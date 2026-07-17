@@ -397,7 +397,7 @@ future one, and closing the strategic map as a whole.
   total-positivity, combinatorial-Hodge) — every finite order is unconditional; the full order is
   RH.
 - **The Pontryagin-index route was closed by direct computation** (paper 11): the index
-  $\kappa=\#\{\text{off-line zeros}\}$ is finite only if a tail relative-form-bound holds, and
+  $\kappa=|\{\text{off-line zeros}\}|$ is finite only if a tail relative-form-bound holds, and
   two independent computations show it does not — a subordination cutoff diverges, and the
   near-critical multiplicity of the relevant operator grows without bound.
 - **The localized Weil form was made unconditionally semibounded, modulo a logarithmic loss**
