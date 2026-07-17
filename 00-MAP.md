@@ -1,1015 +1,775 @@
-# Program Map — From the Survey to the Wall, and the Roads to RH
+# Program Map — From the Survey to the Reduction
 
-A single picture of where the program has been and where it can go. Read top to bottom.
+A single picture of where the program has been and where it stands now. Read top to bottom.
+This map trades the day-by-day working log for the logical structure: what was tried, what
+survived, what failed and why, and where the difficulty currently lives. For phase-by-phase
+detail, see [`03-research/README.md`](03-research/README.md) and
+[`COMPLETE-PROGRAM-SUMMARY.md`](COMPLETE-PROGRAM-SUMMARY.md); for every dead end by name, see
+[`NO-GO-LIST.md`](NO-GO-LIST.md).
 
----
-
-## PART 1 — The road traveled (01 → the named inequality)
-
-```
-                          ┌─────────────────────────────────────────────┐
-                          │  01 · SURVEY "The Critical Line"             │
-                          │  Thesis: every front reduces to POSITIVITY   │
-                          └───────────────────┬─────────────────────────┘
-                                              │
-                  ┌───────────────────────────┴───────────────────────────┐
-                  │   ARC A — the ω-class / resonance program              │
-                  │                                                        │
-                  │   02 ── ω-class reduction:  B(N)≤N^ε ⇒ Lindelöf        │
-                  │   │      (sufficient, plausibly stronger than LH)      │
-                  │   ▼                                                    │
-                  │   04 ── DH null result:  no power-law growth           │
-                  │   │      ⇒ onset bound  N* ≳ 10¹⁴                      │
-                  │   ▼                                                    │
-                  │   (→02) ── phenomenology:  coeff. architecture is the  │
-                  │   │      discriminant; Liouville parity theorem        │
-                  │   ▼                                                    │
-                  │   (→02) ── ω-geometry at peaks  (Research Program 3)   │
-                  │            │                                           │
-                  │   ⚠ pre-canonical SIGN artifacts found ───────────────┼──┐
-                  └────────────────────────────────────────────────────────┘  │
-                                              │                                │
-                                              ▼                                │
-                          ┌─────────────────────────────────────────────┐    │
-                          │  03 · SIGN RECONCILIATION                    │◄───┘
-                          │  r is conditioning-dependent (peaks +, troughs −, │
-                          │  mean 0).  CLEANS 04, 02 (ex-P4/P5).          │
-                          └───────────────────┬─────────────────────────┘
-                                              │  (paper 02's "phase transition" REFUTED,
-                                              │   reframed honestly)
-                                              ▼
-                  ┌───────────────────────────────────────────────────────┐
-                  │   ARC B — inverse operator → localized Weil form       │
-                  │                                                        │
-                  │   localized Weil quadratic form  Q = M_zeros − M_arith │
-                  │   │      (Hermite–Gauss basis at T₀, width σ, dim J)   │
-                  │   ▼                                                    │
-                  │   07 · RIGOROUS DETECTOR                               │
-                  │     • Front A: off-line zero ⇒ λ_min(Q)<0             │
-                  │                (explicit δ² constants)   ✔ PROVEN      │
-                  │     • Front B: truncation floor η(X)≤A·e^(−α(logX)²)  │
-                  │                (PNT only, unconditional) ✔ PROVEN      │
-                  │     • Front C: the DETECTOR is technical;             │
-                  │                the UNIFORM limit is RH-equivalent     │
-                  └───────────────────┬───────────────────────────────────┘
-                                      │
-                                      ▼
-        ┌───────────────────────────────────────────────────────────────────┐
-        │   0A2 · THE BOX UNDER JUDGMENT  ◄── the program's central question  │
-        │   Is  Q = P_J · 𝒯 · P_J  a FAITHFUL compression of the Weil        │
-        │   operator 𝒯 ?                                                     │
-        │     • Part I  (algebraic): the compression identity   ⚑           │
-        │     • Part II (spectral): no spectral pollution        ⚑⚑          │
-        │   0A2 ⟹ H1 (uniform-in-T₀ stability); but H1 ⇏ 0A2.               │
-        └───────────────────┬───────────────────────────────────────────────┘
-                            │  (only IF 0A2 holds does the next box equal RH)
-                            ▼
-        ╔═══════════════════════════════════════════════════════════════════╗
-        ║   THE WALL, NAMED                                                  ║
-        ║   (LB):  inf spec(𝒯) ≥ 0   ⟺   λ_min(Q_∞(f)) ≥ 0  for every f      ║
-        ║          = Weil positivity = RIEMANN HYPOTHESIS  (IF 0A2 holds)    ║
-        ║                                                                   ║
-        ║   Finite-X is controlled (Front B). The open part is the          ║
-        ║   UNIFORM passage to the limit — RH iff the wall is the Weil       ║
-        ║   wall (Scenario 1) and not the localized scheme's (Scenario 2).  ║
-        ╚═══════════════════════════════════════════╤═══════════════════════╝
-                                                    │
-                                                    ▼
-                          ┌─────────────────────────────────────────────┐
-                          │   PHASE 3 · Stability Probe (Program 8)  ✔ DONE │
-                          │   VERDICT: BOTH SUPPORTED                     │
-                          │     (H1) uniformity-in-T₀ falsifier DID NOT   │
-                          │          fire  → faithfulness survived        │
-                          │     (H2) monotone, NO Conrey–Li obstruction   │
-                          │     small-σ negativity = truncation, not      │
-                          │          pollution → evidence vs Scenario 2   │
-                          │   (still a *weak confirmer*: GRH controls,     │
-                          │    entanglement question untouched)           │
-                          └───────────────────┬─────────────────────────┘
-                                              │
-                                              ▼
-                          ┌─────────────────────────────────────────────┐
-                          │   PHASE 4 · pure-math proof underway          │
-                          │   ◀ WE ARE HERE — see PART 4 (internal map)   │
-                          │   collapsed to CLASSICAL structure:           │
-                          │   explicit formula → off-axis evals →         │
-                          │   closability.  𝔱₊ CLOSED ✅; RH-world        │
-                          │   closability ✅; all residual difficulty in  │
-                          │   ONE zero-density inequality (RFB).          │
-                          └─────────────────────────────────────────────┘
-```
+**If you read nothing else, read Part 12.** It states the program's current final result: a
+fifteen-step reduction of RH to one classical, named inequality (Li–Keiper positivity), with
+fourteen of the fifteen steps proved.
 
 ---
 
-## PART 2 — The roads out of the stability probe (potential paths to RH)
-
-The stability probe (Research Program 8) returns a verdict on two hypotheses. Each verdict
-opens, narrows, or closes a road. **No road is short, and every road ends at a positivity
-that a finite computation cannot supply — the last step is always pure mathematics + an
-expert (Phase 4).**
-
-> **THE PROBE LANDED ON THE "BOTH SUPPORTED" BRANCH** (the best of the set). H1 (uniformity in T₀)
-> and H2 (monotonicity) are both supported on the GRH controls, and the Conrey–Li obstruction
-> was specifically *absent*. Both staircases are attached to the wall. This is the strongest
-> empirical position — and, by the one-way logic of 0A2, still a *weak confirmer*: it keeps
-> Scenario 1 (faithful) alive without settling the entanglement question, which is theory.
+## Part 1 — The road traveled: from the survey to the named wall
 
 ```
-                       STABILITY PROBE VERDICT
-                              │
-        ┌─────────────────────┼─────────────────────┬──────────────────────┐
-        ▼                     ▼                     ▼                      ▼
- (H1) CONNES-          (H2) de BRANGES-      BOTH SUPPORTED          BOTH REFUTED
-  stability             chain SUPPORTED       (best case)             (clean negative)
-  SUPPORTED                  │                     │                      │
-        │                    │                     │                      │
-        ▼                    ▼                     ▼                      ▼
- reduce (LB) to       reduce (LB) to        two independent       neither structural
- ONE operator         a CHAIN /             ladders to (LB);      route gives uniform
- positivity:          monotonicity          cross-check each       control
- inf spec(𝒯) ≥ 0      condition on E(z)     other                       │
-        │             (guard: Conrey–Li)         │                      ▼
-        ▼                    │                    ▼               (LB) stands open with
- ⚑ EXPERT (Connes–          ▼              ⚑ EXPERT: prove the      no current handle
-   Consani circle):   ⚑ EXPERT (de         surviving positivity         │
-   prove operator      Branges circle):    on either flank         ┌────┴─────┐
-   positivity?         prove the chain           │                 ▼          ▼
-        │              condition?                │           pivot to     accept 07
-   ┌────┴────┐         ┌────┴────┐               │           another      detector as
-   ▼         ▼         ▼         ▼               ▼           positivity:   the TERMINAL
- proven   not       proven    not          either flank     Nyman–        rigorous
-   │      proven      │      proven         proven           Beurling /    result; RH
-   ▼        │         ▼        │              │              Li / Báez-    untouched by
-  ╔══════╗  ▼        ╔══════╗   ▼             ╔══════╗        Duarte        this program
-  ║ RH!  ║ sharper   ║ RH!  ║ flank          ║ RH!  ║          │
-  ╚══════╝ open      ╚══════╝ refined        ╚══════╝          ▼
- (dream,  lemma     (dream,  or closed      (dream)      (new program,
-  v.low    (real     v.low                                 own multi-year
-  prob)    progress) prob)                                 arc)
+                          +-----------------------------------------------+
+                          |  01 - SURVEY "The Critical Line"               |
+                          |  Thesis: every front reduces to POSITIVITY     |
+                          +----------------------+--------------------------+
+                                                 |
+                  +-------------------------------+-------------------------------+
+                  |   ARC A -- the omega-class / resonance program                |
+                  |                                                               |
+                  |   02 -- omega-class reduction:  B(N) <= N^eps => Lindelof     |
+                  |   |      (sufficient, plausibly stronger than LH)            |
+                  |   v                                                          |
+                  |   04 -- DH null result:  no power-law growth                 |
+                  |   |      => onset bound  N* >~ 10^14                         |
+                  |   v                                                          |
+                  |   (folded into 02) -- phenomenology: coefficient             |
+                  |   |   architecture is the discriminant; Liouville parity     |
+                  |   v                                                          |
+                  |   (folded into 02) -- omega-geometry at peaks                |
+                  |            |                                                 |
+                  |   pre-canonical SIGN artifacts found -------------------+    |
+                  +----------------------------------------------------------+    |
+                                                 |                              |
+                                                 v                              |
+                          +-----------------------------------------------+    |
+                          |  03 - SIGN RECONCILIATION                      |<---+
+                          |  r is conditioning-dependent (peaks positive,  |
+                          |  troughs negative, mean zero). Cleans 02, 04.  |
+                          +----------------------+--------------------------+
+                                                 |  (02's "phase transition" refuted,
+                                                 |   reframed honestly)
+                                                 v
+                  +---------------------------------------------------------+
+                  |   ARC B -- inverse operator, the localized Weil form     |
+                  |                                                          |
+                  |   localized Weil quadratic form  Q = M_zeros - M_arith  |
+                  |   |      (Hermite-Gauss basis at T0, width sigma, dim J) |
+                  |   v                                                     |
+                  |   07 - RIGOROUS DETECTOR                                |
+                  |     - Front A: off-line zero => lambda_min(Q) < 0       |
+                  |                (explicit constants)          PROVED    |
+                  |     - Front B: truncation floor decays like            |
+                  |                exp(-alpha (log X)^2), PNT only         PROVED    |
+                  |     - Front C: the detector is technical; the          |
+                  |                UNIFORM limit is RH-equivalent          |
+                  +----------------------+-----------------------------------+
+                                         |
+                                         v
+        +---------------------------------------------------------------------+
+        |   0A2 - THE COMPRESSION QUESTION (the program's central question)    |
+        |   Is  Q = P_J . T . P_J  a FAITHFUL compression of the Weil          |
+        |   operator T?                                                       |
+        |     - Part I  (algebraic): the compression identity                 |
+        |     - Part II (spectral): no spectral pollution                     |
+        |   0A2 implies H1 (uniform-in-T0 stability); H1 does NOT imply 0A2.  |
+        +----------------------+-----------------------------------------------+
+                               |  (only if 0A2 holds does the next box equal RH)
+                               v
+        +=======================================================================+
+        |   THE WALL, NAMED                                                    |
+        |   (LB):  inf spec(T) >= 0   <=>   lambda_min(Q_infinity(f)) >= 0      |
+        |          for every f  =  Weil positivity  =  RIEMANN HYPOTHESIS       |
+        |          (conditional on 0A2)                                        |
+        |                                                                       |
+        |   Finite-X is controlled (Front B). What remains open is the         |
+        |   UNIFORM passage to the limit.                                      |
+        +======================================+================================+
+                                               |
+                                               v
+                          +-----------------------------------------------+
+                          |   A stability probe (see Part 2) tested        |
+                          |   whether Q is a faithful compression.         |
+                          |   Verdict: BOTH tested hypotheses supported    |
+                          |     (H1) uniformity-in-T0 falsifier did not    |
+                          |          fire -- faithfulness survived         |
+                          |     (H2) monotone, no Conrey-Li obstruction    |
+                          |   A weak confirmer: GRH controls only, the     |
+                          |   entanglement question stays untouched.       |
+                          +----------------------+--------------------------+
+                                                 |
+                                                 v
+                          +-----------------------------------------------+
+                          |   Phase 4 -- pure-math attack on the wall      |
+                          |   collapses the problem to CLASSICAL           |
+                          |   structure: explicit formula -> off-axis      |
+                          |   evaluations -> closability. See Part 4.      |
+                          +-----------------------------------------------+
 ```
 
-**Reading the branches**
+---
 
-| v9 outcome | What it buys | Realistic next step | Probability of *proving RH* from here |
+## Part 2 — What the stability probe could have bought
+
+The stability probe returns a verdict on two hypotheses about the compression question 0A2.
+Each verdict opens, narrows, or closes a road. No road is short, and every road ends at a
+positivity that no finite computation can supply — the last step is always pure mathematics.
+
+**The probe landed on the "both supported" branch** (the best of the four possible outcomes).
+H1 (uniformity in $T_0$) and H2 (monotonicity) were both supported on the GRH controls, and the
+Conrey–Li obstruction was specifically absent. This is the strongest empirical position — and,
+by the one-way logic of 0A2, still only a weak confirmer: it keeps the "faithful compression"
+scenario alive without settling the deeper entanglement question, which is a matter of theory,
+not computation.
+
+| Probe outcome | What it buys | Realistic next step | Chance of *proving RH* from here |
 |---|---|---|---|
-| **(H1) supported** | (LB) ⟶ "inf spec(𝒯) ≥ 0", one operator | hand Connes-trace positivity to an expert | very low, but the *cleanest* reduction |
-| **(H2) supported** | (LB) ⟶ a de Branges chain condition | check Conrey–Li, then expert | very low (de Branges has known gaps) |
-| **both supported** | two cross-checking ladders | strongest position; still needs the proof | very low, best odds of the set |
-| **both refuted** | structural routes via Q are dead | pivot to Nyman–Beurling/Li, OR stop at 07 | ~0 from this instrument |
+| (H1) supported alone | (LB) reduces to one operator positivity, $\inf\mathrm{spec}(\mathcal T)\ge0$ | hand Connes-trace positivity to an expert | very low, but the cleanest reduction |
+| (H2) supported alone | (LB) reduces to a de Branges chain condition | check Conrey–Li, then expert | very low (de Branges has known gaps) |
+| **both supported (what happened)** | two cross-checking ladders to (LB) | strongest position; still needs the proof | very low, best odds of the four |
+| both refuted | the structural routes via $Q$ are dead | pivot to Nyman–Beurling/Li, or stop at paper 07 | effectively zero from this instrument |
 
 ---
 
-## PART 3 — Where we stand, in one paragraph
+## Part 3 — Where the program stood after the first two arcs
 
-We started with a survey whose thesis was *positivity*. Through Arc A we built descriptive
-machinery (ω-classes), calibrated it (DH null), found a parity theorem (Liouville), and had to
-**correct ourselves** (paper 03 — the sign artifacts that even refuted paper 02's headline). Arc B then
-gave the program its one rigorous result: **07**, the localized Weil detector, which turns the
-"Weil signal" into theorems with explicit constants and **names a uniform-positivity inequality
-that equals RH *provided* the localized form $Q$ is a faithful compression of the Weil operator
-(the 0A2 question)**. That faithfulness — not RH itself — is the program's true central problem
-right now: if $Q=P_J\mathcal{T}P_J$ holds spectrally (no pollution), the wall is the genuine Weil
-wall; if it fails subtly, the wall is the scheme's. We are at the foot of that wall. **The
-stability probe** does not climb it; its uniformity-in-$T_0$ curve is a *falsifier* of faithfulness (clean
-decay keeps both scenarios open; center-dependent blow-up strikes at 0A2), and it tells us
-*which staircase* (Connes operator-positivity or de Branges chain) is even attached to the wall. Climbing — proving the structural positivity
-— is pure mathematics beyond any closed computational loop, and is where an expert (Phase 4)
-becomes essential. The honest probability that this program *proves* RH remains very low; the
-probability it has produced **new, rigorous, publishable mathematics and the sharpest extant
-naming of the obstruction** is high — and that is already realized in 07.
+A survey whose thesis was positivity (paper 01). Arc A built descriptive machinery
+(ω-classes), calibrated it (the DH null result), found a parity theorem, and had to correct
+itself (paper 03 — sign artifacts that even refuted paper 02's original headline claim). Arc B
+then gave the program its first rigorous result: paper 07, the localized Weil detector, which
+turns the "Weil signal" into theorems with explicit constants and names a uniform-positivity
+inequality that equals RH *provided* the localized form $Q$ is a faithful compression of the
+Weil operator (the 0A2 question). That faithfulness — not RH itself — was, at this stage, the
+program's central open problem: if $Q=P_J\mathcal T P_J$ holds spectrally, the wall is the
+genuine Weil wall; if it fails subtly, the wall belongs to the localized scheme instead. The
+stability probe does not climb that wall; it is a falsifier of faithfulness, and it survived.
+Climbing the wall — proving the structural positivity — is pure mathematics beyond any closed
+computational loop. *(This is where the deeper phases, Part 4 onward, took over. The program's
+current final state is Part 12.)*
+
+---
+
+## Part 4 — Inside the Weil-operator program: the collapse to classical structure
+
+This phase changed the shape of the problem. The program **stopped looking for a new
+geometry** (Connes' noncommutative framework, the de Branges chain, and a Fock-space pivot were
+each tried and each found unnecessary) and the question **collapsed back to classical
+objects**: the explicit formula, off-axis evaluations, and closability. Fewer new
+constructions, more classical structure, is the pattern that persisted for the rest of the
+program.
+
+**The chain of reductions, in order:**
+
+1. **The compression identity holds** (Problem A, essentially settled: a Gram-matrix tautology
+   plus the Front-B truncation bound from paper 07 together identify $\mathcal T$ as a
+   legitimate object).
+2. **A self-adjoint realization of $\mathcal T$ exists**, unconditionally, by a standard von
+   Neumann deficiency-index argument (the operator admits the natural conjugation
+   $f\mapsto\tilde f$, so its deficiency indices are equal).
+3. **The explicit-formula identity (EF-id) holds on the operator's dense core**, unconditionally:
+   $$\mathfrak t(g,g)=\sum_{\text{on-line}}|\hat g(\gamma)|^2+\sum_{\text{off-line}}4\,\mathrm{Re}[\hat g(t-ib)^2].$$
+   The right-hand side is manifestly indefinite in general; its positivity is exactly RH.
+4. **Two invariants separate the relevant function spaces**: $R=K\rho$ governs trace-class
+   membership (trivial), and $P=\rho\ell$ governs the Carleson condition. A short computation
+   shows that any admissible evaluation window forces $P\to\infty$, so the natural home for this
+   problem is an *over-sampling* Hardy space, where both $\mathfrak t_+$ and $\mathfrak t_-$ are
+   unbounded but coercivity ($\mathfrak t_+\ge c>0$) is easy (a Beurling over-density argument).
+5. **The relative form bound (RFB), $\mathfrak t_-\lesssim\mathfrak t_+$, is the residual
+   target.** Every *pointwise* route to it (Schur test, Gram-matrix comparison, Jaffard's
+   interpolation technique) fails, because each one pays the same divergent price $P\to\infty$.
+   Only a *statistical* route — where that divergent quantity cancels between $\mathfrak t_-$
+   and $\mathfrak t_+$ rather than being bounded separately — survives.
+6. **A statistical proof of RFB via band-fixed quadrature of the zeros.** In the classical
+   Paley–Wiener class $PW_d$, the excess energy $E_g=\sum_\gamma|F(\gamma)|^2-\rho\int|F|^2$
+   is exactly a Parseval pairing $\int_{-2d}^{2d}\hat g(\alpha)D_T(\alpha)\,d\alpha$. The naive
+   global bound on $D_T$ is vacuous (it loses all localization); the correct object is a *local*
+   bound obtained by integration by parts against an unconditional density estimate
+   ($S(t)=O(\log t)$), giving $E_g=O(\mathfrak t_+)$ — the right order of magnitude, not a
+   smaller one, but exactly what the target needs.
+7. **The off-line sum closes unconditionally** via a Plancherel–Pólya argument (clustering of
+   zeros is not an obstruction; only the local zero *count*, which is unconditionally $O(\rho)$,
+   matters).
+8. **What remains is coercivity of $\mathfrak t_+$ itself**, and here the news is mixed: a naive
+   "infinitely many zeros off the critical line still leaves a Nyquist gap" argument does *not*
+   suffice (a theorem of Beurling blocks it). But coercivity is only needed *near* off-line
+   zeros, and a depth split shows shallow off-line zeros are harmless while deep off-line zeros
+   are locally rare — controllable, in principle, by a uniform short-interval zero-density
+   estimate strictly weaker than RH.
+
+**Where this reduction lands.** Everything up to this point is unconditional. The single
+remaining input is: **a uniform short-interval zero-density bound**, strictly between "no gaps
+at all" and RH itself. If it holds, the localized Weil form is a genuine unconditional theorem
+(a faithful, semibounded realization). This is a real, if narrow, achievement — but it does not
+touch the *sign* of the bottom of the spectrum, which is RH itself. The magnitude bound gives
+$|\mathfrak t_-|\le C\mathfrak t_+$ with $C\ge e^d>1$; RH needs $C\le1$ — positivity, not just a
+finite bound. No density or sampling estimate lowers $C$ below $1$ without assuming RH.
+
+**The resulting theorem (Kreĭn structure).** With the semibounded realization in hand,
+$\mathfrak t=E^*JE$ with $J=J^*$, $J^2=I$ (a Kreĭn-space involution), and the whole problem
+becomes the sign of one angular operator: $\mathfrak t=\|P_+EF\|^2-\|P_-EF\|^2$, so RH is
+$\|K\|\le1$ for the associated contraction $K$. A companion **no-go theorem** proves that this
+sign is *not reachable from the zero side alone*: the off-line depths enter $\mathfrak t$ only
+through the quantity whose sign is exactly Weil positivity, so bounding $\|K\|\le1$ using
+zero-side data is circular — it *is* Weil positivity, restated. This closes what became **paper
+08** (a faithful Kreĭn-space realization of the Weil form, with the zero-side no-go).
+
+**Route B — the only route left: is $\mathcal T$ a square, $A^*A$, for an $A$ built
+independently of the zeros?** This was pursued through several fronts:
+
+- **Comparing the Kreĭn structure of paper 08 to Connes' noncommutative-geometry framework**
+  showed both share a common template — $\mathrm{RH}\iff\|K\|\le1$ for *any* metric
+  decomposition of this shape — so matching the shape is not yet a bridge. But a real
+  distinction survives: paper 08's operator $K$ is zero-dependent (it literally vanishes on
+  RH), while the analogous Connes operator is a fixed, zero-*independent* compact operator.
+  There is no natural zero-independent identification between the two, so paper 08's no-go
+  does **not** transport to the Connes side — the Connes residual remains a genuinely
+  unobstructed attack surface.
+- **Comparing to the de Branges canonical-system structure** showed the same template again
+  (a Hermite–Biehler / kernel-positivity certificate equals RH), but the specific de Branges
+  positivity hypotheses proposed in the literature had already been refuted (Conrey–Li, 2000).
+  A durable observation survived: under RH, the de Branges chain and paper 07's sampling
+  ladder coincide.
+- **The semi-local Connes residual** — positivity of $\mathrm{Id}-K_{CC}$ on a semi-local
+  window — is the sharpest open frontier this comparison produced. It connects to a genuine
+  finite-window analogue of the Connes program, built on paper 07's computable machinery.
+
+**A creative-frontier program** then combined the Connes residual with the program's unique
+computational assets — paper 07's engine and an explicit RH-violating control object, the
+Davenport–Heilbronn function $L_{DH}$ (paper 04) — around one organizing question: *which
+arithmetic invariant forces $\|K\|\le1$ for $\zeta$ but forces $\|K\|>1$ for a
+non-Euler-product control?* This produced a genuine, if partial, positive research program:
+
+- **A pure-theory classification program** proved that the natural "tautology test" for any
+  candidate invariant is passed *by theorem*, not just by experiment: the zero-side operator
+  from paper 08 literally *is* the tautology (it vanishes exactly on RH), while the arithmetic
+  Connes-side invariant is provably distinct and real-analytic in the Euler factors.
+- A forced spectral-transition theorem was lifted from paper 07's detector: the localized
+  eigenvalue crosses zero exactly at a computable threshold, with rate confirmed numerically
+  to high precision.
+- The per-prime "anatomy" $R_p$ of the localized Weil form was characterized exactly:
+  $\lambda_{\min}=R_\infty(u)-\sum_pR_p(u)$, an archimedean-versus-prime-mass competition, with
+  a proved mass-form, a proved concavity/extremal reduction, and a proved exponential-stability
+  theorem (paper 09) — all unconditional, all RH-*independent*, all durable mathematics.
+- This anatomy program matured into two publishable results: **paper 09** (the exponential
+  stability theorem, autonomous) and **paper 10** (the anatomy itself, the Carleson
+  reformulation, and the resulting Conjecture B2 — factorizability of the anatomy implies an
+  Euler product — later proved as a genuine converse theorem and folded into paper 10).
+- A validated numerical engine confirmed every gate: $\zeta$ sits at the positivity floor,
+  the forced-negativity exponent matches prediction, and the $L_{DH}$ control is correctly
+  flagged as violating positivity.
+
+**A separate, more ambitious attempt — Osterwalder–Schrader reflection positivity.** The
+insight: the Kreĭn involution $J$ (complex conjugation composed with $\rho\mapsto1-\rho$) is
+exactly the functional-equation reflection, so Weil positivity should be OS reflection
+positivity for a lattice built from the Euler product, one factor per prime. If each local
+factor were reflection-positive and the tensor gluing worked, OS reconstruction would deliver a
+self-adjoint Hamiltonian — Hilbert–Pólya, for free. **This mechanism was computed and refuted:**
+the exact local prime kernel $G_p$ is indefinite (verified for $p=2,3,5,7$ to full numerical
+precision), so per-place reflection positivity fails outright, and the Euler-lattice mechanism
+collapses. The refutation is itself informative: it shows RH is equivalent to the archimedean
+envelope pointwise dominating the sum of these indefinite local kernels — and that comb, once
+regularized, is essentially $\zeta'/\zeta$ on the critical line, i.e. **large values of $\zeta$**
+(a genuine, hard, open frontier, closely related to the program's own ω-class machinery, but not
+an obvious crossing). A careful audit of every follow-up attempt to exploit this observation
+found each one flawed on inspection — the comb is a distribution, not a function, and the
+naive pointwise-domination argument does not survive taking limits.
+
+**What this phase established, in one sentence.** Before this collapse the picture was "RH
+follows from some new geometry (Connes / de Branges / Fock)"; after it, the picture is "RH
+follows from Weil positivity, which follows from the explicit formula, which follows from
+off-axis evaluations and closability" — all classical objects, with the entire remaining
+difficulty concentrated in one zero-density inequality (the RFB) and, beyond that, in the sign
+of the Kreĭn operator $K$, which two independent no-go arguments show cannot be reached from the
+zero side alone.
+
+---
+
+## Part 5 — The eight-language wall and the wrong-sign capstone
+
+With Route B's honest conclusion in hand, the program engaged every modern reformulation of RH
+it could identify. Each one reduced to the same statement, via the same underlying principle.
+
+- **The band-limited Weil–Carleson form** (paper 12): a saturated positivity constant
+  $C(d,T_0)=\lambda_{\max}$, with $\mathrm{RH}\iff C\le1$. Three findings: $C\equiv1$ for
+  $\zeta$ in the natural regime, with prime incoherence buying zero margin; the detector's
+  second-order statistic *is* the Montgomery–Dyson pair correlation; and $C(d,T_0)$ is exactly
+  the Connes–Consani prolate compression constant — the same wall, reached from a third
+  direction.
+- **The de Bruijn–Newman heat flow** (paper 13): $\mathrm{RH}\iff\Lambda=0$. A Lyapunov theorem
+  proves the critical line is the flow's attractor; a dynamical no-go shows the flow itself is
+  arithmetic-blind (it cannot distinguish $\zeta$ from any other GRH-respecting control), so no
+  purely dynamical argument can supply RH — the target becomes an unconditional gap
+  universality statement.
+- **A search for an arithmetic-aware monotone quantity along the heat flow** found none: every
+  candidate is either generic (arithmetic-blind) or reduces, via the explicit formula, to the
+  same wall. This produced the **wrong-sign capstone**: every unconditional tool available
+  (sieves, density estimates, positivity of variance) supplies a *lower*-bound positivity, while
+  RH is an *upper*-bound constraint. The available machinery has the wrong sign.
+- **The cohomological/Hodge-index route** (paper 14, attempted specifically to escape the
+  capstone, in analogy with the Weil-conjectures proof over function fields): a candidate
+  intersection form was shown to degenerate exactly at the point where four different framings
+  coincide ($C\equiv1$, $\Lambda=0$, a vanishing Hodge gap); the regularized form survives as
+  definite, giving the identity $\lambda_{\min}(G)=\frac{\pi^2}{6}\beta_{\min}^2$ — but this
+  reprices to exactly the same target as before (uniform short-interval regularity). The
+  capstone holds even here.
+- **The hyperbolicity / stable-polynomial route** (paper 14): real-rootedness of the Jensen
+  polynomials of $\Xi$, via interlacing rather than positivity directly — the most promising
+  *structurally different* mechanism considered. It reduces to a moment identity
+  $b(k)=m_{2k}/(2k)!$, and the decisive fact (via Borcea–Brändén) is that real-rootedness of
+  this kind **is itself** a positive-semidefinite Hermite-form condition. The capstone holds
+  even in the richest available positivity language.
+
+**The headline of this phase.** Eight independent paradigms — the explicit-formula/Kreĭn
+approach, per-place analysis, the Carleson form, pair correlation, the Connes prolate operator,
+the heat flow, the cohomological/Hodge route, and hyperbolicity — all reduce to a positivity
+statement and to the same cornered target, and the deepest single finding is the wrong-sign
+capstone: every unconditional handle available in current analytic number theory is a
+lower-bound positivity, while RH demands an upper-bound one. This was confirmed across all
+eight paradigms, including the two (Hodge, hyperbolicity) specifically built to escape it. This
+is a chart of the wall of unusual completeness — not a passage through it.
+
+---
+
+## Part 6 — The first mechanism-correct path
+
+The capstone itself pointed to the next move: find a mechanism whose *native* output is an
+unconditional upper bound rather than a positivity. The one branch of mathematics tied to
+$\zeta$ with that property is **log-correlated fields and multiplicative chaos**.
+
+- $S(t)=\arg\zeta(\tfrac12+it)$ is log-correlated (the measured covariance slope matches the
+  theoretical value); tight zero-pairs correspond to its steepest rises.
+- The natural upper bound on this field is a first-moment (union/Markov) bound — **not a
+  positivity statement**, and so, for the first time in the program, a genuine escape from the
+  capstone.
+- This immediately meets a second, independent obstruction: a probabilistic/deterministic
+  barrier. The log-correlated-field machinery describes the *statistics* of an ensemble; RH is
+  a statement about one *deterministic* configuration (the actual off-line zero count, which
+  must be exactly zero). Two fundamentally different obstructions now co-exist: the capstone
+  (deterministic tools have the wrong sign) and this new barrier (the right-signed tools are
+  the wrong *kind* of object).
+- The barrier is bridged, partially: $S(t)$ can be derandomized as an explicit prime sum
+  (verified), turning the union-bound count into a large-value count for that prime sum,
+  controllable by the large sieve — the first tool in the program that is simultaneously
+  deterministic, upper-bound, and not a positivity statement.
+- The resulting moment computation is sharp in its low-order reach (the relevant sum is
+  Gaussian, by the $\mathbb Q$-linear independence of $\{\log p\}$), but its extreme values are
+  governed by near-resonances among the $\log p$ — precisely the **additive energy of the
+  primes**, the object already studied in paper 02's ω-class machinery. Baker's theorem on
+  linear forms in logarithms is qualitatively the right tool but exponentially too weak
+  quantitatively; a sharp high-order bound on this additive energy is exactly the
+  moment-conjecture frontier (Conrey–Farmer–Keating–Rubinstein–Snaith).
+
+**The headline of this phase.** This is the program's first mechanism-correct chain, start to
+finish: it escapes the wrong-sign capstone and bridges the probabilistic/deterministic barrier,
+reaching the extreme values of $\zeta$ by a route that is deterministic, upper-bound, and
+non-positivity throughout. What remains is a genuine, sharply stated open problem — a
+high-order additive-energy bound for $\{\log p\}$ — and, remarkably, this is exactly the problem
+the program's very first arc (the ω-class program) had already been built to study. For the
+first time, the obstruction found is the *right* one, not a restatement of positivity.
+
+---
+
+## Part 7 — Closing the strategy map: the discriminator and the unconditional finite bottom
+
+After reaching the ω-class frontier again from a completely different direction, the program
+turned from attacking individual routes to building an *instrument* for classifying every
+future one, and closing the strategic map as a whole.
+
+- **The ω-hierarchy** (paper 05, RH-independent): the moment exponent, multiplicative-chaos
+  freezing, and a branching-random-walk picture of the maximum of $\log|\zeta|$ are shown to be
+  one and the same structure, viewed three ways. Genuinely new mathematics, but it does not
+  face the zeros.
+- **The ω-to-zeros direction was closed.** A Motohashi-type factorization shows the relevant
+  generating function is self-referentially built from $\zeta$ itself in a way that makes any
+  ω-based route back to the zeros circular, because $\omega(n)$ is prime-blind by construction.
+- **A discriminator, D0**, was built and calibrated: an operational filter deciding whether a
+  proposed new mathematical object can, even in principle, escape the walls already found. It
+  is a four-clause test (does the object distinguish primes; does it supply genuinely
+  independent input via a decisive existing theorem; does it resolve individual zeros, not just
+  averages; is it arithmetic-aware) calibrated against roughly thirty historical RH programs and
+  four positive controls, including the two genuinely *proved* analogues of RH (the function-field
+  case, twice). Every attempted ζ-side route is blocked either by a missing-geometry obstruction
+  or by an "object-special" trap (the candidate secretly re-encodes $\zeta$ rather than
+  supplying independent structure).
+- **The finitization obstruction.** The only remaining kind of new object that could work is a
+  *finite-dimensional model* of ζ's positivity — formally, a Frobenius periodicity, in analogy
+  with the function-field case (where the zeros repeat with a finite period). Under the standard
+  linear-independence hypothesis for the ordinates $\{\gamma_n\}$, **no such periodicity can
+  exist** (paper 06). This closes off finite-dimensional model-building as a route, and applies
+  uniformly across several concrete finite-order-positivity families (Hodge-theoretic, Hankel,
+  total-positivity, combinatorial-Hodge) — every finite order is unconditional; the full order is
+  RH.
+- **The Pontryagin-index route was closed by direct computation** (paper 11): the index
+  $\kappa=\#\{\text{off-line zeros}\}$ is finite only if a tail relative-form-bound holds, and
+  two independent computations show it does not — a subordination cutoff diverges, and the
+  near-critical multiplicity of the relevant operator grows without bound.
+- **The localized Weil form was made unconditionally semibounded, modulo a logarithmic loss**
+  (paper 16): a verified identity for the second moment, combined with the large sieve, gives an
+  unconditional lower bound on $\mathfrak t$ up to a $(\log T)^c$ factor; a Goldston–Montgomery
+  equivalence reduces closing that gap to a *uniform short-interval prime variance* estimate —
+  strictly weaker than RH and strictly stronger than anything currently known, but genuinely
+  non-circular. A three-level hierarchy separates the target cleanly: semibounded (achieved) <
+  finite index (refuted) < RH.
+
+**The headline of this phase.** The program closed its own strategy map: every RH-directed
+branch collapses either to the wrong-sign capstone or to the missing-geometry wall, unified as
+the absence of a finite-dimensional, Frobenius-periodic model of ζ's positivity — an absence
+that is *proved*, not merely observed, under linear independence of the zero ordinates. The
+discriminator gives future ideas a fast, calibrated classification. The one genuinely new
+RH-directed gain from this phase is paper 16: the localized Weil form is unconditionally
+semibounded modulo a logarithmic loss, with the residual difficulty identified precisely as a
+recognized sub-RH frontier. Everything else new and durable that this phase produced (papers 05,
+09, and Conjecture B2) is RH-independent.
+
+---
+
+## Part 8 — The Lefschetz dichotomy and the SURF specification
+
+The program then built the full Weil scaffold for an arithmetic intersection theory over
+$\mathrm{Spec}\,\mathbb Z$, reducing RH to the existence of one missing object — an independent
+hard-Lefschetz $\mathfrak{sl}_2$ triple, or equivalently an ample (Kähler-type) class $\omega$ —
+and then proved why the spectral routes available cannot supply it.
+
+- The arithmetic intersection pairing, its trace identity, effectivity, and the ample cone were
+  all built and verified to high numerical precision.
+- $\mathrm{RH}\iff\omega\succ0$ on the relevant orthogonal complement; the missing class
+  $\omega$ must satisfy an **independence filter** ($\omega$ cannot lie in the operator algebra
+  generated by the Weil form itself) — any spectrally derived candidate for $\omega$ only
+  restates RH.
+- An explicit, $\mathcal T$-independent hard-Lefschetz $\mathfrak{sl}_2$ triple **was**
+  constructed on the archimedean continuum, verified to high precision — the first such
+  explicit object in the program. Its transport to the arithmetic side is exactly the explicit
+  formula, and the resulting positivity is a near-cancellation residual — the wall named
+  earlier as the capstone, reached again.
+- **The Lefschetz dichotomy** (paper 17): an integer (lowest-weight) hard-Lefschetz grading and
+  the linearly-independent arithmetic zero spectrum are structurally incompatible. In the
+  discrete picture there is no Tate-twist operator available on the zeros; in the continuum
+  picture the relevant representation is a principal series, which does not carry a
+  hard-Lefschetz structure at all. This sharpens the finitization obstruction (paper 06) to a
+  precise representation-theoretic statement.
+- A prismatic-cohomology route was traced and found to relocate the same obstruction: the
+  relevant Frobenius structure exists *locally* (at each prime, as local Satake data) but the
+  obstruction is *global* gluing — exactly the missing object again, now in a third language.
+- A submitted third-party "proof" invoking Connes' framework was checked and refuted, with six
+  independent fatal flaws identified.
+- A literature program returned three honest negative results — matching, independently, the
+  three-route obstruction already found — plus one new RH-independent constraint (a rigidity
+  bound on the third moment of prime gaps, tied to a prime-power design constraint).
+- An "Arakelov–RH equivalence" claim from the literature was checked and clarified: its honest
+  content is a one-directional theorem (existence of a suitable witness variety implies RH, via
+  the Yuan–Zhang arithmetic Hodge index theorem); the converse (RH implies such a variety
+  exists) is the open Hilbert–Pólya dream, and may simply be false if the zeros are not
+  geometric in the required sense.
+
+**The SURF specification.** This phase closed by fixing precise acceptance criteria for any
+future construction of the missing witness variety: four pillars (spectrum, pairing, Lefschetz
+structure, positivity) and four rejection filters, with the correction that the required
+positivity theorem for the zero-carrying cohomology is *not* available from the Yuan–Zhang
+theorem (which controls a different, related object) — it is a genuinely new theorem that would
+need to be proved, not cited.
+
+---
+
+## Part 9 — The forward ω-flow and the zero–ω bridge
+
+In parallel with the Weil/SURF program, an independent arc traced the direct flow from primes,
+through the ω-class statistics, to multiplicative chaos and moments — deliberately without
+reference to the zeros of $\zeta$, to see how far arithmetic statistics alone could reach.
+
+**An unconditional, RH-independent chain** (five steps, no zeros involved):
+
+```
+   primes -> omega(n) ~ Poisson(log log n)        [Erdos-Kac / Turan-Kubilius]
+          -> E[q^omega] ~ (log n)^(q-1)            [Poisson moment-generating function, q = k^2]
+          -> M_k(N) ~ C_k (log N)^(k^2)            [elementary integral; the exponent k^2 is forced]
+          -> large-deviation saturation             [the same phenomenon at each step]
+          -> B-smooth condensation                  [weight shifts toward large omega]
+          -> the random maximum grows with sum(1/p) [a log-correlated branching-random-walk field]
+```
+
+The exponent $k^2$ and its constant are both prime-theoretic and provably convergent without
+reference to any zero of $\zeta$. This is durable, RH-independent mathematics.
+
+**Does ω-statistics see the zeros at all?** A Selberg–Delange factorization answers this
+directly: the generating function for $q^{\omega(n)}$ factors as $\zeta(s)^q\cdot G_q(s)$ with
+$G_q$ holomorphic and non-vanishing where it matters — so the zeros of $\zeta$ appear as *zeros*
+of this generating function, not poles, and Perron's formula for the relevant moments picks up
+no residue at them. The moments are monotonically increasing; they never oscillate. The zeros
+are, to first order, invisible to this statistic.
+
+**Where the zeros do enter.** The only channel through which the zeros affect the ω-class
+statistics in a non-trivial way — one that does not simply reduce to the prime-counting function
+$\psi$ itself — is the *rate of convergence* of the cross-correlation
+$C_k(h,N)/M_k(N)^2\to r_q(h)$. An explicit error formula was derived for this rate,
+$$\frac{C_k(h,N)}{M_k(N)^2}-r_q(h)=-\frac{A_q(h)}{C_q^2}\sum_\rho\frac{N^{\rho-1}}{\rho}+O(\text{smaller}),$$
+with an explicit, strictly positive coefficient $A_q(h)$. This gives an unconditional
+**equivalence**: this convergence rate is $O(N^{-1/2+\varepsilon})$ if and only if RH holds. And
+a structural theorem closes off any hope of an alternative route: because $A_q(h)>0$ at every
+multi-point correlation, the positivity of $q^{\omega(n)}$ **prevents any algebraic cancellation**
+of the zero terms — there is no "arithmetic resonance" internal to the ω-class construction that
+could eliminate the zeros' contribution without already assuming RH.
+
+**Conclusion of this arc.** The ω-class family contains enough information to reconstruct
+$\zeta$'s bulk statistics (moments, multifractal structure) but not the fine geometry of its
+zeros. The zeros surface only in the error term of one specific cross-correlation, and that
+error term is provably equivalent to RH via the same classical mechanism (the prime number
+theorem in arithmetic progressions) found by every other route in this program. There is no
+zero-free direction inside the ω class.
+
+---
+
+## Part 10 — Phases 21–61: the wall mapped from every side
+
+*Full phase-by-phase detail lives in [`COMPLETE-PROGRAM-SUMMARY.md`](COMPLETE-PROGRAM-SUMMARY.md).
+This is the one-paragraph map of a long stretch of the program.*
+
+After the ω-class branch reached the same classical wall, the program ran the **Arc-B closure**
+(the Pontryagin/Kreĭn realization pushed to its Paley–Wiener barrier, a fifteen-mechanism audit,
+four parallel fronts all reducing to the statement "$\Xi\in$ Laguerre–Pólya"), then the **CCM
+framework** (the Connes–Consani–Moscovici trace criterion, $T_\lambda=0\iff\mathrm{RH}$, and its
+Hadamard barrier), then a long sequence of new-direction attempts: the amplification functor,
+a Hodge/$\mathrm{Spec}\,\mathbb Z$ construction, the Deninger leafwise-Hodge route (found
+non-circular as a *framework* but later shown to be indeterminate/circular as an actual proof
+route), and a series of new-mathematics constructions interleaved with adversarial audits (one
+audit refuted an incorrectly claimed kernel positivity and the trace criterion was repaired via
+moment rigidity).
+
+A later stretch attacked **the wall as an object in its own right**: it was characterized as the
+kernel of an averaging operator; the five classical crossing mechanisms known to number theory
+(Tauberian theorems, positivity arguments, functional equations, group/dynamical arguments, and
+index/K-theoretic arguments) were shown to provably collapse for the Weil form specifically; and
+every canonical inertia metric on the relevant crossed-product construction was shown to carry
+$\zeta$ by modular structure (the Bost–Connes system) rather than by anything specific to RH.
+This stretch closed with a precise decomposition $\mathrm{RH}=A\wedge\mathrm{Dic}$ (each half
+independently calibrated), roughly eighteen new unconditional theorems, the accumulated no-go
+results organized axiomatically, and a precise interface specification for any future external
+attack.
+
+One further phase refuted a proposed "multiplicativity discriminant" (a new variant of the
+arithmetic-propagation wall), and the phase that followed took inventory of what remained
+genuinely open within this framework.
+
+**The state at the end of this stretch.** RH lived in the sign of one global scalar $\kappa$.
+Every front reached it; none crossed it. The crossing appeared to require a cohomology over
+$\mathrm{Spec}\,\mathbb Z$ that reads inertia rather than value — the still-unbuilt
+Connes–Consani arithmetic site — which is RH-equivalent by construction and therefore no easier
+to build than to prove RH directly. *(Part 11, next, sharpens this into a single named classical
+criterion.)*
+
+---
+
+## Part 11 — Phases 62–76: the pivot to $\Omega_7$
+
+```
+                          +-------------------------------------------------+
+                          |  PHASE 62 - Cesaro-in-lambda / quaternionic HR   |
+                          |  Averaging relocates the arithmetic-propagation  |
+                          |  wall; it does not cross it (off-line growth is  |
+                          |  secular). A real quaternionic Hodge-Riemann     |
+                          |  polarization was found on the Weil window --    |
+                          |  but it is GAPLESS: zeta sits at the marginal    |
+                          |  threshold, mu_max = 1.                          |
+                          +----------------------+----------------------------+
+                                                 |
+                          +----------------------v----------------------------+
+                          |  PHASE 63 - Lefschetz realization frontier        |
+                          |  The function-field analogue has a J-linear      |
+                          |  Frobenius isometry of a GAPPED polarization;    |
+                          |  the zeta window has neither property (its       |
+                          |  scaling is antilinear, its polarization         |
+                          |  gapless). This makes the missing-object wall    |
+                          |  precise by direct contrast with the one proved  |
+                          |  case of RH.                                     |
+                          +----------------------+----------------------------+
+                                                 |
+                                sharpest statement of the wall reached so far
+```
+
+**The pivot off Weil positivity, onto $\Omega_7$:**
+
+```
+   PHASE 64 (Connes' route)              PHASE 65 (signature continuity)
+   L1 reclassified as an RH criterion    Constructs an index-graded
+   in its own right; the live target     determinant and topology;
+   becomes REGULARIZED positivity,       isolates the decisive burden
+   not a finite spectral gap             (a Feshbach-shorting argument)
+             |                                       |
+             +--------------------+------------------+
+                                  v
+   PHASE 66 (rank-one escape)            PHASE 67 (quantum q-index)
+   The candidate operators are           A free-product Haar-orthogonality
+   self-adjoint BY CONSTRUCTION, so      argument kills the arithmetic
+   there is no positivity left to        interference this route needs
+   prove; the open question becomes
+   boundedness -- a different kind
+   of question than Weil positivity
+             |                                       |
+             +--------------------+------------------+
+                                  v
+   PHASE 68 (GLT/Toeplitz symbol)        PHASE 69 (exact signed index)
+   Symbol positivity turns out to be     A signed-index identity,
+   GAUGE-FRAGILE -- it fails the         ind_-(A_N - P_lambda) = 0 <=> RH,
+   generalized-locally-Toeplitz          is made gauge-robust and exact.
+   distribution law numerically          Solid as a detector; the forcing
+                                          mechanism is still open
+             |                                       |
+             +--------------------+------------------+
+                                  v
+                  +-------------------------------------------+
+                  |  PHASE 70 - Lee-Yang / de Bruijn-Newman     |
+                  |  RH <=> Lambda = 0 (Rodgers-Tao: Lambda>=0) |
+                  |  The open content is localized to the      |
+                  |  arithmetic direction Lambda <= 0 -- a      |
+                  |  genuine forcing mechanism, the first       |
+                  |  clearly positive turn of this arc.         |
+                  +----------------------+-----------------------+
+```
+
+**A finite architecture, closing into paper 36:**
+
+```
+                  +-----------------------v-----------------------+
+                  |  PHASE 71 - CAND-1 / CCM finite convergence     |
+                  |  The spectrum is real BY ALGEBRA (this route    |
+                  |  never touches Weil positivity at all). The RH  |
+                  |  content is now entirely a question of stable-  |
+                  |  divisor OPERATOR CONVERGENCE.                   |
+                  +----------------------+-----------------------+
+                                         |
+                  +----------------------v-----------------------+
+                  |  PHASE 72 - Feshbach leakage calculus           |
+                  |  Converts the global convergence question into  |
+                  |  a pole-relative leakage estimate -- a strictly |
+                  |  smaller, more tractable target.                |
+                  +----------------------+-----------------------+
+                                         |
+                  +----------------------v-----------------------+
+                  |  PHASE 73 - Cauchy projection gate              |
+                  |  Reduces the leakage estimate to ONE finite      |
+                  |  Cauchy-Schur nodal identity, named NAT-PROJ.    |
+                  +----------------------+-----------------------+
+                                         |
+                  +----------------------v-----------------------+
+                  |  PHASE 74 - Hilbert eigenline cancellation      |
+                  |  NAT-PROJ is rewritten as an exact Hilbert       |
+                  |  product-rule identity, named HPR-DIV.           |
+                  +----------------------+-----------------------+
+                                         |
+                  +----------------------v-----------------------+
+                  |  PHASE 75 - Arithmetic numerator divisibility   |
+                  |  Attacks HPR-DIV via a chain of finite           |
+                  |  arithmetic-divisibility statements:             |
+                  |  ARITH-LOCK => CCM-ROOT-LOCK => CRIT-NUM-DIV     |
+                  |  => CAUCHY-EIG-LOC => HPR-DIV.                   |
+                  +----------------------+-----------------------+
+                                         |
+                  +----------------------v-----------------------+
+                  |  PHASE 76 - Normalized adjugate arithmetic lock |
+                  |  Corrects the endpoint identity to A_L = |C_L|^2;|
+                  |  roughly sixty-five audited sub-steps close it   |
+                  |  down to one remaining limit-point uniqueness    |
+                  |  statement.                                      |
+                  +----------------------+-----------------------+
+                                         |
+                                         v   feeds directly into Part 12
 ```
 
 ---
 
-## PART 4 — Phase 4 internal map (the collapse to classical structure, Days 0–7)
-
-The Phase-4 proof work changed the shape of the problem. We **stopped looking for a new geometry**
-(Connes / de Branges chain / Fock were each entertained and then *not needed*) and the question
-**collapsed back to classical objects**: the explicit formula, off-axis evaluations, and closability.
-That collapse — fewer new constructions, more classical structure — is the maturing pattern.
-
-```
-                         07 detector  ✅
-                              │
-                              ▼
-                  Problem A: Q = P_J 𝒯 P_J ?           🟡 essentially done
-                  (algebraic compression identity)      (Gram tautology + 07-B)
-                              │
-                              ▼
-                  𝒯 exists as a legitimate object
-                              │
-        ┌─────────────────────┴─────────────────────┐
-        │  B-1: self-adjoint realization EXISTS      │  ✅ unconditional
-        │  (von Neumann; conjugation f↦f̃)           │  (deficiency indices equal)
-        └─────────────────────┬─────────────────────┘
-                              │
-   ───────────────────────────────────────────────────────────
-              THE FRONTIER IS NOW CLASSICAL, NOT NEW GEOMETRY
-   ───────────────────────────────────────────────────────────
-                              │
-                              ▼
-              EF-id (audited, stable)                  ✅ unconditional on
-        𝔱(g,g) = Σ_on-line |ĝ(γ)|²                       the dense core 𝒟
-               + Σ_off-line 4·Re[ĝ(t−ib)²]             (RHS INDEFINITE; pos.=RH)
-                              │
-                              ▼
-              TWO INVARIANTS (Day-15, audited):             ◄── constrains the PROBLEM
-              R=K·ρ  governs TRACE-CLASS (T1: R∈L¹ trivial)
-              P=ρ·ℓ  governs CARLESON  (ℓ=√(K/K₁₁) resolution)
-              eval-bounding ⟹ d≥½ ⟹ ℓ≳½ ⟹ P=ρℓ→∞ ALWAYS
-              ⟹ OVER-sampling is FORCED, 𝔱₊ always UNBOUNDED
-                (no T2; only Carleson spaces are de Branges
-                 = resolution-shrinking ⟹ T1 trace-class)
-              home = over-sampling Hardy-band, |E|≍const
-                              │
-                              ▼
-   over-sampling: 𝔱₊,𝔱₋ both UNBOUNDED; coercivity
-   T₊≥c>0 EASY (Beurling over-density, mod finite low-t)
-                              │
-                              ▼
-         FORM-CORE A.2 ≠ frame bound (separates when 𝔱₊ unbounded)
-                              │
-         RFB: 𝔱₋ ≲ 𝔱₊   (Days 16–18)
-           ✗ point-wise routes (Schur/Gram/Jaffard/interp)    ❌ all pay P=ρℓ→∞
-           ✓ STATISTICAL route: P cancels in 𝔱₋/𝔱₊           ◄══ FA ENDS HERE
-                              │                                   STATISTICS BEGIN
-         RFB ⟸ BAND-FIXED QUADRATURE of the zeros (Days 18–19):
-           in PW_d (classical Weil class): E_g = Σ_γ|F(γ)|² − ρ∫|F|²
-           = ∫_{-2d}^{2d} ĝ(α)·D_T(α) dα   (Parseval ✅)
-           |E_g| ≤ ‖ĝ‖₂ · ‖D_T‖_{L²[-2d,2d]}
-                              │
-         ✗ global ‖D_T‖²_{L²}=V(d,T)~T log T : VACUOUS C-S      ❌ (Day-20: loses localization)
-                              │
-         ✓ LOCAL bound: E_g=∫|F|²dS=∫(|F|²)'S                  ◄══ the right object
-           ≤ (sup|S|)·∫|(|F|²)'| ≤ 2d·logT₀·‖F‖₂² = O(𝔱₊)
-           (Bernstein + UNCONDITIONAL S=O(log); logT₀ cancels ρ)
-           B-2 needs O(𝔱₊) [finite const], NOT o(𝔱₊)
-                              │
-         off-line sum (Day-21): PLANCHEREL–PÓLYA (clustering-OK, ◄══ off-line gap CLOSED
-           no separation) + local count ≤ all zeros/cell = O(ρ)     (UNCONDITIONAL)
-           ⟹ 𝔱̃₋ ≤ C_d·ρ·‖F‖₂²  (κ≤e^d uniform; |b|<½<d)
-           [local count O(ρ) not ρ_off (clustering) ⟹ B-2 not RH]
-                              │
-         B-2 ⟸ COERCIVITY: 𝔱₊ ≥ c·ρ·‖F‖₂²                     ◄══ THE remaining input
-           Day-22: D⁻=∞ does NOT suffice (one Nyquist gap kills
-           it — Beurling gap theorem). BUT coercivity only needed
-           NEAR off-line zeros. DEPTH SPLIT:
-             shallow off-line (κ≈1): harmless (sample like on-line)
-             deep off-line (κ up to e^d): danger, but LOCALLY o(ρ)
-               by SHORT-INTERVAL ZERO-DENSITY (uncond, σ>½+δ)
-                              │
-         ⟹ B-2 ⟸ UNIFORM SHORT-INTERVAL ZERO-DENSITY (σ>½+δ)  ◆ THE input; ≪ RH; sharper
-           (deep off-line locally rare). ≪ RH, ≫ "no gaps"        than "no gaps"; ⚠️ frontier
-                              │
-         EVERYTHING ELSE UNCONDITIONAL (A,B,C,Plancherel–Pólya)
-         ⟹ if uniform short-int density holds: B-2 = UNCOND      ◆ §6 prize A∧B; ⚠️ frontier
-           THEOREM (faithful semibounded Weil realization, RH-indep)
-                              │
-   ════════════════════════════════════════════════════════════
-        RH END-GAME (RH-ENDGAME.md): the machinery gives the
-        bottom is FINITE (B-2); RH = its SIGN ≥ 0, UNTOUCHED.
-        Magnitude bounds give |𝔱₋|≤C𝔱₊, C≥e^d>1 ⟹ B-2;
-        RH needs C≤1 (off-line dominated) = positivity = RH.
-        NO density/sampling bound lowers C below 1 without RH.
-   ════════════════════════════════════════════════════════════
-        (A) faithful REFORMULATION: RH ⟺ sign of inf spec(𝒯)   ✅ DONE → PAPER 08
-            = ‖K‖≤1 (Kreĭn/angular). Zero-side NO-GO (08 Thm C):     (04-papers/08-weil-krein-
-            depths enter only through 𝔱 ⟹ zero-side ≡ Weil pos.      realization/) closes this line
-        (B) to PROVE RH: structural positivity 𝒯 = A*A          ◆ the ONLY route; v. low prob
-            (Connes Sonin trace / de Branges chain). MUST be          → PLAN-RH-ROUTE-B-
-            built INDEPENDENT of the zeros (08 Thm C forbids           structural-positivity.md
-            zero-side). NEW PLAN opened; honest target = no-go
-            or identification, not RH.
-                              │
-                              ▼
-                    inf spec(𝒯) ≥ 0 ?  = RH   ⟸ is 𝒯 a square A*A? (the hard core)
-              RH-FALSE residual = ONE inequality
-        (RFB)  |𝔱₋(g)| ≤ a·𝔱₊(g) + C‖g‖²,  a<1       ⬜ the single open target
-                              │
-                  ⟹ closable AND semibounded (B-2)
-                              │
-        THEOREM (Day-11, density-adapted; F1+F2 gaps fixed):
-        K≳1/log + F1 + off-line positive proportion ⟹       ◄── arithmetic difficulty
-        S_off = ∞ ⟹ a=0 IMPOSSIBLE ⟹                            is unavoidable
-        RELATIVE CARLESON (a>0) is forced                       (inside the faithful window)
-        (μ_off=Σδ_{t−ib} vs μ_on=Σδ_γ; fine zero-geometry)
-                              │
-        CONSTRAINT LIST K1–K4 (impossibility results,
-        the durable output): trivial⊥faithful; faithful⊥a=0;
-        Gamma–dB excluded; strong-norm⊥nontrivial
-                              │
-                              ▼
-              0A2 / faithful compression               ⬜ (regains meaning only
-              (does T̄₊ = the right operator?)              once T̄₊ is identified)
-                              │
-                              ▼
-                    inf spec(𝒯) ≥ 0 ?                  ⬜ = RH (norm-independent sign)
-                              │
-                              ▼
-                             RH
-```
-
-**Where we stand on *this program's own* ladder** (not "% of RH" — that would be meaningless):
-
-```
-  07 detector .................... ✅
-  Problem A (compression) ........ 🟡 essentially done
-  B-1 (realization exists) ....... ✅ unconditional
-  EF-id (audited) ................ ✅ unconditional on dense core
-  SCALING LAW faithful ⟹ Kρ ∉ L¹ ........ ✅ necessary, model-indep (Day-12)
-  DENS.1 audited (reg-varying K) ........ ✅ holds; critical law uncond (Day-13)
-  invariants: R=Kρ (T1 trace-cl) vs P=ρℓ (Carleson) ✅ separated (Day-15)
-  over-sampling FORCED (ℓ≥½ ⟹ P→∞) ...... ✅ 𝔱₊ always unbounded; T2/K5 ❌ (collapses to T1)
-  genuine space = over-sampling Hardy .... ✅ 𝔱± unbounded; coercivity EASY
-  Carleson: P≲1 ⟹ Carleson (Schur) ...... ✅ suff. only; P→∞⟹𝔱₊ unbdd direct ✅
-  RFB: point-wise routes all fail (P→∞) . ❌ Schur/Gram/Jaffard (Day-17 errors fixed)
-  RFB ⟸ STATISTICAL quadrature (P cancels) ◆ Day-18, the right object
-  RFB ⟸ band-fixed quadrature (PW_d, Parseval) ✅ E_g=∫ĝ·D_T; |E_g|≤‖ĝ‖₂‖D_T‖_{L²}
-  ❌ global V(d,T) C-S vacuous ........... Day-20 (loses localization; "Montgomery" was artifact)
-  ✓ LOCAL E_g=O(𝔱₊) uncond (IBP+Bernstein+Selberg S=O(log)) ◆ B-2 needs O not o
-  Proofs A/B/C verified .................. ✅ IBP, Bernstein+Selberg E_g=O(𝔱₊), vertical e^d
-  off-line CLOSED (Plancherel–Pólya) ..... ◆→✅ 𝔱̃₋≤C_d·ρ‖F‖₂² uncond (clustering-OK)
-  coercivity: D⁻=∞ does NOT suffice ...... ◆ Day-22 (Beurling gap thm; referee right)
-  depth split: deep off-line = only danger ◆ shallow κ≈1 harmless; deep locally o(ρ)
-  B-2 ⟸ uniform short-int zero-density ... ◆ THE input (σ>½+δ); ≪ RH, ≫ "no gaps"; ⚠️ frontier
-  ⟹ if it holds: B-2 = UNCOND THEOREM ... ◆ §6 prize A∧B (no Montgomery!) ⚠️ frontier
-  ── Day 23 ────────────────────────────────────────────────────────────────────
-  hypothesis (H) = uniform local sparsity .. ◆ (H)⟹coercivity⟹B-2; (H) NOT uncond (Selberg
-    of deep off-line (≪RH, frontier)            large-dev allows sporadic cluster); genuinely needed
-  THEOREM A: 𝒯 semibounded, inf spec≥1−4C .. ✅ modulo (H); RH ⟺ sign of bottom (PAPER-A §5)
-  KREĬN: 𝔱 = E*JE, J=J*, J²=I .............. ✅ uncond; negativity of J = exactly off-line (§6)
-  ANGULAR OP: 𝔱=‖P₊EF‖²−‖P₋EF‖² (no /4) .... ✅ uncond; B-2=‖K‖<∞, RH=‖K‖≤1, ‖K‖≥e^{d/2} (§7)
-  THEOREM C = NO-GO: depth gives 0 leverage  ✅ PROVED; 𝔱_zero-side=𝔞+𝔮−𝔭 (no b_ρ);
-    (zero-side ‖K‖≤1 ≡ Weil positivity ≡ RH)    sign-agnostic⟹‖K‖²≳e^d (wrong side) (§8)
-  ≈ Connes–Consani (2006.13771) / 2301.00421  ✅ situated; strongly analogous, NOT proven identical
-  inf spec(𝒯) ≥ 0  =  ‖K‖ ≤ 1 ............. ⬜ = RH (sign); needs STRUCTURAL positivity 𝒯=A*A,
-                                               provably NOT reachable from zero side (Thm C)
-
-  ████████████░░░░░░░░░░░░░░░░░░   (progress along the identified path, not toward RH)
-```
-
-**Day-23 update (cold read).** Path (A) is **closed**: Paper A (`phase-4-handoff/PAPER-A.md`) states the
-faithful semibounded realization (Thm A, modulo (H)), the exact Kreĭn structure collapsing everything onto
-$\|K\|$ (Thm B), and a **no-go** (Thm C) proving the zero-side cannot reach the sign — the off-line depths
-enter only through $\mathfrak t$ itself, so bounding $\|K\|\le1$ from the zero side *is* Weil positivity. The
-program now converges to a single precise inequality, $\|K\|\le1$ (= RH), with a theorem explaining why this
-door does not open. Bibliography places it as **strongly analogous to Connes–Consani** (not proven identical).
-**No step past the sign barrier; high conceptual value.** The sign requires structural positivity
-$\mathcal T=A^*A$ (route (B)) — untouched, and provably unreachable from the zero side.
-
-**ROUTE B (phase-5-structural/) — opened; plan = `PLAN-RH-ROUTE-B-structural-positivity.md`.** The only open
-route: is $\mathcal T=A^*A$ for $A$ built **independent of the zeros**? Fronts B3 (identify) → B2 (Connes
-residual) → B1 (factorize / no-go).
-- **M1 (B3.1) DONE — `phase-5-structural/B3.1-connes-comparison.md`.** Compared 08 vs Connes–Consani
-  (eqs 7–14, Thms 1/3/6.11). **Universal template** (Prop B3.1.1): RH$\iff\|K\|\le1$ for ANY metric
-  decomposition — so matching shape ≠ bridge. **Prop B3.1.3 (proved, panel-corrected wording):** $K_{08}=0\iff$RH
-  (zero-dependent, vanishes on RH) vs $K_{CC}\ne0$ fixed compact (zero-INDEPENDENT) ⟹ **no natural
-  zero-independent unitary identification** (not "same wall" — "same Kreĭn template"). **Cor B3.1.4: 08's no-go
-  does NOT transport to $K_{CC}$** — Connes residual is the genuine, unobstructed attack surface. Both positive
-  parts are already manifest squares ($A^*A$); the whole problem is **non-negativity of the semi-local Connes
-  residual**.
-- **M2 (B3.2, de Branges) DONE — `B3.2-de-branges-comparison.md`.** Structure functions $A,B$ of $E_\xi$
-  (zero-indep); certificate (Hermite–Biehler / kernel positivity) $\iff$ RH = same template; specific de
-  Branges positivity hypotheses **refuted (Conrey–Li 2000)**. Different mechanism (CHAIN ordering). Durable:
-  Obs B3.2.1 — under RH, **de Branges chain ↔ 08 sampling ladder**. **Verdict: deprioritized** (no new attack).
-- **M3 (B2, semi-local residual) DONE — `B2-semilocal-residual.md`.** Semi-local $\mathrm{Id}-K_{CC}\succeq0\iff$RH
-  = open frontier. $PW_d$↔prolate **superficial** for global 08 (CC=time∧band@$\Lambda$=1; 08=band-only@free $d$)
-  but **REAL for localized 07** (Hermite–Gauss→Slepian). Operative experiment: 07-prolate Gram vs CC compression.
-  Magnitude-vs-sign trap reapplied: estimate sharpening ≠ sign. True frontier = **cross-place semi-local
-  cancellation** (Connes geometric program; zero-indep, unobstructed by 08, beyond a bounded milestone).
-  *(Editorial: M1 "$K_{08}=0\iff$RH" qualified to "within the §§6–7 realization"; M2 Obs B3.2.1 downgraded to
-  organizational insight. Panel-ready.)*
-
-**CREATIVE FRONTIER PROGRAM — `PLAN-RH-FRONTIER-creative-program.md`** (continues route B). Mix the Connes
-frontier with the program's unique assets — 07's **computable semi-local localized** Weil engine + an
-**explicit RH-violator $L_{DH}$** (04). Organizing Q: *which arithmetic invariant forces $\|K\|\le1$ for
-$\zeta$ but $>1$ for an RH-false L-function?* Directions: **α** semi-local spectral flow · **δ** the
-$\zeta$-vs-$L_{DH}$ discriminant (novel, asset-unique) · **β** sine-kernel/GUE identification · **γ** global
-adèle-class square via GNS (north star, <1%). **M4 = combined experiment:** Slepian-prolate localized residual
-spectrum for $\zeta$ AND $L_{DH}$ (extends 07 engine) → spectral flow + discriminant + sine-kernel at once.
-Output `phase-5-structural/experiments/`. Honest prior: durable structure, not RH.
-
-**M5 — PURE-THEORY CLASSIFICATION PROGRAM — `phase-5-structural/M5-classification-pure-theory.md`.** Panel
-reframe: declared goal = **anatomy of L-functions, RH = north star**; tautology test mandatory & first.
-**SPINE (proved):** the panel's tautology test = **our 08 Thm C + M1 Prop B3.1.3** — zero-side $K_{08}$ IS the
-tautology (zero-functional, =0 on RH); arithmetic-side $K_{CC}$ provably distinct + real-analytic in the Euler
-factors ⟹ non-tautological invariant exists on the Connes side BY THEOREM (test passed before any experiment).
-**Pure-math path:** T1 anti-tautology/analyticity (first); **T2 forced spectral transition = 07 Thm I lifted**
-($\lambda_{\min}(Q)<0\iff\|K\|>1$, rate $\delta^2A(\gamma)$, transversal crossing — near-in-hand); T3 anatomy
-$R_\infty+\sum_p R_p$ (which arithmetic ingredient forces the crossing); T4 classification $\Phi(L)$ (partial
-realistic, full=RH). Deformation family D1(zeros=control)/**D2(Euler@fixed-$d$ = anti-tautology witness, run
-first)**/D3(conductor). Declared goal RH-independent; provable spine in hand.
-- **FOUNDATION CORRECTION + PROOFS — `M5-T1-T2-proofs.md`.** Hostile audit: dropped my conflated "$K_{CC}(L)$
-  via CC eq.14" (prolate eigenvalues ≠ L-coefficients); rebuilt on **07's computable $Q_{\mathrm{arith}}(L)$**,
-  $\lambda_{\min}(Q)<0\iff\|K\|>1$. **T1 ✅ PROVED:** $I^{(X)}=G_X(\{\Lambda_L(n)\}_{n\le X})$ is local+analytic,
-  $d(L)$ is global ⟹ $I\ne f(d)$ (tautology test passes on the computable invariant). **T2 ✅ PROVED** (lifts
-  07 Thm I): transversal crossing $\|K\|=1$ at $\delta_*^2=m_0/(c|\langle u_0,v\rangle|^2)$, explicit
-  arithmetic threshold. **Analytic D2 ✅ PROVED:** $\partial I/\partial\Lambda_L(n)=\tfrac1{\sqrt n}|\widehat{u_0}(\log n)|^2$,
-  $\nabla I\not\parallel\nabla d$ (constructive non-tautology).
-- **NUMERICAL D2 RAN — `experiments/{d2_gradient_check.py,M4-D2-results.md}`.** **Prop D2 ✅ confirmed to
-  $10^{-7}$** (fixed a complex-Hermitian bug); gradient spread over ~14 Euler factors (non-tautology
-  exhibited). **T2 $\delta^2$ law ✅ confirmed by 07 validated data** (engine-spec §4: $\alpha\approx2.03$,
-  $R^2=0.999$). **Two honest negatives:** (1) my self-contained Gram lacks 07's baseline (RH-true ζ wrongly
-  $\lambda_{\min}<0$) — absolute margins artifact, need real engine; (2) **the scalar $\lambda_{\min}$ is
-  near-tautological** (07 validated: off-line detector, floor for all RH-true, fires only for $L_{DH}$) ⟹
-  **scalar margin RETIRED as the invariant**. **REDIRECTION:** the non-tautological invariant is the per-prime
-  **anatomy $R_p$ / gradient profile (T3)**, not the scalar.
-- **T3 ANATOMY (analytic) — `T3-anatomy.md`** (advisor's ordering: formalize T3 BEFORE the engine). **T3.1 ✅
-  exact:** $\lambda_{\min}=R_\infty(u_0)-\sum_p R_p(u_0)$, $R_p=\sum_k\frac{\Lambda_L(p^k)}{\sqrt{p^k}}|\widehat{u_0}(k\log p)|^2$.
-  **T3.2 ✅** mass form $\lambda_{\min}=\min_{\|u\|=1}[R_\infty(u)-\|\mu_u\|]$ = archimedean-square vs
-  prime-mass competition (RH-true ζ = balanced at floor). **T3.3 ✅** gradient = anatomy density (D2 already
-  measured the surviving profile). **T3.4 ✅** observed band ($\log p\approx3.3$–3.7) is **Hermite-basis
-  enveloped** ($\lesssim\sqrt{2J}/\sigma$), not yet arithmetic — demoted to a lead. **T3-open ⬜:**
-  concentration theorem; $R_p\leftrightarrow$ Euler-factor $L_p$; profile discriminant $\Phi$. **Phasing:** Ph1
-  (T3 done) → Ph2 (Slepian re-derivation + $R_p\leftrightarrow L_p$, analytic) → Ph3 (validated engine measures
-  $\mathcal R(\zeta)$ vs $\mathcal R(L_{DH})$, the surviving profile).
-- **PHASE 2 (analytic) — `Phase2-Rp-Euler.md`.** Decisive Q: is $\{R_p\}$ new info or just $\{a_p\}$? **A ✅**
-  anatomy subspace-intrinsic; Slepian = flat-box envelope; **band test (no engine):** divide out envelope, does
-  the band persist? **B (Prop B1) ✅** $R_p=\sum_k a_{p^k}W_k(\log p)$ (windowed local factor). **Honest:**
-  leading $R_p\approx a_p W_1$ = $a_p$ re-weighted (deflation REAL); new content = Satake corrections +
-  self-consistent $W[u_0]$ + **factorizability $\equiv$ Euler product** (ζ factors, $L_{DH}$ no Euler product
-  doesn't = the discriminant). **C ✅** stability $\|\mathcal R(L)-\mathcal R(L')\|\le Ce^{-\alpha(\log P)^2}$
-  (quantitative T1). Invariant sharpened → multiplicative structure. **T4 seed:** is positivity transparent in
-  $\{R_p\}$ (factorizability+Ramanujan ⟹ $\sum R_p\le R_\infty$ on a sub-class)? → then Ph3 → panel.
-- **T4-SEED (analytic) — `T4-seed.md`.** Advisor corrections: factorizability ⇒ Euler only (converse =
-  **Conjecture B2**); C flagged autonomous; T4 reformulated (inequality natural in $R_p$, opaque in $a_p$).
-  **T4-I ✅** positivity $\iff$ prime measure $\nu_L$ **Carleson $\le1$** in archimedean metric; **finite bound
-  unconditional** (Ramanujan ⟹ B-2 reappears), $\le1$ = local RH. **T4-II ✅** $\lambda_{\min}$ **concave +
-  monotone** in prime masses ⟹ **extremal reduction** (box $\iff$ one $\zeta^2$ check). **VERDICT: program
-  SURVIVES** — positivity IS structural in anatomy coords (Bessel/Carleson + concave/extremal), genuine
-  inequalities opaque in $a_p$ — **but the sign wall is unmoved** ($\le1$ = local RH). Ph3 target: measure
-  Carleson constant $\nu_\zeta$ vs $\nu_{L_{DH}}$ + test Conj B2. Theorem C (stability) = autonomous result.
-- **PAPERS 09 + 10 written & compiled** (advisor's two-paper split). **09** `04-papers/09-stable-arithmetic-fingerprints/`
-  (4pp) — autonomous RH-INDEPENDENT stability theorem ($\|Q(L)-Q(L')\|\le Ae^{-\alpha(\log P)^2}$) = the durable
-  result. **10** `04-papers/10-anatomy-local-invariant/` (4pp) — anatomy + Carleson reformulation + Conjecture
-  B2 (factorization ⇒ Euler), the speculative RH program, no sign. Index now 01–10. T4-II corrected (extremal
-  reduction is the theorem; corner-positivity open).
-- **PHASE 3 (first pass) — `experiments/Phase3-results.md`.** **Band test ✅ CONFIRMS T3.4:** anatomy density
-  rises to the Hermite turning-point edge (peak $p\approx59$, $\log p\approx4.1$) = **basis artifact, not
-  arithmetic**; real test needs Slepian. **Carleson constant $C(L)=\lambda_{\max}(A_\infty^{-1/2}P A_\infty^{-1/2})$
-  — BLOCKED:** self-contained engine FAILS the ζ gate ($C(\zeta)\approx1.98>1$, likely factor-2 normalization,
-  not fudged); $L_{DH}$ no-Euler-product needs handling. **Faithful Phase-3 measurement requires 07's validated
-  engine** (engine-spec §3) — the open engineering task. Analytic program (09/10/T1–T4) unaffected.
-- **PHASE 3 — VALIDATED COLAB ENGINE (zero side) — `experiments/colab_phase3_engine.py`.** Found the correct
-  convention: Weil symmetrization $M[i,j]=\sum_\rho g_i(t-i\delta)\overline{g_j(t+i\delta)}$ (pair $z$ with
-  $\bar z$, NOT $g_i(z)\overline{g_j(z)}$=PSD dead-end) + in-window locality. **Self-validating gates ALL PASS:**
-  ζ at floor ($5\times10^{-5}$), **δ² forced-negativity law exponent 2.04 vs engine-spec 2.03 ✅**. Positivity
-  read directly: $\lambda_{\min}(M_{\mathrm{zeros}})\ge0\iff$ local positivity (no arithmetic side). $L_{DH}$
-  κ-construction FIXED ($(1\mp i\kappa)/2$, κ=0.28408, reproduces ref off-line zero; self-checks). Arithmetic-
-  side Carleson NUMBER omitted (structural mismatch, residual 0.58). User runs it in Colab → ζ_δ curve +
-  (DO_LDH=True) $L_{DH}$ violation. **Phase 3 RESOLVED for the zero side (the positivity sign); Carleson
-  absolute number stays uncalibrated.
-
-**MOONSHOT — RH via Osterwalder–Schrader reflection positivity — `PLAN-RH-MOONSHOT-OS-reflection.md`.** Past
-the wall, no bibliography. **Insight:** the Kreĭn $J$ ($\rho\mapsto1-\bar\rho$) = the functional-equation
-reflection ⟹ Weil positivity = **OS reflection positivity** ($\Theta=J$, time $\tau=$ off-line $\delta$).
-**Leverage:** OS reconstruction ⟹ self-adjoint $H\succeq0$ = **Hilbert–Pólya for free** ⟹ RH. **Mechanism:**
-**Euler product = reflection-positive lattice** $\prod_v L_v$; RP ⟸ (local RP per place) + (tensor gluing).
-Consistency: $L_{DH}$ (no Euler) violates RH = predicted; **= the mechanism behind Conjecture B2**. Skeleton
-S1 (OS form, engine-tested) → S2 (per-place RP) → **S3 gluing (hard core)** → S4 (OS reconstruction ⟹
-Hilbert–Pólya ⟹ RH). Validated engine = falsifiable guide (δ² curve IS the OS RP test). Hedges: H1 rigidity,
-H2 function-field interpolation. Odds RH <1%; prize = S3 or its no-go. First move M-OS-1: write S1 + test.
-- **PHASE 6 STARTED (`phase-6/`).** **S1 (M-OS-1) ✅ recasting:** Weil's criterion IS reflection positivity —
-  Weil's involution $\tilde\psi=\overline{\psi(-\cdot)}$ IS the functional-eq reflection. **S2 (M-OS-2) —
-  COMPUTED & REFUTED ❌:** local prime form $\int|\widehat\psi|^2 G_p$, $G_p(r)=\frac{2\log p}{p|1-z|^2}(\sqrt p\cos(r\log p)-1)$
-  is **INDEFINITE** ($G_p(0)>0$, $G_p(\pi/\log p)<0$; verified p=2,3,5,7 to all digits) ⟹ **per-place
-  reflection positivity FAILS** ⟹ the Euler-lattice mechanism collapses; positivity is cross-place (=Connes).
-  S1 corrections: S1.1 separate-$\Theta$ step bogus (reflection = the involution); S1.4 Hilbert–Pólya-for-free
-  RETRACTED (two-point fn oscillatory, not OS-decaying). **Moonshot mechanism + prize both fail on
-  computation; recasting survives.** A rigorous no-go.
-- **PHASE 6 — the S2 refutation POINTS somewhere (`S2-followup-incoherence.md`).** Exact $G_p$ ⟹ **RH $\iff$
-  $\Omega_\infty(r)\ge(\sum_p G_p)_{\rm reg}(r)\ \forall r$** = archimedean envelope dominates the prime comb,
-  pointwise. The comb's spike $F(r)=\sum_p\frac{2\log p}{\sqrt p|1-z_p|^2}\cos(r\log p)$ is essentially
-  $\zeta'/\zeta$ on the line = **constructive interference = large values of ζ** (Bondarenko–Seip). Lever:
-  $\{\log p\}$ **ℚ-independent = unique factorization** ⟹ prime oscillators **incoherent** ⟹ no spike ⟹ RH;
-  $L_{DH}$ (no Euler ⟹ ℚ-relations ⟹ coherence ⟹ spike ⟹ off-line). **Sharpens Conjecture B2** to a
-  frequency-resonance statement. **Our ω-class assets (paper 02, absorbing ex-P4/P5) bound the interference spike** = sub-problem
-  S2f-1. Honest: the large-values frontier (self-referential, open, tied to RH) — NOT an obvious crossing, but
-  the RIGHT frontier and our most-equipped one.
-- **PHASE 6 HONEST META-CONCLUSION (`S2f-PROGRESS-HONEST.md`).** S2f-1 attempted → the S2-followup §1
-  reduction is **FLAWED** (the comb $\sum_pG_p$ is **distributional**, $=\Omega_\infty-2\pi\sum_\rho\delta_{\gamma_\rho}$;
-  "envelope ≥ comb pointwise" is false; cannot take $\hat\varphi\to\delta$). Across phase 6 **every idea
-  claiming leverage on the SIGN failed on audit** (S1.4 retracted, S2 refuted, S2f §1 flawed). **NO sound new
-  path across the wall.** Durable: 09, the validated detector, the no-gos (**N1** positivity doesn't localize
-  per prime — $G_p$ indefinite, publishable; **N2** no naive OS Hilbert–Pólya; 08 Thm C) + the precise map
-  (sign = cross-place conspiracy = large values = Connes KMS). Recommendation: consolidate; engage the open
-  core only with eyes fully open (<1%).**
-
-**What changed (cold read).** Before Day 0 the picture was *"RH ← new geometry (de Branges/Connes/Fock)."*
-After Day 7 it is *"RH ← Weil positivity ← explicit formula ← off-axis evaluations ← closability,"* all
-classical. Each day eliminated a transient reformulation (soft perturbation, the symbol $\Phi$, naive
-$L^2$, a pure-de-Branges chain, a Fock pivot, and two truncation-artifact "blow-ups" — B2.3 and BR.1,
-both **retracted**). What survived a deliberate hard audit: **B-1 (unconditional), EF-id (unconditional on
-the core), $\mathfrak t_+$ closed (Kato), and RH-world closability** — leaving the *entire* remaining
-difficulty in **one zero-density inequality (RFB)**. The program is **not measurably closer to proving
-RH** than a week ago, but it has **located the real obstacle far more precisely**, and that second claim
-is now much more solid than at Day 0. *(Full derivations and retractions: `phase-4-handoff/proofs/`.)*
-
----
-
-## PART 6 — Phases 7–11: the eight-language wall, the cornered target, and the capstone (Days 24–28)
-
-After Phase 6's honest meta-conclusion, the program engaged the open core and the modern paradigms. Every
-route reduced to ONE statement, explained by ONE principle.
-
-- **PHASE 7 (`phase-7/`, 12).** Built the band-limited **Weil–Carleson constant** $C(d,T_0)=\lambda_{\max}(P_F,A_\Phi)$,
-  $\mathrm{RH}\iff C\le1$. **N3 — saturation:** $C\equiv1$ for ζ in the natural regime; prime incoherence buys
-  **zero** margin (measured). **B1 — sine-kernel bridge:** the detector's 2nd order **is** the Montgomery–Dyson
-  pair correlation; off-line $\delta^2$ detection. **N4 — Connes prolate bridge:** $C(d,T_0)$ IS the
-  Connes–Consani prolate compression; archimedean contraction $\lambda_{\max}(c)<1=A_\Phi\succ0$ provable; finite
-  places not per-place positive; **same wall**. → 12 (the five-language map).
-- **PHASE 8 (`phase-8/`, 13).** The **de Bruijn–Newman heat flow** ($\mathrm{RH}\iff\Lambda=0$). **Lyapunov
-  theorem** $\dot{\mathcal L}=-2\sum(y_j-y_k)^2/|z_j-z_k|^2\le0$ → critical line = the flow's attractor; violator
-  height $\le0.63$. **N5 — dynamical no-go:** the flow is **arithmetic-blind** (subsumes PT-symmetry / dissipative
-  heuristics). $\Lambda=$ first backward collision (extremal); the normalized margin $t_c/s^2\approx-0.02$
-  (universal) → target = **unconditional gap universality**.
-- **PHASE 9 (`phase-9/`).** **N6 — no arithmetic-aware monotone escape:** every flow-monotone $\mathcal F[H_t]$ is
-  generic-blind / archimedean-count / prime-aware-via-explicit-formula-=-wall (EF verified to $5\times10^{-12}$).
-  **T9-A:** the upper tail = short-interval prime variance; the unconditional tool $F\ge0$ is **wrong-signed**. →
-  the **WRONG-SIGN CAPSTONE** (every unconditional handle is a lower-bound positivity; RH is an upper constraint).
-  **T9-cal exchange rate:** prove $F(\alpha)\le O(1)$ up to $\alpha=A$ ⟹ analytic RH for $\sim A^3$ zeros.
-- **PHASE 10 (`phase-10/`, 14).** The **cohomological / Hodge-index turn** (built to escape the capstone, like the
-  Weil-conjecture proof). **M10.1:** the candidate intersection form degenerates toward ζ — the four-way
-  unification $C\equiv1=\Lambda{=}0=$ vanishing Hodge gap $=$ degeneration. **M10.2:** the **regularized** gap
-  survives (definite primitive form). **Deep run + M10.4:** $\lambda_{\min}(G)=\tfrac{\pi^2}6\beta_{\min}^2$ → prices
-  identically to T9-cal; RH $\iff$ uniform Riesz / Muckenhoupt $A_2$ / **$S(T)$ regularity**. Capstone holds (the
-  lower frame bound is an upper-clustering constraint).
-- **PHASE 11 (`phase-11/`, 14).** The **hyperbolicity / stable-polynomial route** (the most promising NEW
-  mechanism — real-rootedness via interlacing, not positivity). **M11.1–M11.2:** Jensen polys of $\Xi$ hyperbolic;
-  interlace (MSS precondition); the positivity is **total positivity** of $b(k)=(-1)^ka(k)$. **M11.3:** the
-  dBN-moment identity $b(k)=m_{2k}/(2k)!$; the shift = differentiation = stability preserver, **arithmetic-blind**
-  (control $\cos$ = ζ structure). **M11.4–M11.5 (decisive):** real-rootedness **is** the Hermite-form positivity;
-  MSS rests on PSD real-stability (Borcea–Brändén). **The capstone HOLDS even here** — the richest positivity
-  language, but a positivity. → 14.
-
-> **HEADLINE (Days 24–28).** Eight independent paradigms — explicit-formula/Kreĭn, per-place, Carleson,
-> pair-correlation, Connes prolate, heat-flow, cohomological Hodge, hyperbolicity — **all reduce to a positivity
-> and to the cornered target (U)** (unconditional extremal gap universality, priced $A\leftrightarrow A^3$). The
-> deepest output is the **wrong-sign capstone**: every unconditional handle is a lower-bound positivity; RH is an
-> upper constraint; positivity is the wrong sign. Confirmed across all eight, including the two (Hodge, MSS) built
-> to escape it. Durable identities: $\lambda_{\min}(G)=\tfrac{\pi^2}6\beta_{\min}^2$; $b(k)=m_{2k}/(2k)!$. Papers
-> 01–14. A chart of the wall of unusual completeness — not a passage.
-
----
-
-## PART 7 — Phase 12: the first mechanism-correct path (Days 29)
-
-The capstone itself dictated the move: a mechanism whose native output is an unconditional UPPER bound, not a
-positivity. The unique such machinery tied to ζ — **log-correlated fields / multiplicative chaos**.
-
-- **M12.1** $S(T)$ is log-correlated (covariance slope 0.0465 ≈ 1/2π²); tight pairs = steepest S rises.
-- **M12.4** the upper bound is a union/first-moment (Markov) — **NOT a positivity → ESCAPES the capstone (1st time)**.
-- **M12.3 → N7** the probabilistic–deterministic barrier (describes the ensemble statistics, not the deterministic
-  off-line count). Two fundamental obstructions: capstone (deterministic = positivity, wrong sign) + N7
-  (probabilistic = statistics, wrong object).
-- **M12.5 (bridges N7)** derandomize: S(T) = explicit-formula prime sum (verified) → union count = prime-sum
-  large-value count, bounded by the **large sieve** — deterministic + upper + non-positivity (first tool all three).
-- **M12.6–M12.7 (landing)** moment method sharp in reach (Gaussian by ℚ-independence); the extreme = near-resonances
-  |Σ±log p_i|<1/W = the **multiplicative additive energy of {log p} = paper 02's ω-class moments (ex-P5)**. Baker = right
-  mechanism, exponentially too weak; the energy (count) bounded by sieve, sharp low-order; high-order = the
-  **moment-conjecture (CFKRS) frontier** = Arc A.
-
-> **HEADLINE (Day 29).** Phase 12 is the program's FIRST mechanism-correct chain end to end: it escapes the
-> wrong-sign capstone and bridges N7, reaching the extreme large values of ζ by a route that is deterministic,
-> upper-direction, and non-positivity throughout. The remaining wall is a genuine open problem (a sharp high-order
-> additive-energy bound for {log p} = the moment conjectures), neither the capstone nor N7 — and exactly where the
-> program began (Arc A, the ω-classes). For the first time, the obstruction is the right one.
-
----
-
-## PART 8 — Phases 13–14: the closure, the discriminator, and the unconditional finite bottom (Days 30–39)
-
-After Phase 12 reached Arc A, the program turned from attacking to **mapping the wall and building an instrument**.
-
-- **05 (RH-independent).** ω-hierarchy = chaos = moments = BRW; z=β² dictionary; d_k²=(k²)^ω; both FHK terms from
-  depth+Bramson. Real new math, not zeros-facing.
-- **The ω→zeros line CLOSED (M14.1–3).** Motohashi/additive-divisor = density; z^ω = ζ²·G_z; **G_z=∏ζ(Ns)^{c_N}
-  (ζ-isobaric) ⟹ SELF-REFERENTIAL** because ω is prime-blind. The ω-direction cannot reach the zeros.
-- **N8 formulated then REFUTED.** Density→absence = square-root cancellation barrier — broken by **de la Vallée
-  Poussin** (ζ(1+it)≠0 = exact absence with NO cancellation, only positivity+pole). N8 was a symptom.
-- **Anchor = LANDAU SINGULARITY.** ζ-free framework (Theorem A recovers de la Vallée Poussin). **Stage-2 test vs the
-  one PROVEN RH** (function fields): the geometric anchor is the TRIVIAL-cohomology EDGE pole, NOT a center anchor;
-  RH proven by the HODGE INDEX (definiteness), so the anchor route collapses to Weil positivity. Missing object =
-  **SURF**: a Hodge index theorem on a 2-dim arithmetic geometry over Spec ℤ (= live Connes–Consani program).
-- **The DISCRIMINATOR D0.** Escape ⟺ I1 (prime-distinguishing) ∧ I2a (independent input) ∧ I2b (decisive general
-  theorem) ∧ I3 (individual-resolving) ∧ I4 (arithmetic-aware). Three-valued (RECOGNIZE-PASS / OPEN / REJECT).
-  Calibrated against ~30 historical programs + 4 positive controls (function-field RH ×2, Fermat, BSD); the
-  near-false-positive (Connes) forced splitting I2→I2a∧I2b. Library of constraint-theorems + matcher; all ζ-routes
-  blocked by R1–R3 (missing geometry = SURF) or R4 (object-special trap = CAP).
-- **Bin three + the FINITIZATION OBSTRUCTION.** The only possible new object is a FINITIZATION (finite-dim model of
-  ζ's positivity) = a Frobenius PERIODICITY (function-field zeros = 2g mod period 2π/log q). **Under Linear
-  Independence of {γ_n}, no periodicity exists ⟹ no finitization** (06, Thm). The 𝔽₁ period 2π/log q → ∞ as q→1.
-  Finite-to-full positivity gap: 4 families (Hodge, Hankel, total-positivity/Pólya, combinatorial-Hodge), every
-  finite order unconditional, full order = RH.
-- **Option (b) — Pontryagin index κ — CLOSED by computation.** κ = #off-line zeros; κ<∞ ⟸ RFB_X (tail relative
-  form bound). Two computations close it: (I) subordination cutoff X*(d)~e^{2d}/10 → ∞ (finite-rank head fails);
-  (II) near-critical multiplicity grows linearly 3,11,19,27 (finite defect fails — near-null space infinite-dim).
-  Criticality is SELF-SIMILAR. Cross-scale probe: √N overcome pointwise, saturation boundary-exact via
-  sign-alternating octaves (octave-resolved N3).
-- **The (LB) made UNCONDITIONAL mod log (paper 16, ex-P17).** Verified identity V(d,T)=∫_{-2d}^{2d}|S|²dξ (real zeros, err 1e-6);
-  large sieve ⟹ 𝔱 ≥ −C(log T)^c‖g‖² UNCONDITIONAL; Goldston–Montgomery equivalence reduces the clean (LB) to a
-  UNIFORM short-interval prime variance — NON-CIRCULAR, strictly sub-RH. Three-level hierarchy: (S) semibounded <
-  (κ) finite index < (R) RH.
-
-> **HEADLINE (Days 30–39).** The program closed its own strategy map: every RH-directed branch collapses to the
-> capstone/SURF, unified as the absence of a finite-dimensional (Frobenius-periodic) model of ζ's positivity,
-> obstructed under LI. The instrument (discriminator D0, calibrated on the one proven RH) routes all future ideas
-> into REJECT / OPEN-on-SURF / NEW-THEOREM-REQUIRED. The one genuinely new RH-DIRECTED gain is paper 16 (ex-P17): the localized
-> Weil form is unconditionally semibounded mod log, with the residue a recognized sub-RH frontier (uniform
-> short-interval prime variance), NOT RH. Genuinely new mathematics produced (05, 09, B2conj) is RH-independent.
-> Papers 01–17 (new numbering; ex-P1–P17). The map is, with this, complete; the wall is charted from every accessible side and named
-> precisely (finitization obstructed under LI); no non-circular passage was found, and the honest residue is a
-> single sub-RH prime-variance frontier with an unconditional partial result in hand.
-
----
-
-## PART 9 — Phase 15→16: the Lefschetz dichotomy and the SURF spec sheet (2026-06-06)
-
-Phase 15 (Anatomy–Kreĭn–Hodge, M1–M10) built the full Weil scaffold for Spec ℤ and reduced RH to one object — an
-independent hard-Lefschetz sl₂ / Kähler class ω — then proved why the spectral routes cannot supply it:
-
-- **M1–M2:** arithmetic intersection pairing + trace identity + effectivity + ample cone (verified 1e-12).
-- **M3 (8 attempts) / paper 17 (ex-P21):** RH ⟺ ω ≻ 0 on Π⊥; the missing ω must satisfy the INDEPENDENCE FILTER (L ∉ W*(𝒯)) — any
-  spectral L only restates RH.
-- **M4 / paper 17:** archimedean density Ψ = smooth zero-density (Ψ'>0, r₀=6.29<γ₁); first EXPLICIT 𝒯-independent
-  hard-Lefschetz sl₂ on the continuum (L=T_c, verified 1e-12); transport = explicit formula Q=A_∞−P; positivity is the
-  near-cancellation residual = CAP.
-- **M5 / paper 17 (the Lefschetz dichotomy):** integer (lowest-weight) HR grading and the LI arithmetic zero-spectrum are
-  INCOMPATIBLE — discrete horn (no Tate-twist op on the zeros) + continuum horn (principal series, no HR). Sharpens
-  06 to a representation-theoretic obstruction.
-- **M6:** prismatic route (Advisor 4-2) relocates to SURF — prismatic Frobenius = local Satake/anatomy, not global
-  zeros; integer Lefschetz exists LOCALLY (weights), obstruction is global gluing.
-- **M7:** an advisor "incompleteness theorem" independently re-derived all of this (no proof in spectral data).
-- **M8:** a submitted "Connes proof of RH" REFUTED — 6 fatal flaws (continuous-spectrum ⇏ SU(2); h_ρ formula circular;
-  moment-inversion underdetermined; spectral L; divergent input).
-- **Research Program 9 (M9):** the guarded literature program returned 3 honest negatives (= our 3-route obstruction) + 1 new
-  RH-independent constraint (Δ₃ rigidity plateau ≈0.1908, prime-power design constraint).
-- **M10:** the advisor "Arakelov–RH equivalence" — the one-directional theorem **∃𝒳 (witness variety) ⟹ RH** is the
-  honest content (Yuan–Zhang transport); the converse (RH ⟹ 𝒳) is the OPEN Hilbert–Pólya dream, possibly false (the
-  zeros may not be geometric).
-
-**PHASE 16 LAUNCHED — the single task: construct the witness variety 𝒳 and verify the realization Axiom 3.** Acceptance
-criteria fixed in `phase-16/00-SURF-SPEC-SHEET.md` (4 Pillars: Spectrum/Pairing/Lefschetz/Positivity + 4 rejection
-filters). **Two arbiter corrections to the submitted spec:** (1) Pillar-1 trace test must be the TEST-FUNCTION trace
-Tr h(Frob)=Σ h(γ_ρ)=explicit formula (raw power-trace Σγ^k diverges); (2) **Pillar 4 cannot cite Yuan–Zhang** — that
-theorem controls 𝑃𝑖𝑐⁰/heights (the object Pillar 2.2 rejects), so the Hodge-index positivity for the zero-carrying
-H¹ is a GENUINELY NEW theorem (Attempt 6, sharpest form), the open core. Live routes: A (Shimura/Borel–Serre/Eisenstein),
-B (δ/𝔽₁), C (prismatic global); each with its wall. Δ₃ plateau is an acceptance test. Role: arbiter of the spec sheet
-(reject on any failed filter; demand references; flag spectrum-as-input as circular).
-
----
-
-## PART 10 — Phases 17–20: the forward ω flow and the zero bridge (2026-06-07)
-
-While the SURF/Weil program continued, a second, fully independent arc opened (Route 3,
-Branch B): the direct flow primes→ω→multiplicative chaos→moments.
-
-### Phase 19 — Route 3 (Branch B, RH-INDEPENDENT)
-
-Established an unconditional, 5-step chain with no ζ zeros involved:
-
-```
-   primes → ω(n) ~ Poisson(loglogn)        [Erdős-Kac / Turán-Kubilius]
-          → E[q^ω] ~ (logn)^{q-1}          [Poisson MGF, q = k²]
-          → M_k(N) ~ C_k (logN)^{k²}       [elementary integral; k² FORCED]
-          → large-deviation saturation      [same phenomenon across Steps 1-4]
-          → B-smooth condensation           [weight shifts to large-ω]
-          → random maximum grows with Σ1/p [log-correlated BRW field]
-```
-
-**Key invariant:** the exponent k² and the constant C_k = G_q(1)/Γ(q) are BOTH
-prime-theoretic. G_q(1) = ∏_p (p-1+q)(p-1)^{q-1}/p^q converges without any zero.
-
-**Classification:** Category B (durable new mathematics, RH-independent).
-**Active barrier N7:** the probabilistic mechanism controls statistics of the ζ ensemble,
-not the deterministic localization of the zeros.
-**Files:** `phase-19/` (5 steps + closure).
-
----
-
-### Phase 20 — The zero–ω bridge (2026-06-07, in progress)
-
-Central question: does ω-statistics contain information about the zeros of ζ?
-
-**Step 0 (theoretical result, no computation): Selberg–Delange factorization:**
-```
-   F_q(s) = Σ q^{ω(n)}/n^s = ζ(s)^q · G_q(s)   [G_q holomorphic, nonvanishing for Re(s)>½]
-```
-The zeros of ζ are ZEROS of F_q (not poles). Perron's formula for M_k(N) picks up no
-residues at the nontrivial zeros. M_k(N) is monotonically increasing — it never oscillates.
-
-**Immediate consequence:** Hypothesis C of the original design (amplitude-N^{-½} oscillations)
-was incorrect. The originally planned Step 1 experiment was discarded before execution.
-
-**Classification of Step 0: Category B.** Establishes the fundamental decoupling.
-
----
-
-**Central result — Phase 20 Step 1 (pure proof):**
-
-| Object | Dirichlet series | ζ zeros in Perron | Classification |
-|---|---|---|---|
-| M_k = Σ q^{ω}/n | ζ^q G_q (G holomorphic) | ZEROS — no residues | Category B (RH-indep) |
-| Ψ_q = Σ q^{ω}Λ | q·(−ζ'/ζ) | Poles at ρ — but Ψ_q = q·ψ | Category C (trivial) |
-| I(α) = LD rate | variational via Poisson | None | Category B (RH-indep) |
-| C_k(h,N) = Σ q^{ω(n)}q^{ω(n+h)}/n | NOT multiplicative | Error via PNT in progressions | Category A (RH-equiv) |
-| r_q(h) = lim C_k/M_k² | Euler product | None (limit) | Category B (arithmetic) |
-| Error C_k/M_k² − r_q(h) | PNT + sieve | Indirect ζ'/ζ poles | Category A → Wall W4 |
-
----
-
-**New Wall W4 (Chowla–Elliott):**
-
-The only door through which the zeros enter the ω class in a NON-trivial way not reducible
-to ψ is the convergence rate R_k(h,N) = C_k(h,N)/M_k(N)² − r_q(h).
-
-Proving |R_k(h,N)| = O(N^{-½+ε}) is EQUIVALENT TO RH (via PNT in progressions).
-This analysis leads to the Chowla–Elliott conjecture on correlations of multiplicative
-functions — a wall DIFFERENT from W1–W3:
-
-```
-   W1 (CAP):             positivity/sign in the Weil form Q       [algebraic]
-   W2 (de Branges):       canonical systems / de Branges chain     [spectral]
-   W3 (pair correlation): autocorrelation of ζ zeros              [analytic]
-   W4 (Chowla–Elliott):   correlations of multiplicative functions [combinatorial-analytic]
-```
-
-W4 is new to the program. It does not reduce to W1–W3.
-
----
-
-**Highest-priority open question (2026-06-07):**
-
-> Can |R_k(h,N)| = O((logN)^{-k²} N^{-½+ε}) be proved using specific properties of
-> q^{ω(n)} (non-oscillating, non-negative, very regular Euler product) that are NOT
-> available for a general multiplicative function?
-
-If the answer is YES: a new route to RH bypassing all of walls W1–W4.
-If the answer is NO: W4 is the definitive limit of the ω class.
-
-**Files:** `phase-20/00b-PASO0-analisis-dirichlet.md`, `phase-20/01-proof-explicit-formula-omega.md`.
-
----
-
-**Phase 20 Step 2 — Explicit error formula and closure of the ω program (2026-06-07):**
-
-**Critical correction:** W4 (Chowla–Elliott) was incorrectly identified as the wall
-for C_k/M_k². The precise distinction:
-- Chowla–Elliott: a ZERO-MEAN function, limit = 0, STRONGER than RH.
-- C_k/M_k²: a POSITIVE-MEAN function, limit = r_q(h) > 0, EQUIVALENT to RH.
-The real obstacle is the PNT in arithmetic progressions (classical W1, new direction).
-
-**Wall W4 REMOVED from the program.** Corrected map:
-```
-   W1 (CAP):       positivity/Weil Q     [algebraic]
-   W2 (de Branges): canonical systems     [spectral]
-   W3 (Montgomery): pair correlation      [analytic]
-```
-
-**T4 (Category A): explicit error formula:**
-```
-   C_k(h,N)/M_k(N)² − r_q(h) = −[A_q(h)/C_q²] · Σ_ρ N^{ρ−1}/ρ + O(smaller)
-```
-with A_q(h) = ∏_{p∤h}(1+2(q−1)/p) · ∏_{p|h}(1+2(q−1)/p+(q−1)²/p) > 0.
-
-**T4.1 (RH-equivalence):** RH ⟺ |C_k(h,N)/M_k(N)² − r_q(h)| = O(N^{-½+ε}).
-
-**T5 (Category B, structural):** for positive weights q_j > 0, the arithmetic coefficient
-A_{q₁,...,q_r}(h₁,...,h_r) is strictly positive for every multi-point correlation. The
-positivity of q^{ω(n)} prevents algebraic cancellation of the N^{ρ-1} terms.
-
-**Consequence of T5:** there are no "arithmetic resonances" within the ω class that could
-eliminate the zeros' contribution without assuming RH. The open question ("can q^{ω(n)}
-avoid W4 via its positivity?") has a NEGATIVE answer.
-
-**New result (Category B, unconditional):**
-```
-   M_k(N)/M_1(N)^{k²} → C_k   with error O(1/logN) WITHOUT RH
-```
-The zeros cancel algebraically in the ratio (both sides are blind to the zeros
-via the factorization F_q = ζ^q G_q). Faster than N^{-½+ε}.
-
-**Information map (final state, Phase 20):**
-```
-   M_k(N)/(logN)^{k²} → C_k      O(1/logN)      NO zeros  (B, arithmetic)
-   M_k/M_1^{k²} → C_k            O(1/logN)      NO zeros  (B, new)
-   r_q(h) = lim C_k/M_k²         exists         NO zeros  (B, arithmetic)
-   C_k(h,N)/M_k(N)² − r_q(h)     O(N^{-½+ε}|RH) HAS zeros (A, RH-equiv)
-```
-
-The RH-sensitive window within the ω class is UNIQUE. There are no others.
-
-**Files:** `phase-20/02-proof-error-correlation.md`.
-
----
-
-**Map of the program's two branches (final state, 2026-06-07):**
-
-```
-   BRANCH A (RH-directed):
-   07 → Weil-Kreĭn → SURF/Hodge → wall = W1∪W2∪SURF ← BLOCKED
-
-   BRANCH B (ω-class):
-   Phase 19 (k² with no zeros) → Phase 20 (decoupling + information barrier) →
-   T5 (positivity prevents cancellation) → The RH-sensitive window = C_k(h,N)/M_k(N)² − r_q(h)
-   This window arrives at the same wall W1 (RH-equiv via PNT) from a new direction.
-   There is no direction free of a wall within the ω class.
-```
-
-**Conclusion of Phase 20:** the ω class contains enough information to reconstruct ζ's
-statistics (moments, multifractality) but not the geometry of its zeros. The zeros appear
-only in the convergence error of the cross-correlations — and that error arrives at the
-same classical wall. T5 closes the search for alternative routes within the ω class.
-
----
-
-## PART N — Continuation: Phases 21–61 (the wall, mapped from every side)
-
-*Added 2026-06-26. The sections above trace the program through Phase 20. The full, current
-narrative — every phase verdict from 21 through 61 — is in
-[`COMPLETE-PROGRAM-SUMMARY.md`](COMPLETE-PROGRAM-SUMMARY.md) (Part 11). The one-paragraph map of
-the rest of the road:*
-
-After the ω-class branch reached the same classical wall (Phase 20), the program ran the
-**Arc-B closure** (Phases 21–28: the Pontryagin/Kreĭn realization, the Paley–Wiener barrier, the
-15-mechanism audit, the four fronts all reducing to ξ ∈ Laguerre–Pólya), then the
-**CCM framework** (Phases 29–33: the trace criterion T_λ=0 ⟺ RH and the Hadamard barrier), then
-**new directions** (Phase 34) and **five parallel fronts** (Phase 35). Phases 36–48 pursued the
-amplification functor, the Hodge/Spec-ℤ construction (G1↔G2), the Deninger leafwise-Hodge route
-(found non-circular as a *framework* in Phase 42, then revoked to indeterminable-circular in
-Phase 43), and a long sequence of new-mathematics constructions and adversarial audits (the
-audit refuted W_λ ≥ 0 in Phase 38 and repaired the trace criterion via moment rigidity).
-
-Phases 49–59 are the **wall-as-object attack and the closure audits**: the wall is the kernel
-N(A) of the averager; the five known crossing mechanisms (tauberian, positivity, equation,
-group/dynamics, index/K-theory) all provably **collapse** for the Weil form; every canonical
-inertia metric on the crossed product of the primes **carries ζ by modular structure**
-(Bost–Connes). The program closed honestly with RH = A ∧ Dic (each half calibrated), ~18 new
-unconditional theorems, the no-go axiomatized, and the exact interface for an external attack.
-
-Phase 60 refuted the multiplicativity discriminant (NG-F1 — a new variant of the
-arithmetic-propagation wall); Phase 61 inventoried the genuinely open problems (O1–O10) in the
-CCM frame.
-
-**The state at Phase 61:** RH lives in the sign of one global scalar κ. Every front reaches it;
-none crosses it. The crossing requires a cohomology over Spec ℤ that reads inertia, not value —
-the unbuilt Connes–Consani object — which is RH-equivalent by construction. *(Phases 62–76,
-below, sharpen this into a single named classical criterion.)*
-
-> *Note: some passages in the sections above retain their original-language phrasing as part of
-> the raw research record; the current English synthesis is this Part N and
-> `COMPLETE-PROGRAM-SUMMARY.md`.*
-
----
-
-## PART O — Phases 62–76: the pivot to Ω7, and the reduction to Li–Keiper
-
-*Added 2026-07-17. Full phase-by-phase detail in [`03-research/README.md`](03-research/README.md)
-and [`COMPLETE-PROGRAM-SUMMARY.md`](COMPLETE-PROGRAM-SUMMARY.md) (Part 11, Phases 62–76). This
-section replaces the "single picture" of Part N with the program's current final state.*
-
-### O.1 — Phases 62–63: the wall stated at its sharpest
-
-```
-                          ┌─────────────────────────────────────────────┐
-                          │  PHASE 62 · Cesàro-in-λ / quaternionic HR    │
-                          │  NG-62: averaging relocates MW-2, does not   │
-                          │  cross it (off-line growth is secular).      │
-                          │  NG-62b: real quaternionic HR polarization   │
-                          │  found on the Weil window — but GAPLESS      │
-                          │  (e^{-cL}→0); ζ pinned at the marginal       │
-                          │  threshold μ_max = 1.                        │
-                          └───────────────────┬─────────────────────────┘
-                                              │
-                          ┌───────────────────▼─────────────────────────┐
-                          │  PHASE 63 · Lefschetz realization frontier   │
-                          │  NG-63: F_q has a J-linear Frobenius         │
-                          │  isometry of a GAPPED polarization; the ζ    │
-                          │  window has neither (antilinear scaling,     │
-                          │  gapless polarization). MW-5 made precise    │
-                          │  by direct F_q-vs-ℤ contrast.                │
-                          └───────────────────┬─────────────────────────┘
-                                              │
-                                  sharpest statement of the master wall
-```
-
-### O.2 — Phases 64–70: the pivot off Weil positivity, onto Ω7
-
-```
-   PHASE 64 (Connes' route)          PHASE 65 (signature continuity)
-   L1 reclassified as an RH          Construct index-graded det. D̃ and
-   criterion; target = REGULARIZED   topology τ_κ; identifies decisive
-   positivity, not finite gap        burden (Feshbach-shorting), open
-             │                                    │
-             └──────────────────┬─────────────────┘
-                                 ▼
-   PHASE 66 (rank-one escape, CAND-1)      PHASE 67 (quantum q-index)
-   Operators self-adjoint BY               NG-67: free-product Haar
-   CONSTRUCTION ⟹ no positivity to         orthogonality kills the
-   prove; open Q is BOUNDEDNESS, a         arithmetic interference the
-   different category from MW-1            route needs
-             │                                    │
-             └──────────────────┬─────────────────┘
-                                 ▼
-   PHASE 68 (GLT/Toeplitz symbol)          PHASE 69 (exact signed index)
-   NG-68: symbol positivity is             ind_-(A_N-P_λ)=0 ⟺ RH, made
-   GAUGE-FRAGILE — fails the GLT           gauge-robust and exact; solid
-   distribution law numerically            detector, forcer still open
-             │                                    │
-             └──────────────────┬─────────────────┘
-                                 ▼
-                  ┌───────────────────────────────────────┐
-                  │  PHASE 70 · Lee–Yang / de Bruijn–Newman│
-                  │  RH ⟺ Λ=0 (Rodgers–Tao Λ≥0).           │
-                  │  Ω7 localized to the arithmetic         │
-                  │  direction Λ≤0 — a genuine forcing      │
-                  │  mechanism, first positive turn of      │
-                  │  the arc.                                │
-                  └───────────────────┬─────────────────────┘
-```
-
-### O.3 — Phases 71–76: a finite architecture, closing into paper 36
-
-```
-                                     │
-                  ┌───────────────────▼─────────────────────┐
-                  │  PHASE 71 · CAND-1/CCM convergence        │
-                  │  spectrum real BY ALGEBRA (off MW-1);     │
-                  │  RH content = stable-divisor operator     │
-                  │  convergence θ_x → k_λ                    │
-                  └───────────────────┬─────────────────────┘
-                                     │
-                  ┌───────────────────▼─────────────────────┐
-                  │  PHASE 72 · Feshbach leakage calculus     │
-                  │  global convergence ⟶ pole-relative       │
-                  │  leakage estimate (a smaller target)      │
-                  └───────────────────┬─────────────────────┘
-                                     │
-                  ┌───────────────────▼─────────────────────┐
-                  │  PHASE 73 · Cauchy projection gate        │
-                  │  reduces to ONE finite Cauchy–Schur       │
-                  │  nodal identity: NAT-PROJ                 │
-                  └───────────────────┬─────────────────────┘
-                                     │
-                  ┌───────────────────▼─────────────────────┐
-                  │  PHASE 74 · Hilbert eigenline cancellation│
-                  │  NAT-PROJ ⟶ exact Hilbert product rule:   │
-                  │  HPR-DIV                                  │
-                  └───────────────────┬─────────────────────┘
-                                     │
-                  ┌───────────────────▼─────────────────────┐
-                  │  PHASE 75 · Arithmetic numerator          │
-                  │  divisibility: ARITH-LOCK ⟹ CCM-ROOT-LOCK │
-                  │  ⟹ CRIT-NUM-DIV ⟹ CAUCHY-EIG-LOC ⟹ HPR-DIV│
-                  └───────────────────┬─────────────────────┘
-                                     │
-                  ┌───────────────────▼─────────────────────┐
-                  │  PHASE 76 · Normalized adjugate           │
-                  │  arithmetic lock — corrects the endpoint  │
-                  │  to A_L=|C_L|²; ~65 audited sub-steps;    │
-                  │  closes to one limit-point uniqueness     │
-                  │  statement (SAFE-LIMIT-POINT)             │
-                  └───────────────────┬─────────────────────┘
-                                     │
-                                     ▼  feeds directly into
-```
-
-### O.4 — Final state: paper 36, the ARP-P chain, and Ω7 = Li–Keiper
-
-```
-   ┌───────────────────────────────────────────────────────────────────┐
-   │  PAPER 36 · "The Riemann Hypothesis: An Obstruction Ledger and     │
-   │  the Arithmetic Pick Architecture It Shaped" (04-papers/36-        │
-   │  obstruction-ledger/, on arXiv)                                   │
-   │                                                                     │
-   │  Part I — the obstruction ledger: catalogues MW-1..MW-6 and every  │
-   │  structural wall found by Phases 0–76, with a precise logical      │
-   │  status for each.                                                  │
-   │                                                                     │
-   │  Part II — the ARP-P chain: fifteen steps proving                  │
-   │                                                                     │
-   │        ARP-P  ⟺  RH                                                │
-   │                                                                     │
-   │  14 of 15 Steps CLOSED. Step 5 (ARP-P itself, a finite-node Pick   │
-   │  positivity condition) is the sole open input, and it reduces, via │
-   │  the proved Ω-chain (Ω1 → ... → Ω6, all closed), to:               │
-   │                                                                     │
-   │        ┌───────────────────────────────────────────────┐          │
-   │        │   Ω7 :  δ_N ≥ 0  for all N                     │          │
-   │        │        ⟺  λ_n ≥ 0  for all n   (Li–Keiper)     │          │
-   │        │        ⟺  RH                                   │          │
-   │        └───────────────────────────────────────────────┘          │
-   │                                                                     │
-   │  Ω7 is not a new discovery — it is the CLASSICAL Li criterion.     │
-   │  The contribution is that an independently constructed             │
-   │  architecture, built from Phases 62–76, terminates exactly there.  │
-   └───────────────────────────────────────────────────────────────────┘
-```
-
-**The program's current final state.** RH still lives in the sign of one global scalar. What
-changed across Phases 62–76 is not the difficulty — Ω7 is exactly as hard as RH — but the
-*resolution* of the map: instead of "an unbuilt cohomology over Spec ℤ," the program now points
-at one classical, precisely stated inequality (Li–Keiper positivity), reached by an independent
-construction, with 14 of 15 supporting steps proved and a falsification harness available for
-outside attack. No proof of RH is claimed. Every attempted closure of Ω7 so far (Phases 64–76)
-has returned to one of MW-1 through MW-6 — see [`NO-GO-LIST.md`](NO-GO-LIST.md).
+## Part 12 — The current final state: paper 36, the fifteen-step architecture, and $\Omega_7=$ Li–Keiper
+
+This is the program's current endpoint. It is published as **paper 36**,
+["The Riemann Hypothesis: An Obstruction Ledger and the Arithmetic Pick Architecture It
+Shaped"](04-papers/36-obstruction-ledger/), already posted to arXiv.
+
+The paper has two parts. **Part I** is the obstruction ledger: every structural wall found by
+this program (MW-1 through MW-6, catalogued in [`NO-GO-LIST.md`](NO-GO-LIST.md)) is stated
+precisely and assigned an exact logical status. **Part II** is a new, independently constructed
+fifteen-step architecture — the **Arithmetic Pick/Nevanlinna Program**, ARP-P — proving
+
+$$\text{ARP-P}\iff\text{RH}.$$
+
+### The fifteen steps
+
+Fourteen of the fifteen steps below are fully proved (two of those fourteen, Steps 9 and 11, as
+proved *conditional* consequences of Step 5). **Step 5 is the sole open input.** Every other
+step is a classical or complex-analytic implication with no remaining gap.
+
+| Step | What it establishes | Status |
+|---|---|---|
+| 1 | Sets up the variables, the completed zeta function $\Xi$, and translates RH into a statement about zero locations in a shifted coordinate. | Closed |
+| 2 | Defines finite evaluation channels and the target function $G_\Xi^F$. | Closed |
+| 3 | Proves meromorphy of $G_\Xi^F$ with no holomorphic ambiguity. | Closed |
+| 4 | Establishes the Weil explicit formula on the relevant half-plane. | Closed |
+| **5** | **ARP-P**: a finite-node arithmetic Pick-positivity condition. | **Open — the single input** |
+| 6 | Positive Cauchy transforms have positive Pick kernels (a classical fact from Nevanlinna–Pick theory). | Closed |
+| 7 | A "tower" version of ARP-P implies ARP-P itself. | Closed |
+| 8 | ARP-P produces genuine Nevanlinna–Pick interpolants. | Closed |
+| 9 | Normality of the interpolant family and a Montel extension argument. | Closed, conditional on Step 5 |
+| 10 | Detects residues channel by channel. | Closed |
+| 11 | ARP-P removes any off-line poles in the relevant domain. | Closed, conditional on Step 5 |
+| 12 | The resulting symmetries cover all of $\mathbb C\setminus\mathbb R$. | Closed |
+| 13 | Real zeros of $\Xi$, in this coordinate system, are exactly RH. | Closed |
+| 14 | RH implies ARP-P (the converse direction). | Closed |
+| 15 | ARP-P $\iff$ RH (assembling Steps 1–14). | Closed |
+
+Steps 1–4 build the classical setup; Steps 6–15 are a closed analytic bridge showing that *once*
+Step 5 is supplied, RH follows (Steps 1–13), and that RH conversely implies Step 5 (Step 14) —
+so the equivalence in Step 15 is exact, not one-directional. All of the architecture's difficulty
+is concentrated in Step 5.
+
+### Developing Step 5: the $\Omega$-chain down to $\Omega_7$
+
+Step 5 (ARP-P) does not reduce to RH all at once. It factors through a chain of six further
+proved equivalences, $\Omega_1$ through $\Omega_6$, terminating at $\Omega_7$ — the one
+statement in the entire architecture that is not closed.
+
+| Link | Statement | Status |
+|---|---|---|
+| $\Omega_1$ | $\mathrm{RH}\iff$ every zero of $\Xi$ is real. | Closed |
+| $\Omega_2$ | Real zeros $\iff$ ARP-P (this is exactly Steps 1–15 above). | Closed |
+| $\Omega_3$ | ARP-P $\iff$ a terminal positivity condition, $\delta_N(z_0)\ge0$ for all $N$, in a specific reference-whitened form. | Closed, in that whitened form |
+| $\Omega_4$ | $\delta_N\ge0$ for all $N$ $\iff$ a one-sided whitened spectral-radius domination condition. | Closed |
+| $\Omega_5$ | Interior positivity has a positive, regular limit as the boundary is approached. | Closed, for each $N$ |
+| $\Omega_6$ | Boundary positivity $\iff$ the classical **Li–Keiper criterion**, $\lambda_n\ge0$ for all $n$. | Closed |
+| $\Omega_7$ | $\lambda_n\ge0$ for all $n$: an archimedean ceiling term must dominate an oscillating prime-side term, uniformly in $n$. | **Open — the terminal residue; equivalent to RH** |
+
+Every link $\Omega_1$ through $\Omega_6$ is a proved equivalence. $\Omega_7$ is not a link — it
+is the statement the entire chain isolates. It is not a new discovery: it is the classical
+**Li–Keiper positivity criterion** for RH, known since 1997. The contribution of this program is
+that an independently constructed fifteen-step architecture, built from an entirely different
+starting point (Pick/Nevanlinna interpolation theory rather than the Li–Keiper coefficients
+themselves), **terminates at exactly the same classical statement.**
+
+Two proved facts sharpen what any attempted closure of $\Omega_7$ must look like:
+
+- **No finite prime truncation gives a positive operator to perturb from.** The full sum over
+  all primes is positive (this is exactly RH), but the same sum truncated at any finite cutoff
+  $X$ is *negative*, verified computationally at multiple truncation depths. Positivity is
+  restored only by summing the entire, infinite prime tail — it is a genuine global
+  cancellation, not a small correction to an already-positive quantity.
+- **This defeats the two natural perturbative attempts to close it.** Mollifying the evaluation
+  symbol is equivalent, in the relevant limit, to the same truncation and inherits the same
+  indefiniteness. Running the de Bruijn–Newman backward heat flow (starting from a height where
+  the zeros are known to be real, by the proof that $\Lambda\ge0$) propagates a margin that
+  shrinks factorially in the window size against a merely polynomial error drift, so it closes
+  only a bounded range of the index $n$, not all of it.
+
+Every attempted route through phases 64–76 to close $\Omega_7$ — the rank-one/self-adjoint
+route, the quantum q-index route, the GLT/Toeplitz-symbol route, the exact signed-index route,
+the Lee–Yang/de Bruijn–Newman route, and the finite CAND-1/Feshbach/Cauchy–Hilbert architecture
+that produced this very reduction — returned, on inspection, to one of the six structural walls
+(MW-1 through MW-6) catalogued in [`NO-GO-LIST.md`](NO-GO-LIST.md).
+
+### What changed, honestly
+
+$\Omega_7$ is exactly as hard as RH — being equivalent to it, it carries the Hypothesis's full
+difficulty, and this reduction does not lower that difficulty by one degree. What changed across
+phases 62–76 is the *resolution* of the map. Before this arc, the program's honest final
+statement was that RH requires "an unbuilt cohomology over $\mathrm{Spec}\,\mathbb Z$" — real,
+but abstract, and not stated as a checkable inequality. After this arc, the program's honest
+final statement is that RH requires one classical, precisely stated inequality — Li–Keiper
+positivity — reached independently through an arithmetic Pick/Nevanlinna architecture, with
+fourteen of its fifteen supporting steps fully proved and a falsification harness available for
+outside attack.
+
+**No proof of RH is claimed.** This is a reduction, not a resolution — but it is the sharpest,
+most concrete statement this program has produced of exactly where RH lives and exactly what a
+proof would need to supply.
