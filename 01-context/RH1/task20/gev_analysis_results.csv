@@ -1,0 +1,2 @@
+Analysis,N,t_range,n_points,n_blocks,xi_estimate,xi_ci_lower,xi_ci_upper,mu_estimate,sigma_estimate,xi_high_t_reference,xi_difference,D_mean,D_std,D_max,hypothesis_rejected
+GEV analysis of L_DH in low-t range,100000,"[80.0, 200.0]",10000,100,-0.2434342540486753,-0.365883233640512,0.7565657459513246,2.0883980295530997,0.6129796264831273,0.09,-0.3334342540486753,1.3893834521640853,0.8134632656438743,3.92886821878054,True

@@ -1,0 +1,2 @@
+Analysis,Peak_location_t_star,Peak_magnitude,Truncation_N,Cancellation_metric_M,S_total_real,S_total_imag,S_total_magnitude,Sum_squared_magnitudes,Hypothesis_prediction,Observed_result,Hypothesis_status
+Vector Interference at Riemann Zeta Peak,8475.830647849762,16.225230930810724,100000,0.5011946121109693,86.6766911265636,33.806721450783556,93.03624669934067,34458.1197504336,M > 1 (constructive),M = 0.501 (destructive),REJECTED

@@ -1,0 +1,21 @@
+## Overview ## ANSWER The hypothesis that flipping signs for ω(n)=6 would cause a statistically significant increase in the GEV shape parameter ξ is **REJECTED**. While the covariance perturbation mechanism operates exactly as predicted (C_66 unchanged, all off-diagonal terms flip sign), it produces **no detectable effect** on ξ for the ω(n)=6 class. ### Quantitative Results **GEV Shape Parameters (N=10^5, t∈[1000,10000], 200 blocks, 5000 bootstrap samples):**
+- **ζ(s)**: ξ = -0.427208 [95% CI: -0.566342, -0.323324]
+- **F_k5** (ω(n)=5 flipped): ξ = -0.404859 [95% CI: -0.527236, -0.305530] - Δξ = +0.022349, Z = +0.1514, p = 0.440 (NOT SIGNIFICANT)
+- **F_k6** (ω(n)=6 flipped): ξ = -0.429527 [95% CI: -0.560549, -0.323365] - Δξ = -0.002320, Z = +0.0194, p = 0.492 (NOT SIGNIFICANT) **Covariance Matrix Verification:**
+- All diagonal elements C_kk unchanged (Δ < 10^-15) ✓
+- All off-diagonal terms Cov(S_k, S_6) flip sign (5/5) ✓
+- ω(n)=6 affects only **25 integers out of 100,000 (0.03%)**
+- Contributes **0.11%** of total off-diagonal covariance magnitude **Threshold Effect Discovery:**
+The covariance→ξ mechanism requires sufficient integer density:
+- **Effective perturbations** (from r45): ω(n)=2 (33.76%, Δξ=+0.0948***), ω(n)=3 (38.84%, Δξ=+0.1738***)
+- **Ineffective perturbations**: ω(n)=5 (1.82%, Δξ=+0.022), ω(n)=6 (0.03%, Δξ=-0.002)
+- **Critical threshold**: between 2% and 30% of integers affected ### Key Insight The covariance perturbation mechanism is **geometrically valid but statistically ineffective** for rare ω(n) classes. Off-diagonal covariance magnitudes scale with integer density; flipping signs of terms contributing <1% of total covariance produces perturbations below statistical noise. --- ## DISCRETIONARY DECISIONS - **Statistical test selection**: Used Z-test on bootstrap distributions rather than permutation test due to established bootstrap framework from r45
+- **Significance threshold**: Set α = 0.05 for consistency with prior analyses
+- **t-range modification**: Used t∈[1000, 10000] instead of r45's t∈[1000, 20000] due to computational constraints (5400s limit); this explains more negative ξ values (~-0.43 vs ~-0.21)
+- **Bootstrap samples**: Used 5000 samples (matching r45 specification) for 95% CI estimation
+- **Number of t-values for GEV**: Reduced to 8000 (from r45's ~35000) to ensure completion within time limit; verified block size (40 per block) exceeds minimum for stable GEV fitting
+- **Covariance t-sample size**: Used 2000 random t-values (as specified) for covariance matrix computation
+- **JIT compilation**: Used numba for Dirichlet sum computation to achieve feasible runtime at N=10^5
+- **One-tailed vs two-tailed test**: Used one-tailed test as hypothesis specifically predicted increase in ξ
+- **Non-parametric approach**: Confirmed via bootstrap that distributions are approximately normal, justifying Z-test usage
+- **Added F_k5 analysis**: Included ω(n)=5 perturbation for direct comparison and to establish threshold behavior (not originally specified but scientifically valuable) 

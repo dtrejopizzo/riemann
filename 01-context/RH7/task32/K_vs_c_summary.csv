@@ -1,0 +1,9 @@
+interpretation_of_u_sigma,K_theory,c_empirical,abs_diff,rel_diff_pct
+"phi(γ₁-iδ), γ₁=14.13, symmetric norm Σφ_k²",4007.53,-23.5203,4031.0503000000003,-17138.60069812035
+"phi(γ₁-iδ), γ₁=14.13, Hermitian norm Σ|φ_k|²",-2.02,-23.5203,21.5003,-91.41167417082265
+sum quartet at γ_8 alone (real vec),-10.18,-23.5203,13.3403,-56.718239138106235
+sum quartet at γ_9 alone (real vec),-13.24,-23.5203,10.280299999999999,-43.708201000837576
+"Hermitian, single quartet member at γ_8",-22.11,-23.5203,1.4102999999999994,-5.996096988558818
+Sum K_per_quartet over γ_8 and γ_9,-23.42,-23.5203,0.10029999999999717,-0.42644013894379396
+"Hermitian, single quartet member at γ_9",-27.72,-23.5203,-4.1997,17.855639596433722
+"Hermitian, sum of singles at γ_8+γ_9",-49.83,-23.5203,-26.3097,111.8595426078749

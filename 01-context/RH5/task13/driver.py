@@ -1,0 +1,5 @@
+
+import os, sys, time, pickle
+import numpy as np
+import multiprocessing as mp sys.path.insert(0, "/workspace/2c93de43-0886-47b5-8df3-cc9002f91033")
+from delta_worker import worker def main(): T_max = 4075.0 N_SHARDS = 8 DPS = 80 boundaries = [T_max * (i / N_SHARDS) ** (1.0/3.0) for i in range(N_SHARDS + 1)] args_list = [(boundaries[i], boundaries[i+1], DPS, i) for i in range(N_SHARDS)] for a in args_list: print("shard", a[3], "T:", a[0], "->", a[1], flush=True) ctx = mp.get_context("spawn") t_start = time.time() with ctx.Pool(N_SHARDS) as pool: results = pool.map(worker, args_list) t_elapsed = time.time() - t_start print(f"Total parallel runtime: {t_elapsed:.1f}s", flush=True) # Sort by shard index, collect results.sort(key=lambda r: r[0]) all_zeros = [] for idx, tmin, tmax, elapsed, zeros in results: print(f"shard {idx} [{tmin:.2f},{tmax:.2f}]: {len(zeros)} zeros in {elapsed:.1f}s", flush=True) all_zeros.extend(zeros) # Save raw collected zeros first with open("/workspace/2c93de43-0886-47b5-8df3-cc9002f91033/ldelta_raw_zeros.pkl", "wb") as f: pickle.dump(all_zeros, f) print(f"Total raw zeros: {len(all_zeros)}", flush=True) if __name__ == "__main__": main()

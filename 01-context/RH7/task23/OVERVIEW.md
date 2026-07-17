@@ -1,0 +1,44 @@
+## Overview <output>
+<conclusion>
+The hypothesis is REFUTED in its stated form: `_zeros.L_Delta_zeros` cannot generate the first 100 zeros of `L(Δ,s)` within a 1-hour budget at the requested settings (`dps=80, n_taus=300, step=0.1`), and even with code-level fixes the default integration cutoff `y_max=12` is fundamentally wrong, causing missed zeros above t≈90; only the first 50 zeros (t = 9.222…–90.963…) were successfully computed and verified, and they are saved to `cache/L_Delta_zeros_50_reliable.pkl`.
+</conclusion> <methods>
+1. Loaded `_zeros.py` and inspected `L_Delta_zeros`/`Lambda_Delta`. Identified that the default `y_max=12` truncates the Mellin integral too early: for s = 6+it on the critical line, the integrand `(y^(s−1)+y^(11−s)) f_Δ(y)` has |y^5 e^{−2πy}| ≈ 1e−27 at y=12, masking the true |Λ| which decays like t^(11/2) e^(−πt/2) (≈1e−58 at t=100). This is the root cause of the “spurious-zeros above t≈40” bug documented in r26.
+2. Empirically scanned `Λ(Δ,6+it)` for `y_max ∈ {10,12,15,20,25,30,35,40,45}` at t∈{20,40,50,100,200,250} with dps=80. Confirmed `y_max=25` extends validity to roughly t≲90 at dps=80; beyond that the dps=80 mantissa floor (~1e−80) is reached and sign noise dominates.
+3. Implemented an optimized scanner `optimized_L_Delta_zeros` (dps=80, n_taus=300, step=0.1, **y_max=25**, 50–60 bisection steps, periodic pickle checkpoint every 5 zeros to `cache/L_Delta_zeros_100_progress.pkl`). The scan was run twice within the time budget (≈900 s + ≈800 s of wall-time).
+4. Reached zero #55 at t≈106.31 before the budget was exhausted. Audited the t∈[91,97] segment with dps=100, y_max=40 and found a true sign change near t≈91.2 that was missed at dps=80,y_max=25 — i.e. at least one zero between the cached #50 and #51 was skipped.
+5. Cross-checked computed zero ordinates against published LMFDB values for L(Δ): the first five zeros match to all displayed digits (9.222379399921…, 13.907549861392…, 17.442776978234…, 19.656513141955…, 22.336103637210…).
+6. Saved the verified prefix (50 zeros) as `cache/L_Delta_zeros_50_reliable.pkl`; kept the 55-zero attempt as `cache/L_Delta_zeros_55_attempted.pkl` with explicit "suspect" flag. Did **not** create `L_Delta_zeros_100.pkl` to avoid misrepresenting an incomplete/contaminated list under the requested filename.
+</methods> <results>
+* 50 reliable zeros of L(Δ,s) saved (mpmath mpc, dps=80) in `cache/L_Delta_zeros_50_reliable.pkl`, ordinates γ_n ranging from 9.222379399921102522271… (n=1) to 90.963470616422362879861… (n=50). All match the first known LMFDB Δ-zero ordinates exactly within the digits displayed.
+* Throughput at dps=80, y_max=25: ≈25–35 s per zero (≈75–90 evaluations of Λ per zero × ~0.3–0.5 s/evaluation). 100 zeros would require ≈45–55 minutes if y_max=25 remained sufficient — but it does not, so the headline runtime claim of the hypothesis is moot.
+* y_max scan at t=100, dps=80: Λ = −5.23e−50 (y_max=20), −6.98e−55 (25), −5.72e−55 (30), +1.18e−55 (35), −4.62e−55 (40), −5.51e−55 (45). Sign flips reveal the dps=80 noise floor is ≈1e−54 — comparable to the true |Λ|, so reliable zero detection above t≈90 requires higher dps **and** larger y_max.
+* Direct verification of a missed zero: dps=100, y_max=40 shows Λ(91.0)=−4.99e−55 → Λ(91.5)=+6.67e−55 (sign change ≈ t=91.2), a zero entirely absent from the cached scan.
+* Therefore zeros #51–#55 in the attempted file are **not** zeros 51–55 of L(Δ); they are simply the next sign changes the dps=80 scan happened to catch after silently skipping at least one true zero.
+</results> <challenges>
+* The reference implementation in `_zeros.py` carries two latent bugs that interact: (i) `y_max=12` default is far too small for any t ≳ 40 (the source of the r26 "spurious zeros" phenomenon — actually missed zeros and noise crossings), and (ii) at dps=80 even `y_max=40` is insufficient because the true |Λ| at t≈100 (~1e−55–1e−58) is at or below the dps=80 mantissa precision. Reliable zeros 51–100 demand dps≥120 with y_max≥40, which roughly quadruples per-call cost and makes the 1-hour budget infeasible.
+* The function provides no internal diagnostic of integration truncation error; future implementations should auto-extend y_max until successive truncations agree to e.g. 1e−10 of the value.
+* Kernel timeouts (cells capped at 900 s) forced the long scan into two segments; checkpointed pickle saves were used to avoid data loss.
+* The internal bisection (120 iterations with stop at 10^(−dps+5)≈1e−75) is wasteful since interval halving from step=0.1 saturates near 1e−38; reducing to ~50–60 steps gave identical zero ordinates to ≥15 digits at roughly half the cost.
+</challenges> <discussion>
+The research hypothesis is wrong in two complementary ways. First, in pure runtime terms, even an optimized run gets only ~50–60 zeros per hour at the requested dps/step. Second, and more importantly, the algorithm as parameterized is *systematically lossy* above t≈90: the Mellin integral is truncated below the magnitude of the true Λ, so genuine sign changes are masked and the scanner reports the *next* surviving sign change as the next “zero,” shifting all subsequent indices. Caching a 100-element list from this procedure would therefore poison rather than enable the L(Δ) trace-mismatch investigation, which is the opposite of the stated rationale. The principled fix is to (a) make `y_max` t-dependent (e.g. y_max ≈ 0.6 t + 15) so the truncated tail is provably below ε·|Λ|, (b) raise dps adaptively so the precision floor is below |Λ|, and (c) optionally accelerate using the functional-equation symmetry ∫_1^∞ form so that no manual y_max is needed at all. Until that is implemented, only the first ~50 zeros from `_zeros` should be trusted, and the persistent ≈4.4% L(Δ) trace mismatch cannot yet be relitigated with a high-quality 100-zero list.
+</discussion> <proposed-next-hypotheses>
+1. Rewriting `Lambda_Delta` in the symmetric form Λ(s) = ∫_1^∞ (y^{s−1}+y^{11−s}) f_Δ(y) dy with an *adaptive* y_max chosen so that the boundary integrand is < 10^{−(dps−5)} (or equivalently using the upper-incomplete-gamma representation) will allow `L_Delta_zeros(100, dps=60)` to terminate in under 30 minutes with all 100 zeros verified against LMFDB.
+2. Once a validated 100-zero list is available, the persistent ~4.4% trace-identity failure in `weil_modular.py` at X=10⁴ will close to ≲0.5% (i.e. consistent with the Hermite-Gauss noise-floor model `η_theory(X)`), proving the residual error was driven by corrupted zero data rather than an arithmetic-side normalization.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>cache/L_Delta_zeros_50_reliable.pkl</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Pickle of a Python list of 50 mpmath mpc numbers ρ_n = 1/2 + iγ_n (dps=80) giving the first 50 non-trivial zeros of the Ramanujan L-function L(Δ,s) in analytic normalization. Produced by an optimized sign-change/bisection scanner over `_zeros.Lambda_Delta` with dps=80, n_taus=300, step=0.1, **y_max=25** (the documented default y_max=12 is incorrect), and 50-step bisection refinement. The first five ordinates were cross-validated digit-for-digit against LMFDB. Zeros 51+ found in the same run were rejected after diagnostic scans at dps=100, y_max=40 revealed at least one missed zero near t≈91.2, so the file is intentionally truncated at index 50.</artifact-description>
+</artifact>
+<artifact>
+<file-name>cache/L_Delta_zeros_55_attempted.pkl</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Pickle of 55 mpmath mpc values produced by the same scan as `L_Delta_zeros_50_reliable.pkl`. Entries 1–50 are reliable; entries 51–55 are flagged as suspect because diagnostic high-precision (dps=100, y_max=40) re-evaluation showed at least one true sign change of Λ(Δ,6+it) is missed at dps=80,y_max=25 above t≈90 due to integration-truncation error exceeding |Λ|. This file is preserved for forensic comparison; it must not be used as a definitive zero list.</artifact-description>
+</artifact>
+<artifact>
+<file-name>L_Delta_zeros_diagnostic.png</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Two-panel diagnostic figure. (A) Scatter of the 55 computed γ_n vs index n, with the 50 reliable points in blue and the 5 suspect points in red. (B) Λ(Δ,6+it) for t∈[91,97] sampled at two precision configurations, showing that dps=80,y_max=25 (used by the production scan) misses the sign change near t≈91.2 that is clearly visible at dps=100,y_max=40, evidencing systematic missed zeros at high t.</artifact-description>
+</artifact>
+</artifacts>
+</output> 

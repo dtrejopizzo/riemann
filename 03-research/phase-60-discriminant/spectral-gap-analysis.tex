@@ -1,0 +1,207 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\PR}{\textcolor{green!55!black}{\textbf{[P]}}}
+\newcommand{\OP}{\textcolor{red!75!black}{\textbf{[O]}}}
+\newcommand{\GAP}{\textcolor{red!75!black}{\textsc{[gap]}}}
+\newcommand{\RETRACT}{\textcolor{orange!85!black}{\textbf{[corrige]}}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}{Lema}
+\newtheorem{proposition}{Proposici\'on}
+\theoremstyle{definition}
+\newtheorem{remark}{Observaci\'on}
+
+\newcommand{\xih}{\widehat{\xi}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Lam}{\Lambda}
+\DeclareMathOperator{\Real}{Re}
+\newcommand{\half}{\tfrac12}
+\newcommand{\El}{E_\lambda}
+\newcommand{\PW}{\mathrm{PW}}
+
+\title{\textbf{Atacando el hueco espectral $[\lambda,\lambda^2]$:\\
+por qu\'e la restricci\'on exacta desinfla la desigualdad,\\
+y d\'onde queda el frente real del Eslab\'on 2}}
+\author{Programa \texttt{riemann-program} --- documento de trabajo (autocorrecci\'on)}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Al intentar acotar la cola combinada $\mathcal W_\lambda$ explotando el hueco
+espectral $[\lambda,\lambda^2]$ (Prop.\ 4.2 de \texttt{weil-remainder-attack}),
+choqu\'e con un hecho \emph{ya probado} del programa: la \textbf{restricci\'on
+exacta} $A_\lambda=A_\infty|_{\El}$. Su consecuencia es que la cola de primos
+$>\lambda^2$ contribuye \emph{exactamente cero} a la forma sobre funciones
+band--limited; luego la desigualdad objetivo es \textbf{vac\'ua} sobre $\El$
+(\S\ref{sec:vacuo}). Esto \RETRACT{} la Prop.\ 4.2 y reubica el frente: el piso del
+Eslab\'on 2 no es una cola de s\'imbolo (invisible a la forma) sino el error de
+\textbf{exhausti\'on de subespacio} del operador de Dirac $D_{\log}$, gobernado por
+aproximaci\'on en el espacio de de Branges $H(\El)$ (\S\ref{sec:real}). El obst\'aculo
+de circularidad sobrevive, pero en su forma cl\'asica conocida: la persistencia de la
+positividad de Weil $A_\infty\ge0$, equivalente a que $\varepsilon_0(\lambda)$ no se
+hunda. El \'unico residuo no circular es una cota inferior PNT de
+$\varepsilon_0(\lambda)$.
+\end{abstract}
+
+\tableofcontents
+
+% =====================================================================
+\section{El hecho que lo cambia: restricci\'on exacta}\label{sec:vacuo}
+% =====================================================================
+
+Sea $\El=\PW_{L/2}$, $L=2\log\lambda$, el espacio de funciones band--limited de tipo
+$L/2$. La forma de Weil truncada admite la reducci\'on de Fourier \PR
+\[
+  A_\lambda(g,g)=\frac1{2\pi}\int_\R|\widehat g(t)|^2\,W_\lambda(t)\,dt,
+  \qquad
+  W_\lambda(t)=2\theta'(t)-2\Real\!\Bigl[\sum_{n\le\lambda^2}\tfrac{\Lam(n)}{n^{1/2+it}}\Bigr].
+\]
+
+\begin{lemma}[Restricci\'on exacta, hecho \PR\ del programa]\label{lem:exact}
+Para todo $g\in\El$ y todo primo (potencia) $n>\lambda^2$, la contribuci\'on del
+t\'ermino $n$ a $A_\lambda(g,g)$ es \emph{exactamente nula}. En consecuencia
+\[
+  A_\lambda(g,g)=A_\infty(g,g)\qquad\text{para todo }g\in\El,
+\]
+i.e.\ $A_\lambda=A_\infty|_{\El}$: la truncaci\'on a primos $\le\lambda^2$ \emph{no es
+una aproximaci\'on}, es la restricci\'on exacta de la forma completa al subespacio.
+\end{lemma}
+\begin{proof}[Raz\'on]
+$\int|\widehat g(t)|^2\cos(t\log n)\,dt$ es la autocorrelaci\'on $R_g(\log n)$, y
+para $g$ de tipo $L/2$ el soporte de $R_g$ es $[-L,L]=[-2\log\lambda,2\log\lambda]$.
+Como $\log n>\log\lambda^2=L$ para $n>\lambda^2$, se tiene $R_g(\log n)=0$. \qed
+\end{proof}
+
+\begin{proposition}[La desigualdad objetivo es vac\'ua \RETRACT]\label{prop:vacuo}
+La cantidad de Prop.\ 4.2 de \texttt{weil-remainder-attack},
+\[
+  \frac1{2\pi}\int|\widehat g_n(t)|^2\,\mathcal W_\lambda(t)\,dt
+  \;=\;\frac1{2\pi}\int|\widehat g_n(t)|^2\,\bigl(W_\infty-W_\lambda\bigr)\,dt,
+\]
+es \textbf{id\'enticamente cero} para $g_n\in\El$, por el Lema \ref{lem:exact}. Luego
+no captura el piso, y el ``hueco espectral $[\lambda,\lambda^2]$ como sala para pelear
+contra la cola'' \textbf{no procede}: no hay cola que pelear --- la cola es invisible
+a la forma.
+\end{proposition}
+
+\begin{remark}[De d\'onde ven\'ia el error]
+\texttt{weil-remainder-attack} mezcl\'o dos operadores distintos: el
+\emph{desplazamiento de ceros} (espectro del Dirac $D_{\log}$) lo acot\'o por una
+\emph{cola de la forma} $\mathcal W_\lambda$. Pero por restricci\'on exacta esa cola
+es $0$ sobre $\El$. El Teorema de circularidad (resto $R_\lambda$ RH--equivalente)
+sigue siendo \emph{cierto} como enunciado sobre la \emph{truncaci\'on de s\'imbolo}
+$-\zeta'/\zeta\mapsto\sum_{n\le\lambda^2}$, pero \textbf{esa ruta no es la que ejecuta
+el modelo}: el modelo restringe el subespacio, no trunca el s\'imbolo. El muro $R_\lambda$
+describe un camino que CCM no toma.
+\end{remark}
+
+% =====================================================================
+\section{El frente real: exhausti\'on de subespacio}\label{sec:real}
+% =====================================================================
+
+Hay \emph{dos} objetos, y conviene no confundirlos:
+\begin{itemize}[leftmargin=1.5em]
+\item la \textbf{forma} $A_\lambda=A_\infty|_{\El}$ (positividad $\Rightarrow$
+Eslab\'on 1);
+\item el \textbf{Dirac} $D_{\log}^{(\lambda)}$, cuyo espectro son los ceros de
+$\xih_\lambda$ (Eslab\'on 2).
+\end{itemize}
+
+\begin{proposition}[Reformulaci\'on correcta del Eslab\'on 2]\label{prop:real}
+Como $A_\lambda=A_\infty|_{\El}$ y $\El\uparrow$ (uni\'on densa), la convergencia
+$\xih_\lambda\to\Xi$ es la \textbf{exhausti\'on de subespacio} de la forma fija
+$A_\infty$: el espectro del Dirac restringido converge al de $A_\infty$. El piso
+$\mathrm{piso}_\lambda(n)$ es el error de aproximar el cero $\gamma_n$ por el mejor
+elemento band--limited de $H(\El)$ (espacio de de Branges), gobernado por la tasa
+$e^{-c\lambda^2}$ medida num\'ericamente (capa de banda).
+\end{proposition}
+
+\noindent Esto \emph{explica} el hallazgo num\'erico que tanto cost\'o interpretar:
+la entrada de primos no aportaba salto porque \textbf{no hay truncaci\'on de
+s\'imbolo} --- s\'olo crece el subespacio. Todo era banda, como mostraban los datos.
+
+\subsection{D\'onde reaparece la circularidad (forma cl\'asica)}
+
+La exhausti\'on $A_\infty|_{\El}\to A_\infty$ converger\'ia gratuitamente
+(convergencia mon\'otona de formas) \emph{si} $A_\infty$ fuese una forma semiacotada
+$\ge0$. Pero
+\[
+  A_\infty(g,g)\ge0\ \ \forall g\quad\Longleftrightarrow\quad\text{RH}
+  \qquad(\text{criterio de positividad de Weil}).
+\]
+\'Esta es la circularidad, ahora en su forma genuina: el l\'imite es positivo
+\emph{sii} RH. Lo que el programa tiene \PR\ es la positividad \emph{finita}
+\[
+  A_\lambda(g,g)\;\ge\;\varepsilon_0(\lambda)\,\|g\|^2\;>\;0\qquad\text{sobre }\El,
+\]
+con $\varepsilon_0(\lambda)\sim C_0/\lambda^2\to0$. La pregunta RH es si el margen
+\textbf{se hunde a cero por arriba} (RH: $A_\infty\ge0$) o \textbf{cruza a negativo}
+(un cero fuera de l\'inea, al ensancharse la banda lo suficiente para resolverlo).
+
+\begin{theorem}[Reformulaci\'on limpia, RH--equivalente]\label{thm:clean}
+RH $\Longleftrightarrow$ los m\'argenes finitos demostrados $\varepsilon_0(\lambda)>0$
+permanecen $\ge0$ cuando $\lambda\to\infty$ (ning\'un autovalor de $A_\infty|_{\El}$
+cruza a negativo). Equivalentemente, RH $\Longleftrightarrow$ no aparece un autovalor
+negativo de $A_\infty$ en ninguna banda finita.
+\end{theorem}
+
+% =====================================================================
+\section{El \'unico residuo no circular}\label{sec:residue}
+% =====================================================================
+
+El Teorema \ref{thm:clean} es RH--equivalente y por tanto no es, en s\'i, un puente.
+El \'unico resquicio no circular identificado es:
+
+\begin{quote}\itshape
+\GAP\ Probar una cota inferior $\varepsilon_0(\lambda)\ge c/\lambda^2$ (o cualquier
+$\varepsilon_0(\lambda)>0$ que no se anule prematuramente) usando \emph{s\'olo} el
+lado primo --- momentos $M_0,M_2$, coeficiente cin\'etico $c=-\psi''(\tfrac14)/8$,
+distribuci\'on de primos (PNT/regiones libres de ceros cl\'asicas) --- sin la
+posici\'on de los ceros.
+\end{quote}
+
+\noindent Es el Objetivo B con su \GAP\ ya conocido (la asint\'otica extremal de de
+Branges del producto can\'onico truncado a densidad cr\'itica). La pregunta central:
+\[
+  \textbf{¿la cota inferior de }\varepsilon_0\textbf{ se sigue de la DENSIDAD (PNT)
+  o necesita la POSICI\'ON (RH)?}
+\]
+Si basta densidad $\Rightarrow$ puente no circular. Si necesita posici\'on $\Rightarrow$
+circular. Los t\'erminos singulares cerca del horizonte $T^*\sim2\pi\lambda^2$
+(espaciado $\sim2\pi/L$) son el lugar exacto donde se decide --- y donde de
+Branges/Connes deben mirar.
+
+% =====================================================================
+\section{Veredicto de este bloque}\label{sec:verdict}
+% =====================================================================
+
+\begin{enumerate}[leftmargin=1.6em]
+\item \RETRACT\ El ataque ``hueco espectral $[\lambda,\lambda^2]$ contra la cola'' \textbf{no
+procede}: por restricci\'on exacta (Lema \ref{lem:exact}) la cola es invisible a la
+forma y la desigualdad objetivo es vac\'ua (Prop.\ \ref{prop:vacuo}). Autocorrecci\'on
+de \texttt{weil-remainder-attack} Prop.\ 4.2.
+\item \PR\ El Teorema de circularidad del resto $R_\lambda$ sigue v\'alido, pero
+describe la \emph{truncaci\'on de s\'imbolo}, que \emph{no} es el mecanismo del modelo.
+\item \PR\ (reubicaci\'on) El Eslab\'on 2 es exhausti\'on de subespacio de
+$A_\infty$ (Prop.\ \ref{prop:real}); su contenido RH es la persistencia de la
+positividad de Weil $A_\infty\ge0$ (Teorema \ref{thm:clean}), unificando Objetivos
+A (positividad) y B (escala de $\varepsilon_0$).
+\item \OP\ Residuo no circular \'unico: cota inferior PNT de $\varepsilon_0(\lambda)$
+(\S\ref{sec:residue}). Frente leg\'itimo: ¿densidad o posici\'on?
+\end{enumerate}
+
+\noindent\emph{Honestidad:} este bloque es mayormente \emph{correctivo}. No produjo una
+cota; produjo (a)~la refutaci\'on de un ataque que parec\'ia prometedor pero era vac\'uo
+por un hecho ya probado, y (b)~la reubicaci\'on del frente al \'unico objeto no
+circular real: la cota inferior de $\varepsilon_0$ desde la densidad de primos. Es
+menos de lo que esper\'abamos, pero impide gastar esfuerzo contra una cola fantasma.
+\end{document}

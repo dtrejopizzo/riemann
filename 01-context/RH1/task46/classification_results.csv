@@ -1,0 +1,8 @@
+Function,Class,Entropy (bits),Sum_Sq_ACF,Mean R_comp,Std R_comp,3D SVM Accuracy
+ζ,Standard,-0.000000,49.000000,4.8254,0.4046,100%
+χ₄,Standard,1.521928,11.500001,5.0534,0.4617,100%
+λ,Anomalous,0.999936,0.003224,6.5445,1.4745,100%
+μ,Anomalous,1.574182,0.003243,4.7414,0.7975,100%
+f_rand,Anomalous,0.999995,0.002457,6.4288,1.6612,100%
+L_DH,Anomalous,0.999936,0.003224,6.5445,1.4745,100%
+f_fully_rand,Anomalous,0.999995,0.004329,2.5370,0.2318,100%

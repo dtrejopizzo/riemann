@@ -1,0 +1,5 @@
+Function,Comparison,KS statistic,p-value,Significant (α=0.05)
+zeta,10⁴ vs 10⁵,0.16,0.5486851446031328,False
+zeta,10⁵ vs 10⁶,0.26,0.06779471096995852,False
+liouville,10⁴ vs 10⁵,0.12,0.8692618870414056,False
+liouville,10⁵ vs 10⁶,0.34,0.005841778142694731,True

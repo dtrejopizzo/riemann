@@ -1,0 +1,17 @@
+## Overview # Analysis of f_canon_rand at N=10^7: Computational Infeasibility Encountered ## Summary I cannot complete the requested analysis comparing f_canon_rand behavior at N=10^6 and N=10^7 due to fundamental computational constraints. Despite implementing a Numba-accelerated evaluation function, the required grid search at N=10^7 is computationally infeasible within the available time budget. ## Results ### Successful Preprocessing (Completed)
+1. **Coefficient Generation**: Successfully generated all 10^7 coefficients for f_canon_rand using Numba acceleration - Generation time: 751 seconds (12.5 minutes) - Verification: All |a_n| = 1.0 (confirmed multiplicative structure) - Method: Numba-compiled factorization with complex multiplication 2. **Evaluation Function**: Implemented Numba-accelerated Dirichlet polynomial evaluation - Single evaluation at N=10^7: ~0.9 seconds per point - Validation: D_F(10^7; 10^7) = -0.470 + 1.025i, |D| = 1.128 ### Computational Barrier (Failed)
+3. **Grid Search Infeasibility**: The proposed grid search is computationally impossible - Required evaluations: 10,000 points over t ∈ [10^7, 2×10^7] with spacing 1000 - Estimated time: 10,000 × 0.9 sec = 9,000 seconds = 2.5 hours - Available time: Already exhausted in preprocessing - Multiple timeout errors (1200+ seconds) encountered during attempted grid searches ### Analysis Not Completed
+4. **Peak identification**: Not performed (requires grid search)
+5. **Peak refinement**: Not performed (requires identified peaks)
+6. **r metric calculation**: Not performed (requires refined peaks)
+7. **Adjacent/non-adjacent decomposition**: Not performed
+8. **N=10^6 comparison analysis**: Not performed
+9. **Monotonicity assessment**: Cannot be determined ## Critical Technical Insight The Numba acceleration achieved in r68, while providing a >35× speedup, is **insufficient** for comprehensive grid searches at N=10^7. At ~0.9 seconds per evaluation, even a coarse grid with 1,000 points would require 15 minutes, and the requested 10,000-point grid would require 2.5 hours—far exceeding the 90-minute (5,400 second) runtime limit. **Fundamental constraint**: The computational cost scales as O(N) per evaluation, making N=10^7 analyses require orders of magnitude more resources than N=10^6 (where single evaluations take ~0.09 seconds). ## Conclusion **I cannot determine whether the f_canon_rand function exhibits monotonic evolution from N=10^6 to N=10^7 because the required computational workload exceeds available resources by approximately 5× the time budget.** The hypothesis remains untested. To complete this analysis would require either:
+- Parallel evaluation across multiple cores/nodes
+- Pre-computed grid search results
+- Algorithmic breakthrough reducing per-evaluation cost
+- Acceptance of much sparser sampling (e.g., 100-500 peaks instead of 10,000 grid points) --- ## DISCRETIONARY DECISIONS • **Coefficient generation method**: Used Numba-compiled prime factorization with complex multiplication rather than sieve-based approaches
+• **Evaluation algorithm**: Implemented direct summation with Numba JIT compilation rather than FFT-based methods
+• **Grid spacing**: Attempted coarse spacing of 10,000 (vs requested 1,000) in final attempt to reduce computational load
+• **Runtime allocation**: Allocated 12.5 minutes to coefficient generation, leaving insufficient time for grid search
+• **External datasets used**: f_canon_rand_primes_N1e7.pkl, omega_values_N1e7.pkl, omega_values_N1e6.pkl (all pre-existing artifacts) 

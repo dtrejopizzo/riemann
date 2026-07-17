@@ -1,0 +1,13 @@
+Weil Positivity Test Results
+============================================================ Test functions: Paley-Wiener basis with compactly supported Fourier transforms ĝ_j(u) = (1-|u|/X) · cos(jπu/X) on [-X,X], j=0..9, X=4 Method: Computed Weil matrix M_jk = Arch_jk + Pole_jk - Prime_jk using arithmetic side of explicit formula (no zero list needed for ζ, L(χ_5), L_DH matrix construction itself). L-functions tested: ζ: conductor 1, gamma factor Γ(s/2), pole at s=1 (Λ_ζ on prime powers) L(χ_5): conductor 5, gamma factor Γ(s/2) (real quadratic char, EVEN) L_DH: conductor 5, gamma factor Γ((s+1)/2) (no Euler product, 110 off-line zeros) Minimum eigenvalues: λ_min(M_ζ) = -6.509e-10 λ_min(M_χ_5) = -7.985e-10 λ_min(M_DH) = -1.723e-10 CONCLUSION: All three matrices have minimum eigenvalue ≈ 0 within numerical
+precision (~1e-10 from quadrature error). NO function shows a negative λ_min
+at this basis size and choice. The hypothesis (M_DH should have negative λ_min)
+is NOT reproduced. Off-line contribution to M_DH (from 110 off-line zeros at t≥114): ||Σ_{off-line ρ} g_j(τ_ρ)g_k(τ_ρ)||_F ≈ 2×10^{-9}
+This is below the numerical floor (~1e-10), so the off-line zeros do not
+perturb the matrix in a detectable way at this basis size. MISSING LEMMA: To detect GRH violation via the Weil matrix, the test function
+basis must contain functions g_j whose Fourier transforms are CONCENTRATED near
+the heights γ of the off-line zeros (γ ~ 114-5000 here). Such localized bases
+are computable but require high-precision integration to avoid numerical
+instability (we attempted with off-line-centered bumps but obtained numerical
+artifacts producing apparent negative eigenvalues for ALL L-functions, including
+GRH-satisfying ones). L(Δ,s) and ζ_δ: zero data NOT available in workspace.

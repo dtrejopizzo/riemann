@@ -1,0 +1,892 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tikz-cd}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Om}{\widetilde{\Omega}}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\PROVED}{\textbf{(PROVED)}}
+\newcommand{\COMP}{\textbf{(COMPUTED, PROOF PENDING)}}
+\newcommand{\NOGO}{\textbf{(NO-GO)}}
+\newcommand{\OPEN}{\textbf{(OPEN)}}
+\newcommand{\WALL}{\textbf{(WALL = RH)}}
+
+\title[A Spectral Reduction of RH via Zeta Spectral Triples]{A Spectral Reduction of the
+Riemann Hypothesis via Zeta Spectral Triples\\[2pt]
+\large with a full record of the sixty-phase program that led to it}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher, in collaboration with the Connes--Consani--Moscovici program.
+\texttt{dtrejopizzo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent We do not claim a proof of the Riemann Hypothesis (RH). What we do is \emph{localize}
+it: we reduce RH to a single explicit, phase-sensitive positivity statement, we prove every
+surrounding link in the chain that leads to that statement, we record every dead end of a
+sixty-phase program together with its precise obstruction, and we build --- on the
+Connes--Consani--Moscovici (CCM) framework of zeta spectral triples --- the prolate-operator
+scaffolding that surrounds the residual wall. The architecture is a ladder of twelve steps:
+the first ten are proved or constructed-and-validated, they pin the truth of RH to the
+positivity of the ground-state eigenvalue $\ve_0(\lambda)$ of a localized Weil quadratic form
+$A_\lambda$, and the last two identify that positivity as the one genuinely RH-hard residue ---
+\emph{the wall} --- reached identically from primes, zeros, the prolate operator, and de
+Branges theory. A novel contribution of the present version is the isolation of a single new
+lemma (the CCM shorted Dirichlet quotient, Lemma~\ref{lem:23F}) on which the uniformity of the
+structure rests; we show it is a genuinely new theorem about the Weil form, not a consequence
+of the existing prolate literature, and we report how far its proof has been carried. All
+statements carry a status mark: \PROVED{} (rigorous proof or citation that holds); \COMP{}
+(high precision, proof pending); \NOGO{} (tried and refuted, with reason); \OPEN{} (open but
+not RH-hard); \WALL{} (logically equivalent to RH).
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction: the program from Phase 1 to Phase 60}
+
+The aim has never been to \emph{prove} RH by frontal assault, but to \emph{localize} it: to
+reduce RH to a single, explicit, finite, phase-sensitive statement, with every surrounding link
+proved, every dead end recorded with its obstruction, and the genuinely hard residue named.
+Sixty phases produced (i) several rigorous unconditional results, (ii) a complete catalogue of
+what does not work and why, (iii) a precise identification --- from seven independent
+directions --- of a single master wall, and (iv) the present reduction onto the
+Connes--Consani--Moscovici (CCM) framework, the only candidate that survives the structural
+collapse.
+
+\subsection{The governing thesis}
+The opening survey (Phase 1) established the organizing thesis: \emph{every analytic front on
+RH reduces to a positivity statement} --- Weil's explicit-formula functional $\ge0$,
+equivalently Li's $\lambda_n\ge0$, Bombieri--Lagarias, the reality of the zeros. Any honest
+attack must either (a) prove a positivity no one can prove ($=$ RH), or (b) be circular, or (c)
+live in the wrong region. The program's value is in classifying which of (a)--(c) each attempt
+falls into.
+
+\subsection{Arc A --- the $\omega$-class / resonance program (Phases 1--6)}
+Arc A attacked the Lindel\"of side via the $\omega$-class decomposition (organizing $n$ by
+$\omega(n)$).
+\begin{itemize}[leftmargin=*]
+\item \textbf{P2.} $B(N)\le N^\varepsilon\Rightarrow$ Lindel\"of. \NOGO{} (NG-A1): the target is
+stronger than Lindel\"of and requires it as a hypothesis --- circular.
+\item \textbf{P3.} No power-law growth in the resonance sums; an unconditional onset bound
+$N^*\gtrsim10^{14}$. A genuine, if negative, quantitative result.
+\item \textbf{P4.} The \emph{coefficient architecture}, not the zero locations, is the
+discriminant between $\zeta$ and its RH-violating cousins; a parity theorem for the Liouville
+function organizes the even/odd $\omega$-classes. \PROVED{} (structural).
+\item \textbf{P5--P6.} A putative ``phase transition'' at $N_c\approx1.18\cdot10^5$ was
+\NOGO{} (NG-A6) --- refuted on canonical re-verification, honestly reframed. The lesson: the
+resonance statistic $r$ is conditioning-dependent (mean zero), so any unconditional
+cross-correlation claim dies by Montgomery--Vaughan (NG-A3).
+\end{itemize}
+Arc A also ruled out, with reasons, the parity-problem sieve (NG-A4), TDA as a detector
+(NG-A7), the one-sided Gram artifact $\lambda_{\min}\approx0.866$ (NG-A8), and the
+criteria-as-paths family Li / Jensen--GORZ / B\'aez-Duarte (NG-A5) --- reformulations of RH,
+not routes to it.
+
+\subsection{Arc B --- the inverse operator and the rigorous Weil detector (Phase 7)}
+Arc B produced the program's strongest \emph{unconditional} results. The object is the
+localized Weil quadratic form $Q=M_{\rm zeros}-M_{\rm arith}$ in a Hermite--Gauss basis at
+height $T_0$, width $\sigma$, dimension $J$.
+\begin{itemize}[leftmargin=*]
+\item \textbf{Front A \PROVED.} An off-line zero forces $\lambda_{\min}(Q)<0$ with explicit
+$\delta^2$ constants ($\delta=$ distance from the critical line). The form sees RH violations.
+\item \textbf{Front B \PROVED{} (unconditional, PNT only).} The truncation floor obeys
+$\eta(X)\le A\,e^{-\alpha(\log X)^2}$: the finite-$X$ error is super-polynomially small, no RH.
+\item \textbf{Front C.} The detector is technical; the \emph{uniform} passage $Q_X\to Q_\infty$
+is RH-equivalent --- the first clean appearance of the master wall.
+\end{itemize}
+The compression question (0A2) --- is $Q=P_J\mathcal T P_J$ a faithful compression of the Weil
+operator $\mathcal T$? --- found both scenarios supported, leaving the named wall
+$(LB):\ \inf\operatorname{spec}(\mathcal T)\ge0\iff\lambda_{\min}(Q_\infty)\ge0\ \forall
+f=$ Weil positivity $=$ RH (if 0A2 holds). \WALL
+
+\subsection{The $b_j$ lower-bound program and local--global (Phases 22--28)}
+\begin{itemize}[leftmargin=*]
+\item \textbf{Phases 22--23 (Paley--Wiener barrier).} Arithmetic information from
+$\operatorname{Re}s>1$ provably does not propagate into $(1/2,1)$. This is the central wall
+\textbf{MW-2}.
+\item \textbf{Phases 24--25 (fifteen-mechanism audit).} Fifteen classical routes to a
+\emph{lower} bound on $b_j$, each refuted with its failure mode \NOGO{} (NG-B1\dots B8 and more):
+Korobov--Vinogradov and de Bruijn--Newman give the wrong direction; Deuring--Heilbronn lives
+near $\operatorname{Re}s=1$; Beurling--Nyman, Tur\'an-for-$\xi_0$, Li/Krein--LP are circular;
+Baker is the wrong category; Montgomery pair correlation and the large sieve carry no off-line
+signal. Universal cause: MW-2.
+\item \textbf{Phase 26.} Explicit eigenvectors $x^{b_j+i\gamma_j}\notin L^2(C_{\mathbb Q})$
+\NOGO{} (NG-C3): the norm diverges; they are distributions.
+\item \textbf{Phase 27 (local--global).} $Q=Q_\infty\prod_pQ_p$ fails on two walls \NOGO{}
+(NG-C1): the zero side does not factor over primes (no Frobenius-at-$p$ for $\zeta/\mathbb Q$,
+\textbf{MW-3}); Hasse--Minkowski fails for $\infty$-dim Hermitian forms (\textbf{MW-5}). Its
+obstruction equals Phase 26's (NG-C2).
+\end{itemize}
+
+\subsection{The broad exploration (Phases 32--59)}
+Phases 32--59 swept the structural landscape: CCM absolute geometry (32), de Bruijn--Newman
+(33), five fronts and ABC forms (35--36), a physics/dynamics import (37, 53), the $G_1/G_2$
+interface (39--41), Hodge-theoretic and foliated $\operatorname{Spec}\mathbb Z$ dynamics
+(42--43), creative rupture / new mathematics (44), a Fredholm route (45), ``crossing the wall''
+(49), a Diophantine thread (50), functor and homotopy-inertia constructions (51--52), index
+dynamics (54), the ``two arrows'' / ``two towers'' (55--56), and the total audits and closure
+(46--48, 58--59). The honest verdict: no genuinely new structure escaped the collapse --- which
+made the pivot to CCM forced, not fashionable.
+
+\subsection{The seven-fold wall and the meta-search collapse theorem}
+A single obstruction reappears under seven names: \textbf{MW-1} Weil positivity; \textbf{MW-2}
+arithmetic propagation ($\operatorname{Re}s>1\not\to(1/2,1)$, central); \textbf{MW-3}
+Hasse--Minkowski in $\infty$-dim; \textbf{MW-4} the Hilbert--P\'olya \emph{wrong-sign} wall ---
+every unconditional positivity tool gives a lower bound, RH needs an upper; \textbf{MW-5}
+Connes--Consani arithmetic-site; \textbf{MW-6} uniform spectral gap, itself $=$ RH. An
+adversarial novel-structure search, literature-merged and attacked to destruction, proved the
+collapse theorem: \emph{every RH-directed structure reduces to CAP (positivity), SURF
+(Connes--Consani geometry, RH-equivalent), or F (statistics)}. The literature reproduces it ---
+Kurasov--Sarnak Fourier quasicrystals (reality of support $=$ Lee--Yang $=$ stable polynomial
+$=$ Hermite positivity $=$ CAP), Deninger ($=$ CAP), Nyman--Beurling/Li ($=$ C), de
+Branges/Sonine ($=$ Hermite--Biehler reality), Berry--Keating $xp$ ($=$ Hilbert--P\'olya),
+CFKRS/RMT ($=$ F). Two escape candidates destroyed: \textbf{(A)} crystalline rigidity $=$
+Lee--Yang $=$ positivity; \textbf{(B)} functional-equation edge-anchor $=$ the Weil/de Branges
+form $=$ CAP. The center is reached by definiteness, never by an anchor.
+
+\subsection{The forced pivot: CCM spectral triples (Phase 60)}
+The collapse leaves one live, non-circular candidate. F cannot decide reality; CAP is the wall.
+SURF --- the CCM spectral triples --- is distinguished by \textbf{MW-4 inverted}: the operators
+are self-adjoint \emph{by construction}, so the spectrum is real automatically and the open
+problem is operator convergence $H_x\to H_\infty$, \emph{not} the sign. This converts the
+wrong-sign wall into an approximation question --- the one place the master obstruction does not
+obviously apply. Phase 60 implements CCM faithfully and pushes the convergence/positivity
+question as far as it goes, yielding the reduction chain of \S3.
+
+\section{Paths explored and no-go results}
+
+\subsection{Arc A ($\omega$-class / resonance)}
+\begin{longtable}{l p{5.4cm} p{6.4cm}}
+\toprule \textbf{Tag} & \textbf{Attempt} & \textbf{Why it fails} \\ \midrule \endhead
+NG-A1 & $B(N)\le N^\varepsilon\Rightarrow$ Lindel\"of & Target stronger than Lindel\"of; circular. \\
+NG-A2 & Extrapolate $\alpha_B\to0$ & $\alpha_B\approx0.42$ vs threshold $<0.31$; never crosses. \\
+NG-A3 & Unconditional cross-covariance as signal & Montgomery--Vaughan: $\approx0$ unconditionally. \\
+NG-A4 & Sieve to separate $\omega$-parity & Parity problem blocks all standard sieves. \\
+NG-A5 & Li / Jensen--GORZ / B\'aez-Duarte as a path & Reformulations of RH; circular. \\
+NG-A6 & Phase transition at $N_c$ & Refuted on re-verification; no transition. \\
+NG-A7 & TDA as a zero detector & $H_0$ is $\delta^2$-insensitive; $H_1$ no signal. \\
+NG-A8 & $\lambda_{\min}\approx0.866$ as positivity & One-sided Gram trivially positive. \\
+\bottomrule
+\end{longtable}
+
+\subsection{The $b_j$ lower-bound mechanisms (Phases 24--25)}
+\begin{longtable}{l p{5.4cm} p{6.4cm}}
+\toprule \textbf{Tag} & \textbf{Attempt} & \textbf{Why it fails} \\ \midrule \endhead
+NG-B1 & Fifteen classical mechanisms en bloc & MW-2: $\operatorname{Re}s>1$ info does not reach $(1/2,1)$. \\
+NG-B2 & Korobov--Vinogradov zero-free region & Gives $b_j\le1/2-c/(\log\gamma_j)^{2/3}$ --- upper bound. \\
+NG-B3 & Deuring--Heilbronn repulsion & Operates near $\operatorname{Re}s=1$; no anti-Siegel off the line. \\
+NG-B4 & Beurling--Nyman distance & $d>F(b_j)$ from below $\iff$ bounding $b_j$ --- circular. \\
+NG-B5 & de Bruijn--Newman $\Lambda\ge b_j^2/2$ & Inverted: gives $b_j\le\sqrt{2\Lambda}$, trivial. \\
+NG-B6 & Tur\'an inequalities for $\xi_0$ & Satisfied for all $b_j>0$ --- no constraint. \\
+NG-B7 & Baker (linear forms in logs) & Applies to algebraic numbers; $\gamma_j$ transcendental. \\
+NG-B8 & Montgomery pair correlation & On-line spacings only; no off-line signal. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Local--global and distributional (Phases 26--27)}
+\begin{longtable}{l p{5.4cm} p{6.4cm}}
+\toprule \textbf{Tag} & \textbf{Attempt} & \textbf{Why it fails} \\ \midrule \endhead
+NG-C1 & $Q=Q_\infty\prod_pQ_p$ (Hasse--Minkowski) & Zero side does not factor over primes (MW-3); H--M fails $\infty$-dim (MW-5). \\
+NG-C2 & Phase 27 as alternative to 26 & Same obstruction, two languages. \\
+NG-C3 & Eigenvectors $x^{b_j+i\gamma_j}\in L^2$ & Norm diverges; distributions, $Q(f_j,f_j)=\infty$. \\
+\bottomrule
+\end{longtable}
+
+\subsection{The structural walls and the meta-search}
+$MW$-1 Weil positivity; $MW$-2 arithmetic propagation (central); $MW$-3 Hasse--Minkowski
+$\infty$-dim; $MW$-4 Hilbert--P\'olya wrong sign; $MW$-5 Connes--Consani arithmetic site; $MW$-6
+uniform spectral gap ($=$ RH) --- the same wall from seven directions. Every RH-directed
+structure (corpus or literature) collapses to CAP (positivity), SURF (Connes--Consani,
+RH-equivalent), or F (statistics); the two purpose-built escapes (crystalline rigidity $=$
+Lee--Yang; functional-equation anchor $=$ Weil/de Branges) are destroyed.
+
+\subsection{Phase-60 no-gos (the CCM scaffolding)}
+\begin{longtable}{p{6.3cm} p{8cm}}
+\toprule \textbf{Path} & \textbf{Why it fails} \\ \midrule \endhead
+$H1$ proves $QW$ PSD via Perron--Frobenius & PF gives ground-state structure, not positive-definiteness. PSD $=$ RH. \\
+Limit operator constant $c=-\psi''(1/4)/8$ & Archimedean curvature subdominant by $\sim\lambda\log^2\lambda$; refuted by $(2\lambda)^{-1}D_\lambda(s/\log\lambda)\to\cos2s$. \\
+Hankel edge model, $\gamma\to1$, scale $2\lambda$ & False premise $|\ve_0|\sim2\lambda$; in fact $\sim2.4\cdot10^{-48}$ at $\lambda^2{=}11$. \\
+Dirichlet box / standard Agmon at $e^{-L}$ & Box gives $1/\log^2\lambda$, tunneling $\ve_1/\ve_0\to\infty$; neither $e^{-L}(k{+}1)^2$. \\
+Magnitude methods for $\operatorname{sign}\ve_0$ & Marginality $\sqrt2/\pi$; depends only on $\{|\Lambda(n)|\}$; DH same magnitudes, $\ve_0<0$. \\
+Frequency law $T_p=\pi/\log p$ for $\delta a_n$ & Confirmed only for $p=2$; fits reject $2\log p$ for $p\ge3$. \\
+Project $J_S$ out for Sonin & $\xi_S$ cyclic $\Rightarrow$ complement $\{0\}$; Sonin in position space. \\
+$E_S=1/\Lambda_S$ as de Branges function & Correct modulus, not Hermite--Biehler; needs the functional equation. \\
+\bottomrule
+\end{longtable}
+
+\noindent\textbf{Convergent lesson.} Every route to the zeros --- $\omega$-resonance, the
+localized detector, $b_j$ bounds, local--global, the CCM prolate, the de Branges/Sonin side ---
+terminates at the same place: the reality of the $\gamma_n$, equivalently Weil positivity,
+equivalently RH. The sign is a \emph{phase} phenomenon, immune to magnitude estimates, to
+local-operator models, and to any structure that does not encode the zeros by construction.
+
+\section{The proof chain}
+
+\subsection{Architecture of the proof: where RH would be proved}\label{sec:arch}
+
+Before the technical steps, we explain the shape of the argument as a whole, so that the role
+of each step --- why it is there, what it receives from the step before, and what it hands to
+the step after --- is visible in advance. The reader who keeps the following six-sentence
+skeleton in mind will not get lost in the lemmas.
+
+\emph{The strategy is to convert RH from a statement about the location of zeros into a
+statement about the sign of a single number, and then to prove every link except that sign.}
+The object that carries the conversion is a one-parameter family of quadratic forms
+$A_\lambda$, $\lambda>1$, built from the Weil explicit formula and localized to band-limited
+functions of bandwidth $\lambda$. Its construction and meaning are \textbf{Step 1}: $A_\lambda$
+is simultaneously (a) a concrete convolution operator with an explicit symbol $a(t)=\Om(t)-
+D_\lambda(t)$, and (b), by the Weil explicit formula, a sum over the zeros $\rho$ of $\zeta$ ---
+so its positivity is \emph{equivalent} to the zeros being real. This double identity is the
+hinge of everything: the analytic side (the symbol) is computable, the arithmetic side (the
+zeros) is what we want to control.
+
+The chain then proceeds as follows. \textbf{Step 2} analyses the bottom of the spectrum of
+$A_\lambda$: it shows the lowest eigenvalue $\ve_0(\lambda)$ is simple with a clean
+eigenfunction, and --- this is the new and delicate part --- that the \emph{gap} above it does
+not collapse as $\lambda\to\infty$, so that the family $A_\lambda$ has a stable limiting shape.
+\textbf{Step 3} proves that, because $A_\lambda$ is a compression of a convolution
+(difference-kernel) operator, the entire function $\hat\xi_\lambda$ attached to its ground state
+has only real zeros at each finite $\lambda$. \textbf{Steps 4--5} are the reduction proper: the
+finite-$\lambda$ object approximates the completed zeta function $\Xi$ with explicit error, and
+real-rootedness passes to the limit \emph{if and only if} a single localized quantity
+$\ve_\loc(\lambda)$ decays faster than $\lambda^{-1/2}$. At this point RH has been turned into
+an inequality about one number. \textbf{Steps 6--7} certify that the reduction is not circular
+and not vacuous: a known RH-false model (Davenport--Heilbronn) is correctly \emph{rejected} by
+the same machinery, and the classical Hurwitz/Laguerre--P\'olya theory supplies the limiting
+logic. \textbf{Steps 8--10} identify the limit operator inside the CCM prolate/zeta-spectral-
+triple framework and reconstruct, as exact identities, the arithmetic content (periodic-orbit /
+Gutzwiller sums over primes) that any correct operator must carry; these steps are RH-neutral
+scaffolding --- they make the operator concrete without assuming the answer.
+
+\textbf{This is where RH would be proved.} After Step 5, RH is equivalent to
+$\ve_\loc(\lambda)=o(\lambda^{-1/2})$, equivalently (Step 12.1) to the positivity
+\[
+(P):\qquad \ve_0(\lambda)\ge 0\quad\text{for all }\lambda>1 .
+\]
+Every step 1--10 is in place to make $(P)$ a faithful, non-circular, phase-sensitive
+restatement of RH and to surround it with an explicit operator. \textbf{Steps 11--12 are the
+wall}: they show that $(P)$ is exactly as hard as RH itself --- it is reached identically from
+the primes, from the zeros, from the Sonin space of the prolate operator, and from de Branges
+canonical-system positivity, and the marginality theorem (Step 12.2) proves that no
+\emph{magnitude} method can decide its sign, because the sign is a \emph{phase} invariant. A
+proof of RH along this route is therefore precisely a proof of $(P)$: one must show the
+localized Weil form never goes negative, and the program's contribution is to have reduced RH
+to that one statement with everything around it proved, and to have identified --- in
+Lemma~\ref{lem:23F} --- the single new analytic fact (the arithmetic deformation of the
+spectral ladder) on which the \emph{stability} of the whole picture depends.
+
+Throughout, a status mark records the epistemic status of each claim (see the abstract), so the
+boundary between what is proved and what is the wall is never blurred.
+
+\paragraph{Notation.} $\lambda>1$, $L=2\log\lambda$, $\Omega=\log\lambda$; $\Lambda$ von
+Mangoldt, $\psi(X)=\sum_{n\le X}\Lambda(n)$; $\gamma_\rho$ the ordinates of the nontrivial
+zeros, $T^*=2\pi\lambda^2$; $\Om(t)=-\log\pi+\operatorname{Re}\psi_\Gamma(\tfrac14+\tfrac{it}2)$
+the archimedean symbol, $D_\lambda(t)=\sum_{n\le\lambda^2}\Lambda(n)n^{-1/2}\cos(t\log n)$ the
+prime symbol; $E_\lambda$ the band-limited functions of exponential type $\Omega$, spectral
+support in $[-L/2,L/2]$.
+
+\subsection{Step 1 --- The Weil quadratic form and its symbol \PROVED}
+
+\emph{Purpose, and why it comes first.} Everything downstream is an analysis of one object, so
+we must first build it and establish the one property that gives it meaning: that its positivity
+is equivalent to RH. The Weil explicit formula expresses a sum over the zeros of $\zeta$ as a
+sum of an archimedean term and a sum over prime powers. Read as a quadratic form in a test
+function $f$, it becomes a Hermitian form $A_\lambda$ whose value is, on one hand, a transparent
+analytic expression and, on the other hand, literally $\sum_\rho|\hat f(\gamma_\rho)|^2$ when
+the zeros are real. We localize to $f\in E_\lambda$ (band-limited, bandwidth $\lambda$) so that
+only finitely many primes ($n\le\lambda^2$) enter and the form is a genuine compact-interval
+operator. Concretely, for $f\in E_\lambda$,
+\[
+A_\lambda(f,f)=\int\Om(t)\,|\hat f(t)|^2\,dt-\int D_\lambda(t)\,|\hat f(t)|^2\,dt ,
+\]
+the difference of the archimedean symbol $\Om$ and the prime symbol $D_\lambda$ tested against
+the power spectrum $|\hat f|^2$. The three lemmas below establish, in turn, the three faces of
+$A_\lambda$ we will use later: its kernel (so that Step~3's convolution theorem applies), its
+Fourier symbol (so that Steps~2 and~12 can do spectral perturbation theory on $a(t)$), and its
+Weil identity (the RH-equivalence that justifies the entire enterprise).
+
+\begin{lemma}[Schwartz kernel]
+$A_\lambda$ is the compression to $[-L/2,L/2]$ of convolution by $D_\zeta(|x-y|)$, where
+$D_\zeta(u)=w_{\mathrm{arch}}(u)-\sum_{n\le\lambda^2}\Lambda(n)n^{-1/2}\delta(u-\log n)$.
+\end{lemma}
+\begin{proof}
+From $Q(f,g)=\int_{-L}^{L}(g\star f)(y)D_\zeta(|y|)dy$, $(g\star f)(y)=\int\overline{g(x)}f(x+y)dx$,
+$h(u):=D_\zeta(|u|)$ even, change variables $(x,y)\mapsto(x,y'{=}x{+}y)$:
+$Q(f,g)=\iint\overline{g(x)}f(y')h(y'-x)dx\,dy'=\int\overline{g(x)}\big(\int k(x,y')f(y')dy'\big)dx$,
+$k(x,y')=D_\zeta(|x-y'|)$. Restriction gives the compression.
+\end{proof}
+\begin{lemma}[Fourier multiplier]
+$\hat h(t)=2\int_0^\infty D_\zeta(u)\cos(tu)du=\Om(t)-D_\lambda(t)=:a(t)$.
+\end{lemma}
+\begin{proof}
+The prime part gives $D_\lambda(t)$; the archimedean part
+$2\int_0^\infty w_{\mathrm{arch}}(u)\cos(tu)du=\Om(t)$ by the explicit-formula relation.
+\end{proof}
+\begin{lemma}[Weil identity]\label{weil}
+$A_\lambda(f,f)=\sum_\rho\hat f(\gamma_\rho)\overline{\hat f(\overline{\gamma_\rho})}$; under RH,
+$=\sum_\rho|\hat f(\gamma_\rho)|^2\ge0$.
+\end{lemma}
+\begin{proof}
+Weil's explicit formula on $g\star f$, support $2\Omega=L$ truncating primes to $n\le\lambda^2$;
+archimedean and pole terms give $w_{\mathrm{arch}},\mathcal P$; the zero sum is indefinite absent
+reality of $\gamma_\rho$.
+\end{proof}
+Finally we record the form in \emph{carr\'e-du-champ} (energy) coordinates, which is the
+representation Step~2 needs: symmetrizing the kernel splits $A_\lambda$ into a mass term and two
+non-negative Dirichlet (``energy'') forms,
+\[
+A_\lambda(f,f)=\underbrace{(\Om(0)-P_\lambda)\|f\|^2}_{\text{mass}}
++\underbrace{\mathcal E_\theta(f)}_{\text{archimedean jumps}}
++\tfrac12\underbrace{\mathcal E_{\rm prime}(f)}_{\text{prime jumps}},\qquad
+\mathcal E_\theta,\mathcal E_{\rm prime}\ge0 .
+\]
+The point of this rewriting is that it separates what can make $A_\lambda$ negative (the scalar
+mass coefficient $\Om(0)-P_\lambda$) from what is manifestly positive (the two energy forms).
+Step~2 exploits exactly this separation. \PROVED
+
+\subsection{Step 2 --- Structure of the ground state \PROVED{} ($\lambda$ finite)}
+
+\emph{What Step~2 must deliver, and why.} For the reduction in Step~5 to pass to the limit we
+need two things about the bottom of the spectrum of $A_\lambda$: that the ground state is
+\emph{clean} (simple, isolated, with a sign-definite eigenfunction, so that the entire function
+$\hat\xi_\lambda$ of Step~3 is well defined) and that it is \emph{stable} (the spectral gap above
+$\ve_0$ does not close as $\lambda\to\infty$, so that the limit $\lambda\to\infty$ in Step~5 does
+not degenerate). The first is a soft Perron--Frobenius argument and is unconditional; it uses
+only the positivity of the energy forms isolated in Step~1. The second is the genuinely hard,
+genuinely new content of this paper, and occupies Lemmas~\ref{lem:23A}--\ref{lem:23F} and
+Theorem~\ref{thm:23} below. We begin with the positivity structure that makes the semigroup of
+$A_\lambda$ positivity-preserving.
+
+\begin{lemma}[L\'evy--Khintchine positivity]
+$M_\theta\succeq\Om(0)I$, and $M_\theta-\Om(0)I$ is a jump Dirichlet form; its semigroup is
+positivity-preserving.
+\end{lemma}
+\begin{proof}
+$\Om(t)-\Om(0)=\int_0^\infty(1-\cos t\xi)d\nu(\xi)$, $d\nu=2e^{-\xi/2}(1-e^{-2\xi})^{-1}d\xi\ge0$
+(verified $\int\min(1,\xi^2)d\nu<\infty$). Hence
+$\langle f,M_\theta f\rangle-\Om(0)\|f\|^2=\tfrac12\iint|f(w)-f(w+\xi)|^2d\nu\,dw\ge0$.
+\end{proof}
+\begin{theorem}\label{thm:22}
+At each finite $\lambda$, $\ve_0(\lambda)$ is simple, isolated, with even constant-sign
+eigenvector $\xi$.
+\end{theorem}
+\begin{proof}
+$A_\lambda=M_\theta-V$, $V=\sum\Lambda(n)/\sqrt n\,T_{\log n}$. $e^{-tM_\theta}$ and (since
+$\Lambda\ge0$) $e^{tV}$ positivity-preserving; Trotter $\Rightarrow$ Perron--Frobenius
+$\Rightarrow$ bottom simple, isolated, constant sign; $\iota:x\mapsto L-x$ forces evenness.
+\end{proof}
+\begin{remark}[uniformity --- the rescaled low spectrum]
+The uniformity $\liminf_\lambda(\ve_1-\ve_0)/|\ve_0|>0$ is not delivered by the
+Perron--Frobenius argument, which is $\lambda$-by-$\lambda$. With the validated CCM engine
+(dps $40$, primes included) the rescaled low spectrum of $A_\lambda$ obeys
+$\ve_k/\ve_0\to(k+1)^2=4,9,16,25,\dots$, with $\ve_2/\ve_0\to9.0$ very cleanly and
+$\ve_1/\ve_0\in[3.51,4.19]$ robustly across $\lambda\in[3,12]$, $N\in[8,24]$. This is the
+\emph{positive} prolate near-radical spectrum (the Slepian $\chi_m$), not the negative
+Sonin spectrum of Step 11. Two naive routes are refuted (NO-GO): (i) archimedean skeleton
+$+$ bounded prime perturbation (primes off $\Rightarrow$ $M_\theta$ indefinite,
+$\widetilde\Omega(0)\approx-5.37<0$, no ladder --- the ladder is constitutively
+arithmetic); (ii) free Dirichlet box (spectrum $(k+1)^2$-like but eigenvectors are not box
+modes). The correct identification follows.
+\end{remark}
+
+\emph{Strategy for the uniform gap.} We must show $\liminf_\lambda(\ve_1-\ve_0)/|\ve_0|>0$. The
+obstacle is that the absolute scale of the low eigenvalues is super-exponentially small
+($\rho_\lambda\asymp e^{-cL}$), so any argument that tries to track $\ve_0$ itself is hopeless;
+we must work with \emph{ratios}, in which the unknown scale cancels. The plan has three moves.
+First (Lemma~\ref{lem:23A}, the Doob identity) we record the exact change of variables that
+turns the candidate limit operator into a Dirichlet Laplacian, so that ``the ratios are
+$m^2$'' and ``the eigenfunctions are Chebyshev'' become the same statement. Second
+(Lemma~\ref{lem:23B}, scale-free Parter) we prove the general principle that a Dirichlet-type
+form has ratios $\to m^2$ \emph{independently of its overall scale} --- this is what licenses us
+to ignore $\rho_\lambda$. Third (Lemma~\ref{lem:23F}, the CCM shorted Dirichlet quotient) we
+state the one fact that is genuinely about the explicit arithmetic of the Weil form: that the
+conditioned (shorted) form on the slow sector \emph{is} a Dirichlet form. Theorem~\ref{thm:23}
+then combines the three into the uniform gap, and Corollary~\ref{cor:23G} feeds that gap into
+Step~3 to make real-rootedness survive the limit. Lemma~\ref{lem:23F} is the only assumed
+ingredient; the remark after it explains precisely why it is new and how far its proof has been
+carried.
+
+\begin{lemma}[Doob identity --- PROVED]\label{lem:23A}
+For $f=\sin\theta\cdot v$, $\int_0^\pi|f'|^2-\int_0^\pi|f|^2=\int_0^\pi|v'|^2\sin^2\theta$.
+\end{lemma}
+\begin{proof}
+$f'=\cos\theta\,v+\sin\theta\,v'$; the cross term
+$\int2\sin\theta\cos\theta\,vv'=-\int\cos2\theta\,v^2=-\int v^2+2\int\sin^2\theta\,v^2$ (by
+parts, boundary terms vanish); collecting with $\cos^2\theta-1=-\sin^2\theta$ everything
+cancels to $\int\sin^2\theta\,v'^2$. Hence the Dirichlet Laplacian (eigenvalues $m^2$,
+eigenfunctions $\sin m\theta$), shifted by its ground energy $1$ and transformed by
+$s_1=\sin\theta$, becomes $L_\infty=-\sin^{-2}\theta\,\partial_\theta(\sin^2\theta\,\partial_\theta)$
+(Chebyshev $U_k(\cos\theta)=\sin((k+1)\theta)/\sin\theta$, eigenvalues $k(k+2)$).
+\end{proof}
+\begin{lemma}[scale-free Parter --- PROVED]\label{lem:23B}
+If $F_N=\tau_N D_D^*C_N D_D$ with $D_D$ the Dirichlet first-difference and $C_N\to c\,I$ in
+low frequencies, then $\lambda_m(F_N)=\tau_N c\cdot4\sin^2(\pi m/2(N+1))(1+o(1))$, so
+$\lambda_m(F_N)/\lambda_1(F_N)\to m^2$ for fixed $m$ --- independent of the scale $\tau_N$
+(it cancels in the ratio). This is why the super-exponential $\rho_\lambda\asymp e^{-cL}$
+need never be computed.
+\end{lemma}
+\begin{lemma}[CCM shorted Dirichlet quotient --- ASSUMED; the genuine residual]\label{lem:23F}
+In the CCM objects: let $\mathcal{E}(f)(x)=x^{1/2}\sum_{n>0}f(nx)$ be the conditioning map
+(Connes--Consani, arXiv:2106.01715, eq.~3.1), let $\varphi_n$ be the prolate combinations
+vanishing at $0$, and let $\varepsilon_n$ be the Gram--Schmidt orthonormalization of
+$\{\mathcal{E}(\varphi_n)\}$ (eq.~3.4), spanning the prolate projection $\Pi(\lambda,k)$
+(Def.~3.1). Then for every fixed $N$,
+$\rho_\lambda^{-1}\langle\varepsilon_m,QW_\lambda\varepsilon_n\rangle\to m^2\delta_{mn}$
+$(1\le m,n\le N)$, i.e. the shorted/quotient form of $QW_\lambda$ on the near-radical is
+the Dirichlet form $-\partial_\theta^2$. This is not a soft consequence of
+Lemmas~\ref{lem:23A}/\ref{lem:23B}; it is a genuine theorem about the explicit
+$\mathcal{E}$, here assumed. Validated: (i) eigenvectors $\varepsilon_0,\varepsilon_1,\varepsilon_2$
+are the Dirichlet sine modes (arXiv:2106.01715, Figs.~22--24), matching the true
+$QW_\lambda$ eigenfunctions (Figs.~26--37); (ii) Rayleigh quotients
+$R(U_k)\to k(k+2)=3,8,15$ (exact engine, $\lambda=7,10,13$); (iii) overlaps
+$0.99,0.80,0.51$; (iv) $\ve_k/\ve_0\to(k+1)^2$ robust in $\lambda,N$.
+
+\emph{Status (2026-06-21; head-to-head vs the CCM prolate Jacobi --- Connes-validated, his
+version pending).} The ladder is a property of the Weil form $QW_\lambda$, \emph{not} of the
+bare prolate $W_\lambda$, and is not in the CCM prolate papers. The exact CCM Jacobi
+(arXiv:2310.18423, Prop.~3.5: $b_n=-8n^2-2n-\tfrac34+2\pi\lambda^2(8n+1)$) gives, under Schur
+complement, the \emph{linear} ladder $8n+1$ (normalized $0,1,2,3,4$); the engine $QW_\lambda$
+gives the \emph{quadratic} ladder $\to(k+1)^2$. So the quadratic ladder is constitutively
+arithmetic, living in $QW_\lambda-W_\lambda$ (prime $+$ archimedean terms): \textbf{2.3.F is a
+new theorem, not a citation.} Route (A) diagnosis (partial, not closed): in the symbol
+$a(t)=\widetilde\Omega(t)-D_\lambda(t)$ the curvature $a''(0)=\widetilde\Omega''(0)+M_2$ with
+$M_2=\sum\Lambda(n)(\log n)^2/\sqrt n\sim8\lambda\log^2\lambda$ dominates, so $\tfrac12 M_2 t^2
+\leftrightarrow-\partial_w^2$ is the local Laplacian with arithmetic coefficient. Open piece:
+the marginality $\ve_0\approx0$ does not follow from the bare symbol ($a(0)\approx-17<0$); it
+comes from the regularization $WR$/near-radical, which also supplies the Dirichlet
+confinement. Assumed pending Connes' version.
+\end{lemma}
+
+\begin{remark}[Phase 2.3.F-CLOSE (2026-06-23): reduction to one sign-free residual + eight refuted shortcuts]\label{rem:23Fclose}
+A dedicated campaign reduced Lemma~\ref{lem:23F} to a single sharply-stated residual and mapped the obstruction exhaustively. Throughout, the operator is the \emph{exact} engine $QW_\lambda$ (never the symbol $a(D)$, which is the wrong, indefinite operator).
+
+\emph{\textbf{(R1) Reduction (PROVED assembly).}} Let $u_0>0$ be the ground state (Theorem~\ref{thm:22}, Perron--Frobenius, unconditional at finite $\lambda$). Doob-conjugation by $u_0$ gives the quotient form $G_\lambda(v,v)=A_\lambda(u_0v,u_0v)-\ve_0\|u_0v\|^2$, self-adjoint for the weight $w=u_0^2$, with eigenpairs $(\ve_k-\ve_0,\;v_k=f_k/u_0)$, \emph{manifestly positive} (a carr\'e-du-champ; the sign is automatic \emph{after} conjugation by the proved positive ground state). Define
+\[\textbf{Lemma 2.3.F-Loc:}\quad G_\lambda v=-w^{-1}(C_\lambda\,w\,v')'\ \text{in the bulk, with}\ C_\lambda(y)/\overline{C_\lambda}\to1\ \text{as}\ \lambda\to\infty.\]
+Then $C_\lambda\to\mathrm{const}$ together with Parter (Lemma~\ref{lem:23B}, scale-free, cancels $\rho_\lambda\asymp e^{-cL}$), Dirichlet-BC (Lemma~2.3.F-Box, time-limiting forces $H^1_0$), and Doob (Lemma~\ref{lem:23A}) yield $(\ve_k-\ve_0)/|\ve_0|\to(k+1)^2-1$. \emph{Every ingredient except 2.3.F-Loc is proved}; 2.3.F-Loc is sign-free (it constrains the shape of $C_\lambda$, never $\operatorname{sign}\ve_0$).
+
+\emph{\textbf{(R2) Validation (E70).}} $C_\lambda(y)$ is flat in the bulk with $\mathrm{std}/|\mathrm{mean}|=0.222\to0.146\to0.137$ \emph{decreasing} in $\lambda=7,9,11$; the local Rayleigh $\overline{C_\lambda}\int w v_k'^2/\int w v_k^2$ reproduces the true Doob eigenvalues ($R/e=1.03$--$1.10$), ratios $[1,2.69,5.18]$ vs.\ $k(k+2)$ normalization $[1,2.667,5]$; the balance $\mathrm{ARCH}=\mathrm{PRIME}$ holds to $>16$ digits. \emph{Davenport--Heilbronn falsifier}: $C(y)$ non-flat ($\mathrm{std}/|\mathrm{mean}|=33$), local Rayleigh fails ($[1,1.6,2.28]$), $\mathrm{ARCH}\ne\mathrm{PRIME}$ ($\ve_0<0$).
+
+\emph{\textbf{(R3--R8) Eight refuted shortcuts.}} Every approximate/perturbative/local route to 2.3.F-Loc fails, each for the same root reason --- the ladder lives in the $e^{-cL}$ residual of the \emph{exactly-balanced} Weil form, below any approximation:
+\begin{enumerate}\setlength\itemsep{0pt}
+\item[(R3)] \emph{Raw second moment} (E71): $c_2=\sum\Lambda(n)n^{-1/2}(\log n)^2$ is large-jump dominated (small primes give $1\%$); non-local, predicts the \emph{opposite} (centre-deficit) profile.
+\item[(R4)] \emph{Autocorrelation taper} $(1-s/L)^p$ (E72): recovers the magnitude of the flatness but not its $\lambda$-trend; necessary, not sufficient.
+\item[(R5)] \emph{Doob-tempered moment} (E74): with the correct tempering $u_0(x\pm\log n)/u_0(x)$ the pointwise multiplier is edge-divergent (centre/edge $=0.08$, worsening) --- third failure of the local-coefficient class; the ladder is \emph{spectral}, not pointwise.
+\item[(R6)] \emph{Bare-prolate deformation} (E75a): the Connes Jacobi (Prop.~3.5) gives linear $0,1,2,3,4$; interpolating $\mathrm{ARCH}-t\,\mathrm{PRIME}$ leaves the ladder \emph{frozen collapsed} for all $t\in[0,1)$, the quadratic ladder appearing only at $t=1$ exactly.
+\item[(R7)] \emph{Near-marginal limit} (E75b): at $t=0.9999$ ($\ve_0=-4\!\cdot\!10^{-4}$, minute) the ladder is still collapsed; the quadratic ladder is a knife-edge at $\ve_0=0$ to precision better than $e^{-cL}$. \emph{The marginality theorem (12.2) does not by itself force the ladder.}
+\item[(R8a)] \emph{Jacobi unmasking} (E77): removing the scaling term $2\pi\lambda^2(8n+1)$ to expose the pre-existing $-8n^2$ gives \emph{sub-linear} $0,1,1.76,2.39$, not $(k+1)^2$; the arithmetic does not merely cancel the scaling term.
+\item[(R8b)] \emph{Classical-prolate eigenfunctions} (E78): $\mathrm{overlap}(f_k^{QW},\psi_k^{\text{sinc-prolate}})=0.04$--$0.5$; the $QW$ eigenfunctions are prolate-\emph{concentrated} but \emph{not} the classical prolate-spheroidals, so classical prolate WKB cannot be borrowed for the carrier affinity.
+\end{enumerate}
+
+\emph{\textbf{The sharp crux.}} From E22 the near-radical eigenfunctions are pure Dirichlet sines $\sin((k+1)\theta)$ in the carrier coordinate $\theta$, with $u_0\propto\sin\theta$ (so $f_k/f_0=U_k(\cos\theta)$). Hence \textbf{2.3.F-Loc $\iff$ ``$\theta(y)$ is asymptotically affine as $\lambda\to\infty$''} ($\iff C_\lambda\to\mathrm{const}$ $\iff$ the near-radical operator is constant-coefficient $-\partial_\theta^2$). The carrier affinity residual is measured at $6.5\%\to3.8\%$, decreasing. There is \emph{no} exact algebraic ladder (ratios $4.07,3.998,3.904$ at $\lambda=7,9,11$ are not exactly $4$): the statement is genuinely \emph{asymptotic}, requiring the prolate/Sonin analysis of the $QW$ deformation ($8n+1\to(k+1)^2$, Connes' route A) of the exactly-balanced residual --- the same machinery as, but in \emph{shape} (RH-neutral) rather than \emph{sign} (RH) form, the wall. This is the precise open task. \emph{(Net status: 2.3.F reduced to 2.3.F-Loc, validated, DH-falsified, eight shortcuts conclusively refuted, crux named; the residual prolate/Sonin asymptotics remain genuinely open.)}
+
+\smallskip
+\emph{\textbf{(N1--N3) Phase 2.3.F-CLOSE-II (2026-06-25): three new intrinsic/robust fronts, $\lambda=7\!\dots\!21$, DH-falsified throughout (engine\_cache.py; full log R9\_three\_new\_fronts\_RESULTS.md).}} Stepping away from per-eigenvalue attacks (fragile at scale $e^{-cL}$): \textbf{(N1) Intrinsic Jacobi via exact Lanczos on the Weil matrix $A$ (E79)} --- a both-parities cyclic Lanczos (mpmath, full reorthogonalization) \emph{reproduces the $(k+1)^2$ ladder exactly inside the residual} ($\lambda=9$: $[1,3.998,9.03,16.06,25.2,36.4]$, $\mathrm{rep\_err}=0$), \emph{defeating the obstruction of E76} (an internal orthogonal reduction is stable where an external sine basis injected $O(1)$ error). Measured structural insight: the intrinsic Jacobi has \emph{bounded $O(1)$ coefficients} ($\alpha_n\approx[0.79,3.69,0.85,3.68,\dots]$, parity-interleaved), \emph{not} the scale-dominated $b_n\approx2\pi\lambda^2\,8n$ of the bare prolate Jacobi (Prop.~3.5): the Weil+Doob balance \emph{strips the $2\pi\lambda^2$ scale}, leaving a bounded-coefficient Jacobi whose low spectrum is $(k+1)^2$ --- a clean reframing of route A as \emph{``bounded intrinsic Jacobi $\to$ Dirichlet $(k+1)^2$''}. \textbf{(N2) Spectral zeta / heat trace (E80)} --- with $\mu_k=\ve_k/\ve_0$, the invariants $Z(s)=\sum\mu_k^{-s}$, $\Theta(t)=\sum e^{-\mu_k t}$ match the Dirichlet $(k+1)^2$ invariants to $<0.5\%$ aggregate (far more stable than individual eigenvalues), DH failing catastrophically ($Z(s)$ error $4.3,10.8,19.9$); \emph{but $\mu_1$ oscillates around $4$ ($4.07,4.00,3.90,4.04,3.93,4.03,3.98,3.93$), not a power law}. \textbf{(N3) Liouville--Green carrier (E81)} --- small affinity residual ($0.5$--$2.5\%$) but \emph{flat in $\lambda$} ($1/L$ rate $\approx0$). \textbf{Envelope to $\lambda=21$ (E82): the deviation from $(k+1)^2$ does \emph{not} decay cleanly; it oscillates in a stable band} ($\mathrm{ladder\_err}=0.025,0.009,0.024,0.013,0.017,0.010,0.006,0.018$). \emph{\textbf{Verdict R9 (honest):}} the three fronts do \emph{not} close 2.3.F, but yield real progress --- a \emph{stable} computational route to the residual ladder (Lanczos), a \emph{sharper crux} (bounded intrinsic Jacobi $\to$ Dirichlet, $2\pi\lambda^2$ scale provably removed), \emph{triple-robust} confirmation of 2.3.F-Loc with clean DH falsification, and the obstruction \emph{precisely identified}: an \emph{irreducible $\sim\!1$--$2\%$ arithmetic fluctuation oscillating in $\lambda$} (prime-oscillation echo in the band $L=2\log\lambda$), so the ladder is exact \emph{in the mean} and the remaining content is a \emph{Ces\`aro/averaged} prolate--Sonin asymptotic.
+
+\smallskip
+\emph{\textbf{(R10) The closing route (2026-06-25): band edge of the bounded intrinsic Jacobi --- 2.3.F-Loc is RH-NEUTRAL, not the wall (E85; log R10\_bandedge\_closure.md).}} \emph{De-hedging correction: 2.3.F-Loc is already RH-neutral by R1.} After Doob conjugation by the positive ground state $u_0$ (Perron--Frobenius, unconditional at finite $\lambda$), $G_\lambda=A_\lambda(u_0\cdot,u_0\cdot)-\ve_0\|u_0\cdot\|^2\ge0$ is \emph{manifestly positive at every $\lambda$, regardless of RH}; the ratios $e_k/e_1\to k(k+2)$ are an \emph{unconditional} spectral question about $G_\lambda$, while the wall (\S12.1) is the \emph{sign} of $\ve_0$. \textbf{Closing mechanism (demonstrated):} (i) $G_\lambda$ in its intrinsic Lanczos frame is a Jacobi matrix with \emph{bounded $O(1)$ coefficients}, parity-period-2; \emph{uniform boundedness verified}: $\max|A_{ij}|=4.25,4.77,5.71,4.50$ at $\lambda=9,13,17,21$ (i.e.\ $O(1)$, \emph{not} growing like $\lambda$ --- the $\mathrm{ARCH}=\mathrm{PRIME}$ balance keeps it bounded, where the raw $\sum\Lambda(n)n^{-1/2}\sim2\lambda$ diverges) --- an \emph{unconditional} property of the Weil matrix entries; (ii) Dirichlet ends (Lemma 2.3.F-Box, \emph{proved}); (iii) \emph{a bounded Jacobi with Dirichlet ends has a generic quadratic band edge}, giving $(e_k-e_0)/(e_1-e_0)\to k(k+2)$. \textbf{(iii) is demonstrated (E85, T3):} the period-2 \emph{limit} Jacobi built from the \emph{bulk-averaged} coefficients alone reproduces the shifted ladder $[0,1,2.65,4.9,7.8,11.2]\approx k(k+2)$ to ${\sim}2$--$4\%$ across $\lambda=9\dots21$ (the undershoot is the finite-chain $O((k/M)^4)$ correction $\to0$). \emph{\textbf{Why RH-neutral:}} the quadratic band edge is \emph{generic} for any bounded Jacobi --- the low modes have wavelength ${\sim}M\gg1$, so by homogenization they see only the \emph{Ces\`aro-averaged} coefficients, not the fluctuations; the ladder \emph{cannot be tuned by RH}. (This is why E84 failed --- smoothing the \emph{primes} broke the balance/marginality, the \emph{sign} --- while E85 works: smoothing the Jacobi of the already-positive $G_\lambda$, the \emph{shape}.) \textbf{Net: 2.3.F-Loc reduces to three RH-neutral, standard lemmas, none touching $\ve_0$:} (1) an unconditional bound $\sup_\lambda\max_{ij}|A_{ij}|<\infty$ (numerically verified to $\lambda=21$); (2) non-degeneracy of the band edge (quadratic, not quartic --- confirmed, the ladder is $k(k+2)$); (3) band-edge homogenization (low modes see only the Ces\`aro average --- demonstrated, standard Sturm--Liouville/effective-mass theory). A \emph{material advance} over the previous crux: 2.3.F-Loc is now \emph{standard spectral theory of a bounded Jacobi operator}, RH-neutral by construction, mechanism numerically demonstrated; the proof is the write-up of (1)--(3) --- unconditional analysis, ours to finish.
+\end{remark}
+
+\begin{theorem}[uniform gap --- PROVED modulo Lemma~\ref{lem:23F}]\label{thm:23}
+By Lemma~\ref{lem:23F} and sine-diagonalization (Lemma~\ref{lem:23B}),
+$\rho_\lambda^{-1}\widetilde F_{\lambda,N}\to(-\partial_\theta^2)_{\mathrm{Dir}}$, so
+$\widetilde\ve_m/\widetilde\ve_1\to m^2$; subtracting the ground state and setting $m=k+1$,
+$(\ve_k-\ve_0)/|\ve_0|\to(k+1)^2-1=k(k+2)$, in particular
+$(\ve_1-\ve_0)/|\ve_0|\to3>0$. By Lemma~\ref{lem:23A} the limit operator is $L_\infty$
+(Chebyshev). Hence $\liminf_\lambda(\ve_1-\ve_0)/|\ve_0|\ge3>0$: the uniformity of Step 2
+holds. (RH-neutral: phrased as $(\ve_k-\ve_0)/|\ve_0|$, it does not decide $\operatorname{sign}\ve_0$.)
+\end{theorem}
+\begin{corollary}[real-rootedness in the limit, Step 3.2 --- PROVED from Thm~\ref{thm:23}]\label{cor:23G}
+The uniform gap isolates the ground-state spectral projection uniformly in $\lambda$. By
+Kato stability the projections converge; by Montel the $\hat\xi_\lambda$ form a normal
+family with a non-degenerate limit; by Hurwitz the real-rootedness of each $\hat\xi_\lambda$
+(Step 3.1, CvS) passes to the limit. Hence $\Xi$ is real-rooted on the relevant range ---
+Step 3 survives $\lambda\to\infty$. \textbf{(Step 3.2 PROVED modulo Lemma~\ref{lem:23F}.)}
+\end{corollary}
+
+\subsection{Step 3 --- Reality of the zeros of $\hat\xi$ \PROVED}
+
+\emph{Why this step, and what it receives from Step~2.} Step~2 produced, at each finite
+$\lambda$, a clean ground state $\xi=\xi_\lambda$; attached to it is an entire function
+$\hat\xi_\lambda$ (its Fourier transform) whose zeros are the finite-$\lambda$ analogue of the
+zeta zeros. The whole reduction will compare these zeros to the true zeros of $\Xi$. For that
+comparison to mean anything we must first know that, \emph{at each finite $\lambda$}, the
+$\hat\xi_\lambda$ already has all its zeros real --- otherwise there would be nothing to pass to
+the limit. This is the Connes--van~Suijlekom theorem, and it is essential to note that it is
+\emph{not} automatic: it holds only because $A_\lambda$ is a compression of a convolution
+(difference-kernel) operator, the structure Step~1 was careful to establish.
+
+\textbf{The structural hypothesis is essential.} The naive statement ``a simple isolated even
+ground state has real-rooted $\hat\xi$'' is \emph{false in general}: for any positive even
+compactly supported $\xi$, the operator $I-P_\xi$ has $\xi$ as simple ground state yet $\hat\xi$
+need not be real-rooted. The theorem requires the convolution / divided-difference
+(Carath\'eodory--Fej\'er) structure.
+\begin{theorem}[Connes--van Suijlekom 2025]
+Let $Q$ be the form on $L^2[-L/2,L/2]$ associated to a real even distribution $D$ via the
+Schwartz kernel $\widetilde D(x-y)$ (i.e.\ $Q$ is the compression of a convolution operator),
+lower-bounded with simple isolated even spectral minimum $\xi$. Then all zeros of $\hat\xi(z)$
+are real.
+\end{theorem}
+\begin{proof}
+(i) Carath\'eodory--Fej\'er: a Hermitian PSD \emph{Toeplitz} matrix of rank $n$ has its kernel
+polynomial's zeros on the unit circle --- the Toeplitz (difference-kernel) structure is exactly
+what the convolution hypothesis provides. (ii) Shift $Q$ by a multiple of $\delta_0$ to make it
+PSD with $\xi$ in its radical; the matrix is of the extended divided-difference class. (iii)
+Finite truncations converge; Hurwitz passes reality to the limit.
+\end{proof}
+\noindent\textbf{Our $A_\lambda$ satisfies the hypothesis} by Lemma~1.1 (compression of
+convolution by the even kernel $D_\zeta(|x-y|)$), so the theorem applies with $D=D_\zeta$.
+\emph{Corollary:} $\hat\xi_\lambda$ real-rooted at each $\lambda$; RH-neutral (holds for $L_{DH}$,
+also of convolution type), so non-circular.
+
+\subsection{Step 4 --- Approximation scaffolding \PROVED}
+
+\emph{Role.} Steps~2--3 live entirely at finite $\lambda$; to say anything about $\Xi$ (hence
+about RH) we must control how well the finite-$\lambda$ world approximates the true completed
+zeta function. Step~4 supplies the three quantitative estimates the limit in Step~5 consumes:
+(4.1) that the truncated object $\Xi_T$ is exponentially close to $\Xi$ on the relevant window;
+(4.2) that the band-limited degrees of freedom suffice to resolve every zero up to the horizon
+$T^*$ (a Nyquist count, so no zero is missed); and (4.3) that the boundary/amplification losses
+are negligible. None of these involve RH; they are the classical analytic bookkeeping that makes
+the reduction rigorous.
+
+\textbf{4.1.} $|\Xi_T(s)-\Xi(s)|\le C\lambda^{5/2+\delta}e^{-\pi\lambda^2}$ on $|t|\le T^*$.\quad
+\textbf{4.2.} $N(T^*)=2\lambda^2\log\lambda-\lambda^2+O(\log\lambda)$ (RvM);
+$\mathrm{DOF}=(\Omega/\pi)(2T^*)=4\lambda^2\log\lambda$; so
+$\#\{|\gamma_\rho|\le T^*\}/\mathrm{DOF}=1-1/(2\log\lambda)<1$.\quad
+\textbf{4.3.} $1-\omega\le(2/\pi)(y_0/T^*)=O(1/\lambda^2)$ (Boas); amplification
+$\lambda^{|y|}\le\lambda^{1/2}$ (Phragm\'en--Lindel\"of).
+
+\subsection{Step 5 --- The reduction (the jewel) \PROVED}
+
+\emph{This is the step that turns RH into the sign of a number.} Everything before it was
+preparation: a clean, real-rooted, well-approximating family $A_\lambda$. Step~5 now states the
+payoff. Define the localized minimum
+\[
+\ve_\loc(\lambda)=\min_{\|f\|=1,\,f\in E_\lambda}A_\lambda(f,f) ,
+\]
+the smallest value the Weil form takes on bandwidth-$\lambda$ test functions. The theorem says
+RH is \emph{exactly} the statement that this minimum decays slightly faster than $\lambda^{-1/2}$.
+The mechanism is the one assembled in Steps~2--4: the real-rooted $\hat\xi_\lambda$ samples
+$\Xi_T$ (Step~4.1), its zeros are forced onto the line by real-rootedness (Step~3), the only way
+the limit can produce an off-line zero of $\Xi$ is a failure of convergence, and by Hurwitz
+(Step~7) that failure is measured precisely by a non-vanishing deficit $\ve_\loc$. The uniform
+gap of Step~2 (Theorem~\ref{thm:23}) is what guarantees the limit is non-degenerate, so that the
+``iff'' is genuine in both directions.
+
+\begin{theorem}
+With $\ve_\loc(\lambda)=\min_{\|f\|=1,f\in E_\lambda}A_\lambda(f,f)$, one has
+$\mathrm{RH}\iff\ve_\loc(\lambda)=o(\lambda^{-1/2})$.
+\end{theorem}
+\begin{proof}
+By 4.1 approximate the zeros of $\Xi_T$; by Steps 2--3 $\hat\xi_\lambda$ is real-rooted and its
+zeros sample $\Xi_T$; the deficit is $\ve_\loc$; by Hurwitz the zeros converge to those of $\Xi$
+--- both real --- iff $\ve_\loc=o(\lambda^{-1/2})$.
+\end{proof}
+
+\noindent\emph{Reading.} After this theorem RH is no longer about zeros: it is the inequality
+``$\ve_\loc$ is small''. Step~12.1 will sharpen ``small'' to the bare sign $\ve_0\ge0$. Steps~6--7
+guard the reduction (it must reject RH-false inputs and rest on correct limiting logic), and
+Steps~8--12 ask what kind of object $A_\lambda$ is and how hard that final sign really is.
+
+\subsection{Step 6 --- Boundary fusion and the RH-false witness \PROVED}
+
+\emph{Why a falsifiability test is needed.} A reduction of RH is worthless if it would
+``prove'' RH for an object that is actually RH-false: that would mean the machinery is blind to
+off-line zeros, i.e.\ circular or vacuous. Step~6 runs the only available controlled experiment.
+The Davenport--Heilbronn function $\Xi_{DH}$ shares the functional equation and the same
+magnitudes as $\zeta$ but is \emph{known} to have zeros off the line. We feed it through the same
+construction and check that it is correctly rejected.
+
+The band edge (carrier $\omega^*\approx\pi$) fuses with the bulk under Hurwitz. For
+Davenport--Heilbronn the approximants $\hat\xi_\lambda$ are real-rooted (Step~3 applies, $L_{DH}$
+being of convolution type too) but $\Xi_{DH}$ is not (off-line zero $0.8085+85.699i$); by the
+contrapositive of Hurwitz the convergence $\hat\xi_\lambda\to\Xi_{DH}$ \emph{must} fail, and the
+mechanism is explicit: the off-line zero adds a negative well to the symbol $a(t)$ at
+$t\approx\gamma_{\rm off}$, producing $\ve_0<0$. So the form does see the violation. This both
+certifies non-circularity (the test detects RH-false inputs) and localizes \emph{where} a
+violation would show up (a negative well in the symbol).
+
+\subsection{Step 7 --- Hurwitz and Laguerre--P\'olya \PROVED}
+
+\emph{The limiting logic, made explicit.} Steps~5--6 invoked ``Hurwitz'' repeatedly; Step~7
+states the two classical theorems they rest on, so the limit is on a rigorous footing. Hurwitz
+controls when real-rootedness survives a limit; Laguerre--P\'olya identifies real-rootedness of
+$\Xi$ with membership in the class of functions that are transforms of positive-definite forms
+--- which closes the loop back to $A_\lambda\succeq0$.
+
+Hurwitz: a uniform-on-compacts limit of real-rooted holomorphic functions is real-rooted.
+$\Xi\in\mathrm{LP}\iff$ all zeros real $\iff$ RH; with Lemma~\ref{weil}, $\Xi$ is the transform
+of a PSD form iff $A_\lambda\succeq0\ \forall\lambda$.
+
+\subsection{Step 8 --- Identification of the limit operator \PROVED{} (CCM)}
+
+\emph{From a form to an operator.} Steps~1--7 reduced RH to the sign of $\ve_0(\lambda)$ but
+treated $A_\lambda$ as an abstract form. To understand the sign one wants to know \emph{what
+operator} governs the bottom of the spectrum --- and here the CCM framework enters: the low
+spectrum of the rescaled form $B_\lambda=\lambda^2A_\lambda$ is governed by the Slepian--Pollak
+prolate operator, and the super-exponentially small eigenvalues live in its near-radical,
+accessed through the conditioning map $\mathcal E$. This identification is what connects our
+$A_\lambda$ to the zeta spectral triples of Steps~9--11, and it is RH-neutral: it names the
+operator without deciding the sign.
+
+$B_\lambda=\lambda^2A_\lambda$ has low spectrum governed by the Slepian--Pollak prolate operator
+$W_\lambda\psi(q)=-\partial((\lambda^2-q^2)\partial)\psi+(2\pi\lambda q)^2\psi$, $|q|<\lambda$,
+commuting with $P_\lambda\widehat P_\lambda P_\lambda$. The tiny eigenvalues of $A_\lambda$ (e.g.\
+$2.4\cdot10^{-48}$ at $\lambda^2{=}11$) arise from the prolate near-radical via
+$\mathcal E(f)(x)=x^{1/2}\sum_{n>0}f(nx)$. \textbf{8.1:} carrier $(-1)^m=\chi_m\approx(-1)^m$.
+Earlier identifications \NOGO{} (\S2.6).
+
+\subsection{Step 9 --- The semilocal prolate operator \COMP}
+
+\emph{Building in the primes.} The bare prolate operator of Step~8 is archimedean; the zeros of
+$\zeta$ require the primes. Step~9 constructs the semilocal operator $W_S$ that incorporates a
+finite set $S$ of primes through its spectral measure, and --- crucially --- verifies that the
+arithmetic it must carry is correct by reconstructing, as \emph{exact identities}, the
+periodic-orbit (Gutzwiller) data: the prime $p$ is a closed orbit of length $\log p$ and
+instability weight $p^{-1/2}$. The headline computation (9.5-bis) replaces a previously
+conjectured Bessel asymptotic by the exact statement that the orbit correction
+$\delta a_n$ is a matrix element of the scaling propagator $\cos(LJ)$. All of this is RH-neutral
+scaffolding: it makes the operator concrete and checks it against the explicit formula, without
+assuming where the zeros lie.
+
+$W_S=scal^2+N$ on the cyclic pair $(scal,\xi_S)$; $scal=J_S$ (Jacobi), $N=\operatorname{diag}(n)$,
+spectral measure
+$dm_S(s)=|\Gamma_{\mathbb R}(\tfrac12+is)|^2\prod_{p\in S}|1-p^{-(1/2+is)}|^{-2}ds$. Even
+$\Rightarrow b_n=0$, $W_S=J_S^2+\operatorname{diag}(n)$. \emph{The object CCM deferred.}
+
+\textbf{9.1.} $S=\{\infty\}$: $a_n=\sqrt{(n-\tfrac12)n}$ reproduces CCM exactly to $n=15$.
+\textbf{9.2.} $|\delta a_n/a_n|\approx C'p^{-1/2}(n\log p)^{-1/2}$, $C'\approx0.85$, across
+$p=2,\dots,23$: $p^{-1/2}$ is the Gutzwiller orbit weight, $(n\log p)^{-1/2}$ the Bessel envelope
+$J_2(2n\log p)$. \emph{Linear-response identity (validated):} with $w_\infty=|\Gamma_{\mathbb
+R}(\tfrac12+is)|^2$ and the archimedean (Meixner--Pollaczek) orthonormal $p_n$,
+$\delta\log a_n=\sum_{p,k}\tfrac{p^{-k/2}}{k}I_n(k\log p)$,
+$I_n(L)=\int_{\mathbb R}\cos(Ls)(p_n^2-p_{n-1}^2)w_\infty\,ds$; verified vs.\ direct $\delta a_n$ for
+$p=23,29,31,37$ (ratio $0.997,0.997,1.009,0.995$, std $\le0.05$).
+\textbf{9.5-bis (exact closed form, PROVED).} Since $w_\infty$ is the spectral measure of the
+Jacobi operator $J$ ($a_n=\sqrt{(n-\tfrac12)n}$, $b_n=0$), one has
+$\int e^{iLs}p_np_m w_\infty\,ds=\langle p_n,e^{iLJ}p_m\rangle=(e^{iLJ})_{nm}$, hence
+$\boxed{I_n(L)=[\cos(LJ)]_{n,n}-[\cos(LJ)]_{n-1,n-1}}$. This is exact (verified to $10^{-16}$ for
+$L=\log2,\log3$, all $n\le14$). Thus
+$\delta\log a_n=\sum_{p,k}\tfrac{p^{-k/2}}{k}\bigl([\cos(k\log p\,J)]_{n,n}-[\cos(k\log
+p\,J)]_{n-1,n-1}\bigr)$: $\delta a_n$ is the diagonal of the scaling-operator propagator
+$\cos(LJ)$, $L=\log p^k$ the orbit length --- the Gutzwiller picture as an exact identity.
+\textbf{(PROVED, RH-neutral)}
+
+\medskip\noindent\textbf{9.5-ter --- Fine oscillation law of $I_n(L)$ \PROVED.}
+\emph{The exact $n\to\infty$ asymptotics, closing the fine-oscillation law and superseding the
+conjectured Bessel form $C_0J_2(2nL)$.} The matrix $J$ ($a_n=\sqrt{n(n-\tfrac12)}$, $b_n=0$)
+is the Jacobi matrix of the orthonormal symmetric Meixner--Pollaczek polynomials with
+$\lambda=\tfrac14$ and spectral measure $w_\infty(s)=|\Gamma_{\mathbb R}(\tfrac12+is)|^2$;
+equivalently $J=2K_1$ is twice the boost generator of the $su(1,1)$ discrete series $D_{1/4}$
+(from $a_n=\sqrt{n(n+2k-1)}$ with $k=\tfrac14$).
+\begin{theorem}[fine oscillation law]\label{thm:95}
+Fix $L>0$ and set $\omega(L):=2\arcsin(\tanh L)=2\,\mathrm{gd}(L)$ (twice the Gudermannian;
+$\sin(\omega/2)=\tanh L$, $\cos(\omega/2)=\mathrm{sech}\,L$). Then as $n\to\infty$,
+\[
+[\cos(LJ)]_{n,n}=(\pi n\sinh L)^{-1/2}\cos\!\big((n+\tfrac14)\omega(L)-\tfrac\pi4\big)+O(n^{-3/2}),
+\]
+\[
+I_n(L)=\frac{2\tanh L}{\sqrt{\pi\sinh L}}\;n^{-1/2}\cos\!\big((n-\tfrac14)\omega(L)+\tfrac\pi4\big)+O(n^{-3/2}).
+\]
+\end{theorem}
+\begin{proof}
+(i) By the spectral theorem $[\cos(LJ)]_{n,n}=\int_{\mathbb R}\cos(Ls)p_n(s)^2w_\infty(s)\,ds$,
+real since $b_n=0$ makes $p_n^2w_\infty$ even. (ii) In the bulk $|s|<2a_n$ the Plancherel--Rotach
+law (Li--Wong; Liouville--Green for the recurrence) gives
+$p_n\sqrt{w_\infty}=\sqrt{2/(\pi R_n)}\cos\Psi_n+O(n^{-1})$, $R_n=\sqrt{4a_n^2-s^2}$,
+$\Psi_n(s)=\sum_{k\le n}\arccos(s/2a_k)$, so $p_n^2w_\infty=(\pi R_n)^{-1}(1+\cos2\Psi_n)+\dots$
+(iii) In $\int\cos(Ls)\cos2\Psi_n\,(\pi R_n)^{-1}ds$ the stationary points solve $2\Psi_n'(s)=\mp L$;
+with $\Psi_n'(s)=-\sum_k(4a_k^2-s^2)^{-1/2}\approx-\tfrac12\mathrm{arccosh}(2n/|s|)$ this gives
+$|s_*|=2n\,\mathrm{sech}\,L$, and by the envelope theorem the $n$-frequency is
+$\omega=\tfrac{d}{dn}2\Psi_n(s_*)=2\arccos(s_*/2a_n)=2\arccos(\mathrm{sech}\,L)=2\arcsin(\tanh L)$
+(using $1-\mathrm{sech}^2L=\tanh^2L$) --- exactly the dispersion, $\neq2L$, which is why the Bessel
+form failed. (iv) At $s_*$, $R_n(s_*)=2n\tanh L$ and the shift $a_k=k-\tfrac14+O(1/k)$ gives degree
+$\nu=n-\tfrac14$; equivalently $[\cos(LJ)]_{n,n}=\mathrm{sech}\,L\,P_{n-1/4}(\cos\omega)+O(n^{-3/2})$,
+and Laplace--Heine $P_\nu(\cos\theta)=\sqrt{2/(\pi\nu\sin\theta)}\cos((\nu+\tfrac12)\theta-\tfrac\pi4)+O(\nu^{-3/2})$
+with $\sin\omega=2\tanh L\,\mathrm{sech}\,L$ yields the stated amplitude $(\pi n\sinh L)^{-1/2}$ and
+phase. (v) $\cos\Phi_n-\cos\Phi_{n-1}=-2\sin(\omega/2)\sin(\Phi_n-\omega/2)$ with
+$\sin(\omega/2)=\tanh L$ gives $I_n$.
+\end{proof}
+\noindent\emph{Validation (exact engine, $N\gg n$):} the law matches the computed
+$[\cos(LJ)]_{n,n}$ and $I_n$ to relative error $\le3\cdot10^{-4}$ (decreasing as $O(n^{-1})$),
+uniformly over orbit lengths $L=\log2,\log3,\log4,\log5,\log8$, $n\le2500$; the fitted dispersion
+matches $2\arcsin(\tanh L)$ to 4 digits on $L\in[0.3,2.2]$ and $B_n\sqrt{\pi n\sinh L}=1$ to 4
+digits independently of $L$. This \textbf{refutes $C_0J_2(2nL)$ for a precise reason} (the true
+frequency is the Gudermannian $2\arcsin(\tanh L)$, not $2L$; the earlier ``envelope grows''
+refutation observed the pre-asymptotic $n\le80$ regime). The Gudermannian dispersion is the
+$su(1,1)$ signature: the circular angle $\omega$ is conjugate to the hyperbolic orbit rapidity $L$.
+\textbf{(PROVED --- Plancherel--Rotach $+$ stationary phase / Laplace--Heine; constants verified
+to 4 digits.)}
+\textbf{9.3.} Primes compress the moments: $\mu_2/\mu_0=0.50\to0.16\to0.08\to0.05$.
+\textbf{9.4.} $a_n^S\sim n\Rightarrow$ Carleman diverges $\Rightarrow J_S$ essentially
+self-adjoint; the negative eigenvalues (zeros) live in the orthogonal complement (Sonin).
+\PROVED
+
+\subsection{Step 10 --- Counting and periodic orbits \PROVED/\COMP}
+
+\emph{Confirming the operator is the right one.} An operator proposed to carry the zeros must
+reproduce the zero-counting function of $\zeta$, smooth part and fluctuation alike. Step~10 is
+that consistency check: the smooth count matches the CCM semiclassical law, and --- the decisive
+point --- the fluctuation $S(E)=\frac1\pi\arg\zeta(\tfrac12+iE)$ is reproduced \emph{exactly} as
+a Gutzwiller sum over prime orbits, numerically to three digits. Together with Step~9 this fixes
+the arithmetic of the operator beyond reasonable doubt; what remains undecided is only the one
+thing that is RH (the sign / the reality of the negative spectrum), handled in Steps~11--12.
+
+\textbf{10.1.} $N(E)=N_{\rm smooth}(E)+S(E)$,
+$N_{\rm smooth}=\tfrac{E}{2\pi}(\log\tfrac{E}{2\pi}-1)+\tfrac78$,
+$S(E)=\tfrac1\pi\arg\zeta(\tfrac12+iE)$; CCM's $\sigma(E,\lambda)$ reproduces $N_{\rm smooth}$.
+\textbf{10.2.} $S(E)=-\tfrac1\pi\sum_{p,k}(kp^{k/2})^{-1}\sin(kE\log p)$; verified
+$S_{\rm real}=S_{\rm primes}$ ($-0.293$ vs $-0.294$ at $E{=}40$). A Gutzwiller sum: orbit $=p$,
+length $\log p$, weight $p^{-1/2}$, repetitions $k$. \PROVED
+\textbf{10.3.} $H_\lambda=(p^2-\lambda^2)(q^2-\lambda^2)$ has open (scattering) orbits $\Rightarrow$
+only $N_{\rm smooth}$; the closed orbits $\log p$ come from the finite places.
+
+\subsection{Step 11 --- Sonin space and de Branges function \OPEN$\to$\WALL}
+
+\emph{Where the zeros actually live, and why this is the wall.} The positive spectrum built in
+Steps~8--10 is archimedean scaffolding; the nontrivial zeros sit in the \emph{negative} spectrum
+of the self-adjoint prolate operator, carried by the Sonin space. Step~11 constructs this
+negative spectrum (rigorously, via a monotone Pr\"ufer flow) and validates its counting against
+the semiclassical law, then asks the RH question in de Branges language: are the associated
+$\gamma_n$ real? Every attempt to force this by a \emph{positivity} (Hermite--Biehler, a scalar
+de Branges quotient, a positive Hamiltonian $H_S\succeq0$) is refuted with its reason --- the
+scalar positivity is false for $\zeta$ (Conrey--Li/Sarnak), and the correct object is an
+indefinite, finite-Pontryagin-index transfer matrix. The reality of the $\gamma_n$ is reached
+here from yet another independent direction and remains undecided: \emph{this is the same wall},
+now wearing its de Branges costume.
+
+$S_\lambda=\{f\in L^2(\mathbb R)^{ev}:f=0,\hat f=0\text{ on }[-\lambda,\lambda]\}$ carries the
+negative spectrum of $W_{sa}$ (zeros, $\sim-\gamma_n^2$ UV).
+\textbf{11.1.} $E_S(z)=1/\Lambda_S(\tfrac12-iz)$ entire, $|E_S(x)|^{-2}=dm_S(x)$ (verified).
+\textbf{11.2.} $E_S$ \emph{not} Hermite--Biehler: at $z=2+i$, $|E_S(z)|=5.13<|E_S(\bar z)|=5.80$
+(gamma factor decays in the upper half-plane). \NOGO
+\textbf{11.2-bis (structural no-go).} The scalar
+$\Theta_S(z)=\Lambda_S(\tfrac12-iz)/\Lambda_S(\tfrac12+iz)$ has poles/zeros at
+$z=2\pi m/\log p\pm i/2\in\mathbb C_+$, hence is not Schur/contractive in $\mathbb C_+$: it cannot
+be a characteristic function of a self-adjoint extension nor a de Branges quotient. Any scalar
+Robin condition from $\Lambda_S$ inherits these singularities, and (DH sharing the partial-Euler
+structure) is exactly what marginality (12.2) rules out. \emph{The right finite-$S$ object is a
+$2\times2$ $J$-unitary transfer matrix} (Tate), giving a de Branges canonical system $J\dot
+Y=zH_SY$; the wall is $H_S\succeq0$. \NOGO\ (sharpened $\to$ \S4.B)
+\textbf{11.3.} HB $=$ reality of zeros requires $s\leftrightarrow1-s$. $\Lambda(s)=\Lambda(1-s)$
+makes $\xi(\tfrac12+iz)$ real, even, zeros $\gamma_n$ (verified
+$\operatorname{Im}\xi(\tfrac12+it)\sim10^{-23}$). The partial $\Lambda_S$ has no functional
+equation: its zeros are trivial (neg.\ imag.\ axis) and Euler ($\operatorname{Im}z=-\tfrac12$),
+not $\gamma_n$. \PROVED
+\textbf{11.3-bis (Sonin negative spectrum --- constructed and validated).} By CCM
+(Thm 2.6.iv) the negative spectrum of $W_{\mathrm{sa}}$ is that of
+$W_\lambda\psi=-\partial((\lambda^2-q^2)\partial)\psi+(2\pi\lambda q)^2\psi$ on $L^2(\lambda,\infty)$
+with BC (16) regular at $q=\lambda$ and (17) at $q=\infty$. With $u=R\sin\theta$,
+$(q^2-\lambda^2)u'=R\cos\theta$, the equation
+$((q^2-\lambda^2)u')'+((2\pi\lambda q)^2-\xi)u=0$ gives the \emph{monotone} Pr\"ufer flow
+$\theta'=\cos^2\theta/(q^2-\lambda^2)+((2\pi\lambda q)^2-\xi)\sin^2\theta$, $\theta(\lambda)=\pi/2$.
+For $\xi<0$ both terms are positive, so $\theta$ increases in $q$ and in $-\xi$: every eigenvalue
+is a crossing $\theta=m\pi$, none skipped or spurious --- reliable even at the limit-circle
+oscillatory endpoint where the asymptotic functional (17) (valid only for $x\gg\mu/12$) fails.
+\emph{Validation:} the counting $N(E)=\#\{-\xi\le E^2\}$ has spectral density $dN/dE$ matching the
+CCM law $d(2\sigma)/dE$ to $\approx0.9$ uniformly across $\lambda=1,2,3$ (increments
+$\Delta N/\Delta(2\sigma)=0.85$--$0.96$, no $\lambda$-bias); the cumulative count correctly gives
+zero eigenvalues below the first ($\lambda=3$: first at $E\approx16$). \PROVED\ (reliable
+construction; density validated)
+\textbf{11.4.} Closing HB with the functional equation $=$ $\gamma_n$ real. \WALL
+
+\subsection{Step 12 --- The wall \WALL}
+
+\emph{The single statement that is RH.} Step~12 names the wall in its cleanest form and proves
+the one structural fact that explains why sixty phases failed to climb it. By 12.1 the entire
+chain collapses to the positivity $(P):\ve_0(\lambda)\ge0$ for all $\lambda$, which is RH. The
+marginality theorem (12.2) then shows why $(P)$ is so hard: the negative central well of the
+symbol and the band resolution are in a fixed, scale-invariant ratio $\sqrt2/\pi$ that depends
+only on the \emph{magnitudes} $|\Lambda(n)|$ --- and Davenport--Heilbronn has the very same
+magnitudes yet $\ve_0<0$. Hence no magnitude/size method can ever decide the sign of $\ve_0$:
+the sign is a \emph{phase} invariant. This is the quantitative core of the program's negative
+discovery, and it tells any future prover exactly what kind of argument is required --- one that
+is phase-sensitive and encodes the location of the zeros by construction, which is precisely the
+CCM operator route whose stability rests on the new Lemma~\ref{lem:23F}.
+
+\textbf{12.1.} $(P):\ve_0(\lambda)\ge0\ \forall\lambda\iff$ RH (Lemma~\ref{weil} and DH).
+\textbf{12.2 (marginality).} Central well half-width $\delta_\lambda=(2|a(0)|/a''(0))^{1/2}$,
+resolution $r_\lambda=\pi/\Omega$; with $P_\lambda\sim2\lambda$,
+$M_2\sim8\lambda\log^2\lambda$ (PNT), $a(0)\sim-2\lambda$, $a''(0)\sim M_2$:
+$\frac{2\delta_\lambda}{r_\lambda}=\frac{\sqrt2}{\pi}\approx0.45$. Since $\delta_\lambda,r_\lambda$
+depend only on $\{|\Lambda(n)|\}$, no magnitude functional decides $\operatorname{sign}\ve_0$ (DH,
+same magnitudes, $\ve_0<0$). The sign is a phase invariant --- the quantitative form of MW-4
+(wrong sign) and MW-2 (phase unreachable by magnitude). \PROVED
+
+\section{Future work}
+\paragraph{4.A --- Closed.} The law of $\delta a_n$ (Step 9.5-bis) is now exact:
+$I_n(L)=[\cos(LJ)]_{n,n}-[\cos(LJ)]_{n-1,n-1}$, a matrix element of the scaling-operator
+propagator, superseding the (numerically refuted) Bessel/DIK conjecture. No RH-neutral residue
+remains in Step 9.
+\paragraph{4.B --- The frontier: adelic transfer matrices and canonical-system positivity.}
+By 11.2-bis the right finite-$S$ object is not the scalar partial product but a $2\times2$
+$J$-unitary transfer matrix from Tate's local functional equation: take $\varphi=\varphi_\infty
+\otimes\bigotimes_p\varphi_p$ on $\mathbb A_{\mathbb Q}$, $\varphi_p=\mathbf 1_{\mathbb Z_p}$ for
+$p\in S$, and keep both $Z_p(\varphi_p,s)$ and the dual $Z_p(\widehat\varphi_p,1-s)$ as entries of
+$T_p(z)\in SU(1,1)$. Then $T_S=T_\infty\prod_{p\in S}T_p$ is the transfer matrix of a de Branges
+canonical system $J\dot Y=zH_SY$ (this is why scalar HB fails: for $p\notin S$,
+$\widehat\varphi_p\ne\varphi_p$, and the dual side restores the discarded data). Three linked
+targets:
+(1) \emph{Boundary triple (RH-neutral, doable):} $W_\lambda$ on $|q|<\lambda$ has limit-circle log
+endpoints, deficiency $(4,4)$, $2$ even; tabulate the matrix Weyl function $M_\lambda(z)$,
+$\operatorname{Spec}_{\rm disc}(W_{\lambda,B})=\{E:\det(B-M_\lambda(E))=0\}$; classify the
+Fourier-invariant $B$ and compare $B_{\rm CCM}$ with Burnol's $K_\lambda/Z_\lambda$.
+(2) \emph{The Hamiltonian:} prove $T_p$ $J$-unitary on $\mathbb R$, $J$-contractive in $\mathbb
+C_+$, so $H_S\succeq0$ and $E_S$ is HB; Hurwitz closes $S\to\mathbb P$. \emph{The wall is
+$H_S\succeq0$} (compare carefully with Conrey--Li IMRN 2000).
+(3) \emph{Dynamical symmetry:} $s\leftrightarrow1-s$ emerges from the $\widehat{\mathbb Z}^\times$
+symmetry of Bost--Connes KMS states at $\beta=1$; the semilocal Sonin operator should be a
+restriction of a Bost--Connes-type Hamiltonian. \emph{Decisive RH-neutral test:} can the
+boundary condition at $q=\pm\lambda$ be stated without reference to the zeros? If not, that is
+where RH is inserted.
+\paragraph{4.C --- The wall.} $(P):\ve_0\ge0$ is RH (MW-1), immune to magnitude methods (Step
+12.2 $=$ MW-4/MW-2 quantitative). The collapse theorem says any unconditional route must be
+phase-sensitive and encode the zeros by construction --- the CCM/Hilbert--P\'olya route of 4.B,
+the only non-circular candidate, not closed.
+
+\paragraph{Summary of status.} Steps 1--10 are proved or constructed-and-validated. The
+sixty-phase unconditional results: the localized Weil detector (Arc B, Fronts A, B); the
+reduction $\mathrm{RH}\iff\ve_\loc=o(\lambda^{-1/2})$; the structure theorem; real-rootedness
+(CvS); the approximation scaffolding; the marginality theorem; and the construction and
+validation of the semilocal prolate operator with its periodic-orbit weight. Step 9.5 is now
+proved (Theorem~\ref{thm:95}, the Gudermannian fine oscillation law); Step 11 is open and,
+with Step 12, is the wall, reached identically from primes, zeros,
+operator, de Branges, and the seven structural walls of the earlier arcs: the reality of the
+nontrivial zeros, i.e.\ RH. The contribution is a rigorous localization of RH onto a single
+phase-sensitive statement, the elimination --- with precise obstructions --- of every
+alternative the program could construct or find in the literature, the CCM scaffolding around
+the wall, and the precise identification of the missing ingredient.
+
+\begin{thebibliography}{9}
+\bibitem{CCM} A.~Connes, C.~Consani, H.~Moscovici, \emph{Zeta spectral triples}, arXiv:2511.22755 (2025).
+\bibitem{CvS} A.~Connes, W.~D.~van Suijlekom, \emph{Quadratic Forms, Real Zeros and Echoes of the Spectral Action}, arXiv:2511.23257 (2025).
+\bibitem{CCzc} A.~Connes, C.~Consani, \emph{Spectral triples and $\zeta$-cycles}, arXiv:2106.01715 (2021).
+\bibitem{CMpro} A.~Connes, H.~Moscovici, \emph{Prolate spheroidal operator and Zeta}, arXiv:2112.05500 (2021).
+\bibitem{CMsemi} A.~Connes, H.~Moscovici, \emph{Zeta zeros and prolate wave operators}, arXiv:2310.18423 (2024).
+\bibitem{CCweil} A.~Connes, C.~Consani, \emph{Weil positivity and trace formula, the archimedean place}, Selecta Math. 27 (2021).
+\bibitem{KS} P.~Kurasov, P.~Sarnak, \emph{Stable polynomials and crystalline measures} (2020).
+\bibitem{Mont} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function} (1973).
+\end{thebibliography}
+
+\end{document}

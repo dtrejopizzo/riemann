@@ -1,0 +1,10 @@
+,M_coh,M_coh,R_comp,R_comp,ACF_sum_squared,ACF_sum_squared,class
+,mean,std,mean,std,mean,std,first
+function,,,,,,,
+L_DH,0.112658,0.102743,3.402668,0.469295,24.870221,0.0,Anomalous
+L_chi4,0.155232,0.143071,4.293215,0.653951,12.432618,0.0,Standard
+L_liouville,0.182334,0.133735,4.968953,1.03741,0.003226,0.0,Anomalous
+L_mobius,0.147484,0.107712,3.737838,0.519688,0.003225,0.0,Anomalous
+f_fully_rand,0.11822,0.089608,2.270169,0.231514,0.003911,0.0,Anomalous
+f_rand,0.085133,0.058944,2.338256,0.193875,0.004307,0.0,Anomalous
+zeta,0.138486,0.099755,4.305919,0.69044,0.0,0.0,Standard

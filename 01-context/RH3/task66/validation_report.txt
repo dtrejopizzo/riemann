@@ -1,0 +1,35 @@
+
+DAVENPORT-HEILBRONN VALIDATION REPORT
+===================================== OBJECTIVE:
+Validate the L_DH implementation by computing |L_DH(ρ)| at four known off-line zeros
+and confirming that each modulus < 10^-6. VALIDATION STATUS: **INCOMPLETE** CRITICAL LIMITATION:
+The validation requires "four known off-line zeros (ρ) listed in the research program."
+These zeros are not present in:
+- The provided dataset description
+- Any accessible dataset files (directory is empty)
+- The search results from external databases
+- The downloads directory (only contains a plot) METHODOLOGY IMPLEMENTED:
+1. High-precision arithmetic using mpmath (50 decimal places)
+2. Kahan compensated summation for numerical stability
+3. Dirichlet polynomial evaluation: L_DH(s) = Σ a_n/n^s with N=10^5
+4. Newton-Raphson zero refinement
+5. Coefficient formula: a_n^(DH) = ((1−iκ)/2)·χ(n) + ((1+iκ)/2)·χ̄(n) CHARACTERS TESTED:
+- Non-principal character mod 4 (real-valued)
+- Complex characters mod 5 (conjugate pair)
+- Complex characters mod 8 (conjugate pair)
+- Complex characters mod 7 KAPPA VALUES TESTED:
+- Given value: κ = 0.28408
+- Optimal value for mod 5: κ ≈ -0.0883
+- Grid search: κ ∈ [0, 1.0] with fine resolution ZERO SEARCH REGIONS:
+- Near σ = 0.44, t ∈ [6, 25] (classical DH zeros)
+- Near σ = 0.50, t ∈ [5, 23] (refined searches)
+- Near σ = 0.25, t ∈ [5, 23] (based on plot) KEY FINDING:
+A plot (downloads/L_DH_profile.png) shows a minimum at: σ = 0.25, t = 5.336, |L_DH| ≈ 4.7 × 10^-5 However, none of the tested character/kappa combinations reproduce this value.
+The closest achieved was |L_DH| ≈ 0.014 with mod 5 characters at different locations. CONCLUSION:
+The validation cannot be completed without:
+1. The exact four zero coordinates from the research program
+2. The precise character definition (modulus and structure) 3. The exact kappa value used in the dataset generation
+4. Or access to the original dataset files and documentation The methodology is sound and the implementation follows the specification,
+but the required input data is unavailable. RECOMMENDATION:
+Provide the research program documentation containing the four zero coordinates,
+or provide the original dataset files mentioned in the description.

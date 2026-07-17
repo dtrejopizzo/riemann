@@ -1,0 +1,21 @@
+
+================================================================================ M4 DECOMPOSITION FINAL RESULTS Zeta Function at N=10^6, 500 t-values in [10^6, 2×10^6]
+================================================================================ REQUESTED CATEGORIES:
+--------------------
+(a) Pure Diagonal (PD): 211.10 (11.5%)
+(b) Mixed Diagonal (MD): 412.39 (22.4%)
+(c) Three-Index Type A: -14.48 (-0.8%)
+(d) Three-Index Type B: 311.76 (17.0%)
+(e) Four-Index: 296.81 (16.2%) ADDITIONAL SIGNIFICANT CATEGORIES:
+----------------------------------
+(f) Other 2-Index (3,1): 142.76 (7.8%)
+(g) Other 2-Index (2,2): 477.18 (26.0%) TOTAL M4 (Arithmetic Mean): 1837.51 (100.0%) ================================================================================
+OFF-DIAGONAL BREAKDOWN:
+--------------------
+Total off-diagonal (non-PD/MD): 1214.02 (66.1%) - Within spec categories (c+d+e): 594.08 (32.3%) - Additional 2-index terms (f+g): 619.94 (33.7%) Comparison to r19 "off-diagonal" estimate: - r19: 85-93% (at N=10^6, peak-focused) - Ours: 66% (arithmetic mean over 500 t-values) - High-M4 regime (our top 10%): 81% ================================================================================
+HYPOTHESIS VERDICT: PARTIALLY REJECTED
+--------------------
+The hypothesis that 4-index terms dominate over 3IDX_A terms is: ✓ TRUE for arithmetic mean (16.2% vs -0.8%) ✗ FALSE for high-M4 regime (8.6% vs 26.4%) ✗ FALSE for M4-weighted mean (9.3% vs 34.1%) KEY FINDING:
+At physically meaningful high-M4 points, 3IDX_A terms (|S_j|² S_k S̄_l) dominate, contributing 26-34% of M4, while 4IDX terms contribute only 8-9%. The strongest contributor is actually the "Other 2-index" category,
+which was not anticipated in the original problem specification.
+================================================================================

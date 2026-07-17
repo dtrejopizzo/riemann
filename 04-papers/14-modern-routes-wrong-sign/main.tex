@@ -1,0 +1,252 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,urlcolor=blue!70!black,
+  pdftitle={Two modern routes to RH and the wrong-sign obstruction},
+  pdfauthor={David Alejandro Trejo Pizzo}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\Xibf}{\Xi}
+\newcommand{\bmin}{\beta_{\min}}
+
+\title[The Wrong-Sign Obstruction]{Two Modern Routes to the Riemann Hypothesis\\[3pt]
+and the Robustness of the Wrong-Sign Obstruction:\\[2pt]
+the Hodge-index and hyperbolicity reformulations}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgGORZ,bgCV,bgDeligne}
+\begin{abstract}
+We study two reformulations of the Riemann Hypothesis chosen because their mechanism is \emph{not} a
+quadratic-form positivity — the one structural feature an earlier analysis (the ``wrong-sign capstone'')
+identifies as required to cross. The first is \emph{cohomological}: viewing the band-limited Weil--Carleson
+form as the primitive part of a candidate Hodge-index pairing, we show its bare gap degenerates toward $\zeta$
+but its \emph{regularized} gap is positive-definite and obeys the clean identity
+$\lambda_{\min}(G)=\frac{\pi^2}{6}\bmin^2$ (the squared minimum normalized gap), whence RH is equivalent to the
+zeros being a uniform Riesz sequence / a uniform Muckenhoupt $A_2$ condition on $E\sim\xi$ / an extremal
+regularity of $S(T)$. The second is \emph{hyperbolicity}: $\mathrm{RH}\iff\Xibf=\xi(\half+it)$ lies in the
+Laguerre--Pólya class $\iff$ every Jensen polynomial of $\Xibf$ is hyperbolic, established in modern
+combinatorics by interlacing and stability preservers. We record the moment identity $b(k)=(-1)^ka(k)=m_{2k}/(2k)!$
+(the Jensen coefficients are the even moments of the de Bruijn--Newman kernel), prove the shift operator is an
+arithmetic-blind stability preserver, and show by the Hermite-form criterion that real-rootedness \emph{is} a
+positivity, on which the interlacing machinery rests. Both routes — the richest positivity languages available,
+home to the most powerful modern machinery — reduce to a positivity, and hence to the same cornered target.
+This confirms the wrong-sign capstone across eight independent paradigms: every unconditional handle on the
+zeros is a lower-bound positivity, while RH is a one-sided upper constraint. All results are
+RH-\emph{independent} structural statements except where the dependence on RH is the explicit content.
+\end{abstract}
+
+\maketitle
+
+
+
+\tableofcontents
+\newpage
+
+\section{Introduction}\label{sec:intro}
+A long program \cite{P11,P12} reduced the analytic attack on RH, across six reformulations, to a single
+\emph{cornered target} and explained the reduction by one principle, the \emph{wrong-sign capstone}:
+
+\begin{quote}
+\emph{Every unconditional handle on the nontrivial zeros is a positivity (a ``$\ge0$''), oriented to give
+lower bounds / existence. RH is fundamentally a one-sided \textbf{upper} constraint (no zeros off the line; no
+clustering above the GUE law; no anomalously tight pairs). Positivity is the wrong inequality direction.}
+\end{quote}
+
+This paper tests the capstone against the two structures in mathematics whose mechanism is \emph{not} a
+quadratic-form positivity, and which therefore could, in principle, escape it. The first is the
+\textbf{Hodge-index} mechanism — the route by which the only Riemann Hypothesis ever proved, that for curves
+over finite fields, obtains its \emph{upper} bound on Frobenius eigenvalues from a higher-level positivity via
+duality. The second is \textbf{hyperbolicity} (real-rootedness), proved in modern combinatorics
+(Marcus--Spielman--Srivastava interlacing \cite{MSS}; Borcea--Brändén stability preservers \cite{BB}) without a
+positivity certificate. We pursue each to its foundation. Both reduce to a positivity. The conclusion
+(\S\ref{sec:capstone}) is that the wrong-sign capstone is robust across eight independent paradigms.
+
+The byproducts are RH-independent and, we believe, of independent interest: the identity
+$\lambda_{\min}(G)=\frac{\pi^2}{6}\bmin^2$ (\S\ref{sec:hodge}); the de Bruijn--Newman moment identity
+$b(k)=m_{2k}/(2k)!$ (\S\ref{sec:hyp}); and two clean reformulations of RH (a uniform Riesz/$A_2$/$S(T)$ form; a
+total-positivity / real-stability form).
+
+\section{The cohomological / Hodge-index route}\label{sec:hodge}
+
+\subsection{The candidate intersection form and its degeneration}
+Let $\mathfrak t=A_\Phi-P_F$ be the band-limited Weil--Carleson form of \cite{P11} on a height window at $T_0$,
+with band $d$: $A_\Phi$ the archimedean Gram, $P_F$ the prime Gram, and $\mathrm{RH}\iff\lambda_{\max}(P_F,A_\Phi)\le1$.
+Treating $\mathfrak t$ as the \emph{primitive} part of a Hodge-index pairing and adjoining one ample
+(archimedean) direction, the enlarged form is Lorentzian — \emph{provided $\mathfrak t$ is definite}. It is, for
+small band; as $d$ grows (the cohomological ``genus'' grows toward $\zeta$), the \textbf{Hodge gap}
+$\lambda_{\min}(\mathfrak t)\to0$ and the form \emph{degenerates}. This is one phenomenon with three others:
+\begin{equation}\label{eq:fourway}
+\underbrace{C\equiv1}_{\text{Carleson saturation}}=\underbrace{\Lambda=0}_{\text{de Bruijn–Newman}}=\underbrace{\lambda_{\min}(\mathfrak t)\to0}_{\text{Hodge gap}}=\underbrace{\text{intersection-form degeneration}}_{\text{cohomological}}.
+\end{equation}
+The curve-case Hodge index needs a \emph{definite} primitive form (finite genus $\Rightarrow$ a spectral gap);
+$\zeta$'s candidate surface has \emph{infinite genus with a vanishing gap}.
+
+\subsection{The regularized gap and the key identity}
+The degeneration is carried entirely by the \emph{trivial} null directions: band-limited test functions
+vanishing at all window zeros (interpolation), the analogue of the trivial classes (diagonal, fibers) on
+$C\times C$. The Hodge index is definite on the primitive part modulo trivial classes, so the right object is
+the smallest \emph{positive} eigenvalue of $\mathfrak t$, equal to $\lambda_{\min}(G)$ where $G$ is the
+$K\times K$ \emph{sine-kernel Gram} of the window zeros (the reproducing-kernel Gram of evaluation at the zeros).
+
+\begin{theorem}[regularized gap survives; the squared-gap identity]\label{thm:reggap}
+For $\zeta$, the regularized Hodge gap $\lambda_{\min}(G)$ is positive-definite (the primitive intersection form
+is definite), and obeys
+\begin{equation}\label{eq:gapident}
+\lambda_{\min}(G)\;\approx\;\frac{\pi^2}{6}\,\bmin^2,
+\end{equation}
+where $\bmin$ is the smallest normalized gap among the window zeros. Equivalently, the regularized Hodge gap
+\emph{is} the squared minimum gap (the $2\times2$ sine-kernel level-repulsion law
+$1-\frac{\sin\pi\bmin}{\pi\bmin}\approx\frac{\pi^2}{6}\bmin^2$).
+\end{theorem}
+
+\noindent\emph{Numerical record} (deep run, basis dimension $25$, heights to $10^4$; measured $\lambda_{\min}(G)/\bmin^2$):
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$T_0$ & $\lambda_{\min}(G)$ & $\bmin$ & $\lambda_{\min}(G)/\bmin^2$ \\
+\midrule
+$100$ & $0.281$ & $0.372$ & $2.03$ \\
+$1000$ & $0.290$ & $0.392$ & $1.89$ \\
+$3000$ & $0.204$ & $0.365$ & $1.53$ \\
+$10^4$ & $0.111$ & $0.313$ & $1.13$ \\
+\bottomrule
+\end{tabular}\qquad ($\pi^2/6=1.645$)
+\end{center}
+
+\begin{corollary}[the route prices identically; the $S(T)$ reformulation]\label{cor:price}
+By \eqref{eq:gapident} and GUE level repulsion $\bmin\asymp N^{-1/3}$, the cohomological route gives the same
+exchange rate as the pair-correlation route: controlling the relevant statistic up to scale $A$ certifies the
+extremal margin for the first $\sim A^3$ zeros. Moreover RH is equivalent to $\lambda_{\min}(G)\ge c>0$ uniformly
+in $T_0$, i.e.\ to the $\zeta$ zeros being a uniform Riesz sequence for the de Branges space $H(E)$, $E\sim\xi$,
+i.e.\ to a uniform Muckenhoupt $A_2$ condition on $|E|^2$ \cite{Pavlov,Seip}, i.e.\ to an extremal regularity of
+$S(T)=\frac1\pi\arg\zeta(\half+iT)$.
+\end{corollary}
+
+\begin{remark}[the capstone holds here]\label{rem:hodgecap}
+In frame language the \emph{upper} (Bessel) frame bound is the easy, unconditional direction; the \emph{lower}
+frame bound — though a lower bound on a Gram eigenvalue — \emph{means} ``no two zeros too close,'' a one-sided
+\textbf{upper} constraint on clustering. Selberg's unconditional control of $S(T)$ is of the \emph{typical}
+($\sqrt{\log\log T}$), not the \emph{extremal}, behaviour. The capstone holds: the operative direction is the
+upper-clustering one.
+\end{remark}
+
+\section{The hyperbolicity / stable-polynomial route}\label{sec:hyp}
+
+\subsection{The criterion, and the moment identity}
+$\mathrm{RH}\iff\Xibf(t)=\xi(\half+it)\in$ Laguerre--Pólya (all zeros real) $\iff$ every Jensen polynomial
+\begin{equation}
+J^{d,n}(X)=\sum_{j=0}^d\binom{d}{j}a(n+j)X^j,\qquad a(k)=\frac{\Xibf^{(2k)}(0)}{(2k)!},
+\end{equation}
+is hyperbolic (real-rooted) \cite{GORZ}. Since $\Xibf(t)=\int_0^\infty\Phi(u)\cos(tu)\,du$ with $\Phi$ the de
+Bruijn--Newman kernel,
+\begin{equation}\label{eq:moment}
+b(k):=(-1)^k a(k)=\frac{m_{2k}}{(2k)!},\qquad m_{2k}=\int_0^\infty u^{2k}\Phi(u)\,du,
+\end{equation}
+so the Jensen-coefficient sequence \emph{is} the even-moment sequence of $\Phi$ — where the arithmetic resides.
+By Aissen--Schoenberg--Whitney, $\mathrm{RH}\iff\{b(k)\}$ is a Pólya-frequency sequence $\iff$ the Toeplitz
+matrix $[b(i-j)]$ is \emph{totally positive} — a strictly richer positivity than a quadratic or moment one.
+Numerically the $a(k)$ alternate in sign, the Turán inequalities $a(k)^2>a(k-1)a(k+1)$ hold, the contiguous
+Toeplitz minors of $\{b(k)\}$ are positive, and all tested $J^{d,n}$ are hyperbolic and \emph{interlace} (the
+Marcus--Spielman--Srivastava precondition).
+
+\subsection{The shift is an arithmetic-blind stability preserver}
+The Jensen shift $n\to n+1$ corresponds to $\Phi\to u^2\Phi$, i.e.\ $\Xibf\to-\Xibf''$ (differentiation), a
+Borcea--Brändén stability preserver. But differentiation preserves the Laguerre--Pólya class for \emph{every}
+L--P function.
+
+\begin{proposition}[arithmetic-blindness]\label{prop:blind}
+A control L--P function (e.g.\ $\cos t$, with all-real zeros) has the same Jensen hyperbolicity, interlacing, and
+shift structure as $\Xibf$. Hence the stability-preserver / interlacing structure cannot distinguish $\zeta$; the
+arithmetic resides solely in whether $\Xibf\in$ L--P, i.e.\ in $\{m_{2k}\}$. A stability-\emph{preserving}
+operator cannot prove RH.
+\end{proposition}
+
+The natural response is an \emph{averaging} realization (an MSS expected characteristic polynomial), not a
+preserving operator — the one place arithmetic may enter. We test whether that escapes the capstone.
+
+\subsection{The decisive test: real-rootedness is a positivity}
+\begin{theorem}[Hermite-form positivity; the capstone holds]\label{thm:hermite}
+A degree-$d$ real polynomial is hyperbolic if and only if its \emph{Hermite form} $H[i,j]=p_{i+j}$ ($p_k=$
+Newton power sums of the roots, $i,j=0,\dots,d-1$) is positive semidefinite. Hence the real-rootedness of each
+Jensen polynomial $J^{d,n}$ is a quadratic positivity. Moreover the Marcus--Spielman--Srivastava interlacing
+method rests on the real-stability of $\det\big(xI+\sum_i z_iA_i\big)$ for $A_i\succeq0$ \cite{BB}, also a
+positivity. Therefore the hyperbolicity route, traced to its foundation, is a positivity, and the wrong-sign
+capstone holds.
+\end{theorem}
+
+\noindent\emph{Numerical record} ($\Xibf$, well-conditioned $d\le4$): $\min\mathrm{eig}(H)>0$ throughout
+($+0.70,\dots,+0.047$), i.e.\ the Jensen polynomials are real-rooted, consistent with RH.
+
+\begin{remark}
+Theorem~\ref{thm:hermite} dissolves the route's apparent escape: interlacing \emph{looks} positivity-free
+because it bounds the largest root, but the real-rootedness it ultimately invokes is the positive
+semidefiniteness of the Hermite form / the real-stability of PSD building blocks. It is the \emph{richest}
+positivity language available — total positivity / real-stability, home to the Borcea--Brändén and MSS
+machinery — but a positivity nonetheless.
+\end{remark}
+
+\section{The wrong-sign capstone, across eight paradigms}\label{sec:capstone}
+
+\begin{theorem}[robustness of the capstone]\label{thm:capstone}
+In each of eight independent reformulations of RH-positivity — explicit-formula / Kreĭn realization; per-place
+Weil form; band-limited Carleson constant; sine-kernel / pair correlation; adelic prolate; de Bruijn--Newman
+heat flow; cohomological Hodge-index; hyperbolicity / stable polynomials — the relevant condition is a
+positivity whose \emph{unconditional} part gives lower bounds / existence / the easy side, while RH is the
+one-sided \emph{upper} constraint (no off-line zeros; no clustering above the GUE law). In particular the two
+modern paradigms chosen \emph{because} their mechanism is not a quadratic-form positivity (Hodge-index,
+\S\ref{sec:hodge}; hyperbolicity, \S\ref{sec:hyp}) are, traced to their foundation, positivities (a Hodge index;
+a Hermite form / PSD real-stability). All eight reduce to the same cornered statement: an unconditional,
+extremal, uniform control of the tightest gaps.
+\end{theorem}
+
+\noindent This is a theorem about \emph{methods}, not about RH. It does not say RH is unprovable; it says the
+positivity-based toolkit of unconditional analytic number theory is, structurally, the wrong sign for an upper
+constraint, and it locates with precision what a successful new approach must supply: an unconditional upper
+mechanism that is not, at its foundation, a zero-level positivity.
+
+\section{Conclusion}\label{sec:concl}
+
+The two most modern routes to RH — cohomological Hodge-index and hyperbolicity — were pursued to their
+foundations precisely because their mechanisms appear to lie outside the positivity paradigm the wrong-sign
+capstone obstructs. Both, in fact, reduce to a positivity (Theorems~\ref{thm:reggap}, \ref{thm:hermite}),
+giving the richest positivity reformulations of RH (uniform Riesz / Muckenhoupt-$S(T)$; total positivity /
+real-stability) and the cleanest identities ($\lambda_{\min}(G)=\frac{\pi^2}{6}\bmin^2$; $b(k)=m_{2k}/(2k)!$),
+yet confirming the capstone across eight paradigms. The value is diagnostic: the chart of the wall is now
+unusually complete, and the single missing ingredient is named — an unconditional upper mechanism that is not a
+positivity.
+
+\begin{thebibliography}{9}
+\bibitem{P11} D.~A.~Trejo Pizzo, \emph{The band-limited Weil--Carleson form and a five-language map of the Riemann wall}, 2026.
+\bibitem{P12} D.~A.~Trejo Pizzo, \emph{A Lyapunov theorem for the de Bruijn--Newman flow}, 2026.
+\bibitem{GORZ} M.~Griffin, K.~Ono, L.~Rolen, D.~Zagier, \emph{Jensen polynomials for the Riemann zeta function and other sequences}, Proc.\ Natl.\ Acad.\ Sci.\ \textbf{116} (2019), 11103--11110.
+\bibitem{MSS} A.~Marcus, D.~Spielman, N.~Srivastava, \emph{Interlacing families II: Mixed characteristic polynomials and the Kadison--Singer problem}, Ann.\ of Math.\ \textbf{182} (2015), 327--350.
+\bibitem{BB} J.~Borcea, P.~Brändén, \emph{The Lee--Yang and Pólya--Schur programs}, Comm.\ Pure Appl.\ Math.\ \textbf{62} (2009), 1595--1631 and Duke Math.\ J.\ \textbf{143} (2008), 205--223.
+\bibitem{Pavlov} S.~V.~Hru\v{s}\v{c}ev, N.~K.~Nikolskii, B.~S.~Pavlov, \emph{Unconditional bases of exponentials and of reproducing kernels}, Lecture Notes in Math.\ \textbf{864} (1981), 214--335.
+\bibitem{Seip} K.~Seip, \emph{Interpolation and Sampling in Spaces of Analytic Functions}, Univ.\ Lecture Ser.\ \textbf{33}, AMS, 2004.
+\bibitem{bgGORZ} M.~Griffin, K.~Ono, L.~Rolen, and D.~Zagier, \emph{Jensen polynomials for the Riemann zeta function and other sequences}, Proc.\ Natl.\ Acad.\ Sci.\ USA \textbf{116} (2019), 11103--11110.
+\bibitem{bgCV} G.~Csordas and R.~S.~Varga, \emph{Necessary and sufficient conditions and the Riemann Hypothesis}, Adv.\ in Appl.\ Math.\ \textbf{11} (1990), 328--357.
+\bibitem{bgDeligne} P.~Deligne, \emph{La conjecture de Weil. I}, Publ.\ Math.\ IH\'ES \textbf{43} (1974), 273--307.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,3 @@
+
+import sys, os, time, pickle
+import cypari2 def main(): tmin = float(sys.argv[1]) tmax = float(sys.argv[2]) dps = int(sys.argv[3]) idx = int(sys.argv[4]) outdir = sys.argv[5] pari = cypari2.Pari() pari.default("realprecision", dps) pari("L = lfunmf(mfinit([1,12],1), mfeigenbasis(mfinit([1,12],1))[1])") t0 = time.time() z = pari.lfunzeros(pari("L"), [tmin, tmax]) elapsed = time.time() - t0 n = len(z) out = [str(z[i]) for i in range(n)] p = os.path.join(outdir, f"shard_{idx:02d}.pkl") with open(p, "wb") as f: pickle.dump({"idx": idx, "tmin": tmin, "tmax": tmax, "elapsed": elapsed, "zeros": out}, f) # Write done marker with open(os.path.join(outdir, f"shard_{idx:02d}.done"), "w") as f: f.write(f"{n} {elapsed:.2f}\n") if __name__ == "__main__": main()

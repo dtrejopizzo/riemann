@@ -1,0 +1,2 @@
+{ "logS_only": { "AUC": 0.0806, "CI95": [ 0.018, 0.1773 ] }, "spectral_only": { "AUC": 0.6, "CI95": [ 0.2, 1.0 ] }, "combined": { "AUC": 0.6014, "CI95": [ 0.2026, 1.0 ] }, "note": "CI from class-stratified bootstrap (6 held-out classes); model = logistic regression. RF results: logS=0.176, spectral=0.800, combined=0.726."
+}

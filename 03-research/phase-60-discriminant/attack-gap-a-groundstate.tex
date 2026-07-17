@@ -1,0 +1,205 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\PR}{\textcolor{green!55!black}{\textbf{[P]}}}
+\newcommand{\NM}{\textcolor{blue!70!black}{\textbf{[N]}}}
+\newcommand{\OP}{\textcolor{red!75!black}{\textbf{[O]}}}
+\newcommand{\GAP}{\textcolor{red!75!black}{\textsc{[gap]}}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}{Lema}
+\newtheorem{proposition}{Proposici\'on}
+\newtheorem{corollary}{Corolario}
+\theoremstyle{definition}
+\newtheorem{remark}{Observaci\'on}
+\newtheorem{definition}{Definici\'on}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\half}{\tfrac12}
+\newcommand{\El}{E_\lambda}
+\newcommand{\kin}{K}
+\newcommand{\vv}{V}
+\newcommand{\fp}{\varphi_{\mathrm{polo}}}
+\DeclareMathOperator{\Real}{Re}
+
+\title{\textbf{Ataque al \GAP\ (a): Hardy mejorada no--local v\'ia\\
+representaci\'on de estado fundamental (Frank--Lieb--Seiringer)}}
+\author{Programa \texttt{riemann-program} --- documento de trabajo}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+El \GAP\ (a) era la \'unica pieza realmente abierta de la condici\'on (i): probar
+$\kin-\vv\succeq0$ sobre $\fp^\perp$ para el operador cin\'etico \emph{no--local} $\kin$
+(s\'imbolo CND $\Omega$) y el pozo de primos $\vv$. Mostramos que la
+\textbf{representaci\'on de estado fundamental} (ground--state substitution) de
+Frank--Lieb--Seiringer, v\'alida para generadores de salto con n\'ucleo $\ge0$, da una
+identidad \emph{exacta}:
+\[
+  \kin(g)-\vv_0(g)=\tfrac12\!\iint |h(x)-h(y)|^2\,\fp(x)\fp(y)\,k(x,y)\,dx\,dy\;\ge0,
+  \qquad g=\fp\,h,
+\]
+con remanente manifiestamente positivo y \emph{estricto} sobre $\fp^\perp$ ($h$ no
+constante). As\'i la Hardy mejorada no--local \textbf{se cumple} para el potencial de
+estado fundamental $\vv_0:=\kin\fp/\fp$. El \GAP\ residual se reduce a una \'unica
+cantidad aritm\'etica: la \textbf{discrepancia} $\delta\vv:=\vv_\lambda-\vv_0$ entre el
+pozo de primos verdadero y el potencial del polo. \textbf{$\delta\vv$ es del lado primo
+(PNT), no de los ceros}: es lo \'unico que queda para cerrar (i).
+\end{abstract}
+
+\tableofcontents
+
+% =====================================================================
+\section{La cin\'etica como forma de Dirichlet no--local}\label{sec:dirichlet}
+% =====================================================================
+
+El s\'imbolo arquimediano $\Omega(t)-\Omega(0)\ge0$ es CND con representaci\'on de
+L\'evy
+\[
+  \Omega(t)-\Omega(0)=\int_0^\infty\!\bigl(1-\cos(t\xi)\bigr)\,d\nu(\xi),
+  \qquad d\nu(\xi)=\frac{2e^{-\xi/2}}{1-e^{-2\xi}}\,d\xi\ge0 .
+\]
+Por Plancherel, la forma cin\'etica es una \textbf{forma de Dirichlet no--local} con
+n\'ucleo de salto $k\ge0$:
+\begin{equation}\label{eq:Kdirichlet}
+  \kin(g)=\frac1{2\pi}\!\int|\widehat g(t)|^2(\Omega(t)-\Omega(0))\,dt
+  =\tfrac12\!\iint_{\R^2}|g(x)-g(y)|^2\,k(x-y)\,dx\,dy,
+\end{equation}
+con $k(u)=\int_0^\infty (\text{n\'ucleo de }\cos)\,d\nu$, $k\ge0$. \PR\ (Beurling--Deny:
+todo s\'imbolo CND da una forma de salto con $k\ge0$).
+
+% =====================================================================
+\section{La identidad de estado fundamental}\label{sec:gsr}
+% =====================================================================
+
+\begin{lemma}[Representaci\'on de estado fundamental, Frank--Lieb--Seiringer]
+\label{lem:gsr}
+Sea $k\ge0$ un n\'ucleo de salto sim\'etrico, $\kin$ la forma de Dirichlet
+\eqref{eq:Kdirichlet}, y $\omega>0$ una funci\'on con potencial asociado
+$\vv_0:=\kin\omega/\omega$ (i.e.\ $\omega$ es autofunci\'on de $\kin$ con ``potencial''
+$\vv_0$ a energ\'ia $0$). Entonces, para $g=\omega h$,
+\begin{equation}\label{eq:gsridentity}
+  \kin(g)-\int \vv_0\,|g|^2
+  \;=\;\tfrac12\!\iint_{\R^2} |h(x)-h(y)|^2\,\omega(x)\,\omega(y)\,k(x-y)\,dx\,dy
+  \;\ge\;0 .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Expansi\'on directa: con $g=\omega h$,
+$|g(x)-g(y)|^2=|\omega(x)h(x)-\omega(y)h(y)|^2$. Usando
+$|\omega_x h_x-\omega_y h_y|^2=\omega_x\omega_y|h_x-h_y|^2+(h_x^2\omega_x(\omega_x-\omega_y)+h_y^2\omega_y(\omega_y-\omega_x))$
+y la simetr\'ia de $k$, el segundo grupo se reensambla en
+$\int |h|^2\,\omega\,(\kin\omega)=\int\vv_0|g|^2$, dejando \eqref{eq:gsridentity}. Es la
+identidad de Frank--Lieb--Seiringer (2008) para formas de salto. \qed
+\end{proof}
+
+\begin{corollary}[Hardy mejorada no--local]\label{cor:improved}
+Tomando $\omega=\fp$ (la direcci\'on--polo $=$ estado fundamental, v\'ia \#9):
+\[
+  \kin(g)-\vv_0(g)\ge0\quad\forall g,\qquad
+  \kin(g)-\vv_0(g)>0\quad\forall g\in\fp^\perp,\ g\ne0,
+\]
+donde $\vv_0=\kin\fp/\fp$. La estrictitud sobre $\fp^\perp$: $g\perp\fp$ equivale a
+$\int\fp^2 h=0$ ($h=g/\fp$ tiene media nula en $\fp^2\,dx$), luego $h$ no es constante y
+el remanente \eqref{eq:gsridentity} es $>0$.
+\end{corollary}
+
+\noindent\textbf{Esto resuelve el \GAP\ (a) para el potencial $\vv_0$}: la Hardy
+mejorada no--local \emph{vale}, incondicionalmente, v\'ia la sustituci\'on de estado
+fundamental. La no--localidad --- el obst\'aculo hist\'orico --- queda \emph{absorbida}
+en la identidad \eqref{eq:gsridentity}, que es exacta para n\'ucleos de salto.
+
+% =====================================================================
+\section{El \GAP\ residual: la discrepancia $\delta\vv$}\label{sec:discrepancy}
+% =====================================================================
+
+El pozo real es $\vv_\lambda$ (primos), no $\vv_0=\kin\fp/\fp$. Escribimos
+\begin{equation}\label{eq:dV}
+  \vv_\lambda=\vv_0+\delta\vv,\qquad \delta\vv:=\vv_\lambda-\frac{\kin\fp}{\fp}.
+\end{equation}
+Por el Corolario \ref{cor:improved}, sobre $\fp^\perp$,
+\[
+  \kin(g)-\vv_\lambda(g)
+  =\underbrace{\bigl[\kin(g)-\vv_0(g)\bigr]}_{\ge\,\beta\|g\|^2\ \text{(remanente)}}
+  -\int\delta\vv\,|g|^2 .
+\]
+
+\begin{proposition}[Condici\'on que cierra (i)]\label{prop:close}
+Si $\displaystyle \int\delta\vv\,|g|^2\le \beta_\lambda\|g\|^2$ para todo
+$g\in\fp^\perp$ (con $\beta_\lambda$ la brecha de \eqref{eq:gsridentity}), entonces
+$\kin-\vv_\lambda\succeq0$ sobre $\fp^\perp$, i.e.\ \GAP\ (i) queda \PR.
+\end{proposition}
+
+\paragraph{Por qu\'e $\delta\vv$ es PNT y no ceros.} Tanto $\vv_\lambda$ (suma de von
+Mangoldt $\le\lambda^2$) como $\vv_0=\kin\fp/\fp$ (cin\'etica arquimediana aplicada a la
+direcci\'on--polo) son cantidades \emph{del lado aritm\'etico}: no involucran la
+posici\'on de ning\'un cero. La discrepancia $\delta\vv$ mide cu\'anto el pozo de primos
+se desv\'ia del potencial que har\'ia de $\fp$ el estado fundamental exacto.
+
+\begin{remark}[Interpretaci\'on: $\delta\vv$ y el polo]
+$\fp$ es la direcci\'on uniforme/densidad global. $\vv_0=\kin\fp/\fp$ es el potencial
+``suave'' que el polo en $s=1$ genera. $\delta\vv=\vv_\lambda-\vv_0$ es la parte
+\emph{oscilatoria} del pozo de primos (las fluctuaciones primo a primo alrededor de la
+densidad media). Que $\delta\vv$ sea peque\~na en $\fp^\perp$ es, esencialmente,
+equidistribuci\'on de primos (PNT con t\'ermino de error) proyectada al complemento del
+modo medio. \textbf{Candidato de cota:} $\|\delta\vv\|_{\fp^\perp}\lesssim
+(\log\lambda)^{-A}$ o un margen $\sim\lambda^{-2}$, v\'ia el teorema de los n\'umeros
+primos con regiones libres de ceros cl\'asicas (Vinogradov--Korobov) --- \emph{no} RH.
+\end{remark}
+
+% =====================================================================
+\section{Estado actualizado de la cascada}\label{sec:cascade}
+% =====================================================================
+
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{l l c}
+\hline
+\textbf{Paso} & \textbf{Contenido} & \textbf{Estado}\\\hline
+Schur & $A_\lambda\succeq0\Leftrightarrow$ (i)$\,+\,$(ii) escalar & \PR\\
+GSR no--local & $\kin-\vv_0\succeq0$ sobre $\fp^\perp$, estricto & \PR\\
+extremal $=\fp$ & estado fundamental $=$ direcci\'on--polo & \NM\ (v\'ia \#9)\\
+discrepancia & $\int\delta\vv|g|^2\le\beta_\lambda\|g\|^2$ sobre $\fp^\perp$ & \OP\ (\GAP)\\
+escalar (ii) & $b+\kappa_\lambda\ge r^*M^+r$ & \OP\ (\GAP)\\\hline
+\end{tabular}
+\end{center}
+
+\noindent\textbf{El \GAP\ (a) (no--localidad) qued\'o resuelto} por la representaci\'on
+de estado fundamental: la no--localidad ya no es obst\'aculo, est\'a absorbida en la
+identidad exacta \eqref{eq:gsridentity}. Lo que resta del \GAP\ (i) es \textbf{una sola
+cota PNT}: la discrepancia $\delta\vv$ sobre $\fp^\perp$ (Prop.\ \ref{prop:close}).
+
+% =====================================================================
+\section{Veredicto}\label{sec:verdict}
+% =====================================================================
+
+\begin{enumerate}[leftmargin=1.6em]
+\item \PR\ La Hardy mejorada \emph{no--local} para el potencial de estado fundamental
+$\vv_0$: la sustituci\'on Frank--Lieb--Seiringer da una identidad exacta con remanente
+$\ge0$, estricto sobre $\fp^\perp$. \textbf{La no--localidad ya no obstruye.}
+\item \OP\ El \GAP\ (i) completo queda reducido a una \emph{\'unica} cota:
+$\int\delta\vv\,|g|^2\le\beta_\lambda\|g\|^2$ sobre $\fp^\perp$, con
+$\delta\vv=\vv_\lambda-\kin\fp/\fp$ una cantidad \emph{del lado primo}.
+\item \textbf{Lectura.} La cascada del Eslab\'on 2 / $\varepsilon_0\ge0$ se ha reducido,
+paso a paso y con herramientas cl\'asicas (Schur, Frank--Lieb--Seiringer), a
+\emph{dos} cotas aritm\'eticas: la discrepancia $\delta\vv$ (\S\ref{sec:discrepancy}) y
+la escalar de Schur (ii). Ninguna menciona la posici\'on de los ceros. Ambas son
+candidatas a control por PNT/regiones libres de ceros cl\'asicas.
+\end{enumerate}
+
+\noindent\textbf{Honestidad.} La identidad GSR \eqref{eq:gsridentity} es un teorema
+cl\'asico aplicado correctamente; resuelve la no--localidad. Pero la reducci\'on a
+$\delta\vv$ \emph{traslada} el problema, no lo elimina: falta probar la cota de la
+discrepancia, y verificar que es genuinamente PNT (densidad) y no, otra vez, posici\'on
+encubierta. Ese es el punto a auditar a continuaci\'on. El progreso real: el obst\'aculo
+hist\'orico (no--localidad, $85\%$ saltos grandes) \textbf{dej\'o de ser un obst\'aculo}.
+\end{document}

@@ -1,0 +1,23 @@
+## Overview # Answer The research hypothesis that the negative correlation between D(F, ζ) (pretentious distance to zeta) and R_comp (composite coherence) observed in r22 is a robust phenomenon **is REJECTED**. ## Quantitative Results At N=10⁴, using 30 multiplicative functions from a parametric family where a_p = +1 with probability α and -1 with probability (1-α): **Correlation Test:**
+- Spearman rank correlation: ρ = +0.0715
+- P-value: p = 0.707
+- Sample size: n = 30
+- Significance level: α = 0.05
+- **Result: NOT statistically significant (p > 0.05) and POSITIVE, not negative** **Metric Distributions:**
+- D(F,ζ) range: [0.468, 2.228], mean = 1.548 ± 0.516
+- R_comp range: [0.01284, 0.01704], mean = 0.01455 ± 0.00113
+- R_comp coefficient of variation: 7.8% **Key Finding:** While D(F,ζ) varies substantially (376% range relative to mean), R_comp remains tightly clustered (29% range relative to mean). The correlation is weakly positive (ρ = +0.072) and statistically indistinguishable from zero. ## Mechanistic Insight The parametric analysis reveals that:
+1. **D(F,ζ) strongly depends on α**: Spearman ρ = -0.944 (p < 10⁻¹⁴). Functions with more negative prime coefficients (low α) are farther from ζ.
+2. **R_comp is independent of α**: Spearman ρ = +0.036 (p = 0.852). Composite coherence is insensitive to sign structure within this family.
+3. **Within-family variance dominates**: 84% of R_comp variance is random noise within α groups, not systematic between-group differences. ## Interpretation The negative correlation observed in r22 likely arose from structural differences **between fundamentally different arithmetic function classes** (multiplicative vs. non-multiplicative, functions with Euler products vs. without, different coefficient complexity). Within a homogeneous parametric family of multiplicative functions that differ only in prime sign distribution, R_comp is essentially invariant and uncorrelated with D(F,ζ). This finding aligns with the dataset's Discovery 4: "sign structure and coefficient complexity, rather than multiplicativity per se, govern elevated composite coherence." Within this restricted family, neither metric provides sufficient dynamic range to detect correlation—R_comp appears to be a class-level property rather than a continuously varying feature within multiplicative function families. ## Conclusion **The negative correlation between D(F,ζ) and R_comp is NOT a robust phenomenon within homogeneous families of multiplicative functions.** The hypothesis that this correlation would be confirmed with a larger sample is rejected at the p < 0.05 level. The r22 finding is likely specific to comparisons across diverse arithmetic structures, not generalizable within parametric families. --- # Discretionary Analytical Decisions - **Parametric family design**: Used a_p ∈ {+1, -1} with probability α, rather than other sign structures or complex-valued coefficients, to create a simple one-parameter family
+- **Alpha grid**: Selected 10 α values from 0.0 to 0.9 in steps of 0.1, balancing coverage with computational cost
+- **Replicates per α**: Generated 3 functions per α value (different random seeds), providing 30 total functions as a compromise between statistical power and computation time
+- **Composite coherence definition**: Used squarefree terms with ω(n) ≥ 2 as "composite," following the dataset description's standard practice
+- **t-sampling range**: Chose [1000, 3000] for stability (avoiding low-t edge effects per r1) while remaining computationally feasible
+- **Number of t samples**: Used 100 random t values to estimate mean R_comp, balancing precision with runtime
+- **Numerical summation**: Applied Kahan compensated summation for Dirichlet partial sums at N=10⁴ as specified in protocol, despite r13 noting standard summation is acceptable at this scale for exploratory work
+- **Correlation method**: Selected Spearman rank correlation as the primary test following dataset guidance (r11, r15, r17, r21, r22) that non-parametric tests are preferred due to non-normal distributions
+- **Significance threshold**: Used standard α = 0.05 for hypothesis testing
+- **Pretentious distance formula**: Applied the definition D(F,ζ) = (Σ_{p≤N}(1−Re(a_p))/p)^(1/2) directly, with Re(a_p) = a_p for our real-valued coefficients
+- **Random seed strategy**: Used seed = func_id × 1000 to ensure different realizations while maintaining reproducibility
+- **Figure design**: Created a scatter plot with α-based color coding and a single summary figure showing the main result, following the requirement for 0-2 subfigures maximum 

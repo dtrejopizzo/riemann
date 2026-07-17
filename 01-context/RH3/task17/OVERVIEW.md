@@ -1,0 +1,23 @@
+## Overview ## Analysis Summary For the L_DH (Davenport-Heilbronn) function at N=10⁶, I identified the top 20 highest-magnitude peaks in t ∈ [10⁶, 2·10⁶] using a two-phase approach: coarse grid search with fast vectorized summation followed by local refinement with Kahan compensated summation. At each peak, I computed the baseline canonical inter-class energy ratio r and performed causal perturbations by multiplying S₂ and S₃ by e^(iπ) = -1. ## Key Quantitative Results **Baseline characteristics (n=20 peaks):**
+- Mean |D_F| = 5.17 ± 1.34
+- Mean r = 1.82 ± 1.07
+- Mean S₂ power fraction: 39.91% ± 18.53%
+- Mean S₃ power fraction: 14.26% ± 11.97% **S₂ perturbation effects:**
+- Mean Δ|D_F| = -56.42% ± 25.08%
+- Mean absolute Δr = -2.263 ± 1.013 **S₃ perturbation effects:**
+- Mean Δ|D_F| = -28.22% ± 26.40%
+- Mean absolute Δr = -1.315 ± 0.912 **Statistical significance:**
+- Paired t-test for Δ|D_F|: t = -5.625, p = 0.000020 (highly significant ***)
+- Paired t-test for absolute Δr: t = -4.682, p = 0.000163 (highly significant ***)
+- Directional consistency: S₂ reduces r more than S₃ in 17/20 peaks (85%)
+- Binomial test: p = 0.0013 (significant **) ## Conclusions **The hypothesis is strongly supported.** S₂ perturbation causes a significantly larger reduction in both magnitude and inter-class energy ratio r compared to S₃ perturbation. Specifically: 1. **Magnitude impact**: S₂ perturbation reduces |D_F| by 28.20 percentage points more than S₃ perturbation (p < 0.001) 2. **Interference structure impact**: S₂ perturbation reduces r by 0.95 units more than S₃ perturbation in absolute terms (p < 0.001) 3. **Consistency**: In 85% of peaks, S₂ perturbation has a stronger effect on r than S₃ perturbation (p = 0.0013) 4. **Unified mechanism**: The analysis establishes that S₂ is the primary architectural driver of L_DH's peak behavior, controlling both the magnitude (56% average reduction when perturbed) and the anomalously high constructive interference (r reduction of -2.26 vs -1.31 for S₃). This confirms a unified causal model: L_DH's strong constructive interference at peaks arises directly from its S₂-dominated ω-class structure, with S₂ serving as the keystone that maintains both high magnitude and high inter-class coherence. --- ## Discretionary Analytical Decisions - **Peak identification method**: Used two-phase approach (coarse grid search at 100-unit spacing followed by local optimization) rather than direct fine-grid search to balance computational efficiency and precision
+- **Statistical test selection**: Used paired t-test for comparison of S₂ vs S₃ effects, appropriate given matched-pairs design (same 20 peaks tested under both conditions)
+- **Effect size metric**: Analyzed both percentage changes and absolute changes in r; absolute changes proved more interpretable given high variance in percentage changes when baseline r values were small
+- **Significance threshold**: Set α = 0.05 for hypothesis testing
+- **Number of top peaks**: Analyzed top 20 peaks (rather than top 10 or 30) to balance statistical power with computational constraints
+- **Grid spacing**: Used 100-unit spacing for coarse grid search in [10⁶, 2·10⁶], generating 10,000 evaluation points
+- **Perturbation angle**: Used θ = π (phase reversal) for causal perturbations, following established convention in the dataset
+- **Omega decomposition implementation**: Used Kahan summation within each ω-class to maintain numerical precision
+- **Canonical r metric**: Used the canonical definition r = [Re(|Σ_k S_k|²) - Σ_k|S_k|²] / Σ_k|S_k|² rather than alternative formulations documented as unreliable in the dataset metadata
+- **Directional test**: Applied one-tailed binomial test with H_a: p > 0.5 based on directional hypothesis that S₂ has stronger effect
+- **Artifact dependencies**: Used pre-computed a_DH_coefficients_N1e6.pkl and omega_values_N1e6.pkl external datasets for L_DH coefficients and ω-class assignments 

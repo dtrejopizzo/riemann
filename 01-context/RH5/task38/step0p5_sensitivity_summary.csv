@@ -1,0 +1,6 @@
+Front,Weight,Window,max |rel change|,"min detectable δ (5%, m=20)",Classification
+"I (Jacobi a_n, b_n)",W1: uniform (depends only on γ),n < 0.1·N = 500,0 (exact),∞ (blind to real-part perturbation by construction),UNINFORMATIVE (blind)
+"I (Jacobi a_n, b_n)",W2: w_k=1/|ρ_k|² (depends on σ_k),n < 0.1·N = 500,"1.86e-02 (at n~363, Lanczos noise)",> 0.5 (non-physical) at low n where reliable,UNINFORMATIVE (signal dominated by Lanczos numerical noise)
+II (Li coefficients λ_n),n=1..200,n ≤ 200,8.53e-05 (at n=1),~58.6 (non-physical; linear extrap),"UNINFORMATIVE (blind to m=20, δ=0.1 perturbation at this precision)"
+III (H1 persistence),"V-R on 3D embed (σ, ũ, ũ_shift)",idx 900-1100 (perturbed region),0 (H1 empty for both),∞ (H1 empty; observable carries no signal),UNINFORMATIVE (H1=∅ as anticipated by spec)
+"III (H0 persistence, ancillary)","V-R on 3D embed (σ, ũ, ũ_shift)",idx 900-1100,bottleneck Δ = 3.656e-02,small but non-zero shift,MARGINAL (H0 only; not the primary TDA observable)

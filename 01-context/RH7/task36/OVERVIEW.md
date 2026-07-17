@@ -1,0 +1,38 @@
+## Overview <output>
+<conclusion>
+A `modular` family for L(Δ,s) was implemented and integrated with the existing Weil engine, but the trace identity `tr(M_zeros)=tr(M_arith)` did NOT hold at the standard validation point (T₀=85.7, σ=2, J=10), giving |λ_min|/tr(M_zeros) ≈ 5.7×10⁻² — far above the expected 10⁻⁸–10⁻¹⁰ GRH floor; the hypothesis of an immediate null result was therefore not validated in the time available.
+</conclusion> <methods>
+1. Reviewed the existing `weil_quadratic_form_general.py` and `_zeros.py` modules and consulted the §2 and §4 sections of `-v8-validated-data.md` for the Ramanujan Δ specification.
+2. Derived the explicit-formula components for L(Δ, s) in analytic normalization, level N=1, weight k=12: gamma factor Γ_C(s+11/2) with archimedean integrand 2·Re ψ(6+ir) – 2·log(2π); polar constant = log N – 2 log(2π) (no pole); prime-sum coefficients c_k(p) = α_p^k + β_p^k from the Deligne recurrence c_0=2, c_1 = τ(p)/p^{11/2}, c_k = a_p c_{k-1} – c_{k-2}.
+3. Generated 65 high-precision (dps=40) L(Δ,s) zeros spanning t ∈ [9.22, 105.17] using a fast custom Λ(Δ,t) sign-change/bisection finder; first zero matched the spec gate γ₁ = 9.222379399921103. Cached to `cache/LDelta_zeros_fast_dps40.pkl`.
+4. Implemented a new family in `weil_modular.py` (function `compute_Q_modular`) reusing the validated `_phi_at_points` and `_g_at_u` helpers from `weil_quadratic_form_general`; the new module follows the same M_arith = M_polar + M_arch − M_primes / Q = M_zeros − M_arith sign convention.
+5. Evaluated Q at T₀=85.7, σ=2, J=10, primes_cutoff=5000, n_nodes_quad=200, including both ±γ. As a sanity baseline I re-ran ζ at the same point using the existing engine.
+</methods> <results>
+- Zeta baseline at T₀=85.7, σ=2, J=10: λ_min = −7.50×10⁻¹⁴, tr(M_zeros)=3.898, |λ_min|/tr = 1.92×10⁻¹⁴ (engine working correctly).
+- L(Δ) first computed Q (primes_cutoff=5000): - λ_min = −0.4532, λ_max = 0.3467 - tr(M_zeros) = 7.9404, tr(M_arith) = 8.2860, residual trace = +0.3456 - tr(M_polar) = −5.8501, tr(M_arch) = 14.1697, tr(M_primes) = 0.0336 - |λ_min|/tr(M_zeros) = 5.71×10⁻², |tr(Q)|/tr(M_zeros) = 4.35×10⁻²
+- The component magnitudes are individually plausible (M_polar ≈ −10·log(2π)/π ≈ −5.85 ✓; tr(M_arch) ≈ 14.2 matches a leading-log-ψ(6+ir) estimate ✓), but the trace identity is broken at the percent level, indicating a residual normalization or convention error in either M_arch (factor of 2 in front of Re ψ), the symmetrization of the prime sum, or the polar/conductor constant for a degree-2 gamma factor.
+- A re-run at primes_cutoff=20000 to test whether the residual was prime-cutoff sensitive could not be completed within the time budget (kernel timeout at 47 s).
+</results> <challenges>
+1. L(Δ) zero generation is the dominant cost. Each Λ(Δ,t) evaluation takes ~0.17 s at dps=40 with n_taus=300, y_max=12, and bisection requires ~50 evaluations per zero (~9 s/zero). Producing 65 zeros took roughly 16 minutes of wall time and consumed most of the runtime budget.
+2. The existing `_zeros.L_Delta_zeros` is even slower (dps=50, ~15 s/zero) and the cache key was different from the one I needed. I wrote an incremental, checkpointed finder (`find_zeros_incremental`) that saved every 5 zeros to disk to survive 900 s cell timeouts.
+3. LMFDB API/direct-download endpoints for the 2-1-1.1-c11-0-0 zeros returned 404 or HTML; pre-computed zero tables could not be retrieved.
+4. The engine produces a ~4% trace mismatch for L(Δ) despite the ζ baseline being correct to 14 digits. The most likely culprits are (a) a missing or extra factor of 2 in M_arch for degree-2 gamma Γ_C versus the engine's degree-1 Γ_R convention, (b) the polar constant for log N − d log(2π) when expressed inside (1/2π)·∫·I (might need different scaling for degree-2), or (c) the prime-sum sign/factor convention when transcribing the Dirichlet code (which absorbs the "−2 Σ" via /π) to the modular case. Time ran out before this could be resolved.
+5. Computing τ(n) for all n up to a large primes_cutoff via the η-product q-expansion is O(X² / log X); X=100000 is impractical and was reduced to X=5000 for this test. A faster path would compute only τ(p) for primes p ≤ X (via direct Hecke trace formulas) and use the Satake recurrence for p^k, but this was not implemented.
+</challenges> <discussion>
+The hypothesis predicted that a correctly-implemented L(Δ) arithmetic side would yield a near-floor |λ_min|/tr ~ 10⁻⁸–10⁻¹⁰. The implementation produced a percent-level trace mismatch instead, demonstrating that the extension from a degree-1 Dirichlet engine to a degree-2 holomorphic-modular engine is not a trivial relabeling: the gamma-factor's degree (Γ_C vs Γ_R), the conductor-log normalization, and the prime-sum factor-of-2 conventions all interact and must be re-derived from first principles, exactly as the primary-dataset description warned. The fact that tr(M_polar) and tr(M_arch) individually match leading-order estimates while their combination misses tr(M_zeros) by ~4% points to a single conserved-quantity convention error (most likely M_arch contains both Γ_R's of Γ_C, but the (1/2π) prefactor is identical to the degree-1 case and so introduces a relative factor of 2). With more time, fixing this and rerunning at primes_cutoff=10⁵ should bring the engine to the floor; the present run is best read as a *partial implementation* that handles zero generation and arithmetic-side bookkeeping correctly but has an unresolved normalization bug.
+</discussion> <proposed-next-hypotheses>
+1. The 4% trace residual in `compute_Q_modular` is removed by replacing the M_arch integrand 2·Re ψ(k/2+ir) with Re ψ(k/2+ir) (i.e., the engine's `_g_at_u`/integral convention already supplies the symmetrization factor); with that single change, |λ_min|/tr(M_zeros) drops below 10⁻⁸ at (T₀=85.7, σ=2, J=10, X=10⁵).
+2. Once the modular family is validated for L(Δ), the same engine will validate L(f, s) for any weight-k level-N holomorphic newform by parameterizing only (k, N, λ(p)) — testable on a second weight (e.g. weight-16 level-1 cusp form, LMFDB 1.16.a.a) using the same code path.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>weil_modular.py</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>New Python module implementing a degree-2 modular family for the Weil quadratic-form engine. Reuses `_phi_at_points` and `_g_at_u` from `weil_quadratic_form_general.py`, computes τ(n) via the Δ q-expansion η-product, builds prime-power coefficients via the Satake recurrence c_k(p)=a_p c_{k-1}−c_{k-2}, assembles M_polar (log N − 2 log 2π)/(2π)·I, M_arch from 2·Re ψ(k/2+ir), and M_primes via Σ c_k(p) log p / √p^k · Re g_ij(k log p)/π. Sign and normalization conventions match the existing Dirichlet path but produce a ~4% trace residual for L(Δ) — known bug to be resolved.</artifact-description>
+</artifact>
+<artifact>
+<file-name>cache/LDelta_zeros_fast_dps40.pkl</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Pickle list of 65 high-precision (dps=40) zeros of L(Δ, s) in analytic normalization, spanning t ∈ [9.222379399921103, 105.170905016847]. Computed via Λ(Δ, t) sign-change scan + bisection using a custom finder (n_taus=300, y_max=12, step=0.3). First zero matches the §4 validation gate (9.2223793999211025) to 14 digits. Sufficient to cover the Hermite window at T₀=85.7, σ=2, J=10.</artifact-description>
+</artifact>
+</artifacts>
+</output> 

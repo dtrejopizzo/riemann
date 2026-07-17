@@ -1,0 +1,25 @@
+## Overview ## FINAL ANSWER **HYPOTHESIS REJECTED**: For the 8 function classes tested at N=10⁴, composite coherence R_comp is **NOT** more strongly (and negatively) correlated with minimum pretentious distance D_min(F) than with the standard distance D(F,ζ). ### Quantitative Results The Spearman rank correlations are:
+- **ρ(R_comp, D(F,ζ)) = -0.602** (p = 0.114, |ρ| = 0.602)
+- **ρ(R_comp, D_min(F)) = +0.422** (p = 0.298, |ρ| = 0.422) The correlation with D(F,ζ) is **stronger** in absolute magnitude (0.602 > 0.422), and the correlation with D_min is **positive**, not negative as hypothesized. ### Key Findings 1. **Correlation Direction**: R_comp shows a moderate **negative** correlation with D(F,ζ) and a weak **positive** correlation with D_min(F), opposite to the hypothesized pattern. 2. **Correlation Strength**: The absolute correlation with D(F,ζ) is 43% stronger than with D_min(F) (0.602 vs 0.422). 3. **Statistical Significance**: Neither correlation reaches statistical significance at α=0.05 (n=8), though the correlation with D(F,ζ) approaches marginal significance (p=0.114). 4. **Observed Pattern**: Functions with larger pretentious distance to ζ (e.g., Liouville λ and Möbius μ with D(F,ζ)=2.229) tend to have **lower** composite coherence (R_comp ≈ 0.44-0.49), while the fully random function (D(F,ζ)=1.337) exhibits the **highest** composite coherence (R_comp=0.551). 5. **D_min Compression**: All 8 functions show remarkably similar D_min values (range: 1.225-1.278, SD=0.017), suggesting that all functions can be "twisted" to look similarly different from multiplicative twists n^{it}, regardless of their structure. ### Complete Results Table | Function | Type | R_comp | D(F,ζ) | D_min(F) |
+|----------|------|--------|--------|----------|
+| F1: ζ(s) | Multiplicative | 0.492 | 0.000 | 1.250 |
+| F2: L(s,χ₄) | Multiplicative | 0.447 | 1.868 | 1.225 |
+| F3: f_rand | Multiplicative | 0.489 | 1.818 | 1.266 |
+| F4: L_DH | Non-multiplicative | 0.447 | 1.492 | 1.238 |
+| F5: L(s,λ) | Multiplicative | 0.491 | 2.228 | 1.241 |
+| F6: L(s,μ) | Multiplicative | 0.444 | 2.228 | 1.241 |
+| F7: f_fully_rand | Non-multiplicative | 0.551 | 1.337 | 1.256 |
+| F8: L_DH_var | Non-multiplicative | 0.447 | 1.501 | 1.278 | ### Interpretation The hypothesis that "closer minimal twist" predicts stronger composite coherence is rejected. Instead, pretentious distance to the Riemann zeta function itself (D(F,ζ)) is a **better** predictor of composite coherence than the minimum distance over all twists. Functions arithmetically distant from ζ exhibit **reduced** composite coherence, suggesting that multiplicative structure similar to ζ may actually enhance, rather than suppress, composite-driven phase alignment at finite N. This contradicts the motivating hypothesis from the literature (r14, r20) and suggests that the relationship between pretentious distance and resonance mechanisms is more nuanced than previously proposed. --- ## DISCRETIONARY ANALYTICAL DECISIONS - **N = 10⁴**: Chosen for computational feasibility of R_comp calculation, as specified in the research objective; higher N would require prohibitively long runtime based on literature constraints
+- **t-grid for D_min**: 200 evenly spaced points in [-2000, 2000] to balance resolution and computational cost
+- **Random t samples for R_comp**: 100 samples uniformly distributed in [1000, 3000] to avoid low-height instabilities while sampling diverse ordinate values
+- **R_comp definition**: Computed as (Σ_{k≥2} |S_k|) / (Σ_{k≥0} |S_k|), representing the fraction of total ω-class magnitude contributed by composite classes (k≥2)
+- **Maximum ω for R_comp**: Set to 10, sufficient to capture dominant composite classes at N=10⁴
+- **Spearman correlation**: Used instead of Pearson due to small sample size (n=8) and non-normal distributions, consistent with literature practice (r11, r15, r17)
+- **Random seeds**: Fixed (seed=42 for f_rand and R_comp sampling, seed=43 for f_fully_rand) to ensure reproducibility
+- **Character definitions**: - χ₄ (real character mod 5): χ₄(1)=1, χ₄(2)=-1, χ₄(3)=-1, χ₄(4)=1, χ₄(0)=0 - χ (complex character mod 5): χ(1)=1, χ(2)=i, χ(3)=-i, χ(4)=-1, χ(0)=0
+- **L_DH coefficients**: a_n = ((1-i)/2)·χ(n) + ((1+i)/2)·χ̄(n) where χ is the complex character mod 5
+- **L_DH variant**: Used different complex weights ((1-0.5i)/√1.25, (1+0.5i)/√1.25) to create a distinct non-multiplicative function
+- **Liouville function**: λ(n) = (-1)^Ω(n) where Ω(n) is the total number of prime factors with multiplicity
+- **Möbius function**: Standard definition μ(n) = 0 if n has squared factor, (-1)^ω(n) otherwise
+- **Kahan compensated summation**: Applied to all partial sum calculations D_F(t;N) and S_k sums to maintain numerical precision, as required by the dataset protocol
+- **No statistical power correction**: With n=8, correlations require |ρ| ≥ 0.738 for significance at α=0.05; our correlations are below this threshold but are reported as exploratory findings 

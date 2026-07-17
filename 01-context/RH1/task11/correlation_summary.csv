@@ -1,0 +1,14 @@
+Metric,Value
+Sample Size,1000
+Mean M(t),2.618341
+Std M(t),6.111783
+Median M(t),1.207545
+Mean R_comp(t),0.003305
+Std R_comp(t),0.002260
+Median R_comp(t),0.002757
+Pearson r,-0.124365
+Pearson p-value,8.040826e-05
+Pearson significant (α=0.05),Yes
+Spearman ρ,-0.310175
+Spearman p-value,9.654069e-24
+Spearman significant (α=0.05),Yes

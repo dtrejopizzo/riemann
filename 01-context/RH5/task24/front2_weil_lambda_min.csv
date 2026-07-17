@@ -1,0 +1,8 @@
+function,lambda_min(Q_N),lambda_max(Q_N),note
+zeta,-4.499932e-17,0.1799168,Mercer kernel PSD by construction
+L_chi5,-1.226373e-16,0.756497,Mercer kernel PSD by construction
+L_DH (critical only),-2.081292e-16,1.235266,Mercer kernel PSD; ignores σ
+L_DH + 110 off-line,-2.077577e-16,1.235838,"Off-line zeros add positive cos(t·) terms, still PSD"
+L_Delta,,,Zero list not available in workspace
+zeta_delta_weak,-4.499932e-17,0.1799168,Identical to zeta: Mercer kernel uses only Im(ρ)
+zeta_delta_strong,-4.499932e-17,0.1799168,Identical to zeta: Mercer kernel uses only Im(ρ)

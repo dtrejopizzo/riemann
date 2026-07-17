@@ -1,0 +1,7 @@
+Function,α (scaling),R²,CAS,Multiplicative,Periodic
+ζ,-0.8827,0.9997,3.47,Yes,Yes
+"L(s,χ₄) mod 5",-1.0109,0.9999,3.64,Yes,Yes
+f_rand,-0.9597,0.9999,1.01,Yes,No
+"L(s,χ_4) mod 4",-1.0120,0.9996,3.74,Yes,Yes
+f_fully_rand,-0.8628,0.9976,1.01,No,No
+L_DH,-0.9348,0.9964,2.02,No,No

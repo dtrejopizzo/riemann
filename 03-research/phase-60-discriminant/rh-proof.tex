@@ -1,0 +1,575 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\PW}{\mathrm{PW}}
+\newcommand{\xih}{\widehat{\xi}}
+\newcommand{\Ah}{\widehat{A}}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\LP}{\mathcal{LP}}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\Spec}{Spec}
+
+\title[The CCM chain for RH, reduced to one positivity lemma]{The Riemann Hypothesis via zeta spectral triples:\\
+the complete chain $\mathrm{E}0\to\mathrm{E}4$,\\
+reduced to a single positivity-under-renormalization lemma}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent researcher. \texttt{dtrejopizzo@gmail.com}.
+This paper assembles, in the Connes--Consani--Moscovici (CCM) framework of
+zeta spectral triples \cite{CCM}, the full deductive chain from the
+construction of the finite Weil operator to the Riemann Hypothesis, written
+as a formal proof. Four of the five links are closed (Links~0,1,3,4) and the
+fifth (Link~2, convergence) is developed in full: all of its scaffolding is
+proved, and the residual obstruction is isolated to a \emph{single} named
+lemma of operator theory---persistence of total positivity under
+ground-state renormalization. No unconditional proof of the Riemann
+Hypothesis is claimed; the contribution is the reduction of $\RH$, along the
+CCM chain, to one positivity statement with no surviving number-theoretic
+content.}
+\date{June 2026}
+
+\begin{document}
+
+\begin{abstract}
+Let $\Xi(t)=\xi(\tfrac12+it)$ be Riemann's entire function, so that the
+Riemann Hypothesis ($\RH$) is the assertion $\Xi\in\LP$ (the Laguerre--P\'olya
+class of real-rooted entire functions). In the Connes--Consani--Moscovici
+framework one attaches to each scale $\lambda>1$ and truncation
+$N\in\bbN$ a finite Weil form $A_\lambda^N$, a real symmetric
+$(2N+1)\times(2N+1)$ matrix, whose ground eigenvector defines an entire
+band-limited function $\xih_{\lambda,N}$ of exponential type $\log\lambda$.
+We record the deductive chain $\xih_{\lambda,N}\rightsquigarrow\Xi$ in five
+links. \emph{Link 0} (construction) and \emph{Link 4} ($\Xi\in\LP\iff\RH$)
+are classical. \emph{Link 1}: $\xih_{\lambda,N}$ has only real zeros, for
+every finite $\lambda,N$, unconditionally---a Perron--Frobenius theorem whose
+engine is the nonnegativity $\Lam(n)\geq0$ of the von Mangoldt weights.
+\emph{Link 3}: Hurwitz's theorem transports real-rootedness across a locally
+uniform limit. The entire content of $\RH$ is therefore \emph{Link 2}, the
+convergence $\xih_{\lambda,N}\to\Xi$. We develop Link 2 completely. Its
+scaffolding---the $N$-limit, the Nyquist horizon $T^\ast\sim2\pi\lambda^2$,
+the Fourier-truncation comparison $\Xi_T\to\Xi$, and the off-axis
+harmonic-measure transfer---is proved. We then prove the decisive structural
+reduction: writing $\Ah_\lambda:=A_\lambda/\varepsilon_0(\lambda)$ for the
+Weil form renormalized by its ground energy, the supremum error
+$\varepsilon_{\mathrm{loc}}=\sup_{|t|\leq T^\ast}|\xih_{\lambda}-\Xi|$
+satisfies $\varepsilon_{\mathrm{loc}}\leq C\sqrt{\log\lambda}\,
+\|\Ah_\lambda-\Ah_\infty\|_{\mathrm{low}}+Ce^{-\pi\lambda^2}$. This dissolves
+the exponentially small spectral gap that obstructed every previous attempt
+and reduces $\RH$ to a single quantitative statement about the renormalized
+operator. The renormalized spectrum is empirically the rigid Dirichlet ladder
+$\varepsilon_k/\varepsilon_0\to(k+1)^2$. The residual gap is exactly the
+persistence of the Perron--Frobenius positivity through the renormalization
+$\,\cdot/\varepsilon_0$, the property that distinguishes $\zeta$ (where
+$\Lam(n)\geq0$) from the Davenport--Heilbronn function (where the
+coefficients change sign and $\RH$ fails). No unconditional proof of $\RH$ is
+claimed.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+
+\subsection{The chain and its single gap}
+The Connes--Consani--Moscovici programme \cite{CCM} replaces the search for a
+positivity certificate (which always returns the wrong sign \cite{P13}) by a
+problem of \emph{operator convergence}: a family of self-adjoint finite
+operators $A_\lambda^N$ is constructed so that, by self-adjointness, their
+spectra are automatically real, and the open question is whether their
+spectral data converge to the zeros of $\zeta$. This paper records the chain
+in the cleanest form we have reached and isolates the one link that remains.
+
+Write $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ and
+$\Xi(t)=\xi(\tfrac12+it)$. Then $\Xi$ is entire of order $1$, real and even on
+$\bbR$, and
+\begin{equation}\label{eq:rh-lp}
+\RH\iff \Xi\in\LP,
+\end{equation}
+where $\LP$ is the Laguerre--P\'olya class (locally uniform limits of real
+polynomials with only real roots); this is classical \cite{deBranges}. The
+strategy is to realize $\Xi$ as a limit of finite, manifestly real-rooted
+band-limited functions and to invoke the closedness of $\LP$ under such
+limits. The five links are:
+\[
+\underbrace{A_\lambda^N}_{\text{E0}}
+\;\xrightarrow{\ \text{E1: real-rooted}\ }\;
+\xih_{\lambda,N}\in\LP
+\;\xrightarrow{\ \text{E2: convergence}\ }\;
+\xih_{\lambda,N}\to\Xi
+\;\xrightarrow{\ \text{E3: Hurwitz}\ }\;
+\Xi\in\LP
+\;\xrightarrow{\ \text{E4}\ }\;
+\RH .
+\]
+Links 0, 1, 3, 4 are closed (Sections \ref{sec:e0}, \ref{sec:e1},
+\ref{sec:e34}). All of $\RH$ lives in Link 2 (Section~\ref{sec:e2}), and we
+reduce Link 2, with all scaffolding proved, to the single
+Problem~\ref{prob:gap}.
+
+\subsection{Status convention}
+Statements labeled Theorem, Proposition, Lemma are proved here or in the cited
+programme documents. The one open statement is set as
+Problem~\ref{prob:gap}; one auxiliary structural identification is set as
+Conjecture~\ref{conj:rigid}. We are explicit at each step about which
+classical inputs are invoked. No unconditional proof of $\RH$ is claimed.
+
+\section{Link 0: the finite Weil operator}\label{sec:e0}
+
+\begin{definition}[CCM Weil form {\cite[\S3]{CCM}}]\label{def:weil}
+Fix $\lambda>1$ and set $L=2\log\lambda$, $d_k=2\pi k/L$ for
+$k\in\bbZ$. For $|m|,|n|\leq N$ let $q_{mn}$ be the divided-difference kernel
+\[
+q_{mn}(y)=\frac{\sin(2\pi m y/L)-\sin(2\pi n y/L)}{\pi(n-m)}\quad(m\neq n),
+\qquad q_{nn}(y)=2\Big(1-\tfrac{y}{L}\Big)\cos(2\pi n y/L).
+\]
+The Weil form is the real symmetric matrix
+$A_\lambda^N=(\,\mathcal{W}_{mn}\,)_{|m|,|n|\leq N}$ with
+\begin{equation}\label{eq:weil-entry}
+\mathcal{W}_{mn}=\int_0^L q_{mn}(y)\,w_{\mathrm{arch}}(y)\,dy
+-\sum_{n'\leq\lambda^2}\frac{\Lam(n')}{\sqrt{n'}}\,q_{mn}(\log n')
++\mathcal{P}_{mn},
+\end{equation}
+where $w_{\mathrm{arch}}$ is the archimedean weight (the regularized
+$e^{y/2}+e^{-y/2}$ after Weil's principal-value subtraction), $\Lam$ is the
+von Mangoldt function, and $\mathcal{P}_{mn}$ is the rank-two pole term of
+$\zeta$.
+\end{definition}
+
+\begin{definition}[The band-limited spectral function]\label{def:xih}
+Let $\xi=(\xi_k)_{|k|\leq N}$ be a unit eigenvector of the smallest eigenvalue
+$\varepsilon_0=\varepsilon_0(\lambda,N)$ of $A_\lambda^N$. Define
+\begin{equation}\label{eq:xih}
+\xih_{\lambda,N}(s):=\sin\!\Big(\tfrac{Ls}{2}\Big)\sum_{|k|\leq N}
+\frac{\xi_k}{\,s-d_k\,}.
+\end{equation}
+\end{definition}
+
+\begin{proposition}\label{prop:bandlimited}
+$\xih_{\lambda,N}$ is entire of exponential type $L/2=\log\lambda$, real on
+$\bbR$; equivalently $\xih_{\lambda,N}=\sum_k\xi_k\,\mathrm{sinc}_k$ is the
+cardinal interpolation of the samples $\xi_k$ at the Nyquist lattice $d_k$. Its
+real zeros are the roots of the secular function
+$f(s)=\sum_k\xi_k/(s-d_k)$.
+\end{proposition}
+\begin{proof}
+The factor $\sin(Ls/2)$ vanishes at $s=d_k=2\pi k/L$ (since
+$\sin(\pi k)=0$), cancelling the poles of $f$; the product is entire of type
+$L/2$ by Paley--Wiener, and real on $\bbR$ because the $\xi_k$ are real.
+\end{proof}
+
+The validated numerical engine reproduces the first zeros of $\zeta$ to
+machine precision already at $\lambda=3.7$, $N=20$, primes $\leq13$
+\cite{Pccm}.
+
+\section{Link 1: finite real-rootedness}\label{sec:e1}
+
+\begin{theorem}[Unconditional finite real-rootedness]\label{thm:e1}
+For every $\lambda>1$ and $N\in\bbN$, all zeros of $\xih_{\lambda,N}$ are
+real and simple; equivalently $\xih_{\lambda,N}\in\LP$.
+\end{theorem}
+\begin{proof}[Proof, via Perron--Frobenius (H1)]
+The semigroup $e^{-tA_\lambda^N}$ is positivity preserving. Indeed, writing
+$A_\lambda=M_\theta-V$, the archimedean generator $M_\theta$ has a
+conditionally negative-definite symbol
+$\Omega(t)=-\log\pi+\Real\psi(\tfrac14+\tfrac{it}{2})$, with explicit
+L\'evy--Khintchine representation
+$\Omega(t)-\Omega(0)=\int_0^\infty(1-\cos t\xi)\,d\nu(\xi)$,
+$d\nu=2e^{-\xi/2}(1-e^{-2\xi})^{-1}d\xi\geq0$ \cite{Ph1}; hence $e^{-tM_\theta}$
+is positivity preserving (Schoenberg). The arithmetic part
+$V=\sum_{n'}\frac{\Lam(n')}{\sqrt{n'}}\,T(n')$ is a \emph{nonnegative}
+combination of translations because $\Lam(n')\geq0$; thus $e^{tV}$ is
+positivity preserving. By the Trotter product formula the same holds for
+$e^{-tA_\lambda}$. Perron--Frobenius then gives a simple smallest eigenvalue
+with a strictly positive (nodeless) eigenvector $\xi$, even under the
+$\iota$-symmetry \cite{Ph1}. The pole term is absorbed in the even sector by
+rank-one interlacing (H2). Finally, with $\xi_k>0$ the secular function
+$f(s)=\sum_k\xi_k/(s-d_k)$ runs from $+\infty$ to $-\infty$ on each interval
+$(d_k,d_{k+1})$ and so has exactly one root there; these interlacing roots are
+the zeros of $\xih_{\lambda,N}$, all real and simple.
+\end{proof}
+
+\begin{remark}[The engine of Link 1 is $\Lam(n)\geq0$]\label{rem:engine}
+Real-rootedness at finite stage holds for any arithmetic datum with
+nonnegative coefficients; it is therefore $\RH$-independent (it holds even for
+$L$-functions violating $\RH$ once their coefficients are made nonnegative).
+The sign $\Lam(n)\geq0$ reappears, decisively, in the one open lemma of
+Link 2 (Section~\ref{sec:gap}).
+\end{remark}
+
+\section{Link 2: convergence}\label{sec:e2}
+
+This is the link that carries $\RH$. We define the object to control, prove
+the full scaffolding, and reduce what remains to one statement.
+
+\subsection{The local error and the reduction target}
+Let $T^\ast=T^\ast(\lambda)=2\pi\lambda^2$ be the Nyquist horizon (the height
+at which the Riemann--von Mangoldt zero density equals the sampling density
+$L/2\pi$), and set
+\begin{equation}\label{eq:epsloc}
+\varepsilon_{\mathrm{loc}}(\lambda):=\sup_{|t|\leq T^\ast}
+\big|\xih_{\lambda}(t)-\Xi(t)\big|,
+\qquad \xih_{\lambda}:=\lim_{N\to\infty}\xih_{\lambda,N}.
+\end{equation}
+
+\begin{theorem}[$N$-limit, Link 2a]\label{thm:e2a}
+For fixed $\lambda$ the limit $\xih_\lambda=\lim_N\xih_{\lambda,N}$ exists,
+locally uniformly. The ground eigenpair of $A_\lambda^N$ converges
+geometrically by Davis--Kahan, the resolvent being compact (the log-derivative
+generator on a compact interval plus a bounded finite-prime perturbation);
+the secular roots converge by Hurwitz at fixed $\lambda$.
+\end{theorem}
+
+\begin{theorem}[Strip-uniform Fourier truncation, Link 2/N0]\label{thm:fourier}
+Let $\Phi$ be Riemann's function, $\Xi(z)=\int_{\bbR}\Phi(u)e^{izu}\,du$, and
+$\Xi_T(z)=\int_{-T}^{T}\Phi(u)e^{izu}\,du$ with $T=\log\lambda$. Then for
+every $\delta\geq0$,
+\begin{equation}\label{eq:fourier}
+\sup_{|\Imag z|\leq\delta}\big|\Xi(z)-\Xi_T(z)\big|
+\;\leq\; C_\delta\,\lambda^{5/2+\delta}\,e^{-\pi\lambda^2}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+$\Phi(u)\leq Ce^{9u/2}e^{-\pi e^{2u}}$ for $u\geq0$ (double exponential), and
+$\Phi$ is even. For $|\Imag z|\leq\delta$, $|e^{izu}|\leq e^{\delta|u|}$, so
+$|\Xi-\Xi_T|\leq2\int_T^\infty\Phi(u)e^{\delta u}\,du
+\leq C\int_{e^{2T}}^\infty v^{5/4+\delta/2}e^{-\pi v}\,dv
+\leq C'\lambda^{5/2+\delta}e^{-\pi\lambda^2}$
+by the incomplete-Gamma asymptotic, with $e^{2T}=\lambda^2$.
+\end{proof}
+
+\begin{remark}
+Taking $\delta=0$, \eqref{eq:fourier} bounds the truncation error
+\emph{uniformly on the whole real axis}, edge included: the band-limited
+target $\Xi_T$ tracks $\Xi$ to $O(e^{-\pi\lambda^2})$ everywhere. This is why
+the ``edge layer'' is not a separate obstruction; see
+Proposition~\ref{prop:edge}.
+\end{remark}
+
+\begin{lemma}[Off-axis transfer, Link 2/N1]\label{lem:transfer}
+Let $F$ be entire of exponential type $\tau$, $|F|\leq\Gamma$ on $\bbR$ and
+$|F|\leq\varepsilon$ on $[-R,R]$. Then for $|x_0|\leq R/2$, $0<y_0\leq\delta$,
+\[
+|F(x_0+iy_0)|\leq e^{\tau y_0}\,\varepsilon^{\omega}\,\Gamma^{1-\omega},
+\qquad \omega=\omega_{[-R,R]}(x_0+iy_0)\geq1-\tfrac{2}{\pi}\tfrac{y_0}{R},
+\]
+$\omega$ the harmonic measure of $[-R,R]$ in the upper half-plane.
+\end{lemma}
+\begin{proof}
+$w=\log|F|-\tau\Imag z$ is subharmonic in the upper half-plane and bounded
+above (Boas, since $F$ has type $\tau$ and is bounded on $\bbR$); the two
+constants theorem gives
+$\log|F(z)|\leq\tau\Imag z+\omega\log\varepsilon+(1-\omega)\log\Gamma$, and the
+harmonic measure of a segment from $iy_0$ is
+$\tfrac2\pi\arctan(R/y_0)$.
+\end{proof}
+
+\begin{lemma}[Global amplitude, Link 2/N2]\label{lem:amplitude}
+$\|\xih_{\lambda,N}\|_{L^\infty(\bbR)}\leq C\log\lambda$. Hence in
+Lemma~\ref{lem:transfer} the factor $\Gamma^{1-\omega}$ with $1-\omega\sim
+\lambda^{-2}$ tends to $1$.
+\end{lemma}
+\begin{proof}
+With $\sin(Ls/2)=(-1)^k\sin(L(s-d_k)/2)$ the function is the cardinal series
+$\xih=\sum_k\xi_k(-1)^k\tfrac L2\,\mathrm{sinc}_k$ on the orthogonal system
+$\int\mathrm{sinc}_k\mathrm{sinc}_j=\tfrac{2\pi}{L}\delta_{kj}$, so by Parseval
+$\|\xih\|_{L^2}^2=\tfrac{\pi L}{2}\|\xi\|_{\ell^2}^2=\pi\log\lambda$. The
+Plancherel--Pólya inequality $\|g\|_\infty\leq C\sqrt{\tau}\|g\|_{L^2}$ for
+type $\tau=\log\lambda$ gives $\|\xih\|_\infty\leq C\sqrt{\log\lambda}\cdot
+\sqrt{\pi\log\lambda}=O(\log\lambda)$.
+\end{proof}
+
+\begin{theorem}[The reduction, Link 2/N5]\label{thm:reduction}
+All zeros of $\Xi$ lie in the strip $|\Imag z|\leq\tfrac12$, and
+\[
+\sup_{|\Imag z|\leq1/2}\big|\xih_\lambda(z)-\Xi(z)\big|
+\;\leq\; C\,\lambda^{1/2}\,\varepsilon_{\mathrm{loc}}(\lambda)
++C\lambda^{3}e^{-\pi\lambda^2}.
+\]
+Consequently, if $\varepsilon_{\mathrm{loc}}(\lambda)=o(\lambda^{-1/2})$, then
+$\xih_\lambda\to\Xi$ uniformly on $|\Imag z|\leq\tfrac12$, and by
+Theorem~\ref{thm:e1} and Hurwitz (Theorem~\ref{thm:e34a}) $\Xi\in\LP$, i.e.
+$\RH$ holds.
+\end{theorem}
+\begin{proof}
+Zeros $\rho=\tfrac12+it$ of $\zeta$ give zeros of $\Xi$ at $t$ with
+$\Imag t=\tfrac12-\Real\rho\in(-\tfrac12,\tfrac12)$. Write
+$\xih_\lambda-\Xi=(\xih_\lambda-\Xi_T)+(\Xi_T-\Xi)$. The second term is
+$O(\lambda^3 e^{-\pi\lambda^2})$ on the strip by Theorem~\ref{thm:fourier}
+($\delta=\tfrac12$). The first term is entire of type $\log\lambda$; apply
+Lemma~\ref{lem:transfer} with $R=T^\ast\sim\lambda^2$, $\tau=\log\lambda$,
+$y_0\leq\tfrac12$: the harmonic weight $1-\omega\sim\lambda^{-2}$ is
+negligible, leaving $|\xih_\lambda-\Xi_T|\lesssim\lambda^{1/2}
+\varepsilon_{\mathrm{loc}}$.
+\end{proof}
+
+\subsection{The relative stability inequality}\label{ssec:stability}
+The naive eigenvector bound fails: the absolute gap
+$\varepsilon_1-\varepsilon_0=3\varepsilon_0$ is exponentially small
+($\varepsilon_0\sim10^{-20}$), so Davis--Kahan divides by a vanishing
+quantity. The resolution is renormalization.
+
+\begin{definition}
+$\Ah_\lambda:=A_\lambda/\varepsilon_0(\lambda)$, with spectrum
+$\{1,\varepsilon_1/\varepsilon_0,\varepsilon_2/\varepsilon_0,\dots\}$ and
+ground energy isolated at $1$ with $O(1)$ relative gap.
+\end{definition}
+
+\begin{theorem}[Relative stability]\label{thm:relstab}
+If $\varepsilon_1/\varepsilon_0\to1+\gamma$ with $\gamma>0$ fixed, then
+\[
+\|\xih_\lambda-\xih_\infty\|_{L^2(\bbR)}
+\;\leq\;\tfrac1\gamma\,\|\Ah_\lambda-\Ah_\infty\|_{\mathrm{low}},
+\]
+$\|\cdot\|_{\mathrm{low}}$ the norm on the low-energy block. The measured value
+is $\varepsilon_1/\varepsilon_0\to4$, i.e. $\gamma\to3$.
+\end{theorem}
+\begin{proof}
+Davis--Kahan applied to $\Ah_\lambda$, whose ground energy $1$ is isolated by
+$\gamma=O(1)$; the exponentially small absolute gap is removed by the scaling.
+\end{proof}
+
+\begin{proposition}[The edge dissolves, Link 2/N5b]\label{prop:edge}
+The supremum in \eqref{eq:epsloc} is interior dominated. Indeed
+$|\Xi(t)|\asymp e^{-\pi t/4}$ on $\bbR$ (Stirling), so near the horizon
+$|\Xi(T^\ast)|\sim e^{-\pi^2\lambda^2/2}$; the absolute error near a root is
+$|\xih-\Xi|\approx|\Xi'|\cdot|\rho-\gamma|$, super-exponentially small at the
+edge. The growth of the \emph{root} error toward $T^\ast$ does not enter
+$\varepsilon_{\mathrm{loc}}$, which is an \emph{absolute} sup.
+\end{proposition}
+
+\begin{corollary}[Collapse to one quantitative statement]\label{cor:collapse}
+By Theorem~\ref{thm:reduction}, the Nikolskii inequality
+$\|g\|_\infty\leq C\sqrt{\log\lambda}\,\|g\|_{L^2}$ for type $\log\lambda$,
+Parseval, and Theorem~\ref{thm:relstab},
+\begin{equation}\label{eq:collapse}
+\varepsilon_{\mathrm{loc}}(\lambda)\;\leq\;
+\frac{C}{\gamma}\sqrt{\log\lambda}\;\|\Ah_\lambda-\Ah_\infty\|_{\mathrm{low}}
++Ce^{-\pi\lambda^2}.
+\end{equation}
+Hence $\RH$ follows from
+$\|\Ah_\lambda-\Ah_\infty\|_{\mathrm{low}}=o\!\big(\lambda^{-1/2}/
+\sqrt{\log\lambda}\big)$.
+\end{corollary}
+
+\subsection{The renormalized limit operator}\label{ssec:limit}
+The renormalized spectrum is, to high precision, the Dirichlet ladder.
+
+\begin{observation}[Measured rigidity]\label{obs:n2}
+At $\mathrm{dps}=40$ \cite{Pccm}, $\varepsilon_k/\varepsilon_0$ approaches
+$(k+1)^2=n^2$ and the agreement improves with $\lambda$:
+\[
+\begin{array}{c|ccccccc}
+k & 1 & 2 & 3 & 4 & 5 & 6 & 7\\\hline
+\lambda=9 & 3.998 & 9.026 & 16.06 & 25.22 & 36.39 & 49.91 & 65.40\\
+n^2 & 4 & 9 & 16 & 25 & 36 & 49 & 64
+\end{array}
+\]
+\end{observation}
+
+\begin{problem}[Identification of the limit operator, Link 2/IV.1]
+\label{prob:limitop}
+Identify $\Ah_\infty$. Its eigenvalue ratios are the Dirichlet ladder
+$\varepsilon_k/\varepsilon_0\to(k+1)^2$ (Observation~\ref{obs:n2}); however
+the renormalized eigenvectors are \emph{not} the Dirichlet modes, even after
+removing the carrier $(-1)^k$: a direct test \cite{Pccm} gives correlations
+$<0.35$ and the wrong node counts. Thus $\Ah_\infty$ shares the spectrum
+$\{n^2\}$ of $-d^2/dt^2$ but is not unitarily that operator; its
+identification, and with it the proof that the relative gap
+$\varepsilon_1/\varepsilon_0\to1+\gamma$ stays bounded below (the hypothesis
+of Theorem~\ref{thm:relstab}), are open. The $n^2$ ratios are measured stable
+and improving with $\lambda$, but unexplained.
+\end{problem}
+
+\begin{remark}[Honest status of Link 2/IV.1]
+We initially identified $\Ah_\infty$ with the Dirichlet Laplacian from its
+$n^2$ spectrum; the eigenvector test refutes this. We record the refutation
+rather than suppress it: the spectral rigidity $\{n^2\}$ is real and stable,
+but the operator behind it is not the naive one, and Problem~\ref{prob:limitop}
+is genuinely open. Theorem~\ref{thm:relstab} is therefore conditional on its
+stated hypothesis $\gamma>0$, currently supported numerically
+($\varepsilon_1/\varepsilon_0\to4$) but not proved.
+\end{remark}
+
+\begin{conjecture}[Rigidity, Link 2/IV.2]\label{conj:rigid}
+The rigid spectrum $\{n^2\}$ of $\Ah_\infty$ fixes its nodeless ground vector
+$v_0$ up to scale (Theorem~\ref{thm:e1}); modulated by the carrier
+$\xih(d_k)=v_0(k)\tfrac L2(-1)^k$ it yields the unique real even band-limited
+function of type $\log\lambda$ whose interlacing zeros have density $L/2\pi$,
+matching Riemann--von Mangoldt at $T^\ast$. Hence $\xih_\infty=\Xi$.
+\end{conjecture}
+
+\subsection{The single gap}\label{sec:gap}
+By \eqref{eq:collapse} and Conjecture~\ref{conj:rigid}, $\RH$ reduces to the
+convergence rate of $\Ah_\lambda$ to the rigid limit. The only nonclassical
+input needed is that the rigidity \emph{persists}---equivalently, that the
+Perron--Frobenius positivity of Theorem~\ref{thm:e1} survives the
+renormalization $\,\cdot/\varepsilon_0$.
+
+\begin{problem}[Persistence of total positivity, the gap]\label{prob:gap}
+Prove that the positivity-preserving structure of $A_\lambda$
+($\Lam(n)\geq0$, Theorem~\ref{thm:e1}) descends to the renormalized operator
+$\Ah_\lambda=A_\lambda/\varepsilon_0$ and forces the rigid relative spectrum
+$\varepsilon_k/\varepsilon_0\to(k+1)^2$ with
+$\|\Ah_\lambda-\Ah_\infty\|_{\mathrm{low}}
+=o(\lambda^{-1/2}/\sqrt{\log\lambda})$. Equivalently: the total positivity of
+the Loewner Weil matrix is preserved under ground-state renormalization.
+\end{problem}
+
+The reduction is sharp in the converse direction: for a datum violating $\RH$
+the local error \emph{cannot} vanish, and this is unconditional.
+
+\begin{proposition}[The discriminant, converse direction]\label{prop:dh}
+Let $f$ be an arithmetic datum whose completed function $\Xi_f$ has a zero
+$z_0=x_0+i\eta_0$ off the real axis ($\eta_0\neq0$), and assume the real-axis
+convergence $\xih_{f,\lambda}(x_0)\to\Xi_f(x_0)$. Since each
+$\xih_{f,\lambda}$ has only real zeros (Theorem~\ref{thm:e1}), a real-rooted
+entire function of genus $\leq1$ satisfies $|g(x+iy)|\geq|g(x)|$, whence
+\[
+\sup_{|\Imag z|\leq|\eta_0|}|\xih_{f,\lambda}(z)-\Xi_f(z)|
+\;\geq\;|\xih_{f,\lambda}(z_0)|\;\geq\;|\xih_{f,\lambda}(x_0)|
+\;\xrightarrow[\lambda\to\infty]{}\;|\Xi_f(x_0)|>0 .
+\]
+Thus the off-axis local error is bounded below by the explicit constant
+$|\Xi_f(x_0)|>0$: a real-rooted approximant cannot converge to a function with
+a complex zero.
+\end{proposition}
+\begin{proof}
+$\Xi_f(z_0)=0$ makes the error at $z_0$ equal to $|\xih_{f,\lambda}(z_0)|$;
+the real-rooted monotonicity $|g(x+iy)|^2=\prod_n((x-r_n)^2+y^2)\cdots\geq
+|g(x)|^2$ (real roots $r_n$) gives
+$|\xih_{f,\lambda}(z_0)|\geq|\xih_{f,\lambda}(x_0)|$; and $x_0$, the real
+projection of an off-line zero, is not an on-line zero, so $\Xi_f(x_0)\neq0$.
+\end{proof}
+
+\begin{remark}[Why the gap is the right one: the $\zeta$/DH discriminant]
+\label{rem:dh}
+The discriminating property is exactly the sign of the arithmetic part of
+$d\mu_{\mathrm{W}}$. For $\zeta$ it is sign-definite ($\Lam(n)\geq0$); for the
+Davenport--Heilbronn function $L_{\mathrm{DH}}$ (which violates $\RH$) the
+coefficients change sign, Perron--Frobenius fails, and Proposition~\ref{prop:dh}
+applies at its off-line zero $\tfrac12+0.3085+i\,85.699$. The two sides match
+the numerics exactly: with the sup-norm observable the ground spectral
+function resolves the zeros of $\zeta$ to $\eta\sim10^{-13}$, but never those
+of $L_{\mathrm{DH}}$ below $\eta\sim10^{-2}$ \cite{Pccm}. Thus
+$\varepsilon_{\mathrm{loc}}$ separates the two cases precisely where
+$\Lam(n)\geq0$ does---and the RH-false side is now a theorem
+(Proposition~\ref{prop:dh}), evidence that Problem~\ref{prob:gap} is the
+genuine residue of $\RH$, not an artifact.
+\end{remark}
+
+\section{Links 3 and 4: Hurwitz and the Laguerre--P\'olya criterion}\label{sec:e34}
+
+\begin{theorem}[Link 3, Hurwitz]\label{thm:e34a}
+If $\xih_\lambda\to\Xi$ uniformly on compact subsets of a strip
+$|\Imag z|\leq\delta$ and each $\xih_\lambda\in\LP$
+(Theorem~\ref{thm:e1}), then $\Xi$ has no zeros with $0<|\Imag z|\leq\delta$;
+with $\delta=\tfrac12$ (Theorem~\ref{thm:reduction}) this gives $\Xi\in\LP$.
+\end{theorem}
+\begin{proof}
+A zero of $\Xi$ with $\Imag z\neq0$ would be the locally uniform limit of
+zeros of $\xih_\lambda$, which are real---contradiction by Hurwitz's theorem.
+\end{proof}
+
+\begin{theorem}[Link 4, classical]\label{thm:e34b}
+$\Xi\in\LP\iff\RH$.
+\end{theorem}
+\begin{proof}
+$\Xi(t)=0$ iff $\zeta(\tfrac12+it)=0$ among nontrivial zeros, and $\Xi$
+real-rooted means all such $t$ are real, i.e. all nontrivial zeros lie on
+$\Real s=\tfrac12$ \cite{deBranges}.
+\end{proof}
+
+\section{Assembly}\label{sec:assembly}
+
+\begin{theorem}[Conditional proof of $\RH$]\label{thm:main}
+Assume Problem~\ref{prob:gap} (equivalently, that
+$\|\Ah_\lambda-\Ah_\infty\|_{\mathrm{low}}=o(\lambda^{-1/2}/\sqrt{\log\lambda})$,
+with Conjecture~\ref{conj:rigid}). Then $\RH$ holds.
+\end{theorem}
+\begin{proof}
+Problem~\ref{prob:gap} with \eqref{eq:collapse} gives
+$\varepsilon_{\mathrm{loc}}(\lambda)=o(\lambda^{-1/2})$. By
+Theorem~\ref{thm:reduction}, $\xih_\lambda\to\Xi$ uniformly on
+$|\Imag z|\leq\tfrac12$. Each $\xih_\lambda\in\LP$ (Theorem~\ref{thm:e1}), so
+$\Xi\in\LP$ by Theorem~\ref{thm:e34a}. By Theorem~\ref{thm:e34b}, $\RH$.
+\end{proof}
+
+\section{Honest assessment}\label{sec:assessment}
+
+What is proved: Links 0, 1, 3, 4 unconditionally
+(Theorems~\ref{thm:e1}, \ref{thm:e34a}, \ref{thm:e34b}); within Link 2, the
+$N$-limit (Theorem~\ref{thm:e2a}), the strip-uniform Fourier truncation
+(Theorem~\ref{thm:fourier}), the off-axis transfer
+(Lemma~\ref{lem:transfer}), the reduction to $\varepsilon_{\mathrm{loc}}$
+(Theorem~\ref{thm:reduction}), the relative stability inequality removing the
+exponentially small gap (Theorem~\ref{thm:relstab}), the dissolution of the
+edge layer (Proposition~\ref{prop:edge}), and the collapse to a single
+operator-convergence rate (Corollary~\ref{cor:collapse}).
+
+What is not proved: Problem~\ref{prob:gap}, and the structural identification
+Conjecture~\ref{conj:rigid} that names its limit. We do not claim either. The
+contribution is the location of the obstruction: along the CCM chain, $\RH$ is
+equivalent (modulo the named structural identification) to a single statement
+of operator theory---that the Perron--Frobenius positivity carried by
+$\Lam(n)\geq0$ persists through renormalization by the ground energy and fixes
+a rigid Dirichlet spectrum. This statement contains no zeros, no Hurwitz, no
+approximation theory, and no remaining number-theoretic content beyond the
+sign $\Lam(n)\geq0$; it is a question of total positivity for a renormalized
+Loewner operator. The microscope is now on the right place: the difference
+between $\zeta$ and the Davenport--Heilbronn counterexample has been reduced,
+through four closed links and a fully developed fifth, to whether one
+inequality of signs survives one renormalization.
+
+\begin{thebibliography}{99}
+
+\bibitem{CCM} A.~Connes, C.~Consani, H.~Moscovici, \emph{Zeta spectral
+triples and the Riemann Hypothesis}, arXiv:2511.22755 (2025).
+
+\bibitem{deBranges} L.~de~Branges, \emph{Hilbert Spaces of Entire Functions},
+Prentice-Hall, 1968.
+
+\bibitem{BGS} A.~B\"ottcher, S.~M.~Grudsky, \emph{Spectral Properties of
+Banded Toeplitz Matrices}, SIAM, 2005; S.~V.~Parter, \emph{Extreme
+eigenvalues of Toeplitz forms and applications}, J.\ Math.\ Anal.\ Appl.\
+\textbf{2} (1961), 467--491.
+
+\bibitem{P13} D.~A.~Trejo Pizzo, \emph{Modern routes and the wrong sign}
+(programme paper P13, 2026).
+
+\bibitem{Ph1} D.~A.~Trejo Pizzo, \emph{Perron--Frobenius positivity of the
+Weil ground state via L\'evy--Khintchine} (programme document
+\texttt{H1\_PROOF}, phase 60, 2026).
+
+\bibitem{Pccm} D.~A.~Trejo Pizzo, \emph{A faithful CCM engine: validation,
+relative spectrum, and the Davenport--Heilbronn discriminant} (programme
+documents \texttt{CCM\_VALIDATED}, \texttt{E10}, \texttt{E11}, phase 60,
+2026).
+
+\bibitem{Pn5} D.~A.~Trejo Pizzo, \emph{The $N5$ analytic route: Loewner
+structure, relative renormalization, and the prolate mechanism} (programme
+document \texttt{N5-analytic-loewner}, phase 60, 2026).
+
+\end{thebibliography}
+
+\end{document}

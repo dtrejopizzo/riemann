@@ -1,0 +1,2 @@
+N,t_min,t_max,n_time_points,n_composite_squarefree,n_blocks,block_size,xi_Rcomp_MLE,xi_Rcomp_bootstrap_mean,xi_Rcomp_bootstrap_std,xi_Rcomp_CI_lower,xi_Rcomp_CI_upper,xi_D_reference,xi_diff,prob_xi_Rcomp_gt_xi_D,effect_size_cohens_d,GEV_location,GEV_scale,n_bootstrap,n_bootstrap_clean
+1000000,1000,10000,9001,529427,100,90,0.7751351089009619,0.7651976816689302,0.11138674449126997,0.7723535178852726,0.7834147945173903,0.105,0.670135108900962,0.9908792024604942,6.016291363587563,6.280290430967246e-06,1.7454038511543194e-06,10000,9429

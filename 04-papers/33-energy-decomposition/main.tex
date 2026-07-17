@@ -1,0 +1,1077 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\LH}{\mathrm{LH}}
+\renewcommand{\DH}{\mathrm{DH}}
+\newcommand{\Dic}{\mathrm{Dic}}
+\newcommand{\Aax}{\mathbf{A}}
+\newcommand{\meas}{\operatorname{meas}}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\Imm}{\operatorname{Im}}
+
+\title[An Energy Decomposition of RH]{An Energy Decomposition of the Riemann Hypothesis:\\
+the Off-Line Energy $I$, its Integral Representation,\\
+and Structural Barriers}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+
+\begin{abstract}
+For each quadruple of non-trivial zeros of the Riemann zeta function off the critical line, write $\rho=\tfrac12+b+i\gamma$ with $b\in(0,\tfrac12)$, $\gamma>0$, and define the \emph{off-line energy} $I=\sum_j b_j^2$ (one summand per quadruple). The Riemann Hypothesis is the conjunction of two logically independent statements: $\Aax$ (\emph{finiteness}): $I<\infty$; and $\Dic$ (\emph{purity}): $I<\infty\Rightarrow I=0$. We study this decomposition with full proofs of the following unconditional results: (i) $E(T)=\sum_{\gamma\le T}b^2\ll T/\log T$, an immediate but apparently unrecorded consequence of Selberg's density theorem; (ii) an exact identity expressing $I(T)$ as the area integral of $\log|\zeta|$ over the right half-strip plus the constant $\tfrac18$ and a boundary-flux term --- $I$ is the second transversal moment of the Riesz measure of $\log|\zeta|$, with Littlewood's 1924 lemma as the first moment and zero-density counts as the zeroth; (iii) a Ces\`aro-averaged form in which the boundary term vanishes: the limit $\lim_{T_0\to\infty}T_0^{-1}\int_{T_0}^{2T_0}\!\bigl(\iint\log|\zeta|\bigr)\,dT$ \emph{always exists} in $[-\pi/8,+\infty]$ and equals $\pi I-\pi/8$, so that $\RH$ is equivalent to the exact value $-\pi/8$ and $\Aax$ to mere finiteness of the limit; (iv) $\Aax$ implies the Lindel\"of Hypothesis, giving the calibrated chain $\RH\Rightarrow(m<\infty)\Rightarrow\Aax\Rightarrow\LH\Rightarrow\DH$; (v) an anti-recurrence theorem: in the intermediate state $0<I<\infty$, Bagchi-type self-approximation of $\zeta$ in a disc containing an off-line zero admits only finitely many separated witnesses, so the energy dichotomy is not reducible to an independent universality-type axiom --- conditionally on $\Aax$, sequential self-approximation is \emph{equivalent} to $\RH$; (vi) an exact boundary-flux identity on the critical line, $\oint u\,\partial_n u=\pi\sum_{\gamma\le T}b\log(\gamma/2\pi)+O(\log^2T)$, resting on the identity $2\Re(\zeta'/\zeta)(\tfrac12+it)=\Re(\chi'/\chi)(\tfrac12+it)$; (vii) a \emph{universal lower bound for mollified moments}: for every Dirichlet-polynomial mollifier of length $T^\theta$, $\theta<\tfrac12$, with divisor-bounded coefficients, $\frac1T\int_0^T|\zeta\varphi(\tfrac12+it)|^2dt\ge1+\log\frac{1-\theta}{\theta}-o(1)$, unconditionally and with no structural assumption on the coefficients --- so the mollifier barrier becomes a \emph{theorem} for $\theta<\tfrac12$ (no short mollifier gains a logarithm over $E(T)\ll T/\log T$), while for $\theta\in[\tfrac12,1]$ the floor is provably trivial within the unconditional bilinear pipeline and is calibrated two-sidedly against standard statements (implied by a bilinear-range extension; its failure would refute the Farmer ``$\theta=\infty$'' conjecture by a factor $\gg\log T$); the rate $\log\frac{1-\theta}\theta$ is weaker than the conjectural $1/\theta$ and is presented as such; (viii) Riemann--von Mangoldt counting in unit windows holds \emph{uniformly along the de Bruijn heat flow} $H_t$, $t\in[0,1]$, unconditionally, by Jensen and a vertical Gaussian representation. We then prove structural barriers showing why $\Aax$ is inaccessible to the standard machinery (exponential zero-density theorems, the mollified-moment conduit, and sign-blind moment methods), and we close with an axiomatized no-go: a class $\mathfrak A$ of detection functionals, defined by five closed information currencies plus unconditional accessibility, such that no $\Phi\in\mathfrak A$ detects either half of the decomposition --- and a three-price theorem: any detector must pay with microscopic phase correlations, with long mollifiers $\theta\ge\tfrac12$, or with renouncing unconditional accessibility. The no-go holds for $\Phi\in\mathfrak A$ and only for $\Phi\in\mathfrak A$; it is not a universal impossibility, and membership of any future proposal is verifiable axiom by axiom. The paper claims no progress toward a proof of $\RH$; its purpose is the architecture, the exact identities, and the barriers.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+%======================================================================
+\section{Introduction}\label{sec:intro}
+
+\subsection{The off-line energy and the decomposition}
+
+Let $\zeta$ denote the Riemann zeta function. Its non-trivial zeros lie in the strip $0<\sigma<1$ and, by the Hadamard--de la Vall\'ee Poussin theorem, in the open strip; by the functional equation and the reality of the Dirichlet coefficients, any zero off the critical line $\sigma=\tfrac12$ belongs to a \emph{quadruple} $\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$. Throughout the paper we fix the following coordinates.
+
+\begin{definition}[coordinates and energy]\label{def:energy}
+For each quadruple of off-line zeros we choose the representative in the upper-right quarter,
+\[
+\rho=\tfrac12+b+i\gamma,\qquad b\in(0,\tfrac12),\quad\gamma>0 ,
+\]
+and we enumerate the representatives as $\rho_j=\tfrac12+b_j+i\gamma_j$. Zeros on the line occur in pairs $\tfrac12\pm i\gamma$ and carry $b=0$. The \emph{off-line energy} and its truncation are
+\[
+I \;:=\; \sum_j b_j^2 \;\in\;[0,\infty],
+\qquad
+E(T)\;:=\;\sum_{\gamma_j\le T} b_j^2 ,
+\]
+one summand per quadruple. Clearly $I=0$ if and only if the Riemann Hypothesis holds. We write $m\in\{0,1,2,\dots,\infty\}$ for the number of off-line quadruples, and
+\[
+N(\sigma,T):=\#\{\rho:\ \zeta(\rho)=0,\ \beta\ge\sigma,\ 0<\gamma\le T\}.
+\]
+\end{definition}
+
+The starting point of this paper is the elementary but structurally consequential decomposition
+\begin{equation}\label{eq:decomposition}
+\boxed{\ \RH \;\Longleftrightarrow\; \Aax\wedge\Dic\ }
+\qquad
+\begin{aligned}
+\Aax&:\quad I<\infty &&\text{(\emph{finiteness})},\\
+\Dic&:\quad I<\infty\;\Longrightarrow\;I=0 &&\text{(\emph{purity}, or the \emph{energy dichotomy} $I\in\{0,\infty\}$)}.
+\end{aligned}
+\end{equation}
+The two halves are of different natures. $\Aax$ is a quantitative statement of $\ell^2$ type about how fast off-line zeros (if any) must accumulate on the line; we will show it sits strictly between ``all but finitely many zeros are on the line'' and the Lindel\"of Hypothesis. $\Dic$ is a rigidity statement: the intermediate state $0<I<\infty$ must be excluded. We will show that the most natural attempt to attack $\Dic$ through almost-periodicity (a Bagchi-type self-approximation hypothesis) \emph{dissolves}: the needed hypothesis is provably false exactly in the intermediate state it was meant to exclude, and, conditionally on $\Aax$, is equivalent to $\RH$ itself.
+
+\subsection{Why the second moment}
+
+The energy $I$ is a quantity of \emph{second order} in the displacements $b_j$. This matters for a structural reason. First-order zero-sums $\sum_\rho \Phi(\rho)$ with $\Phi$ holomorphic --- the class reached by the explicit formula --- are even in each $b_j$ (the map $b\mapsto-b$ permutes the quadruple), so the leading signal any such functional carries about off-line displacements is precisely the $b^2$ term, and it always appears welded to a weight determined by the probe itself. The quantity $I$ is the weight-one limit of that family, and it is exactly the object for which this line of work described here possesses its only unconditional second-order certificate (Theorem~\ref{thm:envelope} below). The integral representation of Section~\ref{sec:green} shows that the price of weight one is leaving the holomorphic class: $I$ is reached by $\log|\zeta|=\Re\log\zeta$ restricted to the half-plane $\sigma>\tfrac12$ --- taking real parts and selecting half a quadruple, two non-holomorphic operations.
+
+\subsection{What this paper does and does not claim}
+
+This paper presents only results that survived an adversarial internal audit (June 2026) of a longer research program; statements refuted or degraded by that audit are excluded or stated with their exact conditional status. We prove:
+
+\begin{enumerate}
+\item an unconditional growth bound $E(T)\ll T/\log T$ (Section~\ref{sec:envelope});
+\item an exact integral representation of $I(T)$ (the \emph{Green--Littlewood identity}, Section~\ref{sec:green});
+\item a Ces\`aro form of that identity in which $\RH$ becomes the exact value of a limit of a classical integral that provably always exists (Section~\ref{sec:cesaro});
+\item the calibration $\Aax\Rightarrow\LH$ (Section~\ref{sec:lindelof});
+\item the energy dichotomy under sequential self-approximation, the unconditional anti-recurrence theorem, and the resulting dissolution of self-approximation as an independent axiom (Section~\ref{sec:dichotomy});
+\item an exact boundary-flux identity on the critical line (Section~\ref{sec:flux});
+\item structural barriers: no exponential zero-density theorem can prove $\Aax$; the Littlewood--Jensen--mollifier conduit is capped at $T/\log T$; moment methods are sign-blind for the relevant signed integral; the natural Dirichlet-energy functional is isotropic and its boundary kernel is deterministic (Section~\ref{sec:barriers});
+\item a universal, unconditional lower bound for mollified second moments over the entire divisor-bounded coefficient class for $\theta<\tfrac12$, which upgrades the mollifier barrier from conditional-on-Farmer to a theorem in that range; together with a proof that the floor is trivial within the unconditional bilinear pipeline for $\theta\ge\tfrac12$ and a two-sided calibration of the long range (Section~\ref{sec:floor});
+\item an unconditional Riemann--von Mangoldt counting theorem in unit windows, uniform along the de Bruijn heat flow $H_t$, $t\in[0,1]$ (Section~\ref{sec:rvmt});
+\item an axiomatized no-go: a closed class $\mathfrak A$ of detection functionals (five information currencies plus unconditional accessibility) such that no $\Phi\in\mathfrak A$ detects $\Aax$ or $\Dic$, together with a three-price theorem replacing the open-ended search for a ``collapsing object'' by a well-posed disjunction (Section~\ref{sec:trichotomy}).
+\end{enumerate}
+
+We claim no progress toward a proof of $\RH$. The barriers are \emph{method barriers}, each with an explicitly stated scope; none is a universal impossibility theorem. Where a result is conditional (now only the long-mollifier range $\theta\in[\tfrac12,1]$, calibrated two-sidedly in Section~\ref{sec:floor}) this is flagged in the statement itself. Where a simple statement may exist in the literature unrecorded, we say so: several of our unconditional statements (Theorem~\ref{thm:envelope}, Theorem~\ref{thm:inverse}) follow in few lines from Selberg's and Littlewood's classical work and may be folklore; to the best of our knowledge they have not been stated in this form, and to the best of our knowledge the universal mollifier bound of Theorem~\ref{thm:floor} is new, with the literature reservation stated there.
+
+\subsection{Notation}
+
+$s=\sigma+it$; $u(s):=\log|\zeta(s)|$; $\chi$ is the factor in the functional equation $\zeta(s)=\chi(s)\zeta(1-s)$. We set
+\[
+D(T):=\int_{1/2}^{\infty}\!\!\int_0^T \log|\zeta(\sigma+it)|\,dt\,d\sigma,
+\qquad
+\Xi(T):=\frac{1}{2\pi}\int_{1/2}^\infty\Bigl(\sigma-\tfrac12\Bigr)^2\,\Imm\,\frac{\zeta'}{\zeta}(\sigma+iT)\,d\sigma .
+\]
+A height $T$ is \emph{admissible} if it is not the ordinate of any zero. Constants implied by $\ll$, $O(\cdot)$ are absolute unless indicated. $\Lambda(n)$ is the von Mangoldt function. ``Selberg's density theorem'' refers to the bound
+\begin{equation}\label{eq:selberg}
+N\bigl(\tfrac12+s,T\bigr)\;\ll\;T^{\,1-s/4}\log T,\qquad 0\le s\le\tfrac12,
+\end{equation}
+uniformly in $s$, from \cite{Selberg1946}.
+
+%======================================================================
+\section{The unconditional envelope: $E(T)\ll T/\log T$}\label{sec:envelope}
+
+\begin{theorem}[unconditional energy envelope]\label{thm:envelope}
+Unconditionally,
+\[
+E(T)\;=\;\sum_{0<\gamma_j\le T}\Bigl(\beta_j-\tfrac12\Bigr)^2\;\ll\;\frac{T}{\log T}.
+\]
+More generally, any density bound of the shape $N(\tfrac12+s,T)\le A\,T^{1-cs}(\log T)^{\kappa}$ valid uniformly for $0<s\le\tfrac12$ yields $E(T)\le \frac{2A}{c^2}\,T(\log T)^{\kappa-2}(1+o(1))$.
+\end{theorem}
+
+\begin{proof}
+By the layer-cake identity $b^2=\int_0^{1/2}2s\,\mathbf 1_{\{s<b\}}\,ds$ and Tonelli's theorem,
+\begin{equation}\label{eq:layercake}
+E(T)\;=\;\int_0^{1/2} 2s\,N\bigl(\tfrac12+s,\,T\bigr)\,ds
+\end{equation}
+(the boundary set $\{s=b_j\}$ has measure zero). Inserting \eqref{eq:selberg} in the form $N(\tfrac12+s,T)\le C\,T\log T\,e^{-(s/4)\log T}$,
+\[
+E(T)\;\le\;2C\,T\log T\int_0^{1/2}s\,e^{-s\log T/4}\,ds
+\;\le\;2C\,T\log T\cdot\frac{16}{\log^2 T}\int_0^\infty v\,e^{-v}\,dv
+\;=\;\frac{32\,C\,T}{\log T}.
+\]
+The general form is identical with $(A,c,\kappa)$ in place of $(C,\tfrac14,1)$.
+\end{proof}
+
+\begin{remark}[provenance]\label{rem:folklore}
+The bound is an immediate corollary of Selberg's density theorem and should perhaps be regarded as folklore-adjacent; we are not aware of a statement of $E(T)\ll T/\log T$ in the literature, though it follows readily from \cite{Selberg1946}. We record three calibrations. (a) The trivial bound is $E(T)\le\tfrac14 N(T)\asymp T\log T$; the gain is a factor $\log^2T$. (b) Near $\sigma=\tfrac12$ Selberg's exponent is still the best known: the density theorems of Ingham \cite{Ingham1940} and Huxley, optimized away from the line, give only $T(\log T)^{3}$ or worse through \eqref{eq:layercake}. (c) The classical $\ell^1$ route --- Littlewood's lemma plus Jensen's inequality, giving $\sum_{\gamma\le T}(\beta-\tfrac12)\ll T\log\log T$ \cite{Littlewood1924,Titchmarsh1986} --- yields only $E(T)\ll T\log\log T$; the density route is strictly better for the $\ell^2$ quantity.
+\end{remark}
+
+\begin{remark}[microscopic reformulation]\label{rem:mu2}
+Since the local density of ordinates at height $T$ is $\asymp\log T$, the natural microscopic variable is $u=s\log T$. Substituting $s=u/\log T$ in \eqref{eq:layercake} gives the exact identity
+\begin{equation}\label{eq:mu2}
+E(T)\;=\;\frac{T}{\log T}\,\mu_2(T),
+\qquad
+\mu_2(T):=\frac{\log T}{T}\,E(T)
+=\frac{2\log T}{T\log^2 T}\int_0^{\frac12\log T}u\,N\Bigl(\tfrac12+\tfrac{u}{\log T},T\Bigr)\,du .
+\end{equation}
+The quantity $\mu_2$ is, up to normalization by $N(T)\asymp\frac{T}{2\pi}\log T$, the \emph{mean-square transversal displacement of the typical zero in units of the mean gap}. Theorem~\ref{thm:envelope} says $\mu_2(T)\ll 1$; $\RH$ says $\mu_2\equiv0$; and any improvement $\mu_2(T)=o(1)$ would already improve Theorem~\ref{thm:envelope}. \emph{All of hypothesis $\Aax$ is contained in one number per height}: $\Aax$ holds if and only if $\mu_2(T)\ll(\log T)/T$. The reformulation is exact (a change of variables), and it shows that the missing information is a statement of \emph{proportion at the scale of the gap}, not a counting statement about exceptional zeros; this observation drives the barrier analysis of Section~\ref{sec:barriers}.
+\end{remark}
+
+%======================================================================
+\section{The exact integral representation}\label{sec:green}
+
+The following identity expresses the truncated energy as an area integral of $\log|\zeta|$ over the right half-strip. It is proved with entirely classical machinery (Green's identity against the weight $\tfrac12(\sigma-\tfrac12)^2$, partial fractions for $\zeta'/\zeta$); the assembled statement is, to the best of our knowledge, new, and we give the proof in full.
+
+\begin{theorem}[Green--Littlewood identity]\label{thm:GL}
+Let $T>0$ be admissible. Then, unconditionally,
+\begin{equation}\label{eq:GL}
+I(T)\;:=\;E(T)\;=\;\frac1\pi\int_{1/2}^{\infty}\!\!\int_0^T \log|\zeta(\sigma+it)|\,dt\,d\sigma\;+\;\frac18\;-\;\Xi(T),
+\end{equation}
+with all integrals absolutely convergent, where
+\[
+\Xi(T)=\frac{1}{2\pi}\int_{1/2}^\infty\Bigl(\sigma-\tfrac12\Bigr)^2\,\Imm\,\frac{\zeta'}{\zeta}(\sigma+iT)\,d\sigma .
+\]
+Moreover $|\Xi(T)|\ll\log T$ for \emph{every} admissible $T\ge2$ (Lemma~\ref{lem:flux} below), so that
+\begin{equation}\label{eq:GLapprox}
+D(T)\;=\;\pi\,E(T)\;-\;\frac\pi8\;+\;O(\log T).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Write $u(s)=\log|\zeta(s)|$ and $v(\sigma)=\tfrac12(\sigma-\tfrac12)^2$, so that $\Delta v=\partial_\sigma^2 v\equiv1$. Fix $A>2$ and consider the symmetric rectangle $R=R_{A,T}=[\tfrac12,A]\times[-T,T]$.
+
+\emph{Step 1: local structure of $u$.} By the partial-fraction decomposition of $\zeta'/\zeta$ (see \cite[Ch.~15--16]{Davenport}) and integration, in a neighbourhood of $R$ we may write
+\[
+u(s)=\sum_{\rho\in\mathcal Z}\log|s-\rho|\;-\;\log|s-1|\;+\;h(s),
+\]
+where $\mathcal Z$ is the (finite) set of zeros in a slightly larger rectangle and $h$ is harmonic there ($h=\log$ of the modulus of a zero-free, pole-free holomorphic function on a simply connected neighbourhood).
+
+\emph{Step 2: Green's identity piecewise.} Green's identity $\iint_R(u\Delta v-v\Delta u)=\oint_{\partial R}(u\,\partial_n v-v\,\partial_n u)$ holds for the smooth pair $(h,v)$, and for each potential piece $\log|s-w|$ against the smooth $v$ it holds in the classical distributional sense, contributing $2\pi v(w)$ when $w\in R^\circ$. Since $T$ is admissible, no zero lies on the horizontal edges; zeros with $\beta=\tfrac12$ lie on the edge $\sigma=\tfrac12$, where $v=v'=0$, and contribute $2\pi v(\rho)=0$, consistently. The pole $s=1$ is interior to the symmetric rectangle ($-T<0<T$) and contributes $-2\pi v(1)=-\tfrac{2\pi}{8}$. Using $\Delta v=1$:
+\[
+\iint_R u
+\;-\;2\pi\Bigl[\sum_{\rho\in R^\circ,\ \beta>1/2} v(\rho)\;-\;v(1)\Bigr]
+\;=\;\oint_{\partial R}\bigl(u\,\partial_n v-v\,\partial_n u\bigr).
+\]
+
+\emph{Step 3: the count.} Each quadruple with $\gamma<T$ has exactly two members with $\beta>\tfrac12$ inside $R$, namely $\tfrac12+b\pm i\gamma$, each with $v=b^2/2$; total $b^2$ per quadruple. Hence $\sum_{\rho\in R^\circ,\beta>1/2}v(\rho)=E(T)$ with our convention of one representative per quadruple. And $v(1)=\tfrac12\cdot\tfrac14=\tfrac18$.
+
+\emph{Step 4: the boundary.} (i) On $\sigma=\tfrac12$: $v=0$ and $\partial_n v=-v'(\tfrac12)=0$; no contribution. (ii) On $\sigma=A$: for $\sigma\ge2$ one has $|u|,|\partial_\sigma u|\ll 2^{-\sigma}$ while $v\ll\sigma^2$; both terms tend to $0$ as $A\to\infty$, and $\iint_R u$ converges absolutely ($\log|s-1|$ is locally integrable near $s=1$). (iii) On $t=\pm T$: $\partial_n v=\pm\partial_t v=0$, so only $-\oint v\,\partial_n u$ survives; by the reflection symmetry $u(\sigma,-t)=u(\sigma,t)$ (from $\zeta(\bar s)=\overline{\zeta(s)}$), the two horizontal edges give equal contributions and also $\iint_R u=2\iint_{0<t<T}u$.
+
+\emph{Step 5: assembly.} With $\partial_t u=\Re\bigl[i\,\zeta'/\zeta\bigr]=-\Imm\,\zeta'/\zeta$,
+\[
+2\,D(T)\;-\;2\pi E(T)\;+\;\frac{2\pi}{8}
+\;=\;-\,2\int_{1/2}^\infty v(\sigma)\,\partial_t u(\sigma,T)\,d\sigma
+\;=\;2\pi\,\Xi(T),
+\]
+which rearranges to \eqref{eq:GL}. Absolute convergence of $\Xi(T)$ for admissible $T$ follows from the estimates in Lemma~\ref{lem:flux}.
+
+\emph{Consistency check as $T\to0^+$.} Then $E(T)\to0$ and $D(T)\to0$; near $s=1$, $\zeta'/\zeta\sim-1/(s-1)$, so $\Imm\,\zeta'/\zeta(\sigma+iT)=\frac{T}{(\sigma-1)^2+T^2}+O(1)$ converges to a Poisson mass $\pi\delta_{\sigma=1}$, and the flux term tends to $\frac1{2\pi}\cdot(\tfrac12)^2\cdot\pi=\tfrac18$, cancelling the constant $+\tfrac18$ exactly.
+\end{proof}
+
+\begin{lemma}[flux bound at every admissible height]\label{lem:flux}
+For every admissible $T\ge2$,
+\[
+|\Xi(T)|\;\ll\;\log T .
+\]
+\end{lemma}
+
+\begin{proof}
+Split at $\sigma=2$. For $\sigma\ge2$: $|\zeta'/\zeta(\sigma+iT)|\le\sum_n\Lambda(n)n^{-\sigma}\ll2^{-\sigma}$ and $\int_2^\infty\sigma^2 2^{-\sigma}d\sigma=O(1)$. For $\tfrac12\le\sigma\le2$, by partial fractions \cite[Ch.~15--16]{Davenport},
+\[
+\frac{\zeta'}{\zeta}(\sigma+iT)\;=\;\sum_{|\gamma-T|\le1}\frac{1}{\sigma+iT-\rho}\;+\;O(\log T).
+\]
+The $O(\log T)$ remainder integrated against $(\sigma-\tfrac12)^2\le\tfrac94$ over a bounded interval gives $O(\log T)$. For each zero $\rho=\beta+i\gamma$ with $|\gamma-T|\le1$ we integrate \emph{first in $\sigma$}: with $x=\sigma-\beta$,
+\[
+\int_{1/2}^{2}\Bigl(\sigma-\tfrac12\Bigr)^2\Bigl|\Imm\,\frac{1}{\sigma+iT-\rho}\Bigr|\,d\sigma
+\;\le\;\frac94\int_{-\infty}^{\infty}\frac{|T-\gamma|\,dx}{x^2+(T-\gamma)^2}\;=\;\frac{9\pi}{4},
+\]
+a Poisson mass per zero, \emph{independent of $|T-\gamma|$}. There are $O(\log T)$ zeros with $|\gamma-T|\le1$ (von Mangoldt). Total: $\ll\log T$.
+\end{proof}
+
+\begin{remark}[the three transversal moments]\label{rem:moments}
+Let $\mu^+:=\sum_{\beta>1/2}\delta_\rho$ be the (atomic, positive) measure of zeros in the right half-plane --- the Riesz measure of $\log|\zeta|$ there, with the pole removed. The family of Green identities against the weights $v_m=(\sigma-\tfrac12)_+^m$ produces:
+\begin{itemize}
+\item $m=0$: the zero-density counts $N(\sigma,T)$ --- the input of the density industry;
+\item $m=1$: Littlewood's classical lemma \cite{Littlewood1924}, \cite[\S9.9]{Titchmarsh1986},
+\begin{equation}\label{eq:littlewood}
+\int_0^T\log|\zeta(\sigma_0+it)|\,dt
+\;=\;2\pi\!\!\sum_{\beta>\sigma_0,\,0<\gamma\le T}\!\!(\beta-\sigma_0)\;-\;\pi(1-\sigma_0)\;+\;O(\log T),
+\end{equation}
+uniformly for $\sigma_0\in[\tfrac12,1]$, zeros counted in $0<\gamma\le T$ (the pole term carries the constant $\pi$, not $2\pi$: in folding the symmetric rectangle from $|t|<T$ to $0<t<T$ the zeros double by conjugation but the pole, at $t=0$, does not);
+\item $m=2$: Theorem~\ref{thm:GL} --- the energy is the mass of $\log|\zeta|$ \emph{over the half-strip}.
+\end{itemize}
+Thus $I$ is the \emph{second transversal moment of the Riesz measure of $\log|\zeta|$}, with Littlewood's theorem the first moment and zero-density the zeroth. Iterating \eqref{eq:littlewood} over $\sigma_0\in[\tfrac12,\infty)$ recovers \eqref{eq:GL}, with the constant $\tfrac18$ reappearing as $\frac1\pi\int_{1/2}^1\pi(1-\sigma_0)\,d\sigma_0=\tfrac18$ --- the pole again; the two computations agree.
+\end{remark}
+
+\begin{remark}[why this representation must be non-holomorphic]\label{rem:nonholo}
+Every functional $\sum_\rho\Phi(\rho)$ with $\Phi$ holomorphic and quadruple-symmetric is even in each displacement $b_j$, and one can show (we omit the general statement, which belongs to the longer program) that the $b^2$-coefficient of such a functional is welded to its on-line profile, forcing any non-negative weight to be integrable in $\gamma$ --- weight $1$ is unreachable in the holomorphic class. The representation \eqref{eq:GL} reaches weight $1$ by two non-holomorphic operations: taking $\Re\log\zeta$, and restricting to $\sigma>\tfrac12$ (selecting \emph{half} of each quadruple). The price is visible in \eqref{eq:GL}: no multiplicative weight remains, but an additive boundary flux appears at the cut, and the integrand carries a sign.
+\end{remark}
+
+%======================================================================
+\section{The Ces\`aro limit: $\RH$ as the exact value of a classical limit}\label{sec:cesaro}
+
+The flux term in \eqref{eq:GL} is local at the cut height; averaging the cut makes it disappear entirely. The key observation is that $\partial_T\log|\zeta(\sigma+iT)|=-\Imm\,\frac{\zeta'}{\zeta}(\sigma+iT)$, so the integral of the flux over a window of cut heights is a \emph{difference of two values} of $\log|\zeta|$, integrated in $\sigma$.
+
+\begin{lemma}[local integrability on vertical segments]\label{lem:localint}
+For every $T\ge2$ (admissible or not),
+\[
+\int_{1/2}^{2}\bigl|\log|\zeta(\sigma+iT)|\bigr|\,d\sigma\;\ll\;\log T .
+\]
+\end{lemma}
+
+\begin{proof}
+By the standard local factorization (Borel--Carath\'eodory plus Jensen; \cite[\S3.9]{Titchmarsh1986}), in the disc $|s-(2+iT)|\le2$ one has $\log|\zeta(s)|=\sum_{|\rho-(2+iT)|\le 5/2}\log|s-\rho|+O(\log T)$, with $O(\log T)$ zeros in the larger disc. The segment $[\tfrac12,2]\times\{T\}$ lies in that disc, and each zero contributes $\int_{1/2}^2\bigl|\log|\sigma+iT-\rho|\bigr|\,d\sigma\ll1$ (a logarithmic singularity is integrable, even when the zero lies on the segment). With $O(\log T)$ zeros and the $O(\log T)$ remainder integrated over a bounded length, the total is $\ll\log T$.
+\end{proof}
+
+\begin{theorem}[averaged Green--Littlewood; the Ces\`aro limit always exists]\label{thm:cesaro}
+Define
+\[
+\overline E(T_0):=\frac1{T_0}\int_{T_0}^{2T_0}E(T)\,dT,
+\qquad
+\overline D(T_0):=\frac1{T_0}\int_{T_0}^{2T_0}D(T)\,dT .
+\]
+Then, unconditionally, for all $T_0\ge2$:
+\begin{itemize}
+\item[\textup{(a)}] $\displaystyle \overline E(T_0)\;=\;\frac1\pi\,\overline D(T_0)\;+\;\frac18\;+\;O\Bigl(\frac{\log T_0}{T_0}\Bigr)$.
+\item[\textup{(b)}] The limit $\displaystyle\lim_{T_0\to\infty}\overline D(T_0)$ \textbf{exists} in $[-\tfrac\pi8,+\infty]$ and equals $\pi I-\dfrac\pi8$.
+\item[\textup{(c)}] Consequently:
+\[
+\RH\iff\lim_{T_0\to\infty}\overline D(T_0)=-\frac\pi8,
+\qquad
+\Aax\iff\lim_{T_0\to\infty}\overline D(T_0)<\infty
+\iff \liminf_{T_0\to\infty}\overline D(T_0)<\infty .
+\]
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+(a) The identity $E(T)=\frac1\pi D(T)+\frac18-\Xi(T)$ holds for all $T$ off the (countable, measure-zero) set of ordinates; $E$ is monotone and locally bounded, $D$ is continuous, and $|\Xi(T)|\ll\log T$ (Lemma~\ref{lem:flux}) makes everything integrable on $[T_0,2T_0]$. It remains to bound $\frac1{T_0}\int_{T_0}^{2T_0}\Xi(T)\,dT$. By Fubini --- justified since $|\zeta'/\zeta|\sim|s-\rho|^{-1}$ near each zero is locally integrable in two dimensions --- and the fundamental theorem of calculus on almost every abscissa (the singularities of $T\mapsto\log|\zeta(\sigma+iT)|$ are logarithmic, hence integrable; absolute continuity off a countable set of abscissae suffices for the subsequent $\sigma$-integration),
+\[
+\int_{T_0}^{2T_0}\Xi(T)\,dT
+\;=\;\frac1{2\pi}\int_{1/2}^\infty\Bigl(\sigma-\tfrac12\Bigr)^2\Bigl[\log|\zeta(\sigma+iT_0)|-\log|\zeta(\sigma+2iT_0)|\Bigr]\,d\sigma .
+\]
+On $\sigma\in[\tfrac12,2]$ apply Lemma~\ref{lem:localint} at the two heights ($T_0$ and $2T_0$, \emph{without} assuming they are admissible): contribution $\ll\log T_0$. On $\sigma\ge2$: $|\log|\zeta||\ll2^{-\sigma}$, contribution $O(1)$. Total $\ll\log T_0$; divide by $T_0$.
+
+(b) $E$ is non-decreasing with $\lim_{T\to\infty}E(T)=I\in[0,\infty]$; hence $E(T_0)\le\overline E(T_0)\le E(2T_0)$ and $\overline E(T_0)\to I$, including when $I=\infty$ (in which case $\overline D$ diverges cleanly to $+\infty$: monotonicity of $E$ plus the $O(\log T_0/T_0)$ error forbid oscillation). By (a), $\overline D(T_0)=\pi\overline E(T_0)-\frac\pi8+o(1)\to\pi I-\frac\pi8$.
+
+(c) Immediate from (b): the limit always exists, hence $\liminf<\infty\iff\lim<\infty\iff I<\infty$; and $\lim=-\frac\pi8\iff I=0\iff\RH$ (one off-line quadruple has $b>0$ strictly, so $I>0$).
+\end{proof}
+
+\begin{corollary}[unconditional lower bound; optimal constant]\label{cor:lower}
+For every admissible $T\ge2$, $D(T)\ge-\frac\pi8-C\log T$, and
+\[
+\overline D(T_0)\;\ge\;-\frac\pi8\;-\;C\,\frac{\log T_0}{T_0}\qquad(T_0\ge2),
+\]
+with equality in the limit under $\RH$: the constant $-\pi/8$ --- the mass of the pole seen through the quadratic weight --- is optimal. The lower bound costs nothing beyond $E\ge0$ (positivity of the Riesz measure); \emph{the upper bound is hypothesis $\Aax$}.
+\end{corollary}
+
+\begin{remark}\label{rem:cesaroreading}
+Theorem~\ref{thm:cesaro} converts $\Aax$ into the finiteness of a limit that \emph{provably exists}: no good-height subsequences, no boundary residue, no possible oscillation --- the Ces\`aro average of $\iint\log|\zeta|$ over the half-strip either converges to $\pi I-\pi/8$ finite or diverges to $+\infty$. And it converts $\RH$ into the \emph{exact value} of a limit of a classical integral. We emphasize, with the bluntness the subject deserves, that this is a reformulation, not a reduction: the identity is exact and therefore transports the difficulty intact (see Proposition~\ref{prop:signblind}). Its value is structural --- it isolates where the difficulty now lives (the upper bound; equivalently the sign cancellation of $\log|\zeta|$ in $t$) and it eliminates all boundary pathology unconditionally.
+\end{remark}
+
+We record the inverse reading, with its honesty clause.
+
+\begin{theorem}[mean values of $\log|\zeta|$ over the half-strip]\label{thm:inverse}
+Unconditionally:
+\begin{itemize}
+\item[\textup{(a)}] For every admissible $T$: $D(T)=\pi E(T)-\frac\pi8+O(\log T)$, hence by Theorem~\ref{thm:envelope}
+\[
+\Bigl|\int_{1/2}^\infty\!\!\int_0^T\log|\zeta(\sigma+it)|\,dt\,d\sigma\Bigr|\;\ll\;\frac{T}{\log T}.
+\]
+\item[\textup{(b)}] Uniformly for $\sigma\in(\tfrac12,1]$:
+\[
+\Bigl|\frac1T\int_0^T\log|\zeta(\sigma+it)|\,dt\Bigr|\;\ll\;\frac1{(\sigma-\frac12)\log T}\;+\;\frac{\log T}{T}.
+\]
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+(a) is \eqref{eq:GLapprox} plus Theorem~\ref{thm:envelope}. (b): Littlewood's lemma \eqref{eq:littlewood} with the Chebyshev bound $\sum_{\beta>\sigma}(\beta-\sigma)\le\sum_{b_j>\sigma-1/2}b_j\le E(T)/(\sigma-\tfrac12)$ (if $b>s$ then $b\le b^2/s$) for the upper direction, and the pole term $-\pi(1-\sigma)+O(\log T)$ for the lower.
+\end{proof}
+
+\begin{remark}[provenance, again]
+The ingredients of Theorem~\ref{thm:inverse} are Littlewood (1924) and Selberg (1946); the statements are new \emph{as statements}, to the best of our knowledge --- in particular (a) with the exact constant $-\pi/8$ and validity at every admissible height --- but they follow from classical work in a few lines and may be folklore. Equivalently, with $S_1(t)=\frac1\pi\int_{1/2}^\infty\log|\zeta(\sigma+it)|\,d\sigma$ the classical Littlewood integral \cite[\S9.9]{Titchmarsh1986}, one has $D(T)=\pi\int_0^T S_1(t)\,dt$ exactly, so (a) reads $\bigl|\int_0^TS_1\bigr|\ll T/\log T$ and Theorem~\ref{thm:cesaro}(c) reads: \emph{$\Aax$ holds if and only if the Ces\`aro mean of $\int_0^TS_1$ is bounded}.
+\end{remark}
+
+%======================================================================
+\section{Calibration: $\Aax$ implies the Lindel\"of Hypothesis}\label{sec:lindelof}
+
+\begin{theorem}\label{thm:lindelof}
+$\Aax$ (that is, $I<\infty$) implies the Lindel\"of Hypothesis. Combined with the trivial implications, the following chain holds, where each arrow is proved and no converse is known:
+\[
+\RH\;\Longrightarrow\;(m<\infty)\;\Longrightarrow\;\Aax\;\Longrightarrow\;\LH\;\Longrightarrow\;\DH ,
+\]
+$\DH$ being the Density Hypothesis $N(\sigma,T)\ll T^{2(1-\sigma)+\varepsilon}$.
+\end{theorem}
+
+\begin{proof}
+Suppose $I<\infty$. For each $s>0$, Chebyshev's inequality gives a \emph{total} count over all heights:
+\[
+N\bigl(\tfrac12+s,\infty\bigr)\;\le\;I/s^2\;<\;\infty ,
+\]
+since each zero counted contributes $b^2\ge s^2$ to $I$. In particular, for each fixed $\sigma>\tfrac12$ the window counts satisfy $N(\sigma,T+1)-N(\sigma,T)\to0$ as $T\to\infty$ (indeed they are eventually $0$). By Backlund's criterion (\cite{Backlund1918}; \cite[\S13.5]{Titchmarsh1986}: $\LH$ holds \emph{if and only if} for every $\sigma>\tfrac12$, $N(\sigma,T+1)-N(\sigma,T)=o(\log T)$ --- the implication used here, window counts $o(\log T)\Rightarrow\LH$, is the direction Backlund proved via the three-circles and Borel--Carath\'eodory theorems), $\LH$ follows. The remaining arrows: $\RH\Rightarrow m<\infty$ trivially ($m=0$); $m<\infty\Rightarrow I<\infty$ trivially (finite sum of terms $<\tfrac14$); $\LH\Rightarrow\DH$ is Ingham \cite{Ingham1940}. Strictness in the sense stated: $I<\infty$ does not formally imply $m<\infty$ in the class of a priori zero configurations ($b_j=1/(j+2)$ on arbitrary heights gives $m=\infty$, $I<\infty$); the converses of the other arrows are open.
+\end{proof}
+
+\begin{remark}[position of $\Aax$]\label{rem:position}
+$\Aax$ is thus a ``quasi-$\RH$'' statement --- $\RH$ with $\ell^2$ error --- sitting strictly above Lindel\"of in the proved-implication order. Two calibrations sharpen the picture. (i) Under $\Aax$, every half-plane $\sigma\ge\tfrac12+s$ contains only \emph{finitely many} zeros in total; the proof above uses much less than this. (ii) Conversely, Section~\ref{sec:barriers} shows that $\LH$, even granted in full, does not move the microscopic mean square $\mu_2$ at all: $\Aax$ is a statement at the gap scale $u=b\log T\asymp1$, which $\LH$ (a statement at scale $T^\varepsilon$, i.e.\ $u\asymp\varepsilon\log T$) does not see. We know of no standard conjecture strictly weaker than ``all but finitely many zeros lie on the line'' that implies $\Aax$; in particular Montgomery's pair-correlation conjecture \cite{Montgomery1973} is formulated under $\RH$ and presupposes $\Aax$ rather than offering a route to it.
+\end{remark}
+
+%======================================================================
+\section{The energy dichotomy and the dissolution of self-approximation}\label{sec:dichotomy}
+
+This section concerns the second half of the decomposition, $\Dic:\ I\in\{0,\infty\}$. A natural-looking route to $\Dic$ runs through the almost-periodicity of $\zeta$ in the critical strip, in the spirit of Bohr and of Bagchi's topological-dynamics reformulation of $\RH$ \cite{Bagchi1981,Bagchi1987}. We formalize the relevant hypothesis, prove that it implies the dichotomy, and then prove that --- unconditionally --- it is \emph{false} in the intermediate state $0<I<\infty$, so that it cannot serve as an independent axiom. The net effect is a dissolution: conditionally on $\Aax$, sequential self-approximation is equivalent to $\RH$ itself.
+
+\subsection{Statements}
+
+\begin{hypothesis}[sequential self-approximation, $\mathrm{SSA}$]\label{hyp:ssa}
+For every closed disc $D\subset\{\tfrac12<\sigma<1\}$ there exists a sequence $\tau_k\to\infty$ with
+\[
+\sup_{s\in D}\,\bigl|\zeta(s+i\tau_k)-\zeta(s)\bigr|\;\longrightarrow\;0 .
+\]
+\end{hypothesis}
+
+This is weaker than Bagchi's \emph{strong recurrence} (positive lower density of $\varepsilon$-translation times for every $\varepsilon$ and every admissible compact set), which is known to be \emph{equivalent} to $\RH$ \cite{Bagchi1981,Bagchi1987}; see also \cite[Ch.~8]{Steuding2007}. $\mathrm{SSA}$ asks only for one unbounded sequence per disc, with no density requirement, and is therefore not covered by Bagchi's equivalence: under $\RH$ it is true (strong recurrence gives it with room to spare, by a diagonal argument); under $\neg\RH$ its status was open. The relevance of discs \emph{containing zeros} is the crux: Voronin universality \cite{Voronin1975} and its descendants approximate non-vanishing targets only --- the support of Bagchi's limit measure on $H(D)$ consists of the non-vanishing functions together with $0$, a compression of support forced by the Euler product (\cite{Bagchi1981}, \cite[Ch.~6]{Laurincikas1996}, \cite{Steuding2007}) --- so a target with a zero in the disc lies \emph{outside the support}, and all distributional machinery works against, not for, such approximation. (For Hurwitz zeta functions, which have no Euler product, the limit measure has full support and self-approximation is a theorem even on discs containing zeros \cite{GarunkstisKarikovas2014}; the contrast is exactly the Euler product.)
+
+For an off-line zero $\rho_0=\tfrac12+b_0+i\gamma_0$ (with multiplicity $m_0\ge1$) define the \emph{canonical constants}
+\[
+r:=\tfrac12\min\Bigl(b_0,\ \tfrac12-b_0,\ \operatorname{dist}\bigl(\rho_0,\,Z(\zeta)\setminus\{\rho_0\}\bigr)\Bigr)>0,
+\quad
+D_0:=\overline D(\rho_0,r),
+\quad
+\eta:=\min_{|s-\rho_0|=r}|\zeta(s)|>0,
+\]
+so that $D_0\subset\{\tfrac12+\tfrac{b_0}2<\sigma<1\}$ and $\zeta$ has no zero in $D_0\setminus\{\rho_0\}$; note also $r\le\gamma_0$ (since $\bar\rho_0$ is a zero at distance $2\gamma_0$), so the translated discs $D(\rho_0+i\tau,r)$, $\tau>0$, stay in the upper half-plane. For $0<\varepsilon<\eta$ let
+\[
+A_\varepsilon:=\Bigl\{\tau>0:\ \sup_{s\in D_0}\bigl|\zeta(s+i\tau)-\zeta(s)\bigr|\le\varepsilon\Bigr\}
+\]
+be the set of \emph{good shifts} (self-approximation witnesses) in the window of $\rho_0$.
+
+\subsection{Quantitative Rouch\'e--Hurwitz}
+
+\begin{lemma}[replication with rate]\label{lem:rouche}
+Let $g$ be holomorphic on a neighbourhood of $\overline D(z_0,R)$, with a zero of multiplicity $m_0\ge1$ at $z_0$ and no other zero in $\overline D(z_0,R)$. For $0<\delta\le R$ set $\eta(\delta):=\min_{|z-z_0|=\delta}|g(z)|>0$. Then:
+\begin{itemize}
+\item[\textup{(i)}] If $f$ is holomorphic on $\overline D(z_0,R)$ with $\sup_{\overline D(z_0,R)}|f-g|<\eta(\delta)$, then $f$ has exactly $m_0$ zeros (with multiplicity) in $D(z_0,\delta)$.
+\item[\textup{(ii)}] Write $g(z)=c\,(z-z_0)^{m_0}h(z)$ with $c=g^{(m_0)}(z_0)/m_0!\ne0$, $h(z_0)=1$, and choose $\delta_1\in(0,R]$ with $|h|\ge\tfrac12$ on $\overline D(z_0,\delta_1)$. Then for every $\varepsilon\le\tfrac{|c|}{4}\delta_1^{m_0}$ and every $f$ with $\sup_{\overline D(z_0,R)}|f-g|\le\varepsilon$, $f$ has exactly $m_0$ zeros in $D\bigl(z_0,\delta(\varepsilon)\bigr)$, where $\delta(\varepsilon):=(4\varepsilon/|c|)^{1/m_0}$.
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+(i) On the circle $|z-z_0|=\delta$, $|f-g|<\eta(\delta)\le|g|$; Rouch\'e's theorem applied to the pair $(g,f-g)$ gives that $f=g+(f-g)$ has in $D(z_0,\delta)$ the same number of zeros with multiplicity as $g$, namely $m_0$. (ii) On $|z-z_0|=\delta\le\delta_1$ we have $|g|\ge\tfrac{|c|}2\delta^{m_0}$, hence $\eta(\delta)\ge\tfrac{|c|}2\delta^{m_0}$. With $\varepsilon\le\tfrac{|c|}4\delta_1^{m_0}$ one has $\delta(\varepsilon)\le\delta_1$ and $\eta(\delta(\varepsilon))\ge\tfrac{|c|}2\cdot\tfrac{4\varepsilon}{|c|}=2\varepsilon>\varepsilon$, and (i) applies.
+\end{proof}
+
+This is Hurwitz's theorem in quantitative form: zeros of the limit attract zeros of the approximants, with multiplicity, at rate $\varepsilon^{1/m_0}$.
+
+\subsection{The dichotomy under $\mathrm{SSA}$}
+
+\begin{theorem}[energy dichotomy]\label{thm:dichotomy}
+Assume Hypothesis~\ref{hyp:ssa} \textup{(}indeed only its instance on the single disc $D_0$ of one off-line zero, at the single fixed precision $\varepsilon<\eta$\textup{)}. Then
+\[
+I>0\;\Longrightarrow\;I=\infty,
+\qquad\text{i.e.}\qquad I\in\{0,\infty\}.
+\]
+\end{theorem}
+
+\begin{proof}
+Suppose $I>0$ and fix an off-line zero $\rho_0$ with its constants $(r,\eta,m_0,c)$, $c=\zeta^{(m_0)}(\rho_0)/m_0!$. Apply $\mathrm{SSA}$ to $D_0$: there is $\tau_k\to\infty$ with $\varepsilon_k:=\sup_{D_0}|\zeta(\cdot+i\tau_k)-\zeta|\to0$.
+
+\emph{Step 1 (replica with controlled abscissa).} For $k$ with $\varepsilon_k<\eta$, Lemma~\ref{lem:rouche}(i) with $g=\zeta|_{D_0}$, $f=\zeta(\cdot+i\tau_k)|_{D_0}$, $\delta=R=r$ shows that $\zeta(\cdot+i\tau_k)$ has $m_0$ zeros in $D(\rho_0,r)$; equivalently $\zeta$ has a zero $\rho_k$ in $D(\rho_0+i\tau_k,r)$. Then $|\Re\rho_k-(\tfrac12+b_0)|<r\le\tfrac{b_0}2$, so $b(\rho_k):=\Re\rho_k-\tfrac12\ge b_0/2$: the replica \emph{copies the distance to the critical line}, up to the fixed radius (and, by Lemma~\ref{lem:rouche}(ii), up to error $\le(4\varepsilon_k/|c|)^{1/m_0}\to0$, though the coarse bound suffices).
+
+\emph{Step 2 (replicas lie in distinct quadruples).} Pass to a subsequence with $\tau_{j+1}>\tau_j+2r+1$. The intervals $(\gamma_0+\tau_j-r,\,\gamma_0+\tau_j+r)$ containing $\Imm\rho_j$ are pairwise disjoint and eventually exceed $\gamma_0$. Since $\rho_j\in\{\sigma>\tfrac12,\ \Imm>0\}$, each $\rho_j$ is the upper-right representative of its quadruple; two upper members of one quadruple share their imaginary part, so disjoint intervals force distinct quadruples, all distinct from that of $\rho_0$.
+
+\emph{Step 3 (divergence).} Each replica quadruple contributes $b(\rho_j)^2\ge b_0^2/4$ to $I$; infinitely many distinct quadruples give $I=\infty$.
+\end{proof}
+
+\begin{remark}
+The proof uses only: zeros are isolated, $b_0<\tfrac12$ strictly (Hadamard--de la Vall\'ee Poussin), Rouch\'e, and the definition of $I$. Only the fixed precision $\varepsilon<\eta$ in the single disc $D_0$ is needed, not $\varepsilon_k\to0$. A weaker one-shift-per-$(D,\varepsilon)$ version of $\mathrm{SSA}$ also suffices, via an induction on discs with summable radii $r_k\le b_0 2^{-k-2}$ that prevents the abscissa from leaking ($\sum r_k\le b_0/2$, so all replicas keep $b\ge b_0/2$); we omit the routine details. Theorem~\ref{thm:dichotomy} also subsumes the cardinality dichotomy: $I\in\{0,\infty\}\Rightarrow m\in\{0,\infty\}$, since $1\le m<\infty$ would force $0<I<\infty$.
+\end{remark}
+
+\subsection{Unconditional anti-recurrence: the witness budget}
+
+The converse face of Theorem~\ref{thm:dichotomy} is unconditional, and it is what kills the strategy.
+
+\begin{theorem}[self-approximation of a $\zeta$ with an off-line zero is rare, with a rate]\label{thm:witnesses}
+Suppose $\zeta$ has an off-line zero $\rho_0=\tfrac12+b_0+i\gamma_0$, with canonical constants $r\le b_0/2$, $\eta$, and let $0<\varepsilon<\eta$. Then, unconditionally:
+\begin{itemize}
+\item[\textup{(i)}] $\displaystyle \meas\bigl(A_\varepsilon\cap[0,T]\bigr)\;\le\;2r\,N\bigl(\tfrac12+\tfrac{b_0}2,\;T+\gamma_0+r\bigr)\;\ll\;r\,T^{\,1-b_0/8}\log T$;
+\item[\textup{(ii)}] $\displaystyle \meas\bigl(A_\varepsilon\cap[0,T]\bigr)\;\le\;\frac{8r}{b_0^2}\,E\bigl(T+\gamma_0+r\bigr)\;\ll\;\frac{r}{b_0^2}\cdot\frac{T}{\log T}$;
+\item[\textup{(iii)}] every $2r$-separated subset $\{\tau_k\}\subset A_\varepsilon$ satisfies
+\[
+\#\{k:\tau_k\le T\}\;\le\;\min\Bigl(N\bigl(\tfrac12+\tfrac{b_0}2,\,T+\gamma_0+r\bigr),\;\frac{4}{b_0^2}\,E(T+\gamma_0+r)\Bigr).
+\]
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+\emph{The replica map.} For $\tau\in A_\varepsilon$ (note $\varepsilon<\eta$ strictly), Lemma~\ref{lem:rouche}(i) with $\delta=R=r$ produces a zero $\rho$ of $\zeta$ with $|\rho-(\rho_0+i\tau)|<r$; it has $b(\rho)\ge b_0/2$ and $\Imm\rho\in(\gamma_0+\tau-r,\gamma_0+\tau+r)$. The disc $D(\rho_0+i\tau,r)$ lies in $\{\sigma>\tfrac12\}\cap\{\Imm>0\}$ (the latter by $r\le\gamma_0$), so only the upper-right representative of a quadruple can fall in it: each replica identifies a quadruple. Let
+\[
+\mathcal Z(T):=\bigl\{\text{quadruples with } b\ge\tfrac{b_0}2,\ 0<\gamma\le T+\gamma_0+r\bigr\}.
+\]
+For each $z\in\mathcal Z(T)$ with representative $\beta+i\gamma$, the set of $\tau$ which $z$ can serve, $T_z=\{\tau:|\beta+i\gamma-\rho_0-i\tau|<r\}$, is contained in the interval $(\gamma-\gamma_0-r,\gamma-\gamma_0+r)$ of length $\le2r$. Hence $A_\varepsilon\cap[0,T]\subset\bigcup_{z\in\mathcal Z(T)}T_z$ and $\meas(A_\varepsilon\cap[0,T])\le2r\,\#\mathcal Z(T)$. Now two bounds:
+\[
+\#\mathcal Z(T)\le N\bigl(\tfrac12+\tfrac{b_0}2,\,T+\gamma_0+r\bigr)
+\qquad\text{and}\qquad
+\#\mathcal Z(T)\le\frac{4}{b_0^2}\,E(T+\gamma_0+r)
+\]
+(the latter is Chebyshev on the energy). Selberg's density theorem \eqref{eq:selberg} gives the exponent $1-\tfrac14\cdot\tfrac{b_0}2=1-b_0/8$ in (i); Theorem~\ref{thm:envelope} gives (ii). For (iii): if $|\tau_k-\tau_{k'}|>2r$ the translated discs are disjoint, so separated shifts receive distinct quadruples and the replica map is injective.
+\end{proof}
+
+\begin{proposition}[anti-recurrence of the finite-energy state]\label{prop:antirecurrence}
+If $0<I<\infty$, then for \emph{every} off-line zero $\rho_0$ (constants $r\le b_0/2$, $\eta$) and every $\varepsilon<\eta$:
+\[
+\begin{gathered}
+\meas\bigl(A_\varepsilon\bigr)\;\le\;\frac{8r}{b_0^2}\,I\;<\;\infty
+\quad\text{\textup{(}total measure on $(0,\infty)$\textup{)}},\\[2pt]
+\#\{\textup{$2r$-separated subset of }A_\varepsilon\}\;\le\;\frac{4I}{b_0^2}\;<\;\infty .
+\end{gathered}
+\]
+In particular $A_\varepsilon$ is a \emph{bounded} set: no unbounded sequence of $\varepsilon$-good shifts exists in the window of any off-line zero, even at the fixed precision $\varepsilon<\eta$. The energy $I$ is literally a budget of self-approximation witnesses: each separated $\varepsilon$-good return consumes at least $b_0^2/4$ units, and only $I$ are available.
+\end{proposition}
+
+\begin{proof}
+Take $T\to\infty$ in Theorem~\ref{thm:witnesses}(ii)--(iii): $\#\mathcal Z(\infty)\le4I/b_0^2$ by Chebyshev over the full series, and $A_\varepsilon$ is contained in at most $4I/b_0^2$ bounded intervals of length $\le2r$ (each $T_z\subset(\gamma_z-\gamma_0-r,\gamma_z-\gamma_0+r)$ with $\gamma_z$ \emph{fixed}); a subset of a finite union of bounded intervals is bounded.
+\end{proof}
+
+\subsection{The dissolution}
+
+\begin{theorem}[$\mathrm{SSA}$ by energy state]\label{thm:dissolution}
+Unconditionally:
+\begin{itemize}
+\item[\textup{(1)}] If $I=0$ \textup{(}$\RH$\textup{)}: $\mathrm{SSA}$ is \emph{true} --- by Bagchi's theorem, under $\RH$ every $\zeta|_D$ is non-vanishing, lies in the support of the limit measure, and strong recurrence yields positive lower density of $\varepsilon$-good shifts for every $\varepsilon$ \cite{Bagchi1981,Bagchi1987,Steuding2007}, hence unbounded sequences by a diagonal argument.
+\item[\textup{(2)}] If $0<I<\infty$: $\mathrm{SSA}$ is \emph{false} --- indeed its minimal instance \textup{(}one unbounded sequence at one fixed precision $\varepsilon<\eta$, in the disc of any single off-line zero\textup{)} is false, by Proposition~\ref{prop:antirecurrence}.
+\item[\textup{(3)}] If $I=\infty$: open.
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+(1) is Bagchi's theorem as cited; (2) is Proposition~\ref{prop:antirecurrence} (an unbounded sequence in $A_\varepsilon$ cannot exist when $A_\varepsilon$ is bounded; for full $\mathrm{SSA}$, apply it to $D_0$ and note that uniform convergence gives eventual precision $<\eta/2<\eta$); (3) is a declaration.
+\end{proof}
+
+\begin{corollary}[$\mathrm{SSA}$ is not an independent axiom]\label{cor:notaxiom}
+\begin{itemize}
+\item[\textup{(1)}] $\mathrm{SSA}\Rightarrow\Dic$ \textup{(}Theorem~\ref{thm:dichotomy}\textup{)}, and $\Dic\Rightarrow\mathrm{SSA}$ in the case $I=0$; hence $\mathrm{SSA}$ and $\Dic$ are equivalent modulo the single open case $I=\infty$.
+\item[\textup{(2)}] \textbf{Conditionally on $\Aax$ \textup{(}$I<\infty$\textup{)}: $\mathrm{SSA}\iff\RH$.} \textup{(}If $\mathrm{SSA}$ holds and $I<\infty$, case \textup{(2)} of Theorem~\ref{thm:dissolution} is excluded, so $I=0$; conversely by Bagchi.\textup{)}
+\item[\textup{(3)}] Consequently, as a proof target the implication ``$\Aax\wedge\mathrm{SSA}\Rightarrow\RH$'' is identical to ``$\Aax\wedge\Dic\Rightarrow\RH$'': any proof of $\mathrm{SSA}$ must contain a proof that the state $0<I<\infty$ does not exist --- which is exactly the work $\mathrm{SSA}$ was hoped to do. Self-approximation is the dichotomy under another name, not a shortcut to it.
+\end{itemize}
+\end{corollary}
+
+\begin{remark}[reading]
+There is no positive ``replication mechanism'' that $\mathrm{SSA}$ activates; there is a logical incompatibility between unbounded recurrence and a finite energy budget --- Theorem~\ref{thm:dichotomy} and Proposition~\ref{prop:antirecurrence} are contrapositives of one another. The obstruction to settling case (3) ($I=\infty\Rightarrow\mathrm{SSA}$?) is genuine: Rouch\'e only yields the direction \emph{witnesses $\Rightarrow$ zeros}; the direction \emph{zeros $\Rightarrow$ witnesses} would require the translate to approximate the whole function on $D_0$, i.e.\ universality outside the support of the Bagchi measure, where the Euler product compresses the support to non-vanishing functions while the hypothetical function has infinitely many off-line zeros. The only external calibration available is consistent with (3) being true: for Hurwitz zeta functions (no Euler product, full support, $I=\infty$ trivially since they have $\gg T$ zeros in interior substrips) self-approximation is a theorem even on discs with zeros \cite{GarunkstisKarikovas2014}. In either resolution of (3), $\mathrm{SSA}$ carries no independent leverage. Finally, Theorem~\ref{thm:witnesses} has independent content as a bridge between the energy certificate and universality theory: \emph{$E(T)$ counts self-approximation witnesses}, so any future improvement of Theorem~\ref{thm:envelope} transfers automatically to a rarity bound for self-approximation; and conversely, the witness rate $\ll T^{1-b_0/8}\log T$ sharpens, with an elementary proof, the qualitative zero-density statement obtainable from Bagchi's limit theorem.
+\end{remark}
+
+%======================================================================
+\section{The boundary-flux identity on the critical line}\label{sec:flux}
+
+The Green geometry of Sections~\ref{sec:green}--\ref{sec:cesaro} has exactly one anisotropic channel: the flux of $u=\log|\zeta|$ through the critical line itself. This section computes it exactly. The result is an identity of independent interest --- the first \emph{analytic} incarnation, as far as we know, of the weighted first moment $\sum b\log\gamma$ --- together with an honest verdict: the resulting upper bound merely recovers Littlewood's 1924 estimate by partial summation, because the boundary kernel turns out to be deterministic.
+
+\begin{lemma}[the boundary kernel is deterministic]\label{lem:kernel}
+For every $t>0$ that is not the ordinate of a zero,
+\[
+\partial_\sigma u\bigl(\tfrac12+it\bigr)
+\;=\;\Re\,\frac{\zeta'}{\zeta}\bigl(\tfrac12+it\bigr)
+\;=\;\frac12\,\Re\,\frac{\chi'}{\chi}\bigl(\tfrac12+it\bigr)
+\;=\;-\frac12\log\frac{t}{2\pi}\;+\;O(t^{-2}),
+\]
+the middle equality being an exact identity: \emph{the real part of $\zeta'/\zeta$ on the critical line contains no zero term whatsoever}.
+\end{lemma}
+
+\begin{proof}
+First, $\partial_\sigma u=\Re(\zeta'/\zeta)$ by the Cauchy--Riemann equations. Taking the logarithmic derivative of the functional equation $\zeta(s)=\chi(s)\zeta(1-s)$,
+\[
+\frac{\zeta'}{\zeta}(s)\;=\;\frac{\chi'}{\chi}(s)\;-\;\frac{\zeta'}{\zeta}(1-s).
+\]
+At $s=\tfrac12+it$ we have $1-s=\bar s$, and by Schwarz reflection ($\zeta(\bar s)=\overline{\zeta(s)}$, real coefficients) $\frac{\zeta'}{\zeta}(\bar s)=\overline{\frac{\zeta'}{\zeta}(s)}$. Hence
+\[
+\frac{\zeta'}{\zeta}\bigl(\tfrac12+it\bigr)+\overline{\frac{\zeta'}{\zeta}\bigl(\tfrac12+it\bigr)}=\frac{\chi'}{\chi}\bigl(\tfrac12+it\bigr)
+\quad\Longrightarrow\quad
+2\,\Re\,\frac{\zeta'}{\zeta}\bigl(\tfrac12+it\bigr)=\Re\,\frac{\chi'}{\chi}\bigl(\tfrac12+it\bigr).
+\]
+We record that the right-hand side is in fact \emph{real}, so the identity equates two real numbers: differentiating $\log\chi(s)+\log\chi(1-s)=0$ (from $\chi(s)\chi(1-s)=1$) gives $\frac{\chi'}{\chi}(s)=\frac{\chi'}{\chi}(1-s)$, and at $s=\tfrac12+it$, by Schwarz reflection ($\chi$ real on the real axis), $\frac{\chi'}{\chi}(\tfrac12+it)=\frac{\chi'}{\chi}(\tfrac12-it)=\overline{\frac{\chi'}{\chi}(\tfrac12+it)}\in\mathbb R$. Stirling's formula applied to $\chi(s)=2^s\pi^{s-1}\sin(\tfrac{\pi s}2)\Gamma(1-s)$ \cite[\S4.12]{Titchmarsh1986} gives $\Re\,\frac{\chi'}{\chi}(\tfrac12+it)=-\log\frac{t}{2\pi}+O(t^{-2})$ for $t\ge1$.
+\end{proof}
+
+\begin{remark}
+The pointwise mechanism behind the identity: an on-line zero $\tfrac12+i\gamma'$ contributes $\Re\frac1{i(t-\gamma')}=0$ to $\Re(\zeta'/\zeta)$ on the line; an off pair $\tfrac12\pm b+i\gamma$ contributes $\frac{-b}{b^2+\tau^2}+\frac{+b}{b^2+\tau^2}=0$ ($\tau=t-\gamma$) --- the quadruple twin cancels its partner \emph{exactly}, pointwise. The functional-equation proof above is the globally rigorous form of the same cancellation, free of conditionally convergent sums. Note also that $\Re(\zeta'/\zeta)$ extends continuously across each ordinate (the singularity lives entirely in the imaginary part), while $u\to-\infty$ logarithmically (integrable): the flux below is an absolutely convergent integral, no principal value needed.
+\end{remark}
+
+\begin{theorem}[boundary flux $=$ weighted first moment]\label{thm:flux}
+Define the critical-line flux \textup{(}outward normal $-\partial_\sigma$ on $\sigma=\tfrac12$\textup{)}
+\[
+\mathcal F_{1/2}(T)\;:=\;-\int_0^T u\bigl(\tfrac12+it\bigr)\,\partial_\sigma u\bigl(\tfrac12+it\bigr)\,dt .
+\]
+Then, unconditionally,
+\[
+\mathcal F_{1/2}(T)\;=\;\pi\sum_{\gamma_j\le T} b_j\,\log\frac{\gamma_j}{2\pi}\;+\;O(\log^2 T).
+\]
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:kernel}, with $\omega(t):=\log\frac t{2\pi}$,
+\[
+\mathcal F_{1/2}(T)=\frac12\int_0^T\omega(t)\,u\bigl(\tfrac12+it\bigr)\,dt+O(1)
+\]
+(the $O(t^{-2})$ kernel error against $u$ integrates to $O(1)$ by local integrability of $u$ and Selberg's mean-square bound; the range $t\le2\pi e$ is $O(1)$). Littlewood's lemma at $\sigma_0=\tfrac12$ in the form \eqref{eq:littlewood} reads $L(t):=\int_0^t u(\tfrac12+iv)\,dv=2\pi J(t)+\epsilon(t)$ with $J(t)=\sum_{\gamma\le t}b$ (one summand per quadruple) and $|\epsilon(t)|\ll\log(t+2)$. Integration by parts ($\omega'=1/t$):
+\[
+\int_0^T\omega\,dL
+=\omega(T)L(T)-\int_{2\pi}^T\frac{L(t)}{t}\,dt+O(1)
+=2\pi\Bigl[\omega(T)J(T)-\int_{2\pi}^T\frac{J(t)}{t}\,dt\Bigr]+O(\log^2T),
+\]
+the error using $|\omega(T)\epsilon(T)|\ll\log^2T$ and $\int^T|\epsilon|/t\ll\log^2T$. Exchanging sum and integral (all terms non-negative, Tonelli):
+\[
+\omega(T)J(T)-\int_{2\pi}^T\frac{J(t)}{t}\,dt
+=\sum_{\gamma\le T}b\Bigl[\omega(T)-\int_{\gamma}^T\frac{dt}{t}\Bigr]
+=\sum_{\gamma\le T}b\,\log\frac{\gamma}{2\pi}
+\]
+(no zeros have $\gamma<2\pi$: the first ordinate is $\approx14.13$). Multiply by $\tfrac12$.
+\end{proof}
+
+\begin{corollary}\label{cor:fluxbounds}
+\textup{(a)} $\mathcal F_{1/2}(T)\ge-O(\log^2T)$ unconditionally, and $\mathcal F_{1/2}(T)=O(\log^2T)$ under $\RH$.
+\textup{(b)} Unconditionally,
+\[
+\sum_{\gamma_j\le T} b_j\log\gamma_j\;\le\;\Bigl(\tfrac1{4\pi}+o(1)\Bigr)\,T\log T\log\log T .
+\]
+\end{corollary}
+
+\begin{proof}
+(a) is Theorem~\ref{thm:flux} with $b_j\ge0$. (b) Decompose dyadically; on each block $[T_k/2,T_k]$, $T_k=T/2^k$, Jensen's inequality with the Hardy--Littlewood second moment $\int_{T_k/2}^{T_k}|\zeta(\tfrac12+it)|^2dt\sim\tfrac{T_k}2\log T_k$ \cite{HardyLittlewood1918} gives $\int_{T_k/2}^{T_k}u\,dt\le\frac{T_k}{4}\log\log T_k+O(T_k)$; weighting by $\omega\le\log T$ and summing the geometric series yields the stated bound via Theorem~\ref{thm:flux}.
+\end{proof}
+
+\begin{remark}[honest verdict]\label{rem:fluxverdict}
+Corollary~\ref{cor:fluxbounds}(b) coincides, in both order and method, with what Abel summation applied to Littlewood's classical bound $J(T)\le(\tfrac1{4\pi}+o(1))\,T\log\log T$ \cite{Littlewood1924} already gives: \emph{it is not a new bound}. The structural reason is Lemma~\ref{lem:kernel}: the only weight the Green geometry offers on the boundary is the deterministic, slowly varying function $-\tfrac12\log\frac t{2\pi}$, which commutes with the dyadic Littlewood machinery; a weight could only help if it anticorrelated with $u$, i.e.\ carried zero information, and the kernel provably carries none. We state the status of this reabsorption with precision: it is \emph{proved} for the class of deterministic, slowly varying weights (the dyadic factorization above), and formally open for $\zeta$-correlated weights --- every candidate we have examined re-enters the deterministic class, but the universal claim is a bridge resting on three theorems and one inspection, not a proposition. What survives as content: (i) the identity itself --- the weighted first moment $\sum b\log(\gamma/2\pi)$ has an exact realization as a boundary flux, so any future progress on $\int_0^T\log t\cdot\log|\zeta(\tfrac12+it)|\,dt$ \emph{with sign} transfers to it with the explicit constant $\pi$; (ii) the essential positivity (a); (iii) the negative lesson that feeds Section~\ref{sec:barriers}: the unique anisotropic channel of the flat Green geometry on $\{\sigma>\tfrac12\}$ is of \emph{first} order in $b$, while the signal of $\Aax$ is of second order. Note also, via Cauchy--Schwarz, $\sum b\log\gamma\le(\sum b^2)^{1/2}(\sum_{\mathrm{off}}\log^2\gamma)^{1/2}$: even $\Aax$ in full would not control $\mathcal F_{1/2}$ without population control --- the first-moment and second-moment currencies are not comparable.
+\end{remark}
+
+%======================================================================
+\section{Structural barriers}\label{sec:barriers}
+
+We now prove the negative results. Each is a \emph{method barrier}: a theorem (or, where indicated, a conditional statement) about a precisely delimited class of arguments, not about all possible mathematics. Together with Remark~\ref{rem:mu2} they explain in what exact sense $\Aax$ is out of reach of the standard repertoire: the missing information is the microscopic proportion $\mu_2(T)=o(1)$, a second-order statement at the gap scale $u=b\log T\asymp1$, which densities, mollified moments, and sign-blind moments provably cannot resolve (for mollifiers: by theorem in the short range $\theta<\tfrac12$, Section~\ref{sec:floor}; by a two-sided calibration in the long range $\theta\in[\tfrac12,1]$).
+
+\subsection{Barrier I: exponential zero-density theorems cannot give $\Aax$}
+
+\begin{proposition}[the density conduit, exactly]\label{prop:densitybarrier}
+Suppose $N(\tfrac12+s,T)\le C\,T^{1-cs}(\log T)^{\kappa}$ for $0<s\le\tfrac12$, $T\ge T_1$, with any constants $c>0$, $\kappa\ge0$. Then the layer-cake \eqref{eq:layercake} gives, and gives no more than,
+\[
+E(T)\;\le\;2C\,T(\log T)^{\kappa}\int_0^{1/2}s\,e^{-cs\log T}\,ds\;\le\;\frac{2C}{c^2}\,T\,(\log T)^{\kappa-2}.
+\]
+Consequently:
+\begin{itemize}
+\item[\textup{(1)}] Selberg \textup{(}$c=\tfrac14$, $\kappa=1$\textup{)} reproduces $E(T)\ll T/\log T$ --- Theorem~\ref{thm:envelope} \emph{is} this computation.
+\item[\textup{(2)}] The quality of the exponent is irrelevant to the shape: $c$ enters only the constant $2C/c^2$. No improvement of $c$ --- by Ingham, Huxley, or any hypothetical exponent --- changes the family $T(\log T)^{\kappa-2}$.
+\item[\textup{(3)}] The Lindel\"of Hypothesis does not help through this conduit: under $\LH$, Ingham gives $N(\tfrac12+s,T)\ll T^{1-2s+\varepsilon}$ and Hal\'asz--Tur\'an give $N(\sigma,T)\ll T^\varepsilon$ only for $\sigma\ge\tfrac34+\delta$ --- spectacular away from the line, vacuous near it. The mass of $E(T)$ lives at $s\asymp1/\log T$, where every exponential saving is $T^{-cs}=e^{-O(c)}\asymp1$ and any density bound is as trivial as $N\ll T\log T$. $\LH$ moves $E(T)$ within the family $T(\log T)^{\kappa-2}$ \textup{(}improving the constant by a factor $\asymp64$ when $c$ goes from $\tfrac14$ to $2$\textup{)} and never to $O(1)$.
+\item[\textup{(4)}] The bound is sharp against the hypothesis class: a configuration with $N(\tfrac12+s,T)\asymp\epsilon_0\,T^{1-cs}\log T$ saturated at $s\asymp1/\log T$, for a suitable small constant $\epsilon_0>0$, is compatible with $N(T)\sim\frac{T}{2\pi}\log T$ and has $E(T)\asymp_{\epsilon_0}T/\log T$. The density-to-energy conduit cannot do better without new information \emph{at} $s\asymp1/\log T$.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+The integral: $\int_0^{1/2}s\,e^{-cs\log T}ds\le\int_0^\infty s\,e^{-cs\log T}ds=(c\log T)^{-2}$. Points (1)--(3) are substitutions. Point (4): take a proportion $\delta>0$ of the $\sim\frac T{2\pi}\log T$ zeros at displacement $b=\tfrac12/\log T$ ($u=\tfrac12$ in microscopic units), scaled by a small $\epsilon_0$ so that the configuration stays below the assumed density at all $s\ge1/\log T$ (which does not see $u<1$) and below the total count; then $E(T)\asymp\delta\epsilon_0\,T/\log T$ and $\mu_2\asymp\delta\epsilon_0$.
+\end{proof}
+
+\begin{remark}[the minimal statement, and its genus]\label{rem:gapA}
+By the layer-cake, $\Aax$ is \emph{equivalent} to a uniform-in-$T$ density statement: there exists $f:(0,\tfrac12)\to[0,\infty]$ with
+\[
+N\bigl(\tfrac12+s,T\bigr)\le f(s)\quad\forall\,T,\qquad\int_0^{1/2}s\,f(s)\,ds<\infty
+\]
+(the minimal admissible $f$ is $f_{\min}(s)=N(\tfrac12+s,\infty)$, and then $\int 2sf_{\min}=I$ exactly). Note the genus: this is not a density theorem (a bound growing in $T$) but a \emph{finiteness} theorem (a $T$-independent bound per abscissa). The entire density industry, unconditional or conditional, produces bounds $T^{\theta}$ with $\theta>0$; what $\Aax$ requires is not improving $\theta$ but killing it. Zero-free regions do not help either: Vinogradov--Korobov gives $N(\sigma,T)=0$ only for $\sigma>1-c/(\log T)^{2/3}(\log\log T)^{1/3}$, a boundary escaping to $1$. A version valid only for $s\ge1/\log T$ would not even suffice for the intermediate goal $E\ll T/\log^2T$: the inner strip $s<1/\log T$ with the trivial count already costs $T/\log T$, and the saturating configuration of Proposition~\ref{prop:densitybarrier}(4) lives exactly there. \emph{At the relevant scale the statement stops being about exceptional zeros and becomes a statement about the typical zero} ($\mu_2\to0$, Remark~\ref{rem:mu2}); we know of no log-free density result valid uniformly down to $\sigma-\tfrac12\asymp1/\log T$, and this analysis explains why none can exist as an ordinary density theorem.
+\end{remark}
+
+\subsection{Barrier II: the Littlewood--Jensen--mollifier conduit}
+
+Selberg's proof of \eqref{eq:selberg} runs through Littlewood's lemma applied to $f=\zeta\varphi$, with $\varphi$ a mollifying Dirichlet polynomial of length $X=T^\theta$, plus Jensen's inequality on the mollified second moment. We examine whether this conduit, run with the weight $b^2$ built in, can beat $T/\log T$.
+
+\begin{proposition}[ceiling of the mollifier conduit]\label{prop:mollifier}
+Let $\varphi$ be a Dirichlet polynomial of length $T^\theta$ with coefficient $1$ at $n=1$, and assume the mollified-moment bound, with constants $c>1$, $a>0$:
+\begin{equation}\label{eq:M}
+\frac1T\int_0^T\bigl|\zeta\varphi\bigl(\tfrac12+s+it\bigr)\bigr|^2dt\;\le\;1+(c-1)\,e^{-as\log T}
+\qquad(0<s\le\tfrac12,\ T\ge T_0),
+\end{equation}
+together with the standard Dirichlet-series tail bound for large $\sigma$. Then
+\[
+E(T)\;\le\;\frac{c-1}{2\pi a}\cdot\frac{T}{\log T}\;+\;O(\log T),
+\]
+\emph{and the conduit gives no less}: any improvement to $E\ll T/(w(T)\log T)$ with $w\to\infty$ through this conduit requires a family $\varphi_T$ with $(c_T-1)/a_T\ll1/w(T)$.
+
+Moreover, by the universal floor of Section~\ref{sec:floor} \textup{(}Theorem~\ref{thm:floor} and Corollary~\ref{cor:floorbarrier}\textup{)}, \textbf{for $\theta<\tfrac12$ the ceiling is a theorem}: every mollifier of the divisor-bounded class satisfies $c(\theta)-1\ge\delta$ whenever $\theta\le\tfrac12-\delta$, unconditionally, so no choice of short mollifier gains a logarithm through this conduit. For $\theta\in[\tfrac12,1]$ the conjectural floor
+\begin{equation}\label{eq:farmer}
+c(\theta)\;\ge\;1+\frac1\theta+o(1)
+\end{equation}
+is a \emph{theorem} for the standard mollifier class in the evaluated range $\theta<4/7$ \textup{(}Conrey \cite{Conrey1989}; see also the Levinson method literature\textup{)}; as a universal lower bound over all mollifiers it is \emph{Farmer's conjecture} \cite{Farmer1993,BettinGonek2017} --- Farmer's ``$\theta=\infty$'' conjecture is precisely the statement that the floor persists and is attained. The status of the barrier in $[\tfrac12,1]$ is the two-sided calibration of Section~\ref{sec:floor}: implied by a bilinear-range extension \textup{(}Proposition~\ref{prop:sandwich}\textup{)}, and breakable only by a $\gg\log T$ failure of \eqref{eq:farmer}.
+\end{proposition}
+
+\begin{proof}[Proof of the unconditional part]
+(i) \emph{Majorization by the zeros of $f=\zeta\varphi$.} The zeros of $f$ in $\sigma>\tfrac12$ contain those of $\zeta$, and the extra zeros of $\varphi$ contribute non-negative terms $(\beta-\tfrac12)^2\ge0$; Littlewood's lemma by abscissa applied to $f$ (holomorphic up to the simple pole at $s=1$ with bounded factor $\varphi(1)$) plus the layer-cake in $\sigma$ --- the same computation that proves Theorem~\ref{thm:GL} --- give
+\[
+\pi E(T)\;\le\;\int_{1/2}^\infty\!\!\int_0^T\log|f(\sigma+it)|\,dt\,d\sigma\;+\;O(\log T),
+\]
+the error collecting horizontal edges and pole, uniformly since $\varphi$ has polynomial degree in $T$.
+(ii) \emph{Jensen by line.} By concavity of $\log$ and $\log x\le x-1$:
+\[
+\int_0^T\log|f(\tfrac12+s+it)|\,dt\;\le\;\frac T2\log\Bigl(\frac1T\int_0^T|f|^2dt\Bigr)\;\le\;\frac T2\Bigl[\frac1T\int_0^T|f|^2dt-1\Bigr].
+\]
+(iii) \emph{Integration in $s$.} With \eqref{eq:M}: $\int_0^{1/2}\frac T2(c-1)e^{-as\log T}ds\le\frac{(c-1)T}{2a\log T}$; the large-$\sigma$ tail contributes $O(1)$ by standard mean-value bounds for the Dirichlet coefficients of $f$ (divisor-bounded), the intermediate range being covered by \eqref{eq:M} with $a\asymp\theta$. Total: $\pi E(T)\le\frac{(c-1)T}{2a\log T}+O(\log T)$.
+(iv) \emph{Optimality within the conduit.} The only inputs are the per-line mollified second moments; the output is a monotone functional of $\int_0^{1/2}[\mathrm{mean}(s)-1]^+ds$, and $\mathrm{mean}(0)\ge c$ forces $\int\gtrsim(c-1)/(a\log T)$. The shape $T/\log T$ with constant $(c-1)/a$ is exact \emph{for the conduit as defined} (input $=$ mollified second moment per line); variants with different inputs are outside the scope of this statement.
+\end{proof}
+
+\begin{remark}[where the lost logarithm lives]
+Not in the density step, not in the layer-cake, not in Littlewood's lemma: in the value of the mollified moment \emph{on the line}, $c(\theta)=\lim T^{-1}\int|\zeta\varphi(\tfrac12+it)|^2dt>1$. The conduit converts $c-1$ (at rate $a\asymp\theta$) into the constant of $T/\log T$. To win one logarithm one needs $c(\theta_T)-1\ll\theta_T/\log T$ --- which Theorem~\ref{thm:floor} forbids unconditionally for $\theta<\tfrac12$, and which for $\theta\ge\tfrac12$ is exactly the territory of long mollifiers. We state the consequence plainly: both ``twin'' barriers are now unconditional in their stated ranges; the residual slit is confined to $\theta\in[\tfrac12,1]$, where a family of mollifiers violating \eqref{eq:farmer} with $c-1=o(\theta/\log T)$ would yield $E(T)=o(T/\log T)$ \emph{through the already proved part of Proposition~\ref{prop:mollifier}} --- and would, by Proposition~\ref{prop:sandwich}, refute Farmer's conjecture by a factor $\gg\log T$, not marginally. Higher moments do not help: the fourth moment enters Jensen with mean $\asymp\log\log T$, worse; mollified moments of higher order carry the same defect $c>1$.
+\end{remark}
+
+\subsection{Barrier III: sign-blindness of moment methods}
+
+The hope behind Theorem~\ref{thm:cesaro} would be to bound $\overline D(T_0)$ from above by moment methods, bypassing zeros. This fails for an exact reason.
+
+\begin{proposition}[sign-blindness]\label{prop:signblind}
+\begin{itemize}
+\item[\textup{(a)}] \emph{The positive part alone is too large.} By the Cauchy--Schwarz inequality and Selberg's second-moment bound $\int_0^T(\log|\zeta(\tfrac12+it)|)^2dt\ll T\log\log T$ \cite{Selberg1946},
+\[
+\int_{1/2}^{1/2+1/\log T}\!\!\int_0^T\bigl(\log|\zeta(\sigma+it)|\bigr)^+\,dt\,d\sigma\;\ll\;\frac{T\sqrt{\log\log T}}{\log T},
+\]
+and Selberg's central limit theorem indicates that this order is attained \textup{(}the positive part of an approximately centered Gaussian of standard deviation $\sqrt{\tfrac12\log\log T}$ has mean $\asymp\sqrt{\log\log T}$\textup{)}; the matching lower bound $\gg T\sqrt{\log\log T}/\log T$ requires the uniformity of Selberg's moments in shifts $s\ll1/\log T$, which we use here as a calibration and flag as such \textup{(}it is consistent with, and expected from, the moment computations of Selberg's school, but we do not claim a proof in this paper\textup{)}. Off the microscopic strip, Bohr--Jessen theory \cite{BohrJessen1930} sizes the total positive mass at $\asymp T$. In all cases the positive part is strictly larger than the proven signed bound $|D(T)|\ll T/\log T$ of Theorem~\ref{thm:inverse}.
+\item[\textup{(b)}] \emph{The cancellation is exactly the zeros.} For each $\sigma>\tfrac12$, Littlewood's lemma \eqref{eq:littlewood} is an \emph{identity} up to $O(\log T)$: every upper bound for $\int_0^T\log|\zeta(\sigma+it)|\,dt$ is equivalent, modulo $O(\log T)$, to a zero-counting bound, and conversely. There is no third term. Hence any improvement of $\overline D$ not using zeros must extract the sign cancellation of $\log|\zeta|$ in $t$ directly --- and moments of $|\zeta|$, of $|{\log|\zeta|}|$, or of powers are blind to sign: their floor is \textup{(a)}.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+(a) Cauchy--Schwarz per line, $\int_0^T(\log|\zeta|)^+\le T^{1/2}(\int(\log|\zeta|)^2)^{1/2}\ll T\sqrt{\log\log T}$, times the strip width $1/\log T$; the variance constant $\tfrac12\log\log T$ is the one for $\log|\zeta|$ (not the one for $S(t)$). The lower-bound calibration and the Bohr--Jessen sizing are as discussed in the statement. (b) is the bidirectional reading of \eqref{eq:littlewood}.
+\end{proof}
+
+\begin{remark}[scope]
+Proposition~\ref{prop:signblind}(b) is exact; the moral drawn from (a) --- ``moment methods cannot see the cancellation'' --- is a structural principle about the \emph{known} repertoire of tools (moments of $|\zeta|$ and its logarithm), not a quantified impossibility theorem over all functionals. We state it at that altitude and no higher. The calibration of distances is worth recording: the absolute mass $\iint|\log|\zeta||$ over the half-strip is $\asymp T$; the proven signed cancellation (Theorem~\ref{thm:inverse}) is $\ll T/\log T$; hypothesis $\Aax$ asserts $O(1)$. \emph{The distance between what is known and $\Aax$ is the factor between $\log T$ and $T$.}
+\end{remark}
+
+\subsection{Barrier IV: isotropy of the Dirichlet energy and determinism of the boundary kernel}
+
+The remaining natural functional on the Green geometry of $\{\sigma>\tfrac12\}$ is the Dirichlet energy $\mathcal D_R(T)=\iint|\nabla u|^2=\iint|\zeta'/\zeta|^2$ over the half-strip with discs of radius $R$ excised around the zeros. We summarize the audited outcome, at proof-sketch level with pointers, since the conclusion is wholly negative.
+
+\begin{proposition}[isotropy and determinism; sketch]\label{prop:isotropy}
+\begin{itemize}
+\item[\textup{(i)}] \emph{Interior isotropy.} The desingularized self-energy of a zero $\rho$ at excision scale $R\le b$ is $2\pi\log\frac1R+c(\rho)+O(R\log\frac1R)$, where $c(\rho)=-2\pi h(\rho)$ is a smooth function of position with no isolable $b^2$ structure: \emph{the volume weight is isotropic} --- it counts zeros with weight $\log\frac1R$ and is blind to the transversal displacement. Any bound on $\mathcal D_R$ therefore bounds a count, not the energy $E$; counting is the territory of Barrier~I.
+\item[\textup{(ii)}] \emph{Boundary determinism.} The unique anisotropic channel of the object is the flux through $\sigma=\tfrac12$, computed exactly in Section~\ref{sec:flux}: its kernel is the deterministic function $-\tfrac12\log\frac{t}{2\pi}$ \textup{(}Lemma~\ref{lem:kernel}: no zero signal whatsoever\textup{)}, and its zero content is the \emph{first}-order moment $\pi\sum b\log(\gamma/2\pi)$ \textup{(}Theorem~\ref{thm:flux}\textup{)}, whose unconditional estimates by deterministic slowly varying weights factor through Littlewood's signed integral and recover Littlewood 1924 by partial summation \textup{(}Corollary~\ref{cor:fluxbounds} and Remark~\ref{rem:fluxverdict}; for $\zeta$-correlated weights the factorization is open, as flagged there\textup{)}.
+\end{itemize}
+Hence the flat Green geometry does not isolate $\sum b^2$: its volume term is isotropic, and its boundary term is first-order and Littlewood-saturated. The cell ``anisotropic, second order, with coherent sign, unconditionally accessible'' remains empty in this geometry.
+\end{proposition}
+
+\begin{proof}[Pointer-level sketch]
+(i) Green's identity on the excised domain with $u=\log r+h$ near each zero, $h$ harmonic; the circle integral gives $-2\pi\log R-2\pi h(\rho)+O(R\log\frac1R)$ by the mean-value property, with no dependence on the direction of the displacement to that order. (ii) is Lemma~\ref{lem:kernel}, Theorem~\ref{thm:flux}, and Corollary~\ref{cor:fluxbounds}; the dyadic factorization argument of Remark~\ref{rem:fluxverdict} shows that any deterministic slowly varying weight reduces to Littlewood blockwise, and the kernel is provably such a weight.
+\end{proof}
+
+%======================================================================
+\section{A universal lower bound for mollified moments}\label{sec:floor}
+
+This section closes the conditional clause of Barrier~II. We prove an unconditional lower bound for the mollified second moment, valid over the \emph{entire} divisor-bounded coefficient class --- not merely the variational families the industry optimizes --- for mollifiers of length $T^\theta$, $\theta<\tfrac12$; and we then determine the exact status of the floor in the long range $\theta\in[\tfrac12,1]$: trivial within the method (a theorem about the method), and calibrated two-sidedly against standard statements. Two remarks on provenance, stated with the required bluntness. First, the rate we obtain, $\log\frac{1-\theta}{\theta}$, is \emph{weaker} than the conjectural floor $1/\theta$ of Farmer \cite{Farmer1993} as $\theta\to0$, and nobody should cite it as the true floor; the contribution is the unconditional \emph{bridge} (convolution rigidity plus a prime test inside the bilinear range), not the rate. Second, to the best of our knowledge no universal lower bound of this kind appears in the literature --- the mollified moment has been \emph{evaluated} for specific classes (Balasubramanian--Conrey--Heath-Brown \cite{BCHB1985} for $\theta<\tfrac12$, Conrey \cite{Conrey1989} for $\theta<\tfrac47$ on a restricted class), and its minimum conjectured \cite{Farmer1993,BettinGonek2017}, but a lower bound over arbitrary divisor-bounded coefficients we have not located; we flag this as a literature reservation rather than assert novelty outright.
+
+\subsection{Convolution rigidity and the floor for $\theta<\tfrac12$}
+
+\begin{lemma}[convolution rigidity]\label{lem:rigidity}
+Let $(b_n)$ be any sequence with $b_1=1$ and $b_n=0$ for $n>X$. Then the Dirichlet coefficients $A=1*b$ of $\zeta(s)\varphi(s)$, $\varphi(s)=\sum_{n\le X}b_nn^{-s}$, satisfy $A_p=b_1+b_p=1$ for \emph{every} prime $p>X$.
+\end{lemma}
+
+This is a combinatorial identity, blind to any further structure of $b$: beyond its support, the mollifier cannot touch the prime coefficients. The whole question is how much of this forced mass the moment on $[0,T]$ can \emph{see}.
+
+\begin{theorem}[universal mollifier floor, $\theta<\tfrac12$]\label{thm:floor}
+Fix $\kappa\in\mathbb N$, $A_0>0$. There is $C_0=C_0(\kappa,A_0)$ such that: for all large $T$, all $\delta$ with $C_0\frac{\log\log T}{\log T}\le\delta\le\tfrac12$, all $\theta\le\tfrac12-\delta$, and every Dirichlet polynomial $\varphi(s)=\sum_{n\le T^\theta}b_nn^{-s}$ with $b_1=1$ and $|b_n|\le d_\kappa(n)(\log T)^{A_0}$,
+\[
+\frac1T\int_0^T\bigl|\zeta\varphi(\tfrac12+it)\bigr|^2\,dt\;\ge\;1+\log\frac{1-\theta-\delta}{\theta}-\delta\;\ge\;1+\delta .
+\]
+More generally, for $0\le s\le\tfrac12$,
+\[
+\frac1T\int_0^T\bigl|\zeta\varphi(\tfrac12+s+it)\bigr|^2\,dt\;\ge\;1+\!\!\sum_{T^\theta<p\le T^{1-\theta-\delta}}\!\!p^{-1-2s}\;-\;\delta .
+\]
+The bound requires no multiplicativity, no sign condition, and no structure of $b$ beyond the stated size.
+\end{theorem}
+
+\begin{proof}
+Write $X=T^\theta$, $Y=T^{1-\theta-\delta}$, $F(t)=\zeta\varphi(\tfrac12+it)$, $G=F-1$. All exponents $B,B_1,\dots$ below depend only on $(\kappa,A_0)$, and $C_0$ is chosen larger than thrice the largest of them plus $3$.
+
+\emph{(i) Reduction to a polynomial.} By the Hardy--Littlewood approximation \cite[Thm 4.11]{Titchmarsh1986} with $x=T$, for $1\le t\le T$: $\zeta(\tfrac12+it)=Z(t)+O\bigl(T^{1/2}/t+T^{-1/2}\bigr)$ with $Z(t)=\sum_{m\le T}m^{-1/2-it}$. Set $F_0=Z\varphi$, a Dirichlet polynomial of length $TX$ with coefficients $\alpha_N=\sum_{n\mid N,\,n\le X,\,N/n\le T}b_n$, so $|\alpha_N|\le d_{\kappa+1}(N)(\log T)^{A_0}$, $\alpha_1=1$, and --- by Lemma~\ref{lem:rigidity} in its truncated form ($n=p$ exceeds the support, $p\le Y\le T$) --- $\alpha_p=1$ for $X<p\le Y$.
+
+\emph{(ii) The prime test.} Let $D(t)=\sum_{X<p\le Y}p^{-1/2-it}$. By Cauchy--Schwarz,
+\[
+\frac1T\int_0^T|G|^2\,dt\;\ge\;\frac{\bigl|\frac1T\int_0^TG\,\overline D\,dt\bigr|^2}{\frac1T\int_0^T|D|^2\,dt}.
+\]
+
+\emph{(iii) Denominator.} By the Montgomery--Vaughan mean-value theorem \cite{MontgomeryVaughan1974}, $\frac1T\int_0^T|D|^2=\sum_{X<p\le Y}\frac1p\,(1+O(p/T))=(1+O(T^{-\theta-\delta}))\,\mathcal P$, where $\mathcal P:=\sum_{X<p\le Y}1/p=\log\frac{1-\theta-\delta}{\theta}+O\bigl(\frac1{\theta\log T}\bigr)$ by Mertens.
+
+\emph{(iv) Numerator: diagonal extraction.} $\int_0^TG\overline D=\int_0^T(F_0-1)\overline D+(\text{correctors from (i)})$. The diagonal terms $N=p$ of $\int_0^T F_0\overline D$ contribute exactly $T\sum_{X<p\le Y}\alpha_p/p=T\mathcal P$. The off-diagonal terms are controlled by the \emph{weighted} generalized Hilbert inequality of Montgomery--Vaughan \cite[Cor.~2]{MontgomeryVaughan1974}, with weights $\delta_N^{-1}\asymp N$ (the minimal spacing of $\{\log N\}$ at $N\asymp M$ is $\asymp1/M$, so the unweighted form does not suffice): with $a_N=\alpha_NN^{-1/2}$,
+\[
+\sum_N|a_N|^2\delta_N^{-1}\;\asymp\;\sum_{N\le TX}|\alpha_N|^2N^{-1}\cdot N\;=\;\sum_{N\le TX}|\alpha_N|^2\;\ll\;TX(\log T)^{B_3},
+\]
+and with $b_k=p^{-1/2}$, $\sum_p p^{-1}\cdot p=\pi(Y)\ll Y/\log Y$; the off-diagonal error is $\ll(TX)^{1/2}Y^{1/2}(\log T)^{B_3}=T^{1-\delta/2}(\log T)^{B_3}$. The constant term $-1$ against $D$ has frequency gap $\ge\log X$ and contributes $\ll Y^{1/2}$. The correctors from (i): against $D$ (with $|D|\ll Y^{1/2}$ pointwise and $|\varphi|\ll X^{1/2}(\log T)^{B_1}$), $\int_1^T(T^{1/2}/t)X^{1/2}Y^{1/2}(\log T)^{B_1}dt\ll T^{1-\delta/2}(\log T)^{B_2}$; the segment $0\le t\le1$ contributes $\ll X^{1/2}Y^{1/2}(\log T)^{B_1}\ll T^{(1-\delta)/2+\varepsilon}$. Hence $\frac1T\int_0^TG\overline D=\mathcal P+O\bigl(T^{-\delta/2}(\log T)^{B}\bigr)$.
+
+\emph{(v) Assembly.} Since $\delta\ge C_0\frac{\log\log T}{\log T}$, the error $T^{-\delta/2}(\log T)^{B}\le(\log T)^{B-C_0/2}=o(\mathcal P)$ (as $\mathcal P\ge2\delta$); the quotient in (ii) is $\ge\mathcal P-o_\delta(1)$.
+
+\emph{(vi) From $|G|^2$ to the moment.} $\frac1T\int|F|^2=1+\frac2T\Re\int G+\frac1T\int|G|^2$, and the first moment has power saving: $\frac1T\int_0^T(F_0-1)\,dt\ll\frac1T\sum_{2\le N\le TX}|\alpha_N|N^{-1/2}\ll T^{-1}(TX)^{1/2}(\log T)^{B}=T^{(\theta-1)/2}(\log T)^{B}=o(1)$, the correctors likewise. Collecting, $\frac1T\int|F|^2\ge1+\mathcal P-\delta$ with $C_0$ large enough, and $\log\frac{1-\theta-\delta}\theta\ge\log\frac1{1-2\delta}\ge2\delta$ gives the final inequality. The shifted version is the same proof verbatim: the shift puts $p^{-2s}$ on the diagonal ($\alpha_p\,p^{-s}\cdot p^{-s}$), and every error term only improves for $s>0$.
+\end{proof}
+
+\begin{corollary}[Barrier~II is a theorem for $\theta<\tfrac12$]\label{cor:floorbarrier}
+For every mollifier family $\varphi_T$ of the class of Theorem~\ref{thm:floor} with $\theta\le\tfrac12-\delta$, $\delta\ge C_0\frac{\log\log T}{\log T}$, the conduit of Proposition~\ref{prop:mollifier} cannot produce $E(T)=o(\delta\,T/\log T)$; in particular gaining a logarithm \textup{(}$(c-1)/a\ll1/\log T$\textup{)} is impossible in this range, unconditionally.
+\end{corollary}
+
+\begin{proof}
+The shifted floor of Theorem~\ref{thm:floor} persists in the window $s\asymp1/\log T$ with value $\ge\sum_{X<p\le Y}p^{-1-2s}-\delta\gg\delta$ there (each factor $p^{-2s}=e^{-O(1)}$ in the window), and the errors are uniform in $s\in[0,\tfrac12]$. Any majorant of the shape \eqref{eq:M} evaluated at $s\asymp1/\log T$ therefore satisfies $(c-1)e^{-O(a)}\gg\delta$, i.e.\ $c-1\gg\delta e^{-O(a)}$. If $a=O(1)$ this gives $(c-1)/a\gg\delta$ directly; if $a\gg1$ it forces $c-1\gg\delta e^{ca}$, and the quotient $(c-1)/a$ only grows. In every regime $(c-1)/a\gg\delta$, and Proposition~\ref{prop:mollifier} caps the output at $\gg\delta\,T/\log T$. \textup{(}We note that a na\"ive substitution of the shifted floor as a global constraint on the rate $a$ would be incorrect: the floor is observable only in the window $s\lesssim\log\log T/\log T$, and its decay in $s$ is governed by the lower endpoint $p\asymp X$, i.e.\ rate $\lesssim2\theta$, not $2(1-\theta)$; the argument above uses only the window, which suffices.\textup{)}
+\end{proof}
+
+\begin{remark}[every unmollified prime costs $1/p$]\label{rem:noninitial}
+The same test shows that gaps in the support are catastrophic, not helpful: if additionally $b_n=0$ for $1<n\le T^\alpha$ (with $\alpha\log T\to\infty$), then $A_p=1$ also for all $p\le T^\alpha$, and testing against $\sum_{1<p\le T^\alpha}p^{-1/2-it}$ gives $c-1\ge\log(\alpha\log T)-O(1)\to\infty$. The mollifier \emph{must} approximate $\mu$ throughout its initial range; the only freedom is in how, not whether.
+\end{remark}
+
+\subsection{The long range $\theta\in[\tfrac12,1]$: a method barrier and a two-sided calibration}
+
+The rigidity $A_p=1$ persists for all $p>X$; what dies at $\theta=\tfrac12$ is not the arithmetic but the \emph{observable window}. The proof needs three compatible lengths: $x$ (approximation of $\zeta$; unconditional Hardy--Littlewood forces $x\ge T$), $X$ (mollifier), $Y$ (test), with bilinear domination $XY\le T^{1-\eta}$ and rigidity requiring $Y>X$: together, $\theta<\tfrac12$. The observable window of rigid primes is $(X,\,T^{1-\eta}/X]$ --- \emph{empty} exactly when $\theta\ge\tfrac12$. We record three precise statements about this frontier. Throughout, $(\mathrm{TW}_y)$, $y\in(\tfrac12,1)$, denotes the bilinear-range hypothesis: for prime-supported tests $D$ of length $T^y$ with divisor-bounded coefficients, $\int_0^T\zeta\varphi(\tfrac12+it)\overline{D(\tfrac12+it)}\,dt=T\sum_p\alpha_p\,p^{-1}+O(T^{1-\varepsilon})$ uniformly over the class of Theorem~\ref{thm:floor}.
+
+\begin{proposition}[the twisted first moment is the same bilinear form]\label{prop:twisted}
+Let $D(t)=\sum_{X<p\le Y}c_p\,p^{-1/2-it}$ with divisor-bounded $c_p$. The aggregated prime-twisted first moment
+\[
+\mathcal T\;:=\;\frac{\bigl|\frac1T\int_0^T(\zeta\varphi-1)\overline D\,dt\bigr|^2}{\frac1T\int_0^T|D|^2\,dt}\;\le\;\frac1T\int_0^T|\zeta\varphi-1|^2\,dt
+\]
+is identical, term by term, to the scheme of Theorem~\ref{thm:floor}: the numerator is the bilinear form of step \textup{(iv)} and the inequality is the Cauchy--Schwarz of step \textup{(ii)}. In particular, linearity in $\zeta$ buys nothing: the object being twisted is $\zeta\varphi$, of length $TX$, not $\zeta$, of length $T$ --- a single twist $\int_0^T\zeta(\tfrac12+it)n^{it}dt$ \emph{is} computable for $n\le T^{1-\varepsilon}$ without bilinear restriction \cite{Gonek1984}, but the mollifier multiplies the length, and for $\theta\ge\tfrac12$ no prime is simultaneously rigid \textup{(}$p>X$\textup{)} and observable \textup{(}$pX\le T^{1-\eta}$\textup{)}.
+\end{proposition}
+
+\begin{proof}
+Direct reading: $\int(\zeta\varphi-1)\overline D=\sum_p\bar c_p\,p^{-1/2}\int(\zeta\varphi-1)p^{it}dt$ --- the twist by $p$ is the $p$-th row of the bilinear form, and optimal aggregation over $c_p$ reproduces the test $D$ of Theorem~\ref{thm:floor}. There is no new functional.
+\end{proof}
+
+\begin{theorem}[the pipeline floor is trivial for $\theta\ge\tfrac12$]\label{thm:pipeline}
+Call an argument of class $\mathcal P$ any lower bound for $\frac1T\int_0^T|\zeta\varphi-1|^2$ obtained by: \textup{(1)} replacing $\zeta$ by a Dirichlet approximation of length $x\le T$ with the unconditional Hardy--Littlewood error; \textup{(2)} Cauchy--Schwarz against a test polynomial of length $Y$ with divisor-bounded coefficients; \textup{(3)} diagonal extraction by the weighted Hilbert inequality, with no additional off-diagonal cancellation hypothesis. \textup{(}This class contains Theorem~\ref{thm:floor} and all its variants.\textup{)} Then for $\theta\ge\tfrac12$ every argument of class $\mathcal P$ certifies only $\ge1+o(1)$: the certifiable floor of the pipeline in $[\tfrac12,1]$ is exactly trivial.
+\end{theorem}
+
+\begin{proof}
+The signal in (3) is the shared diagonal $T\sum_k\bar c_k\alpha_k/k$ over frequencies $k\le\min(xX,Y)$. For $k>X$: domination of the Hilbert error $(xX)^{1/2}Y^{1/2}(\log T)^B$ requires (with $x\le T$) $XY\le T^{1-\eta}$, hence $Y\le T^{1-\eta}/X<X$ when $\theta\ge\tfrac12$ --- no rigid frequency is observable. For $k\le X$: the adversary annihilates the diagonal --- take $b=\mu$ truncated to $[1,X]$, so that $(1*b)(k)=\sum_{n\mid k,\,n\le X}\mu(n)=\mathbf 1_{k=1}$ for all $k\le X$; the observable diagonal is identically zero apart from the trivial $k=1$. For that $\varphi$ no test of class $\mathcal P$ certifies anything beyond $1+o(1)$, so the class floor (infimum over $\varphi$) certified by $\mathcal P$ is trivial.
+\end{proof}
+
+We state the scope of Theorem~\ref{thm:pipeline} plainly: it is a theorem about the pipeline $\mathcal P$, not about ``all methods''. A method evaluating the $\chi$-part of the functional equation (the swap terms; Gonek's lemmas \cite{Gonek1984} evaluate each term, the open problem is summing them with general coefficients) leaves $\mathcal P$ by construction --- and doing so uniformly is precisely the hypothesis $(\mathrm{TW}_y)$: the $\chi$-channel is not a detour around the door, it is the lock seen from the other side.
+
+\begin{proposition}[two-sided calibration of the long-range floor]\label{prop:sandwich}
+\begin{itemize}
+\item[\textup{(a)}] \textup{(}Sufficiency\textup{)} $(\mathrm{TW}_y)$ implies $c(\theta)\ge1+\log(y/\theta)-o(1)$ for all $\theta<y$: the proof of Theorem~\ref{thm:floor} repeats verbatim with $Y=T^{y-\varepsilon}$, the only step that used $XY\le T^{1-\eta}$ being replaced by the hypothesis.
+\item[\textup{(b)}] \textup{(}Partial necessity\textup{)} Suppose the floor breaks at some $\theta_0\in(\tfrac12,1)$: a family $\varphi_T$ of the class with $c(\theta_0)-1\le\epsilon_T\to0$. Then \textup{(i)} $(\mathrm{TW}_y)$ is false for every $y>\theta_0$ \textup{(}contrapositive of \textup{(a)}\textup{)}; and \textup{(ii)} the conjectural asymptotic $c(\theta_0)=1+1/\theta_0$ \cite{Farmer1993,BettinGonek2017} fails by a factor $\ge(1/\theta_0)/\epsilon_T\to\infty$ --- with the $\epsilon_T\ll1/\log T$ that breaking Barrier~II requires, by a factor $\gg\log T$: a catastrophic, not marginal, failure.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+(a) as stated. (b)(i) immediate; (b)(ii) immediate from the definitions: $\varphi_T$ lies in the divisor-bounded class and undercuts the conjectured optimum by that factor (if Farmer's class is strictly smaller, the conclusion is that the true optimum over the general class betrays the conjectured one by $\gg\log T$ --- a catastrophic refutation either way). Moreover, read backwards through the proof of Theorem~\ref{thm:floor}, such a family forces the swap terms to cancel the forced diagonal mass $\sum_{X<p\lesssim T}1/p\asymp\log(1/\theta_0)$ down to $O(\epsilon_T)$ --- an exact negative correlation between the $\chi$-part and the prime diagonal, uniform in $T$, for which no candidate mechanism exists in the literature we know.
+\end{proof}
+
+\begin{remark}[net status of the mollifier barrier]\label{rem:floorstatus}
+For $\theta<\tfrac12$: theorem (Corollary~\ref{cor:floorbarrier}), over the divisor-bounded class, which exhausts every mollifier used in the literature (Selberg--Levinson, Conrey, Feng, Radziwi\l\l--Soundararajan-type smoothings: smooth $t$-weights do not touch the floor, since the rigidity lives in the coefficients; two-piece Levinson detectors $\zeta\varphi_1+\zeta'\varphi_2$ leave the conduit altogether, as they do not vanish at off-line zeros of $\zeta$). For $\theta\in[\tfrac12,1]$: trivial within the pipeline (Theorem~\ref{thm:pipeline}), sandwiched between two standard statements (Proposition~\ref{prop:sandwich}) --- provable from a bilinear-range extension, breakable only with a $\gg\log T$ refutation of the $\theta=\infty$ conjecture. We do not prove, and do not expect, an exact equivalence with a single named conjecture: Farmer's statement is a \emph{ceiling} for \emph{one} family; the floor is a \emph{lower bound} over the \emph{whole} class, and the two are not equivalent without an optimality principle that is itself conjectural.
+\end{remark}
+
+%======================================================================
+\section{Zero counting along the de Bruijn heat flow}\label{sec:rvmt}
+
+The de~Bruijn--Newman heat flow appears in this paper only through its $\zeta$-free laws (Section~\ref{sec:trichotomy}). We record here one unconditional theorem \emph{about the arithmetic flow itself}, of independent interest: the Riemann--von Mangoldt counting in unit windows holds uniformly along the flow. Let, in the normalization of \cite{Polymath2019},
+\[
+H_t(z)\;=\;\int_0^\infty e^{tu^2}\,\Phi(u)\cos(zu)\,du,
+\qquad
+\Phi(u)=\sum_{n\ge1}\bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)e^{-\pi n^2e^{4u}},
+\]
+so that $\partial_tH_t=-\partial_z^2H_t$, $H_0(z)=\tfrac18\,\xi\bigl(\tfrac12+\tfrac{iz}2\bigr)$, and the non-trivial zeros of $\zeta$ correspond to the zeros of $H_0$ in the band $|\Imm z|<1$.
+
+\begin{lemma}[vertical Gaussian representation]\label{lem:vertical}
+For every $t>0$ and $z\in\mathbb C$,
+\[
+H_t(z)\;=\;\frac1{\sqrt{4\pi t}}\int_{\mathbb R}H_0(z+iw)\,e^{-w^2/4t}\,dw .
+\]
+\end{lemma}
+
+\begin{proof}
+For a single mode $\cos(\lambda z)$: $\cos(\lambda(z+iw))=\tfrac12(e^{i\lambda z-\lambda w}+e^{-i\lambda z+\lambda w})$ and $\frac1{\sqrt{4\pi t}}\int e^{\pm\lambda w-w^2/4t}dw=e^{t\lambda^2}$, reproducing exactly the factor $e^{tu^2}$. The general case follows by superposition and Fubini, justified by the superexponential decay of $\Phi$: $\int e^{|w|u-w^2/4t}dw=O(e^{tu^2})$ and $\int\Phi(u)e^{u^2}du<\infty$. The sign convention matters: with the Fourier multiplier $e^{tu^2}$ the smoothing is \emph{vertical} (in $iw$), and this is what makes the following theorem uniform in $t$.
+\end{proof}
+
+\begin{theorem}[Riemann--von Mangoldt along the flow, unconditionally]\label{thm:rvmt}
+There is an absolute constant $C_0$ such that for every $t\in[0,1]$ and every $\gamma\ge2$, the number of zeros of $H_t$ \textup{(}with multiplicity, real or not\textup{)} in the box $[\gamma,\gamma+1]\times[-1,1]$ is at most $C_0\log\gamma$.
+\end{theorem}
+
+\begin{proof}[Proof \textup{(}complete, condensed\textup{)}]
+Write $\xi(s)=\mathfrak G(s)\zeta(s)$ with $\mathfrak G(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)$, $\mathfrak g(z):=\mathfrak G(\tfrac12+\tfrac{iz}2)$, $\hat\gamma:=\gamma+\tfrac12$, $\varphi:=\tfrac14\log\frac{\hat\gamma}{4\pi}$, and let $z_0:=\hat\gamma-iB$ with $B$ an absolute even constant fixed below; note $s(z_0)=\tfrac12+\tfrac B2+\tfrac{i\hat\gamma}2$ has real part $\ge\tfrac72$ for $B\ge6$.
+
+\emph{Two Stirling estimates.} (1) Uniformly for $x\ge2$, $|y|\le4B+8$: $|H_0(x+iy)|\le C(1+x)^A|\mathfrak g(x)|e^{\varphi(x)|y|}$, with $\varphi(x)=\tfrac14\log\frac x{4\pi}$ --- by the functional equation it suffices to take $\Imm z\le0$, where Stirling gives $\log|\mathfrak G(\sigma+i\tau)|=\log|\mathfrak G(\tfrac12+i\tau)|+(\sigma-\tfrac12)\tfrac12\log\frac{|\tau|}{2\pi}+O(\log(2+|\tau|))$ and crude convexity bounds $|\zeta(s)|\le C|s|$ in $\tfrac12\le\sigma\le2$, $|\zeta|\le\zeta(2)$ in $\sigma\ge2$. (2) Along the vertical through $z_0$, with $\psi:=-\frac d{dw}\log\mathfrak g(z_0+iw)|_{w=0}=\varphi+\tfrac{i\pi}8+O(\hat\gamma^{-1})$: for $-\gamma/2\le w\le B-4$, $\mathfrak g(z_0+iw)=\mathfrak g(z_0)e^{-\psi w+R(w)}$ with $|R(w)|\le Cw^2/\gamma$ (Taylor with integral remainder; the second logarithmic derivative is $O(1/\gamma)$ on the segment).
+
+\emph{Pointwise lower bound at $z_0$, uniform in $t\in[0,1]$.} For $t=0$, $|H_0(z_0)|=\tfrac18|\mathfrak g(z_0)||\zeta(s(z_0))|\ge\tfrac18|\mathfrak g(z_0)|(2-\zeta(\tfrac72))$. For $t\in(0,1]$ use Lemma~\ref{lem:vertical} and split $\mathbb R=G\cup G^c$, $G=(-\gamma/2,B-4]$, on which $\Re s(z_0+iw)\ge\tfrac52$ and $\xi=\mathfrak g\,(1+(\zeta-1))$. The main term (the ``$1$''), by completing the square exactly ($\frac1{\sqrt{4\pi t}}\int e^{-\psi w-w^2/4t}dw=e^{t\psi^2}$, $\psi$ complex, no contour shift needed): $\mathfrak g(z_0)e^{t\psi^2}(1+O(\gamma^{-1/2}))$, of modulus $\ge0.8\,|\mathfrak g(z_0)|e^{t\varphi^2}$ --- the tail beyond $G$ is $O(e^{-2\varphi(B-4)})$ relative to the main term by $\frac{w^2}{4t}+t\varphi^2\ge\varphi w$ (AM--GM), and the curvature correction $|e^R-1|$ contributes $O((\log\gamma)^2/\gamma)$ relatively, since the effective Gaussian mass lives in $|w|\le2t\varphi+C\sqrt t$. The arithmetic error on $G$: $|\zeta(s(w))-1|\le\zeta(\tfrac52)-1<0.342$ pointwise, and the same Laplace computation bounds its contribution by $0.342\,|\mathfrak g(z_0)|e^{t\varphi^2}(1+o(1))$ --- margin $0.8-0.342>0.45$; no cancellation is used, only absolute convergence of the Dirichlet series. The remainder $w>B-4$ (where the vertical crosses the zero band) is bounded by estimate (1): $\le C\gamma^{A}|\mathfrak g(\hat\gamma)|e^{t\varphi^2}e^{-2\varphi(B-4)}$, and choosing $B:=8A+16$ makes it $O(\gamma^{-2})$ relative to the main term. Altogether $|H_t(z_0)|\ge c\,\gamma^{-A'}|\mathfrak g(\hat\gamma)|\,e^{B\varphi+t\varphi^2}$.
+
+\emph{Local upper bound.} For $|z-z_0|\le2B+4$ and $t\in[0,1]$, the triangle inequality in Lemma~\ref{lem:vertical} with estimate (1) (and the order-$1$ global bound on $\xi$ for large $|w|$, crushed by the Gaussian) gives $|H_t(z)|\le C\gamma^{A}|\mathfrak g(\hat\gamma)|e^{(3B+4)\varphi+t\varphi^2}$.
+
+\emph{Jensen.} The box $[\gamma,\gamma+1]\times[-1,1]$ lies in $D(z_0,B+2)$; Jensen's inequality on $D(z_0,2B+4)$ gives
+\[
+N\;\le\;\frac1{\log2}\Bigl[\log\max_{|z-z_0|\le2B+4}|H_t|-\log|H_t(z_0)|\Bigr]\;\le\;\frac{(2B+4)\varphi+(A+A')\log\gamma+C}{\log2}\;\le\;C_0\log\gamma:
+\]
+\emph{the amplification factors $e^{t\varphi^2}$ cancel exactly} between maximum and center, leaving a bound linear in $\log\gamma$ with absolute constants, uniform in $t\in[0,1]$. The range $2\le\gamma\le\gamma_0$ is absorbed into $C_0$ by continuity of $(t,z)\mapsto H_t(z)$, $H_t\not\equiv0$, Hurwitz, and compactness of $[0,1]$.
+\end{proof}
+
+\begin{remark}[inputs; structural reading]\label{rem:rvmtreading}
+The inputs are Stirling, the absolutely convergent Dirichlet series in $\sigma\ge\tfrac52$, crude convexity of $\zeta$ in a fixed strip, the functional equation of $\xi$, and de~Bruijn's representation \cite{deBruijn1950}; no information about the location of zeros of $\zeta$ or of $H_t$ is used, and no effective input from \cite{KiKimLee2009,Polymath2019} is needed. Structurally: the flow multiplier $e^{tu^2}$ \emph{amplifies} the archimedean mode by $e^{t\varphi^2}$ identically in the numerator and denominator of Jensen, and the saddle of the vertical integral sits at depth $\asymp t\log\gamma$, i.e.\ the flow pushes the effective evaluation \emph{into} the region of absolute convergence, where $\zeta\to1$ --- the larger $t$, the more dominant the term $n=1$. As a by-product the proof exhibits a quantitative zero-free disc below the axis, $H_t(\hat\gamma-iB)\ne0$ with an explicit lower bound, uniform in the flow. Within the longer program behind this paper, this theorem removes the last technical hypothesis \textup{(}uniform unit-window counting along the flow\textup{)} from the dynamic half of the purity tower, which thereby rests on unconditional theorems plus a single declared structural hypothesis of local reality of zeros along the flow; we state this as context, not as a claim of this paper.
+\end{remark}
+
+%======================================================================
+\section{The axiomatized no-go: no collapsing object in the class $\mathfrak A$}\label{sec:trichotomy}
+
+The barriers of Section~\ref{sec:barriers} share a shape. We make the shape into a definition and a classification.
+
+\begin{definition}[collapsing object]\label{def:collapser}
+Let $\mathfrak R$ denote the repertoire of objects constructible by the methods of this paper and this line of work behind it: functionals, operators, measures and flows built from $\zeta$, from its zeros, or from its de~Bruijn--Newman heat flow $\{H_t\}$ (cf.\ \cite{deBruijn1950,KiKimLee2009,RodgersTao2020,Polymath2019}), through the explicit formula and Weil functional, Littlewood's lemma, moments, density theorems, mollifiers, and correlation windows. An object $\Phi\in\mathfrak R$ is a \emph{collapser} if it simultaneously satisfies:
+\begin{itemize}
+\item[\textup{(a)}] \emph{Production of $I$:} a deterministic operation recovers $I$ from $\Phi$; in particular $\Phi$ distinguishes $I=0$ from $0<I<\infty$ from $I=\infty$ (it carries the information of $\Dic$).
+\item[\textup{(b)}] \emph{Production of $\mu_2$:} a deterministic operation recovers the profile $T\mapsto\mu_2(T)$ of Remark~\ref{rem:mu2}; in particular $\Phi$ resolves the second transversal order at the microscopic scale $u=b\log T\asymp1$ (it carries the information of $\Aax$ \emph{with profile}).
+\item[\textup{(c)}] \emph{Unconditional accessibility:} some norm, trace, or moment of $\Phi$ is bounded \emph{unconditionally} by known machinery at a scale comparable to or below the signal that \textup{(a)} and \textup{(b)} must read; formally, evaluating the operations in \textup{(a)}--\textup{(b)} must not require, as input, a statement equivalent to $\Aax$, $\Dic$, or $\RH$.
+\end{itemize}
+The multiset of zeros itself satisfies (a) and (b) tautologically and fails (c) tautologically (no unconditional machinery evaluates an individual $b_j$); condition (c) is what separates ``the object exists'' from ``the object serves''. Note the calibration: if $\Phi$ satisfies (a) and (b) with evaluable readouts, then $\RH\iff$ (readout of $I$ is $0$); a collapser is not a step toward $\RH$ but a complete repackaging of $\RH$ \emph{with an unconditional handle}. The classification question is whether the framework contains any object whose handle permits a grip.
+\end{definition}
+
+We now replace the informal phrase ``the methods of this paper and this line of work behind it'' by a closed, axiom-by-axiom verifiable class. This is the honest repair of the obvious objection to any repertoire classification: ``known machinery'' is a historical inventory, not a mathematical object. The class below is.
+
+\begin{definition}[the class $\mathfrak A$ of detection functionals]\label{def:classA}
+A \emph{detection functional} is a family $\Phi=(\Phi_T)_{T\ge2}$ of real numbers attached to a function $F$ of the P\'olya--de Bruijn class $\mathcal P$ \textup{(}real, even, of order $\le1$, carrying the heat flow $\{H_t\}$; $\Xi$ and the Hadamard-type configurations of Section~\ref{sec:dichotomy} live there\textup{)}, together with a proved envelope $\mathrm{env}(T)>0$. We say $\Phi\in\mathfrak A$ if it satisfies:
+
+\textbf{(A1) Information factorization.} There is one of the following five \emph{information currencies} $\mathfrak M$ such that $\Phi_T(F)$ is a deterministic function of the data of $\mathfrak M$ alone --- i.e.\ if $F,F'\in\mathcal P$ \textup{(}in the currency's domain\textup{)} have the same $\mathfrak M$-data, then $\Phi_T(F)=\Phi_T(F')$ for all $T$:
+\begin{itemize}
+\item[\textup{(i)}] \emph{$\zeta$-free flow laws:} the identities and inequalities of the de~Bruijn--Newman flow valid on all of $\mathcal P$ \textup{(}balance, coercivity, lifespan budgets\textup{)}, and any class-invariant datum;
+\item[\textup{(ii)}] \emph{exponential densities:} the function $N(\sigma,T)$ through bounds of the shape $N(\tfrac12+s,T)\le CT^{1-cs}(\log T)^\kappa$ --- the class of Proposition~\ref{prop:densitybarrier};
+\item[\textup{(iii)}] \emph{vertical moments of the modulus:} the values \textup{(}not the integrands\textup{)} of $\int_0^T|\zeta(\sigma+it)|^{2k}dt$ and $\int_0^T(\log|\zeta(\sigma+it)|)_\pm\,dt$, $\sigma\ge\tfrac12$, $k>0$;
+\item[\textup{(iv)}] \emph{short mollified moments:} $\int_0^T|\zeta M(\tfrac12+it)|^2dt$ with $M$ a Dirichlet polynomial of length $\le T^\theta$, \emph{$\theta<\tfrac12$} --- exactly the range where the floor is a theorem \textup{(}Theorem~\ref{thm:floor}\textup{)};
+\item[\textup{(v)}] \emph{linear functionals with deterministic boundary kernel:} $\iint_{R_T}W\,d\nu$ with $\nu$ the Riesz measure of $\log|\zeta|$ and $W>0$ a \emph{deterministic} \textup{(}zero-independent\textup{)} weight of slow variation, or $\int W(t)\log|\zeta(\tfrac12+it)|\,dt$ with such $W$ --- the class of Proposition~\ref{prop:isotropy} and Remark~\ref{rem:fluxverdict}; $\zeta$-correlated weights are excluded.
+\end{itemize}
+
+\textbf{(A2) Accessibility.} There is a \emph{proved, unconditional} bound $|\Phi_T|\le\mathrm{env}(T)$, assuming neither $\RH$, $\Aax$, $\Dic$, nor any unproved hypothesis \textup{(}Farmer's floor and pair-correlation conjectures included\textup{)}.
+
+$\Phi$ \emph{detects $\Aax$} if there is a proved conditional theorem $[\Phi_T=o(\mathrm{env}(T))\Rightarrow E(T)=o(T/\log T)]$ whose premise is decidable within the currency of \textup{(A1)}; $\Phi$ \emph{detects $\Dic$} if the value of $\Phi$, as a function on the currency's domain in $\mathcal P$, separates the three cases $I=0$, $0<I<\infty$, $I=\infty$.
+\end{definition}
+
+We are explicit about the design: $\mathfrak A$ is \emph{not} ``all functionals''; it is the union of five formal classes, chosen to be exactly large enough that the standard unconditional artillery falls inside (Remark~\ref{rem:antivacuity}) and exactly small enough that the following is a theorem. Exhaustiveness over everything constructible was never provable; we renounce it explicitly in exchange for a theorem with checkable membership.
+
+\begin{lemma}[moment blindness of currency \textup{(iii)}]\label{lem:momentblind}
+Every proved unconditional bound on the data of currency \textup{(iii)} is insensitive to a perturbation of $I$ of size $E(T)\asymp T/\log T$. Precisely: \textup{(1)} by the bidirectional Littlewood identity \eqref{eq:littlewood} at $\sigma_0=\tfrac12$, the data of \textup{(iii)} determine $\sum_{\gamma\le t}b$ only through the difference of two quantities each of size $\gg T\sqrt{\log\log T}/\log T$ \textup{(}Proposition~\ref{prop:signblind}\textup{(a)}\textup{)}, while the signal of $\Aax$ is $o(T/\log T)$: no bound in the unconditional list resolves the difference to the scale of the signal without counting zeros better than its own input. \textup{(2)} The uncertainty band so created contains configurations of $\mathcal P$ with distinct energy classes: a Hadamard-type configuration with $0<I<\infty$ and a configuration with $I=0$ both lie within the resolution of every bound in the list.
+\end{lemma}
+
+\begin{proof}
+(1) is Proposition~\ref{prop:signblind} with the quantifier made explicit: the bounds available unconditionally for the data (iii) (Hardy--Littlewood and fourth-moment asymptotics, Selberg's second moment of $\log|\zeta|$, Jensen on the second moment; conditional upper bounds of Soundararajan--Harper type are excluded by (A2)) each carry an error $\gg T\sqrt{\log\log T}/\log T$ in the signed combination that reads $\sum b$, by the sizing of the positive part alone. (2) The bounds of the list are bounds of the \emph{class} (they hold for every element of $\mathcal P$ with the same real zero-counting density, via Jensen and the order-$1$ Hadamard factorization), and by (1) the difference in moments induced by the difference in $I$ lies, in the signed combination, below the resolution of every bound of the list; configurations with $I=0$ and with $0<I<\infty$ (Section~\ref{sec:dichotomy}, e.g.\ displacements $b_j=1/(j+2)$) both fit in the band. We state the maintenance clause: the lemma is relative to the closed list of proved bounds in (A2); if the list grows \textup{(}e.g.\ an unconditional Harper bound\textup{)}, the lemma must be re-verified.
+\end{proof}
+
+\begin{theorem}[no-go over $\mathfrak A$]\label{thm:nogo}
+No $\Phi\in\mathfrak A$ detects $\Aax$, and no $\Phi\in\mathfrak A$ detects $\Dic$.
+\end{theorem}
+
+\begin{proof}
+By cases over the currency of (A1).
+
+\emph{Case \textup{(i)}.} Let $F_H\in\mathcal P$ be a Hadamard-type configuration with $0<I(F_H)<\infty$ satisfying every $\zeta$-free law (it exists: the laws are identities proved zero-by-zero from the Hadamard product and the flow ODEs, with no arithmetic input), and let $F_0\in\mathcal P$ have all zeros real ($I=0$). Both have the same currency-(i) data, so $\Phi_T(F_H)=\Phi_T(F_0)$ for all $T$ by (A1): the value of $\Phi$ cannot separate $I=0$ from $0<I<\infty$ --- no detection of $\Dic$. For $\Aax$: the class admits a parametric family of such configurations with $E(T)\asymp T/\log T$ (rescaling the displacement sequence within the budget), all with identical currency-(i) data; a premise that does not vary cannot imply a conclusion that does. This is the one case with a pure indistinguishability proof.
+
+\emph{Case \textup{(ii)}.} Proposition~\ref{prop:densitybarrier}: every bound of the class leaves $\mu_2\ll1$, never $o(1)$ --- the mass of $E(T)$ at $s\asymp1/\log T$ is invisible to exponential savings; the detection premise for $\Aax$ is not decidable in the currency. For $\Dic$: the currency consists of \emph{bounds} on $N(\sigma,T)$, not its exact values, and two configurations with the same density bounds and different $\sum b^2$ exist trivially (relocating $b$ within a dyadic band of $\sigma$): an aggregated count does not determine a second moment.
+
+\emph{Case \textup{(iii)}.} Lemma~\ref{lem:momentblind}: the uncertainty band of every proved bound exceeds the signal of $\Aax$ and contains configurations of distinct energy class --- neither $\Aax$ nor $\Dic$.
+
+\emph{Case \textup{(iv)}.} Theorem~\ref{thm:floor} and Corollary~\ref{cor:floorbarrier}: for $\theta<\tfrac12$ the conduit has an unconditional floor at exactly the level $T/\log T$ of Theorem~\ref{thm:envelope}, not a logarithm better, so the premise $\Phi_T=o(\mathrm{env})$ with $\mathrm{env}=T/\log T$ is unreachable within the currency, and with a larger envelope the implication toward $E=o(T/\log T)$ does not exist. For $\Dic$, a short mollified moment is an averaged modulus datum and inherits case \textup{(iii)} through part (1) of Lemma~\ref{lem:momentblind}.
+
+\emph{Case \textup{(v)}.} Two sub-cases, both proved. \textup{(v-a)} Isotropic volume weight: Proposition~\ref{prop:isotropy}(i) --- the functional weighs each zero by $\log(1/R)$ with no transversal factor $(\beta-\tfrac12)^2$; the population term buries the second-order signal. \textup{(v-b)} Deterministic slowly varying boundary weight: Lemma~\ref{lem:kernel} (the kernel carries no zero signal) and Theorem~\ref{thm:flux} (the zero content is the \emph{first} moment $\pi\sum b\log(\gamma/2\pi)$, Littlewood-saturated by Corollary~\ref{cor:fluxbounds}). A weighted first moment determines neither $E=\sum b^2$ (Cauchy--Schwarz gives only $E\cdot N_{\mathrm{off}}\ge(J/\text{weight})^2$, and the off-line population is not accessible) nor the trichotomy of $I$. The declared restriction: \textup{(v)} covers deterministic slowly varying weights only; $\zeta$-correlated weights are outside $\mathfrak A$ and outside this theorem.
+\end{proof}
+
+\textbf{Scope.\ Theorem~\ref{thm:nogo} holds for $\Phi\in\mathfrak A$ and only for $\Phi\in\mathfrak A$: $\mathfrak A$ is a closed list of five currencies, and we do not claim that every mathematical functional --- or even every ``natural'' one --- belongs to it. The quantifier is ``for all $\Phi\in\mathfrak A$'', not ``for all $\Phi$''. Membership of any future proposal is verifiable axiom by axiom against \textup{(A1)(i)--(v)} and \textup{(A2)}.} Three explicit limits of the theorem, declared rather than swept: the restriction $\theta<\tfrac12$ in currency \textup{(iv)} (the long range is the calibrated territory of Section~\ref{sec:floor}); the restriction to deterministic slowly varying weights in \textup{(v)}; and the absence of an inter-currency closure clause --- a functional whose value requires the \emph{joint} data of two currencies in a non-factorizable way is not automatically in $\mathfrak A$, and we do not claim the no-go for it.
+
+\begin{corollary}[the examined repertoire is an instance]\label{cor:repertoire}
+The repertoire $\mathfrak R$ of Definition~\ref{def:collapser} sorts as follows. In $\mathfrak A$, hence covered by Theorem~\ref{thm:nogo}: the $\zeta$-free flow laws \textup{(}currency \textup{(i)}\textup{)}; the density functionals of Barrier~I \textup{(ii)}; the moment functionals of Barrier~III and windowed second-order functionals \textup{(iii)}; the short mollifier conduit of Barrier~II \textup{(iv)}; the Dirichlet energy and the boundary flux \textup{(v)}. Outside $\mathfrak A$, by failure of \textup{(A2)}: Weil positivity and the exact moment families equivalent to $\RH$ by zero--prime cancellation --- these \emph{do} carry the information \textup{(}indeed they detect by construction\textup{)} but have no unconditional handle: their evaluation at the scale of the signal is of the same genus as the conclusion. The informal trichotomy \textup{(}$\zeta$-free / averaged / exact-but-inaccessible\textup{)} is recovered as: classes 1--2 $=\mathfrak A$ \textup{(}covered by the theorem\textup{)}, class 3 $=\neg$\textup{(A2)}.
+\end{corollary}
+
+\begin{theorem}[the three prices]\label{thm:prices}
+Every detection functional $\Psi$ that detects $\Aax$ or $\Dic$ violates \textup{(A1)} or \textup{(A2)}; that is, it pays exactly one of three prices:
+\begin{itemize}
+\item[\textup{(S1)}] \emph{a new currency --- microscopic phase correlations:} $\Psi$ uses information not factoring through \textup{(i)--(v)}; within the analytic data of $\zeta$ available here, the identifiable complement is the phase on the line \textup{(}fine $S(t)$, correlations between zeros at scale $1/\log T$\textup{)} or, equivalently, zero--zero correlations of the Riesz measure with $\zeta$-correlated kernel. Price: this is exactly the open pair-correlation-type territory, with no discount; calibration from the longer program behind this paper \textup{(}stated as calibration, not as a theorem of this paper\textup{)} indicates that even pair correlation, averaged through windows, does not pass $T/\log T$, so the new currency would have to be finer than averaged pair correlation.
+\item[\textup{(S2)}] \emph{long mollifiers:} $\Psi$ uses currency \textup{(iv)} with $\theta\ge\tfrac12$, outside Theorem~\ref{thm:floor}. Price: the two-sided calibration of Section~\ref{sec:floor} --- the floor there is implied by a bilinear-range extension and its failure refutes the $\theta=\infty$ conjecture \cite{Farmer1993,BettinGonek2017} by a factor $\gg\log T$; and even success would bear on $\Aax$ only, since a mollified modulus remains blind to $\Dic$ by case \textup{(iii)}.
+\item[\textup{(S3)}] \emph{renouncing \textup{(A2)} --- genuine positivity:} $\Psi$ is exact \textup{(}Weil positivity, exact moment families, the Riesz measure itself\textup{)} and the evaluation is attacked directly. Price: the evaluation is of the genus of the conclusion; this is the Weil--Connes--Deninger route, without an unconditional handle.
+\end{itemize}
+The disjunction is exhaustive \emph{by construction relative to the list} \textup{(A1)(i)--(v)}: what is neither a class law, nor a density, nor a modulus datum \textup{(}mollified or not, short or long\textup{)}, nor a deterministic-kernel linear functional, is phase-correlation data \textup{(S1)}; failure of \textup{(A2)} is \textup{(S3)} by definition. It is an enumeration of the complement of a definition, not a classification of all of mathematics.
+\end{theorem}
+
+\begin{remark}[anti-vacuity]\label{rem:antivacuity}
+$\mathfrak A$ is neither empty nor rigged. Inside: the density machinery of Ingham, Hal\'asz--Tur\'an and Huxley \textup{(ii)}; the Hardy--Littlewood and Selberg moments \textup{(iii)}; the Levinson--Conrey mollifiers with $\theta<\tfrac12$ \textup{(iv)} --- which detect zeros \emph{on} the line, not $\Aax$, consistently with the theorem; the Dirichlet energy and boundary flux \textup{(v)}. Outside, and \emph{not prohibited}: Weil positivity and the exact families (they detect; they lack the handle --- route S3 remains open); Montgomery's pair correlation beyond $|\alpha|<1$ (currency S1, the declared residue); $\zeta$-correlated boundary weights. The boundary of $\mathfrak A$ falls exactly along the proved/open frontier of the problem --- which is the test that the axiomatization cuts where it should. We also record the candid answer to the obvious criticism: yes, $\mathfrak A$ was designed so that the theorem holds --- that is what an honest no-go is; its utility survives because membership is checkable, so every future proposal either dies by Theorem~\ref{thm:nogo} without new work, or exhibits its new currency and thereby its price \textup{(S1/S2/S3)}.
+\end{remark}
+
+What the axiomatized no-go establishes is a precise specification of what an external object would have to be. A collapser, if it exists, must simultaneously be:
+
+\begin{enumerate}
+\item \emph{$\zeta$-loaded in the state}: it must distinguish initial conditions within the P\'olya class --- it cannot be an evolution law or a class invariant; it must read the arithmetic of the initial configuration;
+\item \emph{anisotropic with sign at the microscopic scale}: its coupling to an off-line zero must be $\propto b$ or $b^2$ with coherent sign, resolvable at $u=b\log T\asymp1$ --- the property that all four barrier families lack (isotropy, or cancelling sign, or on-line saturation, or first-order-only anisotropy);
+\item \emph{equipped with an unconditional handle}: some trace or norm bounded below the signal scale without input of the genus $\RH/\Aax/\Dic$ --- the property that the exact objects lack.
+\end{enumerate}
+
+No object combining the three properties is known to us, in this program or in the literature we have examined; specifying the triple is, we believe, the most useful form of the negative result.
+
+%======================================================================
+\section{Conclusion}\label{sec:conclusion}
+
+\subsection{The architecture}
+
+The decomposition $\RH\iff\Aax\wedge\Dic$ organizes the unconditional results of this paper into a two-towers architecture:
+
+\begin{itemize}
+\item \textbf{The finiteness tower ($\Aax$).} The unconditional state of knowledge is exactly $E(T)\ll T/\log T$, equivalently $\mu_2(T)\ll1$ (Theorem~\ref{thm:envelope}, Remark~\ref{rem:mu2}); the target is $E(T)=O(1)$, equivalently $\mu_2(T)\ll(\log T)/T$. $\Aax$ has an exact analytic equivalent --- the finiteness of a Ces\`aro limit that provably always exists (Theorem~\ref{thm:cesaro}) --- with unconditional lower bound $-\pi/8$ achieved exactly under $\RH$. $\Aax$ is \emph{Lindel\"of-hard} (Theorem~\ref{thm:lindelof}), and provably out of reach of exponential densities (Proposition~\ref{prop:densitybarrier}), of the mollifier conduit --- now by \emph{theorem} for all mollifiers of length $T^\theta$, $\theta<\tfrac12$ (Theorem~\ref{thm:floor}, Corollary~\ref{cor:floorbarrier}), and by a two-sided calibration in $\theta\in[\tfrac12,1]$ (Theorem~\ref{thm:pipeline}, Proposition~\ref{prop:sandwich}) --- and of sign-blind moments (Proposition~\ref{prop:signblind}). The missing information is a second-order proportion at the gap scale.
+\item \textbf{The purity tower ($\Dic$).} The recurrence route dissolves: sequential self-approximation implies the dichotomy (Theorem~\ref{thm:dichotomy}) but is itself false in the intermediate state (Theorem~\ref{thm:dissolution}), so that, conditionally on $\Aax$, it is equivalent to $\RH$ (Corollary~\ref{cor:notaxiom}); the unconditional residue is the anti-recurrence theorem and the witness budget (Theorem~\ref{thm:witnesses}, Proposition~\ref{prop:antirecurrence}), which bridge the energy certificate to universality theory. The dichotomy is moreover false in the bare P\'olya class (configurations with $0<I<\infty$ satisfy all $\zeta$-free dynamical laws), so any proof of $\Dic$ must use arithmetic specific to $\zeta$. On the dynamical side, the unconditional counting theorem along the heat flow (Theorem~\ref{thm:rvmt}) removes the last technical hypothesis from the flow-based half of this tower in the longer program.
+\end{itemize}
+
+The axiomatized no-go of Section~\ref{sec:trichotomy} (Theorem~\ref{thm:nogo}) shows that, over the closed class $\mathfrak A$, the two towers are not independent routes but two projections of a single deficit: what is provable forgets (either the state, by $\zeta$-freeness, or the microscopic profile, by averaging), and what remembers is not provable (it lacks the unconditional handle). The three-price theorem (Theorem~\ref{thm:prices}) replaces the open-ended search for a collapsing object by a well-posed disjunction: any detector pays with microscopic phase correlations (S1), with long mollifiers (S2), or with renouncing unconditional accessibility (S3) --- each price measured against a theorem of this paper. The paper's contribution is to make this precise, exact where possible (the identities of Sections~\ref{sec:green}--\ref{sec:flux}, the floors of Section~\ref{sec:floor}), and bounded in scope where not (the barriers and the no-go).
+
+\subsection{Open problems}
+
+We state the residual problems in their minimal audited forms.
+
+\begin{problem}[microscopic mean square]\label{prob:mu2}
+Prove $\mu_2(T)=o(1)$, i.e.\ $E(T)=o(T/\log T)$: \emph{the mean-square transversal displacement of the typical zero, in units of the mean gap, tends to zero}. This is the first step past the envelope; it is invisible to all four barrier families.
+\end{problem}
+
+\begin{problem}[uniform-in-$T$ density; equivalent to $\Aax$]\label{prob:gapA}
+Exhibit $f$ with $\int_0^{1/2}sf(s)\,ds<\infty$ and $N(\tfrac12+s,T)\le f(s)$ for all $T$ \textup{(}Remark~\ref{rem:gapA}\textup{)}.
+\end{problem}
+
+\begin{problem}[the residue of the dissolution]\label{prob:residue}
+Decide whether $I=\infty$ implies sequential self-approximation in the disc of some off-line zero \textup{(}case \textup{(3)} of Theorem~\ref{thm:dissolution}\textup{)}. Either resolution is informative: if true, $\mathrm{SSA}$ is exactly the dichotomy; if false, $\mathrm{SSA}$ is unconditionally equivalent to $\RH$.
+\end{problem}
+
+\begin{problem}[mollifier floor, long range]\label{prob:farmer}
+For $\theta<\tfrac12$ a universal floor is now a theorem (Theorem~\ref{thm:floor}), with the suboptimal rate $\log\frac{1-\theta}\theta$; two residues remain. \textup{(a)} Close the rate gap: prove $c(\theta)\ge1+\epsilon_0/\theta$ over the full divisor-bounded class for $\theta<\tfrac12$ \textup{(}plausibly via minimization of the Balasubramanian--Conrey--Heath-Brown quadratic form \cite{BCHB1985} over arbitrary coefficients, which we have not located in the literature\textup{)}. \textup{(b)} Extend any non-trivial floor to $\theta\in[\tfrac12,1]$: by Theorem~\ref{thm:pipeline} this requires leaving the unconditional bilinear pipeline, and by Proposition~\ref{prop:sandwich} it is implied by the bilinear-range hypothesis $(\mathrm{TW}_y)$ --- summing the swap terms with general coefficients \cite{Gonek1984}. A disproof with $c-1=o(\theta/\log T)$ would give $E(T)=o(T/\log T)$ through the proved part of Proposition~\ref{prop:mollifier}, and would refute the $\theta=\infty$ conjecture \cite{Farmer1993,BettinGonek2017} by a factor $\gg\log T$.
+\end{problem}
+
+\begin{problem}[the external object]\label{prob:collapser}
+Construct an object with the three properties of Section~\ref{sec:trichotomy}: $\zeta$-loaded in the state, anisotropic with coherent sign at the scale $u\asymp1$, and carrying an unconditional handle. Theorem~\ref{thm:nogo} proves no such object exists in the class $\mathfrak A$; Theorem~\ref{thm:prices} names the exact price of leaving it \textup{(S1, S2 or S3)}; beyond that the problem is open.
+\end{problem}
+
+\subsection{Honest assessment}
+
+Nothing in this paper brings the Riemann Hypothesis closer to proof. The unconditional theorems are exact bookkeeping (Theorems~\ref{thm:GL}, \ref{thm:cesaro}, \ref{thm:flux}), an envelope that may be folklore (Theorem~\ref{thm:envelope}), a calibration (Theorem~\ref{thm:lindelof}), a rarity-with-rate bridge to universality (Theorem~\ref{thm:witnesses}, Proposition~\ref{prop:antirecurrence}), a universal mollifier floor with an admittedly suboptimal rate (Theorem~\ref{thm:floor}), and a counting theorem along the heat flow (Theorem~\ref{thm:rvmt}). The two genuinely new unconditional theorems --- the mollifier floor and the flow counting --- are barrier-building and bookkeeping respectively: neither produces any improvement of $E(T)\ll T/\log T$, and neither could, being logically on the opposite side of the signal. The barriers delimit methods, not truth. The value we claim for the whole is cartographic: the decomposition \eqref{eq:decomposition} with both halves positioned ($\Aax$ between $m<\infty$ and Lindel\"of; $\Dic$ inequivalent to recurrence axioms and false without arithmetic), the identification of the single number $\mu_2$ in which the finiteness problem concentrates, and the replacement of an open-ended search by the three named prices of Theorem~\ref{thm:prices}.
+
+\subsection*{Acknowledgements}
+This paper distills part of a longer research program; the results presented here are those that survived a systematic adversarial audit of that program's internal documents in June 2026.
+
+%======================================================================
+\begin{thebibliography}{99}
+
+\bibitem{Backlund1918}
+R.~J. Backlund, \emph{\"Uber die Nullstellen der Riemannschen Zetafunktion}, Acta Math.\ \textbf{41} (1918), 345--375.
+
+\bibitem{Bagchi1981}
+B.~Bagchi, \emph{The statistical behaviour and universality properties of the Riemann zeta-function and other allied Dirichlet series}, Ph.D.\ thesis, Indian Statistical Institute, Calcutta, 1981.
+
+\bibitem{Bagchi1987}
+B.~Bagchi, \emph{Recurrence in topological dynamics and the Riemann hypothesis}, Acta Math.\ Hungar.\ \textbf{50} (1987), 227--240.
+
+\bibitem{BCHB1985}
+R.~Balasubramanian, J.~B. Conrey and D.~R. Heath-Brown, \emph{Asymptotic mean square of the product of the Riemann zeta-function and a Dirichlet polynomial}, J.~Reine Angew.\ Math.\ \textbf{357} (1985), 161--181.
+
+\bibitem{BettinGonek2017}
+S.~Bettin and S.~M. Gonek, \emph{The $\theta=\infty$ conjecture implies the Riemann hypothesis}, Mathematika \textbf{63} (2017), 29--33.
+
+\bibitem{BohrJessen1930}
+H.~Bohr and B.~Jessen, \emph{\"Uber die Werteverteilung der Riemannschen Zetafunktion}, Acta Math.\ \textbf{54} (1930), 1--35; \textbf{58} (1932), 1--55.
+
+\bibitem{BohrLandau1914}
+H.~Bohr and E.~Landau, \emph{Ein Satz \"uber Dirichletsche Reihen mit Anwendung auf die $\zeta$-Funktion und die $L$-Funktionen}, Rend.\ Circ.\ Mat.\ Palermo \textbf{37} (1914), 269--272.
+
+\bibitem{Conrey1989}
+J.~B. Conrey, \emph{More than two fifths of the zeros of the Riemann zeta function are on the critical line}, J.~Reine Angew.\ Math.\ \textbf{399} (1989), 1--26.
+
+\bibitem{Davenport}
+H.~Davenport, \emph{Multiplicative Number Theory}, 3rd ed., Graduate Texts in Mathematics \textbf{74}, Springer, 2000.
+
+\bibitem{deBruijn1950}
+N.~G. de~Bruijn, \emph{The roots of trigonometric integrals}, Duke Math.\ J.\ \textbf{17} (1950), 197--226.
+
+\bibitem{Farmer1993}
+D.~W. Farmer, \emph{Long mollifiers of the Riemann zeta-function}, Bull.\ London Math.\ Soc.\ \textbf{25} (1993), 135--143.
+
+\bibitem{Gallagher1970}
+P.~X. Gallagher, \emph{A large sieve density estimate near $\sigma=1$}, Invent.\ Math.\ \textbf{11} (1970), 329--339.
+
+\bibitem{GarunkstisKarikovas2014}
+R.~Garunk\v stis and E.~Karikovas, \emph{Self-approximation of Hurwitz zeta-functions}, Funct.\ Approx.\ Comment.\ Math.\ \textbf{51} (2014), 181--188.
+
+\bibitem{Gonek1984}
+S.~M. Gonek, \emph{Mean values of the Riemann zeta function and its derivatives}, Invent.\ Math.\ \textbf{75} (1984), 123--141.
+
+\bibitem{HalaszTuran1969}
+G.~Hal\'asz and P.~Tur\'an, \emph{On the distribution of roots of Riemann zeta and allied functions, I}, J.~Number Theory \textbf{1} (1969), 121--137.
+
+\bibitem{HardyLittlewood1918}
+G.~H. Hardy and J.~E. Littlewood, \emph{Contributions to the theory of the Riemann zeta-function and the theory of the distribution of primes}, Acta Math.\ \textbf{41} (1918), 119--196.
+
+\bibitem{Ingham1940}
+A.~E. Ingham, \emph{On the estimation of $N(\sigma,T)$}, Quart.\ J.~Math.\ Oxford \textbf{11} (1940), 291--292.
+
+\bibitem{Ivic1985}
+A.~Ivi\'c, \emph{The Riemann Zeta-Function}, Wiley, New York, 1985.
+
+\bibitem{KiKimLee2009}
+H.~Ki, Y.-O. Kim and J.~Lee, \emph{On the de Bruijn--Newman constant}, Adv.\ Math.\ \textbf{222} (2009), 281--306.
+
+\bibitem{Laurincikas1996}
+A.~Laurin\v cikas, \emph{Limit Theorems for the Riemann Zeta-Function}, Kluwer, Dordrecht, 1996.
+
+\bibitem{Littlewood1924}
+J.~E. Littlewood, \emph{On the zeros of the Riemann zeta-function}, Proc.\ Cambridge Philos.\ Soc.\ \textbf{22} (1924), 295--318.
+
+\bibitem{Montgomery1973}
+H.~L. Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc.\ Sympos.\ Pure Math.\ \textbf{24}, Amer.\ Math.\ Soc., 1973, 181--193.
+
+\bibitem{MontgomeryVaughan1974}
+H.~L. Montgomery and R.~C. Vaughan, \emph{Hilbert's inequality}, J.~London Math.\ Soc.\ (2) \textbf{8} (1974), 73--82.
+
+\bibitem{Polymath2019}
+D.~H.~J. Polymath, \emph{Effective approximation of heat flow evolution of the Riemann $\xi$ function, and a new upper bound for the de Bruijn--Newman constant}, Res.\ Math.\ Sci.\ \textbf{6} (2019), no.~3, Paper No.~31.
+
+\bibitem{RodgersTao2020}
+B.~Rodgers and T.~Tao, \emph{The de Bruijn--Newman constant is non-negative}, Forum Math.\ Pi \textbf{8} (2020), e6.
+
+\bibitem{Selberg1946}
+A.~Selberg, \emph{Contributions to the theory of the Riemann zeta-function}, Arch.\ Math.\ Naturvid.\ \textbf{48} (1946), 89--155.
+
+\bibitem{Steuding2007}
+J.~Steuding, \emph{Value-Distribution of $L$-Functions}, Lecture Notes in Mathematics \textbf{1877}, Springer, 2007.
+
+\bibitem{Titchmarsh1986}
+E.~C. Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., revised by D.~R. Heath-Brown, Oxford University Press, 1986.
+
+\bibitem{Voronin1975}
+S.~M. Voronin, \emph{A theorem on the ``universality'' of the Riemann zeta-function}, Izv.\ Akad.\ Nauk SSSR Ser.\ Mat.\ \textbf{39} (1975), 475--486 (Russian); English transl.\ Math.\ USSR-Izv.\ \textbf{9} (1975), 443--453.
+
+\end{thebibliography}
+
+\end{document}

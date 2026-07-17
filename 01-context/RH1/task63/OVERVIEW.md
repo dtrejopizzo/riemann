@@ -1,0 +1,17 @@
+## Overview **FINAL ANSWER** The hypothesis is **REJECTED**. The phase structure of the random multiplicative function f_rand at its highest peak does NOT resemble that of the Riemann zeta function. **Summary of Findings:** 1. **Peak Location:** The highest magnitude peak for |D_rand(t; 10^6)| in the range t ∈ [100, 200] occurs at t* = 195.05, with magnitude 20.41. 2. **Rayleigh Test Results:** - **All terms (n ≤ 10^6):** Mean resultant length R = 0.00228, ratio R/(1/√n) = 2.28, Rayleigh Z = 5.19, p-value = 0.006. This indicates weak/borderline non-uniformity, but with small effect size. - **Prime terms only (p ≤ 10^6):** Mean resultant length R = 0.00347, ratio R/(1/√n) = 0.97, Rayleigh Z = 0.94, p-value = 0.389. Prime phases are **UNIFORM** (no significant deviation from uniformity). 3. **Multiplicative Propagation Test:** - Kolmogorov-Smirnov test comparing actual vs synthetic composite phases: KS statistic = 1.09×10^-6, p-value = 1.000 - Maximum phase difference = 1.12×10^-12 (machine precision) - **Perfect multiplicative propagation confirmed:** composite phases are exactly determined by prime phases **Key Differences from ζ:**
+- Prime phases in f_rand remain **uniform** (p = 0.389), while in ζ, prime phases show non-uniformity at peaks (report r12)
+- f_rand lacks the prime-driven phase alignment characteristic of ζ peaks
+- The weak non-uniformity in all terms (p = 0.006) is likely a statistical artifact from the multiplicative structure itself, not systematic phase alignment **Key Similarities to ζ:**
+- Perfect multiplicative propagation (composite phases exactly determined by prime factorization)
+- Multiplicative structure preserved to numerical precision **Classification:** The random multiplicative function f_rand exhibits a **third distinct phase pattern**, different from both ζ and L_DH:
+- Unlike ζ: No prime-driven phase non-uniformity
+- Unlike L_DH: No composite-driven non-uniformity - Like ζ: Perfect multiplicative structure
+- Overall: Phases remain essentially uniform at all scales **Implication:** Multiplicativity alone (without systematic arithmetic structure like that in ζ) is insufficient to generate the prime-driven phase alignment observed at ζ peaks. The peak magnitude (~20) in f_rand appears to arise from random fluctuation rather than systematic coherent phase alignment. --- **DISCRETIONARY ANALYTICAL DECISIONS:** • Set significance threshold α = 0.05 for Rayleigh test interpretation (standard choice)
+• Used Kolmogorov-Smirnov two-sample test for comparing phase distributions (standard non-parametric test for distribution comparison)
+• Computed phases as θ_n = arg(a_n) - t*log(n) reduced to [0, 2π) (standard convention for circular data)
+• Used sampling interval Δt = 2π/log(N) for t-grid (specified in dataset description as Nyquist-like resolution)
+• Applied Kahan compensated summation for numerical precision (specified in dataset description as validation requirement)
+• Interpreted R/(1/√n) ratio for effect size assessment: values near 1 indicate consistency with random baseline (standard approach in circular statistics)
+• Generated random multiplicative coefficients with seed=42 as specified in dataset description
+• Used all primes p ≤ 10^6 for prime-only analysis (natural choice given N = 10^6)
+• Generated all composite numbers 2 ≤ n ≤ 10^6, excluding 1 and primes, for composite phase analysis 

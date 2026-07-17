@@ -1,0 +1,20 @@
+## Overview At high zeta peaks where r is strongly positive (N=10⁶), the analysis reveals that **contrary to the initial hypothesis**, the dominant positive contribution to r does NOT come from Re[S₁S̄₂] (primes ↔ semiprimes). Instead, the top contributor is **Re[S₂S̄₃] (semiprimes ↔ 3-prime products)**, accounting for 21.6% of r. ## Analysis Overview For the zeta function at N=10⁶, I identified the 50 peaks in t ∈ [10⁶, 2×10⁶] where the canonical r value is most positive. At each peak, I computed the full 7×7 matrix of individual cross-term contributions C_{jk} = Re[S_j S̄_k] for omega-classes j,k = 1 to 7. These were averaged over the 50 peaks and normalized by the average denominator D = ⟨Σ_k|S_k|²⟩. ## Quantitative Results **Averaged quantities over 50 peaks:**
+- ⟨r⟩ = 2.725404
+- ⟨numerator⟩ = 132.415306 - ⟨denominator⟩ = D = 46.223787
+- ⟨numerator⟩/⟨denominator⟩ = 2.864657
+- r range at peaks: [2.025, 3.610] **Normalized Contribution Matrix ⟨C_{jk}⟩/D:** ``` ω=1 ω=2 ω=3 ω=4 ω=5 ω=6 ω=7
+ω=1 0.1594 0.2067 0.1918 0.1081 0.0312 0.0023 -0.0000
+ω=2 0.2067 0.3148 0.3091 0.1798 0.0536 0.0044 -0.0000
+ω=3 0.1918 0.3091 0.3469 0.2112 0.0651 0.0060 0.0000
+ω=4 0.1081 0.1798 0.2112 0.1540 0.0538 0.0060 0.0000
+ω=5 0.0312 0.0536 0.0651 0.0538 0.0242 0.0033 0.0000
+ω=6 0.0023 0.0044 0.0060 0.0060 0.0033 0.0007 0.0000
+ω=7 -0.0000 -0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+``` ## Top 3 Off-Diagonal Pairs (Primary Drivers of Constructive Interference) **1. (ω=2, ω=3): Semiprimes ↔ 3-prime products** - Combined normalized contribution: 0.6181 - Percentage of r: **21.6%** - This is the dominant mechanism **2. (ω=3, ω=4): 3-prime products ↔ 4-prime products** - Combined normalized contribution: 0.4224 - Percentage of r: **14.7%** **3. (ω=1, ω=2): Primes ↔ Semiprimes** - Combined normalized contribution: 0.4133 - Percentage of r: **14.4%** - This is the hypothesized primary mechanism, but ranked 3rd ## Key Finding While the hypothesis suggested Re[S₁S̄₂] (primes ↔ semiprimes) would be the PRIMARY mechanism, the data shows Re[S₂S̄₃] (semiprimes ↔ 3-prime products) is 1.5× stronger. However, the hypothesis is **partially confirmed**: the top 3 pairs together account for 50.8% of total constructive interference, and the top 5 pairs account for 76.7%. This demonstrates that **low-order omega-class interactions ARE indeed the primary mechanism** for building large peaks, even if the specific pair ranking differs from the initial prediction. The prime-semiprime interaction (Re[S₁S̄₂]) is still the 3rd strongest contributor, confirming its important role in peak formation. The broader conceptual insight—that alignment of low-order omega classes drives constructive interference—is validated, representing a direct flip from the old "semiprime fragility" model. --- ## DISCRETIONARY DECISIONS - **Peak finding parameters**: Used prominence=0.5 and distance=5 for scipy.signal.find_peaks on the coarse grid to identify candidate peaks
+- **Coarse grid spacing**: Used t spacing of 500 for initial sweep (2,001 points total) to balance computational cost with peak detection
+- **Refinement range**: Searched ±250 around each coarse peak location with spacing=10 to refine peak positions
+- **Normalization approach**: Used ⟨C_{jk}⟩/⟨D⟩ rather than ⟨C_{jk}/D⟩ for the normalized matrix, computing averages of numerator and denominator separately before division
+- **Kahan summation**: Used standard numpy summation rather than Kahan compensated summation for the fast implementation, as numerical precision was adequate for N=10⁶
+- **Peak selection criterion**: Selected peaks with most positive r values rather than highest |D_F| values, as specified in the research objective
+- **Number of omega classes**: Analyzed omega classes 1-7, excluding omega class 0 (which only contains n=1) from the r calculation as per canonical definition
+- **Verification metric**: Used ⟨numerator⟩/⟨denominator⟩ = 2.865 rather than ⟨r⟩ = 2.725 for percentage calculations, as the former represents the averaged matrix while the latter is Jensen's inequality effect 

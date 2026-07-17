@@ -1,0 +1,289 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\PR}{\textcolor{green!55!black}{\textbf{[P]}}}
+\newcommand{\OP}{\textcolor{red!75!black}{\textbf{[O]}}}
+\newcommand{\GAP}{\textcolor{red!75!black}{\textsc{[gap]}}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}{Lema}
+\newtheorem{proposition}{Proposici\'on}
+\newtheorem{corollary}{Corolario}
+\theoremstyle{definition}
+\newtheorem{definition}{Definici\'on}
+\newtheorem{remark}{Observaci\'on}
+
+\newcommand{\xih}{\widehat{\xi}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Lam}{\Lambda}
+\DeclareMathOperator{\Real}{Re}
+\newcommand{\half}{\tfrac12}
+
+\title{\textbf{Ataque anal\'itico al resto de Weil truncado:\\
+d\'onde vive (exactamente) el muro de circularidad del Eslab\'on 2}}
+\author{Programa \texttt{riemann-program} --- documento de trabajo}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Aceptado que el Eslab\'on 2 (convergencia $\xih_{\lambda}\to\Xi$) se reduce, una vez
+muerta la capa de banda, a controlar el \emph{piso de truncaci\'on de primos}
+$\mathrm{piso}_\lambda(n)$, este documento ataca ese objeto con la f\'ormula
+expl\'icita. El resultado central es \emph{negativo y preciso}:
+\textbf{por la ruta est\'andar (Perron + f\'ormula expl\'icita), la cota del piso es
+RH--equivalente} (Teorema \ref{thm:circ}). El piso se expresa intr\'insecamente como
+una suma sobre los ceros $\rho$, y su tama\~no \'optimo (ra\'iz cuadrada) \emph{es}
+RH. Esto identifica el Escenario C de forma rigurosa para la ruta ingenua, y aisla
+la \emph{\'unica} v\'ia de escape (Escenario A): la cancelaci\'on cruzada
+arquimediano$\leftrightarrow$primos del s\'imbolo combinado $W_\lambda$
+(\S\ref{sec:escape}), que es el problema abierto localizado.
+\end{abstract}
+
+\tableofcontents
+
+% =====================================================================
+\section{El piso como desplazamiento de ceros}\label{sec:shift}
+% =====================================================================
+
+Sea $\Xi$ la $\xi$ completada de Riemann y $\xih_\lambda$ la funci\'on entera del
+modelo CCM construida con primos $p\le\lambda^2$ (cf.\ documento principal). En el
+r\'egimen donde la banda est\'a saturada ($N\to\infty$ tomado, tipo $L/2=\log\lambda$
+fijado por $\lambda$), la diferencia de los s\'imbolos logar\'itmicos es
+\begin{equation}\label{eq:Rlam}
+  R_\lambda(s)\;:=\;-\frac{\zeta'}{\zeta}(s)\;-\;\sum_{n\le\lambda^2}\frac{\Lam(n)}{n^{s}},
+\end{equation}
+el \emph{resto de la suma de von Mangoldt truncada}. El primer sumando de
+\eqref{eq:Rlam} es la serie completa (continuaci\'on anal\'itica), el segundo un
+polinomio de Dirichlet (entero).
+
+\begin{proposition}[Desplazamiento de un cero]\label{prop:shift}
+Sea $\rho_n=\half+i\gamma_n$ un cero simple de $\Xi$ y $\widehat\rho_n(\lambda)$ el
+cero correspondiente de $\xih_\lambda$. Al primer orden en la perturbaci\'on del
+s\'imbolo,
+\begin{equation}\label{eq:shiftformula}
+  \widehat\rho_n(\lambda)-\rho_n
+  \;=\;-\,\frac{R_\lambda(\rho_n)}{\Phi'(\rho_n)}\;\bigl(1+o(1)\bigr),
+\end{equation}
+donde $\Phi(s)=\frac{d}{ds}\log\Xi(s)$ es la densidad logar\'itmica
+(con $\Phi'(\rho_n)\ne0$ por simplicidad). En particular
+\[
+  \mathrm{piso}_\lambda(n)\;=\;|\widehat\rho_n(\lambda)-\rho_n|
+  \;\asymp\;|R_\lambda(\half+i\gamma_n)| .
+\]
+\end{proposition}
+\begin{proof}[Idea]
+El cero de $\xih_\lambda$ es el cero del s\'imbolo combinado perturbado por
+$R_\lambda$; por el teorema de la funci\'on impl\'icita aplicado a la ecuaci\'on
+caracter\'istica $\Phi(s)+R_\lambda(s)=0$ cerca de $\rho_n$, el desplazamiento es
+$-R_\lambda(\rho_n)/\Phi'(\rho_n)$. \qed
+\end{proof}
+
+\noindent\textbf{Conclusi\'on de \S\ref{sec:shift}.} El piso es, salvo el factor
+de normalizaci\'on $1/\Phi'(\rho_n)$ (universal, independiente de $\lambda$), el
+\emph{valor del resto truncado evaluado sobre la l\'inea cr\'itica en la altura del
+cero}. Todo se juega en $R_\lambda(\half+it)$.
+
+% =====================================================================
+\section{El resto truncado v\'ia f\'ormula expl\'icita}\label{sec:explicit}
+% =====================================================================
+
+Calculamos $R_\lambda$ por sumaci\'on de Abel a partir de la funci\'on de Chebyshev
+$\psi(u)=\sum_{n\le u}\Lam(n)$ y su f\'ormula expl\'icita.
+
+\begin{lemma}[Representaci\'on del resto]\label{lem:rep}
+Para $\Real(s)\in(\half,1)$ y $y=\lambda^2$,
+\begin{equation}\label{eq:rep}
+  \sum_{n\le y}\frac{\Lam(n)}{n^{s}}
+  \;=\;\frac{s}{s-1}\,\bigl(1-y^{1-s}\bigr)
+  \;-\;s\sum_{\rho}\frac{y^{\rho-s}}{\rho(\rho-s)}
+  \;+\;E(s,y)\;+\;\psi(y)\,y^{-s},
+\end{equation}
+donde la suma recorre los ceros no triviales $\rho$, y $E(s,y)$ recoge los
+t\'erminos arquimedianos suaves (polo trivial, $\zeta'/\zeta(0)$), uniformemente
+$O(1)$. Tomando $y\to\infty$ con $\Real s>1$ se recupera $-\zeta'/\zeta(s)$, y por
+tanto
+\begin{equation}\label{eq:Rrep}
+  R_\lambda(s)\;=\;\underbrace{\frac{s}{s-1}\,y^{1-s}}_{\text{polo en }s=1}
+  \;+\;s\sum_{\rho}\frac{y^{\rho-s}}{\rho(\rho-s)}
+  \;-\;\psi(y)\,y^{-s}\;-\;E(s,y),
+  \qquad y=\lambda^2 .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Sumaci\'on de Abel:
+$\sum_{n\le y}\Lam(n)n^{-s}=\psi(y)y^{-s}+s\int_1^y\psi(u)u^{-s-1}\,du$.
+Insertando $\psi(u)=u-\sum_\rho u^\rho/\rho-\log(2\pi)-\half\log(1-u^{-2})$
+(f\'ormula expl\'icita de Riemann--von Mangoldt) e integrando t\'ermino a t\'ermino:
+$s\int_1^y u\cdot u^{-s-1}du=\frac{s}{1-s}(y^{1-s}-1)$ y
+$-s\int_1^y\frac{u^\rho}{\rho}u^{-s-1}du=-\frac{s}{\rho(\rho-s)}(y^{\rho-s}-1)$;
+los restantes son $E(s,y)=O(1)$. Reordenando se obtiene \eqref{eq:rep}. \qed
+\end{proof}
+
+\begin{remark}[La firma del Escenario C, expl\'icita]\label{rem:C}
+La parte oscilatoria de $R_\lambda$ \emph{es, literalmente, una suma sobre los ceros}:
+\[
+  R_\lambda^{\mathrm{osc}}(s)\;=\;s\sum_\rho\frac{(\lambda^2)^{\rho-s}}{\rho(\rho-s)} .
+\]
+La dependencia en la \emph{posici\'on} de los ceros no es un artefacto: aparece de
+forma estructural en la \'unica representaci\'on disponible del resto truncado.
+\'Este es el peligro del Escenario C, materializado.
+\end{remark}
+
+% =====================================================================
+\section{Teorema: la ruta est\'andar es RH--equivalente}\label{sec:circ}
+% =====================================================================
+
+Sobre la l\'inea cr\'itica $s=\half+it$ con $t=\gamma_n$, el m\'odulo de cada t\'ermino
+oscilatorio de \eqref{eq:Rrep} es
+\[
+  \left|(\lambda^2)^{\rho-s}\right|
+  \;=\;(\lambda^2)^{\,\Real\rho-\half}
+  \;=\;(\lambda^2)^{\,\beta-\half},
+  \qquad \beta:=\Real\rho .
+\]
+
+\begin{theorem}[Circularidad de la cota est\'andar]\label{thm:circ}
+Sea $\Theta:=\sup_\rho\Real\rho$ el supremo de las partes reales de los ceros.
+Entonces la cota del piso obtenida de la representaci\'on \eqref{eq:Rrep} satisface
+\begin{equation}\label{eq:bound}
+  \mathrm{piso}_\lambda(n)\;\asymp\;|R_\lambda(\half+i\gamma_n)|
+  \;\lesssim\;(\lambda^2)^{\,\Theta-\half}\cdot\Psi(\gamma_n),
+\end{equation}
+con $\Psi(\gamma_n)=\sum_\rho\frac{1}{|\rho|\,|\rho-\half-i\gamma_n|}$ convergente.
+Adem\'as la cota es \'optima en el exponente. En consecuencia:
+\begin{enumerate}[label=\textbf{(\alph*)},leftmargin=2em]
+\item \emph{Incondicionalmente} s\'olo se sabe $\Theta\le1$, dando
+$\mathrm{piso}_\lambda\lesssim(\lambda^2)^{1/2}=\lambda$ --- \textbf{cota in\'util}
+(no decae).
+\item La cota \'optima de ra\'iz cuadrada $(\lambda^2)^{\Theta-1/2}=O(1)$ uniforme,
+es decir un piso acotado y luego decreciente v\'ia los factores subdominantes,
+\textbf{equivale a} $\Theta=\half$, \textbf{que es exactamente RH}.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+La desigualdad triangular en \eqref{eq:Rrep} da
+$|R_\lambda^{\mathrm{osc}}|\le|s|(\lambda^2)^{\Theta-1/2}\sum_\rho|\rho|^{-1}|\rho-s|^{-1}$;
+el polo $\frac{s}{s-1}(\lambda^2)^{1-s}$ aporta $(\lambda^2)^{1/2}$ que es dominado
+o cancelado por el contrat\'ermino arquimediano (v\'ease \S\ref{sec:escape}); el
+t\'ermino $\psi(y)y^{-s}$ aporta $\sim y^{1/2}/y^{1/2}=O(1)$ por PNT. La convergencia
+de $\Psi$ se sigue de $\sum_\rho|\rho|^{-2}<\infty$ y de que $\gamma_n$ est\'a a
+distancia positiva de los dem\'as ceros. La optimalidad del exponente $\Theta-\half$:
+existe $\rho^\ast$ con $\Real\rho^\ast$ arbitrariamente cerca de $\Theta$, y su
+t\'ermino no puede ser cancelado por los dem\'as para $\lambda$ gen\'erico (fases
+$(\lambda^2)^{i\,\Im\rho}$ equidistribuidas), luego el $\limsup$ realiza el
+exponente. La equivalencia con RH en (b) es la definici\'on $\Theta=\half
+\Leftrightarrow$ todos los $\beta=\half$. \qed
+\end{proof}
+
+\begin{corollary}[El muro, n\'itido]
+Probar $\mathrm{piso}_\lambda(n)\to0$ con tasa $(\lambda^2)^{-\delta}$, $\delta>0$,
+por la representaci\'on \eqref{eq:Rrep} \emph{requiere} $\Theta\le1-\delta'$, i.e.\
+una regi\'on libre de ceros cuantitativa; y la tasa \'optima de ra\'iz cuadrada es
+$\Theta=\half=$ RH. La ruta est\'andar \textbf{no puede} cerrar el Eslab\'on 2 sin
+asumir (parte de) lo que quiere probar.
+\end{corollary}
+
+\noindent Esto confirma, ahora con demostraci\'on, lo que la num\'erica s\'olo
+insinuaba y lo que ya hab\'ia aparecido como la ``constante ajustada $c=2$'' del
+Objetivo A: \textbf{el resto de primos, tratado en aislamiento, es RH--circular}.
+
+% =====================================================================
+\section{La \'unica v\'ia de escape: cancelaci\'on cruzada}\label{sec:escape}
+% =====================================================================
+
+El Escenario A no est\'a refutado: lo que el Teorema \ref{thm:circ} refuta es
+\emph{tratar el resto de primos en aislamiento}. El modelo CCM no usa $R_\lambda$
+solo, sino el \emph{s\'imbolo combinado}
+\begin{equation}\label{eq:Wlam}
+  W_\lambda(t)\;=\;\underbrace{2\theta'(t)}_{\text{arquimediano}}
+  \;-\;2\,\Real\!\Bigl[\textstyle\sum_{n\le\lambda^2}\frac{\Lam(n)}{n^{1/2+it}}\Bigr],
+  \qquad
+  2\theta'(t)\sim\log\frac{t}{2\pi},
+\end{equation}
+y la forma de Weil $A_\lambda(g,g)=\frac1{2\pi}\int|\widehat g|^2 W_\lambda\,dt$.
+
+\begin{remark}[Por qu\'e el combinado puede escapar]\label{rem:escape}
+El t\'ermino arquimediano $2\theta'(t)$ y la suma de primos provienen de los
+\emph{dos lados} de la f\'ormula expl\'icita: para una funci\'on test $g$,
+\[
+  \sum_\rho \widehat g(\gamma_\rho)
+  \;=\;\underbrace{\frac1{2\pi}\!\int \widehat g(t)\,2\theta'(t)\,dt}_{\text{arquimediano}}
+  \;-\;\underbrace{2\sum_n\frac{\Lam(n)}{\sqrt n}\,\check g(\log n)}_{\text{primos}} .
+\]
+La parte oscilatoria de \emph{ambos} lados es la misma suma $\sum_\rho$; al
+combinarlos en $W_\lambda$, la representaci\'on por ceros de
+\S\ref{sec:explicit} \textbf{se cancela contra el arquimediano}. Es decir: el
+$\sum_\rho$ que hace circular a $R_\lambda$ \emph{no aparece} en el objeto
+combinado correcto --- aparece como la \emph{diferencia} entre el truncado y el
+completo, que es una cola de Fourier suave.
+\end{remark}
+
+\begin{proposition}[Reformulaci\'on no circular del piso]\label{prop:noncirc}
+Definir el resto combinado truncado
+\[
+  \mathcal{W}_\lambda(t)\;:=\;W_\infty(t)-W_\lambda(t)
+  \;=\;2\,\Real\!\Bigl[\sum_{n>\lambda^2}\frac{\Lam(n)}{n^{1/2+it}}\Bigr]_{\text{(suma cancelada)}} .
+\]
+Entonces el piso es $\mathrm{piso}_\lambda(n)\asymp|\mathcal W_\lambda$ ponderado por
+$|\widehat g_n|^2|$, y el Escenario A equivale a la cota
+\begin{equation}\label{eq:Atarget}
+  \boxed{\;\Bigl|\frac1{2\pi}\!\int |\widehat g_n(t)|^2\,\mathcal W_\lambda(t)\,dt\Bigr|
+  \;\le\; C\cdot\eta(\lambda),\qquad \eta(\lambda)\to0,\;}
+\end{equation}
+con $\eta$ \emph{controlable por PNT} (distribuci\'on de primos, regiones libres de
+ceros cl\'asicas tipo Vinogradov--Korobov), \textbf{sin} usar $\Theta=\half$.
+\end{proposition}
+
+\paragraph{El \GAP, localizado al mil\'imetro.}
+La cantidad $\mathcal W_\lambda(t)=2\Real\sum_{n>\lambda^2}\Lam(n)n^{-1/2-it}$ es,
+crudamente, una cola divergente; \emph{cancelada} (sumaci\'on por la fase $n^{-it}$),
+es la cola de Fourier del s\'imbolo completo. La pregunta abierta es:
+\begin{quote}\itshape
+¿Existe una cota \eqref{eq:Atarget} de la cola \emph{ponderada por la ventana
+band--limited} $|\widehat g_n|^2$ (soportada en $|\log n|\le\log\lambda$), que use
+s\'olo PNT/regiones libres de ceros cl\'asicas y \emph{no} la hip\'otesis
+$\Theta=\half$?
+\end{quote}
+La ventana $|\widehat g_n|^2$ es band--limited de tipo $\log\lambda$: \emph{s\'olo ve}
+$\log n\le\log\lambda$, i.e.\ $n\le\lambda$, mientras la cola empieza en $n>\lambda^2$.
+\textbf{Hay un hueco espectral} (entre $\lambda$ y $\lambda^2$) que es exactamente la
+``room'' donde la cancelaci\'on cruzada podr\'ia dar la cota sin ceros. Esto es la
+hip\'otesis de trabajo del programa de Connes (cancelaci\'on entre lugares /
+$\mathbb{S}$--locales), aqu\'i reducida a una desigualdad anal\'itica concreta.
+
+% =====================================================================
+\section{Veredicto}\label{sec:verdict}
+% =====================================================================
+
+\begin{enumerate}[leftmargin=1.6em]
+\item \PR{} (Teorema \ref{thm:circ}) Tratar el resto de primos $R_\lambda$ en
+aislamiento da una cota del piso \textbf{RH--equivalente}: $\Theta=\half\Leftrightarrow$
+tasa \'optima. La ruta ingenua del Eslab\'on 2 es circular. \emph{Esto es un
+resultado, no una conjetura.}
+\item \OP{} (Prop.\ \ref{prop:noncirc}) La \'unica v\'ia no circular es la cota
+\eqref{eq:Atarget} del s\'imbolo combinado $\mathcal W_\lambda$, explotando el hueco
+espectral $[\lambda,\lambda^2]$ y la cancelaci\'on arquimediano$\leftrightarrow$primos.
+Es un problema anal\'itico concreto, no una identificaci\'on de operador.
+\item \textbf{Posici\'on en el mapa.} El Eslab\'on 2 no se cierra por an\'alisis
+elemental; pero el obst\'aculo qued\'o \emph{demostrado} circular en la ruta est\'andar
+y \emph{aislado} en una \'unica desigualdad en la ruta de Connes. Las herramientas
+candidatas (m\'etodo de Selberg--Beurling para la ventana, sumas de tipo
+Vinogradov para la cola, positividad de Weil localizada para el peso) son cl\'asicas
+de teor\'ia anal\'itica de n\'umeros.
+\end{enumerate}
+
+\noindent\emph{Honestidad:} este documento \textbf{no} demuestra \eqref{eq:Atarget};
+demuestra que \eqref{eq:Atarget} es lo \'unico que falta, y que su negaci\'on por la
+v\'ia est\'andar es RH--circular. El siguiente bloque de trabajo es atacar
+\eqref{eq:Atarget} con el hueco espectral $[\lambda,\lambda^2]$ como recurso central.
+
+\end{document}

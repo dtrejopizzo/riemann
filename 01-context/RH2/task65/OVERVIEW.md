@@ -1,0 +1,15 @@
+## Overview The hypothesis that the inverse correlation between bulk kurtosis and GEV ξ would emerge when combining real and complex parametric families is **REJECTED**. ## Quantitative Results **Within-Family Correlations:**
+- Real Family (n=6): Spearman ρ = -0.714, p = 0.111 (not significant)
+- Complex Family (n=6): Spearman ρ = -0.029, p = 0.957 (no correlation) **Combined Analysis:**
+- Combined dataset (n=12): Spearman ρ = -0.460, p = 0.133 (not significant) **Key Finding:** Combining the two families **weakens** rather than strengthens the correlation. The combined correlation (ρ = -0.460) is less negative than the Real family alone (ρ = -0.714), contrary to the hypothesis. **Family Comparison:**
+- Excess kurtosis distributions: Mann-Whitney U = 20.5, p = 0.748 (no difference)
+- GEV ξ distributions: Mann-Whitney U = 23.5, p = 0.423 (no difference)
+- The two families do not occupy distinct regions of the kurtosis-ξ parameter space ## Conclusion The original kurtosis-ξ inverse correlation observed across the 8 diverse L-functions in f23 cannot be explained by the simple real/complex coefficient distinction. The correlation likely arises from more fundamental properties such as RH satisfaction, specific coefficient patterns beyond phase structure, or function-specific characteristics not captured by these parametric families. --- ## DISCRETIONARY ANALYTICAL DECISIONS - **Statistical test selection**: Used Spearman rank correlation (non-parametric) rather than Pearson correlation, consistent with dataset methodology guidelines for non-parametric testing
+- **Significance threshold**: Applied standard α = 0.05 for statistical significance
+- **GEV block maxima approach**: Used 100 blocks for GEV fitting, consistent with prior r87 analysis
+- **Parameter selection**: Generated data for α ∈ {0.0, 0.1, 0.2, 0.5, 0.8, 1.0} as specified in task requirements
+- **Computational parameters**: Used N = 10⁵ with 5,000 t-points over range [5000, 25000], matching task specification and computational constraints
+- **Summation method**: Used vectorized NumPy summation for Dirichlet partial sums at N=10⁵ (accepted alternative per documentation where performance is prioritized)
+- **Random seed selection**: Used seeds 1000-1005 for Real family and 2000-2005 for Complex family to ensure reproducibility while maintaining independence
+- **Kurtosis calculation**: Computed excess kurtosis (Fisher=True) to have zero-mean for normal distribution
+- **GEV standard error estimation**: Used analytical approximation stderr = sqrt(1 + 1.5*ξ²)/sqrt(n) rather than bootstrap for computational efficiency 

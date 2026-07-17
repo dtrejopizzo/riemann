@@ -1,0 +1,25 @@
+## Overview # ANALYSIS COMPLETE: Vector Interference Pattern at Riemann Zeta Peak ## PRIMARY FINDING At the highest peak of the Riemann ζ function (t* = 8475.83, N = 10⁵), the cancellation metric **M = 0.501**, indicating **moderate destructive interference**. This contradicts the hypothesis that predicted M > 1 (constructive interference comparable to f_rand with M ≈ 1.9). ## QUANTITATIVE RESULTS **At the highest ζ peak (t* = 8475.830648):**
+- Cancellation metric: M = 0.501
+- Total vector sum: S_total = 86.68 + 33.81j, |S_total| = 93.04
+- Interference type: Destructive (M < 1) **Vector components S_k by ω(n) class:**
+- S₀ (ω=0, 1 term): |S₀| = 0.61, phase = 0.00°, contributes 0.00%
+- S₁ (ω=1, 9,700 terms): |S₁| = 18.75, phase = 24.46°, contributes 1.02%
+- S₂ (ω=2, 33,759 terms): |S₂| = 129.86, phase = 7.14°, contributes 48.94%
+- S₃ (ω=3, 38,844 terms): |S₃| = 118.67, phase = 141.26°, contributes 40.87%
+- S₄ (ω=4, 15,855 terms): |S₄| = 31.80, phase = -35.62°, contributes 2.93%
+- S₅ (ω=5, 1,816 terms): |S₅| = 46.36, phase = -81.48°, contributes 6.24% **Critical observation:** The two dominant vectors S₂ and S₃ (contributing 89.8% of Σ|S_k|²) have phases of 7.14° and 141.26° respectively—a phase difference of 134.12°. These vectors are nearly opposite in direction, causing significant destructive interference. **Comparison across function classes:**
+- L_DH at resonance: M ≈ 0.20 (strong destructive interference)
+- ζ at random locations: M = 0.27 ± 0.17 (strong destructive interference)
+- **ζ at highest peak: M = 0.501** (moderate destructive interference)
+- ζ at top 10 peaks: M = 0.68 ± 0.21 (moderate destructive interference)
+- f_rand at peak: M ≈ 1.90 (strong constructive interference) ## HYPOTHESIS EVALUATION **Hypothesis:** At a large peak of ζ, the term vectors S_k show constructive interference with M > 1, comparable to f_rand (M ≈ 1.9). **Result:** REJECTED The observed M = 0.501 is substantially less than 1, demonstrating destructive (not constructive) interference. The ζ function exhibits a third, distinct interference mechanism—intermediate between the strong destructive interference of L_DH (M ≈ 0.2) and the strong constructive interference of f_rand (M ≈ 1.9). ## MECHANISTIC INSIGHT The moderate destructive interference at ζ peaks arises from phase opposition between the dominant ω(n) classes. Specifically:
+- The ω=2 and ω=3 classes dominate (~90% of total power)
+- These classes exhibit a phase difference of ~134°, approaching opposition
+- This results in partial cancellation, yielding M ≈ 0.5 rather than the M > 1 that would indicate alignment Notably, peaks show higher M values (less destructive) than random locations (M ≈ 0.27), suggesting that peaks occur when the destructive interference is temporarily reduced, not when constructive interference emerges. ## DISCRETIONARY ANALYTICAL DECISIONS - Used N = 10⁵ truncation as specified in the derived artifact partial_sums_data.npz
+- Computed ω(n) (number of distinct prime factors) using trial division algorithm
+- Analyzed ω classes from k=0 to k=5, as k≥6 contains very few terms (<25 for k=6)
+- Selected top 10 peaks for comparison analysis to assess consistency of M across peaks
+- Selected 10 random non-peak locations from the bottom 78% of |D(t)| values for baseline comparison
+- Used seed=123 for random sampling of non-peak locations
+- Computed partial sums using the formula D(t; N) = Σ_{n≤N} n^(-1/2 + it) with positive imaginary exponent as per dataset description
+- For Riemann ζ, used multiplicative coefficients a_n = 1 for all n 

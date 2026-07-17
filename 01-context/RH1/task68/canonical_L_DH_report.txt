@@ -1,0 +1,22 @@
+
+CANONICAL L_DH IMPLEMENTATION AND VALIDATION REPORT
+==================================================== Implementation Details:
+-----------------------
+The canonical Davenport-Heilbronn function was implemented strictly according to the definition in research-program-v3.pdf (Section 3.1): L_DH(s) = ((1-iκ)/2)·L(s,χ) + ((1+iκ)/2)·L(s,χ̄) where: - χ is the primitive complex character modulo 5 of order 4 - χ(1) = 1, χ(2) = i, χ(3) = -i, χ(4) = -1, χ(0) = 0 - κ = (√5 - 1) / (2√(5(√5 - 1))) ≈ 0.2486028939 - Coefficients a_n are set to zero for all non-squarefree n Computational Parameters:
+------------------------- - Truncation length: N = 10^5 - Height range: t ∈ [1000, 10000] - Sampling resolution: Δt = 2π/log(N) ≈ 0.546 - Number of samples: 16,492 - Numerical method: Kahan compensated summation Zero Validation Results (N = 10^6):
+------------------------------------
+Target: |L_DH(s)| < 10^-6 at known off-line zeros σ = 0.8085, t = 85.70: |L_DH(s)| = 3.88×10^-2 ✗ FAILED σ = 0.6508, t = 114.16: |L_DH(s)| = 2.57×10^-2 ✗ FAILED σ = 0.5744, t = 166.48: |L_DH(s)| = 1.96×10^-2 ✗ FAILED σ = 0.7243, t = 176.70: |L_DH(s)| = 2.53×10^-2 ✗ FAILED Conclusion: The canonical implementation does NOT reproduce the known zeros.
+Values are ~10^4 times larger than the target threshold. Metric Computation Results:
+---------------------------
+Computed (M_coh, R_comp) coordinates for the 50 highest-magnitude peaks: CANONICAL L_DH (this work): M_coh: mean = 1.9387 ± 0.2081 R_comp: mean = 0.000083 ± 0.000014 (8.3×10^-5) Peak magnitudes: mean = 5.11 ± 0.37 REFERENCE L_DH (from full_metrics_data_300peaks.csv): M_coh: mean = 1.9945 ± 0.1845 R_comp: mean = 0.018543 ± 0.002294 Peak magnitudes: mean = 8.64 ± 0.59 Statistical Comparison:
+-----------------------
+Two-sample t-tests comparing canonical vs reference L_DH: M_coh: t = -1.411, p = 0.1615 → NOT significantly different R_comp: t = -56.909, p = 6.9×10^-77 → HIGHLY significantly different Key Finding: R_comp differs by a factor of 225x between implementations! Classification Map Analysis:
+----------------------------
+In the (M_coh, R_comp) 2D classification space: - Canonical L_DH forms a DISTINCT, SEPARATE cluster at R_comp ≈ 10^-4 - Reference L_DH is located at R_comp ≈ 0.018 - The two implementations are completely non-overlapping - Canonical L_DH occupies a region below ALL other function classes Conclusions:
+------------
+1. The canonical implementation (based strictly on the PDF definition) does NOT match the reference L_DH from r62. 2. The canonical implementation FAILS zero validation at all four known off-line zero locations. 3. The (M_coh, R_comp) metrics show the canonical implementation produces a fundamentally different statistical signature than reference L_DH. 4. This confirms the "major data provenance issue" mentioned in the dataset description. 5. The canonical implementation represents a THIRD distinct version of L_DH, separate from both: - Reference L_DH (r62) - L_DH^(ε=0) (r66, mentioned but not present in the data) Implications:
+-------------
+The failure to reproduce known zeros and the dramatic difference in R_comp
+suggest one of the following: a) The character definition or its implementation is incorrect b) The formula for L_DH in the PDF differs from the original construction c) The published zero locations are for a different L_DH variant d) The squarefree restriction is applied incorrectly e) Some other subtle implementation detail differs Further investigation is required to identify which L_DH variant (if any)
+correctly implements the original Davenport-Heilbronn construction. Files Generated:
+---------------- - canonical_L_DH_metrics.csv: Full metrics for 50 peaks - classification_map_canonical.png: Full classification map - classification_map_comparison.png: Side-by-side comparison - canonical_vs_reference_L_DH.png: Focused comparison plot

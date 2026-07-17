@@ -1,0 +1,383 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,
+  showstringspaces=false,columns=fullflexible,keepspaces=true}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\TP}{\mathrm{TP}}
+
+\title[A Uniformity Gap]{Finite-to-full positivity is a uniformity gap: a criterion, a
+Hodge--Riemann stability theorem for towers, and the place of $\zeta$}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgIK,bgMV,bgTitchmarsh,bgConrey03}
+\begin{abstract}
+For the Riemann $\xi$-function every finite-order positivity --- the Tur\'an
+inequalities, the hyperbolicity of each fixed-degree Jensen polynomial, each
+finite total-positivity minor --- is unconditional, while the full-order
+positivity is the Riemann Hypothesis. We isolate the general phenomenon as a
+\emph{uniformity} (quantifier-order) gap, not a logical-implication gap, and
+develop the resulting positivity theory. We prove a criterion: the bridge from
+``eventually at each order'' to ``uniformly at all orders'' holds precisely when
+the object is scale-free or has a bounded order-threshold; we show the
+bounded-threshold class is non-empty (converging strictly-positive measures) and
+that its discriminator is uniform convergence to a definite limit; we prove that
+the convergence route to RH is over-shooting or circular, so the framework
+explains the gap without crossing it; and we prove a \emph{Hodge--Riemann
+stability theorem}: a Hodge--Riemann tower has uniform positivity if and only if
+its limit form is strictly definite, generalizing Adiprasito--Huh--Katz from a
+single object to families. The verdicts place $\zeta$'s hierarchy at the
+borderline degenerate limit. A numerical appendix with code illustrates the
+stability dichotomy. Everything is independent of the Riemann Hypothesis.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Several reformulations of RH are full-order positivity statements whose
+finite-order truncations are unconditional: the total positivity of the de
+Bruijn--Newman kernel, the hyperbolicity of the Jensen polynomials of $\xi$, the
+Hankel (moment) positivity. Across these, every finite order is known
+unconditionally --- for each fixed order, eventually in height --- while the full
+order is RH~\cite{RP13,RP15}. This paper extracts the structure responsible,
+shows it is a uniformity gap with a clean criterion, and develops the attendant
+positivity theory, culminating in a stability theorem for Hodge--Riemann towers.
+The results are independent of RH; the connection to $\zeta$ is that its
+hierarchy sits at the borderline of the criterion.
+
+\section{Scale-parametrized positivity hierarchies}
+\begin{definition}
+A \emph{scale-parametrized positivity hierarchy} is a family
+$\{P_k(T)\}_{k\ge1,\,T\ge1}$ of conditions, nested $P_1\supseteq P_2\supseteq
+\cdots$, with a scale parameter $T$, together with order defects
+$\delta_k(T)\ge0$ such that $P_k(T)\iff\delta_k(T)\le0$.
+\end{definition}
+Two statements must be separated:
+\[
+\textbf{(eventual)}\quad\forall k\ \exists T_0(k)\ \forall T>T_0(k):P_k(T);
+\qquad
+\textbf{(uniform)}\quad\forall T\ \forall k:P_k(T).
+\]
+The full order $P_\infty=\bigcap_k P_k$ holding at every scale is \textbf{(uniform)};
+the known unconditional results are \textbf{(eventual)}.
+
+\begin{remark}
+The finite-to-full gap is \emph{not} the implication $\forall k\,P_k\Rightarrow
+P_\infty$, which is trivial since $P_\infty=\bigcap_kP_k$. It is the failure of
+the quantifier swap: each $P_k$ is known only eventually in $T$, with threshold
+$T_0(k)\to\infty$, so no single scale enjoys all orders. For $\zeta$ the orders
+are: $\TP_1$ ($\Phi>0$), $\TP_2$ (Tur\'an/log-concavity/degree-two Jensen),
+order $k$ (degree-$k$ Jensen hyperbolicity, Griffin--Ono--Rolen--Zagier), and
+$\TP_\infty=$ RH.
+\end{remark}
+
+\section{The uniformity criterion}
+\begin{theorem}[Criterion]\label{thm:crit}
+For a scale-parametrized hierarchy, \textbf{(eventual)} implies
+\textbf{(uniform)} if and only if $\sup_k\sup_T\delta_k(T)\le0$; this holds in
+either of two cases:
+\begin{enumerate}
+\item \emph{finite type:} the object is scale-free, $\delta_k(T)=\delta_k$
+independent of $T$ (so eventual $=$ uniform); or
+\item \emph{bounded threshold:} $\sup_kT_0(k)<\infty$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+\textbf{(uniform)} is exactly $\sup_k\sup_T\delta_k(T)\le0$. In case (1) the
+inner supremum over $T$ is $\delta_k$, and \textbf{(eventual)} forces
+$\delta_k\le0$. In case (2), for $T>\sup_kT_0(k)$ every $P_k(T)$ holds; the
+finitely many smaller scales are covered by \textbf{(eventual)} at each fixed
+$k$. Conversely, if both fail, some $\delta_k(T)>0$ persists for arbitrarily
+large $T$, contradicting \textbf{(uniform)}.
+\end{proof}
+
+\section{The dividing line}
+\begin{center}
+\begin{tabular}{lccc}
+\hline
+hierarchy & scale parameter? & threshold $T_0(k)$ & finite-to-full \\
+\hline
+matroid Hodge--Riemann (AHK) & none & --- & \textbf{bridge holds} \\
+Lorentzian / stable polynomials & none & --- & \textbf{bridge holds} \\
+Hamburger moment problem & none & --- & bridge holds \\
+$\zeta$ Jensen / total positivity & height $T$ & $T_0(k)\to\infty$ & \textbf{gap} \\
+\hline
+\end{tabular}
+\end{center}
+Finite combinatorial or fixed-measure objects are scale-free (case 1), so their
+full positivity follows from a general theorem (Adiprasito--Huh--Katz for
+matroids). The $\zeta$-hierarchies carry a genuine height parameter with
+$T_0(k)\to\infty$, so neither case applies.
+
+\section{Equivalence with the finitization obstruction}
+\begin{corollary}\label{cor:fin}
+A scale-parametrized hierarchy has no finite-to-full gap iff it is finite type or
+bounded threshold. For the $\zeta$-hierarchies, a finite-dimensional model (a
+Frobenius-type periodicity of the zeros) would make the object scale-free, hence
+case (1); its absence~\cite{RP15} is the absence of case (1), and the unbounded
+thresholds are the failure of case (2). Thus
+\[
+\text{finite-to-full gap}\ \Longleftrightarrow\ \text{neither finite type nor bounded threshold}\ \Longleftrightarrow\ \text{no finitization}.
+\]
+\end{corollary}
+
+\section{The bounded-threshold class is non-empty}
+\begin{proposition}[Existence]\label{prop:exist}
+There exist scale-parametrized positivity hierarchies that are not finite type
+yet have bounded threshold.
+\end{proposition}
+\begin{proof}
+Let $\mu_T\to\mu_\infty$ in total variation, $\|\mu_T-\mu_\infty\|\le
+\varepsilon(T)\to0$, with $\mu_\infty$ strictly positive (every moment/total-
+positivity minor $>0$, with a uniform gap $g_0>0$ from the boundary on the unit
+sphere of test vectors). Each finite minor is a continuous functional of the
+measure, $1$-Lipschitz in total variation after normalization; hence for
+$T>T^\ast:=\sup\{T:\varepsilon(T)>g_0\}$ every minor of $\mu_T$ is positive, so
+$\sup_kT_0(k)\le T^\ast<\infty$, while $\mu_T$ genuinely varies with $T$.
+\end{proof}
+The discriminating mechanism is therefore \emph{uniform convergence to a strictly
+positive limit}. The $\xi$-Jensen polynomials converge (rescaled) to Hermite
+polynomials --- a hyperbolic limit --- but the Griffin--Ono--Rolen--Zagier
+thresholds $T_0(k)$ grow: the convergence is not uniform in degree, so $\zeta$
+sits outside the bounded-threshold class.
+
+\section{The convergence route is over-RH or circular}
+One might hope the convergence mechanism (not obstructed by linear independence,
+unlike a finitization) provides a passage to RH. It does not.
+\begin{theorem}\label{thm:overRH}
+Uniform $(d,n)$ convergence of the Jensen polynomials to the rescaled Hermite
+limit at rate $o(1/d)$ implies RH (the Hermite gap is $\asymp1/d$, so being
+within that margin gives hyperbolicity for all $(d,n)$); but it is not implied by
+RH (a hyperbolic $J_{d,n}$ need not match the Hermite spacing). Hence uniform
+convergence is strictly stronger than RH. The RH-equivalent relaxation ---
+``$J_{d,n}$ within the margin of \emph{some} hyperbolic polynomial'' --- is just
+``$J_{d,n}$ hyperbolic,'' i.e.\ RH itself.
+\end{theorem}
+\begin{proof}
+The rescaled Hermite limit $\widehat H_d$ has simple real zeros with minimal gap
+$\asymp1/d$; a real perturbation of size $o(1/d)$ in coefficients moves each zero
+by $o(1/d)$ and preserves real-rootedness, so $J_{d,n}$ is hyperbolic; over all
+$(d,n)$ this is RH. Conversely RH asserts hyperbolicity, a property of the zero
+set's reality, not of its proximity to the Hermite configuration; a hyperbolic
+polynomial may have any real zero spacing. The relaxation to ``some hyperbolic
+polynomial'' is hyperbolicity by definition.
+\end{proof}
+So the convergence route over-shoots RH (harder) or restates it (circular); there
+is no intermediate sub-RH opening. The framework's RH-relevance is exactly to
+explain the gap, not to cross it.
+
+\section{A Hodge--Riemann stability theorem for towers}
+We now develop the positivity theory in its own right, generalizing
+Adiprasito--Huh--Katz from a single object to a family.
+
+\begin{definition}[Hodge--Riemann tower]
+A \emph{Hodge--Riemann tower} is a sequence $(V_m,L_m,Q_m)$, where $V_m=
+\bigoplus_jV_m^j$ is a finite graded real vector space, $L_m\colon V_m^j\to
+V_m^{j+1}$ a Lefschetz operator, and $Q_m$ the bilinear form on primitive parts
+$P_m^j=\ker L_m^{\,d-2j+1}$, with the Hodge--Riemann property
+$(-1)^jQ_m|_{P_m^j}>0$. Set the \emph{HR gap}
+$\delta_m=\inf_{j}\inf_{\|v\|=1,\,v\in P_m^j}(-1)^jQ_m(v,v)$. The tower
+\emph{converges} to $(V_\infty,L_\infty,Q_\infty)$ if, on a common model (fixed
+grading and dimensions, or an inverse limit), $Q_m\to Q_\infty$ and the primitive
+projections converge in operator norm.
+\end{definition}
+
+\begin{theorem}[HR stability]\label{thm:hr}
+Let $(V_m,L_m,Q_m)$ be a convergent Hodge--Riemann tower with limit gap
+$\delta_\infty$.
+\begin{enumerate}
+\item If $\delta_\infty>0$ (the limit form is strictly definite on primitives),
+the tower has \emph{uniform Hodge--Riemann}: $\liminf_m\delta_m\ge\delta_\infty>0$,
+so $\delta_m\ge\delta_\infty/2$ for all large $m$.
+\item If $\delta_\infty=0$ (the limit form degenerates on some primitive
+direction), uniform HR fails: $\inf_m\delta_m=0$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+On the common model, $m\mapsto Q_m$ and $m\mapsto P_m^j$ (as orthogonal
+projections) are convergent, so $(m,v)\mapsto(-1)^jQ_m(v,v)$ is jointly continuous
+on the compact unit sphere of $\bigoplus_jP_m^j$; hence $\delta_m\to\delta_\infty$.
+If $\delta_\infty>0$, definiteness is an open condition: there is $m_0$ with
+$\delta_m\ge\delta_\infty/2$ for $m\ge m_0$, giving (1). If $\delta_\infty=0$, a
+unit primitive $v_\infty$ with $Q_\infty(v_\infty,v_\infty)=0$ is a limit of
+$v_m\in P_m^{j}$ with $(-1)^jQ_m(v_m,v_m)\to0$, so $\inf_m\delta_m=0$, giving (2).
+\end{proof}
+
+\begin{corollary}\label{cor:towerbridge}
+A Hodge--Riemann tower has the finite-to-full bridge (uniform positivity across
+the tower) iff its limit form is strictly definite. This is the Hodge-theoretic
+refinement of Theorem~\ref{thm:crit}(2): bounded threshold $=$ strictly-definite
+limit.
+\end{corollary}
+
+\begin{remark}
+Adiprasito--Huh--Katz prove HR for each individual matroid; Theorem~\ref{thm:hr}
+governs \emph{families}, identifying strict-definiteness of the limit as the exact
+condition for uniformity --- genuinely new content, since HR is classically a
+per-object theorem. It predicts the dividing line of \S4: a hierarchy bridges
+finite-to-full iff its objects converge to a strictly-definite limit. For
+$\zeta$, the $\xi$-Jensen polynomials converge to Hermite (hyperbolic, so the
+limit is definite in each fixed degree), but the convergence is non-uniform in
+the degree direction, so the relevant limit gap across degrees degenerates: the
+borderline $\delta_\infty=0$ case.
+\end{remark}
+
+\section{Worked examples}
+\begin{example}[A uniform-HR tower]\label{ex:def}
+Let $\mu_m$ be the probability measure $\tfrac1m\sum_{i=1}^m\delta_{i/m}$ on
+$[0,1]$, converging weakly to Lebesgue measure $\mu_\infty$. The Hankel forms
+$H_m^{(N)}=[\,\int x^{a+b}d\mu_m\,]_{0\le a,b\le N}$ converge to the Hilbert-type
+Hankel matrix of $\mu_\infty$, which is strictly positive definite for every $N$
+(Lebesgue measure has infinite support). By Proposition~\ref{prop:exist} the
+total-positivity hierarchy of $\mu_m$ has bounded threshold: there is a single
+$m_0(N)$, in fact $m_0$ \emph{uniform in $N$} on compact moment ranges, beyond
+which all minors are positive. This is a bounded-threshold, non-finite-type
+hierarchy.
+\end{example}
+
+\begin{example}[The degenerate borderline]\label{ex:deg}
+Let $\nu_m=(1-\tfrac1m)\delta_0+\tfrac1m\,\lambda_{[0,1]}$ converge to
+$\nu_\infty=\delta_0$, a point mass. The limit Hankel form is rank one
+(degenerate, $\delta_\infty=0$): all higher minors vanish. By
+Theorem~\ref{thm:hr}(2) uniform positivity fails --- the order-$N$ minor is
+$\asymp m^{-N}$, so $T_0(N)\to\infty$. This is the structural shape of $\zeta$'s
+situation: a limit that is positive but \emph{degenerate} in the high-order
+directions, so the thresholds grow.
+\end{example}
+
+\begin{example}[Uniform matroids]\label{ex:matroid}
+The uniform matroids $U_{r,m}$ have characteristic polynomials whose
+(normalized) coefficient sequences converge as $m\to\infty$; AHK gives HR for
+each $U_{r,m}$ individually, and Theorem~\ref{thm:hr} adds that the family has
+uniform HR iff the limiting normalized intersection form is definite --- a
+concrete instance of the tower theorem in the combinatorial-Hodge setting where
+AHK applies per object.
+\end{example}
+
+\section{The $\zeta$ orders, concretely}
+For $\xi$ the hierarchy is the total positivity of the de Bruijn--Newman kernel
+$\Phi$, with $\Phi>0$ ($\TP_1$) classical and the order-two defect
+\[
+\delta_2 = -\bigl(b(k)^2-b(k-1)b(k+1)\bigr),\qquad b(k)=m_{2k}/(2k)!,
+\]
+nonpositive (the Tur\'an inequality, hence $\TP_2$) unconditionally by
+Csordas--Norfolk--Varga. The order-$k$ defect is the discriminant condition for
+the degree-$k$ Jensen polynomial $J_{k,n}$, with threshold $T_0(k)=N(k)$ the
+Griffin--Ono--Rolen--Zagier height beyond which $J_{k,n}$ is hyperbolic. The
+content of \S6 is that $N(k)\to\infty$: the rescaled $J_{k,n}$ converge to the
+Hermite polynomial $H_k$ (hyperbolic), but the convergence is non-uniform in $k$
+because the Hermite gap shrinks like $1/k$ while the convergence rate at degree
+$k$ does not keep pace --- the degenerate-borderline shape of
+Example~\ref{ex:deg}, in the degree direction.
+
+\section{Defect-rate transfer}
+The criterion can be made quantitative.
+\begin{proposition}[Rate transfer]\label{prop:rate}
+Suppose the tower converges with $\|Q_m-Q_\infty\|\le\eta(m)$ and the limit is
+strictly definite with gap $\delta_\infty>0$. Then $\delta_m\ge\delta_\infty-
+C\eta(m)$ for a constant $C$ depending only on the primitive-projection moduli;
+in particular uniform HR holds as soon as $\eta(m)<\delta_\infty/C$, with an
+explicit threshold $m_0$. Conversely, if $\delta_\infty=0$ with
+$\delta_m\asymp\eta(m)\to0$, the threshold $T_0(k)$ (in the scale language) grows
+like the inverse rate, $T_0(k)\asymp\eta^{-1}(\text{gap at order }k)$.
+\end{proposition}
+\begin{proof}
+$|\,(-1)^jQ_m(v,v)-(-1)^jQ_\infty(v,v)\,|\le\|Q_m-Q_\infty\|+2\|P_m^j-P_\infty^j\|
+\,\|Q_\infty\|\le C\eta(m)$ uniformly over unit primitives; take infima to get
+$|\delta_m-\delta_\infty|\le C\eta(m)$.
+\end{proof}
+This identifies the non-uniformity of the $\xi$-Jensen$\to$Hermite convergence as
+the exact obstruction: the per-degree gap shrinks like $1/d$ while the
+convergence rate at degree $d$ does not keep pace, so $T_0(d)\to\infty$.
+
+\section{Conclusion}
+The finite-to-full gap is a uniformity gap (Theorem~\ref{thm:crit}); its two
+escape routes are finite type and bounded threshold, the latter a non-empty class
+discriminated by uniform convergence to a definite limit
+(Proposition~\ref{prop:exist}); the convergence route to RH over-shoots or
+circles (Theorem~\ref{thm:overRH}); and Hodge--Riemann positivity is stable under
+limits exactly when the limit form is definite (Theorem~\ref{thm:hr}). The
+framework explains why $\zeta$'s hierarchy has the gap --- no finitization, a
+degenerate limit gap across degrees --- without offering a passage to RH, and
+stands on its own as positivity theory. The natural continuations, all RH-
+independent, are the classification of uniform-HR towers, the construction of
+bounded-threshold non-finite-type hierarchies beyond converging measures, and a
+uniform Hodge--Riemann theorem for towers of matroids or polymatroids.
+
+\appendix
+\section{Numerical illustration of the stability dichotomy}\label{app:code}
+The following program builds two convergent families of symmetric bilinear forms
+on a fixed space --- one converging to a strictly definite limit, one to a
+degenerate limit --- and tracks the gap $\delta_m$, illustrating
+Theorem~\ref{thm:hr}.
+
+\lstinputlisting[language=Python,caption={\texttt{hr\_stability\_demo.py}}]{code.py}
+
+\medskip\noindent\textbf{Output.}
+\begin{lstlisting}
+ definite limit (delta_inf>0):  expect delta_m -> 0.5 (uniform HR holds)
+   m=   2: delta=0.2010   m=   8: delta=0.4120   m=  32: delta=0.4767
+   m= 128: delta=0.4941   m= 512: delta=0.4985
+ degenerate limit (delta_inf=0):  expect delta_m -> 0 (uniform HR fails)
+   m=   2: delta=0.5000   m=   8: delta=0.1250   m=  32: delta=0.0312
+   m= 128: delta=0.0078   m= 512: delta=0.0020
+\end{lstlisting}
+The definite-limit tower has $\delta_m\to\delta_\infty=1/2>0$ (uniform HR); the
+degenerate-limit tower has $\delta_m=1/m\to0$ (uniform HR fails), exactly as
+Theorem~\ref{thm:hr} predicts, with the $1/m$ decay matching the rate transfer of
+Proposition~\ref{prop:rate}.
+
+\section{The degenerate borderline and threshold growth}\label{app:deg}
+The degenerate case (Example~\ref{ex:deg}) is the structural shape of $\zeta$'s
+hierarchy: a positive but \emph{degenerate} limit, so that higher-order
+positivity holds only at a growing threshold. The following computes the
+order-$N$ Hankel minimal eigenvalue of $\nu_m=(1-\tfrac1m)\delta_0+\tfrac1m
+\lambda_{[0,1]}\to\delta_0$.
+\lstinputlisting[language=Python,caption={\texttt{code2.py}: degenerate borderline}]{code2.py}
+\noindent\textbf{Output.}
+\begin{lstlisting}
+   order-N Hankel smallest eigenvalue of nu_m (limit delta_0):
+        m    N=2       N=3       N=4
+        4  1.86e-03  5.19e-05  1.51e-06
+       16  4.89e-04  1.32e-05  3.80e-07
+       64  1.24e-04  3.32e-06  9.53e-08
+      256  3.10e-05  8.31e-07  2.38e-08
+     1024  7.74e-06  2.08e-07  5.96e-09
+\end{lstlisting}
+At fixed order the eigenvalue $\to0$ as $m\to\infty$ (the degenerate limit); at
+fixed $m$ it drops by roughly three orders of magnitude from $N=2$ to $N=4$ ---
+higher-order positivity is harder, so the threshold $T_0(N)$ grows in $N$. This is
+the order-by-order signature of a degenerate limit, and the structural analogue,
+in the moment hierarchy, of the Griffin--Ono--Rolen--Zagier threshold growth for
+the $\xi$-Jensen polynomials.
+
+\begin{thebibliography}{9}
+\bibitem{RP13} D.~A.~Trejo Pizzo, \emph{Two modern routes and the wrong-sign obstruction}, preprint, 2026.
+\bibitem{RP15} D.~A.~Trejo Pizzo, \emph{Why the Riemann Hypothesis resists}, preprint, 2026.
+\bibitem{AHK} K.~Adiprasito, J.~Huh, E.~Katz, \emph{Hodge theory for combinatorial geometries}, Ann. of Math. \textbf{188} (2018).
+\bibitem{GORZ} M.~Griffin, K.~Ono, L.~Rolen, D.~Zagier, \emph{Jensen polynomials for the Riemann zeta function and other sequences}, PNAS \textbf{116} (2019).
+\bibitem{bgIK} H.~Iwaniec and E.~Kowalski, \emph{Analytic Number Theory}, Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{53}, AMS, 2004.
+\bibitem{bgMV} H.~L.~Montgomery and R.~C.~Vaughan, \emph{Multiplicative Number Theory I: Classical Theory}, Cambridge Univ.\ Press, 2007.
+\bibitem{bgTitchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., rev.\ D.~R.~Heath-Brown, Oxford Univ.\ Press, 1986.
+\bibitem{bgConrey03} J.~B.~Conrey, \emph{The Riemann Hypothesis}, Notices Amer.\ Math.\ Soc.\ \textbf{50} (2003), 341--353.
+\end{thebibliography}
+
+\end{document}

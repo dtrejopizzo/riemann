@@ -1,0 +1,6 @@
+L-function,lambda_min,N_zeros,notes
+zeta,+1.482882e-06,5000,GRH holds (positive control)
+L(chi_5),+2.239166e-01,5000,GRH holds (Dirichlet control)
+"L(Delta,s)",+6.513553e-01,1455,GRH expected (modular structural control)
+L_DH (on-line only),+2.030296e-04,5000,Hypothetical GRH counterfactual
+L_DH (on + 110 off-line),-2.371606e-02,5000+110,Full L_DH with known GRH violations

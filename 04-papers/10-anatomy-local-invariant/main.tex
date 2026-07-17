@@ -1,0 +1,500 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,
+  showstringspaces=false,columns=fullflexible,keepspaces=true}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Numerical observation}
+
+\newcommand{\fa}{\mathfrak a}
+\newcommand{\fp}{\mathfrak p}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\GL}{\mathrm{GL}}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Sym}{Sym}
+
+\title[The Anatomy as a Local Invariant]{The localized-Weil anatomy as a complete local invariant of
+$L$-functions: Euler products, Satake recovery, and functoriality}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgCarleson,bgGarnett,bgRSar,bgYoung}
+\begin{abstract}
+To each $L$-function in the Selberg class we attach a per-prime-power
+\emph{anatomy} $\cR_L$, the ground-state-weighted profile of its localized Weil
+form, whose prime sum is the bottom eigenvalue. We prove that this spectral
+profile is a faithful invariant of the multiplicative structure. First, an
+$L$-function has an Euler product if and only if its anatomy \emph{factorizes}
+(carries no entanglement between distinct primes): the forward direction is
+unconditional and structural, and the converse is proven, in the natural
+localized-detector regime in a single window and in general across two windows
+of generic width ratio, via the zero structure of the ground-state
+autocorrelation (a polynomial times a Gaussian, with at most $2\deg P$ moving
+real zeros). Second, for $\GL(n)$ automorphic $L$-functions the anatomy recovers
+the Satake parameters at every prime: it determines their power sums, hence (by
+Newton--Girard) the local factors, the degree (an eventual Hankel rank), and the
+Ramanujan bound (a critical decay exponent $p^{-k/2}$). Third, the anatomy is
+\emph{functorial}: the anatomy power sums multiply under Rankin--Selberg and the
+anatomy of any functorial lift ($\Sym^m$, $\wedge^m$, $\otimes$) is a fixed
+polynomial in the anatomy of $\pi$. We deduce $\GL(1)$ automorphy from
+factorizing anatomy outright, and reduce the $\GL(2)$ case to the Selberg
+degree-two conjecture, contributing two new spectral tools. Everything is
+independent of the Riemann Hypothesis. A numerical appendix with code verifies
+the autocorrelation zero structure on which the converse rests.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+The localized Weil form~\cite{RP7} attaches to an $L$-function a quadratic form
+$Q_L=\fa-\fp_L$ on a band-limited window --- the archimedean Gram minus the
+prime Gram --- whose bottom eigenvalue is organized by~ into a sum of
+per-prime profiles, the \emph{anatomy}. Conjecture B2 of~ asked
+whether the existence of an Euler product is detected by the locality of this
+anatomy. We answer affirmatively and then show that the anatomy detects much
+more: the full local Langlands data. The thread throughout is that a single
+quadratic spectral functional, with no recourse to twists, sees the entire
+multiplicative structure of $L$. None of this concerns the location of the
+zeros; the statements are about classification, orthogonal to the Riemann
+Hypothesis, and unconditional.
+
+\medskip\noindent\textbf{Results.}
+\begin{itemize}
+\item[(I)] \emph{Characterization} (Theorem~\ref{thm:char}): $L$ has an Euler
+product $\iff$ its anatomy factorizes.
+\item[(II)] \emph{Satake recovery} (Theorem~\ref{thm:satake}): for $\GL(n)$ the
+anatomy determines the Satake parameters, the degree, and the Ramanujan bound.
+\item[(III)] \emph{Functoriality} (Theorems~\ref{thm:rs}--\ref{thm:lift}): the
+anatomy power sums multiply under Rankin--Selberg; lifts are polynomial in the
+base anatomy.
+\item[(IV)] \emph{Automorphy} (Theorem~\ref{thm:gl1}, \S\ref{sec:auto}): $\GL(1)$
+automorphy follows from factorizing anatomy; $\GL(2)$ reduces to the Selberg
+degree-two conjecture.
+\end{itemize}
+
+\section{The localized Weil form and its anatomy}\label{sec:setup}
+Let $L(s)=\sum_{n\ge1}a_L(n)n^{-s}$ lie in the Selberg class $\cS$: a Dirichlet
+series with $a_L(1)=1$ and Ramanujan bound $a_L(n)\ll_\varepsilon n^\varepsilon$,
+a meromorphic continuation with at most a pole at $s=1$, and a functional
+equation of the standard shape with $\Gamma$-factors. We do \emph{not} assume an
+Euler product. Define $\Lambda_L$ by
+\[
+-\frac{L'}{L}(s)=\sum_{n\ge2}\frac{\Lambda_L(n)}{n^{s}}.
+\]
+Fix a Gaussian-localized window of width $\sigma$ at height $T_0$: test functions
+$g$ with $\widehat g$ supported (to exponential accuracy) in a band of type $d$
+and Gaussian decay. The localized Weil form is
+\[
+Q_L[g]=\fa[g]-\fp_L[g],\qquad
+\fp_L[g]=2\sum_{n\ge2}\frac{\Lambda_L(n)}{\sqrt n}\,\mathrm{Re}\,(g\star\tilde g)(\log n),
+\]
+with $\fa[g]=\int\Omega(r)|\widehat g(r)|^2\,dr$, $\Omega(r)=\mathrm{Re}\,
+\psi(\tfrac14+\tfrac{ir}2)-\log\pi$ the archimedean multiplier, and
+$(g\star\tilde g)(u)=\int g(t)\overline{g(t-u)}\,dt$ the autocorrelation, whose
+Fourier transform is $|\widehat g|^2\ge0$. Let $g_0$ be the ground state (bottom
+eigenvector of $Q_L$ on the window) and $c_0=g_0\star\tilde g_0$ its
+autocorrelation.
+
+\begin{definition}[Anatomy]\label{def:anat}
+The \emph{anatomy} of $L$ (in the given window) is the per-$n$ profile
+\[
+\cR_L(n)=\frac{\Lambda_L(n)}{\sqrt n}\,c_0(\log n),\qquad\text{so}\qquad
+\lambda_{\min}(Q_L)=R_\infty-\sum_{n\ge2}\cR_L(n),
+\]
+where $R_\infty$ collects the archimedean contribution. We say $L$ has
+\emph{factorizing anatomy} if $\cR_L(n)=0$ for every $n$ with at least two
+distinct prime factors.
+\end{definition}
+
+The anatomy is a spectral object: it weights the arithmetic coefficient
+$\Lambda_L(n)$ by the ground-state autocorrelation at the lag $\log n$. The
+analysis below turns entirely on the interplay between the arithmetic factor
+$\Lambda_L(n)$ and the analytic factor $c_0(\log n)$.
+
+\section{The forward direction}\label{sec:fwd}
+\begin{theorem}[Euler $\Rightarrow$ factorizing]\label{thm:fwd}
+If $L\in\cS$ has an Euler product $L(s)=\prod_p L_p(p^{-s})$, then $\Lambda_L$ is
+supported on prime powers; consequently $\cR_L(n)=0$ for every non-prime-power
+$n$, and the anatomy factorizes.
+\end{theorem}
+\begin{proof}
+The Euler product gives $\log L(s)=\sum_p\log L_p(p^{-s})$, hence
+$-L'/L(s)=\sum_p\bigl(-L_p'/L_p\bigr)(p^{-s})$, a sum of per-prime Dirichlet
+series in the single variable $p^{-s}$. Comparing Dirichlet coefficients,
+$\Lambda_L(n)=0$ unless $n=p^k$ is a prime power; for prime powers,
+$\Lambda_L(p^k)$ is the coefficient of $p^{-ks}$ in $-L_p'/L_p$, a polynomial in
+the coefficients of $L_p$ given by the Newton--Girard identities. Since
+$\Lambda_L$ vanishes off prime powers, $\cR_L(n)=\Lambda_L(n)n^{-1/2}c_0(\log n)$
+vanishes there as well: the anatomy is supported on prime powers, hence factorizes.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:fwd} identifies the footprint of an Euler product in the
+localized Weil form: the prime form decomposes into single-prime contributions,
+so distinct primes are never entangled. The content of the converse is that this
+absence of entanglement, read off the \emph{spectral} profile $\cR_L$ rather than
+the coefficients $\Lambda_L$, is already enough to force multiplicativity.
+\end{remark}
+
+\section{The autocorrelation of the ground state}\label{sec:auto}
+Because $\cR_L(n)=\Lambda_L(n)n^{-1/2}c_0(\log n)$, the anatomy vanishes at a
+non-prime-power $n$ if and only if $\Lambda_L(n)=0$ \emph{or} $c_0(\log n)=0$.
+The converse therefore turns on the real zeros of $c_0$.
+
+\begin{lemma}[Zero structure]\label{lem:auto}
+Let the ground state be $g_0(t)=P(t)\,e^{-t^2/2\sigma^2}$ with $P$ a real
+polynomial of degree $m$. Then
+\[
+c_0(u)=Q_\sigma(u)\,e^{-u^2/4\sigma^2},\qquad \deg Q_\sigma\le 2m,
+\]
+so $c_0$ has at most $2m$ real zeros. For the pure lowest mode ($m=0$),
+$c_0(u)=\sqrt{\pi\sigma^2}\,e^{-u^2/4\sigma^2}>0$ has none. For a pure Hermite
+mode $g_0=H_m(t/\sigma)e^{-t^2/2\sigma^2}$,
+$c_0(u)=\sqrt{\pi\sigma^2}\,L_m\!\bigl(u^2/2\sigma^2\bigr)e^{-u^2/4\sigma^2}$ with
+$L_m$ the Laguerre polynomial, hence exactly $m$ positive real zeros, located at
+$u=\sigma\sqrt{2\rho_j}$ where $\rho_j$ are the roots of $L_m$.
+\end{lemma}
+\begin{proof}
+Write $c_0(u)=\int P(t)P(t-u)e^{-t^2/2\sigma^2}e^{-(t-u)^2/2\sigma^2}\,dt$. The
+exponent is $-\frac1{2\sigma^2}(t^2+(t-u)^2)=-\frac1{\sigma^2}(t-\tfrac u2)^2
+-\frac{u^2}{4\sigma^2}$. Substituting $s=t-\tfrac u2$,
+$c_0(u)=e^{-u^2/4\sigma^2}\int P(s+\tfrac u2)P(s-\tfrac u2)e^{-s^2/\sigma^2}\,ds$,
+and the integral is a polynomial $Q_\sigma(u)$ of degree $\le2m$ (each factor is
+degree $m$ in $s$ and $u$, and the odd-in-$s$ terms integrate to expressions of
+the stated degree). The Hermite case is the classical evaluation of the
+ambiguity function of the Hermite--Gauss functions at zero frequency offset,
+giving the Laguerre polynomial; its $m$ simple positive roots are those of $L_m$.
+\end{proof}
+
+\section{The converse and the characterization}\label{sec:conv}
+\begin{theorem}[Converse, localized-detector regime]\label{thm:convdet}
+Suppose $\fp_L$ is a relative perturbation of $\fa$ on the window (the
+localized-detector regime). Then the ground state of $Q_L$ is dominated by the
+lowest mode, whose Fourier mass concentrates near $r=0$ where $\Omega$ is least;
+its autocorrelation $c_0$ is a strictly positive Gaussian on the band, so
+$c_0(\log n)>0$ for all $n$. Consequently factorizing anatomy forces
+$\Lambda_L(n)=0$ for every non-prime-power $n$, and $L$ has an Euler product.
+\end{theorem}
+\begin{proof}
+$\fa[g]=\int\Omega(r)|\widehat g(r)|^2\,dr$ with $\Omega(r)$ strictly increasing
+in $|r|$ (the digamma real part), so the minimizer of $\fa[g]/\|g\|^2$ in the
+Gaussian-localized class concentrates $\widehat g$ near $r=0$: the lowest
+Hermite--Gauss mode, a Gaussian. Writing $Q_L=\fa-\fp_L$ with $\fp_L$ relatively
+form-bounded with small bound, the ground state $g_0$ is a small perturbation of
+this Gaussian; by Lemma~\ref{lem:auto} its autocorrelation is
+$c_0=Q_\sigma e^{-u^2/4\sigma^2}$ with $Q_\sigma$ close to a positive constant on
+the band, hence $c_0>0$ there, so $c_0(\log n)>0$ for every $n$ with $\log n$ in
+the band. Then $\cR_L(n)=0$ forces $\Lambda_L(n)=0$; Theorem~\ref{thm:fwd} read
+backwards produces the Euler product.
+\end{proof}
+
+\begin{theorem}[Converse, two-window form]\label{thm:conv2}
+For a ground state with any finite excitation, $c_0$ has finitely many real
+zeros, located (Lemma~\ref{lem:auto}) at $u=\sigma\,\rho_j(\sigma)$. Fix two
+widths $\sigma_1\ne\sigma_2$ of generic ratio, so that the zero sets
+$\{\sigma_1\rho_j\}$ and $\{\sigma_2\rho_j\}$ meet only at $u=0$. If the anatomy
+factorizes in both windows, then for each non-prime-power $n$ the values
+$c_0^{(\sigma_1)}(\log n)$ and $c_0^{(\sigma_2)}(\log n)$ cannot both vanish, so
+$\Lambda_L(n)=0$. Hence $L$ has an Euler product.
+\end{theorem}
+\begin{proof}
+By Lemma~\ref{lem:auto} the real zeros of $c_0^{(\sigma)}$ are $u=\sigma\rho_j$
+with $\rho_j$ the (window-shape-dependent) roots; for generic $\sigma_2/\sigma_1$
+no nonzero value lies in both scaled sets. A fixed $\log n>0$ is therefore a zero
+of at most one of the two autocorrelations, so factorization in both windows
+forces $\Lambda_L(n)=0$ for every non-prime-power $n$.
+\end{proof}
+
+\begin{theorem}[Characterization]\label{thm:char}
+An $L\in\cS$ has an Euler product if and only if its localized-Weil anatomy
+factorizes: in the localized-detector regime, in a single window
+(Theorem~\ref{thm:convdet}); in general, across two windows of generic width
+ratio (Theorem~\ref{thm:conv2}). The forward direction is
+Theorem~\ref{thm:fwd}.
+\end{theorem}
+
+\begin{remark}
+The structural content is that an Euler product is a property visible across
+\emph{all} localizations: the only way a non-Euler $L$ could fake factorization
+in one window --- an autocorrelation zero falling on $\log n$ --- cannot persist
+as the window varies, because the finitely many zeros of $c_0$ move with
+$\sigma$ while the candidate hidden coefficient sits at a fixed $\log n$. This is
+verified numerically in Appendix~\ref{app:code}.
+\end{remark}
+
+\section{Positivity as a Carleson/Bessel bound and the extremal reduction}
+\label{sec:carleson}
+
+Before turning to the automorphic refinements, we record what the anatomy says
+about the \emph{positivity} of the localized form --- the property whose global
+counterpart is the Riemann Hypothesis. The decomposition $\lambda_{\min}(Q_L)=
+R_\infty-\sum_{n}\cR_L(n)$ of Definition~\ref{def:anat} turns $\lambda_{\min}\ge0$
+into a comparison between the archimedean form and the prime measure, which is
+exactly a Carleson/Bessel bound.
+
+Factor the archimedean form $\fa=B^{*}B$ (with $B\succ0$ on its range, the
+Sonin/de~Branges metric) and set $\widetilde w_n:=B^{-*}w_n$, where $w_n$ is the
+evaluation functional $g\mapsto(g\star\tilde g)(\log n)$.
+
+\begin{theorem}[Carleson reformulation of local positivity]\label{thm:carleson}
+$\lambda_{\min}(Q_L)\ge0$ if and only if the weighted prime system
+$\{(\Lambda_L(n)/\sqrt n)^{1/2}\widetilde w_n\}_n$ is Bessel with bound $\le1$ in
+the archimedean metric; equivalently the prime measure
+$\nu_L=\sum_{n\ge2}\frac{\Lambda_L(n)}{\sqrt n}\delta_{\log n}$ is a Carleson
+measure with constant $\le1$ for the band-limited window space.
+\end{theorem}
+\begin{proof}
+$\lambda_{\min}\ge0\iff Q_L\succeq0\iff\sum_n\frac{\Lambda_L(n)}{\sqrt n}w_nw_n^{*}
+\preceq\fa=B^{*}B$. Conjugating by $B^{-1}$ gives $\sum_n\frac{\Lambda_L(n)}
+{\sqrt n}\widetilde w_n\widetilde w_n^{*}\preceq I$, the Bessel bound $\le1$.
+\end{proof}
+
+\begin{proposition}[Finite Carleson bound, unconditional]\label{prop:finite}
+Under the Ramanujan bound $|a_L(p^k)|\le k+1$ and the Gaussian window,
+$\sum_n\frac{|\Lambda_L(n)|}{\sqrt n}\|\widetilde w_n\|^2<\infty$: the prime
+measure is always Carleson with \emph{some} finite constant.
+\end{proposition}
+\begin{proof}
+$\sum_{p,k}\frac{(k+1)\log p}{p^{k/2}}\|\widetilde w_{p^k}\|^2<\infty$ by the
+$p^{-k/2}$ decay and the super-polynomial window decay of $\|\widetilde w_n\|^2$
+in $\log n$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:carleson} re-expresses local positivity in the language of
+Carleson measures and Bessel systems --- connecting to the harmonic-analysis
+literature --- but it is a conjugation of a positive-semidefinite condition, not
+a new statement about zeros: the finite bound (Proposition~\ref{prop:finite}) is
+unconditional, while the bound $\le1$ \emph{is} local Weil positivity. Its value
+is conceptual clarity and the availability of frame-theoretic tools.
+\end{remark}
+
+\begin{theorem}[Concavity and the extremal reduction]\label{thm:concave}
+The map $\Lambda\mapsto\lambda_{\min}(Q_L(\Lambda))$ is concave and, on
+$\Lambda_n\ge0$, coordinatewise non-increasing; hence on a box
+$\{0\le\Lambda_n\le c_n\}$ its minimum is the all-upper corner, and positivity
+over the box reduces to positivity of the single corner object. For the tempered
+non-negative box $a_L(p^k)\in[0,2]$ the corner is the $\zeta^2$-point.
+\end{theorem}
+
+The reduction is the content; whether the corner is positive is a separate matter
+not settled here. These two reformulations were proposed earlier with the
+\emph{converse} (factorizing anatomy $\Rightarrow$ Euler product) left as a
+classification conjecture; that converse is now the theorem of
+\S\ref{sec:conv} (Theorem~\ref{thm:char}), so the anatomy is established as an
+exact discriminant of the Euler-product property, with the Carleson bound $\le1$
+remaining the open arithmetic core of positivity.
+
+\section{$\GL(n)$: Satake recovery, degree, and the Ramanujan bound}\label{sec:gln}
+Let $L(s,\pi)$ be the standard $L$-function of a cuspidal automorphic
+representation $\pi$ of $\GL(n)$ over $\mathbb Q$, with local factors
+$L_p(x)=\prod_{i=1}^n(1-\alpha_{i,p}x)^{-1}$ and Satake parameters
+$\{\alpha_{i,p}\}_{i=1}^n$. Then $\Lambda_L(p^k)=(\log p)\,s_k(p)$ with the
+\emph{$k$-th power sum}
+\[
+s_k(p)=\sum_{i=1}^n\alpha_{i,p}^k,\qquad\text{so}\qquad
+\cR_L(p^k)=\frac{\log p}{p^{k/2}}\,s_k(p)\,c_0(\log p^k).
+\]
+
+\begin{theorem}[Satake recovery]\label{thm:satake}
+In the localized-detector regime ($c_0(\log p^k)\ne0$, Theorem~\ref{thm:convdet}),
+the anatomy $\{\cR_L(p^k)\}_{k\ge1}$ determines:
+\begin{enumerate}
+\item the power sums $s_k(p)$ for all $k$, by dividing out the explicit factor
+$p^{-k/2}(\log p)c_0(\log p^k)$;
+\item the degree $n=\rank\bigl[s_{i+j}(p)\bigr]_{0\le i,j\le N}$ for $N\ge n$
+(the eventual Hankel rank), with $s_0(p)=n$;
+\item the local factor $L_p$, since the first $n$ power sums fix the elementary
+symmetric functions of $\{\alpha_{i,p}\}$ by Newton--Girard;
+\item the largest Satake parameter $\max_i|\alpha_{i,p}|=\lim_{k\to\infty}
+|s_k(p)|^{1/k}$, so the Ramanujan bound $|\alpha_{i,p}|=1$ holds at $p$ iff
+$\cR_L(p^k)$ decays exactly like $p^{-k/2}$.
+\end{enumerate}
+By strong multiplicity one, $\{\cR_L(p^k)\}_{p,k}$ determines $\pi$.
+\end{theorem}
+\begin{proof}
+(1) is immediate. (2): the Hankel matrix of power sums of an $n$-element multiset
+has rank equal to the number of distinct values, generically $n$; for $N\ge n$
+the rank stabilizes (a standard fact for power-sum Hankel matrices, via the
+Vandermonde factorization $[\,s_{i+j}\,]=V^\top D V$ with $V$ the Vandermonde of
+the $\alpha_{i,p}$). (3) is Newton--Girard. (4): $|s_k(p)|^{1/k}\to\max_i
+|\alpha_{i,p}|$ since the largest-modulus term dominates (up to cancellation on a
+density-zero set of $k$, excluded by Cesàro). Strong multiplicity one upgrades
+local data to $\pi$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:char} detects the \emph{existence} of an Euler product;
+Theorem~\ref{thm:satake} shows the anatomy further reads its \emph{degree},
+\emph{local factors}, and \emph{Ramanujan bound}. The anatomy is thus a complete,
+faithful local invariant of the automorphic datum --- obtained from a single
+quadratic spectral functional, with no twists, in contrast to the
+converse-theorem route which uses the functional equations of all $L\otimes\chi$.
+\end{remark}
+
+\section{The anatomy generating function and local reconstruction}\label{sec:gen}
+\begin{theorem}[Local reconstruction]\label{thm:gen}
+Form the \emph{anatomy generating function} $G_p(x)=\sum_{k\ge1}s_k(p)\,x^k$.
+Then
+\[
+G_p(x)=\sum_{i=1}^n\frac{\alpha_{i,p}x}{1-\alpha_{i,p}x}=x\,\frac{L_p'(x)}{L_p(x)},
+\qquad
+L_p(x)=\exp\!\int_0^x\frac{G_p(t)}{t}\,dt,
+\]
+so the anatomy reconstructs the local Euler factor $L_p$ in closed form, exactly,
+not merely its first $n$ coefficients.
+\end{theorem}
+\begin{proof}
+$\sum_k s_k(p)x^k=\sum_i\sum_{k\ge1}(\alpha_{i,p}x)^k=\sum_i\alpha_{i,p}x/
+(1-\alpha_{i,p}x)$. On the other hand $\log L_p(x)=-\sum_i\log(1-\alpha_{i,p}x)
+=\sum_i\sum_{k\ge1}(\alpha_{i,p}x)^k/k=\sum_k s_k(p)x^k/k$, whence
+$x\,d/dx\log L_p=\sum_k s_k(p)x^k=G_p$. Integrating recovers $\log L_p$, and
+exponentiating $L_p$.
+\end{proof}
+
+\section{Functoriality of the anatomy}\label{sec:funct}
+The power-sum encoding makes the anatomy compatible with the standard functorial
+operations.
+
+\begin{theorem}[Rankin--Selberg multiplicativity]\label{thm:rs}\sloppy
+Let $\pi,\pi'$ be automorphic representations of $\GL(n)$, $\GL(n')$ with Satake
+$\{\alpha_{i,p}\}$, $\{\beta_{j,p}\}$. The Rankin--Selberg convolution
+$\pi\boxtimes\pi'$ has Satake $\{\alpha_{i,p}\beta_{j,p}\}$, so its anatomy power
+sums factor:
+\[
+s_k(\pi\boxtimes\pi',p)=\Bigl(\sum_i\alpha_{i,p}^k\Bigr)\Bigl(\sum_j\beta_{j,p}^k\Bigr)
+=s_k(\pi,p)\,s_k(\pi',p).
+\]
+Equivalently, the map $\pi\mapsto\bigl(s_k(\pi,p)\bigr)_{k}$ sends Rankin--Selberg
+convolution to pointwise product of power-sum sequences.
+\end{theorem}
+\begin{proof}
+The Satake parameters of $\pi\boxtimes\pi'$ are the pairwise products
+$\alpha_{i,p}\beta_{j,p}$; then $s_k=\sum_{i,j}(\alpha_{i,p}\beta_{j,p})^k=
+(\sum_i\alpha_{i,p}^k)(\sum_j\beta_{j,p}^k)$.
+\end{proof}
+
+\begin{theorem}[Lifts are polynomial in the base anatomy]\label{thm:lift}
+For any functorial operation $r$ on $\GL(n)$ (e.g.\ $\Sym^m$, $\wedge^m$, or a
+fixed representation of the dual group), the anatomy power sums of $r(\pi)$ are
+fixed universal polynomials in $\{s_j(\pi,p)\}_{j\le mn}$. In particular for
+$\GL(2)$ with Satake $\{\alpha,\beta\}$ ($\det=\alpha\beta$):
+\[
+s_k(\Sym^2\pi,p)=s_{2k}(\pi,p)+(\alpha\beta)^k,\qquad
+s_k(\wedge^2\pi,p)=(\alpha\beta)^k,
+\]
+so $s_k(\Sym^2\pi,p)=s_{2k}(\pi,p)+s_k(\wedge^2\pi,p)$, and all are determined by
+the base anatomy via Newton--Girard.
+\end{theorem}
+\begin{proof}
+The Satake of $r(\pi)$ are fixed monomials in the $\alpha_{i,p}$ determined by the
+weights of $r$; their power sums are symmetric functions of the $\alpha_{i,p}$,
+hence (Newton--Girard) polynomials in the base power sums $s_j(\pi,p)$. The
+$\GL(2)$ formulas are the cases $\Sym^2\colon\{\alpha^2,\alpha\beta,\beta^2\}$ and
+$\wedge^2\colon\{\alpha\beta\}$.
+\end{proof}
+
+\begin{corollary}
+The anatomy is a ring homomorphism on the level of power sums: it linearizes the
+tensor structure of the automorphic spectrum (Theorem~\ref{thm:rs}) and is
+covariant under all functorial lifts (Theorem~\ref{thm:lift}). A single localized
+Weil form thus carries the full functorial package of $\pi$, prime by prime.
+\end{corollary}
+
+\section{Automorphy: $\GL(1)$ closed, $\GL(2)$ reduced}\label{sec:auto2}
+\label{sec:auto}
+\begin{theorem}[$\GL(1)$ automorphy]\label{thm:gl1}
+Let $L\in\cS$ have degree $1$ (a single $\Gamma$-factor) and factorizing anatomy.
+Then $L$ is automorphic on $\GL(1)$: a shifted Dirichlet $L$-function
+$L(s+i\tau,\chi)$ (a Hecke character).
+\end{theorem}
+\begin{proof}
+By Theorem~\ref{thm:char}, factorizing anatomy gives an Euler product. Degree-one
+elements of the Selberg class with an Euler product are exactly the shifted
+Dirichlet $L$-functions, by the Kaczorowski--Perelli classification of $\cS$ in
+degree $1$ (classically, this is Hecke's theorem). These are the automorphic
+representations of $\GL(1)/\mathbb Q$.
+\end{proof}
+
+\noindent\textbf{The $\GL(2)$ reduction.} For degree $2$, factorizing anatomy
+yields an Euler product (Theorem~\ref{thm:char}), and the anatomy's Hankel rank
+(Theorem~\ref{thm:satake}) reads off local degree $2$. Whether a degree-two
+Selberg-class element with an Euler product is automorphic of $\GL(2)$ type is the
+\emph{Selberg degree-two conjecture}, open, with the partial results of
+Kaczorowski--Perelli (the degree spectrum omits $(1,2)$; degree two is
+constrained). The anatomy contributes to this frontier two genuinely new spectral
+tools: the \emph{Hankel-rank degree detector} (Theorem~\ref{thm:satake}.2) and the
+\emph{closed-form local reconstruction} $G_p\mapsto L_p$ (Theorem~\ref{thm:gen}),
+together with the functorial transfer (\S\ref{sec:funct}) that lets one test
+$\Sym^2$- and $\wedge^2$-automorphy from the base anatomy.
+
+\section{Conclusion and the automorphy direction}
+The localized-Weil anatomy is a complete, faithful local invariant of an
+$L$-function's multiplicative structure: it detects the Euler product
+(Theorem~\ref{thm:char}), recovers the Satake parameters, degree and Ramanujan
+bound (Theorem~\ref{thm:satake}), reconstructs the local factors in closed form
+(Theorem~\ref{thm:gen}), and is functorial (\S\ref{sec:funct}). The natural open
+continuation, genuinely hard and independent of RH, is the \emph{automorphy
+direction}: does factorizing anatomy together with the functional equation force
+$\pi$ to be cuspidal automorphic of $\GL(n)$ type --- a twist-free, spectral
+analogue of the Langlands converse theorem? For $\GL(1)$ this is a theorem
+(Theorem~\ref{thm:gl1}); for $\GL(2)$ it is the Selberg degree-two conjecture,
+where the anatomy now supplies new spectral invariants.
+
+\appendix
+\section{Numerical verification of the autocorrelation zero structure}\label{app:code}
+The converse (Theorems~\ref{thm:convdet}--\ref{thm:conv2}) rests on
+Lemma~\ref{lem:auto}: the pure lowest mode has a zero-free Gaussian
+autocorrelation, a pure Hermite mode $H_m$ has exactly $m$ real autocorrelation
+zeros (Laguerre), and these zeros move linearly with the window width. The
+following self-contained program verifies all three.
+
+\lstinputlisting[language=Python,caption={\texttt{B2\_autocorrelation\_zeros.py}}]{code.py}
+
+\medskip\noindent\textbf{Output.}
+\begin{lstlisting}
+(a) PURE GAUSSIAN ground state (lowest mode):
+   sigma=1.5:  #real zeros in [0,12] = 0   (c0>0 everywhere: True)
+   sigma=2.0:  #real zeros in [0,12] = 0   (c0>0 everywhere: True)
+   sigma=3.0:  #real zeros in [0,12] = 0   (c0>0 everywhere: True)
+(b) PURE EXCITED modes H_k  (autocorr = Laguerre L_k, k zeros), sigma=2:
+   H_2:  #real zeros=2  zeros u=[2.165, 5.226]
+   H_4:  #real zeros=4  zeros u=[1.606, 3.737, 6.024, 8.670]
+   H_6:  #real zeros=6  zeros u=[1.335, 3.084, 4.893, 6.797, 8.871, 11.308]
+(c) NON-STATIONARITY: first three real zeros of c_0 (pure H_4) vs sigma:
+   sigma=1.40:  1.124  2.616  4.217
+   sigma=2.00:  1.606  3.737  6.024
+   sigma=3.00:  2.410  5.606  9.037
+\end{lstlisting}
+The Gaussian lowest mode is zero-free (converse holds in a single window); the
+excited modes have exactly $m$ zeros at $u=\sigma\sqrt{2\rho_j}$, scaling linearly
+with $\sigma$ (non-stationary), confirming the two-window converse.
+
+\begin{thebibliography}{9}
+\bibitem{RP7} D.~A.~Trejo Pizzo, \emph{A rigorous localized Weil detector}, preprint, 2026.
+\bibitem{KP} J.~Kaczorowski and A.~Perelli, \emph{On the structure of the Selberg class}, I--VII (1999--2011).
+\bibitem{Sel} A.~Selberg, \emph{Old and new conjectures and results about a class of Dirichlet series}, Collected Papers II.
+\bibitem{bgCarleson} L.~Carleson, \emph{Interpolations by bounded analytic functions and the corona problem}, Ann.\ of Math.\ \textbf{76} (1962), 547--559.
+\bibitem{bgGarnett} J.~B.~Garnett, \emph{Bounded Analytic Functions}, Academic Press, 1981.
+\bibitem{bgRSar} Z.~Rudnick and P.~Sarnak, \emph{Zeros of principal $L$-functions and random matrix theory}, Duke Math.\ J.\ \textbf{81} (1996), 269--322.
+\bibitem{bgYoung} R.~M.~Young, \emph{An Introduction to Nonharmonic Fourier Series}, Academic Press, 1980.
+\end{thebibliography}
+
+\end{document}

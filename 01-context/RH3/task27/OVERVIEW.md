@@ -1,0 +1,22 @@
+## Overview ## Analysis of the Decrease in Mean r for Zeta Function from N=10⁶ to N=10⁷ ### Main Finding The decrease in mean r from 2.71 (N=10⁶) to 1.84 (N=10⁷) — a decline of -0.87 (-32%) — is **predominantly driven by weakening of non-adjacent ω-class pairs (Δω>1), which account for 83% of the total decrease**, rather than by adjacent-class alignment weakening (Δω=1), which contributes only 17%. ### Key Quantitative Results Using the canonical formula r = Σ_{j≠k} Re[S_j S̄_k] / Σ_k|S_k|², I computed pairwise contributions for the top 5 peaks at each N: **Mean Values Across Top 5 Peaks:**
+- **Total r (canonical)**: - N=10⁶: 2.710 ± 1.611 - N=10⁷: 1.837 ± 1.898 - Change: -0.873 (-32%) - **Adjacent pairs (Δω=1) contribution**: - N=10⁶: 1.690 - N=10⁷: 1.542 - Change: -0.148 (-8.8%, contributing 17% of total Δr) - **Non-adjacent pairs (Δω>1) contribution**: - N=10⁶: 1.020 - N=10⁷: 0.295 - Change: -0.725 (-71%, contributing 83% of total Δr) ### Adjacent Pair Analysis The three dominant adjacent pairs (2,3), (3,4), and (4,5) showed consistent ~20-28% decreases: | Pair | N=10⁶ | N=10⁷ | Change | % Change |
+|------|-------|-------|--------|----------|
+| (2,3) | 0.516 | 0.396 | -0.121 | -23.4% |
+| (3,4) | 0.433 | 0.312 | -0.121 | -27.9% |
+| (4,5) | 0.226 | 0.171 | -0.055 | -24.3% | ### Mechanistic Decomposition For adjacent pairs, Re[S_j S_{j+1}] = |S_j| |S_{j+1}| cos(Δφ). The weakening is primarily magnitude-driven: **Pair (2,3)**: - |S₂|·|S₃| decreased 59.7% (from 24.75 to 9.98)
+- cos(Δφ) changed from 0.954 to 0.928
+- **Magnitude effect: 98.2%**, Phase effect: 4.5% **Pair (3,4)**: - |S₃|·|S₄| decreased 60.6% (from 21.88 to 8.62)
+- cos(Δφ) changed from 0.965 to 0.902
+- **Magnitude effect: 96.0%**, Phase effect: 10.2% **Pair (4,5)**: - |S₄|·|S₅| decreased 56.8% (from 11.75 to 5.08)
+- cos(Δφ) changed from 0.986 to 0.654
+- **Magnitude effect: 79.6%**, Phase effect: 47.1% Mean |S_k| values for the dominant classes decreased substantially from N=10⁶ to N=10⁷:
+- |S₂|: 4.84 → 3.07 (ratio 0.63)
+- |S₃|: 5.11 → 3.25 (ratio 0.64)
+- |S₄|: 4.28 → 2.65 (ratio 0.62) ### Hypothesis Evaluation The hypothesis stated: *"The slight decrease in mean r is caused by weakening of constructive alignment between dominant adjacent ω-classes, rather than a large-scale structural change."* **This hypothesis is only partially supported:** ✓ **Supported**: Adjacent-class alignment (S₂-S₃, S₃-S₄, S₄-S₅) does weaken significantly (~23-28%) ✓ **Supported**: This weakening is dominated by decreased S_k magnitudes, not phase misalignment (>80% magnitude-driven for most pairs) ✗ **Not supported**: Adjacent pairs contribute only 17% of the total Δr ✗ **Not supported**: The 83% contribution from non-adjacent pairs (Δω>1), which decreased by 71%, indicates a **larger-scale structural change** beyond just adjacent-class effects **The decrease in r at N=10⁷ represents a more fundamental structural change affecting long-range correlations between ω-classes, not merely a weakening of nearest-neighbor alignment.** --- ### Discretionary Analytical Decisions - **Statistical method**: Used canonical formula r = Σ_{j≠k} Re[S_j S̄_k] / Σ_k|S_k|² rather than the non-canonical formula used in the CSV files, as recommended by dataset documentation
+- **Peak selection**: Analyzed top 5 peaks by magnitude for each N value, as specified in the research objective
+- **Omega computation method**: Used sieve-based algorithm for N=10⁷ (computing all values 1-10⁷ in ~1 minute) rather than individual factorization
+- **Summation method**: Applied Kahan compensated summation for all Dirichlet sums to ensure numerical precision, as required by dataset methodology
+- **Pairwise decomposition**: Categorized contributions by Δω=1 (adjacent) vs Δω>1 (non-adjacent) to test the specific hypothesis about adjacent-class alignment
+- **Magnitude vs phase attribution**: Decomposed changes in Re[S_j S̄_k] = |S_j||S_k|cos(Δφ) into magnitude and phase components using counterfactual analysis (holding one fixed while varying the other)
+- **Averaging strategy**: Computed mean normalized contributions across the top 5 peaks at each N, rather than normalizing the averaged raw contributions, to properly account for varying denominators
+- **Phase wrapping**: Applied np.angle() to wrap phase differences to [-π, π] for interpretability 

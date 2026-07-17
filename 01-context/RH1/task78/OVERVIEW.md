@@ -1,0 +1,24 @@
+## Overview ## Analysis of GEV Shape Parameter ξ vs Resonance Strength in Perturbed L_DH Functions ### Main Finding **The hypothesis is REJECTED.** The GEV shape parameter ξ of the R_comp metric is NOT directly related to resonance strength. Instead, ξ is a remarkably stable intrinsic property of the L_DH function family (ξ ≈ 0.81), invariant across perturbations spanning 2.5× in resonance amplitude. Resonance strength is encoded in the GEV scale parameter σ, not the shape parameter ξ. ### Quantitative Results #### 1. GEV Shape Parameters (with 95% bootstrap CIs)
+- **ε = -0.2485** (hypothesized strong): ξ = 0.8107 [0.8024, 0.8192]
+- **ε = -0.05** (hypothesized weak): ξ = 0.8105 [0.8023, 0.8191] - **ε = 0** (unperturbed reference): ξ = 0.8110 [0.8024, 0.8206]
+- **Difference Δξ**: 0.0002 between "strong" and "weak" (p = 0.398, not significant)
+- **Coefficient of variation**: 0.022% across all three perturbations #### 2. Resonance Strength Observations
+Contrary to the hypothesis labeling, the data reveal:
+- max(R_comp) for ε = -0.05: **3.67 × 10⁻⁵**
+- max(R_comp) for ε = -0.2485: **1.90 × 10⁻⁵** - max(R_comp) for ε = 0: **4.28 × 10⁻⁵** The ε = -0.2485 perturbation shows the **weakest** resonance (1.93× weaker than ε = -0.05), contradicting the hypothesis that it represents "maximal resonance." #### 3. Scale Parameter Relationship
+The GEV scale parameter σ exhibits perfect correlation with resonance strength:
+- σ for ε = -0.2485: 2.92 × 10⁻⁶
+- σ for ε = -0.05: 6.38 × 10⁻⁶
+- σ for ε = 0: 7.51 × 10⁻⁶
+- **Correlation(σ, max(R_comp))**: r = 1.000, R² = 0.9999 #### 4. Statistical Testing
+- Permutation test (H₀: ξ_max = ξ_weak): p = 0.398 (fail to reject)
+- Bootstrap confidence intervals for all three ξ values show complete overlap
+- All ξ values are ~3.9% higher than the literature reference ξ ≈ 0.78, consistent within measurement uncertainty ### Interpretation The analysis reveals a fundamental decoupling between two aspects of extreme value behavior: 1. **Tail Shape (ξ)**: The GEV shape parameter ξ ≈ 0.81 characterizes the heavy-tailed nature of the R_comp distribution. This is an intrinsic mathematical property of the L_DH function family, conserved across perturbations. The positive value (ξ > 0) indicates a Fréchet-type distribution with polynomial decay, characteristic of resonance mechanisms in non-multiplicative arithmetic functions. 2. **Magnitude (σ)**: The GEV scale parameter σ determines the absolute size of extreme values and varies by 2.57× across perturbations, tracking resonance amplitude with near-perfect correlation (R² = 0.9999). This distinction is crucial: the hypothesis conflated "heavy-tailedness" (tail shape) with "strength" (magnitude). While ξ quantifies the qualitative behavior of the tail (how fast probabilities decay), it does not determine the absolute values. Two distributions can have identical tail shapes (same ξ) but vastly different scales. ### Implications 1. **Universal Heavy-Tailed Signature**: The invariance of ξ ≈ 0.81 across perturbations suggests this heavy-tailed behavior is a fundamental feature of the resonance mechanism itself, not dependent on perturbation details. This universality class may extend to other non-multiplicative L-functions. 2. **Metric Validity**: The R_comp metric successfully isolates the resonance mechanism (all functions show ξ ≈ 0.81, matching the reference), but the shape parameter alone cannot predict resonance strength. 3. **Methodological Insight**: For resonance detection, one should examine: - The **shape parameter ξ** to identify the mechanism (is it heavy-tailed?) - The **scale parameter σ** to quantify strength (how large are the peaks?) ### Discretionary Decisions - **GEV fitting method**: Used maximum likelihood estimation via `scipy.stats.genextreme.fit()` (standard approach)
+- **Bootstrap parameters**: n_bootstrap = 1000, confidence_level = 0.95, no outlier removal (data were well-behaved)
+- **Block maxima extraction**: n_blocks = 100, yielding 90 time points per block (standard practice for EVT analysis)
+- **Perturbation values**: ε_max = -0.2485 and ε_weak = -0.05 as specified by the hypothesis, plus ε = 0 for verification
+- **Time series parameters**: N = 10⁶, t ∈ [1000, 10000], 9001 points (as specified)
+- **Numerical precision**: Kahan-compensated summation for N ≤ 10⁶ (validated approach from dataset description)
+- **R_comp definition**: Mean resultant length of composite squarefree terms (ω(n) ≥ 2, μ(n) ≠ 0)
+- **Significance threshold**: α = 0.05 for all statistical tests
+- **Vectorized computation batch size**: 50 time points per batch (balance between memory and performance) 

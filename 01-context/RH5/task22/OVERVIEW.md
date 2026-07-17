@@ -1,0 +1,42 @@
+## Overview <output>
+<conclusion>
+The Front I comparative analysis on the available five-function panel confirms the research hypothesis: all five Jacobi b_n sequences share a log-quadratic growth law, but L_DH and L(Δ,s) exhibit 2–7× larger parameter instability under spectral re-weighting and (for L_DH) ~2× the normalized residual variance of ζ and L(χ₄ mod 5).
+</conclusion> <methods>
+Data sources. Five N=5000 zero lists were referenced; four were used directly (zeta_zeros_N5000_dps50.npy, ldh_zeros_N5000_dps50.npy, lchi5_zeros_N5000_dps80.npy, zeta_delta_strong_N5000_dps50.npy). The N=5000 L(Δ,s) list (ldelta_zeros_N5000_dps80.npy) is not present in the workspace (consistent with the dataset note that its generation is incomplete); pre-computed Jacobi coefficients derived from the partial N=1298 L(Δ,s) list (giving 129 a_n / 128 b_n entries) were used instead. Jacobi coefficients. Pre-computed Lanczos coefficient files {function}_{a,b}_{unif,weighted}.npy were loaded (n up to 500 for ζ, ζ_δ, L_DH, L(χ₄ mod 5); up to 129/128 for L(Δ,s)). Two spectral weightings: uniform and 1/|ρ|². As documented in r40, the 1/|ρ|² weight is real-part insensitive, so ζ and ζ_δ^strong yield identical Jacobi coefficients under both weights (verified). Model selection. For each (function, weight) we fit the b_n sequence on n ∈ [5, N] (excluding the small-n Lanczos transient, especially pronounced under 1/|ρ|² weighting) with two candidate models:
+- Log: b_n = A + B·log(n)
+- Log-quadratic: b_n = A + B·log(n) + C·log²(n)
+A log-cubic model was also fit for diagnostics. Selection was by AIC and BIC. Normalized residual standard deviation = RMSE / |mean(b_n)| was reported. Parameter sensitivity was quantified as the percent change in each coefficient (A, B, C) when switching from uniform to 1/|ρ|² weight. Visualization. Final 2-panel figure (front1_bn_logquad_fits.png) overlays all five b_n sequences with their log-quadratic fits, one panel per weighting (A: uniform, B: 1/|ρ|²), on a log-n x-axis. Libraries: numpy, scipy.optimize.curve_fit, pandas, matplotlib.
+</methods> <results>
+Model selection. For all 5 functions and both weights, BOTH AIC and BIC select the log-quadratic model over the simple-log model (large ΔAIC and ΔBIC > 100 in every case). The log-quadratic form is therefore the universally preferred parsimonious description. Summary table (log-quadratic fit, b_n on n ∈ [5,N]): function N A_unif A_wgt B_unif B_wgt C_unif C_wgt |ΔB%| |ΔC%| rmse_rel_u rmse_rel_w
+ζ 499 1332 1333 17.81 17.25 −2.722 −2.653 3.12 2.52 0.00150 0.00157
+ζ_δ (strong) 499 1332 1333 17.81 17.25 −2.722 −2.653 3.12 2.52 0.00150 0.00157
+L_DH 499 1229 1231 10.44 9.36 −1.583 −1.470 10.27 7.14 0.00318 0.00334
+L(χ₄ mod 5) 499 1079 1079 11.71 11.50 −1.761 −1.729 1.84 1.84 0.00145 0.00139
+L(Δ,s) 128 244.2 244.4 4.09 3.62 −0.940 −0.859 11.57 8.60 0.00197 0.00203 Hypothesis evaluation:
+• Shared log-quadratic growth — CONFIRMED for all five functions (AIC/BIC strongly prefers log-quadratic).
+• Residual variance: L_DH has the highest normalized residual SD (~0.32%) — roughly 2× ζ (0.15%) and L(χ₄ mod 5) (0.14%). L(Δ,s) sits at 0.20% on its shorter window — comparable to ζ.
+• Parameter instability under weight switch: |ΔB%| is 10.3% for L_DH and 11.6% for L(Δ,s), vs only 3.1% for ζ and 1.8% for L(χ₄ mod 5). |ΔC%| follows the same ordering (7.1% / 8.6% vs 2.5% / 1.8%). L_DH and L(Δ,s) are 3–7× more weight-sensitive than the ζ/L(χ₄) pair.
+• ζ_δ^strong yields identical b_n to ζ (expected: 1/|ρ|² with assumed Re=1/2 is structurally insensitive to real-part shifts; this matches r40). Output files written: front1_summary_table.csv, front1_bn_logquad_fits.png.
+</results> <challenges>
+1. The N=5000, dps=80 L(Δ,s) zero list (ldelta_zeros_N5000_dps80.npy) is NOT present in the workspace. The dataset description explicitly notes this generation is incomplete. Only pre-computed Jacobi coefficients from the partial N=1298 list were available (yielding 128 b_n entries instead of 499). The L(Δ,s) comparison is therefore on a much shorter fit window than the other four functions, and the absolute magnitudes of A, B, C are not directly comparable across functions because the asymptotic regime in n is not reached. Percentage-change metrics on B and C are nevertheless legitimate intra-function quantities and should be interpreted as the most reliable L(Δ,s) signal.
+2. The ζ and ζ_δ^strong Jacobi coefficients are bit-identical under both weighting schemes. This is the documented (r40) structural insensitivity of 1/|ρ|² weighting to real-part perturbations, not a bug — but it means ζ_δ^strong contributes no independent information for Front I.
+3. The small-n Lanczos transient (n<5), especially in the 1/|ρ|² panel where b_1 dips toward 100–400 before re-stabilizing, was excluded from fitting. Including those points strongly biases the log-quadratic coefficients.
+4. Higher-order (log-cubic) models always achieved still-lower AIC/BIC than log-quadratic, indicating residual fine structure beyond log-quadratic; however, the research protocol restricted comparison to log vs. log-quadratic.
+</challenges> <discussion>
+The Front I inverse spectral picture supports the qualitative hypothesis: the smooth log-quadratic envelope of the Jacobi recurrence is a universal feature of all five zero distributions, but its quantitative stability under spectral re-weighting separates the "clean Euler-product" functions (ζ, L(χ₄ mod 5)) from the "perturbed" controls (L_DH, L(Δ,s)). L_DH lacks an Euler product and is known to host off-line zeros (110 confirmed up to t<5000); L(Δ,s) is the highest-weight automorphic L-function in the panel with the most complex local factors. Both anomalies manifest in Front I as a 3–7× increase in coefficient sensitivity to the 1/|ρ|² spectral weight, with L_DH additionally exhibiting nearly double the normalized residual variance of ζ. Notably, this comparison provides a complementary perspective to r39's finding that Li-coefficient (Front II) and r40's spectral-weight (Front I) tests are insensitive to off-line zeros: even though the 1/|ρ|² weight is structurally insensitive to Re(ρ) perturbations, the residual variance and weight-switch parameter shifts still rank L_DH and L(Δ,s) as the "less-regular" members of the panel.
+</discussion> <proposed-next-hypotheses>
+1. The elevated normalized residual variance of L_DH's log-quadratic Jacobi fit (~0.32% vs 0.15% for ζ) is driven specifically by short-range correlations imprinted by its 110 off-line zeros; recomputing b_n after substituting each off-line zero with its critical-line projection should reduce L_DH's rmse_rel to within 1.2× the ζ baseline.
+2. Once the full N=5000 ldelta_zeros_N5000_dps80.npy list is available, L(Δ,s)'s |ΔB%| under uniform → 1/|ρ|² re-weighting will remain ≥ 8% (i.e., the weight-switch instability is a property of L(Δ,s) itself, not a finite-N artifact of the present 128-point window), and a log-quadratic model will still be AIC/BIC-preferred over a plain-log model.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>front1_summary_table.csv</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>CSV summary of Front I log-quadratic model fits for b_n on the 5-function N=5000 panel (L(Δ,s) restricted to 128 coefficients from partial N=1298 list). Columns: function, N_coefs, selected model (AIC and BIC), fitted A/B/C under uniform and 1/|ρ|² weights, percent changes in parameters between weights, and normalized residual standard deviation under each weight. Produced by fitting candidate models {A+B·log n, A+B·log n + C·log² n} on n ∈ [5,N] via scipy.optimize.curve_fit and computing AIC/BIC.</artifact-description>
+</artifact>
+<artifact>
+<file-name>front1_bn_logquad_fits.png</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Final summary figure (2 stacked panels, A: uniform weight, B: 1/|ρ|² weight). Each panel overlays the Jacobi b_n sequences for all five control families together with their log-quadratic fits (dashed). The x-axis is log-n; the figure visualizes both the shared log-quadratic envelope and the differential sensitivity to spectral re-weighting that distinguishes L_DH / L(Δ,s) from ζ / L(χ₄ mod 5).</artifact-description>
+</artifact>
+</artifacts>
+</output> 

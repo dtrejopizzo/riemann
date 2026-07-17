@@ -1,0 +1,2 @@
+N,t_range,n_peaks,coefficient_density,mean_S2_reduction,std_S2_reduction,mean_S3_reduction,std_S3_reduction,mean_S4_reduction,std_S4_reduction,dominant_class,S2_dominant_peaks,S3_dominant_peaks,S4_dominant_peaks,mean_S2_S3_ratio,mean_baseline_magnitude
+1000000,"[1000000, 2000000]",20,80.0%,55.93%,16.78%,34.13%,23.10%,27.11%,17.18%,S2,14,6,0,1.747,6.448

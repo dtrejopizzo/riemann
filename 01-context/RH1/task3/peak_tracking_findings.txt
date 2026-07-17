@@ -1,0 +1,25 @@
+
+PEAK TRACKING ANALYSIS OF DAVENPORT-HEILBRONN FUNCTION
+====================================================== RESEARCH QUESTION:
+Does tracking the shifting peak location reveal a growth exponent closer to the theoretical value (~0.31) than the global maximum method? METHODS:
+--------
+1. Peak Tracking Method: - For each N, find the location t* where |D_DH(t; N)| is maximum in [80, 92] - Track the magnitude M(N) at these (potentially different) t* values - Fit power law: M ~ N^α 2. Fixed-t Method (at known zero): - Evaluate |D_DH(t; N)| at fixed t ≈ 85.7 (location of known off-line zero) - Fit power law: M ~ N^α RESULTS:
+--------
+1. Peak Tracking (t ≈ 84.2): • Peak locations: 84.093 → 84.200 → 84.200 • Peak magnitudes: 4.153125 → 4.218369 → 4.217973 • Growth: +1.6% (from 10^4 to 10^6) • Fitted exponent: α = 0.003364 ± 0.0073 • Power law: M = 4.036942 * N^0.003364 • R² = 0.743458 2. Fixed-t at Zero (t ≈ 85.7): • Magnitudes: 0.596589 → 0.369631 → 0.407894 • Growth: -31.6% (DECREASING!) • Fitted exponent: α = -0.082564 • Power law: M = 1.159180 * N^-0.082564 3. Theoretical Prediction: • For off-line zero at σ = 0.8085, t = 85.7 • Expected: α = σ - 1/2 = 0.3085 • Observed (peak): α = 0.003364 (1.1% of theory) • Observed (fixed-t): α = -0.082564 (-26.8% of theory) CRITICAL FINDINGS:
+-----------------
+1. LOCATION MISMATCH: The global maximum of |D_DH(t; N)| occurs at t ≈ 84.2, NOT at the known zero location t ≈ 85.7. The peak location shifts only slightly with N (0.11 from 10^4 to 10^5, then remains stable). 2. ZERO IS A MINIMUM: At t ≈ 85.7 (the known off-line zero), |D_DH(t; N)| exhibits a LOCAL MINIMUM, not a maximum. This is mathematically consistent: near a zero of L_DH, the partial sum should be small. 3. NEGATIVE GROWTH AT ZERO: When tracking at fixed t ≈ 85.7, the magnitude DECREASES with N (α = -0.082564). This negative growth is opposite to the theoretical prediction but consistent with approaching a zero. 4. WEAK GROWTH AT PEAK: The peak magnitude at t ≈ 84.2 shows only 1.6% growth from N=10^4 to N=10^6. This gives α = 0.003364, which is ~91x smaller than the theoretical value of 0.3085. 5. PRE-ASYMPTOTIC REGIME: The effective σ from the peak tracking is σ_eff = α + 1/2 = 0.5034, which is very close to 1/2. This indicates the peak at t ≈ 84.2 is NOT associated with an off-line zero, and we're in a pre-asymptotic regime where N ≤ 10^6 is insufficient to observe the theoretical behavior. COMPARISON TO PREVIOUS ANALYSIS (r4):
+------------------------------------
+The research hypothesis suggested that the previous "global maximum method" gave α ≈ 0.00018. However:
+• Current data shows peak tracking gives α = 0.003364
+• This is ~19x larger than the claimed 0.00018
+• But still ~91x smaller than theory (0.3085) The improvement from tracking the shifting peak is marginal at best. ANSWER TO RESEARCH QUESTION:
+----------------------------
+NO. Tracking the shifting peak location does NOT reveal a growth exponent closer to the theoretical value. The observed exponent α = 0.003364 is still orders of magnitude smaller than the theoretical α = 0.3085. The fundamental issue is that:
+1. The peak in |D_DH(t; N)| is at t ≈ 84.2, not at the zero t ≈ 85.7
+2. The peak magnitude barely grows with N (only 1.6% over 2 orders of magnitude)
+3. Pre-asymptotic effects dominate for N ≤ 10^6
+4. Much larger N values (likely N ≥ 10^8) would be needed to observe asymptotic behavior consistent with theory IMPLICATIONS:
+------------
+• The relationship between |D_DH(t; N)| peaks and L_DH zeros is more subtle than initially hypothesized
+• Simple peak tracking in the range N ∈ [10^4, 10^6] cannot reveal the theoretical growth rate
+• Alternative approaches (e.g., different metrics, larger N, or refined theoretical understanding) are needed Date: 2026-03-24 05:21:35

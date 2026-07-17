@@ -1,0 +1,32 @@
+
+================================================================================
+COMPREHENSIVE ANALYSIS REPORT
+================================================================================ RESEARCH QUESTION:
+Do the extreme value distributions of R_comp metrics show clear separation
+between three function classes (Standard, Anomalous-Resonant, Control)? HYPOTHESIS:
+The "Anomalous-Resonant" class will have a GEV shape parameter ξ that is statistically distinct from both "Standard" and "Control" classes. ================================================================================
+METHODS
+================================================================================ 1. FUNCTION CLASSES DEFINED: - Standard: ζ(s), L(s,χ₄) (real character mod 5) - Anomalous-Resonant: L(s,λ(n)), L(s,μ(n)), validated historical L_DH - Control: f_rand (seed=42), f_fully_rand (seed=42) 2. COMPUTATIONAL PARAMETERS: - Truncation length: N = 10^5 - Time range: t ∈ [1000, 20000] - Sampling resolution: dt = 2π/log(N) ≈ 0.546 - Number of time points: 34,815 - R_comp window size: 100 points 3. EXTREME VALUE ANALYSIS: - Block maxima extraction: 200 blocks per function - GEV fitting: Maximum likelihood estimation - Confidence intervals: Bootstrap (1000 samples, 95% CI) 4. STATISTICAL TESTS: - One-way ANOVA for class differences - Post-hoc pairwise t-tests (Welch's) - Cohen's d effect sizes ================================================================================
+RESULTS
+================================================================================ 1. GEV SHAPE PARAMETER ESTIMATES: Function Class ξ 95% CI
+-------- ----- -- ------
+zeta Standard -0.203 [-0.278, -0.129]
+chi4 Standard -0.095 [-0.176, -0.002]
+liouville Anomalous-Resonant 0.062 [-0.033, 0.154]
+mobius Anomalous-Resonant -0.060 [-0.159, 0.029]
+L_DH Anomalous-Resonant -0.172 [-0.330, -0.097]
+f_rand Control 0.020 [-0.097, 0.128]
+f_fully_rand Control -0.149 [-0.241, -0.044] 2. CLASS-LEVEL STATISTICS: Class Mean ξ SD Range
+----- ------ -- -----
+Standard -0.149 0.076 [-0.203, -0.095]
+Anomalous-Resonant -0.057 0.117 [-0.172, 0.062]
+Control -0.065 0.120 [-0.149, 0.020] 3. STATISTICAL TESTS: One-way ANOVA: F-statistic = 0.479 p-value = 0.651 Conclusion: NO SIGNIFICANT DIFFERENCE between classes Post-hoc Pairwise Comparisons (Welch's t-test): Standard vs Anomalous-Resonant: p = 0.366 (not significant) Standard vs Control: p = 0.502 (not significant) Anomalous-Resonant vs Control: p = 0.948 (not significant) 4. EFFECT SIZES (Cohen's d): Standard vs Anomalous-Resonant: d = -0.875 (large) Standard vs Control: d = -0.840 (large) Anomalous-Resonant vs Control: d = 0.067 (negligible) Note: Large effect sizes but non-significant p-values indicate high
+within-group variability and/or small sample sizes. 5. CONFIDENCE INTERVAL OVERLAPS: - 17 out of 21 function pairs show overlapping CIs - Only 4 pairs are clearly distinct: * zeta vs liouville * zeta vs f_rand * liouville vs L_DH * liouville vs f_fully_rand ================================================================================
+CONCLUSION
+================================================================================ HYPOTHESIS: NOT SUPPORTED The extreme value distributions of R_comp metrics do NOT show clear statistical
+separation between the three function classes. Specifically: 1. No significant differences in mean ξ between classes (ANOVA p = 0.651) 2. High within-class heterogeneity, especially in Anomalous-Resonant class: - L(s,λ(n)) shows positive ξ (heavier tail) - L(s,μ(n)) shows near-zero ξ - L_DH shows negative ξ (lighter tail) 3. Confidence intervals overlap extensively between classes 4. The Anomalous-Resonant class does not exhibit a unique tail behavior This finding is consistent with prior research (r84) demonstrating that GEV shape parameters of resonance metrics are not reliable classifiers
+for distinguishing standard L-functions from those with analytic anomalies. ================================================================================
+KEY INSIGHTS
+================================================================================ 1. HETEROGENEITY WITHIN "ANOMALOUS" CLASS: Functions with known analytic anomalies (off-line zeros or poles) do not form a homogeneous group in terms of extreme value statistics. This suggests that the mechanism of resonance differs between these functions. 2. L(s,λ(n)) OUTLIER BEHAVIOR: The Liouville function L(s,λ(n)) consistently shows distinct behavior from other anomalous functions, with positive ξ indicating heavier-tailed extremes. This aligns with r83 findings of high resonance via phase-alignment. 3. CONTROL FUNCTIONS SHOW VARIABILITY: Even purely random functions (f_rand, f_fully_rand) show different extreme value behaviors, indicating that the R_comp metric is sensitive to the structure of coefficients beyond multiplicativity. 4. STATISTICAL POWER LIMITATIONS: Small sample sizes (n=2-3 per class) limit the power to detect differences, even when effect sizes are large. ================================================================================
+IMPLICATIONS
+================================================================================ 1. The R_comp metric's extreme value distribution (via GEV ξ) is NOT a reliable classifier for separating standard L-functions from those with analytic anomalies. 2. Alternative approaches needed: - Multi-scale diagnostics (as suggested in research program) - Phase decomposition analysis - Persistence measures across scales - Direct detection of off-line zero signatures 3. The three-class framework may be too coarse. Functions within the "Anomalous-Resonant" class exhibit fundamentally different behaviors that should not be grouped together. ================================================================================

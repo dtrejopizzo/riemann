@@ -1,0 +1,28 @@
+
+COMPREHENSIVE ANALYSIS SUMMARY
+============================== RESEARCH OBJECTIVE:
+Test the generality of the (M_coh, R_comp) classification framework by determining
+whether perturbed L_DH^(ε) functions, known to have off-line zeros, cluster with the
+original L_DH function in the (M_coh, R_comp) space. METHODS:
+1. Implemented L_DH^(ε) with coefficient: a_n = ((1-iκ')/2)·χ(n) + ((1+iκ')/2)·χ̄(n) where κ' = sqrt(2) + ε, and χ(n) = i^(-ω(n)) for squarefree n
+2. Computed partial sums D(t; N=10^5) for ε ∈ {-0.1, -0.05, 0, 0.05, 0.1}
+3. Identified top 50 peaks for each function (250 peaks total)
+4. Computed M_coh and R_comp metrics at each peak location
+5. Compared with reference data from 6 functions (300 peaks) KEY FINDINGS: 1. CONSISTENCY ACROSS PERTURBATIONS: All L_DH^(ε) functions produce highly similar (M_coh, R_comp) coordinates: - Mean M_coh: 1.32 ± 0.18 (all ε values) - Mean R_comp: 0.0088 ± 0.0037 (all ε values) - ANOVA: No significant differences between ε values (p > 0.99) 2. SEPARATION FROM REFERENCE L_DH: The L_DH^(ε) cluster is DRAMATICALLY separated from reference L_DH: - Reference L_DH center: (M_coh=1.99, R_comp=0.019) - L_DH^(ε) center: (M_coh=1.32, R_comp=0.0088) - Euclidean distance: 0.674 - This is 4.2× the typical inter-cluster distance (0.161) - Statistical tests: p < 10^-16, Cohen's d ≈ -3.7 3. ALTERNATIVE CLUSTERING: L_DH^(ε) functions cluster closest to f_fully_rand: - Distance to f_fully_rand: 0.309 - Distance to L_DH (reference): 0.674 - Distance to other functions: 0.40-0.59 CRITICAL DISCREPANCY:
+Our implementation of L_DH produces fundamentally different behavior than the
+reference data:
+- Our L_DH peak magnitudes: 12-16 (similar to ζ, L(χ₄), f_rand)
+- Reference L_DH peak magnitudes: 8-10 (distinctly smaller)
+- Our L_DH metrics match L_DH^(ε), not reference L_DH POSSIBLE EXPLANATIONS:
+1. Different function definitions (alternative normalization or character)
+2. Different computational parameters (N, sampling, numerical precision)
+3. Errors in reference data generation
+4. Fundamentally different L_DH variant in reference vs. task specification CONCLUSIONS:
+The hypothesis that "L_DH^(ε) functions cluster with L_DH in (M_coh, R_comp) space"
+is REJECTED based on comparison with the reference data. However, this rejection
+reveals a deeper issue: our self-consistent implementation of L_DH and all its
+perturbations produces a distinct signature that differs from the reference L_DH. The (M_coh, R_comp) framework successfully distinguishes between our L_DH family
+and the reference functions, but the perturbed versions do NOT map to the same
+region as the reference L_DH. This either:
+(a) Invalidates the framework as a general detector of off-line zeros, OR
+(b) Suggests a fundamental difference in function definitions between our implementation and the reference data.

@@ -1,0 +1,794 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RH}{\mathrm{RH}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\fhat}{\widehat f}
+\newcommand{\ghat}{\widehat g}
+\newcommand{\HK}{\mathcal H_K}
+\newcommand{\HE}{H(E_\xi)}
+\newcommand{\Fix}{\operatorname{Fix}}
+\DeclareMathOperator{\Res}{Res}
+
+\title[The Kre\u\i n Index of the Weil Form]{The localized Weil form and its Kre\u\i n--Pontryagin index:\\
+localization, obstruction, and rigidity}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgConnes99,bgCC21,bgBognar,bgAzizov,bgBK}
+\begin{abstract}
+The Riemann Hypothesis is equivalent to the positivity of an indefinite (Kre\u\i n)
+quadratic form: the localized Weil form $Q$, whose negative index $\kappa$ equals the
+number of nontrivial zeros of $\zeta$ in one open half of the critical strip
+(equivalently $2m$ for $m$ off-line Klein quartets). This paper assembles a
+complete functional-analytic anatomy of $Q$ and of the realization problem ``carry
+$\kappa$ by an operator.'' We work with an autonomous definition of $Q$ on even real test
+functions through an entire transform, proving its convergence and symmetries directly,
+and we show that the indefiniteness has a single explicit source: each off-line zero acts
+through an \emph{off-axis evaluation functional} $f\mapsto\fhat(\gamma-ib)$, $b=\beta-\half
+\ne0$, contributing a Lorentzian $u^2-v^2$, while every on-line zero contributes the
+nonnegative square $\fhat(\gamma)^2$. From this localization we derive three structural
+conclusions. \emph{(Obstruction.)} No positive-definite reproducing kernel, no fixed-sign
+Cauchy kernel whose parameters lie on one side of a line, and no Hermitian form depending
+smoothly and non-degenerately on the zero's real part can carry $\kappa$; we prove all
+three as elementary but general theorems and illustrate the second with the modular-surface
+resonance pairings, which are sign-definite for every configuration of zeros in the strip.
+A genuine carrier must therefore have an indefinite kernel \emph{or} a degeneration at the
+critical line. \emph{(Mechanism and count.)} The Weil form is bilinear, not sesquilinear;
+the sesquilinear evaluation form is always positive, whereas the bilinear evaluation-square
+form carries signature exactly $(1,1)$ at each off-axis point. The exact global count
+$\kappa=2m$ (twice the number of off-line quartets) then rests on an independence lemma and the de Branges
+Pontryagin-index theorem, valid in the finite-index regime. \emph{(Rigidity.)} Of the three
+de Branges axioms, conjugation is automatic from the symmetries, point-evaluation continuity
+is the reproducing-kernel hypothesis, and the difference-quotient (resolvent) axiom is the
+single substantive demand; any finite-defect realization satisfying it is a de
+Branges--Pontryagin space whose structure function shares its wrong-half-plane zeros with
+$E_\xi$, the full identification $E=E_\xi$ remaining open. We close with the dichotomy that
+explains why the spectral programmes converge to one wall: the symmetry data (spectrum,
+anti-holomorphic real structure, resolvent) is unconditional, while the sign $\kappa=0$ is a
+separate, global, one-sided ingredient living in the pair-correlation regime. Everything is
+pure functional analysis; nothing here depends on, or proves, the Riemann Hypothesis.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+Let $\xi(s)=\half s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ be the completed Riemann zeta
+function, entire of order one, with $\xi(s)=\xi(1-s)$ and real on the critical line, and
+with nontrivial zeros $\rho=\beta+i\gamma$ confined to the open strip $0<\beta<1$. The
+Riemann Hypothesis ($\RH$) asserts $\beta=\half$ for all of them.
+
+By Weil's explicit formula, $\RH$ is equivalent to the positivity of a single Hermitian
+form. For a suitable even real test function $f$, the sum
+\begin{equation}\label{eq:weil-id}
+\sum_\rho\widehat f(\gamma_\rho)\;=\;A_\infty(f)-P(f),
+\end{equation}
+with $A_\infty$ the archimedean (gamma-factor) term and $P$ the sum over prime powers,
+extends to a quadratic form $Q(f,f)=\sum_\rho\varphi_f(\rho)^2$ whose positivity for all $f$
+is precisely $\RH$. The form $Q$ is \emph{indefinite}: it is a Kre\u\i n form, and its
+negative index
+\[
+\kappa\;=\;\#\{\rho:\beta_\rho>\tfrac12\}\;=\;2m
+\]
+equals the number of off-line zeros lying in the right half-strip --- equivalently
+$2m$, where $m$ is the number of Klein quartets $\{\half\pm b\pm i\gamma\}$ of off-line
+zeros --- so that $\kappa=0\iff\RH$. (The negative index counts the zeros of the structure
+function $E_\xi$ in one open half-plane, two per quartet, not all four off-line zeros; the
+parity $\kappa=2m$ and its arithmetic consequences are the subject of the companion
+paper~\cite{Defect}.) This reformulation is the
+starting point of a long sequence of spectral attacks (Hilbert--P\'olya and its de Branges
+canonical-system form, Connes' scaling flow, Burnol's de Branges spaces, and the conjectural
+arithmetic surface for $\operatorname{Spec}\mathbb Z$): each seeks to \emph{realize} $Q$ as
+the inner product of a Hilbert or Pontryagin space whose spectrum is $\{\gamma_\rho\}$ and
+whose positivity would force the zeros onto the line.
+
+The purpose of this paper is to give a complete, self-contained anatomy of $Q$ as an
+indefinite form, and of the realization problem, organized around one localization. We prove,
+from an autonomous definition of $Q$, that the entire indefiniteness is carried by the
+\emph{off-axis evaluation functionals} attached to off-line zeros
+(\S\ref{sec:setup}--\S\ref{sec:localization}); we then deploy this localization in three
+directions:
+\begin{itemize}
+\item \textbf{Obstruction} (\S\ref{sec:modular}--\S\ref{sec:obstruction}). An entire class of
+candidate realizations is excluded: positive-kernel reproducing spaces, fixed-sign Cauchy
+pairings, and forms depending smoothly and non-degenerately on $\beta$. The modular surface
+furnishes the sharpest concrete instance — its resonance pairings are sign-definite for every
+zero configuration — and the three general theorems explain why. A genuine carrier must have
+an \emph{indefinite kernel} or a \emph{degeneration at the line}.
+\item \textbf{Mechanism and count} (\S\ref{sec:mechanism}--\S\ref{sec:regimes}). The Weil form
+is bilinear, and that is exactly why it can be indefinite; the local mechanism is one
+Lorentzian $(1,1)$ block per off-axis evaluation, and the global count
+$\kappa=2m$ follows from an independence lemma together with the de
+Branges Pontryagin-index theorem in the finite-index regime, whose scope we delimit.
+\item \textbf{Rigidity} (\S\ref{sec:rigidity}). Among the three de Branges axioms, only the
+difference-quotient (resolvent) axiom carries new content; any finite-defect realization
+satisfying it is a de Branges--Pontryagin space whose structure function shares the
+wrong-half-plane zeros of $E_\xi$. The residual problem is two explicit items: the resolvent
+axiom and the identification $E=E_\xi$.
+\end{itemize}
+We close (\S\ref{sec:dichotomy}) with the dichotomy \emph{symmetry versus positivity}: the
+symmetry data of any realization is unconditional, while $\kappa=0$ is orthogonal to it and
+irreducibly global, which is why the spectral programmes all terminate at the same wall —
+the Weil positivity in the pair-correlation regime.
+
+Everything below is pure functional analysis. None of it assumes $\RH$, and none of it proves
+$\RH$; the contribution is structural — a precise account of where the indefiniteness of $Q$
+lives, which realizations are excluded, and what an admissible realization must look like. The
+exact arithmetic count of negative directions per off-line orbit (the parity refinement
+$\kappa=2m$) and the resulting modified explicit formula are taken up in a companion
+paper~\cite{Defect}; here we keep to the de Branges count $\kappa=2m$ (zeros of $E_\xi$ in one open half-plane)
+and its local mechanism.
+
+\section{The Weil form, defined autonomously}\label{sec:setup}
+
+We define $Q$ directly on a concrete test space, so that all later statements are about an
+explicit object rather than about the bookkeeping of the explicit formula. This is the
+viewpoint that makes the localization theorem a self-contained statement.
+
+\begin{definition}[Test space and transform]\label{def:setup}
+Let $\mathcal V$ be the space of even real $f\in C_c^\infty(\mathbb R)$. For $f\in\mathcal V$
+define the entire transform
+\[
+\varphi_f(s)\;=\;\int_{\mathbb R} f(u)\,e^{(s-\frac12)u}\,du,\qquad s\in\mathbb C .
+\]
+Since $f$ has compact support, $\varphi_f$ is entire of exponential type. Writing
+$s=\half+iz$ we have $\varphi_f(\half+iz)=\int f(u)e^{izu}\,du=\fhat(z)$, the Fourier
+transform of $f$ extended to $z\in\mathbb C$; because $f$ is even and real, $\fhat$ is even
+and real on $\mathbb R$.
+\end{definition}
+
+\begin{definition}[The localized Weil form]\label{def:weil}
+For $f,g\in\mathcal V$ set
+\[
+Q(f,g)\;=\;\sum_{\rho}\varphi_f(\rho)\,\varphi_g(\rho),
+\]
+the sum running over the nontrivial zeros $\rho$ of $\zeta$ with multiplicity.
+\end{definition}
+
+\begin{lemma}[Absolute convergence and symmetries]\label{lem:conv}
+For $f,g\in\mathcal V$ the series in Definition~\ref{def:weil} converges absolutely, and
+\[
+\varphi_f(1-s)=\varphi_f(s),\qquad \varphi_f(\bar s)=\overline{\varphi_f(s)} .
+\]
+\end{lemma}
+\begin{proof}
+Evenness of $f$ gives $\varphi_f(1-s)=\int f(u)e^{(\frac12-s)u}du=\int f(-u)e^{(\frac12-s)u}
+du=\int f(u)e^{(s-\frac12)u}du=\varphi_f(s)$; reality of $f$ gives
+$\overline{\varphi_f(s)}=\int f(u)e^{(\bar s-\frac12)u}du=\varphi_f(\bar s)$. For
+convergence, write $\rho=\beta+i\gamma$. With $f$ supported in $[-T_0,T_0]$,
+$|\varphi_f(\rho)|=|\fhat(\gamma-i(\beta-\half))|\le\|f\|_1\,e^{T_0|\beta-\frac12|}\le
+\|f\|_1\,e^{T_0/2}$, while integrating by parts twice against $e^{(\rho-\frac12)u}$ yields
+$|\varphi_f(\rho)|\le C_f\,(1+|\gamma|)^{-2}$ uniformly for $0\le\beta\le1$. The Riemann--von
+Mangoldt density $\#\{\rho:|\gamma|\le T\}\sim\frac{T}{\pi}\log\frac{T}{2\pi}$ makes
+$\sum_\rho(1+|\gamma|)^{-2}<\infty$, hence $\sum_\rho|\varphi_f(\rho)\varphi_g(\rho)|<\infty$.
+\end{proof}
+
+The two symmetries say that the summand $\varphi_f(\rho)^2$ is invariant under
+$\rho\mapsto1-\rho$ and is conjugated under $\rho\mapsto\bar\rho$; this is what couples the
+four members of an off-line orbit, computed next.
+
+\section{Localization of the index in off-axis evaluation}\label{sec:localization}
+
+The nontrivial zeros split into the on-line zeros $\rho=\half+i\gamma$ and the off-line
+zeros, which by the symmetries of Lemma~\ref{lem:conv} occur in \emph{Klein quartets}
+\[
+\{\rho,\ \bar\rho,\ 1-\rho,\ 1-\bar\rho\}=\{\tfrac12\pm b\pm i\gamma\},\qquad
+b=\beta-\tfrac12\neq0 .
+\]
+
+\begin{theorem}[Localization of the negative directions]\label{thm:loc}
+On $\mathcal V$ the Weil form decomposes as $Q=Q_{\mathrm{on}}+Q_{\mathrm{off}}$, where:
+\begin{enumerate}
+\item each on-line zero $\half+i\gamma$ contributes the manifestly nonnegative term
+$\varphi_f(\half+i\gamma)^2=\fhat(\gamma)^2\ge0$, with $\fhat(\gamma)\in\mathbb R$;
+\item each off-line quartet $\{\half\pm b\pm i\gamma\}$ contributes, when restricted to even
+real test functions, the indefinite Lorentzian block
+\[
+4\,\Re\!\big[\fhat(\gamma-ib)^2\big]\;=\;4\,(u^2-v^2),\qquad
+u=\Re\fhat(\gamma-ib),\ \ v=\Im\fhat(\gamma-ib),
+\]
+built solely from the off-axis evaluation functional $E_{\gamma-ib}:f\mapsto\fhat(\gamma-ib)$.
+\end{enumerate}
+Hence the indefiniteness is carried entirely by the off-axis evaluations: $Q_{\mathrm{off}}
+\equiv0\iff$ there are no off-line zeros $\iff\RH$. The on-axis functionals ($b=0$) are the
+positive limit of the off-axis ones as $\beta\to\half$. The exact negative index is computed
+in Corollary~\textnormal{\ref{cor:count}}.
+\end{theorem}
+\begin{proof}
+For an on-line zero, $\varphi_f(\half+i\gamma)=\fhat(\gamma)$ is real (Lemma~\ref{lem:conv}),
+so its square is $\ge0$. For an off-line quartet restricted to even real $f$, group the four
+summands by the symmetries. Put $w=\fhat(\gamma-ib)=\varphi_f(\half+b+i\gamma)$. By
+$\varphi_f(1-s)=\varphi_f(s)$ the zero $1-\rho=\half-b-i\gamma$ gives $w$, and by
+$\varphi_f(\bar s)=\overline{\varphi_f(s)}$ the zeros $\bar\rho$ and $1-\bar\rho$ give
+$\bar w$; the quartet contributes $w^2+w^2+\bar w^2+\bar w^2=4\Re[w^2]=4(u^2-v^2)$, the form
+$\mathrm{diag}(4,-4)$ in $(u,v)$, depending on $f$ only through $w=E_{\gamma-ib}(f)$. This
+exhibits the off-line indefiniteness on the real test space; the full (complex) negative
+index is the de Branges Pontryagin index of the next subsection.
+\end{proof}
+
+\begin{remark}[Real-test-space mechanism versus the complex index]\label{rem:two-blocks}
+On the \emph{even real} space $\mathcal V$ the reality $\fhat(\bar z)=\overline{\fhat(z)}$
+forces the evaluations at the two heights $\pm\gamma$ of a quartet to be complex conjugates,
+so a quartet manifests there as the \emph{single} Lorentzian block above. In the complex de
+Branges space $\HE$, however, the evaluations at the two upper-half-plane zeros of $E_\xi$ in
+a quartet are genuinely independent, and the quartet carries \emph{two} negative directions.
+The resulting count is $\kappa=2m$ (Corollary~\ref{cor:count}); the passage from the
+real-restricted mechanism to the complex parity is exactly the phenomenon analyzed
+in~\cite{Defect}.
+\end{remark}
+
+\begin{remark}[Four load-bearing choices]\label{rem:choices}
+The decomposition rests on exactly four explicit choices, each isolated above: the test space
+$\mathcal V$ (even real, compactly supported), the transform $\varphi_f$ (which makes the
+evaluation entire and ties $\half+iz$ to $\fhat(z)$), the quartet regrouping (which uses both
+symmetries of Lemma~\ref{lem:conv}), and the convergence input (Riemann--von Mangoldt). None
+is a corollary of explicit-formula bookkeeping; together they make Theorem~\ref{thm:loc} an
+autonomous statement about the explicit object of Definitions~\ref{def:setup}--\ref{def:weil}.
+\end{remark}
+
+Theorem~\ref{thm:loc} reduces the realization problem to a single analytic object: a function
+space on which the off-axis point evaluations $E_{\gamma-ib}$ ($b\ne0$) are bounded and carry
+the indefinite combination $u^2-v^2$. On $L^2(\mathbb R)$ these evaluations are unbounded, so
+$L^2$ is excluded at the outset; the question is which spaces support them, and whether
+boundedness forces positivity. The next three sections answer this.
+
+\section{A definite test case: the modular-surface resonances}\label{sec:modular}
+
+Before the general obstruction we record the sharpest concrete failure, on the most natural
+geometric home of the zeros. On the modular surface $X=SL_2(\mathbb Z)\backslash\mathbb H$ the
+zeros appear as scattering resonances: the constant term of the Eisenstein series $E(z,s)$ is
+$y^s+\varphi(s)y^{1-s}$ with scattering determinant
+\[
+\varphi(s)=\frac{\xi(2s-1)}{\xi(2s)},
+\]
+whose poles are exactly the resonances $s_\rho=\rho/2=\tfrac14+i\gamma_\rho/2$ (since
+$\xi(2s)=0\iff2s=\rho$). One asks whether the resonance space carries the indefinite Weil
+form. It does not, for a structural reason that the next section generalizes.
+
+\begin{proposition}[The resonance weights are $O(1)$]\label{prop:weights}
+The resonance state $\Psi_\rho=\Res_{s=s_\rho}E(\cdot,s)$ has cusp weight
+$R_\rho=\Res_{s=\rho/2}\varphi(s)=\xi(\rho-1)/2\xi'(\rho)$, and $|R_\rho|=O(1)$: the
+archimedean factors cancel, $\xi(\rho-1)\asymp e^{-\pi\gamma/4}\asymp\xi'(\rho)$, so the ratio
+is bounded (numerically $0.52$--$0.66$ for the first fifteen zeros, slowly increasing). The
+resonance space is therefore non-trivial, in contrast to the de Branges space $\HE$ of the
+critical-line $\xi$, whose weights decay like $e^{-\pi t/4}$.
+\end{proposition}
+
+Thus the modular surface passes the spectrum test with genuine, bounded-below weights. The
+pairing is where it fails.
+
+\begin{theorem}[The resonance pairings are half-plane definite]\label{thm:modular}
+Write $\rho=\beta_\rho+i\gamma_\rho$ with $0<\beta_\rho<1$ and $s_\rho=\rho/2$.
+\begin{enumerate}
+\item \emph{(Sesquilinear.)} The regularized Maass--Selberg--Zagier inner product of resonance
+states has Gram matrix $G=DKD^{*}$, $D=\mathrm{diag}(R_\rho)$,
+$K_{\rho\sigma}=(s_\rho+\overline{s_\sigma}-1)^{-1}$, and $K$ is negative-definite for every
+configuration of zeros in $0<\beta<1$; hence $G$ is negative-definite, of constant signature.
+\item \emph{(Bilinear.)} The bilinear Gamow/Jost self-pairing of $\rho$ with its conjugate is
+\[
+B(\Psi_\rho,\Psi_{\bar\rho})=\frac{-R_\rho R_{\bar\rho}}{s_\rho+s_{\bar\rho}-1}
+=\frac{|R_\rho|^2}{1-\beta_\rho}>0
+\]
+for every $\beta_\rho\in(0,1)$, on-line and off-line alike.
+\end{enumerate}
+Consequently neither pairing can equal $Q$: both are sign-definite throughout the strip, so
+the negative index $\kappa$ is structurally absent from them, with or without $\RH$.
+\end{theorem}
+\begin{proof}
+(1) Set $w_\rho=\half-s_\rho$, so $\Re w_\rho=\tfrac{1-\beta_\rho}{2}>0$ because
+$\beta_\rho<1$. Then
+\[
+K_{\rho\sigma}=\frac{1}{s_\rho+\overline{s_\sigma}-1}=\frac{-1}{w_\rho+\overline{w_\sigma}}
+=-\int_0^\infty e^{-w_\rho t}\,\overline{e^{-w_\sigma t}}\,dt,
+\]
+the negative of the Cauchy/Szeg\H o reproducing kernel of the Hardy space $H^2$ of the right
+half-plane, hence negative-definite; conjugating by the invertible $D$ preserves signature.
+(2) Use $R_{\bar\rho}=\overline{R_\rho}$ and $s_\rho+s_{\bar\rho}-1=\beta_\rho-1$.
+\end{proof}
+
+\begin{remark}
+The obstruction is that both Gram kernels are Cauchy-type $1/(s_\rho\pm\overline{s_\sigma}-c)$
+with denominator of one sign throughout $0<\beta<1$, while $\kappa$ must detect $\beta=\half$
+\emph{exactly} — a measure-zero, non-monotone condition. A pairing smooth and sign-stable
+across the strip cannot witness it. Every natural pairing the surface supplies — the analytic
+Maass--Selberg--Zagier product and the arithmetic Arakelov/N\'eron--Tate pairing
+(negative-definite by Faltings--Hriljac) — is definite. This is the general phenomenon, to
+which we now turn.
+\end{remark}
+
+\section{The obstruction theorems and the excluded class}\label{sec:obstruction}
+
+We isolate three properties shared by the failing constructions and prove that each forces
+definiteness or non-detection. The results are elementary; the value is the classification.
+
+\subsection{Positive kernels are semidefinite}
+Let $\Omega$ be a set and $K:\Omega\times\Omega\to\mathbb C$ a positive-definite kernel; let
+$\HK$ be its Moore--Aronszajn reproducing-kernel Hilbert space, with $K_z=K(\cdot,z)$ and
+$\langle f,K_z\rangle=f(z)$.
+
+\begin{theorem}[Positive kernel $\Rightarrow$ semidefinite]\label{thm:A}
+Any Hermitian form realized as $B(f,g)=\langle f,g\rangle_{\HK}$ for a positive-definite kernel
+$K$ is positive semidefinite; its negative index is $0$. In particular, if $Q$ is realized as
+the inner product of a positive-kernel RKHS, then $\kappa=0$, i.e.\ $\RH$ — the form never
+exhibits a negative direction.
+\end{theorem}
+\begin{proof}
+For $f=\sum_i c_iK_{z_i}$, $\|f\|_{\HK}^2=\sum_{i,j}c_i\bar c_j K(z_i,z_j)\ge0$ by
+positive-definiteness; such $f$ are dense, so $B\succeq0$ and its negative index vanishes.
+\end{proof}
+
+This is the Moore--Aronszajn tautology read backwards: indefiniteness cannot be manufactured
+from a positive kernel. Bergman, Hardy, Fock, Mehler/heat, Bochner-positive convolution
+pairings, and standard de Branges spaces with a Hermite--Biehler structure function are all
+excluded as carriers of $\kappa$.
+
+\subsection{Fixed-sign Cauchy kernels are definite}
+Theorem~\ref{thm:modular} is the special case $c=1$ of the following.
+
+\begin{theorem}[Fixed-sign Cauchy kernel $\Rightarrow$ definite]\label{thm:B}
+Let $c\in\mathbb R$ and $S\subset\mathbb C$ with all $\Re z<c/2$ (resp.\ all $\Re z>c/2$).
+Then $K(z,w)=(z+\bar w-c)^{-1}$ is negative-definite (resp.\ positive-definite) on $S$, and
+any Gram form $G=[d_i\bar d_j K(z_i,z_j)]$ with weights $d_i\ne0$ has constant signature.
+\end{theorem}
+\begin{proof}
+With $w_z=\tfrac c2-z$ (so $\Re w_z>0$ on $S$ in the first case),
+$K(z,w)=-(w_z+\overline{w_w})^{-1}=-\int_0^\infty e^{-w_zt}\overline{e^{-w_wt}}\,dt$ is the
+negative of the half-plane Hardy kernel, hence negative-definite; the other case is identical
+with $w_z=z-\tfrac c2$, and conjugation by $D=\mathrm{diag}(d_i)$ preserves signature.
+\end{proof}
+
+The hypothesis is exactly ``the parameters lie in a half-plane not straddling $\Re=c/2$.''
+For the modular resonances $s_\rho=\rho/2$ this holds because $0<\beta_\rho<1$ confines them
+to $\Re s_\rho<\half$; the bounded critical strip forces definiteness regardless of $\RH$.
+
+\subsection{No $\beta$-smooth non-degenerate form detects the line}
+The condition $\beta=\half$ has real codimension one; signature is locally constant on the
+non-degenerate locus.
+
+\begin{theorem}[Smoothness $\Rightarrow$ no detection]\label{thm:C}
+Let $\beta\mapsto Q_\beta$ be a Hermitian form on a fixed finite-dimensional space (or with
+discrete, continuously varying spectrum), depending continuously on $\beta$ near $\half$. If
+$Q_\beta$ is non-degenerate throughout a neighborhood of $\half$, its negative index
+$\kappa(\beta)$ is constant there. In particular $Q_\beta$ cannot have $\kappa(\half)=0$ and
+$\kappa(\beta)\ge1$ for $\beta\ne\half$ unless it degenerates at $\half$.
+\end{theorem}
+\begin{proof}
+Eigenvalues vary continuously; $\kappa(\beta)$, the number of negative ones, can change only
+where an eigenvalue crosses $0$, i.e.\ at a degeneracy. On a non-degenerate neighborhood none
+crosses, so $\kappa$ is constant. The stated detection pattern forces a zero eigenvalue at
+$\half$.
+\end{proof}
+
+This explains the recurrent finding that every natural pairing tested was a smooth,
+non-degenerate function of $\beta$ — the Petersson form $\sim(1-\beta)$, the bilinear Gamow
+form $\sim1/(1-\beta)$, the Klein--Gordon current ($\beta$-independent) — none vanishing at
+$\half$, hence all of constant signature and blind to $\RH$. The genuine detector, the off-line
+displacement $b=\beta-\half$, \emph{does} vanish at $\half$: it is degenerate there by design.
+
+\begin{corollary}[The excluded class and the two escape routes]\label{cor:class}
+The localized Weil form $Q$ — indefinite, with $\kappa$ a genuine, $\RH$-detecting index —
+cannot be realized by any of: \emph{(i)} a positive-definite reproducing kernel
+(Theorem~\ref{thm:A}); \emph{(ii)} a Cauchy kernel $1/(z+\bar w-c)$ whose parameter domain
+lies on one side of $\Re=c/2$, in particular any modular/scattering/Arakelov pairing of zeros
+confined to the strip (Theorem~\ref{thm:B}); \emph{(iii)} a non-degenerate Hermitian form
+depending smoothly on $\beta$ near $\half$ (Theorem~\ref{thm:C}). Consequently a genuine
+realization must possess at least one feature its competitors lack: an \emph{indefinite
+(Pontryagin) kernel}, or a \emph{degeneration at $\beta=\half$}.
+\end{corollary}
+
+The second escape route is exactly the off-axis evaluation of Theorem~\ref{thm:loc}, which
+degenerates as $b\to0$. The first is the indefinite de Branges space, whose local mechanism we
+now identify.
+
+\section{The local mechanism and the exact count}\label{sec:mechanism}
+
+\subsection{Bilinear, not sesquilinear}
+For even real $f$, $\fhat$ is even and real on $\mathbb R$, so the entire extension of
+$|\fhat|^2$ is the holomorphic square $\fhat(z)^2$, not $\fhat(z)\overline{\fhat(z)}$. Hence
+\begin{equation}\label{eq:bilinear}
+Q(f,g)=\sum_\rho\fhat(z_\rho)\,\ghat(z_\rho),\qquad z_\rho=\tfrac{\rho-\frac12}{i},
+\end{equation}
+is a \emph{symmetric bilinear} form, not the sesquilinear $\sum\fhat(z_\rho)\overline{\ghat
+(z_\rho)}$. This distinction is the whole point: the bilinear square of a complex number is
+indefinite.
+
+\begin{proposition}[Sesquilinear vs.\ bilinear]\label{prop:vs}
+Let $E_z(f)=\fhat(z)$. The sesquilinear form $f\mapsto|E_z(f)|^2$ is $\ge0$ for every $z$. The
+bilinear form $f\mapsto E_z(f)^2$ is $\ge0$ where $E_z(f)$ is real (e.g.\ $z\in\mathbb R$) but
+indefinite where $E_z(f)$ ranges over $\mathbb C$: with $E_z(f)=u+iv$, $\Re[E_z(f)^2]=u^2-v^2$.
+\end{proposition}
+
+\subsection{The dichotomy theorems}
+\begin{theorem}[Sesquilinear evaluation forms are positive]\label{thm:E}
+In any reproducing-kernel Hilbert space with continuous evaluations $E_z(f)=\langle f,K_z
+\rangle$, and any points $z_i$ and weights $c_i\ge0$, the form $f\mapsto\sum_i c_i|E_{z_i}(f)|^2$
+is positive semidefinite.
+\end{theorem}
+\begin{proof}
+$|E_{z_i}(f)|^2=\langle f,(K_{z_i}\otimes K_{z_i})f\rangle$ with $K_{z_i}\otimes K_{z_i}
+\succeq0$; a nonnegative combination of positive forms is positive.
+\end{proof}
+
+\begin{theorem}[Bilinear evaluation squares: signature $(1,1)$ off-axis]\label{thm:F}
+The real quadratic form $f\mapsto\Re[E_z(f)^2]$ has signature $(1,0)$ where $E_z(f)$ is forced
+real (on-axis) and signature $(1,1)$ where $E_z(f)=u+iv$ realizes all of $\mathbb C$
+(off-axis). Thus each off-axis evaluation contributes \emph{at most} one negative direction.
+\end{theorem}
+\begin{proof}
+Factor $E_z=u+iv$ with $u,v$ real-linear. On-axis $v\equiv0$ and $\Re[E_z^2]=u^2$: signature
+$(1,0)$. Off-axis $(u,v)$ maps onto $\mathbb R^2$ and $\Re[E_z^2]=u^2-v^2$ pulls back
+$\mathrm{diag}(1,-1)$: signature $(1,1)$.
+\end{proof}
+
+\subsection{From blocks to count}
+The negative index of a \emph{sum} $\sum_\rho(u_\rho^2-v_\rho^2)$ is not automatically the
+number of blocks: the $v_\rho$ could be dependent or interact with the $u_\rho$. The exact
+count needs an independence input.
+
+\begin{lemma}[Independence of off-axis evaluations]\label{lem:indep}
+On $\mathcal V$ (indeed on $\mathcal S(\mathbb R)$), for distinct off-axis points
+$z_1,\dots,z_n$ the $2n$ real-linear functionals $\{\Re E_{z_i},\Im E_{z_i}\}$ are linearly
+independent; hence $\sum_{i=1}^n((\Re E_{z_i})^2-(\Im E_{z_i})^2)$ has negative index exactly
+$n$.
+\end{lemma}
+\begin{proof}
+A relation $\sum_i c_iE_{z_i}=0$ on $\mathcal S$ reads $\int f(x)\sum_i c_ie^{-iz_ix}\,dx=0$
+for all $f\in\mathcal S$, forcing the tempered distribution $\sum_i c_ie^{-iz_ix}=0$;
+exponentials of distinct frequencies are independent (nonvanishing Vandermonde), so all
+$c_i=0$. Thus the $E_{z_i}$ are $\mathbb C$-independent, the $\{\Re E_{z_i},\Im E_{z_i}\}$ are
+$\mathbb R$-independent, and in a dual basis the form is $\mathrm{diag}(1,-1,\dots,1,-1)$.
+\end{proof}
+
+\begin{corollary}[The count]\label{cor:count}
+On the de Branges space $\HE$, $E_\xi(z)=\xi(\half+iz)$, the negative (Pontryagin) index of
+$Q$ equals the number of zeros of $E_\xi$ in the open upper half-plane. A zero $\rho$ of
+$\xi$ maps to $z=-i(\rho-\half)$ with $\Im z=\half-\Re\rho$, so the upper-half-plane zeros are
+exactly those with $\Re\rho<\half$ --- two per off-line quartet. Hence
+\[
+\kappa\;=\;\#\{\rho:\Re\rho<\tfrac12\}\;=\;\#\{\rho:\Re\rho>\tfrac12\}\;=\;2m,
+\]
+$m$ the number of off-line quartets. For finitely many off-axis points the independence is
+Lemma~\ref{lem:indep}; for the full zero set the count is the de Branges Pontryagin-index
+theorem~\cite{deBranges}, of which Theorem~\ref{thm:F} and Lemma~\ref{lem:indep} are the local
+mechanism. The parity $\kappa\equiv0\pmod2$ and the per-quartet structure are developed
+in~\cite{Defect}.
+\end{corollary}
+
+\begin{remark}[Two reductions deferred]\label{rem:deferred}
+Lemma~\ref{lem:indep} is the finite, complexified mechanism. Two further reductions — the
+passage to the real even test space, where the conjugate pairing $z_i\leftrightarrow-\bar z_i$
+couples the off-axis blocks, and the convergence of the full infinite zero sum — are supplied
+by the de Branges Pontryagin theory. The first is also where the arithmetic refinement
+enters: counting the negative directions \emph{per Klein orbit} (rather than per evaluation
+point) gives the parity statement $\kappa=2m$ with $m$ the number of off-line orbits, proved
+in the companion paper~\cite{Defect}. In the present functional-analytic count we use the de
+Branges value $\kappa=2m$.
+\end{remark}
+
+\subsection{Signature from the spectrum}
+\begin{proposition}[Definiteness is governed by real vs.\ complex spectral points]\label{prop:spectrum}
+For a Weil-type bilinear form $\sum_\rho E_{z_\rho}^2$ on a de Branges space $H(E)$ (where the
+$z_\rho$ are the zeros of $E$): each real $z_\rho$ contributes signature $(1,0)$ and each
+non-real $z_\rho$ contributes $(1,1)$. Hence the form is positive-definite iff all $z_\rho$
+are real, and has negative index $\#\{\text{non-real }z_\rho\}$ (modulo Lemma~\ref{lem:indep})
+otherwise. Equivalently: $E$ Hermite--Biehler $\Leftrightarrow$ all zeros real
+$\Leftrightarrow$ definite; $E$ non-Hermite--Biehler with $\kappa$ wrong-half zeros
+$\Leftrightarrow$ indefinite of index $\kappa$.
+\end{proposition}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}\small
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Space} & \textbf{off-axis $E_z$} & \textbf{spectrum} & \textbf{bilinear signature}\\\hline
+Hardy / Bergman / Fock / Paley--Wiener & bounded & real (HB) & definite\\
+de Branges $H(E)$, $E$ Hermite--Biehler & bounded & real & definite\\
+\textbf{Pontryagin--de Branges, $E$ non-HB} & bounded & $\kappa$ complex & \textbf{indefinite, index $\kappa$}\\
+$L^2(\mathbb R)$ & \emph{unbounded} & --- & ---\\\hline
+\end{tabular}
+\end{center}
+
+The indefiniteness is thus never an artifact of unbounded evaluation; it is the presence of
+$\kappa$ non-real spectral points (off-line zeros), each a $(1,1)$ block by
+Theorem~\ref{thm:F}. The indefinite de Branges space $\HE$ is the canonical known carrier; we
+do not claim it is the unique one (a full classification of indefinite realizations is open).
+
+\section{The three index regimes and the finiteness question}\label{sec:regimes}
+
+The count of Corollary~\ref{cor:count} invokes the de Branges Pontryagin-index theorem, which
+presupposes a \emph{finite} negative index. We make this scope precise.
+
+\begin{definition}
+A \emph{Pontryagin space} $\Pi_\kappa$ has finite negative index $\kappa<\infty$; a
+\emph{Kre\u\i n space} allows $\kappa=\infty$. A de Branges space $H(E)$ is a Hilbert space
+when $E$ is Hermite--Biehler, and a $\Pi_\kappa$ when $E$ has exactly $\kappa<\infty$ zeros in
+the open upper half-plane; for infinitely many such zeros its negative index is infinite.
+\end{definition}
+
+\begin{proposition}[Three regimes]\label{prop:regimes}
+According to $\kappa=2m=\#\{\rho:\Re\rho>\tfrac12\}$, the realization $\HE$ of $Q$ falls into:
+\[
+\begin{array}{lll}
+\text{(H)} & \kappa=0\ (\RH): & \text{a Hilbert space};\ E_\xi\ \text{Hermite--Biehler}.\\
+\text{(P)} & 0<\kappa<\infty: & \text{a Pontryagin space}\ \Pi_\kappa.\\
+\text{(K)} & \kappa=\infty: & \text{infinite index; the finite-index theorem does not apply}.
+\end{array}
+\]
+The de Branges Pontryagin-index theorem, and the count of Corollary~\ref{cor:count}, are
+available in cases \textnormal{(H)} and \textnormal{(P)} but not in \textnormal{(K)}.
+\end{proposition}
+
+\begin{proposition}[Where finiteness sits]\label{prop:finiteness}
+The statement $\kappa<\infty$ (finitely many off-line zeros) is strictly implied by $\RH$
+($\kappa=0$), hence a priori weaker than $\RH$; yet it is not implied by the known
+unconditional results. The positive-proportion theorems (Levinson; Conrey) give $\ge2/5$ of
+zeros on the line but bound nothing off it, and the zero-density estimates $N(\sigma,T)=
+O(T^{c(1-\sigma)+\varepsilon})$ give $o(T)$ off-line zeros up to height $T$ for each fixed
+$\sigma>\half$ but permit infinitely many in total. The only general constraint is that
+off-line zeros occur in quartets contributing two negative directions each, so $\kappa\in2\mathbb Z_{\ge0}$ with minimal nonzero value $2$; this does not bound
+$\kappa$, and both $\kappa<\infty$ and $\kappa=\infty$ remain open. We make no conjecture.
+\end{proposition}
+
+\begin{remark}
+Thus the finite-vs-infinite index distinction is not a soft-analysis gap; it is the
+zero-density frontier in index-theoretic dress. The de Branges realization is, strictly, a
+finite-index analysis, clean under $\RH$ (case (H), the Hilbert case) and valid in (P); case
+(K) would require a broader Kre\u\i n-space theory, which we do not develop. The quartet
+constraint $\kappa\in2\mathbb Z_{\ge0}$ here is the coarse functional-analytic bound; the
+arithmetic refinement to $\kappa=2m$ per orbit is in~\cite{Defect}.
+\end{remark}
+
+\section{Structural rigidity of the finite-defect realization}\label{sec:rigidity}
+
+Existence of a realization does not entail uniqueness. We ask how rigid the de Branges
+realization is, using de Branges' axiomatic characterization, extended to Pontryagin spaces by
+Kre\u\i n and Langer.
+
+\begin{definition}[de Branges axioms]\label{def:axioms}
+Let $\Pi$ be a Pontryagin space of entire functions with indefinite inner product
+$[\cdot,\cdot]$; write $\mathcal E_w:f\mapsto f(w)$ and $f^*(z)=\overline{f(\bar z)}$. Then
+$\Pi$ is a \emph{de Branges--Pontryagin space} if:
+\begin{itemize}
+\item[\textbf{(dB1)}] $\mathcal E_w$ is continuous for every non-real $w$;
+\item[\textbf{(dB2)}] \emph{(difference-quotient axiom)} if $f\in\Pi$ and $f(w)=0$ then
+$z\mapsto f(z)/(z-w)\in\Pi$, and for $f,g\in\Pi$ with $f(w)=g(v)=0$,
+\[
+\Big[\tfrac{f(z)}{z-w},g\Big]-\Big[f,\tfrac{g(z)}{z-v}\Big]
+=(\bar v-w)\Big[\tfrac{f(z)}{z-w},\tfrac{g(z)}{z-v}\Big];
+\]
+\item[\textbf{(dB3)}] \emph{(conjugation isometry)} $f\mapsto f^*$ maps $\Pi$ onto $\Pi$ with
+$[f^*,g^*]=[g,f]$.
+\end{itemize}
+\end{definition}
+
+\begin{theorem}[de Branges; Kre\u\i n--Langer~\cite{deBranges,KL}]\label{thm:dB}
+A Pontryagin space of entire functions satisfying \textnormal{(dB1)--(dB3)} and containing a
+nonzero element equals isometrically a space $H(E)$ for a structure function $E$ that is
+Hermite--Biehler up to finitely many wrong-half-plane zeros, their number equal to the
+negative index; $E$ is determined up to the real-unimodular normalization.
+\end{theorem}
+
+\begin{proposition}[Cost of each axiom]\label{prop:auto}
+Let $H$ be a reproducing-kernel Pontryagin realization of $Q$ with finite $\kappa$, built from
+the off-axis functionals of Theorem~\ref{thm:loc}. Then:
+\begin{enumerate}
+\item \textnormal{(dB3)} is automatic: by Lemma~\ref{lem:conv}, $\varphi_f(\bar s)=
+\overline{\varphi_f(s)}$ and $\varphi_f(1-s)=\varphi_f(s)$, so $Q(f,g)=\sum_\rho\varphi_f(\rho)
+\varphi_g(\rho)$ is invariant under $f\mapsto f^*$; hence $f\mapsto f^*$ is a
+$[\cdot,\cdot]$-isometry.
+\item \textnormal{(dB1)} is \emph{not} automatic: Theorem~\ref{thm:loc} bounds only the
+specific functionals $E_{\gamma-ib}$ at the zero ordinates, whereas \textnormal{(dB1)} demands
+continuity at \emph{every} non-real $w$ — the statement that $H$ is a reproducing-kernel space.
+We take it as the standing hypothesis ``$H$ is a reproducing-kernel realization.''
+\item \textnormal{(dB2)} is the single substantive demand: it asserts that $H$ is closed under
+the resolvent-type operation $f\mapsto f/(z-w)$ obeying the de Branges commutation relation — a
+shift/resolvent structure, the Hilbert--P\'olya object isolated as one hypothesis. It cannot be
+read off from the symmetries of $Q$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(1) The two symmetries make $f^*$ a representative with conjugate $\varphi$-values at the
+conjugate (and reflected) zeros; conjugation-symmetry of the zero set preserves the form value.
+(2)--(3) A finite set of bounded functionals does not entail continuity at all non-real points;
+and the difference-quotient identity is an operator-theoretic statement independent of the
+symmetries.
+\end{proof}
+
+\begin{theorem}[Structural rigidity]\label{thm:rigid}
+Let $H$ be a reproducing-kernel Pontryagin realization of $Q$ with finite $\kappa$
+\textnormal{(}so \textnormal{(dB1)} holds\textnormal{)}, built from the off-axis functionals
+of Theorem~\ref{thm:loc}, and suppose $H$ satisfies \textnormal{(dB2)}. Then:
+\begin{enumerate}
+\item $H=H(E)$ isometrically for some structure function $E$ with exactly $\kappa$ zeros in
+the open upper half-plane;
+\item the wrong-half-plane zeros of $E$ are precisely the off-line zeros of $\xi$ (in the
+$z$-variable); so $E$ and $E_\xi(z)=\xi(\half+iz)$ share their upper-half-plane zero sets.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+By Proposition~\ref{prop:auto}, (dB3) holds and (dB1) is the standing hypothesis; (dB2) is
+assumed. Theorem~\ref{thm:dB} gives $H=H(E)$ isometrically with negative index $\kappa$ equal
+to the number of upper-half-plane zeros of $E$. By Theorem~\ref{thm:loc} and
+Corollary~\ref{cor:count} the negative directions are indexed by the off-line zeros of $\xi$;
+the isometry preserves the index and its carrier, so the wrong-half-plane zeros of $E$ are
+exactly those off-line zeros, which are also the wrong-half-plane zeros of $E_\xi$.
+\end{proof}
+
+\begin{remark}[The identification $E=E_\xi$ is not established]\label{rem:identify}
+Theorem~\ref{thm:rigid} pins the carrier to the de Branges--Pontryagin class and fixes its
+wrong-half-plane zeros, but does not prove $E=E_\xi$: the structure function is underdetermined
+by its upper-half-plane zeros alone, and $E$ could differ from $E_\xi$ by a Hermite--Biehler
+factor with only real zeros (the on-line spectrum) and by the real-unimodular normalization.
+A full identification would require matching the entire reproducing kernel of $Q$ to that of
+$\xi$, including the on-line spectrum and boundary phase. We isolate this as the precise
+remaining step; it is genuinely deeper than the class membership proved above.
+\end{remark}
+
+\begin{corollary}[The two residues]\label{cor:freedom}
+In the finite-defect regime the realization problem splits into exactly two residues:
+\textnormal{(i)} the resolvent axiom \textnormal{(dB2)}, and \textnormal{(ii)} the
+identification $E=E_\xi$. Neither is supplied by the symmetries of $Q$. In the infinite-index
+regime \textnormal{(K)} the finite-index theorem is silent and these tools do not decide the
+realization.
+\end{corollary}
+
+\section{Symmetry versus positivity: why the programmes meet one wall}\label{sec:dichotomy}
+
+We close with the structural dichotomy that organizes the entire analysis. Write
+$\sigma(s)=\bar s$, $\iota(s)=1-s$, and $j=\sigma\iota:\,s\mapsto1-\bar s$, an
+anti-holomorphic involution with $\Fix(j)=\{\Re s=\half\}$.
+
+\begin{definition}[Realization and its symmetry data]\label{def:real}
+A \emph{realization} of $Q$ is a reproducing-kernel (Pontryagin or Kre\u\i n) space on which
+$Q$ acts as the inner product through the off-axis functionals of Theorem~\ref{thm:loc}. Its
+\emph{symmetry data} is the triple (spectrum $\{\gamma_\rho\}$; real structure $j$;
+de Branges resolvent (dB2)). Its \emph{positivity} is the scalar $\kappa$, with
+$\RH\iff\kappa=0$.
+\end{definition}
+
+\begin{proposition}[Symmetry is unconditional]\label{prop:sym}
+$\sigma,\iota$ generate a Klein four-group $V\cong(\mathbb Z/2)^2$ acting on $\mathbb C$, with
+$j$ anti-holomorphic and $\Fix(j)$ the critical line; the zero set of $\xi$ is $V$-invariant
+unconditionally. Consequently, for every admissible zero configuration — on-line or off —
+there is a realization carrying the spectrum, the real structure $j$, and the resolvent: the
+symmetry data is present whether or not $\RH$ holds.
+\end{proposition}
+\begin{proof}
+$\sigma,\iota$ are commuting involutions; $j^2=\mathrm{id}$, $1-\bar s=s\iff\Re s=\half$. The
+functional equation and real coefficients give $V$-invariance of the zeros. For an off-line
+configuration the de Branges space of the corresponding $E$ (Hermite--Biehler up to finite
+defect) carries multiplication (spectrum $=$ zeros), the conjugation $j$, and the
+difference-quotient resolvent exactly as in the on-line case (Theorem~\ref{thm:rigid}); none
+of this constrains $\kappa$.
+\end{proof}
+
+\begin{proposition}[The index is orthogonal to the symmetry]\label{prop:kappa}
+The real structure acts on the spectrum setwise and pointwise:
+\[
+\text{(setwise)}\ \ j(\{\gamma_\rho\})=\{\gamma_\rho\};\qquad
+\text{(pointwise)}\ \ j(\rho)=\rho\ \forall\rho .
+\]
+The setwise statement holds unconditionally (off-line zeros form $j$-symmetric quartets); the
+pointwise statement is $\{\rho\}\subset\Fix(j)$, i.e.\ $\RH$. The index
+$\kappa=\#\{\rho:\Re\rho>\tfrac12\}$ is the negative index of the bilinear pairing
+(Theorem~\ref{thm:loc}); it is invariant under $V$ and commutes with the resolvent, hence
+invisible to the symmetry data.
+\end{proposition}
+\begin{proof}
+Off-line $\rho$ gives the $j$-symmetric orbit $\{\half\pm b\pm i\gamma\}$, so $j$ permutes
+$\{\gamma_\rho\}$ regardless of $\RH$; $j$ fixes $\rho$ iff $\Re\rho=\half$, so pointwise
+invariance of the whole spectrum is $\RH$. By Theorem~\ref{thm:loc} and
+Corollary~\ref{cor:count}, $\kappa=\#\{\rho:\Re\rho>\tfrac12\}$ is unchanged by relabelling under
+$V$ and by the resolvent, which preserve the inner product.
+\end{proof}
+
+\begin{proposition}[The negative directions are locally invisible]\label{prop:local}
+Each negative direction of $Q$ is a frequency packet centred at an off-line ordinate
+$\gamma_0$ of width below the mean zero spacing; it is orthogonal to the on-line evaluation
+modes and is not lifted by any finite collection of neighbouring on-line zeros. Hence
+$\kappa=0$ is implied by no local-in-$\gamma$ condition: the only constraint is the global
+identity $\sum_\rho\varphi_f(\rho)^2=A_\infty(f)-P(f)$, and $\kappa=0\iff A_\infty\ge P$ on
+all $f$ — the Weil criterion, a global positivity in the pair-correlation regime.
+\end{proposition}
+\begin{proof}[Proof sketch]
+On an off-line quartet the form is $4(u^2-v^2)$, $u+iv=\fhat(\gamma_0-ib)$
+(Theorem~\ref{thm:loc}); the negative direction suppresses $u$, maximizes $v$, and its
+transform concentrates at $\gamma_0$ with frequency width controlled by the support of $f$,
+which may exceed the inverse mean spacing — giving a packet narrower than the spacing. Such a
+packet is orthogonal to the neighbouring on-line modes $\cos(\gamma't)$ and slips between the
+discrete zeros, while the smooth archimedean density $A_\infty(f)=\int|\fhat|^2\Omega$,
+$\Omega(r)\sim\log r$, still detects it; the identity routes the negativity to $P(f)>A_\infty
+(f)$. Protection is the global comparison $A_\infty\ge P$, at the pair-correlation scale.
+\end{proof}
+
+\begin{theorem}[Symmetry versus positivity]\label{thm:dichotomy}
+Let $R$ be any realization of $Q$ carrying the symmetry data of Definition~\ref{def:real}.
+Then \emph{(i)} the symmetry data is $\RH$-independent (Proposition~\ref{prop:sym});
+\emph{(ii)} $\RH$ is the positivity $\kappa=0$, the pointwise condition $\{\rho\}\subset
+\Fix(j)$, neither implied by nor reflected in the symmetry data (Proposition~\ref{prop:kappa});
+\emph{(iii)} the witnesses of $\kappa>0$ are sub-spacing and locally invisible, so $\kappa=0$
+is irreducibly global — the Weil criterion $A_\infty\ge P$ in the pair-correlation regime
+(Proposition~\ref{prop:local}). Hence no realization decides $\RH$ from its spectrum, real
+structure, or resolvent: the sign is a separate, global, one-sided ingredient.
+\end{theorem}
+\begin{proof}
+Immediate from Propositions~\ref{prop:sym}, \ref{prop:kappa}, \ref{prop:local}.
+\end{proof}
+
+\begin{corollary}[Convergence to one wall]\label{cor:converge}
+The Hilbert--P\'olya / de Branges canonical system, Connes' scaling flow, Burnol's de Branges
+spaces, and the conjectural arithmetic surface each supply the symmetry data and therefore, by
+Theorem~\ref{thm:dichotomy}, terminate at the same residual statement: the global positivity
+$\kappa=0$ in the pair-correlation regime. They differ in how they package the symmetry, not
+in what they leave open.
+\end{corollary}
+
+\section{Conclusion}
+
+The indefiniteness of the localized Weil form has a single, explicit source — the off-axis
+evaluation functionals attached to off-line zeros (Theorem~\ref{thm:loc}) — and this one fact
+organizes the whole landscape. It excludes an entire class of realizations (positive kernels,
+fixed-sign Cauchy pairings, $\beta$-smooth forms; Corollary~\ref{cor:class}), with the modular
+surface as the sharpest concrete casualty (Theorem~\ref{thm:modular}). It identifies the local
+mechanism by which a Pontryagin index can nonetheless appear — one Lorentzian $(1,1)$ block per
+off-axis evaluation (Theorem~\ref{thm:F}) — and reduces the global count to the de Branges
+Pontryagin-index theorem in the finite-index regime (Corollary~\ref{cor:count},
+\S\ref{sec:regimes}). It makes the de Branges realization structurally rigid up to two named
+residues, the resolvent axiom and the identification $E=E_\xi$ (Theorem~\ref{thm:rigid},
+Corollary~\ref{cor:freedom}). And it explains, through the dichotomy symmetry-versus-positivity
+(Theorem~\ref{thm:dichotomy}), why the spectral programmes converge to one wall: the symmetry
+data is abundant and unconditional, while the sign $\kappa=0$ is scarce, global, and one-sided.
+
+The diagnostic conclusion is concrete. A successful realization must supply not a better
+spectrum, real structure, or resolvent — these are RH-independent — but a genuinely new
+\emph{global positivity}, carried by an indefinite kernel with bounded off-axis evaluation, or
+equivalently by an indefinite arithmetic intersection that degenerates exactly at the critical
+line. Nothing here proves the Riemann Hypothesis; it delimits, in pure functional-analytic
+terms, what proving it through an operator realization would require.
+
+\begin{thebibliography}{99}
+\bibitem{Defect} D.~A.~Trejo Pizzo, \emph{The arithmetic defect of off-line zeros: parity, the
+modified explicit formula, and two-scale structure}, companion paper, preprint, 2026.
+\bibitem{deBranges} L.~de Branges, \emph{Hilbert Spaces of Entire Functions}, Prentice--Hall,
+Englewood Cliffs NJ, 1968.
+\bibitem{KL} M.~G.~Kre\u\i n and H.~Langer, \emph{\"Uber die verallgemeinerten Resolventen und
+die charakteristische Funktion eines isometrischen Operators im Raume $\Pi_\kappa$}, in:
+Hilbert Space Operators and Operator Algebras, Colloq.\ Math.\ Soc.\ J\'anos Bolyai
+\textbf{5} (1972), 353--399.
+\bibitem{Aronszajn} N.~Aronszajn, \emph{Theory of reproducing kernels}, Trans.\ Amer.\ Math.\
+Soc.\ \textbf{68} (1950), 337--404.
+\bibitem{Weil} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres
+premiers}, Comm.\ S\'em.\ Math.\ Univ.\ Lund (1952), 252--265.
+\bibitem{Iwaniec} H.~Iwaniec, \emph{Spectral Methods of Automorphic Forms}, Grad.\ Stud.\
+Math.\ \textbf{53}, Amer.\ Math.\ Soc., 2002.
+\bibitem{Zagier} D.~Zagier, \emph{The Rankin--Selberg method for automorphic functions which
+are not of rapid decay}, J.\ Fac.\ Sci.\ Univ.\ Tokyo \textbf{28} (1981), 415--437.
+\bibitem{Montgomery} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta
+function}, Proc.\ Sympos.\ Pure Math.\ \textbf{24} (1973), 181--193.
+\bibitem{bgConnes99} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\bibitem{bgCC21} A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the archimedean place}, Selecta Math.\ (N.S.) \textbf{27} (2021), no.~77.
+\bibitem{bgBognar} J.~Bogn\'ar, \emph{Indefinite Inner Product Spaces}, Springer, 1974.
+\bibitem{bgAzizov} T.~Ya.~Azizov and I.~S.~Iokhvidov, \emph{Linear Operators in Spaces with an Indefinite Metric}, Wiley, 1989.
+\bibitem{bgBK} M.~V.~Berry and J.~P.~Keating, \emph{The Riemann zeros and eigenvalue asymptotics}, SIAM Rev.\ \textbf{41} (1999), 236--266.
+\end{thebibliography}
+
+\end{document}

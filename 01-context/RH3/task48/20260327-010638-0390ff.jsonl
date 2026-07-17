@@ -1,0 +1,3067 @@
+{
+  "hits": {
+    "hits": [
+      {
+        "created": "2017-07-02T22:26:13.616210+00:00",
+        "modified": "2024-08-03T09:40:28.063593+00:00",
+        "id": 822059,
+        "conceptrecid": "822058",
+        "doi": "10.5281/zenodo.822059",
+        "conceptdoi": "10.5281/zenodo.822058",
+        "doi_url": "https://doi.org/10.5281/zenodo.822059",
+        "metadata": {
+          "title": "Constant quality of the Riemann zeta's non-trivial  zeros",
+          "doi": "10.5281/zenodo.822059",
+          "publication_date": "2017-04-26",
+          "description": "<p>In this article we are closely examining Riemann zeta function's non-trivial zeros. Especially, we examine real part of non-trivial zeros. Real part of Riemann zeta function's non-trivial zeros is considered in the light of constant quality of such zeros. We propose and prove a theorem of this quality. We also uncover a definition phenomenons of zeta and Riemann xi functions. In conclusion and as an conclusion we observe Riemann hypothesis in perspective of our researches.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Pushkarev, Petr",
+              "affiliation": null
+            }
+          ],
+          "keywords": [
+            "Riemann zeta function",
+            "Riemann hypothesis"
+          ],
+          "related_identifiers": [
+            {
+              "identifier": "0973-1768",
+              "relation": "isPartOf",
+              "scheme": "issn"
+            }
+          ],
+          "resource_type": {
+            "title": "Journal article",
+            "type": "publication",
+            "subtype": "article"
+          },
+          "journal": {
+            "issue": "6",
+            "pages": "1987-1992",
+            "title": "Global Journal of Pure and Applied Mathematics",
+            "volume": "13"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "822058"
+                }
+              }
+            ]
+          }
+        },
+        "title": "Constant quality of the Riemann zeta's non-trivial  zeros",
+        "links": {
+          "self": "https://zenodo.org/api/records/822059",
+          "self_html": "https://zenodo.org/records/822059",
+          "preview_html": "https://zenodo.org/records/822059?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.822059",
+          "self_doi": "https://doi.org/10.5281/zenodo.822059",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.822059",
+          "reserve_doi": "https://zenodo.org/api/records/822059/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/822058",
+          "parent_html": "https://zenodo.org/records/822058",
+          "parent_doi": "https://doi.org/10.5281/zenodo.822058",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.822058",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:822059/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:822059/sequence/default",
+          "files": "https://zenodo.org/api/records/822059/files",
+          "media_files": "https://zenodo.org/api/records/822059/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:822059:gjpamv13n6_42.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:822059:gjpamv13n6_42.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:822059:gjpamv13n6_42.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:822059:gjpamv13n6_42.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:822059:gjpamv13n6_42.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:822059:gjpamv13n6_42.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/822059/files-archive",
+          "archive_media": "https://zenodo.org/api/records/822059/media-files-archive",
+          "latest": "https://zenodo.org/api/records/822059/versions/latest",
+          "latest_html": "https://zenodo.org/records/822059/latest",
+          "versions": "https://zenodo.org/api/records/822059/versions",
+          "draft": "https://zenodo.org/api/records/822059/draft",
+          "access_links": "https://zenodo.org/api/records/822059/access/links",
+          "access_grants": "https://zenodo.org/api/records/822059/access/grants",
+          "access_users": "https://zenodo.org/api/records/822059/access/users",
+          "access_request": "https://zenodo.org/api/records/822059/access/request",
+          "access": "https://zenodo.org/api/records/822059/access",
+          "communities": "https://zenodo.org/api/records/822059/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/822059/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/822059/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/822059/file-modification",
+          "requests": "https://zenodo.org/api/records/822059/requests"
+        },
+        "updated": "2024-08-03T09:40:28.063593+00:00",
+        "recid": "822059",
+        "revision": 8,
+        "files": [
+          {
+            "id": "9e8820f7-889f-4efa-bb56-665cf859815b",
+            "key": "gjpamv13n6_42.pdf",
+            "size": 480997,
+            "checksum": "md5:3b24562747b83380f7b22fbe6a555cc1",
+            "links": {
+              "self": "https://zenodo.org/api/records/822059/files/gjpamv13n6_42.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "33435"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 125,
+          "unique_downloads": 122,
+          "views": 146,
+          "unique_views": 142,
+          "version_downloads": 125,
+          "version_unique_downloads": 122,
+          "version_unique_views": 141,
+          "version_views": 145
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2023-11-08T14:29:05.839274+00:00",
+        "modified": "2024-07-10T23:22:17.913194+00:00",
+        "id": 10083634,
+        "conceptrecid": "1490764",
+        "doi": "10.5281/zenodo.10083634",
+        "conceptdoi": "10.5281/zenodo.1490764",
+        "doi_url": "https://doi.org/10.5281/zenodo.10083634",
+        "metadata": {
+          "title": "Riemann's Functional Equation is Not Valid and its Implication on the Riemann Hypothesis",
+          "doi": "10.5281/zenodo.10083634",
+          "publication_date": "2023-11-08",
+          "description": "<p>&nbsp;</p><p><strong>Riemann's \"functional\" equation</strong> was formulated by Bernhard Riemann in his 1859 paper. If it is valid, then a real function is obtained that has zeros similar to the hypothesized zeros of the Riemann zeta function.</p><p>The <strong>Riemann Hypothesis </strong>states<strong> </strong>that 'all the nontrivial zeros of the zeta function are at <i>z </i>= ½ + <i>iy'</i>. Thus, the Riemann's \"functional\" equation <i>is</i> the foundation upon which the Riemann Hypothesis is based. But the \"functional\" equation, as shall be shown here, is not valid such that the Riemann Hypothesis crumbles on its claim.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Armando M. Evangelista Jr.",
+              "affiliation": "None",
+              "orcid": "0000-0002-3199-1105"
+            }
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 7,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "1490764"
+                }
+              }
+            ]
+          }
+        },
+        "title": "Riemann's Functional Equation is Not Valid and its Implication on the Riemann Hypothesis",
+        "links": {
+          "self": "https://zenodo.org/api/records/10083634",
+          "self_html": "https://zenodo.org/records/10083634",
+          "preview_html": "https://zenodo.org/records/10083634?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.10083634",
+          "self_doi": "https://doi.org/10.5281/zenodo.10083634",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.10083634",
+          "reserve_doi": "https://zenodo.org/api/records/10083634/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/1490764",
+          "parent_html": "https://zenodo.org/records/1490764",
+          "parent_doi": "https://doi.org/10.5281/zenodo.1490764",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.1490764",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:10083634/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:10083634/sequence/default",
+          "files": "https://zenodo.org/api/records/10083634/files",
+          "media_files": "https://zenodo.org/api/records/10083634/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:10083634:RiemannFunctionalEquationIsInvalidNov2023.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:10083634:RiemannFunctionalEquationIsInvalidNov2023.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:10083634:RiemannFunctionalEquationIsInvalidNov2023.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:10083634:RiemannFunctionalEquationIsInvalidNov2023.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:10083634:RiemannFunctionalEquationIsInvalidNov2023.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:10083634:RiemannFunctionalEquationIsInvalidNov2023.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/10083634/files-archive",
+          "archive_media": "https://zenodo.org/api/records/10083634/media-files-archive",
+          "latest": "https://zenodo.org/api/records/10083634/versions/latest",
+          "latest_html": "https://zenodo.org/records/10083634/latest",
+          "versions": "https://zenodo.org/api/records/10083634/versions",
+          "draft": "https://zenodo.org/api/records/10083634/draft",
+          "access_links": "https://zenodo.org/api/records/10083634/access/links",
+          "access_grants": "https://zenodo.org/api/records/10083634/access/grants",
+          "access_users": "https://zenodo.org/api/records/10083634/access/users",
+          "access_request": "https://zenodo.org/api/records/10083634/access/request",
+          "access": "https://zenodo.org/api/records/10083634/access",
+          "communities": "https://zenodo.org/api/records/10083634/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/10083634/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/10083634/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/10083634/file-modification",
+          "requests": "https://zenodo.org/api/records/10083634/requests"
+        },
+        "updated": "2024-07-10T23:22:17.913194+00:00",
+        "recid": "10083634",
+        "revision": 6,
+        "files": [
+          {
+            "id": "29e9dafb-1536-4814-bea8-90fbbc8e0b4d",
+            "key": "RiemannFunctionalEquationIsInvalidNov2023.pdf",
+            "size": 95302,
+            "checksum": "md5:ec5b0fd8533481676a93abd7b292f3c4",
+            "links": {
+              "self": "https://zenodo.org/api/records/10083634/files/RiemannFunctionalEquationIsInvalidNov2023.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "55859"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 3183,
+          "unique_downloads": 3068,
+          "views": 5366,
+          "unique_views": 5059,
+          "version_downloads": 280,
+          "version_unique_downloads": 253,
+          "version_unique_views": 357,
+          "version_views": 380
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2022-07-15T21:58:03.152435+00:00",
+        "modified": "2024-07-16T09:45:25.098670+00:00",
+        "id": 6842225,
+        "conceptrecid": "6330528",
+        "doi": "10.5281/zenodo.6842225",
+        "conceptdoi": "10.5281/zenodo.6330528",
+        "doi_url": "https://doi.org/10.5281/zenodo.6842225",
+        "metadata": {
+          "title": "Note on the Riemann Hypothesis",
+          "doi": "10.5281/zenodo.6842225",
+          "publication_date": "2022-07-15",
+          "description": "<p>The Riemann Hypothesis is a conjecture that the Riemann zeta function has its zeros only at the negative even integers and complex numbers with real part $\\frac{1}{2}$. In 2011, Sol{\\&#39;e} and and Planat stated that the Riemann Hypothesis is true if and only if the inequality $\\prod_{q\\leq q_{n}}\\left(1+\\frac{1}{q} \\right) &gt;\\frac{e^{\\gamma}}{\\zeta(2)}\\times \\log\\theta(q_{n})$ is satisfied for all primes $q_{n}&gt; 3$, where $\\theta(x)$ is the Chebyshev function, $\\gamma\\approx 0.57721$ is the Euler-Mascheroni constant and $\\zeta(x)$ is the Riemann zeta function. Using this result, we create a new criterion for the Riemann Hypothesis. We prove the Riemann Hypothesis is true using this new criterion.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Frank Vega",
+              "affiliation": "CopSonic",
+              "orcid": "0000-0001-8210-4126"
+            }
+          ],
+          "keywords": [
+            "Riemann Hypothesis",
+            "Prime numbers",
+            "Chebyshev function",
+            "Riemann zeta function"
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 21,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "6330528"
+                }
+              }
+            ]
+          },
+          "notes": "Last version of the author without the final revision of the referees."
+        },
+        "title": "Note on the Riemann Hypothesis",
+        "links": {
+          "self": "https://zenodo.org/api/records/6842225",
+          "self_html": "https://zenodo.org/records/6842225",
+          "preview_html": "https://zenodo.org/records/6842225?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.6842225",
+          "self_doi": "https://doi.org/10.5281/zenodo.6842225",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6842225",
+          "reserve_doi": "https://zenodo.org/api/records/6842225/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/6330528",
+          "parent_html": "https://zenodo.org/records/6330528",
+          "parent_doi": "https://doi.org/10.5281/zenodo.6330528",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6330528",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:6842225/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:6842225/sequence/default",
+          "files": "https://zenodo.org/api/records/6842225/files",
+          "media_files": "https://zenodo.org/api/records/6842225/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:6842225:manuscript.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:6842225:manuscript.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:6842225:manuscript.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:6842225:manuscript.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:6842225:manuscript.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:6842225:manuscript.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/6842225/files-archive",
+          "archive_media": "https://zenodo.org/api/records/6842225/media-files-archive",
+          "latest": "https://zenodo.org/api/records/6842225/versions/latest",
+          "latest_html": "https://zenodo.org/records/6842225/latest",
+          "versions": "https://zenodo.org/api/records/6842225/versions",
+          "draft": "https://zenodo.org/api/records/6842225/draft",
+          "access_links": "https://zenodo.org/api/records/6842225/access/links",
+          "access_grants": "https://zenodo.org/api/records/6842225/access/grants",
+          "access_users": "https://zenodo.org/api/records/6842225/access/users",
+          "access_request": "https://zenodo.org/api/records/6842225/access/request",
+          "access": "https://zenodo.org/api/records/6842225/access",
+          "communities": "https://zenodo.org/api/records/6842225/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/6842225/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/6842225/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/6842225/file-modification",
+          "requests": "https://zenodo.org/api/records/6842225/requests"
+        },
+        "updated": "2024-07-16T09:45:25.098670+00:00",
+        "recid": "6842225",
+        "revision": 5,
+        "files": [
+          {
+            "id": "976e1c5a-f0fa-42ee-9bd0-59b96b932c5a",
+            "key": "manuscript.pdf",
+            "size": 110314,
+            "checksum": "md5:1f7ed1ab3100a02c385e8b48bb768026",
+            "links": {
+              "self": "https://zenodo.org/api/records/6842225/files/manuscript.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "45971"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 1809,
+          "unique_downloads": 1781,
+          "views": 2140,
+          "unique_views": 2074,
+          "version_downloads": 102,
+          "version_unique_downloads": 98,
+          "version_unique_views": 358,
+          "version_views": 361
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2022-11-03T21:27:03.076194+00:00",
+        "modified": "2024-07-15T19:43:30.533982+00:00",
+        "id": 7278404,
+        "conceptrecid": "7278403",
+        "doi": "10.5281/zenodo.7278404",
+        "conceptdoi": "10.5281/zenodo.7278403",
+        "doi_url": "https://doi.org/10.5281/zenodo.7278404",
+        "metadata": {
+          "title": "Riemann Hypothesis on Ramanujan's Function",
+          "doi": "10.5281/zenodo.7278404",
+          "publication_date": "2022-11-03",
+          "description": "<p>Srinivasa Ramanujan studied the function $S_{1}(x) = \\sum_{\\rho} \\frac{x^{\\rho - 1}}{\\rho \\cdot (1 - \\rho)}$ where $\\rho$ runs over the nontrivial zeros of the Riemann $\\zeta$ function. Under the Riemann hypothesis, we know that $\\lvert S_{1}(x) \\rvert \\leq \\frac{\\tau}{\\sqrt{x}}$ for $\\tau = 2 + \\gamma - \\log(4 \\cdot \\pi) \\approx 0.04619$. The Riemann hypothesis is a conjecture that the Riemann zeta function has its zeros only at the negative even integers and complex numbers with real part $\\frac{1}{2}$. It is considered by many to be the most important unsolved problem in pure mathematics. There are several statements equivalent to the famous Riemann hypothesis. In 2011, Sol&eacute; and Planat stated that, the Riemann hypothesis is true if and only if the inequality $\\zeta(2) \\cdot \\prod_{p\\leq x} (1+\\frac{1}{p}) &gt; e^{\\gamma} \\cdot \\log \\theta(x)$ holds for all $x \\geq 5$, where $\\theta(x)$ is the Chebyshev function, $\\gamma \\approx 0.57721$ is the Euler-Mascheroni constant, $\\zeta(x)$ is the Riemann zeta function and $\\log$ is the natural logarithm. In this note, using Sol&eacute; and Planat criterion, we prove that, when the Riemann hypothesis is false, then there are infinitely many natural numbers $x$ for which $\\frac{\\log x}{\\sqrt{x}} - \\frac{10}{\\sqrt{x}} + 2 \\cdot \\log x + S_{1}(x) \\cdot \\sqrt{x} \\cdot \\log x \\leq 2.062$ could be satisfied. In addition, we show that the Riemann hypothesis is true when $S_{1}(x) \\geq \\frac{\\varepsilon}{\\sqrt{x}}$ for $\\varepsilon \\geq -1.9999999$ and large enough $x$.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Frank Vega",
+              "affiliation": "CopSonic, 1471 Route de Saint-Nauphary 82000 Montauban, France",
+              "orcid": "0000-0001-8210-4126"
+            }
+          ],
+          "keywords": [
+            "Riemann hypothesis",
+            "Riemann zeta function",
+            "Chebyshev function"
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "7278403"
+                }
+              }
+            ]
+          }
+        },
+        "title": "Riemann Hypothesis on Ramanujan's Function",
+        "links": {
+          "self": "https://zenodo.org/api/records/7278404",
+          "self_html": "https://zenodo.org/records/7278404",
+          "preview_html": "https://zenodo.org/records/7278404?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.7278404",
+          "self_doi": "https://doi.org/10.5281/zenodo.7278404",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7278404",
+          "reserve_doi": "https://zenodo.org/api/records/7278404/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/7278403",
+          "parent_html": "https://zenodo.org/records/7278403",
+          "parent_doi": "https://doi.org/10.5281/zenodo.7278403",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7278403",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:7278404/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:7278404/sequence/default",
+          "files": "https://zenodo.org/api/records/7278404/files",
+          "media_files": "https://zenodo.org/api/records/7278404/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:7278404:The%20Riemann%20Hypothesis-II.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:7278404:The%20Riemann%20Hypothesis-II.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:7278404:The%20Riemann%20Hypothesis-II.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:7278404:The%20Riemann%20Hypothesis-II.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:7278404:The%20Riemann%20Hypothesis-II.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:7278404:The%20Riemann%20Hypothesis-II.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/7278404/files-archive",
+          "archive_media": "https://zenodo.org/api/records/7278404/media-files-archive",
+          "latest": "https://zenodo.org/api/records/7278404/versions/latest",
+          "latest_html": "https://zenodo.org/records/7278404/latest",
+          "versions": "https://zenodo.org/api/records/7278404/versions",
+          "draft": "https://zenodo.org/api/records/7278404/draft",
+          "access_links": "https://zenodo.org/api/records/7278404/access/links",
+          "access_grants": "https://zenodo.org/api/records/7278404/access/grants",
+          "access_users": "https://zenodo.org/api/records/7278404/access/users",
+          "access_request": "https://zenodo.org/api/records/7278404/access/request",
+          "access": "https://zenodo.org/api/records/7278404/access",
+          "communities": "https://zenodo.org/api/records/7278404/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/7278404/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/7278404/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/7278404/file-modification",
+          "requests": "https://zenodo.org/api/records/7278404/requests"
+        },
+        "updated": "2024-07-15T19:43:30.533982+00:00",
+        "recid": "7278404",
+        "revision": 5,
+        "files": [
+          {
+            "id": "4690456f-d88b-4818-b07f-0d38da9222e6",
+            "key": "The Riemann Hypothesis-II.pdf",
+            "size": 412117,
+            "checksum": "md5:b064f2e4b0341c14d62ec58180374c83",
+            "links": {
+              "self": "https://zenodo.org/api/records/7278404/files/The Riemann Hypothesis-II.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "45971"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 101,
+          "unique_downloads": 100,
+          "views": 85,
+          "unique_views": 83,
+          "version_downloads": 100,
+          "version_unique_downloads": 99,
+          "version_unique_views": 83,
+          "version_views": 85
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2024-10-19T03:44:20.654261+00:00",
+        "modified": "2024-10-19T03:44:20.837321+00:00",
+        "id": 13953707,
+        "conceptrecid": "13953706",
+        "doi": "10.5281/zenodo.13953707",
+        "conceptdoi": "10.5281/zenodo.13953706",
+        "doi_url": "https://doi.org/10.5281/zenodo.13953707",
+        "metadata": {
+          "title": "Analyzing the Zeros of the Riemann Zeta Function Using Set-Theoretic and Sweeping Net Methods",
+          "doi": "10.5281/zenodo.13953707",
+          "publication_date": "2024-10-19",
+          "description": "<p>1 Introduction<br>The Riemann zeta function &zeta;(s) is a central object in number theory and complex analysis, defined<br>for complex variables and intimately connected to the distribution of prime numbers through its zeros.<br>The famous Riemann Hypothesis conjectures that all non-trivial zeros of the zeta function lie on the<br>critical line Re(s) = 1<br>2 .<br>In this paper, we explore the Riemann zeta function through the lens of set-theoretic and sweeping<br>net methods, leveraging creative comparisons of specific sets to gain deeper insight into the distribution<br>of its zeros. By rewording and analyzing the Riemann Hypothesis using set-theoretic arguments, applying<br>sweeping net techniques, and integrating modal logic interpretations, we aim to provide new perspectives<br>and support for this profound conjecture.<br>Our objectives are:<br>&bull; Define the zeta function and its properties relevant to the zeros.<br>&bull; Reword the Riemann Hypothesis using set-theoretic language and establish logical equivalence.<br>&bull; Introduce and compare specific sets related to the zeros of &zeta;(s).<br>&bull; Apply set-theoretic and sweeping net methods to analyze the distribution of zeros.<br>&bull; Provide rigorous proofs about the absence of zeros in certain regions, including mechanical justifi-<br>cations with all steps.<br>&bull; Incorporate modal logic interpretations into the proof.<br>&bull; Discuss implications for the Riemann Hypothesis.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Emmerson, Parker",
+              "affiliation": null,
+              "orcid": "0009-0007-1288-3292"
+            }
+          ],
+          "keywords": [
+            "research methodologies",
+            "contemporary mathematics",
+            "theorem proving",
+            "mathematical implications",
+            "harmonic analysis",
+            "mathematical modeling",
+            "transcendental functions",
+            "symmetry",
+            "number theory",
+            "analytical continuation",
+            "Dirichlet series",
+            "asymptotic behavior",
+            "upper bounds",
+            "estimations",
+            "statistical properties",
+            "oscillatory behavior",
+            "threshold functions",
+            "graph visualization",
+            "approximating zeros",
+            "integration of sets",
+            "set operations",
+            "contour integration",
+            "phase angle",
+            "distribution of zeros",
+            "complex plane",
+            "prime numbers",
+            "formal logic",
+            "mathematical proofs",
+            "mechanical justifications",
+            "argument of zeta",
+            "computational mathematics",
+            "numerical methods",
+            "convergence",
+            "zero-free regions",
+            "modal logic",
+            "argument principle",
+            "functional equation",
+            "non-trivial zeros",
+            "trivial zeros",
+            "critical line",
+            "sweeping net methods",
+            "logical equivalence",
+            "set theory",
+            "analytic number theory",
+            "complex analysis",
+            "zeros",
+            "Riemann Hypothesis",
+            "Riemann zeta function"
+          ],
+          "resource_type": {
+            "title": "Journal article",
+            "type": "publication",
+            "subtype": "article"
+          },
+          "journal": {
+            "title": "The Journal of Liberated Mathematics"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "communities": [
+            {
+              "id": "liberatedmathematics"
+            }
+          ],
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "13953706"
+                }
+              }
+            ]
+          }
+        },
+        "title": "Analyzing the Zeros of the Riemann Zeta Function Using Set-Theoretic and Sweeping Net Methods",
+        "links": {
+          "self": "https://zenodo.org/api/records/13953707",
+          "self_html": "https://zenodo.org/records/13953707",
+          "preview_html": "https://zenodo.org/records/13953707?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.13953707",
+          "self_doi": "https://doi.org/10.5281/zenodo.13953707",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.13953707",
+          "reserve_doi": "https://zenodo.org/api/records/13953707/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/13953706",
+          "parent_html": "https://zenodo.org/records/13953706",
+          "parent_doi": "https://doi.org/10.5281/zenodo.13953706",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.13953706",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:13953707/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:13953707/sequence/default",
+          "files": "https://zenodo.org/api/records/13953707/files",
+          "media_files": "https://zenodo.org/api/records/13953707/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:13953707:Analyzing_the_Zeros_of_the_Riemann_Zeta_Function_Using_Set_Theoretic_and_Sweeping_Net_Methods%20(1).pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:13953707:Analyzing_the_Zeros_of_the_Riemann_Zeta_Function_Using_Set_Theoretic_and_Sweeping_Net_Methods%20(1).pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:13953707:Analyzing_the_Zeros_of_the_Riemann_Zeta_Function_Using_Set_Theoretic_and_Sweeping_Net_Methods%20(1).pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:13953707:Analyzing_the_Zeros_of_the_Riemann_Zeta_Function_Using_Set_Theoretic_and_Sweeping_Net_Methods%20(1).pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:13953707:Analyzing_the_Zeros_of_the_Riemann_Zeta_Function_Using_Set_Theoretic_and_Sweeping_Net_Methods%20(1).pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:13953707:Analyzing_the_Zeros_of_the_Riemann_Zeta_Function_Using_Set_Theoretic_and_Sweeping_Net_Methods%20(1).pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/13953707/files-archive",
+          "archive_media": "https://zenodo.org/api/records/13953707/media-files-archive",
+          "latest": "https://zenodo.org/api/records/13953707/versions/latest",
+          "latest_html": "https://zenodo.org/records/13953707/latest",
+          "versions": "https://zenodo.org/api/records/13953707/versions",
+          "draft": "https://zenodo.org/api/records/13953707/draft",
+          "access_links": "https://zenodo.org/api/records/13953707/access/links",
+          "access_grants": "https://zenodo.org/api/records/13953707/access/grants",
+          "access_users": "https://zenodo.org/api/records/13953707/access/users",
+          "access_request": "https://zenodo.org/api/records/13953707/access/request",
+          "access": "https://zenodo.org/api/records/13953707/access",
+          "communities": "https://zenodo.org/api/records/13953707/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/13953707/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/13953707/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/13953707/file-modification",
+          "requests": "https://zenodo.org/api/records/13953707/requests"
+        },
+        "updated": "2024-10-19T03:44:20.837321+00:00",
+        "recid": "13953707",
+        "revision": 4,
+        "files": [
+          {
+            "id": "59fdbbdf-3090-4538-accb-9d4f0e8ab436",
+            "key": "Analyzing the Zeros of the Riemann Zeta Function Using Set-Theoretic and Sweeping Net Methods.zip",
+            "size": 338273,
+            "checksum": "md5:34f27b2cdb7e9c1c2493d52696c17b00",
+            "links": {
+              "self": "https://zenodo.org/api/records/13953707/files/Analyzing the Zeros of the Riemann Zeta Function Using Set-Theoretic and Sweeping Net Methods.zip/content"
+            }
+          },
+          {
+            "id": "d778efa9-ee9f-4ac4-bb47-ce434eb34d79",
+            "key": "Analyzing_the_Zeros_of_the_Riemann_Zeta_Function_Using_Set_Theoretic_and_Sweeping_Net_Methods (1).pdf",
+            "size": 592161,
+            "checksum": "md5:03d6f6ffda9d7dd2f08800f208efe359",
+            "links": {
+              "self": "https://zenodo.org/api/records/13953707/files/Analyzing_the_Zeros_of_the_Riemann_Zeta_Function_Using_Set_Theoretic_and_Sweeping_Net_Methods (1).pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "433246"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 117,
+          "unique_downloads": 113,
+          "views": 257,
+          "unique_views": 241,
+          "version_downloads": 117,
+          "version_unique_downloads": 113,
+          "version_unique_views": 241,
+          "version_views": 257
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2022-06-30T23:47:06.792242+00:00",
+        "modified": "2024-07-16T12:30:28.153318+00:00",
+        "id": 6785002,
+        "conceptrecid": "6667934",
+        "doi": "10.5281/zenodo.6785002",
+        "conceptdoi": "10.5281/zenodo.6667934",
+        "doi_url": "https://doi.org/10.5281/zenodo.6785002",
+        "metadata": {
+          "title": "Slide Presentation on the Riemann Hypothesis",
+          "doi": "10.5281/zenodo.6785002",
+          "publication_date": "2022-06-30",
+          "description": "<p>The Riemann Hypothesis is a conjecture that the Riemann zeta function has its zeros only at the negative even integers and complex numbers with real part 1/2. In 2011, Patrick Sol&eacute; and Michel Planat stated a new criterion for the Riemann Hypothesis. We prove the Riemann Hypothesis is true using this criterion.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Frank Vega",
+              "affiliation": "CopSonic",
+              "orcid": "0000-0001-8210-4126"
+            }
+          ],
+          "keywords": [
+            "Riemann Hypothesis",
+            "Prime numbers",
+            "Chebyshev function",
+            "Riemann zeta function"
+          ],
+          "resource_type": {
+            "title": "Presentation",
+            "type": "presentation"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 7,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "6667934"
+                }
+              }
+            ]
+          }
+        },
+        "title": "Slide Presentation on the Riemann Hypothesis",
+        "links": {
+          "self": "https://zenodo.org/api/records/6785002",
+          "self_html": "https://zenodo.org/records/6785002",
+          "preview_html": "https://zenodo.org/records/6785002?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.6785002",
+          "self_doi": "https://doi.org/10.5281/zenodo.6785002",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6785002",
+          "reserve_doi": "https://zenodo.org/api/records/6785002/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/6667934",
+          "parent_html": "https://zenodo.org/records/6667934",
+          "parent_doi": "https://doi.org/10.5281/zenodo.6667934",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6667934",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:6785002/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:6785002/sequence/default",
+          "files": "https://zenodo.org/api/records/6785002/files",
+          "media_files": "https://zenodo.org/api/records/6785002/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:6785002:presentation.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:6785002:presentation.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:6785002:presentation.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:6785002:presentation.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:6785002:presentation.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:6785002:presentation.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/6785002/files-archive",
+          "archive_media": "https://zenodo.org/api/records/6785002/media-files-archive",
+          "latest": "https://zenodo.org/api/records/6785002/versions/latest",
+          "latest_html": "https://zenodo.org/records/6785002/latest",
+          "versions": "https://zenodo.org/api/records/6785002/versions",
+          "draft": "https://zenodo.org/api/records/6785002/draft",
+          "access_links": "https://zenodo.org/api/records/6785002/access/links",
+          "access_grants": "https://zenodo.org/api/records/6785002/access/grants",
+          "access_users": "https://zenodo.org/api/records/6785002/access/users",
+          "access_request": "https://zenodo.org/api/records/6785002/access/request",
+          "access": "https://zenodo.org/api/records/6785002/access",
+          "communities": "https://zenodo.org/api/records/6785002/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/6785002/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/6785002/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/6785002/file-modification",
+          "requests": "https://zenodo.org/api/records/6785002/requests"
+        },
+        "updated": "2024-07-16T12:30:28.153318+00:00",
+        "recid": "6785002",
+        "revision": 8,
+        "files": [
+          {
+            "id": "7fcaa834-d70e-4dd3-86e9-a4822c3615da",
+            "key": "presentation.pdf",
+            "size": 420218,
+            "checksum": "md5:ea6c01d6b077d2e4b4aef5b0b3a3f4da",
+            "links": {
+              "self": "https://zenodo.org/api/records/6785002/files/presentation.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "45971"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 759,
+          "unique_downloads": 746,
+          "views": 645,
+          "unique_views": 636,
+          "version_downloads": 152,
+          "version_unique_downloads": 143,
+          "version_unique_views": 222,
+          "version_views": 225
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2026-03-25T04:34:16.625575+00:00",
+        "modified": "2026-03-26T02:49:25.559331+00:00",
+        "id": 19212905,
+        "conceptrecid": "19212904",
+        "doi": "10.5281/zenodo.19212905",
+        "conceptdoi": "10.5281/zenodo.19212904",
+        "doi_url": "https://doi.org/10.5281/zenodo.19212905",
+        "metadata": {
+          "title": "The Riemann Hypothesis as a Consequence of the Spectral Structure of the Zeta Function",
+          "doi": "10.5281/zenodo.19212905",
+          "publication_date": "2026-03-25",
+          "description": "<p>We establish the Riemann Hypothesis based on the explicit construction of a self-adjoint operator $H$ whose spectrum coincides exactly with the imaginary parts $\\gamma_n$ of the non-trivial zeros of $\\zeta(s)$. The construction starts from Riemann's explicit formula and the Fourier analysis of the prime counting error, which reveals the zeros as frequencies of an integral kernel. We demonstrate that the operator $H$ is self-adjoint on $L^2(\\mathbb{R})$, its spectrum is exactly $\\{\\gamma_n\\}$, and the conformal transformation $\\Phi(z) = \\beta \\operatorname{arcsinh}(z/\\gamma)$ with $\\alpha\\beta\\gamma = 2\\pi$ establishes a bijection between the eigenvalues of $H$ and the zeros. Furthermore, the topology of the M\\\"obius strip, the natural domain of the completed function $\\xi(s)$, imposes a parity condition ($c_1(\\mathcal{L}) = 2$) that excludes the possibility of zeros off the critical line. As a corollary, all non-trivial zeros of $\\zeta(s)$ satisfy $\\operatorname{Re}(s) = 1/2$, thereby verifying the Riemann Hypothesis, accompanied by high-precision numerical verification.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Souto, Felipe Oliveira",
+              "affiliation": "Universidade Federal do Triângulo Mineiro",
+              "orcid": "0009-0004-2444-552X"
+            }
+          ],
+          "references": [
+            "M.V. Berry. \"Riemann's zeta function: A model for quantum chaos?\" In: Quantum Chaos and Stat. Nucl. Phys. Ed. by T.H. Seligman and H. Nishioka. Vol. 263. Lecture Notes in Physics. Berlin/Heidelberg, Germany: Springer, 1986, pp. 1–17.",
+            "M.V. Berry and J.P. Keating. \"The Riemann zeros and eigenvalue asymptotics\". In: SIAM Rev. 41.2 (1999), pp. 236–266.",
+            "Enrico Bombieri. Problems of the Millennium: The Riemann Hypothesis. Accessed: 2026-03-18. Clay Mathematics Institute, 2000. url: https://www.claymath.org/ wp-content/uploads/2022/05/riemann.pdf.",
+            "J.B. Conrey. \"The Riemann Hypothesis\". In: Not. Am. Math. Soc. 50.3 (2003), pp. 341–353.",
+            "H.M. Edwards. Riemann's Zeta Function. New York, NY, USA: Academic Press, 1974.",
+            "David Hilbert. \"Grundzüge einer allgemeinen Theorie der linearen Integralgleichun- gen\". In: Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse (1910), pp. 595–618. url: http : //eudml.org/doc/58785.",
+            "J.P. Keating. \"The Riemann zeta function and quantum chaology\". In: Quantum Chaos. Ed. by G. Casati, I. Guarneri, and U. Smilansky. Vol. 119. Proceedings of the International School of Physics \"Enrico Fermi\". Amsterdam, The Netherlands: North-Holland, 1993.",
+            "H.L. Montgomery. \"The pair correlation of zeros of the zeta function\". In: Analytic Number Theory. Ed. by H.G. Diamond. Vol. 24. Proceedings of Symposia in Pure Mathematics. Providence, RI, USA: American Mathematical Society, 1973, pp. 181– 193.",
+            "A.M. Odlyzko. Correspondence about the origins of the Hilbert-Pólya Conjecture. http://www.dtc.umn.edu/~odlyzko/polya/index.html. Accessed on 18 March 2026. 1982.",
+            "A.M. Odlyzko. \"On the distribution of spacings between zeros of the zeta function\". In: Math. Comput. 48.177 (1987), pp. 273–308.",
+            "A.M. Odlyzko. The 1022-nd zero of the Riemann zeta function. https : / / www - users.cse.umn.edu/~odlyzko/zeta_tables. Accessed on 18 March 2026. 2001.",
+            "M. Reed and B. Simon. Methods of Modern Mathematical Physics I: Functional Analysis. San Diego, CA, USA: Academic Press, 1980.",
+            "B. Riemann. \"Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse\". In: Monatsberichte der Königlich Preussischen Akademie der Wissenschaften zu Berlin (1859), pp. 671–680.",
+            "F. O. Souto. A path to the Riemann Hypothesis: Geometric approach via non- orientable surfaces. Preprints. https://doi.org/10.20944/preprints202512.1313.v1. 2025.",
+            "F. O. Souto. The Arithmetic-Geometric Origin of the Fine Structure Constant. Preprints. https://doi.org/10.20944/preprints202512.1527.v2. 2025.",
+            "F. O. Souto. A Self-Adjoint Operator with Spectrum Given by the Riemann Zeta Zeros. Zenodo. https://doi.org/10.5281/zenodo.19203882. 2026.",
+            "F. O. Souto. The Riemann-Moebius-Enneper Structure: A Geometric Framework for Fund. Const. Preprints. https://doi.org/10.20944/preprints202601.1293.v2. 2026.",
+            "E.C. Titchmarsh and D.R. Heath-Brown. The Theory of the Riemann Zeta Function. 2nd. Oxford, UK: Oxford University Press, 1986."
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "19212904"
+                }
+              }
+            ]
+          }
+        },
+        "title": "The Riemann Hypothesis as a Consequence of the Spectral Structure of the Zeta Function",
+        "links": {
+          "self": "https://zenodo.org/api/records/19212905",
+          "self_html": "https://zenodo.org/records/19212905",
+          "preview_html": "https://zenodo.org/records/19212905?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.19212905",
+          "self_doi": "https://doi.org/10.5281/zenodo.19212905",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.19212905",
+          "reserve_doi": "https://zenodo.org/api/records/19212905/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/19212904",
+          "parent_html": "https://zenodo.org/records/19212904",
+          "parent_doi": "https://doi.org/10.5281/zenodo.19212904",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.19212904",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:19212905/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:19212905/sequence/default",
+          "files": "https://zenodo.org/api/records/19212905/files",
+          "media_files": "https://zenodo.org/api/records/19212905/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:19212905:The_Riemann_Hypothesis_as_a_Consequence.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:19212905:The_Riemann_Hypothesis_as_a_Consequence.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:19212905:The_Riemann_Hypothesis_as_a_Consequence.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:19212905:The_Riemann_Hypothesis_as_a_Consequence.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:19212905:The_Riemann_Hypothesis_as_a_Consequence.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:19212905:The_Riemann_Hypothesis_as_a_Consequence.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/19212905/files-archive",
+          "archive_media": "https://zenodo.org/api/records/19212905/media-files-archive",
+          "latest": "https://zenodo.org/api/records/19212905/versions/latest",
+          "latest_html": "https://zenodo.org/records/19212905/latest",
+          "versions": "https://zenodo.org/api/records/19212905/versions",
+          "draft": "https://zenodo.org/api/records/19212905/draft",
+          "access_links": "https://zenodo.org/api/records/19212905/access/links",
+          "access_grants": "https://zenodo.org/api/records/19212905/access/grants",
+          "access_users": "https://zenodo.org/api/records/19212905/access/users",
+          "access_request": "https://zenodo.org/api/records/19212905/access/request",
+          "access": "https://zenodo.org/api/records/19212905/access",
+          "communities": "https://zenodo.org/api/records/19212905/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/19212905/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/19212905/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/19212905/file-modification",
+          "requests": "https://zenodo.org/api/records/19212905/requests"
+        },
+        "updated": "2026-03-26T02:49:25.559331+00:00",
+        "recid": "19212905",
+        "revision": 6,
+        "files": [
+          {
+            "id": "e19e7b72-e728-4fc3-add5-d922c8fbed8c",
+            "key": "The_Riemann_Hypothesis_as_a_Consequence.tex",
+            "size": 33592,
+            "checksum": "md5:65e6933bb3d775e74d18833dcbdd38fc",
+            "links": {
+              "self": "https://zenodo.org/api/records/19212905/files/The_Riemann_Hypothesis_as_a_Consequence.tex/content"
+            }
+          },
+          {
+            "id": "5097d591-cb28-4e21-8879-a5ec3e2fd26e",
+            "key": "references.bib",
+            "size": 6474,
+            "checksum": "md5:2aee2bad18cc87caa3f87c9f03498a75",
+            "links": {
+              "self": "https://zenodo.org/api/records/19212905/files/references.bib/content"
+            }
+          },
+          {
+            "id": "fe2ab4f0-5897-463f-beda-dcd0d616c951",
+            "key": "The_Riemann_Hypothesis_as_a_Consequence.pdf",
+            "size": 549781,
+            "checksum": "md5:f4eb0ac14a10c4fa84ee73ebac877d16",
+            "links": {
+              "self": "https://zenodo.org/api/records/19212905/files/The_Riemann_Hypothesis_as_a_Consequence.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1577060"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 20,
+          "unique_downloads": 8,
+          "views": 19,
+          "unique_views": 7,
+          "version_downloads": 20,
+          "version_unique_downloads": 8,
+          "version_unique_views": 7,
+          "version_views": 19
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2026-01-11T15:29:17.661835+00:00",
+        "modified": "2026-01-30T11:40:55.802008+00:00",
+        "id": 18213944,
+        "conceptrecid": "17326512",
+        "doi": "10.5281/zenodo.18213944",
+        "conceptdoi": "10.5281/zenodo.17326512",
+        "doi_url": "https://doi.org/10.5281/zenodo.18213944",
+        "metadata": {
+          "title": "Nontrivial zeros of the Riemann zeta function",
+          "doi": "10.5281/zenodo.18213944",
+          "publication_date": "2024-12-18",
+          "description": "<p>Abstract&nbsp;</p>\n<p>The Riemann hypothesis, stating that all nontrivial zeros of the Riemann zeta function have real parts equal to 1/2, is one of the most important conjectures in mathematics. In this paper we prove the Riemann hypothesis by adding an extra unbounded term to the traditional definition, extending its validity to Rez&gt;0. The Stolz-Ces&agrave;ro theorem is then used to analyse zeta(z)/zeta(-1z)<span>&nbsp;</span>as a ratio of complex sequences. The results are analysed in both halves of the critical strip (0&lt;Rez&lt;1/2, 1/2&lt;Rez&lt;1 ), yielding a contradiction when it is assumed that zeta(z)=0<span>&nbsp;</span>in either of these halves.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Austin, James Clifton",
+              "affiliation": "Keele University",
+              "orcid": "0000-0002-6663-3455"
+            }
+          ],
+          "keywords": [
+            "Riemann zeta function"
+          ],
+          "related_identifiers": [
+            {
+              "identifier": "https://www.academia.edu/100093666",
+              "relation": "isVersionOf",
+              "scheme": "url"
+            }
+          ],
+          "dates": [
+            {
+              "type": "available"
+            }
+          ],
+          "references": [
+            "Riemann B, 1859, Monatsberichte der Berliner Akademie; Heymann Y, 2020, ArXiv:1804.04700v15; Stoltz O, 1885, Leibzig: Teubners, 173-175; Cesàro E, 1888, Nouvelles annals de mathématiques, Series 3, 7, 49-59; Spigler R and Vianello M, 1993, Journal of Mathematical Analysis and Application, 180, 317-324; Osborne AD, 1999, \"Complex Variables and Their Applications\", Addison-Wesley."
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "alternate_identifiers": [
+            {
+              "identifier": "10.5281/zenodo.17326513"
+            }
+          ],
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 1,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "17326512"
+                }
+              }
+            ]
+          }
+        },
+        "title": "Nontrivial zeros of the Riemann zeta function",
+        "links": {
+          "self": "https://zenodo.org/api/records/18213944",
+          "self_html": "https://zenodo.org/records/18213944",
+          "preview_html": "https://zenodo.org/records/18213944?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.18213944",
+          "self_doi": "https://doi.org/10.5281/zenodo.18213944",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18213944",
+          "reserve_doi": "https://zenodo.org/api/records/18213944/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/17326512",
+          "parent_html": "https://zenodo.org/records/17326512",
+          "parent_doi": "https://doi.org/10.5281/zenodo.17326512",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.17326512",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:18213944/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:18213944/sequence/default",
+          "files": "https://zenodo.org/api/records/18213944/files",
+          "media_files": "https://zenodo.org/api/records/18213944/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:18213944:Nontrivial%20zeros%20v8.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:18213944:Nontrivial%20zeros%20v8.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:18213944:Nontrivial%20zeros%20v8.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:18213944:Nontrivial%20zeros%20v8.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:18213944:Nontrivial%20zeros%20v8.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:18213944:Nontrivial%20zeros%20v8.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/18213944/files-archive",
+          "archive_media": "https://zenodo.org/api/records/18213944/media-files-archive",
+          "latest": "https://zenodo.org/api/records/18213944/versions/latest",
+          "latest_html": "https://zenodo.org/records/18213944/latest",
+          "versions": "https://zenodo.org/api/records/18213944/versions",
+          "draft": "https://zenodo.org/api/records/18213944/draft",
+          "access_links": "https://zenodo.org/api/records/18213944/access/links",
+          "access_grants": "https://zenodo.org/api/records/18213944/access/grants",
+          "access_users": "https://zenodo.org/api/records/18213944/access/users",
+          "access_request": "https://zenodo.org/api/records/18213944/access/request",
+          "access": "https://zenodo.org/api/records/18213944/access",
+          "communities": "https://zenodo.org/api/records/18213944/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/18213944/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/18213944/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/18213944/file-modification",
+          "requests": "https://zenodo.org/api/records/18213944/requests"
+        },
+        "updated": "2026-01-30T11:40:55.802008+00:00",
+        "recid": "18213944",
+        "revision": 6,
+        "files": [
+          {
+            "id": "199824f5-dc25-49fc-bde7-0400c2423ea5",
+            "key": "Nontrivial zeros v8.pdf",
+            "size": 730723,
+            "checksum": "md5:f87b06aa9875fc568d9a79c364798496",
+            "links": {
+              "self": "https://zenodo.org/api/records/18213944/files/Nontrivial zeros v8.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1431005"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 75,
+          "unique_downloads": 51,
+          "views": 109,
+          "unique_views": 101,
+          "version_downloads": 28,
+          "version_unique_downloads": 16,
+          "version_unique_views": 35,
+          "version_views": 41
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2022-11-02T04:12:49.248242+00:00",
+        "modified": "2024-07-15T19:53:36.178550+00:00",
+        "id": 7272749,
+        "conceptrecid": "7245345",
+        "doi": "10.5281/zenodo.7272749",
+        "conceptdoi": "10.5281/zenodo.7245345",
+        "doi_url": "https://doi.org/10.5281/zenodo.7272749",
+        "metadata": {
+          "title": "On the nontrivial zeros of the Riemann zeta function",
+          "doi": "10.5281/zenodo.7272749",
+          "publication_date": "2022-11-02",
+          "description": "<p>The Riemann hypothesis is a conjecture that the Riemann zeta function has its zeros only at the negative even integers and complex numbers with real part $\\frac{1}{2}$. It is considered by many to be the most important unsolved problem in pure mathematics. There are several statements equivalent to the famous Riemann hypothesis. In 2011, Sol&eacute; and Planat stated that, the Riemann hypothesis is true if and only if the inequality $\\zeta(2) \\cdot \\prod_{p\\leq x} (1+\\frac{1}{p}) &gt; e^{\\gamma} \\cdot \\log \\theta(x)$ holds for all $x \\geq 5$, where $\\theta(x)$ is the first Chebyshev function, $\\gamma \\approx 0.57721$ is the Euler-Mascheroni constant, $\\zeta(x)$ is the Riemann zeta function and $\\log$ is the natural logarithm. In this note, using Sol&eacute; and Planat criterion, we prove that, when the Riemann hypothesis is false, then there are infinitely many natural numbers $x$ for which $\\frac{\\log x}{\\sqrt{x}} - \\frac{10}{\\sqrt{x}} + 2 \\cdot \\log x + \\varepsilon \\cdot \\log x \\leq 2.062$ could be satisfied for some $\\varepsilon &gt; 0$. Since the inequality $\\frac{\\log x}{\\sqrt{x}} - \\frac{10}{\\sqrt{x}} + 2 \\cdot \\log x + \\varepsilon \\cdot \\log x \\leq 2.062$ never holds for every $\\varepsilon &gt; 0$ and large enough $x$, then the Riemann hypothesis is true by principle of non-contradiction.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Frank Vega",
+              "affiliation": "CopSonic, 1471 Route de Saint-Nauphary 82000 Montauban, France",
+              "orcid": "0000-0001-8210-4126"
+            }
+          ],
+          "keywords": [
+            "Riemann hypothesis",
+            "Riemann zeta function",
+            "Chebyshev function"
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 5,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "7245345"
+                }
+              }
+            ]
+          }
+        },
+        "title": "On the nontrivial zeros of the Riemann zeta function",
+        "links": {
+          "self": "https://zenodo.org/api/records/7272749",
+          "self_html": "https://zenodo.org/records/7272749",
+          "preview_html": "https://zenodo.org/records/7272749?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.7272749",
+          "self_doi": "https://doi.org/10.5281/zenodo.7272749",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7272749",
+          "reserve_doi": "https://zenodo.org/api/records/7272749/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/7245345",
+          "parent_html": "https://zenodo.org/records/7245345",
+          "parent_doi": "https://doi.org/10.5281/zenodo.7245345",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7245345",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:7272749/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:7272749/sequence/default",
+          "files": "https://zenodo.org/api/records/7272749/files",
+          "media_files": "https://zenodo.org/api/records/7272749/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:7272749:8th-Hilbert-Problem.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:7272749:8th-Hilbert-Problem.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:7272749:8th-Hilbert-Problem.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:7272749:8th-Hilbert-Problem.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:7272749:8th-Hilbert-Problem.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:7272749:8th-Hilbert-Problem.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/7272749/files-archive",
+          "archive_media": "https://zenodo.org/api/records/7272749/media-files-archive",
+          "latest": "https://zenodo.org/api/records/7272749/versions/latest",
+          "latest_html": "https://zenodo.org/records/7272749/latest",
+          "versions": "https://zenodo.org/api/records/7272749/versions",
+          "draft": "https://zenodo.org/api/records/7272749/draft",
+          "access_links": "https://zenodo.org/api/records/7272749/access/links",
+          "access_grants": "https://zenodo.org/api/records/7272749/access/grants",
+          "access_users": "https://zenodo.org/api/records/7272749/access/users",
+          "access_request": "https://zenodo.org/api/records/7272749/access/request",
+          "access": "https://zenodo.org/api/records/7272749/access",
+          "communities": "https://zenodo.org/api/records/7272749/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/7272749/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/7272749/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/7272749/file-modification",
+          "requests": "https://zenodo.org/api/records/7272749/requests"
+        },
+        "updated": "2024-07-15T19:53:36.178550+00:00",
+        "recid": "7272749",
+        "revision": 5,
+        "files": [
+          {
+            "id": "0cb7105a-c809-4caf-b895-26ec22437338",
+            "key": "8th-Hilbert-Problem.pdf",
+            "size": 391354,
+            "checksum": "md5:30c07da52f19b0151890fad4b18fa877",
+            "links": {
+              "self": "https://zenodo.org/api/records/7272749/files/8th-Hilbert-Problem.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "45971"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 345,
+          "unique_downloads": 341,
+          "views": 686,
+          "unique_views": 676,
+          "version_downloads": 59,
+          "version_unique_downloads": 58,
+          "version_unique_views": 161,
+          "version_views": 162
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2026-03-24T11:27:29.105117+00:00",
+        "modified": "2026-03-24T11:27:29.473782+00:00",
+        "id": 19203882,
+        "conceptrecid": "19203881",
+        "doi": "10.5281/zenodo.19203882",
+        "conceptdoi": "10.5281/zenodo.19203881",
+        "doi_url": "https://doi.org/10.5281/zenodo.19203882",
+        "metadata": {
+          "title": "A Self-Adjoint Operator with Spectrum Given by the Riemann Zeta Zeros",
+          "doi": "10.5281/zenodo.19203882",
+          "publication_date": "2026-03-24",
+          "description": "<p>We construct the operator $Z(s) = \\sinh(\\pi(\\zeta(s)-\\frac{1}{2}))$ and demonstrate that it serves as the unifying source from which all previously discovered numerical operators emerge naturally. Starting from first principles, we derive: (1) the conformal transformation $\\Phi(E) = \\beta\\operatorname{arcsinh}(E/\\gamma)$ with the quantization condition $\\alpha\\beta\\gamma = 2\\pi$, previously demonstrated; (2) the integral operator $K$ with kernel constructed from prime counting data, whose eigenvalues approximate the zeta zeros with precision $10^{-12}$; and (3) the geometric factor decomposition $K = K_g \\cdot C = 1$, which yields derivations of fundamental physical constants. The constancy property $Z(\\rho) = \\sinh(-\\pi/2)$ for every non-trivial zero $\\rho$ is established as the central organizing principle. All derivations are verified with precision using the first four Riemann zeta zeros, with errors below $10^{-45}$. This work provides the missing theoretical foundation for previous numerical discoveries and establishes a self-consistent framework for the Hilbert-P\\'olya operator approach to the Riemann Hypothesis.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Souto, Felipe Oliveira",
+              "affiliation": "Universidade Federal do Triângulo Mineiro",
+              "orcid": "0009-0004-2444-552X"
+            }
+          ],
+          "references": [
+            "Riemann, B. Über die Anzahl der Primzahlen unter einer gegebenen Größe. Monats- berichte der Königlich Preußischen Akademie der Wissenschaften zu Berlin, 1859, 671–680.",
+            "Montgomery, H.L. The pair correlation of zeros of the zeta function. In Proceedings of Symposia in Pure Mathematics; American Mathematical Society: Providence, RI, USA, 1973; Volume 24, pp. 181–193.",
+            "Odlyzko, A.M. On the distribution of spacings between zeros of the zeta function. Mathematics of Computation, 1987, 48, 273–308.",
+            "Odlyzko, A.M. The 1022-nd zero of the Riemann zeta function. AT&T Labs Research, 2001. Available online: https://www-users.cse.umn.edu/~odlyzko/zeta_tables.",
+            "Edwards, H.M. Riemann's Zeta Function; Academic Press: New York, USA, 1974.",
+            "Titchmarsh, E.C.; Heath-Brown, D.R. The Theory of the Riemann Zeta Function, 2nd ed.; Oxford University Press: Oxford, UK, 1986.",
+            "Conrey, J.B. The Riemann hypothesis. Notices of the American Mathematical Society, 2003, 50, 341–353.",
+            "Bombieri, E. Problems of the Millennium: The Riemann Hypothesis. Clay Mathe- matics Institute, 2000. Available online: https://www.claymath.org/wp-content/ uploads/2022/05/riemann.pdf",
+            "Berry, M.V. Riemann's zeta function: A model for quantum chaos? In Quantum Chaos and Statistical Nuclear Physics; Seligman, T.H., Nishioka, H., Eds.; Springer: Berlin/Heidelberg, Germany, 1986; pp. 1–17.",
+            "Berry, M.V.; Keating, J.P. The Riemann zeros and eigenvalue asymptotics. SIAM Review, 1999, 41, 236–266.",
+            "Keating, J.P. The Riemann zeta function and quantum chaology. In Proceedings of the International School of Physics \"Enrico Fermi\"; Casati, G., Ed.; North-Holland: Amsterdam, 1993.",
+            "The LMFDB Collaboration. The L-functions and modular forms database. Available online: https://www.lmfdb.org. Accessed on 2026.",
+            "CODATA Task Group on Fundamental Constants. CODATA recommended values of the fundamental physical constants: 2018. Reviews of Modern Physics, 2021, 93, 025010.",
+            "Souto, F.O. Physical realization of the Riemann zeta function and numerical evi- dence for the Hilbert-Pólya conjecture. Preprints, 2026, 2025120817. Available online: https://doi.org/10.20944/preprints202512.0817.v1.",
+            "Souto, F.O. Analytical-computational approach to the Riemann hypothesis via inte- gral operators and quantum systems. Preprints, 2026, 2025120745. Available online: https://doi.org/10.20944/preprints202512.0745.v1.",
+            "Souto, F.O. Arithmetic geometry of Planck scale: Deriving Kg · C = 1 from zeta zeros. Preprints, 2026, 2026020815. Available online: https://doi.org/10.20944/ preprints202602.0815.v1."
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "19203881"
+                }
+              }
+            ]
+          }
+        },
+        "title": "A Self-Adjoint Operator with Spectrum Given by the Riemann Zeta Zeros",
+        "links": {
+          "self": "https://zenodo.org/api/records/19203882",
+          "self_html": "https://zenodo.org/records/19203882",
+          "preview_html": "https://zenodo.org/records/19203882?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.19203882",
+          "self_doi": "https://doi.org/10.5281/zenodo.19203882",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.19203882",
+          "reserve_doi": "https://zenodo.org/api/records/19203882/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/19203881",
+          "parent_html": "https://zenodo.org/records/19203881",
+          "parent_doi": "https://doi.org/10.5281/zenodo.19203881",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.19203881",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:19203882/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:19203882/sequence/default",
+          "files": "https://zenodo.org/api/records/19203882/files",
+          "media_files": "https://zenodo.org/api/records/19203882/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:19203882:A_Self_Adjoint_Operator.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:19203882:A_Self_Adjoint_Operator.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:19203882:A_Self_Adjoint_Operator.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:19203882:A_Self_Adjoint_Operator.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:19203882:A_Self_Adjoint_Operator.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:19203882:A_Self_Adjoint_Operator.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/19203882/files-archive",
+          "archive_media": "https://zenodo.org/api/records/19203882/media-files-archive",
+          "latest": "https://zenodo.org/api/records/19203882/versions/latest",
+          "latest_html": "https://zenodo.org/records/19203882/latest",
+          "versions": "https://zenodo.org/api/records/19203882/versions",
+          "draft": "https://zenodo.org/api/records/19203882/draft",
+          "access_links": "https://zenodo.org/api/records/19203882/access/links",
+          "access_grants": "https://zenodo.org/api/records/19203882/access/grants",
+          "access_users": "https://zenodo.org/api/records/19203882/access/users",
+          "access_request": "https://zenodo.org/api/records/19203882/access/request",
+          "access": "https://zenodo.org/api/records/19203882/access",
+          "communities": "https://zenodo.org/api/records/19203882/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/19203882/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/19203882/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/19203882/file-modification",
+          "requests": "https://zenodo.org/api/records/19203882/requests"
+        },
+        "updated": "2026-03-24T11:27:29.473782+00:00",
+        "recid": "19203882",
+        "revision": 4,
+        "files": [
+          {
+            "id": "c89e845a-84d5-4f2d-b658-bb85b2f27f8e",
+            "key": "A_Self_Adjoint_Operator.tex",
+            "size": 58810,
+            "checksum": "md5:14b5668acb55587c5523d64ddb5652c5",
+            "links": {
+              "self": "https://zenodo.org/api/records/19203882/files/A_Self_Adjoint_Operator.tex/content"
+            }
+          },
+          {
+            "id": "d166a7f6-df9f-4507-9e60-ad396fbce178",
+            "key": "A_Self_Adjoint_Operator.pdf",
+            "size": 569611,
+            "checksum": "md5:c7c66b19dbb2274ec7780fdd6b68c144",
+            "links": {
+              "self": "https://zenodo.org/api/records/19203882/files/A_Self_Adjoint_Operator.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1577060"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 24,
+          "unique_downloads": 15,
+          "views": 16,
+          "unique_views": 11,
+          "version_downloads": 24,
+          "version_unique_downloads": 15,
+          "version_unique_views": 11,
+          "version_views": 16
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2026-03-07T15:24:55.240040+00:00",
+        "modified": "2026-03-07T19:41:05.469224+00:00",
+        "id": 18902196,
+        "conceptrecid": "18902195",
+        "doi": "10.5281/zenodo.18902196",
+        "conceptdoi": "10.5281/zenodo.18902195",
+        "doi_url": "https://doi.org/10.5281/zenodo.18902196",
+        "metadata": {
+          "title": "A Didactic Coefficientwise Prime–Zero Dictionary for log ζ",
+          "doi": "10.5281/zenodo.18902196",
+          "publication_date": "2026-03-07",
+          "description": "<p>For each fixed $\\sigma&gt;1$ we expand $\\log \\zeta(\\sigma+z)$ in powers of $z$ in two different ways: first through the Euler product, and second through the completed function $\\xi$ and its zero factorization. Coefficient comparison yields, for every $n \\geq 1$, an exact identity between a weighted prime-power sum and a shifted power sum over the nontrivial zeros of $\\zeta$, together with an explicit archimedean correction term. In this form the identity gives a direct local dictionary between the prime presentation and the zero presentation of the same zeta object. We also record a simple truncation algorithm for approximating the first few shifted zero sums from finitely many prime powers. Although the identities themselves are assembled from classical ingredients, the present coefficientwise packaging appears to offer a particularly direct local comparison between the Euler and zero presentations of $\\zeta$.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Perisic, Aleksandar",
+              "affiliation": null,
+              "orcid": "0000-0003-0726-364X"
+            }
+          ],
+          "references": [
+            "H. M. Edwards, Riemann's Zeta Function, Academic Press, New York, 1974.",
+            "E. C. Titchmarsh, The Theory of the Riemann Zeta-Function, 2nd ed., revised by D. R. Heath-Brown, Oxford University Press, Oxford, 1986.",
+            "J. C. Lagarias, Li coefficients for automorphic L-functions, Ann. Inst. Fourier 57 (2007), no. 5, 1689–1740.",
+            "A. Voros, Zeta functions for the Riemann zeros, Ann. Inst. Fourier 53 (2003), no. 3, 665–699.",
+            "A. Voros, Zeta functions over zeros of zeta functions and an exponential-asymptotic view of the Riemann hypothesis, Rocky Mountain J. Math. 45 (2015), no. 1, 241–288.",
+            "J. C. Lagarias, The Riemann Hypothesis: Arithmetic and Geometry, in The Millennium Prize Problems, Clay Mathematics Institute, AMS, Providence, RI, 2006, pp. 107–146.",
+            "A. Perišić, Continuous Prime Transform on Dilation Orbits, Zenodo. 2026"
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "communities": [
+            {
+              "id": "helson-blur-space"
+            }
+          ],
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "18902195"
+                }
+              }
+            ]
+          }
+        },
+        "title": "A Didactic Coefficientwise Prime–Zero Dictionary for log ζ",
+        "links": {
+          "self": "https://zenodo.org/api/records/18902196",
+          "self_html": "https://zenodo.org/records/18902196",
+          "preview_html": "https://zenodo.org/records/18902196?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.18902196",
+          "self_doi": "https://doi.org/10.5281/zenodo.18902196",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18902196",
+          "reserve_doi": "https://zenodo.org/api/records/18902196/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/18902195",
+          "parent_html": "https://zenodo.org/records/18902195",
+          "parent_doi": "https://doi.org/10.5281/zenodo.18902195",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18902195",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:18902196/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:18902196/sequence/default",
+          "files": "https://zenodo.org/api/records/18902196/files",
+          "media_files": "https://zenodo.org/api/records/18902196/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:18902196:Didactic_Primes_Zeros.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:18902196:Didactic_Primes_Zeros.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:18902196:Didactic_Primes_Zeros.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:18902196:Didactic_Primes_Zeros.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:18902196:Didactic_Primes_Zeros.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:18902196:Didactic_Primes_Zeros.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/18902196/files-archive",
+          "archive_media": "https://zenodo.org/api/records/18902196/media-files-archive",
+          "latest": "https://zenodo.org/api/records/18902196/versions/latest",
+          "latest_html": "https://zenodo.org/records/18902196/latest",
+          "versions": "https://zenodo.org/api/records/18902196/versions",
+          "draft": "https://zenodo.org/api/records/18902196/draft",
+          "access_links": "https://zenodo.org/api/records/18902196/access/links",
+          "access_grants": "https://zenodo.org/api/records/18902196/access/grants",
+          "access_users": "https://zenodo.org/api/records/18902196/access/users",
+          "access_request": "https://zenodo.org/api/records/18902196/access/request",
+          "access": "https://zenodo.org/api/records/18902196/access",
+          "communities": "https://zenodo.org/api/records/18902196/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/18902196/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/18902196/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/18902196/file-modification",
+          "requests": "https://zenodo.org/api/records/18902196/requests"
+        },
+        "updated": "2026-03-07T19:41:05.469224+00:00",
+        "recid": "18902196",
+        "revision": 12,
+        "files": [
+          {
+            "id": "8eafef0c-3d80-4bdc-bd5a-096b7b1efe71",
+            "key": "Didactic_Primes_Zeros.pdf",
+            "size": 313099,
+            "checksum": "md5:bc0d6e0db4af6d28b048d9568fe959b4",
+            "links": {
+              "self": "https://zenodo.org/api/records/18902196/files/Didactic_Primes_Zeros.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1073833"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 23,
+          "unique_downloads": 18,
+          "views": 16,
+          "unique_views": 12,
+          "version_downloads": 23,
+          "version_unique_downloads": 18,
+          "version_unique_views": 12,
+          "version_views": 16
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2023-05-15T11:32:09.494955+00:00",
+        "modified": "2024-07-12T02:38:25.545464+00:00",
+        "id": 7937104,
+        "conceptrecid": "7937103",
+        "doi": "10.5281/zenodo.7937104",
+        "conceptdoi": "10.5281/zenodo.7937103",
+        "doi_url": "https://doi.org/10.5281/zenodo.7937104",
+        "metadata": {
+          "title": "Disproof of the Riemann Hypothesis and the Non-Trivial Zeros of the Zeta Function",
+          "doi": "10.5281/zenodo.7937104",
+          "publication_date": "2023-05-15",
+          "description": "<p>This paper disproves the Riemann hypothesis by disproving the non-trivial zeros of the zeta function.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Wokene, Henok Tadesse",
+              "affiliation": null
+            }
+          ],
+          "keywords": [
+            "Riemann hypothesis",
+            "Riemann zeta function"
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "7937103"
+                }
+              }
+            ]
+          }
+        },
+        "title": "Disproof of the Riemann Hypothesis and the Non-Trivial Zeros of the Zeta Function",
+        "links": {
+          "self": "https://zenodo.org/api/records/7937104",
+          "self_html": "https://zenodo.org/records/7937104",
+          "preview_html": "https://zenodo.org/records/7937104?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.7937104",
+          "self_doi": "https://doi.org/10.5281/zenodo.7937104",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7937104",
+          "reserve_doi": "https://zenodo.org/api/records/7937104/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/7937103",
+          "parent_html": "https://zenodo.org/records/7937103",
+          "parent_doi": "https://doi.org/10.5281/zenodo.7937103",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7937103",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:7937104/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:7937104/sequence/default",
+          "files": "https://zenodo.org/api/records/7937104/files",
+          "media_files": "https://zenodo.org/api/records/7937104/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:7937104:Riemann%20Hypothesis%2010%20FINAL3%20ULT.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:7937104:Riemann%20Hypothesis%2010%20FINAL3%20ULT.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:7937104:Riemann%20Hypothesis%2010%20FINAL3%20ULT.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:7937104:Riemann%20Hypothesis%2010%20FINAL3%20ULT.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:7937104:Riemann%20Hypothesis%2010%20FINAL3%20ULT.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:7937104:Riemann%20Hypothesis%2010%20FINAL3%20ULT.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/7937104/files-archive",
+          "archive_media": "https://zenodo.org/api/records/7937104/media-files-archive",
+          "latest": "https://zenodo.org/api/records/7937104/versions/latest",
+          "latest_html": "https://zenodo.org/records/7937104/latest",
+          "versions": "https://zenodo.org/api/records/7937104/versions",
+          "draft": "https://zenodo.org/api/records/7937104/draft",
+          "access_links": "https://zenodo.org/api/records/7937104/access/links",
+          "access_grants": "https://zenodo.org/api/records/7937104/access/grants",
+          "access_users": "https://zenodo.org/api/records/7937104/access/users",
+          "access_request": "https://zenodo.org/api/records/7937104/access/request",
+          "access": "https://zenodo.org/api/records/7937104/access",
+          "communities": "https://zenodo.org/api/records/7937104/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/7937104/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/7937104/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/7937104/file-modification",
+          "requests": "https://zenodo.org/api/records/7937104/requests"
+        },
+        "updated": "2024-07-12T02:38:25.545464+00:00",
+        "recid": "7937104",
+        "revision": 7,
+        "files": [
+          {
+            "id": "f6a6ba42-ebcf-4284-95ab-76421bec5ec2",
+            "key": "Riemann Hypothesis 10 FINAL3 ULT.pdf",
+            "size": 585698,
+            "checksum": "md5:8633204cbc31a77e2733fc39f06c8cf5",
+            "links": {
+              "self": "https://zenodo.org/api/records/7937104/files/Riemann Hypothesis 10 FINAL3 ULT.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "364279"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 123,
+          "unique_downloads": 119,
+          "views": 122,
+          "unique_views": 119,
+          "version_downloads": 123,
+          "version_unique_downloads": 119,
+          "version_unique_views": 119,
+          "version_views": 122
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2022-08-24T05:30:05.424316+00:00",
+        "modified": "2024-07-16T05:22:57.675160+00:00",
+        "id": 7018145,
+        "conceptrecid": "7005752",
+        "doi": "10.5281/zenodo.7018145",
+        "conceptdoi": "10.5281/zenodo.7005752",
+        "doi_url": "https://doi.org/10.5281/zenodo.7018145",
+        "metadata": {
+          "title": "Note on the Riemann Hypothesis: International Conference on Recent Developments in Mathematics (ICRDM 2022)",
+          "doi": "10.5281/zenodo.7018145",
+          "publication_date": "2022-08-24",
+          "description": "<p>The Riemann Hypothesis is a conjecture that the Riemann zeta function has its zeros only at the negative even integers and complex numbers with real part 1/2. In 1984, Guy Robin stated a new criterion for the Riemann Hypothesis. We prove the Riemann Hypothesis is true using the Robin&#39;s criterion.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Frank Vega",
+              "affiliation": "CopSonic, 1471 Route de Saint-Nauphary 82000 Montauban, France",
+              "orcid": "0000-0001-8210-4126"
+            }
+          ],
+          "keywords": [
+            "Riemann Hypothesis",
+            "Robin's inequality",
+            "Sum-of-divisors function",
+            "Superabundant numbers",
+            "Prime numbers"
+          ],
+          "resource_type": {
+            "title": "Presentation",
+            "type": "presentation"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 3,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "7005752"
+                }
+              }
+            ]
+          },
+          "notes": "Presentation at The Conference ICRDM, 2022"
+        },
+        "title": "Note on the Riemann Hypothesis: International Conference on Recent Developments in Mathematics (ICRDM 2022)",
+        "links": {
+          "self": "https://zenodo.org/api/records/7018145",
+          "self_html": "https://zenodo.org/records/7018145",
+          "preview_html": "https://zenodo.org/records/7018145?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.7018145",
+          "self_doi": "https://doi.org/10.5281/zenodo.7018145",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7018145",
+          "reserve_doi": "https://zenodo.org/api/records/7018145/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/7005752",
+          "parent_html": "https://zenodo.org/records/7005752",
+          "parent_doi": "https://doi.org/10.5281/zenodo.7005752",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7005752",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:7018145/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:7018145/sequence/default",
+          "files": "https://zenodo.org/api/records/7018145/files",
+          "media_files": "https://zenodo.org/api/records/7018145/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:7018145:presentation.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:7018145:presentation.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:7018145:presentation.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:7018145:presentation.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:7018145:presentation.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:7018145:presentation.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/7018145/files-archive",
+          "archive_media": "https://zenodo.org/api/records/7018145/media-files-archive",
+          "latest": "https://zenodo.org/api/records/7018145/versions/latest",
+          "latest_html": "https://zenodo.org/records/7018145/latest",
+          "versions": "https://zenodo.org/api/records/7018145/versions",
+          "draft": "https://zenodo.org/api/records/7018145/draft",
+          "access_links": "https://zenodo.org/api/records/7018145/access/links",
+          "access_grants": "https://zenodo.org/api/records/7018145/access/grants",
+          "access_users": "https://zenodo.org/api/records/7018145/access/users",
+          "access_request": "https://zenodo.org/api/records/7018145/access/request",
+          "access": "https://zenodo.org/api/records/7018145/access",
+          "communities": "https://zenodo.org/api/records/7018145/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/7018145/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/7018145/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/7018145/file-modification",
+          "requests": "https://zenodo.org/api/records/7018145/requests"
+        },
+        "updated": "2024-07-16T05:22:57.675160+00:00",
+        "recid": "7018145",
+        "revision": 5,
+        "files": [
+          {
+            "id": "b79c0c34-3e9b-4f9b-afd2-1e4d68aba743",
+            "key": "presentation.pdf",
+            "size": 331764,
+            "checksum": "md5:cfedf91fe5b095bb49cc53d92bff31bc",
+            "links": {
+              "self": "https://zenodo.org/api/records/7018145/files/presentation.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "45971"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 309,
+          "unique_downloads": 306,
+          "views": 444,
+          "unique_views": 437,
+          "version_downloads": 76,
+          "version_unique_downloads": 76,
+          "version_unique_views": 145,
+          "version_views": 147
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2025-12-05T09:37:53.657254+00:00",
+        "modified": "2025-12-05T09:42:15.934237+00:00",
+        "id": 17827927,
+        "conceptrecid": "13366619",
+        "doi": "10.2139/ssrn.5295965",
+        "conceptdoi": "10.5281/zenodo.13366619",
+        "doi_url": "https://doi.org/10.2139/ssrn.5295965",
+        "metadata": {
+          "title": "Towards Proving the Riemann Hypothesis: A Unified Framework Using Möbius Transformations and Potential Theory",
+          "doi": "10.2139/ssrn.5295965",
+          "publication_date": "2024-08-23",
+          "description": "<p><span>The Riemann Hypothesis, one of mathematics' most profound unsolved problems, posits that all non-trivial zeros of the Riemann zeta function lie on the critical line </span><span></span><span><span>&nbsp;</span>. In this paper, we present a novel analytical approach by leveraging M&ouml;bius transformations and potential theory. By mapping the critical strip </span><span></span><span>to the unit disk </span><span></span><span>, we centralize the critical line, enabling rigorous potential theory to derive the equilibrium distribution of zeros. Symmetry constraints from the functional equation further restrict zero locations.</span></p>\n<p><span>Our approach bridges the gap between statistical methods and direct analytical techniques, offering a unified framework that addresses key aspects of the Riemann Hypothesis. We rigorously demonstrate that the zeros of the transformed zeta function </span><span></span><span><span>&nbsp;</span>are symmetrically distributed and concentrated on the critical line within the unit disk, providing strong theoretical support for the hypothesis. Additionally, we explore implications for other L-functions and suggest future research directions, including numerical verification and extensions to the Generalized Riemann Hypothesis.</span></p>\n<p><span>This work not only deepens the mathematical understanding of the zeta function's zeros but also presents a solution to the Riemann Hypothesis. By establishing a rigorous framework that directly addresses the core aspects of this Millennium Prize Problem, this research potentially brings us closer to resolving a question that has challenged and captivated mathematicians for over a century.</span></p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Volpatti, Giovanni",
+              "affiliation": "HARMONICUM",
+              "orcid": "0009-0006-1520-4518"
+            }
+          ],
+          "contributors": [
+            {
+              "name": "Volpatti, Giovanni",
+              "affiliation": "HARMONICUM",
+              "type": "Researcher",
+              "orcid": "0009-0006-1520-4518"
+            }
+          ],
+          "keywords": [
+            "Riemann Hypothesis",
+            "Zeta Function",
+            "Möbius Transformations",
+            "Potential Theory",
+            "Critical Line",
+            "Symmetry Constraints",
+            "Equilibrium Distribution",
+            "Analytic Number Theory",
+            "Generalized Riemann Hypothesis",
+            "L-functions"
+          ],
+          "dates": [
+            {
+              "type": "submitted",
+              "description": "Submission to Zenodo"
+            }
+          ],
+          "language": "eng",
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 1,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "13366619"
+                }
+              }
+            ]
+          }
+        },
+        "title": "Towards Proving the Riemann Hypothesis: A Unified Framework Using Möbius Transformations and Potential Theory",
+        "links": {
+          "self": "https://zenodo.org/api/records/17827927",
+          "self_html": "https://zenodo.org/records/17827927",
+          "preview_html": "https://zenodo.org/records/17827927?preview=1",
+          "doi": "https://doi.org/10.2139/ssrn.5295965",
+          "self_doi": "https://doi.org/10.2139/ssrn.5295965",
+          "self_doi_html": "https://zenodo.org/doi/10.2139/ssrn.5295965",
+          "reserve_doi": "https://zenodo.org/api/records/17827927/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/13366619",
+          "parent_html": "https://zenodo.org/records/13366619",
+          "parent_doi": "https://doi.org/10.5281/zenodo.13366619",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.13366619",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:17827927/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:17827927/sequence/default",
+          "files": "https://zenodo.org/api/records/17827927/files",
+          "media_files": "https://zenodo.org/api/records/17827927/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:17827927:2025-10-28-VG-Riemann-FINAL%20FOR%20PUBLICATION%20(SSRN-v2).pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:17827927:2025-10-28-VG-Riemann-FINAL%20FOR%20PUBLICATION%20(SSRN-v2).pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:17827927:2025-10-28-VG-Riemann-FINAL%20FOR%20PUBLICATION%20(SSRN-v2).pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:17827927:2025-10-28-VG-Riemann-FINAL%20FOR%20PUBLICATION%20(SSRN-v2).pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:17827927:2025-10-28-VG-Riemann-FINAL%20FOR%20PUBLICATION%20(SSRN-v2).pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:17827927:2025-10-28-VG-Riemann-FINAL%20FOR%20PUBLICATION%20(SSRN-v2).pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/17827927/files-archive",
+          "archive_media": "https://zenodo.org/api/records/17827927/media-files-archive",
+          "latest": "https://zenodo.org/api/records/17827927/versions/latest",
+          "latest_html": "https://zenodo.org/records/17827927/latest",
+          "versions": "https://zenodo.org/api/records/17827927/versions",
+          "draft": "https://zenodo.org/api/records/17827927/draft",
+          "access_links": "https://zenodo.org/api/records/17827927/access/links",
+          "access_grants": "https://zenodo.org/api/records/17827927/access/grants",
+          "access_users": "https://zenodo.org/api/records/17827927/access/users",
+          "access_request": "https://zenodo.org/api/records/17827927/access/request",
+          "access": "https://zenodo.org/api/records/17827927/access",
+          "communities": "https://zenodo.org/api/records/17827927/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/17827927/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/17827927/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/17827927/file-modification",
+          "requests": "https://zenodo.org/api/records/17827927/requests"
+        },
+        "updated": "2025-12-05T09:42:15.934237+00:00",
+        "recid": "17827927",
+        "revision": 6,
+        "files": [
+          {
+            "id": "5108e20f-97a6-47e8-abae-6f283ec3df4d",
+            "key": "2025-10-28-VG-Riemann-FINAL FOR PUBLICATION (SSRN-v2).pdf",
+            "size": 562567,
+            "checksum": "md5:db782da7b89d6f611be274180e87411d",
+            "links": {
+              "self": "https://zenodo.org/api/records/17827927/files/2025-10-28-VG-Riemann-FINAL FOR PUBLICATION (SSRN-v2).pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1158545"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 90,
+          "unique_downloads": 66,
+          "views": 104,
+          "unique_views": 92,
+          "version_downloads": 15,
+          "version_unique_downloads": 13,
+          "version_unique_views": 23,
+          "version_views": 25
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2025-08-06T02:48:39.993218+00:00",
+        "modified": "2025-08-06T02:48:40.270453+00:00",
+        "id": 16749604,
+        "conceptrecid": "16749603",
+        "doi": "10.6084/m9.figshare.29829023",
+        "doi_url": "https://doi.org/10.6084/m9.figshare.29829023",
+        "metadata": {
+          "title": "DELTA-REGULARIZED ZETA FUNCTION AND THE RIEMANN HYPOTHESIS",
+          "doi": "10.6084/m9.figshare.29829023",
+          "publication_date": "2025-08-05",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Russameekiattisak, Swiss",
+              "affiliation": null,
+              "orcid": "0009-0008-6445-0269"
+            }
+          ],
+          "keywords": [
+            "Math",
+            "Riemann hypothesis"
+          ],
+          "related_identifiers": [
+            {
+              "identifier": "10.6084/m9.figshare.29829023",
+              "relation": "isNewVersionOf",
+              "scheme": "doi"
+            }
+          ],
+          "dates": [
+            {
+              "type": "submitted",
+              "description": "This paper introduces the Delta-regularized zeta function and proves the Riemann Hypothesis under this framework. Numerical and operator-theoretic validation is provided"
+            }
+          ],
+          "version": "1.0.0",
+          "references": [
+            "Berry, M.V., & Keating, J.P. (1999). The Riemann Zeros and Eigenvalue Asymptotics. SIAM Review, 41(2), 236–266. https://doi.org/10.1137/S0036144598347035"
+          ],
+          "language": "enm",
+          "custom": {
+            "code:codeRepository": "https://www.python.org/",
+            "code:programmingLanguage": [
+              {
+                "id": "python",
+                "title": {
+                  "en": "Python"
+                }
+              }
+            ],
+            "code:developmentStatus": {
+              "id": "active",
+              "title": {
+                "en": "Active"
+              }
+            }
+          },
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "meeting": {
+            "title": "Independent Mathematical Research Symposium 2025",
+            "acronym": "IMRS2025",
+            "dates": "2025-08-04",
+            "place": "Thailand",
+            "session": "Analytic Number Theory & Operator Theory",
+            "session_part": "1"
+          },
+          "thesis": {
+            "university": "-"
+          },
+          "alternate_identifiers": [
+            {
+              "identifier": "10.6084/m9.figshare.29829023"
+            }
+          ],
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "16749603"
+                }
+              }
+            ]
+          }
+        },
+        "title": "DELTA-REGULARIZED ZETA FUNCTION AND THE RIEMANN HYPOTHESIS",
+        "links": {
+          "self": "https://zenodo.org/api/records/16749604",
+          "self_html": "https://zenodo.org/records/16749604",
+          "preview_html": "https://zenodo.org/records/16749604?preview=1",
+          "doi": "https://doi.org/10.6084/m9.figshare.29829023",
+          "self_doi": "https://doi.org/10.6084/m9.figshare.29829023",
+          "self_doi_html": "https://zenodo.org/doi/10.6084/m9.figshare.29829023",
+          "reserve_doi": "https://zenodo.org/api/records/16749604/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/16749603",
+          "parent_html": "https://zenodo.org/records/16749603",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:16749604/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:16749604/sequence/default",
+          "files": "https://zenodo.org/api/records/16749604/files",
+          "media_files": "https://zenodo.org/api/records/16749604/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:16749604:SwissRh_DeltaZeta_RH_2025.pdf.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:16749604:SwissRh_DeltaZeta_RH_2025.pdf.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:16749604:SwissRh_DeltaZeta_RH_2025.pdf.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:16749604:SwissRh_DeltaZeta_RH_2025.pdf.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:16749604:SwissRh_DeltaZeta_RH_2025.pdf.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:16749604:SwissRh_DeltaZeta_RH_2025.pdf.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/16749604/files-archive",
+          "archive_media": "https://zenodo.org/api/records/16749604/media-files-archive",
+          "latest": "https://zenodo.org/api/records/16749604/versions/latest",
+          "latest_html": "https://zenodo.org/records/16749604/latest",
+          "versions": "https://zenodo.org/api/records/16749604/versions",
+          "draft": "https://zenodo.org/api/records/16749604/draft",
+          "access_links": "https://zenodo.org/api/records/16749604/access/links",
+          "access_grants": "https://zenodo.org/api/records/16749604/access/grants",
+          "access_users": "https://zenodo.org/api/records/16749604/access/users",
+          "access_request": "https://zenodo.org/api/records/16749604/access/request",
+          "access": "https://zenodo.org/api/records/16749604/access",
+          "communities": "https://zenodo.org/api/records/16749604/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/16749604/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/16749604/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/16749604/file-modification",
+          "requests": "https://zenodo.org/api/records/16749604/requests"
+        },
+        "updated": "2025-08-06T02:48:40.270453+00:00",
+        "recid": "16749604",
+        "revision": 4,
+        "files": [
+          {
+            "id": "626b27c4-9521-4f49-9a34-9507a8f25b91",
+            "key": "SwissRh_DeltaZeta_RH_2025.pdf.pdf",
+            "size": 274690,
+            "checksum": "md5:f10acadfcd511e12ca84ca22ed29bb08",
+            "links": {
+              "self": "https://zenodo.org/api/records/16749604/files/SwissRh_DeltaZeta_RH_2025.pdf.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1379228"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 283,
+          "unique_downloads": 213,
+          "views": 251,
+          "unique_views": 224,
+          "version_downloads": 283,
+          "version_unique_downloads": 213,
+          "version_unique_views": 224,
+          "version_views": 251
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2024-07-25T22:44:48.917845+00:00",
+        "modified": "2024-07-25T22:44:49.250143+00:00",
+        "id": 12837958,
+        "conceptrecid": "12837957",
+        "doi": "10.5281/zenodo.12837958",
+        "conceptdoi": "10.5281/zenodo.12837957",
+        "doi_url": "https://doi.org/10.5281/zenodo.12837958",
+        "metadata": {
+          "title": "Connected Prime Digit Factorial Occurrences to The Riemann Zeta Function",
+          "doi": "10.5281/zenodo.12837958",
+          "publication_date": "2024-07-26",
+          "description": "<p>This paper explores the theoretical relationship between the frequency of prime digits in factorial representations and the non-trivial zeros of the Riemann Zeta function. By defining the prime digit frequency within factorials and aggregating these frequencies, we propose a hypothesis where such aggregated prime digit frequencies exhibit periodic patterns that mirror the distribution of the non-trivial zeros of the Riemann Zeta function. Utilizing Fourier transform analysis, we identify periodic components in the digit frequencies that may correspond to these zeros. Statistical tests, including Chi-Squared and Kolmogorov-Smirnov tests, are employed to validate this connection. This study suggests that the nature of prime digit frequencies in number sequences, such as factorials, may reflect deeper mathematical structures influenced by the Riemann Zeta function&rsquo;s zeros.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Emmerson, Parker",
+              "affiliation": null
+            }
+          ],
+          "keywords": [
+            "prime digits",
+            "factorials",
+            "Riemann Zeta function",
+            "non-trivial zeros",
+            "Fourier transform",
+            "prime frequency",
+            "statistical analysis",
+            "Chi-Squared test",
+            "Kolmogorov-Smirnov test",
+            "periodic patterns",
+            "aggregated frequencies",
+            "number theory",
+            "digit distribution",
+            "mathematical conjectures",
+            "critical line",
+            "prime factorization",
+            "statistics",
+            "analytical continuation",
+            "complex analysis",
+            "prime occurrence",
+            "mathematical sequences"
+          ],
+          "dates": [
+            {
+              "type": "accepted"
+            }
+          ],
+          "language": "eng",
+          "resource_type": {
+            "title": "Data paper",
+            "type": "publication",
+            "subtype": "datapaper"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "communities": [
+            {
+              "id": "liberatedmathematics"
+            }
+          ],
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "12837957"
+                }
+              }
+            ]
+          }
+        },
+        "title": "Connected Prime Digit Factorial Occurrences to The Riemann Zeta Function",
+        "links": {
+          "self": "https://zenodo.org/api/records/12837958",
+          "self_html": "https://zenodo.org/records/12837958",
+          "preview_html": "https://zenodo.org/records/12837958?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.12837958",
+          "self_doi": "https://doi.org/10.5281/zenodo.12837958",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.12837958",
+          "reserve_doi": "https://zenodo.org/api/records/12837958/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/12837957",
+          "parent_html": "https://zenodo.org/records/12837957",
+          "parent_doi": "https://doi.org/10.5281/zenodo.12837957",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.12837957",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:12837958/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:12837958/sequence/default",
+          "files": "https://zenodo.org/api/records/12837958/files",
+          "media_files": "https://zenodo.org/api/records/12837958/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:12837958:Prime_digit.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:12837958:Prime_digit.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:12837958:Prime_digit.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:12837958:Prime_digit.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:12837958:Prime_digit.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:12837958:Prime_digit.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/12837958/files-archive",
+          "archive_media": "https://zenodo.org/api/records/12837958/media-files-archive",
+          "latest": "https://zenodo.org/api/records/12837958/versions/latest",
+          "latest_html": "https://zenodo.org/records/12837958/latest",
+          "versions": "https://zenodo.org/api/records/12837958/versions",
+          "draft": "https://zenodo.org/api/records/12837958/draft",
+          "access_links": "https://zenodo.org/api/records/12837958/access/links",
+          "access_grants": "https://zenodo.org/api/records/12837958/access/grants",
+          "access_users": "https://zenodo.org/api/records/12837958/access/users",
+          "access_request": "https://zenodo.org/api/records/12837958/access/request",
+          "access": "https://zenodo.org/api/records/12837958/access",
+          "communities": "https://zenodo.org/api/records/12837958/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/12837958/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/12837958/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/12837958/file-modification",
+          "requests": "https://zenodo.org/api/records/12837958/requests"
+        },
+        "updated": "2024-07-25T22:44:49.250143+00:00",
+        "recid": "12837958",
+        "revision": 4,
+        "files": [
+          {
+            "id": "39fc1f3f-4786-48a3-9bc0-1e4dddf5aa58",
+            "key": "Prime_digit.pdf",
+            "size": 378368,
+            "checksum": "md5:fb996246131ade2c0b4016d4cfc8d446",
+            "links": {
+              "self": "https://zenodo.org/api/records/12837958/files/Prime_digit.pdf/content"
+            }
+          },
+          {
+            "id": "192ebdfb-0b0a-43a1-9db2-4a367d186145",
+            "key": "Connected_Prime_Digit_Factorial_Occurrences_to_The_Riemann_Zeta_Function_10_5281_zenodo_12837958 (1).ipynb",
+            "size": 1440851,
+            "checksum": "md5:56c77ab7554bcc9efc7f8fb4777fe1ce",
+            "links": {
+              "self": "https://zenodo.org/api/records/12837958/files/Connected_Prime_Digit_Factorial_Occurrences_to_The_Riemann_Zeta_Function_10_5281_zenodo_12837958 (1).ipynb/content"
+            }
+          },
+          {
+            "id": "f3091f2f-913f-4dd8-b664-30cc33ec21e0",
+            "key": "Prime digit.zip",
+            "size": 300562,
+            "checksum": "md5:5878a08e4f964768bc05a62dc9300e88",
+            "links": {
+              "self": "https://zenodo.org/api/records/12837958/files/Prime digit.zip/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "433246"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 101,
+          "unique_downloads": 100,
+          "views": 93,
+          "unique_views": 89,
+          "version_downloads": 101,
+          "version_unique_downloads": 100,
+          "version_unique_views": 89,
+          "version_views": 93
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2026-03-24T19:48:40.826831+00:00",
+        "modified": "2026-03-24T19:48:41.235358+00:00",
+        "id": 19209284,
+        "conceptrecid": "19209283",
+        "doi": "10.5281/zenodo.19209284",
+        "conceptdoi": "10.5281/zenodo.19209283",
+        "doi_url": "https://doi.org/10.5281/zenodo.19209284",
+        "metadata": {
+          "title": "The Analytic Foundation of the Riemann Hypothesis: A Unified Derivation from Spectral Correspondence and Arithmetic Identities",
+          "doi": "10.5281/zenodo.19209284",
+          "publication_date": "2026-03-24",
+          "description": "<p>This paper presents a complete, self-contained analytic derivation of the Riemann Hypothesis. The exposition proceeds through three independent yet mutually reinforcing arguments, drawing on classical results: the Riemann-von Mangoldt formula, the Landau-Ramanujan theorem, the Chowla-Selberg formula, the Weil explicit formula, and basic spectral theory. The derivation requires no unproven conjectures.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Souto, Felipe Oliveira",
+              "affiliation": "Universidade Federal do Triângulo Mineiro",
+              "orcid": "0009-0004-2444-552X"
+            }
+          ],
+          "references": [
+            "Riemann, B. Über die Anzahl der Primzahlen unter einer gegebenen Grösse. Monats- berichte der Königlich Preußischen Akademie der Wissenschaften zu Berlin, 1859, 671–680.",
+            "Weil, A. Sur les formules explicites de la théorie des nombres premiers. Meddelanden från Lunds Universitets Matematiska Seminarium, 1952, 252–265.",
+            "Chowla, S.; Selberg, A. On Epstein's zeta function. Journal für die reine und ange- wandte Mathematik, 1967, 227, 86–110.",
+            "Landau, E. Über die Einteilung der positiven ganzen Zahlen in vier Klassen nach der Mindestzahl der zu ihrer additiven Zusammensetzung erforderlichen Quadrate. Archiv der Mathematik und Physik, 1908, 13, 305–312.",
+            "Edwards, H.M. Riemann's Zeta Function; Academic Press: New York, 1974.",
+            "Titchmarsh, E.C. The Theory of the Riemann Zeta Function, 2nd ed.; Oxford Uni- versity Press: Oxford, 1986.",
+            "Montgomery, H.L. The pair correlation of zeros of the zeta function. Proceedings of Symposia in Pure Mathematics, 1973, 24, 181–193.",
+            "Odlyzko, A.M. On the distribution of spacings between zeros of the zeta function. Mathematics of Computation, 1987, 48, 273–308.",
+            "Gross, B.H.; Zagier, D. On singular moduli. Journal für die reine und angewandte Mathematik, 1985, 355, 191–220."
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "19209283"
+                }
+              }
+            ]
+          }
+        },
+        "title": "The Analytic Foundation of the Riemann Hypothesis: A Unified Derivation from Spectral Correspondence and Arithmetic Identities",
+        "links": {
+          "self": "https://zenodo.org/api/records/19209284",
+          "self_html": "https://zenodo.org/records/19209284",
+          "preview_html": "https://zenodo.org/records/19209284?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.19209284",
+          "self_doi": "https://doi.org/10.5281/zenodo.19209284",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.19209284",
+          "reserve_doi": "https://zenodo.org/api/records/19209284/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/19209283",
+          "parent_html": "https://zenodo.org/records/19209283",
+          "parent_doi": "https://doi.org/10.5281/zenodo.19209283",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.19209283",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:19209284/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:19209284/sequence/default",
+          "files": "https://zenodo.org/api/records/19209284/files",
+          "media_files": "https://zenodo.org/api/records/19209284/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:19209284:The_Analytic_Foundation_of_the_Riemann_Hypothesis.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:19209284:The_Analytic_Foundation_of_the_Riemann_Hypothesis.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:19209284:The_Analytic_Foundation_of_the_Riemann_Hypothesis.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:19209284:The_Analytic_Foundation_of_the_Riemann_Hypothesis.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:19209284:The_Analytic_Foundation_of_the_Riemann_Hypothesis.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:19209284:The_Analytic_Foundation_of_the_Riemann_Hypothesis.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/19209284/files-archive",
+          "archive_media": "https://zenodo.org/api/records/19209284/media-files-archive",
+          "latest": "https://zenodo.org/api/records/19209284/versions/latest",
+          "latest_html": "https://zenodo.org/records/19209284/latest",
+          "versions": "https://zenodo.org/api/records/19209284/versions",
+          "draft": "https://zenodo.org/api/records/19209284/draft",
+          "access_links": "https://zenodo.org/api/records/19209284/access/links",
+          "access_grants": "https://zenodo.org/api/records/19209284/access/grants",
+          "access_users": "https://zenodo.org/api/records/19209284/access/users",
+          "access_request": "https://zenodo.org/api/records/19209284/access/request",
+          "access": "https://zenodo.org/api/records/19209284/access",
+          "communities": "https://zenodo.org/api/records/19209284/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/19209284/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/19209284/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/19209284/file-modification",
+          "requests": "https://zenodo.org/api/records/19209284/requests"
+        },
+        "updated": "2026-03-24T19:48:41.235358+00:00",
+        "recid": "19209284",
+        "revision": 4,
+        "files": [
+          {
+            "id": "5fd6e2c6-e61f-42a3-925d-614335d1f816",
+            "key": "The_Analytic_Foundation_of_the_Riemann_Hypothesis.tex",
+            "size": 30250,
+            "checksum": "md5:eaecf20703f47bd95894f9cb741ebe69",
+            "links": {
+              "self": "https://zenodo.org/api/records/19209284/files/The_Analytic_Foundation_of_the_Riemann_Hypothesis.tex/content"
+            }
+          },
+          {
+            "id": "a34df00a-f4f9-42aa-94c6-c7150da60085",
+            "key": "The_Analytic_Foundation_of_the_Riemann_Hypothesis.pdf",
+            "size": 468124,
+            "checksum": "md5:605d8f8e2a2cb21417039984d90ed729",
+            "links": {
+              "self": "https://zenodo.org/api/records/19209284/files/The_Analytic_Foundation_of_the_Riemann_Hypothesis.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1577060"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 16,
+          "unique_downloads": 11,
+          "views": 9,
+          "unique_views": 8,
+          "version_downloads": 16,
+          "version_unique_downloads": 11,
+          "version_unique_views": 8,
+          "version_views": 9
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2026-01-25T04:59:34.868930+00:00",
+        "modified": "2026-01-25T04:59:35.484880+00:00",
+        "id": 18365022,
+        "conceptrecid": "18365021",
+        "doi": "10.5281/zenodo.18365022",
+        "conceptdoi": "10.5281/zenodo.18365021",
+        "doi_url": "https://doi.org/10.5281/zenodo.18365022",
+        "metadata": {
+          "title": "A Structural Resolution of the Riemann Hypothesis",
+          "doi": "10.5281/zenodo.18365022",
+          "publication_date": "2026-01-25",
+          "description": "<p><strong>This paper presents a claimed solution to the Riemann Hypothesis that is structurally complete and formally closed, but it has not yet been validated by the mathematical community or the Clay Mathematics Institute.</strong></p>\n<p>The work advances a deterministic, elimination-based framework for resolving the Riemann Hypothesis by ruling out the structural mechanisms that would lead to its failure. Rather tha estimating zero distributions or refining asymptotic error bounds, the paper constructs a system of local observables and incoherent probes that deny off&ndash;critical&ndash;line zeros the degrees of freedom needed to persist.</p>\n<p>The argument proceeds by combining three core components:</p>\n<ol>\n<li>Local symmetric second-difference observables that annihilate smooth prime density effects at the point of construction;</li>\n<li>A deterministically defined family of oscillatory probes indexed by subset sums of reciprocal primes, admitting exact kernel factorisation and enforced algebraic incoherence; and</li>\n<li>A &beta;&ndash;large-sieve framework that places a uniform upper bound on aggregate oscillatory energy across all probing directions.</li>\n</ol>\n<p>Within a globally locked parameter regime, the explicit formula shows that any nontrivial zero of the Riemann zeta function with real part different from one-half would inject a local oscillatory contribution that survives localisation and differencing. Uniform stationary-phase analysis shows that this contribution provides a lower bound on &beta;&ndash;energy across all but an exponentially small exceptional subset of probes. This lower bound is shown to be incompatible with the &beta;&ndash;large-sieve dispersion bound, yielding a contradiction.</p>\n<p>The paper is finite-scale, identity-driven, and does not rely on probabilistic assumptions, averaging heuristics, or conjectural bounds. All parameters are fixed once, all equivalences invoked are stated explicitly, and all decay and dispersion claims are proved within the paper&rsquo;s framework.</p>\n<p>As such, the manuscript presents a complete logical argument for the Riemann Hypothesis within the stated model. Its correctness remains subject to independent verification and scrutiny by experts in analytic number theory.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Thompson, Beth",
+              "affiliation": null
+            }
+          ],
+          "keywords": [
+            "Riemann Hypothesis",
+            "Analytic number theory",
+            "Prime number theory"
+          ],
+          "dates": [
+            {
+              "type": "copyrighted"
+            }
+          ],
+          "version": "1.0",
+          "references": [
+            "Edwards, H. M. (1974). Riemann's zeta function. Academic Press.",
+            "Ivić, A. (1985). The Riemann zeta-function: Theory and applications. John Wiley & Sons.",
+            "Iwaniec, H., & Kowalski, E. (2004). Analytic number theory. American Mathematical Society. https://doi.org/10.1090/coll/053",
+            "Littlewood, J. E., & Offord, A. C. (1943). On the number of real roots of a random algebraic equation. Journal of the London Mathematical Society, 18(4), 307–317. https://doi.org/10.1112/jlms/s1-18.4.307",
+            "Montgomery, H. L. (1973). The pair correlation of zeros of the zeta function. Proceedings of the Symposium on Pure Mathematics, 24, 181–193. American Mathematical Society.",
+            "Titchmarsh, E. C. (1986). The theory of the Riemann zeta-function (2nd ed., revised by D. R. Heath-Brown). Oxford University Press."
+          ],
+          "language": "eng",
+          "resource_type": {
+            "title": "Report",
+            "type": "publication",
+            "subtype": "report"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "18365021"
+                }
+              }
+            ]
+          }
+        },
+        "title": "A Structural Resolution of the Riemann Hypothesis",
+        "links": {
+          "self": "https://zenodo.org/api/records/18365022",
+          "self_html": "https://zenodo.org/records/18365022",
+          "preview_html": "https://zenodo.org/records/18365022?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.18365022",
+          "self_doi": "https://doi.org/10.5281/zenodo.18365022",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18365022",
+          "reserve_doi": "https://zenodo.org/api/records/18365022/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/18365021",
+          "parent_html": "https://zenodo.org/records/18365021",
+          "parent_doi": "https://doi.org/10.5281/zenodo.18365021",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18365021",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:18365022/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:18365022/sequence/default",
+          "files": "https://zenodo.org/api/records/18365022/files",
+          "media_files": "https://zenodo.org/api/records/18365022/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:18365022:A%20Structural%20Resolution%20of%20the%20RH%20Hypothesis.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:18365022:A%20Structural%20Resolution%20of%20the%20RH%20Hypothesis.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:18365022:A%20Structural%20Resolution%20of%20the%20RH%20Hypothesis.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:18365022:A%20Structural%20Resolution%20of%20the%20RH%20Hypothesis.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:18365022:A%20Structural%20Resolution%20of%20the%20RH%20Hypothesis.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:18365022:A%20Structural%20Resolution%20of%20the%20RH%20Hypothesis.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/18365022/files-archive",
+          "archive_media": "https://zenodo.org/api/records/18365022/media-files-archive",
+          "latest": "https://zenodo.org/api/records/18365022/versions/latest",
+          "latest_html": "https://zenodo.org/records/18365022/latest",
+          "versions": "https://zenodo.org/api/records/18365022/versions",
+          "draft": "https://zenodo.org/api/records/18365022/draft",
+          "access_links": "https://zenodo.org/api/records/18365022/access/links",
+          "access_grants": "https://zenodo.org/api/records/18365022/access/grants",
+          "access_users": "https://zenodo.org/api/records/18365022/access/users",
+          "access_request": "https://zenodo.org/api/records/18365022/access/request",
+          "access": "https://zenodo.org/api/records/18365022/access",
+          "communities": "https://zenodo.org/api/records/18365022/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/18365022/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/18365022/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/18365022/file-modification",
+          "requests": "https://zenodo.org/api/records/18365022/requests"
+        },
+        "updated": "2026-01-25T04:59:35.484880+00:00",
+        "recid": "18365022",
+        "revision": 4,
+        "files": [
+          {
+            "id": "a44b81af-fdb5-4dbb-ae52-689d166bab4c",
+            "key": "A Structural Resolution of the RH Hypothesis.pdf",
+            "size": 794577,
+            "checksum": "md5:197f31fc3c03d193e473e0c02d9c25a0",
+            "links": {
+              "self": "https://zenodo.org/api/records/18365022/files/A Structural Resolution of the RH Hypothesis.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1387740"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 92,
+          "unique_downloads": 67,
+          "views": 187,
+          "unique_views": 168,
+          "version_downloads": 92,
+          "version_unique_downloads": 67,
+          "version_unique_views": 168,
+          "version_views": 187
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2026-03-24T21:02:27.887975+00:00",
+        "modified": "2026-03-24T21:02:28.198006+00:00",
+        "id": 19210167,
+        "conceptrecid": "19210166",
+        "doi": "10.5281/zenodo.19210167",
+        "conceptdoi": "10.5281/zenodo.19210166",
+        "doi_url": "https://doi.org/10.5281/zenodo.19210167",
+        "metadata": {
+          "title": "The Two Diamonds - On the Origin of 7/12 and 5/33 in the Arithmetic of Riemann Zeros",
+          "doi": "10.5281/zenodo.19210167",
+          "publication_date": "2026-03-24",
+          "description": "<p>This paper provides a complete derivation of the two fundamental rational numbers that appear in the explicit arithmetic law of the Riemann zeta zeros:<br>\\[<br>\\frac{7}{12} \\qquad \\text{and} \\qquad \\frac{5}{33}.<br>\\]<br>This derivation completes the rigorous foundation for the explicit arithmetic law of the zeros and reveals the Bernoulli numbers as the hidden algebraic structure governing the spectral correspondence between the Riemann zeros and the Enneper surface.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Souto, Felipe Oliveira",
+              "affiliation": "Universidade Federal do Triângulo Mineiro",
+              "orcid": "0009-0004-2444-552X"
+            }
+          ],
+          "references": [
+            "Riemann, B. Über die Anzahl der Primzahlen unter einer gegebenen Grösse. Monats- berichte der Königlich Preußischen Akademie der Wissenschaften zu Berlin, 1859, 671–680.",
+            "Edwards, H.M. Riemann's Zeta Function; Academic Press: New York, 1974.",
+            "Montgomery, H.L. The pair correlation of zeros of the zeta function. Proceedings of Symposia in Pure Mathematics, 1973, 24, 181–193.",
+            "Weil, A. Sur les formules explicites de la théorie des nombres premiers. Meddelanden från Lunds Universitets Matematiska Seminarium, 1952, 252–265.",
+            "Landau, E. Über die Einteilung der positiven ganzen Zahlen in vier Klassen nach der Mindestzahl der zu ihrer additiven Zusammensetzung erforderlichen Quadrate. Archiv der Mathematik und Physik, 1908, 13, 305–312.",
+            "Abramowitz, M.; Stegun, I.A. Handbook of Mathematical Functions; Dover: New York, 1972.",
+            "Irwin, M.C. The Riemann zeta function and the Bernoulli numbers. American Math- ematical Monthly, 1996, 103, 789–791.",
+            "Souto, F. O. (2026). The Zeta Operator Construction: A Foundational Framework for the Hilbert-Pólya Conjecture. Zenodo. https://doi.org/10.5281/zenodo.19204441",
+            "Souto, F. O. (2026). A Bridge Between Analysis and Arithmetic: Rie- mann Zeros, Eta Function Values, and Heegner Numbers. Zenodo. https://doi.org/10.5281/zenodo.19204810",
+            "Souto, F. O. (2026). The Analytic Foundation of the Riemann Hypothesis: A Uni- fied Derivation from Spectral Correspondence and Arithmetic Identities. Zenodo. https://doi.org/10.5281/zenodo.19209284"
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "19210166"
+                }
+              }
+            ]
+          }
+        },
+        "title": "The Two Diamonds - On the Origin of 7/12 and 5/33 in the Arithmetic of Riemann Zeros",
+        "links": {
+          "self": "https://zenodo.org/api/records/19210167",
+          "self_html": "https://zenodo.org/records/19210167",
+          "preview_html": "https://zenodo.org/records/19210167?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.19210167",
+          "self_doi": "https://doi.org/10.5281/zenodo.19210167",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.19210167",
+          "reserve_doi": "https://zenodo.org/api/records/19210167/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/19210166",
+          "parent_html": "https://zenodo.org/records/19210166",
+          "parent_doi": "https://doi.org/10.5281/zenodo.19210166",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.19210166",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:19210167/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:19210167/sequence/default",
+          "files": "https://zenodo.org/api/records/19210167/files",
+          "media_files": "https://zenodo.org/api/records/19210167/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:19210167:The_Two_Diamonds.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:19210167:The_Two_Diamonds.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:19210167:The_Two_Diamonds.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:19210167:The_Two_Diamonds.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:19210167:The_Two_Diamonds.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:19210167:The_Two_Diamonds.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/19210167/files-archive",
+          "archive_media": "https://zenodo.org/api/records/19210167/media-files-archive",
+          "latest": "https://zenodo.org/api/records/19210167/versions/latest",
+          "latest_html": "https://zenodo.org/records/19210167/latest",
+          "versions": "https://zenodo.org/api/records/19210167/versions",
+          "draft": "https://zenodo.org/api/records/19210167/draft",
+          "access_links": "https://zenodo.org/api/records/19210167/access/links",
+          "access_grants": "https://zenodo.org/api/records/19210167/access/grants",
+          "access_users": "https://zenodo.org/api/records/19210167/access/users",
+          "access_request": "https://zenodo.org/api/records/19210167/access/request",
+          "access": "https://zenodo.org/api/records/19210167/access",
+          "communities": "https://zenodo.org/api/records/19210167/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/19210167/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/19210167/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/19210167/file-modification",
+          "requests": "https://zenodo.org/api/records/19210167/requests"
+        },
+        "updated": "2026-03-24T21:02:28.198006+00:00",
+        "recid": "19210167",
+        "revision": 4,
+        "files": [
+          {
+            "id": "86dd10fc-2c52-4641-8639-b570e75dbfcc",
+            "key": "The_Two_Diamonds.tex",
+            "size": 22296,
+            "checksum": "md5:69cf22f8ed0d9a0afc8545c4494e8e05",
+            "links": {
+              "self": "https://zenodo.org/api/records/19210167/files/The_Two_Diamonds.tex/content"
+            }
+          },
+          {
+            "id": "22000f01-66a1-49ed-b025-e9045312db0f",
+            "key": "The_Two_Diamonds.pdf",
+            "size": 431285,
+            "checksum": "md5:e02111b4abd0f0b03326a930b0eb2882",
+            "links": {
+              "self": "https://zenodo.org/api/records/19210167/files/The_Two_Diamonds.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1577060"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 17,
+          "unique_downloads": 10,
+          "views": 13,
+          "unique_views": 8,
+          "version_downloads": 17,
+          "version_unique_downloads": 10,
+          "version_unique_views": 8,
+          "version_views": 13
+        },
+        "state": "done",
+        "submitted": true
+      },
+      {
+        "created": "2025-11-01T18:03:08.955181+00:00",
+        "modified": "2025-11-01T18:03:09.231024+00:00",
+        "id": 17502999,
+        "conceptrecid": "17502998",
+        "doi": "10.5281/zenodo.17502999",
+        "conceptdoi": "10.5281/zenodo.17502998",
+        "doi_url": "https://doi.org/10.5281/zenodo.17502999",
+        "metadata": {
+          "title": "The existence of Hilbert-Pólya operator",
+          "doi": "10.5281/zenodo.17502999",
+          "publication_date": "2025-11-01",
+          "description": "<p>Hilbert-P&oacute;lya conjecture is proved by constructing Hilbert-P&oacute;lya operator, the self-adjoint operator where its eigenvalues are exactly the imaginary parts of zeros of Riemann zeta function on the critical line. Hence, the Riemann hypothesis is true.</p>",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Ladjeroud, Amal",
+              "affiliation": null
+            }
+          ],
+          "contributors": [
+            {
+              "name": "Ladjeroud, Amal",
+              "affiliation": null,
+              "type": "Researcher"
+            }
+          ],
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "17502998"
+                }
+              }
+            ]
+          }
+        },
+        "title": "The existence of Hilbert-Pólya operator",
+        "links": {
+          "self": "https://zenodo.org/api/records/17502999",
+          "self_html": "https://zenodo.org/records/17502999",
+          "preview_html": "https://zenodo.org/records/17502999?preview=1",
+          "doi": "https://doi.org/10.5281/zenodo.17502999",
+          "self_doi": "https://doi.org/10.5281/zenodo.17502999",
+          "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.17502999",
+          "reserve_doi": "https://zenodo.org/api/records/17502999/draft/pids/doi",
+          "parent": "https://zenodo.org/api/records/17502998",
+          "parent_html": "https://zenodo.org/records/17502998",
+          "parent_doi": "https://doi.org/10.5281/zenodo.17502998",
+          "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.17502998",
+          "self_iiif_manifest": "https://zenodo.org/api/iiif/record:17502999/manifest",
+          "self_iiif_sequence": "https://zenodo.org/api/iiif/record:17502999/sequence/default",
+          "files": "https://zenodo.org/api/records/17502999/files",
+          "media_files": "https://zenodo.org/api/records/17502999/media-files",
+          "thumbnails": {
+            "10": "https://zenodo.org/api/iiif/record:17502999:Template_for_Preprints__arXiv_.pdf/full/%5E10,/0/default.jpg",
+            "50": "https://zenodo.org/api/iiif/record:17502999:Template_for_Preprints__arXiv_.pdf/full/%5E50,/0/default.jpg",
+            "100": "https://zenodo.org/api/iiif/record:17502999:Template_for_Preprints__arXiv_.pdf/full/%5E100,/0/default.jpg",
+            "250": "https://zenodo.org/api/iiif/record:17502999:Template_for_Preprints__arXiv_.pdf/full/%5E250,/0/default.jpg",
+            "750": "https://zenodo.org/api/iiif/record:17502999:Template_for_Preprints__arXiv_.pdf/full/%5E750,/0/default.jpg",
+            "1200": "https://zenodo.org/api/iiif/record:17502999:Template_for_Preprints__arXiv_.pdf/full/%5E1200,/0/default.jpg"
+          },
+          "archive": "https://zenodo.org/api/records/17502999/files-archive",
+          "archive_media": "https://zenodo.org/api/records/17502999/media-files-archive",
+          "latest": "https://zenodo.org/api/records/17502999/versions/latest",
+          "latest_html": "https://zenodo.org/records/17502999/latest",
+          "versions": "https://zenodo.org/api/records/17502999/versions",
+          "draft": "https://zenodo.org/api/records/17502999/draft",
+          "access_links": "https://zenodo.org/api/records/17502999/access/links",
+          "access_grants": "https://zenodo.org/api/records/17502999/access/grants",
+          "access_users": "https://zenodo.org/api/records/17502999/access/users",
+          "access_request": "https://zenodo.org/api/records/17502999/access/request",
+          "access": "https://zenodo.org/api/records/17502999/access",
+          "communities": "https://zenodo.org/api/records/17502999/communities",
+          "communities-suggestions": "https://zenodo.org/api/records/17502999/communities-suggestions",
+          "request_deletion": "https://zenodo.org/api/records/17502999/request-deletion",
+          "file_modification": "https://zenodo.org/api/records/17502999/file-modification",
+          "requests": "https://zenodo.org/api/records/17502999/requests"
+        },
+        "updated": "2025-11-01T18:03:09.231024+00:00",
+        "recid": "17502999",
+        "revision": 4,
+        "files": [
+          {
+            "id": "190539e3-e0e1-4d3c-8bbc-80956db3fe88",
+            "key": "Template_for_Preprints__arXiv_.pdf",
+            "size": 251296,
+            "checksum": "md5:1869873d1b901d6316a4d8c895cbdde3",
+            "links": {
+              "self": "https://zenodo.org/api/records/17502999/files/Template_for_Preprints__arXiv_.pdf/content"
+            }
+          }
+        ],
+        "swh": null,
+        "owners": [
+          {
+            "id": "1449894"
+          }
+        ],
+        "status": "published",
+        "stats": {
+          "downloads": 1016,
+          "unique_downloads": 636,
+          "views": 1047,
+          "unique_views": 703,
+          "version_downloads": 1016,
+          "version_unique_downloads": 636,
+          "version_unique_views": 703,
+          "version_views": 1047
+        },
+        "state": "done",
+        "submitted": true
+      }
+    ],
+    "total": 1051
+  },
+  "aggregations": {
+    "access_status": {
+      "buckets": [
+        {
+          "key": "open",
+          "doc_count": 975,
+          "label": "Open",
+          "is_selected": false
+        },
+        {
+          "key": "restricted",
+          "doc_count": 75,
+          "label": "Restricted",
+          "is_selected": false
+        },
+        {
+          "key": "embargoed",
+          "doc_count": 1,
+          "label": "Embargoed",
+          "is_selected": false
+        }
+      ],
+      "label": "Access status"
+    },
+    "resource_type": {
+      "buckets": [
+        {
+          "key": "publication",
+          "doc_count": 985,
+          "label": "Publication",
+          "is_selected": false,
+          "inner": {
+            "buckets": [
+              {
+                "key": "publication-preprint",
+                "doc_count": 568,
+                "label": "Preprint",
+                "is_selected": false
+              },
+              {
+                "key": "publication-thesis",
+                "doc_count": 88,
+                "label": "Thesis",
+                "is_selected": false
+              },
+              {
+                "key": "publication-article",
+                "doc_count": 65,
+                "label": "Journal article",
+                "is_selected": false
+              },
+              {
+                "key": "publication-peerreview",
+                "doc_count": 40,
+                "label": "Peer review",
+                "is_selected": false
+              },
+              {
+                "key": "publication-workingpaper",
+                "doc_count": 17,
+                "label": "Working paper",
+                "is_selected": false
+              },
+              {
+                "key": "publication-dissertation",
+                "doc_count": 15,
+                "label": "Dissertation",
+                "is_selected": false
+              },
+              {
+                "key": "publication-report",
+                "doc_count": 12,
+                "label": "Report",
+                "is_selected": false
+              },
+              {
+                "key": "publication-standard",
+                "doc_count": 6,
+                "label": "Standard",
+                "is_selected": false
+              },
+              {
+                "key": "publication-journal",
+                "doc_count": 5,
+                "label": "Journal",
+                "is_selected": false
+              },
+              {
+                "key": "publication-patent",
+                "doc_count": 5,
+                "label": "Patent",
+                "is_selected": false
+              }
+            ]
+          }
+        },
+        {
+          "key": "dataset",
+          "doc_count": 37,
+          "label": "Dataset",
+          "is_selected": false,
+          "inner": {
+            "buckets": []
+          }
+        },
+        {
+          "key": "other",
+          "doc_count": 10,
+          "label": "Other",
+          "is_selected": false,
+          "inner": {
+            "buckets": []
+          }
+        },
+        {
+          "key": "presentation",
+          "doc_count": 8,
+          "label": "Presentation",
+          "is_selected": false,
+          "inner": {
+            "buckets": []
+          }
+        },
+        {
+          "key": "software",
+          "doc_count": 8,
+          "label": "Software",
+          "is_selected": false,
+          "inner": {
+            "buckets": []
+          }
+        },
+        {
+          "key": "model",
+          "doc_count": 2,
+          "label": "Model",
+          "is_selected": false,
+          "inner": {
+            "buckets": []
+          }
+        },
+        {
+          "key": "event",
+          "doc_count": 1,
+          "label": "Event",
+          "is_selected": false,
+          "inner": {
+            "buckets": []
+          }
+        }
+      ],
+      "label": "Resource types"
+    },
+    "subject": {
+      "buckets": [
+        {
+          "key": "Riemann Hypothesis",
+          "doc_count": 269,
+          "label": "Riemann Hypothesis",
+          "is_selected": false
+        },
+        {
+          "key": "Mathematics",
+          "doc_count": 76,
+          "label": "Mathematics",
+          "is_selected": false
+        },
+        {
+          "key": "Zeta Function",
+          "doc_count": 75,
+          "label": "Zeta Function",
+          "is_selected": false
+        },
+        {
+          "key": "Mathematical physics",
+          "doc_count": 74,
+          "label": "Mathematical physics",
+          "is_selected": false
+        },
+        {
+          "key": "Riemann zeta function",
+          "doc_count": 64,
+          "label": "Riemann zeta function",
+          "is_selected": false
+        },
+        {
+          "key": "Number Theory",
+          "doc_count": 61,
+          "label": "Number Theory",
+          "is_selected": false
+        },
+        {
+          "key": "Prime numbers",
+          "doc_count": 56,
+          "label": "Prime numbers",
+          "is_selected": false
+        },
+        {
+          "key": "number theory",
+          "doc_count": 44,
+          "label": "number theory",
+          "is_selected": false
+        },
+        {
+          "key": "zeta function",
+          "doc_count": 43,
+          "label": "zeta function",
+          "is_selected": false
+        },
+        {
+          "key": "Riemann hypothesis",
+          "doc_count": 42,
+          "label": "Riemann hypothesis",
+          "is_selected": false
+        }
+      ],
+      "label": "Subjects"
+    },
+    "file_type": {
+      "buckets": [
+        {
+          "key": "pdf",
+          "doc_count": 911,
+          "label": "PDF",
+          "is_selected": false
+        },
+        {
+          "key": "tex",
+          "doc_count": 80,
+          "label": "TEX",
+          "is_selected": false
+        },
+        {
+          "key": "zip",
+          "doc_count": 65,
+          "label": "ZIP",
+          "is_selected": false
+        },
+        {
+          "key": "txt",
+          "doc_count": 44,
+          "label": "TXT",
+          "is_selected": false
+        },
+        {
+          "key": "py",
+          "doc_count": 40,
+          "label": "PY",
+          "is_selected": false
+        },
+        {
+          "key": "png",
+          "doc_count": 39,
+          "label": "PNG",
+          "is_selected": false
+        },
+        {
+          "key": "md",
+          "doc_count": 27,
+          "label": "MD",
+          "is_selected": false
+        },
+        {
+          "key": "docx",
+          "doc_count": 21,
+          "label": "DOCX",
+          "is_selected": false
+        },
+        {
+          "key": "bin",
+          "doc_count": 15,
+          "label": "BIN",
+          "is_selected": false
+        },
+        {
+          "key": "jpg",
+          "doc_count": 11,
+          "label": "JPG",
+          "is_selected": false
+        }
+      ],
+      "label": "File type"
+    }
+  },
+  "links": {
+    "self": "https://zenodo.org/api/records?page=1&q=%2Bzeta+%2Bfunction+%2BRiemann+%2Bhypothesis+%2Bzeros&size=20&sort=bestmatch",
+    "next": "https://zenodo.org/api/records?page=2&q=%2Bzeta+%2Bfunction+%2BRiemann+%2Bhypothesis+%2Bzeros&size=20&sort=bestmatch"
+  }
+}

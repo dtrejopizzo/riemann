@@ -1,0 +1,35 @@
+## Overview <output>
+<conclusion>
+The hypothesis is refuted: augmenting the One-Class SVM feature set with the proposed scale-invariant shape features (`argmax_a`, `entropy_a`) of the per-peak amplification spectrum does not improve—and in fact slightly degrades—detection of the F4-family of GRH-violators relative to the 6D `log|S_k|` baseline, with the achieved 8D AUC (~0.83) falling well short of the >0.90 target.
+</conclusion> <methods>
+1. Loaded the per-class complex S_k arrays (F1.npy … F12.npy, each 200×8 complex) and matching peak t-values, alongside theoretical coefficient moments C (11×8) and the class label array (classes.npy). Verified row alignment with `peaks_features_F1_F12_normalized_full.csv` (2200 rows; t-values matched exactly per class).
+2. Computed per-peak amplification ratios a_k(t) = |S_k(t)|² / C_k for k=1..6 using class-specific C_k. The k=7 column was excluded (known feature leak: S_7=0 for mod-5 classes at N=10⁶; also C_7=0 for several classes).
+3. Derived two shape features: `argmax_a` ∈ {0..5} (k-index of the maximum a_k) and `entropy_a = -Σ p_k ln p_k` with p_k = a_k / Σa_j (natural log; range ~0.72–1.77, max possible ln(6)≈1.79).
+4. Built the 6D baseline using `log_abs_S{1..6}` columns from the CSV (natural-log magnitudes; verified to match ln|S_k| from the complex arrays to <0.01 typical, <0.12 worst-case for tiny-magnitude entries) and the 8D set by appending `argmax_a` and `entropy_a`.
+5. Applied StandardScaler (fit on training subset of GRH-true peaks only) and trained `OneClassSVM(kernel='rbf', gamma='scale', nu=0.1)`. Anomaly scores defined as −decision_function. Computed AUCs against held-out test peaks: 80/20 split of GRH-true peaks (random_state=42) as the in-distribution set, then scored each violator class (F4, F5p, F5m, F4-family=union, F12). Confirmed robustness with nu ∈ {0.05, 0.1, 0.2, 0.3} and with two alternative shape encodings (entropy-only 7D; one-hot-encoded argmax + entropy 13D).
+6. Generated a 2-panel summary figure (ROC curves and per-family AUC bars).
+</methods> <results>
+Held-out evaluation (80/20 GRH-true split, nu=0.1):
+- F4-family (F4+F5p+F5m): 6D AUC = 0.878 → 8D AUC = 0.831 (Δ = −0.047)
+- F4 only: 6D = 0.878 → 8D = 0.830 (Δ = −0.048)
+- F5p only: 6D = 0.874 → 8D = 0.827 (Δ = −0.047)
+- F5m only: 6D = 0.882 → 8D = 0.834 (Δ = −0.048)
+- F12 (independent violator class): 6D = 0.980 → 8D = 0.974 (Δ = −0.006) In-sample evaluation (train and score on all 1400 GRH-true peaks, nu=0.1) gave the same picture: F4-family 0.876→0.851, F12 0.984→0.977. Across nu sweeps the 6D model dominated the 8D model on F4-family at every setting tested (best 6D = 0.898 at nu=0.3 vs best 8D = 0.872). Adding only entropy_a (7D) gave 0.851 and only argmax_a (7D) gave 0.858—both below the 6D baseline of 0.876. One-hot encoding of argmax_a was even worse (F4-family 0.810). The 6D baseline AUC (0.876–0.898) we reproduce here is somewhat above the 0.844 figure from r52, plausibly reflecting different train/test partitions, hyperparameters, or subset definitions; even using the higher 6D figure as the reference, the 8D model never reaches the 0.90 hypothesis target for the F4-family.
+</results> <challenges>
+- The cited primary archives (`Sk_complex_all_2200peaks.npz`, `Ck_Mkk_diag_results.npz`) were not present on disk; equivalent content was reconstructed from per-class `F*.npy` complex arrays (200×8) and `C.npy`/`M.npy`/`classes.npy`. Row alignment with the CSV was verified by exact match of t-values within each class block.
+- Small inconsistencies (≤0.12 in absolute log-units, mean ≪0.01) between CSV `log_abs_S{k}` and ln|S_k| computed from the complex arrays at small |S_k| values; these are numerical and immaterial for OCSVM with rbf+scaling. We used the CSV columns to align with the r52 protocol.
+- The exact r52 protocol details (training/holdout split, nu, gamma, normalization) were not specified beyond "OCSVM trained on log|S_k| of GRH-true peaks." We documented our concrete choices and verified conclusions hold across multiple nu values and two evaluation modes.
+- argmax_a is a discrete 6-level feature; we tested both ordinal-numeric and one-hot encodings—neither helped.
+</challenges> <discussion>
+The motivation for the hypothesis was that the *shape* of the amplification spectrum a_k(t) might encode structural information about the underlying L-function family beyond what the magnitude vector log|S_k| carries. Empirically, however, scale-invariant shape descriptors are highly informative about the *family* (modular vs. non-modular, conductor structure) but provide no additional discriminative signal between GRH-true and the F4-family of GRH-violators in the OCSVM anomaly-detection setting. This is consistent with the v6 leitmotif (r39, r44, r50) that bulk and shape descriptors track family identity rather than the GRH-violation property itself. Adding two features that primarily encode family identity slightly inflates the OCSVM normal manifold (since the GRH-true training set spans several families with different shapes), causing the F4-family violators—whose shapes overlap with some GRH-true family shapes—to look slightly less anomalous, which explains the small but consistent AUC decrease. The stronger F12 detection (~0.97–0.98) also degrades only marginally with shape features, confirming that the shape features are not strongly violator-specific. The result reinforces the more nuanced finding that GRH-violation detection requires features that are conditioned on peak structure rather than scale-invariant moments of the amplification spectrum.
+</discussion> <proposed-next-hypotheses>
+1. A second-order shape descriptor that contrasts the empirically observed a_k(t) profile against the *family-conditional expected* a_k profile (i.e., residual shape `a_k(t) − E[a_k | family]` or its rank), used as additional OCSVM features, will improve F4-family detection beyond the 0.88 baseline because it strips out family identity while preserving violation-relevant deviations.
+2. Replacing the magnitude features with phase-aware features built from the complex S_k(t) arrays—specifically, the principal-component projections of the per-peak cross-term matrix Re(S_j·conj(S_k))—as OCSVM inputs will outperform the 6D log|S_k| baseline on both the F4-family and F12, because peak conditioning is encoded in inter-k correlations that magnitude features discard.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>shape_features_ocsvm_results.png</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Two-panel summary figure. Panel A: ROC curves for One-Class SVM detection of the F4-family violators using the 6D `log|S_k|` baseline (AUC 0.878) versus the 8D feature set augmented with shape features `argmax_a` and `entropy_a` (AUC 0.831), evaluated on a held-out 20% split of GRH-true peaks. Panel B: per-family AUC comparison (F4, F5p, F5m, F4-family union, F12), with reference lines at the r52 baseline (0.844) and the 0.90 hypothesis target. The 8D model is uniformly at or below the 6D model.</artifact-description>
+</artifact>
+</artifacts>
+</output> 

@@ -1,0 +1,7 @@
+================================================================================
+SHANNON ENTROPY CLASSIFICATION OF L-FUNCTIONS
+================================================================================ RESEARCH OBJECTIVE:
+Test if Shannon entropy of Dirichlet coefficients can distinguish
+the Riemann ζ function from other L-functions and resolve the
+misclassification issue reported in [r82]. DATASET: N = 10,000 (truncation length) t ∈ [1000, 10000] 350 peaks (50 per function) 7 functions: ζ, χ₄, λ, μ, f_rand, L_DH, f_fully_rand FEATURES: 1. R_comp: Peak resonance metric 2. Sum_Sq_ACF: Sum of squared autocorrelation (lags 1-50) 3. Entropy: Shannon entropy of coefficient sequence CLASSIFICATION: Method: SVM with RBF kernel, StandardScaler normalization Validation: Leave-One-Out Cross-Validation RESULTS: Overall Accuracy: 1.0000 (100.00%) ζ Classification: 50/50 correct (100.0%) Perfect separation of Standard vs. Anomalous classes CONFUSION MATRIX: Predicted Standard Anomalous
+Actual Standard 100 0 Anomalous 0 250 KEY FINDINGS: 1. Entropy ≈ 0 uniquely identifies ζ (all others have Entropy ≥ 1) 2. Sum_Sq_ACF separates periodic from prime-dependent coefficients 3. The 3D feature space achieves perfect classification 4. Hypothesis CONFIRMED: Entropy resolves ζ misclassification 

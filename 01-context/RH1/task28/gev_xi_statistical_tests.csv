@@ -1,0 +1,6 @@
+Test,Statistic,p-value,Significant (α=0.05)
+Mann-Whitney U (L_DH vs. mult.),7.280,0.0165,Yes
+Kruskal-Wallis (all 3 functions),0.026,0.0263,Yes
+Slope comparison: ζ vs L(χ₄),0.757,0.4488,No
+Slope comparison: ζ vs L_DH,0.667,0.5048,No
+Slope comparison: L(χ₄) vs L_DH,-0.099,0.9214,No

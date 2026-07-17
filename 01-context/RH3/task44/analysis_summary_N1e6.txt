@@ -1,0 +1,22 @@
+======================================================================
+OMEGA-CLASS CROSS-TERM ANALYSIS AT ZETA PEAKS
+N = 10^6, t in [10^6, 2*10^6]
+====================================================================== ANALYSIS PARAMETERS:
+- Truncation: N = 1,000,000
+- t range: [1,000,000, 2,000,000]
+- Number of peaks analyzed: 50
+- Omega classes: k = 1 to 7 PEAK STATISTICS:
+- Average r: 2.725404
+- r range: [2.025143, 3.609581]
+- Average |D_F|: 12.602735
+- Average denominator <D>: 46.223787
+- Average numerator: 132.415306 TOP 3 OMEGA-CLASS PAIRS DRIVING CONSTRUCTIVE INTERFERENCE:
+---------------------------------------------------------------------- 1. (ω=2, ω=3): Semiprimes (2-prime products) ↔ 3-prime products Combined contribution: 0.618136 Percentage of r: 21.58% 2. (ω=3, ω=4): 3-prime products ↔ 4-prime products Combined contribution: 0.422351 Percentage of r: 14.74% 3. (ω=1, ω=2): Primes ↔ Semiprimes (2-prime products) Combined contribution: 0.413349 Percentage of r: 14.43% ======================================================================
+CONCLUSION:
+----------------------------------------------------------------------
+The dominant positive contribution to r at high zeta peaks comes from
+the interaction between semiprimes (ω=2) and 3-prime products (ω=3),
+contributing 21.6% to the total constructive interference. Contrary to the initial hypothesis that Re[S_1 S̄_2] (primes ↔ semiprimes)
+would be the primary driver, the data shows that Re[S_2 S̄_3] is actually
+the strongest contributor. However, the prime-semiprime interaction is
+still the 3rd strongest at 14.4%, showing it plays an important role.

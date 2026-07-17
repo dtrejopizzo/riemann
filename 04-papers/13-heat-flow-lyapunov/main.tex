@@ -1,0 +1,247 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,urlcolor=blue!70!black,
+  pdftitle={A Lyapunov theorem for the de Bruijn-Newman flow},
+  pdfauthor={David Alejandro Trejo Pizzo}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\Lyap}{\mathcal L}
+\newcommand{\Norm}[1]{\lVert #1\rVert}
+
+\title[A de Bruijn--Newman Lyapunov Theorem]{A Lyapunov Theorem for the de Bruijn--Newman Flow,\\[3pt]
+a Dynamical No-Go, and the Extremal Form of the\\[2pt]
+Riemann Hypothesis as Gap Universality}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgNewman,bgCSV}
+\begin{abstract}
+We study the Riemann Hypothesis through the de Bruijn--Newman heat flow, for which $\mathrm{RH}\iff\Lambda=0$
+(using Rodgers--Tao's $\Lambda\ge0$ and Polymath15's $\Lambda\le0.2$). We record three RH-independent results.
+(i) A clean \emph{Lyapunov theorem}: along the Coulomb-gas zero dynamics, the total off-line-ness
+$\Lyap=\sum_j(\im z_j)^2$ obeys $\dot\Lyap=-2\sum_{j\ne k}(y_j-y_k)^2/|z_j-z_k|^2\le 0$, so $\Lyap$ is a strict
+Lyapunov function and the critical line is the flow's global attractor; as a by-product any hypothetical
+off-line zero sits at imaginary height $\le\sqrt{2\Lambda}\le0.63$. (ii) A \emph{dynamical no-go} (N5): the
+identity for $\dot\Lyap$ is \emph{arithmetic-blind} (it holds for every conjugate-symmetric configuration), so
+no argument using the flow alone can prove RH; in particular this subsumes the entire class of
+``critical-line-as-attractor'' dissipative-dynamics / PT-symmetry heuristics. (iii) The \emph{extremal
+reduction}: $\Lambda$ equals the first backward-collision time of the zeros under the flow, an extremal (not
+average) quantity, and a single off-line zero already forces $\Lambda>0$. Measuring real $\zeta$ zeros we find
+the normalized backward-collision margin $t_c/s^2$ clusters at a universal negative constant $\approx-0.02$
+(the sine-kernel prediction), giving the sharpest statement of the target: \emph{RH follows from the
+unconditional GUE gap universality of the zeros}. We locate, precisely and quantitatively, the single
+irreducible arithmetic statement at which the dynamical approach---and, as a companion map shows, every
+current analytic approach---arrives.
+\end{abstract}
+
+\maketitle
+
+
+
+\tableofcontents
+\newpage
+
+\section{Introduction}\label{sec:intro}
+The de Bruijn--Newman constant $\Lambda$ is defined through the one-parameter deformation
+\begin{equation}\label{eq:Ht}
+H_t(z)=\int_0^\infty e^{tu^2}\,\Phi(u)\,\cos(zu)\,du,\qquad H_0(z)\propto\xi(\half+\tfrac{iz}{2}),
+\end{equation}
+where $\xi$ is the Riemann $\xi$-function and $\Phi$ its (super-exponentially decaying) kernel; $H_t$ satisfies
+the backward heat equation $\partial_t H_t=-\partial_{zz}H_t$. By the theorems of de Bruijn and Newman, there
+is a constant $\Lambda\in\mathbb R$ such that $H_t$ has only real zeros iff $t\ge\Lambda$. Newman conjectured
+$\Lambda\ge0$ (``RH, if true, is only barely so''); this was proved by Rodgers and Tao \cite{RT}, while
+Polymath15 \cite{P15} established $\Lambda\le0.2$. Consequently
+\begin{equation}\label{eq:RHL}
+\mathrm{RH}\ \Longleftrightarrow\ \Lambda\le 0\ \Longleftrightarrow\ \Lambda=0.
+\end{equation}
+This reframes RH as the statement that the flow's zeros are \emph{already} all real at $t=0$, the boundary of
+the all-real regime. It is attractive because the reality of the zeros for $t\ge\Lambda>0$ is a \emph{theorem},
+not RH, and the only remaining content is the propagation of reality down to $t=0$, governed by the zero
+dynamics rather than by the explicit formula.
+
+This paper records what that dynamical viewpoint yields rigorously. The results are RH-independent: a Lyapunov
+theorem and its attractor corollary (\S\ref{sec:lyap}), a no-go showing the flow alone cannot decide RH
+(\S\ref{sec:nogo}), and the extremal reduction of $\Lambda$ to a backward-collision time together with the
+numerical observation that pins the target as gap universality (\S\ref{sec:extremal}). The companion paper
+\cite{P11} places these alongside the static reformulations; here we develop the dynamical side in full.
+
+\paragraph{The zero dynamics.} Where $H_t$ has simple zeros $z_j(t)$, differentiating $H_t(z_j(t))=0$ and using
+$\partial_tH=-\partial_{zz}H$ gives the Calogero/Coulomb flow
+\begin{equation}\label{eq:flow}
+\dot z_j\;=\;2\sum_{k\ne j}\frac{1}{z_j-z_k},
+\end{equation}
+the classical zero dynamics of the heat flow \cite{CSV}. (We normalize the time so the constant is $2$; all
+statements below are invariant under rescaling $t$.) Since $H_t$ has real coefficients, the zeros are symmetric
+under conjugation; complex zeros occur in conjugate pairs.
+
+\section{A Lyapunov theorem and the attractor}\label{sec:lyap}
+
+Write $z_j=x_j+iy_j$ and define the \emph{total off-line-ness}
+\begin{equation}\label{eq:L}
+\Lyap\;:=\;\sum_j (\im z_j)^2\;=\;\sum_j y_j^2\;\ge0,\qquad \Lyap=0\iff\text{all zeros real.}
+\end{equation}
+
+\begin{theorem}[Lyapunov monotonicity]\label{thm:lyap}
+Along the flow \eqref{eq:flow},
+\begin{equation}\label{eq:Ldot}
+\dot\Lyap\;=\;-2\sum_{j\ne k}\frac{(y_j-y_k)^2}{|z_j-z_k|^2}\;\le\;0,
+\end{equation}
+with equality iff all $y_j$ are equal; for a conjugate-symmetric configuration this forces all $y_j=0$. Hence
+$\Lyap$ is a strict Lyapunov function for the forward flow, and the set of all-real configurations is its
+global attractor.
+\end{theorem}
+
+\begin{proof}
+$\dot\Lyap=2\sum_j y_j\dot y_j=2\sum_j y_j\,\im\dot z_j$. By \eqref{eq:flow},
+$\im\dot z_j=2\sum_{k\ne j}\im(z_j-z_k)^{-1}=-2\sum_{k\ne j}(y_j-y_k)/|z_j-z_k|^2$, so
+$\dot\Lyap=-4\sum_{j\ne k}y_j(y_j-y_k)/|z_j-z_k|^2$. Symmetrizing under $j\leftrightarrow k$ (each unordered pair
+twice) replaces $y_j(y_j-y_k)$ by $\half[(y_j-y_k)^2]$, giving \eqref{eq:Ldot}. Each summand is $\ge0$;
+equality needs $y_j=y_k$ for all $j,k$, and conjugate symmetry ($\sum y_j=0$, $y$'s in $\pm$ pairs) then forces
+$y_j\equiv0$.
+\end{proof}
+
+This is the rigorous content of the intuition that ``the critical line is a stable attractor'': under the heat
+flow, off-line zeros are pulled toward the real axis, monotonically in the quadratic measure $\Lyap$. We record
+two consequences.
+
+\begin{corollary}[Healing rate; height bound]\label{cor:height}
+An isolated conjugate pair at $\pm iy_0$ obeys $\frac{d}{dt}y_0^2=-2$ exactly, hence heals (reaches the real
+axis) by time $y_0^2/2$. Therefore any zero of $H_0=\xi$ off the real axis (i.e.\ any RH-violating zero) has
+imaginary part $|y_0|\le\sqrt{2\Lambda}\le\sqrt{0.4}\approx0.63$.
+\end{corollary}
+
+\begin{proof}
+For the isolated pair, \eqref{eq:Ldot} gives $\dot\Lyap=-2\cdot 2\cdot\frac{(2y_0)^2}{(2y_0)^2}=-4$ and
+$\Lyap=2y_0^2$, so $\frac{d}{dt}y_0^2=-2$ and $y_0^2(t)=y_0^2(0)-2t$. A pair present at $t=0$ heals by
+$t=y_0^2(0)/2$; since the all-real regime begins at $t=\Lambda$, $y_0^2(0)/2\le\Lambda$, and $\Lambda\le0.2$.
+\end{proof}
+
+\section{A dynamical no-go: the flow is arithmetic-blind}\label{sec:nogo}
+
+Theorem~\ref{thm:lyap} is appealing, but it cannot prove RH, for two structural reasons that we make precise.
+
+First, \emph{wrong direction}: forward in $t$, $\Lyap$ decreases to $0$ (the regime $t\ge\Lambda$). RH concerns
+$t=0\le\Lambda$, reached by flowing \emph{backward}, where $\Lyap$ \emph{increases}; the monotonicity then
+yields only $\Lyap(0)\ge\Lyap(\Lambda)=0$, which is trivially true and not $\Lyap(0)=0$.
+
+Second, and decisively, \emph{arithmetic-blindness}.
+
+\begin{theorem}[Dynamical no-go, N5]\label{thm:nogo}
+The identity \eqref{eq:Ldot} holds for \emph{every} finite conjugate-symmetric configuration $\{z_j\}$,
+independently of any arithmetic origin. Consequently no argument that uses only the flow \eqref{eq:flow}
+together with a Lyapunov/monotonicity functional of the zero positions can distinguish $\xi$ from an arbitrary
+such function, and hence cannot prove RH: it would prove ``every function in the de Bruijn--Newman class
+satisfies RH,'' which is false (generic initial data have $\Lambda>0$). Any RH attack based on a dissipative
+dynamics with the critical line as attractor is of this form, and is subject to this obstruction.
+\end{theorem}
+
+\begin{proof}
+The derivation of \eqref{eq:Ldot} used only \eqref{eq:flow} and $z_j=x_j+iy_j$, never the values $\{z_j(0)\}$.
+The flow \eqref{eq:flow} is the same vector field for all initial data. A functional $F(\{z_j\})$ of the
+positions therefore has $\dot F$ determined by the universal field; only the initial value $F(\{z_j(0)\})$
+carries the arithmetic, and that value is exactly what RH asserts. There exist functions in the class with
+$\Lambda>0$ (off-line zeros), e.g.\ suitable Fourier transforms violating the Hermite--Biehler condition; for
+these the same $\dot\Lyap\le0$ holds. Hence the flow cannot separate $\Lambda\le0$ from $\Lambda>0$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:nogo} explains, in a single sentence, why the heat flow does not escape the difficulty even
+though it introduces a genuinely new parameter $t$: the new degree of freedom is arithmetic-blind. RH lives
+entirely in the \emph{initial condition} $H_0=\xi$, i.e.\ in where the zeros start and how they are spaced. To
+use the flow one must re-inject $\zeta$'s zero statistics; \S\ref{sec:extremal} identifies exactly which
+statistic.
+\end{remark}
+
+\section{The extremal reduction, and the target as gap universality}\label{sec:extremal}
+
+Because the flow preserves the real axis forward but contracts gaps backward, $\Lambda$ admits a clean
+extremal description.
+
+\begin{proposition}[$\Lambda$ as first backward collision]\label{prop:collision}
+Under \eqref{eq:flow} a pair of real zeros with gap $g$ obeys $g(t)^2=g_0^2+8t$ to leading (two-body) order, so
+backward in $t$ the gap shrinks and the pair collides (forming a double zero, then a conjugate pair) at
+$t_c=-g_0^2/8$. The de Bruijn--Newman constant is the supremum of such collision times over all pairs and
+heights: $\Lambda=\sup t_c$. In particular a \emph{single} off-line zero forces $\Lambda>0$; $\Lambda$ is an
+\emph{extremal}, not an averaged, functional of the zeros.
+\end{proposition}
+
+This is the crux. Any control of RH through the flow must bound the \emph{worst} pair, uniformly in height ---
+no averaged statistic (mean spacing, integrated pair correlation) suffices, since each is insensitive to a
+sparse set of anomalously tight pairs, while one such pair decides $\Lambda$.
+
+\paragraph{A universal collision margin (numerical).} We backward-flow blocks of consecutive real $\zeta$ zeros
+(via \texttt{mpmath.zetazero}) until the tightest pair collides, recording the collision time $t_c$ and the
+local mean spacing $s\sim 2\pi/\log T$:
+
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+height $T$ & min gap & mean spacing $s$ & $t_c$ & $t_c/s^2$\\
+\midrule
+$99$ & 0.845 & 2.281 & $-0.105$ & $-0.0202$\\
+$850$ & 0.484 & 1.280 & $-0.032$ & $-0.0195$\\
+$2547$ & 0.425 & 1.046 & $-0.025$ & $-0.0229$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+In absolute units the margin $|t_c|$ shrinks with height (the spacing $s\to0$), but in mean-spacing units
+$t_c/s^2$ clusters at a \emph{universal negative constant} $\approx-0.02$. This is the sine-kernel / GUE
+prediction for the (normalized) closest-pair collision time, and it is consistent with the marginal value
+$\Lambda=0$: the supremum of $t_c$ tends to $0^-$ in absolute units while the normalized margin stays strictly
+below $0$. (The computation is a deliberate probe---three blocks, a windowed flow without the mean field---so
+the constant is suggestive, not established.)
+
+\begin{observation}[The sharpest target]\label{obs:target}
+By Proposition~\ref{prop:collision}, RH $=\{\Lambda\le0\}$ follows if the normalized backward-collision margin
+$t_c/s^2$ stays a negative constant uniformly in $T$ --- equivalently, if the closest-pair gap statistics of
+the $\zeta$ zeros are GUE-universal \emph{unconditionally}. This is the extremal, quantitative form of the
+target. Its uniform control is precisely the open, currently RH-conditional, statement of pair-correlation /
+gap universality (Montgomery's conjecture is proved only in a restricted range \cite{Mont}).
+\end{observation}
+
+\section{Conclusion}\label{sec:concl}
+
+The de Bruijn--Newman flow gives a clean dynamical picture of RH and three RH-independent results: a Lyapunov
+theorem with the critical line as attractor (Theorem~\ref{thm:lyap}) and the height bound
+(Corollary~\ref{cor:height}); a dynamical no-go showing the flow alone is arithmetic-blind and subsuming the
+PT-symmetry/dissipative heuristics (Theorem~\ref{thm:nogo}); and the extremal reduction of $\Lambda$ to a
+backward-collision time, with the numerical universality of the normalized margin pinning the target as the
+\emph{unconditional gap universality} of the zeros (Proposition~\ref{prop:collision},
+Observation~\ref{obs:target}). The viewpoint does not cross the wall; it compresses RH, with unusual precision,
+into a single extremal arithmetic statement. Establishing that statement unconditionally---the GUE universality
+of the closest-pair gaps, uniform in height---is the new analytic input the problem demands, and the subject of
+a separate program.
+
+\begin{thebibliography}{9}
+\bibitem{RT} B.~Rodgers and T.~Tao, \emph{The de Bruijn--Newman constant is non-negative}, Forum Math. Pi \textbf{8} (2020), e6.
+\bibitem{P15} D.~H.~J.~Polymath, \emph{Effective approximation of heat flow evolution of the Riemann $\xi$ function, and a new upper bound for the de Bruijn--Newman constant}, Res. Math. Sci. \textbf{6} (2019), 31.
+\bibitem{CSV} G.~Csordas, W.~Smith, R.~S.~Varga, \emph{Lehmer pairs of zeros, the de Bruijn--Newman constant $\Lambda$, and the Riemann hypothesis}, Constr. Approx. \textbf{10} (1994), 107--129.
+\bibitem{Mont} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc. Sympos. Pure Math. \textbf{24} (1973), 181--193.
+\bibitem{P11} D.~A.~Trejo Pizzo, \emph{The band-limited Weil--Carleson form and a five-language map of the Riemann wall}, preprint, 2026.
+\bibitem{bgNewman} C.~M.~Newman, \emph{Fourier transforms with only real zeros}, Proc.\ Amer.\ Math.\ Soc.\ \textbf{61} (1976), 245--251.
+\bibitem{bgCSV} G.~Csordas, W.~Smith, and R.~S.~Varga, \emph{Lehmer pairs of zeros, the de Bruijn--Newman constant $\Lambda$, and the Riemann Hypothesis}, Constr.\ Approx.\ \textbf{10} (1994), 107--129.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,205 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Numerical observation}
+
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\fa}{\mathfrak a}
+\newcommand{\fp}{\mathfrak p}
+\newcommand{\ft}{\mathfrak t}
+\newcommand{\RH}{\mathrm{RH}}
+\DeclareMathOperator{\Spec}{Spec}
+
+\title[The Pontryagin-Index Route]{The off-line zeros as a Pontryagin index: a tail relative-form-bound
+reduction, and two computations closing the finite-defect route}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgdeBranges,bgKL,bgBognar,bgAzizov,bgLagarias,bgLevinson,bgConrey89}
+\begin{abstract}
+We study the localized Weil form $\ft=\fa-\fp$ (archimedean minus prime) as a
+quadratic form on a Kre\u\i n space, and track not its sign but its
+\emph{negative index} $\kappa$, equal to the number of off-line zeros. The
+hierarchy $\kappa=0\,(\RH)\subset\kappa<\infty\subset\kappa=\infty$ suggests an
+infinite-dimensional analogue of finitization: \emph{finite defect}
+($\kappa<\infty$, a Pontryagin space $\Pi_\kappa$), where Kre\u\i n--Langer
+theory bounds the non-real spectrum. We reduce $\kappa<\infty$ to a single
+relative form bound on the prime tail (RFB$_X$) and then close the two natural
+mechanisms for it, by computation on the validated band-limited engine. First,
+the relative-form-subordination cutoff scales with the band,
+$X^\ast(d)\sim e^{2d}/10$, so no fixed prime head captures the negative squares.
+Second, the saturation $\lambda_{\max}=1$ of the prime-vs-archimedean pencil is
+\emph{approached}, not attained: the near-critical multiplicity grows linearly
+with the band and the spectral gap closes, so the near-null space is
+infinite-dimensional. Hence the off-line zero count is not finite-rank
+detectable; the criticality is self-similar across $\log$-prime scale; and the
+question returns, with no finite shortcut, to the semiboundedness of $\ft$ on an
+infinite-dimensional near-null space. No claim about RH is made.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+The Weil explicit formula realizes a quadratic functional
+$\ft(g)=\sum_\rho h_g(\gamma_\rho)$ over the nontrivial zeros
+$\tfrac12+i\gamma_\rho$, with $h_g$ the entire extension of $|\widehat g|^2$;
+on-line zeros contribute nonnegatively, off-line zeros contribute indefinite
+quartets, and $\RH\iff\ft\succeq0$ (Weil's criterion). Realized on a Kre\u\i n
+space \cite{P8}, $\ft$ carries a \emph{negative index}
+\[
+\kappa\;=\;\#\{\text{negative squares of }\ft\}\;=\;\#\{\text{off-line zeros}\}.
+\]
+This paper asks whether $\kappa$ is \emph{finite} --- a question strictly
+weaker than RH ($\kappa=0$) and strictly stronger than any zero-density
+estimate --- because $\kappa<\infty$ would place $\ft$ in a Pontryagin space
+$\Pi_\kappa$, where the Kre\u\i n--Langer theory \cite{KL} gives a self-adjoint
+operator with at most $\kappa$ non-real eigenvalue pairs and a definitizing
+structure. Finite defect is the infinite-dimensional analogue of the
+finitization (a finite-rank model) that the function-field proof of RH supplies
+geometrically.
+
+We reduce $\kappa<\infty$ to a concrete inequality (\S\ref{sec:red}) and then
+close its two natural mechanisms by computation (\S\S\ref{sec:c1}--\ref{sec:c2}).
+The outcome is negative for finite defect and structurally informative: the
+off-line negative squares are not confined to any finite set of primes, and the
+criticality of $\ft$ is carried by an infinite-dimensional, self-similar
+near-null space.
+
+\section{The reduction to a tail relative form bound}\label{sec:red}
+On band-limited test functions write
+\[
+\ft[g]=\fa[g]-\fp[g],\qquad
+\fp[g]=2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,\mathrm{Re}\,(g\star\tilde g)(\log n),
+\]
+with $\fa$ the archimedean form (gamma-factor multiplier
+$\Omega(r)=\mathrm{Re}\,\psi(\tfrac14+\tfrac{ir}{2})-\log\pi$, positive at
+height). Split the prime form at a cutoff $X$, $\fp=\fp_{\le X}+\fp_{>X}$; the
+head $\fp_{\le X}$ is finite rank.
+
+\begin{proposition}[Reduction]\label{prop:red}
+If for some $X$ the tail satisfies the relative form bound
+\begin{equation}\tag{RFB$_X$}
+\bigl|\fp_{>X}[g]\bigr|\le a\,\fa[g]+C\|g\|^2,\qquad a<1,
+\end{equation}
+then $\ft$ has finitely many negative squares, $\kappa<\infty$.
+\end{proposition}
+\begin{proof}
+$\ft=\fa-\fp_{\le X}-\fp_{>X}\succeq(1-a)\fa-\fp_{\le X}-C$. The form
+$(1-a)\fa-C$ is bounded below; subtracting the finite-rank form $\fp_{\le X}$
+adds at most $\operatorname{rank}\fp_{\le X}<\infty$ negative squares. Hence
+$\kappa\le\operatorname{rank}\fp_{\le X}<\infty$.
+\end{proof}
+
+The quantity controlling negative squares is the one-sided maximal generalized
+eigenvalue
+$\lambda_{\max}(X,d)=\sup_g \fp_{>X}[g]/\fa[g]$ on band $d$ (primes $\le e^{2d}$);
+$\ft$ stops producing negative squares from the tail once
+$\lambda_{\max}(X,d)\le1$. (RFB$_X$) for a \emph{fixed} $X$ as $d\to\infty$ is
+exactly what Proposition~\ref{prop:red} needs.
+
+\begin{remark}[Why this is hard, in one line]
+$\sum_{n\le N}\Lambda(n)n^{-1/2}\sim2\sqrt N$ dominates $\fa\sim\log$, so
+(RFB$_X$) holds only through cancellation: the prime tail must exhibit
+square-root cancellation \emph{in the relative-form sense}. This is the same
+$\sqrt N$-vs-$\log N$ obstruction met at the foundation of this line of work.
+\end{remark}
+
+\section{Computation I: the subordination cutoff scales with the
+band}\label{sec:c1}
+On the validated band-limited engine (sinc basis at spacing $\pi/d$, height
+$T_0=10^3$ where $\fa\succ0$), we computed $\lambda_{\max}(X,d)$.
+
+\begin{observation}\label{obs:c1}
+For $d=4$ ($e^{2d}\approx2981$) and $d=5$ ($e^{2d}\approx22026$):
+$\lambda_{\max}(1,d)=1.00000$ (the full form saturates, reproducing the
+Carleson-saturation result $C\equiv1$); and $\lambda_{\max}(X,d)$ first drops
+below $1$ at
+\[
+X^\ast(d)\;\approx\;\tfrac1{10}\,e^{2d}\qquad(X^\ast(4)\approx300,\ X^\ast(5)\approx2000).
+\]
+Equivalently, in $\log$-scale the subordinate tail is the fixed-width top slice
+$[\,2d-\log10,\,2d\,]$, of width $\approx2.3$ independent of $d$; for any fixed
+$X$, $\lambda_{\max}(X,d)$ increases with $d$ and recrosses above $1$.
+\end{observation}
+
+\begin{corollary}\label{cor:c1}
+(RFB$_X$) fails for every fixed $X$ in the limit $d\to\infty$: the cutoff making
+the tail subordinate diverges, $X^\ast(d)\to\infty$. The finite-rank-head
+mechanism of Proposition~\ref{prop:red} does not establish $\kappa<\infty$.
+\end{corollary}
+
+Removing small primes \emph{raises} $\lambda_{\max}$ above $1$ before it falls,
+so the saturation at exactly $1$ is a global property of all primes, not a
+small-prime artifact; the offending directions recur at every scale.
+
+\section{Computation II: the saturation is approached, not
+attained}\label{sec:c2}
+We next ask whether the saturation $\lambda_{\max}=1$ of the full pencil
+$(\fp,\fa)$ is carried by finitely many directions. We computed the full
+spectrum for increasing band, with basis dimension scaled to the band.
+
+\begin{observation}\label{obs:c2}
+At $T_0=10^3$, the near-critical multiplicity of $(\fp,\fa)$ grows linearly with
+the band:
+\[
+\#\{\lambda>0.99\}\;=\;3,\,11,\,19,\,27\quad\text{for }d=3,4,5,6,
+\]
+(constant increment $8$), the spectral gap $\lambda_{\max}-\lambda_2$ is
+$\le10^{-4}$ throughout, and the near-critical fraction rises from $10\%$ to
+$55\%$ of the spectrum.
+\end{observation}
+
+\begin{corollary}\label{cor:c2}
+The saturation is \emph{approached}: a subspace of growing dimension (indeed a
+growing positive fraction) satisfies $\fp\approx\fa$, i.e. $\ft\approx0$. The
+near-null space of $\ft$ is infinite-dimensional in the limit. Hence the
+finite-defect picture fails: there is no finite critical structure to which a
+$\Pi_\kappa$ realization with $\kappa<\infty$ could attach.
+\end{corollary}
+
+\section{Conclusion}
+Corollaries~\ref{cor:c1} and \ref{cor:c2} close, by computation, both natural
+routes to $\kappa<\infty$: the off-line negative squares are neither captured by
+removing a finite prime head, nor concentrated in a finite critical subspace.
+Two structural facts emerge. The criticality is \emph{self-similar}: the linear
+growth of the near-null dimension with the band (a $\log$-prime range, equally a
+height-scale) matches the $\log T$ growth of the zero density, and the
+subordination window of Computation~I slides to infinity at a fixed $\log$-width.
+And the off-line zero count is \emph{not finite-rank detectable}: any control of
+$\kappa$ must face the form on an infinite-dimensional near-null space. The
+problem therefore returns to the semiboundedness of $\ft$ --- this line of work's
+central inequality --- now equipped with the fact that no finite-defect
+shortcut exists. We make no claim about RH; we have determined the shape of the
+obstruction in the Pontryagin framework and shown it admits no finite reduction.
+
+\begin{thebibliography}{9}
+\bibitem{P8} D.~A.~Trejo Pizzo, \emph{A faithful Kre\u\i n-space realization of
+the Weil form}, this program.
+\bibitem{KL} M.~G.~Kre\u\i n and H.~Langer, \emph{\"Uber die
+$Q$-Funktion eines $\pi$-hermiteschen Operators im Raume $\Pi_\kappa$}, Acta
+Sci. Math. (Szeged) \textbf{34} (1973).
+\bibitem{bgdeBranges} L.~de Branges, \emph{Hilbert Spaces of Entire Functions}, Prentice-Hall, 1968.
+\bibitem{bgKL} M.~G.~Kre\u\i n and H.~Langer, \emph{\"Uber die verallgemeinerten Resolventen und die charakteristische Funktion eines isometrischen Operators im Raume $\Pi_\kappa$}, Colloq.\ Math.\ Soc.\ J\'anos Bolyai \textbf{5} (1972), 353--399.
+\bibitem{bgBognar} J.~Bogn\'ar, \emph{Indefinite Inner Product Spaces}, Springer, 1974.
+\bibitem{bgAzizov} T.~Ya.~Azizov and I.~S.~Iokhvidov, \emph{Linear Operators in Spaces with an Indefinite Metric}, Wiley, 1989.
+\bibitem{bgLagarias} J.~C.~Lagarias, \emph{Hilbert spaces of entire functions and Dirichlet $L$-functions}, in: Frontiers in Number Theory, Physics, and Geometry I, Springer, 2006, 365--377.
+\bibitem{bgLevinson} N.~Levinson, \emph{More than one third of zeros of Riemann's zeta-function are on $\sigma=1/2$}, Adv.\ Math.\ \textbf{13} (1974), 383--436.
+\bibitem{bgConrey89} J.~B.~Conrey, \emph{More than two fifths of the zeros of the Riemann zeta function are on the critical line}, J.\ Reine Angew.\ Math.\ \textbf{399} (1989), 1--26.
+\end{thebibliography}
+
+\end{document}

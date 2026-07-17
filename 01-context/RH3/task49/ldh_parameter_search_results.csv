@@ -1,0 +1,11 @@
+Rank,Character,Formulation,κ_optimal,MSE,RMSE
+1,quadratic_mod3,liouville,0.222278,1.235178,1.111385
+2,primitive_mod7,liouville,-0.221429,1.417754,1.190695
+3,primitive_mod8,simple,0.091188,1.485493,1.218808
+4,quadratic_mod4,simple,-0.369979,1.774868,1.332242
+5,primitive_mod5,liouville,-0.816280,1.877198,1.370109
+6,primitive_mod12,simple,-0.064395,1.983707,1.408441
+7,primitive_mod5,simple,-0.343632,2.156396,1.468467
+8,primitive_mod10,liouville,-0.132815,2.166004,1.471735
+9,primitive_mod12,liouville,-0.163178,2.202261,1.484002
+10,quadratic_mod8,liouville,-0.722895,2.349933,1.532949

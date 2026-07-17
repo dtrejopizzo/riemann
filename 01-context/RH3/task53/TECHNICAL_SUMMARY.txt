@@ -1,0 +1,196 @@
+
+================================================================================
+TECHNICAL DATASET SUMMARY FOR FUTURE EXPLORATORY RUNS
+================================================================================ PROJECT: ω-Class Geometry of Dirichlet Polynomials at Large Values DATASET TYPE: Computationally Generated Mathematical Data
+GENERATION DATE: 2024
+STATUS: Initial dataset (N=10^4), ready for extension to N∈{10^5, 10^6, 10^7} ================================================================================
+1. FILE MANIFEST
+================================================================================ CORE DATA FILES:
+┌─────────────────────────────────────────────┬──────────┬───────────────────┐
+│ Filename │ Size │ Type │
+├─────────────────────────────────────────────┼──────────┼───────────────────┤
+│ dirichlet_polynomials_N10000_T10000-20000.pkl│ 391.86 KB│ Pickle (dict) │
+│ omega_decomposition_peaks_N10000.pkl │ 144.93 KB│ Pickle (dict) │
+│ zeta_peaks_N10000.pkl │ 4.97 KB│ Pickle (dict) │
+│ dirichlet_summary_N10000.csv │ 551 B │ CSV │
+│ DATASET_README.txt │ 12.78 KB│ Text (markdown) │
+│ dataset_overview.png │ 996.78 KB│ PNG (300 dpi) │
+└─────────────────────────────────────────────┴──────────┴───────────────────┘ TOTAL SIZE: ~1.55 MB ================================================================================
+2. DATASET STRUCTURE
+================================================================================ 2.1 PRIMARY DATA: dirichlet_polynomials_N10000_T10000-20000.pkl
+----------------------------------------------------------------
+Contains D_F(t; N) evaluations for 5 function classes across 2,000 t values. HIERARCHY:
+{ 'metadata': { 'T_min': 10000, 'T_max': 20000, 'num_points': 2000, 'N': 10000, 'function_classes': ['zeta', 'L_DH', 'liouville', 'f_rand', 'f_fully_rand'], 'seed': 42 }, 'data': { '<function_class>': { 't_values': ndarray(2000, dtype=float64), 'D_F': ndarray(2000, dtype=complex128), 'modulus': ndarray(2000, dtype=float64), 'argument': ndarray(2000, dtype=float64), 'N': int }, ... (5 function classes) }
+} VARIABLES:
+- t_values: Evaluation points in [10000, 20000], uniformly spaced Δt ≈ 5.0
+- D_F: Complex values D_F(1/2 + it; N) - modulus: |D_F(1/2 + it; N)|
+- argument: arg(D_F(1/2 + it; N)) in [-π, π] DTYPES:
+- t_values, modulus, argument: float64
+- D_F: complex128 2.2 PEAK DATA: zeta_peaks_N10000.pkl
+------------------------------------
+Top 200 peaks of |ζ(1/2 + it)| selected from 241 total peaks. STRUCTURE:
+{ 't_values': ndarray(200, dtype=float64), 'heights': ndarray(200, dtype=float64), 'indices': ndarray(200, dtype=int64), 'N': 10000
+} PEAK SELECTION CRITERIA:
+- Prominence > 1.0
+- Distance ≥ 5 (minimum separation)
+- Sorted by height, top 200 selected RANGES:
+- t: [10025.01, 19914.96]
+- heights: [3.06, 17.83]
+- mean height: 6.59 2.3 OMEGA DECOMPOSITION: omega_decomposition_peaks_N10000.pkl
+-------------------------------------------------------------
+ω-class decompositions S_k(t; N) at the 200 peak locations. STRUCTURE:
+{ '<function_class>': [ { 't': float, 'peak_height': float, 'S_k': {k: complex, ...}, # k ∈ [0, k_max] 'r': float }, ... (200 peaks) ], ... (3 function classes: zeta, L_DH, liouville)
+} OMEGA CLASSES (k values):
+- k=0: n=1 only (ω(1) = 0)
+- k=1: Primes (ω(p) = 1)
+- k=2: Semiprimes and products of 2 distinct primes
+- k=3, 4, ...: Higher ω-classes
+- k_max varies with N (k_max = 4 for N=10,000) KEY METRIC: r (inter-class energy ratio)
+r(t; N) = Σ_{j≠k} Re[S_j S̄_k] / Σ_k |S_k|² OBSERVED VALUES:
+- zeta: mean r = 1.28, std = 1.01, 12.5% negative
+- L_DH: mean r = -0.29, std = 0.77, 77.5% negative - liouville: mean r = -0.90, std = 0.15, 100% negative ⚠️ ================================================================================
+3. FUNCTION CLASSES (8 TOTAL, 5 COMPUTED)
+================================================================================ COMPUTED (present in dataset):
+-------------------------------
+1. zeta (F1) - a_n = 1 for all n - Multiplicative, satisfies RH (assumed) - dtype: float64 - Euler product: ∏_p (1 - p^{-s})^{-1} 2. L_DH (F4) ⚠️ NOT MULTIPLICATIVE - Davenport-Heilbronn function - Linear combination: ((1-iκ)/2)·L(s,χ) + ((1+iκ)/2)·L(s,χ̄) - κ ≈ 0.28408 - dtype: complex128 - Has OFF-LINE ZEROS (Re(s) > 1/2) 3. liouville (F6) ⚠️ CRITICAL: COMPLETELY MULTIPLICATIVE - λ(n) = (-1)^Ω(n), Ω(n) = total prime factors with multiplicity - dtype: float64, values ∈ {-1, +1} - Euler product: ∏_p (1 + p^{-s})^{-1} - ANOMALOUS: Shows strong anti-correlation (r < 0 at ALL peaks) - RULE R3: Do NOT classify as non-multiplicative! 4. f_rand (F3) - Random phases on primes, extended multiplicatively - dtype: complex128, unit circle - seed: 42 5. f_fully_rand (F8) - i.i.d. random phases for all n - dtype: complex128, unit circle - NOT multiplicative - seed: 42 + N (varies with N) NOT YET COMPUTED (planned):
+---------------------------
+6. chi4 (F2) - L(s, χ₄) with character mod 5
+7. mobius (F7) - Möbius function μ(n)
+8. L_DH_eps (F5) - Perturbed Davenport-Heilbronn with κ → κ + ε IMPLEMENTATION NOTE: All coefficient generation is in DirichletCoefficients class.
+Do NOT re-implement (RULE R1). ================================================================================
+4. STATISTICAL PROPERTIES
+================================================================================ MODULUS DISTRIBUTIONS (N=10,000, t∈[10000, 20000]):
+┌───────────────┬─────────┬─────────┬─────────┬──────────┐
+│ Function │ Mean │ Std │ Max │ Min │
+├───────────────┼─────────┼─────────┼─────────┼──────────┤
+│ zeta │ 1.880 │ 2.173 │ 17.828 │ 0.0042 │
+│ L_DH │ 1.682 │ 1.362 │ 9.985 │ 0.0066 │
+│ liouville │ 1.996 │ 2.121 │ 30.683 │ 0.0401 │ ⚠️
+│ f_rand │ 2.332 │ 2.087 │ 17.471 │ 0.0533 │
+│ f_fully_rand │ 2.739 │ 1.443 │ 8.573 │ 0.0333 │
+└───────────────┴─────────┴─────────┴─────────┴──────────┘ ⚠️ NOTE: Liouville shows anomalously high max (30.68 vs zeta's 17.83) INTER-CLASS RATIO r AT PEAKS:
+┌───────────────┬──────────┬─────────┬─────────┬──────────┬──────────┐
+│ Function │ Mean r │ Median │ Std │ Min │ % r < 0 │
+├───────────────┼──────────┼─────────┼─────────┼──────────┼──────────┤
+│ zeta │ +1.276 │ +1.201 │ 1.005 │ -0.757 │ 12.5% │
+│ L_DH │ -0.292 │ -0.546 │ 0.773 │ -1.000 │ 77.5% │
+│ liouville │ -0.903 │ -0.959 │ 0.145 │ -1.000 │ 100.0% │ ⚠️
+└───────────────┴──────────┴─────────┴─────────┴──────────┴──────────┘ ⚠️ CRITICAL FINDING: - Liouville shows UNIVERSAL anti-correlation (100% of peaks have r < 0)
+- This is dramatically different from zeta (only 12.5% negative)
+- Suggests parity-driven cancellation mechanism unique to λ(n) CORRELATIONS:
+- r vs peak_height (zeta): ρ = +0.344 (moderate positive) → Larger zeta peaks tend to have MORE constructive interference (r > 0) → CONTRADICTS initial conditional anti-correlation hypothesis ================================================================================
+5. COMPUTATIONAL METHODS
+================================================================================ 5.1 CORE ALGORITHMS
+------------------- Kahan Summation (REQUIRED by R5): - Used for ALL Dirichlet sums - Provides compensated floating-point addition - Essential for numerical stability at large N Dirichlet Polynomial Evaluation: D_F(t; N) = Σ_{n=1}^N a_n / n^{1/2 + it} = Σ_{n=1}^N a_n / √n · exp(-it log n) Implementation: - Vectorized numpy operations - Kahan sum for final accumulation - dtype: complex128 ω-class Decomposition: S_k(t; N) = Σ_{ω(n)=k} a_n / n^{1/2 + it} Implementation: - Pre-compute ω(n) via sieve (O(N log log N)) - Mask-based selection for each k - Separate Kahan sum per class - Verification: Σ_k S_k = D_F (checked to machine precision) 5.2 PRE-COMPUTATIONS
+-------------------- Stored in DirichletCoefficients class:
+- Primes up to N_max: Sieve of Eratosthenes
+- ω(n) for all n ≤ N_max: Sieve-based counting
+- Ω(n) for all n ≤ N_max: Sieve with multiplicity For N_max = 10^5:
+- 9,592 primes
+- Pre-computation time: ~0.5 seconds
+- Memory: ~1 MB for all arrays 5.3 VALIDATION TESTS PERFORMED
+------------------------------- ✓ Kahan summation: Verified on pathological example (1 + 10^10 + 1 - 10^10 = 2)
+✓ ω-class decomposition: Σ_k S_k = D_F to machine precision (<10^-15)
+✓ Liouville multiplicativity: λ(1)=1, λ(2)=-1, λ(6)=1, etc.
+✓ Coefficient generation: All 8 classes tested NOT YET VALIDATED (REQUIRED by R2):
+✗ L_DH at known zeros: Must verify |L_DH(ρ)| < 10^-6 at 4 off-line zeros
+✗ High-precision comparison: D_F vs mpmath (50 digits) for N≤10^4 ⚠️ VALIDATION GATE REQUIRED: Before proceeding with analysis, MUST validate L_DH at zeros using mpmath. If |L_DH(ρ)| ≥ 10^-6 → STOP. ================================================================================
+6. ENVIRONMENT CONFIGURATION
+================================================================================ PYTHON VERSION: 3.x (standard scientific Python environment) PACKAGES (all pre-installed, no issues):
+┌────────────────┬─────────────┬──────────────────────────┐
+│ Package │ Status │ Usage │
+├────────────────┼─────────────┼──────────────────────────┤
+│ numpy │ ✓ installed │ Core computations │
+│ scipy │ ✓ installed │ Peak finding, stats │
+│ matplotlib │ ✓ installed │ Visualization │
+│ mpmath │ ✓ installed │ High-precision validation│
+│ pandas │ ✓ installed │ Data tables │
+│ sympy │ ✓ installed │ Not yet used │
+│ sklearn │ ✓ installed │ Not yet used │
+└────────────────┴─────────────┴──────────────────────────┘ NO INSTALLATION REQUIRED. All packages available by default. NUMERICAL PRECISION:
+- Standard computation: float64, complex128
+- Validation: mpmath with mp.dps = 50 (50 decimal places) RANDOM SEED: 42 (for all stochastic function classes) ================================================================================
+7. KNOWN ISSUES AND CHALLENGES
+================================================================================ 7.1 COMPUTATIONAL CHALLENGES
+----------------------------- NONE ENCOUNTERED during initial dataset generation. Future considerations:
+- Memory: N=10^7 will require ~80 MB for coefficients
+- Time: N=10^7 with 2000 t values → ~several hours
+- Precision: May need higher precision for very large N 7.2 ANALYTICAL CHALLENGES
+-------------------------- ⚠️ UNEXPECTED FINDING: Zeta does NOT show strong anti-correlation at peaks - Only 12.5% of peaks have r < 0 - Mean r = +1.28 (constructive interference) - Positive correlation between r and peak_height (ρ = +0.344) IMPLICATIONS: - F1 (conditional anti-correlation) hypothesis NOT supported at N=10^4 - May require: * Higher N (10^5, 10^6, 10^7) to see effect * More stringent peak selection (top 1% only?) * Different conditioning (on moments rather than peaks?) ⚠️ LIOUVILLE ANOMALY: Universal anti-correlation (100% of peaks) - Mean r = -0.90 (strongly negative) - Very low variance (std = 0.15) - Dramatically different from other functions IMPLICATIONS: - Parity structure λ(n) = (-1)^Ω(n) creates unique cancellation - F3 (semiprime fragility) may be more pronounced in liouville - Euler product structure ∏_p (1 + p^{-s})^{-1} vs ∏_p (1 - p^{-s})^{-1} creates fundamentally different ω-class interactions ⚠️ L_DH INTERMEDIATE BEHAVIOR: - 77.5% negative (between zeta's 12.5% and liouville's 100%) - Non-multiplicative structure seems to enhance anti-correlation - May provide bridge between extreme cases 7.3 METHODOLOGICAL NOTES
+------------------------- RULE R6 COMPLIANCE:
+- ALL correlation claims must specify conditioning
+- Current results: "at peaks with prominence > 1.0"
+- NEVER claim unconditional negative covariance (MVT forbids it) RULE R4 COMPLIANCE:
+- N-dependence tracking: REQUIRED
+- Current data: N = 10^4 only
+- MUST extend to {10^4, 10^5, 10^6, 10^7} RULE R7 COMPLIANCE:
+- Report observations, not proofs
+- Avoid overclaiming theoretical results
+- Distinguish computation from proof ================================================================================
+8. RECOMMENDED NEXT STEPS FOR FUTURE RUNS
+================================================================================ IMMEDIATE PRIORITIES: 1. VALIDATION GATE (R2) ⚠️ CRITICAL - Compute L_DH at 4 known zeros using mpmath (50 digits) - Verify |L_DH(ρ)| < 10^-6 for all - IF ANY FAIL → STOP, debug implementation - Must be done BEFORE any further analysis 2. N-DEPENDENCE (R4) - Extend to N ∈ {10^5, 10^6, 10^7} - Track ALL metrics: r, peak heights, distributions - Generate equivalent datasets for each N - Critical: Does r become more negative at higher N? 3. QUARTILE ANALYSIS (F1, Step 2.2) - Bin peaks by magnitude: Q1 (smallest) to Q4 (largest) - Compute ⟨r⟩ per quartile - Test: Is ⟨r⟩ more negative for Q4 than Q1? - Currently: correlation is POSITIVE (+0.344), contradicts hypothesis 4. REMAINING FUNCTION CLASSES - Compute chi4, mobius, L_DH_eps - Complete 8×8 comparison matrix - Focus on multiplicative vs non-multiplicative distinction 5. MOMENT DECOMPOSITION (F2) - Compute ∫|D_F|^{2k} dt for k=1,2,3,4 - Decompose by ω-class interactions - What fraction comes from cross-terms? 6. PHASE ANALYSIS (F3) - Compute Δφ(1,2) = arg(S_1) - arg(S_2) at peaks - Test: Is Δφ(1,2) ≈ π (anti-phase)? - Extends to Δφ(1,3), Δφ(2,3), etc. EXPLORATORY QUESTIONS: Q1: Why does liouville show universal anti-correlation while zeta does not? → Investigate parity structure vs coefficient magnitude Q2: Does the N→∞ limit change the behavior? → Track convergence of all metrics Q3: Is there a critical peak threshold above which r becomes negative? → Conditional analysis: r | |ζ| > θ for varying θ Q4: How do non-multiplicative functions (L_DH, f_fully_rand) differ? → Compare ω-class structure when Euler product fails ================================================================================
+9. DATA ACCESS EXAMPLES
+================================================================================ LOADING DATA:
+```python
+import pickle
+import numpy as np # Main Dirichlet data
+with open('dirichlet_polynomials_N10000_T10000-20000.pkl', 'rb') as f: data = pickle.load(f) t_values = data['data']['zeta']['t_values']
+zeta_modulus = data['data']['zeta']['modulus'] # Omega decomposition at peaks
+with open('omega_decomposition_peaks_N10000.pkl', 'rb') as f: omega_data = pickle.load(f) zeta_peaks = omega_data['zeta']
+first_peak_S_k = zeta_peaks[0]['S_k'] # Dictionary {k: S_k}
+first_peak_r = zeta_peaks[0]['r']
+``` COMPUTING NEW METRICS:
+```python
+from your_engine import DirichletCoefficients, compute_dirichlet_partial_sum # Initialize
+coeff_gen = DirichletCoefficients(N_max=100000) # Get coefficients
+coeffs_zeta = coeff_gen.get_coefficients('zeta', N=10000) # Compute at specific t
+D_F = compute_dirichlet_partial_sum(coeffs_zeta, t=15234.5, N=10000)
+``` ================================================================================
+10. CRITICAL RULES SUMMARY (FROM RESEARCH PROGRAM)
+================================================================================ R1: ONE Implementation → DirichletCoefficients class is CANONICAL → Do NOT re-implement coefficient generation → A second implementation is a FATAL ERROR R2: Validation Gates → MUST validate L_DH at 4 known zeros → |L_DH(ρ)| < 10^-6 required → If fail → STOP immediately R3: Liouville IS Multiplicative → λ(n) = (-1)^Ω(n) is COMPLETELY multiplicative → Euler product: ∏_p (1 + p^{-s})^{-1} → Do NOT classify as non-multiplicative R4: Track N-Dependence → ALL metrics across N ∈ {10^4, 10^5, 10^6, 10^7} → A single number is NOT a result R5: Kahan Summation → ALL Dirichlet sums use compensated summation → Already implemented in core functions R6: Conditional vs Unconditional → NEVER claim unconditional negative covariance → MVT makes unconditional cross-terms ≈ 0 → ALL claims must specify conditioning R7: No Circular Arguments → Report what computation shows → Do not overclaim theoretical results → Distinguish observation from proof ================================================================================
+11. ANOMALIES AND OPEN QUESTIONS
+================================================================================ ANOMALY 1: Zeta peaks show POSITIVE inter-class correlation
+- Expected: r < 0 at large peaks (conditional anti-correlation)
+- Observed: mean r = +1.28, only 12.5% negative
+- Correlation r vs height: +0.344 (OPPOSITE of expectation)
+→ HYPOTHESIS MAY BE WRONG, or effect requires higher N ANOMALY 2: Liouville shows UNIVERSAL anti-correlation - 100% of peaks have r < 0
+- Mean r = -0.90, extremely consistent (std = 0.15)
+- Dramatically stronger than any other function
+→ Parity-driven mechanism fundamentally different from magnitude-driven ANOMALY 3: L_DH intermediate behavior
+- 77.5% negative (between zeta and liouville)
+- Non-multiplicative but not random
+→ Linear combination structure affects ω-classes predictably OPEN QUESTION 1: Does N→∞ change zeta behavior?
+- Current N=10^4 may be too small
+- Need N ∈ {10^5, 10^6, 10^7} to test convergence OPEN QUESTION 2: What is the mechanism for liouville's strong effect?
+- Parity vs magnitude
+- Euler product ∏(1+p^{-s})^{-1} vs ∏(1-p^{-s})^{-1}
+- Convolution structure in ω-classes OPEN QUESTION 3: Is there a critical threshold?
+- Perhaps r < 0 only for |ζ| > (log T)^α for some α
+- Current prominence > 1.0 may be too weak
+- Need finer peak selection ================================================================================
+12. DATASET PROVENANCE
+================================================================================ GENERATION METHOD: Computational (deterministic)
+RANDOM SEED: 42 (for stochastic function classes)
+VALIDATION: Partial (core functions tested, L_DH zeros not yet validated) CODE AVAILABILITY: - All code in this notebook
+- DirichletCoefficients class is canonical implementation
+- Reproducible with same seed MATHEMATICAL FRAMEWORK:
+- Dirichlet L-functions
+- Analytic number theory
+- Riemann Hypothesis (assumed for some functions) RESEARCH FRONTS:
+- F1: Conditional anti-correlation at peaks
+- F2: Moment decomposition by ω-classes
+- F3: Semiprime fragility mechanism LIMITATIONS:
+- N = 10^4 only (need extension)
+- t ∈ [10^4, 2×10^4] (single interval)
+- 5/8 function classes computed
+- L_DH zeros not yet validated ================================================================================
+END OF TECHNICAL SUMMARY
+================================================================================ DATASET READY FOR:
+✓ Exploratory analysis
+✓ Extension to higher N
+✓ Additional function classes
+✓ Validation against mpmath
+✓ Hypothesis testing DATASET NOT READY FOR:
+✗ Final conclusions (need N-dependence)
+✗ Publication (need validation gate)
+✗ Theoretical claims (observations only) ================================================================================

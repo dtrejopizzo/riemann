@@ -1,0 +1,39 @@
+## Overview The hypothesis that a feature space combining resonance metrics (M_coh, R_comp) with coefficient structure (Sum of Squared ACF) would provide complete separation between "Standard" and "Anomalous" L-functions is **REJECTED**. ## Classification Performance Using an SVM classifier with RBF kernel and leave-one-out cross-validation on 350 data points (7 functions × 50 peaks each): **Overall Performance:**
+- Accuracy: 85.43%
+- Precision (Anomalous): 83.06%
+- Recall (Anomalous): 100.00% **Confusion Matrix:**
+- True Negatives (Standard correct): 49/100
+- False Positives (Standard misclassified): 51/100
+- False Negatives (Anomalous misclassified): 0/250
+- True Positives (Anomalous correct): 250/250 **Per-Function Accuracy:**
+- ζ (Standard): 0% - All 50 peaks misclassified as Anomalous
+- L(s,χ₄) (Standard): 98% - 49/50 peaks correct
+- L(s,λ(n)) (Anomalous): 100%
+- L(s,μ(n)) (Anomalous): 100%
+- f_rand (Anomalous): 100%
+- L_DH (Anomalous): 100%
+- f_fully_rand (Anomalous): 100% ## Statistical Analysis of Feature Separability **R_comp (Resonance Compression):**
+- Standard: mean = 4.30 ± 0.67
+- Anomalous: mean = 3.34 ± 1.15
+- Mann-Whitney U test: p < 0.001 (highly significant)
+- Cohen's d = 0.92 (large effect size) **ACF Sum Squared:**
+- Standard: mean = 6.22 ± 6.25
+- Anomalous: mean = 4.98 ± 9.97
+- Mann-Whitney U test: p = 0.003 (significant)
+- Cohen's d = 0.14 (small effect size) **M_coh (Coherence Magnitude):**
+- Standard: mean = 0.147 ± 0.123
+- Anomalous: mean = 0.129 ± 0.106
+- Mann-Whitney U test: p = 0.203 (not significant)
+- Cohen's d = 0.16 (negligible effect size) ## Why the Hypothesis Fails The feature space fails to provide complete separation due to fundamental heterogeneity within both classes: **1. Riemann Zeta Misclassification:**
+The Riemann ζ function (Standard) has coefficient structure (ACF ≈ 0) identical to anomalous multiplicative functions with prime-dependent coefficients (L_liouville, L_mobius, f_rand). The classifier cannot distinguish ζ's constant coefficients (a_n = 1) from functions with alternating or random signs when ACF is near zero. **2. L_liouville Counterexample:**
+L(s, λ(n)) with λ(n) = (-1)^Ω(n) (Liouville function) represents a critical counterexample:
+- Classification: Anomalous (has poles at ζ zeros)
+- Multiplicativity: Fully multiplicative by construction
+- R_comp: 4.97 (HIGHEST among all functions tested)
+- ACF: 0.003 (essentially zero, like ζ) This function exhibits resonance metrics HIGHER than both standard functions (ζ: 4.31, L(s,χ₄): 4.29), demonstrating that anomalous analytic behavior does not necessarily manifest as reduced resonance. **3. Class Heterogeneity:** Standard class contains:
+- ζ: R_comp = 4.31, ACF = 0 (constant coefficients)
+- L(s,χ₄): R_comp = 4.29, ACF = 12.43 (periodic coefficients mod 5) Anomalous class contains:
+- High resonance: L_liouville (R_comp = 4.97), L_mobius (R_comp = 3.74)
+- Low resonance: f_rand (R_comp = 2.34), f_fully_rand (R_comp = 2.27)
+- High ACF: L_DH (ACF = 24.87, periodic coefficients)
+- Low ACF: Others (ACF ≈ 0) ## Fundamental Limitation The analysis reveals that **resonance metrics and coefficient autocorrelation do not cleanly separate by analytic properties** when the classes are defined as "standard vs. anomalous." Instead, these metrics primarily separate: 1. **Coefficient periodicity:** Functions with periodic patterns (L(s,χ₄), L_DH) have high ACF; functions with prime-dependent or random patterns have low ACF. 2. **Overall structure:** Truly random functions (f_rand, f_fully_rand) show low resonance, while multiplicative functions (standard and anomalous) show higher resonance. The classifier successfully identifies L_liouville as anomalous not because of its resonance properties, but because the training set contains many anomalous functions with low resonance. However, this creates a fundamental ambiguity: ζ, which has similar metric values to L_liouville and L_mobius, is consistently misclassified. ## Conclusion While the feature space achieves 85% accuracy and perfectly identifies all anomalous functions, it completely fails on the most important standard function: Riemann ζ. The existence of anomalous multiplicative functions with high resonance (L_liouville) demonstrates that resonance metrics alone cannot reliably indicate analytic anomalies. Complete separation would require additional features that distinguish ζ's unique all-ones coefficient structure from multiplicative functions with alternating signs, which current ACF and coherence metrics cannot capture. --- ## DISCRETIONARY DECISIONS - **Truncation length reduced from N=10⁵ to N=10⁴** due to computational constraints (timeout at 1200s). The original objective specified N=10⁵, but intensive calculations required reduction to N=10⁴ as mentioned in dataset description. - **Coarse t-grid sampling (Δt = 2.0)** instead of standard resolution (Δt ≈ 0.55) to enable computation within time limits. This affects peak identification precision but not metric calculation validity. - **Window half-width = 50 points** for computing M_coh and R_comp around each peak, chosen to balance local context with computational efficiency. - **ACF lag range = 1 to 50** for sum of squared autocorrelations, following the established protocol from r79. - **L_DH coefficient implementation:** Used periodic pattern a_n = 2 for n≡1 (mod 4), a_n = -2 for n≡3 (mod 4), a_n = 0 otherwise, to create the "validated historical L_DH" with real periodic coefficients and CAS ≈ 3.6 as described in the dataset documentation. - **SVM kernel selection:** Tested both linear and RBF kernels; reported RBF results (85.43% accuracy) as superior to linear (71.43% accuracy). Linear kernel classified all samples as Anomalous. - **Random seed = 42** for f_rand and f_fully_rand, ensuring reproducibility as specified in dataset description. - **Feature normalization:** Applied StandardScaler (zero mean, unit variance) before SVM training, following the recommendation to normalize by standard deviation. - **Statistical tests:** Used non-parametric Mann-Whitney U test as primary test due to potential non-normality; reported both Mann-Whitney and t-test for completeness. - **Peak window extraction:** Computed metrics on windows of ±50 points around each peak rather than global time series, focusing on local behavior at resonance points. - **Kahan summation:** Implemented compensated summation for computing D(t; N) to maintain numerical precision as specified in dataset description, though with reduced N this was less critical. 

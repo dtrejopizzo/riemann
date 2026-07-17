@@ -1,0 +1,31 @@
+## Overview <output>
+<conclusion>
+The analysis could not be completed because the precise definition (and Dirichlet coefficients) of the baseline function F15 is not recorded in the workspace, and attempts to identify it or to generate modular-form coefficients up to N=10⁶ using cypari2 (mfDelta / ramanujantau / mfcoefs) repeatedly exceeded the cell time limit, so the ω-stratified sums S_k(F15) needed to construct M_base, M_pert, and M_cross could not be produced.
+</conclusion> <methods>
+1. Loaded the available coarse-grid partial sums from the local files `ts.npy`, `re15.npy`, `im15.npy`, `rec3.npy`, `imc3.npy` (each shape (100001,) float64 over t∈[10⁴, 2·10⁴], Δt=0.1) — these together encode the contents that would normally be in the missing `partial_sums_F15_chi3_t10k_20k.npz` archive.
+2. Built the complex partial sums F15 = re15 + i·im15 and χ₃ = rec3 + i·imc3.
+3. Identified the top-200 peaks of |F16(c)| = |F15 + c·χ₃| at c=0 (range t∈[10043.3, 19996.4], min |F|=9.22) and c=0.6 (range t∈[10043.3, 19987.3], min |F|=10.44) using `scipy.signal.find_peaks` followed by amplitude ranking.
+4. Verified the χ₃ partial sum matches the primitive non-principal real Dirichlet character mod 3 (period [0,1,−1]), with mpmath cross-check at t=10000 differing by ~10⁻³ from the file (consistent with N=10⁶ truncation).
+5. Attempted to identify F15 by comparing F15(½+10000i) ≈ 0.647 − 0.430i against ζ, L(s,χ₄), L(s,χ₃), and several Kronecker characters of small conductor — none matched. Tried to generate Ramanujan Δ coefficients to N=10⁶ via cypari2 (`ramanujantau`, `mfDelta`/`mfcoefs`); both calls exceeded the 900s cell timeout.
+6. Without F15's Dirichlet coefficients, the ω(n)-stratified sums S_k(F15) at the c=0.6 peak locations cannot be constructed, so the matrices M_base, M_pert, M_cross, the reconstruction M_total(c=0.6), and the cosine-similarity / variance-contribution analyses required by the objective could not be computed.
+</methods> <results>
+- Coarse-grid data successfully loaded: 100001 t-values over [10⁴, 2·10⁴]. |F15| range 0.0027–18.08 (mean 1.75); |χ₃| range 0.00018–16.03 (mean 1.83).
+- χ₃ confirmed as the primitive non-principal real character mod 3: mpmath L(½+10000i, χ₃) = 2.0741 + 2.6547i vs file value 2.0747 + 2.6544i (Δ ≈ 6·10⁻⁴, expected from N=10⁶ truncation).
+- Top-200 peaks identified for c=0 (200 peaks, min amplitude 9.22) and c=0.6 (200 peaks, min amplitude 10.44).
+- Reference table from `F16_perturbation_results.csv` reproduced: at c=0.6, pc1_complex = 0.9094, H_complex = 0.4013, trace = 44.41 (compared to baseline c=0: 0.9405, 0.2600, 36.22). This confirms the empirical drop in spectral concentration (Δpc1 ≈ −0.031) that the hypothesis seeks to explain.
+- F15 was not identifiable from its critical-line value alone among ζ, L(s,χ₄), L(s,χ₃), or several Kronecker characters of conductor ≤ 15. Modular-form coefficient generation via cypari2 timed out at 900 s for both `ramanujantau` (vectorised over N=10⁶) and `mfcoefs(mfDelta(), 10⁶)`.
+- Consequently no values of M_base, M_pert, M_cross, reconstructed pc1_complex, eigenvector cosine similarities, or per-term variance contributions are reported.
+</results> <challenges>
+- The expected `partial_sums_F15_chi3_t10k_20k.npz` archive was missing from the workspace; only its unpacked component `.npy` files were available.
+- The precise definition of F15 (its Dirichlet coefficients) is not recorded in the workspace memory or in the v6 Binding Context PDF, which only defines F1–F13. Its critical-line value at t=10000 did not match any of the small-conductor Dirichlet L-functions tested.
+- cypari2 was installable, but generating N=10⁶ modular-form coefficients (Δ tau values via `ramanujantau` or `mfcoefs(mfDelta())`) repeatedly exceeded the 900 s cell wall-time on the available hardware, blocking the from-scratch coefficient-generation pipeline.
+- Without Dirichlet coefficients of F15, the ω-stratified sums S_k(F15) cannot be evaluated, and the entire 8×8 decomposition M_total = M_base + c²·M_pert + c·M_cross cannot be assembled. This is a hard prerequisite for steps 4–6 of the research objective.
+- The research-runtime budget (3600 s total) was exhausted by the two long PARI invocations before any matrix could be constructed.
+</challenges> <discussion>
+The hypothesis — that the c=0.6 drop in pc1_complex is driven primarily by the cross-term c·E[Re(S_j(F15)·conj(S_k(χ₃)) + S_k(F15)·conj(S_j(χ₃)))], because that term is misaligned with the leading eigenvector of M_base and therefore spreads variance into subdominant modes — remains untested. The reproduction of the r67 summary statistics (pc1_complex(0)=0.9405 → pc1_complex(0.6)=0.9094, with trace rising from 36.2 to 44.4) is fully consistent with two non-exclusive mechanisms: (i) inflation of the trace by c²·tr(M_pert) (which would not change pc1 if M_pert were aligned with the leading eigenvector of M_base, and would reduce pc1 if it were not), and (ii) misalignment introduced by the linear c·M_cross term. Distinguishing these requires the eigenvector-alignment analysis specified in step 6, which in turn requires coefficient-level S_k computations that I was unable to produce. Future work should (a) record F15's defining coefficients explicitly in the workspace memory, and (b) pre-compute and persist the modular-form coefficient vector for N=10⁶ as a reusable artifact so that any decomposition-style analysis can proceed without re-invoking PARI.
+</discussion> <proposed-next-hypotheses>
+1. The c²·M_pert term inflates the trace but is approximately diagonal in the eigenbasis of M_base (high cosine similarity of leading eigenvectors), so it alone preserves pc1_complex; the observed drop in pc1_complex is therefore driven almost entirely by the linear c·M_cross term, whose leading eigenvector has |cos θ| < 0.7 with the leading eigenvector of M_base.
+2. At the empirical violator threshold c* (where pc1_complex first crosses the GRH-true critical level), the energy of M_cross in the subspace orthogonal to the leading eigenvector of M_base equals the energy of M_base itself in that subspace — i.e., the threshold is set by a balance condition c*·||P_⊥ M_cross P_⊥|| ≈ ||P_⊥ M_base P_⊥||.
+</proposed-next-hypotheses> <artifacts>
+</artifacts>
+</output>

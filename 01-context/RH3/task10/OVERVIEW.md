@@ -1,0 +1,28 @@
+## Overview **CONCLUSION** The zeta function does NOT exhibit a statistically significant power concentration reversal at N=10⁷. While the fraction of power in high omega classes (k≥4) decreased by 16.0% from N=10⁶ to N=10⁷ (0.3313 to 0.2784), this change is not statistically significant (one-sided t-test: p=0.258). The Shannon entropy actually increased by 4.8% (opposite to the hypothesis), though also not significantly (p=0.341). This contrasts with the Liouville function, which showed a clear power concentration reversal at N=10⁷ in report r54, indicating that the reversal phenomenon is function-specific rather than universal. **DETAILED RESULTS** Power distribution analysis at N=10⁶ (top 5 peaks):
+- Mean fraction in k≥4: 0.3313 ± 0.1309
+- Mean Shannon entropy: 1.6801 ± 0.1520
+- Peak locations (t): [1948000, 1828000, 1894000, 1734000, 1787000]
+- Individual k≥4 fractions: [0.4199, 0.2727, 0.2670, 0.5106, 0.1865]
+- Individual entropies: [1.7787, 1.6660, 1.5880, 1.8763, 1.4917] Power distribution analysis at N=10⁷ (top 5 peaks):
+- Mean fraction in k≥4: 0.2784 ± 0.1149
+- Mean Shannon entropy: 1.7612 ± 0.0949
+- Peak locations (t): [18484848, 12323232, 10909091, 16161616, 11919192]
+- Individual k≥4 fractions: [0.4155, 0.3731, 0.2557, 0.2103, 0.1372]
+- Individual entropies: [1.6367, 1.8503, 1.8125, 1.8233, 1.6833] Statistical comparison:
+1. High omega power (k≥4): - Absolute change: -0.0530 - Relative change: -16.0% - One-sided t-test (H₁: mean(N=10⁶) > mean(N=10⁷)): t=0.6801, p=0.258 - Cohen's d: 0.430 (small effect) - Conclusion: NOT significant at α=0.05 or α=0.10 2. Shannon entropy: - Absolute change: +0.0811 - Relative change: +4.8% - Two-sided t-test: t=-1.0123, p=0.341 - Cohen's d: -0.640 (medium effect, in opposite direction) - Conclusion: NOT significant, and increase contradicts reversal hypothesis Power redistribution by omega class ranges:
+- Low omega (k=0,1): increased from 0.1101 to 0.2507 (+127.7%)
+- Mid omega (k=2,3): decreased from 0.5585 to 0.4709 (-15.7%)
+- High omega (k≥4): decreased from 0.3313 to 0.2784 (-16.0%) The redistribution pattern shows power shifting from mid- and high-omega classes back to low-omega classes at N=10⁷, but the high variance in individual peak behavior (particularly at N=10⁷, where k≥4 fractions range from 0.137 to 0.416) prevents this trend from reaching statistical significance. Correlation analysis:
+- At N=10⁶: weak positive correlations between peak height and both k≥4 fraction (r=0.38) and entropy (r=0.43)
+- At N=10⁷: strong positive correlation between peak height and k≥4 fraction (r=0.88), but negative correlation with entropy (r=-0.52)
+- The emergence of strong structure-height correlation at N=10⁷ suggests qualitative changes in peak formation mechanisms **DISCRETIONARY DECISIONS** - Used Kahan compensated summation for computing Dirichlet polynomial sums and omega-class decompositions to ensure high numerical precision
+- Set significance threshold α=0.05 for primary hypothesis tests
+- Applied one-sided t-test for k≥4 fraction (testing for decrease) and two-sided t-test for entropy (no directional prior)
+- Used unbiased sample standard deviation (ddof=1) for all variance calculations
+- Defined "high omega classes" as k≥4, following the definition established in report r54
+- Computed Cohen's d using pooled standard deviation for effect size quantification
+- Used the top 5 peaks from each N value as specified in the research objective
+- Shannon entropy computed as H = -Σ pₖ log(pₖ) using natural logarithm
+- Pre-computed omega values loaded from artifacts omega_values_N1e6.pkl and omega_values_N1e7.pkl (external sources)
+- Peak locations for N=10⁷ loaded from N10^7_detailed_results.csv (external source, computationally expensive to reproduce)
+- Peak locations and heights for N=10⁶ loaded from detailed_results_N1e6.pkl (external source)

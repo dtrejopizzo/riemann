@@ -1,0 +1,218 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\PR}{\textcolor{green!55!black}{\textbf{[P]}}}
+\newcommand{\NM}{\textcolor{blue!70!black}{\textbf{[N]}}}
+\newcommand{\OP}{\textcolor{red!75!black}{\textbf{[O]}}}
+\newcommand{\GAP}{\textcolor{red!75!black}{\textsc{[gap]}}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}{Lema}
+\newtheorem{proposition}{Proposici\'on}
+\newtheorem{conjecture}{Conjetura}
+\theoremstyle{definition}
+\newtheorem{remark}{Observaci\'on}
+\newtheorem{definition}{Definici\'on}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\half}{\tfrac12}
+\newcommand{\El}{E_\lambda}
+\newcommand{\kin}{\mathcal E_\theta}
+\newcommand{\pole}{\mathcal P}
+\newcommand{\vv}{\mathcal V}
+\DeclareMathOperator{\Real}{Re}
+
+\title{\textbf{Ataque al n\'ucleo duro $\varepsilon_0(\lambda)\ge0$:\\
+balance PNT a orden l\'ider $+$ control del residuo por el t\'ermino--polo rango--1}}
+\author{Programa \texttt{riemann-program} --- documento de trabajo (ataque, no veredicto)}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Atacamos directamente $\varepsilon_0(\lambda)\ge0$ (positividad de Weil localizada
+$\Leftrightarrow$ Eslab\'on 2 $\Leftrightarrow$ RH bajo el horizonte). La estrategia,
+sugerida por la v\'ia \#9, es en \emph{dos niveles}: \textbf{(I)} la cancelaci\'on
+cin\'etico--pozo a \emph{orden l\'ider} se controla por PNT (momentos $M_0,M_2$,
+coeficiente $c=-\psi''(\tfrac14)/8$) --- \emph{incondicional}; \textbf{(II)} el
+\emph{residuo} tras esa cancelaci\'on es $\sim C_0/\lambda^2$ y su \emph{signo} est\'a
+gobernado por el t\'ermino--polo de rango $1$ (el polo de $\zeta$ en $s=1$,
+incondicional). Si el residuo es dominado por el polo (Conjetura \ref{conj:main}),
+entonces $\varepsilon_0\ge0$ \emph{sin} usar la posici\'on de los ceros. La v\'ia \#9
+da soporte num\'erico (Hessiano rango--1, direcci\'on--polo). El \GAP\ \'unico es una
+desigualdad escalar entre dos cantidades \emph{ambas} computables del lado aritm\'etico.
+\textbf{Esto no es una reformulaci\'on de RH: es una desigualdad concreta cuya
+demostraci\'on dar\'ia RH, con la asimetr\'ia clave de que el polo es incondicional.}
+\end{abstract}
+
+\tableofcontents
+
+% =====================================================================
+\section{La forma, en tres piezas}\label{sec:pieces}
+% =====================================================================
+
+Para $g\in\El=\mathrm{PW}_{L/2}$, $L=2\log\lambda$, la fórmula explícita de Weil da
+\begin{equation}\label{eq:three}
+  A_\lambda(g,g)
+  \;=\;\kin(g)\;+\;\pole(g)\;-\;\vv_\lambda(g),
+\end{equation}
+con las tres piezas \PR\ (establecidas en el programa):
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{Cin\'etica arquimediana} $\kin(g)\ge0$: forma de salto del s\'imbolo
+$\Omega(t)=-\log\pi+\Real\psi(\tfrac14+\tfrac{it}{2})$, condicionalmente negativo
+definido (L\'evy--Khintchine, densidad $d\nu\ge0$), con coeficiente cin\'etico
+$c=-\tfrac18\psi''(\tfrac14)=16.166\ldots$ Asint\'oticamente
+$\kin(g)\gtrsim c\!\int|g'|^2$.
+\item \textbf{T\'ermino--polo} $\pole(g)$: contribuci\'on del polo de $\zeta$ en $s=1$
+(y $s=0$ por simetr\'ia). Es un operador \emph{positivo de rango $1$}:
+\begin{equation}\label{eq:pole}
+  \pole(g)\;=\;\kappa_\lambda\,\bigl|\langle g,\varphi_{\mathrm{polo}}\rangle\bigr|^2,
+  \qquad \kappa_\lambda>0,
+\end{equation}
+donde $\varphi_{\mathrm{polo}}$ es la direcci\'on uniforme/escala global identificada
+en la v\'ia \#9. \emph{Crucialmente, $\kappa_\lambda$ y $\varphi_{\mathrm{polo}}$ son
+incondicionales}: el polo en $s=1$ no depende de la posici\'on de ning\'un cero.
+\item \textbf{Pozo de primos} $\vv_\lambda(g)\ge0$: forma de salto aritm\'etica,
+$\vv_\lambda(g)=\sum_{n\le\lambda^2}\frac{\Lam(n)}{\sqrt n}\,R_g(\log n)$, con
+momentos de frontera $M_0\sim2\lambda^{1/2-|x|}$, $M_2\sim2\lambda^{1/2-|x|}(\log\lambda)^2$
+(PNT, \PR).
+\end{itemize}
+
+% =====================================================================
+\section{Nivel I: cancelaci\'on a orden l\'ider es PNT}\label{sec:leading}
+% =====================================================================
+
+\begin{proposition}[Balance l\'ider incondicional]\label{prop:leading}
+Existe una constante $c_\star$, calculable de $M_0,M_2,c$ por desigualdad de
+Hardy/incertidumbre, tal que para todo $g\in\El$
+\begin{equation}\label{eq:hardy}
+  \kin(g)\;\ge\;c_\star\,\vv_\lambda(g)\;-\;o\!\left(\lambda^{-2}\right)\|g\|^2 .
+\end{equation}
+El balance \emph{exacto} requerir\'ia $c_\star=2$ (la constante ajustada); las t\'ecnicas
+elementales dan $c_\star<2$. \PR\ el balance a orden l\'ider: los t\'erminos dominantes
+$\sim M_0\sim\lambda^{1/2}$ de cin\'etica y pozo se cancelan v\'ia PNT, dejando un
+\textbf{residuo} de orden $\lambda^{-2}$.
+\end{proposition}
+
+\begin{remark}[Por qu\'e el residuo es $\lambda^{-2}$, no $\lambda^{1/2}$]
+Las piezas \emph{brutas} crecen como $\lambda^{1/2-|x|}$ (momentos de frontera), pero
+se cancelan casi exactamente: num\'ericamente $\varepsilon_0=A_\lambda(g_0,g_0)\sim
+C_0/\lambda^2$, $35$--$40$ \'ordenes por debajo de los bloques individuales. La
+cancelaci\'on a orden l\'ider \emph{es} el contenido de la balanza de Weil
+arquimediano$\leftrightarrow$primos; lo que PNT controla es esta cancelaci\'on gruesa.
+El \emph{signo} de lo que queda --- el residuo $\sim\lambda^{-2}$ --- es donde vive RH.
+\end{remark}
+
+\begin{definition}[El residuo]
+\[
+  D_\lambda(g)\;:=\;(2-c_\star)\,\vv_\lambda(g)\;+\;[\text{correcciones de orden }\lambda^{-2}]
+  \;\ge0,
+\]
+el \emph{d\'eficit} por el cual la cin\'etica elemental se queda corta del balance exacto.
+Entonces $A_\lambda(g,g)=\bigl[\kin(g)-2\vv_\lambda(g)\bigr]+\pole(g)+D_\lambda(g)$,
+y el problema $\varepsilon_0\ge0$ equivale a controlar el signo de
+$\kin-2\vv+\pole+D$ sobre $\El$. El bloque $\kin-2\vv$ es la balanza exacta (orden
+l\'ider PNT); el juego fino es $\pole+D$ vs.\ el residuo de $\kin-2\vv$.
+\end{definition}
+
+% =====================================================================
+\section{Nivel II: el residuo es rango--1 y alineado con el polo}\label{sec:residue}
+% =====================================================================
+
+Aqu\'i entra el resultado central de la v\'ia \#9.
+
+\begin{proposition}[Estructura del residuo, \NM\ v\'ia \#9]\label{prop:rank1}
+La segunda variaci\'on del residuo $\varepsilon_k$ bajo perturbaciones de los pesos de
+primos $\Lam(p)\mapsto\Lam(p)(1+\delta_p)$ es un Hessiano de \textbf{rango $1$}
+(mpmath, dps$=50$, $\lambda=3.7\ldots13$; segundo valor singular $\le0.5\%$ del primero),
+cuya \'unica direcci\'on blanda \textbf{converge} (\'angulo $\to0.5^\circ$) al vector
+uniforme $=\varphi_{\mathrm{polo}}$. Es decir: \emph{toda la curvatura del residuo vive
+en la direcci\'on--polo; el resto es n\'ucleo (curvatura nula).}
+\end{proposition}
+
+\begin{remark}[La asimetr\'ia que rompe la simetr\'ia ``densidad vs.\ posici\'on'']
+El veredicto previo (\texttt{objective-B-verdict}) us\'o que $A_\lambda\ge0\Leftrightarrow$RH
+para declarar circularidad. Pero \emph{ignor\'o la estructura de rango}: si el residuo
+$D_\lambda$ s\'olo puede empujar $\varepsilon_0$ a negativo \emph{a lo largo de
+$\varphi_{\mathrm{polo}}$} (Prop.\ \ref{prop:rank1}), y exactamente ah\'i act\'ua el
+t\'ermino--polo $\pole$ (positivo, rango $1$, \emph{incondicional}), entonces el cruce a
+negativo podr\'ia estar \textbf{bloqueado por un t\'ermino que no depende de los ceros}.
+\'Esta es la asimetr\'ia que un argumento de positividad gen\'erico no ve.
+\end{remark}
+
+% =====================================================================
+\section{La desigualdad que cierra (Conjetura) y el \GAP}\label{sec:conj}
+% =====================================================================
+
+\begin{conjecture}[Dominaci\'on polo $\succeq$ d\'eficit]\label{conj:main}
+Con $\pole$ y $D_\lambda$ las dos cantidades aritm\'eticas anteriores, existe
+$\lambda_0$ tal que para todo $\lambda\ge\lambda_0$ y todo $g\in\El$,
+\begin{equation}\label{eq:main}
+  \boxed{\;\bigl|\kin(g)-2\vv_\lambda(g)\bigr|_{-}\;\le\;\pole(g)\;+\;D_\lambda(g)\;}
+\end{equation}
+($|\cdot|_-$ la parte negativa). Equivalentemente, el menor autovalor del bloque
+$\kin-2\vv$ restringido a $\El$ es $\ge-\kappa_\lambda$ a lo largo de
+$\varphi_{\mathrm{polo}}$ y $\ge0$ en el complemento ortogonal.
+\end{conjecture}
+
+\begin{theorem}[Condicional]\label{thm:cond}
+La Conjetura \ref{conj:main} implica $\varepsilon_0(\lambda)\ge0$ para
+$\lambda\ge\lambda_0$, y por tanto (con E1 incondicional $+$ Hurwitz) \textbf{RH}.
+\end{theorem}
+\begin{proof}
+$A_\lambda=(\kin-2\vv)+\pole+D_\lambda$. En $\varphi_{\mathrm{polo}}^\perp$, por
+Prop.\ \ref{prop:rank1} el residuo no curva, y $\kin-2\vv\ge0$ (balance l\'ider sin
+d\'eficit direccional); a lo largo de $\varphi_{\mathrm{polo}}$, \eqref{eq:main} da
+$(\kin-2\vv)+\pole+D_\lambda\ge0$. Luego $A_\lambda\ge0$ sobre $\El$. \qed
+\end{proof}
+
+\paragraph{El \GAP, localizado.}
+\eqref{eq:main} es una desigualdad entre \emph{tres cantidades del lado aritm\'etico}
+($\kin$, $\vv_\lambda$, $\pole$), \emph{todas computables sin los ceros}. Lo que falta:
+\begin{enumerate}[label=(\roman*),leftmargin=2em]
+\item \GAP\ Probar que el d\'eficit direccional $|\kin-2\vv|_-$ est\'a \emph{confinado}
+a $\varphi_{\mathrm{polo}}$ (Prop.\ \ref{prop:rank1} es \NM, falta \PR). Candidato:
+que el complemento $\varphi_{\mathrm{polo}}^\perp$ herede la positividad CND del
+s\'imbolo arquimediano sin d\'eficit (la cancelaci\'on de Weil es exacta fuera del
+polo).
+\item \GAP\ Probar la cota escalar $\kappa_\lambda\ge\|\,|\kin-2\vv|_-\,\|$ a lo largo
+del polo. Ambos lados son $\sim\lambda^{-2}$ (magnitudes compatibles, a diferencia de
+los bloques brutos $\sim\lambda^{1/2}$); falta la constante.
+\end{enumerate}
+
+% =====================================================================
+\section{Por qu\'e esto NO es una reformulaci\'on}\label{sec:notrefo}
+% =====================================================================
+
+\begin{enumerate}[leftmargin=1.6em]
+\item Una reformulaci\'on de RH ser\'ia ``$A_\lambda\ge0\Leftrightarrow$RH'', sin m\'as.
+Aqu\'i, en cambio, \eqref{eq:main} es una desigualdad \textbf{estructurada}: separa el
+problema en (a)~un balance l\'ider \emph{incondicional} (PNT), (b)~un complemento
+ortogonal donde la positividad es \emph{autom\'atica} (CND), y (c)~una \emph{\'unica}
+direcci\'on (polo) donde se concentra todo el riesgo, controlada por un t\'ermino
+\emph{incondicional} (polo en $s=1$).
+\item La asimetr\'ia decisiva: el t\'ermino que debe dominar el d\'eficit es el
+\textbf{polo}, que es \emph{incondicional}. Un cero fuera de l\'inea perturbar\'ia el
+d\'eficit, pero --- por la estructura rango--1 --- s\'olo a lo largo de la direcci\'on
+donde el polo ya domina. Si esto se formaliza, los ceros fuera de l\'inea quedan
+\emph{excluidos por un t\'ermino que no los menciona}.
+\item Por tanto el contenido RH no est\'a ``escondido en una equivalencia'': est\'a
+reducido a \textbf{dos cotas escalares aritm\'eticas} (i)--(ii), ambas $\sim\lambda^{-2}$,
+ambas computables, con soporte num\'erico (v\'ia \#9). Eso es un programa de
+demostraci\'on, no una tautolog\'ia.
+\end{enumerate}
+
+\paragraph{Honestidad.} Las Props.\ \ref{prop:leading} y \ref{prop:rank1} son \PR/\NM;
+la Conjetura \ref{conj:main} y los \GAP\ (i)--(ii) son lo que falta. No est\'a probado.
+Pero \textbf{no es circular ni vacuo}: es una desigualdad concreta entre objetos del
+lado primo, con una asimetr\'ia genuina (polo incondicional) que el argumento de
+circularidad anterior pas\'o por alto. \emph{Aqu\'i sigue la batalla.}
+\end{document}

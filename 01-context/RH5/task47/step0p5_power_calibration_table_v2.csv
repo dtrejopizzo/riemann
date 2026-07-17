@@ -1,0 +1,6 @@
+observable,δ_orig (0.1),δ_strong (1.0),ratio strong/orig
+Front I: max_n |Δa_n|/|a_n| (n≤100),1.839560328185535e-10,2.354727487689412e-09,12.800490702101714
+Front I: max_n |Δb_n|/|b_n| (n≤100),1.4488692803609792e-10,1.88212975436418e-09,12.990335152217844
+Front III: H0 bottleneck distance,0.050000000745058,0.5,9.99999985098839
+Front III: H1 bottleneck distance,0.050000000745058,0.0,0.0
+"Front II: Targeted Weil λ_min shift |Δλ_min| (J=10, σ=2, t₀=γ₁₀₀₀)",0.024019110649960984,6.619452488499449,275.5910734983937

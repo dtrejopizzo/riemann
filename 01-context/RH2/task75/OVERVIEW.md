@@ -1,0 +1,37 @@
+## Overview # ANALYSIS RESULTS: Vector Sum Model for Composite Coherence ## Main Finding **The hypothesis is PARTIALLY CONFIRMED with significant limitations.** A simple vector sum model using the theoretical adjacent-fiber law (|S_{k+1}|/|S_k| ≈ C·loglog(N)/k) and empirically measured phases can predict the composite coherence R_comp for ζ(s) with HIGH ACCURACY (+0.4% error), but it performs POORLY for the perturbed function F_k2 (+40.1% error in R_comp, -25.0% error in |D|). ## Quantitative Evidence ### Measured Data (ζ at t*=2818.99, N=10^5):
+- S_1 = 3.634840 + 0.977057i (|S_1| = 3.763868, arg = 15.046°)
+- S_2 = 3.317886 + 2.298914i (|S_2| = 4.036505, arg = 34.718°)
+- S_3 = 1.916857 + 2.267411i (|S_3| = 2.969090, arg = 49.789°)
+- S_4 = 1.045059 + 0.433579i (|S_4| = 1.131432, arg = 22.533°)
+- S_5 = -0.093519 + 0.324888i (|S_5| = 0.338080, arg = 106.059°)
+- Total: D_ζ = 9.821122 + 6.301849i, |D_ζ| = 11.669093
+- R_comp (measured) = 0.963094 ### Model Parameters:
+**Magnitude Scaling Law:** |S_{k+1}|/|S_k| = C·loglog(N)/k
+- Fitted constant: **C = 0.472018**
+- loglog(N=10^5) = 2.443470
+- R² = 0.9357, Pearson r = 0.9673, p = 0.033 (statistically significant) **Scaling Law Fit Quality:**
+- k=1→2: Predicted ratio 1.153, Measured 1.072 (error: -7.6%)
+- k=2→3: Predicted ratio 0.577, Measured 0.736 (error: +21.6%)
+- k=3→4: Predicted ratio 0.384, Measured 0.381 (error: -0.9%)
+- k=4→5: Predicted ratio 0.288, Measured 0.299 (error: +3.5%) **Phase Rotations (empirically measured):**
+- Δθ_1 = 0.343 rad (19.7°)
+- Δθ_2 = 0.263 rad (15.1°)
+- Δθ_3 = -0.476 rad (-27.3°)
+- Δθ_4 = 1.458 rad (83.5°)
+- Mean = 0.397 rad (22.8°), Std Dev = 0.691 rad (39.6°) ### Model Performance: **For ζ(s):**
+- Individual |S_k| predictions: MAPE = 11.22%, RMSE = 0.261 * k=2: +7.6% error, k=3: -15.7% error, k=4: -14.9% error, k=5: -17.9% error
+- Total sum |D_ζ|: Predicted 11.346, Measured 11.669 (error: **-2.8%**)
+- **R_comp: Predicted 0.967325, Measured 0.963094 (error: +0.4%)** **For F_k2 (a_n = -1 for ω(n)=2):**
+- Key observation: Perturbation only flips S_2 phase by 180°; all magnitudes and other phases identical to ζ
+- Measured F_k2: |D| = 3.612, R_comp = 0.101
+- Predicted F_k2: |D| = 2.708 (error: **-25.0%**), R_comp = 0.141 (error: **+40.1%**) ### Critical Findings: 1. **The theoretical scaling law C·loglog(N)/k is only moderately accurate** (R²=0.94), with errors ranging from -7.6% to +21.6% for individual k-transitions. The worst fit occurs at k=2→3 (+21.6% error). 2. **Phase rotations are highly irregular** (std dev = 39.6°), NOT following a simple law. The model requires empirically measured phase differences for each k, making it non-predictive for new systems. 3. **R_comp for ζ is remarkably robust** to magnitude errors: despite 11.2% MAPE in individual |S_k|, R_comp is predicted to within 0.4%. This suggests R_comp is dominated by phase alignment rather than precise magnitudes. 4. **The model fails for F_k2** because magnitude errors compound when vectors sum destructively. The S_2 flip causes the k≥2 vectors to partially cancel, magnifying the impact of the ~16% under-prediction in |S_3|, |S_4|, |S_5|. 5. **The perturbation F_k2 acts as expected theoretically:** Only S_2 changes (phase flips 180°), all other vectors remain identical in magnitude and phase. This validates that ω-class contributions are structurally independent for small perturbations. ## Statistical Assessment - **Null hypothesis test (scaling law):** The fitted C·loglog(N)/k model correlates significantly with measured ratios (r=0.967, p=0.033), rejecting the hypothesis that ratios are random.
+- **Prediction accuracy:** For ζ(s), the model achieves ~97% accuracy in R_comp prediction (absolute error 0.004). For F_k2, accuracy drops to ~60% (absolute error 0.040). ## Conclusion The simple vector sum model **successfully predicts R_comp for ζ(s) with <1% error**, demonstrating that composite coherence can be modeled using the magnitude scaling law and empirical phases. However, **the model is NOT truly predictive**: it requires empirically measured phase rotations (which vary by ±40°) and struggles with perturbed functions where errors compound. The theoretical adjacent-fiber law C·loglog(N)/k provides a reasonable first approximation (R²=0.94) but misses important structure, particularly at k=2→3. The model's success for ζ is partly accidental—R_comp is inherently robust to magnitude errors when phases are known. --- ## Discretionary Analytical Decisions - **Significance threshold:** Used p < 0.05 for statistical significance in scaling law correlation test
+- **R_comp definition:** Computed as |Σ S_k| / Σ|S_k| for k=2-5 (composite classes only), excluding primes (k=1), following previous analysis conventions in r55 and r60
+- **Magnitude scaling law form:** Fitted C·loglog(N)/k following the theoretical prediction from r19; alternative models (e.g., power law, exponential) were not tested
+- **Phase modeling approach:** Used empirically measured Δθ_k rather than attempting to fit a parametric phase law, due to high variability (std dev 39.6°)
+- **Model for F_k2:** Applied the perturbation by flipping only S_2 phase by 180° while keeping model-predicted magnitudes for all k, based on the literal interpretation of the research objective
+- **Resonance peak location:** Used t* = 2818.99 as specified in the research objective, identified from r18
+- **Truncation depth:** N = 10^5 as specified in the research objective
+- **Kahan summation:** Mandatory protocol from dataset description to mitigate catastrophic cancellation errors in oscillatory sums
+- **ω-class range:** k=1 to 5 as specified in the research objective; higher-k contributions (k≥6) constitute <2% of terms and were excluded
+- **Least-squares fitting:** Used scipy.optimize.minimize_scalar with bounded search [0.1, 10.0] for C to avoid negative or extreme values 

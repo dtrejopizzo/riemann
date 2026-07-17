@@ -1,0 +1,42 @@
+## Overview <output>
+<conclusion>
+The non-multiplicative Davenport-Heilbronn L-function exhibits significantly stronger constructive interference at peaks (mean r = 3.792 ± 1.985) than all tested multiplicative functions, directly contradicting the hypothesis that non-multiplicativity would lead to weaker or negative r values.
+</conclusion> <methods>
+This analysis extended validated L_DH coefficients from N=10⁴ to N=10⁶ using the analytical formula a_n = ((1-iκ)/2)·χ(n) + ((1+iκ)/2)·χ̄(n) where χ is a primitive character mod 5 of order 4 and κ ≈ 0.284. The Dirichlet polynomial D_F(t; N) = Σ_{n=1}^N a_n/n^{1/2+it} was computed using Kahan compensated summation for numerical precision, with ω-class decompositions based on pre-computed Ω(n) values (omega_values_N1e6.pkl). Peak finding employed a two-step strategy: (1) coarse grid evaluation at 1000 points in t ∈ [10⁶, 2·10⁶], (2) local refinement using scipy.optimize.minimize_scalar with bounded search windows (±2 grid spacings). The top 100 candidate peaks from the coarse grid were refined, and the top 50 highest-magnitude peaks were selected for analysis. At each peak, the canonical inter-class energy ratio r = Σ_{j≠k} Re[S_j S̄_k] / Σ_k|S_k|² was computed, where S_k are ω-class partial sums. Statistical comparison used 95% confidence intervals and Z-scores to compare L_DH against multiplicative functions (zeta, f_rand, L_mobius) from summary_r_at_peaks_N1e6.csv.
+</methods> <results>
+The analysis identified 50 high-magnitude peaks in L_DH with mean |D_F(t)| = 9.88. The inter-class energy ratio statistics at these peaks are: mean r = 3.792, median r = 3.749, standard deviation = 1.985, range = [0.099, 7.369]. All 50 peaks showed positive r values. Statistical comparison to multiplicative functions revealed highly significant differences: L_DH vs zeta (Δr = +1.335, Z = 4.75, p < 0.001), L_DH vs f_rand (Δr = +1.022, Z = 3.64, p < 0.001), L_DH vs L_mobius (Δr = +2.139, Z = 7.62, p < 0.001). The highest peak at t = 1,550,686 exhibited |D_F(t)| = 23.66 with r = 7.28, where |Σ S_k|² = 559.78 greatly exceeded Σ|S_k|² = 67.60, indicating extremely strong constructive interference. The dominant ω-classes at peaks were k ∈ {2,3,4,5,6}, collectively contributing 80-90% of total power.
+</results> <challenges>
+The primary computational challenge was the evaluation time for the Dirichlet polynomial at N=10⁶: initial estimates suggested 2000 grid points would require excessive computation time, necessitating reduction to 1000 points for the coarse grid. Vectorization over n was implemented, but evaluation still required ~58 seconds for 1000 points. Local refinement of 100 candidates added another ~2 minutes. The total analysis remained within computational limits (~3-4 minutes total), but further scaling to N=10⁷ with this approach would be infeasible without significant optimization (e.g., FFT-based methods or GPU acceleration). No data quality issues were encountered; the validated L_DH coefficients extended cleanly to N=10⁶, and numerical precision using Kahan summation was verified to machine precision (errors < 10⁻¹⁵).
+</challenges> <discussion>
+This result fundamentally challenges the assumption that strong constructive interference at Dirichlet polynomial peaks is a signature of multiplicativity. The L_DH function, which is explicitly non-multiplicative (as a linear combination of two characters), exhibits even stronger ω-class alignment than the Riemann zeta function or random multiplicative functions. This suggests that the character-based structure—specifically, the periodic pattern mod 5 combined with 80% coefficient density—creates phase relationships that enhance constructive interference beyond what multiplicativity alone achieves. The mechanism may involve the deterministic character values at primes (χ(p) ∈ {i, -i, -1, 1}) creating systematic phase alignments that persist through higher ω-classes more effectively than the random signs in multiplicative functions like L_mobius or f_rand. Alternatively, the formula a_n = ((1-iκ)/2)·χ(n) + ((1+iκ)/2)·χ̄(n) may introduce cross-term correlations that amplify inter-class coherence. These findings have implications for "Frente 1 (Conditional Correlation)" analysis: constructive interference patterns appear to depend more on coefficient arithmetic and character structure than on multiplicativity per se. The hypothesis that non-multiplicativity would disrupt ω-class alignment is rejected; L_DH demonstrates that alternative structural properties can drive equally strong—or stronger—interference effects.
+</discussion> <proposed-next-hypotheses>
+1. The character periodicity mod 5 in L_DH creates deterministic phase relationships between ω-classes that enhance constructive interference: testing with characters of different moduli (e.g., mod 3, mod 7) would reveal whether higher-order character structure systematically amplifies r values compared to multiplicative functions. 2. The coefficient density (80% non-zero for L_DH vs 100% for zeta) is a critical parameter: constructing hybrid test functions with controlled sparsity patterns while preserving character-like phase structure would isolate the relative contributions of density versus phase coherence to the r metric at peaks.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>a_DH_coefficients_N1e6.pkl</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Dirichlet coefficients a_n for the Davenport-Heilbronn L-function extended to N=10⁶. Computed using the validated analytical formula a_n = ((1-iκ)/2)·χ(n) + ((1+iκ)/2)·χ̄(n) with κ ≈ 0.284 and primitive character χ mod 5 of order 4. Stored as a dictionary containing the complex128 coefficient array, formula metadata, and computational notes. This artifact enables future L_DH analyses at N=10⁶ without recomputation.</artifact-description>
+</artifact>
+<artifact>
+<file-name>summary_r_at_peaks_N1e6_with_LDH.csv</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Extended summary table combining the canonical r statistics for L_DH with the existing multiplicative function results (zeta, f_rand, L_mobius) at N=10⁶. Contains mean, median, standard deviation, min, max, and mean peak height for each function. This artifact provides the primary comparative evidence that L_DH exhibits stronger constructive interference (mean r = 3.79) than any tested multiplicative function.</artifact-description>
+</artifact>
+<artifact>
+<file-name>L_DH_peak_details_N1e6.csv</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Detailed results for all 50 L_DH peaks analyzed, containing the refined t location, peak magnitude |D_F(t)|, and canonical r value for each peak. This artifact documents the complete distribution of r values and enables verification of statistical analyses or investigation of individual peak structures.</artifact-description>
+</artifact>
+</artifacts>
+</output> DISCRETIONARY DECISIONS:
+• Used 1000 coarse grid points instead of the documented 2000 for N=10⁶ due to computational time constraints (~58 seconds vs estimated ~120 seconds)
+• Extended validated L_DH coefficients from N=10⁴ to N=10⁶ using the analytical formula rather than using pre-stored coefficients
+• Selected top 100 candidate peaks for local refinement, then chose top 50 by refined magnitude (could have used different cutoffs)
+• Used scipy.optimize.minimize_scalar with 'bounded' method for peak refinement with search window of ±2 grid spacings
+• Applied 95% confidence intervals for statistical significance testing (α = 0.05)
+• Used sample standard deviation with Bessel correction (ddof=1) for all standard deviation calculations
+• Employed two-sided Z-tests for comparing L_DH mean to multiplicative function means, treating latter as population parameters
+• Used 20 bins for histogram visualization of r distribution
+• Pre-computed Ω(n) values were loaded from omega_values_N1e6.pkl (external artifact from previous analysis)
+• Multiplicative function comparison data from summary_r_at_peaks_N1e6.csv (external artifact from previous analysis)
+• Validated L_DH coefficients for N=10⁴ from a_DH_coefficients_N10000_validated.pkl (external artifact) 

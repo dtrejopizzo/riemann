@@ -1,0 +1,22 @@
+## Overview ## Answer The research hypothesis is **REJECTED**. The proposed mechanism does not explain the coexistence of peak stability and faster R_comp decay at resonance peaks for ζ(s). ### Key Quantitative Findings **1. Denominator Growth (α_den):**
+- Peak ordinates: median = -0.006075, mean = -0.004693
+- Random ordinates: median = +0.030651, mean = +0.005453
+- Mann-Whitney U test: p = 0.027 (one-sided, peaks < random)
+- **The denominator sqrt(Σ|S_k|²) grows SLOWER at peaks, not faster** **2. Numerator Growth (α_num):**
+- Peak ordinates: median = +0.001378, mean = +0.000997
+- Random ordinates: median = +0.023173, mean = +0.079576
+- Mann-Whitney U test: p = 0.038 (two-sided)
+- **The numerator |D(N)| is also more stable at peaks** **3. R_comp Growth:**
+- Peak ordinates: median = +0.007526
+- Random ordinates: median = +0.034756
+- Mann-Whitney U test: p = 0.515 (one-sided)
+- **No significant evidence that R_comp decays faster at peaks in the measured N range** The hypothesis predicted that the denominator would grow more rapidly at peaks, causing R_comp to decay faster. Instead, we find that both the numerator and denominator are more stable (lower growth exponents) at peak ordinates compared to random ordinates. The denominator actually grows significantly *slower* at peaks (p=0.027), directly contradicting the proposed mechanism. ### Discretionary Analytical Decisions - Used t ∈ [5000, 15000] as the search range for peaks (chosen to avoid very low t where numerical issues may occur and to be consistent with dataset description recommendations)
+- Selected N values {10^5, 2×10^5, 5×10^5, 10^6, 2×10^6} for computational feasibility while spanning two decades
+- Used N=100,000 for initial coarse peak-finding scan (balance between resolution and computational cost)
+- Set peak prominence threshold of 1.0 to identify significant resonances
+- Used minimum distance of 20 (in units of dt=10) from peaks for random ordinate selection
+- Set random seed to 42 for reproducibility of random ordinate selection
+- Applied Mann-Whitney U test (non-parametric) rather than t-test due to small sample sizes and dataset guidance preferring non-parametric methods
+- Used one-sided test for denominator comparison (directional hypothesis) and two-sided for numerator
+- Set significance threshold α = 0.05
+- Computed max_k=20 for S_k decomposition (covers the vast majority of integers up to N=2×10^6) 

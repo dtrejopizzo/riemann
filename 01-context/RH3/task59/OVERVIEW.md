@@ -1,0 +1,26 @@
+## Overview # COMPREHENSIVE ANALYSIS RESULTS: Inter-class Energy Ratio r at N=10⁵ ## Summary of Findings Using the metric formula r = (|D_F|² - Σ|S_k|²) / (2Σ|S_k|²) at N=10⁵ with t ∈ [10⁵, 2×10⁵], I computed the inter-class energy ratio at the top 200 peaks for five multiplicative functions. The results reveal **all functions exhibit positive mean r values**, indicating strong constructive interference between ω-classes: ### Quantitative Results (N=10⁵, k_max=6, 200 peaks per function) **1. Zeta Function:**
+- Mean r: 0.7018 ± 0.5405 (SD)
+- Median r: 0.7489
+- % with r < 0: 13.0%
+- Q4 (highest peaks) mean r: 0.9913 **2. L(s, χ₄) [Chi4]:**
+- Mean r: 0.7175 ± 0.4103
+- Median r: 0.7665
+- % with r < 0: 4.5% **3. f_rand (seed=42):**
+- Mean r: 0.5415 ± 0.3396
+- Median r: 0.4979
+- % with r < 0: 4.0% **4. L(s, μ) [Möbius]:**
+- Mean r: 0.8643 ± 0.5343
+- Median r: 0.9296
+- % with r < 0: 7.5% **5. Liouville Function:**
+- Mean r: 0.5727 ± 0.5042
+- Median r: 0.5853
+- % with r < 0: 13.0% ### Critical Discrepancy with r2 Baseline **The hypothesis is NOT supported by these results.** The analysis reveals a fundamental discrepancy: - **r2 reported** (N=10⁵): Zeta mean r = -0.043, Q4 mean r = -0.208 (negative values)
+- **Current analysis**: Zeta mean r = +0.7018, Q4 mean r = +0.9913 (positive values)
+- **Difference**: ~0.74 for overall mean, ~1.20 for Q4 mean This represents a **sign reversal** and order-of-magnitude difference from the r2 baseline. The hypothesis predicted that using the canonical metric would yield "near-zero or slightly negative" r values consistent with r2, but instead all functions show substantial positive r values (range: 0.54 to 0.86). ### Additional Findings 1. **Strong correlation between peak height and r**: Pearson r = 0.406 (p = 2.5×10⁻⁹), explaining quartile differences
+2. **Möbius function shows highest interference**: Mean r = 0.86, suggesting strongest ω-class constructive interference
+3. **Random function (f_rand) shows lowest r**: Mean r = 0.54, but still substantially positive
+4. **Formula ambiguity tested**: Both r = (|D_F|² - Σ|S_k|²) / Σ|S_k|² and r = (|D_F|² - Σ|S_k|²) / (2Σ|S_k|²) yield positive values (means of 1.40 and 0.70 for zeta, respectively) ### Interpretation The positive r values indicate that at N=10⁵ and this t range, **ω-class cross-terms contribute constructively** to |D_F|², with the cross-term energy exceeding the sum of individual ω-class energies by ~50-170% depending on the function. This is the opposite of the destructive interference pattern reported in r2. **Possible explanations for the discrepancy:**
+1. The current results may represent the "conflicting r3 results" referenced in the hypothesis, confirming that metric definition ambiguity exists
+2. Report r2 may have used undocumented computational parameters (different t range, peak selection criteria, or N value)
+3. A third canonical metric definition exists that was not tested
+4. The t range [10⁵, 2×10⁵] may exhibit fundamentally different interference patterns than the range used in r2 The analysis was computationally rigorous, using Kahan compensated summation, verified mathematical decompositions (D_F = Σ_k S_k within numerical error), and complete ω-class coverage (k_max = 6 captures >99.97% of values). The mathematical correctness was verified at multiple checkpoints. --- ## DISCRETIONARY ANALYTICAL DECISIONS • **t range selection**: Used t ∈ [10⁵, 2×10⁵] with 2,000 uniformly spaced points, matching the sampling density of the N=10⁴ dataset (2000 points over range of 10⁴) • **Metric formula with factor of 2**: Used r = (|D_F|² - Σ|S_k|²) / (2Σ|S_k|²) as the primary formula, based on the dataset description's validation warning, though the research objective stated the formula without the factor of 2. Also computed and reported results with r = (|D_F|² - Σ|S_k|²) / Σ|S_k|² for comparison • **k_max value**: Set k_max = 6 to capture all ω-classes present in the data (max ω(n) = 6 for n ≤ 10⁵), extending beyond the k_max = 5 used in the N=10⁴ dataset • **Peak detection parameters**: Used scipy.signal.find_peaks with prominence=1.0 and distance=5, matching the parameters documented for the N=10⁴ dataset • **Number of peaks analyzed**: Selected top 200 peaks by height for each function, consistent with the N=10⁴ dataset structure • **Random seed for f_rand**: Used seed=42 as specified in the research objective and dataset description • **Quartile analysis method**: Sorted peaks by height and divided into four equal groups of 50 peaks each for quartile comparison with r2 • **Statistical measures reported**: Chose mean, median, standard deviation (with Bessel's correction, ddof=1), and percentage of negative values as the primary statistical descriptors • **Numerical summation method**: Used Kahan compensated summation for all Dirichlet polynomial computations to minimize floating-point accumulation errors • **Computational verification**: Verified that D_F = Σ_k S_k within numerical tolerance (|difference| < 0.04) for all peaks to ensure ω-class decomposition validity 

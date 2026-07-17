@@ -1,0 +1,263 @@
+"""
+Generalized Localized Weil Detector: Q = M_zeros - M_arith for a family of L-functions.
+
+Supports:
+  - Riemann ζ (default; family="zeta")
+  - Dirichlet L(s, χ) for a primitive character χ of modulus q and parity a:
+      family="dirichlet", chi_values (list of length q with chi[n mod q]),
+      q_mod, parity (0 even, 1 odd)
+  - Davenport-Heilbronn L_DH (uses χ4 mod 5 arithmetic side; this is the test
+    case where Q acquires a large negative eigenvalue, since L_DH is NOT
+    a genuine L-function and its zeros don't satisfy the χ explicit formula):
+      family="dirichlet" with chi_values for χ4 mod 5, plus L_DH zeros.
+
+Explicit-formula form (Dirichlet, no polar):
+  Σ_ρ h(γ) = (1/2π) ∫ h(r) [ log(q/π) + Re ψ((1/2+a)/2 + ir/2) ] dr
+             − Σ_{n≥1} (χ(n)+χ̄(n)) Λ_vM(n)/√n · g_B(log n)
+
+For ζ (q=1, a=0, has_polar=True): adds 2 h(i/2) − g_B(0) log π in the polar piece;
+the 2 h(i/2) is exponentially suppressed for T0/σ ≳ 5 and is omitted.
+
+Implementation sign convention (matches the validated ζ engine):
+  M_arith = M_polar + M_arch − M_primes
+  Q       = M_zeros − M_arith
+"""
+import numpy as np
+from scipy.special import digamma, gammaln, roots_hermite
+from sympy import primerange
+
+
+def _phi_at_points(t_points, sigma, T0, J):
+    """Evaluate φ_k(t) = (1/√σ) h_k((t−T0)/σ) at given t. Returns (N, J)."""
+    t = np.asarray(t_points, dtype=np.float64)
+    u = (t - T0) / sigma
+    N = len(t)
+    h = np.zeros((J, N))
+    h[0] = np.pi ** (-0.25) * np.exp(-u * u / 2)
+    if J > 1:
+        h[1] = np.sqrt(2.0) * u * h[0]
+    for n in range(1, J - 1):
+        h[n + 1] = np.sqrt(2.0 / (n + 1)) * u * h[n] - np.sqrt(n / (n + 1)) * h[n - 1]
+    return (h / np.sqrt(sigma)).T
+
+
+def _g_at_u(u_array, sigma, T0, J, n_nodes=200):
+    """g_ij(u) = ∫ φ_i(r) φ_j(r) e^{−i u r} dr. Returns (len(u), J, J), complex."""
+    u_array = np.asarray(u_array, dtype=np.float64)
+    x, w = roots_hermite(n_nodes)  # stable for large n_nodes
+    H = np.zeros((J, n_nodes))
+    H[0] = 1.0
+    if J > 1:
+        H[1] = 2 * x
+    for n in range(1, J - 1):
+        H[n + 1] = 2 * x * H[n] - 2 * n * H[n - 1]
+    norm = np.array([0.5 * (k * np.log(2) + gammaln(k + 1)) for k in range(J)])
+    norm_ij = norm[:, None] + norm[None, :] + 0.5 * np.log(np.pi)
+    exp_neg_norm = np.exp(-norm_ij)
+    omega = sigma * u_array
+    phase = np.exp(-1j * omega[:, None] * x[None, :])
+    G_un = np.einsum("ik,mk,jk->mij", H, w * phase, H)
+    G = G_un * exp_neg_norm
+    phase_T0 = np.exp(-1j * u_array * T0)
+    return G * phase_T0[:, None, None]
+
+
+def compute_Q(
+    zeros,
+    T0,
+    sigma,
+    J,
+    family="zeta",
+    chi_values=None,
+    q_mod=1,
+    parity=0,
+    has_polar=None,
+    primes_cutoff=100_000,
+    n_nodes_quad=200,
+    include_negative_zeros=True,
+    zeros_complex=False,
+):
+    """Build the localized Weil quadratic form Q = M_zeros − M_arith.
+
+    Parameters
+    ----------
+    zeros : array_like
+        Imaginary parts γ of nontrivial zeros (positive, real-valued by
+        default). If `zeros_complex=True`, treat `zeros` as complex ρ values
+        and evaluate the basis at complex arguments (used for ζ_δ).
+    family : str
+        "zeta" → Riemann ζ (q=1, a=0, has_polar=True by default)
+        "dirichlet" → Dirichlet L(s, χ); must provide chi_values, q_mod, parity
+    chi_values : list[complex] or None
+        Length-q list with chi_values[n mod q] = χ(n). chi_values[0] should be 0.
+    q_mod : int
+        Modulus q (only used if family="dirichlet"; defaults to 1).
+    parity : int
+        0 if χ(−1)=+1 (even); 1 if χ(−1)=−1 (odd). Defaults to 0 for ζ.
+    has_polar : bool or None
+        If None, set automatically: True for "zeta", False otherwise.
+    primes_cutoff : int
+        Cutoff X for prime-power sum.
+    n_nodes_quad : int
+        Gauss-Hermite quadrature nodes.
+    include_negative_zeros : bool
+        Whether to include −γ alongside γ (true for self-dual functional eqs;
+        for complex χ, the zeros come in pairs only via combining χ + χ̄ —
+        which we do by setting weights to Re(χ(n)) which automatically pairs).
+        For Dirichlet L(s,χ), zeros of L(s,χ) and L(s,χ̄) together sit on
+        Re(s)=1/2 line with γ values symmetric around 0 only if χ is real.
+        Practically, for L(χ4 mod 5) we treat zeros of L(s,χ) alone and DON'T
+        include −γ (since γ-list comes from L(s,χ) Hardy Z and these aren't
+        symmetric). The trace-identity check uses the matching arithmetic side
+        with Re(χ(n)) weights.
+    zeros_complex : bool
+        If True, accept complex ρ = β + iγ values; basis evaluated at complex
+        argument. Used for ζ_δ deformations.
+
+    Returns
+    -------
+    Q : (J, J) ndarray (complex if zeros_complex else real)
+    components : dict of sub-matrices
+    """
+    if has_polar is None:
+        has_polar = (family == "zeta")
+
+    # ---- M_zeros ----
+    if zeros_complex:
+        rhos = np.asarray(zeros, dtype=np.complex128)
+        # φ_k evaluated at complex t: need both ψ_k(t) and ψ_k(t̄) etc.
+        # For Weil, the zero contribution uses h(γ) where γ = (ρ − 1/2)/i = -i(ρ-1/2)
+        # so γ is complex if ρ off-line. The basis is φ_k(γ). For the quadratic form
+        # M_zeros_ij = Σ_ρ φ_i(γ_ρ) φ_j(γ_ρ) where γ_ρ = −i(ρ − 1/2).
+        gammas = -1j * (rhos - 0.5)
+        # Evaluate the basis at complex argument.
+        t = gammas
+        u = (t - T0) / sigma
+        h = np.zeros((J, len(t)), dtype=np.complex128)
+        h[0] = np.pi ** (-0.25) * np.exp(-u * u / 2)
+        if J > 1:
+            h[1] = np.sqrt(2.0) * u * h[0]
+        for n in range(1, J - 1):
+            h[n + 1] = np.sqrt(2.0 / (n + 1)) * u * h[n] - np.sqrt(n / (n + 1)) * h[n - 1]
+        phi = (h / np.sqrt(sigma)).T
+        M_zeros = phi.T @ phi  # complex
+        if include_negative_zeros:
+            # add contributions from ρ̄ paired zeros (or −γ)
+            t2 = -gammas
+            u2 = (t2 - T0) / sigma
+            h2 = np.zeros((J, len(t2)), dtype=np.complex128)
+            h2[0] = np.pi ** (-0.25) * np.exp(-u2 * u2 / 2)
+            if J > 1:
+                h2[1] = np.sqrt(2.0) * u2 * h2[0]
+            for n in range(1, J - 1):
+                h2[n + 1] = np.sqrt(2.0 / (n + 1)) * u2 * h2[n] - np.sqrt(n / (n + 1)) * h2[n - 1]
+            phi2 = (h2 / np.sqrt(sigma)).T
+            M_zeros = M_zeros + phi2.T @ phi2
+    else:
+        zeros = np.asarray(zeros, dtype=np.float64)
+        if include_negative_zeros:
+            g_all = np.concatenate([zeros, -zeros])
+        else:
+            g_all = zeros
+        phi = _phi_at_points(g_all, sigma, T0, J)
+        M_zeros = phi.T @ phi
+
+    # ---- M_primes ----
+    # Coefficient at p^k:
+    #   ζ: 2 · log p / √(p^k)
+    #   Dirichlet χ: (χ(p^k) + χ̄(p^k)) · log p / √(p^k) = 2 Re χ(p^k) · log p / √(p^k)
+    # Code's existing convention uses "weights = log p / √(p^k)" for ζ; the factor "2"
+    # comes from include_negative_zeros mirroring on the formula's "− 2 Σ ..." side.
+    # We keep the same convention: weights = (coefficient/2) · log p / √(p^k).
+    # For ζ:    factor = 1
+    # For χ:    factor = Re χ(p^k)
+    primes_list = list(primerange(2, primes_cutoff + 1))
+    u_vals, weights = [], []
+    if family == "zeta":
+        weight_dtype = np.float64
+    else:
+        weight_dtype = np.complex128
+    for p in primes_list:
+        k = 1
+        pk = p
+        while pk <= primes_cutoff:
+            if family == "zeta":
+                fac = 1.0
+            elif family == "dirichlet":
+                fac = complex(chi_values[pk % q_mod])
+            else:
+                raise ValueError(f"Unknown family: {family}")
+            if fac != 0:
+                u_vals.append(k * np.log(p))
+                weights.append(fac * np.log(p) / np.sqrt(pk))
+            k += 1
+            pk *= p
+    u_vals = np.array(u_vals)
+    weights = np.array(weights, dtype=weight_dtype)
+
+    M_primes = np.zeros((J, J))
+    chunk = 2000
+    if family == "zeta":
+        # ζ: weights real, take Re g. (Equivalent to "2 Σ Λ Re g" convention.)
+        for i in range(0, len(u_vals), chunk):
+            u_chunk = u_vals[i : i + chunk]
+            w_chunk = weights[i : i + chunk]
+            g_chunk = _g_at_u(u_chunk, sigma, T0, J, n_nodes_quad)
+            M_primes += np.sum(w_chunk[:, None, None] * np.real(g_chunk), axis=0) / np.pi
+    else:
+        # Dirichlet (single-χ): M_primes = Re[ Σ χ(n) Λ(n)/√n · g_ij(log n) ] / π
+        for i in range(0, len(u_vals), chunk):
+            u_chunk = u_vals[i : i + chunk]
+            w_chunk = weights[i : i + chunk]
+            g_chunk = _g_at_u(u_chunk, sigma, T0, J, n_nodes_quad)
+            M_primes += np.real(np.sum(w_chunk[:, None, None] * g_chunk, axis=0)) / np.pi
+
+    # ---- M_arch ----
+    # ζ:    digamma(1/4 + i r / 2)
+    # chi:  digamma((1/2 + a)/2 + i r / 2)
+    x, w = roots_hermite(n_nodes_quad)
+    H = np.zeros((J, n_nodes_quad))
+    H[0] = 1.0
+    if J > 1:
+        H[1] = 2 * x
+    for n in range(1, J - 1):
+        H[n + 1] = 2 * x * H[n] - 2 * n * H[n - 1]
+    norm = np.array([0.5 * (k * np.log(2) + gammaln(k + 1)) for k in range(J)])
+    norm_ij = norm[:, None] + norm[None, :] + 0.5 * np.log(np.pi)
+    exp_neg_norm = np.exp(-norm_ij)
+    t_nodes = T0 + sigma * x
+    a_param = 0 if family == "zeta" else parity
+    arg = (0.5 + a_param) / 2.0 + 0.5j * t_nodes
+    psi_vals = np.real(digamma(arg))
+    diag = w * psi_vals
+    HP = H * diag[None, :]
+    M_arch = (HP @ H.T) * exp_neg_norm / (2 * np.pi)
+
+    # ---- M_polar ----
+    # ζ:        M_polar = −(log π)/(2π) · I    (i.e. constant inside integrand = −log π)
+    # Dirichlet: M_polar = +(log(q/π))/(2π) · I
+    if family == "zeta":
+        polar_const = -np.log(np.pi)
+    elif family == "dirichlet":
+        polar_const = np.log(q_mod / np.pi)
+    else:
+        raise ValueError(f"Unknown family: {family}")
+    M_polar = (polar_const / (2 * np.pi)) * np.eye(J)
+    if has_polar and family == "zeta":
+        # 2 h(i/2) term — exponentially suppressed for T0/σ ≳ 5; include for completeness
+        # h(r) for our basis: it's a rank-J operator; ignoring (matches validated ζ engine).
+        pass
+
+    M_arith = M_polar + M_arch - M_primes
+    Q = M_zeros - M_arith
+    if not zeros_complex:
+        Q = 0.5 * (Q + Q.T)
+
+    components = {
+        "M_zeros": M_zeros,
+        "M_primes": M_primes,
+        "M_arch": M_arch,
+        "M_polar": M_polar,
+        "M_arith": M_arith,
+    }
+    return Q, components

@@ -1,0 +1,41 @@
+## Overview <output>
+<conclusion>
+Sweeping the Weil quadratic form's centre T₀ and width σ produces a clear sensitivity map: ζ_δ (zeta with its first 20 zeros artificially shifted off the critical line) yields a negative λ_min(Q) whenever T₀ lies within the range of the shifted zeros (γ₁≈14.13 to γ₂₀≈77.14) and σ is small (σ=1 or 2), detecting even the smallest tested shift δ=0.05; at the optimal probe point (T₀=46.13, σ=1, J=10) only ζ_δ produces a significantly negative eigenvalue (λ_min≈−0.51) while ζ, L(χ₄ mod 5), L(Δ) and L_DH (probed away from its T≈85.7 anomaly) all yield |λ_min|≲10⁻¹¹, i.e., no false positives.
+</conclusion> <methods>
+1. **Weil quadratic form (re-implementation of r15).** Test-function basis h_i(t) = ((t−T₀)/σ)^i · exp(−((t−T₀)/σ)²/2), i=0,…,J−1, with J=10. The spectral matrix is M_zeros[i,j] = Σ_γ h_i(γ) h_j(γ) over zeros γ with |γ−T₀| ≤ max(20, 6σ). The arithmetic matrix is M_arith[i,j] = Σ_{p prime, k≥1, p^k≤1000} (log p)/√(p^k) · [h_i(k log p)h_j(k log p) + h_i(−k log p)h_j(−k log p)], replacing log p/√(p^k) by Λ_L(p^k)/√(p^k) for general L-functions (χ-character coefficients for L(χ), Chebyshev recursion on a_p=τ(p)/p^{11/2} for L(Δ)). The Weil form is Q = M_zeros − M_arith; its eigenvalues are computed with numpy.linalg.eigvalsh.
+2. **ζ_δ construction.** For each shift δ in {0.05, 0.10, …, 0.50}, the first 20 zeros of ζ are removed from the critical-line sum and re-added as off-critical zeros at β = ½ + δ via complex test-function values φ_i(ρ) = h_i(γ − i(β−½)); their contribution Re[outer(φ,φ)] replaces the original real outer product. At δ=0 this exactly reproduces the unshifted Mz (verified, residual 1.5×10⁻¹¹).
+3. **Parameter sweep.** T₀ ∈ {γ₁−10, γ₁−8, …, γ₂₀+10} (step 2.0, 42 points); σ ∈ {1.0, 2.0, 4.0}; δ as above. At each (T₀,σ) the minimum δ for which λ_min(Q) drops significantly below the δ=0 baseline (criterion: λ_min(δ) < λ_min(0) − max(10⁻⁴, 10⁻²·|λ_min(0)|)) was recorded.
+4. **Validation at the optimal point** T₀=46.13, σ=1, J=10 (chosen at the median of the shifted-zero range where σ=1 gives the most localised, low-floor detector): computed λ_min for ζ, L(χ₄ mod 5), L(Δ), L_DH (zeros from `ldh_zeros_small_T.json`), and ζ_δ at δ=0.05, each with its own consistent arithmetic side.
+5. Inputs: `zeta_zeros_5000_dps50.npy`, `lchi_zeros_5000_dps50.npy`, `ldelta_zeros_2000_dps50.npy`, `ldh_zeros_small_T.json`, `ldh_def.py`; τ(n) for n≤1000 computed from q·Π(1−q^n)^24 (verified τ(2)=−24, τ(3)=252, τ(5)=4830, τ(7)=−16744).
+</methods> <results>
+**Sensitivity map.** Detection of δ=0.05 (smallest tested) occurs for σ=1 over T₀ ∈ [12.13, 82.13] and for σ=2 over T₀ ∈ [18.13, 80.13]. At σ=4 the detector is too broad; the smallest detectable δ rises to 0.05–0.15 over T₀ ∈ [28, 80] and there are several NaN regions. Outside the shifted-zero window or near its edges the minimum detectable δ degrades sharply (0.10–0.50 or NaN). The most-sensitive setting is σ=1 with T₀ anywhere from ~12 to ~82 (multiple optima at δ=0.05). **Validation at optimal (T₀=46.13, σ=1, J=10), λ_min(Q):**
+| function | λ_min | interpretation |
+|---|---|---|
+| ζ | −1.11×10⁻¹³ | numerical zero (PASS, no false positive) |
+| L(χ₄ mod 5) | +1.13×10⁻¹² | numerical zero, *positive* (PASS) |
+| L(Δ) | −7.33×10⁻¹² | numerical zero (PASS) |
+| L_DH | +2.17×10⁻¹² | numerical zero — anomaly is at T₀≈85.7, not probed here (PASS) |
+| ζ_δ (δ=0.05) | **−5.10×10⁻¹** | **clear detection** | Separation between the smallest detected anomaly and the worst control noise is 11 orders of magnitude. As a cross-check at the previously validated L_DH anomaly point (T₀=85.7, σ=2, J=10), explicit inclusion of the Spira off-critical pair (ρ=0.808517±... + 85.699348i) yields λ_min ≈ −1.86×10⁻² with our normalization, qualitatively reproducing r15. **Geometry of the map.** Sensitivity is maximised when (i) T₀ lies inside the range of shifted γ-values, (ii) σ is comparable to the local zero spacing (~1 in this height range), so that h-windows isolate individual shifted zeros rather than averaging over many on-critical ones.
+</results> <challenges>
+- Reproducing r15's exact trace value (166 122.7) was not possible — our trace at (T₀=85.7, σ=2, J=10, hw=20) is 92 962, indicating a different normalisation in r15. Qualitative behaviour (negative eigenvalue at L_DH, ≈0 elsewhere) is reproduced, which is the operationally relevant property; the absolute scale of λ_min differs from r15 by O(10⁵) for the L_DH cross-check.
+- At small T₀ (≤γ₁), the arithmetic side becomes large negative while the zero side has nothing in window, giving a misleading "baseline" λ_min of order −10⁵. This required using a *relative-drop* criterion (Δλ_min from the δ=0 baseline) rather than an absolute negativity threshold to fairly characterise sensitivity at edges.
+- A consistent M_arith for L_DH (which lacks an Euler product) requires more careful construction than the symmetric-pair sum used here; we side-stepped this by observing that, at the optimal T₀=46.13, the arithmetic side is numerically ≈0 for all functions (Gaussian decay), so the validation question reduces to M_zeros structure.
+- The first-20 ζ_δ shift only injects 5 off-critical zeros (γ₁₆…γ₂₀) into the optimal-T₀ window; sensitivity is therefore limited by how many shifted zeros sit within ~σ of T₀.
+</challenges> <discussion>
+The sensitivity map converts r15's single-point Weil-form detector into a calibrated instrument. The operational region (σ ≲ 2, T₀ inside the range of zeros suspected of being off the critical line) detects shifts as small as δ=0.05 — well below the L_DH anomaly's effective δ≈0.31 — and does so without any false positives across three independent GRH-abiding L-functions. The fact that L_DH itself appears "clean" when probed away from T≈85.7 confirms that the detector is *local*: it lights up only when shifted/off-critical zeros lie within ~σ of T₀. Practically, this means that to scan an L-function for hypothetical RH violations one must sweep T₀ across all heights of interest with a small σ; a single (T₀,σ) choice can only certify local compliance. The 11-order-of-magnitude signal-to-noise separation at the optimum suggests the Weil form is an extremely sharp detector when properly localised — much sharper than TDA bottleneck distances, which scale only as δ² for points aligned on the critical line.
+</discussion> <proposed-next-hypotheses>
+1. The minimum detectable shift scales as δ_min ∝ σ / √(N_shifted_in_window), so doubling σ at fixed δ requires roughly 4× more shifted zeros in the window to retain detection — testable by varying both σ and the number of shifted zeros n_shift ∈ {1, 5, 20, 100}.
+2. Increasing the basis dimension J at fixed (T₀, σ) sharpens detection by adding higher-frequency Hermite-like modes; specifically, λ_min(δ; J) → −∞ polynomially in J for any fixed δ>0 (i.e., the Weil form becomes arbitrarily sensitive in the J→∞ limit), while remaining ≈0 for GRH-abiding functions.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>weil_sensitivity_map.json</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>JSON with the (T₀, σ, δ) sensitivity-map table for ζ_δ, the parameters used (J=10, prime_bound=1000, half_window=max(20, 6σ), Gaussian-monomial basis, M_arith formula), and the λ_min values at the optimal point (T₀=46.13, σ=1) for ζ, L(χ₄ mod 5), L(Δ), L_DH, and ζ_δ (δ=0.05). Generated by re-implementing the Weil quadratic form Q = M_zeros − M_arith from report r15 and sweeping T₀ ∈ [γ₁−10, γ₂₀+10] (step 2.0), σ ∈ {1,2,4}, δ ∈ {0.05,…,0.5}. Includes documentation notes on detection criteria and known limitations.</artifact-description>
+</artifact>
+<artifact>
+<file-name>weil_sensitivity_map.png</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Final two-panel figure: (A) heat-map of minimum detectable δ as a function of (T₀, σ) with red vertical lines marking the 20 shifted ζ-zero positions; (B) bar chart of |λ_min(Q)| on a log scale at the optimal point (T₀=46.13, σ=1, J=10) for the five test functions, with red = negative and blue = positive eigenvalue. Demonstrates ~11 orders of magnitude separation between the ζ_δ signal and GRH-abiding controls.</artifact-description>
+</artifact>
+</artifacts>
+</output> 

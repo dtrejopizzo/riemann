@@ -1,0 +1,515 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RH}{\mathrm{RH}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\fhat}{\widehat f}
+\newcommand{\Zoff}{\mathcal Z_{\mathrm{off}}}
+\newcommand{\Zcl}{\mathcal Z_{\mathrm{cl}}}
+\newcommand{\xio}{\xi_0}
+\newcommand{\Pmpoly}{P_{4m}}
+\newcommand{\psiO}{\psi_0}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\kap}{\kappa}
+\DeclareMathOperator{\sgn}{sgn}
+
+\title[The Defect of Off-Line Zeros]{The arithmetic defect of off-line zeros:\\
+parity, the modified explicit formula, and two-scale structure}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\begin{abstract}
+We study the exact arithmetic footprint that a \emph{finite} set of off-critical-line zeros
+of the Riemann zeta function would leave. The off-line zeros of $\zeta$ form complete Klein
+four-orbits $\{\half\pm b\pm i\gamma\}$, and the negative index $\kappa$ of the localized
+Weil form is the dimension of its maximal negative subspace. We first prove the geometry of
+that subspace: each orbit contributes exactly two linearly independent negative directions,
+so $\kappa=2m$ is even, with the minimal non-trivial value $2$; directions from orbits at
+distinct heights are exponentially nearly orthogonal, so the negative subspace decomposes as
+an approximate orthogonal sum of Lorentz planes. Assuming a finite negative index
+(Hypothesis~D, $0<\kappa=2m<\infty$, strictly weaker than the negation of the Riemann
+Hypothesis), the completed zeta factors as $\xi=\xi_0\,P_{4m}$ with $P_{4m}$ the degree-$4m$
+polynomial of the off-line zeros and $\xi_0$ an entire function sharing the functional
+equation and having all zeros on the line. This yields an \emph{exact modified explicit
+formula} $\psi(x)=\psi_0(x)-D_m(x)$, where the arithmetic defect $D_m$ is a finite sum of
+$4m$ oscillations whose amplitudes, frequencies, and phases are explicit; its dominant term
+grows like $x^{1/2+b_{\max}}$ and its energy like $X^{2b_{\max}}$. We then locate the precise
+obstruction: the companion $\zeta_0=\xi_0/(\pi^{-s/2}\Gamma(s/2))$ has poles inside the
+critical strip, so by Landau's theorem it admits no Dirichlet series with non-negative
+coefficients and no Euler product --- the analytic factorization is incompatible with the
+multiplicative structure of $\zeta$. This is the wall we name (RSRP): the Euler product is
+incompatible with a finite non-zero index; it follows from the Riemann Hypothesis, does not
+imply it, and is distinct from the positivity, de Branges, and pair-correlation walls.
+Finally we exhibit the two-scale signature of a single orbit --- an exponentially growing
+oscillation in the Chebyshev variable and a localized logarithmic depression of
+$\log|\zeta(\half+it)|$ near $t=\gamma$ --- prove that both are compatible with the
+unconditional prime number theorem and (in the polynomially-bounded regime) with the
+multiplicative-chaos model, and state precisely which three inputs any proof of the exclusion
+principle $\kappa\in\{0,\infty\}$ would require, none of which is currently available.
+Nothing here assumes or proves the Riemann Hypothesis.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+The Riemann Hypothesis ($\RH$) is the assertion that every nontrivial zero
+$\rho=\beta+i\gamma$ of $\zeta$ has $\beta=\half$. Suppose it fails. What, precisely, would a
+finite collection of off-line zeros do to the distribution of primes, and where exactly does
+the assumption that they exist collide with the arithmetic of $\zeta$? This paper answers both
+questions exactly, under the working hypothesis that the index is finite.
+
+We write $\xi(s)=\half s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ for the completed zeta function,
+$\Zoff=\{\rho:\beta_\rho\ne\half\}$ for the off-line zeros and $\Zcl=\{\rho:\beta_\rho=\half\}$
+for the on-line ones. The functional equation $\xi(s)=\xi(1-s)$ and the reality
+$\overline{\xi(\bar s)}=\xi(s)$ make $\Zoff$ invariant under the Klein four-group
+$V=\{1,\sigma,\iota,j\}$, $\sigma(s)=\bar s$, $\iota(s)=1-s$, $j=\sigma\iota$, so the off-line
+zeros come in quartets
+\[
+\mathcal O_j=\{\sigma_j\pm i\gamma_j,\ (1-\sigma_j)\pm i\gamma_j\},\qquad
+\sigma_j=\half+b_j>\half,\ \ \gamma_j>0 .
+\]
+The localized Weil form $Q$ --- the quadratic form whose positivity is $\RH$ --- is indefinite,
+and its negative (Kre\u\i n) index $\kappa$ is the dimension of its maximal negative subspace
+$\cN$; one has $\RH\iff\kappa=0$. The companion functional-analytic study of $Q$
+\cite{Index} localizes $\kappa$ in the off-axis evaluation functionals attached to off-line
+zeros and identifies $\kappa$ with the number of zeros of the structure function
+$E_\xi(z)=\xi(\half+iz)$ in one open half-plane. The present paper takes that index as given
+and develops its \emph{arithmetic} content.
+
+The standing hypothesis throughout the conditional parts is:
+
+\begin{quote}
+\textbf{Hypothesis D.}\ $0<\kappa=2m<\infty$: there are finitely many off-line zeros, forming
+$m\ge1$ Klein quartets.
+\end{quote}
+
+Hypothesis~D is strictly weaker than $\neg\RH$: it is the negation of $\RH$ \emph{together
+with} finiteness of the off-line set. Finiteness is itself unconditionally open and weaker
+than $\RH$ (it is not delivered by the positive-proportion or zero-density theorems
+\cite{Index}); we assume it only to make the defect a finite, fully explicit object, and we
+are careful to mark every statement that uses it.
+
+The paper has three movements. \S\ref{sec:geometry} proves the geometry of $\cN$: parity
+$\kappa=2m$, angular separation between orbits, and the Lorentz-plane decomposition.
+\S\ref{sec:mef}--\S\ref{sec:wall} derive, under Hypothesis~D, the factorization
+$\xi=\xi_0P_{4m}$ and the exact modified explicit formula $\psi=\psi_0-D_m$, analyze the
+defect $D_m$, and prove the arithmetic-analytic gap that the companion $\zeta_0$ has no Euler
+product --- the wall (RSRP). \S\ref{sec:twoscale}--\S\ref{sec:barrier} exhibit the two-scale
+signature of an orbit, prove its compatibility with the unconditional prime number theorem and
+with multiplicative chaos in the polynomially-bounded regime, and state the barrier theorem
+isolating the three inputs that a proof of the exclusion principle $\kappa\in\{0,\infty\}$
+would require. None of this assumes or proves $\RH$.
+
+\section{The negative subspace: parity and Lorentz geometry}\label{sec:geometry}
+
+We work in the reproducing-kernel Kre\u\i n space $\mathcal H$ of test functions on which $Q$
+acts, with negative subspace $\cN=\{v:Q(v,v)<0\}$, $\dim\cN=\kappa$ \cite{Index}. For an
+off-line orbit $\mathcal O_j$ write $\rho_j^+=\sigma_j+i\gamma_j$, $\rho_j^-=(1-\sigma_j)+
+i\gamma_j$, and split the orbit by height into the upper sub-orbit $\mathcal O_j^+=\{\rho_j^+,
+1-\bar\rho_j^+\}$ (both at height $+\gamma_j$) and the lower sub-orbit $\mathcal O_j^-=\{
+\bar\rho_j^+,1-\rho_j^+\}$ (both at height $-\gamma_j$).
+
+\begin{proposition}[The form restricted to one sub-orbit]\label{prop:restricted}
+For test functions whose transform is concentrated near $+\gamma_j$, the contribution of
+$\mathcal O_j^+$ to the Weil form is
+\[
+Q|_{\mathcal O_j^+}(f,f)=4\big[(\Re\fhat(\rho_j^+))^2-(\Im\fhat(\rho_j^+))^2\big],
+\]
+a two-dimensional form of signature $(1,1)$ whose unique negative direction $v_j^+$ is
+characterized by $\Re\fhat(\rho_j^+)=0$. The lower sub-orbit $\mathcal O_j^-$ gives the
+analogous form near $-\gamma_j$, with unique negative direction $v_j^-$.
+\end{proposition}
+\begin{proof}
+The contribution of $\mathcal O_j^+=\{\rho_j^+,1-\bar\rho_j^+\}$ to $\sum_\rho\fhat(\rho)^2$ is
+$\fhat(\rho_j^+)^2+\fhat(1-\bar\rho_j^+)^2$. The functional-equation/reality symmetries give
+$\fhat(1-\bar s)=\overline{\fhat(s)}$, so $\fhat(1-\bar\rho_j^+)=\overline{\fhat(\rho_j^+)}$;
+writing $\fhat(\rho_j^+)=u+iv$, the sum is $(u+iv)^2+(u-iv)^2=2(u^2-v^2)$, i.e.\ $4(u^2-v^2)$
+after the archimedean normalization. The lower sub-orbit follows by conjugation.
+\end{proof}
+
+\begin{proposition}[Sub-orbit and inter-orbit orthogonality]\label{prop:orth}
+Let $f^\pm$ have transforms supported in a $\delta$-neighborhood of $\pm\gamma_j$ in the
+imaginary direction, $\delta<\gamma_j$. Then $Q(f^+,f^-)=O(e^{-c\gamma_j^2/\delta^2})$. More
+generally, negative directions localized at distinct heights $\gamma_j\ne\gamma_k$ satisfy
+$Q(v_j,v_k)=O(e^{-c(\gamma_j-\gamma_k)^2/\delta^2})$.
+\end{proposition}
+\begin{proof}
+$Q(f^+,f^-)=\sum_\rho\fhat^+(\rho)\fhat^-(\rho)-B_{\mathrm{arith}}(f^+,f^-)$. The archimedean
+cross term involves $\int\fhat^+\fhat^-\,\Omega$ with $\Omega$ smooth; the supports are
+disjoint, so it vanishes. In the zero sum, a zero at height $\sim+\gamma_j$ contributes
+$|\fhat^-(\rho)|=O(e^{-c\gamma_j^2/\delta^2})$ by concentration, and symmetrically; summing
+over zeros (Riemann--von Mangoldt density) gives the bound. The inter-orbit estimate is
+identical with $\gamma_j-\gamma_k$ in place of $\gamma_j$.
+\end{proof}
+
+\begin{theorem}[Parity of the index]\label{thm:parity}
+$\kappa\equiv0\pmod2$; equivalently $\kappa=2m$, with $m$ the number of off-line Klein
+quartets. If $\RH$ fails, then $\kappa\ge2$: the possible values of $\kappa$ are
+$\{0,2,4,\dots\}$, and no odd value is consistent with the symmetry of $\zeta$. The same holds
+for any primitive real Dirichlet $L$-function. With multiplicities, a zero of order $\ell$
+contributes $2\ell$ to $\kappa$.
+\end{theorem}
+\begin{proof}
+Each orbit $\mathcal O_j$ contributes, by Proposition~\ref{prop:restricted}, one negative
+direction $v_j^+$ from $\mathcal O_j^+$ and one $v_j^-$ from $\mathcal O_j^-$. These are
+independent: $Q(v_j^+,v_j^-)=O(e^{-c\gamma_j^2/\delta^2})$ by Proposition~\ref{prop:orth} with
+$\delta<\gamma_j$, strictly smaller than $\sqrt{Q(v_j^+,v_j^+)\,Q(v_j^-,v_j^-)}$, so the two
+are not proportional. The archimedean term and prime sum are non-negative, so every negative
+direction arises from an off-line evaluation and is accounted for by this orbit structure;
+hence $\dim\cN=2m$. This agrees with the structure-function count: the negative index equals
+the number of zeros of $E_\xi$ in one open half-plane, which is exactly the two members of
+each quartet on a fixed side, i.e.\ $2m$ \cite{Index}.
+\end{proof}
+
+\begin{remark}[Why two, and where the count is robust]\label{rem:two}
+The two negative directions of an orbit live at the two heights $\pm\gamma_j$ and are
+independent in the full (complex) Kre\u\i n space $\mathcal H$; on a space of \emph{even real}
+test functions the reality $\fhat(\bar z)=\overline{\fhat(z)}$ identifies the two heights and a
+quartet manifests there as a single Lorentzian block. The robust, representation-independent
+count is the structure-function one, $\kappa=\#\{$zeros of $E_\xi$ in one half-plane$\}=2m$
+\cite{Index}; the height decomposition above is the geometric realization of those two zeros.
+\end{remark}
+
+\begin{theorem}[Lorentz-plane decomposition]\label{thm:lorentz}
+Under Hypothesis~D the negative subspace decomposes as an approximate orthogonal direct sum of
+$m$ Lorentz planes,
+\[
+\cN\;\approx\;\bigoplus_{j=1}^m \mathbb R^{1,1}_j,
+\]
+where $\mathbb R^{1,1}_j=\operatorname{span}\{w_j^+,v_j^+\}$ carries signature $(1,1)$
+($w_j^+$ the positive, $v_j^+$ the negative direction of $\mathcal O_j^+$), and the planes at
+distinct heights are exponentially nearly orthogonal in $Q$ (Proposition~\ref{prop:orth}). The
+approximation is exact in the limit of well-separated heights.
+\end{theorem}
+\begin{proof}
+Each orbit contributes the signature-$(1,1)$ plane of Proposition~\ref{prop:restricted} at
+height $+\gamma_j$ (and its mirror at $-\gamma_j$); by Proposition~\ref{prop:orth} the Gram
+matrix between planes at $\gamma_j\ne\gamma_k$ is $O(e^{-c(\gamma_j-\gamma_k)^2/\delta^2})$,
+so the total form is block-diagonal up to exponentially small couplings.
+\end{proof}
+
+\begin{corollary}[Parity-gap trichotomy]\label{cor:trichotomy}
+The index satisfies $\kappa\in\{0\}\cup2\mathbb Z_{>0}\cup\{\infty\}$. Combined with the
+exclusion of the finite non-zero (Pontryagin) regime by the finite-defect analysis
+\cite{Index}, the operative dichotomy is between $\kappa=0$ ($\RH$) and the
+arithmetically-loaded regimes $2\mathbb Z_{>0}\cup\{\infty\}$ studied below. We do not assert
+$\kappa\ne$ any particular value; Theorem~\ref{thm:parity} only fixes the parity.
+\end{corollary}
+
+\section{The modified explicit formula}\label{sec:mef}
+
+We now assume Hypothesis~D and read off the arithmetic consequences. The finiteness of $\Zoff$
+makes the off-line part of the zero sum a genuine finite object.
+
+\begin{proposition}[Factorization]\label{prop:factor}
+Under Hypothesis~D,
+\[
+\xi(s)=\xi_0(s)\,P_{4m}(s),\qquad P_{4m}(s)=\prod_{\rho\in\Zoff}(s-\rho),
+\]
+where $P_{4m}$ is a degree-$4m$ polynomial with conjugate-symmetric roots and $\xi_0$ is
+entire, shares the functional equation $\xi_0(s)=\xi_0(1-s)$, and has all its zeros on
+$\Re s=\half$.
+\end{proposition}
+\begin{proof}
+Divide the Hadamard product of $\xi$ by the finite product over $\Zoff$; the quotient $\xi_0$
+is entire of order one with zero set $\Zcl$. The set $\Zoff$ is $V$-invariant, so $P_{4m}$ is
+invariant under $s\mapsto1-s$ and under conjugation, whence $\xi_0=\xi/P_{4m}$ inherits the
+functional equation and reality.
+\end{proof}
+
+\begin{definition}[Arithmetic defect and virtual Chebyshev function]\label{def:defect}
+Under Hypothesis~D set
+\[
+D_m(x):=\sum_{\rho\in\Zoff}\frac{x^\rho}{\rho},\qquad
+\psi_0(x):=x-\sum_{\rho\in\Zcl}\frac{x^\rho}{\rho}-\log(2\pi)-\half\log(1-x^{-2}).
+\]
+$D_m$ is real-valued ($\Zoff$ is conjugation-symmetric) and is a finite sum of $4m$ terms.
+\end{definition}
+
+\begin{theorem}[Modified explicit formula]\label{thm:mef}
+Under Hypothesis~D, for every non-integer $x>1$,
+\[
+\psi(x)=\psi_0(x)-D_m(x),
+\]
+an exact identity. Writing $E(x)=\psi(x)-x$ and $E_0(x)=\psi_0(x)-x$, one has
+$E(x)=E_0(x)-D_m(x)$ with $E_0(x)=O(x^{1/2+\varepsilon})$ automatically (all zeros of $\xi_0$
+are on the line); hence the dominant growth of $E$ is carried entirely by the defect $D_m$.
+\end{theorem}
+\begin{proof}
+Insert $\sum_\rho=\sum_{\Zcl}+\sum_{\Zoff}$ into the classical explicit formula
+$\psi(x)=x-\sum_\rho x^\rho/\rho-\log(2\pi)-\half\log(1-x^{-2})$. Under Hypothesis~D the
+off-line sum is finite, needing no regularization; rearranging gives the identity. The bound
+on $E_0$ is the explicit formula for $\xi_0$, whose zeros all lie on the line.
+\end{proof}
+
+\section{Anatomy of the defect}\label{sec:anatomy}
+
+Fix an orbit $\mathcal O_j$ and write $\theta_j^\pm=\arg\rho_j^\pm$.
+
+\begin{proposition}[Single-orbit defect]\label{prop:Dj}
+\[
+D_j(x)=\underbrace{\frac{2x^{1/2+b_j}}{|\rho_j^+|}\cos(\gamma_j\log x-\theta_j^+)}_{\text{dominant}}
++\underbrace{\frac{2x^{1/2-b_j}}{|\rho_j^-|}\cos(\gamma_j\log x-\theta_j^-)}_{\text{subdominant}} .
+\]
+Consequently $D_m(x)=\sum_{j=1}^m\frac{2x^{1/2+b_j}}{|\rho_j^+|}\cos(\gamma_j\log x-\theta_j^+)
++O(x^{1/2-b_{\min}})$ as $x\to\infty$.
+\end{proposition}
+\begin{proof}
+Pair conjugate zeros: $\frac{x^{\sigma_j+i\gamma_j}}{\sigma_j+i\gamma_j}+\frac{x^{\sigma_j-
+i\gamma_j}}{\sigma_j-i\gamma_j}=\frac{2x^{\sigma_j}}{|\rho_j^+|}\cos(\gamma_j\log x-\theta_j^+)$,
+and similarly for the $(1-\sigma_j)$ pair with exponent $1-\sigma_j=\half-b_j$. Collecting the
+subdominant terms over all orbits gives the asymptotic.
+\end{proof}
+
+\begin{proposition}[Defect energy]\label{prop:energy}
+For the logarithmic energy $\mathcal E_j(X)=\int_X^{2X}|D_j(t)|^2t^{-2}\,dt$,
+\[
+\mathcal E_j(X)\sim\frac{2^{2b_j}-1}{|\rho_j^+|^2\,b_j}\,X^{2b_j}\to\infty\quad(b_j>0),
+\qquad \sum_{j=1}^m\mathcal E_j(X)\sim C_m\,X^{2b_{\max}} .
+\]
+\end{proposition}
+\begin{proof}
+The dominant part of $|D_j(t)|^2$ is $\frac{4t^{1+2b_j}}{|\rho_j^+|^2}\cos^2(\gamma_j\log t-
+\theta_j^+)+O(t)$; the cosine-square averages to $\half$ (Riemann--Lebesgue), and
+$\int_X^{2X}t^{2b_j-1}\,dt=\frac{(2^{2b_j}-1)}{2b_j}X^{2b_j}$. The total is dominated by the
+largest $b_j$.
+\end{proof}
+
+\section{The arithmetic-analytic gap and the wall (RSRP)}\label{sec:wall}
+
+The factorization $\xi=\xi_0P_{4m}$ is purely \emph{analytic}. We now show it is incompatible
+with the \emph{multiplicative} structure of $\zeta$. Set
+$\zeta_0(s)=\xi_0(s)/(\pi^{-s/2}\Gamma(s/2))$, the companion Dirichlet-type function; from
+$\xi'/\xi=\xi_0'/\xi_0+P_{4m}'/P_{4m}$ one gets
+\[
+-\frac{\zeta_0'(s)}{\zeta_0(s)}=-\frac{\zeta'(s)}{\zeta(s)}+\sum_{\rho\in\Zoff}\frac{1}{s-\rho}.
+\]
+
+\begin{lemma}[Arithmetic incapacity of $\zeta_0$]\label{lem:noEuler}
+Under Hypothesis~D:
+\begin{enumerate}
+\item $\zeta_0$ has a pole at each $\rho\in\Zoff$, hence poles inside the strip $0<\Re s<1$;
+\item $\zeta_0$ is not representable as a Dirichlet series $\sum_n a_n n^{-s}$ with all
+$a_n\ge0$;
+\item $\zeta_0$ admits no Euler product $\prod_p(1-a_pp^{-s})^{-1}$ with $|a_p|\le1$;
+\item the formal $\Lambda_0$ defined by $-\zeta_0'/\zeta_0=\sum_n\Lambda_0(n)n^{-s}$ is not
+the von Mangoldt function of any standard arithmetic object.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) The poles of $\zeta_0$ in the strip are the zeros of $P_{4m}$, i.e.\ $\Zoff$. (2) By
+Landau's theorem, a Dirichlet series with non-negative coefficients that converges somewhere
+has its abscissa of convergence as a real singularity and is otherwise holomorphic to its
+right --- in particular it has no poles in $0<\Re s<1$; (1) forbids this. (3) An Euler product
+of the stated form is holomorphic and zero-free for $\Re s>1$ and its continuation has no poles
+in $\Re s>0$; (1) again forbids it. (4) $\Lambda\ge0$ produces non-negative Dirichlet
+coefficients, excluded by (2).
+\end{proof}
+
+\begin{remark}
+Lemma~\ref{lem:noEuler} is not a contradiction with Hypothesis~D. It says the Kre\u\i
+n--Langer-type factorization is available in the analytic category (entire functions with a
+functional equation) but incompatible with the arithmetic category (multiplicative
+coefficients, Euler product) of $\zeta$. The wall below is the assertion that this
+incompatibility is ultimately fatal to the existence of a finite non-zero index.
+\end{remark}
+
+\begin{definition}[The wall (RSRP)]\label{def:wall}
+\emph{Resonant Spectral Rigidity of the Euler Product} (RSRP) is the statement: no entire
+function $f$ satisfying the functional equation of $\xi$, carrying an Euler product
+$f(s)=\tfrac{s(s-1)}2\pi^{-s/2}\Gamma(s/2)\prod_p(1-a_pp^{-s})^{-1}$ with $|a_p|\le1$, can have
+$0<\kappa(f)<\infty$.
+\end{definition}
+
+\begin{theorem}[(RSRP) is a genuine, strictly weaker wall]\label{thm:wall}
+\emph{(i)} $\RH\Rightarrow$ (RSRP) (vacuously, $\kappa=0$). \emph{(ii)} (RSRP)$\not\Rightarrow
+\RH$ in isolation: it excludes only the finite non-zero index, leaving $\kappa=\infty$
+untouched, so it is consistent with infinitely many off-line zeros. \emph{(iii)} (RSRP) is not
+a consequence of the positivity wall (an analytic condition on $Q$), the de Branges/global
+geometry wall (existence of a reproducing-kernel space), or the pair-correlation wall (a
+statistical hypothesis on spacings): it is an \emph{arithmetic} incompatibility on the Euler
+product, of a different type from all three.
+\end{theorem}
+\begin{proof}
+(i) is immediate. (ii): (RSRP) forbids $0<\kappa<\infty$ but says nothing about $\kappa=\infty$,
+which is consistent with $\neg\RH$; hence it cannot imply $\RH$. (iii): the three established
+walls are, respectively, positivity of a quadratic form, existence of a geometric realization,
+and a spacing statistic; (RSRP) is the non-existence of a meromorphic-with-Euler-product object
+of finite index, an incompatibility between a polar divisor in the strip and multiplicativity.
+These are logically independent formulations.
+\end{proof}
+
+\section{Two-scale structure of a single orbit}\label{sec:twoscale}
+
+A single off-line orbit manifests at two distinct scales: an exponentially growing oscillation
+in the Chebyshev variable $x$ (equivalently $t=\log x$), and a localized depression of
+$\log|\zeta(\half+it)|$ near the ordinate $t=\gamma_j$.
+
+\begin{theorem}[Hadamard depression]\label{thm:depression}
+Under Hypothesis~D, the contribution of $\mathcal O_j$ to $\log|\zeta(\half+it)|$ is, up to
+$O(1)$ archimedean constants,
+\[
+\delta_j\log|\zeta(\tfrac12+it)|=\log\!\big(b_j^2+(t-\gamma_j)^2\big)+\log\!\big(b_j^2+
+(t+\gamma_j)^2\big)-\log|\rho_j^+|^2-\log|\rho_j^-|^2+O(1).
+\]
+In particular: at $t=\gamma_j$ the depth is $2\log b_j+O(1)$; the depression is localized with
+half-width $b_j$; and for $|t-\gamma_j|\gg b_j$ it is $O(\log(|t-\gamma_j|/b_j))$.
+\end{theorem}
+\begin{proof}
+The four Hadamard factors $1-s/\rho$ of $\mathcal O_j$ at $s=\half+it$ have moduli
+$\sqrt{b_j^2+(t\mp\gamma_j)^2}/|\rho_j^\pm|$; taking logs of their product gives the displayed
+formula (the convergence factors $e^{s/\rho}$ contribute $O(1)$). Setting $t=\gamma_j$ gives
+depth $2\log b_j+O(1)$.
+\end{proof}
+
+\begin{proposition}[Average invisibility]\label{prop:cesaro}
+If $\gamma_j\in[T,2T]$ then
+\[
+\frac1T\int_T^{2T}|\delta_j\log|\zeta(\half+it)||^2\,dt=O(b_j(\log b_j)^2/T)\to0 .
+\]
+The depression is invisible to the Cesàro average.
+\end{proposition}
+\begin{proof}
+The integrand is $O((\log b_j)^2)$ on the window $[\gamma_j-b_j,\gamma_j+b_j]$ of width
+$2b_j$, and $O((\log|t-\gamma_j|)^2)$ outside with convergent tail; dividing by $T$ gives the
+estimate.
+\end{proof}
+
+\begin{theorem}[Structure-function bounds and their compatibility]\label{thm:struct}
+Let $X(t)=(\psi(e^t)-e^t)e^{-t/2}$ and $S_2(\tau,T)=\frac1T\int_0^T|X(t+\tau)-X(t)|^2\,dt$.
+\begin{enumerate}
+\item \emph{(Lower bound, under Hypothesis~D.)} For $\tau\notin\frac{2\pi}{\gamma_j}\mathbb Z$,
+\[
+S_2(\tau,T)\ge\frac{4A_j^2\sin^2(\gamma_j\tau/2)}{2b_j}\cdot\frac{e^{2b_jT}-1}{T}+O(e^{b_jT}/
+\sqrt T),\qquad A_j=\frac{2}{|\rho_j^+|},
+\]
+so $S_2(\tau,T)\gg e^{2b_jT}/T$.
+\item \emph{(Upper bound, unconditional.)} By Korobov--Vinogradov, $S_2(\tau,T)\le C\,e^{T}
+e^{-2c_1\sqrt T}$.
+\item \emph{(Compatibility.)} The two bounds never contradict: $e^{2b_jT}/T\le Ce^Te^{-c_1
+\sqrt T}$ holds for large $T$ because $2b_j-1<0$. A contradiction would require $b_j>\half$,
+impossible since $\sigma_j<1$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(1) Under Hypothesis~D, $X=X_0-Y$ with $Y(t)=D_m(e^t)e^{-t/2}$ and, by the on-line bound
+$\sum_{\Zcl}|\rho|^{-2}<\infty$, the $X_0$ structure function is $O(1)$; the dominant term of
+$|Y(t+\tau)-Y(t)|^2$ from orbit $j$ is $4A_j^2e^{2b_jt}\sin^2(\gamma_j\tau/2)\cos^2(\cdots)$,
+and averaging $\cos^2\to\half$ with $\int_0^Te^{2b_jt}dt\sim e^{2b_jT}/(2b_j)$ gives the bound.
+(2) From $|\psi(x)-x|\le Cx\exp(-c_1\sqrt{\log x})$, $|X(t)|\le Ce^{t/2}\exp(-c_1\sqrt t)$, and
+square-integrating. (3) is the displayed inequality.
+\end{proof}
+
+\section{Chaos compatibility and the barrier theorem}\label{sec:barrier}
+
+\sloppy The $t$-scale depression must coexist with the value distribution of $\zeta$ on the line. The
+Fyodorov--Hiary--Keating picture (established in part by Arguin--Bovier--Kistler, Najnudel,
+Radziwi\l\l--\allowbreak Soundararajan) gives, for $t$ uniform in $[T,2T]$,
+$\min_{[T,2T]}\log|\zeta(\half+it)|\sim-\log\log T+O(\log\log\log T)$.
+
+\begin{theorem}[Chaos compatibility is regime-dependent]\label{thm:chaos}
+With $T\asymp\gamma_j$ the depression depth $2|\log b_j|+O(1)$ compares with the chaos minimum
+$\sim-c\log\gamma_j$ as follows:
+\begin{enumerate}
+\item if $b_j\ge\gamma_j^{-C}$ (polynomially bounded below), the depth is $O(\log\gamma_j)$
+and is accommodated --- \emph{compatible};
+\item if $b_j=e^{-\gamma_j^\alpha}$, $\alpha\in(0,1)$, the depth is $\sim2\gamma_j^\alpha\gg
+\log\gamma_j$ --- \emph{potentially incompatible};
+\item if $b_j\le e^{-c\gamma_j}$, the depth is $\sim2c\gamma_j$ --- \emph{incompatible} with
+the chaos model.
+\end{enumerate}
+Since no unconditional lower bound on $b_j$ is known, uniform compatibility across all
+$b_j\in(0,\half)$ cannot be asserted.
+\end{theorem}
+\begin{proof}
+The depth is Theorem~\ref{thm:depression}; the minimum is the cited chaos result. In (1),
+$O(C\log\gamma_j)$ matches $O(-\log\gamma_j)$; in (2)--(3), $\gamma_j^\alpha$ and $\gamma_j$
+exceed $\log\gamma_j$ for large $\gamma_j$.
+\end{proof}
+
+\begin{remark}[A correction]\label{rem:correction}
+Korobov--Vinogradov bounds $b_j$ from \emph{above} only ($b_j\le\half-c_0/(\log\gamma_j)^{2/3}$);
+it gives no lower bound, hence no upper bound on $|\log b_j|$. Any claim that the depression
+depth is $O(\log\log\gamma_j)$ is therefore unfounded: the correct conclusion is the
+regime-dependent Theorem~\ref{thm:chaos}.
+\end{remark}
+
+\begin{theorem}[Barrier theorem]\label{thm:barrier}
+Any proof of the exclusion principle $\kappa\in\{0\}\cup\{\infty\}$ from the present results
+requires at least one of:
+\begin{itemize}
+\item[\emph{(F1)}] an unconditional bound $\psi(x)-x=O(x^{1/2+\varepsilon_0})$ for some fixed
+$\varepsilon_0<\min_j b_j$, independent of Hypothesis~D;
+\item[\emph{(F2)}] a property of the Euler product (valid for $\Re s>1$) incompatible with poles
+of $-\zeta'/\zeta$ in $\Re s\in(\half,1)$ --- i.e.\ the wall (RSRP);
+\item[\emph{(F3)}] a property of the multiplicative-chaos model incompatible with a depression
+of $\log|\zeta(\half+it)|$ of the depth permitted by Theorem~\ref{thm:chaos}.
+\end{itemize}
+None of (F1), (F2), (F3) is currently available.
+\end{theorem}
+\begin{proof}
+(F1) is necessary: without a better-than-Korobov--Vinogradov bound, the structure-function
+estimates are compatible (Theorem~\ref{thm:struct}), so no contradiction arises from $D_m$.
+(F2) is necessary: the Euler product for $\Re s>1$ gives no information on zeros in
+$\Re s\in(\half,1)$, and the standard candidate invariants (Selberg second moment, Mertens
+function, the Weil functional) are each either circular or reduce to a known wall. (F3) is
+necessary by Theorem~\ref{thm:chaos}. Their status: (F1) is equivalent to controlling zero
+locations, hence circular; (F2) is the wall (RSRP), unproven; (F3) is regime-dependent and
+cannot be closed without a lower bound on $b_j$.
+\end{proof}
+
+\section{Conclusion}
+
+Under the sole hypothesis that the off-line set is finite, a single Klein quartet of off-line
+zeros is a fully explicit object with a fully explicit footprint: two negative directions in
+the Weil form (Theorem~\ref{thm:parity}), a Lorentz-plane block in the negative subspace
+(Theorem~\ref{thm:lorentz}), an exact defect term $D_m$ in the explicit formula
+(Theorem~\ref{thm:mef}) growing like $x^{1/2+b_{\max}}$ with energy $X^{2b_{\max}}$
+(Proposition~\ref{prop:energy}), and a logarithmic depression of $\log|\zeta(\half+it)|$ at
+$t=\gamma$ of depth $2|\log b|$ (Theorem~\ref{thm:depression}). All of this is compatible with
+the unconditional prime number theorem (Theorem~\ref{thm:struct}) and, in the
+polynomially-bounded regime, with the value distribution of $\zeta$ on the line
+(Theorem~\ref{thm:chaos}). The obstruction to excluding such a configuration is sharp and
+named: the analytic factorization $\xi=\xi_0P_{4m}$ produces a companion with poles in the
+strip and hence no Euler product (Lemma~\ref{lem:noEuler}), the incompatibility
+crystallized as the wall (RSRP) (Theorem~\ref{thm:wall}); and any unconditional exclusion
+must supply one of three precisely identified inputs (Theorem~\ref{thm:barrier}), none of which
+is available. The contribution is a map of exactly where the finiteness of the index meets,
+and resists, the arithmetic of $\zeta$. Nothing here assumes or proves the Riemann Hypothesis.
+
+\begin{thebibliography}{99}
+\bibitem{Index} D.~A.~Trejo Pizzo, \emph{The localized Weil form and its Kre\u\i n--Pontryagin
+index: localization, obstruction, and rigidity}, preprint, 2026.
+\bibitem{deBranges} L.~de Branges, \emph{Hilbert Spaces of Entire Functions}, Prentice--Hall,
+Englewood Cliffs NJ, 1968.
+\bibitem{Davenport} H.~Davenport, \emph{Multiplicative Number Theory}, 3rd ed., GTM \textbf{74},
+Springer, 2000.
+\bibitem{Landau} E.~Landau, \emph{\"Uber einen Satz von Tschebyschef}, Math.\ Ann.\ \textbf{61}
+(1905), 527--550.
+\bibitem{Ivic} A.~Ivi\'c, \emph{The Riemann Zeta-Function: Theory and Applications}, Dover, 2003.
+\bibitem{FHK} Y.~V.~Fyodorov, G.~A.~Hiary, J.~P.~Keating, \emph{Freezing transition,
+characteristic polynomials of random matrices, and the Riemann zeta function}, Phys.\ Rev.\
+Lett.\ \textbf{108} (2012), 170601.
+\bibitem{ABK} L.-P.~Arguin, D.~Belius, A.~J.~Harper, \emph{Maxima of a randomized Riemann zeta
+function, and branching random walks}, Ann.\ Appl.\ Probab.\ \textbf{27} (2017), 178--215.
+\end{thebibliography}
+
+\end{document}

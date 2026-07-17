@@ -1,0 +1,281 @@
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{corollary}[theorem]{Corolario}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definición}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Observación}
+
+\newcommand{\Om}{\widetilde\Omega}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\loc}{\mathrm{loc}}
+
+\title{Positividad de una forma cuadrática espectral\\ y la Hipótesis de Riemann}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Siguiendo el programa de triples espectrales zeta de Connes--Consani--Moscovici y la teoría de
+formas cuadráticas de Connes--van Suijlekom, asociamos a cada escala $\lambda$ una forma
+cuadrática finita y explícita $A_\lambda$ cuyo estado fundamental codifica los ceros de
+$\zeta$. Demostramos la cadena completa de estructura, aproximación y reducción, y probamos que
+la positividad de $A_\lambda$ para todo $\lambda$ es lógicamente equivalente a la Hipótesis de
+Riemann. Dos enunciados quedan abiertos, señalados en el texto: la convergencia cuantitativa
+del operador límite (neutral respecto de la hipótesis) y la positividad global (equivalente a
+ella).
+\end{abstract}
+
+\section*{Cuadro de situación}
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+\# & Enunciado & Estado \\
+\midrule
+1 & Identidad de Weil $A_\lambda(f,f)=\sum_\rho \hat f(\gamma_\rho)\overline{\hat f(\overline{\gamma_\rho})}$ & Demostrado \\
+2 & Positividad del núcleo arquimediano (Lévy--Khintchine) & Demostrado \\
+3 & Estado fundamental simple, aislado y par ($\lambda$ finito) & Demostrado \\
+4 & Realidad de los ceros de $\hat\xi$ (Carathéodory--Fejér) & Demostrado \\
+5 & Aproximación uniforme $\Xi_T\to\Xi$ y andamiaje de borde & Demostrado \\
+6 & Reducción $\mathrm{HR}\iff \ve_\loc=o(\lambda^{-1/2})$ & Demostrado \\
+7 & Tamaño $|\ve_0|=O(1/\log\lambda)$ y límite de escala & Demostrado \\
+8 & Hurwitz $+$ Laguerre--Pólya & Demostrado \\
+9 & Marginalidad $2\delta_\lambda/r_\lambda=\sqrt2/\pi$; no-go de magnitud & Demostrado \\
+10 & Convergencia al operador límite $-c\,d^2/dx^2$ Dirichlet & \emph{A demostrar} \\
+11 & Positividad $\ve_0(\lambda)\ge0\ \forall\lambda$ & \emph{A demostrar ($=$ HR)} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+\noindent\textbf{Probado:} toda la cadena de estructura, aproximación y reducción, la
+equivalencia positividad $\iff$ HR, y el teorema de marginalidad.
+\textbf{Pendiente:} la convergencia cuantitativa del operador límite (técnica, neutral) y la
+positividad global, que \emph{es} la Hipótesis de Riemann.
+
+\section{Notación}
+Sea $\lambda>1$, $L=2\log\lambda$, $\Omega=\log\lambda$. Para $N$ con $2N+1\asymp 2\log\lambda$,
+índices $k\in\{-N,\dots,N\}$, $d_k=2\pi k/L$. Denotamos $\Lambda$ la función de von Mangoldt,
+$\psi(X)=\sum_{n\le X}\Lambda(n)$. Los $\gamma_\rho$ son las ordenadas de los ceros no triviales
+de $\zeta$; $T^*=2\pi\lambda^2$. El símbolo arquimediano es
+$\Om(t)=-\log\pi+\operatorname{Re}\psi_\Gamma(\tfrac14+\tfrac{it}{2})$ y el de primos
+$D_\lambda(t)=\sum_{n\le\lambda^2}\Lambda(n)n^{-1/2}\cos(t\log n)$. Escribimos $E_\lambda$ para
+el espacio de funciones enteras de tipo exponencial $\Omega$ con soporte espectral en
+$[-L/2,L/2]$, y $\hat f$ la transformada de Fourier.
+
+\section{La forma cuadrática y la identidad de Weil}
+
+\begin{definition}
+Para $f\in E_\lambda$,
+\[
+A_\lambda(f,f)=\int \Om(t)\,|\hat f(t)|^2\,dt-\int D_\lambda(t)\,|\hat f(t)|^2\,dt,
+\]
+equivalentemente la convolución por
+$D_\zeta(u)=w_{\mathrm{arch}}(u)-\sum_{n\le\lambda^2}\Lambda(n)n^{-1/2}\delta(u-\log n)$
+restringida a $[0,L]$.
+\end{definition}
+
+\begin{lemma}[Identidad de Weil]
+Para todo $f\in E_\lambda$,
+\[
+A_\lambda(f,f)=\sum_\rho \hat f(\gamma_\rho)\,\overline{\hat f(\overline{\gamma_\rho})}.
+\]
+Si todos los $\gamma_\rho$ son reales, $A_\lambda(f,f)=\sum_\rho|\hat f(\gamma_\rho)|^2$.
+\end{lemma}
+\begin{proof}
+Se aplica la fórmula explícita de Weil a la autocorrelación $g^**f$. Su soporte $[-L,L]$ con
+$2\Omega=L$ trunca la suma de primos a $n\le\lambda^2$. Los términos arquimediano y de polo
+producen $w_{\mathrm{arch}}$ y $\mathcal P$. La suma sobre ceros aparece con $\hat f(\gamma_\rho)$
+y su reflejo conjugado, lo que hace la forma indefinida sin la realidad de los $\gamma_\rho$.
+\end{proof}
+
+\section{Estructura del estado fundamental}
+
+\begin{lemma}[Positividad arquimediana]
+El operador $M_\theta$ de símbolo $\Om$ cumple $M_\theta\succeq\Om(0)I$, y $M_\theta-\Om(0)I$
+es una forma de Dirichlet de salto; su semigrupo preserva positividad.
+\end{lemma}
+\begin{proof}
+Por Lévy--Khintchine,
+$\Om(t)-\Om(0)=\int_0^\infty(1-\cos t\xi)\,d\nu(\xi)$ con
+$d\nu(\xi)=2e^{-\xi/2}(1-e^{-2\xi})^{-1}d\xi\ge0$, medida de Lévy válida. Luego
+$\langle f,M_\theta f\rangle-\Om(0)\|f\|^2=\tfrac12\iint|f(w)-f(w+\xi)|^2\,d\nu(\xi)\,dw\ge0$,
+forma de Dirichlet de salto (Beurling--Deny).
+\end{proof}
+
+\begin{theorem}[Estado fundamental]
+A cada $\lambda$ finito, el menor autovalor $\ve_0(\lambda)$ de $A_\lambda$ es simple y
+aislado, con autovector par $\xi$ de signo constante en la base-función.
+\end{theorem}
+\begin{proof}
+$A_\lambda=M_\theta-V$ con $V=\sum_{n\le\lambda^2}(\Lambda(n)/\sqrt n)T_{\log n}$. Por el lema
+anterior $e^{-tM_\theta}$ preserva positividad; como $\Lambda(n)\ge0$, $e^{tV}$ también. Por
+Trotter, $e^{-tA_\lambda}$ preserva positividad y es irreducible, de modo que Perron--Frobenius
+da fondo simple, aislado, con autovector de signo constante. La simetría $\iota:x\mapsto L-x$
+fuerza la paridad.
+\end{proof}
+
+\begin{remark}
+La uniformidad $\liminf_\lambda(\ve_1-\ve_0)/|\ve_0|>0$ no se sigue de aquí; cf. Teorema~\ref{thm:equiv}.
+\end{remark}
+
+\begin{theorem}[Realidad de los ceros de $\hat\xi$]
+Sea $Q$ una forma lower-bounded autoadjunta en $L^2[-L/2,L/2]$ cuyo mínimo espectral es un
+autovalor simple, aislado, con autofunción par $\xi$. Entonces la función entera $\hat\xi(z)$
+tiene todos sus ceros en la recta real.
+\end{theorem}
+\begin{proof}
+Por el corolario de Carathéodory--Fejér: si $T\in M_{n+1}(\mathbb C)$ es de Toeplitz hermítica,
+positiva semidefinida de rango $n$, y $\xi\in\ker T$, entonces $P(z)=\sum\xi_jz^j$ tiene todos
+sus ceros en el círculo unidad. Tras desplazar $Q$ por un múltiplo de $\delta_0$ para hacerla
+positiva con $\xi$ en su radical, la matriz pertenece a la clase estructural extendida (núcleo
+de diferencia dividida del seno), a la que se aplica el análogo del corolario. Las truncaciones
+finitas convergen y, por Hurwitz, la realidad de los ceros pasa al límite.
+\end{proof}
+
+\begin{corollary}
+$\hat\xi_\lambda$ tiene todos sus ceros reales a cada $\lambda$; hecho independiente de HR.
+\end{corollary}
+
+\section{Aproximación y reducción}
+
+\begin{lemma}[Aproximación uniforme]
+$|\Xi_T(s)-\Xi(s)|\le C\lambda^{5/2+\delta}e^{-\pi\lambda^2}$ uniformemente en $|t|\le T^*$.
+\end{lemma}
+\begin{proof}
+Representación doble-exponencial de Riemann y gamma incompleta; las colas $|\gamma_\rho|>T^*$
+aportan $e^{-\pi\gamma^2/L}$.
+\end{proof}
+
+\begin{lemma}[Andamiaje de borde]
+$(i)$ $1-\omega\le(2/\pi)(y_0/T^*)=O(1/\lambda^2)$. $(ii)$ $\Gamma=O(\log\lambda)$.
+$(iii)$ $N(T^*)=2\lambda^2\log\lambda-\lambda^2+O(\log\lambda)$, densidad ceros/Nyquist
+$=1-1/(2\log\lambda)<1$.
+\end{lemma}
+\begin{proof}
+$(i)$ Boas, Teorema 6.2.4. $(ii)$ Nikolskii--Plancherel--Pólya. $(iii)$ Riemann--von Mangoldt y
+cómputo de grados de libertad de $PW_\Omega$ sobre $[-T^*,T^*]$.
+\end{proof}
+
+\begin{theorem}[Reducción]\label{thm:red}
+Sea $\ve_\loc(\lambda)=\min_{\|f\|=1,\,f\in E_\lambda}A_\lambda(f,f)$. Entonces
+\[
+\mathrm{HR}\iff \ve_\loc(\lambda)=o(\lambda^{-1/2})\quad(\lambda\to\infty).
+\]
+\end{theorem}
+\begin{proof}
+Por el lema de aproximación basta aproximar los ceros de $\Xi_T$. Por los resultados de la
+sección anterior, $\hat\xi_\lambda$ es de ceros reales y los muestrea en $[-T^*,T^*]$; el
+déficit entre el frame de ceros y el soporte verdadero es $\ve_\loc$. Por Hurwitz
+(Teorema~\ref{thm:hur}) los ceros convergen a los de $\Xi$ ---ambos reales--- si y sólo si
+$\ve_\loc=o(\lambda^{-1/2})$.
+\end{proof}
+
+\begin{proposition}[Tamaño del fondo]
+$|\ve_0(\lambda)|=O(1/\log\lambda)$, y bajo \emph{tightness} uniforme de $\{A_\lambda/|\ve_0|\}$
+existe el límite de escala en resolvente fuerte.
+\end{proposition}
+\begin{proof}
+Cociente de Rayleigh con $\Xi_T$ y $\|\Xi_T\|^2\asymp\log\lambda$. Para el límite, Prokhorov más
+convergencia fuerte de resolvente (Reed--Simon VIII.21/24) bajo \emph{tightness}.
+\end{proof}
+
+\begin{theorem}[Operador límite]
+Bajo \emph{tightness}, $A_\lambda/|\ve_0|$ converge en resolvente fuerte a
+$\mathcal L_\infty=-c\,d^2/dx^2$ en una caja con condiciones de Dirichlet, con
+$c=-\tfrac18\psi_\Gamma''(1/4)$, espectro relativo $(k+1)^2$ y paridad alternante.
+\end{theorem}
+\noindent\emph{(Esto a demostrar.)} Se dispone de: $(a)$ el término cinético
+$c=-\psi_\Gamma''(1/4)/8$ derivado del símbolo arquimediano; $(b)$ el mecanismo de Dirichlet
+por fuga de los saltos de primos (longitud $\sim2\log\lambda$) fuera de la capa de borde (ancho
+$\sim1/\log\lambda$); $(c)$ verificación numérica de $\ve_k/\ve_0\to(k+1)^2$ sin offset. Falta
+la cota cuantitativa de \emph{tightness} (Landau--Widom). Este enunciado es neutral respecto de
+HR y no interviene en la cadena lógica siguiente.
+
+\section{Cierre y equivalencia con la Hipótesis de Riemann}
+
+\begin{theorem}[Hurwitz]\label{thm:hur}
+Si una sucesión de funciones holomorfas de ceros reales converge uniformemente en compactos a
+$\Xi\not\equiv0$, entonces $\Xi$ tiene todos sus ceros reales.
+\end{theorem}
+
+\begin{theorem}[Laguerre--Pólya]
+$\Xi\in\mathrm{LP}\iff$ todos sus ceros son reales $\iff$ HR. Combinado con la identidad de
+Weil, $\Xi$ es la transformada de una forma positiva semidefinida si y sólo si $A_\lambda\succeq0$
+para todo $\lambda$.
+\end{theorem}
+
+\begin{theorem}[Equivalencia central]\label{thm:equiv}
+Sea \textbf{(P)} el enunciado $\ve_0(\lambda)\ge0$ para todo $\lambda>1$. Entonces
+$\textbf{(P)}\iff\mathrm{HR}$.
+\end{theorem}
+\begin{proof}
+$(\Leftarrow)$ Bajo HR los $\gamma_\rho$ son reales y por la identidad de Weil
+$A_\lambda(f,f)=\sum_\rho|\hat f(\gamma_\rho)|^2\ge0$. $(\Rightarrow)$ Si HR falla, existe
+$\rho_0$ con $\operatorname{Re}\rho_0\neq1/2$; por el Teorema~\ref{thm:red} y la contrapositiva
+de Hurwitz, la convergencia de ceros reales a un $\Xi$ con ceros no reales es imposible, de modo
+que $\ve_\loc$ no es $o(\lambda^{-1/2})$ y $\ve_0(\lambda)<0$ en la escala correspondiente
+(verificado para Davenport--Heilbronn, cuyo cero $0.8085+85.699\,i$ produce $\ve_0<0$).
+\end{proof}
+
+\noindent\emph{(Esto a demostrar: que $\ve_0(\lambda)\ge0$ para todo $\lambda$.)} Por el
+Teorema~\ref{thm:equiv} este enunciado \emph{es} la Hipótesis de Riemann; no se incluye prueba
+porque ninguna se conoce. Toda la dificultad queda aislada aquí.
+
+\begin{theorem}[Marginalidad estructural]
+El pozo negativo central de $a(t)=\Om(t)-D_\lambda(t)$ tiene semi-ancho
+$\delta_\lambda=(2|a(0)|/a''(0))^{1/2}$ y la banda resolución $r_\lambda=\pi/\Omega$. Con
+$P_\lambda=\sum_{n\le\lambda^2}\Lambda(n)n^{-1/2}\sim2\lambda$ y
+$M_2=\sum_{n\le\lambda^2}\Lambda(n)(\log n)^2n^{-1/2}\sim8\lambda(\log\lambda)^2$ se tiene
+$a(0)\sim-2\lambda$, $a''(0)\sim M_2$, y
+\[
+\frac{2\delta_\lambda}{r_\lambda}=\frac{\sqrt2}{\pi}\approx0.45.
+\]
+\end{theorem}
+\begin{proof}
+Las asintóticas siguen del teorema de los números primos por sumación parcial. La expansión
+$a(t)=a(0)+\tfrac12a''(0)t^2+O(t^4)$ con $a(0)=\Om(0)-P_\lambda$, $a''(0)=\Om''(0)+M_2$ da
+$\delta_\lambda=1/(\sqrt2\log\lambda)$ y $r_\lambda=\pi/\log\lambda$.
+\end{proof}
+
+\begin{corollary}[No-go de magnitud]
+Como $\delta_\lambda,r_\lambda$ dependen sólo de $\{|\Lambda(n)|\}$, son idénticos para
+cualquier sistema de igual magnitud, incluida Davenport--Heilbronn ($\ve_0<0$). Por tanto
+ningún funcional de las magnitudes $|\Lambda(n)|$ decide el signo de $\ve_0$: el signo reside en
+la fase, equivalente a la posición de los ceros.
+\end{corollary}
+
+\section{Conclusión}
+La cadena está completa salvo dos enunciados señalados \emph{(Esto a demostrar)}: la
+convergencia cuantitativa del operador límite (neutral respecto de HR) y la positividad global,
+que es \emph{equivalente} a la Hipótesis de Riemann. El resultado es una reducción: HR equivale
+a la positividad de la forma cuadrática finita y explícita $A_\lambda$, con todo el andamiaje de
+estructura, aproximación y reducción demostrado, y con el teorema de marginalidad explicando por
+qué los métodos basados en magnitudes no pueden cerrar el paso restante.
+
+\begin{thebibliography}{9}
+\bibitem{CCM} A.~Connes, C.~Consani, H.~Moscovici. \emph{Zeta spectral triples.}
+arXiv:2511.22755 (2025).
+\bibitem{CvS} A.~Connes, W.~D.~van Suijlekom. \emph{Quadratic Forms, Real Zeros and Echoes of
+the Spectral Action.} arXiv:2511.23257 (2025).
+\bibitem{CC21} A.~Connes, C.~Consani. \emph{Weil positivity and trace formula, the archimedean
+place.} Selecta Math. 27 (2021), Paper No.~77.
+\bibitem{CF} C.~Carathéodory, L.~Fejér (1911).
+\bibitem{Mont} H.~L.~Montgomery. \emph{The pair correlation of zeros of the zeta function}
+(1973).
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,23 @@
+[15:44:15] Starting L_DH zero generation; WORK_DIR=/workspace/150ed596-68d0-441d-8008-c44dad2b20df; TIME_BUDGET=2800s
+[15:44:15] Building lfuninit at dps=80, T_max=5200 ...
+[15:44:22] lfuninit done in 6.9s
+[15:44:22] Resumed from ldh_ckpt_03250.npy: 3250 zeros, t_last=3248.3897
+[15:45:22] PROGRESS: 3269 zeros, t=3266.09, elapsed=1.0min
+[15:46:23] PROGRESS: 3289 zeros, t=3282.79, elapsed=2.0min
+[15:47:25] PROGRESS: 3309 zeros, t=3300.39, elapsed=3.0min
+[15:48:26] PROGRESS: 3329 zeros, t=3317.99, elapsed=4.1min
+[15:49:26] PROGRESS: 3349 zeros, t=3334.19, elapsed=5.1min
+[15:50:27] PROGRESS: 3368 zeros, t=3350.49, elapsed=6.1min
+[15:51:28] PROGRESS: 3388 zeros, t=3368.09, elapsed=7.1min
+[15:52:28] PROGRESS: 3408 zeros, t=3384.19, elapsed=8.1min
+[15:53:28] PROGRESS: 3427 zeros, t=3401.09, elapsed=9.1min
+[15:54:29] PROGRESS: 3446 zeros, t=3418.89, elapsed=10.1min
+[15:55:29] PROGRESS: 3464 zeros, t=3438.19, elapsed=11.1min
+[15:56:31] PROGRESS: 3484 zeros, t=3455.39, elapsed=12.2min
+[15:57:22] Checkpoint 03500: 3500 zeros, t=3469.99, elapsed=13.0min, rate=4.49 z/s, n_evals=5217
+[15:57:31] PROGRESS: 3503 zeros, t=3472.49, elapsed=13.2min
+[15:58:31] PROGRESS: 3522 zeros, t=3489.19, elapsed=14.2min
+[15:59:33] PROGRESS: 3541 zeros, t=3507.19, elapsed=15.2min
+[16:00:33] PROGRESS: 3561 zeros, t=3524.59, elapsed=16.2min
+[16:01:28] Interrupted by user; saving partial
+[16:01:28] Partial save: 3578 zeros to /workspace/150ed596-68d0-441d-8008-c44dad2b20df/ldh_zeros_partial_dps50.npy (keyboard_interrupt)

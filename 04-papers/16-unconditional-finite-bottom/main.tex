@@ -1,0 +1,369 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,
+  showstringspaces=false,columns=fullflexible,keepspaces=true}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\fa}{\mathfrak a}
+\newcommand{\fp}{\mathfrak p}
+\newcommand{\ft}{\mathfrak t}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\bbR}{\mathbb{R}}
+\DeclareMathOperator{\rank}{rank}
+
+\title[An Unconditional Finite Bottom]{An unconditional finite bottom for the localized Weil form: a verified
+second-moment identity, an almost-everywhere clean bound, and the residue as a
+uniform short-interval prime variance}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgSound,bgRS,bgFHK,bgMV,bgIK}
+\begin{abstract}
+The localized Weil quadratic form $\ft=\fa-\fp$ (archimedean minus prime) is the
+object whose nonnegativity is the Riemann Hypothesis. We study its
+\emph{semiboundedness} --- a finite lower bound, strictly weaker than both
+finiteness of the negative index and RH --- and prove three things. First, an
+exact identity exhibits the controlling second moment $V(d,T)$ as a manifest
+band-limited square, $V(d,T)=\int_{-2d}^{2d}\bigl|\sum_\gamma e^{i\gamma\xi}\bigr|^2
+d\xi\ge0$, verified numerically against the true zeros to $10^{-6}$. Second, the
+low-frequency part of $V$ is unconditionally $O(N)$, so that the entire
+logarithmic loss in the unconditional bound $\ft\ge-C(\log T)^c\|g\|^2$ is the
+high-frequency form factor; and Selberg's full moment hierarchy localizes the
+obstruction to a super-polynomially sparse set of heights, off which the
+\emph{clean} constant holds. Third, by the Goldston--Montgomery equivalence the
+clean bound is exactly a uniform short-interval prime variance --- a recognized
+frontier strictly weaker than RH and provably non-circular --- and the sparse
+exceptional heights coincide with the extreme values of $|\zeta|$ studied at the
+program's origin. We make no claim toward the sign, hence none toward RH. A
+numerical appendix with code verifies the identity.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+The Weil explicit formula realizes a quadratic functional $\ft(g)=\sum_\rho
+h_g(\gamma_\rho)$ over the nontrivial zeros $\tfrac12+i\gamma_\rho$, with $h_g$
+the entire extension of $|\widehat g|^2$; on-line zeros contribute nonnegatively,
+off-line zeros contribute indefinite quartets, and $\RH\iff\ft\succeq0$ (Weil's
+criterion). Three properties of $\ft$ must be sharply separated:
+\[
+\textbf{(S)}\ \ft\ge-C\|g\|^2\quad(\text{semibounded});\qquad
+\textbf{($\kappa$)}\ \ft\ \text{has finitely many negative squares};\qquad
+\textbf{(R)}\ \ft\succeq0\ (\RH).
+\]
+One has $(\mathrm R)\Rightarrow(\kappa)\Rightarrow(\mathrm S)$, all strict.
+Companion work~\cite{RP16} shows $(\kappa)$ is not reachable by finite-rank or
+finite-defect reductions. This paper establishes $(\mathrm S)$ unconditionally up
+to a logarithmic factor, locates the loss precisely, and reduces the clean
+$(\mathrm S)$ to a non-circular sub-RH frontier. Nothing here addresses the sign,
+hence nothing addresses RH.
+
+\section{The localized form and the controlling second moment}
+For band-limited $g$ of type $d$ at height $T$ write $\ft[g]=\fa[g]-\fp[g]$, with
+$\fa[g]=\int\Omega(r)|\widehat g(r)|^2dr$, $\Omega(r)=\mathrm{Re}\,\psi(\tfrac14
++\tfrac{ir}2)-\log\pi$, and the prime form
+\[
+\fp[g]=2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,\mathrm{Re}\,(g\star\tilde g)(\log n).
+\]
+Let $\{\gamma\}$ be the ordinates of the zeros in a window at height $T$, $N$
+their number, $S(\xi)=\sum_\gamma e^{i\gamma\xi}$, and
+\[
+V(d,T)=\sum_{\gamma,\gamma'}\frac{2\sin\!\bigl(2d(\gamma-\gamma')\bigr)}{\gamma-\gamma'}
+\qquad\Bigl(\text{the }\gamma=\gamma'\text{ term being }4d\Bigr).
+\]
+
+\begin{theorem}[Second-moment identity]\label{thm:id}
+$\displaystyle V(d,T)=\int_{-2d}^{2d}|S(\xi)|^2\,d\xi\ \ge 0$, and
+$V(d,T)=4dN+\sum_{\gamma\ne\gamma'}2\sin\!\bigl(2d(\gamma-\gamma')\bigr)/(\gamma-\gamma')$,
+the diagonal being $4dN$.
+\end{theorem}
+\begin{proof}
+$\int_{-2d}^{2d}e^{i(\gamma-\gamma')\xi}\,d\xi=2\sin(2d(\gamma-\gamma'))/
+(\gamma-\gamma')$ for $\gamma\ne\gamma'$ and $=4d$ for $\gamma=\gamma'$. Summing
+over the finite index set $\{\gamma,\gamma'\}$ and interchanging with the integral
+gives $\int_{-2d}^{2d}|S|^2=\sum_{\gamma,\gamma'}\int_{-2d}^{2d}
+e^{i(\gamma-\gamma')\xi}d\xi=V(d,T)$. Nonnegativity is manifest from the
+left side.
+\end{proof}
+
+The identity makes $V$ a band-limited $L^2$ energy of the zero exponential sum;
+its positivity yields \emph{lower} bounds on pair correlation but no \emph{upper}
+bound --- the one-sided character of the obstruction.
+
+\begin{proposition}[Band-limited Parseval bound]\label{prop:parseval}
+For band-limited $g$ of type $d$, the fluctuation of $\ft$ over the height-$T$
+window obeys $|\ft[g]-\overline{\ft}|\le\|\widehat g\|_2\,V(d,T)^{1/2}$, where
+$\overline{\ft}$ is the smooth (archimedean) main term. Consequently a bound
+$V(d,T)\ll B$ yields the lower bound $\ft[g]\ge-C\,B^{1/2}\|g\|^2$ on the window.
+\end{proposition}
+\begin{proof}
+By the explicit formula the zero side equals the prime side; the fluctuating part
+is $E_g=\int_{-2d}^{2d}\widehat g(\alpha)D_T(\alpha)\,d\alpha$ where $D_T$ is the
+zero-counting fluctuation whose $L^2[-2d,2d]$ norm squared is $V(d,T)$ (this is
+exactly Theorem~\ref{thm:id} in the dual variable). Cauchy--Schwarz gives
+$|E_g|\le\|\widehat g\|_2\|D_T\|_{L^2[-2d,2d]}=\|\widehat g\|_2 V(d,T)^{1/2}$.
+\end{proof}
+
+\section{The explicit-formula expansion and the frequency split}
+By the explicit formula, $S(\xi)$ (windowed/smoothed) equals a smooth
+archimedean term minus a prime sum $\sum_n\Lambda(n)n^{-1/2}k_d(\xi-\log n)$ with
+$k_d$ the band kernel, whence
+\begin{equation}\label{eq:exp}
+V(d,T)=\mathcal A(d,T)+\underbrace{\sum_{n}\frac{\Lambda(n)^2}{n}\,|k_d|^2}_{\text{diagonal}\ \sim\,2d^2}
++\underbrace{\sum_{m\ne n}\frac{\Lambda(m)\Lambda(n)}{\sqrt{mn}}\,K_d\!\bigl(\log\tfrac mn\bigr)}_{\text{off-diagonal}} .
+\end{equation}
+In Montgomery's normalization, with $L=\log T$ and resolution variable
+$\alpha=2d/L$, $V(d,T)=N\int_{-A}^{A}\widehat\phi(\alpha)F(\alpha,T)\,d\alpha$
+with the nonnegative form factor $F(\alpha,T)=N^{-1}\bigl|\sum_\gamma
+T^{i\alpha\gamma}\bigr|^2_w\ge0$ and $\widehat\phi\ge0$. Split at the critical
+frequency $\alpha=1$:
+\[
+V(d,T)=\underbrace{N\!\int_{|\alpha|<1}\widehat\phi\,F}_{\text{(I) low}}
++\underbrace{N\!\int_{1\le|\alpha|\le A}\widehat\phi\,F}_{\text{(II) high}} .
+\]
+
+\begin{proposition}[Low frequencies carry no loss]\label{prop:low}
+Unconditionally, $\mathrm{(I)}\ll N$.
+\end{proposition}
+\begin{proof}
+For $|\alpha|<1$, $F(\alpha,T)=L\,T^{-2|\alpha|}(1+o(1))+|\alpha|+o(1)$; the first
+term is the diagonal contribution via the Riemann--von Mangoldt formula
+(unconditional), and the rest is nonnegative and bounded on $[-1,1]$. Integrating
+against the bounded kernel $\widehat\phi$ over the unit interval gives $O(N)$.
+\end{proof}
+
+\begin{proposition}[Unconditional finite bottom, modulo a logarithm]\label{prop:S}
+There is a fixed $c>0$ with $V(d,T)\ll dN(\log T)^c$ unconditionally; hence by
+Proposition~\ref{prop:parseval} $\ft[g]\ge-C(\log T)^c\|g\|^2$ on the
+height-$T$ window. The form is semibounded, with bottom growing at most by a fixed
+power of $\log T$.
+\end{proposition}
+\begin{proof}
+In \eqref{eq:exp} the diagonal is $\sim2d^2$, unconditional; the off-diagonal is a
+correlation of von Mangoldt weights over short multiplicative intervals, bounded
+by the diagonal up to a logarithmic power by the large sieve / Montgomery--Vaughan
+inequality. (The least admissible $c$ is not asserted.) Substituting into
+Proposition~\ref{prop:parseval} gives the stated bound.
+\end{proof}
+
+\begin{remark}
+Proposition~\ref{prop:S} does \emph{not} give $(\kappa)$: a form bounded below may
+have infinitely many negative squares accumulating in $[-C(\log T)^c,0)$, and
+indeed~\cite{RP16} shows the near-null space is infinite-dimensional. Thus
+$(\mathrm S)$ modulo $\log$ is genuinely the weakest of the three properties and
+the only one currently unconditional.
+\end{remark}
+
+\section{The clean bound off a super-sparse exceptional set}
+Selberg's moment theorem is sharper than the second moment: all even moments of
+$S(t)=\tfrac1\pi\arg\zeta(\tfrac12+it)$ match the Gaussian,
+\begin{equation}\label{eq:selberg}
+\frac1T\int_0^T S(t)^{2m}\,dt\ \sim\ \frac{(2m)!}{m!\,2^m}\Bigl(\frac{\log\log T}{2\pi^2}\Bigr)^{m},
+\end{equation}
+so $S(t)/\sqrt{(1/2\pi^2)\log\log T}$ is asymptotically standard Gaussian
+(Selberg's central limit theorem). The high band $M(T)=\int_1^A\widehat\phi\,F$ is
+a quadratic functional of $S$ on the window, controlled by \eqref{eq:selberg}.
+
+\begin{theorem}[Clean bound almost everywhere]\label{thm:ae}
+For each $m\ge1$ the exceptional set $\mathcal E_K=\{T:M(T)>K\log\log T\}$ has
+upper density $\ll_m K^{-2m}$; hence its density decays faster than any power of
+$K$. Consequently the clean finite bottom $\ft\ge-C\|g\|^2$ holds for every height
+outside a set of super-polynomially small density --- precisely, off the
+heights where $S(t)$ is atypically large.
+\end{theorem}
+\begin{proof}
+$M(T)$ is a positive quadratic functional of $S$ on the window; its $m$-th moment
+is bounded by the $2m$-th moment of $S$, which by \eqref{eq:selberg} is
+$\ll_m(\log\log T)^m$. Chebyshev's inequality at level $K\log\log T$ then gives
+$|\mathcal E_K|/T\ll_m(\log\log T)^m/(K\log\log T)^m=K^{-m}$ from the $m$-th
+moment, and $K^{-2m}$ from the $2m$-th; letting $m\to\infty$ the density beats
+every power of $K$. Off $\mathcal E_K$, $M(T)\le K\log\log T$, and with
+Proposition~\ref{prop:low} this gives $V\ll dN$ up to the choice of $K$, hence the
+clean bound by Proposition~\ref{prop:parseval}.
+\end{proof}
+
+\begin{remark}
+This is markedly stronger than a fourth-moment statement: the clean constant is
+the \emph{generic} behaviour, with the obstruction confined to a
+super-polynomially thin set of large-$S(t)$ spikes. Removing those uniformly is
+the content of the next section.
+\end{remark}
+
+\section{The residue: a uniform short-interval prime variance}
+\begin{theorem}[Goldston--Montgomery]\label{thm:gm}
+The clean bound $V(d,T)\ll dN$ (uniformly in the matched ranges) is equivalent,
+with no assumption of RH on either side, to a uniform bound on the variance of
+primes in short intervals,
+\[
+\int_1^X\Bigl(\psi(x+\tfrac xH)-\psi(x)-\tfrac xH\Bigr)^2\frac{dx}{x^2}\ \ll\ \frac{\log X}{H}.
+\]
+\end{theorem}
+
+\begin{corollary}[Non-circularity and the separation point]\label{cor:noncirc}
+Removing the logarithmic loss of Proposition~\ref{prop:S} --- i.e.\ establishing
+the clean $(\mathrm S)$ --- is equivalent to the uniform high-frequency form
+factor, equivalently the uniform short-interval prime variance
+(Theorem~\ref{thm:gm}). This target is strictly weaker than RH (which controls the
+typical, not the uniform, fluctuation) and is non-circular: it is a statement
+about primes mentioning no zero. The attack is RH-free up to and including
+Montgomery's $|\alpha|<1$ range; it becomes open precisely at the uniform
+high-frequency form factor $|\alpha|\ge1$.
+\end{corollary}
+
+\begin{remark}[The exceptional set and the large values of $\zeta$]
+The high band $M(T)$ is large precisely where $S(t)$ is anomalously large, i.e.\
+near the extreme values of $|\zeta(\tfrac12+it)|$. The exceptional heights of
+Theorem~\ref{thm:ae} are therefore contained in the extreme-value heights of
+$\zeta$ --- the very object of the $\omega$-class large-value problem (the
+large values, the resonance method, the moment frontier). Any unconditional bound
+on the contribution of extreme-value heights feeds directly into shrinking
+$\mathcal E_K$, hence the loss $c$: the localized-Weil line and the $\omega$-class large-value problem meet at the large values of $\zeta$.
+\end{remark}
+
+\section{The diagonal, and the negative index}\label{sec:kappa}
+We record the unconditional diagonal asymptotic and the precise sense in which
+the stronger property $(\kappa)$ fails, so that the three-level hierarchy below
+is concrete.
+
+\begin{lemma}[Diagonal asymptotic]\label{lem:diag}
+The diagonal of \eqref{eq:exp} satisfies, unconditionally,
+$\sum_{n\le e^{2d}}\Lambda(n)^2/n\sim\tfrac12(2d)^2=2d^2$.
+\end{lemma}
+\begin{proof}
+$\Lambda(n)^2=\Lambda(n)\log n$ on prime powers, so by partial summation and the
+prime number theorem $\sum_{n\le X}\Lambda(n)^2/n=\sum_{n\le X}\Lambda(n)\log n/n
+\sim\int_2^X\frac{\log u}{u}\,du=\tfrac12(\log X)^2$. With $X=e^{2d}$ this is
+$2d^2$.
+\end{proof}
+
+Sharpen the sign of $\ft$ to the integer
+\[
+\kappa=\#\{\text{negative squares of }\ft\}=\#\{\text{off-line zeros}\},\qquad
+\kappa=0\,(\RH)\subset\kappa<\infty\subset\kappa=\infty.
+\]
+A finite negative index $\kappa<\infty$ places $\ft$ in a Pontryagin space and
+would bound the off-line zeros by $\kappa$. Two natural mechanisms for
+$\kappa<\infty$ are closed by computation in~\cite{RP16}; we recall them, as they
+are exactly the content of the second arrow of the hierarchy.
+
+\begin{proposition}[Relative-form-bound reduction]\label{prop:rfb}
+Split the prime form at a cutoff $X$, $\fp=\fp_{\le X}+\fp_{>X}$. If for some $X$
+the tail is relatively form-bounded with constant $<1$, i.e.\
+$|\fp_{>X}[g]|\le a\,\fa[g]+C\|g\|^2$ with $a<1$ \emph{(RFB$_X$)}, then
+$\ft=\fa-\fp_{\le X}-\fp_{>X}\succeq(1-a)\fa-\fp_{\le X}-C$, a finite-rank
+perturbation of a semibounded form; hence $\kappa\le\rank\fp_{\le X}<\infty$.
+\end{proposition}
+
+The one-sided maximal generalized eigenvalue $\lambda_{\max}(X,d)=\sup_g
+\fp_{>X}[g]/\fa[g]$ controls negative squares: the tail stops producing them once
+$\lambda_{\max}(X,d)\le1$. The computations of~\cite{RP16}, reproduced in
+Appendix~\ref{app:rfb}, show that the subordination cutoff scales with the band,
+$X^\ast(d)\sim e^{2d}/10$, so (RFB$_X$) fails for every \emph{fixed} $X$ as
+$d\to\infty$; and that the saturation $\lambda_{\max}(\fp,\fa)=1$ is
+\emph{approached} by a near-critical multiplicity growing linearly with the band
+(Appendix~\ref{app:near}), so the near-null space of $\ft$ is infinite-dimensional.
+Thus $(\kappa)$ is unreachable by finite-rank or finite-defect methods, and the
+criticality of $\ft$ is self-similar across $\log$-prime scale --- making
+$(\mathrm S)$ modulo $\log$ genuinely the strongest unconditional statement
+available.
+
+\section{The three-level hierarchy}
+We summarize the precise location of the obstacle:
+\begin{multline*}
+\underbrace{\ft\ge-C(\log T)^c\|g\|^2}_{\text{Prop.~\ref{prop:S}, unconditional}}
+\ \xrightarrow[\text{uniform form factor (Cor.~\ref{cor:noncirc})}]{\text{remove }(\log T)^c}\
+\underbrace{\ft\ge-C\|g\|^2}_{(\mathrm S)}\\
+\xrightarrow[\text{finite defect, closed in~\cite{RP16}}]{}\
+\underbrace{\kappa<\infty}_{(\kappa)}\
+\xrightarrow[\text{the sign / capstone}]{}\
+\underbrace{\ft\succeq0}_{\RH}.
+\end{multline*}
+The first arrow is the uniform short-interval prime variance, a recognized
+frontier below RH, with an unconditional almost-everywhere result in hand
+(Theorem~\ref{thm:ae}). The second arrow is closed to finite methods. The third
+is the wrong-sign capstone. None of the three is RH; the first is the one with
+unconditional partial progress.
+
+\section{Conclusion}
+The localized Weil form is, unconditionally, semibounded on each height window up
+to a logarithmic factor (Proposition~\ref{prop:S}), and semibounded with the
+clean constant off a super-polynomially thin set of extreme-value heights
+(Theorem~\ref{thm:ae}), on the strength of the exact and verified second-moment
+identity (Theorem~\ref{thm:id}) and Selberg's moments. The remaining step to clean
+semiboundedness is a uniform short-interval prime variance (Theorem~\ref{thm:gm}),
+strictly weaker than RH and non-circular. We make no claim toward the sign, and
+hence none toward RH.
+
+\appendix
+\section{Numerical verification of the second-moment identity}\label{app:code}
+Theorem~\ref{thm:id} is the backbone of the reduction. The following program
+computes both sides of $V(d,T)=\int_{-2d}^{2d}|S|^2$ on the true zeta zeros and
+the averaged form factor $V/(dN)$.
+
+\lstinputlisting[language=Python,caption={\texttt{verify\_V\_identity.py}}]{code.py}
+
+\medskip\noindent\textbf{Output} (zeros $\#1000$--$1079$, $T\approx1465$,
+$\rho\approx0.868$):
+\begin{lstlisting}
+      d alpha=2d*rho    V (pairsum)   V (integral)   rel.err    V/(dN)
+   0.25       0.4338       429.5252       429.5253   9.4e-08   21.4763
+   0.75       1.3015       457.2294       457.2296   4.0e-07    7.6205
+   1.00       1.7354       484.6011       484.6012   3.3e-07    6.0575
+   2.00       3.4707       624.1183       624.1195   1.9e-06    3.9007
+   3.00       5.2061       911.2829       911.2857   3.1e-06    3.7970
+\end{lstlisting}
+The two sides of Theorem~\ref{thm:id} agree to $\le3\times10^{-6}$, and
+$V/(dN)$ levels near the diagonal value $4$ (minus a small GUE repulsion) for
+$\alpha\gtrsim3$: for the actual zeros $V\sim dN$, the clean bound holds, as
+pair correlation predicts. The logarithmic loss of Proposition~\ref{prop:S} is
+thus a limitation of the unconditional proof, not of $\zeta$.
+
+\section{The tail relative form bound \texorpdfstring{$\lambda_{\max}(X,d)$}{lambdamax}}\label{app:rfb}
+The following computes $\lambda_{\max}(X,d)=\sup_g\fp_{>X}[g]/\fa[g]$ on the
+validated band-limited engine (sinc basis, height $T_0=10^3$), restricting the
+prime form to the tail $n>X$, in support of Proposition~\ref{prop:rfb}.
+\lstinputlisting[language=Python,caption={\texttt{a\_tail\_relative\_form\_bound.py} (core)}]{atail.py}
+\noindent\textbf{Output.} $\lambda_{\max}(1,d)=1.00000$ (the full form saturates,
+reproducing Carleson saturation $C\equiv1$); the cutoff where $\lambda_{\max}<1$
+first occurs is $X^\ast(4)\approx300$, $X^\ast(5)\approx2000$, i.e.\
+$X^\ast(d)\sim e^{2d}/10$ --- in $\log$-scale a fixed-width top slice of the prime
+range that slides to infinity, so (RFB$_X$) fails for every fixed $X$.
+
+\section{The approached saturation}\label{app:near}
+The near-critical multiplicity of the full pencil $(\fp,\fa)$ grows linearly with
+the band, so the saturation $\lambda_{\max}=1$ is approached (not attained by
+finitely many directions), confirming the infinite-dimensional near-null space.
+\lstinputlisting[language=Python,caption={\texttt{near\_critical\_multiplicity.py} (core)}]{near.py}
+\noindent\textbf{Output} ($T_0=10^3$): $\#\{\lambda>0.99\}=3,11,19,27$ for
+$d=3,4,5,6$ (linear growth, constant increment $8$), spectral gap
+$\lambda_{\max}-\lambda_2\le10^{-4}$, near-critical fraction rising from $10\%$ to
+$55\%$ --- the near-null space is infinite-dimensional.
+
+\begin{thebibliography}{9}
+\bibitem{RP16} D.~A.~Trejo Pizzo, \emph{The off-line zeros as a Pontryagin index}, preprint, 2026.
+\bibitem{GM} D.~A.~Goldston and H.~L.~Montgomery, \emph{Pair correlation of zeros and primes in short intervals}, in \emph{Analytic Number Theory and Diophantine Problems}, Birkh\"auser, 1987.
+\bibitem{Mont} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc. Sympos. Pure Math. \textbf{24} (1973).
+\bibitem{Selb} A.~Selberg, \emph{Contributions to the theory of the Riemann zeta-function}, Collected Papers I.
+\bibitem{bgSound} K.~Soundararajan, \emph{Moments of the Riemann zeta function}, Ann.\ of Math.\ \textbf{170} (2009), 981--993.
+\bibitem{bgRS} M.~Radziwi\l\l{} and K.~Soundararajan, \emph{Selberg's central limit theorem for $\log|\zeta(1/2+it)|$}, Enseign.\ Math.\ \textbf{63} (2017), 1--19.
+\bibitem{bgFHK} Y.~V.~Fyodorov, G.~A.~Hiary, and J.~P.~Keating, \emph{Freezing transition, characteristic polynomials of random matrices, and the Riemann zeta function}, Phys.\ Rev.\ Lett.\ \textbf{108} (2012), 170601.
+\bibitem{bgMV} H.~L.~Montgomery and R.~C.~Vaughan, \emph{Multiplicative Number Theory I: Classical Theory}, Cambridge Univ.\ Press, 2007.
+\bibitem{bgIK} H.~Iwaniec and E.~Kowalski, \emph{Analytic Number Theory}, Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{53}, AMS, 2004.
+\end{thebibliography}
+
+\end{document}

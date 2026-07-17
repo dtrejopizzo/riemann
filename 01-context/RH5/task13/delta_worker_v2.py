@@ -1,0 +1,3 @@
+
+import os, sys, time, pickle
+import cypari2 def worker_to_file(args): """Worker variant that writes result to file to avoid pickling cypari2 data across pipes.""" tmin, tmax, dps, idx, outdir = args pari = cypari2.Pari() pari.default("realprecision", dps) pari("L = lfunmf(mfinit([1,12],1), mfeigenbasis(mfinit([1,12],1))[1])") t0 = time.time() z = pari.lfunzeros(pari("L"), [tmin, tmax]) elapsed = time.time() - t0 n = len(z) out = [str(z[i]) for i in range(n)] out_path = os.path.join(outdir, f"shard_{idx:02d}.pkl") with open(out_path, "wb") as f: pickle.dump({"idx": idx, "tmin": tmin, "tmax": tmax, "elapsed": elapsed, "zeros": out}, f) return out_path

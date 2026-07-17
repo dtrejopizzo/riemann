@@ -1,0 +1,34 @@
+## Overview <output>
+<conclusion>
+A consolidated Bottleneck Ledger (`bottleneck_ledger_final.md`) was assembled, documenting four formal entries that cover the irreproducibility of the spec's L_DH benchmark, the corrected κ-weighted L_DH definition, the L(Δ,s) zero-generation bug fix, and the final diagnosis that the L(Δ,s) residual reflects degree-2 prime-sum convergence rather than an engine flaw.
+</conclusion> <methods>
+1. Inventoried the workspace; found only `-v8-validated-data.md` and `bottleneck_ledger_L_DH.md` plus this task's brief — no standalone f1/f2/f3/f5/r19/r31/r33 files were present in the task.
+2. Used the `explore` sub-agent to confirm that those finding/report IDs are not preserved as discrete files, and to extract their reconstructed content from the project's authoritative brief and the existing ledger entry.
+3. Read `bottleneck_ledger_L_DH.md` in full and the binding specification's §2–§4 to capture exact numerical values and the recorded definition mismatch (spec line shows coefficient `1`, not `κ`).
+4. Authored `bottleneck_ledger_final.md` as a structured ledger: Provenance / Entry 1 (L_DH benchmark irreproducibility) / Entry 2 (κ-weighting correction) / Entry 3 (zero-generation bug) / Entry 4 (degree-2 threshold mismatch), each with Issue, Resolution, and Decision sections, citing numerical values directly from the existing ledger entry and the project brief without fabricating new measurements.
+5. Generated a single summary figure `bottleneck_ledger_final_summary.png` showing all four ledger entries (issue / resolution / status) in a 2×2 grid using matplotlib.
+</methods> <results>
+The final ledger captures (verbatim from the available authoritative sources): - Entry 1 — L_DH benchmark: spec gate `λ_min ≈ −9.0×10⁴` and `|λ_min|/tr(M_zeros) ≈ 1.7` at (T₀=85.7, σ=2, J=10, dps=50) is irreproducible because L_DH has no Euler product and no public Λ-coefficient definition. Best-effort reference at (T₀=85.7, σ=2, J=10, X=10⁵, κ=0.28408): λ_min = −7.7712×10⁻¹, λ_max = +7.1697×10⁻¹, tr(M_zeros) = 5.2136, tr(M_arith) = 6.6977, trace residual = −1.4841, |λ_min|/tr(M_zeros) = 1.49×10⁻¹.
+- Entry 2 — L_DH formula error: corrected definition is `L_DH(s) = ((1−iκ)/2)·L(s,χ) + ((1+iκ)/2)·L(s,χ̄)` with κ ≈ 0.28407904384; the off-line zero (0.808517, 85.699348) and its functional-equation mirror (0.191483, 85.699348) are now handled consistently.
+- Entry 3 — L(Δ,s) zero bug: switching from `_zeros.py` to `_zeros_v2.py` / `L_Delta_zeros_200_reliable.pkl` and from T₀=85.7 to T₀=46.13 reduced the trace mismatch ~140×, from ~9% to ~0.06%.
+- Entry 4 — Degree-2 threshold mismatch: the remaining `L(Δ,s)` residual is far above the degree-1 `<10⁻¹²` gate because the degree-2 prime sum converges much more slowly and τ(n) computation makes the required X infeasible; this is a methodological miscalibration of the validation thresholds, not an engine bug.
+</results> <challenges>
+The named prior artifacts referenced in the objective (findings f1/f2/f3/f5 and reports r19/r31/r33) do not exist as discrete files in this task's workspace, and `.prompts/MEMORY.md` was an empty template. Their content had to be reconstructed strictly from the authoritative project brief and the existing `bottleneck_ledger_L_DH.md`, with no fabrication of additional numerical values. This is explicitly disclosed in the "Provenance and evidence base" section of the final ledger so downstream readers can audit the source of each claim. Additionally, the spec text on line 26 of `-v8-validated-data.md` shows the uncorrected coefficient form (`(1±i)/2`, not `(1±iκ)/2`), so the project brief's claim of an initial L_DH formula error is internally corroborated by the spec itself.
+</challenges> <discussion>
+The consolidated ledger captures two qualitatively different categories of bottleneck. Entries 1 and 2 are specification problems: the canonical RH-violator L_DH is, by its own construction, outside the Selberg class, which means any "explicit-formula" benchmark for it implicitly depends on a non-canonical choice of arithmetic side. This is a structural limit on what the Weil detector can be expected to reproduce for Davenport–Heilbronn, and the project correctly converted the failed match into a qualitative positive-control criterion. Entries 3 and 4 are computational/methodological: a tooling bug in zero generation was masking a more interesting fact, namely that degree-2 automorphic L-functions like L(Δ,s) have intrinsically slower-converging arithmetic sums and therefore cannot be held to thresholds calibrated on ζ and Dirichlet L-functions. Together, these four entries justify a tiered validation policy going forward — strict trace-identity tolerances for degree-1 controls, and degree-aware tolerances plus convergence diagnostics for degree-2 controls.
+</discussion> <proposed-next-hypotheses>
+1. The L(Δ,s) trace residual decays as a slow power law in X (consistent with a degree-2 GL(2) Rankin–Selberg–style mean square), so fitting log-residual vs log X across a feasible range of X should yield a slope between roughly −1/2 and −1, predicting the X needed to reach any chosen tolerance.
+2. A degree-aware noise-floor theory analogous to η_theory(X) for ζ and L(χ₄ mod 5) — but with the degree-1 Prime Number Theorem replaced by the Rankin–Selberg average of |τ(n)|² — will quantitatively explain the L(Δ,s) trace residual at fixed (T₀, σ, J) and recover the observed 140× improvement when switching from T₀=85.7 to T₀=46.13.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>bottleneck_ledger_final.md</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Consolidated final Bottleneck Ledger for the v8 Localized Weil Detector project. Compiled from the existing `bottleneck_ledger_L_DH.md` entry, the binding specification `-v8-validated-data.md`, and the project task brief's preserved summaries of findings f1/f2/f3/f5 and reports r19/r31/r33. Documents four ledger entries: (a) the irreproducibility of the L_DH `λ_min ≈ −9.0×10⁴` benchmark, (b) the corrected κ-weighted L_DH definition, (c) the `_zeros.py → _zeros_v2.py` zero-generation fix, and (d) the degree-1-vs-degree-2 validation threshold mismatch for L(Δ,s). Includes a provenance section explicitly noting which referenced finding/report IDs are not present as standalone files in the workspace.</artifact-description>
+</artifact>
+<artifact>
+<file-name>bottleneck_ledger_final_summary.png</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Single-panel summary figure (2×2 layout) showing each of the four consolidated ledger entries with their Issue, Resolution, and Status. Generated with matplotlib from the contents of `bottleneck_ledger_final.md`.</artifact-description>
+</artifact>
+</artifacts>
+</output> 

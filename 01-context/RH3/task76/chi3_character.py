@@ -1,0 +1,3 @@
+
+# Dirichlet character χ₃ mod 3 (real quadratic character)
+# This is the non-principal real character modulo 3 def chi_3(n): ''' Real Dirichlet character mod 3 (quadratic character). χ₃(n) = 0 if gcd(n, 3) ≠ 1 χ₃(n) = 1 if n ≡ 1 (mod 3) χ₃(n) = -1 if n ≡ 2 (mod 3) This is a real, non-principal, multiplicative Dirichlet character. ''' if n % 3 == 0: return 0 elif n % 3 == 1: return 1 else: # n % 3 == 2 return -1 def generate_chi3_coefficients(N): '''Generate coefficient array a_n = χ₃(n) for n=1 to N''' import numpy as np coeffs = np.array([chi_3(n) for n in range(1, N+1)], dtype=np.float64) return coeffs

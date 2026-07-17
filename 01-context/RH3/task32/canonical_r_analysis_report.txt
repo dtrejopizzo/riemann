@@ -1,0 +1,22 @@
+
+CANONICAL r METRIC BASELINE: N-DEPENDENCE ANALYSIS
+=================================================== Analysis Date: 2024
+Methodology: Report r11 canonical definition with Kahan summation
+Functions Analyzed: zeta, liouville
+N values: 10^4, 10^5, 10^6
+t ranges: [N, 2N] for each N CANONICAL r METRIC DEFINITION
+------------------------------
+r = Σ_{j≠k, j,k≥1} Re[S_j S̄_k] / Σ_{k≥1} |S_k|² where S_k is the sum over all terms with ω(n) = k (k distinct prime factors). VALIDATION
+----------
+Gold standard (r11): zeta at N=10^5, t=150000.0 → r = -0.823083
+Our implementation: r = -0.823083 (exact match) KEY FINDINGS
+------------ 1. POSITIVITY OF Q4 MEAN r VALUES All Q4 (highest-magnitude peaks) mean r values are consistently positive: Zeta: N=10^4: r = 1.4996 ± 0.7107 (n=50) N=10^5: r = 1.7388 ± 0.7756 (n=50) N=10^6: r = 1.5324 ± 0.9862 (n=35) Liouville: N=10^4: r = 1.3606 ± 0.7745 (n=50) N=10^5: r = 1.4727 ± 0.8203 (n=50) N=10^6: r = 1.3466 ± 0.9382 (n=33) 2. STABILIZATION BEHAVIOR Zeta: Shows stabilization |Δ(10^4→10^5)| = 0.239, |Δ(10^5→10^6)| = 0.206 Ratio: 0.863 < 1.0 ✓ Liouville: Does NOT show stabilization |Δ(10^4→10^5)| = 0.112, |Δ(10^5→10^6)| = 0.126 Ratio: 1.125 > 1.0 ✗ 3. TREND ACROSS QUARTILES For both functions at all N values: - r increases monotonically from Q1 to Q4 - Q4 has substantially higher r than other quartiles - Variance increases with N (especially at N=10^6) 4. N=10^6 OBSERVATIONS - Both functions show reduced r values in lower quartiles (Q1, Q2, Q3) - Q1 mean r becomes negative at N=10^6 (zeta: -0.167, liouville: -0.198) - Q4 maintains positive values but with higher variance - Fewer peaks found (139-132 vs 200 target) due to coarser sampling COMPUTATIONAL PARAMETERS
+------------------------
+N=10^4: 2000 t-points, t ∈ [10,000, 20,000]
+N=10^5: 2000 t-points, t ∈ [100,000, 200,000]
+N=10^6: 1000 t-points, t ∈ [1,000,000, 2,000,000] Peak finding: scipy.find_peaks with prominence=1.0, distance=5
+Number of peaks analyzed: top 200 (or all if fewer found) HYPOTHESIS ASSESSMENT
+---------------------
+Hypothesis: "Q4 mean r values are consistently positive and show stabilization" Result: PARTIALLY CONFIRMED ✓ Q4 mean r values ARE consistently positive for both functions at all N ✗ Stabilization is function-dependent (zeta: yes, liouville: no) IMPLICATIONS
+------------
+1. The canonical r metric produces positive values at high-magnitude peaks, consistent across N ∈ {10^4, 10^5, 10^6}, confirming constructive interference at peaks. 2. The stabilization behavior differs between zeta and liouville, suggesting function-specific convergence dynamics. 3. The non-monotonic behavior (increase then decrease) for both functions suggests N=10^5 may represent a local maximum in Q4 mean r, with asymptotic values potentially lower than small-N values. 4. Higher variance at N=10^6 and negative Q1 values indicate stronger destructive interference in low-magnitude regions as N increases.

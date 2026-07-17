@@ -1,0 +1,74 @@
+"""
+W-1 estructural: ¿la monotonia de eps_0(lambda) tiene un MECANISMO primo-a-primo (RH-neutral)
+o es solo "no alcanzamos un cero off-line"?
+
+Test: a lambda FIJO (L, ARCH fijos), construir PRIME con cutoff creciente P = primos {2}, {2,3},
+{2,3,5}, ... hasta lambda^2, y trazar eps_0(P) = inf spec(ARCH - PRIME_P).
+  - Si eps_0(P) DECRECE monotono con cada primo => mecanismo estructural: ARCH es la linea base
+    positiva, cada primo la baja hacia 0 (marginalidad). Eso seria RH-neutral (no usa posicion
+    de ceros, solo Lambda(n)>=0).
+  - Si oscila / algun primo SUBE eps_0 => no hay mecanismo monotono simple; la monotonia en lambda
+    es mas sutil (posiblemente liga a ceros).
+Falsador DH: con coeficientes de signo, agregar 'primos' no debe bajar monotono.
+"""
+import sys, mpmath as mp
+from engine_cache import get_matrices
+import engine_cache as EC
+
+mp.mp.dps = 30
+
+
+def primes_upto(M):
+    sv = [True] * (M + 1)
+    for i in range(2, int(M ** 0.5) + 1):
+        if sv[i]:
+            for j in range(i * i, M + 1, i):
+                sv[j] = False
+    return [p for p in range(2, M + 1) if sv[p]]
+
+
+def prime_contrib(idx, L, lam, p, kind='zeta'):
+    """contribucion de UN primo p (todas sus potencias <= lam^2) a la matriz PRIME."""
+    dim = len(idx); Lm = mp.mpf(L); mx = int(lam * lam)
+    M = mp.zeros(dim)
+    lp = mp.log(p)
+    for a in range(dim):
+        for b in range(a, dim):
+            q = EC.q_func(idx[a], idx[b], Lm)
+            s = mp.mpf(0); pm = p; me = 1
+            while pm <= mx:
+                w = lp * (mp.mpf(pm) ** mp.mpf('-0.5'))
+                if kind == 'DH':
+                    w = w * {1: 1, 2: 1, 3: -1, 4: -1, 0: 0}[p % 5]
+                s += w * q(me * lp); pm *= p; me += 1
+            M[a, b] = s; M[b, a] = s
+    return M
+
+
+def run(lam, N, kind='zeta'):
+    Larch, Lpr, A, L, idx = get_matrices(lam, N, kind, dps=45)
+    mx = int(lam * lam); ps = primes_upto(mx)
+    print(f"\n{kind} lam={lam} L={L:.3f}  primos hasta {mx}: {ps}")
+    e0_arch = sorted(float(x) for x in mp.eigsy(Larch)[0])[0]
+    print(f"  {'(ARCH solo)':>12} eps_0 = {e0_arch:>14.4e}")
+    print(f"  {'+ primo':>12} {'eps_0(acum)':>16} {'Delta':>14}")
+    acc = mp.zeros(len(idx)); prev = e0_arch; mono = True
+    for p in ps:
+        acc = acc + prime_contrib(idx, L, lam, p, kind)
+        e0 = sorted(float(x) for x in mp.eigsy(Larch - acc)[0])[0]
+        d = e0 - prev
+        if d > 1e-30:
+            mono = False
+        print(f"  {p:>12} {e0:>16.4e} {d:>+14.3e}")
+        prev = e0
+    print(f"  => eps_0 baja monotono con cada primo: {mono}")
+
+
+if __name__ == '__main__':
+    runs = [(11.0, 18, 'zeta')]
+    if len(sys.argv) > 1:
+        runs = eval(sys.argv[1])
+    print("W-1 estructural — eps_0 vs cutoff de primos (¿mecanismo monotono primo-a-primo?)")
+    for lam, N, k in runs:
+        run(lam, N, k)
+    run(11.0, 18, 'DH')

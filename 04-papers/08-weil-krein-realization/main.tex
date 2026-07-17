@@ -1,0 +1,628 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,
+  urlcolor=blue!70!black,
+  pdftitle={A Faithful Krein-Space Realization of the Weil Quadratic Form},
+  pdfauthor={David Alejandro Trejo Pizzo}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\PW}{\mathit{PW}_d}
+\newcommand{\tform}{\mathfrak t}
+\newcommand{\tplus}{\mathfrak t_+}
+\newcommand{\tminus}{\mathfrak t_-}
+\newcommand{\ttilde}{\widetilde{\mathfrak t}_-}
+\newcommand{\Hplus}{H_+}
+\newcommand{\rmar}{\mathfrak a}
+\newcommand{\rmq}{\mathfrak q}
+\newcommand{\rmp}{\mathfrak p}
+\newcommand{\Top}{\mathcal T}
+\newcommand{\Kop}{K}
+\newcommand{\Norm}[1]{\lVert #1 \rVert}
+
+\title[A Kre\u{\i}n--Space Weil Realization]{A Faithful Kre\u{\i}n--Space Realization of the Weil Quadratic Form, with a No-Go Theorem for the Zero-Side Attack on Positivity}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\begin{abstract}
+Weil's criterion identifies the Riemann Hypothesis (RH) with the positive
+semidefiniteness of the Weil functional $\tform$ read from the Riemann--Weil explicit
+formula. We give a rigorous operator-theoretic realization of $\tform$ on the
+classical band-limited (Paley--Wiener) test class $\PW$, $d>\half$, in three layers.
+\textbf{(A) Semibounded realization.} Modulo a single, precisely isolated hypothesis
+\textnormal{(H)}---a uniform short-interval zero-density statement strictly weaker than
+RH---the form $\tform$ is closable and defines a self-adjoint operator $\Top$ that is
+bounded below, with $\inf\spec(\Top)$ a finite, convergent quantity; consequently
+$\mathrm{RH}\iff \inf\spec(\Top)\ge0$. Four supporting lemmas are unconditional.
+\textbf{(B) Kre\u{\i}n structure.} We prove the exact identity $\tform=E^{*}JE$, where
+$E$ is evaluation at the (near-line) zeros and $J$ is a fundamental symmetry whose
+negative directions are exactly the off-line zeros; the construction is therefore a
+Kre\u{\i}n-space problem (indefinite metric), not a de~Branges (a priori positive)
+one. The angular operator $\Kop$ of the sampling range yields a single-axis dictionary:
+$\Norm{\Kop}<\infty\iff$ finiteness of the bottom, and $\Norm{\Kop}\le1\iff\mathrm{RH}$.
+\textbf{(C) No-go theorem.} We prove that the explicit dependence of $\Kop$ on the
+off-line depths carries no leverage toward the sign: the zero-side expression and the
+arithmetic side of the explicit formula are the same functional, so bounding
+$\Norm{\Kop}\le1$ from the zero side is identically the problem of proving Weil
+positivity. We situate the construction relative to the Connes--Consani archimedean
+trace approach and the Suzuki de~Branges completion: ours is strongly analogous,
+the distinguishing feature being its unconditional, explicitly Kre\u{\i}n, finite
+sampling ladder. We do \emph{not} claim progress past the sign barrier; we claim a
+precise localization of it. This paper closes the explicit-formula/zero-side line of
+this line of work and isolates the only remaining route to RH (structural positivity).
+\end{abstract}
+
+\maketitle
+
+
+
+\tableofcontents
+\newpage
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Introduction}\label{sec:intro}
+\subsection{Weil's criterion and the sign problem}
+Let $\xi(s)=\half s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ be the completed Riemann zeta
+function, with nontrivial zeros $\rho$. For a suitable even test function the
+Riemann--Weil explicit formula equates a sum over zeros with an archimedean term, a
+pole term, and a sum over primes. Polarizing, one obtains a Hermitian quadratic
+functional $\tform(F)$ with the property
+\begin{equation}\label{eq:weil}
+\boxed{\ \mathrm{RH}\iff \tform(F)\ge0 \ \text{ for all admissible } F.\ }
+\end{equation}
+This is Weil's positivity criterion \cite{Weil1952,Bombieri}. In this formulation the
+difficulty of RH is \emph{entirely the sign} of $\tform$: the right-hand side of the
+explicit formula is indefinite. On-line zeros contribute $|F(\gamma)|^{2}\ge0$, while
+off-line zeros (should they exist) contribute terms of \emph{either} sign. Proving the
+sign is proving RH; no weaker statement about the \emph{magnitude} of $\tform$ suffices.
+This paper makes that precise and operator-theoretic, and then proves a structural
+theorem explaining why the most natural (zero-side) realization cannot, by itself,
+decide the sign.
+
+\subsection{The three layers and the main results}
+We work on the band-limited class $\PW$ (Paley--Wiener, exponential type $d>\half$,
+$L^{2}$ on the line). Band-limited functions are entire, so the off-axis evaluations
+$F(\gamma+ib)$ forced by off-line zeros are automatic and $L^{2}$-controlled; this is
+the technically clean home for Weil's criterion.
+
+\begin{theorem}[Semibounded realization; \S\ref{sec:thmA}]\label{thm:A}
+Assume \textnormal{(H)} \textnormal{(Definition~\ref{def:H})}. On $\PW\cap H^{1}$,
+$d>\half$, the Weil form $\tform$ is closable in $\Hplus$ and its self-adjoint operator
+$\Top$ satisfies $\inf\spec(\Top)\ge 1-4C>-\infty$ for a finite $C=C(d,\delta,\eta)$.
+Consequently $\mathrm{RH}\iff\inf\spec(\Top)\ge0$.
+\end{theorem}
+
+\begin{theorem}[Kre\u{\i}n identity and the single axis; \S\S\ref{sec:krein}--\ref{sec:angular}]\label{thm:B}
+Unconditionally, $\tform=E^{*}JE$ with $J=J^{*}$, $J^{2}=I$. The angular operator
+$\Kop$ of the closed sampling range is defined (type-density uniqueness), and
+\[
+\Norm{\Kop}<\infty\iff \text{(finite bottom, B-2)},\qquad
+\Norm{\Kop}\le1\iff \mathrm{RH},
+\]
+with $\Norm{\Kop}\ge e^{d/2}>1$ from the magnitude side.
+\end{theorem}
+
+\begin{theorem}[No-go; \S\ref{sec:nogo}]\label{thm:C}
+The off-line depths $\{b_\rho\}$ enter $\Norm{\Kop}$ only through $\tform$ itself. Hence
+bounding $\Norm{\Kop}\le1$ from the zero side is identically Weil positivity, and every
+zero-position-free, sign-agnostic bound gives $\Norm{\Kop}^{2}\gtrsim e^{d}$ (the wrong
+side of $1$). The zero-side realization, being defined in terms of the unknown off-line
+zeros, cannot attack the sign.
+\end{theorem}
+
+\subsection{Relation to prior work and honest scope}
+The reduction ``$\Norm{\Kop}\le1\iff$ RH'' is strongly analogous to the device of
+Connes--Consani \cite{ConnesConsani}, who root Weil positivity in the compression of the
+scaling action onto Sonin's space and control a residual operator by an
+eigenvalue-below-$1$ argument. The completion of the Weil form into a reproducing-kernel
+space is the theme of Suzuki \cite{Suzuki}, who obtains a \emph{de~Branges} space under
+RH. Our construction differs in being \emph{unconditional} (no RH assumed; the metric is
+genuinely indefinite, hence Kre\u{\i}n, not de~Branges) and in exposing an explicit
+finite sampling ladder. We do \emph{not} claim an identification of our $\Kop$ with the
+Connes--Consani operator; Theorem~\ref{thm:C} in fact explains why the zero-side
+realization, unlike the archimedean one, cannot serve as a computational handle.
+
+Theorem~\ref{thm:A} is conditional on (H); (H) is much weaker than RH but is not
+established unconditionally by current methods (\S\ref{sec:Hstatus}). Theorems~\ref{thm:B}
+and \ref{thm:C} are unconditional. \textbf{None of the three proves RH}, and
+Theorem~\ref{thm:C} proves that this particular route cannot. The value of the paper is a
+clean, faithful reformulation together with a rigorous map of the wall, and the
+identification of the only remaining route (structural positivity, \S\ref{sec:open}).
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Setup and notation}\label{sec:setup}
+
+\paragraph{Test class.} For $d>\half$ let
+$\PW=\{F\in L^{2}(\mathbb R): \widehat F\in L^{2}[-d,d]\}$ be the Paley--Wiener space
+(entire functions of exponential type $\le d$ in $L^{2}$), with
+$\widehat F(\xi)=\int F(t)e^{-it\xi}\,dt$. We use the dense domain
+$\mathcal D:=\PW\cap H^{1}$ (so $\widehat F\in H^{1}[-d,d]\hookrightarrow C^{0}$). Two
+classical inequalities recur:
+\begin{equation}\label{eq:bernstein}
+\text{(Bernstein)}\quad \Norm{F'}_{2}\le d\,\Norm{F}_{2},\qquad
+\text{(Nikolskii)}\quad \Norm{F}_{\infty}\le C_{d}\Norm{F}_{2}.
+\end{equation}
+
+\paragraph{Zeros, depths, partners.} Write a nontrivial zero as
+$\rho=\half+b_\rho+it_\rho$, $b_\rho,t_\rho\in\mathbb R$, so $b_\rho=0\iff\rho$ on the
+critical line. The functional equation gives the symmetric quartet
+$\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$. Define the reflected partner involution
+\begin{equation}\label{eq:sigma}
+\sigma(\rho):=1-\bar\rho=\half-b_\rho+it_\rho,\qquad
+\sigma^{2}=\mathrm{id},\quad b_{\sigma(\rho)}=-b_\rho,\ t_{\sigma(\rho)}=t_\rho.
+\end{equation}
+The zero density is $\rho(T)=\tfrac1{2\pi}\log\tfrac T{2\pi}$, and $S(T)=N(T)-\bar
+N(T)=O(\log T)$ unconditionally. The Nyquist cell has length $1/d$ and contains
+$\sim\rho(T)/d\to\infty$ zeros (over-sampling).
+
+\paragraph{Weil functional.} For $F\in\mathcal D$ let $h(z):=F(z)\overline{F(\bar z)}$.
+The explicit formula gives
+\begin{equation}\label{eq:EF}
+\tform(F):=\sum_\rho h(\text{spectral point of }\rho)
+=\underbrace{\rmar(F)}_{\text{arch.}}+\underbrace{\rmq(F)}_{\text{pole}}
+-\underbrace{\rmp(F)}_{\text{primes}},
+\end{equation}
+the spectral point of $\rho=\half+b_\rho+it_\rho$ being $t_\rho+ib_\rho$ (on-line zeros
+sampled on the real axis). Grouping by partners \eqref{eq:sigma} gives the on/off
+decomposition
+\begin{equation}\label{eq:onoff}
+\tform(F)=\underbrace{\sum_{b_\rho=0}|F(t_\rho)|^{2}}_{\tplus(F)\,\ge0}
+\;+\;\underbrace{\sum_{\text{off-line pairs}}2\re\!\big[F(t_\rho+ib_\rho)\overline{F(t_\rho-ib_\rho)}\big]}_{\tminus(F)\ \text{indefinite}} .
+\end{equation}
+With $\ttilde(F):=\sum_{b_\rho\ne0}|F(t_\rho+ib_\rho)|^{2}$ one has
+$|\tminus(F)|\le 2\,\ttilde(F)$ (sharpened to an exact projection identity in
+\S\ref{sec:angular}).
+
+\paragraph{Realization space.} Let $\Hplus$ be the completion of $\mathcal D$ in the
+seminorm $\Norm{F}_{\Hplus}^{2}:=\tplus(F)$ (the on-line sampling space). $\Top$ is the
+self-adjoint operator associated with the form $\tform$ on $\Hplus$.
+
+% ════════════════════════════════════════════════════════════════════════
+\section{The four unconditional lemmas}\label{sec:lemmas}
+
+\begin{lemma}[Integration by parts]\label{lem:A}
+For $F\in\mathcal D$ and $g:=|F|^{2}$,
+$E_g:=\sum_{b_\rho=0} g(t_\rho)-\int g\,\rho\,dt=-\int g'(t)\,S(t)\,dt$.
+\end{lemma}
+\begin{proof}
+$\widehat F\in H^{1}\hookrightarrow C^{0}$, and IBP in $\xi$ gives $|F(t)|=O(1/t)$, so
+$g=O(t^{-2})$ and $g\log t\to0$; the boundary terms $[gS]_{\pm\infty}$ vanish, and
+$dS=dN-\rho\,dt$ has locally bounded variation, so Stieltjes IBP yields the claim.
+\end{proof}
+
+\begin{lemma}[The quadrature error is $O(\tplus)$]\label{lem:B}
+$|E_g|\le 2d\,(\sup_{\mathrm{supp}\,g}|S|)\,\Norm{F}_2^{2}=O(\rho\Norm{F}_2^{2})=O(\tplus(F))$.
+\end{lemma}
+\begin{proof}
+$g'=2\re(F'\overline F)$, so $\int|g'|\le 2\Norm{F'}_2\Norm{F}_2\le 2d\Norm{F}_2^2$ by
+Bernstein \eqref{eq:bernstein}. With $|S|=O(\log T_0)$ on $\mathrm{supp}\,g$ and the tail
+controlled by $g'=O(t^{-3})$, $|E_g|\le C_d(\log T_0)\Norm{F}_2^2$. As the on-line main
+term is $\sim\rho\Norm{F}_2^2\sim\tfrac{\log T_0}{2\pi}\Norm{F}_2^2$, this is $O(\tplus)$.
+\end{proof}
+
+\begin{remark}\label{rem:Onoto}
+B-2 (a finite bottom) needs only $E_g=O(\tplus)$; the sharp $o(\tplus)$---which would
+require Montgomery pair-correlation / RH-level input---is \emph{not} needed. This is the
+single most important calibration of this line of work: we need an $O$, not an $o$.
+\end{remark}
+
+\begin{lemma}[Vertical $L^{2}$ bound]\label{lem:C}
+For $F\in\PW$ and $|b|<\half$,
+$\Norm{F(\cdot+ib)}_2^{2}=\int_{-d}^{d}|\widehat F(\xi)|^{2}e^{-2b\xi}d\xi\le e^{2d|b|}\Norm{F}_2^{2}\le e^{d}\Norm{F}_2^{2}.$
+\end{lemma}
+\begin{proof}
+Parseval on the shifted line, then $e^{-2b\xi}\le e^{2d|b|}\le e^{d}$ on $|\xi|\le d$,
+$|b|<\half<d$. Exact, no RH.
+\end{proof}
+The amplification $\kappa(b):=e^{2d|b|}$ ($>1$ for $b\ne0$) is the quantitative source of
+the lower bound $\Norm{\Kop}\ge e^{d/2}$ in \S\ref{sec:angular}.
+
+\begin{lemma}[Off-line sum bound; Plancherel--P\'olya]\label{lem:D}
+$\ttilde(F)=\sum_{b_\rho\ne0}|F(t_\rho+ib_\rho)|^{2}\le C_d\,\rho\,\Norm{F}_2^{2}.$
+\end{lemma}
+\begin{proof}
+Off-line spectral points lie in the strip interior $|b_\rho|<\half<d$ (margin
+$d-\half>0$). The band-limited Plancherel--P\'olya/Bessel inequality, valid for
+arbitrary (possibly clustered) sequences in a strip interior, gives
+$\sum_n|F(w_n)|^{2}\le B\Norm{F}_2^{2}$ with $B\asymp_d\sup_x\#\{n:\re w_n\in[x,x+\tfrac1d]\}$.
+The pointwise bound $|F(w)|^{2}\le C_d\int_{|x-\re w|<1/d}|F|^{2}$ summed over the cell
+count gives $B=O(\rho)$ by Riemann--von~Mangoldt and $S=O(\log)$.
+\end{proof}
+
+\begin{remark}[Why $O(\rho)$ and not $o(\rho)$]
+Zero-density makes off-line zeros globally sparse, but they may cluster locally; the cell
+count is bounded by the total $O(\rho)$, not by the off-line density. Replacing it by the
+latter would give $o(\tplus)=$ RH---forbidden by possible clustering.
+\end{remark}
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Coercivity, the depth split, and the hypothesis (H)}\label{sec:H}
+
+By Lemmas~\ref{lem:C}--\ref{lem:D}, $\ttilde\le C_d\rho\Norm{F}_2^2$. To conclude
+$\ttilde\le C\tplus$ (which is B-2) we need \emph{coercivity}
+$\tplus(F)\ge c\,\rho\,\Norm{F}_2^{2}$, a lower sampling bound. This is not free: by the
+Beurling gap theorem the on-line zeros are a set of sampling for $\PW$ only if they have
+no gap exceeding $\pi/d$; the density condition $D^{-}\ge d/\pi$ is necessary but not
+sufficient. A single Nyquist gap containing a bump of $F$ destroys coercivity.
+
+\paragraph{Depth split.} Coercivity is needed only where $\ttilde>0$, i.e. near off-line
+zeros. Split off-line zeros by depth at a threshold $\delta$: \emph{shallow}
+($|b_\rho|<\delta$, $\kappa\le e^{2d\delta}=1+O(\delta)$, sample like on-line points) vs
+\emph{deep} ($|b_\rho|\ge\delta$, amplified, the only danger). Thus B-2 reduces to:
+deep off-line zeros do not dominate any Nyquist cell at large height.
+
+\begin{hypothesis}[Uniform local sparsity of deep off-line zeros]\label{def:H}
+There exist $\delta>0$, $\eta>0$, $T_0$ such that for all $T\ge T_0$ and every interval
+$I$ of length $1/d$ centred at height $T$,
+\[
+\#\{\rho:\ |b_\rho|<\delta,\ t_\rho\in I\}\ \ge\ \eta\,\rho(T)\,|I| .
+\]
+Equivalently, deep off-line zeros occupy at most $(1-\eta)$ of each Nyquist cell.
+\end{hypothesis}
+
+\begin{lemma}[(H) $\Rightarrow$ coercivity]\label{lem:E}
+Under \textnormal{(H)}, every Nyquist cell contains $\ge\eta\rho|I|$ samples with
+$\kappa=1+O(\delta)$; this set has no Nyquist gaps, so by Beurling
+$\sum_{\text{shallow}\cup\text{on}}|F(t_\rho)|^{2}\ge c\eta\rho\Norm{F}_2^{2}$. Taking
+$\delta$ small gives $\tplus(F)\ge c'\rho\Norm{F}_2^{2}$.
+\end{lemma}
+
+\subsection{The honest status of (H)}\label{sec:Hstatus}
+(H) is strictly weaker than RH: RH says there are \emph{no} off-line zeros; (H) says only
+that deep ones do not \emph{locally dominate} (they may exist, even infinitely many,
+provided they do not fill a Nyquist cell). It is implied by RH and by any uniform
+short-interval bound $N(\half+\delta,T+\tfrac1d)-N(\half+\delta,T)=o(\rho)$.
+
+However, (H) is \emph{not} established unconditionally by current methods. The global
+density $N(\half+\delta,T)\ll T^{1-c\delta}$ leaves a budget allowing $\sim\log T$ deep
+zeros to be concentrated in a single short interval (cost $\log T\ll T^{1-c\delta}$),
+which the global bound does not forbid. Selberg's fluctuation theory makes such a
+cell-filling cluster a large deviation of $S$, of measure
+$\ll\exp(-c(\log T)^{2}/\log\log T)$---extraordinarily rare, but not provably absent at
+sporadic large heights. And (H) is necessary: without it there exist $F$ with
+$\tplus(F)=0$ but $\tminus(F)\ne0$, breaking closability in $\Hplus$. Alternative
+realizations (all-zeros norm, $L^{2}$) reduce to the same gap/clustering condition.
+Hence \textbf{Theorem~\ref{thm:A} is unconditional modulo (H), with (H) a uniform
+short-interval zero-density bound far weaker than RH, very likely true, but at the
+frontier of the unconditional.}
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Theorem A: the semibounded realization}\label{sec:thmA}
+
+\begin{proof}[Proof of Theorem~\ref{thm:A}]
+By Lemmas~\ref{lem:C}--\ref{lem:D} and Lemma~\ref{lem:E} (under (H)),
+$\ttilde\le \tfrac{C_d}{c'}\tplus=:C\tplus$, hence $|\tminus|\le 4C\tplus$ (the factor
+$4$ is removed in \S\ref{sec:angular}). In $\Hplus$, where $\tplus=\Norm{\cdot}_{\Hplus}^2$,
+\[
+\frac{\tform(F)}{\Norm{F}_{\Hplus}^{2}}=1+\frac{\tminus(F)}{\tplus(F)}\ge 1-4C .
+\]
+$\tplus$ is closed (a monotone limit of bounded forms; Kato \cite{Kato}), and $\tminus$
+is form-bounded relative to it with bound $4C$, so $\tform=\tplus+\tminus$ is closed and
+semibounded; $\Top$ is the self-adjoint operator associated to it via KLMN, with form
+domain $\Hplus$.
+\end{proof}
+
+\begin{corollary}[Faithful reformulation]\label{cor:Aprime}
+The positivity $\tform\succeq0$ does not refer to the inner product, so its truth is
+norm-independent; with Theorem~\ref{thm:A},
+\[
+\boxed{\ \mathrm{RH}\iff\inf\spec(\Top)\ge0\ }
+\]
+---RH is exactly the sign of the finite bottom of the rigorously realized operator $\Top$.
+\end{corollary}
+
+The magnitude estimates give $C\ge e^{d}>1$, so the bottom $1-4C$ is negative; lowering
+$C$ to $\le\tfrac14$ is exactly RH. Theorem~\ref{thm:A} relocates RH to the sign of a
+concrete finite object; it does not evaluate that sign.
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Theorem B (i): the Kre\u{\i}n identity}\label{sec:krein}
+
+This section is unconditional. Define the evaluation operator
+$E:\PW\to\ell^{2}(\rho)$, $(EF)_\rho:=F(t_\rho+ib_\rho)$ (bounded by Lemma~\ref{lem:D}),
+and the fundamental symmetry $J$ as the linear involution induced by the partner map
+\eqref{eq:sigma}, $(Jc)_\rho:=c_{\sigma(\rho)}$. Then $J^{2}=I$ and $J=J^{*}$ (a
+permutation by an involution is self-adjoint): a genuine Kre\u{\i}n fundamental symmetry.
+
+\begin{proposition}[The identity]\label{prop:identity}
+With $\langle a,b\rangle=\sum_\rho a_\rho\overline{b_\rho}$,
+\[
+\langle EF,JEF\rangle=\sum_\rho (EF)_\rho\overline{(EF)_{\sigma(\rho)}}
+=\sum_\rho F(t_\rho+ib_\rho)\overline{F(t_\rho-ib_\rho)}=\tform(F),
+\]
+i.e. $\boxed{\ \tform=E^{*}JE,\quad J=J^{*},\ J^{2}=I\ }$ (exact, unconditional).
+\end{proposition}
+\begin{proof}
+Immediate from $b_{\sigma(\rho)}=-b_\rho$, $t_{\sigma(\rho)}=t_\rho$ and \eqref{eq:EF}.
+\end{proof}
+
+\begin{remark}
+Writing $J$ with a complex conjugation, $(Jc)_\rho=\overline{c_{\bar\rho}}$, makes it
+antilinear; that coincides with the linear $J$ above on real-type test functions
+$F(\bar z)=\overline{F(z)}$. The linear involution is the convention-free statement.
+\end{remark}
+
+\paragraph{Three structural consequences.}
+\begin{enumerate}[label=\textbf{(C\arabic*)}]
+\item \emph{RH $\Rightarrow J=I\Rightarrow\Top=E^{*}E\ge0$.} Under RH all $b_\rho=0$, so
+$\sigma(\rho)=\rho$, $J=I$, $\tform=E^{*}E\ge0$: Weil positivity becomes the trivial
+positivity of a Gram operator.
+\item \emph{RH fails $\Rightarrow$
+$J=I_{\mathrm{on}}\oplus\bigoplus_{\text{pairs}}\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$.}
+Each off-line quartet splits under $\sigma$ into two swap-pairs $\{\rho,1-\bar\rho\}$,
+each a $2\times2$ swap with spectrum $\{+1,-1\}$. All negative directions of $J$ come
+exactly from off-line zeros.
+\item \emph{RH $\iff E^{*}JE\ge0\iff R(E)$ is a $J$-non-negative subspace.}
+\end{enumerate}
+The conceptual gain is the clean separation of the geometry of $\PW$ (through $R(E)$),
+the location of zeros (through $\sigma$, hence $J$), and the sign (through the indefinite
+form $[\cdot,\cdot]_J$).
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Theorem B (ii): the angular operator and the single axis}\label{sec:angular}
+
+Let $\ell^{2}(\rho)=\mathcal K_+\oplus\mathcal K_-$ with $J=P_+-P_-$. On a swap-pair the
+$\pm1$ eigenvectors are $\tfrac1{\sqrt2}(e_\rho\pm e_{\sigma\rho})$, so with
+$F_\pm:=F(t_\rho\pm ib_\rho)$,
+\[
+\Norm{P_+EF}^{2}=\tplus+\!\!\sum_{\text{pairs}}\tfrac12|F_++F_-|^{2},\qquad
+\Norm{P_-EF}^{2}=\!\!\sum_{\text{pairs}}\tfrac12|F_+-F_-|^{2},
+\]
+and exactly (no factor-$4$ slack)
+\begin{equation}\label{eq:split}
+\boxed{\ \tform(F)=\Norm{P_+EF}^{2}-\Norm{P_-EF}^{2}.\ }
+\end{equation}
+
+\begin{lemma}[Qualitative injectivity; unconditional, not circular]\label{lem:inj}
+$P_+EF=0\Rightarrow F=0$.
+\end{lemma}
+\begin{proof}
+$P_+EF=0$ forces $F$ to vanish at all on-line zeros. By the type-density uniqueness
+theorem (a nonzero $L^{2}$ function of exponential type $d$ cannot vanish on a real
+sequence of density $>d/\pi$ \cite{Levin}), and the on-line zeros have density
+$\tfrac1{2\pi}\log T\to\infty\gg d/\pi$, we get $F=0$. This uses only the zeros of $F$,
+no sampling/coercivity input.
+\end{proof}
+
+Hence $\overline{R(E)}$ is the graph of the \emph{angular operator}
+$\Kop:=P_-(P_+|_{R(E)})^{-1}:\mathcal K_+\supseteq\mathrm{dom}\,\Kop\to\mathcal K_-$,
+defined unconditionally (possibly unbounded). Kre\u{\i}n theory
+\cite{AzizovIokhvidov,Bognar} gives the single-axis dictionary
+\begin{equation}\label{eq:dict}
+\boxed{\
+\underbrace{\text{type-density}}_{\Kop\ \text{defined}}\,;\quad
+\underbrace{(H)\Rightarrow\Norm{\Kop}<\infty}_{\text{B-2 (finite bottom)}}\,;\quad
+\underbrace{\Norm{\Kop}\le1\iff\mathrm{RH}}_{\text{given }\Kop\text{ defined}}.\ }
+\end{equation}
+Here $\Norm{\Kop}<\infty\iff R(E)$ uniformly positive-projecting $\iff$ the coercivity
+B-2 needs; (H) is sufficient for it (the honest direction is
+$(H)\Rightarrow\Norm{\Kop}<\infty\Rightarrow$ B-2). And $\Norm{\Kop}\le1\iff
+\Norm{P_-EF}\le\Norm{P_+EF}\ \forall F\iff\tform\ge0\iff$ RH. From Lemma~\ref{lem:C},
+$\Norm{\Kop}\ge e^{d/2}>1$ on the magnitude side---the wrong side of $1$.
+
+\paragraph{Cleanest statement of this line of work.} B-2 is ``$\Kop$ bounded'' (needs (H)); RH
+is ``$\Kop$ a contraction.''
+
+\subsection{Where the negativity lives, and a warning}
+On a swap-pair the negative coordinate is the vertical antisymmetric difference
+\[
+d_\rho:=F(t_\rho+ib_\rho)-F(t_\rho-ib_\rho)=2i\,b_\rho\,F'(t_\rho)+O(b_\rho^{3}\Norm{F''}),
+\]
+so to leading order $\Norm{P_-EF}^{2}\approx\sum_{\text{pairs}}2\,b_\rho^{2}|F'(t_\rho)|^{2}$:
+the negative directions are depth-weighted derivative samples, and $\Norm{\Kop}\to0$ as
+depths $\to0$.
+
+\begin{remark}[The optimistic-pillar trap]
+The $b_\rho^{2}$ form is the \emph{shallow linearization only}. The Taylor remainder is
+$O(b_\rho^{3}\Norm{F''})$ with $\Norm{F''}\le d^{2}\Norm{F}$ (Bernstein); for \emph{deep}
+zeros ($|b_\rho|$ up to $\half$, $d$ moderately $>\half$) the remainder/leading ratio is
+$\sim b_\rho^{2}d=O(1)$---the expansion does not converge, and the true vertical
+evaluation carries the $e^{2d|b_\rho|}$ amplification responsible for
+$\Norm{\Kop}\ge e^{d/2}$. Thus a ``$\sum b_\rho^{2}|F'|^{2}\le\theta\tplus\Rightarrow$ RH''
+inequality would deliver RH only on the shallow part already known harmless. The correct
+concrete target keeps the full vertical difference:
+\begin{equation}\label{eq:rayleigh}
+\Norm{\Kop}^{2}=\sup_F\frac{\sum_{\text{pairs}}\tfrac12|F(t_\rho+ib_\rho)-F(t_\rho-ib_\rho)|^{2}}
+{\tplus+\sum_{\text{pairs}}\tfrac12|F(t_\rho+ib_\rho)+F(t_\rho-ib_\rho)|^{2}},
+\qquad \Norm{\Kop}\le1\iff\mathrm{RH}.
+\end{equation}
+\end{remark}
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Theorem C: a no-go theorem for the zero-side attack}\label{sec:nogo}
+
+\begin{proof}[Proof of Theorem~\ref{thm:C}]
+The pivot is that the explicit formula gives $\tform(F)$ as the \emph{same} functional in
+two ways:
+\begin{equation}\label{eq:pivot}
+\underbrace{\Norm{P_+EF}^{2}-\Norm{P_-EF}^{2}}_{\text{zero side: depends on }\{t_\rho,b_\rho\}}
+=\tform(F)=
+\underbrace{\rmar(F)+\rmq(F)-\rmp(F)}_{\text{arithmetic side: contains no }b_\rho}.
+\end{equation}
+
+\textbf{(i) No independent information in the depths.} The arithmetic side sums the
+depths out---it does not contain $b_\rho$. Since both sides equal the same functional of
+$F$, any bound on $\Norm{\Kop}$ phrased through the $b_\rho$ is, by \eqref{eq:pivot}, a
+bound on $\tform$ through the arithmetic side in disguise.
+
+\textbf{(ii) Tautology w.r.t. Weil.} $\Norm{\Kop}\le1\iff\Norm{P_-EF}\le\Norm{P_+EF}\
+\forall F\iff\tform\ge0\iff\rmar+\rmq-\rmp\ge0\iff$ RH. Lowering $\Norm{\Kop}$ to $\le1$
+\emph{is} proving arithmetic positivity.
+
+\textbf{(iii) Sign-agnostic bounds land on the wrong side.} Dropping the phase
+cancellation between $F_+$ and $F_-$ (triangle inequality
+$|F_+-F_-|^{2}\le2(|F_+|^{2}+|F_-|^{2})$) gives
+$\Norm{P_-EF}^{2}\le\kappa\cdot(\text{off-line cell count})\Norm{F}^{2}$, $\kappa$ up to
+$e^{2d|b|}$, hence $\Norm{\Kop}^{2}\gtrsim e^{d}$. Retaining the phase requires the exact
+analytic continuation of $F$ at $t_\rho\pm ib_\rho$; for deep zeros that is not the
+$2ib_\rho F'$ linearization but the global behaviour of $F$---the arithmetic side again.
+\end{proof}
+
+\begin{corollary}[Why the zero-side realization is circular as a tool]\label{cor:circular}
+To even write $\Kop=P_-(P_+|_{R(E)})^{-1}$ one must know the off-line zero data
+$\{(t_\rho,b_\rho):b_\rho\ne0\}$---the very data whose emptiness is RH. The realization is
+a true identity but presupposes the unknowns. The Connes--Consani realization is the
+useful one precisely because its operator is built from explicit archimedean data,
+independent of the zeros. This is the structural reason the zero-side picture cannot
+attack the sign.
+\end{corollary}
+
+\[
+\boxed{\ \begin{array}{c}
+\textbf{No-go: } \Norm{\Kop}\text{ depends on the off-line depths only through }\tform;\\[2pt]
+\text{bounding }\Norm{\Kop}\le1\text{ from the zero side}\equiv\text{Weil positivity}\equiv\text{RH.}
+\end{array}\ }
+\]
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Relation to prior work}\label{sec:prior}
+
+\paragraph{Connes--Consani \cite{ConnesConsani}.} They root Weil positivity in the
+\emph{compression of the scaling action} $\vartheta$ on $L^{2}(\mathbb R)_{\mathrm{ev}}$
+onto Sonin's space $\mathbf S$ (the orthogonal complement of the range of the phase-space
+cutoff projection), proving $W_\infty(g*g^{*})\ge\tr(\vartheta(g)\,\mathbf S\,\vartheta(g)^{*})$
+and controlling the residual difference (between the Weil distribution and the Sonin
+trace) via prolate spheroidal wave functions and Hermitian Toeplitz matrices, by an
+eigenvalue-below-$1$ argument. Our reduction ``$\Norm{\Kop}\le1\iff$ RH'' is of the same
+type (a compression with a norm/eigenvalue-below-$1$ positivity criterion). We do
+\emph{not} claim an identification $U\,\Kop\,U^{-1}=K_{\mathrm{CC}}$: the two are distinct
+realizations of the same form $\tform$---ours \emph{zero-side} (depends on the zeros),
+theirs \emph{archimedean} (explicit, independent of the zeros). Theorem~\ref{thm:C} and
+Corollary~\ref{cor:circular} explain the asymmetry: the archimedean realization is a
+genuine handle, the zero-side one is circular.
+
+\paragraph{Suzuki \cite{Suzuki}.} Completing the Weil hermitian form yields, \emph{under
+RH}, a de~Branges space $\mathcal H(E_\xi)$ with $E_\xi(z)=\xi(\half-iz)+\xi'(\half-iz)$
+(Hermite--Biehler under RH \cite{Lagarias}), turning Weil's inequality into equalities.
+Suzuki notes (after Selberg) that ``the construction of a space assuming RH will not be
+useful for attacking RH'' and therefore builds unconditional spaces $\mathcal H_0,
+\mathcal K_0$ via screw lines. Our completion is the same in spirit but \emph{directly}
+unconditional: with off-line zeros allowed, the metric is genuinely indefinite, so the
+natural object is a \emph{Kre\u{\i}n} space (Pontryagin only if the off-line set were
+finite, which is not known). The Kre\u{\i}n-vs-de~Branges dichotomy is precisely the
+positivity-built-in vs not distinction; our Theorem~\ref{thm:C} is the rigorous form of
+Selberg's warning, specialized to the zero-side realization.
+
+\paragraph{Classical lineage.} Weil's criterion \cite{Weil1952,Bombieri}; de~Branges'
+\emph{Hilbert Spaces of Entire Functions} \cite{deBranges} (the positive regime);
+Azizov--Iokhvidov \cite{AzizovIokhvidov} and Bogn\'ar \cite{Bognar} for Kre\u{\i}n-space
+angular operators; Montgomery \cite{Montgomery} and Selberg \cite{Selberg} for the zero
+statistics behind (H). Our place is a modular reformulation plus a no-go, not a new
+mechanism for positivity.
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Honest status and open problems}\label{sec:open}
+
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+Statement & Status \\
+\midrule
+Lemmas~\ref{lem:A}--\ref{lem:D} (IBP, quadrature $O(\tplus)$, vertical, P--P) & unconditional \\
+Depth split; (H) $\Rightarrow$ coercivity (Lemma~\ref{lem:E}) & unconditional \\
+Theorem~\ref{thm:A} (semibounded $\Top$, $\inf\spec\ge1-4C$) & \textbf{modulo (H)} \\
+Corollary~\ref{cor:Aprime} (RH $\iff$ sign of the bottom) & modulo (H) \\
+Theorem~\ref{thm:B} (i): $\tform=E^{*}JE$ & unconditional \\
+Theorem~\ref{thm:B} (ii): angular operator, dictionary \eqref{eq:dict} & unconditional \\
+Theorem~\ref{thm:C}: no-go for the zero-side attack & unconditional \\
+RH itself (the sign) & not proved; Thm~\ref{thm:C} shows this route cannot \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{What is not claimed.} No proof of RH. Theorem~\ref{thm:A} is conditional on
+(H); (H) is much weaker than RH but not unconditionally established (\S\ref{sec:Hstatus}).
+The Kre\u{\i}n picture is the correct language and the precise target, and
+Theorem~\ref{thm:C} proves it is not a route past the sign.
+
+\paragraph{Open problems.}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+\item \emph{Is (H) unconditional?} Is the uniform (every cell, all large $T$)
+short-interval zero-density for fixed $\sigma>\half$ unconditional, or only on average?
+This is the one item separating ``unconditional B-2'' from ``B-2 modulo (H)''.
+\item \emph{Sharp constants.} The Plancherel--P\'olya constant of Lemma~\ref{lem:D} with
+clustering and margin $d-\half$; the quantitative Beurling step in Lemma~\ref{lem:E}.
+\item \emph{The only route to the sign.} By Theorem~\ref{thm:C} the sign cannot come from
+the zero side; it requires \emph{structural positivity}---a factorization $\Top=A^{*}A$,
+Connes' archimedean trace positivity, or a de~Branges chain---an independently-given
+positive structure, not a bound. This is the genuine RH problem and is left open. It is
+the subject of the companion research plan (route B).
+\end{enumerate}
+
+\paragraph{Conclusion.} Starting from Weil's criterion (RH $\iff$ a positivity), we built
+a faithful, RH-independent, semibounded operator realization $\Top$ whose bottom is
+finite and whose sign is RH (Theorem~\ref{thm:A}), exposed its exact Kre\u{\i}n structure
+$\tform=E^{*}JE$ and the single controlling axis $\Norm{\Kop}$ (Theorem~\ref{thm:B}), and
+proved that this zero-side structure---however explicit its dependence on the off-line
+zeros---cannot decide the sign, because the depths enter only through the very functional
+whose positivity is RH (Theorem~\ref{thm:C}). The program therefore delivers a precise
+localization of RH's difficulty (the contraction $\Norm{\Kop}\le1$) and a rigorous
+account of why the natural zero-side attacks fail---but not a proof. The sign, as long
+suspected, requires structural positivity, which the magnitude/zero-side machinery
+provably cannot supply. This closes the explicit-formula/zero-side line of this line of work.
+
+% ════════════════════════════════════════════════════════════════════════
+\begin{thebibliography}{99}
+
+\bibitem{AzizovIokhvidov} T.~Ya.~Azizov, I.~S.~Iokhvidov, \emph{Linear Operators in
+Spaces with an Indefinite Metric}, Wiley, Chichester, 1989.
+
+\bibitem{Bognar} J.~Bogn\'ar, \emph{Indefinite Inner Product Spaces}, Springer, 1974.
+
+\bibitem{Bombieri} E.~Bombieri, \emph{Problems of the Millennium: The Riemann Hypothesis},
+Clay Mathematics Institute, 2000.
+
+\bibitem{ConnesConsani} A.~Connes, C.~Consani, \emph{Weil positivity and trace formula,
+the archimedean place}, Selecta Math.\ (2021); arXiv:2006.13771.
+
+\bibitem{deBranges} L.~de~Branges, \emph{Hilbert Spaces of Entire Functions},
+Prentice-Hall, Englewood Cliffs, 1968.
+
+\bibitem{Kato} T.~Kato, \emph{Perturbation Theory for Linear Operators}, 2nd ed.,
+Springer, 1976.
+
+\bibitem{Lagarias} J.~C.~Lagarias, \emph{Hilbert spaces of entire functions and Dirichlet
+$L$-functions}, in \emph{Frontiers in Number Theory, Physics, and Geometry I}, Springer,
+2006, 365--377.
+
+\bibitem{Levin} B.~Ya.~Levin, \emph{Lectures on Entire Functions}, Transl.\ Math.\
+Monographs 150, Amer.\ Math.\ Soc., 1996.
+
+\bibitem{Montgomery} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta
+function}, in \emph{Analytic Number Theory}, Proc.\ Sympos.\ Pure Math.\ 24 (1973),
+181--193.
+
+\bibitem{Selberg} A.~Selberg, \emph{On the remainder in the formula for $N(T)$, the number
+of zeros of $\zeta(s)$ in the strip $0<t<T$}, Avh.\ Norske Vid.\ Akad.\ Oslo (1944).
+
+\bibitem{Suzuki} M.~Suzuki, \emph{On the Hilbert space derived from the Weil
+distribution}, arXiv:2301.00421 (v3, 2025).
+
+\bibitem{Weil1952} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des
+nombres premiers}, Comm.\ S\'em.\ Math.\ Univ.\ Lund (1952), 252--265.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,5 @@
+Function,Type,ξ (point),95% CI Lower,95% CI Upper,GEV Location (μ),GEV Scale (σ),Fit Method,Bootstrap Success,Consistent with ξ ≤ 0?
+Riemann ζ,Multiplicative,-0.140408,-0.253431,-0.013874,1.146869,0.191531,MLE,1000/1000,Yes (strong)
+L(χ₄),Multiplicative,0.009461,-0.667015,0.199508,1.162221,0.152882,MM,513/1000,Yes (weak)
+f_rand,Multiplicative,0.213412,0.012050,0.378896,1.652728,0.448211,MLE,1000/1000,No
+L_DH (ref),Non-multiplicative,0.810000 (from r47),N/A,N/A,N/A,N/A,N/A,N/A,N/A (ξ > 0)

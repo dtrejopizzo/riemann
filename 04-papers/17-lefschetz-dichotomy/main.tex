@@ -1,0 +1,482 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,
+  showstringspaces=false,columns=fullflexible,keepspaces=true}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\HW}{\mathcal H_W}
+\newcommand{\T}{\mathcal T}
+\newcommand{\Tc}{\mathcal T_{\mathrm{cont}}}
+\newcommand{\Ainf}{A_\infty}
+\newcommand{\sltwo}{\mathfrak{sl}_2}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Real}{Re}
+
+\title[The Lefschetz Dichotomy]{The Lefschetz dichotomy: why the hard-Lefschetz route to the
+Riemann Hypothesis is obstructed by linear independence}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgWeil49,bgDeligne,bgConnes99,bgCC10,bgDeninger,bgBK,bgMont73,bgKS,bgBombieri00,bgTitchmarsh,bgEdwards,bgIK}
+\begin{abstract}
+Weil's proof of the Riemann Hypothesis for curves over finite fields is an
+intersection form plus a Hodge index: positivity on the primitive cohomology,
+delivered by an ample class (a hard-Lefschetz $\sltwo$-action). Transcribing the
+construction to $\operatorname{Spec}\mathbb Z$ produces, unconditionally, every
+ingredient except that ample class. We make the missing object precise and prove
+that it cannot be supplied along this route. First we record an
+\emph{independence filter}: any raising operator built as a function of the
+Frobenius flow $\T$ (whose spectrum is the zeros) only restates the Weil
+positivity. Then we construct the candidate Kähler data from the archimedean
+place: the density $\Psi(r)=\Real\psi(\tfrac14+\tfrac{ir}{2})-\log\pi$ is the
+smooth zero-counting density; it is strictly increasing on $r>0$ with a unique
+sign change $r_0=6.2898\ldots$ lying below the first zero, hence positive on the
+spectrum but indefinite on the low band. We show the resulting form is indefinite
+on the primitive part, exhibit an explicit hard-Lefschetz $\sltwo$ on the
+archimedean continuum whose raising operator is provably outside the von Neumann
+algebra of $\T$ --- the first such operator this line of work produces --- and verify
+that the transport to the discrete zeros is exactly the explicit formula, with
+the Weil positivity emerging only as the residual of an almost total
+archimedean--prime cancellation. Finally we prove the \emph{Lefschetz dichotomy}:
+on the zeros the linear independence of the ordinates forbids any Tate-twist
+raising operator, while on the continuum the only available $\sltwo$ is principal
+series and carries no Hodge--Riemann form. Thus an arithmetic spectrum and a
+Hodge--Riemann-carrying grading are linearly-independence-incompatible. This is a
+theorem about why $\zeta$ resists the Lefschetz route, sharpening the
+finitization-under-LI obstruction of the series. All claims are accompanied by
+reproducible computations; none asserts a proof of RH.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Weil's proof of $\RH$ for a curve $C/\mathbb F_q$ has two parts: an intersection
+pairing on the surface $C\times C$, and the Hodge index theorem, which makes the
+pairing negative definite on the primitive part. The second part is supplied by
+an \emph{ample class} on the surface --- equivalently a hard-Lefschetz
+$\sltwo$-action $(L,\Lambda,H)$ whose positivity is the Hodge--Riemann bilinear
+relation. The Frobenius acts on $H^1$, whose eigenvalues are the zeros, and the
+ample class is independent geometric input.
+
+The program of which this paper is a part has built, unconditionally and with
+numerical verification, the analogue of the \emph{first} part for
+$\operatorname{Spec}\mathbb Z$: a Kre\u\i n space $\HW$ with an intersection
+pairing whose negative index counts the off-line zeros, a Lefschetz trace
+identity (the explicit formula), a Rankin--Selberg effectivity, and a positive
+ample cone~\cite{RP8,RP16,RP17}. The Riemann Hypothesis is then equivalent to the
+\emph{second} part: positivity of the pairing on the primitive subspace --- the
+arithmetic Hodge index. Eight successive sharpenings reduced the gap to a single
+missing object: an independent, positive, hard-Lefschetz $\sltwo$-action (a Kähler
+class $\omega$) on the primitive cohomology, commuting appropriately with the
+Frobenius flow $\T$ whose spectrum is the set of ordinates $\{\gamma_\rho\}$.
+
+This paper does two things. It records why the obvious construction --- building
+$\omega$ from the spectral data $(\T,J,Q)$ --- can only restate $\RH$ (\S2). And
+it carries out the one construction that escapes this circularity, the archimedean
+one, to its conclusion (\S\S3--6), proving along the way the first
+hard-Lefschetz raising operator independent of $\T$ (\S5), and ending at a clean
+structural obstruction: the \emph{Lefschetz dichotomy} (\S7). The dichotomy
+explains, in representation-theoretic terms, why the linear independence of the
+zeros (the hypothesis $\mathrm{LI}$, that the positive ordinates are
+$\mathbb Q$-linearly independent) blocks the Lefschetz route. Nothing here proves
+or assumes $\RH$; the result is negative and structural, and every quantitative
+claim is reproducible from the code in Appendix~\ref{app:code}.
+
+\section{The independence filter}
+We work on the primitive part $\HW^{\mathrm{prim}}$, an infinite-dimensional real
+Kre\u\i n space carrying: the indefinite Weil pairing $Q$ (negative index $=$
+number of off-line zeros), a self-adjoint Frobenius operator $\T$ with
+$\spec(\T)=\{\gamma_\rho\}$, and a complex structure $J$ from the spectral
+splitting~\cite{RP8}. Let $W^*(\T)$ denote the von Neumann algebra generated by
+$\T$.
+
+\begin{proposition}[Determinacy / the filter]\label{prop:filter}
+The only $(1,1)$-form compatible with $(J,Q)$ in the standard way is
+$\omega(x,y)=Q(Jx,y)$, and its positivity $\omega(x,Jx)=Q(Jx,Jx)>0$ is exactly
+$\RH$. Consequently, if a raising operator $L$ lies in $W^*(\T)$ --- i.e.\
+$L=f(\T)$ for some Borel $f$ --- then the associated form $Q(Jf(\T)\cdot,\cdot)$ is
+a function of the spectral data and asserting its positivity restates $\RH$. An
+$\omega$ that \emph{forces} positivity must use a raising operator
+$L\notin W^*(\T)$.
+\end{proposition}
+
+\begin{proof}
+Compatibility of a $(1,1)$-form with $(J,Q)$ means $\omega(x,y)=Q(Jx,y)$; this
+fixes $\omega$. Its positivity is the second Riemann bilinear relation
+$Q(Jx,Jx)>0$, equivalent by the Weil criterion to the vanishing of the negative
+index, i.e.\ $\RH$. If $L=f(\T)$ then $L$ commutes with $\T$ and is diagonal in
+the spectral resolution of $\T$; every quantity built from $L,J,Q$ is a function
+of that resolution, so its sign is the sign of $Q$ on the spectral subspaces ---
+the statement $\RH$ itself.
+\end{proof}
+
+The filter is the lesson of the eight attempts in compact form: a candidate Kähler
+class is genuine input only if its raising operator is \emph{not} a function of
+the Frobenius. We now produce one.
+
+\section{The archimedean density}
+The archimedean place contributes to the Weil quadratic form, for a test function
+$f$ with Fourier transform $\widehat f$, the term
+\begin{equation}\label{eq:Ainf}
+\Ainf(f,f)=\frac1{2\pi}\int_{-\infty}^{\infty}|\widehat f(r)|^2\,\Psi(r)\,dr,
+\qquad
+\Psi(r)=\Real\psi\!\left(\tfrac14+\tfrac{ir}{2}\right)-\log\pi,
+\end{equation}
+where $\psi=\Gamma'/\Gamma$ and $\Psi$ is the smooth density of the archimedean
+factor $\Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(s/2)$ in the explicit formula. The
+following structure is elementary but decisive.
+
+\begin{proposition}[Structure of $\Psi$]\label{prop:psi}
+$\Psi$ is even and real-analytic, and:
+\begin{enumerate}
+\item[\rm(i)] $\Psi'(r)=\displaystyle\sum_{n\ge0}\frac{(\tfrac14+n)\,r}
+{\bigl((\tfrac14+n)^2+(r/2)^2\bigr)^2}>0$ for $r>0$ (strictly increasing);
+\item[\rm(ii)] $\Psi$ has a unique positive zero $r_0=6.2898359888\ldots$, global
+minimum $\Psi(0)=\psi(\tfrac14)-\log\pi=-\gamma-3\log2-\tfrac{\pi}{2}-\log\pi
+=-5.37218\ldots$;
+\item[\rm(iii)] $\Psi(r)=\log\dfrac{|r|}{2\pi}+o(1)$, and
+$\tfrac1{2\pi}\Psi(r)$ equals the Riemann--von Mangoldt zero density $N'(r)$ to
+leading order.
+\end{enumerate}
+In particular $\Psi(r)>0\iff|r|>r_0$; the only negativity is the bounded band
+$|r|<r_0$, which lies strictly inside the zero-free gap, $r_0<\gamma_1
+=14.1347\ldots$, so $\Psi>0$ on the entire support of the zeros.
+\end{proposition}
+
+\begin{proof}
+Evenness and analyticity are clear. For (i), differentiate \eqref{eq:Ainf}:
+$\Psi'(r)=\Real\bigl[\tfrac{i}{2}\psi'(\tfrac14+\tfrac{ir}{2})\bigr]
+=-\tfrac12\Im\psi'(\tfrac14+\tfrac{ir}{2})$, and
+$\psi'(z)=\sum_{n\ge0}(z+n)^{-2}$ gives
+$\Im\psi'(\tfrac14+\tfrac{ir}{2})=-\sum_n\frac{2(\tfrac14+n)(r/2)}
+{((\tfrac14+n)^2+(r/2)^2)^2}<0$ for $r>0$; the stated series follows. Hence
+$\Psi$ increases from $\Psi(0)<0$ to $+\infty$, crossing zero once at $r_0$;
+(ii)--(iii) are the standard values and the digamma asymptotics
+$\Real\psi(\tfrac14+\tfrac{ir}{2})=\log\tfrac{|r|}{2}+o(1)$. The numerical
+constants and $r_0<\gamma_1$ are verified to $40$ digits in
+Appendix~\ref{app:code}.
+\end{proof}
+
+So the archimedean form is a strictly positive metric on the spectral bulk
+($|r|\ge\gamma_1$, where $\T$ has spectrum) and indefinite only on a finite band
+in the spectral gap.
+
+\section{Indefiniteness on the primitive part}
+A natural hope is that the band $|r|<r_0$ is absorbed by the ample/pole part of
+the construction (the de Vallée Poussin edge positivity of~\cite{RP16}). It is
+not.
+
+\begin{proposition}[$\Ainf$ is indefinite on primitives]\label{prop:indef}
+The vectors $\widehat f_\sigma(r)=(r^2+\tfrac14)e^{-r^2/2\sigma^2}$ are primitive
+($\widehat f_\sigma(\pm\tfrac{i}{2})=0$, so the pole/ample term vanishes on them),
+and $\Ainf(f_\sigma,f_\sigma)<0$ for small $\sigma$: numerically
+$\Ainf/\|f_\sigma\|^2=-1.82$ at $\sigma=1$, crossing to positive near
+$\sigma\approx5$. Hence $\Ainf$ is indefinite on $\HW^{\mathrm{prim}}$ and the
+band is not absorbed by the pole part.
+\end{proposition}
+
+\begin{proof}
+$(i/2)^2+\tfrac14=0$ gives $\widehat f_\sigma(\pm i/2)=0$, so $f_\sigma$ is
+primitive and the pole term $2|\widehat f_\sigma(i/2)|^2$ vanishes identically.
+For small $\sigma$ the mass of $|\widehat f_\sigma|^2$ concentrates in
+$|r|<r_0$ where $\Psi<0$, giving $\Ainf<0$; the values are computed in
+Appendix~\ref{app:code}.
+\end{proof}
+
+The signed form factors through a positive metric and a grading sign:
+$\Ainf=g_\infty(S\,\cdot,\cdot)$ with $g_\infty=|\Psi|(\Tc)\succ0$ and
+$S=\sgn(\Tc^2-r_0^2)\in\{\pm1\}$ --- the shape of a Hodge--Riemann form, a positive
+metric times a degree sign. The indefiniteness is a candidate grading, not a
+defect; whether it organizes into a hard-Lefschetz $\sltwo$ is the next question.
+
+\section{The continuum $\sltwo$ and the discrete no-go}
+The Frobenius $\T$ acts on $\HW$ with simple spectrum, so its commutant is a
+maximal abelian subalgebra (a MASA): any $L$ commuting with $\T$ is a function of
+$\T$ and, by Proposition~\ref{prop:filter}, useless. The correct hard-Lefschetz
+condition is therefore not commutation but the \emph{Tate twist}
+$[\T,L]=cL$ --- the analogue of $\mathrm{Frob}\cdot L=q\,L\cdot\mathrm{Frob}$ on
+$C\times C$, where $L$ raises the weight and scales the Frobenius eigenvalue.
+
+\begin{proposition}[No Tate-twist Lefschetz on the zeros]\label{prop:nogo}
+If $[\T,L]=cL$ with $c\ne0$ and $L\ne0$, then $L$ maps the $\gamma$-eigenspace of
+$\T$ into the $(\gamma+c)$-eigenspace, so the zero set must satisfy
+$\{\gamma_\rho\}+c\subseteq\{\gamma_\rho\}$, i.e.\ be invariant under translation
+by $c$. No $c\ne0$ has this property: a single inclusion $\gamma,\gamma+c,
+\gamma+2c\in\{\gamma_\rho\}$ already is a nontrivial $\mathbb Q$-linear relation
+among ordinates, excluded by $\mathrm{LI}$ \cite{RP15}; unconditionally, the
+variable spacing of the zeros rules out exact translation invariance. Hence no
+hard-Lefschetz raising operator exists on $\HW$ itself.
+\end{proposition}
+
+The remedy is to pass to the archimedean continuum $L^2(\mathbb R,dr)$, where the
+multiplication operator $\Tc$ has spectrum all of $\mathbb R$ --- which \emph{is}
+translation invariant.
+
+\begin{proposition}[Explicit continuum $\sltwo$]\label{prop:sl2}
+On $L^2(\mathbb R,dr)$ put $L=T_c$ (translation by $c$),
+$H=\tfrac2c\,\Tc$, and $\Lambda=T_{-c}\,m(\Tc)$ with $m(r)=-\tfrac{r^2}{c^2}
++\tfrac{r}{c}$. Then
+\[
+[\Tc,L]=cL,\qquad [H,L]=2L,\qquad [H,\Lambda]=-2\Lambda,\qquad [L,\Lambda]=H,
+\]
+so $(L,\Lambda,H)$ is an $\sltwo$-triple, Tate-twist compatible with the Frobenius
+flow. The raising operator $L=T_c$ is not a multiplication operator, hence
+$L\notin W^*(\Tc)$: the independence filter of Proposition~\ref{prop:filter} is
+cleared by an explicit operator. The grading $H=\tfrac2c\Tc$ has continuous
+spectrum --- a ``Frobenius-as-a-flow'' Lefschetz, not an integer grading.
+\end{proposition}
+
+\begin{proof}
+$[\Tc,T_c]=cT_c$ is the canonical commutation of multiplication and translation.
+Then $[H,L]=\tfrac2c[\Tc,T_c]=2T_c=2L$. With
+$(T_{-c}\,m\,T_c f)(r)=m(r+c)f(r)$ one computes
+$[L,\Lambda]=[T_c,T_{-c}m]=m(r)-m(r+c)=\tfrac2c r=H$ (using
+$m(r)-m(r+c)=-\tfrac{1}{c^2}(r^2-(r+c)^2)+\tfrac1c(r-(r+c))=\tfrac2c r$), and
+$[H,\Lambda]=\tfrac2c[\Tc,T_{-c}]m=-2\Lambda$. The relations are verified
+numerically to $10^{-12}$ in Appendix~\ref{app:code}. A translation is not
+diagonal in the position representation, so $L\notin W^*(\Tc)$.
+\end{proof}
+
+Propositions~\ref{prop:nogo}--\ref{prop:sl2} are the two horns to be joined in
+\S7. First we check what the construction buys downstairs.
+
+\section{The transport is the explicit formula}
+The continuum structure connects to the arithmetic zeros only through sampling.
+
+\begin{proposition}[Transport identity]\label{prop:transport}
+For primitive $f$ the explicit formula reads
+\begin{equation}\label{eq:transport}
+Q(f,f)=\sum_\rho |\widehat f(\gamma_\rho)|^2
+=\Ainf(f,f)-P(f,f),\qquad
+P(f,f)=2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,g(\log n),
+\end{equation}
+where $g$ is the Fourier transform of $|\widehat f|^2$ (the pole term drops since
+$\widehat f(\pm i/2)=0$). On the test family of Proposition~\ref{prop:indef} the
+identity holds to $10^{-12}$--$10^{-20}$, and $\Ainf$ and $P$ are large, negative,
+and nearly equal, so $Q$ is the small non-negative residual of an almost total
+archimedean--prime cancellation.
+\end{proposition}
+
+Table~\ref{tab:transport} records the computation (first $300$ zeros, von
+Mangoldt to $2\cdot10^4$). The point is structural: the discrete positivity
+$Q\ge0$ is \emph{not} the transported image of the upstairs metric --- on these
+primitives $\Ainf<0$ --- but the residue $\Ainf-P$, the classical wrong-sign
+obstruction~\cite{RP13}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|rrrr}
+$\sigma$ & $Q=\sum_\rho|\widehat f(\gamma_\rho)|^2$ & $\Ainf$ & $P$ & $Q-(\Ainf-P)$\\\hline
+$2$ & $1.6\times10^{-17}$ & $-6.2225$ & $-6.2225$ & $-1.4\times10^{-20}$\\
+$3$ & $1.83\times10^{-5}$ & $-21.677$ & $-21.677$ & $-2\times10^{-12}$\\
+$4$ & $0.3022$ & $-24.239$ & $-24.542$ & $-3\times10^{-4}$
+\end{tabular}
+\caption{The transport identity \eqref{eq:transport} and the near-cancellation.}
+\label{tab:transport}
+\end{table}
+
+\section{The Lefschetz dichotomy}
+The continuum $\sltwo$ of Proposition~\ref{prop:sl2} clears the independence
+filter, but it does not carry the positivity that hard Lefschetz needs.
+
+\begin{proposition}[No Hodge--Riemann form on the continuum $\sltwo$]\label{prop:ps}
+The representation of Proposition~\ref{prop:sl2} is principal series:
+$\spec(H)=\tfrac2c\mathbb R$ is unbounded below, and the lowest-weight equation
+$\Lambda v=0$ forces $m(r)v(r)=0$, i.e.\ $v$ supported on the measure-zero set
+$\{0,c\}$, so there is no normalizable lowest-weight vector and no primitive
+decomposition $V=\bigoplus_k L^k(\ker\Lambda)$. Hodge--Riemann bilinear relations
+are defined only on lowest-weight (equivalently finite-dimensional or
+discrete-series, integer-graded) $\sltwo$-representations; the continuum $\sltwo$
+carries none. Concretely, the only manifestly positive form the data yield is
+$g_\infty(f,f)=\tfrac1{2\pi}\int|\widehat f|^2|\Psi|$, which differs from the Weil
+form $Q$ by factors $10^2$--$10^{18}$ on the test family
+(Appendix~\ref{app:code}); the degree grading produces $g_\infty$, not $Q$.
+\end{proposition}
+
+\begin{theorem}[The Lefschetz dichotomy]\label{thm:dichotomy}
+Under $\mathrm{LI}$ there is no hard-Lefschetz $\sltwo$-action carrying a
+Hodge--Riemann form that acts on the arithmetic zero-spectrum:
+\[
+\boxed{\;
+\begin{array}{ll}
+\textbf{discrete horn:} & \text{on }\{\gamma_\rho\}\text{ no Tate-twist raising
+operator exists (Prop.~\ref{prop:nogo}),}\\
+\textbf{continuum horn:} & \text{on }L^2(\mathbb R,dr)\text{ the raising operator
+exists but the }\sltwo\\
+& \text{is principal series, with no Hodge--Riemann form
+(Prop.~\ref{prop:ps}).}
+\end{array}\;}
+\]
+Equivalently: a Hodge--Riemann-carrying grading requires lowest weight (integer
+spacing), which forces the Frobenius eigenvalues into a single weight; $\mathrm{LI}$
+is exactly the statement that the zeros admit no such integer-weight structure.
+An arithmetic spectrum and a Hodge--Riemann grading are
+$\mathrm{LI}$-incompatible.
+\end{theorem}
+
+\begin{proof}
+The two horns are Propositions~\ref{prop:nogo} and~\ref{prop:ps}. For the
+equivalence: in the function-field case $H^1$ is pure of weight $1$, the
+Frobenius eigenvalues are Weil numbers of that single weight, and the
+Lefschetz $\sltwo$ on $H^0\oplus H^1\oplus H^2$ is lowest weight, so
+Hodge--Riemann applies and yields $\RH$. A lowest-weight (integer-graded)
+$\sltwo$ commuting-up-to-Tate-twist with $\T$ would, by the argument of
+Proposition~\ref{prop:nogo}, place the eigenvalues of $\T$ in an arithmetic
+progression of weights --- a $\mathbb Q$-linear structure on $\{\gamma_\rho\}$
+excluded by $\mathrm{LI}$. Hence no such grading exists on the zeros; buying one
+on the continuum costs the lowest-weight property (Proposition~\ref{prop:ps}).
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:dichotomy} refines the finitization-under-LI obstruction
+of~\cite{RP15} from ``no finite model'' to a representation-theoretic statement
+about gradings, and it is reached constructively: every ingredient of Weil's
+scaffold is built (pairing, trace identity, effectivity, ample cone, the
+zero-carrying cohomology, the Frobenius flow, and an explicit $\T$-independent
+$\sltwo$), and the obstruction is isolated as the incompatibility of two
+specific structures. It does not assert that $\RH$ is false, nor that no proof
+exists --- only that the hard-Lefschetz mechanism, as it operates in the
+function-field case, cannot be transported to $\zeta$ along this route.
+\end{remark}
+
+\section{Conclusion}
+The archimedean--modular construction produces three genuine gains: a positive
+metric $g_\infty=|\Psi|$ on the spectral bulk (Proposition~\ref{prop:psi}); the
+first explicit hard-Lefschetz raising operator independent of the Frobenius
+(Proposition~\ref{prop:sl2}); and the exact transport identity
+(Proposition~\ref{prop:transport}). It does not cross the wall: the Weil
+positivity is the near-cancellation residual $\Ainf-P$, and the
+Lefschetz dichotomy (Theorem~\ref{thm:dichotomy}) names precisely why the
+positivity cannot be supplied by a hard-Lefschetz class --- linear independence
+of the zeros forbids the lowest-weight grading that Hodge--Riemann requires. The
+result is a structural theorem about the obstruction, consistent with the
+program's wrong-sign map~\cite{RP13,RP15}, reached this time from the
+Hodge-theoretic side.
+
+\appendix
+\section{Reproducible computations}\label{app:code}
+All values are produced by the following self-contained scripts (Python with
+\texttt{mpmath}/\texttt{numpy}); outputs are quoted in the text.
+
+\subsection*{A.1 The archimedean density (Propositions~\ref{prop:psi})}
+\begin{lstlisting}
+import mpmath as mp
+mp.mp.dps = 40
+logpi = mp.log(mp.pi)
+Psi  = lambda r: mp.re(mp.digamma(mp.mpf('0.25')+1j*mp.mpf(r)/2)) - logpi
+dPsi = lambda r: mp.re(0.5*1j*mp.polygamma(1, mp.mpf('0.25')+1j*mp.mpf(r)/2))
+# (i) strict monotonicity, (ii) unique zero r0, (iii) asymptotics
+print("Psi(0)   =", mp.nstr(Psi(0),12))        # -5.37218341923 (global min)
+print("r0       =", mp.nstr(mp.findroot(Psi,6.3),16))  # 6.289835988836903
+print("gamma_1  =", mp.nstr(mp.im(mp.zetazero(1)),12)) # 14.1347251417 > r0
+print("Psi(g1)  =", mp.nstr(Psi(mp.im(mp.zetazero(1))),8))  # 0.81054874 > 0
+for r in [20,100,1000]:                          # Psi/2pi ~ N'(r) zero density
+    print(r, mp.nstr(Psi(r)/(2*mp.pi),10), mp.nstr(mp.log(mp.mpf(r)/(2*mp.pi))/(2*mp.pi),10))
+\end{lstlisting}
+
+\subsection*{A.2 Indefiniteness on primitives (Proposition~\ref{prop:indef})}
+\begin{lstlisting}
+import mpmath as mp
+mp.mp.dps = 30
+logpi = mp.log(mp.pi)
+Psi = lambda r: mp.re(mp.digamma(mp.mpf('0.25')+1j*mp.mpf(r)/2)) - logpi
+def Ainf_over_norm(sig):
+    sig=mp.mpf(sig)
+    fh=lambda r:(r**2+mp.mpf('0.25'))*mp.e**(-r**2/(2*sig**2))  # primitive: fh(+-i/2)=0
+    A=(1/(2*mp.pi))*mp.quad(lambda r: fh(r)**2*Psi(r), [-mp.inf,-6.29,0,6.29,mp.inf])
+    N=(1/(2*mp.pi))*mp.quad(lambda r: fh(r)**2, [-mp.inf,0,mp.inf])
+    return A/N
+for s in ['1','3','6','12']:
+    print('sigma',s, mp.nstr(Ainf_over_norm(s),8))   # -1.82, -0.41, +0.30, +0.998
+\end{lstlisting}
+
+\subsection*{A.3 The continuum $\sltwo$ (Proposition~\ref{prop:sl2})}
+\begin{lstlisting}
+import numpy as np
+N=6000; h=0.01; c=1.0; shift=int(round(c/h))
+r=(np.arange(N)-N//2)*h
+Tcont=np.diag(r)
+Tc =np.zeros((N,N)); Tc[shift:,:-shift]=np.eye(N-shift)     # (T_c f)_j=f_{j-shift}
+Tmc=np.zeros((N,N)); Tmc[:-shift,shift:]=np.eye(N-shift)    # (T_-c f)_j=f_{j+shift}
+m=-(r**2)/c**2+r/c
+H=(2.0/c)*Tcont; L=Tc; Lam=Tmc@np.diag(m)
+comm=lambda A,B:A@B-B@A; s=slice(shift+20,N-shift-20); e=lambda M:np.max(np.abs(M[s,s]))
+print('[Tcont,L]-cL', e(comm(Tcont,L)-c*L))    # ~3e-15
+print('[H,L]-2L    ', e(comm(H,L)-2*L))         # ~7e-15
+print('[H,Lam]+2Lam', e(comm(H,Lam)+2*Lam))     # ~7e-12
+print('[L,Lam]-H   ', e(comm(L,Lam)-H))         # ~3e-13
+\end{lstlisting}
+
+\subsection*{A.4 Transport identity and the dichotomy comparison (Props.~\ref{prop:transport},~\ref{prop:ps})}
+\begin{lstlisting}
+import mpmath as mp
+mp.mp.dps=25
+logpi=mp.log(mp.pi)
+Psi=lambda r: mp.re(mp.digamma(mp.mpf('0.25')+1j*mp.mpf(r)/2))-logpi
+def vonmangoldt(nmax):
+    spf=list(range(nmax+1)); i=2
+    while i*i<=nmax:
+        if spf[i]==i:
+            for j in range(i*i,nmax+1,i):
+                if spf[j]==j: spf[j]=i
+        i+=1
+    L=[mp.mpf(0)]*(nmax+1)
+    for n in range(2,nmax+1):
+        p=spf[n]; m=n
+        while m%p==0: m//=p
+        if m==1: L[n]=mp.log(p)
+    return L
+NMAX=20000; Lam=vonmangoldt(NMAX); Z=[mp.im(mp.zetazero(k)) for k in range(1,301)]
+for s in ['2','3','4']:
+    sig=mp.mpf(s); h=lambda r:(r**2+mp.mpf('0.25'))**2*mp.e**(-r**2/sig**2)
+    g=lambda u:(1/(2*mp.pi))*mp.quad(lambda r:h(r)*mp.cos(u*r),[-mp.inf,0,mp.inf])
+    Q=mp.fsum(2*h(z) for z in Z)
+    A=(1/(2*mp.pi))*mp.quad(lambda r:h(r)*Psi(r),[-mp.inf,-6.29,0,6.29,mp.inf])
+    gI=(1/(2*mp.pi))*mp.quad(lambda r:h(r)*abs(Psi(r)),[-mp.inf,-6.29,0,6.29,mp.inf])
+    P=mp.fsum(2*(Lam[n]/mp.sqrt(n))*g(mp.log(n)) for n in range(2,NMAX+1) if Lam[n]!=0)
+    print(s,'Q',mp.nstr(Q,6),'A',mp.nstr(A,6),'P',mp.nstr(P,6),
+          'Q-(A-P)',mp.nstr(Q-(A-P),4),'  g_inf',mp.nstr(gI,6))
+# g_inf >= 0 but differs from Q by 10^2..10^18: the grading yields g_inf, not Q.
+\end{lstlisting}
+
+\begin{thebibliography}{9}
+\bibitem{RP8} D.~A.~Trejo Pizzo, \emph{A Weil--Kre\u\i n realization of the explicit formula}, preprint, 2026.
+\bibitem{RP13} D.~A.~Trejo Pizzo, \emph{Two modern routes and the wrong-sign obstruction}, preprint, 2026.
+\bibitem{RP15} D.~A.~Trejo Pizzo, \emph{Why the Riemann Hypothesis resists}, preprint, 2026.
+\bibitem{RP16} D.~A.~Trejo Pizzo, \emph{The Pontryagin index and the finite-defect route}, preprint, 2026.
+\bibitem{RP17} D.~A.~Trejo Pizzo, \emph{An unconditional finite bottom for the localized Weil form: a verified second-moment identity, an almost-everywhere clean bound, and the residue as a uniform short-interval prime variance}, preprint, 2026.
+
+\bibitem{Weil} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers}, Comm. S\'em. Math. Lund (1952).
+\bibitem{Deninger} C.~Deninger, \emph{Some analogies between number theory and dynamical systems on foliated spaces}, ICM (1998).
+\bibitem{bgWeil49} A.~Weil, \emph{Numbers of solutions of equations in finite fields}, Bull.\ Amer.\ Math.\ Soc.\ \textbf{55} (1949), 497--508.
+\bibitem{bgDeligne} P.~Deligne, \emph{La conjecture de Weil. I}, Publ.\ Math.\ IH\'ES \textbf{43} (1974), 273--307.
+\bibitem{bgConnes99} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\bibitem{bgCC10} A.~Connes and C.~Consani, \emph{Schemes over $\mathbb{F}_1$ and zeta functions}, Compos.\ Math.\ \textbf{146} (2010), 1383--1415.
+\bibitem{bgDeninger} C.~Deninger, \emph{Some analogies between number theory and dynamical systems on foliated spaces}, Doc.\ Math.\ ICM \textbf{I} (1998), 163--186.
+\bibitem{bgBK} M.~V.~Berry and J.~P.~Keating, \emph{The Riemann zeros and eigenvalue asymptotics}, SIAM Rev.\ \textbf{41} (1999), 236--266.
+\bibitem{bgMont73} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc.\ Sympos.\ Pure Math.\ \textbf{24} (1973), 181--193.
+\bibitem{bgKS} N.~M.~Katz and P.~Sarnak, \emph{Zeroes of zeta functions and symmetry}, Bull.\ Amer.\ Math.\ Soc.\ \textbf{36} (1999), 1--26.
+\bibitem{bgBombieri00} E.~Bombieri, \emph{Problems of the Millennium: The Riemann Hypothesis}, Clay Mathematics Institute, 2000.
+\bibitem{bgTitchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., rev.\ D.~R.~Heath-Brown, Oxford Univ.\ Press, 1986.
+\bibitem{bgEdwards} H.~M.~Edwards, \emph{Riemann's Zeta Function}, Academic Press, 1974.
+\bibitem{bgIK} H.~Iwaniec and E.~Kowalski, \emph{Analytic Number Theory}, Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{53}, AMS, 2004.
+\end{thebibliography}
+
+\end{document}

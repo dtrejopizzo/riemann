@@ -1,0 +1,17 @@
+## Overview ## CORRELATION ANALYSIS OF M(t) AND R_comp(t) FOR DAVENPORT-HEILBRONN FUNCTION The hypothesis that the cancellation metric M(t) and composite coherence R_comp(t) are independent for the true Davenport-Heilbronn function is **REJECTED**. ### Quantitative Evidence **Correlation Coefficients:**
+- **Pearson correlation**: r = -0.124365, p = 8.04×10⁻⁵ (statistically significant)
+- **Spearman correlation**: ρ = -0.310175, p = 9.65×10⁻²⁴ (highly statistically significant) Both correlations are statistically significant at α = 0.05, indicating that M(t) and R_comp(t) are **NOT independent**. **Robustness:**
+- Without top 1% outliers: Pearson r = -0.195 (p = 5.85×10⁻¹⁰), Spearman ρ = -0.305 (p = 8.06×10⁻²³)
+- Windowed correlation analysis (100-point windows): Mean Spearman ρ = -0.312 ± 0.056, with 91/91 windows showing negative correlation **Dataset Details:**
+- N = 10⁵ (truncation length)
+- t ∈ [1000, 2000] with 1,000 uniformly sampled points
+- Correct L_DH implementation with a_n = 0 for all non-squarefree n (60,794 squarefree numbers used) ### Interpretation The analysis reveals a **weak to moderate negative correlation** between M(t) and R_comp(t). This indicates that: 1. When M(t) is high (less cancellation, more constructive interference), R_comp(t) tends to be low (less phase coherence in composite squarefree terms)
+2. When M(t) is low (more cancellation), R_comp(t) tends to be higher This negative relationship suggests the metrics capture **related but complementary aspects** of the resonance mechanism rather than orthogonal phenomena. The coupling between these metrics may reflect an intrinsic trade-off in the Davenport-Heilbronn function's structure: strong ω-stratified constructive interference (high M) appears to compete with composite-term phase alignment (high R_comp). --- ## DISCRETIONARY DECISIONS - **Cancellation metric formulation**: Used the canonical formulation M = √(Σ|S_k|²) / |Σ S_k| where S_k are partial sums partitioned by ω(n), which yields M < 1 for destructive interference
+- **Truncation length**: Selected N = 10⁵ as a computationally feasible scale for 1,000-point time series (completed in ~81 seconds). N = 10⁶ was stated as the target but would have exceeded computational constraints
+- **Sampling strategy**: Used uniform sampling with 1,000 points over [1000, 2000] to balance resolution and computational cost
+- **Significance threshold**: Set α = 0.05 for statistical significance testing as specified in research objective
+- **Outlier treatment**: Performed robustness check by excluding top 1% of M values (M > 18.41) to verify correlation stability
+- **Correlation methods**: Computed both Pearson (linear) and Spearman (rank-based) correlations to assess linear and monotonic relationships
+- **Window size for local correlation**: Selected 100-point windows for windowed correlation analysis to capture local correlation structure while maintaining statistical power
+- **Numerical precision**: Used Kahan compensated summation for all partial sum computations to minimize floating-point errors, as specified in dataset description
+- **Composite squarefree definition**: Defined composite squarefree numbers as those with μ(n) ≠ 0 AND ω(n) ≥ 2 (at least 2 distinct prime factors) 

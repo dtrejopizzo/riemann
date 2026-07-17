@@ -1,0 +1,438 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\Koff}{\mathcal{K}_{\mathrm{off}}}
+\newcommand{\negind}{\operatorname{neg.ind}}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\Spec}{Spec}
+
+\title[Finiteness and Rigidity]{Finiteness and rigidity:\\
+a two-lemma architecture for the Riemann Hypothesis}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgWeil49,bgDeligne,bgCC21,bgDeninger,bgdeBranges,bgKL,bgBombieri00,bgIK}
+
+\begin{abstract}
+Let $m\in\{0,1,2,\dots,\infty\}$ denote the number of quadruples of
+non-trivial zeros of $\zeta$ off the critical line, so that the Riemann
+Hypothesis (RH) is the statement $m=0$. We prove a conditional dichotomy:
+if $\zeta$ admits pointwise self-approximation along a single unbounded
+sequence of shifts on compact disks of the open critical strip
+(Lemma~LP-112, formally weaker than Bagchi's strong recurrence), then
+$m\in\{0,\infty\}$. The hypothesis $m<\infty$ freezes every constant in the
+Bohr--Rouch\'e replication argument---a minimal off-line distance, a
+nonvanishing margin, a maximal height---so that a single replication
+suffices, and the Euler product enters at three identified points,
+excluding the known finite-$m$ counterexamples without Euler product.
+Consequently $\RH$ follows from two lemmas: \emph{(L8) finiteness},
+$m<\infty$, which we argue is the countable avatar of cohomological
+finite-dimensionality over $\Spec\bbZ$ (it admits no Siegel-type repulsion:
+two quadruples are \emph{harder} to exclude than one, since index costs add
+rather than compete for a scarce budget); and \emph{(LP-112) sequential
+rigidity}, for which we show there is no precedent in the literature: every
+known self-approximation theorem is a density statement proved by
+genericity, and the natural Montel-plus-Besicovitch chain dies at the
+identification of the limit. As a byproduct we prove an unconditional
+negative theorem in seminorm coordinates: $\zeta$ is not Stepanov
+almost-periodic, in the band (vector-valued) sense, on any sub-strip of
+the critical strip---every seminorm
+that sees compact windows is destroyed by the growth of $\zeta$, and every
+seminorm under which $\zeta$ is almost periodic is blind to compact
+windows. The two lemmas reproduce the order of the only proof of an
+RH-type statement that exists (finiteness before purity, Weil--Deligne),
+and the wall of \cite{P43} is shown to be insensitive to the cardinality
+of witnesses demanded, sensitive only to their exceptionality. No proof of
+RH is claimed.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\subsection{From a closed map to an open architecture}
+The companion paper \cite{P43} closed a long programme: it argued that
+every analytic, spectral, and combinatorial route to RH terminates at a
+single obstruction---the inversion of one quantifier, from averaged to
+individual---and that no argument-form catalogued there crosses it. A
+closed map invites a question it cannot itself answer: \emph{if the wall
+is one, where is its gate?} This paper records the programme's answer,
+found by asking a physicist's question (what pins a system to its critical
+point, and what kind of object counts modes one by one) and following it
+to its mathematical end \cite[Docs~109--113]{P40}.
+
+The answer is an architecture. Writing $m$ for the number of off-critical
+zero quadruples,
+\[
+\RH \;=\; \underbrace{(m<\infty)}_{\text{finiteness}}
+\;\wedge\;
+\underbrace{(m<\infty\Rightarrow m=0)}_{\text{dichotomy}},
+\]
+and the two halves have different natures, different natural owners, and
+different walls. The dichotomy, we prove, follows from a single sequential
+rigidity lemma (LP-112) that is strictly weaker than every previously
+identified sufficient condition. The finiteness, we argue, is the countable
+avatar of cohomological finite-dimensionality, inaccessible to analysis for
+a structural reason (there is no Siegel-type repulsion among quadruples)
+and matching exactly what the Connes--Consani arithmetic-site programme
+would supply if it succeeds. This reproduces the order of the only existing
+proof of an RH-type theorem: over function fields, finiteness
+($\dim H^1=2g$) came first, purity second.
+
+We are explicit about status: both lemmas remain open, and both sit behind
+the master-quantifier wall of \cite{P43}---finiteness because $m$ is an
+intensive, density-zero parameter invisible to averages; LP-112 because its
+witnesses form an exceptional set under $\neg\RH$. The contribution is not
+progress along either lemma but the articulation itself: the joint at which
+the problem separates into a geometric half and an analytic half, with the
+boundary between them drawn precisely.
+
+\subsection{Framework and notation}
+We use the framework of \cite{P39,P40,P41,P42,P43}. Off-critical zeros of
+$\zeta$ come in quadruples $\{\beta\pm i\gamma,\,1-\beta\pm i\gamma\}$ with
+$\beta=\tfrac12+\delta$, $\delta\in(0,\tfrac12)$; $m$ counts the quadruples;
+$\RH\iff m=0$. By Bohr--Landau (1914), in every $\neg\RH$ world the
+off-critical zeros have density zero among all zeros. The negative index of
+the Weil form satisfies $\kappa(Q)=2m$ on the off-critical subspace $\Koff$
+\cite{P35}, \cite[]{P40}.
+
+\section{The dichotomy theorem}\label{sec:dichotomy}
+
+\subsection{The rigidity lemma}
+\begin{definition}[LP-112: sequential self-approximation]\label{def:lp112}
+For every compact disk $D\subset\{\tfrac12<\Real(s)<1\}$ there exists a
+sequence $\tau_k\to\infty$ (which may depend on $D$) such that
+$\zeta(s+i\tau_k)\to\zeta(s)$ uniformly on $D$.
+\end{definition}
+
+\begin{remark}[Quantifier form]
+This is the \emph{weak} (per-disk) form, and it is all the proof of
+Theorem~\ref{thm:dichotomy} uses: a single disk around a single
+off-critical zero. The strong form (one sequence serving all disks
+simultaneously) is not needed and is not assumed.
+\end{remark}
+
+LP-112 demands a \emph{sequence} of good shifts---non-vacuity of the set of
+pointwise almost-periods---where Bagchi's strong recurrence demands
+positive lower density of them. The gap in strength is strict and decisive:
+strong recurrence is \emph{equivalent} to RH \cite[]{P40}, while
+LP-112 is implied by RH and, as far as every known dictionary reaches, does
+not imply it (\S\ref{ssec:notequiv}).
+
+\subsection{The theorem}
+\begin{theorem}[Conditional dichotomy {\cite[Thm~2.3]{P40}}]
+\label{thm:dichotomy}
+Assume LP-112. Then $m\in\{0,\infty\}$. Consequently
+$\RH$ follows from LP-112 together with $m<\infty$.
+\end{theorem}
+
+\begin{proof}[Sketch, with the role of finiteness made explicit]
+Suppose $0<m<\infty$. Finiteness freezes every constant of the replication
+argument: there is a minimal off-line distance $\delta_{\min}>0$, a maximal
+height $\gamma_{\max}<\infty$, and around a fixed off-critical zero
+$\rho_0$ a closed disk $D$ of radius $r<\delta_{\min}/2$ on whose boundary
+$\eta:=\min_{\partial D}|\zeta|>0$. Take $\tau_k$ as in LP-112 with
+$\sup_D|\zeta(s+i\tau_k)-\zeta(s)|<\eta$ for large $k$. By Rouch\'e,
+$\zeta(\cdot+i\tau_k)$ has a zero in $D$, i.e.\ $\zeta$ has a zero in
+$D+i\tau_k$---off-critical, since $r<\delta_{\min}/2$ keeps the replica
+away from the line, and \emph{new}, since $\tau_k\to\infty$ eventually
+exceeds $2\gamma_{\max}$. One replica gives $m+1$ quadruples; iterating
+along the sequence gives infinitely many, contradicting $m<\infty$. Hence
+$m=0$ or $m=\infty$.
+\end{proof}
+
+\begin{remark}[Why a single replica suffices, and why that matters]
+Every earlier replication argument in the programme (Bagchi's, and its
+effective version \cite[]{P40}) needed a positive-density family of
+replicas to contradict the zero-density theorems
+$N(\sigma,T)=o(T)$---and was self-blocking precisely because the needed
+density and the available ceiling carried the same exponent. Under
+$m<\infty$ the target changes: \emph{one} replica beats finiteness. The
+self-blocking mechanism of \cite[]{P40} does not apply to the
+sequential version (no density theorem obstructs density-zero replication);
+what remains is only the exceptionality of the witnesses
+(\S\ref{ssec:wall}).
+\end{remark}
+
+\subsection{Where the Euler product enters}
+By \cite[Prop.~2.2]{P40}, every finite $m$ is realisable in the
+class of order-one real entire functions with the functional equation
+(explicit $\cosh$-type examples), so Theorem~\ref{thm:dichotomy} must use
+the Euler product essentially. It does, at three identified points
+\cite[\S3]{P40}: (i) the $B^2$ almost-periodicity that feeds any
+approximation statement comes from the Dirichlet series; (ii) the
+$\bbQ$-linear independence of $\{\log p\}$---unique factorisation, pure
+arithmetic---makes the group of almost-periods relatively dense and
+non-discrete, so replicas land at \emph{new} heights (the $\cosh$-examples
+are periodic with one frequency: their ``replicas'' land on the same
+zeros and generate nothing); (iii) the random Euler product underlies the
+support theorems that control the limit. The counterexamples are excluded
+at the first step: they are not even $B^2$.
+
+\subsection{LP-112 is not known to be RH-equivalent}\label{ssec:notequiv}
+RH implies LP-112 (Bagchi's theorem gives positive density of pointwise
+almost-periods, a fortiori a sequence). Conversely LP-112 yields only the
+dichotomy: under $\neg\RH$ its consequence is $m=\infty$, which is
+consistent. LP-112 is formally weaker than strong recurrence (sequence
+versus positive density, a one-way implication), and \cite[]{P40}
+verifies that no known dictionary upgrades it to RH. We state the status
+precisely: the non-equivalence is \emph{not refuted}, not \emph{proved}---
+indeed no material non-equivalence can be proved while RH is open, since
+under RH both statements are true. What is certified is that LP-112 is
+weaker \emph{as a statement} along every known derivation; whether it is
+easier \emph{as a problem} is the architecture's declared bet, not a
+theorem. It is the weakest statement so far identified that, with
+finiteness, closes the argument.
+
+\section{The finiteness lemma is cohomological}\label{sec:finiteness}
+
+\subsection{No Siegel mechanism}
+Could analysis prove $m<\infty$ directly---an unconditional ``at most $C$
+exceptions'' theorem, as for Siegel zeros? The analysis of
+\cite[]{P40} says no, for a structural reason worth recording.
+Siegel-type repulsion works by \emph{scarcity of a budget}: the simple pole
+of $\zeta$ is a global $O(1)$ resource near $s=1$, and two exceptional
+zeros compete for it. For off-critical quadruples in the interior of the
+strip the local budget is the archimedean term $\asymp\log\gamma_0$, which
+\emph{grows}; without scarcity there is no repulsion. Worse, the mechanism
+is \emph{anti-Siegel}: in every counting functional of the programme the
+costs of two quadruples add---they never compete---so $m=2$ is harder to
+exclude than $m=1$. And the statistics that are unconditionally
+Gaussian-concentrated (Selberg's central limit theorem for $S(t)$) are
+blind to the abscissa: a quadruple is indistinguishable from a double
+on-line zero for $N(T)$ and $S(T)$ \cite[Lem.~5.1]{P40}.
+
+\subsection{Finiteness as the countable avatar of $\dim H^1<\infty$}
+The two historical precedents of an unconditional
+``finite-budget-per-object'' theorem are Siegel's (budget: the pole) and
+Weil's over function fields (budget: $\dim H^1=2g$, established
+\emph{before} purity). The programme's Form~B analysis sharpened this:
+the Deligne mechanism transplanted to $(K,Q)$ possessed amplification but
+lacked precisely an a-priori finiteness source---``Form~B was Deligne minus
+finiteness'' \cite[]{P40}---and the missing axiom (L6: a-priori
+finite rank with arithmetic traces) is exactly what the tropical
+Riemann--Roch of the Connes--Consani site does not yet provide: their
+theorem yields Euler characteristics (values), not signatures with
+positivity (inertia). Moreover, by \cite[Prop.~4.5]{P40}, the
+value/inertia wall of \cite{P43} is rank-sensitive: \emph{in a-priori
+finite rank, finitely many autonomous traces determine the inertia}
+(Newton identities). Finiteness converts the unreadable into the readable.
+We therefore state the geometric half as a target specification rather than
+a conjecture of analysis:
+
+\begin{problem}[L8, the finiteness lemma]\label{prob:L8}
+Prove $m<\infty$: the off-critical zeros of $\zeta$, if any, are finite in
+number. Equivalently (in the programme's operator form): the negative
+index $\kappa(Q)=2m$ is finite a priori. The expected source is a
+cohomological finiteness theorem over $\Spec\bbZ$---the analogue of
+$\dim H^1=2g$---not an analytic estimate; no analytic route catalogued in
+\cite{P40,P41,P42,P43} reaches it, and the anti-Siegel structure above
+explains why.
+\end{problem}
+
+\section{The rigidity lemma has no precedent}\label{sec:rigidity}
+
+\subsection{The map of what is proved}
+\cite[]{P40} surveys self-approximation exhaustively. Everything
+proved is a \emph{density} statement established by \emph{genericity}: the
+Hurwitz zeta self-approximates at $d=0$ unconditionally because its orbit
+closure has full support (no Euler product---exactly the property $\zeta$
+lacks); the family $\mathrm{SR}_d$ for $d\neq0$ holds by equidistribution
+(Baker, six exponentials); $d=0$ for $\zeta$ with positive density is
+Bagchi's theorem, equivalent to RH---an equivalence already present, in
+almost-period language, in Bohr's 1922 work, sixty years before Bagchi.
+The unconditional abscissa for pointwise almost-periodicity of $\zeta$ is
+exactly $\sigma_0=1$; the sequential statement is open for every
+$\sigma_0<1$. No class of functions is known in which sequential
+self-approximation is proved without either full support or an
+RH-equivalent.
+
+\subsection{A negative theorem in seminorm coordinates}
+The natural attack on LP-112---compactness (Montel) plus
+almost-periodicity ($B^2$)---fails at a precise and instructive point. The
+compactness links hold unconditionally: by the second-moment bounds, the
+set of $\tau$ with $\zeta(\cdot+i\tau)$ bounded on a fixed disk has density
+$1-\delta$; intersecting with the positive-density set of $B^2$
+almost-periods gives a sequence along which $\zeta(s+i\tau_k)$ converges to
+some holomorphic $g$. The chain dies at the \emph{identification} $g=\zeta$:
+the $B^2$ seminorm is a global average in $t$ and assigns weight zero to the
+compact window of the disk, so the certificate ``$\tau_k$ is a $B^2$
+almost-period'' carries no information about the window where the zero
+lives---the same locus as \cite[Prop.~2.6]{P40}. Could a stronger
+seminorm see the window? We prove it cannot:
+
+\begin{theorem}[No Stepanov almost-periodicity, band sense {\cite[Thm~5.2]{P40}}]
+\label{thm:stepanov}
+$\zeta$ is not Stepanov almost-periodic on any sub-strip of the open
+critical strip, in the band (vector-valued) sense: for every
+$[\sigma_1,\sigma_2]\subset(\tfrac12,1)$ and every $p\geq1$, the vectorial
+Stepanov norm
+$\sup_x\int_x^{x+1}\!\!\int_{\sigma_1}^{\sigma_2}|\zeta(\sigma+it)|^p\,
+d\sigma\,dt$ is infinite, so $t\mapsto\zeta(\cdot+it)$ is not $S^p$ almost
+periodic as an $L^p(\sigma_1,\sigma_2)$-valued function. (Stepanov almost
+periodicity implies finiteness of the Stepanov norm, which the
+unconditional large-value theorems for $\zeta$, via subharmonicity of
+$|\zeta|^p$ on disks contained in the band, violate.) The fixed-line scalar
+version is not claimed and remains open.
+\end{theorem}
+
+\begin{observation}[The wall in seminorm coordinates]\label{obs:seminorm}
+Every seminorm that sees compact windows (uniform, Stepanov) is destroyed
+by the growth of $\zeta$ in the strip; every seminorm under which $\zeta$
+\emph{is} almost periodic ($B^2$, Weyl) is blind to compact windows. The
+master quantifier of \cite{P43}, in this coordinate system: the seminorms
+that average survive and certify nothing individual; the seminorms that
+individuate do not survive.
+\end{observation}
+
+\subsection{The wall, and a sharpening of \cite{P43}}\label{ssec:wall}
+Under $\neg\RH$, the set of $\tau$ good for Rouch\'e on the zero's disk has
+upper density zero \cite[Prop.~2.6]{P40}: LP-112 asks to certify
+that an exceptional set is non-empty. This is the master quantifier in
+sequential form, and it yields a sharpening of the no-go:
+
+\begin{observation}[Cardinality-insensitivity]\label{obs:cardinal}
+The wall of \cite{P43} is insensitive to the cardinality of witnesses
+demanded---positive density of replicas or a single one---and sensitive
+only to their exceptionality. Weakening a target from ``positive density''
+to ``one witness'' removes the self-blocking against density theorems
+\cite[]{P40} but does not move the wall, because the witness still
+lives in a null set that averaging methods cannot enter.
+\end{observation}
+
+The named missing piece is the anchoring lemma \emph{LP-113}
+\cite[]{P40}: localise the mean goodness of a $B^2$ almost-period
+into the fixed compact window. LP-113 implies LP-112, follows from RH, and
+is not RH-equivalent by any known dictionary---but its witnesses are
+exceptional under $\neg\RH$: same wall, one level down.
+
+\section{The architecture, assembled}\label{sec:architecture}
+
+\begin{theorem}[Two-lemma reduction]\label{thm:architecture}
+$\RH$ follows from L8 (Problem~\ref{prob:L8}) together with LP-112
+(Definition~\ref{def:lp112}). The two lemmas are independent in nature:
+L8 is a finiteness statement of cohomological type, with no analytic route
+and no Siegel mechanism; LP-112 is an analytic rigidity statement, strictly
+weaker than every previously identified sufficient condition, with no
+precedent in any function class. Both sit behind the master-quantifier
+wall of \cite{P43}: L8 because $m$ is intensive and density-zero, LP-112
+because its witnesses are exceptional.
+\end{theorem}
+
+\begin{remark}[The Weil order]
+The architecture reproduces the structure of the one proof that exists.
+Over function fields, finiteness ($\dim H^1=2g$, cohomological) preceded
+purity (the zeros where they must be); and given finiteness, finitely many
+traces---Lefschetz numbers, the autonomous values---determine everything.
+Here likewise: given L8, the rank is finite a priori, finitely many
+arithmetic traces determine the inertia \cite[Prop.~4.5]{P40},
+and the replication argument of Theorem~\ref{thm:dichotomy} needs only one
+witness. The programme spent thirty-seven phases attempting purity without
+finiteness; the architecture explains why that order was impossible.
+\end{remark}
+
+\begin{remark}[The physics that found the joint]
+The articulation was located by physical reasoning \cite[]{P40}:
+the Rodgers--Tao theorem ($\Lambda\geq0$) is one-sided self-organised
+criticality, provable because its order parameter (crystalline rigidity)
+is \emph{extensive}---visible to averages; the order parameter of the other
+side is $m$ itself, \emph{intensive} and density-zero by Bohr--Landau, so
+no relaxation sandwich exists. The thermodynamic reading of the master
+quantifier (extensive = average = theorem; intensive = individual = wall)
+is what suggested splitting RH at $m<\infty$, where the intensive parameter
+becomes a priori finite and the wall becomes, in principle, crossable from
+the other side.
+\end{remark}
+
+\section{Honest assessment}\label{sec:assessment}
+
+What is proved here and in the underlying documents: the conditional
+dichotomy (Theorem~\ref{thm:dichotomy}); the three essential entry points
+of the Euler product, with the finite-$m$ counterexamples excluded; the
+non-equivalence of LP-112 to RH by all known dictionaries; the absence of
+any precedent for sequential self-approximation without genericity; the
+unconditional Stepanov negative theorem (Theorem~\ref{thm:stepanov}) and
+the seminorm dichotomy (Observation~\ref{obs:seminorm}); the
+cardinality-insensitivity of the wall (Observation~\ref{obs:cardinal});
+and the anti-Siegel structure of the finiteness problem.
+
+What is not proved: either lemma. We do not predict that either will be
+proved. The honest summary is this: the programme that \cite{P43} closed
+has, in closing, located the gate it could not open. RH separates at its
+natural joint into a geometric finiteness statement---whose specification
+matches what the arithmetic-site programme is building toward, and which we
+hand to geometry---and an analytic rigidity statement weaker than anything
+previously known to suffice, whose exact obstruction is now a theorem about
+seminorms rather than a fog. If the gate opens, it opens from the geometric
+side first, exactly as it did the only other time. Mapping a wall is not
+crossing it; but a map that ends at a gate, with the gate's two locks named
+and specified, is the most a programme of this kind can honestly leave
+behind.
+
+\begin{thebibliography}{99}
+
+\bibitem{Bohr22} H.~Bohr, \emph{\"Uber eine quasi-periodische Eigenschaft
+Dirichletscher Reihen mit Anwendung auf die Dirichletschen $L$-Funktionen},
+Math. Ann. \textbf{85} (1922), 115--122.
+
+\bibitem{Bagchi87} B.~Bagchi, \emph{Recurrence in topological dynamics and
+the Riemann hypothesis}, Acta Math. Hungar. \textbf{50} (1987), 227--240.
+
+\bibitem{RT20} B.~Rodgers, T.~Tao, \emph{The de Bruijn--Newman constant is
+non-negative}, Forum Math. Pi \textbf{8} (2020), e6.
+
+\bibitem{Del74} P.~Deligne, \emph{La conjecture de Weil. I},
+Publ. Math. IH\'ES \textbf{43} (1974), 273--307.
+
+\bibitem{P35} D.~A.~Trejo Pizzo, \emph{Pontryagin spectral index of the Weil form and the Connes scaling operator: a bridge theorem for the Riemann Hypothesis}, preprint, 2026.
+
+\bibitem{P39} D.~A.~Trejo Pizzo, \emph{A trace and measure criterion for the Riemann Hypothesis from the zeta spectral triple}, preprint, 2026.
+
+\bibitem{P40} D.~A.~Trejo Pizzo, \emph{The localized Weil form and its Kre\u\i n--Pontryagin index: localization, obstruction, and rigidity}, preprint, 2026.
+
+\bibitem{P41} D.~A.~Trejo Pizzo, \emph{The exhaustion of one-dimensional
+propagation} (programme paper P41, 2026).
+
+\bibitem{P42} D.~A.~Trejo Pizzo, \emph{Two closures and a survivor}
+(programme paper P42, 2026).
+
+\bibitem{P43} D.~A.~Trejo Pizzo, \emph{One wall in many coordinates}
+(programme paper P43, 2026).
+
+\bibitem{bgWeil49} A.~Weil, \emph{Numbers of solutions of equations in finite fields}, Bull.\ Amer.\ Math.\ Soc.\ \textbf{55} (1949), 497--508.
+\bibitem{bgDeligne} J.~B.~Conrey, \emph{The Riemann Hypothesis}, Notices Amer.\ Math.\ Soc.\ \textbf{50} (2003), 341--353.
+\bibitem{bgCC21} A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the archimedean place}, Selecta Math.\ (N.S.) \textbf{27} (2021), no.~77.
+\bibitem{bgDeninger} C.~Deninger, \emph{Some analogies between number theory and dynamical systems on foliated spaces}, Doc.\ Math.\ ICM \textbf{I} (1998), 163--186.
+\bibitem{bgdeBranges} L.~de Branges, \emph{Hilbert Spaces of Entire Functions}, Prentice-Hall, 1968.
+\bibitem{bgKL} M.~G.~Kre\u\i n and H.~Langer, \emph{\"Uber die verallgemeinerten Resolventen und die charakteristische Funktion eines isometrischen Operators im Raume $\Pi_\kappa$}, Colloq.\ Math.\ Soc.\ J\'anos Bolyai \textbf{5} (1972), 353--399.
+\bibitem{bgBombieri00} E.~Bombieri, \emph{Problems of the Millennium: The Riemann Hypothesis}, Clay Mathematics Institute, 2000.
+\bibitem{bgIK} H.~Iwaniec and E.~Kowalski, \emph{Analytic Number Theory}, Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{53}, AMS, 2004.
+\end{thebibliography}
+
+\end{document}

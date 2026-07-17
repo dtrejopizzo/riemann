@@ -1,0 +1,32 @@
+## Overview <output>
+<conclusion>
+The quantitative implementation of the Weil explicit formula quadratic form reveals that the Davenport-Heilbronn L-function `L_DH` does NOT produce a negative minimum eigenvalue when tested against a standard Paley-Wiener basis of size $J=10$ with Fourier support $X=4$, refuting the initial hypothesis under this specification.
+</conclusion> <methods>
+The Weil positivity test evaluates the quadratic form $M_{jk} = A_{\infty}(g_j g_k) + \text{Pole}(g_j g_k) - P(g_j g_k)$, representing the arithmetic side of the explicit formula. By identity, this equals $\sum_{\rho} g_j(\tau_{\rho})g_k(\tau_{\rho})$ across all zeros $\rho$. Under GRH, the matrix is positive semi-definite (PSD); violation of GRH can manifest as negative eigenvalues. We implemented this matrix for $\zeta$, $L(\chi_5)$ (the real quadratic character modulo 5), and $L_{DH}$. We did not evaluate the Ramanujan $L(\Delta,s)$ and deformed $\zeta_{\delta}$ due to complete absence of their numerical zero data artifacts in the workspace.
+We designed $J=10$ test functions $g_j(t)$ whose Fourier transforms $\hat{g}_j(u) = (1-|u|/X)\cos(j\pi u/X)$ are strictly supported on $[-X, X]$ with $X=4$.
+The archimedean term $A_{\infty}$ was computed via high-precision numerical quadrature (trapezoidal and `scipy.integrate.quad` to numerical limits over $r \in [-80,80]$). The prime sum $P$ was computed for $n \leq e^{2X} \approx 2981$. Since $L_{DH}$ lacks an Euler product, its von Mangoldt coefficients $\Lambda_{DH}(n)$ were robustly calculated out to $n=2981$ using exact recursive Dirichlet inversion from its coefficients $-L_{DH}'(s)/L_{DH}(s) = \sum \Lambda_{DH}(n)/n^s$.
+As an explicit consistency check, we validated the matrix numerically against the finite zero sum $\sum_{n=1}^{5000} g_j(\gamma_n)g_k(\gamma_n)$, yielding tight agreement (Frobenius difference of $\sim 5\times 10^{-6}$ for $\zeta$) reflecting the identity.
+</methods> <results>
+Within numerical quadrature precision bounds (noise floor $\approx 10^{-10}$), the matrix $M$ is PSD for all three tested L-functions:
+- $\lambda_{\min}(M_{\zeta}) = -6.51 \times 10^{-10}$
+- $\lambda_{\min}(M_{\chi_5}) = -7.98 \times 10^{-10}$
+- $\lambda_{\min}(M_{DH}) = -1.72 \times 10^{-10}$ We did not observe a large negative eigenvalue for $L_{DH}$. An explicit calculation of the $L_{DH}$ off-line zero contribution ($\sum_{\text{off-line } \rho} g_j(\tau_\rho)g_k(\tau_{\rho})$ over the 110 known off-line zeros at $t \geq 114.16$) reveals a Frobenius norm of $\approx 2 \times 10^{-9}$. This tiny value results from the strong inverse-quadratic temporal decay of the test functions $g_j(t) \sim t^{-2}$, such that $g_j(114) \approx 10^{-5}$, rendering the squared contribution far below the threshold needed to push the minimum eigenvalue strictly negative. </results> <challenges>
+The principal challenge lies in designing a set of test functions computationally robust enough to detect GRH failures occurring at high imaginary heights (in $L_{DH}$, the first off-line zero is near $\gamma=114$). Attempting to construct a modulated basis (e.g., using $\hat{g}_j(u) = \cos(114 u) \cdot \dots$ to peak test functions near the first off-line zero) introduced catastrophic numerical instability during the $G_{jk}(x)$ convolution integrals across a dense $x$-grid. The rapidly oscillatory integrands spawned artifactual negative eigenvalues ($\lambda_{\min} \approx -0.05$) indiscriminately across all L-functions, even the GRH-satisfying $\zeta$ and $L(\chi_5)$. Thus, while the arithmetic side of the explicit formula is theoretically exact, practical matrix construction requires extremely high-precision numerical arithmetic (mpmath at 100+ dps) or symbolic integration for bases designed to probe high-$\gamma$ regimes. Additionally, missing artifacts (specifically for $L(\Delta,s)$ and $\zeta_{\delta}$) prevented evaluating all five controls.
+</challenges> <discussion>
+The hypothesis correctly observes that the true Weil explicit formula quadratic form escapes the structural insensitivity (i.e., guaranteed positivity) of the pseudo-Mercer kernel approach identified in previous pipeline bugs. However, the exact configuration of test functions—specifically, their Fourier support and structural focus—is critical. Because the $L_{DH}$ off-line zeros first appear high up the critical line ($t \approx 114$), low-frequency bases bounded near the origin (e.g., $X=4$) are fundamentally blind to the GRH violation due to the extreme spatial decay of Schwartz test functions. This reveals the "missing lemma": Weil positivity is a theoretical absolute, but practical positivity testing requires adaptive bases strategically chosen to resolve specific spectral regimes. An algorithm must "look" at the high-$\gamma$ spectrum to detect off-line shifts, highlighting why Front III (TDA on real-parts or sequence spacings) is a much more robust detector of subtle high-altitude GRH violations than unoptimized global sum rules.
+</discussion> <proposed-next-hypotheses>
+1. A basis of Gabor-like wavelets $g_j(t)$ centered precisely at $t_0 \in \{114.16, 166.48, \dots\}$, evaluated entirely using closed-form analytical convolutions $G_{jk}(x)$, will yield a cleanly negative $\lambda_{\min}$ for $L_{DH}$ while remaining strictly PSD for $\zeta$.
+2. The Dirichlet coefficients $\Lambda_{DH}(n)$ contain a unique oscillatory trace directly correlated with the $L_{DH}$ off-line zeros, meaning the Weil matrix $M_{DH}$ constructed exclusively with very large support ($X > 50$) will naturally develop negative eigenvalues.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>weil_matrix_eigenvalues.csv</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>A table containing the sorted eigenvalues for the explicit formula Weil matrix (size J=10, X=4) for the Riemann zeta function, the real quadratic L-function L(chi_5), and the Davenport-Heilbronn L-function. Computed using the arithmetic side of the explicit formula.</artifact-description>
+</artifact>
+<artifact>
+<file-name>weil_positivity_eigenvalues.png</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>A plot of the eigenvalue spectra (log-scale magnitude) for the three successfully evaluated L-functions. It visually confirms that all eigenvalues are non-negative and numerically bounded by a noise floor of approximately 1e-10.</artifact-description>
+</artifact>
+</artifacts>
+</output>

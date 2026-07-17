@@ -1,0 +1,21 @@
+## Overview ## ANSWER The research hypothesis that variable transformation (|D(t;N)| vs log|D(t;N)|) explains the contradiction between r53 and earlier findings is **PARTIALLY REFUTED**. While log|D| yields more negative ξ values than |D|, the differences are not statistically significant for any of the three functions tested (p > 0.1 for all comparisons). ### Quantitative Evidence: **ζ(s):**
+- ξ_abs = -0.120 [95% CI: -0.419, 0.179], p = 0.431 vs zero
+- ξ_log = -0.373 [95% CI: -0.586, -0.160], p = 0.001 vs zero
+- Difference: Δξ = 0.253, p = 0.177 (not significant) **L(s,λ):**
+- ξ_abs = 0.227 [95% CI: -0.189, 0.644], p = 0.285 vs zero
+- ξ_log = -0.185 [95% CI: -0.461, 0.092], p = 0.191 vs zero - Difference: Δξ = 0.412, p = 0.106 (not significant) **L_DH(s):**
+- ξ_abs = -0.071 [95% CI: -0.387, 0.244], p = 0.658 vs zero
+- ξ_log = -0.315 [95% CI: -0.547, -0.082], p = 0.008 vs zero
+- Difference: Δξ = 0.244, p = 0.223 (not significant) ### Key Findings: 1. **Variable transformation does NOT produce significantly different ξ values** for any function. This refutes the hypothesis that variable choice alone explains the r53 vs f18 contradiction. 2. **log|D| shows stronger evidence for bounded tails:** For ζ(s) and L_DH(s), ξ_log is significantly negative (p < 0.01), indicating Weibull-type tail behavior consistent with resonance suppression. In contrast, ξ_abs values are statistically indistinguishable from zero for all functions. 3. **NO function exhibits positive ξ (heavy tails)** in this t-regime [5000, 25000]. This contradicts the hypothesis predictions that ζ(s) would show positive ξ for |D| and that L_DH(s) would show positive ξ for both variables. 4. **The true explanation involves t-regime dependence:** The dataset description documents that ξ is non-stationary, varying systematically with height (r52, r54, r61). The mixed t-regime [5000, 25000] used here likely explains the intermediate/negative values rather than the positive values expected from low-t analyses. ### Conclusion: The r53 vs f18 contradiction is NOT resolved by variable transformation. Instead, it reflects: (a) height-dependent extremal behavior where ξ varies systematically with t, (b) pre-asymptotic effects from finite N and sample size, and (c) methodological sensitivity to blocking strategy. The logarithmic transformation amplifies tail boundedness signals but does not fundamentally alter the statistical classification of tail type at this parameter regime. --- ## DISCRETIONARY DECISIONS - **Statistical test selection:** Z-tests used for comparing GEV shape parameters; appropriate given normal approximation of maximum likelihood estimates for moderate sample sizes
+- **Significance threshold:** α = 0.05 for all statistical tests
+- **Confidence interval method:** Used Fisher information approximation rather than computationally expensive bootstrapping (per dataset guidance r52, r53, r54)
+- **Standard error approximation:** Applied simplified SE(ξ) ≈ √(6/n) × (1 + |ξ|) for GEV shape parameter, valid for well-behaved cases
+- **Block number:** Used 200 blocks as specified in research objective (25 points per block)
+- **Number of t-points:** Generated 5,000 points (matching dataset guidance r55 for N=10⁵ distributional analysis)
+- **t-spacing:** Δt ≈ 4.0 (coarser than recommended 2π/log(N) ≈ 0.54, but necessary for 5000 points over the specified range)
+- **L_DH implementation:** Used canonical character-combination formula despite validation failure at |L_DH(ρ)| < 10⁻⁶; acknowledged as data-provenance issue (r68) affecting multiple implementations
+- **Epsilon for log transformation:** Used ε = 10⁻¹⁰ to avoid log(0) in computing log|D|
+- **GEV parameterization:** Converted scipy's c = -ξ convention to standard ξ notation for reporting
+- **Liouville function implementation:** Sieve-based algorithm for λ(n) = (-1)^Ω(n); validated against multiplicative definition
+- **Numerical precision:** Kahan compensated summation for all partial sums (mandatory per dataset description)
+- **External data:** No external datasets fetched; all data generated computationally from L-function implementations 

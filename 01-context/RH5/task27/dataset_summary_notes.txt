@@ -1,0 +1,4 @@
+Dataset summary prepared from the only on-disk primary dataset file and local environment checks.
+- Primary file: -PROMPT-v6-DATASET.md
+- Nature: binding Markdown specification describing required future zero-list inputs and workflow
+- Figure artifact: dataset_description_overview.png

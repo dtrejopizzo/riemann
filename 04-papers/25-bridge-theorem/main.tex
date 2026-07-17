@@ -1,0 +1,558 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\geometry{margin=1in}
+
+%--- Theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{objective}[theorem]{Objective}
+
+%--- Operators
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\kap}{\kappa}
+\newcommand{\negind}{\operatorname{neg.ind}}
+\newcommand{\AQ}{\mathbb{A}_{\mathbb{Q}}}
+\newcommand{\CQ}{C_{\mathbb{Q}}}
+\newcommand{\Kcal}{\mathcal{K}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\Wcal}{\mathcal{W}}
+
+\title[The Pontryagin-Index Bridge]{Pontryagin spectral index of the Weil form\\
+  and the Connes scaling operator:\\
+  a bridge theorem for the Riemann Hypothesis}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+
+\begin{abstract}
+Under the assumption that the Riemann $\zeta$-function has exactly $m$ orbits of zeros
+off the critical line (\emph{Hypothesis~D}), the Weil quadratic form~$Q$ acquires a
+Kre\u{\i}n negative index $\kap = 2m$ (established in the companion work).
+We formulate a \emph{bridge conjecture} identifying $\kap(Q)$ with the number of complex
+eigenvalue pairs of the Connes scaling operator~$H_C$, when $H_C$ is viewed as a
+$Q$-sym\-me\-tric operator on a Pontryagin space~$(\Kcal, Q)$ built from the pair
+$(L^2(\CQ), Q)$.  The conjecture states
+\[
+  \kap(Q) = \negind(H_C),
+\]
+so that $\mathrm{RH} \iff \negind(H_C) = 0$.  The Kre\u{\i}n--Langer spectral theorem
+yields the bound $\negind(H_C) \le \kap$ as a free consequence once $H_C$ is $Q$-symmetric.
+The reverse inequality---the spectral correspondence between off-line zeros and complex
+eigenvalues of~$H_C$---requires a Pontryagin-space completion of $(L^2(\CQ), Q)$ together
+with a distributional extension admitting the characters $x^{b_j+i\gamma_j}$ as generalized
+eigenvectors.  We formulate the verification program~\textbf{V.1--V.4}, identify
+\textbf{V.2} as the central open problem, and derive the adelic-rigidity direction
+(\emph{adelic rigidity}: $\negind(H_C)=0$ from the structure of $\CQ$).
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+%--------------------------------------------------------------------
+\section{Introduction}
+%--------------------------------------------------------------------
+
+The Riemann Hypothesis (RH) states that all non-trivial zeros of $\zeta(s)$ lie on the
+critical line $\Re(s) = 1/2$.  Two independent reformulations of RH motivate this paper.
+
+\medskip
+\textbf{(Weil--Kre\u{\i}n).}  Weil's positivity criterion \cite{Weil52} asserts
+\[
+  \mathrm{RH} \iff Q(f,f) \ge 0 \text{ for all admissible } f,
+\]
+where $Q(f,g) = \Wcal(f*\tilde g)$ is the Weil quadratic form.  the companion work of this
+series established that under Hypothesis~D (finitely many off-line orbits, see
+Definition~\ref{def:hypD}), the Kre\u{\i}n negative index of $Q$ satisfies
+\begin{equation}\label{eq:kappa-2m}
+  \kap(Q) = 2m,
+\end{equation}
+where $m$ is the number of Klein four-group orbits of zeros with $\Re(\rho) > 1/2$.
+RH is equivalent to $\kap(Q) = 0$.
+
+\medskip
+\textbf{(Connes--Spectral).}  Connes \cite{Connes99} showed that the zeros of $\zeta$
+appear in the spectrum of a scaling operator $H_C$ on the id\`ele class space
+$\CQ = \AQ^*/\mathbb{Q}^*$, and argued:
+\begin{equation}\label{eq:connes-RH}
+  \mathrm{RH} \iff H_C \text{ is self-adjoint (spectrum in } i\mathbb{R}\text{)}.
+\end{equation}
+
+\medskip
+\textbf{The bridge.}  The bridge conjecture (Conjecture~\ref{conj:bridge}) unifies
+\eqref{eq:kappa-2m} and \eqref{eq:connes-RH} via a single dictionary:
+\[
+  \kap(Q) = \negind(H_C),
+\]
+where $H_C$ is viewed as a $Q$-symmetric operator on the Pontryagin space $\Kcal$
+constructed from $(L^2(\CQ), Q)$.  Corollary~\ref{cor:rh-hc} then gives:
+\[
+  \mathrm{RH} \iff \negind(H_C) = 0.
+\]
+
+\medskip
+\textbf{Honest status.}  The bridge theorem is a \emph{conjecture}.  The Kre\u{\i}n--Langer
+spectral theorem \cite{KreinLanger78, AzizovIokhvidov} yields $\negind(H_C) \le \kap$
+unconditionally (given $Q$-symmetry).  The reverse inequality is the central open
+problem identified as \textbf{V.2}: constructing a distributional extension
+$\Kcal^+$ that admits the characters $x^{b_j+i\gamma_j}$ as genuine eigenvectors
+of $H_C$.  Without this construction the bridge remains a precise conjecture, not a theorem.
+
+\medskip
+\textbf{Organization.}  Section~\ref{sec:krein} reviews the Kre\u{\i}n index.
+Section~\ref{sec:connes} recalls the Connes operator.  Section~\ref{sec:pontryagin}
+introduces the Pontryagin space framework.  Section~\ref{sec:bridge} states the bridge
+conjecture and its consequences.  Section~\ref{sec:verification} formulates the
+verification program V.1--V.4.  Section~\ref{sec:phase27} outlines the adelic-rigidity step (adelic
+rigidity).  Section~\ref{sec:conclusion} collects open problems.
+
+%--------------------------------------------------------------------
+\section{The Kre\u{\i}n index of the Weil form}
+\label{sec:krein}
+%--------------------------------------------------------------------
+
+Let $\Scal = \Scal(\mathbb{R}^*_+)$ be the Schwartz space of rapidly decreasing smooth
+functions on $\mathbb{R}^*_+$.  For $f \in \Scal$, let
+$\hat f(s) = \int_0^\infty f(x)x^{s-1}\,dx$ be its Mellin transform, and set
+$\tilde f(x) = \overline{f(1/x)}\cdot x^{-1}$.
+
+\begin{definition}[Weil functional and quadratic form]\label{def:weil}
+The \emph{Weil functional} is
+\begin{equation}\label{eq:weil-functional}
+  \Wcal(f) = \sum_\rho \hat f(\rho)
+    - \hat f(0)\log\pi - \hat f(1)\log\pi
+    + \sum_{p,n} \frac{\log p}{p^{n/2}}\bigl[f(p^n) + f(p^{-n})\bigr]
+    + f(1)\log\pi,
+\end{equation}
+where the first sum runs over all non-trivial zeros of $\zeta(s)$, and
+$\sum_{p,n}$ runs over primes $p$ and integers $n \ge 1$.
+The \emph{Weil quadratic form} is
+\[
+  Q(f,g) := \Wcal(f * \tilde g), \qquad f, g \in \Scal.
+\]
+\end{definition}
+
+\begin{theorem}[Weil \cite{Weil52}]\label{thm:weil-positivity}
+$Q(f,f) \ge 0$ for all $f \in \Scal$ if and only if the Riemann Hypothesis holds.
+\end{theorem}
+
+\begin{definition}[Kre\u{\i}n negative index]\label{def:krein-index}
+The \emph{Kre\u{\i}n negative index} of $Q$ is
+\[
+  \kap(Q) := \sup\bigl\{k \in \mathbb{N} :
+    \exists\,f_1,\ldots,f_k \in \Scal \text{ with }
+    \det(Q(f_i,f_j))_{1\le i,j\le k} < 0\bigr\}.
+\]
+By Theorem~\ref{thm:weil-positivity}: $\mathrm{RH} \iff \kap(Q) = 0$.
+\end{definition}
+
+\begin{definition}[Hypothesis~D]\label{def:hypD}
+We say \emph{Hypothesis~D holds with parameter} $m \ge 1$ if the set of non-trivial zeros
+$\rho$ of $\zeta$ with $\Re(\rho) \ne 1/2$ consists of exactly $m$ complete orbits under
+the Klein four-group $V = \{\mathrm{id},\,\sigma,\,\iota,\,j\}$ acting by
+$\rho \mapsto \bar\rho,\ 1-\rho,\ 1-\bar\rho$.
+Each orbit has four elements: $\rho_j,\,\bar\rho_j,\,1-\rho_j,\,1-\bar\rho_j$, with
+$\rho_j = (1/2+b_j)+i\gamma_j$, $b_j \in (0,1/2)$, $\gamma_j > 0$.
+\end{definition}
+
+\begin{theorem}[P32, P33]\label{thm:kappa-2m}
+Under Hypothesis~D with $m$ orbits, $\kap(Q) = 2m$.
+\end{theorem}
+
+This was established in the companion work via the Kre\u{\i}n--Langer factorization
+$\xi = \xi_0 \cdot P_{4m}$, where $P_{4m}$ is a polynomial of degree $4m$ encoding the
+off-line zeros and $\xi_0$ is in the Laguerre--P\'olya class.  The polynomial $P_{4m}$
+is strictly positive on the critical line, and the factorization assigns each pair of
+off-line zeros to one negative direction of $Q$.
+
+%--------------------------------------------------------------------
+\section{The Connes scaling operator}
+\label{sec:connes}
+%--------------------------------------------------------------------
+
+Let $\AQ$ be the ring of ad\`eles of $\mathbb{Q}$ and $\CQ = \AQ^*/\mathbb{Q}^*$ the
+id\`ele class group.  Let $H = L^2(\CQ, d\mu)$ where $d\mu$ is Haar measure.
+
+The group $\mathbb{R}^*_+$ acts on $\CQ$ by scaling:
+$(U_\lambda f)(x) = f(\lambda^{-1}x)$, $\lambda \in \mathbb{R}^*_+$.
+
+\begin{definition}[Connes scaling operator]\label{def:hc}
+The \emph{Connes scaling operator} is the infinitesimal generator of $(U_\lambda)$:
+\[
+  H_C := \frac{1}{i}\left.\frac{d}{d\lambda}\right|_{\lambda=1} U_\lambda,
+\]
+acting formally as $(H_C f)(x) = -ix\,\partial_x f(x)$ (the Euler--Mellin operator
+on $\CQ$).
+\end{definition}
+
+\begin{remark}\label{rem:connes-spectrum}
+Connes \cite{Connes99} established a trace formula expressing the Weil explicit formula
+as a distributional trace of the scaling action.  In Connes' spectral parametrization,
+zeros of $\zeta$ on the critical line $\Re(s)=1/2$ appear at imaginary points
+$\rho - 1/2 = i\gamma$ of the spectrum; RH corresponds to the spectrum of $H_C$ lying
+entirely in $i\mathbb{R}$.
+\end{remark}
+
+The formal action of $H_C$ on a character $f_s(x) = x^{s-1/2}$ of $\mathbb{R}^*_+$ gives:
+\[
+  H_C f_s = -ix\,\partial_x\bigl(x^{s-1/2}\bigr) = -i(s-1/2)\,f_s,
+\]
+so the formal eigenvalue of $f_s$ is $-i(s-1/2)$.  For $s = \rho_j = (1/2+b_j)+i\gamma_j$:
+\[
+  \text{formal eigenvalue} = -i(b_j+i\gamma_j) = \gamma_j - ib_j,
+\]
+which has $\Im(\gamma_j - ib_j) = -b_j \ne 0$.  This non-real eigenvalue reflects the
+off-line displacement of $\rho_j$.
+
+%--------------------------------------------------------------------
+\section{The Pontryagin space framework}
+\label{sec:pontryagin}
+%--------------------------------------------------------------------
+
+The bridge replaces the standard $L^2(\CQ)$ inner product by the Weil form $Q$, turning
+$(H, Q)$ into an indefinite inner product space of Pontryagin type.
+
+\begin{proposition}[Weil form as indefinite inner product]\label{prop:indefinite}
+The bilinear map
+\[
+  \langle f, g \rangle_Q := Q(f, g) = \Wcal(f * \tilde g)
+\]
+is a Hermitian form on $\Scal$.  Under Hypothesis~D:
+\begin{itemize}
+\item $\langle f,f\rangle_Q < 0$ for certain $f \in \Scal$ (by Theorem~\ref{thm:kappa-2m});
+\item the negative index of $\langle\cdot,\cdot\rangle_Q$ on any finite-dimensional
+  subspace is bounded by $\kap(Q) = 2m$.
+\end{itemize}
+\end{proposition}
+
+A Pontryagin space completion of $(H, Q)$ requires more than finite negative index.
+
+\begin{definition}[Kre\u{\i}n--Connes space]\label{def:KC}
+If the Hermitian form $Q$ on $H = L^2(\CQ)$ satisfies all three conditions:
+\begin{enumerate}
+\item[(a)] $\ker Q := \{f \in H : Q(f,g)=0\ \forall g\}$ is finite-dimensional or trivial;
+\item[(b)] the quotient $H/\ker Q$ is complete in the semi-norm $|Q(\cdot,\cdot)|^{1/2}$;
+\item[(c)] there exists a fundamental decomposition $H = H_+ \oplus H_-$ (orthogonal
+  with respect to $Q$) with $Q|_{H_+} > 0$, $-Q|_{H_-} > 0$, and $\dim H_- = \kap(Q)$;
+\end{enumerate}
+then the resulting Pontryagin space of negative index $\kap$ is denoted $\Kcal =
+(\Kcal, Q)$.
+\end{definition}
+
+\begin{remark}\label{rem:KC-not-constructed}
+The existence of $\Kcal$ is \emph{not yet established}.  Conditions~(a)--(c) form the
+first part of the verification program V.1--V.4; specifically, verifying that $\ker Q$ is
+finite-dimensional requires controlling the Weil functional on the full infinite-dimensional
+space $H$, which goes beyond the finite-rank results of P32--P33.
+\end{remark}
+
+The next objective is the $Q$-invariance of the scaling action, which would make $H_C$
+automatically $Q$-symmetric.
+
+\begin{objective}[$Q$-invariance of scaling — \textbf{V.1}]\label{obj:V1}
+Prove that for all $f, g \in \Scal$ and all $\lambda \in \mathbb{R}^*_+$:
+\[
+  Q(U_\lambda f,\, U_\lambda g) = Q(f, g).
+\]
+If this holds, then (by differentiating at $\lambda=1$) $H_C$ is $Q$-symmetric:
+$Q(H_C f, g) = Q(f, H_C g)$ for all $f, g$ in the domain of $H_C$.
+\end{objective}
+
+\begin{remark}[Why \textbf{V.1} is non-trivial]\label{rem:V1-nontrivial}
+The Weil functional~\eqref{eq:weil-functional} contains three types of terms.
+The prime term transforms as:
+\[
+  \bigl(f * \tilde g\bigr)(p^n)
+  \;\longmapsto\;
+  \bigl(U_\lambda f * \widetilde{U_\lambda g}\bigr)(p^n)
+  = \bigl(f * \tilde g\bigr)(\lambda^{-1}p^n)
+\]
+under $U_\lambda$, shifting the evaluation from $p^n$ to $\lambda^{-1}p^n$.  The global
+invariance requires either that each term type is separately invariant, or that the
+shifts cancel in the full sum.  This is related to the Tate--Weil adelic transformation
+formula and constitutes an independent result.
+\end{remark}
+
+%--------------------------------------------------------------------
+\section{The bridge conjecture}
+\label{sec:bridge}
+%--------------------------------------------------------------------
+
+We recall the key result from the theory of operators on Pontryagin spaces.
+
+\begin{theorem}[Kre\u{\i}n--Langer \cite{KreinLanger78, AzizovIokhvidov}]
+\label{thm:KL}
+Let $T$ be a $Q$-self-adjoint operator on a Pontryagin space $(\Kcal, Q)$ of negative
+index $\kap < \infty$.  Then:
+\begin{enumerate}
+\item[\emph{(i)}] $T$ has \textbf{at most} $\kap$ pairs of non-real eigenvalues
+  $\{\mu_j, \bar\mu_j\}$ with $\Im(\mu_j) \ne 0$.
+\item[\emph{(ii)}] The essential spectrum $\sigma_\mathrm{ess}(T) \subseteq \mathbb{R}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[At most vs.\ exactly]\label{rem:atmost}
+Theorem~\ref{thm:KL}(i) gives $\le \kap$, not $= \kap$.  The equality requires that
+the space $\Kcal$ is \emph{minimal} for $T$ (generated by eigenvectors), or that the
+construction of $\Kcal$ guarantees that every negative direction of $Q$ produces a
+genuine complex eigenvalue.  This is the content of \textbf{V.2} below.
+\end{remark}
+
+\begin{conjecture}[Bridge Theorem]\label{conj:bridge}
+Assume Hypothesis~D with $\kap = 2m$.  Assume further that $\Kcal$ exists
+(Definition~\ref{def:KC}) and that $H_C$ is $Q$-self-adjoint in $\Kcal$ (Objective~\ref{obj:V1}).
+Then:
+\begin{enumerate}
+\item[\emph{(i)}] The essential spectrum of $H_C$ in $\Kcal$ is contained in $i\mathbb{R}$,
+  corresponding to the on-line zeros $\{i\gamma\}$.
+\item[\emph{(ii)}] $H_C$ has exactly $\kap = 2m$ complex eigenvalue pairs in $\Kcal$, given by
+  \[
+    \{\gamma_j - ib_j,\;\gamma_j + ib_j\}_{j=1}^m,
+  \]
+  corresponding to the $m$ off-line orbits $\rho_j = (1/2+b_j)+i\gamma_j$.
+\item[\emph{(iii)}] Each complex eigenvalue has multiplicity~$1$ if the corresponding zero
+  of $\zeta$ is simple.
+\item[\emph{(iv)}] $\negind_Q(H_C) = \kap(Q) = 2m$.
+\end{enumerate}
+\end{conjecture}
+
+\begin{corollary}[RH via the spectral index of $H_C$]\label{cor:rh-hc}
+Under Conjecture~\ref{conj:bridge}:
+\[
+  \mathrm{RH}
+  \iff \kap(Q) = 0
+  \iff \negind(H_C) = 0
+  \iff H_C \text{ is self-adjoint in } \Kcal.
+\]
+\end{corollary}
+
+\begin{proof}
+Weil's criterion (Theorem~\ref{thm:weil-positivity}): $\mathrm{RH} \iff \kap(Q) = 0$.
+Theorem~\ref{thm:kappa-2m}: $\kap(Q) = 2m$ under Hypothesis~D.
+Conjecture~\ref{conj:bridge}(iv): $\negind(H_C) = \kap(Q)$.
+If $\kap = 0$: $\Kcal$ degenerates to a Hilbert space, $H_C$ has no complex eigenvalues,
+and self-adjointness follows from $Q$-symmetry (Objective~\ref{obj:V1}).
+\end{proof}
+
+\begin{remark}[What the bridge achieves]\label{rem:bridge-value}
+Before the bridge: $\mathrm{RH} \iff \kap(Q)=0$ and $\mathrm{RH} \iff H_C$
+self-adjoint are two reformulations with no direct connection.
+After the bridge: both are equivalent to $\negind(H_C) = 0$, with an explicit dictionary:
+\begin{itemize}
+\item negative directions of $Q$ $\longleftrightarrow$ complex eigenvalues of $H_C$,
+\item off-line zero orbits $\longleftrightarrow$ non-unitary representations of $\mathbb{R}^*_+$
+  in the scaling spectrum.
+\end{itemize}
+This allows tools from adelic arithmetic (Connes program) to act on the Kre\u{\i}n index.
+\end{remark}
+
+%--------------------------------------------------------------------
+\section{The verification program V.1--V.4}
+\label{sec:verification}
+%--------------------------------------------------------------------
+
+\paragraph{\textbf{V.1} — Scaling invariance.}
+Prove Objective~\ref{obj:V1}: $Q(U_\lambda f, U_\lambda g) = Q(f,g)$ for all
+$f,g \in \Scal$, $\lambda \in \mathbb{R}^*_+$.
+
+\medskip
+\paragraph{\textbf{V.2} — Spectral correspondence (primary objective).}
+This is the central open problem.  The candidate eigenvectors are
+$f_j(x) = x^{b_j+i\gamma_j}$, which satisfy $H_C f_j = (\gamma_j - ib_j) f_j$ formally.
+However:
+\[
+  \|f_j\|_{L^2(\CQ)}^2 = \int_0^\infty x^{2b_j-1}\,dx = +\infty.
+\]
+The character $f_j$ is \emph{not} in $L^2(\CQ)$, and $Q(f_j,f_j)$ is not defined in the
+classical sense.
+
+\textbf{The distributional construction.}  One must construct a rigged Hilbert space
+(Gel'fand triple) $\Phi \subset L^2(\CQ) \subset \Phi'$ such that:
+\begin{enumerate}
+\item[(a)] the characters $f_j = x^{b_j+i\gamma_j}$ lie in $\Phi'$;
+\item[(b)] the regularization $Q_\mathrm{reg}(f_j,f_j) = \Wcal_\mathrm{reg}(f_j*\tilde f_j)$
+  is finite (possibly zero, so $f_j$ is an isotropic vector of $Q$);
+\item[(c)] the action $H_C: \Phi' \to \Phi'$ is well-defined, with $H_C f_j = (\gamma_j-ib_j)f_j$.
+\end{enumerate}
+
+If this construction succeeds, $\negind(H_C) \ge m$ (each off-line orbit contributes at
+least one complex eigenvalue pair), and combined with Theorem~\ref{thm:KL}(i) one obtains
+$\negind(H_C) = 2m = \kap$.
+
+If the construction fails (e.g., $Q_\mathrm{reg}(f_j,f_j)$ diverges for all reasonable
+regularizations), the bridge in the form of Conjecture~\ref{conj:bridge} is false as
+stated, and requires reformulation via localized Weil forms
+(see Section~\ref{sec:phase27}, Strategy~B).
+
+\medskip
+\paragraph{\textbf{V.3} — Index identification.}
+Given \textbf{V.2}, apply Theorem~\ref{thm:KL} to $H_C$ in $\Kcal$:
+$\negind(H_C) \le \kap$ (free) and $\negind(H_C) \ge \kap$ (from \textbf{V.2}).
+Hence $\negind(H_C) = \kap$.
+
+\medskip
+\paragraph{\textbf{V.4} — Orbit count.}
+Under Hypothesis~D with $m$ orbits, verify that the construction yields exactly $m$
+eigenvalue pairs (not $2m$).  Each orbit $\{\rho_j, \bar\rho_j, 1-\rho_j, 1-\bar\rho_j\}$
+contributes two characters $x^{b_j \pm i\gamma_j}$, but the functional equation symmetry
+$s \leftrightarrow 1-s$ of $\xi$ identifies the pairs $(\rho_j, 1-\bar\rho_j)$ and
+$(\bar\rho_j, 1-\rho_j)$, reducing four characters to two independent eigenvalues:
+$\gamma_j - ib_j$ and $\gamma_j + ib_j$.
+
+%--------------------------------------------------------------------
+\section{Phase 27: adelic rigidity}
+\label{sec:phase27}
+%--------------------------------------------------------------------
+
+Assuming Conjecture~\ref{conj:bridge}, RH reduces to the single spectral question:
+\begin{equation}\label{eq:phase27-target}
+  \negind(H_C) = 0.
+\end{equation}
+This is no longer a statement about zeros of $\zeta$; it is a statement about an
+operator on $\CQ$.  the adelic-rigidity step proposes to establish \eqref{eq:phase27-target} via the
+adelic structure of $\CQ$.
+
+\medskip
+\textbf{27-A} (Classification of negative directions).  By \textbf{V.2}, each negative
+direction of $Q$ in $\Kcal$ corresponds to an isolated complex eigenvalue of $H_C$,
+i.e., to a non-unitary character $|x|^{b_j+i\gamma_j}$ of $\mathbb{R}^*_+$
+($b_j > 0$) in the scaling spectrum.
+
+\medskip
+\textbf{27-B} (Adelic interpretation).  In the adèlic framework, the character
+$|x|^{b_j+i\gamma_j}$ corresponds to a Gr\"ossencharacter of $\CQ$ with non-trivial
+modular growth ($|x|^{b_j}$ factor, $b_j > 0$).  Such a character is \emph{non-unitary}:
+it lies outside the unitary dual $\widehat\CQ$ measured by Haar measure.
+
+\medskip
+\textbf{27-C} (Global constraint).  The local-global product structure
+\[
+  \CQ \;\cong\; \prod_p \mathbb{Z}_p^* \;\times\; \mathbb{R}^*_+
+\]
+induces a factorization of the Weil form: $Q = Q_\infty \times \prod_p Q_p$ (if it exists).
+Each local factor $Q_p$ encodes the prime-$p$ term of $\Wcal$.  The the adelic-rigidity step hypothesis:
+\[
+  Q_p \text{ is positive-definite for all } p
+  \;\Longrightarrow\;
+  Q \text{ is positive-definite globally.}
+\]
+This is an \emph{adelic Hasse--Minkowski principle} for the Weil functional form.
+
+\medskip
+\textbf{27-D} (Conclusion).  If \textbf{27-C} holds and each $Q_p$ is positive-definite
+(which would follow from the local Riemann hypothesis for $\mathbb{F}_p$, proven by Weil),
+then $Q \ge 0$, hence $\kap(Q) = 0$, hence $\negind(H_C) = 0$, hence RH.
+
+\begin{remark}[Relation to Wall W4-RSRP]
+the adelic-rigidity step is the most concrete formulation to date of the fundamental obstacle identified
+in the companion work (Wall~W4-RSRP) and exhaustively surveyed in the companion work (the prior audit):
+the inability to propagate arithmetic constraints from $\Re(s) > 1$ into the critical strip.
+the adelic-rigidity step reformulates this as: ``does the local positivity of each $Q_p$ imply global
+positivity of $Q$?''  This is a local-to-global theorem for an indefinite functional form
+over $\mathbb{Q}$, analogous to the Hasse--Minkowski theorem (which applies to classical
+quadratic forms but not to infinite-dimensional functional forms).  The infinite-dimensional
+nature of $Q$ is the key obstacle.
+\end{remark}
+
+\begin{remark}[Comparison with previous phases]
+Phases~21--24 exhausted all spectral approaches to a lower bound on $b_j = \Re(\rho_j) - 1/2$
+from within the Kre\u{\i}n arc, with uniformly negative results.  the prior audit audited
+fifteen classical mechanisms and named Wall~W4-RSRP in six equivalent formulations.
+the present construction reformulates W4-RSRP as a spectral question about $H_C$: are there
+non-unitary characters in the scaling spectrum?  the adelic-rigidity step proposes to answer this using
+class field theory and the local-global structure of $\CQ$, offering a genuinely new tool
+that was not available in Phases~21--25.
+\end{remark}
+
+%--------------------------------------------------------------------
+\section{Open problems and conclusion}
+\label{sec:conclusion}
+%--------------------------------------------------------------------
+
+The bridge conjecture raises the following mathematically precise questions.
+
+\medskip
+\begin{enumerate}
+\setlength\itemsep{4pt}
+
+\item \textbf{Existence of $\Kcal$.}  Does the Weil form $Q$ satisfy conditions~(a)--(c)
+  of Definition~\ref{def:KC}?  In particular, is $\ker Q$ finite-dimensional?
+
+\item \textbf{V.1 — Scaling invariance.}  Is $Q(U_\lambda f, U_\lambda g) = Q(f,g)$ for
+  all $f, g \in \Scal$?  (Related to the Tate--Weil adelic transformation formula.)
+
+\item \textbf{V.2 — Spectral correspondence.}  Does a rigged Hilbert space completion
+  $\Kcal^+$ exist that admits $f_j = x^{b_j+i\gamma_j}$ as generalized eigenvectors
+  of $H_C$ with $Q_\mathrm{reg}(f_j,f_j)$ finite?
+
+\item \textbf{Adelic Hasse--Minkowski.}  Does $Q = \prod_p Q_p$ factorize adelically, and
+  does local positivity of each $Q_p$ imply global positivity of $Q$?
+
+\end{enumerate}
+
+\medskip
+Each question is independent of the Riemann Hypothesis.  Questions~1--3 constitute the
+the present construction verification program; Question~4 is the the adelic-rigidity step target.
+
+\medskip
+\textbf{Conclusion.}  We have formulated the bridge conjecture
+$\kap(Q) = \negind(H_C)$ connecting the Kre\u{\i}n index of the Weil form to the
+spectral index of the Connes scaling operator.  Under this conjecture,
+$\mathrm{RH} \iff \negind(H_C) = 0$, reducing the Riemann Hypothesis to a single
+spectral question about an explicit operator on the id\`ele class space.
+the adelic-rigidity step proposes to address this via adelic rigidity, asking whether the local Euler
+factors force global spectral positivity of the Weil form.  This is a new tool in the
+program: a local-to-global principle for an infinite-dimensional Hermitian form over
+$\mathbb{Q}$.
+
+The paper does not prove RH.  It provides a precise new route: a dictionary between
+three reformulations (Weil positivity, Kre\u{\i}n index, Connes spectral index) and
+a concrete first target for the adelic-rigidity step that, if achieved, would imply RH via a chain
+of unconditional results.
+
+%--------------------------------------------------------------------
+\begin{thebibliography}{99}
+%--------------------------------------------------------------------
+
+\bibitem{Weil52}
+A.~Weil,
+\textit{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
+Comm.~S\'em.\ Math.\ Univ.\ Lund (1952), Tome suppl., 252--265.
+
+\bibitem{KreinLanger78}
+M.~G.~Kre\u{\i}n and H.~Langer,
+\textit{On the spectral theory of linear pencils $M - \lambda L$ of selfadjoint operators
+in spaces with an indefinite metric},
+Acta Sci.\ Math.\ (Szeged) \textbf{39} (1978), 189--205.
+
+\bibitem{AzizovIokhvidov}
+T.~Ya.~Azizov and I.~S.~Iokhvidov,
+\textit{Linear Operators in Spaces with an Indefinite Metric},
+Wiley, Chichester, 1989.
+
+\bibitem{Connes99}
+A.~Connes,
+\textit{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function},
+Selecta Math.\ (N.S.) \textbf{5} (1999), no.~1, 29--106.
+
+\bibitem{Burnol00}
+J.-F.~Burnol,
+\textit{Sur les formules explicites~I: analyse invariante},
+C.~R.\ Acad.\ Sci.\ Paris S\'er.~I Math.\ \textbf{331} (2000), 423--428.
+
+\end{thebibliography}
+
+\end{document}

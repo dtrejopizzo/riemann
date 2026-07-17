@@ -1,0 +1,18 @@
+## Overview ## Analysis Status: INCOMPLETE - Computational Infeasibility I was unable to complete the GEV analysis on the R_comp metric for the three multiplicative function classes (ζ, L(χ₄), f_rand) due to **severe computational constraints**. The analysis failed during the data generation phase and could not proceed to the hypothesis testing stage. ### What Was Attempted: 1. **Successful coefficient generation**: Generated Dirichlet coefficients for all three multiplicative functions up to N=10^6: - ζ: a_n = 1 for all n - L(χ₄): a_n following the real character mod 5 pattern - f_rand: Random multiplicative function with seed=42 2. **Successful auxiliary computations**: Computed Möbius function μ(n) and ω(n) (number of distinct prime factors) for N=10^6, identifying 529,427 composite squarefree numbers. 3. **Failed R_comp computation**: The computation of R_comp(t) time series failed due to timeout. The required computation involves: - 9,000 t-values × 529,427 composite squarefree terms ≈ 4.76 billion complex exponential evaluations - This exceeded the 1200-second timeout limit for individual cells multiple times ### Why the Analysis Could Not Be Completed: The R_comp metric requires computing the mean resultant length of composite squarefree terms: R_comp(t) = |Σ_{n: μ(n)≠0, ω(n)≥2} a_n/n^(1/2+it)| / √(# terms) With N=10^6, this involves summing over ~530,000 complex terms for each of 9,000 t-values. Despite attempting three different computational strategies:
+1. Kahan compensated summation (accurate but slow)
+2. Fully vectorized computation (memory intensive, >38 GB required)
+3. Chunked processing (still exceeded timeout) All approaches failed to complete within the computational time budget. ### Critical Limitation - Cannot Test Hypothesis: **I cannot determine whether multiplicative functions exhibit ξ ≤ 0 for R_comp extremes.** Without the R_comp time series, I cannot:
+- Extract block maxima
+- Fit GEV distributions
+- Estimate shape parameters ξ
+- Test whether ξ ≤ 0 vs ξ > 0
+- Compare to the L_DH reference value (ξ ≈ 0.78) ### What Would Be Required: To complete this analysis properly would require:
+1. **More computational resources**: Access to multi-core CPU parallelization or GPU acceleration
+2. **Reduced scope**: Use N=10^4 or N=10^5 instead of N=10^6 (though this deviates from the specified objective)
+3. **Extended time limits**: Estimated 2-3 hours of computation time per function
+4. **Optimized implementation**: Pre-compiled code (C++/Rust) rather than Python ### Scientific Integrity Statement: **I cannot fabricate results.** While the hypothesis predicts that multiplicative functions should show ξ ≤ 0 (bounded/Gumbel tails) in contrast to L_DH's heavy-tailed signature (ξ ≈ 0.78), I have no empirical data to support or refute this claim. The analysis remains incomplete, and the research question is **unanswered**. --- ## DISCRETIONARY DECISIONS: - **N = 10^6 was specified but computationally infeasible**: Attempted to use the specified truncation length but could not complete computations within available resources
+- **Attempted three computational strategies**: Kahan summation, full vectorization, and chunked processing to balance accuracy, memory, and speed
+- **Seed = 42 for random multiplicative function**: Used as specified in the dataset description
+- **9000 t-values in [1000, 10000]**: Sampled uniformly as specified
+- **Möbius function computation**: Used efficient sieve-based algorithm to identify squarefree numbers
+- **Character χ₄ definition**: Used real character mod 5 with χ₄(1)=1, χ₄(2)=-1, χ₄(3)=-1, χ₄(4)=1, χ₄(0)=0 as specified in research program document 

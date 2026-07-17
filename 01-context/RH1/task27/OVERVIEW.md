@@ -1,0 +1,26 @@
+## Overview ## Analysis Results: Power-Law Phase Coherence at L_DH Zero t≈114.16 ### Quantitative Findings I performed a complete phase coherence analysis at the L_DH off-line zero at t≈114.16 using N=10⁶ squarefree integers, partitioned by k=ω(n) (number of distinct prime factors). **Phase Uniformity Tests (Rayleigh Test):**
+- k=1 (primes, n=78,498): R₁ = 0.0052, p = 0.120 (uniform, not significant)
+- k=2 (n=209,867): R₂ = 0.0108, p = 2.46×10⁻¹¹ (non-uniform, significant***)
+- k=3 (n=206,964): R₃ = 0.0074, p = 1.17×10⁻⁵ (non-uniform, significant***)
+- k=4 (n=92,966): R₄ = 0.0091, p = 4.83×10⁻⁴ (non-uniform, significant***)
+- k=5 (n=18,387): R₅ = 0.0168, p = 5.58×10⁻³ (non-uniform, significant***)
+- k=6 (n=1,235): R₆ = 0.0272, p = 0.400 (not significant due to small sample size) Four k-classes (k=2,3,4,5) showed statistically significant phase non-uniformity at p<0.05. **Power-Law Fit R_k = a·k^b:** Using all k values (k=1-6):
+- a = 0.00487 ± (not separately reported)
+- **b = 0.738 ± 0.253**
+- R² = 0.681
+- p-value = 0.0433 (marginally significant) Using only significant k values (k=2,3,4,5):
+- a = 0.00653
+- **b = 0.397 ± 0.557**
+- R² = 0.203
+- p-value = 0.549 (not significant) **Comparison with Report r18:**
+- r18 (at t≈84.208): b ≈ 0.172
+- This study (at t≈114.15): b = 0.738 (all k) or b = 0.397 (significant k only)
+- **Relative difference: 329% (all k) or 131% (significant k)** ### Conclusion **The hypothesis is REJECTED.** The power-law relationship with exponent b≈0.172 observed in report r18 is NOT a general feature of L_DH off-line zeros. At t≈114.16, the fitted exponent is b=0.738 or b=0.397 (depending on fitting strategy), differing from r18's b≈0.172 by 131-329%. Additionally, the data exhibit a non-monotonic pattern (R₃ < R₂), inconsistent with a simple power law, and the model fit has poor predictive power (R²=0.20-0.68). The power-law mechanism appears to be location-dependent rather than universal across zeros. --- ### Discretionary Analytical Decisions - **Significance threshold**: Set α = 0.05 for Rayleigh uniformity tests (standard convention)
+- **Phase definition**: Used phase = t·log(n) mod 2π for squarefree terms (based on partial sum formula)
+- **Optimal t selection**: Used t = 114.150 where mean resultant length R_comp of composite squarefree terms was maximized, rather than the JSON's t = 114.099 (difference of 0.05 units)
+- **Power-law fitting strategy**: Reported both fits using (1) all k values and (2) only statistically significant k values. The all-k fit had better goodness-of-fit (R²=0.68 vs 0.20) but included non-significant points
+- **k-class exclusions**: Excluded k=0 (n=1, single term) and k=7 (8 terms, insufficient sample) from analysis
+- **Sample size threshold**: Required minimum 10 terms per k-class for Rayleigh test validity
+- **Multiple testing correction**: Not applied to the 6 Rayleigh tests, as each k-class represents a separate hypothesis about phase structure
+- **Numerical precision**: Used Kahan compensated summation for partial sum computation to maintain relative error <10⁻¹²
+- **Squarefree constraint implementation**: Computed Möbius function μ(n) via sieving algorithm to identify squarefree integers (μ(n)≠0), enforcing the corrected L_DH definition mentioned in the dataset description 

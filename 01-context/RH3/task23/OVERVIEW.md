@@ -1,0 +1,21 @@
+## Overview # ANALYSIS OF INTER-CLASS ENERGY RATIO r AT N=10^7 ## Executive Summary I performed a canonical recomputation of the inter-class energy ratio r(t; 10^7) = Σ_{j≠k} Re[S_j S̄_k] / Σ_k|S_k|² for all 10 peak locations (5 zeta, 5 Liouville) from `N10^7_detailed_results.csv`. The hypothesis that original values were "incorrect by a factor of 2" proved to be an oversimplification—the relationship between canonical and original values varies substantially by peak (ratios ranging from 0.83 to 6.92 for zeta, -5.16 to 5.01 for Liouville). ## Key Findings ### 1. Canonical r Values at N=10^7 **Zeta Function:**
+- Mean r = 1.8374 ± 1.8980 (n=5 peaks)
+- Original (file) mean: 0.6889 ± 0.5375 **Liouville Function:**
+- Mean r = 3.6816 ± 1.5681 (n=5 peaks)
+- Original (file) mean: 1.0797 ± 0.9099 ### 2. Evolution Across N (Canonical Values) **Zeta Function:**
+- N=10^4: 1.779 ± 0.920 (50 peaks)
+- N=10^5: 1.512 ± 1.214 (10 peaks)
+- N=10^6: 1.906 ± 0.941 (5 peaks)
+- N=10^7: 1.837 ± 1.898 (5 peaks) **Liouville Function:**
+- N=10^4: 1.580 ± 0.987 (50 peaks)
+- N=10^5: 1.579 ± 0.959 (10 peaks)
+- N=10^6: 0.732 ± 1.009 (5 peaks)
+- N=10^7: 3.682 ± 1.568 (5 peaks) ### 3. Monotonic Behavior from N=10^6 to N=10^7 **Zeta:** NO - Shows slight decrease (1.906 → 1.837, Δ = -0.069) **Liouville:** YES - Shows dramatic increase (0.732 → 3.682, Δ = +2.949) ### 4. Overall Convergence Assessment Neither function exhibits monotonic convergence across all N values: - **Zeta**: Oscillatory behavior (decreases 10^4→10^5, increases 10^5→10^6, decreases 10^6→10^7)
+- **Liouville**: Non-monotonic with dramatic jump at 10^7 (relatively stable 10^4→10^5, sharp drop 10^5→10^6, massive increase 10^6→10^7) ## Conclusion The canonical recomputation reveals that: 1. **The original formula was not simply r_canonical/2**: The relationship varies by peak and function, suggesting a fundamentally different computational approach was used. 2. **Monotonic increase from 10^6 to 10^7 holds for Liouville ONLY**: The Liouville function shows a dramatic 4-fold increase, while the zeta function shows a slight decrease. 3. **Strong evidence for non-convergence**: Both functions fail to show stable, monotonic convergence toward a limiting value. The Liouville function's dramatic increase at N=10^7 particularly suggests non-convergence or extremely slow, non-uniform convergence. 4. **Function-dependent behavior is confirmed**: The zeta (dense, all coefficients = 1) and Liouville (dense, coefficients ±1) functions show qualitatively different evolution patterns, reinforcing that r dynamics depend on coefficient structure. The non-convergence hypothesis is **strongly supported** for the Liouville function and **partially supported** for the zeta function (oscillatory rather than divergent). --- ## DISCRETIONARY DECISIONS - **Statistical test selection**: Used direct numerical evaluation rather than statistical tests due to small sample sizes (n=5 at N≥10^6).
+- **Scaling of N≤10^6 data**: Scaled convergence_summary.csv values by factor of 2 as specified in dataset documentation, assuming that documentation is correct.
+- **Peak selection**: Used the 5 peaks provided in N10^7_detailed_results.csv without re-searching for global maxima.
+- **Omega computation method**: Implemented standard sieve-based algorithm for Ω(n) computation up to N=10^7.
+- **Kahan summation**: Applied Kahan compensated summation to all Dirichlet sum computations as required by dataset standards.
+- **Visualization scale**: Used linear scale for r values and log scale for N to emphasize relative changes across orders of magnitude.
+- **Standard deviation reporting**: Reported sample standard deviations without applying Bessel's correction (consistent with small sample exploratory analysis).
+- **Canonical formula implementation**: Used the identity-based simplification r = (|Σ_k S_k|² - Σ_k|S_k|²) / Σ_k|S_k|² for numerical stability, verified against explicit double-sum computation. 

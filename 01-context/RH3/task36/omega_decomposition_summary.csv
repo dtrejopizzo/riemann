@@ -1,0 +1,4 @@
+Function,Rank_1_Pair,Rank_1_Value,Rank_2_Pair,Rank_2_Value,Rank_3_Pair,Rank_3_Value,Mean_r,Std_r,N_peaks
+Zeta (r18 reference),"(2,3)",-,"(3,4)",-,"(1,2)",-,-,-,-
+L_mobius (verified),"(2,3)",0.260465,"(1,2)",0.256833,"(3,4)",0.098872,1.653311,0.82951,50
+f_rand seed42 (unverified coeff),"(3,4)",0.105643,"(2,3)",0.101727,"(4,5)",0.069759,0.542042,1.424269,50

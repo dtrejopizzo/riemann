@@ -1,0 +1,32 @@
+## Overview ## ANALYSIS OF R_COMP SCALING AT RESONANCE PEAKS VS. RANDOM T VALUES ### Main Finding The hypothesis that ζ(s) exhibits slower decay of R_comp at resonance peaks compared to random t values is **REFUTED**. The analysis reveals the opposite: ζ(s) shows **significantly faster decay** at peaks (α_peak = -0.107 vs. α_random = -0.053, p = 0.0018), indicating enhanced decoherence rather than resistance. The Liouville function shows a non-significant trend toward slower decay at peaks (α_peak = -0.046 vs. α_random = -0.076, p = 0.0803). ### Quantitative Results **Zeta Function ζ(s):**
+- Peak scaling: R_comp ∝ N^(-0.107±0.013), R² = 0.929
+- Random scaling: R_comp ∝ N^(-0.053±0.011), R² = 0.823
+- Difference: Δα = -0.054 ± 0.017 (z = -3.128, p = 0.0018**)
+- Ratio: α_peak/α_random = 2.01 ± 0.49 (approximately twice as fast decay at peaks)
+- Interpretation: Resonance peaks in ζ(s) exhibit **enhanced decoherence**, with composite phase alignment degrading significantly faster than at random t values **Liouville Function L(s,λ):**
+- Peak scaling: R_comp ∝ N^(-0.046±0.012), R² = 0.752
+- Random scaling: R_comp ∝ N^(-0.076±0.012), R² = 0.885
+- Difference: Δα = +0.030 ± 0.017 (z = 1.749, p = 0.0803)
+- Ratio: α_peak/α_random = 0.61 ± 0.18
+- Interpretation: Weak trend toward slower decay at peaks, but not statistically significant at α = 0.05 ### Methodological Details **Data Generation:**
+- Computed R_comp for N ∈ {10⁴, 3×10⁴, 10⁵, 3×10⁵, 10⁶, 3×10⁶, 10⁷}
+- Peak t values: Top 10 resonance maxima in t ∈ [1000, 5000] at N=10⁵
+- Random t values: 10 uniformly sampled values in t ∈ [1000, 5000] (seed=42)
+- Total computations: 280 (2 functions × 2 types × 10 t values × 7 N values) **Implementation:**
+- Kahan-compensated Dirichlet partial sums: D_F(t;N) = Σ_{n≤N} a_n(F)/n^(1/2+it)
+- Precomputed ω(n) and squarefree indicators for n ≤ 10⁷
+- R_comp: Mean resultant length of phases θ_k = arg(S_k) for ω-classes k ≥ 2
+- JIT compilation with numba for performance (~0.25s per calculation at N=10⁷) **Statistical Analysis:**
+- Power law fits via linear regression on log-transformed data
+- Standard errors computed from residual variance
+- z-tests for α_peak vs. α_random using SE(α_peak - α_random) = √(SE²_peak + SE²_random) **Peak Validation:**
+- Zeta peaks: mean |D(t;10⁵)| = 11.7 vs. random = 2.4 (4.9× higher)
+- Liouville peaks: mean |D(t;10⁵)| = 35.1 vs. random = 2.1 (16.7× higher) ### Interpretation and Implications The unexpected finding that ζ(s) shows **faster** decoherence at resonance peaks challenges the hypothesis that peaks represent "special" t values where multiplicative structure provides enhanced phase discipline. Instead, the data suggest: 1. **Peak mechanism is different**: Resonance peaks in ζ(s) arise from constructive interference at specific scales, but this alignment is fragile and degrades rapidly with increasing N 2. **Liouville behavior is distinct**: The fully multiplicative Liouville function shows the opposite trend (though not statistically significant), consistent with its different coefficient structure (sign-oscillating vs. constant) 3. **α_peak/α_random as a metric**: The ratio |α_peak/α_random| ≈ 2 for ζ(s) provides a quantitative measure of differential decoherence dynamics and could serve as a diagnostic for resonance quality 4. **No evidence for "resistance"**: The hypothesis that ζ(s) uniquely resists decoherence at peaks is not supported; if anything, peaks are **more susceptible** to decoherence ### DISCRETIONARY ANALYTICAL DECISIONS - **Peak identification**: Selected top 10 resonance peaks by maximum |D_F(t;N)| at N=10⁵ in t ∈ [1000, 5000] (alternative: N=10⁴ or different t range)
+- **Random t selection**: Used 10 uniformly random values in [1000, 5000] with seed=42 (alternative: different sample size or range)
+- **N value spacing**: Used geometric progression {10⁴, 3×10⁴, 10⁵, 3×10⁵, 10⁶, 3×10⁶, 10⁷} to balance computational cost and resolution (alternative: pure powers of 10)
+- **Power law fitting**: Linear regression on log-transformed data (alternative: nonlinear least squares on original scale)
+- **Statistical test**: z-test assuming asymptotic normality of fitted exponents (alternative: bootstrap confidence intervals)
+- **Significance threshold**: α = 0.05 for hypothesis testing (standard convention)
+- **R_comp definition**: Mean resultant length of phases for ω-classes k ≥ 2 (composite squarefree only, excluding primes)
+- **Kahan summation**: Used Kahan-compensated summation for all partial sums to control numerical error (mandatory per protocol)
+- **Precomputation range**: N_max = 10⁷ for ω(n) and squarefree sieve (determined by largest N value) 

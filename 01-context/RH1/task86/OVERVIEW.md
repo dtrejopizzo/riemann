@@ -1,0 +1,25 @@
+## Overview ## ANSWER **The research hypothesis is REJECTED.** The surprising R_comp hierarchy observed in r49 (L(χ₄) > L_DH) does **NOT** persist after correcting the L(χ₄) implementation to use the real character mod 5. In fact, the relationship is **REVERSED**: L_DH exhibits significantly **HIGHER** composite coherence than L(χ₄). ### Quantitative Evidence With corrected implementations over t ∈ [1000, 10000] (N=10⁵, n=5000 sampling points): **L(s, χ₄) with real character mod 5:**
+- Mean R_comp: 0.003402 ± 0.003436
+- Median: 0.002264
+- Range: [0.000020, 0.029896] **L_DH(s) with coefficients zero for non-squarefree n:**
+- Mean R_comp: 0.006338 ± 0.004137
+- Median: 0.005440
+- Range: [0.000034, 0.028078] **Statistical Comparison:**
+- Difference: Δμ = 0.002936 (L_DH > χ₄)
+- Ratio: L_DH / χ₄ = 1.86
+- Effect size: Cohen's d = 0.7722 (medium-to-large effect) **Hypothesis Test (H₁: μ(χ₄) > μ(L_DH)):**
+- Two-sample t-test: t = -38.61, p = 1.000 (NOT significant)
+- Mann-Whitney U test: p = 1.000 (NOT significant) **Reverse Test (H₁: μ(L_DH) > μ(χ₄)):**
+- Two-sample t-test: t = 38.61, p < 10⁻³⁰⁰ (HIGHLY significant)
+- Mann-Whitney U test: p < 10⁻³⁰⁰ (HIGHLY significant) ### Conclusion The original r49 finding was an **ARTIFACT** of the incorrect character definition. With corrected implementations: 1. **L(s, χ₄)** (multiplicative, Euler product) exhibits **LOW** composite coherence (mean = 0.0034), consistent with expected behavior for multiplicative functions. 2. **L_DH** (non-multiplicative, no Euler product) exhibits **HIGHER** composite coherence (mean = 0.0063), consistent with its known off-line zeros and resonance behavior. The corrected analysis **SUPPORTS** the theoretical framework that multiplicativity suppresses composite coherence, contrary to the r49 finding. The high composite coherence of L(χ₄) reported in r49 was **NOT** a genuine phenomenon related to sign-varying coefficients, but rather an artifact of implementation errors. --- ## DISCRETIONARY ANALYTICAL DECISIONS - **Truncation length**: N = 10⁵ chosen for computational feasibility (N = 10⁶ would require ~300× more computation time and potentially exceed memory/time limits)
+- **Time range**: t ∈ [1000, 10000] chosen to avoid small-t numerical instabilities while maintaining sufficient height range
+- **Sampling density**: 5000 points (sampling interval Δt ≈ 1.8) chosen to balance resolution and computation time, exceeding the minimum requirement of 5000 points
+- **Statistical test**: Two-sample t-test with Welch's correction (unequal variances) used as primary test, with Mann-Whitney U test as non-parametric validation, given non-normal distributions (Shapiro-Wilk p < 10⁻⁶)
+- **Significance level**: α = 0.05 used as standard threshold
+- **One-sided vs two-sided test**: One-sided test used for directional hypothesis (χ₄ > L_DH), with reverse direction also tested for completeness
+- **Effect size metric**: Cohen's d calculated using pooled standard deviation to quantify practical significance
+- **Composite squarefree filter**: Terms with ω(n) ≥ 2 used to define composite squarefree numbers, consistent with research program definition
+- **Character implementation**: Real character χ₄ mod 5 implemented as specified in research objective, verified against mathematical definition
+- **L_DH implementation**: Coefficients set to zero for all n where μ(n)=0 (non-squarefree), following corrected implementation protocol from r17+
+- **Möbius sieve**: Standard prime sieve with squared-prime detection used for efficient computation of μ(n) and ω(n)
+- **Numerical precision**: Standard float64 (double precision) used for all computations; Numba JIT compilation used for computational efficiency 

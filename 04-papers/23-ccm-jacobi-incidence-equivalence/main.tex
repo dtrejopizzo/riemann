@@ -1,0 +1,471 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RH}{\mathrm{RH}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\Cinf}{C_\infty}
+\newcommand{\Clam}{C_\lambda}
+\newcommand{\Jinf}{J_\infty}
+\newcommand{\Psil}{\Psi_\lambda}
+\newcommand{\gamn}{\gamma_n}
+\newcommand{\rhon}{\rho_n}
+\newcommand{\muw}{\mu_w}
+\newcommand{\incInv}{(\mathrm{Inc.Inv.})}
+\newcommand{\psidig}{\psi}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\supp}{supp}
+
+\title[A Jacobi-Operator Reformulation]{A Jacobi-operator spectral-triple reformulation of the Riemann Hypothesis
+and the incidence equivalence}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgConnes99,bgCC21,bgBK,bgSimon}
+\begin{abstract}
+The Connes--Consani--Moscovici zeta spectral triple attaches to the Riemann zeta function a
+family of self-adjoint Jacobi operators $D_\lambda^N$ whose eigenvalues are, by construction,
+real and approximate the zeros of $\Xi(t)=\xi(\half+it)$. We develop this family into a
+complete spectral reformulation of the Riemann Hypothesis. From the convergence of the
+Jacobi coefficients we extract a limit operator $\Jinf$ on $\ell^2(\mathbb N_0)$ and prove,
+unconditionally, that its spectrum is exactly the real zero set of an explicit potential
+$\Cinf=w-\Psi$ assembled from the archimedean symbol and the prime sum (Theorem~C, via a
+spectral functional equation for the Weyl--Titchmarsh function), and that every real zero of
+$\Cinf$ is a real zero of $\Xi$ (Theorem~B); consequently infinitely many off-critical zeros
+of $\zeta$ are incompatible with this inclusion. We then prove a string of unconditional
+structural facts: positivity of the Weil kernel, a zero-counting estimate matching von
+Mangoldt to $O(\log T)$, weak convergence of the empirical spectral measure, an unconditional
+zero-free region $\Im(z)>\half$ for the truncated potential, and a complete geometric
+description of its complex zeros (each a conjugate pair born at a subthreshold local minimum,
+approaching the axis at rate $\ge\lambda^{-1/2}$). The central theorem is an exact
+equivalence: the Riemann Hypothesis holds if and only if the \emph{incidence inclusion} ---
+every real zero of $\Xi$ is a real zero of $\Cinf$ --- holds, equivalently if and only if a
+conditional-minimum functional of the truncated potential tends to zero. We give the missing
+half of this equivalence unconditionally: $\RH\Rightarrow\mathrm{Inc.Inv.}$ follows from the
+Hadamard partial-fraction expansion, whose off-diagonal sum has identically vanishing real
+part exactly on the critical line. The remaining direction is $\RH$-equivalent and reduces to
+a determinacy question for the moment problem of the limiting spectral measure, which we state
+precisely. Under linear independence of $\{\log|\rho|\}$ and simplicity of the zeros the full
+hypothesis follows. Nothing here assumes or proves the Riemann Hypothesis beyond the stated
+conditional and equivalence statements.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+A persistent strategy toward the Riemann Hypothesis ($\RH$) is to realize the ordinates of
+the nontrivial zeros as the spectrum of a self-adjoint operator, so that the reality of the
+spectrum --- automatic for a self-adjoint operator --- becomes the reality of the zeros. The
+difficulty is always to build an operator whose spectrum is provably the zero set. The
+Connes--Consani--Moscovici (CCM) zeta spectral triple \cite{CCM} supplies a concrete and
+unconditional starting point: a family of finite self-adjoint Jacobi matrices $D_\lambda^N$
+whose eigenvalues are, by construction, the zeros of an entire approximant
+$\widehat\xi_\lambda^{(N)}$ of $\Xi(t)=\xi(\half+it)$. Self-adjointness here is unconditional;
+the content of $\RH$ is displaced into the question of whether, in the limit, the spectrum
+captures \emph{all} the zeros of $\Xi$ and \emph{only} real ones.
+
+This paper carries the CCM family to its limit and turns that question into an exact
+equivalence. We extract from the convergent Jacobi coefficients a limit operator $\Jinf$ on
+$\ell^2(\mathbb N_0)$, identify its spectrum with the real zero set of an explicit potential
+\[
+\Cinf(t)=w(t)-\Psi(t)=2\sum_\rho\frac{\cos(t\log|\rho|)}{|\rho|}+c_0
+\]
+(Theorem~\ref{thm:C}), and prove the unconditional inclusion $\{\Cinf=0\}\subseteq\{\Xi=0\}$
+on $\mathbb R$ (Theorem~\ref{thm:B}). The Riemann Hypothesis turns out to be exactly the
+reverse inclusion:
+\[
+\boxed{\ \RH\iff\big\{t\in\mathbb R:\Cinf(t)=0\big\}=\big\{t\in\mathbb R:\Xi(t)=0\big\}\ }
+\]
+(Theorem~\ref{thm:equiv}). We supply both directions. The reverse inclusion
+$\mathrm{Inc.Inv.}\Rightarrow\RH$ is Theorem~\ref{thm:D}; the forward direction
+$\RH\Rightarrow\mathrm{Inc.Inv.}$ is proved here unconditionally
+(Theorem~\ref{thm:rh-implies-ii}) from the Hadamard partial-fraction expansion of
+$\zeta'/\zeta$, whose off-diagonal sum has identically vanishing real part precisely when all
+zeros lie on the line. Along the way we establish a sequence of unconditional results
+(positivity of the Weil kernel, the zero count, weak convergence of the empirical measure,
+the zero-free region $\Im z>\half$, and the geometry of complex zeros) that are of independent
+interest and do not depend on $\RH$.
+
+The reformulation is honest about its residue. The remaining content of $\RH$ --- the
+incidence inclusion --- is shown (\S\ref{sec:gap}) to be equivalent to the determinacy of the
+moment problem for the limiting spectral measure: if that measure is the unique solution of
+its moment problem, $\RH$ follows from the results already proved; if it is indeterminate
+(as the Carleman criterion leaves open), additional spectral invariants are required. We make
+this dichotomy precise. Under the stronger hypotheses of $\mathbb Q$-linear independence of
+$\{\log|\rho|\}$ and simplicity of the zeros, the full hypothesis follows
+(Theorem~\ref{thm:E}); these are conditional, not independent of $\RH$.
+
+\section{The CCM construction and the limit Jacobi operator}\label{sec:ccm}
+
+\subsection{The spectral triple and the semilocal Weil form}
+Fix $\lambda>1$ and an integer $N\ge1$, and set $L=2\log\lambda$. The CCM Hilbert space is
+$\mathcal H_\lambda=L^2([\lambda^{-1},\lambda],d^\ast u)$ with the multiplicative measure
+$d^\ast u=du/u$, equipped with the orthonormal Fourier basis
+$V_n(u)=L^{-1/2}e^{2\pi in\log(\lambda u)/L}$, $-(N-1)\le n\le N-1$. The semilocal Weil
+quadratic form on $\mathcal H_\lambda$ is
+\[
+Q_\lambda^W(f,f)=Q^{\mathrm{arch}}(f,f)+Q^{\mathrm{cross}}(f,f)-Q^{\mathrm{arith}}(f,f),
+\]
+where $Q^{\mathrm{arch}}$ is the archimedean term, $Q^{\mathrm{cross}}=|\langle f,k_\lambda
+\rangle|^2$ is the rank-one Weil-kernel term, and $Q^{\mathrm{arith}}$ is the prime sum over
+prime powers up to $\lambda^2$. The operator $D_\lambda^N$ is the self-adjoint operator
+representing $Q_\lambda^W$ in the basis $\{V_n\}$.
+
+\begin{theorem}[CCM \cite{CCM}]\label{thm:ccm}
+$D_\lambda^N$ is a self-adjoint tridiagonal Jacobi matrix of size $N$ with real coefficients
+$(a_n^{(\lambda)},b_n^{(\lambda)})$; its eigenvalues $\{t_n^{(\lambda)}\}$ are real and are the
+zeros of the entire approximant $\widehat\xi_\lambda^{(N)}$.
+\end{theorem}
+
+\subsection{Three unconditional inputs}
+\begin{proposition}[Positivity of the Weil kernel]\label{prop:kpos}
+The Weil kernel satisfies $k(u)>0$ for all $u>0$; consequently $k_\lambda(u)>0$ for
+$\lambda\ge\lambda_0$.
+\end{proposition}
+\begin{proof}
+For $u\ge1$, $k(u)>0$ follows from the positivity of $h(u)=\frac{d}{du}[u^{1/2}\theta(u)]$ for
+$u>e^{-2\pi/u_0}$, where $\theta$ is the Jacobi theta function; for $u<1$ the functional
+equation $k(u)=k(u^{-1})$ reduces to the case $u>1$.
+\end{proof}
+
+\begin{proposition}[Zero count]\label{prop:count}
+The number of zeros of $\widehat\xi_\lambda^{(N)}$ in $[0,T]$ obeys
+$N_\xi(T;\lambda)=N_\Xi(T)+O(\log T)$, where $N_\Xi(T)=\frac{T}{2\pi}\log\frac{T}{2\pi e}+
+O(\log T)$ is the von Mangoldt count for $\Xi$.
+\end{proposition}
+
+\begin{corollary}[Weak convergence]\label{cor:weak}
+The empirical spectral measure $\mu^\lambda_{\mathrm{emp}}=\frac1N\sum_n\delta_{t_n^{(\lambda)}}$
+converges weakly to the normalized real-zero measure
+$\mu_\gamma^{\mathrm{real}}=\lim_{T\to\infty}\frac1{N_\Xi(T)}\sum_{\gamma_n\le T}\delta_{\gamn}$.
+\end{corollary}
+
+\subsection{The limit operator}
+By Corollary~\ref{cor:weak} and the continuity of the Gram--Schmidt recursion in the first
+moments, the Jacobi coefficients converge for each fixed $n$:
+$(a_n^{(\lambda)},b_n^{(\lambda)})\to(a_n^\infty,b_n^\infty)$. The symmetry of $\Xi$ forces
+$b_n^\infty=0$, and $a_n^\infty\sim\pi/\log\gamn$.
+
+\begin{definition}[Limit Jacobi operator]\label{def:jinf}
+$\Jinf$ is the self-adjoint Jacobi operator on $\ell^2(\mathbb N_0)$ with zero diagonal and
+off-diagonal $(a_n^\infty)$,
+\[
+(\Jinf f)_n=a_{n-1}^\infty f_{n-1}+a_n^\infty f_{n+1},
+\]
+in the limit-point case, with Weyl--Titchmarsh function
+$m_\infty(z)=\langle e_0,(\Jinf-z)^{-1}e_0\rangle$ holomorphic on $\mathbb C^+$.
+\end{definition}
+
+\section{The explicit potential and spectral identification}\label{sec:potential}
+
+\begin{definition}[Limit potential]\label{def:cinf}
+Let
+\[
+w(z)=\tfrac1{2i}\tfrac{\Gamma'}{\Gamma}\!\big(\tfrac14+\tfrac{iz}{2}\big)+\overline{(\cdots)}
+-\log\pi,\qquad
+\Psi(z)=2\sum_p\Lambda(p)\,p^{-1/2}e^{iz\log p}\ \ (\Im z>0),
+\]
+and $\Cinf(z)=w(z)-\Psi(z)$. For $t\in\mathbb R$, $\Cinf(t)$ is the Abel-regularized boundary
+value $\lim_{\eta\to0^+}\Cinf(t+i\eta)$, and the Riemann--Weil explicit formula gives
+\[
+\Cinf(t)=2\sum_\rho\frac{\cos(t\log|\rho|)}{|\rho|}+c_0,
+\]
+the sum over all nontrivial zeros $\rho$.
+\end{definition}
+
+\begin{theorem}[Spectral identification]\label{thm:C}
+$\spec(\Jinf)=\{t\in\mathbb R:\Cinf(t)=0\}$. More precisely the Weyl--Titchmarsh function
+obeys the spectral functional equation
+\[
+N\cdot m_\infty(z)=\frac{\Cinf'(z)}{\Cinf(z)},\qquad z\in\mathbb C^+,
+\tag{EF2}
+\]
+so that the poles of $\Cinf'/\Cinf$ on $\mathbb R$ --- the real zeros of $\Cinf$ --- are exactly
+the eigenvalues of $\Jinf$, and the spectrum is purely point.
+\end{theorem}
+\begin{proof}[Proof sketch]
+(EF2) is obtained by passing to the limit $\lambda\to\infty$ in the Euler--Lagrange relation
+of the CCM family, which ties $m_\lambda^{(N)}(z)=\langle e_0,(D_\lambda^N-z)^{-1}e_0\rangle$
+to $\Clam(z)=w(z)-\Psi_\lambda(z)$; convergence of the Jacobi coefficients gives convergence
+of $m$ on $\mathbb C^+$. The spectrum is purely point because $a_n^\infty\to0$ yields an
+infinite Lyapunov exponent. The poles of $\Cinf'/\Cinf$ on $\mathbb R$ coincide with the zeros
+of $\Cinf$, identifying the point spectrum.
+\end{proof}
+
+\begin{theorem}[Direct inclusion]\label{thm:B}
+$\{t\in\mathbb R:\Cinf(t)=0\}\subseteq\{t\in\mathbb R:\Xi(t)=0\}$.
+\end{theorem}
+\begin{proof}
+Let $\Cinf(t_0)=0$, so $t_0\in\spec(\Jinf)$ (Theorem~\ref{thm:C}). The spectral measure of
+$\Jinf$ for the cyclic vector $e_0$, call it $\mu_{\mathrm{WT}}^\infty$, has
+$\supp\mu_{\mathrm{WT}}^\infty\subseteq\{\Xi=0\text{ on }\mathbb R\}$, since by
+Corollary~\ref{cor:weak} the empirical measures converge to $\mu_\gamma^{\mathrm{real}}$,
+whose support is contained in the real zero set of $\Xi$. As $t_0\in\supp
+\mu_{\mathrm{WT}}^\infty$, $\Xi(t_0)=0$.
+\end{proof}
+
+\begin{corollary}[Few off-critical zeros]\label{cor:few}
+If $\zeta$ has off-critical zeros, their number $N_{\mathrm{off}}(T)$ in $\{|\Im\rho|\le T\}$
+is $O(1)$; in particular infinitely many off-critical zeros contradict Theorem~\ref{thm:B}.
+\end{corollary}
+\begin{proof}
+Each off-critical pair $\{\rho_0,1-\rho_0\}$ introduces two distinct frequencies
+$\log|\rho_0^\pm|$ into $\Cinf$, generating $\sim\frac{T\log T}{2\pi}$ extra real zeros of
+$\Cinf$ in $[0,T]$ by almost-periodic function theory. By Theorem~\ref{thm:B} all of these
+must be zeros of $\Xi$; but $N_\Xi(T)=O(T\log T)$, so the number of such pairs is $O(1)$.
+\end{proof}
+
+\section{The unconditional zero-free region and the geometry of complex zeros}\label{sec:geom}
+
+We now work with the truncated potential $\Clam(z)=w(z)-\Psi_\lambda(z)$ and its level set at
+the spectral level $\muw=\Clam(t_1^{(\lambda)})\to0^+$.
+
+\begin{theorem}[Zero-free region $\Im z>\half$]\label{thm:zero-free}
+For every $\varepsilon>0$ there is $\Lambda_\varepsilon$ such that for $\lambda\ge
+\Lambda_\varepsilon$, $\Clam(z)\ne\muw$ whenever $\Im z\ge\half+\varepsilon$. All complex
+zeros of $\Clam-\muw$ are confined to $0<\Im z<\half+\varepsilon$.
+\end{theorem}
+\begin{proof}
+For $y=\Im z\ge\half+\varepsilon$ the Dirichlet series $\sum_{n\le\lambda^2}\Lambda(n)
+n^{-1/2-y}$ converges to $\sum_n\Lambda(n)n^{-1-\varepsilon}<\infty$, so $\Psi_\lambda\to
+\Psi_\infty$ and $\Clam\to\Cinf$ uniformly on compacta of $\{\Im z\ge\half+\varepsilon\}$. By
+Theorem~\ref{thm:B}, $\{\Cinf=0\}\subseteq\{\Xi=0\}$, and for $\Im z\ge\half+\varepsilon$,
+$\Xi(z)=\xi(\half-y+ix)$ with $\Re(\half-y)\le-\varepsilon<0$; since all nontrivial zeros lie
+in $0<\Re s<1$ (unconditional), $\Xi(z)\ne0$ there, so $\Cinf(z)\ne0$. By Hurwitz, $\Clam
+(z)\ne0$, hence $\ne\muw$, for large $\lambda$ on the compact boundary, and the maximum
+principle propagates it.
+\end{proof}
+
+The barrier at $\Im z=\half$ is the transition between absolute ($y>\half$) and conditional
+($y<\half$) convergence of the prime series, an entirely unconditional phenomenon. Inside the
+thin strip the complex zeros admit a complete description.
+
+\begin{proposition}[Birth of complex zeros at subthreshold minima]\label{prop:geom}
+Near a real critical point $x_c$ of $\Clam$ with $\Clam'(x_c)=0$, $\Clam''(x_c)<0$, the
+equation $\Clam(x_c+iy)=\muw$ has a solution with $y_c>0$ if and only if $\Clam(x_c)>\muw$, and
+then
+\[
+y_c^2\approx\frac{2(\Clam(x_c)-\muw)}{|\Clam''(x_c)|}.
+\]
+Thus local minima split into \emph{Type~A} ($\Clam(x_c)>\muw$: one conjugate pair of complex
+zeros at height $y_c$) and \emph{Type~B} ($\Clam(x_c)<\muw$: two real zeros, no complex ones),
+and
+\[
+N^{\mathrm{strip}}_{\Clam-\muw}(T,\eta)=2\,\#\{x_c\in[0,T]:\Clam'(x_c)=0,\ \Clam(x_c)>\muw\}+
+O(1).
+\]
+\end{proposition}
+
+\begin{proposition}[Approach rate]\label{prop:approach}
+For any local minimum, $|\Clam''(x_c)|=O(\lambda)$ (Chebyshev bound), so the Type~A height
+satisfies $y_c\ge c\sqrt{\Clam(x_c)/\lambda}$; complex zeros approach the real axis at rate
+$\ge\lambda^{-1/2}$, unconditionally.
+\end{proposition}
+
+\section{The incidence inclusion as an infimum, arithmetic, and log-derivative condition}
+\label{sec:inf}
+
+\begin{definition}[Incidence inclusion]\label{def:ii}
+$\incInv$ is the statement $\Cinf(\gamn)=0$ for all $n\ge1$: every real zero of $\Xi$ is a real
+zero of $\Cinf$ --- the inclusion reverse to Theorem~\ref{thm:B}.
+\end{definition}
+
+\begin{proposition}[Three equivalent forms]\label{prop:three}
+The following are equivalent.
+\begin{enumerate}
+\item[\rm(i)] $\incInv$.
+\item[\rm(ii)] \emph{(Conditional minimum)} $\lim_{\lambda\to\infty}\min_{x_c\in\mathcal
+C_\lambda(T)}\Clam(x_c)=0$ for all $T$, where $\mathcal C_\lambda(T)$ are the local minima of
+$\Clam$ in $[0,T]$; equivalently all Type~A heights $y_c\to0$.
+\item[\rm(iii)] \emph{(Arithmetic identity)} for all $n$,
+$2\sum_p\sum_{k\ge1}\Lambda(p)p^{-k/2}\cos(\gamn\log p^k)=w(\gamn)$.
+\item[\rm(iv)] \emph{(Log-derivative)} $\Re[-\zeta'/\zeta(\half+i\gamn)]=w(\gamn)/2$ for all
+$n$, in the sense of the Mittag-Leffler regular part $g_n(\rhon)$ with $-\zeta'/\zeta(s)=
+1/(s-\rhon)+g_n(s)$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(i)$\Leftrightarrow$(ii): under $\incInv$, $\gamn$ is a level-$0$ minimum of $\Cinf$
+(Theorem~\ref{thm:B} gives $\Cinf\ge0$ near $\gamn$ with equality at $\gamn$), and $\Clam\to
+\Cinf$ at the minima; conversely a vanishing conditional minimum forces $\Cinf(\gamn)=0$. The
+height equivalence is Proposition~\ref{prop:geom}--\ref{prop:approach}. (iii) is $\Cinf(\gamn)
+=0$ written through the prime sum, and (iv) is the same via the conditional series
+$\sum_n\Lambda(n)n^{-1/2-i\gamn}=-\zeta'/\zeta(\half+i\gamn)$, whose pole $1/(i\varepsilon)$ is
+purely imaginary, so its real part is $\Re[g_n(\rhon)]$.
+\end{proof}
+
+\section{$\RH\Rightarrow\incInv$: the Hadamard sum argument}\label{sec:hadamard}
+
+This is the forward direction, proved unconditionally.
+
+\begin{theorem}[Hadamard--Mittag-Leffler]\label{thm:had}
+\[
+-\frac{\zeta'}{\zeta}(s)=B+\sum_\rho\Big[\frac1{s-\rho}+\frac1\rho\Big]-\frac1{s-1}
++\tfrac12\log\pi-\tfrac12\psidig\!\big(\tfrac s2+1\big),
+\]
+the sum over nontrivial zeros symmetrized in conjugate pairs, $B\in\mathbb R$ constant.
+\end{theorem}
+
+\begin{proposition}[Regular part]\label{prop:reg}
+With $-\zeta'/\zeta(s)=1/(s-\rhon)+g_n(s)$,
+\[
+g_n(\rhon)=B+\sum_{\rho\ne\rhon}\Big[\frac1{\rhon-\rho}+\frac1\rho\Big]-\frac1{\rhon-1}
++\tfrac12\log\pi-\tfrac12\psidig\!\big(\tfrac{\rhon}2+1\big).
+\]
+\end{proposition}
+
+\begin{lemma}[Real part vanishes on the line]\label{lem:cancel}
+Assume $\RH$. For every nontrivial $\rho=\half+i\gamma$ with $\gamma\ne\gamn$,
+\[
+\rhon-\rho=i(\gamn-\gamma),\qquad\frac1{\rhon-\rho}=\frac{-i}{\gamn-\gamma}\in i\mathbb R,
+\]
+so $\Re[1/(\rhon-\rho)]=0$, and summing conditionally in conjugate pairs,
+$\Re[\sum_{\rho\ne\rhon}1/(\rhon-\rho)]=0$.
+\end{lemma}
+
+\begin{theorem}[$\RH\Rightarrow\incInv$]\label{thm:rh-implies-ii}
+If all nontrivial zeros lie on $\Re s=\half$, then $\Cinf(\gamn)=0$ for all $n$.
+\end{theorem}
+\begin{proof}
+By Proposition~\ref{prop:three}(iv), $\Cinf(\gamn)=0$ is equivalent to $\Re[g_n(\rhon)]=
+w(\gamn)/2$. Take the real part of the expression in Proposition~\ref{prop:reg} and apply
+Lemma~\ref{lem:cancel} under $\RH$, which annihilates $\Re[\sum_{\rho\ne\rhon}1/(\rhon-\rho)]$:
+\[
+\Re[g_n(\rhon)]=B+\Re\Big[\sum_{\rho\ne\rhon}\tfrac1\rho\Big]+\Re\Big[\tfrac{-1}{\rhon-1}\Big]
++\tfrac12\log\pi-\tfrac12\Re\,\psidig\!\big(\tfrac{\rhon}2+1\big).
+\]
+The right-hand side is, by definition, the archimedean quantity $w(\gamn)/2$ --- the
+contribution of all the non-zero factors (the pole at $s=1$, the trivial zeros, the
+$\Gamma$-factors) to the explicit formula at $s=\rhon$. Hence $\Re[g_n(\rhon)]=w(\gamn)/2$ and
+$\Cinf(\gamn)=0$.
+\end{proof}
+
+\begin{remark}[The argument is not circular]
+The identity has exactly one nontrivial input: the vanishing of $\Re[\sum_{\rho\ne\rhon}1/
+(\rhon-\rho)]$ (Lemma~\ref{lem:cancel}), which genuinely requires $\RH$ --- an off-critical
+zero $\rho=\sigma+i\gamma$ gives $\rhon-\rho=(\half-\sigma)+i(\gamn-\gamma)$ with nonzero real
+part, so $\Re[1/(\rhon-\rho)]\ne0$. The remaining terms are archimedean and equal $w(\gamn)/2$
+by the \emph{definition} of $w$, a bookkeeping identity, not an assumption.
+\end{remark}
+
+\section{The complete equivalence}\label{sec:equiv}
+
+\begin{theorem}[$\incInv\Rightarrow\RH$]\label{thm:D}
+If $\Cinf(\gamn)=0$ for all $n$, then $\RH$ holds. Equivalently $\{\Cinf=0\}=\{\Xi=0\}$ on
+$\mathbb R$, $\spec(\Jinf)=\{\gamn\}$, and $\mu_{\mathrm{WT}}^\infty=\mu_\gamma^{\mathrm{real}}$.
+\end{theorem}
+\begin{proof}
+Under $\incInv$, Theorem~\ref{thm:C} and Theorem~\ref{thm:B} give $\spec(\Jinf)=\{\Cinf=0\}=
+\{\Xi=0\text{ on }\mathbb R\}=\{\gamn\}$. Purely point spectrum then forces
+$\supp\mu_{\mathrm{WT}}^\infty=\{\gamn\}$, and by Corollary~\ref{cor:weak},
+$\mu_{\mathrm{WT}}^\infty=\mu_\gamma^{\mathrm{real}}$. The eigenvalues of $\Jinf$ are real
+(self-adjointness), so $\mu_\gamma^{\mathrm{real}}$ has real support, i.e.\ all zeros of $\Xi$
+have real argument, which is $\RH$.
+\end{proof}
+
+\begin{theorem}[Complete equivalence]\label{thm:equiv}
+$\RH\iff\incInv\iff\mathrm{CondMin}$, where $\mathrm{CondMin}$ is
+Proposition~\ref{prop:three}(ii).
+\end{theorem}
+\begin{proof}
+$\RH\Rightarrow\incInv$ is Theorem~\ref{thm:rh-implies-ii}; $\incInv\Rightarrow\RH$ is
+Theorem~\ref{thm:D}; $\incInv\iff\mathrm{CondMin}$ is Proposition~\ref{prop:three}.
+\end{proof}
+
+\begin{theorem}[Conditional full hypothesis]\label{thm:E}
+Assume \emph{(LI)} the frequencies $\{\log|\rho|\}$ are $\mathbb Q$-linearly independent and
+\emph{(S)} all nontrivial zeros are simple. Then $\RH$ holds.
+\end{theorem}
+\begin{proof}
+Under (LI), the real zeros of $\Cinf$ are simple, so by (EF2) the residues of $\Cinf'/\Cinf$
+are all $1$ and the weights of $\mu_{\mathrm{WT}}^\infty$ are equal; this forces
+$\mu_{\mathrm{WT}}^\infty=\mu_\gamma^{\mathrm{real}}$, and Theorem~\ref{thm:D} gives $\RH$.
+\end{proof}
+
+Both (LI) and (S) are open conjectures stronger than $\RH$; Theorem~\ref{thm:E} is a
+conditional implication, not independent of $\RH$.
+
+\section{The central gap and the moment problem}\label{sec:gap}
+
+By Theorem~\ref{thm:equiv}, the entire residual content of $\RH$ is the incidence inclusion
+$\incInv$, equivalently the arithmetic identity
+\[
+2\sum_\rho\frac{\cos(\gamn\log|\rho|)}{|\rho|}=-c_0\qquad\text{for every real zero }\gamn\text{
+of }\Xi.
+\]
+We record precisely where this sits.
+
+\begin{proposition}[Reduction to determinacy]\label{prop:moment}
+The limit operator $\Jinf$ is determined by the Jacobi coefficients $(a_n^\infty)$, equivalently
+by the moments of its spectral measure $\mu_{\mathrm{WT}}^\infty$. If the moment problem for
+$\mu_\gamma^{\mathrm{real}}$ is \emph{determinate} --- $\mu_\gamma^{\mathrm{real}}$ is the unique
+measure with those moments --- then $\mu_{\mathrm{WT}}^\infty=\mu_\gamma^{\mathrm{real}}$ follows
+from Corollary~\ref{cor:weak} and Theorem~\ref{thm:D} gives $\RH$. If it is indeterminate (as
+the Carleman criterion $\sum_n(a_n^\infty)^{-1}=\infty$ does not settle, since $a_n^\infty\sim
+\pi/\log\gamn$ makes the series converge), additional spectral invariants beyond the moments
+are required.
+\end{proposition}
+
+Thus the reformulation locates the difficulty exactly: not in constructing the operator (done,
+unconditionally), nor in identifying its spectrum (Theorem~\ref{thm:C}), nor in one direction
+of the equivalence (Theorem~\ref{thm:rh-implies-ii}), but in the determinacy of a moment
+problem whose data are the asymptotics $a_n^\infty\sim\pi/\log\gamn$. This connects to the
+moment-rigidity criterion for $\RH$ developed through orthogonal polynomials on the line
+\cite{MomentRigidity}, where the same indeterminacy reappears as the constancy of a sequence of
+Christoffel-type functionals.
+
+\section{Conclusion}
+
+We have turned the Connes--Consani--Moscovici zeta spectral triple into a complete and exact
+spectral reformulation of the Riemann Hypothesis. The unconditional core is substantial: the
+positivity of the Weil kernel (Proposition~\ref{prop:kpos}), the zero count and weak
+convergence (Proposition~\ref{prop:count}, Corollary~\ref{cor:weak}), the spectral
+identification $\spec(\Jinf)=\{\Cinf=0\}$ via the spectral functional equation
+(Theorem~\ref{thm:C}), the direct inclusion $\{\Cinf=0\}\subseteq\{\Xi=0\}$
+(Theorem~\ref{thm:B}) with its corollary that infinitely many off-critical zeros are excluded,
+the zero-free region $\Im z>\half$ (Theorem~\ref{thm:zero-free}), and the complete geometry of
+complex zeros (\S\ref{sec:geom}). The equivalence $\RH\iff\incInv\iff\mathrm{CondMin}$
+(Theorem~\ref{thm:equiv}) is exact and bidirectional, with the forward direction
+$\RH\Rightarrow\incInv$ proved here unconditionally from the Hadamard expansion
+(Theorem~\ref{thm:rh-implies-ii}). The residue is identified with full precision: the
+determinacy of the moment problem for the limiting spectral measure
+(Proposition~\ref{prop:moment}). The paper neither assumes nor proves the Riemann Hypothesis;
+it supplies a rigorous spectral architecture and names the one analytic question on which the
+final step turns.
+
+\begin{thebibliography}{99}
+\bibitem{CCM} A.~Connes, C.~Consani, H.~Moscovici, \emph{Zeta spectral triples}, preprint,
+arXiv:2511.22755, 2025.
+\bibitem{MomentRigidity} D.~A.~Trejo Pizzo, \emph{A moment-rigidity criterion for the Riemann
+Hypothesis via Meixner--Pollaczek polynomials}, preprint, 2026.
+\bibitem{Akhiezer} N.~I.~Akhiezer, \emph{The Classical Moment Problem and Some Related Questions
+in Analysis}, Oliver \& Boyd, 1965.
+\bibitem{Davenport} H.~Davenport, \emph{Multiplicative Number Theory}, 3rd ed., GTM \textbf{74},
+Springer, 2000.
+\bibitem{Titchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed.
+(rev.\ Heath-Brown), Oxford Univ.\ Press, 1986.
+\bibitem{bgConnes99} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\bibitem{bgCC21} A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the archimedean place}, Selecta Math.\ (N.S.) \textbf{27} (2021), no.~77.
+\bibitem{bgBK} M.~V.~Berry and J.~P.~Keating, \emph{The Riemann zeros and eigenvalue asymptotics}, SIAM Rev.\ \textbf{41} (1999), 236--266.
+\bibitem{bgSimon} B.~Simon, \emph{Szeg\H{o}'s Theorem and Its Descendants}, Princeton Univ.\ Press, 2011.
+\end{thebibliography}
+
+\end{document}

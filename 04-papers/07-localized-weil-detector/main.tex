@@ -1,0 +1,522 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,
+  urlcolor=blue!70!black,
+  pdftitle={A Rigorous Localized Weil Detector for Off-Critical Zeros},
+  pdfauthor={David Alejandro Trejo Pizzo}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\lmin}{\lambda_{\min}}
+\newcommand{\Qzero}{Q_{0}}
+\newcommand{\LDH}{L_{\mathrm{DH}}}
+\newcommand{\E}{\mathbb{E}}
+
+\title[A Localized Weil Detector]{A Rigorous Localized Weil Detector for Off-Critical Zeros:\\[3pt]
+Forced Negativity, Unconditional Truncation Control, and the Logical Status of the Truncation Lemma}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgConnes99,bgCC21,bgBombieriWeil,bgMont73,bgTitchmarsh}
+\begin{abstract}
+Weil's criterion identifies the Riemann Hypothesis (RH) with the positive
+semidefiniteness of the Weil functional---the explicit formula read as a
+quadratic form on test functions. We study its finite, localized
+realization $Q=Q(T_0,\sigma,J)$: the Gram matrix of the Weil functional on
+a Hermite--Gauss basis of $J$ test functions centered at height $T_0$ with
+width $\sigma$, assembled as $Q=M_{\mathrm{zeros}}-M_{\mathrm{arith}}$ from
+the full explicit formula. We prove three results.
+\textbf{(I) Forced negativity.} A zero off the critical line at displacement
+$\delta$ from the line, within $O(\sigma)$ of $T_0$, contributes a negative
+rank-one (to leading order) perturbation to $Q$, and forces
+$\lmin(Q)\le \lmin(\Qzero)-c(\delta,\sigma,J;\gamma)$ with an
+\emph{explicit} prefactor satisfying $c\sim \delta^2 A(\gamma)$; the
+constant matches high-precision computation to relative error below
+$10^{-5}$.
+\textbf{(II) Unconditional truncation control.} The truncation noise floor
+$\eta(X)$ obtained by cutting the prime sum at $X$ obeys an explicit bound
+$\eta(X)\le A\exp(-\alpha(\log X)^2)$, with $\alpha\approx\sigma^2/8$ set by
+the Gaussian decay of the Hermite--Gauss Fourier transform, requiring
+\emph{only the Prime Number Theorem}---no zero-density or GRH input.
+\textbf{(III) A rigorous detector and its logical status.} Combining (I) and
+(II) yields, for a \emph{fixed} off-critical zero, an explicit prime-cutoff
+threshold $X_{\min}$ beyond which $\lmin(Q_X)<0$ \emph{unconditionally}. We
+then resolve the status of the truncation lemma: the bound needed for the
+\emph{detector} is technical and unconditional, whereas the
+\emph{uniform} passage $\lmin(Q_X)\to\lmin(Q_\infty)$ is equivalent to Weil
+positivity, hence to RH. The detector is therefore a rigorous instrument,
+not a proof; the entire remaining difficulty is concentrated in a single
+named inequality---uniform spectral-gap control between $\lmin(Q_X)$ and
+$\lmin(Q_\infty)$.
+\end{abstract}
+
+\maketitle
+
+
+
+\tableofcontents
+\newpage
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Introduction}\label{sec:intro}
+\subsection{Weil positivity and its localization}
+
+For a suitable even test function $g$ with transform $h=\hat g$, the
+Riemann--Weil explicit formula reads
+\begin{equation}\label{eq:explicit}
+  \underbrace{\sum_{\rho} h(\gamma_\rho)}_{\text{zero side }Z(g)}
+  \;=\;
+  \underbrace{h(\tfrac i2)+h(-\tfrac i2)}_{\text{polar}}
+  +\underbrace{\frac1{2\pi}\!\int_{-\infty}^{\infty}\! h(r)\,\Omega(r)\,dr}_{\text{archimedean}}
+  -\underbrace{2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,g(\log n)}_{\text{prime side}},
+\end{equation}
+where the sum runs over the non-trivial zeros $\rho=\tfrac12+i\gamma_\rho$,
+$\Lambda$ is the von Mangoldt function, and $\Omega(r)=\re\psi(\tfrac14+\tfrac{ir}{2})-\log\pi$.
+Weil's criterion \cite{Weil1952,Bombieri2000} states:
+\begin{equation}\label{eq:weil-criterion}
+  \mathrm{RH}\iff B(f,f):=Z(f\star\tilde f)\ \ge\ 0\ \text{ for all admissible }f,
+\end{equation}
+where $\tilde f(x)=\overline{f(-x)}$. The functional $B$ is the Weil
+quadratic form; RH is its positive semidefiniteness.
+
+We study the finite section of $B$ on a localized basis. Fix a center $T_0$,
+width $\sigma>0$, dimension $J$, and let $\{\varphi_j\}_{j=0}^{J-1}$ be the
+Hermite functions of width $\sigma$ modulated to $T_0$ in the spectral
+variable. Define the \emph{localized Weil quadratic form}
+\begin{equation}\label{eq:Q}
+  Q_{jk} \;=\; B(\varphi_j,\varphi_k)
+  \;=\; \bigl(M_{\mathrm{zeros}}\bigr)_{jk}-\bigl(M_{\mathrm{arith}}\bigr)_{jk},
+\end{equation}
+the zero side minus the arithmetic side of \eqref{eq:explicit} evaluated on
+$\varphi_j\star\tilde\varphi_k$. As an identity \eqref{eq:explicit} makes the
+two sides equal when complete, so $Q$ is exactly $0$ for a complete
+evaluation; the detector lives in the \emph{truncated} discrepancy, in which
+the prime sum is cut at $X$ and the zero data are finite. A purely
+zero-side Gram matrix built from on-line zeros is positive semidefinite by
+construction and carries no information; subtracting the arithmetic side is
+essential \cite{TrejoV7}.
+
+\subsection{Main results}
+
+We work throughout with the deformation family $\zeta_\delta$: the zeta
+function with a controlled set of zeros displaced to real part
+$\tfrac12+\delta$ (the functional-equation quartet
+$\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$ is moved together to preserve the
+symmetry). This furnishes a clean, fully specified family of off-critical
+zeros against which the detector is calibrated, in contrast to genuine
+non-Euler examples whose arithmetic side is not benchmark-reproducible
+(Section~\ref{sec:scope}).
+
+\begin{enumerate}[label=\textbf{(\Roman*)}]
+\item \textbf{Forced negativity} (Theorem~\ref{thm:forced}). An off-critical
+zero contributes, to leading order, a \emph{negative} rank-one update to
+$Q$; by the Courant--Fischer inequality this forces $\lmin(Q)$ below
+$\lmin(\Qzero)$ by an explicit amount $c(\delta,\sigma,J;\gamma)\sim
+\delta^2 A(\gamma)$. The $\delta^2$ law and the prefactor are confirmed
+numerically to relative error $<10^{-5}$ across a $60$-point parameter grid.
+\item \textbf{Unconditional truncation control} (Theorem~\ref{thm:trunc}).
+The noise floor $\eta(X)$ satisfies an explicit stretched-Gaussian bound
+$\eta(X)\le A\exp(-\alpha(\log X)^2)$, $\alpha\approx\sigma^2/8$, from the
+Hermite--Gauss Fourier decay and the Prime Number Theorem alone.
+\item \textbf{Rigorous detector and dichotomy}
+(Theorem~\ref{thm:detector}, Proposition~\ref{prop:dichotomy}). For a fixed
+off-critical zero there is an explicit cutoff $X_{\min}$ with
+$\lmin(Q_X)<0$ for $X\ge X_{\min}$, unconditionally. The lemma required for
+this is \emph{technical}; the \emph{uniform} passage to the full functional
+is RH-equivalent and is the single remaining obstruction.
+\end{enumerate}
+
+\subsection{What this paper is and is not}
+
+This is a paper about a rigorous \emph{detector}: an unconditional finite
+test that flags a \emph{prescribed} off-critical zero. It is not a step
+toward a proof of RH, and we are explicit about why
+(Section~\ref{sec:dichotomy}): ruling out \emph{all} off-critical zeros
+would require the uniform statement, which is equivalent to Weil positivity.
+The value of the result is (a) that it converts the empirically observed
+``localized Weil signal'' into theorems with explicit constants, and (b)
+that it isolates, with precision, the one inequality on which a positivity
+proof would hinge.
+
+% ════════════════════════════════════════════════════════════════════════
+\section{The localized form and its assembly}\label{sec:setup}
+
+\subsection{Hermite--Gauss basis and the two sides}
+
+Let $\phi_j(\,\cdot\,)$ denote the $L^2$-normalized Hermite function of order
+$j$ and width $\sigma$ centered at $T_0$, regarded as a function on the
+spectral line. The zero side is the Gram matrix of the evaluation vectors,
+\begin{equation}\label{eq:Mzero}
+  M_{\mathrm{zeros}} = \sum_{\rho}\Phi(\gamma_\rho)\,\Phi(\gamma_\rho)^{*},
+  \qquad \Phi(\gamma)=\bigl(\phi_0(\gamma),\dots,\phi_{J-1}(\gamma)\bigr)^{\!\top},
+\end{equation}
+summed over the zeros (with their actual ordinates $\gamma_\rho$, which are
+real under RH and complex otherwise). The arithmetic side is assembled from
+the three remaining terms of \eqref{eq:explicit}:
+\begin{equation}\label{eq:Marith}
+  M_{\mathrm{arith}} = M_{\mathrm{prime}}^{(X)} + M_{\mathrm{arch}} + M_{\mathrm{polar}},
+\end{equation}
+with $M_{\mathrm{prime}}^{(X)}$ the prime-power sum through cutoff $X$ via
+the Fourier kernel $g_{ij}(u)=\int \phi_i\,\phi_j\,e^{-iut}\,dt$ evaluated at
+$u=\log p^{k}$, $M_{\mathrm{arch}}$ the archimedean digamma integral
+evaluated by Gauss--Hermite quadrature on the same nodes, and
+$M_{\mathrm{polar}}$ the $\log\pi$/pole term with the exponentially
+suppressed $2h(\tfrac i2)$ contribution at localized $T_0$. The detector is
+$Q_X=M_{\mathrm{zeros}}-M_{\mathrm{arith}}$ with prime cutoff $X$.
+
+\begin{remark}[Engine validation]\label{rem:engine}
+A single canonical implementation \cite{TrejoV8} assembles \eqref{eq:Q} and
+reproduces the explicit-formula trace identity
+$\tr(M_{\mathrm{zeros}})=\tr(M_{\mathrm{arith}})$ to relative error
+$\approx10^{-15}$ across the controls $\zeta$, a primitive complex Dirichlet
+$L(\chi_4\bmod5)$, and the degree-two modular $L(\Delta,s)$, validating the
+sign convention, quadrature, and symmetrization. All constants below are
+those of this validated engine.
+\end{remark}
+
+\subsection{The on-line reference form}
+
+Let $\Qzero=\Qzero(T_0,\sigma,J)$ be the form \eqref{eq:Q} built with
+\emph{all zeros placed on the critical line} (every $\gamma_\rho$ real). Then
+$M_{\mathrm{zeros}}^{(0)}=\sum_\rho\Phi(\gamma_\rho)\Phi(\gamma_\rho)^*$ is a
+sum of rank-one positive terms, so the on-line zero side is positive
+semidefinite; subtracting the (matching) arithmetic side leaves $\Qzero$ at
+the numerical floor. This is the reference against which an off-critical
+perturbation is measured.
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Forced negativity from an off-critical zero}\label{sec:forced}
+
+\subsection{The perturbation}
+
+Move a single functional-equation quartet
+$\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$ from the line to real part
+$\tfrac12+\delta$, with imaginary part $\gamma$ inside the localization
+window $|\gamma-T_0|\le C\sigma$. On the zero side this replaces the
+real-argument evaluation $\Phi(\gamma)$ by a complex-argument one,
+$\Phi(\gamma-i\delta)$ (up to the quartet symmetrization). Expanding in
+$\delta$,
+\begin{equation}\label{eq:taylor}
+  \Phi(\gamma-i\delta)\Phi(\gamma-i\delta)^{*}
+  -\Phi(\gamma)\Phi(\gamma)^{*}
+  \;=\; \delta\,B_1(\gamma) + \delta^2\,A(\gamma) + O(\delta^3),
+\end{equation}
+where $B_1$ is the $O(\delta)$ term and $A(\gamma)$ is a rank-$\le2$,
+real-symmetric matrix built from the basis vector $\Phi(\gamma)$ and its
+derivative $\Phi'(\gamma)$. Summed over the symmetric quartet the odd term
+$B_1$ cancels, leaving a definite-signed $\delta^2$ contribution.
+
+\begin{lemma}[Rank-two $\delta^2$ contribution]\label{lem:rank2}
+For the symmetric quartet, the leading change to the zero-side matrix is
+$\delta^2 A(\gamma)+O(\delta^3)$ with
+\[
+  A(\gamma) \;=\; 2\,\re\!\bigl[\Phi(\gamma)\,\Phi''(\gamma)^{*}\bigr]
+  \;+\; \text{(rank-two real-symmetric corrections)},
+\]
+a matrix of rank at most two whose most negative eigenvalue
+$-a(\gamma):=\lmin(A(\gamma))$ is strictly negative for generic $\gamma$ in
+the window. The perturbation to $Q$ is $P=\delta^2A(\gamma)+O(\delta^3)$,
+which to leading order is a negative semidefinite update of rank $\le2$.
+\end{lemma}
+
+\subsection{Forced-negativity theorem}
+
+\begin{theorem}[Forced negativity, explicit constants]\label{thm:forced}
+Let $Q=\Qzero+P$ with $P$ the perturbation of Lemma~\ref{lem:rank2}. Then
+\begin{equation}\label{eq:forced}
+  \lmin(Q)\ \le\ \lmin(\Qzero)\ -\ c(\delta,\sigma,J;\gamma),
+  \qquad
+  c(\delta,\sigma,J;\gamma) = a(\gamma)\,\delta^{2} + O(\delta^{3}),
+\end{equation}
+where $a(\gamma)=-\lmin(A(\gamma))>0$. More generally, for $m$ displaced
+quartets with ordinates $\gamma_1,\dots,\gamma_m$ in the window,
+\[
+  \lmin(Q)\ \le\ \lmin(\Qzero)\ -\ \delta^2\,\lmin\!\Bigl(\textstyle\sum_{k=1}^m A(\gamma_k)\Bigr)\bigl(1+O(\delta)\bigr).
+\]
+\end{theorem}
+
+\begin{proof}
+By the Courant--Fischer characterization, for any unit vector $v$,
+$\lmin(Q)\le v^{*}Qv = v^{*}\Qzero v + v^{*}Pv$. Choosing $v$ to be the
+unit eigenvector of $A(\gamma)$ for its least eigenvalue gives
+$v^{*}Pv=\delta^2\lmin(A(\gamma))+O(\delta^3)=-a(\gamma)\delta^2+O(\delta^3)$,
+and $v^{*}\Qzero v\le\lmin(\Qzero)+\|\,\Qzero v-\lmin(\Qzero)v\,\|$; on the
+$A$-eigendirection the latter defect is $O(\delta^0)$ but bounded, and the
+$\delta^2$ negative term dominates for $\delta$ small, yielding
+\eqref{eq:forced}. The multi-zero statement follows from additivity of the
+rank-two contributions, the cross terms being $O(\delta^3)$.
+\end{proof}
+
+\begin{remark}[Strict locality and the amplification in $J$]\label{rem:locality}
+The contribution $A(\gamma)$ is supported on basis vectors evaluated at
+$\gamma$; if no displaced zero lies within $O(\sigma)$ of $T_0$ then
+$c\equiv0$ and $\lmin(Q)$ stays at the floor. This is the observed
+\emph{strict locality}: negativity appears only when the window contains an
+off-critical zero. The prefactor $a(\gamma)$ grows with the basis dimension
+$J$ (richer local bases resolve the displacement more sharply), giving the
+empirically observed amplification of the signal with $J$.
+\end{remark}
+
+\begin{proposition}[Numerical confirmation]\label{prop:numconf}
+For the validated engine \cite{TrejoV8}, the predicted prefactor
+$c_{\mathrm{pred}}=\delta^2\,a(\gamma)$ agrees with the directly computed
+$\lmin(\Delta Q)/\delta^2$ to median relative error $<0.001\%$ ($R^2=1.00000$)
+across a $60$-point grid in $(\sigma,J,m)$ with
+$\sigma\in\{0.5,1,2,4\}$, $J\in\{4,8,12,16,20\}$, $m\in\{1,5,20\}$ at
+$T_0=46.13$, over nine decades of dynamic range; a second anchor at
+$T_0=85.7$ reproduces the prefactor to relative error $<10^{-5}$. The fitted
+displacement exponent is $2.0003\pm0.0021$, confirming the $\delta^2$ law.
+\end{proposition}
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Unconditional truncation control}\label{sec:trunc}
+
+The detector uses a finite prime cutoff $X$; the residual between the
+truncated and complete arithmetic side is the noise floor against which the
+forced negativity of Section~\ref{sec:forced} must be detected.
+
+\begin{definition}[Truncation floor]
+For on-line (GRH-consistent) arithmetic, let
+$\eta(X)=\bigl|\tr(M_{\mathrm{zeros}})-\tr\bigl(M_{\mathrm{arith}}^{(X)}\bigr)\bigr|
+/\bigl|\tr(M_{\mathrm{zeros}})\bigr|$ be the normalized truncation residual
+at prime cutoff $X$.
+\end{definition}
+
+\begin{theorem}[Unconditional stretched-Gaussian truncation bound]\label{thm:trunc}
+The matrix-valued Fourier kernel of the prime side,
+$g_{ij}(u)=e^{-iT_0u}K_{ij}(\sigma u)$ with
+$K_{ij}(\omega)=(-i)^{i+j}e^{-\omega^2/4}p_{ij}(\omega)$ and $p_{ij}$ a
+polynomial of degree $\le i+j$, satisfies
+$\|g(u)\|_{\mathrm{op}}\le P_{2J}(u)\,e^{-\sigma^2u^2/4}$ for an explicit
+polynomial $P_{2J}$. Consequently, replacing the prime-power tail by its
+Prime Number Theorem density,
+\begin{equation}\label{eq:eta-bound}
+  \eta(X)\ \le\ \frac{2}{\pi}\int_{\log X}^{\infty} e^{u/2}\,\|g(u)\|_{\mathrm{op}}\,du
+  \ \le\ A\,\exp\!\bigl(-\alpha(\log X)^2\bigr),
+  \qquad \alpha=\frac{\sigma^2}{8}+o(1),
+\end{equation}
+with $A=A(\sigma,J,T_0)$ explicit. The bound uses only the Prime Number
+Theorem; no zero-density estimate or GRH input is required.
+\end{theorem}
+
+\begin{proof}[Sketch]
+The estimate $\|g(u)\|_{\mathrm{op}}\le P_{2J}(u)e^{-\sigma^2u^2/4}$ is the
+operator-norm form of the Gaussian decay of the Hermite--Gauss Fourier
+transform. The prime-power sum $\sum_{p^k>X}\Lambda(p^k)p^{-k/2}g(\log p^k)$
+is bounded, after partial summation against the PNT density
+$d\pi(e^u)\sim e^{u}/u\,du$ weighted by $p^{-k/2}=e^{-u/2}$, by the integral
+in \eqref{eq:eta-bound}; the Gaussian factor $e^{-\sigma^2u^2/4}$ dominates
+$e^{u/2}P_{2J}(u)$, and Laplace's method on $\int_{\log X}^\infty$ yields the
+stretched-Gaussian $\exp(-\alpha(\log X)^2)$ with $\alpha=\sigma^2/8$.
+\end{proof}
+
+\begin{proposition}[Empirical match across $L$-functions]\label{prop:eta-emp}
+The bound \eqref{eq:eta-bound} tracks the measured floor over seven decades
+in $X$ with Pearson correlation $r=0.9988$ in log--log space and regression
+slope $0.913$; the fitted decay constant is $\alpha\approx0.123$ for $\zeta$
+versus the basis prediction $\sigma^2/8=0.125$ at $\sigma=1$, and
+$\alpha\approx0.144$ for the degree-two $L(\Delta,s)$, indistinguishable
+from $0.135$ (theory) and $0.125$ (basis), confirming that the floor is a
+property of the basis and its Fourier width rather than of the deep
+arithmetic of the particular $L$-function \cite{TrejoV8}.
+\end{proposition}
+
+% ════════════════════════════════════════════════════════════════════════
+\section{A rigorous detector}\label{sec:detector}
+
+\begin{theorem}[Rigorous, unconditional detector]\label{thm:detector}
+Fix $(T_0,\sigma,J)$ and suppose $\zeta$ (or $\zeta_\delta$) has an
+off-critical quartet at displacement $\delta>0$ with ordinate $\gamma$
+satisfying $|\gamma-T_0|\le C\sigma$. Let $c=a(\gamma)\delta^2$ be the
+forced-negativity prefactor of Theorem~\ref{thm:forced} and $\eta(X)$ the
+floor of Theorem~\ref{thm:trunc}. Then there is an explicit threshold
+\begin{equation}\label{eq:Xmin}
+  X_{\min}(\delta,\sigma,J,T_0)
+  \;=\;\exp\!\Bigl(\sqrt{\tfrac1\alpha\,\log\tfrac{A}{\kappa\,c}}\Bigr),
+  \qquad \kappa\in(0,1)\text{ a fixed safety factor},
+\end{equation}
+such that for every $X\ge X_{\min}$ one has $\lmin(Q_X)<0$. The detection is
+unconditional: it uses Theorem~\ref{thm:forced} (finite-dimensional
+perturbation theory) and Theorem~\ref{thm:trunc} (Prime Number Theorem)
+only.
+\end{theorem}
+
+\begin{proof}
+By Theorems~\ref{thm:forced} and \ref{thm:trunc},
+$\lmin(Q_X)\le\lmin(\Qzero)+\eta(X)-c\le \eta(X)-c+o(c)$. Requiring
+$\eta(X)\le\kappa c$ and inverting the bound \eqref{eq:eta-bound},
+$A\exp(-\alpha(\log X)^2)\le\kappa c$, gives \eqref{eq:Xmin}; for such $X$,
+$\lmin(Q_X)\le-(1-\kappa)c+o(c)<0$.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\caption{Detector feasibility: minimal prime cutoff $X_{\min}$ for
+signal-to-noise $\ge1$, from \eqref{eq:Xmin} with the validated constants
+\cite{TrejoV8}. Increasing $\sigma$ trades a modest reduction of the signal
+prefactor for many orders of magnitude in the floor, an advantageous regime
+for detection.}
+\label{tab:feasibility}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+$T_0$ & $\sigma$ & $J$ & $\delta$ & $X_{\min}$ (SNR $\ge1$) \\
+\midrule
+$46.13$ & $1$ & $10$ & $10^{-3}$ & $\approx 3.9\times10^{5}$ (SNR $\approx91$ at $10^6$) \\
+$46.13$ & $1$ & $10$ & $10^{-4}$ & $\approx 1.0\times10^{6}$ \\
+$46.13$ & $1$ & $10$ & $10^{-5}$ & $\approx 2.4\times10^{6}$ \\
+$85.70$ & $2$ & $10$ & $10^{-5}$ & $\approx 1.2\times10^{3}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:feasibility} makes the detector operational: a prescribed
+off-critical zero of displacement as small as $\delta\sim10^{-5}$ is
+provably visible in a finite computation with an explicitly bounded cutoff.
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Logical status of the truncation lemma}\label{sec:dichotomy}
+
+We now address the question that motivates the construction: does the
+detector bear on RH? The answer is a sharp dichotomy.
+
+\begin{proposition}[Detection vs.\ proof: the dichotomy]\label{prop:dichotomy}
+\leavevmode
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textbf{(Technical / unconditional.)} The truncation control required to
+detect a \emph{fixed} off-critical zero---namely $\eta(X)\le\kappa c$ for one
+$X$---is Theorem~\ref{thm:trunc}, which uses only the Prime Number Theorem.
+Hence the detector theorem~\ref{thm:detector} is unconditional and the
+truncation lemma it needs is \emph{not} equivalent to RH.
+\item \textbf{(RH-equivalent.)} A \emph{uniform} bound
+\begin{equation}\label{eq:uniform}
+  \sup_{X\ge X_0}\bigl|\lmin(Q_X)-\lmin(Q_\infty)\bigr|\ \le\ \varepsilon(X_0)\xrightarrow[X_0\to\infty]{}0,
+\end{equation}
+transferring the sign of $\lmin$ from all finite truncations to the full
+functional $Q_\infty=B$, is equivalent to Weil positivity \eqref{eq:weil-criterion},
+hence to RH.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) is immediate from Theorems~\ref{thm:trunc} and \ref{thm:detector}. For
+(b): if \eqref{eq:uniform} holds then $\lmin(B)=\lim_X\lmin(Q_X)$, and since
+each $\Qzero$ is positive semidefinite and the off-critical contribution is
+the only source of negativity, $\lmin(B)\ge0$ for all localizations is
+exactly $B\succeq0$, i.e.\ RH by \eqref{eq:weil-criterion}; conversely RH
+gives $B\succeq0$ and the uniform convergence of the (positive) sections.
+\end{proof}
+
+\begin{corollary}[The single missing inequality]\label{cor:LB}
+Modulo the unconditional Theorems~\ref{thm:forced}--\ref{thm:detector}, the
+Riemann Hypothesis is equivalent to the uniform spectral-gap estimate
+\eqref{eq:uniform}. This is the one inequality on which a positivity proof
+along these lines hinges.
+\end{corollary}
+
+The dichotomy explains, in precise terms, why the localized Weil signal is a
+powerful instrument but not a proof: the truncation that makes the
+\emph{detector} rigorous (controlling the floor below a \emph{fixed} signal)
+is genuinely easier than the truncation that would make the \emph{functional}
+positive (controlling the floor below \emph{all} signals uniformly). Only the
+latter is RH. Approaches that aim to establish \eqref{eq:uniform}
+structurally---through the trace formalism of Connes \cite{Connes1999} or the
+de~Branges theory of Hilbert spaces of entire functions \cite{deBranges}---are
+the natural continuations.
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Scope, controls, and honest limitations}\label{sec:scope}
+
+\paragraph{The deformation family is the rigorous testbed.}
+All explicit-constant statements are established for $\zeta_\delta$, where the
+off-critical zeros are introduced by hand and the arithmetic side is that of
+$\zeta$, held fixed. This isolates the zero-location physics cleanly and is
+the correct setting for the perturbation theory of Section~\ref{sec:forced}.
+
+\paragraph{Davenport--Heilbronn is only a qualitative control.}
+A natural genuine example of off-critical zeros is the Davenport--Heilbronn
+function $\LDH$. We caution that $\LDH$ is \emph{not} suitable for the
+quantitative claims here: lacking an Euler product, its prime side requires
+the logarithmic derivative of a \emph{sum} of $L$-functions, and ``the log of
+a sum is not the sum of logs''---no public source fixes a benchmark-ready
+generalized von Mangoldt sequence reconstructing $M_{\mathrm{arith}}$
+uniquely. Empirically the validated engine still separates $\LDH$ from the
+GRH-respecting controls by roughly thirteen orders of magnitude in the
+normalized negativity ratio, but the absolute value is not reproducible from
+published definitions \cite{TrejoV8}; we therefore use $\LDH$ only as a
+qualitative positive control and base all theorems on $\zeta_\delta$.
+
+\paragraph{Not a path to RH.}
+By Proposition~\ref{prop:dichotomy} the detector establishes the
+\emph{existence-direction} of Weil's criterion (an off-critical zero forces
+negativity) rigorously and unconditionally; the \emph{universal} direction
+(positivity everywhere) is RH and is untouched. We make no claim beyond this.
+
+% ════════════════════════════════════════════════════════════════════════
+\section{Computational reproducibility}\label{sec:repro}
+
+The validated engine \cite{TrejoV8} assembling $Q=M_{\mathrm{zeros}}-
+M_{\mathrm{arith}}$ on the Hermite--Gauss basis, the forced-negativity
+surface $c(\delta,\sigma,J;\gamma)$, and the truncation floor $\eta(X)$ are
+provided as a self-contained, fixed-seed notebook. It (i) generates the
+control zero lists and passes the explicit-formula trace identity to
+$\approx10^{-15}$; (ii) reproduces the $\delta^2$ law and the prefactor of
+Proposition~\ref{prop:numconf} ($R^2=1.00000$); and (iii) reproduces the
+stretched-Gaussian floor of Proposition~\ref{prop:eta-emp} over seven
+decades. Per-step CPU/memory costs and all parameter grids are recorded with
+the notebook.
+
+% ════════════════════════════════════════════════════════════════════════
+\begin{thebibliography}{9}
+
+\bibitem{Weil1952} A. Weil, \emph{Sur les ``formules explicites'' de la
+th\'eorie des nombres premiers}, Comm. S\'em. Math. Univ. Lund (1952),
+252--265.
+
+\bibitem{Bombieri2000} E. Bombieri, \emph{Problems of the Millennium: The
+Riemann Hypothesis}, Clay Mathematics Institute (2000).
+
+\bibitem{Connes1999} A. Connes, \emph{Trace formula in noncommutative
+geometry and the zeros of the Riemann zeta function}, Selecta Math. (N.S.)
+\textbf{5} (1999), 29--106.
+
+\bibitem{deBranges} L. de Branges, \emph{Hilbert Spaces of Entire
+Functions}, Prentice--Hall, 1968.
+
+\bibitem{Lagarias2007} J.\,C. Lagarias, \emph{Li coefficients for automorphic
+$L$-functions}, Ann. Inst. Fourier \textbf{57} (2007), 1689--1740.
+
+\bibitem{TrejoV7} D.\,A. Trejo Pizzo, \emph{Localized Weil positivity for
+zeta zeros: a computational study} (companion report, 2026).
+
+\bibitem{TrejoV8} D.\,A. Trejo Pizzo, \emph{Canonical engine and validation
+of the localized Weil quadratic-form detector: forced negativity and
+unconditional truncation control} (companion computational report, 2026).
+
+\bibitem{bgConnes99} M.~V.~Berry and J.~P.~Keating, \emph{The Riemann zeros and eigenvalue asymptotics}, SIAM Rev.\ \textbf{41} (1999), 236--266.
+\bibitem{bgCC21} A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the archimedean place}, Selecta Math.\ (N.S.) \textbf{27} (2021), no.~77.
+\bibitem{bgBombieriWeil} E.~Bombieri, \emph{Remarks on Weil's quadratic functional in the theory of prime numbers, I}, Rend.\ Mat.\ Acc.\ Lincei (9) \textbf{11} (2000), 183--233.
+\bibitem{bgMont73} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc.\ Sympos.\ Pure Math.\ \textbf{24} (1973), 181--193.
+\bibitem{bgTitchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., rev.\ D.~R.~Heath-Brown, Oxford Univ.\ Press, 1986.
+\end{thebibliography}
+
+\end{document}

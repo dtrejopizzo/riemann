@@ -1,0 +1,451 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{principle}[theorem]{Principle}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\Koff}{\mathcal{K}_{\mathrm{off}}}
+\newcommand{\negind}{\operatorname{neg.ind}}
+\newcommand{\Wtwo}{\mathcal{W}_2}
+\newcommand{\dnu}{d\nu}
+\newcommand{\Tl}{T_\lambda}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\sig}{sig}
+\DeclareMathOperator{\Spec}{Spec}
+\newcommand{\La}{\Lambda}
+
+\title[One Wall in Many Coordinates]{One wall in many coordinates:\\
+closure of the propagation trichotomy\\
+and the master quantifier for the Riemann Hypothesis}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgTitchmarsh,bgEdwards,bgConrey03,bgBombieri00,bgConnes99,bgdeBranges,bgMont73,bgBK}
+
+\begin{abstract}
+The companion papers \cite{P41,P42} reduced the search for a proof of the
+Riemann Hypothesis (RH), within the Connes--Consani--Moscovici framework, to
+a trichotomy of argument-forms surviving a structural no-go: two-dimensional
+propagation (Form~A), index amplification (Form~B), and an effective
+self-approximation criterion (Form~C). All three are now closed. We collect
+the three closure theorems and make the paper's central claim: they are not
+three independent failures but one obstruction expressed in three coordinate
+systems. In each case the unconditionally controlled object is an
+\emph{averaged}, \emph{generic}, or \emph{interior} quantity, and RH is
+equivalent to an \emph{individual}, \emph{uniform}, or \emph{boundary}
+refinement of it; the wall is always the inversion of a single quantifier,
+from ``on average / for almost all / in the interior'' to ``for the specific
+/ uniformly / at the boundary.'' We show this quantifier inversion is the
+same object as the parity barrier that closed the $\omega$-class arc, the
+arithmetic-propagation wall MW-2, the Hadamard barrier MW-7, and the
+individual-versus-generic orbit obstruction of Bagchi's criterion. The
+sharpest new formulation, isolated in the amplification analysis, is a
+distinction between two kinds of autonomy of a quadratic functional: its
+\emph{value} can be computed from the primes alone, but its \emph{inertia}
+(the partition of its negative index into blocks) cannot be determined
+without the positions of the zeros. We state the master quantifier as a
+synthesis principle, exhibit each closure as an instance, and present the
+unconditional ledger the programme leaves behind---among them the
+strict single-scale trace criterion, the tensor index identity
+$\negind(Q_1\otimes Q_2)=p_1q_2+q_1p_2$, an unconditional sub-resolution
+positivity theorem, and a quadruple-density target weaker than RH. We close
+with an honest account of what a proof must now do: cross the mean-to-uniform
+barrier by a mechanism no current argument-form provides.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\subsection{The end of a programme, and what it leaves}
+A long programme \cite{P40,P41,P42} set out to prove RH and did not. What it
+produced instead is a map: a sequence of attempts, each documented and each
+either refuted or reduced to a named wall, culminating in the structural
+no-go of \cite{P41}. That paper argued that RH always appears as the
+boundary value of a one-parameter family whose interior is an unconditional
+theorem, that no one-dimensional propagation principle reaches the boundary,
+and that exactly three argument-forms survive: two-dimensional propagation
+(Form~A), index amplification (Form~B), and an effective version of Bagchi's
+self-approximation criterion (Form~C). The companion paper \cite{P42}
+pursued all three. Forms~A and~C closed there; Form~B survived a first
+decisive experiment and was reduced to a single missing lemma, the
+sieve-to-index bridge. That bridge has since closed \cite[]{P40}.
+
+This paper does two things. First (\S\ref{sec:trichotomy}), it records the
+three closures as a single ledger of theorems. Second, and principally
+(\S\ref{sec:master}--\S\ref{sec:autonomy}), it argues that the three are one
+wall in three coordinate systems, isolates that wall as a single quantifier
+inversion, and gives its sharpest formulation. The remaining sections present
+the unconditional results the programme leaves behind
+(\S\ref{sec:ledger}) and an honest account of the boundary of current
+methods (\S\ref{sec:boundary}).
+
+\subsection{What is claimed}
+We claim no proof of RH and no conditional result following from a weaker
+hypothesis than is already known. The central claim is structural and is
+stated as a synthesis principle (Principle~\ref{prin:master}), not a theorem:
+that the obstruction to RH, across every arc of the programme, is the
+inversion of one quantifier. Several \emph{instances} of the principle are
+theorems (the closure theorems of \S\ref{sec:trichotomy}); the principle
+itself is the assertion that they are the same theorem. The one genuinely new
+conceptual contribution is the value/inertia distinction of
+\S\ref{sec:autonomy}, which we believe is the most precise form yet of the
+Hadamard barrier.
+
+\subsection{Framework}
+We use the notation of \cite{P39,P40,P41,P42}: $\dnu\ge0$ is the
+unconditional discrepancy measure with $\RH\iff\dnu=0$; the bridge theorem
+\cite{P35} gives $\kappa(Q)=\negind(H_C)=2m$ on the off-critical subspace
+$\Koff$, with $m$ the number of off-critical quadruples and $\RH\iff m=0$;
+$\Wtwo$ is the two-variable Weil functional of \cite[]{P40}.
+
+\section{The trichotomy, closed}\label{sec:trichotomy}
+
+We restate the three closures as theorems, citing their proofs. Each
+identifies the precise point at which the form fails.
+
+\begin{theorem}[Form~C: the self-blocking amplifier {\cite[]{P40}, \cite[\S2]{P42}}]
+\label{thm:C}
+The self-approximation density $\delta(d,\varepsilon)$ does not degenerate as
+$d\to0$; the guaranteed scale degenerates linearly,
+$T_0\asymp C(\varepsilon)/|d|$. The Rouch\'e amplification that would convert
+one off-critical zero into a positive-density family is bounded, under
+$\neg\RH$, by an anchored density carrying the \emph{same} exponent
+$\kappa(\sigma)$ as the unconditional zero-density ceiling
+$N(\sigma,T)=O(T^{\kappa(\sigma)})$ that would contradict it. The density
+needed to force RH and the ceiling that caps it move together under any
+improvement; mobile $d=d(T)$ does not separate them.
+\end{theorem}
+
+\begin{theorem}[Form~A: degeneration {\cite[]{P40}, \cite[\S3]{P42}}]
+\label{thm:A}
+Let $\mathcal{T}(t,x)$ be the joint heat-time/arithmetic discrepancy trace.
+The only definition for which both edges---vanishing for $t\ge\Lambda$ and
+reality of zeros at finite $x$---are unconditional theorems vanishes
+identically on the interior of the quadrant, because the forward
+De~Bruijn--Newman flow preserves reality of zeros \cite{deBruijn50}. Hence
+$\partial_t\mathcal{T}\equiv\partial_x\mathcal{T}\equiv0$ and every coupling
+inequality is vacuous; the corner $(0,\infty)=\RH$ remains a pure
+discontinuity.
+\end{theorem}
+
+\begin{theorem}[Form~B: inertia is not autonomous {\cite[]{P40}}]
+\label{thm:B}
+The negative index amplifies exponentially and unconditionally,
+$\kappa(\psi^{\otimes k})=\tfrac12(4m)^k$ on $\Koff$
+\cite[]{P40}, and the tensor square is realised by the two-variable
+Weil functional $\Wtwo$ on a thickened multiplicative diagonal, whose value
+is computable from the primes alone \cite[]{P40}. Nevertheless the
+window indices of $\Wtwo$ are binary---$0$ on every window under RH, and
+$\asymp m\log T$ without bound under $\neg\RH$---so any uniform finite bound
+on the relative negative index already implies RH at $k=2$, before
+amplification can act. The bound the bridge requires is an asymptotic
+evaluation of the almost-prime functional with relative error $o(1/\log T)$
+uniform over all windows, which implies RH directly.
+\end{theorem}
+
+The three forms fail at three apparently different places: a matching of
+density exponents (C), an invariance of the heat flow (A), a binarity of
+window indices (B). The rest of the paper argues they are the same place.
+
+\section{The master quantifier}\label{sec:master}
+
+\subsection{The common shape}
+In each closure, separate the object that is unconditionally controlled from
+the object equivalent to RH.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.45}
+\begin{tabular}{lll}
+\textbf{Form} & \textbf{Unconditionally controlled} & \textbf{Equivalent to RH}\\
+\hline
+C & zero density \emph{on average}, $N(\sigma,T)=O(T^{\kappa})$ & anchored density in the \emph{individual} window $J_d$\\
+A & the trace on the \emph{interior} / forward flow & the trace at the \emph{boundary} corner $(0,\infty)$\\
+B & the functional value \emph{in mean} over windows & the index \emph{uniformly} over every window\\
+\end{tabular}
+\end{center}
+
+In all three the controlled quantity is an average, a generic value, or an
+interior value; the RH-equivalent quantity is the corresponding individual,
+specific, or boundary refinement. The gap between the two columns is, in each
+row, the inversion of one quantifier.
+
+\begin{principle}[The master quantifier]\label{prin:master}
+Across the programme, RH is equivalent to a statement obtained from an
+unconditional theorem by inverting a single quantifier:
+\[
+\text{``for almost all / on average / in the interior''}
+\;\longrightarrow\;
+\text{``for the specific / uniformly / at the boundary.''}
+\]
+Every unconditional method certifies the averaged side; none certifies the
+refined side, because the arithmetic object sits in the measure-zero
+exceptional set of its own generic behaviour, in the favourable direction,
+and genericity cannot detect a measure-zero event.
+\end{principle}
+
+We do not claim Principle~\ref{prin:master} as a theorem; it is the
+synthesis the closures support. Its force is that it is not specific to the
+trichotomy: it organises the entire programme.
+
+\subsection{The principle organises the whole programme}
+The same quantifier inversion is visible in every arc.
+
+\emph{Arc~A (the parity barrier).} Sieve methods control the count of
+integers with given congruence data \emph{on average over residue classes};
+RH-strength statements need to \emph{distinguish} $\omega(n)\bmod2$ for the
+individual sequence. Selberg's parity principle is exactly the statement that
+the averaged data cannot see the individual sign \cite[Arc~A]{P40}.
+
+\emph{Arc~B (the arithmetic-propagation wall MW-2).} The Euler product
+controls $\zeta$ \emph{generically} in the half-plane $\Real(s)>1$; the zeros
+are \emph{individual} global objects in the strip, owned by no prime. The
+information does not propagate because it is averaged information about a
+region, not pointwise information about a locus.
+
+\emph{The CCM Hadamard barrier MW-7.} No property of $\zeta$ verifiable
+without the positions of the zeros---i.e.\ no \emph{generic}, position-blind
+property---implies $\dnu=0$, the \emph{individual} vanishing.
+
+\emph{Bagchi's criterion.} The Bohr-torus flow is uniquely ergodic, so the
+\emph{generic} orbit recurs; RH is the recurrence of the \emph{individual}
+arithmetic orbit $\omega_0$, which lies in the measure-zero exceptional set
+\cite[]{P40}.
+
+\begin{observation}
+The four obstructions MW-2, MW-7, the parity barrier, and the Bagchi
+individual-orbit gap, previously catalogued as distinct walls, are four
+instances of Principle~\ref{prin:master}. The trichotomy closures
+(Theorems~\ref{thm:C}--\ref{thm:B}) are three more. The programme's seven
+walls collapse to one.
+\end{observation}
+
+\subsection{Why the inversion is hard in exactly this way}
+The inversion is not a technical gap to be narrowed by sharper estimates. An
+averaged statement and its individual refinement differ by the behaviour on a
+null set, and \emph{the favourable direction of RH is precisely a null-set
+event}: that the off-critical count is not merely $o(\text{generic})$ but
+exactly zero. No method that proceeds by majorisation, equidistribution, or
+density---all of which see only the averaged side---can certify an exact-zero
+individual event. This is why every unconditional bound in the programme has
+``the wrong sign'' (MW-4): it bounds the average, and the average is
+compatible with both RH and its negation. The quantifier, not the size of
+the constant, is the obstruction.
+
+\section{Autonomy of value versus autonomy of inertia}\label{sec:autonomy}
+
+The amplification analysis produced the sharpest formulation of the wall, and
+we isolate it because it is the paper's one new conceptual tool.
+
+\begin{definition}
+Let $\Wtwo$ be the two-variable Weil functional and $Q_2$ its associated
+quadratic form on the thickened-diagonal test space. We say the \emph{value}
+of $Q_2$ is autonomous if $Q_2(h,h)$ is computable from arithmetic data
+(primes, pole, gamma factor) without the positions of the zeros of $\zeta$.
+We say the \emph{inertia} of $Q_2$ is autonomous if the partition of its
+negative index into the relative block $\negind(Q|_{\Koff}^{\otimes2})$ and
+the remainder is so computable.
+\end{definition}
+
+\begin{theorem}[Value autonomous, inertia not {\cite[--108]{P40}}]
+\label{thm:autonomy}
+The value of $Q_2$ is autonomous: the mixed zeros$\times$primes terms
+reabsorb into arithmetic$\times$arithmetic terms, and the primes$\times$primes
+block is the almost-prime functional
+$\sum_N g(N)\sum_{d\mid N}\La(d)\La(N/d)\varphi(d^2/N)$, computable from the
+primes alone. The inertia of $Q_2$ is \emph{not} autonomous: the negative
+directions live, at second order, in the deficit between the almost-prime
+kernel and its archimedean prediction---a pair-correlation quantity---and the
+isolation of the off-critical block from the off$\times$on contamination
+requires knowing which zeros are off the line. The global negative index is
+$\infty$ under $\neg\RH$; only the relative block is finite, and the relative
+block is not test-accessible.
+\end{theorem}
+
+\begin{remark}[The Hadamard barrier, sharpened]
+Theorem~\ref{thm:autonomy} is the Hadamard barrier MW-7 in its most precise
+form. Earlier statements asserted that no position-blind property implies
+$\dnu=0$. The value/inertia distinction locates the obstruction one level
+finer: one \emph{can} write down a position-blind functional whose value
+encodes the discrepancy (the barrier does not forbid that), but one
+\emph{cannot} read its index---the very invariant that detects $m$---without
+the partition into blocks, and the partition is position-dependent. The
+quantity is autonomous; the \emph{signature} is not. This is why the
+amplification route, which needs the index and not the value, meets the wall
+even though the value is in hand.
+\end{remark}
+
+\begin{observation}
+Value/inertia is the master quantifier in operator-theoretic coordinates: the
+value is the averaged (trace-like) datum; the inertia is the individual
+(spectral-resolution) datum. Computing a trace is averaging; resolving a
+signature is individuating. The same null-set obstruction reappears: the
+off-critical contribution to the value is $o(1/\log T)$ per window---generic
+zero---while its contribution to the inertia is a full negative direction---an
+individual event the average cannot see.
+\end{observation}
+
+\section{The unconditional ledger}\label{sec:ledger}
+
+A programme that does not reach its goal is judged by what it proves along the
+way. We list the unconditional results, with sources, that survive
+independently of RH.
+
+\begin{enumerate}[\rm(L1)]
+\item \emph{Non-negativity of the discrepancy:} $\dnu\ge0$ as a measure,
+each off-critical quadruple contributing a factor $\ge1$
+\cite[]{P40}.
+\item \emph{Single-scale trace criterion:} the Abel kernel $W_\lambda$ is
+strictly positive at every real point, whence $\RH\iff\Tl[\lambda_0]=0$ for a
+single $\lambda_0$; the universal quantifier of the criterion is redundant
+\cite[]{P40}, \cite[Thm~3.2]{P41}.
+\item \emph{Tensor index identity:} for indefinite quadratic forms of
+signatures $(p_i,q_i)$, $\negind(Q_1\otimes Q_2)=p_1q_2+q_1p_2$, strictly
+superadditive; hence exponential amplification $\kappa(\psi^{\otimes k})=
+\tfrac12(4m)^k$ on $\Koff$ \cite[]{P40}, \cite[Thm~4.2--4.3]{P42}.
+\item \emph{Realisation of the tensor square:} the two-variable Weil
+functional on the thickened diagonal realises
+$(\Koff,Q|_{\Koff})^{\otimes2}$ with the predicted $(8,8)$ signature, the
+thickening weight carrying the index \cite[]{P40}, \cite[Thm~5.4]{P42}.
+\item \emph{Sub-resolution positivity:} $Q_2>0$ on test functions of fixed
+support in high windows; the negative index is invisible below the resolution
+scale $a\asymp\log T$ \cite[Thm~3.3]{P40}.
+\item \emph{Closed-form kernel:} for $N(\lambda_0)=1$,
+$B_{\lambda_0}(r)=\tfrac18\operatorname{sech}^{1/2}(r)
+(105\operatorname{sech}^4 r-78\operatorname{sech}^2 r+5)$; its prime series
+diverges like $(5\sqrt2/8)\log X$, so the CCM test function sits on the
+boundary of the Weil class \cite[]{P40}, \cite[\S3]{P42}.
+\item \emph{Eight equivalent reformulations} of RH as functionals of $\dnu$
+\cite[]{P40}, and the bridge theorem $\kappa(Q)=\negind(H_C)$
+\cite{P35}.
+\item \emph{A quadruple-density target:} a bound of the form
+$\kappa_W\le C\cdot n_W$ on window indices would give $m\le C/2$, an
+unconditional bound on the number of off-critical quadruples weaker than RH
+\cite[\S8.2]{P40}---behind the same wall, but a genuine partial
+target.
+\end{enumerate}
+
+These are not consolation. (L2) and (L3) in particular are clean, quotable
+facts; (L5) is an unconditional positivity with a precise resolution
+threshold; (L8) is the shape of a theorem strictly weaker than RH that the
+framework could plausibly reach.
+
+\section{The boundary of current argument-forms}\label{sec:boundary}
+
+\subsection{What the closures establish jointly}
+\cite{P41} predicted that if Forms~A and~B also collapsed, the collapse would
+itself be informative: it would be the first evidence that RH is unreachable
+by any of the argument-forms currently known to mathematics. We have reached
+that point, and the evidence is now specific rather than impressionistic.
+Every form---propagation (1D in \cite{P41}, 2D in Form~A), amplification
+(Form~B), recurrence (Form~C and Bagchi), positivity (MW-1, the whole of
+Arc~B)---terminates at the same quantifier inversion. The walls are not many;
+the wall is one, and we can now write it down.
+
+\begin{principle}[The boundary]\label{prin:boundary}
+A proof of RH must certify an individual, uniform, or boundary statement that
+its averaged, generic, or interior shadow leaves undetermined---an exact-zero
+event on a null set of the relevant generic behaviour. No argument-form
+catalogued in this programme (propagation, amplification, recurrence,
+positivity, sieve) does this, because each proceeds through the averaged
+shadow. The missing idea must cross the mean-to-uniform barrier by a mechanism
+outside this list.
+\end{principle}
+
+\subsection{Where such a mechanism might live}
+We will not pretend to know the mechanism. We can say what property it must
+have, sharpened by Theorem~\ref{thm:autonomy}: it must read the
+\emph{inertia} of an arithmetic functional, not merely its value---it must
+individuate a signature where only a trace is unconditionally available. In
+the one historical case where RH-type statements were proved (function
+fields), the mechanism that did this was cohomological: finite-dimensional
+$\ell$-adic cohomology supplies an integer signature directly, bypassing the
+averaged analytic data entirely. The programme's repeated arrival at the
+arithmetic site, the scaling-site square, and the Riemann--Roch analogue
+\cite[MW-5]{P40} is, in this light, not a coincidence but a recognition: a
+genuinely cohomological invariant over $\Spec\bbZ$ would supply the inertia
+non-generically, and that---not any analytic refinement---is what the master
+quantifier demands. Whether such an invariant exists is the Connes--Consani
+programme's open question, and it is outside the analytic methods this
+programme exhausted.
+
+\section{Assessment}\label{sec:assessment}
+
+The programme set out to prove RH and did not; this paper records why, as
+precisely as we are able. The structural trichotomy of \cite{P41} is closed
+in all three branches (Theorems~\ref{thm:C}--\ref{thm:B}), and the three
+closures, with the programme's earlier walls, are one obstruction: the
+inversion of a single quantifier from averaged to individual
+(Principle~\ref{prin:master}), in its sharpest form the distinction between
+the autonomous value and the non-autonomous inertia of a quadratic functional
+(Theorem~\ref{thm:autonomy}). The programme leaves an unconditional ledger
+(\S\ref{sec:ledger}) and a clear statement of what a proof must do
+(Principle~\ref{prin:boundary}).
+
+We state the honest conclusion plainly. We have not narrowed the distance to
+a proof of RH; the distance is, if anything, more visibly large than when we
+began. What we have narrowed is the \emph{description} of the obstruction:
+from a list of seven walls to a single quantifier inversion with a named
+operator-theoretic form. A reader who hoped for progress toward the theorem
+will find none here. A reader who wants to know exactly where the difficulty
+lives, and why every analytic, spectral, and combinatorial route returns to
+the same place, will find that this is now answerable in one sentence---and
+that the answer points outside the methods we used, toward an invariant that
+reads inertia rather than value. Mapping the wall is not crossing it. But a
+wall whose single gate is known is a better thing to leave behind than a
+fog.
+
+\begin{thebibliography}{99}
+
+\bibitem{CCM24} A.~Connes, C.~Consani, H.~Moscovici,
+\emph{Spectral realisation of zeta zeros and the Riemann--Roch programme}
+(2024).
+
+\bibitem{deBruijn50} N.~G.~de~Bruijn, \emph{The roots of trigonometric
+integrals}, Duke Math. J. \textbf{17} (1950), 197--226.
+
+\bibitem{P35} D.~A.~Trejo Pizzo, \emph{Pontryagin spectral index of the Weil form and the Connes scaling operator: a bridge theorem for the Riemann Hypothesis}, preprint, 2026.
+
+\bibitem{P39} D.~A.~Trejo Pizzo, \emph{A trace and measure criterion for the Riemann Hypothesis from the zeta spectral triple}, preprint, 2026.
+
+\bibitem{P40} D.~A.~Trejo Pizzo, \emph{The localized Weil form and its Kre\u\i n--Pontryagin index: localization, obstruction, and rigidity}, preprint, 2026.
+
+\bibitem{P41} D.~A.~Trejo Pizzo, \emph{The exhaustion of one-dimensional
+propagation} (programme paper P41, 2026).
+
+\bibitem{P42} D.~A.~Trejo Pizzo, \emph{Two closures and a survivor: the
+amplification route to the Riemann Hypothesis through almost-prime sieve
+bounds} (programme paper P42, 2026).
+
+\bibitem{bgTitchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., rev.\ D.~R.~Heath-Brown, Oxford Univ.\ Press, 1986.
+\bibitem{bgEdwards} H.~M.~Edwards, \emph{Riemann's Zeta Function}, Academic Press, 1974.
+\bibitem{bgConrey03} J.~B.~Conrey, \emph{The Riemann Hypothesis}, Notices Amer.\ Math.\ Soc.\ \textbf{50} (2003), 341--353.
+\bibitem{bgBombieri00} E.~Bombieri, \emph{Problems of the Millennium: The Riemann Hypothesis}, Clay Mathematics Institute, 2000.
+\bibitem{bgConnes99} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\bibitem{bgdeBranges} L.~de Branges, \emph{Hilbert Spaces of Entire Functions}, Prentice-Hall, 1968.
+\bibitem{bgMont73} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc.\ Sympos.\ Pure Math.\ \textbf{24} (1973), 181--193.
+\bibitem{bgBK} M.~V.~Berry and J.~P.~Keating, \emph{The Riemann zeros and eigenvalue asymptotics}, SIAM Rev.\ \textbf{41} (1999), 236--266.
+\end{thebibliography}
+
+\end{document}

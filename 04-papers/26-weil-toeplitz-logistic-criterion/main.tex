@@ -1,0 +1,1715 @@
+\documentclass[11pt,reqno]{amsart}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+%% ---- theorem environments ----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{assumption}[theorem]{Hypothesis}
+
+%% ---- macros ----
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\Jc}{\mathcal{J}}
+\newcommand{\Cor}{\mathcal{C}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\specess}{\operatorname{spec_{ess}}}
+\newcommand{\negind}{\operatorname{neg.ind}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Hil}{H}
+\newcommand{\sst}{\operatorname{st}}
+\newcommand{\Qaut}{Q^{\mathrm{aut}}}
+\newcommand{\half}{\tfrac12}
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\GAP}{\textbf{[GAP]}}
+
+\begin{document}
+
+\title[An Operatorial Geometry for $\zeta$]{An operatorial geometry for $\zeta$: the Weil--Toeplitz algebra and a logistic criterion for the Riemann Hypothesis}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+\begin{abstract}
+We introduce an operatorial geometry for the Weil explicit formula. The
+renormalized window forms of the explicit formula are organized into a
+bounded field of finite-dimensional Hilbert spaces over the discrete base
+\(\N\) (an \(\ell^\infty\)-product; no Dixmier continuity is claimed or used);
+the bounded sections
+form a \(C^*\)-algebra \(\W\), the sections vanishing at infinity form a closed
+ideal \(\Jc\cong c_0\), and the quotient corona \(\Cor=\W/\Jc\) carries a
+\emph{symbol} \(\sigma(Q)\) whose spectrum is the limit set of the window
+spectra. The master quantifier (``mean over windows'' versus
+``uniformly over windows'') becomes literally the distinction between the
+Ces\`aro states of \(\Cor\) and its norm. Within an axiomatized spectral model
+\(\mathfrak W\) we prove a \emph{trichotomy}: off-critical zeros stratify by a
+resolution-dependent visibility into a fat stratum (seen by the symbol), a thin
+stratum (accumulating exactly at the boundary point \(0\in\spec\sigma(Q)\)), and
+a sub-resolution stratum (invisible, living in \(\Jc\)). The boundary point
+\(0\) is exactly the point separating weak from strict essential positivity, and
+by a sharp characterization theorem it is the unique point on which robust
+finiteness of the defect depends. Independently, passing to a non-standard
+normalized signature we prove an exact logistic law
+\(\sigma^{(k)}=\half(1-(1-2\sigma^0)^{2^k})\) for the tensor tower of window
+indices, and -- in its \emph{localized} form -- a criterion
+\(\mathrm{RH}\iff\lim_k\sigma_{\mathrm{loc}}^{(k)}=0\) whose RH branch
+(\(\mathrm{RH}\Rightarrow0\)) is a theorem and whose \(\neg\)RH branch
+(\(\neg\mathrm{RH}\Rightarrow\half\)) is \emph{conditional} on a single, named,
+purely analytic gap -- a quantitative uniformity in \(M\) of Paley--Wiener
+constants in the witness construction (the Paley--Wiener uniformity problem) -- strictly narrower than
+the realizability hypothesis it replaces. We are explicit about scope: this is a
+reformulation, not a proof of RH and not progress toward one; the classical
+wall (uniform second-order pair-correlation asymptotics) is transmuted into the
+norm of the corona and into a named, non-RH, falsifiable gap; what is genuinely
+new is the framework -- the Weil--Toeplitz algebra -- and the reduction of the
+former realizability hypothesis under \(\neg\)RH to the strictly narrower
+analytic gap above.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}\label{sec:intro}
+
+\subsection{The framework in one sentence}
+The Weil explicit formula defines, on a class of test functions equipped with a
+notion of height, a hermitian form \(Q\) whose positivity is equivalent to the
+Riemann Hypothesis (RH) \cite{Weil1952}. We package the renormalized
+\emph{windows} of this form as a section of a bounded field of
+finite-dimensional Hilbert spaces over \(\N\), form the associated
+\(C^*\)-algebra \(\W\) of
+bounded sections together with its corona \(\Cor=\W/\Jc\) (Definition
+\ref{def:field}), and read the obstruction to RH inside the spectrum of the
+\emph{symbol} \(\sigma(Q)\in\Cor\). This is the exact analogue, for a family,
+of the passage from a Toeplitz operator to its Calkin image: the essential
+spectrum is computed window-by-window in the limit.
+
+\subsection{What is new}
+Two things, and they are independent.
+
+\emph{(A) An operatorial geometry.} The corona \(\Cor\) makes the
+\emph{master quantifier} -- the gap between what arithmetic computes in mean and
+what RH needs uniformly -- into a structural feature: membership in \(c_0\)
+versus \(\ell^\infty\), equivalently the difference between the Ces\`aro states
+of \(\Cor\) and its norm (Section \ref{sec:trichotomy}, Section
+\ref{sec:logistic}). Inside this geometry we prove a trichotomy theorem
+(Theorems \ref{thm:fat}--\ref{thm:nogo}): off-critical zeros do not split
+dichotomously into ``visible'' and ``invisible''; they stratify by visibility,
+and the intermediate stratum lives exactly at the single boundary point
+\(0\in\spec\sigma(Q)\). That point is, by a sharp characterization (Theorem
+\ref{thm:exact}), the unique point on which the Fredholm half of the architecture
+depends.
+
+\emph{(B) A criterion whose RH branch is a theorem.} In normalized
+non-standard coordinates the tensor tower of window indices obeys an exact
+logistic recursion (Theorem \ref{thm:logistic}), and in its localized version we
+obtain
+\[
+\mathrm{RH}\;\Longleftrightarrow\;\lim_{k\to\infty}\sigma_{\mathrm{loc}}^{(k)}=0
+\]
+with the RH branch a theorem (compressed Weil positivity, Proposition
+\ref{prop:RHbranch}) and the \(\neg\)RH branch \emph{conditional} on a single,
+named, purely analytic gap: a quantitative uniformity in \(M\) of the
+Paley--Wiener constants of the witness construction (Hypothesis \ref{hyp:pw},
+the Paley--Wiener uniformity problem; Theorem \ref{thm:realiz}). This gap is strictly narrower than the
+realizability hypothesis it replaces (Remark \ref{rem:key}), but it is open: the
+\(\neg\)RH branch is \emph{not} claimed as a theorem here.
+
+\subsection{Honest scope, stated up front}\label{subsec:honest-up-front}
+We are categorical about this and devote Section \ref{sec:honest} to it. (a) We
+do \emph{not} prove RH and we claim no progress toward a proof: the equivalence
+of (B) is a reformulation. (b) The ``computability of the symbol'' -- whether
+\(\sigma(Q)\) equals the autonomous arithmetic prediction -- is the classical
+wall (uniform second-order pair-correlation asymptotics) transmuted into the
+norm topology of the corona; it is not resolved (Section \ref{sec:honest},
+Theorem \ref{thm:symbolcompute}). (c) What is genuinely new is the framework and
+the reduction of the former realizability hypothesis under \(\neg\)RH to the
+strictly narrower analytic gap of the Paley--Wiener uniformity problem (Hypothesis \ref{hyp:pw}); that
+gap is open, and the \(\neg\)RH branch is conditional on it. Every result
+below is labelled: \emph{Theorem} (complete proof here), \emph{Proposition} /
+\emph{Lemma} (auxiliary, complete proof here), or \emph{Conjecture} / \emph{Open}
+/ \(\GAP\) (declared, not proved). When a step rests on a structural input from
+the author's earlier work we name it as a cited hypothesis, never assume it
+tacitly.
+
+\subsection{Relation to the author's earlier work}
+This paper is self-contained: all proofs are given here. It builds on three
+earlier works of the author, cited as previous work and never re-proved: the
+\(\kappa=2m\) bridge identification of the Weil form on a Pontryagin space
+\cite{P35}; the trace criterion and the autonomy of the value of \(Q\) computed
+from primes without zero positions \cite{P39}; and the spectral structure of the
+windowed Weil form (online sea \(\approx\) identity, each visible off-critical
+quadruple a hyperbolic plane) \cite{P40}. The precise statements we import are
+collected as Hypotheses \ref{hyp:blocks}--\ref{hyp:spectral} and tabulated in
+Section \ref{sec:honest}.
+
+\subsection*{Notation}
+\(H\) denotes a complex separable Hilbert space; \(\mathcal B(H)\) the bounded
+operators; \(G=G^*\) a bounded self-adjoint operator with spectral measure
+\(E_G\). A hermitian form is sesquilinear, linear in the first variable, with
+\(Q(y,x)=\overline{Q(x,y)}\). For a subspace \(W\), \(\negind(Q|_W)\) is the
+supremum of \(\dim N\) over subspaces \(N\subseteq W\) with \(Q(x,x)<0\) for all
+\(x\in N\setminus\{0\}\), valued in \(\N\cup\{\infty\}\). A nontrivial zero is
+written \(\rho=\beta+i\gamma\), \(\beta\in(0,1)\); a zero is \emph{off-critical}
+if \(\beta\neq\half\); a quadruple is \(\{\half\pm\delta\pm i\gamma\}\).
+
+\section{Defect spaces and the defect \texorpdfstring{$\delta$}{delta}}
+\label{sec:defect}
+
+We isolate the minimal language of index needed below. The defect of a hermitian
+form is the dimension of a maximal negative subspace; it is the
+polarization-theoretic analogue of the Fredholm index.
+
+\begin{definition}[defect]\label{def:defect}
+For a hermitian form \(Q\) on a complex vector space \(H\) with a marked
+subspace \(P\), the \emph{defect} is
+\(\delta(Q,P):=\negind(Q|_P)\in\N\cup\{\infty\}\). When \(H\) is Hilbert,
+\(P=H\), and \(Q(x,y)=\langle Gx,y\rangle\) with \(G=G^*\) bounded, we write
+\(\delta(G)\). The form is \emph{polarized} if \(\delta=0\).
+\end{definition}
+
+\begin{lemma}[the defect is spectral]\label{lem:defect-spectral}
+\(\delta(G)=\dim\ran E_G(-\infty,0)\).
+\end{lemma}
+
+\begin{proof}
+On \(N_-:=\ran E_G(-\infty,0)\) one has
+\(\langle Gx,x\rangle=\int_{(-\infty,0)}\lambda\,d\|E_\lambda x\|^2<0\) for
+\(x\neq0\); thus \(N_-\) is negative and \(\delta\geq\dim N_-\). Conversely, if
+\(N\) is negative then \(E_G(-\infty,0)|_N\) is injective: if
+\(E_G(-\infty,0)x=0\) then \(x\in\ran E_G[0,\infty)\), whence
+\(\langle Gx,x\rangle\geq0\), impossible for \(x\in N\setminus\{0\}\). So
+\(\dim N\leq\dim N_-\).
+\end{proof}
+
+\subsection{Arithmetic of the defect}
+The defect is monotone, additive, and tensor-multiplicative in a precise sense.
+These are load-bearing only through the \emph{tensor identity}, which drives the
+logistic law of Section \ref{sec:logistic}; we re-prove what we use.
+
+\begin{lemma}[monotonicity and additivity]\label{lem:mono-add}
+\textup{(i)} If \(f\colon(H_1,Q_1,P_1)\to(H_2,Q_2,P_2)\) is linear, isometric
+\((Q_2(fx,fy)=Q_1(x,y))\) with \(f(P_1)\subseteq P_2\), then
+\(\delta(Q_1,P_1)\leq\delta(Q_2,P_2)\). \textup{(ii)}
+\(\delta(Q_1\oplus Q_2)=\delta(Q_1)+\delta(Q_2)\), with no dimension or
+nondegeneracy hypothesis.
+\end{lemma}
+
+\begin{proof}
+(i) For \(N\subseteq P_1\) negative, \(f|_N\) is injective (\(fx=0\Rightarrow
+Q_1(x,x)=Q_2(fx,fx)=0\Rightarrow x=0\)) and \(f(N)\subseteq P_2\) is negative by
+isometry. (ii) ``\(\geq\)'' is direct sum of witnesses. ``\(\leq\)'': if some
+\(\delta(Q_i)=\infty\) there is nothing to prove; if both are finite, choose
+maximal negatives \(N_i\) with \(P_i=N_i\oplus R_i\) (\(Q_i\geq0\) on \(R_i\):
+if \(w\in R_i\) had \(Q_i(w,w)<0\) then \(N_i\oplus\C w\) would be negative of
+larger dimension). For \(N\subseteq P_1\oplus P_2\) negative, the projection
+\(\pi\colon N\to N_1\oplus N_2\) along \(R_1\oplus R_2\) has trivial kernel
+(\(\ker\pi=N\cap(R_1\oplus R_2)\) is both \(\geq0\) and \(<0\)), so
+\(\dim N\leq\delta(Q_1)+\delta(Q_2)\).
+\end{proof}
+
+\begin{lemma}[Whitney formula for the defect]\label{lem:whitney}
+For finite-dimensional nondegenerate hermitian forms of signatures
+\((p_1,q_1)\), \((p_2,q_2)\) (with \(q_i=\delta\)),
+\[
+\sgn(Q_1\otimes Q_2)=(p_1p_2+q_1q_2,\;p_1q_2+q_1p_2),
+\qquad
+\delta(Q_1\otimes Q_2)=p_1q_2+q_1p_2 .
+\]
+\end{lemma}
+
+\begin{proof}
+Take \(Q_i\)-orthonormal bases with signs \(\varepsilon^{(i)}_a\in\{\pm1\}\)
+(Sylvester's law of inertia \cite{Gantmacher}). The tensor basis is \(Q_1\otimes Q_2\)-orthogonal with signs
+\(\varepsilon^{(1)}_a\varepsilon^{(2)}_b\); the sign is \(-1\) exactly when the
+two factors disagree, giving \(p_1q_2+q_1p_2\) negative directions and a
+diagonal orthogonal basis with no isotropic vectors (nondegeneracy).
+\end{proof}
+
+\begin{corollary}[reduced signature is the only multiplicative character]
+\label{cor:character}
+With \(d=p+q\), \(s=p-q\): \(d(Q_1\otimes Q_2)=d_1d_2\) and
+\(s(Q_1\otimes Q_2)=s_1s_2\), and \(\delta=(d-s)/2\). In particular
+\(\delta\) is not multiplicative; the Grothendieck ring of finite nondegenerate
+forms under \(\oplus,\otimes\) is \(\Z[\varepsilon]/(\varepsilon^2-1)\) via
+\(p+q\varepsilon\), whose only ring homomorphisms to an integral domain are
+\(\varepsilon\mapsto\pm1\), i.e.\ \(d\) and \(s\).
+\end{corollary}
+
+\begin{proof}
+\(s_1s_2=(p_1-q_1)(p_2-q_2)=(p_1p_2+q_1q_2)-(p_1q_2+q_1p_2)\) by Lemma
+\ref{lem:whitney}; \(d_1d_2=(p_1+q_1)(p_2+q_2)\) is total dimension. A ring
+homomorphism to an integral domain sends \(\varepsilon\) to a root of
+\(\varepsilon^2=1\).
+\end{proof}
+
+\subsection{The exact characterization of robust finiteness}
+This is the first load-bearing theorem. Essential positivity comes in two
+strengths, and only the strict one is stable under the compact ideal; the
+distinction is the whole content.
+
+\begin{definition}[two essential positivities]\label{def:two-pos}
+\(G=G^*\) is \emph{weakly essentially positive} if
+\(\specess(G)\subseteq[0,\infty)\), and \emph{strictly essentially positive} if
+\(\specess(G)\subseteq[c,\infty)\) for some \(c>0\). Since \(\specess(G)\) is
+compact, the latter is equivalent to \(\specess(G)\subseteq(0,\infty)\).
+\end{definition}
+
+\begin{theorem}[exact characterization of robust finiteness of the defect]
+\label{thm:exact}
+For \(G=G^*\in\mathcal B(H)\) the following are equivalent:
+\begin{enumerate}
+\item[\textup{(i)}] \(G\) is strictly essentially positive;
+\item[\textup{(ii)}] \(\delta(G+K)<\infty\) for \emph{every} compact
+self-adjoint \(K\);
+\item[\textup{(iii)}] there is \(\varepsilon>0\) with
+\(\delta(G-\varepsilon I)<\infty\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{(i)\(\Rightarrow\)(ii).} By Weyl's theorem on stability of the essential
+spectrum under compact perturbations \cite[Thm.\ IV.5.35]{Kato},
+\(\specess(G+K)=\specess(G)\subseteq[c,\infty)\). Hence
+\(\spec(G+K)\cap(-\infty,0]\) is bounded and discrete (its accumulation points
+would lie in \(\specess(G+K)\), disjoint from \((-\infty,0]\)), so finite, of
+eigenvalues of finite multiplicity, and \(\delta(G+K)<\infty\) by Lemma
+\ref{lem:defect-spectral}.
+
+\emph{(iii)\(\Leftrightarrow\)(i).} \(\delta(G-\varepsilon I)=\dim\ran
+E_G(-\infty,\varepsilon)\). If this is finite, \(\spec(G)\cap(-\infty,\varepsilon)\)
+is finitely many eigenvalues of finite multiplicity, so
+\(\specess(G)\subseteq[\varepsilon,\infty)\): strict. Conversely, if
+\(\specess(G)\subseteq[c,\infty)\), take \(\varepsilon=c/2\); the same argument
+gives \(\dim\ran E_G(-\infty,c/2)<\infty\).
+
+\emph{(ii)\(\Rightarrow\)(i), by contraposition.} Suppose strictness fails:
+there is \(\mu\in\specess(G)\) with \(\mu\leq0\). We construct a compact
+self-adjoint \(K\) with \(\delta(G+K)=\infty\).
+
+\emph{Step 1 (orthonormal Weyl sequence with summable error).} For each \(n\),
+\(\dim\ran E_G(\mu-8^{-n},\mu+8^{-n})=\infty\) (this is the defining property of
+the essential spectrum for self-adjoint operators: if it were finite for some
+\(n\), \(\mu\) would be an isolated eigenvalue of finite multiplicity, hence not
+in \(\specess\) \cite[\S XIII.4]{ReedSimon}). Choose inductively
+\(e_n\in\ran E_G(\mu-8^{-n},\mu+8^{-n})\) of unit norm orthogonal to
+\(e_1,\dots,e_{n-1}\) (possible: the range is infinite-dimensional and finitely
+many orthogonality constraints). Then \((e_n)\) is orthonormal and
+\[
+\|(G-\mu)e_n\|^2=\int_{(\mu-8^{-n},\mu+8^{-n})}|\lambda-\mu|^2\,d\|E_\lambda e_n\|^2
+\leq 64^{-n},\qquad\text{i.e.}\quad\|(G-\mu)e_n\|\leq 8^{-n}.
+\]
+
+\emph{Step 2 (Gram matrix of \(G\)).} For \(n\neq m\), by self-adjointness,
+\(|\langle Ge_n,e_m\rangle|=|\langle(G-\mu)e_n,e_m\rangle|\leq 8^{-n}\) and
+\(=|\langle e_n,(G-\mu)e_m\rangle|\leq 8^{-m}\), so
+\(|\langle Ge_n,e_m\rangle|\leq 8^{-\max(n,m)}\); and
+\(\langle Ge_n,e_n\rangle\leq\mu+8^{-n}\leq8^{-n}\) (as \(\mu\leq0\)).
+
+\emph{Step 3 (the perturbation).} Set
+\(K:=-\sum_{n\geq1}2^{-n}\langle\cdot,e_n\rangle e_n\): compact (norm limit of
+finite-rank), self-adjoint, \(\|K\|=\half\). For
+\(x=\sum_{n\geq n_0}\xi_n e_n\) finitely supported in \(\{n\geq n_0\}\),
+\[
+\langle(G+K)x,x\rangle\leq\sum_n(8^{-n}-2^{-n})|\xi_n|^2
++\sum_{n\neq m}8^{-\max(n,m)}|\xi_n||\xi_m|.
+\]
+The cross term is bounded by
+\(\sum_{n\neq m}8^{-\max(n,m)}\tfrac{|\xi_n|^2+|\xi_m|^2}{2}
+\leq\sum_n|\xi_n|^2 r_n\) with
+\(r_n=\sum_{m\neq n}8^{-\max(n,m)}\leq n8^{-n}+\sum_{m>n}8^{-m}\leq(n+1)8^{-n}\).
+Hence
+\(\langle(G+K)x,x\rangle\leq\sum_n\bigl(8^{-n}+(n+1)8^{-n}-2^{-n}\bigr)|\xi_n|^2\).
+Since \((n+2)8^{-n}<2^{-n}\) for all \(n\geq4\), taking \(n_0=4\) makes every
+coefficient negative: \(G+K\) is negative definite on the
+infinite-dimensional \(V_0:=\overline{\operatorname{span}}\{e_n:n\geq4\}\), so
+\(\delta(G+K)=\infty\) by Lemma \ref{lem:defect-spectral}.
+\end{proof}
+
+\begin{remark}[the design lesson]\label{rem:design}
+The only reading of ``essential positivity \(\Rightarrow\) finite defect'' that
+survives the compact ideal -- and the essential spectrum lives modulo that ideal
+by definition -- is the \emph{strict} one. Any certificate must produce a
+\emph{gap} \(c>0\), not merely a sign. The operator \(G=\operatorname{diag}(-1/n)\)
+has \(\specess(G)=\{0\}\subseteq[0,\infty)\) (weakly positive) yet
+\(\delta=\infty\): by Theorem \ref{thm:exact}, this is the generic shape of
+gaplessness. The (i)\(\Rightarrow\)(ii) direction is the form in which earlier
+work \cite{P40} used Weyl's theorem; the contrapositive (ii)\(\Rightarrow\)(i),
+proved above, is what makes the characterization \emph{exact} and is new here.
+\end{remark}
+
+\begin{lemma}[gap detector]\label{lem:gap-detector}
+If there is an orthonormal sequence \((u_n)\) with
+\(\liminf_n\langle Gu_n,u_n\rangle\leq\ell\), then
+\(\inf\specess(G)\leq\ell\).
+\end{lemma}
+
+\begin{proof}
+Suppose \(\specess(G)\subseteq[c,\infty)\) with \(c>\ell\); fix
+\(\varepsilon\in(0,c-\ell)\) and \(E:=E_G(-\infty,c-\varepsilon)\), finite-rank
+by Theorem \ref{thm:exact}(iii)\(\Leftrightarrow\)(i). With
+\(m_0:=\inf\spec(G)>-\infty\),
+\[
+\langle Gu,u\rangle\geq m_0\|Eu\|^2+(c-\varepsilon)\|(1-E)u\|^2
+=(c-\varepsilon)\|u\|^2-(c-\varepsilon-m_0)\|Eu\|^2 .
+\]
+Since \(u_n\rightharpoonup0\) and \(E\) is finite-rank, \(\|Eu_n\|\to0\), so
+\(\liminf\langle Gu_n,u_n\rangle\geq c-\varepsilon>\ell\), a contradiction.
+\end{proof}
+
+\section{The Weil--Toeplitz algebra}\label{sec:algebra}
+
+\subsection{The field of windows and the corona}
+
+\begin{definition}[field of windows; \(\W\), \(\Jc\), the symbol]\label{def:field}
+A \emph{field of windows} is a sequence
+\(\{(H_n,Q_n)\}_{n\geq2}\) with \(H_n\) a finite-dimensional Hilbert space
+\((\dim H_n=d_n<\infty)\), \(Q_n=Q_n^*\in\mathcal B(H_n)\), and
+\(\sup_n\|Q_n\|<\infty\). Set
+\[
+\W:=\Bigl\{A=(A_n)_n:A_n\in\mathcal B(H_n),\ \|A\|:=\sup_n\|A_n\|<\infty\Bigr\},
+\qquad
+\Jc:=\{A\in\W:\|A_n\|\to0\}.
+\]
+With pointwise operations, \(\W\) is a \(C^*\)-algebra (the \(\ell^\infty\)
+product of the field) and \(\Jc\) is a closed two-sided ideal (the
+\emph{compact ideal of the field}: it is the closure of the finitely supported
+sections). The \emph{corona} is \(\Cor:=\W/\Jc\) and the \emph{symbol} of a
+section is its class \(\sigma(A):=A+\Jc\in\Cor\).
+\end{definition}
+
+\begin{remark}
+In the block-diagonal operator \(\bigoplus_n A_n\) on \(\bigoplus_n H_n\), a
+section lies in \(\Jc\) iff the operator is compact; \(\Cor\) is the image of
+the section algebra in the Calkin algebra of \(\bigoplus_n H_n\). The corona is
+literally ``the family modulo compacts''. The name Weil--Toeplitz reflects the
+analogy with the Toeplitz symbol: the essential spectrum of \(T_\phi\) is the
+range of the symbol -- the ``limits of the windows'' of the operator
+\cite{BottcherSilbermann,RabinovichRochSilbermann}.
+\end{remark}
+
+\begin{lemma}[norm of the symbol]\label{lem:symbol-norm}
+\(\|\sigma(A)\|_{\Cor}=\limsup_n\|A_n\|\).
+\end{lemma}
+
+\begin{proof}
+(\(\leq\)) For fixed \(N\) the truncation
+\(A^{(N)}:=(A_2,\dots,A_N,0,0,\dots)\in\Jc\), so
+\(\|\sigma(A)\|\leq\|A-A^{(N)}\|=\sup_{n>N}\|A_n\|\to\limsup_n\|A_n\|\). (\(\geq\))
+For every \(J\in\Jc\),
+\(\|A+J\|=\sup_n\|A_n+J_n\|\geq\limsup_n\|A_n+J_n\|=\limsup_n\|A_n\|\) since
+\(\|J_n\|\to0\); take the infimum over \(J\).
+\end{proof}
+
+\begin{lemma}[symbol spectrum is the limit set of window spectra]
+\label{lem:symbol-spectrum}
+For \(A=(A_n)\in\W\) with each \(A_n\) self-adjoint,
+\[
+\spec_{\Cor}(\sigma(A))=\Lambda(A):=\bigl\{\lambda\in\R:\exists\,n_k\to\infty,\
+\lambda_k\in\spec(A_{n_k}),\ \lambda_k\to\lambda\bigr\}.
+\]
+\end{lemma}
+
+\begin{proof}
+\(\sigma(A)\) is self-adjoint, so its spectrum is real; \(\Lambda(A)\) is closed
+and bounded.
+
+(\(\subseteq\) via contrapositive) If \(\sigma(A)-\lambda\) is invertible in
+\(\Cor\), there is \(B\in\W\) with \((A-\lambda)B=1+J\), \(B(A-\lambda)=1+J'\),
+\(J,J'\in\Jc\). For large \(n\), \(\|J_n\|,\|J'_n\|\leq\half\), so
+\((A_n-\lambda)B_n\) and \(B_n(A_n-\lambda)\) are invertible, whence
+\(A_n-\lambda\) is invertible with \(\|(A_n-\lambda)^{-1}\|\leq2\|B\|\). For
+self-adjoint \(A_n\),
+\(\|(A_n-\lambda)^{-1}\|=\dist(\lambda,\spec A_n)^{-1}\), so
+\(\dist(\lambda,\spec A_n)\geq(2\|B\|)^{-1}\) for all large \(n\): no
+\(\lambda_k\in\spec(A_{n_k})\) can converge to \(\lambda\), i.e.\
+\(\lambda\notin\Lambda(A)\).
+
+(\(\supseteq\) via contrapositive) If \(\lambda\notin\Lambda(A)\), there are
+\(\varepsilon>0\) and \(N\) with \(\dist(\lambda,\spec A_n)\geq\varepsilon\) for
+all \(n\geq N\) (else a violating subsequence would, by boundedness of the
+spectra, produce a point of \(\Lambda\) within \(\varepsilon\) of \(\lambda\)).
+Put \(B_n:=(A_n-\lambda)^{-1}\) for \(n\geq N\) (\(\|B_n\|\leq\varepsilon^{-1}\))
+and \(B_n:=0\) for \(n<N\); then \(B\in\W\) and \((A-\lambda)B-1\),
+\(B(A-\lambda)-1\) are finitely supported, hence in \(\Jc\), so \(\sigma(B)\)
+inverts \(\sigma(A)-\lambda\).
+\end{proof}
+
+\begin{corollary}[positivity of the symbol is the uniform quantifier]
+\label{cor:master-quantifier}
+For \(A=A^*\):
+\begin{itemize}
+\item \(\spec(\sigma(A))\subseteq[0,\infty)\) \emph{(weak symbol positivity)}
+\(\iff\) \(\min\spec(A_n)\geq-\varepsilon_n\) with \(\varepsilon_n\to0\);
+\item \(\spec(\sigma(A))\subseteq[c,\infty)\), \(c>0\) \emph{(strict symbol
+positivity)} \(\iff\) for all \(\varepsilon>0\) there is \(N\) with
+\(\spec(A_n)\subseteq(c-\varepsilon,\infty)\) for all \(n\geq N\) -- a gap
+\emph{uniform over windows, eventually}.
+\end{itemize}
+\end{corollary}
+
+\begin{proof}
+Read Lemma \ref{lem:symbol-spectrum} twice.
+\end{proof}
+
+This is the structural observation that orients the paper: the master
+quantifier (mean over windows versus uniformly over windows) becomes membership
+in \(c_0\) versus \(\ell^\infty\). Corollary \ref{cor:master-quantifier} is the
+statement ``uniform in every window'' written as positivity of an element of a
+\(C^*\)-algebra.
+
+\subsection{The field of Weil}
+We now describe the field carrying the Weil form. The structural inputs we
+import from earlier work are isolated as hypotheses.
+
+\begin{definition}[the Weil field at a resolution calendar]\label{def:weil-field}
+Fix \(\Delta\in(0,1]\) and a nondecreasing \emph{resolution calendar}
+\(a\colon[2,\infty)\to[1,\infty)\) (the log-support budget of the tests per
+window; the natural choice is \(a(T)\asymp\log T\), the resolution scale of
+individual zeros). For each \(n\): \(H_n\) is a finite-dimensional subspace of
+the test class, concentrated in the window \(|\operatorname{Im}s-n|\leq\Delta\)
+with multiplicative support \(\subseteq[e^{-a(n)},e^{a(n)}]\), endowed with the
+\emph{online-sea normalization} (the inner product is the spectral Gram form of
+the online zeros of the window, normalized to mass \(1\) per zero); and \(Q_n\)
+is the compression of the Weil form to \(H_n\) in that normalization. The
+\emph{autonomous} section \(\Qaut=(\Qaut_n)\) is the polar/archimedean-plus-near-
+prime prediction of each window, computable without zero positions
+\cite{P39,P40}.
+\end{definition}
+
+The following are imported, not proved here.
+
+\begin{assumption}[block structure {\cite{P40}}]\label{hyp:blocks}
+Each \(Q_n\) decomposes, up to controlled couplings, as an online-sea block
+(\(\approx\) identity after normalization) plus one hyperbolic plane
+\(\left(\begin{smallmatrix}0&\theta\\\theta&0\end{smallmatrix}\right)\) for each
+visible off-critical quadruple in the window.
+\end{assumption}
+
+\begin{assumption}[autonomy of the value {\cite{P39,P35}}]\label{hyp:autonomy}
+For tests \(f,g\) of the class, \(Q_n(f,g)\) is computable from the arithmetic
+blocks of the explicit formula (primes, pole, gamma factor) without any zero
+position.
+\end{assumption}
+
+\begin{assumption}[spectral realization {\cite{P35}}]\label{hyp:spectral}
+The Weil form is realized on a Pontryagin space \((\mathcal K,Q)\) with
+\(\kappa(Q)=2m\), where \(m\) is the number of off-critical quadruples;
+\(\mathrm{RH}\iff m=0\). \emph{(The identification of \(\kappa\) with the
+negative index of the scaling generator is a conjecture of \cite{P35}; we do not
+use it.)}
+\end{assumption}
+
+\begin{remark}[honest status of the field]\label{rem:field-status}
+That the compressions exist with the stated normalization, and that the section
+is bounded, uses the realizability apparatus of \cite{P40}. The uniform
+boundedness \(\sup_n\|Q_n\|<\infty\) in the online-sea normalization requires
+control of the per-window pair-correlation corrections; we treat this as an
+axiom \textbf{(S1)} of the model \(\mathfrak W\) below
+(\(\GAP\): per-window pair-correlation boundedness, not proved here), inside
+which all theorems of Section \ref{sec:trichotomy} are proved with complete
+rigor. This separates, as the contract demands, \emph{theorems} (in the
+axiomatized model) from the \emph{bridge} (the genuine Weil instance, Section
+\ref{sec:honest}).
+\end{remark}
+
+\section{The spectral model and the trichotomy}\label{sec:trichotomy}
+
+\subsection{The model}
+We axiomatize the spectral structure of the windowed Weil form, distilled from
+Hypotheses \ref{hyp:blocks}--\ref{hyp:spectral}.
+
+\begin{definition}[configuration and visibility]\label{def:config}
+A \emph{configuration} is an at most countable set
+\(Z=\{(\delta_j,\gamma_j)\}_{j\in J}\) with \(\delta_j\in(0,\half)\),
+\(\gamma_j\to\infty\) if \(|J|=\infty\), and finitely many \(j\) per window;
+\(m:=|J|\). (\(Z=\emptyset\) is ``RH''.) The \emph{visibility} of quadruple
+\(j\) at calendar \(a\) is \(\theta_j:=\theta(\delta_j,\gamma_j)\in[0,1]\),
+where \(\theta\) is a fixed function with
+\begin{itemize}
+\item[\textup{(V1)}] \(\theta\) continuous, nondecreasing in \(\delta\), and
+\(\theta(\delta,\gamma)\to0\) as \(\delta\,a(\gamma)\to0\);
+\item[\textup{(V2)}] there is \(c_0>0\) with \(\theta(\delta,\gamma)\geq c_0\)
+when \(\delta\,a(\gamma)\geq1\).
+\end{itemize}
+Quadruples with \(\delta_j\,a(\gamma_j)\geq1\) are \emph{supra-resolution (fat)};
+with \(\delta_j\,a(\gamma_j)<1\), \emph{sub-resolution (thin)}.
+\end{definition}
+
+\begin{remark}[origin of \(\theta\)]\label{rem:theta}
+(V1)--(V2) are the correct properties, justified by a Paley--Wiener estimate: a
+test with multiplicative support in \([e^{-a},e^a]\) has
+\(\hat f(s)=\int_{-a}^{a}F(u)e^{(s-1/2)u}\,du\), so over a band of width
+\(2\delta\),
+\[
+\hat f(\tfrac12+\delta+i\gamma)\,\overline{\hat f(\tfrac12-\delta+i\gamma)}
+=\bigl|\hat f(\tfrac12+i\gamma)\bigr|^2
++O\bigl(\delta\,a\,e^{a/2}\|F\|_{L^1}\sup_{\text{band}}|\hat f|\bigr).
+\]
+Thus a quadruple with \(\delta a\to0\) differs from an online pair by
+\(O(\delta a)\to0\) per unit mass (V1); for \(\delta a\geq1\) an aligned test
+realizes a sign opposition of size \(\geq c_0\) (V2), using closure of the class
+under multiplication by Mellin polynomials \cite{P40}. The exact exponent in the
+transition \(\delta a\asymp1\) is not load-bearing (\(\GAP\), declared,
+non-load-bearing): no theorem below uses more than (V1)--(V2).
+\end{remark}
+
+\begin{definition}[the model \(\mathfrak W(Z)\)]\label{def:model}
+Given a configuration \(Z\) and calendar \(a\), set
+\[
+H_n:=\C^{d_n}\oplus\bigoplus_{j\in J_n^{\mathrm{vis}}}\C^2,\qquad
+Q_n:=(I_{d_n}+R_n)\oplus\bigoplus_{j\in J_n^{\mathrm{vis}}}
+\begin{pmatrix}0&\theta_j\\\theta_j&0\end{pmatrix}+C_n,
+\]
+where \(d_n\asymp\Delta\log n\),
+\(J_n^{\mathrm{vis}}:=\{j:|\gamma_j-n|\leq\Delta,\ \theta_j>0\}\), and
+\begin{itemize}
+\item[\textup{(S1)}] \(\|R_n\|\leq r<\half\) for all \(n\) \emph{(sea
+corrections; \(\GAP\) for the Weil instance, Remark \ref{rem:field-status})};
+\item[\textup{(S2)}] the hyperbolic blocks carry weight \(\theta_j\) with
+(V1)--(V2) \emph{(Remark \ref{rem:theta} for the Weil instance)};
+\item[\textup{(S3)}] \(\|C_n\|\leq\omega_n\) with \(\omega_n\to0\)
+\emph{(cross-couplings between separated windows; \(\GAP\) for the Weil
+instance, inherited from correlation decay)}.
+\end{itemize}
+The autonomous section is \(\Qaut_n:=(I_{d_n}+R_n)\oplus
+I_{2|J_n^{\mathrm{vis}}|}\). Sub-resolution quadruples with \(\theta_j=0\) do not
+appear in \(H_n\); their entire effect is absorbed into \(R_n/C_n\).
+\end{definition}
+
+All theorems in this section are \emph{unconditional inside} \(\mathfrak W\);
+their transport to \(\zeta\) carries the statuses of (S1)--(S3) and is discussed
+in Section \ref{sec:honest}.
+
+\subsection{The stratification theorems}
+Throughout, \(\sigma(Q)\in\Cor\), \(\Lambda(Q)=\spec(\sigma(Q))\), and
+\(\vartheta_n:=\max\{\theta_j:j\in J_n^{\mathrm{vis}}\}\) (\(:=0\) if empty).
+
+\begin{lemma}[per-window spectrum]\label{lem:window-spec}
+For all \(n\),
+\(\spec(Q_n)\subseteq\bigl([1-r,1+r]\cup\{\pm\theta_j\}_{j\in J_n^{\mathrm{vis}}}
+\bigr)+[-\omega_n,\omega_n]\). In particular
+\(\lambda_{\min}(Q_n)\geq-\vartheta_n-\omega_n\); and if
+\(J_n^{\mathrm{vis}}\neq\emptyset\),
+\(\lambda_{\min}(Q_n)\leq-\vartheta_n+\omega_n\).
+\end{lemma}
+
+\begin{proof}
+Without \(C_n\), \(Q_n\) is a direct sum: the sea block has spectrum in
+\([1-r,1+r]\), and each
+\(\left(\begin{smallmatrix}0&\theta\\\theta&0\end{smallmatrix}\right)\) has
+eigenvalues \(\pm\theta\). The self-adjoint perturbation \(C_n\) moves each
+eigenvalue by at most \(\|C_n\|\leq\omega_n\) (finite-dimensional Weyl
+inequality \cite{Bhatia}). The upper bound: the vector \(v=(1,-1)/\sqrt2\) of
+the \(\vartheta_n\)-block gives
+\(\lambda_{\min}(Q_n)\leq\langle Q_nv,v\rangle\leq-\vartheta_n+\omega_n\).
+\end{proof}
+
+\begin{theorem}[fat \(\Rightarrow\) the symbol sees them]\label{thm:fat}
+If there are \(c>0\) and a subsequence \(j_k\) with \(\theta_{j_k}\geq c\) and
+\(\gamma_{j_k}\to\infty\), then
+\(\spec(\sigma(Q))\cap(-\infty,-c/2]\neq\emptyset\). In particular the symbol is
+not even weakly positive: the negativity of supra-resolution quadruples
+\emph{survives the quotient by the compact ideal}.
+\end{theorem}
+
+\begin{proof}
+Let \(n_k\) be the window of \(\gamma_{j_k}\) (\(n_k\to\infty\)). By Lemma
+\ref{lem:window-spec}, \(\lambda_{\min}(Q_{n_k})\leq-c+\omega_{n_k}\). Since
+\(\omega_n\to0\) and the spectra are uniformly bounded, a subsequence of
+\(\lambda_{\min}(Q_{n_k})\) converges to a point \(\leq-c\), which lies in
+\(\Lambda(Q)\) by Lemma \ref{lem:symbol-spectrum}.
+\end{proof}
+
+\begin{theorem}[thin visible \(\Rightarrow\) negatives live exactly at the
+boundary \(0\)]\label{thm:thin}
+Suppose \(m=\infty\), \(J_n^{\mathrm{vis}}\neq\emptyset\) for infinitely many
+\(n\), and \(\vartheta_n\to0\). Then:
+\begin{enumerate}
+\item[\textup{(i)}] \(0\in\spec(\sigma(Q))\); if moreover \(\vartheta_n>\omega_n\)
+for infinitely many populated windows, it is attained as a limit of genuinely
+\emph{negative} \(\lambda_{\min}(Q_n)\) over those windows;
+\item[\textup{(ii)}] \(\spec(\sigma(Q))\subseteq\{0\}\cup[1-r,1+r]\): weak symbol
+positivity \emph{holds};
+\item[\textup{(iii)}] strict symbol positivity \emph{fails}.
+\end{enumerate}
+The negatives accumulate exactly at the single point \(0\) -- the point
+separating weak from strict positivity, the very point of Theorem
+\ref{thm:exact}.
+\end{theorem}
+
+\begin{proof}
+(i) Over the infinitely many populated windows,
+\(\lambda_{\min}(Q_n)\in[-\vartheta_n-\omega_n,-\vartheta_n+\omega_n]\to0\)
+(Lemma \ref{lem:window-spec}, \(\vartheta_n,\omega_n\to0\)); when
+\(\vartheta_n>\omega_n\) these are genuinely negative, and the limit \(0\) lies
+in \(\Lambda(Q)\) (Lemma \ref{lem:symbol-spectrum}). (ii) Every eigenvalue of
+\(Q_n\) lies in
+\([-\vartheta_n-\omega_n,\vartheta_n+\omega_n]\cup[1-r-\omega_n,1+r+\omega_n]\);
+its limit points lie in \(\{0\}\cup[1-r,1+r]\). (iii) Immediate from (i) and
+Corollary \ref{cor:master-quantifier}.
+\end{proof}
+
+\begin{theorem}[strict symbol positivity \(\iff\) finite \emph{visible} count]
+\label{thm:strict}
+Strict symbol positivity at calendar \(a\)
+holds iff \(\#\{n:J_n^{\mathrm{vis}}\neq\emptyset\}<\infty\), i.e.\
+\(m_a^{\mathrm{vis}}:=\#\{j:\theta_j>0\}<\infty\). \textup{(}With noise
+\(\omega_n\to0\) the equivalence holds \emph{verbatim}, with no exception
+clause.\textup{)} In particular strict positivity says \emph{nothing} about
+\(m-m_a^{\mathrm{vis}}\), the sub-resolution count.
+\end{theorem}
+
+\begin{proof}
+(\(\Leftarrow\)) If \(J_n^{\mathrm{vis}}=\emptyset\) for \(n\geq N\),
+then \(\spec(Q_n)\subseteq[1-r-\omega_n,1+r+\omega_n]\) for \(n\geq N\), so
+\(\Lambda(Q)\subseteq[1-r,1+r]\) with gap \(c=1-r>0\) (Corollary
+\ref{cor:master-quantifier}). (\(\Rightarrow\)) If infinitely many windows are
+populated, each carries an eigenvalue
+\(\mu_n\in[-\vartheta_n-\omega_n,-\vartheta_n+\omega_n]\) (Lemma
+\ref{lem:window-spec}). The sequence \((\mu_n)\) over the populated windows is
+bounded; any accumulation point \(\ell\) satisfies
+\(\ell\leq\limsup_n(-\vartheta_n+\omega_n)\leq\limsup_n\omega_n=0\), and
+\(\ell\in\Lambda(Q)\) by Lemma \ref{lem:symbol-spectrum}: strict positivity
+fails, \emph{regardless of the comparison between \(\vartheta_n\) and
+\(\omega_n\)}.
+\end{proof}
+
+\begin{remark}[a corrected exception clause]\label{rem:strict-corrected}
+An earlier version of this theorem (and its source, an earlier analysis,
+Thm.~5.3(ii)) allowed an exception for windows with
+\(\vartheta_n\leq\omega_n\) eventually. That clause is \emph{false}
+(counterexample: \(\omega_n=1/n\), one population in each even window with
+\(\vartheta_n=1/(2n)\); the perturbed block eigenvalues lie in
+\([-3/(2n),1/(2n)]\to0\), so \(0\in\spec(\sigma(Q))\) and there is no gap). The
+corrected statement above is \emph{stronger}: sub-noise visible windows are
+\emph{not} compatible with strict symbol positivity. If one wishes to discard
+populations below the noise floor, the place to do it is the definition of
+\(J_n^{\mathrm{vis}}\) (a threshold \(\theta_j>\omega\)), not an exception in
+the theorem. Corollary \ref{cor:gap-quant}, Conjecture \ref{conj:lp134} and
+Theorem \ref{thm:synergy} used only the regime \(\theta\geq c_0\) and are
+unaffected.
+\end{remark}
+
+\begin{corollary}[the gap controls the visible count quantitatively]
+\label{cor:gap-quant}
+In the clean case, if \(\spec(Q_n)\subseteq[c,\infty)\) for \(n\geq N_0\), then
+\(m_a^{\mathrm{vis}}\leq\sum_{n<N_0}|J_n^{\mathrm{vis}}|\), and with the
+zero-density bound per window \(|J_n^{\mathrm{vis}}|\ll\Delta\log n\)
+\cite[Thm.\ 5.8]{IwaniecKowalski}, \(m_a^{\mathrm{vis}}\ll N_0\log N_0\).
+\end{corollary}
+
+\begin{proof}
+By Theorem \ref{thm:strict} all visible quadruples sit in windows \(n<N_0\); sum
+the per-window count.
+\end{proof}
+
+\begin{theorem}[sub-resolution \(\Rightarrow\) the symbol is blind]
+\label{thm:blind}
+Let \(Z\) have \(m=\infty\) but \(\delta_j\,a(\gamma_j)\to0\) (all
+sub-resolution, with \(J_n^{\mathrm{vis}}=\emptyset\)). Then, as sections over
+the same field,
+\[
+Q-\Qaut\in\Jc,\qquad\text{hence}\qquad\sigma(Q)=\sigma(\Qaut)\ \text{in }\Cor,
+\]
+and if \(\Qaut\) has a gap (\(\spec\subseteq[1-r,1+r]\) modulo \(\omega\)), then
+\(\sigma(Q)\) has \emph{strict} positivity -- while the defect of the
+configuration, as the full form, is \(\delta=2m=\infty\) by Lemma
+\ref{lem:mono-add}\textup{(ii)} applied to the hyperbolic blocks
+\textup{(}which exist in the unrestricted test class but require support
+exceeding the calendar\textup{)}. Strict symbol positivity does \emph{not} imply
+\(m<\infty\).
+\end{theorem}
+
+\begin{proof}
+By (V1) in perturbation form (Remark \ref{rem:theta}), the window difference
+satisfies
+\(\|Q_n-\Qaut_n\|\leq\sum_{j:|\gamma_j-n|\leq\Delta}\varphi(\delta_j a(\gamma_j))
++2\omega_n\) with \(\varphi(t)\to0\) as \(t\to0\). Since \(\gamma_j\to\infty\),
+finitely many \(j\) per window, and \(\delta_j a(\gamma_j)\to0\), the per-window
+sum tends to \(0\): the difference section is in \(\Jc\). The rest is Lemma
+\ref{lem:symbol-norm} and (S1). The full-form defect is the sum of the
+hyperbolic planes (Lemma \ref{lem:mono-add}(ii), each contributing a negative
+direction in the unrestricted class).
+\end{proof}
+
+\begin{theorem}[calendar no-go: \(m<\infty\) is a boundary event over the
+resolution filtration]\label{thm:nogo}
+\begin{enumerate}
+\item[\textup{(a)}] For \emph{every} calendar \(a\) there is a configuration
+\(Z\) with \(m=\infty\) and \(\delta_j\,a(\gamma_j)\to0\) (take
+\(\gamma_j:=j\), \(\delta_j:=\min(\tfrac14,1/(j\,a(\gamma_j)))\)): invisible at
+\(a\) by Theorem \ref{thm:blind}.
+\item[\textup{(b)}] For every configuration and quadruple, some calendar sees it
+(\(a(\gamma_j)\geq1/\delta_j\)). Hence with
+\(m_a:=\#\{j:\delta_j a(\gamma_j)\geq1\}\), \(\;m=\sup_a m_a\).
+\item[\textup{(c)}] Consequently \(m<\infty\iff\exists M\,\forall a:m_a\leq M\),
+a \(\Sigma_2\) statement over the filtration of resolutions, and \emph{no single
+Weil--Toeplitz symbol (no fixed calendar) certifies it}.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(a) \(\delta_j a(\gamma_j)\leq1/j\to0\); Theorem \ref{thm:blind}. (b)
+Monotonicity of \(a\mapsto m_a\) and the pointwise observation. (c) Rewriting of
+(b) together with (a).
+\end{proof}
+
+\begin{remark}[the trichotomy]\label{rem:trichotomy}
+The dichotomy ``symbol or ideal'' is false; it is a trichotomy stratified by
+\(\delta_j a(\gamma_j)\):
+\[
+\begin{array}{lll}
+\text{fat }(\delta_j a(\gamma_j)\geq1\text{ i.o.}) &
+\text{in the symbol: mass }\leq-c/2 & \text{Thm.\ \ref{thm:fat}}\\
+\text{thin visible }(\theta_j\to0^+) &
+\text{at the boundary }0\in\spec\sigma(Q) & \text{Thm.\ \ref{thm:thin}}\\
+\text{sub-resolution }(\delta_j a(\gamma_j)\to0) &
+\text{in the ideal: }\sigma(Q)=\sigma(\Qaut) & \text{Thm.\ \ref{thm:blind}}
+\end{array}
+\]
+The strata are relative to the calendar (Theorem \ref{thm:nogo}); within
+\(\mathfrak W\), it is the \emph{intermediate (thin-visible) stratum} that lives
+on the symbol/compact boundary, accumulating at \(0\) -- the unique point
+separating weak from strict positivity, which by Theorem \ref{thm:exact} is the
+only point on which robust finiteness of the defect depends -- while the fat
+stratum sits in the negative interior of the symbol and the sub-resolution
+stratum in the ideal. The slogan ``the zeros live on the boundary'' is therefore
+a theorem-in-model for the intermediate stratum only, not a global statement
+about the zeros of \(\zeta\). The master quantifier acquires an
+exact \(C^*\)-algebraic direction: it is the point \(0\in\spec_{\Cor}\).
+\end{remark}
+
+\subsection{Synergy of the two axes}
+The Fredholm axis (symbol positivity) and the replication axis combine cleanly.
+
+\begin{theorem}[replication \(\Rightarrow\) the symbol sees]\label{thm:synergy}
+Suppose \(Z\) satisfies the quantitative replication axiom \emph{(R)}: if
+\(m\geq1\), there is a quadruple \((\delta_0,\gamma_0)\in Z\) and heights
+\(\tau_k\to\infty\) such that \(Z\) contains quadruples
+\((\delta_k',\gamma_0+\tau_k)\) with \(\delta_k'\geq\delta_0/2\). Let \(a\) be any
+calendar with \(a(\gamma)\to\infty\). Then \(m\geq1\) forces infinitely many fat
+quadruples, hence
+\(\spec(\sigma(Q))\cap(-\infty,-c_0/2]\neq\emptyset\). Contrapositively,
+\[
+\text{weak symbol positivity }\wedge\text{ (R)}\ \Longrightarrow\ m=0
+\ \Longrightarrow\ \mathrm{RH}.
+\]
+\end{theorem}
+
+\begin{proof}
+The replicas have
+\(\delta_k'a(\gamma_0+\tau_k)\geq(\delta_0/2)a(\gamma_0+\tau_k)\to\infty\), hence
+are eventually supra-resolution with visibility \(\geq c_0\) by (V2). Theorem
+\ref{thm:fat} applies. The contrapositive uses only weak positivity since
+Theorem \ref{thm:fat} violates even weak positivity.
+\end{proof}
+
+The thin/sub-resolution stratum that kills the pure Fredholm route (Theorems
+\ref{thm:blind}, \ref{thm:nogo}) is exactly the stratum that replication does
+not produce: replicas inherit a fixed \(\delta_0\), and every unbounded
+calendar eventually sees them. We record the missing piece this leaves open.
+
+\begin{conjecture}[LP-134: resolution repulsion; new, non-RH, falsifiable]
+\label{conj:lp134}
+There exist a calendar \(a\) (e.g.\ \(a(\gamma)=C\log\gamma\)) and \(c>0\) such
+that every nontrivial zero \(\rho=\half+\delta+i\gamma\) of \(\zeta\) with
+\(\delta\neq0\) satisfies \(|\delta|\geq c/a(\gamma)\). \emph{(``Zeros cannot be
+asymptotically sub-resolution.'')}
+\end{conjecture}
+
+Under LP-\ref{conj:lp134} the thin and sub-resolution strata are empty, and by
+Theorems \ref{thm:fat}, \ref{thm:strict} the Fredholm half becomes a single
+\(C^*\)-statement: \(m<\infty\iff\) strict symbol positivity at one calendar.
+LP-\ref{conj:lp134} is \emph{not} RH (a quadruple at \(\delta=\tfrac14\)
+satisfies it and violates RH), follows from nothing known (classical zero-free
+regions repel from \(\operatorname{Re}s=1\), not from \(\operatorname{Re}s=\half\);
+density theorems bound how many, not how close), and is of the right shape -- a
+rigidity dichotomy.
+
+\section{The localized signature and the logistic law}\label{sec:logistic}
+
+We now develop the second, independent contribution: an exact logistic law for
+the tensor tower of window indices, and an RH criterion in its localized
+form (one branch a theorem, the other conditional on the Paley--Wiener uniformity problem). We work in
+non-standard coordinates, using a non-principal ultrafilter
+\(\mathcal U\) on \(\N\), the ultrapower \({}^*\R=\R^\N/\mathcal U\), and the
+standard part \(\sst\) on the limited elements \cite{Robinson}.
+
+\subsection{The logistic law}
+
+\begin{theorem}[exact logistic law of the tensor tower]\label{thm:logistic}
+Let \(\bar Q\) be a nondegenerate hermitian form of signature \((p,q)\) on a
+space of dimension \(\bar n=p+q\), and set
+\(x_k:=\negind(\bar Q^{\otimes 2^k})/\bar n^{2^k}\). Then for all \(k\geq0\), as
+an identity of rationals,
+\[
+x_{k+1}=2x_k(1-x_k),\qquad 1-2x_k=(1-2x_0)^{2^k}.
+\]
+Consequently, for any scheme of forms with \(\sigma^0:=\sst([x_0(N)])\),
+\[
+\sigma^{(k)}:=\sst([x_k(N)])=\tfrac12\bigl(1-(1-2\sigma^0)^{2^k}\bigr),
+\qquad
+\lim_{k\to\infty}\sigma^{(k)}=
+\begin{cases}0,&\sigma^0\in\{0,1\},\\[2pt]\tfrac12,&\sigma^0\in(0,1).\end{cases}
+\]
+\end{theorem}
+
+\begin{proof}
+By Lemma \ref{lem:whitney} applied to
+\(\bar Q^{\otimes 2^{k+1}}=(\bar Q^{\otimes 2^k})\otimes(\bar Q^{\otimes 2^k})\),
+with signature \((P_k,K_k)\), \(P_k+K_k=\bar n^{2^k}\),
+\[
+K_{k+1}=2P_kK_k,\qquad P_{k+1}=P_k^2+K_k^2.
+\]
+Dividing by \(\bar n^{2^{k+1}}=(\bar n^{2^k})^2\) gives
+\(x_{k+1}=2(P_k/\bar n^{2^k})(K_k/\bar n^{2^k})=2x_k(1-x_k)\). Then
+\(1-2x_{k+1}=1-4x_k+4x_k^2=(1-2x_k)^2\), so \(1-2x_k=(1-2x_0)^{2^k}\). Each
+\(x_k(N)\in[0,1]\) is limited; \(\sst\) is a ring homomorphism on limited
+elements, so the polynomial identity \(1-2x_{k+1}=(1-2x_k)^2\) passes to
+standard parts for each fixed \(k\) (\(k\) standard; the identity is used
+finitely often). Limits: if \(\sigma^0\in(0,1)\) then \(|1-2\sigma^0|<1\) and
+\((1-2\sigma^0)^{2^k}\to0\); if \(\sigma^0=0\), \(\sigma^{(k)}\equiv0\); if
+\(\sigma^0=1\), \(1-2\sigma^0=-1\) and \((-1)^{2^k}=1\) for \(k\geq1\), so
+\(\sigma^{(k)}=0\) -- consistent, since the tensor square of a negative-definite
+form is positive-definite.
+\end{proof}
+
+\begin{remark}[the global signature collapses]\label{rem:collapse}
+The naive global signature -- normalizing the window index by the full window
+dimension \(n_N\to\infty\) -- collapses to \(\sigma^0=0\) under \(\neg\)RH of
+finite defect, because capturing an off\(\times\)on negative plane costs a full
+dimensional factor \((w_\sigma\log T)(w_\tau\log T)\) while the off slot is rigid
+(\(\leq4\bar m\) vectors): \(\kappa/n\lesssim\bar m/\max(w\log T)\to0\). The same
+tensor identity that amplifies the tower (Theorem \ref{thm:logistic}) dilutes the
+density of an individual defect. We call this \emph{density invisibility}: a
+defect of finite cardinal is null for every asymptotic-density functional. This
+forces the \emph{localized} construction below, where the per-cell dimension is
+bounded and does not dilute. (The collapse is proved in the analysis preceding this paper, not in \cite{P40}; we do not re-prove it, and we
+do not use the global signature as a criterion.)
+\end{remark}
+
+\subsection{The localized signature}
+
+\begin{definition}[micro-resolution cell]\label{def:cell}
+Fix a \emph{profile} \(p=(D,w,M,b,c,c')\) with \(D\in\N\) (degree), \(w>0\)
+(width), \(M\in\N\) (decay order), \(b\in\mathbb Q_{>0}\) (caliber),
+\((c,c')\in\mathbb Q^2\) (centers). The \emph{cell} is
+\[
+V_p:=\operatorname{span}\bigl\{h_{g_a,\varphi_b}:0\leq a,b\leq D\bigr\},\quad
+\hat g_a(\sigma):=B^{(M)}_w(\sigma-ic)\sigma^a,\quad
+\hat\varphi_b(\tau):=B^{(M)}_w(\tau-ic')\tau^b,
+\]
+where \(B^{(M)}_w\) is the Mellin transform of a fixed even bump
+\(g_0^{(M,w)}\in C_c^\infty(\R_{>0})\) with
+\[
+|B^{(M)}_w(z)|\leq C_M e^{a_0|\operatorname{Re}z-1/2|}
+(1+|\operatorname{Im}z|/w)^{-M},\qquad B^{(M)}_w(0)=1
+\tag{$\ast$}
+\]
+(Paley--Wiener; \(a_0=a_0(M,w)\) the fixed log-support). Then \(\dim V_p\leq
+(D+1)^2\), and \(V_p\) is test-accessible (the profile mentions no zeros). The
+\emph{filled cell} is \(\tilde V_p:=V_p\oplus\C^{(D+1)^2}\) with
+\(\tilde Q_p:=(Q_2|_{V_p})\oplus I\) (positive filler of dimension equal to the
+cell's cap).
+\end{definition}
+
+\begin{definition}[localized scheme]\label{def:loc-scheme}
+For each \(N\), the \emph{grid} \(\mathcal G_N\) is the finite computable set of
+profiles \(p\) with \(D,M\leq N\), \(w,b\in\{2^{-j}:j\leq N\}\), and centers in
+\((b\Z)^2\cap[-2^N,2^N]^2\). Set
+\[
+x_0(N):=\max_{p\in\mathcal G_N}\frac{\negind(\tilde Q_p)}{\dim\tilde V_p}
+\in\mathbb Q\cap[0,\tfrac12],
+\]
+and \(\sigma_{\mathrm{loc}}:=\sst([x_0(N)])\). For each \(N\) fix a winning
+profile \(p^*_N\) (maximizing the ratio), let \(\bar Q_N\) be the reduced
+nondegenerate form of \(\tilde Q_{p^*_N}\) (quotient by the radical) and
+\(\bar n_N:=\dim\tilde V_{p^*_N}-\dim\operatorname{rad}(\tilde Q_{p^*_N})\) its
+dimension, and set
+\[
+\begin{gathered}
+x_{\mathrm{base}}(N):=\frac{\negind(\bar Q_N)}{\bar n_N},\qquad
+x_k(N):=\frac{\negind(\bar Q_N^{\otimes2^k})}{\bar n_N^{2^k}},\\[2pt]
+\sigma_{\mathrm{base}}^{\,\mathcal U}:=\sst([x_{\mathrm{base}}(N)]),\qquad
+\sigma_{\mathrm{loc}}^{(k)}:=\sst([x_k(N)]).
+\end{gathered}
+\]
+Note that \(x_{\mathrm{base}}(N)\neq x_0(N)\) in general when the radical is
+nontrivial (the denominators differ), and that
+\(\sigma_{\mathrm{base}}^{\,\mathcal U}\) and the intermediate floors
+\(\sigma_{\mathrm{loc}}^{(k)}\), \(k\geq1\), are not claimed to be independent
+of \(\mathcal U\): only the limit dichotomy of Proposition
+\ref{prop:loc-logistic} is.
+\end{definition}
+
+\begin{proposition}[well-definedness and autonomy]\label{prop:loc-welldef}
+\textup{(a)} \(x_0(N)\) is determined by the arithmetic data without zero
+positions: every Gram entry is \(Q_2(h,h')\) (autonomy, Hypothesis
+\ref{hyp:autonomy}), a computable real number (a prime sum), and the grid is
+finite. Since the entries are computable reals rather than rationals,
+\(\negind\) is \emph{not} claimed to be computed exactly; what holds, and what
+Section \ref{sec:honest} uses, is that the predicate
+\(\negind(\tilde Q_p)\geq1\) is \emph{semidecidable} by interval arithmetic: a
+strictly negative eigenvalue is certified at finite precision. \textup{(b)}
+\(\sigma_{\mathrm{loc}}\in[0,\tfrac12]\) exists for every \(\mathcal U\).
+\textup{(c)} \(x_0(N)\) is nondecreasing in \(N\) (\(\mathcal G_N\subseteq
+\mathcal G_{N+1}\)), so it converges and \(\sigma_{\mathrm{loc}}=\lim_N x_0(N)\)
+is independent of \(\mathcal U\).
+\end{proposition}
+
+\begin{proof}
+(a) The class contains \(B_w\cdot(\text{monomials})\) by closure under Mellin
+multiplication \cite{P40}; the filler is an explicit block; a strictly negative
+eigenvalue of a hermitian matrix with computable-real entries is certified at
+finite precision by continuity of eigenvalues (Theorem \ref{thm:weyl-stab}).
+(b) \(\sst\) exists on limited elements. (c) Monotone
+bounded; \(\sst\) of a convergent sequence is its limit, for every
+\(\mathcal U\).
+\end{proof}
+
+\begin{proposition}[the logistic law, localized and repaired]
+\label{prop:loc-logistic}
+For every \(\mathcal U\) and standard \(k\geq0\),
+\[
+\sigma_{\mathrm{loc}}^{(k)}
+=\half\bigl(1-(1-2\sigma_{\mathrm{base}}^{\,\mathcal U})^{2^k}\bigr),
+\qquad
+\sigma_{\mathrm{base}}^{\,\mathcal U}\in
+[\sigma_{\mathrm{loc}},\,2\sigma_{\mathrm{loc}}]\cap[0,\tfrac12].
+\]
+In particular, \emph{independently of \(\mathcal U\)}:
+\(\lim_k\sigma_{\mathrm{loc}}^{(k)}=0\) if \(\sigma_{\mathrm{loc}}=0\), and
+\(=\half\) if \(\sigma_{\mathrm{loc}}\in(0,\tfrac12]\).
+\end{proposition}
+
+\begin{proof}
+For each \(N\), \(\bar Q_N\) is finite-dimensional nondegenerate; Theorem
+\ref{thm:logistic} applies coordinatewise with base \(x_{\mathrm{base}}(N)\),
+and \(\sst\) is a ring homomorphism on limited elements, giving the closed
+formula in \(\sigma_{\mathrm{base}}^{\,\mathcal U}\). The bracketing: the filler
+\(I_{(D+1)^2}\) is nondegenerate and orthogonal to the compressed block, so
+\(\operatorname{rad}(\tilde Q_p)=\operatorname{rad}(Q_2|_{V_p})\oplus0\) and
+\(\bar n_N\geq(D+1)^2=\tfrac12\dim\tilde V_{p^*_N}\), whence
+\(\dim\tilde V_{p^*_N}/\bar n_N\in[1,2]\); since
+\(\negind(\bar Q_N)=\negind(\tilde Q_{p^*_N})\) (the radical carries no negative
+direction) and \(\sst\) is multiplicative on limited elements,
+\(\sigma_{\mathrm{loc}}\leq\sigma_{\mathrm{base}}^{\,\mathcal U}
+\leq2\sigma_{\mathrm{loc}}\). Moreover
+\(x_{\mathrm{base}}(N)\leq(\bar n_N-(D+1)^2)/\bar n_N\leq\half\), so
+\(\sigma_{\mathrm{base}}^{\,\mathcal U}\in[0,\half]\) and the case
+\(\sigma^0=1\) (the only one breaking the dichotomy in Theorem
+\ref{thm:logistic}) is excluded. The dichotomy: \(\sigma_{\mathrm{loc}}=0\iff
+\sigma_{\mathrm{base}}^{\,\mathcal U}=0\) (bracketing), in which case the tower
+is identically \(0\); and \(\sigma_{\mathrm{loc}}>0\Rightarrow
+\sigma_{\mathrm{base}}^{\,\mathcal U}\in(0,\half]\Rightarrow
+|1-2\sigma_{\mathrm{base}}^{\,\mathcal U}|<1\Rightarrow
+\lim_k\sigma_{\mathrm{loc}}^{(k)}=\half\), for every \(\mathcal U\).
+\end{proof}
+
+\begin{remark}[corrected]\label{rem:radical-bug}
+An earlier version of this proposition asserted the closed formula with
+\(\sigma_{\mathrm{loc}}\) itself as the base of the tower. That is \emph{false}
+as stated whenever the winning Gram is degenerate: the definition then carried
+two incompatible normalizations of \(x_0(N)\) (denominator
+\(\dim\tilde V_p\) versus the reduced dimension \(\bar n_N\)). The repair above
+(found in an adversarial audit) keeps the \(0\)-versus-\(\half\)
+dichotomy and the \(\mathcal U\)-independence of the \emph{limit}; the closed
+formula holds in terms of \(\sigma_{\mathrm{base}}^{\,\mathcal U}\), and the
+intermediate floors are not claimed canonical.
+\end{remark}
+
+\subsection{Stability of the cell index}
+These three perturbation lemmas make a computable mesh suffice to capture a plane
+whose exact position is unknown.
+
+\begin{theorem}[Weyl stability]\label{thm:weyl-stab}
+For hermitian \(A,E\) on a finite-dimensional space, with eigenvalues ordered
+\(\lambda_1\geq\dots\geq\lambda_n\), \(|\lambda_k(A+E)-\lambda_k(A)|\leq\|E\|\)
+for all \(k\). In particular, if \(A\) has \(\kappa\) eigenvalues \(\leq-\mu\)
+and \(\|E\|<\mu\), then \(\negind(A+E)\geq\kappa\).
+\end{theorem}
+
+\begin{proof}
+Courant--Fischer: \(\lambda_k(A+E)=\min_{\operatorname{codim}S=k-1}
+\max_{0\neq v\in S}R_{A+E}(v)\) with \(R\) the Rayleigh quotient; for all \(v\),
+\(|R_{A+E}(v)-R_A(v)|\leq\|E\|\). Take the optimal \(S\) for \(A\) and swap
+\(A\leftrightarrow A+E\) \cite{Bhatia}.
+\end{proof}
+
+\begin{theorem}[bounded-rank stability]\label{thm:rank-stab}
+\(|\negind(A+E)-\negind(A)|\leq\rank E\).
+\end{theorem}
+
+\begin{proof}
+Let \(N\) be negative for \(A\) with \(\dim N=\negind(A)\). On
+\(N\cap\ker E\) (codimension \(\leq\rank E\) in \(N\)),
+\((A+E)|_{N\cap\ker E}=A|_{N\cap\ker E}<0\), so
+\(\negind(A+E)\geq\negind(A)-\rank E\). Swap \(A\leftrightarrow A+E\) and
+\(E\leftrightarrow-E\).
+\end{proof}
+
+\begin{theorem}[Lipschitz Gram under cell shift]\label{thm:lipschitz}
+For a profile \(p\), let \(G(\vartheta)\) be the Gram of \(Q_2\) on the cell
+with centers \((c+\vartheta_1,c'+\vartheta_2)\). Then \(G\) is differentiable in
+\(\vartheta\) with \(\|\partial_{\vartheta_i}G(\vartheta)\|\leq L_p<\infty\),
+\(L_p\) computable from the arithmetic data.
+\end{theorem}
+
+\begin{proof}
+Center shift is the modulation \(g\mapsto g\cdot x^{i\vartheta}\), whose
+\(\vartheta\)-derivative inserts \(i(\log x)\)g, a test of the same class
+\cite{P40}. The spectral side \eqref{eq:speca} (below) converges absolutely with
+local uniformity in \(\vartheta\) by the decay \((\ast)\) \cite{P40}, so one may
+differentiate under the sum; the derivative inserts a linear factor, i.e.\ a
+derived test of the class, whose values are finite and computable. The norm of a
+\((D+1)^2\times(D+1)^2\) hermitian matrix is at most its dimension times the
+maximal entry.
+\end{proof}
+
+\begin{theorem}[the aligned cell survives in the mesh]\label{thm:mesh}
+Let \(p^*\) be an ideal profile (real centers, not necessarily in the mesh) with
+\(G(p^*)\) having \(\kappa\) eigenvalues \(\leq-\mu<0\). Let \(p\in\mathcal G_N\)
+be the nearest mesh profile, \(|\mathrm{centers}(p)-\mathrm{centers}(p^*)|\leq
+b\sqrt2\). If \(b\leq\mu/(4\sqrt2\,L_{p^*})\), then \(\negind(G(p))\geq\kappa\).
+In particular, for every ideal profile with \((\mu,L)\) fixed there is an
+\(N_0\), explicit in \((\mu,L,\mathrm{position})\), such that \(\mathcal G_N\)
+contains a cell of index \(\geq\kappa\) for all \(N\geq N_0\). \textup{(}We say
+``explicit'', not ``computable'': the inputs \((\mu,L,\mathrm{position})\) are
+not effectively knowable; cf.\ Section \ref{sec:honest}\textup{(a)}.\textup{)}
+\end{theorem}
+
+\begin{proof}
+By Theorem \ref{thm:lipschitz} and the mean value theorem,
+\(\|G(p)-G(p^*)\|\leq L_{p^*}\cdot b\sqrt2\cdot2=2\sqrt2\,L_{p^*}b\leq\mu/2<\mu\);
+apply Theorem \ref{thm:weyl-stab}. Existence of \(N_0\): the mesh has caliber
+\(2^{-N}\to0\) and reach \(2^N\to\infty\). \textup{(}The earlier bound
+\(b\leq\mu/(2\sqrt2\,L)\) gave only \(\leq\mu\), not the strict inequality
+Theorem \ref{thm:weyl-stab} requires; corrected.\textup{)}
+\end{proof}
+
+\subsection{Realizability under \texorpdfstring{$\neg$}{not-}RH}
+We now import the spectral side and prove the realizability theorem. From
+\cite{P40,P35} we have, on the span of the (doubled) test class, the spectral
+side
+\begin{equation}\label{eq:speca}
+Q_2(h,h')=\sum_{(\rho_1,\rho_2)}\hat h(\rho_1,\rho_2)\,
+\overline{\hat h'(\iota(\rho_1,\rho_2))},\quad
+\iota(\rho_1,\rho_2):=(1-\bar\rho_1,1-\bar\rho_2),
+\end{equation}
+absolutely convergent, with \(\hat h_{g,\varphi}(\rho_1,\rho_2)=
+\half\hat g(\sigma)\hat\varphi(\tau)\), \(\sigma=(\rho_1+\rho_2)/2\),
+\(\tau=(\rho_1-\rho_2)/2\); pairs fixed by \(\iota\) (both online) contribute
+\(|\hat h|^2\geq0\), and free orbits \(\{P,\iota P\}\) contribute hyperbolic
+planes of signature \((1,1)\); under RH the sum is diagonal and \(Q_2\geq0\)
+\cite{P40,P35}. We use \(N(t+1)-N(t)\ll\log(2+t)\) \cite[Thm.\
+5.8]{IwaniecKowalski}.
+
+\begin{lemma}[tail of the concentrated test]\label{lem:tail}
+Let \(h\in V_p\) with \(|\hat g(\sigma)|\leq C_g(1+|\operatorname{Im}\sigma-
+\gamma_0|)^{-M+D}\) and \(|\hat\varphi(\tau)|\leq C_\varphi(1+|\operatorname{Im}
+\tau|)^{-M+D}\) on \(|\operatorname{Re}|\leq1\). Let \(\Omega_r\) be the pairs
+with \(\max(|\operatorname{Im}\sigma-\gamma_0|,|\operatorname{Im}\tau|)\geq r\).
+If \(M-D\geq4\), then
+\[
+\sum_{(\rho_1,\rho_2)\in\Omega_r}|\hat h(\rho_1,\rho_2)|\,
+|\hat h(\iota(\rho_1,\rho_2))|\leq
+C_g^2C_\varphi^2\,\frac{C^*(M-D)\,(\log(2+|\gamma_0|))^2}{(1+r)^{M-D-4}},
+\]
+\(C^*\) absolute. \emph{Warning (corrected): the constants
+\(C_g,C_\varphi\) depend on \(M\) through the bump \((\ast)\); the right-hand
+side tends to \(0\) as \(M\to\infty\) at fixed \(r\) only if the family of
+bumps keeps \(C_g(M)^2C_\varphi(M)^2(1+r)^{-(M-D-4)}\to0\) -- this uniformity is
+exactly Hypothesis \ref{hyp:pw} below and is \emph{not} proved here.}
+\end{lemma}
+
+\begin{proof}
+Write \(u=\operatorname{Im}\sigma=(\gamma_1+\gamma_2)/2\),
+\(v=\operatorname{Im}\tau=(\gamma_1-\gamma_2)/2\), so \(\gamma_1=u+v\),
+\(\gamma_2=u-v\). With \(a=|\gamma_1-\gamma_0|\), \(b=|\gamma_2-\gamma_0|\), the
+elementary inequality \((1+\tfrac{a+b}2)^2\geq(1+a)(1+b)\) (since
+\((1+\tfrac{a+b}2)^2-(1+a)(1+b)=(\tfrac{a-b}2)^2\geq0\)) and
+\(|u-\gamma_0|+|v|\geq(a+b)/2\) give
+\[
+(1+|u-\gamma_0|)(1+|v|)\geq 1+|u-\gamma_0|+|v|\geq1+\tfrac{a+b}2
+\geq\sqrt{(1+a)(1+b)}.
+\]
+The point \(\iota(\rho_1,\rho_2)\) has the same ordinates
+(\(\operatorname{Im}(1-\bar\rho)=\operatorname{Im}\rho\)), so with \(m:=M-D\),
+\[
+|\hat h(P)||\hat h(\iota P)|\leq\tfrac14 C_g^2C_\varphi^2
+\bigl[(1+|u-\gamma_0|)(1+|v|)\bigr]^{-2m}
+\leq\tfrac14 C_g^2C_\varphi^2(1+a)^{-m}(1+b)^{-m}.
+\]
+The double sum factors; the single sum, grouped over unit intervals
+\(|\gamma-\gamma_0|\in[j,j+1)\) with \(N(t+1)-N(t)\ll\log(2+t)\), is
+\(\sum_\rho(1+|\gamma-\gamma_0|)^{-m}\leq C'\zeta(m-1)\log(2+|\gamma_0|)\),
+convergent for \(m\geq3\). On \(\Omega_r\), one product is \(\geq1+r\); extract
+\((1+r)^{-(m-4)}\) and retain exponent \(2\) in each factor for convergence.
+\end{proof}
+
+\begin{assumption}[Paley--Wiener uniformity; the Paley--Wiener uniformity problem]\label{hyp:pw}
+There is a family of even bumps \(\{g_0^{(M,w)}\}_M\) satisfying \((\ast)\)
+such that, in the witness construction of Theorem \ref{thm:realiz} (fixed
+configuration, fixed \(D\) and \(w\)), the full tail budget of Lemma
+\ref{lem:tail} at \(r=1\) tends to \(0\) as \(M\to\infty\):
+\[
+C_1(M)^2\,C_g(M)^2\,C_\varphi(M)^2\;
+C^*(M-D)\,(\log(2+|\gamma_0|))^2\;2^{-(M-D-4)}\;\longrightarrow\;0,
+\]
+where \(C_g(M),C_\varphi(M)\) absorb the Paley--Wiener constant \(C_M\) and the
+strip factor \(e^{a_0(M,w)}\) of \((\ast)\), and \(C_1(M)\) is the Vandermonde
+coefficient norm of Lemma \ref{lem:vandermonde} (which depends on \(M\) through
+\(b_0(M)=\min_i|B^{(M)}(z_i-ic)|\)).
+\end{assumption}
+
+\begin{remark}[why Hypothesis \ref{hyp:pw} is a genuine open gap:
+Paley--Wiener rigidity]\label{rem:pw-rigidity}
+For any \emph{fixed} nonzero bump (fixed log-support \(a_0\)), the optimal
+constants \(C_M\) in \((\ast)\) grow superexponentially: for every \(A>1\),
+\(C_M>A^M\) for all large \(M\). Indeed, if \(C_M\leq A^M\) for infinitely many
+\(M\), then for \(|t|>Aw\) one would have \(|B(t)|\leq(Aw/|t|)^M\to0\) along
+those \(M\), forcing \(B\equiv0\) on \(\{|t|>Aw\}\); but \(B\) is entire
+(Paley--Wiener, compact support) and not identically zero, so its real zeros
+are discrete -- contradiction. Hence \(C_M^4\,2^{-M}\to\infty\): \emph{no fixed
+bump satisfies Hypothesis \ref{hyp:pw}}, and the standard \(M\)-dependent
+families (powers of \(\operatorname{sinc}\), support \(a_0(M)\) growing) fail
+as well -- the strip factor \(e^{c\,a_0(M)}\) defeats the polynomial decay in
+\(\operatorname{Im}\) at fixed distance \(r=1\). Closing the gap requires
+either a family of bumps with the stated uniformity, or a different proof
+mechanism (the classical exponential-dominance route of Weil's criterion, in
+which the off-zero term grows like \(e^{2\delta_0 a_0}\) with \(a_0\to\infty\)
+and absorbs the \(M\)-dependent constants). This is \emph{the Paley--Wiener uniformity problem}, open.
+We emphasize the precise status: the \emph{statement} of Theorem
+\ref{thm:realiz} is not refuted -- Lemma \ref{lem:tail} is only an upper bound,
+and the classical mechanism makes the statement plausible -- but its proof here
+is conditional on Hypothesis \ref{hyp:pw}.
+\end{remark}
+
+\begin{lemma}[Vandermonde with bump]\label{lem:vandermonde}
+Let \(z_1,\dots,z_q\in\C\) be distinct and \(B\) entire with \(B(z_i)\neq0\). If
+\(D\geq q-1\), the evaluations \(f\mapsto f(z_i)\) are linearly independent on
+\(\operatorname{span}\{B(\sigma)\sigma^a:0\leq a\leq D\}\); for any data
+\((y_1,\dots,y_q)\) there is an element with \(f(z_i)=y_i\) and coefficient norm
+\(\leq C(z,\min_i|B(z_i)|)\|y\|\). Moreover, for
+\(B=B^{(M)}_w(\cdot-ic)\not\equiv0\), the centers \(c\) with \(B(z_i-ic)=0\) for
+some \(i\) are discrete; every open interval of centers contains a \(c\) with
+\(\min_i|B(z_i-ic)|\geq b_0>0\), stable on a ball.
+\end{lemma}
+
+\begin{proof}
+The matrix \((B(z_i)z_i^a)_{i,a}=\operatorname{diag}(B(z_i))\cdot(z_i^a)\) has
+rank \(q\) (Vandermonde with distinct nodes, invertible diagonal). The function
+\(c\mapsto B(z_i-ic)\) is entire and not identically zero, so its real zeros are
+discrete; a finite union of discrete sets is discrete; \(B\) is continuous and
+nonzero on a compact set avoiding the zeros.
+\end{proof}
+
+\begin{theorem}[realizability under \(\neg\)RH, conditional on the Paley--Wiener uniformity problem]
+\label{thm:realiz}
+Assume \(\neg\)RH \emph{and Hypothesis \ref{hyp:pw}}. Let
+\(\rho^0=\half+\delta_0+i\gamma_0\) be the off-critical
+zero of minimal height, multiplicity \(m_0\geq1\). Then there are a standard
+dimension \(D_0\) and a standard \(N_0\) such that for all \(N\geq N_0\),
+\(x_0(N)\geq 1/(2D_0)>0\), and hence for every non-principal \(\mathcal U\),
+\[
+\sigma_{\mathrm{loc}}\geq\frac{1}{2D_0}>0,\qquad
+\lim_{k\to\infty}\sigma_{\mathrm{loc}}^{(k)}=\tfrac12.
+\]
+\end{theorem}
+
+\begin{proof}
+\emph{Step 0 (target plane).} Take \(P_0=(\rho^0,\rho^0)\) with coordinates
+\((\sigma_0,\tau_0)=(\half+\delta_0+i\gamma_0,0)\) and
+\(\iota P_0=(1-\bar\rho^0,1-\bar\rho^0)\) with
+\((\sigma_0',0)=(\half-\delta_0+i\gamma_0,0)\). Since \(\delta_0\neq0\),
+\(\iota P_0\neq P_0\): a free orbit, contributing
+\(2m_0^2\operatorname{Re}[\hat h(P_0)\overline{\hat h(\iota P_0)}]\) to
+\eqref{eq:speca}.
+
+\emph{Step 1 (the sets to annihilate).} Let \(S\) be the finite set of zeros
+\(\rho\) with \(||\gamma|-|\gamma_0||\leq2\), and \(Z_\sigma\) the finite set of
+\(\sigma=(\rho_1+\rho_2)/2\) over pairs with both members in \(S\), excluding
+\(\sigma_0,\sigma_0'\). Let \(Z_\tau\) be the finite set of
+\(\tau=(\rho_1-\rho_2)/2\) over the \emph{resonant pairs}: pairs with both
+members in \(S\) and \(\sigma\in\{\sigma_0,\sigma_0'\}\), other than the target
+orbit \(\{P_0,\iota P_0\}\). Every resonant pair has \(\tau\neq0\) (\(\tau=0\)
+together with \(\sigma=\sigma_0\) forces \(\rho_1=\rho_2=\rho^0\), the target).
+Put \(D:=\max(|Z_\sigma|+1,\,|Z_\tau|)\); all standard, fixed by the
+configuration. \textup{(}The annihilation of the resonant pairs is a correction:
+an earlier version of this proof omitted them, and under general
+\(\neg\)RH configurations they contribute terms of uncontrolled
+sign.\textup{)}
+
+\emph{Step 2 (the cell and witness).} Choose the ideal profile \(p^*\) with
+degree \(D\), \(\sigma\)-center \(c^*\) where Lemma \ref{lem:vandermonde} gives
+\(\min|B(z-ic^*)|\geq b_0\) over \(Z_\sigma\cup\{\sigma_0,\sigma_0'\}\), and
+\(\tau\)-center \(c'^*\) where it gives the same over \(Z_\tau\cup\{0\}\). In
+\(V_{p^*}\) build \(v=h_{g_v,\varphi_v}\) with
+\(\hat g_v=0\) on \(Z_\sigma\), \(\hat g_v(\sigma_0)=1\),
+\(\hat g_v(\sigma_0')=-1\), and \(\hat\varphi_v=0\) on \(Z_\tau\),
+\(\hat\varphi_v(0)=1\) (Lemma \ref{lem:vandermonde} on each side; coefficient
+norm \(\leq C_1\), standard at fixed \(M\) but \emph{\(M\)-dependent}, cf.\
+Hypothesis \ref{hyp:pw}). The data \((1,-1)\) fixes the
+phase: the target plane contributes
+\(2m_0^2\operatorname{Re}[(\half\cdot1\cdot1)\overline{(\half\cdot(-1)\cdot1)}]
+=-m_0^2/2<0\).
+
+\emph{Step 3 (budget of \(Q_2(v,v)\)).} Decompose \eqref{eq:speca}: (a) the orbit
+\(\{P_0,\iota P_0\}\) contributes \(-m_0^2/2\); (b) pairs with both members in
+\(S\) other than the target: either \(\sigma\in Z_\sigma\), where
+\(\hat g_v=0\), or \(\sigma\in\{\sigma_0,\sigma_0'\}\) (resonant), where
+\(\tau\in Z_\tau\) and \(\hat\varphi_v=0\) -- in both cases the contribution is
+\(0\) (the case split is exhaustive, and the \(\iota\)-image adds no new case:
+\(\sigma(\iota P)=1-\bar\sigma\) swaps \(\sigma_0\leftrightarrow\sigma_0'\),
+already covered); (c) the rest lie in \(\Omega_1\) about \((\gamma_0,0)\) (some
+member outside \(S\)), and by Lemma \ref{lem:tail} with \(r=1\) the bound is
+the budget of Hypothesis \ref{hyp:pw}, which \emph{by that hypothesis -- and
+only by it (Remark \ref{rem:pw-rigidity}); this is GAP-A, the conditional point
+of the theorem} -- tends to \(0\) as \(M\to\infty\). Choose \(M=M_0\) standard
+with \(|(c)|\leq m_0^2/4\). Then
+\[
+Q_2(v,v)\leq-\frac{m_0^2}{2}+0+\frac{m_0^2}{4}=-\frac{m_0^2}{4}<0,
+\]
+so \(\negind(Q_2|_{V_{p^*}})\geq1\), with a standard spectral margin \(-\mu_0\).
+
+\emph{Step 4 (ideal cell to grid).} By Theorem \ref{thm:mesh} (with
+\(\kappa=1\), \(\mu=\mu_0\), \(L=L_{p^*}\) finite by Theorem \ref{thm:lipschitz},
+all standard) there is a standard \(N_0\) such that for \(N\geq N_0\),
+\(\mathcal G_N\) contains a profile \(p\) with \(\negind(Q_2|_{V_p})\geq1\).
+
+\emph{Step 5 (conclusion).} For \(N\geq N_0\),
+\(x_0(N)\geq\negind(\tilde Q_p)/\dim\tilde V_p\geq1/(2(D+1)^2)=:1/(2D_0)\) with
+\(D_0=(D+1)^2\) standard (filler doubles dimension; the negative subspace
+persists).
+By Proposition \ref{prop:loc-welldef}(c),
+\(\sigma_{\mathrm{loc}}=\lim x_0(N)\geq1/(2D_0)\) for every \(\mathcal U\);
+Proposition \ref{prop:loc-logistic} gives \(\sigma_{\mathrm{loc}}^{(k)}\to\half\).
+\end{proof}
+
+\begin{remark}[the conceptual key; what replaces the realizability hypothesis]
+\label{rem:key}
+The index \(\negind(Q_2|_{V_p})\) is a property of the \emph{compressed Gram}.
+Test-accessibility restricts the \emph{specification} of \(V_p\) (no zero
+positions); the \emph{witness} \(v\) inside \(V_p\) is an object of the proof,
+free to use all positions. Earlier work \cite{P40} used polynomial factors with
+roots at zero positions and so appeared to inherit a realizability caveat (the
+``Hypothesis D'' of \cite{P40}); here the same factors are rebuilt as linear
+combinations \emph{inside} the test-accessible span \(\{B\cdot\sigma^a\}\)
+(Lemma \ref{lem:vandermonde}). Localizing to the bounded height of the defect
+dissolves the \(T\to\infty\) regime of that caveat -- but, as the
+adversarial audit established, it does not dissolve the caveat
+entirely: it \emph{transmutes} it into the uniformity in \(M\) of the
+Paley--Wiener constant budget, Hypothesis \ref{hyp:pw} (the Paley--Wiener uniformity problem), a
+strictly narrower and purely analytic statement, open. \emph{We claim no
+quantitative bound}: \(D_0,N_0\) are not effective in \(\bar m\) -- they depend
+on the unknown local configuration. That non-effectivity is exactly what the
+criterion does not need.
+\end{remark}
+
+\begin{proposition}[RH branch]\label{prop:RHbranch}
+Under RH, \(x_0(N)=0\) for all \(N\), \(\sigma_{\mathrm{loc}}=0\), and
+\(\sigma_{\mathrm{loc}}^{(k)}\equiv0\).
+\end{proposition}
+
+\begin{proof}
+Under RH the spectral side \eqref{eq:speca} is diagonal, so \(Q_2\geq0\) on the
+span \cite{P40,P35}; every compression of a positive form is positive; the
+filler is positive; \(\negind=0\) in every cell.
+\end{proof}
+
+\begin{theorem}[the logistic criterion]\label{thm:main}
+For every non-principal ultrafilter \(\mathcal U\):
+\begin{enumerate}
+\item[\textup{(i)}] \textup{(theorem)}
+\(\mathrm{RH}\Longrightarrow\sigma_{\mathrm{loc}}=0\Longrightarrow
+\lim_k\sigma_{\mathrm{loc}}^{(k)}=0\);
+\item[\textup{(ii)}] \textup{(conditional on Hypothesis \ref{hyp:pw},
+the Paley--Wiener uniformity problem)}
+\(\neg\mathrm{RH}\Longrightarrow\sigma_{\mathrm{loc}}>0\Longrightarrow
+\lim_k\sigma_{\mathrm{loc}}^{(k)}=\tfrac12\).
+\end{enumerate}
+Hence, \emph{conditionally on Hypothesis \ref{hyp:pw}},
+\[
+\mathrm{RH}\;\Longleftrightarrow\;\sigma_{\mathrm{loc}}=0\;\Longleftrightarrow\;
+\lim_{k\to\infty}\sigma_{\mathrm{loc}}^{(k)}=0\;\Longleftrightarrow\;
+\lim_{k}\sigma_{\mathrm{loc}}^{(k)}\neq\tfrac12 .
+\]
+Unconditionally, \(\lim_k\sigma_{\mathrm{loc}}^{(k)}\in\{0,\half\}\) with
+\(0\iff\sigma_{\mathrm{loc}}=0\), independently of \(\mathcal U\).
+\end{theorem}
+
+\begin{proof}
+(i) Proposition \ref{prop:RHbranch} and Proposition \ref{prop:loc-logistic}.
+(ii) Theorem \ref{thm:realiz} and Proposition \ref{prop:loc-logistic}. The
+\(\mathcal U\)-independence of \(\sigma_{\mathrm{loc}}\) is Proposition
+\ref{prop:loc-welldef}(c); the unconditional dichotomy is Proposition
+\ref{prop:loc-logistic}.
+\end{proof}
+
+\begin{remark}[\(\mathcal U\) is tamed for free]
+The dichotomy of Theorem \ref{thm:main} is independent of the ultrafilter:
+\(\sigma_{\mathrm{loc}}\) is a genuine limit (Proposition
+\ref{prop:loc-welldef}(c)). The non-canonicity one might fear -- ``which
+ultrafilter concentrates where the defect lives?'' -- is resolved by
+monotonicity of the growing grid, not by a choice.
+\end{remark}
+
+\section{Honest scope}\label{sec:honest}
+
+We state precisely what is and is not achieved, per the contract.
+
+\subsection{(a) RH is not proved, and no progress toward a proof is claimed}
+Theorem \ref{thm:main} is an \emph{equivalence conditional on Hypothesis
+\ref{hyp:pw}} (its RH branch is an unconditional theorem), a reformulation of
+RH. It does
+not decide RH and provides no new route to deciding it. The standard part
+\(\sigma_{\mathrm{loc}}=0\) is a \(\Pi_1\) statement over the sequence
+\((x_0(N))_N\) -- ``for all large \(N\), \(x_0(N)\) small'' -- exactly as
+non-effective as RH itself. The improvement is one of \emph{coordinates}: each
+event \(x_0(N)\) is now finite linear algebra over arithmetic data (Proposition
+\ref{prop:loc-welldef}(a)), so falsifying RH becomes ``certify, by interval
+arithmetic, a negative eigenvalue
+of an arithmetic Gram'' rather than ``integrate \(\zeta'/\zeta\) with controlled
+error''. This is a second semidecision machine alongside the classical numerical
+one -- with the caveat that its \emph{completeness} (that \(\neg\)RH forces the
+machine to halt) is Theorem \ref{thm:realiz}, hence conditional on
+the Paley--Wiener uniformity problem; RH gains nothing.
+
+\subsection{(b) The computability of the symbol is the classical wall, moved}
+The trichotomy (Section \ref{sec:trichotomy}) locates the obstruction at the
+single point \(0\in\spec\sigma(Q)\), and the following identity shows that
+deciding whether the symbol equals its autonomous prediction is the classical
+wall in new coordinates.
+
+\begin{theorem}[computing the symbol \(=\) uniformity over windows]
+\label{thm:symbolcompute}
+On the same field of test spaces,
+\(\|\sigma(Q)-\sigma(\Qaut)\|_{\Cor}=\limsup_n\|Q_n-\Qaut_n\|\). Hence the
+statement ``the symbol of the Weil form is the archimedean/near-prime
+prediction'' is equivalent to \(\|Q_n-\Qaut_n\|\to0\): the second-order
+deficit asymptotics, in operator norm per window, \emph{uniformly} over \(n\) on
+the whole ball of tests.
+\end{theorem}
+
+\begin{proof}
+Lemma \ref{lem:symbol-norm} applied to the difference section; the right-hand
+side is the per-window deficit form against the window's tests
+\cite{P40}.
+\end{proof}
+
+The right-hand side is the uniform second-order pair-correlation asymptotic --
+the classical wall. What arithmetic computes unconditionally are the
+\emph{Ces\`aro states} (the mean over windows) of \(\sigma(Q)\); strict
+positivity is a statement of \emph{norm} (all states, including the pure states
+supported on window subsequences aligned with the zeros). The gap between the
+computable and the necessary is exactly the gap between the mean states and the
+exceptional pure states of the corona. We record the abstract half of what is
+provable.
+
+\begin{proposition}[mean Ces\`aro positivity, abstract half]\label{prop:cesaro}
+If, for every \(\varepsilon>0\),
+\(N^{-1}\#\{n\leq N:\lambda_{\min}(Q_n)<-\varepsilon\}\to0\) (``almost every
+window is \(\varepsilon\)-positive''), then for every positive test section
+\(0\leq A_n\leq I\) and every Banach limit \(\mathcal L\),
+\[
+\mathcal L\text{-}\lim_N\frac1N\sum_{n\leq N}\frac{\tr(Q_nA_n)}{d_n}\geq0:
+\]
+all positive Ces\`aro states of \(\sigma(Q)\) are \(\geq0\).
+\end{proposition}
+
+\begin{proof}
+If \(\lambda_{\min}(Q_n)\geq-\varepsilon\), then \(Q_n\geq-\varepsilon I\), so
+\(\tr(Q_nA_n)\geq-\varepsilon\tr(A_n)\geq-\varepsilon d_n\) (using
+\(\tr(CA)\geq0\) for \(C,A\geq0\)); otherwise the trivial bound
+\(\tr(Q_nA_n)\geq-\sup_k\|Q_k\|\,d_n\). The bad windows have vanishing density,
+so the Banach limit of a sequence \(\geq-\varepsilon-o(1)\) is
+\(\geq-\varepsilon\); let \(\varepsilon\to0\).
+\end{proof}
+
+The hypothesis is the mean-value / large-sieve output (almost every window),
+whose arithmetic status is inherited from the author's earlier work and is
+\emph{not} proved here (\(\GAP\), declared); Proposition \ref{prop:cesaro}
+guarantees that once supplied, it yields ``mean positivity of the symbol'',
+delimiting the wall from inside: the wall is precisely the passage from mean
+states to pure states.
+
+\subsection{(c) What is genuinely new}
+\begin{itemize}
+\item The \emph{framework}: the Weil--Toeplitz algebra \(\W\), its corona
+\(\Cor\), and the symbol \(\sigma(Q)\) (Definition \ref{def:field}, Lemmas
+\ref{lem:symbol-norm}--\ref{lem:symbol-spectrum}), which realize the master
+quantifier as \(c_0\) versus \(\ell^\infty\) (Corollary
+\ref{cor:master-quantifier}).
+\item The \emph{exact} characterization of robust defect finiteness (Theorem
+\ref{thm:exact}, the (ii)\(\Rightarrow\)(i) direction), pinning the obstruction
+to the single boundary point \(0\).
+\item The \emph{trichotomy} (Theorems \ref{thm:fat}--\ref{thm:nogo}): off-critical
+zeros stratify by visibility -- the thin-visible stratum on the symbol/compact
+boundary, the fat stratum in the symbol, the sub-resolution stratum in the
+ideal (Remark \ref{rem:trichotomy}) -- and \(m<\infty\) is a \(\Sigma_2\)
+boundary event over the resolution filtration, certified by no fixed calendar.
+\item That the \emph{realizability hypothesis} of \cite{P40} is replaced by the
+strictly narrower, purely analytic gap of Hypothesis \ref{hyp:pw}
+(the Paley--Wiener uniformity problem): test-accessibility is no longer the obstruction (Remark
+\ref{rem:key}); what remains is a constant budget, open.
+\item The exact logistic law (Theorem \ref{thm:logistic}) and the criterion
+(Theorem \ref{thm:main}), whose RH branch is a theorem and whose \(\neg\)RH
+branch is conditional on the Paley--Wiener uniformity problem.
+\end{itemize}
+
+\subsection{What remains open}
+The computability of the symbol -- uniform pair-correlation asymptotics (Theorem
+\ref{thm:symbolcompute}) -- is the old wall, intact. the Paley--Wiener uniformity problem (the
+Paley--Wiener constant budget, Hypothesis \ref{hyp:pw} and Remark
+\ref{rem:pw-rigidity}) is the single analytic gap of the \(\neg\)RH branch of
+Theorem \ref{thm:main}. LP-\ref{conj:lp134}
+(resolution repulsion) is a new, non-RH, falsifiable lemma; together with
+replication (R) it would close the Fredholm half. The non-effectivity is
+\(\Pi_1\), pure (Section \ref{sec:honest}(a)). We make the dependence on cited
+inputs explicit.
+
+\begin{remark}[cited hypotheses from earlier work on which the paper
+depends]\label{rem:deps}
+\textup{Theorem \ref{thm:main}}, the central equivalence, depends on:
+\begin{enumerate}
+\item the spectral side \eqref{eq:speca} with absolute convergence and the
+factorization \(\hat h_{g,\varphi}=\half\hat g(\sigma)\hat\varphi(\tau)\), and
+the free-orbit / hyperbolic-plane structure with multiplicity weights, from
+\cite{P40} (and \cite{P35} for the realization \((\mathcal K,Q)\),
+\(\kappa=2m\));
+\item the autonomy of the value: \(Q_2(h,h')\) computable from primes without
+zero positions, from \cite{P39,P35};
+\item closure of the test class under multiplication by Mellin polynomials,
+from \cite{P40};
+\item under RH, diagonality of \eqref{eq:speca} (hence \(Q_2\geq0\)), from
+\cite{P40};
+\item the zero-density bound \(N(t+1)-N(t)\ll\log(2+t)\)
+\cite[Thm.\ 5.8]{IwaniecKowalski} (published literature, not P-series);
+\item for the \(\neg\)RH branch only: Hypothesis \ref{hyp:pw} (the Paley--Wiener uniformity problem),
+\emph{open} -- not a cited input but a declared gap.
+\end{enumerate}
+\textup{The trichotomy (Section \ref{sec:trichotomy})} additionally depends on
+the model axioms (S1)--(S3) of Definition \ref{def:model}, of which: the block
+structure and the sub-resolution blindness (V1) are theorems of \cite{P40}; (S1)
+(per-window pair-correlation boundedness) and (S3) (cross-window decay) are
+declared \(\GAP\)s for the genuine Weil instance; (V2) carries the status of the
+realizability lemma of \cite{P40}. \textup{Theorem \ref{thm:realiz}} uses items
+(1)--(3),(5) and the open Hypothesis \ref{hyp:pw} (item (6), the Paley--Wiener uniformity problem),
+but \emph{not} (S1)--(S3) and \emph{not} the realizability
+lemma of \cite{P40} (Remark \ref{rem:key}). \textup{Proposition
+\ref{prop:cesaro}} is unconditional given its stated density hypothesis, whose
+arithmetic provenance (mean-value / large sieve) is a declared \(\GAP\).
+\end{remark}
+
+\appendix
+\section{The constructive regime: Weil positivity for finite systems of primes}
+\label{app:constructive}
+
+The Weil--Toeplitz analysis of the body concerns the \emph{defect} --- the off-line
+zeros and the negative directions they create. It is illuminating to record, by way
+of contrast, the opposite extreme: the fully constructive regime, in which positivity
+is immediate and the whole content lies in a single decidable discriminator. The
+material of this appendix is the easy direction of Weil's criterion \cite{Weil1952},
+recast categorically; we claim no novelty for the positivity itself and are explicit
+about its standing.
+
+\subsection{Pure Euler objects}
+For a prime $p$ write $L_p=\log p$. The \emph{Euler object} of $p$ with parameter
+$\alpha$ ($1\le|\alpha|\le p$) is the datum $F_{p,\alpha}$ whose local zeta factor is
+$(1-\alpha p^{-s})^{-1}(1-(p/\bar\alpha)p^{-s})^{-1}$, with Weil functional
+$W_{F_{p,\alpha}}$ assembled from the coefficients $c_m=\alpha^m+(p/\bar\alpha)^m$ of
+its logarithmic derivative. The object is \emph{self-dual} (invariant under
+$s\mapsto1-s$), and we say it satisfies the positivity property $H$ if its localized
+Weil quadratic form $Q_{F_{p,\alpha}}(f,f)=W_{F_{p,\alpha}}(f\star\tilde f)\ge0$ for all
+admissible $f$.
+
+\begin{theorem}[Local purity is the exact discriminator]\label{thm:local-purity}
+For $1\le|\alpha|\le p$,
+\[
+F_{p,\alpha}\text{ satisfies }H\quad\Longleftrightarrow\quad|\alpha|=\sqrt p
+\quad\Longleftrightarrow\quad|c_m|\le2p^{m/2}\ \ \forall m\ge1 .
+\]
+\end{theorem}
+\begin{proof}
+If $|\alpha|=\sqrt p$ then $p/\bar\alpha=\alpha$, the two geometric progressions
+coincide on $\Re s=\half$, and $c_m=2\alpha^m$ with $|c_m|=2p^{m/2}$. Summing the
+single-factor Poisson identity over the doubled progression,
+\[
+Q_{F_{p,\alpha}}(f,f)=\sum_{\rho}\widehat f(\rho)\,\overline{\widehat f(\half+i\Im\rho)}
+=2\sum_{\xi\in\Lambda_p}|\widehat F(\xi)|^2\ge0,
+\]
+since every zero $\rho$ has $\Re\rho=\half$ (so $1-\bar\rho=\rho$ and each term is a
+squared modulus), where $\Lambda_p=\{(\arg\alpha+2\pi k)/L_p:k\in\mathbb Z\}$.
+Conversely, if $|\alpha|=p^{1/2+\delta'}$ with $\delta'\ne0$, the reverse triangle
+inequality gives $|c_m|\ge p^{m/2}(p^{m\delta'}-p^{-m\delta'})>2p^{m/2}$ for large $m$,
+the zeros leave the line, and $H$ fails. Equality $|\alpha|=\sqrt p$ is exactly
+$|c_m|=2p^{m/2}$.
+\end{proof}
+
+\subsection{Additivity: the cross terms vanish exactly}
+\begin{proposition}[Convolution does not mix Weil data]\label{prop:crosszero}
+For Euler objects $X_1,X_2$ of distinct primes, the Weil functional of the product is
+additive, $W_{X_1\star X_2}=W_{X_1}+W_{X_2}$, with cross terms \emph{exactly zero}.
+Consequently a product of pure Euler objects over any finite set of primes satisfies
+$H$ if and only if each factor does, i.e.\ if and only if each is pure
+\textnormal{(}$|\alpha_p|=\sqrt p$\textnormal{)}.
+\end{proposition}
+\begin{proof}
+The logarithmic derivative of a product is the sum of the logarithmic derivatives, and
+the Weil functional is linear in it; the cross terms are integrals of
+$e^{i(\log p)\xi}\,\overline{e^{i(\log q)\xi}}$ against the test data, which vanish
+because $\log p\ne\log q$ places the two progressions on disjoint frequency lattices.
+Hence positivity is per-prime, and Theorem~\ref{thm:local-purity} applies factorwise.
+\end{proof}
+
+\subsection{Honest scope}
+Proposition~\ref{prop:crosszero} with Theorem~\ref{thm:local-purity} is exactly the
+\emph{easy} direction of Weil's criterion: purity places every zero on $\Re s=\half$
+\emph{by hypothesis}, and positivity follows term by term, with the additivity of
+logarithmic derivatives (classical since Euler) making the finite system no harder than
+one prime. We claim no novelty for the positivity. Two structural points are worth
+recording. First, purity is the \emph{exact, decidable} discriminator: $H$ holds if and
+only if $|\alpha_p|=\sqrt p$ for every $p$ in the system, a sharp local condition.
+Second, the cross-prime interference, which one might fear, is located precisely: it is
+absent from the \emph{sign} (the cross terms are identically zero) and present only in
+the spectral structure that a genuine global object would carry. The finite Euler
+product is \emph{not} $\zeta$: the constructive positivity survives every finite
+truncation but the spectrality does not, and $\zeta$ is not the limit of its Euler
+factors in the relevant sense. The contrast with the body is the point: in the
+constructive regime purity is assumed and positivity is free, whereas the difficulty
+addressed in the main text is precisely the absence of an a priori purity.
+
+\section*{Correction history}
+\emph{June 2026.} Two adversarial audits mandated the following corrections, all applied in this version. A
+false victory being worse than a failure, we record them explicitly.
+\begin{itemize}
+\item \textbf{(Critical.)} The \(\neg\)RH branch of the
+logistic criterion was previously claimed as a theorem over cited inputs. Its
+proof contained a constant treated as constant while depending on the parameter
+sent to infinity: the tail budget of Theorem \ref{thm:realiz}, Step 3, used
+\(M\)-dependent Paley--Wiener constants whose uniformity is not only unproved
+but \emph{false} for every fixed bump (Paley--Wiener rigidity, Remark
+\ref{rem:pw-rigidity}). Status downgraded: the branch is now \emph{conditional}
+on Hypothesis \ref{hyp:pw} (the Paley--Wiener uniformity problem). Abstract, introduction, Theorem
+\ref{thm:main} and Section \ref{sec:honest} reworded accordingly. The statement
+itself is not refuted; the RH branch (Proposition \ref{prop:RHbranch}) and the
+exact logistic algebra (Theorem \ref{thm:logistic}) survive the audit intact.
+\item \textbf{(Correction.)} The same proof failed to annihilate the
+\emph{resonant pairs} (both members in \(S\), \(\sigma\in\{\sigma_0,\sigma_0'\}\),
+off the target orbit), which exist under general \(\neg\)RH configurations and
+contribute terms of uncontrolled sign. Repaired here (repair validated by the
+audit) by Vandermonde annihilation on the \(\tau\) side over \(Z_\tau\),
+enlarging \(D\); the enlargement feeds back into the constant budget, so the
+two gaps must be closed jointly within the Paley--Wiener uniformity problem.
+\item \textbf{(Correction.)} The closed logistic formula in
+\(\sigma_{\mathrm{loc}}\) (the former version of Proposition
+\ref{prop:loc-logistic}) was false when the
+winning Gram is degenerate (two incompatible normalizations of \(x_0(N)\):
+the radical bug). Repaired via
+\(\sigma_{\mathrm{base}}^{\,\mathcal U}\in[\sigma_{\mathrm{loc}},
+2\sigma_{\mathrm{loc}}]\cap[0,\half]\) (Remark \ref{rem:radical-bug}); the
+\(0\)-versus-\(\half\) dichotomy and the \(\mathcal U\)-independence of the
+limit survive; intermediate floors are no longer claimed canonical.
+\item \textbf{(adversarial audit)} ``\(\negind\) computed
+exactly'' weakened to semidecidability by interval arithmetic (Proposition
+\ref{prop:loc-welldef}); mesh constant corrected to \(b\leq\mu/(4\sqrt2\,L)\)
+and ``computable \(N_0\)'' to ``explicit \(N_0\)'' (Theorem \ref{thm:mesh});
+the unconditional ``\(\to0\) as \(M\to\infty\)'' claim removed from Lemma
+\ref{lem:tail}; the attribution of the global-signature collapse corrected
+(Remark \ref{rem:collapse}).
+\item \textbf{(adversarial audit)} The noisy-case exception clause of Theorem
+\ref{thm:strict} (``up to windows with \(\vartheta_n\leq\omega_n\)
+eventually'') was \emph{false} (counterexample: \(\omega_n=1/n\),
+\(\vartheta_n=1/(2n)\)). The correction \emph{strengthens} the theorem: strict
+symbol positivity \(\iff\) finitely many visible windows, with no exception
+(Remark \ref{rem:strict-corrected}). Downstream results unaffected.
+\item \textbf{(adversarial audit)} ``Continuous field'' replaced by
+``bounded field over the discrete base \(\N\)'' (over a discrete base the
+Dixmier continuity condition is vacuous; no proof used it); the global slogan
+of Remark \ref{rem:trichotomy} stratified (only the thin-visible stratum lives
+on the symbol/compact boundary); a typographic inequality chain in Lemma
+\ref{lem:window-spec} fixed; Theorem \ref{thm:thin}(i) qualified by
+\(\vartheta_n>\omega_n\) i.o.\ for the negativity claim. Theorem
+\ref{thm:exact} and Lemmas \ref{lem:symbol-norm}--\ref{lem:symbol-spectrum}
+passed the audit without correction.
+\end{itemize}
+
+\section*{Acknowledgements}
+This work builds on the author's earlier works \cite{P35,P39,P40}, cited as prior
+work.
+
+\begin{thebibliography}{99}
+
+\bibitem{Bhatia}
+R.~Bhatia,
+\emph{Matrix Analysis},
+Graduate Texts in Mathematics \textbf{169}, Springer, 1997.
+
+\bibitem{BottcherSilbermann}
+A.~B\"ottcher and B.~Silbermann,
+\emph{Analysis of Toeplitz Operators},
+2nd ed., Springer, 2006.
+
+\bibitem{Gantmacher}
+F.~R.~Gantmacher,
+\emph{The Theory of Matrices}, Vol.~2,
+Chelsea, 1959.
+
+\bibitem{IwaniecKowalski}
+H.~Iwaniec and E.~Kowalski,
+\emph{Analytic Number Theory},
+American Mathematical Society Colloquium Publications \textbf{53}, AMS, 2004.
+
+\bibitem{Kato}
+T.~Kato,
+\emph{Perturbation Theory for Linear Operators},
+2nd ed., Springer, 1976.
+
+\bibitem{RabinovichRochSilbermann}
+V.~Rabinovich, S.~Roch, and B.~Silbermann,
+\emph{Limit Operators and Their Applications in Operator Theory},
+Operator Theory: Advances and Applications \textbf{150}, Birkh\"auser, 2004.
+
+\bibitem{ReedSimon}
+M.~Reed and B.~Simon,
+\emph{Methods of Modern Mathematical Physics, IV: Analysis of Operators},
+Academic Press, 1978.
+
+\bibitem{Robinson}
+A.~Robinson,
+\emph{Non-standard Analysis},
+North-Holland, 1966.
+
+\bibitem{Weil1952}
+A.~Weil,
+\emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
+Comm.\ S\'em.\ Math.\ Lund (1952), 252--265.
+
+\bibitem{P35} D.~A.~Trejo Pizzo, \emph{Pontryagin spectral index of the Weil form and the Connes scaling operator: a bridge theorem for the Riemann Hypothesis}, preprint, 2026.
+
+\bibitem{P39} D.~A.~Trejo Pizzo, \emph{A trace and measure criterion for the Riemann Hypothesis from the zeta spectral triple}, preprint, 2026.
+
+\bibitem{P40} D.~A.~Trejo Pizzo, \emph{The localized Weil form and its Kre\u\i n--Pontryagin index: localization, obstruction, and rigidity}, preprint, 2026.
+
+\end{thebibliography}
+
+\end{document}

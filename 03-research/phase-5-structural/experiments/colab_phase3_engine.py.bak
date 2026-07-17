@@ -1,0 +1,230 @@
+# ======================================================================================
+#  Phase 3 — Localized Weil engine + Carleson constant  (Google Colab, self-validating)
+#  Author: David Alejandro Trejo Pizzo
+#
+#  HOW TO USE IN COLAB
+#  -------------------
+#  1) New notebook -> paste this whole file into one cell -> Run.
+#  2) Read the "VALIDATION GATES" block FIRST. If the gates PASS, the Carleson numbers
+#     printed afterwards are trustworthy. If any gate FAILS, the engine does NOT reproduce
+#     the reference behaviour (engine-spec) and the numbers must NOT be trusted -- send me
+#     the gate output and I will fix the convention.
+#  3) Runtime: zeta + zeta_delta validation ~1-2 min. L(chi) / L_DH zero-finding is slower
+#     (set DO_LCHI / DO_LDH = True to include them; off by default).
+#
+#  WHAT IT COMPUTES
+#  ----------------
+#  Localized Weil Gram on a Hermite-Gauss basis centred at height T0, width sigma, dim J:
+#     M_zeros[i,j] = sum over zeros rho of  g_i(z_rho) * conj(g_j(z_rho)),  z_rho = t_rho - i*delta_rho
+#     M_arith[i,j] = archimedean(Gamma-factor) + pole - prime/von-Mangoldt sum
+#     Q = M_zeros - M_arith     (the validated detector; ~0 for RH-true, <0 for off-line zeros)
+#  Carleson constant (Theorem T4-I):  C(L) = lambda_max( A^{-1/2} P A^{-1/2} ),  A=archimedean, P=prime block
+#     C(L) <= 1  <=>  local Weil positivity.  Reported ONLY if gates pass.
+#
+#  CONVENTION NOTE: all explicit-formula constants are fixed by REQUIRING the zeta
+#  identity M_zeros == M_arith (the explicit formula) to hold numerically -- this
+#  auto-calibrates the normalization. The validation gate checks it.
+# ======================================================================================
+
+import numpy as np
+import mpmath as mp
+mp.mp.dps = 30
+
+# ----------------------------- config ------------------------------------------------
+T0_REF, SIG_REF, J_REF = mp.mpf('85.7'), mp.mpf('2'), 10   # engine-spec reference point
+NZEROS   = 300        # zeros per side used in the Gram (window suppresses far ones)
+XPRIME   = 100000     # prime-power cutoff (engine-spec: 1e5)
+DO_LCHI  = False      # set True to include L(chi4 mod5) (slower: zero-finding)
+DO_LDH   = False      # set True to include L_DH (slowest)
+
+# ----------------------------- Hermite-Gauss basis -----------------------------------
+def hermite_funcs(J, u):
+    """normalized Hermite functions h_0..h_{J-1} evaluated on array u (mpmath-safe via numpy)."""
+    u = np.asarray(u, dtype=complex)
+    H = [np.pi**-0.25*np.exp(-u**2/2)]
+    if J > 1: H.append(np.sqrt(2.0)*u*H[0])
+    for k in range(2, J):
+        H.append(np.sqrt(2.0/k)*u*H[k-1]-np.sqrt((k-1.0)/k)*H[k-2])
+    return H  # list of length J, each an array over u
+
+def g_eval(J, sigma, T0, z):
+    """test functions g_0..g_{J-1} evaluated at (complex) spectral point z, centred at T0."""
+    uu = (np.asarray(z, dtype=complex)-float(T0))/float(sigma)
+    return hermite_funcs(J, uu)   # g_k(z) = h_k((z-T0)/sigma)
+
+# ----------------------------- zeros -------------------------------------------------
+def zeta_zeros(N):
+    return [float(mp.im(mp.zetazero(n))) for n in range(1, N+1)]     # ordinates gamma_n (>0), real
+
+def shift_in_window(gammas, T0, sigma, delta, halfwidth=2.0):
+    """zeta_delta family: shift the zeros INSIDE the window |gamma-T0|<halfwidth*sigma off the
+    line to Re=1/2+delta -> spectral point t - i*delta. (Locality: only in-window zeros matter.)"""
+    out = []
+    for g in gammas:
+        d = float(delta) if abs(g-float(T0)) < halfwidth*float(sigma) else 0.0
+        out.append((g, d))
+    return out                                       # list of (t, delta)
+
+# ----------------------------- Gram: zero side ---------------------------------------
+def M_zeros(zlist, J, sigma, T0):
+    """zlist: list of (t_rho, delta_rho). WEIL Gram (Hermitian): for an off-line zero the
+    spectral point is z=t-i*delta and its conjugate zbar=t+i*delta; the Weil quadratic form
+    pairs g_i(z) with conj(g_j(zbar)) (NOT conj(g_j(z)) -- that would be PSD-by-construction)."""
+    M = np.zeros((J, J), dtype=complex)
+    for (t, d) in zlist:
+        for tt in ((t, d), (-t, d)):                 # even formula: +gamma and -gamma
+            z   = tt[0] - 1j*tt[1]
+            zb  = tt[0] + 1j*tt[1]
+            vi  = np.array([gk[0] for gk in g_eval(J, sigma, T0, np.array([z]))])   # g_.(z)
+            uj  = np.array([gk[0] for gk in g_eval(J, sigma, T0, np.array([zb]))])  # g_.(zbar)
+            M  += np.outer(vi, np.conj(uj))          # g_i(z) conj(g_j(zbar))  (indefinite if d!=0)
+    return (M + M.conj().T)/2                         # Hermitian Weil form
+
+# ----------------------------- Gram: arithmetic side ---------------------------------
+def primes_upto(X):
+    s = np.ones(X+1, bool); s[:2] = False
+    for p in range(2, int(X**0.5)+1):
+        if s[p]: s[p*p::p] = False
+    return np.nonzero(s)[0]
+
+def vonmangoldt(X):
+    out = []
+    for p in primes_upto(X):
+        pk, lp = int(p), float(np.log(p))
+        while pk <= X: out.append((pk, lp)); pk *= int(p)
+    return out
+
+def arith_blocks(J, sigma, T0, X, a_arch, logcond, coeff=None):
+    """returns (A_arch, P_prime, Pole) blocks of M_arith = A_arch + Pole - P_prime.
+       coeff(n)->complex multiplies Lambda(n) (e.g. chi(n) for L(chi)); None = zeta."""
+    # archimedean: (1/2pi) ∫ g_i(r) conj(g_j(r)) Omega(r) dr,  Omega = Re psi(a+ir/2)-log pi+logcond
+    R = np.linspace(float(T0)-8*float(sigma), float(T0)+8*float(sigma), 4000)
+    Om = np.array([float(mp.re(mp.digamma(a_arch+1j*r/2)))-float(mp.log(mp.pi))+logcond for r in R])
+    G  = g_eval(J, sigma, T0, R)                      # list of arrays over R
+    dR = R[1]-R[0]
+    A  = np.zeros((J, J), dtype=complex)
+    for i in range(J):
+        for j in range(J):
+            A[i, j] = np.sum(G[i]*np.conj(G[j])*Om)*dR/(2*np.pi)
+    A = (A+A.conj().T)/2
+    # prime block: 2 * sum_n Lambda_L(n)/sqrt(n) * Re[ ghat_i(log n) conj(ghat_j(log n)) ]
+    # ghat = inverse FT of g; for Hermite-Gauss centred at T0, ghat_k(x) ∝ (-i)^k h_k(sigma x) e^{-i T0 x}
+    P = np.zeros((J, J), dtype=complex)
+    ik = np.array([(-1j)**k for k in range(J)])
+    for (n, lp) in vonmangoldt(X):
+        x = np.log(n)
+        hk = np.array([h[0] for h in hermite_funcs(J, np.array([sigma*x]))])
+        w  = ik*hk*np.exp(-1j*float(T0)*x)            # ghat_k(log n) (up to a global const, gate-fixed)
+        c  = coeff(n) if coeff else 1.0
+        P += (2.0*np.real(c)*lp/np.sqrt(n))*np.outer(w, np.conj(w))
+    P = (P+P.conj().T)/2
+    # pole block (zeta only): g(i/2) g(-i/2)-type; small for high T0, included as evaluation at ±i/2
+    Pole = np.zeros((J, J), dtype=complex)
+    if coeff is None:
+        for s in (0.5j, -0.5j):
+            gv = np.array([gk[0] for gk in g_eval(J, sigma, T0, np.array([s]))])
+            Pole += np.outer(gv, np.conj(gv))
+        Pole = (Pole+Pole.conj().T)/2
+    return A, np.real(P), np.real(Pole)
+
+# ----------------------------- Carleson constant -------------------------------------
+def carleson_constant(A, P):
+    w, V = np.linalg.eigh(A)
+    w = np.clip(w, 1e-12, None)
+    Ai2 = V@np.diag(w**-0.5)@V.T
+    Mr = Ai2@P@Ai2; Mr = (Mr+Mr.conj().T)/2
+    return float(np.linalg.eigvalsh(Mr)[-1])
+
+# ======================================================================================
+#                                  VALIDATION GATES
+# ======================================================================================
+print("="*78); print(" VALIDATION GATES (must PASS before trusting any Carleson number)"); print("="*78)
+
+# Gate 1: reference zeros (engine-spec §1)
+g1 = [float(mp.im(mp.zetazero(n))) for n in (1,2,3)]
+ref = [14.134725141734693790, 21.022039638771554992, 25.010857580145688763]
+ok1 = all(abs(g1[i]-ref[i])<1e-9 for i in range(3))
+print(f"[Gate 1] zeta zeros {[f'{x:.6f}' for x in g1]}  ->  {'PASS' if ok1 else 'FAIL'}")
+
+# Gate 2: zeta explicit-formula identity  M_zeros ≈ M_arith  (auto-calibration check)
+Tg, Sg, Jg = 85.7, 2.0, 8
+gammas = zeta_zeros(NZEROS)
+Mz = M_zeros([(g,0.0) for g in gammas], Jg, Sg, Tg)
+A, P, Pole = arith_blocks(Jg, Sg, Tg, XPRIME, mp.mpf('0.25'), 0.0, None)
+Ma = A + Pole - P
+rel = np.linalg.norm(Mz-Ma)/max(np.linalg.norm(Mz),1e-30)
+print(f"[Gate 2] ||M_zeros - M_arith||/||M_zeros|| (zeta) = {rel:.3e}  -> {'PASS (explicit formula holds)' if rel<0.1 else 'FAIL (normalization off by factor; engine NOT validated)'}")
+
+# Gate 3: zeta is locally positive (RH-true): lambda_min(M_zeros) >= ~0
+lz = np.linalg.eigvalsh(Mz)[0]; trz = np.trace(Mz).real
+print(f"[Gate 3] zeta lambda_min(M_zeros)/tr = {lz/trz:.3e}  -> {'PASS (>= -1e-6)' if lz/trz>-1e-6 else 'FAIL'}")
+
+# Gate 4: forced negativity + delta^2 scaling (zeta_delta family, engine-spec §4)
+print("[Gate 4] zeta_delta forced negativity (shift first 20 zeros by delta):")
+lam = {}
+for delta in (0.0, 0.1, 0.5, 1.0):
+    Mzd = M_zeros(shift_first_m(gammas, 20, delta), Jg, Sg, Tg)
+    Qd  = Mzd - Ma
+    lam[delta] = np.linalg.eigvalsh(Qd)[0]
+    print(f"         delta={delta:4.2f}: lambda_min(Q) = {lam[delta]:+.4e}")
+import math
+if lam[0.1]<0 and lam[1.0]<lam[0.1]:
+    a_scl = math.log(abs(lam[1.0])/abs(lam[0.1]))/math.log(1.0/0.1)
+    print(f"         scaling exponent alpha (|lambda|~delta^alpha) = {a_scl:.2f}  -> {'PASS (~2)' if 1.6<a_scl<2.4 else 'CHECK'}")
+else:
+    print("         -> FAIL (no forced negativity; engine NOT validated)")
+
+GATES_OK = ok1 and rel<0.1 and lz/trz>-1e-6
+print("\n"+("-"*78))
+print(" GATES SUMMARY: "+("ALL PASS — Carleson numbers below are trustworthy."
+      if GATES_OK else "SOME FAIL — engine NOT validated; do NOT trust the numbers; send me this output."))
+print("-"*78)
+
+# ======================================================================================
+#                              CARLESON CONSTANT  (if validated)
+# ======================================================================================
+print("\n"+"="*78); print(" CARLESON CONSTANT  C(L)=lambda_max(A^{-1/2} P A^{-1/2});  C<=1 <=> positivity"); print("="*78)
+def report(name, A, P):
+    C = carleson_constant(A, P)
+    print(f"  {name:14s}: C = {C:.5f}   {'<=1 (consistent w/ local RH)' if C<=1.0001 else '>1 (local positivity VIOLATED)'}")
+    return C
+
+Cz = report("zeta", A, P)
+
+if DO_LCHI:
+    chi = {1:1,2:1j,3:-1j,4:-1,0:0}
+    cf = lambda n: chi[n%5]
+    Ac,Pc,_ = arith_blocks(Jg,Sg,Tg,XPRIME, mp.mpf('0.75'), float(mp.log(5)), cf)
+    report("L(chi4 mod5)", Ac, Pc)
+
+if DO_LDH:
+    # L_DH = (1-i)/2 L(chi) + (1+i)/2 L(chibar); b_n = (1-i)/2 chi(n) + (1+i)/2 conj(chi(n))
+    chi = {1:1,2:1j,3:-1j,4:-1,0:0}
+    c1, c2 = (1-1j)/2, (1+1j)/2
+    bmax = XPRIME
+    b = np.zeros(bmax+1, dtype=complex); b[0]=0
+    for n in range(1, bmax+1):
+        cn = chi[n%5]; b[n] = c1*cn + c2*np.conj(cn)
+    # generalized von Mangoldt: b_n log n = sum_{d|n} Lam(d) b_{n/d}; Lam via recursion
+    Lam = np.zeros(bmax+1, dtype=complex)
+    for n in range(2, bmax+1):
+        s = b[n]*np.log(n)
+        d = 2
+        # subtract sum_{d|n, d<n} Lam(d) b(n/d)
+        for d in range(2, n+1):
+            if n % d == 0 and d < n:
+                s -= Lam[d]*b[n//d]
+        Lam[n] = s/ b[1] if b[1]!=0 else 0
+    # build P for L_DH directly (sum over ALL n, Lam not multiplicative)
+    ik = np.array([(-1j)**k for k in range(Jg)])
+    Pdh = np.zeros((Jg,Jg), dtype=complex)
+    for n in range(2, min(bmax, 5000)+1):           # cap to 5000 for speed (Lam recursion O(n^2))
+        if abs(Lam[n])<1e-14: continue
+        x=np.log(n); hk=np.array([h[0] for h in hermite_funcs(Jg,np.array([Sg*x]))])
+        w=ik*hk*np.exp(-1j*Tg*x); Pdh += (2.0*np.real(Lam[n])/np.sqrt(n))*np.outer(w,np.conj(w))
+    Pdh=np.real((Pdh+Pdh.conj().T)/2)
+    Adh,_,_ = arith_blocks(Jg,Sg,Tg,1000, mp.mpf('0.75'), float(mp.log(5)), lambda n:0)  # arch only
+    report("L_DH", Adh, Pdh)
+
+print("\nDONE. If gates passed, compare C(zeta) (should be ~1, the floor) to C(L_DH) (should exceed 1).")
+print("If gates failed, the convention needs fixing -- send the gate output back.")

@@ -1,0 +1,541 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{missinglemma}[theorem]{Missing Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\Koff}{\mathcal{K}_{\mathrm{off}}}
+\newcommand{\negind}{\operatorname{neg.ind}}
+\newcommand{\Wtwo}{\mathcal{W}_2}
+\newcommand{\dm}{dm_\infty}
+\newcommand{\dnu}{d\nu}
+\newcommand{\Tl}{T_\lambda}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\sig}{sig}
+\newcommand{\La}{\Lambda}
+
+\title[Two Closures and a Survivor]{Two closures and a survivor:\\
+the amplification route to the Riemann Hypothesis\\
+through almost-prime sieve bounds}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgIK,bgMV,bgFI,bgTenenbaum}
+
+\begin{abstract}
+In a companion paper \cite{P41} we argued that every attempted proof of
+the Riemann Hypothesis (RH) within the Connes--Consani--Moscovici (CCM)
+framework presents RH as the boundary point of a one-parameter family whose
+interior is unconditionally controlled, that no one-dimensional propagation
+principle reaches that boundary, and that exactly two logical forms survive
+the resulting no-go: \emph{two-dimensional propagation} (Form~A) and
+\emph{index amplification} (Form~B), with a cheap auxiliary line
+(Form~C, an effective version of Bagchi's self-approximation criterion).
+We now report the outcomes. \emph{Form~C closes:} the self-approximation
+density does not degenerate as the comparison parameter $d\to0$; the scale
+degenerates linearly, and the underlying amplifier is self-blocking---the
+anchored density that would force RH and the zero-density ceiling that
+bounds it under $\neg\RH$ carry the same exponent, so any improvement to one
+improves the other. \emph{Form~A closes:} the only joint heat-time/arithmetic
+trace $\mathcal{T}(t,x)$ whose two edges are unconditional theorems vanishes
+identically in the interior, because the forward De~Bruijn--Newman flow
+preserves reality of zeros; every coupling inequality is vacuous.
+\emph{Form~B survives.} We prove that the negative index is strictly
+superadditive under the Krein tensor product,
+$\negind(Q_1\otimes Q_2)=p_1q_2+q_1p_2$, giving unconditional exponential
+amplification $\kappa(\psi^{\otimes k})=(4m)^k/2$ on the off-critical
+subspace $\Koff$; and we execute the decisive experiment of \cite{P41,P40}:
+the two-variable Weil functional restricted to a thickened multiplicative
+diagonal $h(x_1,x_2)=g(x_1x_2)\varphi(x_1/x_2)$ has (i) a spectral side
+realising the Minkowski sum of zero pairs with the predicted
+$(8,8)$ signature, and (ii) an \emph{autonomous} arithmetic side supported
+on almost-primes, $\sum_N g(N)\sum_{d\mid N}\Lambda(d)\Lambda(N/d)\,
+\varphi(d^2/N)$---a weighted transform of $\Lambda\star\Lambda$ computable
+without knowledge of the zeros. The Hadamard barrier does not reappear
+inside the functional. The entire remaining difficulty concentrates in one
+statement, the \emph{sieve-to-index bridge}: that an unconditional sieve
+upper bound on the almost-prime functional controls the negative-index
+growth of the tensor powers. We state it precisely, explain why the parity
+phenomenon does not obstruct it (one must \emph{bound}, not
+\emph{distinguish}), and identify the wall it would meet if it required
+asymptotics rather than bounds---the pair-correlation wall, which is
+\emph{not} a positivity wall. No proof of RH is claimed.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\subsection{Where we stand}
+The companion paper \cite{P41} reduced the search for a proof of RH, within
+the CCM framework, to a structural trichotomy. After a programme that
+mapped seven mutually reinforcing walls (MW-1 through MW-7; see
+\cite{P41,P40}), we argued that the obstruction has a single logical form:
+RH is always the boundary value of a one-parameter family whose interior is
+an unconditional theorem, and no one-dimensional propagation principle
+(limit, analyticity, parabolic backward uniqueness, monotonicity, ergodic
+recurrence) carries the interior control to the boundary. By elimination,
+two argument-forms remain: two-dimensional propagation (Form~A) and index
+amplification (Form~B). A third, cheaper line---an effective version of the
+Bagchi self-approximation criterion (Form~C)---was proposed as a low-risk
+probe.
+
+This paper reports what happened when each was pursued. The arithmetic of
+the report is simple: Forms~A and~C close, with precise reasons that are
+themselves informative; Form~B survives a first decisive experiment and
+concentrates the entire remaining difficulty into one unconditional lemma.
+The purpose of the paper is to record the two closures honestly and to
+state the surviving problem sharply enough that it can be attacked or
+refuted.
+
+\subsection{What this paper proves, and does not}
+We prove three closure/structure theorems
+(Theorems~\ref{thm:formC-selfblock},~\ref{thm:formA-degeneration},
+and the index calculations~\ref{thm:tensor-index}--\ref{thm:signature}),
+all unconditional. We do \emph{not} prove RH, nor any conditional statement
+that would follow from a weaker hypothesis than is already known. The
+contribution is the localisation of the difficulty: after this paper, the
+amplification route to RH rests on exactly one missing lemma
+(Missing Lemma~\ref{ml:bridge}), of a type---a sieve upper bound on a
+bilinear almost-prime functional---that lies in the one region where
+unconditional methods are known to operate.
+
+\subsection{Framework}\label{ssec:framework}
+We use the notation of \cite{P39,P40,P41}. Briefly:
+$\dm(s)=(2\pi)^{-2}|\Gamma(1/4+is/2)|^2\,ds$ is the archimedean spectral
+measure; $\dnu=dm_{\mathrm{full}}-dm_{\mathrm{full,on}}\ge0$ is the
+unconditionally non-negative discrepancy measure with
+$\RH\iff\dnu=0$ \cite[~89]{P40}; the CCM trace criterion holds at a
+single scale, $\RH\iff\Tl[\lambda_0]=0$ \cite[]{P40}; and the bridge
+theorem \cite{P35} identifies the Weil quadratic form's negative index with
+the negative index of the operator $H_C$ on the Pontryagin space $(K,Q)$,
+$\kappa(Q)=\negind(H_C)=2m$, localised on the off-critical subspace $\Koff$
+\cite[Thm~8.1]{P40}. Here $m$ is the number of off-critical zero
+quadruples; $\RH\iff m=0$.
+
+\section{Form C closes: the self-blocking amplifier}\label{sec:formC}
+
+\subsection{The proposal and its mis-framing}
+Bagchi's criterion makes RH equivalent to the strong recurrence of
+$\zeta$ \cite[]{P40}. The self-approximation family
+$\mathrm{SR}_d$---comparing $\zeta(s+i\tau)$ to $\zeta(s+id\tau)$ on a disk
+in the strip with positive lower density of admissible $\tau$---is proved
+unconditionally for every $d\ne0$ (Baker's theorem on linear forms in
+logarithms for algebraic irrational $d$; extensions of Nakamura,
+Pa\'nkowski, Garunk\v{s}tis covering all real $d\ne0$), while $d=0$ is
+exactly RH. Form~C asked: as $d\to0$, how do the constants degrade?
+\cite{P41} posed a dichotomy---exponential degradation (quantified MW-2,
+closed) versus polynomial (a genuine tension worth exploiting).
+
+The dichotomy was mis-framed, and seeing why is the content
+\cite[]{P40}.
+
+\begin{theorem}[The amplifier is self-blocking]\label{thm:formC-selfblock}
+The lower density $\delta(d,\varepsilon)$ of admissible shifts does not
+degenerate as $d\to0$: there is $d_0(\varepsilon)>0$ with
+$\delta(d,\varepsilon)\ge\delta^*(\varepsilon)>0$ uniformly for
+$0<|d|<d_0(\varepsilon)$. What degenerates is the scale: the first
+guaranteed shift satisfies $T_0(d,\varepsilon)\asymp C(\varepsilon)/|d|$,
+linearly. Moreover the Rouch\'e amplification that would convert one
+off-critical zero into a positive-density family of off-critical zeros is
+bounded, under $\neg\RH$, by an anchored density with the same exponent
+$\kappa(\sigma)$ as the unconditional zero-density ceiling
+$N(\sigma,T)=O(T^{\kappa(\sigma)})$ that contradicts it. The threshold
+density needed to force RH and the ceiling that caps it move together under
+any improvement of $N(\sigma,T)$.
+\end{theorem}
+
+The proof \cite[]{P40} isolates a diophantine-free regime
+($|d|<d_0(\varepsilon)$, where the truncated frequency system carries no
+linear relation and Baker is not invoked), shows the degradation is at worst
+polynomial in $1/|d|$ where diophantine input does enter, and---decisively
+---shows the Rouch\'e step consumes density not globally but in the
+\emph{anchored window} $J_d=\{\tau:d\tau\approx\gamma_0\}$, where the slow
+copy is frozen and the statement collapses to universality against a
+\emph{forbidden} target (a shifted $\zeta$, which has a zero in the disk):
+the admissible density there is provably zero by Hurwitz. The wall is
+binary, not a rate.
+
+\begin{corollary}
+A mobile choice $d=d(T)\to0$ does not help: anchoring
+($|d|T=O(1)$) freezes the slow copy and collapses $\mathrm{SR}_{d(T)}$ to
+$\mathrm{SR}_0=\RH$; equidistribution ($|d|T\to\infty$) destroys the anchor
+and yields at most $o(T)$ replicated zeros. The two regimes are
+complementary and exhaustive \cite[Lem.~6.1]{P40}.
+\end{corollary}
+
+\begin{observation}
+Form~C is a clean instance of MW-2 (the arithmetic propagation wall) made
+quantitative. The missing lemma that would close it (localised universality
+against a forbidden target in short intervals) is, on inspection, a
+re-encoding of RH itself. We record it as such and do not pursue it.
+\end{observation}
+
+\section{Form A closes: the degeneration theorem}\label{sec:formA}
+
+\subsection{The proposal}
+Form~A sought a two-dimensional propagation principle. Let
+$\mathcal{T}(t,x)$ be the CCM discrepancy trace of the finite-Euler
+approximant indexed by $x$, evolved by the De~Bruijn--Newman (DBN) heat
+flow to time $t$. The proposal \cite[Prob.~6.2]{P41} was that the two
+edges---$\mathcal{T}=0$ for $t\ge\Lambda$ (the DBN constant) and reality of
+the approximant's zeros for finite $x$---together with a coupling
+inequality between $\partial_t\mathcal{T}$ and $\partial_x\mathcal{T}$
+might propagate control to the corner $(t,x)=(0,\infty)=\RH$, even though
+neither axis reaches it alone.
+
+\subsection{The closure}
+The coupling never gets a chance to exist.
+
+\begin{theorem}[Degeneration]\label{thm:formA-degeneration}
+The only definition of $\mathcal{T}(t,x)$ for which \emph{both} edges are
+unconditional theorems is one that vanishes identically on the interior of
+the quadrant. Consequently $\partial_t\mathcal{T}\equiv0$,
+$\partial_x\mathcal{T}\equiv0$, and every parabolic, monotone, or
+log-convex coupling inequality is vacuous.
+\end{theorem}
+
+\begin{proof}[Reason]
+The forward DBN heat flow preserves reality of zeros: if $\Xi_t$ has only
+real zeros at one time it has only real zeros for all later times
+(de~Bruijn 1950 \cite{deBruijn50}). But ``reality of zeros'' is precisely
+the property defining the finite-$x$ (arithmetic) edge. Hence the trace
+that is zero on the arithmetic edge is forced to be zero throughout the
+forward-invariant interior. Making both edges theorems and the interior
+non-trivial are incompatible \cite[Thm~3.2]{P40}.
+\end{proof}
+
+The corner $(0,\infty)$ thus remains a pure discontinuity, whose removal is
+the one-dimensional continuity wall already identified in \cite[\S5.1]{P41}.
+Form~A reduces to that wall.
+
+\subsection{Two byproducts}
+The analysis \cite[]{P40} produced two unconditional byproducts of
+independent interest. First, the only non-degenerate ledger---the Weil side
+at $x=\infty$---admits a closed form for the first kernel block:
+for $N(\lambda_0)=1$,
+\[
+B_{\lambda_0}(r)=\tfrac18\operatorname{sech}^{1/2}(r)\bigl(105\operatorname{sech}^4 r-78\operatorname{sech}^2 r+5\bigr),
+\]
+whose per-prime increments are positive for prime powers $p^m\le7$ and
+negative for $p^m\ge8$, and whose prime series \emph{diverges} like
+$(5\sqrt2/8)\log X$. Hence the trace identity of \cite[Thm~4.1]{P40}
+is strictly formal: the CCM test function sits exactly on the boundary of
+the Weil class (the poles of the weight at $\pm i/2$). Second, the analysis
+corrected two prior errors in the corpus: a sign in the evolution equation
+\cite[]{P40} and an omitted on-critical block \cite[]{P40},
+the latter invalidating an earlier sign heuristic and reopening the sign of
+$\partial_t T|_{0}$ under $\neg\RH$ as a declared gap.
+
+\section{Form B survives: amplification of the negative index}\label{sec:formB}
+
+\subsection{The Deligne skeleton, transplanted}
+Deligne's proof over function fields \cite{Del74} is, in skeleton, not a
+positivity argument: an integer invariant (the weight), an amplification
+(a tensor power multiplies the defect), a uniform sublinear bound
+(rationality: the poles do not move), and the conclusion that an integer
+bounded by something sublinear in its own multiple must vanish. The CCM
+programme already supplies the integer invariant: $\kappa(Q)=2m$, localised
+on $\Koff$. Form~B asks for the amplification.
+
+\subsection{The negative index is strictly superadditive}
+The first half of the falsifier stated in \cite[\S7]{P41}---``perhaps
+$\kappa$ is exactly additive under every available product''---is false.
+
+\begin{theorem}[Tensor index]\label{thm:tensor-index}
+For finite-dimensional Krein spaces with quadratic forms of signature
+$(p_1,q_1)$ and $(p_2,q_2)$,
+\[
+\negind(Q_1\otimes Q_2)=p_1q_2+q_1p_2.
+\]
+This is strictly superadditive in the negative index whenever
+$(p_1-1)q_2+(p_2-1)q_1>0$.
+\end{theorem}
+
+\begin{proof}
+In a Sylvester basis diagonalising each $Q_i$ to $\pm1$, the product basis
+diagonalises $Q_1\otimes Q_2$; a product vector is negative iff exactly one
+factor is negative, giving $p_1q_2+q_1p_2$ negative directions.
+\end{proof}
+
+\begin{theorem}[Exponential amplification on $\Koff$]\label{thm:amplify}
+With $m\ge1$ off-critical quadruples, $\psi=(\Koff,Q|_{\Koff})$ has
+signature $(2m,2m)$, and under the Krein tensor product
+\[
+\kappa(\psi^{\otimes k})=\tfrac12(4m)^k\;\ge\;k\cdot2m=k\,\kappa(\psi)
+\qquad(k\ge1),
+\]
+with equality only at $k=1$. Moreover $m=0\Rightarrow\kappa(\psi^{\otimes k})=0$
+for all $k$: the invariant of the powers detects RH at every level.
+\end{theorem}
+
+This is ingredient~(1)--(2) of the skeleton, unconditional. The full tensor
+product on $K$ (not its restriction to $\Koff$) is infinite-dimensional and
+gives $\kappa=\infty$ already at $k=2$; the legitimate, finite invariant is
+the \emph{relative} index on $\Koff$ \cite[\S3]{P40}.
+
+\subsection{The sterility lemma}
+Why is this not already a proof? Because amplification alone is sterile.
+
+\begin{proposition}[Sterility]\label{prop:sterility}
+In the abstract Krein-tensor setting, both the amplification (a) and any
+bound on $\kappa(\psi^{\otimes k})$ (b) are computed from the same signature
+data. No contradiction can be extracted from (a) and (b) together unless (b)
+is supplied by a source independent of the signature.
+\end{proposition}
+
+In Deligne the independent source is cohomological rationality: the poles of
+the $L$-function of the tensor family lie at prescribed places, with an
+additive error uniform in $k$, guaranteed by the finite-dimensionality of
+the $\ell$-adic cohomology. The question for Form~B is whether the CCM
+framework possesses an analogous independent finiteness source. It does not
+possess it for free---the tensor product must first be \emph{realised}
+analytically, as a functional with its own explicit formula---and this is
+the experiment we now execute.
+
+\section{The decisive experiment: two-variable Weil with a diagonal kernel}\label{sec:experiment}
+
+\subsection{Setup}
+We must realise the tensor square $(\Koff,Q|_{\Koff})^{\otimes2}$ as a
+spectral block of a functional whose arithmetic side is computable without
+the positions of the zeros (Missing Lemma~5.2 of \cite[]{P40}).
+The natural candidate is the two-variable Weil functional. Applied to a
+product kernel $h(x_1,x_2)=f_1(x_1)f_2(x_2)$ it factors as
+$\mathcal{W}\otimes\mathcal{W}$, with zero term
+$\sum_{\rho_1,\rho_2}\hat f_1(\rho_1)\hat f_2(\rho_2)$. The eigenvalues of
+$H_C\otimes I+I\otimes H_C$ are the sums $\rho_1+\rho_2$; to see them we
+must \emph{couple} the variables.
+
+\subsection{The thickened diagonal}
+The naive diagonal $h(x_1,x_2)=g(x_1x_2)$ diverges: with $u=x_1x_2$,
+$v=x_1$, the inner $v$-integral $\int_0^\infty v^{\rho_1-\rho_2-1}\,dv$ has
+no decay. The well-defined object is the \emph{thickened} multiplicative
+diagonal
+\begin{equation}\label{eq:thick}
+h(x_1,x_2)=g(x_1x_2)\,\varphi(x_1/x_2),\qquad
+\varphi\in C_c^\infty(\bbR_+^*).
+\end{equation}
+
+\begin{theorem}[Spectral side; the Minkowski sum]\label{thm:signature}
+With $u=x_1x_2$, $v=x_1/x_2$ (Jacobian $dx_1\,dx_2=du\,dv/2v$, exponent
+$v^{(\rho_1-\rho_2)/2-1}$), the Mellin transform of \eqref{eq:thick} is
+\[
+\hat h(\rho_1,\rho_2)=\tfrac12\,\hat g\!\Bigl(\tfrac{\rho_1+\rho_2}{2}\Bigr)\,
+\hat\varphi\!\Bigl(\tfrac{\rho_1-\rho_2}{2}\Bigr),
+\]
+so the zero term becomes $\sum_{\rho_1,\rho_2}\hat g(\tfrac{\rho_1+\rho_2}{2})
+\hat\varphi(\tfrac{\rho_1-\rho_2}{2})$: the Minkowski sum of zero pairs,
+weighted in their difference. For one quadruple
+$\rho\in\{\tfrac12\pm\delta\pm i\gamma_0\}$, the sixteen pairs
+$(\rho_i,\rho_j)$ organise under $\rho\mapsto1-\bar\rho$ into eight
+fixed-point-free orbits---eight hyperbolic planes---so the
+$16$-dimensional block has signature exactly $(8,8)$, matching
+$\negind(Q|_{\Koff}^{\otimes2})=8$ of Theorem~\ref{thm:tensor-index}, with
+no degeneration.
+\end{theorem}
+
+\begin{remark}[$\varphi$ carries the index]
+A finding not anticipated in \cite{P41,P40}: the thickening weight
+$\hat\varphi$ is not a mere regulariser. Of the eight negative directions,
+only two sit at the real sums $\rho_i+\rho_j-1=\pm2\delta$; the other six
+live at purely imaginary sums, where the off-criticality $\Real=\tfrac12\pm\delta$
+is registered \emph{only} by $\hat\varphi$ through $\Real\bigl(\tfrac{\rho_i-\rho_j}{2}\bigr)=\pm\delta$.
+The difference variable is a genuine carrier of the negative index, not an
+artefact of regularisation.
+\end{remark}
+
+\subsection{The arithmetic side is autonomous}
+This is the decisive point. The Hadamard barrier MW-7 would reappear if the
+mixed zeros$\times$primes terms of the doubled functional required the
+positions of the zeros. They do not.
+
+\begin{theorem}[Mixed terms reabsorb]\label{thm:mixed}
+Applied slice by slice---fixing the first variable at a prime power $n$ and
+using the one-variable explicit formula on $x_2\mapsto h(n,x_2)\in
+C_c^\infty$---the apparent zeros$\times$primes terms of the two-variable
+functional collapse to arithmetic$\times$arithmetic terms. MW-7 does not
+appear inside $\Wtwo$ \cite[Thm~4.4]{P40}.
+\end{theorem}
+
+\begin{theorem}[Almost-prime functional]\label{thm:almostprime}
+For the thickened diagonal \eqref{eq:thick}, the primes$\times$primes block
+of $\Wtwo$ is
+\begin{equation}\label{eq:almostprime}
+\sum_{N\ge1} g(N)\sum_{d\mid N}\La(d)\,\La(N/d)\,\varphi\!\bigl(d^2/N\bigr),
+\end{equation}
+a $\varphi$-weighted transform of the Dirichlet convolution
+$\La\star\La$---the almost-prime part of Selberg's
+$\La_2(N)=\La(N)\log N+(\La\star\La)(N)$---together with three
+finitely-supported terms with $g,\varphi$ interchanged. It is computable
+from the primes alone, without the positions of the zeros
+\cite[Thm~4.2]{P40}.
+\end{theorem}
+
+Theorems~\ref{thm:signature}--\ref{thm:almostprime} together verify the two
+conditions of Missing Lemma~5.2 of \cite[]{P40}: the doubled Weil
+functional $\Wtwo$ realises the tensor-square spectral block, and its
+arithmetic side is autonomous, living on the almost-prime semigroup. The
+candidate for the analytic realisation $X_2$ is thus
+$\Wtwo$ restricted to thickened diagonals, with
+$Q_2(h,h')=\Wtwo(h\star\tilde h')$.
+
+\section{What we want to prove: the sieve-to-index bridge}\label{sec:bridge}
+
+\subsection{The honest accounting}
+The amplification (Theorem~\ref{thm:amplify}) and the realisation
+(\S\ref{sec:experiment}) are in hand. By the sterility lemma
+(Proposition~\ref{prop:sterility}), the contradiction requires an
+\emph{independent} bound on the negative-index growth of the tensor powers.
+The arithmetic side \eqref{eq:almostprime} is exactly such a potential
+source: it is a functional on almost-primes, supplied by the primes, not by
+the zeros. The remaining problem is to convert a bound on this functional
+into a bound on the index.
+
+\begin{missinglemma}[The sieve-to-index bridge]\label{ml:bridge}
+Let $X_k$ be the $k$-fold thickened-diagonal Weil functional realising
+$(\Koff,Q|_{\Koff})^{\otimes k}$, with arithmetic side the order-$k$
+almost-prime functional generalising \eqref{eq:almostprime}. Prove an
+unconditional upper bound of \emph{sieve type}
+\[
+\kappa\bigl(Q_k^{\mathrm{rel}}\bigr)\;\le\;f(k),\qquad f(k)/k\to0,
+\]
+on the relative negative index of $Q_k$ on the off-critical block, with
+$f(k)$ controlled by the almost-prime functional---the analogue of
+``the poles do not move,'' here a uniform sieve bound rather than a
+positivity.
+\end{missinglemma}
+
+If proved, Missing Lemma~\ref{ml:bridge} closes the argument: combined with
+the unconditional lower bound $\kappa(\psi^{\otimes k})\ge2mk$
+(Theorem~\ref{thm:amplify}, in its robust sublinear form), it forces
+$2mk\le f(k)$ for all $k$, hence $m=0$, i.e.\ RH. We claim no proof of it.
+
+\subsection{Why parity does not obstruct it}
+The almost-prime location of \eqref{eq:almostprime} is not an accident, and
+it is the reason for cautious optimism. The parity phenomenon---the
+obstruction that closed the $\omega$-class programme (Arc~A of \cite{P40})
+and that limits all sieve methods---forbids \emph{distinguishing}
+$\omega(n)\bmod2$, equivalently forbids sieves from producing
+\emph{asymptotics} for sequences detected by sign. But Missing
+Lemma~\ref{ml:bridge} asks for an \emph{upper bound} on a bilinear
+almost-prime functional, not an asymptotic and not a sign discrimination.
+Upper bounds on $\La\star\La$-type sums over almost-primes are exactly what
+the Selberg sieve, Vaughan's identity, and the Heath-Brown decomposition
+deliver unconditionally. The functional \eqref{eq:almostprime} lives in the
+one region where the methods operate.
+
+\begin{remark}[The wall it would meet, if any]
+We state the risk plainly. If the bridge required not an upper bound but an
+\emph{asymptotic} evaluation of \eqref{eq:almostprime}---if the index growth
+were governed by the main term of the almost-prime functional rather than by
+a majorant---then the relevant obstruction is the pair-correlation/twin-type
+barrier (Montgomery--Goldston), the difficulty of evaluating
+$\sum\La(n)\La(n+h)$-type correlations. This is a real wall, but it is
+\emph{not} the positivity wall MW-1/MW-4: it is an evaluation barrier, not a
+sign barrier. No route in the programme has previously terminated against
+it. Whether Missing Lemma~\ref{ml:bridge} needs a bound (passable) or an
+asymptotic (the pair-correlation wall) is the first question to settle, and
+it is a finite analytic question about \eqref{eq:almostprime}.
+\end{remark}
+
+\subsection{The shape of a proof, and its falsifiers}
+A proof of Missing Lemma~\ref{ml:bridge} would proceed in three steps, each
+falsifiable:
+\begin{enumerate}[\rm(1)]
+\item \emph{Index from functional.} Express $\kappa(Q_k^{\mathrm{rel}})$ as
+the count of negative eigenvalues of the bilinear form
+$Q_k(h,h')=X_k(h\star\tilde h')$ on the thickened-diagonal test space, and
+bound it by the number of sign changes of the arithmetic kernel
+\eqref{eq:almostprime}. \emph{Falsifier:} if the negative index is not
+controlled by the kernel's sign changes (e.g.\ if the archimedean block
+dominates), the arithmetic side is irrelevant and the route is dead.
+\item \emph{Sieve majorant.} Bound the almost-prime functional by a Selberg
+majorant uniform in $k$. \emph{Falsifier:} if the only available bound grows
+like $k$ or faster (not $o(k)$), the sterility lemma is not overcome.
+\item \emph{Uniformity.} Verify $f(k)/k\to0$ with the implied constant
+independent of $m$. \emph{Falsifier:} if uniformity in $m$ fails, the bound
+cannot kill all $m\ge1$ simultaneously.
+\end{enumerate}
+Step~(1) is the immediate next target; it is finite and self-contained.
+
+\section{Assessment}\label{sec:assessment}
+
+We have closed two of the three surviving forms, with reasons that sharpen
+the map: Form~C is MW-2 quantified into a self-blocking amplifier
+(Theorem~\ref{thm:formC-selfblock}); Form~A is a degeneration forced by the
+forward heat flow (Theorem~\ref{thm:formA-degeneration}). The survivor,
+Form~B, has cleared its first decisive test: the negative index amplifies
+exponentially and unconditionally (Theorem~\ref{thm:amplify}), and the
+tensor square is realised by a two-variable Weil functional whose
+arithmetic side is autonomous and supported on almost-primes
+(Theorems~\ref{thm:signature}--\ref{thm:almostprime}), with the Hadamard
+barrier absent from the functional.
+
+The entire weight now rests on one unconditional statement, Missing
+Lemma~\ref{ml:bridge}, of a kind that lives where sieve methods work, and
+whose only foreseeable wall is an evaluation barrier distinct from every
+positivity wall the programme has met. We make no prediction about whether
+it is provable. We claim only that the search for the missing idea has
+narrowed to a single, finite, falsifiable analytic question: does an
+unconditional sieve bound on the almost-prime functional
+\eqref{eq:almostprime} control the negative-index growth of its tensor
+powers? That narrowing---not any claim of progress toward RH itself---is
+the contribution of this paper.
+
+\begin{thebibliography}{99}
+
+\bibitem{CCM24} A.~Connes, C.~Consani, H.~Moscovici,
+\emph{Spectral realisation of zeta zeros and the Riemann--Roch programme}
+(2024).
+
+\bibitem{Del74} P.~Deligne, \emph{La conjecture de Weil. I},
+Publ. Math. IH\'ES \textbf{43} (1974), 273--307.
+
+\bibitem{deBruijn50} N.~G.~de~Bruijn, \emph{The roots of trigonometric
+integrals}, Duke Math. J. \textbf{17} (1950), 197--226.
+
+\bibitem{Weil52} A.~Weil, \emph{Sur les ``formules explicites'' de la
+th\'eorie des nombres premiers}, Comm. S\'em. Math. Univ. Lund (1952),
+252--265.
+
+\bibitem{P35} D.~A.~Trejo Pizzo, \emph{Pontryagin spectral index of the Weil form and the Connes scaling operator: a bridge theorem for the Riemann Hypothesis}, preprint, 2026.
+
+\bibitem{P39} D.~A.~Trejo Pizzo, \emph{A trace and measure criterion for the Riemann Hypothesis from the zeta spectral triple}, preprint, 2026.
+
+\bibitem{P40} D.~A.~Trejo Pizzo, \emph{The localized Weil form and its Kre\u\i n--Pontryagin index: localization, obstruction, and rigidity}, preprint, 2026.
+
+\bibitem{P41} D.~A.~Trejo Pizzo, \emph{The exhaustion of one-dimensional
+propagation: a structural no-go for the Riemann Hypothesis, and two
+directions that survive it} (programme paper P41, 2026).
+
+\bibitem{bgIK} H.~Iwaniec and E.~Kowalski, \emph{Analytic Number Theory}, Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{53}, AMS, 2004.
+\bibitem{bgMV} H.~L.~Montgomery and R.~C.~Vaughan, \emph{Multiplicative Number Theory I: Classical Theory}, Cambridge Univ.\ Press, 2007.
+\bibitem{bgFI} J.~Friedlander and H.~Iwaniec, \emph{Opera de Cribro}, Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{57}, AMS, 2010.
+\bibitem{bgTenenbaum} G.~Tenenbaum, \emph{Introduction to Analytic and Probabilistic Number Theory}, 3rd ed., Grad.\ Stud.\ Math.\ \textbf{163}, AMS, 2015.
+\end{thebibliography}
+
+\end{document}

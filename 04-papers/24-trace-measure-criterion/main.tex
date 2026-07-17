@@ -1,0 +1,359 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RH}{\mathrm{RH}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\dnu}{d\nu}
+\newcommand{\dmfull}{dm_{\mathrm{full}}}
+\newcommand{\dmon}{dm_{\mathrm{full,on}}}
+\newcommand{\zon}{\zeta_{\mathrm{on}}}
+\newcommand{\Tlam}{T_\lambda}
+\newcommand{\Wlam}{W_\lambda}
+
+\title[A Trace--Measure Criterion]{A trace and measure criterion for the Riemann Hypothesis\\
+from the zeta spectral triple}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgConnes99,bgCC21}
+\begin{abstract}
+The zeta spectral triple attaches to $\zeta$ two spectral measures: the full measure
+$\dmfull$, built from $|\zeta(\half+is)|^2$, and the on-critical measure $\dmon$, built from
+the Hadamard product with every zero forced onto the critical line. We study their difference,
+the signed measure $\dnu=\dmfull-\dmon$, and prove that it is the exact obstruction to the
+Riemann Hypothesis. Our central unconditional result is a \emph{dominance theorem}: the
+density $R(s)=|\zeta(\half+is)/\zon(\half+is)|^2$ satisfies $R\ge1$ for all real $s$, with
+equality if and only if every nontrivial zero lies on the line; hence $\dnu\ge0$
+unconditionally, and $\dnu=0\iff\RH$. From this single non-negative measure we derive a
+synthesis: eight a priori different conditions on $\zeta$ --- a zero measure, the vanishing of
+a Nevanlinna functional, a Jensen excess, a relative entropy, a conditional-positive trace,
+and the others --- are pairwise equivalent, all reducing to $\dnu=0$. We give the
+quantitative lower bound that an off-critical zero forces on the trace $\Tlam=\int\Wlam\,\dnu$
+(second order in the off-line displacement), and we are careful about the one direction that is
+not unconditional: recovering $\dnu$ from the trace family $\{\Tlam\}$ requires the totality of
+the Abel kernels in $L^2(\dnu)$, which we state as an explicit completeness hypothesis and
+connect to the moment-rigidity criterion for $\RH$ proved elsewhere; we do not use, and we
+explicitly avoid, any pointwise positivity of the Abel kernel as a quadratic form. We frame the
+obstruction through the function-field analogue, where the same measure vanishes by Weil's
+three structural pillars (a polarized cohomology, a Frobenius, a Lefschetz pairing), and
+isolate the missing pillar for $\zeta$ as the Hadamard barrier: the Hadamard product delivers
+$\dnu\ge0$ but not the completeness or the positivity that would force $\dnu=0$. Nothing here
+assumes or proves the Riemann Hypothesis; the contribution is a clean non-negative invariant
+whose vanishing is $\RH$, together with a precise account of what its vanishing would require.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+The zeta spectral triple represents $\zeta$ through a self-adjoint Jacobi operator whose
+spectral data encode the nontrivial zeros. Two measures arise naturally. The \emph{full}
+spectral measure $\dmfull$ carries the actual modulus $|\zeta(\half+is)|^2$; the
+\emph{on-critical} measure $\dmon$ carries the modulus of the function $\zon$ obtained from the
+Hadamard product of $\zeta$ by relocating every zero onto the critical line. If the Riemann
+Hypothesis ($\RH$) holds, $\zeta=\zon$ and the two coincide; in general they differ, and the
+difference
+\[
+\dnu=\dmfull-\dmon
+\]
+is a signed measure on $\mathbb R$ that vanishes exactly when $\RH$ holds. This paper is a study
+of $\dnu$ as an invariant in its own right.
+
+The main unconditional fact is that $\dnu$ has a sign. Writing $R(s)=|\zeta(\half+is)/\zon
+(\half+is)|^2$ for the density of $\dmfull$ relative to $\dmon$, we prove $R(s)\ge1$ for all
+real $s$ (Theorem~\ref{thm:dominance}), with equality iff there are no off-critical zeros; thus
+$\dnu\ge0$ unconditionally, and $\dnu=0\iff\RH$ (Corollary~\ref{cor:dnu}). The mechanism is
+elementary and exact: each off-critical zero, together with the three partners forced on it by
+the functional equation and conjugation, contributes to $R$ a factor $\ge1$ that degenerates to
+$1$ precisely when the off-line displacement vanishes.
+
+This non-negative measure organizes a number of previously separate criteria. We prove a
+synthesis theorem (Theorem~\ref{thm:eight}): eight conditions --- among them the vanishing of a
+Nevanlinna transform of $\dnu$, the vanishing of a Jensen excess on a disk model of $\zeta$, the
+vanishing of a relative entropy, and the vanishing of the conditional-positive trace family
+$\{\Tlam\}$ --- are all equivalent to $\dnu=0$, hence to $\RH$. We then turn to the trace
+$\Tlam=\int\Wlam\,\dnu$ with $\Wlam$ the positive Abel kernel. Because $\dnu\ge0$ and $\Wlam>0$,
+each $\Tlam\ge0$ \emph{without cancellation}, and a single off-critical zero forces a strictly
+positive lower bound that is second order in its displacement (Proposition~\ref{prop:lower}).
+The one delicate point --- which we treat with care --- is the reverse implication: that
+$\Tlam=0$ for all $\lambda$ forces $\dnu=0$. This requires the totality of $\{\Wlam\}$ in
+$L^2(\dnu)$; we isolate it as an explicit completeness hypothesis and relate it to the
+moment-rigidity criterion for $\RH$ established through orthogonal polynomials on the line
+\cite{MomentRigidity}. We do \emph{not} appeal to any pointwise sign of $\Wlam$ as a quadratic
+form; the only positivity used is that of $\dnu$ itself and of the scalar test functions.
+
+Finally we locate the obstruction structurally. In the function-field analogue the same measure
+vanishes \emph{for a proven reason}: Weil's three pillars --- a polarized cohomology with a
+positive intersection form, a Frobenius whose eigenvalues are the zeros, and a Lefschetz/Hodge
+pairing forcing them onto the critical circle. For $\zeta$ the first two have candidate
+analogues but the polarization is absent; what remains is the \emph{Hadamard barrier}: the
+Hadamard product supplies $\dnu\ge0$ but supplies neither the completeness nor the positive
+intersection form that would force $\dnu=0$. We make this comparison precise
+(\S\ref{sec:weil}--\S\ref{sec:barrier}). Nothing in the paper assumes or proves $\RH$.
+
+\section{The two measures and the density $R$}\label{sec:measures}
+
+\begin{definition}[Full and on-critical measures]\label{def:measures}
+Let $dm_\infty$ be the reference (archimedean) measure of the spectral triple. The full and
+on-critical spectral measures are the absolutely continuous measures
+\[
+\dmfull=|\zeta(\half+is)|^2\,dm_\infty,\qquad
+\dmon=|\zon(\half+is)|^2\,dm_\infty,
+\]
+where $\zon$ is defined by the Hadamard product of $\zeta$ with every nontrivial zero
+$\rho=\half+\delta+i\gamma$ replaced by its on-critical projection $\half+i\gamma$. The density
+of $\dmfull$ relative to $\dmon$ is $R(s)=|\zeta(\half+is)/\zon(\half+is)|^2$, and
+\[
+\dnu=\dmfull-\dmon=(R-1)\,\dmon .
+\]
+\end{definition}
+
+\section{The dominance theorem}\label{sec:dominance}
+
+\begin{theorem}[Unconditional dominance of $\zeta$ over $\zon$]\label{thm:dominance}
+For all $s\in\mathbb R$, $R(s)\ge1$, with equality for all $s$ if and only if $\RH$ holds.
+\end{theorem}
+\begin{proof}
+The nontrivial zeros are symmetric under conjugation and $s\mapsto1-s$, so each off-critical
+zero $\rho_0=\half+\delta_0+i\gamma_0$ ($\delta_0\ne0$) belongs to a quadruple
+$\{\rho_0,\bar\rho_0,1-\rho_0,1-\bar\rho_0\}$; the on-critical replacement moves all four to
+$\half\pm i\gamma_0$ (each with multiplicity two). On the critical line $s=\half+it$, the ratio
+$\zeta/\zon$ is the product over off-critical quadruples of
+\[
+\frac{(\half+it-\rho_0)(\half+it-\bar\rho_0)(\half+it-(1-\rho_0))(\half+it-(1-\bar\rho_0))}
+{(\half+it-(\half+i\gamma_0))^2(\half+it-(\half-i\gamma_0))^2}.
+\]
+Computing moduli, $|\half+it-\rho_0|^2=\delta_0^2+(t-\gamma_0)^2$, and likewise the four
+numerator factors give $\delta_0^2+(t\mp\gamma_0)^2$ (twice each), while the denominators give
+$(t-\gamma_0)^2$ and $(t+\gamma_0)^2$ (squared). Hence the squared modulus of the
+single-quadruple contribution is
+\[
+\frac{(\delta_0^2+(t-\gamma_0)^2)^2(\delta_0^2+(t+\gamma_0)^2)^2}{(t-\gamma_0)^4(t+\gamma_0)^4}
+\ge1,
+\]
+since $\delta_0^2+u^2\ge u^2$ for every $u$, with equality iff $\delta_0=0$. The product over
+quadruples converges absolutely (the off-critical zeros, if any, obey the global density bound
+$N(T)=O(T\log T)$, and all factors are $\ge1$), giving $R(s)\ge1$, with equality for all $s$ iff
+every $\delta_0=0$, i.e.\ $\RH$.
+\end{proof}
+
+\begin{corollary}[$\dnu$ is a non-negative invariant for $\RH$]\label{cor:dnu}
+Unconditionally $\dnu=(R-1)\,\dmon\ge0$. Moreover $\dnu=0\iff\RH$, and $\dnu$ is even
+($\dnu(s)=\dnu(-s)$, from $\xi(s)=\xi(1-s)$) and finite, with
+\[
+\int_{\mathbb R}\dnu=\sum_{j}\frac{4\delta_j^2}{\gamma_j^2+\delta_j^2}+O\!\Big(\sum_j
+\frac{\delta_j^4}{\gamma_j^4}\Big)<\infty,
+\]
+the sum over off-critical zeros, convergent because $\sum_j\delta_j^2/\gamma_j^2<\infty$ by the
+zero-counting estimate.
+\end{corollary}
+\begin{proof}
+Non-negativity and the equivalence are Theorem~\ref{thm:dominance}. Parity is the functional
+equation. For finiteness, each quadruple contributes $(R-1)$ of order $\delta_j^2/\gamma_j^2$,
+summable by $N(T)=O(T\log T)$ and $\sum_j\delta_j^2/\gamma_j^2<\infty$.
+\end{proof}
+
+\begin{remark}[The curve case]\label{rem:curve}
+For a smooth projective curve over a finite field, the analogous measure vanishes identically:
+every zero of the zeta function already lies on the critical circle, so the product analogous
+to $R$ has no nontrivial factors. There $\dnu=0$ is \emph{known} from Weil's proof; for $\zeta$
+we know only $\dnu\ge0$. The whole difficulty is the gap between these two statements, made
+precise in \S\ref{sec:weil}--\S\ref{sec:barrier}.
+\end{remark}
+
+\section{The synthesis: eight equivalent criteria}\label{sec:eight}
+
+Several criteria that arise independently --- from a Nevanlinna transform, a Jensen excess on a
+disk model, a relative entropy, and the spectral trace --- all reduce to $\dnu=0$.
+
+\begin{theorem}[Eight equivalent criteria]\label{thm:eight}
+The following are pairwise equivalent.
+\begin{enumerate}[\upshape(1)]
+\item \textup{(RH)} every nontrivial zero of $\zeta$ has $\Re s=\half$;
+\item \textup{(Zero measure)} $\dnu=0$;
+\item \textup{(Nevanlinna)} $\mathcal G(z)=\int_{\mathbb R}\frac{s+z}{s-z}\,\dnu(s)$ vanishes
+identically on $\{\Im z>0\}$;
+\item \textup{(Trace)} $\Tlam=\int_{\mathbb R}\Wlam\,\dnu=0$ for every $\lambda>0$, where
+$\Wlam>0$ is the Abel kernel;
+\item \textup{(Jensen excess)} $\delta=\sum_{\Re\rho>1/2}\log(|\rho|/|\rho-1|)=0$;
+\item \textup{(Variational)} the squared distance $\widetilde\delta_\lambda^2$ from
+$|\zeta|^2dm_\infty$ to the on-critical variety vanishes for every $\lambda$;
+\item \textup{(Relative entropy)} $\mathrm{KL}(\dmfull\,\|\,\dmon)=0$;
+\item \textup{(CCM distance)} $d_{\mathrm{CCM}}=\sup_{\lambda>0}\Tlam=0$.
+\end{enumerate}
+The equivalences $(1)\Leftrightarrow(2)\Leftrightarrow(3)\Leftrightarrow(5)\Leftrightarrow(7)$
+are unconditional. The equivalences involving the trace, $(2)\Leftrightarrow(4)\Leftrightarrow
+(6)\Leftrightarrow(8)$, hold under the completeness hypothesis of \S\ref{sec:trace}
+\textnormal{(}the totality of $\{\Wlam\}$ in $L^2(\dnu)$\textnormal{)}; the forward directions
+$(2)\Rightarrow(4),(6),(8)$ are unconditional.
+\end{theorem}
+\begin{proof}
+$(1)\Leftrightarrow(2)$ is Corollary~\ref{cor:dnu}. $(2)\Leftrightarrow(3)$: the Nevanlinna
+kernels $\{(s+z)/(s-z):\Im z>0\}$ are total in $L^2(\dnu)$, so $\mathcal G\equiv0\iff\dnu=0$.
+$(1)\Leftrightarrow(5)$: by Jensen's formula on the disk model $F(z)=\xi(z/(z-1))$, the excess
+$\delta\ge0$ with equality iff $F$ is zero-free in $|z|<1$, iff $\RH$. $(2)\Leftrightarrow(7)$:
+$\mathrm{KL}(\dmfull\|\dmon)=\int\log R\,\dmon$, and $\log x\ge(x-1)-\half(x-1)^2$ with $R\ge1$
+gives $\mathrm{KL}=0\iff R=1$ a.e.\ $\iff\dnu=0$. For the trace equivalences: $\dnu\ge0$ and
+$\Wlam>0$ give $\Tlam\ge0$, so $\dnu=0\Rightarrow\Tlam=0\ \forall\lambda$ (forward,
+unconditional); the converse $\Tlam=0\ \forall\lambda\Rightarrow\dnu=0$ is exactly the
+completeness hypothesis of \S\ref{sec:trace}. $(2)\Leftrightarrow(6)$ is the same statement,
+since $\widetilde\delta_\lambda^2=\Tlam$ up to a positive constant, and $(4)\Leftrightarrow(8)$
+because $d_{\mathrm{CCM}}=\sup_\lambda\Tlam$ vanishes iff every $\Tlam$ does.
+\end{proof}
+
+\section{The trace, its lower bound, and the completeness hypothesis}\label{sec:trace}
+
+\begin{proposition}[Lower bound under $\neg\RH$]\label{prop:lower}
+Suppose $\neg\RH$, with off-critical zeros $\rho_j=\half+\delta_j+i\gamma_j$. For each
+$\lambda>0$ and each $j$ with $|\gamma_j|\le\lambda$,
+\[
+\Tlam\ge2\sum_{|\gamma_j|\le\lambda}\delta_j^2\,K_\lambda(\gamma_j),\qquad
+K_\lambda(\gamma_j)=\Wlam(\gamma_j)\,\dmon(\{\gamma_j\})>0
+\]
+for $\lambda$ large enough; hence the right-hand side is strictly positive. The trace detects an
+off-critical zero to second order in its displacement $\delta_j$.
+\end{proposition}
+\begin{proof}
+By Theorem~\ref{thm:dominance}, near $\gamma_j$ the density satisfies $R(t)-1\ge(\delta_j^2+
+(t-\gamma_j)^2)^2/(t-\gamma_j)^4-1\ge2\delta_j^2/(t-\gamma_j)^2+O(\delta_j^4)$; integrating
+$\Wlam\,(R-1)\,\dmon$ over a unit window at $\gamma_j$ and summing the (non-negative)
+contributions gives the bound.
+\end{proof}
+
+The decisive point is the reverse implication. Since $\dnu\ge0$ and $\Wlam>0$, the trace is a
+\emph{linear} functional of a non-negative measure tested against a positive kernel; there is no
+sign cancellation, and the only question is whether the kernels $\{\Wlam\}$ \emph{see all of}
+$\dnu$.
+
+\begin{definition}[Completeness hypothesis]\label{def:completeness}
+\textbf{(C)}\ The Abel kernels $\{\Wlam:\lambda>0\}$ are total in $L^2(\dnu)$ for every
+non-negative even finite measure $\dnu$ of the form $(R-1)\dmon$.
+\end{definition}
+
+\begin{theorem}[Trace criterion under (C)]\label{thm:trace-crit}
+Under hypothesis \textnormal{(C)}, $\Tlam=0$ for all $\lambda>0$ if and only if $\RH$.
+Unconditionally, $\RH\Rightarrow\Tlam=0\ \forall\lambda$, and a single off-critical zero forces
+some $\Tlam>0$ \textnormal{(}Proposition~\ref{prop:lower}\textnormal{)}.
+\end{theorem}
+\begin{proof}
+$\RH\Rightarrow\dnu=0\Rightarrow\Tlam=0$ for all $\lambda$ (Corollary~\ref{cor:dnu}). Under (C),
+$\Tlam=0\ \forall\lambda$ means $\dnu\perp\Wlam$ for all $\lambda$, hence $\dnu=0$ by totality,
+hence $\RH$.
+\end{proof}
+
+\begin{remark}[What is and is not used]\label{rem:notused}
+We emphasize that Theorem~\ref{thm:trace-crit} uses \emph{only} $\dnu\ge0$ (the dominance
+theorem) and the scalar positivity $\Wlam>0$. It does \emph{not} use, and we do not assert, any
+positivity of $\Wlam$ as a quadratic form (a kernel positivity); such a pointwise-kernel claim
+is false in general and plays no role here. Hypothesis (C) is a genuine analytic input --- a
+completeness of the Abel system in $L^2(\dnu)$ --- and is the honest residue of the trace
+criterion. It is equivalent, via the orthogonal-polynomial realization of $\dnu$, to the
+moment-rigidity criterion proved in \cite{MomentRigidity}, where $\RH$ is shown equivalent to
+the constancy of a sequence of Christoffel-type functionals; (C) is the statement that the trace
+family recovers those functionals.
+\end{remark}
+
+\section{The function-field mirror: Weil's three pillars}\label{sec:weil}
+
+The reason $\dnu$ vanishes in the function-field case is structural and instructive.
+
+\begin{theorem}[Function-field trace vanishes]\label{thm:ff}
+For the zeta function $Z_C$ of a smooth projective curve $C$ over a finite field, the analogue
+$\dnu^C$ of $\dnu$ is identically zero.
+\end{theorem}
+
+The vanishing rests on three pillars, of which $\zeta$ has analogues of the first two but not
+the third:
+\begin{enumerate}[(P1)]
+\item a finite-dimensional cohomology $H^1(C)$ carrying the zeros as Frobenius eigenvalues
+(\emph{for $\zeta$}: a candidate spectral realization exists --- the Jacobi operator of the
+spectral triple --- but it is infinite-dimensional and its self-adjointness is the analogue of,
+not a substitute for, the Frobenius);
+\item a Lefschetz/explicit-formula trace relating the eigenvalues to point counts
+(\emph{for $\zeta$}: the Riemann--Weil explicit formula plays this role);
+\item a \textbf{polarization}: a positive intersection form on $H^1(C)$ (the Hodge index /
+Riemann form) that forces the Frobenius eigenvalues onto the critical circle
+(\emph{for $\zeta$}: absent --- this is exactly the missing positivity).
+\end{enumerate}
+
+\begin{remark}
+The measure $\dnu$ is the analytic shadow of the failure of: in the curve case the
+polarization forces $R\equiv1$ (all zeros on the circle, $\dnu^C=0$); for $\zeta$ the Hadamard
+product gives only $R\ge1$, the one-sided remnant of a polarization that is not known to be
+two-sided. The trace criterion (Theorem~\ref{thm:trace-crit}) and the moment rigidity of
+\cite{MomentRigidity} are two ways of asking for the missing pillar.
+\end{remark}
+
+\section{The Hadamard barrier}\label{sec:barrier}
+
+\begin{definition}[Hadamard barrier]\label{def:barrier}
+The \emph{Hadamard barrier} is the gap between the two facts: (a) the Hadamard product of $\xi$
+yields, unconditionally, the one-sided bound $R\ge1$, i.e.\ $\dnu\ge0$; (b) forcing $\dnu=0$
+requires either the completeness (C) of the Abel system in $L^2(\dnu)$ or, equivalently, a
+positive intersection form on the spectral realization. The Hadamard product delivers (a)
+but not (b).
+\end{definition}
+
+\begin{proposition}[The barrier is genuine]\label{prop:barrier}
+The implication $\dnu\ge0\Rightarrow\dnu=0$ is false for general non-negative even finite
+measures; it holds for the specific $\dnu=(R-1)\dmon$ if and only if $\RH$. Hence no purely
+soft argument from $\dnu\ge0$ can close the gap: the additional input is exactly of the strength
+of $\RH$, and is supplied by neither the Hadamard product nor the explicit formula alone.
+\end{proposition}
+\begin{proof}
+A non-negative even finite measure need not vanish, so $\dnu\ge0$ alone is insufficient. By
+Corollary~\ref{cor:dnu}, $\dnu=(R-1)\dmon=0\iff\RH$. Thus any argument deducing $\dnu=0$ supplies
+$\RH$, so it cannot be soft; in particular it is not a consequence of the structural facts
+(dominance, explicit formula, self-adjointness of the Jacobi operator) that hold unconditionally.
+\end{proof}
+
+\section{Conclusion}
+
+The difference of the two spectral measures of the zeta spectral triple is a single, clean,
+non-negative invariant: $\dnu\ge0$ unconditionally (Theorem~\ref{thm:dominance}), with $\dnu=0$
+exactly the Riemann Hypothesis (Corollary~\ref{cor:dnu}). It unifies a family of criteria
+(Theorem~\ref{thm:eight}) and is detected to second order by a positive trace family
+(Proposition~\ref{prop:lower}). The criterion's hard direction is honestly isolated: it is the
+completeness (C) of the Abel kernels in $L^2(\dnu)$ (Theorem~\ref{thm:trace-crit},
+Remark~\ref{rem:notused}), equivalent to the moment-rigidity criterion of \cite{MomentRigidity},
+and we use no pointwise kernel positivity. The function-field mirror (\S\ref{sec:weil}) names
+the missing ingredient as Weil's polarization pillar, and the Hadamard barrier
+(\S\ref{sec:barrier}) proves that no soft argument from $\dnu\ge0$ can supply it: the input
+needed is exactly of the strength of $\RH$. The paper neither assumes nor proves the Riemann
+Hypothesis; it provides a sign-definite invariant whose vanishing is $\RH$ and a precise map of
+what its vanishing demands.
+
+\begin{thebibliography}{99}
+\bibitem{MomentRigidity} D.~A.~Trejo Pizzo, \emph{A moment-rigidity criterion for the Riemann
+Hypothesis via Meixner--Pollaczek polynomials}, preprint, 2026.
+\bibitem{CCM} A.~Connes, C.~Consani, H.~Moscovici, \emph{Zeta spectral triples}, preprint,
+arXiv:2511.22755, 2025.
+\bibitem{BaezDuarte} L.~B\'aez-Duarte, \emph{A strengthening of the Nyman--Beurling criterion for
+the Riemann hypothesis}, Atti Accad.\ Naz.\ Lincei \textbf{14} (2003), 5--11.
+\bibitem{Weil} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres
+premiers}, Comm.\ S\'em.\ Math.\ Univ.\ Lund (1952), 252--265.
+\bibitem{KS} I.~S.~Kac, M.~G.~Kre\u\i n, \emph{R-functions --- analytic functions mapping the
+upper half-plane into itself}, Amer.\ Math.\ Soc.\ Transl.\ \textbf{103} (1974), 1--18.
+\bibitem{bgConnes99} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\bibitem{bgCC21} A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the archimedean place}, Selecta Math.\ (N.S.) \textbf{27} (2021), no.~77.
+\end{thebibliography}
+
+\end{document}

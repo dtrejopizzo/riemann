@@ -1,0 +1,267 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,
+  showstringspaces=false,columns=fullflexible,keepspaces=true}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RH}{\mathrm{RH}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\half}{\tfrac12}
+
+\title[RH as a Herglotz Positivity]{The Riemann Hypothesis as a Herglotz positivity:
+$\Re\,\xi'/\xi>0$ in the right half-plane, an unconditional boundary
+identity, and the Hilbert--P\'olya reformulation}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgdeBranges,bgBK,bgConnes99,bgLagarias,bgTitchmarsh,bgEdwards,bgConrey03,bgBombieri00,bgGarnett}
+\begin{abstract}
+We give a clean, self-contained, computationally verified account of the de Branges
+chain criterion for the Riemann Hypothesis in its sharpest analytic form: $\RH$ is
+equivalent to the positivity $\Re\,\xi'/\xi(\sigma+i\tau)>0$ for all
+$\sigma>\half$, i.e.\ to $\xi'/\xi$ being a Herglotz--Nevanlinna function on the
+right half-plane $\{\sigma>\half\}$. We isolate one genuinely unconditional
+ingredient — the boundary identity $\Re\,\xi'/\xi(\half+i\tau)=0$ for all real
+$\tau$, which follows from the functional equation alone — and use it to display
+the criterion as a harmonic-function problem: $\Re\,\xi'/\xi$ is harmonic in
+$\{\sigma>\half\}$ away from the zeros, vanishes on the boundary, and grows at
+infinity, so the minimum principle yields positivity \emph{provided there are no
+interior poles}; an off-line zero is exactly such a pole and forces a sign change.
+We record the resulting chain of equivalences $\RH\iff\Re\,\xi'/\xi>0\iff
+\xi'/\xi\text{ Herglotz}\iff$ Hilbert--P\'olya (a Herglotz function is the Weyl
+function of a self-adjoint operator, whose spectrum is the zeros, real iff $\RH$).
+The criterion is classical in content (Hermite--Biehler / Laguerre--P\'olya); our
+contribution is the clean unified statement, the explicit unconditional boundary
+identity, the harmonic-measure formulation of the obstruction, and full numerical
+verification. We are explicit that this reformulates $\RH$ and does not prove it:
+the missing step is the exclusion of interior poles from boundary data, the
+program's wrong-sign capstone in harmonic-function form.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Let
+\[
+\xi(s)=\half s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)
+\]
+be the completed Riemann zeta function: entire, of order $1$, real on $\mathbb R$,
+with $\xi(s)=\xi(1-s)$, whose zeros are exactly the nontrivial zeros
+$\rho=\beta+i\gamma$ of $\zeta$, all in the strip $0<\beta<1$. The Riemann
+Hypothesis is $\beta=\half$ for all $\rho$.
+
+A recurring theme of this line of work is that $\RH$ is a \emph{positivity} of an
+indefinite (Kre\u\i n/Pontryagin) form, whose negative index counts the off-line
+zeros~\cite{RP8,RP16,RP21,RP22}. The de Branges chain of Hilbert spaces of entire
+functions packages this positivity as the Hermite--Biehler property of a structure
+function. This paper extracts the resulting criterion in the cleanest possible
+analytic form and makes one of its ingredients fully unconditional and explicit.
+
+\textbf{The criterion.} $\RH$ holds if and only if
+\begin{equation}\label{eq:crit}
+\Re\,\frac{\xi'}{\xi}(\sigma+i\tau)>0\qquad\text{for all }\sigma>\half,\ \text{all }\tau\in\mathbb R,
+\end{equation}
+i.e.\ $\xi'/\xi$ is a Herglotz--Nevanlinna function on $\{\Re s>\half\}$. The
+content of~\eqref{eq:crit} is classical — it is equivalent to
+$\Xi(z):=\xi(\half+iz)$ lying in the Laguerre--P\'olya class (all zeros real),
+i.e.\ to the Hermite--Biehler property of the associated structure
+function~\cite{deBranges,Lagarias}. Our aims are (i) to state it cleanly and verify
+it; (ii) to isolate its one unconditional ingredient; (iii) to phrase the
+obstruction as a sharp harmonic-measure problem; and (iv) to record the
+Hilbert--P\'olya equivalence transparently. We are explicit throughout that this is
+a \emph{reformulation}, equivalent to $\RH$, not a proof.
+
+\section{The criterion and the off-line obstruction}
+\begin{proposition}[The criterion is $\RH$]\label{prop:crit}
+Writing $\Re\,\xi'/\xi(\sigma+i\tau)=\sum_\rho\frac{\sigma-\beta_\rho}{|\sigma+i\tau-\rho|^2}$
+(symmetric Hadamard sum over the zeros), the positivity~\eqref{eq:crit} holds if
+and only if there is no zero with $\beta>\half$ — i.e.\ if and only if $\RH$.
+\end{proposition}
+\begin{proof}
+If $\RH$ holds, every term has $\sigma-\beta_\rho=\sigma-\half>0$ for $\sigma>\half$,
+so $\Re\,\xi'/\xi>0$. Conversely, suppose a zero $\rho_0=\beta_0+i\gamma_0$ has
+$\beta_0>\half$. At $s=\half+\varepsilon+i\gamma_0$ with $0<\varepsilon<\beta_0-\half$,
+its term is $\frac{\half+\varepsilon-\beta_0}{(\half+\varepsilon-\beta_0)^2}
+=\frac{-1}{\beta_0-\half-\varepsilon}<0$; as $\varepsilon\downarrow0$ this stays
+bounded away from $0$, while the on-line zeros contribute
+$\frac{\varepsilon}{\varepsilon^2+(\gamma_0-\gamma)^2}\to0$. Hence
+$\Re\,\xi'/\xi<0$ at points arbitrarily close to $s=\half+i\gamma_0$, violating
+\eqref{eq:crit}. (Numerically, $\Re\,\xi'/\xi$ is small and positive between
+on-line zeros on $\sigma=\half+\varepsilon$, so an $O(1)$ negative term flips the
+sign; Appendix~\ref{app:code}.)
+\end{proof}
+
+\begin{remark}
+Equation~\eqref{eq:crit} says $\xi'/\xi$ maps the half-plane $\{\Re s>\half\}$ into
+the half-plane $\{\Re>0\}$ — a \emph{Herglotz--Nevanlinna} map. The zeros of $\xi$
+are the poles of $\xi'/\xi$ (residue $+1$); a Herglotz function on a half-plane has
+all poles on the boundary, so~\eqref{eq:crit} forces every zero onto
+$\sigma=\half$.
+\end{remark}
+
+\section{The unconditional boundary identity}
+The boundary of the half-plane carries an exact, $\RH$-free fact.
+\begin{theorem}[Boundary identity]\label{thm:boundary}
+For all real $\tau$,
+\[
+\Re\,\frac{\xi'}{\xi}\!\left(\half+i\tau\right)=0 .
+\]
+\end{theorem}
+\begin{proof}
+Differentiating $\xi(s)=\xi(1-s)$ gives $\xi'/\xi(s)=-\,\xi'/\xi(1-s)$. On
+$s=\half+i\tau$ we have $1-s=\half-i\tau=\bar s$, and since $\xi$ has real Taylor
+coefficients, $\xi'/\xi(\bar s)=\overline{\xi'/\xi(s)}$. Therefore
+$\xi'/\xi(s)=-\overline{\xi'/\xi(s)}$, whence $\Re\,\xi'/\xi(s)=0$. No use is made
+of the location of the zeros. (Verified to machine precision,
+Appendix~\ref{app:code}.)
+\end{proof}
+
+\begin{corollary}[Critical-line is a $\sigma$-critical line of $|\xi|$]\label{cor:min}
+$\partial_\sigma\log|\xi(\sigma+i\tau)|=\Re\,\xi'/\xi$ vanishes on $\sigma=\half$;
+thus $\sigma\mapsto|\xi(\sigma+i\tau)|$ has a critical point at $\sigma=\half$ for
+every $\tau$. Its second derivative there is
+$\partial_\sigma\Re\,\xi'/\xi=\Re\,(\xi'/\xi)'=\sum_\rho\frac{(\tau-\gamma_\rho)^2-(\half-\beta_\rho)^2}
+{|\half+i\tau-\rho|^4}$, which under $\RH$ equals $\sum_\rho(\tau-\gamma_\rho)^{-2}>0$, so the
+critical line is a local \emph{minimum} of $|\xi|$ in $\sigma$ — the classical
+``$\xi$ is smallest on the critical line'' picture.
+\end{corollary}
+
+\section{The harmonic-function structure and the obstruction}
+$\Re\,\xi'/\xi$ is harmonic in $\{\sigma>\half\}$ away from the zeros (as the real
+part of a meromorphic function), it vanishes on the boundary
+(Theorem~\ref{thm:boundary}), and $\Re\,\xi'/\xi(\sigma+i\tau)\to+\infty$ as
+$\sigma\to+\infty$ (the $\Gamma$-factor dominates).
+
+\begin{proposition}[Minimum principle vs.\ interior poles]\label{prop:minprinciple}
+If $\xi$ has no zero in $\{\sigma>\half\}$ (i.e.\ $\RH$), then $\Re\,\xi'/\xi$ is
+harmonic there, $=0$ on the boundary and positive at infinity, so by the minimum
+principle $\Re\,\xi'/\xi>0$ throughout $\{\sigma>\half\}$. Conversely, a zero
+$\rho_0$ with $\beta_0>\half$ is an interior pole of $\xi'/\xi$ with residue $+1$;
+near it $\Re\,\xi'/\xi\sim(\sigma-\beta_0)/|s-\rho_0|^2$ takes both signs, so the
+positivity fails. Hence \eqref{eq:crit} $\iff$ no interior poles $\iff\RH$.
+\end{proposition}
+
+\begin{remark}[The new-tool target]
+Theorem~\ref{thm:boundary} furnishes, unconditionally, the boundary data ($\Re=0$ on
+$\sigma=\half$) and the growth at infinity. What is missing is an argument that
+$\Re\,\xi'/\xi$ stays positive in $\half<\sigma<1$ \emph{without assuming the
+interior poles absent} — a Phragm\'en--Lindel\"of / harmonic-measure principle
+robust to possible interior singularities. Equivalently (next section), one must
+\emph{construct} the self-adjoint operator whose Weyl function is $\xi'/\xi$. This
+is the open core.
+\end{remark}
+
+\section{The Herglotz $=$ Hilbert--P\'olya reformulation}
+A function $m$ holomorphic on a half-plane with $\Re\,m\ge0$ there is a
+\emph{Herglotz--Nevanlinna} function; by the spectral theorem such $m$ are exactly
+the Weyl ($m$-) functions of self-adjoint operators / canonical systems, with the
+poles of $m$ being the (real) eigenvalues~\cite{deBranges,Lagarias}. Combining:
+\[
+\boxed{\ \begin{array}{c}
+\RH\iff \Re\,\dfrac{\xi'}{\xi}>0\text{ on }\{\sigma>\half\}
+\iff \dfrac{\xi'}{\xi}\ \text{is Herglotz}\\[6pt]
+\iff \dfrac{\xi'}{\xi}\ \text{is the Weyl function of a self-adjoint operator}.
+\end{array}\ }
+\]
+The last is Hilbert--P\'olya: an operator $H=H^*$ with $\xi'/\xi(s)=\langle(\,\cdot\,-(s-\half)/i\,)^{-1}\rangle$-type
+resolvent data, whose spectrum is $\{\gamma_\rho\}$, real iff $\RH$. The chain makes
+explicit that the analytic positivity~\eqref{eq:crit} and the spectral
+(Hilbert--P\'olya) program are \emph{the same statement}; the indefinite object
+carrying the off-line index is the de Branges/Pontryagin space $H(E_\xi)$ of the
+companion structure function~\cite{RP16,RP22}.
+
+\section{Place in the wrong-sign capstone (honest status)}
+The unconditional input is two-sided/boundary: $\Re\,\xi'/\xi=0$ on the line
+(Theorem~\ref{thm:boundary}) and positive growth at infinity. The missing input is
+one-sided: the exclusion of interior negative singularities
+(Proposition~\ref{prop:minprinciple}). This is precisely the present work's wrong-sign
+capstone~\cite{RP13}: every unconditional handle is a boundary/lower constraint,
+while $\RH$ is the one-sided/upper statement that no zero escapes the line. The de
+Branges sufficient condition for the chain to stay Hermite--Biehler was shown not
+to hold for $\zeta$ by Conrey--Li~\cite{ConreyLi}; the finite-order truncations are
+each positive unconditionally, the full positivity is $\RH$, and the gap is a
+uniformity gap~\cite{RP13}. We therefore present~\eqref{eq:crit}--Theorem~\ref{thm:boundary}
+as a clean, verified \emph{reformulation} with one genuinely unconditional
+ingredient, not as progress past the wall.
+
+\section*{Conclusion}
+$\RH$ is the Herglotz positivity of $\xi'/\xi$ on the right half-plane; the critical
+line is, unconditionally, the locus where $\Re\,\xi'/\xi$ vanishes and where $|\xi|$
+is $\sigma$-stationary; and the whole content is the exclusion of interior poles
+from boundary data — equivalently, the construction of a self-adjoint realization
+(Hilbert--P\'olya). The reformulation is exact and clean; the crossing is the open
+problem.
+
+\appendix
+\section{Reproducible computations}\label{app:code}
+\subsection*{A.1 The criterion $\Re\,\xi'/\xi>0$ for $\sigma>\half$ (Prop.~\ref{prop:crit})}
+\begin{lstlisting}
+import mpmath as mp
+mp.mp.dps = 25
+def xi(s): return mp.mpf('0.5')*s*(s-1)*mp.pi**(-s/2)*mp.gamma(s/2)*mp.zeta(s)
+def xilog(s): return mp.diff(lambda z: mp.log(xi(z)), s)   # xi'/xi
+for sigma in ['1.0','0.7','0.55','0.501']:
+    sg=mp.mpf(sigma)
+    vals=[mp.re(xilog(sg+1j*mp.mpf(t))) for t in [0,10,14.13,20,30,50]]
+    print(sigma, "min Re xi'/xi =", mp.nstr(min(vals),5))   # all > 0 (RH holds in range)
+\end{lstlisting}
+
+\subsection*{A.2 The unconditional boundary identity $\Re\,\xi'/\xi(\half+i\tau)=0$ (Thm.~\ref{thm:boundary})}
+\begin{lstlisting}
+import mpmath as mp
+mp.mp.dps = 25
+def xi(s): return mp.mpf('0.5')*s*(s-1)*mp.pi**(-s/2)*mp.gamma(s/2)*mp.zeta(s)
+def xilog(s): return mp.diff(lambda z: mp.log(xi(z)), s)
+for t in [1,5,10,14.13,20,50,100]:
+    print(t, "Re xi'/xi(1/2+it) =", mp.nstr(mp.re(xilog(mp.mpf('0.5')+1j*mp.mpf(t))),4))  # = 0
+\end{lstlisting}
+
+\subsection*{A.3 The fine scan near the line (positivity is small between zeros)}
+\begin{lstlisting}
+import mpmath as mp
+mp.mp.dps = 25
+def xi(s): return mp.mpf('0.5')*s*(s-1)*mp.pi**(-s/2)*mp.gamma(s/2)*mp.zeta(s)
+def xilog(s): return mp.diff(lambda z: mp.log(xi(z)), s)
+sg=mp.mpf('0.51')
+vals=[(float(t),float(mp.re(xilog(sg+1j*t)))) for t in mp.linspace(0.5,40,80)]
+m=min(vals,key=lambda x:x[1]); print("min on sigma=0.51:", m)   # small positive, between zeros
+\end{lstlisting}
+
+\begin{thebibliography}{9}
+\bibitem{RP8} D.~A.~Trejo Pizzo, \emph{A Weil--Kre\u\i n realization of the explicit formula}, preprint, 2026.
+\bibitem{RP13} D.~A.~Trejo Pizzo, \emph{Two modern routes and the wrong-sign obstruction}, preprint, 2026.
+\bibitem{RP16} D.~A.~Trejo Pizzo, \emph{The Pontryagin index and the finite-defect route}, preprint, 2026.
+\bibitem{RP21} D.~A.~Trejo Pizzo, \emph{The Lefschetz dichotomy}, preprint, 2026.
+\bibitem{RP22} D.~A.~Trejo Pizzo, \emph{The localized Weil form and its Kre\u\i n--Pontryagin index: localization, obstruction, and rigidity}, preprint, 2026.
+
+\bibitem{deBranges} L.~de Branges, \emph{Hilbert Spaces of Entire Functions}, Prentice-Hall (1968).
+\bibitem{Lagarias} J.~C.~Lagarias, \emph{Hilbert spaces of entire functions and Dirichlet $L$-functions}, in Frontiers in Number Theory, Physics and Geometry I, Springer (2006).
+\bibitem{ConreyLi} J.~B.~Conrey, X.-J.~Li, \emph{A note on some positivity conditions related to zeta and $L$-functions}, Internat. Math. Res. Notices (2000).
+\bibitem{bgdeBranges} A.~M.~Odlyzko, \emph{On the distribution of spacings between zeros of the zeta function}, Math.\ Comp.\ \textbf{48} (1987), 273--308.
+\bibitem{bgBK} M.~V.~Berry and J.~P.~Keating, \emph{The Riemann zeros and eigenvalue asymptotics}, SIAM Rev.\ \textbf{41} (1999), 236--266.
+\bibitem{bgConnes99} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\bibitem{bgLagarias} J.~C.~Lagarias, \emph{Hilbert spaces of entire functions and Dirichlet $L$-functions}, in: Frontiers in Number Theory, Physics, and Geometry I, Springer, 2006, 365--377.
+\bibitem{bgTitchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., rev.\ D.~R.~Heath-Brown, Oxford Univ.\ Press, 1986.
+\bibitem{bgEdwards} H.~M.~Edwards, \emph{Riemann's Zeta Function}, Academic Press, 1974.
+\bibitem{bgConrey03} J.~B.~Conrey, \emph{The Riemann Hypothesis}, Notices Amer.\ Math.\ Soc.\ \textbf{50} (2003), 341--353.
+\bibitem{bgBombieri00} E.~Bombieri, \emph{Problems of the Millennium: The Riemann Hypothesis}, Clay Mathematics Institute, 2000.
+\bibitem{bgGarnett} J.~B.~Garnett, \emph{Bounded Analytic Functions}, Academic Press, 1981.
+\end{thebibliography}
+
+\end{document}

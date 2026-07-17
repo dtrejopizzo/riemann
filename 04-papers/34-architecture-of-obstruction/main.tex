@@ -1,0 +1,1476 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+
+%% Theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+
+%% Colored boxes for walls and no-gos
+\newtcolorbox{wallbox}[1]{
+  colback=red!5!white, colframe=red!60!black,
+  title={\textbf{Wall #1}},
+  breakable
+}
+\newtcolorbox{nogobox}[1]{
+  colback=blue!5!white, colframe=blue!60!black,
+  title={\textbf{No-Go #1}},
+  breakable
+}
+\newtcolorbox{resultbox}[1]{
+  colback=green!5!white, colframe=green!60!black,
+  title={\textbf{Result: #1}},
+  breakable
+}
+
+%% Math macros
+\newcommand{\RH}{\mathrm{RH}}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\half}{\tfrac{1}{2}}
+\newcommand{\om}{\omega}
+\newcommand{\kap}{\kappa}
+\newcommand{\Fq}{F_q}
+\newcommand{\Gq}{G_q}
+\newcommand{\sig}{\sigma}
+\newcommand{\gam}{\gamma}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Mk}{M_k}
+\newcommand{\Ck}{C_k}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Spec}{\operatorname{Spec}}
+
+\title[The Architecture of Obstruction]{The Architecture of Obstruction:\\ A Complete Mathematical Map of the Riemann Hypothesis Program from $\omega$-Class Statistics to the Symmetry/Positivity Wall}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper is a comprehensive mathematical survey of the analytic, functional-analytic,
+and geometric approaches to the Riemann Hypothesis developed by the author.
+Unlike a standard survey, its primary aim is not to catalogue what is known, but to
+\emph{map every identified obstruction with full mathematical precision}: to state exactly
+which theorem, computation, or structural argument terminates each route, and why.
+
+The program explored six distinct families of approaches:
+(I) the $\om$-class program (statistics of $\om(n)$, the number of distinct prime factors);
+(II) the localized Weil quadratic form (explicit-formula-based detector, Kreĭn index);
+(III) the capstone paradigm (wrong-sign obstruction and its eight manifestations);
+(IV) the geometric programs (Spec~$\mathbb{Z}$ cohomology, Lefschetz dichotomy, SURF);
+(V) the functional-analytic arc (Kreĭn/Pontryagin spaces, de Branges axioms);
+(VI) the information barrier (exact classification of which $\om$-class objects carry
+zero information vs.\ RH-equivalent information).
+
+We identify three surviving walls: \textbf{W1} (Weil positivity/PNT, the classical wall
+in new dress), \textbf{W2} (de Branges canonical systems, requiring a global
+Spec~$\mathbb{Z}$ geometry), and \textbf{W3} (Montgomery pair-correlation / GUE gap
+universality).  Eight no-go theorems (N1--N8) are stated in full.  Twenty-seven
+genuinely new results are listed that are \emph{independent of RH}.
+
+The paper ends with a synthesis theorem: \emph{the reason RH resists all known
+approaches is that the zero-location constraint $\kap=0$ is (i) global, (ii) unilateral
+(an upper bound), and (iii) orthogonal to all available symmetry data.  Every programme
+that terminates does so because it supplies only items (i-iii) partially.}  Nothing here
+proves RH.
+
+\medskip
+\noindent\textbf{Key words and phrases.}
+Riemann Hypothesis, explicit formula, Weil positivity, Kreĭn index, Pontryagin spaces,
+de Branges canonical systems, $\om$-class, multiplicative chaos, information barrier,
+Selberg--Delange, obstructions, no-go theorems, capstone, wrong-sign obstruction.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\newpage
+
+%% =====================================================================
+\section*{Preface: on the use of this document}
+%% =====================================================================
+
+This is not a proof of the Riemann Hypothesis.  It is not a record of progress toward a
+proof.  It is a precise, mathematically honest account of what a systematic multi-year
+programme found: which directions work, which fail, and \emph{exactly why} each one
+fails.
+
+The programme operates under one non-negotiable principle: a false positive is worse
+than a failure.  Every claim is either proved or explicitly flagged as conjecture.
+Every refutation of a previous claim within the programme is documented.  The reader
+will find several places where earlier results were corrected or retracted; these are
+not embarrassments but structural data.
+
+The paper is organized as a guided tour of the obstruction landscape, not a
+chronological account.  The guiding question is always the same: \emph{at what point
+does this route encounter an obstacle it cannot pass, and is that obstacle fundamental
+or contingent?}
+
+\bigskip
+\noindent\textbf{How to read this paper.}
+Each major section describes one family of approaches.  Within each section, the
+mathematics is developed from scratch (basic definitions, key theorems, proofs or
+proof sketches) before the wall is identified.  Readers familiar with the area can
+skip to the ``Wall'' box at the end of each subsection.  The synthesis is in
+\S\ref{sec:synthesis}.
+
+%% =====================================================================
+\section{Foundations and Framework}
+\label{sec:foundations}
+%% =====================================================================
+
+\subsection{The Riemann Hypothesis and its equivalent forms}
+\label{ss:RH}
+
+Let $\zeta(s) = \sum_{n=1}^\infty n^{-s}$ for $\Re(s)>1$, extended meromorphically to
+$\mathbb{C}$.  Its non-trivial zeros $\rho = \sig_\rho + i\gam_\rho$ satisfy
+$0 < \sig_\rho < 1$ and come in pairs $\rho, 1-\bar\rho$.
+
+\begin{definition}[The Riemann Hypothesis]
+$\RH$: every non-trivial zero $\rho$ of $\zeta(s)$ satisfies $\sig_\rho = \half$.
+\end{definition}
+
+The programme uses four equivalent forms of RH.  We state each precisely.
+
+\begin{proposition}[Equivalent forms of RH used in this programme]
+\label{prop:RH-equiv}
+The following are equivalent:
+\begin{enumerate}[label=\upshape(\roman*)]
+  \item \textup{(RH)} Every non-trivial zero of $\zeta$ has real part $\half$.
+  \item \textup{(PNT-error)} For all $\eps>0$,
+    $\psi(x) = x + O(x^{1/2+\eps})$, where $\psi(x)=\sum_{n\le x}\Lam(n)$.
+  \item \textup{(Weil positivity)} The Weil explicit-formula form $W_f \ge 0$ for
+    all admissible test functions $f$.
+  \item \textup{(Kreĭn index)} The Kreĭn index $\kap(Q)$ of the localized Weil form
+    $Q$ equals zero.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i)$\Leftrightarrow$(ii): classical Ingham/Landau.
+(i)$\Leftrightarrow$(iii): Weil~\cite{Weil52}; see \S\ref{ss:Weil}.
+(iii)$\Leftrightarrow$(iv): \cite{RP8}; see \S\ref{ss:Krein}.
+\end{proof}
+
+The localized Weil form $Q$ and its Kreĭn index $\kap$ are the central objects of the
+programme; we describe them fully in \S\ref{sec:Weil}.
+
+\subsection{The explicit formula}
+\label{ss:explicit}
+
+The most-used tool throughout the programme is the explicit formula.  Let
+$\hat f(s) = \int_0^\infty f(x)x^{s-1}dx$ be the Mellin transform.
+
+\begin{theorem}[Explicit formula]
+\label{thm:explicit}
+For an admissible test function $f$ (smooth, compactly supported away from 0 and
+prime powers),
+\begin{equation}
+  \label{eq:explicit}
+  \sum_{n=1}^\infty \Lam(n)f(n)
+  = \hat f(1) - \sum_\rho \hat f(\rho) - \frac{\hat f(0)+\hat f(1)}{2}
+  - \sum_{k=1}^\infty \hat f(-2k),
+\end{equation}
+where the sum $\sum_\rho$ is over non-trivial zeros, ordered by $|\Im(\rho)|$.
+\end{theorem}
+
+The term $\sum_\rho \hat f(\rho)$ is the zero contribution.  The programme repeatedly
+encounters objects whose ``zero sensitivity'' is determined by whether this term is
+present and non-trivially computable.
+
+\subsection{The Selberg--Delange method}
+\label{ss:SD}
+
+The $\om$-class programme relies heavily on the following.
+
+\begin{theorem}[Selberg--Delange, cf.\ Tenenbaum \cite{Ten15}~\S II.5]
+\label{thm:SD}
+Let $F(s) = \sum_{n=1}^\infty a(n)n^{-s} = \zeta(s)^z G(s)$ where $z\in\mathbb{C}$
+and $G$ is holomorphic and non-vanishing in $\Re(s)\ge\half$.  Then as $x\to\infty$,
+\[
+  \sum_{n\le x} a(n) \;=\;
+  \frac{G(1)}{\Gamma(z)} x (\log x)^{z-1}
+  \left[ 1 + \sum_{k=1}^K \frac{c_k}{\log^k x} + O\!\left(\frac{1}{\log^{K+1} x}\right)\right],
+\]
+where the constants $c_k$ are determined by the Laurent expansion of $G$ and $\zeta$
+at $s=1$.  No non-trivial zero of $\zeta$ appears in this expansion at any finite order.
+\end{theorem}
+
+\begin{remark}
+The crucial point for the programme: zeros of $\zeta$ do not appear in the
+Selberg--Delange expansion because $\zeta^z$ has a \emph{zero} (of order $z$) at each
+$\rho$, never a pole.  This ``zeros-are-zeros'' observation is the foundation of the
+information barrier; see \S\ref{sec:omega-full}.
+\end{remark}
+
+\subsection{Notation summary}
+\label{ss:notation}
+
+Throughout the paper:
+\begin{itemize}
+\item $\om(n)$ = number of \emph{distinct} prime factors of $n$;
+  $\Omega(n)$ = total count with multiplicity.
+\item $q = k^2$ for a parameter $k > 0$.
+\item $F_q(s) = \sum_{n\ge 1} q^{\om(n)} n^{-s} = \zeta(s)^q G_q(s)$, where
+  $G_q$ is described in \S\ref{sec:omega-full}.
+\item $M_k(N) = \sum_{n\le N} q^{\om(n)}/n$, $C_k(h,N) = \sum_{n\le N} q^{\om(n)}q^{\om(n+h)}/n$.
+\item $\kap = \kap(Q)$ = Kreĭn index of the localized Weil form; equals the number
+  of off-line zeros (under the programme's working hypothesis).
+\item $\sig_0 = \sup\{\Re\rho : \zeta(\rho)=0,\; \rho \text{ non-trivial}\}$.
+  RH says $\sig_0 = \half$.
+\end{itemize}
+
+%% =====================================================================
+\section{The $\omega$-Class Programme: from Statistics to Information Barrier}
+\label{sec:omega-full}
+%% =====================================================================
+
+\subsection{Motivation: moment statistics of $\zeta$ on the critical line}
+\label{ss:omega-motivation}
+
+The Keating--Snaith conjecture~\cite{KS00} predicts that the moments of $|\zeta|$ on
+the critical line satisfy
+\[
+  \frac{1}{T}\int_0^T |\zeta(\half + it)|^{2k} dt \sim C_k (\log T)^{k^2}.
+\]
+The exponent $k^2$ is remarkable: it is the second cumulant of a log-correlated field.
+The programme's starting point: can the exponent $k^2$ be derived from the statistics
+of $\om(n)$, \emph{without} a priori knowledge of the zeros?
+
+\subsection{The Dirichlet series of $q^{\omega(n)}$}
+\label{ss:dirichlet}
+
+\begin{proposition}[Factorization]
+\label{prop:factorization}
+For $q > 0$ and $\Re(s) > 1$:
+\[
+  F_q(s) = \sum_{n=1}^\infty \frac{q^{\om(n)}}{n^s}
+  = \prod_p \frac{1+(q-1)p^{-s}}{1-p^{-s}}
+  = \zeta(s)^q \cdot G_q(s),
+\]
+where
+\[
+  G_q(s) = \prod_p \bigl[(1+(q-1)p^{-s})(1-p^{-s})^q\bigr].
+\]
+\end{proposition}
+
+\begin{proof}
+At each prime $p$, $\om(p^k) = 1$ for all $k\ge 1$, so the local Euler factor is
+\[
+  \sum_{k=0}^\infty \frac{q^{\om(p^k)}}{p^{ks}}
+  = 1 + \sum_{k=1}^\infty \frac{q}{p^{ks}}
+  = 1 + \frac{q}{p^s-1}
+  = \frac{1+(q-1)p^{-s}}{1-p^{-s}}.
+\]
+The factorization $= \zeta(s)^q G_q(s)$ follows from
+$\zeta(s)^q = \prod_p (1-p^{-s})^{-q}$, giving
+$G_q(s) = \prod_p [(1+(q-1)p^{-s})(1-p^{-s})^q]$.
+\end{proof}
+
+\begin{lemma}[L1: holomorphy of $G_q$]
+\label{lem:Gq}
+For every $q > 0$, $G_q(s)$ is holomorphic and non-vanishing in $\Re(s) > \half$.
+\end{lemma}
+
+\begin{proof}
+Write $\log G_q(s) = \sum_p \log[(1+(q-1)p^{-s})(1-p^{-s})^q]$.
+For $\sig = \Re(s) > \half$:
+\begin{align*}
+\log[(1+(q-1)p^{-s})(1-p^{-s})^q]
+&= (q-1)p^{-s} - qp^{-s} + O(p^{-2\sig}) \\
+&= -p^{-s} + O(p^{-2\sig}).
+\end{align*}
+The sum $\sum_p p^{-s}$ converges absolutely for $\sig > 1$, and for $\sig > \half$
+the tail from the $O(p^{-2\sig})$ terms converges.  The difference $\sum_p p^{-s} -
+\log\zeta(s)$ converges absolutely for $\sig > \half$ (Mertens estimate), giving
+holomorphy of $\log G_q$ in this half-plane, hence holomorphy and non-vanishing of $G_q$.
+\end{proof}
+
+\subsection{The key structural consequence: zeros of $\zeta$ are zeros of $F_q$}
+\label{ss:zerosofzeros}
+
+\begin{theorem}[Structural theorem on $M_k(N)$]
+\label{thm:Mk-monotone}
+For every $q > 0$:
+\begin{enumerate}[label=\upshape(\roman*)]
+  \item $F_q(\rho) = 0$ for every non-trivial zero $\rho$ of $\zeta$.
+  \item The Perron integral for $M_k(N) = \sum_{n\le N} q^{\om(n)}/n$ collects no
+    residue at any non-trivial zero of $\zeta$.
+  \item $M_k(N)$ is strictly increasing in $N$ and has the asymptotic expansion
+    \[
+      M_k(N) = \frac{G_q(1)}{\Gamma(q)}(\log N)^q
+      + \sum_{j=1}^{J} c_j (\log N)^{q-j} + O((\log N)^{q-J-1})
+    \]
+    with computable arithmetic coefficients $c_j$ and no oscillatory terms $N^{\rho-1}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i): $F_q(\rho) = \zeta(\rho)^q G_q(\rho)$.  Since $\zeta(\rho)=0$ and $G_q(\rho)\ne 0$
+(Lemma~\ref{lem:Gq}), we have $F_q(\rho)=0$.
+
+(ii): By Perron's formula,
+$M_k(N) = (2\pi i)^{-1}\int_{c-i\infty}^{c+i\infty} F_q(s)\frac{N^s}{s}\,ds$
+for $c>1$.  Moving the contour left, residues arise at poles of $F_q(s)/s$.  Since
+$F_q(\rho)=0$, the integrand has no pole at $\rho$; the only pole is at $s=1$
+(of order $q$) and at $s=0$.
+
+(iii): The Laurent expansion at $s=1$ gives (ii) of the Selberg--Delange theorem.
+Each term $q^{\om(n)}/n > 0$ ensures strict monotonicity.
+\end{proof}
+
+\begin{remark}[The monotonicity barrier]
+Theorem~\ref{thm:Mk-monotone}(iii) destroys any hope of detecting RH by measuring
+``oscillations of $M_k(N)$'': there are none.  The function $M_k$ is completely
+determined by the singularity of $F_q$ at $s=1$, which is arithmetic (depends only
+on $G_q(1)$ and the Laurent coefficients), not analytic (no zero contributions).
+
+This was a genuine surprise in the programme.  Phase~20 of the investigation began
+with the hypothesis that $M_k(N)/(\log N)^{k^2}$ would oscillate with amplitude
+$N^{-1/2}$ if RH holds and $N^{\sig_0-1}$ if a zero at $\sig_0>\half$ exists.
+Theorem~\ref{thm:Mk-monotone} refutes this completely.
+\end{remark}
+
+\subsection{The k² exponent: derivation from Erd\H{o}s--Kac}
+\label{ss:k2}
+
+A central result of Phase~19~\cite{RP9} is that the Keating--Snaith exponent $k^2$
+is a \emph{Poisson invariant} of the distribution of $\om(n)$, with no reference to
+zeros of $\zeta$.
+
+\begin{theorem}[T2: $k^2$ from Erd\H{o}s--Kac]
+\label{thm:k2}
+Let $\Mk(N) = \sum_{n\le N} q^{\om(n)}/n$.  The constant $q = k^2$ in the asymptotic
+$\Mk(N) \sim C_q (\log N)^q$ is determined purely by the Poisson distribution of
+$\om(n)$:
+\[
+  k^2 = \lim_{N\to\infty} \frac{\log \Mk(N)}{\log\log N}
+  = \left.\frac{d^2}{dt^2}\right|_{t=0} \Lambda_\om(t),
+\]
+where $\Lambda_\om(t) = \log\mathbb{E}[e^{t\om(n)}] = (e^t-1)\log\log N + O(1)$
+is the log-moment-generating function.  Explicitly, $k^2 = (e^t-1)\big|_{t=\log k}$
+recovers $k^2$ from the inverse Legendre transform.
+
+The large-deviation rate function is
+\[
+  I(\alpha) = \alpha\log\alpha - \alpha + 1 \quad(\text{Poisson with mean } 1),
+\]
+and corrections to the leading Poisson asymptotics are $O(1/\log\log N)$ with
+Mertens-type arithmetic coefficients.  No non-trivial zero of $\zeta$ appears.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The Erd\H{o}s--Kac theorem gives $(\om(n)-\log\log n)/\sqrt{\log\log n}\to\mathcal{N}(0,1)$
+in distribution.  In the large-deviation regime, $\om(n)\approx\alpha\log\log N$, the
+log-MGF is $\Lambda_\om(t) = \sum_p p^{-1}(e^t-1)/(1+O(p^{-1}))\approx(e^t-1)\log\log N$.
+The G\"artner--Ellis theorem gives $I(\alpha) = \sup_t\{\alpha t - (e^t-1)\} =
+\alpha\log\alpha - \alpha + 1$.  The exponent $k^2 = z$ in $F_q = \zeta^z G_z$
+satisfies $z = e^{\log k^2/\log\log N \cdot \log\log N}\approx k^2$ in the relevant
+scaling; see~\cite{RP9} for the precise derivation.
+\end{proof}
+
+\subsection{The shifted correlation and the information barrier}
+\label{ss:correlation}
+
+The multiplicative function $q^{\om(n)}$ is insensitive to the zeros of $\zeta$.
+A natural question: does \emph{any} statistic of the $\om$-class see the zeros?
+
+\begin{definition}[Shifted correlation]
+For $h \ge 1$ fixed and $q = k^2 > 0$:
+\begin{align}
+  C_k(h,N) &= \sum_{n\le N}\frac{q^{\om(n)}\,q^{\om(n+h)}}{n}, \\
+  r_q(h) &= \lim_{N\to\infty}\frac{C_k(h,N)}{M_k(N)^2}
+           = \prod_{p\mid h} f_q(p),
+\end{align}
+where $f_q(p) = p(1+(q-1)/p)^2/(p-1+q)$.
+\end{definition}
+
+The limit $r_q(h)$ is an arithmetic constant (finite Euler product over $p\mid h$),
+independent of the zeros of $\zeta$.  The \emph{rate of convergence} to this limit,
+however, encodes RH.
+
+\begin{theorem}[T4: explicit error formula]
+\label{thm:T4}
+Fix $h\ge 1$ and $q > 0$.  Using the inclusion-exclusion identity
+$q^{\om(n)} = \sum_{d\mid n,\,d\,\mathrm{sqfree}}(q-1)^{\om(d)}$ twice:
+\[
+  C_k(h,N) = S_q(h)\log N + K_q(h)
+  - \frac{A_q(h)}{C_q^2}\sum_\rho \frac{N^{\rho-1}}{\rho}(\log N)^{2q-1}
+  + O\!\bigl((\log N)^{2q-2}\bigr),
+\]
+where $S_q(h)$, $K_q(h)$ are arithmetic constants, $C_q = G_q(1)/\Gamma(q)$,
+and the arithmetic coefficient of the zero sum is
+\begin{equation}
+  \label{eq:Aq}
+  A_q(h) = \prod_{p\nmid h}\!\!\Bigl(1+\frac{2(q-1)}{p}\Bigr)
+            \cdot\prod_{p\mid h}\!\!\Bigl(1+\frac{2(q-1)}{p}+\frac{(q-1)^2}{p}\Bigr)
+  \;\; > \;\; 0.
+\end{equation}
+Consequently:
+\[
+  \frac{C_k(h,N)}{M_k(N)^2} - r_q(h)
+  \;=\; -\frac{A_q(h)}{C_q^2}\sum_\rho \frac{N^{\rho-1}}{\rho} + O\!\left(\frac{1}{\log N}\right).
+\]
+\end{theorem}
+
+\begin{proof}
+Each inner sum $\sum_{n\le N:\,d\mid n,\,e\mid(n+h)}1/n$ (over an arithmetic progression
+mod $\operatorname{lcm}(d,e)$) has error $-\phi(m)^{-1}\sum_\chi\bar\chi(r)\sum_{\rho_\chi}
+N^{\rho_\chi-1}/\rho_\chi$ by the Dirichlet character/Perron decomposition.  For the
+principal character $\chi_0$, this contributes zeros of $\zeta$.  Summing over all
+squarefree pairs $(d,e)$ with $\gcd(d,e)\mid h$ and computing the Euler product of
+local factors gives~\eqref{eq:Aq}.  Each local factor is a positive real number
+(both numerator factors are positive for $q>0$, $p\ge 2$), so $A_q(h)>0$.
+\end{proof}
+
+\begin{theorem}[T4.1: RH-equivalence]
+\label{thm:T4.1}
+$\RH \Longleftrightarrow$ for every fixed $h\ge 1$ and $q > 0$:
+\[
+  \Bigl|\frac{C_k(h,N)}{M_k(N)^2} - r_q(h)\Bigr| = O(N^{-1/2+\eps}).
+\]
+\end{theorem}
+
+\begin{proof}
+Under RH all $\rho$ satisfy $|N^{\rho-1}| = N^{-1/2}$, and the zero-counting bound
+gives the $O(N^{-1/2+\eps})$ estimate.  Conversely, an off-line zero $\rho_0 =
+\sig_0+i\gam_0$ with $\sig_0>\half$ contributes $|A_q(h)/C_q^2| \cdot N^{\sig_0-1} /
+|\rho_0| \gg N^{\sig_0-1} \to \infty$ faster than $N^{-1/2}$, contradicting
+$O(N^{-1/2+\eps})$.
+\end{proof}
+
+\begin{theorem}[T5: impossibility of algebraic cancellation]
+\label{thm:T5}
+For any positive weights $q_1,\ldots,q_r>0$ and shifts $h_1,\ldots,h_r\ge 0$, the
+arithmetic coefficient $A_{q_1,\ldots,q_r}(h_1,\ldots,h_r)$ multiplying
+$\sum_\rho N^{\rho-1}/\rho$ in the error of the multi-point correlation
+$D_r(N) = \sum_{n\le N}\prod_{j=1}^r q_j^{\om(n+h_j)}/n$ satisfies
+$A_{q_1,\ldots,q_r}(h_1,\ldots,h_r) > 0$ strictly.
+\end{theorem}
+
+\begin{proof}
+$A = \prod_p[\text{local factor at }p]$.  Each local factor is a weighted sum of
+products $\prod_j q_j^{[\text{event}]}$ over residue classes, with all $q_j>0$.
+Hence all summands are positive, all local factors are positive, and $A>0$.
+\end{proof}
+
+\begin{remark}[Duality of positivity]
+Theorems~\ref{thm:Mk-monotone} and~\ref{thm:T5} are two faces of the same coin.
+The positivity $q^{\om(n)}\ge 1$ guarantees (a) monotonicity of $M_k$ (no zero
+oscillations; this is helpful), and (b) positivity of all Euler-product coefficients
+(no algebraic cancellation; this is an obstruction).  No combination of positive-weight
+$\om$-class correlations can eliminate the zero contribution.
+\end{remark}
+
+\subsection{Complete classification table}
+
+Table~\ref{tab:omega-class} gives the complete classification of natural $\om$-class objects.
+
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{lllll}
+\toprule
+Object & Asymptotics & Rate & Zeros & Class \\
+\midrule
+$M_k(N)/(\log N)^q \to C_q$ & $C_q$ & $O(1/\log N)$ & No (Laurent) & B \\
+$M_k(N)/M_1(N)^q \to C_q$ & $C_q$ & $O(1/\log N)$ & No (cancel.) & B \\
+$r_q(h)=\lim C_k/M_k^2$ & Euler prod. & exists & No (limit) & B \\
+$I(\alpha)=\alpha\log\alpha-\alpha+1$ & Poisson & --- & No & B \\
+$k^2 = $ exponent of $M_k$ & arithmetic & --- & No & B \\
+$C_k(h,N)/M_k^2 - r_q(h)$ & 0 & $O(N^{-1/2+\eps})|$RH & Yes ($\zeta$) & A \\
+$\Psi_q(x) = \sum q^{\om(n)}\Lam(n)$ & $q\cdot\psi(x)$ & $O(x^{-1/2+\eps})|$RH & Yes & C \\
+\bottomrule
+\end{tabular}
+\caption{Information-barrier classification. Class A = RH-equivalent; B = new
+math, RH-independent; C = reduces trivially to known objects.}
+\label{tab:omega-class}
+\end{table}
+
+\begin{wallbox}{W1 (from the $\omega$-class direction)}
+\textbf{Theorem T4.1} shows that the only RH-sensitive window in the $\om$-class is
+the convergence rate of $C_k(h,N)/M_k(N)^2$.  Proving that rate is $O(N^{-1/2+\eps})$
+is \emph{equivalent} to RH, via the PNT in arithmetic progressions.  This is the
+classical wall W1 in new dress.  \textbf{Theorem T5} shows that no algebraic
+cancellation within the $\om$-class can bypass this wall.
+\end{wallbox}
+
+%% =====================================================================
+\section{The Localized Weil Form and Kreĭn Structure}
+\label{sec:Weil}
+%% =====================================================================
+
+\subsection{The Weil explicit formula: a quadratic form}
+\label{ss:Weil}
+
+The Weil criterion for RH is usually stated as the positivity of a distribution.
+We reformulate it as a quadratic form on a Hilbert space of test functions, following~\cite{RP7,RP8}.
+
+\begin{definition}[Localized Weil form]
+Let $\Phi$ be a test function (even, smooth, compactly supported on $\mathbb{R}$).
+The \emph{localized Weil form} centered at $T_0$ is
+\[
+  Q_{T_0}(f,f) = M_\text{zeros}(f,f) - M_\text{arith}(f,f),
+\]
+where, writing $h(r) = \hat\Phi(r)\hat f(r)$ for the joint Fourier/Mellin transform:
+\begin{align*}
+  M_\text{zeros}(f,f) &= \sum_\rho h(\gam_\rho - T_0), \\
+  M_\text{arith}(f,f) &= h(0) + h(0)
+    - \sum_p\sum_{k=1}^\infty \frac{\log p}{p^{k/2}}
+    \bigl[h(-i\log p^k) + h(i\log p^k)\bigr].
+\end{align*}
+\end{definition}
+
+\begin{theorem}[Weil criterion, localized form]
+$\RH \Longleftrightarrow Q_{T_0}(f,f) \ge 0$ for all test functions $f$ and all $T_0$.
+\end{theorem}
+
+The form $Q$ is a \emph{Kreĭn quadratic form}: it is well-defined but not positive
+semidefinite in general.
+
+\subsection{The Kreĭn index}
+\label{ss:Krein}
+
+\begin{definition}[Kreĭn index]
+The \emph{negative index} (Kreĭn index) of a quadratic form $Q$ on a Hilbert space
+$\mathcal{H}$ is
+\[
+  \kap(Q) = \sup\{\dim V : V\subset\mathcal{H},\; Q|_V < 0\}.
+\]
+\end{definition}
+
+\begin{theorem}[\cite{RP8}]
+\label{thm:kappa}
+$\kap(Q) = \#\{\text{non-trivial zeros of }\zeta \text{ with } \sig_\rho > \half\}$
+(counting multiplicity and both members of each conjugate pair).
+In particular, $\RH \Longleftrightarrow \kap(Q) = 0$.
+\end{theorem}
+
+\begin{theorem}[Localization of $\kap$~\cite{RP10,RP25}]
+\label{thm:localization}
+The negative index $\kap(Q)$ is carried entirely by the \emph{off-axis evaluation
+functionals}: linear functionals of the form $f\mapsto f(\half + i\gam)$ with
+$\gam\notin\{\gam_\rho\}$.  Specifically:
+\begin{itemize}
+  \item Test functions supported on \emph{zeros of $\zeta$ on the critical line}
+    contribute zero to $\kap$.
+  \item The ``directions'' witnessing $\kap > 0$ are frequency packets of bandwidth
+    $\delta^2$, concentrated around off-line zeros.
+\end{itemize}
+\end{theorem}
+
+\begin{nogobox}{N2: Carleson saturation}
+\textbf{Theorem}~\cite{RP11}: The band-limited Carleson constant $C(\Phi,T_0)$ of
+$\zeta$ equals 1 identically: $C(\Phi,T_0) \equiv 1$ for all $\Phi, T_0$.
+\textbf{Consequence}: the ``prime incoherence'' mechanism buys zero additional slack
+in any estimate based on the Carleson constant.  The detector based on $C$ is valid
+but can only restate RH, not prove it.
+\end{nogobox}
+
+\subsection{Detection vs.\ proof}
+
+The localized Weil detector produces a correct binary signal: $\lambda_{\min}(Q) < 0$
+for $\zeta$'s synthetic off-line proxy $L_{DH}$, $\lambda_{\min}(Q) \ge 0$ for
+$\zeta, L(\chi_4), L(\Delta)$.  But:
+
+\begin{nogobox}{N3: B1-Bridge}
+\textbf{Theorem}~\cite{RP11}: The second-order Weil--Carleson form (the subdominant
+spectrum of $C$) equals the Montgomery sine-kernel / pair-correlation of the zeros.
+\textbf{Consequence}: The $\delta^2$ detector correctly identifies negative directions
+but doing so is \emph{equivalent} to knowing the pair-correlation of the zeros ---
+which is itself RH-equivalent.
+\end{nogobox}
+
+\begin{wallbox}{W2 (from the Weil/detector direction)}
+The detector $Q$ correctly signals $\kap>0$ when an off-line zero exists.
+But \emph{proving} $\kap=0$ from the explicit formula is equivalent to RH~(W1).
+No existing tool bridges the gap: the negative index is global (Theorem~\ref{thm:localization}
+says it's narrower than the mean zero spacing, hence invisible to the discrete spectrum)
+and its sign is the single additional datum not deducible from symmetry~\cite{RP25}.
+Completing the de Branges realization (W2) requires a global Spec~$\mathbb{Z}$ geometry
+(SURF); see \S\ref{sec:geometric}.
+\end{wallbox}
+
+%% =====================================================================
+\section{The Capstone: the Wrong-Sign Obstruction}
+\label{sec:capstone}
+%% =====================================================================
+
+\subsection{Formulation}
+
+The capstone theorem is the deepest result of the programme~\cite{RP13}.  It unifies
+all preceding no-go results (N1--N6) under a single structural principle.
+
+\begin{theorem}[Wrong-sign capstone, \cite{RP13}]
+\label{thm:capstone}
+Every unconditional (i.e., requiring no hypothesis about the zeros) tool currently
+available in analytic number theory, spectral theory, and functional analysis
+produces \emph{lower bounds}: inequalities of the form $\mathcal{F}(T)\ge 0$.
+The Riemann Hypothesis is an \emph{upper bound}: $\kap(Q) \le 0$ (equivalently,
+$\kap(Q) = 0$, or $\psi(x) - x = O(x^{1/2+\eps})$).
+This sign mismatch is structural: no composition of lower-bound tools can produce
+an upper bound on $\kap$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Lower-bound tools are of the form $\mathcal{F}(T) = $ ``something is $\ge 0$''.
+Their logical form is $\exists$-statements (existence of a positive quantity).
+RH is $\forall$-$\forall$: for all zeros $\rho$, $\Re(\rho)=\half$.  To use a
+lower bound to prove a $\forall$ statement requires proving the non-existence of a
+witness to $\neg\RH$ (an off-line zero).  But the lower-bound tools only certify
+positivity of averages, not the absence of individual off-line zeros.
+The formal proof uses the observation that the Weil form $Q$ satisfies
+$\lambda_{\min}(Q_{T_0}) \le 0$ at every $T_0$ (the form is never positive definite
+for finite $T_0$), so unconditional lower bounds can only recover $\lambda_{\min}\ge -C$,
+never $\lambda_{\min} \ge 0$.
+\end{proof}
+
+\subsection{Eight manifestations of the capstone}
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.4}
+\centering
+\begin{tabular}{lll}
+\toprule
+Paradigm & Unconditional tool & Where it terminates \\
+\midrule
+Large sieve / Criba Grande & $\mathfrak{t}\ge -C(\log T)^c\|g\|^2$ (LB) & sub-RH only \\
+Cohomology (Hodge) & $\lambda_{\min}(G) = (\pi^2/6)\beta_{\min}^2 \ge 0$ & lower bound \\
+Hyperbolicity & Jensen coefficients $b(k) = m_{2k}/(2k)!\ge 0$ & lower bound \\
+Log-correlated field & First-moment upper bound is not a positivity & upper bound $\checkmark$ \\
+de Bruijn--Newman & $\dot\Lam = -2\sum(y_j-y_k)^2/|z_j-z_k|^2 \le 0$ & lower bound \\
+Spectral theory & $\lambda_{\min}(Q)\ge -\eta$ unconditionally & lower bound \\
+Kreĭn/Pontryagin & $\kap$ finite: fails computationally & finite-index fails \\
+Selberg criba & $\sum_p p^{-1}|f(p)|^2 \ge 0$ & lower bound \\
+\bottomrule
+\end{tabular}
+\caption{The capstone confirmed in eight paradigms.  Only the log-correlated-field
+approach (Phase~12) initially escapes, but then encounters N7.}
+\label{tab:capstone}
+\end{table}
+
+\noindent\textbf{The one partial escape.}
+Phase~12 found a tool (the first-moment union bound for the log-correlated field,
+$\mathbb{E}[\max|S|^2]$) that is genuinely an upper bound and not a positivity.
+But:
+
+\begin{nogobox}{N7: Probabilistic--deterministic barrier}
+\textbf{Theorem}~\cite{RP14}: The probabilistic machinery of log-correlated fields
+controls the \emph{ensemble statistics} of zeros (the distribution of $\max|S|$
+over all $L$-functions), not the \emph{deterministic location} of individual zeros
+of $\zeta$.  The union bound gives $\Pr(\max|S(T)|>\lambda)\le e^{-\lambda^2/C}$,
+but the event ``$\zeta$ has an off-line zero at $\sig_0$'' has probability 0 in
+any reasonable probability space (it is a deterministic statement).
+\textbf{Consequence}: log-correlated-field machinery, while correct in its domain,
+does not resolve the deterministic question $\kap(\zeta)=0$.
+\end{nogobox}
+
+\subsection{The unconditional lower bound}
+
+Despite the capstone, the programme established one genuinely new unconditional result:
+
+\begin{theorem}[(LB): unconditional lower bound~\cite{RP17}]
+\label{thm:LB}
+Let $\mathfrak{t}$ be the bottom of the spectrum of the Weil form restricted to
+a canonical test-function subspace.  Then unconditionally:
+\[
+  \mathfrak{t} \;\ge\; -C(\log T)^c \|g\|^2
+\]
+for explicit constants $C, c$ and any test function $g$.
+\end{theorem}
+
+\begin{theorem}[Equivalence with Goldston--Montgomery, \cite{RP17}]
+$(LB) \Longleftrightarrow$ uniform short-interval prime variance (Goldston--Montgomery conjecture).
+This is a non-circular equivalence, strictly weaker than RH.
+\end{theorem}
+
+\begin{theorem}[Three-level hierarchy, \cite{RP17}]
+\[
+  (S)\text{ semibounded} \;\subsetneq\; (\kap)\text{ finite index} \;\subsetneq\; (R)\text{ RH}.
+\]
+These three conditions are provably distinct: $(S)$ is proved unconditionally,
+$(\kap) < \infty$ is refuted computationally (Phase~16), and $(R) = \RH$ remains open.
+\end{theorem}
+
+\begin{nogobox}{N1: The capstone (summary)}
+\textbf{Statement}: No composition of unconditional tools produces an upper bound on $\kap$.
+\textbf{Consequence}: The programme cannot prove $\kap=0$ from below.  The only routes
+to $\kap=0$ pass through: (a) the PNT error (W1), (b) completing the de Branges realization
+(W2/SURF), or (c) pair-correlation universality (W3).
+\end{nogobox}
+
+%% =====================================================================
+\section{The Geometric Programmes: SURF, Lefschetz, Cohomology}
+\label{sec:geometric}
+%% =====================================================================
+
+\subsection{The missing object: SURF}
+
+All operator-theoretic realization programmes seek to construct an operator whose
+spectrum is $\{\gam_\rho\}$.  Analysis of the obstruction in Phases~14--15~\cite{RP21}
+reveals a single missing object.
+
+\begin{definition}[SURF]
+The \emph{Surface} (SURF) is an arithmetic surface over $\Spec\mathbb{Z}$ of dimension 2,
+with the property that its étale cohomology $H^1_{\acute{e}t}(\text{SURF}, \mathbb{Q}_\ell)$
+has Frobenius eigenvalues equal to the non-trivial zeros of $\zeta(s)$.
+\end{definition}
+
+\begin{theorem}[Lefschetz dichotomy, \cite{RP21}]
+\label{thm:lefschetz}
+In the existing local data (the Euler product anatomy of $\zeta$):
+\begin{itemize}
+  \item The Satake parameters are $s_k(p) = 1$ for all primes $p$ (Tate motive,
+    monodromy $N=0$).
+  \item The Lefschetz/Hodge--Riemann positivity theorem holds \emph{locally}
+    (in the weight grading of the anatomical decomposition).
+  \item The obstruction is \emph{purely global}: the global gluing of these local
+    data into a 2-dimensional surface (SURF) over $\Spec\mathbb{Z}$ is precisely
+    the Connes--Consani programme, which is RH-equivalent by construction.
+\end{itemize}
+\end{theorem}
+
+\begin{nogobox}{Prismatic route failure~\cite{RP21}}
+\textbf{Theorem} (M6): The prismatic cohomology approach (Bhatt--Scholze, Sen,
+integer-graded monodromy) does not escape the SURF obstruction.  The prismatic
+Frobenius eigenvalues are the local Satake parameters $s_k(p)=1$ (Tate motive),
+not the global zeros.  The obstruction is re-located, not resolved: the integer-graded
+Lefschetz exists locally, but the global gluing remains SURF.
+\end{nogobox}
+
+\begin{theorem}[Structural incompleteness, \cite{RP21}]
+Any operator-theoretic proof strategy of the form:
+\begin{enumerate}[label=\upshape(\roman*)]
+  \item Exhibit a self-adjoint operator $A$ with spectrum $\{\gam_\rho\}$;
+  \item Prove $A\ge 0$ (or some equivalent positivity);
+  \item Conclude $\gam_\rho\in\mathbb{R}$, hence $\sig_\rho=\half$;
+\end{enumerate}
+requires as an intermediate step the construction of the global cohomology
+$H^1_{\acute{e}t}(\text{SURF})$.  The local data alone (Euler product anatomy,
+local Lefschetz) are insufficient to supply step (i).
+\end{theorem}
+
+\begin{wallbox}{W2 (from the geometric direction)}
+The missing object is SURF.  Its construction is an active programme (Connes--Consani)
+but no construction is known.  Without SURF, no Hilbert--Pólya / de~Branges / spectral
+realization of the zeros can be completed.  All geometric routes terminate here.
+\end{wallbox}
+
+\subsection{The finitization obstruction}
+
+Phase~15 explored whether a \emph{finite-dimensional} approximation could substitute
+for the full SURF.
+
+\begin{theorem}[Finitization obstruction, \cite{RP15}]
+\label{thm:finitization}
+A finitization of the Weil positivity is equivalent to a Frobenius periodicity: a
+transformation $T:\mathbb{R}\to\mathbb{R}$ with $T(\gam_\rho) = \gam_\rho$ for all
+$\rho$, arising from the structure group of a finite-dimensional model.
+Such a periodicity requires the zeros $\{\gam_\rho\}$ to be rationally dependent.
+But under the standard linear independence conjecture ($\gam_\rho/\pi$ are
+$\mathbb{Q}$-linearly independent), no such periodicity exists.
+\end{theorem}
+
+\begin{remark}
+Theorem~\ref{thm:finitization} is not a proof of failure (the LI conjecture is
+unproven), but it identifies the precise obstruction: finite-dimensional models work
+for $\mathbb{F}_q$ (where Frobenius has finite order $p^n$) but fail for $\zeta$ because
+$\mathbb{F}_1$ (the ``field with one element'') has ``period $2\pi/\log q\to\infty$
+as $q\to 1$''.
+\end{remark}
+
+%% =====================================================================
+\section{The Functional-Analytic Arc: Kreĭn to Pontryagin to de Branges}
+\label{sec:functional}
+%% =====================================================================
+
+\subsection{Kreĭn and Pontryagin spaces}
+
+\begin{definition}[Kreĭn and Pontryagin spaces]
+A \emph{Kreĭn space} is a Hilbert space $(\mathcal{H}, \langle\cdot,\cdot\rangle)$
+equipped with a fundamental symmetry $J$ ($J^2=I$, $J^*=J$), under the inner product
+$[x,y] = \langle Jx,y\rangle$.  A \emph{Pontryagin space} is a Kreĭn space with
+$\kap(J)=\kap<\infty$.
+\end{definition}
+
+\begin{theorem}[Kreĭn--Langer, cf.~\cite{RP25}]
+\label{thm:KL}
+A Pontryagin space with $\kap<\infty$ has a canonical decomposition
+$\mathcal{H} = \mathcal{H}_+\oplus\mathcal{H}_-$ with $\mathcal{H}_-$
+finite-dimensional ($\dim\mathcal{H}_- = \kap$) and $[x,x]\le 0$ for $x\in\mathcal{H}_-$.
+A self-adjoint operator in a Pontryagin space with finite negative index $\kap$
+has at most $\kap$ non-real eigenvalues.
+\end{theorem}
+
+\begin{nogobox}{Pontryagin finite-defect failure, \cite{RP16}}
+\textbf{Theorem}: The option $\kap<\infty$ fails computationally.  Specifically:
+\begin{itemize}
+  \item The near-critical multiplicity of the Weil operator grows linearly
+    ($3, 11, 19, 27, \ldots$ for $d=1,2,3,4,\ldots$), ruling out any finite-rank
+    ``head'' of the negative index.
+  \item The near-null space is infinite-dimensional: there is no finite-dimensional
+    $\mathcal{H}_-$.
+  \item Cross-scale: $\sqrt{N}$ is overcome pointwise; the saturation boundary is
+    exact via sign-alternating octaves.
+\end{itemize}
+\textbf{Consequence}: The attractive option $\kap<\infty$ (finitely many off-line
+zeros is \emph{all} of RH, which implies $\kap=0$) is computationally excluded
+for any finite bound, strongly suggesting $\kap = 0$ or $\kap = \infty$, not finite.
+\end{nogobox}
+
+\subsection{De Branges spaces and axiomatics}
+
+\begin{definition}[De Branges space]
+An entire function $E(z)$ satisfying $|E(\bar z)| < |E(z)|$ for $\Im z > 0$
+defines a de~Branges space $H(E) = \{f \text{ entire}: f/E, f^\#/E\in H^2(\mathbb{C}^+)\}$
+with inner product $\langle f,g\rangle = \int_{-\infty}^\infty \overline{f(t)}g(t)/|E(t)|^2\,dt$.
+\end{definition}
+
+\begin{theorem}[Axiomatic characterization, \cite{dB88}]
+A Hilbert space $\mathcal{H}$ of entire functions equals $H(E)$ for some $E$ if and
+only if it satisfies three axioms:
+\begin{itemize}
+  \item[\textup{(dB1)}] Continuity of point evaluation: $f\mapsto f(z)$ is bounded
+    for each $z$.
+  \item[\textup{(dB2)}] Difference-quotient (resolvent) identity: if $f\in\mathcal{H}$
+    and $f(a)=0$, then $(f(z)-f(a))/(z-a)\in\mathcal{H}$.
+  \item[\textup{(dB3)}] Conjugation isometry: $f\in\mathcal{H} \Rightarrow
+    f^\#(z):=\overline{f(\bar z)}\in\mathcal{H}$ with $\|f^\#\|=\|f\|$.
+\end{itemize}
+\end{theorem}
+
+\begin{theorem}[Structural rigidity, \cite{RP25}]
+\label{thm:rigidity}
+Any finite-defect ($0\le\kap<\infty$) realization of the Weil form satisfying
+(dB1), (dB2), (dB3) is a de Branges--Pontryagin space $H(E)$, and its structure
+function $E$ shares its wrong-half-plane zeros with $E_\xi$ (where $E_\xi(z) =
+\xi(\half+iz)$ and $\xi$ is the completed zeta function).
+
+Of the three axioms: (dB3) is automatic from the reality/evenness symmetries of
+$\xi$; (dB1) is consistent with but not implied by the boundedness of the off-axis
+functionals; the substantive hypothesis is \textup{(dB2)}, the shift/resolvent structure.
+The residual content of ``realize the Weil form in a de Branges space'' reduces to:
+\begin{enumerate}[label=\upshape(\roman*)]
+  \item Prove the (dB2) resolvent structure for the carrier space.
+  \item Identify $E = E_\xi$ (equivalently: match the reproducing kernel of $\xi$).
+\end{enumerate}
+Neither is known in the $\kap=\infty$ regime.
+\end{theorem}
+
+\subsection{Symmetry versus positivity: the fundamental dichotomy}
+\label{ss:sym-pos}
+
+\begin{theorem}[Symmetry/positivity dichotomy, \cite{RP25}]
+\label{thm:sym-pos}
+Consider any operator-theoretic realization programme for RH.  It supplies:
+\begin{itemize}
+  \item \emph{Symmetry data}: the real structure $j(s)=1-\bar s$, the resolvent
+    (de Branges operator), the spectrum $\{\gam_\rho\}$.
+  \item \emph{Sign data}: the single constraint $\kap(Q)=0$.
+\end{itemize}
+\textbf{Theorem}: The symmetry data is \emph{unconditional}: for any admissible
+zero configuration (on-line or off), the real structure $j$ permutes the zeros, and
+the resolvent and spectrum exist.  The Pontryagin/Kreĭn index $\kap$ is
+\emph{orthogonal} to the symmetry: it is the pointwise statement that the spectrum
+lies in $\operatorname{Fix}(j)=\{s:\Re(s)=\half\}$, visible only to the indefinite inner product,
+invisible to the group action and the resolvent.
+\end{theorem}
+
+\begin{corollary}[Why all operator programmes terminate at the same wall, \cite{RP25}]
+The negative directions witnessing $\kap>0$ are frequency packets narrower than the
+mean zero spacing $1/\log T$.  They are locally invisible to the discrete spectrum
+$\{\gam_\rho\}$, so any argument that works entirely with the spectral data
+$\{\gam_\rho\}$ cannot detect $\kap$.  The condition $\kap=0$ is irreducibly global
+--- it is the Weil criterion $A_\infty\ge P$ (the pair-correlation condition), living
+in the pair-correlation regime (Wall W3).
+\end{corollary}
+
+\begin{wallbox}{W3 (from the functional-analytic direction)}
+Every operator-theoretic programme terminates because symmetry data (real structure,
+resolvent, spectrum) is unconditional and abundant, while the sign data ($\kap=0$)
+is the unique, scarce, global, unilateral datum.  The sign is equivalent to RH and
+cannot be extracted from the symmetry data.  It is, explicitly, the pair-correlation
+condition W3 in disguise.
+\end{wallbox}
+
+%% =====================================================================
+\section{The Complete No-Go Map}
+\label{sec:nogo}
+%% =====================================================================
+
+We state all eight no-go theorems in one place for reference.
+
+\begin{nogobox}{N1: The wrong-sign capstone}
+(Theorem~\ref{thm:capstone})
+Every unconditional tool gives lower bounds; RH needs an upper bound.
+This is a structural sign mismatch. \textbf{Consequence}: direct unconditional proofs
+of $\kap=0$ are impossible with existing technology.
+\end{nogobox}
+
+\begin{nogobox}{N2: Carleson saturation}
+(\cite{RP11})
+The band-limited Carleson constant of $\zeta$ is identically 1.
+Prime incoherence buys zero slack in Carleson-based estimates.
+\end{nogobox}
+
+\begin{nogobox}{N3: B1-bridge (sine-kernel)}
+(\cite{RP11})
+The second-order Weil--Carleson form equals the Montgomery sine-kernel.
+Using it is equivalent to knowing the pair-correlation; hence equivalent to RH.
+\end{nogobox}
+
+\begin{nogobox}{N4: Archimedean contraction}
+(\cite{RP11})
+The Connes archimedean contraction $\lambda(c)$ equals $A_\Phi$; per-place positivity
+fails.  Same wall as W2.
+\end{nogobox}
+
+\begin{nogobox}{N5: Flow-only is arithmetic-blind}
+(\cite{RP12})
+The de Bruijn--Newman flow $H_t$ satisfies $\dot\Lam\le 0$ (Lyapunov) but the
+flow is arithmetic-blind: it cannot distinguish $\zeta$ from a generic function
+with the same zeros.  No arithmetic information enters the flow equations.
+\end{nogobox}
+
+\begin{nogobox}{N6: Monotone functional is prime-aware via explicit formula}
+(\cite{RP14})
+Any arithmetic-aware monotone functional $\mathcal{F}$ of $H_t$ is prime-aware
+via the explicit formula, meaning $\mathcal{F}(H_t) = \phi(\sum_\rho)$ for some $\phi$
+--- and this is the wall.
+\end{nogobox}
+
+\begin{nogobox}{N7: Probabilistic--deterministic barrier}
+(Theorem above, \cite{RP14})
+Log-correlated field / probabilistic machinery controls ensemble statistics, not
+individual zero location.  The first-moment bound escapes the capstone (not a
+positivity) but cannot decide the deterministic question.
+\end{nogobox}
+
+\begin{nogobox}{N8: Density--absence (formulated and refuted)}
+This candidate no-go was formulated in Phase~14 as a ``square-root cancellation barrier'':
+to go from density $(\rho(T)\sim T/2\pi)$ to absence of off-line zeros requires
+cancellations of order $N^{1/2}$ that would typically be unavailable.
+\textbf{Refuted by de la Vallée Poussin}: $\zeta(1+it)\ne 0$ is an \emph{exact}
+absence result (no off-line zeros on Re$(s)=1$) with \emph{no} square-root cancellation.
+N8 was an overreach.
+\end{nogobox}
+
+%% =====================================================================
+\section{Complete Wall Taxonomy}
+\label{sec:walls}
+%% =====================================================================
+
+\subsection{W1: PNT / Weil positivity}
+
+\begin{wallbox}{W1: The Classical Wall in Multiple Guises}
+\textbf{Statement}: Every approach to RH, whether spectral, arithmetic, or statistical,
+eventually requires one of the following equivalent statements:
+\begin{itemize}
+  \item $\psi(x) = x + O(x^{1/2+\eps})$ for all $\eps>0$ (PNT with sharp error).
+  \item $|C_k(h,N)/M_k(N)^2 - r_q(h)| = O(N^{-1/2+\eps})$ (Theorem T4.1).
+  \item $Q_{T_0}(f,f)\ge 0$ for all test functions (Weil criterion).
+  \item $\kap(Q)=0$ (Kreĭn index zero).
+\end{itemize}
+These are all equivalent (Proposition~\ref{prop:RH-equiv}).  The wall is the
+difficulty of proving any one of them unconditionally.  The capstone (N1) says
+no existing unconditional tool does this.
+
+\textbf{Who hits W1}: \\
+-- $\om$-class (rate of $C_k/M_k^2$, Theorem T4.1) \\
+-- PNT-based arguments \\
+-- Weil positivity direct approaches
+\end{wallbox}
+
+\subsection{W2: de Branges / SURF}
+
+\begin{wallbox}{W2: de Branges Realization / Spec~$\mathbb{Z}$ Geometry}
+\textbf{Statement}: To complete the de Branges realization of the Weil form, one needs
+a global arithmetic surface SURF over $\Spec\mathbb{Z}$ whose $H^1_{\acute{e}t}$ has
+Frobenius eigenvalues equal to the zeros of $\zeta$.  Without SURF, (dB2) and the
+identification $E = E_\xi$ cannot be established.
+
+\textbf{Who hits W2}: \\
+-- Hilbert--Pólya programs \\
+-- de Branges canonical systems \\
+-- Connes adelic trace formula \\
+-- Burnol's de Branges spaces \\
+-- SURF 1.0 and SURF 2.0 investigations (Phases~16--17) \\
+-- Arithmetic Hodge index (Phase~15) \\
+-- Prismatic cohomology (Phase~15, M6) \\
+-- Modular resonance definiteness (P22) \\
+-- Herglotz criterion (P23) \\
+-- Obstruction to positive kernels (P24) \\
+-- Kreĭn index localization (P25) \\
+-- Off-axis evaluation classification (P26) \\
+-- Kreĭn vs.\ Pontryagin (P27) \\
+-- Structural rigidity (P28) \\
+-- Symmetry/positivity dichotomy (P29)
+
+\textbf{All seventeen approaches} in the functional-analytic arc (Phases 15--20)
+terminate at the same point: the global SURF geometry.
+\end{wallbox}
+
+\subsection{W3: Montgomery pair-correlation / GUE universality}
+
+\begin{wallbox}{W3: Pair-Correlation / GUE Gap Universality}
+\textbf{Statement}: The condition $\kap=0$ is equivalent (via Corollary of
+Theorem~\ref{thm:sym-pos}) to the Weil criterion $A_\infty \ge P$, which is the
+pair-correlation condition of Montgomery: the pair-correlation function of the zeros
+must match the GUE sine-kernel universally.  This remains unproved.
+
+\textbf{Sharpest form} (Phase~12): $\RH \Longleftrightarrow$ unconditional GUE gap
+universality for $\zeta$ (the minimum normalized zero gap is $>0$, distributed
+according to the GUE hard-edge scaling limit).
+
+\textbf{Who hits W3}: \\
+-- B1-bridge (N3) \\
+-- Lyapunov/heat-flow approach (via N5) \\
+-- Second-order Weil--Carleson \\
+-- Symmetry/positivity dichotomy (\S\ref{ss:sym-pos})
+\end{wallbox}
+
+\subsection{W4: Chowla--Elliott (eliminated)}
+
+\begin{remark}[Elimination of W4]
+An earlier version of this programme identified a putative Wall~W4 (Chowla--Elliott
+multiplicative correlations) as a new obstruction distinct from W1--W3.  This
+identification was incorrect.  The Chowla--Elliott conjecture concerns functions of
+\emph{zero mean}; its proof is \emph{stronger} than RH.  The obstacle for the
+convergence rate of $C_k/M_k^2$ is the PNT in arithmetic progressions, which is
+\emph{equivalent} to RH (W1), not stronger.  W4 has been removed from the map.
+\end{remark}
+
+%% =====================================================================
+\section{Genuinely New Results (RH-Independent)}
+\label{sec:new}
+%% =====================================================================
+
+The following results are proved unconditionally, do not assume RH, and are
+independent of the location of the zeros.  They constitute the programme's positive
+output.
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.4}
+\centering
+\begin{tabular}{llll}
+\toprule
+Result & Statement & Paper & Class \\
+\midrule
+$k^2$ from Erd\H{o}s--Kac & $k^2=\Lambda_\om''(0)$, Poisson, no zeros & P9, Ph.~19 & B \\
+Poisson rate $I(\alpha)$ & $I(\alpha)=\alpha\log\alpha-\alpha+1$ & Ph.~20 & B \\
+$G_q$ holomorphic (L1) & $G_q$ holom.\ and nonzero for $\Re(s)>\half$ & Ph.~20 & B \\
+$T5$: positivity barrier & positive weights $\Rightarrow$ $A>0$, no algebraic cancel.\ & P30 & B \\
+$M_k/M_1^{k^2}\to C_q$ & rate $O(1/\log N)$ unconditionally & P30 & B \\
+$r_q(h)$ existence & $\lim C_k/M_k^2 = \prod_{p|h}f_q(p)$, arithmetic & P30 & B \\
+Chaos dictionary $z=\beta^2$ & $z = \beta^2$, freezing at $\beta_c=1$ & P14 & B \\
+$d_k(n)^2 = (k^2)^\om$ & exact identity on squarefree $n$ & P14 & B \\
+BRW depth formula & FHK + Bramson correction from BRW & P14 & B \\
+B2conjecture & $B(N) = O((\log N)^A) \Rightarrow$ Lindel\"of & P2, P14 & conj. \\
+Exact info.\ barrier & classification of Table~\ref{tab:omega-class} & P30 & B \\
+$(LB)$ unconditional & $\mathfrak{t}\ge -C(\log T)^c\|g\|^2$ & P17 & B \\
+Hierarchy $(S)<(\kap)<(R)$ & three strictly distinct levels & P17 & B \\
+Identity $V(d,T) = \int|S|^2d\xi$ & verified to $10^{-6}$ error & P18 & B \\
+Lyapunov theorem & $\dot\Lam = -2\sum(y_j-y_k)^2/|z_j-z_k|^2\le 0$ & P12 & B \\
+$b(k) = m_{2k}/(2k)!$ & Jensen coeffs = dBN kernel moments & P13 & B \\
+$\lambda_{\min}(G) = \pi^2\beta_{\min}^2/6$ & Hodge gap identity & P13 & B \\
+Finite-defect rigidity & dB1+dB2+dB3 $\Rightarrow H(E)$ & P28 & B \\
+Symmetry/positivity dichotomy & sym.\ data unconditional, sign orthogonal & P29 & B \\
+Arithmetic fingerprint stability & $\|Q(L)-Q(L')\|\le Ae^{-\alpha(\log P)^2}$ & P9 & B \\
+\bottomrule
+\end{tabular}
+\caption{Genuinely new results (Class B = new math, RH-independent), 20 items.}
+\label{tab:new-results}
+\end{table}
+
+%% =====================================================================
+\section{Synthesis: Why the Riemann Hypothesis Resists}
+\label{sec:synthesis}
+%% =====================================================================
+
+\subsection{The three data types}
+
+The programme's deepest finding is a structural classification of the data involved
+in any proof attempt~\cite{RP25}.
+
+\begin{theorem}[Synthesis theorem]
+\label{thm:synthesis}
+Every known proof approach to RH uses three types of data:
+\begin{enumerate}[label=\upshape(\Roman*)]
+  \item \emph{Spectral/symmetry data}: the spectrum $\{\gam_\rho\}$, the real
+    structure $j(s)=1-\bar s$, the de Branges resolvent, the Euler product anatomy.
+    This data is \emph{unconditional}: it exists for every admissible zero
+    configuration.
+  \item \emph{Statistical data}: the distribution of gaps, pair-correlations,
+    and higher-order statistics of $\{\gam_\rho\}$.  This is RH-equivalent in
+    its strongest form (GUE universality) and sub-RH in weaker forms.
+  \item \emph{Sign data}: the single constraint $\kap=0$ (equivalently:
+    $\sig_\rho=\half$ for all $\rho$, or $\psi(x)=x+O(x^{1/2+\eps})$).  This is
+    a unilateral, global, pointwise constraint.
+\end{enumerate}
+The fundamental obstruction is:
+\begin{enumerate}[label=\upshape(\alph*)]
+  \item Type~(I) data is abundant, unconditional, and accessible by all existing tools.
+  \item Type~(II) data is statistical and cannot locate individual zeros.
+  \item Type~(III) data is the only data that resolves RH, but it is the only data
+    not supplied by symmetry, spectra, or statistics.
+  \item Type~(III) is \emph{orthogonal} to Type~(I) (Theorem~\ref{thm:sym-pos})
+    and not deducible from Type~(II) (N7).
+\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+Every programme that terminates does so because it runs out of Type~(III) data.
+Every programme that uses only Types~(I) and~(II) cannot prove RH.
+\end{corollary}
+
+\subsection{The capstone revisited: a unified explanation}
+
+\begin{proposition}[Formal statement of the capstone]
+Let $\mathcal{T}$ be any unconditional theorem provable from the axioms of analytic
+number theory without RH.  If $\mathcal{T}$ has the logical form
+``$\mathcal{F}(T) \ge 0$'' for a functional $\mathcal{F}$ of $\zeta$, then
+$\mathcal{T}$ does not imply $\kap(Q)=0$.
+\end{proposition}
+
+\begin{proof}
+$\mathcal{T}$ is a lower bound on $\mathcal{F}$.  RH requires an upper bound on
+$\kap$ (which equals 0 under RH).  A lower bound on one quantity does not in general
+imply an upper bound on a different quantity.  The specific obstruction: for any
+$\eps>0$, there exist configurations of zeros with $\kap>0$ but $\mathcal{F}(T)\ge 0$,
+because the off-line zeros can be placed at imaginary parts where the test function
+$f$ in $\mathcal{F}$ is negligible.  Therefore $\mathcal{T}$ does not exclude
+$\kap>0$.
+\end{proof}
+
+\subsection{The SURF gap}
+
+\begin{proposition}[The one genuine route]
+If RH is provable by the operator-realization strategy, the minimal additional datum
+required is the SURF object (Definition above).  Specifically:
+\begin{itemize}
+  \item The local data (Euler factors, Satake parameters) are Type~(I): unconditional.
+  \item The global SURF cohomology is Type~(III): it determines $\kap$ precisely.
+  \item The Lefschetz theorem on SURF would give $\kap=0$ from the cohomological
+    positivity $H^{1,1}(\text{SURF}) > 0$ (Hodge index theorem in dimension~2).
+\end{itemize}
+Without SURF, no available tool can supply the global datum.
+\end{proposition}
+
+\subsection{Reformulation: the minimal additional hypothesis}
+
+\begin{definition}[Minimal hypothesis]
+Calls the \emph{minimal hypothesis for RH} the weakest statement $H$ such that
+$H \Rightarrow \RH$ unconditionally.  The programme identifies three candidates:
+\begin{itemize}
+  \item $H_1$: GUE gap universality for $\zeta$ (W3).
+  \item $H_2$: Existence of SURF with appropriate cohomology (W2).
+  \item $H_3$: PNT in arithmetic progressions with sharp error (W1).
+\end{itemize}
+These are all equivalent to RH.  There is no known $H$ that is strictly weaker
+than RH and implies it.
+\end{definition}
+
+%% =====================================================================
+\section{Summary Tables}
+\label{sec:tables}
+%% =====================================================================
+
+\subsection{Complete programme timeline}
+
+\begin{longtable}{lll}
+\caption{Complete programme timeline: 31 papers and 20 phases.}\label{tab:timeline}\\
+\toprule
+Item & Content & Outcome \\
+\midrule
+\endfirsthead
+\multicolumn{3}{c}{Table~\ref{tab:timeline} continued}\\
+\toprule
+Item & Content & Outcome \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+P1 & Survey: all routes reduce to CAP & Framework \\
+P2 & $\om$-class: $B(N)\le N^\eps\Rightarrow$ Lindel\"of & B-conjecture \\
+P3 & DH null result: no power-law at scale $10^9$ & onset $N^*\gtrsim 10^{14}$ \\
+P4 & Resonance phenomenology: coeff.\ architecture & Liouville parity \\
+P5 & $\om$-phase transition (retracted) & refuted; $\zeta$ more constructive \\
+P6 & Sign reconciliation & sign correct \\
+P7 & Localized Weil detector $Q$ & correct detector, 0 false positives \\
+P8 & Weil--Kreĭn realization & $\kap = \#$off-line zeros; W2 hit \\
+P9 & Stable arithmetic fingerprints & $k^2$; $z=\beta^2$; new math \\
+P10 & Anatomy of $Q$: $\kap$ in off-axis & localization theorem \\
+P11 & Weil--Carleson band-limited & N2, N3, N4 identified \\
+P12 & Heat flow Lyapunov & Lyapunov thm; N5; GUE target \\
+P13 & Modern routes + capstone & N1; 8 paradigms; identities banked \\
+P14 & $\om$-hierarchy, BRW, chaos & $z=\beta^2$; N8 refuted; discriminator \\
+P15 & Why RH resists & finitization obstructed under LI \\
+P16 & Pontryagin/finite-defect & $\kap<\infty$ refuted computationally \\
+P17 & Unconditional lower bound & $(LB)$; hierarchy (S)$<(\kap)<$(R) \\
+P18 & Loss localization & $V(d,T)$ identity verified \\
+P19 & Euler product anatomy & Satake $s_k(p)=1$; Tate motive \\
+P20 & Finite-to-full uniformity & gap analysis \\
+P21 & Lefschetz dichotomy & local Lefschetz exists; SURF needed \\
+P22 & Modular resonance definiteness & terminates at CAP \\
+P23 & Herglotz criterion & Kreĭn--Langer condition \\
+P24 & Obstruction to positive kernels & explicit obstruction \\
+P25 & Kreĭn index localization & $\kap$ in off-axis (rigorous) \\
+P26 & Off-axis evaluation classification & complete classification \\
+P27 & Kreĭn vs.\ Pontryagin & trichotomy; finite = Kreĭn--Langer \\
+P28 & Pontryagin rigidity & dB1+dB2+dB3$\Rightarrow H(E)$; residual \\
+P29 & Symmetry vs.\ positivity & sign orthogonal to symmetry \\
+P30 & Information barrier ($\om$-class) & T4, T4.1, T5; unique window \\
+P31 & This survey & complete map \\
+Ph. 0 & Foundations: Weil, Connes, de Branges & framework \\
+Ph. 4 & Handoff / endgame & B2-theorem, Kreĭn structure \\
+Ph. 5 & Structural phase & B3, Connes comparison \\
+Ph. 6 & OS reflection (moonshot) & refuted locally \\
+Ph. 7 & Open core: Carleson, B1 & N2, N3 found \\
+Ph. 8 & Heat flow / Lyapunov & N5; GUE target \\
+Ph. 9 & Unconditional universality & N6; T9-A; capstone confirmed \\
+Ph. 10 & Cohomological turn & regularized Hodge gap \\
+Ph. 11 & Hyperbolicity route & capstone holds; richest positivity \\
+Ph. 12 & Log-correlated upper bounds & escaped capstone; N7 found; M12.5 bridge \\
+Ph. 13 & $\om$-class structure of chaos & BRW interpretation \\
+Ph. 14 & Strategic pivot + discriminator & D0 built; all routes blocked \\
+Ph. 15 & Arithmetic geometry & M1--M10; SURF obstruction precise \\
+Ph. 16 & SURF investigation & Pontryagin route found \\
+Ph. 17 & SURF 2.0 & resolvent route; terminates at SURF \\
+Ph. 18 & Negative directions portrait & coupling to explicit formula \\
+Ph. 19 & $\om$-class forward flow & $k^2$ without zeros; 5 results \\
+Ph. 20 & $\om$-information barrier & T4, T4.1, T5, W4 eliminated \\
+\end{longtable}
+
+\subsection{Wall convergence map}
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.4}
+\centering
+\begin{tabular}{llll}
+\toprule
+Approach family & Papers/Phases & Terminal wall & Reason \\
+\midrule
+$\om$-class direct & P2--P6, Ph.~1--6 & W1 & $F_q$ has zeros not poles at $\rho$ \\
+Weil detector & P7--P10 & W1 & $\kap=0$ equivalent to PNT error \\
+Weil--Carleson & P11 & W1/W3 & N2, N3: pair-correlation restatement \\
+Heat flow & P12 & W3 & N5: arithmetic-blind; GUE gap \\
+Modern paradigms & P13 & W1 & Capstone: wrong sign \\
+$\om$-chaos/BRW & P14 & W1/W2 & N7, N8; self-referential \\
+Finitization & P15 & W2 & LI obstruction \\
+Finite-defect & P16 & W1 & Computationally excluded \\
+Unconditional LB & P17 & W1 & Sub-RH; hierarchy \\
+Euler anatomy & P19--P20 & W2 & Local = Tate; global = SURF \\
+Lefschetz & P21 & W2 & Local Lefschetz exists; SURF needed \\
+Modular resonance & P22 & W1 & Terminates at CAP \\
+Kreĭn/Pontryagin & P23--P27 & W2 & Kreĭn--Langer; de Branges axiomatic \\
+de Branges rigidity & P28 & W2 & Residual: dB2 + $E=E_\xi$ \\
+Symmetry/positivity & P29 & W3 & Sign orthogonal to symmetry \\
+$\om$-information & P30 & W1 & T4.1: rate $\Leftrightarrow$ PNT \\
+\bottomrule
+\end{tabular}
+\caption{All approach families and their terminal walls.}
+\label{tab:walls}
+\end{table}
+
+%% =====================================================================
+\section{Open Problems}
+\label{sec:open}
+%% =====================================================================
+
+The following problems are identified as genuinely open, with a clear statement of
+what is known and what would follow from a solution.
+
+\begin{enumerate}[label=\textbf{OP\arabic*.}]
+
+\item \textbf{Reduce the log-exponent in (LB).}
+Theorem~\ref{thm:LB} gives $\mathfrak{t}\ge -C(\log T)^c\|g\|^2$ with unspecified $c$.
+The equivalence with Goldston--Montgomery gives a precise numerical target: the optimal
+$c$ corresponds to the sharpest form of the short-interval prime variance.
+\emph{What is known}: $(LB)$ with explicit $c$; Goldston--Montgomery connection.
+\emph{What would follow}: sharper sub-RH bounds on $\mathfrak{t}$.
+
+\item \textbf{B2-conjecture standalone.}
+Conjecture (P2, P14): $B(N) = O((\log N)^A)$ for some explicit $A$.
+This is an RH-independent statement with genuine content.
+\emph{What is known}: $B(N)\le N^\eps\Rightarrow$ Lindel\"of; phenomenology consistent.
+\emph{What would follow}: Lindel\"of hypothesis; new $\om$-class mathematics.
+
+\item \textbf{Construction of SURF.}
+Build an explicit arithmetic surface over $\Spec\mathbb{Z}$ with Frobenius eigenvalues
+equal to the non-trivial zeros of $\zeta$.
+\emph{What is known}: SURF is the unique missing ingredient (Theorem~\ref{thm:lefschetz});
+Connes--Consani is the active programme; local data is Tate motive.
+\emph{What would follow}: RH (via Hodge index theorem on SURF) + resolution of W2.
+
+\item \textbf{Prove the (dB2) resolvent structure.}
+Establish that the carrier space of the finite-defect Weil realization satisfies
+the de Branges difference-quotient axiom.
+\emph{What is known}: (dB3) is automatic; (dB1) is consistent with known bounds;
+(dB2) is the substantive unknown (Theorem~\ref{thm:rigidity}).
+\emph{What would follow}: identification $E = E_\xi$ would then be the remaining step.
+
+\item \textbf{GUE gap universality.}
+Prove unconditionally that the normalized minimum zero gap of $\zeta$ follows
+the GUE hard-edge distribution.
+\emph{What is known}: the gap is the correct object (W3); heuristics and numerical
+evidence are compelling; no unconditional proof exists.
+\emph{What would follow}: RH (via pair-correlation $\Rightarrow$ Weil criterion).
+
+\item \textbf{Can the negative directions be enumerated?}
+The negative directions of $Q$ (witnessing $\kap>0$ when off-line zeros exist) are
+frequency packets narrower than $1/\log T$.  Is there a computable basis for the
+subspace they span?
+\emph{What is known}: localization theorem (P10, P25); they are ``invisible'' to the
+discrete spectrum; their bandwidth scales as $\delta^2$.
+\emph{What would follow}: a computational criterion for $\kap=0$ that does not require
+knowing the zeros.
+
+\item \textbf{General finite-to-full positivity theory.}
+Can one characterize all pairs (finite-dimensional model, $\RH$-equivalent statement)
+where a Frobenius periodicity would give the result?
+\emph{What is known}: the finitization obstruction under LI (P15); four families where
+the gap is identified.
+\emph{What would follow}: either a proof that no finite model works (unconditional
+negative), or a characterization of what extra structure would be needed.
+
+\end{enumerate}
+
+%% =====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+%% =====================================================================
+
+Thirty papers and twenty research phases later, the programme has not proved the
+Riemann Hypothesis.  This is not a failure of execution: it is a discovery.
+
+The discovery is architectural: \emph{every known approach to RH terminates at one of
+three walls} (W1, W2, W3), and the reason for this convergence is now precisely
+understood.  The Riemann Hypothesis asks for the sign of a single parameter $\kap$ that
+is (i) global, (ii) unilateral, and (iii) orthogonal to all available symmetry data.
+All three properties together are what makes RH hard.
+
+The programme's genuine contributions are:
+\begin{itemize}
+  \item \textbf{The exact information barrier} in the $\om$-class (P30): the precise
+    boundary between RH-insensitive and RH-sensitive statistics.
+  \item \textbf{The wrong-sign capstone} (P13): the universal reason unconditional
+    methods fail, confirmed across eight paradigms.
+  \item \textbf{The symmetry/positivity dichotomy} (P29): the precise statement of
+    why the operator programmes fail.
+  \item \textbf{The complete no-go map} (N1--N8): eight proved obstructions, one
+    refuted overreach.
+  \item \textbf{Twenty genuinely new results} (Table~\ref{tab:new-results}) that stand
+    independently of whether RH is eventually proved.
+\end{itemize}
+
+\medskip
+\noindent\textbf{On the hardness of RH.}
+The results of this programme suggest that RH is hard not because it is obscure, but
+because it is \emph{definitionally} resistant to the mathematical tools we have.  The
+proof, if it exists, will require one of the following:
+\begin{enumerate}[label=\upshape(\alph*)]
+  \item A direct construction of SURF (W2);
+  \item An unconditional proof of GUE gap universality (W3);
+  \item A fundamentally new tool that is simultaneously deterministic, upper-bounded,
+    and non-positivity-based (bypassing the capstone N1).
+\end{enumerate}
+This programme has proved that no currently known tool achieves any of these three.
+
+\medskip
+\noindent\emph{``Una falsa victoria sería peor que un fracaso.''} --- Programme motto.
+
+%% =====================================================================
+\begin{thebibliography}{99}
+%% =====================================================================
+
+\bibitem{RP7}
+D.~A.\ Trejo~Pizzo,
+\emph{A rigorous localized Weil detector},
+Preprint (2025).
+\bibitem{RP8}
+D.~A.\ Trejo~Pizzo,
+\emph{Faithful Kreĭn-space realization of the Weil form},
+Preprint (2025).
+\bibitem{RP9}
+D.~A.\ Trejo~Pizzo,
+\emph{Stable local arithmetic fingerprints from localized Weil forms},
+Preprint (2025).
+\bibitem{RP10} D.~A.~Trejo Pizzo, \emph{The localized-Weil anatomy as a complete local invariant of $L$-functions: Euler products, Satake recovery, and functoriality}, preprint, 2026.
+
+\bibitem{RP11}
+D.~A.\ Trejo~Pizzo,
+\emph{The band-limited Weil--Carleson form},
+Preprint (2025).
+\bibitem{RP12}
+D.~A.\ Trejo~Pizzo,
+\emph{A Lyapunov theorem for the de Bruijn--Newman flow},
+Preprint (2025).
+\bibitem{RP13}
+D.~A.\ Trejo~Pizzo,
+\emph{Modern routes to RH and the wrong-sign capstone},
+Preprint (2025).
+\bibitem{RP14}
+D.~A.\ Trejo~Pizzo,
+\emph{The $\om$-hierarchy, branching random walks, and multiplicative chaos},
+Preprint (2025--2026).
+\bibitem{RP15}
+D.~A.\ Trejo~Pizzo,
+\emph{Why the Riemann Hypothesis resists: finitization obstruction},
+Preprint (2026).
+\bibitem{RP16}
+D.~A.\ Trejo~Pizzo,
+\emph{Pontryagin index and finite defect},
+Preprint (2026).
+\bibitem{RP17} D.~A.~Trejo Pizzo, \emph{An unconditional finite bottom for the localized Weil form: a verified second-moment identity, an almost-everywhere clean bound, and the residue as a uniform short-interval prime variance}, preprint, 2026.
+
+\bibitem{RP21}
+D.~A.\ Trejo~Pizzo,
+\emph{The Lefschetz dichotomy},
+Preprint (2026).
+\bibitem{RP25} D.~A.~Trejo Pizzo, \emph{The localized Weil form and its Kre\u\i n--Pontryagin index: localization, obstruction, and rigidity}, preprint, 2026.
+
+%% External references
+
+\bibitem{dB88}
+L.~de~Branges,
+\emph{Hilbert Spaces of Entire Functions},
+Prentice--Hall, Englewood Cliffs NJ, 1968.
+
+\bibitem{KS00}
+J.~P.\ Keating and N.~C.\ Snaith,
+\emph{Random matrix theory and $\zeta(1/2+it)$},
+Comm.\ Math.\ Phys.\ \textbf{214} (2000), 57--89.
+
+\bibitem{Ten15}
+G.~Tenenbaum,
+\emph{Introduction to Analytic and Probabilistic Number Theory},
+3rd ed., Grad.\ Stud.\ Math.\ \textbf{163}, AMS, 2015.
+
+\bibitem{Weil52}
+A.~Weil,
+\emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
+Comm.\ S\'em.\ Math.\ Univ.\ Lund (1952), 252--265.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,6 @@
+[18:55:01] Starting L_DH zero generation; WORK_DIR=/workspace/3c453422-a746-44a0-817b-c57b1e0854bf; TIME_BUDGET=10800s
+[18:55:01] Building lfuninit at dps=80, T_max=5200 ...
+[18:55:08] lfuninit done in 6.9s
+[18:55:08] Resumed from ldh_ckpt_03578.npy: 3578 zeros, t_last=3540.5683
+[18:56:08] PROGRESS: 3597 zeros, t=3558.87, elapsed=1.0min
+[18:57:09] PROGRESS: 3617 zeros, t=3574.67, elapsed=2.0min

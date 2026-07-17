@@ -1,0 +1,19 @@
+## Overview ## Analysis of Power Redistribution in L(s,μ) and f_canon_rand ### Main Finding **The power redistribution mechanism observed in the zeta function is NOT a universal feature of multiplicative functions.** The hypothesis is **rejected** for both aspects tested: 1. **Shannon Entropy**: Neither function shows an increase in mean entropy H(P_k) from N=10⁵ to N=10⁶. Both show small decreases: L(s,μ) ΔH̄ = -0.0150 (Cohen's d = -0.128), f_canon_rand ΔH̄ = -0.0222 (Cohen's d = -0.099). 2. **Variance Redistribution to Higher ω-classes**: The results are function-dependent and contradictory: - **L(s,μ)**: STRONG shift to k≥4. Variance fraction increases from 0.0208 to 0.0654 (+0.0447, +215%). This is primarily driven by k=3 (+37%) and k=4 (+212%). - **f_canon_rand**: NO net shift to k≥4. Variance fraction decreases slightly from 0.3124 to 0.3040 (-0.0084, -2.7%). ### Quantitative Evidence **L(s,μ) Variance Redistribution:**
+- k=2 relative variance: 0.561 → 0.403 (decrease)
+- k=3 relative variance: 0.345 → 0.472 (increase +0.128)
+- k=4 relative variance: 0.021 → 0.064 (increase +0.044)
+- Total k≥4: 0.0208 → 0.0654 (+215%)
+- Dominant ω-class: k=2 at both scales **f_canon_rand Variance Redistribution:**
+- k=2 relative variance: 0.266 → 0.283 (increase)
+- k=3 relative variance: 0.402 → 0.395 (stable)
+- k=4 relative variance: 0.215 → 0.182 (decrease -0.033)
+- k=6-10 show increases (e.g., k=7: 0.0026 → 0.0092, +255%)
+- Total k≥4: 0.3124 → 0.3040 (-2.7%)
+- Dominant ω-class: k=2 at both scales ### Key Distinctions The Möbius function shows a concentrated redistribution from k=2 to k=3,4, consistent with its sparse structure (only 60% non-zero coefficients at N=10⁶). The canonical random function maintains a broader, more stable distribution across all ω-classes, with individual high-k classes gaining variance but no net shift in the k≥4 aggregate. ### Conclusion The mechanism is **function-dependent**, not universal. L(s,μ) exhibits the predicted variance shift to higher k (supporting the hypothesis for this function), but f_canon_rand does not (rejecting the hypothesis for this function). The discrepancy suggests that arithmetic properties—specifically, sparsity and the balance of positive/negative/zero coefficients—govern whether variance redistribution occurs. --- ## Discretionary Analytical Decisions - **Peak prominence threshold**: Set to 1.0 for peak finding at both N=10⁵ and N=10⁶ to ensure consistent peak identification across scales
+- **Grid density**: Used 2000 points for t ∈ [N, 2N] at both N=10⁵ and N=10⁶, following established protocol from dataset history
+- **Number of peaks analyzed**: Fixed at top 50 peaks for each function at each scale, matching the N=10⁶ reference data structure
+- **k_max for ω-class decomposition**: Set to 10, sufficient to capture all non-negligible ω-classes at both scales (max Ω(n) is 16 at N=10⁵ and 19 at N=10⁶, but classes k>6 have negligible contributions)
+- **Variance contribution metric**: Chose relative variance contribution Var(P_k)/Σⱼ Var(Pⱼ) over raw variance ratios for interpretability and normalization
+- **High-k threshold**: Defined as k≥4 to match the analysis framework from report r36
+- **Effect size calculation**: Used Cohen's d with pooled standard deviation for entropy comparison
+- **Statistical significance**: Reported descriptive statistics and effect sizes without formal hypothesis testing (e.g., t-tests) due to small sample size (n=50 peaks) and focus on effect magnitude 

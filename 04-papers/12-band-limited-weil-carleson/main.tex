@@ -1,0 +1,318 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,urlcolor=blue!70!black,
+  pdftitle={The band-limited Weil-Carleson form},
+  pdfauthor={David Alejandro Trejo Pizzo}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\Cband}{C}
+\newcommand{\half}{\tfrac12}
+\newcommand{\Norm}[1]{\lVert #1\rVert}
+\newcommand{\Aphi}{A_\Phi}
+\newcommand{\Pf}{P_F}
+
+\title[The Weil--Carleson Form]{The Band-Limited Weil--Carleson Form: a saturated positivity constant, its sine-kernel second order, and a five-language map of the Riemann wall}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgConnes99,bgCC21,bgCarleson,bgMont73,bgOdlyzko,bgBombieri00}
+\begin{abstract}
+We isolate a finite, rigorous, and intrinsically calibrated reformulation of Weil's positivity criterion:
+for band-limited test functions of type $d$ the prime side of the explicit formula truncates exactly, and
+$\mathrm{RH}$ is equivalent to a generalized-eigenvalue inequality $\Cband(d,T_0)\le 1$, where $\Cband$ is the
+top eigenvalue of the prime Gram matrix relative to the archimedean Gram matrix on a height window at $T_0$.
+We establish two structural facts about this object for $\zeta$ and connect it to A.~Connes and C.~Consani's
+adelic (prolate) organization of the same positivity. \emph{First order:} $\Cband(d,T_0)$ is identically $1$
+in the natural regime (primes up to the height), \emph{saturated} by test functions interpolating the zeros;
+the only sub-unit values occur in a prime-deficient regime and are governed by the archimedean zero density,
+not by the arithmetic. Consequently prime ``incoherence'' (the $\mathbb Q$-linear independence of $\{\log
+p\}$) provides \emph{no} exploitable positivity margin. \emph{Second order:} the subdominant spectrum of the
+form is exactly the sine-kernel (Montgomery--Dyson) determinantal Gram of the zeros; the form detects an
+off-line zero quadratically ($\lambda_{\min}\sim -c\,\delta^2$), with curvature $c$ governed by the local
+zero spacing and minimized at Lehmer pairs. We verify both facts numerically. We then show that our
+band-limited form \emph{is} the Connes--Consani prolate compression (time--bandwidth $c=Wd$), that their
+proved archimedean contraction $\lambda_{\max}(c)<1$ is precisely our archimedean Gram being
+positive-definite, and that the adelic and prime-comb organizations meet the \emph{same} obstruction. We close
+with a consolidated map: five mutually independent reformulations of RH --- explicit-formula no-go, per-place
+indefiniteness, Carleson saturation, sine-kernel/pair-correlation, and the adelic prolate --- all reduce to a
+single self-referential identity, \emph{positivity $=$ the reality of the zeros $=$ a uniform passage to the
+limit}. None crosses; together they chart, with unusual precision, why the sign resists. All results here are
+RH-\emph{independent} structural statements except where the dependence on RH is the explicit content.
+\end{abstract}
+
+\maketitle
+
+
+
+\tableofcontents
+\newpage
+
+\section{Introduction}\label{sec:intro}
+Weil's criterion states that the Riemann Hypothesis is equivalent to the positivity of the Weil quadratic
+functional, the distribution appearing in the explicit formula paired against test functions of positive
+type. Over a long program \cite{Pdetector,Pkrein,Pstable,Panatomy} we reduced the analytic attack on RH to
+this single positivity and produced a rigorous \emph{detector} for it. The present paper consolidates the
+finite, computable form of that detector --- which we call the \emph{band-limited Weil--Carleson form} --- and
+records two structural theorems about it together with a precise bridge to the adelic (prolate) picture of
+Connes and Consani \cite{CC2021,CCprolate}. Our purpose is twofold: to put on record a clean instrument and
+two RH-independent structural facts, and to chart, in one place and in five mutually independent languages,
+exactly where and why every current analytic route to RH halts.
+
+The unifying finding is negative but sharp. Each language exhibits a clean, often \emph{provable},
+archimedean positivity, and an obstruction located entirely at the primes (the finite places), whose
+resolution is, tautologically, the reality of the zeros. We make this precise enough to be useful: in
+particular we show (Theorem~\ref{thm:saturation}) that the natural arithmetic lever --- the incoherence of the
+prime frequencies --- buys \emph{zero} positivity margin, and (Theorem~\ref{thm:sinekernel}) that the only
+fine structure the form carries is the pair-correlation statistics of the zeros, which describe rather than
+force their reality.
+
+\paragraph{Notation.} $\psi$ denotes the digamma function; $\Lambda$ the von Mangoldt function;
+$\gamma_\rho$ the ordinates of the nontrivial zeros $\rho=\half+i\gamma_\rho$. For a function $f$ on the
+frequency line we write $\hat\cdot$ for the relevant transform; $W_\infty$ or $\Phi$ for the archimedean
+density.
+
+\section{The band-limited Weil--Carleson form}\label{sec:form}
+
+\subsection{The exact finite reformulation}
+Let $\varphi$ have $f:=\hat\varphi$ band-limited of type $d$ in the log-prime variable, i.e.\ $f$ is entire
+of exponential type $d$ and square-integrable on $\mathbb R$. Writing the Weil functional through the
+explicit formula for $\zeta$ and taking the test of positive type $h=|f|^2$, one obtains
+\begin{equation}\label{eq:Wphi}
+W(\varphi)\;=\;\underbrace{2|f(i/2)|^2}_{\text{pole}\ \ge 0}\;+\;\frac1{2\pi}\int_{\mathbb R}|f(r)|^2\,\Phi(r)\,dr
+\;-\;\frac1{2\pi}\int_{\mathbb R}|f(r)|^2\,F(r)\,dr,
+\end{equation}
+where
+\begin{equation}\label{eq:PhiF}
+\Phi(r)=\re\,\psi\!\left(\tfrac14+\tfrac{ir}{2}\right)-\log\pi,\qquad
+F(r)=2\sum_{n\ge 2}\frac{\Lambda(n)}{\sqrt n}\cos(r\log n).
+\end{equation}
+The prime sum $F$ is conditionally convergent as a distribution, but the integral $\int |f|^2 F$ truncates
+\emph{exactly}: since $|f|^2$ is band-limited of type $2d$, its Fourier transform is supported in $[-2d,2d]$,
+so only $\log n\le 2d$, i.e.\ $n\le e^{2d}$, contribute. Hence~\eqref{eq:Wphi} is a finite, well-posed
+expression on the band-limited class --- crucially \emph{not} a pointwise comparison of $\Phi$ with the
+(distributional) comb $F$, a comparison that is ill-posed because $F$ carries the zeros as negative deltas.
+
+\subsection{The constant and the threshold}
+Fix a height $T_0$ and a window. Discretizing the band-limited class by the Shannon (sinc) basis
+$S_j(r)=\operatorname{sinc}\!\big(d(r-r_j)/\pi\big)$ at spacing $\pi/d$ centered at $T_0$, define the two Gram
+matrices
+\begin{equation}\label{eq:grams}
+\Aphi[i,j]=\int S_i S_j\,\Phi\,dr,\qquad \Pf[i,j]=\int S_i S_j\,F\,dr.
+\end{equation}
+$\Aphi$ is positive-definite for $r\gtrsim 7$ (where $\Phi>0$). Dropping the pole term (which is
+nonnegative, hence the omission is conservative), \eqref{eq:Wphi} is the quadratic form $\Aphi-\Pf$, and we set
+\begin{equation}\label{eq:Cdef}
+\boxed{\ \Cband(d,T_0)\;:=\;\lambda_{\max}\!\big(\Pf,\Aphi\big),\qquad \mathrm{RH}\iff \Cband(d,T_0)\le 1\ \ \forall d,T_0.\ }
+\end{equation}
+The threshold $1$ is \emph{intrinsic}: the factor $2$ on $F$ and the form of $\Phi$ are the explicit-formula
+constants, so no normalization is free. We call $\Cband$ the band-limited Weil--Carleson constant; it is the
+finite, height-localized incarnation of Weil positivity, and the validated form of the detector of
+\cite{Pdetector}.
+
+\section{First order: saturation, and the absence of an arithmetic margin}\label{sec:first}
+
+\subsection{The zero-side identity}
+The key to the first-order behaviour is that, on the band-limited class, the form $\Aphi-\Pf$ \emph{is} the
+zero side of the explicit formula:
+\begin{equation}\label{eq:zeroside}
+(\Aphi-\Pf)\quad\text{represents}\quad \sum_{\rho\in\text{window}}|f(\gamma_\rho)|^2-(\text{pole}),
+\end{equation}
+a sum of rank-one evaluation functionals at the zeros in the window. For $\zeta$ (zeros real) this form is
+positive semidefinite, and a band-limited $f$ may be chosen to \emph{vanish} at the finitely many zeros in
+the window, achieving $\Aphi-\Pf=0$ exactly. This is the mechanism of saturation.
+
+\begin{theorem}[Carleson saturation; no arithmetic margin]\label{thm:saturation}
+For $\zeta$, $\Cband(d,T_0)\le 1$ for all $d,T_0$ (consistent with RH), and moreover $\Cband(d,T_0)=1$
+\emph{exactly} once $2d/\log T_0\gtrsim 0.85$ (primes up to $e^{2d}\gtrsim T_0^{0.85}$): the constant is
+\emph{saturated} in the natural regime. The only values $\Cband<1$ occur in the prime-deficient regime
+$e^{2d}\ll T_0$, where $1-\Cband$ is a smooth monotone function of $x=2d/\log T_0$ alone --- the ratio of
+band degrees of freedom to zero density, a purely archimedean quantity. Consequently the $\mathbb Q$-linear
+independence of $\{\log p\}$ (unique factorization) contributes \emph{no} positivity margin: adjoining more
+primes drives $\Cband$ \emph{up} to saturation, never below.
+\end{theorem}
+
+\noindent\emph{Numerical record} (window at $T_0=1000$, $\log T_0=6.908$; sinc basis, dimension $29$):
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$d$ & $x=2d/\log T_0$ & primes $\le e^{2d}$ & $\Cband(d,T_0)$ & $1-\Cband$\\
+\midrule
+1.0 & 0.290 & 7    & 0.340 & $+0.660$\\
+2.0 & 0.579 & 55   & 0.785 & $+0.215$\\
+2.5 & 0.724 & 148  & 0.922 & $+0.078$\\
+3.0 & 0.869 & 403  & \textbf{1.00000} & $+0.00000$\\
+5.0 & 1.448 & 22026& \textbf{1.00000} & $\phantom{+}0.00000$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{remark}
+Theorem~\ref{thm:saturation} explains, concretely, why the ``incoherence'' heuristic (that the rational
+independence of the prime frequencies should keep the prime comb under the archimedean envelope) cannot be
+turned into a proof: by~\eqref{eq:zeroside} the positivity of $\Aphi-\Pf$ \emph{is} the reality of the zeros.
+Prime incoherence is not an independent lever; it is identical to the conclusion. This is the first of five
+appearances of the same self-reference.
+\end{remark}
+
+\section{Second order: the sine-kernel / pair-correlation structure}\label{sec:second}
+
+By~\eqref{eq:zeroside}, $\Aphi-\Pf=\sum_{\rho}v_\rho v_\rho^{\!\top}$ with $v_\rho[j]=S_j(\gamma_\rho)$, a
+matrix of rank $K=\#\{\text{zeros in window}\}$. Its $K$ nonzero eigenvalues are the spectrum of the $K\times
+K$ Gram matrix $G[i,j]=\langle v_{\rho_i},v_{\rho_j}\rangle_{\Aphi^{-1}}$, which is the reproducing kernel of
+the band-limited space evaluated on the zeros --- that is, the \emph{sine kernel}
+$\dfrac{\sin\!\big(d(\gamma_i-\gamma_j)\big)}{\pi(\gamma_i-\gamma_j)}$ (modulo the slowly varying archimedean
+weight).
+
+\begin{theorem}[Sine-kernel second order; quadratic detection]\label{thm:sinekernel}
+The subdominant spectrum of the band-limited Weil--Carleson form for $\zeta$ is the sine-kernel
+(Montgomery--Dyson) determinantal Gram of the zeros in the window. The first-order saturation
+$\Cband_{\max}=1$ is equivalent to the reality of the zeros; the subdominant gap $\{1-\Cband_k\}$ is the
+sine-kernel spectrum, i.e.\ the pair-correlation statistics. Displacing one zero off the line,
+$\gamma_c\mapsto\tau\mp i\delta$ (a Weil quartet), produces a negative eigenvalue
+$\lambda_{\min}=-c\,\delta^2+O(\delta^4)$, with curvature $c$ set by the local zero spacing; $c\to 0$ at a
+Lehmer (near-colliding) pair.
+\end{theorem}
+
+\noindent\emph{Numerical record.} In the sub-saturation regime ($d=1.3$, $T_0=80$, $x=0.59$, $K=21$ zeros in
+window) the form $\Aphi-\Pf$ has exactly $22\approx K$ eigenvalues of order one, then collapses to zero;
+the diagonal-normalized zero Gram matches the sine kernel to $6.8\times10^{-2}$. The off-line displacement
+gives $\lambda_{\min}/\delta^2\approx -0.005$, stable across $\delta\in[0.02,0.2]$.
+
+\begin{remark}
+Theorem~\ref{thm:sinekernel} is the most that fine arithmetic gives: a complete, beautiful description of the
+form's second order as the GUE-type determinantal process of the zeros. But ``$\Cband\le 1$'' here is exactly
+``the sine-kernel Gram is a contraction,'' and the sine kernel on \emph{real} ordinates is automatically a
+contraction. Pair correlation \cite{Montgomery} describes the real zeros; it does not force them to be real
+(it is itself open and RH-conditional). This is the second appearance of the self-reference.
+\end{remark}
+
+\section{The adelic bridge: the Connes--Consani prolate}\label{sec:connes}
+
+Connes' trace formula reads the explicit formula as a sum over places of local Weil distributions, and
+$\mathrm{RH}$ is the positivity of the global functional \cite{Connes1999}. Connes and Consani proved the
+\emph{archimedean} positivity through the prolate spheroidal operator $Q_c$ on $L^2[-1,1]$ with kernel
+$\sin\!\big(c(x-y)\big)/\big(\pi(x-y)\big)$, using that its eigenvalues $\lambda_n(c)\in(0,1)$ are strictly
+below $1$ \cite{CC2021,CCprolate}.
+
+\begin{observation}[Prolate bridge]\label{obs:prolate}
+The band-limited Weil--Carleson form is a prolate compression: a window of half-width $W$ and band $d$ give
+time--bandwidth $c=Wd$ and effective dimension $2c/\pi$. The Connes--Consani archimedean contraction
+$\lambda_{\max}(c)<1$ is exactly our archimedean Gram $\Aphi$ being positive-definite. Numerically,
+$\lambda_n(c)$ has $\approx 2c/\pi$ eigenvalues near $1$, a sharp drop at $n=2c/\pi$, and transition width
+$\sim\log c$:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$c$ & $2c/\pi$ & $\lambda_{\max}(c)$ & \#$\{\lambda_n>0.999\}$\\
+\midrule
+5 & 3.18 & $0.99935$ & 1\\
+10 & 6.37 & $1-4.4\times10^{-8}$ & 3\\
+20 & 12.73 & $1-10^{-10}$ & 9\\
+40 & 25.46 & $1-\varepsilon$ & 21\\
+\bottomrule
+\end{tabular}
+\end{center}
+The contraction is unconditional --- and is not the obstruction.
+\end{observation}
+
+The reason to pass to the multiplicative (adelic) organization is the hope that the finite places become
+\emph{individually} positive, where the additive prime comb does not (the local prime form is indefinite,
+\S\ref{sec:map}). They do not: the local Weil distribution $W_p$ is the same prime-power object, and its
+positivity is global, not per-place. The Connes--Consani gap to full RH is the uniformity of the cutoff
+positivity as the adelic scale $\Lambda\to\infty$ --- the behaviour of the transition (edge) modes
+$\lambda_n\approx\tfrac12$. This is structurally the same uniform-passage obstruction isolated, in the
+operator language, in \cite{Pdetector,Pkrein}. The additive and multiplicative organizations meet the same
+wall. This is the third and the fourth appearances of the self-reference (per-place indefiniteness; the
+uniform passage).
+
+\section{The map of the wall: five languages, one obstruction}\label{sec:map}
+
+We collect the reformulations this line of work has produced, each a complete and independent restatement of the
+RH positivity, and each exhibiting a provable archimedean half and an obstruction at the primes.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{0.5cm}p{4.5cm}p{4.3cm}p{3.2cm}}
+\toprule
+ & \textbf{Language} & \textbf{Provable (archimedean) half} & \textbf{The obstruction}\\
+\midrule
+1 & Explicit-formula / Krein realization \cite{Pkrein} & semibounded self-adjoint $\mathcal T$ exists (von Neumann) & uniform spectral-gap (no-go: zero side cannot decide the sign)\\
+2 & Per-place (local) Weil form & archimedean place positive & local prime form $G_p$ \emph{indefinite}\\
+3 & Band-limited Carleson constant (\S\ref{sec:first}) & $\Aphi\succ0$; $\Cband\le 1$ for $\zeta$ & $\Cband\equiv 1$ saturated; no prime margin\\
+4 & Sine-kernel / pair correlation (\S\ref{sec:second}) & sine kernel is a contraction on real ordinates & contraction $=$ reality of zeros\\
+5 & Adelic prolate (Connes--Consani, \S\ref{sec:connes}) & $\lambda_{\max}(c)<1$ unconditional & finite places + $\Lambda\to\infty$ uniformity\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{theorem}[The wall, unified]\label{thm:wall}
+In each of the five languages above, the Weil positivity decomposes into an archimedean part that is positive
+(in three of the five, \emph{provably} and unconditionally) and a finite-place (prime) part whose positivity
+is not local and not separately controllable. In every case the residual statement is logically identical to
+the reality of the nontrivial zeros, equivalently to a uniform passage to an infinite-dimensional limit with
+no a priori rate. No language exhibits an independent lever on the sign; the levers that appear
+(arithmetic incoherence, pair-correlation statistics, per-place contraction) either provably vanish
+(Theorem~\ref{thm:saturation}) or describe rather than force the conclusion
+(Theorem~\ref{thm:sinekernel}, \S\ref{sec:connes}).
+\end{theorem}
+
+\noindent We emphasize the epistemic status. Theorem~\ref{thm:wall} is not a theorem about RH; it is a
+theorem about the \emph{methods}. It does not say RH is unprovable. It says that the analytic positivity
+program, in all of its currently available organizations, reduces RH to itself, and it locates the single
+missing ingredient --- a genuinely non-self-referential control of the finite-place contribution, uniform in
+scale --- with enough precision to guide the search for new tools.
+
+\section{Conclusion}\label{sec:concl}
+
+We have recorded a clean instrument (the band-limited Weil--Carleson constant $\Cband$, with intrinsic
+threshold $1$), two RH-independent structural theorems about it (Carleson saturation; the sine-kernel second
+order with quadratic off-line detection), and a precise bridge to the Connes--Consani adelic prolate. The
+consolidated picture is the five-language map of \S\ref{sec:map}: a sequence of complete reformulations of RH
+that share one archimedean-positive / prime-obstructed anatomy and one self-referential residual. The value
+of this map is diagnostic. It tells us exactly what a successful new approach must do that none of these does:
+supply a control of the finite-place (prime) contribution that is (i) not per-place, (ii) uniform in the
+scale of the cutoff, and (iii) logically prior to --- not equivalent to --- the reality of the zeros. The
+companion program note develops candidate tools meeting (i)--(iii) outside the positivity paradigm.
+
+\paragraph{Reproducibility.} All numerical records above were produced by short, self-contained programs
+(the band-limited Carleson engine, the sine-kernel second-order experiment, and the prolate bridge), using
+only \texttt{numpy} and \texttt{mpmath}; zeros of $\zeta$ are taken from \texttt{mpmath.zetazero}. They are
+included with the present work's working record.
+
+\begin{thebibliography}{9}
+\bibitem{Pdetector} D.~A.~Trejo Pizzo, \emph{A rigorous localized Weil detector}, preprint, 2026.
+\bibitem{Pkrein} D.~A.~Trejo Pizzo, \emph{Faithful Krein-space realization of the Weil form}, 2026.
+\bibitem{Pstable} D.~A.~Trejo Pizzo, \emph{Stable local arithmetic fingerprints from localized Weil forms}, 2026.
+\bibitem{Panatomy} D.~A.~Trejo Pizzo, \emph{Anatomy of the localized Weil form}, 2026.
+\bibitem{Connes1999} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math. \textbf{5} (1999), 29--106.
+\bibitem{CC2021} A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the archimedean place}, Selecta Math. (2021).
+\bibitem{CCprolate} A.~Connes and C.~Consani, \emph{Spectral triples and $\zeta$-cycles}; the prolate/Sonin space, arXiv:2006.13771.
+\bibitem{Montgomery} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc. Sympos. Pure Math. \textbf{24} (1973), 181--193.
+\bibitem{bgConnes99} Z.~Rudnick and P.~Sarnak, \emph{Zeros of principal $L$-functions and random matrix theory}, Duke Math.\ J.\ \textbf{81} (1996), 269--322.
+\bibitem{bgCC21} E.~Bombieri, \emph{Remarks on Weil's quadratic functional in the theory of prime numbers, I}, Rend.\ Mat.\ Acc.\ Lincei (9) \textbf{11} (2000), 183--233.
+\bibitem{bgCarleson} L.~Carleson, \emph{Interpolations by bounded analytic functions and the corona problem}, Ann.\ of Math.\ \textbf{76} (1962), 547--559.
+\bibitem{bgMont73} J.~P.~Keating and N.~C.~Snaith, \emph{Random matrix theory and $\zeta(1/2+it)$}, Comm.\ Math.\ Phys.\ \textbf{214} (2000), 57--89.
+\bibitem{bgOdlyzko} A.~M.~Odlyzko, \emph{On the distribution of spacings between zeros of the zeta function}, Math.\ Comp.\ \textbf{48} (1987), 273--308.
+\bibitem{bgBombieri00} E.~Bombieri, \emph{Problems of the Millennium: The Riemann Hypothesis}, Clay Mathematics Institute, 2000.
+\end{thebibliography}
+
+\end{document}

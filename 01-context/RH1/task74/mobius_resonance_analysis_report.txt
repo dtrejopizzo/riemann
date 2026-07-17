@@ -1,0 +1,37 @@
+================================================================================
+RESONANCE MECHANISM ANALYSIS: L(s, μ(n))
+Comparative Study with L(s, λ(n)) from [r83]
+================================================================================ COMPUTATIONAL PARAMETERS
+--------------------------------------------------------------------------------
+Truncation length N: 100000
+Height range: t ∈ [1000.00, 9999.97]
+Sampling resolution: Δt ≈ 0.5458
+Number of t values: 16492
+Numerical precision: float64 with Kahan compensated summation PEAK IDENTIFICATION
+--------------------------------------------------------------------------------
+Maximum resonance peak at t* = 7563.7418
+Peak magnitude: |D(t*)| = 24.6603
+Peak value: D(t*) = 14.0204 + -20.2868i
+Peak phase: -0.9661 rad = -55.35° TERM-CLASS DECOMPOSITION
+--------------------------------------------------------------------------------
+Computed S_k(t*) = Σ_{ω(n)=k} μ(n) n^{-1/2-it*} for k=1,...,6 k=1: S_1 = 3.907997 + -1.303960i |S_1| = 4.119800, phase = -18.45° k=2: S_2 = 5.354304 + -4.867087i |S_2| = 7.235821, phase = -42.27° k=3: S_3 = 2.682556 + -7.341834i |S_3| = 7.816561, phase = -69.93° k=4: S_4 = 0.743621 + -5.374245i |S_4| = 5.425447, phase = -82.12° k=5: S_5 = 0.300410 + -1.354481i |S_5| = 1.387395, phase = -77.49° k=6: S_6 = 0.031560 + -0.045213i |S_6| = 0.055138, phase = -55.08° ALIGNMENT ANALYSIS: RAW VECTORS S_k
+--------------------------------------------------------------------------------
+Sum of magnitudes: Σ|S_k| = 26.040163
+Magnitude of sum: |ΣS_k| = 24.105748
+Alignment ratio: R_raw = 0.925714
+Mean angular spread: 18.96°
+Interpretation: 92.6% constructive alignment ALIGNMENT ANALYSIS: PHASE-CORRECTED VECTORS (-1)^k S_k
+--------------------------------------------------------------------------------
+Sum of magnitudes: Σ|(-1)^k S_k| = 26.040163
+Magnitude of sum: |Σ(-1)^k S_k| = 0.813510
+Alignment ratio: R_corrected = 0.031241
+Mean angular spread: 87.73°
+Interpretation: 3.1% constructive alignment (destructive) COMPARATIVE ANALYSIS
+--------------------------------------------------------------------------------
+R_raw / R_corrected = 29.63
+Angular spread ratio = 4.63 CONCLUSION
+================================================================================
+The resonance mechanism for L(s, μ(n)) is IDENTICAL to that discovered
+for L(s, λ(n)) in [r83]: ✓ INTRINSIC ALIGNMENT: Term-class sums S_k naturally align at resonance peaks (R_raw ≈ 0.926), producing strong constructive interference. ✗ PHASE CORRECTION FAILS: Applying (-1)^k destroys alignment (R_corrected ≈ 0.031), confirming this is NOT the mechanism. This unifies the resonance mechanism for both anomalous multiplicative
+functions and requires revision of interpretations from [r81].
+================================================================================

@@ -1,0 +1,14 @@
+
+ANALYSIS SUMMARY: Growth of |D_DH(85.7; N)| for the Davenport-Heilbronn Function
+================================================================================== RESEARCH HYPOTHESIS:
+The growth of |D_DH(85.7; N)| will begin to follow a power law with exponent α ≈ 0.31 for values of N significantly larger than 10^6, confirming that previous analyses were in a pre-asymptotic regime. METHODOLOGY:
+- Computed D_DH(t; N) = Σ_{n≤N} a_n(DH) / n^(1/2 + it) at t = 85.7
+- Used Kahan compensated summation for numerical precision
+- N values: logarithmically spaced from 10^4 to 10^9
+- Performed linear regression on log-log scale to determine growth exponent α KEY RESULTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1. FITTED GROWTH EXPONENT: α_fitted = 0.000440 ± 0.000453 R² = 0.095 p-value = 0.357 (not statistically significant) 2. COMPARISON TO THEORETICAL PREDICTION: α_theoretical = 0.3085 (from β - 0.5 where β = 0.8085) Difference: -0.3081 Ratio: α_fitted / α_theory = 0.0014 (0.14%) Statistical significance: 680 standard errors below prediction 3. MAGNITUDE STATISTICS (N = 10^4 to 10^9): Mean: 0.3536 Standard deviation: 0.0018 Coefficient of variation: 0.52% Range: [0.3482, 0.3560] 4. GROWTH COMPARISON: Theoretical prediction: |D| should grow by factor of 35.5 over this N range Observed: |D| changed by factor of 1.02 Magnitude remains essentially CONSTANT CONCLUSION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ THE HYPOTHESIS IS REJECTED. Even for N up to 10^9 (five orders of magnitude beyond the previously studied N ≤ 10^6), the magnitude |D_DH(85.7; N)| shows NO EVIDENCE of approaching the theoretical power law growth with exponent α = 0.31. The fitted exponent α ≈ 0.0004 is:
+• Statistically indistinguishable from zero
+• 680 standard errors below the theoretical value
+• Only 0.14% of the theoretical prediction The magnitude oscillates around a constant value of ~0.354 with a coefficient of variation of only 0.52%. The pre-asymptotic regime extends FAR BEYOND N = 10^9, indicating that the asymptotic behavior (if it exists) requires extraordinarily large N values that are computationally inaccessible. IMPLICATIONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1. The discrepancy between fitted and theoretical exponents at N ≤ 10^6 is NOT a "pre-asymptotic effect" that resolves at larger N. The same pattern persists to N = 10^9. 2. Either: a) The theoretical prediction α = 0.3085 does not apply to this observable, OR b) The asymptotic regime requires N >> 10^9 (perhaps N > 10^13 or beyond) 3. The constant magnitude suggests that the partial sum D_DH(t; N) may converge or oscillate around a finite limit rather than growing as a power law. 4. This finding challenges the interpretation that simple power-law scaling can be used to detect off-line zeros via the partial sum observable at computationally feasible N values.

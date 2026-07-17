@@ -1,0 +1,2 @@
+{ "function": "rand", "N": 100000, "T": 100.0, "T_max": 200.0, "delta_t": 0.5457505415367365, "n_samples": 184, "seed": 42, "epsilon": null, "summation_algorithm": "kahan_compensated", "validation_status": "passed", "computation_time_seconds": 4.678067445755005, "timestamp": "2026-03-24T04:06:27.757208", "numpy_version": "1.26.4"
+}

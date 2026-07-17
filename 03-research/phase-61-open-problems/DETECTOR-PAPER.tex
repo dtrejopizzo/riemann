@@ -1,0 +1,400 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{listings}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  columns=fullflexible,
+  keywordstyle=\color{blue!60!black},
+  commentstyle=\color{green!40!black},
+  stringstyle=\color{red!60!black},
+  showstringspaces=false,
+  language=Python,
+  frame=single,
+  framesep=4pt,
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\lam}{\lambda}
+
+\title[A Finite Spectral Detector for RH]{A Finite Spectral Detector for the Riemann Hypothesis: \\ Weil Positivity, the Davenport--Heilbronn Control, \\ and the Role of the Pole}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+\date{June 2026}
+
+\begin{document}
+\begin{abstract}
+We describe, in complete computational detail, a \emph{finite spectral detector} for the Riemann Hypothesis (RH). For each scale parameter $\lam>1$ we assemble a finite, explicitly computable real symmetric matrix $A_\lam$ --- the Weil quadratic form restricted to test functions supported in a window of additive length $2\log\lam$ --- whose smallest eigenvalue $\mu_\lam$ obeys the exact equivalence
+\[
+\mu_\lam \ge 0 \quad\text{for all } \lam>1 \qquad\Longleftrightarrow\qquad \text{RH}.
+\]
+The construction is unconditional and uses only the prime powers up to $\lam^2$ together with the archimedean (gamma-factor) data; the truncation is \emph{exact}, not approximate. We exhibit two phenomena that make the detector concrete and trustworthy. First, the eigenvector for $\mu_\lam$ has a Fourier transform whose zeros reproduce the non-trivial zeros of $\zeta$ to better than $10^{-7}$ already at $\lam=7$, even though the matrix is built only from primes and the gamma factor. Second, we establish that the detector is genuinely \emph{faithful} --- not blind to violations of RH. Care is needed here: the Davenport--Heilbronn function (a Dirichlet series with a Riemann-type functional equation but \emph{no Euler product} and with zeros off the line) returns $\mu_\lam<0$, but that comparison is \emph{confounded}, because Davenport--Heilbronn is also entire and its off-line zero sits at a height beyond the window's resolution. We therefore give a controlled, non-confounded test: keeping the full positive budget of $\zeta$ and forcing a single off-line zero at a resolvable height drives $\mu_\lam<0$, while the same zero on the line leaves $\mu_\lam\ge0$. We also pin down what the negative-eigenvalue count $\kappa_\lam$ measures: twice the number of off-line zeros below a slowly growing spectral horizon. Finally we isolate the mechanism of positivity: removing the pole of $\zeta$ at $s=1$ turns $\mu_\lam$ strongly negative, so that Weil positivity for $\zeta$ rests on the cancellation
+\[
+\underbrace{\text{(pole term)}}_{s=1,\ \text{main term / PNT}} + \underbrace{\text{(archimedean)}}_{\Gamma\text{-factor}} \;=\; \underbrace{\text{(prime sum)}}_{\sum \Lambda(n)},
+\]
+which brings $\mu_\lam$ to marginality $\mu_\lam\approx 0^+$, RH being the sign of the sub-dominant residue. We further show that the pole alone is not enough: replacing the genuine (multiplicative) prime data by the non-multiplicative coefficients of Davenport--Heilbronn, with everything else unchanged, already destroys positivity, so that the Euler product is an essential, sign-sensitive ingredient. Equivalently, the number of negative eigenvalues $\kappa_\lam$ --- a discrete phase invariant --- is healed to zero exactly by the complete set of Euler primes for $\zeta$, while it stays positive for Davenport--Heilbronn. Self-contained Python code is included.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+
+%% ======================================================================
+\section{Introduction}\label{sec:intro}
+%% ======================================================================
+
+The Riemann Hypothesis asserts that all non-trivial zeros $\rho=\tfrac12+i\gamma_\rho$ of the Riemann zeta function lie on the critical line, i.e.\ that every $\gamma_\rho$ is real. Among the many equivalent reformulations, the one due to Weil \cite{weil1952} is distinguished by being a \emph{positivity} statement: a certain Hermitian quadratic form, built explicitly from the primes and the archimedean place, is positive semidefinite if and only if RH holds. The appeal of Weil's criterion is that it is, in principle, \emph{finitely checkable in the primes}: positivity may be tested one finite set of primes at a time.
+
+This note has a single, modest, but --- we believe --- useful goal: to make the Weil criterion into a concrete, reproducible, finite-dimensional \emph{numerical detector}, and to validate that this detector actually works, in the precise sense that it returns a non-negative answer for $\zeta$ and a \emph{negative} answer for a natural arithmetic object that violates RH. A detector that always returned ``$\ge 0$'' would be useless; the content here is that ours does not.
+
+\subsection*{What is constructed}
+For each $\lam>1$ we build a finite real symmetric matrix $A_\lam$, the matrix of the Weil quadratic form in a fixed orthonormal Fourier basis of the space of functions supported in the additive window $[0,L]$, $L=2\log\lam$. The entries of $A_\lam$ are elementary: a pole term, an archimedean term given by a single convergent integral, and a prime term that is a finite sum over prime powers $k\le\lam^2$. The key structural fact (Lemma~\ref{lem:exact}) is that for functions supported in $[0,L]$ this truncation is \emph{exact}: $A_\lam$ equals, with no error term, the full Weil form
+\[
+A_\lam(f,f)=\sum_{\rho}\bigl|\widehat f(\gamma_\rho)\bigr|^2,
+\]
+the sum running over \emph{all} non-trivial zeros. Under RH every $\gamma_\rho$ is real and the right-hand side is a sum of squares, hence $\ge 0$; conversely a single off-line zero can make it negative. Writing $\mu_\lam$ for the least eigenvalue of $A_\lam$, this is the equivalence
+\[
+\boxed{\;\mu_\lam\ge 0\ \ \forall\lam \iff \text{RH}.\;}
+\]
+
+\subsection*{What is demonstrated}
+We report three computations, all reproducible from the code in Appendix~\ref{sec:code}.
+
+\begin{enumerate}[label=(\Roman*),leftmargin=*]
+\item \textbf{The detector sees the zeros (\S\ref{sec:validation}).} The eigenvector $f_0$ of $\mu_\lam$ has a Fourier transform $\widehat f_0$ whose genuine zeros reproduce the ordinates $14.1347\ldots,\,21.0220\ldots,\,25.0109\ldots,\,30.4249\ldots,\,32.9351\ldots$ of the first zeros of $\zeta(\tfrac12+it)$ to better than $10^{-7}$, already at $\lam=7$ --- although $A_\lam$ was built knowing only the primes and the gamma factor. The low spectrum satisfies $\mu_k/\mu_0\to (k+1)^2$.
+\item \textbf{The detector is faithful (\S\ref{sec:DH}).} Applied to the Davenport--Heilbronn function $f_{\mathrm{DH}}$ the machinery returns $\mu_\lam<0$, but we argue (Remark~\ref{rem:confound}) that this comparison is \emph{confounded}: $f_{\mathrm{DH}}$ is entire and its off-line zero lies above the window's resolution, so the negative sign is driven largely by the missing pole, not by detection of the off-line zero. We then give a \emph{non-confounded} test (\S\ref{sec:nonconfound}): with the full budget of $\zeta$ present, forcing one off-line zero at a resolvable height makes $\mu_\lam<0$, while placing it on the line keeps $\mu_\lam\ge0$ --- the detector genuinely senses an off-line zero. The negative-eigenvalue count satisfies $\kappa_\lam=2\cdot\#\{\text{off-line zeros below a horizon }\mathcal R(\lam)\}$ (Proposition~\ref{prop:kappacount}).
+\item \textbf{Positivity comes from the pole and the Euler product (\S\ref{sec:pole}--\ref{sec:euler}).} If the pole term of $\zeta$ (the contribution of the simple pole at $s=1$) is deleted, $\mu_\lam$ becomes strongly negative. Thus Weil positivity for $\zeta$ is not an accident of the prime and archimedean data alone: the pole at $s=1$ --- equivalently the non-vanishing $\zeta(1)\ne 0$ and the main term of the prime number theorem --- supplies precisely the contribution that brings the form to marginality $\mu_\lam\approx 0^+$. But the pole is not sufficient: it is also \emph{essential} that the prime data be multiplicative. Keeping the pole and the archimedean term of $\zeta$ and substituting the non-multiplicative Davenport--Heilbronn coefficients already gives $\mu_\lam<0$. The discrete index $\kappa_\lam$ (the number of negative eigenvalues) is healed to zero by the complete set of Euler primes; RH is then the assertion that $\kappa_\lam=0$ for every $\lam$.
+\end{enumerate}
+
+\subsection*{Why this should be useful}
+Anyone attacking RH through positivity (Weil, Li, Bombieri--Lagarias, de~Branges, or the spectral programs) faces the same obstruction: information that is easy to control --- magnitudes of coefficients, second moments, density estimates --- does not determine the \emph{sign} of the relevant residue, which is a delicate phase invariant. The detector here makes that obstruction tangible and gives a clean, falsifiable test bed: any proposed mechanism for $\mu_\lam\ge0$ must, on pain of being vacuous, fail for Davenport--Heilbronn. We hope the explicit, short, and self-contained code makes the object easy to reuse and to experiment with.
+
+We emphasize at the outset what is \emph{not} claimed: nothing here proves RH. The equivalence $\mu_\lam\ge0\Leftrightarrow\text{RH}$ is Weil's criterion in finite form; establishing the left-hand side unconditionally is exactly as hard as RH. What is new is a validated, reproducible realization of the detector, the precise localization of the difficulty in a sub-dominant residue, and the identification of the pole as the source of marginality.
+
+%% ======================================================================
+\section{The semilocal Weil quadratic form}\label{sec:construction}
+%% ======================================================================
+
+\subsection{The explicit formula as a quadratic form}
+We work on the multiplicative group $\R_+^\times$ with its Haar measure $d^\times x=dx/x$, and pass freely to the additive coordinate $u=\log x$, so that $\R_+^\times\cong(\R,du)$. For a test function $f$ on $\R_+^\times$ we write its Mellin transform on the critical line as
+\[
+\widehat f(\gamma):=\int_0^\infty f(x)\,x^{1/2+i\gamma}\,\frac{dx}{x}=\int_{-\infty}^\infty f(e^u)\,e^{u/2}\,e^{i\gamma u}\,du .
+\]
+The Weil explicit formula, in its quadratic (Hermitian) form, states that
+\begin{equation}\label{eq:weil}
+\sum_{\rho}\widehat f(\gamma_\rho)\,\overline{\widehat f(\gamma_{\bar\rho})}
+=\widehat f\!\left(\tfrac{i}{2}\right)\!+\widehat f\!\left(-\tfrac{i}{2}\right)
++W_\infty(f)-\sum_{n\ge 2}\Lambda(n)\,n^{-1/2}\,g_f(\log n),
+\end{equation}
+where the sum on the left runs over all non-trivial zeros $\rho$, where $\Lambda$ is the von Mangoldt function, where $g_f(v)=\int f(x^{1/2}\cdot)\overline{f}\cdots$ is the additive autocorrelation of $f$ (made precise below), where $W_\infty$ is the archimedean term carried by the gamma factor $\Gamma_\R(s)=\pi^{-s/2}\Gamma(s/2)$, and where the first two terms are the contributions of the poles of $\zeta$ at $s=1$ and $s=0$. Under RH all ordinates $\gamma_\rho$ are real, so $\gamma_{\bar\rho}=\gamma_\rho$ and the left-hand side is $\sum_\rho|\widehat f(\gamma_\rho)|^2\ge 0$. This is \emph{Weil positivity}.
+
+\subsection{Localization}
+Fix $\lam>1$ and set $L:=2\log\lam$. Let $\mathcal H_\lam:=L^2\big([0,L],du\big)$, regarded as the space of test functions supported in the window $u\in[0,L]$ (equivalently $x\in[1,\lam^2]$, or, after recentering, $x\in[\lam^{-1},\lam]$). On $\mathcal H_\lam$ define the \emph{semilocal Weil quadratic form}
+\[
+A_\lam(f,f):=\sum_\rho \widehat f(\gamma_\rho)\,\overline{\widehat f(\gamma_{\bar\rho})}.
+\]
+Two features make $A_\lam$ a finite object.
+
+\begin{lemma}[Exact truncation]\label{lem:exact}
+For $f$ supported in $[0,L]$ the autocorrelation $g_f$ is supported in $[-L,L]$, hence $g_f(\log n)=0$ for every integer $n>e^{L}=\lam^2$. Consequently the prime sum in \eqref{eq:weil} terminates at $n\le\lam^2$, and
+\[
+A_\lam(f,f)=\underbrace{\widehat f(\tfrac i2)+\widehat f(-\tfrac i2)}_{\text{poles}}+\,W_\infty(f)\,-\sum_{2\le n\le \lam^2}\Lambda(n)\,n^{-1/2}\,g_f(\log n)
+\]
+\emph{exactly}, with no tail and no approximation.
+\end{lemma}
+
+\begin{proof}
+$g_f(v)=\int f(e^{u})\,\overline{f(e^{u+v})}\,du$ (the additive autocorrelation in the recentered coordinate). If $f$ is supported in an interval of length $L$, then $g_f$ is supported in $[-L,L]$. The prime side of \eqref{eq:weil} pairs $f$ with its translate by $\log n$; only $n$ with $\log n\le L$, i.e.\ $n\le\lam^2$, contribute. The archimedean and pole terms are unaffected by the support of $f$.
+\end{proof}
+
+Lemma~\ref{lem:exact} is the reason the object is computable: $A_\lam$ depends on \emph{finitely many primes} and on the archimedean place, yet equals the full zero sum. We record the resulting equivalence, which is Weil's criterion localized.
+
+\begin{theorem}[The detector]\label{thm:detector}
+Let $\mu_\lam:=\inf\operatorname{spec} A_\lam$ be the least eigenvalue of $A_\lam$ on $\mathcal H_\lam$. Then
+\[
+\mu_\lam\ge 0\ \text{ for all } \lam>1\qquad\Longleftrightarrow\qquad \text{RH}.
+\]
+Moreover $\mu_\lam$ is monotone non-increasing in $\lam$ (a larger window contains the test functions of a smaller one).
+\end{theorem}
+
+\begin{proof}
+If RH holds then for every $\lam$ and every $f\in\mathcal H_\lam$, $A_\lam(f,f)=\sum_\rho|\widehat f(\gamma_\rho)|^2\ge0$, so $\mu_\lam\ge0$. Conversely, suppose RH fails, with an off-line zero $\rho_0=\beta_0+i\gamma_0$, $\beta_0\neq\tfrac12$. Choosing $\lam$ large and $f$ concentrating $\widehat f$ near the conjugate pair $\{\gamma_{\rho_0},\gamma_{\bar\rho_0}\}$ (these are now complex conjugates of each other times $i$, not equal), the cross term $\widehat f(\gamma_{\rho_0})\overline{\widehat f(\gamma_{\bar\rho_0})}$ is not a square and can be made negative, forcing $A_\lam(f,f)<0$ for some $\lam$, i.e.\ $\mu_\lam<0$. Monotonicity is immediate from $\mathcal H_{\lam'}\subset\mathcal H_\lam$ for $\lam'<\lam$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:detector} is not new mathematics --- it is Weil's positivity criterion read off a finite window. Its value here is operational: $A_\lam$ is a small matrix one can build, diagonalize, and interrogate. The rest of the paper is about doing exactly that.
+\end{remark}
+
+%% ======================================================================
+\section{The matrix and its computation}\label{sec:matrix}
+%% ======================================================================
+
+\subsection{Basis and kernel}
+We use the Fourier basis of $\mathcal H_\lam$,
+\[
+V_n(u)=e^{2\pi i n u/L},\qquad n\in\Z,\quad u\in[0,L],
+\]
+truncated to $|n|\le N$. The autocorrelation pairing of two modes is the elementary kernel
+\[
+q_{nm}(u)=
+\begin{cases}
+\dfrac{\sin(2\pi m u/L)-\sin(2\pi n u/L)}{\pi(n-m)}, & m\ne n,\\[1.2ex]
+2\Bigl(1-\dfrac{u}{L}\Bigr)\cos\!\bigl(2\pi n u/L\bigr), & m=n,
+\end{cases}
+\]
+which is the additive autocorrelation of $V_n$ and $V_m$ on $[0,L]$. Note $q_{nm}(0)=2\delta_{nm}$.
+
+\subsection{The three terms}
+With the notation of \S\ref{sec:construction}, the matrix of $A_\lam$ decomposes as
+\[
+A_\lam(V_n,V_m)=\mathcal P(n,m)-\mathcal R(n,m)-\mathcal Q(n,m),
+\]
+the three pieces being the pole term, the archimedean term, and the prime term:
+\begin{align}
+\mathcal P(n,m)&=\int_0^L q_{nm}(u)\,\bigl(e^{u/2}+e^{-u/2}\bigr)\,du, \label{eq:P}\\[0.5ex]
+\mathcal R(n,m)&=\tfrac12\bigl(\gamma+\log 4\pi\bigr)\,q_{nm}(0)
++\int_0^L \frac{e^{u/2}q_{nm}(u)-q_{nm}(0)}{2\sinh u}\,du
++\tfrac12\,q_{nm}(0)\log\tanh\tfrac{L}{2}, \label{eq:R}\\[0.5ex]
+\mathcal Q(n,m)&=\sum_{2\le k\le \lam^2}\Lambda(k)\,k^{-1/2}\,q_{nm}(\log k). \label{eq:Q}
+\end{align}
+Here $\gamma$ is Euler's constant. The term $\mathcal P$ encodes the poles $\widehat f(\pm i/2)$ (the weight $e^{u/2}+e^{-u/2}=x^{1/2}+x^{-1/2}$ is exactly the residue pairing). The term $\mathcal R$ is the archimedean contribution of $\Gamma_\R(s)$: the integral converges rapidly because $e^{u/2}q_{nm}(u)-q_{nm}(0)$ vanishes at $u=0$ and the kernel $1/(2\sinh u)$ decays like $e^{-u}$. The constant $\tfrac12(\gamma+\log4\pi)$ and the boundary term $\tfrac12 q_{nm}(0)\log\tanh\tfrac L2$ are the principal-value regularization of the archimedean place.
+
+\subsection{The numerical regime}
+The eigenvalue that decides RH is extraordinarily small. The least eigenvalue behaves like $\mu_\lam\sim e^{-cL}$ for a positive constant $c$; at $\lam=7$ it is a positive number of order $10^{-21}$ to $10^{-26}$. This is far below the resolution of double precision relative to the $O(1)$ matrix entries, so all spectral computations must be carried out in extended precision (we use $40$ decimal digits).
+
+\begin{remark}[On the magnitude of $\mu_\lam$]\label{rem:quad}
+We caution the reader that while the \emph{sign} $\mu_\lam>0$ is robust, the precise \emph{magnitude} of $\mu_\lam$ is delicate. Being a residue of size $e^{-cL}$ left over from cancellations among $O(1)$--$O(10)$ contributions, it is hypersensitive to the accuracy of the archimedean integral \eqref{eq:R} near $u=0$, where the numerator $e^{u/2}q_{nm}(u)-q_{nm}(0)$ suffers catastrophic cancellation. Recomputing at $40$, $60$ and $80$ digits, the value at $\lam=7$ drifts (from $\approx5.8\times10^{-21}$ at the coarsest handling to $\approx8\times10^{-26}$, still unstable at the few-percent level), so the absolute magnitude should not be read as a converged quantity; only its positivity and the order $e^{-cL}$ are reliable. Pinning the magnitude requires replacing the quadrature of \eqref{eq:R} by the closed hypergeometric forms of the archimedean term. By contrast, the $O(1)$ verdicts below (the negative values for Davenport--Heilbronn and for $\zeta$ with the pole deleted) are residues of nothing and are numerically robust.
+\end{remark}
+
+%% ======================================================================
+\section{Validation: the detector reproduces the zeros}\label{sec:validation}
+%% ======================================================================
+
+The first test of any putative spectral encoding of the zeros is whether the encoding actually contains them. It does, and to high precision.
+
+\subsection{The low spectrum} At $\lam=7$, $N=14$ the lowest eigenvalues of $A_\lam$ are positive and satisfy
+\[
+\mu_0>0\ \text{(of order }e^{-cL}\text{; see Remark~\ref{rem:quad})},\qquad \frac{\mu_k}{\mu_0}=1,\;\approx\!4,\;\approx\!9,\;\approx\!16,\;\approx\!25,\ldots\longrightarrow (k+1)^2 .
+\]
+The ratios $(k+1)^2$ identify the low part of $A_\lam$, after rescaling, with a flat Dirichlet Laplacian; the ground state is simple and even.
+
+\subsection{Reconstruction of the zeros}
+Write the ground eigenvector as $f_0=\sum_n c_n V_n$. Its Mellin/Fourier transform on the critical line factorizes as
+\[
+\widehat f_0(z)=2\sin\!\Big(\tfrac{zL}{2}\Big)\,g(z),\qquad g(z)=\sum_n \frac{c_n}{k_n+z},\quad k_n=\frac{2\pi n}{L}.
+\]
+The factor $\sin(zL/2)$ carries only \emph{spurious} zeros at the band frequencies $z=k_m$ (an artifact of the hard window); the \emph{genuine} zeros of $\widehat f_0$ are the zeros of $g$. Table~\ref{tab:zeros} shows that these reproduce the ordinates of the first zeros of $\zeta(\tfrac12+it)$ to the precision of the tabulated reference values.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+zero of $\zeta(\tfrac12+it)$ & zero of $g$ (engine) & discrepancy \\
+\midrule
+$14.134725$ & $14.134725$ & $<10^{-7}$\\
+$21.022040$ & $21.022040$ & $<10^{-7}$\\
+$25.010858$ & $25.010858$ & $<10^{-7}$\\
+$30.424876$ & $30.424876$ & $<10^{-7}$\\
+$32.935062$ & $32.935062$ & $<10^{-7}$\\
+\bottomrule
+\end{tabular}
+\caption{The Fourier transform of the ground state vanishes at the non-trivial zeros of $\zeta$ to better than $10^{-7}$, at $\lam=7$. The matrix $A_\lam$ was built only from the prime powers $k\le 49$ and the gamma factor; the zeros are an output, not an input.}\label{tab:zeros}
+\end{table}
+
+The point of Table~\ref{tab:zeros} is conceptual: the explicit formula is an identity relating primes, the archimedean place, and zeros, and the variational problem ``minimize $\sum_\rho|\widehat f(\gamma_\rho)|^2$ over the window'' forces the minimizing $\widehat f_0$ to interpolate zero at the $\gamma_\rho$. A band-limited function of exponential type $L$ can interpolate zeros up to height $\sim\lam^4$, so already at $\lam=7$ the first dozens of zeros are pinned.
+
+%% ======================================================================
+\section{The Davenport--Heilbronn control}\label{sec:DH}
+%% ======================================================================
+
+A detector is only meaningful if it can fail. We now feed the construction an object for which RH is \emph{false}.
+
+\subsection{The Davenport--Heilbronn function}
+Let $\chi$ be the primitive character modulo $5$ with $\chi(2)=i$ (so $\chi$ is odd, $\chi(-1)=-1$), and set
+\[
+\kappa=\frac{\sqrt{10-2\sqrt5}-2}{\sqrt5-1},\qquad \theta=\arctan\kappa,\qquad
+f_{\mathrm{DH}}(s)=\frac{\sec\theta}{2}\Bigl(e^{-i\theta}L(s,\chi)+e^{i\theta}L(s,\bar\chi)\Bigr).
+\]
+The constant $\theta$ is chosen so that the Dirichlet coefficients $a_n$ of $f_{\mathrm{DH}}$ are real; they are periodic mod $5$,
+\[
+(a_0,a_1,a_2,a_3,a_4)=(0,\,1,\,\kappa,\,-\kappa,\,-1),\qquad \kappa=0.284079\ldots,
+\]
+and the completed function $\Lambda_{\mathrm{DH}}(s)=(5/\pi)^{(s+1)/2}\Gamma(\tfrac{s+1}{2})\,f_{\mathrm{DH}}(s)$ satisfies the Riemann-type functional equation $\Lambda_{\mathrm{DH}}(s)=\Lambda_{\mathrm{DH}}(1-s)$. Crucially, $f_{\mathrm{DH}}$ has \emph{no Euler product} ($a_6\ne a_2a_3$); it is a classical example, due to Davenport and Heilbronn \cite{DH1936}, of a Dirichlet series with a Riemann-type functional equation whose zeros do \emph{not} all lie on the critical line. One off-line zero is $s\approx 0.808517+85.699i$.
+
+\subsection{The von Mangoldt coefficients of \texorpdfstring{$f_{\mathrm{DH}}$}{fDH}}
+The arithmetic input to the detector is the logarithmic derivative $-f_{\mathrm{DH}}'/f_{\mathrm{DH}}(s)=\sum_n \Lambda_{\mathrm{DH}}(n)\,n^{-s}$. Because $f_{\mathrm{DH}}$ has no Euler product, $\Lambda_{\mathrm{DH}}$ is \emph{not} supported on prime powers; it is computed exactly by Dirichlet inversion of the (rational, reproducible) coefficients $a_n$:
+\[
+\Lambda_{\mathrm{DH}}(n)=(\log n)\,a_n-\sum_{\substack{d\mid n\\ d>1}}a_d\,\Lambda_{\mathrm{DH}}(n/d),\qquad a_1=1.
+\]
+Two features matter. First, $\Lambda_{\mathrm{DH}}(n)$ is supported on all $n$ (e.g.\ $\Lambda_{\mathrm{DH}}(6)=1.94\ne 0$, while $\Lambda(6)=0$ for $\zeta$). Second, and decisively, $\Lambda_{\mathrm{DH}}(n)$ \emph{oscillates in sign}: the partial sums do not accumulate. Concretely
+\[
+\sum_{2\le n\le 49}\frac{\Lambda_{\mathrm{DH}}(n)}{\sqrt n}\approx -0.73,
+\qquad\text{whereas for }\zeta:\quad \sum_{2\le n\le\lam^2}\frac{\Lambda(n)}{\sqrt n}\sim 2\lam .
+\]
+For $\zeta$ the Euler product makes every $\Lambda(n)\ge0$, and the prime sum grows like $2\lam$; for $f_{\mathrm{DH}}$ the absence of multiplicativity produces cancellation and an $O(1)$ prime sum. This is the arithmetic fingerprint of the failure of RH.
+
+\subsection{The detector returns a negative answer}
+We assemble $A_\lam^{\mathrm{DH}}$ exactly as in \S\ref{sec:matrix}, with three faithful modifications dictated by the structure of $f_{\mathrm{DH}}$:
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+\item \textbf{No pole.} $f_{\mathrm{DH}}$ is entire, so the pole term vanishes: $\mathcal P\equiv 0$.
+\item \textbf{Primes.} $\Lambda$ is replaced by $\Lambda_{\mathrm{DH}}$ in \eqref{eq:Q}.
+\item \textbf{Archimedean.} The odd gamma factor $\Gamma(\tfrac{s+1}{2})$ replaces $\Gamma(\tfrac s2)$; in \eqref{eq:R} this changes the weight $e^{+u/2}$ to $e^{-u/2}$ (the digamma argument moves from $\tfrac14$ to $\tfrac34$), and the conductor $5$ shifts the constant by $\log 5$.
+\end{enumerate}
+
+First we validate the construction independently of the undetermined constant: the eigenvector of $A_\lam^{\mathrm{DH}}$ reproduces the \emph{on-line} zeros of $f_{\mathrm{DH}}$ --- $5.094,\,14.404,\,19.309,\ldots$ --- confirming that the off-diagonal structure (the coefficients $\Lambda_{\mathrm{DH}}$ and the odd archimedean kernel) is correct. Then we read off the sign of $\mu_\lam$. The result, at $\lam=7$, $N=14$, with the \emph{same} archimedean constant $C=\log4\pi+\gamma$ used for $\zeta$, is
+\[
+\boxed{\ \mu_\lam(\zeta)>0\ \ (\text{Weil positivity, of order }e^{-cL}),\qquad \mu_\lam(f_{\mathrm{DH}})\approx -1.61\ \ (<0).\ }
+\]
+Including the conductor shift $+\log 5$ makes $\mu_\lam(f_{\mathrm{DH}})$ more negative still ($\approx -4.83$). The negativity is robust: as a function of the one free archimedean constant $C$, $\mu_\lam(f_{\mathrm{DH}})$ crosses zero only at $C^\ast\approx 1.5$, well below any admissible value (the bare $\zeta$ constant is already $\log4\pi+\gamma=3.108$, and the conductor can only increase it). Table~\ref{tab:robust} records the dependence.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcccccc}
+\toprule
+$C$ & $1.0$ & $2.0$ & $3.108\ (\zeta)$ & $4.72$ & $6.33\ (+2\log5)$ & $7.0$\\
+\midrule
+$\mu_\lam(f_{\mathrm{DH}})$ & $+0.50$ & $-0.50$ & $-1.61$ & $-3.22$ & $-4.83$ & $-5.50$\\
+\bottomrule
+\end{tabular}
+\caption{Robustness of the negative verdict for Davenport--Heilbronn. The sign changes only at $C^\ast\approx 1.5$, far below the admissible archimedean constant $C\ge 3.108$.}\label{tab:robust}
+\end{table}
+
+\begin{remark}[What this computation does and does not show --- a confound]\label{rem:confound}
+Run with the identical archimedean constant, $\zeta$ lands at $+0$ and $f_{\mathrm{DH}}$ at $-1.61$, and one is tempted to conclude that the detector has \emph{detected} the off-line zeros of $f_{\mathrm{DH}}$. It has not, and the comparison as stated is \emph{confounded}. Davenport--Heilbronn violates RH \emph{and} is entire (it has no pole), and these two facts pull $\mu_\lam$ negative for different reasons. Indeed $\zeta$ with its pole deleted gives $\mu_\lam\approx-10.7$ (\S\ref{sec:pole}), \emph{more} negative than $f_{\mathrm{DH}}$, so a large part of the negativity of $\mu_\lam(f_{\mathrm{DH}})$ is simply the absence of the positive budget supplied by a pole. Moreover the off-line zero of $f_{\mathrm{DH}}$ sits at height $\approx 85.7$, far above the heights the window $[0,L]$ at $\lam=7$ can resolve sharply. The $f_{\mathrm{DH}}$ run therefore establishes that the machine runs and returns a sign compatible with non-positivity --- but it does \emph{not}, by itself, establish that the detector is sensitive to an off-line zero when the budget is present and the violation lives only in the sub-dominant residue. That is the regime that matters for $\zeta$, and it must be tested directly.
+\end{remark}
+
+\subsection{A non-confounded faithfulness test}\label{sec:nonconfound}
+To decide whether the detector genuinely senses an off-line zero, we keep the full positive budget of $\zeta$ and add a \emph{single} off-line quadruple at our chosen height. A zero quadruple $\{\tfrac12\pm b\pm i\gamma_0\}$ contributes to the Weil form, in the same normalization as the matrix entries, the elementary term
+\[
+\mathcal Q^{\mathrm{off}}_{nm}(b,\gamma_0)=\int_0^L q_{nm}(u)\,\bigl[\,4\cosh(bu)\cos(\gamma_0 u)\,\bigr]\,du,
+\]
+which for $b=0$ (the zero on the line) is positive semidefinite, and for $b>0$ (off the line) is indefinite. We then read the sign of $\mu_\lam$ for $A_\lam+\mathcal Q^{\mathrm{off}}$. At $\lam=7$:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+height $\gamma_0$ & on-line $(b=0)$ & off-line $(b=0.1\text{--}0.3)$\\
+\midrule
+$\gamma_0=14$ (within reach) & $\mu_\lam>0$ & $\mu_\lam<0$ \ \ \textbf{(detected)}\\
+$\gamma_0=85$ (out of reach) & $\mu_\lam>0$ & $\mu_\lam>0$ \ \ (not detected)\\
+\bottomrule
+\end{tabular}
+\end{center}
+This is the decisive, non-confounded statement. \emph{With the budget present}, a forced off-line zero at a height the window can resolve drives $\mu_\lam<0$, while the same zero placed back on the line ($b=0$) leaves $\mu_\lam\ge0$: the detector is genuinely faithful. The failure at $\gamma_0=85$ is not blindness but finite resolution --- the negative direction created by a high off-line zero is essentially orthogonal to the near-radical eigenspace (which is low-frequency) and is absorbed by the $O(1)$ budget.
+
+\begin{proposition}[What the index $\kappa_\lam$ counts]\label{prop:kappacount}
+Let $\kappa_\lam$ be the number of negative eigenvalues of $A_\lam$. Adjoining off-line quadruples one at a time, $\kappa_\lam$ increases by exactly $2$ for each quadruple lying below a scale-dependent \emph{reach} $\mathcal R(\lam)$, and not at all for quadruples above it. Numerically $\mathcal R(\lam)\approx 25$--$40$ for $\lam\in[5,9]$, growing slowly (not like $\lam^4$). Hence
+\[
+\kappa_\lam = 2\cdot\#\{\text{off-line quadruples of height}\lesssim \mathcal R(\lam)\}.
+\]
+\end{proposition}
+The naive identification ``$\kappa_\lam=2\times(\text{number of off-line zeros})$'' is therefore correct only up to the horizon $\mathcal R(\lam)$. Since $\mathcal R(\lam)\to\infty$ as $\lam\to\infty$, the equivalence $\kappa_\lam=0\ \forall\lam\Leftrightarrow\text{RH}$ is unaffected; but at any fixed $\lam$ the detector sees only the off-line zeros below its horizon. Any index- or Maslov-theoretic interpretation of $\kappa_\lam$ must incorporate this spectral horizon.
+
+%% ======================================================================
+\section{The role of the pole}\label{sec:pole}
+%% ======================================================================
+
+Having a faithful detector, we may ask it \emph{why} $\zeta$ is positive. The answer is clean.
+
+\begin{proposition}[Positivity rests on the pole]\label{prop:pole}
+Deleting the pole term $\mathcal P$ from $A_\lam$ for $\zeta$ turns the least eigenvalue strongly negative:
+\[
+\mu_\lam(\zeta)\big|_{\text{with pole}}>0\ (\text{order }e^{-cL}),\qquad
+\mu_\lam(\zeta)\big|_{\text{pole deleted}}\approx -10.7 .
+\]
+\end{proposition}
+
+Thus the pole term contributes $\approx+10.7$ to the least eigenvalue, almost exactly cancelling the combined archimedean-minus-prime contribution $\approx-10.7$, and leaving a positive residue of order $e^{-cL}$. In other words, on the ground state the explicit formula realizes the balance
+\[
+\underbrace{\mathcal P}_{\text{pole at }s=1}\;\approx\;\underbrace{\mathcal R}_{\text{archimedean}}\;+\;\underbrace{\mathcal Q}_{\text{primes}}
+\qquad\text{to relative accuracy } e^{-cL}.
+\]
+The pole at $s=1$ is the analytic incarnation of the prime number theorem (the main term $\mathrm{li}(x)$); it is what brings the Weil form to \emph{marginality}, $\mu_\lam\approx 0$. The Riemann Hypothesis is then exactly the statement that the sub-dominant residue, of size $e^{-cL}$, does not become negative. Davenport--Heilbronn, having no pole, has nothing to cancel its archimedean-minus-prime part, and lands robustly negative.
+
+\begin{remark}
+This gives a precise location for the difficulty. The leading $O(1)$ balance is the explicit formula and is automatic once the pole is present. RH lives entirely in the sign of the next-order term. Both the discrete ladder $\mu_k/\mu_0\to(k+1)^2$ and the wall (the sign of $\mu_0$) are properties of this same residue: the ladder is its \emph{shape}, the sign is RH. No functional of the coefficient magnitudes can decide the sign --- Davenport--Heilbronn has coefficient magnitudes comparable to a genuine $L$-function yet violates positivity --- which is the quantitative reason all magnitude-based approaches to RH stall.
+\end{remark}
+
+%% ======================================================================
+\section{The arithmetic of positivity: multiplicativity and the index}\label{sec:euler}
+%% ======================================================================
+
+Section~\ref{sec:pole} showed that the pole is necessary for marginality. It is not, however, sufficient: the detector also requires the \emph{multiplicativity} of the prime data. We make this precise with two further experiments, both run in the identical framework of \S\ref{sec:matrix}.
+
+\subsection{Multiplicativity is essential}
+Consider the ``hybrid'' matrix obtained by keeping the pole and the (even) archimedean term of $\zeta$ but replacing the genuine von Mangoldt coefficients $\Lambda(n)$ by the Davenport--Heilbronn coefficients $\Lambda_{\mathrm{DH}}(n)$ --- that is, by switching off the Euler product while changing nothing else. The result, at $\lam=7$:
+\[
+\underbrace{\mu_\lam[\text{pole}+\mathcal R_{\mathrm{even}}+\Lambda]}_{\zeta,\ \text{multiplicative}}>0\ (\text{order }e^{-cL}),
+\qquad
+\underbrace{\mu_\lam[\text{pole}+\mathcal R_{\mathrm{even}}+\Lambda_{\mathrm{DH}}]}_{\text{hybrid, non-multiplicative}}\approx -4.58 .
+\]
+Positivity is destroyed even with the pole present. The reason is visible in the prime sum itself: for $\zeta$ the Euler product forces $\Lambda(n)\ge 0$, and the prime contribution accumulates, $\sum_{n\le\lam^2}\Lambda(n)n^{-1/2}\sim 2\lam$; for a non-multiplicative series the signs of $\Lambda_{\mathrm{DH}}(n)$ oscillate, there is cancellation, and the prime sum stays $O(1)$ (here $\approx-0.73$). Only the multiplicative coefficients produce the precise value of the prime form $\mathcal Q$ that cancels $\mathcal P-\mathcal R$ down to the marginal residue. Forcing the magnitudes to be positive (replacing $\Lambda_{\mathrm{DH}}$ by $|\Lambda_{\mathrm{DH}}|$) does \emph{not} restore positivity: it is the multiplicative \emph{values} $\Lambda(p^k)=\log p$, not merely positive signs, that matter.
+
+\subsection{The discrete index and how the primes heal it}
+For a real symmetric $A_\lam$ let $\kappa_\lam$ denote the number of negative eigenvalues. Theorem~\ref{thm:detector} reads, in this language,
+\[
+\kappa_\lam=0\ \text{ for all }\lam\quad\Longleftrightarrow\quad\text{RH},
+\]
+and $\kappa_\lam$ is a discrete (integer) avatar of the wall --- a genuine phase invariant, insensitive to coefficient magnitudes. Building $A_\lam$ for $\zeta$ by adjoining the primes one at a time exhibits a striking phenomenon: the incomplete forms carry negative eigenvalues, and the \emph{complete} Euler set heals them exactly to zero. At $\lam=7$, $N=14$ the count $\kappa$ evolves as
+\[
+\begin{array}{c|cccccc}
+\text{primes }\le & 2 & 3 & 7 & 19 & 43 & 47\,(=\lam^2)\\\hline
+\kappa_\lam & 8 & 10 & 12 & 10 & 2 & 0
+\end{array}
+\]
+ending at $\kappa_\lam=0$ precisely at the exact-truncation cutoff. For Davenport--Heilbronn the same count returns $\kappa_\lam=12\ne 0$. Thus the Euler product does not merely shift one eigenvalue: it organizes the \emph{collective} cancellation of all negative directions. We caution that this is a property of the full prime set, not of individual primes --- the single-prime forms $\mathcal Q_p$ are highly indefinite --- so $\kappa$ is a global, not a local, count.
+
+\subsection{Summary of the mechanism}
+Combining \S\ref{sec:pole} and the present section: Weil positivity for $\zeta$ rests on two ingredients acting together. The pole at $s=1$ supplies the positive ``budget'' that brings the form to marginality; the multiplicativity of $\Lambda$ supplies the precise prime form that cancels the archimedean-minus-budget to a non-negative residue. Remove the pole, or break multiplicativity, and the detector returns a negative verdict. RH is the statement that, with both ingredients in place, the residual index $\kappa_\lam$ vanishes for every $\lam$.
+
+%% ======================================================================
+\section{Discussion}\label{sec:discussion}
+%% ======================================================================
+
+We have made Weil's positivity criterion into a finite, reproducible numerical detector and verified that it behaves as a detector should: it encodes the zeros of $\zeta$ to high precision, it returns a non-negative verdict for $\zeta$, and it returns a negative verdict for the Davenport--Heilbronn function, which violates RH. We have further isolated the pole at $s=1$ as the source of marginality.
+
+Three points seem worth stressing for anyone wishing to build on this.
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{The detector is faithful, but one must test this carefully.} One might fear that a localized, on-line form is blind to off-line zeros (since on the critical line everything looks like a sum of squares). The naive evidence against this --- that Davenport--Heilbronn gives $\mu_\lam<0$ --- is confounded by its missing pole and by the height of its off-line zero (Remark~\ref{rem:confound}). The honest evidence is the controlled test of \S\ref{sec:nonconfound}: with the budget present, a forced off-line zero \emph{within the window's reach} drives $\mu_\lam<0$ while the same zero on the line does not. The detector is genuinely faithful, but only up to a spectral horizon $\mathcal R(\lam)$ that grows slowly with $\lam$; an off-line zero is sensed only once $\lam$ is large enough to resolve its height.
+\item \textbf{Reproducibility.} Every ingredient is elementary and the von Mangoldt coefficients of $f_{\mathrm{DH}}$ are obtained by exact Dirichlet inversion of rational data, not by any opaque ``logarithm of a sum of $L$-functions.'' The complete computation is the short script of Appendix~\ref{sec:code}.
+\item \textbf{Where RH sits.} The difficulty is now a single, sharply localized object: the sign of the sub-dominant ($e^{-cL}$) residue of the balance $\mathcal P\approx\mathcal R+\mathcal Q$. This is a phase invariant, immune to magnitude estimates. Any unconditional argument for $\mu_\lam\ge 0$ must use the multiplicativity of $\Lambda$ (the Euler product) in an essential, sign-sensitive way --- precisely the ingredient absent from Davenport--Heilbronn.
+\end{enumerate}
+
+We make no claim of progress toward proving the left-hand side of Theorem~\ref{thm:detector}. The contribution is a clean, validated, and shared instrument, together with the observation that it reduces RH --- faithfully and reproducibly --- to the sign of one explicitly computable residue.
+
+\appendix
+%% ======================================================================
+\section{Python code}\label{sec:code}
+%% ======================================================================
+
+The following self-contained script (requiring only \texttt{mpmath} and \texttt{numpy}) builds $A_\lam$ for $\zeta$ and for Davenport--Heilbronn, computes the least eigenvalues, reconstructs the zeros from the ground state, and performs the pole-deletion experiment. The non-confounded faithfulness test of \S\ref{sec:nonconfound} and the index count of Proposition~\ref{prop:kappacount} are obtained by adding to the matrix the elementary term $\mathcal Q^{\mathrm{off}}_{nm}(b,\gamma_0)=\int_0^L q_{nm}(u)\,4\cosh(bu)\cos(\gamma_0u)\,du$ and counting negative eigenvalues. All spectral computations use $40$ decimal digits.
+
+\lstinputlisting{detector_engine.py}
+
+\begin{thebibliography}{9}
+\bibitem{DH1936} H.~Davenport and H.~Heilbronn, \emph{On the zeros of certain Dirichlet series} I, II, J.~London Math.~Soc.\ \textbf{11} (1936), 181--185, 307--312.
+\bibitem{weil1952} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers}, Comm.~S\'em.~Math.~Univ.~Lund (1952), 252--265.
+\bibitem{bombieri2000} E.~Bombieri, \emph{The Riemann Hypothesis}, in \emph{The Millennium Prize Problems}, Clay Math.~Inst./AMS (2006), 107--124.
+\bibitem{connes1999} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\bibitem{titchmarsh1986} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., Oxford Univ.~Press (1986).
+\bibitem{slepian1961} D.~Slepian and H.~O.~Pollak, \emph{Prolate spheroidal wave functions, Fourier analysis and uncertainty} I, Bell Syst.~Tech.~J.\ \textbf{40} (1961), 43--63.
+\end{thebibliography}
+
+\end{document}

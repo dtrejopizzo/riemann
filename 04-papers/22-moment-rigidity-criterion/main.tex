@@ -1,0 +1,753 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\minf}{m_\infty}
+\newcommand{\zon}{\zeta_{\mathrm{on}}}
+\newcommand{\xon}{\xi_{\mathrm{on}}}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\spn}{span}
+
+\title[RH as Moment Rigidity]{The Riemann Hypothesis as moment rigidity\\
+over Meixner--Pollaczek polynomials}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+
+\begin{abstract}
+Let $d\minf(s)=(2\pi)^{-3/2}\bigl|\Gamma\bigl(\tfrac14+\tfrac{is}{2}\bigr)\bigr|^{2}ds$
+be the probability measure on $\bbR$ arising as the archimedean spectral
+measure in the work of Connes, Consani and Moscovici, and let
+$\{\mathcal P_n\}_{n\ge0}$ be its orthonormal polynomials---a rescaled
+Meixner--Pollaczek family, with Jacobi coefficients
+$a_n=\tfrac12\sqrt{(2n+1)(2n+2)}$. Let $\zon$ be the modified zeta function
+obtained by projecting every non-trivial zero of $\zeta$ horizontally onto
+the critical line, and consider the discrepancy measure
+\[
+d\nu(s)=\Bigl(\bigl|\zeta(\tfrac12+is)\bigr|^{2}
+-\bigl|\zon(\tfrac12+is)\bigr|^{2}\Bigr)\,d\minf(s).
+\]
+We prove unconditionally that $\nu$ is a finite, non-negative, even measure
+with all moments finite, and that the Riemann Hypothesis is equivalent to the
+\emph{moment rigidity} statement: the spectral moments
+$\Delta_n=\int_\bbR\mathcal P_n^{2}\,d\nu$ are constant in $n$. The proof of
+the non-trivial direction uses no asymptotics of orthogonal polynomials and
+no positivity of any kernel. Constancy of $\Delta_n$ forces, by
+triangularity of $\{\mathcal P_n^{2}\}$ inside the even polynomials, the
+proportionality of all moments of $\nu$ to those of $\minf$; Carleman's
+condition---verified in one line from
+$a_n=\tfrac12\sqrt{(2n+1)(2n+2)}$---makes the moment problem of $\minf$
+determinate, whence $\nu=c\,\minf$ as measures; and Hardy's 1914 theorem on
+the existence of zeros on the critical line forces $c=0$, hence $\nu=0$,
+hence RH. The criterion is an equivalence, not a proof of RH; we state
+precisely what it does and does not give.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}\label{sec:intro}
+
+The criterion proved in this paper can be stated in one sentence. Let
+$d\nu=\bigl(|\zeta|^{2}-|\zon|^{2}\bigr)\,d\minf$ be the discrepancy, along
+the critical line, between the squared modulus of $\zeta$ and that of its
+on-line projection $\zon$ (every zero moved horizontally onto
+$\Real s=\tfrac12$; Definition~\ref{def:on}), weighted by the archimedean
+measure $d\minf(s)=(2\pi)^{-3/2}|\Gamma(\tfrac14+\tfrac{is}{2})|^{2}ds$ of
+Connes--Consani--Moscovici. Then (Theorem~\ref{thm:main})
+\[
+\boxed{\;\RH\iff
+\Delta_n:=\int_{\bbR}\mathcal P_n(s)^{2}\,d\nu(s)
+\ \text{is constant in }n\ge0,\;}
+\]
+where $\{\mathcal P_n\}$ are the orthonormal polynomials of $\minf$, i.e.\
+(Proposition~\ref{prop:mp}) rescaled Meixner--Pollaczek polynomials
+$P^{(1/4)}_n(s/2;\pi/2)$.
+
+\subsection{Why this measure}
+The measure $\minf$ is not chosen for convenience. In the
+spectral-realization programme of Connes, Consani and Moscovici
+\cite{CCMprolate,CCMq,CCMtriples}, the operator-theoretic framework built on
+the semilocal trace formula attaches, to each finite set $S$ of places of
+$\bbQ$ containing the archimedean place, a determinate moment problem whose
+measure is the squared absolute value, restricted to the critical line, of
+the product of the local factors over $S$. For $S=\{\infty\}$ the local
+factor is the archimedean one, $\pi^{-s/2}\Gamma(s/2)$, and the resulting
+measure is exactly $\minf$. Connes--Consani--Moscovici prove
+\cite[Prop.~3.3]{CCMprolate} that the orthonormal polynomials of $\minf$
+realize the scaling operator as the Jacobi matrix with zero diagonal and
+off-diagonal entries $a_n=\tfrac12\sqrt{(2n+1)(2n+2)}$, and they determine
+its moments \cite[Prop.~5.2]{CCMprolate}; the deformation of this moment
+problem by adjoining finite places is studied in \cite{CCMq}, and the
+framework is developed further in \cite{CCMtriples}. The measure $\minf$ is
+thus the canonical archimedean reference measure of that programme, and
+$|\zeta(\tfrac12+is)|^{2}\,d\minf(s)$ is its natural global counterpart. The
+present paper takes from \cite{CCMprolate} only two inputs, both
+re-verifiable from classical sources: the measure $\minf$ itself
+(Lemma~\ref{lem:mass} re-derives its normalization) and the exact value of
+its Jacobi coefficients (Proposition~\ref{prop:mp} re-derives them from the
+Meixner--Pollaczek tables \cite{KLS}). Everything else is proved here from
+scratch.
+
+\subsection{The shape of the proof}
+The implication $\RH\Rightarrow(\Delta_n\ \text{constant})$ is trivial:
+under RH the projection does nothing, $|\zon|=|\zeta|$ on the critical line,
+$\nu=0$, and $\Delta_n\equiv0$. The content is the converse, and its
+mechanism is the rigidity of a determinate Hamburger moment problem:
+\begin{enumerate}[(1)]
+\item the squares $\{\mathcal P_k^{2}\}_{k\le n}$ form a triangular basis of
+the even polynomials of degree $\le2n$ (Lemma~\ref{lem:triangular}), so
+$\Delta_n\equiv c$ forces \emph{every} moment of $\nu$ to equal $c$ times the
+corresponding moment of $\minf$;
+\item Carleman's condition holds for $\minf$---in Jacobi form it is the
+one-line verification
+$\sum 1/a_n\ge\sum 1/(n+1)=\infty$---so the moment problem of $\minf$ is
+determinate and $\nu=c\,\minf$ \emph{as measures}
+(Theorem~\ref{thm:rigidity});
+\item both measures have continuous Lebesgue densities, and by Hardy's
+theorem \cite{Hardy1914} $\zeta$ has at least one zero on the critical line;
+at such a zero the density of $\nu$ vanishes while that of $c\,\minf$ is
+$c\,w>0$ unless $c=0$. Hence $c=0$, so $\nu=0$, and the unconditional
+equality case of the Hadamard-product inequality
+(Proposition~\ref{prop:positivity}) gives RH.
+\end{enumerate}
+No asymptotics of $\mathcal P_n$, no Christoffel-function estimates, and no
+positivity of any indefinite kernel enter the argument. The unconditional
+inputs are collected in Section~\ref{sec:facts}: $d\nu\ge0$ (an explicit
+Hadamard-product computation: each off-line zero quadruple contributes a
+factor $\ge1$ to $|\zeta/\zon|^{2}$), finiteness of all moments of $\nu$,
+and parity.
+
+\subsection{What the criterion is and is not}
+The criterion is an exact reformulation of RH inside classical moment
+theory: \emph{the only non-negative even measure all of whose
+$\mathcal P_n$-spectral moments are equal is a multiple of the reference
+measure, and arithmetic---one application of Hardy's theorem---kills the
+multiple}. It is not, in its present form, a strategy of proof: evaluating
+$\nu$ requires knowing the zeros of $\zeta$ (Remark~\ref{rem:barrier}). Its
+interest, we believe, lies in the exact division of labour it
+exhibits---moment rigidity does all the analytic work, and the arithmetic
+input is confined to a single point---and in the family of explicit-formula
+identities it suggests (Question~\ref{q:arith}). All statements below are
+unconditional theorems about $\zeta$; none assumes RH.
+
+\section{The archimedean measure and its orthonormal polynomials}
+\label{sec:setup}
+
+\begin{definition}\label{def:minf}
+Let
+$w(s):=(2\pi)^{-3/2}\bigl|\Gamma\bigl(\tfrac14+\tfrac{is}{2}\bigr)\bigr|^{2}$
+for $s\in\bbR$, and $d\minf(s):=w(s)\,ds$. Since $\Gamma$ has no zeros,
+$w(s)>0$ for every $s\in\bbR$.
+\end{definition}
+
+\begin{lemma}[total mass]\label{lem:mass}
+$\displaystyle\int_{\bbR}\bigl|\Gamma\bigl(\tfrac14+it\bigr)\bigr|^{2}\,dt
+=\pi\sqrt{2\pi}$, and consequently $\minf$ is a probability measure.
+\end{lemma}
+
+\begin{proof}
+Let $f(x)=e^{-e^{x}}e^{x/4}$. Substituting $u=e^{x}$,
+\[
+\widehat f(t)=\int_{\bbR}f(x)e^{-itx}\,dx
+=\int_0^\infty e^{-u}u^{1/4-it}\,\frac{du}{u}
+=\Gamma\bigl(\tfrac14-it\bigr).
+\]
+By Plancherel's theorem $\int_{\bbR}|\widehat f|^{2}=2\pi\int_{\bbR}|f|^{2}$,
+so
+\[
+\int_{\bbR}\bigl|\Gamma\bigl(\tfrac14+it\bigr)\bigr|^{2}dt
+=2\pi\int_0^\infty e^{-2u}u^{-1/2}\,du
+=2\pi\,\Gamma\bigl(\tfrac12\bigr)\,2^{-1/2}
+=\pi\sqrt{2\pi}.
+\]
+With $t=s/2$ this gives
+$\int_{\bbR}|\Gamma(\tfrac14+\tfrac{is}{2})|^{2}\,ds=(2\pi)^{3/2}$, which is
+the normalization of Definition~\ref{def:minf}.
+\end{proof}
+
+The normalization agrees with \cite[Prop.~3.3, Prop.~5.2]{CCMprolate}. Let
+$\{\mathcal P_n\}_{n\ge0}$ be the orthonormal polynomials of $\minf$:
+$\deg\mathcal P_n=n$, positive leading coefficients,
+$\int\mathcal P_m\mathcal P_n\,d\minf=\delta_{mn}$; in particular
+$\mathcal P_0\equiv1$. Since $w$ is even, the classical parity property
+\cite[\S2.3]{Szego} gives $\mathcal P_n(-s)=(-1)^{n}\mathcal P_n(s)$, the
+recurrence has no diagonal terms, and there are $a_n>0$ with
+\begin{equation}\label{eq:recurrence}
+s\,\mathcal P_n(s)=a_n\,\mathcal P_{n+1}(s)+a_{n-1}\,\mathcal P_{n-1}(s),
+\qquad a_{-1}:=0 .
+\end{equation}
+
+\begin{proposition}[Meixner--Pollaczek identification]\label{prop:mp}
+The orthonormal polynomials of $\minf$ are rescaled Meixner--Pollaczek
+polynomials: with $P^{(\lambda)}_n(x;\phi)$ as in \cite[\S9.7]{KLS},
+\[
+\mathcal P_n(s)=c_n\,P^{(1/4)}_n\bigl(\tfrac s2;\tfrac\pi2\bigr)
+\quad\text{for some }c_n>0,
+\qquad
+a_n=\tfrac12\sqrt{(2n+1)(2n+2)}\quad(n\ge0).
+\]
+\end{proposition}
+
+\begin{proof}
+The Meixner--Pollaczek family $P^{(\lambda)}_n(x;\phi)$ is orthogonal on
+$\bbR$ with respect to the weight
+$e^{(2\phi-\pi)x}\,|\Gamma(\lambda+ix)|^{2}$ \cite[\S9.7]{KLS}. For
+$\lambda=\tfrac14$, $\phi=\tfrac\pi2$, $x=\tfrac s2$ this weight is
+$|\Gamma(\tfrac14+\tfrac{is}{2})|^{2}$, i.e.\ the weight of $\minf$ up to a
+positive constant, so the two orthonormal families coincide up to the change
+of variable and positive normalizations.
+
+For the coefficients: the recurrence \cite[(9.7.3)]{KLS} at $\phi=\pi/2$
+reads $(n+1)P_{n+1}(x)=2x\,P_n(x)-(n+2\lambda-1)P_{n-1}(x)$, with
+$P_n=P^{(\lambda)}_n(\,\cdot\,;\pi/2)$. The leading coefficient $k_n$
+satisfies $k_{n+1}=\tfrac{2}{n+1}k_n$, so $k_n=2^{n}/n!$ and
+$\tilde p_n:=\tfrac{n!}{2^{n}}P_n$ is monic, with
+\[
+x\,\tilde p_n(x)
+=\tilde p_{n+1}(x)+\frac{n(n+2\lambda-1)}{4}\,\tilde p_{n-1}(x).
+\]
+Hence the orthonormal recurrence in the variable $x$ has coefficients
+$a^{\mathrm{MP}}_n=\tfrac12\sqrt{(n+1)(n+2\lambda)}$, which for
+$\lambda=\tfrac14$ is $\tfrac12\sqrt{(n+1)(n+\tfrac12)}$. The change of
+variable $s=2x$ doubles them:
+$a_n=\sqrt{(n+1)(n+\tfrac12)}=\tfrac12\sqrt{(2n+1)(2n+2)}$.
+\end{proof}
+
+\begin{remark}
+The value $a_n=\tfrac12\sqrt{(2n+1)(2n+2)}$ agrees with
+\cite[Prop.~3.3]{CCMprolate}, where it is derived through the metaplectic
+representation; Proposition~\ref{prop:mp} certifies it independently against
+the classical tables. Consistency check at small order:
+\eqref{eq:recurrence} gives $\mu_2(\minf)=a_0^{2}=\tfrac12$ and
+$\mu_4(\minf)=a_0^{2}(a_0^{2}+a_1^{2})=\tfrac12\cdot\tfrac72=\tfrac74$,
+matching the moments $c_2=\tfrac12$, $c_4=\tfrac74$ computed in
+\cite[Prop.~5.2]{CCMprolate} from the generating identity
+$\sum c_n(ix)^{n}/n!=\sqrt{2/(e^{x}+e^{-x})}$.
+\end{remark}
+
+\begin{lemma}[moment growth and determinacy]\label{lem:carleman}
+The even moments $\mu_{2k}(\minf)=\int s^{2k}\,d\minf$ satisfy
+$\mu_{2k}(\minf)\le C\,\Gamma(2k+1)\,(2/\pi)^{2k}$ for an absolute constant
+$C$; hence $\mu_{2k}(\minf)^{1/(2k)}=O(k)$ and
+\[
+\sum_{k\ge1}\mu_{2k}(\minf)^{-1/(2k)}=\infty .
+\]
+Consequently, for every $c>0$ the Hamburger moment problem with moment
+sequence $\bigl(c\,\mu_j(\minf)\bigr)_{j\ge0}$ is determinate: $c\,\minf$ is
+the unique non-negative Borel measure on $\bbR$ with these moments
+\cite{Carleman,Akhiezer,Simon}.
+\end{lemma}
+
+\begin{proof}
+By Stirling's formula in the form
+$|\Gamma(x+iy)|\sim\sqrt{2\pi}\,|y|^{x-1/2}e^{-\pi|y|/2}$ as $|y|\to\infty$
+(cf.\ \cite[\S4.42]{Titchmarsh}), there is $C_0$ with
+$w(s)\le C_0\,(1+|s|)^{-1/2}e^{-\pi|s|/2}$ for all $s\in\bbR$. Hence
+\[
+\mu_{2k}(\minf)
+\le 2C_0\int_0^{\infty}s^{2k}e^{-\pi s/2}\,ds
+=2C_0\,\Gamma(2k+1)\Bigl(\tfrac{2}{\pi}\Bigr)^{2k+1},
+\]
+and $\Gamma(2k+1)^{1/(2k)}\le2k$ gives $\mu_{2k}^{1/(2k)}\le C'k$, so the
+Carleman series dominates a harmonic series. For $c>0$ the moments are
+$c\,\mu_{2k}$ and $c^{-1/(2k)}\to1$, so Carleman's condition is inherited;
+Carleman's theorem \cite{Carleman}, \cite[Chap.~II]{Akhiezer},
+\cite[\S1]{Simon} gives determinacy.
+\end{proof}
+
+\begin{remark}\label{rem:jacobicarleman}
+Equivalently, in Jacobi-coefficient form
+\cite[Chap.~I, Addenda]{Akhiezer}, \cite[\S3]{Simon}: by
+Proposition~\ref{prop:mp},
+\[
+\sum_{n\ge0}\frac1{a_n}
+=\sum_{n\ge0}\frac{2}{\sqrt{(2n+1)(2n+2)}}
+\;\ge\;\sum_{n\ge0}\frac1{n+1}=\infty,
+\]
+so the Jacobi matrix of $\minf$ is essentially self-adjoint and the moment
+problem is determinate. The divergence is logarithmic: the weight
+$e^{-\pi|s|/2}$ sits exactly at the boundary of determinacy, like
+$e^{-|x|}$. This borderline determinacy is the engine of the whole paper.
+\end{remark}
+
+\begin{lemma}[triangularity of the squares]\label{lem:triangular}
+For every $n\ge0$,
+$\spn\{\mathcal P_0^{2},\mathcal P_1^{2},\dots,\mathcal P_n^{2}\}$ is the
+space of all even polynomials of degree $\le2n$.
+\end{lemma}
+
+\begin{proof}
+Each $\mathcal P_k^{2}$ is an even polynomial (by parity of $\mathcal P_k$)
+of degree exactly $2k$ (square of a positive leading coefficient). The $n+1$
+polynomials $\mathcal P_0^{2},\dots,\mathcal P_n^{2}$ have the distinct
+degrees $0,2,\dots,2n$, hence are linearly independent in the
+$(n+1)$-dimensional space of even polynomials of degree $\le2n$, hence span
+it.
+\end{proof}
+
+\section{The discrepancy measure: unconditional facts}
+\label{sec:facts}
+
+\subsection{The on-line projection of \texorpdfstring{$\zeta$}{zeta}}
+Let $\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ be the completed
+zeta function, entire of order $1$ with functional equation
+$\xi(s)=\xi(1-s)$; its zeros are the non-trivial zeros $\rho=\beta+i\gamma$
+of $\zeta$, $0<\beta<1$, $\gamma\neq0$.\footnote{$\gamma\neq0$ because
+$\zeta$ has no zeros on the real segment $(0,1)$: for real
+$\sigma\in(0,1)$ the alternating series
+$\eta(\sigma)=\sum_{n\ge1}(-1)^{n-1}n^{-\sigma}$ is positive, and
+$\zeta(\sigma)=(1-2^{1-\sigma})^{-1}\eta(\sigma)\neq0$.} By the functional
+equation and the reality of $\xi$ on $\bbR$, the zeros off the critical line
+(if any) occur in quadruples
+\[
+Q_j=\bigl\{\tfrac12+\delta_j+i\gamma_j,\ \tfrac12+\delta_j-i\gamma_j,\
+\tfrac12-\delta_j+i\gamma_j,\ \tfrac12-\delta_j-i\gamma_j\bigr\},
+\qquad \delta_j\in(0,\tfrac12),\ \gamma_j>0,
+\]
+listed with multiplicity and indexed by $j\in J$ ($J$ finite or countable;
+$J=\emptyset$ iff RH). The classical bound
+$\sum_\rho(\tfrac14+\gamma^{2})^{-1}<\infty$ \cite[\S2.12]{Titchmarsh}
+implies in particular $\sum_{j\in J}\gamma_j^{-2}<\infty$.
+
+\begin{definition}[on-line projection]\label{def:on}
+For $j\in J$ put
+\[
+R_j(s):=
+\frac{\bigl((s-\tfrac12)^{2}+\gamma_j^{2}\bigr)^{2}}
+{\bigl((s-\tfrac12)^{2}-(\delta_j+i\gamma_j)^{2}\bigr)
+ \bigl((s-\tfrac12)^{2}-(\delta_j-i\gamma_j)^{2}\bigr)}\,,
+\]
+a rational function whose poles are exactly the quadruple $Q_j$ and whose
+zeros are exactly the projections $\tfrac12\pm i\gamma_j$, each double.
+Define
+\[
+\xon(s):=\xi(s)\prod_{j\in J}R_j(s),
+\qquad
+\bigl|\zon(\tfrac12+is)\bigr|
+:=\frac{\bigl|\xon(\tfrac12+is)\bigr|}{\bigl|G(\tfrac12+is)\bigr|},
+\quad G(s):=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2),
+\]
+which is legitimate because
+$|G(\tfrac12+is)|=\tfrac12(\tfrac14+s^{2})\pi^{-1/4}
+|\Gamma(\tfrac14+\tfrac{is}{2})|\neq0$ for all $s\in\bbR$.
+\end{definition}
+
+\begin{lemma}\label{lem:onentire}
+The product $\prod_{j}R_j$ converges absolutely and locally uniformly on
+compact subsets of $\bbC\setminus\bigcup_jQ_j$, and $\xon$ is an entire
+function whose zero set is exactly the multiset of projected zeros: the
+critical zeros of $\xi$ (unmoved) together with the points
+$\tfrac12\pm i\gamma_j$, $j\in J$, each with multiplicity $2$ per quadruple.
+If $\RH$ holds then $J=\emptyset$ and $\xon=\xi$. Moreover
+$\xon(1-s)=\xon(s)$, and $s\mapsto|\xon(\tfrac12+is)|^{2}$ is even and
+continuous on $\bbR$.
+\end{lemma}
+
+\begin{proof}
+Writing $X=(s-\tfrac12)^{2}$, a direct expansion gives
+\begin{equation}\label{eq:Rminus1}
+R_j(s)-1
+=\frac{\delta_j^{2}\,\bigl(2X-2\gamma_j^{2}-\delta_j^{2}\bigr)}
+{\bigl(X-(\delta_j+i\gamma_j)^{2}\bigr)\bigl(X-(\delta_j-i\gamma_j)^{2}\bigr)}\,,
+\end{equation}
+so on a fixed compact set $K$ (avoiding the finitely many $Q_j$ that meet
+$K$) one has $|R_j(s)-1|\le C_K\,\delta_j^{2}/\gamma_j^{2}\le
+C_K/(4\gamma_j^{2})$ for all large $j$, which is summable; the product
+therefore converges locally uniformly and defines a meromorphic function on
+$\bbC$ with poles exactly at the $Q_j$, matching the zeros of $\xi$ there
+with equal multiplicity. Hence $\xon$ is entire with the stated zero set.
+The symmetry $R_j(1-s)=R_j(s)$ is immediate ($R_j$ depends on
+$(s-\tfrac12)^{2}$), and continuity of $|\xon(\tfrac12+is)|^2$ in $s$ follows
+from local uniformity; evenness follows from
+$\overline{\xi(\tfrac12+is)}=\xi(\tfrac12-is)$ and the evenness of
+$R_j(\tfrac12+is)$ in $s$.
+\end{proof}
+
+\begin{definition}\label{def:nu}
+Set
+$\tilde g(s):=\bigl|\zeta(\tfrac12+is)\bigr|^{2}
+-\bigl|\zon(\tfrac12+is)\bigr|^{2}$ and
+\[
+d\nu(s):=\tilde g(s)\,d\minf(s)=\tilde g(s)\,w(s)\,ds .
+\]
+By Lemma~\ref{lem:onentire}, $\tilde g$ is continuous and even on $\bbR$.
+\end{definition}
+
+\subsection{Non-negativity via the Hadamard quadruples}
+
+\begin{proposition}[pointwise domination; vanishing iff RH]
+\label{prop:positivity}
+For all $u\in\bbR$,
+\begin{equation}\label{eq:quadprod}
+\bigl|\zon(\tfrac12+iu)\bigr|^{2}
+=\bigl|\zeta(\tfrac12+iu)\bigr|^{2}
+\prod_{j\in J}
+\Bigl(1+\frac{\delta_j^{2}}{(u-\gamma_j)^{2}}\Bigr)^{-2}
+\Bigl(1+\frac{\delta_j^{2}}{(u+\gamma_j)^{2}}\Bigr)^{-2},
+\end{equation}
+with the convention that at $u=\pm\gamma_j$ both sides vanish. Consequently
+$\tilde g(s)\ge0$ for all $s\in\bbR$, so $\nu$ is a non-negative Borel
+measure; and $\tilde g\equiv0$ if and only if $J=\emptyset$, i.e.\ if and
+only if $\RH$ holds.
+\end{proposition}
+
+\begin{proof}
+Evaluate $R_j$ at $s=\tfrac12+iu$, where $X=(s-\tfrac12)^{2}=-u^{2}$. The
+two denominator factors are complex conjugates, so
+\[
+R_j(\tfrac12+iu)
+=\frac{(\gamma_j^{2}-u^{2})^{2}}
+{\bigl(\gamma_j^{2}-\delta_j^{2}-u^{2}\bigr)^{2}+4\delta_j^{2}\gamma_j^{2}}
+\;\in\;[0,1],
+\]
+a non-negative real number. The key algebraic identity is
+\begin{equation}\label{eq:keyidentity}
+\bigl(\gamma^{2}-\delta^{2}-u^{2}\bigr)^{2}+4\delta^{2}\gamma^{2}
+=\bigl[(u-\gamma)^{2}+\delta^{2}\bigr]\bigl[(u+\gamma)^{2}+\delta^{2}\bigr],
+\end{equation}
+verified by expanding both sides:
+each equals
+$u^{4}+\gamma^{4}+\delta^{4}-2u^{2}\gamma^{2}+2u^{2}\delta^{2}
++2\gamma^{2}\delta^{2}$. Hence
+\[
+R_j(\tfrac12+iu)
+=\Bigl(1+\frac{\delta_j^{2}}{(u-\gamma_j)^{2}}\Bigr)^{-1}
+ \Bigl(1+\frac{\delta_j^{2}}{(u+\gamma_j)^{2}}\Bigr)^{-1}
+\qquad(u\neq\pm\gamma_j),
+\]
+and $R_j(\tfrac12\pm i\gamma_j)=0$. Since
+$|\xon(\tfrac12+iu)|^{2}=|\xi(\tfrac12+iu)|^{2}\prod_jR_j(\tfrac12+iu)^{2}$
+and the factor $|G(\tfrac12+iu)|^{2}$ is common to $\zeta$ and $\zon$,
+identity \eqref{eq:quadprod} follows. Every factor of the product in
+\eqref{eq:quadprod} lies in $(0,1]$, so
+$|\zon(\tfrac12+iu)|^{2}\le|\zeta(\tfrac12+iu)|^{2}$, i.e.\ $\tilde g\ge0$.
+
+If $J=\emptyset$ the product is empty and $\tilde g\equiv0$. Conversely,
+suppose some quadruple $Q_{j_0}$ exists and consider
+$u=\gamma_{j_0}+\epsilon$ for small $\epsilon>0$ chosen so that
+$\zeta(\tfrac12+iu)\neq0$ (possible: zeros are isolated). Then
+\[
+\tilde g(u)
+=\bigl|\zeta(\tfrac12+iu)\bigr|^{2}
+\Bigl(1-\prod_jR_j(\tfrac12+iu)^{2}\Bigr)
+\ \ge\
+\bigl|\zeta(\tfrac12+iu)\bigr|^{2}
+\Bigl(1-\bigl(1+\tfrac{\delta_{j_0}^{2}}{\epsilon^{2}}\bigr)^{-2}\Bigr)
+>0,
+\]
+using $R_j\le1$ for every $j$. Hence $\tilde g\not\equiv0$.
+\end{proof}
+
+\begin{remark}
+The intuition behind \eqref{eq:quadprod}: pulling a zero off the critical
+line \emph{increases} $|\xi|$ at every point of the line, by the factor
+$\bigl(1+\delta^{2}/(u\mp\gamma)^{2}\bigr)$ per projected zero. The on-line
+function is the pointwise smallest member of the family obtained by sliding
+the zeros horizontally; RH says $\xi$ is already minimal. The inequality
+$\tilde g\ge0$ is unconditional precisely because it compares $\xi$ with its
+own projection.
+\end{remark}
+
+\subsection{Finiteness of all moments}
+
+\begin{proposition}\label{prop:moments}
+For every $k\ge0$,
+\[
+\mu_{2k}(\nu)=\int_{\bbR}s^{2k}\,d\nu(s)
+\;\le\;\int_{\bbR}s^{2k}\,\bigl|\zeta(\tfrac12+is)\bigr|^{2}\,d\minf(s)
+\;<\;\infty .
+\]
+In particular $\nu(\bbR)<\infty$, all moments of $\nu$ are finite, all odd
+moments vanish, and the Carleman condition
+$\sum_k\mu_{2k}(\nu)^{-1/(2k)}=\infty$ holds for $\nu$ as well.
+\end{proposition}
+
+\begin{proof}
+The first inequality is the pointwise bound
+$0\le\tilde g\le|\zeta(\tfrac12+is)|^{2}$ from
+Proposition~\ref{prop:positivity}. For the second, the convexity bound
+$|\zeta(\tfrac12+it)|\ll_\varepsilon(1+|t|)^{1/4+\varepsilon}$
+\cite[Chap.~V]{Titchmarsh} and the Stirling estimate
+$w(s)\le C_0(1+|s|)^{-1/2}e^{-\pi|s|/2}$ (proof of
+Lemma~\ref{lem:carleman}) dominate the integrand by
+$C_\varepsilon\,s^{2k}(1+|s|)^{2\varepsilon}e^{-\pi|s|/2}$, which is
+integrable; as in Lemma~\ref{lem:carleman} this also gives
+$\mu_{2k}(\nu)\le C\,\Gamma(2k+2)(2/\pi)^{2k}$, whence
+$\mu_{2k}(\nu)^{1/(2k)}=O(k)$ and the Carleman divergence. Odd moments
+vanish because $\tilde g$ and $w$ are even. Note that no information about
+the configuration of hypothetical off-line zeros is needed: the domination
+$\tilde g\le|\zeta|^{2}$ is global.
+\end{proof}
+
+\section{The main theorem}\label{sec:main}
+
+Throughout this section $\Delta_n:=\int_\bbR\mathcal P_n^{2}\,d\nu$, which is
+finite for every $n$ by Proposition~\ref{prop:moments}.
+
+\begin{theorem}[moment rigidity]\label{thm:rigidity}
+Let $\sigma$ be a non-negative, even Borel measure on $\bbR$ with all
+moments finite, and suppose
+\[
+\int_\bbR\mathcal P_n(s)^{2}\,d\sigma(s)=c\qquad\text{for all }n\ge0 .
+\]
+Then $\sigma=c\,\minf$ as Borel measures. (For $n=0$ the hypothesis forces
+$c=\sigma(\bbR)\ge0$.)
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1: all moments are proportional.} By orthonormality
+$\int\mathcal P_n^{2}\,d\minf=1$, so the two measures $\sigma$ and
+$c\,\minf$ assign the same integral to every $\mathcal P_n^{2}$. By
+linearity and Lemma~\ref{lem:triangular} they assign the same integral to
+every even polynomial; both assign $0$ to every odd polynomial (both
+measures are even, and all moments converge absolutely). Hence
+$\mu_j(\sigma)=c\,\mu_j(\minf)$ for every $j\ge0$.
+
+\emph{Step 2: determinacy.} If $c=0$ then
+$\sigma(\bbR)=\mu_0(\sigma)=0$, so $\sigma=0=c\,\minf$. If $c>0$, the
+moment sequence $(c\,\mu_j(\minf))_j$ satisfies Carleman's condition and is
+therefore determinate (Lemma~\ref{lem:carleman}): it admits exactly one
+non-negative representing measure. Both $\sigma$ and $c\,\minf$ represent
+it; hence $\sigma=c\,\minf$.
+\end{proof}
+
+\begin{remark}
+Positivity of $\sigma$ is essential in Step 2: determinacy is a uniqueness
+statement within the class of \emph{non-negative} measures, and the
+conclusion fails for signed measures. This is the precise point where the
+unconditional positivity $d\nu\ge0$ of
+Proposition~\ref{prop:positivity} enters the chain. Note also what the
+theorem does \emph{not} say: it does not force $\sigma=0$. The measure
+$\sigma=\minf$ itself satisfies the hypothesis with $c=1$. Separating
+$c\,\minf$ from $0$ requires one further input, and that input is
+arithmetic.
+\end{remark}
+
+\begin{lemma}[Hardy kills the constant]\label{lem:hardy}
+Suppose $\nu=c\,\minf$ for some $c\ge0$, with $\nu$ as in
+Definition~\ref{def:nu}. Then $c=0$.
+\end{lemma}
+
+\begin{proof}
+The measures $\nu$ and $c\,\minf$ are both absolutely continuous with
+respect to Lebesgue measure, with densities $\tilde g\,w$ and $c\,w$
+respectively; equality of the measures gives $\tilde g\,w=c\,w$ almost
+everywhere, hence everywhere, since both sides are continuous
+(Definition~\ref{def:nu}; $w$ is continuous). As $w(s)>0$ for every $s$, we
+conclude $\tilde g(s)=c$ for all $s\in\bbR$.
+
+By Hardy's theorem \cite{Hardy1914} (see also
+\cite[Thm.~10.2]{Titchmarsh}), $\zeta$ has at least one zero---in fact
+infinitely many---on the critical line; let $\tfrac12+i\gamma_*$ be one,
+$\gamma_*\in\bbR$. Then $|\zeta(\tfrac12+i\gamma_*)|^{2}=0$, and by
+\eqref{eq:quadprod} also $|\zon(\tfrac12+i\gamma_*)|^{2}=0$ (the product
+factor lies in $[0,1]$). Hence $c=\tilde g(\gamma_*)=0-0=0$.
+\end{proof}
+
+\begin{theorem}[main theorem: RH as moment rigidity]\label{thm:main}
+The following are equivalent:
+\begin{enumerate}[(i)]
+\item the Riemann Hypothesis;
+\item $\Delta_n=\int_\bbR\mathcal P_n^{2}\,d\nu$ is constant in $n\ge0$;
+\item $\displaystyle\int_\bbR\kappa_n(s)\,d\nu(s)=0$ for all $n\ge0$, where
+$\kappa_n:=a_n^{2}\bigl(\mathcal P_{n+1}^{2}-\mathcal P_n^{2}\bigr)$ and
+$a_n=\tfrac12\sqrt{(2n+1)(2n+2)}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i)$\Rightarrow$(ii): under RH, $J=\emptyset$, $\tilde g\equiv0$
+(Proposition~\ref{prop:positivity}), $\nu=0$, and $\Delta_n\equiv0$.
+
+(ii)$\Leftrightarrow$(iii): $\int\kappa_n\,d\nu
+=a_n^{2}(\Delta_{n+1}-\Delta_n)$, all quantities being finite
+(Proposition~\ref{prop:moments}) and $a_n>0$; the equivalence is a
+telescoping triviality.
+
+(ii)$\Rightarrow$(i): $\nu$ is non-negative
+(Proposition~\ref{prop:positivity}), even, with all moments finite
+(Proposition~\ref{prop:moments}); by Theorem~\ref{thm:rigidity},
+$\nu=c\,\minf$ with $c=\Delta_0=\nu(\bbR)$; by Lemma~\ref{lem:hardy},
+$c=0$, so $\nu=0$, i.e.\ $\tilde g\,w\equiv0$, i.e.\ $\tilde g\equiv0$
+($w>0$ and $\tilde g$ continuous); by the equality case of
+Proposition~\ref{prop:positivity}, $J=\emptyset$, which is RH.
+\end{proof}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[what the proof uses, and what it does not]
+The proof of Theorem~\ref{thm:main} uses: orthonormality and parity of the
+$\mathcal P_n$; the exact Jacobi coefficients (only through Carleman's
+condition, where any $a_n=O(n)$ would do); the Hadamard quadruple inequality
+with its equality case; the convexity bound for $\zeta$; Stirling; and
+Hardy's theorem. It uses no asymptotics of the polynomials
+$\mathcal P_n$, no Christoffel--Darboux kernel estimates, and no positivity
+of the (indefinite) functions $\kappa_n$. The division of labour is sharp:
+moment theory proves ``$\nu$ is a multiple of $\minf$''; the arithmetic of
+$\zeta$ enters exactly once, to prove ``the multiple is zero''.
+\end{remark}
+
+\begin{remark}[the universal quantifier is essential]\label{rem:quantifier}
+No finite subfamily of the conditions in Theorem~\ref{thm:main}(iii)
+characterizes RH, and there is no single-index version. Indeed
+$\int\kappa_n\,d\minf=a_n^{2}(1-1)=0$ for every $n$: each $\kappa_n$ has
+mean zero against the reference measure, so each condition
+$\int\kappa_n\,d\nu=0$ is a single linear constraint that non-zero
+non-negative measures satisfy in abundance (any truncation of the family
+cuts out a set of measures of finite codimension, which contains, e.g., a
+positive multiple of $\minf$ plus suitable even perturbations). The
+criterion does not detect the mass of $\nu$ through the sign of any test
+function---it cannot, since the $\kappa_n$ are indefinite---but through the
+\emph{completeness} of $\{\mathcal P_n^{2}\}$ in the even polynomials
+combined with determinacy. Relatedly, ``$\Delta_n$ constant'' alone does not
+force $\nu=0$ (the measure $\minf$ itself has $\Delta_n\equiv1$): it is the
+arithmetic nature of $\nu$---a density vanishing at critical zeros---that
+converts rigidity into RH.
+\end{remark}
+
+\begin{remark}[partial-sum versions]\label{rem:partialsums}
+It is tempting to repackage the family (iii) as a single function of a
+height parameter, e.g.\
+$T_\lambda:=\sum_{n:\,\gamma_n\le\lambda}\int\kappa_n\,d\nu$, where
+$\gamma_n$ runs over the ordinates of the zeros of $\xi$ in non-decreasing
+order, and to assert $\RH\iff T_\lambda=0$ for all $\lambda$. One direction
+is again trivial, but the converse \emph{as stated} recovers the per-index
+family only if the ordinates $\gamma_n$ are pairwise distinct, since the
+jumps of $\lambda\mapsto T_\lambda$ then isolate each term. Under $\neg\RH$
+distinctness fails automatically---$\beta+i\gamma$ and $(1-\beta)+i\gamma$
+share the ordinate $\gamma$---so the $\lambda$-form only yields block sums
+$\sum_{n\in B}a_n^{2}(\Delta_{n+1}-\Delta_n)=0$ over blocks $B$ of
+coinciding ordinates, and these do not force constancy of $\Delta_n$ (one
+free parameter per block). We therefore regard the per-index form
+(ii)/(iii) as the correct formulation and state this caveat explicitly: we
+do not claim the $\lambda$-indexed equivalence.
+\end{remark}
+
+\begin{remark}[the barrier, stated honestly]\label{rem:barrier}
+The criterion is a reformulation of RH, not progress towards its proof: to
+evaluate $\nu$---hence any $\Delta_n$---one must know the multiset of zeros
+of $\zeta$, since $\zon$ is built from it. A proof of RH through
+Theorem~\ref{thm:main} would require establishing the constancy of
+$\Delta_n$ by some mechanism that does not presuppose knowledge of the
+zeros, and no such mechanism is offered here.
+\end{remark}
+
+\begin{remark}[relation to the Connes--Consani--Moscovici framework]
+\label{rem:ccm}
+What is taken from \cite{CCMprolate,CCMq,CCMtriples} is the measure $\minf$
+and the exact value of its Jacobi coefficients, i.e.\ the identity of the
+reference moment problem; both are re-derived here from classical sources
+(Lemma~\ref{lem:mass}, Proposition~\ref{prop:mp}). The criterion of
+Theorem~\ref{thm:main} and its proof are, to the best of the author's
+knowledge, not contained in those works, and conversely nothing here bears
+on the operator-theoretic statements proved there (semilocal trace formula,
+prolate operators, zeta spectral triples): the present paper makes no claim
+about them, in either direction. The reader should view
+Theorem~\ref{thm:main} as a statement of classical moment theory and
+classical analytic number theory whose \emph{coordinates}---the measure and
+the polynomials---are those canonically singled out by the
+Connes--Consani--Moscovici framework at the archimedean place.
+\end{remark}
+
+\begin{question}[arithmetic content]\label{q:arith}
+Each function $h_n(s):=\kappa_n(s)\,w(s)$ is even, real-analytic, and decays
+like $e^{-\pi|s|/2}$ times a polynomial, so it is an admissible test
+function for the Weil explicit formula; condition (iii) of
+Theorem~\ref{thm:main} is then a countable family of identities between a
+sum over the zeros and a sum over prime powers. Is there a direct arithmetic
+interpretation of the spectral moments $\Delta_n$---for instance, a closed
+expression for the prime side $\sum_p(\log p/\sqrt p)\,\widehat h_n(\log p)$
+in terms of the Meixner--Pollaczek data---that would let the constancy of
+$\Delta_n$ be studied as a statement about primes rather than about zeros?
+We leave this as the natural open question raised by the criterion.
+\end{question}
+
+\section*{Acknowledgments}
+The author thanks the internal audits of this line of workme within which
+this criterion was found; their adversarial standards are responsible for
+the present formulation, in particular for the caveat of
+Remark~\ref{rem:partialsums}. Any errors are the author's own.
+
+\begin{thebibliography}{99}
+
+\bibitem{Akhiezer}
+N.~I. Akhiezer,
+\emph{The Classical Moment Problem and Some Related Questions in Analysis},
+Oliver \& Boyd, Edinburgh--London, 1965.
+
+\bibitem{Carleman}
+T.~Carleman,
+\emph{Les fonctions quasi analytiques},
+Gauthier-Villars, Paris, 1926.
+
+\bibitem{CCMprolate}
+A.~Connes, C.~Consani, H.~Moscovici,
+\emph{Zeta zeros and prolate wave operators},
+Ann. Funct. Anal. \textbf{15} (2024), art. 87.
+arXiv:2310.18423.
+
+\bibitem{CCMq}
+A.~Connes, C.~Consani, H.~Moscovici,
+\emph{On $q$-series and the moment problem associated to local factors},
+preprint, arXiv:2403.01247 (2024).
+
+\bibitem{CCMtriples}
+A.~Connes, C.~Consani, H.~Moscovici,
+\emph{Zeta spectral triples},
+preprint, arXiv:2511.22755 (2025).
+
+\bibitem{Hardy1914}
+G.~H. Hardy,
+\emph{Sur les z\'eros de la fonction $\zeta(s)$ de Riemann},
+C. R. Acad. Sci. Paris \textbf{158} (1914), 1012--1014.
+
+\bibitem{KLS}
+R.~Koekoek, P.~A. Lesky, R.~F. Swarttouw,
+\emph{Hypergeometric Orthogonal Polynomials and Their $q$-Analogues},
+Springer Monographs in Mathematics, Springer, Berlin, 2010; \S9.7.
+
+\bibitem{Simon}
+B.~Simon,
+\emph{The classical moment problem as a self-adjoint finite difference
+operator},
+Adv. Math. \textbf{137} (1998), 82--203.
+
+\bibitem{Szego}
+G.~Szeg\H{o},
+\emph{Orthogonal Polynomials},
+4th ed., Amer. Math. Soc. Colloq. Publ. \textbf{23},
+American Mathematical Society, Providence, RI, 1975.
+
+\bibitem{Titchmarsh}
+E.~C. Titchmarsh,
+\emph{The Theory of the Riemann Zeta-Function},
+2nd ed., revised by D.~R. Heath-Brown,
+Oxford University Press, Oxford, 1986.
+
+\end{thebibliography}
+
+\end{document}

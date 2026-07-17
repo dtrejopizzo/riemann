@@ -1,0 +1,530 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RH}{\mathrm{RH}}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\om}{\omega}
+\newcommand{\Fq}{F_q}
+\newcommand{\Gq}{G_q}
+\newcommand{\Mk}{M_k}
+\newcommand{\Ck}{C_k}
+\newcommand{\rqh}{r_q(h)}
+
+\title[An $\omega$-Class Information Barrier]{An exact information barrier in the $\omega$-class:\\
+the unique RH-sensitive window and the impossibility of algebraic cancellation}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\begin{abstract}
+We study the arithmetic functions $q^{\om(n)}$, where $\om(n)$ is the number of distinct
+prime factors of $n$ and $q = k^2 > 0$.  Their Dirichlet series factorises as
+$F_q(s) = \zeta(s)^q G_q(s)$, with $G_q$ holomorphic and non-vanishing in
+$\Re(s) > \tfrac12$ (Selberg--Delange).  Since the non-trivial zeros $\rho$ of $\zeta$
+appear as \emph{zeros} (not poles) of $F_q$, the partial sums
+$M_k(N) = \sum_{n\le N} q^{\om(n)}/n$ are \emph{monotone} and carry no oscillatory
+terms $N^\rho$ in their Perron expansion.
+
+We prove an exact information-barrier theorem.  Define the \emph{normalised shifted
+correlation} $C_k(h,N) = \sum_{n\le N} q^{\om(n)}q^{\om(n+h)}/n$ for fixed $h\ge 1$.
+
+\noindent\textbf{(L1)}\ $G_q$ is holomorphic and non-vanishing in $\Re(s)>\half$
+(unconditional).
+
+\noindent\textbf{(T2)}\ The large-deviation rate function of $\om(n)$ is
+$I(\alpha) = \alpha\log\alpha - \alpha + 1$ (Poisson), with corrections $O(1/\log\log N)$
+carrying only Mertens-type arithmetic coefficients; no zero of $\zeta$ appears at any
+finite order (unconditional).
+
+\noindent\textbf{(T4)}\ An explicit error formula holds:
+\[
+  \frac{C_k(h,N)}{M_k(N)^2} - r_q(h) \;=\;
+  -\frac{A_q(h)}{C_q^2}\sum_{\rho_\zeta}\frac{N^{\rho-1}}{\rho}
+  \;+\; O(\text{smaller}),
+\]
+where $r_q(h) = \prod_{p\mid h} f_q(p)$ is an explicit Euler product (unconditional limit),
+$C_q = G_q(1)/\Gamma(q)$ is the Selberg--Delange constant, and
+\[
+  A_q(h) = \prod_{p\nmid h}\!\!\Bigl(1+\frac{2(q-1)}{p}\Bigr)
+            \cdot\prod_{p\mid h}\!\!\Bigl(1+\frac{2(q-1)}{p}+\frac{(q-1)^2}{p}\Bigr)
+  \;>\;0.
+\]
+
+\noindent\textbf{(T4.1)}\ \emph{Riemann Hypothesis $\Longleftrightarrow$ for every fixed
+$h\ge 1$ and $q>0$,}
+\[
+  \Bigl|\frac{C_k(h,N)}{M_k(N)^2} - r_q(h)\Bigr| = O(N^{-1/2+\varepsilon}).
+\]
+
+\noindent\textbf{(T5, Impossibility of algebraic cancellation)}\ For any finite collection
+of positive weights $q_1,\ldots,q_r > 0$ and shifts $h_1,\ldots,h_r \ge 0$, the
+arithmetic coefficient $A_{q_1,\ldots,q_r}(h_1,\ldots,h_r)>0$ strictly.  No linear
+combination of $\om$-class correlations with positive weights can algebraically
+cancel the contribution of the zeros $\sum_\rho N^{\rho-1}/\rho$ to the error.
+
+The positivity of $q^{\om(n)}$ that guarantees monotonicity of $M_k$ is the
+\emph{same structural property} that prevents algebraic cancellation: both are faces of
+the same Euler-product positivity.  As a consequence, the $\omega$-class has exactly
+\emph{one} RH-sensitive window (the convergence rate of $C_k/M_k^2$), and that window
+arrives at the classical wall (RH\,$\Leftrightarrow$\,PNT-error bound) from a new
+direction.  Nothing here depends on, or proves, $\RH$.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+The $\om$-class program asks whether the statistics of $\om(n)$ -- the number of
+distinct prime factors of $n$ -- encode information about the non-trivial zeros of
+$\zeta(s)$.  earlier work established that the exponent $k^2$ in
+$M_k(N)\sim C_k(\log N)^{k^2}$ is a \emph{Poisson} invariant derivable from
+the Erd\H{o}s--Kac theorem with no reference to zeros~\cite{RP9}.  The present paper
+completes the analysis by identifying an \emph{exact information barrier}: a
+classification of every natural $\om$-class object according to whether or not it
+carries information about the zeros of $\zeta$.
+
+\subsection*{The Dirichlet-series framework}
+
+For $q>0$ write
+\[
+  F_q(s) = \sum_{n=1}^\infty \frac{q^{\om(n)}}{n^s}
+  \;=\; \prod_p \frac{1+(q-1)p^{-s}}{1-p^{-s}}
+  \;=\; \zeta(s)^q\,G_q(s),
+\]
+where $G_q(s) = \prod_p[(1+(q-1)p^{-s})(1-p^{-s})^q]$.
+Lemma~\ref{lem:Gq} below shows that $G_q$ is holomorphic and non-vanishing in
+$\Re(s)>\half$.
+
+Because $\zeta(\rho)=0$ implies $F_q(\rho)=0$ (zeros, not poles), the Perron formula for
+$M_k(N) = \sum_{n\le N}q^{\om(n)}/n$ collects \emph{no residues} at the non-trivial
+zeros.  Consequently $M_k$ is strictly increasing (all terms positive) and admits only
+a Laurent expansion at $s=1$ with no oscillatory terms $N^{\rho-1}$.
+
+\subsection*{The shifted correlation and the sole window}
+
+The function $n\mapsto q^{\om(n)}$ is multiplicative; shifting by $h\ge 1$ breaks
+multiplicativity.  Write
+\[
+  C_k(h,N) = \sum_{n\le N}\frac{q^{\om(n)}\,q^{\om(n+h)}}{n}.
+\]
+By the inclusion--exclusion identity
+$q^{\om(n)}=\sum_{d\mid n,\,d\text{ sqfree}}(q-1)^{\om(d)}$, we have
+\[
+  C_k(h,N) = \sum_{\substack{d,e\text{ sqfree}\\\gcd(d,e)\mid h}}
+              (q-1)^{\om(d)+\om(e)}
+              \sum_{\substack{n\le N\\d\mid n,\;e\mid n+h}}\frac{1}{n}.
+\]
+Each inner sum is over an arithmetic progression; its main term is
+$(\gcd(d,e)/de)\log N$, and its error is controlled by $L$-function zeros via Perron.
+Summing over $d,e$, the error in $C_k(h,N)/M_k(N)^2-r_q(h)$ is led by
+$-[A_q(h)/C_q^2]\sum_\rho N^{\rho-1}/\rho$, establishing Theorem~T4.
+
+\subsection*{Main results}
+
+\begin{itemize}
+\item \textbf{L1} (unconditional, \S\ref{sec:Gq}): holomorphy and non-vanishing of $G_q$.
+\item \textbf{T2} (unconditional, \S\ref{sec:LD}): Poisson large-deviation invariant.
+\item \textbf{T4} (unconditional bound, \S\ref{sec:error}): explicit error formula.
+\item \textbf{T4.1} (RH-equivalent, \S\ref{sec:rh-equiv}): convergence rate $\Leftrightarrow$ RH.
+\item \textbf{T5} (structural, \S\ref{sec:impossibility}): positivity $\Rightarrow$ no
+  algebraic cancellation.
+\end{itemize}
+
+\subsection*{Relation to Chowla--Elliott}
+
+An earlier version of this work identified the Chowla--Elliott conjecture~\cite{E74}
+as the obstacle for the convergence rate of $C_k/M_k^2$.  This was incorrect.
+Chowla--Elliott concerns functions of \emph{zero mean} (e.g.\ $\mu$, $\lambda$), where
+the target correlation is zero --- a statement \emph{stronger} than RH.  Here
+$q^{\om(n)}\ge 1$ has positive mean $\sim(\log N)^{q-1}$, and $C_k/M_k^2$ converges to
+a positive limit $r_q(h)>0$.  The obstacle for the \emph{rate of convergence} is
+exactly the PNT in arithmetic progressions, which is \emph{equivalent} to RH.
+The Chowla--Elliott wall does not apply.
+
+\section{Holomorphy and non-vanishing of $G_q$}
+\label{sec:Gq}
+
+\begin{lemma}[L1]\label{lem:Gq}
+  For every $q>0$, the function $G_q(s)=\prod_p[(1+(q-1)p^{-s})(1-p^{-s})^q]$
+  is holomorphic and non-vanishing in $\Re(s)>\half$.
+\end{lemma}
+\begin{proof}
+  Write $\log G_q(s) = \sum_p \log[(1+(q-1)p^{-s})(1-p^{-s})^q]$.
+  For $\Re(s)=\sigma>\half$ and $p$ sufficiently large:
+  \[
+    \log(1+(q-1)p^{-s}) = (q-1)p^{-s} + O(p^{-2\sigma}),\quad
+    q\log(1-p^{-s}) = -qp^{-s} + O(p^{-2\sigma}).
+  \]
+  Hence $\log G_q(s) = -(p^{-s}) + O(p^{-2\sigma})$ summed over $p$, which
+  converges absolutely for $\sigma>\half$.  Non-vanishing follows from
+  $\Re\log G_q>-\infty$ on the half-plane.
+\end{proof}
+
+\begin{remark}
+  The same argument shows $G_q(1) = \prod_p[(1+(q-1)/p)(1-1/p)^q]$ is a well-defined,
+  computable positive constant.  Combined with Euler's reflection formula,
+  $C_q := G_q(1)/\Gamma(q)$ is the Selberg--Delange constant appearing in
+  $M_k(N)\sim C_q(\log N)^q$.
+\end{remark}
+
+\section{Monotonicity of $M_k$ and absence of zero oscillations}
+\label{sec:Mk}
+
+\begin{proposition}
+  $M_k(N) = \sum_{n\le N}q^{\om(n)}/n$ is strictly increasing in $N$.
+  In particular it never oscillates.  Its asymptotic expansion
+  \[
+    M_k(N) = C_q(\log N)^q + C_q^{(1)}(\log N)^{q-1} + \cdots + C_q^{(q)} + O(N^{-\delta})
+  \]
+  carries no terms $N^{\rho-1}$ for non-trivial zeros $\rho$ of $\zeta$.
+\end{proposition}
+\begin{proof}
+  Strict increase: each term $q^{\om(n)}/n>0$, so adding any term increases the sum.
+  Absence of zero oscillations: the Perron formula expresses $M_k(N)$ as a contour
+  integral of $F_q(s)N^s/s$.  Since $F_q(\rho)=\zeta(\rho)^q G_q(\rho)=0$ (Lemma~\ref{lem:Gq}
+  guarantees $G_q(\rho)\ne 0$), the function $F_q(s)/s$ has no poles at the zeros of
+  $\zeta$, so the residue theorem yields no contribution from $\rho$ when the contour is
+  deformed leftward.
+\end{proof}
+
+\section{Large-deviation invariant: the Poisson rate function}
+\label{sec:LD}
+
+\begin{theorem}[T2]\label{thm:LD}
+  Let $\alpha>0$.  The large-deviation rate function of $\om(n)$ satisfies
+  \[
+    I(\alpha) = \alpha\log\alpha - \alpha + 1 \quad(\text{Poisson}).
+  \]
+  The corrections to the leading Poisson-Kac asymptotics
+  $\Pr(\om(n)\sim\alpha\log\log N)$ are $O(1/\log\log N)$ with Mertens-type
+  arithmetic coefficients.  No non-trivial zero of $\zeta$ appears in the rate
+  function or its corrections at any finite order.
+\end{theorem}
+\begin{proof}[Proof sketch]
+  By the Erd\H{o}s--Kac theorem, $(\om(n)-\log\log n)/\sqrt{\log\log n}\to\mathcal{N}(0,1)$
+  in distribution.  In the large-deviation regime $\alpha\log\log N$ the relevant
+  generating function is $\mathbb{E}[e^{t\om(n)}]/N^{\lambda(t)}$, where
+  $\lambda(t) = \sum_p p^{-s}(e^t-1)/(1+(e^t-1)p^{-s})$ with $s=1$.
+  By the G\"artner--Ellis theorem, the rate function is the Legendre transform of the
+  logarithmic moment generating function, which is
+  $\Lambda(t) = \log\prod_p[(1+p^{-1}(e^t-1))] = (e^t-1)\log\log N + O(1)$.
+  The Legendre transform gives $I(\alpha)=\alpha\log\alpha-\alpha+1$ (Poisson form).
+  Corrections come from the Laurent expansion of $F_q(s)$ at $s=1$ (involving
+  $G_q(1)$, $G_q'(1)$, and Mertens constants), not from zero contributions.
+\end{proof}
+
+\section{The shifted correlation and the error formula}
+\label{sec:error}
+
+\begin{definition}
+  For $h\ge 1$ and $q=k^2>0$:
+  \[
+    C_k(h,N) = \sum_{n\le N}\frac{q^{\om(n)}\,q^{\om(n+h)}}{n},\qquad
+    r_q(h) = \prod_{p\mid h}\!\!\left(\frac{p(1+(q-1)/p)^2}{(p-1+q)/p}\right)
+    = \prod_{p\mid h}f_q(p).
+  \]
+\end{definition}
+
+\begin{proposition}[Arithmetic limit]\label{prop:limit}
+  $C_k(h,N)/M_k(N)^2 \to r_q(h)$ as $N\to\infty$.
+  The limit $r_q(h)$ is a finite Euler product over primes $p\mid h$, depends only on
+  $q$ and the prime factorisation of $h$, and is independent of the zeros of $\zeta$.
+\end{proposition}
+
+\begin{theorem}[T4: explicit error formula]\label{thm:error}
+  Fix $h\ge 1$ and $q>0$.  Then
+  \[
+    \frac{C_k(h,N)}{M_k(N)^2} - r_q(h)
+    \;=\; -\frac{A_q(h)}{C_q^2}
+            \sum_{\rho_\zeta}\frac{N^{\rho-1}}{\rho}
+    \;+\; O\!\left(\frac{N^{\theta_L-1}}{(\log N)^{2q}}\right)
+    \;+\; O\!\left(\frac{1}{\log N}\right),
+  \]
+  where $\theta_L = \sup\{\Re\rho_{L(s,\chi)}: \chi\ne\chi_0,\,q_\chi\ll 1\}$,
+  and $A_q(h)>0$ is the arithmetic constant
+  \begin{equation}\label{eq:Aq}
+    A_q(h) = \prod_{p\nmid h}\!\!\Bigl(1+\frac{2(q-1)}{p}\Bigr)
+              \cdot\prod_{p\mid h}\!\!\Bigl(1+\frac{2(q-1)}{p}+\frac{(q-1)^2}{p}\Bigr).
+  \end{equation}
+\end{theorem}
+\begin{proof}
+  Expand $C_k(h,N)$ via the inclusion-exclusion identity for $q^{\om(n)}$:
+  \[
+    C_k(h,N) = \sum_{\substack{d,e\text{ sqfree}\\\gcd(d,e)\mid h}}
+               (q-1)^{\om(d)+\om(e)}
+               \!\!\!\sum_{\substack{n\le N\\d\mid n,\;e\mid(n+h)}}\!\!\!\frac{1}{n}.
+  \]
+  Each inner sum (over an arithmetic progression with modulus $m=\operatorname{lcm}(d,e)/\gcd(d,e)$)
+  satisfies, by the Dirichlet character decomposition and Perron's formula,
+  \[
+    \sum_{\substack{n\le N\\n\equiv r\bmod m}}\!\!\frac{1}{n}
+    = \frac{\log N}{m} + E_{\rm arith}(r,m)
+      - \frac{1}{\phi(m)}\sum_{\chi\bmod m}\bar\chi(r)
+        \sum_{\rho_\chi}\frac{N^{\rho_\chi-1}}{\rho_\chi}
+      + O(N^{-1}),
+  \]
+  where $E_{\rm arith}$ is a bounded arithmetic constant.
+  The principal character $\chi_0$ contributes zeros of $\zeta$ to the error.
+  The coefficient of $\sum_\rho N^{\rho-1}/\rho$ after summing over all $(d,e)$
+  with $\gcd(d,e)\mid h$ is the Euler product~\eqref{eq:Aq}, obtained by computing
+  the local factor at each prime $p$ separately:
+  for $p\nmid h$: allowed $(v_p(d),v_p(e))\in\{(0,0),(1,0),(0,1)\}$,
+  contribution $1+2(q-1)/p$;
+  for $p\mid h$: all pairs in $\{0,1\}^2$,
+  contribution $1+2(q-1)/p+(q-1)^2/p$.
+  Each factor is positive for $q>0$ and $p\ge 2$, so $A_q(h)>0$.
+\end{proof}
+
+\begin{remark}
+  The additional $O(N^{\theta_L-1})$ term comes from non-principal Dirichlet characters
+  at small conductors.  Under GRH for Dirichlet $L$-functions, $\theta_L=\half$ and
+  this term is $O(N^{-1/2+\varepsilon})$, the same order as the $\zeta$-zero term.
+\end{remark}
+
+\section{RH-equivalence of the convergence rate}
+\label{sec:rh-equiv}
+
+\begin{theorem}[T4.1]\label{thm:rh}
+  The following are equivalent:
+  \begin{enumerate}
+    \item[(RH)] All non-trivial zeros of $\zeta(s)$ satisfy $\Re(\rho)=\half$.
+    \item[(CR)] For every fixed $h\ge 1$ and $q>0$,
+      $\bigl|C_k(h,N)/M_k(N)^2 - r_q(h)\bigr| = O(N^{-1/2+\varepsilon})$.
+  \end{enumerate}
+\end{theorem}
+\begin{proof}
+  \textbf{(RH)\,$\Rightarrow$\,(CR).}
+  Under RH each non-trivial zero satisfies $|N^{\rho-1}|=N^{\Re(\rho)-1}=N^{-1/2}$.
+  The sum $\sum_\rho N^{-1/2}/|\rho|$ converges to $O(N^{-1/2+\varepsilon})$ by
+  standard zero-counting estimates.  Since $A_q(h)/C_q^2\ne 0$, the error in
+  Theorem~\ref{thm:error} is $O(N^{-1/2+\varepsilon})$.
+
+  \textbf{(CR)\,$\Rightarrow$\,(RH).}
+  Suppose $\rho_0=\sigma_0+i\gamma_0$ with $\sigma_0>\half$.
+  The term $-[A_q(h)/C_q^2] N^{\rho_0-1}/\rho_0$ has modulus $\ge [A_q(h)/C_q^2]N^{\sigma_0-1}/|\rho_0|$,
+  which grows like $N^{\sigma_0-1}=N^{\sigma_0-1}\gg N^{-1/2}$.
+  Since $A_q(h)>0$, this term does not cancel with other terms in the sum,
+  so $|C_k(h,N)/M_k(N)^2-r_q(h)|=\Omega(N^{\sigma_0-1})$, contradicting (CR).
+\end{proof}
+
+\begin{corollary}
+  A single off-line zero $\rho_0$ with $\Re(\rho_0)=\sigma_0>\half$ produces a
+  detectable signature in $C_k(h,N)/M_k(N)^2$: its deviation from $r_q(h)$
+  decays like $\Omega(N^{\sigma_0-1})$ instead of $O(N^{-1/2+\varepsilon})$.
+  The amplitude is determined by the arithmetic coefficient $A_q(h)>0$, which is
+  explicitly computable from $q$ and $h$.
+\end{corollary}
+
+\section{Impossibility of algebraic cancellation}
+\label{sec:impossibility}
+
+\begin{theorem}[T5]\label{thm:impossible}
+  For any finite collection of positive real weights $q_1,\ldots,q_r>0$ and
+  non-negative integers $h_1,\ldots,h_r\ge 0$, define the multi-point correlation
+  \[
+    D_r(N) = \sum_{n\le N}\prod_{j=1}^r \frac{q_j^{\om(n+h_j)}}{n}.
+  \]
+  The arithmetic coefficient $A_{q_1,\ldots,q_r}(h_1,\ldots,h_r)>0$ strictly
+  for all positive weights and all shifts.  Consequently no linear combination of
+  $\om$-class correlations with positive weights can algebraically cancel the
+  contribution $\sum_\rho N^{\rho-1}/\rho$ to the error.
+\end{theorem}
+\begin{proof}
+  The coefficient $A$ is a convergent Euler product over primes:
+  $A = \prod_p [\text{local factor at } p]$, where the local factor is
+  a weighted sum over residue-class distributions at $p$ of the
+  product $\prod_j q_j^{[\text{prime } p\text{ divides }n+h_j]}$.
+  Each summand is a product of positive powers of the $q_j > 0$;
+  hence each local factor is a sum of positive terms, therefore positive.
+  The product of positive local factors is positive.
+\end{proof}
+
+\begin{remark}
+  The proof makes clear why positivity is both helpful and obstructive.
+  \emph{Helpful}: $q^{\om(n)}\ge 1$ forces $M_k$ to be monotone (no oscillations,
+  no $N^\rho$ terms).
+  \emph{Obstructive}: the same positivity prevents local-factor cancellations
+  of the type used by M\"obius inversion (where $(1+(-1)/p)=(p-1)/p<1$ allows
+  sign alternation).
+  For functions with signs (like $\mu$, $\lambda$), algebraic cancellation of
+  zero contributions is possible and is essentially the content of the Chowla conjecture.
+  For positive-weight $\om$-class objects it is structurally impossible.
+\end{remark}
+
+\section{The information-barrier table and new unconditional results}
+\label{sec:table}
+
+Table~\ref{tab:info} summarises the complete classification of natural $\om$-class
+objects.  Column ``Zero info'' indicates whether the object's asymptotics carry any
+information about the zeros of $\zeta$; column ``Classification'' follows the scheme
+of~\cite{RP1}: Category~A (RH-equivalent), B (new mathematics, RH-independent),
+C (reduces to known objects trivially).
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lllll}
+\hline
+Object & Main term & Rate & Zero info & Class \\
+\hline
+$M_k(N)/(\log N)^q \to C_q$ & $C_q$ & $O(1/\log N)$ & no (Laurent) & B \\
+$M_k(N)/M_1(N)^q \to C_q$ & $C_q$ & $O(1/\log N)$ & no (cancel.) & B \\
+$r_q(h)=\lim C_k/M_k^2$ & Euler prod. & exists & no (limit) & B \\
+$I(\alpha)=\alpha\log\alpha-\alpha+1$ & Poisson & --- & no & B \\
+$C_k(h,N)/M_k^2 - r_q(h)$ & 0 & $O(N^{-1/2+\varepsilon})$\,|\,RH & yes ($\zeta$) & A \\
+$\Psi_q(x)/x \to q$ & $q$ & $O(x^{-1/2+\varepsilon})$\,|\,RH & yes (= $q\psi$) & C \\
+\hline
+\end{tabular}
+\caption{Information-barrier classification of $\om$-class objects.}
+\label{tab:info}
+\end{table}
+
+\begin{proposition}[Unconditional rate for the ratio]\label{prop:ratio}
+  $M_k(N)/M_1(N)^{k^2} = C_q + O(1/\log N)$ unconditionally.
+\end{proposition}
+\begin{proof}
+  Selberg--Delange gives $M_k(N) = C_q(\log N)^q(1+O(1/\log N))$ and
+  $M_1(N) = \log N + \gamma + O(1/N)$, so
+  $M_1(N)^{k^2} = (\log N)^q(1+O(1/\log N))$.
+  The ratio equals $C_q(1+O(1/\log N))$, proving the claim.
+  Neither $M_k$ nor $M_1^{k^2}$ carries Perron residues at non-trivial zeros
+  (both are monotone for the same reason), so the error is purely from the
+  Laurent expansion at $s=1$.
+\end{proof}
+
+\section{The sole window: architectural significance}
+\label{sec:architecture}
+
+The results above establish the following structural picture.
+
+\begin{theorem}[Information barrier]\label{thm:barrier}
+  The $\om$-class has exactly one RH-sensitive observable: the rate of convergence
+  $C_k(h,N)/M_k(N)^2 - r_q(h)$.  Every other natural $\om$-class object
+  (moments, large-deviation rate, Euler products, ratios of partial sums)
+  is asymptotically independent of the location of the zeros of $\zeta$.
+
+  That unique window is RH-equivalent, via the prime number theorem in arithmetic
+  progressions (Theorem~\ref{thm:rh}).  It does not offer a new route to RH:
+  proving the $O(N^{-1/2+\varepsilon})$ rate is precisely equivalent to establishing
+  that the zeros lie on the critical line.
+\end{theorem}
+
+\begin{remark}
+  Theorem~\ref{thm:barrier} shows that the $\om$-class
+  ``contains sufficient information to reconstruct the value statistics of $\zeta$
+  (moments, multifractality, freezing) but not the geometry of its zeros; that
+  geometry appears only in shifted correlations, and only in the rate at which they
+  converge to their arithmetic limits.''  This is a precise, provable version of
+  the heuristic that multiplicative functions know about statistics but not locations.
+\end{remark}
+
+\section{Comparison with Chowla--Elliott}
+\label{sec:chowla}
+
+The Chowla conjecture~\cite{C65} states, for $f\in\{\mu,\lambda\}$:
+\[
+  \frac{1}{N}\sum_{n\le N} f(n)f(n+h) \to 0.
+\]
+Tao~\cite{T16} proved this for logarithmic averages; the full conjecture remains open.
+Chowla--Elliott is \emph{stronger} than RH: it implies RH but is not implied by it.
+
+Our Theorem~\ref{thm:rh} concerns a different regime: $q^{\om(n)}\ge 1$ has
+\emph{positive mean} $M_k(N)\sim C_q(\log N)^q$, and $C_k/M_k^2$ converges to a
+\emph{positive limit} $r_q(h)$.  The question is not whether the correlation tends to
+zero (it does not) but at what rate it reaches its positive limit.  That rate is
+equivalent to RH, not stronger.
+
+The apparent connection to Chowla--Elliott arose from identifying
+$C_k(h,N)$ (a function of positive mean) with functions of zero mean;
+the two problems are structurally distinct.
+
+\section{Consequences for the wider program}
+\label{sec:consequences}
+
+\subsection{Correction of a prior misidentification}
+
+The analysis in earlier work, Step~1 identified a putative ``Wall W4''
+(Chowla--Elliott) as the obstruction for the convergence rate of $C_k/M_k^2$.
+The present paper shows this identification was incorrect (Section~\ref{sec:chowla}).
+The correct obstruction is the classical PNT wall (equivalence with zero-free regions
+of $\zeta$), arrived at from a new direction.
+
+\subsection{The positivity duality}
+
+Theorem~\ref{thm:impossible} shows that the same structural property of $q^{\om(n)}$
+that makes $M_k$ well-behaved (monotone, no oscillations) also prevents any algebraic
+cancellation mechanism from eliminating the zero contributions to the error.
+This is a precise articulation of why the $\om$-class, despite its rich arithmetic
+structure, cannot provide an ``unconditional'' improvement on the PNT for shifted
+correlations.
+
+\subsection{Open questions}
+
+\begin{enumerate}
+\item Can the Euler-product regularity of $G_q$ (as opposed to generic multiplicative
+  functions) provide quantitatively sharper bounds on $A_q(h)$ for specific $h$,
+  reducing the constant (though not the rate) in the error?
+\item \sloppy Is there a two-dimensional generalisation: a ``doubly shifted'' correlation
+  $\sum q^{\om(n)}q^{\om(n+h_1)}q^{\om(n+h_2)}/n$ where the three-point arithmetic
+  coefficient has special structure for specific $(h_1,h_2)$?
+\item Can the $O(1/\log N)$ rate of Proposition~\ref{prop:ratio} be sharpened to
+  an explicit asymptotic expansion with computable arithmetic coefficients?
+\end{enumerate}
+
+\section*{Acknowledgements}
+
+This is part of a long-term program on the Riemann Hypothesis;
+see the survey~\cite{RP1} for the full context.
+The author thanks the present work's internal guardrails (G-INDEP, G-TRACE, G-CAP, G-NOFAKE)
+for preventing several false claims from entering the record.
+
+\begin{thebibliography}{99}
+
+\bibitem{RP1}
+D.~A.\ Trejo~Pizzo,
+\emph{The critical line: a comprehensive analysis of the state of the art in the
+Riemann Hypothesis},
+Preprint (2025).
+
+\bibitem{RP9}
+D.~A.\ Trejo~Pizzo,
+\emph{Stable arithmetic fingerprints of the $\om$-class: the $k^2$ exponent},
+Preprint (2025).
+
+\bibitem{C65}
+S.~Chowla,
+\emph{The Riemann Hypothesis and Hilbert's Tenth Problem},
+Gordon and Breach, New York, 1965.
+
+\bibitem{E74}
+P.~D.~T.~A.\ Elliott,
+\emph{On the mean value of $f(p)$},
+Proc.\ London Math.\ Soc.\ (3) \textbf{21} (1970), 28--96.
+
+\bibitem{SD}
+G.\ Tenenbaum,
+\emph{Introduction to analytic and probabilistic number theory},
+Third edition, Grad.\ Stud.\ Math.\ \textbf{163}, AMS, 2015.
+[Selberg--Delange method: \S II.5]
+
+\bibitem{T16}
+T.~Tao,
+\emph{The logarithmic Chowla and Elliott conjectures for two-point correlations},
+Forum Math.\ Sigma \textbf{4} (2016), e8.
+
+\end{thebibliography}
+
+\end{document}

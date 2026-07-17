@@ -1,0 +1,25 @@
+## Overview ## Analysis Summary For the Möbius function L(s,μ) at N=10⁶, I identified the top 20 highest-magnitude peaks in the interval [10⁶, 2×10⁶] and performed systematic phase perturbation analysis on the S₂ and S₃ ω-class sums. ## Key Quantitative Results **S₂ Perturbation:**
+- Angle of minimum magnitude: θ = 3.14 rad (180.0°)
+- Minimum normalized magnitude (average curve): 0.350
+- Peak reduction (mean across 20 peaks): 70.70% ± 3.07% (SE)
+- Range: 52.93% to 97.23% **S₃ Perturbation:**
+- Angle of minimum magnitude: θ = 2.79 rad (160.0°)
+- Minimum normalized magnitude (average curve): 0.498
+- Peak reduction (mean across 20 peaks): 56.73% ± 3.19% (SE)
+- Range: 41.57% to 91.58% **Comparative Analysis:**
+- S₂ perturbation causes significantly larger peak reduction (70.70% vs 56.73%)
+- Difference: 13.97% ± 4.43% (SE), Z-score = 3.16 (p < 0.002)
+- Effect size ratio: 1.25x (S₂ dominant over S₃) ## Phase Alignment Evidence Both adjacent ω-class pairs show constructive phase alignment at peaks:
+- Mean Δ(S₂, S₁): 0.21 rad (12.1°)
+- Mean Δ(S₃, S₂): 0.17 rad (9.9°) The optimal destructive interference occurs at θ ≈ π (180°) for both perturbations, confirming that the natural phase alignment at peaks is constructive. ## Conclusion **The hypothesis is PARTIALLY CONFIRMED with important qualification**: While both S₂ and S₃ perturbations cause significant peak reductions (confirming the general causal mechanism of phase alignment), **the (1,2) interaction dominates over the (2,3) interaction** for the Möbius function. This differs from a simple uniform importance across adjacent classes and reveals function-specific architecture. The S₂ ω-class is causally dominant (70.7% reduction) compared to S₃ (56.7% reduction), with statistical significance (Z = 3.16). This finding extends the causal validation from the zeta function (task r27) to the Möbius function, while revealing that the relative importance of specific ω-class interactions is function-dependent. ## Discretionary Analytical Decisions - Set N = 10⁶ for Möbius function analysis (matching dataset availability and computational feasibility)
+- Used coarse grid of 2000 points for initial peak search (following successful N=10⁶ protocol from dataset documentation)
+- Selected top 20 peaks for perturbation analysis (balancing statistical power with computational cost)
+- Used 36 phase angles (10° resolution) for perturbation curves (sufficient for accurate minima identification)
+- Applied window size of 2 coarse grid intervals for local refinement (ensuring capture of true peak maximum)
+- Set significance threshold at α = 0.05 for comparative analysis
+- Computed standard errors assuming independence across the 20 peaks
+- Used Kahan compensated summation for all Dirichlet polynomial evaluations (per dataset requirements)
+- Evaluated interval [N, 2N] = [10⁶, 2×10⁶] (following established N-dependence convention)
+- Included ω-class k=0 (n=1 term) in decomposition to ensure complete sum reconstruction
+- Computed ω-class sums for k=1 to 10 (capturing >99% of total magnitude based on inspection)
+- Used omega_values_N1e6.pkl pre-computed artifact (external_source) to avoid repeated prime factorization 

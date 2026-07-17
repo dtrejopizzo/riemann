@@ -1,0 +1,22 @@
+
+M₄ DECOMPOSITION ANALYSIS - FINAL REPORT
+================================================================================
+Analysis Date: 2024
+N = 10⁶, t ∈ [10⁶, 2×10⁶], n_points = 500 RESEARCH HYPOTHESIS:
+The dominance of "Three-Index Type A" (Re[|S_j|² S_k S̄_l]) terms in the fourth moment contribution in high-magnitude regimes is a universal feature of multiplicative functions. HYPOTHESIS STATUS: REJECTED
+================================================================================ KEY FINDINGS:
+------------ 1. CATEGORY CONTRIBUTIONS IN TOP 10% M₄ REGIME: Category Zeta Möbius f_rand Mean ------------------------------------------------ PD 2.35% 4.91% 1.53% 2.93% MD 28.80% 45.46% 23.35% 32.54% 3A 15.12% 15.65% 13.73% 14.83% 3B 26.84% 25.63% 26.89% 26.45% 4I 26.90% 8.34% 34.49% 23.24% 2. CATEGORY CONTRIBUTIONS IN TOP 1% M₄ REGIME: Category Zeta Möbius f_rand Mean ------------------------------------------------ PD 0.87% 3.98% 0.43% 1.76% MD 18.38% 42.47% 12.84% 24.57% 3A 19.63% 17.58% 17.67% 18.29% 3B 32.35% 28.04% 32.29% 30.89% 4I 28.76% 7.93% 36.78% 24.49% 3. LEADING OFF-DIAGONAL CONTRIBUTORS: Top 10% Regime: - Zeta: Mixed Diagonal (MD) at 28.80% - Möbius: Mixed Diagonal (MD) at 45.46% - f_rand: Four-Index (4I) at 34.49% Top 1% Regime: - Zeta: Three-Index Type B (3B) at 32.35% - Möbius: Mixed Diagonal (MD) at 42.47% - f_rand: Four-Index (4I) at 36.78% 4. THREE-INDEX TYPE A RANKING: - Consistently ranks 3rd or 4th among off-diagonal terms - Contributes ~14-20% across all functions and regimes - NOT the dominant off-diagonal contributor for any function 5. OFF-DIAGONAL DOMINANCE: All functions show off-diagonal dominance in high-M₄ regimes: - Top 10%: 95-98% off-diagonal contribution - Top 1%: 96-99% off-diagonal contribution This confirms the general finding from r23, but the specific breakdown among off-diagonal terms does NOT show universal 3A dominance. FUNCTION-SPECIFIC PATTERNS:
+-------------------------- ZETA: - Balanced contribution across MD, 3B, and 4I terms - 3A ranks 4th (last) among off-diagonal terms in top 10% - Slight increase in 3A and 3B contribution in top 1% MÖBIUS: - Strong MD dominance (42-45%) across all high-M₄ regimes - 4I contribution is relatively weak (~8%) - 3A contribution stable around 16-18% F_RAND: - Strong 4I dominance (34-37%) across all high-M₄ regimes - All three-index terms (3A + 3B) contribute ~40-50% combined - Most variable function with largest M₄ magnitudes CONCLUSION:
+----------- The hypothesis that "Three-Index Type A" terms universally dominate the M₄
+off-diagonal contribution is FALSE. The actual M₄ structure in high-magnitude
+regimes is function-dependent: - Möbius shows Mixed Diagonal (MD) dominance
+- f_rand shows Four-Index (4I) dominance - Zeta shows balanced competition among MD, 3B, and 4I While off-diagonal terms do dominate (confirming r23), there is no single
+universal off-diagonal term structure across multiplicative functions. DISCREPANCY WITH r23:
+--------------------- The r23 report claimed "Three-Index Type A" dominance for zeta at N=10⁶.
+Our analysis at N=10⁶ shows:
+- Top 10%: 3A ranks 4th with 15.12%, behind MD (28.80%), 3B (26.84%), 4I (26.90%)
+- Top 1%: 3A ranks 3rd with 19.63%, behind 3B (32.35%) and 4I (28.76%) Possible explanations:
+1. Different definition of "high-magnitude regime" in r23
+2. Different peak selection methodology
+3. Different classification scheme for term categories
+4. Statistical variation due to different t-sampling strategies ================================================================================

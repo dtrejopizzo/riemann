@@ -1,0 +1,2 @@
+Analysis,N,epsilon,t_range,dt,n_points,t_R,t_D,delta_t,R_comp_max,D_magnitude_max,R_comp_FWHM,D_magnitude_FWHM,R_comp_SNR,D_magnitude_SNR,Rayleigh_Z_at_tR,Rayleigh_p_at_tR,Rayleigh_Z_at_tD,Rayleigh_p_at_tD,n_composite_squarefree,kappa_original,kappa_perturbed
+Fine-grained scan of L_DH^(ε=0.01),1000000,0.01,"[80.0, 81.0]",0.001,1001,80.26900000000128,80.85200000000407,0.5830000000027837,0.09906324458303842,3.596923191961077,1.0010000000000001,0.444,65.71371877016044,2.8442699161195333,5195.545855836158,0.0,4634.720767708205,0.0,529427,0.2486028939,0.2586028939

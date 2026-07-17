@@ -1,0 +1,335 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{criterion}[theorem]{Criterion}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\NS}{NS}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\TP}{TP}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\Xib}{\Xi}
+\newcommand{\LP}{\mathrm{LP}}
+\newcommand{\RH}{\mathrm{RH}}
+
+\title[Why RH Resists]{Why the Riemann Hypothesis resists: a classifier for zero--absence
+mechanisms, the finite--to--full positivity gap, and a finitization
+obstruction under linear independence}
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+
+\begin{document}
+\nocite{bgTitchmarsh,bgEdwards,bgConrey03,bgBombieri00,bgConnes99,bgdeBranges,bgMont73,bgKS}
+\begin{abstract}
+We do not attempt to prove the Riemann Hypothesis (RH). We address the
+adjacent meta-question: \emph{why does every formalized route to RH stall at
+the same place?} We introduce a four-condition classifier $D_0$ for
+mechanisms that could force the absence of off-line zeros, validate it against
+roughly thirty historical programs (it reproduces the known outcome of each,
+including the one proven RH --- function fields), and isolate the single
+discriminating clause: a candidate escapes only if the off-line bound is a
+\emph{corollary of a general theorem} proven independently for a whole class
+the object inhabits, rather than a property special to the object (which, for
+$\zeta$, is RH itself). We then prove a structural statement: in each
+positivity family attached to $\zeta$ --- intersection/Hodge, moment/Hankel,
+total positivity/P\'olya frequency, combinatorial Hodge --- every
+\emph{finite-order} positivity is unconditional while the \emph{full-order}
+positivity equals RH, and the four hierarchies are the same gap. We identify
+the missing ingredient as a \emph{finitization} of $\zeta$'s positivity, show
+that in the function-field case it is exactly a Frobenius periodicity, and
+prove that under the Linear Independence conjecture for the zeros no such
+periodicity --- hence no finite-dimensional algebraic finitization --- can
+exist. The geometric route to RH is therefore in tension with the believed
+independence of the zeros. None of this proves or disproves RH; it is a
+precise, conditional account of the obstruction, and it is falsifiable.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+A century of work has produced many reformulations of the Riemann Hypothesis
+and several deep programs aimed at it, yet they stall. This paper is not one
+more reformulation. It asks a structural question --- \emph{what do the stalled
+programs have in common, and is that commonality forced?} --- and answers it
+with three components: a classifier (\S\ref{sec:disc}), a structural theorem
+(\S\ref{sec:gap}), and a conditional obstruction (\S\ref{sec:fin}).
+
+The classifier $D_0$ is calibrated, not postulated: it is required to
+reproduce the historical outcome of every program it is run against. The one
+program it marks as a full success is the one proven RH (function fields,
+twice over, plus the cross-problem controls of modularity and Heegner points);
+every stalled program fails a specific, named clause. The decisive clause turns
+out to be sharp and non-circular, and it points to a single missing object,
+which the structural theorem and the obstruction then analyze.
+
+\smallskip
+\noindent\textbf{Standing disclaimer.} No statement below assumes RH, and none
+implies it. The results are about the \emph{shape of the difficulty}.
+
+\section{The classifier \texorpdfstring{$D_0$}{D0}}\label{sec:disc}
+
+Fix the completed zeta function $\xi$, entire of order $1$, with zeros
+$\tfrac12+i\gamma$ ($\gamma\in\bbR \iff \RH$). A \emph{mechanism} is any
+mathematical structure $X$ together with an asserted implication
+``[a property of $X$] $\Rightarrow$ [no zeros off the critical line, in some
+region].''
+
+\begin{criterion}[$D_0$]\label{crit:d0}
+A mechanism $X$ \emph{escapes collapse} only if it satisfies all four:
+\begin{itemize}
+\item[$I_1$] (\emph{prime-distinguishing}) the asserted property depends on the
+individual primes (the Euler structure), not merely on prime counts or on
+$\zeta$'s global analytic data;
+\item[$I_2$] (\emph{independent input with a decisive theorem}) $X$ lies in a
+class $\mathcal C$ carrying a general theorem $T$, established independently of
+RH and holding for \emph{every} object of $\mathcal C$, such that $T$ applied
+to $X$ yields the off-line bound as a \emph{corollary} ($I_{2a}$: such an
+independent $\mathcal C,T$ exist; $I_{2b}$: the bound is a corollary, not a
+property special to $X$);
+\item[$I_3$] (\emph{individual-resolving}) the property constrains a single
+zero (an $O(1)$ signal), not an aggregate sum, integral, moment, or density;
+\item[$I_4$] (\emph{arithmetic-aware}) the property depends on the actual
+primes and is not invariant under arithmetic-blind deformation.
+\end{itemize}
+\end{criterion}
+
+\begin{remark}[The role of $I_{2b}$]
+$I_{2b}$ is the operative clause. For a surface $C\times C$ over $\bbF_q$, the
+bound $|\alpha_i|=\sqrt q$ is a corollary of the Hodge index theorem, a general
+fact about \emph{all} algebraic surfaces; the object merely lands in the class
+where the theorem applies. For $\zeta$, the analogous positivity (the Weil
+pairing's sign) is not a corollary of any general theorem proven elsewhere; it
+\emph{is} RH. The distinction is a category-placement question --- decided by
+exhibiting $\mathcal C$ and $T$ --- not an inequality one must prove about
+$\zeta$; Weil's history (find the category, then the inequality follows from
+general geometry) is the proof of its non-triviality.
+\end{remark}
+
+\begin{proposition}[Calibration]\label{prop:cal}
+Run against the standard corpus of programs --- Weil's explicit formula and
+criterion; Hilbert--P\'olya and Berry--Keating; Connes' trace formula;
+Deninger's cohomology; Connes--Consani; de Branges canonical systems;
+Nyman--Beurling and B\'aez-Duarte; Li's criterion; Montgomery pair correlation;
+random matrix theory and moment/ratio conjectures; multiplicative chaos; zero
+density estimates and Levinson--Conrey mollifiers; the de Bruijn--Newman flow;
+and the function-field proofs (Weil/Hodge and Stepanov) --- $D_0$ assigns to
+each a verdict in $\{\textsc{pass},\textsc{open},\textsc{reject}\}$ that matches
+its historical status. In particular the only \textsc{pass} verdicts are the
+\emph{proven} cases (function fields; and, as cross-problem controls,
+modularity and Heegner-point/Gross--Zagier), and every \textsc{reject} fails a
+single named clause.
+\end{proposition}
+
+We record the structure of the verdicts; the full table is in the supplementary
+audit. Three states arise, and the three-valuedness is essential:
+\textsc{recognize-pass} (a known general $T$ applies for free: function fields);
+\textsc{open} (a class is being built so a general $T$ \emph{would} apply, but
+$T$ is not yet established: Connes--Consani, Deninger --- $I_{2a}$ holds,
+$I_{2b}$ does not); \textsc{reject} (no general theorem is in sight; the bound
+is special to $\zeta$: all reformulations, all statistics, all flows).
+
+\begin{remark}[The library is finite]
+The only general theorems that have ever delivered such a bound as a corollary
+are the Hodge-type positivity theorems: the Hodge index theorem (surfaces),
+Weil II/purity (varieties over finite fields), the Hodge--Riemann relations
+(K\"ahler; and, after Adiprasito--Huh--Katz, matroids and Lorentzian
+polynomials), the spectral theorem for a self-adjoint operator with
+independently known spectrum, and Stepanov's auxiliary-function method. Running
+each against $\zeta$ produces a single named obstruction per theorem, and the
+obstructions cluster into two roots: the absence of a geometry over
+$\operatorname{Spec}\bbZ$ richer than $\zeta$ (no surface, no independent
+cohomology, no independent operator), and the object-special trap (any known
+embedding into a positivity class requires proving the positivity by hand, i.e.
+RH). The remainder of the paper analyzes these two roots and shows they are one.
+\end{remark}
+
+\section{The finite-to-full positivity gap}\label{sec:gap}
+
+We make precise the sense in which every positivity route to $\zeta$ stops at
+the same place. Recall the de Bruijn--Newman kernel
+\[
+\Phi(t)=\sum_{n\ge1}\bigl(2\pi^2 n^4 e^{9t/2}-3\pi n^2 e^{5t/2}\bigr)
+e^{-\pi n^2 e^{2t}},\qquad \Phi>0\ \text{unconditionally},
+\]
+with $\widehat\Phi=\Xib$ (the standard normalization, so $\Xib$ is real and
+even and $\RH\iff\Xib\in\LP$, the Laguerre--P\'olya class). The Jensen/$\Xib$
+coefficients are the normalized moments $b(k)=m_{2k}/(2k)!$,
+$m_{2k}=\int t^{2k}\Phi(t)\,dt$.
+
+\begin{theorem}[Total-positivity form of RH]\label{thm:tp}
+$\RH$ holds if and only if $\Phi$ is a P\'olya frequency function, i.e. the
+kernel matrices $\bigl[\Phi(x_i-x_j)\bigr]_{i,j=1}^N$ are totally positive
+(all minors $\ge0$) for all $N$ and all $x_1<\dots<x_N$.
+\end{theorem}
+\begin{proof}
+By Schoenberg's theorem an integrable even kernel $\Phi$ is a P\'olya frequency
+function if and only if its bilateral Laplace transform is the reciprocal of a
+Laguerre--P\'olya function. Since $\widehat\Phi=\Xib$ and
+$\RH\iff\Xib\in\LP$, the two conditions coincide.
+\end{proof}
+
+Total positivity is a hierarchy $\TP_1\supseteq\TP_2\supseteq\dots\supseteq
+\TP_\infty$, where $\TP_k$ requires all minors up to order $k$ to be
+nonnegative. The following organizes the known unconditional results.
+
+\begin{proposition}[The available orders]\label{prop:orders}
+For $\zeta$: $\TP_1$ ($\Phi>0$) is classical; $\TP_2$ (the Tur\'an
+inequalities, equivalently log-concavity of $b(k)$, equivalently hyperbolicity
+of the degree-$2$ Jensen polynomials) holds unconditionally
+{\rm(Csordas--Norfolk--Varga)}; for each fixed $k$, the order-$k$ condition
+(hyperbolicity of the degree-$k$ Jensen polynomials) holds for all sufficiently
+large height {\rm(Griffin--Ono--Rolen--Zagier)}; and $\TP_\infty$ is equivalent
+to RH.
+\end{proposition}
+
+\begin{theorem}[The finite-to-full gap]\label{thm:gap}
+Attach to $\zeta$ the four positivity hierarchies: intersection/Hodge (the
+localized Weil form and its bottom eigenvalue), moment/Hankel (the $m_{2k}$),
+total positivity (the kernel $\Phi$), and combinatorial Hodge (the Jensen
+polynomials). In each, every finite order is unconditional for $\zeta$, the
+full order equals RH, and no general theorem of the family bridges a finite
+order to the full order for the specific object. Moreover the four hierarchies
+are mutually equivalent order by order: the second order is, in all four, the
+Tur\'an/log-concavity/$\TP_2$/degree-$2$-Jensen inequality, and the full order
+is, in all four, $\Xib\in\LP$.
+\end{theorem}
+\begin{proof}[Proof sketch]
+Equivalence of the full orders is the chain
+$\lambda_{\min}\ge0$ $\iff$ $\Xib\in\LP$ $\iff$ $\Phi$ P\'olya frequency $\iff$
+all Jensen polynomials hyperbolic, each link classical (Weil criterion;
+Theorem~\ref{thm:tp}; the Jensen--P\'olya characterization of $\LP$).
+Equivalence of the second orders is the identity of the Tur\'an inequality
+$b(k)^2\ge b(k-1)b(k+1)$ with $\TP_2$ of $\Phi$ and with the discriminant
+condition for the degree-$2$ Jensen polynomial. That every finite order is
+unconditional while the full order is RH is Proposition~\ref{prop:orders} in
+the total-positivity column and the cited results in the others. That no
+general theorem of a family bridges finite to full is the content of $I_{2b}$:
+the bridge is the object-special step, which is RH.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:gap} is the precise form of ``every positivity route stops at
+the same place.'' The obstruction is uniformity: order $k$ is available for
+each $k$ (eventually in height), but RH requires all orders at all heights.
+This is the cornered target reached from the total-positivity direction.
+\end{remark}
+
+\section{Finitization, and the obstruction under linear
+independence}\label{sec:fin}
+
+We now explain why the function-field case has no finite-to-full gap, and what
+its absence would require for $\zeta$.
+
+\begin{proposition}[Geometry finitizes positivity]\label{prop:finit}
+For a smooth projective curve $C/\bbF_q$ of genus $g$, the full positivity that
+is RH for $\zeta_C$ is a \emph{finite} condition: the reality of the $2g$
+Frobenius arguments $\theta_i$, delivered by the Hodge index theorem on the
+finite-rank lattice $\NS(C\times C)$. Equivalently, in the variable $s$
+($T=q^{-s}$) the zeros are
+\[
+s=\tfrac12+i\frac{\theta_i+2\pi k}{\log q}\qquad(1\le i\le 2g,\ k\in\bbZ):
+\]
+infinitely many zeros, but only $2g$ modulo the period $2\pi/\log q$.
+\end{proposition}
+
+Thus the device that converts the infinite-order positivity into a finite one
+is a \emph{periodicity}: the Frobenius folds the zeros into $2g$ orbits. We
+call such a structure a \emph{finitization}. By Theorem~\ref{thm:gap}, a
+finitization is exactly what a proof of RH along any positivity route would
+require, and by \S\ref{sec:disc} it is the only object in bin
+\textsc{open}/\textsc{new}.
+
+\begin{theorem}[Finitization obstruction under LI]\label{thm:LI}
+Assume the Linear Independence conjecture: the positive ordinates
+$\{\gamma_n\}_{n\ge1}$ of $\zeta_{\bbQ}$ are linearly independent over $\bbQ$.
+Then there is no real period $\tau>0$ and finite set $\{\beta_1,\dots,\beta_m\}$
+with $\{\gamma_n\}\subseteq\{\beta_j+k\tau: 1\le j\le m,\ k\in\bbZ\}$. In
+particular $\{\gamma_n\}$ admits no Frobenius-type periodicity, hence no
+finite-dimensional algebraic finitization of the type of
+Proposition~\ref{prop:finit}.
+\end{theorem}
+\begin{proof}
+If such $\tau,\{\beta_j\}$ existed, then for each $n$ there are $j(n),k(n)$ with
+$\gamma_n=\beta_{j(n)}+k(n)\tau$. Taking two indices $n\ne n'$ with
+$j(n)=j(n')$ gives $\gamma_n-\gamma_{n'}=(k(n)-k(n'))\tau$, a rational multiple
+relation among the differences; pinning $\tau$ from one such pair and
+substituting into a third index (there are infinitely many $n$ but finitely
+many classes $j$, so some class is infinite) yields a nontrivial $\bbQ$-linear
+relation $a\gamma_{n_1}+b\gamma_{n_2}+c\gamma_{n_3}=0$ with
+$(a,b,c)\in\bbQ^3\setminus\{0\}$, contradicting linear independence.
+\end{proof}
+
+\begin{corollary}[The $\bbF_1$ degeneration]\label{cor:degen}
+The finitizing period of Proposition~\ref{prop:finit} is $2\pi/\log q$, which
+diverges as $q\to1^+$. The fundamental domain holding finitely many zeros
+becomes infinite precisely in the $\bbF_1$ limit; the finite structure
+dissolves where it is needed. The Connes--Consani program is thus an attempt to
+extract a finite residue from a divergence, consistent with its being stalled
+exactly at the arithmetic Hodge index / $H^1$ term.
+\end{corollary}
+
+\begin{remark}[The dichotomy]
+Theorem~\ref{thm:LI} forces a clean alternative. If LI holds (as is widely
+believed: simplicity of zeros, GUE spacing, absence of observed resonances),
+then no finite-dimensional algebraic finitization exists, and a positivity
+proof of RH would require an \emph{infinite-dimensional} general positivity
+theorem; by $D_0$ every known infinite-dimensional positivity for $\zeta$ is
+object-special (the Weil/Krein form). If instead LI fails, a hidden periodicity
+might exist and the geometric route reopens --- but LI-falsity is itself a
+sensational and strongly disbelieved statement. Either way, the geometric route
+to RH is in tension with the independence of the zeros.
+\end{remark}
+
+\section{Conclusion}
+The three components combine to a single conditional statement. Every
+formalized positivity route to RH is, by Theorem~\ref{thm:gap}, a climb up one
+of four equivalent finite-order hierarchies whose top is RH; crossing requires
+a finitization (\S\ref{sec:fin}); in the only setting where RH is proven the
+finitization is a Frobenius periodicity (Proposition~\ref{prop:finit}); and
+under the Linear Independence conjecture no such periodicity exists for
+$\zeta_{\bbQ}$ (Theorem~\ref{thm:LI}), with the would-be $\bbF_1$ substitute
+degenerating (Corollary~\ref{cor:degen}). This is a precise, falsifiable
+account of why RH resists the one method that ever proved an RH --- not a proof,
+and not a barrier theorem, but a conditional structural obstruction tying the
+difficulty of RH to the believed independence of its zeros. It is refuted the
+day a periodicity is exhibited (i.e. LI is disproved) or a general
+infinite-dimensional positivity theorem is found that applies to $\zeta$ as a
+corollary.
+
+\smallskip
+\noindent\textbf{Acknowledgement of scope.} The classifier's calibration is an
+expert judgment reproducing historical outcomes, not a theorem; the
+finite-to-full gap (Theorem~\ref{thm:gap}) is a precise statement whose
+``no general theorem bridges'' clause is the content of the open problem; the
+obstruction (Theorem~\ref{thm:LI}) is conditional on LI. The contribution is
+the organization of these into one account and the identification of the single
+object --- a finitization --- whose existence or non-existence decides the
+geometric route.
+
+\begin{thebibliography}{9}
+\bibitem{bgTitchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., rev.\ D.~R.~Heath-Brown, Oxford Univ.\ Press, 1986.
+\bibitem{bgEdwards} H.~M.~Edwards, \emph{Riemann's Zeta Function}, Academic Press, 1974.
+\bibitem{bgConrey03} J.~B.~Conrey, \emph{The Riemann Hypothesis}, Notices Amer.\ Math.\ Soc.\ \textbf{50} (2003), 341--353.
+\bibitem{bgBombieri00} E.~Bombieri, \emph{Problems of the Millennium: The Riemann Hypothesis}, Clay Mathematics Institute, 2000.
+\bibitem{bgConnes99} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\bibitem{bgdeBranges} L.~de Branges, \emph{Hilbert Spaces of Entire Functions}, Prentice-Hall, 1968.
+\bibitem{bgMont73} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc.\ Sympos.\ Pure Math.\ \textbf{24} (1973), 181--193.
+\bibitem{bgKS} N.~M.~Katz and P.~Sarnak, \emph{Zeroes of zeta functions and symmetry}, Bull.\ Amer.\ Math.\ Soc.\ \textbf{36} (1999), 1--26.
+\end{thebibliography}
+
+\end{document}

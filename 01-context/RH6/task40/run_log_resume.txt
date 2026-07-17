@@ -1,0 +1,54 @@
+[14:52:28] Starting L_DH zero generation; WORK_DIR=/workspace/ac6de2d1-ba98-4ea0-a368-3e1ef71273bf; TIME_BUDGET=2800s
+[14:52:28] Building lfuninit at dps=80, T_max=5200 ...
+[14:52:35] lfuninit done in 6.9s
+[14:52:35] Resumed from ldh_ckpt_03250.npy: 3250 zeros, t_last=3248.3907
+[14:53:36] PROGRESS: 3270 zeros, t=3266.29, elapsed=1.0min
+[14:54:37] PROGRESS: 3290 zeros, t=3283.69, elapsed=2.0min
+[14:55:37] PROGRESS: 3309 zeros, t=3300.99, elapsed=3.0min
+[14:56:37] PROGRESS: 3329 zeros, t=3318.09, elapsed=4.0min
+[14:57:40] PROGRESS: 3350 zeros, t=3334.59, elapsed=5.1min
+[14:58:40] PROGRESS: 3369 zeros, t=3351.19, elapsed=6.1min
+[14:59:41] PROGRESS: 3389 zeros, t=3368.69, elapsed=7.1min
+[15:00:41] PROGRESS: 3408 zeros, t=3385.99, elapsed=8.1min
+[15:01:41] PROGRESS: 3428 zeros, t=3402.19, elapsed=9.1min
+[15:02:41] PROGRESS: 3447 zeros, t=3420.29, elapsed=10.1min
+[15:03:43] PROGRESS: 3466 zeros, t=3439.59, elapsed=11.1min
+[15:04:43] PROGRESS: 3485 zeros, t=3457.09, elapsed=12.1min
+[15:05:29] Checkpoint 03500: 3500 zeros, t=3469.99, elapsed=12.9min, rate=4.52 z/s, n_evals=5217
+[15:05:43] PROGRESS: 3505 zeros, t=3473.79, elapsed=13.1min
+[15:06:43] PROGRESS: 3524 zeros, t=3490.69, elapsed=14.1min
+[15:07:44] PROGRESS: 3543 zeros, t=3508.89, elapsed=15.1min
+[15:08:44] PROGRESS: 3563 zeros, t=3525.99, elapsed=16.2min
+[15:09:44] PROGRESS: 3582 zeros, t=3544.59, elapsed=17.2min
+[15:10:45] PROGRESS: 3601 zeros, t=3562.49, elapsed=18.2min
+[15:11:45] PROGRESS: 3621 zeros, t=3578.39, elapsed=19.2min
+[15:12:47] PROGRESS: 3641 zeros, t=3595.69, elapsed=20.2min
+[15:13:47] PROGRESS: 3660 zeros, t=3613.79, elapsed=21.2min
+[15:14:47] PROGRESS: 3679 zeros, t=3632.39, elapsed=22.2min
+[15:15:48] PROGRESS: 3698 zeros, t=3649.69, elapsed=23.2min
+[15:16:49] PROGRESS: 3718 zeros, t=3666.09, elapsed=24.2min
+[15:17:50] PROGRESS: 3738 zeros, t=3683.09, elapsed=25.2min
+[15:18:25] Checkpoint 03750: 3750 zeros, t=3692.79, elapsed=25.8min, rate=2.42 z/s, n_evals=10445
+[15:18:50] PROGRESS: 3758 zeros, t=3698.99, elapsed=26.2min
+[15:19:51] PROGRESS: 3778 zeros, t=3716.39, elapsed=27.3min
+[15:20:52] PROGRESS: 3798 zeros, t=3733.49, elapsed=28.3min
+[15:21:53] PROGRESS: 3817 zeros, t=3751.59, elapsed=29.3min
+[15:22:54] PROGRESS: 3837 zeros, t=3768.89, elapsed=30.3min
+[15:23:54] PROGRESS: 3856 zeros, t=3786.69, elapsed=31.3min
+[15:24:56] PROGRESS: 3876 zeros, t=3803.79, elapsed=32.3min
+[15:25:56] PROGRESS: 3896 zeros, t=3820.39, elapsed=33.3min
+[15:26:57] PROGRESS: 3915 zeros, t=3839.39, elapsed=34.4min
+[15:27:57] PROGRESS: 3935 zeros, t=3856.69, elapsed=35.4min
+[15:28:57] PROGRESS: 3955 zeros, t=3874.19, elapsed=36.4min
+[15:29:57] PROGRESS: 3975 zeros, t=3889.59, elapsed=37.4min
+[15:30:59] PROGRESS: 3996 zeros, t=3905.69, elapsed=38.4min
+[15:31:12] Checkpoint 04000: 4000 zeros, t=3908.99, elapsed=38.6min, rate=1.73 z/s, n_evals=15607
+[15:31:59] PROGRESS: 4015 zeros, t=3923.99, elapsed=39.4min
+[15:32:59] PROGRESS: 4035 zeros, t=3941.39, elapsed=40.4min
+[15:34:00] PROGRESS: 4054 zeros, t=3958.69, elapsed=41.4min
+[15:35:00] PROGRESS: 4074 zeros, t=3974.59, elapsed=42.4min
+[15:36:00] PROGRESS: 4092 zeros, t=3993.19, elapsed=43.4min
+[15:37:02] PROGRESS: 4112 zeros, t=4011.89, elapsed=44.4min
+[15:38:02] PROGRESS: 4132 zeros, t=4027.79, elapsed=45.5min
+[15:38:28] Interrupted by user; saving partial
+[15:38:28] Partial save: 4141 zeros to /workspace/ac6de2d1-ba98-4ea0-a368-3e1ef71273bf/ldh_zeros_partial_dps50.npy (keyboard_interrupt)

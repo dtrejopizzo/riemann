@@ -1,0 +1,14 @@
+## Overview The hypothesis that the divergence of the r distribution is driven by faster growth in the variance of the numerator compared to the denominator is **REFUTED** for the N=10⁵ to N=10⁶ transition in the zeta function. ## Quantitative Results **At N=10⁵ (126 peaks):**
+- Numerator: Mean = 26.566, Std = 68.779
+- Denominator: Mean = 21.853, Std = 27.997 **At N=10⁶ (50 peaks):**
+- Numerator: Mean = 62.955, Std = 67.093
+- Denominator: Mean = 53.901, Std = 44.022 **Growth Factors (N=10⁶ / N=10⁵):**
+- Std(Numerator): 0.975 (decreased by 2.5%)
+- Std(Denominator): 1.572 (increased by 57.2%)
+- Relative difference: -38.0% ## Key Finding The data reveals the **opposite** of the hypothesized mechanism. The denominator's standard deviation grew **1.61× faster** than the numerator's standard deviation. The numerator's standard deviation actually decreased slightly, while the denominator's increased substantially. This finding does not support the proposed mechanism where faster growth in Var(Num) drives r distribution divergence. Instead, it suggests that at this scale transition (10⁵ → 10⁶), the denominator (Σ|S_k|²) shows greater variability across peaks, while the numerator (Σ_{j≠k} Re[S_j S̄_k]) becomes more consistent. Interestingly, despite this reversal, the standard deviation of r itself slightly decreased from 1.131 at N=10⁵ to 1.069 at N=10⁶, suggesting that r distribution dynamics are more complex than a simple variance component decomposition would predict. --- ## Discretionary Analytical Decisions - **Peak sets used**: Used all 126 peaks from `peaks_zeta_N100000.csv` for N=10⁵ and all 50 peaks from `detailed_results_N1e6.pkl` for N=10⁶, as specified in the research objective
+- **Statistical estimator**: Used sample standard deviation with Bessel's correction (ddof=1) for all variance estimates
+- **Omega value pre-computation**: Pre-computed ω(n) values for all n ≤ 10⁶ to optimize computational efficiency
+- **Maximum omega class**: Set max_omega=10 as an upper bound for omega-class grouping (sufficient for N ≤ 10⁶)
+- **Numerical summation method**: Applied Kahan compensated summation for both omega-class sums and cross-term calculations to ensure high numerical precision, as required by the dataset documentation
+- **Cross-term calculation**: Computed numerator using the direct double-sum formulation Σ_{j≠k} Re[S_j S̄_k] with explicit enumeration of all j≠k pairs
+- **External data sources**: Used pre-computed peak data from `peaks_zeta_N100000.csv` and `detailed_results_N1e6.pkl` artifacts; recomputed omega-class decompositions at each peak location rather than relying on stored r values to ensure internal consistency

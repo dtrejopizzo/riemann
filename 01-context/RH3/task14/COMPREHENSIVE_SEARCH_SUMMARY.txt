@@ -1,0 +1,39 @@
+
+================================================================================
+COMPREHENSIVE DATA RETRIEVAL SUMMARY
+================================================================================ QUERY OBJECTIVE:
+----------------
+Retrieve a specific computational dataset of Dirichlet polynomial evaluations:
+- Core N=10,000 dataset with ω-class decompositions
+- Extended N=10^5 dataset
+- Previous analysis results (Reports r2, r3, r4) FILES REQUESTED:
+----------------
+1. dirichlet_polynomials_N10000_T10000-20000.pkl
+2. omega_decomposition_peaks_N10000.pkl
+3. zeta_peaks_N10000.pkl
+4. dirichlet_summary_N10000.csv
+5. DATASET_README.txt
+6. TECHNICAL_SUMMARY.txt
+7. N=10^5 variant files
+8. Previous moment decomposition results SEARCH EFFORTS:
+---------------- 1. ✓ Zenodo Repository - Searched multiple query combinations - Found 22,665+ results for general analytic number theory - NO exact matches for requested dataset files - Results saved: downloads/raw/zenodo_search_dirichlet.json 2. ✓ LMFDB (L-functions and Modular Forms Database) - API accessible and functional - Retrieved 100 sample L-function records - Provides: Dirichlet coefficients for L-functions - Does NOT provide: Pre-computed Dirichlet polynomial evaluations - Does NOT provide: ω-decomposition analysis - Does NOT provide: Moment decomposition results - Results saved: downloads/raw/lmfdb_lfunctions_sample.json 3. ✓ GitHub - Searched for computational number theory datasets - Found general-purpose libraries (e.g., flintlib/arb) - NO matching dataset repositories - Results saved: downloads/raw/github_search_results.json 4. ✗ Figshare - API returned 403 errors (access restrictions) CRITICAL FINDINGS:
+------------------ 1. DATASET DOES NOT EXIST IN OPEN REPOSITORIES The specific files and dataset structure described do not exist in any major open-access scientific data repository searched. 2. REFERENCES TO PREVIOUS WORK The query references: - "primary dataset description" - "analysis history as Report r2 and r3" - "Report r4 results" These suggest an INTERNAL or PRIVATE dataset from a specific research project, not a publicly available resource. 3. DATASET CHARACTERISTICS Based on the query, this dataset is: - Computationally generated (not observational) - Requires specific mathematical software (Python with numpy/scipy) - Generated with fixed random seed (42) for reproducibility - Contains novel ω-class decomposition analysis - Not standard output from existing mathematical software 4. WHAT IS AVAILABLE FROM LMFDB - Dirichlet coefficients a_n for various L-functions - Euler factors - Zeros of L-functions - Basic metadata (conductor, degree, etc.) BUT NOT: - Dirichlet polynomial evaluations D_F(t) = Σ a_n/n^(1/2+it) - ω-class decompositions D_ω(t) - Peak analysis - Moment decompositions M₂, M₄ CONCLUSION:
+----------- The requested dataset CANNOT be retrieved from trusted open-access sources because
+it does not exist as a published, publicly available resource. This dataset appears to be either:
+A) Part of ongoing unpublished research
+B) Generated in a previous analysis session
+C) Part of supplementary materials for a paper not yet identified POSSIBLE PATHS FORWARD:
+----------------------- Option 1: If this dataset exists in a specific location (URL, DOI, paper supplement), provide that information for direct retrieval. Option 2: If this dataset was meant to be generated computationally, provide: - Mathematical specifications for the Dirichlet polynomials - ω-class decomposition algorithm/definition - Parameter values (T-range, N values, functions to compute) Option 3: If this is from a specific paper, provide citation/DOI to access supplementary materials. Without one of these, I cannot proceed with data retrieval while maintaining
+scientific integrity (no fabrication or simulation of research data). ================================================================================
+FILES CREATED DURING SEARCH:
+================================================================================ downloads/
+├── raw/
+│ ├── zenodo_search_dirichlet.json (Zenodo search results)
+│ ├── zenodo_all_searches.json (Extended Zenodo searches)
+│ ├── lmfdb_api_info.txt (LMFDB API homepage)
+│ ├── lmfdb_lfunctions_sample.json (100 L-function records)
+│ ├── github_search_results.json (GitHub repository search)
+│ └── figshare_search_results.json (Figshare search, empty)
+├── processed/
+│ └── (empty - no processable data retrieved)
+└── data_retrieval_report.txt (Initial status report) ================================================================================

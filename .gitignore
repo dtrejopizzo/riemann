@@ -1,0 +1,38 @@
+# System
+.DS_Store
+
+# Local tool/editor state (not part of the research corpus)
+.claude/
+.vscode/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Large binary data files (kept locally, not on GitHub)
+*.npy
+*.npz
+*.pkl
+*.zip
+*.pyc
+__pycache__/
+
+# Large executed notebooks (keep source notebooks, exclude executed outputs > 10MB)
+*_executed.ipynb
+*_memory_*.jsonl
+
+# Large data files in trajectory folders
+01-context/**/*.pdf
+01-context/**/*.png
+01-context/**/*.jpg
+01-context/**/*.jpeg
+01-context/**/*.gz
+01-context/**/*.parquet
+# Large zero tables
+zeros6.txt

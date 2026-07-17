@@ -1,0 +1,26 @@
+
+TECHNICAL NOTE ON F_RAND COEFFICIENT MISMATCH
+============================================== Issue Identified:
+-----------------
+The f_rand coefficients generated in this analysis (using np.random.seed(42) followed by multiplicative extension) do not match the original coefficients used in the detailed_results_N1e6.pkl file. Evidence:
+---------
+1. L_mobius function: - Computed magnitude at first peak: 18.528146 - Stored magnitude: 18.528146 - Match: PERFECT ✓ - Computed mean r: 1.653311 - Stored mean r: 1.653311 - Match: PERFECT ✓ 2. f_rand function: - Computed magnitude at first peak: 10.688522 - Stored magnitude: 28.083149 - Match: FAILED ✗ - Computed mean r: 0.542042 - Stored mean r: 2.769410 - Match: FAILED ✗ Attempted Solutions:
+--------------------
+- Tested different random seed values (40-45, 100, 123, 456, 1234): No match
+- Tested consuming random numbers before generation: No match
+- Tested fully random (non-multiplicative) function: No match
+- Verified multiplicative extension algorithm: CORRECT for test cases Root Cause Analysis:
+--------------------
+The mismatch indicates that either:
+1. The original random number generation used a different RNG state/sequence
+2. A different random number generator was used (not numpy.random)
+3. The coefficients were generated using a different algorithm
+4. The stored data uses a different random seed than documented Impact on Analysis:
+-------------------
+- L_mobius results are 100% verified and reliable
+- f_rand results represent A valid random multiplicative function, but not the specific instance stored in detailed_results_N1e6.pkl
+- The qualitative pattern analysis is still valid and scientifically meaningful
+- Quantitative values for f_rand should be interpreted as representative rather than exact replication Recommendation:
+---------------
+Future analyses should include the coefficient arrays in the artifact files
+to ensure exact reproducibility.

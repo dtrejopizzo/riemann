@@ -1,0 +1,6 @@
+Context note for final response:
+- Existing workspace files labeled generically as Sk_re.npy/Sk_im.npy/t_peaks.npy did not match the stated zeta t-range [1e4,1e5]; their t-range was [50,2000], matching the F4 task. I therefore regenerated both F1 and F4 analyses from scratch rather than trusting mislabeled intermediates.
+- F1 (zeta) peak finding used a numba-accelerated Riemann-Siegel Z-function approximation with C0 correction on a 0.05 grid over [1e4,1e5], then local refinement on a 0.001 grid in ±0.05 windows.
+- F4 (Davenport-Heilbronn) peak finding used a truncated Dirichlet polynomial with M=10^4 on a 0.05 grid over [50,2000], then local refinement on a 0.001 grid in ±0.05 windows.
+- For both classes, ω-stratified sums S_k for k=0..7 were then computed with N=10^6 over the top 200 peaks using ω(n)=k.
+- Artifacts saved: Sk_at_peaks_F4.npz, Sk_at_peaks_zeta_N1e6_regenerated.npz, eigenvector_comparison.png.

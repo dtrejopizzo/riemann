@@ -1,0 +1,25 @@
+
+# Composite Coherence R_comp vs Truncation Length N
+## Analysis of Three L-Functions at Resonance Peaks ### Data Retrieved:
+- **Functions analyzed:** Riemann zeta ζ(s), Davenport-Heilbronn L_DH(s), Liouville L(s,λ)
+- **Truncation lengths:** N = 10^4, 10^5 (10^6 not completed due to time constraints)
+- **Number of peaks per function:** Top 10 resonance peaks
+- **Total measurements:** 60 (3 functions × 10 peaks × 2 N values) ### Peak Locations (t-values): **Riemann Zeta ζ(s):**
+Peak 1: t=2447.60, Peak 2: t=2819.40, Peak 3: t=2927.86, Peak 4: t=2202.02, Peak 5: t=1967.34
+Peak 6: t=2556.75, Peak 7: t=1658.99, Peak 8: t=1549.84, Peak 9: t=2030.79, Peak 10: t=1721.76 **Davenport-Heilbronn L_DH(s):**
+Peak 1: t=2612.69, Peak 2: t=2798.25, Peak 3: t=2146.08, Peak 4: t=2177.46, Peak 5: t=1294.02
+Peak 6: t=2331.63, Peak 7: t=1991.90, Peak 8: t=2984.49, Peak 9: t=2472.16, Peak 10: t=2486.49 **Liouville L(s,λ):**
+Peak 1: t=1083.23, Peak 2: t=2433.96, Peak 3: t=1735.40, Peak 4: t=2742.31, Peak 5: t=1890.26
+Peak 6: t=2633.84, Peak 7: t=2941.51, Peak 8: t=1609.88, Peak 9: t=1364.29, Peak 10: t=2668.63 ### R_comp Summary Statistics: **Riemann Zeta ζ(s):**
+- N=10^4: mean=0.7355, std=0.2405, range=[0.2659, 0.9637]
+- N=10^5: mean=0.6264, std=0.2039, range=[0.4176, 0.9501]
+- Change: mean=-0.109 (DECREASING trend) **Davenport-Heilbronn L_DH(s):**
+- N=10^4: mean=0.7201, std=0.2602, range=[0.1670, 0.9819]
+- N=10^5: mean=0.6937, std=0.3181, range=[0.0850, 0.9816]
+- Change: mean=-0.026 (SLIGHT DECREASE) **Liouville L(s,λ):**
+- N=10^4: mean=0.8131, std=0.1255, range=[0.6150, 0.9986]
+- N=10^5: mean=0.7252, std=0.1821, range=[0.3838, 0.9848]
+- Change: mean=-0.088 (DECREASING trend) ### Key Findings: 1. **All three functions show DECREASING R_comp with increasing N** - Riemann zeta: -10.9% decrease (strongest decline) - Liouville: -8.8% decrease - Davenport-Heilbronn: -2.6% decrease (smallest decline) 2. **Liouville function shows HIGHEST absolute R_comp values** - Mean R_comp at N=10^4: 0.813 (highest among all three) - Maintains high coherence even at N=10^5: 0.725 3. **R_comp values are much higher than published literature** - Papers report R_comp ~ 0.002 for ζ, ~ 0.013 for L_DH - Our values: 0.4-0.9 range - Possible reasons: different peak identification, different t-range, or methodological difference 4. **Observed trend contradicts one hypothesis prediction:** - For ζ(s): R_comp DOES decay with N (consistent with suppression) - For L(s,λ): R_comp ALSO decays (contradicts "persistent resonance" hypothesis) - For L_DH: R_comp shows MINIMAL change (closest to "constant" behavior) ### Files Generated:
+1. downloads/Rcomp_vs_N_dataset.csv - Full tabular data
+2. downloads/Rcomp_vs_N_dataset.json - Structured JSON format
+3. downloads/Rcomp_vs_N_trends.png - Visualization of trends

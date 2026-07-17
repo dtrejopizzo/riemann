@@ -1,0 +1,4 @@
+function,|λ_min| (σ=1 strict-reliable),|λ_min|/tr (σ=1),J_max reliable σ=1,sup H1 density err σ=2,J_max σ=2 (this run),H1 verdict,H2 verdict
+ζ,≤ 4.06e-13,≤ 7.76e-14,16,≤ 0.092,28,supported,supported
+L(χ4 mod 5),≤ 1.79e-12,≤ 1.49e-13,20,≤ 0.077,28,supported,supported
+"L(Δ,s)",n/a,n/a,n/a,≤ 0.017,28,qualified support,supported

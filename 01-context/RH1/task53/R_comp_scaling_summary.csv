@@ -1,0 +1,6 @@
+Function,Type,Exponent α,R²
+ζ (zeta),Multiplicative,-0.7070 ± 0.0559,0.9816
+f_rand,Multiplicative,-0.5198 ± 0.0528,0.9700
+f_fully_rand,Non-multiplicative,-0.5417 ± 0.0605,0.9640
+L_DH (reference),Non-multiplicative,≈ -0.53 (from r67),N/A
+ζ (expected),Multiplicative,≈ 0 (from r67),N/A

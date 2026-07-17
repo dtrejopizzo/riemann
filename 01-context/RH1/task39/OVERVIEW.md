@@ -1,0 +1,25 @@
+## Overview ## Analysis of Phase Coherence Ratios at L_DH Resonances ### Summary of Results Using the corrected squarefree-enforced implementation of the Davenport-Heilbronn function L_DH with N=10^6, I computed the mean resultant length R_k for terms with k=2,3,4,5 prime factors at two specified resonance locations: **At t ≈ 84.208:**
+- R_2 = 0.002139
+- R_3 = 0.002822
+- R_4 = 0.003083
+- R_5 = 0.004448
+- Ratios: R_3/R_2 = 1.3194, R_4/R_2 = 1.4416, R_5/R_2 = 2.0795 **At t ≈ 114.153:**
+- R_2 = 0.001270
+- R_3 = 0.000980
+- R_4 = 0.004676
+- R_5 = 0.006582
+- Ratios: R_3/R_2 = 0.7720, R_4/R_2 = 3.6825, R_5/R_2 = 5.1842 **Percentage Differences Between Locations:**
+- R_3/R_2: 41.49% difference
+- R_4/R_2: 155.45% difference
+- R_5/R_2: 149.29% difference ### Hypothesis Test The hypothesis stated that these ratios would show <20% variation if they form a stable, location-independent structural signature. All three ratios substantially exceed this threshold:
+- R_3/R_2: 41% > 20% ✗
+- R_4/R_2: 155% > 20% ✗
+- R_5/R_2: 149% > 20% ✗ ### Conclusion **The hypothesis is rejected.** The ratios R_k/R_2 are NOT approximately constant between the two L_DH resonance locations. Rather than forming a stable structural signature, these ratios vary dramatically, with differences ranging from 41% to 155%. This finding is consistent with report r22's observation that power-law exponents for phase coherence vary significantly between different off-line zeros. The absolute phase coherence values R_k themselves are very small (<0.01) and statistically non-significant (Rayleigh test p > 0.05 for all k at both locations), indicating weak overall phase alignment even at resonance peaks for this truncation length. --- ## Discretionary Decisions - **Implementation of L_DH coefficients**: Used the squarefree-enforced implementation where a_n = 0 for all non-squarefree n (μ(n)=0), as specified in the dataset description as the corrected approach
+- **Exact t values**: Used the specified values t≈84.208 and t≈114.153 from the research objective rather than searching for peaks
+- **Truncation length**: N = 10^6 as specified in the objective
+- **Phase coherence metric**: Used mean resultant length R_k = |mean(exp(i·phase))| for terms with exactly k prime factors
+- **Statistical significance threshold**: Applied α = 0.05 for Rayleigh tests
+- **Stability threshold**: Applied the specified 20% threshold for determining ratio constancy
+- **Numerical precision**: Used complex128 dtype and standard NumPy summation (dataset mentions Kahan summation was validated for t ≤ 500, and our t values fall within this range)
+- **Character implementation**: χ mod 5 with χ(1)=1, χ(2)=i, χ(3)=-i, χ(4)=-1, χ(0)=0 as specified in research-program-v3.pdf
+- **κ computation**: κ = (√5-1)/(2√(5(√5-1))) yielding κ ≈ 0.2486 

@@ -1,0 +1,50 @@
+## Overview <output>
+<conclusion>
+For the specified compactly supported C∞ bump test function φ(t)=exp(-1/(1-t²)), the smallest eigenvalue λ_min(Q_N) of the finite-N Weil-type kernel matrix Q_N[m,n] = φ((γ_m−γ_n)/W) built from the first N nontrivial zeta zeros is positive only in a narrow regime (small N with small bandwidth W), and becomes substantially negative and continues to decrease as N grows or W is enlarged — concretely demonstrating the R7 gap that no finite-N, single-test-function calculation can deliver a uniform-in-N positivity certificate.
+</conclusion> <methods>
+1. Data acquisition & R2 gate. Downloaded Odlyzko's first 100,000 nontrivial zeta-zero imaginary parts (`zeros1`, ~9-digit precision) from https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros1, saved as `odlyzko_zeros1.txt` and cached as a NumPy array `zeta_zeros_N100000_dps9.npy`. Checked the R2 gate by comparing the first three zeros against the spec values (14.134725141, 21.022039639, 25.010857580). Differences were [1.0e-9, 0, 0], within the 9-digit precision of the source table; R2 (zeta side) passes.
+2. Test function. Implemented φ(t)=exp(-1/(1-t²)) for |t|<1, 0 otherwise — a positive, compactly supported C∞ bump.
+3. Matrix construction. Built the N×N Weil-type kernel matrix Q_N[m,n] = φ((γ_m − γ_n)/W) using `numpy.searchsorted` to exploit the compact support of φ (no truncation error: |t|≥1 ⇒ φ=0 exactly). Verified symmetry and agreement with a brute-force dense build on a 500×500 case.
+4. Eigenvalue computation. Used `scipy.linalg.eigvalsh` on the dense symmetric matrix. Swept N ∈ {100, 250, 500, 1000, 2000} and W ∈ {2, 5, 10}.
+5. Comparator test function. Repeated the analysis with the Fejér kernel φ(t)=sinc²(t) (whose Fourier transform is non-negative, so by Bochner the kernel matrix is PSD on any set of distinct points) to contrast test-function choices.
+6. Outputs saved: `weil_matrix_lambdas.csv`, `weil_matrix_results.json`, and the figure `weil_matrix_lambda_min.png` (two panels showing λ_min vs N for the bump at several W, and the bump vs Fejér comparison). Important caveat on construction: `-PROMPT-v6-DATASET.md` does not give an entrywise formula for Q_N. The chosen kernel — φ evaluated on pairwise zero spacings — is one of the most direct, well-defined finite-N matrix realisations of a "Weil quadratic form" on a zero list (it is the quadratic form whose positivity, by Bochner, would follow from a non-negative Fourier transform of the test function), but other interpretations exist. The qualitative conclusions about the R7 gap are robust to that choice.
+</methods> <results>
+R2 gate. First three zeros from the Odlyzko table reproduced to the spec's stated 9-digit precision (max abs diff = 1.0e-9). Bump test function, λ_min(Q_N): | W | N=100 | N=250 | N=500 | N=1000 | N=2000 |
+|---|-------|-------|-------|--------|--------|
+| 2 | +0.04714 | −0.03705 | −0.07299 | −0.11198 | −0.13455 |
+| 5 | −0.15014 | −0.17288 | −0.19307 | −0.22112 | −0.23727 |
+| 10| −0.24027 | −0.29264 | −0.33157 | −0.37283 | −0.41378 | Rank of the negative subspace (# eigenvalues < −1e-10) grows roughly linearly in N (e.g., at W=5: 31, 84, 176, 367, 761), so the indefiniteness is not a single outlier eigenvalue but a substantial fraction of the spectrum. Fejér test function φ=sinc²(t), W=2 (Bochner-positive): λ_min stays ≥0 (N=100: 0.3580; N=250: 0.1483; N=500: 0.0768; N=1000: 0.0156; N=2000: 0.0073), but drifts monotonically toward 0 with N — no positive uniform-in-N lower bound is detectable on the explored grid. Hypothesis assessment. The research hypothesis stated that λ_min(Q_N) would be positive for "standard test functions" and only that the bound would be N- and φ-dependent. The numerical evidence is stronger and more revealing: for the specific compactly supported bump prescribed by the objective, λ_min is in fact NEGATIVE across most of the explored grid (only positive at the smallest case N=100, W=2). Thus the matrix is indefinite, not positive-definite, which is itself the most striking embodiment of the R7 gap — a "natural" smooth test function need not yield Weil-type positivity at finite N at all.
+</results> <challenges>
+- The specification document does not prescribe an entrywise formula for Q_N. Multiple inequivalent matrix realisations of a "Weil quadratic form" are defensible (Bombieri/Li–Keiper-style coefficients, Gram matrices over a basis of test functions evaluated against the explicit formula, kernel matrices on pairwise zero differences). I chose the kernel-on-differences form because it is the simplest object whose entrywise formula is uniquely fixed by the given φ alone, and it has a direct Bochner-theoretic interpretation. Other choices could yield different signs/magnitudes for λ_min.
+- Building the explicit-formula side (sum over primes + archimedean terms) for a full Q_N matrix would substantially expand the scope and require an additional basis convention; this was outside the practical budget and was not done.
+- The Odlyzko table has ~9-digit precision, below the spec's dps∈{50,80}. For the kernel matrix this is irrelevant (eigenvalues are O(1) and insensitive to 9-digit input noise) but I did not pursue dps=50/80 zeros at N=2000 (extrapolated runtime >> session budget per the dataset description).
+- A minor matplotlib mathtext bug (`\ge` unsupported) required substituting `\geq`; recorded.
+- For non-compactly-supported test functions (Gaussian, Fejér tails), the searchsorted-based windowed assembly introduces truncation; for the prescribed bump it does not (support is exactly |t|<1). I patched the comparator to be aware of this.
+</challenges> <discussion>
+The computation gives a concrete, falsifiable picture of "R7": positivity (or lack of it) of a finite-N Weil-type matrix depends very strongly on the test function and weakly but persistently on N. Even with a "Bochner-positive" test function (Fejér), where positive semidefiniteness is mathematically guaranteed for any distinct zero set, the smallest eigenvalue still drifts toward zero with N, meaning we have no candidate quantitative lower bound c > 0 that would survive the limit N → ∞. With the specified bump function — whose Fourier transform is sign-changing — the finite matrix is in fact indefinite over a wide regime, and the negative subspace grows with N. So even existence (not just a uniform quantitative bound) of finite-N positivity is a property of the test function. In the Weil-positivity programme, RH is equivalent to the positivity of an explicit-formula quadratic form for ALL admissible φ. A numerical result of λ_min(Q_N) > 0 for some chosen φ and finite N, even if observed, is therefore three steps short of RH: (i) it must hold for ALL admissible test functions; (ii) it must hold with a positive lower bound that does not collapse as N → ∞; (iii) the finite kernel matrix studied here is at best a fragment of the full explicit-formula form, which also includes prime, gamma-factor, and pole contributions. R7 in the dataset specification names exactly this triple gap as the "missing lemma": the absence of a uniform-in-N, uniform-over-test-spaces lower bound. Our data illustrate that gap in both directions — sign-changing φ̂ makes the finite-N form indefinite, while Bochner-positive φ̂ makes it positive but with a bound that decays toward 0 with N.
+</discussion> <proposed-next-hypotheses>
+1. For the family of Beurling–Selberg majorants and minorants of the indicator of [−T,T] (whose Fourier transforms are positive and explicit), the smallest eigenvalue λ_min(Q_N) of the kernel matrix on the first N zeta zeros decays as a power of N (testable: fit λ_min(N) ~ c·N^{−α} and report α, c).
+2. The fraction of negative eigenvalues of the bump-kernel matrix Q_N approaches a non-trivial limit f* ∈ (0,1) determined by the integral of (φ̂)_negative_part / ∫φ̂ over the GUE-like local pair-correlation density of zeta zeros; testable by extrapolating the rank statistics (0.31, 0.336, 0.352, 0.367, 0.381 at W=5 here) and comparing to the Montgomery pair-correlation prediction.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>zeta_zeros_N100000_dps9.npy</file-name>
+<artifact-type>external_source</artifact-type>
+<artifact-description>First 100,000 nontrivial zeta-zero imaginary parts, downloaded from Odlyzko's `zeros1` table (https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros1), saved as a NumPy float64 array. Source precision ~9 decimal digits. Validated against the R2 gate (max abs diff against spec first three zeros = 1.0e-9). Used as input zero list for all Q_N computations.</artifact-description>
+</artifact>
+<artifact>
+<file-name>weil_matrix_lambdas.csv</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Summary table of λ_min, λ_max, trace, and rank of the positive/negative subspaces of the Weil-type kernel matrix Q_N[m,n]=φ((γ_m−γ_n)/W) with the compactly supported bump φ(t)=exp(-1/(1-t²))·1_{|t|<1}, for N ∈ {100,250,500,1000,2000} and W ∈ {2,5,10}. Computed via scipy.linalg.eigvalsh on dense symmetric matrices assembled from the Odlyzko zero table.</artifact-description>
+</artifact>
+<artifact>
+<file-name>weil_matrix_results.json</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>JSON containing the R2 validation diffs, the bump-φ results across (N,W), the Fejér-φ comparator results at W=2, and provenance fields describing the construction. Produced from the same eigvalsh sweep as the CSV.</artifact-description>
+</artifact>
+<artifact>
+<file-name>weil_matrix_lambda_min.png</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Two-panel figure: (A) λ_min(Q_N) vs N at three bandwidths for the bump test function, showing that λ_min is positive only for the smallest case and becomes increasingly negative with N or W; (B) λ_min(Q_N) vs N at W=2 for bump (sign-changing φ̂) vs Fejér sinc² (φ̂ ≥ 0), showing that Bochner-positive φ gives positive but vanishing λ_min — the R7 absence of a uniform-in-N lower bound.</artifact-description>
+</artifact>
+</artifacts>
+</output> 

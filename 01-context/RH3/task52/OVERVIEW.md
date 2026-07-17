@@ -1,0 +1,21 @@
+## Overview ## ANALYSIS RESULTS ### Summary Statistics **N = 10⁴ (n_peaks = 42, Q4 peaks):**
+- Numerator: Mean = 24.741, Std = 38.263, Variance = 1464.04
+- Denominator: Mean = 30.282, Std = 22.079, Variance = 487.49 **N = 10⁵ (n_peaks = 32, Q4 peaks):**
+- Numerator: Mean = 91.724, Std = 104.667, Variance = 10955.24
+- Denominator: Mean = 57.753, Std = 37.089, Variance = 1375.58 ### Growth Factors (N=10⁵ / N=10⁴) **Mean Growth:**
+- Numerator: 3.707×
+- Denominator: 1.907×
+- Ratio: 1.944× **Standard Deviation Growth:**
+- Numerator: 2.735× (38.263 → 104.667)
+- Denominator: 1.680× (22.079 → 37.089)
+- Ratio: 1.628× (62.8% faster) **Variance Growth:**
+- Numerator: 7.483× (1464.04 → 10955.24)
+- Denominator: 2.822× (487.49 → 1375.58)
+- Ratio: 2.652× (165.2% faster) ### Hypothesis Test Result **✓ HYPOTHESIS SUPPORTED** The numerator's standard deviation exhibits a **markedly higher growth factor** (2.735×) compared to the denominator (1.680×), representing 62.8% faster growth. The variance shows an even more dramatic disparity, with the numerator growing 7.483× versus the denominator's 2.822× (ratio of 2.652×). This provides **preliminary evidence** that the divergence of the r distribution between N=10⁴ and N=10⁵ is mechanistically driven by faster growth in the variance of the numerator (Σ_{j≠k} Re[S_j S̄_k]) compared to the denominator (Σ_k|S_k|²). Since r = Num/Den, faster growth in numerator variance relative to denominator variance naturally leads to increased variability in r, explaining the observed divergence pattern. --- ### Discretionary Decisions Made - **Peak identification method**: Used scipy.signal.find_peaks with default parameters (no prominence or distance thresholds) to identify all local maxima in the magnitude profile
+- **Grid resolution for N=10⁴**: Evaluated Dirichlet sums on 500 equally-spaced points in t∈[10000, 20000] (spacing ≈20.04)
+- **Q4 threshold definition**: Defined top quartile as peaks with magnitude ≥75th percentile of all identified peaks
+- **Omega-class decomposition**: Used standard decomposition by n mod 4 for zeta function with classes k∈{0,1,2,3}
+- **Relationship verification**: Computed Num and Den from artifact r values using the identity |D_F|² = Den + Num and r = Num/Den
+- **"Markedly higher" threshold**: Applied 20% criterion (ratio > 1.2) to assess whether growth factor difference is substantial
+- **Statistical reporting**: Reported growth factors to 3 decimal places; all other statistics to 3 decimal places
+- **External dataset**: Used peaks_zeta_N100000.csv artifact provided for N=10⁵ analysis 

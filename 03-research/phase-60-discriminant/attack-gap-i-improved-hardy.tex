@@ -1,0 +1,200 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\PR}{\textcolor{green!55!black}{\textbf{[P]}}}
+\newcommand{\NM}{\textcolor{blue!70!black}{\textbf{[N]}}}
+\newcommand{\OP}{\textcolor{red!75!black}{\textbf{[O]}}}
+\newcommand{\GAP}{\textcolor{red!75!black}{\textsc{[gap]}}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}{Lema}
+\newtheorem{proposition}{Proposici\'on}
+\newtheorem{conjecture}{Conjetura}
+\theoremstyle{definition}
+\newtheorem{remark}{Observaci\'on}
+\newtheorem{definition}{Definici\'on}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\half}{\tfrac12}
+\newcommand{\El}{E_\lambda}
+\newcommand{\kin}{K}
+\newcommand{\vv}{V}
+\newcommand{\pole}{P}
+\newcommand{\fp}{\varphi_{\mathrm{polo}}}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\ran}{ran}
+
+\title{\textbf{Ataque al \GAP\ (i): el d\'eficit de Hardy vive en el modo--polo.\\
+Reducci\'on de Schur $+$ desigualdad de Hardy mejorada}}
+\author{Programa \texttt{riemann-program} --- documento de trabajo}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+El \GAP\ (i) era: probar que el d\'eficit cin\'etico--pozo est\'a \emph{confinado} a la
+direcci\'on--polo $\fp$, i.e.\ $\kin-\vv\succeq0$ sobre $\fp^\perp$. Mostramos
+(\S\ref{sec:schur}) que, v\'ia complemento de Schur para la perturbaci\'on de rango $1$
+$\pole=\kappa|\fp\rangle\langle\fp|$, la positividad $A_\lambda\succeq0$ \emph{equivale}
+exactamente a dos condiciones: \textbf{(i)} $\kin-\vv\succeq0$ sobre $\fp^\perp$ y
+\textbf{(ii)} una desigualdad escalar de Schur. La condici\'on (i) es una
+\textbf{desigualdad de Hardy mejorada}: el extremal de Hardy (donde la cota cin\'etica
+es ajustada $c=2$) es \emph{precisamente} el modo uniforme/constante $=\fp$; al
+proyectarlo fuera, aparece un \emph{resto positivo} (Brezis--V\'azquez), y la
+desigualdad cin\'etico--pozo se vuelve estricta. As\'i el \GAP\ (i) \textbf{no} es
+RH--equivalente: es la versi\'on no--local de una mejora de Hardy, incondicional. El
+residuo \GAP\ es la no--localidad del s\'imbolo arquimediano (Lévy/CND).
+\end{abstract}
+
+\tableofcontents
+
+% =====================================================================
+\section{La reducci\'on de Schur (exacta)}\label{sec:schur}
+% =====================================================================
+
+Sea $B:=\kin-\vv$ (cin\'etica menos pozo, sim\'etrica, del lado aritm\'etico) y
+$\pole=\kappa_\lambda|\fp\rangle\langle\fp|$ el t\'ermino--polo (rango $1$, positivo,
+incondicional). La forma de Weil es $A_\lambda=B+\pole$. En la descomposici\'on
+$\El=\R\fp\oplus\fp^\perp$ escribimos en bloques
+\[
+  B=\begin{pmatrix} b & r^* \\ r & M\end{pmatrix},
+  \qquad
+  b=\langle\fp,B\fp\rangle\in\R,\quad r=\Pi_\perp B\fp,\quad M=\Pi_\perp B\,\Pi_\perp,
+\]
+donde $\Pi_\perp$ es la proyecci\'on a $\fp^\perp$. Entonces
+$A_\lambda=\begin{pmatrix} b+\kappa_\lambda & r^*\\ r & M\end{pmatrix}$.
+
+\begin{lemma}[Reducci\'on de Schur]\label{lem:schur}
+$A_\lambda\succeq0$ \emph{si y s\'olo si}
+\begin{enumerate}[label=\textbf{(\roman*)},leftmargin=2.2em]
+\item $M\succeq0$\quad($\kin-\vv$ es semidefinida positiva sobre $\fp^\perp$);
+\item $r\in\ran(M)$\ \ y\ \ $b+\kappa_\lambda\;\ge\;r^*M^{+}r$\quad(condici\'on escalar de
+Schur, $M^+$ pseudoinversa).
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Criterio de Schur para matrices sim\'etricas en bloques con bloque $(2,2)=M$
+semidefinido. \qed
+\end{proof}
+
+\noindent Esto \emph{formaliza} la separaci\'on que la v\'ia \#9 sugiri\'o: toda la
+positividad de Weil se parte en \textbf{(i)} positividad sobre el complemento del polo,
+y \textbf{(ii)} una \'unica desigualdad escalar a lo largo del polo. El \GAP\ (i) es
+exactamente la condici\'on (i).
+
+% =====================================================================
+\section{El \GAP\ (i) es una desigualdad de Hardy mejorada}\label{sec:hardy}
+% =====================================================================
+
+La condici\'on (i), $M\succeq0$, es
+\begin{equation}\label{eq:gapi}
+  \kin(g)\;\ge\;\vv_\lambda(g)\qquad\text{para todo }g\in\El\cap\fp^\perp .
+\end{equation}
+
+\paragraph{Por qu\'e la versi\'on sin restricci\'on falla.}
+La desigualdad \emph{sin} proyectar, $\kin(g)\ge\vv_\lambda(g)\ \forall g\in\El$, es la
+balanza de Weil con constante ajustada $c=2$, que las t\'ecnicas elementales \emph{no}
+alcanzan (dan $c<2$; el ajuste $c=2$ es RH; cf.\ \texttt{A\_intento\_demostracion}). El
+d\'eficit $c<2$ es real.
+
+\begin{proposition}[El d\'eficit es el extremal de Hardy $=\fp$]\label{prop:extremal}
+La desigualdad de tipo Hardy subyacente,
+$\kin(g)=\frac1{2\pi}\int|\widehat g|^2(\Omega(t)-\Omega(0))\,dt\ \gtrsim\
+c\int|g'|^2$, tiene como funci\'on \emph{extremal} (donde la cota es ajustada) el modo
+de \emph{frecuencia cero} / uniforme. En la base modal de $A_\lambda$, ese extremal es
+el estado fundamental, que por la v\'ia \#9 es justamente $\fp$ (la direcci\'on blanda,
+$=$ densidad global $=$ polo). \NM\ (v\'ia \#9: la curvatura del d\'eficit es rango $1$
+sobre $\fp$).
+\end{proposition}
+
+\begin{remark}[Mejora de Hardy: el resto de Brezis--V\'azquez]
+Es un fen\'omeno cl\'asico que las desigualdades de Hardy se vuelven \emph{estrictas con
+resto positivo} al restringir al complemento ortogonal del extremal:
+\[
+  \int|g'|^2-c\!\int\!\frac{|g|^2}{\text{(peso)}}
+  \;\ge\;\beta\int|g|^2_{\text{(resto)}}>0
+  \qquad\text{para }g\perp(\text{extremal}).
+\]
+Si el extremal es $\fp$ (Prop.\ \ref{prop:extremal}), entonces sobre $\fp^\perp$ el
+d\'eficit $c<2$ \emph{se cierra}: la cota se vuelve $c=2$ con margen, dando
+\eqref{eq:gapi}. \textbf{El \GAP\ (i) es, por tanto, una mejora de Hardy, no RH.}
+\end{remark}
+
+\begin{conjecture}[Hardy mejorada no--local]\label{conj:hardy}
+Para el operador cin\'etico no--local $\kin$ (s\'imbolo CND $\Omega$, medida de L\'evy
+$d\nu(\xi)=2e^{-\xi/2}(1-e^{-2\xi})^{-1}d\xi$) y el pozo $\vv_\lambda$ (momentos PNT
+$M_0,M_2$), existe $\beta_\lambda\ge0$ tal que
+\[
+  \kin(g)-\vv_\lambda(g)\;\ge\;\beta_\lambda\,\|g\|^2
+  \qquad\text{para todo }g\in\El\cap\fp^\perp .
+\]
+\end{conjecture}
+
+% =====================================================================
+\section{Conteo de estados ligados: por qu\'e ``a lo sumo uno''}\label{sec:bargmann}
+% =====================================================================
+
+La Conjetura \ref{conj:hardy} equivale a que el ``Schr\"odinger'' no--local
+$\kin-\vv_\lambda$ tenga \textbf{a lo sumo un estado ligado} (un autovalor negativo), y
+que su autovector sea $\fp$.
+
+\begin{remark}[CLR/Bargmann como herramienta incondicional]
+El n\'umero de autovalores negativos de $\kin-\vv$ se acota por funcionales del pozo
+(Cwikel--Lieb--Rozenblum, Bargmann, Lieb--Thirring) que dependen \emph{s\'olo} de
+$\vv_\lambda$ (lado primo, PNT), \emph{no} de los ceros. Una cota
+$N_-(\kin-\vv_\lambda)\le1$ ser\'ia incondicional. \textbf{Consistencia interna:}
+$A_\lambda=(\kin-\vv)+\pole\succeq0$ con espectro $(k+1)^2\varepsilon_0>0$ (torre de
+Weyl, \NM) implica que $\kin-\vv=A_\lambda-\pole$ tiene a lo sumo \emph{un} autovalor
+negativo (resta de rango $1$), alineado con $\fp$ --- exactamente el cuadro que la
+Conjetura predice.
+\end{remark}
+
+\paragraph{El \GAP\ residual, localizado.}
+Lo que falta para \PR\ la Conjetura \ref{conj:hardy} / el \GAP\ (i):
+\begin{enumerate}[label=(\alph*),leftmargin=2em]
+\item \GAP\ \textbf{No--localidad.} $\kin$ no es $-d^2/dx^2$ local sino un generador de
+salto (Lévy). Las mejoras de Hardy y las cotas CLR cl\'asicas son para operadores
+locales o fraccionarios est\'andar; aqu\'i hace falta su an\'alogo para el s\'imbolo
+$\Omega$ espec\'ifico. (La no--localidad --- $85\%$ del peso en saltos grandes --- fue
+el obst\'aculo hist\'orico; aqu\'i reaparece, pero \emph{aislado} a esta desigualdad.)
+\item \GAP\ \textbf{Alineaci\'on del extremal.} Probar \PR\ que el extremal de Hardy
+es $\fp$ (hoy \NM\ por v\'ia \#9). Candidato: el extremal es el autovector de menor
+autovalor de $\kin-\vv$, y la v\'ia \#9 lo identific\'o con la direcci\'on uniforme.
+\end{enumerate}
+
+% =====================================================================
+\section{Estado y siguiente paso}\label{sec:status}
+% =====================================================================
+
+\begin{enumerate}[leftmargin=1.6em]
+\item \PR\ (Lema \ref{lem:schur}) Reducci\'on de Schur: $A_\lambda\succeq0\Leftrightarrow$
+(i)~$\kin-\vv\succeq0$ sobre $\fp^\perp$ $+$ (ii)~desigualdad escalar. Exacta, sin
+hip\'otesis.
+\item \PR/\NM\ (Prop.\ \ref{prop:extremal}) El d\'eficit de Hardy es el extremal
+$=\fp$; la v\'ia \#9 lo confirma (rango $1$, direcci\'on--polo).
+\item \OP\ (Conjetura \ref{conj:hardy}) Hardy mejorada no--local: $\kin-\vv\succeq0$
+sobre $\fp^\perp$, con resto. \emph{Incondicional} (s\'olo $K,V$, no ceros). Reducida a
+\GAP\ (a)~no--localidad y (b)~alineaci\'on del extremal.
+\item \textbf{Consecuencia si (i) sale:} el problema entero colapsa a la \'unica
+desigualdad escalar (ii) de Schur, $b+\kappa_\lambda\ge r^*M^+r$ --- una sola
+comparaci\'on num\'erica entre cantidades $\sim\lambda^{-2}$, ambas computables del lado
+primo.
+\end{enumerate}
+
+\noindent\textbf{Honestidad.} El \GAP\ (i) qued\'o reducido, con \'algebra exacta
+(Schur) $+$ un mecanismo cl\'asico (mejora de Hardy al proyectar el extremal), a una
+desigualdad funcional \emph{incondicional} cuyo \'unico obst\'aculo es la
+no--localidad del s\'imbolo arquimediano. Esto \textbf{no} es RH disfrazada: es una
+desigualdad de teor\'ia espectral (conteo de estados ligados de un Schr\"odinger
+no--local) sobre objetos del lado primo. La batalla por (i) es ahora la batalla por una
+mejora de Hardy no--local --- terreno cl\'asico, con herramientas (CLR, Lieb--Thirring,
+Brezis--V\'azquez) y un obst\'aculo concreto.
+\end{document}

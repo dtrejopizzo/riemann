@@ -1,0 +1,45 @@
+## Overview <output>
+<conclusion>
+The hypothesis is REFUTED: introducing a factor of 0.5 in `M_primes` does not correct the L(Δ,s) trace residual — at (T₀=85.7, σ=2, J=10, X=10⁴) the absolute residual actually worsens from +4.35% to +4.56%, and the magnitude of `tr(M_primes)` (~0.034) is more than ten times smaller than the trace mismatch (~0.346), so no scalar rescaling of `M_primes` can close the gap.
+</conclusion> <methods>
+1. Loaded the existing modules `weil_modular.py`, `weil_quadratic_form_general.py`, and `_zeros.py` (unmodified) at /workspace/416c4f6c-e364-4af9-a895-e280d74220a4.
+2. Generated L(Δ,s) zeros from scratch using `_zeros.L_Delta_zeros` (no cache existed) with dps=30, n_taus=200, y_max=12. Validated the first zero against the spec: γ₁ = 9.22237939992110... matching the LMFDB reference (9.2223793999211025) to 16+ digits.
+3. Generated N=80 zeros (last γ ≈ 124.10). Verified that this is more than enough: at the Hermite window (T₀=85.7, σ=2, J=10), `tr(M_zeros)` saturates at 7.940388 by N=60 zeros (γ ≈ 99); zeros beyond t ≈ 124 contribute exp(−183) ≈ 0 to the basis envelope.
+4. Ran the baseline `weil_modular.compute_Q_modular` at (T₀=85.7, σ=2, J=10, weight=12, conductor=1, primes_cutoff=10⁴, n_nodes_quad=200, include_negative_zeros=True).
+5. Constructed two counterfactual versions by re-assembling `M_arith` from the returned components: (a) the proposed FIX, halving `M_primes` (×0.5); (b) a counter-test doubling `M_primes` (×2.0). For each, computed Q = M_zeros − M_arith, symmetrised, took the minimum eigenvalue and the relative trace residual (tr(M_arith) − tr(M_zeros))/tr(M_zeros).
+6. Attempted the full X=10⁵ validation; the prime-power assembly timed out (>900 s), consistent with the documented bottleneck. The X=10⁴ result is decisive on its own.
+</methods> <results>
+At (T₀=85.7, σ=2, J=10, X=10⁴, N_zeros=80), all in analytic normalisation: | Variant | tr(M_zeros) | tr(M_polar) | tr(M_arch) | tr(M_primes) | tr(M_arith) | rel. residual | λ_min(Q) | |λ_min|/tr(M_zeros) |
+|---|---|---|---|---|---|---|---|---|
+| Baseline (current code) | 7.940388 | −5.850144 | 14.169736 | 0.033616 | 8.285975 | **+4.3523 %** | −4.5318×10⁻¹ | 5.71×10⁻² |
+| Proposed FIX (M_primes × 0.5) | 7.940388 | −5.850144 | 14.169736 | 0.016808 | 8.302784 | **+4.5640 %** | −2.4272×10⁻¹ | 3.06×10⁻² |
+| Counter-test (M_primes × 2.0) | 7.940388 | −5.850144 | 14.169736 | 0.067232 | 8.252359 | **+3.9289 %** | — | — | Key quantitative observations:
+- The baseline residual at X=10⁴ in this run is **+4.35 %**, not the −12.1 % quoted from r18; the discrepancy is most likely due to differences in zero-list provenance/length or convention in r18. In our setup the sign of the mismatch is positive (M_arith too large), and the absolute size of the mismatch is ≈0.346.
+- |tr(M_primes)| = 0.034 is **~10× smaller** than the absolute trace mismatch (0.346). Any multiplicative rescaling of M_primes can move the residual by at most ±0.034/7.94 ≈ ±0.43 percentage points, so it cannot conceivably bring the residual within the required 10⁻² tolerance.
+- The proposed halving makes the residual slightly worse (+4.35 % → +4.56 %); doubling moves it slightly closer (+3.93 %). Both confirm that the dominant mismatch is **not** in the prime-sum normalisation.
+- λ_min(Q) does decrease in magnitude under the FIX (−0.453 → −0.243), but |λ_min|/tr stays at ~3×10⁻², which is **eight orders of magnitude above** the spec's GRH numerical floor (~10⁻¹⁰).
+- Validation against the spec: first L(Δ) zero γ₁ = 9.22237939992110… matches LMFDB 1.12.a.a to 16+ digits; the zero-generation pipeline itself is sound.
+- The X=10⁵ run timed out (>900 s) and was not completed; given the X=10⁴ result, completing X=10⁵ would not change the conclusion because the prime sum is convergent and tr(M_primes) at X=10⁵ remains much smaller than the 0.35 mismatch.
+</results> <challenges>
+- No L(Δ,s) zeros cache existed; zeros had to be generated in this task. Generation cost scales steeply (10 zeros ≈ 67 s, 50 ≈ 478 s, 80 ≈ 874 s at dps=30, n_taus=200), consistent with the spec's ~T⁴ note.
+- The full X=10⁵ prime-power assembly timed out (>900 s) and the runtime budget did not permit retrying with more parallelism. This was anticipated by the task description and is why X=10⁴ was specified as the diagnostic point.
+- The r18 baseline of "−12.1 %" trace residual could not be reproduced; in this task the baseline (same parameters, X=10⁴) is +4.35 %. The likely source is differences in the number/precision of L(Δ) zeros used, or a different convention/sign elsewhere. This does not affect the hypothesis test, which is decided by the inability of any rescaling of M_primes to close a 0.346 gap when |tr(M_primes)| is only 0.034.
+- Because `compute_Q_modular` is monolithic, the halving test was carried out by post-hoc rescaling `comps['M_primes']` and re-assembling Q (algebraically identical to changing the assembly logic in-place); no edits were saved to `weil_modular.py` since the change is not corrective.
+</challenges> <discussion>
+The hypothesis that the L(Δ,s) trace failure stems from a factor-of-2 double-counting in `M_primes` is decisively refuted by a basic order-of-magnitude argument that is independent of the precise baseline value. At (T₀=85.7, σ=2, J=10) the diagonal of M_primes is dominated by archimedean cancellations: tr(M_polar) = −5.85, tr(M_arch) = +14.17, tr(M_primes) = +0.034, summing to tr(M_arith) = 8.29, against tr(M_zeros) = 7.94 — a gap of 0.346 that is ~10× larger than |tr(M_primes)|. The bug must therefore lie in either (i) the archimedean term — although r18 reportedly excluded it, our numbers show M_arch is the dominant component and even small fractional errors there (≈2.4 %) suffice to explain the gap; (ii) the polar/conductor constant (e.g. a missing log N for non-trivial level, or sign on log(2π)); or (iii) the M_zeros side itself — most plausibly the **functional-equation symmetrisation**: for the self-dual real L(Δ,s) the spec uses the natural pairing γ ↔ −γ in `include_negative_zeros=True`, but the explicit-formula RHS as currently written may already implicitly include this symmetry through the Re-doubled archimedean term, causing a partial overcount. Re-deriving the M_zeros normalisation from Λ(Δ, s) = Λ(Δ, 1−s) under the analytic normalisation chosen here is the most promising next step. A subtler observation: the proposed FIX does reduce |λ_min(Q)| (from 0.45 to 0.24), so it shifts spectral mass without curing the trace mismatch. This indicates that the bug couples to both diagonal and off-diagonal pieces, again pointing to a global normalisation/symmetrisation issue rather than a single rescaling. Until this is resolved, `weil_modular.py` should be considered not validated for L(Δ,s); the engines for ζ and L(χ₄ mod 5) in `weil_quadratic_form_general.py` remain the only validated paths.
+</discussion> <proposed-next-hypotheses>
+1. The L(Δ,s) trace mismatch arises from the archimedean term: specifically, the explicit-formula Φ(r) for a holomorphic weight-k form should use 2·Re ψ(k/2 + ir) − 2·log(2π) integrated against |h(r)|², but the current implementation may be applying the Re-doubling in a way inconsistent with the symmetrised zero sum (`include_negative_zeros=True`). Halving the factor in front of `Re ψ(k/2 + ir)` (or equivalently using `ψ(k/2 + ir) + ψ(k/2 − ir)` only once instead of twice through γ↔−γ symmetry) should close the +4.4 % gap.
+2. Alternatively, the bug is in the M_zeros symmetrisation: dropping `include_negative_zeros=True` and instead matching the unsymmetrised explicit formula (with the single-sided "− 2 Σ Λ_L(n)/√n g(log n)" RHS unchanged) will close the trace identity for L(Δ,s) and bring |λ_min|/tr down to the 10⁻⁸–10⁻¹⁰ floor specified for GRH-consistent functions.
+</proposed-next-hypotheses> <artifacts>
+<artifact>
+<file-name>cache/LDelta_zeros_N80_dps30.pkl</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Pickle file containing the first 80 imaginary parts γ of zeros of L(Δ,s) in analytic normalisation, generated via `_zeros.L_Delta_zeros(80, dps=30, n_taus=200, y_max=12)` (mpmath sign-change scan on Λ(Δ, 6+it), bisection to ~25-digit precision). First zero matches LMFDB 1.12.a.a (γ₁ = 9.22237939992110…) to 16+ digits; last zero γ₈₀ ≈ 124.105. Generation cost: ~874 s of CPU. Reusable for future L(Δ,s) Weil-engine validation runs at any (T₀, σ, J) with T₀ ≲ 100, σ ≲ 5.</artifact-description>
+</artifact>
+<artifact>
+<file-name>lDelta_prime_halving_test.png</file-name>
+<artifact-type>agent_produced</artifact-type>
+<artifact-description>Bar chart summarising the hypothesis test. Shows the relative trace residual (tr(M_arith) − tr(M_zeros))/tr(M_zeros) at (T₀=85.7, σ=2, J=10, X=10⁴, N_zeros=80) for three variants of `weil_modular.compute_Q_modular`: baseline (+4.352 %), proposed FIX with M_primes×0.5 (+4.564 %), and counter-test with M_primes×2.0 (+3.929 %). The required tolerance (|residual| < 1 %) is marked. The chart visually demonstrates that no scalar rescaling of M_primes can close the residual.</artifact-description>
+</artifact>
+</artifacts>
+</output> 

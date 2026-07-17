@@ -1,0 +1,31 @@
+## Overview The extreme value behavior of the M_coh and R_comp metrics for the Riemann zeta function is **NON-STATIONARY** with respect to height t. The GEV shape parameter ξ exhibits statistically significant differences across low (t ∈ [50, 550]), mid (t ∈ [1000, 10000]), and high (t ∈ [10000, 20000]) t-ranges for both metrics. **Quantitative Results:** **M_coh Metric:**
+- Low-t: ξ = -1.186 [95% CI: -1.524, -0.257]
+- Mid-t: ξ = -0.696 [95% CI: -0.864, -0.540]
+- High-t: ξ = -1.457 [95% CI: -1.600, -0.274]
+- Pattern: Non-monotonic variation with Δξ = -0.271 from low to high
+- Kruskal-Wallis test: H = 881.3, p < 0.001
+- All pairwise Mann-Whitney U tests: p < 0.001
+- Cohen's d effect sizes: 0.77 to 2.53 (medium to large) **R_comp Metric:**
+- Low-t: ξ = 0.813 [95% CI: 0.803, 0.825]
+- Mid-t: ξ = 0.823 [95% CI: 0.812, 0.832]
+- High-t: ξ = 0.818 [95% CI: 0.808, 0.831]
+- Pattern: Nearly constant but statistically varying with Δξ = +0.005 (+0.7%)
+- Kruskal-Wallis test: H = 920.8, p < 0.001
+- All pairwise Mann-Whitney U tests: p < 0.001
+- Cohen's d effect sizes: 0.35 to 0.57 (small to medium) **Comparison with L_DH:**
+While both ζ and L_DH exhibit non-stationary extreme value behavior, the patterns differ fundamentally:
+- L_DH shows monotonic decrease in ξ with increasing t
+- ζ (M_coh) shows non-monotonic variation
+- ζ (R_comp) shows small but statistically significant variation **Conclusion:**
+The initial hypothesis that multiplicative functions exhibit stationary extreme value behavior is **REJECTED**. Non-stationarity in extreme value statistics is not unique to L_DH but extends to the canonical multiplicative function (Riemann ζ). However, the specific pattern and magnitude of non-stationarity differ between multiplicative and non-multiplicative functions, suggesting that while non-stationarity may be a general phenomenon in resonance metrics, its characteristics could potentially serve as a discriminator between function classes. --- **DISCRETIONARY DECISIONS:** - **Truncation length N = 10⁴**: Selected for computational tractability while maintaining sufficient resolution; N = 10⁵ or 10⁶ would have been more accurate but computationally prohibitive for this analysis
+- **t-range boundaries**: Low [50, 550], Mid [1000, 10000], High [10000, 20000] chosen to balance separation, coverage, and computational feasibility
+- **Number of time series points**: 1501 points per range, providing adequate sampling for block maxima extraction
+- **Number of blocks**: 100 blocks per time series, yielding 100 maxima for GEV fitting
+- **Bootstrap resamples**: 1000 resamples for confidence interval estimation, providing stable estimates
+- **Statistical tests**: Kruskal-Wallis H-test for overall comparison (non-parametric, no normality assumption) and Mann-Whitney U tests for pairwise comparisons
+- **Significance threshold**: α = 0.05 for all hypothesis tests
+- **Confidence interval level**: 95% for reporting uncertainty in ξ estimates
+- **Effect size metric**: Cohen's d for quantifying magnitude of differences between bootstrap distributions
+- **GEV fitting method**: Maximum likelihood estimation via scipy.stats.genextreme
+- **Numerical precision**: Kahan compensated summation for complex partial sums to minimize floating-point errors
+- **Bootstrap seed**: Fixed at 42 for reproducibility of confidence intervals

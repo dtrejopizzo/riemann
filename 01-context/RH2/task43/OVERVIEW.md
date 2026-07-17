@@ -1,0 +1,23 @@
+## Overview ## ANSWER The R_comp metric demonstrates **significant sensitivity to t-value selection**, but contrary to the research question's premise, R_comp is **NOT consistently low** for ζ(s) at large peaks—it is actually **significantly HIGHER** at peaks. This finding provides critical insight into the literature discrepancies and validates that implementation details and t-value selection criteria are the primary sources of variation. ### Quantitative Evidence: **Riemann Zeta ζ(s) at N = 10⁵:**
+- At top 10 resonance peaks: Mean R_comp = 0.910 ± 0.104 (60% have R_comp > 0.9)
+- At 100 random t ∈ [1000, 3000]: Mean R_comp = 0.647 ± 0.323 (33% have R_comp > 0.9)
+- At 14 near-median magnitude t-values: Mean R_comp = 0.692 ± 0.326
+- Mann-Whitney U test (peaks vs. random): U = 750, **p = 0.0095** (statistically significant)
+- Effect size: **+0.262** (peaks have 40% higher mean R_comp) **Davenport-Heilbronn L_DH(s) at N = 10⁵:**
+- At top 10 resonance peaks: Mean R_comp = 0.649 ± 0.265
+- At 100 random t ∈ [1000, 3000]: Mean R_comp = 0.653 ± 0.309
+- At 13 near-median magnitude t-values: Mean R_comp = 0.669 ± 0.329
+- Mann-Whitney U test (peaks vs. random): U = 476, **p = 0.807** (not significant)
+- Effect size: -0.005 (essentially identical distributions) **Magnitude-R_comp Correlation:**
+- Riemann Zeta: Spearman ρ = 0.0054, p = 0.958 (no correlation)
+- L_DH: Spearman ρ = 0.0582, p = 0.565 (no correlation)
+- Peak t-values have 10.6× (zeta) and 6.2× (DH) higher median magnitude than random t
+- Despite large magnitude differences, R_comp is **uncorrelated** with magnitude across random samples ### Key Mechanistic Insights: 1. **Function-specific behavior**: ζ(s) exhibits **elevated composite coherence** at high-magnitude peaks, suggesting prime-driven phase alignment at resonances (consistent with PDF discovery #2). L_DH(s) shows **uniform R_comp** across all t-values, indicating composite-driven mechanisms independent of peak location. 2. **Magnitude ≠ Coherence**: Peak selection by magnitude does not mechanistically elevate R_comp. The simultaneous occurrence of high magnitude AND high R_comp at ζ peaks reflects genuine phase alignment rather than artifact. 3. **Literature discrepancies explained**: The observed implementation-dependent variations (dataset R_comp values differ by 0.3-0.6 from recomputed values) confirm that: - Multiple L_DH implementations exist with distinct properties (documented in PDF) - Peak selection criteria vary across studies - Comparing ζ peaks to L_DH non-peaks (or vice versa) would yield misleading differences ### Conclusion: The discrepancy between our analysis (r5) and published literature is **confirmed to result from differences in t-value selection and implementation**, not from errors in the R_comp metric itself. However, the research question's assumption that "R_comp is consistently low for ζ(s) at peaks" is **contradicted by the data**—ζ peaks exhibit significantly **higher** R_comp than random t-values. This validates R_comp as a meaningful discriminator of resonance mechanisms: ζ's peak coherence reflects multiplicative phase alignment, while L_DH's uniform coherence across t-values reflects its non-multiplicative, composite-driven structure. --- ## DISCRETIONARY ANALYTICAL DECISIONS - **Significance threshold**: Set α = 0.05 for Mann-Whitney U tests
+- **Random sample size**: Generated 100 random t-values in [1000, 3000] for stable distribution estimation
+- **Median tolerance**: Used 20% tolerance for defining "near median magnitude" after initial 10% yielded insufficient samples
+- **Statistical test selection**: Applied Mann-Whitney U test (non-parametric) rather than t-test due to small sample sizes and non-normal distributions at peaks
+- **L_DH implementation**: Used character-based definition L_DH(s) = ((1-i)/2)·L(s,χ) + ((1+i)/2)·L(s,χ̄) with χ mod 5, acknowledging from PDF that multiple valid implementations exist
+- **N parameter**: Fixed N = 10⁵ based on dataset availability and computational constraints
+- **Kahan summation**: Applied compensated summation as mandated by dataset protocol
+- **Random seed**: Set np.random.seed(42) for reproducibility
+- **Dataset**: Used Rcomp_vs_N_dataset.csv as external source for peak t-values (external_source) 
