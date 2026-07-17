@@ -1,6 +1,6 @@
 # The Riemann Hypothesis, in Plain Language
 
-After 61 phases of work, my simple explanation is no longer the textbook one. It goes in
+After 76 phases of work, my simple explanation is no longer the textbook one. It goes in
 layers, from the simplest to the deepest — and the last layer is what *we* learned.
 
 ## Layer 1 — The problem, without formulas
@@ -58,7 +58,7 @@ real physical question behind RH.
 
 ## Layer 4 — Why it is fiendishly hard (what our program understood)
 
-Here is the synthesis of 61 phases in simple language:
+Here is the synthesis of 76 phases in simple language:
 
 We can prove the orchestra is balanced *on average*. We cannot rule out a rogue instrument —
 because all our methods listen to the whole orchestra at once.
@@ -77,19 +77,34 @@ The only time in history that bridge was crossed was in the parallel world of fu
 counts the zeros one by one, without averaging. For the integers, that space is not known. That
 is what is missing.
 
+## Layer 5 — Where the search actually landed (phases 62–76)
+
+The later phases did something more useful than a new attempt: they gave the "rogue instrument"
+problem a single, named face. Fifteen steps of arithmetic reasoning (an architecture we called
+ARP-P, built from Pick and Nevanlinna's theory of functions that preserve sign in the upper
+half-plane) reduce all of RH to one classical, already-known inequality: the **Li–Keiper
+criterion**, that a specific infinite family of numbers $\lambda_n$ is never negative. Fourteen
+of those fifteen steps are now fully proved. The fifteenth *is* the Li–Keiper statement itself —
+so the reduction does not make RH easier (being equivalent to RH, that one step carries the full
+weight of the problem), but it does make the target sharp: not "find some clever new geometry
+somewhere," but "prove this one specific, classical, textbook-statable inequality." Every route
+this program tried to prove it by (phases 64–76) ran back into the same handful of structural
+walls the earlier phases had already named.
+
 ## A closing thought
 
 That is my honest understanding. And notice that the intuition "the primes must have an order
 inside the apparent chaos" has a precise answer from this map: the order is *already* proved
 (the GUE statistics, the balance on average, the critical point $\Lambda \geq 0$); what remains
 to prove is that the order has not a single exception. RH is not "find the hidden pattern" — it
-is "prove the visible pattern is exact."
+is "prove the visible pattern is exact," and after 76 phases that exactness now has one name:
+Li–Keiper positivity.
 
 And Layer 3 holds the two places where thinking like physicists can really bite:
 
 1. *What physical principle forces a system to sit exactly at its critical point?*
 2. *What kind of object "counts modes one by one" instead of averaging?*
 
-Those two questions — together with the barriers where we came genuinely close (the
-non-autonomous inertia thread, the L8 target) — are the live edges where the next real idea, if
-there is one, would have to come from.
+Those two questions — together with the six structural walls this program mapped and named
+(catalogued in `NO-GO-LIST.md`) — are the live edges where the next real idea, if there is one,
+would have to come from.
