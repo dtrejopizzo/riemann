@@ -1,0 +1,2148 @@
+{
+  "statement": "Leading 1/N coefficient by sigma for R_N=Delta external-Delta logT",
+  "source": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5l_logt_cell_update_results.json",
+  "cases": [
+    {
+      "label": "zeta-lam6",
+      "rows": [
+        {
+          "from_N": 8,
+          "to_N": 10,
+          "max_abs_coeff_N_residual": 0.13375111978716725,
+          "min_coeff_N_residual": 0.019603998794221686,
+          "max_coeff_N_residual": 0.13375111978716725,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0024504998492777107,
+              "external": 0.01800369119291257,
+              "logt": 0.01555319134363486,
+              "coeff_N_residual": 0.019603998794221686,
+              "coeff_N2_residual": 0.1568319903537735,
+              "residual_over_external": 0.13611096874636394
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0026778731987164295,
+              "external": 0.019640390392268257,
+              "logt": 0.016962517193551827,
+              "coeff_N_residual": 0.021422985589731436,
+              "coeff_N2_residual": 0.1713838847178515,
+              "residual_over_external": 0.13634521235232755
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.003367571234002203,
+              "external": 0.02455048799033532,
+              "logt": 0.021182916756333117,
+              "coeff_N_residual": 0.026940569872017622,
+              "coeff_N2_residual": 0.21552455897614098,
+              "residual_over_external": 0.13716921779020846
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.004548206898581403,
+              "external": 0.03273398398711376,
+              "logt": 0.028185777088532357,
+              "coeff_N_residual": 0.03638565518865122,
+              "coeff_N2_residual": 0.2910852415092098,
+              "residual_over_external": 0.1389444957378813
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.007069534295208568,
+              "external": 0.04910097598067064,
+              "logt": 0.04203144168546207,
+              "coeff_N_residual": 0.056556274361668546,
+              "coeff_N2_residual": 0.45245019489334837,
+              "residual_over_external": 0.1439795065986387
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.009881557510716447,
+              "external": 0.06546796797422752,
+              "logt": 0.05558641046351107,
+              "coeff_N_residual": 0.07905246008573158,
+              "coeff_N2_residual": 0.6324196806858526,
+              "residual_over_external": 0.15093728760004396
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.016718889973395906,
+              "external": 0.09820195196134128,
+              "logt": 0.08148306198794537,
+              "coeff_N_residual": 0.13375111978716725,
+              "coeff_N2_residual": 1.070008958297338,
+              "residual_over_external": 0.17025007792082947
+            }
+          ]
+        },
+        {
+          "from_N": 10,
+          "to_N": 12,
+          "max_abs_coeff_N_residual": 0.10901875762494115,
+          "min_coeff_N_residual": 0.01726553449149638,
+          "max_coeff_N_residual": 0.10901875762494115,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.001726553449149638,
+              "external": 0.011977103301626778,
+              "logt": 0.01025054985247714,
+              "coeff_N_residual": 0.01726553449149638,
+              "coeff_N2_residual": 0.17265534491496382,
+              "residual_over_external": 0.14415450928899734
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0018855242499849507,
+              "external": 0.013065930874501938,
+              "logt": 0.011180406624516987,
+              "coeff_N_residual": 0.018855242499849507,
+              "coeff_N2_residual": 0.18855242499849506,
+              "residual_over_external": 0.14430845135301737
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.0023657532063462838,
+              "external": 0.016332413593127423,
+              "logt": 0.013966660386781139,
+              "coeff_N_residual": 0.023657532063462838,
+              "coeff_N2_residual": 0.23657532063462838,
+              "residual_over_external": 0.1448501896462981
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.003179778501519407,
+              "external": 0.02177655145750323,
+              "logt": 0.018596772955983824,
+              "coeff_N_residual": 0.03179778501519407,
+              "coeff_N2_residual": 0.3179778501519407,
+              "residual_over_external": 0.14601845970537253
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.004878173401989403,
+              "external": 0.032664827186254845,
+              "logt": 0.027786653784265442,
+              "coeff_N_residual": 0.04878173401989403,
+              "coeff_N2_residual": 0.4878173401989403,
+              "residual_over_external": 0.1493402482791064
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.006705044130903656,
+              "external": 0.04355310291500646,
+              "logt": 0.036848058784102806,
+              "coeff_N_residual": 0.06705044130903656,
+              "coeff_N2_residual": 0.6705044130903657,
+              "residual_over_external": 0.153951008817638
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.010901875762494115,
+              "external": 0.06532965437250969,
+              "logt": 0.054427778610015576,
+              "coeff_N_residual": 0.10901875762494115,
+              "coeff_N2_residual": 1.0901875762494115,
+              "residual_over_external": 0.16687484217093235
+            }
+          ]
+        },
+        {
+          "from_N": 12,
+          "to_N": 14,
+          "max_abs_coeff_N_residual": 0.10541424080273576,
+          "min_coeff_N_residual": 0.017678194478969202,
+          "max_coeff_N_residual": 0.10541424080273576,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0014731828732474335,
+              "external": 0.008544788448710115,
+              "logt": 0.007071605575462682,
+              "coeff_N_residual": 0.017678194478969202,
+              "coeff_N2_residual": 0.21213833374763041,
+              "residual_over_external": 0.17240717919351403
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0016081164539538421,
+              "external": 0.00932158739859285,
+              "logt": 0.0077134709446390086,
+              "coeff_N_residual": 0.019297397447446105,
+              "coeff_N2_residual": 0.23156876936935328,
+              "residual_over_external": 0.17251530079486213
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.0020145799992053303,
+              "external": 0.011651984248241064,
+              "logt": 0.009637404249035733,
+              "coeff_N_residual": 0.024174959990463964,
+              "coeff_N2_residual": 0.2900995198855676,
+              "residual_over_external": 0.17289587389456376
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.0026988640022815556,
+              "external": 0.015535978997654753,
+              "logt": 0.012837114995373197,
+              "coeff_N_residual": 0.03238636802737867,
+              "coeff_N2_residual": 0.388636416328544,
+              "residual_over_external": 0.17371702180396645
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.004102781785254413,
+              "external": 0.023303968496482128,
+              "logt": 0.019201186711227714,
+              "coeff_N_residual": 0.04923338142305296,
+              "coeff_N2_residual": 0.5908005770766356,
+              "residual_over_external": 0.17605506915587157
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.005571461231223335,
+              "external": 0.031071957995309506,
+              "logt": 0.02550049676408617,
+              "coeff_N_residual": 0.06685753477468002,
+              "coeff_N2_residual": 0.8022904172961602,
+              "residual_over_external": 0.17930834072524107
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.008784520066894647,
+              "external": 0.046607936992964255,
+              "logt": 0.03782341692606961,
+              "coeff_N_residual": 0.10541424080273576,
+              "coeff_N2_residual": 1.264970889632829,
+              "residual_over_external": 0.18847691259582508
+            }
+          ]
+        },
+        {
+          "from_N": 14,
+          "to_N": 16,
+          "max_abs_coeff_N_residual": 0.09389848326559816,
+          "min_coeff_N_residual": 0.016138191654407934,
+          "max_coeff_N_residual": 0.09389848326559816,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0011527279753148524,
+              "external": 0.006403788137421278,
+              "logt": 0.005251060162106426,
+              "coeff_N_residual": 0.016138191654407934,
+              "coeff_N2_residual": 0.22593468316171106,
+              "residual_over_external": 0.1800072005160122
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0012580833437514753,
+              "external": 0.006985950695368666,
+              "logt": 0.00572786735161719,
+              "coeff_N_residual": 0.017613166812520654,
+              "coeff_N2_residual": 0.24658433537528918,
+              "residual_over_external": 0.18008763568651026
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.0015750768473543958,
+              "external": 0.008732438369210832,
+              "logt": 0.007157361521856437,
+              "coeff_N_residual": 0.02205107586296154,
+              "coeff_N2_residual": 0.30871506208146154,
+              "residual_over_external": 0.18037079458904198
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.002107218397758622,
+              "external": 0.011643251158947777,
+              "logt": 0.009536032761189155,
+              "coeff_N_residual": 0.02950105756862071,
+              "coeff_N2_residual": 0.41301480596068996,
+              "residual_over_external": 0.1809819584746513
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.0031912458489931784,
+              "external": 0.017464876738421665,
+              "logt": 0.014273630889428486,
+              "coeff_N_residual": 0.0446774418859045,
+              "coeff_N2_residual": 0.625484186402663,
+              "residual_over_external": 0.18272363995404742
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.0043115156779818115,
+              "external": 0.023286502317895554,
+              "logt": 0.018974986639913743,
+              "coeff_N_residual": 0.06036121949174536,
+              "coeff_N2_residual": 0.8450570728844351,
+              "residual_over_external": 0.18515084915386518
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.006707034518971297,
+              "external": 0.03492975347684333,
+              "logt": 0.028222718957872032,
+              "coeff_N_residual": 0.09389848326559816,
+              "coeff_N2_residual": 1.3145787657183743,
+              "residual_over_external": 0.19201494002577843
+            }
+          ]
+        },
+        {
+          "from_N": 16,
+          "to_N": 18,
+          "max_abs_coeff_N_residual": 0.09601924083990765,
+          "min_coeff_N_residual": 0.016872514021306656,
+          "max_coeff_N_residual": 0.09601924083990765,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.001054532126331666,
+              "external": 0.0049782395888379235,
+              "logt": 0.0039237074625062575,
+              "coeff_N_residual": 0.016872514021306656,
+              "coeff_N2_residual": 0.2699602243409065,
+              "residual_over_external": 0.21182831953209122
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0011507316069720493,
+              "external": 0.0054308068241868245,
+              "logt": 0.004280075217214775,
+              "coeff_N_residual": 0.01841170571155279,
+              "coeff_N2_residual": 0.29458729138484463,
+              "residual_over_external": 0.21188962233882308
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.001439879639932997,
+              "external": 0.006788508530233531,
+              "logt": 0.005348628890300534,
+              "coeff_N_residual": 0.023038074238927952,
+              "coeff_N2_residual": 0.36860918782284724,
+              "residual_over_external": 0.21210544753980942
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.0019240568259547442,
+              "external": 0.009051344706978041,
+              "logt": 0.007127287881023297,
+              "coeff_N_residual": 0.030784909215275907,
+              "coeff_N2_residual": 0.4925585474444145,
+              "residual_over_external": 0.2125713789765859
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.0029041229146010514,
+              "external": 0.013577017060467062,
+              "logt": 0.01067289414586601,
+              "coeff_N_residual": 0.04646596663361682,
+              "coeff_N2_residual": 0.7434554661378692,
+              "residual_over_external": 0.21389992379527487
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.0039057135963556644,
+              "external": 0.018102689413956083,
+              "logt": 0.014196975817600418,
+              "coeff_N_residual": 0.06249141754169063,
+              "coeff_N2_residual": 0.9998626806670501,
+              "residual_over_external": 0.21575322357044885
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.006001202552494228,
+              "external": 0.027154034120934124,
+              "logt": 0.021152831568439896,
+              "coeff_N_residual": 0.09601924083990765,
+              "coeff_N2_residual": 1.5363078534385224,
+              "residual_over_external": 0.22100592957079856
+            }
+          ]
+        },
+        {
+          "from_N": 18,
+          "to_N": 20,
+          "max_abs_coeff_N_residual": 0.09048394589787787,
+          "min_coeff_N_residual": 0.01606682184599132,
+          "max_coeff_N_residual": 0.09048394589787787,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0008926012136661844,
+              "external": 0.0039812026443216434,
+              "logt": 0.003088601430655459,
+              "coeff_N_residual": 0.01606682184599132,
+              "coeff_N2_residual": 0.28920279322784376,
+              "residual_over_external": 0.2242039135936208
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0009739576254493227,
+              "external": 0.004343130157441793,
+              "logt": 0.00336917253199247,
+              "coeff_N_residual": 0.017531237258087806,
+              "coeff_N2_residual": 0.31556227064558057,
+              "residual_over_external": 0.2242524608157281
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.0012183749848568362,
+              "external": 0.005428912696802241,
+              "logt": 0.004210537711945405,
+              "coeff_N_residual": 0.02193074972742305,
+              "coeff_N2_residual": 0.3947534950936149,
+              "residual_over_external": 0.22442338878915627
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.0016271714537185516,
+              "external": 0.007238550262402988,
+              "logt": 0.0056113788086844365,
+              "coeff_N_residual": 0.02928908616693393,
+              "coeff_N2_residual": 0.5272035510048108,
+              "residual_over_external": 0.2247924507991712
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.0024521878338215446,
+              "external": 0.010857825393604482,
+              "logt": 0.008405637559782938,
+              "coeff_N_residual": 0.0441393810087878,
+              "coeff_N2_residual": 0.7945088581581804,
+              "residual_over_external": 0.22584520794246163
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.003290859733472323,
+              "external": 0.014477100524805976,
+              "logt": 0.011186240791333653,
+              "coeff_N_residual": 0.05923547520250182,
+              "coeff_N2_residual": 1.0662385536450327,
+              "residual_over_external": 0.22731483613266043
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.005026885883215437,
+              "external": 0.021715650787208964,
+              "logt": 0.016688764903993528,
+              "coeff_N_residual": 0.09048394589787787,
+              "coeff_N2_residual": 1.6287110261618014,
+              "residual_over_external": 0.2314867711068734
+            }
+          ]
+        },
+        {
+          "from_N": 20,
+          "to_N": 22,
+          "max_abs_coeff_N_residual": 0.07950400013237581,
+          "min_coeff_N_residual": 0.014185591527754744,
+          "max_coeff_N_residual": 0.07950400013237581,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0007092795763877372,
+              "external": 0.0032565220667059307,
+              "logt": 0.0025472424903181935,
+              "coeff_N_residual": 0.014185591527754744,
+              "coeff_N2_residual": 0.28371183055509486,
+              "residual_over_external": 0.21780278525954982
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0007739011754658424,
+              "external": 0.0035525695273155604,
+              "logt": 0.002778668351849718,
+              "coeff_N_residual": 0.015478023509316848,
+              "coeff_N2_residual": 0.309560470186337,
+              "residual_over_external": 0.21784265431410932
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.0009679998559153388,
+              "external": 0.004440711909144451,
+              "logt": 0.003472712053229112,
+              "coeff_N_residual": 0.019359997118306778,
+              "coeff_N2_residual": 0.38719994236613553,
+              "residual_over_external": 0.2179830341891812
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.001292461340344618,
+              "external": 0.0059209492121926,
+              "logt": 0.004628487871847982,
+              "coeff_N_residual": 0.025849226806892358,
+              "coeff_N2_residual": 0.5169845361378471,
+              "residual_over_external": 0.21828617237302794
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.0019463741591324388,
+              "external": 0.008881423818288901,
+              "logt": 0.0069350496591564625,
+              "coeff_N_residual": 0.03892748318264878,
+              "coeff_N2_residual": 0.7785496636529755,
+              "residual_over_external": 0.2191511405101967
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.0026094720163145884,
+              "external": 0.0118418984243852,
+              "logt": 0.009232426408070612,
+              "coeff_N_residual": 0.05218944032629177,
+              "coeff_N2_residual": 1.0437888065258354,
+              "residual_over_external": 0.2203592635908009
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.0039752000066187905,
+              "external": 0.017762847636577803,
+              "logt": 0.013787647629959012,
+              "coeff_N_residual": 0.07950400013237581,
+              "coeff_N2_residual": 1.5900800026475161,
+              "residual_over_external": 0.22379294626346602
+            }
+          ]
+        }
+      ],
+      "sigma_profiles": [
+        {
+          "sigma": "0.550000000000000044408921",
+          "first_coeff": 0.019603998794221686,
+          "last_coeff": 0.014185591527754744,
+          "range_coeff": 0.005418407266466942,
+          "last_delta_coeff": -0.001881230318236577,
+          "max_abs_delta_coeff": 0.002338464302725305,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0024504998492777107,
+              "external": 0.01800369119291257,
+              "logt": 0.01555319134363486,
+              "coeff_N_residual": 0.019603998794221686,
+              "coeff_N2_residual": 0.1568319903537735,
+              "residual_over_external": 0.13611096874636394
+            },
+            {
+              "N": 10,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.001726553449149638,
+              "external": 0.011977103301626778,
+              "logt": 0.01025054985247714,
+              "coeff_N_residual": 0.01726553449149638,
+              "coeff_N2_residual": 0.17265534491496382,
+              "residual_over_external": 0.14415450928899734
+            },
+            {
+              "N": 12,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0014731828732474335,
+              "external": 0.008544788448710115,
+              "logt": 0.007071605575462682,
+              "coeff_N_residual": 0.017678194478969202,
+              "coeff_N2_residual": 0.21213833374763041,
+              "residual_over_external": 0.17240717919351403
+            },
+            {
+              "N": 14,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0011527279753148524,
+              "external": 0.006403788137421278,
+              "logt": 0.005251060162106426,
+              "coeff_N_residual": 0.016138191654407934,
+              "coeff_N2_residual": 0.22593468316171106,
+              "residual_over_external": 0.1800072005160122
+            },
+            {
+              "N": 16,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.001054532126331666,
+              "external": 0.0049782395888379235,
+              "logt": 0.0039237074625062575,
+              "coeff_N_residual": 0.016872514021306656,
+              "coeff_N2_residual": 0.2699602243409065,
+              "residual_over_external": 0.21182831953209122
+            },
+            {
+              "N": 18,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0008926012136661844,
+              "external": 0.0039812026443216434,
+              "logt": 0.003088601430655459,
+              "coeff_N_residual": 0.01606682184599132,
+              "coeff_N2_residual": 0.28920279322784376,
+              "residual_over_external": 0.2242039135936208
+            },
+            {
+              "N": 20,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0007092795763877372,
+              "external": 0.0032565220667059307,
+              "logt": 0.0025472424903181935,
+              "coeff_N_residual": 0.014185591527754744,
+              "coeff_N2_residual": 0.28371183055509486,
+              "residual_over_external": 0.21780278525954982
+            }
+          ]
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "first_coeff": 0.021422985589731436,
+          "last_coeff": 0.015478023509316848,
+          "range_coeff": 0.005944962080414588,
+          "last_delta_coeff": -0.0020532137487709583,
+          "max_abs_delta_coeff": 0.002567743089881929,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0026778731987164295,
+              "external": 0.019640390392268257,
+              "logt": 0.016962517193551827,
+              "coeff_N_residual": 0.021422985589731436,
+              "coeff_N2_residual": 0.1713838847178515,
+              "residual_over_external": 0.13634521235232755
+            },
+            {
+              "N": 10,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0018855242499849507,
+              "external": 0.013065930874501938,
+              "logt": 0.011180406624516987,
+              "coeff_N_residual": 0.018855242499849507,
+              "coeff_N2_residual": 0.18855242499849506,
+              "residual_over_external": 0.14430845135301737
+            },
+            {
+              "N": 12,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0016081164539538421,
+              "external": 0.00932158739859285,
+              "logt": 0.0077134709446390086,
+              "coeff_N_residual": 0.019297397447446105,
+              "coeff_N2_residual": 0.23156876936935328,
+              "residual_over_external": 0.17251530079486213
+            },
+            {
+              "N": 14,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0012580833437514753,
+              "external": 0.006985950695368666,
+              "logt": 0.00572786735161719,
+              "coeff_N_residual": 0.017613166812520654,
+              "coeff_N2_residual": 0.24658433537528918,
+              "residual_over_external": 0.18008763568651026
+            },
+            {
+              "N": 16,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0011507316069720493,
+              "external": 0.0054308068241868245,
+              "logt": 0.004280075217214775,
+              "coeff_N_residual": 0.01841170571155279,
+              "coeff_N2_residual": 0.29458729138484463,
+              "residual_over_external": 0.21188962233882308
+            },
+            {
+              "N": 18,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0009739576254493227,
+              "external": 0.004343130157441793,
+              "logt": 0.00336917253199247,
+              "coeff_N_residual": 0.017531237258087806,
+              "coeff_N2_residual": 0.31556227064558057,
+              "residual_over_external": 0.2242524608157281
+            },
+            {
+              "N": 20,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0007739011754658424,
+              "external": 0.0035525695273155604,
+              "logt": 0.002778668351849718,
+              "coeff_N_residual": 0.015478023509316848,
+              "coeff_N2_residual": 0.309560470186337,
+              "residual_over_external": 0.21784265431410932
+            }
+          ]
+        },
+        {
+          "sigma": "0.75",
+          "first_coeff": 0.026940569872017622,
+          "last_coeff": 0.019359997118306778,
+          "range_coeff": 0.0075805727537108444,
+          "last_delta_coeff": -0.002570752609116274,
+          "max_abs_delta_coeff": 0.0032830378085547847,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "0.75",
+              "residual": 0.003367571234002203,
+              "external": 0.02455048799033532,
+              "logt": 0.021182916756333117,
+              "coeff_N_residual": 0.026940569872017622,
+              "coeff_N2_residual": 0.21552455897614098,
+              "residual_over_external": 0.13716921779020846
+            },
+            {
+              "N": 10,
+              "sigma": "0.75",
+              "residual": 0.0023657532063462838,
+              "external": 0.016332413593127423,
+              "logt": 0.013966660386781139,
+              "coeff_N_residual": 0.023657532063462838,
+              "coeff_N2_residual": 0.23657532063462838,
+              "residual_over_external": 0.1448501896462981
+            },
+            {
+              "N": 12,
+              "sigma": "0.75",
+              "residual": 0.0020145799992053303,
+              "external": 0.011651984248241064,
+              "logt": 0.009637404249035733,
+              "coeff_N_residual": 0.024174959990463964,
+              "coeff_N2_residual": 0.2900995198855676,
+              "residual_over_external": 0.17289587389456376
+            },
+            {
+              "N": 14,
+              "sigma": "0.75",
+              "residual": 0.0015750768473543958,
+              "external": 0.008732438369210832,
+              "logt": 0.007157361521856437,
+              "coeff_N_residual": 0.02205107586296154,
+              "coeff_N2_residual": 0.30871506208146154,
+              "residual_over_external": 0.18037079458904198
+            },
+            {
+              "N": 16,
+              "sigma": "0.75",
+              "residual": 0.001439879639932997,
+              "external": 0.006788508530233531,
+              "logt": 0.005348628890300534,
+              "coeff_N_residual": 0.023038074238927952,
+              "coeff_N2_residual": 0.36860918782284724,
+              "residual_over_external": 0.21210544753980942
+            },
+            {
+              "N": 18,
+              "sigma": "0.75",
+              "residual": 0.0012183749848568362,
+              "external": 0.005428912696802241,
+              "logt": 0.004210537711945405,
+              "coeff_N_residual": 0.02193074972742305,
+              "coeff_N2_residual": 0.3947534950936149,
+              "residual_over_external": 0.22442338878915627
+            },
+            {
+              "N": 20,
+              "sigma": "0.75",
+              "residual": 0.0009679998559153388,
+              "external": 0.004440711909144451,
+              "logt": 0.003472712053229112,
+              "coeff_N_residual": 0.019359997118306778,
+              "coeff_N2_residual": 0.38719994236613553,
+              "residual_over_external": 0.2179830341891812
+            }
+          ]
+        },
+        {
+          "sigma": "1.0",
+          "first_coeff": 0.03638565518865122,
+          "last_coeff": 0.025849226806892358,
+          "range_coeff": 0.010536428381758865,
+          "last_delta_coeff": -0.003439859360041573,
+          "max_abs_delta_coeff": 0.004587870173457152,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "1.0",
+              "residual": 0.004548206898581403,
+              "external": 0.03273398398711376,
+              "logt": 0.028185777088532357,
+              "coeff_N_residual": 0.03638565518865122,
+              "coeff_N2_residual": 0.2910852415092098,
+              "residual_over_external": 0.1389444957378813
+            },
+            {
+              "N": 10,
+              "sigma": "1.0",
+              "residual": 0.003179778501519407,
+              "external": 0.02177655145750323,
+              "logt": 0.018596772955983824,
+              "coeff_N_residual": 0.03179778501519407,
+              "coeff_N2_residual": 0.3179778501519407,
+              "residual_over_external": 0.14601845970537253
+            },
+            {
+              "N": 12,
+              "sigma": "1.0",
+              "residual": 0.0026988640022815556,
+              "external": 0.015535978997654753,
+              "logt": 0.012837114995373197,
+              "coeff_N_residual": 0.03238636802737867,
+              "coeff_N2_residual": 0.388636416328544,
+              "residual_over_external": 0.17371702180396645
+            },
+            {
+              "N": 14,
+              "sigma": "1.0",
+              "residual": 0.002107218397758622,
+              "external": 0.011643251158947777,
+              "logt": 0.009536032761189155,
+              "coeff_N_residual": 0.02950105756862071,
+              "coeff_N2_residual": 0.41301480596068996,
+              "residual_over_external": 0.1809819584746513
+            },
+            {
+              "N": 16,
+              "sigma": "1.0",
+              "residual": 0.0019240568259547442,
+              "external": 0.009051344706978041,
+              "logt": 0.007127287881023297,
+              "coeff_N_residual": 0.030784909215275907,
+              "coeff_N2_residual": 0.4925585474444145,
+              "residual_over_external": 0.2125713789765859
+            },
+            {
+              "N": 18,
+              "sigma": "1.0",
+              "residual": 0.0016271714537185516,
+              "external": 0.007238550262402988,
+              "logt": 0.0056113788086844365,
+              "coeff_N_residual": 0.02928908616693393,
+              "coeff_N2_residual": 0.5272035510048108,
+              "residual_over_external": 0.2247924507991712
+            },
+            {
+              "N": 20,
+              "sigma": "1.0",
+              "residual": 0.001292461340344618,
+              "external": 0.0059209492121926,
+              "logt": 0.004628487871847982,
+              "coeff_N_residual": 0.025849226806892358,
+              "coeff_N2_residual": 0.5169845361378471,
+              "residual_over_external": 0.21828617237302794
+            }
+          ]
+        },
+        {
+          "sigma": "1.5",
+          "first_coeff": 0.056556274361668546,
+          "last_coeff": 0.03892748318264878,
+          "range_coeff": 0.01762879117901977,
+          "last_delta_coeff": -0.005211897826139025,
+          "max_abs_delta_coeff": 0.007774540341774515,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "1.5",
+              "residual": 0.007069534295208568,
+              "external": 0.04910097598067064,
+              "logt": 0.04203144168546207,
+              "coeff_N_residual": 0.056556274361668546,
+              "coeff_N2_residual": 0.45245019489334837,
+              "residual_over_external": 0.1439795065986387
+            },
+            {
+              "N": 10,
+              "sigma": "1.5",
+              "residual": 0.004878173401989403,
+              "external": 0.032664827186254845,
+              "logt": 0.027786653784265442,
+              "coeff_N_residual": 0.04878173401989403,
+              "coeff_N2_residual": 0.4878173401989403,
+              "residual_over_external": 0.1493402482791064
+            },
+            {
+              "N": 12,
+              "sigma": "1.5",
+              "residual": 0.004102781785254413,
+              "external": 0.023303968496482128,
+              "logt": 0.019201186711227714,
+              "coeff_N_residual": 0.04923338142305296,
+              "coeff_N2_residual": 0.5908005770766356,
+              "residual_over_external": 0.17605506915587157
+            },
+            {
+              "N": 14,
+              "sigma": "1.5",
+              "residual": 0.0031912458489931784,
+              "external": 0.017464876738421665,
+              "logt": 0.014273630889428486,
+              "coeff_N_residual": 0.0446774418859045,
+              "coeff_N2_residual": 0.625484186402663,
+              "residual_over_external": 0.18272363995404742
+            },
+            {
+              "N": 16,
+              "sigma": "1.5",
+              "residual": 0.0029041229146010514,
+              "external": 0.013577017060467062,
+              "logt": 0.01067289414586601,
+              "coeff_N_residual": 0.04646596663361682,
+              "coeff_N2_residual": 0.7434554661378692,
+              "residual_over_external": 0.21389992379527487
+            },
+            {
+              "N": 18,
+              "sigma": "1.5",
+              "residual": 0.0024521878338215446,
+              "external": 0.010857825393604482,
+              "logt": 0.008405637559782938,
+              "coeff_N_residual": 0.0441393810087878,
+              "coeff_N2_residual": 0.7945088581581804,
+              "residual_over_external": 0.22584520794246163
+            },
+            {
+              "N": 20,
+              "sigma": "1.5",
+              "residual": 0.0019463741591324388,
+              "external": 0.008881423818288901,
+              "logt": 0.0069350496591564625,
+              "coeff_N_residual": 0.03892748318264878,
+              "coeff_N2_residual": 0.7785496636529755,
+              "residual_over_external": 0.2191511405101967
+            }
+          ]
+        },
+        {
+          "sigma": "2.0",
+          "first_coeff": 0.07905246008573158,
+          "last_coeff": 0.05218944032629177,
+          "range_coeff": 0.02686301975943981,
+          "last_delta_coeff": -0.007046034876210049,
+          "max_abs_delta_coeff": 0.012002018776695017,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "2.0",
+              "residual": 0.009881557510716447,
+              "external": 0.06546796797422752,
+              "logt": 0.05558641046351107,
+              "coeff_N_residual": 0.07905246008573158,
+              "coeff_N2_residual": 0.6324196806858526,
+              "residual_over_external": 0.15093728760004396
+            },
+            {
+              "N": 10,
+              "sigma": "2.0",
+              "residual": 0.006705044130903656,
+              "external": 0.04355310291500646,
+              "logt": 0.036848058784102806,
+              "coeff_N_residual": 0.06705044130903656,
+              "coeff_N2_residual": 0.6705044130903657,
+              "residual_over_external": 0.153951008817638
+            },
+            {
+              "N": 12,
+              "sigma": "2.0",
+              "residual": 0.005571461231223335,
+              "external": 0.031071957995309506,
+              "logt": 0.02550049676408617,
+              "coeff_N_residual": 0.06685753477468002,
+              "coeff_N2_residual": 0.8022904172961602,
+              "residual_over_external": 0.17930834072524107
+            },
+            {
+              "N": 14,
+              "sigma": "2.0",
+              "residual": 0.0043115156779818115,
+              "external": 0.023286502317895554,
+              "logt": 0.018974986639913743,
+              "coeff_N_residual": 0.06036121949174536,
+              "coeff_N2_residual": 0.8450570728844351,
+              "residual_over_external": 0.18515084915386518
+            },
+            {
+              "N": 16,
+              "sigma": "2.0",
+              "residual": 0.0039057135963556644,
+              "external": 0.018102689413956083,
+              "logt": 0.014196975817600418,
+              "coeff_N_residual": 0.06249141754169063,
+              "coeff_N2_residual": 0.9998626806670501,
+              "residual_over_external": 0.21575322357044885
+            },
+            {
+              "N": 18,
+              "sigma": "2.0",
+              "residual": 0.003290859733472323,
+              "external": 0.014477100524805976,
+              "logt": 0.011186240791333653,
+              "coeff_N_residual": 0.05923547520250182,
+              "coeff_N2_residual": 1.0662385536450327,
+              "residual_over_external": 0.22731483613266043
+            },
+            {
+              "N": 20,
+              "sigma": "2.0",
+              "residual": 0.0026094720163145884,
+              "external": 0.0118418984243852,
+              "logt": 0.009232426408070612,
+              "coeff_N_residual": 0.05218944032629177,
+              "coeff_N2_residual": 1.0437888065258354,
+              "residual_over_external": 0.2203592635908009
+            }
+          ]
+        },
+        {
+          "sigma": "3.0",
+          "first_coeff": 0.13375111978716725,
+          "last_coeff": 0.07950400013237581,
+          "range_coeff": 0.05424711965479144,
+          "last_delta_coeff": -0.010979945765502055,
+          "max_abs_delta_coeff": 0.0247323621622261,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "3.0",
+              "residual": 0.016718889973395906,
+              "external": 0.09820195196134128,
+              "logt": 0.08148306198794537,
+              "coeff_N_residual": 0.13375111978716725,
+              "coeff_N2_residual": 1.070008958297338,
+              "residual_over_external": 0.17025007792082947
+            },
+            {
+              "N": 10,
+              "sigma": "3.0",
+              "residual": 0.010901875762494115,
+              "external": 0.06532965437250969,
+              "logt": 0.054427778610015576,
+              "coeff_N_residual": 0.10901875762494115,
+              "coeff_N2_residual": 1.0901875762494115,
+              "residual_over_external": 0.16687484217093235
+            },
+            {
+              "N": 12,
+              "sigma": "3.0",
+              "residual": 0.008784520066894647,
+              "external": 0.046607936992964255,
+              "logt": 0.03782341692606961,
+              "coeff_N_residual": 0.10541424080273576,
+              "coeff_N2_residual": 1.264970889632829,
+              "residual_over_external": 0.18847691259582508
+            },
+            {
+              "N": 14,
+              "sigma": "3.0",
+              "residual": 0.006707034518971297,
+              "external": 0.03492975347684333,
+              "logt": 0.028222718957872032,
+              "coeff_N_residual": 0.09389848326559816,
+              "coeff_N2_residual": 1.3145787657183743,
+              "residual_over_external": 0.19201494002577843
+            },
+            {
+              "N": 16,
+              "sigma": "3.0",
+              "residual": 0.006001202552494228,
+              "external": 0.027154034120934124,
+              "logt": 0.021152831568439896,
+              "coeff_N_residual": 0.09601924083990765,
+              "coeff_N2_residual": 1.5363078534385224,
+              "residual_over_external": 0.22100592957079856
+            },
+            {
+              "N": 18,
+              "sigma": "3.0",
+              "residual": 0.005026885883215437,
+              "external": 0.021715650787208964,
+              "logt": 0.016688764903993528,
+              "coeff_N_residual": 0.09048394589787787,
+              "coeff_N2_residual": 1.6287110261618014,
+              "residual_over_external": 0.2314867711068734
+            },
+            {
+              "N": 20,
+              "sigma": "3.0",
+              "residual": 0.0039752000066187905,
+              "external": 0.017762847636577803,
+              "logt": 0.013787647629959012,
+              "coeff_N_residual": 0.07950400013237581,
+              "coeff_N2_residual": 1.5900800026475161,
+              "residual_over_external": 0.22379294626346602
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant-lam6",
+      "rows": [
+        {
+          "from_N": 8,
+          "to_N": 10,
+          "max_abs_coeff_N_residual": 6.180843941367662,
+          "min_coeff_N_residual": -6.180843941367662,
+          "max_coeff_N_residual": 0.47868703563897097,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": -0.7726054926709578,
+              "external": 0.01800369119291257,
+              "logt": 0.7906091838638704,
+              "coeff_N_residual": -6.180843941367662,
+              "coeff_N2_residual": -49.4467515309413,
+              "residual_over_external": -42.913727212512164
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": -0.6783573583316022,
+              "external": 0.019640390392268257,
+              "logt": 0.6979977487238704,
+              "coeff_N_residual": -5.426858866652817,
+              "coeff_N2_residual": -43.41487093322254,
+              "residual_over_external": -34.538893819475604
+            },
+            {
+              "sigma": "0.75",
+              "residual": -0.43670715676394856,
+              "external": 0.02455048799033532,
+              "logt": 0.4612576447542839,
+              "coeff_N_residual": -3.4936572541115885,
+              "coeff_N2_residual": -27.949258032892708,
+              "residual_over_external": -17.78812530878674
+            },
+            {
+              "sigma": "1.0",
+              "residual": -0.1876777219699441,
+              "external": 0.03273398398711376,
+              "logt": 0.22041170595705786,
+              "coeff_N_residual": -1.5014217757595527,
+              "coeff_N2_residual": -12.011374206076422,
+              "residual_over_external": -5.733421328849746
+            },
+            {
+              "sigma": "1.5",
+              "residual": -0.014982418484159092,
+              "external": 0.04910097598067064,
+              "logt": 0.06408339446482973,
+              "coeff_N_residual": -0.11985934787327274,
+              "coeff_N2_residual": -0.9588747829861819,
+              "residual_over_external": -0.30513484070168284
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.026707176093036973,
+              "external": 0.06546796797422752,
+              "logt": 0.03876079188119055,
+              "coeff_N_residual": 0.21365740874429578,
+              "coeff_N2_residual": 1.7092592699543663,
+              "residual_over_external": 0.40794264614338827
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.05983587945487137,
+              "external": 0.09820195196134128,
+              "logt": 0.03836607250646991,
+              "coeff_N_residual": 0.47868703563897097,
+              "coeff_N2_residual": 3.8294962851117678,
+              "residual_over_external": 0.6093145630997915
+            }
+          ]
+        },
+        {
+          "from_N": 10,
+          "to_N": 12,
+          "max_abs_coeff_N_residual": 0.5758567172009307,
+          "min_coeff_N_residual": -0.19709628698574633,
+          "max_coeff_N_residual": 0.5758567172009307,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": -0.019709628698574632,
+              "external": 0.011977103301626778,
+              "logt": 0.03168673200020141,
+              "coeff_N_residual": -0.19709628698574633,
+              "coeff_N2_residual": -1.9709628698574633,
+              "residual_over_external": -1.6456089759113617
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": -0.01627694115221799,
+              "external": 0.013065930874501938,
+              "logt": 0.029342872026719927,
+              "coeff_N_residual": -0.1627694115221799,
+              "coeff_N2_residual": -1.6276941152217992,
+              "residual_over_external": -1.2457544210632796
+            },
+            {
+              "sigma": "0.75",
+              "residual": -0.005720983234124014,
+              "external": 0.016332413593127423,
+              "logt": 0.022053396827251437,
+              "coeff_N_residual": -0.05720983234124014,
+              "coeff_N2_residual": -0.5720983234124014,
+              "residual_over_external": -0.35028400435140633
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.008791553013866632,
+              "external": 0.02177655145750323,
+              "logt": 0.012984998443636599,
+              "coeff_N_residual": 0.08791553013866632,
+              "coeff_N2_residual": 0.8791553013866632,
+              "residual_over_external": 0.4037164943688756
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.026013847655047304,
+              "external": 0.032664827186254845,
+              "logt": 0.006650979531207541,
+              "coeff_N_residual": 0.26013847655047306,
+              "coeff_N2_residual": 2.6013847655047306,
+              "residual_over_external": 0.7963871202108722
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.03734526497394985,
+              "external": 0.04355310291500646,
+              "logt": 0.006207837941056615,
+              "coeff_N_residual": 0.3734526497394985,
+              "coeff_N2_residual": 3.7345264973949845,
+              "residual_over_external": 0.8574650822658684
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.057585671720093067,
+              "external": 0.06532965437250969,
+              "logt": 0.007743982652416622,
+              "coeff_N_residual": 0.5758567172009307,
+              "coeff_N2_residual": 5.758567172009307,
+              "residual_over_external": 0.8814629783855822
+            }
+          ]
+        },
+        {
+          "from_N": 12,
+          "to_N": 14,
+          "max_abs_coeff_N_residual": 0.5268300674751247,
+          "min_coeff_N_residual": 0.05667286480509175,
+          "max_coeff_N_residual": 0.5268300674751247,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0047227387337576456,
+              "external": 0.008544788448710115,
+              "logt": 0.00382204971495247,
+              "coeff_N_residual": 0.05667286480509175,
+              "coeff_N2_residual": 0.6800743776611009,
+              "residual_over_external": 0.5527039975425687
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0054837047486224625,
+              "external": 0.00932158739859285,
+              "logt": 0.003837882649970388,
+              "coeff_N_residual": 0.06580445698346955,
+              "coeff_N2_residual": 0.7896534838016346,
+              "residual_over_external": 0.5882801409393276
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.0079065131331852,
+              "external": 0.011651984248241064,
+              "logt": 0.003745471115055865,
+              "coeff_N_residual": 0.09487815759822239,
+              "coeff_N2_residual": 1.1385378911786688,
+              "residual_over_external": 0.6785550825284316
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.012103132628509622,
+              "external": 0.015535978997654753,
+              "logt": 0.0034328463691451305,
+              "coeff_N_residual": 0.14523759154211546,
+              "coeff_N2_residual": 1.7428510985053856,
+              "residual_over_external": 0.7790389411788379
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.02031418108102656,
+              "external": 0.023303968496482128,
+              "logt": 0.002989787415455568,
+              "coeff_N_residual": 0.24377017297231873,
+              "coeff_N2_residual": 2.925242075667825,
+              "residual_over_external": 0.8717047950048983
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.028256374579601874,
+              "external": 0.031071957995309506,
+              "logt": 0.0028155834157076306,
+              "coeff_N_residual": 0.3390764949552225,
+              "coeff_N2_residual": 4.06891793946267,
+              "residual_over_external": 0.909385066234556
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.043902505622927065,
+              "external": 0.046607936992964255,
+              "logt": 0.002705431370037189,
+              "coeff_N_residual": 0.5268300674751247,
+              "coeff_N2_residual": 6.321960809701498,
+              "residual_over_external": 0.9419534194262752
+            }
+          ]
+        },
+        {
+          "from_N": 14,
+          "to_N": 16,
+          "max_abs_coeff_N_residual": 0.4409387111728031,
+          "min_coeff_N_residual": 0.026376427517282988,
+          "max_coeff_N_residual": 0.4409387111728031,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.001884030536948785,
+              "external": 0.006403788137421278,
+              "logt": 0.004519757600472493,
+              "coeff_N_residual": 0.026376427517282988,
+              "coeff_N2_residual": 0.36926998524196186,
+              "residual_over_external": 0.2942056321225298
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0024156555633107575,
+              "external": 0.006985950695368666,
+              "logt": 0.004570295132057908,
+              "coeff_N_residual": 0.0338191778863506,
+              "coeff_N2_residual": 0.4734684904089085,
+              "residual_over_external": 0.3457876627890053
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.004186730698362102,
+              "external": 0.008732438369210832,
+              "logt": 0.00454570767084873,
+              "coeff_N_residual": 0.058614229777069426,
+              "coeff_N2_residual": 0.820599216878972,
+              "residual_over_external": 0.47944577692341217
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.0073811146601219894,
+              "external": 0.011643251158947777,
+              "logt": 0.004262136498825788,
+              "coeff_N_residual": 0.10333560524170785,
+              "coeff_N2_residual": 1.4466984733839099,
+              "residual_over_external": 0.6339393146603766
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.013685294485466026,
+              "external": 0.017464876738421665,
+              "logt": 0.0037795822529556387,
+              "coeff_N_residual": 0.19159412279652435,
+              "coeff_N2_residual": 2.682317719151341,
+              "residual_over_external": 0.7835895260204849
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.019716570152221956,
+              "external": 0.023286502317895554,
+              "logt": 0.0035699321656735977,
+              "coeff_N_residual": 0.2760319821311074,
+              "coeff_N2_residual": 3.8644477498355037,
+              "residual_over_external": 0.8466952178159395
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.03149562222662879,
+              "external": 0.03492975347684333,
+              "logt": 0.0034341312502145396,
+              "coeff_N_residual": 0.4409387111728031,
+              "coeff_N2_residual": 6.173141956419244,
+              "residual_over_external": 0.9016846410756608
+            }
+          ]
+        },
+        {
+          "from_N": 16,
+          "to_N": 18,
+          "max_abs_coeff_N_residual": 0.4190847811843801,
+          "min_coeff_N_residual": 0.05716714541816391,
+          "max_coeff_N_residual": 0.4190847811843801,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0035729465886352443,
+              "external": 0.0049782395888379235,
+              "logt": 0.001405293000202679,
+              "coeff_N_residual": 0.05716714541816391,
+              "coeff_N2_residual": 0.9146743266906225,
+              "residual_over_external": 0.7177128631266382
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.00401302337978394,
+              "external": 0.0054308068241868245,
+              "logt": 0.001417783444402885,
+              "coeff_N_residual": 0.06420837407654303,
+              "coeff_N2_residual": 1.0273339852246886,
+              "residual_over_external": 0.7389368669700058
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.0053884301709584085,
+              "external": 0.006788508530233531,
+              "logt": 0.0014000783592751224,
+              "coeff_N_residual": 0.08621488273533454,
+              "coeff_N2_residual": 1.3794381237653526,
+              "residual_over_external": 0.7937575900450465
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.0077548576628971196,
+              "external": 0.009051344706978041,
+              "logt": 0.0012964870440809215,
+              "coeff_N_residual": 0.12407772260635391,
+              "coeff_N2_residual": 1.9852435617016626,
+              "residual_over_external": 0.8567630461492193
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.01245445530379382,
+              "external": 0.013577017060467062,
+              "logt": 0.001122561756673242,
+              "coeff_N_residual": 0.19927128486070111,
+              "coeff_N2_residual": 3.188340557771218,
+              "residual_over_external": 0.9173189698684355
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.01706477655424174,
+              "external": 0.018102689413956083,
+              "logt": 0.0010379128597143418,
+              "coeff_N_residual": 0.27303642486786783,
+              "coeff_N2_residual": 4.368582797885885,
+              "residual_over_external": 0.9426652672439834
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.026192798824023755,
+              "external": 0.027154034120934124,
+              "logt": 0.0009612352969103686,
+              "coeff_N_residual": 0.4190847811843801,
+              "coeff_N2_residual": 6.705356498950081,
+              "residual_over_external": 0.9646006448754767
+            }
+          ]
+        },
+        {
+          "from_N": 18,
+          "to_N": 20,
+          "max_abs_coeff_N_residual": 0.3661756060025597,
+          "min_coeff_N_residual": 0.0450199897570872,
+          "max_coeff_N_residual": 0.3661756060025597,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0025011105420604,
+              "external": 0.0039812026443216434,
+              "logt": 0.0014800921022612434,
+              "coeff_N_residual": 0.0450199897570872,
+              "coeff_N2_residual": 0.8103598156275696,
+              "residual_over_external": 0.6282299007380882
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0028443507027872674,
+              "external": 0.004343130157441793,
+              "logt": 0.0014987794546545252,
+              "coeff_N_residual": 0.051198312650170816,
+              "coeff_N2_residual": 0.9215696277030746,
+              "residual_over_external": 0.654908004060983
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.003928885668807909,
+              "external": 0.005428912696802241,
+              "logt": 0.001500027027994332,
+              "coeff_N_residual": 0.07071994203854237,
+              "coeff_N2_residual": 1.2729589566937627,
+              "residual_over_external": 0.7236966015537727
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.005809019113919005,
+              "external": 0.007238550262402988,
+              "logt": 0.0014295311484839833,
+              "coeff_N_residual": 0.10456234405054209,
+              "coeff_N2_residual": 1.8821221929097576,
+              "residual_over_external": 0.802511401225054
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.009532841014826824,
+              "external": 0.010857825393604482,
+              "logt": 0.0013249843787776587,
+              "coeff_N_residual": 0.17159113826688283,
+              "coeff_N2_residual": 3.088640488803891,
+              "residual_over_external": 0.8779696365758373
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.013166626905975212,
+              "external": 0.014477100524805976,
+              "logt": 0.0013104736188307641,
+              "coeff_N_residual": 0.23699928430755382,
+              "coeff_N2_residual": 4.2659871175359685,
+              "residual_over_external": 0.9094795524431625
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.020343089222364427,
+              "external": 0.021715650787208964,
+              "logt": 0.0013725615648445386,
+              "coeff_N_residual": 0.3661756060025597,
+              "coeff_N2_residual": 6.591160908046074,
+              "residual_over_external": 0.9367939013988469
+            }
+          ]
+        },
+        {
+          "from_N": 20,
+          "to_N": 22,
+          "max_abs_coeff_N_residual": 0.34723203265444696,
+          "min_coeff_N_residual": 0.05280201155537924,
+          "max_coeff_N_residual": 0.34723203265444696,
+          "sigma_rows": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.002640100577768962,
+              "external": 0.0032565220667059307,
+              "logt": 0.000616421488936969,
+              "coeff_N_residual": 0.05280201155537924,
+              "coeff_N2_residual": 1.0560402311075847,
+              "residual_over_external": 0.8107117113563742
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0029306257233927087,
+              "external": 0.0035525695273155604,
+              "logt": 0.0006219438039228518,
+              "coeff_N_residual": 0.058612514467854177,
+              "coeff_N2_residual": 1.1722502893570834,
+              "residual_over_external": 0.824931278855839
+            },
+            {
+              "sigma": "0.75",
+              "residual": 0.003826786494213059,
+              "external": 0.004440711909144451,
+              "logt": 0.0006139254149313916,
+              "coeff_N_residual": 0.07653572988426117,
+              "coeff_N2_residual": 1.5307145976852237,
+              "residual_over_external": 0.8617506770328475
+            },
+            {
+              "sigma": "1.0",
+              "residual": 0.005354013295283052,
+              "external": 0.0059209492121926,
+              "logt": 0.0005669359169095487,
+              "coeff_N_residual": 0.10708026590566104,
+              "coeff_N2_residual": 2.141605318113221,
+              "residual_over_external": 0.9042491505007176
+            },
+            {
+              "sigma": "1.5",
+              "residual": 0.008395634942586692,
+              "external": 0.008881423818288901,
+              "logt": 0.00048578887570220977,
+              "coeff_N_residual": 0.16791269885173382,
+              "coeff_N2_residual": 3.3582539770346767,
+              "residual_over_external": 0.9453028156699539
+            },
+            {
+              "sigma": "2.0",
+              "residual": 0.011398199438818073,
+              "external": 0.0118418984243852,
+              "logt": 0.0004436989855671271,
+              "coeff_N_residual": 0.22796398877636148,
+              "coeff_N2_residual": 4.559279775527229,
+              "residual_over_external": 0.9625314312227633
+            },
+            {
+              "sigma": "3.0",
+              "residual": 0.017361601632722348,
+              "external": 0.017762847636577803,
+              "logt": 0.00040124600385545395,
+              "coeff_N_residual": 0.34723203265444696,
+              "coeff_N2_residual": 6.944640653088939,
+              "residual_over_external": 0.9774109415300508
+            }
+          ]
+        }
+      ],
+      "sigma_profiles": [
+        {
+          "sigma": "0.550000000000000044408921",
+          "first_coeff": -6.180843941367662,
+          "last_coeff": 0.05280201155537924,
+          "range_coeff": 6.238011086785826,
+          "last_delta_coeff": 0.007782021798292037,
+          "max_abs_delta_coeff": 5.983747654381916,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "0.550000000000000044408921",
+              "residual": -0.7726054926709578,
+              "external": 0.01800369119291257,
+              "logt": 0.7906091838638704,
+              "coeff_N_residual": -6.180843941367662,
+              "coeff_N2_residual": -49.4467515309413,
+              "residual_over_external": -42.913727212512164
+            },
+            {
+              "N": 10,
+              "sigma": "0.550000000000000044408921",
+              "residual": -0.019709628698574632,
+              "external": 0.011977103301626778,
+              "logt": 0.03168673200020141,
+              "coeff_N_residual": -0.19709628698574633,
+              "coeff_N2_residual": -1.9709628698574633,
+              "residual_over_external": -1.6456089759113617
+            },
+            {
+              "N": 12,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0047227387337576456,
+              "external": 0.008544788448710115,
+              "logt": 0.00382204971495247,
+              "coeff_N_residual": 0.05667286480509175,
+              "coeff_N2_residual": 0.6800743776611009,
+              "residual_over_external": 0.5527039975425687
+            },
+            {
+              "N": 14,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.001884030536948785,
+              "external": 0.006403788137421278,
+              "logt": 0.004519757600472493,
+              "coeff_N_residual": 0.026376427517282988,
+              "coeff_N2_residual": 0.36926998524196186,
+              "residual_over_external": 0.2942056321225298
+            },
+            {
+              "N": 16,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0035729465886352443,
+              "external": 0.0049782395888379235,
+              "logt": 0.001405293000202679,
+              "coeff_N_residual": 0.05716714541816391,
+              "coeff_N2_residual": 0.9146743266906225,
+              "residual_over_external": 0.7177128631266382
+            },
+            {
+              "N": 18,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.0025011105420604,
+              "external": 0.0039812026443216434,
+              "logt": 0.0014800921022612434,
+              "coeff_N_residual": 0.0450199897570872,
+              "coeff_N2_residual": 0.8103598156275696,
+              "residual_over_external": 0.6282299007380882
+            },
+            {
+              "N": 20,
+              "sigma": "0.550000000000000044408921",
+              "residual": 0.002640100577768962,
+              "external": 0.0032565220667059307,
+              "logt": 0.000616421488936969,
+              "coeff_N_residual": 0.05280201155537924,
+              "coeff_N2_residual": 1.0560402311075847,
+              "residual_over_external": 0.8107117113563742
+            }
+          ]
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "first_coeff": -5.426858866652817,
+          "last_coeff": 0.058612514467854177,
+          "range_coeff": 5.492663323636287,
+          "last_delta_coeff": 0.007414201817683361,
+          "max_abs_delta_coeff": 5.264089455130637,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "0.59999999999999997779554",
+              "residual": -0.6783573583316022,
+              "external": 0.019640390392268257,
+              "logt": 0.6979977487238704,
+              "coeff_N_residual": -5.426858866652817,
+              "coeff_N2_residual": -43.41487093322254,
+              "residual_over_external": -34.538893819475604
+            },
+            {
+              "N": 10,
+              "sigma": "0.59999999999999997779554",
+              "residual": -0.01627694115221799,
+              "external": 0.013065930874501938,
+              "logt": 0.029342872026719927,
+              "coeff_N_residual": -0.1627694115221799,
+              "coeff_N2_residual": -1.6276941152217992,
+              "residual_over_external": -1.2457544210632796
+            },
+            {
+              "N": 12,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0054837047486224625,
+              "external": 0.00932158739859285,
+              "logt": 0.003837882649970388,
+              "coeff_N_residual": 0.06580445698346955,
+              "coeff_N2_residual": 0.7896534838016346,
+              "residual_over_external": 0.5882801409393276
+            },
+            {
+              "N": 14,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0024156555633107575,
+              "external": 0.006985950695368666,
+              "logt": 0.004570295132057908,
+              "coeff_N_residual": 0.0338191778863506,
+              "coeff_N2_residual": 0.4734684904089085,
+              "residual_over_external": 0.3457876627890053
+            },
+            {
+              "N": 16,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.00401302337978394,
+              "external": 0.0054308068241868245,
+              "logt": 0.001417783444402885,
+              "coeff_N_residual": 0.06420837407654303,
+              "coeff_N2_residual": 1.0273339852246886,
+              "residual_over_external": 0.7389368669700058
+            },
+            {
+              "N": 18,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0028443507027872674,
+              "external": 0.004343130157441793,
+              "logt": 0.0014987794546545252,
+              "coeff_N_residual": 0.051198312650170816,
+              "coeff_N2_residual": 0.9215696277030746,
+              "residual_over_external": 0.654908004060983
+            },
+            {
+              "N": 20,
+              "sigma": "0.59999999999999997779554",
+              "residual": 0.0029306257233927087,
+              "external": 0.0035525695273155604,
+              "logt": 0.0006219438039228518,
+              "coeff_N_residual": 0.058612514467854177,
+              "coeff_N2_residual": 1.1722502893570834,
+              "residual_over_external": 0.824931278855839
+            }
+          ]
+        },
+        {
+          "sigma": "0.75",
+          "first_coeff": -3.4936572541115885,
+          "last_coeff": 0.07653572988426117,
+          "range_coeff": 3.588535411709811,
+          "last_delta_coeff": 0.005815787845718803,
+          "max_abs_delta_coeff": 3.4364474217703482,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "0.75",
+              "residual": -0.43670715676394856,
+              "external": 0.02455048799033532,
+              "logt": 0.4612576447542839,
+              "coeff_N_residual": -3.4936572541115885,
+              "coeff_N2_residual": -27.949258032892708,
+              "residual_over_external": -17.78812530878674
+            },
+            {
+              "N": 10,
+              "sigma": "0.75",
+              "residual": -0.005720983234124014,
+              "external": 0.016332413593127423,
+              "logt": 0.022053396827251437,
+              "coeff_N_residual": -0.05720983234124014,
+              "coeff_N2_residual": -0.5720983234124014,
+              "residual_over_external": -0.35028400435140633
+            },
+            {
+              "N": 12,
+              "sigma": "0.75",
+              "residual": 0.0079065131331852,
+              "external": 0.011651984248241064,
+              "logt": 0.003745471115055865,
+              "coeff_N_residual": 0.09487815759822239,
+              "coeff_N2_residual": 1.1385378911786688,
+              "residual_over_external": 0.6785550825284316
+            },
+            {
+              "N": 14,
+              "sigma": "0.75",
+              "residual": 0.004186730698362102,
+              "external": 0.008732438369210832,
+              "logt": 0.00454570767084873,
+              "coeff_N_residual": 0.058614229777069426,
+              "coeff_N2_residual": 0.820599216878972,
+              "residual_over_external": 0.47944577692341217
+            },
+            {
+              "N": 16,
+              "sigma": "0.75",
+              "residual": 0.0053884301709584085,
+              "external": 0.006788508530233531,
+              "logt": 0.0014000783592751224,
+              "coeff_N_residual": 0.08621488273533454,
+              "coeff_N2_residual": 1.3794381237653526,
+              "residual_over_external": 0.7937575900450465
+            },
+            {
+              "N": 18,
+              "sigma": "0.75",
+              "residual": 0.003928885668807909,
+              "external": 0.005428912696802241,
+              "logt": 0.001500027027994332,
+              "coeff_N_residual": 0.07071994203854237,
+              "coeff_N2_residual": 1.2729589566937627,
+              "residual_over_external": 0.7236966015537727
+            },
+            {
+              "N": 20,
+              "sigma": "0.75",
+              "residual": 0.003826786494213059,
+              "external": 0.004440711909144451,
+              "logt": 0.0006139254149313916,
+              "coeff_N_residual": 0.07653572988426117,
+              "coeff_N2_residual": 1.5307145976852237,
+              "residual_over_external": 0.8617506770328475
+            }
+          ]
+        },
+        {
+          "sigma": "1.0",
+          "first_coeff": -1.5014217757595527,
+          "last_coeff": 0.10708026590566104,
+          "range_coeff": 1.6466593673016683,
+          "last_delta_coeff": 0.002517921855118954,
+          "max_abs_delta_coeff": 1.589337305898219,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "1.0",
+              "residual": -0.1876777219699441,
+              "external": 0.03273398398711376,
+              "logt": 0.22041170595705786,
+              "coeff_N_residual": -1.5014217757595527,
+              "coeff_N2_residual": -12.011374206076422,
+              "residual_over_external": -5.733421328849746
+            },
+            {
+              "N": 10,
+              "sigma": "1.0",
+              "residual": 0.008791553013866632,
+              "external": 0.02177655145750323,
+              "logt": 0.012984998443636599,
+              "coeff_N_residual": 0.08791553013866632,
+              "coeff_N2_residual": 0.8791553013866632,
+              "residual_over_external": 0.4037164943688756
+            },
+            {
+              "N": 12,
+              "sigma": "1.0",
+              "residual": 0.012103132628509622,
+              "external": 0.015535978997654753,
+              "logt": 0.0034328463691451305,
+              "coeff_N_residual": 0.14523759154211546,
+              "coeff_N2_residual": 1.7428510985053856,
+              "residual_over_external": 0.7790389411788379
+            },
+            {
+              "N": 14,
+              "sigma": "1.0",
+              "residual": 0.0073811146601219894,
+              "external": 0.011643251158947777,
+              "logt": 0.004262136498825788,
+              "coeff_N_residual": 0.10333560524170785,
+              "coeff_N2_residual": 1.4466984733839099,
+              "residual_over_external": 0.6339393146603766
+            },
+            {
+              "N": 16,
+              "sigma": "1.0",
+              "residual": 0.0077548576628971196,
+              "external": 0.009051344706978041,
+              "logt": 0.0012964870440809215,
+              "coeff_N_residual": 0.12407772260635391,
+              "coeff_N2_residual": 1.9852435617016626,
+              "residual_over_external": 0.8567630461492193
+            },
+            {
+              "N": 18,
+              "sigma": "1.0",
+              "residual": 0.005809019113919005,
+              "external": 0.007238550262402988,
+              "logt": 0.0014295311484839833,
+              "coeff_N_residual": 0.10456234405054209,
+              "coeff_N2_residual": 1.8821221929097576,
+              "residual_over_external": 0.802511401225054
+            },
+            {
+              "N": 20,
+              "sigma": "1.0",
+              "residual": 0.005354013295283052,
+              "external": 0.0059209492121926,
+              "logt": 0.0005669359169095487,
+              "coeff_N_residual": 0.10708026590566104,
+              "coeff_N2_residual": 2.141605318113221,
+              "residual_over_external": 0.9042491505007176
+            }
+          ]
+        },
+        {
+          "sigma": "1.5",
+          "first_coeff": -0.11985934787327274,
+          "last_coeff": 0.16791269885173382,
+          "range_coeff": 0.3799978244237458,
+          "last_delta_coeff": -0.003678439415149004,
+          "max_abs_delta_coeff": 0.3799978244237458,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "1.5",
+              "residual": -0.014982418484159092,
+              "external": 0.04910097598067064,
+              "logt": 0.06408339446482973,
+              "coeff_N_residual": -0.11985934787327274,
+              "coeff_N2_residual": -0.9588747829861819,
+              "residual_over_external": -0.30513484070168284
+            },
+            {
+              "N": 10,
+              "sigma": "1.5",
+              "residual": 0.026013847655047304,
+              "external": 0.032664827186254845,
+              "logt": 0.006650979531207541,
+              "coeff_N_residual": 0.26013847655047306,
+              "coeff_N2_residual": 2.6013847655047306,
+              "residual_over_external": 0.7963871202108722
+            },
+            {
+              "N": 12,
+              "sigma": "1.5",
+              "residual": 0.02031418108102656,
+              "external": 0.023303968496482128,
+              "logt": 0.002989787415455568,
+              "coeff_N_residual": 0.24377017297231873,
+              "coeff_N2_residual": 2.925242075667825,
+              "residual_over_external": 0.8717047950048983
+            },
+            {
+              "N": 14,
+              "sigma": "1.5",
+              "residual": 0.013685294485466026,
+              "external": 0.017464876738421665,
+              "logt": 0.0037795822529556387,
+              "coeff_N_residual": 0.19159412279652435,
+              "coeff_N2_residual": 2.682317719151341,
+              "residual_over_external": 0.7835895260204849
+            },
+            {
+              "N": 16,
+              "sigma": "1.5",
+              "residual": 0.01245445530379382,
+              "external": 0.013577017060467062,
+              "logt": 0.001122561756673242,
+              "coeff_N_residual": 0.19927128486070111,
+              "coeff_N2_residual": 3.188340557771218,
+              "residual_over_external": 0.9173189698684355
+            },
+            {
+              "N": 18,
+              "sigma": "1.5",
+              "residual": 0.009532841014826824,
+              "external": 0.010857825393604482,
+              "logt": 0.0013249843787776587,
+              "coeff_N_residual": 0.17159113826688283,
+              "coeff_N2_residual": 3.088640488803891,
+              "residual_over_external": 0.8779696365758373
+            },
+            {
+              "N": 20,
+              "sigma": "1.5",
+              "residual": 0.008395634942586692,
+              "external": 0.008881423818288901,
+              "logt": 0.00048578887570220977,
+              "coeff_N_residual": 0.16791269885173382,
+              "coeff_N2_residual": 3.3582539770346767,
+              "residual_over_external": 0.9453028156699539
+            }
+          ]
+        },
+        {
+          "sigma": "2.0",
+          "first_coeff": 0.21365740874429578,
+          "last_coeff": 0.22796398877636148,
+          "range_coeff": 0.1597952409952027,
+          "last_delta_coeff": -0.009035295531192339,
+          "max_abs_delta_coeff": 0.1597952409952027,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "2.0",
+              "residual": 0.026707176093036973,
+              "external": 0.06546796797422752,
+              "logt": 0.03876079188119055,
+              "coeff_N_residual": 0.21365740874429578,
+              "coeff_N2_residual": 1.7092592699543663,
+              "residual_over_external": 0.40794264614338827
+            },
+            {
+              "N": 10,
+              "sigma": "2.0",
+              "residual": 0.03734526497394985,
+              "external": 0.04355310291500646,
+              "logt": 0.006207837941056615,
+              "coeff_N_residual": 0.3734526497394985,
+              "coeff_N2_residual": 3.7345264973949845,
+              "residual_over_external": 0.8574650822658684
+            },
+            {
+              "N": 12,
+              "sigma": "2.0",
+              "residual": 0.028256374579601874,
+              "external": 0.031071957995309506,
+              "logt": 0.0028155834157076306,
+              "coeff_N_residual": 0.3390764949552225,
+              "coeff_N2_residual": 4.06891793946267,
+              "residual_over_external": 0.909385066234556
+            },
+            {
+              "N": 14,
+              "sigma": "2.0",
+              "residual": 0.019716570152221956,
+              "external": 0.023286502317895554,
+              "logt": 0.0035699321656735977,
+              "coeff_N_residual": 0.2760319821311074,
+              "coeff_N2_residual": 3.8644477498355037,
+              "residual_over_external": 0.8466952178159395
+            },
+            {
+              "N": 16,
+              "sigma": "2.0",
+              "residual": 0.01706477655424174,
+              "external": 0.018102689413956083,
+              "logt": 0.0010379128597143418,
+              "coeff_N_residual": 0.27303642486786783,
+              "coeff_N2_residual": 4.368582797885885,
+              "residual_over_external": 0.9426652672439834
+            },
+            {
+              "N": 18,
+              "sigma": "2.0",
+              "residual": 0.013166626905975212,
+              "external": 0.014477100524805976,
+              "logt": 0.0013104736188307641,
+              "coeff_N_residual": 0.23699928430755382,
+              "coeff_N2_residual": 4.2659871175359685,
+              "residual_over_external": 0.9094795524431625
+            },
+            {
+              "N": 20,
+              "sigma": "2.0",
+              "residual": 0.011398199438818073,
+              "external": 0.0118418984243852,
+              "logt": 0.0004436989855671271,
+              "coeff_N_residual": 0.22796398877636148,
+              "coeff_N2_residual": 4.559279775527229,
+              "residual_over_external": 0.9625314312227633
+            }
+          ]
+        },
+        {
+          "sigma": "3.0",
+          "first_coeff": 0.47868703563897097,
+          "last_coeff": 0.34723203265444696,
+          "range_coeff": 0.22862468454648371,
+          "last_delta_coeff": -0.018943573348112752,
+          "max_abs_delta_coeff": 0.09716968156195971,
+          "values": [
+            {
+              "N": 8,
+              "sigma": "3.0",
+              "residual": 0.05983587945487137,
+              "external": 0.09820195196134128,
+              "logt": 0.03836607250646991,
+              "coeff_N_residual": 0.47868703563897097,
+              "coeff_N2_residual": 3.8294962851117678,
+              "residual_over_external": 0.6093145630997915
+            },
+            {
+              "N": 10,
+              "sigma": "3.0",
+              "residual": 0.057585671720093067,
+              "external": 0.06532965437250969,
+              "logt": 0.007743982652416622,
+              "coeff_N_residual": 0.5758567172009307,
+              "coeff_N2_residual": 5.758567172009307,
+              "residual_over_external": 0.8814629783855822
+            },
+            {
+              "N": 12,
+              "sigma": "3.0",
+              "residual": 0.043902505622927065,
+              "external": 0.046607936992964255,
+              "logt": 0.002705431370037189,
+              "coeff_N_residual": 0.5268300674751247,
+              "coeff_N2_residual": 6.321960809701498,
+              "residual_over_external": 0.9419534194262752
+            },
+            {
+              "N": 14,
+              "sigma": "3.0",
+              "residual": 0.03149562222662879,
+              "external": 0.03492975347684333,
+              "logt": 0.0034341312502145396,
+              "coeff_N_residual": 0.4409387111728031,
+              "coeff_N2_residual": 6.173141956419244,
+              "residual_over_external": 0.9016846410756608
+            },
+            {
+              "N": 16,
+              "sigma": "3.0",
+              "residual": 0.026192798824023755,
+              "external": 0.027154034120934124,
+              "logt": 0.0009612352969103686,
+              "coeff_N_residual": 0.4190847811843801,
+              "coeff_N2_residual": 6.705356498950081,
+              "residual_over_external": 0.9646006448754767
+            },
+            {
+              "N": 18,
+              "sigma": "3.0",
+              "residual": 0.020343089222364427,
+              "external": 0.021715650787208964,
+              "logt": 0.0013725615648445386,
+              "coeff_N_residual": 0.3661756060025597,
+              "coeff_N2_residual": 6.591160908046074,
+              "residual_over_external": 0.9367939013988469
+            },
+            {
+              "N": 20,
+              "sigma": "3.0",
+              "residual": 0.017361601632722348,
+              "external": 0.017762847636577803,
+              "logt": 0.00040124600385545395,
+              "coeff_N_residual": 0.34723203265444696,
+              "coeff_N2_residual": 6.944640653088939,
+              "residual_over_external": 0.9774109415300508
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

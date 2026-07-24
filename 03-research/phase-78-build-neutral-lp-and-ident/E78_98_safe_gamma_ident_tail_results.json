@@ -1,0 +1,134 @@
+{
+  "statement": "Audit of the explicit absolute Euler tail bound on safe compacts for x=lambda^2.",
+  "parameters": {
+    "dps": 80,
+    "lambda_values": [
+      6,
+      12,
+      20
+    ],
+    "sigmas": [
+      "1.0",
+      "1.5",
+      "2.0",
+      "3.0"
+    ],
+    "prime_power_sum_cutoff": 200000
+  },
+  "summary_ratio_actual_over_bound": {
+    "count": 12,
+    "min": "0.0403351090885799558917088",
+    "median": "0.0716124876716107189767623",
+    "max": "0.113442755660362477125953"
+  },
+  "rows": [
+    {
+      "lambda": 6,
+      "x_equals_lambda_sq": "36.0",
+      "sigma": "1.0",
+      "s": "1.5",
+      "actual_tail_truncated_at_2e6": "0.671224026547070454821255",
+      "explicit_bound": "5.91685227178944333495829",
+      "ratio_actual_over_bound": "0.113442755660362477125953"
+    },
+    {
+      "lambda": 6,
+      "x_equals_lambda_sq": "36.0",
+      "sigma": "1.5",
+      "s": "2.0",
+      "actual_tail_truncated_at_2e6": "0.0577409665457406804319666",
+      "explicit_bound": "0.564835437606234444624995",
+      "ratio_actual_over_bound": "0.102226175451112235600091"
+    },
+    {
+      "lambda": 6,
+      "x_equals_lambda_sq": "36.0",
+      "sigma": "2.0",
+      "s": "2.5",
+      "actual_tail_truncated_at_2e6": "0.00652944855455245637773119",
+      "explicit_bound": "0.074848543288931738708204",
+      "ratio_actual_over_bound": "0.0872354793779667513903588"
+    },
+    {
+      "lambda": 6,
+      "x_equals_lambda_sq": "36.0",
+      "sigma": "3.0",
+      "s": "3.5",
+      "actual_tail_truncated_at_2e6": "0.000112266167261558092594168",
+      "explicit_bound": "0.00169159632557575977424767",
+      "ratio_actual_over_bound": "0.0663669964069865461107485"
+    },
+    {
+      "lambda": 12,
+      "x_equals_lambda_sq": "144.0",
+      "sigma": "1.0",
+      "s": "1.5",
+      "actual_tail_truncated_at_2e6": "0.324809731265902891534559",
+      "explicit_bound": "3.65157331645466697689638",
+      "ratio_actual_over_bound": "0.0889506256939303308944594"
+    },
+    {
+      "lambda": 12,
+      "x_equals_lambda_sq": "144.0",
+      "sigma": "1.5",
+      "s": "2.0",
+      "actual_tail_truncated_at_2e6": "0.0139090380536271133965019",
+      "explicit_bound": "0.179717036099333350568317",
+      "ratio_actual_over_bound": "0.0773940988317840844277296"
+    },
+    {
+      "lambda": 12,
+      "x_equals_lambda_sq": "144.0",
+      "sigma": "2.0",
+      "s": "2.5",
+      "actual_tail_truncated_at_2e6": "0.000773683281414060341471682",
+      "explicit_bound": "0.0120302468484619353532525",
+      "ratio_actual_over_bound": "0.0643115050887734355864733"
+    },
+    {
+      "lambda": 12,
+      "x_equals_lambda_sq": "144.0",
+      "sigma": "3.0",
+      "s": "3.5",
+      "actual_tail_truncated_at_2e6": "0.00000322351198710660094604047",
+      "explicit_bound": "0.000068461762308757723031147",
+      "ratio_actual_over_bound": "0.0470848526009130332889385"
+    },
+    {
+      "lambda": 20,
+      "x_equals_lambda_sq": "400.0",
+      "sigma": "1.0",
+      "s": "1.5",
+      "actual_tail_truncated_at_2e6": "0.191159987808128446169363",
+      "explicit_bound": "2.49743936413239459606113",
+      "ratio_actual_over_bound": "0.0765423940030420081237167"
+    },
+    {
+      "lambda": 20,
+      "x_equals_lambda_sq": "400.0",
+      "sigma": "1.5",
+      "s": "2.0",
+      "actual_tail_truncated_at_2e6": "0.00499550194019598462811442",
+      "explicit_bound": "0.0749146454710798198687045",
+      "ratio_actual_over_bound": "0.0666825813401794298298078"
+    },
+    {
+      "lambda": 20,
+      "x_equals_lambda_sq": "400.0",
+      "sigma": "2.0",
+      "s": "2.5",
+      "actual_tail_truncated_at_2e6": "0.000166941344989688611136978",
+      "explicit_bound": "0.00302422133907277027230713",
+      "ratio_actual_over_bound": "0.0552014308056145846755797"
+    },
+    {
+      "lambda": 20,
+      "x_equals_lambda_sq": "400.0",
+      "sigma": "3.0",
+      "s": "3.5",
+      "actual_tail_truncated_at_2e6": "0.000000250784810455830241324432",
+      "explicit_bound": "0.00000621753147871948423851164",
+      "ratio_actual_over_bound": "0.0403351090885799558917088"
+    }
+  ]
+}

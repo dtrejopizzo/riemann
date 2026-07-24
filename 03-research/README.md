@@ -1,7 +1,7 @@
 # Program 10 — The Research Program (Phases 0–76)
 
 This folder is the core of the project: a single continuous research program on the Riemann
-Hypothesis, run as a sequence of numbered phases (currently through **phase 76**) after nine
+Hypothesis, run as a sequence of numbered phases (currently through **phase 77**) after nine
 early exploratory computational programs (now conducted in Lise Science)
 (see [`../01-context/`](../01-context/), *Research Programs 1–9*).
 
@@ -101,6 +101,7 @@ The complete narrative is in
 | phase-73-cauchy-projection | Cauchy projection gate; the transformed compact branch reduced to the single finite Cauchy-Schur nodal identity NAT-PROJ |
 | phase-74-hilbert-eigenline-cancellation | Hilbert eigenline cancellation; NAT-PROJ reduced to an exact Hilbert product rule (HPR-DIV) on the projected eigenline |
 | phase-75-arithmetic-numerator-divisibility | Arithmetic numerator divisibility; attacks the ARITH-LOCK ⇒ CCM-ROOT-LOCK ⇒ CRIT-NUM-DIV ⇒ CAUCHY-EIG-LOC ⇒ HPR-DIV chain via a new signed arithmetic identity |
-| phase-76-normalized-adjugate-arithmetic-lock | Normalized adjugate arithmetic lock; autonomous phase closing the paper-53 endpoint chain down to a normalized-adjugate reformulation, with theorem-grade autopsies on each failed mechanism |
+| phase-76-normalized-adjugate-arithmetic-lock | Normalized adjugate arithmetic lock; safe-ratio closure theorem SR-SAFE ⇒ Ω7, exact Sherman–Morrison/displacement algebra, and the closing split SAFE-LIMIT-POINT = LP ∧ IDENT (closed at 67 documents; see PHASE_76_CLOSURE.md) |
+| phase-77-weyl-limit-point | Weyl limit-point closure; proves (or refutes) LP (limit-point for the semi-infinite CCM system, via Kato–Putnam on the rank-two displacement commutator) and IDENT (Gamma-prime identification in absolute convergence), the two halves left by phase 76 |
 
 *Note: there are two `phase-44-*` folders (parallel threads run under that number).*

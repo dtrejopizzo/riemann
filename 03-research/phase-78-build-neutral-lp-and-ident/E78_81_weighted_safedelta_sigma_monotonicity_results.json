@@ -1,0 +1,71 @@
+{
+  "statement": "Audit of sigma monotonicity for Y_N(sigma)=N*(-SAFEDELTA_N)/A_N on the common safe slices.",
+  "sources": {
+    "theta_coupling_points": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "schur_phase_increment": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5g_schur_phase_increment_results.json"
+  },
+  "rows": [
+    {
+      "N": 8,
+      "Y_sigma_1": 0.32033520392027215,
+      "Y_sigma_3": 0.30665694072693284,
+      "sigma3_over_sigma1": 0.9573001561303774,
+      "difference": 0.013678263193339313,
+      "monotone_nonincreasing": true
+    },
+    {
+      "N": 10,
+      "Y_sigma_1": 0.21977168960714422,
+      "Y_sigma_3": 0.21257266473320527,
+      "sigma3_over_sigma1": 0.9672431654558981,
+      "difference": 0.007199024873938947,
+      "monotone_nonincreasing": true
+    },
+    {
+      "N": 12,
+      "Y_sigma_1": 0.21345882344908143,
+      "Y_sigma_3": 0.20972133428015172,
+      "sigma3_over_sigma1": 0.9824908190322652,
+      "difference": 0.003737489168929714,
+      "monotone_nonincreasing": true
+    },
+    {
+      "N": 14,
+      "Y_sigma_1": 0.1519253930881376,
+      "Y_sigma_3": 0.14942032825152324,
+      "sigma3_over_sigma1": 0.9835112170145179,
+      "difference": 0.0025050648366143624,
+      "monotone_nonincreasing": true
+    },
+    {
+      "N": 16,
+      "Y_sigma_1": 0.1614834776105863,
+      "Y_sigma_3": 0.1599359127143603,
+      "sigma3_over_sigma1": 0.9904165743819445,
+      "difference": 0.0015475648962259836,
+      "monotone_nonincreasing": true
+    },
+    {
+      "N": 18,
+      "Y_sigma_1": 0.12692875635722015,
+      "Y_sigma_3": 0.12578112871819327,
+      "sigma3_over_sigma1": 0.9909584898492422,
+      "difference": 0.0011476276390268714,
+      "monotone_nonincreasing": true
+    },
+    {
+      "N": 20,
+      "Y_sigma_1": 0.09574794283987662,
+      "Y_sigma_3": 0.0948847926653963,
+      "sigma3_over_sigma1": 0.9909851830871834,
+      "difference": 0.0008631501744803122,
+      "monotone_nonincreasing": true
+    }
+  ],
+  "global": {
+    "all_monotone_nonincreasing": true,
+    "max_Y": 0.32033520392027215,
+    "min_sigma_ratio": 0.9573001561303774,
+    "max_sigma_ratio": 0.9909851830871834
+  }
+}

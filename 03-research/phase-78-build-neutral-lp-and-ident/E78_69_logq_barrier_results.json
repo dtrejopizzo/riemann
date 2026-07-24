@@ -1,0 +1,322 @@
+{
+  "statement": "Barrier form of the old-old logq gain: 1-exp(-a)cos(b)>0 iff a > -log cos(|wrap(b)|) when |wrap(b)|<pi/2.",
+  "sources": {
+    "logq_scalar": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_68_logq_scalar_results.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell": 0.22022543414184628,
+          "wrapped_im_delta_ell_abs": 0.0009418641866543176,
+          "angular_barrier": 4.4355413864486307e-07,
+          "barrier_margin": 0.22022499058770764,
+          "scalar_gain": 0.1976624526635823,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell": 0.21579676075253715,
+          "wrapped_im_delta_ell_abs": 0.0005205399524803589,
+          "angular_barrier": 1.354809272173724e-07,
+          "barrier_margin": 0.21579662527160992,
+          "scalar_gain": 0.19410103363200404,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell": 0.11159183180594917,
+          "wrapped_im_delta_ell_abs": 4.816155317133308e-05,
+          "angular_barrier": 1.1597676159500044e-09,
+          "barrier_margin": 0.11159183064618156,
+          "scalar_gain": 0.10559074862237405,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell": 0.12212873926973816,
+          "wrapped_im_delta_ell_abs": 0.0011416168973559238,
+          "angular_barrier": 6.516447116813173e-07,
+          "barrier_margin": 0.12212808762502649,
+          "scalar_gain": 0.11496615424493595,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell": 0.10341451172755096,
+          "wrapped_im_delta_ell_abs": 0.0010835100653174834,
+          "angular_barrier": 5.869971456446327e-07,
+          "barrier_margin": 0.10341392473040532,
+          "scalar_gain": 0.09824742056406877,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell": 0.10261574666936663,
+          "wrapped_im_delta_ell_abs": 0.00023279405701348566,
+          "angular_barrier": 2.7096536715136926e-08,
+          "barrier_margin": 0.10261571957282992,
+          "scalar_gain": 0.09752633906984443,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell": 0.20066321363580295,
+          "wrapped_im_delta_ell_abs": 0.0028376779602368174,
+          "angular_barrier": 4.026213506484112e-06,
+          "barrier_margin": 0.20065918742229646,
+          "scalar_gain": 0.1818153544936989,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell": 0.20700537431790308,
+          "wrapped_im_delta_ell_abs": 0.0015537550251827348,
+          "angular_barrier": 1.2070778247950205e-06,
+          "barrier_margin": 0.20700416724007828,
+          "scalar_gain": 0.18698570079887233,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell": 0.10570456469861442,
+          "wrapped_im_delta_ell_abs": 0.000145758665685225,
+          "angular_barrier": 1.062279436727688e-08,
+          "barrier_margin": 0.10570455407582005,
+          "scalar_gain": 0.10030960043365955,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell": 0.11903807593348922,
+          "wrapped_im_delta_ell_abs": 0.003416828355572221,
+          "angular_barrier": 5.837369364028254e-06,
+          "barrier_margin": 0.11903223856412519,
+          "scalar_gain": 0.11223118495487827,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell": 0.10096365368767836,
+          "wrapped_im_delta_ell_abs": 0.0032474275439806632,
+          "angular_barrier": 5.272902094577024e-06,
+          "barrier_margin": 0.10095838078558378,
+          "scalar_gain": 0.0960388783957834,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell": 0.10110535336471611,
+          "wrapped_im_delta_ell_abs": 0.0006977794718809882,
+          "angular_barrier": 2.434481154350576e-07,
+          "barrier_margin": 0.10110510991660068,
+          "scalar_gain": 0.09616241452186203,
+          "reconstruction_error": 0.0
+        }
+      ],
+      "summary": {
+        "angular_barrier": {
+          "count": 12,
+          "min": 1.1597676159500044e-09,
+          "median": 5.152756421447479e-07,
+          "max": 5.837369364028254e-06
+        },
+        "barrier_margin": {
+          "count": 12,
+          "min": 0.10095838078558378,
+          "median": 0.11531203460515338,
+          "max": 0.22022499058770764
+        },
+        "scalar_gain": {
+          "count": 12,
+          "min": 0.0960388783957834,
+          "median": 0.10891096678862616,
+          "max": 0.1976624526635823
+        }
+      },
+      "max_reconstruction_error": 0.0
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell": -0.8206138148249932,
+          "wrapped_im_delta_ell_abs": 0.06697682712990183,
+          "angular_barrier": 0.002244626633056205,
+          "barrier_margin": -0.8228584414580494,
+          "scalar_gain": -1.266800097197235,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell": -0.29373975377889017,
+          "wrapped_im_delta_ell_abs": 0.14138261286488563,
+          "angular_barrier": 0.010027997000775618,
+          "barrier_margin": -0.3037677507796658,
+          "scalar_gain": -0.3280500741453376,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell": -0.4454967473375394,
+          "wrapped_im_delta_ell_abs": 0.011250030300597125,
+          "angular_barrier": 6.328292578052958e-05,
+          "barrier_margin": -0.4455600302633199,
+          "scalar_gain": -0.5611667594199843,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell": 1.2470032430782496,
+          "wrapped_im_delta_ell_abs": 0.010111263257074565,
+          "angular_barrier": 5.111969339531047e-05,
+          "barrier_margin": 1.2469521233848544,
+          "scalar_gain": 0.7126500197533746,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell": 0.9885867132607753,
+          "wrapped_im_delta_ell_abs": 0.0012157384528066473,
+          "angular_barrier": 7.390101748969095e-07,
+          "barrier_margin": 0.9885859742506004,
+          "scalar_gain": 0.6278980682904471,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell": -1.0173574714350537,
+          "wrapped_im_delta_ell_abs": 0.0017754311278168622,
+          "angular_barrier": 1.5760786727984761e-06,
+          "barrier_margin": -1.0173590475137266,
+          "scalar_gain": -1.7658718323763423,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell": -0.7740760135373091,
+          "wrapped_im_delta_ell_abs": 0.006761654875123035,
+          "angular_barrier": 2.286016252026865e-05,
+          "barrier_margin": -0.7740988736998294,
+          "scalar_gain": -1.168537882034125,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell": -0.27187668932609216,
+          "wrapped_im_delta_ell_abs": 0.16197231229341202,
+          "angular_barrier": 0.013175275863559129,
+          "barrier_margin": -0.2850519651896513,
+          "scalar_gain": -0.29524700376610835,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell": -0.4427957900850762,
+          "wrapped_im_delta_ell_abs": 0.012195684786826089,
+          "angular_barrier": 7.436920728451329e-05,
+          "barrier_margin": -0.4428701592923607,
+          "scalar_gain": -0.5569385433492893,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell": 1.246473621820296,
+          "wrapped_im_delta_ell_abs": 0.01385732449872945,
+          "angular_barrier": 9.601579410306824e-05,
+          "barrier_margin": 1.246377606026193,
+          "scalar_gain": 0.712510700225903,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell": 0.9881288485956662,
+          "wrapped_im_delta_ell_abs": 0.011477036443307664,
+          "angular_barrier": 6.586262870980659e-05,
+          "barrier_margin": 0.9880629859669564,
+          "scalar_gain": 0.6277518998870681,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell": -1.0169277674756656,
+          "wrapped_im_delta_ell_abs": 0.009709045536097527,
+          "angular_barrier": 4.7133523129366015e-05,
+          "barrier_margin": -1.016974900998795,
+          "scalar_gain": -1.7645576325653929,
+          "reconstruction_error": 0.0
+        }
+      ],
+      "summary": {
+        "angular_barrier": {
+          "count": 12,
+          "min": 7.390101748969095e-07,
+          "median": 6.457277724516809e-05,
+          "max": 0.013175275863559129
+        },
+        "barrier_margin": {
+          "count": 12,
+          "min": -1.0173590475137266,
+          "median": -0.3733189550360132,
+          "max": 1.2469521233848544
+        },
+        "scalar_gain": {
+          "count": 12,
+          "min": -1.7658718323763423,
+          "median": -0.44249430874731344,
+          "max": 0.7126500197533746
+        }
+      },
+      "max_reconstruction_error": 0.0
+    }
+  }
+}

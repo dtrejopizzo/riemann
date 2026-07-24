@@ -1,0 +1,256 @@
+{
+  "statement": "E78.112 Cauchy-side first-resolvent geometric certificate audit",
+  "cases": [
+    {
+      "label": "zeta",
+      "rows": [
+        {
+          "N": 6,
+          "gap_factor_abs_nu0_over_nu1": "0.00245679538358040309720743",
+          "points": [
+            {
+              "z": "(0.0 + 0.59999999999999997779554j)",
+              "first_resolvent_offground_ratio": "0.000776075535906894385629086",
+              "geometric_ratio": "1.99055972790749719072476",
+              "certificate_bound": "0.00489039795026420238051196",
+              "certificate_over_actual": "6.30144583097759490002808",
+              "overlap_abs": "0.858316458811688741141681"
+            },
+            {
+              "z": "(0.0 + 1.0j)",
+              "first_resolvent_offground_ratio": "0.00129305748862444706335019",
+              "geometric_ratio": "3.19947245925425151154324",
+              "certificate_bound": "0.00786044916778848446146125",
+              "certificate_over_actual": "6.07896341573368129189713",
+              "overlap_abs": "0.39762774710993053327054"
+            },
+            {
+              "z": "(0.0 + 2.0j)",
+              "first_resolvent_offground_ratio": "0.00258254932288218074404655",
+              "geometric_ratio": "11.177649773829393030827",
+              "certificate_bound": "0.0274611983636225895760587",
+              "certificate_over_actual": "10.6333684008696104695183",
+              "overlap_abs": "0.0787452189052315577218533"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "gap_factor_abs_nu0_over_nu1": "0.00118515796557101200883737",
+          "points": [
+            {
+              "z": "(0.0 + 0.59999999999999997779554j)",
+              "first_resolvent_offground_ratio": "0.000334563093372273203631945",
+              "geometric_ratio": "2.15544328011359429736193",
+              "certificate_bound": "0.00255454077276313638360973",
+              "certificate_over_actual": "7.63545299337802880900485",
+              "overlap_abs": "0.808110920391498797411677"
+            },
+            {
+              "z": "(0.0 + 1.0j)",
+              "first_resolvent_offground_ratio": "0.000557499260724889242759969",
+              "geometric_ratio": "3.48069315622121417214279",
+              "certificate_bound": "0.00412517121980407886936625",
+              "certificate_over_actual": "7.39942007176891832408668",
+              "overlap_abs": "0.371257235924451692354039"
+            },
+            {
+              "z": "(0.0 + 2.0j)",
+              "first_resolvent_offground_ratio": "0.00111406739001920528877871",
+              "geometric_ratio": "12.69233345335357092523",
+              "certificate_bound": "0.0150424200939254153652619",
+              "certificate_over_actual": "13.5022533005531206612748",
+              "overlap_abs": "0.0707467290875083158528139"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "gap_factor_abs_nu0_over_nu1": "0.00117315925454243488955392",
+          "points": [
+            {
+              "z": "(0.0 + 0.59999999999999997779554j)",
+              "first_resolvent_offground_ratio": "0.000305179931817210191813671",
+              "geometric_ratio": "2.27674580383161966656143",
+              "certificate_bound": "0.00267098541000571962827869",
+              "certificate_over_actual": "8.75216595698542315938052",
+              "overlap_abs": "0.774081227518213904339908"
+            },
+            {
+              "z": "(0.0 + 1.0j)",
+              "first_resolvent_offground_ratio": "0.000508532149236116159385543",
+              "geometric_ratio": "3.68566389349987996255525",
+              "certificate_bound": "0.00432387070579228731296434",
+              "certificate_over_actual": "8.5026496599818202067076",
+              "overlap_abs": "0.353824336083478534512471"
+            },
+            {
+              "z": "(0.0 + 2.0j)",
+              "first_resolvent_offground_ratio": "0.0010162073987926178406784",
+              "geometric_ratio": "13.790942718298216274231",
+              "certificate_bound": "0.016178972078836156044052",
+              "certificate_over_actual": "15.9209351339685275707716",
+              "overlap_abs": "0.0658550691924707899610008"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "gap_factor_abs_nu0_over_nu1": "0.000905190718162261032384453",
+          "points": [
+            {
+              "z": "(0.0 + 0.59999999999999997779554j)",
+              "first_resolvent_offground_ratio": "0.000222376900832203968686993",
+              "geometric_ratio": "2.36676045794107717102594",
+              "certificate_bound": "0.0021423695986417254414466",
+              "certificate_over_actual": "9.63395744173206760358466",
+              "overlap_abs": "0.750373705466410361645135"
+            },
+            {
+              "z": "(0.0 + 1.0j)",
+              "first_resolvent_offground_ratio": "0.000370583133188685431928496",
+              "geometric_ratio": "3.83702696690581823365607",
+              "certificate_bound": "0.00347324119578143980223776",
+              "certificate_over_actual": "9.37236718221876183519758",
+              "overlap_abs": "0.341875182883063745090577"
+            },
+            {
+              "z": "(0.0 + 2.0j)",
+              "first_resolvent_offground_ratio": "0.000740779536076491957598659",
+              "geometric_ratio": "14.5970121067448218138356",
+              "certificate_bound": "0.0132130798719275641546167",
+              "certificate_over_actual": "17.836723651830466123111",
+              "overlap_abs": "0.0626750287317160381262346"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "rows": [
+        {
+          "N": 6,
+          "gap_factor_abs_nu0_over_nu1": "1.14563480686288019990305",
+          "points": [
+            {
+              "z": "(0.0 + 0.59999999999999997779554j)",
+              "first_resolvent_offground_ratio": "118331713699172319.729044",
+              "geometric_ratio": "4.04345709230461924759223",
+              "certificate_bound": "4.6323251850007456287264",
+              "certificate_over_actual": "3.91469458202661589903942e-17",
+              "overlap_abs": "0.45903534540841912270505"
+            },
+            {
+              "z": "(0.0 + 1.0j)",
+              "first_resolvent_offground_ratio": "57317937674589678.6052781",
+              "geometric_ratio": "2.85835926273550496431782",
+              "certificate_bound": "3.27463586190871487113222",
+              "certificate_over_actual": "5.71310831261892043788111e-17",
+              "overlap_abs": "0.440154133732695735048594"
+            },
+            {
+              "z": "(0.0 + 2.0j)",
+              "first_resolvent_offground_ratio": "13186376112862031.0631492",
+              "geometric_ratio": "2.07635853159803231005211",
+              "certificate_bound": "2.37874860532540528032399",
+              "certificate_over_actual": "1.80394415036073990829928e-16",
+              "overlap_abs": "0.383448296768906141002562"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "gap_factor_abs_nu0_over_nu1": "1.35413240014271418589916",
+          "points": [
+            {
+              "z": "(0.0 + 0.59999999999999997779554j)",
+              "first_resolvent_offground_ratio": "3055991970748392435541.7",
+              "geometric_ratio": "10.9567960691422565923989",
+              "certificate_bound": "14.8369525589818600919516",
+              "certificate_over_actual": "4.85503649911370267826197e-21",
+              "overlap_abs": "0.17452356197821265923854"
+            },
+            {
+              "z": "(0.0 + 1.0j)",
+              "first_resolvent_offground_ratio": "1604092209124652612752.37",
+              "geometric_ratio": "8.70374312154644392341329",
+              "certificate_bound": "11.7860205634053254353439",
+              "certificate_over_actual": "7.34747073538678599183721e-21",
+              "overlap_abs": "0.153464896525598038417611"
+            },
+            {
+              "z": "(0.0 + 2.0j)",
+              "first_resolvent_offground_ratio": "302555332545713433398.348",
+              "geometric_ratio": "5.59626123179462171852029",
+              "certificate_bound": "7.57807865363567328056659",
+              "certificate_over_actual": "2.50469181616248414836691e-20",
+              "overlap_abs": "0.158441314706630472054818"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "gap_factor_abs_nu0_over_nu1": "1.17377843658380008272465",
+          "points": [
+            {
+              "z": "(0.0 + 0.59999999999999997779554j)",
+              "first_resolvent_offground_ratio": "3.23002477091910222250977e+25",
+              "geometric_ratio": "9.32905744673486549829611",
+              "certificate_bound": "10.9502464646289082404072",
+              "certificate_over_actual": "3.3901431850360144775033e-25",
+              "overlap_abs": "0.205157613214974443307427"
+            },
+            {
+              "z": "(0.0 + 1.0j)",
+              "first_resolvent_offground_ratio": "1.77770831157071320616814e+25",
+              "geometric_ratio": "7.82203208151964940260076",
+              "certificate_bound": "9.1813325875544615553191",
+              "certificate_over_actual": "5.16470138987098332028036e-25",
+              "overlap_abs": "0.171351461796806794748649"
+            },
+            {
+              "z": "(0.0 + 2.0j)",
+              "first_resolvent_offground_ratio": "3.62807387428697170079892e+24",
+              "geometric_ratio": "5.58745834450792787975822",
+              "certificate_bound": "6.55843812009362342004767",
+              "certificate_over_actual": "1.80769144933206702678987e-24",
+              "overlap_abs": "0.160421003212029273610844"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "gap_factor_abs_nu0_over_nu1": "1.09792589555753951647985",
+          "points": [
+            {
+              "z": "(0.0 + 0.59999999999999997779554j)",
+              "first_resolvent_offground_ratio": "3.05237282325756548615459e+29",
+              "geometric_ratio": "9.13197023701691862394521",
+              "certificate_bound": "10.026226600681596780792",
+              "certificate_over_actual": "3.28473197123455164301648e-29",
+              "overlap_abs": "0.20986877483273554916037"
+            },
+            {
+              "z": "(0.0 + 1.0j)",
+              "first_resolvent_offground_ratio": "1.68742979292559314764061e+29",
+              "geometric_ratio": "7.72736324779754835045761",
+              "certificate_bound": "8.48407221413654042032319",
+              "certificate_over_actual": "5.02780752698885396097501e-29",
+              "overlap_abs": "0.173978029750262718394988"
+            },
+            {
+              "z": "(0.0 + 2.0j)",
+              "first_resolvent_offground_ratio": "3.45106965530274509715775e+28",
+              "geometric_ratio": "5.63421499060812878002115",
+              "certificate_bound": "6.18595053932714388668718",
+              "certificate_over_actual": "1.79247339439298606528676e-28",
+              "overlap_abs": "0.160253259650446367383458"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bound": "||(I-P0)A^-1 b|| / ||P0 A^-1 b|| <= |nu0/nu1| * ||(I-P0)b|| / |<v0,b>|"
+}

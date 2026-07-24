@@ -1,0 +1,1738 @@
+{
+  "statement": "E79.3w sparse terminal packet sweep",
+  "cases": [
+    {
+      "label": "zeta",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 15,
+              "active_len": 9,
+              "extra": "0.000525776522483",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    5
+                  ],
+                  "packet": "0.000465248946981",
+                  "minus": "-6.0527575502e-5",
+                  "mismatch": "0.115120346599",
+                  "N2_abs_minus": "0.00387376483213"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    5,
+                    7
+                  ],
+                  "packet": "0.000512311337884",
+                  "minus": "-1.34651845992e-5",
+                  "mismatch": "0.0256100910243",
+                  "N2_abs_minus": "0.00086177181435"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "packet": "0.000513746626608",
+                  "minus": "-1.20298958751e-5",
+                  "mismatch": "0.0228802454288",
+                  "N2_abs_minus": "0.000769913336006"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    4
+                  ],
+                  "packet": "0.000551166449233",
+                  "minus": "2.53899267504e-5",
+                  "mismatch": "0.0460658060477",
+                  "N2_abs_minus": "0.00162495531203"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    5,
+                    7
+                  ],
+                  "packet": "0.000512311337884",
+                  "minus": "-1.34651845992e-5",
+                  "mismatch": "0.0256100910243",
+                  "N2_abs_minus": "0.00086177181435"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "packet": "0.000513746626608",
+                  "minus": "-1.20298958751e-5",
+                  "mismatch": "0.0228802454288",
+                  "N2_abs_minus": "0.000769913336006"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    4
+                  ],
+                  "packet": "0.000551166449233",
+                  "minus": "2.53899267504e-5",
+                  "mismatch": "0.0460658060477",
+                  "N2_abs_minus": "0.00162495531203"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    5,
+                    7
+                  ],
+                  "packet": "0.000512311337884",
+                  "minus": "-1.34651845992e-5",
+                  "mismatch": "0.0256100910243",
+                  "N2_abs_minus": "0.00086177181435"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "packet": "0.000513746626608",
+                  "minus": "-1.20298958751e-5",
+                  "mismatch": "0.0228802454288",
+                  "N2_abs_minus": "0.000769913336006"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 15,
+              "active_len": 9,
+              "extra": "0.00105114185516",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    5
+                  ],
+                  "packet": "0.000926186946399",
+                  "minus": "-0.000124954908763",
+                  "mismatch": "0.11887540026",
+                  "N2_abs_minus": "0.0079971141608"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    5,
+                    7
+                  ],
+                  "packet": "0.00101971251783",
+                  "minus": "-3.14293373309e-5",
+                  "mismatch": "0.0299001863322",
+                  "N2_abs_minus": "0.00201147758918"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "packet": "0.00102233461705",
+                  "minus": "-2.88072381112e-5",
+                  "mismatch": "0.0274056617285",
+                  "N2_abs_minus": "0.00184366323912"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    4
+                  ],
+                  "packet": "0.00109889923216",
+                  "minus": "4.77573770026e-5",
+                  "mismatch": "0.043459286898",
+                  "N2_abs_minus": "0.00305647212817"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    5,
+                    7
+                  ],
+                  "packet": "0.00101971251783",
+                  "minus": "-3.14293373309e-5",
+                  "mismatch": "0.0299001863322",
+                  "N2_abs_minus": "0.00201147758918"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "packet": "0.00102233461705",
+                  "minus": "-2.88072381112e-5",
+                  "mismatch": "0.0274056617285",
+                  "N2_abs_minus": "0.00184366323912"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    4
+                  ],
+                  "packet": "0.00109889923216",
+                  "minus": "4.77573770026e-5",
+                  "mismatch": "0.043459286898",
+                  "N2_abs_minus": "0.00305647212817"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    5,
+                    7
+                  ],
+                  "packet": "0.00101971251783",
+                  "minus": "-3.14293373309e-5",
+                  "mismatch": "0.0299001863322",
+                  "N2_abs_minus": "0.00201147758918"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "packet": "0.00102233461705",
+                  "minus": "-2.88072381112e-5",
+                  "mismatch": "0.0274056617285",
+                  "N2_abs_minus": "0.00184366323912"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 19,
+              "active_len": 11,
+              "extra": "0.000307409734913",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    7
+                  ],
+                  "packet": "0.000122049282465",
+                  "minus": "-0.000185360452448",
+                  "mismatch": "0.602975219702",
+                  "N2_abs_minus": "0.0185360452448"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    8
+                  ],
+                  "packet": "0.000216329911537",
+                  "minus": "-9.10798233761e-5",
+                  "mismatch": "0.296281519522",
+                  "N2_abs_minus": "0.00910798233761"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    8,
+                    9
+                  ],
+                  "packet": "0.000275782126773",
+                  "minus": "-3.162760814e-5",
+                  "mismatch": "0.102884211357",
+                  "N2_abs_minus": "0.003162760814"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    6
+                  ],
+                  "packet": "0.000283969662356",
+                  "minus": "-2.34400725568e-5",
+                  "mismatch": "0.0762502611164",
+                  "N2_abs_minus": "0.00234400725568"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    6,
+                    10
+                  ],
+                  "packet": "0.000318295777062",
+                  "minus": "1.08860421485e-5",
+                  "mismatch": "0.0342010260048",
+                  "N2_abs_minus": "0.00108860421485"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    8,
+                    9
+                  ],
+                  "packet": "0.000275782126773",
+                  "minus": "-3.162760814e-5",
+                  "mismatch": "0.102884211357",
+                  "N2_abs_minus": "0.003162760814"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    5
+                  ],
+                  "packet": "0.000316748219442",
+                  "minus": "9.33848452913e-6",
+                  "mismatch": "0.0294823584031",
+                  "N2_abs_minus": "0.000933848452913"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    6,
+                    10
+                  ],
+                  "packet": "0.000318295777062",
+                  "minus": "1.08860421485e-5",
+                  "mismatch": "0.0342010260048",
+                  "N2_abs_minus": "0.00108860421485"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    8,
+                    9
+                  ],
+                  "packet": "0.000275782126773",
+                  "minus": "-3.162760814e-5",
+                  "mismatch": "0.102884211357",
+                  "N2_abs_minus": "0.003162760814"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 19,
+              "active_len": 11,
+              "extra": "0.000614678199283",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    7
+                  ],
+                  "packet": "0.000243115366527",
+                  "minus": "-0.000371562832756",
+                  "mismatch": "0.604483505661",
+                  "N2_abs_minus": "0.0371562832756"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    8
+                  ],
+                  "packet": "0.000430907667036",
+                  "minus": "-0.000183770532248",
+                  "mismatch": "0.298970310745",
+                  "N2_abs_minus": "0.0183770532248"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    8,
+                    9
+                  ],
+                  "packet": "0.000549168325836",
+                  "minus": "-6.55098734471e-5",
+                  "mismatch": "0.106575885599",
+                  "N2_abs_minus": "0.00655098734471"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    6
+                  ],
+                  "packet": "0.000566239393278",
+                  "minus": "-4.84388060052e-5",
+                  "mismatch": "0.0788035203813",
+                  "N2_abs_minus": "0.00484388060052"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    6,
+                    10
+                  ],
+                  "packet": "0.000634517323548",
+                  "minus": "1.9839124265e-5",
+                  "mismatch": "0.0312664816684",
+                  "N2_abs_minus": "0.0019839124265"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    8,
+                    9
+                  ],
+                  "packet": "0.000549168325836",
+                  "minus": "-6.55098734471e-5",
+                  "mismatch": "0.106575885599",
+                  "N2_abs_minus": "0.00655098734471"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    5
+                  ],
+                  "packet": "0.000631659597054",
+                  "minus": "1.69813977703e-5",
+                  "mismatch": "0.0268837802029",
+                  "N2_abs_minus": "0.00169813977703"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    6,
+                    10
+                  ],
+                  "packet": "0.000634517323548",
+                  "minus": "1.9839124265e-5",
+                  "mismatch": "0.0312664816684",
+                  "N2_abs_minus": "0.0019839124265"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    8,
+                    9
+                  ],
+                  "packet": "0.000549168325836",
+                  "minus": "-6.55098734471e-5",
+                  "mismatch": "0.106575885599",
+                  "N2_abs_minus": "0.00655098734471"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 23,
+              "active_len": 11,
+              "extra": "0.000198719668364",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    7
+                  ],
+                  "packet": "0.000203395289775",
+                  "minus": "4.67562141015e-6",
+                  "mismatch": "0.0229878549072",
+                  "N2_abs_minus": "0.000673289483061"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    10
+                  ],
+                  "packet": "0.000250038059554",
+                  "minus": "5.13183911892e-5",
+                  "mismatch": "0.205242319032",
+                  "N2_abs_minus": "0.00738984833124"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    9,
+                    10
+                  ],
+                  "packet": "0.000307478354026",
+                  "minus": "0.000108758685662",
+                  "mismatch": "0.353711681612",
+                  "N2_abs_minus": "0.0156612507353"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    7
+                  ],
+                  "packet": "0.000203395289775",
+                  "minus": "4.67562141015e-6",
+                  "mismatch": "0.0229878549072",
+                  "N2_abs_minus": "0.000673289483061"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    10
+                  ],
+                  "packet": "0.000250038059554",
+                  "minus": "5.13183911892e-5",
+                  "mismatch": "0.205242319032",
+                  "N2_abs_minus": "0.00738984833124"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    9,
+                    10
+                  ],
+                  "packet": "0.000307478354026",
+                  "minus": "0.000108758685662",
+                  "mismatch": "0.353711681612",
+                  "N2_abs_minus": "0.0156612507353"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    7
+                  ],
+                  "packet": "0.000203395289775",
+                  "minus": "4.67562141015e-6",
+                  "mismatch": "0.0229878549072",
+                  "N2_abs_minus": "0.000673289483061"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    10
+                  ],
+                  "packet": "0.000250038059554",
+                  "minus": "5.13183911892e-5",
+                  "mismatch": "0.205242319032",
+                  "N2_abs_minus": "0.00738984833124"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    9,
+                    10
+                  ],
+                  "packet": "0.000307478354026",
+                  "minus": "0.000108758685662",
+                  "mismatch": "0.353711681612",
+                  "N2_abs_minus": "0.0156612507353"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 23,
+              "active_len": 11,
+              "extra": "0.000397382480892",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    7
+                  ],
+                  "packet": "0.000405687727561",
+                  "minus": "8.30524666879e-6",
+                  "mismatch": "0.0204720185122",
+                  "N2_abs_minus": "0.00119595552031"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    10
+                  ],
+                  "packet": "0.000498648007393",
+                  "minus": "0.000101265526501",
+                  "mismatch": "0.203080178803",
+                  "N2_abs_minus": "0.0145822358162"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    9,
+                    10
+                  ],
+                  "packet": "0.000613131317136",
+                  "minus": "0.000215748836245",
+                  "mismatch": "0.351880307227",
+                  "N2_abs_minus": "0.0310678324192"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    7
+                  ],
+                  "packet": "0.000405687727561",
+                  "minus": "8.30524666879e-6",
+                  "mismatch": "0.0204720185122",
+                  "N2_abs_minus": "0.00119595552031"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    10
+                  ],
+                  "packet": "0.000498648007393",
+                  "minus": "0.000101265526501",
+                  "mismatch": "0.203080178803",
+                  "N2_abs_minus": "0.0145822358162"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    9,
+                    10
+                  ],
+                  "packet": "0.000613131317136",
+                  "minus": "0.000215748836245",
+                  "mismatch": "0.351880307227",
+                  "N2_abs_minus": "0.0310678324192"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    7
+                  ],
+                  "packet": "0.000405687727561",
+                  "minus": "8.30524666879e-6",
+                  "mismatch": "0.0204720185122",
+                  "N2_abs_minus": "0.00119595552031"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    10
+                  ],
+                  "packet": "0.000498648007393",
+                  "minus": "0.000101265526501",
+                  "mismatch": "0.203080178803",
+                  "N2_abs_minus": "0.0145822358162"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    7,
+                    9,
+                    10
+                  ],
+                  "packet": "0.000613131317136",
+                  "minus": "0.000215748836245",
+                  "mismatch": "0.351880307227",
+                  "N2_abs_minus": "0.0310678324192"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 27,
+              "active_len": 13,
+              "extra": "0.000133017693008",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "5.65293203851e-5",
+                  "minus": "-7.64883726231e-5",
+                  "mismatch": "0.57502405051",
+                  "N2_abs_minus": "0.0149917210341"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    9,
+                    11
+                  ],
+                  "packet": "0.00010817003636",
+                  "minus": "-2.48476566487e-5",
+                  "mismatch": "0.186799636099",
+                  "N2_abs_minus": "0.00487014070314"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    10,
+                    11,
+                    12
+                  ],
+                  "packet": "0.000130159988215",
+                  "minus": "-2.85770479337e-6",
+                  "mismatch": "0.0214836442336",
+                  "N2_abs_minus": "0.0005601101395"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    8
+                  ],
+                  "packet": "0.000190998103978",
+                  "minus": "5.79804109701e-5",
+                  "mismatch": "0.303565374537",
+                  "N2_abs_minus": "0.0113641605501"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    9,
+                    11
+                  ],
+                  "packet": "0.00010817003636",
+                  "minus": "-2.48476566487e-5",
+                  "mismatch": "0.186799636099",
+                  "N2_abs_minus": "0.00487014070314"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    10,
+                    11,
+                    12
+                  ],
+                  "packet": "0.000130159988215",
+                  "minus": "-2.85770479337e-6",
+                  "mismatch": "0.0214836442336",
+                  "N2_abs_minus": "0.0005601101395"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    8
+                  ],
+                  "packet": "0.000190998103978",
+                  "minus": "5.79804109701e-5",
+                  "mismatch": "0.303565374537",
+                  "N2_abs_minus": "0.0113641605501"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    9,
+                    11
+                  ],
+                  "packet": "0.00010817003636",
+                  "minus": "-2.48476566487e-5",
+                  "mismatch": "0.186799636099",
+                  "N2_abs_minus": "0.00487014070314"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    10,
+                    11,
+                    12
+                  ],
+                  "packet": "0.000130159988215",
+                  "minus": "-2.85770479337e-6",
+                  "mismatch": "0.0214836442336",
+                  "N2_abs_minus": "0.0005601101395"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 27,
+              "active_len": 13,
+              "extra": "0.000266010252359",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.000112708236376",
+                  "minus": "-0.000153302015983",
+                  "mismatch": "0.576301156154",
+                  "N2_abs_minus": "0.0300471951327"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    9,
+                    11
+                  ],
+                  "packet": "0.000215735045221",
+                  "minus": "-5.02752071376e-5",
+                  "mismatch": "0.188997253646",
+                  "N2_abs_minus": "0.00985394059897"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    10,
+                    11,
+                    12
+                  ],
+                  "packet": "0.000259560255283",
+                  "minus": "-6.44999707557e-6",
+                  "mismatch": "0.024247174755",
+                  "N2_abs_minus": "0.00126419942681"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    8
+                  ],
+                  "packet": "0.000381261798205",
+                  "minus": "0.000115251545846",
+                  "mismatch": "0.302289781953",
+                  "N2_abs_minus": "0.0225893029859"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    9,
+                    11
+                  ],
+                  "packet": "0.000215735045221",
+                  "minus": "-5.02752071376e-5",
+                  "mismatch": "0.188997253646",
+                  "N2_abs_minus": "0.00985394059897"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    10,
+                    11,
+                    12
+                  ],
+                  "packet": "0.000259560255283",
+                  "minus": "-6.44999707557e-6",
+                  "mismatch": "0.024247174755",
+                  "N2_abs_minus": "0.00126419942681"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    8
+                  ],
+                  "packet": "0.000381261798205",
+                  "minus": "0.000115251545846",
+                  "mismatch": "0.302289781953",
+                  "N2_abs_minus": "0.0225893029859"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    9,
+                    11
+                  ],
+                  "packet": "0.000215735045221",
+                  "minus": "-5.02752071376e-5",
+                  "mismatch": "0.188997253646",
+                  "N2_abs_minus": "0.00985394059897"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    10,
+                    11,
+                    12
+                  ],
+                  "packet": "0.000259560255283",
+                  "minus": "-6.44999707557e-6",
+                  "mismatch": "0.024247174755",
+                  "N2_abs_minus": "0.00126419942681"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 31,
+              "active_len": 14,
+              "extra": "9.49775787544e-5",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "8.20474246112e-5",
+                  "minus": "-1.29301541431e-5",
+                  "mismatch": "0.13613901631",
+                  "N2_abs_minus": "0.00331011946064"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    11,
+                    13
+                  ],
+                  "packet": "9.84777888532e-5",
+                  "minus": "3.50021009882e-6",
+                  "mismatch": "0.0355431426679",
+                  "N2_abs_minus": "0.000896053785299"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    11,
+                    12,
+                    13
+                  ],
+                  "packet": "0.000162118558593",
+                  "minus": "6.71409798385e-5",
+                  "mismatch": "0.414147401885",
+                  "N2_abs_minus": "0.0171880908387"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "8.20474246112e-5",
+                  "minus": "-1.29301541431e-5",
+                  "mismatch": "0.13613901631",
+                  "N2_abs_minus": "0.00331011946064"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    11,
+                    13
+                  ],
+                  "packet": "9.84777888532e-5",
+                  "minus": "3.50021009882e-6",
+                  "mismatch": "0.0355431426679",
+                  "N2_abs_minus": "0.000896053785299"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    11,
+                    12,
+                    13
+                  ],
+                  "packet": "0.000162118558593",
+                  "minus": "6.71409798385e-5",
+                  "mismatch": "0.414147401885",
+                  "N2_abs_minus": "0.0171880908387"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "8.20474246112e-5",
+                  "minus": "-1.29301541431e-5",
+                  "mismatch": "0.13613901631",
+                  "N2_abs_minus": "0.00331011946064"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    11,
+                    13
+                  ],
+                  "packet": "9.84777888532e-5",
+                  "minus": "3.50021009882e-6",
+                  "mismatch": "0.0355431426679",
+                  "N2_abs_minus": "0.000896053785299"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    11,
+                    12,
+                    13
+                  ],
+                  "packet": "0.000162118558593",
+                  "minus": "6.71409798385e-5",
+                  "mismatch": "0.414147401885",
+                  "N2_abs_minus": "0.0171880908387"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 31,
+              "active_len": 14,
+              "extra": "0.000189942293",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.000163723728759",
+                  "minus": "-2.62185642413e-5",
+                  "mismatch": "0.138034367318",
+                  "N2_abs_minus": "0.00671195244577"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    11,
+                    13
+                  ],
+                  "packet": "0.000196500101925",
+                  "minus": "6.55780892429e-6",
+                  "mismatch": "0.0333730560954",
+                  "N2_abs_minus": "0.00167879908462"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    11,
+                    12,
+                    13
+                  ],
+                  "packet": "0.00032348847075",
+                  "minus": "0.00013354617775",
+                  "mismatch": "0.412831336586",
+                  "N2_abs_minus": "0.0341878215041"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.000163723728759",
+                  "minus": "-2.62185642413e-5",
+                  "mismatch": "0.138034367318",
+                  "N2_abs_minus": "0.00671195244577"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    11,
+                    13
+                  ],
+                  "packet": "0.000196500101925",
+                  "minus": "6.55780892429e-6",
+                  "mismatch": "0.0333730560954",
+                  "N2_abs_minus": "0.00167879908462"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    11,
+                    12,
+                    13
+                  ],
+                  "packet": "0.00032348847075",
+                  "minus": "0.00013354617775",
+                  "mismatch": "0.412831336586",
+                  "N2_abs_minus": "0.0341878215041"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.000163723728759",
+                  "minus": "-2.62185642413e-5",
+                  "mismatch": "0.138034367318",
+                  "N2_abs_minus": "0.00671195244577"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    11,
+                    13
+                  ],
+                  "packet": "0.000196500101925",
+                  "minus": "6.55780892429e-6",
+                  "mismatch": "0.0333730560954",
+                  "N2_abs_minus": "0.00167879908462"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    11,
+                    12,
+                    13
+                  ],
+                  "packet": "0.00032348847075",
+                  "minus": "0.00013354617775",
+                  "mismatch": "0.412831336586",
+                  "N2_abs_minus": "0.0341878215041"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 15,
+              "active_len": 14,
+              "extra": "0.025942560238",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.0442591382767",
+                  "minus": "0.0183165780387",
+                  "mismatch": "0.413848501165",
+                  "N2_abs_minus": "1.17226099448"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    10,
+                    11
+                  ],
+                  "packet": "0.0255462340043",
+                  "minus": "-0.000396326233723",
+                  "mismatch": "0.0152770671085",
+                  "N2_abs_minus": "0.0253648789583"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    10,
+                    12,
+                    13
+                  ],
+                  "packet": "0.207311879164",
+                  "minus": "0.181369318926",
+                  "mismatch": "0.874862162542",
+                  "N2_abs_minus": "11.6076364113"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.0442591382767",
+                  "minus": "0.0183165780387",
+                  "mismatch": "0.413848501165",
+                  "N2_abs_minus": "1.17226099448"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    10,
+                    11
+                  ],
+                  "packet": "0.0255462340043",
+                  "minus": "-0.000396326233723",
+                  "mismatch": "0.0152770671085",
+                  "N2_abs_minus": "0.0253648789583"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    9,
+                    10,
+                    11
+                  ],
+                  "packet": "0.0364901626287",
+                  "minus": "0.0105476023906",
+                  "mismatch": "0.289053312751",
+                  "N2_abs_minus": "0.675046553002"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.0442591382767",
+                  "minus": "0.0183165780387",
+                  "mismatch": "0.413848501165",
+                  "N2_abs_minus": "1.17226099448"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    10,
+                    11
+                  ],
+                  "packet": "0.0255462340043",
+                  "minus": "-0.000396326233723",
+                  "mismatch": "0.0152770671085",
+                  "N2_abs_minus": "0.0253648789583"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    8,
+                    10,
+                    11
+                  ],
+                  "packet": "0.0189079457893",
+                  "minus": "-0.00703461444874",
+                  "mismatch": "0.271161149254",
+                  "N2_abs_minus": "0.450215324719"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 15,
+              "active_len": 12,
+              "extra": "0.0513034113696",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.050758918116",
+                  "minus": "-0.000544493253623",
+                  "mismatch": "0.0106131978184",
+                  "N2_abs_minus": "0.0348475682319"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    8,
+                    11
+                  ],
+                  "packet": "0.0394392199213",
+                  "minus": "-0.0118641914483",
+                  "mismatch": "0.231255410344",
+                  "N2_abs_minus": "0.759308252692"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    8,
+                    9,
+                    11
+                  ],
+                  "packet": "0.0564805901662",
+                  "minus": "0.00517717879659",
+                  "mismatch": "0.0916629727373",
+                  "N2_abs_minus": "0.331339442982"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.050758918116",
+                  "minus": "-0.000544493253623",
+                  "mismatch": "0.0106131978184",
+                  "N2_abs_minus": "0.0348475682319"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    11
+                  ],
+                  "packet": "0.0569604849992",
+                  "minus": "0.00565707362955",
+                  "mismatch": "0.0993157559952",
+                  "N2_abs_minus": "0.362052712291"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    8,
+                    9,
+                    11
+                  ],
+                  "packet": "0.0564805901662",
+                  "minus": "0.00517717879659",
+                  "mismatch": "0.0916629727373",
+                  "N2_abs_minus": "0.331339442982"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    11
+                  ],
+                  "packet": "0.050758918116",
+                  "minus": "-0.000544493253623",
+                  "mismatch": "0.0106131978184",
+                  "N2_abs_minus": "0.0348475682319"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    7,
+                    11
+                  ],
+                  "packet": "0.0569604849992",
+                  "minus": "0.00565707362955",
+                  "mismatch": "0.0993157559952",
+                  "N2_abs_minus": "0.362052712291"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    6,
+                    7,
+                    11
+                  ],
+                  "packet": "0.0515916321327",
+                  "minus": "0.000288220763109",
+                  "mismatch": "0.00558657966794",
+                  "N2_abs_minus": "0.018446128839"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 19,
+              "active_len": 16,
+              "extra": "0.0156278887936",
+              "packets": {
+                "W4-K1": {
+                  "window": 4,
+                  "cardinality": 1,
+                  "support": [
+                    15
+                  ],
+                  "packet": "0.0117908389785",
+                  "minus": "-0.00383704981505",
+                  "mismatch": "0.24552579467",
+                  "N2_abs_minus": "0.383704981505"
+                },
+                "W4-K2": {
+                  "window": 4,
+                  "cardinality": 2,
+                  "support": [
+                    13,
+                    15
+                  ],
+                  "packet": "0.0145332150369",
+                  "minus": "-0.00109467375668",
+                  "mismatch": "0.070046170096",
+                  "N2_abs_minus": "0.109467375668"
+                },
+                "W4-K3": {
+                  "window": 4,
+                  "cardinality": 3,
+                  "support": [
+                    12,
+                    13,
+                    15
+                  ],
+                  "packet": "0.0134465296883",
+                  "minus": "-0.00218135910527",
+                  "mismatch": "0.13958117658",
+                  "N2_abs_minus": "0.218135910527"
+                },
+                "W5-K1": {
+                  "window": 5,
+                  "cardinality": 1,
+                  "support": [
+                    15
+                  ],
+                  "packet": "0.0117908389785",
+                  "minus": "-0.00383704981505",
+                  "mismatch": "0.24552579467",
+                  "N2_abs_minus": "0.383704981505"
+                },
+                "W5-K2": {
+                  "window": 5,
+                  "cardinality": 2,
+                  "support": [
+                    13,
+                    15
+                  ],
+                  "packet": "0.0145332150369",
+                  "minus": "-0.00109467375668",
+                  "mismatch": "0.070046170096",
+                  "N2_abs_minus": "0.109467375668"
+                },
+                "W5-K3": {
+                  "window": 5,
+                  "cardinality": 3,
+                  "support": [
+                    11,
+                    13,
+                    15
+                  ],
+                  "packet": "0.0154125425458",
+                  "minus": "-0.000215346247767",
+                  "mismatch": "0.0137796122439",
+                  "N2_abs_minus": "0.0215346247767"
+                },
+                "W6-K1": {
+                  "window": 6,
+                  "cardinality": 1,
+                  "support": [
+                    15
+                  ],
+                  "packet": "0.0117908389785",
+                  "minus": "-0.00383704981505",
+                  "mismatch": "0.24552579467",
+                  "N2_abs_minus": "0.383704981505"
+                },
+                "W6-K2": {
+                  "window": 6,
+                  "cardinality": 2,
+                  "support": [
+                    13,
+                    15
+                  ],
+                  "packet": "0.0145332150369",
+                  "minus": "-0.00109467375668",
+                  "mismatch": "0.070046170096",
+                  "N2_abs_minus": "0.109467375668"
+                },
+                "W6-K3": {
+                  "window": 6,
+                  "cardinality": 3,
+                  "support": [
+                    11,
+                    13,
+                    15
+                  ],
+                  "packet": "0.0154125425458",
+                  "minus": "-0.000215346247767",
+                  "mismatch": "0.0137796122439",
+                  "N2_abs_minus": "0.0215346247767"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 19,
+              "active_len": 1,
+              "extra": "0.0310509121697",
+              "packets": {
+                "W1-K1": {
+                  "window": 1,
+                  "cardinality": 1,
+                  "support": [
+                    0
+                  ],
+                  "packet": "0.00636231060359",
+                  "minus": "-0.0246886015661",
+                  "mismatch": "0.79510068597",
+                  "N2_abs_minus": "2.46886015661"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 23,
+              "active_len": 1,
+              "extra": "0.011645313968",
+              "packets": {
+                "W1-K1": {
+                  "window": 1,
+                  "cardinality": 1,
+                  "support": [
+                    0
+                  ],
+                  "packet": "0.00190063809266",
+                  "minus": "-0.00974467587538",
+                  "mismatch": "0.836789450428",
+                  "N2_abs_minus": "1.40323332605"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 23,
+              "active_len": 2,
+              "extra": "0.0231801662401",
+              "packets": {
+                "W2-K1": {
+                  "window": 2,
+                  "cardinality": 1,
+                  "support": [
+                    0
+                  ],
+                  "packet": "0.00376541340819",
+                  "minus": "-0.0194147528319",
+                  "mismatch": "0.837558826404",
+                  "N2_abs_minus": "2.79572440779"
+                },
+                "W2-K2": {
+                  "window": 2,
+                  "cardinality": 2,
+                  "support": [
+                    0,
+                    1
+                  ],
+                  "packet": "0.00707600740392",
+                  "minus": "-0.0161041588361",
+                  "mismatch": "0.694738711939",
+                  "N2_abs_minus": "2.3189988724"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 27,
+              "active_len": 2,
+              "extra": "0.00855322674668",
+              "packets": {
+                "W2-K1": {
+                  "window": 2,
+                  "cardinality": 1,
+                  "support": [
+                    1
+                  ],
+                  "packet": "0.00133478956379",
+                  "minus": "-0.00721843718289",
+                  "mismatch": "0.843943156972",
+                  "N2_abs_minus": "1.41481368785"
+                },
+                "W2-K2": {
+                  "window": 2,
+                  "cardinality": 2,
+                  "support": [
+                    0,
+                    1
+                  ],
+                  "packet": "0.00243730554071",
+                  "minus": "-0.00611592120597",
+                  "mismatch": "0.715042566637",
+                  "N2_abs_minus": "1.19872055637"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 27,
+              "active_len": 2,
+              "extra": "0.0170441661996",
+              "packets": {
+                "W2-K1": {
+                  "window": 2,
+                  "cardinality": 1,
+                  "support": [
+                    1
+                  ],
+                  "packet": "0.00264747476619",
+                  "minus": "-0.0143966914334",
+                  "mismatch": "0.844669740063",
+                  "N2_abs_minus": "2.82175152095"
+                },
+                "W2-K2": {
+                  "window": 2,
+                  "cardinality": 2,
+                  "support": [
+                    0,
+                    1
+                  ],
+                  "packet": "0.0048355639225",
+                  "minus": "-0.0122086022771",
+                  "mismatch": "0.716292139735",
+                  "N2_abs_minus": "2.39288604631"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "sigmas": {
+            "1.0": {
+              "dim_common": 31,
+              "active_len": 1,
+              "extra": "0.00665771637675",
+              "packets": {
+                "W1-K1": {
+                  "window": 1,
+                  "cardinality": 1,
+                  "support": [
+                    0
+                  ],
+                  "packet": "0.00123447911055",
+                  "minus": "-0.0054232372662",
+                  "mismatch": "0.814579197927",
+                  "N2_abs_minus": "1.38834874015"
+                }
+              }
+            },
+            "2.0": {
+              "dim_common": 31,
+              "active_len": 2,
+              "extra": "0.0132781609951",
+              "packets": {
+                "W2-K1": {
+                  "window": 2,
+                  "cardinality": 1,
+                  "support": [
+                    0
+                  ],
+                  "packet": "0.00245626711543",
+                  "minus": "-0.0108218938797",
+                  "mismatch": "0.815014510192",
+                  "N2_abs_minus": "2.7704048332"
+                },
+                "W2-K2": {
+                  "window": 2,
+                  "cardinality": 2,
+                  "support": [
+                    0,
+                    1
+                  ],
+                  "packet": "0.00443945537705",
+                  "minus": "-0.00883870561807",
+                  "mismatch": "0.665657361838",
+                  "N2_abs_minus": "2.26270863823"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

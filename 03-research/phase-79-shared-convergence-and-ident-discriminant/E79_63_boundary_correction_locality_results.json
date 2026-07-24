@@ -1,0 +1,298 @@
+{
+  "statement": "E79.63 locality audit for the one-shell correction",
+  "sources": [
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_59_ray_profile_moment_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_58_ray_edge_intensity_results.json"
+  ],
+  "rows": [
+    {
+      "N": 8,
+      "y": 0.0331799142465018,
+      "slope": -0.16507495518136453,
+      "intensity": 0.0347381452591,
+      "edge0": 0.0260257314065,
+      "edge1": 0.0430304564892,
+      "edge2": 0.0426426585376,
+      "edge01_avg": 0.03452809394785,
+      "edge12_avg": 0.0428365575134,
+      "edge012_avg": 0.0372329488111,
+      "delta10": 0.0170047250827,
+      "delta21": -0.0003877979516000024,
+      "ratio10": 1.6533812563074797,
+      "ratio21": 0.9909878262226353,
+      "front2_mass": 0.0690561878957
+    },
+    {
+      "N": 10,
+      "y": 0.038684833336302744,
+      "slope": -0.3196810946820139,
+      "intensity": 0.0327560467539,
+      "edge0": 0.0236687582612,
+      "edge1": 0.0390001849989,
+      "edge2": 0.0396270439931,
+      "edge01_avg": 0.03133447163005,
+      "edge12_avg": 0.039313614496,
+      "edge012_avg": 0.03409866241773333,
+      "delta10": 0.015331426737699997,
+      "delta21": 0.0006268589942000011,
+      "ratio10": 1.6477495172542564,
+      "ratio21": 1.016073231299228,
+      "front2_mass": 0.0626689432601
+    },
+    {
+      "N": 12,
+      "y": 0.027682487754282833,
+      "slope": 0.057766786479176505,
+      "intensity": 0.0376696575887,
+      "edge0": 0.0228640972298,
+      "edge1": 0.035995766072,
+      "edge2": 0.0384675087224,
+      "edge01_avg": 0.0294299316509,
+      "edge12_avg": 0.0372316373972,
+      "edge012_avg": 0.0324424573414,
+      "delta10": 0.013131668842200003,
+      "delta21": 0.0024717426503999967,
+      "ratio10": 1.5743357680042052,
+      "ratio21": 1.0686675940013592,
+      "front2_mass": 0.0588598633018
+    },
+    {
+      "N": 14,
+      "y": 0.03546470265657091,
+      "slope": -0.08994038803670595,
+      "intensity": 0.035522323623,
+      "edge0": 0.0202641377702,
+      "edge1": 0.0351319937749,
+      "edge2": 0.0370754561486,
+      "edge01_avg": 0.027698065772549997,
+      "edge12_avg": 0.03610372496175,
+      "edge012_avg": 0.030823862564566665,
+      "delta10": 0.0148678560047,
+      "delta21": 0.0019434623737000015,
+      "ratio10": 1.7337028682544957,
+      "ratio21": 1.0553188750445615,
+      "front2_mass": 0.055396131545099994
+    },
+    {
+      "N": 16,
+      "y": 0.03183731099877623,
+      "slope": 0.23930459869123524,
+      "intensity": 0.038208291083,
+      "edge0": 0.018860391851,
+      "edge1": 0.0319073765427,
+      "edge2": 0.0342820868364,
+      "edge01_avg": 0.025383884196849997,
+      "edge12_avg": 0.03309473168955,
+      "edge012_avg": 0.02834995174336667,
+      "delta10": 0.013046984691699997,
+      "delta21": 0.002374710293700004,
+      "ratio10": 1.6917663638578235,
+      "ratio21": 1.0744251189226433,
+      "front2_mass": 0.050767768393699994
+    }
+  ],
+  "baseline_keys": [
+    "slope",
+    "intensity"
+  ],
+  "extras": {
+    "edge0": {
+      "keys": [
+        "slope",
+        "intensity",
+        "edge0"
+      ],
+      "beta": [
+        0.18339243317184867,
+        0.018032630377858384,
+        -3.749783113645011,
+        -0.6651960281684889
+      ],
+      "in_sample_max_relative_error": 0.010567253300082107,
+      "leave_one_out": {
+        "max_relative_error": 0.2899370991951318,
+        "mean_relative_error": 0.0923107033400879
+      }
+    },
+    "edge1": {
+      "keys": [
+        "slope",
+        "intensity",
+        "edge1"
+      ],
+      "beta": [
+        0.20619420336790611,
+        0.024375949489422268,
+        -4.377141037607899,
+        -0.4015226008546572
+      ],
+      "in_sample_max_relative_error": 0.029758931009683902,
+      "leave_one_out": {
+        "max_relative_error": 0.4745939124838593,
+        "mean_relative_error": 0.18310541509360279
+      }
+    },
+    "edge2": {
+      "keys": [
+        "slope",
+        "intensity",
+        "edge2"
+      ],
+      "beta": [
+        0.19272982843498201,
+        0.01800146708911105,
+        -3.783825206193332,
+        -0.598125920160773
+      ],
+      "in_sample_max_relative_error": 0.02650488846451324,
+      "leave_one_out": {
+        "max_relative_error": 0.45036421459400805,
+        "mean_relative_error": 0.16621516575232081
+      }
+    },
+    "edge01_avg": {
+      "keys": [
+        "slope",
+        "intensity",
+        "edge01_avg"
+      ],
+      "beta": [
+        0.19702782697191118,
+        0.02150414732716812,
+        -4.112178135282247,
+        -0.516759405882967
+      ],
+      "in_sample_max_relative_error": 0.02138254412163071,
+      "leave_one_out": {
+        "max_relative_error": 0.4085566474113949,
+        "mean_relative_error": 0.14264824670072906
+      }
+    },
+    "edge12_avg": {
+      "keys": [
+        "slope",
+        "intensity",
+        "edge12_avg"
+      ],
+      "beta": [
+        0.2007722377304042,
+        0.021801524745416433,
+        -4.138000004785353,
+        -0.4809304702824602
+      ],
+      "in_sample_max_relative_error": 0.028424297761268313,
+      "leave_one_out": {
+        "max_relative_error": 0.46482451648322193,
+        "mean_relative_error": 0.1758948337475656
+      }
+    },
+    "edge012_avg": {
+      "keys": [
+        "slope",
+        "intensity",
+        "edge012_avg"
+      ],
+      "beta": [
+        0.19569412936279357,
+        0.020416734752632903,
+        -4.01122655878121,
+        -0.5423020707507615
+      ],
+      "in_sample_max_relative_error": 0.02286202118267598,
+      "leave_one_out": {
+        "max_relative_error": 0.42120953310193554,
+        "mean_relative_error": 0.14924922812561459
+      }
+    },
+    "delta10": {
+      "keys": [
+        "slope",
+        "intensity",
+        "delta10"
+      ],
+      "beta": [
+        0.2268742878107356,
+        0.035784216817736275,
+        -5.170440990072821,
+        -0.4445780954587437
+      ],
+      "in_sample_max_relative_error": 0.05878697028188737,
+      "leave_one_out": {
+        "max_relative_error": 0.7065015094426139,
+        "mean_relative_error": 0.32199128656220694
+      }
+    },
+    "delta21": {
+      "keys": [
+        "slope",
+        "intensity",
+        "delta21"
+      ],
+      "beta": [
+        0.2332028910736358,
+        0.03738787212211788,
+        -5.573875756753883,
+        1.1879569353531318
+      ],
+      "in_sample_max_relative_error": 0.037015964367393156,
+      "leave_one_out": {
+        "max_relative_error": 0.5250552773675217,
+        "mean_relative_error": 0.2378914550293786
+      }
+    },
+    "ratio10": {
+      "keys": [
+        "slope",
+        "intensity",
+        "ratio10"
+      ],
+      "beta": [
+        0.12703522979343568,
+        0.02194721220140937,
+        -3.5556733772082896,
+        0.020944202530762474
+      ],
+      "in_sample_max_relative_error": 0.040495405977913394,
+      "leave_one_out": {
+        "max_relative_error": 2.9361001280773324,
+        "mean_relative_error": 0.705377702826545
+      }
+    },
+    "ratio21": {
+      "keys": [
+        "slope",
+        "intensity",
+        "ratio21"
+      ],
+      "beta": [
+        0.18212783532976104,
+        0.034903301603524235,
+        -5.4233876713173075,
+        0.045358827442804936
+      ],
+      "in_sample_max_relative_error": 0.035511056506775024,
+      "leave_one_out": {
+        "max_relative_error": 0.5148370507953081,
+        "mean_relative_error": 0.22293941300626807
+      }
+    },
+    "front2_mass": {
+      "keys": [
+        "slope",
+        "intensity",
+        "front2_mass"
+      ],
+      "beta": [
+        0.19702782697191118,
+        0.02150414732716812,
+        -4.112178135282247,
+        -0.2583797029414835
+      ],
+      "in_sample_max_relative_error": 0.02138254412163071,
+      "leave_one_out": {
+        "max_relative_error": 0.4085566474113949,
+        "mean_relative_error": 0.14264824670072906
+      }
+    }
+  }
+}

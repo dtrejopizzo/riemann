@@ -1,0 +1,96 @@
+{
+  "statement": "TAIL/A is a radial-average problem for (-SAFEDELTA)/A on the safe axis.",
+  "sources": {
+    "basepoint": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_73_basepoint_radial_results.json",
+    "fractional_budget": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_75_fractional_budget_results.json",
+    "safeu_geometric_envelope": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_28_safe_u_geometric_envelope_results.json",
+    "schur_phase_increment": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5g_schur_phase_increment_results.json"
+  },
+  "rows": [
+    {
+      "sigma": "1.0",
+      "N": 8,
+      "tail_over_A": 0.00700848545473696,
+      "tail_over_A_per_length": 0.01557441212163769,
+      "minus_delta_safe_over_A": 0.04004190049003402
+    },
+    {
+      "sigma": "3.0",
+      "N": 8,
+      "tail_over_A": 0.029080374560252174,
+      "tail_over_A_per_length": 0.01186954063683762,
+      "minus_delta_safe_over_A": 0.03833211759086661
+    },
+    {
+      "sigma": "1.0",
+      "N": 10,
+      "tail_over_A": 0.0038423938705613764,
+      "tail_over_A_per_length": 0.008538653045691949,
+      "minus_delta_safe_over_A": 0.021977168960714426
+    },
+    {
+      "sigma": "3.0",
+      "N": 10,
+      "tail_over_A": 0.015917295995721812,
+      "tail_over_A_per_length": 0.006496855508457882,
+      "minus_delta_safe_over_A": 0.02125726647332053
+    },
+    {
+      "sigma": "1.0",
+      "N": 12,
+      "tail_over_A": 0.0031068511526488054,
+      "tail_over_A_per_length": 0.006904113672552901,
+      "minus_delta_safe_over_A": 0.017788235287423456
+    },
+    {
+      "sigma": "3.0",
+      "N": 12,
+      "tail_over_A": 0.012923001305378724,
+      "tail_over_A_per_length": 0.005274694410358663,
+      "minus_delta_safe_over_A": 0.01747677785667931
+    },
+    {
+      "sigma": "1.0",
+      "N": 14,
+      "tail_over_A": 0.0018948513955450949,
+      "tail_over_A_per_length": 0.0042107808789891,
+      "minus_delta_safe_over_A": 0.01085181379200983
+    },
+    {
+      "sigma": "3.0",
+      "N": 14,
+      "tail_over_A": 0.007866820469276975,
+      "tail_over_A_per_length": 0.0032109471303171325,
+      "minus_delta_safe_over_A": 0.010672880589394517
+    },
+    {
+      "sigma": "1.0",
+      "N": 16,
+      "tail_over_A": 0.001761530452811366,
+      "tail_over_A_per_length": 0.003914512117358592,
+      "minus_delta_safe_over_A": 0.010092717350661641
+    },
+    {
+      "sigma": "3.0",
+      "N": 16,
+      "tail_over_A": 0.007327826617535802,
+      "tail_over_A_per_length": 0.002990949639810531,
+      "minus_delta_safe_over_A": 0.009995994544647521
+    },
+    {
+      "sigma": "1.0",
+      "N": 18,
+      "tail_over_A": 0.0012305973203487436,
+      "tail_over_A_per_length": 0.0027346607118860972,
+      "minus_delta_safe_over_A": 0.00705159757540112
+    },
+    {
+      "sigma": "3.0",
+      "N": 18,
+      "tail_over_A": 0.005114875685149768,
+      "tail_over_A_per_length": 0.0020877043612856196,
+      "minus_delta_safe_over_A": 0.006987840484344073
+    }
+  ],
+  "correlation": 0.9764011478445827
+}

@@ -1,0 +1,205 @@
+{
+  "statement": "E79.104 outlier-fraction reconstruction audit",
+  "source_files": [
+    "E79_90_escape_balance_split_results.json",
+    "E79_101_outlier_escape_agreement_results.json"
+  ],
+  "identity": "outlier_fraction = (outlier_abs / (mesh_radius * spectral_reading))^2 = (escape_ratio / spectral_reading)^2 * (outlier_abs/escape_scale)^2",
+  "cases": [
+    {
+      "label": "zeta",
+      "rows": [
+        {
+          "N": 8,
+          "outlier_fraction": 13.89357652168094,
+          "spectral_exact_reconstruction": 13.893576521680938,
+          "exact_relative_ratio": 0.9999999999999999,
+          "escape_spectral_approximation": 13.52407695048315,
+          "approx_relative_ratio": 0.973405006938193,
+          "outlier_over_escape": 1.0135687500707489
+        },
+        {
+          "N": 10,
+          "outlier_fraction": 11.10895508075903,
+          "spectral_exact_reconstruction": 11.108955080759028,
+          "exact_relative_ratio": 0.9999999999999999,
+          "escape_spectral_approximation": 10.667694225747596,
+          "approx_relative_ratio": 0.9602788154418134,
+          "outlier_over_escape": 1.0204725475927414
+        },
+        {
+          "N": 12,
+          "outlier_fraction": 11.827980896028805,
+          "spectral_exact_reconstruction": 11.827980896028798,
+          "exact_relative_ratio": 0.9999999999999994,
+          "escape_spectral_approximation": 11.416139811792297,
+          "approx_relative_ratio": 0.9651807787096797,
+          "outlier_over_escape": 1.0178778592797721
+        },
+        {
+          "N": 14,
+          "outlier_fraction": 10.566183053967366,
+          "spectral_exact_reconstruction": 10.566183053967366,
+          "exact_relative_ratio": 1.0,
+          "escape_spectral_approximation": 10.060358527393722,
+          "approx_relative_ratio": 0.952127979991439,
+          "outlier_over_escape": 1.0248311939833643
+        },
+        {
+          "N": 16,
+          "outlier_fraction": 10.219707475466961,
+          "spectral_exact_reconstruction": 10.219707475466963,
+          "exact_relative_ratio": 1.0000000000000002,
+          "escape_spectral_approximation": 9.686646339121326,
+          "approx_relative_ratio": 0.9478398831252968,
+          "outlier_over_escape": 1.0271467835548436
+        },
+        {
+          "N": 18,
+          "outlier_fraction": 9.679639835645956,
+          "spectral_exact_reconstruction": 9.679639835645958,
+          "exact_relative_ratio": 1.0000000000000002,
+          "escape_spectral_approximation": 9.129518871544882,
+          "approx_relative_ratio": 0.9431672073091795,
+          "outlier_over_escape": 1.0296880053448552
+        }
+      ],
+      "summary": {
+        "mean_abs_lock_deviation": 0.022264189971054244,
+        "max_abs_lock_deviation": 0.029688005344855162,
+        "mean_abs_approx_rel_error": 0.043000054747399784,
+        "max_abs_approx_rel_error": 0.05683279269082053
+      }
+    },
+    {
+      "label": "plant_gamma1_beta030",
+      "rows": [
+        {
+          "N": 8,
+          "outlier_fraction": 1.2284325310885862,
+          "spectral_exact_reconstruction": 1.2284325310885864,
+          "exact_relative_ratio": 1.0000000000000002,
+          "escape_spectral_approximation": 0.5440187982114716,
+          "approx_relative_ratio": 0.442856066119793,
+          "outlier_over_escape": 1.5026875943689648
+        },
+        {
+          "N": 10,
+          "outlier_fraction": 1.5732553663362185,
+          "spectral_exact_reconstruction": 1.573255366336219,
+          "exact_relative_ratio": 1.0000000000000002,
+          "escape_spectral_approximation": 1.360773458168077,
+          "approx_relative_ratio": 0.8649412468473142,
+          "outlier_over_escape": 1.0752431784816416
+        },
+        {
+          "N": 12,
+          "outlier_fraction": 1.158402480052054,
+          "spectral_exact_reconstruction": 1.158402480052054,
+          "exact_relative_ratio": 1.0,
+          "escape_spectral_approximation": 0.7795360113431294,
+          "approx_relative_ratio": 0.6729405580244443,
+          "outlier_over_escape": 1.2190222933528527
+        },
+        {
+          "N": 14,
+          "outlier_fraction": 1.0208345628192037,
+          "spectral_exact_reconstruction": 1.0208345628192037,
+          "exact_relative_ratio": 1.0,
+          "escape_spectral_approximation": 0.6391913381343934,
+          "approx_relative_ratio": 0.6261458628214553,
+          "outlier_over_escape": 1.2637531243837439
+        },
+        {
+          "N": 16,
+          "outlier_fraction": 1.2228717390875907,
+          "spectral_exact_reconstruction": 1.2228717390875907,
+          "exact_relative_ratio": 1.0,
+          "escape_spectral_approximation": 0.8115032594434062,
+          "approx_relative_ratio": 0.6636045576201517,
+          "outlier_over_escape": 1.2275673248774357
+        },
+        {
+          "N": 18,
+          "outlier_fraction": 1.3411249718280118,
+          "spectral_exact_reconstruction": 1.3411249718280116,
+          "exact_relative_ratio": 0.9999999999999999,
+          "escape_spectral_approximation": 0.9737303810476585,
+          "approx_relative_ratio": 0.7260549177012352,
+          "outlier_over_escape": 1.1735869303399682
+        }
+      ],
+      "summary": {
+        "mean_abs_lock_deviation": 0.24364340763410117,
+        "max_abs_lock_deviation": 0.5026875943689648,
+        "mean_abs_approx_rel_error": 0.3339094651442677,
+        "max_abs_approx_rel_error": 0.557143933880207
+      }
+    },
+    {
+      "label": "plant_gamma2_beta030",
+      "rows": [
+        {
+          "N": 8,
+          "outlier_fraction": 6.151561632454673,
+          "spectral_exact_reconstruction": 6.151561632454672,
+          "exact_relative_ratio": 0.9999999999999999,
+          "escape_spectral_approximation": 4.5781166254991525,
+          "approx_relative_ratio": 0.7442202320376226,
+          "outlier_over_escape": 1.1591756878315258
+        },
+        {
+          "N": 10,
+          "outlier_fraction": 1.0961843180379838,
+          "spectral_exact_reconstruction": 1.0961843180379833,
+          "exact_relative_ratio": 0.9999999999999996,
+          "escape_spectral_approximation": 0.029076730704232768,
+          "approx_relative_ratio": 0.026525402914243507,
+          "outlier_over_escape": 6.140008965322784
+        },
+        {
+          "N": 12,
+          "outlier_fraction": 1.1570665424935804,
+          "spectral_exact_reconstruction": 1.1570665424935807,
+          "exact_relative_ratio": 1.0000000000000002,
+          "escape_spectral_approximation": 1.0779162387076517,
+          "approx_relative_ratio": 0.9315939914610677,
+          "outlier_over_escape": 1.036064183750648
+        },
+        {
+          "N": 14,
+          "outlier_fraction": 1.0839941593581277,
+          "spectral_exact_reconstruction": 1.083994159358128,
+          "exact_relative_ratio": 1.0000000000000002,
+          "escape_spectral_approximation": 0.8658793328188178,
+          "approx_relative_ratio": 0.7987859762376731,
+          "outlier_over_escape": 1.1188832803845834
+        },
+        {
+          "N": 16,
+          "outlier_fraction": 1.1993126106064456,
+          "spectral_exact_reconstruction": 1.1993126106064453,
+          "exact_relative_ratio": 0.9999999999999998,
+          "escape_spectral_approximation": 0.9913899681447916,
+          "approx_relative_ratio": 0.8266318217428602,
+          "outlier_over_escape": 1.0998765434171387
+        },
+        {
+          "N": 18,
+          "outlier_fraction": 1.2444908886154178,
+          "spectral_exact_reconstruction": 1.2444908886154182,
+          "exact_relative_ratio": 1.0000000000000004,
+          "escape_spectral_approximation": 1.0745034250003742,
+          "approx_relative_ratio": 0.8634080288011057,
+          "outlier_over_escape": 1.0761974497889655
+        }
+      ],
+      "summary": {
+        "mean_abs_lock_deviation": 0.9383676850826076,
+        "max_abs_lock_deviation": 5.140008965322784,
+        "mean_abs_approx_rel_error": 0.3014724244675712,
+        "max_abs_approx_rel_error": 0.9734745970857565
+      }
+    }
+  ]
+}

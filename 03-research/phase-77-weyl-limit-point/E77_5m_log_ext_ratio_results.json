@@ -1,0 +1,186 @@
+{
+  "statement": "LOG-EXT-RATIO residual scaling diagnostics",
+  "source": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5l_logt_cell_update_results.json",
+  "cases": [
+    {
+      "label": "zeta-lam6",
+      "rows": [
+        {
+          "N": 8,
+          "to_N": 10,
+          "residual": 0.016718889973395906,
+          "external": 0.09820195196134128,
+          "logt": 0.08148306198794537,
+          "residual_over_external": 0.17025007792082947,
+          "N_residual": 0.13375111978716725,
+          "N2_residual": 1.070008958297338,
+          "local_power_slope": null
+        },
+        {
+          "N": 10,
+          "to_N": 12,
+          "residual": 0.010901875762494117,
+          "external": 0.06532965437250969,
+          "logt": 0.054427778610015576,
+          "residual_over_external": 0.16687484217093237,
+          "N_residual": 0.10901875762494116,
+          "N2_residual": 1.0901875762494118,
+          "local_power_slope": -1.9162747525148343
+        },
+        {
+          "N": 12,
+          "to_N": 14,
+          "residual": 0.008784520066894648,
+          "external": 0.046607936992964255,
+          "logt": 0.03782341692606961,
+          "residual_over_external": 0.18847691259582514,
+          "N_residual": 0.10541424080273579,
+          "N2_residual": 1.2649708896328293,
+          "local_power_slope": -1.1844116370889937
+        },
+        {
+          "N": 14,
+          "to_N": 16,
+          "residual": 0.006707034518971296,
+          "external": 0.03492975347684333,
+          "logt": 0.028222718957872032,
+          "residual_over_external": 0.1920149400257784,
+          "N_residual": 0.09389848326559815,
+          "N2_residual": 1.314578765718374,
+          "local_power_slope": -1.7504573165865123
+        },
+        {
+          "N": 16,
+          "to_N": 18,
+          "residual": 0.006001202552494229,
+          "external": 0.027154034120934124,
+          "logt": 0.021152831568439896,
+          "residual_over_external": 0.2210059295707986,
+          "N_residual": 0.09601924083990766,
+          "N2_residual": 1.5363078534385226,
+          "local_power_slope": -0.8327407290948584
+        },
+        {
+          "N": 18,
+          "to_N": 20,
+          "residual": 0.005026885883215434,
+          "external": 0.021715650787208964,
+          "logt": 0.016688764903993528,
+          "residual_over_external": 0.23148677110687327,
+          "N_residual": 0.09048394589787781,
+          "N2_residual": 1.6287110261618005,
+          "local_power_slope": -1.504114662132473
+        },
+        {
+          "N": 20,
+          "to_N": 22,
+          "residual": 0.0039752000066187905,
+          "external": 0.017762847636577803,
+          "logt": 0.013787647629959012,
+          "residual_over_external": 0.22379294626346602,
+          "N_residual": 0.07950400013237581,
+          "N2_residual": 1.5900800026475161,
+          "local_power_slope": -2.227832876894249
+        }
+      ],
+      "tail_N_residual_range": [
+        0.07950400013237581,
+        0.09601924083990766
+      ],
+      "tail_N2_residual_range": [
+        1.314578765718374,
+        1.6287110261618005
+      ]
+    },
+    {
+      "label": "plant-lam6",
+      "rows": [
+        {
+          "N": 8,
+          "to_N": 10,
+          "residual": 0.7726054926709578,
+          "external": 0.09820195196134128,
+          "logt": 0.7906091838638704,
+          "residual_over_external": 7.867516655627232,
+          "N_residual": 6.180843941367662,
+          "N2_residual": 49.4467515309413,
+          "local_power_slope": null
+        },
+        {
+          "N": 10,
+          "to_N": 12,
+          "residual": 0.05758567172009307,
+          "external": 0.06532965437250969,
+          "logt": 0.03168673200020141,
+          "residual_over_external": 0.8814629783855823,
+          "N_residual": 0.5758567172009308,
+          "N2_residual": 5.7585671720093075,
+          "local_power_slope": -11.635983932094037
+        },
+        {
+          "N": 12,
+          "to_N": 14,
+          "residual": 0.04390250562292707,
+          "external": 0.046607936992964255,
+          "logt": 0.003837882649970388,
+          "residual_over_external": 0.9419534194262753,
+          "N_residual": 0.5268300674751248,
+          "N2_residual": 6.3219608097014985,
+          "local_power_slope": -1.4880433917030613
+        },
+        {
+          "N": 14,
+          "to_N": 16,
+          "residual": 0.03149562222662879,
+          "external": 0.03492975347684333,
+          "logt": 0.004570295132057908,
+          "residual_over_external": 0.9016846410756608,
+          "N_residual": 0.4409387111728031,
+          "N2_residual": 6.173141956419244,
+          "local_power_slope": -2.154533702197539
+        },
+        {
+          "N": 16,
+          "to_N": 18,
+          "residual": 0.026192798824023755,
+          "external": 0.027154034120934124,
+          "logt": 0.001417783444402885,
+          "residual_over_external": 0.9646006448754767,
+          "N_residual": 0.4190847811843801,
+          "N2_residual": 6.705356498950081,
+          "local_power_slope": -1.3806793793915761
+        },
+        {
+          "N": 18,
+          "to_N": 20,
+          "residual": 0.020343089222364424,
+          "external": 0.021715650787208964,
+          "logt": 0.001500027027994332,
+          "residual_over_external": 0.9367939013988468,
+          "N_residual": 0.3661756060025596,
+          "N2_residual": 6.591160908046073,
+          "local_power_slope": -2.145837550154282
+        },
+        {
+          "N": 20,
+          "to_N": 22,
+          "residual": 0.017361601632722348,
+          "external": 0.017762847636577803,
+          "logt": 0.0006219438039228518,
+          "residual_over_external": 0.9774109415300508,
+          "N_residual": 0.34723203265444696,
+          "N2_residual": 6.944640653088939,
+          "local_power_slope": -1.504171580262187
+        }
+      ],
+      "tail_N_residual_range": [
+        0.34723203265444696,
+        0.4409387111728031
+      ],
+      "tail_N2_residual_range": [
+        6.173141956419244,
+        6.944640653088939
+      ]
+    }
+  ]
+}

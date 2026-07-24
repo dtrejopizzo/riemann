@@ -1,0 +1,950 @@
+{
+  "statement": "Fractional reserve criterion: (TAIL+phase^2)/BASE < 1 iff reserve margin is positive, with slack ratio = 1 - consumption ratio.",
+  "source": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_74_reserve_budget_results.json",
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 1.2077927253141028e-06,
+          "consumption_ratio": 1.2077927253141028e-06,
+          "slack_ratio": 0.9999987922072747
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.0006651921759276691,
+          "phase_square_ratio": 1.4374649844512958e-06,
+          "consumption_ratio": 0.0006666296409121204,
+          "slack_ratio": 0.999333370359088
+        },
+        {
+          "sigma": "0.75",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.0030045557428554797,
+          "phase_square_ratio": 2.2465438211900323e-06,
+          "consumption_ratio": 0.0030068022866766696,
+          "slack_ratio": 0.9969931977133234
+        },
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.00804141310618043,
+          "phase_square_ratio": 3.995789798115335e-06,
+          "consumption_ratio": 0.008045408895978545,
+          "slack_ratio": 0.9919545911040214
+        },
+        {
+          "sigma": "1.5",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.022303258971787067,
+          "phase_square_ratio": 9.002881380577205e-06,
+          "consumption_ratio": 0.022312261853167648,
+          "slack_ratio": 0.9776877381468324
+        },
+        {
+          "sigma": "2.0",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.04195423655843482,
+          "phase_square_ratio": 1.6035522635183193e-05,
+          "consumption_ratio": 0.04197027208107,
+          "slack_ratio": 0.9580297279189299
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.09615527100499799,
+          "phase_square_ratio": 3.627039461597144e-05,
+          "consumption_ratio": 0.09619154139961397,
+          "slack_ratio": 0.9038084586003859
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 3.7877521320348194e-07,
+          "consumption_ratio": 3.7877521320348194e-07,
+          "slack_ratio": 0.9999996212247868
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.0003021086874709289,
+          "phase_square_ratio": 4.507409795552279e-07,
+          "consumption_ratio": 0.00030255942845048417,
+          "slack_ratio": 0.9996974405715495
+        },
+        {
+          "sigma": "0.75",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.001365010233710847,
+          "phase_square_ratio": 7.041021848890878e-07,
+          "consumption_ratio": 0.001365714335895736,
+          "slack_ratio": 0.9986342856641043
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.003655850786158747,
+          "phase_square_ratio": 1.2510440153182464e-06,
+          "consumption_ratio": 0.003657101830174065,
+          "slack_ratio": 0.9963428981698259
+        },
+        {
+          "sigma": "1.5",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.01015955849537194,
+          "phase_square_ratio": 2.810400240809072e-06,
+          "consumption_ratio": 0.01016236889561275,
+          "slack_ratio": 0.9898376311043873
+        },
+        {
+          "sigma": "2.0",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.01916255144304824,
+          "phase_square_ratio": 4.9852276494742105e-06,
+          "consumption_ratio": 0.019167536670697715,
+          "slack_ratio": 0.9808324633293023
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.04424610991275501,
+          "phase_square_ratio": 1.1146269668805898e-05,
+          "consumption_ratio": 0.044257256182423814,
+          "slack_ratio": 0.9557427438175762
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 6.2486058564875315e-09,
+          "consumption_ratio": 6.2486058564875315e-09,
+          "slack_ratio": 0.9999999937513941
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.0003856210798391896,
+          "phase_square_ratio": 7.4373151903496935e-09,
+          "consumption_ratio": 0.00038562851715438,
+          "slack_ratio": 0.9996143714828457
+        },
+        {
+          "sigma": "0.75",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.0017428578859083174,
+          "phase_square_ratio": 1.1626074063299645e-08,
+          "consumption_ratio": 0.0017428695119823807,
+          "slack_ratio": 0.9982571304880176
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.004670805627133761,
+          "phase_square_ratio": 2.0688800142857993e-08,
+          "consumption_ratio": 0.0046708263159339035,
+          "slack_ratio": 0.9953291736840661
+        },
+        {
+          "sigma": "1.5",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.013003713845991728,
+          "phase_square_ratio": 4.667957689465083e-08,
+          "consumption_ratio": 0.013003760525568621,
+          "slack_ratio": 0.9869962394744314
+        },
+        {
+          "sigma": "2.0",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.024589152762561586,
+          "phase_square_ratio": 8.330787251020412e-08,
+          "consumption_ratio": 0.0245892360704341,
+          "slack_ratio": 0.9754107639295658
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.057181538107904634,
+          "phase_square_ratio": 1.8949733385676987e-07,
+          "consumption_ratio": 0.05718172760523849,
+          "slack_ratio": 0.9428182723947616
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 3.222201756762384e-06,
+          "consumption_ratio": 3.222201756762384e-06,
+          "slack_ratio": 0.9999967777982433
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.00018478724944385073,
+          "phase_square_ratio": 3.834556942874885e-06,
+          "consumption_ratio": 0.00018862180638672563,
+          "slack_ratio": 0.9998113781936133
+        },
+        {
+          "sigma": "0.75",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.0008352309717963597,
+          "phase_square_ratio": 5.990783003330639e-06,
+          "consumption_ratio": 0.0008412217547996904,
+          "slack_ratio": 0.9991587782452003
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.0022387643473623367,
+          "phase_square_ratio": 1.0647546112757312e-05,
+          "consumption_ratio": 0.002249411893475094,
+          "slack_ratio": 0.9977505881065248
+        },
+        {
+          "sigma": "1.5",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.006235747849108745,
+          "phase_square_ratio": 2.393941101486509e-05,
+          "consumption_ratio": 0.00625968726012361,
+          "slack_ratio": 0.9937403127398764
+        },
+        {
+          "sigma": "2.0",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.011799087147581001,
+          "phase_square_ratio": 4.251528622286827e-05,
+          "consumption_ratio": 0.01184160243380387,
+          "slack_ratio": 0.9881583975661961
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.02748871032896435,
+          "phase_square_ratio": 9.537950807585551e-05,
+          "consumption_ratio": 0.0275840898370402,
+          "slack_ratio": 0.9724159101629598
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 3.4274843870721113e-06,
+          "consumption_ratio": 3.4274843870721113e-06,
+          "slack_ratio": 0.999996572515613
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.00017207122328579219,
+          "phase_square_ratio": 4.078933640492054e-06,
+          "consumption_ratio": 0.00017615015692628422,
+          "slack_ratio": 0.9998238498430737
+        },
+        {
+          "sigma": "0.75",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.0007778542433256297,
+          "phase_square_ratio": 6.373025439923888e-06,
+          "consumption_ratio": 0.0007842272687655536,
+          "slack_ratio": 0.9992157727312345
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.002085545178177725,
+          "phase_square_ratio": 1.1328638741521618e-05,
+          "consumption_ratio": 0.002096873816919247,
+          "slack_ratio": 0.9979031261830807
+        },
+        {
+          "sigma": "1.5",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.00581354190897951,
+          "phase_square_ratio": 2.5481826788584216e-05,
+          "consumption_ratio": 0.0058390237357680945,
+          "slack_ratio": 0.9941609762642319
+        },
+        {
+          "sigma": "2.0",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.011012262833266194,
+          "phase_square_ratio": 4.5282096119788186e-05,
+          "consumption_ratio": 0.011057544929385982,
+          "slack_ratio": 0.988942455070614
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.025735481960247088,
+          "phase_square_ratio": 0.0001017632029120981,
+          "consumption_ratio": 0.025837245163159186,
+          "slack_ratio": 0.9741627548368408
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 1.5957249683053192e-07,
+          "consumption_ratio": 1.5957249683053192e-07,
+          "slack_ratio": 0.9999998404275031
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 0.00010677833535840138,
+          "phase_square_ratio": 1.8990210244243244e-07,
+          "consumption_ratio": 0.0001069682374608438,
+          "slack_ratio": 0.9998930317625392
+        },
+        {
+          "sigma": "0.75",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 0.00048271267319948,
+          "phase_square_ratio": 2.96709067707894e-07,
+          "consumption_ratio": 0.00048300938226718786,
+          "slack_ratio": 0.9995169906177328
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 0.0012943260547287215,
+          "phase_square_ratio": 5.274329840308736e-07,
+          "consumption_ratio": 0.0012948534877127525,
+          "slack_ratio": 0.9987051465122871
+        },
+        {
+          "sigma": "1.5",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 0.003608782202884055,
+          "phase_square_ratio": 1.1864041033749753e-06,
+          "consumption_ratio": 0.00360996860698743,
+          "slack_ratio": 0.9963900313930125
+        },
+        {
+          "sigma": "2.0",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 0.0068380117628473345,
+          "phase_square_ratio": 2.1083663585817115e-06,
+          "consumption_ratio": 0.006840120129205917,
+          "slack_ratio": 0.9931598798707941
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 0.01599419826930884,
+          "phase_square_ratio": 4.738707310863804e-06,
+          "consumption_ratio": 0.015998936976619704,
+          "slack_ratio": 0.9840010630233803
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 2.003049725874023e-05,
+          "consumption_ratio": 2.003049725874023e-05,
+          "slack_ratio": 0.9999799695027413
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.00013997784582231955,
+          "phase_square_ratio": 2.3837657103216876e-05,
+          "consumption_ratio": 0.00016381550292553644,
+          "slack_ratio": 0.9998361844970746
+        },
+        {
+          "sigma": "0.75",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.0006328116866256295,
+          "phase_square_ratio": 3.724474326035609e-05,
+          "consumption_ratio": 0.0006700564298859855,
+          "slack_ratio": 0.9993299435701141
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.0016968766326657641,
+          "phase_square_ratio": 6.620674782749335e-05,
+          "consumption_ratio": 0.0017630833804932573,
+          "slack_ratio": 0.9982369166195068
+        },
+        {
+          "sigma": "1.5",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.0047318010675658235,
+          "phase_square_ratio": 0.00014892579529525148,
+          "consumption_ratio": 0.004880726862861075,
+          "slack_ratio": 0.995119273137139
+        },
+        {
+          "sigma": "2.0",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.008967640329804733,
+          "phase_square_ratio": 0.0002646590002632335,
+          "consumption_ratio": 0.009232299330067965,
+          "slack_ratio": 0.990767700669932
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.020986699009908485,
+          "phase_square_ratio": 0.0005948538370362363,
+          "consumption_ratio": 0.021581552846944723,
+          "slack_ratio": 0.9784184471530553
+        }
+      ],
+      "summary": {
+        "tail_ratio": {
+          "count": 49,
+          "min": 0.0,
+          "median": 0.0030045557428554797,
+          "max": 0.09615527100499799
+        },
+        "phase_square_ratio": {
+          "count": 49,
+          "min": 6.2486058564875315e-09,
+          "median": 3.995789798115335e-06,
+          "max": 0.0005948538370362363
+        },
+        "consumption_ratio": {
+          "count": 49,
+          "min": 6.2486058564875315e-09,
+          "median": 0.0030068022866766696,
+          "max": 0.09619154139961397
+        },
+        "slack_ratio": {
+          "count": 49,
+          "min": 0.9038084586003859,
+          "median": 0.9969931977133234,
+          "max": 0.9999999937513941
+        }
+      },
+      "max_budget_identity_error": 1.1102230246251565e-16
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": -0.0,
+          "phase_square_ratio": -0.009678124951595589,
+          "consumption_ratio": -0.009678124951595589,
+          "slack_ratio": 1.0096781249515956
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.009506816318178221,
+          "phase_square_ratio": -0.009177481818971624,
+          "consumption_ratio": 0.00032933449920659655,
+          "slack_ratio": 0.9996706655007934
+        },
+        {
+          "sigma": "0.75",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.031020078432500594,
+          "phase_square_ratio": -0.007516894509793433,
+          "consumption_ratio": 0.023503183922707165,
+          "slack_ratio": 0.9764968160772929
+        },
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.051654244009245606,
+          "phase_square_ratio": -0.005184143578097941,
+          "consumption_ratio": 0.046470100431147666,
+          "slack_ratio": 0.9535298995688524
+        },
+        {
+          "sigma": "1.5",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.07070518869110505,
+          "phase_square_ratio": -0.0023858305622775577,
+          "consumption_ratio": 0.06831935812882749,
+          "slack_ratio": 0.9316806418711725
+        },
+        {
+          "sigma": "2.0",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.08273688583548429,
+          "phase_square_ratio": -0.0008620136837430374,
+          "consumption_ratio": 0.08187487215174125,
+          "slack_ratio": 0.9181251278482588
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "tail_ratio": 0.10543584693501205,
+          "phase_square_ratio": -5.283648049421595e-05,
+          "consumption_ratio": 0.10538301045451784,
+          "slack_ratio": 0.8946169895454822
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": -0.0,
+          "phase_square_ratio": -0.041153151585666715,
+          "consumption_ratio": -0.041153151585666715,
+          "slack_ratio": 1.0411531515856667
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.004576990709519617,
+          "phase_square_ratio": -0.045224478215447186,
+          "consumption_ratio": -0.04064748750592757,
+          "slack_ratio": 1.0406474875059275
+        },
+        {
+          "sigma": "0.75",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.01703740347444619,
+          "phase_square_ratio": -0.05528086306440359,
+          "consumption_ratio": -0.0382434595899574,
+          "slack_ratio": 1.0382434595899572
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.0335463753569122,
+          "phase_square_ratio": -0.06576734345649188,
+          "consumption_ratio": -0.03222096809957968,
+          "slack_ratio": 1.0322209680995797
+        },
+        {
+          "sigma": "1.5",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.05662834813240339,
+          "phase_square_ratio": -0.07452915054160558,
+          "consumption_ratio": -0.017900802409202204,
+          "slack_ratio": 1.0179008024092022
+        },
+        {
+          "sigma": "2.0",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.074475384507213,
+          "phase_square_ratio": -0.07868093467758874,
+          "consumption_ratio": -0.004205550170375738,
+          "slack_ratio": 1.0042055501703757
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "tail_ratio": 0.10547956660659649,
+          "phase_square_ratio": -0.08631769946457005,
+          "consumption_ratio": 0.019161867142026445,
+          "slack_ratio": 0.9808381328579736
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": -0.0,
+          "phase_square_ratio": -0.0003297446681594748,
+          "consumption_ratio": -0.0003297446681594748,
+          "slack_ratio": 1.0003297446681594
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 6.949876632231835e-05,
+          "phase_square_ratio": -0.00034497932493854724,
+          "consumption_ratio": -0.0002754805586162289,
+          "slack_ratio": 1.0002754805586163
+        },
+        {
+          "sigma": "0.75",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.000372441629765821,
+          "phase_square_ratio": -0.0003538014939072754,
+          "consumption_ratio": 1.8640135858545572e-05,
+          "slack_ratio": 0.9999813598641415
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.0010926255278568896,
+          "phase_square_ratio": -0.0002837841047249672,
+          "consumption_ratio": 0.0008088414231319224,
+          "slack_ratio": 0.999191158576868
+        },
+        {
+          "sigma": "1.5",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.0027723301346533643,
+          "phase_square_ratio": -8.22262491333421e-05,
+          "consumption_ratio": 0.0026901038855200224,
+          "slack_ratio": 0.9973098961144801
+        },
+        {
+          "sigma": "2.0",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.004375951916893152,
+          "phase_square_ratio": -5.332368629603341e-10,
+          "consumption_ratio": 0.004375951383656289,
+          "slack_ratio": 0.9956240486163438
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "tail_ratio": 0.007148800199712197,
+          "phase_square_ratio": -0.000333497869395212,
+          "consumption_ratio": 0.006815302330316985,
+          "slack_ratio": 0.993184697669683
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 4.7233555901279985e-05,
+          "consumption_ratio": 4.7233555901279985e-05,
+          "slack_ratio": 0.9999527664440987
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 7.634648560134417e-06,
+          "phase_square_ratio": 5.2339172769700146e-05,
+          "consumption_ratio": 5.997382132983456e-05,
+          "slack_ratio": 0.9999400261786702
+        },
+        {
+          "sigma": "0.75",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 2.9697201366659943e-05,
+          "phase_square_ratio": 6.569914515753775e-05,
+          "consumption_ratio": 9.539634652419769e-05,
+          "slack_ratio": 0.9999046036534759
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 6.449535854541135e-05,
+          "phase_square_ratio": 8.198138326245052e-05,
+          "consumption_ratio": 0.00014647674180786187,
+          "slack_ratio": 0.9998535232581922
+        },
+        {
+          "sigma": "1.5",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.00013881669236692678,
+          "phase_square_ratio": 0.00010256596154198672,
+          "consumption_ratio": 0.00024138265390891348,
+          "slack_ratio": 0.9997586173460911
+        },
+        {
+          "sigma": "2.0",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.000232241997385596,
+          "phase_square_ratio": 0.00011903548349501325,
+          "consumption_ratio": 0.0003512774808806092,
+          "slack_ratio": 0.9996487225191193
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "tail_ratio": 0.0004891831873703849,
+          "phase_square_ratio": 0.00015397959755048584,
+          "consumption_ratio": 0.0006431627849208707,
+          "slack_ratio": 0.9993568372150791
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 6.9295316702931405e-06,
+          "consumption_ratio": 6.9295316702931405e-06,
+          "slack_ratio": 0.9999930704683297
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": -4.0246939037587425e-08,
+          "phase_square_ratio": 6.758514215945608e-06,
+          "consumption_ratio": 6.718267276908021e-06,
+          "slack_ratio": 0.9999932817327231
+        },
+        {
+          "sigma": "0.75",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 2.359689753819655e-07,
+          "phase_square_ratio": 5.193462261345822e-06,
+          "consumption_ratio": 5.429431236727788e-06,
+          "slack_ratio": 0.9999945705687633
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 5.283190854136347e-06,
+          "phase_square_ratio": 1.4950759069948867e-06,
+          "consumption_ratio": 6.778266761131234e-06,
+          "slack_ratio": 0.9999932217332389
+        },
+        {
+          "sigma": "1.5",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 4.715179639473856e-05,
+          "phase_square_ratio": 3.0388800799978333e-06,
+          "consumption_ratio": 5.019067647473639e-05,
+          "slack_ratio": 0.9999498093235253
+        },
+        {
+          "sigma": "2.0",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.0001387687166571993,
+          "phase_square_ratio": 2.5017555063885054e-05,
+          "consumption_ratio": 0.00016378627172108435,
+          "slack_ratio": 0.9998362137282789
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "tail_ratio": 0.0004684314812175333,
+          "phase_square_ratio": 0.00013324240336201054,
+          "consumption_ratio": 0.0006016738845795439,
+          "slack_ratio": 0.9993983261154205
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": -0.0,
+          "phase_square_ratio": -1.6712846150615406e-07,
+          "consumption_ratio": -1.6712846150615406e-07,
+          "slack_ratio": 1.0000001671284615
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 2.5531135217234635e-06,
+          "phase_square_ratio": -2.741286014749526e-07,
+          "consumption_ratio": 2.2789849202485106e-06,
+          "slack_ratio": 0.9999977210150797
+        },
+        {
+          "sigma": "0.75",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 1.1754896394965247e-05,
+          "phase_square_ratio": -8.675876704399344e-07,
+          "consumption_ratio": 1.0887308724525312e-05,
+          "slack_ratio": 0.9999891126912754
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 3.253021433475904e-05,
+          "phase_square_ratio": -3.098274930713438e-06,
+          "consumption_ratio": 2.9431939404045604e-05,
+          "slack_ratio": 0.9999705680605959
+        },
+        {
+          "sigma": "1.5",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 9.547924340120289e-05,
+          "phase_square_ratio": -1.3408085631976098e-05,
+          "consumption_ratio": 8.20711577692268e-05,
+          "slack_ratio": 0.9999179288422307
+        },
+        {
+          "sigma": "2.0",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 0.00018712584121063705,
+          "phase_square_ratio": -3.188911362669385e-05,
+          "consumption_ratio": 0.00015523672758394318,
+          "slack_ratio": 0.9998447632724161
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "tail_ratio": 0.00045488911284475957,
+          "phase_square_ratio": -9.265425515577206e-05,
+          "consumption_ratio": 0.0003622348576889875,
+          "slack_ratio": 0.9996377651423111
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.0,
+          "phase_square_ratio": 2.1937724164838879e-07,
+          "consumption_ratio": 2.1937724164838879e-07,
+          "slack_ratio": 0.9999997806227584
+        },
+        {
+          "sigma": "0.59999999999999997779554",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 1.7685124821133561e-06,
+          "phase_square_ratio": 3.4606432384801485e-07,
+          "consumption_ratio": 2.114576805961371e-06,
+          "slack_ratio": 0.999997885423194
+        },
+        {
+          "sigma": "0.75",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 8.344254042536909e-06,
+          "phase_square_ratio": 1.0227608903017252e-06,
+          "consumption_ratio": 9.367014932838634e-06,
+          "slack_ratio": 0.9999906329850672
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 2.3896852349388792e-05,
+          "phase_square_ratio": 3.4774339514934653e-06,
+          "consumption_ratio": 2.737428630088226e-05,
+          "slack_ratio": 0.9999726257136992
+        },
+        {
+          "sigma": "1.5",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 7.328989181064135e-05,
+          "phase_square_ratio": 1.4551800656818877e-05,
+          "consumption_ratio": 8.784169246746022e-05,
+          "slack_ratio": 0.9999121583075324
+        },
+        {
+          "sigma": "2.0",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.00014711985015271846,
+          "phase_square_ratio": 3.419597964651082e-05,
+          "consumption_ratio": 0.00018131582979922926,
+          "slack_ratio": 0.9998186841702007
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "tail_ratio": 0.00036632169924556034,
+          "phase_square_ratio": 9.841089421908363e-05,
+          "consumption_ratio": 0.00046473259346464395,
+          "slack_ratio": 0.9995352674065353
+        }
+      ],
+      "summary": {
+        "tail_ratio": {
+          "count": 49,
+          "min": -4.0246939037587425e-08,
+          "median": 0.00013881669236692678,
+          "max": 0.10547956660659649
+        },
+        "phase_square_ratio": {
+          "count": 49,
+          "min": -0.08631769946457005,
+          "median": -8.675876704399344e-07,
+          "max": 0.00015397959755048584
+        },
+        "consumption_ratio": {
+          "count": 49,
+          "min": -0.041153151585666715,
+          "median": 5.997382132983456e-05,
+          "max": 0.10538301045451784
+        },
+        "slack_ratio": {
+          "count": 49,
+          "min": 0.8946169895454822,
+          "median": 0.9999400261786702,
+          "max": 1.0411531515856667
+        }
+      },
+      "max_budget_identity_error": 2.220446049250313e-16
+    }
+  }
+}

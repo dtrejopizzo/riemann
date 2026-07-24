@@ -1,0 +1,222 @@
+{
+  "statement": "Iterated-limit IDENT derivative audit",
+  "parameters": {
+    "lambda": 6,
+    "modes": 18,
+    "dps": 70,
+    "prime_cutoff": 200000,
+    "sigmas": [
+      "0.55",
+      "0.6",
+      "0.75",
+      "1.0",
+      "1.5",
+      "2.0",
+      "3.0"
+    ],
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "predicted_falsifier_break": "B: SAFE-GAMMA-IDENT / OUTER-LIMIT",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "N": 18,
+      "planted": null,
+      "max_finite_identity_error": "2.85253890983041439576537e-70",
+      "max_finite_to_xi_error": "0.375658095004804035035714",
+      "max_euler_to_xi_error": "427.649778384019443827937",
+      "rows": [
+        {
+          "sigma": "0.55",
+          "finite_derivative": "0.0718577855833004736709941",
+          "independent_numeric_derivative": "0.0718577855833004736709941",
+          "finite_derivative_identity_relative_error": "2.49031174667734590106501e-71",
+          "external_tail": "0.039777094266637822468139",
+          "core_derivative": "0.0320806913166626512028551",
+          "xi_target": "0.0508062754729743717361097",
+          "finite_to_xi_relative_error": "0.368568331017937168749711",
+          "euler_truncation": "21.7780987220079070944735",
+          "euler_to_xi_relative_error": "427.649778384019443827937"
+        },
+        {
+          "sigma": "0.6",
+          "finite_derivative": "0.0783844531468129286316306",
+          "independent_numeric_derivative": "0.0783844531468129286316306",
+          "finite_derivative_identity_relative_error": "4.4146435509280222791607e-71",
+          "external_tail": "0.0433931937454230790561516",
+          "core_derivative": "0.034991259401389849575479",
+          "xi_target": "0.0554199111209694205953739",
+          "finite_to_xi_relative_error": "0.368615743085338736046116",
+          "euler_truncation": "5.95636068631813535659138",
+          "euler_to_xi_relative_error": "106.476907953113026004696"
+        },
+        {
+          "sigma": "0.75",
+          "finite_derivative": "0.0979547999469303461345131",
+          "independent_numeric_derivative": "0.0979547999469303461345131",
+          "finite_derivative_identity_relative_error": "5.99938738972269694347479e-71",
+          "external_tail": "0.0542414921817788488201895",
+          "core_derivative": "0.0437133077651514973143236",
+          "xi_target": "0.0692523870845082970873606",
+          "finite_to_xi_relative_error": "0.368782657097315727563164",
+          "euler_truncation": "0.447536680165753657603081",
+          "euler_to_xi_relative_error": "5.46240077789126853876468"
+        },
+        {
+          "sigma": "1.0",
+          "finite_derivative": "0.130532339496352977049443",
+          "independent_numeric_derivative": "0.130532339496352977049443",
+          "finite_derivative_identity_relative_error": "9.28207105579738017669685e-71",
+          "external_tail": "0.0723219895757051317602526",
+          "core_derivative": "0.0582103499206478452891906",
+          "xi_target": "0.092271856120925150718932",
+          "finite_to_xi_relative_error": "0.369142961160753471942132",
+          "euler_truncation": "0.101215555704849909518119",
+          "euler_to_xi_relative_error": "0.0969277086200992968588499"
+        },
+        {
+          "sigma": "1.5",
+          "finite_derivative": "0.19548294517881715299488",
+          "independent_numeric_derivative": "0.19548294517881715299488",
+          "finite_derivative_identity_relative_error": "6.33897535517869865725638e-71",
+          "external_tail": "0.108482984363557697640379",
+          "core_derivative": "0.0869999608152594553545012",
+          "xi_target": "0.138132463060001352450332",
+          "finite_to_xi_relative_error": "0.370170060766462933577181",
+          "euler_truncation": "0.138142461831419956040918",
+          "euler_to_xi_relative_error": "0.0000723853842688692927502961"
+        },
+        {
+          "sigma": "2.0",
+          "finite_derivative": "0.260060880151632610424861",
+          "independent_numeric_derivative": "0.260060880151632610424861",
+          "finite_derivative_identity_relative_error": "0.0",
+          "external_tail": "0.144643979151410263520505",
+          "core_derivative": "0.115416901000222346904356",
+          "xi_target": "0.1836685429912815531647",
+          "finite_to_xi_relative_error": "0.371602239988907630380483",
+          "euler_truncation": "0.18366855789576415911681",
+          "euler_to_xi_relative_error": "8.11488040532863692621597e-8"
+        },
+        {
+          "sigma": "3.0",
+          "finite_derivative": "0.387648468667582667116986",
+          "independent_numeric_derivative": "0.387648468667582667116986",
+          "finite_derivative_identity_relative_error": "2.85253890983041439576537e-70",
+          "external_tail": "0.216965968727115395280758",
+          "core_derivative": "0.170682499940467271836228",
+          "xi_target": "0.273379855772744580137415",
+          "finite_to_xi_relative_error": "0.375658095004804035035714",
+          "euler_truncation": "0.273379855772789289318512",
+          "euler_to_xi_relative_error": "1.63542339178939044913006e-13"
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "N": 18,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "max_finite_identity_error": "2.72899555285022016891784e-71",
+      "max_finite_to_xi_error": "50.4676279269269204005843",
+      "max_euler_to_xi_error": "427.649778384019443827937",
+      "rows": [
+        {
+          "sigma": "0.55",
+          "finite_derivative": "2.65465557666263582872945",
+          "independent_numeric_derivative": "2.65465557666263582872945",
+          "finite_derivative_identity_relative_error": "2.72899555285022016891784e-71",
+          "external_tail": "0.039777094266637822468139",
+          "core_derivative": "2.61487848239599800626131",
+          "xi_target": "0.0508062754729743717361097",
+          "finite_to_xi_relative_error": "50.4676279269269204005843",
+          "euler_truncation": "21.7780987220079070944735",
+          "euler_to_xi_relative_error": "427.649778384019443827937"
+        },
+        {
+          "sigma": "0.6",
+          "finite_derivative": "2.78190699883756074096595",
+          "independent_numeric_derivative": "2.78190699883756074096595",
+          "finite_derivative_identity_relative_error": "0.0",
+          "external_tail": "0.0433931937454230790561516",
+          "core_derivative": "2.7385138050921376619098",
+          "xi_target": "0.0554199111209694205953739",
+          "finite_to_xi_relative_error": "48.413897454915925747867",
+          "euler_truncation": "5.95636068631813535659138",
+          "euler_to_xi_relative_error": "106.476907953113026004696"
+        },
+        {
+          "sigma": "0.75",
+          "finite_derivative": "3.06998684279046892695548",
+          "independent_numeric_derivative": "3.06998684279046892695548",
+          "finite_derivative_identity_relative_error": "0.0",
+          "external_tail": "0.0542414921817788488201895",
+          "core_derivative": "3.01574535060869007813529",
+          "xi_target": "0.0692523870845082970873606",
+          "finite_to_xi_relative_error": "42.5471682287080306437721",
+          "euler_truncation": "0.447536680165753657603081",
+          "euler_to_xi_relative_error": "5.46240077789126853876468"
+        },
+        {
+          "sigma": "1.0",
+          "finite_derivative": "3.33002694369176194050449",
+          "independent_numeric_derivative": "3.33002694369176194050449",
+          "finite_derivative_identity_relative_error": "0.0",
+          "external_tail": "0.0723219895757051317602526",
+          "core_derivative": "3.25770495411605680874423",
+          "xi_target": "0.092271856120925150718932",
+          "finite_to_xi_relative_error": "34.30551016386548755419",
+          "euler_truncation": "0.101215555704849909518119",
+          "euler_to_xi_relative_error": "0.0969277086200992968588499"
+        },
+        {
+          "sigma": "1.5",
+          "finite_derivative": "3.48448191622002636336675",
+          "independent_numeric_derivative": "3.48448191622002636336675",
+          "finite_derivative_identity_relative_error": "0.0",
+          "external_tail": "0.108482984363557697640379",
+          "core_derivative": "3.37599893185646866572637",
+          "xi_target": "0.138132463060001352450332",
+          "finite_to_xi_relative_error": "23.4403006872469766227131",
+          "euler_truncation": "0.138142461831419956040918",
+          "euler_to_xi_relative_error": "0.0000723853842688692927502961"
+        },
+        {
+          "sigma": "2.0",
+          "finite_derivative": "3.5038674585416225150192",
+          "independent_numeric_derivative": "3.5038674585416225150192",
+          "finite_derivative_identity_relative_error": "0.0",
+          "external_tail": "0.144643979151410263520505",
+          "core_derivative": "3.35922347939021225149869",
+          "xi_target": "0.1836685429912815531647",
+          "finite_to_xi_relative_error": "17.2895961642689631577029",
+          "euler_truncation": "0.18366855789576415911681",
+          "euler_to_xi_relative_error": "8.11488040532863692621597e-8"
+        },
+        {
+          "sigma": "3.0",
+          "finite_derivative": "3.49239923290136733738654",
+          "independent_numeric_derivative": "3.49239923290136733738654",
+          "finite_derivative_identity_relative_error": "0.0",
+          "external_tail": "0.216965968727115395280758",
+          "core_derivative": "3.27543326417425194210578",
+          "xi_target": "0.273379855772744580137415",
+          "finite_to_xi_relative_error": "10.9812531721322461382035",
+          "euler_truncation": "0.273379855772789289318512",
+          "euler_to_xi_relative_error": "1.63542339178939044913006e-13"
+        }
+      ]
+    }
+  ]
+}

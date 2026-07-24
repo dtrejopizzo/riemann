@@ -1,0 +1,261 @@
+{
+  "statement": "Audit of weighted monotonicity for Delta safe_u: sign(Q_theta,N) = sign(N Delta safe_u_N - (N+2) Delta safe_u_{N+2})",
+  "sources": {
+    "theta_coupling_zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "theta_coupling_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "mod4": 0,
+          "delta_u_safe": 0.03184139920207599,
+          "delta_u_safe_next": 0.020607349051170416,
+          "weighted_diff": 0.04865770310490375,
+          "Q_theta": 3.1140929987138395,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "mod4": 0,
+          "delta_u_safe": 0.09176076948021608,
+          "delta_u_safe_next": 0.06020621815437219,
+          "weighted_diff": 0.13202397429800672,
+          "Q_theta": 8.449534355072435,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "mod4": 2,
+          "delta_u_safe": 0.020607349051170416,
+          "delta_u_safe_next": 0.014046100313612616,
+          "weighted_diff": 0.037520286748352755,
+          "Q_theta": 3.7520286748352754,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "mod4": 2,
+          "delta_u_safe": 0.06020621815437219,
+          "delta_u_safe_next": 0.04134060831558568,
+          "weighted_diff": 0.10597488175669378,
+          "Q_theta": 10.597488175669378,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "mod4": 0,
+          "delta_u_safe": 0.014046100313612616,
+          "delta_u_safe_next": 0.010329907613581445,
+          "weighted_diff": 0.023934497173211167,
+          "Q_theta": 3.4465675929424084,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "mod4": 0,
+          "delta_u_safe": 0.04134060831558568,
+          "delta_u_safe_next": 0.030550501015114646,
+          "weighted_diff": 0.06838028557542308,
+          "Q_theta": 9.846761122860924,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "mod4": 2,
+          "delta_u_safe": 0.010329907613581445,
+          "delta_u_safe_next": 0.007668274243668681,
+          "weighted_diff": 0.021926318691441335,
+          "Q_theta": 4.297558463522502,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "mod4": 2,
+          "delta_u_safe": 0.030550501015114646,
+          "delta_u_safe_next": 0.0227470619588462,
+          "weighted_diff": 0.06375402287006587,
+          "Q_theta": 12.495788482532904,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "mod4": 0,
+          "delta_u_safe": 0.007668274243668681,
+          "delta_u_safe_next": 0.006003876023732592,
+          "weighted_diff": 0.014622619471512235,
+          "Q_theta": 3.74339058470713,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "mod4": 0,
+          "delta_u_safe": 0.0227470619588462,
+          "delta_u_safe_next": 0.017849718842402076,
+          "weighted_diff": 0.04265805217830182,
+          "Q_theta": 10.92046135764527,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "mod4": 2,
+          "delta_u_safe": 0.006003876023732592,
+          "delta_u_safe_next": 0.004920868178574307,
+          "weighted_diff": 0.009652404855700514,
+          "Q_theta": 3.127379173246965,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "mod4": 2,
+          "delta_u_safe": 0.017849718842402076,
+          "delta_u_safe_next": 0.014654739928996715,
+          "weighted_diff": 0.028200140583303057,
+          "Q_theta": 9.1368455489902,
+          "same_sign_as_Q_theta": true
+        }
+      ],
+      "same_sign_count": 12,
+      "fail_count": 0
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "mod4": 0,
+          "delta_u_safe": 0.1531079861785686,
+          "delta_u_safe_next": 0.048322301415743514,
+          "weighted_diff": 0.7416408752711137,
+          "Q_theta": 47.46501601735128,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "mod4": 0,
+          "delta_u_safe": 0.028617193867703814,
+          "delta_u_safe_next": 0.020769328528502367,
+          "weighted_diff": 0.021244265656606837,
+          "Q_theta": 1.359633002022838,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "mod4": 2,
+          "delta_u_safe": 0.048322301415743514,
+          "delta_u_safe_next": 0.0017385031270372357,
+          "weighted_diff": 0.4623609766329883,
+          "Q_theta": 46.23609766329883,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "mod4": 2,
+          "delta_u_safe": 0.020769328528502367,
+          "delta_u_safe_next": 0.004467613417272168,
+          "weighted_diff": 0.15408192427775766,
+          "Q_theta": 15.408192427775765,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "mod4": 0,
+          "delta_u_safe": 0.0017385031270372357,
+          "delta_u_safe_next": -0.001021868708501016,
+          "weighted_diff": 0.03516819944346106,
+          "Q_theta": 5.064220719858391,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "mod4": 0,
+          "delta_u_safe": 0.004467613417272168,
+          "delta_u_safe_next": -0.0005359331783620748,
+          "weighted_diff": 0.06111442550433507,
+          "Q_theta": 8.800477272624248,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "mod4": 2,
+          "delta_u_safe": -0.001021868708501016,
+          "delta_u_safe_next": -0.00046705733955589815,
+          "weighted_diff": -0.006833244486119855,
+          "Q_theta": -1.3393159192794917,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "mod4": 2,
+          "delta_u_safe": -0.0005359331783620748,
+          "delta_u_safe_next": -0.00028763275846203923,
+          "weighted_diff": -0.00290094036167642,
+          "Q_theta": -0.5685843108885783,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "mod4": 0,
+          "delta_u_safe": -0.00046705733955589815,
+          "delta_u_safe_next": 0.00019006970184039517,
+          "weighted_diff": -0.010894172066021484,
+          "Q_theta": -2.7889080489015,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "mod4": 0,
+          "delta_u_safe": -0.00028763275846203923,
+          "delta_u_safe_next": 0.0009368918863016896,
+          "weighted_diff": -0.02146617808882304,
+          "Q_theta": -5.495341590738699,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "mod4": 2,
+          "delta_u_safe": 0.00019006970184039517,
+          "delta_u_safe_next": -0.00013091421442314356,
+          "weighted_diff": 0.006039538921589984,
+          "Q_theta": 1.9568106105951548,
+          "same_sign_as_Q_theta": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "mod4": 2,
+          "delta_u_safe": 0.0009368918863016896,
+          "delta_u_safe_next": -0.00019755476834340516,
+          "weighted_diff": 0.02081514932029852,
+          "Q_theta": 6.744108379776719,
+          "same_sign_as_Q_theta": true
+        }
+      ],
+      "same_sign_count": 12,
+      "fail_count": 0
+    }
+  }
+}

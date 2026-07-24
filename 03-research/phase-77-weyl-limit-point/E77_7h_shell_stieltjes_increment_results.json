@@ -1,0 +1,171 @@
+{
+  "statement": "E77.7h shell Stieltjes-increment identity probe",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 20,
+    "pairs": [
+      [
+        16,
+        18
+      ],
+      [
+        18,
+        20
+      ]
+    ],
+    "ref_modes": 14,
+    "dps": 60,
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "Finite shell Schur identity. It proves the exact finite decomposition but not the infinite shell summability theorem.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 20,
+      "ref_modes": 14,
+      "planted": null,
+      "rows": [
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "ref_modes": 14,
+          "shell_labels": [
+            "('coord', -18)",
+            "('coord', -17)",
+            "('coord', 17)",
+            "('coord', 18)"
+          ],
+          "mu_ref": "1.70904698080237686364875e-41",
+          "delta_old": "1.70889284397736754051917e-41",
+          "delta_new": "1.70904695553041241127617e-41",
+          "delta_ratio_new_over_old": "1.00009018210450585267933",
+          "sigma_old_at_eta_old": "1.70889284397736754051868e-41",
+          "sigma_old_at_eta_new": "1.7088927690188197217072e-41",
+          "sigma_new_at_eta_new": "1.70904695553041241127544e-41",
+          "fixed_eta_shell_increment_direct": "1.54186511592689568242438e-45",
+          "fixed_eta_shell_increment_schur": "1.54186511592689568242438e-45",
+          "eta_drift_increment_old_space": "-7.49585478188114777035856e-49",
+          "total_increment": "1.54111553044870756764735e-45",
+          "shell_increment_over_eta_new": "0.0000902178322800012889538742",
+          "eta_drift_over_eta_new": "-4.38598527537516764401891e-8",
+          "total_increment_over_eta_new": "0.000090173972427247537277434",
+          "identity_relative_defect": "1.79533817422485241082977e-74",
+          "identity_log10_defect": "-73.7458537346250621",
+          "shell_residual_norm": "1.31029311948869303411363e-30",
+          "schur_min_eigenvalue": "2.3093057949965033435366e-23",
+          "schur_dim": 4
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "ref_modes": 14,
+          "shell_labels": [
+            "('coord', -20)",
+            "('coord', -19)",
+            "('coord', 19)",
+            "('coord', 20)"
+          ],
+          "mu_ref": "1.70904698080237686364875e-41",
+          "delta_old": "1.70904695553041241127617e-41",
+          "delta_new": "1.70904698079730443402777e-41",
+          "delta_ratio_new_over_old": "1.00000001478420001334011",
+          "sigma_old_at_eta_old": "1.70904695553041241127544e-41",
+          "sigma_old_at_eta_new": "1.7090469554908225217882e-41",
+          "sigma_new_at_eta_new": "1.70904698079730443402714e-41",
+          "fixed_eta_shell_increment_direct": "2.53064819122389454491485e-49",
+          "fixed_eta_shell_increment_schur": "2.53064819122389454491485e-49",
+          "eta_drift_increment_old_space": "-3.95898894872460179283181e-52",
+          "total_increment": "2.52668920227516994312202e-49",
+          "shell_increment_over_eta_new": "1.48073646872088723551477e-8",
+          "eta_drift_over_eta_new": "-2.3164892441269546885784e-11",
+          "total_increment_over_eta_new": "1.47841997947676028082619e-8",
+          "identity_relative_defect": "1.18426383254214797600925e-73",
+          "identity_log10_defect": "-72.9265515338859324",
+          "shell_residual_norm": "3.11358078624921845829413e-33",
+          "schur_min_eigenvalue": "1.67483593655963764653993e-23",
+          "schur_dim": 4
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 20,
+      "ref_modes": 14,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "ref_modes": 14,
+          "shell_labels": [
+            "('coord', -18)",
+            "('coord', -17)",
+            "('coord', 17)",
+            "('coord', 18)"
+          ],
+          "mu_ref": "-1.72414565172047431765303",
+          "delta_old": "0.0158730359239517694695481",
+          "delta_new": "0.0205480373367898664909337",
+          "delta_ratio_new_over_old": "1.29452471696253826891521",
+          "sigma_old_at_eta_old": "0.0158730359239517694695481",
+          "sigma_old_at_eta_new": "0.0158379983434995221044554",
+          "sigma_new_at_eta_new": "0.0205480373367898664909337",
+          "fixed_eta_shell_increment_direct": "0.0047100389932903443864783",
+          "fixed_eta_shell_increment_schur": "0.0047100389932903443864783",
+          "eta_drift_increment_old_space": "-0.0000350375804522473650926649",
+          "total_increment": "0.00467500141283809702138564",
+          "shell_increment_over_eta_new": "0.229220869910399626612466",
+          "eta_drift_over_eta_new": "-0.00170515460323380641776877",
+          "total_increment_over_eta_new": "0.227515715307165820194697",
+          "identity_relative_defect": "6.07716335728627119838288e-64",
+          "identity_log10_defect": "-63.216299089436051",
+          "shell_residual_norm": "0.102998631521426514069852",
+          "schur_min_eigenvalue": "1.84157639566454389753098",
+          "schur_dim": 4
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "ref_modes": 14,
+          "shell_labels": [
+            "('coord', -20)",
+            "('coord', -19)",
+            "('coord', 19)",
+            "('coord', 20)"
+          ],
+          "mu_ref": "-1.72414565172047431765303",
+          "delta_old": "0.0205480373367898664909337",
+          "delta_new": "0.0252341962633672048746034",
+          "delta_ratio_new_over_old": "1.2280587118744956152923",
+          "sigma_old_at_eta_old": "0.0205480373367898664909337",
+          "sigma_old_at_eta_new": "0.0205047343757827929707879",
+          "sigma_new_at_eta_new": "0.0252341962633672048746034",
+          "fixed_eta_shell_increment_direct": "0.00472946188758441190381552",
+          "fixed_eta_shell_increment_schur": "0.00472946188758441190381552",
+          "eta_drift_increment_old_space": "-0.000043302961007073520145829",
+          "total_increment": "0.00468615892657733838366969",
+          "shell_increment_over_eta_new": "0.187422727406231292523117",
+          "eta_drift_over_eta_new": "-0.00171604280774882316139001",
+          "total_increment_over_eta_new": "0.185706684598482469361727",
+          "identity_relative_defect": "0.0",
+          "identity_log10_defect": "-inf",
+          "shell_residual_norm": "0.146783621657791094452833",
+          "schur_min_eigenvalue": "1.85288057304052399587121",
+          "schur_dim": 4
+        }
+      ]
+    }
+  ]
+}

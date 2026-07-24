@@ -1,0 +1,185 @@
+{
+  "statement": "Exact factorization rho_N = ((N+2)/N) * (Delta safe_u_{N+2}/Delta safe_u_N)",
+  "sources": {
+    "theta_coupling_zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "theta_coupling_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "delta_safeu_ratio": 0.6471872960226843,
+          "weight_factor": 1.25,
+          "rho_reconstructed": 0.8089841200283554
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "delta_safeu_ratio": 0.6561215484069458,
+          "weight_factor": 1.25,
+          "rho_reconstructed": 0.8201519355086823
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "delta_safeu_ratio": 0.6816063666769818,
+          "weight_factor": 1.2,
+          "rho_reconstructed": 0.8179276400123782
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "delta_safeu_ratio": 0.6866501431726868,
+          "weight_factor": 1.2,
+          "rho_reconstructed": 0.8239801718072242
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "delta_safeu_ratio": 0.7354288651612672,
+          "weight_factor": 1.1666666666666667,
+          "rho_reconstructed": 0.8580003426881451
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "delta_safeu_ratio": 0.7389949558046757,
+          "weight_factor": 1.1666666666666667,
+          "rho_reconstructed": 0.8621607817721216
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "delta_safeu_ratio": 0.7423371563930222,
+          "weight_factor": 1.1428571428571428,
+          "rho_reconstructed": 0.8483853215920254
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "delta_safeu_ratio": 0.7445724686345487,
+          "weight_factor": 1.1428571428571428,
+          "rho_reconstructed": 0.8509399641537699
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "delta_safeu_ratio": 0.7829500918918881,
+          "weight_factor": 1.125,
+          "rho_reconstructed": 0.8808188533783742
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "delta_safeu_ratio": 0.7847043664230415,
+          "weight_factor": 1.125,
+          "rho_reconstructed": 0.8827924122259218
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "delta_safeu_ratio": 0.8196152217538659,
+          "weight_factor": 1.1111111111111112,
+          "rho_reconstructed": 0.9106835797265177
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "delta_safeu_ratio": 0.8210067653381925,
+          "weight_factor": 1.1111111111111112,
+          "rho_reconstructed": 0.9122297392646583
+        }
+      ]
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "delta_safeu_ratio": 0.3156092808861427,
+          "weight_factor": 1.25,
+          "rho_reconstructed": 0.39451160110767836
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "delta_safeu_ratio": 0.725763980372016,
+          "weight_factor": 1.25,
+          "rho_reconstructed": 0.90720497546502
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "delta_safeu_ratio": 0.03597724189665411,
+          "weight_factor": 1.2,
+          "rho_reconstructed": 0.043172690275984936
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "delta_safeu_ratio": 0.21510630019363067,
+          "weight_factor": 1.2,
+          "rho_reconstructed": 0.2581275602323568
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "delta_safeu_ratio": -0.5877865231352727,
+          "weight_factor": 1.1666666666666667,
+          "rho_reconstructed": -0.6857509436578182
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "delta_safeu_ratio": -0.1199596134012205,
+          "weight_factor": 1.1666666666666667,
+          "rho_reconstructed": -0.13995288230142391
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "delta_safeu_ratio": 0.4570619842553225,
+          "weight_factor": 1.1428571428571428,
+          "rho_reconstructed": 0.5223565534346543
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "delta_safeu_ratio": 0.5366951890179775,
+          "weight_factor": 1.1428571428571428,
+          "rho_reconstructed": 0.61336593030626
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "delta_safeu_ratio": -0.4069515362313396,
+          "weight_factor": 1.125,
+          "rho_reconstructed": -0.45782047826025707
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "delta_safeu_ratio": -3.257250291347942,
+          "weight_factor": 1.125,
+          "rho_reconstructed": -3.664406577766435
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "delta_safeu_ratio": -0.688769504847619,
+          "weight_factor": 1.1111111111111112,
+          "rho_reconstructed": -0.7652994498306879
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "delta_safeu_ratio": -0.21086186275263605,
+          "weight_factor": 1.1111111111111112,
+          "rho_reconstructed": -0.23429095861404006
+        }
+      ]
+    }
+  }
+}

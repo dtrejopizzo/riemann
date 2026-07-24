@@ -1,0 +1,132 @@
+{
+  "statement": "Candidate scale-coupled law for the radial shell budget: TAIL <= kappa(sigma) A_N, together with A_N <= C' BASE.",
+  "sources": {
+    "basepoint": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_73_basepoint_radial_results.json",
+    "fractional_budget": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_75_fractional_budget_results.json",
+    "safeu_geometric_envelope": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_28_safe_u_geometric_envelope_results.json"
+  },
+  "rows": [
+    {
+      "sigma": "1.0",
+      "N": 8,
+      "safeu_amplitude_A_N": 0.2547311936166079,
+      "basepoint_reserve": 0.22201071400717606,
+      "tail_over_A": 0.00700848545473696,
+      "A_over_base": 1.1473824349232722,
+      "tail_over_base": 0.00804141310618043
+    },
+    {
+      "sigma": "3.0",
+      "N": 8,
+      "safeu_amplitude_A_N": 0.7340861558417286,
+      "basepoint_reserve": 0.22201071400717606,
+      "tail_over_A": 0.029080374560252174,
+      "A_over_base": 3.3065348180358574,
+      "tail_over_base": 0.09615527100499799
+    },
+    {
+      "sigma": "1.0",
+      "N": 10,
+      "safeu_amplitude_A_N": 0.20607349051170415,
+      "basepoint_reserve": 0.2165885762693645,
+      "tail_over_A": 0.0038423938705613764,
+      "A_over_base": 0.9514513371906417,
+      "tail_over_base": 0.003655850786158747
+    },
+    {
+      "sigma": "3.0",
+      "N": 10,
+      "safeu_amplitude_A_N": 0.6020621815437219,
+      "basepoint_reserve": 0.2165885762693645,
+      "tail_over_A": 0.015917295995721812,
+      "A_over_base": 2.779750400108618,
+      "tail_over_base": 0.04424610991275501
+    },
+    {
+      "sigma": "1.0",
+      "N": 12,
+      "safeu_amplitude_A_N": 0.1685532037633514,
+      "basepoint_reserve": 0.11211550152134399,
+      "tail_over_A": 0.0031068511526488054,
+      "A_over_base": 1.503388929061367,
+      "tail_over_base": 0.004670805627133761
+    },
+    {
+      "sigma": "3.0",
+      "N": 12,
+      "safeu_amplitude_A_N": 0.49608729978702815,
+      "basepoint_reserve": 0.11211550152134399,
+      "tail_over_A": 0.012923001305378724,
+      "A_over_base": 4.42478776846559,
+      "tail_over_base": 0.057181538107904634
+    },
+    {
+      "sigma": "1.0",
+      "N": 14,
+      "safeu_amplitude_A_N": 0.14461870659014023,
+      "basepoint_reserve": 0.12240277022774242,
+      "tail_over_A": 0.0018948513955450949,
+      "A_over_base": 1.1814986402763832,
+      "tail_over_base": 0.0022387643473623367
+    },
+    {
+      "sigma": "3.0",
+      "N": 14,
+      "safeu_amplitude_A_N": 0.42770701421160506,
+      "basepoint_reserve": 0.12240277022774242,
+      "tail_over_A": 0.007866820469276975,
+      "A_over_base": 3.4942592673010098,
+      "tail_over_base": 0.02748871032896435
+    },
+    {
+      "sigma": "1.0",
+      "N": 16,
+      "safeu_amplitude_A_N": 0.12269238789869889,
+      "basepoint_reserve": 0.10363063810516267,
+      "tail_over_A": 0.001761530452811366,
+      "A_over_base": 1.1839393266515708,
+      "tail_over_base": 0.002085545178177725
+    },
+    {
+      "sigma": "3.0",
+      "N": 16,
+      "safeu_amplitude_A_N": 0.3639529913415392,
+      "basepoint_reserve": 0.10363063810516267,
+      "tail_over_A": 0.007327826617535802,
+      "A_over_base": 3.512021135797752,
+      "tail_over_base": 0.025735481960247088
+    },
+    {
+      "sigma": "1.0",
+      "N": 18,
+      "safeu_amplitude_A_N": 0.10806976842718666,
+      "basepoint_reserve": 0.10274873703680383,
+      "tail_over_A": 0.0012305973203487436,
+      "A_over_base": 1.0517868301240225,
+      "tail_over_base": 0.0012943260547287215
+    },
+    {
+      "sigma": "3.0",
+      "N": 18,
+      "safeu_amplitude_A_N": 0.32129493916323737,
+      "basepoint_reserve": 0.10274873703680383,
+      "tail_over_A": 0.005114875685149768,
+      "A_over_base": 3.1269964812137,
+      "tail_over_base": 0.01599419826930884
+    }
+  ],
+  "summary": {
+    "tail_over_A": {
+      "count": 12,
+      "min": 0.0012305973203487436,
+      "median": 0.006061680569943364,
+      "max": 0.029080374560252174
+    },
+    "A_over_base": {
+      "count": 12,
+      "min": 0.9514513371906417,
+      "median": 2.1415696645849924,
+      "max": 4.42478776846559
+    }
+  }
+}

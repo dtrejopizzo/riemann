@@ -1,0 +1,286 @@
+{
+  "statement": "Audit that PAIRNUM_N = -Re((A+B+C) conj(1-theta_N)) is not a constant multiple of either Delta safe_u_N or Q_theta,N on the common certified ladder.",
+  "sources": {
+    "pairnum": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_63_pairnum_ternary_results.json",
+    "theta_zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "theta_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "pairnum": 0.02316591421911207,
+          "delta_safe_u": 0.03184139920207599,
+          "Q_theta": 3.1140929987138395,
+          "pairnum_over_delta_safe_u": 0.7275407111381496,
+          "pairnum_over_Q_theta": 0.007439056646246561
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "pairnum": 0.01464427009841529,
+          "delta_safe_u": 0.020607349051170416,
+          "Q_theta": 3.7520286748352754,
+          "pairnum_over_delta_safe_u": 0.7106333794828188,
+          "pairnum_over_Q_theta": 0.003903027233409461
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "pairnum": 0.005174007649224988,
+          "delta_safe_u": 0.014046100313612616,
+          "Q_theta": 3.4465675929424084,
+          "pairnum_over_delta_safe_u": 0.36835901308569313,
+          "pairnum_over_Q_theta": 0.0015012059127521207
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "pairnum": 0.00450654557884933,
+          "delta_safe_u": 0.010329907613581445,
+          "Q_theta": 4.297558463522502,
+          "pairnum_over_delta_safe_u": 0.4362619441943762,
+          "pairnum_over_Q_theta": 0.0010486292663847863
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "pairnum": 0.003016582767926934,
+          "delta_safe_u": 0.007668274243668681,
+          "Q_theta": 3.74339058470713,
+          "pairnum_over_delta_safe_u": 0.3933848310677698,
+          "pairnum_over_Q_theta": 0.0008058423772957534
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "pairnum": 0.002434957061962173,
+          "delta_safe_u": 0.006003876023732592,
+          "Q_theta": 3.127379173246965,
+          "pairnum_over_delta_safe_u": 0.40556418092863405,
+          "pairnum_over_Q_theta": 0.0007785934890121133
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "pairnum": 0.019405379966772607,
+          "delta_safe_u": 0.09176076948021608,
+          "Q_theta": 8.449534355072435,
+          "pairnum_over_delta_safe_u": 0.21147795595759983,
+          "pairnum_over_Q_theta": 0.0022966212280234287
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "pairnum": 0.01335999013235778,
+          "delta_safe_u": 0.06020621815437219,
+          "Q_theta": 10.597488175669378,
+          "pairnum_over_delta_safe_u": 0.22190382558329774,
+          "pairnum_over_Q_theta": 0.0012606751629155662
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "pairnum": 0.004737373844034165,
+          "delta_safe_u": 0.04134060831558568,
+          "Q_theta": 9.846761122860924,
+          "pairnum_over_delta_safe_u": 0.11459371395481242,
+          "pairnum_over_Q_theta": 0.00048110985784305757
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "pairnum": 0.004290371384903846,
+          "delta_safe_u": 0.030550501015114646,
+          "Q_theta": 12.495788482532904,
+          "pairnum_over_delta_safe_u": 0.14043538542236067,
+          "pairnum_over_Q_theta": 0.000343345391201291
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "pairnum": 0.002893565112387364,
+          "delta_safe_u": 0.0227470619588462,
+          "Q_theta": 10.92046135764527,
+          "pairnum_over_delta_safe_u": 0.1272061032595057,
+          "pairnum_over_Q_theta": 0.0002649672955769051
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "pairnum": 0.0023675307266275425,
+          "delta_safe_u": 0.017849718842402076,
+          "Q_theta": 9.1368455489902,
+          "pairnum_over_delta_safe_u": 0.1326368637809277,
+          "pairnum_over_Q_theta": 0.00025911904868406154
+        }
+      ],
+      "summary": {
+        "pairnum_over_delta_safe_u": {
+          "count": 12,
+          "min": 0.11459371395481242,
+          "median": 0.29513141933449544,
+          "max": 0.7275407111381496
+        },
+        "pairnum_over_Q_theta": {
+          "count": 12,
+          "min": 0.00025911904868406154,
+          "median": 0.0009272358218402699,
+          "max": 0.007439056646246561
+        }
+      }
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "pairnum": -5.809951544408081,
+          "delta_safe_u": 0.1531079861785686,
+          "Q_theta": 47.46501601735128,
+          "pairnum_over_delta_safe_u": -37.94675698779018,
+          "pairnum_over_Q_theta": -0.12240492117993174
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "pairnum": -7.76570101129758,
+          "delta_safe_u": 0.048322301415743514,
+          "Q_theta": 46.23609766329883,
+          "pairnum_over_delta_safe_u": -160.70635677065448,
+          "pairnum_over_Q_theta": -0.16795753542716946
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "pairnum": -23.904054570070926,
+          "delta_safe_u": 0.0017385031270372357,
+          "Q_theta": 5.064220719858391,
+          "pairnum_over_delta_safe_u": -13749.790954249427,
+          "pairnum_over_Q_theta": -4.720184188721408
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "pairnum": 73.99621293251948,
+          "delta_safe_u": -0.001021868708501016,
+          "Q_theta": -1.3393159192794917,
+          "pairnum_over_delta_safe_u": -72412.64197341444,
+          "pairnum_over_Q_theta": -55.2492596163025
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "pairnum": 5.383802057883561,
+          "delta_safe_u": -0.00046705733955589815,
+          "Q_theta": -2.7889080489015,
+          "pairnum_over_delta_safe_u": -11527.068738503829,
+          "pairnum_over_Q_theta": -1.9304336907070647
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "pairnum": -2.0964456477112714,
+          "delta_safe_u": 0.00019006970184039517,
+          "Q_theta": 1.9568106105951548,
+          "pairnum_over_delta_safe_u": -11029.878131085265,
+          "pairnum_over_Q_theta": -1.0713584832175695
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "pairnum": -6.167822530589681,
+          "delta_safe_u": 0.028617193867703814,
+          "Q_theta": 1.359633002022838,
+          "pairnum_over_delta_safe_u": -215.52855807956877,
+          "pairnum_over_Q_theta": -4.536387776269996
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "pairnum": -7.328725486109491,
+          "delta_safe_u": 0.020769328528502367,
+          "Q_theta": 15.408192427775765,
+          "pairnum_over_delta_safe_u": -352.862899542085,
+          "pairnum_over_Q_theta": -0.4756382372859178
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "pairnum": -23.81218905842954,
+          "delta_safe_u": 0.004467613417272168,
+          "Q_theta": 8.800477272624248,
+          "pairnum_over_delta_safe_u": -5329.957369715477,
+          "pairnum_over_Q_theta": -2.7057838252139357
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "pairnum": 73.85688293629599,
+          "delta_safe_u": -0.0005359331783620748,
+          "Q_theta": -0.5685843108885783,
+          "pairnum_over_delta_safe_u": -137809.87242106983,
+          "pairnum_over_Q_theta": -129.89609723995574
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "pairnum": 5.379159080480414,
+          "delta_safe_u": -0.00028763275846203923,
+          "Q_theta": -5.495341590738699,
+          "pairnum_over_delta_safe_u": -18701.482783958825,
+          "pairnum_over_Q_theta": -0.9788580003008207
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "pairnum": -2.0954841831199285,
+          "delta_safe_u": 0.0009368918863016896,
+          "Q_theta": 6.744108379776719,
+          "pairnum_over_delta_safe_u": -2236.6339315752803,
+          "pairnum_over_Q_theta": -0.3107133019100895
+        }
+      ],
+      "summary": {
+        "pairnum_over_delta_safe_u": {
+          "count": 12,
+          "min": -137809.87242106983,
+          "median": -8179.917750400371,
+          "max": -37.94675698779018
+        },
+        "pairnum_over_Q_theta": {
+          "count": 12,
+          "min": -129.89609723995574,
+          "median": -1.5008960869623171,
+          "max": -0.12240492117993174
+        }
+      }
+    }
+  }
+}

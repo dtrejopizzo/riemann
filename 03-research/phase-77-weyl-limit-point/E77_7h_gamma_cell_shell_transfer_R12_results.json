@@ -1,0 +1,424 @@
+{
+  "statement": "E77.7h Gamma/cell Loewner shell-transfer decomposition",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 20,
+    "ref_modes": 12,
+    "pairs": [
+      [
+        16,
+        18
+      ],
+      [
+        18,
+        20
+      ]
+    ],
+    "dps": 50,
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "Finite exact Loewner decomposition probe. It localizes the algebraic cancellation but does not prove the cofinal transfer estimate.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 20,
+      "ref_modes": 12,
+      "pairs": [
+        [
+          16,
+          18
+        ],
+        [
+          18,
+          20
+        ]
+      ],
+      "include_arith": true,
+      "planted": null,
+      "rows": [
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "ref_modes": 12,
+          "identity_defect_log10": "-51.9791754312583607",
+          "residual_identity_defect_log10": "-52.0475434762050865",
+          "shell_norm_log10": "-29.8823012950595906",
+          "term_cancel_ratio_log10": "-16.0557683131182707",
+          "components": [
+            {
+              "label": "('coord', -18)",
+              "coord": -18,
+              "actual_shell_Hu": "-9.26934132718002730694407e-31",
+              "negative_residual": "-9.26934132718002730694404e-31",
+              "loewner_predicted": "-9.26934132718002730694482e-31",
+              "term_Sa_A": "1.55167184379980172740994e-17",
+              "term_B": "1.55167184379963564310897e-17",
+              "loewner_cancel_ratio": "1.07035712240613403231927e-13",
+              "residual_over_term_scale": "5.97377684219677515240804e-14"
+            },
+            {
+              "label": "('coord', -17)",
+              "coord": -17,
+              "actual_shell_Hu": "2.31013027049663561991426e-32",
+              "negative_residual": "2.31013027049663561992068e-32",
+              "loewner_predicted": "2.3101302704966356199126e-32",
+              "term_Sa_A": "-1.05426927491238397109776e-14",
+              "term_B": "-1.05426927491238396695856e-14",
+              "loewner_cancel_ratio": "3.92612958170170220339624e-18",
+              "residual_over_term_scale": "2.19121464076492331166243e-18"
+            },
+            {
+              "label": "('coord', 17)",
+              "coord": 17,
+              "actual_shell_Hu": "2.31013027049663562685606e-32",
+              "negative_residual": "2.3101302704966356268623e-32",
+              "loewner_predicted": "2.31013027049663562685465e-32",
+              "term_Sa_A": "-1.05426927491238397127394e-14",
+              "term_B": "-1.05426927491238396713475e-14",
+              "loewner_cancel_ratio": "3.92612958170170221453832e-18",
+              "residual_over_term_scale": "2.19121464076492331788054e-18"
+            },
+            {
+              "label": "('coord', 18)",
+              "coord": 18,
+              "actual_shell_Hu": "-9.26934132718002732951143e-31",
+              "negative_residual": "-9.26934132718002732951139e-31",
+              "loewner_predicted": "-9.26934132718002732951213e-31",
+              "term_Sa_A": "1.5516718437998017276896e-17",
+              "term_B": "1.55167184379963564338864e-17",
+              "loewner_cancel_ratio": "1.07035712240613403473226e-13",
+              "residual_over_term_scale": "5.97377684219677516587525e-14"
+            }
+          ]
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "ref_modes": 12,
+          "identity_defect_log10": "-51.6937131262226645",
+          "residual_identity_defect_log10": "-52.5121023377497743",
+          "shell_norm_log10": "-32.5061981587824893",
+          "term_cancel_ratio_log10": "-16.3701559501457666",
+          "components": [
+            {
+              "label": "('coord', -20)",
+              "coord": -20,
+              "actual_shell_Hu": "2.19002619238805669334486e-33",
+              "negative_residual": "2.19002619238805669333074e-33",
+              "loewner_predicted": "2.19002619238805669319677e-33",
+              "term_Sa_A": "-5.14898947760745648647024e-18",
+              "term_B": "-5.14898947760745256247007e-18",
+              "loewner_cancel_ratio": "7.62091316195911000950507e-16",
+              "residual_over_term_scale": "4.25331261971364572541671e-16"
+            },
+            {
+              "label": "('coord', -19)",
+              "coord": -19,
+              "actual_shell_Hu": "2.51167262527455348878985e-34",
+              "negative_residual": "2.51167262527455348886294e-34",
+              "loewner_predicted": "2.51167262527455348911875e-34",
+              "term_Sa_A": "5.14372454277858530392621e-17",
+              "term_B": "5.14372454277858534892934e-17",
+              "loewner_cancel_ratio": "8.74913338089746940195622e-18",
+              "residual_over_term_scale": "4.8829843129931188378713e-18"
+            },
+            {
+              "label": "('coord', 19)",
+              "coord": 19,
+              "actual_shell_Hu": "2.51167262527470249533191e-34",
+              "negative_residual": "2.51167262527470249555786e-34",
+              "loewner_predicted": "2.51167262527470249531831e-34",
+              "term_Sa_A": "5.14372454277860837125508e-17",
+              "term_B": "5.14372454277860841625821e-17",
+              "loewner_cancel_ratio": "8.74913338089794921255513e-18",
+              "residual_over_term_scale": "4.88298431299338662622831e-18"
+            },
+            {
+              "label": "('coord', 20)",
+              "coord": 20,
+              "actual_shell_Hu": "2.19002619238816869448778e-33",
+              "negative_residual": "2.19002619238816869447428e-33",
+              "loewner_predicted": "2.19002619238816869435375e-33",
+              "term_Sa_A": "-5.14898947760748118677241e-18",
+              "term_B": "-5.14898947760747726277225e-18",
+              "loewner_cancel_ratio": "7.62091316195946319579256e-16",
+              "residual_over_term_scale": "4.25331261971384284241079e-16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "arch_only",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 20,
+      "ref_modes": 12,
+      "pairs": [
+        [
+          16,
+          18
+        ],
+        [
+          18,
+          20
+        ]
+      ],
+      "include_arith": false,
+      "planted": null,
+      "rows": [
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "ref_modes": 12,
+          "identity_defect_log10": "-51.0385986268449344",
+          "residual_identity_defect_log10": "-51.5385986268449344",
+          "shell_norm_log10": "-0.639738338275063189",
+          "term_cancel_ratio_log10": "-0.338525156278321264",
+          "components": [
+            {
+              "label": "('coord', -18)",
+              "coord": -18,
+              "actual_shell_Hu": "0.111468313776221862533209",
+              "negative_residual": "0.111468313776221862533209",
+              "loewner_predicted": "0.111468313776221862533209",
+              "term_Sa_A": "0.0371590023371519413229966",
+              "term_B": "0.236883409064581516950492",
+              "loewner_cancel_ratio": "0.843133791075164391980032",
+              "residual_over_term_scale": "0.470561928403488398707412"
+            },
+            {
+              "label": "('coord', -17)",
+              "coord": -17,
+              "actual_shell_Hu": "0.117672539955620396337148",
+              "negative_residual": "0.117672539955620396337148",
+              "loewner_predicted": "0.117672539955620396337148",
+              "term_Sa_A": "0.0514201357657574968770559",
+              "term_B": "0.262261023499356992978859",
+              "loewner_cancel_ratio": "0.803935273798382137890949",
+              "residual_over_term_scale": "0.448684819366263564613443"
+            },
+            {
+              "label": "('coord', 17)",
+              "coord": 17,
+              "actual_shell_Hu": "-0.117672539955620396337148",
+              "negative_residual": "-0.117672539955620396337148",
+              "loewner_predicted": "-0.117672539955620396337148",
+              "term_Sa_A": "-0.0514201357657574968770559",
+              "term_B": "-0.262261023499356992978859",
+              "loewner_cancel_ratio": "0.803935273798382137890949",
+              "residual_over_term_scale": "0.448684819366263564613443"
+            },
+            {
+              "label": "('coord', 18)",
+              "coord": 18,
+              "actual_shell_Hu": "-0.111468313776221862533209",
+              "negative_residual": "-0.111468313776221862533209",
+              "loewner_predicted": "-0.111468313776221862533209",
+              "term_Sa_A": "-0.0371590023371519413229966",
+              "term_B": "-0.236883409064581516950492",
+              "loewner_cancel_ratio": "0.843133791075164391980032",
+              "residual_over_term_scale": "0.470561928403488398707412"
+            }
+          ]
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "ref_modes": 12,
+          "identity_defect_log10": "-51.5385986268449344",
+          "residual_identity_defect_log10": "-inf",
+          "shell_norm_log10": "-0.680934410105332943",
+          "term_cancel_ratio_log10": "-0.337726530125035385",
+          "components": [
+            {
+              "label": "('coord', -20)",
+              "coord": -20,
+              "actual_shell_Hu": "0.101674955534389338626491",
+              "negative_residual": "0.101674955534389338626491",
+              "loewner_predicted": "0.101674955534389338626491",
+              "term_Sa_A": "0.0337554490511978434874673",
+              "term_B": "0.215932513413281378171134",
+              "loewner_cancel_ratio": "0.843675931347161152367531",
+              "residual_over_term_scale": "0.470864502650371174253319"
+            },
+            {
+              "label": "('coord', -19)",
+              "coord": -19,
+              "actual_shell_Hu": "0.106743982802652917846196",
+              "negative_residual": "0.106743982802652917846196",
+              "loewner_predicted": "0.106743982802652917846196",
+              "term_Sa_A": "0.0460294340143680410771325",
+              "term_B": "0.237288975984138064033319",
+              "loewner_cancel_ratio": "0.806019500807130006182358",
+              "residual_over_term_scale": "0.449848048607990869276422"
+            },
+            {
+              "label": "('coord', 19)",
+              "coord": 19,
+              "actual_shell_Hu": "-0.106743982802652917846196",
+              "negative_residual": "-0.106743982802652917846196",
+              "loewner_predicted": "-0.106743982802652917846196",
+              "term_Sa_A": "-0.0460294340143680410771325",
+              "term_B": "-0.237288975984138064033319",
+              "loewner_cancel_ratio": "0.806019500807130006182358",
+              "residual_over_term_scale": "0.449848048607990869276422"
+            },
+            {
+              "label": "('coord', 20)",
+              "coord": 20,
+              "actual_shell_Hu": "-0.101674955534389338626491",
+              "negative_residual": "-0.101674955534389338626491",
+              "loewner_predicted": "-0.101674955534389338626491",
+              "term_Sa_A": "-0.0337554490511978434874673",
+              "term_B": "-0.215932513413281378171134",
+              "loewner_cancel_ratio": "0.843675931347161152367531",
+              "residual_over_term_scale": "0.470864502650371174253319"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 20,
+      "ref_modes": 12,
+      "pairs": [
+        [
+          16,
+          18
+        ],
+        [
+          18,
+          20
+        ]
+      ],
+      "include_arith": true,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "ref_modes": 12,
+          "identity_defect_log10": "-50.3309510660030368",
+          "residual_identity_defect_log10": "-51.5864888807784776",
+          "shell_norm_log10": "-0.985540226871001442",
+          "term_cancel_ratio_log10": "-0.488137232372412345",
+          "components": [
+            {
+              "label": "('coord', -18)",
+              "coord": -18,
+              "actual_shell_Hu": "-0.0714783413341964854674197",
+              "negative_residual": "-0.0714783413341964854674197",
+              "loewner_predicted": "-0.0714783413341964854674197",
+              "term_Sa_A": "-0.00832508091378785960001228",
+              "term_B": "-0.136397075844049499133827",
+              "loewner_cancel_ratio": "0.938964373962779113745831",
+              "residual_over_term_scale": "0.524045995061666284357874"
+            },
+            {
+              "label": "('coord', -17)",
+              "coord": -17,
+              "actual_shell_Hu": "-0.0153339814586687917573107",
+              "negative_residual": "-0.0153339814586687917573107",
+              "loewner_predicted": "-0.0153339814586687917573107",
+              "term_Sa_A": "-0.151403393552309076378678",
+              "term_B": "-0.178878200031846307298644",
+              "loewner_cancel_ratio": "0.153595052245862244178401",
+              "residual_over_term_scale": "0.0857230308441097337432848"
+            },
+            {
+              "label": "('coord', 17)",
+              "coord": 17,
+              "actual_shell_Hu": "-0.0153339814586687917573107",
+              "negative_residual": "-0.0153339814586687917573107",
+              "loewner_predicted": "-0.0153339814586687917573107",
+              "term_Sa_A": "-0.151403393552309076378678",
+              "term_B": "-0.178878200031846307298644",
+              "loewner_cancel_ratio": "0.153595052245862244178401",
+              "residual_over_term_scale": "0.0857230308441097337432848"
+            },
+            {
+              "label": "('coord', 18)",
+              "coord": 18,
+              "actual_shell_Hu": "-0.0714783413341964854674197",
+              "negative_residual": "-0.0714783413341964854674197",
+              "loewner_predicted": "-0.0714783413341964854674197",
+              "term_Sa_A": "-0.00832508091378785960001228",
+              "term_B": "-0.136397075844049499133827",
+              "loewner_cancel_ratio": "0.938964373962779113745831",
+              "residual_over_term_scale": "0.524045995061666284357874"
+            }
+          ]
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "ref_modes": 12,
+          "identity_defect_log10": "-50.1826950123243389",
+          "residual_identity_defect_log10": "-51.6010679951490843",
+          "shell_norm_log10": "-0.831717058333751035",
+          "term_cancel_ratio_log10": "-0.212031760190065949",
+          "components": [
+            {
+              "label": "('coord', -20)",
+              "coord": -20,
+              "actual_shell_Hu": "-0.0477795911352105270664365",
+              "negative_residual": "-0.0477795911352105270664365",
+              "loewner_predicted": "-0.0477795911352105270664365",
+              "term_Sa_A": "-0.0214035688805895592983762",
+              "term_B": "-0.107013103732947855173305",
+              "loewner_cancel_ratio": "0.799991140019615220763243",
+              "residual_over_term_scale": "0.44648355639179402207337"
+            },
+            {
+              "label": "('coord', -19)",
+              "coord": -19,
+              "actual_shell_Hu": "-0.0925730140632253054258251",
+              "negative_residual": "-0.0925730140632253054258251",
+              "loewner_predicted": "-0.0925730140632253054258251",
+              "term_Sa_A": "0.034103933215225505164697",
+              "term_B": "-0.131764641327540339309844",
+              "loewner_cancel_ratio": "1.25882461995589546153434",
+              "residual_over_term_scale": "0.70256339736172052309003"
+            },
+            {
+              "label": "('coord', 19)",
+              "coord": 19,
+              "actual_shell_Hu": "-0.0925730140632253054258251",
+              "negative_residual": "-0.0925730140632253054258251",
+              "loewner_predicted": "-0.0925730140632253054258251",
+              "term_Sa_A": "0.034103933215225505164697",
+              "term_B": "-0.131764641327540339309844",
+              "loewner_cancel_ratio": "1.25882461995589546153434",
+              "residual_over_term_scale": "0.70256339736172052309003"
+            },
+            {
+              "label": "('coord', 20)",
+              "coord": 20,
+              "actual_shell_Hu": "-0.0477795911352105270664365",
+              "negative_residual": "-0.0477795911352105270664365",
+              "loewner_predicted": "-0.0477795911352105270664365",
+              "term_Sa_A": "-0.0214035688805895592983762",
+              "term_B": "-0.107013103732947855173305",
+              "loewner_cancel_ratio": "0.799991140019615220763243",
+              "residual_over_term_scale": "0.44648355639179402207337"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2756 @@
+ SOME ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL
+                  WAVE FUNCTIO~S
+                                   By DAvID SLEPIAN
+
+  1. Introduction and Summary of Results. 1.1 Intloduetwn. For specIal values
+of the parameter x, the dIfferential equatIOn
+
+                                                  22m2)
+                -d ( 1 - . t 2) -elifi + ( X - ex - - - ifi = 0                    (11 )
+                dx              dl                  1 - Xl
+
+has a real contmuous solutIOn ifi(x) that IS bounded for all x. Except for a con-
+stant factor, thIS solutIOn IS umque Here, as throughout thIS paper, e IS an
+arbitrary posItive number and In IS a nonnegatIve mteger For SImplIcity of
+notatIOn, we shall generally suppress the exphclt dependence of other quantItIes
+on e
+    Denote the speCIal values of X for whICh these bounded contmuous solutIOns
+eXIst by Xm,n , It = Ill, III + 1,      These eIgenvalues can be labelled so that
+o < Xm. m < Xm. m+l < Xm. m+2 <            The correspondmg solutIOns of (1 1)
+wIll be denoted by ifim.n(x), n = Ill, In + 1,    . The eIgenfunction ifim.n(x) IS an
+even or odd functIOn of x accordmg as n - In IS an even or odd mteger, and
+ifim.n has precisely n - rn zeros m the open mterval Ixl < 1
+    The ifim.n(x) are known as prolate spherOIdal wave functIOns of order rn. They
+have been extenSIvely studIed m t.he hterature Many details of their properties
+can be found m t.he books by MeIxner and Schafke [1], Flammer [2], and Stratton,
+Morse, Chu, LIttle and Corbato [3] The first. hvo of these contam extenSIve
+bIblIographIeS of the pertment penodlcal lIterature pnor to 1957
+    EquatIOn (11) results when the three-dlmensIOnal scalar wave equatIOn IS
+separated m a prolate spheroIdal coordmate system The 1/Im.n arlse m thIS con-
+nect.IOn m most of the phYSIcal applIcatIOns CIted m [1] and [2]. These deal WIt.h
+problems m acoustIC or electromagnet.Ic propagatIOn mvolvmg ellIpSOIdal struc-
+t.ures or WIth the quantum mechamcal t.wo-center problem
+    Recently, however, t.he functIOns of zero order, ifio.n(x), have come to play an
+lmportant role m a WIde variety of other applIed problems from qUlte another
+connectIOn Central to these applIeatIOns IS the fact that the ifio.n are the eigen-
+functIOns of the finite Founer transform operator, 1 e, that they satlsfy the
+integral equai IOn
+
+                           an ifio.n(x) =   11
+                                            -1
+                                                 e<CXY   1/Io,n(Y) dy              (1.2)
+
+whose nrst Iterate
+
+                           1
+                            1   sm e(x - y)                                   12
+          An 1/Io.n(X) =           (       ) ifio.n(Y) dy,          An = 27r
+                                                                          C
+                                                                         -Ian      (1.3 )
+                           -1     7r.r - y
+also frequently occurs. PhYSICal applications of thIs consequence are to such
+dlverse fields as st.ochastic processes [4], the determination of laser modes [5], the
+                                             99
+100                                       DAVID SLEPIAN
+
+
+uncertamty prinClple [lOJ, the statIstlCal theory of energy levels of complex
+systems [6J, [7J, antenna theory [8J, and a variety of considerations of funda-
+ mental Importance in communication theory [9J-[13]. New mathematical proper-
+tIes of the y,.O,n have come to lIght from some of these researches [9].
+   In many of these newer applications, the behavior of the y,.O,n(x) and the An
+of (1.3) for large values of c are of considerable interest. A number of treatments
+of the asymptotlCs of prolate spheroidal wave functions for large c eXlst m the
+literature [1], [2], [14], [15] These do not suffice, however, to allow detailed
+determination of the y,.m,n(x) for all values of x, nor do they discuss the behavior
+of An • Indeed, except for [15], these expanSIOns gIve details about the prolate
+spheroIdal functIOns (for fixed nand rn) in an mterval about x = 0 whose width
+unfortunately vamshes with increasing c like c-t. The discussion in [15J provides
+information m the interval Ixl < 1 - 1/c when n « c.
+   In part II of this paper we develop expressions for y,.m,n(X) for fixed rn and n
+valid for large values of c for all real values of x. In part III, formulae for nand c
+both large are obtained for all real values of x. In part IV the earlIer results are
+applied to determine asymptotIc expressions for the eIgenvalues An of (1.3) both
+for large and small c for fixed n and for nand c large together.
+   The results of parts II-IV are summarized m the next three sectIOns of this
+introductIOn.
+   1.2 y,.m,n(X) for Large c and Fixed rn and n. For fixed rn and n and large c a
+solution of (1.1) is given by
+                                                    y,.~,n(X),                    o ;;;; X ;;;; c-1
+                                                    k2y,.~,n(X),        C-i   ;;;; x   ;;;; 1 - c-1
+                                     -
+                                     y,.m,,,(X) = i kay,.m,n(X)
+                                                        3       ,        1 - c-1 ;;;; X ;;;; 1        ( 1.4)
+                                                    k41ft~,n(X),         1 ;;;; x ;;;; 1 + c-     1
+
+
+                                                    k61ft~,n(X),                  1 + c-1 ~ X
+and the corresponding eigenvalue is gIven by
+
+                              Xm,n = n _       m + ! + L: (~)' a, .                                   (1.5)
+                               2c                  2         3=1   2c
+Here
+
+y,.~,,,(x) = (I - x2)m/2 [Dz(xv'2c) + ~ (;c)' k=~3 A 'D + (xV2c) ]        k      1 2k                 (1.6)
+
+  2            eCI/(I - y)I/2 [
+1ftm,,,(X) = ..l r . I  ,11 ... ,)/.
+                         ••          1   + L: (1)'
+                                           ,-1
+                                                    (D~
+                                               2c L: Y
+                                                     k
+                                                        1
+                                                       k=1
+                                                                                                      (1.7)
+                                                             +,. E'. "- + (I -F~)]
+                                                                               y)k
+
+y,.!.,n(X) = Im(CY)      + L: (21)J t BHcy)klm+k(cy)
+                              ,=1   C    k=1
+                                                                                                      ( 1.8)
+   ASYMPTOTIC EXPANSION::' FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                               101
+
+
+if;~.n(X) = ~ [Jm(CZ) + ~ C~)' ~ m( -CZ)kJmH(CZ) ]                                                           (I9)
+
+
+if;~.n(X) = Re e ,
+                     ,(cz-m[,rJ2j)   (1
+                                          -   ~z
+                                                   ) l/2 [
+                                                             1   + L _I)J L (DJ
+                                                                        (         J
+
+                                + ~Z)(l+1)J2
+                                                                                        _k
+                      (tz),(1                                     }~1       2c   k~l    (tZ)1
+                                                                                                            (1.10 )
+                                                                    + (1 +
+                                                                         Ek
+                                                                            ~Z)k
+                                                                                 + (1 -FitZ)k)]
+where we have adopted the abbreviatIOns 1 = n - m, Y = VI - X2, Z = ~
+and tm = 1 If m IS odd whIle tm = (- 1) mJ2 If m IS even
+   In the foregomg Dv(X) IS the Weber functIOn of order II (see [16], Vol. II,
+Chapter VIII), J m(x) is the usual Bessel functIOn and 1m (X) IS the modified
+Bessel functIOn. The quantItIes a J , Ak , Bk, Dk, Ek, Fk are all polynomials m
+land m. The aJ and Ak are gIVen by the recurrence scheme (2.lO)-(2.11), the
+Bk are gIven by the recurrence (254)-(255), the D' , E~ , and are determined                    F'
+by (2.32)-(2.34). The first few of each of these serIes of polynomIals are gIven
+in Tables I, II, and III
+   The connectmg constants of (104) are given by
+                          k2 = e- cc 1J22(3l+1)J2p(c)                                                       (1.11 )
+                          kJ = k4 = e- c(l+1)J2 2 (3l+2)J2V ; P(c)Q(c)
+                                                   C
+                                                                                                            (1.12 )
+                          k5 =       e- cc 1J22(3l+J)J2p(c).                                                (1.13 )
+
+                                                       TABLE I
+
+                  2ao = 21 + 1
+                -22a, = 212     + +
+                               21    3 - 4m 2
+                -2 3a2 = (21    +
+                               1)(l2+ + I    3 - 8m2)
+                                + +
+                -2 4a3 = 51 4 lOl3     + +
+                                       401 2 351    15 - 48m2(212    21      1)         + +
+                -2 7a4 = 661 6   +   +  +
+                                 16514 9621 3 127812 1321l        453   +             +
+                         - m2(2368/3 +   +35521 2 4448l   1632)         +
+                                                                   m 4 (2561    128)  +     +
+                     J'24'A~J =  (-1)1,                                                               J = 0,1, .
+         (J -    1) '24'-3A~J_l =(-1) ,-1m,                                                           J = 1,2, ...
+        (J - 2)124'-3A~J_2 = (-1)'-'(21                  +
+                                              4J - 3 - 4m2),                                          J = 2,3, . .
+       () - 2) 12 4,-sA:'2J+2 = (21 - 4) + 5 + 4m 2)l(1 - 1)                           (I - 4j + 5), J = 2, 3, .. .
+       (J - 1) 12 4 ,-sA:'2J+' = ml(l - 1)     (I - 4J   3),            +                            J = 1,2, .. .
+                   JI24iA~J = 1(1 - 1)      (I - 4J    1),          +                                J = 1,2, . .
+
+    32Ai = - m(12 - 25l - 36)
+   32A: 1 = m(l' - 27l - 10)l(1 - 1)
+  3 '29A~ = m(31 2 - 2431 - 616)      64m 3   +
+   213A; = - 14      +
+                     613 - 71512 - 35141 - 4832       +  m2(3072l   6656)        +
+                     + +
+    2 6A; = m( -6l s 991 2 275l         252)   +   +
+                                                  m 3( -412    4l - 32)     +
+   26A:, = [m(6za   +  U7l' - 59l     82)     + +
+                                               m3(-4l' - 121 - 40)]1(1 - 1)
+  21SA:2 = [14    +
+                  lOIS+   7391 2 - 20621     2040+   +  m2(30721 - 3584)]l(1 - 1)(1 - 2)(1 - 3)
+                    +
+ 312 9A:s = [m(31 2 2491 - 370)               +
+                                       64m S ]I(1 - 1) (I - 2) (I - 3) (I - 4)(1 - 5)
+102                                                   DAVID SLEPIAN
+
+
+                                                        TABLE II
+
+     Bl = - (2l + 1)
+    2B~ = 212 + 2l + 3 + 4m
+    2B~ = 412 + 4l + 3
+    4B~ = (2l + 1)(l2 + 1 + 3 - Sm2)
+    4B~ = - (2l + 1)(412 + 4l + 30 + 24m)
+    6B; = - (21 + 1)(412 + 4l + 15)
+    SB1 = 51 4 + lOP + 401 2 + 351 + 15 - m2(961 2 + 961 + 4S)
+    SB~ = - 414 - S13 + 301 2 + 341 + 75 + m(4S1 2 + 4S1 + 16S) + m2(6412 + 64Z + 96)
+    4B: = 81 4 + 1613 + 1701 2 + 1621 + 105 + m(8012 + 801 + 60)
+   24B: = 1614 + 321 3 + 20Ql2 + 1841 + 105
+
+
+                                                       TABLE III
+      J I22'D: =     (12 - 4m2) (3 2 -    4m2)(5 2 - 4m2) •.         [(2J - 1)2 - 4m 2)
+      ) 12 2 'E: =   (I+ 1)(1 + 2) . (l + 2)
+;12Z,+lD:+l =        (2)+ 1)(21 + 1)(12 - 4m2)(3 2 - 4m2) .•. [(2) - 1)2 - 4m2]
+                     - [1(1 - 4) - 1) - 2(; - 1) - 8m2)(l + 1)(1 + 2)
+               1
+; !2 2 ,+3E:+ =
+                 .. ·(1+2)                                                             j=1,2,3,
+        26D~ =   [(l2      + +
+                           1 1) (4m2          +
+                                          135) - 90)(1 - 4m2)
+         28E; = - [141 3 - 47[2 - 7l - 30 - 32m2(7l - 1) - 32m 4}(l             l)(Z    +
+                                                                                        2)  +
+      3 127D1 = [2265l 2 2265l  +         +
+                                       2070           +          +
+                                                m2(1561 2 100l - 268)               +
+                                                                              16m4)(2l       +
+                                                                                          1) (1 - 4m2)
+      3 127D; = [4551 2 4551   +      +
+                                     140    4m2([2+           + +
+                                                       1 1)](1 - 4m2)(9 - 4m2)
+      4 12 9Et = [1 6      +
+                          [5 - 124714         +
+                                         31671 3 - 6S6l 2 8700l +     5184  +
+                               4
+                 - m (161 - 343361
+                        2               2    5520l+    9952)  +
+                 + m4(192Z2         +
+                                   97921 - 2560)      512m6)(l+   1) (I +  2)   +
+      4!2 9E; = [1 4 - 1101 3       +
+                                  61112       +
+                                           5541           +
+                                                    468 - m2(161 2 - 15521 - 4S0)           +
+                                                                                        190m4)
+                     (I    +1)(1    +
+                                  2)(1    3)(1+    4)     +
+        Fi(l) = (-l)'Ek(-l - 1),                                         k = 1,2, . . );; = 1,2,
+
+
+Here
+
+         P(c) =[I+~g~+~gi+ ... J/[I+~g~+~gi+ ... J                                                   (1.14)
+
+         Q(c) = [1 + ! hi + ~l h~ + ... J /                          [1 + !c M + ~c2 h~ + ... J (1.15)
+                                C             c
+where the first few g's and h's are gIven on Table IV. It would appear that If
+m = 0, Q(c) = 1.
+  Normalization for the solution (14) is provided by
+
+N~ = [ [$m,n(X)]2 dx
+  m,n        -1
+
+
+             l!
+                  11.J!c[1 + -.!.2c {-m(2l + 1) I                                                    (1.16)
+                                    + ~ {14 + 2z3 + 23z2 + 22l + 12
+                                        4c2                     27
+                                    + 6m l(l + 1) - ~m(3l2 + 3l + 1)} +
+                                              2
+                                                                                            ... J.
+      ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                               103
+
+                                             TABLE IV
+       g:
+       28 = - I' - 101" - 351 2 - 501 - 24 + m( -1281 - 64)
+   3 1217g;    18 + 361' + 5461 6 + 30001 5 + 32491' - 24876/3 - 9307612 - 1192801 - 51840
+               + m(1536P + 192001' + 430081" - 15744012 - 2380801 - 129024)
+               + m2(9830412 + 1966081 + 73728)
+3 16 1221g:    - 112 - 78111 - 27171 10 - 442501 9 - 31170318 + 7456861' + 173560091 6
+               + 53924730[6 - 953303561' - 9158440081" - 2161406592[2 - 22357036801
+               - 857226240
+              + m( -5760[9 - 233280[8 - 33408001' - 8208000[6 + 164154240[6 + 494804160l'
+               - 1083651840[" - 37781337601 2 - 49623091201 - 2097930240)
+              + m2( -29491201 6 - 57507840/0 - 130129920[' + 979845120[3 + 4844298240[2
+              + 43462656001 + 1831403520)
+              + m"(-188743680za - 849346560[2 + 47185920l + 212336640)
+       g;
+       28 = - [' - 101" + 13[2 + 621 + 64 - 128m2
+   3 1217g; = [8 + 361' - 30[6 - 4104[5 - 18351l' + 131401" + 11226812 + 265680l + 165888
+              + m 2(1536[' + 15360/3 + 2918412 - 5376001 - 491520) + 98304m'
+   6 1222g; = - 71 12 + 414111 - 13019[10 + 2306501 9 - 2227641/8 + 171324421' + 1026468171 6
+              + 247576710[6 - 7109206121' + 12933125841" + 55418889612 + 204766848Ol
+              + 902430720 + m2( -19201 8 - 691201' - 188160/6 + 11566080[5 + 123461760l'
+              + 319080960/3 - 266873088012 - 5287680000[ - 3212574720) + m'( -14745601'
+              - 14745600/3 - 752025601 2 + 9407692801 + 975175680) - 62914560m 6
+      2'h; = 61 + 3 + m(161 + 8) + m 2(81 + 4)
+     210h~ = 3241 2 + 3241 + 171 + m(1152[2 + 11521 + 480) + m2(1248[2 + 1248l + 328)
+              + m"(5121 2 + 5121 + 128) + m'(641 2 + 64[ + 48)
+  214 32h; = 4946ZS + 741961 2 + 99414[ + 37341 + m(2017921" + 302688[2 + 3029281
+              + 101016) + m2(2847681" + 4271521 2 + 2615921 + 59604) + m"(185856/3
+              + 2787841 2 + 1309441 + 19008) + m'(60032[" + 900481 2 + 535361 + 11760)
+              + m 5 (9216/3 + 138241 2 + 11520[ + 3456) + m6(512l" + 7681 2 + 2176l + 960)
+      2'h; = 6l + 3 + m2(8l + 4)
+     21Oh; = 3241 2 + 324l + 171 + m 2(736l 2 + 736l + 200) + m'(64l 2 + 641 + 48)
+  214 32hi = 49464l" + 741961 2 + 99414l + 37341 + m 2 (1465281 3 + 21979212 + 130264[
+              + 28500) + m'(23168l" + 347521 2 + 258881 + 7152) + m6(512/3 + 7681 2
+              + 21761 + 960)
+
+  The connectlOn with l\Ietxner's prolate functIOn [1] IS gIven by
+                   m       2
+                 ps,,(x, -e) =
+                                   [
+                                       (2n
+                                             2(n - m) 1
+                                             +  I)(n + m)1
+                                                             J N m,,, l/Im,,,(X) ,
+                                                              12
+                                                               /        -
+                                                                                            (1.17)
+
+and Flammer's angular functlOn 8 m ,n(e, x) [2] is related by
+                                 ~m,n(X) = Cm,n8m,n(e, x)                                   (1.18)
+where If l IS even
+  C
+    m,n
+            = [t(n + m)]! 2(n+mln L (~))
+                  (n+m)1               )=0    2e
+                                                    f (-l)kA~ (tl)! +
+                                                   k~2)
+                                                                            (l
+                                                                      (~l+k)12k
+                                                                                     2k)!
+                                                                                            (1.19 )
+
+whereas If I IS odd
+        [t(n + m +1)]! 2(,,+ml /2
+Cm,,, =       (n + m + 1)!        2VC
+                          .L(~)J
+                           )=0    2e
+                                             f (_1)kA~[t(l-1)]!(l+2k)!.
+                                         k=-2J         [!(l - 1) +
+                                                                        (1.20)
+
+                                                                                 k]! 2k
+,104                                   DAVID SLEPIAN
+
+
+Flammer's radIal function R~~~ (c, x) [2] is connected with (1 4) by
+
+                                Rm,n
+                                 (1) (           1 tfm,n
+                                       c, x ) = -k  - () x                                          ( 1.21)
+                                                  e 6
+  1.3 tfm,n(x) for Large e and n wzth In Fzxed. When nand e are both large, the
+eigenvalue of (1 1) can be written
+
+                                Xm,n = e
+                                           2
+                                               + 21le + L: ~e  3=0
+                                                                     1
+                                                                                                    (1.22)
+
+and the corresponding solutIOn is
+                                                  tf~,n(X),               o ~ x ~ 1 - c-1
+                                  " () _ ~ k 7tf:,n(X) ,                   l-e-!~x~1
+                                 tfm,n x -      s                                                   ( 1.23)
+                                           kstfm,n(X) ,                   I ~ x ~ 1 + C-~
+                                                  k 9tf!,n(X) ,                 1 + c- t ~ x.
+Here
+
+                exp {z (ex +     ~ log 1 + x - l ~)}
+tJ;~.n(X) =Re                    2       I-x               2
+                                VI - x 2                                                            (1.24)
+
+                                           L: !e1 k=l
+                                     [ 1 + 3=1        t ( M~+ + N~ )]
+                                                          X)k  (1
+                                                                (1 - X)k                        '
+                 2
+tf~.n(X) = (1 - x )m/2Um•n(X),
+                                                        2
+                                           tf~.n(X) = (x - 1)m/2Um,n(X)                     (1.25,26)
+
+Um,n(x) = e,c(l-X) [iJ>(fJ, m   + 1; 0 + ~ ~ V
+                                                1=1   e1
+                                                           3   (o]                                  (1.27)
+
+                                 1                                                   3
+  VJ(~) = iJ>(fJ, In + 1; ~) L: K~ ~k + ~iJ>(fJ + 1, m + 3,~) L: L~ ~k                              (1.28)
+                                k=l                                                 k-1
+
+where ~ = -2zc(1 - x), fJ = Hm + 1 - zll)
+
+  9              exp{z[cX+~log(~~D-
+                               (n+                                        l)~]}
+tfm.n(x) = Re -->--=------'===-----~
+                        X2 - 1         ev                                                           ( 1.29)
+
+                                           L: e~l k=l
+                                     [ 1 + 3=1        t ( Mi
+                                                          +    (1        X)k
+                                                                               + (1 Ni
+                                                                                    - X)k
+                                                                                          )]
+                                                                                             •
+
+  In the foregomg, iJ>(a, c, x) IS the confluent hypergeometric functIOn ([16],
+Vol. 1, Chapter 6). The quantIty Il is a functIOn of c, m, and n. It must be chosen
+along with a suitable mteger q to satisfy
+       e + Illog(2VC) - CPm(ll) = (n + IH7r - (rn + l)h + 27rq                                      (1.30)
+and when used wIth (1.23) must YIeld a solutIOn $m.n having precisely n - m
+zeros in I x I < 1. Here the function cp,,( y) is defined by
+     ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROlDAL WAVE FUNCTIONS                                           105
+
+                              , r[i(1 + x + 'lY)] = R",(y)e'<PzCY)                                      (1.31 )
+with tP",(O) = 0 More detaIl about the selectIOn of 0 IS gIven m Section 3.7.
+  The quantities bJ ,Kt. , Lf. , JIIlf. and Nt. are all polynomials in 0. The first three
+of these are determined by the recurrence scheme (324)-(3.28); the M's and
+N's are gIven by a modificatIOn of the recurrence (2.32)-(234) as dIscussed
+below Eq. (3 36). The first few of each of these serres of polynomIals are gIven
+m Tables V and VI
+  The connecting constants of (1 23) are gIven by
+                              _
+                          k7 - ks -
+                                       _          cCmH)/2Rm(fj)eOCr/4) [
+                                                      2r(m + 1)               1+0
+                                                                                       (I)J
+                                                                                        C               (1.32 )
+
+
+                          kg = ce
+                                      OCr 2
+                                         / )      [1 + 0        G) J                                    (1.33 )
+
+with Rm(o) defined as m (1.31).
+  The solutIon (1 23) IS connected wIth Flammer's radial functIOn by
+                                           ::::
+                                        if.'m.nex) = k9Rm•n (c, x)
+                                                                    (1)
+                                                                                                        e1.34)
+      1.4 Asymptot'lCs of 'lI. n • Regardmg the eigenvalue 'lI. n of (1 3) we show m part
+IV that for small c,
+          2 [    22n(nl)3
+'lI. n =:;;. (2n) I (2n + 1)1 c
+                                  J2
+                                     2n+l    {     (2n + 1)c
+                                                              2
+                                                                     [
+                                          exp -(2n _ 1)2(2n + 3)21 + 0 c
+                                                                            (2»)} (
+                                                                                    1.35)
+
+whIle for fixed n and large c
+
+                                                          TABLE V
+
+                          2b o = o. - 1     m',   +    2 3b1 = - 03           +
+                                                                         0 - m'o
+                         2 6b. = 50 4 - 100 2     1 + + m'(60' - 2)        m4  +
+                         2 9b3 = - 330'           +
+                                              11403 - 370           +              +
+                                                                  m'( -460 3 500) - 13m40
+                                                     +
+                        210b4 = 630 6 - 3400 4 2390' - 14                 +
+                                                                       m'(1000 4 - 2300'   30)  +
+                                  +  m4(390' - 18)          2m 6+
+                  +
+                8(m                + +
+                        I)K; = t[- o'        (m          +
+                                                      I)'),     + 16(m       + +
+                                                                          l)'(m    2)Li = 03   oem    I)'
+                  +
+               27 (m                +
+                        l)K~ = 50' - 3        m(30' - 7) - 5m - m    2      3
+                  +
+               2 5 (m               +
+                        l)K; = t[03 - 0             +
+                                               m 20],       27 (m+ + +
+                                                                     l)'L; = t[5 3 0     2mo   m'Il)
+    2 (m +
+    7             +
+              l)'(m                    4
+                        2)L; = - 30 - 20' + +       1      +
+                                                           m(-04 - 70 2  +    2) - 6m'0'   m3(-5 2 - 2)
+                           - m             4
+
+          3 12 (m + l)Kl = t[ - 54 + 32.5
+                9                           15 + m(300' - 38) + m'(60' - 32) - 10m'
+                                                          2 -
+
+                           - m             4
+
+          3128(m + l)K~ = - 0' - 265 + 230 + m( -115 + 130) + m2(
+                                                      3                      1911) - 9m
+                                                                              3
+                                                                                              -1l3 -        3
+
+             2 (m + l)K: = t[- 50' + 100' - 1 + m'(-60' + 2) - m4)
+                8
+
+3 1210(m + l)'(m + 2)L; = 05 - 220 3 - 23 + m(-160 3 - 640) + m'(-20 3 - 62.5)
+                               - 24m 30 - 3m 40
+3 12 9 (m   + 1)2(m +   2)L~ = t[- 06 - 290 4 -,1902    9         + +
+                                                           m(-170 4 - 680'    21)              +
+                                  +
+                                  m'(-40 4 - 700'    6)          + +
+                                                          m 3(-240' - 18)    m4(-30 2 - 15)   +
+                               - 3m 6
+3!2 8 (m    + 1)2(m +   2)Lf = 230 6 - 20 3 - 250  m(90 6       +
+                                                           520 3 - 530)   +
+                                                                          m'(o'          +
+                                                                                  550 3 - 180)      +
+                                                      +
+                               + m 3(140 3 260) m4(03 190) 3m'0 +         +        +
+106                                                DAVID SLEPIAN
+
+
+                                                     TABLE VI
+
+      Ni   (Mi complex conjugate)
+   23M;    - 20     t(02+        +
+                           m 2 - 1)
+   27M~    04   +
+                100 2    1      + +
+                             m 2(20' - 2) + m 4 + tor -402 + 4 - 4m2]
+  27M;     - 04 + 220' - 9 + m2( -20 2 + 10) - m 4 + tor -80 2 + 24 - 8m2]
+  2'0 M;   - 70' - 620· + 90 + m 2 (-14O· - 20) - 7m 40 + 1[200 4 - 400 2 + 4
+           + m 2(240 2 - 8) + 4m4]
+  211M~    20' - 1880· + 660 + m 2(40· - 680) + 2m 40 + t[06 + 570 4 - 2090 2 - 9
+           + m'(304 + 460 2 + 19) + m4(302 - 11)]
+3129M~     180 6 - 4440· + 6900 + m 2 (360· - 3240) + 18m 40 + t[ -0 6 + 1270' - 7990'
+           + 225 + m 2 (-30 4 + 1620 2 - 259) + m 4(-30 2 + 35)]
+41213M~     + 12520 + 110300 78040 + 81 + m'(40 + 26120 + 24920' - 52)
+           0"                   6         4
+                                              -
+                                                      2
+                                                                          6   4
+
+           + m (60 + 14680' - 138) + m (40' + 108) + m" + t[ -31680' + 109440'
+                    4       4                             6
+
+           - 35520 + m 2( -44160 3 + 48000) - 1248m 40]
+41213M~    0" + 1000 6 + 162140 4 - 139480' + 657 + m 2 (40' + 1160 4 + 86360' - 1396)
+           + m4(60 4 - 6802 + 822) + m 6 (40 2 - 84) + m" + d - 10407 - 39760'
+           + 230800· - 3768 + m'( -3120' - 369603 + 35920) + m4( -3120· + 2800)
+           - 104m 60]
+412"M~     - 0" - 1240 6 + 52900' - 86360' - 225 + m'( -40' - 2120 4 + 33160 2 + 484)
+           + m4( -604 - 5202 - 294) + m6( -40 2 + 36) - m" + t[ -407 - 13160 5
+           + 100520· - 24600 + m'(-120' - 146403 + 26120) + m 4 (-120 3 - 1480) - 4m 60]
+4!2 " M!                                                                          +
+           o· - 4280· + 132380 4 - 490360 2 + 11025 + m'(40 6 - 9400 4 135320' - 12916)
+           + m 4 (60 4 - 5960 2 + 1974) + m 6 (40' - 84) + m" + t[3207 - 31040 5 + 336320 3
+           - 369600 + m'(960 5 - 48000 3 + 201920) + m 4 (960 3 - 16960) + 32m 60]
+
+
+                                     4- /-2Jncn+~e-2c [     002 - 2n + 3
+                1 - A =
+                                n
+                                      V 7r
+                                            n'
+                                                        1 -
+                                                                 32c
+                                                                                  + O(c ) .
+                                                                                      -2 ]
+                                                                                              ( 1.36)
+
+The lead term here has been gIven prevIOusly by Fuchs [17].
+  Let 0 be the root of smallest absolute value of
+                                    (' + 0 log(2VC) - cpo(o) = !7rn - t7r.                    (137)
+
+Then for large nand c, we have the approxImation
+                                                  An ~ (1     + e..O)-l                       (1.38)
+(Some numencal examples of the remarkable accuracy of this formula are gIVen
+m the next sectIon) Fmally we have the mterestmg limItmg result that if b IS
+fixed and
+
+                                       n = [(2/7r)(C + b log(2VC»]                            (1.39)
+whme the brackets denote "largest integer m", then
+                                          hmc~ooAn = (1          + e.-b)-l                    (1.40)
+
+  The ease where c = O( (n/log n)t) has been treated by Widom [19] who shows
+that then An    27r(c/4)2n+l/(n!)2.
+                ro-'                      .
+   1.5 Some Numerzcal Examples. FIgure 1 shows the behavior of if;O.8 for x > 0
+for c = 1, 10,20,40,80. The functIOn has been normalized accordmg to Flammer's
+convention so that if;O.8(0) = &
+    ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                                    107
+
+                  04,                                                                           ,4X10 3
+
+                                                                                                   2
+
+           1/1      O1       <
+                             \I                 IyI          •
+                                                             "   11
+                                                               , •    I '="         •   -     'I
+                                                                                               20" "
+                                                                                                   ,11
+
+                 -0.2                                                                              -2
+                 -041                                          V-.J 1                           1-4
+                  041                                            II I                           14
+
+
+
+
+                 :fv
+                                                                                                   2
+
+
+
+
+                      '\lJr'"
+           1/1
+
+                              \7I2~
+                 0.6l                                        f\ II                             ]:  -4          2
+
+
+
+
+                                                  r
+                  0.4      C =20                                                                       X 10-
+
+
+                                                                                                   2
+
+           1/1          I ',' ,
+
+
+                                                V   0"'"""2r: ~
+                                  II   '\'
+
+                                  •                   ' I'     'I               'C/"'
+                 -041                                            1
+                  0.4                                                                              4X 10- 10
+
+
+
+
+           1/1                                                                                          1/1
+                 -0.2
+
+
+                 -O.4r
+                 -0.6
+                                                                 II~
+                                                                        1
+                                                                            -   ,
+                                                                                               f4
+                                                                                            ,1.5_ 6
+
+                  0.4 [     1\         f\                        II n.                          14X10-26
+                  02
+
+          1/1       0111 \ I                     >,              11111111111111111111111
+                                                                                                        1/1
+                 -02
+
+                 -0 4 '                ,    I                    1I                            1-4
+                     o                     05                    11                           1.5
+                                                                  X
+   FIG 1 ,yO,8(X) for c = 1, 10,20,40,80. Note change III vertIcal scales for x > 1 for each
+c and III horIzontal scales for .r > 1 for c = 40, 80.
+108                                      DAVID SLEPIAN
+
+
+   For e « (n - m)7r/2, 1/Im,n IS concentrated outsIde I x I ~ 1. The zeros of 1/1
+m I x I ~ 1 are then dIstrIbuted hke those of P':: (x), the associated Legendre
+functIOn. When e » (n - m)7r/2, 1/Im,n IS concentrated m I x I ~ 1. Its n - m
+zeros 1Il I x I ~ 1 are crowded 1Il around the OrIgm. For I x I > 1, 1/Im,n oSCIllates
+rapIdly and IS small. These quahtatIve features can be seen clearly from the lead
+terms of (1.6)-(110)
+  When e ~ (n - III )7r/2 and e IS large, 1/Im,n behaves hke
+
+                             (1 - x 2)-tCOS(
+                                         .
+                                        sm
+                                             ex +5- 1o g - -
+                                                  2    1 - x
+                                                            l+X)
+for I x I < 1 - c-1 and for large x falls off like l/x and oscillates WIth angular
+frequency e. These features can be seen from the lead terms of (1 24) and (1.29).
+The behavior near x = lIS more dIfficult to descrIbe (1.25)-(128).
+   Programs for the IBM 7090 have been WrItten for the functIOns and constants
+of Eqs. (1.6)-(1.20) for the case m = O. A program for computmg SOn(e, x) and
+R~!! (e, x) by means of Legendre polynomIal and spherIcal Bessel functIOn ex-
+panSIOns as descrIbed 1Il [2] Sections 3.1, 3.14, 3 15, and 41 has also been pro-
+duced Tables VII, VIII, and IX Illustrate the accuracy of the asymptotIC
+formulae developed here The values m Italics m the regions defined on the
+rIght of (1.4). The asterIsks on Table IX mdICa te values of x for whICh the
+ Legendre and Bessel expansions apparently do not converge.
+   A program was also developed to find the root of (1.37) and to compute the
+rIght of (1.24) Table X compares (1.24) with exact values.
+                                           TABLE VII
+                                  n = 0,     c = 5,  m = 0
+
+       '"        oJ, Exact       k,oJ"        k.oJ"      k..,.          ",,,,.         k,.",
+
+
+        1         979200-0      979201-0    982060-0
+        2         918874-0      918876-0    921574-0
+        3         824959-0      824962-0    827286-0
+        4         706453-0      706455-0    708476-0
+        5         574224-0     .574252-0    575927-0
+        6         439613-0     .439665-0    440878-0    441537-0
+        7         313042-0      313104-0    314133-0   .314160-0
+        8         202850-0      199888-0    203822-0    203516-0
+        9         114494-0      112213-0    115540-0   .114851-0
+      1 0         502298-1     ,477134-1                503853-1       503853-1
+      1 1         926680-2                                             927107-2     ,922680-2
+      1 2    -    116568-1                                         -   117108-1   - 117065-1
+      1 3    -    174198-1                                         -   174587-1   - .174712-1
+      1 4    -   .135429-1                                         -   134456-1   - 135788-1
+      1 5    -    526640-2                                                        -   528053-2
+      1 6         317839-2                                                            318676-2
+      1 7         900601-2                                                            ,903072-2
+      1 8         109912-1                                                             110216-1
+      1 9         928790-2                                                            931279-2
+      2 0         503154-2                                                            504573-2
+--                           -----
+        ASYMPTOTJC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTJONS                                   109
+
+                                                TABLE VIII
+                                       n = 4,      c   10,      m = 0
+
+    x      '" Exact         k,,,,,         k,"',        k,"',       ",,,,.       k"".          k"".
+-
+   1   239277--0          .289286-0                                                           289011-0
+   2 - 739182-1       -    789087-1    - 748163-1                                          - 746155-1
+   3 - 347042-0       -    847069-0    - .342517--0                                        - 847587-0
+   4 - 386654--0      -    886715-0    - 386189--0                                         - 886105-0
+   5 - 151237--0      -    151284-0    - 149464--0                                         - .149155--0
+   6   227172-0            227352-0       280211-0                                            230185--0
+   7   536608--0           541246--0      588789-0                                           .539381--0
+   8   623349--0           622695--0      617992-0 .635883--0                                .624301--0
+   9   478826--0           473955--0     .481658-0 487719-0                                  .398753--0
+ 1 0   223313--0           202390--0                .227040-0      227040-0
+ 1.1   103927-1                                                   .101958-1     104520-1
+ 1 2 - 727571-1                                                 - .737972-1 -.755887-1
+ 1 3 - 421430-1                                                             - 421872-1
+ 1 4   221864-1                                                                .222889-1
+ 1 5   488366-1                                                                 502401-1
+ 1 6   229148-1                                                                 229849-1
+ 1 7 - 200298-1                                                             - .201089-1
+ 1 8 - 372073-1                                                             - 879807-1
+ 1 9 - 171842-1                                                             - .172861-1
+ 2.0   160907-1                                                                 161506-1
+
+
+   Figure 2 shows the dependence on c of the eigenvalues An of (13). Exact
+values of An were obtallled from (4.1) usmg the sphencal Bessel functIOn ex-
+panSIOn of [2] SectIOn 4, 1 to compute m~) (c, 1). Table XI compares the approxi-
+matIOn (137)-(138) With these exact values. For A m the range.l < A < .95
+the approxllllatIOn IS already good to 1% for n as small as 3
+   1.6 Dlscusswn. In many ways the matenal presented here IS far from com-
+plete From the purely mathematICal pomt of View, our derivatIOns must be
+regarded as heunstlc The mfimte senes m the formulae (1.6)-(1.10) of SectIOn
+12 and (124)-(1.29) of SectIOn 1.3 appear to be divergent. We suspect that
+they are all true asymptotic senes m the sense that If truncatlllg one after N
+terms YIelds y;N, then lImc~oocNI3( y; - y;N) = 0 where y; IS the properly normalIzed
+exact solutIOn of (1.1). We have not, however, establIshed thiS fact.
+   In the matchmg of solutIOns presented here there IS also much to be desired.
+The nonlmear recurrences encountered for the vanous coeffiCIents m the ex-
+panSIOns greatly complIcate matters and prevent wntmg general expres-
+SIOns We must be content With showmg that a few exphCItly computed
+terms match Indeed, were It not for the ALPAK program [18] even thiS modest
+goal would not have beon fulfilled, the algebra becomes so burdensome. Tables
+I-VI were computed by thiS program
+   In additIOn to the foregomg shortcommgs, It must be added that the chOIce
+of 0 deSCrIbed m part III IS partICularly troublesome
+   Despite these difficultieS, however, there can be little doubt that the ex-
+110                                          DA VJD SLEPIAN
+
+
+                                                    TABLE IX
+                                       n = 4,         c = 30, m = 0
+ --~------;-E~:~-i      ---    kl"'l                      k,"',          k"J;
+                                                                                                 k,,,,.    I          k.",.
+ -~-      ---1---- ----I                                                                I
+                                                                                 ---- - - - - -             --
+   10 - 144564-1 -         144564-1                    144557-1
+   20
+   30
+      - 392575-0 -
+      - 230669-1 -
+                           392575-0
+                           230669-1
+                                                -
+                                                -
+                                                       392541-0
+                                                       230649-1
+                                                                                        I
+   40   450703-0,          450703-0                    450664-0
+   50   429440-0 I         429440-0                    429403-0                         I
+   60   180140-0           180140-0                    180125-0
+   70   370492-1           370492-1                    370460-1
+   80   327512-2           327511-2                    327484-2       31464 3-2
+   85   628793-3           628784-3                    628738-3       _6276~ '6-3
+   90   77006 ;>-4         770282-4                   .770030-4        77001 5-4
+   95     *                430050-5                    428524-5       .4285£ 4-5
+ 1 00              -       105885-6                                   .1122~ '9-7 I             112269-7
+ 1 05     *                                                                                     146396-8         146395-8
+ 110*                                                                                       -   129693-9         129702-9
+ 1.15     *                                                                                     642373-9         642057-9
+ 1.20     *                                                                                 -   156789-8       - 151488-8
+ 1 30     *                                                                                                    - 781949-9
+ 1.40     *                                                                                                      144356-8
+
+
+                                                     TABLE X
+                                n = 8,               m  0,   c = 10,20
+
+                              c = 10                                                            c = 20
+      x
+                Exact                               ",'                         Exact                           ",'
+
+
+  _05           231111-0                     231021-0                     177887-0                          177531-0
+  .10           116808-0                     116504-0             I     - 427151-1                        - 436431-1
+   15       -   350653-1                 -   355691-1                   - 235749-0                        - 236486-0
+   20       -   178271-0                 -   178799-0                   - 267050-0                        - 266438-0
+  .25       -   268208-0                 -   268473-0                   - 112882-0                        - 110591-0
+   30       -   275231-0                 -   274949-0                     123951-0                          126681-0
+   35       -   194072-0                 -   193104-0                     283803-0                          284722-0
+   40       -   465647-1                 -   450301-1                     257069-0                          254605-0
+   45           123407-0                     125092-0                     560376-1                          508860-1
+  .50           261736-0                     262930-0                   - 194419-0                        - 199137-0
+  .55           319843-0                     319847-0                   - 337678-0                        - 338115-0
+  .60           270264-0                     268545-0                     281998-0                        - 276217-0
+  .65           117811-0                     114214-0                   - 510687-1                        - 409143-1
+   70       -   970723-1                 -   102176-0                     238688--0                         247810-0
+  .75       -   304332-0                 -   309820-0                     452400-0                          453954-0
+
+
+pressions gIven are the correct asymptotIc ones, they are remarkedly mternally
+consistent and check well numencally. We have ac('ordmgly deemed It best to
+present the matenal now III this unfimshed state rather than postpone pubhcation
+to some unforeseeable date when a more ngorous denvatlOn may be possible
+     ASYMPTOTlC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                111
+
+   1.7 Acknowledgment The author IS indebted to Mrs L. Needham for the
+ALPAK computation reporter here and to Mrs E Sonnenbhck for the extensive
+IBM 7090 programming used to numerically venfy the many formulae de-
+veloped here Both sets of computatIOns helped gUIde the author and brought to
+lIght several errors m hIS ongmal theoretIcal treatment of the problem
+
+  II. Derivation of Asymptotics for Fixed In and n and Large c. 2.1 Behavwr
+Near the Ongw. For completeness we present hele a short derivation of the
+standard asymptotIc expansIOn of the if;m,n(x) to he found III [1] and [2] The
+recurrence scheme (210)-(211) does not appear m the lIterature.
+                               2 m/2               _ l-
+  In (11), set if;(x) = (1 - x) u(x) and x = tlv 2c There results
+
+                           (~ - ;cx)u(t) +:C u(t) = 0                         (2.1)
+
+
+
+
+"n
+
+
+
+                                                                                  22
+                                               c
+                     FIG 2    Curves of >.." vel SUS c fO! n = 0 to 10
+
+where the operators,(l and X are glVen by
+                                           2
+               d2     t2                   d          d
+                                X = t dil + 2(m + l)t dt + m(m + 1).
+                                       2
+         ~=dt2-4'                                                             (2.2)
+
+ We seek a bounded solutIOn of (2.1) haVIng l = n - m zeros mit I < v'2c.
+ Now the Weber functions D,(t), J = 0, 1, 2,' ,(see [16], Vol. II. Chapter
+VIn) satIsfy
+                             ~D,(t)   + (J + t)D,(t) = 0                      (2.3)
+
+and D,(t) has preCIsely J zeros. Equation (2.1) mdicat.es t.hat for fixed t and very
+large c we should have approximately if;m,,. = (I - x 2 ) m/2uz (t) where Ul(t) ~
+Dz(t), Xn,m/2c ~ 1 + ~. This suggests att.emptmg a formal solution of (2.1) by
+the senes
+112                              DAVID SLEPIAN
+
+                                   TABLE XI
+                                            exact }.           }. from (139)
+
+
+                                        n=O
+               5                         309690                 .335527
+             1.0                        .572582                  599627
+             1.5                         762590                  773452
+             2.0                         880560                  881136
+
+                                        n       3
+
+             3.5                         0492455                 0468574
+             4.0                         110211                  109229
+             50                         .343562                 .346547
+             60                          646792                 .649512
+             7.0                         864567                 .864608
+             80                          960546                 .959634
+             90                         .990395                  989777
+
+                                      n = 10
+
+            13 5                        .0307501                 0302790
+            14 5                        .102185                 .101969
+            15.5                        .261187                 .261725
+            18 0                        .825431                 .825589
+            19 5                        .962447                  962137
+            20 5                        .988687                  988456
+
+
+
+                        UI(t) = Dz(t)     + ~ (1)'
+                                               2c Q,(t)
+                                                 00                            (2.4)
+
+                                      1 ,-1 2c
+                                      ~(1)'
+                          ' = l + - + £....i
+                        Xnm
+                        -
+                         2c           2
+                                             -- a,                             (2.5)
+
+where the a's and Q's do not depend on c. SubstItuting these series mto (2.1) and
+equating to zero the coefficients of dIstinct powers of c, we find the system of
+equations
+             ~Dl   + (l + t )Dl = 0
+                                                                               (2.6)
+             ~Q, + () + t )Q, = JeQ,-1 - L:'-1 akQ,-k, j = 1, 2, .. .
+Here we define Qo = D l •
+   Now It 18 easy to derive from the recurrence relations for Weber functions
+([16], Vol II, p. 119) that
+                             JeD!   L:;--2I'iDl+2'                      (2.7)
+where
+           1'12 = H(l - 1)(l - 2)(1 - 3),     I'll = ml(l - 1),
+                                                                               (2.8)
+             I'~ = m - t(2Z2 + 2Z
+                    2                 +
+                                    3),
+                                            1
+                                          1'1     -m,     I'i = i.
+    ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                 113
+
+(The superscrIpt on 'Y IS not, of course, an exponent. We shall often use such
+superscrIpts.) From (27) and (2.3), It IS seen that the solution of (2.6) is of the
+form
+                                     QJ(t)         L~!'-2J AkD/+2k(t)                          (2.9)
+On substItutmg thIS form mto (26) and equatmg to zero the coeffiCIent of Dp
+for each p, we obtaIll the recurrence relatIOns*
+                        ",2         A,-l k
+                 aJ      L,..k=-2    -k 'Y1-2k ,                                  J = 1,2,    (2.10)
+           . A'r
+           2r            L,..k=l ak A r- -
+                         "',          J k      ",2        A ,-I k
+                                               L,..k=-2 .'1r-k'Y/+2(r-k) ,
+                                                                                              (2.11)
+                  r = -2J, -2J + 1, .. , 2J;                                  j    = 1,2,
+Here we have adopted the conventIOns ao = 0, Ag = OOk and if J ~ 0, At = 0
+If I k I > 2j, or k = 0, or k < -lI2.
+   CombIllmg results, we have a formal solutIon of (1.1)
+
+                                        t2 )m/2 [
+                      ..y~,n(X) = ( 1 - 2c        DI(t) + ~ 2c
+                                                          co              (1)'    Q,(t)
+                                                                                          ]   (2.12)
+
+
+                         Xm,n   = (2l + 1)c + al + L           '" (1)J
+                                                                   2- a,+1                    (2.13)
+                                                              ,=1     c
+where l = n - m, t = xy2c, QJ IS gIven by (2.9» and the a's and A's by the
+recurrence (210)-(2.11) WhIle tedIOUS for hand calculatIOns III lIteral terms,
+thIS recurrence is easIly handled for numerIcal work by hIgh speed computers.
+ExpreSSIOns for the first few a's and A's are gIven III Table 1.
+   The serIes (2.12) IS ordered III powers of (2C)-1 when expressed III the varIable
+t. For fixed t, then, the first few terms can be expected to gIve a good apprOXI-
+matIOn to ..y If C IS made large enough. However, fixed t, say t = k 1 , Imphes
+x = kr/Y2c, so that the x regIOn for whICh (2.12) gIves useful IllformatIOn
+about ..y vamshes WIth IllcreasIllg c. When t = xy2c IS substItuted III the rIght
+of (2.12), the sum IS no longer ordered III powers of                  c-r,
+                                                            for, SIllce D J+2(xy2c)/
+D J(xy2c) = O(c), It IS seen from (2.9) that QJ+l(xy2c)IQ,(xy2C) IS O(c2).
+For fixed x, the terms of (2.12) are of IllcreasIllg order III c. WhIle it IS true, as
+proved in both [1] and [14] that the solutIOn of (1 1) IS gIven by
+                       ..ym,n(X) = (1 - x 2)m/2Dn_ m(xy2e)                + O(1/e),
+thIS statement IS III a sense vacuous as a description of ..ym,n(X) SIllce for fixed x,
+D p (xy2e) approaches zero exponentIally, It says only that except for x = 0,
+..ym,n approaches zero WIth IllcreasIllg e at least as fast as lie. For large e, except
+very near x = 0, if-' does not look lIke (1 - x 2)m/2Dn _ m(xy2e), other than in
+the weak sense that both are small.
+  The situation regardIllg Xm,n IS more satisfactory SIPS [14] has shown that
+(2 13) IS an asymptotic serIeS, so that
+  * The procedure outlined here is a special case of a general perturbation scheme deSCrIbed
+III AppendIX I   of Ref 20
+114                                         DAVID SLEPIAN
+
+
+
+                lim c
+                c-oo
+                       N
+                           (xn.m - (2l + l)c - al - t (21 )J a,-l) = O.
+                                                                 3=1        C
+
+  2.2 The Oscdlatory Regwns of1/lm.n(x). In (1.1) substItute 1/1 = (1 - X2)-!U.
+There results
+                                            U+r(x)U=O                                     (2.14)
+where
+                            2         2                2
+                = 1 -      m + (x - c i) (1 - i) = 2 (x - x~)(i - xi)                     (215)
+        r(x )                  (1 _ X2)2           c     (1 _ X2)2                          .
+
+where x~ and x~ are the roots of the quadratic equation
+                  x - (1 + x/c )x + (x + 1 - m )/c = O.
+                   2             2                   2 2
+                                                                                          (2.16)
+Now from (2.14) It is seen that U can have an OSCIllatory behavior only m
+regIOns where r(x) > O. In mtervals where r(x) < 0, U can have at most one
+zero. Smce the factor (1 - x 2 )-! relatmg 1/1 and U is monotone in every mterval
+not including the points x = ±1, the oscillatory behavior of 1/1 in such regIOns IS
+the same as that of U.
+   From (2.13), one has for large c, Xn.m = (2l + l)c + al + O(1/c). SubstI-
+tuting thIs value for X in (2.16) one finds
+
+                             Xo    = ±/2l ~          1[1 + 0 (OJ
+                                            - (1 - m2») + 0 (1)
+                                   = ± (1 - 1
+                                                                                          (2.17)
+                             Xl                              - .
+                                                c2       2                      c3
+
+ExammatIOn of (2.15) then shows that for large c, the osculatIOns of 1/1 are COIl-
+fined to the regIOns I x I < v(2l + 1)/c and I x I > 1 - (1 - m )/2c •
+                                                                     2    2
+
+   Since if;m.n(x) is either even or odd m x, m all that follows we shall restrICt
+our attention to the region x ~ O. We shall find dIfferent asymptotic expreSSIOns
+for 1/1 m each of the regIOns defined on the right of (1.4). The separate consider-
+ation of regions near X = 1 IS necessItated by the singular behavior of rex) at
+x=1.
+   For 0 ~ x ~ c-1 the succeSSIve term of (2.12) are ordered in powers of c-t,
+and for large enough c, the first few terms of this senes give an accurate descnp-
+tion of if;m.n .
+   2.3 Solutwn for c-t ~ x ~ 1 - C-1 It IS now convement to work WIth the
+independent variable y = VI - x 2 • Equation (1.1) becomes
+                    2
+                                  (1v
+         (1 - y2) -d if; + - - 2y dif;
+                        ~
+                                            )
+                                     - + ( X - c2 + c22m2)
+                                                ~
+                                                         y - -     if; = O. (2.18)
+                                                                                     if
+In thIS latter equation substItute
+                                            eCY(1 _ y)112
+                                    t/I =   r-:I-.   I   _,/LLH/I)   v(y)                 (2.19 )
+     ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                                     115
+
+and the asymptotic series (2.13) for Xm,n • There results
+(1 - y2)V   + [2c(1 - y2) - (2l + 1)]v
+             + [l -y2
+                      m + (Z + !)2 + ! - (2Z + 1)y + al + t a)+1] v = 0
+                                   2
+
+
+                                   (1 - y2)               )=1 (2C)1
+or
+                                                                          00
+                                             1              1                    1
+                              Ii       + -2c £v + -1--
+                                                   -y E (2Cl
+                                                           ) a) v = 0
+                                                                  2       2
+                                                                                                                (2.20)
+
+where'the operator £ IS gIven by
+
+                £v = ii -                (Z + !)(_1_
+                                              2 1+y
+                                                     + _1_) v + s(y)v
+                                                       1-y
+                                                                                                                (2.21)
+
+and
+               4s(y) = 1 - 4m
+                                                 2
+                                                     + (l + 1) (l + 2) + Z(l - 1)                               (2.22)
+                          y2                                    (1 + y)2                  (1 - y)2'
+Here we have made use of the explicIt expressIOn found earlier for al as gIven m
+Table I
+  SubstItute the expanSIOn
+
+                                             v = 1 + E 121)lf)(Y)                                               (2.23)
+                                                         )=1 \        C
+
+mto (2.20). Here thef)(y) are assumed mdependent of c. Equatmg to zero the
+coefficients of distmct powers of c, we obtam the system of equatIOns
+                    -fo = 0,                     -II = £fo
+                                                        1             )                                         (2.24)
+                    -I) = £frl + -1--  E a, f)-"
+                                  - Y2 ,=2
+                                                                                            J = 2,3, '"
+
+where we defme fo = 1.
+  Equations (2.24) can now be mtegrated successIvely Each new mtegratIOn
+mtroduces a constant of integratIOn. These can be handled m a systematIc way
+as follows. Let fo = 1, it, f2, .. be a particular solutIOn of (2.24) Then we
+assert that
+                   go = fo
+
+              g)(y) = fJ               + 2:~:1 krf1-r + k} = fJ + 2::=1 k f 1_                   r   r ,   J = 1,2, .
+WhICh contams a new additive constant for each g, is also a solution for arbItrary
+values of the constants kl , k2 , '. For, we have
+                    }
+
+
+     -g1 = -11 -    E krlrr
+                    r=1
+
+                              1                                                              1
+        = £frl + -1- - 2 L: a, f)-, + L: kr                                             + -1 - y L:
+                                         J                  J-l            [                         )-r         ]
+                                                                               £frr-l       --2      a, fr.-'
+                          -        y ,=2                    r=1                                  ,=2
+116                                                           DAVID SLEPIAN
+
+
+                                                                            1
+                       L: kr f,-l-r
+           = £ ( fr1 + r=1                                        + -_1y L: a, f,-1 + L: kr fr.-r
+                                  }-1                     )                          J           (       )-,           )
+                                                                                 2
+                                                                                     ,~2                 ~1
+
+
+                                      1
+           =       £gr1 + - -
+                          1 - y2 ,~2
+                                     a. g,-•.L:'
+In view of thIS fact, we can now write in place of (2.23)
+                                      1                                     1
+                    v = 1 + 2c (ft + k1 ) + (2C)2 (f2 + k1 ft + k 2) +
+
+                                              1       (
+                         = 1 + ~ (2c)1 f1 + ~ krfrr •
+                                      00                                1                )
+
+
+
+
+But now It IS evident that the arbitrariness apparently introduced by these
+constants of integratIOn into the determmatIOn of if; is completely illusory. For,
+on wfltmg
+                                       eCI/(1 _ y)I/2
+                            G(y) = r:-;{,      -.\(1+1)/2                   (2.25)
+                                                                                 I
+
+
+
+
+equatIOns (2.19) and the expression just found for v gIVe us
+                1
+if; = G(y) [1 + 2c (f1                    + kl ) + (2~)2 (h + kdl + k2) + '"                                   J
+  =   G(y) [ 1 +               2J1
+                               11               1
+                                   + (2c)2f + (2c)2fa +
+                                                      2
+                                                                                                 J
+                                      kl              [                 1
+                                 + 2c G(y) 1 + 2c ft + (2C)2 f2 + (2C)2ia +
+                                                                                             1           1           ... J + ...
+  =   (
+                           k')
+          1 + ~ (2c)' G(y) ~ (2C),i1(Y).
+                    00                        00          1
+
+
+The choice of the k's formally affects only the scale of if;. Accordmgly, we hence-
+forth wflte
+
+                                           if; = G(y)             [1 + ~               1
+                                                                                     (2 C),i,(Y)     J                       (2.26)
+
+wIth G given by (2.25), and now tum our attentIOn to obtammg a partIcular
+solution of (224).
+  The first of (2.24) IS
+
+          -J = .(' = ( ) = ~
+               1         £JO      8   Y           4
+                                                      [1 -          4m
+                                                                   y2
+                                                                            2
+                                                                                + (1 +(11)(1 +
+                                                                                         + y)2           2) + (1 _ I)J
+                                                                                                               1(l -
+                                                                                                                       y)2
+
+and we take
+
+                        ( ) = ~ [1 - 4m + (1 + 1)(1 + 2) _ 1(1 -
+                     f lY     4     Y         l+y
+                                                              2
+
+                                                             l-y'
+                                                                                                               1)J           (2.27)
+   ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                            117
+
+Note that the apparent singularity at y = 1, i.e., x = 0, due to the term l(l - 1)/
+(1 - y) IS canceled by the factor (1 - y)l/2 m G(y) m (2.26). Our solution so
+far IS analytIC at y = 1.
+  The next equatIOn of (2.24) IS
+
+                                           -12 = £jl + 1 _ y2 .
+                                                                    ll2
+                                                                                                        (2.28)
+
+  From (2.21), (2.22) and (2.27), It IS easily seen that £11 on the right of (2.28)
+can be expanded in partial fractIOns m the form
+
+                            ±(D' + +E, + F. ) .
+                            ,=1       y'       (1        y)'            (1 - y)'
+Actual computatIOn shows that DI = 0 and that El = FI = (2l + 1)
+(Z2 + l + 3 - 8m2)/16. But, by the recurrence (2.10), (2.11) one finds, as
+shown m Table I, a2/2 = - EI and so the terms on the right of (2.28) that
+would integrate into logarIthms all vamsh One finds
+                                 2                   2
+j2(y) =  }5
+          [12(2l + 1)y(1 - 4m ) + (1 - 4m2~~9 - 4m )
+
+                                2
+_ (Z + 1)(Z + 2)[Z(l - 5) - 8m ] + (l + I)(Z + 2)(Z + 3)(l + 4)                                         (229)
+              (1   +y)                         (1     y)2                           +                     .
+      _ Z(l - 1)[(Z + 1)(Z + 6) - 8m ] + l(Z - 1)(Z - 2)(l - 3)J
+                                    2
+                      1 - y                       (1 - y)2       .
+Note that once agam the coeffiCIents of 1/(1 - y) and 1/(1 - y)2 are such that
+combined with the factor (1 - y) 1/2 m G, if; has no singularItIes at y = 1.
+  The foregoing examples suggest that a solution of (2.24) can be obtained III
+the form
+
+                   j,(y) = ~
+                                      , (D'y: + +'E' y)' + F')
+                                                    (1      y)' .              (1 -'                    (2.30)
+
+Adopt the abbreviatIOns ZI = y, Z2 = 1 + y, Za = 1 - y. Now we can WrIte for
+t = 1, 2, 3 and k = 0, 1, 2,
+
+
+                £k
+                  1    H2 3 d~1
+                            LL
+                             l ,
+                                          1 1
+                                       1 _ y2?
+                                                   HI 3
+                                                   ~"
+                                                   L....
+                                                           _
+                                                         Ukl         (2.31 )           L zr,
+                   Z.       1-1 ,=1 Z,                                    ,        1=1,=1
+
+Insert these expanSIOns along WIth (2.30) into the general equation of (2.24)
+By equating to zero the coeffiCients of distinct powers of l/y, 1/(1 + y) and
+1/(1 - y), we obtam the recurrence
+     k        1         k         2                  ,          3
+  kD,     e,k,    kE,         e,k,            -kFk             e,k,
+                                                                                                        (232)
+                                                         k = 1, 2, "',),                j   = 2, 3, .
+where we have WrItten
+ I
+e,k   ~,-1
+    = L.....=k-I (D,-Id
+                   ,
+                              E,-Id 21
+                        'k+l + .
+                        ll
+                                    ,k+I + ,
+                                          F,-Id31)
+                                               .k+I
+
+                                  + L....r=2 ar L.....=k
+                                       ~,-k         ~J-r(D,-r
+                                                                    •
+                                                                              11
+                                                                          U.k+l
+                                                                                   + E,-r 21
+                                                                                      • U,k+l
+                                                                                              + F,-r 31 )
+                                                                                                 • U.k+I.
+118                                                              DAVID SLEPIAN
+
+
+These permIt one to obtam successIvely the D's, E's and F's assuming the a's
+known In (232) terms preceded by L~ are to be interpreted as zero If b < a,
+and the conventIOns D: = E~ = F: = 0 if ~ < 1 or Z > J or J < 1 have been
+adopted. The startlllg values can be taken from (2.27) or (2.29).
+  In order that (230) satisfy (2.24), in addition to (2.32) It is also necessary
+that the equatIOns
+                                                                                                    J = 2,3,·
+                                             1
+                                            e,o         0,            e;o        e~o    - a,/2                         (233)
+be satIsfied. These lllsure that the logarIthmIC terms obtallled on llltegratlllg
+(2.24) all vamsh. Equation (232) together WIth the second or third equation
+of (2.33) can be considered as a recurrence to determllle the D's, E's and F's
+and a's That the remallllllg two equatIOns of (2.33) will then be satIsfied and
+that this recurrence will yield the same values of the a, for allj as the recurrence
+(2.10)-(2.11) has not yet been shown. ComputatIOns by ALPAK for.J = 1 to 5
+have given the same a's and checked the consistency of (2.33).
+  The constants in the expanSIOns (231) are readIly worked out They are
+d!!       -ako,1         + ao,2,       + aO}2,      d~! = ako}1
+dt; = (-l)kk({3 - aO)o}1 + (_1)k{30J2, d:; = k({3 - ao)T(k+1l0 + (3T o}2,                                       }1
+                                                                                                                        k
+
+
+
+d kJ = k
+ 13
+             +)
+          'Y (   ao OJI + 'Y 0  dkJ = k( 'Y + ao )2-(k+1l O}l + 'Y 2- 0}2,
+                                                 }2 ,
+                                                                 23                                        k
+
+
+
+         kaO[l + (_1)<+1+1] + h + (3( -1)k+1(k + 1 + J), j ~ k + 1
+dt! = a + k(k + 1),                                             J = k+ 2
+       {
+         0,                                                    J > k +2
+        rka o2 H - + (a + 'Y2,-k-2)(k + 1 - J),
+                   2
+                                                                J ~ k + 1
+di; = ~ (k + 1) + kao + {3,                                     J=k+2
+          lo,                                                                                           J>k+2
+              -ka02      + (a + (32
+                         H
+                              -
+                                  2                          H
+                                                                 -
+                                                                      2
+                                                                          )(k   + 1 - J),               J ~ k   + 1 (2.34)
+d!~ =         le(k + 1) - kao + 'Y,                                                                     J=k+2
+          {
+              0,                                                                                        J>k+2
+ 21
+Uk,       UkJ
+              31
+                     0,               ut;          tc-l)kOll'                     U~;   2-(k+1) 01, ,
+
+U!~       tOI, ,              23
+                             Uk,
+                                            2-(k+1)~
+                                                        U,l ,
+
+
+U!! =     {t[l +         (-1)k+}J,                                                                             J ~ k
+              0,                                                                                           J > k;
+          {2'-k-2                                                                                       J ~ k +1
+Ukl22 =              '
+
+              0,                                                                                        J> k + 1
+
+Uk,33 = {2
+                                                                                                        J ~ k + 1
+               H    2
+                   - '
+
+              0,                                                                                        J> k + 1
+    ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                               119
+
+where o'J is the usual Kronecker symbol and
+a = tel - 4m ),
+                   2
+                            (3 = t(l      + l)(l + 2),                     l' =    tz(l - 1),
+                                                                                                           (2 3fi)
+                                                                                          Qo   = l +!
+  Usmg these values, one can compute from (2.32) the values gIven on Table III.
+  WIth the D's, E's and F's given as above, we now define
+                                        cy   (I             ) 1/2   [           1       ]
+                   Y;~.n(X) = ~" ,- ~('-Ll".                            1 + ~ (2c)JJ(Y)
+                                                                             00
+                                                                                                           (2.36)
+
+wIthfJ(Y) given by (230) and Y = VI - x 2•
+   For any fixed Y wIth 0 < Y < 1, any given term m the sum (2.36) can be
+made small compared to 1 by choOSIng c sufficiently large. For fixed c, however,
+due to the terms In y- J and (1 - y)-J In fJ as given by (2.30), thei h term In
+(2.36) will be small compared to umty only if (2C)-1 « y « 1 - (2c)-\ or,
+what is the same, If c-i « x « 1 - (&2)-1. For fixed large c then, the first few
+terms of (2 36) wIll desCrIbe y; accurately If c-t ~ x ~ 1 - C-1 whICh IS the
+restrlCtIOn we have Imposed.
+   2.4 Jmning of the SolutIOn y;~." and Y;~,n. In terms of the varIable x, our
+solution (2 12) reads
+                                          2,    1      00
+
+
+             y;~,n(X) = (I - x2)m/2 ~ J=~' (2c)' A; Dl+ 2J (xV2C).        (2.37)
+
+In this serIes, substitute
+                                                   r   = u/ca                                              (2.38)
+For fixed u and large c, the argument of the Weber functIOn In (2.37), namely
+xV2c = uV2ct-a becomes large if a < !. The ratIO of the (z + 1)at term to
+the zth term IS now O(Cl - 4a ) under these assumptions, so that If a > t, the
+successive terms of (2.12) wIll be ordered In powers of I/c4a - and the first term
+                                                               1
+
+
+of the sum can be expected to gIve a good value for y; for large enough c. Ac-
+cordIngly we Inquire mto the lImItIng form of (2.37) when (2.38) holds with
+fixed u, large c, and
+                                                  t < a < !.                                               (239)
+  We now substItute Into (2.37) the asymptotlC expreSSIOn
+                     - /02 I-a)
+              D • ( Uv            [ _ /02 !-a]v -lu 22c l - 2a "                   ( _l)k[V]2k             (2.40)
+                         ~c     "" u V ~C      e               L..                   2k (I 2a)k 2~
+                                                                           k=O    k!u c        2
+where the falling factorIal [k], IS k(k - 1)· . (k - J                            +
+                                                             1) for POSItIve Integral
+j, one for j = 0, and zero for all other values of j. (See [16], Vol. II, Eq. (8.4.1),
+p 122.) The resultant triple sum can be rearranged to yield
+y;~,n(U/ca)      21/2cfJl/2ule-u2c~/2   [1 _         2
+                                                   u ]m/2
+                                                   c2a
+
+                                  x i: i: _1_ t                           (_1)J+V[l    +    2J]2(v+J) A;   (2.41)
+                                        ,=0 v=-2. c'+ll v J=-2o              u 2v2'+1+2v ( 11  +  J) !
+120                                                   DAVID SLEPIAN
+
+
+where {3 = 1 - 2a. The expression in brackets can be expanded, and one sees
+that, as functions of u, the terms of the expanded form for vi are all of the form
+AuPe-u2c~/2. For large e, we see from (2.41) that the term with p = l dominates,
+since the only term in the triple sum that does not involve e to a negative ex-
+ponent (namely the term ~ = v = 0) has the value unity.
+   We now wnte
+                         .1,1 ( / a)
+                         't'm.n U e
+                                            BI/2 1 -u 2 cP/2gl ( e )
+                                     -+ 21/2cue                             (2.42)
+where gl(e) IS obtained from (2.41) by extractmg the terms mdependent of u
+from the product of the triple sum and the expression in brackets. StraIght-
+forward marupulatlOns finally yield gl(e) = 1  gUe    gVe
+                                                          2
+                                                                  with              +             +       + ...
+                      1 =
+                     gk
+                                 ± f:
+                                 .=0 ,=-2,
+                                                 (-1)'[m/2h-, [l + 2J]2(h+3) A~
+                                                   (k - i) !(k - ~ + J) ! 22k+1- ' •
+
+
+Note that gl(e) does not depend upon a provIded (239) holds. The fIrst few
+g! as computed by ALPAK are gIven on Table IV.
+  We next consider our solution if;!.n(x) as gIven by (2.36) and (2.30) when
+x = u/ea • The ratio of the (~+ l)st term m (2.36) tothe~thtermIsnowO(e2a-1),
+so that if a < !, (as IS required by (2.39», the first term of the sum can be
+expected to give a good value for if; for large enough c.
+  We now expand the varlOUS factors of if;!.n(u/ea ). Smce y = (1 - x )i =
+                                                                        2
+
+       2 2a
+(1 - u /e )l, we can wnte
+
+                   e = exp {e [1 - 2·1!
+                     CY
+                                   _1_ ~e - 2~·2! ue                  2a             2
+                                                                                             4
+
+                                                                                             4a
+                                                                                                  -   ... ]}
+
+
+
+                           =     eCe-utcP/2[1 + Eu2.
+                                                             .=2
+                                                                               [E R.,(-1)']
+                                                                               ,=1
+                                                                                     l
+
+                                                                                          c2a' - 1
+
+where
+             R., =       """"
+                         L....    a282 as83 .. a:'                                       1·3·5 ... (2j - 3)
+                                 82 ! 83 ! ... 8, ! '                      a, =                 21 '1
+                                                                                                  J.        '
+
+and the sum defining R., is over all partitions 282     383           is. = ~ of i         +          + ... +
+into j parts with no part less than two. It is convenient to extend the definition
+of R' J so that ROJ = l)Jo = R 30 , R 1, = O.
+   For the remaining part of the factor in (2.36), one finds
+                                  1           (1 -    y)1/2                    ul             u 2•
+                                 Vy (1 +             U)(l+1)/2       = e   1a2l+t        ~ M. e2,a
+with
+                            + 3)/2      M2 = (4l + 24Z + 31)/2 ·2!,                         2
+                                                             3                                                    6
+        Mo    1,           M1 = (2Z                              ,
+
+
+        M3 = (8Zs + 108Z + 454l + 561)/2 '3!,
+                                      2                                    9
+
+
+           = (16Z + 384Z + 332OZ + 12000Z + 14577)/2 '4 1,
+                     4                    3          12  3
+        M4
+
+
+etc.
+       ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                                                     121
+
+   CombInIng these results, we find
+                     C    I       -u2c~/2 [                     1              ]
+         ~
+I/;;",n ( ) = e          ~21+!                1 + ~ (2C)J1(Y)
+                                                                                                                                     (2.43)
+                                                                         :E:E :E u2(,+klM R ( 1)1
+                                                                          '"   ""      [./2]
+                                                                                                            k    '1   -
+                                                                         ,=0 k=O 1=0                    C2a (·+k)     1
+The expreSSIOn In brackets here can be expanded, and the resultant serIes for
+1/;2 WIll consIst of terms of the form BuPe-U2C~/2. Equation (2.43) shows that the
+term wIth p = 1 domInates for large c, and so we write
+                                                                         C I -u2c~/2
+                                               2 (
+                                              I/;m,n u/c
+                                                           2)
+                                                                -+
+                                                                   e uc"12l+i
+                                                                        e                      ( )
+                                                                                             g2 c                                    (2.44)
+
+where g2(C) consIsts of all terms mdependent of u that are obtamed from the
+product of the triple sum and expression m brackets in (2.43). These terms can
+be sorted out m a routme manner. We find, after much expandmg and rearranging
+                               2
+that g2(C) = 1 + gi!c + g;;c +      . wIth
+21g~      ?:; [E1
+             1              ]
+              D~ + 2: + F~ U + ~ M, {;. F~ U          kk
+                                                                     1             1
+                                                                                               qq - ,
+
+
+                                                                                                                               R (        )"
+                                                                    + :E E   L: L:
+                                                                         k+J k+J 'Fk+JU
+                                                                          1
+                                                                                                        q
+                                                                                                                     ],r
+                                                                                                                qq-,1V1..-,     'k   -1
+                                                                         k=l '=2k q~' .=2k                                2k
+Here the U's are gIven by
+                                                                                         2a(q-p)
+                                               (1 - y)-q = L: U qp C (q_Pf
+                                                                         p=o            U2
+                                                      2                                         q
+so that U qO = 2 , U q1 =                              3)2 - 4/2!, etc. Note that g2(C)
+                                                _q2 - , U q2 = q(q -
+                              q                       Q
+
+
+IS mdependent of a provIded thIS quantIty is less than t The first few g~ as
+computed by ALPAK are given on Table IV.
+   The solutIOn 1/;1 and 1/;2 should dIffer only by a constant factor (possIbly a
+functIOn of c). Comparison of (2.42) and (2.44) shows that for large c and
+x = u/ca, u fixed and t < a < t, the lead term of I/;~,n and k21/;!.,n will be identIcal
+if we choose
+                       k2 = 21/2!1/2g1 (C) = e- Cc!/22(3I+l)/2g1 (c)
+                                                                                 (2.45)
+                              eCg2(c)/c" 12 1+i       g2(C)
+
+as reported in (1.11). Note that tills IS Independent of a.
+  2.5 Solution for 1 - c-1 ~ X ~ 1. We seek a solutIOn of (2.18) near y = 0
+valId for large c. SubstItute y = 81c into (2.18) to obtam
+
+             (c2 -       2
+                     8 ) -
+                                    2
+                                  d 1/; +
+                                  M
+                                              (c- -
+                                               8
+                                                2
+                                                       28         + ( X - c2 + 82 - -m
+                                                            ) -dif;
+                                                                ~                    ~
+                                                                                      c) I/; = O.               22
+
+
+
+Into tills equation SubstItute the senes (2.13) for x. We write ao = 1 + t. Re-
+grouping the terms results in
+                                                    1                  aJ
+                                          mtl/; = (2C)2 m,1/; = J=O (2C)1+1 I/;
+                                                                               f                                                     (246)
+122                                        DAVID SLEPIAN
+
+
+with the operators given by
+
+                            4;m =      -i
+                                       ds 2
+                                                + -1 ds
+                                                     --d - ( 1 + -m2)
+                                                        S                    S2
+                                                                                                        (247)
+                                              2
+
+                             m: = s - 2
+                                    ds
+                                       2    d
+                                                  + 2s -dsd - S         2
+                                                                                                        (2.48)
+
+  Equation (2.46) suggests solutIOn In the form
+                                                  Q()           1
+                                      if; = ~ (2C)1 h1(S)                                               (2.49 )
+
+wIth the h's independent of c. By substJtutmg thIS expression In (2.46) and
+equating to zero the coefficIents of dIStInct powers of 1/c, we find the system of
+differential equatIOns
+                            ;mho = 0,                   ;mh l = -aoho
+                                                                                                        (2.50)
+                            ;mh 1      m:h J - l -              "'1-1
+                                                                L..,~o a, h 1-1-., J = 2,3,
+
+   We are, of course, seekIng a solutIOn of (2.46) that remaInS bounded at s = 0
+for all c, and hence reqUIre each h to be bounded at s = 0 We are forced then
+to take from the first of (2.50) hoe s) = 1 m( s) where 1m is the usual Bessel
+functIOn of pure InmgInary argument ([16], Vol. II, p. 5).
+  To dIsplay exphcItly a solutIOn for the remaInIng equatIOns of (2.50), It IS
+convenient to Introduce the functions
+
+                                      P,(s) = s11m+,(s)                           j   = 0,1,2, .        (2 ..51)
+
+From (2.47), (2.48) and the recurrence relatIOns and dIfferential equation for
+the 1's ([16], Vol. II, p. 79) one readIly establishes the formulae
+;mp, = tjP 1- 1                                                                                         (2.52)
+m:P,   = [2j(2J + 1) + m(4J + 1) + m2]p, + (2J + I)P,+I,
+                                                                                  j = 0,1,2, ....
+ExamInation of (2.50) now shows that constants                              mcan be chosen so that
+  hoes) = Po(s) = 1m(s),              h/s) = L~~I B!P.(s), J = 1,2, ....                                (2.53)
+
+Indeed, SubstItuting this assumed solution Into (2.50), we find
+
+tB~ = -ao = -(l + t),                                           + m - ai,
+                                                            2
+                                      tB~ = m
+                                                                                                        (2.54)
+                              t·2B~ = 1 - aoB~
+and for J = 3, 4, .. and 'l = 1, 2, 3, "', J
+tlB! = [2(t -     1)(2i -    1)     + m(4'l - 3) + m21B:=~ + (2'l - 3)B!:~                              (2 ..5!) )
+                                                                              -
+                                                                                      "',-.    B,-I-k
+                                                                                      L..k=O aA ,-1
+    ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                  123
+
+Here we define B~ = 0,0 and for J ~ 0 we define B~                          0 If Z > J or z < 1 The
+h's are thus completely determmed.
+   \Ve now wnte
+
+                    1/;~.n(X) = Im(s) + ~ (2~)1 1;1 milm+k(s)                                (2.56)
+
+                       S    = ey,       y = V1='X2,                    Ix I ~ 1
+wIth the B's gIven by (2.54)-(2.55) and the a's by (2.13). The first few B's are
+gIVen III Table II. Note that when x = 1, I.e., y = s = 0, 1/;~.n is zero If m ~ 0,
+whereas"1/;~.n(x = 1) = 1.
+   26 Jommg of the Solutwns 1/;~.n and 1/;~.n. As expIessed m terms of the
+varIable s, the rIght side of (2.56) appears ordered in inverse powers of c. If,
+however, s = cy IS substituted there, the terms are no longer ordered m powers
+of lie, so that the first few terms of (2 ..56) give useful mformation about 1/; only
+If y tends to zero as c gets large.
+   We observe now that If, wIth v fixed, y = vic", then s ----t CXJ and the terms of
+(2.56) are ordered m powers of lie" provided 0 < a < 1. The argument of the
+Bessel functIOn m (2.56) IS now large and we can use the well-known asymptoti(~
+form ([16], Vol. II, Eq (7.13.5), p 86)
+
+                              i.(z) =       _ez_:E (-I)'(v,J)                               (2.57)
+                                            V271'z ,=0         (2Z)1
+where (v, 0) = 1 and for J ~ 0,
+                         2        2
+             (    ) _ (4v - 1) (4v -               32 ) • • [4v 2 -        (2j -   1?1
+               V,J -                                   221Jl
+
+Insertmg this expreSSIOn in (2.56) and rearrangmg the sum, we find
+                              vel-a                          1)'(          +
+                                                                        k )B' k-.
+          y = V I C") = C             rz=
+                                          00,           00 (
+     a (                    e            " "" -                   m      ,Z kV               (2.58)
+   1/;m.n               (1 ,,)/2 _       £..... £..... L.J
+                               v .:.7I'V ,=0 k=O ,=0
+                                                              2'+'e,+(,-k) (l-a)
+
+  As functIOns of v, the terms of the series (2.58) are all of the form Avp-'evcl-a.
+For large c, the term with p = 0 dominates. We WrIte
+                                                          t'C 1 - a
+
+                           1/;~.n(Y = vic") ----t (J a~/2        /       ha(c)              (2 ..59 )
+                                                   e           " 271'v
+where ha(c) = 1 + hUe + h~/c2 + .. consists of those terms of the trIple sum
+in (2.58) that are independent of v. We find
+
+                              h; =    t
+                                      ,=0
+                                            !3~( -1)'(m + z, z)
+                                                    2'+1
+                                                                                            (2.60)
+
+so that ha(e) is mdependent of a. Some values of h; are gIven m Table IV.
+  We now investigate the behavior for large c of 1/;~.n(Y = vic") as given by
+(2.36). Since a > 0, y ----t 0 for large c and we have
+124                                                DAVID SLEPIAN
+
+
+
+1/1!... ( y = ~)        =e     J,
+                             vel-a al2 [
+                                           1
+                                                    00
+
+                                               + ~ (2c)J,(Y)
+                                                              1                      J
+                                                                                                                  (2.61)
+                                               X   t{cak t (-1)'[£J2 • [- ~J
+                                                   k=O            ,=0      2                                k-,
+
+where as before the subscripted bracket is a falling factonal. As functions of v,
+the terms of this series are all of the form Avp-!evel-a. We see from (2.61) that
+for large c, the term with p = 0 dominates. We write
+                                                                            a/2 'Vc 1 - a
+
+                                    1/I! ... (y = v/ca ) - t c e r-                         h2(C)                 (2.62)
+                                2
+where h2( c) = 1 + hVc + hi/c + ... consists of those terms mdependent of v
+obtained from the product of the tnple sum of (2.61) with the expansion of the
+square bracket factor there. Straightforward mampulations Yield
+
+            2'h; =     t (E~ + F~ + D~ t (-lnZ/2]~crICk[-- HZcr)! + l)h-~).
+                       k=l                           ~=O
+                                                                                                                  (2.63)
+
+Note that h2(C) is independent of a. Some values of h; are given in table IV.
+  Comparison of (2.59) and (2.62) now show that for large c and y = v/ca ,
+o < a < 1, the lead terms of k21/12 and ka1/la wIll be identical If
+                                      a/2 (1-a)/2 - ~ h (                        )                  h C)
+                          ka = k2 C        C         V ,",1I'V          2    C       = y'2;C ~ k2
+                                               VV ha(c)                                             ha(c)
+as reported m (1.12) and (1.15).
+                SoZutwnfor 1 ~ x ~ 1 + c- • When 1 xl G 1, we adopt the abbrevIation
+                                                         1
+    2.7
+Z   = VX2 -         1. The substitutIOn y = ~z m (2.56) then yields
+
+                      ~m [Jm(cz) + ~ (2~)11; m(-cz)kJm+k(cz) J
+                   .J;m.n(X) =
+
+as a formal solution of (1 1) valId for 1 ~ x ~ 1 + C-1. Here J. is the usual
+Bessel function and we have used the relatIOn I.(iz) = ~v J.(z). We must now
+choose an appropnate constant multIplier for this expreSSIOn to Join it to .J;:"...
+   It is well known ([1], p. 230) that the eIgenfunctIOns of (1.1) can be written
+in the form .J;(x) = (1 - x2)m/24>(x) where 4>(x) IS the restrictIOn to the real line
+of an entire function. If then m is even, 1/1 itself IS entire and It is natural to join
+a solution valId for 1 x I < 1 to its analytIC continuation for x > 1. If m is an odd
+integer, and .J; = (1 - x 2 ) m/24> (x ) is a solution valid for 1 x I < 1, we follow
+Flammer ([2], bottom page page 32) in takmg.J; = (x 2 - l)m/24>(x) as the ex-
+tenSIOn of this solutIOn valid for x > 1. Here 4> is to be continued analytically.
+   WIth these consideratIOns we write
+
+.J;!. ... (x)      E: 1/I:".n (x) 111="
+                   1
+                                                                                                                  (2.64)
+                                                   1 '                   ]
+                                  Em [ Jm(CZ) + L (2) L m( -cz)kJm+k(CZ)
+                                                             00
+                              =                                            ,
+                                                         1=1        C 1 k=l
+       ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                                   125
+
+wIth z = v'x2=1 and Em = 1 If 111 IS odd and ( -1) m/2 If rn IS even.
+   28 Solutwn for 1 + e- ~ x ExallllllatIOn of the fonnahsm of SectIOn 2.3
+                               1
+
+
+shows that the substitutIOn y = lZ = 1 Y x 2 - 1 III 1/;2 YIelds a complex formal
+solutIOn of (1 1) vahd for x > 1. We multiply thIS solutIOn by a complex constant
+and take its real part as 1/;0 ExphcItly,
+                    1/;~.n(X) = Re e-·m"/21/;~.n(x)III~"
+                                           e'<CZ-m1r /2l(1 -             ~Z)I/2 [            1. ]
+                                 = Re          ..                      /1+1l/2      1 + L: (2 ) fJ(~z)             (2.65)
+                                                                - ~z                       J~l     C 1
+
+where thefJ are gIven by (2.30) and (2.32).
+  The jomlllg factor for 1/;4 and 1/;6 IS obtallled by settmg Z = wlvc III (2.64)
+and (2.65). The expanSIOns are similar to those used to join 1/;2 and y/. One finds
+V;Ch 2(e)1/;4 = y2 ha(e)1/;5 as reported III (1.13).
+  For very large x, the solutIOn (2.65) becomes
+
+                                     1/;~.n(X)         I""-'   cos [ex - (n + 1)11"/2]
+                                                                          x
+Flammer's radial functIOn [2], p. 31, IS related by eR~~~(e, x) = 1/;~.n(X) whence
+(1.21).
+  2.9 The Normaltzatwn Factor. We now seek a normalizatIOn factor N m .n for
+the solutIOn (1.4). That IS we reqUIre
+
+
+                                           1   1
+                                              -1
+                                                   [Nm.n ~m.n(X)]2 dx = 1.
+
+We of course use the fact that the eIgenfunctions of (1.1) are even or odd ac-
+cording as l IS even or odd to extend (1.4) to I x I ~ 1.
+     The contrIbution from 1/;1 to                     J~2dx is
+1o
+  c-
+       1/3
+
+             dx [1/;!. ... (X)]2 =       1
+                                     _ I'<C
+                                     V
+                                            1'"
+                                          2e 0
+                                                                        1
+                                               dt [1/;!..n(tlV2c)]2 - _ I'<C
+                                                                      V 2c cl/521/2
+                                                                                                 f'"
+                                                                                    dt[1/;!..n(tlV2c)]2
+
+                                == J 1 -      J2 •
+From
+                                                                 t2)m/2             1
+                                                                           L: (2)e L: A~ D
+                         1           -             (                                       2J
+                       1/;m.n(tlY2e) =                  1 - 2-                                           H2k (t)
+                                                             e             J~O          1 k=21
+
+
+it is clear that [1/;I(tlvl2c)]2 can be developed in powers of lie. Terms such as
+t2JDp(t)Du(t) can be expressed as sums of products of D's by repeated use of the
+recurrence
+                                         tD.(t) = "D._l(t)                  + D'+I(t).
+To carry out the integration imphed m J 1 , one then needs only the formula
+
+                                           1'" [D.(t)]2 dt =                "I   v;j2
+126                                  DAVID SLEPJAN
+
+
+We belabor the pomt no further. The first few terms of 2J1 appear on the right
+of (1.16). In a similar development for J 2 , one finds each term to be O(cPe-Vc
+for some finite p.
+   Simple arguments show that the contnbutlOn to N 2 due to integratlOn of the
+square of (1.4) over the range c-t ~ x ~ 1 is O(e-       for 0 < a < t. We have
+                                                                           Ca
+                                                                                )
+
+
+then finally N~,m = tJ 1 as reported m (1.16).
+   The normahzation factor Cm,n connecting Flammer's functions with our y.,~n ,
+y.,~n(X) = Cm,,,Sm,,,(C, x), can be obtamed by evaluatmg this equation or Its
+derivative at x = 0 using (2.37) and the formulae
+
+         D (0) = (-I)P(2p) I             it D
+                                         d               +1 (t) 1t=O   = (-I)P (2p + I)!
+          2P
+                     pl2P                           2P
+                                                                               2 Pq!
+The results are stated m (1.19)-(1.20).
+
+   III. Asymptotics for n and c Both Large 3.1 The Osclllatory Regums of
+y.,m,,,(X). When nand c both are large, with n = (2/1r)c say, numerical evidence
+                        2
+mdICates that Xn,m r v c Let us wnte
+                                                                       b
+                                                               L c,-.!. •
+                                                                <Xl
+
+                                Xn,m = c + 215c +
+                                        2
+                                                                                                     (3.1)
+                                                               ,~o
+
+
+
+   When this expreSSIOn IS used, the roots of (2.16) become for large c and m ~ 1,
+x = 1 + [15 ± V15 2 + m 2 - Ij/c. If m > 1, the two roots surround x = 1 and
+converge to It as c increases The eigenfunction IS oscillatory except m this small
+regIOn surroundmg x = 1. If m = 0 and 1151 < 1, the roots are complex and
+rex) of (2.14) is always positive. If 1151 > 1, agam r is negatIve only in a small
+regIOn surrounding x = 1. Finally, If m = 1, we see from (2.15) that
+r = (x - c2x 2 )/(1 - x 2 ) and r is negatIve only m an mterval of wIdth l5/c, one
+endpoint of wruch 18 x = 1.
+   These considerations lead us to expect that as long as (3.1) holds, y., Will be
+oscIllatory everywhere. Its behaVIOr around x = 1, must of course be examined
+separately.
+   3.2 Solutwn near x = 1 In (1.1) make the substitutIOns
+                                  y., = (1 - x2)m/2v(x)                                              (3.2)
+and 1'/ = 1 - x to obtam
+            Iv
+11(2 - 1'/) dl'/2   + 2(m + 1)(1 - 1'/) dV
+                                        dl'/
+                                                                                                     (3.3)
+                              + [x - m      2
+                                                -
+                                                              2
+                                                         m - c (1 - 21'/            + 1'/2)]V = O.
+Exammation of the indiClal equatIOn assoClated WIth (3.3) shows that at x = 1,
+i.e., 1'/ = 0, one of the two independent solutions IS bounded. The other has a
+logarithmic singularity if m = 0 and if m ~ 0 behaves as (1 - x)-m. From
+      ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                  127
+
+(3.2) then we see that In order to obtaIn a if; bounded at x = 1 we must take for
+U the unIque (apart from a constant factor) solution of (3.3) bounded at 1/ = O.
+WIth c fixed, this solutIOn depends on the sIngle parameter X. We now seek an
+asymptotIc form for this solutIOn
+  Set 1/ = 'tUc,
+                                        U = e"''1V                               (3.4)
+and replace X by the expanSIOn (3.1). EquatIOn (3.3) then gIves for V
+
+                                               L: c~1
+                              -4zc~W = CRV - V ,-0                               (3.5)
+
+where
+                         2
+                       dV                  dV  1
+              ~W = ~ -       + (m + 1 - ~) - - - (m + 1 - z6) V                  (36)
+              ~        d~l                      d~     2                           .
+and
+
+      CRV =   t2~; + ~ [2(m + 1)          ~l ~~ + [m 2 + m - (m + 1)~1 V.        (3.7)
+
+WrIte
+
+                                 V = Vo +     L: ~ VI .
+                                              ,-1 c1
+                                                                                 (3.8)
+
+SubstItute tills expreSSIOn In (3.5) and equate to zero the coeffiCIents of dIStInCt
+powers of c. There results the system of dUIerential equatIOns
+        QVo = 0,       -4zQV 1 = CRV 1- 1 -    L:k:~ bk V 1- k - I , J   1,2,    (3.9)
+for the determInatIOn of V.
+  Now the solutIOn of ~Vo = 0 that IS bounded for ~ = 0 IS
+                               Voa) = <1>(,8, m + 1, ~)                         (3.10)
+where for breVIty we have set
+                                 ,8 =   Hm + 1 - z6)                            (3.11)
+and
+                                                                            3
+                       ax   a(a+l)~   a(a+l)(a+2)x .+ ...
+      <I>(a,c,x) = 1 + cI!+ c(c+l) 2!+ c(c+l)(c+2) 3!
+
+18 the confluent hypergeometric functIOn In the notatIOn of [16), Vol. 1, Chapter 6.
+The lead term in our solutIOn IS now
+              if;(x) = (1 - x 2 )m/2e,e(l-x)<I>(,8, m + 1; - 2zc(1 - x».        (3.12)
+  We now construct a solutIOn for the remaining equations of (3.9). Let us
+128                                              DAVID SLEPIAN
+
+
+define Tpa) = <p(p + /3, 2p + m + 1,~) and note that Toa) = Vo(~) by
+(3.10). Then from the known recurrence relations for the confluent hyper-
+geometrIc functIOn ([16], Vol. 1, p. 254), one can derIve the equatIOns
+
+   ~~ Tp = [- (2p + m) +:p - : : -=-/31~] Tp + (2p + m)Tp-                                                             1       (3.13)
+
+       !i T =        P + /3             T       + (p + /3) (p + m + 1 - /3) ~T                                        +l
+                                                                                                                               (3.14)
+       d~   p   0_    I   ~__   I   1       P     10_   I   ___    I   1 \9. / 0 _   I   ___       I   0\         P
+
+
+
+                                   1 + m - 2/3 ]
+(2p + m)Tp- 1 + (2p + m) [ - 1 + (2p + m)2 _ 1 ~ Tp
+                                                                                                                               (3.1.5 )
+                            + /3) (p + m + 1 - P)
+                                        (p                                                     2
+                      - (2p + m + 1)2 (2p + m + 2) ~ Tp+l = 0
+
+and of course one has ~T; + (2p + m + 1 - ~)T~ - (p + /3)Tp = O. From
+these equations and the defimtIOns (3.6) and (37) one can show that
+       Q~qTp = [q(q + m)~q-l + (p - q)~q]Tp + 2(q - p)~qT~         (3.16 )
+      <R~qTp = [(q + m)(q + m + l)~q + (p - q + /3 - m - l)~q+l]Tp
+                                                                                                                               (3.17)
+                + [2(q - p) + m + l]~q+lT~.
+SpeClahzmg the foregoing we find
+
+      Q~qTo = [q(q + mH q- 1 + q(2{3 m- +m 1- 1) <;t q] T 0
+
+                                                            + 2q/3(m + 1 - /3)                         q+l
+                                                                  (m   + 1)2(m + 2) ~                        Tl
+
+ Q~q+ITl = 2q(m + 2)~qTo +[(q -l)(q - 1 - m)~q                                   q(2/3 - m - 1) ~q+l]T
+                                                                                      m+1             1
+
+
+      <ReTo = [(q + m)(q + m + 1)~q + (q + m + 1) (2/3 - m - 1) tq+1] ~ (3.18)
+                                               m+ 1             <;     0
+
+
+                                            + (2q + m + l)/3(m + 1 - /3) q+2
+                                                   (m + 1)2 (m + 2)      ~ Tl
+ <R~q+lTl =
+
+
+. (m + 2) (2q + m + 1 )~q+ITo + [q(q -                            1)~q+I - q(2/3 - m - 1) ~q+2] T
+                                                                                     m +1                                  1
+
+
+where the first of these equatIOns comes from (3.16) and (3.14), the second from
+(3.16) and (3.13), the third from (3.17) and (3.14) and the last from (3.17) and
+(3.13).
+  Returning to (3.9), we have for j = 1 on recalling that Vo = To,
+   ASYMPTOTIC EXPANSTONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                  129
+
+-4~~lV1 = CRTo -        bo To
+
+        =
+                                                         +
+                                                   ,8(m 1 -,8) ,.2
+                [m(m+ 1) - bo + (2,8 - m -l)~]To+ (m+ 1)(m+2) I; Tl        (3.19)
+
+where we have used the tlurd equatlOn of (3.18) wIth q = 0 to evaluate the right
+member. But now from the first two equations of (3.18) it is seen that Q operating
+on a hnear combmation of ~To and ~2T1 wIll have terms of the same form as the
+rIght of (3.19). Indeed,
+
+-4~Q(K~ ~To + L~ ~2T1) = -4i [{ (m + 1)K~ + (K~ 2,8 - ~ :- 1
+       + L~ 2(m + 2»)~} To + {K~ 2,8(m + 1- ,8) _ L12,8
+                                 (m+ l)2(m+ 2)     1
+                                                        - m -I} T
+                                                        m+1
+                                                                 J
+                                                               ~ 1·
+                                                                            2
+
+
+
+ComparIson WIth (3.19) shows that
+              2
+V (t) = :. I.8 + (m + 1 - ,8)2] tT
+ 1~         4             "          ~o
+                                                                           (3.20)
+                                +:. 2,8(2,8 - m - l)(m + 1 - ,8) 2T
+                                  4         (m + 1)2 (m + 2)     ~   1
+
+
+IS a solution of (3.19) provided we choose
+
+                bo = m(m + 1) - ,82 - (m + 1 - ,8)2 = !Co2 + m 2 - 1).     (3.21)
+   A httle study of (39) and (3.18) shows that this scheme can be continued.
+If we set
+            VJ(~) = Lk~l Kk~kTo(~)     + L~~l Lk~k+1Tl(~) j = 1,2, ...     (3.22)
+the K's, L's and b's can be successIvely determmed to satisfy (3.9). Each b will
+be a polynomIal in 0. Combmed wIth (3.8) and (3.4) we will then have found a
+formal solution of (3.3) bounded at ~ = 1] = O. ThIS solution depends on the
+smgle parameter 0 whICh IS related to X by (3.1). We have then found the one
+parameter famIly of bounded solutions of (3.3) referred to Just below that
+equation. The point here IS that our method of solution of the system (3.9)
+appears somewhat arbItrary especially with regard to the determination of the
+b's. Yet one can only expect a one parameter famIly of bounded solutlOns of
+(3.3) and we have found It.
+   To show how the K's, L's and b's can be determmed by a recurrence scheme,
+we first write (3.18) WIth obvlOus abbrevIatlOns as
+Q~q+PTp = [ap(q)~q-1 + bp(q)~q]To + [cp(q)~q + dp(q)~q+l]Tl
+CR~q+PTp = [ep(q)~q + fp(q)~q+11To + [gp(q)~q+1 + hp(q)e+2]Tl'             (3.23)
+                                                               p = 0,1
+]30                                  DAVID SLEPIAN
+
+
+Now substItute (3.22) mto the general equation of (39) and use (323) The
+resulting expreSSlOn is an identity m ~ provided
+- 4i[bo(q)K~ + ao(q + I)K~+1 + bl(q)L~l
+                     q-l + eo ()K,-I
+      = 10 ( q - 1 )K,-1       q q + II ( q - 1) Lq-I
+                                                  ,-1
+
+            - LCg-1 bJ(~-k-1 - 4z[do(q)K~ + dl(q)L~ + Cl(q + I)L~+d
+                                                                                         (;~24)
+       = ho(q - I)K;~ + hl(q - l)L;~
+                      + gl (q )L,-I - ,"",-q-I b L,-k-I
+                                q     L."k~O     k    q   ,    q = 1,2,             ,J
+            -4iao(I)K{ = ol)e(O) - b,_I,                       J = 1,2,
+Here we have adopted the conventlOns L~ = 0, K~ = 0,0, J = ... -1,0, 1,
+and for k ¢ 0, L; = K; = 0 IT j < 1 or J > k. We also reqUlre terms preceded
+by L:! to vanish If a > b.
+  The first pair of equatlOns (3.24) furrushes 2j slmultaneous equations for the
+2j quantities K~, L~, q = 1, 2, .. ,J. The right slde involves K's and L's of
+lower superscrlpt and the quantities bo , b1 , . ,b,-2' (For J = 1, no b's occur.)
+These can be solved and the last of (3.24) used to determine bJ- 1 , whence one
+can proceed to the next value of J.
+  The 2j simultaneous equations can be solved explicitly by the followmg
+technique. Introduce the two component vectors
+
+
+                                      Z~ = L~  (K~)                                      (3.25)
+
+and
+
+           lo(q - l)K;~    + eo(q)K~-1 + ft(q - I)L;~ - L b K~-k-l 1
+                                                               ,-q-l
+
+                                                                k=O
+                                                                        k
+
+
+u~ =                                                            ,-q-l                J   (3.26)
+       [   ho(q -   I)K;~ + h1(q - l)L;~ + gl(q)L~-1 -           L b L~-k-l
+                                                                 k=O
+                                                                            k
+
+
+and define the matrlces
+
+      A(q) = -4z
+                               (q») ,
+                      (~~~~ db (q)
+                                1
+                                               C(q)       -4z (ao~q)            c}q») . (3.27)
+                                1
+
+The system (3.24) becomes
+                                                ACJ)Z~ = u~
+
+                            A(q)Z~   + C(q + I)Z~+1 = u~,             q = 1,2,'          ,J - 1
+whose solution we write in the recursive form
+              Z~ = A (j) -IU~
+
+              Z~ = A(q)-I[U~ - C(q    + I)Z~+11, q = ) - I,) - 2"                   ,1
+                                                                                         (3.28)
+            bJ-l = ol,e(O) + 4iao(I)K{ ,                         ) = 1,2, ....
+     ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                                     131
+
+The inverslOn indICated here can mdeed be carried out, for one finds det A = 4tq
+and
+
+                                                                                                   + 2»)
+                                                         -~5
+                    -1              ~             m + 1                            2(m
+                A        (q) = 4q
+                                        (
+                                             (m   + I? + 52                                        ~5       .
+                                            2(m   + 1)2(m + 2)                         m+l
+Table V hsts values of the K's, L's and b's obtamed from tills recurrence by
+ALPAK
+  The results of this sectlOn can be assembled to gIve if;:.n(x) and if;!,n(x) as
+presented m equations (1.25) to (1.28). The K's and L's are gIven by the
+recurrence (3.25)-(3.28) with the Imtial condItion glVen below (3.24). It is easy
+to verify usmg Kummer's transformation ([16], Vol. I, p. 253) that if;7 and if;8
+are real.
+  3 3 Solutwn for 0 ;;;; x ;;;; 1 - c-1. Into (1.1) substItute the expresslOn
+
+
+                if;m,n(X)
+                                    exp{~[cX +~log(~)]} w(x)                                                       (3.29)
+                                                             1 -       X2
+and the expanSlOn (3.1). There results
+
+  (1 - X2)W   + 2~[c(1 - X2) + 5]w +                         [1 -             2
+                                                                       52 - m o + 2~5.l: + L:~] w =
+                                                                          1 - X"           ,~O c1
+                                                                                                                      0,
+or
+                                              1                  1  "" b                   ,
+                                  -2~w = - <Pw
+                                              C
+                                                             + -1-- £.oJ +
+                                                                - X 1=0
+                                                                            2      C
+                                                                                       1       1
+                                                                                                                   (3.30)
+
+where
+                     2                                                                 2
+              <Pw = d w +           ~ dw + [1 - 52 - m + 2i5X] W.                                                  (3.31)
+                         dx   2     1 -      X2 dx                          (1 -    .1: 2 )2
+
+Now mto (330) substItute the expansion
+
+                                          w = 1          + L: c~4>1(X)
+                                                             1=1
+                                                                   1
+                                                                                                                   (3.32)
+
+and equate coeffiClents of hke powers of lie to zero The system of dtfferentlal
+equatlOns
+                         4>0=1
+                                                         1       )-1                                               (3.33)
+                - 2~4>, = <P4>,-1 + -1- - 2 L: bk 4>,-k-1 ,                                             J = 1,2,
+                                                     -       X   k~O
+
+
+results.
+  Tills system IS very simIlar to that treated m SectlOn 2 3. The equatlOns can be
+mtegrated one at a tIme. For reasons sImilar to those gIven below (2.24) the
+additive constant of mtegration can be neglected. We find for 4>1 , for example,
+132                                                  DAVID SLEPIAN
+
+
+
+       () = -I( 1 - 02 -
+ - 2UPl X
+                 4
+                                    In
+                                         2
+                                             + 2bo log -1I+x
+                                                         )
+                                                          -
+                                                          -x
+                                                                                                   (3.34)
+              +1-0 -m   2 2(__
+                        -1
+                                   1_ ) +t~ (_1_+ __
+                              1 ____
+                            I-x   1+:r    2 I-x
+                                                   1_ )
+                                                  1+.r·
+   Now the ('onstants bo , b1 , , have already been determmed m the prevIOUS
+
+sectIOn Indeed, Eq. (321) shows that the coeffiCIent of the loganthmic term m
+(334) vamshes, so that we can 'vnte
+
+              <Pl(X) = -I 1
+                             o( +1 + l--=--i
+                                        1)
+                                             + 4"~ ( 1+
+                                             x                       bo 1       x - 1 -.r
+                                                                                         1 )
+                                                                                               .   (3.35 )
+
+       ThIS delrghtful happenstance leads one to suspect that perhaps we can wnte
+
+                              <PJ(x) =           t; (~1i
+                                                 J                lVi)
+                                                     (l + x)~ + (1- X)k                            (3.36)
+
+for J = 1,2,      , I.e, that the b's as determmed m the prevIOUS sectIOn wIll
+contmually cause the 10ganthmH' terms to cancel as (3.33) IS mtegrated. The
+situatIOn IS now completely parallel to that treated m SectIOn 2.3. Indeed Eqs
+(232)-(2.35) can be taken over to gIve a recurrence for the M's and lV's by
+makmg the followmg substItutions and changes u~; = d~; = D~ =                   = 0,               a
+I = 1,2, 3, a~ = bk - 1 ,ao = -to, {3 = -!(b o                 +
+                                                 to), 'Y = -!(b o - to), Ei = Mi,
+Fk = lVi The left members of (232) must also be multIplied by 21. Starting
+values for the recurrence are gIven by (3 35) Table VI gIves some values of the
+M's and lV's determmed thIS way. In every case computed, the b's gIven by the
+analogue of (233) comCIded wIth those obtamed from (3.28). We have not
+succeeded in showmg dIrectly that these two schemes must yield the same bk
+for all k
+   We multiply the solutIOn (3.29), (3.32), (3.36) by the phase factor exp ( -l7r12)
+and take the real part to obtain the solutIOn lP~,n(X) as reported m (1.24). ThIS
+phase factor assures proper panty for 1P The M's and lV's are given by the
+recurrence descnbed above. As yet 0 IS unspecIfied. Its relation to n, m and C WIll
+be gIven later
+   34 JOlmng of the solutwn lP~,n and lP~,n. In (124) let us substItute
+x = 1 - uc-! and for fixed u allow c to become large. By expandmg m powers of
+liVe we find                        ,
+                    ,          c·
+.1,6    (x = 1 - uc-') '"'"' _ 1_
+Fm,n                             v2u
+
+              ·Re exp   {t   [c -   uVe - ~ log2~- l ~J}[I + L W~(u)J
+                                                               (Vc)1
+                                                                      (337)
+
+where
+                      _ lV~
+                 l( ) -
+               W lU     -
+                                 + u1 -- -to
+                         u                           4
+                                                                                                   (3.38)
+               W~( u) = N~ + ~ [2M~ + (1 _ to)lV~l + u 3 - 4to - 0
+                                                                                               2
+                                                                            2
+                             ~          4                                            -
+etc.
+     ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                                     133
+
+   The solutlOn if;;",n as gIven by (1.25 )-( 1.28) can also be developed m powers
+of live when x = 1 - uc-!. Now ~ = -2~veu is large and we make use of
+the known asymptotic formula for the confluent hypergeometnc functlOns
+([16], Vol. I, p. 278). One finds the formIdable expression
+ 7                    _~        vl2r(m + l)e- o(r/4)
+if;m,n(x = 1 -      uc ) rv       yue(2m+1)/4R (o)
+                                                   m
+                                                                                                  (3.39)
+ Re exp {       -~ [uVc - (m + 1) i + ~ log (2uVc) - cPm(O) J                             2
+                                                                                         W (U)}
+
+where we define the real functlOns Rand cP by
+                                r[!(x + 1 + ~Y)] = Rx (y)e'4>z(Y)                                 (3.40)
+wIth cPx(O) = 0 and
+
+W 2 (u) = 1 + I: W;~u)
+                    J=1    (ye)1
+
+            =   (1 _~)m/2
+                    20
+                          [I: {!em + 1 + ~O}ra(l - m + ~o)
+                                   T~O                   rl (-2~uVc)"
+                                                                                         }T
+
+                                                                                                  (3.41 )
+                   (
+                     1 + I: ~
+                         J~1 e1 k~1
+                                   tKH _2~uve)k) +                      (7 + +2)(m
+                                                                         2(m
+                                                                                   + 1)
+                                                                                1 - ~o)
+
+     . I: {!em + 3 + ~o) }T{ -!em + 1 - ~o) }T I: ~ t H( -2~UVC)kJ.
+      T~O                   rl (-2wye)'                             J~I c} k~1
+
+Here {a}" = rea + a)/r(a).
+ If now we reqUlre
+
+                 e + 0 log (2Vc) - cPm(O) = (m + 1)                       i + l ~ + 27rp          (3.42)
+
+wIth p an arbItrary mteger, the exponentIal factors m (3.37) and (3.39) become
+IdentIcal, and apart from factors mdependent of u, these two senes then have
+the same lead terms for large e. The coeffiClents of these lead terms can be deter-
+mmed as asymptotIC senes me-I by extractmg the terms of W~(u) and W;(u)
+that are mdependent of u, much as was done m Sections 2.4 and 2.6. We content
+ourselves wIth the lead terms of these senes me-I. The ratlO of the lead term of
+if;6 to that of if;7 IS
+
+
+                            k7 -
+                                _ c(m+1)/2Rm (o)eO<7r/4) [
+                                     2r(m     +  1)        1        +0 C
+                                                                           (I)J                   (3.43)
+
+and we take k7if;7 to be an extenslOn of the solutlOn if;6.
+  35 Solutwn for x > 1 + e-! When
+
+                                   exp   {~ [ex + ~ log (x ~ D]}
+                    if;m,n(x)                  _                    x             w(x)
+                                                       'x 2 -   1
+134                                             DAVID SLEPIAN
+
+
+and (3.1) are substituted mto (1.1), Eq. (3.30) results once more. We multIply
+this solution by a sUItably chosen complex constant and take the real part for
+tf;9 as mdICated m (1.29) where the M's and N's are as in Section 3.3. As x ~ ~,
+(1.29) gIves formally
+                                   .1,9 ()
+                                   Y'm,n X '"
+                                                 cos [ex - (n
+                                                           ex
+                                                                + 1)11'"/2]                    (3.44)
+
+so that for the connectIOn wIth Flammer's radIal functIOn [2] p. 31 we have
+                                           R~~(e, x) = tf;!.n(X)                               (3.45)
+whence (1.34).
+  3.6 J mmng of the Solutwn tf;~.n and tf;!.n. The sItuation here is very SImilar
+to that treated in SectIOn 3.4. SubstItutmg x = 1 + ue-t into (1.29) and ex-
+panding m powers of        we findl/vc
+tf;!.n(X = 1     + ue-!)
+
+               '"
+                     3 4
+                    e- / Re exp{i         [e +   uyc - ; log 2 u - - (n + 1)
+                                                              ye
+                                                                                        ~2]}
+                                                                                               (3.46)
+                                                    Y2u
+                                                                  .[1 + L w!( -u)] .
+                                                                              )=1   (y'c)1
+     SImIlarly tf;8 becomes
+ 8                          y'2r(m + 1)eo<.. /4)
+                           _!
+tf;m,n(X = 1     +   ue ) '" v'ue<2m+l)/4Rm(o)
+                                                                                               (3.47)
+·Re exp    {~ [uvc - (m + 1) i - ; log (2uyc) + I/lm(o)]} W2( -u)
+wIth W2 (u) gIven by (3.41) Comparing these results we find that If
+           e   + 0 log(2yc) - I/lm(O) = (n + 1)11'"/2 - (m + 1)11'"/4 + 211'"q                 (3.48)
+where q IS an arbItrary mteger, then the ratIO,
+                                   r = 2r(,m _~_ 1)<~"/4) [1 + 0      G)],                     (3.49)
+
+of the lead term of (3.47) to the lead term of (3.46) IS mdependent of u We treat
+rtf;9 as the contmuatIOn of tf;8. From (3.49), (1.32) and (1.23), Eq. (1.33) then
+follows.
+    3.7 Determmatwn of o. By matching vanous solutIOns, we have arnved at
+two equations, (3.42) and (3.48) that 0 must satisfy. Companson of these
+equations shows that we must have p = q. We henceforth take (3.48) as the
+fundamental restnctIOn on 0 ansmg from matchmg solutions.
+    We now wnte thIS equation in the form Yl(O) = Y2(O) where
+                                Yl = 0 log(2ye) + e - 11'"/4 -      hem, n, q)
+                                                                                               (3.50)
+                                Y2 = I/lm(O),     h = n1l'"/2 - m1l'"/4 + 211'"q
+   ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                       135
+
+and fix the definition of <Pz(y) given m (3.40) by taking <Pz(O) = O. Figure 3 shows
+plots of Y2 vs 0 for m = 0, 1,2,3,4 and for h = 0 plots of members of the famIly
+of straIght hnes (3.50) corresponding to c = .17, .25, .5, 1.0. The envelope
+y = (o/2)log( -2o/e) - 71"/4,0 ;:;i 0 of tills famIly of straight hnes is also shown.
+Solutions of (3.48) for given m and n can be vIsualized by translatmg the family
+of straight hnes vertically by an amount h and observing the intersectIOn of the
+appropriate straIght hne and Y2 = <Pm curve. For given m and n, there are in-
+finitely many h values corresponding to the possIble chOIces of q. Smce for large
+       5r.----------------------,---.-------~--TTJr~r_--_ro
+
+
+
+       4
+
+
+
+
+       3
+
+
+
+       2
+              C=O.17
+
+
+
+
+   y
+       01                    I    ,'6< ,';PI(,e:   "       I
+             C=O.25                                                         C=O 25
+
+       -I
+
+
+
+
+    -2
+                                                                   C=O.17
+
+
+     -3
+
+
+
+    -4
+
+
+
+
+            -12        -8        -4        o           4       8       12        14
+                                           6
+                            FIG. 3. Curves for determining a
+130                                         DAVID SLEPIAN
+
+
+ 1151, ¢m(b) '"" (b/2)log(lbI/2) + m1l"/4, there will always be a real mtersectIOn of
+the straIght lIne and the Y2 = ¢ curve.
+     We thus see that for gIven values of e, m and n, there wIll m general be many
+values of 15 and q for which (3.48) IS satisfied. Once such a value of 15 has been
+chosen, however, by (1.23)-(128) and (132) a formal solutIOn if;m.n(x) to (1.1)
+is completely determmed valId for Ixl ~ 1 From general theory, tills solution
+must have precIsely l = n - Tn zeros m the open mterval Ixl < 1 ThIs, then, is
+the awkward cntenon for choosmg the proper values of 15 and q to satIsfy (3.48),
+n, e and 'In bemg gIVen' the resultant solutIOn must have preclsely n - til zeros
+in Ixl < 1.
+     The sltuatIOn for small or moderate values of e IS qUlte comphcated. Theoretlcal
+determmahon of the number of zeros contnbuted to if; by if;6 and if;7 as a functIOn
+of 15 and e seems hopeless when more than one term m eIther of the senes (124)
+or (127) must be taken mto account. Numerical work for m = 0 and small
+values of nand e mdicates that the correct root IS always obtamed by takmg
+q = 0 and ehoosmg the 15 root of smallest absolute value
+    The situatIOn IS more amenable to analysls when e IS assumed so lmge that the
+zeros of if; are completely determmed by the lead terms of (1 24) and (1.27). For
+large enough e then, we have
+
+       (1 - i)-l sm
+                 cos
+                           (ex + ~2 log 11 +- x)x '            0 ~    x~ 1 _ ~
+                                                                             VC
+if;    k7(1 -     2
+                 :t )m/2c,c(I-X)cp(/3, In   + 1, -21e(1 - x»,                           (351)
+                                                                    1
+                                                                      vc
+                                                               1---::::;x::::;1
+                                                                       - - ,
+and we can now estimate the number, Z, of zeros of (3.51) for Ixl ~ 1 as e
+becomes large. We assume 15 = 0(1). From the first of (3.51), as x goes from
+- 1 + e-! to 1 - e-\ the argument of the tngonometnc functIOn changes by an
+amount
+
+                  2   [e - yc + ; log 2yc + ; log ( 1 - 2~C) ]
+so that the number of zeros, Zl , contnbuted by thlS mterval is
+
+                      Zl = -2 [ e - ve
+                            71'
+                                           15
+                                    _ ;- - -log
+                                           2
+                                                 - e
+                                                2v          rJ +   O(e-! ).             (3.52)
+
+The number of zeros, Z2, contnbuted by the second hne of (3.51) is tWICe the
+number of zeros of the functIOn J( t) = e'tcp(/3, m + 1, - 21t) m the mternal
+o ~ t ~ yc Now for large t,
+      J(t) '"
+                2f(m   +1)e-o(,../4)      15
+                 (,,"'_~n"n / 0 ' cos t + :zlog 2t - ¢m(b) -
+                                     [
+                                                                           (m   + 1) 1I"J
+                                                                                     4
+([16] Vol. I p. 278). Assuming that for all a and b greater than some fixed number
+M, the number of zeros of J(t) for a < t < b dIffers from the number of zeros of
+    ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEROIDAL WAVE FUNCTIONS                           137
+
+cos[t + 0/2 log 2t - cf>m(O) - (m + 1)71"/4] In the same Internal by no more than
+two, we find
+
+                          Z2 = 2;;: [_v r C + "20 log 2v       rJ
+                                                       - C + 0(1)                      (3.53)
+
+CombInIng these statements we have
+              Z = Zl + Z2 = 271"-1[C + 0Iog2y~] + 0(1) = n - m.
+ComparIson of this equatIOn with (348) shows that for large c we must have
+                          cf>m(O) + (m + 1)71"/4 + 271"q = 0(1).                       (3.54)
+  In VieW of the foregoIng, a useful hmitIng result can now be estabhshed. Let
+                            n -   III   = [271"-1(C + blog2Vc)]
+where b IS a fixed number (independent of c) and the brackets denote "Integer
+part of". Equation (3.48) now becomes
+               (0 - b)log(2yc) = cf>m(O) + (m + 1)71"/4 + 271"q + E
+wIth lEI < 1 In vIrtue of (354), we then have the following result If
+                          l = n - m = [271"-1(C         + blog2yc)],                   (3.55)
+then
+                                         IllIlc->oo 0   = b.                           (3.56)
+
+  IV. Asymptotics of An, 4 1 Ftxed n and Large c. We recall from [9], Eq. (27),
+that
+                                  Xn = 2C7l"-1[m~(c, 1)]2                               ( 4.1)
+where R IS Flammer's radial prolate functIOn. From the results of SectIOn 2.8, It
+follows that, for fixed n and large c, R~~ (c, x) ,......, Y 71" /2c lP~.n (x). From (2.64),
+one finds lP~.n(1) = 1, so that from (4.1) we obtaIn the weak result Xn ---> 1 as
+c ---> 00.
+    To obtaIn InfOrmatIOn about the rate at whICh Xn ---> 1, we return to (12)
+and (13) and drlIerentIate the latter wIth respect to c. Multiply the result by
+lPO.n(X) and Integrate to find
+
+aaXn 11 [lPO,,,(X)]2 dx + Xn 11 lPO,n(X) alPO;(x) dx
+   c 1                        -1             C
+
+
+       = ! 11 dx 11 dy cos c(x - Y)lPO,,,(X)lPo,n(Y) + Xn 11 lPO.n(Y) alPo/ Y ) dy.
+          71" -1      1                                                1           C
+Here, to obtaIn the last term, we have Interchanged orders of Integration and
+agaIn used (1.3). We now have
+                      1
+                                                  J2
+          axn = _1 [1 dx cos CXlPo.,,(x) + -1 [11 dx sin CXlPO,n(x)
+          _
+           ac    71" -1                     71" 1
+                                                                             J2
+                                                                         (4.2)
+138                                                   DAvIn SI,EPIAN
+
+
+
+where we have assumed if; real and normahzed so that                                   11
+                                                                                        -1
+                                                                                             if;2 dx = 1. Suppose
+now n IS even. The last mtegral m (4.2) then vamshes. However, for even n,
+(12) gIves
+
+                                an if;o,n(1) =               L
+                                                             COS cyif;o,n(Y) dy,
+
+SO that (4.2) becomes aAnjac = jal[if;0.n(1)]2j,r. The same result IS obtamed
+when n IS odd. Usmg the relatIOnship between An and an gIven m (1.3), we have
+                                                 1 aAn    2
+                                                 An 7iC = C [if;O,n(1)]2                                          (4.3)
+
+a relationshIp also found by Fuchs [17].
+   Now from (1.4), (1.8) and (1.16), [if;o.n(l)f = N~,nki. Usmg the expanSIOn
+gIven m (1.12), (1.14), (1.15) and (1.16), the nght side of (4.3) can be ex·
+pressed m. the form
+
+                                                                           L'Y.J.
+                                        n
+                                      2_  _v_~ c +!e-2c [ 1 +
+                                       ,1 +3 - / - n
+
+                                            nl                              1 c1
+In tegratmg (4 3) then YIelds
+
+                    -1
+                          og
+                                A
+                                  n
+                                       = 2 +IIv_ /7r- f""
+                                             Jn 3
+
+                                                       c
+                                                          dt t+~e-21 [ 1 + '" ~
+                                                                           "T' tl
+                                                                                              J.
+
+W orkmg out the hrst few K'S and makmg ObVIOUS expanSIOns, we find finally
+
+A    =   1 _ 2
+               Jn+2_ / - n+i -2c
+                   V 7fC
+                                 [  6 2 _
+                            e X 1 _ n                              n
+                                                                     2   +3
+ n                   nl                                          32c
+                                + 1056n - 3454n + 873n + 2334 + O( -3)J
+               5            4                     3              2                                                (44)
+         _ 114n - 192n
+                                                 2113 1 cl                                          C         •
+
+
+The lead term m the expanSIOn of 1 - An has been gIven prevIously by Fuchs
+[17].
+  4 2 Ftxed n and Small c. For small c, It IS not hard to denve that
+
+                                           n(n - 1)                 ( )
+if;o,n(x) = Pn(x) + c
+                            2 [
+                                      .)(.)~_ 1 \2(,)~ --L 1 \ Pn- 2 X                                   -".,
+
+                                                                                              J
+                                                                                                                  ( 4.5)
+                                                 -_,(~ + 1!~~ + ?)_ , P n +2(X)                    + O(c4)
+IS a solutIOn of (1.1). From [9] Eq. (40),
+
+           An +1/A n =    -[L if;~.n(x)if;o.n+l(X) J/ Lif;o.n(x)if;~.nH(X)
+                                                                 dx                                     dx.
+
+Usmg (4.5) m thIS equatIOn, one rinds
+                                                      (n + l)c
+                                                                     2
+                         An+l = An ,~                                    0'" [1   + O(c )].
+                                                                                        2
+                                                                                                                  (4.6)
+    ASYMPTOTIC EXPANSIONS FOR PROLATE SPHEIWIDAL WAVE FUNCTIONS                                                       1:39
+
+From (12)
+
+                             aO lfo,o(l) =    L     cos CYlfo,o( y) dy.                                             (4.7)
+
+From (4.5) and (4.7), one finds nIl medIately that ao = 2 + 0(c ), whence from
+                                                                                                      2
+
+
+(13) Ao = 271'-l c[1 + 0(c2 )] Combmed wIth (4.6), thIS gIves finally
+                         2 [   ?2n(           ,)3       J2
+                    An =;: (2n)~ (2~          + 1) , c +1[1 + 0(C
+                                                             2n                             2
+                                                                                                )].                 (4.8)
+
+  \Ve now use (4.3) to Improve thIS estImate From (4.5) one has
+
+
+                         1-1
+                             1 [lfo,n(.t)]2 dx = ,) 2, ,
+                                                 _n
+                                                                     + 0(c         4
+                                                                                       ).
+
+
+
+ThIs result, eombmed wlt.h (-! .5), gIves
+
+           *
+           lfO,n(1) =    I      2n   + 1 [ 1 _ (2n - 1)1(2n
+                                     2
+                                                       C
+                                                            + 3)2
+                                                                  + 0(c
+                                                                     2
+                                                                                                          4)
+                                                                                                               J
+       * IS a solutIOn of (1.1) normahzed t.o have square mtegral umty m
+where lfO,n
+(-1,1) Usmg thIS value III (4.3) and mtegratmg from c = 0, we find (1.35)
+Here we have used (4.8) to deternllne the constant of llltegratIOn
+  4.3 Asymptotlcs for nand c Both Large. EquatIOns (34.5) and (349) can be
+eombmed to Yield
+
+                   R~~(c, 1) = Ro~~:o"/4lf~,n(1)[1 + 0(c-                                   1
+                                                                                                )].                 (4.9)
+
+FlOm (126) we see that lf~,n(l) = 1. EquatIOns (4.1) and (4.9) thus gIve
+
+                          An =       LR~(Il)e-ow/2[1 +            0(c- 1 )].                                       ( 4.10)
+
+Re('all now from (3.40) that Ro(ll) IS defined by
+
+                                r    G+ D Ro(ll)e'~o(.).
+                                          t         =
+
+~rultlply thIS equatIOn by ItS complex conJugate                     There results
+
+               [Ro(Il)] 2 = r   (12" + 1"2Il) r (12" - Il) = --.-..
+                                                             t   2                          71'                    (4.11 )
+
+Here we have used the functIOnal relatIOn ([16], Vol. 1, p. 3, Eq. (7)) for the
+gamma fUnetIOn
+                               r 0 + z) r (t - z) = 71' see 7rZ
+EquatIons (4.10) and (411) then gIve
+                               An = [1   + e"O]-I[l + 0(c-               1
+                                                                             )].                                   (412)
+ThIS formula together wIth (3 ..')5) and (3 56) YIelds the lllmt statement for
+fixed b reported as (1.39) and (1 40)
+140                               DAVID SLEPIAN
+
+
+  As pointed out III SectIOn 1.5, (4.12) IS remarkably accurate even for small n
+and c when 0 IS chosen as the root of smallest absolute value of (3.48) wIth q = O.
+                                  REFERENCES
+ [1) J MEIXNER AND F W SCHAFKE, "Mathleusche FunktIOnen und SpharoldfunktIOnen",
+          Spnnger-Verlag, Berlm, 1954
+ [2) C FLAMMER, "Spheroidal Wave FunctiOns", Stanford Umv Press, Stanford, 1957
+ [3) J A STRATTON, P M MORSE, L J CHU, J D C LITTLE, AND P J CORBATO, "Sphe-
+          rOidal Wave FunctiOns", John Wiley & Sons, Inc, New York, 1956
+ [4) D. SLEPIAN, "EstimatiOn of Signal Parameters m the Presence of NOise", IRE Trans
+          PGIT -3, pp 68-89, 1954
+ [5) G D BoYD AND J P. GORDON, "Confocal Multlmode Resonator for MIlhmeter Through
+           OptiCal Wavelength Masers", Bell System J , 40, pp 489-508, 1961
+ [6) F J DYSON, "Statistical Theory of Energy Levels of Complex Systems, III", J of
+          Math Phys, 3, pp 166-175, 1962
+ [7) M GAUDIN, "Sur la 101 hmlte de l'espacement des valeurs prop res d'une matnce
+          aIeatorre", Nuclear Phys , 26, pp 447-458, 1961
+ [8) D R RHODES, "The Optimum Lme Source for the Best Mean-Square ApprOXimatiOn
+          to a GIVen RadiatIOn Pattern", IEEE Trans on Antennas and Propagation,
+          AP-11, pp 440-446, 1963.
+ [9) D SLEPIAN AND H 0 POLLAK, "Prolate SpherOidal Wave FunctIOns, Founer AnalYSIS
+          and Uncertamty-I", Bell System Tech J , 40, pp 43-64,1961
+[10) H J LANDAU AND H 0 POLLAK, "Prolate SpherOidal Wave FunctiOns, Founer Analy-
+          SIS and Uncertamty-II", Bell System Tech J, 40, pp 65-84, 1961
+[11) H J LANDAU AND H 0 POLLAK, "Prolate SpherOidal Wave FunctiOns, Founer Analy-
+          SIS and Uncertamty-III", Bell System Tech J , 41, pp 1295-1336, 1962
+[12) H J LANDAU, "The Eigenvalue BehaViOr of Certam ConvolutiOn EquatIOns", Trans
+           Am Math Soc., to appear
+[13) M PETRICH, "On the Number of Orthogonal Signals WhiCh can be Placed m a WT-
+          Product", J Soc Ind Appl Math, 11, pp 936-940,1963
+[14) R SIPS, "RepresentatiOn Asymptotlque des FonctiOns de MathieU et des FonctiOns
+          d'Onde SpherOidales", Trans Am Math Soc, 66, pp 93-134,1949
+[15) H J W MULLER, "Asymptotic ExpansiOns of Prolate SpherOidal Wave FunctiOns and
+          Their CharactenstIc Numbers", J Reme u Ange Math, 212, pp 26-48, 1963
+[16) A ERDELYI, "HIgher Transcendental FunctiOns", McGraw-HIll Book Co, New York,
+          1953
+[17) W H. J FUCHS, "On the EIgenvalues of an Integral EquatiOn Ansmg m the Theory of
+          Band-hmIted SIgnals," J Math AnalYSIS and Appl , 9, pp 317-330, 1964
+[18) W S BROWN, "The ALPAK System for Nonnumencal Algebra on a DIgital Computer
+          -I", Bell System Tech J , 42, pp 2081-2119, 1963
+          W S BROWN, J P HYDE AND B A TAGUE, "The ALPAK System for Non-
+          numencal Algebra on a Digital Computer-II", Bell System Tech J, 43, pp
+          785-804, 1964
+[19) 11 WIDOM, "Asymptotic BehaViOr of the Eigenvalues of Certam Integral EquatiOns
+          II," ArchIve for Rational AnalYSIS and Mechamcs, 17, pp 215-229, 1964
+[20) D SLEPIAN, "Prolate SpherOidal Wave FunctiOns, Fouller AnalYSIS and Uncertamty-
+          IV ExtensiOns to Many DimensiOns, Generahzed Prolate SpherOidal FunctiOns,"
+          Bell System Tech J, 43, pp 3009-3057, 1964
+
+  BELL TELEPHONE LABORATORIES, INC
+  MURRAY HILL, NEW JERSEY
+
+                              (ReCeived August 4, 1964)
+

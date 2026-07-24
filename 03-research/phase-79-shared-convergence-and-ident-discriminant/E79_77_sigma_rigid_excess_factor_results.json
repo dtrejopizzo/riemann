@@ -1,0 +1,139 @@
+{
+  "statement": "E79.77 sigma-rigid excess factor",
+  "sources": [
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_69_relational_matching_selector_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_76_frontier_ratio_rule_results.json"
+  ],
+  "rows": [
+    {
+      "N": 8,
+      "kind": "tradeoff",
+      "extra_sigma1": 0.0005281825090824222,
+      "extra_sigma2": 0.00105114185516,
+      "candidates": [
+        {
+          "name": "pair",
+          "packet_sigma1": 0.0005123113378837199,
+          "packet_sigma2": 0.0010197125178302317,
+          "eps_sigma1": -0.03004864971063559,
+          "eps_sigma2": -0.02990018633116287,
+          "rigidity_defect": 0.0001484633794727186,
+          "mismatch": 0.029900186331162863
+        },
+        {
+          "name": "triple",
+          "packet_sigma1": 0.000513746626607844,
+          "packet_sigma2": 0.0010223346170499352,
+          "eps_sigma1": -0.027331239157572296,
+          "eps_sigma2": -0.027405661727436192,
+          "rigidity_defect": 7.442256986389673e-05,
+          "mismatch": 0.027405661727436206
+        }
+      ]
+    },
+    {
+      "N": 10,
+      "kind": "tradeoff",
+      "extra_sigma1": 0.0003078331458410208,
+      "extra_sigma2": 0.0006132627769007301,
+      "candidates": [
+        {
+          "name": "pair",
+          "packet_sigma1": 0.00031674821944227105,
+          "packet_sigma2": 0.000631659597053559,
+          "eps_sigma1": 0.028960733181911502,
+          "eps_sigma2": 0.029998266396994655,
+          "rigidity_defect": 0.0010375332150831529,
+          "mismatch": 0.02948235840351119
+        },
+        {
+          "name": "suffix",
+          "packet_sigma1": 0.0003101082414785083,
+          "packet_sigma2": 0.0006174462561064077,
+          "eps_sigma1": 0.007390677931292222,
+          "eps_sigma2": 0.006821674758771046,
+          "rigidity_defect": 0.0005690031725211764,
+          "mismatch": 0.00870182150800833
+        }
+      ]
+    },
+    {
+      "N": 12,
+      "kind": "tradeoff",
+      "extra_sigma1": 0.000198719668364,
+      "extra_sigma2": 0.00039628786539330454,
+      "candidates": [
+        {
+          "name": "pair",
+          "packet_sigma1": 0.0002033952897746118,
+          "packet_sigma2": 0.0004056877275606518,
+          "eps_sigma1": 0.02352872993954147,
+          "eps_sigma2": 0.023719782986587834,
+          "rigidity_defect": 0.0001910530470463634,
+          "mismatch": 0.02298785490948674
+        },
+        {
+          "name": "triple",
+          "packet_sigma1": 0.00030747835402640403,
+          "packet_sigma2": 0.0006131313171364577,
+          "eps_sigma1": 0.5472970368649563,
+          "eps_sigma2": 0.5471867061282387,
+          "rigidity_defect": 0.00011033073671762317,
+          "mismatch": 0.35371168161341404
+        }
+      ]
+    },
+    {
+      "N": 14,
+      "kind": "degenerate",
+      "extra_sigma1": 0.00013338899684189597,
+      "extra_sigma2": 0.000266010252359,
+      "candidates": [
+        {
+          "name": "suffix",
+          "packet_sigma1": 0.00013015998821479455,
+          "packet_sigma2": 0.00025956025528327926,
+          "eps_sigma1": -0.024207458662641512,
+          "eps_sigma2": -0.024247174755565593,
+          "rigidity_defect": 3.971609292408029e-05,
+          "mismatch": 0.02424717475556555
+        },
+        {
+          "name": "triple",
+          "packet_sigma1": 0.00013015998821479455,
+          "packet_sigma2": 0.00025956025528327926,
+          "eps_sigma1": -0.024207458662641512,
+          "eps_sigma2": -0.024247174755565593,
+          "rigidity_defect": 3.971609292408029e-05,
+          "mismatch": 0.02424717475556555
+        }
+      ]
+    },
+    {
+      "N": 16,
+      "kind": "tradeoff",
+      "extra_sigma1": 9.505024064978429e-05,
+      "extra_sigma2": 0.00018965824160575091,
+      "candidates": [
+        {
+          "name": "pair",
+          "packet_sigma1": 9.84777888531815e-05,
+          "packet_sigma2": 0.0001965001019245078,
+          "eps_sigma1": 0.036060384276418,
+          "eps_sigma2": 0.03607467970192024,
+          "rigidity_defect": 1.4295425502242054e-05,
+          "mismatch": 0.03554314266742822
+        },
+        {
+          "name": "triple",
+          "packet_sigma1": 0.00016211855859285686,
+          "packet_sigma2": 0.00032348847075041795,
+          "eps_sigma1": 0.7056091334917076,
+          "eps_sigma2": 0.7056388797638677,
+          "rigidity_defect": 2.974627216012493e-05,
+          "mismatch": 0.4141474018842848
+        }
+      ]
+    }
+  ]
+}
