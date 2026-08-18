@@ -28,7 +28,7 @@ write it as \(\mathcal S(\mathbb R)\) in logarithmic coordinate.  Let
  (T_gF)(t)=F(t+g).                                         \tag{1}
 \]
 
-Let \(\operatorname {Tr}_{\rm orb}\) be the CCM cyclic diagonal orbit
+Let \(\mathrm{Tr}_{\rm orb}\) be the CCM cyclic diagonal orbit
 trace, \(\mathfrak e_1\) the primitive Eulerian projector of 106.174, and
 \(\mathcal L_{\rm conn}\) its connected Tate localization.  The
 primitive coefficient identity 106.174(17) says that the \((p,k)\) row
@@ -37,7 +37,7 @@ of the resulting coefficient vector is
 \[
  \boxed{
  E_{p,k}\mathcal L_{\rm conn}\mathfrak e_1
- \operatorname {Tr}_{\rm orb}F
+ \mathrm{Tr}_{\rm orb}F
  =p^{-k/2}F(k\log p).}                                     \tag{2}
 \]
 
@@ -58,7 +58,7 @@ Define the base localization
  \boxed{
  \mathfrak L
  =\iota_{\rm po}\mathcal L_{\rm conn}\mathfrak e_1
-     \operatorname {Tr}_{\rm orb}.}                        \tag{4}
+     \mathrm{Tr}_{\rm orb}.}                        \tag{4}
 \]
 
 All factors in (4) were constructed before taking the CCM quotient and
@@ -132,8 +132,8 @@ equipped with the natural rapid jet seminorms.
 #### Proof
 
 Every component of (5) is continuous on the Schwartz space.  Theorem
-3.1 supplies a continuous recovery map from \(\operatorname {Ran}
-\mathfrak L_\infty\) to \(\operatorname {Ran}\mathcal O_\infty\).
+3.1 supplies a continuous recovery map from \(\mathrm{Ran}
+\mathfrak L_\infty\) to \(\mathrm{Ran}\,\mathcal O_\infty\).
 Theorem 3.1 of 106.175 gives the exact seminorm identity
 
 \[
@@ -162,7 +162,7 @@ Hence \(\mathfrak L_\infty\) induces an injective topological map
  \boxed{
  \mathbf S(C_\mathbb Q)/\mathcal V
  \hookrightarrow
- \operatorname {Ran}\mathfrak L_\infty/
+ \mathrm{Ran}\,\mathfrak L_\infty/
  \overline{\mathfrak L_\infty(\mathcal V)}.}              \tag{12}
 \]
 

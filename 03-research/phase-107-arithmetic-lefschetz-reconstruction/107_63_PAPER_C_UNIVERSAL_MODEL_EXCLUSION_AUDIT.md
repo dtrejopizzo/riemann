@@ -41,7 +41,7 @@ choices can be shown to fail exactly, not just heuristically.
 The audit does not prove:
 
 1. existence of a regular proper arithmetic surface
-   \(\mathcal X_T/\operatorname{Spec}\mathbf Z\);
+   \(\mathcal X_T/\mathrm{Spec}\,\mathbf Z\);
 2. algebraic construction of the true universal finite model;
 3. compatibility with exact adelic realization or Route A
    applicability;

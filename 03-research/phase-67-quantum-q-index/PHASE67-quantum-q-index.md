@@ -268,7 +268,7 @@ X_{p,k},
 \qquad
 X_{p,k}:=
 d_q((u^{(p)})^{\otimes k})^{-1/2}
-\operatorname{Tr}_{q,\mathrm{cyc}}((u^{(p)})^{\otimes k}).
+\mathrm{Tr}_{q,\mathrm{cyc}}((u^{(p)})^{\otimes k}).
 $$
 
 El factor `1/k` del logaritmo cíclico está implícito antes de derivar: cancela el `k` producido por
@@ -389,7 +389,7 @@ $$
 En el límite de ventanas,
 
 $$
-\kappa = \operatorname{ind}_-(D_\infty)
+\kappa = \mathrm{ind}_-(D_\infty)
 $$
 
 es el índice negativo de la forma de Weil/Pontryagin ya identificado en el programa, y
@@ -402,7 +402,7 @@ La lectura q-algebraica es:
 
 $$
 m
-=\frac12\,\operatorname{ind}_-\!\left(I-B_\lambda^*B_\lambda\right)
+=\frac12\,\mathrm{ind}_-\!\left(I-B_\lambda^*B_\lambda\right)
 =\frac12\,\ell_{\mathrm{Jantzen}}(D_y^+,B_\lambda),
 $$
 
@@ -719,7 +719,7 @@ con
 
 $$
 \boxed{
-m=\frac12\operatorname{ind}_-(I-B_\lambda^*B_\lambda).
+m=\frac12\mathrm{ind}_-(I-B_\lambda^*B_\lambda).
 }
 $$
 

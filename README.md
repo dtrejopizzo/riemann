@@ -52,7 +52,7 @@ closed.
 
 **Route 2 — the arithmetic-Lefschetz reconstruction (phases 107–119,
 [paper 42](04-papers/42-arithmetic-lefschetz-programme/)).** A direct imitation of Weil's own 1948
-proof of RH for curves over finite fields, built over $\operatorname{Spec}\mathbb Z$. Its own open
+proof of RH for curves over finite fields, built over $\mathrm{Spec}\,\mathbb Z$. Its own open
 input — row (d), the Hodge-index/Castelnuovo–Severi step — is proved equivalent to RH **twice**,
 independently: algebraically (phase 113, via Riemann–Roch and effectivity) and analytically
 (phase 118, via the explicit formula, verified against real zeros of $\zeta$ to $10^{-10}$

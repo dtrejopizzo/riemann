@@ -151,6 +151,6 @@ reformulation of RH).
   positivity of the primitive part (M3).
 
 Milestones M1 (the pairing + trace identity + effectivity) and M2 (the ample cone, unconditional) together build
-the full Weil-style scaffold for $\operatorname{Spec}\mathbb Z$. The single remaining content is M3 — the arithmetic
+the full Weil-style scaffold for $\mathrm{Spec}\,\mathbb Z$. The single remaining content is M3 — the arithmetic
 Hodge index: definiteness on the primitive part $\Pi^\perp$ — attacked by the HR-stability limit (M3a) and the
 Rankin–Selberg effectivity combined with this ample positivity (M3b).

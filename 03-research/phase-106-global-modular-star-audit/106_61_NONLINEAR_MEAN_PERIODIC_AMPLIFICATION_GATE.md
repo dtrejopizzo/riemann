@@ -172,7 +172,7 @@ Thus tensoring does preserve the coordinatewise mean-periodic equations.
 The desired amplification, however, occurs only after diagonal restriction:
 
 \[
- (\operatorname{Diag}\mathcal F_k)(x)
+ (\mathrm{Diag}\,\mathcal F_k)(x)
  =\mathcal F_k(x,\ldots,x)=F_{z_0}(x)^k.              \tag{13}
 \]
 
@@ -180,8 +180,8 @@ By Theorem 2 this diagonal is not in the one-variable complement for
 \(ka>1/2\).  Therefore
 
 \[
- \operatorname{Diag}\circ(K*_{x_j})
- \ne (K*)\circ\operatorname{Diag}.                   \tag{14}
+ \mathrm{Diag}\,\circ(K*_{x_j})
+ \ne (K*)\circ\mathrm{Diag}.                   \tag{14}
 \]
 
 The tensor construction stores the original frequency in separate
@@ -205,7 +205,7 @@ acts diagonally on an exponential:
 
 whenever the scalar series is defined.  Hence translations, the Möbius
 connection, and every finite \(j_k=\mu*\log^k\) jet preserve \(z\) and
-therefore preserve \(|\operatorname{Im}z|\).  They can change an amplitude
+therefore preserve \(|\mathrm{Im}\,z|\).  They can change an amplitude
 or create a pole, but cannot increase the tail exponent.
 
 This yields a sharp preservation--amplification dichotomy for finite
@@ -214,7 +214,7 @@ exponential polynomials:
 \[
  \begin{array}{c|c|c}
  \text{operation}&\text{keeps the zero frequency}&
-                   \text{amplifies }|\operatorname{Im}z|\\ \hline
+                   \text{amplifies }|\mathrm{Im}\,z|\\ \hline
  \text{translation/Jordan multiplier}&\text{yes}&\text{no}\\
  \text{pointwise product/diagonal tensor}&\text{no in general}&\text{yes}.
  \end{array}                                         \tag{17}

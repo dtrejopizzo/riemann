@@ -23,7 +23,7 @@ also miss $Q$? M5 answers in two parts.
 
 \begin{proposition}[Principal series, no lowest weight]\label{prop:ps}
 The $\mathfrak{sl}_2$ of M4.2 ($L=T_c$, $H=\frac2c\mathcal T_{\mathrm{cont}}$, $\Lambda=T_{-c}\,m$,
-$m(r)=\tfrac{r(c-r)}{c^2}$) is a **principal-series** representation: $\operatorname{spec}(H)=\frac2c\mathbb R=\mathbb
+$m(r)=\tfrac{r(c-r)}{c^2}$) is a **principal-series** representation: $\mathrm{spec}(H)=\frac2c\mathbb R=\mathbb
 R$ is unbounded below, and the lowest-weight equation $\Lambda v=0$ forces $m(r)v(r)=0$, i.e.\ $v$ supported on the
 measure-zero set $\{0,c\}$ — **no normalizable lowest-weight vector exists.** Hence there is no primitive
 decomposition $V=\bigoplus_k L^k(\ker\Lambda)$, and **no Hodge–Riemann bilinear form is defined on this
@@ -37,7 +37,7 @@ principal series has no such finite strings. The "full HR form" the handle hoped
 
 ## 3. Part 2 — the only positive form the machinery yields is not $Q$
 
-Even granting the most charitable concrete proxy — using the sign grading $S=\operatorname{sgn}(\mathcal
+Even granting the most charitable concrete proxy — using the sign grading $S=\mathrm{sgn}(\mathcal
 T_{\mathrm{cont}}^2-r_0^2)$ (M4.1b) to absorb the indefiniteness — the manifestly positive form one builds is
 $g_\infty(f,f)=\frac1{2\pi}\int|\widehat f(r)|^2|\Psi(r)|\,dr\ge0$. Computed on the M4.3 primitives:
 
@@ -93,7 +93,7 @@ hard-Lefschetz route to RH for $\zeta$ does not close.
   closed: it produced the explicit independent $\mathfrak{sl}_2$ and the sharp two-horned obstruction, and it does
   not manufacture a proof.
 
-> The Anatomy–Kreĭn–Hodge program (M1–M5) has now built the entire Weil scaffold for $\operatorname{Spec}\mathbb Z$
+> The Anatomy–Kreĭn–Hodge program (M1–M5) has now built the entire Weil scaffold for $\mathrm{Spec}\,\mathbb Z$
 > — pairing, trace identity, effectivity, ample cone, the zero-carrying cohomology, the Frobenius flow, an explicit
 > independent hard-Lefschetz $\mathfrak{sl}_2$ on the continuum — and reduced RH to a single, now precisely
 > characterized, structural incompatibility: **HR positivity needs a lowest-weight grading that LI forbids on the

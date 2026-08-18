@@ -70,7 +70,7 @@ For (operatorname {Im}x_e>0), suppose that (B(x)h=0).  Taking the
 imaginary part of (langle h,B(x)h\rangle=0) gives
 
 \[
- \sum_e(\operatorname {Im}x_e)|\langle v_e,h\rangle|^2=0.
+ \sum_e(\mathrm{Im}\,x_e)|\langle v_e,h\rangle|^2=0.
 \]
 
 Thus every (langle v_e,h\rangle) vanishes, and then (Bh=0), contrary

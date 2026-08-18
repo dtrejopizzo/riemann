@@ -144,7 +144,7 @@ Fredholm operator and put
  C_1=\ker(\pi_1T),\qquad C_2=\ker(\pi_2T).           \tag{8}
 \]
 
-Let \(R=\operatorname {ran}T\), which is closed and has finite codimension.
+Let \(R=\mathrm{ran}\,T\), which is closed and has finite codimension.
 Plainly \(C_1\cap C_2=\ker T\), hence the intersection is finite
 dimensional.
 
@@ -235,7 +235,7 @@ Let \(P=P_\Gamma^+\), and assume \(\Gamma\) encloses only eigenvalues in
 \[
 \begin{aligned}
  \mathfrak T(P)
- &:=\operatorname {Tr}\left(P(L^2-\tfrac12L)\right)\\
+ &:=\mathrm{Tr}\,\left(P(L^2-\tfrac12L)\right)\\
  &=\sum_{j=1}^m\lambda_j(\lambda_j-\tfrac12).        \tag{15}
 \end{aligned}
 \]

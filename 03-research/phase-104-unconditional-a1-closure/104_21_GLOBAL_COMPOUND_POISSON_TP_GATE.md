@@ -244,7 +244,7 @@ aproximaciones:
  \int_0^xe^{-2y}f(x-y)\,dy
    &={3\over2}e^{-2x}Q,\\
  \int_0^xye^{-2y}f(x-y)\,dy
-   &={3\over2}e^{-2x}(\operatorname{artanh}Q-Q).
+   &={3\over2}e^{-2x}(\mathrm{artanh}\,Q-Q).
  \end{aligned}                                     \tag{24}
 \]
 
@@ -253,20 +253,20 @@ En consecuencia,
 \[
  \boxed{
  h(x)={3\over2}e^{-2x}
- \left({1\over Q}-4Q+\operatorname{artanh}Q\right).}          \tag{25}
+ \left({1\over Q}-4Q+\mathrm{artanh}\,Q\right).}          \tag{25}
 \]
 
 En el punto exacto \(x_0=\frac12\log2\), se tiene \(Q=1/\sqrt2\) y
 
 \[
- {1\over Q}-4Q+\operatorname{artanh}Q
- =-\sqrt2+\operatorname{artanh}(1/\sqrt2)<0.       \tag{26}
+ {1\over Q}-4Q+\mathrm{artanh}\,Q
+ =-\sqrt2+\mathrm{artanh}(1/\sqrt2)<0.       \tag{26}
 \]
 
 La última desigualdad es elemental y estricta:
 
 \[
- \operatorname{artanh}q
+ \mathrm{artanh}\,q
  =q\int_0^1{ds\over1-q^2s^2}
  <2q=\sqrt2,
  \qquad q={1\over\sqrt2}.                         \tag{27}

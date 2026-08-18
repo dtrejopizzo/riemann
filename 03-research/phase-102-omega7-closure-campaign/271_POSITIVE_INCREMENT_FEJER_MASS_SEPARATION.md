@@ -106,7 +106,7 @@ and (7) is false as a matter of measure theory.
 Let \(\nu\) be any finite positive measure supported away from
 \(\zeta=1\).  More explicitly, suppose that for some \(0<\theta_0\le\pi\),
 \[
-  \operatorname{supp}\nu\subset\{e^{i\theta}:|\theta|\ge\theta_0\}.
+  \mathrm{supp}\,\nu\subset\{e^{i\theta}:|\theta|\ge\theta_0\}.
 \tag{8}
 \]
 

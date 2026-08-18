@@ -80,7 +80,7 @@ On a single prime factor,
 so
 
 \[
- \operatorname {rank}(I-S_p^kS_p^{*k})=k.                 \tag{2.2}
+ \mathrm{rank}(I-S_p^kS_p^{*k})=k.                 \tag{2.2}
 \]
 
 Let \(\omega\) be any faithful positive diagonal weight on this factor,
@@ -95,7 +95,7 @@ is strictly increasing in \(k\).  It cannot equal \(\log p\) for every
 
 A vacuum state makes (2.3) equal to one for every \(k\), but it fails on
 mixed integers.  If \(n=p^kq^\ell\), the global vacuum lies in
-\(\operatorname {Ran}D_n\), so
+\(\mathrm{Ran}\,D_n\), so
 
 \[
  \langle\Omega,D_{p^kq^\ell}\Omega\rangle=1,              \tag{2.4}
@@ -139,16 +139,16 @@ For \(\sigma>1\), let
 Then \(R_\sigma\) is trace class and
 
 \[
- \operatorname {Tr}R_\sigma=\zeta(\sigma),
+ \mathrm{Tr}\,R_\sigma=\zeta(\sigma),
  \qquad
- \operatorname {Tr}(R_\sigma V_nV_n^*)
+ \mathrm{Tr}(R_\sigma V_nV_n^*)
  =n^{-\sigma}\zeta(\sigma).                               \tag{3.2}
 \]
 
 Thus
 
 \[
- \operatorname {Tr}(R_\sigma D_n)
+ \mathrm{Tr}(R_\sigma D_n)
  =(1-n^{-\sigma})\zeta(\sigma).                            \tag{3.3}
 \]
 
@@ -160,7 +160,7 @@ independent of their exponent.
 On one prime factor the Gibbs trace is equally explicit:
 
 \[
- \operatorname {Tr}\left(q^{N_p}
+ \mathrm{Tr}\,\left(q^{N_p}
  (I-S_p^kS_p^{*k})\right)
  ={1-q^k\over1-q}.                                        \tag{3.4}
 \]

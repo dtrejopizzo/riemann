@@ -67,14 +67,14 @@ we obtain
 
 \[
  -\partial_\sigma\log|L_p(\sigma+i\tau)|^2
- =2(\log p)\operatorname {Re}{q\over1-q}.           \tag{1.2}
+ =2(\log p)\mathrm{Re}{q\over1-q}.           \tag{1.2}
 \]
 
 At (sigma=1/2), the scalar Poisson identity is
 
 \[
  {1-r^2\over|1-rU|^2}-1
- =2\operatorname {Re}{rU\over1-rU}.                 \tag{1.3}
+ =2\mathrm{Re}{rU\over1-rU}.                 \tag{1.3}
 \]
 
 Equations (1.2)--(1.3) prove the first equality in (0.2).  Expanding the

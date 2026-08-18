@@ -40,7 +40,7 @@ The unit Gamma--Tate inequality is equivalent to
 \[
 C_N\ge0,
 \qquad
-b_N\in\operatorname{Ran}C_N^{1/2},
+b_N\in\mathrm{Ran}\,C_N^{1/2},
 \qquad
 d_N-b_N^*C_N^\dagger b_N\ge0.
 \]
@@ -77,7 +77,7 @@ The condition \(\widehat h(0)=0\) gives a zero at one frequency. It does not
 imply
 
 \[
-\operatorname{supp}\widehat h\subset\{|\tau|\gtrsim N\}.
+\mathrm{supp}\,\widehat h\subset\{|\tau|\gtrsim N\}.
 \]
 
 An arbitrary element of \(L^2(0,\delta_N)\) need not even possess an

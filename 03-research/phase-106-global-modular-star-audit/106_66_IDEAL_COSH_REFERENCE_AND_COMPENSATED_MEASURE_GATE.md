@@ -93,14 +93,14 @@ h(x)=\cosh(x/2),\qquad c_K=\frac12.                 \tag{6}
 For even \(r\), folding both variables in the usual identity
 
 \[
-\operatorname {Var}_{\mu_K}(r)
+\mathrm{Var}_{\mu_K}(r)
 =\frac12\iint|r(x)-r(y)|^2\,d\mu_K(x)d\mu_K(y)     \tag{7}
 \]
 
 gives
 
 \[
-\frac12\operatorname {Var}_{\mu_K}(r)
+\frac12\mathrm{Var}_{\mu_K}(r)
 =\frac1{c_K^2}\int_0^\infty\!\int_0^\infty
  K(x)K(y)h(x)h(y)|r(x)-r(y)|^2\,dx\,dy.            \tag{8}
 \]
@@ -121,7 +121,7 @@ Comparing (9) with (4) proves:
 
 \[
 \boxed{
-\frac12\operatorname {Var}_{\mu_K}(r)
+\frac12\mathrm{Var}_{\mu_K}(r)
 =\int_0^\infty J_u(r)\,2\cosh(u/2)\,du.}           \tag{10}
 \]
 
@@ -149,7 +149,7 @@ Theorem 1 and Corollary 2 give the exact quotient identity
 
 \[
 \boxed{
-\mathscr E_K(r)-\frac12\operatorname {Var}_{\mu_K}(r)
+\mathscr E_K(r)-\frac12\mathrm{Var}_{\mu_K}(r)
 =\int_0^\infty J_u(r)\,d\sigma(u).}                \tag{13}
 \]
 
@@ -186,7 +186,7 @@ S_1(U)
 :={}&\sum_{n\le e^U}\frac{\Lambda(n)}{\sqrt n}
  +G_1(U)-4\sinh(U/2),                               \tag{16}\\
 G_1(U)
-:={}&\operatorname {FP}\int_0^U g(u)\,du\\
+:={}&\mathrm{FP}\,\int_0^U g(u)\,du\\
 ={}&-\frac12\log\frac{1+e^{-U/2}}{1-e^{-U/2}}
  -\arctan(e^{-U/2})+\log2+\frac\pi4.              \tag{17}
 \end{aligned}

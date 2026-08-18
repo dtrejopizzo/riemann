@@ -9,7 +9,7 @@ chain (ordering) condition on a structure function $E(z)$.
 
 ## 1. de Branges spaces, in one screen
 
-Given an entire **Hermite–Biehler** function $E$ (i.e. $|E(\bar z)|<|E(z)|$ for $\operatorname{Im}z>0$),
+Given an entire **Hermite–Biehler** function $E$ (i.e. $|E(\bar z)|<|E(z)|$ for $\mathrm{Im}\,z>0$),
 the de Branges space $\mathcal{H}(E)$ \[deBranges68\] consists of entire functions $F$ with
 $F/E$ and $F^*/E$ in the Hardy space $H^2$ of the upper half-plane, with norm
 $\|F\|^2=\int_\mathbb{R}|F(x)/E(x)|^2\,dx$. It is a reproducing-kernel Hilbert space with kernel

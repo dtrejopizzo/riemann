@@ -80,7 +80,7 @@ Write
 Let \(D_N\) be the physical quotient operator of 106.04 and set
 
 \[
-\tau_N(s)=\operatorname{Tr}(s-D_N)^{-2}.
+\tau_N(s)=\mathrm{Tr}(s-D_N)^{-2}.
 \tag{3}
 \]
 
@@ -225,7 +225,7 @@ CCM's monotone Ritz theorem gives
 
 \[
 \sum_N\Delta_N
-=\varepsilon_{N_0}-\inf\operatorname{Spec}A_L<\infty,
+=\varepsilon_{N_0}-\inf\mathrm{Spec}\,A_L<\infty,
 \tag{15}
 \]
 
@@ -292,7 +292,7 @@ ground state, not from abstract Galerkin convergence. For example, a
 source-specific Ritz error
 
 \[
-\varepsilon_N-\inf\operatorname{Spec}A_L
+\varepsilon_N-\inf\mathrm{Spec}\,A_L
 =O(N^{-p}\log N),\qquad p>1,
 \tag{15e}
 \]
@@ -339,10 +339,10 @@ The limit has norm one. Lower semicontinuity of the closed form and the Ritz
 limit give
 
 \[
-\inf\operatorname{Spec}A_L
+\inf\mathrm{Spec}\,A_L
 \le QW_L(\phi)
 \le\liminf_j\varepsilon_{N_j}
-=\inf\operatorname{Spec}A_L,
+=\inf\mathrm{Spec}\,A_L,
 \]
 
 so \(\phi\) is a continuum ground state.
@@ -413,12 +413,12 @@ Let \(\mathcal K_L\) be the \(L^2\)-closure of the unit Ritz vectors. The
 same compact form embedding used above makes \(\mathcal K_L\) a compact set
 of unit vectors; in particular it does not contain zero. The
 Fourier transform maps it continuously and injectively into
-\(\operatorname{Hol}(\mathbb C)\). After the harmless translation from
+\(\mathrm{Hol}(\mathbb C)\). After the harmless translation from
 \([0,L]\) to \([-L/2,L/2]\), which only multiplies the transform by a
 zero-free exponential, one has
 
 \[
-|\widehat f(w)|\le\sqrt L\,e^{(L/2)|\operatorname{Im}w|}.
+|\widehat f(w)|\le\sqrt L\,e^{(L/2)|\mathrm{Im}\,w|}.
 \tag{21}
 \]
 
@@ -437,7 +437,7 @@ and use (21) on the concentric disk of radius \(2(R+M)\). Counting zeros
 with multiplicity gives, uniformly in \(N\),
 
 \[
-\#\{\theta\in\operatorname{Spec}\mathsf A_N:|\theta|\le R\}
+\#\{\theta\in\mathrm{Spec}\,\mathsf A_N:|\theta|\le R\}
 \le C_L(1+R).
 \tag{23}
 \]
@@ -448,7 +448,7 @@ identity. Splitting
 \(\mathbb R\) into dyadic shells in (23) gives
 
 \[
-\sup_N\sum_{\theta\in\operatorname{Spec}\mathsf A_N}
+\sup_N\sum_{\theta\in\mathrm{Spec}\,\mathsf A_N}
 \frac1{|\theta-z|^2}<\infty,
 \tag{24}
 \]
@@ -475,7 +475,7 @@ h_N^+=\langle g_N,r_N\rangle e_M^+
 \]
 
 Consequently an orthonormal basis of
-\(\operatorname{Ran}Q_N^{\rm new}\) is
+\(\mathrm{Ran}\,Q_N^{\rm new}\) is
 
 \[
 q_N^\sigma=
@@ -503,7 +503,7 @@ The exact Hilbert--Schmidt telescoping identity is
 \begin{aligned}
 \|G_{N+1}Q_N^{\rm new}\|_{\mathcal S_2}^2
 ={}&H_{N+1}-H_N\\
-&-2\Re\operatorname{Tr}
+&-2\Re\mathrm{Tr}
    ((\mathsf U_NG_N)^*E_N)-\|E_N\|_{\mathcal S_2}^2.
 \end{aligned}}
 \tag{28}
@@ -531,11 +531,11 @@ then
 
 ### Proof
 
-Since \(\|\mathsf U_NG_N\|\le|\operatorname{Im}z|^{-1}\),
+Since \(\|\mathsf U_NG_N\|\le|\mathrm{Im}\,z|^{-1}\),
 
 \[
-|\operatorname{Tr}((\mathsf U_NG_N)^*E_N)|
-\le |\operatorname{Im}z|^{-1}\|E_N\|_{\mathcal S_1}.
+|\mathrm{Tr}((\mathsf U_NG_N)^*E_N)|
+\le |\mathrm{Im}\,z|^{-1}\|E_N\|_{\mathcal S_1}.
 \tag{31}
 \]
 

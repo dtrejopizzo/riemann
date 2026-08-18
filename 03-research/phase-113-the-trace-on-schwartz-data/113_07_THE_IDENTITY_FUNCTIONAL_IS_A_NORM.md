@@ -61,7 +61,7 @@ $e^{x/2}(\tilde f*\tilde g)(x)=\int e^{t/2}\tilde f(t)\,e^{(x-t)/2}\tilde g(x-t)
 So in balanced coordinates the involution is the plain conjugate-reflection
 $G\mapsto\overline{G(-\cdot)}$ — an **isometry of every $\mathcal S_\theta$,
 losing nothing** — and the reflection $s\mapsto1-\bar s$ of 113_05 Lemma 2.3
-becomes $w\mapsto-\bar w$, the reflection of the strip $|\!\operatorname{Re}w|<\theta$
+becomes $w\mapsto-\bar w$, the reflection of the strip $|\!\mathrm{Re}\,w|<\theta$
 in its own axis. This is the coordinate the problem was always asking for.
 
 > ### Definition 1.3 (the pairing domain)
@@ -74,7 +74,7 @@ in its own axis. This is the coordinate the problem was always asking for.
 > 1. $f,g\in\mathcal D_\theta\Rightarrow f\star g\in\mathcal D_\theta$;
 > 2. $g\in\mathcal D_\theta\Rightarrow\widetilde g\in\mathcal D_\theta$, and $\widetilde{\widetilde g}=g$;
 > 3. $f\in\mathcal D_\theta\Rightarrow\widehat f$ is holomorphic on
->    $|\!\operatorname{Re}s-\tfrac12|<\theta$ and decays faster than every
+>    $|\!\mathrm{Re}\,s-\tfrac12|<\theta$ and decays faster than every
 >    polynomial on each closed substrip;
 > 4. $f\in\mathcal D_\theta\Rightarrow\tilde f\in\mathcal S_{\theta-1/2}$.
 >
@@ -127,8 +127,8 @@ $\int|F|^2dx=\frac1{2\pi}\int|\mathcal FF|^2dt$. Positivity is then read off
 the middle expression. $\square$
 
 Note what the critical line is doing in (2.1): $s\mapsto1-\bar s$ fixes
-$\operatorname{Re}s=\tfrac12$ pointwise, so on that line the mirrored pairing
-of 113_05 Theorem 3.1 collapses to the diagonal one. The line $\operatorname{Re}s=\frac12$
+$\mathrm{Re}\,s=\tfrac12$ pointwise, so on that line the mirrored pairing
+of 113_05 Theorem 3.1 collapses to the diagonal one. The line $\mathrm{Re}\,s=\frac12$
 is not put in by hand; it is the fixed locus of the involution the algebra
 already carries.
 
@@ -185,7 +185,7 @@ that the admissible example was hard to construct; there is none.
 >    \tag{3.2}$$
 > 3. $I_\partial$ is sesquilinear and Hermitian: $I_\partial(g,f)=\overline{I_\partial(f,g)}$;
 > 4. the diagonal is available: for every $f\in\mathcal D$,
->    $$Q(f):=I_\partial(f,f)=2\operatorname{Re}\bigl[\widehat f(0)\overline{\widehat f(1)}\bigr]
+>    $$Q(f):=I_\partial(f,f)=2\mathrm{Re}\,\bigl[\widehat f(0)\overline{\widehat f(1)}\bigr]
 >    -\sum_\rho m_\rho\,\widehat f(\rho)\,\overline{\widehat f(\rho')}\in\mathbb R .
 >    \tag{3.3}$$
 
@@ -194,7 +194,7 @@ Theorem 2.2. (2) 113_05 Theorem 3.1 gives
 $\widehat h(s)=\widehat f(s)\overline{\widehat g(1-\bar s)}$; evaluate at
 $s=0,1,\rho$, using $1-\bar 0=1$ and $1-\bar1=0$. Note $\widehat g$ is defined
 at $0$ and $1$ because $\theta>3/2>\tfrac12$ puts both inside the strip
-$|\!\operatorname{Re}s-\tfrac12|<\theta$. (3) $\widetilde{f\star\widetilde g}=g\star\widetilde f$
+$|\!\mathrm{Re}\,s-\tfrac12|<\theta$. (3) $\widetilde{f\star\widetilde g}=g\star\widetilde f$
 by Lemma 1.2(1)–(2), and (3.2) visibly conjugate-swaps: the zero set $Z$ is
 stable under $\rho\mapsto\rho'$ with $m_{\rho'}=m_\rho$ (from $\xi(s)=\xi(1-s)$
 and $\overline{\xi(\bar s)}=\xi(s)$), so the sum reindexes. (4) Set $g=f$ in

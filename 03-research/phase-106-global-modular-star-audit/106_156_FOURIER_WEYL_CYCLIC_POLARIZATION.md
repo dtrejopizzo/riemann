@@ -182,7 +182,7 @@ mixed-complex action: the factors \(e^{-(n+1)t/2}\) differ in adjacent
 degrees and hence do not commute with \(b\).  The conversion of (13) to a
 single weight-one action belongs to the Tate twist in the derived
 degree-one realization.  Degree zero recovers the half-density
-normalization of 106.155.  Proving that the CCM \(\operatorname{Tor}\)
+normalization of 106.155.  Proving that the CCM \(\mathrm{Tor}\,\)
 realization supplies exactly this twist is part of the descent theorem,
 not an identity available at chain level.
 
@@ -206,7 +206,7 @@ doubled mixed complexes and a mapping cone
 
 \[
  \mathfrak C_{\rm FW,rel}
- =\operatorname{Cone}(\rho_x^\natural\oplus\rho_\xi^\natural) \tag{16}
+ =\mathrm{Cone}(\rho_x^\natural\oplus\rho_\xi^\natural) \tag{16}
 \]
 
 carrying \(J_{\rm FW}\), algebraic scaling, and the chain forms (11).
@@ -283,7 +283,7 @@ Still required:
 
 * A. Connes, C. Consani, and M. Marcolli,
   [*The Weil proof and the geometry of the adeles class space*](https://arxiv.org/abs/math/0703392):
-  the cyclic cokernel, its \(\operatorname{Tor}\) realization, scaling action,
+  the cyclic cokernel, its \(\mathrm{Tor}\,\) realization, scaling action,
   trace pairing, and the sharp involution.
 * A. Connes and C. Consani,
   [*Weil positivity and Trace formula, the archimedean place*](https://arxiv.org/abs/2006.13771):

@@ -17,7 +17,7 @@ The output of this note is a metrized pairing
  \tag{1.1}
 \]
 
-on finite-support source divisors \(D,E\in\operatorname{Div}_{\mathrm{EF}}\),
+on finite-support source divisors \(D,E\in\mathrm{Div}_{\mathrm{EF}}\),
 with the diagonal obtained from the same metric as the cross terms.
 
 ## 2. Input from earlier steps
@@ -25,7 +25,7 @@ with the diagonal obtained from the same metric as the cross terms.
 Three previous documents supply the required ingredients.
 
 1. `107_03` fixes the finite-support source divisor module
-   \(\operatorname{Div}_{\mathrm{EF}}\).
+   \(\mathrm{Div}_{\mathrm{EF}}\).
 2. `107_04` constructs the finite determinant line
    \(\langle D,E\rangle_{\mathrm{fin}}\) and proves that its
    off-diagonal orders are the normalized cyclotomic resultants.
@@ -112,7 +112,7 @@ Equivalently, the primitive finite part and the archimedean boundary norm
 cancel exactly:
 
 \[
- \operatorname{FP}_{s\downarrow1/2}\|B_sF\|^2+\|B_\infty F\|^2=0.
+ \mathrm{FP}_{s\downarrow1/2}\|B_sF\|^2+\|B_\infty F\|^2=0.
  \tag{4.2}
 \]
 
@@ -154,7 +154,7 @@ the common cutoff cancels before any limit is taken.
 
 ## 6. Definition of the Gamma--polar metric
 
-For \(D,E\in\operatorname{Div}_{\mathrm{EF}}\), let \(h_{D,E}\) denote the
+For \(D,E\in\mathrm{Div}_{\mathrm{EF}}\), let \(h_{D,E}\) denote the
 source logarithmic correlation extracted from the connected return data.
 Because \(D\) and \(E\) have finite prime-power support, \(h_{D,E}\) has
 compact logarithmic support.
@@ -200,7 +200,7 @@ intersection object.  The present metric closes that gap.
 
 ### Definition 7.1: diagonal self-pairing
 
-For a source divisor \(D\in\operatorname{Div}_{\mathrm{EF}}\), define its
+For a source divisor \(D\in\mathrm{Div}_{\mathrm{EF}}\), define its
 self-pairing by
 
 \[
@@ -234,7 +234,7 @@ This is exactly the coherence requirement imposed by 107.00.
 ### Definition 8.1: arithmetic pairing
 
 The Paper A arithmetic Deligne pairing on
-\(\operatorname{Div}_{\mathrm{EF}}\) is the assignment
+\(\mathrm{Div}_{\mathrm{EF}}\) is the assignment
 
 \[
  (D,E)\longmapsto \overline{\langle D,E\rangle}

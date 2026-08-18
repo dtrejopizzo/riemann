@@ -30,8 +30,8 @@ Indeed, maps from either side to a target are exactly maps from `A` sending
 both `s` and `t` to zero.  Consequently
 
 \[
- D_A(s)\times_{\operatorname{Spec}A}D_A(t)
- \simeq\operatorname{Spec}A/E((s,t)).                                  \tag{1.3}
+ D_A(s)\times_{\mathrm{Spec}\,A}D_A(t)
+ \simeq\mathrm{Spec}\,A/E((s,t)).                                  \tag{1.3}
 \]
 
 This argument is valid chartwise and is compatible with restriction because
@@ -103,7 +103,7 @@ The first two are improper self-intersections and require normal/Green data.
 The last fiber product exists as the generalized quotient
 
 \[
- \operatorname{Spec}A/E((i_1(p),i_2(q))),                              \tag{4.2}
+ \mathrm{Spec}\,A/E((i_1(p),i_2(q))),                              \tag{4.2}
 \]
 
 but the two scalars belong to different additions, so (2.1) cannot be used.

@@ -227,7 +227,7 @@ perfectly regular points of $\Gamma$) it is not.
 
 **Why this settles the source-rule question, and not just formally.** The
 point $s=0$ ($n=0$ in the spectrum of $\Theta$) is a pole of $\Gamma(s/2)$,
-hence lies in $\operatorname{spec}$ by Proposition 6.1 — but it is **not** a
+hence lies in $\mathrm{spec}$ by Proposition 6.1 — but it is **not** a
 zero of $\zeta$: $\zeta(0)=-\tfrac12\ne0$ (check "6" in the verifier,
 via $\zeta_H(0,1)=\zeta(0)$, matching $-\tfrac12$ to $10^{-10}$). It is also
 not a zero of $\xi$: at $s=0$ the polar factor $s(s-1)/2$ of $\xi$ has a

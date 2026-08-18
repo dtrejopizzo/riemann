@@ -34,8 +34,8 @@ Let \(H^2(\mathbb S^1)\) be the Hardy space with orthonormal basis
 \[
  \boxed{
  \ker T_z=0,\qquad
- \operatorname {coker}T_z=\mathbb C e_0,\qquad
- \operatorname {Ind}T_z=-1.}                                \tag{2}
+ \mathrm{coker}\,T_z=\mathbb C e_0,\qquad
+ \mathrm{Ind}\,T_z=-1.}                                \tag{2}
 \]
 
 #### Proof
@@ -61,7 +61,7 @@ Let
 with normalized trace
 
 \[
- \tau(A)=\frac12\mathbf E\,\operatorname {Tr}_2A             \tag{4}
+ \tau(A)=\frac12\mathbf E\,\mathrm{Tr}_2A             \tag{4}
 \]
 
 be the finite algebra of 106.154. Its common return holonomies are
@@ -88,9 +88,9 @@ It is Breuer--Fredholm. Its kernel is zero and its cokernel is the copy
 
 For \(A\in\mathscr M\), define the equivariant \(\tau\)-index character
 \[
- \operatorname {Ind}_\tau(\mathcal T;A)
- =\operatorname {Tr}_\tau(A\mid\ker\mathcal T)
-  -\operatorname {Tr}_\tau(A\mid\operatorname {coker}\mathcal T).
+ \mathrm{Ind}_\tau(\mathcal T;A)
+ =\mathrm{Tr}_\tau(A\mid\ker\mathcal T)
+  -\mathrm{Tr}_\tau(A\mid\mathrm{coker}\,\mathcal T).
                                                                     \tag{9}
 \]
 
@@ -100,7 +100,7 @@ For every \(t>0\) and \(k\geq1\),
 
 \[
  \boxed{
- \operatorname {Ind}_\tau(\mathcal T;U_t^k)
+ \mathrm{Ind}_\tau(\mathcal T;U_t^k)
  =-\tau(U_t^k)
  =-e^{-kt/2}.}                                               \tag{10}
 \]
@@ -121,7 +121,7 @@ Let \(\widehat h\) be compactly supported on \((0,\infty)\). Define
 \[
  \mathcal L_{\rm pr}(\widehat h)
  =\sum_p\sum_{k\geq1}(\log p)\,
-   \operatorname {Ind}_\tau
+   \mathrm{Ind}_\tau
       (\mathcal T;U_{\log p}^{\,k})\,
    \widehat h(k\log p).                                      \tag{11}
 \]
@@ -145,7 +145,7 @@ formula.
 
 Apply Theorem 3.1 with \(t=\log p\):
 \[
- \operatorname {Ind}_\tau
+ \mathrm{Ind}_\tau
    (\mathcal T;U_{\log p}^{\,k})
  =-e^{-k\log p/2}=-p^{-k/2}.
 \]

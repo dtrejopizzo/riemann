@@ -16,11 +16,11 @@ donde $m_\infty^{(n)}$ es la función WT del operador truncado en $n$. Del anál
 
 **Proposición 1** (eigenvalores = ceros de $C_\infty$). Para todo $t_0 \in \mathbb{R}$:
 
-$$t_0 \in \operatorname{spec}(J_\infty) \iff C_\infty(t_0) = 0.$$
+$$t_0 \in \mathrm{spec}(J_\infty) \iff C_\infty(t_0) = 0.$$
 
 *Prueba.* $t_0$ es eigenvalor de $J_\infty$ iff $\mu_\infty^{WT}(\{t_0\}) > 0$ iff $m_\infty^{WT}$ tiene polo en $t_0$. Por la EF2-WT (Doc 17, Theorem C1), los polos de $m_\infty^{WT}$ son los ceros de $C_\infty$. $\square$
 
-**Corolario 1** (inclusión directa, Teorema 2 de Doc 19). Dado que $m_\infty^{emp}(z) \to \mu_\gamma^{real}$ (Doc 15) y $\mu_\gamma^{real}$ tiene soporte $\{\gamma_n\}$, y $\operatorname{spec}(J_\infty) \subseteq \operatorname{supp}(\mu_\gamma^{real})$:
+**Corolario 1** (inclusión directa, Teorema 2 de Doc 19). Dado que $m_\infty^{emp}(z) \to \mu_\gamma^{real}$ (Doc 15) y $\mu_\gamma^{real}$ tiene soporte $\{\gamma_n\}$, y $\mathrm{spec}(J_\infty) \subseteq \mathrm{supp}(\mu_\gamma^{real})$:
 
 $$\{C_\infty = 0 \text{ en } \mathbb{R}\} \subseteq \{\Xi = 0 \text{ en } \mathbb{R}\} = \{\gamma_n\}.$$
 

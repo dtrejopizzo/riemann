@@ -10,7 +10,7 @@ The target under audit is Proposition 5.1 of `107_04`:
 
 \[
  \frac{1}{\varphi(n)}
- \log\left|\operatorname{Res}(\Phi_m,\Phi_n)\right|
+ \log\left|\mathrm{Res}(\Phi_m,\Phi_n)\right|
  =
  \begin{cases}
  \log p,&m/n=p^a,\\
@@ -23,7 +23,7 @@ The target under audit is Proposition 5.1 of `107_04`:
 The same audit also checks the diagonal warning of Proposition 7.1:
 
 \[
- \operatorname{Res}(\Phi_n,\Phi_n)=0,
+ \mathrm{Res}(\Phi_n,\Phi_n)=0,
  \tag{1.2}
 \]
 
@@ -51,18 +51,18 @@ No external CAS is used.
 For every \(2\le n<m\le24\), the verifier checks:
 
 1. if \(m/n\) is not an integral prime power, then
-   \(|\operatorname{Res}(\Phi_m,\Phi_n)|=1\);
+   \(|\mathrm{Res}(\Phi_m,\Phi_n)|=1\);
 2. if \(m/n=p^a\), then
-   \(|\operatorname{Res}(\Phi_m,\Phi_n)|=p^{\varphi(n)}\);
+   \(|\mathrm{Res}(\Phi_m,\Phi_n)|=p^{\varphi(n)}\);
 3. the prime support of the resultant is exactly \(\{p\}\) in the
    prime-power case and empty otherwise;
 4. symmetry of the absolute norm:
-   \(|\operatorname{Res}(\Phi_m,\Phi_n)|
-    =|\operatorname{Res}(\Phi_n,\Phi_m)|\).
+   \(|\mathrm{Res}(\Phi_m,\Phi_n)|
+    =|\mathrm{Res}(\Phi_n,\Phi_m)|\).
 
 For every \(1\le n\le24\), it also checks:
 
-5. \(\operatorname{Res}(\Phi_n,\Phi_n)=0\).
+5. \(\mathrm{Res}(\Phi_n,\Phi_n)=0\).
 
 ## 4. Audit outcome
 

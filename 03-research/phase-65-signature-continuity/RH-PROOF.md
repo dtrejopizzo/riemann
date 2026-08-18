@@ -78,7 +78,7 @@ family + identity theorem), it converges locally uniformly on all of `Ω_-` to a
 `G_Ξ^{G5}` has no off-real pole in `Ω_-`; by the `z ↦ −z` symmetry (functional equation), none in `Ω_+`.
 Hence
 \[
-   \operatorname{sq}_-(G_\Xi^{\mathrm G5}) = 0,
+   \mathrm{sq}_-(G_\Xi^{\mathrm G5}) = 0,
 \]
 and by G5,
 \[

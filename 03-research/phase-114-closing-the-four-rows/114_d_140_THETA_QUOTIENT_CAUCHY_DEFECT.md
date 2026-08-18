@@ -17,7 +17,7 @@ Since \(\ker L=\mathbb Ck\), the formula
  \langle Lu,Lv\rangle_{\rm q}:=\langle Qu,Qv\rangle_{L^2} \tag{0.2}
 \]
 
-is well defined and positive on \(\operatorname{Ran}L\).  Its failure to
+is well defined and positive on \(\mathrm{Ran}\,L\).  Its failure to
 make \((LD,L)\) symmetric is the rank-two boundary form
 
 \[
@@ -27,7 +27,7 @@ make \((LD,L)\) symmetric is the rank-two boundary form
 \]
 
 For the theta eigenfunction \(u_\alpha\) attached to
-\(\Xi(\alpha)=0\), put \(b=\operatorname{Im}\alpha\),
+\(\Xi(\alpha)=0\), put \(b=\mathrm{Im}\,\alpha\),
 \(N=\|k\|^2\), \(z_\alpha=\langle u_\alpha,k\rangle\), and
 \(J_\alpha=\|u_\alpha\|^2\).  Direct Fourier calculation gives
 
@@ -43,7 +43,7 @@ The Cauchy--Schwarz inequality is strict:
 \]
 
 Hence (0.4) is nonzero for every non-real zero and has sign opposite to
-\(\operatorname{Im}\alpha\) after division by \(2i\).  For a real zero it
+\(\mathrm{Im}\,\alpha\) after division by \(2i\).  For a real zero it
 vanishes.  The quotient metric is therefore an exact off-line detector,
 not a proof that the defect vanishes.
 
@@ -75,7 +75,7 @@ the Schwartz class.  Since
 
 the kernel of the maximal first-order realization is \(\mathbb Ck\).
 If \(Lu=Lv\), then \(u-v\in\mathbb Ck\), so \(Qu=Qv\).  This proves that
-(0.2) is well defined.  It is nondegenerate on \(\operatorname{Ran}L\):
+(0.2) is well defined.  It is nondegenerate on \(\mathrm{Ran}\,L\):
 \(Qu=0\) implies \(u\in\ker L\), hence \(Lu=0\).
 
 This is the minimal \(L^2\) quotient norm.  It is source-defined from the
@@ -148,7 +148,7 @@ Plancherel gives
 For \(\alpha=a+ib\),
 
 \[
- \operatorname{Re}z_\alpha=-bJ_\alpha.                \tag{3.5}
+ \mathrm{Re}\,z_\alpha=-bJ_\alpha.                \tag{3.5}
 \]
 
 ## 4. The Cauchy variance
@@ -166,7 +166,7 @@ yields
 \[
 \begin{aligned}
  N\Omega(u_\alpha,u_\alpha)
- &=2ib|z_\alpha|^2+2iN\operatorname{Re}z_\alpha\\
+ &=2ib|z_\alpha|^2+2iN\mathrm{Re}\,z_\alpha\\
  &=2ib\bigl(|z_\alpha|^2-NJ_\alpha\bigr),             \tag{4.2}
 \end{aligned}
 \]
@@ -194,7 +194,7 @@ strict.
 
 If \(b\ne0\), (4.3) is nonzero.  If \(b=0\), the removable real integrand
 in the second line of (3.4) is real before multiplication by \(-i\), so
-\(\operatorname{Re}z_\alpha=0\), and (4.3) vanishes.
+\(\mathrm{Re}\,z_\alpha=0\), and (4.3) vanishes.
 
 This proves the announced exact detector.
 
@@ -247,7 +247,7 @@ The remaining mismatch is now explicit:
 
 \[
  \text{theta boundary plane }
- \operatorname{span}\{k,Dk\}
+ \mathrm{span}\,\{k,Dk\}
  \ne
  \text{A--B--C Tate plane in (5.3)}.                  \tag{6.1}
 \]

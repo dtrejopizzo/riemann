@@ -34,7 +34,7 @@ C_N\ge0,
 \qquad
 d_N>0,
 \qquad
-b_N\in\operatorname{Ran}C_N^{1/2},
+b_N\in\mathrm{Ran}\,C_N^{1/2},
 \qquad
 \boxed{\rho_N\le\frac1{20\log N}}.
 \]

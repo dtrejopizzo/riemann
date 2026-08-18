@@ -33,7 +33,7 @@ derivatives stay bounded along a suitable sequence.  Hence the initial
 crossing form has no uniform sign, even after imposing both Tate moments.
 
 The same issue prevents a classical operator-norm derivative of the shorted
-annular capacity \(\operatorname {Cap}_N\) at birth.  On fixed coercive
+annular capacity \(\mathrm{Cap}_N\) at birth.  On fixed coercive
 blocks its derivative is the usual Schur--Hadamard expression, derived
 below.  At an actual threshold the annular Hilbert space is born with the
 cell and the entering translation has norm one for every \(\delta>0\),
@@ -98,7 +98,7 @@ where \(G_T\) is the Gamma multiplier
 and
 
 \[
- \ell_\infty(u)=\operatorname {Re}\psi(1/4+iu/2)-\psi(1/4). \tag{1.6}
+ \ell_\infty(u)=\mathrm{Re}\,\psi(1/4+iu/2)-\psi(1/4). \tag{1.6}
 \]
 
 The two moment vectors may be taken as
@@ -294,7 +294,7 @@ linearly independent on every open interval.  There are coefficients
 \[
  f_\varepsilon=b_\varepsilon
    -c_{\varepsilon,+}\chi_+
-   -c_{\varepsilon,-}\chi_-\in\operatorname {Ran}P_{T_0}. \tag{6.3}
+   -c_{\varepsilon,-}\chi_-\in\mathrm{Ran}\,P_{T_0}. \tag{6.3}
 \]
 
 The endpoint values are unchanged.  Therefore the entering term in
@@ -351,7 +351,7 @@ On fixed Hilbert spaces, let
 be differentiable in operator norm.  The shorted capacity is
 
 \[
- \operatorname {Cap}(\delta)
+ \mathrm{Cap}(\delta)
  =D(\delta)-B(\delta)^*A(\delta)^{-1}B(\delta).        \tag{7.2}
 \]
 
@@ -360,7 +360,7 @@ Direct differentiation gives the exact Schur--Hadamard formula
 \[
 \boxed{
 \begin{aligned}
- \dot{\operatorname {Cap}}={}&\dot D
+ \dot{\mathrm{Cap}}={}&\dot D
  -\dot B^*A^{-1}B-B^*A^{-1}\dot B\\
  &+B^*A^{-1}\dot A A^{-1}B.                           \tag{7.3}
 \end{aligned}}
@@ -369,16 +369,16 @@ Direct differentiation gives the exact Schur--Hadamard formula
 For a scalar inverse capacity
 
 \[
- \operatorname {cap}=\langle b,A^{-1}b\rangle^{-1},   \tag{7.4}
+ \mathrm{cap}=\langle b,A^{-1}b\rangle^{-1},   \tag{7.4}
 \]
 
 one likewise obtains
 
 \[
 \boxed{
- \dot{\operatorname {cap}}
- =-\operatorname {cap}^2
- \left(2\operatorname {Re}\langle\dot b,A^{-1}b\rangle
+ \dot{\mathrm{cap}}
+ =-\mathrm{cap}^2
+ \left(2\mathrm{Re}\,\langle\dot b,A^{-1}b\rangle
  -\langle b,A^{-1}\dot A A^{-1}b\rangle\right).}      \tag{7.5}
 \]
 
@@ -411,7 +411,7 @@ identification.  Thus
 
 The contact is strongly/form-norm continuous on suitable domains but not
 operator-norm continuous at birth.  Simultaneously, the annular summand in
-the decomposition defining \(\operatorname {Cap}_N\) has zero dimension at
+the decomposition defining \(\mathrm{Cap}_N\) has zero dimension at
 \(\delta=0\) and positive infinite dimension for every \(\delta>0\).
 There is no canonical fixed annular Hilbert space on which (7.3) can be
 differentiated.
@@ -419,7 +419,7 @@ differentiated.
 After blowing the layer up to a fixed interval, (7.7) becomes an order-one
 off-diagonal boundary block, while the Gamma form acquires the singular
 scale \(\log(1/\delta)\).  It is therefore false that
-\(\operatorname {Cap}_N(\delta)\) has an intrinsic finite bounded-operator
+\(\mathrm{Cap}_N(\delta)\) has an intrinsic finite bounded-operator
 right derivative determined by (0.1).  A Galerkin or mollified trace may
 have a derivative, but it is a derivative of that regularization.
 

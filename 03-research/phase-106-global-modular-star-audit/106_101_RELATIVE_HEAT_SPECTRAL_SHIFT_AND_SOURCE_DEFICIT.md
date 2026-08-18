@@ -5,7 +5,7 @@
 Document 106.100 constructs the positive relative heat observable
 
 \[
- \Theta_V(t)=\operatorname {Tr}\{e^{-tS}-e^{-t(S+V)}\},
+ \Theta_V(t)=\mathrm{Tr}\,\{e^{-tS}-e^{-t(S+V)}\},
  \qquad S=A+\frac12I,
  \tag{1}
 \]
@@ -53,7 +53,7 @@ For \(s\in[0,1]\), put \(S_s=S+sV\), and define the finite positive measure
 
 \[
  d\eta_V(\lambda)
- =\int_0^1\operatorname {Tr}
+ =\int_0^1\mathrm{Tr}
  \bigl(V^{1/2}E_{S_s}(d\lambda)V^{1/2}\bigr)\,ds.
  \tag{5}
 \]
@@ -72,7 +72,7 @@ No trace-class assumption on either heat semigroup is used.  The measure in
 (5) is finite because
 
 \[
- \eta_V(\mathbb R)=\int_0^1\operatorname {Tr}V\,ds=\|V\|_1.
+ \eta_V(\mathbb R)=\int_0^1\mathrm{Tr}\,V\,ds=\|V\|_1.
  \tag{7}
 \]
 
@@ -110,7 +110,7 @@ with multiplicity.  They are absolutely continuous, satisfy
 \[
  \lambda_j(0)=\lambda_0,
  \qquad
- \lambda_j'(s)=\operatorname {Tr}(VP_j(s))
+ \lambda_j'(s)=\mathrm{Tr}(VP_j(s))
  \quad\text{for a.e. }s,
  \tag{11}
 \]
@@ -181,9 +181,9 @@ which proves (3).
 Use the notation of 106.100:
 
 \[
- E_V(t)=\int_0^1\operatorname {Tr}(L\Gamma_{s,t})\,ds,
+ E_V(t)=\int_0^1\mathrm{Tr}(L\Gamma_{s,t})\,ds,
  \qquad
- B_V(t)=\int_0^1s\operatorname {Tr}(V\Gamma_{s,t})\,ds.
+ B_V(t)=\int_0^1s\mathrm{Tr}(V\Gamma_{s,t})\,ds.
  \tag{16}
 \]
 

@@ -129,7 +129,7 @@ tower
 
 \[
  K_p(F,F)=2\sum_{k\ge1}\frac{\Lambda(p^k)}{\sqrt{p^k}}
-                    \operatorname{Re}\langle F,S_{k\log p}F\rangle.
+                    \mathrm{Re}\,\langle F,S_{k\log p}F\rangle.
                                                                     \tag{3.4}
 \]
 

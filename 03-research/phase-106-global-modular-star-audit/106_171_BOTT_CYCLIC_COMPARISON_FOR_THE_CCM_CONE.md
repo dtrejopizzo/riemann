@@ -24,7 +24,7 @@ positive.
 Let \(\mathfrak C_{\rm CCM}\) denote the nuclear relative mixed complex
 
 \[
- \operatorname {Cone}\!\left(
+ \mathrm{Cone}\,\!\left(
  \mathscr S(\mathcal G_{\mathbb Q})^\natural_0
  \xrightarrow{\rho^\natural}
  \mathbf S^\natural(C_{\mathbb Q},
@@ -62,7 +62,7 @@ is finite-dimensional after the de Rham contraction.
 Let
 
 \[
- \operatorname {Bott}_\eta:
+ \mathrm{Bott}_\eta:
  CC^{\rm per}(\mathfrak C_{\rm CCM})
  \longrightarrow
  CC^{\rm per}(
@@ -89,7 +89,7 @@ On periodic cyclic homology,
 
 \[
  \boxed{
- \int_{\mathbb S^1}\circ\operatorname {Bott}_\eta=I.}        \tag{6}
+ \int_{\mathbb S^1}\circ\mathrm{Bott}_\eta=I.}        \tag{6}
 \]
 
 Moreover
@@ -104,7 +104,7 @@ Moreover
  HP_{\epsilon-1}(\mathfrak C_{\rm CCM}),}                    \tag{7}
 \]
 
-and \(\operatorname {Bott}_\eta\) is an isomorphism from
+and \(\mathrm{Bott}_\eta\) is an isomorphism from
 \(HP_{\epsilon-1}(\mathfrak C_{\rm CCM})\) onto the second summand.
 
 #### Proof
@@ -157,7 +157,7 @@ On the odd Bott summand,
 
 \[
  \boxed{
- \partial_{\mathcal T}\circ\operatorname {Bott}_\eta=-I.}    \tag{10}
+ \partial_{\mathcal T}\circ\mathrm{Bott}_\eta=-I.}    \tag{10}
 \]
 
 Equivalently,
@@ -177,7 +177,7 @@ pairing of the Toeplitz extension with the generator
 \([z]\in K_1(C(\mathbb S^1))\) is
 
 \[
- \operatorname {Ind}T_z=-1.
+ \mathrm{Ind}\,T_z=-1.
 \]
 
 The normalized de Rham class \(\eta\) pairs with the same generator by
@@ -219,17 +219,17 @@ orbit core:
 \[
 \begin{CD}
  CC^{\rm per}(\mathfrak C_{\rm CCM})
-   @>{\operatorname {Bott}_\eta}>>
+   @>{\mathrm{Bott}_\eta}>>
  CC^{\rm per}(\mathfrak C_{\rm CCM}\widehat\otimes C^\infty(S^1))\\
- @V{\operatorname {Loc}_{\rm orb}}VV
- @VV{(R,RJ)\circ\operatorname {Loc}_{\rm Tate}}V\\
+ @V{\mathrm{Loc}_{\rm orb}}VV
+ @VV{(R,RJ)\circ\mathrm{Loc}_{\rm Tate}}V\\
  \mathfrak C_{\rm orb}
-   @>>{\operatorname {phase}}>
+   @>>{\mathrm{phase}}>
  \mathscr K\oplus\mathscr K .
 \end{CD}                                                     \tag{14}
 \]
 
-Here \(\operatorname {Loc}_{\rm orb}\) denotes the existing fixed-orbit
+Here \(\mathrm{Loc}_{\rm orb}\) denotes the existing fixed-orbit
 localization functional underlying the CCM trace formula. The top arrow
 and the right phase boundary are now constructed. Extending the bottom
 and left arrows to a quasi-isomorphism of nonreduced nuclear complexes is
@@ -259,7 +259,7 @@ finite middle complexes of 106.169 and let
 The remaining map is
 
 \[
- \operatorname {Loc}^{\rm mid}:
+ \mathrm{Loc}^{\rm mid}:
  \mathfrak C_{\rm CCM}
  \longrightarrow
  \mathfrak C_{\rm Tate}^{\rm mid}
@@ -272,11 +272,11 @@ unproved assertions are:
 
 \[
  \boxed{
- H^1(\operatorname {Loc}^{\rm mid})\text{ is injective},
+ H^1(\mathrm{Loc}^{\rm mid})\text{ is injective},
  \qquad
  \mathfrak h_{\rm Ros}(u,v)
- =\langle\operatorname {Loc}^{\rm mid}u,
-          \operatorname {Loc}^{\rm mid}v\rangle_{\rm mid}.}  \tag{16}
+ =\langle\mathrm{Loc}^{\rm mid}u,
+          \mathrm{Loc}^{\rm mid}v\rangle_{\rm mid}.}  \tag{16}
 \]
 
 The second equality would transfer the positive middle metric to the CCM

@@ -30,7 +30,7 @@ zeros of \(L_{n-1}^{(2)}\) that are \(>T_n\).  On each lobe
 \]
 the sign
 \[
-  \sigma_{n,j}=\operatorname{sgn}K_n(u)
+  \sigma_{n,j}=\mathrm{sgn}\,K_n(u)
 \]
 is constant in the interior.
 

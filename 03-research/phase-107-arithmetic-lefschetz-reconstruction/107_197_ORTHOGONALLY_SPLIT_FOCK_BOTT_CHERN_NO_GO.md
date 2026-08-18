@@ -15,9 +15,9 @@ For \(N\ge2\), truncate the exact sequence of 107_196 to
 where
 
 \[
- F_{1,N}=\operatorname{span}(e_1,\ldots,e_N),
+ F_{1,N}=\mathrm{span}(e_1,\ldots,e_N),
  \qquad
- F_{2,N}=\operatorname{span}(e_2,\ldots,e_N).
+ F_{2,N}=\mathrm{span}(e_2,\ldots,e_N).
 \]
 
 Equip every space with the standard number-basis Hermitian metric.  Then
@@ -42,7 +42,7 @@ the Bott--Chern secondary Chern character is normalized to vanish when
 the sequence is orthogonally split:
 
 \[
- \widetilde{\operatorname{ch}}
+ \widetilde{\mathrm{ch}}
  (\overline E',\overline E,\overline E'')=0.
  \tag{2.1}
 \]

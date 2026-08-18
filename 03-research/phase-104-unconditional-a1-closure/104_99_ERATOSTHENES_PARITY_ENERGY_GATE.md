@@ -44,9 +44,9 @@ se obtiene la identidad firmada completa
 
 \[
  \boxed{
- \pi(x)-\operatorname {Li}_2(x)
+ \pi(x)-\mathrm{Li}_2(x)
  =R_E(x,\sqrt x)+xV(\sqrt x)+\pi(\sqrt x)-1
-  -\operatorname {Li}_2(x).}
+  -\mathrm{Li}_2(x).}
  \tag{5}
 \]
 
@@ -57,13 +57,13 @@ que falta es exactamente
 
 \[
  \sum_{m\le N}{{R_E(m,\sqrt m)+mV(\sqrt m)+\pi(\sqrt m)-1
- -\operatorname {Li}_2(m)}^2\over m(m+1)}=N^{o(1)}.
+ -\mathrm{Li}_2(m)}^2\over m(m+1)}=N^{o(1)}.
  \tag{6}
 \]
 
 El término \(\pi(\sqrt m)-1\) tiene energía finita, pero la cancelación
 entre \(R_E(m,\sqrt m)\), \(mV(\sqrt m)\) y
-\(\operatorname {Li}_2(m)\) conserva íntegro el contenido de RH.
+\(\mathrm{Li}_2(m)\) conserva íntegro el contenido de RH.
 
 Hay además una identidad exacta que localiza la barrera de paridad dentro
 del residuo completo. Sea
@@ -90,7 +90,7 @@ En particular, quitando de nuevo el bloque de energía finita,
  \boxed{
  \mathrm {RH}\Longleftrightarrow
  \sum_{m\le N}{1\over m(m+1)}
- \left\{\operatorname {Li}_2(m)+
+ \left\{\mathrm{Li}_2(m)+
  \sum_{d\mid P(\sqrt m)}L(m/d)\right\}^{\!2}=N^{o(1)}.}
  \tag{9}
 \]
@@ -243,8 +243,8 @@ Defina
 La identidad (8) equivale a
 
 \[
- \pi(m)-\operatorname {Li}_2(m)
- =H_m-\{T_m+\operatorname {Li}_2(m)\}.
+ \pi(m)-\mathrm{Li}_2(m)
+ =H_m-\{T_m+\mathrm{Li}_2(m)\}.
  \tag{22}
 \]
 
@@ -269,7 +269,7 @@ acotada como crecimiento \(N^{o(1)}\). La equivalencia (9) sigue de
 
 Observe que (8) no ha ganado una desigualdad: insertada en (22), recupera
 exactamente \(\pi(m)\). Su utilidad es adversarial: cualquier prueba que
-declare pequeño \(T_m+\operatorname {Li}_2(m)\) debe exhibir una
+declare pequeño \(T_m+\mathrm{Li}_2(m)\) debe exhibir una
 cancelación global entre todos los \(L(m/d)\), no una cota de cada uno.
 
 ## 4. Gate cuantitativo para todo nivel subcompleto

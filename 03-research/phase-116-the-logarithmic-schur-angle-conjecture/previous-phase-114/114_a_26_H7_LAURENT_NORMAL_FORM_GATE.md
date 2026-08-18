@@ -108,7 +108,7 @@ The following are equivalent.
    satisfying
    \[
      E_\sigma(i_1(a))=a,\qquad
-     E_\sigma(i_2(b))=\operatorname{sgn}(b)|b|^\sigma.   \tag{3.2}
+     E_\sigma(i_2(b))=\mathrm{sgn}(b)|b|^\sigma.   \tag{3.2}
    \]
 2. `J_Har=0`.
 3. `Phi` is an isomorphism

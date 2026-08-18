@@ -80,7 +80,7 @@ used in 107_231.
 With the uniform topology on \(C_p\times C_q\),
 
 \[
- \operatorname{tdim}\mathcal T_{N,M}^{p,q}
+ \mathrm{tdim}\,\mathcal T_{N,M}^{p,q}
  =(N-p+1)(M-q+1)=de.
  \tag{3.1}
 \]
@@ -107,7 +107,7 @@ section module and form a countable cover. The countable closed-sum
 theorem for covering dimension therefore gives
 
 \[
- \operatorname{tdim}\mathcal T_{N,M}^{p,q}\leq de.
+ \mathrm{tdim}\,\mathcal T_{N,M}^{p,q}\leq de.
 \]
 
 For the reverse inequality, 107_231 constructs an open coefficient
@@ -136,17 +136,17 @@ Frobenius to put
 Define the special external continuous dimension by
 
 \[
- \operatorname{cdim}^{(2)}
+ \mathrm{cdim}^{(2)}
  \bigl(H^0(\alpha\{1\})\boxtimes H^0(\beta\{1\})\bigr)
  :=\lim_{n,m\to\infty}p^{-n}q^{-m}
- \operatorname{tdim}\mathcal T_{N_n,M_m}^{p,q}.
+ \mathrm{tdim}\,\mathcal T_{N_n,M_m}^{p,q}.
  \tag{4.1}
 \]
 
 The limit exists along every cofinal path and Theorem 3.1 gives
 
 \[
- \operatorname{cdim}^{(2)}=\alpha\beta.
+ \mathrm{cdim}^{(2)}=\alpha\beta.
  \tag{4.2}
 \]
 

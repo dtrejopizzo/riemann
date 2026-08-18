@@ -143,7 +143,7 @@ shorthand for this weaker, but explicit and nonzero, structure.
 For \(c\,U_s\in\mathcal L_s\), \(c\neq0\), define
 
 \[
- \operatorname{div}(cU_s):=c\cdot r^{s-1}\,\frac{dr}r
+ \mathrm{div}(cU_s):=c\cdot r^{s-1}\,\frac{dr}r
  \qquad\text{on }(0,\infty),
  \tag{5.1}
 \]
@@ -154,8 +154,8 @@ SS1's Hessian formula.
 
 ### Proposition 5.2 (div is injective on \(\mathcal G\), and every value is nonzero)
 
-For every \(s\), \(\operatorname{div}:\mathcal L_s\to\{\text{currents on
-}(0,\infty)\}\) is injective, and \(\operatorname{div}(cU_s)=0\) iff
+For every \(s\), \(\mathrm{div}:\mathcal L_s\to\{\text{currents on
+}(0,\infty)\}\) is injective, and \(\mathrm{div}(cU_s)=0\) iff
 \(c=0\).
 
 **Proof.** \(r^{s-1}\) is a nowhere-vanishing continuous function on
@@ -188,7 +188,7 @@ of (3.3).
 
 \[
  \boxed{
- \operatorname{Prin}(\mathcal G):=\operatorname{div}(\mathcal L_0)
+ \mathrm{Prin}(\mathcal G):=\mathrm{div}(\mathcal L_0)
  =\mathbb R\cdot\Big(\frac{dr}r\Big)
  \subset\{\text{currents on }(0,\infty)\}.}
  \tag{6.1}
@@ -196,12 +196,12 @@ of (3.3).
 
 ### Theorem 6.2
 
-\(\operatorname{Prin}(\mathcal G)\) is a one-dimensional, nonzero subspace,
+\(\mathrm{Prin}(\mathcal G)\) is a one-dimensional, nonzero subspace,
 canonically and explicitly constructed, with generator the curvature current
 of \(U_0(x,y)=y\log(y/x)-y\).
 
 **Proof.** \(\mathcal L_0\) is one-dimensional (108.02 Theorem 4.1 at
-\(s=0\)); \(\operatorname{div}\) is injective on it (Proposition 5.2) and
+\(s=0\)); \(\mathrm{div}\,\) is injective on it (Proposition 5.2) and
 its image is spanned by the density \(r^{-1}\), which is nonzero.
 \(\square\)
 
@@ -219,7 +219,7 @@ rational function on a scheme.
 
 ### 6.2 Scope of the claim
 
-\(\operatorname{Prin}(\mathcal G)\) is a *witness*: an explicit, nonzero
+\(\mathrm{Prin}(\mathcal G)\) is a *witness*: an explicit, nonzero
 candidate for a global principal subspace, constructed without reference to
 any zero of \(\xi\), any Li coefficient, or the sign of the Weil form. It is
 **not** claimed to be:
@@ -227,7 +227,7 @@ any zero of \(\xi\), any Li coefficient, or the sign of the Weil form. It is
 * the full space of global principal divisors on the quotient topos (larger
   categories of global sections, beyond the character-graded family
   \(\mathcal G\), are not ruled out or constructed here);
-* contained in, or unrelated to, \(\operatorname{rad}I_\partial\) (107_240
+* contained in, or unrelated to, \(\mathrm{rad}\,I_\partial\) (107_240
   Theorem D) -- that question is 108.04's, and 108.04 explicitly declines to
   test it; 108.10 explains why the test is not currently even well posed.
 
@@ -247,7 +247,7 @@ Not claimed:
 
 * full sheaf-theoretic gluing on the quotient topos;
 * completeness of \(\mathcal G\) as "all" global sections;
-* any relation between \(\operatorname{Prin}(\mathcal G)\) and
+* any relation between \(\mathrm{Prin}(\mathcal G)\) and
   \(I_\partial\) (108.04, 108.10).
 
 ## 8. Verifier
@@ -261,7 +261,7 @@ Not claimed:
    cases is exactly linear in \((x,y)\) (fits a plane with zero residual);
 3. confirms Proposition 5.2 (injectivity: distinct \(c\) give
    distinguishable sampled densities; the density is nonvanishing);
-4. confirms Theorem 6.2: constructs \(\operatorname{Prin}(\mathcal G)\)
+4. confirms Theorem 6.2: constructs \(\mathrm{Prin}(\mathcal G)\)
    explicitly and checks it is nonzero and one-dimensional (spanned by
    \(1/r\)) by sampling;
 5. prints `VERDICT: YES` for "an explicit nonzero global principal line is

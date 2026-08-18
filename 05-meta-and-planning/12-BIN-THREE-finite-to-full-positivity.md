@@ -74,7 +74,7 @@ infinite moment sequence), so "full" is a genuine limit no finite-order theorem 
 This is the precise shape of **bin three's only possible occupant**: not "a new positivity inequality" and not "a
 new statistic," but **a finitization** — a construction rendering ζ's full positivity equivalent to a
 finite-dimensional one (a finite intersection lattice / finite cohomology / a finite totally-positive matrix whose
-total positivity is itself a corollary). The function-field curve is such a finitization; for $\operatorname{Spec}
+total positivity is itself a corollary). The function-field curve is such a finitization; for $\mathrm{Spec}
 \mathbb Z$ none is known, and that — not any single inequality — is the missing mathematics.
 
 ## 5. Adversarial audit of the synthesis (destroy it)
@@ -101,7 +101,7 @@ total positivity is itself a corollary). The function-field curve is such a fini
   the two faces of one missing object — *a finite-dimensional model of ζ's positivity.*
 - **Bin three remains empty**, but its only possible occupant is now characterized with precision it never had: not
   a new inequality, but a **finitization of ζ's full positivity**. Whether one exists — geometric (the
-  $\operatorname{Spec}\mathbb Z$ surface) or otherwise — is the single open question the entire strategy map now
+  $\mathrm{Spec}\,\mathbb Z$ surface) or otherwise — is the single open question the entire strategy map now
   points to.
 - **No RH proof is claimed.** This is new mathematics in the candid sense the program demands: a sharper true
   statement about the wall, falsifiable, and pointing at exactly one thing to build.

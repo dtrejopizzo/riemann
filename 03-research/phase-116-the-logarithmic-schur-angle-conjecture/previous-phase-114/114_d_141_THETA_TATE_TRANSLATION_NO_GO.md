@@ -19,7 +19,7 @@ Thus, at \(a=k\log p\), it carries exactly the two Frobenius characters
 The theta defect plane is represented by
 
 \[
- \mathcal B_\Theta=\operatorname{span}\{k,Dk\},
+ \mathcal B_\Theta=\mathrm{span}\,\{k,Dk\},
  \qquad \widehat k=\Xi/2.                             \tag{0.2}
 \]
 
@@ -83,7 +83,7 @@ diagonal matrix
 \]
 
 For \(a=k\log p\), (1.5) is precisely
-\(\operatorname{diag}(p^{-k/2},p^{k/2})\).  This is the metric
+\(\mathrm{diag}(p^{-k/2},p^{k/2})\).  This is the metric
 normalization already shared by rows A, B and C.
 
 ## 2. The theta defect plane
@@ -105,7 +105,7 @@ and D.140 proved that the quotient-pair defect is represented by the two
 functionals with Riesz vectors \(k,Dk\).  Thus
 
 \[
- \mathcal B_\Theta=\operatorname{span}\{k,Dk\}
+ \mathcal B_\Theta=\mathrm{span}\,\{k,Dk\}
  \subset L^2(\mathbb R).                              \tag{2.3}
 \]
 
@@ -123,14 +123,14 @@ be the resulting \(2\times2\) matrix.
 Cayley--Hamilton gives
 
 \[
- A_a^2-(\operatorname{tr}A_a)A_a
+ A_a^2-(\mathrm{tr}\,A_a)A_a
        +(\det A_a)I=0.                                \tag{3.1}
 \]
 
 Applying (3.1) to \(k\) yields
 
 \[
- S_{2a}k-(\operatorname{tr}A_a)S_ak
+ S_{2a}k-(\mathrm{tr}\,A_a)S_ak
        +(\det A_a)k=0.                                \tag{3.2}
 \]
 
@@ -144,7 +144,7 @@ Hence (3.2) becomes
 
 \[
  \left(e^{-2ia\tau}
- -(\operatorname{tr}A_a)e^{-ia\tau}
+ -(\mathrm{tr}\,A_a)e^{-ia\tau}
  +\det A_a\right)\Xi(\tau)=0
  \quad\text{for a.e. }\tau.                           \tag{3.4}
 \]
@@ -153,7 +153,7 @@ The real zeros of the nonzero entire function \(\Xi\) form a discrete set,
 so they have measure zero.  Therefore the quadratic polynomial
 
 \[
- P(z)=z^2-(\operatorname{tr}A_a)z+\det A_a            \tag{3.5}
+ P(z)=z^2-(\mathrm{tr}\,A_a)z+\det A_a            \tag{3.5}
 \]
 
 vanishes at \(z=e^{-ia\tau}\) for almost every real \(\tau\).  Those values

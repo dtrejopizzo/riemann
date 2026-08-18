@@ -60,7 +60,7 @@ Define
 
 \[
  \rho_{\rm op}:\mathscr C_{\rm op}\longrightarrow
- \operatorname{End}_{\mathbb C}(\mathcal H),
+ \mathrm{End}_{\mathbb C}(\mathcal H),
  \qquad \Gamma_n^{\rm op}\longmapsto V_n.             \tag{2.2}
 \]
 
@@ -95,7 +95,7 @@ Haran's equation (13.37), with `Phi_n(t)` denoting the usual cyclotomic
 polynomial, is
 
 \[
- \operatorname{tr}(\lambda_t(\phi_n))=\Phi_n(t).       \tag{3.1}
+ \mathrm{tr}(\lambda_t(\phi_n))=\Phi_n(t).       \tag{3.1}
 \]
 
 For `n>=2`, define the operator-diagonal mass
@@ -103,7 +103,7 @@ For `n>=2`, define the operator-diagonal mass
 \[
  I_{\rm op}(\Gamma_n^{\rm op},\Delta_{\rm op})
  :=\log\left|
- \operatorname{tr}\bigl(\lambda_1(V_n\phi_1)\bigr)
+ \mathrm{tr}\,\bigl(\lambda_1(V_n\phi_1)\bigr)
  \right|.                                              \tag{3.2}
 \]
 
@@ -142,7 +142,7 @@ already present in the Witt object.
 The constructions `a_17`--`a_19` provide on
 
 \[
- Y=X\times_{\operatorname{Spec}\mathbb F\{\pm1\}}X
+ Y=X\times_{\mathrm{Spec}\,\mathbb F\{\pm1\}}X
 \]
 
 the diagonal, prime-incidence carriers, nontrivial prime ruling classes and
@@ -154,7 +154,7 @@ mass but no map
 
 \[
  \rho_{\rm geom}:\mathscr C_{\rm op}
- \longrightarrow\operatorname{CorrDiv}(Y).             \tag{4.1}
+ \longrightarrow\mathrm{CorrDiv}(Y).             \tag{4.1}
 \]
 
 The source's final Remark 12.42 explicitly distinguishes the adelic/Witt

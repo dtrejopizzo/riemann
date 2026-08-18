@@ -141,7 +141,7 @@ and equip it with its canonical semifinite normal trace
 
 \[
  \tau_p(T)=\int_{\mathbb T}
- \operatorname{Tr}(T_\theta)\,d\mu_{p^{-1/2}}(\theta)
+ \mathrm{Tr}(T_\theta)\,d\mu_{p^{-1/2}}(\theta)
 \]
 
 for positive decomposable \(T\).  Then \(A_p=A_p^*\geq0\),
@@ -318,7 +318,7 @@ An arithmetic heat-kernel realization must now provide one Hilbert space
  K_t&=K_t^*\succeq0,\\
  \|K_t\|&\leq1,\\
  K_t&\in\mathcal S_1\quad(t>0),\\
- \operatorname{Tr}K_t&=H_A(t)-P(t).
+ \mathrm{Tr}\,K_t&=H_A(t)-P(t).
  \end{aligned}}                                      \tag{16}
 \]
 
@@ -340,7 +340,7 @@ If (16) is achieved, the spectral theorem gives
 The Laplace identity of E101.036 then gives
 
 \[
- \operatorname{Tr}(\mathcal A+x)^{-1}=g_\Xi(x),
+ \mathrm{Tr}(\mathcal A+x)^{-1}=g_\Xi(x),
 \]
 
 and the trace-class determinant in the variable

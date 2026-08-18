@@ -37,7 +37,7 @@ Form the augmentation-completed symmetric algebra
 
 \[
  \widehat{\mathscr E}
- =\prod_{m\ge0}\operatorname {Sym}^m(\mathscr P).             \tag{2}
+ =\prod_{m\ge0}\mathrm{Sym}^m(\mathscr P).             \tag{2}
 \]
 
 Give it the standard connected commutative and cocommutative Hopf
@@ -80,8 +80,8 @@ On \(\widehat{\mathscr E}\),
  \boxed{
  \mathfrak e_1^2=\mathfrak e_1,
  \qquad
- \operatorname {Ran}\mathfrak e_1
- =\operatorname {Prim}(\widehat{\mathscr E})=\mathscr P.}    \tag{7}
+ \mathrm{Ran}\,\mathfrak e_1
+ =\mathrm{Prim}(\widehat{\mathscr E})=\mathscr P.}    \tag{7}
 \]
 
 In particular,
@@ -270,14 +270,14 @@ than by separate prime-wise projections.
 
 ## 7. Remaining comparison with CCM
 
-Let \(\operatorname {Tr}_{\rm orb}\rho^\natural\) denote the CCM cyclic
+Let \(\mathrm{Tr}_{\rm orb}\rho^\natural\) denote the CCM cyclic
 restriction followed by diagonal trace and fixed-orbit localization.  The
 new construction supplies the complete right-hand side of a comparison
 
 \[
  \begin{CD}
- \operatorname {Cone}(\rho^\natural)
-   @>{\operatorname {Tr}_{\rm orb}}>>
+ \mathrm{Cone}(\rho^\natural)
+   @>{\mathrm{Tr}_{\rm orb}}>>
   \widehat{\mathscr E}\\
  @. @VV{\mathfrak e_1}V\\
  @. \mathscr P
@@ -294,8 +294,8 @@ Gamma and polar identity sector is attached:
 \[
  \boxed{
  \ker H^1(\mathcal L_{\rm conn}\mathfrak e_1
-       \operatorname {Tr}_{\rm orb})
- =\overline{\operatorname {Ran}\rho^\natural}.}              \tag{21}
+       \mathrm{Tr}_{\rm orb})
+ =\overline{\mathrm{Ran}\,\rho^\natural}.}              \tag{21}
 \]
 
 Equation (21), together with the metric identity, is not a consequence of

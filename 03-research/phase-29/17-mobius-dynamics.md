@@ -233,7 +233,7 @@ $$\text{spec}(J_\infty) = \{t \in \mathbb{R} : C_\infty(t) = 0\}.$$
 
 **Corolario C2.** La medida espectral de $J_\infty$ satisface:
 
-$$\operatorname{supp}(\mu_\infty) = \{t \in \mathbb{R} : C_\infty(t) = 0\}.$$
+$$\mathrm{supp}(\mu_\infty) = \{t \in \mathbb{R} : C_\infty(t) = 0\}.$$
 
 Este es el resultado más limpio del Frente C: los eigenvalores del operador límite CCM son exactamente los ceros del potencial explícito $C_\infty = w - \Psi$.
 
@@ -245,7 +245,7 @@ Este es el resultado más limpio del Frente C: los eigenvalores del operador lí
 
 $$\mu_\gamma^{real} = \text{medida de distribución de ceros de } C_\infty \text{ en } \mathbb{R}.$$
 
-*Prueba.* Por Doc 15: $\mu_\infty = \mu_\gamma^{real}$ (incondicionalmente). Por Corolario C2: $\operatorname{supp}(\mu_\infty) = \{t \in \mathbb{R}: C_\infty(t)=0\}$. Luego la medida $\mu_\gamma^{real}$ está soportada en los ceros reales de $C_\infty$. $\square$
+*Prueba.* Por Doc 15: $\mu_\infty = \mu_\gamma^{real}$ (incondicionalmente). Por Corolario C2: $\mathrm{supp}(\mu_\infty) = \{t \in \mathbb{R}: C_\infty(t)=0\}$. Luego la medida $\mu_\gamma^{real}$ está soportada en los ceros reales de $C_\infty$. $\square$
 
 **Teorema C3** (equivalencia con RH via ceros de $C_\infty$). Las siguientes son equivalentes:
 
@@ -284,7 +284,7 @@ Esto genera ceros adicionales de $C_\infty$ en $\mathbb{R}$ que no son $\gamma_n
 - El sistema dinámico de Möbius $\{T_n\}$ converge al atractor único $m_\infty(z)$ (caso LP, incondicional).
 - La simetría $\Xi(t) = \Xi(-t)$ implica $m_\infty(-z) = -m_\infty(z)$ e impone $b_n^\infty = 0$ en la escala simétrica.
 - La ecuación de punto fijo (EF2) se satisface incondicionalmente en $\mathbb{C}^+$ (Proposición 5).
-- **Teorema C1** (incondicional): $\operatorname{spec}(J_\infty) = \{t \in \mathbb{R} : C_\infty(t) = 0\}$.
+- **Teorema C1** (incondicional): $\mathrm{spec}(J_\infty) = \{t \in \mathbb{R} : C_\infty(t) = 0\}$.
 - **Teorema C3**: RH $\iff$ los ceros reales de $C_\infty$ son exactamente $\{\gamma_n\}$.
 
 **Abierto:**

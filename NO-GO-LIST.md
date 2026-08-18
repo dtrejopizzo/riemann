@@ -460,7 +460,7 @@ non-circular, per deep research from June 2026.
 
 A structurally different pivot from the ARP-P arc (Phases 77–106, closed above with no crossing):
 imitate Weil's 1948 proof of RH for curves over finite fields, working backward from what row (d)
-— Hodge index / Castelnuovo–Severi — would require over $\operatorname{Spec}\mathbb Z$. Full
+— Hodge index / Castelnuovo–Severi — would require over $\mathrm{Spec}\,\mathbb Z$. Full
 detail in `03-research/THE_BACKWARD_MAP.md` and `03-research/AUDIT_CONSOLIDATED.md`; the resulting
 paper is `04-papers/42-arithmetic-lefschetz-programme/`.
 

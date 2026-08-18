@@ -79,7 +79,7 @@ finite moments needed in the specified bidegree.
 For `c=(c_0,...,c_{r-1}) in I_r(Q)`, put
 
 \[
- B_r(c)=\sum_{j=0}^{r-1}3^j\operatorname{sgn}(c_j)
+ B_r(c)=\sum_{j=0}^{r-1}3^j\mathrm{sgn}(c_j)
               [|c_j|/Q],                               \tag{3.1}
 \]
 

@@ -68,7 +68,7 @@ cutoffs.  Before reading any capacity it compares its measured safe block
 with the exact Arb whitening from D.222.  The calibration error is enormous:
 
 \[
- \operatorname{spec}(B_{\rm FFT})
+ \mathrm{spec}(B_{\rm FFT})
  \subset[3.75\,10^{-4},4.39\,10^4],
 \]
 
@@ -90,7 +90,7 @@ D.207, and let \(D_{\rm bdry}\) be its finite complement inside
 block,
 
 \[
- \operatorname{tr}
+ \mathrm{tr}
  \bigl(R_{600}A_TS_{\rm flat}B_{\rm flat}^{-1}
        S_{\rm flat}^*A_TR_{600}\bigr)
  <3.156\,10^{-27}.                                  \tag{3.1}

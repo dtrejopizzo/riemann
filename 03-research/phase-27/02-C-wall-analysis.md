@@ -114,7 +114,7 @@ Wall A es la afirmación:
 **Proposición 27-C.5** (Wall A está bloqueada por la ausencia del sitio aritmético).
 
 Wall A equivale a construir:
-1. Una cohomología aritmética $H^1(\operatorname{Spec}\mathbb{Z},\mathcal{F})$ sobre $\mathbb{Z}$;
+1. Una cohomología aritmética $H^1(\mathrm{Spec}\,\mathbb{Z},\mathcal{F})$ sobre $\mathbb{Z}$;
 2. Un operador de Frobenius aritmético $\phi_p: H^1 \to H^1$ en cada prima $p$;
 3. Una forma de intersección en $H^1$ que: (a) factoriza como $Q = Q_\infty + \sum_p Q_p$, y
    (b) su positividad sea equivalente a RH.
@@ -167,7 +167,7 @@ no se sigue de ningún resultado conocido de la teoría de formas cuadráticas.
 **Sin embargo:** Si el sitio aritmético de Connes–Consani existiese como objeto
 matemático riguroso, el análogo del teorema de índice de Hodge para superficies (que es
 FINITO-DIMENSIONAL) podría aplicar y dar Wall B como consecuencia. Esto sería el
-argumento de Weil-Deligne para curvas elevado a $\operatorname{Spec}\mathbb{Z}$.
+argumento de Weil-Deligne para curvas elevado a $\mathrm{Spec}\,\mathbb{Z}$.
 
 ---
 
@@ -202,13 +202,13 @@ sitio aritmético de Connes–Consani. Esto es:
 
 **Resultado negativo de Phase 27-C:**
 
-Phase 27-C no prueba $\operatorname{neg.ind}(H_C) = 0$. Los dos muros (Wall A y Wall B)
+Phase 27-C no prueba $\mathrm{neg.ind}(H_C) = 0$. Los dos muros (Wall A y Wall B)
 están abiertos. El muro más difícil es Wall A.
 
 **El diagnóstico preciso:** Phase 27 reformula RH como la positividad de una forma de
 intersección en una cohomología aritmética sobre $\mathbb{Z}$, que es exactamente el
 programa de Connes–Consani. La cadena es:
-$$\operatorname{neg.ind}(H_C) = 0
+$$\mathrm{neg.ind}(H_C) = 0
 \iff Q \ge 0
-\iff \text{positividad de la forma de intersección en } H^1(\operatorname{Spec}\mathbb{Z})
+\iff \text{positividad de la forma de intersección en } H^1(\mathrm{Spec}\,\mathbb{Z})
 \iff \text{RH.}$$

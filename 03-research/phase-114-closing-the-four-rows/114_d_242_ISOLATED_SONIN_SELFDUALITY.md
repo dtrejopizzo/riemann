@@ -123,7 +123,7 @@ Differentiating (1.3) at \(\sigma=\frac12\) gives the exact tangent anomaly
 \]
 
 The vector \(w_p\) belongs to \(L^2(\mathbb Q_p)\).  With
-\(\operatorname{vol}(\mathbb Z_p)=1\),
+\(\mathrm{vol}(\mathbb Z_p)=1\),
 
 \[
  \|w_p\|_2^2=2(p-1),\qquad
@@ -132,7 +132,7 @@ The vector \(w_p\) belongs to \(L^2(\mathbb Q_p)\).  With
 \]
 
 Indeed the shell volumes are
-\(\operatorname{vol}(\epsilon_j)=(1-p^{-1})p^j\), and
+\(\mathrm{vol}(\epsilon_j)=(1-p^{-1})p^j\), and
 \(\sum_{j\leq-1}p^j=(p-1)^{-1}\).
 
 There is an additional exact orthogonality which will be needed in the

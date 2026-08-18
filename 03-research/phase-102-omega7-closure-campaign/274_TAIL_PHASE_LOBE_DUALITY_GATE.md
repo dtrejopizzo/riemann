@@ -32,7 +32,7 @@ The nonpositive-tail condition is
 Let the zeros of \(L_{n-1}^{(2)}\) beyond \(T\) partition the tail into
 intervals \(J_{n,j}\), as in `249`, and write
 \[
-  \sigma_{n,j}=\operatorname{sgn}L_{n-1}^{(2)}(u)
+  \sigma_{n,j}=\mathrm{sgn}\,L_{n-1}^{(2)}(u)
   \qquad(u\in J_{n,j}).
 \]
 

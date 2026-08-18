@@ -193,7 +193,7 @@ Combining (11) with the full-kernel identity of 106.31 gives
   +\widetilde{\mathscr E}_p(r)
   +\mathscr X_{\rm frac}(r)
   +\mathscr X_{\rm ctr}(r)
-  -\frac12\operatorname{Var}_{\mu_K}(r).}
+  -\frac12\mathrm{Var}_{\mu_K}(r).}
  \tag{13}
 \]
 
@@ -201,7 +201,7 @@ Thus the ordinary-prime absorption inequality is equivalent to
 
 \[
  \boxed{
- \frac12\operatorname{Var}_{\mu_K}(r)
+ \frac12\mathrm{Var}_{\mu_K}(r)
  \leq
  \mathscr E_\Gamma(r)
  +\widetilde{\mathscr E}_p(r)

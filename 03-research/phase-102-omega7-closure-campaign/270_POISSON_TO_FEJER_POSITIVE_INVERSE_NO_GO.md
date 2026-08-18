@@ -20,7 +20,7 @@ Let
 \[
   P_r(e^{i\theta})
   =
-  \operatorname{Re}{1+re^{i\theta}\over1-re^{i\theta}}
+  \mathrm{Re}{1+re^{i\theta}\over1-re^{i\theta}}
   =
   {1-r^2\over |1-re^{i\theta}|^2},
   \qquad 0<r<1,

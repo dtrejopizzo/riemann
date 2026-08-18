@@ -15,11 +15,11 @@ consequences of the opposite-chart seminorms.  Indeed, if `a=-2n` and
 `b=1+2n`, then
 
 \[
- \operatorname{res}_{s=a}u_+
- =\bigl(\operatorname{res}_{s=a}\gamma\bigr)u_-(a),
+ \mathrm{res}_{s=a}u_+
+ =\bigl(\mathrm{res}_{s=a}\gamma\bigr)u_-(a),
  \qquad
- \operatorname{res}_{s=b}u_-
- =\bigl(\operatorname{res}_{s=b}\gamma^{-1}\bigr)u_+(b).           \tag{1.1}
+ \mathrm{res}_{s=b}u_-
+ =\bigl(\mathrm{res}_{s=b}\gamma^{-1}\bigr)u_+(b).           \tag{1.1}
 \]
 
 Evaluation on a fixed vertical line is continuous for the Schwartz
@@ -92,9 +92,9 @@ so
 Both maps
 
 \[
- f\longmapsto\widehat f|_{\operatorname{Re}s\ge1/2},
+ f\longmapsto\widehat f|_{\mathrm{Re}\,s\ge1/2},
  \qquad
- f\longmapsto\widehat{J\mathcal Ff}|_{\operatorname{Re}s\le1/2} \tag{2.4}
+ f\longmapsto\widehat{J\mathcal Ff}|_{\mathrm{Re}\,s\le1/2} \tag{2.4}
 \]
 
 are continuous for the half-strip Schwartz seminorms.  This is precisely
@@ -105,10 +105,10 @@ exchanges the two weighted strips.
 Taylor expansion at zero gives the exact residue formulas
 
 \[
- \operatorname{res}_{s=-2n}\widehat f(s)
+ \mathrm{res}_{s=-2n}\widehat f(s)
  =\frac{f^{(2n)}(0)}{(2n)!},
  \qquad
- \operatorname{res}_{s=1+2n}\widehat{J\mathcal Ff}(s)
+ \mathrm{res}_{s=1+2n}\widehat{J\mathcal Ff}(s)
  =-\frac{(\mathcal Ff)^{(2n)}(0)}{(2n)!}.            \tag{2.5}
 \]
 

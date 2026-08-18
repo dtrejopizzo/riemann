@@ -6,7 +6,7 @@ tomar el logaritmo. Si
 
 \[
  \mathbb P_s(N=m)={m^{-s}\over\zeta(s)},\qquad
- Y\sim\operatorname{Exp}(s-1),
+ Y\sim\mathrm{Exp}(s-1),
  \tag{1}
 \]
 
@@ -352,7 +352,7 @@ Para toda variable integrable y todo \(a>0\),
 
 \[
  \mathbb EZ
- =\mathbb E\operatorname{clip}_{[-a,a]}(Z)
+ =\mathbb E\mathrm{clip}_{[-a,a]}(Z)
   +\mathbb E(Z-a)_+-\mathbb E(-Z-a)_+,                 \tag{30}
 \]
 

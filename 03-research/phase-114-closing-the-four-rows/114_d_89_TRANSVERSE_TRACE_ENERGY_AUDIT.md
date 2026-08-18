@@ -186,7 +186,7 @@ Indeed, the Jacobian calculation used in (2.2) gives
 Consequently \(\mathcal A^\dagger\) is an isometry and
 \[
  \mathcal K_s=\ker\mathcal A\ \widehat\oplus\
- \operatorname{Ran}\mathcal A^\dagger.                  \tag{2.12}
+ \mathrm{Ran}\,\mathcal A^\dagger.                  \tag{2.12}
 \]
 The normalization in (2.8) is forced by the coisometry equation and leaves
 the row-C convolution \(\mathcal A\) itself unscaled.
@@ -208,7 +208,7 @@ However, changing variables gives
 \begin{aligned}
  \|S_a^{(1)}F\|_{\perp,1}^2
  ={}&\|F\|_{\perp,1}^2
- +2a\,\operatorname{Re}\langle uF,F\rangle
+ +2a\,\mathrm{Re}\,\langle uF,F\rangle
  +a^2\|F\|_2^2.
 \end{aligned}}                                           \tag{3.2}
 \]

@@ -5,7 +5,7 @@
 Connes--Consani's construction of
 
 \[
- \Theta:\operatorname{Spec}\mathbb Z\longrightarrow\widehat{\mathbb N_0^\times}
+ \Theta:\mathrm{Spec}\,\mathbb Z\longrightarrow\widehat{\mathbb N_0^\times}
 \]
 
 uses the sheaf \(\mathcal S\) whose stalk at \(p\) is
@@ -61,9 +61,9 @@ Combining the published Zariski support theorem with 107_155 gives the
 remaining condition for a divisor \(D\):
 
 \[
- \operatorname{supp}_{\rm prime}(D)\text{ finite}
+ \mathrm{supp}_{\rm prime}(D)\text{ finite}
  \quad\text{and}\quad
- \operatorname{depth}_p(D)<\infty
+ \mathrm{depth}_p(D)<\infty
  \text{ for each admitted }p.
 \]
 

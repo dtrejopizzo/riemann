@@ -25,16 +25,16 @@ corollas supplied by the two copies of `Z` in
 The first-additive Laurent scalar used in `114_a_25` is
 
 \[
- P(a,b)=delta_1\circ\operatorname{diag}(i_1(a_j)i_2(b_j))
+ P(a,b)=delta_1\circ\mathrm{diag}(i_1(a_j)i_2(b_j))
                     \circ\delta_1^t.                    \tag{1.2}
 \]
 
 The genuinely bounded cross-contraction of `114_a_28` is
 
 \[
- C(a,b)=igl(\delta_1\circ\operatorname{diag}(i_1(a_j))\bigr)
+ C(a,b)=igl(\delta_1\circ\mathrm{diag}(i_1(a_j))\bigr)
           \circ
-          \bigl(\operatorname{diag}(i_2(b_j))\circ\delta_2^t\bigr).
+          \bigl(\mathrm{diag}(i_2(b_j))\circ\delta_2^t\bigr).
                                                                \tag{1.3}
 \]
 
@@ -46,9 +46,9 @@ associativity within a label does not identify (1.2) and (1.3).
 Both have the same ordinary diagonal fold:
 
 \[
- \operatorname{fold}P(a,b)
+ \mathrm{fold}\,P(a,b)
  =\sum_j a_jb_j
- =\operatorname{fold}C(a,b).                            \tag{1.4}
+ =\mathrm{fold}\,C(a,b).                            \tag{1.4}
 \]
 
 Equality after fold is not equality in `B`; `114_a_20` proves that the fold
@@ -72,7 +72,7 @@ The analogous factorization of (1.2) would require the second weighted
 column
 
 \[
- \operatorname{diag}(i_2(b_j))\delta_1^t                \tag{2.2}
+ \mathrm{diag}(i_2(b_j))\delta_1^t                \tag{2.2}
 \]
 
 to lie in the product chart. Its ordinary coefficient vector has norm at

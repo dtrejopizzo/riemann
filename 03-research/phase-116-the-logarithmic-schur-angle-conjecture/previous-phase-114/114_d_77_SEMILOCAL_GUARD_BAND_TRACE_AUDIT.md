@@ -67,7 +67,7 @@ The renormalized corner character is
 \[
  \mathfrak T_S(h)
  =\lim_{\Lambda\to\infty}
- \left(\operatorname {Tr}(\theta(h)\widehat P_\Lambda P_\Lambda)
+ \left(\mathrm{Tr}(\theta(h)\widehat P_\Lambda P_\Lambda)
        -2h(1)\log\Lambda\right).                            \tag{1.5}
 \]
 
@@ -86,7 +86,7 @@ After stabilization in `S`, (1.6) is the row-C distribution.  For
  \begin{aligned}
  B_{\rm nuc}(F,F)={}&
  2\sum_{p,k\ge1}{\Lambda(p^k)\over\sqrt{p^k}}
-    \operatorname {Re}\langle F,S_{k\log p}F\rangle\\
+    \mathrm{Re}\,\langle F,S_{k\log p}F\rangle\\
  &+m_0\|F\|^2-\|\partial_\infty F\|^2.                     \tag{1.7}
 \end{aligned}
 \]
@@ -105,7 +105,7 @@ The most direct supported lift is
 It satisfies `P_Lambda M=M`, so
 
 \[
- \operatorname {Tr}igl((M_\Lambda^P)^*
+ \mathrm{Tr}igl((M_\Lambda^P)^*
    (\widehat P_\Lambda-P_\Lambda)M_\Lambda^P\bigr)
  =-\|Q_\Lambda U_SM_\Lambda^P\|_{\rm HS}^2\le0.            \tag{2.2}
 \]
@@ -114,7 +114,7 @@ By cyclicity at finite cutoff, the unrenormalized corner difference is
 
 \[
  C_\Lambda(f)
- =\operatorname {Tr}igl(A_f^*
+ =\mathrm{Tr}igl(A_f^*
    (\widehat P_\Lambda P_\Lambda-P_\Lambda)A_f\bigr).        \tag{2.3}
 \]
 
@@ -122,7 +122,7 @@ The supported leakage is
 
 \[
  D_\Lambda^P(f)
- =\operatorname {Tr}igl(A_f^*
+ =\mathrm{Tr}igl(A_f^*
   (P_\Lambda\widehat P_\Lambda P_\Lambda-P_\Lambda)A_f\bigr).
                                                                   \tag{2.4}
 \]
@@ -133,7 +133,7 @@ Subtracting gives the exact identity
  \boxed{
  C_\Lambda(f)-D_\Lambda^P(f)
  =E_\Lambda^P(f)
- :=\operatorname {Tr}igl(
+ :=\mathrm{Tr}igl(
  A_f^*Q_\Lambda\widehat P_\Lambda P_\Lambda A_f\bigr).}    \tag{2.5}
 \]
 
@@ -211,7 +211,7 @@ the two moment equations can delete the anomaly before the trace.
 Assume
 
 \[
- \operatorname {supp}f\subset[e^{-T},e^T].                  \tag{4.1}
+ \mathrm{supp}\,f\subset[e^{-T},e^T].                  \tag{4.1}
 \]
 
 Scaling covariance of the position cutoff gives a smaller projection
@@ -236,7 +236,7 @@ is supported without projecting its output.  Its leakage is
 
 \[
  D_{\Lambda,T}^G(f)
- =\operatorname {Tr}igl(
+ =\mathrm{Tr}igl(
  J_{\Lambda,T}A_f^*(\widehat P_\Lambda-P_\Lambda)
  A_fJ_{\Lambda,T}\bigr)\le0.                               \tag{4.5}
 \]
@@ -253,7 +253,7 @@ Cyclicity gives the exact comparison
 \[
  \boxed{
  C_\Lambda(f)-D_{\Lambda,T}^G(f)
- =\operatorname {Tr}igl(
+ =\mathrm{Tr}igl(
    (\widehat P_\Lambda-P_\Lambda)
    \mathscr E_{\Lambda,T}(f)\bigr),}                        \tag{4.7}
 \]

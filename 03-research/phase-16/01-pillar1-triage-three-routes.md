@@ -11,13 +11,13 @@ live route, and it survives because the zeros provably appear in the $GL_2$ Eise
 ## Route C (global prismatic) — **REJECTED at Pillar 1**
 By M6: prismatic/TC packages the **local** Frobenius $\{\varphi_p\}$ into a monoid action; the crystalline/prismatic
 Frobenius eigenvalues are the **local Satake** $\alpha_{i,p}$ (for $\zeta$, trivially $1$ — the anatomy $s_k(p)=1$),
-**not** the global zeros. No single global endomorphism with $\operatorname{spec}=\{\gamma_\rho\}$ exists (the global
+**not** the global zeros. No single global endomorphism with $\mathrm{spec}=\{\gamma_\rho\}$ exists (the global
 Sen generator fails: Frobenius $\to$ $L$-factors, Sen $\to$ Hodge–Tate weights, not interchangeable). **Fails
 Requirement 1.1 (no Frobenius with the zero-spectrum).** Rejected. *(M6.)*
 
 ## Route B ($\delta$ / $\mathbb F_1$, Spec $\mathbb Z\times_{\mathbb F_1}$Spec $\mathbb Z$) — **UNTESTABLE (pre-Pillar-1)**
-There is no constructed cohomology with a Frobenius to test: "$\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}
-\operatorname{Spec}\mathbb Z$" is not yet a scheme carrying a Weil cohomology. The available operators — the
+There is no constructed cohomology with a Frobenius to test: "$\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}
+\mathrm{Spec}\,\mathbb Z$" is not yet a scheme carrying a Weil cohomology. The available operators — the
 $\delta$-Frobenius / Adams operations $\psi_p$ of Borger's $\Lambda$-ring structure — act with **integer Adams-weight
 eigenvalues (local data)**, not the global $\gamma_\rho$. One cannot compute a test-function trace of a non-existent
 object. **Status: pre-Pillar-1 — the wall is foundational (build the global $\delta$-cohomology, intersection theory,
@@ -38,7 +38,7 @@ $\xi(2s)=0$ to $10^{-28}$. **The zeros genuinely live in the $GL_2$ geometry.**
 matrix on a continuous spectrum**, not yet as a clean **simple** Frobenius spectrum on a finite-type cohomology; and
 the same surface also carries the **cuspidal (Maass) spectrum** = wrong eigenvalues. The open sub-tasks:
 1. **Discretize** the Eisenstein/continuous spectrum so the zeros become a clean Frobenius spectrum
-   $\operatorname{spec}(\mathrm{Frob})=\{\gamma_\rho\}$ on a cohomology $H^1_{\mathrm{Eis,prim}}$ (isolate from the
+   $\mathrm{spec}(\mathrm{Frob})=\{\gamma_\rho\}$ on a cohomology $H^1_{\mathrm{Eis,prim}}$ (isolate from the
    cuspidal part).
 2. **Pillar 2 (a point in A's favor):** the natural pairing on the Eisenstein part is the **regularized
    Maass–Selberg / Zagier inner product**, which involves $\varphi'/\varphi$ and is **indefinite** — exactly the

@@ -2,7 +2,7 @@
 
 ## 1. Result
 
-Connes--Consani, *On the Jacobian of* \(\overline{\operatorname{Spec}\mathbb Z}\)
+Connes--Consani, *On the Jacobian of* \(\overline{\mathrm{Spec}\,\mathbb Z}\)
 (arXiv:2602.15941), construct a Picard monoid whose elements are
 isomorphism classes of torsion-free rank-one subgroups of \(\mathbb Q\).
 Addition of generalized divisors corresponds to tensor product.  Their
@@ -16,7 +16,7 @@ arithmetic Abel--Jacobi map sends
 The source of Phase 107 is instead the signed free abelian group
 
 \[
- \operatorname{Div}_{\mathrm{EF}}
+ \mathrm{Div}_{\mathrm{EF}}
  =\mathbb ZF_{\rm v}\oplus\mathbb ZF_{\rm h}
  \oplus\mathbb Z\Delta\oplus\mathbb ZZ_\infty
  \oplus\bigoplus_{p,k}\mathbb Z Z_{p,k}.
@@ -25,8 +25,8 @@ The source of Phase 107 is instead the signed free abelian group
 
 > **Theorem (signed-divisor no-go).**  There is no additive map
 > \[
->  \mathcal A:\operatorname{Div}_{\mathrm{EF}}
->  \longrightarrow\operatorname{Pic}(\overline{\operatorname{Spec}\mathbb Z})
+>  \mathcal A:\mathrm{Div}_{\mathrm{EF}}
+>  \longrightarrow\mathrm{Pic}(\overline{\mathrm{Spec}\,\mathbb Z})
 > \]
 > into the Connes--Consani Picard monoid that sends a prime-return
 > generator to its published Abel--Jacobi boundary class \(H_p\).
@@ -117,7 +117,7 @@ pairing.
 
 Morishita's map \(\Psi_F:\mathfrak X_F\to\mathscr X_F\) does not itself
 create a forbidden kernel on the current source:
-\(\operatorname{Div}_{\mathrm{EF}}\) contains one connected symbol
+\(\mathrm{Div}_{\mathrm{EF}}\) contains one connected symbol
 \(Z_{p,k}\) per prime power, not one symbol for every circle
 \(\gamma_{p,\bar a}\) in Deninger's packet.  Differences between packet
 circles are outside the present source domain.

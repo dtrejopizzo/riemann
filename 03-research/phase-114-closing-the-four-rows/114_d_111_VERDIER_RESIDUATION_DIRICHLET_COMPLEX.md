@@ -166,7 +166,7 @@ Expanding each finite difference gives
 \begin{aligned}
  \|\partial_{{\rm fin},X}F\|^2
  ={}&2A_X\|F\|^2\\
- &-2\operatorname{Re}
+ &-2\mathrm{Re}
    \sum_{2\leq n\leq X}{\Lambda(n)\over\sqrt n}
        \langle F,S_{\log n}F\rangle.                   \tag{4.2}
 \end{aligned}
@@ -196,8 +196,8 @@ Equation (4.4) is an equality of boundary terms, not a positivity claim.
 Let
 
 \[
- \operatorname{Tr}_{\rm Tate}F=(M_-(F),M_+(F)),qquad
- \mathcal P=\ker\operatorname{Tr}_{\rm Tate}.           \tag{5.1}
+ \mathrm{Tr}_{\rm Tate}F=(M_-(F),M_+(F)),qquad
+ \mathcal P=\ker\mathrm{Tr}_{\rm Tate}.           \tag{5.1}
 \]
 
 At a fixed support window, the moments are continuous and \(\mathcal P\)
@@ -205,8 +205,8 @@ is closed.  The relevant three-term complex is
 
 \[
  0\longrightarrow\mathcal P
- \longrightarrow\operatorname{Dom}(\partial_X)
- \xrightarrow{\operatorname{Tr}_{\rm Tate}}\mathbb C^2
+ \longrightarrow\mathrm{Dom}(\partial_X)
+ \xrightarrow{\mathrm{Tr}_{\rm Tate}}\mathbb C^2
  \longrightarrow0,                                    \tag{5.2}
 \]
 

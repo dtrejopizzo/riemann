@@ -19,7 +19,7 @@ but a non-rigorous sub-proof (it reuses the discredited Gershgorin schema); we h
 | **L3 (Integrality is definition, not consequence):** $h_\rho\in\mathbb Z$ ⟺ the $\sltwo$ integrates to a compact/discrete-series group = an ample polarization; it does **not** follow from the commutation relations. | ✅ correct | **Exactly the Lefschetz dichotomy (M5).** Our M4.2 built the principal-series $\sltwo$ (continuous $H$); M5 proved no Hodge–Riemann/lowest-weight form on it. The advisor's "integrates to $SU(2)$" = our "lowest-weight/integer grading," and his "geometric property not algebraic" = our "needs the ample class, LI-forbidden on the zeros." |
 | **L4 (Yuan–Zhang inapplicable):** no $\mathcal X$ with $H^1_{\mathrm{arith}}(\mathcal X)\cong\HW^{\mathrm{prim}}$; YZ controls $\widehat{\mathrm{Pic}}^0$ (weight 0, heights), not weight-1 zeros. | ✅ correct | **Attempt 6 + M6.** Cites our own Attempt 6; M6 confirmed prismatically (Frobenius = local Satake/anatomy, weight grading is local & trivial for $\zeta$). |
 | **Final Theorem:** no proof of RH in the current program; M3 is a reduction, not a proof. | ✅ correct | Our entire Phase-15 conclusion. |
-| **Corollary:** the missing object is $\mathcal K_{\mathrm{geom}}\in\mathrm{Corr}^1(\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z)$, postulated from geometry, not derived from anatomy. | ✅ correct (with one refinement, §3) | **SURF / Deninger–Connes–Consani**, the standing wall (M5/M6). |
+| **Corollary:** the missing object is $\mathcal K_{\mathrm{geom}}\in\mathrm{Corr}^1(\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z)$, postulated from geometry, not derived from anatomy. | ✅ correct (with one refinement, §3) | **SURF / Deninger–Connes–Consani**, the standing wall (M5/M6). |
 
 ## 2. The one soft spot: Lemma 2's proof (and the clean replacement)
 
@@ -58,7 +58,7 @@ Frente 3 is the spectral tautology under a new name.
 
 - **Convergent confirmation.** An independent advisor re-derived our Phase-15 result: RH has **no proof inside the
   spectral data**; the obstruction is the geometric correspondence $\mathcal K_{\mathrm{geom}}$ over
-  $\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z$ (SURF/Deninger), independent of the
+  $\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$ (SURF/Deninger), independent of the
   spectrum. His L3 is our Lefschetz dichotomy (M5); his L4 is our Attempt 6 / M6; his final theorem is our standing
   map.
 - **One correction logged:** L2's Gershgorin sub-proof is non-rigorous (assumes the conclusion); the determinacy

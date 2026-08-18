@@ -71,7 +71,7 @@ kernel is
 Writing `x_n=tanh a_n` gives the transparent form
 
 \[
- C(m,n)=\operatorname{sech}(a_m-a_n).                \tag{4}
+ C(m,n)=\mathrm{sech}(a_m-a_n).                \tag{4}
 \]
 
 Thus the oscillator produces a canonical positive, infinite-rank Green

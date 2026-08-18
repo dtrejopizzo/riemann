@@ -24,7 +24,7 @@ Let
 and suppose \(S\) is not identically zero.  Then there exist \(\delta>0\)
 and infinitely many \(n\) such that
 \[
-  \operatorname{Re} S(n)\ge\delta.
+  \mathrm{Re} S(n)\ge\delta.
 \tag{1}
 \]
 
@@ -43,7 +43,7 @@ is continuous on that closure.
 Since \(S\) is not identically zero, \(P\) is not identically zero on the
 orbit closure.  Hence
 \[
-  M=\max \operatorname{Re} P
+  M=\max \mathrm{Re} P
 \]
 on the orbit closure is positive after multiplying the whole shell by a
 unit complex number if necessary.  For the Li paired contribution the phase
@@ -52,7 +52,7 @@ negative unless the shell contribution is identically zero.
 
 By recurrence of the orbit in its compact closure, values with
 \[
-  \operatorname{Re}S(n)>M/2
+  \mathrm{Re}\,S(n)>M/2
 \]
 occur infinitely often.  Taking \(\delta=M/2\) proves (1).
 
@@ -67,7 +67,7 @@ Let a finite exterior shell be
 with signed multiplicity coefficients \(c_j\).  Its contribution to the
 zero-side Li expression has the form
 \[
-  -2R^n\operatorname{Re}
+  -2R^n\mathrm{Re}
   \left(\sum_{j=1}^J c_j e^{in\theta_j}\right)
 \tag{2}
 \]
@@ -76,7 +76,7 @@ after the usual conjugate pairing and up to harmless lower-radius terms.
 If the shell trigonometric polynomial is not identically zero, the finite
 trigonometric lemma gives an infinite subsequence with
 \[
-  -2R^n\operatorname{Re}
+  -2R^n\mathrm{Re}
   \left(\sum_{j=1}^J c_j e^{in\theta_j}\right)
   \le
   -2\delta R^n.

@@ -203,7 +203,7 @@ una forma sobre un espacio de dimensión n_N es ≤ n_N. La parte estándar exis
 V_N/rad(Q_N) (no degenerada), de signatura (p_N, q_N), p_N + q_N = n̄_N,
 q_N = κ_N (el radical no aporta direcciones negativas). La *torre* es la sucesión
 de formas Q̄_N^{⊗2^k} sobre (V_N/rad)^{⊗2^k}, k = 0, 1, 2, …, con
-$$x_k(N) := \frac{\operatorname{neg.ind}\big(\bar Q_N^{\otimes 2^k}\big)}{\bar n_N^{\,2^k}},
+$$x_k(N) := \frac{\mathrm{neg.ind}\,\big(\bar Q_N^{\otimes 2^k}\big)}{\bar n_N^{\,2^k}},
 \qquad
 \sigma^{(k)} := \mathrm{st}\big([\,x_k(N)\,]\big).$$
 

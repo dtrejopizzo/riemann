@@ -20,7 +20,7 @@ cannot be declared effective after passing to divisor classes. If a
 realisation \(\iota\) has
 
 \[
- \ker\iota=\operatorname{rad} I_d,
+ \ker\iota=\mathrm{rad} I_d,
 \]
 
 then every radical element has target class \(\mathcal O_X\). Thus R8 tests
@@ -42,7 +42,7 @@ and fails R8.
 Define strict target effectivity by
 
 \[
- L\in\operatorname{Eff}_{\rm thr}
+ L\in\mathrm{Eff}_{\rm thr}
  \quad\Longleftrightarrow\quad
  h_\theta(L)>h_\theta(\mathcal O_X).                                  \tag{2.1}
 \]
@@ -74,7 +74,7 @@ settles its scope in the row-A ledger.
 The stronger statement
 
 \[
- c\in\operatorname{Eff}_{\rm source}
+ c\in\mathrm{Eff}_{\rm source}
  \quad\Longleftrightarrow\quad
  h_\theta(\iota(c))>h_\theta(\mathcal O_X)                            \tag{3.1}
 \]

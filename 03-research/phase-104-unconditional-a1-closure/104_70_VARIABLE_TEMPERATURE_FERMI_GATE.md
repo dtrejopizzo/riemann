@@ -351,7 +351,7 @@ condicionamiento relativo.
 Para el cuarteto
 
 \[
- Q_n=4-2\operatorname {Re}\{(2i)^n+(2i)^{-n}\},            \tag{27}
+ Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\},            \tag{27}
 \]
 
 y la elección (1):

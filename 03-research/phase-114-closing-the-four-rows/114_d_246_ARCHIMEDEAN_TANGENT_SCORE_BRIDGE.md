@@ -8,7 +8,7 @@ logarithmic tangent into Fourier parity and pairing the even tangent with
 the dual central state gives
 
 \[
- 2\operatorname{Re}{L_\infty'\over L_\infty}
+ 2\mathrm{Re}{L_\infty'\over L_\infty}
 \]
 
 on the critical line.  The odd tangent gives the conjugate phase score.
@@ -115,7 +115,7 @@ For \(s=\frac12+i\tau\), one has \(1-s=\bar s\) and
 \[
  \boxed{
  {2\mathcal Md_{\infty,+}(s)\over\mathcal Mg_0(s)}
- =2\operatorname{Re}{L_\infty'(s)\over L_\infty(s)}
+ =2\mathrm{Re}{L_\infty'(s)\over L_\infty(s)}
  =\left.\partial_\sigma
    \log|L_\infty(\sigma+i\tau)|^2
   \right|_{\sigma=1/2}.
@@ -126,7 +126,7 @@ Similarly,
 
 \[
  {2\mathcal Md_{\infty,-}(s)\over\mathcal Mg_0(s)}
- =2i\operatorname{Im}{L_\infty'(s)\over L_\infty(s)}. \tag{3.2}
+ =2i\mathrm{Im}{L_\infty'(s)\over L_\infty(s)}. \tag{3.2}
 \]
 
 The even tangent is therefore the Gamma norm score, while the odd tangent

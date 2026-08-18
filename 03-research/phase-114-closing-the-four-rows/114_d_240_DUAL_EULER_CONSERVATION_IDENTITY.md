@@ -136,7 +136,7 @@ Then
 \[
  -\left.\partial_\sigma\log|L_\infty(\sigma+i\tau)|^2
  \right|_{\sigma=1/2}
- =\log\pi-\operatorname {Re}\psi
+ =\log\pi-\mathrm{Re}\,\psi
        (\tfrac14+\tfrac{i\tau}{2})
  =m_\infty(\tau).                                   \tag{3.2}
 \]

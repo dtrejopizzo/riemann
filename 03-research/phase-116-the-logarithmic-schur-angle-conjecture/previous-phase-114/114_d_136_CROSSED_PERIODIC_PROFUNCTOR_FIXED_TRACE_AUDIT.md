@@ -15,7 +15,7 @@ periodic curve induces enriched strong monoidal autoequivalences
 Their formal derived trace is the twisted Hochschild shadow
 
 \[
- \operatorname {Tr}(\mathbb P_n)
+ \mathrm{Tr}(\mathbb P_n)
  =\mathsf{Sec}_{\rm per}
    \otimes^{\mathbf L}_{\mathsf{Sec}_{\rm per}^{e}}\mathbb P_n. \tag{0.2}
 \]
@@ -85,7 +85,7 @@ For \(n\geq1\), let
 The relations
 
 \[
- r_{m,p}r_{n,p}=r_{mn,p},\qquad r_{1,p}=\operatorname{id} \tag{1.3}
+ r_{m,p}r_{n,p}=r_{mn,p},\qquad r_{1,p}=\mathrm{id} \tag{1.3}
 \]
 
 are literal.  On the product component \((p,q)\), use
@@ -129,9 +129,9 @@ The semidirect enriched category
 has the same objects as \(\mathsf{Sec}_{\rm per}\) and morphism object
 
 \[
- \underline{\operatorname {Hom}}_{\rtimes}(x,y)
+ \underline{\mathrm{Hom}}_{\rtimes}(x,y)
  =\bigoplus_{n\geq1}'
-   \underline{\operatorname {Hom}}_{\mathsf{Sec}_{\rm per}}
+   \underline{\mathrm{Hom}}_{\mathsf{Sec}_{\rm per}}
        (x,\tau_n y).                                    \tag{2.2}
 \]
 
@@ -151,7 +151,7 @@ Equivalently, define the graph profunctor
 
 \[
  \mathbb P_n(x,y)=
- \underline{\operatorname {Hom}}_{\mathsf{Sec}_{\rm per}}
+ \underline{\mathrm{Hom}}_{\mathsf{Sec}_{\rm per}}
         (x,\tau_n y).                                   \tag{2.4}
 \]
 
@@ -174,7 +174,7 @@ In the bicategory of enriched profunctors, the shadow of (2.4) is the
 coend
 
 \[
- \operatorname {Tr}_{\rm form}(\mathbb P_n)
+ \mathrm{Tr}_{\rm form}(\mathbb P_n)
  =\int^x\mathbb P_n(x,x).                              \tag{3.1}
 \]
 
@@ -221,7 +221,7 @@ When (4.2) holds, \(r_{n,p}\) is the identity and every point is fixed.
 Otherwise the fixed locus is empty.  Thus
 
 \[
- \operatorname {Fix}(r_{n,p})=
+ \mathrm{Fix}(r_{n,p})=
  \begin{cases}
  C_p,&n=p^k,\\
  \varnothing,&\text{otherwise}.
@@ -258,8 +258,8 @@ Topologically this is the ordinary Lefschetz number of an
 orientation-preserving circle rotation:
 
 \[
- \operatorname {tr}(r_n^*|H^0(C_p))
- -\operatorname {tr}(r_n^*|H^1(C_p))=1-1=0.           \tag{5.3}
+ \mathrm{tr}(r_n^*|H^0(C_p))
+ -\mathrm{tr}(r_n^*|H^1(C_p))=1-1=0.           \tag{5.3}
 \]
 
 For a nontrivial rotation the geometric fixed locus is empty; for the
@@ -310,7 +310,7 @@ capable of distinguishing a free rotation from the identity.
 Therefore a correct Lefschetz localization must retain the spatial factor
 
 \[
- \operatorname {Sh}(C_p\times C_q)\widehat\boxtimes
+ \mathrm{Sh}(C_p\times C_q)\widehat\boxtimes
  \mathsf A_{p,q},                                      \tag{6.1}
 \]
 
@@ -367,7 +367,7 @@ For every \(n\), supply a natural transformation from the periodic fixed
 shadow to the perfect complex
 
 \[
- \mathfrak o_n:\operatorname {Tr}(\mathbb P_n)
+ \mathfrak o_n:\mathrm{Tr}(\mathbb P_n)
  \longrightarrow K_n^W,                               \tag{8.1}
 \]
 
@@ -389,7 +389,7 @@ Construct a dualizable bivariant object \(\mathbb M\) over the combined
 periodic--Witt--Poisson category and an isomorphism
 
 \[
- \delta^2\log\operatorname {Det}(\mathbb M)(f,g)
+ \delta^2\log\mathrm{Det}(\mathbb M)(f,g)
  \simeq B_{\rm nuc}(f,g).                              \tag{8.2}
 \]
 
@@ -408,7 +408,7 @@ The non-circular geometric audit separates three levels:
  \begin{array}{c|c|c}
  \text{level}&\text{constructed from periodic translations}&\text{result}\\ \hline
  \text{composition}&\mathbb P_m\otimes\mathbb P_n&\mathbb P_{mn}\\
- \text{fixed support}&\operatorname {Fix}(r_{n,p})&n=p^k\\
+ \text{fixed support}&\mathrm{Fix}(r_{n,p})&n=p^k\\
  \text{fixed contact}&\text{derived loop of }C_p&
       \mathcal O\oplus\Omega^1[1],\ \chi=0\\
  \text{arithmetic contact}&\text{requires }\Phi_n(1)&P_n\\

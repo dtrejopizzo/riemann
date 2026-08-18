@@ -84,7 +84,7 @@ The surviving route must keep a distributional or relative boundary
 term outside ordinary coherent Euler characteristic and prove an index
 theorem that includes it.  Equivalently, it needs an equivariant,
 renormalized arithmetic Hodge theory for the pair
-\((\widetilde{\operatorname{Spec}\mathbb Z},\widetilde\eta)\), not just
+\((\widetilde{\mathrm{Spec}\,\mathbb Z},\widetilde\eta)\), not just
 a proper compactification of the transverse line.
 
 This no-go is restricted to finite-type proper coherent

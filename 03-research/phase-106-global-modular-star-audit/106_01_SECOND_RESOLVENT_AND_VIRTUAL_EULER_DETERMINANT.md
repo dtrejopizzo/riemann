@@ -9,7 +9,7 @@ operator \(\Theta\) satisfied
 
 \[
 \boxed{
-\operatorname{Tr}(s-\Theta)^{-2}
+\mathrm{Tr}(s-\Theta)^{-2}
 =-\left(\frac{\xi'}{\xi}\right)'(s),
 }
 \tag{1}
@@ -43,7 +43,7 @@ Then
 
 \[
 (\log D_\Theta)''(s)
-=-\operatorname{Tr}(s-\Theta)^{-2}.
+=-\mathrm{Tr}(s-\Theta)^{-2}.
 \tag{2}
 \]
 
@@ -87,7 +87,7 @@ the continuation. \(\square\)
 Near an eigenvalue \(\lambda\) of algebraic multiplicity \(m\),
 
 \[
-\operatorname{Tr}(s-\Theta)^{-2}
+\mathrm{Tr}(s-\Theta)^{-2}
 =\frac{m}{(s-\lambda)^2}+O(1).
 \]
 

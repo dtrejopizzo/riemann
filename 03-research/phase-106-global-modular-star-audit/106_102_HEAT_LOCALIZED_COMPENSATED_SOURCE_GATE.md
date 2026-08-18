@@ -42,9 +42,9 @@ For \(s\in[0,1]\) and \(t>0\), put
 Then
 
 \[
- A_V(t)=\operatorname {Tr}\overline\Gamma_t,
+ A_V(t)=\mathrm{Tr}\,\overline\Gamma_t,
  \qquad
- E_V(t)=\operatorname {Tr}(A\overline\Gamma_t).
+ E_V(t)=\mathrm{Tr}(A\overline\Gamma_t).
  \tag{2}
 \]
 
@@ -105,7 +105,7 @@ Every vector in \(\mathscr C\) is orthogonal to the constant function.
 Consequently, for each \(r_j\in\mathscr C\),
 
 \[
- \operatorname {Var}_{\mu_K}(r_j)=\|r_j\|_{\mu_K}^2.
+ \mathrm{Var}_{\mu_K}(r_j)=\|r_j\|_{\mu_K}^2.
  \tag{7}
 \]
 
@@ -124,7 +124,7 @@ prime and Gamma pieces pass to the limit by monotone convergence, while the
 polar term passes by trace-norm convergence.  This proves
 
 \[
- \operatorname {Tr}\{(A-\tfrac12I)\overline\Gamma_t\}
+ \mathrm{Tr}\,\{(A-\tfrac12I)\overline\Gamma_t\}
  =\int_0^\infty\mathcal J_u[\overline\Gamma_t]\,d\sigma(u).
 \]
 
@@ -143,9 +143,9 @@ With
 \[
  \Gamma_t=e^{-tS/2}Ve^{-tS/2},
  \qquad
- Z_V(t)=\operatorname {Tr}\Gamma_t,
+ Z_V(t)=\mathrm{Tr}\,\Gamma_t,
  \qquad
- \mathcal E_V(t)=\operatorname {Tr}(A\Gamma_t),
+ \mathcal E_V(t)=\mathrm{Tr}(A\Gamma_t),
  \tag{8a}
 \]
 

@@ -20,7 +20,7 @@ $\dot\beta=-1/\beta-\beta/|z_1|^2$; con dos modos superiores, $\dot I=4\beta\dot
 
 ### 1.2. [THM 174.2] Coercividad exponencial — **CERTIFICADO-CON-ERRATA** (E-186.4, de redacción)
 
-El punto de ataque era la dirección de la cadena $\dot I\le-2I/M\le-2I$. Verificado: $I\le\kappa M$ ⟹ $-2\kappa\le-2I/M$; y $-2I/M\le-2I$ **requiere $M\le1$**, que el documento sí establece (banda estricta $|\operatorname{Im}z|<1$ en $t=0$ + Lema 174.3 ⟹ $M(t)<1$ para $t\ge0$). La cadena está en el orden correcto y la hipótesis de banda está usada explícitamente, no tácita. **Advertencia de alcance que el enunciado ya respeta:** la desigualdad $-2I/M\le-2I$ se invertiría si $M>1$; el teorema solo se aplica forward desde $t\ge0$, donde $M<1$. Para lecturas backward ($t<0$, donde $M(t)\ge2|t|$ puede superar 1) el documento usa correctamente solo la forma $\dot I\le-2I/M$ con $M\le\bar M$ (§2.1) — sin error.
+El punto de ataque era la dirección de la cadena $\dot I\le-2I/M\le-2I$. Verificado: $I\le\kappa M$ ⟹ $-2\kappa\le-2I/M$; y $-2I/M\le-2I$ **requiere $M\le1$**, que el documento sí establece (banda estricta $|\mathrm{Im}\,z|<1$ en $t=0$ + Lema 174.3 ⟹ $M(t)<1$ para $t\ge0$). La cadena está en el orden correcto y la hipótesis de banda está usada explícitamente, no tácita. **Advertencia de alcance que el enunciado ya respeta:** la desigualdad $-2I/M\le-2I$ se invertiría si $M>1$; el teorema solo se aplica forward desde $t\ge0$, donde $M<1$. Para lecturas backward ($t<0$, donde $M(t)\ge2|t|$ puede superar 1) el documento usa correctamente solo la forma $\dot I\le-2I/M$ con $M\le\bar M$ (§2.1) — sin error.
 
 Integración verificada: $d\log I\le-2\,dt/(M_0-2(t-t_0))$ ⟹ $I\le I_0\bigl(1-2(t-t_0)/M_0\bigr)$; la dirección $M(s)\le M_0-2(s-t_0)$ ⟹ $-2I/M(s)\le-2I/(M_0-2(s-t_0))$ es la correcta. ✓
 
@@ -35,12 +35,12 @@ Reconstruido: para $\beta_k$ maximal, conjugado propio $=-2$ exacto; cruzados $-
 ### 1.4. [THM 174.4] Modelo cerrado del cuádruplo — **CERTIFICADO**
 
 Reconstrucción completa:
-- $H=z^4+az^2+c=(z^2-w)(z^2-\bar w)$ ⟹ $a=-2\operatorname{Re}w$, $c=|w|^2$; $\operatorname{Re}w=-a/2$, $(\operatorname{Im}w)^2=c-a^2/4$ ✓.
+- $H=z^4+az^2+c=(z^2-w)(z^2-\bar w)$ ⟹ $a=-2\mathrm{Re}\,w$, $c=|w|^2$; $\mathrm{Re}\,w=-a/2$, $(\mathrm{Im}\,w)^2=c-a^2/4$ ✓.
 - $\partial_z^2H=12z^2+2a$ ⟹ $\dot a=-12$, $\dot c=-2a$ ✓.
-- $\frac{d}{dt}\operatorname{Re}w=6$ ✓; $\frac{d}{dt}(\operatorname{Im}w)^2=\dot c-\tfrac{a\dot a}2=-2a+6a=4a=-8\operatorname{Re}w$ ✓.
-- $t_c$: $24t^2+8R_0t-(\operatorname{Im}w_0)^2=0$ ⟹ la fórmula del recuadro ✓.
-- **Expansión (donde suelen esconderse los errores de signo):** con $R=\alpha^2-\beta^2$, $\operatorname{Im}w_0=2\alpha\beta$: $\sqrt{R^2+6\alpha^2\beta^2}\approx R+3\alpha^2\beta^2/R-\tfrac92\alpha^4\beta^4/R^3$; $t_c\approx\frac{\alpha^2\beta^2}{2R}-\frac34\frac{\beta^4}{\alpha^2}=\frac{\beta^2}2+\frac{\beta^4}{2\alpha^2}-\frac{3\beta^4}{4\alpha^2}=\frac{\beta^2}2-\frac{\beta^4}{4\alpha^2}$ — **el término $-\beta_0^4/4\alpha_0^2$ y su signo (interacción acelera) son correctos**.
-- Verificación cruzada: $\dot I=2\operatorname{Re}w/|w|-6=(-4\alpha^2-8\beta^2)/|z_1|^2=-4-4\beta^2/|z_1|^2$ = Prop 174.1 ✓.
+- $\frac{d}{dt}\mathrm{Re}\,w=6$ ✓; $\frac{d}{dt}(\mathrm{Im}\,w)^2=\dot c-\tfrac{a\dot a}2=-2a+6a=4a=-8\mathrm{Re}\,w$ ✓.
+- $t_c$: $24t^2+8R_0t-(\mathrm{Im}\,w_0)^2=0$ ⟹ la fórmula del recuadro ✓.
+- **Expansión (donde suelen esconderse los errores de signo):** con $R=\alpha^2-\beta^2$, $\mathrm{Im}\,w_0=2\alpha\beta$: $\sqrt{R^2+6\alpha^2\beta^2}\approx R+3\alpha^2\beta^2/R-\tfrac92\alpha^4\beta^4/R^3$; $t_c\approx\frac{\alpha^2\beta^2}{2R}-\frac34\frac{\beta^4}{\alpha^2}=\frac{\beta^2}2+\frac{\beta^4}{2\alpha^2}-\frac{3\beta^4}{4\alpha^2}=\frac{\beta^2}2-\frac{\beta^4}{4\alpha^2}$ — **el término $-\beta_0^4/4\alpha_0^2$ y su signo (interacción acelera) son correctos**.
+- Verificación cruzada: $\dot I=2\mathrm{Re}\,w/|w|-6=(-4\alpha^2-8\beta^2)/|z_1|^2=-4-4\beta^2/|z_1|^2$ = Prop 174.1 ✓.
 
 La respuesta al director ($t_c=\beta_0^2/2$, no $\beta_0^2/4$; $=I_0/4$ por cuádruplo) es aritméticamente correcta. ✓
 
@@ -53,7 +53,7 @@ Punto de ataque obligatorio: el solape de vidas. **Veredicto: el solape no rompe
 ### 1.7. [THM 174.10] Jerarquía de momentos — **CERTIFICADO** (la sospecha máxima del mandato se resuelve a favor)
 
 Reconstrucción del término cruzado para $n\ge2$, que era el punto débil designado:
-$$\dot I_{2n}=-4n\sum_k\sum_{w\ne z_k}\beta_k^{2n-1}\frac{\beta_k-\operatorname{Im}w}{|z_k-w|^2}.$$
+$$\dot I_{2n}=-4n\sum_k\sum_{w\ne z_k}\beta_k^{2n-1}\frac{\beta_k-\mathrm{Im}\,w}{|z_k-w|^2}.$$
 - Conjugado propio: $\beta_k^{2n-1}\cdot2\beta_k/(4\beta_k^2)=\beta_k^{2n-2}/2$ ⟹ $-2nI_{2n-2}$ ✓.
 - Cruzados tipo $(z_k,z_l)$: los denominadores son **idénticos** ($|z_k-z_l|^2$); numerador simetrizado $\beta_k^{2n-1}(\beta_k-\beta_l)+\beta_l^{2n-1}(\beta_l-\beta_k)=(\beta_k-\beta_l)(\beta_k^{2n-1}-\beta_l^{2n-1})\ge0$ — **válido para todo $n$ porque $x\mapsto x^{2n-1}$ es creciente** (no se necesita cuadrado perfecto; basta monotonía: es una desigualdad de Chebyshev de 2 puntos). El temor de que "el binomio no es cuadrado perfecto para $n\ge2$" es infundado: la prueba de $n=1$ no usaba el cuadrado per se, sino la monotonía de $x\mapsto x$, y ésta escala.
 - Cruzados tipo $(z_k,\bar z_l)$: denominadores $|z_k-\bar z_l|=|z_l-\bar z_k|$ (conjugación) ✓; numerador $(\beta_k+\beta_l)(\beta_k^{2n-1}+\beta_l^{2n-1})\ge0$ ✓. Lo mismo para los pares con espejos $-z_l,-\bar z_l$.
@@ -138,7 +138,7 @@ Bloques reconstruidos:
 4. Aritmética final: $2\kappa(1+4\kappa-4+2r)=2\kappa(4\kappa+2r-3)$ ✓; con $n=2\kappa+r$: $4\kappa+2r-3=2n-3$ exacto ✓; $2\kappa(2n-3)\le n(2n-3)\le2n^2$ ✓.
 5. Exterior vía Lema 177.4 + Cauchy–Schwarz ✓; Grönwall con término multiplicativo pequeño: estándar ✓.
 
-Calibración contra el monomio ($dI_W/d\sigma=n(n-1)$ exacto: mitad superior de $2n(n-1)$... verificado: $I_W=\sum_{\beta>0}\beta^2=-\frac12\operatorname{Re}\sum z_j^2$ en el caso vertical puro, $\frac{d}{d\sigma}=n(n-1)$ ✓): factor $\approx2$ de holgura en energía, como afirma. ✓
+Calibración contra el monomio ($dI_W/d\sigma=n(n-1)$ exacto: mitad superior de $2n(n-1)$... verificado: $I_W=\sum_{\beta>0}\beta^2=-\frac12\mathrm{Re}\,\sum z_j^2$ en el caso vertical puro, $\frac{d}{d\sigma}=n(n-1)$ ✓): factor $\approx2$ de holgura en energía, como afirma. ✓
 
 ### 2.7. [THM 177.7] Aterrizajes en la esquina — **CERTIFICADO-CON-ERRATA** (E-186.3, condicional al Lema 177.B)
 

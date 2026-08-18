@@ -61,7 +61,7 @@ The finite side of the completed Lefschetz distribution is
 \[
  B_{{\rm nuc},{\rm fin}}(f,f)
  =2\sum_{n\ge2}{\Lambda(n)\over\sqrt n}
-       \operatorname {Re}H(\log n).
+       \mathrm{Re}\,H(\log n).
 \]
 
 Therefore the row-D form (Q_W=-B_{\rm nuc}) has finite part
@@ -69,7 +69,7 @@ Therefore the row-D form (Q_W=-B_{\rm nuc}) has finite part
 \[
  Q_{W,{\rm fin}}(F)
  =-2\sum_{n\ge2}{\Lambda(n)\over\sqrt n}
-       \operatorname {Re}\langle F,S_{\log n}F\rangle.       \tag{1.1}
+       \mathrm{Re}\,\langle F,S_{\log n}F\rangle.       \tag{1.1}
 \]
 
 The minus sign in (1.1) agrees with the spectral identity: after the two
@@ -105,8 +105,8 @@ In particular the (p^2) term uses (Lambda(p^2)=\log p), not
 
 \[
 \begin{array}{c|r|r}
-n&\operatorname {Re}\langle F,S_{\log n}F\rangle
-  &-2\Lambda(n)n^{-1/2}\operatorname {Re}\langle F,S_{\log n}F\rangle\\ \hline
+n&\mathrm{Re}\,\langle F,S_{\log n}F\rangle
+  &-2\Lambda(n)n^{-1/2}\mathrm{Re}\,\langle F,S_{\log n}F\rangle\\ \hline
 2&  0.3483692194407488&-0.3414917642905753\\
 3& -0.2830855046821839& 0.3591132694590929\\
 4&  0.2436295194127086&-0.1688711144820934
@@ -150,7 +150,7 @@ the completed archimedean contribution to (Q_W) is
 \[
  Q_{W,\infty}(F)
  ={1\over2\pi}\int_{\mathbb R}
- \left(\operatorname {Re}\psi\!\left({1\over4}+{i\tau\over2}\right)
+ \left(\mathrm{Re}\,\psi\!\left({1\over4}+{i\tau\over2}\right)
        -\log\pi\right)|G(\tau)|^2\,d\tau.              \tag{4.1}
 \]
 
@@ -164,7 +164,7 @@ the positive Gamma jump Laplacian has symbol
 
 \[
  \ell_\infty(\tau)
- =\operatorname {Re}\psi\!\left({1\over4}+{i\tau\over2}\right)
+ =\mathrm{Re}\,\psi\!\left({1\over4}+{i\tau\over2}\right)
   -\psi(1/4),
 \]
 
@@ -198,7 +198,7 @@ For (G(z)=\int F(t)e^{-izt}dt), these are exactly
 The full completed formula contains the polar bilinear form
 
 \[
- 2\operatorname {Re}\bigl(M_-(F)\overline{M_+(F)}\bigr).
+ 2\mathrm{Re}\,\bigl(M_-(F)\overline{M_+(F)}\bigr).
 \]
 
 It vanishes only after orthogonal projection to the exact kernel of both

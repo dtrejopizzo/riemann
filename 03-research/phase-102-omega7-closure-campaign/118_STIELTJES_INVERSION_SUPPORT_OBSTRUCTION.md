@@ -29,7 +29,7 @@ positive. The problem is its support.
 The positive boundary measure target needs this positive measure to live on
 the imaginary axis:
 \[
-  \operatorname{supp}\Delta u\subset i\mathbb R.
+  \mathrm{supp}\,\Delta u\subset i\mathbb R.
 \]
 
 That support statement is exactly the critical-line statement. If it is
@@ -68,7 +68,7 @@ The missing theorem can be stated as a support-collapse theorem:
 
 The Euler--Gamma data force
 \[
-  \operatorname{supp}\Delta\log\left|\xi\left({1\over2}+z\right)\right|
+  \mathrm{supp}\,\Delta\log\left|\xi\left({1\over2}+z\right)\right|
   \subset i\mathbb R.
 \]
 

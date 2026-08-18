@@ -256,7 +256,7 @@ Stirling's formula gives
 
 \[
  \phi'(\tau)
- =\log\pi-\operatorname {Re}\psi(1/4+i\tau/2)
+ =\log\pi-\mathrm{Re}\,\psi(1/4+i\tau/2)
  =-\log|\tau|+O(1),                                       \tag{4.2}
 \]
 
@@ -281,7 +281,7 @@ termwise proves
 
 \[
  \boxed{
- \operatorname {Mean}_{\rm Cesaro}\Theta_{P_Q}=0}          \tag{4.5}
+ \mathrm{Mean}_{\rm Cesaro}\Theta_{P_Q}=0}          \tag{4.5}
 \]
 
 for the assembled finite-prime--Gamma symbol.
@@ -342,7 +342,7 @@ The finite bilateral identity becomes
  \sum_{n=-N}^N(\|y_n\|^2-\|u_n\|^2)
  ={}&\|x_{-N}\|^2-\|x_{N+1}\|^2\\
  &+\sum_{n=-N}^N
- \left(2\operatorname {Re}\langle x_{n+1},r_n\rangle
+ \left(2\mathrm{Re}\,\langle x_{n+1},r_n\rangle
        -\|r_n\|^2\right).                                \tag{6.2}
 \end{aligned}
 \]
@@ -358,7 +358,7 @@ Therefore the exact A--B--C form would have the boundary decomposition
  B_{\rm nuc}(F,F)
  ={}&\|x_-^0(F)\|^2-\|x_+^0(F)\|^2\\
  &+\sum_n
- \left(2\operatorname {Re}\langle x_{n+1}(F),r_n(F)\rangle
+ \left(2\mathrm{Re}\,\langle x_{n+1}(F),r_n(F)\rangle
        -\|r_n(F)\|^2\right),                              \tag{6.3}
 \end{aligned}
 \]
@@ -373,7 +373,7 @@ characters `M_-` and `M_+` are the two boundary evaluations associated to
 the strip
 
 \[
- 0\le\operatorname {Re}s\le1.                             \tag{7.1}
+ 0\le\mathrm{Re}\,s\le1.                             \tag{7.1}
 \]
 
 The semilocal scattering factor is a transition between the two oriented

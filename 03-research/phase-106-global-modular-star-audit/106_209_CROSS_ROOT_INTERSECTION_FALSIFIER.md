@@ -26,7 +26,7 @@ overlap pairing cannot be the required arithmetic intersection form.
 Fix \(M,m,n\geq1\), and put
 
 \[
- L=\operatorname{lcm}(m,n).
+ L=\mathrm{lcm}(m,n).
  \tag{2}
 \]
 

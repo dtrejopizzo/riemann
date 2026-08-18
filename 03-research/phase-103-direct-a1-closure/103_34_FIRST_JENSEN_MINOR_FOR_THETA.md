@@ -59,12 +59,12 @@ missing cross term.
 Let \(w_m=f_m/\Phi\).  The exact log-sum identity is
 \[
  (\log\Phi)''=\sum_{m\ge1}w_m\ell_m''+
- \operatorname {Var}_w(\ell_m').                                \tag{8}
+ \mathrm{Var}_w(\ell_m').                                \tag{8}
 \]
 The variance is no larger than its second moment about the fixed value
 \(\ell_1'\):
 \[
- \operatorname {Var}_w(\ell_m')
+ \mathrm{Var}_w(\ell_m')
  \le\sum_{m\ge2}w_m(\ell_m'-\ell_1')^2.                          \tag{9}
 \]
 For \(a=m^2-1\ge3\), the function
@@ -84,7 +84,7 @@ Moreover,
 indeed \(2m^2x-3\le2m^2(2x-3)\) follows from \(x>3\).
 Since \(w_m\le f_m/f_1\), (9)--(11) yield
 \[
- \operatorname {Var}_w(\ell_m')
+ \mathrm{Var}_w(\ell_m')
  \le18x^2\sum_{m\ge2}m^4(m^2-1)^2e^{-(m^2-1)x}.                 \tag{12}
 \]
 
@@ -104,7 +104,7 @@ terms of the exponential series at \(3.1415\) already sum to more than
 \(23\).  They give
 \[
 \begin{aligned}
- \operatorname {Var}_w(\ell_m')
+ \mathrm{Var}_w(\ell_m')
  &\le32\pi^2\sum_{a=3}^\infty a^4e^{-a\pi}\\
  &<320\sum_{a=3}^\infty{a^4\over23^a}.                            \tag{13}
 \end{aligned}
@@ -116,7 +116,7 @@ most
 \]
 Consequently
 \[
- \operatorname {Var}_w(\ell_m')
+ \mathrm{Var}_w(\ell_m')
  <320\,{81\over23^3}\,{7\over6}<2.49.                            \tag{14}
 \]
 Combining (7), (8), and (14),
@@ -155,7 +155,7 @@ measure
 the covariance of the two increasing functions \(u\) and \(h(u)\) is
 nonnegative.  This follows directly from
 \[
- 2\operatorname {Cov}_{\nu_p}(u,h)
+ 2\mathrm{Cov}_{\nu_p}(u,h)
  =\iint (u-v)(h(u)-h(v))d\nu_p(u)d\nu_p(v)\ge0.                  \tag{18}
 \]
 Integration by parts, with vanishing boundary terms, gives

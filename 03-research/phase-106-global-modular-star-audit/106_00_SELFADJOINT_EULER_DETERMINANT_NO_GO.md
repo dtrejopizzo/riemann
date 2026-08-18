@@ -41,7 +41,7 @@ Suppose \(A\) and \(A_0\) are self-adjoint and that a perturbation determinant
 
 \[
 \frac{D_{A/A_0}'(z)}{D_{A/A_0}(z)}
-=\operatorname{Tr}\left((A-z)^{-1}-(A_0-z)^{-1}\right)
+=\mathrm{Tr}\,\left((A-z)^{-1}-(A_0-z)^{-1}\right)
 \tag{1}
 \]
 

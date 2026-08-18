@@ -124,7 +124,7 @@ It does **not** yet prove:
    \(\sigma_p\);
 2. that \(R_{A3}\) is globally sufficient beyond the fixed atlas;
 3. any full realization theorem for row (c) on arithmetic surfaces over
-   \(\operatorname{Spec}\mathbf Z\).
+   \(\mathrm{Spec}\,\mathbf Z\).
 
 So the correct reading is:
 

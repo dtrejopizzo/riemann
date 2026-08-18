@@ -34,7 +34,7 @@ the Weierstrass invariants gives
 Thus (1.1) defines an elliptic scheme
 
 \[
- \mathcal E_L\longrightarrow\operatorname{Spec}\mathcal O_L
+ \mathcal E_L\longrightarrow\mathrm{Spec}\,\mathcal O_L
 \]
 
 with good reduction at every finite prime.
@@ -62,7 +62,7 @@ the ramified prime above 11 in `107_172`.
 
 The CM action by \(\mathcal O_K\) is defined on the generic fibre over
 \(L\).  Every such endomorphism extends uniquely over
-\(\operatorname{Spec}\mathcal O_L\), because \(\mathcal E_L\) is an
+\(\mathrm{Spec}\,\mathcal O_L\), because \(\mathcal E_L\) is an
 abelian scheme over a normal base.
 
 ## 3. A proper smooth arithmetic product
@@ -71,12 +71,12 @@ Define
 
 \[
  \mathcal X_L=
- \mathcal E_L\times_{\operatorname{Spec}\mathcal O_L}\mathcal E_L.
+ \mathcal E_L\times_{\mathrm{Spec}\,\mathcal O_L}\mathcal E_L.
  \tag{3.1}
 \]
 
 Then \(\mathcal X_L\) is proper and smooth of relative dimension two
-over the complete arithmetic base \(\operatorname{Spec}\mathcal O_L\).
+over the complete arithmetic base \(\mathrm{Spec}\,\mathcal O_L\).
 It carries globally:
 
 1. the two rulings \(F_1,F_2\);
@@ -112,11 +112,11 @@ Paper-0 correspondence package.  It proves existence for one fixed CM
 control after a degree-four number-field extension.
 
 It is **not** the requested universal surface over
-\(\operatorname{Spec}\mathbb Z\).  The field \(L\), the curve, and the
+\(\mathrm{Spec}\,\mathbb Z\).  The field \(L\), the curve, and the
 endomorphism \(\alpha\) are tailored to the fixed elliptic Frobenius
 polynomial.  Formula (3.2) realizes the zeta function of that elliptic
 curve, not the prime/Gamma explicit formula for Riemann zeta.  Rows (a),
-(c), and (d) for \(\operatorname{Spec}\mathbb Z\) remain open, and no
+(c), and (d) for \(\mathrm{Spec}\,\mathbb Z\) remain open, and no
 paper is promoted by this calibration.
 
 ## 5. Falsifier

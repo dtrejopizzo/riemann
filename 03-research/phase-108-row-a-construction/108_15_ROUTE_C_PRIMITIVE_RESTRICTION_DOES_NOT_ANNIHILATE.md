@@ -122,11 +122,11 @@ $g\not\equiv0$. Hence $c_g\not\equiv0$ on $(0,1)$.
 
 *Step 4 (a bump function detects it).* Since $c_g$ is continuous and not
 identically $0$ on $(0,1)$, there is $a_0\in(0,1)$ with $c_g(a_0)\ne0$; by
-continuity $\operatorname{Re}\big(e^{-i\theta}c_g(a)\big)$ has a fixed sign
+continuity $\mathrm{Re}\,\big(e^{-i\theta}c_g(a)\big)$ has a fixed sign
 ($\theta:=\arg c_g(a_0)$) on some open interval $I\ni a_0$, $I\subset(0,1)$.
 Take $\varphi\ge0$ smooth, supported in $I$, $\varphi\not\equiv0$; then
-$\operatorname{Re}\big(e^{-i\theta}\int_0^1\varphi(a)c_g(a)\,da\big)
-=\int_I\varphi(a)\operatorname{Re}(e^{-i\theta}c_g(a))\,da\ne0$ (a
+$\mathrm{Re}\,\big(e^{-i\theta}\int_0^1\varphi(a)c_g(a)\,da\big)
+=\int_I\varphi(a)\mathrm{Re}(e^{-i\theta}c_g(a))\,da\ne0$ (a
 nonnegative, not-identically-zero integrand of fixed sign), so the integral
 itself is nonzero. $\square$
 

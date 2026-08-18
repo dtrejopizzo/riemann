@@ -16,13 +16,13 @@ For each finite $P$, $\widetilde D(A_P)=(E_P,\mathcal D_{A_P}^{\mathrm{src}},\ma
 R_P)\in\mathcal G_0$, with
 \[
    \mathsf K_{A_P}(z,w)=\int_0^{\ell_P}Y_P(t,w)^*H_P(t)Y_P(t,z)\,dt\ \succeq\ 0,\qquad
-   \kappa(A_P)=\operatorname{sq}_-(\mathsf K_{A_P})=0,\qquad\mathfrak b_P=1.
+   \kappa(A_P)=\mathrm{sq}_-(\mathsf K_{A_P})=0,\qquad\mathfrak b_P=1.
 \]
 \end{theorem}
 \emph{Proof.} G2 (canonical Gram identity, `CANONICAL-FOUNDATION.md` Thm) gives the displayed integral
 representation, manifestly $\succeq0$ since $H_P\ge0$ (G1): for any finite $\{z_i\}$, $\{c_i\}$,
 $\sum_{i,j}\bar c_i c_j\mathsf K_{A_P}(z_i,z_j)=\int_0^{\ell_P}\big\|H_P(t)^{1/2}\sum_j c_jY_P(t,z_j)
-\big\|^2dt\ge0$. Hence $\operatorname{sq}_-(\mathsf K_{A_P})=0$, so the Kreĭn–Langer divisor is empty,
+\big\|^2dt\ge0$. Hence $\mathrm{sq}_-(\mathsf K_{A_P})=0$, so the Kreĭn–Langer divisor is empty,
 $\mathfrak b_P=1$ (D1, Def. divisor), and $E_P$ is Hermite–Biehler (D1, Thm d1). $\square$
 
 ---
@@ -33,7 +33,7 @@ $\mathfrak b_P=1$ (D1, Def. divisor), and $E_P$ is Hermite–Biehler (D1, Thm d1
 The recovered kernel of the sourced determinant germ (D2, Def. rec) coincides with the canonical Gram
 kernel:
 \[
-   \operatorname{Pol}\big(d^2\log\mathcal D_{A_P}^{\mathrm{src}}(0)\big)(z,w)=\mathsf K_{A_P}(z,w)
+   \mathrm{Pol}\,\big(d^2\log\mathcal D_{A_P}^{\mathrm{src}}(0)\big)(z,w)=\mathsf K_{A_P}(z,w)
    =\int_0^{\ell_P}Y_P(t,w)^*H_P(t)Y_P(t,z)\,dt.
 \]
 \end{theorem}
@@ -41,7 +41,7 @@ kernel:
 finite-rank signed source $\delta H$ is the canonical pairing
 \[
    \partial_\varepsilon\log\mathcal D_{A_P,\varepsilon}^{\mathrm{src}}(0)
-   =\int_0^{\ell_P}\operatorname{tr}\big(Y_P(t,\cdot)^*\,\delta H(t)\,Y_P(t,\cdot)\big)\,dt
+   =\int_0^{\ell_P}\mathrm{tr}\,\big(Y_P(t,\cdot)^*\,\delta H(t)\,Y_P(t,\cdot)\big)\,dt
 \]
 (Duhamel/variation-of-parameters for $J\partial_tY=z(H_P+\varepsilon\delta H)Y$). Polarizing the second
 variation in two such sources reconstructs the bilinear form $\int Y_P^*H_PY_P$, which is $\mathsf

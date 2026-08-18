@@ -19,16 +19,16 @@ Assume D8.5 (the source-level local-factor convergence; D8 §9 ledger). Then:
 \[
    \underbrace{\kappa(A_P)=0\ \forall P}_{\text{D7 (A1), from G1–G2}}
    \ \xRightarrow{\ \text{D4 shorting}\ }\
-   \underbrace{\operatorname{sq}_-(\mathsf K_P^\circ)=0}_{\text{D4 Thm index}}
+   \underbrace{\mathrm{sq}_-(\mathsf K_P^\circ)=0}_{\text{D4 Thm index}}
    \ \xRightarrow{\ \text{D8 (incl. 8.5)}\ }\
    \underbrace{\mathsf K_P^\circ\to\mathsf K_\infty^\circ}_{\text{D8.7}}
 \]
 \[
-   \xRightarrow{\ \text{D6 closedness}\ }\ \operatorname{sq}_-(\mathsf K_\infty^\circ)=0
+   \xRightarrow{\ \text{D6 closedness}\ }\ \mathrm{sq}_-(\mathsf K_\infty^\circ)=0
    \ \xRightarrow{\ \text{D9 (A3)}\ }\ \mathsf K_\infty^\circ=\mathsf K_\Xi^{\mathrm{G5}}
-   \ \Rightarrow\ \operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0.
+   \ \Rightarrow\ \mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0.
 \]
-By G5 (D0, Prop. g5), $\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=\#\{\rho:\zeta(\rho)=0,\ \Re\rho
+By G5 (D0, Prop. g5), $\mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=\#\{\rho:\zeta(\rho)=0,\ \Re\rho
 \ne\tfrac12\}$. Therefore
 \[
    \#\{\rho:\zeta(\rho)=0,\ \Re\rho\ne\tfrac12\}=0,\qquad\text{i.e. }\boxed{\text{RH.}}
@@ -89,7 +89,7 @@ See `D8.5-COMPLETE.md` §D–§G. The box below is the superseded earlier framin
 \textbf{D8.5a} (the marked Tate–Binet convergence $G_P^\circ\to G^{\lim}$, blocks 1–8) is \emph{proved
 and genuinely local} (no hidden RH-strength; candor checkpoint passed). \textbf{D8.5b's identification}
 ($G^{\lim}=G_\Xi^{\mathrm{G5}}$ as meromorphic objects) is \emph{proved}. But \textbf{D8.5b's index
-conclusion is RH-strength} (`D8.5b-...md` Thm gate, outcome ii): $\operatorname{sq}_-(G_\Xi^{\mathrm{G5}})
+conclusion is RH-strength} (`D8.5b-...md` Thm gate, outcome ii): $\mathrm{sq}_-(G_\Xi^{\mathrm{G5}})
 =0$ does \emph{not} follow, because the negative squares live at the off-line poles, where the positive
 matrix-Nevanlinna approximants $G_P^\circ$ do not converge (a $\mathcal N_0$ limit develops $\mathcal
 N_\kappa$ poles only non-uniformly). The irreducible residue is the \textbf{convergence of the principal

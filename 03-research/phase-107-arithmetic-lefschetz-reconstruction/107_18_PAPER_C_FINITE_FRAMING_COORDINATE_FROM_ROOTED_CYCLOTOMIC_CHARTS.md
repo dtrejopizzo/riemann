@@ -285,7 +285,7 @@ The present note does not prove three things.
 1. That the framed-divisor charts with coordinates \((n,\chi)\) glue to
    the full compactified factor \(\overline{\mathfrak P}_{\rm fr}\).
 2. That the resulting regularization of the incidence locus is proper and
-   regular over all of \(\operatorname{Spec}\mathbb Z\).
+   regular over all of \(\mathrm{Spec}\,\mathbb Z\).
 3. That the Gamma--polar boundary metric descends adelically or
    Arakelov-theoretically on the regularized model.
 

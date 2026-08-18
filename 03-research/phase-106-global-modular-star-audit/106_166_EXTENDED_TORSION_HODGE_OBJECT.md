@@ -113,7 +113,7 @@ After the degree-one Tate twist
 The polar decomposition of the real multiplication operator is
 
 \[
- M_m=M_{\operatorname {sgn}m}M_{|m|}.
+ M_m=M_{\mathrm{sgn}\,m}M_{|m|}.
 \]
 
 Equation (7) is exactly (3).  It is positive, closed, and definite because
@@ -150,7 +150,7 @@ Under the identification \(z=\rho-1/2\), the finite characteristic
 singularities of \(\mathbb T_\Xi\) are precisely the zeros with
 
 \[
- \boxed{\operatorname {Re}\rho=\frac12.}                   \tag{12}
+ \boxed{\mathrm{Re}\,\rho=\frac12.}                   \tag{12}
 \]
 
 An off-line local Artin factor of (10) has zero image in every

@@ -11,14 +11,14 @@ RH requires the *sign* of a bottom that all the sampling/density machinery leave
 
 ## 1. The exact logical position
 $$
-\text{RH}\ \Longleftrightarrow\ \mathfrak t\succeq0\ \Longleftrightarrow\ \inf\operatorname{spec}(\mathcal T)\ge0\qquad(\text{Weil's criterion}).
+\text{RH}\ \Longleftrightarrow\ \mathfrak t\succeq0\ \Longleftrightarrow\ \inf\mathrm{spec}(\mathcal T)\ge0\qquad(\text{Weil's criterion}).
 $$
 Days 0–22 establish (modulo the last frontier input, §Day-22):
 $$
-\boxed{\ \inf\operatorname{spec}(\mathcal T)\ \ge\ 1-4C,\qquad C\ge e^{d}>1\ \text{finite}.\ }
+\boxed{\ \inf\mathrm{spec}(\mathcal T)\ \ge\ 1-4C,\qquad C\ge e^{d}>1\ \text{finite}.\ }
 $$
 So the program proves the bottom is **finite** (this is **B-2** — a faithful, semibounded *realization* of
-the Weil operator). RH is the **sign** of that bottom: $\inf\operatorname{spec}\ge0$. **The machinery
+the Weil operator). RH is the **sign** of that bottom: $\inf\mathrm{spec}\,\ge0$. **The machinery
 delivers finiteness, not the sign.**
 
 ---
@@ -46,7 +46,7 @@ the criterion; they cannot supply the sign.**
 ### (A) The faithful reformulation — ACHIEVABLE, but NOT a proof of RH
 Completing B-2 (the §Day-22 frontier) yields a genuine theorem:
 $$
-\boxed{\ \text{RH}\ \Longleftrightarrow\ \operatorname{sign}\big(\inf\operatorname{spec}(\mathcal T)\big)\ge0,\quad\text{with }\mathcal T\text{ a rigorously realized, semibounded operator and }\inf\operatorname{spec}\text{ a convergent finite quantity.}\ }
+\boxed{\ \text{RH}\ \Longleftrightarrow\ \mathrm{sign}\,\big(\inf\mathrm{spec}(\mathcal T)\big)\ge0,\quad\text{with }\mathcal T\text{ a rigorously realized, semibounded operator and }\inf\mathrm{spec}\,\text{ a convergent finite quantity.}\ }
 $$
 - **What it is:** a new equivalent of RH — a faithful, RH-independent **spectral reformulation**, with the
   distinguishing feature of an explicit finite-dimensional sampling ladder. Lineage:
@@ -57,7 +57,7 @@ $$
 - **This is the program's realistic deliverable.** It is publishable and serious on its own merits.
 
 ### (B) Structural positivity — the ACTUAL proof of RH, very low probability
-To prove RH one must show $\inf\operatorname{spec}(\mathcal T)\ge0$ — the **sign**. The only known way to force
+To prove RH one must show $\inf\mathrm{spec}(\mathcal T)\ge0$ — the **sign**. The only known way to force
 the sign of a self-adjoint operator is to exhibit **manifest positivity**:
 $$
 \boxed{\ \mathcal T = A^*A\quad(\text{a square})\ \Longrightarrow\ \mathcal T\succeq0\ \Longrightarrow\ \text{RH}.\ }
@@ -92,7 +92,7 @@ attacked **magnitude**, not **structure**. This — not more sampling/density �
 ## 5. The one-paragraph truth
 The program took the Weil criterion (RH $\iff$ a positivity) and, through P7 → faithfulness → B-2 →
 sampling → density, turned it into a **second, sharper positivity** — the sign of a rigorously realized,
-semibounded operator $\mathcal T$, with $\inf\operatorname{spec}(\mathcal T)\ge0\iff$ RH. That is the
+semibounded operator $\mathcal T$, with $\inf\mathrm{spec}(\mathcal T)\ge0\iff$ RH. That is the
 faithful reformulation, and it is achievable. But **proving the sign is proving RH**, and the sign comes
 only from **structural positivity** ($\mathcal T=A^*A$ / Connes trace / de Branges chain) — a question the
 magnitude-machinery of these 22 days never engaged and cannot settle. So: **complete (A) for a real

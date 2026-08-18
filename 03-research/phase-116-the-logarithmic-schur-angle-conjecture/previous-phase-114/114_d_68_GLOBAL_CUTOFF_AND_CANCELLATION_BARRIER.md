@@ -67,7 +67,7 @@ where
 
 \[
  \mathfrak a(\tau)=
- \operatorname {Re}\psi\left({1\over4}+{i\tau\over2}\right)
+ \mathrm{Re}\,\psi\left({1\over4}+{i\tau\over2}\right)
  -\log\pi.                                                 \tag{2.2}
 \]
 

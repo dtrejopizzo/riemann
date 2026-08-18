@@ -35,7 +35,7 @@ No assertion below assumes RH.
 
 Let \(A_L\) be self-adjoint on a Hilbert space \(\mathcal H_L\), with
 normalized simple ground state \(\phi_L\) and ground eigenvalue
-\(\epsilon_L\).  Let \(q_L\in\operatorname{Dom}(A_L)\) be a normalized
+\(\epsilon_L\).  Let \(q_L\in\mathrm{Dom}(A_L)\) be a normalized
 model vector and let \(\mu_L\in\mathbb R\).  Put
 
 \[

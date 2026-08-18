@@ -354,7 +354,7 @@ Para
 
 \[
  Q_n^{\mathrm{off}}
- =4-2\operatorname {Re}\{(2i)^n+(2i)^{-n}\},              \tag{29}
+ =4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\},              \tag{29}
 \]
 
 se tiene

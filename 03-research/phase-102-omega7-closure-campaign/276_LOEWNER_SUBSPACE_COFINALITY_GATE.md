@@ -72,7 +72,7 @@ only if
 \boxed{
   p_np_n^*
   \in
-  \overline{\operatorname{cone}}\{v_\alpha v_\alpha^*\}
+  \overline{\mathrm{cone}}\{v_\alpha v_\alpha^*\}
 }
 \tag{5}
 \]

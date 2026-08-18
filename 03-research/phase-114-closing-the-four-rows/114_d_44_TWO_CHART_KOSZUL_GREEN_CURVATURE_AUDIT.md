@@ -226,7 +226,7 @@ For fixed finite `P`, the prime sum in (4.2) is bounded, whereas
 
 \[
  m_\infty(\tau)
- =\log\pi-\operatorname{Re}\psi(1/4+i\tau/2)
+ =\log\pi-\mathrm{Re}\,\psi(1/4+i\tau/2)
  =\log\pi-\log(|\tau|/2)+o(1).                                \tag{4.6}
 \]
 

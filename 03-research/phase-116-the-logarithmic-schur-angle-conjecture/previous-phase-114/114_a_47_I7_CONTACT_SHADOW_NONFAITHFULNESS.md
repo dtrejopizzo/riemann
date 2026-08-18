@@ -55,7 +55,7 @@ The symmetric monoidal map
 
 \[
  (\mathbb N^\times,\cdot)\longrightarrow
- (\operatorname{Iso}(\operatorname{Sh}(Y)),\otimes),
+ (\mathrm{Iso}(\mathrm{Sh}(Y)),\otimes),
  \qquad n\longmapsto[\mathcal M_n]                     \tag{2.1}
 \]
 

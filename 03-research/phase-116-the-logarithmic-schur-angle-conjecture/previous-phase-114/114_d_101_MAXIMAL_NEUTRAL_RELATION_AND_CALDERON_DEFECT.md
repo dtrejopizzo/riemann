@@ -159,10 +159,10 @@ Therefore
 
 \[
  \boxed{
- \operatorname{Def}(T_{\Theta_{\rm comp}})
- =\operatorname{Def}(T_{\Theta_{\rm Tate}})
+ \mathrm{Def}(T_{\Theta_{\rm comp}})
+ =\mathrm{Def}(T_{\Theta_{\rm Tate}})
   \mathbin{\widehat\oplus}
-  \operatorname{Def}(T_{\Theta_{\rm nt}}),}              \tag{3.5}
+  \mathrm{Def}(T_{\Theta_{\rm nt}}),}              \tag{3.5}
 \]
 
 with the usual nonorthogonal extension when factors share boundary data.

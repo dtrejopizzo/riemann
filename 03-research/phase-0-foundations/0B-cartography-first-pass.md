@@ -28,7 +28,7 @@ archimedean) suffices and a short cutoff $10^3$ fails: the failure is *under-res
 of $g$*, not a number-theoretic obstruction. ✅ technical, unconditional.
 
 ### 1b. Archimedean tail — computable, no obstruction
-$A(g)=\frac1{2\pi}\int h(r)\,\Omega(r)\,dr$ with $\Omega(r)=\operatorname{Re}\psi(\tfrac14+\tfrac{ir}{2})-\log\pi$,
+$A(g)=\frac1{2\pi}\int h(r)\,\Omega(r)\,dr$ with $\Omega(r)=\mathrm{Re}\,\psi(\tfrac14+\tfrac{ir}{2})-\log\pi$,
 $\Omega(r)=O(\log|r|)$. Since $h=\hat g$ is Gaussian-localized at $T_0$, the integrand decays
 super-polynomially; the tail past any cutoff is explicitly bounded. ✅ technical, unconditional.
 

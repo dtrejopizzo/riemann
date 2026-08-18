@@ -91,7 +91,7 @@ so that its nontrivial divisor is the zero divisor and
 The divisor object is represented locally by the mapping cone
 
 \[
- \mathcal K_\Xi=\operatorname{Cone}
+ \mathcal K_\Xi=\mathrm{Cone}
    [\mathcal O\xrightarrow{\Xi}\mathcal O].               \tag{2.2}
 \]
 
@@ -121,7 +121,7 @@ Consequently
 
 \[
  \det G_\rho=-m_\rho^2<0,
- \qquad\operatorname{inertia}(G_\rho)=(1,1).              \tag{2.5}
+ \qquad\mathrm{inertia}(G_\rho)=(1,1).              \tag{2.5}
 \]
 
 This is the local Real/Witt decomposition: fixed divisor points give
@@ -151,7 +151,7 @@ nontrivial divisor trace (2.3)--(2.4) back along evaluation of `F` gives
  Q_{\rm div}(f)={}&
  \sum_{\rho=\iota\rho}m_\rho|F(\rho)|^2\\
  &+\sum_{\{\rho,\iota\rho\},\ \rho\ne\iota\rho}
- 2m_\rho\operatorname{Re}
+ 2m_\rho\mathrm{Re}
    \bigl(F(\rho)\overline{F(\iota\rho)}\bigr).           \tag{3.3}
  \end{aligned}
 \]
@@ -197,8 +197,8 @@ Therefore
  \boxed{
  \text{reflection positivity of the completed Real divisor trace}
  \quad\Longleftrightarrow\quad
- \operatorname{supp}(\operatorname{Div}_{\rm nt}\Xi)
- \subset\operatorname{Fix}(\iota).}                       \tag{4.2}
+ \mathrm{supp}(\mathrm{Div}_{\rm nt}\Xi)
+ \subset\mathrm{Fix}(\iota).}                       \tag{4.2}
 \]
 
 The right side is precisely `Re(rho)=1/2` for every nontrivial zero.

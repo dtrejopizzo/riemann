@@ -162,7 +162,7 @@ Equations (5) and (13c) give
 Under Abel regularization, 106.172 proves
 
 \[
- \operatorname {FP}_{s\downarrow1/2}C_s
+ \mathrm{FP}_{s\downarrow1/2}C_s
  +\kappa_\infty=0.                                        \tag{13f}
 \]
 
@@ -181,7 +181,8 @@ of \(d_{\rm bd,S}\):
  =\ker\left(
    \partial_{T,S}\oplus\beta_\infty^{(1)}:
    \mathscr V_S\oplus\mathscr A_\infty^{(1)}
-   \longrightarrow\mathscr K^{(1)}ight),}               \tag{14}
+   \longrightarrow\mathscr K^{(1)}
+ight),}               \tag{14}
 \]
 
 where the displayed row acts by
@@ -193,12 +194,12 @@ Indeed, (13b) gives
 
 \[
  \mathscr P_S=\ker d_{\rm bd,S}^*
- =\bigl(\operatorname {Ran}d_{\rm bd,S}\bigr)^\perp,       \tag{14a}
+ =\bigl(\mathrm{Ran}\,d_{\rm bd,S}\bigr)^\perp,       \tag{14a}
 \]
 
 so it represents
 \((\mathscr V_S\oplus\mathscr A_\infty^{(1)})/
-\operatorname {Ran}d_{\rm bd,S}\) without changing the quotient metric.
+\mathrm{Ran}\,d_{\rm bd,S}\) without changing the quotient metric.
 
 This is not the orthogonal sum excluded by 106.189.  The two pages share
 the constraint (14) before either page is eliminated.

@@ -416,7 +416,7 @@ As a decomposable operator from the Gamma chord space to
 \[
  \boxed{
  \|R\|^2
- =\operatorname*{ess\,sup}_{x\in\mathbb R}\mathcal S_\Gamma(x),}
+ =\mathop{\mathrm{ess\,sup}}_{x\in\mathbb R}\mathcal S_\Gamma(x),}
  \tag{32}
 \]
 

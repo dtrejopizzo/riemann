@@ -381,7 +381,7 @@ es exactamente la nueva formulación suficiente para RH.
 Para el cuarteto racional de `104_17`,
 
 \[
- Q_n=4-2\operatorname {Re}\{(2i)^n+(2i)^{-n}\}.            \tag{29}
+ Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\}.            \tag{29}
 \]
 
 Cada intervalo de cuatro enteros contiene un \(d\equiv0\pmod4\), y para

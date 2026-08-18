@@ -9,13 +9,13 @@ no fabricated crossing.
 ---
 
 ## 1. The control case
-Let $E/\mathbb Q$ with minimal regular model $\mathcal E\to\operatorname{Spec}\mathbb Z$ — a genuine
-$2$-dimensional regular arithmetic scheme (the surface that $\operatorname{Spec}\mathbb Z$ alone lacks). Here:
+Let $E/\mathbb Q$ with minimal regular model $\mathcal E\to\mathrm{Spec}\,\mathbb Z$ — a genuine
+$2$-dimensional regular arithmetic scheme (the surface that $\mathrm{Spec}\,\mathbb Z$ alone lacks). Here:
 - the **arithmetic Hodge index theorem applies** (Faltings–Hriljac): the Arakelov pairing on
   $\widehat{\mathrm{Pic}}^0(\mathcal E)$ is negative definite, equal to the **Néron–Tate height** $\widehat h$ on
   $E(\mathbb Q)\otimes\mathbb R$;
 - the Hasse–Weil $L$-function $L(E,s)$ (degree $2$, automorphic by modularity) has a functional equation about
-  $s=1$ and conjectural zeros on $\operatorname{Re}s=1$ (GRH for $E$).
+  $s=1$ and conjectural zeros on $\mathrm{Re}\,s=1$ (GRH for $E$).
 So this is exactly the setting of Attempt 5 with the surface present. We trace where it goes.
 
 ## 2. What the arithmetic Hodge index gives here
@@ -37,7 +37,7 @@ volume; it is the input used, e.g., in Gross–Zagier/Kolyvagin for rank $\le1$.
 
 ## 3. What it does *not* give — and the precise separation
 \begin{proposition}[The zeros are a different object]\label{prop:zeros}
-The location of the nontrivial zeros of $L(E,s)$ on $\operatorname{Re}s=1$ (GRH for $E$) is \emph{not} controlled by
+The location of the nontrivial zeros of $L(E,s)$ on $\mathrm{Re}\,s=1$ (GRH for $E$) is \emph{not} controlled by
 $\widehat h$. The height pairing is a statement about the central special value; the zero distribution is a global
 analytic statement. They separate at the level of \emph{which cohomology carries the eigenvalues}:
 \[
@@ -68,20 +68,20 @@ There are \emph{two} arithmetic Hodge index theorems / two cohomologies:
 \]
 So the missing $I_{2b}$ is not merely ``a surface'': even with the surface (for $E$), the *proven* Hodge index is on
 the **wrong cohomology** (heights). **The genuinely missing object is the zero-carrying arithmetic cohomology** (a
-``$H^1$'' for $\operatorname{Spec}\mathbb Z$ on which a Frobenius-analogue has the $\zeta$-zeros as eigenvalues),
+``$H^1$'' for $\mathrm{Spec}\,\mathbb Z$ on which a Frobenius-analogue has the $\zeta$-zeros as eigenvalues),
 together with its own Hodge index. That is exactly the Deninger/Connes target — and it is distinct from, and not
 supplied by, the Arakelov–Faltings–Hriljac height theory.
 
 ## 5. Consequences and the next concrete target
-- **SURF refined:** constructing the $\mathbb F_1$-surface for $\operatorname{Spec}\mathbb Z$ is necessary but, by
+- **SURF refined:** constructing the $\mathbb F_1$-surface for $\mathrm{Spec}\,\mathbb Z$ is necessary but, by
   Attempt 6, **not sufficient unless its cohomology carries the zeros** (not the heights). The Connes–Consani
   program is right to seek the zeros as spectrum; the Arakelov route (heights) is a *different*, BSD-flavoured
   theory and does not transfer.
 - **The Beilinson dictionary, located:** the bridge "special values (heights, controlled) $\leftrightarrow$ zeros
   (GRH, uncontrolled)" is the precise open link. Beilinson's conjectures relate special values to regulators
   (heights); the *zero distribution* is a further, finer datum the regulators do not see.
-- **The single sharpest target now:** a zero-carrying arithmetic cohomology $H^1_?(\operatorname{Spec}\mathbb Z)$
-  with a Frobenius-analogue $\Phi$ such that $\operatorname{spec}(\Phi)=\{\gamma_\rho\}$, and a Hodge-index/
+- **The single sharpest target now:** a zero-carrying arithmetic cohomology $H^1_?(\mathrm{Spec}\,\mathbb Z)$
+  with a Frobenius-analogue $\Phi$ such that $\mathrm{spec}(\Phi)=\{\gamma_\rho\}$, and a Hodge-index/
   definiteness theorem for it. This is the Deninger ``$\Phi$ on leafwise cohomology'' / the Connes ``zeros as
   absorption spectrum'' object — now isolated, by the elliptic control, as the *unique* remaining ingredient, with
   the height-theory shown to be the wrong (though proven) Hodge index.

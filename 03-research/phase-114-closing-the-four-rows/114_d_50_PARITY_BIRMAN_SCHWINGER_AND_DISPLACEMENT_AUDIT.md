@@ -202,7 +202,7 @@ Take the grid `t=(-1,0,1)` and
 
 \[
  J(x_-,x_0,x_+)=(x_+,x_0,x_-),\quad
- D=\operatorname{diag}(-1,0,1),\quad
+ D=\mathrm{diag}(-1,0,1),\quad
  \eta=(1,1,1)^T,\quad\beta=(-1,0,1)^T.                       \tag{6.1}
 \]
 

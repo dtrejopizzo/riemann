@@ -134,7 +134,7 @@ Indeed,
  \begin{aligned}
  v_N''(0)
  &=2\sum_{\ell\le N}\log\ell\,
-   \operatorname {Var}_{p_\ell}(\log d),\\
+   \mathrm{Var}_{p_\ell}(\log d),\\
  p_N''(0)
  &=2\sum_{n\le N}\frac{\Lambda(n)}{\sqrt n}(\log n)^2.
  \end{aligned}
@@ -161,7 +161,7 @@ For a probability law \(P\) and \(X=\log d\),
 
 \[
  1-|\mathbb E_Pe^{-itX}|^2
- =t^2\operatorname {Var}_P(X)+O(t^3),
+ =t^2\mathrm{Var}_P(X)+O(t^3),
 \]
 
 which gives (10).  If \(\ell=2p\), the law in (6) is supported at
@@ -175,7 +175,7 @@ which gives (10).  If \(\ell=2p\), the law in (6) is supported at
 Hence
 
 \[
- \log(2p)\operatorname {Var}_{p_{2p}}(\log d)
+ \log(2p)\mathrm{Var}_{p_{2p}}(\log d)
  =\frac{\log2\,\log p}{\log(2p)}
   (\log p-\log2)^2
  \gg(\log N)^2.
@@ -318,7 +318,8 @@ Prove directly that
 
 \[
  \boxed{
- \inf_{\substack{g\perp q_L^+\\g\ {m even}\\\|g\|=1}}
+ \inf_{\substack{g\perp q_L^+\\g\ {
+m even}\\\|g\|=1}}
  \left[
   \mathcal D_{p,N}(g,g)+\mathcal D_\Gamma(g,g)
   +2|\langle h_L,g\rangle|^2-\kappa_N

@@ -28,9 +28,9 @@ is proved below, and nothing here bears on RH.
 | 108_24 Thm 2.1 | a forced, zero-free pairing exists on *balanced* smearing profiles in the open strip $0<a<1$ | proved (inherited) |
 | 108_26 | 108_03's principal line sits at $s=0$: excluded boundary of the strip, accumulation point of the singular set — unreachable | proved (inherited) |
 | 108_26 §4.1 | poses the open question: is $s=0$ forced, or does a witness exist in $(0,1)$? | open (inherited) |
-| 108_27 Thm 2.1 | $\operatorname{Div}(U)$ is literally Frobenius-invariant iff $s=0$ | proved (inherited) — **stands**, unaltered |
-| 108_27 §4 | proposes searching for a "logarithmic" $\operatorname{Div}$ as the fix | shown misconceived (108_28) |
-| 108_28 | $\operatorname{Div}$ already satisfies every classical logarithmic-divisor law, correctly translated; $\operatorname{Div}(cU)=c\operatorname{Div}(U)$ is the *correct* power-law behaviour, not a defect | proved here |
+| 108_27 Thm 2.1 | $\mathrm{Div}(U)$ is literally Frobenius-invariant iff $s=0$ | proved (inherited) — **stands**, unaltered |
+| 108_27 §4 | proposes searching for a "logarithmic" $\mathrm{Div}$ as the fix | shown misconceived (108_28) |
+| 108_28 | $\mathrm{Div}$ already satisfies every classical logarithmic-divisor law, correctly translated; $\mathrm{Div}(cU)=c\mathrm{Div}(U)$ is the *correct* power-law behaviour, not a defect | proved here |
 | 108_29 (Route Beta) | the "same ray" reading of invariance holds, but for every weight unconditionally — vacuous, not discriminating | proved here (insufficient alone) |
 | 108_29 (Route Gamma) | no canonical, weight-only rescaling can relocate the invariance locus of any $n$-dependent character | proved here (fails) |
 | 108_31 (Route Delta) | Definition 6.1's literal-invariance criterion, applied to the classical model (a torus acting on $\mathbb P^1$), would trivialize the entire classical notion of $T$-invariant principal divisor; the correct classical criterion is semi-invariance, admitting **every** character | proved here (self-contained classical lemma, Proposition 1.1) |
@@ -41,7 +41,7 @@ is proved below, and nothing here bears on RH.
 
 **Proved (written proof, this batch of notes):**
 
-* 108_28 Proposition 2.1: $\operatorname{Div}$ is additive over sums of
+* 108_28 Proposition 2.1: $\mathrm{Div}$ is additive over sums of
   potentials of different weights.
 * 108_28 Proposition 3.1: the diagnostic $D_{\log}$ of 108_27 §3 is blind
   to $s$ entirely — a second, independent reason it could never have
@@ -67,17 +67,17 @@ is proved below, and nothing here bears on RH.
   $s\in(0,1)$.
 
 **Verified numerically (all verifiers below, exit 0):** linearity and
-additivity of $\operatorname{Div}$ across weights; positivity of
+additivity of $\mathrm{Div}$ across weights; positivity of
 $\chi_s(m,n)$ for a wide bank of real $s$ (including large positive and
 negative values); one-dimensionality of $\mathcal L_s$'s image under
-$\operatorname{Div}$; exact ratio-homogeneity $u_s(r/n)=n^{-(s+1)}u_s(r)$;
+$\mathrm{Div}$; exact ratio-homogeneity $u_s(r/n)=n^{-(s+1)}u_s(r)$;
 invariance of $D_{\log}$'s discrepancy across weights; invariance-locus
 stability of $\chi_s$ under four different candidate canonical rescalings;
 exact vanishing order of $t^*\varphi_m$ at $r=0$ on the classical model,
 independent of $t$; nonzero and pairwise-distinguishable
-$\operatorname{div}(U_s)$ at five weights inside $(0,1)$; conservativity of
-the enlarged $\operatorname{Prin}'(\mathcal G)$ against the old
-$\operatorname{Prin}(\mathcal G)$.
+$\mathrm{div}(U_s)$ at five weights inside $(0,1)$; conservativity of
+the enlarged $\mathrm{Prin}'(\mathcal G)$ against the old
+$\mathrm{Prin}(\mathcal G)$.
 
 **Read from source, not re-derived:** 107_237 (2.3) and Theorem 2.1; 108_02
 Theorem 4.1; 108_03 Definitions 4.1/6.1, Propositions 3.1/5.2, Theorem 6.2;
@@ -95,7 +95,7 @@ to a point mass at $a=s$ — not smooth, and of mass $1$, not $0$ (108_26
 Proposition 1.1). The natural fix — pairing a **difference** of two
 in-strip witnesses, $U_{s_0}-U_{s_1}$ with $s_0,s_1\in(0,1)$, which is
 balanced by construction and lies in the linear span of
-$\operatorname{Prin}'(\mathcal G)$ (108_28's additivity) — is sketched but
+$\mathrm{Prin}'(\mathcal G)$ (108_28's additivity) — is sketched but
 not verified: whether smooth balanced approximations to this discrete
 combination have a convergent pairing value is exactly the sort of
 question 108_22 (extension by continuity) and 108_23 (the smeared-pairing
@@ -115,8 +115,8 @@ answers.
 |---|---|---|
 | pairing on individual $f_a$ | — | impossible (108_22, inherited) |
 | pairing on balanced, smooth, compactly supported profiles | $0<a<1$ | exists, proved (108_24, inherited) |
-| $\operatorname{Prin}(\mathcal G)$, literal-invariance reading (108_03 Def 6.1) | $s=0$ only | excluded and unreachable (108_26, inherited) — **superseded as the definition of "principal"** |
-| $\operatorname{Prin}'(\mathcal G)$, semi-invariance reading (108_31 Def 3.1) | every $s\in\mathbb R$ | nonzero witnesses exist throughout, including $(0,1)$ (108_31, this batch) |
+| $\mathrm{Prin}(\mathcal G)$, literal-invariance reading (108_03 Def 6.1) | $s=0$ only | excluded and unreachable (108_26, inherited) — **superseded as the definition of "principal"** |
+| $\mathrm{Prin}'(\mathcal G)$, semi-invariance reading (108_31 Def 3.1) | every $s\in\mathbb R$ | nonzero witnesses exist throughout, including $(0,1)$ (108_31, this batch) |
 | bridging a weight-$s$ witness into 108_24's smooth mean-zero domain | — | identified, not checked (108_31 §5, this batch) |
 | Stage 1's blocking question (108_26 §4.1) | — | **resolved: yes** |
 
@@ -141,9 +141,9 @@ Not established, and explicitly not claimed:
 
 `108_32_stage_1_status.py` performs a lightweight, self-contained
 cross-check (not a re-derivation) of the load-bearing numeric facts from
-108_28/108_29/108_31: additivity of $\operatorname{Div}$; positivity of
+108_28/108_29/108_31: additivity of $\mathrm{Div}$; positivity of
 $\chi_s(m,n)$ on a wide weight bank; the two invariance loci $\{s=0\}$,
-$\{s=-1\}$; nonzero, pairwise-distinguishable $\operatorname{div}(U_s)$ at
-five weights in $(0,1)$; and conservativity of $\operatorname{Prin}'$
-against $\operatorname{Prin}$. It prints the assembled status table and a
+$\{s=-1\}$; nonzero, pairwise-distinguishable $\mathrm{div}(U_s)$ at
+five weights in $(0,1)$; and conservativity of $\mathrm{Prin}'$
+against $\mathrm{Prin}$. It prints the assembled status table and a
 final verdict line.

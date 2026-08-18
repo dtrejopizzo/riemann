@@ -7,7 +7,7 @@
 \[
  \widehat{\mathcal M}_{f,T}^{\rm cand}
  \in
- \widehat{\operatorname{Pic}}_{\rm int}^0(\mathcal X_T^{(1)})
+ \widehat{\mathrm{Pic}}_{\rm int}^0(\mathcal X_T^{(1)})
  \tag{1.1}
 \]
 

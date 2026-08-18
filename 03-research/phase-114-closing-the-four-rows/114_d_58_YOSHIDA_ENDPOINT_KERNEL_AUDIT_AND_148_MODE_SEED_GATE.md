@@ -40,7 +40,7 @@ Writing
 
 \[
  f=g*g^*,qquad
- \operatorname{supp}g\subset[2^{-1/2},2^{1/2}],           \tag{2.2}
+ \mathrm{supp}\,g\subset[2^{-1/2},2^{1/2}],           \tag{2.2}
 \]
 
 the two conjugate zeros of `f` come from the single polar zero of the
@@ -70,7 +70,7 @@ and proves
 
 \[
  W_\infty(g*g^*)
- \geq\operatorname{Tr}
+ \geq\mathrm{Tr}
  \bigl(\vartheta(g)\mathfrak S\vartheta(g)^*\bigr)
  =\|\vartheta(g)\mathfrak S\|_{HS}^2\geq0.               \tag{2.6}
 \]
@@ -136,13 +136,13 @@ Let
  A_T=\sum_{p^k\leq e^{2T}}{\log p\over p^{k/2}},
  \qquad
  m_\infty(\tau)=\log\pi-
- \operatorname{Re}\psi(1/4+i\tau/2).                     \tag{4.1}
+ \mathrm{Re}\,\psi(1/4+i\tau/2).                     \tag{4.1}
 \]
 
 D.55 now uses the monotone exact cutoff `R_T^sharp` defined by
 
 \[
- \operatorname{Re}\psi(1/4+iR_T^\sharp/2)-\log\pi
+ \mathrm{Re}\,\psi(1/4+iR_T^\sharp/2)-\log\pi
  =2A_T+\eta.                                               \tag{4.2}
 \]
 

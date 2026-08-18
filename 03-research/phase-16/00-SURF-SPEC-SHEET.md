@@ -16,12 +16,12 @@ any cited theorem ("hard Lefschetz for $\delta$-schemes", etc.) requires an exac
 The submitted spec is adopted **with two corrections** found on review. Both are load-bearing.
 
 ### Correction 1 (Pillar 1 trace test) — the power-trace diverges; use the test-function trace
-$\operatorname{Tr}(\mathrm{Frob}_{\mathcal X}^k)=\sum_\rho\gamma_\rho^k$ **diverges** ($\HW$ is
+$\mathrm{Tr}(\mathrm{Frob}_{\mathcal X}^k)=\sum_\rho\gamma_\rho^k$ **diverges** ($\HW$ is
 infinite-dimensional, the $\gamma_\rho$ are unbounded). It is the same divergent object refuted at the start of the
 program (the fake $s_k(p)=\sum_\rho\gamma_\rho^k p^{-i\gamma_\rho}$). The correct, convergent acceptance test is the
 **test-function (distributional) trace**, i.e. the Lefschetz trace formula in its only well-posed form:
 $$
-\boxed{\ \operatorname{Tr}\big(h(\mathrm{Frob}_{\mathcal X})\big)=\sum_\rho h(\gamma_\rho)
+\boxed{\ \mathrm{Tr}\,\big(h(\mathrm{Frob}_{\mathcal X})\big)=\sum_\rho h(\gamma_\rho)
 =(\text{poles})+\frac1{2\pi}\!\int h(r)\Psi(r)\,dr-2\sum_n\frac{\Lambda(n)}{\sqrt n}g(\log n)\ }
 $$
 for test functions $h$ (the Weil explicit formula, M1 Thm A, verified to $10^{-12}$). A candidate is accepted at
@@ -61,9 +61,9 @@ but that positivity is the thing to *prove*, not to *invoke*.
 
 ### Pillar 1 — SPECTRUM (zeros $\leftrightarrow$ Frobenius)
 - **1.1** $\mathcal X$ carries $\mathrm{Frob}_{\mathcal X}$ acting on $H^1_{\mathrm{arith}}(\mathcal X)_{\mathrm{prim}}$
-  with $\operatorname{spec}=\{\gamma_\rho\}$, simple (LI-consistent), with a functional-equation involution
+  with $\mathrm{spec}=\{\gamma_\rho\}$, simple (LI-consistent), with a functional-equation involution
   $F_\infty$, $\mathrm{Frob}\,F_\infty=F_\infty\,\mathrm{Frob}^{-1}$.
-- **ACCEPTANCE TEST (corrected):** the **test-function trace** $\operatorname{Tr}(h(\mathrm{Frob}_{\mathcal X}))$
+- **ACCEPTANCE TEST (corrected):** the **test-function trace** $\mathrm{Tr}(h(\mathrm{Frob}_{\mathcal X}))$
   reproduces the explicit formula (boxed above) for a family of $h$. Raw power-traces are divergent and not a test.
   Local Frobenius data must give the anatomy $s_k(p)=1$ for $\zeta$ (P19). **Wrong spectrum $\Rightarrow$ REJECT**
   (e.g. $J_0(N)$ gives modular-form eigenvalues, not $\zeta$-zeros).
@@ -80,7 +80,7 @@ but that positivity is the thing to *prove*, not to *invoke*.
 ### Pillar 3 — LEFSCHETZ ($L$, $\sltwo$, Tate twist)
 - **3.1** $L_{\mathcal X}=\widehat c_1(\overline{\mathcal L})\cup\,\cdot$ on $H^1_{\mathrm{prim}}$, $\overline{\mathcal L}$
   ample.
-- **3.2** $(L,\Lambda=L^\dagger,H=[L,\Lambda])$ is an $\sltwo$ with **integer grading** $\operatorname{spec}(H)\subset
+- **3.2** $(L,\Lambda=L^\dagger,H=[L,\Lambda])$ is an $\sltwo$ with **integer grading** $\mathrm{spec}(H)\subset
   \mathbb Z_{\ge0}$ and hard Lefschetz. **NOTE (M5):** an integer grading must come from the geometry of $\mathcal X$
   (a genuine compact/finite structure), not be imposed — the LI spectrum forbids it on any *spectral* model. The
   geometry is exactly what could legitimately supply it; verify, do not assert.
@@ -110,7 +110,7 @@ but that positivity is the thing to *prove*, not to *invoke*.
 | Route | $\mathcal X$ | Wall |
 |---|---|---|
 | A. Shimura $GL_2$ / Borel–Serre | $\overline{GL_2(\mathbb A)/GL_2(\mathbb Q)}^{\mathrm{BS}}$ | Beilinson realization: Eisenstein residues at $\tfrac12+i\gamma$ must *generate* $H^1_{\mathrm{prim}}$ and give pairing $Q$ — and the positivity is NOT Yuan–Zhang (Corr. 2). |
-| B. $\delta$/$\mathbb F_1$ (Borger, Connes–Consani) | $\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z$ | Foundations: global $\delta$-/prismatic cohomology, intersection theory, diagonal $[\Delta]$, AND a NEW Hodge index (no Yuan–Zhang there). |
+| B. $\delta$/$\mathbb F_1$ (Borger, Connes–Consani) | $\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$ | Foundations: global $\delta$-/prismatic cohomology, intersection theory, diagonal $[\Delta]$, AND a NEW Hodge index (no Yuan–Zhang there). |
 | C. Prismatic global (Bhatt–Scholze) | global prism over $\mathbb Z$ | Globality: a single endomorphism with spectrum $\{\gamma_\rho\}$ does not exist (M6); plus the analytic/$*$-operator package. |
 
 ## WORK ORDER (Phase 16)

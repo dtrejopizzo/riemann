@@ -34,7 +34,7 @@ target-side intersection matrices.
 The verifier:
 
 1. instantiates the source-side local prediction
-   \(\operatorname{ord}_{\mathrm{fin}}=\log p\);
+   \(\mathrm{ord}_{\mathrm{fin}}=\log p\);
 2. constructs the real target-side affine-Dynkin matrices for
    \(I_2\) and \(I_9\);
 3. checks that two different real Kodaira types at the same prime

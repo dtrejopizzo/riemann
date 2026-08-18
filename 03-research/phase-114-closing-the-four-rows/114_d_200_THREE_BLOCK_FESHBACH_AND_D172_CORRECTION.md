@@ -125,7 +125,7 @@ If forming (2.3) densely is undesirable, a trace gate is sufficient.  For
 
 \[
  \kappa\le
- \operatorname {tr}(A_{SS}^{-1}R_{SS}).               \tag{2.4}
+ \mathrm{tr}(A_{SS}^{-1}R_{SS}).               \tag{2.4}
 \]
 
 After proving the right side smaller than `delta`, compute `C_D C_D^*`

@@ -142,7 +142,7 @@ both of which use the diagonal $\widehat f(s)\overline{\widehat g(\bar s)}$.
 > ### Corollary 3.2 (the diagonal displays are transcription defects; the
 > radical is unaffected)
 > The set
-> $$\operatorname{rad}I_\partial=\{f:\ \widehat f(0)=\widehat f(1)=0,\
+> $$\mathrm{rad}\,I_\partial=\{f:\ \widehat f(0)=\widehat f(1)=0,\
 > \widehat f(\rho)=0\ \forall\rho\in Z\}$$
 > is the same for both forms.
 

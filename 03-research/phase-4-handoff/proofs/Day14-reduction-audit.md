@@ -24,7 +24,7 @@ the critical space, vacuously true (A.2 holds from the upper bound).
 strip edge $d=\tfrac12+\epsilon$. Hence $\mu_{\mathrm{off}}$ is **also Carleson** $\Rightarrow$ $\mathfrak t_-$
 **bounded** $\Rightarrow$ $\mathfrak t=\mathfrak t_+-\mathfrak t_-$ is a **bounded** form. Then
 $$
-\boxed{\ \mathfrak t\ \text{bounded}\ \Longrightarrow\ \inf\operatorname{spec}\in(-\infty,\infty)\ \text{automatically}\ \Longrightarrow\ \text{B-2 is VACUOUS.}\ }
+\boxed{\ \mathfrak t\ \text{bounded}\ \Longrightarrow\ \inf\mathrm{spec}\,\in(-\infty,\infty)\ \text{automatically}\ \Longrightarrow\ \text{B-2 is VACUOUS.}\ }
 $$
 **This is a second triviality (T2), distinct from trace-class (T1, Day 9):**
 | | condition | what collapses |

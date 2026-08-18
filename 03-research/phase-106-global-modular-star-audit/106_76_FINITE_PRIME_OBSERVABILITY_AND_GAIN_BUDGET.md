@@ -49,7 +49,7 @@ Let
  \qquad
  \chi_{z,k}(x)
  =\partial_z^k\!\left({\cos(zx)\over h(x)}\right),
- \qquad |\operatorname {Im}z|<\frac12.             \tag{2}
+ \qquad |\mathrm{Im}\,z|<\frac12.             \tag{2}
 \]
 
 Fix finitely many distinct zero-orbit representatives \(z\), retain the
@@ -123,7 +123,7 @@ trivial kernel on the finite-dimensional space \(V\), which proves (5)
 and (6).  \(\square\)
 
 The argument includes conjugate nonreal orbits and confluent jets.  It
-uses only the strict strip margin \(|\operatorname {Im}z|<1/2\), not RH.
+uses only the strict strip margin \(|\mathrm{Im}\,z|<1/2\), not RH.
 
 ### Corollary 2 — Uniform finite-window observability
 
@@ -216,10 +216,10 @@ eigenvalues except the least one gives the certified estimate
  m_V(u)
  \ge
  {(d-1)^{d-1}\det A_V(u)
-  \over(\operatorname {tr}A_V(u))^{d-1}}.}        \tag{16}
+  \over(\mathrm{tr}\,A_V(u))^{d-1}}.}        \tag{16}
 \]
 
-For \(d=1\), \(m_V(u)=\operatorname {tr}A_V(u)\).  Equations (14)--(16)
+For \(d=1\), \(m_V(u)=\mathrm{tr}\,A_V(u)\).  Equations (14)--(16)
 turn finite sampling into an explicit lower-frame certificate.  For the
 elementary modes (2), the determinant in (13) is a confluent
 trigonometric-exponential sampling determinant; no unproved global

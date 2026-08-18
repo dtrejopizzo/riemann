@@ -23,8 +23,8 @@ full Riesz projection \(P=P_J(L)\) commutes with \(L\), but not with the
 finite-cutoff operator \(L_{\varepsilon,N}\).  Hence
 
 \[
- \operatorname {Tr}P[L_{\varepsilon,N},Y_{\varepsilon,N}]
- =\operatorname {Tr}([P,L_{\varepsilon,N}]Y_{\varepsilon,N}),
+ \mathrm{Tr}\,P[L_{\varepsilon,N},Y_{\varepsilon,N}]
+ =\mathrm{Tr}([P,L_{\varepsilon,N}]Y_{\varepsilon,N}),
 \tag{1}
 \]
 
@@ -312,8 +312,8 @@ Let \(P=P_J(L)\).  Then \([P,L]=0\), but generally
 
 \[
 \boxed{
- \operatorname {Tr}P[L_{\varepsilon,N},Y_{\varepsilon,N}]
- =\operatorname {Tr}([P,L_{\varepsilon,N}]Y_{\varepsilon,N}).}
+ \mathrm{Tr}\,P[L_{\varepsilon,N},Y_{\varepsilon,N}]
+ =\mathrm{Tr}([P,L_{\varepsilon,N}]Y_{\varepsilon,N}).}
 \tag{22}
 \]
 
@@ -336,7 +336,7 @@ If \(Y_{\varepsilon,N}\) is skew-adjoint, block multiplication gives
 
 \[
 \boxed{
- \left|\operatorname {Tr}([P,L_{\varepsilon,N}]
+ \left|\mathrm{Tr}([P,L_{\varepsilon,N}]
  Y_{\varepsilon,N})\right|
  \le2\|A_{\varepsilon,N}\|_{\rm HS}
        \|QY_{\varepsilon,N}P\|_{\rm HS}.}
@@ -345,7 +345,7 @@ If \(Y_{\varepsilon,N}\) is skew-adjoint, block multiplication gives
 
 Thus the sufficient cutoff condition is the product limit in (22a), not
 merely graph convergence of \(L_{\varepsilon,N}P\).  If one instead uses
-the canonical Sylvester inverse of the *full* \(\operatorname {ad}_L\) on
+the canonical Sylvester inverse of the *full* \(\mathrm{ad}_L\) on
 an isolated cluster, the fixed spectral separation bounds the second
 factor and the shell vanishes.  In that choice, however, Theorem 3 moves
 only the off-diagonal block: the untouched block diagonal is exactly the
@@ -406,7 +406,7 @@ Riesz projection \(P\):
 1. **commutator-anomaly control**
 
    \[
-   \operatorname {Tr}([P,L_{\varepsilon,N}]
+   \mathrm{Tr}([P,L_{\varepsilon,N}]
    Y_{\varepsilon,N})\longrightarrow0,
    \tag{25}
    \]
@@ -433,7 +433,7 @@ Sylvester equation.  It is
 \[
 \boxed{
  \liminf_{\varepsilon\downarrow0,\,N\to\infty}
- \operatorname {Tr}(P A_{\varepsilon,N})\ge0,}
+ \mathrm{Tr}(P A_{\varepsilon,N})\ge0,}
 \tag{26}
 \]
 
@@ -450,8 +450,7 @@ Proved here:
 * the theta-sandwich cell holonomy;
 * the radical saturation obstruction to an independent positive cell
   summand;
-* the spectral-diagonal characterization of the range of \(\operatorname
-  {ad}_L\);
+* the spectral-diagonal characterization of the range of \(\mathrm{ad}_L\);
 * the full-projection/cutoff-projection dichotomy.
 
 Not proved: the spectral-diagonal compensation (26).  The proposed

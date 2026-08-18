@@ -36,7 +36,7 @@ by
 
 \[
  \kappa_\infty=(\mathbb Q\cap\mathbb Z_{\mathbb R})/\mathfrak m_\infty,
- \qquad x_\infty=\operatorname{Spec}\kappa_\infty.                  \tag{1.2}
+ \qquad x_\infty=\mathrm{Spec}\,\kappa_\infty.                  \tag{1.2}
 \]
 
 This is a definition from the local object and its maximal ideal; Haran

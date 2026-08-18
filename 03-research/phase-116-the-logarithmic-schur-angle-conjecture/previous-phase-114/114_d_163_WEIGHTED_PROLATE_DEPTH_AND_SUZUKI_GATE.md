@@ -68,7 +68,7 @@ Put \(\rho_p=p^{-1/2}\), \(z=\rho_pe^{i\tau\log p}\), and
 
 \[
  P_{p,K}(\tau)-1
- =2\operatorname {Re}{z(1-z^K)\over1-z}               \tag{1.1}
+ =2\mathrm{Re}{z(1-z^K)\over1-z}               \tag{1.1}
 \]
 
 gives
@@ -102,7 +102,7 @@ Write
 \[
 \begin{aligned}
  h_{5/4}(\tau)
- &=\operatorname {Re}\psi(5/4+i\tau/2)-\psi(5/4),\\
+ &=\mathrm{Re}\,\psi(5/4+i\tau/2)-\psi(5/4),\\
  \beta&=\log\pi-\psi(5/4).
 \end{aligned}                                         \tag{2.1}
 \]
@@ -111,7 +111,7 @@ The recurrence \(\psi(z+1)=\psi(z)+1/z\) gives
 
 \[
  h_{5/4}(\tau)-\beta-{1\over\tau^2+1/4}
- =\operatorname {Re}\psi(1/4+i\tau/2)-\log\pi.      \tag{2.2}
+ =\mathrm{Re}\,\psi(1/4+i\tau/2)-\log\pi.      \tag{2.2}
 \]
 
 Combining (1.2) and (2.2) proves (0.2).  Plancherel then gives
@@ -162,7 +162,7 @@ the positive weighted compressions
  A_T^\pm=P_T^0M_{r_T^\pm}P_T^0.                       \tag{3.4}
 \]
 
-On \(\overline{\operatorname {Ran}(A_T^+)^{1/2}}\), put
+On \(\overline{\mathrm{Ran}(A_T^+)^{1/2}}\), put
 
 \[
  \mathcal K_T^{\rm wpr}
@@ -238,7 +238,7 @@ Let \(N=p^k\), \(a_N=\log N\), \(w_N=(\log p)/\sqrt N\), and
 The new finite-depth term in (1.2) has the exact balanced decomposition
 
 \[
- -2w_N\operatorname {Re}C_F(a_N)
+ -2w_N\mathrm{Re}\,C_F(a_N)
  =w_N\|J_{N,-}F\|^2-w_N\|J_{N,+}F\|^2.               \tag{5.2}
 \]
 

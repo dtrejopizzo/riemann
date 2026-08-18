@@ -116,7 +116,7 @@ Fix \(n\geq1\) and \(\varepsilon>0\).  Let
 \(K_{n,\varepsilon}(\log t)\), and put
 
 \[
- \sigma_j=\operatorname {sgn}K_{n,\varepsilon}(\log t)
+ \sigma_j=\mathrm{sgn}\,K_{n,\varepsilon}(\log t)
  \quad(t\in I_j),\qquad
  h_{n,\varepsilon}(t)
  =t^{-2-\varepsilon}|K_{n,\varepsilon}(\log t)|.

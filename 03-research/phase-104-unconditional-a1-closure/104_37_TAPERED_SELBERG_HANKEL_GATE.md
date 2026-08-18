@@ -71,7 +71,7 @@ Recordemos
 \]
 
 Para cualquier sucesión \(X_0=0,X_1,X_2,\ldots\), su polarización Toeplitz
-sobre el plano \(\operatorname{span}\{g_n,\phi_n\}\) da
+sobre el plano \(\mathrm{span}\,\{g_n,\phi_n\}\) da
 
 \[
  \boxed{

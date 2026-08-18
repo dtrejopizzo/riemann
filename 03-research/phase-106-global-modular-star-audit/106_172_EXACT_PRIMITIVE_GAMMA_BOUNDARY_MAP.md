@@ -11,7 +11,7 @@ Document 106.161 constructed the common first-mode boundary operator
 and reduced its unfinished gluing to
 
 \[
- \operatorname {FP}_{s\downarrow1/2}\|B_sF\|^2
+ \mathrm{FP}_{s\downarrow1/2}\|B_sF\|^2
  +\|B_\infty F\|^2=0.                                       \tag{2}
 \]
 
@@ -73,7 +73,7 @@ The series in (8) converges absolutely.
 
 \[
  \boxed{
- \operatorname {FP}_{s\downarrow1/2}C_s
+ \mathrm{FP}_{s\downarrow1/2}C_s
  =-\kappa_\infty,}                                          \tag{9}
 \]
 
@@ -171,7 +171,7 @@ For every \(F\in H^2(\mathbb D)\),
 
 \[
  \boxed{
- \operatorname {FP}_{s\downarrow1/2}\|B_sF\|^2
+ \mathrm{FP}_{s\downarrow1/2}\|B_sF\|^2
  +\|B_\infty F\|^2=0.}                                      \tag{17}
 \]
 
@@ -180,7 +180,7 @@ For every \(F\in H^2(\mathbb D)\),
 Equations (6) and (9) give
 
 \[
- \operatorname {FP}_{s\downarrow1/2}\|B_sF\|^2
+ \mathrm{FP}_{s\downarrow1/2}\|B_sF\|^2
  =-\kappa_\infty\|F\|^2.
 \]
 

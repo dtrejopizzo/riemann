@@ -42,7 +42,7 @@ depending on sign conventions. This connects the question directly to the well-d
 A key rigorous result is that for self-adjoint operators A and C whose spectra are separated by a positive distance d = dist(spec(A),spec(C))>0, the Sylvester equation XA−CX=Y has a unique weak solution and admits the sharp operator-norm bound \(\|X\|\le (\pi/2d)\|Y\|\) (Theorem 2.7 in Albeverio–Makarov–Motovilov 2003). In particular, for the homogeneous case Y=0, uniqueness forces X=0. (albeverio2003graphsubspacesand pages 7-10, albeverio2003graphsubspacesand media bb23c22d, albeverio2003graphsubspacesand media 86ecf2fc)
 
 Applying this with A=T and C=T−cI shows: if
-\[ \operatorname{spec}(T)\cap\operatorname{spec}(T-cI)=\varnothing \quad\text{(equivalently, }\operatorname{spec}(T)\cap(\operatorname{spec}(T)-c)=\varnothing\text{)} \]
+\[ \mathrm{spec}(T)\cap\mathrm{spec}(T-cI)=\varnothing \quad\text{(equivalently, }\mathrm{spec}(T)\cap(\mathrm{spec}(T)-c)=\varnothing\text{)} \]
 (or more quantitatively if dist(spec(T),spec(T)-c)>0), then the only bounded/weak solution of the homogeneous equation is L=0. (albeverio2003graphsubspacesand pages 7-10, nevanlinna2019sylvesterequationsand pages 1-4, albeverio2003graphsubspacesand media bb23c22d)
 
 This gives a precise “invalidation criterion”:

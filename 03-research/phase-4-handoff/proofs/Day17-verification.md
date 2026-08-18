@@ -30,7 +30,7 @@ $\Lambda=d\rho\to\infty$, Nyquist $\Lambda/\pi\to\infty$, zero density $1$, rati
 **This is wrong.** The error: $\Lambda=d\rho$ is the rescaled **coherence length**, and **bandwidth is its
 inverse**, $1/\ell_x=1/(d\rho)\to0$. So Nyquist $\sim1/(d\rho)\to0$, zero density $1\gg$ Nyquist $\Rightarrow$
 **over-sampling** (not under). Three independent checks:
-1. **Flat kernel = degenerate.** $K_T\to$const is a **rank-1** kernel (RKHS $=\operatorname{span}\{1\}$,
+1. **Flat kernel = degenerate.** $K_T\to$const is a **rank-1** kernel (RKHS $=\mathrm{span}\,\{1\}$,
    $1$-dimensional). Sampling a $1$-dim space with infinitely many points is **extreme over-sampling**, not
    under. (The flatness signals the Montgomery scale is *too zoomed-in* to see kernel structure — not a real
    under-sampling.)

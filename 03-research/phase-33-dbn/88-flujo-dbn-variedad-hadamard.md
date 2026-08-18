@@ -48,7 +48,7 @@ $$f_t : s \mapsto |\Xi_t(s)|^2, \qquad t \geq 0.$$
 
 Recordamos del Doc 82 (§3) que la variedad Hadamard-crítica es
 
-$$M := \bigl\{|\eta_{on}|^2 : \eta_{on} \text{ es una función entera de orden 1 con todos sus ceros en }\operatorname{Re}(\rho) = 1/2\bigr\} \cap L^2(W_\lambda\,dm_\infty).$$
+$$M := \bigl\{|\eta_{on}|^2 : \eta_{on} \text{ es una función entera de orden 1 con todos sus ceros en }\mathrm{Re}(\rho) = 1/2\bigr\} \cap L^2(W_\lambda\,dm_\infty).$$
 
 Más precisamente, $\eta_{on}$ es una función Hadamard-crítica si tiene la misma factorización de Hadamard que $\Xi$ pero con todos sus ceros proyectados a la recta crítica: $\eta_{on}(s) = e^{A+Bs}\prod_n (1 - s/\gamma_n)e^{s/\gamma_n}$ donde todos los $\gamma_n$ son reales.
 
@@ -80,9 +80,9 @@ $$\partial_t\Xi_t\big|_{t=0} = -\Xi_0''(s).$$
 
 **Proposición 2.1.** *La derivada de la curva $f_t = |\Xi_t|^2$ en $t = 0$ es*
 
-$$\partial_t f_t\big|_{t=0} = 2\operatorname{Re}\bigl[\overline{\Xi_0(s)}\,\partial_t\Xi_t|_{t=0}\bigr] = -2\operatorname{Re}\bigl[\overline{\Xi_0(s)}\,\Xi_0''(s)\bigr].$$
+$$\partial_t f_t\big|_{t=0} = 2\mathrm{Re}\,\bigl[\overline{\Xi_0(s)}\,\partial_t\Xi_t|_{t=0}\bigr] = -2\mathrm{Re}\,\bigl[\overline{\Xi_0(s)}\,\Xi_0''(s)\bigr].$$
 
-*Explícitamente:* $\partial_t f_t|_{t=0} = -2\bigl[\operatorname{Re}(\Xi_0)\operatorname{Re}(\Xi_0'') + \operatorname{Im}(\Xi_0)\operatorname{Im}(\Xi_0'')\bigr].$
+*Explícitamente:* $\partial_t f_t|_{t=0} = -2\bigl[\mathrm{Re}(\Xi_0)\mathrm{Re}(\Xi_0'') + \mathrm{Im}(\Xi_0)\mathrm{Im}(\Xi_0'')\bigr].$
 
 *Demostración.* Regla de la cadena para $|\cdot|^2 = (\cdot)\overline{(\cdot)}$ y la fórmula del apartado anterior. La función $\Xi$ es de valor real en la recta crítica (parte imaginaria $\equiv 0$ cuando $s \in \mathbb{R}$ y $\Xi_0$ es real: ver e.g. Doc 70, §2.1), de modo que $\overline{\Xi_0(s)} = \Xi_0(s)$ para $s \in \mathbb{R}$ y la fórmula se simplifica, pero se escribe en la forma general para claridad. $\square$
 
@@ -90,7 +90,7 @@ $$\partial_t f_t\big|_{t=0} = 2\operatorname{Re}\bigl[\overline{\Xi_0(s)}\,\part
 
 El Doc 71 (§1, fórmula principal) demostró que
 
-$$\partial_t T_\lambda\big|_{t=0} = -4\int W_\lambda(s)\operatorname{Re}\bigl(\overline{H_0(s)}\,H_0''(s)\bigr)\,dm_\infty(s)$$
+$$\partial_t T_\lambda\big|_{t=0} = -4\int W_\lambda(s)\mathrm{Re}\,\bigl(\overline{H_0(s)}\,H_0''(s)\bigr)\,dm_\infty(s)$$
 
 donde $H_0 = \Xi_0$. Esto es precisamente
 
@@ -106,17 +106,17 @@ La derivada temporal de $T_\lambda$ coincide (salvo el factor $2$) con la integr
 
 La variedad $M$ está parametrizada localmente por las posiciones $\{\gamma_n\} \subset \mathbb{R}$ de los ceros críticos. Si $f_0 = |\Xi_0|^2 \in M$ (es decir, si todos los ceros de $\Xi_0$ están en la recta crítica, i.e., si RH vale), el espacio tangente en $f_0$ es
 
-$$T_{f_0}M = \overline{\operatorname{span}}\bigl\{\partial_{\gamma_n}|\eta_{on}|^2\big|_{\eta_{on}=\Xi_0} : n \geq 1\bigr\}^{L^2(W_\lambda dm_\infty)}.$$
+$$T_{f_0}M = \overline{\mathrm{span}}\bigl\{\partial_{\gamma_n}|\eta_{on}|^2\big|_{\eta_{on}=\Xi_0} : n \geq 1\bigr\}^{L^2(W_\lambda dm_\infty)}.$$
 
 La derivada en la dirección del $n$-ésimo cero es
 
-$$\partial_{\gamma_n}|\eta_{on}|^2\big|_{\eta_{on}=\Xi_0} = 2\operatorname{Re}\bigl[\overline{\Xi_0(s)}\,\partial_{\gamma_n}\Xi_0(s)\bigr].$$
+$$\partial_{\gamma_n}|\eta_{on}|^2\big|_{\eta_{on}=\Xi_0} = 2\mathrm{Re}\,\bigl[\overline{\Xi_0(s)}\,\partial_{\gamma_n}\Xi_0(s)\bigr].$$
 
 Dado que $\Xi_0(s) = A\prod_k(1 - s/\gamma_k)e^{s/\gamma_k}$ (factorización de Hadamard con ceros simples $\{\pm\gamma_k\}$), la derivada respecto a $\gamma_n$ del producto da
 
 $$\partial_{\gamma_n}\Xi_0(s) = \Xi_0(s)\cdot\partial_{\gamma_n}\log\Xi_0(s) = \Xi_0(s)\cdot\Bigl(\frac{s}{\gamma_n^2} - \frac{s}{\gamma_n - s} \cdot \frac{1}{\gamma_n}\Bigr).$$
 
-El espacio tangente $T_{f_0}M$ contiene funciones de la forma $2\operatorname{Re}[\overline{\Xi_0}\Xi_0 \cdot g_n]$ donde $g_n$ son funciones meromorfas con polos en los ceros de $\Xi_0$.
+El espacio tangente $T_{f_0}M$ contiene funciones de la forma $2\mathrm{Re}[\overline{\Xi_0}\Xi_0 \cdot g_n]$ donde $g_n$ son funciones meromorfas con polos en los ceros de $\Xi_0$.
 
 ### 3.2. La derivada del flujo como vector tangente (bajo RH)
 
@@ -231,7 +231,7 @@ Bajo RH ($\Lambda = 0$): la curva $\gamma$ está en $M$ para todo $t \geq 0$, lu
 
 El Doc 71 calculó que
 
-$$\partial_t T_\lambda\big|_{t=0} = -4\int W_\lambda(s)\operatorname{Re}\bigl(\overline{\Xi_0(s)}\,\Xi_0''(s)\bigr)\,dm_\infty(s)$$
+$$\partial_t T_\lambda\big|_{t=0} = -4\int W_\lambda(s)\mathrm{Re}\,\bigl(\overline{\Xi_0(s)}\,\Xi_0''(s)\bigr)\,dm_\infty(s)$$
 
 y demostró que esta expresión es una forma cuadrática en los coeficientes $c_k = \langle \Xi_0, P_k\rangle_{dm_\infty}$ que se cancela exactamente cuando los ceros de $\Xi_0$ son críticos (condición algebraica sobre los $c_k$). La condición $\partial_t T_\lambda|_{t=0} = 0$ es por tanto otra reformulación de RH, no un resultado nuevo.
 
@@ -257,7 +257,7 @@ El Camino 3 ha producido los siguientes resultados rigurosos e incondicionales:
 
 **R1 (Doc 82, Cor. 4.6).** El infimum variacional $\tilde\delta_\lambda^2 := \inf\{\||\zeta|^2 - |\eta_{on}|^2\|^2_{L^2(W_\lambda dm_\infty)} : \eta_{on} \in M\}$ satisface $\tilde\delta_\lambda^2 = 0 \iff$ RH.
 
-**R2 (Doc 85, Thm. 5.1).** El span lineal de $\{e^{i\gamma_n s}\}_{n \geq 1}$ es denso en $L^2(W_\lambda\,dm_\infty)$. Los $\gamma_n = \operatorname{Im}(\rho_n)$ son siempre reales por la ecuación funcional, independientemente de RH.
+**R2 (Doc 85, Thm. 5.1).** El span lineal de $\{e^{i\gamma_n s}\}_{n \geq 1}$ es denso en $L^2(W_\lambda\,dm_\infty)$. Los $\gamma_n = \mathrm{Im}(\rho_n)$ son siempre reales por la ecuación funcional, independientemente de RH.
 
 **R3 (este documento, Prop. 1.2 y Prop. 4.2).** La curva $t \mapsto f_t = |\Xi_t|^2$ es analítica real en $L^2(W_\lambda\,dm_\infty)$ y la traza $t \mapsto T_\lambda(t)$ es continua en $[0,\infty)$.
 

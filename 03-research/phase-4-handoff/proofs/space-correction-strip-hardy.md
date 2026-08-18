@@ -18,7 +18,7 @@ $\varphi=\theta$ (Riemann–Siegel), $\varphi'(t)=\tfrac12\Omega(t)\sim\tfrac1{2
 $$
 K_{H(E_\gamma)}(\gamma,\gamma)\ \sim\ \frac{\log\gamma}{2\pi}\cdot c\,\gamma^{-1/2}e^{-\pi\gamma/2}\ \xrightarrow{\gamma\to\infty}\ 0\quad(\text{exponentially}).
 $$
-Therefore $\operatorname{Tr}T_+=\sum_\gamma K(\gamma,\gamma)\sim\sum_\gamma\log\gamma\,e^{-\pi\gamma/2}<\infty$, and
+Therefore $\mathrm{Tr}\,T_+=\sum_\gamma K(\gamma,\gamma)\sim\sum_\gamma\log\gamma\,e^{-\pi\gamma/2}<\infty$, and
 $$
 \mathfrak t_+(g)=\sum_\gamma|\langle g,K_\gamma\rangle|^2\le\Big(\sum_\gamma K(\gamma,\gamma)\Big)\|g\|^2_{H(E)}\quad\Longrightarrow\quad\boxed{\ \mathfrak t_+\ \text{is BOUNDED (trace-class) in }H(E_\gamma).\ }
 $$

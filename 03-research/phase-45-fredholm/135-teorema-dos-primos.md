@@ -10,7 +10,7 @@
 $$F(t):=f(e^t)\,e^{t/2}\in C_c^\infty(\mathbb R),\qquad
 \hat F(\xi):=\int_{\mathbb R}F(t)\,e^{i\xi t}\,dt,$$
 de modo que $\hat f(\tfrac12+i\xi)=\hat F(\xi)$ y $\;\|f\|_w^2:=\int_G|f(x)|^2\,x\,d^*x=\|F\|_{L^2(\mathbb R)}^2$.
-Para un primo $r$ escribimos $L_r:=\log r$. "Ventana de longitud $2T$" = soporte de $f$ contenido en un intervalo $[\lambda e^{-T},\lambda e^{T}]$ (equivalentemente: $\operatorname{supp}F$ en un intervalo de longitud $2T$; la posición $\lambda$ es libre y, como se verá, irrelevante).
+Para un primo $r$ escribimos $L_r:=\log r$. "Ventana de longitud $2T$" = soporte de $f$ contenido en un intervalo $[\lambda e^{-T},\lambda e^{T}]$ (equivalentemente: $\mathrm{supp}\,F$ en un intervalo de longitud $2T$; la posición $\lambda$ es libre y, como se verá, irrelevante).
 
 ---
 
@@ -307,9 +307,9 @@ irrelevante en lo que sigue). Usamos el test de Mertens de dos protuberancias de
 Doc 131 §6.5, ahora en presencia del segundo primo.
 
 Sea $M\ge1$ a fijar. Tomamos $u\ge0$ real, $u(e^t)=\epsilon^{-1/2}\chi(t/\epsilon)$
-con $\chi$ par, $\operatorname{supp}\chi\subset[-1,1]$, $\int\chi^2=1$, y el test
+con $\chi$ par, $\mathrm{supp}\,\chi\subset[-1,1]$, $\int\chi^2=1$, y el test
 $$f\;:=\;u+\theta\,u(\cdot/p^{M}),\qquad\theta\in\mathbb C.$$
-Sea $g=f\star\tilde f$; $\log\operatorname{supp}g\subset\{0,\pm ML_p\}+[-2\epsilon,2\epsilon]$.
+Sea $g=f\star\tilde f$; $\log\mathrm{supp}\,g\subset\{0,\pm ML_p\}+[-2\epsilon,2\epsilon]$.
 
 *Elección de $\epsilon$ (separación por factorización única).* Los puntos
 muestreados por $W_X$ son $p^m$ y $q^n$. Para que $g(p^m)\ne0$ hace falta
@@ -370,7 +370,7 @@ En esta sección la pureza bilateral está siempre en vigor. Por el Teorema 3.1 
 se reduce al análisis de
 $$Q_X(f,f)=2\sum_{\Lambda_p}|\hat F|^2+2\sum_{\Lambda_q}|\hat F|^2 .$$
 
-**[LEMA 5.1] (Parseval de la periodización).** Si $\operatorname{supp}F$ está en un
+**[LEMA 5.1] (Parseval de la periodización).** Si $\mathrm{supp}\,F$ está en un
 intervalo de longitud $\le L_r$, entonces
 $\sum_{\xi\in\Lambda_r}|\hat F(\xi)|^2=L_r\,\|F\|_{L^2}^2$.
 
@@ -415,7 +415,7 @@ soportados en una ventana de longitud $2T$ con $Q_X(f,f)=0$. En particular $Q_X$
 es semidefinida y **no hay gap uniforme global** en $C_c^\infty(G)$.
 
 *Demostración.* **(a)** Supongamos $Q_X(f,f)=0$ con $f\ne0$. Si
-$\operatorname{supp}F\subset[c-T,c+T]$, sea $G:=F(\cdot+c)$; entonces
+$\mathrm{supp}\,F\subset[c-T,c+T]$, sea $G:=F(\cdot+c)$; entonces
 $\hat F(\xi)=e^{ic\xi}\hat G(\xi)$ con $e^{ic\xi}$ entera y sin ceros: $\hat F$ y
 $\hat G$ tienen los mismos ceros, y $\hat G$ es entera de tipo exponencial $\le T$
 ($|\hat G(\xi+i\eta)|\le\|G\|_1e^{T|\eta|}$) y acotada en $\mathbb R$ por
@@ -442,8 +442,8 @@ $$(D_r\,g)(t):=g(t)-e^{-i\phi_r}\,g(t-L_r),\qquad
 \widehat{D_rg}(\xi)=\bigl(1-e^{i(L_r\xi-\phi_r)}\bigr)\hat g(\xi),$$
 que se anula exactamente en $\xi\in\Lambda_r$. Tomar $g$ un bump de ancho
 $0<\,2T-\log pq\,<\min(2T-\log pq,\,L_p)$ y $F:=D_pD_qg$: entonces
-$\hat F$ se anula en $\Lambda_p\cup\Lambda_q$, $\operatorname{supp}F$ cabe en
-longitud $|{\operatorname{supp}g}|+L_p+L_q\le2T$, y $F\ne0$ porque el trasladado
+$\hat F$ se anula en $\Lambda_p\cup\Lambda_q$, $\mathrm{supp}\,F$ cabe en
+longitud $|{\mathrm{supp}\,g}|+L_p+L_q\le2T$, y $F\ne0$ porque el trasladado
 extremo $g(\cdot-L_p-L_q)$ tiene soporte disjunto de los otros tres (dista $L_p$ y
 $L_q$ de los vecinos, más que el ancho de $g$). El test
 $f(e^t):=F(t)e^{-t/2}$ cumple $Q_X(f,f)=0$, $f\ne0$ (Lema 5.3). La dimensión

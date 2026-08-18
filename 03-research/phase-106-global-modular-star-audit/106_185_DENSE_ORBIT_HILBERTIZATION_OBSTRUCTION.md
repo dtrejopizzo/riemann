@@ -26,7 +26,7 @@ Put
 
 \[
  G=\log \mathbb Q_+^\times
-   =\operatorname {span}_{\mathbb Z}\{\log p:p\text{ prime}\}.
+   =\mathrm{span}_{\mathbb Z}\{\log p:p\text{ prime}\}.
                                                                \tag{1}
 \]
 
@@ -145,7 +145,7 @@ before the spectral conclusion.
 ### Fixed Rosati branch
 
 One must prove positivity of the already identified form
-\(\operatorname {Re}\mathfrak h_{\rm Ros}\).  A Hodge-index theorem on
+\(\mathrm{Re}\,\mathfrak h_{\rm Ros}\).  A Hodge-index theorem on
 an arithmetic square is the natural sufficient mechanism.  The
 factorization map \(D\) is equivalent to this positivity and creates no
 intermediate step.

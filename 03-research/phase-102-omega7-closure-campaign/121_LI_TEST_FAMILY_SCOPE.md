@@ -34,7 +34,7 @@ If a zero is off the line, one Li multiplier
 \]
 has \(|w_\rho|>1\). Then the sequence
 \[
-  \operatorname{Re}(w_\rho^n)
+  \mathrm{Re}(w_\rho^n)
 \]
 has exponentially large positive values along a subsequence. The paired Li
 contribution contains the corresponding negative term, so some Li coefficient

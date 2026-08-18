@@ -18,7 +18,7 @@ formalmente,
 
 \[
  \mathcal U_t(z)
- :=\operatorname {Exp}_{\odot}(-t\mathcal G)(z)
+ :=\mathrm{Exp}_{\odot}(-t\mathcal G)(z)
  =\sum_{k\geq0}{(-t)^k\over k!}\mathcal G^{\odot k}(z)
  =\sum_{n\geq1}e^{-t\lambda_n}z^n.                       \tag{2}
 \]
@@ -116,7 +116,7 @@ Los antecedentes internos más cercanos son:
 Lo nuevo aquí es la combinación de cuatro hechos:
 
 1. la dicotomía radio cero/función entera para
-   \(\operatorname {Exp}_\odot(-t\mathcal G)\);
+   \(\mathrm{Exp}_\odot(-t\mathcal G)\);
 2. la representación exacta de la presión como mezcla de incrementos de
    Jensen;
 3. un contorno seguro común a un bloque diádico, con parte exterior
@@ -201,7 +201,7 @@ fórmula clásica para el orden de una función entera
 \(F(z)=\sum a_nz^n\),
 
 \[
- \operatorname {ord}F
+ \mathrm{ord}\,F
  =\limsup_{n\to\infty}{n\log n\over\log(1/|a_n|)},       \tag{14}
 \]
 
@@ -258,7 +258,7 @@ El polinomio \(D_L\) de (4) es el determinante de la compresión diagonal
 \[
  D_L(\omega)
  =\det_{\ell^2(I_L)}
- \left(I+\omega\operatorname {diag}(z_n)_{n\in I_L}\right).
+ \left(I+\omega\mathrm{diag}(z_n)_{n\in I_L}\right).
  \tag{20}
 \]
 
@@ -471,7 +471,7 @@ su distancia a (37) es \(\gg1/N\). Los ceros críticos o izquierdos
 tienen \(|w_\rho|\ge1\) y satisfacen la misma conclusión. Por tanto
 
 \[
- \operatorname {dist}(|z|=r_N,\{w_\rho\})\ge\delta_N.   \tag{42}
+ \mathrm{dist}(|z|=r_N,\{w_\rho\})\ge\delta_N.   \tag{42}
 \]
 
 Sobre el círculo, \(s=(1-z)^{-1}\) satisface \(|s|\le N\). Además
@@ -606,7 +606,7 @@ Su coeficiente de grado \(n\) es el polinomio de Taylor
 Use el cuarteto racional
 
 \[
- Q_n=4-2\operatorname {Re}\{(2i)^n+(2i)^{-n}\}.          \tag{54}
+ Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\}.          \tag{54}
 \]
 
 Para \(4\mid n\), escriba
@@ -620,7 +620,7 @@ Si \(K\le tY_n/2\), entonces
 \[
 \begin{aligned}
  {\sum_{k=0}^K(tY_n)^k/k!\over e^{tY_n}}
- &=\mathbb P\{\operatorname {Pois}(tY_n)\le K\}\\
+ &=\mathbb P\{\mathrm{Pois}(tY_n)\le K\}\\
  &\le e^{-tY_n/8}.                                       \tag{56}
 \end{aligned}
 \]

@@ -6,7 +6,7 @@
 the numerical quotient
 
 \[
- V:=\{\text{DC divisors}\}/\operatorname{rad}I_\partial ,
+ V:=\{\text{DC divisors}\}/\mathrm{rad}\,I_\partial ,
  \qquad
  \overline I_\partial \text{ nondegenerate on } V .
  \tag{0.1}
@@ -60,14 +60,14 @@ multiplicity of \(\rho\), and set
 \(\rho\mapsto\rho'\) is an involution of \(Z\) preserving multiplicities, and
 
 \[
- \rho'=\rho \iff \operatorname{Re}\rho=\tfrac12 .
+ \rho'=\rho \iff \mathrm{Re}\,\rho=\tfrac12 .
 \]
 
 **Proof.**  \(\xi(s)=\xi(1-s)\) and \(\xi\) has real coefficients, so
 \(\xi(\bar s)=\overline{\xi(s)}\); composing, \(\rho\in Z\Rightarrow
 1-\bar\rho\in Z\) with the same multiplicity.  It is an involution since
 \(1-\overline{(1-\bar\rho)}=\rho\).  Finally \(\rho=1-\bar\rho\) iff
-\(\rho+\bar\rho=1\) iff \(\operatorname{Re}\rho=\frac12\). \(\square\)
+\(\rho+\bar\rho=1\) iff \(\mathrm{Re}\,\rho=\frac12\). \(\square\)
 
 > The zeros on the critical line are exactly the **fixed points** of the
 > mirror involution; the off-line zeros are exactly its **2-cycles**.
@@ -104,7 +104,7 @@ returns \(\sum_\rho m_\rho\widehat f(\rho)\overline{\widehat g(\rho')}\).
 ### Lemma 2.2 (evaluation coordinates)
 
 By 107_240 Theorem D,
-\(\operatorname{rad}I_\partial=\{f:\widehat f(0)=\widehat f(1)=0,\
+\(\mathrm{rad}\,I_\partial=\{f:\widehat f(0)=\widehat f(1)=0,\
 \widehat f(\rho)=0\ \forall\rho\}\).  Hence
 
 \[
@@ -121,9 +121,9 @@ independent on \(\mathcal A\), since the characters \(u\mapsto u^{s_j}\) are.
 
 ## 3. The Hodge index theorem
 
-Write \(L\) for the set of distinct zeros with \(\operatorname{Re}\rho=1/2\)
+Write \(L\) for the set of distinct zeros with \(\mathrm{Re}\,\rho=1/2\)
 and \(P\) for the set of mirror 2-cycles \(\{\rho,\rho'\}\),
-\(\operatorname{Re}\rho\ne1/2\).  Every finite-block truncation of \(V\) is
+\(\mathrm{Re}\,\rho\ne1/2\).  Every finite-block truncation of \(V\) is
 understood below; the signature statement is blockwise and hence exact on
 each finite-dimensional subquotient.
 
@@ -189,7 +189,7 @@ blocks by positive numbers and therefore do not affect inertia. \(\square\)
  \iff
  n_+(\overline I_\partial)=1
  \iff
- \operatorname{sign}(\overline I_\partial)=(1,\ \cdot\ ). \;}
+ \mathrm{sign}(\overline I_\partial)=(1,\ \cdot\ ). \;}
 \]
 
 This is verbatim the classical Hodge index theorem for a surface, whose
@@ -222,7 +222,7 @@ the phase.  107_233 computes, from the tropical tensor construction and
 without any reference to the explicit formula,
 
 \[
- \operatorname{cdim}^{(2)}H^0(D\boxtimes E)=\deg^+(D)\deg^+(E),
+ \mathrm{cdim}^{(2)}H^0(D\boxtimes E)=\deg^+(D)\deg^+(E),
 \]
 
 which is the bidegree coefficient \(F_v\cdot F_h\).  Theorem 3.1(1) recovers

@@ -93,14 +93,14 @@ convention will read every archimedean statement backwards.
 Cited with full hypotheses; these are theirs, not ours.
 
 * **(CC-1) Theorem 1.**  For \(g\in C_c^\infty(\mathbb R_+^*)\) with
-  \(\operatorname{supp}g\subset[2^{-1/2},2^{1/2}]\) and \(\widehat g\)
+  \(\mathrm{supp}\,g\subset[2^{-1/2},2^{1/2}]\) and \(\widehat g\)
   vanishing at \(i/2\) and \(0\),
   \[
-   W_\infty^{CC}(g*g^*)\ \ge\ \operatorname{Tr}\bigl(\vartheta(g)\mathbf S\vartheta(g)^*\bigr)=:\mathcal S(g)\ \ge\ 0 .
+   W_\infty^{CC}(g*g^*)\ \ge\ \mathrm{Tr}\,\bigl(\vartheta(g)\mathbf S\vartheta(g)^*\bigr)=:\mathcal S(g)\ \ge\ 0 .
   \]
 * **(CC-3) Theorem 3.**  For **all** \(f\in C_c^\infty(\mathbb R_+^*)\),
   \[
-   \operatorname{Tr}(\vartheta(f)\mathbf S)=W_\infty^{CC}(f)+E(f),
+   \mathrm{Tr}(\vartheta(f)\mathbf S)=W_\infty^{CC}(f)+E(f),
    \qquad E(f):=\int f(\rho)\epsilon(\rho)\,d^*\rho,
   \]
   with \(\epsilon\) given by their prolate series (14).
@@ -108,8 +108,8 @@ Cited with full hypotheses; these are theirs, not ours.
   \(f\), **with no restriction on the support**, where
   \(D(f)=\int f(\rho^{-1})\delta(\rho)d^*\rho\) and \(\delta\) is elementary:
   \[
-   \delta(\rho)=2\rho^{1/2}\Bigl(\frac{\operatorname{Si}(2\pi(1+\rho))}{2\pi(1+\rho)}
-   +\frac{\operatorname{Si}(2\pi(\rho-1))}{2\pi(\rho-1)}\Bigr),\ \rho\ge1,
+   \delta(\rho)=2\rho^{1/2}\Bigl(\frac{\mathrm{Si}(2\pi(1+\rho))}{2\pi(1+\rho)}
+   +\frac{\mathrm{Si}(2\pi(\rho-1))}{2\pi(\rho-1)}\Bigr),\ \rho\ge1,
    \qquad \delta(\rho^{-1})=\delta(\rho).
   \]
 
@@ -141,7 +141,7 @@ strictly harder than proving row (d), so it cannot serve as a route to it.
 >
 > | \(\mathcal A\) | slack \(\sigma\) | source |
 > |---|---|---|
-> | \(\mathcal S(f)=\operatorname{Tr}(\vartheta(f)\mathbf S\vartheta(f)^*)\) | \(-E(f\star f^\vee)\ge0\) | (CC-3) |
+> | \(\mathcal S(f)=\mathrm{Tr}(\vartheta(f)\mathbf S\vartheta(f)^*)\) | \(-E(f\star f^\vee)\ge0\) | (CC-3) |
 > | \(-D(f\star f^\vee)\) | \(L(f)\ge0\) | (CC-9) |
 >
 > *Proof.*  (CC-3) with \(f\) replaced by \(f\star f^\vee\) gives
@@ -179,10 +179,10 @@ whole difficulty is concentrated in the single comparison
 
 ## 4. The window is exactly the locus \(K=0\)
 
-> **Proposition 5.**  If \(\operatorname{supp}g\subset(2^{-1/2},2^{1/2})\) then
+> **Proposition 5.**  If \(\mathrm{supp}\,g\subset(2^{-1/2},2^{1/2})\) then
 > \(K(f,f)=0\).
 >
-> *Proof.*  \(\operatorname{supp}(g\star g^\vee)\subset(1/2,2)\).  By
+> *Proof.*  \(\mathrm{supp}(g\star g^\vee)\subset(1/2,2)\).  By
 > `eq:Ktest`, \(K(f,f)=W_{\rm fin}(g\star g^\vee)\) samples \(g\star g^\vee\)
 > only at the points \(p^{k}\) and \(p^{-k}\) with \(p\) prime, \(k\ge1\); all
 > of these lie in \([2,\infty)\cup(0,1/2]\), disjoint from the support.
@@ -199,7 +199,7 @@ finite contact term disappears and archimedean positivity alone suffices.
 \(\mathcal G=\sum_{j=1}^4c_j\,\beta(t-\mu_j)\) with
 \(\beta(u)=\cos^8(\pi u/2w)\) on \(|u|\le w\), \(w=0.08\),
 \(\mu\in\{-0.24,-0.08,0.08,0.24\}\).  Then
-\(\operatorname{supp}\mathcal G\subset[-0.32,0.32]\subset(-\log\sqrt2,\log\sqrt2)\),
+\(\mathrm{supp}\,\mathcal G\subset[-0.32,0.32]\subset(-\log\sqrt2,\log\sqrt2)\),
 so Proposition 5 gives \(K=0\) exactly.  Writing
 \(\widehat{\mathcal G}(\tau)=\Psi(\tau)\sum_jc_je^{i\tau\mu_j}\) with \(\Psi\)
 entire, the three conditions \(\widehat{\mathcal G}(0)=\widehat{\mathcal G}(\pm i/2)=0\)

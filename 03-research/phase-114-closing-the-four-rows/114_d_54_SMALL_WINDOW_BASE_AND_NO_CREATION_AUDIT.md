@@ -78,7 +78,7 @@ Writing `M_TF=(M_-(F),M_+(F))`, Cauchy--Schwarz gives
 \[
  \begin{aligned}
  \langle M_TF,CM_TF\rangle
- &=2\operatorname{Re}(M_-(F)\overline{M_+(F)})\\
+ &=2\mathrm{Re}(M_-(F)\overline{M_+(F)})\\
  &\geq-|M_-(F)|^2-|M_+(F)|^2\\
  &\geq-4\sinh(T)\|F\|_2^2,                               \tag{3.2}
  \end{aligned}
@@ -191,7 +191,7 @@ Fourier value.  On that smaller, extra-central subclass it gives
 
 \[
  W_\infty(g*g^*)
- \geq \operatorname{Tr}
+ \geq \mathrm{Tr}
  \bigl(\vartheta(g)\mathfrak S\vartheta(g)^*\bigr)\geq0,  \tag{5.3}
 \]
 
@@ -199,7 +199,7 @@ where `mathfrak S` is the orthogonal projection onto Sonin's space.  The
 second inequality is by construction:
 
 \[
- \operatorname{Tr}
+ \mathrm{Tr}
  \bigl(\vartheta(g)\mathfrak S\vartheta(g)^*\bigr)
  =\|\vartheta(g)\mathfrak S\|_{HS}^2.                     \tag{5.4}
 \]

@@ -34,7 +34,7 @@ The closest earlier constructions are the following.
   A_\infty(f,f)=\frac1{2\pi}\int_{\mathbb R}
   |\widehat f(t)|^2\Psi(t)\,dt,
   \qquad
-  \Psi(t)=\operatorname {Re}\psi\!\left(\frac14+\frac{it}2\right)
+  \Psi(t)=\mathrm{Re}\,\psi\!\left(\frac14+\frac{it}2\right)
   -\log\pi .                                           \tag{1}
   \]
 

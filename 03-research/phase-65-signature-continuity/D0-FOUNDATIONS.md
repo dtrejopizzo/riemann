@@ -47,7 +47,7 @@ A Hermitian kernel $\mathsf K$ on a domain $\Omega$ (matrix- or scalar-valued) h
 $\kappa$ negative squares} if for every finite $z_1,\dots,z_m\in\Omega$ and vectors $u_1,\dots,u_m$ the
 Gram matrix $G_{ij}=\langle\mathsf K(z_i,z_j)u_j,u_i\rangle$ has at most $\kappa$ strictly negative
 eigenvalues; \textbf{exactly $\kappa$} if some finite Gram matrix attains $\kappa$. Write
-$\operatorname{sq}_-(\mathsf K)=\kappa$.
+$\mathrm{sq}_-(\mathsf K)=\kappa$.
 \end{definition}
 
 \begin{definition}[the fixed endpoint kernel — sign corrected, Connes R1.A]\label{def:KG5}
@@ -68,16 +68,16 @@ Kreĭn–Langer negative squares — as required.
 \end{definition}
 
 \begin{proposition}[G5 restated]\label{prop:g5}
-$\operatorname{sq}_-\!\big(\mathsf K_\Xi^{\mathrm{G5}}\big)=\#\{\rho:\zeta(\rho)=0,\ \Re\rho\ne\tfrac12\}
+$\mathrm{sq}_-\!\big(\mathsf K_\Xi^{\mathrm{G5}}\big)=\#\{\rho:\zeta(\rho)=0,\ \Re\rho\ne\tfrac12\}
 =:\kappa(\Xi)$, with the standard counting (functional-equation/conjugate symmetry collapses each
 off-line quadruple appropriately). This is the Kreĭn–Langer index of $M_\Xi$; it is the *given* G5
 (Phase 64, E108). RH $\Leftrightarrow\kappa(\Xi)=0$.
 \end{proposition}
 
 \begin{redflag}
-The target theorem D9 is $\displaystyle\lim_P\operatorname{Short}_{H_P}\mathsf K_{A_P}=
+The target theorem D9 is $\displaystyle\lim_P\mathrm{Short}_{H_P}\mathsf K_{A_P}=
 \mathsf K_\Xi^{\mathrm{G5}}$, with the right-hand side the object of Def.~\ref{def:KG5}, fixed here.
-\textbf{It is forbidden} to set $\mathsf K_\Xi:=\lim_P\operatorname{Short}_{H_P}\mathsf K_{A_P}$ and then
+\textbf{It is forbidden} to set $\mathsf K_\Xi:=\lim_P\mathrm{Short}_{H_P}\mathsf K_{A_P}$ and then
 assert its index is $\kappa(\Xi)$; D9 must prove equality with the pre-fixed Def.~\ref{def:KG5}.
 \end{redflag}
 

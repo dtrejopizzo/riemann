@@ -84,9 +84,9 @@ energía finita; el exponente posible vive ya en los primos \(p\)**.
 La identidad de lcm/factorial no evade esta reducción. En efecto,
 
 \[
- \psi(x)=\log\operatorname {lcm}(1,\ldots,\lfloor x\rfloor),
+ \psi(x)=\log\mathrm{lcm}(1,\ldots,\lfloor x\rfloor),
  \qquad
- \vartheta(x)=\log\operatorname {rad}(\lfloor x\rfloor!),
+ \vartheta(x)=\log\mathrm{rad}(\lfloor x\rfloor!),
  \tag{9}
 \]
 
@@ -305,7 +305,7 @@ la contabilidad de sus potencias.
 ## 6. Auditoría de duplicación
 
 * `103_66` ya prueba la telescopía de torres a
-  \(\psi=\log\operatorname {lcm}\), pero no elimina el bloque
+  \(\psi=\log\mathrm{lcm}\,\), pero no elimina el bloque
   \(k\ge2\) en la norma de Cramér.
 * `E101_090` aísla la covarianza multiplicativa de cociente para
   \(\Lambda-1\), con otro cutoff y otra norma.

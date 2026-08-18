@@ -20,7 +20,7 @@ The finite-place contact has the exact form
 
 \[
  K(F,F)=2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
-       \operatorname{Re}\langle F,S_{\log n}F\rangle .       \tag{1}
+       \mathrm{Re}\,\langle F,S_{\log n}F\rangle .       \tag{1}
 \]
 
 The measure

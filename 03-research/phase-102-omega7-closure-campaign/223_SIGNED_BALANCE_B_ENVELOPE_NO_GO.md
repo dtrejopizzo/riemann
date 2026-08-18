@@ -49,7 +49,7 @@ If the proof uses only (1), then the worst admissible sign pattern gives
 
 This is sharp in the same variational sense as `188`: equality is attained
 formally by choosing \(B\) aligned with
-\(\operatorname{sgn}\mathcal R_n^{\rm tel}\).  Therefore a proof using only
+\(\mathrm{sgn}\,\mathcal R_n^{\rm tel}\).  Therefore a proof using only
 a symmetric \(B\)-envelope must dominate the absolute load
 \[
 \boxed{

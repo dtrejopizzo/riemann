@@ -45,7 +45,7 @@ is exactly
  L_n(\rho)
  &=\sum_{\eta\in\{\rho,1-\rho,\bar\rho,1-\bar\rho\}}
        \left[1-\left(1-\frac1\eta\right)^n\right]\\
- &=4-2\operatorname{Re}(b^n+b^{-n})\\
+ &=4-2\mathrm{Re}(b^n+b^{-n})\\
  &=\boxed{\,4-2(r^n+r^{-n})\cos(n\theta)\,}. \tag{1}
 \end{aligned}
 \]

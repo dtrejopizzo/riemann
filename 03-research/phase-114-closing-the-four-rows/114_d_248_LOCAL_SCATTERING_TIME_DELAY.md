@@ -138,7 +138,7 @@ It has modulus one.  Differentiating and using
 \[
  \boxed{
  -i\,\partial_\tau\log b_\infty(\tau)
- =2\operatorname{Re}{L_\infty'(s)\over L_\infty(s)}.
+ =2\mathrm{Re}{L_\infty'(s)\over L_\infty(s)}.
  }                                                   \tag{4.2}
 \]
 

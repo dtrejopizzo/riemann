@@ -37,7 +37,7 @@ primitive shorted kernel acquires negative squares (the signed cells contribute 
 D3);
 \item \textbf{closedness input:} consequently the shorted limit carries a nontrivial Kreĭn–Langer
 denominator, $\mathfrak b_{\mathrm{DH}}\ne1$;
-\item \textbf{source limit:} the sourced limit germ has negative squares, $\operatorname{sq}_-(\mathsf
+\item \textbf{source limit:} the sourced limit germ has negative squares, $\mathrm{sq}_-(\mathsf
 K^{\mathrm{DH}}_\infty)>0$.
 \end{enumerate}
 In particular, whenever $L_{\mathrm{DH}}$ has off-line zeros, $\deg\mathfrak b_{\mathrm{DH}}=\#\{$off-line
@@ -47,7 +47,7 @@ zeros$\}>0$, and the package does **not** conclude $\kappa_{\mathrm{DH}}=0$.
 negative line forces $\nu_-\ge1$; here the signed cells are exactly negative extensions, D3 (P$-$)). Thus
 the finite DH objects are not in $\mathcal G_0$: $\kappa(A^\chi_P)>0$ already, so the hypothesis of D6/D7
 (finite index $0$) fails at the first signed cell. The Kreĭn–Langer divisor of the limit then has degree
-$=\operatorname{sq}_-(\mathsf K^{\mathrm{DH}}_\infty)$, which by the D9-analogue (the limit germ is the
+$=\mathrm{sq}_-(\mathsf K^{\mathrm{DH}}_\infty)$, which by the D9-analogue (the limit germ is the
 DH-local-factor object with Weyl function $L_{\mathrm{DH}}'/L_{\mathrm{DH}}$) equals the number of
 off-$\R$ poles of that Weyl function $=$ the off-line zeros of $L_{\mathrm{DH}}$. $\square$
 

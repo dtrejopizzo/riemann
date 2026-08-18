@@ -33,7 +33,7 @@ centered expansion
  \boxed{
  d_k=\mathcal H_{5/4}(F_k)
  -2\int_{[1,e^{2T}]}x^{-1/2}
-       \operatorname {Re}C_{F_k}(\log x)\,dE_\beta(x).} \tag{0.4}
+       \mathrm{Re}\,C_{F_k}(\log x)\,dE_\beta(x).} \tag{0.4}
 \]
 
 Here
@@ -129,7 +129,7 @@ The atomic part of (0.4) is explicitly
 
 \[
  2\sum_{p^j\le e^{2T}}{\log p\over p^{j/2}}
-       \operatorname {Re}C_{F_k}(j\log p),           \tag{3.2}
+       \mathrm{Re}\,C_{F_k}(j\log p),           \tag{3.2}
 \]
 
 and no other integer occurs.  Thus all Frobenius depths (p^j) survive
@@ -148,7 +148,7 @@ For every (M\ge0), elementary summation by parts gives
 Indeed, expand (d_k=m_k-m_{k+1}) and telescope.  All terms are positive
 under (D\ge0).  If (q) has a component in (\ker D), then (m_k) has a
 nondecaying component, the last term in (4.1) diverges, and the return
-capacity is infinite.  If (q\in\operatorname {Dom}D^{-1/2}), spectral
+capacity is infinite.  If (q\in\mathrm{Dom}\,D^{-1/2}), spectral
 monotone convergence gives
 
 \[
@@ -165,7 +165,7 @@ Thus a correctly normalized final estimate may be stated as
  \sum_{k\ge0}(k+1)
  \left[
  \mathcal H_{5/4}(F_k)
- -2\int x^{-1/2}\operatorname {Re}C_{F_k}(\log x)
+ -2\int x^{-1/2}\mathrm{Re}\,C_{F_k}(\log x)
                 \,dE_\beta(x)
  \right]
  \le \mathcal C_{\rm born}.}                        \tag{4.3}

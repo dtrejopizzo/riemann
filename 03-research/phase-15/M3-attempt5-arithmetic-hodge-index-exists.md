@@ -9,9 +9,9 @@ fabricated crossing**; a real refinement, verifiable.
 
 ## 1. The corrected premise
 Attempts 1–4 (and the M3b assembly) repeatedly said: *"in function fields the Hodge index is a general theorem;
-for $\operatorname{Spec}\mathbb Z$ no such general theorem is known."* **The second half is false.** The arithmetic
+for $\mathrm{Spec}\,\mathbb Z$ no such general theorem is known."* **The second half is false.** The arithmetic
 Hodge index theorem is **proven**, in two forms:
-- **Faltings–Hriljac (1984):** on an arithmetic surface (a regular model of a curve over $\operatorname{Spec}
+- **Faltings–Hriljac (1984):** on an arithmetic surface (a regular model of a curve over $\mathrm{Spec}
   \mathcal O_K$), the Arakelov intersection pairing on $\widehat{\mathrm{Pic}}^0$ (arithmetically degree-zero divisor
   classes) is **negative definite**, and equals the Néron–Tate height pairing.
 - **Yuan–Zhang (2017), Moriwaki:** the arithmetic Hodge index theorem in all dimensions — the intersection pairing
@@ -42,9 +42,9 @@ Then $(2)$ + Faltings–Hriljac give the definiteness, hence RH.
   **special values** ($L$-function at $s=1$, BSD), via the arithmetic divisors. It does **not** directly give the
   location of the **critical-line zeros** of the $L$-function. The link "Arakelov height pairing $\leftrightarrow$
   $L$-zeros on the critical line" is the (conjectural) Beilinson/arithmetic-motivic dictionary — open.
-- **$\zeta_{\mathbb Q}$ has no arithmetic surface.** $\zeta_{\mathbb Q}$ lives on $\operatorname{Spec}\mathbb Z$
+- **$\zeta_{\mathbb Q}$ has no arithmetic surface.** $\zeta_{\mathbb Q}$ lives on $\mathrm{Spec}\,\mathbb Z$
   (dimension $1$). To apply a $2$-dimensional Hodge index to *its* zeros one needs a $2$-dimensional
-  $\mathcal X=\text{``}\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z\text{''}$, with the
+  $\mathcal X=\text{``}\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z\text{''}$, with the
   zeros as Frobenius eigenvalues on its $H^1$. **No such $\mathcal X$ exists** in current geometry — this is
   precisely SURF / the Connes–Consani program.
 
@@ -56,13 +56,13 @@ it is the \emph{arithmetic surface} }\mathcal X\text{ for }\zeta_{\mathbb Q}\tex
 
 ## 4. Why this is real progress (and what it tells the team)
 - **The program's central claim is refined and made correct.** The wall is not "no Hodge index theorem"; it is "no
-  arithmetic surface for $\operatorname{Spec}\mathbb Z$." The discriminator's $I_{2b}$ is split: the *theorem*
+  arithmetic surface for $\mathrm{Spec}\,\mathbb Z$." The discriminator's $I_{2b}$ is split: the *theorem*
   exists ($I_{2b}$-theorem ✓), the *geometry* does not ($I_{2b}$-object ✗). The whole obstruction is the object.
 - **This is testable on a control case.** For an elliptic curve $E/\mathbb Q$ there **is** an arithmetic surface,
   and there the arithmetic Hodge index **does** apply — to heights (BSD), not zeros. So the construction can be run
   end-to-end on $E$ and seen to land on heights, confirming the zeros↔heights gap is the precise missing link, not
   a defect of the method.
-- **It identifies the single sharpest open problem.** Either (a) construct $\mathcal X$ for $\operatorname{Spec}
+- **It identifies the single sharpest open problem.** Either (a) construct $\mathcal X$ for $\mathrm{Spec}
   \mathbb Z$ (the Connes–Consani $\mathbb F_1$ surface) — then Yuan–Zhang gives RH; or (b) realize $\zeta_{\mathbb Q}$'s
   zeros as Arakelov eigenvalues on an *existing* higher-dimensional arithmetic variety (a motivic/Beilinson
   realization) — then the proven Hodge index applies. Both are recognized deep programs; the attempt shows they are
@@ -71,7 +71,7 @@ it is the \emph{arithmetic surface} }\mathcal X\text{ for }\zeta_{\mathbb Q}\tex
 ## 5. Status
 - **New (corrected) finding:** the arithmetic Hodge index theorem **is proven** (Faltings–Hriljac; Yuan–Zhang;
   Moriwaki). The obstruction to RH via M3 is therefore **purely the missing arithmetic surface** $\mathcal X$ for
-  $\operatorname{Spec}\mathbb Z$ (and the zeros↔Arakelov dictionary), not a missing theorem.
+  $\mathrm{Spec}\,\mathbb Z$ (and the zeros↔Arakelov dictionary), not a missing theorem.
 - **No crossing:** $\mathcal X$ does not exist (SURF / Connes–Consani), and the height↔zero link is open
   (Beilinson). The attempt is genuine and lands candidly: it converts "we lack a Hodge index theorem" into the
   precise, correct "we lack the surface to apply the Hodge index theorem we already have."

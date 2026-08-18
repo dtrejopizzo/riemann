@@ -89,7 +89,7 @@ functional is forced to vanish for every admissible error.
 
 It is not forced to vanish.  For example, the admissible model errors
 \[
-  E_\pm(e^u)=\pm W(u)\operatorname{sgn}K_n(u)
+  E_\pm(e^u)=\pm W(u)\mathrm{sgn}\,K_n(u)
 \]
 satisfy (3), and give
 \[

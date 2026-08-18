@@ -51,7 +51,7 @@ Let \(C\) be any nontrivially twisted cyclotomic component complex of
 107_217 or 107_219.  Since \(H^1(C)\) is finite,
 
 \[
- \operatorname{Hom}_{\mathbf{Ab}}
+ \mathrm{Hom}_{\mathbf{Ab}}
  (\mathbb A_\mathbb Q,H^1(C))=0.
  \tag{2.1}
 \]
@@ -75,7 +75,7 @@ The result rejects only the direct additive comparison proposed after
 
 1. applying Pontryagin duality first, turning the adelic cokernel into a
    lattice of characters;
-2. a derived functor such as \(\operatorname{Ext}\), where divisible
+2. a derived functor such as \(\mathrm{Ext}\,\), where divisible
    source groups and finite torsion can interact differently;
 3. a nonlinear evaluation into a moduli stack;
 4. a correspondence rather than a homomorphism.
@@ -84,7 +84,7 @@ The published Serre duality
 
 \[
  H^0(K-D)\simeq
- \underline{\operatorname{Hom}}(H^1(D),H^1(K))
+ \underline{\mathrm{Hom}}(H^1(D),H^1(K))
 \]
 
 makes the first route canonical.  Therefore the next admissible

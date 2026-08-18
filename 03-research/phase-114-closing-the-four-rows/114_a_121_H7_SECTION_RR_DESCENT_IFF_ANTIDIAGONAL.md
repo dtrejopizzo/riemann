@@ -18,7 +18,7 @@ Use the finite-support prime presentation lattice
 
 \[
  \mathfrak D_{\rm pr}=\mathfrak D_1\oplus\mathfrak D_2
- \xrightarrow{\rho}\operatorname{Pic}_{\rm cmp}(Y^{\rm reg})          \tag{1.1}
+ \xrightarrow{\rho}\mathrm{Pic}_{\rm cmp}(Y^{\rm reg})          \tag{1.1}
 \]
 
 of `a112`.  Put

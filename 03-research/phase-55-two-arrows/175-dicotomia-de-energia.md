@@ -81,12 +81,12 @@ $$I(0^+)\;>\;0\;\Longrightarrow\;I(0^+)\;=\;\infty.$$
 $$\varepsilon_k\;:=\;\sup_{s\in D_0}\bigl|\zeta(s+i\tau_k)-\zeta(s)\bigr|\;\longrightarrow\;0 .$$
 
 **Paso 1 (réplica con abscisa controlada).** Sea $k_0$ tal que $\varepsilon_k<\eta$ para $k\ge k_0$. Por el Lema 175.1(i) con $g=\zeta|_{D_0}$, $f=\zeta(\cdot+i\tau_k)|_{D_0}$ y $\delta=R=r$: $\zeta(\cdot+i\tau_k)$ tiene exactamente $m_0$ ceros en $D(\rho_0,r)$; equivalentemente, ζ tiene $m_0$ ceros (con multiplicidad) en $D(\rho_0+i\tau_k,\,r)$. Elíjase uno, $\rho_k$. Entonces
-$$\bigl|\operatorname{Re}\rho_k-(\tfrac12+b_0)\bigr|\;<\;r\;\le\;\tfrac{b_0}2\qquad\Longrightarrow\qquad b(\rho_k)\;:=\;\operatorname{Re}\rho_k-\tfrac12\;\in\;\bigl(\tfrac{b_0}2,\,\tfrac{3b_0}2\bigr),$$
+$$\bigl|\mathrm{Re}\,\rho_k-(\tfrac12+b_0)\bigr|\;<\;r\;\le\;\tfrac{b_0}2\qquad\Longrightarrow\qquad b(\rho_k)\;:=\;\mathrm{Re}\,\rho_k-\tfrac12\;\in\;\bigl(\tfrac{b_0}2,\,\tfrac{3b_0}2\bigr),$$
 es decir $\rho_k$ es un cero off con $b(\rho_k)\ge b_0/2$. Más fino, por el Lema 175.1(ii): para $k$ grande ($\varepsilon_k\le\tfrac{|c|}4\delta_1^{m_0}$),
 $$\bigl|\rho_k-(\rho_0+i\tau_k)\bigr|\;\le\;\delta(\varepsilon_k)\;=\;\Bigl(\tfrac{4\varepsilon_k}{|c|}\Bigr)^{1/m_0}\;\longrightarrow\;0,\qquad\text{en particular}\qquad b(\rho_k)\;\longrightarrow\;b_0 .$$
 **La réplica copia la distancia a la línea crítica con error $O(\varepsilon_k^{1/m_0})\to0$** — la observación del director, ahora cuantificada. (Para la divergencia de la energía basta la versión gruesa $b(\rho_k)\ge b_0/2$, que ya vale con el radio fijo $r$.)
 
-**Paso 2 (las réplicas son cuádruplos distintos).** $\tau_k\to\infty$ no trae cota inferior de separación, y no hace falta: pásese a la subsucesión definida inductivamente por $\tau_{k_{j+1}}:=\min\{\tau_k>\tau_{k_j}+2r+1\}$ (existe porque $\tau_k\to\infty$; reetiquétese). Entonces los intervalos $\bigl(\gamma_0+\tau_j-r,\;\gamma_0+\tau_j+r\bigr)$, que contienen $\operatorname{Im}\rho_j$, son disjuntos dos a dos y están por encima de $\gamma_0$ (para $\tau_j>r$). Dos miembros de un mismo cuádruplo en el semiplano superior ($\rho$ y $1-\bar\rho$) tienen la **misma** parte imaginaria; partes imaginarias en intervalos disjuntos fuerzan cuádruplos distintos, y todos distintos del cuádruplo de $\rho_0$.
+**Paso 2 (las réplicas son cuádruplos distintos).** $\tau_k\to\infty$ no trae cota inferior de separación, y no hace falta: pásese a la subsucesión definida inductivamente por $\tau_{k_{j+1}}:=\min\{\tau_k>\tau_{k_j}+2r+1\}$ (existe porque $\tau_k\to\infty$; reetiquétese). Entonces los intervalos $\bigl(\gamma_0+\tau_j-r,\;\gamma_0+\tau_j+r\bigr)$, que contienen $\mathrm{Im}\,\rho_j$, son disjuntos dos a dos y están por encima de $\gamma_0$ (para $\tau_j>r$). Dos miembros de un mismo cuádruplo en el semiplano superior ($\rho$ y $1-\bar\rho$) tienen la **misma** parte imaginaria; partes imaginarias en intervalos disjuntos fuerzan cuádruplos distintos, y todos distintos del cuádruplo de $\rho_0$.
 
 **Paso 3 (la energía diverge).** Cada cuádruplo de réplica aporta a $I$ el término $b(\rho_j)^2\ge b_0^2/4$ (el representante del cuádruplo tiene el mismo $b$). Por tanto
 $$I\;\ge\;\sum_{j=1}^{\infty} b(\rho_j)^2\;\ge\;\sum_{j=1}^{\infty}\frac{b_0^2}{4}\;=\;\infty.\qquad\blacksquare$$
@@ -126,7 +126,7 @@ $$A_\varepsilon\;:=\;\Bigl\{\tau>0:\ \sup_{s\in \bar D(\rho_0,r)}\bigl|\zeta(s+i
 (iii) *(conteo separado)* todo subconjunto $2r$-separado $\{\tau_k\}\subset A_\varepsilon$ cumple
 $$\#\{k:\tau_k\le T\}\;\le\;\min\Bigl(N\bigl(\tfrac12+\tfrac{b_0}2,\,T+\gamma_0+r\bigr),\;\frac{4}{b_0^2}E(T+\gamma_0+r)\Bigr)\;\ll\;\min\Bigl(T^{1-b_0/8}\log T,\;\frac{T}{b_0^2\log T}\Bigr).$$
 
-*Demostración.* El mapa de réplica: para $\tau\in A_\varepsilon$, como $\varepsilon<\eta$, el Lema 175.1(i) (con $\delta=R=r$) da un cero $\rho$ de ζ con $|\rho-(\rho_0+i\tau)|<r$; ese cero tiene $\operatorname{Re}\rho\in(\tfrac12+b_0-r,\,\tfrac12+b_0+r)\subset(\tfrac12+\tfrac{b_0}2,\,1)$ — es off con $b(\rho)\ge b_0/2$ — y $\operatorname{Im}\rho\in(\gamma_0+\tau-r,\,\gamma_0+\tau+r)$. Como el disco $D(\rho_0+i\tau,r)$ tiene radio $r<b_0/2\le\tfrac14$ y vive en $\{\sigma>\tfrac12\}$, solo el miembro derecho-superior de cada cuádruplo puede caer en él: el cero replicado identifica un cuádruplo. Sea
+*Demostración.* El mapa de réplica: para $\tau\in A_\varepsilon$, como $\varepsilon<\eta$, el Lema 175.1(i) (con $\delta=R=r$) da un cero $\rho$ de ζ con $|\rho-(\rho_0+i\tau)|<r$; ese cero tiene $\mathrm{Re}\,\rho\in(\tfrac12+b_0-r,\,\tfrac12+b_0+r)\subset(\tfrac12+\tfrac{b_0}2,\,1)$ — es off con $b(\rho)\ge b_0/2$ — y $\mathrm{Im}\,\rho\in(\gamma_0+\tau-r,\,\gamma_0+\tau+r)$. Como el disco $D(\rho_0+i\tau,r)$ tiene radio $r<b_0/2\le\tfrac14$ y vive en $\{\sigma>\tfrac12\}$, solo el miembro derecho-superior de cada cuádruplo puede caer en él: el cero replicado identifica un cuádruplo. Sea
 $$\mathcal Z(T)\;:=\;\bigl\{\text{cuádruplos con } b\ge \tfrac{b_0}{2},\ 0<\gamma\le T+\gamma_0+r\bigr\}.$$
 Para cada cuádruplo $z\in\mathcal Z(T)$ (representante $\beta+i\gamma$), el conjunto de $\tau$ a los que ese cuádruplo puede servir de réplica es $T_z=\{\tau:\ |\beta+i\gamma-\rho_0-i\tau|<r\}\subset(\gamma-\gamma_0-r,\ \gamma-\gamma_0+r)$, un intervalo de longitud $\le2r$. Entonces $A_\varepsilon\cap[0,T]\subset\bigcup_{z\in\mathcal Z(T)}T_z$, de donde $\mathrm{meas}(A_\varepsilon\cap[0,T])\le 2r\,\#\mathcal Z(T)$. Ahora, dos cotas para $\#\mathcal Z(T)$:
 $$\#\mathcal Z(T)\;\le\;N\bigl(\tfrac12+\tfrac{b_0}2,\,T+\gamma_0+r\bigr)\qquad\text{y}\qquad \#\mathcal Z(T)\;\le\;\sum_{\gamma_j\le T+\gamma_0+r}\frac{b_j^2}{(b_0/2)^2}\;=\;\frac{4}{b_0^2}\,E(T+\gamma_0+r)$$
@@ -171,7 +171,7 @@ Resumen verificado contra Docs 112–113 y la literatura citada allí en fuente.
 
 **[PROP 175.7] (estructura ℓ²).** Si $I<\infty$:
 1. *(finitos gordos por nivel)* para todo $b>0$, $\;\#\{j:\ b_j\ge b\}\;\le\;I/b^2\;<\;\infty$;
-2. *(acumulación en la línea)* $b_j\to0$ para cualquier enumeración (colas de una serie convergente); si $m=\infty$, los ceros off se acumulan en $\{\operatorname{Re}=\tfrac12\}$ y solo en ella;
+2. *(acumulación en la línea)* $b_j\to0$ para cualquier enumeración (colas de una serie convergente); si $m=\infty$, los ceros off se acumulan en $\{\mathrm{Re}=\tfrac12\}$ y solo en ella;
 3. $m=\infty$ sigue siendo posible ($b_j=1/j$ realiza $I<\infty$, $m=\infty$, y configuraciones así son indistinguibles por datos de promedio — Teorema 170.8); $I<\infty$ NO implica $m<\infty$: la primera flecha nueva es genuinamente más débil que la vieja.
 
 *Demostración.* (1) Chebyshev. (2) inmediato. (3) Doc 170 §5. $\square$
@@ -191,7 +191,7 @@ $$\mathrm{meas}\bigl(A_\varepsilon\bigr)\;\le\;\frac{8r}{b_0^2}\,I\;<\;\infty\qu
 
 No hay contradicción interna alcanzable sin LP-112: el retrato es consistente. Pero queda nítido **qué lo rompería** — y es el objetivo mínimo:
 
-**[GAP 175.A] (la instancia mínima de LP-112, forma de enunciado).** *Sea $\rho_0$ un cero de ζ con $\operatorname{Re}\rho_0\in(\tfrac12,1)$, $r=r(\rho_0)$, $\eta=\eta(r)$ como en §2.2. Probar: existe una sucesión no acotada $\{\tau_k\}$ con $\sup_{|s-\rho_0|\le r}|\zeta(s+i\tau_k)-\zeta(s)|<\eta$.* — Esto, junto con $I(0^+)<\infty$, implica RH (de hecho implica $I=\infty$, contradiciendo $I<\infty$ y forzando que no exista tal $\rho_0$). Es estrictamente más débil que LP-112 (un disco, un $\varepsilon$) y sus testigos, si existen, viven en un conjunto de medida-densidad $\ll T^{-b_0/8}\log T$ (Teorema 175.6): el muro de P43 §3.1, ahora con la tasa de su propia excepcionalidad escrita.
+**[GAP 175.A] (la instancia mínima de LP-112, forma de enunciado).** *Sea $\rho_0$ un cero de ζ con $\mathrm{Re}\,\rho_0\in(\tfrac12,1)$, $r=r(\rho_0)$, $\eta=\eta(r)$ como en §2.2. Probar: existe una sucesión no acotada $\{\tau_k\}$ con $\sup_{|s-\rho_0|\le r}|\zeta(s+i\tau_k)-\zeta(s)|<\eta$.* — Esto, junto con $I(0^+)<\infty$, implica RH (de hecho implica $I=\infty$, contradiciendo $I<\infty$ y forzando que no exista tal $\rho_0$). Es estrictamente más débil que LP-112 (un disco, un $\varepsilon$) y sus testigos, si existen, viven en un conjunto de medida-densidad $\ll T^{-b_0/8}\log T$ (Teorema 175.6): el muro de P43 §3.1, ahora con la tasa de su propia excepcionalidad escrita.
 
 ---
 

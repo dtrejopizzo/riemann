@@ -17,7 +17,7 @@ weight-one, polarized, real rank-two local systems over the periodic orbit
 
 of the Connes--Consani arithmetic Jacobian.  The family is parametrized by
 the character variety
-\(\operatorname{Hom}(\pi_1(C_p),U(1))\simeq\mathbb T\), and its holonomy is
+\(\mathrm{Hom}(\pi_1(C_p),U(1))\simeq\mathbb T\), and its holonomy is
 averaged with the same Poisson measure as in 106.152.  The resulting finite
 von Neumann module has a positive polarization before any zero of \(\zeta\)
 is used, and its normalized trace gives exactly
@@ -146,7 +146,7 @@ and give it the normalized finite trace
 
 \[
  \tau_p(A)=\frac12\int_{\mathbb T}
-                 \operatorname{Tr}_2(A(\theta))\,d\mu_{r_p}(\theta).
+                 \mathrm{Tr}_2(A(\theta))\,d\mu_{r_p}(\theta).
                                                                     \tag{3}
 \]
 
@@ -186,7 +186,7 @@ Hence, for every \(k\geq1\),
 Since \(U_p(\theta)=R_\theta\),
 
 \[
- \frac12\operatorname{Tr}_2(U_p(\theta)^k)=\cos(k\theta).
+ \frac12\mathrm{Tr}_2(U_p(\theta)^k)=\cos(k\theta).
 \]
 
 The Fourier coefficients of the Poisson measure are
@@ -453,7 +453,7 @@ descent map**
 
 \[
  \boxed{
- \operatorname{Desc}:
+ \mathrm{Desc}:
  \{(\mathcal V^1_p,\Omega_p,\mathbf J_p,\tau_p)\}_p
  \longrightarrow
  (\mathscr H^1,\Omega,\mathbf J,\tau)

@@ -90,7 +90,7 @@ Let `tau_Cl` be the normalized Clifford trace.  Then each prime operator is
 recovered from the first Clifford coefficient:
 
 \[
- (\operatorname{id}\otimes\tau_{\rm Cl})
+ (\mathrm{id}\,\otimes\tau_{\rm Cl})
  \bigl((1\otimes\gamma_p)\mathscr D_P\bigr)
  =\sqrt{\log p}\,A_p.                                \tag{7}
 \]

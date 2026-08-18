@@ -105,11 +105,11 @@ by an enormous margin.
 > $\xi(0)=\xi(1)=\tfrac12\ne0$, so $\widehat f=\xi\widehat g$ gives
 > $\widehat f(0)=\tfrac12\widehat g(0)$ and $\widehat f(1)=\tfrac12
 > \widehat g(1)$, which need not vanish.  Membership in
-> $\operatorname{rad}I_\partial$ additionally requires $\widehat g(0)=
+> $\mathrm{rad}\,I_\partial$ additionally requires $\widehat g(0)=
 > \widehat g(1)=0$.
 
 **Proof.**  Direct, from $\xi(0)=\xi(1)=\tfrac12$ (verified numerically) and
-$\operatorname{rad}I_\partial=\{f:\widehat f(0)=\widehat f(1)=0,\
+$\mathrm{rad}\,I_\partial=\{f:\widehat f(0)=\widehat f(1)=0,\
 \widehat f(\rho)=0\;\forall\rho\}$ (107_240 Thm D). $\square$
 
 This is an extra linear condition on $g$, cutting a codimension-2 subspace.

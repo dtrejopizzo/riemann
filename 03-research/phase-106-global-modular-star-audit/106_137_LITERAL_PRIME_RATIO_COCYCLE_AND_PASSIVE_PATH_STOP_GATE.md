@@ -150,7 +150,7 @@ eliminating one common regression variable.
 More explicitly, with
 
 \[
- D_x=\operatorname {diag}(\kappa_1(x),\ldots,\kappa_M(x)),
+ D_x=\mathrm{diag}(\kappa_1(x),\ldots,\kappa_M(x)),
  \qquad
  \boldsymbol\kappa_x=(\kappa_1(x),\ldots,\kappa_M(x))^{\mathsf T},
 \]

@@ -58,7 +58,7 @@ Wigner--Smith kernel.
 The classical absolutely convergent digamma identity is
 
 \[
- \operatorname{Re}\psi(b+iy)-\psi(b)
+ \mathrm{Re}\,\psi(b+iy)-\psi(b)
  =\sum_{n\ge0}{y^2\over
    (n+b)((n+b)^2+y^2)},\qquad b>0.                 \tag{2.1}
 \]
@@ -82,7 +82,7 @@ Therefore
 \[
  \boxed{
  R_\Gamma(\tau):=
- \operatorname{Re}\psi(\tfrac54+\tfrac{i\tau}{2})
+ \mathrm{Re}\,\psi(\tfrac54+\tfrac{i\tau}{2})
  -\psi(\tfrac54)
  =\sum_{n\ge0}\bigl(D_{a_n}(0)-D_{a_n}(\tau)\bigr).
  }                                                   \tag{2.4}

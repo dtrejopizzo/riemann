@@ -98,8 +98,8 @@ Equivalently, the admissible shape is
 
 \[
  0\longrightarrow \mathcal M_{\mathbb R}
- \longrightarrow \widehat{\operatorname{Pic}}
- \longrightarrow \operatorname{Pic}_{\rm alg}
+ \longrightarrow \widehat{\mathrm{Pic}}
+ \longrightarrow \mathrm{Pic}_{\rm alg}
  \longrightarrow 0,
  \tag{3.3}
 \]

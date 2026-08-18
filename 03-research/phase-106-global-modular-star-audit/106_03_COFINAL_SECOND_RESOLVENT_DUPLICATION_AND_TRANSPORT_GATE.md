@@ -26,7 +26,7 @@ and the Phase-101 defect satisfies
 K_{L,N}(s)
 =
 -\left(\frac{\xi'}{\xi}\right)'(s)
--\operatorname{Tr}(s-\Theta_{L,N})^{-2}.
+-\mathrm{Tr}(s-\Theta_{L,N})^{-2}.
 }
 \tag{3}
 \]
@@ -74,14 +74,14 @@ Let
 
 \[
 \alpha=\frac12+i\theta,
-\qquad \theta\in\operatorname{Spec}D_{L,N},
+\qquad \theta\in\mathrm{Spec}\,D_{L,N},
 \tag{6}
 \]
 
 with algebraic multiplicity \(m_\alpha\).  Functional calculus gives
 
 \[
-\operatorname{Tr}(s-\Theta_{L,N})^{-2}
+\mathrm{Tr}(s-\Theta_{L,N})^{-2}
 =\sum_\alpha\frac{m_\alpha}{(s-\alpha)^2}.
 \tag{7}
 \]
@@ -91,7 +91,7 @@ terms disappear after two derivatives, and hence
 
 \[
 (\log\mathcal F_{L,N})''(s)
-=-\operatorname{Tr}(s-\Theta_{L,N})^{-2}.
+=-\mathrm{Tr}(s-\Theta_{L,N})^{-2}.
 \tag{8}
 \]
 
@@ -144,7 +144,7 @@ Assume that, for one real \(s_0>1\),
 and that locally uniformly on \(\Re s>1\),
 
 \[
-\operatorname{Tr}(s-\Theta_j)^{-2}
+\mathrm{Tr}(s-\Theta_j)^{-2}
 \longrightarrow
 -\left(\frac{\xi'}{\xi}\right)'(s).
 \tag{13}
@@ -166,7 +166,7 @@ Equation (11) makes \(A_j\) self-adjoint.  Let \(\mu_j\) be its eigenvalue
 counting measure.  For \(s=\frac12+iz\),
 
 \[
-\operatorname{Tr}(s-\Theta_j)^{-2}
+\mathrm{Tr}(s-\Theta_j)^{-2}
 =-\int_{\mathbb R}\frac{d\mu_j(t)}{(t-z)^2}.
 \tag{15}
 \]
@@ -330,9 +330,9 @@ D^0e_n=\frac{2\pi n}{L}e_n,
 one obtains the desired adjoint relation, but the trace is
 
 \[
-\operatorname{Tr}(s-\Theta)^{-2}
+\mathrm{Tr}(s-\Theta)^{-2}
 =\frac{L^2}{4}
-\operatorname{csch}^2\!\left(\frac L2(s-\tfrac12)\right),
+\mathrm{csch}^2\!\left(\frac L2(s-\tfrac12)\right),
 \tag{32}
 \]
 
@@ -358,7 +358,7 @@ W_N=I_N^*W_{N+1}I_N.
 Put
 
 \[
-\varepsilon_N=\min\operatorname{Spec}W_N,
+\varepsilon_N=\min\mathrm{Spec}\,W_N,
 \qquad
 T_N=W_N-\varepsilon_NI,
 \qquad

@@ -21,15 +21,15 @@
 Let
 
 \[
- S=\operatorname{Spec}\mathbb F\{\pm1\},\qquad
- \pi:X=\overline{\operatorname{Spec}\mathbb Z}\longrightarrow S,
+ S=\mathrm{Spec}\,\mathbb F\{\pm1\},\qquad
+ \pi:X=\overline{\mathrm{Spec}\,\mathbb Z}\longrightarrow S,
 \]
 
 and write `X^[n]` for the `n`-fold fiber product over `S`.  For
 `L in Pic(X)` define the Cech difference
 
 \[
- \delta(L)=p_2^*L\otimes p_1^*L^{-1}\in\operatorname{Pic}(X^{[2]}). \tag{1.1}
+ \delta(L)=p_2^*L\otimes p_1^*L^{-1}\in\mathrm{Pic}(X^{[2]}). \tag{1.1}
 \]
 
 This is the anti-diagonal part isolated in `114_a_12`.
@@ -47,7 +47,7 @@ by a global unit `u in Gamma(X,O_X^*)`. Multiplying `varphi` by the inverse
 pullback of `u`, we may and do normalize
 
 \[
- \Delta^*\varphi=\operatorname{id}_L.                   \tag{2.2}
+ \Delta^*\varphi=\mathrm{id}_L.                   \tag{2.2}
 \]
 
 On `X^[3]`, let `varphi_ij` denote pullback along the indicated projection and
@@ -93,7 +93,7 @@ Assume:
 Then
 
 \[
- \ker\delta=\pi^*\operatorname{Pic}(S).                 \tag{3.2}
+ \ker\delta=\pi^*\mathrm{Pic}(S).                 \tag{3.2}
 \]
 
 In particular, since `Pic(S)=0`, `delta` is injective and the external Picard

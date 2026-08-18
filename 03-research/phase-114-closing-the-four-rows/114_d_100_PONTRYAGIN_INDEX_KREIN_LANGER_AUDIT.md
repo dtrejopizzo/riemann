@@ -90,7 +90,7 @@ Continuity gives an expansive open arc around `1` and a contractive open
 arc around `-1`.  By Section 1,
 
 \[
- \operatorname{ind}_-K_{R_{p,a}}=\infty.                 \tag{2.3}
+ \mathrm{ind}_-K_{R_{p,a}}=\infty.                 \tag{2.3}
 \]
 
 Therefore the prime factors are not finite-index generalized Schur
@@ -114,7 +114,7 @@ Both feature spaces contain an infinite-dimensional translation/Gamma
 sector.  Hence the ambient Krein space has
 
 \[
- \operatorname{ind}_+(J)=\operatorname{ind}_-(J)=\infty. \tag{3.2}
+ \mathrm{ind}_+(J)=\mathrm{ind}_-(J)=\infty. \tag{3.2}
 \]
 
 The preparation colligation of D.86 makes this visible one principal angle
@@ -187,8 +187,8 @@ upper half-plane.  Therefore
 \[
  \boxed{
  \kappa_a(T)=\deg B_a
- =\sum_{\substack{|\operatorname{Im}\rho|\le T\\
-                   \operatorname{Re}\rho>1/2+a}}
+ =\sum_{\substack{|\mathrm{Im}\,\rho|\le T\\
+                   \mathrm{Re}\,\rho>1/2+a}}
    m_\rho,}                                               \tag{5.3}
 \]
 
@@ -219,7 +219,7 @@ every free nontrivial zero orbit remains as a hyperbolic block.
 Thus a source theorem
 
 \[
- \operatorname{ind}_-(\text{completed colligation})\le2  \tag{6.2}
+ \mathrm{ind}_-(\text{completed colligation})\le2  \tag{6.2}
 \]
 
 together with exact identification of the two Tate directions would imply

@@ -489,7 +489,7 @@ concentrate spectrally at \(q\).  The source-rate identity of
 106.100--106.103 gives
 
 \[
- \frac{Q[\Gamma_t]}{\operatorname {Tr}\Gamma_t}
+ \frac{Q[\Gamma_t]}{\mathrm{Tr}\,\Gamma_t}
  \longrightarrow\alpha-\frac12<0.                \tag{38}
 \]
 
@@ -539,7 +539,7 @@ alignment theorem,
  \boxed{
  2\int K e^{5y/2}\sum_m m\int P_y''A_y^+
  +\int K e^{-5x/2}\sum_m m\int P_{-x}''A_x^-
- \ge -o(\operatorname {Tr}\Gamma_t)}              \tag{41}
+ \ge -o(\mathrm{Tr}\,\Gamma_t)}              \tag{41}
 \]
 
 along a cofinal heat or hybrid sequence, after the exact radical

@@ -130,15 +130,15 @@ The value \(u+\bar v\) is arbitrary.  Moreover the diagonal score blocks
 are
 
 \[
- PHP=2\operatorname{Re}\alpha,\qquad
- (I-P)H(I-P)=2\operatorname{Re}\delta,              \tag{3.2}
+ PHP=2\mathrm{Re}\,\alpha,\qquad
+ (I-P)H(I-P)=2\mathrm{Re}\,\delta,              \tag{3.2}
 \]
 
 and are independent of \(u,v\).  Thus the Schur residual
 
 \[
- 2\operatorname{Re}\delta
- -{|u+\bar v|^2\over2\operatorname{Re}\alpha}       \tag{3.3}
+ 2\mathrm{Re}\,\delta
+ -{|u+\bar v|^2\over2\mathrm{Re}\,\alpha}       \tag{3.3}
 \]
 
 can have either sign even though (1.3)--(1.5) hold exactly.

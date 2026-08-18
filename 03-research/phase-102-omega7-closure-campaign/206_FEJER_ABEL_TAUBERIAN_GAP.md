@@ -6,7 +6,7 @@
 favorable for the Fejer/log-density route.  The remaining danger is a false
 Tauberian step:
 \[
-  \operatorname{Re}\mathcal G_+(r)
+  \mathrm{Re}\,\mathcal G_+(r)
   \sim {1\over2}\log {1\over1-r}
   \quad\not\Longrightarrow\quad
   \int F_n\,d\nu_g\ge {1\over2}\log n+O(1)
@@ -28,7 +28,7 @@ and write
 \[
   A_n(\theta)
   =
-  \operatorname{Re}{1\over1-r_ne^{i\theta}}
+  \mathrm{Re}{1\over1-r_ne^{i\theta}}
   =
   {1-r_n\cos\theta\over |1-r_ne^{i\theta}|^2}.
 \tag{1}

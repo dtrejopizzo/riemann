@@ -28,7 +28,7 @@ There is an exact answer.
    the line states gives exactly, and not asymptotically,
 
    \[
-     \mathscr E_K(q)-{1\over2}\operatorname {Var}_{\mu_K}(q)
+     \mathscr E_K(q)-{1\over2}\mathrm{Var}_{\mu_K}(q)
      =\int_0^\infty J_u(q)\,d\sigma(u).
      \tag{3}
    \]
@@ -57,7 +57,7 @@ There is an exact answer.
 4. The pole at \(s=1/2\) cancels exactly.  Every nontrivial zero
    \(\rho\) gives a pole at \(s=\rho-1/2\).  Consequently an exact stable
    Hilbert-passive continuation of this transfer to
-   \(\operatorname {Re}s>0\) is already equivalent to RH at the level of
+   \(\mathrm{Re}\,s>0\) is already equivalent to RH at the level of
    pole location.  Passivity is not supplied by the positive local weights
    \(\Lambda(p^k)\).
 5. Mean periodicity is compatible with the delay bank but does not make its
@@ -95,7 +95,7 @@ has a pole in the upper half-plane, and the proposed transfer matrix obeys
 \[
  \det\{J-T_p(z)^*JT_p(z)\}
  =-{a^2(p^y-p^{-y})^2\over1-a^2}<0
- \qquad(y=\operatorname {Im}z>0).
+ \qquad(y=\mathrm{Im}\,z>0).
  \tag{8}
 \]
 
@@ -204,7 +204,7 @@ the growing reference density in \(C_0\).  Therefore
  \boxed{
  \|C_+q\|^2=\mathscr E_K(q),
  \qquad
- \|C_0q\|^2={1\over2}\operatorname {Var}_{\mu_K}(q).}
+ \|C_0q\|^2={1\over2}\mathrm{Var}_{\mu_K}(q).}
  \tag{17}
 \]
 
@@ -224,7 +224,7 @@ Then (17) gives
 \[
 \boxed{
  \langle(C_+q,C_0q),\mathcal J(C_+q,C_0q)\rangle
- =\mathscr E_K(q)-{1\over2}\operatorname {Var}_{\mu_K}(q).}
+ =\mathscr E_K(q)-{1\over2}\mathrm{Var}_{\mu_K}(q).}
 \tag{19}
 \]
 
@@ -262,7 +262,7 @@ This proves that the delay bank reproduces the exact signed measure of
 If \(q\) is centered, then
 
 \[
- \operatorname {Var}_{\mu_K}(q)=\|q\|_{\mu_K}^2.
+ \mathrm{Var}_{\mu_K}(q)=\|q\|_{\mu_K}^2.
  \tag{23}
 \]
 
@@ -397,7 +397,7 @@ Pairing this output with the physical boundary row gives exactly
 \boxed{
 \begin{aligned}
  \mathcal P_D(q)
- =-2\operatorname {Re}\int_{x>y}
+ =-2\mathrm{Re}\,\int_{x>y}
  D(e^{x-y})e^{(x-y)/2}\,
  \overline{K(x)q(x)}\,B(Kq)(y)\,dy\,dx .
 \end{aligned}}
@@ -444,7 +444,7 @@ the arithmetic sign.
 
 ## 7. The exact Abel transfer and its pole test
 
-Initially for \(\operatorname {Re}s>1/2\), PNT and (33) give
+Initially for \(\mathrm{Re}\,s>1/2\), PNT and (33) give
 
 \[
 \begin{aligned}
@@ -463,7 +463,7 @@ Set \(z=s+1/2\).  Since \(E_1(1)=0\), Stieltjes integration by parts gives
  \tag{40}
 \]
 
-For \(\operatorname {Re}z>1\),
+For \(\mathrm{Re}\,z>1\),
 
 \[
  \int_1^\infty T^{-z}dE_1(T)
@@ -478,7 +478,7 @@ The principal pole at \(z=1\) cancels between the two terms in (41).  If
 \(\rho\) is a nontrivial zero of multiplicity \(m_\rho\), then
 
 \[
- \operatorname {Res}_{s=\rho-1/2}\widehat k_D(s)
+ \mathrm{Res}_{s=\rho-1/2}\widehat k_D(s)
  =-{m_\rho\over\rho}\ne0.
  \tag{42}
 \]
@@ -491,8 +491,8 @@ archimedean singularities; they are analytic at every nonreal
 
 The following are equivalent:
 
-1. \(\widehat k_D\) has no pole in \(\operatorname {Re}s>0\);
-2. \(\zeta\) has no zero with \(\operatorname {Re}\rho>1/2\);
+1. \(\widehat k_D\) has no pole in \(\mathrm{Re}\,s>0\);
+2. \(\zeta\) has no zero with \(\mathrm{Re}\,\rho>1/2\);
 3. RH holds.
 
 #### Proof

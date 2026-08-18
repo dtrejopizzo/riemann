@@ -5,7 +5,7 @@ Pillar-1 triage left Route A ($GL_2$/Eisenstein) as the only live route (zeros p
 The Pillar-2 prototype tests whether the natural Eisenstein pairing reproduces the Weil form $Q$. Result: the
 regularized Maass–Selberg pairing **genuinely contains the zeros** (its density is the modular-surface explicit
 formula), is **indefinite** (passes 2.2), and is **independent** of the zeros (passes P21) — but the zeros enter as
-**resonances at $\operatorname{Re}(s)=1/4$, not $L^2$ eigenvectors**, so there is no candid Gram matrix on a discrete
+**resonances at $\mathrm{Re}(s)=1/4$, not $L^2$ eigenvectors**, so there is no candid Gram matrix on a discrete
 zero-basis. Pillars 1 and 2 both reduce to a single open core: **realize the resonances as a Kreĭn space** (the
 Beilinson realization), now located precisely.
 
@@ -26,8 +26,8 @@ Beilinson realization), now located precisely.
    pairing is therefore signature-$(1,\infty)$-type, **passing Pillar 2.2 and the heights filter** (it is not an
    unconditionally positive-definite height pairing — unlike the naive Arakelov route D2).
 3. **The zeros are resonances, not $L^2$ eigenvectors.** They sit at $s=\rho/2=\tfrac14+i\gamma/2$, i.e.
-   $\operatorname{Re}(s)=1/4$, **off** the $L^2$ spectrum of the modular Laplacian (continuous on $\operatorname{Re}=1/2$
-   plus discrete Maass at $\operatorname{Re}=1/2$). They are poles of the meromorphically-continued scattering matrix.
+   $\mathrm{Re}(s)=1/4$, **off** the $L^2$ spectrum of the modular Laplacian (continuous on $\mathrm{Re}=1/2$
+   plus discrete Maass at $\mathrm{Re}=1/2$). They are poles of the meromorphically-continued scattering matrix.
 
 ## Arbiter verdict on Route A
 Pillars 1 and 2 are **structurally met but not realized**, and both collapse to one wall:
@@ -40,7 +40,7 @@ Pillars 1 and 2 are **structurally met but not realized**, and both collapse to 
 | independence (P21) | **passed** ($\varphi$ is pure $GL_2$, zeros are output) |
 
 > **The single open core (Beilinson realization, located precisely):** realize the resonances $\{s=\rho/2\}$ (poles of
-> $\varphi$) as candid vectors of a Kreĭn/Pontryagin space $H^1_{\mathrm{Eis,prim}}$, with $\operatorname{Frob}$ of
+> $\varphi$) as candid vectors of a Kreĭn/Pontryagin space $H^1_{\mathrm{Eis,prim}}$, with $\mathrm{Frob}$ of
 > spectrum $\{\gamma_\rho\}$ and the regularized pairing equal to $Q$ (signs $\varepsilon_\rho$, negative index
 > $\kappa$). Then Pillar 1 (clean spectrum) and Pillar 2 (Gram $=Q$) both close, and only the new Hodge index
 > (Pillar 4) remains.
@@ -59,7 +59,7 @@ Pillars 1 and 2 are **structurally met but not realized**, and both collapse to 
 1. **Consolidate** Phase-16 (the triage + this prototype) into a short note/paper: *"RH via the modular surface reduces
    to the Kreĭn realization of the $\zeta$-resonances"* — a clean conditional result with the three rejection filters.
 2. **A Route-A-only Lise Science probe** aimed at the resonance realization (complex scaling / Pontryagin space of
-   resonances; the regularized residue pairing $\operatorname{Res}_{s=\rho/2}\varphi$ as candidate $\varepsilon_\rho$),
+   resonances; the regularized residue pairing $\mathrm{Res}_{s=\rho/2}\varphi$ as candidate $\varepsilon_\rho$),
    with the heights/independence/citation filters as gates.
 3. **Stop**: the map is complete and the wall is located precisely; no non-circular passage is in hand, and the candid
    state is "$\exists$ resonance realization $\Rightarrow$ RH", open.

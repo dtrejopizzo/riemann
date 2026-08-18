@@ -53,7 +53,7 @@ It does **not** prove:
 
 1. the full analytic archimedean Green theory of `107_05`;
 2. the published arithmetic-surface or adelic metric theorem;
-3. the final geometric realization over \(\operatorname{Spec}\mathbf Z\).
+3. the final geometric realization over \(\mathrm{Spec}\,\mathbf Z\).
 
 So the correct reading is:
 

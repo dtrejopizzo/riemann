@@ -18,9 +18,9 @@ Fix a finite prime support \(T\), put \(n_T=\prod_{p\in T}p\), and choose a
 square-free level \(N\) divisible by \(n_T\). Haran (9.4) presents
 
 \[
- X_N=\operatorname{Spec}\mathbb Z
- \coprod_{\operatorname{Spec}\mathbb Z[1/N]}
- \operatorname{Spec}A_N,\qquad
+ X_N=\mathrm{Spec}\,\mathbb Z
+ \coprod_{\mathrm{Spec}\,\mathbb Z[1/N]}
+ \mathrm{Spec}\,A_N,\qquad
  A_N=\mathbb Z[1/N]\cap\mathbb Z_{\mathbb R}.                         \tag{1.1}
 \]
 

@@ -16,10 +16,10 @@ $PW_d$, $d>\tfrac12$. The construction has three layers.
 
 1. **Semibounded realization (B-2).** Modulo a single, precisely isolated hypothesis **(H)** — a *uniform
    short-interval zero-density* statement strictly weaker than RH — the form $\mathfrak t$ is closable and
-   defines a self-adjoint operator $\mathcal T$ that is *bounded below*, with $\inf\operatorname{spec}(\mathcal T)$
+   defines a self-adjoint operator $\mathcal T$ that is *bounded below*, with $\inf\mathrm{spec}(\mathcal T)$
    a finite, convergent quantity. Four supporting lemmas (integration by parts, a quadrature bound, a vertical
    $L^2$ bound, and a Plancherel–Pólya bound) are proved unconditionally. Consequently
-   $\mathrm{RH}\iff\inf\operatorname{spec}(\mathcal T)\ge0$: RH is exactly the *sign* of a finite bottom.
+   $\mathrm{RH}\iff\inf\mathrm{spec}(\mathcal T)\ge0$: RH is exactly the *sign* of a finite bottom.
 
 2. **Kreĭn structure.** We prove the exact identity $\mathfrak t=E^*JE$, where $E$ is evaluation at the
    (near-line) zeros and $J$ is a fundamental symmetry whose negative directions are exactly the off-line
@@ -93,8 +93,8 @@ off-line zeros are automatic and well-controlled — this is the technically cle
 
 > **Theorem A (semibounded realization; §5).** Assume **(H)** (Definition 4.2). On $PW_d\cap H^1$, $d>\tfrac12$,
 > the Weil form $\mathfrak t$ is closable in $H_+$ and its self-adjoint operator $\mathcal T$ satisfies
-> $\inf\operatorname{spec}(\mathcal T)\ge 1-4C>-\infty$ for a finite $C=C(d,\delta,\eta)$. Consequently
-> $\mathrm{RH}\iff\inf\operatorname{spec}(\mathcal T)\ge0$.
+> $\inf\mathrm{spec}(\mathcal T)\ge 1-4C>-\infty$ for a finite $C=C(d,\delta,\eta)$. Consequently
+> $\mathrm{RH}\iff\inf\mathrm{spec}(\mathcal T)\ge0$.
 
 > **Theorem B (Kreĭn identity and the single axis; §§6–7).** Unconditionally, $\mathfrak t=E^*JE$ with $J=J^*$,
 > $J^2=I$. The angular operator $K$ of $\overline{R(E)}$ is defined (type-density uniqueness), and
@@ -320,7 +320,7 @@ $$
 > 1. $\mathfrak t$ is **closable** in $H_+$ and defines a **self-adjoint operator $\mathcal T$**;
 > 2. $\mathcal T$ is **bounded below**: for a finite $C=C(d,\delta,\eta)$,
 >    $$
->    \boxed{\ \inf\operatorname{spec}(\mathcal T)\ \ge\ 1-4C\ >\ -\infty.\ }
+>    \boxed{\ \inf\mathrm{spec}(\mathcal T)\ \ge\ 1-4C\ >\ -\infty.\ }
 >    $$
 
 *Proof.* By Lemmas C–D and Lemma E (under (H)),
@@ -338,7 +338,7 @@ operator associated with it via KLMN, with form domain $H_+$. $\qquad\square$
 > **Corollary A′ (faithful reformulation).** The positivity $\mathfrak t\succeq0$ does not refer to the inner
 > product, so its truth is norm-independent; combined with Theorem A,
 > $$
-> \boxed{\ \mathrm{RH}\ \Longleftrightarrow\ \inf\operatorname{spec}(\mathcal T)\ \ge\ 0\ }
+> \boxed{\ \mathrm{RH}\ \Longleftrightarrow\ \inf\mathrm{spec}(\mathcal T)\ \ge\ 0\ }
 > $$
 > — RH is exactly the **sign** of the finite bottom of the rigorously realized operator $\mathcal T$.
 
@@ -549,7 +549,7 @@ positivity.
 |---|---|
 | Lemmas A–D (IBP, quadrature $O(\mathfrak t_+)$, vertical $e^d$, Plancherel–Pólya) | ✅ unconditional |
 | Depth split; (H) $\Rightarrow$ coercivity (Lemma E) | ✅ unconditional |
-| Theorem A (semibounded realization $\mathcal T$, $\inf\operatorname{spec}\ge1-4C$) | ✅ **modulo (H)** |
+| Theorem A (semibounded realization $\mathcal T$, $\inf\mathrm{spec}\,\ge1-4C$) | ✅ **modulo (H)** |
 | Corollary A′ (RH $\iff$ sign of the bottom) | ✅ modulo (H) |
 | Theorem B (i): $\mathfrak t=E^*JE$, $J$ a fundamental symmetry | ✅ unconditional |
 | Theorem B (ii): angular operator, dictionary $\|K\|<\infty/\le1$ | ✅ unconditional |

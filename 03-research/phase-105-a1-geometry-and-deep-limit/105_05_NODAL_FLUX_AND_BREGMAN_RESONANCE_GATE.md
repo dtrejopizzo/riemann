@@ -277,7 +277,7 @@ Integration by parts and the VK estimate for (C(r)-\gamma) give only
 the envelope
 
 \[
- \exp\{R/2-\eta(R)\}\operatorname{poly}(R),           \tag{29}
+ \exp\{R/2-\eta(R)\}\mathrm{poly}(R),           \tag{29}
 \]
 
 because (|q_R|_2\asymp e^{R/2}/R).  The next section
@@ -408,7 +408,7 @@ unconditional VK/Mertens input gives only
 
 \[
  \|\mathcal M_D\|_2
- \le D^{1/2}\exp\{-\eta(\log D)\}\operatorname{polylog}(D). \tag{41}
+ \le D^{1/2}\exp\{-\eta(\log D)\}\mathrm{polylog}(D). \tag{41}
 \]
 
 Applying Vaughan's identity to the linear term in (6) is exact, but a

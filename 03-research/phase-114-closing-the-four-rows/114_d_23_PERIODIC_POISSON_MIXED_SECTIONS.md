@@ -34,7 +34,7 @@ For every `F in L^2(R)`,
 
 \[
  2\sum_{k\ge1}\frac{\log p}{p^{k/2}}
-       \operatorname{Re}\langle F,S_{k\log p}F\rangle
+       \mathrm{Re}\,\langle F,S_{k\log p}F\rangle
  =\log p\left(
    \langle F,P_{p^{-1/2}}(U_p)F\rangle-\|F\|^2
              \right).                                \tag{3}

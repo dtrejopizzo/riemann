@@ -103,7 +103,7 @@ De la fórmula $F_n(z) = -1/(a_n^{\infty} \cdot P_n(z)P_{n+1}(z) \cdot m_\infty(
 
 $$P_n(\gamma_n) = 0 \quad \text{o} \quad P_{n+1}(\gamma_n) = 0 \quad \text{o} \quad m_\infty(\gamma_n) = 0.$$
 
-Pero $m_\infty(z) = \int (s-z)^{-1} dm_\infty(s)$ tiene parte imaginaria negativa para $z$ real (pues $\operatorname{Im} m_\infty(x + i0^+) = -\pi w(x) < 0$), así que $m_\infty(\gamma_n) \neq 0$ para $\gamma_n$ real.
+Pero $m_\infty(z) = \int (s-z)^{-1} dm_\infty(s)$ tiene parte imaginaria negativa para $z$ real (pues $\mathrm{Im} m_\infty(x + i0^+) = -\pi w(x) < 0$), así que $m_\infty(\gamma_n) \neq 0$ para $\gamma_n$ real.
 
 Por tanto el pseudo-polo en $\gamma_n$ ocurre si y solo si $P_n(\gamma_n) = 0$ o $P_{n+1}(\gamma_n) = 0$.
 

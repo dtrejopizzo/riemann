@@ -131,7 +131,7 @@ $\mathfrak t_+\ge c'\,\rho\,\|F\|_2^2$ (taking $\delta$ small). $\square$
 > 1. the Weil form $\mathfrak t$ is **closable** in $H_+$ and defines a **self-adjoint operator $\mathcal T$**;
 > 2. $\mathcal T$ is **bounded below**: there is a finite constant $C=C(d,\delta,\eta)$ with
 >    $$
->    \boxed{\ \inf\operatorname{spec}(\mathcal T)\ \ge\ 1-4C\ >\ -\infty,\ }
+>    \boxed{\ \inf\mathrm{spec}(\mathcal T)\ \ge\ 1-4C\ >\ -\infty,\ }
 >    $$
 >    a **faithful, semibounded realization of the Weil functional, without assuming RH.**
 
@@ -147,7 +147,7 @@ semibounded; $\mathcal T$ is its associated self-adjoint operator (KLMN with the
 > **Corollary (the faithful reformulation).** By norm-independence of the sign of the bottom (the positivity
 > $\mathfrak t\succeq0$ does not mention the inner product),
 > $$
-> \boxed{\ \mathrm{RH}\ \Longleftrightarrow\ \inf\operatorname{spec}(\mathcal T)\ \ge\ 0\ }
+> \boxed{\ \mathrm{RH}\ \Longleftrightarrow\ \inf\mathrm{spec}(\mathcal T)\ \ge\ 0\ }
 > $$
 > — RH is exactly the **sign** of the finite bottom of the rigorously realized operator $\mathcal T$.
 
@@ -171,7 +171,7 @@ $$
 $$
 
 **What is NOT claimed.** B-2 gives the bottom is **finite**; it does **not** give the **sign**
-($\inf\operatorname{spec}\ge0$ = RH). The sign is untouched by all of §0–§6 (which bound *magnitudes*,
+($\inf\mathrm{spec}\,\ge0$ = RH). The sign is untouched by all of §0–§6 (which bound *magnitudes*,
 $C\ge e^d>1$). Proving the sign requires **structural positivity** ($\mathcal T=A^*A$ / Connes trace /
 de Branges chain) — see `RH-ENDGAME.md`. That is a separate problem and is not addressed here.
 
@@ -188,12 +188,12 @@ de Branges chain) — see `RH-ENDGAME.md`. That is a separate problem and is not
 | Depth split (deep = only danger; shallow harmless) | ✅ unconditional |
 | Coercivity $\mathfrak t_+\ge c\rho\|F\|^2$ | (H) — needs uniform short-interval density |
 | **Theorem B-2** (faithful semibounded realization $\mathcal T$) | **✅ modulo (H)** |
-| Corollary (RH $\iff$ sign of $\inf\operatorname{spec}\mathcal T$) | ✅ modulo (H) |
+| Corollary (RH $\iff$ sign of $\inf\mathrm{spec}\,\mathcal T$) | ✅ modulo (H) |
 | RH itself (the sign) | — not addressed (needs structural positivity) |
 
 **The deliverable, in one line.** *Modulo a uniform short-interval zero-density bound (H), far weaker than
 RH, the Weil functional admits a faithful, rigorously realized, semibounded self-adjoint operator $\mathcal T$
-on the band-limited class, with $\mathrm{RH}\iff\inf\operatorname{spec}(\mathcal T)\ge0$ — a new faithful
+on the band-limited class, with $\mathrm{RH}\iff\inf\mathrm{spec}(\mathcal T)\ge0$ — a new faithful
 spectral reformulation of RH with an explicit finite-dimensional sampling ladder.*
 
 ---

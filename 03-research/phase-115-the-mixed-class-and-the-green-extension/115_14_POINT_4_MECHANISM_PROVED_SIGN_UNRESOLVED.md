@@ -85,7 +85,7 @@ needs.**  `115_13` §4's obstruction is removed.
 ## 4. Why `115_13` Proposition 1 is nevertheless incomplete
 
 Corollary 4 at \(S=\{\infty\}\) would give
-\(\operatorname{Tr}(\vartheta(f)\mathbf S)=-G_\infty(f)=W_\infty^{CC}(f)\), i.e.
+\(\mathrm{Tr}(\vartheta(f)\mathbf S)=-G_\infty(f)=W_\infty^{CC}(f)\), i.e.
 \(E=0\) — contradicting CC's Theorem 3, where \(E\ne0\).  So the identification
 of the structure function used there is wrong, and §2 shows exactly how:
 
@@ -118,7 +118,7 @@ only the norm changes, and it changes by exactly
 Granting the splitting, Propositions 1–3 give
 
 \[
- \boxed{\;\operatorname{Tr}\bigl(\vartheta(f)\mathbf S_S\bigr)
+ \boxed{\;\mathrm{Tr}\,\bigl(\vartheta(f)\mathbf S_S\bigr)
   =-B^S_{\rm nuc}(f)+E(f),\qquad E\ \text{the archimedean correction, }S\text{-independent}.\;}
 \]
 

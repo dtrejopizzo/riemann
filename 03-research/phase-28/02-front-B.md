@@ -8,17 +8,17 @@
 
 **Definición B.1** (flujo espectral). Sea $\{T_\lambda\}_{\lambda \in [0,1]}$ una familia
 continua de operadores autoadjuntos de Fredholm en un espacio de Hilbert $H$. El
-*flujo espectral* $\operatorname{sf}(\{T_\lambda\})$ es el número neto de valores propios
+*flujo espectral* $\mathrm{sf}(\{T_\lambda\})$ es el número neto de valores propios
 que cruzan cero de negativo a positivo mientras $\lambda$ va de $0$ a $1$.
 
-Formalmente: $\operatorname{sf}(\{T_\lambda\}) = \#\{\text{cruces} \uparrow\} - \#\{\text{cruces} \downarrow\}$.
+Formalmente: $\mathrm{sf}(\{T_\lambda\}) = \#\{\text{cruces} \uparrow\} - \#\{\text{cruces} \downarrow\}$.
 
 **Proposición B.2** (flujo espectral = índice de Kreĭn). Sea $Q$ la forma de Weil con
 operador asociado $T$ (definido por $Q(f,g) = \langle Tf, g\rangle_H$ respecto a un
 producto interior positivo fijo $\langle\cdot,\cdot\rangle_H$ en $H$). Sea $T_1 = I$
 (identidad, positivo definido). Entonces para cualquier camino $\{T_\lambda\}_{\lambda
 \in [0,1]}$ de $T_0 = T$ a $T_1 = I$:
-$$\operatorname{sf}(\{T_\lambda\}) = \kappa(Q) = \#\{\text{valores propios negativos de } T\}.$$
+$$\mathrm{sf}(\{T_\lambda\}) = \kappa(Q) = \#\{\text{valores propios negativos de } T\}.$$
 
 *Prueba:* El flujo espectral a lo largo del camino cuenta los cruces de cero. Partimos
 de $T_0 = T$ con $\kappa$ valores propios negativos y llegamos a $T_1 = I > 0$ sin
@@ -36,14 +36,14 @@ no depende del camino específico de $T$ a $I$.
 **Teorema B.3** (APS 1976). Sea $M = [0,1] \times X$ una variedad cilíndrica con frontera
 $\partial M = \{0\} \times X \cup \{1\} \times X$, y $D = \partial/\partial\lambda + T_\lambda$
 el operador de tipo Dirac en el cilindro. Entonces:
-$$\operatorname{sf}(\{T_\lambda\}) = \operatorname{Ind}(D_{\text{APS}}) + \frac{\eta(T_0) - \eta(T_1)}{2},$$
-donde $\operatorname{Ind}(D_{\text{APS}})$ es el índice del problema de valor de frontera
+$$\mathrm{sf}(\{T_\lambda\}) = \mathrm{Ind}(D_{\text{APS}}) + \frac{\eta(T_0) - \eta(T_1)}{2},$$
+donde $\mathrm{Ind}(D_{\text{APS}})$ es el índice del problema de valor de frontera
 de APS, y $\eta(A)$ es el $\eta$-invariante del operador $A$:
-$$\eta(A) = \lim_{s \to 0^+} \sum_{\lambda \ne 0} \operatorname{sgn}(\lambda) |\lambda|^{-s},$$
+$$\eta(A) = \lim_{s \to 0^+} \sum_{\lambda \ne 0} \mathrm{sgn}(\lambda) |\lambda|^{-s},$$
 la suma sobre todos los valores propios no nulos de $A$.
 
 Combinando con B.2:
-$$\kappa(Q) = \operatorname{Ind}(D_{\text{APS}}) + \frac{\eta(T_0) - \eta(T_1)}{2}.$$
+$$\kappa(Q) = \mathrm{Ind}(D_{\text{APS}}) + \frac{\eta(T_0) - \eta(T_1)}{2}.$$
 
 Para $T_1 = I$ (identidad): $\eta(I) = 0$ (todos los valores propios positivos, suma con
 signos $= +\infty$ regularizada $= 0$ por simetría... necesita cuidado). Más precisamente,
@@ -51,11 +51,11 @@ $\eta(I) = \dim H$ en dimensión finita, pero para el camino a $I$ en dimensión
 la convención correcta es $\eta(I) = 0$ por elección del camino de referencia.
 
 **Corolario B.4.** Bajo convenciones estándar:
-$$\kappa(Q) = \operatorname{Ind}(D_{\text{APS}}) + \frac{\eta(T_0)}{2}.$$
+$$\kappa(Q) = \mathrm{Ind}(D_{\text{APS}}) + \frac{\eta(T_0)}{2}.$$
 
-Entonces: **$\kappa(Q) = 0$ si y sólo si $\operatorname{Ind}(D_{\text{APS}}) = -\eta(T_0)/2$.**
+Entonces: **$\kappa(Q) = 0$ si y sólo si $\mathrm{Ind}(D_{\text{APS}}) = -\eta(T_0)/2$.**
 
-En particular, si ambos $\operatorname{Ind}(D_{\text{APS}}) = 0$ y $\eta(T_0) = 0$, entonces $\kappa = 0$.
+En particular, si ambos $\mathrm{Ind}(D_{\text{APS}}) = 0$ y $\eta(T_0) = 0$, entonces $\kappa = 0$.
 
 ---
 
@@ -109,7 +109,7 @@ necesitaríamos una simetría que anticometice el espectro.
 $K: H \to H$ tal que $K T_0 K^{-1} = -T_0$ (anticometización), entonces $\eta(T_0) = 0$.
 
 *Prueba:* $K$ mapea biyectivamente el espectro positivo al negativo y viceversa, con
-igual multiplicidad. La suma $\eta = \sum \operatorname{sgn}(\lambda)|\lambda|^{-s}$
+igual multiplicidad. La suma $\eta = \sum \mathrm{sgn}(\lambda)|\lambda|^{-s}$
 se cancela. $\square$
 
 **Pregunta B.9** (nueva, central). ¿Existe una involución $K$ en $L^2(C_\mathbb{Q})$
@@ -141,7 +141,7 @@ pregunta precisa a resolver en el Frente B.
 **Observación B.11.** Para operadores aritméticos, el $\eta$-invariante se expresa
 frecuentemente en términos de funciones $L$ en puntos especiales. Ejemplos conocidos:
 
-- $\eta(\operatorname{sign}_\Gamma)$ para el operador de signo en una variedad hiperbólica
+- $\eta(\mathrm{sign}_\Gamma)$ para el operador de signo en una variedad hiperbólica
   aritmética expresa combinaciones de valores de funciones $L$ de Dedekind en $s = 0$.
 - El $\eta$-invariante de Dirac en espacios lente se expresa mediante sumas de Dedekind.
 
@@ -149,7 +149,7 @@ frecuentemente en términos de funciones $L$ en puntos especiales. Ejemplos cono
 $$\eta(T_0) = c \cdot \zeta'(0) + d \cdot \log(2\pi)$$
 para algunas constantes $c, d$ que dependen sólo de normalizaciones.
 
-Si $\eta(T_0) \ne 0$ y $\operatorname{Ind}(D_{\text{APS}}) = \eta(T_0)/2$, el corolario
+Si $\eta(T_0) \ne 0$ y $\mathrm{Ind}(D_{\text{APS}}) = \eta(T_0)/2$, el corolario
 B.4 da $\kappa = 0$. Esta sería la prueba de RH vía APS.
 
 El cálculo explícito de $\eta(T_0)$ es el objetivo primario del Frente B.
@@ -160,7 +160,7 @@ El cálculo explícito de $\eta(T_0)$ es el objetivo primario del Frente B.
 
 | Resultado | Estado |
 |---|---|
-| $\operatorname{sf} = \kappa(Q)$ | Probado (Prop. B.2) |
+| $\mathrm{sf} = \kappa(Q)$ | Probado (Prop. B.2) |
 | Fórmula APS para $\kappa$ | Establecida (Cor. B.4) |
 | Simetría $J$ no anticometiza | Probado (Prop. B.7) |
 | Candidata $K = \mathcal{F}$ (Fourier) | Identificada; requiere verificar términos de frontera |

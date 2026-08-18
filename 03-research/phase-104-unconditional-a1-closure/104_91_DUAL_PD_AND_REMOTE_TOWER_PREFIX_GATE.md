@@ -26,22 +26,22 @@ La parte aritmética del funcional posee la forma global cerrada
  \int\varphi u_X\,d\nu
  =\int_{1^-}^{X}
  \left\{x^{-1/2}K(\log x)-{K(0)\over x}\right\}
- d\{J(x)-\operatorname {Li}(x)\},                       \tag{3}
+ d\{J(x)-\mathrm{Li}(x)\},                       \tag{3}
 \]
 
 donde
 
 \[
  dJ=\sum_{p^a}{1\over a}\,\delta_{p^a},\qquad
- d\operatorname {Li}(x)={dx\over\log x}.               \tag{4}
+ d\mathrm{Li}(x)={dx\over\log x}.               \tag{4}
 \]
 
-Como \(d\operatorname {Li}\) tiene masa infinita en \(1^+\), (3) no
+Como \(d\mathrm{Li}\,\) tiene masa infinita en \(1^+\), (3) no
 declara que su diferencia sea una medida de Radon en un entorno de uno.
 La notación significa el funcional impropio regularizado
 
 \[
- \int_{1^-}^Xq\,d(J-\operatorname {Li})
+ \int_{1^-}^Xq\,d(J-\mathrm{Li})
  :=\sum_{p^a\leq X}{q(p^a)\over a}
    -\lim_{\delta\downarrow0}\int_{1+\delta}^X
                   q(x){dx\over\log x},                 \tag{4a}
@@ -153,7 +153,7 @@ La ecuación (10) de 104_89 se escribe, sin separar torres,
 
 \[
  \boxed{u_X(t)=\int_{1^-}^{X}h_x(t)\,
-              d\{J(x)-\operatorname {Li}(x)\}.}        \tag{13}
+              d\{J(x)-\mathrm{Li}(x)\}.}        \tag{13}
 \]
 
 En efecto, el átomo en \(p^a\) tiene masa
@@ -191,7 +191,7 @@ donde \(\varphi_K\) es la densidad única de (10). Entonces
   \mathcal U(K)-
   \int_{1^-}^{X}
   \{x^{-1/2}K(\log x)-K(0)/x\}\,
-  d(J-\operatorname {Li})(x)
+  d(J-\mathrm{Li})(x)
  \right].}                                             \tag{17}
 \]
 
@@ -382,7 +382,7 @@ La consecuencia operativa es doble:
    (35).
 
 El frente restante sigue siendo una cota global específica de la
-discrepancia regularizada \(dJ-d\operatorname {Li}\) de los enteros
+discrepancia regularizada \(dJ-d\mathrm{Li}\,\) de los enteros
 ordinarios.
 
 ## 5. Reproducción

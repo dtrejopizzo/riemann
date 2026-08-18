@@ -41,7 +41,7 @@ The coordinate decomposition
 gives \(\|A\|_\pi\le\sum_{i,j}|a_{ij}|\).
 
 For the reverse inequality, set
-\(b_{ij}=\operatorname{sign}(a_{ij})\).  The bilinear form
+\(b_{ij}=\mathrm{sign}(a_{ij})\).  The bilinear form
 
 \[
  B(x,y)=\sum_{i,j}b_{ij}x_i y_j

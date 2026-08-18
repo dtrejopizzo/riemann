@@ -53,7 +53,7 @@ For an integral effective divisor of degree \(a>0\) on \(C_p\), row A and
 the exact special-module theorem give
 
 \[
- \operatorname{Ext}_{p,r}(a)
+ \mathrm{Ext}_{p,r}(a)
  =\{0,1,\ldots,d_{p,r}(a)-1\},\qquad
  d_{p,r}(a)=ap^r-p+1.                                  \tag{1.1}
 \]
@@ -63,7 +63,7 @@ of the fundamental interval.  Residuation recovers the coefficient of
 each labelled extremal.  Hilbertize the row-A ordered cotangent frame by
 
 \[
- H_{p,r}(a)=\ell^2(\operatorname{Ext}_{p,r}(a)).         \tag{1.2}
+ H_{p,r}(a)=\ell^2(\mathrm{Ext}_{p,r}(a)).         \tag{1.2}
 \]
 
 Since \(d_{p,r}\) increases with \(r\), slope labels define the based
@@ -247,7 +247,7 @@ The correct independent source is the quarter-shift oscillator
 
 \[
  A_\infty e_j=(j+\tfrac14)e_j,qquad
- \operatorname{Tr}(e^{-xA_\infty})={e^{-x/4}\over1-e^{-x}},          \tag{4.4}
+ \mathrm{Tr}(e^{-xA_\infty})={e^{-x/4}\over1-e^{-x}},          \tag{4.4}
 \]
 
 whose heat module gives (4.2) after \(x=2r\).  The digamma identity then

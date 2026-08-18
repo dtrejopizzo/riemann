@@ -12,9 +12,9 @@ The three obstructions:
    (Theorem 1.2 below). The individual poles that $-\zeta'/\zeta(s)$ and $-\zeta'/\zeta(1-s)$
    carry at a zero of $\xi$ cancel *exactly* between the two terms. Consequently $\Phi$'s
    value, and hence its zero set, cannot see the arithmetic data (zeros of $\xi$) that
-   generates $\operatorname{rad}I_{\mathrm{partial}}$ — that data is not merely
+   generates $\mathrm{rad}\,I_{\mathrm{partial}}$ — that data is not merely
    "unrelated," it is provably invisible to $\Phi$.
-2. **Broken mirror symmetry.** $\operatorname{rad}I_{\mathrm{partial}}$'s structure (the
+2. **Broken mirror symmetry.** $\mathrm{rad}\,I_{\mathrm{partial}}$'s structure (the
    task's quoted signature decomposition) is organized entirely around the involution
    $s\mapsto1-s$: the polar block pairs $0$ with $1$, and off-line zeros of $\xi$ contribute
    in mirror pairs $\{\rho,1-\rho\}$. $\Phi$ does **not** respect this involution: $\Phi(1-s)=
@@ -22,7 +22,7 @@ The three obstructions:
    closed form), and $\Phi(\tfrac12)\ne0$ (108_38 Theorem 3.2), so the one point where the
    symmetry is exact is not itself a zero of $\Phi$.
 3. **Polar mismatch.** $\Phi$ has **poles**, not distinguished finite values, at $s=0$ and
-   $s=1$ (Theorem 3.1) — exactly the two points that form $\operatorname{rad}
+   $s=1$ (Theorem 3.1) — exactly the two points that form $\mathrm{rad}
    I_{\mathrm{partial}}$'s non-degenerate hyperbolic (signature $(1,1)$) block. The point
    masses $\delta_0,\delta_1$ are not even in the domain where $\Lambda^0_g$ is finite.
 
@@ -33,13 +33,13 @@ Lemma 2.1 of 108_38 (already established there), and confirmed numerically.
 
 **Stage 0 (given, quoted verbatim in the task, read only in this form):**
 \[
- \operatorname{rad}I_{\mathrm{partial}}=\{f:\ f^{\wedge}(0)=0,\ f^{\wedge}(1)=0,\text{ and }
+ \mathrm{rad}\,I_{\mathrm{partial}}=\{f:\ f^{\wedge}(0)=0,\ f^{\wedge}(1)=0,\text{ and }
  f^{\wedge}(\rho)=0\text{ for every zero }\rho\text{ of }\xi\}.
 \]
 
 **Stage 2 (108_38 Theorem 3.3, read from source):**
 \[
- \operatorname{rad}\Lambda^{0}=\Big\{\textstyle\sum_i\lambda_i\delta_{s_i}:\sum_i\lambda_i=0,\
+ \mathrm{rad}\,\Lambda^{0}=\Big\{\textstyle\sum_i\lambda_i\delta_{s_i}:\sum_i\lambda_i=0,\
  \lambda_i=0\text{ whenever }\Phi(s_i)\ne0\Big\},
 \]
 i.e. spanned by mass-zero combinations of point masses at zeros of
@@ -55,8 +55,8 @@ independently in Lemma 1.1 below, not merely taken on faith).
 $\delta_s\mapsto[D_{f_{s,T}}]$, $T\to\infty$, is eventually built (108_54 constructs one),
 the target space $V$ carries a *fixed* coordinatization, independent of the map:
 $f\mapsto(f^\wedge(0),f^\wedge(1),(f^\wedge(\rho))_\rho)$ (107_241 Lemma 2.2, quoted). For a
-generator $\delta_{s^\ast}-\delta_{s^{\ast\ast}}$ of $\operatorname{rad}\Lambda^0$
-($\Phi(s^\ast)=\Phi(s^{\ast\ast})=0$) to map into $\operatorname{rad}I_{\mathrm{partial}}$,
+generator $\delta_{s^\ast}-\delta_{s^{\ast\ast}}$ of $\mathrm{rad}\,\Lambda^0$
+($\Phi(s^\ast)=\Phi(s^{\ast\ast})=0$) to map into $\mathrm{rad}\,I_{\mathrm{partial}}$,
 *every one* of these coordinates of the image must vanish — in particular the coordinates at
 $0$, at $1$, and at each individual $\rho$. This is a condition on the *target*
 coordinatization and on which $s$-values are singled out by $\Phi=0$; it does not depend on
@@ -105,7 +105,7 @@ full working precision.
 
 > ### Theorem 1.2 (regularity of $\Phi$ at every zero of $\xi$)
 > Let $\rho$ be any zero of $\xi$ (equivalently, any nontrivial zero of $\zeta$), with
-> $0<\operatorname{Re}\rho<1$. Then $\Phi$ is holomorphic at $\rho$ — finite, non-singular —
+> $0<\mathrm{Re}\,\rho<1$. Then $\Phi$ is holomorphic at $\rho$ — finite, non-singular —
 > even though $\zeta'/\zeta(s)$ and $\zeta'/\zeta(1-s)$ individually have simple poles there
 > (at $s=\rho$ and $s=1-\rho$ respectively, or both at $s=\rho$ when $\rho=1-\rho$, which does
 > not occur since $\rho\ne\tfrac12+ik\pi/\log(\cdot)$-type coincidences aside, $\rho\ne1-\rho$
@@ -121,15 +121,15 @@ $0,-1,-2,\ldots$. Hence $\Phi$'s only possible poles are at
  =\{1,2,3,\ldots\}\cup\{0,-2,-4,\ldots\}\cup\{1,3,5,\ldots\},
 \]
 i.e. $\Phi$'s pole set is contained in $\mathbb Z_{\ge0}\cup\{-2,-4,-6,\ldots\}$ — a subset of
-the *real axis*, and in fact of $\{s:\operatorname{Re}(s)\le0\text{ or }\operatorname{Re}(s)
+the *real axis*, and in fact of $\{s:\mathrm{Re}(s)\le0\text{ or }\mathrm{Re}(s)
 \ge1\}$. By the classical zero-free strip for $\zeta$ (Hadamard–de la Vallée Poussin; this is
 unconditional, far short of $\mathrm{RH}$, and used here only for the strip, not for any
 statement about the critical line), every zero $\rho$ of $\xi$ satisfies
-$0<\operatorname{Re}\rho<1$ strictly. Hence $\rho$ is not an integer and not any point of
+$0<\mathrm{Re}\,\rho<1$ strictly. Hence $\rho$ is not an integer and not any point of
 $\Phi$'s pole set, so $\Phi$ is holomorphic at $\rho$. $\blacksquare$
 
 **What this means for Condition III.** The vanishing conditions $f^\wedge(\rho)=0$ that
-generate $\operatorname{rad}I_{\mathrm{partial}}$ are indexed by an intrinsically arithmetic
+generate $\mathrm{rad}\,I_{\mathrm{partial}}$ are indexed by an intrinsically arithmetic
 set — the zeros of $\xi$, tied by the explicit formula (the task's own quoted identity for
 $I_{\mathrm{partial}}$) to the primes. $\Phi$, by Theorem 1.2, does not merely fail to
 privilege this set — it is *analytic and finite* there, carrying no singularity, no
@@ -167,13 +167,13 @@ $D(s)=0\iff\tan(\pi s/2)=\cot(\pi s/2)\iff\tan^2(\pi s/2)=1\iff\tan(\pi s/2)=\pm
 **Consequence.** Within any interval of length $1$ — in particular within $(0,1)$ — the
 symmetry $\Phi(1-s)=\Phi(s)$ holds *only* at $s=\tfrac12$. Combined with 108_38 Theorem 3.2
 ($\Phi(\tfrac12)=-2.230590766\ldots\ne0$), the *unique* point where $\Phi$ could respect the
-involution structuring $\operatorname{rad}I_{\mathrm{partial}}$ is not itself a zero of
+involution structuring $\mathrm{rad}\,I_{\mathrm{partial}}$ is not itself a zero of
 $\Phi$; conversely, the actual zero $s^\ast=0.301692388\ldots\in(0,1)$ is not fixed by
 $s\mapsto1-s$, and its mirror image $1-s^\ast=0.698307612\ldots$ is confirmed numerically to
 satisfy $\Phi(1-s^\ast)=-4.5141568\ldots\ne0$ — so $1-s^\ast$ is *not* a second zero paired
 with $s^\ast$. A mass-zero generator $\delta_{s^\ast}-\delta_{1-s^\ast}$, the natural
-"mirror-pair" shape that would match $\operatorname{rad}I_{\mathrm{partial}}$'s off-line
-planes, is not even a generator of $\operatorname{rad}\Lambda^0$, because $1-s^\ast$ is not a
+"mirror-pair" shape that would match $\mathrm{rad}\,I_{\mathrm{partial}}$'s off-line
+planes, is not even a generator of $\mathrm{rad}\,\Lambda^0$, because $1-s^\ast$ is not a
 zero of $\Phi$ at all.
 
 ## 5. Obstruction 3: the polar points are poles, not generators
@@ -215,7 +215,7 @@ $s\to2$: residue $+2$, distinct from the residue at $s=0,1$. This is recorded on
 verifier uses it as an independent cross-check of the residue-computation method, not because
 it plays any role in the radical comparison.
 
-**Consequence.** $\operatorname{rad}I_{\mathrm{partial}}$'s coordinate description singles
+**Consequence.** $\mathrm{rad}\,I_{\mathrm{partial}}$'s coordinate description singles
 out $s=0,1$ as the two points carrying the *non-radical*, nondegenerate hyperbolic block
 (signature $(1,1)$, per the task's quoted Stage 0 decomposition) — ordinary, finite,
 load-bearing generators of $V$, not radical elements. Whatever the eventual regularized image
@@ -227,7 +227,7 @@ coincidence of normalization: it follows from the same pole mechanism (Theorem 1
 that makes $\Phi$ regular at the zeros of $\xi$ — the poles of the *individual* $\zeta'/\zeta$
 terms at $s=1$ (pole of $\zeta$) and the poles of the digamma terms at $s=0,1$ do **not**
 cancel the way the zeta-zero poles do, precisely because $s=0,1$ sit at the edge of the strip
-where the cancellation mechanism of Theorem 1.2 (relying on $0<\operatorname{Re}\rho<1$
+where the cancellation mechanism of Theorem 1.2 (relying on $0<\mathrm{Re}\,\rho<1$
 *strictly*) does not apply.
 
 ## 6. Obstruction 2, sharpened: the zero in $(0,1)$ is unique and simple, by proof
@@ -280,16 +280,16 @@ $+\infty$ to $-\infty$ on an interval takes every real value, including $0$, **e
 on that interval. Since $\Phi'(s^\ast)<0\ne0$ at that unique zero (Theorem 6.1 again, applied
 at the specific point $s^\ast$), the zero is simple. $\blacksquare$
 
-**Consequence for Obstruction 2.** $\operatorname{rad}\Lambda^0$'s generators supported in the
+**Consequence for Obstruction 2.** $\mathrm{rad}\,\Lambda^0$'s generators supported in the
 principal interval $(0,1)$ form, by Theorem 6.2, a $1$-dimensional space of *coefficients* on
 a single point $\delta_{s^\ast}$ — there is no second, independent zero in $(0,1)$ against
 which $\delta_{s^\ast}$ could be mass-zero-paired. (A single point mass alone is never
-mass-zero unless its coefficient is $0$, so no nonzero element of $\operatorname{rad}\Lambda^0$
+mass-zero unless its coefficient is $0$, so no nonzero element of $\mathrm{rad}\,\Lambda^0$
 is supported in $(0,1)$ alone; every actual radical element touching $s^\ast$ must pair it
 against a zero of $\Phi$ lying outside $(0,1)$ — confirmed to exist numerically in §7 below,
 e.g. near $s\approx1.27$ or $s\approx-1.41$.) In particular the natural
 "reflect-within-the-strip" mirror-pair generator
-$\delta_{s^\ast}-\delta_{1-s^\ast}$ that would need to match $\operatorname{rad}
+$\delta_{s^\ast}-\delta_{1-s^\ast}$ that would need to match $\mathrm{rad}
 I_{\mathrm{partial}}$'s off-line planes is not merely *absent because $1-s^\ast$ happens not to
 be a zero* (§4) — it is **impossible in principle**, because $(0,1)$ contains no second zero of
 $\Phi$ at all, mirror or otherwise. This is a strictly stronger statement than §4 alone
@@ -312,7 +312,7 @@ Answering the task's specific questions, all verified in `108_53_condition_iii_r
   line with $\Phi$'s asymptotic resemblance to $\pi\cot(\pi s/2)$ away from the origin.
 * **Complex zeros?** A grid search over $35$ complex seeds (real part $-1.5$ to $2.3$,
   imaginary part $0.5$ to $5.0$) using Müller's method finds **only real roots** — every
-  converged root has $|\operatorname{Im}(r)|<10^{-40}$. This is reported as a numerical
+  converged root has $|\mathrm{Im}(r)|<10^{-40}$. This is reported as a numerical
   finding over the region searched, **not** a theorem that all zeros of $\Phi$ are real; no
   proof of that stronger statement is attempted or needed here.
 * **At $s=0$ or $1$?** No — these are poles (Theorem 3.1), the opposite of zeros.
@@ -325,26 +325,26 @@ Answering the task's specific questions, all verified in `108_53_condition_iii_r
 > No comparison map $\delta_s\mapsto[D]\in V$ that is compatible with the natural
 > $s$-indexing of both constructions (i.e. under which the coordinate of $[D]$ "at $w$" is
 > determined by evaluation at $w$, per 107_241 Lemma 2.2, and under which $\Phi(s)=0$ is what
-> singles out $\operatorname{rad}\Lambda^0$'s generators, per 108_38 Theorem 3.3 — both fixed,
+> singles out $\mathrm{rad}\,\Lambda^0$'s generators, per 108_38 Theorem 3.3 — both fixed,
 > already-established facts, not choices available to the map) can send a nonzero generator of
-> $\operatorname{rad}\Lambda^0$ into $\operatorname{rad}I_{\mathrm{partial}}$, except at
+> $\mathrm{rad}\,\Lambda^0$ into $\mathrm{rad}\,I_{\mathrm{partial}}$, except at
 > accidental coincidences ruled out or left unmotivated by Theorems 1.2, 2.1, 3.1, 6.2.
 
-**Proof.** A generator of $\operatorname{rad}\Lambda^0$ is (a mass-zero combination of) point
-masses at zeros of $\Phi$. For its image to lie in $\operatorname{rad}I_{\mathrm{partial}}$,
+**Proof.** A generator of $\mathrm{rad}\,\Lambda^0$ is (a mass-zero combination of) point
+masses at zeros of $\Phi$. For its image to lie in $\mathrm{rad}\,I_{\mathrm{partial}}$,
 the image's coordinates at $0$, at $1$, and at every $\rho$ must vanish. By Theorem 1.2,
 $\Phi$ carries no information distinguishing the zeros of $\xi$ from generic points — the
 zero locus of $\Phi$ is fixed by an elementary equation with no reference to $\xi$, $\zeta$'s
 zeros, or the primes, so there is no mechanism forcing correspondence there. By Theorem 3.1,
-the two points $\{0,1\}$ that anchor $\operatorname{rad}I_{\mathrm{partial}}$'s non-radical
+the two points $\{0,1\}$ that anchor $\mathrm{rad}\,I_{\mathrm{partial}}$'s non-radical
 block are poles of $\Phi$ (equal residue $+1$ at both), not candidates for $\Phi(s)=0$ at all
 — so they cannot arise as (finite) zeros of $\Phi$ on the Stage 2 side under any reading. By
-Theorem 2.1, even the *shape* of $\operatorname{rad}\Lambda^0$'s generating set (mass-zero
-combinations, ideally built from mirror pairs $\{\rho,1-\rho\}$ to match $\operatorname{rad}
+Theorem 2.1, even the *shape* of $\mathrm{rad}\,\Lambda^0$'s generating set (mass-zero
+combinations, ideally built from mirror pairs $\{\rho,1-\rho\}$ to match $\mathrm{rad}
 I_{\mathrm{partial}}$'s planes) is unavailable: $\Phi$'s zero set is not symmetric under
 $s\mapsto1-s$ away from the single non-zero fixed point $s=\tfrac12$. By Theorem 6.2 this is
 not a coincidence about $s^\ast$ specifically but forced: $(0,1)$ contains exactly one zero of
-$\Phi$, so no mirror-paired (or any other two-point) generator of $\operatorname{rad}\Lambda^0$
+$\Phi$, so no mirror-paired (or any other two-point) generator of $\mathrm{rad}\,\Lambda^0$
 supported in the principal interval exists to even attempt the comparison. $\blacksquare$
 
 This is a **proved negative closure** of Condition III, not an inability to examine it. It
@@ -367,7 +367,7 @@ $V$-coordinatization (task-supplied, attributed to 107_240 §1,§4 and 107_241 L
 Theorem 3.1); 108_38 Theorem 3.3 (Stage 2's radical), Lemma 2.1, Theorem 3.1/3.2, Corollary
 3.4 (used as the starting numerical evidence that Theorem 6.2 upgrades to a proof, not
 re-proved independently of that upgrade); the classical zero-free strip
-$0<\operatorname{Re}\rho<1$ for zeros of $\xi$ (Hadamard–de la Vallée Poussin, unconditional,
+$0<\mathrm{Re}\,\rho<1$ for zeros of $\xi$ (Hadamard–de la Vallée Poussin, unconditional,
 not $\mathrm{RH}$); the trigamma duplication formula $\psi_1(z)+\psi_1(z+\tfrac12)=4\psi_1(2z)$
 (standard, obtained by differentiating the digamma duplication formula once).
 

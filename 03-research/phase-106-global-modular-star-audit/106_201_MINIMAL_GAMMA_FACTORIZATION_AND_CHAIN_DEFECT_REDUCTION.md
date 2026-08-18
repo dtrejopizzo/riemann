@@ -30,7 +30,7 @@ Let \(D\) be a complex vector space and let
 be linear maps into Hilbert spaces.  Call the realization minimal if
 
 \[
- H_j=\overline{\operatorname {span}G_j(D)}.
+ H_j=\overline{\mathrm{span}\,G_j(D)}.
 \tag{2}
 \]
 
@@ -139,7 +139,7 @@ Let
 
 \[
  H_{\Gamma,Q}^{\rm exp}
- =\overline{\operatorname {Ran}\mathcal G_{\Gamma,Q}}
+ =\overline{\mathrm{Ran}\,\mathcal G_{\Gamma,Q}}
  \subset L^2((0,\infty),du;\mathscr K_Q).
 \tag{12}
 \]
@@ -238,7 +238,7 @@ cokernels.  Equation (17) proves the assertion. \(\square\)
 On the common Hardy boundary sector, 106.172 proves
 
 \[
- \operatorname {FP}_{s\downarrow1/2}\|B_sF\|^2
+ \mathrm{FP}_{s\downarrow1/2}\|B_sF\|^2
  +\|B_\infty F\|^2=0,
  \qquad
  B_\infty^*B_\infty=\kappa_\infty I.

@@ -7,7 +7,7 @@ the relative-dimension-one sense.  Its generic fibre is a projective
 surface \(Y_T/\mathbb Q\), so a regular proper model
 
 \[
- \mathcal Y_T\longrightarrow\operatorname{Spec}\mathbb Z
+ \mathcal Y_T\longrightarrow\mathrm{Spec}\,\mathbb Z
 \]
 
 has relative dimension two and total Krull dimension three.  Therefore
@@ -55,7 +55,7 @@ The direct Route A target must contain all of the following data:
 
 1. a normal geometrically connected projective surface
    \(Y_T/\mathbb Q\);
-2. a regular proper model \(\mathcal Y_T/\operatorname{Spec}\mathbb Z\)
+2. a regular proper model \(\mathcal Y_T/\mathrm{Spec}\,\mathbb Z\)
    of relative dimension two;
 3. an integrable metrized line bundle \(\overline M_f\);
 4. a fixed nef and big metrized polarization \(\overline H_T\);

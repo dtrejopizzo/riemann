@@ -102,7 +102,7 @@ of the same family, with $\widehat f(0),\widehat f(1)$ both nonzero:
 Note that $N$ changes sign across the family: the middle and last probes have
 $N>0$, which is *not* a violation of Connes' criterion, because neither lies in
 $\mathcal D^\circ$ — for them the positive polar term
-$2\operatorname{Re}[\widehat f(0)\overline{\widehat f(1)}]$ dominates. Only the
+$2\mathrm{Re}[\widehat f(0)\overline{\widehat f(1)}]$ dominates. Only the
 first probe satisfies the two side conditions, and it is the one with
 $\mathfrak T<0$. That is exactly the behaviour the criterion predicts, and it
 is a check on the coordinate identification of Theorem 1.1.
@@ -202,7 +202,7 @@ By the contrapositive of (2), $\mathfrak s(y,y)\le0$. $\square$
 >    every $\rho$ — i.e. $y$ is $x$ with the polar coordinates deleted and the
 >    zero coordinates untouched;
 > 2. consequently
->    $$\mathfrak s(y,y)=\mathfrak s(x,x)-2\operatorname{Re}\bigl[\widehat x(0)\overline{\widehat x(1)}\bigr]
+>    $$\mathfrak s(y,y)=\mathfrak s(x,x)-2\mathrm{Re}\,\bigl[\widehat x(0)\overline{\widehat x(1)}\bigr]
 >    =-\sum_\rho m_\rho\widehat x(\rho)\overline{\widehat x(\rho')};$$
 > 3. hypothesis (2) of Lemma 3.1 is **logically equivalent** to
 >    $$\mathfrak s(z,z)\le0\quad\text{for all }z\text{ with }\widehat z(0)=\widehat z(1)=0,$$

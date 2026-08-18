@@ -157,7 +157,7 @@ D.185 improves every reference inverse occurring in \(q\) and \(h\).
 Equation (0.3), however, requires the source-derived factorization
 
 \[
- q\in\operatorname {Ran}D^{1/2}                     \tag{4.3}
+ q\in\mathrm{Ran}\,D^{1/2}                     \tag{4.3}
 \]
 
 with the sharp norm budget.  PNT bounds, finite rank, or common-energy

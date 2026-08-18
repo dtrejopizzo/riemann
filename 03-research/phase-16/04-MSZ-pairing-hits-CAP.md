@@ -10,15 +10,15 @@ wrong-sign capstone (CAP).** French proposal: **Pillar 2 REJECTED.**
 ---
 
 ## 1. Arbiter test of the French MSZ proposal
-The proposal claims (its "Theorem"): the Gram matrix of Eisenstein residues $\Psi_\rho=\operatorname{Res}_{s=\rho/2}E(s)$
-in the MSZ pairing is **diagonal** with signs $\varepsilon_\rho=\operatorname{sign}(\operatorname{Im}\rho)$ ($+1$
+The proposal claims (its "Theorem"): the Gram matrix of Eisenstein residues $\Psi_\rho=\mathrm{Res}_{s=\rho/2}E(s)$
+in the MSZ pairing is **diagonal** with signs $\varepsilon_\rho=\mathrm{sign}(\mathrm{Im}\,\rho)$ ($+1$
 on-line, $-1$ off-line) and index $\kappa$, reproducing $Q$. **Red flag (pre-computation):**
-$\operatorname{sign}(\operatorname{Im}\rho)=\operatorname{sign}(\gamma_\rho)$ distinguishes $\gamma>0$ from $\gamma<0$
+$\mathrm{sign}(\mathrm{Im}\,\rho)=\mathrm{sign}(\gamma_\rho)$ distinguishes $\gamma>0$ from $\gamma<0$
 (complex-conjugate zeros), **not** on-line from off-line — an off-line zero with $\gamma>0$ still has
-$\operatorname{sign}(\operatorname{Im}\rho)=+1$. So the proposed $\varepsilon_\rho$ cannot be the $\kappa$-detector.
+$\mathrm{sign}(\mathrm{Im}\,\rho)=+1$. So the proposed $\varepsilon_\rho$ cannot be the $\kappa$-detector.
 
 **Executed (correcting their Step-2 formula, which omitted the divergence).** In the cusp, $\Psi_\rho\sim R_\rho
-y^{1-\rho/2}$, $R_\rho=\operatorname{Res}_{s=\rho/2}\varphi=\xi(\rho-1)/(2\xi'(\rho))$. The regularized pairing is the
+y^{1-\rho/2}$, $R_\rho=\mathrm{Res}_{s=\rho/2}\varphi=\xi(\rho-1)/(2\xi'(\rho))$. The regularized pairing is the
 Hadamard finite part of a divergent integral:
 $$
 \langle\Psi_\rho,\Psi_\sigma\rangle_{\mathrm{MSZ}}=R_\rho\overline{R_\sigma}\cdot\mathrm{FP}_{T\to\infty}\!\int_1^T
@@ -33,7 +33,7 @@ regularization-dependent.)* Results (`pillar2_MSZ_gram.py`, `pillar2_MSZ_signatu
 - **Diagonal all one sign** ($-$), independent of any on/off-line distinction $\Rightarrow$ not $\varepsilon_\rho$.
 - **Signature constant:** all $8$ eigenvalues $<0$ ($-1.165,\dots,-0.303$). The form is **negative-definite**.
 
-**Why negative-definite:** $G=-D\,K\,D^*$ with $D=\operatorname{diag}(R_\rho)$ and $K_{\rho\sigma}=1/(\tfrac12-i
+**Why negative-definite:** $G=-D\,K\,D^*$ with $D=\mathrm{diag}(R_\rho)$ and $K_{\rho\sigma}=1/(\tfrac12-i
 (\gamma_\rho-\gamma_\sigma)/2)$ a **positive-definite (Bochner) kernel** ($1/(c-i(x-y))=\int_0^\infty e^{-ct}e^{ixt}
 \overline{e^{iyt}}\,dt$). So $G\preceq0$ **regardless of RH** — constant signature, $\kappa$ undetectable.
 

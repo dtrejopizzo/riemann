@@ -8,7 +8,8 @@ remaining finite assertion is the single coupled estimate
 \[
  \boxed{
  \beta_L^+
- :=\inf_{\substack{g\perp q_L^+\\g\ {m even}\\\|g\|_2=1}}
+ :=\inf_{\substack{g\perp q_L^+\\g\ {
+m even}\\\|g\|_2=1}}
  \left[
   \mathcal D_{p,N}(g,g)+\mathcal D_\Gamma(g,g)
   +2|\langle h_L,g\rangle|^2-\kappa_N
@@ -116,7 +117,7 @@ The full-kernel identity of 106.31 is
 
 \[
  QW(Kr,Kr)
- =\mathscr E_K(r)-\frac12\operatorname {Var}_{\mu_K}(r).
+ =\mathscr E_K(r)-\frac12\mathrm{Var}_{\mu_K}(r).
  \tag{9}
 \]
 
@@ -140,7 +141,7 @@ extended form domain,
 \[
  \boxed{
  \mathscr E_K(r_j)
- =\frac12\operatorname {Var}_{\mu_K}(r_j)
+ =\frac12\mathrm{Var}_{\mu_K}(r_j)
  \qquad(j\ge1).}
  \tag{12}
 \]
@@ -154,7 +155,7 @@ The equality family (12) is infinite-dimensional.
 Suppose a proposed proof of the sharp all-prime inequality has the form
 
 \[
- \mathscr E_K(r)-\frac12\operatorname {Var}_{\mu_K}(r)
+ \mathscr E_K(r)-\frac12\mathrm{Var}_{\mu_K}(r)
  =\sum_{\alpha}\mathcal S_\alpha(r),
  \qquad \mathcal S_\alpha(r)\ge0,
  \tag{13}

@@ -199,7 +199,7 @@ on the primitive realization.  Equivalently, with
 
 \[
  \mathcal Qf=(r_0(f),C_T^{1/2}z(f)),
- \qquad J=\operatorname{diag}(I,-I),                       \tag{4.2}
+ \qquad J=\mathrm{diag}(I,-I),                       \tag{4.2}
 \]
 
 \[

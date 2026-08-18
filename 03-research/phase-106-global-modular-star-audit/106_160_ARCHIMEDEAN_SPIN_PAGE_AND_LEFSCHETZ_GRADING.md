@@ -34,7 +34,7 @@ For every \(u>0\), \(e^{-uN_\Gamma}\) is positive and trace class, and
 
 \[
  \boxed{
- \operatorname {Tr}_{\mathcal H_\Gamma}(e^{-uN_\Gamma})
+ \mathrm{Tr}_{\mathcal H_\Gamma}(e^{-uN_\Gamma})
  =\frac{e^{-u/2}}{1-e^{-2u}}.}                    \tag{3}
 \]
 
@@ -43,7 +43,7 @@ For every \(u>0\), \(e^{-uN_\Gamma}\) is positive and trace class, and
 The spectrum in (2) is positive and discrete.  Therefore
 
 \[
- \operatorname {Tr}(e^{-uN_\Gamma})
+ \mathrm{Tr}(e^{-uN_\Gamma})
  =\sum_{m\ge0}e^{-(2m+1/2)u}
  =e^{-u/2}\sum_{m\ge0}e^{-2mu},
 \]
@@ -71,7 +71,7 @@ Then
 
 \[
  \boxed{
- \operatorname {Tr}_{\mathcal H^{\rm triv}}(e^{-uN_{\rm triv}})
+ \mathrm{Tr}_{\mathcal H^{\rm triv}}(e^{-uN_{\rm triv}})
  =2\cosh(u/2).}                                   \tag{5}
 \]
 
@@ -86,8 +86,8 @@ Combining (3), (5), and the Tate-prime atoms gives the exact signed source
 \boxed{
  d\sigma(u)=
  \sum_{p,k\ge1}\log p\,p^{-k/2}\delta_{k\log p}(du)
- +\operatorname {Tr}(e^{-uN_\Gamma})\,du
- -\operatorname {Tr}(e^{-uN_{\rm triv}})\,du.}     \tag{6}
+ +\mathrm{Tr}(e^{-uN_\Gamma})\,du
+ -\mathrm{Tr}(e^{-uN_{\rm triv}})\,du.}     \tag{6}
 \]
 
 Equation (6) is the operator-graded version of the compensated source in
@@ -100,8 +100,8 @@ not eigenstates of the desired global \(H^1\).  A Lefschetz formula has the
 direction
 
 \[
- \operatorname {Tr}(H^0)-\operatorname {Tr}(H^1)
- +\operatorname {Tr}(H^2)
+ \mathrm{Tr}(H^0)-\mathrm{Tr}(H^1)
+ +\mathrm{Tr}(H^2)
  =\sum_{\text{fixed fibres}}\text{local index}.    \tag{7}
 \]
 
@@ -161,14 +161,14 @@ and the actual target is the mapping fibre
 
 \[
  \mathfrak C_{\rm glue}
- :=\operatorname {Fib}(\partial_{\rm gl}).          \tag{11}
+ :=\mathrm{Fib}(\partial_{\rm gl}).          \tag{11}
 \]
 
 Restriction to the fixed fibres is expected to define, only after this
 boundary map is constructed, a localization morphism
 
 \[
- \operatorname {Loc}:\mathfrak C_{\rm CCM}
+ \mathrm{Loc}:\mathfrak C_{\rm CCM}
  \longrightarrow\mathfrak C_{\rm glue}.             \tag{12}
 \]
 
@@ -177,9 +177,9 @@ The sought polarization theorem has now the concrete form
 \[
  \boxed{
  \begin{aligned}
- &H^1(\operatorname {Loc})\text{ is injective},\\
+ &H^1(\mathrm{Loc})\text{ is injective},\\
  &\Omega_{\rm CCM}(c,\star_{\rm ar}c)
-   =\|H^1(\operatorname {Loc})[c]\|^2_{\rm glue}.
+   =\|H^1(\mathrm{Loc})[c]\|^2_{\rm glue}.
  \end{aligned}}                                    \tag{13}
 \]
 

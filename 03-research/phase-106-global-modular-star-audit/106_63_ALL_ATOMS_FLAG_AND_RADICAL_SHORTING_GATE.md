@@ -43,7 +43,7 @@ jets when a zero is multiple, and define the synthesis map
 The identities in 106.43 give
 
 \[
- \operatorname {ran}Z_d\subset(1\oplus\mathcal R)^\perp. \tag{3}
+ \mathrm{ran}\,Z_d\subset(1\oplus\mathcal R)^\perp. \tag{3}
 \]
 
 For a prime power \(m\), put \(u_m=\log m\),
@@ -185,7 +185,7 @@ Let
 For the complete ordinary-prime--Gamma energy the radical identity is
 
 \[
- \mathscr E_K(r_j)-\frac12\operatorname {Var}_{\mu_K}(r_j)=0. \tag{16}
+ \mathscr E_K(r_j)-\frac12\mathrm{Var}_{\mu_K}(r_j)=0. \tag{16}
 \]
 
 Let \(S\) be any proper set of prime powers whose omitted energy is
@@ -193,7 +193,7 @@ nonzero.  Atomwise subtraction gives
 
 \[
 \begin{aligned}
- \mathscr E_S(r_j)-\frac12\operatorname {Var}_{\mu_K}(r_j)
+ \mathscr E_S(r_j)-\frac12\mathrm{Var}_{\mu_K}(r_j)
  &=-\sum_{m\notin S}\frac{\Lambda(m)}{\sqrt m}
        \mathcal J_{\log m}(r_j)\\
  &<0.                                                  \tag{17}
@@ -212,7 +212,7 @@ form domain
 
 \[
  \mathcal A_S(q)=\mathscr E_S(q)
- -\frac12\operatorname {Var}_{\mu_K}(q).             \tag{18}
+ -\frac12\mathrm{Var}_{\mu_K}(q).             \tag{18}
 \]
 
 For every proper finite head \(S\), every \(q\) for which \(q,r_j\) lie

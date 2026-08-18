@@ -229,7 +229,7 @@ $$F_n(z) = G_{n+1,n+1}(z) - G_{n,n}(z) \approx \frac{W_n(\gamma_n)}{P_n(\gamma_n
 
 El residuo del pseudo-polo es:
 
-$$\operatorname{Res}_{z=\gamma_n} F_n = \frac{W_n(\gamma_n)}{P_n(\gamma_n)P_{n+1}(\gamma_n) \cdot m'_\infty(\gamma_n)}.$$
+$$\mathrm{Res}_{z=\gamma_n} F_n = \frac{W_n(\gamma_n)}{P_n(\gamma_n)P_{n+1}(\gamma_n) \cdot m'_\infty(\gamma_n)}.$$
 
 Para estimar el denominador: $|P_n(\gamma_n)| \approx C\gamma_n^{-1/4}n^{-1/4}|\cos(\cdots)|$. Genericamente (cuando el coseno no es cero), $|P_n(\gamma_n)P_{n+1}(\gamma_n)| \sim C^2 \gamma_n^{-1/2} n^{-1/2}$.
 
@@ -237,7 +237,7 @@ Y $m'_\infty(\gamma_n) = -\int (s - \gamma_n)^{-2} dm_\infty(s) \sim -\gamma_n^{
 
 Por tanto el residuo es de orden
 
-$$\operatorname{Res} \sim \frac{\gamma_n^{-1/2} n^{-1/2} (\log n)^{-1/2}}{\gamma_n^{-1/2} n^{-1/2} \cdot \gamma_n^{-2}} \sim \gamma_n^2 (\log n)^{-1/2}.$$
+$$\mathrm{Res} \sim \frac{\gamma_n^{-1/2} n^{-1/2} (\log n)^{-1/2}}{\gamma_n^{-1/2} n^{-1/2} \cdot \gamma_n^{-2}} \sim \gamma_n^2 (\log n)^{-1/2}.$$
 
 ### 7.2. Enunciado del PPP probado asintóticamente
 

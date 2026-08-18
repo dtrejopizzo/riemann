@@ -67,7 +67,7 @@ is positive.
 RH is then equivalent to the single remaining statement: the \textbf{signature theorem} --- that the pairing has
 no negative directions beyond the (removed) primitive ones, i.e.\ $\langle D,D\rangle\ge0$ for $D\in\Pi^\perp$
 (Lemma~\ref{lem:index}). In Weil's proof this is supplied, for free, by the \emph{general} Hodge index theorem on
-the surface $C\times C$; for $\operatorname{Spec}\mathbb Z$ no such general theorem is known, and supplying it is
+the surface $C\times C$; for $\mathrm{Spec}\,\mathbb Z$ no such general theorem is known, and supplying it is
 exactly RH.
 \end{theorem}
 \begin{proof}
@@ -78,9 +78,9 @@ surfaces; here it is the only missing input, RH-equivalent by Proposition~\ref{p
 \end{proof}
 
 > **What M3b establishes (documented).** Every ingredient of Weil's proof is present and proved for
-> $\operatorname{Spec}\mathbb Z$ except one: the *general* Hodge-index signature theorem. In the function-field
+> $\mathrm{Spec}\,\mathbb Z$ except one: the *general* Hodge-index signature theorem. In the function-field
 > case that theorem is the decisive $I_{2b}$ input (a general theorem holding for all surfaces). For
-> $\operatorname{Spec}\mathbb Z$ it is the capstone --- precisely the object the discriminator $D_0$ predicted would
+> $\mathrm{Spec}\,\mathbb Z$ it is the capstone --- precisely the object the discriminator $D_0$ predicted would
 > be missing. M3b does not cross it; it pins it as the unique gap.
 
 ## 3. The unification — M3 is the analytic frontier of P18 (new content, proved)
@@ -170,7 +170,7 @@ semiboundedness modulo $\log$ and the clean index off a super-sparse set (Cor.~\
 \item \textbf{Not proved (the capstone $=$ RH):} the signature theorem $\langle D,D\rangle\ge0$ for all
 $D\in\Pi^\perp$, equivalently the uniform high-frequency form factor, equivalently $\delta_\infty>0$. This single
 statement is RH. In the function-field case it is supplied by the general Hodge index theorem on a surface; for
-$\operatorname{Spec}\mathbb Z$ no such surface/theorem is known, and the program established (the discriminator
+$\mathrm{Spec}\,\mathbb Z$ no such surface/theorem is known, and the program established (the discriminator
 $D_0$; the finitization obstruction under Linear Independence, P15) that no currently available structure supplies
 it.
 \end{itemize}

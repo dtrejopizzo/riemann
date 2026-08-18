@@ -57,7 +57,7 @@ Esta suma sobre otros ceros $\rho \neq s_0$ no es cero en general. La condición
 
 La inclusión directa $C_\infty(t_0) = 0 \Rightarrow \Xi(t_0) = 0$ (Teorema 2, Doc 19) se probó via el argumento espectral: los ceros del operador $J_\infty$ deben ser ceros de $\Xi$ (pues la medida espectral $\mu_\infty = \mu_\gamma^{real}$ tiene soporte en ceros de $\Xi$).
 
-**Proposición 2** (hay "pocos" ceros de $\Xi$ que no son ceros de $C_\infty$). Por el Teorema C1 (Doc 17): $\operatorname{spec}(J_\infty) = \{$ceros reales de $C_\infty\}$. Por la convergencia débil (Doc 15): $\mu_\infty = \mu_\gamma^{real}$ tiene densidad $\frac{1}{2\pi}\log(T/2\pi)$ en $[0,T]$.
+**Proposición 2** (hay "pocos" ceros de $\Xi$ que no son ceros de $C_\infty$). Por el Teorema C1 (Doc 17): $\mathrm{spec}(J_\infty) = \{$ceros reales de $C_\infty\}$. Por la convergencia débil (Doc 15): $\mu_\infty = \mu_\gamma^{real}$ tiene densidad $\frac{1}{2\pi}\log(T/2\pi)$ en $[0,T]$.
 
 Luego: el número de ceros de $C_\infty$ en $[0,T]$ es $N_{C_\infty}(T) = N_\Xi^{real}(T) + O(\log T)$, donde $N_\Xi^{real}(T)$ es el número de ceros de $\Xi$ en $[0,T]$.
 
@@ -103,17 +103,17 @@ Bajo RH: $z_n = \gamma_n \in \mathbb{R}$, $|\rho_n| = \sqrt{1/4+\gamma_n^2}$. El
 
 **Definición.** Decimos que el operador $J_\infty$ tiene **espectro completo** si:
 
-$$\operatorname{spec}(J_\infty) \supseteq \{\gamma_n : \gamma_n \in \mathbb{R}\} \quad (\text{todos los ceros reales de }\Xi).$$
+$$\mathrm{spec}(J_\infty) \supseteq \{\gamma_n : \gamma_n \in \mathbb{R}\} \quad (\text{todos los ceros reales de }\Xi).$$
 
-(La inclusión opuesta, $\operatorname{spec}(J_\infty) \subseteq \{\gamma_n\}$, ya se tiene del Teorema 2 del Doc 19.)
+(La inclusión opuesta, $\mathrm{spec}(J_\infty) \subseteq \{\gamma_n\}$, ya se tiene del Teorema 2 del Doc 19.)
 
 **Proposición 4** (la completitud del espectro es equivalente a RH). El operador $J_\infty$ tiene espectro completo si y solo si RH es cierta.
 
 *Prueba.* 
 
-($\Rightarrow$) Si $J_\infty$ tiene espectro completo: $\operatorname{spec}(J_\infty) = \{\gamma_n : \gamma_n \in \mathbb{R}\}$. La medida espectral $\mu_\infty$ tiene soporte = todos los ceros reales de $\Xi$. Por Doc 15: $\mu_\infty = \mu_\gamma^{real}$ = medida de ceros reales. Si $\operatorname{spec}(J_\infty) = \{\gamma_n\}$ = todos los $\gamma_n$ (incluyendo los no-reales): los $\gamma_n$ son todos reales: RH.
+($\Rightarrow$) Si $J_\infty$ tiene espectro completo: $\mathrm{spec}(J_\infty) = \{\gamma_n : \gamma_n \in \mathbb{R}\}$. La medida espectral $\mu_\infty$ tiene soporte = todos los ceros reales de $\Xi$. Por Doc 15: $\mu_\infty = \mu_\gamma^{real}$ = medida de ceros reales. Si $\mathrm{spec}(J_\infty) = \{\gamma_n\}$ = todos los $\gamma_n$ (incluyendo los no-reales): los $\gamma_n$ son todos reales: RH.
 
-Pero la completitud dice $\operatorname{spec}(J_\infty) \supseteq \{\gamma_n \in \mathbb{R}\}$, no que $\operatorname{spec}(J_\infty) \supseteq \{\text{todos los }\gamma_n\}$. Para RH necesitamos que si $\zeta$ tiene ceros $\rho$ fuera de la recta crítica, esos $\rho$ generen ceros de $C_\infty$ en $\mathbb{R}$ que están en $\operatorname{spec}(J_\infty)$ pero no en $\{\gamma_n \text{ reales}\}$ — contradiciendo $\mu_\infty = \mu_\gamma^{real}$.
+Pero la completitud dice $\mathrm{spec}(J_\infty) \supseteq \{\gamma_n \in \mathbb{R}\}$, no que $\mathrm{spec}(J_\infty) \supseteq \{\text{todos los }\gamma_n\}$. Para RH necesitamos que si $\zeta$ tiene ceros $\rho$ fuera de la recta crítica, esos $\rho$ generen ceros de $C_\infty$ en $\mathbb{R}$ que están en $\mathrm{spec}(J_\infty)$ pero no en $\{\gamma_n \text{ reales}\}$ — contradiciendo $\mu_\infty = \mu_\gamma^{real}$.
 
 ($\Leftarrow$) Bajo RH: todos los $\gamma_n \in \mathbb{R}$, luego $\{\gamma_n \in \mathbb{R}\} = \{\gamma_n\}$ = todos los ceros de $\Xi$ en el semieje real. El espectro de $J_\infty$ es $\{\gamma_n\}$ (probado bajo RH en Doc 09). ✓ $\square$
 
@@ -129,7 +129,7 @@ Pero la completitud dice $\operatorname{spec}(J_\infty) \supseteq \{\gamma_n \in
 
 (c) La contribución extra de $\rho_0$ a $C_\infty$ genera nulos de $C_\infty$ en posiciones $t_k \approx \pi(2k+1)/(2\omega_0)$ que, en general, NO son $\gamma_n$ para ningún $n$.
 
-(d) Esos $t_k \in \operatorname{spec}(J_\infty)$ (Teorema C1, Doc 17), luego $t_k \in \operatorname{supp}(\mu_\infty)$.
+(d) Esos $t_k \in \mathrm{spec}(J_\infty)$ (Teorema C1, Doc 17), luego $t_k \in \mathrm{supp}(\mu_\infty)$.
 
 (e) Pero $\mu_\infty = \mu_\gamma^{real}$ (Doc 15) tiene soporte solo en $\{\gamma_n\}$. Si los $t_k \notin \{\gamma_n\}$: contradicción.
 
@@ -197,7 +197,7 @@ donde $C_\infty^{reg}$ es el potencial $C_\infty$ con la regularización de Abel
 
 **Crítica de la Proposición 7.** La regularización $C_\infty^{reg}$ vs. $C_\infty$ es crucial. La Proposición 7 dice que la regularización SE anula en $\gamma_n$, no que la función literal $C_\infty$ se anule. La regularización extrae el polo divergente de $\Psi$ en $\rho_n$, y lo que queda es 0. Luego los "ceros" de $C_\infty^{reg}$ incluyen a $\gamma_n$ por construcción de la regularización.
 
-**¿Es la regularización la que define los "ceros de $C_\infty$"?** Si la definición correcta de $\operatorname{spec}(J_\infty) = \{$ceros de $C_\infty^{reg}\}$ incluye los $\gamma_n$ por la regularización: entonces la inclusión inversa (Inc. Inv.) se verifica por definición — lo que es circular (se está definiendo los ceros de $C_\infty^{reg}$ para que incluyan los $\gamma_n$).
+**¿Es la regularización la que define los "ceros de $C_\infty$"?** Si la definición correcta de $\mathrm{spec}(J_\infty) = \{$ceros de $C_\infty^{reg}\}$ incluye los $\gamma_n$ por la regularización: entonces la inclusión inversa (Inc. Inv.) se verifica por definición — lo que es circular (se está definiendo los ceros de $C_\infty^{reg}$ para que incluyan los $\gamma_n$).
 
 **El argumento riguroso.** La definición correcta de ceros de $C_\infty$ en el Teorema C1 (Doc 17) es via el límite no-tangencial $\lim_{\eta\to 0^+}C_\infty(t+i\eta) = 0$. Este límite:
 
@@ -217,13 +217,13 @@ La suma completa $\lim_{\eta\to 0^+}C_\infty(\gamma_n+i\eta)$ es la suma de infi
 
 (i) RH.
 
-(ii) El operador $J_\infty$ tiene espectro completo: $\operatorname{spec}(J_\infty) = \{\gamma_n\}$ (todos los ceros de $\Xi$, que bajo RH son todos reales).
+(ii) El operador $J_\infty$ tiene espectro completo: $\mathrm{spec}(J_\infty) = \{\gamma_n\}$ (todos los ceros de $\Xi$, que bajo RH son todos reales).
 
 (iii) La convergencia débil $\mu_\xi^\lambda \Rightarrow \mu_\gamma$ (medida completa de ceros de $\Xi$) es incondicional.
 
 *Prueba.* (i) $\Rightarrow$ (ii): bajo RH, todos los $\gamma_n \in \mathbb{R}$ y el espectro de $J_\infty$ converge a $\{\gamma_n\}$ (Doc 09). ✓
 
-(ii) $\Rightarrow$ (iii): si $\operatorname{spec}(J_\infty) = \{\gamma_n\}$, la medida $\mu_\infty = \mu_\gamma$ — la distribución completa de ceros de $\Xi$ — que tiene soporte real (bajo (i)). La convergencia $\mu_\xi^\lambda \Rightarrow \mu_\infty = \mu_\gamma$ es incondicional (de la convergencia del Doc 15). ✓
+(ii) $\Rightarrow$ (iii): si $\mathrm{spec}(J_\infty) = \{\gamma_n\}$, la medida $\mu_\infty = \mu_\gamma$ — la distribución completa de ceros de $\Xi$ — que tiene soporte real (bajo (i)). La convergencia $\mu_\xi^\lambda \Rightarrow \mu_\infty = \mu_\gamma$ es incondicional (de la convergencia del Doc 15). ✓
 
 (iii) $\Rightarrow$ (i): si $\mu_\xi^\lambda \Rightarrow \mu_\gamma$ con $\mu_\gamma$ soportada en $\mathbb{R}$ (soporte real, pues $t_n^{(\lambda)} \in \mathbb{R}$ para todo $\lambda$): todos los ceros de $\Xi$ son reales: RH. ✓ $\square$
 

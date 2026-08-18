@@ -12,7 +12,7 @@ Let
 For a finite set \(S\) of rational primes, put
 
 \[
- U_S=\operatorname{Spec}\mathbb Z\setminus S.
+ U_S=\mathrm{Spec}\,\mathbb Z\setminus S.
 \]
 
 If \(S\subset T\), then \(U_T\subset U_S\).  On \(\mathcal H\), every
@@ -84,7 +84,7 @@ satisfy
 and glue uniquely to \((a/z_p)e_S=(b/z_q)e_S\).
 
 Hence \(\mathscr L\) is an invertible spectral determinant-line sheaf
-on \(\operatorname{Spec}\mathbb Z\) with coefficients in
+on \(\mathrm{Spec}\,\mathbb Z\) with coefficients in
 \(\mathcal O(\mathcal H)\).
 
 ## 4. Canonical section and generic completion
@@ -114,7 +114,7 @@ cofinal product over all primes, (4.1) is
 ## 5. Exact scope
 
 This constructs a genuine rank-one sheaf on the arithmetic **curve**
-\(\operatorname{Spec}\mathbb Z\), using the actual semilocal
+\(\mathrm{Spec}\,\mathbb Z\), using the actual semilocal
 restrictions.  It is spectral-parameter-valued and its completed generic
 section is \(\xi\).
 

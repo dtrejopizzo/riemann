@@ -62,7 +62,7 @@ Choose smooth even cutoffs \(\chi_a\) satisfying
  \qquad
  \chi_a=1\ \text{on }[-a+1,a-1],
  \qquad
- \operatorname{supp}\chi_a\subset[-a,a],
+ \mathrm{supp}\,\chi_a\subset[-a,a],
 \tag{5}
 \]
 
@@ -276,7 +276,7 @@ It follows from (21) that, after changing \(C,M,c\) once, every unit vector
 in
 
 \[
- V_a^+=\operatorname{span}\{v_{0,a},v_{2,a}\}
+ V_a^+=\mathrm{span}\,\{v_{0,a},v_{2,a}\}
 \tag{23}
 \]
 
@@ -284,7 +284,7 @@ has Weil Rayleigh quotient at most \(\varepsilon_L\) in absolute value, and
 the same holds on the odd line
 
 \[
- V_a^-=\operatorname{span}\{v_{1,a}\}.
+ V_a^-=\mathrm{span}\,\{v_{1,a}\}.
 \tag{24}
 \]
 

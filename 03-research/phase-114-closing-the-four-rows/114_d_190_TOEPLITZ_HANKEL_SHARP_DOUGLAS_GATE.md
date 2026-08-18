@@ -140,7 +140,7 @@ Let
 
 and let \(\Pi_T\) be the orthogonal projection onto \(\ker M_T\).  These
 are exactly the two primitive moments identified with the two Tate jets in
-D.137.  Put \(F_T=I-\Pi_T\).  Then \(\operatorname{rank}F_T\le2\), and
+D.137.  Put \(F_T=I-\Pi_T\).  Then \(\mathrm{rank}\,F_T\le2\), and
 
 \[
  \Pi_TQ_T\Pi_T-Q_T=-F_TQ_T-Q_TF_T+F_TQ_TF_T.         \tag{2.2}
@@ -149,7 +149,7 @@ D.137.  Put \(F_T=I-\Pi_T\).  Then \(\operatorname{rank}F_T\le2\), and
 On any finite-energy spectral regularization, (2.2) implies
 
 \[
- \operatorname{rank}\bigl(
+ \mathrm{rank}\,\bigl(
  P_O(\Pi_TQ_T\Pi_T-Q_T)P_E\bigr)\le4.                \tag{2.3}
 \]
 
@@ -186,10 +186,10 @@ where \(A_O\ge0\).  The generalized Schur--Douglas theorem gives the
 following equivalent assertions:
 
 1. \(\mathcal Q_{OE}\ge0\);
-2. \(\operatorname{Ran}X_{OE}\subseteq
-   \operatorname{Ran}A_O^{1/2}\) and
+2. \(\mathrm{Ran}\,X_{OE}\subseteq
+   \mathrm{Ran}\,A_O^{1/2}\) and
    \(B_E-X_{OE}^*A_O^\dagger X_{OE}\ge0\);
-3. there is an operator \(C_{OE}:H_E\to\overline{\operatorname{Ran}A_O})
+3. there is an operator \(C_{OE}:H_E\to\overline{\mathrm{Ran}\,A_O})
    such that
 
    \[

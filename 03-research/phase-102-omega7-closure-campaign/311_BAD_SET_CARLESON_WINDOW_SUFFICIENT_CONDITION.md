@@ -34,7 +34,7 @@ and write
 Let
 \[
   \delta_n(\theta)=
-  \operatorname{dist}\!\left(\theta,{2\pi\over n}\mathbb Z\right)
+  \mathrm{dist}\,\!\left(\theta,{2\pi\over n}\mathbb Z\right)
   \in[0,\pi/n].
 \]
 

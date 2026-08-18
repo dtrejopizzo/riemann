@@ -23,8 +23,8 @@ contact:
 
 \[
  \boxed{
- 2\int_0^{2T}e^{a/2}\operatorname {Re}C_F(a)\,da
- =-2\int_0^{2T}e^{-a/2}\operatorname {Re}C_F(a)\,da.}   \tag{0.3}
+ 2\int_0^{2T}e^{a/2}\mathrm{Re}\,C_F(a)\,da
+ =-2\int_0^{2T}e^{-a/2}\mathrm{Re}\,C_F(a)\,da.}   \tag{0.3}
 \]
 
 Consequently the exact completed primitive form, including every prime
@@ -35,7 +35,7 @@ power and the full Gamma place, has the renormalized expression
  -B_{\rm nuc}^{\rm prim}(F,F)
  =\mathcal H_{5/4}(F)
  -2\int_{[1,e^{2T}]}
-      x^{-1/2}\operatorname {Re}C_F(\log x)\,dE_\beta(x),} \tag{0.4}
+      x^{-1/2}\mathrm{Re}\,C_F(\log x)\,dE_\beta(x),} \tag{0.4}
 \]
 
 where
@@ -44,7 +44,7 @@ where
  \begin{aligned}
  \mathcal H_{5/4}(F)
  &=\frac1{2\pi}\int_{\mathbb R}
- \left(\operatorname {Re}\psi(5/4+i\tau/2)-\psi(5/4)\right)
+ \left(\mathrm{Re}\,\psi(5/4+i\tau/2)-\psi(5/4)\right)
  |\widehat F(\tau)|^2\,d\tau\geq0,                     \tag{0.5}\\
  dE_\beta(x)&=d\psi_C(x)-dx+{\beta\over2}\delta_1,
  \qquad
@@ -84,8 +84,8 @@ The continuous approximation to the prime-power contact is
 \[
  \begin{aligned}
  \mathcal P_0(F)
- &=2\int_1^{e^{2T}}x^{-1/2}\operatorname {Re}C_F(\log x)\,dx\\
- &=2\int_0^{2T}e^{a/2}\operatorname {Re}C_F(a)\,da.       \tag{1.3}
+ &=2\int_1^{e^{2T}}x^{-1/2}\mathrm{Re}\,C_F(\log x)\,dx\\
+ &=2\int_0^{2T}e^{a/2}\mathrm{Re}\,C_F(a)\,da.       \tag{1.3}
  \end{aligned}
 
 Thus (0.3) turns an apparently exponentially weighted contact into the
@@ -93,7 +93,7 @@ bounded-side expression
 
 \[
  \mathcal P_0(F)
- =-2\int_0^{2T}e^{-a/2}\operatorname {Re}C_F(a)\,da.      \tag{1.4}
+ =-2\int_0^{2T}e^{-a/2}\mathrm{Re}\,C_F(a)\,da.      \tag{1.4}
 
 In particular
 
@@ -117,21 +117,21 @@ With the Fourier convention
 Parseval gives
 
 \[
- 2\int_0^\infty e^{-a/2}\operatorname {Re}C_F(a)\,da
+ 2\int_0^\infty e^{-a/2}\mathrm{Re}\,C_F(a)\,da
  ={1\over2\pi}\int_{\mathbb R}{|\widehat F(\tau)|^2\over
                                     \tau^2+1/4}\,d\tau. \tag{2.2}
 
 The unrenormalized Gamma multiplier in the established A--B--C pullback is
 
 \[
- g_{1/4}(\tau)=\operatorname {Re}\psi(1/4+i\tau/2)-\log\pi.            \tag{2.3}
+ g_{1/4}(\tau)=\mathrm{Re}\,\psi(1/4+i\tau/2)-\log\pi.            \tag{2.3}
 
 \]
 
 The recurrence \(\psi(z+1)=\psi(z)+1/z\) and
 
 \[
- \operatorname {Re}{1\over1/4+i\tau/2}={1\over\tau^2+1/4}             \tag{2.4}
+ \mathrm{Re}{1\over1/4+i\tau/2}={1\over\tau^2+1/4}             \tag{2.4}
 
 \]
 
@@ -140,21 +140,21 @@ identity (1.4), changes the multiplier exactly to
 
 \[
  g_{1/4}(\tau)+{1\over\tau^2+1/4}
- =\operatorname {Re}\psi(5/4+i\tau/2)-\log\pi.          \tag{2.5}
+ =\mathrm{Re}\,\psi(5/4+i\tau/2)-\log\pi.          \tag{2.5}
 
 Put \(\beta=\log\pi-\psi(5/4)\).  Then (2.5) equals
 
 \[
  h_{5/4}(\tau)-\beta,
  \qquad
- h_{5/4}(\tau)=\operatorname {Re}\psi(5/4+i\tau/2)-\psi(5/4).         \tag{2.6}
+ h_{5/4}(\tau)=\mathrm{Re}\,\psi(5/4+i\tau/2)-\psi(5/4).         \tag{2.6}
 
 \]
 
 For \(x>0\), the absolutely convergent digamma difference gives
 
 \[
- \operatorname {Re}\psi(x+iy)-\psi(x)
+ \mathrm{Re}\,\psi(x+iy)-\psi(x)
  =\sum_{m=0}^\infty
  {y^2\over(m+x)((m+x)^2+y^2)}\geq0.                    \tag{2.7}
 
@@ -168,8 +168,8 @@ The arithmetic contact is
 \[
  \mathcal P(F)
  =2\sum_{p^k\leq e^{2T}}{\log p\over p^{k/2}}
-       \operatorname {Re}C_F(k\log p)
- =2\int_{[1,e^{2T}]}x^{-1/2}\operatorname {Re}C_F(\log x)\,d\psi_C(x).
+       \mathrm{Re}\,C_F(k\log p)
+ =2\int_{[1,e^{2T}]}x^{-1/2}\mathrm{Re}\,C_F(\log x)\,d\psi_C(x).
                                                                     \tag{3.1}
 
 \]
@@ -185,7 +185,7 @@ Adding and subtracting \(\mathcal P_0\), and using (2.5)--(2.6), yields
 \[
  -B_{\rm nuc}^{\rm prim}(F,F)
  =\mathcal H_{5/4}(F)-\beta\|F\|_2^2
- -2\int x^{-1/2}\operatorname {Re}C_F(\log x)\,dR(x).  \tag{3.3}
+ -2\int x^{-1/2}\mathrm{Re}\,C_F(\log x)\,dR(x).  \tag{3.3}
 
 Since \(C_F(0)=\|F\|_2^2\), adjoining \((\beta/2)\delta_1\) to \(dR\)
 absorbs the scalar term and proves (0.4).
@@ -215,7 +215,7 @@ and define
 Then
 
 \[
- 2\operatorname {Re}C_F(a)=\|J_+F\|_{L^2(A)}^2-
+ 2\mathrm{Re}\,C_F(a)=\|J_+F\|_{L^2(A)}^2-
                              \|J_-F\|_{L^2(A)}^2.       \tag{4.3}
 
 \]
@@ -257,7 +257,7 @@ following equivalent source-defined statements:
 1. **Centred-discrepancy form**
 
    \[
-   2\int x^{-1/2}\operatorname {Re}C_F(\log x)\,dE_\beta(x)
+   2\int x^{-1/2}\mathrm{Re}\,C_F(\log x)\,dE_\beta(x)
    \leq\mathcal H_{5/4}(F)                              \tag{5.1}
    \]
 

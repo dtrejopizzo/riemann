@@ -116,7 +116,7 @@ For a prime `p` and a ruling `i`, let
 
 \[
  V^{\rm reg}_{p,i}
- =\operatorname{Spec}\bigl(P^{\rm reg}/E((i_i(p)))\bigr).       \tag{3.1}
+ =\mathrm{Spec}\,\bigl(P^{\rm reg}/E((i_i(p)))\bigr).       \tag{3.1}
 \]
 
 Since `i_i(p)` is regular, this is now a regular principal generalized
@@ -127,8 +127,8 @@ contravariantly to the fold.  Quotient base change gives
 
 \[
  \Delta^*V^{\rm reg}_{p,i}
- \simeq\operatorname{Spec}\bigl(F(\mathbb Z)/E((p))\bigr)
- \simeq\operatorname{Spec}\mathbb F_p.                         \tag{3.2}
+ \simeq\mathrm{Spec}\,\bigl(F(\mathbb Z)/E((p))\bigr)
+ \simeq\mathrm{Spec}\,\mathbb F_p.                         \tag{3.2}
 \]
 
 ### Corollary 3.1

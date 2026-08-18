@@ -407,7 +407,7 @@ norms of both parity evaluation vectors grow as \(e^{|a|L/2}\).
 For fixed \(M\), let
 
 \[
- V_L=\operatorname{span}\{P_LK_0,\ldots,P_LK_M\}.
+ V_L=\mathrm{span}\,\{P_LK_0,\ldots,P_LK_M\}.
  \tag{34}
 \]
 

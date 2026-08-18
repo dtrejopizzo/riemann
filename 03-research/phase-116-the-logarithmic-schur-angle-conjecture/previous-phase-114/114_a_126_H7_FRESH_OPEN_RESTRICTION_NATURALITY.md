@@ -57,8 +57,8 @@ open-restriction diagram of bounded scalar sections to the constant diagram
 with value `T`.  In particular,
 
 \[
- \operatorname{im}\varepsilon_U
- \subseteq\operatorname{im}\varepsilon_V\subseteq T                  \tag{2.2}
+ \mathrm{im}\,\varepsilon_U
+ \subseteq\mathrm{im}\,\varepsilon_V\subseteq T                  \tag{2.2}
 \]
 
 whenever `V subset U`.

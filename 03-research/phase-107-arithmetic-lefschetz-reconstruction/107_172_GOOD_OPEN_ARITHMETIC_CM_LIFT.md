@@ -25,7 +25,7 @@ It has CM by \(\mathcal O_K\), where
 Put
 
 \[
- U=\operatorname{Spec}\mathcal O_K[1/11].
+ U=\mathrm{Spec}\,\mathcal O_K[1/11].
 \]
 
 The base change of \(E_{\rm CM}\) extends to an abelian scheme
@@ -42,7 +42,7 @@ Thus
 is a proper smooth relative surface carrying the two rulings, the
 diagonal, and every graph \(\Gamma_{\alpha^n}\).  This is an actual
 arithmetic model, but only over the good open \(U\), not over all of
-\(\operatorname{Spec}\mathbb Z\).
+\(\mathrm{Spec}\,\mathbb Z\).
 
 ## 2. The chosen prime above 5
 
@@ -90,7 +90,7 @@ finite locally free, with constant rank
 
 \[
  \deg(\alpha^n-1)=N_{K/\mathbb Q}(\alpha^n-1)
- =5^n+1-\operatorname{Tr}(\alpha^n)=N_n.
+ =5^n+1-\mathrm{Tr}(\alpha^n)=N_n.
  \tag{3.2}
 \]
 
@@ -115,7 +115,7 @@ After centering, the relative numerical intersection matrix is
  -2&-s_n\\
  -s_n&-2\cdot5^n
  \end{pmatrix},
- \qquad s_n=\operatorname{Tr}(\alpha^n),
+ \qquad s_n=\mathrm{Tr}(\alpha^n),
 \]
 
 on every geometric fibre of \(U\).
@@ -124,12 +124,12 @@ on every geometric fibre of \(U\).
 
 The complete Paper-0 correspondence and intersection package now lives
 in one proper smooth arithmetic family over
-\(\operatorname{Spec}\mathcal O_K[1/11]\).  In particular, the
+\(\mathrm{Spec}\,\mathcal O_K[1/11]\).  In particular, the
 finite-field and complex constructions of `107_02` and `107_171` are
 connected by specialization inside a single model.
 
 This does **not** finish row (a): the base is a CM number field with the
-bad prime removed, not all of \(\operatorname{Spec}\mathbb Z\), and the
+bad prime removed, not all of \(\mathrm{Spec}\,\mathbb Z\), and the
 surface depends on the fixed elliptic control.  It does **not** finish
 row (c): (3.2) packages one elliptic zeta function through a CM
 endomorphism and does not construct Riemann zeta's prime/Gamma source

@@ -129,7 +129,7 @@ Modewise minimal dilation has difference covariance
 
 \[
  \|e^{-rA_\infty}\mathbf1\|^2
- =\operatorname{Tr}(e^{-2rA_\infty})
+ =\mathrm{Tr}(e^{-2rA_\infty})
  ={e^{-r/2}\over1-e^{-2r}},                            \tag{3.4}
 \]
 

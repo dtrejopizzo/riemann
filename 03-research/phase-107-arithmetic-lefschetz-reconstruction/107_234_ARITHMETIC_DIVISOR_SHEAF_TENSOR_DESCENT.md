@@ -2,14 +2,14 @@
 
 ## 1. Published input and exact scope
 
-Connes--Consani, *On the Jacobian of* \(\overline{\operatorname{Spec}\mathbb Z}\)
+Connes--Consani, *On the Jacobian of* \(\overline{\mathrm{Spec}\,\mathbb Z}\)
 (arXiv:2602.15941v1), prove three separate statements:
 
 1. the Riemann sector \(X_{\mathbb Q}\) is canonically the arithmetic Picard
    monoid of pairs \(\mathcal D=(L,\|\cdot\|)\);
 2. multiplication of adeles is tensor product of the rank-one groups and
    their seminorms;
-3. every \(\mathcal D\) defines an \(\mathcal O_{\overline{\operatorname{Spec}
+3. every \(\mathcal D\) defines an \(\mathcal O_{\overline{\mathrm{Spec}
    \mathbb Z}}\)-module \(\mathcal O(\mathcal D)\), whose archimedean
    sections satisfy the mass bound
    \(\sum_x\|\phi(x)\|\leq1\).
@@ -49,7 +49,7 @@ has rational rank zero and is therefore torsion.  It is consequently zero.
 In particular there is no hidden derived term:
 
 \[
- \operatorname{Tor}^{\mathbb Z}_1(L_1,L_2)=0.
+ \mathrm{Tor}^{\mathbb Z}_1(L_1,L_2)=0.
  \tag{2.3}
 \]
 
@@ -105,14 +105,14 @@ commute with multiplication, so the local isomorphisms glue.  The unit and
 associativity constraints are inherited from multiplication in \(\mathbb Q\)
 and multiplication of the seminorm constants.
 
-Let \(\mathscr C=\overline{\operatorname{Spec}\mathbb Z}\) with the published
+Let \(\mathscr C=\overline{\mathrm{Spec}\,\mathbb Z}\) with the published
 absolute structure sheaf, and let \(\mathscr C^2\) be its product topos.  Put
 
 \[
  \mathcal O_{\mathscr C^2}:=
- \operatorname{pr}_1^{-1}\mathcal O_{\mathscr C}
+ \mathrm{pr}_1^{-1}\mathcal O_{\mathscr C}
  \widehat\otimes_\pi
- \operatorname{pr}_2^{-1}\mathcal O_{\mathscr C}.
+ \mathrm{pr}_2^{-1}\mathcal O_{\mathscr C}.
  \tag{4.2}
 \]
 
@@ -120,16 +120,16 @@ The external module
 
 \[
  \mathcal O(\mathcal D_1)\boxtimes\mathcal O(\mathcal D_2)
- :=\operatorname{pr}_1^*\mathcal O(\mathcal D_1)
+ :=\mathrm{pr}_1^*\mathcal O(\mathcal D_1)
  \widehat\otimes_{\mathcal O_{\mathscr C^2},\pi}
- \operatorname{pr}_2^*\mathcal O(\mathcal D_2),
+ \mathrm{pr}_2^*\mathcal O(\mathcal D_2),
  \tag{4.3}
 \]
 
 where
-\(\operatorname{pr}_i^*M=\mathcal O_{\mathscr C^2}
-\widehat\otimes_{\operatorname{pr}_i^{-1}\mathcal O,\pi}
-\operatorname{pr}_i^{-1}M\).
+\(\mathrm{pr}_i^*M=\mathcal O_{\mathscr C^2}
+\widehat\otimes_{\mathrm{pr}_i^{-1}\mathcal O,\pi}
+\mathrm{pr}_i^{-1}M\).
 
 It is consequently canonical and independent of adelic representatives.  Here
 each displayed tensor sheaf means the sheafification of the corresponding

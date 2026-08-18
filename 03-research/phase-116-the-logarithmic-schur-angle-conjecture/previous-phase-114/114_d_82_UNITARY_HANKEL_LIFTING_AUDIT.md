@@ -251,7 +251,7 @@ For a projection `P` and an operator `A` with Hilbert--Schmidt off-diagonal
 blocks, the exact Toeplitz commutator formula is
 
 \[
- \operatorname {Tr}\bigl(A[P,A^*]\bigr)
+ \mathrm{Tr}\,\bigl(A[P,A^*]\bigr)
  =\|QAP\|_{\rm HS}^2-\|PAQ\|_{\rm HS}^2.                  \tag{5.1}
 \]
 
@@ -336,7 +336,7 @@ theorem gives
 
 \[
  \|H_\Psi\|
- =\operatorname {dist}_{L^\infty}(\Psi,H^\infty).          \tag{7.1}
+ =\mathrm{dist}_{L^\infty}(\Psi,H^\infty).          \tag{7.1}
 \]
 
 The fact that `Theta` itself is unitary bounds `H_Theta`; it does not bound

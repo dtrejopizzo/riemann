@@ -57,7 +57,7 @@ Todo mecanismo local ensayado aquí debe rechazar el cuarteto racional
 
 \[
  w=2i,\qquad
- Q_n=4-2\operatorname {Re}(w^n+w^{-n}).                    \tag{4}
+ Q_n=4-2\mathrm{Re}(w^n+w^{-n}).                    \tag{4}
 \]
 
 Para \(n\equiv0\pmod4\),
@@ -86,7 +86,7 @@ agrupe conjugados y multiplicidades. Existen \(R>1\), \(1<R_1<R\),
 \(m_j>0\), y una constante \(C_0\), tales que
 
 \[
- \lambda_n=C_0-2R^n\operatorname {Re}
+ \lambda_n=C_0-2R^n\mathrm{Re}
  \sum_{j=1}^Km_je^{in\phi_j}
  +O(n^2R_1^n+n^2).                                          \tag{7}
 \]
@@ -96,7 +96,7 @@ pertenecen al mismo par real. Ponga
 
 \[
  u_j=Re^{i\phi_j},\qquad
- F_P(x)=2\operatorname {Re}
+ F_P(x)=2\mathrm{Re}
  \sum_{j=1}^Km_jP(u_j)e^{ix_j}.                             \tag{8}
 \]
 
@@ -243,7 +243,7 @@ Como \(P(2i)=P(-2i)=0\), los dos modos exteriores desaparecen y
 \begin{aligned}
  (P(E)Q)_n
  &=Q_{n+2}+4Q_n\\
- &=20-{15\over2}\operatorname {Re}(w^{-n}).                \tag{16}
+ &=20-{15\over2}\mathrm{Re}(w^{-n}).                \tag{16}
 \end{aligned}
 \]
 
@@ -259,12 +259,12 @@ Más generalmente, para cualquier \(P\in\mathbb R[z]\),
 
 \[
  \boxed{
- (P(E)Q)_n=4P(1)-2\operatorname {Re}
+ (P(E)Q)_n=4P(1)-2\mathrm{Re}
  \{w^nP(w)+w^{-n}P(w^{-1})\}.}                              \tag{18}
 \]
 
 Si \(P(w)\ne0\), una de las cuatro clases módulo cuatro hace positiva
-\(\operatorname {Re}(i^nP(w))\). En esa clase, (18) satisface
+\(\mathrm{Re}(i^nP(w))\). En esa clase, (18) satisface
 
 \[
  (P(E)Q)_n\leq-c_P2^n                                      \tag{19}
@@ -273,8 +273,8 @@ Si \(P(w)\ne0\), una de las cuatro clases módulo cuatro hace positiva
 para todo \(n\) suficientemente grande, con
 
 \[
- c_P=\max\{|\operatorname {Re}P(2i)|,
-             |\operatorname {Im}P(2i)|\}>0                 \tag{20}
+ c_P=\max\{|\mathrm{Re}\,P(2i)|,
+             |\mathrm{Im}\,P(2i)|\}>0                 \tag{20}
 \]
 
 después de reducir la constante por un factor fijo. El conjunto de (19)

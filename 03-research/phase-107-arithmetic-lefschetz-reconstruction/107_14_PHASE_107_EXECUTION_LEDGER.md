@@ -90,7 +90,7 @@ Closed obligations from `107_00` §21:
 
 Residual note:
 Paper 0 does not address the proper-global finite-support mechanism over
-\(\operatorname{Spec}\mathbb Z\), by design.
+\(\mathrm{Spec}\,\mathbb Z\), by design.
 The original elliptic preflight is also genus-1 specific; the new
 genus-2 audit isolates diagonal genus sensitivity, but `107_02` itself
 has not yet been rewritten as a genus-uniform source-construction
@@ -103,7 +103,7 @@ a single editorial replacement of the fixed-curve exposition of
 `107_02`, not the genus dependence of the underlying classical
 operations.  What remains delicate is that `107_30` derives the genus
 factor by classical adjunction on \(C\times C\), not yet by the full
-arithmetic Phase 107 route over \(\operatorname{Spec}\mathbf Z\).
+arithmetic Phase 107 route over \(\mathrm{Spec}\,\mathbf Z\).
 
 ### Paper A — Local arithmetic intersection lines
 
@@ -214,7 +214,7 @@ Evidence:
 23. `107_134_S3_ATTEMPT_A5_LOCAL_MOD32_RESIDUE_GATE.md` and
     `107_134_s3_attempt_a5_local_mod32_residue_gate.py` test a
     genuinely different local grammar on a fixed real atlas: the packet
-    \((p,v(c_4),v(c_6),v(\Delta),v(j),\operatorname{ainv}_{\min}\bmod 32)\)
+    \((p,v(c_4),v(c_6),v(\Delta),v(j),\mathrm{ainv}_{\min}\bmod 32)\)
     separates every visible elliptic target state on that atlas and
     therefore returns `VERDICT: YES`.
 24. `107_135_IVSTAR_MOD32_RANGE_EXTENSION_GATE.md` and
@@ -962,7 +962,7 @@ Evidence:
     `107_148_cc_jacobian_signed_divisor_no_go.py` reject the published
     Connes--Consani Picard/Jacobian monoid as the additive target of
     `107_11`.  Its prime class \(H_p=\mathbb Z[1/p]\) is idempotent and
-    noninvertible, whereas \(\operatorname{Div}_{\mathrm{EF}}\) is a
+    noninvertible, whereas \(\mathrm{Div}_{\mathrm{EF}}\) is a
     signed abelian group.  Group completion kills every idempotent
     \(H_p\).  The verifier returns
     `SIGNED_SOURCE_ADDITIVE_MAP_EXISTS: NO`,
@@ -994,7 +994,7 @@ Evidence:
     \(\mathbb S[\pm1]\)-module.  The construction is functorial,
     invariant under isomorphisms of bounded complexes, retains genuinely
     nontransitive bounded images, and recovers
-    \(\ker d_1/\operatorname{im}d_0\) when the image is a subgroup.
+    \(\ker d_1/\mathrm{im}\,d_0\) when the image is a subgroup.
     The verifier returns `NONTRANSITIVE_IMAGE_HANDLED: YES`,
     `SUBGROUP_CASE_RECOVERS_QUOTIENT: YES`, and `VERDICT: YES`.
 80. `107_152_NAIVE_STALK_LINEARIZATION_NO_GO.md` and
@@ -1079,9 +1079,9 @@ Evidence:
 88. `107_160_CYCLOTOMIC_CHART_REPRESENTABILITY.md` and
     `107_160_cyclotomic_chart_representability.py` represent the
     discrete rooted coordinate by the finite flat proper regular scheme
-    \(\mathcal R_T=\coprod_{n\mid L_T}\operatorname{Spec}
+    \(\mathcal R_T=\coprod_{n\mid L_T}\mathrm{Spec}
     \mathbb Z[\zeta_n]\).  They also correct packet labels to
-    \(\operatorname{ord}(\chi)=n\), eliminating duplicate lower-order
+    \(\mathrm{ord}(\chi)=n\), eliminating duplicate lower-order
     characters from the primitive chart \(V(\Phi_n)\).  The verifier
     returns `CYCLOTOMIC_FACTORIZATION_EXACT: YES`,
     `GENERIC_DEGREE_EQUALS_ROOTED_ORDER: YES`, and `VERDICT: YES`.
@@ -1137,7 +1137,7 @@ Evidence:
     `107_166_monoid_topos_cohomological_dimension_no_go.py` prove that
     raw derived invariants of the monoid-action square do not have
     surface amplitude.  For \(r\) visible primes, the constant module
-    has \(\operatorname{Ext}^k\cong\bigwedge^k\mathbb Z^{2r}\), nonzero
+    has \(\mathrm{Ext}^k\cong\bigwedge^k\mathbb Z^{2r}\), nonzero
     through degree \(2r\).  On the actual \(T=2,3,4,5\) atlases the
     verifier returns `COHOMOLOGY_ABOVE_DEGREE_TWO: YES`,
     `RAW_MONOID_TOPOS_HAS_SURFACE_AMPLITUDE: NO`, and `VERDICT: YES`.
@@ -1188,7 +1188,7 @@ Evidence:
     `107_172_good_open_arithmetic_cm_lift.py` connect the Paper-0
     finite-field and complex constructions inside one proper smooth
     arithmetic family over
-    \(\operatorname{Spec}\mathcal O_K[1/11]\).  Scheme-theoretically,
+    \(\mathrm{Spec}\,\mathcal O_K[1/11]\).  Scheme-theoretically,
     \(\Gamma_{\alpha^n}\cap\Delta=\ker(\alpha^n-1)\), finite flat of
     rank \(N_n\).  The verifier fixes the prime \((\alpha)\) over 5,
     checks the real curve and number-field data, and returns
@@ -1199,11 +1199,11 @@ Evidence:
     bad place after the explicit extension
     \(L=\mathbb Q(\alpha,w)\), \(w^2=2\alpha+3\).  The integral CM model
     has discriminant 1 and conductor \((1)\), so its self-product is
-    proper and smooth over all of \(\operatorname{Spec}\mathcal O_L\).
+    proper and smooth over all of \(\mathrm{Spec}\,\mathcal O_L\).
     Exact Sage checks return `EVERYWHERE_GOOD_REDUCTION: YES`,
     `ALL_GRAPH_KERNEL_DEGREES_MATCH: YES`, `BASE_IS_SPEC_Z: NO`, and
     `VERDICT: YES`.  This is a fixed-control construction, not a row-(a)
-    promotion for \(\operatorname{Spec}\mathbb Z\).
+    promotion for \(\mathrm{Spec}\,\mathbb Z\).
 102. `107_174_CM_FROBENIUS_GRAPH_DESCENT_NO_GO.md` and
     `107_174_cm_frobenius_graph_descent_no_go.py` close the direct
     descent of the CM calibration.  Galois exchanges
@@ -1350,7 +1350,7 @@ Evidence:
 117. `107_189_SPECTRAL_DETERMINANT_LINE_SHEAF_ON_SPEC_Z.md` and
     `107_189_spectral_determinant_line_sheaf_on_spec_z.py` prove sheaf
     descent on the semilocal Zariski basis of
-    \(\operatorname{Spec}\mathbb Z\).  The inverse-Euler restrictions
+    \(\mathrm{Spec}\,\mathbb Z\).  The inverse-Euler restrictions
     are units for \(\Re s>1\), and a frame change identifies the system
     with a constant rank-one sheaf.  Exact cover equalizers return
     `UNIQUE_SHEAF_GLUE: YES`,
@@ -1674,7 +1674,7 @@ Evidence:
     107_219_componentwise_cyclotomic_h1_descent.sage repair that no-go
     on the disjoint cyclotomic normalization.  A pair of labels of
     orders \(n,m\) defines a Koszul complex over
-    \(\mathbb Z[\zeta_{\operatorname{lcm}(n,m)}]\).  Because every old
+    \(\mathbb Z[\zeta_{\mathrm{lcm}(n,m)}]\).  Because every old
     normalized component is open and closed at every larger level,
     finite-support direct sums and their integral cohomology stabilize
     strictly by extension by zero.  Five actual mixed components detect
@@ -1777,7 +1777,7 @@ Evidence:
 156. 107_228_FINITE_RAY_STABILIZATION_VS_PERIODIC_RR_NO_GO.md and
     107_228_finite_ray_stabilization_vs_periodic_rr_no_go.py correct the
     open gate of 107_155 Section 4. The published periodic RR theorem
-    gives \(p^{-n}\operatorname{tdim}H^0(D)^{p^n}\to\deg D>0\), so the
+    gives \(p^{-n}\mathrm{tdim}\,H^0(D)^{p^n}\to\deg D>0\), so the
     filtered dimensions are necessarily unbounded; finite-ray
     stabilization cannot model the full periodic \(H^0\). The finite
     stages survive only as a pro-filtration with renormalized continuous
@@ -1796,7 +1796,7 @@ Evidence:
     explicit error bound. It returns TWO_RULING_COFINAL_LIMIT:
     PRODUCT_OF_WINDOW_LENGTHS and ONE_RULING_ACTUAL_H0_LIMIT: MATCHED.
     The latter uses the published exact formula
-    \(\operatorname{tdim}H^0(\alpha\{1\})^{p^n}=\alpha p^n-p+1\):
+    \(\mathrm{tdim}\,H^0(\alpha\{1\})^{p^n}=\alpha p^n-p+1\):
     the support count differs by exactly \(p\), hence has the same
     normalized limit. FULL_PERIODIC_H0_DIMENSION remains
     NOT_CONSTRUCTED, and VERDICT: YES.
@@ -2490,7 +2490,7 @@ Evidence:
    for cross terms.
 3. `107_06` packages both into one coherent theorem.
 4. `107_34` exact-audits the finite diagonal warning
-   \(\operatorname{Res}(\Phi_n,\Phi_n)=0\) in a nontrivial finite
+   \(\mathrm{Res}(\Phi_n,\Phi_n)=0\) in a nontrivial finite
    window.
 5. `107_64` exact-audits the finite diagonal-coherence shadow:
    matched-cutoff stabilization, one common Green functional for cross

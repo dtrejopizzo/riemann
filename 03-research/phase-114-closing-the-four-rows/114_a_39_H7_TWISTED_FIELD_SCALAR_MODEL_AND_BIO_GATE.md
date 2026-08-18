@@ -22,7 +22,7 @@ Fix `u>0` and define the multiplicative bijection
 
 \[
  T_u:\mathbb R\longrightarrow\mathbb R,
- \qquad T_u(x)=\operatorname{sgn}(x)|x|^{1/u}.          \tag{1.1}
+ \qquad T_u(x)=\mathrm{sgn}(x)|x|^{1/u}.          \tag{1.1}
 \]
 
 It fixes `0,1,-1` and satisfies `T_u(xy)=T_u(x)T_u(y)`. Define
@@ -63,7 +63,7 @@ second sum of `1` is transported from the ordinary integer `n`,
 
 \[
  i_{2,u}(n)=T_u^{-1}(n)
- =\operatorname{sgn}(n)|n|^u.                          \tag{2.1}
+ =\mathrm{sgn}(n)|n|^u.                          \tag{2.1}
 \]
 
 Keep the ordinary embedding
@@ -76,7 +76,7 @@ Therefore any common scalar object containing both field laws would send
 
 \[
  i_1(a)i_2(b)longmapsto
- a\operatorname{sgn}(b)|b|^u,                          \tag{2.3}
+ a\mathrm{sgn}(b)|b|^u,                          \tag{2.3}
 \]
 
 exactly the character `E_u` required in `a_25` and `a_26`.

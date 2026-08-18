@@ -224,7 +224,7 @@ obstrucción en coordenadas de covarianza:
 
 \[
  \mathbb E_s[Z_fZ_g]
- =\operatorname{Cov}_s(D_f,D_g)+M_s(f)M_s(g).             \tag{21}
+ =\mathrm{Cov}_s(D_f,D_g)+M_s(f)M_s(g).             \tag{21}
 \]
 
 La nueva fórmula (3) no contradice (21): extrae la parte alternante de los

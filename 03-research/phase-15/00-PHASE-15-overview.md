@@ -12,14 +12,14 @@ as a genuinely new entry point into the geometric frontier where the one proven 
 
 The program established, rigorously and from many sides:
 - every RH-directed route collapses to **CAP** (Weil positivity, the wrong-sign capstone) or **SURF** (a missing
-  arithmetic geometry over $\operatorname{Spec}\mathbb Z$);
+  arithmetic geometry over $\mathrm{Spec}\,\mathbb Z$);
 - the discriminator $D_0$ shows a route can escape only with an **independent input carrying a decisive general
   theorem** ($I_{2a}\wedge I_{2b}$); the *only* known instance is the function-field proof, via a **surface
   $C\times C$ and the Hodge index theorem**;
 - the finite-dimensional version is **obstructed under Linear Independence** of the zeros (P15): the model must be
   genuinely infinite-dimensional.
 
-Therefore the only non-circular target is **SURF**: an arithmetic Hodge-index theorem for $\operatorname{Spec}
+Therefore the only non-circular target is **SURF**: an arithmetic Hodge-index theorem for $\mathrm{Spec}
 \mathbb Z$. This is RH-equivalent in difficulty and is the Connes–Consani / Deninger / Arakelov frontier. What is
 *new* here is the **entry point**: this program produced three tools that the existing geometric approaches do not
 have, and together they give a concrete, spectral, infinite-dimensional scaffold for that geometry.
@@ -28,7 +28,7 @@ have, and together they give a concrete, spectral, infinite-dimensional scaffold
 
 | Tool (this program) | Function-field analogue | Role in the target |
 |---|---|---|
-| **The anatomy** $\mathcal R_L$, with **Satake recovery** (P19) | the Frobenius eigenvalues on $H^1$ | a *spectral arithmetic Frobenius* for $\operatorname{Spec}\mathbb Z$: reads the local data the geometry would carry |
+| **The anatomy** $\mathcal R_L$, with **Satake recovery** (P19) | the Frobenius eigenvalues on $H^1$ | a *spectral arithmetic Frobenius* for $\mathrm{Spec}\,\mathbb Z$: reads the local data the geometry would carry |
 | **The localized Weil form as a Kreĭn/Pontryagin form**, negative index $\kappa$ (P16) | the **intersection form** on $\mathrm{NS}(C\times C)$, signature $(1,\rho-1)$ | the *intersection pairing* with its signature; $\kappa=$ off-line zeros $=$ failure of the Hodge index |
 | **The Hodge–Riemann stability theorem** (P20) | Hodge index holds for *all* surfaces (AHK for matroids) | the criterion for *uniform* (full, infinite-order) positivity: a strictly-definite limit form |
 
@@ -41,7 +41,7 @@ now in the infinite-dimensional/tower setting the LI obstruction forces.
 
 > **The anatomy is the missing arithmetic Frobenius.** In the function-field case the zeros *are* the Frobenius
 > eigenvalues on $H^1$, and the Hodge index pins them by a definiteness theorem on a surface. For
-> $\operatorname{Spec}\mathbb Z$ no such surface is known --- but the localized-Weil **anatomy recovers the full
+> $\mathrm{Spec}\,\mathbb Z$ no such surface is known --- but the localized-Weil **anatomy recovers the full
 > local data spectrally** (P19: Satake parameters, degree, local factors, Rankin--Selberg functoriality). So the
 > ingredient the geometric programs seek to *construct* (a Frobenius / a cohomology carrying the zeros) is already
 > available as a **spectral object**. The phase's thesis: build the arithmetic intersection theory *around the
@@ -55,7 +55,7 @@ task is the *definiteness theorem* on the primitive part.
 
 **M1 — The arithmetic intersection pairing (achievable, non-circular).**
 Construct, from the explicit formula and the anatomy, the data of an "arithmetic surface" for
-$\operatorname{Spec}\mathbb Z$: a self-intersection, a *diagonal* class $\Delta$, and a *Frobenius-graph* class
+$\mathrm{Spec}\,\mathbb Z$: a self-intersection, a *diagonal* class $\Delta$, and a *Frobenius-graph* class
 $\Gamma$ (the prime-to-zero duality of the explicit formula), with the Kreĭn form as the intersection pairing.
 Establish the axioms (symmetry, the Lefschetz trace identity $\Gamma\cdot\Delta=\sum_\rho 1$, the self-intersection
 $\Gamma\cdot\Gamma$ in terms of the anatomy power sums). *Deliverable: a rigorous "arithmetic surface" pairing,

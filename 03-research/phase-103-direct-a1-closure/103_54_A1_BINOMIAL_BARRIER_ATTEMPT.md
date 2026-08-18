@@ -162,13 +162,13 @@ pass to the limit coefficientwise.  The terms carrying a factor
 correct statement is the combined Abel limit.  It is
 
 \[
- \Delta P_n=-1-\operatorname {Abel}\!\int_0^\infty
+ \Delta P_n=-1-\mathrm{Abel}\,\!\int_0^\infty
  E(u)e^{-u}L_n^{(1)}(u)\,du,
 \tag{12}
 \]
 
 \[
-\Delta^2P_n=-\operatorname {Abel}\!\int_0^\infty
+\Delta^2P_n=-\mathrm{Abel}\,\!\int_0^\infty
  E(u)e^{-u}L_{n+1}^{(0)}(u)\,du,
 \tag{13}
 \]

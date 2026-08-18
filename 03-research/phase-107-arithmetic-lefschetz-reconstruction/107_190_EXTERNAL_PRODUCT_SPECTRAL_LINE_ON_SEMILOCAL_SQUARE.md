@@ -3,7 +3,7 @@
 ## 1. The square that is actually used
 
 Let \(\mathcal B\) be the semilocal basis of
-\(X=\operatorname{Spec}\mathbb Z\), with objects
+\(X=\mathrm{Spec}\,\mathbb Z\), with objects
 
 \[
  U_S=X\setminus S
@@ -63,8 +63,8 @@ Thus
 
 \[
  \mathscr L^\square\simeq
- \operatorname{pr}_1^*\mathscr L\otimes
- \operatorname{pr}_2^*\mathscr L
+ \mathrm{pr}_1^*\mathscr L\otimes
+ \mathrm{pr}_2^*\mathscr L
  \tag{2.3}
 \]
 

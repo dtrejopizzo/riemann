@@ -145,7 +145,7 @@ La falla de (8) no impide que la energía acumulada \(H_n\) sea positiva.
 Para conservar esa acumulación, consideremos únicamente el plano
 
 \[
- \mathcal P_n=\operatorname{span}\{g_n,\phi_n\},\qquad n\ge149. \tag{14}
+ \mathcal P_n=\mathrm{span}\,\{g_n,\phi_n\},\qquad n\ge149. \tag{14}
 \]
 
 Los dos vectores son ortogonales para \(\mathsf A_{\rm flag}\), y

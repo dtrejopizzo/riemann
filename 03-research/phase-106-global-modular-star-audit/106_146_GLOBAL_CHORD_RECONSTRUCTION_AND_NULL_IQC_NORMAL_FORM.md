@@ -53,7 +53,7 @@ explicitly and the completed IQC becomes
 \[
  \boxed{
  J+\mathcal L^*Y+Y^*\mathcal L
- =\operatorname {diag}(PJP,I),}
+ =\mathrm{diag}(PJP,I),}
  \tag{5}
 \]
 
@@ -168,7 +168,7 @@ and
 
 \[
  Zq=(Z_pq,Z_\Gamma q,Z_0q),\qquad
- J=\operatorname {diag}(I,I,-I).                 \tag{13}
+ J=\mathrm{diag}(I,I,-I).                 \tag{13}
 \]
 
 With the conventions fixed in 106.139--106.143,
@@ -236,7 +236,7 @@ Let \(E\) be a finite heat/hybrid row and restrict \(\mathcal L\) and
  \tag{18}
 \]
 
-After replacing the constraint codomain by \(\operatorname {ran}\mathcal
+After replacing the constraint codomain by \(\mathrm{ran}\,\mathcal
 L\), \(\mathcal L_1\) is bijective.  Write
 
 \[
@@ -246,7 +246,7 @@ L\), \(\mathcal L_1\) is bijective.  Write
 \]
 
 Define \(Y=[Y_P,Y_Q]:PH_E\oplus QH_E\to
-\operatorname {ran}\mathcal L\) by
+\mathrm{ran}\,\mathcal L\) by
 
 \[
  Y_P=-(\mathcal L_1^*)^{-1}B^*,\qquad

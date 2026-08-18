@@ -46,7 +46,7 @@ dimensionless trace condition
  \boxed{
  \sigma_0+\Delta>0
  \quad\Longleftrightarrow\quad
- \operatorname {Tr}\!\left[
+ \mathrm{Tr}\,\!\left[
  (I+UA^{-1}U^*)^{-1}\frac{rr^*}{\delta}
  \right]>1.}                                    \tag{5}
 \]
@@ -188,7 +188,7 @@ Then
 
 \[
  \Delta
- =\delta\,\operatorname {Tr}((I+B)^{-1}C),       \tag{18}
+ =\delta\,\mathrm{Tr}((I+B)^{-1}C),       \tag{18}
 \]
 
 which proves (5).  The directional estimate of 106.81 gives the
@@ -196,13 +196,13 @@ dimensionless sufficient condition
 
 \[
  \boxed{
- (\operatorname {Tr}C)^2
- >\operatorname {Tr}C+\operatorname {Tr}(BC).}   \tag{19}
+ (\mathrm{Tr}\,C)^2
+ >\mathrm{Tr}\,C+\mathrm{Tr}(BC).}   \tag{19}
 \]
 
 Indeed, substituting
-\(\operatorname {Tr}C=\|r\|^2/\delta\) and
-\(\operatorname {Tr}(BC)=
+\(\mathrm{Tr}\,C=\|r\|^2/\delta\) and
+\(\mathrm{Tr}(BC)=
 \|A^{-1/2}U^*r\|^2/\delta\)
 reduces (19) to
 

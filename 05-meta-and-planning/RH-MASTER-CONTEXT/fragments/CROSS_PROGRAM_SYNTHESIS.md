@@ -68,7 +68,7 @@ No son avances independientes; son coordenadas de la misma barrera, salvo que se
 | Familia | Nombres usados | Estatus correcto |
 |---|---|---|
 | Positividad global | Criterio de Weil, positividad de todas las pruebas admisibles, Li para todos los índices, forma de intersección identificada con Weil | **FUERZA-RH**, en varios casos equivalencia clásica. |
-| Real-rootedness y pasividad | Hilbert–Pólya útil, \(\xi\in LP\), Herglotz/pasividad de \(\Xi\), \(\operatorname{Im}(-\Xi'/\Xi)\ge0\), \(\Lambda\le0\) en la transferencia declarada | **FUERZA-RH**. |
+| Real-rootedness y pasividad | Hilbert–Pólya útil, \(\xi\in LP\), Herglotz/pasividad de \(\Xi\), \(\mathrm{Im}(-\Xi'/\Xi)\ge0\), \(\Lambda\le0\) en la transferencia declarada | **FUERZA-RH**. |
 | Convergencia de aproximantes | Aproximantes enteros con ceros reales que convergen localmente a \(\Xi\), continuidad de signatura, convergencia de resolvente/divisor, Gram primitivo en el extremo | **FUERZA-RH** cuando la convergencia preserva los ceros o el signo necesarios. |
 | Índice y defecto | `Omega7`, índice negativo global nulo, `L1`, AHM, pasividad límite, margen uniforme localizado | **FUERZA-RH**; las versiones finitas son sólo certificados o detectores. |
 | Cierre Cauchy–Feshbach | `PW-Cauchy`, `HPR-DIV`, `K-DIAGOFF`, `EG_LOCK`, `ADJ-ARITH-LOCK`, `TPW`, `scalar-WRL` | Distintas caras de una cancelación/divisibilidad aritmética firmada pendiente; su cierre tiene **FUERZA-RH** bajo las transferencias ya declaradas. |

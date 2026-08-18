@@ -105,7 +105,7 @@ Every nonzero singular value of \(\partial_X\) occurs once in each parity.
 Consequently its contribution cancels in
 
 \[
- \operatorname{Str}(e^{-t\mathcal Q_X^2}).             \tag{2.5}
+ \mathrm{Str}(e^{-t\mathcal Q_X^2}).             \tag{2.5}
 \]
 
 This is the exact mechanism by which prime-power and Gamma modes can cancel
@@ -253,10 +253,10 @@ For any \(\varepsilon>0\), consider the finite Hilbert complex
 Its even and odd Laplacians have spectra
 
 \[
- \operatorname{Spec}(Q_\varepsilon^*Q_\varepsilon)
+ \mathrm{Spec}(Q_\varepsilon^*Q_\varepsilon)
  =\{0,0,\varepsilon^2\},
  \qquad
- \operatorname{Spec}(Q_\varepsilon Q_\varepsilon^*)
+ \mathrm{Spec}(Q_\varepsilon Q_\varepsilon^*)
  =\{\varepsilon^2\}.                                  \tag{6.2}
 \]
 
@@ -264,7 +264,7 @@ Thus:
 
 * the even cohomology has dimension two;
 * the nonzero spectra pair exactly;
-* \(\operatorname{Str}(e^{-t\Delta})=2\) for every \(t>0\); but
+* \(\mathrm{Str}(e^{-t\Delta})=2\) for every \(t>0\); but
 * the first positive eigenvalue is \(\varepsilon^2\), which is arbitrary.
 
 Therefore a two-jet supersymmetric index, exact spectral pairing and a

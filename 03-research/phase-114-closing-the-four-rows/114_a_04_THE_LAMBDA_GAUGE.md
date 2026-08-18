@@ -82,14 +82,14 @@
 
 Not claimed, and stated first so that nothing below can be read as more than it is:
 
-1. **The identity $\Lambda(n) = \log|\operatorname{Res}(\Phi_n, T-1)|$ is not new.** It is the
-   $n=1$ case of `106_210` eq (1), $\tfrac1{\varphi(n)}\log|\operatorname{Res}(\Phi_m,\Phi_n)| =
+1. **The identity $\Lambda(n) = \log|\mathrm{Res}(\Phi_n, T-1)|$ is not new.** It is the
+   $n=1$ case of `106_210` eq (1), $\tfrac1{\varphi(n)}\log|\mathrm{Res}(\Phi_m,\Phi_n)| =
    \log p$ when $m/n = p^a$ and $0$ otherwise. I rederived it before finding `106_210`; the
    credit is `106_210`'s.
-2. **No square is constructed here.** $(\operatorname{Spec}\mathbb Z[T], \psi^N : T\mapsto T^N)$
-   is $\operatorname{Spec}\mathbb Z \times_{\mathbb F_1} \mathbb A^1_{\mathbb F_1}$, not
-   $\operatorname{Spec}\mathbb Z \times_{\mathbb F_1} \operatorname{Spec}\mathbb Z$. The
-   "second $\operatorname{Spec}\mathbb Z$" appearing below is $\mathbb N^\times$, the index set
+2. **No square is constructed here.** $(\mathrm{Spec}\,\mathbb Z[T], \psi^N : T\mapsto T^N)$
+   is $\mathrm{Spec}\,\mathbb Z \times_{\mathbb F_1} \mathbb A^1_{\mathbb F_1}$, not
+   $\mathrm{Spec}\,\mathbb Z \times_{\mathbb F_1} \mathrm{Spec}\,\mathbb Z$. The
+   "second $\mathrm{Spec}\,\mathbb Z$" appearing below is $\mathbb N^\times$, the index set
    of the Frobenii, and that is a weaker object.
 3. **At the stage of this file, a4-strong was not closed.** The later
    construction `a_144` supersedes that status and closes the metrized
@@ -167,8 +167,8 @@ Lehmer's number to 39 places).
 `106_210` §4, verbatim: *"The finite cyclotomic divisor does not determine it [the Green
 metric]."* Its fifth stop test asks for a finite, **source-defined** self-intersection in the
 same category, without importing an unrelated diagonal form or choosing its sign. It failed
-because $\operatorname{Res}(\Phi_n,\Phi_n)=0$, the derived $\operatorname{Tor}$ is not finite,
-and $\operatorname{div}(\Phi_n)$ is principal in the UFD $\mathbb Z[x]$.
+because $\mathrm{Res}(\Phi_n,\Phi_n)=0$, the derived $\mathrm{Tor}$ is not finite,
+and $\mathrm{div}(\Phi_n)$ is principal in the UFD $\mathbb Z[x]$.
 
 The valid observation of this note is only a scalar rigidity statement for the
 Mahler functional.  The missing Green diagonal is not supplied by it.
@@ -197,21 +197,21 @@ cyclotomic kernel.
 
 ## 5. The Frobenius graphs and $\Gamma_n\cdot\Delta$
 
-**Definition 5.1.** $\Gamma_n := \operatorname{div}(\Phi_n)$, $\Delta := \operatorname{div}(T-1)$.
+**Definition 5.1.** $\Gamma_n := \mathrm{div}(\Phi_n)$, $\Delta := \mathrm{div}(T-1)$.
 
 **Proposition 5.2.** For `n>1`, `$\Phi_n(1)=e^{\Lambda(n)}$`, hence
-`$|\operatorname{Res}(\Phi_n,T-1)|=\Phi_n(1)$` and
+`$|\mathrm{Res}(\Phi_n,T-1)|=\Phi_n(1)$` and
 `$\langle\Gamma_n,\Delta\rangle_{\mathrm{fin}}=\Lambda(n)$`. Separately,
 the arithmetic identity `$\sum_{d\mid n}\Lambda(d)=\log n$` holds.
 
 The latter sum is **not** asserted to be the intersection of
-`$\operatorname{div}(T^n-1)$` with `Delta`: the factor `Phi_1=T-1` makes that
+`$\mathrm{div}(T^n-1)$` with `Delta`: the factor `Phi_1=T-1` makes that
 intersection improper and its ordinary resultant zero. A diagonal
 regularisation would be precisely part of the still-open fifth stop test.
 
 *Verified:* A1 ($2\le n\le 400$), A2, A3. *Prior art:* `106_210` eq (1), of which this is the
 $n=1$ case. B1 re-verifies `106_210` eq (1) itself on 462 divisible pairs and B2 verifies
-$\operatorname{Res}=\pm1$ on 708 non-divisible pairs.
+$\mathrm{Res}=\pm1$ on 708 non-divisible pairs.
 
 ---
 
@@ -516,7 +516,7 @@ eq (1), eq (4), eq (10), eq (13), §4, §7, §8; `114_a_02` Def 1.1 and the hype
 
 **Verified numerically.** All 25 checks A–J of `114_a_04_lambda_gauge.py` at 40 digits:
 A1–A3 ($\Phi_n(1)=e^{\Lambda(n)}$ to $n=400$; $\sum_{d|n}\Lambda(d)=\log n$; the resultant
-form); B1–B2 (`106_210` eq (1) on 462 pairs; $\operatorname{Res}=\pm1$ on 708); C1 (Jensen, 8
+form); B1–B2 (`106_210` eq (1) on 462 pairs; $\mathrm{Res}=\pm1$ on 708); C1 (Jensen, 8
 polynomials, $10^{-40}$); D1–D2 (homomorphism); E1 (the four equivariances, non-vacuously);
 F1 ($F_NV_Nf=f^N$); G1–G3 (Kronecker, Lehmer); H1–H3 (Tate telescoping, exact constancy);
 I1–I7 (the rulings, and the blindness); J1–J2 ($\delta=2.019$).
@@ -525,7 +525,7 @@ I1–I7 (the rulings, and the blindness); J1–J2 ($\delta=2.019$).
 with the place-wise resultant data.  The kernel lattice itself is constructed
 in `114_a_05`, while `114_a_09` proves the weight-one/principal-invariant
 versions impossible.  It is also not established that
-$\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z$ is realised
+$\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$ is realised
 by the present Witt construction. Haran's non-totally-commutative pro-square
 is a separate literal construction. Files `a_17`--`a_20` construct its
 prime-incidence, prime Picard and discrete-bigrade data; `a_24`--`a_29`

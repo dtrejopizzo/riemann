@@ -76,16 +76,16 @@ sobre \(L^2(I_T)\), y
 \]
 
 donde \(G_{\Gamma,T}\) es la compresión por extensión por cero del multiplicador
-\(g_\Gamma(\tau)=\operatorname{Re}\psi(\tfrac14+\tfrac{i\tau}2)-\psi(\tfrac14)\).
+\(g_\Gamma(\tau)=\mathrm{Re}\,\psi(\tfrac14+\tfrac{i\tau}2)-\psi(\tfrac14)\).
 
 **Positividad del canal Gamma.** \(g_\Gamma\ge0\), con igualdad solo en \(\tau=0\). En
 efecto `eq:archenergy` (`main.tex:1093-1098`) da
 \(m_\infty(\tau)-m_\infty(0)=-\sum_{k\ge0}\frac{(\tau/2)^2}{(k+\frac14)((k+\frac14)^2+(\tau/2)^2)}\le0\)
-con \(m_\infty(\tau)=\log\pi-\operatorname{Re}\psi(\frac14+\frac{i\tau}2)\); es decir
-\(\operatorname{Re}\psi(\frac14+\frac{i\tau}2)\ge\psi(\frac14)\). Por lo tanto
+con \(m_\infty(\tau)=\log\pi-\mathrm{Re}\,\psi(\frac14+\frac{i\tau}2)\); es decir
+\(\mathrm{Re}\,\psi(\frac14+\frac{i\tau}2)\ge\psi(\frac14)\). Por lo tanto
 \(G_{\Gamma,T}\ge0\). Numéricamente \(m_0=5.3721834192\ldots\)
 
-Como \(S_{\log n}+S_{-\log n}=2\operatorname{Re}S_{\log n}\), escribimos
+Como \(S_{\log n}+S_{-\log n}=2\mathrm{Re}\,S_{\log n}\), escribimos
 \(\sigma_T=\sum_{2\le n<e^{2T}}w_n\).
 
 ---
@@ -103,12 +103,12 @@ Como \(S_{\log n}+S_{-\log n}=2\operatorname{Re}S_{\log n}\), escribimos
 load-bearing: bajo la lectura truncada la Lema 2.2 es falsa y la constante de
 `prop:shiftchaincoercivity` cambia de \(1-\cos\frac\pi{m+1}\) a \(1-\cos\frac\pi{2m+1}\).
 
-**Lema 2.2.** \(\widehat J_{a,\pm}^*\widehat J_{a,\pm}=I\pm\operatorname{Re}S_a\).
+**Lema 2.2.** \(\widehat J_{a,\pm}^*\widehat J_{a,\pm}=I\pm\mathrm{Re}\,S_a\).
 En particular
 
 \[
  \boxed{\;
- \operatorname{Re}S_a
+ \mathrm{Re}\,S_a
  =\tfrac12\bigl(\widehat J_{a,+}^*\widehat J_{a,+}-\widehat J_{a,-}^*\widehat J_{a,-}\bigr),
  \qquad
  S_a+S_{-a}
@@ -127,16 +127,16 @@ de \(I_T\),
 
 Por lo tanto
 \(\|\widehat J_{a,\pm}F\|^2_{L^2(\mathbb R)}
- =\tfrac12\bigl(2\|F\|^2\pm2\operatorname{Re}\langle S_aF,F\rangle\bigr)
- =\|F\|^2\pm\operatorname{Re}\langle S_aF,F\rangle\).
+ =\tfrac12\bigl(2\|F\|^2\pm2\mathrm{Re}\,\langle S_aF,F\rangle\bigr)
+ =\|F\|^2\pm\mathrm{Re}\,\langle S_aF,F\rangle\).
 Restando las dos identidades y usando \(S_a^*=S_{-a}\) se obtiene lo enmarcado. \(\square\)
 
 **Observación 2.3 (por qué el codominio importa).** El vértice de cadena en \(t=r-a\) cae
 fuera de \(I_T\), pero el canal \(\widehat J_{a,\pm}F\) **no** se anula ahí: vale
 \(\pm\widetilde F(r)/\sqrt2\). Descartar esa celda reemplaza
-\(\widehat J^*\widehat J\) por \(\tfrac12(I-U^*)(I-U)=I-\operatorname{Re}U-\tfrac12P_{e_0}\)
+\(\widehat J^*\widehat J\) por \(\tfrac12(I-U^*)(I-U)=I-\mathrm{Re}\,U-\tfrac12P_{e_0}\)
 en el modelo discreto de cadena, que **no** es de la forma
-(diagonal) \(-\operatorname{Re}\)(shift comprimido) y por lo tanto no reproduce el término
+(diagonal) \(-\mathrm{Re}\,\)(shift comprimido) y por lo tanto no reproduce el término
 de shift de \(A_T\). Con el codominio de la Definición 2.1 la cadena de \(m\) vértices
 tiene \(m+1\) aristas (pared Dirichlet en ambos extremos) y el menor autovalor es
 \(1-\cos\frac{\pi}{m+1}\), tal como afirma `prop:shiftchaincoercivity`.
@@ -182,7 +182,7 @@ Sumar sobre \(n\) y agregar \(G_{\Gamma,T}-m_0I\). La positividad de \(G_{\Gamma
 el correcto precisamente porque el reparto es balanceado.
 
 **Observación 3.3.** La factorización es única dada la convención de codominio: cualquier
-otra asignación del término \(\operatorname{Re}S_a\) entre los dos signos rompe la simetría
+otra asignación del término \(\mathrm{Re}\,S_a\) entre los dos signos rompe la simetría
 de energía de borde y por lo tanto la frase `row-d-local-analysis.tex:464-465`.
 
 ---
@@ -261,7 +261,7 @@ Entonces:
 5. \(\mathcal A=\mathcal C^\perp\) dentro de \(\mathcal P_{\tau_{j+1}}\) se descompone como
    \[
     \mathcal A=\bigl(\text{primitivas soportadas en el anillo}\bigr)\;\oplus\;
-    \operatorname{span}\{e^{-t/2},e^{t/2}\}\big|_{I_{\tau_j}},
+    \mathrm{span}\,\{e^{-t/2},e^{t/2}\}\big|_{I_{\tau_j}},
    \]
    es decir el anillo **más exactamente dos** direcciones, y esas dos son los modos de
    Tate restringidos al core.
@@ -339,7 +339,7 @@ Entonces:
 2. \(A\ge0\iff\mathcal C_\varepsilon\ge0\) para todo \(\varepsilon>0\);
 3. si se cumple (2), el límite monótono
    \(\lim_{\varepsilon\downarrow0}Q_c^*(D_0+\varepsilon)^{-1}Q_c\) es acotado, lo que
-   **fuerza** \(\operatorname{Ran}Q_c\subseteq\operatorname{Ran}D_0^{1/2}\), y el límite es
+   **fuerza** \(\mathrm{Ran}\,Q_c\subseteq\mathrm{Ran}\,D_0^{1/2}\), y el límite es
    \(Q_c^*D_0^\dagger Q_c\); en consecuencia
    \(\mathfrak D-Q_c^*D_0^\dagger Q_c\ge0\) y \(\|\Theta\|\le1\).
 
@@ -360,7 +360,7 @@ Finalmente \(A\ge0\iff A+\varepsilon(P_{\mathcal C}\oplus0)\ge0\) para todo
 
 (3) Es el criterio de Douglas en su forma de operador shorted: el supremo monótono
 \(\sup_{\varepsilon>0}Q_c^*(D_0+\varepsilon)^{-1}Q_c\) es acotado si y solo si
-\(\operatorname{Ran}Q_c\subseteq\operatorname{Ran}D_0^{1/2}\), y entonces coincide con
+\(\mathrm{Ran}\,Q_c\subseteq\mathrm{Ran}\,D_0^{1/2}\), y entonces coincide con
 \(Q_c^*D_0^\dagger Q_c\). \(\square\)
 
 **Observación 5.2.** El valor de (3) es metodológico: **la inclusión de rango deja de ser

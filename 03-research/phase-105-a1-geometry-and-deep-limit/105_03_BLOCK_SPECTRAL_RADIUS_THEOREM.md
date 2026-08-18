@@ -63,7 +63,7 @@ A zero \(\rho\) of multiplicity \(m_\rho\) maps to
 \(w_\rho=1-1/\rho\). Near that point,
 
 \[
- \operatorname*{Res}_{z=w_\rho}G(z)=m_\rho w_\rho.      \tag{4}
+ \mathop{\mathrm{Res}}_{z=w_\rho}G(z)=m_\rho w_\rho.      \tag{4}
 \]
 
 Assume RH is false and put

@@ -102,7 +102,7 @@ not a Cartesian product of section spaces.
 For positive integers \(m,n\), define
 
 \[
- (\operatorname{Fr}_{m,n}F)(x,y)=F(mx,ny).
+ (\mathrm{Fr}_{m,n}F)(x,y)=F(mx,ny).
  \tag{3.1}
 \]
 
@@ -114,9 +114,9 @@ construction sheafifies on the product Scaling topos.  Put
 \[
  \mathcal O_{\mathscr S^2}
  :=\left(
- \operatorname{pr}_1^{-1}\mathcal O_{\mathscr S}
+ \mathrm{pr}_1^{-1}\mathcal O_{\mathscr S}
  \otimes_{\mathbb R_{\max}}
- \operatorname{pr}_2^{-1}\mathcal O_{\mathscr S}
+ \mathrm{pr}_2^{-1}\mathcal O_{\mathscr S}
  \right)_{\mathrm{fun.red}}.
  \tag{3.2}
 \]
@@ -153,7 +153,7 @@ place inside the same sheaf.  Consequently, for arbitrary external divisors
 
 \[
  \boxed{
- \operatorname{cdim}^{(2)}
+ \mathrm{cdim}^{(2)}
  H^0_{\mathrm{ext}}(D\boxtimes E)
  =\max(\deg D,0)\max(\deg E,0).}
  \tag{4.2}

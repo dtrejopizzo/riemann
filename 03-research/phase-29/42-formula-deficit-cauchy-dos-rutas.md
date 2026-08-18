@@ -13,7 +13,7 @@ Doc 41 estableció que la energía $L^2$ espectral converge a:
 
 $$E_2(\lambda, T) \;\xrightarrow{\lambda\to\infty}\; \sum_{\gamma_n \leq T} |C_\infty(\gamma_n)|^2 \;=:\; \mathcal{D}(T)$$
 
-y que $\mathcal{D}(T) = 0$ es equivalente a Inc. Inv. La barrera estructural es la siguiente: toda reformulación natural de Inc. Inv. conduce a calcular una cantidad de la forma $\sum_\rho \operatorname{Re}[1/(\rho_n - \rho)]$, cuya anulación es equivalente a RH.
+y que $\mathcal{D}(T) = 0$ es equivalente a Inc. Inv. La barrera estructural es la siguiente: toda reformulación natural de Inc. Inv. conduce a calcular una cantidad de la forma $\sum_\rho \mathrm{Re}[1/(\rho_n - \rho)]$, cuya anulación es equivalente a RH.
 
 El objetivo de este documento es:
 
@@ -33,7 +33,7 @@ Recordamos las definiciones y resultados de los documentos previos.
 **Definición 2.1 (Potencial espectral finito).** Para $\lambda > 0$ y $x \in \mathbb{R}$:
 $$C_\lambda(x) := w(x) - D_\lambda(x), \qquad D_\lambda(x) := 2\sum_{n \leq \lambda^2} \frac{\Lambda(n)}{\sqrt{n}} \cos(x \log n)$$
 
-donde $w(x) = \log\pi - \operatorname{Re}[\psi_{\mathrm{dig}}(1/4 + ix/2)]$ es la función de peso aritmético.
+donde $w(x) = \log\pi - \mathrm{Re}[\psi_{\mathrm{dig}}(1/4 + ix/2)]$ es la función de peso aritmético.
 
 **Definición 2.2 (Potencial límite).** El límite formal $\lambda \to \infty$ de la serie de Dirichlet define:
 $$C_\infty(x) := w(x) - D_\infty(x), \qquad D_\infty(x) := 2\sum_{n=1}^\infty \frac{\Lambda(n)}{\sqrt{n}} \cos(x \log n)$$
@@ -48,7 +48,7 @@ equivalentemente: $C_\infty(\gamma_n) = 0$ para todo $n \geq 1$.
 $$\text{RH} \iff \text{Inc. Inv.}$$
 
 **Teorema 2.5 (Doc 40, Proposición 7.3).** Vía la fórmula de Hadamard, Inc. Inv. equivale a:
-$$C_\infty(\gamma_n) = 0 \iff \operatorname{Re}[g_n(\rho_n)] = \frac{w(\gamma_n)}{2}$$
+$$C_\infty(\gamma_n) = 0 \iff \mathrm{Re}[g_n(\rho_n)] = \frac{w(\gamma_n)}{2}$$
 
 donde $g_n(\rho_n) = \lim_{s \to \rho_n}\!\left[-\zeta'/\zeta(s) - \frac{1}{s-\rho_n}\right]$ es la parte regular de $-\zeta'/\zeta$ en el polo $\rho_n = 1/2 + i\gamma_n$.
 
@@ -67,17 +67,17 @@ donde $B = \log(2\pi) - 1 - \gamma_{\mathrm{Euler}}/2 \approx -0.0230957\ldots$ 
 $$g_n(\rho_n) = B + \frac{1}{\rho_n-1} - \frac{1}{2}\log\pi + \frac{1}{2}\psi_{\mathrm{dig}}\!\left(\frac{\rho_n}{2}+1\right) + \sum_{\rho \neq \rho_n}\left[\frac{1}{\rho_n-\rho} + \frac{1}{\rho}\right]$$
 
 **Lema 3.3 (Parte real de los términos arquimedianos).** Con $\rho_n = 1/2 + i\gamma_n$:
-$$\operatorname{Re}\!\left[B + \frac{1}{\rho_n-1} - \frac{1}{2}\log\pi + \frac{1}{2}\psi_{\mathrm{dig}}\!\left(\frac{\rho_n}{2}+1\right) + \sum_\rho \frac{1}{\rho}\right] = \frac{w(\gamma_n)}{2}$$
+$$\mathrm{Re}\,\!\left[B + \frac{1}{\rho_n-1} - \frac{1}{2}\log\pi + \frac{1}{2}\psi_{\mathrm{dig}}\!\left(\frac{\rho_n}{2}+1\right) + \sum_\rho \frac{1}{\rho}\right] = \frac{w(\gamma_n)}{2}$$
 
-*Prueba.* Esta identidad es precisamente la definición de $w(x)$ via la fórmula explícita de Guinand-Weil. La función $w(x) = \log\pi - \operatorname{Re}[\psi_{\mathrm{dig}}(1/4+ix/2)]$ absorbe exactamente las contribuciones de los ceros triviales, el polo en $s=1$, la constante $B$, y el término $1/(2\pi)$ correspondiente. Una prueba detallada se encuentra en Doc 38 §4. $\square$
+*Prueba.* Esta identidad es precisamente la definición de $w(x)$ via la fórmula explícita de Guinand-Weil. La función $w(x) = \log\pi - \mathrm{Re}[\psi_{\mathrm{dig}}(1/4+ix/2)]$ absorbe exactamente las contribuciones de los ceros triviales, el polo en $s=1$, la constante $B$, y el término $1/(2\pi)$ correspondiente. Una prueba detallada se encuentra en Doc 38 §4. $\square$
 
-**Corolario 3.4 (Simplificación de $\operatorname{Re}[g_n(\rho_n)]$).** Combinando Proposición 3.2 y Lema 3.3:
-$$\operatorname{Re}[g_n(\rho_n)] = \frac{w(\gamma_n)}{2} + \operatorname{Re}\!\left[\sum_{\rho \neq \rho_n} \frac{1}{\rho_n - \rho}\right]$$
+**Corolario 3.4 (Simplificación de $\mathrm{Re}[g_n(\rho_n)]$).** Combinando Proposición 3.2 y Lema 3.3:
+$$\mathrm{Re}[g_n(\rho_n)] = \frac{w(\gamma_n)}{2} + \mathrm{Re}\,\!\left[\sum_{\rho \neq \rho_n} \frac{1}{\rho_n - \rho}\right]$$
 
 **Proposición 3.5 (Fórmula reducida para $C_\infty(\gamma_n)$).** De Teorema 2.5 y Corolario 3.4:
-$$C_\infty(\gamma_n) = w(\gamma_n) - 2\operatorname{Re}[g_n(\rho_n)] = w(\gamma_n) - w(\gamma_n) - 2\operatorname{Re}\!\left[\sum_{\rho\neq\rho_n}\frac{1}{\rho_n-\rho}\right]$$
+$$C_\infty(\gamma_n) = w(\gamma_n) - 2\mathrm{Re}[g_n(\rho_n)] = w(\gamma_n) - w(\gamma_n) - 2\mathrm{Re}\,\!\left[\sum_{\rho\neq\rho_n}\frac{1}{\rho_n-\rho}\right]$$
 
-$$\boxed{C_\infty(\gamma_n) = -2\operatorname{Re}\!\left[\sum_{\rho \neq \rho_n} \frac{1}{\rho_n - \rho}\right]}$$
+$$\boxed{C_\infty(\gamma_n) = -2\mathrm{Re}\,\!\left[\sum_{\rho \neq \rho_n} \frac{1}{\rho_n - \rho}\right]}$$
 
 Esta es la **fórmula central** de este documento. Su análisis completo es el contenido de las secciones §4–§8.
 
@@ -93,19 +93,19 @@ La suma en la fórmula central corre sobre TODOS los ceros no-triviales $\rho \n
 **Lema 4.1 (Contribución de los ceros críticos).** Si $\rho = 1/2 + i\gamma$ con $\gamma \neq \gamma_n$:
 $$\frac{1}{\rho_n - \rho} = \frac{1}{(1/2 + i\gamma_n) - (1/2 + i\gamma)} = \frac{1}{i(\gamma_n - \gamma)} \in i\mathbb{R}$$
 
-Por lo tanto $\operatorname{Re}[1/(\rho_n - \rho)] = 0$. Los ceros críticos no contribuyen a $C_\infty(\gamma_n)$.
+Por lo tanto $\mathrm{Re}[1/(\rho_n - \rho)] = 0$. Los ceros críticos no contribuyen a $C_\infty(\gamma_n)$.
 
 **Lema 4.2 (Contribución de los ceros off-críticos: emparejamiento por conjugación compleja).** La suma de Hadamard está simetrizada en pares $(\rho, \bar\rho)$. Para un cero off-crítico $\rho_0 = \sigma_0 + i\gamma_0$ con $\sigma_0 \neq 1/2$:
 
-$$\operatorname{Re}\frac{1}{\rho_n-\rho_0} + \operatorname{Re}\frac{1}{\rho_n-\bar\rho_0}$$
-$$= \operatorname{Re}\frac{1}{(1/2-\sigma_0)+i(\gamma_n-\gamma_0)} + \operatorname{Re}\frac{1}{(1/2-\sigma_0)+i(\gamma_n+\gamma_0)}$$
+$$\mathrm{Re}\,\frac{1}{\rho_n-\rho_0} + \mathrm{Re}\,\frac{1}{\rho_n-\bar\rho_0}$$
+$$= \mathrm{Re}\,\frac{1}{(1/2-\sigma_0)+i(\gamma_n-\gamma_0)} + \mathrm{Re}\,\frac{1}{(1/2-\sigma_0)+i(\gamma_n+\gamma_0)}$$
 $$= \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2} + \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n+\gamma_0)^2}$$
 
 Este par tiene SIGNO DEFINIDO: si $\sigma_0 > 1/2$, ambas fracciones son negativas; si $\sigma_0 < 1/2$, ambas son positivas. Los dos términos NO se cancelan (son del mismo signo).
 
 *Nota crítica sobre el emparejamiento.* Obsérvese que el par relevante aquí es $(\rho_0, \bar\rho_0)$ (conjugación compleja), NO $(\rho_0, 1-\bar\rho_0)$ (ecuación funcional). Bajo el emparejamiento $(\rho_0, 1-\bar\rho_0)$ los términos sí se cancelan (cf. §A.1 del Apéndice). La no-cancelación es una propiedad del emparejamiento correcto de la suma de Hadamard.
 
-**Proposición 4.3 (Separación de contribuciones).** Denotando por $\mathcal{Z}_{\mathrm{off}}$ el conjunto de ceros off-críticos con $\operatorname{Im}(\rho) > 0$:
+**Proposición 4.3 (Separación de contribuciones).** Denotando por $\mathcal{Z}_{\mathrm{off}}$ el conjunto de ceros off-críticos con $\mathrm{Im}(\rho) > 0$:
 
 $$C_\infty(\gamma_n) = -2 \sum_{\rho_0 \in \mathcal{Z}_{\mathrm{off}}} \left[\frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2} + \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n+\gamma_0)^2}\right]$$
 
@@ -117,7 +117,7 @@ donde $\rho_0 = \sigma_0 + i\gamma_0$.
 
 ## 5. La fórmula del déficit explícito
 
-Asumamos (por la ecuación funcional) que $1/2 < \sigma_0 \leq 1$ para cada $\rho_0 \in \mathcal{Z}_{\mathrm{off}}$ con $\operatorname{Im}(\rho_0) > 0$. Su par funcional $1 - \bar\rho_0 = (1-\sigma_0) + i\gamma_0$ tiene parte real $< 1/2$.
+Asumamos (por la ecuación funcional) que $1/2 < \sigma_0 \leq 1$ para cada $\rho_0 \in \mathcal{Z}_{\mathrm{off}}$ con $\mathrm{Im}(\rho_0) > 0$. Su par funcional $1 - \bar\rho_0 = (1-\sigma_0) + i\gamma_0$ tiene parte real $< 1/2$.
 
 **Definición 5.1 (Déficit puntual).** Para un cero off-crítico $\rho_0 = \sigma_0 + i\gamma_0$ (con $\sigma_0 > 1/2$, $\gamma_0 > 0$), su contribución al déficit de Inc. Inv. en $\gamma_n$ es:
 
@@ -184,11 +184,11 @@ $$C_\infty^{(\epsilon)}(x) := w(x) - 2\sum_{m=1}^\infty \frac{\Lambda(m)}{m^{1/2
 La serie converge absolutamente para $\epsilon > 0$ y uniformemente en compactos de $x$.
 
 **Proposición 7.1 (Conexión con $\zeta'/\zeta$).** Para $\epsilon > 0$ y $x \in \mathbb{R}$:
-$$C_\infty^{(\epsilon)}(x) = w(x) + 2\operatorname{Re}\!\left[\frac{\zeta'}{\zeta}(1/2+\epsilon-ix)\right]$$
+$$C_\infty^{(\epsilon)}(x) = w(x) + 2\mathrm{Re}\,\!\left[\frac{\zeta'}{\zeta}(1/2+\epsilon-ix)\right]$$
 
-*Prueba.* Por la serie de Dirichlet: $-\zeta'/\zeta(s) = \sum_m \Lambda(m) m^{-s}$ para $\operatorname{Re}(s) > 1$. Con $m^{-1/2-\epsilon+ix} = m^{-(1/2+\epsilon-ix)}$:
-$$\sum_m \Lambda(m) m^{-1/2-\epsilon}\cos(x\log m) = \operatorname{Re}\!\left[\sum_m \Lambda(m) m^{-1/2-\epsilon+ix}\right] = \operatorname{Re}\!\left[-\frac{\zeta'}{\zeta}(1/2+\epsilon-ix)\right]$$
-Por lo tanto $C_\infty^{(\epsilon)}(x) = w(x) + 2\operatorname{Re}[\zeta'/\zeta(1/2+\epsilon-ix)]$. $\square$
+*Prueba.* Por la serie de Dirichlet: $-\zeta'/\zeta(s) = \sum_m \Lambda(m) m^{-s}$ para $\mathrm{Re}(s) > 1$. Con $m^{-1/2-\epsilon+ix} = m^{-(1/2+\epsilon-ix)}$:
+$$\sum_m \Lambda(m) m^{-1/2-\epsilon}\cos(x\log m) = \mathrm{Re}\,\!\left[\sum_m \Lambda(m) m^{-1/2-\epsilon+ix}\right] = \mathrm{Re}\,\!\left[-\frac{\zeta'}{\zeta}(1/2+\epsilon-ix)\right]$$
+Por lo tanto $C_\infty^{(\epsilon)}(x) = w(x) + 2\mathrm{Re}[\zeta'/\zeta(1/2+\epsilon-ix)]$. $\square$
 
 **Lema 7.2 (Estructura del polo en $\bar\rho_n$).** Para $\epsilon \to 0^+$ y $x = \gamma_n$: el punto $s = 1/2+\epsilon-i\gamma_n$ se aproxima al cero $\bar\rho_n = 1/2-i\gamma_n$ de $\zeta$ (que existe porque $\zeta(\bar s) = \overline{\zeta(s)}$ y $\zeta(\rho_n) = 0$). Por lo tanto:
 
@@ -196,20 +196,20 @@ $$\frac{\zeta'}{\zeta}(1/2+\epsilon-i\gamma_n) = -\frac{1}{\epsilon} - g_n(\bar\
 
 donde $g_n(\bar\rho_n) = \overline{g_n(\rho_n)}$ (principio de reflexión de Schwarz para la parte regular). Entonces:
 
-$$\operatorname{Re}\!\left[\frac{\zeta'}{\zeta}(1/2+\epsilon-i\gamma_n)\right] = -\frac{1}{\epsilon} - \operatorname{Re}[g_n(\rho_n)] + O(\epsilon)$$
+$$\mathrm{Re}\,\!\left[\frac{\zeta'}{\zeta}(1/2+\epsilon-i\gamma_n)\right] = -\frac{1}{\epsilon} - \mathrm{Re}[g_n(\rho_n)] + O(\epsilon)$$
 
 **Proposición 7.3 (Divergencia del potencial regularizado en $\gamma_n$).** Para $\epsilon \to 0^+$:
-$$C_\infty^{(\epsilon)}(\gamma_n) = w(\gamma_n) - \frac{2}{\epsilon} - 2\operatorname{Re}[g_n(\rho_n)] + O(\epsilon)$$
+$$C_\infty^{(\epsilon)}(\gamma_n) = w(\gamma_n) - \frac{2}{\epsilon} - 2\mathrm{Re}[g_n(\rho_n)] + O(\epsilon)$$
 
 La divergencia $-2/\epsilon$ es **universal**: independiente de $n$, de la naturaleza de $\rho_n$, y de la distribución de los otros ceros. Es producida exclusivamente por la cercanía de $s$ a los dos ceros conjugados $\rho_n$ y $\bar\rho_n$.
 
 **Teorema 7.4 (Fórmula de renormalización de Abel).** La parte regular del límite Abel es:
-$$C_\infty^{\mathrm{ren}}(\gamma_n) := \lim_{\epsilon \to 0^+}\left[C_\infty^{(\epsilon)}(\gamma_n) + \frac{2}{\epsilon}\right] = w(\gamma_n) - 2\operatorname{Re}[g_n(\rho_n)]$$
+$$C_\infty^{\mathrm{ren}}(\gamma_n) := \lim_{\epsilon \to 0^+}\left[C_\infty^{(\epsilon)}(\gamma_n) + \frac{2}{\epsilon}\right] = w(\gamma_n) - 2\mathrm{Re}[g_n(\rho_n)]$$
 
 Y esta cantidad coincide con el valor de la serie condicionalmente convergente:
 $$C_\infty^{\mathrm{ren}}(\gamma_n) = C_\infty(\gamma_n)$$
 
-*Prueba.* La igualdad $C_\infty^{\mathrm{ren}}(\gamma_n) = w(\gamma_n) - 2\operatorname{Re}[g_n(\rho_n)]$ es directa de Proposición 7.3. La igualdad con $C_\infty(\gamma_n)$ proviene de que la serie condicionalmente convergente $D_\infty(\gamma_n)$ se suma a $2\operatorname{Re}[g_n(\rho_n)]$ (cf. Doc 40 Teorema 8.2 y su prueba vía Hadamard). $\square$
+*Prueba.* La igualdad $C_\infty^{\mathrm{ren}}(\gamma_n) = w(\gamma_n) - 2\mathrm{Re}[g_n(\rho_n)]$ es directa de Proposición 7.3. La igualdad con $C_\infty(\gamma_n)$ proviene de que la serie condicionalmente convergente $D_\infty(\gamma_n)$ se suma a $2\mathrm{Re}[g_n(\rho_n)]$ (cf. Doc 40 Teorema 8.2 y su prueba vía Hadamard). $\square$
 
 **Interpretación (Renormalización).** El potencial límite $C_\infty^{(\epsilon)}(\gamma_n)$ diverge universalmente como $-2/\epsilon$ cuando $\epsilon \to 0^+$: el "polo" proviene de los DOS ceros de $\zeta$ en $\{\rho_n, \bar\rho_n\}$ que se acercan al eje real por ambos lados en el espejo conjugado. El valor "físico" $C_\infty(\gamma_n)$ es el residuo finito tras substraer esta divergencia universal — exactamente como en la renormalización de QFT.
 
@@ -225,9 +225,9 @@ Inc. Inv. afirma que la parte finita del potencial regularizado en $\gamma_n$ es
 ¿Por qué la Ruta A (regularización Abel) no prueba Inc. Inv. directamente?
 
 **Diagnóstico 8.1.** El Teorema 7.4 establece:
-$$C_\infty^{\mathrm{ren}}(\gamma_n) = w(\gamma_n) - 2\operatorname{Re}[g_n(\rho_n)] = -2\operatorname{Re}\!\left[\sum_{\rho\neq\rho_n}\frac{1}{\rho_n-\rho}\right]$$
+$$C_\infty^{\mathrm{ren}}(\gamma_n) = w(\gamma_n) - 2\mathrm{Re}[g_n(\rho_n)] = -2\mathrm{Re}\,\!\left[\sum_{\rho\neq\rho_n}\frac{1}{\rho_n-\rho}\right]$$
 
-Para probar $C_\infty^{\mathrm{ren}}(\gamma_n) = 0$ necesitamos probar que $\sum_{\rho\neq\rho_n}\operatorname{Re}[1/(\rho_n-\rho)] = 0$, lo que (por Proposición 4.3 y Teorema 5.2) es equivalente a $\mathcal{Z}_{\mathrm{off}} = \emptyset$, es decir, RH. Circularidad exacta.
+Para probar $C_\infty^{\mathrm{ren}}(\gamma_n) = 0$ necesitamos probar que $\sum_{\rho\neq\rho_n}\mathrm{Re}[1/(\rho_n-\rho)] = 0$, lo que (por Proposición 4.3 y Teorema 5.2) es equivalente a $\mathcal{Z}_{\mathrm{off}} = \emptyset$, es decir, RH. Circularidad exacta.
 
 **La distinción sutil entre límites.** El potencial $C_\infty(x)$ en el eje real es la serie condicionalmente convergente. El límite $\lim_{\epsilon\to 0^+} C_\infty^{(\epsilon)}(x)$ para $x \neq \gamma_n$ coincide con $C_\infty(x)$ (ambas son la misma función fuera de las singularidades). Pero en $x = \gamma_n$: la serie condicional converge a $C_\infty(\gamma_n)$ (con la cancelación de Hadamard), mientras que el límite Abel diverge como $-2/\epsilon$. La renormalización en Teorema 7.4 conecta ambos valores — pero no los prueba iguales a 0.
 
@@ -327,7 +327,7 @@ Las Rutas A y B convergen en el mismo punto central:
 
 (i) **Ruta A (álgebra):** $C_\infty(\gamma_n) = \lim_{\epsilon\to0}[C_\infty^{(\epsilon)}(\gamma_n) + 2/\epsilon]$ — el residuo finito de la regularización Abel.
 
-(ii) **Hadamard (serie):** $C_\infty(\gamma_n) = -2\operatorname{Re}\sum_{\rho\neq\rho_n}[1/(\rho_n-\rho)]$ — la anulación de la suma sobre ceros de $\zeta$.
+(ii) **Hadamard (serie):** $C_\infty(\gamma_n) = -2\mathrm{Re}\,\sum_{\rho\neq\rho_n}[1/(\rho_n-\rho)]$ — la anulación de la suma sobre ceros de $\zeta$.
 
 (iii) **Ruta B (geometría):** $C_\infty(\gamma_n) = H_n \cdot (y_c^\infty)^2/2$ — el cuadrado de la altura límite del cero complejo asintótico, escalado por $H_n$.
 
@@ -337,7 +337,7 @@ Las Rutas A y B convergen en el mismo punto central:
 1. $\mathcal{Z}_{\mathrm{off}} = \emptyset$ (RH).
 2. $y_c^\infty = 0$ para todos los mínimos asintóticos $x_c^\infty = \gamma_n$ (Ruta B).
 3. $\lim_{\epsilon\to0}[C_\infty^{(\epsilon)}(\gamma_n) + 2/\epsilon] = 0$ para todo $n$ (Ruta A).
-4. $\sum_\rho \operatorname{Re}[1/(\rho_n-\rho)] = 0$ para todo $n$ (Hadamard).
+4. $\sum_\rho \mathrm{Re}[1/(\rho_n-\rho)] = 0$ para todo $n$ (Hadamard).
 
 ---
 
@@ -347,13 +347,13 @@ Una observación que parece sugestiva pero que resulta ser incorrecta puede acla
 
 **Proposición 13.1 (El emparejamiento equivocado).** Consideremos los ceros off-críticos agrupados por la simetría de la ECUACIÓN FUNCIONAL: $(\rho_0, 1-\bar\rho_0)$. Entonces:
 
-$$\operatorname{Re}\frac{1}{\rho_n-\rho_0} + \operatorname{Re}\frac{1}{\rho_n-(1-\bar\rho_0)} = \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2} + \frac{\sigma_0-1/2}{(\sigma_0-1/2)^2+(\gamma_n-\gamma_0)^2} = 0$$
+$$\mathrm{Re}\,\frac{1}{\rho_n-\rho_0} + \mathrm{Re}\,\frac{1}{\rho_n-(1-\bar\rho_0)} = \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2} + \frac{\sigma_0-1/2}{(\sigma_0-1/2)^2+(\gamma_n-\gamma_0)^2} = 0$$
 
 Bajo este emparejamiento, cada par contribuye 0 a la suma. Esto parecería implicar $C_\infty(\gamma_n) = 0$ unconditionally.
 
 **Por qué esto es INCORRECTO.** El emparejamiento de la suma de Hadamard NO es por la ecuación funcional, sino por conjugación compleja $(\rho_0, \bar\rho_0)$. Bajo este emparejamiento correcto:
 
-$$\operatorname{Re}\frac{1}{\rho_n-\rho_0} + \operatorname{Re}\frac{1}{\rho_n-\bar\rho_0} = \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2} + \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n+\gamma_0)^2}$$
+$$\mathrm{Re}\,\frac{1}{\rho_n-\rho_0} + \mathrm{Re}\,\frac{1}{\rho_n-\bar\rho_0} = \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2} + \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n+\gamma_0)^2}$$
 
 Ambos términos tienen el MISMO SIGNO (dado por $1/2-\sigma_0$), y NO se cancelan.
 
@@ -390,9 +390,9 @@ para alguna constante $c(\rho_0) > 0$ que depende de $\rho_0$, utilizando la den
 
 ## 15. La región libre de ceros y su efecto sobre la trayectoria
 
-De Doc 38 Theorem 1 (región libre de ceros de $\zeta$ en la franja $0 < \operatorname{Im}(s) < T$):
+De Doc 38 Theorem 1 (región libre de ceros de $\zeta$ en la franja $0 < \mathrm{Im}(s) < T$):
 
-$$\mathcal{Z}_{\mathrm{off}} \cap \{\operatorname{Im}(\rho) \leq T\} \subseteq \left\{|\operatorname{Re}(\rho) - 1/2| > c/\log T\right\}$$
+$$\mathcal{Z}_{\mathrm{off}} \cap \{\mathrm{Im}(\rho) \leq T\} \subseteq \left\{|\mathrm{Re}(\rho) - 1/2| > c/\log T\right\}$$
 
 para alguna constante $c > 0$ (clásica). Esto impone una cota sobre los ceros off-críticos cercanos a la línea crítica.
 
@@ -456,7 +456,7 @@ $$\frac{dz_c}{d\lambda} = -\frac{\partial_\lambda C_\lambda(z_c)}{C_\lambda'(z_c
 
 donde $C_\lambda'(z_c) \neq 0$ (ya que $z_c$ es un cero simple de $C_\lambda - \mu_\lambda$, no un punto crítico de $C_\lambda$).
 
-**Pregunta abierta 18.2.** ¿Puede demostrarse que $\operatorname{Im}(z_c(\lambda))$ es monótonamente decreciente en $\lambda$ para ALGUNA elección de norma, métrica, o promedio sobre los ceros?
+**Pregunta abierta 18.2.** ¿Puede demostrarse que $\mathrm{Im}(z_c(\lambda))$ es monótonamente decreciente en $\lambda$ para ALGUNA elección de norma, métrica, o promedio sobre los ceros?
 
 Del análisis de §10: la altura $y_c(\lambda)$ individual NO es monótona (oscila por las contribuciones de los primos). Pero quizás la suma:
 
@@ -470,7 +470,7 @@ $$\frac{dy_c}{d\lambda} \propto \frac{-\cos(x_c\log p)}{y_c} \cdot \frac{\log p}
 
 cuando $\lambda$ cruza $\sqrt{p}$. El PROMEDIO sobre primos $p$ cerca de $\lambda^2$:
 
-$$\langle\cos(x_c\log p)\rangle_{p \sim \lambda^2} \approx \operatorname{Re}\!\left[\frac{\sum_{p \sim \lambda^2} p^{ix_c}/\log p}{\pi(\lambda^2)}\right]$$
+$$\langle\cos(x_c\log p)\rangle_{p \sim \lambda^2} \approx \mathrm{Re}\,\!\left[\frac{\sum_{p \sim \lambda^2} p^{ix_c}/\log p}{\pi(\lambda^2)}\right]$$
 
 Bajo la equidistribución de primos modulada por los ceros de $\zeta$ (Teorema de Equidistribución de Weyl + cribas): este promedio es pequeño para $x_c$ genérico y puede ser controlado por métodos de criba si $x_c$ está suficientemente lejos de todos los $\gamma_n$.
 
@@ -533,7 +533,7 @@ Esto muestra: la ÚNICA manera de tener $C_\infty(\gamma_n) = 0$ para todos los 
 
 **A.1 (El emparejamiento $(\rho_0, 1-\bar\rho_0)$).** Para $\rho_0 = \sigma_0+i\gamma_0$ y su par funcional $1-\bar\rho_0 = (1-\sigma_0)+i\gamma_0$:
 
-$$\operatorname{Re}\frac{1}{\rho_n-\rho_0} + \operatorname{Re}\frac{1}{\rho_n-(1-\bar\rho_0)} = \frac{(1/2-\sigma_0)}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2} + \frac{(\sigma_0-1/2)}{(\sigma_0-1/2)^2+(\gamma_n-\gamma_0)^2} = 0$$
+$$\mathrm{Re}\,\frac{1}{\rho_n-\rho_0} + \mathrm{Re}\,\frac{1}{\rho_n-(1-\bar\rho_0)} = \frac{(1/2-\sigma_0)}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2} + \frac{(\sigma_0-1/2)}{(\sigma_0-1/2)^2+(\gamma_n-\gamma_0)^2} = 0$$
 
 Los dos términos son iguales en magnitud y opuestos en signo: la diferencia entre $1/2$ y $\sigma_0$ cambia de signo entre los dos ceros del par.
 

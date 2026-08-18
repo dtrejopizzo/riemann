@@ -229,11 +229,11 @@ identity yields only
 \]
 
 Therefore neither (3.5) nor Julia unitarity proves that
-(y_N\in\operatorname {Ran}D_{\rm out}^{1/2}).  The missing substantive
+(y_N\in\mathrm{Ran}\,D_{\rm out}^{1/2}).  The missing substantive
 claim remains
 
 \[
- y_N\in\operatorname {Ran}D_{\rm out}^{1/2},\qquad
+ y_N\in\mathrm{Ran}\,D_{\rm out}^{1/2},\qquad
  \|D_{\rm out}^{\dagger/2}y_N\|\le1,                 \tag{3.8}
 \]
 

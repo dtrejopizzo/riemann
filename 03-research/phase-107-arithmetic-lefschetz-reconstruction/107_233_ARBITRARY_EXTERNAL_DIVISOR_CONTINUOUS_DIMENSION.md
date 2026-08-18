@@ -2,12 +2,12 @@
 
 ## 1. External tensor filtration
 
-Let \(D\in\operatorname{Div}(C_p)\) and
-\(E\in\operatorname{Div}(C_q)\). At depths \(n,m\), define
+Let \(D\in\mathrm{Div}(C_p)\) and
+\(E\in\mathrm{Div}(C_q)\). At depths \(n,m\), define
 
 \[
  \mathcal T_{D,E}^{n,m}
- =\operatorname{im}\left(
+ =\mathrm{im}\,\left(
  H^0(D)^{p^n}\otimes_{\mathbb R_{\max}}H^0(E)^{q^m}
  \longrightarrow C(C_p\times C_q,\mathbb R_{\max})
  \right),
@@ -21,9 +21,9 @@ pointwise maximum.
 When the limit exists, put
 
 \[
- \operatorname{cdim}^{(2)}H^0(D\boxtimes E)
+ \mathrm{cdim}^{(2)}H^0(D\boxtimes E)
  =\lim_{n,m\to\infty}p^{-n}q^{-m}
- \operatorname{tdim}\mathcal T_{D,E}^{n,m}.
+ \mathrm{tdim}\,\mathcal T_{D,E}^{n,m}.
  \tag{1.2}
 \]
 
@@ -78,7 +78,7 @@ For all divisors \(D\) on \(C_p\) and \(E\) on \(C_q\), the limit
 
 \[
  \boxed{
- \operatorname{cdim}^{(2)}H^0(D\boxtimes E)
+ \mathrm{cdim}^{(2)}H^0(D\boxtimes E)
  =\max(\deg D,0)\max(\deg E,0).}
  \tag{3.1}
 \]
@@ -91,13 +91,13 @@ special-divisor theorem 107_232, gives
 
 \[
  \alpha_-\beta_-
- \leq\liminf p^{-n}q^{-m}\operatorname{tdim}\mathcal T_{D,E}^{n,m}
+ \leq\liminf p^{-n}q^{-m}\mathrm{tdim}\,\mathcal T_{D,E}^{n,m}
 \]
 
 and
 
 \[
- \limsup p^{-n}q^{-m}\operatorname{tdim}\mathcal T_{D,E}^{n,m}
+ \limsup p^{-n}q^{-m}\mathrm{tdim}\,\mathcal T_{D,E}^{n,m}
  \leq\alpha_+\beta_+.
 \]
 

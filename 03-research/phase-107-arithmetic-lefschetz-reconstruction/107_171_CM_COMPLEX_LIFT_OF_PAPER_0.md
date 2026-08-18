@@ -50,7 +50,7 @@ Let
 Then
 
 \[
- \operatorname{Tr}_{K/\mathbb Q}(\alpha)=-3,
+ \mathrm{Tr}_{K/\mathbb Q}(\alpha)=-3,
  \qquad N_{K/\mathbb Q}(\alpha)=5,
 \]
 
@@ -74,7 +74,7 @@ over \(\mathbb C\), and let
  \Delta=\Gamma_1.
 \]
 
-For \(\beta\in\operatorname{End}(E_{\rm CM})\), standard graph
+For \(\beta\in\mathrm{End}(E_{\rm CM})\), standard graph
 intersection gives
 
 \[
@@ -103,7 +103,7 @@ Every graph is an elliptic curve in the abelian surface \(A\).  Since
 Take \(\beta=\alpha^n\), and write
 
 \[
- s_n=\operatorname{Tr}(\alpha^n).
+ s_n=\mathrm{Tr}(\alpha^n).
 \]
 
 Then
@@ -202,7 +202,7 @@ reduces to the fixed curve, and the endomorphism \(\alpha\) lives in its
 CM endomorphism ring.
 
 This does **not** construct the universal Phase 107 space over
-\(\operatorname{Spec}\mathbb Z\).  The correspondence \(\alpha\) is
+\(\mathrm{Spec}\,\mathbb Z\).  The correspondence \(\alpha\) is
 defined over the CM field after base change, and the construction uses
 the special ordinary elliptic control.  It neither realizes Riemann
 zeta's prime/Gamma divisor nor resolves the finite-place no-go of row

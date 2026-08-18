@@ -31,7 +31,7 @@ Let
 \]
 For \(0<r<1\),
 \[
-  \operatorname{Re}{1\over1-re^{i\theta}}
+  \mathrm{Re}{1\over1-re^{i\theta}}
   =
   1+\sum_{m\ge1}r^m\cos(m\theta).
 \tag{1}
@@ -46,7 +46,7 @@ gives, with normalized measure \(dm=d\theta/(2\pi)\),
 \[
 \begin{aligned}
   \int_{\partial\mathbb D}
-  \operatorname{Re}{1\over1-r\zeta}\,
+  \mathrm{Re}{1\over1-r\zeta}\,
   L(\zeta)\,dm(\zeta)
   &=
   \sum_{m\ge1}r^m
@@ -86,14 +86,14 @@ As in `263`, this gives a global lower bound
 \]
 with an explicit finite \(B_h^\ast\).  Since
 \[
-  \operatorname{Re}{1\over1-r\zeta}
+  \mathrm{Re}{1\over1-r\zeta}
 \]
 is not everywhere nonnegative, it is cleaner to use the Carathéodory
 Poisson kernel
 \[
   P_r(\theta)
   =
-  \operatorname{Re}{1+re^{i\theta}\over1-re^{i\theta}}
+  \mathrm{Re}{1+re^{i\theta}\over1-re^{i\theta}}
   =
   1+2\sum_{m\ge1}r^m\cos(m\theta)\ge0.
 \tag{8}
@@ -108,7 +108,7 @@ The associated Carathéodory transform is
 \]
 so
 \[
-  \operatorname{Re}H_g(r)=\int P_r\,d\nu_g.
+  \mathrm{Re}\,H_g(r)=\int P_r\,d\nu_g.
 \tag{10}
 \]
 
@@ -131,7 +131,7 @@ Also \(\int P_r\,dm=1\).  Therefore (7), \(h\ge0\), and
 \(\nu_{\rm rem}\ge0\) imply
 \[
 \boxed{
-  \operatorname{Re}H_g(r)
+  \mathrm{Re}\,H_g(r)
   \ge
   a\log {1\over1-r}-B_h^\ast
   \qquad(0<r<1).
@@ -142,7 +142,7 @@ Also \(\int P_r\,dm=1\).  Therefore (7), \(h\ge0\), and
 Equivalently, since \(H_g=2\mathcal G_+-g_0\), the one-sided increment
 generator satisfies
 \[
-  \operatorname{Re}\mathcal G_+(r)
+  \mathrm{Re}\,\mathcal G_+(r)
   \ge
   {a\over2}\log {1\over1-r}+O(1).
 \tag{13}
@@ -178,7 +178,7 @@ more precisely from the gamma factor,
 With \(s=(1-r)^{-1}\), this gives
 \[
 \boxed{
-  \operatorname{Re}\mathcal G_+(r)
+  \mathrm{Re}\,\mathcal G_+(r)
   =
   {1\over2}\log {1\over1-r}+O(1).
 }

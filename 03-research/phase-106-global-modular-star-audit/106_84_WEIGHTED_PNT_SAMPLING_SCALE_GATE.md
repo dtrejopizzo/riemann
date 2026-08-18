@@ -12,7 +12,7 @@ Fix a finite elementary spectral block \(\mathcal Z\), including confluent
 jets of order at most \(J\), and suppose
 
 \[
- |\operatorname {Im}z|\le b<\frac12
+ |\mathrm{Im}\,z|\le b<\frac12
  \qquad(z\in\mathcal Z).                           \tag{1}
 \]
 
@@ -139,7 +139,7 @@ Its exponential form is
 \]
 
 Neither coefficient in (10) vanishes in the open strip
-\(|\operatorname {Im}z|<1/2\).  Differentiating in \(z\) shows that the
+\(|\mathrm{Im}\,z|<1/2\).  Differentiating in \(z\) shows that the
 map from the mode and jet coefficients of \(q\) to the coefficients of
 
 \[
@@ -154,7 +154,7 @@ therefore invertible.  In particular,
  \qquad
  \deg P_\nu\le J,
  \qquad
- -b\le\operatorname {Re}\lambda_\nu\le b,       \tag{12}
+ -b\le\mathrm{Re}\,\lambda_\nu\le b,       \tag{12}
 \]
 
 where the \(\lambda_\nu\) are the distinct values \(iz\) and \(-iz\),
@@ -163,7 +163,7 @@ with the prescribed confluence.  Moreover there is an explicit constant
 coefficient map, such that
 
 \[
- \|\operatorname {coeff}(F_q)\|
+ \|\mathrm{coeff}(F_q)\|
  \ge s_{\mathcal Z}\|q\|_{\rm coeff}.            \tag{13}
 \]
 

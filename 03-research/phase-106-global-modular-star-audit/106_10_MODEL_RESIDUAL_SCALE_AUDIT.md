@@ -219,7 +219,7 @@ For every fixed \(0\le B<1/2\),
 
 \[
  \boxed{
- \sup_{|\operatorname{Im}z|\le B}
+ \sup_{|\mathrm{Im}\,z|\le B}
  |\widehat k_\lambda(z)-\Xi(z)|
  =O_B(\lambda^{B-1/2})}
  \tag{17}

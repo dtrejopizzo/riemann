@@ -199,11 +199,11 @@ mera sustitución en una expresión cerrada.
 ## 2. Relación exacta con la fórmula explícita
 
 La fórmula explícita para la función de Riemann \(J\) contiene
-\(-\operatorname {Li}(x^\rho)\) por cada cero, con emparejamiento
+\(-\mathrm{Li}(x^\rho)\) por cada cero, con emparejamiento
 simétrico. Para cualquier conjunto **finito** de ceros críticos,
 
 \[
- \operatorname {Li}(x^\rho)
+ \mathrm{Li}(x^\rho)
  ={x^\rho\over\rho\log x}
  +O_\rho\!\left({x^{1/2}\over\log^2x}\right),
  \qquad x\to\infty.

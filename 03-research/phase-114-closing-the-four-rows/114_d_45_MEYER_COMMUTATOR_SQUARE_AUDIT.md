@@ -90,9 +90,9 @@ Meyer's character formula is
 \[
  \begin{aligned}
  \chi(\rho)(h)
- ={}&-\operatorname{Tr}\Lambda(h)
+ ={}&-\mathrm{Tr}\,\Lambda(h)
       (\iota_-\pi_- -\iota_+\pi_+)\\
- &+\operatorname{Tr}\Lambda(h)D_+.                            \tag{2.5}
+ &+\mathrm{Tr}\,\Lambda(h)D_+.                            \tag{2.5}
  \end{aligned}
 \]
 
@@ -101,10 +101,10 @@ Equivalently, after expanding the matrices,
 \[
  \begin{aligned}
  \chi(\rho)(h)={}&
- -\operatorname{Tr}_{\mathcal S_>}\Lambda(h)(M-ZMZ^{-1})\\
- &-\operatorname{Tr}_{\mathcal S_<}\Lambda(h)
+ -\mathrm{Tr}_{\mathcal S_>}\Lambda(h)(M-ZMZ^{-1})\\
+ &-\mathrm{Tr}_{\mathcal S_<}\Lambda(h)
        J(M-ZMZ^{-1})J\\
- &-\operatorname{Tr}_{\mathcal H_+}\Lambda(h)
+ &-\mathrm{Tr}_{\mathcal H_+}\Lambda(h)
        (M-FJMJF).                                               \tag{2.6}
  \end{aligned}
 \]
@@ -121,7 +121,7 @@ calculation determines the sign question completely.
 > off-diagonal blocks `QAP` and `PAQ` are Hilbert--Schmidt.  Then
 > \[
 > \boxed{
-> \operatorname{Tr}\bigl(A[P,A^*]\bigr)
+> \mathrm{Tr}\,\bigl(A[P,A^*]\bigr)
 > =\|QAP\|_{\rm HS}^2-\|PAQ\|_{\rm HS}^2.}                    \tag{3.1}
 > \]
 
@@ -177,14 +177,14 @@ variables gives
 Therefore
 
 \[
- \operatorname{Tr}\bigl(A_f[P,A_f^*]\bigr)
+ \mathrm{Tr}\,\bigl(A_f[P,A_f^*]\bigr)
  =-\int_{\mathbb R}r|f(r)|^2\,dr.                              \tag{4.3}
 \]
 
 Equation (4.3) is the logarithmic-coordinate version of Meyer's lemma
 
 \[
- \operatorname{Tr}\Lambda(f_0)[M,\Lambda(f_1)]
+ \mathrm{Tr}\,\Lambda(f_0)[M,\Lambda(f_1)]
    =\tau(f_0*\partial f_1).                                   \tag{4.4}
 \]
 
@@ -217,9 +217,9 @@ For `h=f_0*f_1`, Meyer rewrites the first term of (2.6) as
 
 \[
  \begin{aligned}
- -\operatorname{Tr}\Lambda(h)(M-ZMZ^{-1})
- ={}&\operatorname{Tr}\Lambda(f_0)[M,\Lambda(f_1)]\\
- &-\operatorname{Tr}\Lambda(Z^{-1}f_0)
+ -\mathrm{Tr}\,\Lambda(h)(M-ZMZ^{-1})
+ ={}&\mathrm{Tr}\,\Lambda(f_0)[M,\Lambda(f_1)]\\
+ &-\mathrm{Tr}\,\Lambda(Z^{-1}f_0)
        [M,\Lambda(Zf_1)].                                     \tag{5.1}
  \end{aligned}
 \]
@@ -262,7 +262,7 @@ Let
 Meyer's theorem states
 
 \[
- \chi(\rho)(h)=\operatorname{Tr}_{\rm nuc}\mathfrak D_M(h).   \tag{6.2}
+ \chi(\rho)(h)=\mathrm{Tr}_{\rm nuc}\mathfrak D_M(h).   \tag{6.2}
 \]
 
 For a primitive square `h=f*f^sharp`, the two polar characters vanish and
@@ -270,7 +270,7 @@ the A--B--C comparison identifies (6.2), with the established global sign
 convention, with `B_nuc(f,f)`.  D.32 then gives
 
 \[
- \operatorname{Tr}_{\rm nuc}\mathfrak D_M(f*f^\sharp)
+ \mathrm{Tr}_{\rm nuc}\mathfrak D_M(f*f^\sharp)
  =\|\mathbf Sf\|^2-\|\mathbf Bf\|^2.                           \tag{6.3}
 \]
 
@@ -337,7 +337,7 @@ proves the missing global Hodge inequality.
 The same conclusion applies to a trace-square formula
 
 \[
- B_{\rm nuc}(f,f)=-\operatorname{Tr}(T_fT_f^*).                 \tag{7.5}
+ B_{\rm nuc}(f,f)=-\mathrm{Tr}(T_fT_f^*).                 \tag{7.5}
 \]
 
 Indeed, (7.5) is available in D.37 only after a positive, centrally unitary,

@@ -8,7 +8,7 @@
 ## El diagnóstico de Phase 27
 
 Phase 27 identificó que todos los obstáculos del programa se reducen al mismo objeto:
-construir la cohomología aritmética $H^1(\operatorname{Spec}\mathbb{Z})$ con forma de
+construir la cohomología aritmética $H^1(\mathrm{Spec}\,\mathbb{Z})$ con forma de
 intersección positiva (Wall A = sitio aritmético de Connes–Consani). Pero también
 identificó que ese wall lleva décadas sin cerrarse.
 

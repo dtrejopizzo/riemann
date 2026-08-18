@@ -261,7 +261,7 @@ con residuo exacto
 
 \[
  \boxed{
- \operatorname*{Res}_{z=z_{\rho,a}}
+ \mathop{\mathrm{Res}}_{z=z_{\rho,a}}
  \mathcal LV_{n,a}(z)
  =m_\rho\left[1-\left(1-{a\over\rho}\right)^n\right].} \tag{24}
 \]

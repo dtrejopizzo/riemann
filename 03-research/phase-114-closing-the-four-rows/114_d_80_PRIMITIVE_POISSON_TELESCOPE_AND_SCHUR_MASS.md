@@ -58,8 +58,8 @@ preserves that ideal, and both maps commute with translations, Tate
 involution and the Gamma oscillator.  Their supports satisfy
 
 \[
- \operatorname {supp}(\mathcal A_R^NF)
- \subseteq\operatorname {supp}(F)+[-NR,NR].                \tag{1.4}
+ \mathrm{supp}(\mathcal A_R^NF)
+ \subseteq\mathrm{supp}(F)+[-NR,NR].                \tag{1.4}
 \]
 
 The exact telescope is
@@ -173,7 +173,7 @@ If `0<Re(s)<1`, write `R(s-1/2)=x+iy`.  Then `|x|<R/2` and
 Therefore
 
 \[
- \boxed{|a_R(s)|<1\quad(0<\operatorname {Re}s<1).}         \tag{4.4}
+ \boxed{|a_R(s)|<1\quad(0<\mathrm{Re}\,s<1).}         \tag{4.4}
 \]
 
 The row-C character is nuclear on the smooth compact test algebra.  Under
@@ -227,13 +227,13 @@ such a vector to be zero.  If `(lambda_j)` are the eigenvalues, then
 
 \[
  0\le\lambda_j<1,
- \qquad \sum_j\lambda_j=\operatorname {Tr}C<\infty.        \tag{5.3}
+ \qquad \sum_j\lambda_j=\mathrm{Tr}\,C<\infty.        \tag{5.3}
 \]
 
 For `N>=1`, `lambda_j^N<=lambda_j`; hence dominated convergence proves
 
 \[
- \boxed{\|C^N\|_1=\operatorname {Tr}(C^N)
+ \boxed{\|C^N\|_1=\mathrm{Tr}(C^N)
        =\sum_j\lambda_j^N\longrightarrow0.}               \tag{5.4}
 \]
 
@@ -316,7 +316,7 @@ By (5.4),
 But (6.5) also gives
 
 \[
- \operatorname {Tr}S
+ \mathrm{Tr}\,S
  ={1\over4}\sum_{j\ge1}\|C^{j/2}(I-C)^{1/2}V\|_{\rm HS}^2.
                                                                   \tag{6.9}
 \]

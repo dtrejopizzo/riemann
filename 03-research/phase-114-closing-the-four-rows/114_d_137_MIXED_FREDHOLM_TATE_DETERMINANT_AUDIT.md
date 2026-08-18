@@ -19,8 +19,8 @@ resolvent kernel, and all symmetric prime-power channels), then
 The based metrized line
 
 \[
- \lambda_{\rm mix}(f)=\operatorname {Exp}(Y_Tf)
-             \otimes\operatorname {Exp}(X_Tf)^{-1}     \tag{0.2}
+ \lambda_{\rm mix}(f)=\mathrm{Exp}(Y_Tf)
+             \otimes\mathrm{Exp}(X_Tf)^{-1}     \tag{0.2}
 \]
 
 has exact second metric cross-effect \(B_{\rm nuc}\).  It exists without a
@@ -34,7 +34,7 @@ Second, the Birman--Schwinger defect
 \]
 
 is Fredholm because \(A_T\) is compact.  Therefore its Fredholm determinant
-line \(\operatorname {Det}(F_T)\) exists even though \(A_T^*A_T\) is in no
+line \(\mathrm{Det}(F_T)\) exists even though \(A_T^*A_T\) is in no
 finite Schatten class.  What does **not** exist canonically is a scalar
 Fredholm product, a Quillen product metric, or the usual restricted-Tate
 determinant gerbe: all finite-order regularized determinant series diverge.
@@ -200,7 +200,7 @@ At infinity, the digamma identity gives
 \[
  \|D_\infty F\|^2
  ={1\over2\pi}\int_{\mathbb R}
- \bigl(\operatorname {Re}\psi(5/4+i\tau/2)-\psi(5/4)\bigr)
+ \bigl(\mathrm{Re}\,\psi(5/4+i\tau/2)-\psi(5/4)\bigr)
  |\widehat F(\tau)|^2\,d\tau,                         \tag{2.9}
 \]
 
@@ -236,7 +236,7 @@ positive or negative.
 
 ## 3. The virtual coherent determinant and its cross-effect
 
-For a complex Hilbert space \(H\), let \(\operatorname {Exp}_H(v)\) denote
+For a complex Hilbert space \(H\), let \(\mathrm{Exp}_H(v)\) denote
 the based coherent line with distinguished vector \(e_v\) and metric
 
 \[
@@ -244,14 +244,14 @@ the based coherent line with distinguished vector \(e_v\) and metric
 \]
 
 Its multiplication carries the standard Heisenberg phase
-\(\exp(\tfrac i2\operatorname {Im}\langle v,w\rangle)\).  Bilinearity of
+\(\exp(\tfrac i2\mathrm{Im}\,\langle v,w\rangle)\).  Bilinearity of
 the phase gives the associativity cocycle.  Define
 
 \[
  \lambda_{\rm mix,T}(f)
- =\operatorname {Exp}_{\mathcal Y_T}(Y_Tf)
+ =\mathrm{Exp}_{\mathcal Y_T}(Y_Tf)
   \otimes
-  \operatorname {Exp}_{\mathcal X_T}(X_Tf)^{-1}.       \tag{3.2}
+  \mathrm{Exp}_{\mathcal X_T}(X_Tf)^{-1}.       \tag{3.2}
 \]
 
 Then
@@ -273,11 +273,11 @@ therefore has
 
 \[
  \boxed{
- \log\|\delta^2e(f,g)\|=\operatorname {Re}B_{\rm nuc}(f,g),} \tag{3.5}
+ \log\|\delta^2e(f,g)\|=\mathrm{Re}\,B_{\rm nuc}(f,g),} \tag{3.5}
 \]
 
 while the Heisenberg phase in (3.1) recovers
-\(\operatorname {Im}B_{\rm nuc}(f,g)\).  Hence (3.2), not a formal
+\(\mathrm{Im}\,B_{\rm nuc}(f,g)\).  Hence (3.2), not a formal
 Fredholm product, is the object whose complete Hermitian second
 cross-effect is \(B_{\rm nuc}\).
 
@@ -353,8 +353,8 @@ on separable Hilbert spaces with continuous Fredholm diagrams.  The usual
 determinant functor assigns
 
 \[
- \operatorname {Det}(F_T)
- =\det\ker F_T\otimes(\det\operatorname {coker}F_T)^{-1}. \tag{5.5}
+ \mathrm{Det}(F_T)
+ =\det\ker F_T\otimes(\det\mathrm{coker}\,F_T)^{-1}. \tag{5.5}
 \]
 
 Both vector spaces in (5.5) are finite-dimensional.  Thus this line exists
@@ -380,7 +380,7 @@ The implications are exact:
 * \(\det(I-K_T)\) is not an ordinary Fredholm determinant;
 * no finite-order regularized determinant \(\det_p(I-K_T)\) is defined;
 * the formal series
-  \(-\sum_{m\geq1}\operatorname {Tr}(K_T^m)/m\) has no finite first
+  \(-\sum_{m\geq1}\mathrm{Tr}(K_T^m)/m\) has no finite first
   power at which all subsequent traces become defined; and
 * the usual restricted linear/Tate central extension, which requires a
   trace-class determinant comparison (or a Hilbert--Schmidt polarization
@@ -414,7 +414,7 @@ directed identifications
 
 \[
  \lambda_{\rm mix,T'}(f)\simeq\lambda_{\rm mix,T}(f)
- \qquad(T'\geq T\text{ containing }\operatorname {supp}f). \tag{7.1}
+ \qquad(T'\geq T\text{ containing }\mathrm{supp}\,f). \tag{7.1}
 \]
 
 This directed compatibility applies to the **difference** of the two
@@ -589,7 +589,7 @@ The D.134 factorization gives the following exact answer:
  \begin{array}{c|c|c}
  \text{object}&\text{exists?}&\text{information retained}\\ \hline
  \lambda_{\rm mix}&\text{yes}&B_{\rm nuc}\text{ as second cross-effect}\\
- \operatorname {Det}(I-K_T)&\text{yes}&\ker(I-K_T),\operatorname {coker}(I-K_T)\\
+ \mathrm{Det}(I-K_T)&\text{yes}&\ker(I-K_T),\mathrm{coker}(I-K_T)\\
  \det(I-K_T)\text{ as scalar product}&\text{no}&K_T\notin\mathcal S_p\\
  \text{standard restricted-Tate gerbe}&\text{not canonically}&A_T\notin\mathcal S_p\\
  \text{positive Hilbert/effective metric}&\text{iff D}&\|A_T\|\leq1

@@ -44,7 +44,7 @@ Choose smooth even cutoffs \(\chi_a\) such that
 \[
  0\leq\chi_a\leq1,\qquad
  \chi_a=1\ \hbox{on }[-a+1,a-1],\qquad
- \operatorname{supp}\chi_a\subset(-a,a),
+ \mathrm{supp}\,\chi_a\subset(-a,a),
  \tag{4}
 \]
 
@@ -78,7 +78,7 @@ For a nontrivial zero \(\rho=\beta+i\gamma\), use
 Unconditionally,
 
 \[
- |\operatorname{Im}z_\rho|<\frac12.
+ |\mathrm{Im}\,z_\rho|<\frac12.
  \tag{8}
 \]
 
@@ -155,7 +155,7 @@ For \(g\in L^2(I_L)\), Cauchy--Schwarz and (8) give
  |\widehat g(z_\rho)|
  &\leq \|g\|_2
  \left(\int_{-a}^{a}
- e^{2\operatorname{Im}(z_\rho)x}\,dx\right)^{1/2}\\
+ e^{2\mathrm{Im}(z_\rho)x}\,dx\right)^{1/2}\\
  &\leq (L\lambda)^{1/2}\|g\|_2.
 \end{aligned}
  \tag{14}

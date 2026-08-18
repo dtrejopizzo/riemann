@@ -151,7 +151,7 @@ The Gamma symbol is
 
 \[
  \ell_\infty(\tau)
- =\operatorname{Re}\psi(1/4+i\tau/2)-\psi(1/4).        \tag{4.1}
+ =\mathrm{Re}\,\psi(1/4+i\tau/2)-\psi(1/4).        \tag{4.1}
 \]
 
 Taylor expansion gives
@@ -229,7 +229,7 @@ The sharp uncertainty calculation closes the coherent-channel audit:
 
 \[
  \boxed{
- \|\operatorname{ev}_0\|_{\mathcal P_T}^2
+ \|\mathrm{ev}_0\|_{\mathcal P_T}^2
  =2T-8+o(1),
  \qquad
  \ell_\infty(\tau)\asymp\tau^2.}

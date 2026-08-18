@@ -80,7 +80,7 @@ esa desigualdad, Deep-\(\Lambda\), A1 ni RH.
 
 **No duplicación interna.** `E101_090` aísla la covarianza de cociente
 para los coeficientes \(\Lambda(n)-1\) con cutoff balanceado, y `104_89`
-usa la energía continua de \(J(x)-\operatorname {Li}(x)\) para el gate
+usa la energía continua de \(J(x)-\mathrm{Li}(x)\) para el gate
 BSY. Aquí se cierra la versión discreta exacta (1)--(5), se identifica el
 umbral mínimo \(N^{o(1)}\), se obtiene la obstrucción cuantitativa (4), y
 se audita contra ella toda la jerarquía centrada de Selberg.
@@ -505,5 +505,5 @@ python3 discrete_cramer_selberg_gate_check.py
 
 El checker usa solamente `Fraction`. Verifica (5) para familias racionales
 arbitrarias, la telescopía del borde y cotas racionales de la serie
-\(\operatorname {arctanh}\) que certifican
+\(\mathrm{arctanh}\,\) que certifican
 \(\log2<1<\log3\). No usa valores de \(\zeta\), ceros ni punto flotante.

@@ -163,8 +163,8 @@ Let `rho_-^0` be the scaling representation on `V`.  For a completed test
 
 \[
  \chi_{\mathbb L_{\rm comp}}(h)
- =\operatorname{Tr}_{\mathbb C(0)\oplus\mathbb C(1)}\rho_+^0(h)
- -\operatorname{Tr}_V\rho_-^0(h).                         \tag{4.1}
+ =\mathrm{Tr}_{\mathbb C(0)\oplus\mathbb C(1)}\rho_+^0(h)
+ -\mathrm{Tr}_V\rho_-^0(h).                         \tag{4.1}
 \]
 
 Under the central Mellin identification, the even trace is
@@ -177,7 +177,7 @@ The full character is `B_nuc(f,g)`.  Hence
 
 \[
  \boxed{
- \operatorname{Tr}_V\rho_-^0(f\star g^\vee)
+ \mathrm{Tr}_V\rho_-^0(f\star g^\vee)
  =\langle M(f),CM(g)\rangle-B_{\rm nuc}(f,g).}            \tag{4.3}
 \]
 
@@ -185,7 +185,7 @@ On primitive tests,
 
 \[
  \boxed{
- \operatorname{Tr}_V\rho_-^0(f\star g^\vee)
+ \mathrm{Tr}_V\rho_-^0(f\star g^\vee)
  =-B_{\rm nuc}(f,g).}                                     \tag{4.4}
 \]
 
@@ -246,8 +246,8 @@ and a closed extension of the Poisson differential satisfying:
 Then Hodge decomposition would give
 
 \[
- \mathscr H_Z=\overline{\operatorname{Ran}d}
- \oplus\overline{\operatorname{Ran}d^*}
+ \mathscr H_Z=\overline{\mathrm{Ran}\,d}
+ \oplus\overline{\mathrm{Ran}\,d^*}
  \oplus\mathcal H_{\rm harm},                             \tag{6.2}
 \]
 

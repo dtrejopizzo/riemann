@@ -191,8 +191,8 @@ budget from D.184,
 
 \[
  {\|y_{\rm hi}\|^2\over1-\rho^2}
- +\operatorname {Cap}_{\rm lo}
- +\operatorname {Cap}_{\rm cross}\le1.              \tag{4.1}
+ +\mathrm{Cap}_{\rm lo}
+ +\mathrm{Cap}_{\rm cross}\le1.              \tag{4.1}
 \]
 
 A finite rank, a convergent return series, or a PNT bound alone proves

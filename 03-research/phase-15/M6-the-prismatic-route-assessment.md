@@ -41,7 +41,7 @@ $$
 s_k(p)=\sum_i\alpha_{i,p}^{\,k}=1\qquad\text{for all }p,k,
 $$
 the **trivial anatomy of $\zeta$** (P19). The Hodge–Tate weights are integers and the monodromy is
-$N=0$ (everywhere good reduction; $\zeta$ is the zeta of $\operatorname{Spec}\mathbb Z$ itself, a Tate motive).
+$N=0$ (everywhere good reduction; $\zeta$ is the zeta of $\mathrm{Spec}\,\mathbb Z$ itself, a Tate motive).
 *(Grounding computation: `experiments/m6_prismatic_frobenius.py`.)*
 
 **The decisive separation.** The prismatic Frobenius eigenvalues are the **local** data $\{\alpha_{i,p}\}$, living on
@@ -61,13 +61,13 @@ the local Hodge structure, not the ordinates $\gamma_\rho$ — and for $\zeta$ t
 The integer-graded hard-Lefschetz $\mathfrak{sl}_2$ supplied by the prismatic Sen/monodromy operators acts on the
 **local** weight structure (Hodge–Tate weights, monodromy filtration), reproducing the P19 anatomy
 ($s_k(p)=1$ for $\zeta$). It does **not** act on the global zero-spectrum: the $\gamma_\rho$ are not prismatic
-Frobenius eigenvalues. Producing a cohomology over $\operatorname{Spec}\mathbb Z$ whose Frobenius eigenvalues are the
+Frobenius eigenvalues. Producing a cohomology over $\mathrm{Spec}\,\mathbb Z$ whose Frobenius eigenvalues are the
 $\gamma_\rho$ — and gluing the local prismatic data into it — is the **SURF/Deninger–Connes–Consani** target, which
 prismatic cohomology (a $p$-adic/local theory, per prism) does not currently supply.
 \end{proposition}
 
 So the prismatic route **relocates** to the program's standing wall (SURF: the missing global arithmetic surface for
-$\operatorname{Spec}\mathbb Z$), not to a new one. The dichotomy's **discrete horn** — LI on the global zeros — is
+$\mathrm{Spec}\,\mathbb Z$), not to a new one. The dichotomy's **discrete horn** — LI on the global zeros — is
 untouched: to grade the $\gamma_\rho$ by an integer Lefschetz you still need them in an integer/weight structure,
 which LI forbids.
 
@@ -82,7 +82,7 @@ $\zeta$'s triviality ($N=0$, Tate motive, dimension $1$) is exactly why no surfa
 
 The prismatic perspective does name a precise, non-vacuous question (the candid continuation, not a crossing):
 
-> **Does absolute prismatic cohomology over $\operatorname{Spec}\mathbb Z$ (or over the sphere spectrum $\mathbb S$,
+> **Does absolute prismatic cohomology over $\mathrm{Spec}\,\mathbb Z$ (or over the sphere spectrum $\mathbb S$,
 > à la Connes–Consani $\mathbb F_1$) admit a global Frobenius whose eigenvalues are the $\zeta$-zeros?**
 
 This is the Deninger "$\Phi$ on leafwise cohomology" / Connes–Consani target stated in prismatic language. It is the
@@ -99,7 +99,7 @@ gluing is missing — is the candid output.
 - **Verdict:** **no escape from the dichotomy.** The prismatic integer grading is local (weights), not on the global
   zeros; the global obstruction is SURF, unchanged. The discrete horn (LI on the zeros) stands.
 - **Sharpening (the gain):** the integer-graded HR Lefschetz the dichotomy lacked **exists locally** — so the
-  obstruction is precisely the **global gluing** into a $\operatorname{Spec}\mathbb Z$-cohomology with the zeros as
+  obstruction is precisely the **global gluing** into a $\mathrm{Spec}\,\mathbb Z$-cohomology with the zeros as
   Frobenius eigenvalues, the Deninger/Connes–Consani/SURF target, now stated prismatically.
 - **No crossing.** Consistent with the CAP/SURF map of the whole program: $\zeta$-routes terminate at the wrong-sign
   capstone (analysis) or the missing surface (geometry); the prismatic route is the latter, sharpened.
@@ -107,5 +107,5 @@ gluing is missing — is the candid output.
 > M6 closes the four advisor routes against the filter: A1 restates M3 (in $W^*(\T)$); the archimedean–modular route
 > (A2/A3/A4-i) reaches the Lefschetz dichotomy (M4–M5); the prismatic route (A4-2) relocates to SURF with the gain
 > that the missing integer Lefschetz is local, not impossible. The standing wall — a global zero-carrying cohomology
-> with a hard-Lefschetz class over $\operatorname{Spec}\mathbb Z$ — is unchanged, and now characterized from every
+> with a hard-Lefschetz class over $\mathrm{Spec}\,\mathbb Z$ — is unchanged, and now characterized from every
 > side the advisors proposed.

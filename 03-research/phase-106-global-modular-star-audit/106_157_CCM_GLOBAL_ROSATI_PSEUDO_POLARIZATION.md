@@ -43,7 +43,7 @@ Then \(\sharp\) is a conjugate-linear involution and
 Let
 
 \[
- \tau(f)=\operatorname{Tr}\!\left(
+ \tau(f)=\mathrm{Tr}\,\!\left(
  \underline\vartheta_m(f)\mid H^1_{\rm CCM}\right)            \tag{4}
 \]
 
@@ -120,8 +120,8 @@ Regard \(H^1_{\rm Ros}\) as a real vector space and let
 Put
 
 \[
- g_{\rm Ros}(u,v)=\operatorname{Re}\mathfrak h(u,v),\qquad
- \Omega_{\rm Ros}(u,v)=-\operatorname{Im}\mathfrak h(u,v).    \tag{12}
+ g_{\rm Ros}(u,v)=\mathrm{Re}\,\mathfrak h(u,v),\qquad
+ \Omega_{\rm Ros}(u,v)=-\mathrm{Im}\,\mathfrak h(u,v).    \tag{12}
 \]
 
 ### Theorem 4.1 — Global pseudo-polarization
@@ -138,13 +138,13 @@ with \(g_{\rm Ros}\), it is nondegenerate on the quotient, and
 #### Proof
 
 Hermitian symmetry gives
-\(\operatorname{Im}\mathfrak h(v,u)=-\operatorname{Im}\mathfrak h(u,v)\).
+\(\mathrm{Im}\,\mathfrak h(v,u)=-\mathrm{Im}\,\mathfrak h(u,v)\).
 With the convention that \(\mathfrak h\) is conjugate-linear in the second
 variable, \(\mathfrak h(u,iv)=-i\mathfrak h(u,v)\); hence
 
 \[
- -\operatorname{Im}\mathfrak h(u,iv)
- =\operatorname{Re}\mathfrak h(u,v).
+ -\mathrm{Im}\,\mathfrak h(u,iv)
+ =\mathrm{Re}\,\mathfrak h(u,v).
 \]
 
 If both real and imaginary parts pair \(u\) trivially with every \(v\),

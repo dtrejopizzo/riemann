@@ -80,8 +80,8 @@ Compress the positive kernel (1.2) to orthogonal input subspaces
 automatically satisfies
 
 \[
- \operatorname{Ran}K_{OE}\subseteq
- \operatorname{Ran}K_{OO}^{1/2},\qquad
+ \mathrm{Ran}\,K_{OE}\subseteq
+ \mathrm{Ran}\,K_{OO}^{1/2},\qquad
  K_{EE}-K_{EO}K_{OO}^\dagger K_{OE}\ge0.           \tag{2.1}
 \]
 

@@ -13,7 +13,7 @@ paper 77) with the numbering of that paper, or from the 2020–2026 literature.
 \(f\in C_c^\infty(\mathbb R_+^*)\),
 
 \[
- \operatorname{Tr}\bigl(\vartheta(f)\mathbf S\bigr)=W_\infty(f)+\int f(\rho^{-1})\epsilon(\rho)\,d^*\rho,
+ \mathrm{Tr}\,\bigl(\vartheta(f)\mathbf S\bigr)=W_\infty(f)+\int f(\rho^{-1})\epsilon(\rho)\,d^*\rho,
 \]
 
 with \(\epsilon(\rho^{-1})=\epsilon(\rho)\) and, for \(\rho\ge1\) (eq. (84)),
@@ -56,7 +56,7 @@ At \(I=[2^{-1/2},2^{1/2}]\), §6 establishes:
   \(\gamma\approx2.94355\), and **Theorem 6.11**: for
   \(g\in C_c^\infty([2^{-1/2},2^{1/2}])\) with \(\widehat g(-i/2)=0\),
   \[
-   W_\infty(g*g^*)\ \ge\ \operatorname{Tr}\bigl(\vartheta(g)\mathbf S\vartheta(g)^*\bigr)-c\,|\widehat g(0)|^2,
+   W_\infty(g*g^*)\ \ge\ \mathrm{Tr}\,\bigl(\vartheta(g)\mathbf S\vartheta(g)^*\bigr)-c\,|\widehat g(0)|^2,
    \qquad c=4\gamma/\log2,\ \ 13<c<17 .
   \]
 
@@ -93,7 +93,7 @@ count grows, the mechanism fails and the route closes.
 the \(\epsilon\)-side kernel is **zero independently of \(|I|\)** — whereas for the
 \(\delta\)-side kernel of Theorem 3.6 the trace is proportional to \(|I|\)
 (Figure 8 shows \(Q_+\delta(e^x)\approx15\) at \(x=0\)).  So
-\(\operatorname{tr}K_I=0\) for every \(I\), and any eigenvalue above 1 must be
+\(\mathrm{tr}\,K_I=0\) for every \(I\), and any eigenvalue above 1 must be
 compensated by negative ones.  This is the only statement in the paper about how
 \(K_I\) degrades with \(|I|\), and it is not turned into a count.
 
@@ -117,7 +117,7 @@ For \(D\) (their §3) the picture is worse and settled:
 
 This confirms `115_11`'s record: the \(-D\ge K\) route is closed by
 counterexample.  The \(\epsilon\) route is **not** in the same position — the
-whole difference is Remark 5.6's \(\operatorname{tr}K_I=0\).
+whole difference is Remark 5.6's \(\mathrm{tr}\,K_I=0\).
 
 Separately, at the top of §3 there is a counterexample showing the support
 condition is needed for \(W_\infty\) itself: \(\widehat g(t)=(1+4t^2)e^{-t^2/4}\)
@@ -133,7 +133,7 @@ functions.
 * Codimension at \(I=[2^{-1/2},2^{1/2}]\) is **one**, and the one condition is
   \(\widehat g(0)=0\): **PROVED by CC** (Fact 6.5, Lemmas 6.9–6.10, Thm 6.11).
 * Growth of the count with \(|I|\): **NOT EXAMINED BY ANYONE**, 2020–2026.
-* \(\operatorname{tr}K_I=0\) for all \(I\) (Remark 5.6): **stated by CC, unused**.
+* \(\mathrm{tr}\,K_I=0\) for all \(I\) (Remark 5.6): **stated by CC, unused**.
 * \(E\le0\) without support restriction: **OPEN**.
 * Row (d): **OPEN**.
 

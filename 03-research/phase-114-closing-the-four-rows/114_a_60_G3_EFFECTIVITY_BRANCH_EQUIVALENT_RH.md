@@ -20,7 +20,7 @@ boundary and is not **strictly** effective.
 On the source, 113_10 Corollary 2.4 gives
 
 \[
- D^\circ\cap\operatorname{Eff}=\{0\}.                                   \tag{1.1}
+ D^\circ\cap\mathrm{Eff}=\{0\}.                                   \tag{1.1}
 \]
 
 Therefore no class of `D^o`, including zero under the strict convention, is
@@ -36,7 +36,7 @@ On the rank-two divisor plane of the a4-weak surface, write
 and use the strict cone
 
 \[
- \operatorname{Eff}_{\rm str}(V)
+ \mathrm{Eff}_{\rm str}(V)
  =\{(k,a):k\ge0,\ a\ge0,\ (k,a)\ne(0,0)\}.                            \tag{1.3}
 \]
 
@@ -44,8 +44,8 @@ Theorem 4.1(4) of `a_02` gives the relevant property:
 
 \[
  q(v)>0\quad\Longrightarrow\quad
- v\in\operatorname{Eff}_{\rm str}
- \text{ or }-v\in\operatorname{Eff}_{\rm str}.                         \tag{E}
+ v\in\mathrm{Eff}_{\rm str}
+ \text{ or }-v\in\mathrm{Eff}_{\rm str}.                         \tag{E}
 \]
 
 Indeed `q(v)>0` means that its two coordinates have the same nonzero sign.
@@ -68,7 +68,7 @@ such that:
 By (1.1), condition 3 is simply
 
 \[
- J(c),-J(c)\notin\operatorname{Eff}_{\rm str}(V)
+ J(c),-J(c)\notin\mathrm{Eff}_{\rm str}(V)
  \qquad(c\in D^\circ).                                                    \tag{2.2}
 \]
 

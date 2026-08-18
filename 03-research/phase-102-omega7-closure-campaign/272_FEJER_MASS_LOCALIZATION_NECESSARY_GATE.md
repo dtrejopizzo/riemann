@@ -139,7 +139,7 @@ several false shortcuts.
 
 ### Support away from \(1\)
 
-If \(\operatorname{supp}\nu\subset\{|\theta|\ge\theta_0\}\) for some
+If \(\mathrm{supp}\,\nu\subset\{|\theta|\ge\theta_0\}\) for some
 \(\theta_0>0\), then (3) gives
 \[
   \int F_n\,d\nu

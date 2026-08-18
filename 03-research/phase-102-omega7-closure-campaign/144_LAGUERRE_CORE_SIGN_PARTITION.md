@@ -108,7 +108,7 @@ the sign of \(L_{n-1}^{(2)}\) is constant.  Since
 \]
 the signs alternate:
 \[
-  \operatorname{sgn}L_{n-1}^{(2)}(u)=(-1)^j
+  \mathrm{sgn}\,L_{n-1}^{(2)}(u)=(-1)^j
   \qquad (u\in I_{n,j}).
 \tag{8}
 \]

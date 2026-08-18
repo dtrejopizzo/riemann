@@ -7,7 +7,7 @@ its critical product representation becomes white light.  This note tests
 a different completion which is genuinely available in the full
 half-strip: the Carleman--Fredholm determinant of the prime operator.
 
-The determinant exists and is nonzero for every \(\operatorname {Re}s>1/2\).
+The determinant exists and is nonzero for every \(\mathrm{Re}\,s>1/2\).
 It absorbs all repeated prime powers \(p^k\), \(k\ge2\).  The complete
 failure of trace class is carried by the single primitive-prime trace
 \(\sum_p p^{-s}\).  Consequently any completion of the polarization must
@@ -38,7 +38,7 @@ while \(D_s\) is trace class only for \(\sigma>1\).
 
 ### Theorem 2.1 — Exact determinant in the critical half-strip
 
-For every \(\operatorname {Re}s>1/2\),
+For every \(\mathrm{Re}\,s>1/2\),
 
 \[
  \boxed{
@@ -69,10 +69,10 @@ determinant on the correct half-strip.
 
 ## 3. Exact separation of the primitive trace
 
-For \(\operatorname {Re}s>1\), let
+For \(\mathrm{Re}\,s>1\), let
 
 \[
- P(s)=\operatorname {Tr}D_s=\sum_p p^{-s}.                   \tag{4}
+ P(s)=\mathrm{Tr}\,D_s=\sum_p p^{-s}.                   \tag{4}
 \]
 
 The Euler product and (3) give
@@ -84,9 +84,9 @@ The Euler product and (3) give
  \frac1{\zeta(s)}=e^{-P(s)}\det{}_2(I-D_s).}                \tag{5}
 \]
 
-Equation (5) is initially an identity in \(\operatorname {Re}s>1\).  Its
+Equation (5) is initially an identity in \(\mathrm{Re}\,s>1\).  Its
 importance is that the determinant factor on the right already extends
-holomorphically and without zeros to \(\operatorname {Re}s>1/2\).
+holomorphically and without zeros to \(\mathrm{Re}\,s>1/2\).
 Therefore every obstruction to extending the literal Euler
 factorization across that half-strip is concentrated in the scalar
 primitive trace \(P(s)\).
@@ -99,7 +99,7 @@ Let
  H(s)=\sum_p\sum_{k\ge2}\frac{p^{-ks}}k.                    \tag{6}
 \]
 
-Then \(H\) is holomorphic for \(\operatorname {Re}s>1/2\), and
+Then \(H\) is holomorphic for \(\mathrm{Re}\,s>1/2\), and
 
 \[
  \log\zeta(s)=P(s)+H(s)                                     \tag{7}
@@ -143,7 +143,7 @@ global construction must provide a scalar renormalized primitive trace
 
 \[
  P_{\rm rel}(s)
- =\operatorname {FP}\!\left(\sum_p p^{-s}
+ =\mathrm{FP}\,\!\left(\sum_p p^{-s}
    -\text{generic-orbit continuum}
    +\text{Gamma/polar boundary term}\right)                 \tag{9}
 \]
@@ -162,14 +162,14 @@ complex.  Merely defining \(P_{\rm rel}\) from
 The semilocal CCM term \(2h(1)\log\lambda\) is precisely the trace of the
 generic orbit which must be removed in (9).  Thus (9), not another local
 prime factorization, is the intersection map required for the pair
-\((\operatorname {Pic}_{\rm ar},\eta)\).
+\((\mathrm{Pic}_{\rm ar},\eta)\).
 
 ## 6. Status
 
 Proved:
 
 * a genuine Hilbert--Schmidt prime operator on the whole half-strip
-  \(\operatorname {Re}s>1/2\);
+  \(\mathrm{Re}\,s>1/2\);
 * its exact nonvanishing Carleman--Fredholm determinant;
 * holomorphic absorption of every prime-power winding \(k\ge2\);
 * localization of the complete non-trace-class obstruction in the single

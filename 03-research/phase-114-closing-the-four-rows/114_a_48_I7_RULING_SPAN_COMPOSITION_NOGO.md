@@ -20,16 +20,16 @@
 Let
 
 \[
- S=\operatorname{Spec}\mathbb F\{\pm1\},\qquad
- X=\overline{\operatorname{Spec}\mathbb Z}.
+ S=\mathrm{Spec}\,\mathbb F\{\pm1\},\qquad
+ X=\overline{\mathrm{Spec}\,\mathbb Z}.
 \]
 
 Every category with finite fiber products has a category of spans. The left
 prime ruling of `a_17` defines the endocorrespondence
 
 \[
- R_p=\left(X\xleftarrow{\ i_p\operatorname{pr}_1\ }
- x_p\times_SX\xrightarrow{\ \operatorname{pr}_2\ }X\right).             \tag{1.1}
+ R_p=\left(X\xleftarrow{\ i_p\mathrm{pr}_1\ }
+ x_p\times_SX\xrightarrow{\ \mathrm{pr}_2\ }X\right).             \tag{1.1}
 \]
 
 Composition by fiber product gives

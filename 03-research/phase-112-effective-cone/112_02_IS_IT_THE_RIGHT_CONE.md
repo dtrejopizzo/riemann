@@ -25,7 +25,7 @@ $f=f_+-f_-$ ($f_\pm\ge0$, disjoint supports). Each $U_{f_\pm}$ is convex
 **nonnegative** density), and
 $$
 U_f=U_{f_+}-U_{f_-},\qquad
-\operatorname{Div}(U_f)=D_f=\int_A^B f(\lambda)\,[\Psi_\lambda]\,d^\times\lambda
+\mathrm{Div}(U_f)=D_f=\int_A^B f(\lambda)\,[\Psi_\lambda]\,d^\times\lambda
 =D_{f_+}-D_{f_-}. \tag{1.1}
 $$
 
@@ -69,7 +69,7 @@ states explicitly, in its own words, that its construction "does not yet
 provide ... a global line bundle/Cartier class whose local current is
 $D_f$ ... an $H^1$ theory or RR existence theorem for the DC completion."
 There is no $H^0$ defined on $\mathcal K_{\mathrm{DC}}$ or
-$\operatorname{CorrCur}$ anywhere in the material available to this phase.
+$\mathrm{CorrCur}$ anywhere in the material available to this phase.
 Consequently the right-hand side of "$D$ effective $\iff h^0(D)>0$" is not
 a well-defined object here -- not false, not true, simply **not
 constructed**. Definition 1.1 is the best available surrogate, and it is a
@@ -137,8 +137,8 @@ allowed, it is expected on many surfaces, and is not evidence against a
 cone. **The correct falsifiable test is therefore: $f,g\ge0$ with
 disjoint supports (the tropical/current-theoretic analogue of "no common
 component," since $D_f,D_g$ are then built from disjoint sets of prime
-generators $[\Psi_\lambda]$, $\lambda\in\operatorname{supp}f$ vs.
-$\lambda\in\operatorname{supp}g$) should give $I_\partial(D_f,D_g)\ge0$.**
+generators $[\Psi_\lambda]$, $\lambda\in\mathrm{supp}\,f$ vs.
+$\lambda\in\mathrm{supp}\,g$) should give $I_\partial(D_f,D_g)\ge0$.**
 A negative value here, and only here, is a decisive refutation. A negative
 *self*-intersection ($f=g$, or overlapping supports) is not a refutation
 and is not even surprising -- it is checked below purely as a consistency
@@ -148,11 +148,11 @@ $\le0$ exactly under RH).
 ### 3.2 Computation
 
 By (2.1), for real $f,g$ (so $\widehat f(\bar s)=\overline{\widehat
-f(s)}$) and on-line zeros ($\rho'=\rho$ for $\operatorname{Re}\rho=1/2$,
+f(s)}$) and on-line zeros ($\rho'=\rho$ for $\mathrm{Re}\,\rho=1/2$,
 Lemma 1.1 of 107_241),
 $$
 I_\partial(D_f,D_g)=\widehat f(0)\widehat g(1)+\widehat f(1)\widehat g(0)
--2\sum_{n\ge1}\operatorname{Re}\bigl[\widehat f(\rho_n)\overline{\widehat
+-2\sum_{n\ge1}\mathrm{Re}\,\bigl[\widehat f(\rho_n)\overline{\widehat
 g(\rho_n)}\bigr],\qquad \rho_n=\tfrac12+i\gamma_n, \tag{3.1}
 $$
 summing over $\gamma_n>0$, using the actual ordinates of nontrivial zeros

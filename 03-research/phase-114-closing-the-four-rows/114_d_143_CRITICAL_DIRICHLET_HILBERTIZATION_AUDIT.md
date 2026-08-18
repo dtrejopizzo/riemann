@@ -244,7 +244,7 @@ In row A the arithmetic action on intrinsic periodic cohomology is
 coefficient-only:
 
 \[
- \rho_n^{\rm int}=\operatorname{id}_{P}\otimes L_{\delta_n}. \tag{5.1}
+ \rho_n^{\rm int}=\mathrm{id}_{P}\otimes L_{\delta_n}. \tag{5.1}
 \]
 
 The reduced contact has zero periodic component, while row C realizes

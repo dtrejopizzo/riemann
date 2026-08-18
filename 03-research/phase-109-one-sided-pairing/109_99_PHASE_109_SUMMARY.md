@@ -121,7 +121,7 @@ one kernel.
 **2. The result is stronger than reported, and does not need "forced".**
 109_04 Theorem 1.1 proves the conclusion for **every** kernel supported on
 the prime powers: $Z:=\{f:f(p^k)=0\ \forall p,k\}\subseteq
-\operatorname{rad}B_K$, by a one-line argument using nothing about $K$. With
+\mathrm{rad}\,B_K$, by a one-line argument using nothing about $K$. With
 the witness $F(x)=\sin(\pi x)$ — which lies in $Z$ and whose Mellin transform
 has **constant** modulus $1/\sqrt2$ on the critical line (109_04 Lemma 1.2$'$,
 exact, not asymptotic) — no such pairing has a zero-determined radical.

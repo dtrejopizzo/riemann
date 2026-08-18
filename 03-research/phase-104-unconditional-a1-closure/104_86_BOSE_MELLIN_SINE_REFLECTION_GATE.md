@@ -203,10 +203,10 @@ La raíz
 produce
 
 \[
- y=\pm\operatorname {arcosh}(-x_-)+(2k+1)\pi i.        \tag{24}
+ y=\pm\mathrm{arcosh}(-x_-)+(2k+1)\pi i.        \tag{24}
 \]
 
-Si \(a>2\operatorname {arcosh}(-x_-)\), esos ceros satisfacen
+Si \(a>2\mathrm{arcosh}(-x_-)\), esos ceros satisfacen
 \(0<\Re s<1\) y \(\Re s\ne1/2\).
 
 ## 5. Decisión

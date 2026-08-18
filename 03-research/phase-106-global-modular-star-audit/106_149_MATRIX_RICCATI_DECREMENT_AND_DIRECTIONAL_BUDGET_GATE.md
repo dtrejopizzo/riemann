@@ -289,20 +289,20 @@ For every finite \(N\),
 \[
  \boxed{
  \sum_{j=1}^N\|W_j\|_{\mathrm{HS}}^2
- =\operatorname {Tr}(R_0-R_N).}
+ =\mathrm{Tr}(R_0-R_N).}
  \tag{25}
 \]
 
 #### Proof
 
 Take the trace in (6), using
-\(\operatorname {Tr}(W_j^*W_j)=\|W_j\|_{\mathrm{HS}}^2\). \(\square\)
+\(\mathrm{Tr}(W_j^*W_j)=\|W_j\|_{\mathrm{HS}}^2\). \(\square\)
 
 Thus the trace necessary condition for (20) is
 
 \[
  \sum_{j=1}^N\|W_j\|_{\mathrm{HS}}^2
- \ge \operatorname {Tr}(R_0-I).
+ \ge \mathrm{Tr}(R_0-I).
  \tag{26}
 \]
 
@@ -531,17 +531,17 @@ Equivalently,
 Nevertheless the trace budget passes by a wide margin:
 
 \[
- \operatorname {Tr}(R_0-R_2)
+ \mathrm{Tr}(R_0-R_2)
  ={10\over11}
  >{1\over5}
- =\operatorname {Tr}(R_0-I).
+ =\mathrm{Tr}(R_0-I).
  \tag{48}
 \]
 
 The natural endpoint scalar tests also pass:
 
 \[
- \operatorname {Tr}R_2={71\over55}<2,
+ \mathrm{Tr}\,R_2={71\over55}<2,
  \qquad
  \det R_2={12\over55}<1.
  \tag{49}

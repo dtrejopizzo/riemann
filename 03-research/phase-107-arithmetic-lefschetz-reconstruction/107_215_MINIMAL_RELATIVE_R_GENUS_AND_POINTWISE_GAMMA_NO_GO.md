@@ -5,16 +5,16 @@
 Retain the notation
 
 \[
- D(z)=\left.\partial_\nu\operatorname{Li}_\nu(z)\right|_{\nu=0}
+ D(z)=\left.\partial_\nu\mathrm{Li}_\nu(z)\right|_{\nu=0}
  \]
 
 from 107_214.  For \(x>1\), with the boundary convention induced by
 \(x\pm i0\),
 
 \[
- \operatorname{Disc}D(x)={2\pi i\over\log x},
+ \mathrm{Disc}\,D(x)={2\pi i\over\log x},
  \qquad
- \operatorname{Disc}\log(1-x)=-2\pi i.
+ \mathrm{Disc}\,\log(1-x)=-2\pi i.
  \tag{1.1}
 \]
 

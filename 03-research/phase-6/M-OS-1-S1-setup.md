@@ -59,7 +59,7 @@ This is exactly the involution $\tilde\psi$ appearing in Weil's criterion (Weil 
 
 **Time.** Euclidean time $\tau$ = the additive translation $u\mapsto u+\tau$ (multiplicatively, the
 **dilation** $x\mapsto e^{\tau}x$). $\Theta$ reflects time: $\Theta T_\tau=T_{-\tau}\Theta$. **Positive
-time** $\mathcal D_+:=\{\psi:\operatorname{supp}\psi\subset[0,\infty)\}$ (i.e. $x\ge1$).
+time** $\mathcal D_+:=\{\psi:\mathrm{supp}\,\psi\subset[0,\infty)\}$ (i.e. $x\ge1$).
 
 **Form.** The Weil distribution $W$ (the explicit formula read as a distribution: $W(\psi)=\sum_\rho\widehat\psi(\gamma_\rho)$
 $=$ archimedean $+$ pole $-$ primes) defines the **Weil Hermitian form**

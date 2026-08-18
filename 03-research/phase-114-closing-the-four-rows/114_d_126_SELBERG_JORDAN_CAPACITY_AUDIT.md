@@ -17,7 +17,7 @@ There is, however, a stronger positive structure behind (0.1).  For every
 \(t>0\), the Jordan function
 
 \[
- J_t(n)=(\mu*\operatorname{id}_t)(n)
+ J_t(n)=(\mu*\mathrm{id}_t)(n)
  =n^t\prod_{p\mid n}(1-p^{-t})                          \tag{0.2}
 \]
 

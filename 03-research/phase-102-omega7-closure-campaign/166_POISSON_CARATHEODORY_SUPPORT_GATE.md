@@ -38,7 +38,7 @@ When the analytic series converges in the disk, put
 \]
 Then
 \[
-  \operatorname{Re}H(re^{i\theta})=S_r(\theta).
+  \mathrm{Re}\,H(re^{i\theta})=S_r(\theta).
 \tag{3}
 \]
 
@@ -54,7 +54,7 @@ Thus the Poisson version of the gate is
 Equivalently, in analytic language,
 \[
   \boxed{
-  \operatorname{Re}H(z)\ge0
+  \mathrm{Re}\,H(z)\ge0
   \qquad(|z|<1).
   }
 \tag{5}
@@ -137,11 +137,11 @@ Indeed, if
 has a pole of order \(q\ge1\), then on \(z=a+\rho e^{i\phi}\) the leading
 real part is
 \[
-  \rho^{-q}\operatorname{Re}(c_qe^{-iq\phi})+O(\rho^{1-q}).
+  \rho^{-q}\mathrm{Re}(c_qe^{-iq\phi})+O(\rho^{1-q}).
 \tag{13}
 \]
-As \(\phi\) varies, \(\operatorname{Re}(c_qe^{-iq\phi})\) takes both signs.
-For sufficiently small \(\rho\), \(\operatorname{Re}H\) is therefore negative
+As \(\phi\) varies, \(\mathrm{Re}(c_qe^{-iq\phi})\) takes both signs.
+For sufficiently small \(\rho\), \(\mathrm{Re}\,H\) is therefore negative
 somewhere.  This contradicts real-part positivity.
 
 Thus if a completed Euler--Gamma Carathéodory function is positive in the
@@ -180,7 +180,7 @@ and the no-interior-singularity lemma rule out every zero with
 This is the precise force of the Poisson route:
 \[
   \boxed{
-  \operatorname{Re}H_{\rm EG}\ge0
+  \mathrm{Re}\,H_{\rm EG}\ge0
   \hbox{ in }\mathbb D
   +
   \hbox{exact transformed-zero singularities}
@@ -256,7 +256,7 @@ Closed as a Poisson--Carathéodory normal form and no-go.
 A1 remains open.  The exact live theorem is now:
 
 \[
-  \operatorname{Re}H_{\rm EG}(z)\ge0\quad(|z|<1),
+  \mathrm{Re}\,H_{\rm EG}(z)\ge0\quad(|z|<1),
 \]
 for a non-circular completed Euler--Gamma Carathéodory function whose
 singularities are exactly the transformed nontrivial zero divisor; and, for

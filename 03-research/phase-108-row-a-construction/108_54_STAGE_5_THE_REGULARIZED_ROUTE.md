@@ -30,7 +30,7 @@ the task requires.
 > \]
 
 > ### Theorem 1.2 (compact support, for every finite $T$)
-> $\operatorname{supp}f_{s,T}\subseteq[T^{-2},T^{2}]$, a compact subset of $(0,\infty)$, and
+> $\mathrm{supp}\,f_{s,T}\subseteq[T^{-2},T^{2}]$, a compact subset of $(0,\infty)$, and
 > $f_{s,T}\in C^\infty_c((0,\infty))$.
 
 **Proof.** $\chi(\log x/\log T)\ne0$ requires $|\log x/\log T|\le2$, i.e.

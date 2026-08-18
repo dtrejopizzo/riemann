@@ -60,7 +60,7 @@ La medida de referencia "on-critical" para el parámetro $t$:
 
 $$dm_{full,on}^t(s) = dm_\infty(s) \cdot |H_t^{on}(s)|^2 \cdot C_t^{-1},$$
 
-donde $H_t^{on}$ se construye a partir de $H_t$ reflejando todos sus ceros complejos a la recta real (la imagen $\rho \mapsto \frac{1}{2} + i\operatorname{Im}(\rho)$).
+donde $H_t^{on}$ se construye a partir de $H_t$ reflejando todos sus ceros complejos a la recta real (la imagen $\rho \mapsto \frac{1}{2} + i\mathrm{Im}(\rho)$).
 
 **Observación 3.1.** Para $t > \Lambda$: todos los ceros de $H_t$ son reales, luego $H_t = H_t^{on}$ y $dm_{full}^t = dm_{full,on}^t$. Por la Prop. 2.1 de Doc 64 y el Thm. 3.1: $T_\lambda(t) = 0$ para todo $\lambda$.
 
@@ -118,15 +118,15 @@ $$\partial_t T_\lambda(t) = \int W_\lambda(s)\, \partial_t(dm_{full}^t - dm_{ful
 
 La derivada $\partial_t dm_{full}^t$ se calcula usando $\partial_t H_t = \partial_{ss} H_t$ (ecuación del calor):
 
-$$\partial_t |H_t(s)|^2 = 2\operatorname{Re}(\overline{H_t(s)}\, \partial_t H_t(s)) = 2\operatorname{Re}(\overline{H_t(s)}\, H_t''(s)).$$
+$$\partial_t |H_t(s)|^2 = 2\mathrm{Re}(\overline{H_t(s)}\, \partial_t H_t(s)) = 2\mathrm{Re}(\overline{H_t(s)}\, H_t''(s)).$$
 
 Integrando por partes (usando $W_\lambda$ suave):
 
-$$\partial_t T_\lambda(t) = 2\int W_\lambda(s)\operatorname{Re}(\overline{H_t}\, H_t'' - \overline{H_t^{on}}\, (H_t^{on})'')\, dm_\infty(s).$$
+$$\partial_t T_\lambda(t) = 2\int W_\lambda(s)\mathrm{Re}(\overline{H_t}\, H_t'' - \overline{H_t^{on}}\, (H_t^{on})'')\, dm_\infty(s).$$
 
 Integrando por partes en $s$ (la derivada actúa sobre $W_\lambda$):
 
-$$\partial_t T_\lambda(t) = -2\int W_\lambda'(s)\operatorname{Re}(\overline{H_t}\, H_t' - \overline{H_t^{on}}\, (H_t^{on})')\, dm_\infty(s) + \text{frontera}.$$
+$$\partial_t T_\lambda(t) = -2\int W_\lambda'(s)\mathrm{Re}(\overline{H_t}\, H_t' - \overline{H_t^{on}}\, (H_t^{on})')\, dm_\infty(s) + \text{frontera}.$$
 
 ### 5.3. El signo de la derivada: análisis via ceros
 
@@ -141,7 +141,7 @@ Esta conjetura es plausible porque:
 - El flujo de calor "regulariza" $H_t$: dispersa los ceros fuera de la recta real acercándolos a ella.
 - La cantidad $dm_{full}^t - dm_{full,on}^t$ mide exactamente cuánto se desvían los ceros de $H_t$ de la recta real, y esta desviación decrece con $t$.
 
-*Estado:* conjetura, no probada en este documento. Su prueba requería controlar $\operatorname{Re}(\overline{H_t}H_t'' - \overline{H_t^{on}}(H_t^{on})'')$ en el soporte de $dm_\infty$, que involucra estimados sobre la distribución de los ceros complejos de $H_t$.
+*Estado:* conjetura, no probada en este documento. Su prueba requería controlar $\mathrm{Re}(\overline{H_t}H_t'' - \overline{H_t^{on}}(H_t^{on})'')$ en el soporte de $dm_\infty$, que involucra estimados sobre la distribución de los ceros complejos de $H_t$.
 
 ---
 
@@ -219,31 +219,31 @@ No, esto es incorrecto: la cadena de Toda para medidas simétricas con $b_n = 0$
 
 Para $t \ll 1$, expandimos $H_t \approx H_0 + t H_0'' + O(t^2)$:
 
-$$|H_t|^2 \approx |H_0|^2 + 2t\operatorname{Re}(\overline{H_0} H_0'') + O(t^2).$$
+$$|H_t|^2 \approx |H_0|^2 + 2t\mathrm{Re}(\overline{H_0} H_0'') + O(t^2).$$
 
 La corrección de primer orden a $dm_{full}^t$ es:
 
-$$\delta dm^{(1)}(s) = 2t\operatorname{Re}(\overline{H_0(s)} H_0''(s)) dm_\infty(s) \cdot C_0^{-1}.$$
+$$\delta dm^{(1)}(s) = 2t\mathrm{Re}(\overline{H_0(s)} H_0''(s)) dm_\infty(s) \cdot C_0^{-1}.$$
 
 Por la representación CD (Doc 61, Thm. 2.1), la corrección de primer orden a $(a_n^{full,t})^2$ es:
 
-$$\delta(a_n^2)^{(1)} = 2t \int (|P_{n+1}|^2 - |P_n|^2) \operatorname{Re}(\overline{H_0} H_0'') dm_\infty.$$
+$$\delta(a_n^2)^{(1)} = 2t \int (|P_{n+1}|^2 - |P_n|^2) \mathrm{Re}(\overline{H_0} H_0'') dm_\infty.$$
 
 Usando la integración por partes ($H_0'' = -\mathcal{L}_0 H_0$ donde $\mathcal{L}_0$ es el operador de Schrödinger):
 
-$$\delta(a_n^2)^{(1)} = -2t \int (|P_{n+1}|^2 - |P_n|^2) \operatorname{Re}(\overline{H_0} \mathcal{L}_0 H_0) dm_\infty.$$
+$$\delta(a_n^2)^{(1)} = -2t \int (|P_{n+1}|^2 - |P_n|^2) \mathrm{Re}(\overline{H_0} \mathcal{L}_0 H_0) dm_\infty.$$
 
 Expandiendo $H_0 = \sum_k c_k P_k$ (donde $c_k = \langle \Xi, P_k \rangle_{dm_\infty}$, como en Doc 65):
 
-$$\operatorname{Re}(\overline{H_0} \mathcal{L}_0 H_0) = \operatorname{Re}\left(\sum_{k,l} \bar{c}_k c_l P_k \mathcal{L}_0 P_l\right) = \operatorname{Re}\left(\sum_k |c_k|^2 \mu_k P_k^2 + \text{cross terms}\right),$$
+$$\mathrm{Re}(\overline{H_0} \mathcal{L}_0 H_0) = \mathrm{Re}\,\left(\sum_{k,l} \bar{c}_k c_l P_k \mathcal{L}_0 P_l\right) = \mathrm{Re}\,\left(\sum_k |c_k|^2 \mu_k P_k^2 + \text{cross terms}\right),$$
 
 donde $\mu_k$ son los autovalores de $\mathcal{L}_0$ en $P_k$ (Doc 65, §2.3).
 
 **Proposición 8.2** (Derivada temporal de la traza en $t = 0$).
 
-$$\partial_t T_\lambda \bigg|_{t=0} = -4\int W_\lambda(s) \operatorname{Re}(\overline{H_0(s)} H_0''(s)) dm_\infty(s).$$
+$$\partial_t T_\lambda \bigg|_{t=0} = -4\int W_\lambda(s) \mathrm{Re}(\overline{H_0(s)} H_0''(s)) dm_\infty(s).$$
 
-Si esta derivada es negativa (lo que requeriría $\operatorname{Re}(\overline{H_0}H_0'') > 0$ en el soporte de $W_\lambda$, i.e., que $H_0$ y $H_0''$ tengan parte real del mismo signo), entonces $T_\lambda(t)$ decrece inicialmente, consistente con la Conj. 5.1.
+Si esta derivada es negativa (lo que requeriría $\mathrm{Re}(\overline{H_0}H_0'') > 0$ en el soporte de $W_\lambda$, i.e., que $H_0$ y $H_0''$ tengan parte real del mismo signo), entonces $T_\lambda(t)$ decrece inicialmente, consistente con la Conj. 5.1.
 
 ---
 

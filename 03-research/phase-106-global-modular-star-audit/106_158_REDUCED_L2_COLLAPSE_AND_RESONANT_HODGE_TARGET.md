@@ -33,7 +33,7 @@ multiplication operator
 ### Lemma 2.1 — Multiplication by an a.e. nonzero function has dense range
 
 \[
- \boxed{\overline{\operatorname {Ran}M_m}=L^2(X).}
+ \boxed{\overline{\mathrm{Ran}\,M_m}=L^2(X).}
  \tag{2}
 \]
 
@@ -98,7 +98,7 @@ Let
 \[
  H^1_{(2),\chi}
  :=\mathcal H_\chi/
-   \overline{\operatorname {Ran}M_{m_\chi}}.
+   \overline{\mathrm{Ran}\,M_{m_\chi}}.
  \tag{7}
 \]
 
@@ -205,7 +205,7 @@ Let
 
 \[
  \mathfrak C_{\rm rel}
- =\operatorname {Cone}
+ =\mathrm{Cone}
  \bigl(
  \mathscr S(\mathcal G_{\mathbb Q})^\natural_0
  \xrightarrow{\rho^\natural}

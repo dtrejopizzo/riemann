@@ -29,8 +29,8 @@
 Let
 
 \[
- X=\overline{\operatorname{Spec}\mathbb Z}=\{X_N\}_{N\in I},\qquad
- Y=X\times_{\operatorname{Spec}\mathbb F\{\pm1\}}X
+ X=\overline{\mathrm{Spec}\,\mathbb Z}=\{X_N\}_{N\in I},\qquad
+ Y=X\times_{\mathrm{Spec}\,\mathbb F\{\pm1\}}X
    =\{Y_{N,M}=X_N\times_S X_M\}_{(N,M)\in I^2}.
 \]
 
@@ -44,7 +44,7 @@ pro-`CFR^t` scheme and defines:
 For the arithmetic curve, (11.19) computes
 
 \[
- \operatorname{Pic}(X)\simeq\mathbb R_{>0}.               \tag{1.1}
+ \mathrm{Pic}(X)\simeq\mathbb R_{>0}.               \tag{1.1}
 \]
 
 The later non-involutive formulation, arXiv:2209.08536, confirms two facts
@@ -116,8 +116,8 @@ pro-object.
 There is a canonical homomorphism
 
 \[
- e:\operatorname{Pic}(X)\times\operatorname{Pic}(X)
- \longrightarrow\operatorname{Pic}(Y),\qquad
+ e:\mathrm{Pic}(X)\times\mathrm{Pic}(X)
+ \longrightarrow\mathrm{Pic}(Y),\qquad
  e(L,M)=p_1^*L\otimes p_2^*M.                            \tag{2.2}
 \]
 
@@ -293,9 +293,9 @@ The embedding of ordinary schemes into Haran generalized schemes is fully
 faithful.  Hence
 
 \[
- \operatorname{End}_{\mathrm{GSch}}(\operatorname{Spec}\mathbb Z)
- =\operatorname{End}_{\mathrm{Sch}}(\operatorname{Spec}\mathbb Z)
- =\operatorname{End}_{\mathrm{CRing}}(\mathbb Z)^{\mathrm{op}}
+ \mathrm{End}_{\mathrm{GSch}}(\mathrm{Spec}\,\mathbb Z)
+ =\mathrm{End}_{\mathrm{Sch}}(\mathrm{Spec}\,\mathbb Z)
+ =\mathrm{End}_{\mathrm{CRing}}(\mathbb Z)^{\mathrm{op}}
  =\{\mathrm{id}\}.                                      \tag{5.3}
 \]
 

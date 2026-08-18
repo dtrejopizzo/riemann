@@ -21,7 +21,7 @@ Put
  \tag{1}
 \]
 
-Up to the sign fixed by the explicit formula, \(2\operatorname {Re}D_N\)
+Up to the sign fixed by the explicit formula, \(2\mathrm{Re}\,D_N\)
 is the Fourier multiplier of the finite prime-power translation block.
 
 ## 1. Uniform translated mean square
@@ -100,7 +100,7 @@ Let \(B\) be a Fourier block of length comparable to \(N/L\). Equations
 \[
 \begin{aligned}
  \sum_{j=1}^d\int_B
- (2\operatorname {Re}D_N(t))_+
+ (2\mathrm{Re}\,D_N(t))_+
  |\widehat v_j(t)|^2\frac{dt}{2\pi}
  &\le\frac L\pi\int_B|D_N(t)|dt\\
  &\le C L N.

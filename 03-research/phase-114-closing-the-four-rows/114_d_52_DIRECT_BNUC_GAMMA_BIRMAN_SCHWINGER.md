@@ -36,7 +36,7 @@ The direct Hodge certificate of D.47 is
 
 \[
  n_+(B_T)=1,qquad
- \operatorname{In}(M_TB_T^{-1}M_T^*)=(1,1,0),               \tag{1.5}
+ \mathrm{In}(M_TB_T^{-1}M_T^*)=(1,1,0),               \tag{1.5}
 \]
 
 with the usual range conditions at singular parameters.  By contrast,
@@ -85,7 +85,7 @@ The Gamma multiplier on the full Fourier line is
 
 \[
  m_\infty(\tau)=\log\pi-
- \operatorname{Re}\psi\left({1\over4}+{i\tau\over2}\right).
+ \mathrm{Re}\,\psi\left({1\over4}+{i\tau\over2}\right).
                                                                     \tag{2.5}
 \]
 
@@ -103,7 +103,7 @@ Assume first that `Gamma_T` is invertible; exceptional windows can be
 handled by a small real shift or a Moore--Penrose range formulation.  Put
 
 \[
- J_{\Gamma,T}=\operatorname{sgn}(\Gamma_T),\qquad
+ J_{\Gamma,T}=\mathrm{sgn}(\Gamma_T),\qquad
  K_T=|\Gamma_T|^{-1/2}V_T|\Gamma_T|^{-1/2}.                  \tag{3.1}
 \]
 
@@ -143,7 +143,7 @@ Neither its sign nor the number of crossings follows from compactness.
 The equivalent analytic Fredholm condition for an eigenvalue `z` is
 
 \[
- -1\in\operatorname{spec}
+ -1\in\mathrm{spec}
  \bigl((\Gamma_T-z)^{-1}V_T\bigr),                           \tag{3.6}
 \]
 
@@ -201,7 +201,7 @@ At a singular window one must replace (4.2) by the reduced inverse and
 verify
 
 \[
- M_T^*(\mathbb C^2)\subseteq\operatorname{Ran}B_T,qquad
+ M_T^*(\mathbb C^2)\subseteq\mathrm{Ran}\,B_T,qquad
  \ker B_T\cap\ker M_T=0,                                    \tag{4.5}
 \]
 
@@ -262,7 +262,7 @@ arithmetic oscillation estimate is presently available.
 The direct target
 
 \[
- n_+(B_T)=1,qquad \operatorname{In}(G_T)=(1,1,0)             \tag{7.1}
+ n_+(B_T)=1,qquad \mathrm{In}(G_T)=(1,1,0)             \tag{7.1}
 \]
 
 implies the primitive sign and, after exhaustion, row D.  By the already

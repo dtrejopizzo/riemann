@@ -9,7 +9,7 @@
 
 ## 0. Convenciones y enunciado exacto
 
-Carta de Polymath 15 como en Doc 167 §0.1 / Doc 178 §0: $H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du$, $\Phi(u)=\sum_{n\ge1}(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}$, con $\partial_tH_t=-\,\partial_z^2H_t$ y $H_0=\tfrac18\,\Xi(\cdot/2)$, i.e. $H_0(z)=\tfrac18\,\xi\!\bigl(s(z)\bigr)$, $s(z):=\tfrac12+\tfrac{iz}2$. Los ceros de $\zeta$ en la franja $0<\sigma<1$ corresponden a ceros de $H_0$ en la banda $|\operatorname{Im}z|<1$; "altura $\gamma$" = $\operatorname{Re}z\asymp\gamma$ (reescalado fijo del Doc 178, irrelevante para constantes absolutas). $L:=\log\gamma$, $\rho:=L/4\pi$.
+Carta de Polymath 15 como en Doc 167 §0.1 / Doc 178 §0: $H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du$, $\Phi(u)=\sum_{n\ge1}(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}$, con $\partial_tH_t=-\,\partial_z^2H_t$ y $H_0=\tfrac18\,\Xi(\cdot/2)$, i.e. $H_0(z)=\tfrac18\,\xi\!\bigl(s(z)\bigr)$, $s(z):=\tfrac12+\tfrac{iz}2$. Los ceros de $\zeta$ en la franja $0<\sigma<1$ corresponden a ceros de $H_0$ en la banda $|\mathrm{Im}\,z|<1$; "altura $\gamma$" = $\mathrm{Re}\,z\asymp\gamma$ (reescalado fijo del Doc 178, irrelevante para constantes absolutas). $L:=\log\gamma$, $\rho:=L/4\pi$.
 
 **[ENUNCIADO OBJETIVO (RvM-t), verbatim Doc 178 §2.3].** *Existe $C_0$ absoluto tal que para todo $t\in[0,1]$ y todo intervalo $J\subset\mathbb R$ con $|J|\le1$ centrado a altura $\gamma$ grande: $\#\{x\in Z_t\cap J\}\le\rho(\gamma)|J|+C_0\log\gamma$* (ceros reales de $H_t$, con multiplicidad). Probaremos algo más fuerte: el conteo de **todos** los ceros (reales o no) de $H_t$ en la caja $J\times[-1,1]$ es $\le C_0\log\gamma$, uniforme en $t\in[0,1]$.
 
@@ -21,7 +21,7 @@ $$H_t(z)\;=\;\frac1{\sqrt{4\pi t}}\int_{\mathbb R}H_0(z+iw)\,e^{-w^2/4t}\,dw .$$
 
 Esta corrección de signo no es pedante: es **la razón por la que la ruta 1 cierra en todo $[0,1]$** (Observación 195.6).
 
-Factorización aritmético–arquimediana: para $\sigma=\operatorname{Re}s>1$, $\xi(s)=\mathfrak G(s)\,\zeta(s)$ con $\mathfrak G(s):=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)$, y $\zeta(s)=\sum n^{-s}$ absolutamente convergente. Escribimos $\mathfrak g(z):=\mathfrak G(s(z))$ (holomorfa y sin ceros en $\operatorname{Re}z>0$, $\operatorname{Im}z<-1$, región donde la usamos).
+Factorización aritmético–arquimediana: para $\sigma=\mathrm{Re}\,s>1$, $\xi(s)=\mathfrak G(s)\,\zeta(s)$ con $\mathfrak G(s):=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)$, y $\zeta(s)=\sum n^{-s}$ absolutamente convergente. Escribimos $\mathfrak g(z):=\mathfrak G(s(z))$ (holomorfa y sin ceros en $\mathrm{Re}\,z>0$, $\mathrm{Im}\,z<-1$, región donde la usamos).
 
 ---
 
@@ -31,7 +31,7 @@ Sea $\gamma$ grande y $z_0:=\hat\gamma-iB$ con $\hat\gamma:=\gamma+\tfrac12$ (ce
 
 **[LEMA 195.1] (envolvente local de $H_0$ en una franja).** Existen $A,C>0$ absolutos tales que para $x\ge2$, $|y|\le 4B+8$:
 $$|H_0(x+iy)|\;\le\;C\,(1+x)^{A}\,|\mathfrak g(x)|\;e^{\varphi(x)\,|y|},\qquad \varphi(x):=\tfrac14\log\tfrac{x}{4\pi}.$$
-*Prueba.* Por la ecuación funcional $\xi(s)=\xi(1-s)$ basta $\operatorname{Im}z\le0$, i.e. $\sigma\ge\tfrac12$. Stirling uniforme en $\sigma\in[\tfrac12,\,2B+5]$, $|s|\asymp x$: $\log|\mathfrak G(\sigma+i\tau)|=\log|\mathfrak G(\tfrac12+i\tau)|+(\sigma-\tfrac12)\cdot\tfrac12\log\tfrac{|\tau|}{2\pi}+O(\log(2+|\tau|))$; con $\tau=x/2$, $\sigma-\tfrac12=|y|/2$, el incremento es $\varphi(x)|y|+O(\log x)$. Para $\zeta$: en $\sigma\ge2$, $|\zeta|\le\zeta(2)$; en $\tfrac12\le\sigma\le2$, $|\zeta(s)|\le C|s|$ (cota de convexidad cruda, [Titchmarsh §5]). Los factores $O(\log x)$ y $|s|$ se absorben en $(1+x)^A$. $\square$
+*Prueba.* Por la ecuación funcional $\xi(s)=\xi(1-s)$ basta $\mathrm{Im}\,z\le0$, i.e. $\sigma\ge\tfrac12$. Stirling uniforme en $\sigma\in[\tfrac12,\,2B+5]$, $|s|\asymp x$: $\log|\mathfrak G(\sigma+i\tau)|=\log|\mathfrak G(\tfrac12+i\tau)|+(\sigma-\tfrac12)\cdot\tfrac12\log\tfrac{|\tau|}{2\pi}+O(\log(2+|\tau|))$; con $\tau=x/2$, $\sigma-\tfrac12=|y|/2$, el incremento es $\varphi(x)|y|+O(\log x)$. Para $\zeta$: en $\sigma\ge2$, $|\zeta|\le\zeta(2)$; en $\tfrac12\le\sigma\le2$, $|\zeta(s)|\le C|s|$ (cota de convexidad cruda, [Titchmarsh §5]). Los factores $O(\log x)$ y $|s|$ se absorben en $(1+x)^A$. $\square$
 
 **[LEMA 195.2] (expansión exacta de primer orden de $\mathfrak g$ a lo largo de la vertical).** Sea $\psi:=-\frac{d}{dw}\log\mathfrak g(z_0+iw)\big|_{w=0}$. Entonces $\psi=\varphi(\hat\gamma)+\tfrac{i\pi}8+O(\hat\gamma^{-1})$ y, para $-\gamma/2\le w\le B-4$,
 $$\mathfrak g(z_0+iw)\;=\;\mathfrak g(z_0)\,e^{-\psi w+R(w)},\qquad |R(w)|\le C\,w^2/\gamma .$$
@@ -51,7 +51,7 @@ $$|H_t(z_0)|\;\ge\;c\,\gamma^{-A'}\,|\mathfrak g(\hat\gamma)|\;e^{B\varphi+t\var
 $$\frac{\mathfrak g(z_0)}{\sqrt{4\pi t}}\int_G e^{-\psi w+R(w)}e^{-w^2/4t}dw .$$
 La gaussiana completa sin $R$: $(4\pi t)^{-1/2}\int_{\mathbb R}e^{-\psi w-w^2/4t}dw=e^{t\psi^2}$ (exacto, cuadrado completado; $\psi$ complejo, sin desplazar contornos), con $|e^{t\psi^2}|=e^{t(\varphi^2-\pi^2/64)+O(t\varphi/\gamma)}\ge0.85\,e^{t\varphi^2}$ para $\gamma$ grande. Errores: (a) colas — en $w>w_c$, $|e^{-\psi w}|=e^{-\varphi w}$ y $e^{-w^2/4t}\le1$ dan masa relativa $\le e^{-\varphi w_c-w_c^2/4t-t\varphi^2}\cdot e^{t\varphi^2}\!\big/e^{t\varphi^2}$; como $\tfrac{w_c^2}{4t}+t\varphi^2\ge\varphi w_c$ (AM–GM), la cola relativa al principal es $\le e^{-2\varphi w_c}\cdot O(\sqrt{1+t}\,(1+\varphi\sqrt t))=O(\gamma^{-w_c/2+\epsilon})$; en $w<-\gamma/2$, $e^{\varphi\gamma/2-\gamma^2/16t}\le e^{-\gamma^2/32}$ para $t\le1$, despreciable frente a todo lo presente. (b) curvatura — $|e^{R}-1|\le C\tfrac{w^2}\gamma e^{Cw^2/\gamma}$ y la masa efectiva de $e^{-\varphi w-w^2/4t}$ vive en $|w|\le2t\varphi+C\sqrt t\le C L$: contribución relativa $O(L^2/\gamma)$. Total: término principal $=\mathfrak g(z_0)e^{t\psi^2}(1+O(\gamma^{-1/2}))$, de módulo $\ge0.8\,|\mathfrak g(z_0)|e^{t\varphi^2}$.
 
-**(ii) Error aritmético en $G$.** $|\zeta(s(w))-1|\le\zeta(\sigma(w))-1\le\zeta(\tfrac52)-1<0.342$ puntualmente en $G$; por triángulo y el mismo cálculo de Laplace sobre $|\mathfrak g(z_0+iw)|=|\mathfrak g(z_0)|e^{-\varphi w+\operatorname{Re}R}$:
+**(ii) Error aritmético en $G$.** $|\zeta(s(w))-1|\le\zeta(\sigma(w))-1\le\zeta(\tfrac52)-1<0.342$ puntualmente en $G$; por triángulo y el mismo cálculo de Laplace sobre $|\mathfrak g(z_0+iw)|=|\mathfrak g(z_0)|e^{-\varphi w+\mathrm{Re}\,R}$:
 $$\Bigl|\frac1{\sqrt{4\pi t}}\int_G\mathfrak g\,(\zeta-1)\,e^{-w^2/4t}dw\Bigr|\;\le\;0.342\,|\mathfrak g(z_0)|\,e^{t\varphi^2}\,(1+O(\gamma^{-1/2})).$$
 Margen: $0.8-0.342>0.45$. *(Aquí está el único ajuste fino: el déficit $e^{-t\pi^2/64}\ge0.85$ del término principal debe superar $\zeta(\sigma_0')-1$ en el rango bueno; $\sigma\ge\tfrac52$ basta con holgura. No se necesita ninguna cancelación: solo convergencia absoluta de la serie de Dirichlet.)*
 
@@ -67,7 +67,7 @@ usando otra vez $\varphi w+\tfrac{w^2}{4t}+t\varphi^2\ge2\varphi w\ge2\varphi w_
 
 **[LEMA 195.4] (cota superior local, uniforme en $t$).** Para $|z-z_0|\le 2B+4$ y $t\in[0,1]$:
 $$|H_t(z)|\;\le\;C\,\gamma^{A}\,|\mathfrak g(\hat\gamma)|\,e^{(3B+4)\varphi+t\varphi^2}.$$
-*Prueba.* Triángulo en el Lema 195.0 + Lema 195.1 (con $|y|\le|\operatorname{Im}z|+|w|\le 3B+4+|w|$ donde para $|w|$ grande se usa la cota global de orden $1$ de $\xi$, $\log|H_0(x+iy)|\le C(1+|y|)\log(2+|x|+|y|)$, aplastada por $e^{-w^2/4t}$ con $t\le1$):
+*Prueba.* Triángulo en el Lema 195.0 + Lema 195.1 (con $|y|\le|\mathrm{Im}\,z|+|w|\le 3B+4+|w|$ donde para $|w|$ grande se usa la cota global de orden $1$ de $\xi$, $\log|H_0(x+iy)|\le C(1+|y|)\log(2+|x|+|y|)$, aplastada por $e^{-w^2/4t}$ con $t\le1$):
 $(4\pi t)^{-1/2}\int e^{\varphi|w|-w^2/4t}dw\le 2e^{t\varphi^2}+O(1)$; la variación horizontal de $|\mathfrak g(x)|$ en $|x-\hat\gamma|\le2B+4$ es $\gamma^{O(1)}$, absorbida en $\gamma^A$ (re-etiquetando $A$). $\square$
 
 **[TEOREMA 195.5] (= (RvM-t); GAP-178.A cerrado).** Existe $C_0$ absoluto tal que para todo $t\in[0,1]$ y todo $\gamma\ge2$, el número de ceros de $H_t$ (con multiplicidad) en la caja $[\gamma,\gamma+1]\times[-1,1]$ es $\le C_0\log\gamma$. En particular vale el enunciado (RvM-t) del Doc 178 §2.3.

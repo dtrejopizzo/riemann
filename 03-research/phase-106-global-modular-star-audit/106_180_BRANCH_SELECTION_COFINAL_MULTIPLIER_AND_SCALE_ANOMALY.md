@@ -157,7 +157,7 @@ and, for fixed real \(\tau\),
 \[
  \boxed{
  T_X(\tau)
- =\operatorname {Re}
+ =\mathrm{Re}
    {e^{i\tau\log X}\over1+2i\tau}+o(1).}
 \tag{12}
 \]
@@ -173,7 +173,7 @@ The first return layer gives
 \[
  2\sum_{p\le X}{\log p\over\sqrt p}
  \cos(\tau\log p)
- =2\operatorname {Re}
+ =2\mathrm{Re}
   {X^{1/2+i\tau}\over1/2+i\tau}+o(\sqrt X),
 \tag{13}
 \]
@@ -234,7 +234,7 @@ Documents 106.176 and 106.179 reduce the metric comparison to
 
 \[
  \mathfrak h_I
- =g_{D,I}|_{\operatorname {graph}K_-}
+ =g_{D,I}|_{\mathrm{graph}\,K_-}
   +\mathcal B_I,
 \qquad
  \mathcal B_I=\mathcal P_I-C_I\langle\cdot,\cdot\rangle.

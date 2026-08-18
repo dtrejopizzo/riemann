@@ -50,7 +50,7 @@ The retrieved literature supports a natural bigrading and compatible operators (
 
 Holmström–Scholbach define Arakelov motivic cohomology by a spectrum \(\widehat H\) (denoted \(H^c_B\) in their introduction) as the homotopy fiber of \(HB\to HB\wedge HD\), with groups
 \[
-\widehat H^n(M,p)\;:=\;\operatorname{Hom}_{\mathbf{SH}(S)_\mathbb Q}(M,\,H^c_B(p)[n]),
+\widehat H^n(M,p)\;:=\;\mathrm{Hom}_{\mathbf{SH}(S)_\mathbb Q}(M,\,H^c_B(p)[n]),
 \]
 so the theory is inherently bigraded by the cohomological shift \([n]\) and the Tate/Adams weight (twist) \((p)\). (holmstrom2010arakelovmotiviccohomology pages 1-3)
 

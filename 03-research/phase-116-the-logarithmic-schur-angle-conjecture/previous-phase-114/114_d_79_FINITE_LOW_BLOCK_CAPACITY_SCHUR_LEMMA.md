@@ -36,7 +36,7 @@ then `A_0+R>0`.
 For `x in L`, `y in K`, Young's inequality gives
 
 \[
- 2\operatorname{Re}\langle Bx,y\rangle
+ 2\mathrm{Re}\,\langle Bx,y\rangle
  \ge-\eta^{-1}\|Bx\|^2-\eta\|y\|^2.                 \tag{5}
 \]
 

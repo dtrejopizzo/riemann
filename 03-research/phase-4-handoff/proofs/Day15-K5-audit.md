@@ -16,7 +16,7 @@ $$
 $$
 because $K(t,t')=K(t,t)\big(1-\tfrac12 (t'-t)^2 K_{11}/K+\cdots\big)$ decorrelates on scale $\ell$. This is
 the space's effective sample spacing (Nyquist length). **Computed for Hardy-band** $H^2(S_d)$
-($K(s)=\tfrac1{4d}\operatorname{sech}\tfrac{\pi s}{2d}$): $K=\tfrac1{4d}$, $K_{11}=\tfrac{\pi^2}{16d^3}$, so
+($K(s)=\tfrac1{4d}\mathrm{sech}\,\tfrac{\pi s}{2d}$): $K=\tfrac1{4d}$, $K_{11}=\tfrac{\pi^2}{16d^3}$, so
 $$
 \boxed{\ \ell(t)=\sqrt{\tfrac{1/4d}{\pi^2/16d^3}}=\tfrac{2d}{\pi}\asymp d\quad(\text{constant in }t).\ }
 $$

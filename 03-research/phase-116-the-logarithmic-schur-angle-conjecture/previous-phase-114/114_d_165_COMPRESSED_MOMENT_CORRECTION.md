@@ -61,7 +61,7 @@ whereas the ambient second moment is (S^*M^2S).  Their difference is
  =S^*M(I-P)MS\geq0.}                                 \tag{1.3}
 \]
 
-Equality holds precisely when (MS\subseteq\operatorname{Ran}P).  A
+Equality holds precisely when (MS\subseteq\mathrm{Ran}\,P).  A
 nonconstant multiplier does not preserve a proper Paley--Wiener space, so
 this exceptional condition is not available here.
 
@@ -108,7 +108,7 @@ operator (P_T^0M_{r_T}) between directed endpoint-flat columns.  Formula
 (2.2) contains the exact multiplier
 
 \[
- r_T(\tau)=\operatorname{Re}\psi(1/4+i\tau/2)-\log\pi
+ r_T(\tau)=\mathrm{Re}\,\psi(1/4+i\tau/2)-\log\pi
  -2\sum_{p^k\le e^{2T}}{\log p\over p^{k/2}}
                       \cos(k\tau\log p),             \tag{2.3}
 \]

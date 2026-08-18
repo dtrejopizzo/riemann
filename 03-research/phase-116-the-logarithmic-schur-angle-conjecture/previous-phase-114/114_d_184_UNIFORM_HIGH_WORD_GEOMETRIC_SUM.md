@@ -60,7 +60,7 @@ split.  It does not by itself prove the unit Schur-capacity budget.  If
 estimate is
 
 \[
- \boxed{\operatorname {Cap}_{\rm hi}
+ \boxed{\mathrm{Cap}_{\rm hi}
  \le {\|y_{\rm hi}\|^2\over1-\rho^2}.}              \tag{0.6a}
 \]
 
@@ -86,7 +86,7 @@ one-layer norm and the high inverse norm cannot converge.  The choice
 (0.1) lies strictly above (0.7) while keeping the low rank sublinear:
 
 \[
- \operatorname {rank}F_N
+ \mathrm{rank}\,F_N
  \le {2TR\over\pi\eta}+2
  =O(N^{4/5}\log N).                                  \tag{0.8}
 \]
@@ -116,7 +116,7 @@ Use the actual spectral low projection of the ambient complete reference,
 D.180--D.181 prove
 
 \[
- \operatorname {rank}E_{<a_N}\le{2TR\over\pi\eta}, \tag{2.2}
+ \mathrm{rank}\,E_{<a_N}\le{2TR\over\pi\eta}, \tag{2.2}
 \]
 
 and functional calculus gives
@@ -201,8 +201,8 @@ prove the joint budget
 
 \[
  {\|y_{\rm hi}\|^2\over1-\rho^2}
- +\operatorname {Cap}_{\rm lo}
- +\operatorname {Cap}_{\rm cross}\le1,              \tag{5.1}
+ +\mathrm{Cap}_{\rm lo}
+ +\mathrm{Cap}_{\rm cross}\le1,              \tag{5.1}
 \]
 
 uniformly in \(N\), with the cross term estimated in the same Green

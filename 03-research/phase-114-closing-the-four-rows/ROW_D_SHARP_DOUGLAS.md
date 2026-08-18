@@ -38,7 +38,7 @@ y_Ny_N^*\le D_{\rm out},
 or
 
 \[
-\operatorname{Ran}y_N\subseteq\operatorname{Ran}D_{\rm out}^{1/2},
+\mathrm{Ran}\,y_N\subseteq\mathrm{Ran}\,D_{\rm out}^{1/2},
 \qquad y_N^*D_{\rm out}^\dagger y_N\le I.
 \tag{SD2}
 \]
@@ -59,7 +59,7 @@ C_{OE}^*C_{OE}\le B_E.
 \]
 
 The source note prints (C_{OE}C_{OE}^*\le B_E), but with the stated type
-(C_{OE}:H_E\to\overline{\operatorname{Ran}A_O}), the well-typed
+(C_{OE}:H_E\to\overline{\mathrm{Ran}\,A_O}), the well-typed
 inequality on (H_E) is (C_{OE}^*C_{OE}\le B_E).  This is a typographical
 orientation correction; the Schur complement in D.190 uses the correctly
 typed version.

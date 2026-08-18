@@ -24,7 +24,7 @@ suggest, and the extra structure below is not something 108_00 anticipated.
 
 ### Theorem 1.1
 
-\(\operatorname{Prin}(\mathcal G)=\mathbb R\cdot\operatorname{div}(U_0)\)
+\(\mathrm{Prin}(\mathcal G)=\mathbb R\cdot\mathrm{div}(U_0)\)
 (108.03 Definition 6.1, Theorem 6.2) is a well-defined, explicit,
 one-dimensional, **nonzero** subspace of currents on the universal positive
 chart, constructed without reference to any zero of \(\xi\), Li
@@ -61,12 +61,12 @@ Testing "principal invariance" means asking whether
 
 \[
  I_\partial(D+P,E)=I_\partial(D,E)
- \qquad\text{for }P\in\operatorname{Prin}(\mathcal G),
+ \qquad\text{for }P\in\mathrm{Prin}(\mathcal G),
  \tag{2.1}
 \]
 
 is true. Formulating (2.1) at all requires \(I_\partial\) to accept
-\(P=c\cdot\operatorname{div}(U_0)\) as an input.
+\(P=c\cdot\mathrm{div}(U_0)\) as an input.
 
 ### Proposition 2.1 (the domain gap)
 
@@ -74,11 +74,11 @@ is true. Formulating (2.1) at all requires \(I_\partial\) to accept
 4.1) is defined through the finite-part trace \(\mathfrak T_S(h)\) of
 107_239 (1.4), stated there **only for compactly supported test \(h\)**
 (107_239 SS1: "For a compactly supported test \(h\)..."; SS3 stabilizes the
-place set \(S\) precisely because \(\operatorname{supp}h\) is assumed
+place set \(S\) precisely because \(\mathrm{supp}\,h\) is assumed
 bounded). \(U_0\)'s generating test function is \(f_0(r)\equiv1\)
 (108.02 SS4, \(s=0\)), which is not compactly supported.
 
-**Consequence.** \(I_\partial(D,\,c\cdot\operatorname{div}(U_0))\) is not
+**Consequence.** \(I_\partial(D,\,c\cdot\mathrm{div}(U_0))\) is not
 covered by the published definition. (2.1) is not yet a well-formed
 statement, let alone a provable or disprovable one.
 
@@ -126,7 +126,7 @@ Changes:
   principal directions") no longer forces vacuity once the graded category
   \(\mathcal G\) is admitted;
 * there is now a named, explicit, zero-free-constructed candidate
-  \(\operatorname{Prin}(\mathcal G)\) for future work to test against, once
+  \(\mathrm{Prin}(\mathcal G)\) for future work to test against, once
   \(I_\partial\) is extended.
 
 Does not change:
@@ -152,7 +152,7 @@ Not established, and not attempted:
 
 * any extension of \(\mathfrak T_S\)/\(I_\partial\) to non-compactly
   supported test data;
-* whether \(P\subseteq\operatorname{rad}I_\partial\) once such an extension
+* whether \(P\subseteq\mathrm{rad}\,I_\partial\) once such an extension
   exists;
 * any change to the status of row (a).
 
@@ -162,7 +162,7 @@ Not established, and not attempted:
 
 1. re-derives (does not merely quote) that \(f_0\equiv1\) is not
    compactly supported and that 107_239's stabilization argument (SS3,
-   finiteness of contributing primes for \(\operatorname{supp}h\subset
+   finiteness of contributing primes for \(\mathrm{supp}\,h\subset
    [e^{-T},e^T]\)) fails to apply to it, by checking that no finite \(T\)
    contains the support of a nonzero constant function;
 * checks the analogous statement for every \(f_s\), \(s\in\mathbb R\)

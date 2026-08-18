@@ -7,8 +7,8 @@ Document 106.33 proves, for the endpoint-corrected moving source,
 \[
  |A_\lambda(w)|
  \ll \frac{\lambda^{7/2}\sqrt{d_4}}
- {1+|\operatorname {Im}w|},
- \qquad |\operatorname {Re}w|<\frac12.
+ {1+|\mathrm{Im}\,w|},
+ \qquad |\mathrm{Re}\,w|<\frac12.
  \tag{1}
 \]
 

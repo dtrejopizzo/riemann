@@ -100,7 +100,7 @@ One needs constants `a_lambda,b_lambda` such that
 uniformly on compact subsets, or uniformly on closed substrips, of
 
 \[
- |\operatorname{Im}z|<\tfrac12.                               \tag{3.3}
+ |\mathrm{Im}\,z|<\tfrac12.                               \tag{3.3}
 \]
 
 The exponential factor changes normalization and phase but has no zeros.
@@ -334,8 +334,8 @@ D.47 rewrites the primitive Hodge theorem on each compact window as the
 index-one/hyperbolic-boundary certificate
 
 \[
- \operatorname{In}(A_T)=(1,\infty,0),
- \qquad \operatorname{In}(G_T)=(1,1,0),
+ \mathrm{In}(A_T)=(1,\infty,0),
+ \qquad \mathrm{In}(G_T)=(1,1,0),
  \qquad G_T=M_TA_T^{-1}M_T^*.                              \tag{10.1}
 \]
 
@@ -370,7 +370,7 @@ where `G_lambda` is the explicit Gamma pseudodifferential operator and
 
 \[
  \mathcal B_\lambda(z)
- =\operatorname{sgn}(K_\lambda)|K_\lambda|^{1/2}
+ =\mathrm{sgn}(K_\lambda)|K_\lambda|^{1/2}
    (G_\lambda-z)^{-1}|K_\lambda|^{1/2}.                        \tag{11.2}
 \]
 
@@ -381,7 +381,7 @@ The resolvent identity gives
  =(G_\lambda-z)^{-1}
  -(G_\lambda-z)^{-1}|K_\lambda|^{1/2}
   (I+\mathcal B_\lambda(z))^{-1}
-  \operatorname{sgn}(K_\lambda)|K_\lambda|^{1/2}
+  \mathrm{sgn}(K_\lambda)|K_\lambda|^{1/2}
   (G_\lambda-z)^{-1}.                                         \tag{11.3}
 \]
 

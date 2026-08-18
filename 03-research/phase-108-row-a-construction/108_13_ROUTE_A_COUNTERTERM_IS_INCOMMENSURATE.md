@@ -22,11 +22,11 @@ $\xi$ is used anywhere.
 ## 1. The two objects, precisely
 
 **The counterterm (107_239 (1.4), (3.1)-(3.2)).** For $h$ compactly
-supported with $\operatorname{supp}h\subset[e^{-T},e^T]$, 107_239 defines
+supported with $\mathrm{supp}\,h\subset[e^{-T},e^T]$, 107_239 defines
 
 \[
  \mathfrak T_S(h)=\lim_{\Lambda\to\infty}
- \Big(\operatorname{Tr}(\theta(h)R_\Lambda)-2h(1)\log\Lambda\Big),
+ \Big(\mathrm{Tr}(\theta(h)R_\Lambda)-2h(1)\log\Lambda\Big),
 \]
 
 and shows (3.1)-(3.2) that once $S\supset S(h):=\{\infty\}\cup\{p\le e^T\}$

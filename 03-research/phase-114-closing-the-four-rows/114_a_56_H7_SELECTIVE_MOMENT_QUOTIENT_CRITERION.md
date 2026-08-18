@@ -63,7 +63,7 @@ Let `C=I_r(Q)` be the balanced code and let
 be the odd-moment embedding of `a_51`. For distinct `c,c' in C`, define
 
 \[
- \operatorname{Diff}(c,c')
+ \mathrm{Diff}(c,c')
  =\{j:E_j(c)\ne E_j(c')\}.                                               \tag{2.2}
 \]
 
@@ -72,7 +72,7 @@ Every such set is nonempty because `E` is injective. Define
 \[
  \boxed{
  \kappa(r,Q;p)=min\bigl\{|S|:
- S\cap\operatorname{Diff}(c,c')\ne\varnothing
+ S\cap\mathrm{Diff}(c,c')\ne\varnothing
  \text{ for all }c\ne c'\bigr\}.
  }                                                                       \tag{2.3}
 \]

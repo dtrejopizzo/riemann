@@ -198,7 +198,7 @@ gives a pole at a non-real \(\tau\).  Therefore any positive
 line-coordinate representing measure for the continued completed logarithmic
 derivative must first prove the support collapse
 \[
-  \operatorname{supp}\Delta
+  \mathrm{supp}\,\Delta
   \log\left|\xi\left({1\over2}+z\right)\right|
   \subset i\mathbb R.
 \tag{13}

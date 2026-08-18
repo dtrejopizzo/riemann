@@ -21,7 +21,7 @@ proves four statements.
 2. If `(g_j)` is any Hilbert-dense sequence in that complement, then
    \[
    \mathcal V_M^{\mathrm{heat}}
-   =\operatorname{span}\{e^{-S/k}g_j:1\le j,k\le M\}
+   =\mathrm{span}\,\{e^{-S/k}g_j:1\le j,k\le M\}
    \]
    is a nested form-core exhaustion.
 3. On each fixed heat space, the omitted ordinary-prime bank tends to zero
@@ -294,7 +294,7 @@ Let `H` be a separable Hilbert space and let `S` be self-adjoint with
 span is dense in `H`, and define
 
 \[
- V_M=\operatorname{span}
+ V_M=\mathrm{span}
  \{e^{-S/k}g_j:1\le j,k\le M\}.                   \tag{11}
 \]
 
@@ -405,7 +405,7 @@ Choose a Hilbert-dense sequence `(g_j)` in `N_K` and put
 
 \[
  \mathcal V_M^{\mathrm{heat}}
- =\operatorname{span}
+ =\mathrm{span}
  \{e^{-S/k}g_j:1\le j,k\le M\},                  \tag{21}
 \]
 
@@ -749,7 +749,7 @@ is continuous in the norm of (23), so its nonnegativity passes to the
 limit.  On the whole space the corresponding expression is
 
 \[
- \mathscr E_K(q,q)-\frac12\operatorname{Var}_{\mu_K}(q),
+ \mathscr E_K(q,q)-\frac12\mathrm{Var}_{\mu_K}(q),
                                                                \tag{40a}
 \]
 

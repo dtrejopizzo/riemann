@@ -41,7 +41,7 @@ The digamma integral gives, for real \(\tau\),
 
 \[
  h_{5/4}(\tau)
- =\operatorname {Re}\psi(5/4+i\tau/2)-\psi(5/4)
+ =\mathrm{Re}\,\psi(5/4+i\tau/2)-\psi(5/4)
  =\int_0^\infty \nu(a)(1-\cos(a\tau))\,da,              \tag{1.1}
 \]
 
@@ -57,7 +57,7 @@ Therefore
 \[
  \mathcal H_{5/4}(F)
  =\int_0^\infty\nu(a)
-   \left(\|F\|_2^2-\operatorname {Re}C_F(a)\right)da.  \tag{1.3}
+   \left(\|F\|_2^2-\mathrm{Re}\,C_F(a)\right)da.  \tag{1.3}
 
 \]
 
@@ -89,7 +89,7 @@ pushforward of \(x^{-1/2}dE_\beta(x)\).  The contact in D.133 is
 
 \[
  V_{E,T}(F,G)
- =2\operatorname {Re}\int_{[0,2T]}C_{F,G}(a)\,d\eta_T(a),              \tag{2.2}
+ =2\mathrm{Re}\,\int_{[0,2T]}C_{F,G}(a)\,d\eta_T(a),              \tag{2.2}
 
 \]
 

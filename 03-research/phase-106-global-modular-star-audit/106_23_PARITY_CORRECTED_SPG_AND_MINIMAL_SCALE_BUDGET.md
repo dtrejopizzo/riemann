@@ -38,7 +38,7 @@ Let \(\mathcal D_N\) and \(\kappa_N\) be the positive jump form and the
 centering constant of 106.17.  The polar quadratic term is
 
 \[
- 2\operatorname {Re}\left(
+ 2\mathrm{Re}\,\left(
  \widehat F(i/2)\overline{\widehat F(-i/2)}\right).
 \]
 
@@ -86,7 +86,7 @@ Put \(C=\langle c_L,F\rangle\) and
 \(S=\langle s_L,F\rangle\).  Then
 
 \[
- 2\operatorname {Re}\bigl((C+S)\overline{(C-S)}\bigr)
+ 2\mathrm{Re}\,\bigl((C+S)\overline{(C-S)}\bigr)
  =2|C|^2-2|S|^2.
 \]
 

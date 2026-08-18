@@ -18,16 +18,16 @@ Connes--Consani define, for every divisor \(D\),
 and the continuous dimension
 
 \[
- \operatorname{cdim}H^0(D)
+ \mathrm{cdim}\,H^0(D)
  =\lim_{n\to\infty}
- p^{-n}\operatorname{tdim}H^0(D)^{p^n}.
+ p^{-n}\mathrm{tdim}\,H^0(D)^{p^n}.
  \tag{1.1}
 \]
 
 Their periodic Riemann--Roch theorem states that
 
 \[
- \operatorname{cdim}H^0(D)=\deg D
+ \mathrm{cdim}\,H^0(D)=\deg D
  \qquad(\deg D\geq0).
  \tag{1.2}
 \]
@@ -43,7 +43,7 @@ source file rather than installing them as Phase 107 assumptions.
 Let \(D\) be a divisor on \(C_p\) with \(\deg D>0\), and put
 
 \[
- d_n=\operatorname{tdim}H^0(D)^{p^n}.
+ d_n=\mathrm{tdim}\,H^0(D)^{p^n}.
 \]
 
 Then \((d_n)\) is unbounded. In particular, neither the filtered
@@ -82,7 +82,7 @@ periodic divisor.
 
 Two distinct Riemann--Roch theories had been conflated:
 
-1. On \(\overline{\operatorname{Spec}\mathbb Z}\), the 2022
+1. On \(\overline{\mathrm{Spec}\,\mathbb Z}\), the 2022
    \(H^0(a\{\infty\})\) is the bounded integer interval
    \([-e^a,e^a]\cap\mathbb Z\), with finite integer dimension.
 2. On \(C_p\), slopes lie in the dense group

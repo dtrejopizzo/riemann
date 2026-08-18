@@ -51,7 +51,7 @@ $$
   (analytic continuation of $\widehat g$ to the strip; finite on $\mathcal S$).
 - the **prime** sum — a Toeplitz-type operator: a weighted sum of the unitary shifts $T_{\log n}$.
 
-Then $\mathfrak t(g,g)=\langle g,\mathcal T g\rangle$ on $\mathcal S$, and **(LB)** $\inf\operatorname{spec}(\mathcal T)\ge0\iff\mathrm{RH}$.
+Then $\mathfrak t(g,g)=\langle g,\mathcal T g\rangle$ on $\mathcal S$, and **(LB)** $\inf\mathrm{spec}(\mathcal T)\ge0\iff\mathrm{RH}$.
 
 > **The regularization question, pinned.** There is *no extra free parameter* $\delta$ once $\mathcal H$
 > and the EF are fixed as above: the prime sum is conditionally convergent on $\mathcal S$ (Result B2.2),
@@ -67,7 +67,7 @@ Then $\mathfrak t(g,g)=\langle g,\mathcal T g\rangle$ on $\mathcal S$, and **(LB
 
 The computed object is the finite Gram matrix $Q^{(X)}_{jk}=(M_{\mathrm{zeros}})_{jk}-(M_{\mathrm{arith}}^{(X)})_{jk}$
 in the localizer basis $\{g_j\}_{j<J}$, with prime cutoff $X$. Let $P_J$ be the orthogonal projection
-onto $V_J:=\operatorname{span}\{g_0,\dots,g_{J-1}\}\subset\mathcal H$. The identity to establish is
+onto $V_J:=\mathrm{span}\,\{g_0,\dots,g_{J-1}\}\subset\mathcal H$. The identity to establish is
 $$
 \boxed{\ Q^{\mathrm{exact}}_{jk}:=\langle g_j,\mathcal T g_k\rangle \;=\; (P_J\,\mathcal T\,P_J)_{jk}\ }\qquad(\star)
 $$

@@ -43,7 +43,7 @@ The family is faithful because \(T_n\) is faithful. Its symmetric monoidal
 contact functor satisfies
 
 \[
- \operatorname{Cont}(\Gamma_n)=\mathcal P_n,\qquad
+ \mathrm{Cont}(\Gamma_n)=\mathcal P_n,\qquad
  \log\#\Gamma\mathcal P_n=\Lambda(n).                                \tag{2.2}
 \]
 
@@ -61,7 +61,7 @@ Neither a70 nor the row-a contract permits assigning (2.2) as an
 intersection by declaration. One still needs a comparison
 
 \[
- \mathfrak I:\operatorname{Corr}_{Pic}(X,X)
+ \mathfrak I:\mathrm{Corr}_{Pic}(X,X)
  \longrightarrow \mathcal C_{G7}(Y)                                  \tag{3.1}
 \]
 

@@ -14,7 +14,7 @@ Comenzamos con el único caso en que RH está probada: funciones zeta de curvas 
 **Teorema de Weil (1948).** Sea $C/\mathbb{F}_q$ una curva lisa proyectiva sobre el campo finito con $q$ elementos. La función zeta de $C$:
 $$Z(C/\mathbb{F}_q, T) = \exp\!\left(\sum_{n=1}^\infty \frac{|C(\mathbb{F}_{q^n})|}{n}T^n\right) = \frac{P(T)}{(1-T)(1-qT)}$$
 
-satisface: las raíces $\alpha_i$ de $P(T)$ tienen módulo $|\alpha_i| = q^{1/2}$ — es decir, los ceros de la función zeta (en la variable $s = -\log T/\log q$) están en la línea $\operatorname{Re}(s) = 1/2$.
+satisface: las raíces $\alpha_i$ de $P(T)$ tienen módulo $|\alpha_i| = q^{1/2}$ — es decir, los ceros de la función zeta (en la variable $s = -\log T/\log q$) están en la línea $\mathrm{Re}(s) = 1/2$.
 
 **Los tres ingredientes de Weil:**
 1. **El espacio:** la curva $C$ sobre $\bar{\mathbb{F}}_q$.

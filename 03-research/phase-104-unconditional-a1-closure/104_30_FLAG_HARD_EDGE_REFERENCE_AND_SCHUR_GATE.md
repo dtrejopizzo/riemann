@@ -335,14 +335,14 @@ En la sección
 
 \[
  \mathcal V_{M,N}
- =\operatorname{span}\{g_M,\phi_M,\ldots,\phi_{N-1}\},         \tag{25}
+ =\mathrm{span}\,\{g_M,\phi_M,\ldots,\phi_{N-1}\},         \tag{25}
 \]
 
 la matriz de \(\mathsf A_{\rm flag}\) es
 
 \[
  D_{M,N}
- =\operatorname{diag}
+ =\mathrm{diag}
    (A_M,\Delta A_M,\ldots,\Delta A_{N-1})>0.                  \tag{26}
 \]
 

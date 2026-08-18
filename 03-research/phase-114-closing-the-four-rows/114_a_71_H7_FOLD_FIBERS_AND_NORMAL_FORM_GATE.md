@@ -37,7 +37,7 @@ diagonal give operation-set maps
 \[
  B\mathop{\longrightarrow}^{i=p_1^\#}A
  \mathop{\longrightarrow}^{r=\Delta^\#}B,
- \qquad r i=\operatorname{id}_B.                                      \tag{1.1}
+ \qquad r i=\mathrm{id}_B.                                      \tag{1.1}
 \]
 
 Here `A` is the corresponding operation set on the arithmetic plane and `B`

@@ -24,7 +24,7 @@ completa es
 
 \[
  \boxed{\mathbb E_s[Z_fZ_g]
- =\operatorname{Cov}_s(D_f,D_g)+M_s(f)M_s(g),}              \tag{3}
+ =\mathrm{Cov}_s(D_f,D_g)+M_s(f)M_s(g),}              \tag{3}
 \]
 
 donde \(M_s(f)\) es exactamente el funcional prima--polo de `104_45`.
@@ -34,7 +34,7 @@ Por tanto el cuadrado completado alrededor del margen requerido vale
 \[
  \boxed{
  s^2\mathbb E_s\left(Z_{f_{n,s}}-{\kappa A_n\over s}\right)^2
- =s^2\operatorname{Var}_s(D_{f_{n,s}})
+ =s^2\mathrm{Var}_s(D_{f_{n,s}})
   +(\mathcal B_{n,s}-\kappa A_n)^2,}
  \qquad \kappa={1501\over2002}.                             \tag{4}
 \]
@@ -137,7 +137,7 @@ La suma de (10) es uno por \(\sum_pa_p\log p=\log n\). Además,
 Promediar con (9) prueba (1). No se ha reemplazado una torre por su primer
 nivel ni se han separado los otros primos.
 
-El comparador polar es igualmente exacto. Si \(Y\sim\operatorname{Exp}
+El comparador polar es igualmente exacto. Si \(Y\sim\mathrm{Exp}
 (\varepsilon)\) y
 
 \[
@@ -166,7 +166,7 @@ La probabilidad de que dos potencias primas dividan simultáneamente a
 \(N\) es
 
 \[
- \mathbb P_s(d\mid N,\ e\mid N)=\operatorname{lcm}(d,e)^{-s}.
+ \mathbb P_s(d\mid N,\ e\mid N)=\mathrm{lcm}(d,e)^{-s}.
 \]
 
 Por tanto (1) posee la forma cerrada
@@ -174,7 +174,7 @@ Por tanto (1) posee la forma cerrada
 \[
  \mathbb E_s[J_fJ_g]
  =\sum_{d,e\ge2}{\Lambda(d)\Lambda(e)\over
-             \operatorname{lcm}(d,e)^s}f(\log d)g(\log e). \tag{14}
+             \mathrm{lcm}(d,e)^s}f(\log d)g(\log e). \tag{14}
 \]
 
 Al sustraer el producto de medias,
@@ -182,9 +182,9 @@ Al sustraer el producto de medias,
 \[
 \begin{aligned}
  \Gamma_s^\Lambda(f,g)
- :={}&\operatorname{Cov}_s(J_f,J_g)\\
+ :={}&\mathrm{Cov}_s(J_f,J_g)\\
  ={}&\sum_{d,e\ge2}\Lambda(d)\Lambda(e)f(\log d)g(\log e)
- \{\operatorname{lcm}(d,e)^{-s}-d^{-s}e^{-s}\}.           \tag{15}
+ \{\mathrm{lcm}(d,e)^{-s}-d^{-s}e^{-s}\}.           \tag{15}
 \end{aligned}
 \]
 
@@ -269,7 +269,7 @@ Usando (14) y (22),
 \begin{aligned}
  \mathbb E_s[D_fD_g]={}&
  \sum_{d,e\ge2}{\Lambda(d)\Lambda(e)\over
-    \operatorname{lcm}(d,e)^s}f(\log d)g(\log e)\\
+    \mathrm{lcm}(d,e)^s}f(\log d)g(\log e)\\
  &-\sum_{d\ge2}{\Lambda(d)\over d^s}f(\log d)
        \mathbb E_sU_g(X+\log d)\\
  &-\sum_{e\ge2}{\Lambda(e)\over e^s}g(\log e)
@@ -287,8 +287,8 @@ Ahora centre (21). Para **todo par** de tests admisibles,
 \[
 \begin{aligned}
  \mathbb E_s[Z_fZ_g]
- &=\operatorname{Cov}_s(Z_f,Z_g)+\mathbb E_sZ_f\,\mathbb E_sZ_g\\
- &=\boxed{\operatorname{Cov}_s(D_f,D_g)+M_s(f)M_s(g).}      \tag{24}
+ &=\mathrm{Cov}_s(Z_f,Z_g)+\mathbb E_sZ_f\,\mathbb E_sZ_g\\
+ &=\boxed{\mathrm{Cov}_s(D_f,D_g)+M_s(f)M_s(g).}      \tag{24}
 \end{aligned}
 \]
 
@@ -337,7 +337,7 @@ generalmente,
  &s^2\mathbb E_s
  \left(Z_{f_{n,s}}-{\kappa A_n\over s}\right)
  \left(Z_{f_{m,s}}-{\kappa A_m\over s}\right)\\
- &\quad=s^2\operatorname{Cov}_s(D_{n,s},D_{m,s})
+ &\quad=s^2\mathrm{Cov}_s(D_{n,s},D_{m,s})
  +(\mathcal B_{n,s}-\kappa A_n)
   (\mathcal B_{m,s}-\kappa A_m).                           \tag{29}
 \end{aligned}
@@ -394,16 +394,16 @@ familia exponencial y usar el comparador continuo da
 
 \[
  \boxed{
- \operatorname{Cov}_s(J_f,X)
- -\operatorname{Cov}_\varepsilon(C_f(Y),Y)
+ \mathrm{Cov}_s(J_f,X)
+ -\mathrm{Cov}_\varepsilon(C_f(Y),Y)
  =-\partial_sM_s(f).}                                      \tag{34a}
 \]
 
-En efecto, \(\partial_s\mathbb E_sJ_f=-\operatorname{Cov}_s(J_f,X)\),
+En efecto, \(\partial_s\mathbb E_sJ_f=-\mathrm{Cov}_s(J_f,X)\),
 mientras
 
 \[
- \operatorname{Cov}_\varepsilon(C_f(Y),Y)
+ \mathrm{Cov}_\varepsilon(C_f(Y),Y)
  =\int_0^\infty xe^{-\varepsilon x}f(x)\,dx.
 \]
 
@@ -501,7 +501,7 @@ Condicionado al exponente total dos, (35) da
 En particular,
 
 \[
- \operatorname{Var}(K\mid A=2)
+ \mathrm{Var}(K\mid A=2)
  ={25\cdot17\over42^2}={425\over1764}>0,                  \tag{42}
 \]
 

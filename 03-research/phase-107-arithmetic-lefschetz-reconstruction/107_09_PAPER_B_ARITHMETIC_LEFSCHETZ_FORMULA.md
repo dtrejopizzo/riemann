@@ -26,9 +26,9 @@ Lefschetz statement.
 Four earlier pieces are the required source data.
 
 1. `107_06` provides the finite-support metrized intersection pairing on
-   \(\operatorname{Div}_{\mathrm{EF}}\).
+   \(\mathrm{Div}_{\mathrm{EF}}\).
 2. `107_07` provides the decorated correspondence category
-   \(\operatorname{Corr}_{\mathrm{EF}}\), including transpose, diagonal,
+   \(\mathrm{Corr}_{\mathrm{EF}}\), including transpose, diagonal,
    degree, and connected cyclic trace.
 3. `107_08` provides the glued arithmetic flow
    \((\mathfrak X_{\mathrm{EF}},\vartheta_t)\) whose primitive closed

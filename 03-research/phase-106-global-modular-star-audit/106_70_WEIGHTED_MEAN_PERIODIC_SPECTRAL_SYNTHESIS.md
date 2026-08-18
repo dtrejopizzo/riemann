@@ -98,11 +98,11 @@ with the complete conjugation and \(z\mapsto-z\) orbits understood.
 ## 2. The elementary modes lie in the full graph domain
 
 Every nontrivial zero in the frequency normalization
-\(\Xi(z)=\xi(1/2+iz)\) satisfies \(|\operatorname {Im}z|<1/2\).  For a
+\(\Xi(z)=\xi(1/2+iz)\) satisfies \(|\mathrm{Im}\,z|<1/2\).  For a
 fixed finite collection of modes, put
 
 \[
- \delta=\frac12-\max|\operatorname {Im}z|>0,
+ \delta=\frac12-\max|\mathrm{Im}\,z|>0,
  \qquad d=\max(m_z-1).                              \tag{9}
 \]
 
@@ -161,7 +161,7 @@ The ambient topology here is different.  If \(\tau_aF(x)=F(x-a)\), then
 
 \[
  \|\tau_a\|_{L^2(\omega_K)\to L^2(\omega_K)}^2
- =\operatorname*{ess\,sup}_{x\in\mathbb R}
+ =\mathop{\mathrm{ess\,sup}}_{x\in\mathbb R}
    \frac{\omega_K(x+a)}{\omega_K(x)}.               \tag{14}
 \]
 

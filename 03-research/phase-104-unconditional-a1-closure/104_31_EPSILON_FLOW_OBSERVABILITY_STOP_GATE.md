@@ -217,7 +217,7 @@ Póngase \(M=150\), \(P_M=\sum_{j<M}L_j\), y
 
 \[
  \mathcal H_{\rm flag}
- =\operatorname{span}\{P_M,L_M,L_{M+1},\ldots\}\subset\mathcal H.        \tag{19}
+ =\mathrm{span}\,\{P_M,L_M,L_{M+1},\ldots\}\subset\mathcal H.        \tag{19}
 \]
 
 La familia mostrada en (19) es ortogonal en \(\mathcal H\). Con

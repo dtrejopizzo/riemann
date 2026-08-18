@@ -23,7 +23,7 @@ produce the missing row-D contraction.  The sharp lower bound
 
 \[
  \max\{\|U_u\|,\|U_{-u}\|\}
- \ge \exp\bigl(|u|\,|\operatorname {Re}\rho-\tfrac12|\bigr) \tag{0.1}
+ \ge \exp\bigl(|u|\,|\mathrm{Re}\,\rho-\tfrac12|\bigr) \tag{0.1}
 \]
 
 holds for every zero \(\rho\) represented in the quotient.  Two-sided
@@ -38,7 +38,7 @@ modified.
 
 ## 1. Scalar weighted Mellin spaces
 
-Let \(\Omega\subset\{0<\operatorname {Re}s<1\}\) carry a positive measure
+Let \(\Omega\subset\{0<\mathrm{Re}\,s<1\}\) carry a positive measure
 \(d\mu\), invariant under \(s\mapsto1-\bar s\), and let
 
 \[
@@ -69,7 +69,7 @@ at almost every point in the support of \(w\,d\mu\).  Differentiating at
 \(u=0\) gives
 
 \[
- \boxed{\operatorname {Re}s=\tfrac12\quad\mu\text{-a.e.}}  \tag{1.5}
+ \boxed{\mathrm{Re}\,s=\tfrac12\quad\mu\text{-a.e.}}  \tag{1.5}
 \]
 
 This condition is independent of the choice of positive scalar weight.
@@ -120,7 +120,7 @@ of \(H_+\):
 Thus \(Z_c\) is surjective and
 
 \[
- \boxed{H_-/\operatorname {Ran}Z_c=0.}                     \tag{2.7}
+ \boxed{H_-/\mathrm{Ran}\,Z_c=0.}                     \tag{2.7}
 \]
 
 If (2.4) fails, the range is nonclosed.  With equal weights this failure is
@@ -158,7 +158,7 @@ weights alone cannot solve the problem.
 Fix \(0<a<1/2\) and the symmetric strip
 
 \[
- S_a=\{s:|\operatorname {Re}s-\tfrac12|<a\}.                \tag{4.1}
+ S_a=\{s:|\mathrm{Re}\,s-\tfrac12|<a\}.                \tag{4.1}
 \]
 
 Let \(H^2(S_a)\) be the Hardy space with norm
@@ -241,7 +241,7 @@ Therefore
 
 \[
  \|U_u\|\ge |E_u(\rho)|
- =e^{u(\operatorname {Re}\rho-1/2)}.                       \tag{5.4}
+ =e^{u(\mathrm{Re}\,\rho-1/2)}.                       \tag{5.4}
 \]
 
 Applying (5.4) to \(u\) and \(-u\) proves (0.1).  In particular,
@@ -250,7 +250,7 @@ Applying (5.4) to \(u\) and \(-u\) proves (0.1).  In particular,
  \boxed{
  \|U_u\|\le1\text{ and }\|U_{-u}\|\le1\ \forall u
  \quad\Longrightarrow\quad
- \operatorname {Re}\rho=\tfrac12\ \forall\rho\in S_a.} \tag{5.5}
+ \mathrm{Re}\,\rho=\tfrac12\ \forall\rho\in S_a.} \tag{5.5}
 \]
 
 Conversely, two-sided contraction for an invertible group is unitarity.
@@ -297,7 +297,7 @@ comparison, if the central transpose were the Hilbert adjoint then
 
 \[
  B_{\rm nuc}(a,a)
- =-\operatorname {Tr}\bigl(\mathscr Q_-(a)
+ =-\mathrm{Tr}\,\bigl(\mathscr Q_-(a)
           \mathscr Q_-(a)^*\bigr)\le0                      \tag{7.1}
 \]
 
@@ -338,7 +338,7 @@ into the row-D negative square.
 
 The companion script `114_d_192_weighted_mellin_graph_verify.py` verifies:
 
-1. weighted adjoint equals inverse scaling only on \(\operatorname {Re}s=1/2\);
+1. weighted adjoint equals inverse scaling only on \(\mathrm{Re}\,s=1/2\);
 2. absorbing \(|\Xi|\) makes a diagonal multiplier an onto isometry and
    kills the quotient;
 3. inverse norms diverge without that absorption;

@@ -42,7 +42,7 @@ analítica en un disco alrededor del origen. Escribamos
 
 ### Teorema 1 (contorno binomial)
 
-Si \(0<r<\operatorname{dist}(0,\{t:Z(t)=0\})\), entonces
+Si \(0<r<\mathrm{dist}(0,\{t:Z(t)=0\})\), entonces
 
 \[
  \boxed{
@@ -95,10 +95,10 @@ Si \(P_n=\lambda_n-A_n\) es el bloque primo en la normalización de Phase 103, e
 Los polos de \(R\) son los ceros de \(Z\), con multiplicidad y residuo negativo:
 
 * un cero no trivial \(\rho\) de \(\zeta\) produce \(t_\rho=\rho-1\) y
-  \(\operatorname{Res}_{t=t_\rho}R=-m_\rho\);
+  \(\mathrm{Res}_{t=t_\rho}R=-m_\rho\);
 * el cero trivial \(-2k\) produce
   \(t_k=-(2k+1)=-a_k\), \(a_k=3,5,\ldots\), y
-  \(\operatorname{Res}_{t=-a_k}R=-1\).
+  \(\mathrm{Res}_{t=-a_k}R=-1\).
 
 En \(t=-a\),
 
@@ -118,7 +118,7 @@ así que el residuo **del integrando** de (3) es
 Si un contorno grande contiene ese polo, el teorema de residuos dice
 
 \[
- C_n=I_{\rm exterior}-\sum_{\text{polos cruzados}}\operatorname{Res}(RK_n).
+ C_n=I_{\rm exterior}-\sum_{\text{polos cruzados}}\mathrm{Res}(RK_n).
 \tag{8}
 \]
 

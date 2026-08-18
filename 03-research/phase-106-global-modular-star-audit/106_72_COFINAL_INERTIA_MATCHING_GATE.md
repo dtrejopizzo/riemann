@@ -97,7 +97,7 @@ Let
 
 \[
  r_j={K^{(2j)}\over K}-4^{-j},\qquad
- \mathcal R_J=\operatorname {span}\{r_1,\ldots,r_J\},
+ \mathcal R_J=\mathrm{span}\,\{r_1,\ldots,r_J\},
  \qquad
  \mathcal R=\overline{\bigcup_J\mathcal R_J}.       \tag{8}
 \]

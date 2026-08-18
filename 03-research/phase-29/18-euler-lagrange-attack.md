@@ -83,7 +83,7 @@ La condición H2 correcta es $B_\lambda(z) \to 1$ para $z \in \mathbb{C} \setmin
 
 ## 4. El Ataque D reformulado: ceros de $C_\infty$ vs. ceros de $\Xi$ via von Mangoldt
 
-**La pregunta central del Ataque D.** Por el Teorema C1 del Doc 17: $\operatorname{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$. Y por el Doc 15: $\operatorname{spec}(J_\infty)$ tiene la medida $\mu_\gamma^{real}$.
+**La pregunta central del Ataque D.** Por el Teorema C1 del Doc 17: $\mathrm{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$. Y por el Doc 15: $\mathrm{spec}(J_\infty)$ tiene la medida $\mu_\gamma^{real}$.
 
 Por lo tanto, la medida de distribución de los ceros de $C_\infty$ en $\mathbb{R}$ es $\mu_\gamma^{real}$ (incondicionalmente).
 
@@ -145,7 +145,7 @@ Sin RH: habría modos adicionales con $|\rho| > \gamma$ (de los ceros fuera de l
 
 (d) Pero $\mu_\infty = \mu_\gamma^{real}$ tiene átomos solo en $\{\gamma_n\} = $ ceros de $\Xi$ en $\mathbb{R}$. Si los $t_k$ no son ceros de $\Xi$: $\mu_\infty$ tiene átomos extra, contradiciendo $\mu_\infty = \mu_\gamma^{real}$.
 
-**El gap de la Proposición 5:** El paso (c) asume que TODOS los ceros de $C_\infty$ están en $\operatorname{spec}(J_\infty)$. El Teorema C1 del Doc 17 dice que $\operatorname{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$ — lo cual incluiría los $t_k$. Pero el argumento de contradicción requiere verificar que los $t_k$ son reales y distintos de los $\gamma_n$, y que contribuyen con peso positivo a $\mu_\infty$.
+**El gap de la Proposición 5:** El paso (c) asume que TODOS los ceros de $C_\infty$ están en $\mathrm{spec}(J_\infty)$. El Teorema C1 del Doc 17 dice que $\mathrm{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$ — lo cual incluiría los $t_k$. Pero el argumento de contradicción requiere verificar que los $t_k$ son reales y distintos de los $\gamma_n$, y que contribuyen con peso positivo a $\mu_\infty$.
 
 **Obstáculo.** Los ceros $t_k$ de $C_\infty$ son reales (por la simetría de $C_\infty$ en $\mathbb{R}$: $C_\infty(t) \in \mathbb{R}$ para $t \in \mathbb{R}$). Pero pueden coincidir con ceros de $\Xi$ por cancelación. Si $t_k = \gamma_{n_k}$ para algún cero $\gamma_{n_k}$ de $\Xi$: el espectro de $J_\infty$ en $t_k$ sería un átomo de $\mu_\gamma^{real}$ (consistente).
 
@@ -175,13 +175,13 @@ La función $C_\infty(t)$ no es par. Esto es consistente con que la simetría de
 
 **Implicación.** Los ceros de $C_\infty$ en $\mathbb{R}$ no vienen en pares $\pm t$. Esto es consistente con la medida $\mu_\gamma^{real}$ (que en la escala completa sí es simétrica, pues los $\gamma_n$ vienen en pares $\pm\gamma_n$).
 
-**Contradicción.** Pero si $\mu_\infty = \mu_\gamma^{real}$ es simétrica y $\operatorname{supp}(\mu_\infty) = \{t: C_\infty(t) = 0\}$ (Corolario C2 del Doc 17): los ceros de $C_\infty$ deben ser simétricos. Si $C_\infty(t) = 0$ entonces $C_\infty(-t) = -w(t) - \Psi(t) \neq 0$ en general (pues $w(t) > 0$ para $t > 0$ grande). Contradicción con la simetría del soporte de $\mu_\infty$.
+**Contradicción.** Pero si $\mu_\infty = \mu_\gamma^{real}$ es simétrica y $\mathrm{supp}(\mu_\infty) = \{t: C_\infty(t) = 0\}$ (Corolario C2 del Doc 17): los ceros de $C_\infty$ deben ser simétricos. Si $C_\infty(t) = 0$ entonces $C_\infty(-t) = -w(t) - \Psi(t) \neq 0$ en general (pues $w(t) > 0$ para $t > 0$ grande). Contradicción con la simetría del soporte de $\mu_\infty$.
 
 ---
 
 ## 7. Resolución de la contradicción aparente
 
-**Resolución.** La contradicción de la Sección 6 revela un error en el Corolario C2 del Doc 17. El Teorema C1 afirma $\operatorname{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$, pero esto se deduce de la ecuación de punto fijo (EF2) $N \cdot m_\infty = C_\infty'/C_\infty$, que dice que los **polos** de $m_\infty$ coinciden con los ceros de $C_\infty$.
+**Resolución.** La contradicción de la Sección 6 revela un error en el Corolario C2 del Doc 17. El Teorema C1 afirma $\mathrm{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$, pero esto se deduce de la ecuación de punto fijo (EF2) $N \cdot m_\infty = C_\infty'/C_\infty$, que dice que los **polos** de $m_\infty$ coinciden con los ceros de $C_\infty$.
 
 Ahora: $m_\infty$ tiene polos en los eigenvalores de $J_\infty$ (todos reales, por auto-adjuntez), y el soporte de $\mu_\infty$ es $\{\gamma_n : \gamma_n \in \mathbb{R}\}$ (simétrico). Si los ceros de $C_\infty$ no son simétricos, la ecuación de punto fijo (EF2) falla.
 
@@ -238,7 +238,7 @@ $$\#\{t \in [0,T]: \Psi(t) = w(t)\} = N_\Xi(T) + O(\log T),$$
 
 i.e., el número de ceros de $C_\infty$ en $[0,T]$ es el mismo (hasta $O(\log T)$) que el número de ceros de $\Xi$ en $[0,T]$, y esto se satisface SIN asumir RH.
 
-**Proposición 8** (CA $\Rightarrow$ RH). Si la conjetura auxiliar (CA) es cierta: el número de ceros de $C_\infty$ en $[0,T]$ coincide con $N_\Xi(T) + O(\log T)$. Por el Teorema C1 del Doc 17: $\operatorname{spec}(J_\infty) = \{$ceros reales de $C_\infty\}$. Por la convergencia $\mu_\xi^\lambda \Rightarrow \mu_\gamma^{real}$ (Doc 15): la densidad de $\operatorname{spec}(J_\infty)$ es $N_\Xi(T) + O(\log T)$. Consistente, pero no implica directamente la coincidencia punto a punto con $\{\gamma_n\}$.
+**Proposición 8** (CA $\Rightarrow$ RH). Si la conjetura auxiliar (CA) es cierta: el número de ceros de $C_\infty$ en $[0,T]$ coincide con $N_\Xi(T) + O(\log T)$. Por el Teorema C1 del Doc 17: $\mathrm{spec}(J_\infty) = \{$ceros reales de $C_\infty\}$. Por la convergencia $\mu_\xi^\lambda \Rightarrow \mu_\gamma^{real}$ (Doc 15): la densidad de $\mathrm{spec}(J_\infty)$ es $N_\Xi(T) + O(\log T)$. Consistente, pero no implica directamente la coincidencia punto a punto con $\{\gamma_n\}$.
 
 Para que CA implique RH, necesitamos además que cada cero de $C_\infty$ coincida con un $\gamma_n$ — lo cual requiere la POSICIÓN de los ceros, no solo su conteo. Esto va más allá de (CA).
 
@@ -298,7 +298,7 @@ Esta es la formulación más concreta que el programa ha alcanzado. Es un enunci
 
 | Resultado | Documento |
 |---|---|
-| Teorema C1: $\operatorname{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$ | Doc 17 |
+| Teorema C1: $\mathrm{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$ | Doc 17 |
 | Teorema C3: RH $\iff$ ceros de $C_\infty$ son los $\gamma_n$ | Doc 17 |
 | Proposición 6 en Doc 16: RH $\iff$ (BM): $\mu_\gamma^{real} = \mu_\gamma^{C_\infty}$ | Doc 16 |
 | Sistema dinámico de Möbius: atractor único = $m_\infty$ (incondicional) | Doc 17 |

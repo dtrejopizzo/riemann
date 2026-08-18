@@ -106,7 +106,7 @@ This witness proves a narrow but useful point:
 
 It does **not** prove:
 
-1. any arithmetic-surface realization over \(\operatorname{Spec}\mathbf
+1. any arithmetic-surface realization over \(\mathrm{Spec}\,\mathbf
    Z\);
 2. the Picard/Jacobian realization of Paper C;
 3. the Hodge applicability, terminal identity, or RH closure steps.

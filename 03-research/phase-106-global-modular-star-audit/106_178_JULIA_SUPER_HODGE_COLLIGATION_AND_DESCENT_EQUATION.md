@@ -101,7 +101,7 @@ variable.  Define the Hermitian Krein form
 and its underlying real alternating form
 
 \[
- \Omega_I(v,w)=-\operatorname {Im}\mathfrak k_I(v,w).
+ \Omega_I(v,w)=-\mathrm{Im}\,\mathfrak k_I(v,w).
                                                                     \tag{9}
 \]
 
@@ -127,7 +127,7 @@ satisfies
  \quad
  \Omega_I(\mathcal J_Iv,\mathcal J_Iw)=\Omega_I(v,w),
  \quad
- g_I(v,w)=C_I\operatorname {Re}\langle v,w\rangle.}       \tag{12}
+ g_I(v,w)=C_I\mathrm{Re}\,\langle v,w\rangle.}       \tag{12}
 \]
 
 In particular \(g_I\) is positive definite.  The star commutes with every
@@ -253,16 +253,16 @@ endpoints.  Substitution in (21) gives eigenvalues \(+1\) and \(-1\).
 ## 7. The remaining chain identity
 
 Let \(d_{\rm CCM}\) be the cyclic restriction differential and let
-\(\operatorname {Loc}_I\) be the full-return localization through the
+\(\mathrm{Loc}_I\) be the full-return localization through the
 prime, Gamma, and polar pages.  The Julia construction descends to a
 positive Hodge structure on CCM degree one if one can construct a second
-component \(K_I\operatorname {Loc}_I\) satisfying both
+component \(K_I\mathrm{Loc}_I\) satisfying both
 
 \[
  \boxed{
  \begin{aligned}
  D_I-T_IK_I&=K_I(T_I+D_IK_I),\\
- \operatorname {Loc}_I(\overline{\operatorname {Ran}d_{\rm CCM}})
+ \mathrm{Loc}_I(\overline{\mathrm{Ran}\,d_{\rm CCM}})
  &\subseteq
  \ker\bigl[(f,K_If)\bigr]
  \quad\text{in the relative graded quotient}.
@@ -346,7 +346,7 @@ The first-return part of the Mellin multiplier of \(T_X\) at frequency
 \(t\) is
 
 \[
- \operatorname {Re}
+ \mathrm{Re}
  \frac{e^{it\log X}}{1+2it}+o(1),                          \tag{25}
 \]
 

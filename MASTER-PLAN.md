@@ -82,7 +82,7 @@ not a proof: $\Omega_7$ carries the full difficulty of RH.
 Phases 77–106 pushed the ARP-P/$\Omega_7$ architecture to its limit: thirty phases of exact
 finite algebra closing every accessible sub-gate, with no crossing (see `00-MAP.md` Part 13).
 Phase 107 then pivoted to a structurally different construction — imitating Weil's own 1948 proof
-for curves over finite fields directly over $\operatorname{Spec}\mathbb Z$ (rows a–d), rather
+for curves over finite fields directly over $\mathrm{Spec}\,\mathbb Z$ (rows a–d), rather
 than continuing to push ARP-P forward.
 
 That programme (`00-MAP.md` Part 14) built rows (a)–(c) as paper **42**
@@ -113,7 +113,7 @@ sense that two unrelated constructions land on statements each provably as hard 
 *proved impossible* from what is merely *unbuilt*. Three objects are unbuilt but not excluded: a
 construction with the required quadratic growth (a4); a space carrying an integral lattice
 structure compatible with the row-(c) pairing (a-new/b4); and whether a quadratic Riemann–Roch can
-exist over $\operatorname{Spec}\mathbb Z$ **at all**, independent of anything built here (R16).
+exist over $\mathrm{Spec}\,\mathbb Z$ **at all**, independent of anything built here (R16).
 Phase 119 itself pivots away from positivity entirely, asking what a finite compression of the
 Weil form certifies *unconditionally* (its inertia via Sylvester's law, its moments from the prime
 side) — gated on a Davenport–Heilbronn separation test that has not yet been run. See
@@ -193,7 +193,7 @@ the same kind of target as Route 1 — proved equivalent to RH, twice, independe
 the same candid warning. What is different in kind, and therefore what [`OPTIONS.md`](OPTIONS.md)
 should be read for, are the several sub-targets the phase-119 audit found that were **never shown
 equivalent to RH**: a quadratic-growth construction (a4), an integral-lattice space (a-new/b4),
-the existence question for quadratic Riemann–Roch over $\operatorname{Spec}\mathbb Z$ (R16), and
+the existence question for quadratic Riemann–Roch over $\mathrm{Spec}\,\mathbb Z$ (R16), and
 independently, from the wider audit, Diana L8, "Lemma 108," Conjecture $\mathbf C_B$, LP-112,
 GAP-157.A, and the untried boundary-triple classification for the CCM operator family. These are
 where new unconditional mathematics is most likely to still be reachable without confronting RH's

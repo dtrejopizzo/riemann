@@ -127,7 +127,7 @@ algebraic numbers.
 Let
 
 \[
- b(x)=\operatorname{sech}(x/2),\qquad
+ b(x)=\mathrm{sech}(x/2),\qquad
  a_u(x)=K(x)K(x-u),qquad u>0,
 \]
 

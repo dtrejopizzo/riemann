@@ -52,13 +52,13 @@ roles:
 ## 3. Normalized singular limits
 
 Fix any positive normalization \(a_X\to\infty\) with
-\(C_X/a_X\to c\in(0,\infty)\), and let \(\operatorname {Lim}_\omega\) be
+\(C_X/a_X\to c\in(0,\infty)\), and let \(\mathrm{Lim}_\omega\) be
 any generalized limit extending the ordinary limit on convergent bounded
 sequences.  Define
 
 \[
  \mathcal T_\omega(Q(f,g))
- =\operatorname {Lim}_\omega {Q_X(f,g)\over a_X}.             \tag{3}
+ =\mathrm{Lim}_\omega {Q_X(f,g)\over a_X}.             \tag{3}
 \]
 
 ### Theorem 3.1 — The finite part is invisible
@@ -101,12 +101,12 @@ and jointly it annihilates the finite arithmetic form.
 
 The same conclusion is the defining invariance of singular traces.  Let
 \(K\ge0\) be a measurable operator in \(\mathcal L^{1,\infty}\), let
-\(R\in\mathcal L^1\), and let \(\operatorname {Tr}_\omega\) be a Dixmier
+\(R\in\mathcal L^1\), and let \(\mathrm{Tr}_\omega\) be a Dixmier
 trace.  Then
 
 \[
- \operatorname {Tr}_\omega(aK+R)
- =a\operatorname {Tr}_\omega(K),                             \tag{7}
+ \mathrm{Tr}_\omega(aK+R)
+ =a\mathrm{Tr}_\omega(K),                             \tag{7}
 \]
 
 because every singular trace vanishes on \(\mathcal L^1\).  Thus, even if
@@ -136,11 +136,11 @@ Suppose a regularized trace has a Laurent expansion
 Then
 
 \[
- \operatorname*{Res}_{s=s_0} Z_f(s)=a(f),                  \tag{10}
+ \mathop{\mathrm{Res}}_{s=s_0} Z_f(s)=a(f),                  \tag{10}
 \]
 
 while the desired arithmetic correction is the constant term
-\(b(f)=\operatorname {FP}_{s=s_0}Z_f(s)\).  Positivity of the residue
+\(b(f)=\mathrm{FP}_{s=s_0}Z_f(s)\).  Positivity of the residue
 places no sign constraint on the finite part.  Indeed, for every real
 number \(r\),
 

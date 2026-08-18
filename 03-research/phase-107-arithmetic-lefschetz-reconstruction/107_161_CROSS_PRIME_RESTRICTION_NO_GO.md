@@ -2,7 +2,7 @@
 
 ## 1. Input fixed before the calculation
 
-Let \(X=\operatorname{Spec}\mathbb Z\), and let \(\mathcal S\) be the
+Let \(X=\mathrm{Spec}\,\mathbb Z\), and let \(\mathcal S\) be the
 sheaf used by Connes--Consani to define the geometric morphism from
 \(X\) to the arithmetic site.  Their definition gives
 
@@ -49,7 +49,7 @@ neither \(p\) nor \(q\), and put
 
 On the overlap \(U_p\cap U_q=V\), both one-prime sections restrict to
 zero.  Their only common generization is \(\eta\), whose stalk is zero
-by (1.1).  Distinct closed points of \(\operatorname{Spec}\mathbb Z\)
+by (1.1).  Distinct closed points of \(\mathrm{Spec}\,\mathbb Z\)
 are incomparable under specialization, so there is no further stalk
 transition.  Hence the complete restriction datum relating the two
 one-prime sectors is zero.  A nonzero relation between them would be

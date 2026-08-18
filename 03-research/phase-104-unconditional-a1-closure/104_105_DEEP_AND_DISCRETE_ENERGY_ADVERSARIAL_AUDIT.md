@@ -227,7 +227,7 @@ por \(Y^2\).
 La identidad de Stieltjes
 
 \[
- J(x)-\operatorname {Li}_2(x)
+ J(x)-\mathrm{Li}_2(x)
  ={\psi(x)-x\over\log x}
  +\int_2^x{\psi(t)-t\over t\log^2t}\,dt+{2\over\log2}  \tag{17}
 \]

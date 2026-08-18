@@ -43,7 +43,7 @@ Let the zeros of \(L_{n-1}^{(2)}\) split \([T_n,\infty)\) into lobes
 \]
 and write
 \[
-  \sigma_{n,j}=\operatorname{sgn}K_n(u)\quad(u\in J_{n,j}).
+  \sigma_{n,j}=\mathrm{sgn}\,K_n(u)\quad(u\in J_{n,j}).
 \]
 Then
 \[

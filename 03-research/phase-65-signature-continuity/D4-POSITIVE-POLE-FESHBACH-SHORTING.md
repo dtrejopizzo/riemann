@@ -43,7 +43,7 @@ $\mathsf K_P-(\text{pole block})$.
 \begin{redflag}[subtraction vs shorting — the canonical correction]
 The earlier M2 used pole \emph{subtraction}. By Stage 1, Prop.~$G_R$, subtracting a divergent positive
 rank-one block creates a spurious negative square; the Schur complement does not. \textbf{D4 supersedes
-M2: every pole removal is $\operatorname{Short}_{H_P}$, the second formula of Def.~\ref{def:short}, with
+M2: every pole removal is $\mathrm{Short}_{H_P}$, the second formula of Def.~\ref{def:short}, with
 the cross-term $\beta\alpha^{-1}\beta^*$, not just $-\alpha$.} The cross-term is the entire difference.
 \end{redflag}
 
@@ -73,15 +73,15 @@ The outer factors are unipotent (determinant $1$ for $\det_1$). Taking $\det_1$ 
 \det\alpha_P\cdot\det F_P$. For $\det_2$ the multiplicative law is \emph{not} anomaly-free: for
 Hilbert–Schmidt $A,B$,
 \[
-   \det\nolimits_2\big((I+A)(I+B)\big)=\det\nolimits_2(I+A)\,\det\nolimits_2(I+B)\,e^{-\operatorname{Tr}(AB)},
+   \det\nolimits_2\big((I+A)(I+B)\big)=\det\nolimits_2(I+A)\,\det\nolimits_2(I+B)\,e^{-\mathrm{Tr}(AB)},
 \]
 so writing $I+T_P=(I+A_{\mathrm{pole}})(I+B_{\mathrm{Sch}})$ for the block-triangular $\times$ diagonal
 $\times$ block-triangular factorization, the genuine anomaly is
 \[
-   \mathcal A_P^{\mathrm{pole}}(z)=-\sum\operatorname{Tr}(A_iB_j)\ \text{(the cross-traces of the three
+   \mathcal A_P^{\mathrm{pole}}(z)=-\sum\mathrm{Tr}(A_iB_j)\ \text{(the cross-traces of the three
    factors)},
 \]
-\emph{not} simply $\operatorname{Tr}(\beta\alpha^{-1}\beta^*)$. This is finite provided the Feshbach
+\emph{not} simply $\mathrm{Tr}(\beta\alpha^{-1}\beta^*)$. This is finite provided the Feshbach
 blocks lie in $\mathfrak S_2$ (Hilbert–Schmidt); that membership is the content of the D4 ledger entry
 (§5) and must be checked in the relevant Schatten class, not assumed. With $\mathcal A_P^{\mathrm{pole}}$
 so defined, $D_P=\Delta_PD_P^\circ$ with $\Delta_P=\det_2\alpha_P\cdot e^{\mathcal A_P^{\mathrm{pole}}}$.
@@ -101,7 +101,7 @@ object of D8 (its $V=0$ slice is $D_P^\circ$).
 \begin{theorem}[positive-pole shorting is index-monotone]\label{thm:index}
 For the positive pole ($\alpha_P(z)\succ0$ on the relevant set),
 \[
-   \operatorname{sq}_-\!\big(\mathsf K_P^\circ\big)=\operatorname{sq}_-\!\big(\mathsf K_P\big).
+   \mathrm{sq}_-\!\big(\mathsf K_P^\circ\big)=\mathrm{sq}_-\!\big(\mathsf K_P\big).
 \]
 In particular if $\mathsf K_P\succeq0$ (G2) then $\mathsf K_P^\circ\succeq0$, i.e. $\kappa(A_P^\circ)=0$.
 \end{theorem}
@@ -109,7 +109,7 @@ In particular if $\mathsf K_P\succeq0$ (G2) then $\mathsf K_P^\circ\succeq0$, i.
 $\begin{psmallmatrix}a&b^*\\ b&C\end{psmallmatrix}$ with $a$ the (positive) pole block; the Gram matrix
 of $\mathsf K_P^\circ$ is its Schur complement $C-ba^{-1}b^*$. By Haynsworth (Stage 1, Thm 1.1),
 $\nu_-(C-ba^{-1}b^*)=\nu_-\begin{psmallmatrix}a&b^*\\ b&C\end{psmallmatrix}$ since $a\succ0$. Taking the
-supremum over finite configurations gives $\operatorname{sq}_-(\mathsf K_P^\circ)=\operatorname{sq}_-(
+supremum over finite configurations gives $\mathrm{sq}_-(\mathsf K_P^\circ)=\mathrm{sq}_-(
 \mathsf K_P)$. $\square$
 
 \begin{corollary}[independence of normalization]\label{cor:norm}
@@ -150,10 +150,10 @@ the limit.
 
 > `OPEN (technical, Connes R1.D): the Feshbach factors $A_{pole},B_{Sch}$ of $I+T_P$ lie in $\mathfrak
 > S_2$ on compact $z$-sets away from the pole spectrum, so the genuine det₂ anomaly $\mathcal
-> A_P^{pole}=-\sum\operatorname{Tr}(A_iB_j)$ is finite and holomorphic.` — needed for
+> A_P^{pole}=-\sum\mathrm{Tr}(A_iB_j)$ is finite and holomorphic.` — needed for
 > Thm~\ref{thm:factor}; expected from the trace-class structure of the primitive block (D2 ledger) and
 > $\alpha_P\succ0$, but must be verified in the Schatten class $\mathfrak S_2$, not assumed in the naive
-> $\operatorname{Tr}(\beta\alpha^{-1}\beta^*)$ form (which was wrong). Does not use RH.
+> $\mathrm{Tr}(\beta\alpha^{-1}\beta^*)$ form (which was wrong). Does not use RH.
 
 ---
 
@@ -164,7 +164,7 @@ the limit.
 - The **determinant factorization** $D_P=\Delta_P D_P^\circ$ with the anomaly explicit
   (Thm~\ref{thm:factor}).
 - **Index-monotonicity of shorting** (Thm~\ref{thm:index}): positive-pole shorting preserves
-  $\operatorname{sq}_-$; finite von Mangoldt shorted kernels stay $\succeq0$.
+  $\mathrm{sq}_-$; finite von Mangoldt shorted kernels stay $\succeq0$.
 - Normalization-independence and the well-defined positive-pole chart (Cor.~\ref{cor:norm},
   Def.~\ref{def:chart}).
 

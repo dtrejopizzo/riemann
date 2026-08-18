@@ -16,7 +16,7 @@ positive plane: their matrix is
 
 \[
  C=\begin{pmatrix}0&1\\1&0\end{pmatrix},
- \qquad \operatorname{In}(C)=(1,1,0).                        \tag{1.2}
+ \qquad \mathrm{In}(C)=(1,1,0).                        \tag{1.2}
 \]
 
 Accordingly, on every compact support window row D has the classical Hodge
@@ -58,8 +58,8 @@ is invertible.
 > **Theorem 2.1 (constrained Haynsworth identity).**
 > The restriction of the hermitian form of `A` to `K` satisfies
 > \[
-> \operatorname{In}(A|_K)
->   =\operatorname{In}(A)-\operatorname{In}(G),              \tag{2.3}
+> \mathrm{In}(A|_K)
+>   =\mathrm{In}(A)-\mathrm{In}(G),              \tag{2.3}
 > \]
 > where inertia is the triple `(n_+,n_-,n_0)` and subtraction is
 > componentwise (the zero components are zero under the hypotheses).
@@ -91,8 +91,8 @@ For `r=2` this has the following exact consequence.
 
 > **Corollary 2.2 (hyperbolic two-jet Hodge certificate).** If
 > \[
-> \operatorname{In}(A)=(1,\dim H-1,0),
-> \qquad \operatorname{In}(G)=(1,1,0),                       \tag{2.7}
+> \mathrm{In}(A)=(1,\dim H-1,0),
+> \qquad \mathrm{In}(G)=(1,1,0),                       \tag{2.7}
 > \]
 > then
 > \[
@@ -141,8 +141,8 @@ Theorem 2.1 gives the exact finite-dimensional certificate
  \boxed{
  q_T|_{\ker M_T}<0
  \quad\Longleftarrow\quad
- \operatorname{In}(A_T)=(1,\infty,0),\quad
- \operatorname{In}(G_T)=(1,1,0).}                            \tag{3.4}
+ \mathrm{In}(A_T)=(1,\infty,0),\quad
+ \mathrm{In}(G_T)=(1,1,0).}                            \tag{3.4}
 \]
 
 Here `(1,infinity,0)` denotes one positive direction, no kernel and a
@@ -153,7 +153,7 @@ through a singular parameter is controlled by the Moore--Penrose version of
 (2.3): one must additionally verify
 
 \[
- M_T^*(\mathbb C^2)\subseteq\operatorname{Ran}A_T
+ M_T^*(\mathbb C^2)\subseteq\mathrm{Ran}\,A_T
  \quad\text{and}\quad
  \ker A_T\cap\ker M_T=0.                                    \tag{3.5}
 \]

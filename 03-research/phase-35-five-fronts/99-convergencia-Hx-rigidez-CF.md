@@ -46,7 +46,7 @@ La forma **semilocal** $QW_\lambda$ es la restricción a $L^2([\lambda^{-1},\lam
 CCM-ZST prueban (Prop. 3.3, Thm. 3.6, con la teoría de formas de Schmüdgen, GTM 265):
 
 - $QW_\lambda$ es semiacotada inferiormente y semicontinua inferior; define un operador autoadjunto $A_\lambda$ con **espectro discreto acotado inferiormente** (la compacidad viene del crecimiento $\partial_t\theta(t) \sim \tfrac12\log|t|$ del multiplicador arquimediano).
-- Sea $\mu_\lambda := \inf \operatorname{spec}(A_\lambda)$. Entonces $\mu_\lambda$ es **decreciente en $\lambda$** (ec. (3.27)).
+- Sea $\mu_\lambda := \inf \mathrm{spec}(A_\lambda)$. Entonces $\mu_\lambda$ es **decreciente en $\lambda$** (ec. (3.27)).
 - **Corolario 3.8 (CCM-ZST):** si $\lim_{\lambda\to\infty}\mu_\lambda = 0$, entonces RH.
 
 Recíprocamente, por el criterio de Weil (positividad de $QW$ sobre $C_c^\infty(\mathbb{R}^*_+)$ $\iff$ RH), se tiene RH $\Rightarrow \mu_\lambda \geq 0$ para todo $\lambda$, luego $\lim \mu_\lambda \geq 0$. Es decir:
@@ -55,9 +55,9 @@ $$\boxed{\;\lim_{\lambda\to\infty}\mu_\lambda \geq 0 \iff \text{RH}\;}$$
 
 ### 2.3. Truncación $E_N$ y la estructura matricial
 
-Sea $V_n = \kappa(U_n)$ la base de Fourier transportada a $[\lambda^{-1},\lambda]$, $E_N = \operatorname{span}\{V_n : |n| \leq N\}$ (los $2N+1$ autovectores del operador de escala $D_{\log}^{(\lambda)} = -iu\,\partial_u$ con condiciones periódicas, de autovalor mínimo). La matriz $\tau = QW_\lambda^N$ en esta base tiene la **estructura especial** (CCM-ZST, Lema 5.1):
+Sea $V_n = \kappa(U_n)$ la base de Fourier transportada a $[\lambda^{-1},\lambda]$, $E_N = \mathrm{span}\,\{V_n : |n| \leq N\}$ (los $2N+1$ autovectores del operador de escala $D_{\log}^{(\lambda)} = -iu\,\partial_u$ con condiciones periódicas, de autovalor mínimo). La matriz $\tau = QW_\lambda^N$ en esta base tiene la **estructura especial** (CCM-ZST, Lema 5.1):
 $$\tau_{ii} = a_i, \qquad \tau_{ij} = \frac{b_i - b_j}{i-j} \ (i \neq j), \qquad a_{-j} = a_j,\ b_{-j} = -b_j,$$
-equivalentemente (Lema 5.2): con $D = \operatorname{diag}(n)$ y la graduación $\gamma(V_j) = V_{-j}$,
+equivalentemente (Lema 5.2): con $D = \mathrm{diag}(n)$ y la graduación $\gamma(V_j) = V_{-j}$,
 $$[D, \tau] = |\beta\rangle\langle\eta| - |\eta\rangle\langle\beta|, \qquad \tau\gamma = \gamma\tau,$$
 es decir, **el conmutador con $D$ tiene rango $\leq 2$**. Esta es la clase de matrices a la que se aplica el teorema de CvS (§3 abajo). Nótese: es el análogo exacto, para el par (Loewner, diferenciación), de la caracterización de Toeplitz por $[S,T]$ de rango $\leq 2$ con $S$ el shift.
 
@@ -70,7 +70,7 @@ $$D_{\log}^{(\lambda,N)} := D_{\log}^{(\lambda)} - |D_{\log}^{(\lambda)}\xi\rang
 (i) $D_{\log}^{(\lambda,N)}$ es **autoadjunto** en $E_N' \oplus E_N^{\perp}$, donde en $E_N' = E_N/\mathbb{C}\xi$ el producto interno es el dado por la forma
 $$T := QW_\lambda^N - \epsilon_N \cdot \mathrm{id} \;\geq\; 0.$$
 (ii) Su determinante regularizado es $\det\nolimits_{\mathrm{reg}}(D_{\log}^{(\lambda,N)} - z) = -i\,\lambda^{-iz}\,\widehat{\xi}(z)$, con $\widehat{\xi}$ la transformada de Fourier de $\xi$ para la dualidad $\langle \mathbb{R}^*_+ | \mathbb{R}\rangle$.
-(iii) $\widehat{\xi}(z)$ es entera y **todos sus ceros son reales**, y coinciden con $\operatorname{spec}(D_{\log}^{(\lambda,N)})$.
+(iii) $\widehat{\xi}(z)$ es entera y **todos sus ceros son reales**, y coinciden con $\mathrm{spec}(D_{\log}^{(\lambda,N)})$.
 
 Subrayamos el mecanismo de autoadjunción: el producto interno es $T = QW^N_\lambda - \epsilon_N$, que es $\geq 0$ **por construcción** (shift por el autovalor mínimo), con radical exactamente $\mathbb{C}\xi$. El shift solo cambia la diagonal $a_i \mapsto a_i - \epsilon_N$, así que **preserva la estructura** del §2.3.
 
@@ -97,12 +97,12 @@ Evidencia de literatura adicional [Groskin, arXiv:2605.20224, solo abstract veri
 Dos caras del mismo objeto:
 
 **(CF-a) Problema de coeficientes de Carathéodory / extensión positiva.** Dados $c_0, \dots, c_N \in \mathbb{C}$, ¿existe una medida positiva $\mu$ en el círculo $S^1$ con momentos trigonométricos $\widehat{\mu}(k) = c_k$, $|k| \leq N$? Respuesta (Carathéodory–Toeplitz): sí $\iff$ la matriz de Toeplitz $T_N = (c_{i-j})_{0\le i,j\le N}$ es semidefinida positiva. Caso interior ($T_N > 0$): infinitas extensiones (parametrización de Schur/Nevanlinna–Pick). **Caso de borde** ($T_N \geq 0$ singular): la extensión es **única** y la medida está **forzada** a ser atómica,
-$$\mu = \sum_{j=1}^{r} \rho_j\,\delta_{e^{i\theta_j}}, \qquad r = \operatorname{rank} T_N \leq N,$$
+$$\mu = \sum_{j=1}^{r} \rho_j\,\delta_{e^{i\theta_j}}, \qquad r = \mathrm{rank} T_N \leq N,$$
 y todo vector $\xi \in \ker T_N$ tiene polinomio asociado $P_\xi(z) = \sum \xi_j z^j$ con **todos sus ceros en el círculo unidad** (los átomos $e^{i\theta_j}$ están entre ellos). Esta unicidad-en-el-borde es la **rigidez CF**.
 
 En forma desplegada, el corolario que CvS generalizan es:
 
-> **Corolario CF (forma usada).** Sea $T_N = (c_{i-j})_{0 \leq i,j \leq N}$ hermitiana de Toeplitz, $T_N \geq 0$, $\operatorname{rank}(T_N) = N$ (corrango 1), y sea $0 \neq \xi = (\xi_0, \dots, \xi_N) \in \ker T_N$. Entonces el polinomio $P_\xi(z) = \sum_{j=0}^N \xi_j z^j$ tiene sus $N$ ceros sobre $S^1 = \{|z| = 1\}$, y la (única) medida representante $\mu \geq 0$ de los momentos $c_k$ está soportada en esos ceros.
+> **Corolario CF (forma usada).** Sea $T_N = (c_{i-j})_{0 \leq i,j \leq N}$ hermitiana de Toeplitz, $T_N \geq 0$, $\mathrm{rank}(T_N) = N$ (corrango 1), y sea $0 \neq \xi = (\xi_0, \dots, \xi_N) \in \ker T_N$. Entonces el polinomio $P_\xi(z) = \sum_{j=0}^N \xi_j z^j$ tiene sus $N$ ceros sobre $S^1 = \{|z| = 1\}$, y la (única) medida representante $\mu \geq 0$ de los momentos $c_k$ está soportada en esos ceros.
 
 La intuición de la prueba (en la versión C*-algebraica de CvS): $T_N \geq 0$ singular significa que la forma sesquilineal "toca el cero" en $\xi$; la estructura de Toeplitz ($[S, T]$ de rango $\leq 2$, $S$ = shift) convierte el vector nulo en un vector propio aproximado del shift unitario en la representación GNS, y los autovalores de un unitario viven en $S^1$.
 
@@ -325,7 +325,7 @@ Clasificamos por estatus frente al filtro de circularidad.
 
 **E3 (estabilidad CF bajo perturbación estructurada).** **Demostrado** (Lema 6.1). Cerrado en positivo.
 
-**E4 (tasa de convergencia espectral en función de la cola del producto de Euler).** **CIRCULAR — descartado con precisión.** Cualquier cota de la forma $\mathrm{dist}\bigl(\operatorname{spec}(H_x)\cap K,\ \{\gamma_n\}\cap K\bigr) \leq \omega(x)$ con $\omega(x) \to 0$ uniforme en compactos implicaría (vía el argumento de Hurwitz cuantitativo) una versión efectiva de C2, luego RH efectiva. Y el Lema 5.1 muestra que la "cola del producto de Euler en $\mathrm{Re}(s) = \tfrac12$" no es pequeña: diverge como $\sqrt{x}$ en norma de formas. Toda tasa debe nacer de la cancelación entre bloques divergentes = positividad de Weil = MW-1. Tal cual lo anticipaba la consigna: la cola del Euler en la línea **es** MW-2.
+**E4 (tasa de convergencia espectral en función de la cola del producto de Euler).** **CIRCULAR — descartado con precisión.** Cualquier cota de la forma $\mathrm{dist}\bigl(\mathrm{spec}(H_x)\cap K,\ \{\gamma_n\}\cap K\bigr) \leq \omega(x)$ con $\omega(x) \to 0$ uniforme en compactos implicaría (vía el argumento de Hurwitz cuantitativo) una versión efectiva de C2, luego RH efectiva. Y el Lema 5.1 muestra que la "cola del producto de Euler en $\mathrm{Re}(s) = \tfrac12$" no es pequeña: diverge como $\sqrt{x}$ en norma de formas. Toda tasa debe nacer de la cancelación entre bloques divergentes = positividad de Weil = MW-1. Tal cual lo anticipaba la consigna: la cola del Euler en la línea **es** MW-2.
 
 **E5 (finitud y estructura del paquete negativo de $QW^N_\lambda$).** Pregunta: ¿el número $\kappa_\lambda(N)$ de autovalores negativos de $QW^N_\lambda$ está acotado uniformemente en $N$ (i.e., $\kappa_\lambda := \sup_N \kappa_\lambda(N) < \infty$ para cada $\lambda$), y cómo crece $\kappa_\lambda$ con $\lambda$? Conexión directa con el programa: es el análogo semilocal del índice negativo $\kappa(Q) = \mathrm{neg.ind}(H_C)$ (P35) y del Teorema 8.1 del Doc 96 (índice negativo localizado en $\mathcal{K}_{\mathrm{off}}$); la evidencia numérica de literatura ($\kappa$ creciendo con $N$ a $x$ fijo: 3, 5, 8, 11 — [Groskin, NO VERIFICADO]) sugiere que la versión truncada **no** estabiliza trivialmente, lo que haría de $\kappa_\lambda(N)$ un objeto con contenido. Bajo RH, $\mu_\lambda \geq 0$ fuerza $\kappa_\lambda(N) = 0$ asintóticamente en el límite de la forma — luego cuidado: una cota inferior creciente e incondicional de $\kappa_\lambda(N)$ que sobreviva $N \to \infty$ **refutaría** RH, y una cota superior $\to 0$ la probaría; la versión "estructura fina" (paridad, localización de los autovectores negativos) es en cambio estudiable sin tocar ese filo. **Parcialmente no circular; bien planteado; no iniciado.**
 

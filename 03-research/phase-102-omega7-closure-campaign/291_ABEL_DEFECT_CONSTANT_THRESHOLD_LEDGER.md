@@ -86,7 +86,7 @@ measure exists, the radial Carathéodory identity gives
 \[
   \int P_n\,d\nu_g
   =
-  \operatorname{Re}H_g(1-1/n)
+  \mathrm{Re}\,H_g(1-1/n)
   =
   \log n+O(1).
 \]

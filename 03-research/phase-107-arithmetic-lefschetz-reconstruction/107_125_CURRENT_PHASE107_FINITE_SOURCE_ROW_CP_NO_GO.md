@@ -34,7 +34,7 @@ of `107_03`--`107_04` supplies:
    \]
 4. the finite determinant-line order
    \[
-   \operatorname{ord}_{\rm fin}=\log p
+   \mathrm{ord}_{\rm fin}=\log p
    \]
    on same-prime tower transitions.
 

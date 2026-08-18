@@ -57,7 +57,7 @@ $$C_\infty'(\gamma_n) = -\frac{d}{dt}\bigg|_{t=\gamma_n}\left[w(t) - \Psi(t)\rig
 
 Bajo RH (todos los ceros $\rho = 1/2+i\gamma$ en la recta crítica): la fórmula explícita diferenciada en $s = \rho_n = 1/2+i\gamma_n$ da:
 
-$$\operatorname{Res}_{s=\rho_n}\!\left[\frac{d}{ds}\left(-\frac{\zeta'}{\zeta}(s)\right)\right] = 1, \quad \text{si }\rho_n\text{ es cero simple de }\zeta.$$
+$$\mathrm{Res}_{s=\rho_n}\!\left[\frac{d}{ds}\left(-\frac{\zeta'}{\zeta}(s)\right)\right] = 1, \quad \text{si }\rho_n\text{ es cero simple de }\zeta.$$
 
 Y el lado izquierdo (via la fórmula de von Mangoldt diferenciada) es:
 

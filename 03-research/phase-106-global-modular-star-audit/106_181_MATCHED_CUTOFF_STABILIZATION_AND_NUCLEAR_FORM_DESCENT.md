@@ -246,7 +246,7 @@ The following parts are now fixed:
 What is not proved by Theorem 6.1 is
 
 \[
- \operatorname {Re}\mathfrak H([f],[f])\ge0.
+ \mathrm{Re}\,\mathfrak H([f],[f])\ge0.
 \tag{17}
 \]
 

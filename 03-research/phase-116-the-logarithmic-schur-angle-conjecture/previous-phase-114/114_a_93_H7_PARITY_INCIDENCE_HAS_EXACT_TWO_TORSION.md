@@ -50,7 +50,7 @@ The nonzero Smith factors of `A` are
 Consequently
 
 \[
- \operatorname{coker}A\cong\mathbb Z^2\oplus\mathbb Z/2.            \tag{1.3}
+ \mathrm{coker}\,A\cong\mathbb Z^2\oplus\mathbb Z/2.            \tag{1.3}
 \]
 
 ### Proof

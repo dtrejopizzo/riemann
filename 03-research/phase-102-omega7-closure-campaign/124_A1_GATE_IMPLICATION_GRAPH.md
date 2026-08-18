@@ -612,7 +612,7 @@ point.  A Schur or Carathéodory proof must construct boundary support on
 zero divisor assumes the support statement.
 
 The exterior-point obstruction is quantitative: if \(|w|>1\), then
-\(\operatorname{Re}(w^n)\) is positive with geometric size along an infinite
+\(\mathrm{Re}(w^n)\) is positive with geometric size along an infinite
 subsequence.  The paired Li contribution is therefore negative with
 geometric size along that subsequence.  This supplies the common off-line
 discriminator for all gates, but it does not prove that zeta has no exterior

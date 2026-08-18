@@ -239,7 +239,7 @@ Keeping the colligation output `y_n=Hx_n+Ru_n`, (4.2) becomes
  \begin{aligned}
  \|y_n\|^2-\|u_n\|^2
  ={}&\|x_n\|^2-\|x_{n+1}\|^2\\
- &+2\operatorname {Re}\langle x_{n+1},r_n\rangle
+ &+2\mathrm{Re}\,\langle x_{n+1},r_n\rangle
    -\|r_n\|^2.                                            \tag{5.2}
  \end{aligned}
 \]
@@ -249,7 +249,7 @@ energy it leaves the exact forcing term
 
 \[
  \boxed{
- \sum_n\left(2\operatorname {Re}\langle x_{n+1},r_n\rangle
+ \sum_n\left(2\mathrm{Re}\,\langle x_{n+1},r_n\rangle
               -\|r_n\|^2\right).}                         \tag{5.3}
 \]
 

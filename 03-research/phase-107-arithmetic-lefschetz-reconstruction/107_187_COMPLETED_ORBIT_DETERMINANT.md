@@ -22,7 +22,7 @@ For \(a\notin\{0,-1,-2,\ldots\}\), the spectral zeta function of the
 number operator is the Hurwitz zeta function:
 
 \[
- \zeta_N(z;a)=\operatorname{Tr}(N+a)^{-z}=\zeta_H(z,a).
+ \zeta_N(z;a)=\mathrm{Tr}(N+a)^{-z}=\zeta_H(z,a).
 \]
 
 Its zeta-regularized determinant is

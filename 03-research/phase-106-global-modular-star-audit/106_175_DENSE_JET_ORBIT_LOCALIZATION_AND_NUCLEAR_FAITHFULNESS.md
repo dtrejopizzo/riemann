@@ -39,7 +39,7 @@ Put
 
 \[
  G=\log\mathbb Q_+^\times
-   =\operatorname {span}_{\mathbb Z}\{\log p:p\text{ prime}\}.
+   =\mathrm{span}_{\mathbb Z}\{\log p:p\text{ prime}\}.
                                                                     \tag{2}
 \]
 
@@ -107,7 +107,7 @@ their scaling-generator descendants.
 
 Let \(V\subset\mathcal S(\mathbb R)\) be any linear subspace, and let
 closures be taken in the Schwartz topology and in the transported
-topology of \(\operatorname {Ran}\mathcal O_\infty\), respectively.
+topology of \(\mathrm{Ran}\,\mathcal O_\infty\), respectively.
 
 ### Theorem 4.1 — Nuclear quotient faithfulness
 
@@ -123,7 +123,7 @@ Therefore \(\mathcal O_\infty\) induces an injective topological map
  \boxed{
  \mathcal S(\mathbb R)/\overline V
  \longrightarrow
- \operatorname {Ran}\mathcal O_\infty/
+ \mathrm{Ran}\,\mathcal O_\infty/
  \overline{\mathcal O_\infty(V)}.}                          \tag{10}
 \]
 
@@ -158,7 +158,7 @@ with the usual rapid seminorms in \(\chi\) and the seminorms (4) in
 
 The map (11) is a topological embedding of the complete strong scalar CCM
 target.  If \(\mathcal V\) is the closed range of the scalar diagonal
-restriction map \(\operatorname {Tr}\circ\rho\), then
+restriction map \(\mathrm{Tr}\,\circ\rho\), then
 
 \[
  \boxed{
@@ -214,8 +214,8 @@ quadratic forms.  The outstanding identity is
  \boxed{
  \mathfrak h_{\rm Ros}(u,v)
  =\left\langle
-   \operatorname {Loc}^{\rm mid}u,
-   \operatorname {Loc}^{\rm mid}v
+   \mathrm{Loc}^{\rm mid}u,
+   \mathrm{Loc}^{\rm mid}v
   \right\rangle_{\rm Tate+\Gamma+polar}.}                   \tag{14}
 \]
 

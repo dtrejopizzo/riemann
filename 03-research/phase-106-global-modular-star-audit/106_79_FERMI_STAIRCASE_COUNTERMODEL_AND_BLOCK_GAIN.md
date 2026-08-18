@@ -109,7 +109,7 @@ strictly positive on the centered space. Nevertheless
 \end{array}                                       \tag{10}
 \]
 
-Thus \(\mathcal R=\operatorname{span}\{e_R\}\) is an exact completed
+Thus \(\mathcal R=\mathrm{span}\,\{e_R\}\) is an exact completed
 threshold radical, while its orthogonal centered complement contains the
 bound state \(e_-\) at \(1/4\). For every finite head,
 

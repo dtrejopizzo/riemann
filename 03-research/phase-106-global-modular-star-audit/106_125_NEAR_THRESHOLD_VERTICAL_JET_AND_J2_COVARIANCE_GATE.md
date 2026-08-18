@@ -29,8 +29,8 @@ a physical-surplus theorem.
 1.  The quadratic expansion is exact:
 
     \[
-    4m_s\{(\operatorname {Re}F(s))^2
-          -(\operatorname {Im}F(s))^2\}
+    4m_s\{(\mathrm{Re}\,F(s))^2
+          -(\mathrm{Im}\,F(s))^2\}
     =-4m_sb^2F'(\gamma)^2+O(b^4).
     \tag{3}
     \]
@@ -137,9 +137,9 @@ Taylor expansion and reality of the real-axis derivatives give
 
 \[
 \begin{aligned}
- \operatorname {Re}F(\gamma+ib)
+ \mathrm{Re}\,F(\gamma+ib)
   &=-\frac{b^2}{2}F''(\gamma)+O(b^4),\\
- \operatorname {Im}F(\gamma+ib)
+ \mathrm{Im}\,F(\gamma+ib)
   &=bF'(\gamma)-\frac{b^3}{6}F'''(\gamma)+O(b^5).
 \end{aligned}
 \tag{9}
@@ -148,8 +148,8 @@ Taylor expansion and reality of the real-axis derivatives give
 Hence
 
 \[
- (\operatorname {Re}F(\gamma+ib))^2
- -(\operatorname {Im}F(\gamma+ib))^2
+ (\mathrm{Re}\,F(\gamma+ib))^2
+ -(\mathrm{Im}\,F(\gamma+ib))^2
  =-b^2F'(\gamma)^2+O(b^4).
  \tag{10}
 \]
@@ -229,7 +229,7 @@ radical in its source space.  Put
  \overline C=P_{(C\mathcal R)^\perp}C,
  \qquad
  \|[f]\|_C^2=\|\overline Cf\|^2
- =\operatorname {dist}(Cf,C\mathcal R)^2.
+ =\mathrm{dist}(Cf,C\mathcal R)^2.
  \tag{16}
 \]
 
@@ -396,7 +396,7 @@ There is also a complete-system saturation test.  Let
 For its rank-one projection,
 
 \[
- \operatorname {Tr}P_{r_1}
+ \mathrm{Tr}\,P_{r_1}
  (L^2-\tfrac12L)=0.
  \tag{30}
 \]

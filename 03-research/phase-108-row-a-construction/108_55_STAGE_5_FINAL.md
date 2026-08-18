@@ -52,10 +52,10 @@ $s$-indexing:
 
 1. $\Phi$ is holomorphic — finite, not singular — at *every* zero of $\xi$ (Theorem 1.2 of
    108_53), because the individual poles of $-\zeta'/\zeta(s)$ and $-\zeta'/\zeta(1-s)$ at a
-   zero of $\xi$ cancel exactly. $\operatorname{rad}\Lambda^0$'s generators (zeros of $\Phi$)
+   zero of $\xi$ cancel exactly. $\mathrm{rad}\,\Lambda^0$'s generators (zeros of $\Phi$)
    are therefore chosen by an equation with **zero sensitivity** to the arithmetic data
-   (zeros of $\xi$) that generates $\operatorname{rad}I_{\mathrm{partial}}$.
-2. The mirror involution $s\mapsto1-s$ that structures $\operatorname{rad}
+   (zeros of $\xi$) that generates $\mathrm{rad}\,I_{\mathrm{partial}}$.
+2. The mirror involution $s\mapsto1-s$ that structures $\mathrm{rad}
    I_{\mathrm{partial}}$'s off-line planes and its $\{0,1\}$ polar block holds for $\Phi$
    *only* at $s\in\tfrac12+\mathbb Z$ (Theorem 2.1, exact closed-form classification) — and
    $\Phi(\tfrac12)\ne0$, so it holds nowhere $\Phi$ actually vanishes. $\Phi$'s zero set is
@@ -66,15 +66,15 @@ $s$-indexing:
    $(0,1)$ — three manifestly negative terms, after collapsing the raw derivative with the
    once-differentiated duplication formula — so $\Phi$ is **strictly decreasing** on the
    strip and has **exactly one** zero there, simple, at
-   $s^\ast=0.30169238816042209152\ldots$ Hence $\operatorname{rad}\Lambda^0$ restricted to
+   $s^\ast=0.30169238816042209152\ldots$ Hence $\mathrm{rad}\,\Lambda^0$ restricted to
    the open strip is **one-dimensional**, spanned by $\delta_{s^\ast}$ alone. There is
    therefore no second zero anywhere in $(0,1)$ available to pair with $s^\ast$ under
-   $s\mapsto1-s$: the mirror-pair generator shape that $\operatorname{rad}
+   $s\mapsto1-s$: the mirror-pair generator shape that $\mathrm{rad}
    I_{\mathrm{partial}}$'s off-line planes require is not merely absent at $1-s^\ast$, it is
    **impossible**.
 3. $\Phi$ has poles, not candid finite values, exactly at $s=0,1$ (Theorem 3.1), with simple
    poles of residue exactly $+1$ at **both** — the two points
-   $\operatorname{rad}I_{\mathrm{partial}}$ treats as its nondegenerate, non-radical
+   $\mathrm{rad}\,I_{\mathrm{partial}}$ treats as its nondegenerate, non-radical
    generators.
 
 ## 2. Why this is a complete closure, not an unresolved question
@@ -144,7 +144,7 @@ where Stage 0's radical needs it finite.
 ## 5. Nothing here bears on $\mathrm{RH}$
 
 Every theorem in 108_53/108_54 either (a) is an algebraic identity in $\Phi$ and its closed
-form, (b) uses only the unconditional zero-free strip $0<\operatorname{Re}(\rho)<1$ for zeros
+form, (b) uses only the unconditional zero-free strip $0<\mathrm{Re}(\rho)<1$ for zeros
 of $\xi$ (Hadamard–de la Vallée Poussin, far short of $\mathrm{RH}$), or (c) is an elementary
 calculus statement about the toy integral $P(T;a)$. No statement about the location of zeros
 of $\xi$ *within* the critical strip is made or needed anywhere in this closure.

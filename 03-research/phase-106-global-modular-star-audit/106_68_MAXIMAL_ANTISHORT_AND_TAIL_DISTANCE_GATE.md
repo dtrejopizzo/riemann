@@ -134,7 +134,7 @@ the Hilbert-space distance formula
 
 \[
 \inf_{r\in\mathcal R}\|V_Sq+V_Sr\|^2
-=\operatorname {dist}
+=\mathrm{dist}
  (-V_Sq,\overline{V_S\mathcal R})^2.               \tag{14}
 \]
 
@@ -175,10 +175,10 @@ where
 Indeed, (17) is completion of the square in
 
 \[
-A_S(q+r)=A_S(q)+2\operatorname {Re}\ell_{S,q}(r)-C_S(r,r).          \tag{19}
+A_S(q+r)=A_S(q)+2\mathrm{Re}\,\ell_{S,q}(r)-C_S(r,r).          \tag{19}
 \]
 
-For \(\mathcal R_M=\operatorname {span}\{r_1,\ldots,r_M\}\), let
+For \(\mathcal R_M=\mathrm{span}\,\{r_1,\ldots,r_M\}\), let
 
 \[
 G_{M,ij}=-A_S(r_i,r_j),qquad
@@ -306,7 +306,7 @@ is nonconstant and retains the full theta ground state.  Therefore
 \(A_\Gamma\) is not multiplication by
 
 \[
-\Psi(t)=\operatorname {Re}\psi(1/4+it/2)-\log\pi.  \tag{22j}
+\Psi(t)=\mathrm{Re}\,\psi(1/4+it/2)-\log\pi.  \tag{22j}
 \]
 
 The discrepancy can be certified without numerics.  For large \(j\), the
@@ -342,9 +342,9 @@ In finite dimension, if \(-T_S|_{\mathcal R}\) is invertible, the
 Haynsworth formula gives
 
 \[
-\operatorname {Inertia}(A_S)
-=\operatorname {Inertia}(-T_S|_{\mathcal R})
- +\operatorname {Inertia}(B_S).                    \tag{23}
+\mathrm{Inertia}(A_S)
+=\mathrm{Inertia}(-T_S|_{\mathcal R})
+ +\mathrm{Inertia}(B_S).                    \tag{23}
 \]
 
 The first term is negative, not positive.  Hence (23) supplies no sign for

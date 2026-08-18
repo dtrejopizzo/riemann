@@ -34,7 +34,7 @@ Consequently the connection is flat.  More explicitly,
 \[
  \boxed{
  \partial_\beta\partial_\alpha\sigma
- =-2\operatorname {Re}
+ =-2\mathrm{Re}
  \left\langle
  A^{-1/2}U_\beta^*r_\beta,
  A^{-1/2}U_\alpha^*r_\alpha
@@ -250,7 +250,7 @@ Differentiate (12).  The two terms containing
 \begin{aligned}
  \partial_\alpha\sigma
  &={\|v_\alpha\|^2}
- -2\operatorname {Re}\langle U_\alpha a,v_\alpha\rangle
+ -2\mathrm{Re}\,\langle U_\alpha a,v_\alpha\rangle
  +\|U_\alpha a\|^2\\
  &=\|v_\alpha-U_\alpha a\|^2
  =\|r_\alpha\|^2,
@@ -263,9 +263,9 @@ which is (15).  Now (14) gives
 \[
 \begin{aligned}
  \partial_\beta\partial_\alpha\sigma
- &=2\operatorname {Re}
+ &=2\mathrm{Re}
    \langle\partial_\beta r_\alpha,r_\alpha\rangle\\
- &=-2\operatorname {Re}
+ &=-2\mathrm{Re}
    \langle U_\alpha A^{-1}U_\beta^*r_\beta,r_\alpha\rangle,
 \end{aligned}
  \tag{19}
@@ -280,7 +280,7 @@ result is
 \[
 \begin{aligned}
  D^2\sigma[s,s]
- &=-2\operatorname {Re}
+ &=-2\mathrm{Re}
  \left\langle
  \sum_\beta s_\beta A^{-1/2}U_\beta^*r_\beta,
  \sum_\alpha s_\alpha A^{-1/2}U_\alpha^*r_\alpha
@@ -509,7 +509,7 @@ off-physical block and leaves
 
 \[
  J+\mathcal L^*Y+Y^*\mathcal L
- =\operatorname {diag}(PJP,I).
+ =\mathrm{diag}(PJP,I).
  \tag{35}
 \]
 

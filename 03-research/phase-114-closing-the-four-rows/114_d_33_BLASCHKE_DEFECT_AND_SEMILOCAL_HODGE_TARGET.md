@@ -83,7 +83,7 @@ gives
 
 \[
  \frac1i\frac d{d\tau}\log u_\infty(\tau)
- =\log\pi-\operatorname{Re}\psi(a+i\tau/2)
+ =\log\pi-\mathrm{Re}\,\psi(a+i\tau/2)
  =m_\infty(\tau).                                    \tag{3.2}
 \]
 
@@ -151,7 +151,7 @@ Let `Q>1`, take
 
 \[
  P_Q=\{p:p<Q\},\qquad
- \operatorname{supp}F\subset[-\tfrac12\log Q,
+ \mathrm{supp}\,F\subset[-\tfrac12\log Q,
                                 \tfrac12\log Q].       \tag{5.1}
 \]
 

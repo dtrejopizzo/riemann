@@ -16,13 +16,13 @@ the exact calculation in Connes--Consani, *Geometry of the Scaling
 Site*, Lemma 6.19, gives
 
 \[
- d_{p,n}:=\operatorname{tdim}X_{p,n}(\alpha)
+ d_{p,n}:=\mathrm{tdim}\,X_{p,n}(\alpha)
  =\alpha p^n-p+1,
  \tag{1.1}
 \]
 
 \[
- d_{q,m}:=\operatorname{tdim}X_{q,m}(\beta)
+ d_{q,m}:=\mathrm{tdim}\,X_{q,m}(\beta)
  =\beta q^m-q+1.
  \tag{1.2}
 \]
@@ -37,7 +37,7 @@ interval, so these are separable metric spaces.
 For sufficiently large \(n,m\),
 
 \[
- \operatorname{tdim}
+ \mathrm{tdim}
  \bigl(X_{p,n}(\alpha)\times X_{q,m}(\beta)\bigr)
  =d_{p,n}+d_{q,m}.
  \tag{2.1}
@@ -49,8 +49,8 @@ The product theorem for Lebesgue covering dimension on separable metric
 spaces gives the upper bound
 
 \[
- \operatorname{tdim}(X\times Y)
- \leq\operatorname{tdim}X+\operatorname{tdim}Y.
+ \mathrm{tdim}(X\times Y)
+ \leq\mathrm{tdim}\,X+\mathrm{tdim}\,Y.
 \]
 
 For the reverse inequality, the proof of Connes--Consani Lemma 6.19
@@ -72,7 +72,7 @@ The Cartesian product has zero normalized two-ruling dimension:
 \[
  \lim_{n,m\to\infty}
  p^{-n}q^{-m}
- \operatorname{tdim}
+ \mathrm{tdim}
  \bigl(X_{p,n}(\alpha)\times X_{q,m}(\beta)\bigr)=0
  \tag{3.1}
 \]

@@ -97,7 +97,7 @@ and it is positive by Proposition~\ref{prop:binet}. No new positivity is needed;
 > defined here. Such a determinant is holomorphic and nonzero on
 > \(\mathbb C\setminus\mathbb R\), while every factor
 > \(1-p^{-1/2-iz}\) has a prime-dependent divisor on
-> \(\operatorname{Im}z=1/2\). The local Tate identity belongs to a
+> \(\mathrm{Im}\,z=1/2\). The local Tate identity belongs to a
 > scattering/virtual determinant. Sections 3–4 must therefore be read as a
 > proposed target conditional on a new global non-factorized determinant,
 > not as a secured bridge. See Phase 106, document 106.00.

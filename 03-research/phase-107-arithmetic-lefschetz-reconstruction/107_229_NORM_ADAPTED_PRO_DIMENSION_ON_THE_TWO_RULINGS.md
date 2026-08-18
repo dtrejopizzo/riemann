@@ -166,7 +166,7 @@ stronger exact control. For \(\alpha\in H_p\), \(\alpha>0\), and all
 sufficiently large \(n\),
 
 \[
- \operatorname{tdim}H^0(\alpha\{1\})^{p^n}
+ \mathrm{tdim}\,H^0(\alpha\{1\})^{p^n}
  =\alpha p^n-p+1.
  \tag{5.1}
 \]
@@ -182,7 +182,7 @@ Thus the discrepancy is exactly
 
 \[
  \#N_p(\alpha,n)
- -\operatorname{tdim}H^0(\alpha\{1\})^{p^n}=p,
+ -\mathrm{tdim}\,H^0(\alpha\{1\})^{p^n}=p,
  \tag{5.3}
 \]
 
@@ -200,7 +200,7 @@ the continuous dimension in the limit,
 
 \[
  \lim_{n\to\infty}p^{-n}\#N_p(\alpha,n)
- =\operatorname{cdim}H^0(\alpha\{1\})=\alpha.
+ =\mathrm{cdim}\,H^0(\alpha\{1\})=\alpha.
  \tag{5.5}
 \]
 
@@ -227,7 +227,7 @@ normalization.
 
 The number \(AB\) is a slope-window density. This note does **not**
 identify it with
-\(\operatorname{tdim}H^0(D)^{p^R}\), because that requires the
+\(\mathrm{tdim}\,H^0(D)^{p^R}\), because that requires the
 piecewise-affine divisor inequalities, singularity positions, and
 topology of the actual section module. It also does not construct
 \(H^1\), RR, an intersection product, or the global square.

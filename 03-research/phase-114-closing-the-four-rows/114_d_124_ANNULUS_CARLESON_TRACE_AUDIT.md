@@ -148,7 +148,7 @@ The Gamma form has multiplier
 
 \[
  \ell_\infty(\tau)
- =\operatorname{Re}\psi(1/4+i\tau/2)-\psi(1/4).        \tag{4.1}
+ =\mathrm{Re}\,\psi(1/4+i\tau/2)-\psi(1/4).        \tag{4.1}
 \]
 
 At high frequency,
@@ -200,7 +200,7 @@ primitive source.
 The contact contribution of the dyadic block is
 
 \[
- 2\operatorname{Re}\sum_nw_n c_{R_T,L_T}(\delta_n).    \tag{6.1}
+ 2\mathrm{Re}\,\sum_nw_n c_{R_T,L_T}(\delta_n).    \tag{6.1}
 \]
 
 Young's inequality can bound (6.1) using the trace norm (2.4), but it spends

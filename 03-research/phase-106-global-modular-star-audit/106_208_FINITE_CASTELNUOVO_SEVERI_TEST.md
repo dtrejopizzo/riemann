@@ -91,7 +91,7 @@ Define
 
 \[
  I_{M,n}(\Gamma_n,\Gamma_n)
- :=\frac1M\operatorname{Tr}
+ :=\frac1M\mathrm{Tr}
  \left((U_n^{(M)})^*U_n^{(M)}\right).
  \tag{8}
 \]
@@ -119,7 +119,7 @@ particular, (8) is independent of the auxiliary level \(M\).
 Equation (7) gives
 
 \[
- \frac1M\operatorname{Tr}(nI_M)=n.
+ \frac1M\mathrm{Tr}(nI_M)=n.
 \]
 
 No limit or spectral datum is used. \(\square\)
@@ -197,7 +197,7 @@ Thus the negative sign is a consequence of finite fiber counting after
 removing the two polar degrees; it is not postulated. \(\square\)
 
 The intersection matrix on
-\(\operatorname{span}\{F_{\mathrm v},F_{\mathrm h},\Gamma_n\}\) is
+\(\mathrm{span}\,\{F_{\mathrm v},F_{\mathrm h},\Gamma_n\}\) is
 
 \[
  \begin{pmatrix}
@@ -255,7 +255,7 @@ operator level it sends \(U_n^{(M)}\) to \((U_n^{(M)})^*\).  Therefore
 \[
  (\Gamma_n^t\Gamma_n)_M=nI_M,
  \qquad
- \frac1M\operatorname{Tr}(\Gamma_n^t\Gamma_n)=n>0.
+ \frac1M\mathrm{Tr}(\Gamma_n^t\Gamma_n)=n>0.
  \tag{20}
 \]
 

@@ -204,7 +204,7 @@ Como \(W_n\) es par,
 
 \[
 \begin{aligned}
- \operatorname{TV}_{\mathbb R}(W_n)
+ \mathrm{TV}_{\mathbb R}(W_n)
  &=2\int_0^\pi 2n|\sin(n\theta)|\,d\theta\\
  &=8n.                                                       \tag{18}
 \end{aligned}
@@ -367,7 +367,7 @@ El archivo `tools/full_mangoldt_phase_homotopy_gate_check.py` usa solamente
 `Fraction` y racionales gaussianos para comprobar:
 
 1. la cota racional de (15);
-2. el conteo exacto que da \(\operatorname{TV}(W_n)=8n\);
+2. el conteo exacto que da \(\mathrm{TV}(W_n)=8n\);
 3. la identidad de cruce (21) para el cuarteto (25);
 4. la positividad exacta de (27) sobre una malla racional;
 5. el residuo exponencial (30).

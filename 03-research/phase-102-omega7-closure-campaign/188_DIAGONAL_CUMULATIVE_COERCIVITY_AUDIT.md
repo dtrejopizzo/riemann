@@ -114,7 +114,7 @@ Indeed, the lower bound follows from
 \]
 Equality is obtained, up to the usual null-set convention, by choosing
 \[
-  G(u)=-R(u)\,\operatorname{sgn}\mathcal H_n(u).
+  G(u)=-R(u)\,\mathrm{sgn}\,\mathcal H_n(u).
 \tag{11}
 \]
 
@@ -267,7 +267,7 @@ The following proof pattern is invalid:
 4. claim a coercive lower bound better than (13).
 
 Step 4 is impossible by the symmetric-envelope lemma.  The extremal
-two-sided function \(G=-R\,\operatorname{sgn}\mathcal H_n\) saturates the
+two-sided function \(G=-R\,\mathrm{sgn}\,\mathcal H_n\) saturates the
 absolute-value loss.
 
 Therefore the diagonal cumulative route remains viable only in one of two

@@ -138,13 +138,13 @@ For a scalar eigenvector `Av=lambda v`, positivity gives
 
 \[
  0=\langle v,(A^*H+HA)v\rangle
- =2\operatorname{Re}(\lambda)\langle v,Hv\rangle.         \tag{3.2}
+ =2\mathrm{Re}(\lambda)\langle v,Hv\rangle.         \tag{3.2}
 \]
 
 Hence
 
 \[
- \operatorname{Re}\lambda=0.                             \tag{3.3}
+ \mathrm{Re}\,\lambda=0.                             \tag{3.3}
 \]
 
 On the free block `A=diag(a+i gamma,-a+i gamma)`, (3.1) forces the
@@ -198,7 +198,7 @@ Let `I_0` be the involutive convolution ideal of primitive tests and put
 
 \[
  \Phi(f\star g^\vee)
- :=\operatorname{Tr}_V\rho_-^0(f\star g^\vee)
+ :=\mathrm{Tr}_V\rho_-^0(f\star g^\vee)
  =-B_{\rm nuc}(f,g).                                      \tag{5.1}
 \]
 
@@ -244,7 +244,7 @@ only carries its scalar nuclear action to the Poisson quotient; it does not
 construct a strong monoidal metric functor
 
 \[
- \operatorname{Coh}_{\rm per}(A)\longrightarrow\operatorname{Hilb}(V).
+ \mathrm{Coh}_{\rm per}(A)\longrightarrow\mathrm{Hilb}(V).
                                                                     \tag{6.1}
 \]
 

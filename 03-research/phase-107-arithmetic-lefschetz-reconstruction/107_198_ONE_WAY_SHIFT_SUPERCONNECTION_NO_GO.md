@@ -25,7 +25,7 @@ For every \(k\ge1\), \(A_q^k\) raises number degree by \(k\).
 Consequently every diagonal matrix coefficient vanishes and
 
 \[
- \operatorname{Tr}(A_q^k)=0.
+ \mathrm{Tr}(A_q^k)=0.
  \tag{2.1}
 \]
 
@@ -34,7 +34,7 @@ The Fredholm determinant expansion therefore gives
 \[
  \det_{\mathrm F}(1-A_q)
  =\exp\left(-\sum_{k\ge1}
- {\operatorname{Tr}(A_q^k)\over k}\right)=1.
+ {\mathrm{Tr}(A_q^k)\over k}\right)=1.
  \tag{2.2}
 \]
 

@@ -94,7 +94,7 @@ The Gamma Laplacian has multiplier
 
 \[
  \ell_\infty(\tau)
- =\operatorname{Re}\psi(1/4+i\tau/2)-\psi(1/4).        \tag{3.1}
+ =\mathrm{Re}\,\psi(1/4+i\tau/2)-\psi(1/4).        \tag{3.1}
 \]
 
 Its integral formula shows
@@ -192,14 +192,14 @@ If \(A_Y\ge0\), the exact shorted block capacity is
 
 \[
  \boxed{
- \operatorname{Cap}_{(Y,2Y]}
+ \mathrm{Cap}_{(Y,2Y]}
  =D_Y-K_Y^{\rm ann}-B_Y^*A_Y^\dagger B_Y.}             \tag{6.2}
 \]
 
 The dyadic induction would close if
 
 \[
- \operatorname{Cap}_{(Y,2Y]}\ge0                       \tag{6.3}
+ \mathrm{Cap}_{(Y,2Y]}\ge0                       \tag{6.3}
 \]
 
 uniformly.  Gamma positivity controls a high-frequency portion of \(D_Y\),

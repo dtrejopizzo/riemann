@@ -7,7 +7,7 @@ geometric realization problem in a form compatible with the source
 package already built in Papers A and B:
 for each finite support bound \(T\), the finite-support divisor and
 correspondence data must live on a regular proper arithmetic model over
-the whole of \(\operatorname{Spec}\mathbb Z\).
+the whole of \(\mathrm{Spec}\,\mathbb Z\).
 
 The central constraint is the one already fixed in the Phase 107 setup:
 
@@ -33,7 +33,7 @@ Yuan--Zhang.
 The obstruction was already isolated in `106.210`:
 
 1. the cyclotomic resultant surface
-   \(\operatorname{Spec}\mathbb Z[x]\) supplies the correct finite local
+   \(\mathrm{Spec}\,\mathbb Z[x]\) supplies the correct finite local
    support but no diagonal closure;
 2. its natural proper compactification is genus zero and has trivial
    Jacobian degree one;
@@ -99,7 +99,7 @@ Let \(T>0\).  Define the admissible prime-power support set
 
 Only these prime-power returns are allowed to appear in the test divisor
 or correspondence package at level \(T\).  The ambient arithmetic base
-remains all of \(\operatorname{Spec}\mathbb Z\).
+remains all of \(\mathrm{Spec}\,\mathbb Z\).
 
 ### Definition 4.2: universal finite model
 
@@ -107,7 +107,7 @@ A universal finite model at level \(T\) consists of:
 
 1. a normal geometrically connected projective surface
    \(Y_T/\mathbb Q\), together with a regular proper model
-   \(\mathcal Y_T\to\operatorname{Spec}\mathbb Z\), of relative dimension two
+   \(\mathcal Y_T\to\mathrm{Spec}\,\mathbb Z\), of relative dimension two
    and total Krull dimension three;
 2. two transverse polar projections
    \(\pi_{\mathrm v},\pi_{\mathrm h}\) realizing the two rulings;
@@ -195,7 +195,7 @@ More explicitly:
    reproduces the Gamma--polar metric of `107_05`;
 3. the diagonal intersection with the realized \(Z_{f,T}\) reproduces
    the arithmetic Lefschetz identity of `107_09`;
-4. the degree-one part of \(\operatorname{Pic}^0(\mathcal X_T)\), or its
+4. the degree-one part of \(\mathrm{Pic}^0(\mathcal X_T)\), or its
    precise adelic substitute, retains the nontrivial resonant classes
    needed for Paper C Part II.
 

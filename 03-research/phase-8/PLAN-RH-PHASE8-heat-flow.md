@@ -137,7 +137,7 @@ attack**, **rigorous verification at every step**, and **mandatory self-refutati
    $C\equiv1$ is the $\Lambda=0$ shadow.
 
 Outcome of the seed decides whether L8.1 is the right Lyapunov candidate or must be replaced (e.g. by the
-gas log-energy, or $\sum_j(\operatorname{Im}z_j)^2$, or a relative-entropy functional of the empirical zero
+gas log-energy, or $\sum_j(\mathrm{Im}\,z_j)^2$, or a relative-entropy functional of the empirical zero
 measure vs. the equilibrium GUE density).
 
 ---

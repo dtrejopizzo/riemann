@@ -281,7 +281,7 @@ This does not change the conclusion.  Its positive defect has coefficients
 \(r^{|k|}\) with the diagonal removed.  Recovering (2.3) requires
 
 \[
- \mathfrak S_r-\operatorname {Diag},                       \tag{6.2}
+ \mathfrak S_r-\mathrm{Diag},                       \tag{6.2}
 \]
 
 which is not completely positive and is the matrix version of the scalar

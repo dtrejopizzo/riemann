@@ -295,7 +295,7 @@ Use el cuarteto racional de `104_17`, para el cual
 
 \[
  w=2i,\qquad
- Q_n=4-2\operatorname {Re}(w^n+w^{-n}),\qquad
+ Q_n=4-2\mathrm{Re}(w^n+w^{-n}),\qquad
  D_n^{\mathcal O}=4Q_n.                            \tag{21}
 \]
 

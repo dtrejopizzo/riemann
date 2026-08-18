@@ -102,7 +102,7 @@ one another) that the core is exactly one-sided positivity, unreachable from eff
 A proof must supply an unconditional **upper bound of the form** $\langle\Gamma,H\rangle^2>\langle H,H\rangle
 \langle\Gamma,\Gamma\rangle$ uniformly — a reverse Cauchy–Schwarz forced by a *signature* $(1,\cdot)$ on the
 primitive part. In the function-field case this is the general Hodge index theorem on a surface. For
-$\operatorname{Spec}\mathbb Z$ it requires a structure delivering a one-sided (upper) bound that is **not** an
+$\mathrm{Spec}\,\mathbb Z$ it requires a structure delivering a one-sided (upper) bound that is **not** an
 effectivity/Bochner/relaxation positivity and **not** a local Satake statement — i.e.\ a genuinely new
 constraint of the type the discriminator $D_0$ flags as missing ($I_{2b}$). None of the four standard reservoirs
 supplies it; that is the candid state, now triply confirmed.

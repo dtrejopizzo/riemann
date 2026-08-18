@@ -5,7 +5,7 @@
 Connes--Consani's 2026 arithmetic Jacobian equips the universal
 Abel--Jacobi cover with the arithmetic linking homomorphism.  For a
 rational prime \(p\), its image in every finite abelian quotient is the
-Artin symbol \(\operatorname{Frob}_p\).  Morishita's bridge preserves
+Artin symbol \(\mathrm{Frob}_p\).  Morishita's bridge preserves
 this Galois action and the corresponding closed prime orbit.
 
 This channel is strictly richer than the valuative package rejected in
@@ -53,7 +53,7 @@ and \(5\) are unramified at 2 and satisfy
 \]
 
 Thus universal linking has enough **capacity** to represent either
-component action.  But its complete source value \(\operatorname{lk}_2\)
+component action.  But its complete source value \(\mathrm{lk}_2\)
 is the same for both curves: it is attached to the rational prime 2,
 not to a chosen elliptic curve.  A target-independent rule applied to
 that same input can select only one quotient character, whereas (2.1)
@@ -61,7 +61,7 @@ requires two different outputs.
 
 Selecting \(\chi_{-7}\) for one curve and \(\chi_5\) for the other is
 not a source construction.  It imports a target-dependent quotient of
-\(\operatorname{Gal}(\mathbb Q^{\rm ab}/\mathbb Q)\), exactly the
+\(\mathrm{Gal}(\mathbb Q^{\rm ab}/\mathbb Q)\), exactly the
 component datum that the realization was required to produce.
 
 ## 4. No-go and remaining route
@@ -71,7 +71,7 @@ prime/Gamma source does not by itself reopen the old \(S3\) target:
 
 \[
  \boxed{
- (p,\operatorname{lk}_p)\ \text{has Galois capacity but no
+ (p,\mathrm{lk}_p)\ \text{has Galois capacity but no
  target-independent component selector}.}
 \]
 

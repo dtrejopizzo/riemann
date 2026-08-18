@@ -13,13 +13,13 @@ es el núcleo de de Bruijn. La función $H_0$ satisface $H_0(z) = \Xi(1/2 + iz)$
 $\Xi$ es la función xi de Riemann.
 
 **Definición A.2** (Configuración de ceros). Sea $Z_t = \{z_n(t)\}_{n \ge 1}$ el
-multiconjunto ordenado de ceros de $H_t$ en el semiplano superior $\operatorname{Im} z \ge 0$
+multiconjunto ordenado de ceros de $H_t$ en el semiplano superior $\mathrm{Im} z \ge 0$
 (junto con los reales). Cada cero complejo $z_n = \alpha_n + i\beta_n$ con $\beta_n > 0$
 corresponde a un cero $\rho_n = 1/2 + iz_n = 1/2 + i\alpha_n - \beta_n$ de $\zeta$
-fuera de la recta crítica, con $\operatorname{Re}(\rho_n) = 1/2 - \beta_n$.
+fuera de la recta crítica, con $\mathrm{Re}(\rho_n) = 1/2 - \beta_n$.
 
 **Definición A.3** (Índice transversal en el flujo). Para cada $t$, define:
-$$\kappa_t := 2 \cdot \#\{n : \operatorname{Im} z_n(t) > 0\}$$
+$$\kappa_t := 2 \cdot \#\{n : \mathrm{Im} z_n(t) > 0\}$$
 (el doble del número de ceros complejos en el semiplano superior abierto).
 
 *Observación:* $\kappa_t$ es el análogo del índice de Kreĭn $\kappa(Q_t)$ en el lenguaje
@@ -120,7 +120,7 @@ La pregunta del Frente A se reduce a:
 > transversal $\Phi = \sum_n \beta_n^2$?
 
 Estas dos cantidades son distintas:
-$$E_{\log}(Z) = -\sum_{j \ne k} \log|z_j - z_k|, \qquad \Phi(Z) = \sum_n (\operatorname{Im} z_n)^2.$$
+$$E_{\log}(Z) = -\sum_{j \ne k} \log|z_j - z_k|, \qquad \Phi(Z) = \sum_n (\mathrm{Im} z_n)^2.$$
 
 Para que el flujo lleve $\Phi \to 0$ (RH), necesitamos que la restricción de $E_{\log}$
 a la "dirección transversal" sea convexa con mínimo en $\Phi = 0$.
@@ -132,7 +132,7 @@ a la "dirección transversal" sea convexa con mínimo en $\Phi = 0$.
 ## 6. Resultado nuevo: fórmula para $\Lambda$
 
 **Proposición A.14** (cota inferior de $\Lambda$ vía Kreĭn). Bajo Hipótesis D con
-órbitas a distancia $b_j = \operatorname{Re}(\rho_j) - 1/2 > 0$, el Teorema 25-B.4 del
+órbitas a distancia $b_j = \mathrm{Re}(\rho_j) - 1/2 > 0$, el Teorema 25-B.4 del
 programa establece:
 $$\Lambda \ge \max_j \frac{b_j^2}{2}.$$
 

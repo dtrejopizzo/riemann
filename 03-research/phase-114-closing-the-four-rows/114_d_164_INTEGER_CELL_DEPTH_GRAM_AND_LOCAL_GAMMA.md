@@ -180,7 +180,7 @@ concentration operator for frequencies \([-R,R]\).  It is a positive
 contraction with
 
 \[
- \operatorname {Tr}K_{E,R}={|E|R\over\pi}
+ \mathrm{Tr}\,K_{E,R}={|E|R\over\pi}
  \leq{2\ell R\over\pi}.                               \tag{3.1}
 \]
 
@@ -194,7 +194,7 @@ Hence
 The function
 
 \[
- h_{5/4}(\tau)=\operatorname {Re}\psi(5/4+i\tau/2)-\psi(5/4)
+ h_{5/4}(\tau)=\mathrm{Re}\,\psi(5/4+i\tau/2)-\psi(5/4)
                                                                     \tag{3.3}
 \]
 
@@ -232,7 +232,7 @@ At a prime-power birth \(N=p^k\), the exact update is
 
 \[
  \Delta_N(F)=w_N\|J_{N,-}F\|^2-w_N\|J_{N,+}F\|^2
- =-2w_N\operatorname {Re}C_F(\log N).                 \tag{4.1}
+ =-2w_N\mathrm{Re}\,C_F(\log N).                 \tag{4.1}
 \]
 
 Two equal endpoint bumps make (4.1) negative, while reversing one bump

@@ -345,8 +345,8 @@ Pairing (17) with \(\psi\) gives the exact atom contribution
 \begin{aligned}
 \mathcal V_n[\psi]
 ={}&-\int_{\mathbb R}xV_n'(x)|\psi(x)|^2\,dx\\
- &+2c_Ka_n\operatorname {Re}M_\psi(a)
- -2c_Ka_na\operatorname {Re}C_\psi'(a).
+ &+2c_Ka_n\mathrm{Re}\,M_\psi(a)
+ -2c_Ka_na\mathrm{Re}\,C_\psi'(a).
 \end{aligned}}
 \tag{24}
 \]
@@ -395,7 +395,7 @@ than \(\log2\).  Define
 \]
 
 Then \(A_\varphi(\log2)>0\), and \(A_\varphi(u)=0\) once \(|u|\) exceeds
-the diameter of \(\operatorname {supp}\varphi\).  Product-to-sum and
+the diameter of \(\mathrm{supp}\,\varphi\).  Product-to-sum and
 integration by parts give, uniformly on compact \(u\)-sets,
 
 \[
@@ -437,7 +437,7 @@ where
 \[
  P_\varphi(\xi)
  =\sum_{\substack{n\ge2\\
-       \log n<\operatorname {diam}(\operatorname {supp}\varphi)}}
+       \log n<\mathrm{diam}(\mathrm{supp}\,\varphi)}}
    a_n(\log n)A_\varphi(\log n)\sin(\xi\log n).
 \tag{31}
 \]
@@ -609,8 +609,8 @@ spectral concentration and (38) give
 
 \[
  \boxed{
- {\operatorname {Tr}\{i[A,D_{\mathscr C}]\Gamma_t\}
-  \over\operatorname {Tr}\Gamma_t}
+ {\mathrm{Tr}\,\{i[A,D_{\mathscr C}]\Gamma_t\}
+  \over\mathrm{Tr}\,\Gamma_t}
  \longrightarrow0.}
 \tag{41}
 \]
@@ -642,7 +642,7 @@ sign for the compressed sum of
 
 \[
  -2c_K{\Lambda(n)\over\sqrt n}(\log n)
- \operatorname {Re}C_{\psi_q}'(\log n)
+ \mathrm{Re}\,C_{\psi_q}'(\log n)
 \tag{43}
 \]
 

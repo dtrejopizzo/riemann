@@ -114,7 +114,7 @@ Del Doc 73, Prop. 2.1, la diferencia del integrando puede expresarse como
 $$|\zeta(\tfrac{1}{2}+is)|^2 - |\zeta_{on}(\tfrac{1}{2}+is)|^2 = |\zeta_{on}(\tfrac{1}{2}+is)|^2 \cdot R(s),$$
 con
 $$R(s) = \prod_{\rho_0 \notin \text{crit}} \left|\frac{(1/2+is) - \rho_0}{(1/2+is) - \rho_0'}\right|^2 - 1 \geq 0,$$
-donde el producto corre sobre los ceros off-critical $\rho_0$ y $\rho_0' = 1/2 + i\operatorname{Im}(\rho_0)$ es su proyección a la recta crítica.
+donde el producto corre sobre los ceros off-critical $\rho_0$ y $\rho_0' = 1/2 + i\mathrm{Im}(\rho_0)$ es su proyección a la recta crítica.
 
 Bajo RH, $R(s) \equiv 0$ y $T_\lambda = 0$. Bajo $\neg$RH, $R(s) \geq 0$ con igualdad en solo un conjunto discreto, de modo que $T_\lambda > 0$.
 
@@ -185,7 +185,7 @@ Esta expresión exhibe $T_\lambda$ como el *producto escalar* del kernel $W_\lam
 
 Recordamos (§1.3) que la contribución de un cuádruplo off-critical $\mathcal{Q}(\rho_0)$ a $\lambda_n$ es, a primer orden en $\delta$:
 
-$$\Lambda_n^{(1)}(\rho_0) = -4n\delta_0 \cdot \operatorname{Re}\left[\left(1 - \frac{1}{\rho_0}\right)^{n-1} \cdot \frac{1}{\rho_0^2}\right].$$
+$$\Lambda_n^{(1)}(\rho_0) = -4n\delta_0 \cdot \mathrm{Re}\,\left[\left(1 - \frac{1}{\rho_0}\right)^{n-1} \cdot \frac{1}{\rho_0^2}\right].$$
 
 Para ver la estructura más claramente, aproximamos $\rho_0 = 1/2 + i\gamma_0 + \delta_0$. Entonces $1/\rho_0 \approx 1/(1/2+i\gamma_0)(1 + O(\delta_0))$. A orden $\delta_0^0$, la contribución del cuádruplo al signo de $\lambda_n$ viene dominada por los dos ceros con $|1 - 1/\rho| > 1$. Esto implica que $\lambda_n$ no puede expresarse simplemente como un momento de $d\mu_{corr}$; la relación es más compleja (ver §6).
 
@@ -290,7 +290,7 @@ siempre que $\zeta_{on}'(1/2+i\gamma_0) \neq 0$ (cero simple).
 
 **Proposición 5.3** (constante explícita). Bajo los supuestos anteriores, con $\lambda > |\gamma_0|$ y asumiendo que $\gamma_0$ es la parte imaginaria de un cero simple de $\zeta_{on}$,
 $$C(\lambda, n_0) = \frac{2\delta_0^2 \cdot |\zeta_{on}'(\frac{1}{2}+i\gamma_0)|^2 \cdot W_\lambda(\gamma_0) \cdot w(\gamma_0)}{(1/r_0)^{n_0} + A_{n_0}/2},$$
-donde $A_{n_0} = \sum_{\rho \text{ crít.}} c_{n_0}(\operatorname{Im}(\rho)) \geq 0$ es la contribución total de ceros críticos.
+donde $A_{n_0} = \sum_{\rho \text{ crít.}} c_{n_0}(\mathrm{Im}(\rho)) \geq 0$ es la contribución total de ceros críticos.
 
 *Demostración del Teorema 5.1.* Combinando la cota inferior $T_\lambda \geq \delta_0^2 \cdot I(\lambda,\gamma_0) \geq \delta_0^2 \cdot 2|\zeta_{on}'|^2 W_\lambda(\gamma_0) w(\gamma_0)$ (del cálculo de §5.2/5.3) con la cota superior $|\lambda_{n_0}| \leq 2(1/r_0)^{n_0} + A_{n_0}$ (del Paso 2), obtenemos
 
@@ -298,7 +298,7 @@ $$\frac{T_\lambda}{|\lambda_{n_0}|} \geq \frac{2\delta_0^2 |\zeta_{on}'|^2 W_\la
 
 **Corolario 5.4.** Si $\lambda_{n_0} < 0$ para algún $n_0$, entonces
 $$T_\lambda \geq C(\lambda, n_0) \cdot |\lambda_{n_0}| > 0$$
-para todo $\lambda > |\gamma_0|$ donde $\gamma_0 = \operatorname{Im}(\rho_0)$ y $\rho_0$ es el cero off-critical responsable de $\lambda_{n_0} < 0$.
+para todo $\lambda > |\gamma_0|$ donde $\gamma_0 = \mathrm{Im}(\rho_0)$ y $\rho_0$ es el cero off-critical responsable de $\lambda_{n_0} < 0$.
 
 **Observación 5.5** (sobre la constante $C$). La constante $C(\lambda, n_0)$ es explícita pero decae como $(r_0)^{n_0}$ cuando $n_0 \to \infty$. Si RH falla pero los ceros off-critical están muy cercanos a la recta crítica ($\delta_0 \ll 1$), entonces $r_0 \approx 1 - O(\delta_0)$ y $n_0$ puede ser muy grande, haciendo $C$ exponencialmente pequeño. Esto es consistente con el hecho empírico de que los ceros de $\zeta$ conocidos tienen $\delta = 0$ (están en la recta crítica) hasta alturas muy grandes.
 
@@ -340,7 +340,7 @@ Si existe una transformada de Abel o de Laplace que conecte las funciones de pru
 
 **Proposición 6.4** (conexión parcial). Si se asume que los únicos ceros off-critical tienen $\delta_j = \sigma_j - 1/2 \ll 1$ (hipótesis de ceros casi-críticos), entonces a primer orden en $\delta_j$:
 
-$$\lambda_n \approx -4 \sum_{j \in J^-} \delta_j \cdot \operatorname{Re}\left[\left(1-\frac{1}{\rho_j^{crit}}\right)^{n-1} \cdot \frac{1}{(\rho_j^{crit})^2}\right]$$
+$$\lambda_n \approx -4 \sum_{j \in J^-} \delta_j \cdot \mathrm{Re}\,\left[\left(1-\frac{1}{\rho_j^{crit}}\right)^{n-1} \cdot \frac{1}{(\rho_j^{crit})^2}\right]$$
 
 donde $\rho_j^{crit} = 1/2 + i\gamma_j$ es la proyección crítica de $\rho_j$, y $J^-$ indexa los dos miembros del cuádruplo con $|1-1/\rho| > 1$.
 

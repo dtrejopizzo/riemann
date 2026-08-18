@@ -73,7 +73,7 @@ and put
 
 \[
  \widetilde{\mathcal R}
- =\overline{\operatorname {span}}
+ =\overline{\mathrm{span}}
    \{\mathcal U\bar r_j:j\ge1\}\subset L^2_{\rm even}(dx). \tag{6}
 \]
 
@@ -107,7 +107,7 @@ After applying \(H\) and Fourier transform, (8) becomes
 Every polynomial in braces vanishes at \(t^2=-1/4\).  More precisely,
 
 \[
- \operatorname {span}\left\{(-1)^jt^{2j}-4^{-j}:j\ge1\right\}
+ \mathrm{span}\,\left\{(-1)^jt^{2j}-4^{-j}:j\ge1\right\}
  =(t^2+1/4)\,\mathbb C[t^2].                        \tag{10}
 \]
 
@@ -225,7 +225,7 @@ largest positive operator below \(C^*C\) whose kernel contains
  \begin{aligned}
  \langle f,(C^*C)_{/\mathcal R}f\rangle
  &=\inf_{r\in\mathcal R}\|C(f+r)\|^2\\
- &=\operatorname {dist}(Cf,\overline{C\mathcal R})^2\\
+ &=\mathrm{dist}(Cf,\overline{C\mathcal R})^2\\
  &=\left\|(I-P_{\overline{C\mathcal R}})Cf\right\|^2.
  \end{aligned}                                      \tag{19}
 \]

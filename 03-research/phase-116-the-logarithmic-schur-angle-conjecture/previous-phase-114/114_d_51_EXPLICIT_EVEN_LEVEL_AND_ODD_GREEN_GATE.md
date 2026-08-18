@@ -152,7 +152,7 @@ enters.
 Assume first that
 
 \[
- E_T^{(0)}<\alpha_{o,0}(T):=\inf\operatorname{spec}H_o.       \tag{4.1}
+ E_T^{(0)}<\alpha_{o,0}(T):=\inf\mathrm{spec}\,H_o.       \tag{4.1}
 \]
 
 Define

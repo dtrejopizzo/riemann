@@ -363,13 +363,13 @@ the common cutoff used in 106.102.  This gives the exact trace version of
 (17), whose left side is
 
 \[
- \operatorname {Tr}\{(A-\tfrac12I)\Gamma_t\}.
+ \mathrm{Tr}\,\{(A-\tfrac12I)\Gamma_t\}.
  \tag{23}
 \]
 
 Therefore the cofinal signed heat-alignment lemma of 106.102 is equivalent
 to proving that the right side of the trace-lifted (17) is
-\(-o(\operatorname {Tr}\Gamma_t)\) from below along an unbounded sequence.
+\(-o(\mathrm{Tr}\,\Gamma_t)\) from below along an unbounded sequence.
 The divisor identity (1) does not supply that sign automatically: it
 orthogonally resolves the full literal prime contribution, and Proposition
 4 proves that both its current and dispersion pieces must remain coupled

@@ -69,7 +69,7 @@ Equations (1.2)--(1.5) imply `widehat f=0` almost everywhere, hence `f=0`.
 Therefore
 
 \[
- \overline{\operatorname {span}}
+ \overline{\mathrm{span}}
  \{P_TS_av_{\epsilon,T}:a\in\mathbb R\}=L^2(I_T).         \tag{1.6}
 \]
 
@@ -183,7 +183,7 @@ For finite matrices this follows from the spectral expansion of the Krylov
 space
 
 \[
- \operatorname {span}\{u,Bu,B^2u,\ldots\}.                \tag{3.1}
+ \mathrm{span}\,\{u,Bu,B^2u,\ldots\}.                \tag{3.1}
 \]
 
 For compact resolvent the same statement follows from the spectral theorem.
@@ -251,7 +251,7 @@ locate `mu_1` relative to zero.
 Take
 
 \[
- B=\operatorname {diag}(4,3,2,-1),\qquad
+ B=\mathrm{diag}(4,3,2,-1),\qquad
  u=(1,1,1,1)^T.                                           \tag{5.1}
 \]
 

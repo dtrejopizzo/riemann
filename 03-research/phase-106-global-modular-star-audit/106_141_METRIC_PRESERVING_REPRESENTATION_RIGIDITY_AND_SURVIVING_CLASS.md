@@ -57,7 +57,7 @@ The exact coefficient equation is
 
 ### Theorem 1 — Full-threshold metric rigidity
 
-Define on \(\overline{\operatorname {Ran}\mathcal G}\)
+Define on \(\overline{\mathrm{Ran}\,\mathcal G}\)
 
 \[
  C_0:=2^{-1/2}U_DA^{-1/2}U_A^*.
@@ -67,7 +67,7 @@ Define on \(\overline{\operatorname {Ran}\mathcal G}\)
 Then:
 
 1. \(C_0\mathcal G=D\), and (4) fixes the restriction of every exact
-   realization \(H\) to \(\operatorname {Ran}\mathcal G\).
+   realization \(H\) to \(\mathrm{Ran}\,\mathcal G\).
 2. When it is bounded, the zero extension of \(C_0\) is the minimum-norm
    bounded exact realization.  With the extended value \(+\infty\) when
    \(\inf\sigma(A)=0\),
@@ -121,7 +121,7 @@ lower-right identity in the block of (7) is
 
 which proves the last equivalence.  Unitary conjugacy preserves norms, and
 an isometric enlargement cannot alter the already-fixed restriction on
-\(\operatorname {Ran}\mathcal G\).  \(\square\)
+\(\mathrm{Ran}\,\mathcal G\).  \(\square\)
 
 Thus a positive block realization of the full threshold map is a useful
 coordinate for the desired sign, but it is not positive for free.  Its
@@ -221,7 +221,7 @@ is the Abel connection, not the full threshold observation \(D\).  The
 linear identity controlled in 106.135 concerns
 
 \[
- 2\operatorname {Re}\langle F,\mathcal CF\rangle
+ 2\mathrm{Re}\,\langle F,\mathcal CF\rangle
  \tag{17}
 \]
 

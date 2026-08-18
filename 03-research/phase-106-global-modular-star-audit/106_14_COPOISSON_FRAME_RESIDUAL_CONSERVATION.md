@@ -47,11 +47,11 @@ Let \(A\) be a lower-semibounded self-adjoint compact-resolvent operator on
 
 \[
  P_-={\bf1}_{(-\infty,0)}(A),\qquad
- \mathcal N=\operatorname {Ran}P_-.
+ \mathcal N=\mathrm{Ran}\,P_-.
  \tag{3}
 \]
 
-For \(q_1,\ldots,q_M\in\operatorname {Dom}(A)\), define
+For \(q_1,\ldots,q_M\in\mathrm{Dom}(A)\), define
 
 \[
  Q:\mathbb C^M\to\mathcal H,\quad Qc=\sum_{j=1}^Mc_jq_j,
@@ -121,7 +121,7 @@ Consequently,
 #### Proof
 
 The space \(\mathcal N\) reduces \(A\).  For
-\(v\in\mathcal N\cap\operatorname {Dom}(A)\), apply the frame inequality to
+\(v\in\mathcal N\cap\mathrm{Dom}(A)\), apply the frame inequality to
 \(Av\in\mathcal N\):
 
 \[
@@ -247,7 +247,7 @@ Let \(K_{L,z}\) be the Paley--Wiener Riesz vector on \(I_L\), normalized by
  \tag{19}
 \]
 
-If \(a=|\operatorname {Im}z|>0\),
+If \(a=|\mathrm{Im}\,z|>0\),
 
 \[
  \|K_{L,z}\|^2=\frac{\sinh(aL)}a.
@@ -352,7 +352,7 @@ Then
 
 \[
  \boxed{
- \dim\operatorname {Ran}{\bf1}_{(-\infty,0)}(A_L)
+ \dim\mathrm{Ran}{\bf1}_{(-\infty,0)}(A_L)
  \le\frac{2LT_L}{\pi}.
  }
  \tag{28}
@@ -382,7 +382,7 @@ Let \((v_j)_{j=1}^d\) be orthonormal in the negative space and let
 \[
  \frac d2
  \le\sum_{j=1}^d\|\Pi_{T_L}v_j\|^2
- \le\operatorname {Tr}(P_{I_L}\Pi_{T_L}P_{I_L})
+ \le\mathrm{Tr}(P_{I_L}\Pi_{T_L}P_{I_L})
  =\frac{LT_L}{\pi}.
  \tag{31}
 \]

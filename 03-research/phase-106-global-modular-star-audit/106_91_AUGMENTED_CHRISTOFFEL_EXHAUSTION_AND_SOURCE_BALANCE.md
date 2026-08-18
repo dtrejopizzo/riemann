@@ -51,9 +51,9 @@ finite selection remains in the sharp determinant formulation.
 Use the notation of 106.89--106.90:
 
 \[
-V_M=V_{M-1}\oplus\operatorname{span}\{\phi_M\},
+V_M=V_{M-1}\oplus\mathrm{span}\,\{\phi_M\},
 \qquad
-\mathcal R_J=\operatorname{span}\{r_1,\ldots,r_J\}.              \tag{4}
+\mathcal R_J=\mathrm{span}\,\{r_1,\ldots,r_J\}.              \tag{4}
 \]
 
 Assume the preceding block of the finite maximal-radical anti-short is

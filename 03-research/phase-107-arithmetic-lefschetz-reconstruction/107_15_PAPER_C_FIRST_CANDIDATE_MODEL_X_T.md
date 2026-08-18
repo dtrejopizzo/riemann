@@ -57,7 +57,7 @@ Gamma--polar metric that must appear on that boundary.
 
 `107_10` requires two transverse rulings, a diagonal class, and
 nontrivial degree one.  Therefore a single chart such as
-\(\operatorname{Spec}\mathbb Z[x]\) is insufficient from the outset.
+\(\mathrm{Spec}\,\mathbb Z[x]\) is insufficient from the outset.
 
 ## 3. Finite support data at level \(T\)
 
@@ -83,7 +83,7 @@ multiplication maps to a larger support level.
 
 The construction of \(\mathcal X_T\) should remember only these finite
 support labels while remaining proper over all of
-\(\operatorname{Spec}\mathbb Z\).
+\(\mathrm{Spec}\,\mathbb Z\).
 
 ## 4. Ambient square before regularization
 

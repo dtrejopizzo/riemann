@@ -4,7 +4,7 @@
 
 Document 106.167 shows that every repeated prime winding belongs to a
 nonvanishing Hilbert--Schmidt determinant on
-\(\operatorname {Re}s>1/2\).  Only the primitive trace
+\(\mathrm{Re}\,s>1/2\).  Only the primitive trace
 \(P(s)=\sum_p p^{-s}\) remains.  A scalar finite part of \(P\) has branch
 ambiguities, so it is not the correct invariant.  Its derivative is a
 canonical meromorphic connection one-form.
@@ -22,7 +22,7 @@ Retain the notation
 
 \[
  H(s)=\sum_p\sum_{k\ge2}\frac{p^{-ks}}k,
- \qquad \operatorname {Re}s>\frac12.                         \tag{1}
+ \qquad \mathrm{Re}\,s>\frac12.                         \tag{1}
 \]
 
 By 106.167, \(H\) is holomorphic in this half-plane and
@@ -31,7 +31,7 @@ By 106.167, \(H\) is holomorphic in this half-plane and
  \det{}_2(I-D_s)=e^{-H(s)}.                                  \tag{2}
 \]
 
-In \(\operatorname {Re}s>1\),
+In \(\mathrm{Re}\,s>1\),
 
 \[
  \log\zeta(s)=P(s)+H(s).                                     \tag{3}
@@ -82,11 +82,11 @@ The form \(\omega_{\rm pr}\) is regular at \(s=1\).  At every nontrivial
 zero \(\rho\) of multiplicity \(m_\rho\),
 
 \[
- \boxed{\operatorname {Res}_{s=\rho}\omega_{\rm pr}=m_\rho.} \tag{7}
+ \boxed{\mathrm{Res}_{s=\rho}\omega_{\rm pr}=m_\rho.} \tag{7}
 \]
 
 There are no other singularities of \(\omega_{\rm pr}\) in
-\(\operatorname {Re}s>1/2\).
+\(\mathrm{Re}\,s>1/2\).
 
 #### Proof
 
@@ -115,13 +115,13 @@ of the prime logarithm and without naming any zero.
 ## 4. A contour formulation independent of zero labels
 
 Let \(\Gamma\) be a positively oriented rectifiable Jordan curve contained
-in \(\operatorname {Re}s>1/2\), avoiding \(s=1\) and the zero divisor.
+in \(\mathrm{Re}\,s>1/2\), avoiding \(s=1\) and the zero divisor.
 Then
 
 \[
  \boxed{
  \frac1{2\pi i}\int_\Gamma\omega_{\rm pr}
- =N_\zeta(\operatorname {int}\Gamma),}                       \tag{8}
+ =N_\zeta(\mathrm{int}\,\Gamma),}                       \tag{8}
 \]
 
 where the right side is the number of nontrivial zeros inside \(\Gamma\),
@@ -144,7 +144,7 @@ defined entirely by the connection; no spectral enumeration is involved.
 Let
 
 \[
- \mathbb H_{1/2}=\{s\in\mathbb C:\operatorname {Re}s>1/2\}.
+ \mathbb H_{1/2}=\{s\in\mathbb C:\mathrm{Re}\,s>1/2\}.
 \]
 
 ### Theorem 5.1 — Flat interior connection criterion
@@ -155,7 +155,7 @@ The following are equivalent:
 2. every contour integral in (8) vanishes;
 3. \(\zeta\) has no nontrivial zero in \(\mathbb H_{1/2}\);
 4. every nontrivial zero of \(\zeta\) lies on
-   \(\operatorname {Re}s=1/2\).
+   \(\mathrm{Re}\,s=1/2\).
 
 #### Proof
 
@@ -188,7 +188,7 @@ and a section contributes its zero divisor through the
 Poincaré--Lelong formula.  In the present relative problem, the desired
 arithmetic Hodge theorem must do more than provide a positive metric: it
 must prove that the divisor current of \(\nabla_{\rm pr}\) is supported on
-the real fixed boundary \(\operatorname {Re}s=1/2\).  A positive metric
+the real fixed boundary \(\mathrm{Re}\,s=1/2\).  A positive metric
 on an arbitrary determinant line would not imply this support theorem.
 
 Equivalently, the missing map from the rooted prime module to the CCM
@@ -211,4 +211,4 @@ Still required:
 
 * a source-side arithmetic intersection identity forcing the residue
   current (8) to have no support in
-  \(\operatorname {Re}s>1/2\).
+  \(\mathrm{Re}\,s>1/2\).

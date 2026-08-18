@@ -81,7 +81,7 @@ with \(\eta(T_8)\) large, and \(T_8\) may be increased freely.
 
 Let \(\xi_1<\dots<\xi_M\) be the zeros of \(L_{n-1}^{(2)}\) lying in
 \([2N,3N]\), and let \(I_j=(\xi_j,\xi_{j+1})\) with sign
-\(\sigma_j=\operatorname{sgn}K_n|_{I_j}\).  By Fact 2 of `103_03` the widths
+\(\sigma_j=\mathrm{sgn}\,K_n|_{I_j}\).  By Fact 2 of `103_03` the widths
 satisfy
 \[
   |I_j|=2\pi\sqrt{u/(4N-u)}\ \ge\ 2\pi\sqrt{2/2}=2\pi\qquad(u\ge2N).

@@ -62,7 +62,7 @@ The two poles at \(s=1/2\) cancel. If \(s_0\) corresponds to a zero of
 \(\zeta(s+1/2)\) of multiplicity \(m\), then
 
 \[
- \operatorname*{Res}_{s=s_0}d(s)=-m.                 \tag{6}
+ \mathop{\mathrm{Res}}_{s=s_0}d(s)=-m.                 \tag{6}
 \]
 
 The backward part of the operator in 106.44 is the commutator

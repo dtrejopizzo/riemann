@@ -9,8 +9,8 @@ useful radius information.  In particular, for the first reported vector the
 saved data give
 
 \[
- \max_i\operatorname {rad}w_i=271.91,\qquad
- \max_{ij}\operatorname {rad}(K_{\rm final})_{ij}=255.10,
+ \max_i\mathrm{rad}\,w_i=271.91,\qquad
+ \max_{ij}\mathrm{rad}(K_{\rm final})_{ij}=255.10,
 \]
 
 and the interval called `rayleigh` is
@@ -70,7 +70,7 @@ overlaps gives
 
 \[
  -2\sum_{n=2}^5{\Lambda(n)\over\sqrt n}
-    \operatorname {Re}\int F(t)\overline{F(t+a_n)}dt
+    \mathrm{Re}\,\int F(t)\overline{F(t+a_n)}dt
  =-0.899445505251153.                                  \tag{1.3}
 \]
 

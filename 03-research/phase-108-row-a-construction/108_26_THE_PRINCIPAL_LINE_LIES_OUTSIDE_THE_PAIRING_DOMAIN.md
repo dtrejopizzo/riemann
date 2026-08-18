@@ -29,7 +29,7 @@ No zero of $\xi$ is used anywhere.
 > invariant' is exactly **weight $s=0$**, the trivial character
 > $\chi_0\equiv1$."
 >
-> $\operatorname{Prin}(\mathcal G):=\operatorname{div}(\mathcal L_0)
+> $\mathrm{Prin}(\mathcal G):=\mathrm{div}(\mathcal L_0)
 > =\mathbb R\cdot\big(\tfrac{dr}r\big)$
 
 So the principal subspace is the **single weight $s=0$** — a unit point mass
@@ -98,14 +98,14 @@ Assembling 108_06, 108_11, 108_22, 108_24 and this note:
 |---|---|---|
 | pairing on individual $f_a$ | — | impossible (108_22) |
 | pairing on balanced profiles | $0<a<1$ | **exists, proved** (108_24) |
-| principal line $\operatorname{Prin}(\mathcal G)$ | $s=0$ | **excluded and unreachable** |
+| principal line $\mathrm{Prin}(\mathcal G)$ | $s=0$ | **excluded and unreachable** |
 
 Stage 1's mandate was to make principal invariance testable.  The pairing
 exists; the principal line is not in its domain.  That is the exact failure.
 
 ### 4.1 The single open question this leaves
 
-108_03 §6.2 records that $\operatorname{Prin}(\mathcal G)$ is a **witness**:
+108_03 §6.2 records that $\mathrm{Prin}(\mathcal G)$ is a **witness**:
 "an explicit, nonzero *candidate* for a global principal subspace".  It is
 not proved to be the only one.
 

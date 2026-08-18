@@ -982,7 +982,7 @@ The surviving nonlocal mechanisms have now been normalized:
   implies the A1 diagonal only if
   \[
     p_np_n^*\in
-    \overline{\operatorname{cone}}\{v_\alpha v_\alpha^*\},
+    \overline{\mathrm{cone}}\{v_\alpha v_\alpha^*\},
     \qquad p_n=1-z^n,
   \]
   or if the tested subspace directly contains \(p_n\).  Otherwise finite

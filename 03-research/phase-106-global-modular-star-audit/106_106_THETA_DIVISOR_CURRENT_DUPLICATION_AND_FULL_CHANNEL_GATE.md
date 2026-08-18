@@ -316,7 +316,7 @@ still exactly
 
 \[
  \int_0^\infty \mathcal J_u[\Gamma_{t_k}]\,d\sigma(u)
- \geq-o(\operatorname {Tr}\Gamma_{t_k})            \tag{18}
+ \geq-o(\mathrm{Tr}\,\Gamma_{t_k})            \tag{18}
 \]
 
 along one unbounded sequence \(t_k\).  Theorems 1--2 reorganize the
@@ -341,7 +341,7 @@ Not proved here:
 
 \[
  \int_0^\infty \mathcal J_u[\Gamma_{t_k}]\,d\sigma(u)
- \geq-o(\operatorname {Tr}\Gamma_{t_k}).
+ \geq-o(\mathrm{Tr}\,\Gamma_{t_k}).
 \]
 
 The divisor current therefore does not close the physical surplus.  The

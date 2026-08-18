@@ -25,7 +25,7 @@ Tang, Arithmetic Lefschetz--Riemann--Roch theorem
 (arXiv:1503.07751), assumes an action of
 
 \[
- \mu_n=\operatorname{Spec}\mathbb Z[\mathbb Z/n\mathbb Z]
+ \mu_n=\mathrm{Spec}\,\mathbb Z[\mathbb Z/n\mathbb Z]
  \]
 
 and works over

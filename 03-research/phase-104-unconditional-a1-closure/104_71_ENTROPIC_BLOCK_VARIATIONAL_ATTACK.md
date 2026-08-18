@@ -9,7 +9,7 @@ Gibbs--Donsker--Varadhan finita. Para
  \pi_n:={1\over n+2},                                    \tag{1}
 \]
 
-sea \(\nu_L=\bigotimes_{n\in I_L}\operatorname{Bern}(\pi_n)\), escriba
+sea \(\nu_L=\bigotimes_{n\in I_L}\mathrm{Bern}(\pi_n)\), escriba
 \(B=(B_n)_{n\in I_L}\), y ponga
 
 \[
@@ -70,7 +70,7 @@ Como
  (1-a_n)^{-1}=1+{e^{-\lambda_n}\over n+1},                \tag{7}
 \]
 
-y \(B_n\sim\operatorname{Bern}(\pi_n)\),
+y \(B_n\sim\mathrm{Bern}(\pi_n)\),
 
 \[
 \begin{aligned}
@@ -150,7 +150,7 @@ se tiene exactamente
 ### 2.1 Reducción a perfiles de una coordenada
 
 Sea \(q_n=\mathbb E_\mu B_n\) y
-\(\nu_q=\bigotimes_{n\in I_L}\operatorname{Bern}(q_n)\). La regla de la
+\(\nu_q=\bigotimes_{n\in I_L}\mathrm{Bern}(q_n)\). La regla de la
 cadena para la entropía da
 
 \[
@@ -185,7 +185,7 @@ El funcional es estrictamente cóncavo en el interior y su maximizador es
  ={1\over1+(n+1)e^{\lambda_n}}=a_n.                      \tag{19}
 \]
 
-Así \(\mu_L^*=\bigotimes_n\operatorname{Bern}(a_n)\), y (18) vuelve a
+Así \(\mu_L^*=\bigotimes_n\mathrm{Bern}(a_n)\), y (18) vuelve a
 factorizar:
 
 \[
@@ -412,7 +412,7 @@ No evita la cancelación polo--primos dentro de cada
 Considere otra vez el cuarteto racional
 
 \[
- Q_n=4-2\operatorname {Re}\{(2i)^n+(2i)^{-n}\}.           \tag{39}
+ Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\}.           \tag{39}
 \]
 
 Cada \(I_L\), para \(L\geq4\), contiene un índice

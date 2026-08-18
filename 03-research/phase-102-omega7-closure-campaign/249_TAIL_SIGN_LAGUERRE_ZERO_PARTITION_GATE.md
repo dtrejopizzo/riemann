@@ -73,7 +73,7 @@ On each interval
 \]
 the sign of \(L_{n-1}^{(2)}\) is constant.  Let
 \[
-  \sigma_{n,j}=\operatorname{sgn}L_{n-1}^{(2)}(u)
+  \sigma_{n,j}=\mathrm{sgn}\,L_{n-1}^{(2)}(u)
   \qquad(u\in J_{n,j}).
 \]
 

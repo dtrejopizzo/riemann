@@ -11,7 +11,7 @@ the rest are from the survey and carry its provenance.
 ## 1. The window has not moved in six years
 
 Connes–Consani arXiv:2006.13771 (June 2020), Theorem 1, requires
-\(\operatorname{supp}g\subset[2^{-1/2},2^{1/2}]\).  Nothing in the subsequent
+\(\mathrm{supp}\,g\subset[2^{-1/2},2^{1/2}]\).  Nothing in the subsequent
 Connes / Consani / Moscovici output — 2008.10974, 2106.01715, 2112.08820,
 2205.01391, 2207.10419, 2208.08339, 2306.00456, 2307.06748, 2310.18423,
 2401.08401, 2403.01247, 2501.06560, 2511.22755, 2511.23257, 2602.15941,

@@ -90,8 +90,8 @@ For a reproducible cover, each subinterval must:
 1. keep fixed boundary and middle cell counts;
 2. evaluate disjoint kernel entries in the factored form
    \[
-   {e^{bu}\operatorname{expm1}(b|I|)\,
-    e^{-bs}\operatorname{expm1}(b|J|)
+   {e^{bu}\mathrm{expm1}(b|I|)\,
+    e^{-bs}\mathrm{expm1}(b|J|)
     \over b^2\sqrt{|I||J|}},                             \tag{4.1}
    \]
    avoiding four-exponential cancellation;

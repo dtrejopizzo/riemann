@@ -30,9 +30,9 @@ The calculation gives a sharp answer.
    signed connection coboundary
 
    \[
-    \operatorname {Re}\langle F,\mathcal C_{K,h}F\rangle_{\omega_K}
+    \mathrm{Re}\,\langle F,\mathcal C_{K,h}F\rangle_{\omega_K}
     =-\frac1{4c_K}\iint K(x-y)\{a(x)-a(y)\}^2
-       \operatorname {Re}\{\overline{F(x)}F(y)\}\,dx,dy,
+       \mathrm{Re}\,\{\overline{F(x)}F(y)\}\,dx,dy,
     \quad a=K/h.
     \tag{3}
    \]
@@ -168,7 +168,7 @@ Let \(f=aF\).  Then
 
 \[
  \boxed{
- \operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ \mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}
  =\frac1{2c_K}\langle f,T_Kf\rangle_{L^2(dx)}.}
  \tag{14}
 \]
@@ -177,7 +177,7 @@ With the Fourier convention of Phase 106,
 
 \[
  \boxed{
- \operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ \mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}
  =\frac1{4\pi c_K}
    \int_{\mathbb R}\Xi(\xi)|\widehat f(\xi)|^2\,d\xi.}
  \tag{15}
@@ -208,11 +208,11 @@ Moreover,
 
 \[
  \boxed{
- \operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ \mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}
  =-\frac1{4c_K}
  \iint_{\mathbb R^2}
  K(x-y)\{a(x)-a(y)\}^2
- \operatorname {Re}\{\overline{F(x)}F(y)\}\,dx,dy.}
+ \mathrm{Re}\,\{\overline{F(x)}F(y)\}\,dx,dy.}
  \tag{17}
 \]
 
@@ -231,9 +231,9 @@ which is (16).  Put (I=\langle aF,T_K(aF)\rangle_2).  Subtracting
 (x\leftrightarrow y) gives
 
 \[
- 2\operatorname {Re}I
+ 2\mathrm{Re}\,I
  =-\iint K(x-y)\{a(x)-a(y)\}^2
-       \operatorname {Re}\{\overline{F(x)}F(y)\}\,dx,dy.
+       \mathrm{Re}\,\{\overline{F(x)}F(y)\}\,dx,dy.
  \tag{18}
 \]
 
@@ -241,7 +241,7 @@ Combine (14) and (18).  □
 
 The diagonal terms have canceled exactly.  What remains is not a Dirichlet
 square: its sign is the phase correlation
-\(\operatorname {Re}\{\overline{F(x)}F(y)\}\).
+\(\mathrm{Re}\,\{\overline{F(x)}F(y)\}\).
 
 ## 5. The exact KYP--Gamma Schur gate
 
@@ -278,7 +278,7 @@ Gamma form on \(F=hq\in\mathcal M\) by
 \[
  \mathfrak q_\eta(F)
  :=\mathfrak b_{\Gamma,*}(F/h)
- +2\eta\operatorname {Re}
+ +2\eta\mathrm{Re}
      \langle F,\mathcal CF\rangle_{\omega_K}.
  \tag{22}
 \]
@@ -292,7 +292,7 @@ Theorems 1 and 3 give the exact formula
  ={}&\mathfrak b_{\Gamma,*}(F/h)\\
  &-\frac{\eta}{2c_K}
  \iint K(x-y)\{a(x)-a(y)\}^2
- \operatorname {Re}\{\overline{F(x)}F(y)\}\,dx,dy.
+ \mathrm{Re}\,\{\overline{F(x)}F(y)\}\,dx,dy.
 \end{aligned}}
  \tag{23}
 \]
@@ -325,12 +325,12 @@ is nonnegative if and only if
 \]
 
 as closed forms.  If \(X\) is merely nonnegative, the same statement uses
-the Moore--Penrose inverse on \(\overline{\operatorname {Ran}X}\) and also
+the Moore--Penrose inverse on \(\overline{\mathrm{Ran}\,X}\) and also
 requires
 
 \[
- \operatorname {Ran}\mathcal C
- \subseteq\operatorname {Ran}X^{1/2}.
+ \mathrm{Ran}\,\mathcal C
+ \subseteq\mathrm{Ran}\,X^{1/2}.
  \tag{26}
 \]
 
@@ -374,7 +374,7 @@ passive prime cells.  For one literal prime \(p\), set
 \]
 
 The exact (2\times2) transfer cell tested in Phase 64 satisfies, for
-\(y=\operatorname {Im}z>0\),
+\(y=\mathrm{Im}\,z>0\),
 
 \[
  \boxed{
@@ -415,7 +415,7 @@ ordinary-prime ports still paired,
 \[
  \boxed{
  \mathfrak b_{\Gamma,*}(F/h)
- +2\eta_{\rm phys}\operatorname {Re}
+ +2\eta_{\rm phys}\mathrm{Re}
    \langle F,\mathcal C_{K,h}F\rangle_{\omega_K}
  +\mathfrak P_{\rm PNT}(F)
  \ge0,}

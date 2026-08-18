@@ -55,7 +55,7 @@ On the form domain of \(Q_q^{1/2}\), define
 \[
  \mathfrak k_q(v,w)=-\langle Q_qSv,w\rangle,
  \qquad
- \Omega_q(v,w)=-\operatorname {Im}\mathfrak k_q(v,w),
+ \Omega_q(v,w)=-\mathrm{Im}\,\mathfrak k_q(v,w),
  \qquad
  \mathcal J=-iS.
 \tag{4}
@@ -75,7 +75,7 @@ Its compatible symmetric form is
 \[
  \boxed{
  g_q(v,w)=\Omega_q(v,\mathcal Jw)
-          =\operatorname {Re}\langle Q_qv,w\rangle.}
+          =\mathrm{Re}\,\langle Q_qv,w\rangle.}
 \tag{6}
 \]
 
@@ -129,10 +129,10 @@ Consequently
  \boxed{
  \begin{aligned}
  g_q(\iota_+f,\iota_+g)
-  &=\operatorname {Re}\langle
+  &=\mathrm{Re}\,\langle
       2q(T)(I+T)^{-1}f,g\rangle,\\
  g_q(\iota_-f,\iota_-g)
-  &=\operatorname {Re}\langle
+  &=\mathrm{Re}\,\langle
       2q(T)(I-T)^{-1}f,g\rangle.
  \end{aligned}}
 \tag{10}
@@ -146,7 +146,7 @@ The physical complete-return energy is
 
 \[
  \mathcal E_T(f,g)
- =C\operatorname {Re}\langle(I-T)f,g\rangle.
+ =C\mathrm{Re}\,\langle(I-T)f,g\rangle.
 \tag{11}
 \]
 
@@ -166,7 +166,7 @@ For every \(f,g\) in the closed graph-form domain,
 \[
  \boxed{
  g_D(\iota_-f,\iota_-g)
- =C\operatorname {Re}\langle(I-T)f,g\rangle
+ =C\mathrm{Re}\,\langle(I-T)f,g\rangle
  =\mathcal E_T(f,g).}
 \tag{13}
 \]
@@ -206,8 +206,8 @@ and (13) becomes the literal full local energy
 \[
  \boxed{
  g_{D,I}(\iota_-f,\iota_-g)
- =\operatorname {Re}\langle(C_I I-A_I)f,g\rangle
- =\frac12\operatorname {Re}\sum_iw_i
+ =\mathrm{Re}\,\langle(C_I I-A_I)f,g\rangle
+ =\frac12\mathrm{Re}\,\sum_iw_i
    \langle(I-U_i)f,(I-U_i)g\rangle.}
 \tag{17}
 \]

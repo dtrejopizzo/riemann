@@ -91,7 +91,7 @@ matrix, whose largest eigenvalue is
 Since the right side increases with \(m\), the direct integral gives
 
 \[
- \operatorname {Re}\langle F,S_bF\rangle
+ \mathrm{Re}\,\langle F,S_bF\rangle
  \le\cos{\pi\over m_b+1}\,\|F\|_2^2.              \tag{1.4}
 \]
 
@@ -99,7 +99,7 @@ The zero-extension channel obeys
 
 \[
  \|\widehat J_{b,-}F\|_2^2
- =\|F\|_2^2-\operatorname {Re}\langle F,S_bF\rangle.
+ =\|F\|_2^2-\mathrm{Re}\,\langle F,S_bF\rangle.
                                                                \tag{1.5}
 \]
 

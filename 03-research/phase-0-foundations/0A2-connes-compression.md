@@ -21,7 +21,7 @@ $\mathcal{H}=L^2_\delta(X)$, $X=\mathbb{A}_\mathbb{Q}/\mathbb{Q}^\times$, on whi
 group acts, and a densely defined self-adjoint operator $\mathcal{T}$ whose quadratic form is the
 Weil functional $B$. Weil's criterion becomes
 $$
-\mathrm{RH}\iff B\succeq0\iff \mathcal{T}\succeq0\iff \inf\operatorname{spec}(\mathcal{T})\ge0 .
+\mathrm{RH}\iff B\succeq0\iff \mathcal{T}\succeq0\iff \inf\mathrm{spec}(\mathcal{T})\ge0 .
 $$
 Our localized $Q(T_0,\sigma,J)$ is the Weil form on the Hermite–Gauss family $\{\varphi_j\}_{j<J}$.
 
@@ -34,7 +34,7 @@ character and difficulty.
 
 ### Part I — the *algebraic* compression identity ⚑
 $$
-\boxed{\;Q \;=\; P_J\,\mathcal{T}\,P_J\;}\qquad P_J=\text{orth. proj. onto }\operatorname{span}\{U(\varphi_j)\}.
+\boxed{\;Q \;=\; P_J\,\mathcal{T}\,P_J\;}\qquad P_J=\text{orth. proj. onto }\mathrm{span}\,\{U(\varphi_j)\}.
 $$
 This is a statement about matrix entries: that $B(\varphi_j,\varphi_k)=\langle\varphi_j,\mathcal{T}\varphi_k\rangle_{\mathcal{H}}$.
 What must be checked: (a) the $\varphi_j$ lie in the form domain of $\mathcal{T}$; (b) the
@@ -45,10 +45,10 @@ principle, decidable by direct comparison. **Modulo domains, Part I is the "easy
 ### Part II — *spectral* faithfulness (no spectral pollution) ⚑⚑
 Even granting Part I, the finite compressions need not see the bottom of the spectrum:
 $$
-\boxed{\;\inf\operatorname{spec}\!\big(P_J\mathcal{T}P_J\big)\ \xrightarrow[J\to\infty]{}\ \inf\operatorname{spec}(\mathcal{T})\;?\;}
+\boxed{\;\inf\mathrm{spec}\,\!\big(P_J\mathcal{T}P_J\big)\ \xrightarrow[J\to\infty]{}\ \inf\mathrm{spec}(\mathcal{T})\;?\;}
 $$
 This is a **separate analytic question**, and it is where the advisor's sharpest point lands.
-By the variational principle $\lambda_{\min}(P_J\mathcal{T}P_J)\ge\inf\operatorname{spec}(\mathcal{T})$
+By the variational principle $\lambda_{\min}(P_J\mathcal{T}P_J)\ge\inf\mathrm{spec}(\mathcal{T})$
 *always* (compression raises the bottom). Convergence from above holds **if** $\mathcal{T}$ is
 self-adjoint, bounded below, and the family $\{U(\varphi_j)\}$ is *form-complete* for $\mathcal{T}$.
 But:
@@ -68,19 +68,19 @@ Part II must be decomposed further, or one over-states where RH lives. Three sta
   *any* constant, possibly negative). — construction / regularization. **Not RH.**
 - **(II-b)** the Hermite–Gauss family $\{U(\varphi_j)\}$ is **form-complete** for $\mathcal{T}$ and
   the bottom-eigenvalue convergence is pollution-free. — spectral approximation. **Not RH.**
-- **the value:** $\inf\operatorname{spec}(\mathcal{T})\ge0$. — **this is RH.**
+- **the value:** $\inf\mathrm{spec}(\mathcal{T})\ge0$. — **this is RH.**
 
 By the min-max principle, the *bottom* eigenvalue is captured from above under (II-a)+(II-b)
 alone (spectral pollution lives in essential-spectrum gaps, not below the infimum). Hence
 $$
-\text{(II-a)}\wedge\text{(II-b)}\ \Longrightarrow\ \lambda_{\min}(Q)\to\inf\operatorname{spec}(\mathcal{T})
+\text{(II-a)}\wedge\text{(II-b)}\ \Longrightarrow\ \lambda_{\min}(Q)\to\inf\mathrm{spec}(\mathcal{T})
 \ \text{ faithfully, \emph{whatever the sign}.}
 $$
 **Faithfulness does not require positivity.** RH does not live in the faithfulness; it lives in
 the *sign* of the faithfully-computed infimum. If (II-a)+(II-b) held, the program would deliver a
 genuine new object — a *faithful spectral reformulation*:
 $$
-\boxed{\ \text{RH}\iff \operatorname{sign}\Big(\inf_{T_0,\sigma}\lim_{J}\lambda_{\min}\big(Q(T_0,\sigma,J)\big)\Big)\ge0\ }
+\boxed{\ \text{RH}\iff \mathrm{sign}\,\Big(\inf_{T_0,\sigma}\lim_{J}\lambda_{\min}\big(Q(T_0,\sigma,J)\big)\Big)\ge0\ }
 $$
 RH as the sign of a limit of *computable* eigenvalues.
 
@@ -89,7 +89,7 @@ RH as the sign of a limit of *computable* eigenvalues.
 Where, then, is the danger the advisor identified? Not in faithfulness per se, but in a possible
 **entanglement**: the regularization that yields (II-a) might itself require positivity. The
 sharpest achievable target — and the precise question for a specialist — is therefore *not*
-"prove $\inf\operatorname{spec}\ge0$" (that is RH, hopeless directly) but:
+"prove $\inf\mathrm{spec}\,\ge0$" (that is RH, hopeless directly) but:
 
 > **Can the self-adjoint, bounded-below realization (II-a) and the form-completeness (II-b) be
 > established WITHOUT assuming positivity (RH)?**
@@ -141,7 +141,7 @@ $$
 \boxed{\;\text{H1 observed}\ \not\Longrightarrow\ (0A2)\;}
 $$
 - **Forward:** if the compression is faithful (I) and pollution-free (II), then
-  $\lambda_{\min}(Q)\to\inf\operatorname{spec}(\mathcal{T})$, and uniformity in $T_0$ is expected.
+  $\lambda_{\min}(Q)\to\inf\mathrm{spec}(\mathcal{T})$, and uniformity in $T_0$ is expected.
 - **No converse:** many compression schemes converge cleanly on test cases yet fail spectral
   faithfulness in the limit (this *is* spectral pollution). So a clean H1 on the GRH controls is
   **evidence for**, not **proof of**, (0A2). The reverse direction needs theory, not numerics.

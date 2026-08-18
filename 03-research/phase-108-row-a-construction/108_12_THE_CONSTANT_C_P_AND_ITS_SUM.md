@@ -97,7 +97,7 @@ is already in the program.  107_239 (1.4) defines
 
 \[
  \mathfrak T_S(h)=\lim_{\Lambda\to\infty}
- \Big(\operatorname{Tr}\big(\theta(h)R_\Lambda\big)-2h(1)\log\Lambda\Big),
+ \Big(\mathrm{Tr}\,\big(\theta(h)R_\Lambda\big)-2h(1)\log\Lambda\Big),
 \]
 
 whose counterterm $-2h(1)\log\Lambda$ is **$a$-independent and proportional

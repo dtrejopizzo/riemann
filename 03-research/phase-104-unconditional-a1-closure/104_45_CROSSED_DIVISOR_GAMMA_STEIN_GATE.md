@@ -86,7 +86,7 @@ En coordenadas aditivas escribimos
 El comparador polar conserva también sus dos coordenadas. Sean
 
 \[
- Y_0,X_0\stackrel{\rm ind}{\sim}\operatorname{Exp}(\varepsilon),
+ Y_0,X_0\stackrel{\rm ind}{\sim}\mathrm{Exp}(\varepsilon),
  \qquad S_0=Y_0+X_0\sim\Gamma(2,\varepsilon).                \tag{8}
 \]
 

@@ -37,8 +37,8 @@ suggests a nonharmonic-Fourier exclusion: the mean-periodic frequencies lie
 in the horizontal gap
 
 \[
- |\operatorname {Re}z|\geq\gamma _1,
- \qquad |\operatorname {Im}z|<\frac12,              \tag{4}
+ |\mathrm{Re}\,z|\geq\gamma _1,
+ \qquad |\mathrm{Im}\,z|<\frac12,              \tag{4}
 \]
 
 whereas the archimedean negative band lies strictly below \(\gamma _1\).
@@ -223,7 +223,7 @@ This is exactly the mismatch already detected in 106.62.  It also explains
 why Phase 15, M4.1 does not close the problem.  The archimedean multiplier
 
 \[
- \Psi(t)=\operatorname {Re}\psi\!\left(\frac14+\frac{it}{2}\right)-\log\pi
+ \Psi(t)=\mathrm{Re}\,\psi\!\left(\frac14+\frac{it}{2}\right)-\log\pi
                                                                \tag{16}
 \]
 

@@ -281,6 +281,6 @@ El programa usa Fraction para (3)--(4), la identidad de minimización de
 Young en una malla racional y un polo crítico racional modelo
 \(\rho=1/2+i\), para el cual
 \(1-1/\rho=(3+4i)/5\) no es raíz de unidad. La tabla de
-\(2\operatorname{arsinh}(1/\delta)\) solo ilustra la ley logarítmica de
+\(2\mathrm{arsinh}(1/\delta)\) solo ilustra la ley logarítmica de
 (19); la decisión matemática es la prueba anterior, no la tabla decimal.
 

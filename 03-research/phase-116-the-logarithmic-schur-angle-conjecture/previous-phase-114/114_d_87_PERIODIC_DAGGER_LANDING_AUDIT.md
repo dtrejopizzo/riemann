@@ -237,7 +237,7 @@ be their Halmos coordinates, and apply
 
 \[
  \mathcal Q(p,z)=(2D_Tp-C^{1/2}z,\ C^{1/2}z),\qquad
- J=\operatorname{diag}(I,-I).                            \tag{5.2}
+ J=\mathrm{diag}(I,-I).                            \tag{5.2}
 \]
 
 The global preparation Gram is
@@ -269,7 +269,7 @@ where the complete Gamma finite part is
 
 \[
  m_\infty(\tau)=
- \log\pi-\operatorname{Re}\psi
+ \log\pi-\mathrm{Re}\,\psi
  \left({1\over4}+{i\tau\over2}\right).                  \tag{5.6}
 \]
 

@@ -34,9 +34,9 @@ deduplicated, since each copy was pulled independently by a different research t
 
 The primary-source bibliography for the Connes–Consani programme itself: the arithmetic site and
 scaling site (the two short CRAS notes), Haran's *Geometry over $\mathbb F_1$*, the Riemann–Roch
-strategy for $\overline{\operatorname{Spec}\mathbb Z}$, Hochschild homology and $\zeta$-cycles,
-*Knots, Primes and the Adele Class Space*, the Jacobian of $\overline{\operatorname{Spec}\mathbb
-Z}$, and the absolute geometry of $\operatorname{Spec}\mathbb Z$ via the Fargues–Fontaine curve.
+strategy for $\overline{\mathrm{Spec}\,\mathbb Z}$, Hochschild homology and $\zeta$-cycles,
+*Knots, Primes and the Adele Class Space*, the Jacobian of $\overline{\mathrm{Spec}\,\mathbb
+Z}$, and the absolute geometry of $\mathrm{Spec}\,\mathbb Z$ via the Fargues–Fontaine curve.
 This is the source material behind every place the corpus reads Connes–Consani directly (see
 `03-research/AUDIT_CONSOLIDATED.md` §3 and `NO-GO-LIST.md` MW-5 for what the corpus concluded from
 it).
@@ -49,11 +49,11 @@ it).
 | `arXiv-1509.05576v1` | An Essay on the Riemann Hypothesis |
 | `arXiv-1709.05831v1` | Geometry over $\mathbb F_1$ (Haran) |
 | `arXiv-1805.10501v1` | The Riemann–Roch Strategy |
-| `arXiv-2205.01391v2` | Riemann–Roch for $\overline{\operatorname{Spec}\mathbb Z}$ |
+| `arXiv-2205.01391v2` | Riemann–Roch for $\overline{\mathrm{Spec}\,\mathbb Z}$ |
 | `arXiv-2207.10419v1` | Hochschild Homology, Trace Map and $\zeta$-Cycles |
 | `arXiv-2401.08401v1` | Knots, Primes and the Adele Class Space |
-| `arXiv-2602.15941v1` | On the Jacobian of $\overline{\operatorname{Spec}\mathbb Z}$ |
-| `arXiv-2606.06604v1` | On the Absolute Geometry of $\operatorname{Spec}\mathbb Z$ and the Fargues–Fontaine Curve |
+| `arXiv-2602.15941v1` | On the Jacobian of $\overline{\mathrm{Spec}\,\mathbb Z}$ |
+| `arXiv-2606.06604v1` | On the Absolute Geometry of $\mathrm{Spec}\,\mathbb Z$ and the Fargues–Fontaine Curve |
 
 ## `papers-nuevos/B` — Deninger's own programme, and its newest arithmetic input
 
@@ -75,7 +75,7 @@ against — plus one much newer paper that the corpus currently treats as its be
 The technical machinery Deninger's conjecture actually runs on: leafwise cohomology, dynamical
 zeta functions on foliated systems, Riemannian foliations of bounded geometry, and Connes' own
 spectral interpretation of the zeros. This is what `03-research/phase-42-hodge-dynamics` and
-`phase-43-hodge-foliated-specZ` read from source to test whether $\operatorname{Spec}\mathbb Z$
+`phase-43-hodge-foliated-specZ` read from source to test whether $\mathrm{Spec}\,\mathbb Z$
 can carry a Kähler–Riemann foliation (it cannot, in the realized witness — see `NO-GO-LIST.md`).
 
 | Folder | Title |
@@ -92,7 +92,7 @@ can carry a Kähler–Riemann foliation (it cannot, in the realized witness — 
 Row (d)'s own bibliography: the arithmetic Hodge index theorem for adelic line bundles (both
 parts), quadratic Riemann–Roch formulas, the Riemann–Hurwitz formula for arithmetic surfaces, and
 numerical cohomology for arithmetic surfaces. This is the literature `THE_BACKWARD_MAP.md` and
-`OPTIONS.md` §1d (R16 — does a quadratic Riemann–Roch exist over $\operatorname{Spec}\mathbb Z$ at
+`OPTIONS.md` §1d (R16 — does a quadratic Riemann–Roch exist over $\mathrm{Spec}\,\mathbb Z$ at
 all?) draw on.
 
 | Folder | Title |
@@ -170,7 +170,7 @@ unresolved as to its exact provenance.
 | `arXiv-2511.22755v1` | Zeta Spectral Triples |
 | `arXiv-2511.23257v1` | Quadratic Forms, Real Zeros and Echoes of the Spectral Action |
 | `arXiv-2602.04022v1.tex` | (single-file source; Connes's "Letter to Riemann," per `NO-GO-LIST.md` §VII CAND-1) |
-| `arXiv-2606.06604v1` | On the Absolute Geometry of $\operatorname{Spec}\mathbb Z$ and the Fargues–Fontaine Curve *(duplicate of `papers-nuevos/A`'s copy)* |
+| `arXiv-2606.06604v1` | On the Absolute Geometry of $\mathrm{Spec}\,\mathbb Z$ and the Fargues–Fontaine Curve *(duplicate of `papers-nuevos/A`'s copy)* |
 | `compareplots3.pdf`, `weilcomp.png` | Supporting figures used by `phase-60`'s numerical audit, not papers. |
 
 ## Status

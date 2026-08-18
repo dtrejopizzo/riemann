@@ -41,7 +41,7 @@ $\xi(s)=\xi(1-s)$; $Z$ is its zero set, $m_\rho$ the multiplicity.
 
 > ### Lemma 1.1 (holomorphy and rapid decay in a strip)
 > Let $\tilde h\in\mathcal S_\eta$ with $\eta>1$. Then $\widehat h$ is
-> holomorphic on the strip $|\operatorname{Re}s|<\eta$, and for every
+> holomorphic on the strip $|\mathrm{Re}\,s|<\eta$, and for every
 > $c<\eta$ and every $N$ there is $C=C(N,c)$ with
 > $$|\widehat h(\sigma+i\tau)|\le C(1+|\tau|)^{-N}
 > \qquad\text{for all }|\sigma|\le c,\ \tau\in\mathbb R. \tag{1.4}$$
@@ -75,12 +75,12 @@ work. Neither uses a zero of $\xi$.
 > ### Definition 2.1 (the archimedean functional)
 > For $\tilde h\in\mathcal S_{>1}$ put
 > $$\boxed{\;A(h):=\frac1{2\pi}\int_{-\infty}^{\infty}
-> \Bigl[\tfrac12\operatorname{Re}\psi\bigl(\tfrac14+\tfrac{it}2\bigr)-\tfrac12\log\pi\Bigr]
+> \Bigl[\tfrac12\mathrm{Re}\,\psi\bigl(\tfrac14+\tfrac{it}2\bigr)-\tfrac12\log\pi\Bigr]
 > \bigl[\widehat h(\tfrac12+it)+\widehat h(\tfrac12-it)\bigr]\,dt\;}
 > \tag{2.1}$$
 > and $W_\infty(h):=-A(h)$.
 
-The bracketed kernel is $\operatorname{Re}\bigl(\Gamma_{\mathbb R}'/\Gamma_{\mathbb R}\bigr)(\tfrac12+it)$
+The bracketed kernel is $\mathrm{Re}\,\bigl(\Gamma_{\mathbb R}'/\Gamma_{\mathbb R}\bigr)(\tfrac12+it)$
 for $\Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(s/2)$: it is built from the
 archimedean factor of $\xi$ and from nothing else. The integral converges
 absolutely, since $\psi(\tfrac14+\tfrac{it}2)=O(\log(2+|t|))$ and
@@ -97,9 +97,9 @@ $\widehat h(\tfrac12\pm it)$ decays faster than every polynomial by Lemma 1.1.
 
 **Proof.** Fix $c$ with $1<c<\eta$ and put
 $$G(s):=\widehat h(s)+\widehat h(1-s),$$
-holomorphic on $1-\eta<\operatorname{Re}s<\eta$, a strip containing
+holomorphic on $1-\eta<\mathrm{Re}\,s<\eta$, a strip containing
 $[1-c,c]\supset[0,1]$. By construction $G(1-s)=G(s)$; on the line
-$\operatorname{Re}s=\tfrac12$ this says $G(\tfrac12+it)$ is **even in $t$**.
+$\mathrm{Re}\,s=\tfrac12$ this says $G(\tfrac12+it)$ is **even in $t$**.
 By Lemma 1.1, $G$ decays faster than every polynomial on every vertical line
 of that strip, uniformly.
 
@@ -107,9 +107,9 @@ of that strip, uniformly.
 simple poles exactly at $Z$, residues $m_\rho$, and no other singularity in
 $\mathbb C$ apart from those (the trivial zeros and the pole of $\zeta$ are
 cancelled inside $\xi$). Take the rectangle with vertical sides
-$\operatorname{Re}s=c$ and $\operatorname{Re}s=1-c$ and horizontal sides at
+$\mathrm{Re}\,s=c$ and $\mathrm{Re}\,s=1-c$ and horizontal sides at
 $\pm T$. Since $c<\eta$, all zeros lie strictly inside the vertical strip
-$0\le\operatorname{Re}s\le1$. On a sequence $T_j\to\infty$ chosen to avoid
+$0\le\mathrm{Re}\,s\le1$. On a sequence $T_j\to\infty$ chosen to avoid
 ordinates of zeros one has $|(\xi'/\xi)(\sigma\pm iT_j)|=O(\log^2 T_j)$
 uniformly for $1-c\le\sigma\le c$ — this is the standard unconditional bound
 that accompanies the Riemann–von Mangoldt formula, quoted here, and it is used
@@ -118,8 +118,8 @@ super-polynomial decay (1.4) the horizontal contributions tend to $0$. Hence
 $$\sum_{\rho}m_\rho\widehat h(\rho)
 =\frac1{2\pi i}\Bigl[\int_{(c)}-\int_{(1-c)}\Bigr]\frac{\xi'}{\xi}(s)\,\widehat h(s)\,ds,$$
 absolutely convergent because $|\widehat h(\rho)|$ decays super-polynomially in
-$|\operatorname{Im}\rho|$ uniformly for $0\le\operatorname{Re}\rho\le1$ while
-$\#\{\rho:|\operatorname{Im}\rho|\le T\}=O(T\log T)$.
+$|\mathrm{Im}\,\rho|$ uniformly for $0\le\mathrm{Re}\,\rho\le1$ while
+$\#\{\rho:|\mathrm{Im}\,\rho|\le T\}=O(T\log T)$.
 Substituting $s\mapsto1-s$ in the left integral and using
 $(\xi'/\xi)(1-s)=-(\xi'/\xi)(s)$,
 $$\sum_{\rho}m_\rho\widehat h(\rho)
@@ -130,11 +130,11 @@ $$\frac{\xi'}{\xi}(s)=\underbrace{\frac1s+\frac1{s-1}}_{\text{polar}}
 \;\underbrace{-\tfrac12\log\pi+\tfrac12\psi(s/2)}_{\text{archimedean}}
 \;+\;\underbrace{\frac{\zeta'}{\zeta}(s)}_{\text{arithmetic}}. \tag{2.4}$$
 Each of the three pieces, paired against $G$, is separately absolutely
-convergent on $\operatorname{Re}s=c$: the first is $O(|s|^{-1})$, the second
+convergent on $\mathrm{Re}\,s=c$: the first is $O(|s|^{-1})$, the second
 $O(\log|s|)$, the third is bounded there since $c>1$.
 
 *Step 3 (the polar piece contributes exactly $\widehat h(0)+\widehat h(1)$).*
-Shift $\operatorname{Re}s=c$ to $\operatorname{Re}s=\tfrac12$. The only
+Shift $\mathrm{Re}\,s=c$ to $\mathrm{Re}\,s=\tfrac12$. The only
 singularity crossed is the simple pole of $1/(s-1)$ at $s=1$, of residue
 $G(1)=\widehat h(1)+\widehat h(0)$. Hence
 $$\frac1{2\pi i}\int_{(c)}\Bigl[\frac1s+\frac1{s-1}\Bigr]G(s)\,ds
@@ -154,22 +154,22 @@ piece equals $\widehat h(0)+\widehat h(1)$ exactly.
 > complex $h=f\star\widetilde g$ that the pairing actually produces.
 
 *Step 4 (the archimedean piece is $A(h)$).* $\psi(s/2)$ is holomorphic for
-$\operatorname{Re}s>0$, so the shift from $c$ to $\tfrac12$ crosses nothing:
+$\mathrm{Re}\,s>0$, so the shift from $c$ to $\tfrac12$ crosses nothing:
 $$\frac1{2\pi i}\int_{(c)}\Bigl[\tfrac12\psi(s/2)-\tfrac12\log\pi\Bigr]G(s)\,ds
 =\frac1{2\pi}\int_{\mathbb R}\Bigl[\tfrac12\psi\bigl(\tfrac14+\tfrac{it}2\bigr)-\tfrac12\log\pi\Bigr]G(\tfrac12+it)\,dt .$$
 Since $G(\tfrac12+it)$ is even in $t$, only the even part of the kernel
 survives, and the even part of $\psi(\tfrac14+\tfrac{it}2)$ is
-$\operatorname{Re}\psi(\tfrac14+\tfrac{it}2)$ (because
+$\mathrm{Re}\,\psi(\tfrac14+\tfrac{it}2)$ (because
 $\psi(\bar z)=\overline{\psi(z)}$). This is exactly $A(h)$ of (2.1).
 
-*Step 5 (the arithmetic piece).* For $\operatorname{Re}s=c>1$,
+*Step 5 (the arithmetic piece).* For $\mathrm{Re}\,s=c>1$,
 $\zeta'/\zeta(s)=-\sum_{n\ge1}\Lambda(n)n^{-s}$ absolutely, and
 $\int_{(c)}|G|\,|ds|<\infty$, so we may interchange:
 $$\frac1{2\pi i}\int_{(c)}\frac{\zeta'}{\zeta}(s)G(s)\,ds
 =-\sum_n\Lambda(n)\,\frac1{2\pi i}\int_{(c)}\bigl[\widehat h(s)+\widehat h(1-s)\bigr]n^{-s}\,ds .$$
 By Lemma 1.2 the first term gives $h(n)$. For the second, substitute $w=1-s$;
-the contour $\operatorname{Re}s=c$ traversed upward becomes
-$\operatorname{Re}w=1-c$ traversed upward (two sign reversals cancel), and
+the contour $\mathrm{Re}\,s=c$ traversed upward becomes
+$\mathrm{Re}\,w=1-c$ traversed upward (two sign reversals cancel), and
 $$\frac1{2\pi i}\int_{(c)}\widehat h(1-s)n^{-s}ds
 =\frac1n\cdot\frac1{2\pi i}\int_{(1-c)}\widehat h(w)\,(n^{-1})^{-w}dw
 =\frac{h(1/n)}{n},$$
@@ -197,7 +197,7 @@ one has $\Lambda(n)\ne0$ only for $n=p^k$, where $\Lambda(p^k)=\log p$, so
 
 113_01 Theorem 2.1 computes the local term as $A_p+B_p+h(1)\bigl(\frac{p-2}{p-1}+K\bigr)$
 — that is, **without** the factor $\log p$ — because it evaluates the Tate local
-integral with $\operatorname{vol}(\mathbb Z_p^\times)=1$ rather than with the
+integral with $\mathrm{vol}(\mathbb Z_p^\times)=1$ rather than with the
 normalisation that makes the product formula hold. 113_02 and 113_03 inherit it.
 
 > ### Correction 3.2 (the $\log p$ defect)
@@ -322,7 +322,7 @@ rather than compactly supported.
 > threshold is $\eta>1$ and not something softer.
 
 **T2 (operator-trace limit = arithmetic side).** That
-$\lim_{\Lambda\to\infty}\operatorname{Tr}_{\mathcal H_S}(\theta(h)R_\Lambda)$
+$\lim_{\Lambda\to\infty}\mathrm{Tr}_{\mathcal H_S}(\theta(h)R_\Lambda)$
 exists and equals that common value, for $h\in\mathcal A$.
 
 T2 is not discharged here. But it is now strictly smaller than what 111_01 and
@@ -332,12 +332,12 @@ T2 is not discharged here. But it is now strictly smaller than what 111_01 and
 > Let $h\in\mathcal A$ and let $h_j$ be compactly supported with
 > $\tilde h_j\to\tilde h$ in the $\mathcal S_\eta$ topology, $h_j(1)=0$. The
 > published semilocal trace formula gives, for each $j$,
-> $\lim_\Lambda\operatorname{Tr}(\theta(h_j)R_\Lambda)=P(h_j)+W_\infty(h_j)$.
+> $\lim_\Lambda\mathrm{Tr}(\theta(h_j)R_\Lambda)=P(h_j)+W_\infty(h_j)$.
 > By Theorem 3.3 and Definition 2.1 the right-hand side is continuous in the
 > $\mathcal S_\eta$ topology, so $P(h_j)+W_\infty(h_j)\to P(h)+W_\infty(h)$.
 > **T2 is therefore equivalent to the interchange**
-> $$\lim_{j\to\infty}\ \lim_{\Lambda\to\infty}\operatorname{Tr}(\theta(h_j)R_\Lambda)
-> \;=\;\lim_{\Lambda\to\infty}\ \lim_{j\to\infty}\operatorname{Tr}(\theta(h_j)R_\Lambda),$$
+> $$\lim_{j\to\infty}\ \lim_{\Lambda\to\infty}\mathrm{Tr}(\theta(h_j)R_\Lambda)
+> \;=\;\lim_{\Lambda\to\infty}\ \lim_{j\to\infty}\mathrm{Tr}(\theta(h_j)R_\Lambda),$$
 > i.e. to uniformity in $\Lambda$ of the convergence $\theta(h_j)\to\theta(h)$
 > against the cutoff $R_\Lambda$. It is no longer a claim about the *value* of
 > anything; the value is fixed by Theorem 2.2.
@@ -398,7 +398,7 @@ $h(1)=1$ and still closes to 40 digits, ruling out any missing $h(1)$
 counterterm; and $\widehat h(\tfrac12+it)=e^{-(t-14)^2/2}+e^{-(t+14)^2/2}$,
 where $\widehat h(0)=\widehat h(1)=5\times10^{-43}$ so the identity is
 essentially "zero sum $=A(h)-P(h)$", and it closes to 39 digits. A
-complex-kernel variant of $A(h)$ (without the $\operatorname{Re}$) fails by
+complex-kernel variant of $A(h)$ (without the $\mathrm{Re}$) fails by
 $27\%$–$97\%$, confirming (2.1) is the right functional. Theorem 3.3's
 block ratios against their PNT predictions, as tabulated in §3.
 

@@ -28,7 +28,7 @@ three exact statements for the local model of `107_20`.
 2. For every off-diagonal pair \(m>n>1\) with \(m,n\le 12\), and for
    every rooted label pair \((\chi_1,\chi_2)\), the packet norm equals
    the cyclotomic norm
-   \(\left|\operatorname{Res}(\Phi_m,\Phi_n)\right|\), hence is
+   \(\left|\mathrm{Res}(\Phi_m,\Phi_n)\right|\), hence is
    independent of the rooted labels.
 3. For every diagonal pair \((n,\chi_1),(n,\chi_2)\) with \(n\le 12\),
    the local packet norm still vanishes, so the packet refinement does

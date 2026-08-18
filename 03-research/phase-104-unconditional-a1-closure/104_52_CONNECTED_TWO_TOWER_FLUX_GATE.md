@@ -101,15 +101,15 @@ cual las sumas converjan,
  \boxed{
  \mathbb E_s\{X^2Q(\log D_1,\log D_2)\}
  =\sum_{d,e\ge2}{\Lambda(d)\Lambda(e)\over
-       \operatorname{lcm}(d,e)^s}Q(\log d,\log e).}       \tag{6}
+       \mathrm{lcm}(d,e)^s}Q(\log d,\log e).}       \tag{6}
 \]
 
 En efecto, después de cancelar \(X^2\), la suma sobre los múltiplos de
-\(\operatorname{lcm}(d,e)\) vale
-\(\zeta(s)\operatorname{lcm}(d,e)^{-s}\).
+\(\mathrm{lcm}(d,e)\) vale
+\(\zeta(s)\mathrm{lcm}(d,e)^{-s}\).
 
 El comparador polar tiene una fórmula exactamente paralela. Sea
-\(X_0\sim\operatorname{Exp}(s-1)\) y, condicionado a \(X_0=L\), elija
+\(X_0\sim\mathrm{Exp}(s-1)\) y, condicionado a \(X_0=L\), elija
 \(U_1,U_2\) independientes y uniformes en \([0,L]\). Entonces
 
 \[
@@ -127,11 +127,11 @@ de las intensidades de una marca, el kernel aritmético es
 
 \[
  C_s(d,e)=\Lambda(d)\Lambda(e)
- \{\operatorname{lcm}(d,e)^{-s}-(de)^{-s}\}.             \tag{8}
+ \{\mathrm{lcm}(d,e)^{-s}-(de)^{-s}\}.             \tag{8}
 \]
 
 Si \(d=p^k,e=q^\ell\) y \(p\ne q\), entonces
-\(\operatorname{lcm}(d,e)=de\), luego
+\(\mathrm{lcm}(d,e)=de\), luego
 
 \[
  \boxed{C_s(p^k,q^\ell)=0\qquad(p\ne q).}                \tag{9}

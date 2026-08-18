@@ -254,7 +254,7 @@ chain maps \(\Gamma:K^\bullet\to E^\bullet\),
 \tag{18}
 \]
 
-Let \(P^\bullet=\operatorname {Coker}(\Gamma,B_\Gamma)\), with quotient
+Let \(P^\bullet=\mathrm{Coker}(\Gamma,B_\Gamma)\), with quotient
 map \(\pi:E^\bullet\oplus I^\bullet\to P^\bullet\).  Then
 
 \[
@@ -264,7 +264,7 @@ map \(\pi:E^\bullet\oplus I^\bullet\to P^\bullet\).  Then
 \]
 
 is a chain map satisfying \(D\rho=0\).  It therefore induces a chain map
-from \(\operatorname {Cone}(\rho)\), and in degree one a map from the
+from \(\mathrm{Cone}(\rho)\), and in degree one a map from the
 algebraic cokernel of \(\rho\).
 
 #### Proof
@@ -288,7 +288,7 @@ substitution in Lemma 6.1 is
 \[
  \begin{aligned}
  L_E&=\mathcal L_{\rm conn}\mathfrak e_1
-       \operatorname {Tr}_{\rm orb},\\
+       \mathrm{Tr}_{\rm orb},\\
  B_\Gamma&=\mathbb B_{\infty,Q}^{(1)},\\
  \Gamma&=\Gamma_{S,Q}.
  \end{aligned}
@@ -318,7 +318,7 @@ For a finite prime set \(S\), the charged localization induces a
 complex-linear Hodge-equivariant map
 
 \[
- D_{S,Q}:H^1\!\left(\operatorname {Cone}(\rho_S^\natural)\right)
+ D_{S,Q}:H^1\!\left(\mathrm{Cone}(\rho_S^\natural)\right)
  \longrightarrow\mathbb P_{S,Q}
 \tag{23}
 \]

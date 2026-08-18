@@ -84,8 +84,8 @@ So Q(anchor) joins the audited list — but, unlike a dead end, it **sharpens th
 content**:
 
 > **The precise missing ingredient (the residue of value).** Not "an anchor at the center." It is a **Hodge index
-> theorem on an arithmetic surface for $\operatorname{Spec}\mathbb Z$** — i.e., an object playing the role of
-> $C\times C$ (a "$\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z$"), carrying an
+> theorem on an arithmetic surface for $\mathrm{Spec}\,\mathbb Z$** — i.e., an object playing the role of
+> $C\times C$ (a "$\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$"), carrying an
 > intersection form whose **negative-definiteness on a primitive part** would force the zeros to $\Re s=\tfrac12$.
 > The anchor (edge pole) is already there; what is missing is **the surface and its index theorem.** This is
 > exactly the Connes–Consani / Deninger / Arakelov target — and it **is** Weil positivity, hence RH-equivalent
@@ -101,5 +101,5 @@ content**:
 - **Bifurcation resolved:** Q(anchor) **collapses** to Weil/Hodge positivity (the capstone). It is *not* a new
   RH-relevant object. The framework's merge of "anchor" and "definiteness" was an over-reach, now corrected.
 - **The sharpened wall (genuine value):** the missing ingredient is a **Hodge index theorem on a 2-dimensional
-  arithmetic geometry over $\operatorname{Spec}\mathbb Z$** — the anchor is present, the *surface* is what is
+  arithmetic geometry over $\mathrm{Spec}\,\mathbb Z$** — the anchor is present, the *surface* is what is
   absent. This is the most precise statement of the RH wall the program has reached, and it is RH-equivalent.

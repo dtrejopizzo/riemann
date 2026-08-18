@@ -20,15 +20,15 @@ An object is a quintuple
    \mathbf X=\big(D,\ \mathcal D^{\mathrm{src}},\ \mathsf K,\ \mathfrak b,\ \mathcal R\big),
 \]
 where: $D$ is a real-symmetric entire determinant section; $\mathcal D^{\mathrm{src}}$ a holomorphic
-finite-rank source germ (D2) with $\mathcal D^{\mathrm{src}}(0)=D$; $\mathsf K=\operatorname{Pol}(d^2\log
+finite-rank source germ (D2) with $\mathcal D^{\mathrm{src}}(0)=D$; $\mathsf K=\mathrm{Pol}(d^2\log
 \mathcal D^{\mathrm{src}}(0))$ the recovered Hermitian kernel (D2, Def. rec) with finitely many negative
 squares; $\mathfrak b$ the Kreĭn–Langer grading divisor (D1, Def. divisor) with $\deg\mathfrak b=
-\operatorname{sq}_-(\mathsf K)$; and $\mathcal R$ a Pontryagin/de Branges realization (D1, Thm realiz)
+\mathrm{sq}_-(\mathsf K)$; and $\mathcal R$ a Pontryagin/de Branges realization (D1, Thm realiz)
 certifying that $D,\mathcal D^{\mathrm{src}},\mathsf K,\mathfrak b$ are mutually compatible (come from one
 operator).
 The index is \textbf{computed, not declared}:
 \[
-   \kappa(\mathbf X):=\operatorname{sq}_-(\mathsf K)=\deg\mathfrak b\qquad(\text{equal by D1, Thm d1}).
+   \kappa(\mathbf X):=\mathrm{sq}_-(\mathsf K)=\deg\mathfrak b\qquad(\text{equal by D1, Thm d1}).
 \]
 $\mathcal G_0:=\{\mathbf X:\kappa(\mathbf X)=0\}=\{\mathfrak b=1\}$ is the full subcategory of
 Hermite–Biehler / Hilbert objects.
@@ -69,7 +69,7 @@ $\kappa:\mathcal G\to(\Z_{\ge0},\le)$, $\mathbf X\mapsto\kappa(\mathbf X)$, $\Ph
 a functor: $\sigma$ is additive under composition and $\kappa(\mathbf X')=\kappa(\mathbf X)+\sigma(\Phi)$.
 Along $\mathcal G^+$ (positive extensions and gauges only), $\sigma\equiv0$ and $\kappa$ is preserved.
 \end{lemma}
-\emph{Proof.} (P+) and (G) preserve $\operatorname{sq}_-$ (Stage 1, S2 / D1 Cor. hbn); (P$-$) adds at
+\emph{Proof.} (P+) and (G) preserve $\mathrm{sq}_-$ (Stage 1, S2 / D1 Cor. hbn); (P$-$) adds at
 most one negative square (Stage 1, S4 mechanism). Additivity of $\sigma$ is additivity of negative-square
 count under successive rank-one extensions (interlacing). On $\mathcal G^+$ there are no $(\mathrm P-)$
 generators, so $\sigma=0$. $\square$
@@ -99,7 +99,7 @@ squares of a direct-sum kernel add; the Blaschke divisors multiply. $\square$
 
 \begin{remark}[the Witt content]
 A finite Hermitian form is not determined by its determinant; its correct invariant is the determinant
-line *graded by inertia* (the Witt class). $\mathcal G$ is the categorification: $\operatorname{For}(
+line *graded by inertia* (the Witt class). $\mathcal G$ is the categorification: $\mathrm{For}(
 \mathbf X)=D$ is the scalar shadow, and the extra data $(\mathcal D^{\mathrm{src}},\mathsf K,\mathfrak b)$
 is the Witt/inertia grading. A positive pole tensors by a positive line: its scalar norm diverges, but
 its negative index is $0$ — which is precisely why the positive pole can be quotiented (shorted, D4)
@@ -120,7 +120,7 @@ The assignment
 from admissible canonical operators to $\mathcal G$ is a functor; it \textbf{separates signature-blind
 coincidences} ($D_A=D_B$ with $\kappa(A)\ne\kappa(B)$ are distinct objects of $\mathcal G$,
 Thm~D2-recon); it is \textbf{monoidal} (Prop.~\ref{prop:add}); and it \textbf{agrees with the classical
-Kreĭn–Langer index} ($\kappa(\widetilde D(A))=\operatorname{ind}_-\mathcal H_\kappa(E_A)$, D1).
+Kreĭn–Langer index} ($\kappa(\widetilde D(A))=\mathrm{ind}_-\mathcal H_\kappa(E_A)$, D1).
 \end{theorem}
 \emph{Proof.} Functoriality and monoidality are §2–§3; signature separation is D2, Thm recon; agreement
 with classical index is D1, Thm d1 applied to $\mathsf K_A=\mathsf N_{M_A}$. $\square$

@@ -359,7 +359,7 @@ $$\kappa = 0 \iff H_C \text{ is genuinely self-adjoint in }\mathcal{K} \iff \tex
 ### 9.7 Phase 27 — Adelic rigidity (next direction)
 
 **Prerrequisito:** Conjetura 26-C.2 (Teorema Puente) aceptada como hipótesis de trabajo.
-**Objetivo:** $\operatorname{neg.ind}(H_C) = 0$ via la estructura de $C_\mathbb{Q}$.
+**Objetivo:** $\mathrm{neg.ind}(H_C) = 0$ via la estructura de $C_\mathbb{Q}$.
 
 The bridge changes the question entirely: RH is now equivalent to showing that the Connes
 scaling operator has no complex eigenvalues, which reduces to excluding non-unitary
@@ -387,13 +387,13 @@ local-global principle, adelic factorization Q = ∏_p Q_p, representation theor
 
 2. **Wall A es no-factorización** (Prop. 27-C.1): El término de ceros $Q_{\rm zero} = \sum_\rho \hat{h}(\rho)$ no factoriza sobre primos. Los ceros de $\zeta$ son objetos globales; los factores de Euler $(1-p^{-s})^{-1}$ nunca se anulan. No existe análogo del "Frobenius en un primo" para $\zeta/\mathbb{Q}$.
 
-3. **Wall A = sitio aritmético de Connes–Consani** (Prop. 27-C.5): La factorización $Q = Q_\infty + \sum_p Q_p$ requiere construir $H^1(\operatorname{Spec}\mathbb{Z}, \mathcal{F})$ con operador de Frobenius aritmético y forma de intersección positiva. Ésto es exactamente el programa de Connes–Consani.
+3. **Wall A = sitio aritmético de Connes–Consani** (Prop. 27-C.5): La factorización $Q = Q_\infty + \sum_p Q_p$ requiere construir $H^1(\mathrm{Spec}\,\mathbb{Z}, \mathcal{F})$ con operador de Frobenius aritmético y forma de intersección positiva. Ésto es exactamente el programa de Connes–Consani.
 
 4. **Wall B sin solución conocida** (Prop. 27-C.6): El teorema de Hasse–Minkowski clásico no aplica a formas hermitianas infinito-dimensionales.
 
 **Diagrama de equivalencias completo:**
 
-$$\text{RH} \iff \kappa(Q) = 0 \iff \operatorname{neg.ind}(H_C) = 0 \iff Q \ge 0 \iff \text{Wall A + } Q_p \ge 0 \forall p \iff H^1(\operatorname{Spec}\mathbb{Z}) \ge 0.$$
+$$\text{RH} \iff \kappa(Q) = 0 \iff \mathrm{neg.ind}(H_C) = 0 \iff Q \ge 0 \iff \text{Wall A + } Q_p \ge 0 \forall p \iff H^1(\mathrm{Spec}\,\mathbb{Z}) \ge 0.$$
 
 **Veredicto Phase 27:** Éxito metodológico. Wall W4-RSRP identificado con precisión máxima como el programa de Connes–Consani. El obstáculo final está más precisamente caracterizado que en cualquier fase anterior.
 

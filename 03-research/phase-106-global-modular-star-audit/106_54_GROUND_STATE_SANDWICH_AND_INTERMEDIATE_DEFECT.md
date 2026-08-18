@@ -212,7 +212,7 @@ Let \(\widetilde P=\mathcal UP_\mu\mathcal U^{-1}\) be a finite reducing
 cluster. The physical curvature is
 
 \[
- \operatorname {Tr}
+ \mathrm{Tr}
  \{\widetilde P(\widetilde L^2-\tfrac12\widetilde L)\}. \tag{15}
 \]
 
@@ -222,8 +222,8 @@ the following three objects with their displayed signs:
 \[
 \begin{aligned}
  &\text{primitive completed Riccati curvature},\\
- &-\operatorname {Tr}(\widetilde P\mathcal D_{\varepsilon,N}),\\
- &\operatorname {Tr}\widetilde P
+ &-\mathrm{Tr}(\widetilde P\mathcal D_{\varepsilon,N}),\\
+ &\mathrm{Tr}\,\widetilde P
  \{V^2-VT-TV-\tfrac12V+\tfrac12T\}.                 \tag{16}
 \end{aligned}
 \]

@@ -129,7 +129,7 @@ Hence \(P_0,P_{\mathcal R},Q\) reduce \(B=A-\frac12\).  For
  \tag{6}
 \]
 
-where \(B_Q=QBQ|_{\operatorname {Ran}Q}\).
+where \(B_Q=QBQ|_{\mathrm{Ran}\,Q}\).
 
 Equation (6) separates two different operations.
 
@@ -287,11 +287,11 @@ The self-energy \(\Sigma_P\) is operator Herglotz:
 
 \[
  \boxed{
- \operatorname {Im}\Sigma_P(z)
- =(\operatorname {Im}z)\,
+ \mathrm{Im}\,\Sigma_P(z)
+ =(\mathrm{Im}\,z)\,
  C^*(T-\overline z)^{-1}(T-z)^{-1}C
  \ge0
- \quad(\operatorname {Im}z>0).}
+ \quad(\mathrm{Im}\,z>0).}
  \tag{20}
 \]
 
@@ -393,7 +393,7 @@ gives convergence of the compressed matrix elements
 \[
  C_R^{\rm phys}
  =Q_R\mathcal B_{\sigma,R}Q_R
- \quad\hbox{on }\operatorname {Ran}Q_R.
+ \quad\hbox{on }\mathrm{Ran}\,Q_R.
  \tag{28}
 \]
 
@@ -455,7 +455,7 @@ than the fixed-profile form convergence proved by 106.127.  If a direct
 graph estimate gives \(\eta_R\to0\), a cofinal
 \(\kappa_R\downarrow0\) satisfying (31) can then be selected.  Mosco
 convergence alone supplies no such choice, even before passing to the
-moving spaces \(\operatorname {Ran}Q_R\).
+moving spaces \(\mathrm{Ran}\,Q_R\).
 
 For the physical admittance
 
@@ -466,7 +466,7 @@ For the physical admittance
 \]
 
 the same algebra and remainder bound hold on a family
-\(E_R\subset\operatorname {Ran}Q_R\) only under the additional quantitative
+\(E_R\subset\mathrm{Ran}\,Q_R\) only under the additional quantitative
 hypothesis
 
 \[
@@ -482,7 +482,7 @@ boundary synthesis/observability enters.
 
 For an ambient fixed smooth profile, 106.127 gives the same formula below
 without the exterior \(Q_R\)'s.  For a physical boundary profile
-\(g\in\operatorname {Ran}Q_R\), it gives
+\(g\in\mathrm{Ran}\,Q_R\), it gives
 
 \[
  \boxed{
@@ -502,7 +502,7 @@ where
 \[
  \begin{aligned}
  \mathcal P_D(g)
- =-2\operatorname {Re}\int_{x>y}
+ =-2\mathrm{Re}\,\int_{x>y}
  &D(e^{x-y})e^{(x-y)/2}
  \overline{K(x)g(x)}\\
  &\times\{(Kg)'(y)+\tfrac12K(y)g(y)\}\,dy\,dx,

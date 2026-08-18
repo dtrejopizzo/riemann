@@ -46,7 +46,7 @@ This is stronger than merely having an endomorphism of the direct limit.
 Put
 
 \[
- Z_N=\operatorname{Spec}\mathcal W_N.                 \tag{2.1}
+ Z_N=\mathrm{Spec}\,\mathcal W_N.                 \tag{2.1}
 \]
 
 The ring endomorphism `F_m|W_N` induces a scheme endomorphism
@@ -59,7 +59,7 @@ Its graph is the closed subscheme
 
 \[
  G_{m,N}=\Gamma(f_{m,N})
- \hookrightarrow Z_N\times_{\operatorname{Spec}\mathbb Z}Z_N,             \tag{2.3}
+ \hookrightarrow Z_N\times_{\mathrm{Spec}\,\mathbb Z}Z_N,             \tag{2.3}
 \]
 
 defined affinely by the multiplication map
@@ -103,7 +103,7 @@ of `a_36`.
 As a `Z`-module, `W_N` is free of rank
 
 \[
- \operatorname{rank}_{\mathbb Z}\mathcal W_N=\tau(N), 
+ \mathrm{rank}_{\mathbb Z}\mathcal W_N=\tau(N), 
                                                                \tag{3.1}
 \]
 
@@ -117,8 +117,8 @@ particular,
 Moreover
 
 \[
- Z_N\times_{\operatorname{Spec}\mathbb Z}Z_N
- =\operatorname{Spec}(\mathcal W_N\otimes_{\mathbb Z}\mathcal W_N)         \tag{3.3}
+ Z_N\times_{\mathrm{Spec}\,\mathbb Z}Z_N
+ =\mathrm{Spec}(\mathcal W_N\otimes_{\mathbb Z}\mathcal W_N)         \tag{3.3}
 \]
 
 is again finite over `Spec Z`, so
@@ -133,7 +133,7 @@ The pro-system (2.6) gives literal Frobenius graphs, but neither its stages
 nor their relative squares have surface dimension. It cannot replace
 
 \[
- X\times_{\operatorname{Spec}\mathbb F\{\pm1\}}X,      \tag{3.5}
+ X\times_{\mathrm{Spec}\,\mathbb F\{\pm1\}}X,      \tag{3.5}
 \]
 
 whose two independent rulings are essential for the quadratic coefficient
@@ -151,7 +151,7 @@ The operatorial gate H7-I7-REAL now splits sharply:
 2. **H7-WLEF:** prove a Lefschetz/intersection identity
    \[
    \langle\rho(G_n),\Delta\rangle_Y
-   =\log|\operatorname{tr}(\lambda_1(V_n\phi_1))|
+   =\log|\mathrm{tr}(\lambda_1(V_n\phi_1))|
    =\Lambda(n).                                        \tag{4.1}
    \]
 

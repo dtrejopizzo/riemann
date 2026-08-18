@@ -153,7 +153,7 @@ algebra of trigonometric polynomials, viewed between two different
 
 \[
  \mathcal R:
- \operatorname {Trig}(\widehat G)\subset L^2(\mu_E)
+ \mathrm{Trig}(\widehat G)\subset L^2(\mu_E)
  \longrightarrow L^2(\mu_C).                               \tag{13}
 \]
 

@@ -210,7 +210,7 @@ an \(L^2\) primitive vacuum.
 The coisometry of D.89 gives
 \[
  \mathcal K_s=\ker\mathcal A\widehat\oplus
- \operatorname{Ran}\mathcal A^\dagger,\qquad
+ \mathrm{Ran}\,\mathcal A^\dagger,\qquad
  I-\mathcal A^\dagger\mathcal A=P_{\ker\mathcal A}.      \tag{5.1}
 \]
 Every row-C functional on the Künneth tensor factors through

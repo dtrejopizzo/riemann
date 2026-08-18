@@ -39,8 +39,8 @@ for finite \(S\subset\mathbb Z^2\), and suppose that \(L(S)=L(S')\)
 whenever the upper Newton polygons agree:
 
 \[
- \operatorname{conv}(S)+\mathbb R_+^2
- =\operatorname{conv}(S')+\mathbb R_+^2.
+ \mathrm{conv}(S)+\mathbb R_+^2
+ =\mathrm{conv}(S')+\mathbb R_+^2.
  \tag{3.1}
 \]
 
@@ -56,8 +56,8 @@ The points \(u,v\) are incomparable for the product order and \(w\) is
 their midpoint.  Consequently
 
 \[
- \operatorname{conv}\{u,v\}+\mathbb R_+^2
- =\operatorname{conv}\{u,w,v\}+\mathbb R_+^2.
+ \mathrm{conv}\,\{u,v\}+\mathbb R_+^2
+ =\mathrm{conv}\,\{u,w,v\}+\mathbb R_+^2.
 \]
 
 The required additive identification gives
@@ -77,7 +77,7 @@ the general idempotence lemma in disguise.
 The map \(\Lambda_{n,m}\) of 107_163 is canonical on the **enriched
 unreduced monomial support**.  It is not a functor of the reduced Newton
 polygon alone and must not be described as an additive linearization of
-\(\operatorname{Conv}(\mathbb Z^2)\).
+\(\mathrm{Conv}(\mathbb Z^2)\).
 
 Thus the proposed route
 
@@ -92,7 +92,7 @@ is closed.  A viable route must instead keep a support/phase enhancement
 
 \[
  \widetilde{\mathcal O}
- \xrightarrow{\operatorname{Newt}}
+ \xrightarrow{\mathrm{Newt}}
  \mathcal O_{\rm red},
 \]
 

@@ -50,7 +50,7 @@ El programa $\omega$ establece que las fluctuaciones de $\psi(x)$ a escalas fina
 
 $$\frac{1}{H}\int_x^{x+H} (\psi(x+h)-\psi(x))\,dh \approx h \cdot e^{G(x)}$$
 
-donde $G(x)$ es un campo gaussiano con función de correlación $\operatorname{Cov}(G(x), G(y)) = \log\log|x-y|^{-1} + O(1)$ — el caos multiplicativo logarítmico.
+donde $G(x)$ es un campo gaussiano con función de correlación $\mathrm{Cov}(G(x), G(y)) = \log\log|x-y|^{-1} + O(1)$ — el caos multiplicativo logarítmico.
 
 La transformada de Fourier del CMG tiene **medida espectral absolutamente continua** respecto a la medida de Lebesgue en $\mathbb{R}$ (es un proceso de potencia continua). NO tiene masa puntual (átomos) en ninguna frecuencia.
 

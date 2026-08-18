@@ -32,9 +32,9 @@ $a_n\in\{0,1\}$, soportada en $(n,W)=1$, cuya función contadora
 satisface
 
 \[
- P(x)=\operatorname {Li}(x)
+ P(x)=\mathrm{Li}(x)
       -2\Re\!\int_{X_0}^x{t^{\rho-1}\over\log t}\,dt+O(1)
-      =\operatorname {Li}(x)
+      =\mathrm{Li}(x)
        -2\Re{x^\rho\over\rho\log x}
        +O\!\left({x^\beta\over\log ^2x}\right).           \tag{4}
 \]
@@ -99,7 +99,7 @@ Por último, la energía prima correspondiente viola el blanco de
 `104_93` con tasa polinomial:
 
 \[
- \sum_{m\le N}{\{P(m)-\operatorname {Li}(m)\}^2\over m(m+1)}
+ \sum_{m\le N}{\{P(m)-\mathrm{Li}(m)\}^2\over m(m+1)}
  \asymp_{W,\rho}{N^{2\beta-1}\over\log ^2N}.               \tag{9}
 \]
 
@@ -200,7 +200,7 @@ Integración por partes compleja da
  +O_\rho\!\left({x^\beta\over\log ^2x}\right),           \tag{17}
 \]
 
-y (4) sigue de (11), (15) y la definición de $\operatorname {Li}$,
+y (4) sigue de (11), (15) y la definición de $\mathrm{Li}$,
 con una constante de base absorbida. Para todo $C>0$,
 
 \[
@@ -352,7 +352,7 @@ son por tanto tres caras del mismo sistema exacto.
 De (4) y (17), uniformemente para $x$ grande,
 
 \[
- P(x)-\operatorname {Li}(x)
+ P(x)-\mathrm{Li}(x)
  =-{2x^\beta\over|\rho|\log x}
    \cos(\gamma\log x-\arg\rho)
   +O_\rho\!\left({x^\beta\over\log^2x}\right).            \tag{30}

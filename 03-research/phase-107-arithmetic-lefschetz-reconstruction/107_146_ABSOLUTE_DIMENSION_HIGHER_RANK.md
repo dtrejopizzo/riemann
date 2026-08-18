@@ -143,11 +143,11 @@ $|2^ie_j|_1=2^i\le n$ and $F\subseteq I_r(n)$.
 
 Let $v\in I_r(n)$.  For each $j$, $|v_j|\le|v|_1\le n<2^k$, so there is a
 unique $S_j\subseteq\{0,\dots,k-1\}$ with $|v_j|=\sum_{i\in S_j}2^i$.
-Define $\alpha(2^ie_j):=\operatorname{sign}(v_j)$ for $i\in S_j$ and $0$
+Define $\alpha(2^ie_j):=\mathrm{sign}(v_j)$ for $i\in S_j$ and $0$
 otherwise.  Then
 
 \[
- \sum\alpha(f)f=\sum_j \operatorname{sign}(v_j)\,|v_j|\,e_j=v,
+ \sum\alpha(f)f=\sum_j \mathrm{sign}(v_j)\,|v_j|\,e_j=v,
 \]
 
 and the mass is

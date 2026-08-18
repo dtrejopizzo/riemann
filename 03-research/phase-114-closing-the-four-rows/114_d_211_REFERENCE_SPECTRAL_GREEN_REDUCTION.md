@@ -57,7 +57,7 @@ coercivity of \(Q_T\) at high modes remains.
 
 Because \(R_T\) is self-adjoint with compact resolvent, its spectral
 projection \(P_\Lambda\) has finite rank.  For every
-\(z\in Z_\Lambda\operatorname {Dom}(R_T^{1/2})\), the spectral theorem and
+\(z\in Z_\Lambda\mathrm{Dom}(R_T^{1/2})\), the spectral theorem and
 (0.2) give
 
 \[

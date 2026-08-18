@@ -111,7 +111,7 @@ If \(\rho\) has multiplicity \(m_\rho\), the logarithmic derivative in
 (9) gives a simple pole at \(w_\rho\) with nonzero residue
 
 \[
- \operatorname*{Res}_{z=w_\rho}G(z)=m_\rho w_\rho.        \tag{11}
+ \mathop{\mathrm{Res}}_{z=w_\rho}G(z)=m_\rho w_\rho.        \tag{11}
 \]
 
 Hence no coincident zero can remove the pole: multiplicities add with the

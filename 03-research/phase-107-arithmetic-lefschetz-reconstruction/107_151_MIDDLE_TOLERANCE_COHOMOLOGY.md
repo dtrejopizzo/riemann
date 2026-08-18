@@ -93,13 +93,13 @@ module.
 
 ## 4. Recovery of ordinary cohomology
 
-If \(E^0=HA^0\), then \(Hd_0(E^0)=H(\operatorname{im}d_0)\) is a subgroup
+If \(E^0=HA^0\), then \(Hd_0(E^0)=H(\mathrm{im}\,d_0)\) is a subgroup
 of \(HA^1\).  Relation (1.3) is then transitive and
 
 \[
  (Z^1/\mathcal R)(1_+)
  =
- \ker d_1/\operatorname{im}d_0.
+ \ker d_1/\mathrm{im}\,d_0.
 \]
 
 Thus the construction recovers ordinary middle cohomology whenever the

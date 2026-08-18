@@ -5,7 +5,7 @@
 Let
 
 \[
-D(z)=\left.\partial_\nu\operatorname{Li}_\nu(z)\right|_{\nu=0}
+D(z)=\left.\partial_\nu\mathrm{Li}_\nu(z)\right|_{\nu=0}
 \]
 
 and retain the corrected scalar boundary value of 107_215.  Put
@@ -14,8 +14,8 @@ polylogarithm cut.  Differentiating Jonquiere's inversion formula at
 order zero gives
 
 \[
- \operatorname{Re}\{D(x+i0)+D(x^{-1})\}
- =-\operatorname{Re}\psi\left(-{iL\over2\pi}\right)
+ \mathrm{Re}\,\{D(x+i0)+D(x^{-1})\}
+ =-\mathrm{Re}\,\psi\left(-{iL\over2\pi}\right)
   -\gamma-\log(2\pi).
  \tag{1.1}
 \]
@@ -23,7 +23,7 @@ order zero gives
 Since
 
 \[
- \operatorname{Re}{\log(1-x-i0)\over\log(x+i0)}
+ \mathrm{Re}{\log(1-x-i0)\over\log(x+i0)}
  ={\log(x-1)\over\log x},
 \]
 
@@ -32,7 +32,7 @@ the real relative anomaly has the exact expression
 \[
  R^{\mathrm{rel}}(x^{-1})
  =2D(x^{-1})
- +\operatorname{Re}\psi\left(-{i\log x\over2\pi}\right)
+ +\mathrm{Re}\,\psi\left(-{i\log x\over2\pi}\right)
  +\gamma+\log(2\pi)-{\log(x-1)\over\log x}.
  \tag{1.2}
 \]
@@ -53,7 +53,7 @@ The standard digamma asymptotic in every closed sector avoiding the
 negative real axis gives
 
 \[
- \operatorname{Re}\psi(-iy)=\log y+O(y^{-2}).
+ \mathrm{Re}\,\psi(-iy)=\log y+O(y^{-2}).
  \tag{2.2}
 \]
 

@@ -29,7 +29,7 @@ Then
 
 \[
  \boxed{
- \operatorname {rank}P_{\rm lo}
+ \mathrm{rank}\,P_{\rm lo}
  \le {2TR\over\pi\eta},}                            \tag{0.3}
 \]
 
@@ -58,7 +58,7 @@ Moreover there is an exact decomposition
  \boxed{
  \mathcal R_T^{-1}=G_{\rm hi}+G_{\rm lo},qquad
  \|G_{\rm hi}\|\le{1\over(1-\eta)h_{5/4}(R)},qquad
- \operatorname {rank}G_{\rm lo}\le2\operatorname {rank}P_{\rm lo}.} \tag{0.6}
+ \mathrm{rank}\,G_{\rm lo}\le2\mathrm{rank}\,P_{\rm lo}.} \tag{0.6}
 
 Thus every return word splits into a pure high-mode word, with an explicit
 Gamma denominator at every inverse, and words containing at least one
@@ -84,15 +84,15 @@ where now (P_T) also denotes the support projection.  This is a positive
 compact contraction with
 
 \[
- \operatorname {Tr}C_{T,R}={2TR\over\pi}.            \tag{1.2}
+ \mathrm{Tr}\,C_{T,R}={2TR\over\pi}.            \tag{1.2}
 
 Restrict it to the exact two-Tate primitive subspace.  Compression cannot
 increase the trace, so the same upper bound holds.  Since every eigenvalue
 on (P_{\rm lo}) is greater than (\eta),
 
 \[
- \eta\operatorname {rank}P_{\rm lo}
- \le\operatorname {Tr}C_{T,R},                       \tag{1.3}
+ \eta\mathrm{rank}\,P_{\rm lo}
+ \le\mathrm{Tr}\,C_{T,R},                       \tag{1.3}
 
 which proves (0.3).  The two Tate conditions are present before the
 spectral split; no ambient low mode is reintroduced.
@@ -149,12 +149,12 @@ Put (G=\mathcal R_T^{-1}) on its supported range and define
 
 Then (G=G_{\rm hi}+G_{\rm lo}).  Equation (0.5) bounds the first
 summand.  The range of (P_{\rm lo}G) lies in
-(\operatorname {Ran}P_{\rm lo}), and the range of (GP_{\rm lo}) has
-dimension at most (\operatorname {rank}P_{\rm lo}).  Hence
+(\mathrm{Ran}\,P_{\rm lo}), and the range of (GP_{\rm lo}) has
+dimension at most (\mathrm{rank}\,P_{\rm lo}).  Hence
 
 \[
- \operatorname {rank}G_{\rm lo}
- \le2\operatorname {rank}P_{\rm lo},                 \tag{3.2}
+ \mathrm{rank}\,G_{\rm lo}
+ \le2\mathrm{rank}\,P_{\rm lo},                 \tag{3.2}
 
 which proves (0.6).
 
@@ -222,7 +222,7 @@ sum over (\{\mathrm{hi},\mathrm{lo}\})-marked words.
   (a_R^{-k}).  To retain D.178's simplex constant one still needs a
   high-frequency almost-convolution estimate for the Hankel boundary
   blocks.
-* Every other word factors through (\operatorname {Ran}P_{\rm lo}) at
+* Every other word factors through (\mathrm{Ran}\,P_{\rm lo}) at
   least once.  Its nontrivial alignment is therefore contained in a block
   of rank at most (2TR/(\pi\eta)), where the low-frequency PNT estimate for
   (E_N) and the exact two Tate moments apply.

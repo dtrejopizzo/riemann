@@ -2,7 +2,7 @@
 
 **Fecha:** junio 2026
 **Prerrequisito:** Conjetura 26-C.2 (Teorema Puente) aceptada como hipótesis de trabajo.
-**Objetivo único:** probar $\operatorname{neg.ind}(H_C) = 0$ mediante la estructura de $C_\mathbb{Q}$.
+**Objetivo único:** probar $\mathrm{neg.ind}(H_C) = 0$ mediante la estructura de $C_\mathbb{Q}$.
 
 Si Phase 26 se completa (el puente se establece), el programa cambia de naturaleza:
 ya no se estudian ceros de $\zeta$. Se estudia un operador en un espacio adélico.
@@ -13,18 +13,18 @@ ya no se estudian ceros de $\zeta$. Se estudia un operador en un espacio adélic
 
 **Lo que Phase 26 habría establecido:**
 
-$$\kappa(Q) = \operatorname{neg.ind}(H_C),$$
+$$\kappa(Q) = \mathrm{neg.ind}(H_C),$$
 
 donde $Q$ es la forma de Weil, $H_C$ es el operador de escalado de Connes, y la
 identidad vale en el espacio de Pontryagin $\mathcal{K} = (L^2(C_\mathbb{Q}), Q)$.
 
 **La consecuencia:**
 
-$$\text{RH} \iff \kappa(Q) = 0 \iff \operatorname{neg.ind}(H_C) = 0.$$
+$$\text{RH} \iff \kappa(Q) = 0 \iff \mathrm{neg.ind}(H_C) = 0.$$
 
 **El único problema abierto:**
 
-$$\boxed{\operatorname{neg.ind}(H_C) = 0.}$$
+$$\boxed{\mathrm{neg.ind}(H_C) = 0.}$$
 
 ---
 
@@ -33,9 +33,9 @@ $$\boxed{\operatorname{neg.ind}(H_C) = 0.}$$
 El índice negativo de $H_C$ en $\mathcal{K}$ es el número de pares de eigenvalores
 complejos (no-reales) de $H_C$. Por el Teorema Puente:
 
-$$\operatorname{neg.ind}(H_C) = 2m = \text{número de órbitas fuera de línea.}$$
+$$\mathrm{neg.ind}(H_C) = 2m = \text{número de órbitas fuera de línea.}$$
 
-Entonces $\operatorname{neg.ind}(H_C) = 0$ equivale a: **no existen caracteres
+Entonces $\mathrm{neg.ind}(H_C) = 0$ equivale a: **no existen caracteres
 no-unitarios en el espectro de escalado de $H_C$.**
 
 Cada dirección negativa de $Q$ corresponde a un carácter no-unitario
@@ -94,7 +94,7 @@ Sea $Q = Q_\infty \times \prod_p Q_p$ la factorización local de la forma de Wei
 $$Q_p \ge 0 \text{ para todo primo } p
 \implies Q \ge 0 \text{ globalmente}
 \implies \kappa(Q) = 0
-\implies \operatorname{neg.ind}(H_C) = 0.$$
+\implies \mathrm{neg.ind}(H_C) = 0.$$
 
 **La analogía:** El teorema de Hasse–Minkowski dice que una forma cuadrática $Q$ sobre
 $\mathbb{Q}$ es positiva-definida globalmente sii es positiva-definida localmente (en
@@ -120,10 +120,10 @@ forma global $Q$) ser establecido para formas hermitianas infinito-dimensionales
 
 ### 27-D: Conclusión
 
-**Objetivo:** De 27-C, deducir $\operatorname{neg.ind}(H_C) = 0$ y por ende RH.
+**Objetivo:** De 27-C, deducir $\mathrm{neg.ind}(H_C) = 0$ y por ende RH.
 
 **Lógica:** Si el principio local-global se establece y $Q_p \ge 0$ para todo $p$,
-entonces $Q \ge 0$, $\kappa = 0$, $\operatorname{neg.ind}(H_C) = 0$, RH.
+entonces $Q \ge 0$, $\kappa = 0$, $\mathrm{neg.ind}(H_C) = 0$, RH.
 
 ---
 
@@ -138,7 +138,7 @@ Resultado: todos fallan como Wall W4-RSRP.
 **Phase 26:** El puente Kreĭn–Connes.
 Resultado (condicional): κ = neg.ind($H_C$).
 
-**Phase 27:** Usa el puente para atacar $\operatorname{neg.ind}(H_C) = 0$ con herramientas adélicas.
+**Phase 27:** Usa el puente para atacar $\mathrm{neg.ind}(H_C) = 0$ con herramientas adélicas.
 
 La diferencia crucial: Phase 27 es la **primera formulación del programa donde la herramienta
 propuesta (principio local-global adélico) no existía en las fases anteriores**.
@@ -154,17 +154,17 @@ Estas herramientas son nuevas en el programa.
 
 ## 4. El objetivo intermedio más asequible
 
-Antes de atacar $\operatorname{neg.ind}(H_C) = 0$ directamente (equivalente a RH),
+Antes de atacar $\mathrm{neg.ind}(H_C) = 0$ directamente (equivalente a RH),
 Phase 27 busca resultados intermedios que ya serían extraordinarios:
 
 | Objetivo intermedio | Implicación directa |
 |---|---|
-| $\operatorname{neg.ind}(H_C) < \infty$ | Finitely many off-line zeros (Hypothesis D) |
-| $\operatorname{neg.ind}(H_C) \le M$ para alguna constante $M$ | A lo sumo $M/2$ órbitas off-line |
-| $\operatorname{neg.ind}(H_C) \le 10$ | A lo sumo 5 órbitas fuera de línea |
-| $\operatorname{neg.ind}(H_C) = 0$ | RH |
+| $\mathrm{neg.ind}(H_C) < \infty$ | Finitely many off-line zeros (Hypothesis D) |
+| $\mathrm{neg.ind}(H_C) \le M$ para alguna constante $M$ | A lo sumo $M/2$ órbitas off-line |
+| $\mathrm{neg.ind}(H_C) \le 10$ | A lo sumo 5 órbitas fuera de línea |
+| $\mathrm{neg.ind}(H_C) = 0$ | RH |
 
-El objetivo $\operatorname{neg.ind}(H_C) \le M$ correspondería a un teorema del tipo
+El objetivo $\mathrm{neg.ind}(H_C) \le M$ correspondería a un teorema del tipo
 "la función $\zeta$ tiene a lo sumo $M/2$ órbitas de ceros fuera de la línea crítica",
 que nunca ha sido demostrado para ningún $M$ finito sin asumir restricciones adicionales.
 Ya sería un resultado histórico.

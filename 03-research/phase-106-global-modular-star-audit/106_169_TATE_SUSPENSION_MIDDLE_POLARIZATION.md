@@ -277,7 +277,7 @@ There is a \(J_S\)-orthogonal decomposition
 \[
  \boxed{
  \mathscr V_S=IH^1_S\ \widehat\oplus\
-               \operatorname {Ran}\Gamma_S.}                \tag{25}
+               \mathrm{Ran}\,\Gamma_S.}                \tag{25}
 \]
 
 The orthogonal projection \(P_S^{\rm mid}\) onto \(IH^1_S\) is
@@ -441,8 +441,8 @@ The next identity is therefore the nuclear chain equality
 
 \[
  \boxed{
- \operatorname {Loc}\circ d_{\rm CCM}
- =\partial_{\rm Tate}\circ\operatorname {Loc}_0
+ \mathrm{Loc}\,\circ d_{\rm CCM}
+ =\partial_{\rm Tate}\circ\mathrm{Loc}_0
    \ \oplus\ d_{\Gamma,0,2},}                                \tag{36}
 \]
 

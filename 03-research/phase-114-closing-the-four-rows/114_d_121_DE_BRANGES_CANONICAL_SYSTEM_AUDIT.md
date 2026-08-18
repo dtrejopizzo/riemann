@@ -166,7 +166,7 @@ The Fourier multiplier of the positive jump Laplacian \(L_X\) is
 The integral is
 
 \[
- \operatorname {Re}\psi(1/4+i\tau/2)-\psi(1/4).        \tag{2.4}
+ \mathrm{Re}\,\psi(1/4+i\tau/2)-\psi(1/4).        \tag{2.4}
 \]
 
 Equations (2.1)--(2.4) include every prime power and the full Gamma
@@ -285,7 +285,7 @@ Thus \(E_a\) is Hermite--Biehler precisely when \(\Theta_a\) is Schur in
 the upper half-plane:
 
 \[
- |E_a(z)|>|E_a^\#(z)|\quad(\operatorname {Im}z>0)
+ |E_a(z)|>|E_a^\#(z)|\quad(\mathrm{Im}\,z>0)
  \quad\Longleftrightarrow\quad |\Theta_a(z)|<1.        \tag{3.7}
 \]
 
@@ -324,7 +324,7 @@ Conversely, assume \(E_a\) is Hermite--Biehler for every \(a>0\).  If
 
 \[
  E_a(\lambda-ia)=\boldsymbol\Xi(\lambda)=0,
- \qquad \operatorname {Im}(\lambda-ia)=y-a>0,          \tag{4.3}
+ \qquad \mathrm{Im}(\lambda-ia)=y-a>0,          \tag{4.3}
 \]
 
 contradicting the zero-free upper half-plane property of an
@@ -395,7 +395,7 @@ Under RH, (4.1) gives
 \]
 
 with the canonical convergence prescription.  Every summand has positive
-imaginary part for \(\operatorname {Im}z>0\), so \(m_\Xi\) is a meromorphic
+imaginary part for \(\mathrm{Im}\,z>0\), so \(m_\Xi\) is a meromorphic
 Herglotz function.  Conversely, poles of a meromorphic Herglotz function
 are real, hence if (5.3) is Herglotz all zeros of \(\boldsymbol\Xi\) are
 real.  Therefore
@@ -410,7 +410,7 @@ function is the Weyl function of a trace-normalized positive Hamiltonian
 
 \[
  JY'(x,z)=zH(x)Y(x,z),\qquad H(x)\geq0,quad
- \operatorname {tr}H(x)=1                              \tag{5.6}
+ \mathrm{tr}\,H(x)=1                              \tag{5.6}
 \]
 
 (up to the standard reparametrization equivalence).  Equivalently, each

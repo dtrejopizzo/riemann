@@ -9,7 +9,7 @@ classical Hodge-index theorem only after the correspondence, intersection
 numbers and primitive projection have been independently constructed.
 
 Paper 0 does not validate the finite-support mechanism over
-\(\operatorname{Spec}\mathbb Z\).  The function-field proof takes place
+\(\mathrm{Spec}\,\mathbb Z\).  The function-field proof takes place
 on the complete proper surface \(E\times E\); no truncation by closed-point
 degree is introduced.
 
@@ -114,7 +114,7 @@ The diagonal intersection must be derived scheme-theoretically:
 
 \[
  \Gamma_n\cdot\Delta
- =\deg\operatorname{Fix}(F^n)
+ =\deg\mathrm{Fix}(F^n)
  =N_n.
  \tag{11}
 \]

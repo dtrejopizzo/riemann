@@ -59,7 +59,7 @@ Equivalently, $\tau_\kappa$ is the initial topology for the family of evaluation
 source balls (with uniform local boundedness), then $\mathsf K_i^\circ\to\mathsf K^\circ$ locally
 uniformly.
 \end{theorem}
-\emph{Proof.} The kernel is the polarized Hessian $\mathsf K^\circ=\operatorname{Pol}(d^2\log\mathcal
+\emph{Proof.} The kernel is the polarized Hessian $\mathsf K^\circ=\mathrm{Pol}(d^2\log\mathcal
 D^{\circ,\mathrm{src}}(0))$ (D2, Def. rec; anomaly-free at second order). On a fixed finite-dimensional
 source plane the germs are holomorphic functions of $(V,z)$; uniform convergence of holomorphic functions
 on $B_F(r)\times K$ implies uniform convergence of all $V$-derivatives at $0$ on slightly smaller compacts
@@ -68,7 +68,7 @@ $\mathsf K_i^\circ\to\mathsf K^\circ$ locally uniformly. (Local boundedness, sup
 arithmetic case, licenses the Cauchy estimates.) $\square$
 
 \begin{corollary}[index is a continuous functional]\label{cor:index-cont}
-On $\tau_\kappa$-convergent nets, $\operatorname{sq}_-(\mathsf K^\circ)$ is upper semicontinuous, and on
+On $\tau_\kappa$-convergent nets, $\mathrm{sq}_-(\mathsf K^\circ)$ is upper semicontinuous, and on
 the index-$0$ stratum (τ4: $\mathfrak b\equiv1$) it is continuous: $\kappa=0$ is both attained and
 preserved. (Proof of preservation is D6.)
 \end{corollary}

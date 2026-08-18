@@ -5,7 +5,7 @@
 The full-kernel identity of 106.31 rewrites the even Weil form as
 
 \[
- QW(Kr,Kr)=\mathscr E_K(r)-\frac12\operatorname {Var}_{\mu_K}(r).
+ QW(Kr,Kr)=\mathscr E_K(r)-\frac12\mathrm{Var}_{\mu_K}(r).
  \tag{1}
 \]
 
@@ -125,7 +125,7 @@ Then, also for complex \(r\),
  \boxed{
  \mathcal J_u(r)
  =4Z_u\,\mathbb E\!\left[
-   \operatorname {Var}(Y_u\mid X_u)\right].}
+   \mathrm{Var}(Y_u\mid X_u)\right].}
  \tag{10}
 \]
 
@@ -149,7 +149,7 @@ first choose \(M\in A\) with probability proportional to
  \sum_{m\in A}\frac{\Lambda(m)}{\sqrt m}
        \mathcal J_{\log m}(r)
  =4Z_A\,\mathbb E\!\left[
-   \operatorname {Var}(Y\mid M,X_M)\right].}
+   \mathrm{Var}(Y\mid M,X_M)\right].}
  \tag{12}
 \]
 
@@ -229,7 +229,7 @@ large \(a\),
 \[
  \boxed{
  \mathscr E_S(r_a)
- <\frac12\operatorname {Var}_{\mu_K}(r_a).}
+ <\frac12\mathrm{Var}_{\mu_K}(r_a).}
  \tag{18}
 \]
 
@@ -240,7 +240,7 @@ atoms by (6):
 
 \[
  \begin{aligned}
- \mathscr E_S(r_a)-\frac12\operatorname {Var}_{\mu_K}(r_a)
+ \mathscr E_S(r_a)-\frac12\mathrm{Var}_{\mu_K}(r_a)
  &=QW(f_a,f_a)\\
  &\quad-
  \sum_{m\notin S}\frac{\Lambda(m)}{\sqrt m}
@@ -254,7 +254,7 @@ Retain only the term \(m=m_0\) in the nonnegative sum.  By (15)--(17),
 \[
  \limsup_{a\to\infty}
  \left(
- \mathscr E_S(r_a)-\frac12\operatorname {Var}_{\mu_K}(r_a)
+ \mathscr E_S(r_a)-\frac12\mathrm{Var}_{\mu_K}(r_a)
  \right)
  \le-\frac{\Lambda(m_0)}{\sqrt {m_0}}
        \mathcal J_{\log m_0}(r_*)<0.
@@ -284,7 +284,7 @@ Together with (15), (1) and monotone convergence of the prime energies,
 this extends the full-kernel identity to \(r_*\) and gives
 
 \[
- \mathscr E_K(r_*)=\frac12\operatorname {Var}_{\mu_K}(r_*).
+ \mathscr E_K(r_*)=\frac12\mathrm{Var}_{\mu_K}(r_*).
  \tag{20b}
 \]
 
@@ -295,7 +295,7 @@ In particular, if the prime powers are revealed in any enumeration
 \(m_1,m_2,\ldots\), then on the exact radical \(r_*=K''/K\) the deficits
 
 \[
- D_J:=\frac12\operatorname {Var}_{\mu_K}(r_*)
+ D_J:=\frac12\mathrm{Var}_{\mu_K}(r_*)
  -\mathscr E_{\{m_1,\ldots,m_J\}}(r_*)
  \tag{21}
 \]
@@ -378,7 +378,7 @@ For all sufficiently large \(a\), the compact even tests (13) satisfy
 \[
  \boxed{
  \mathscr E_\Gamma(r_a)+\widetilde{\mathscr E}_{p}(r_a)
- <\frac12\operatorname {Var}_{\mu_K}(r_a).}
+ <\frac12\mathrm{Var}_{\mu_K}(r_a).}
  \tag{28}
 \]
 
@@ -401,7 +401,7 @@ Hence
 \[
  \begin{aligned}
  &\mathscr E_\Gamma(r_a)+\widetilde{\mathscr E}_{p}(r_a)
- -\frac12\operatorname {Var}_{\mu_K}(r_a)\\
+ -\frac12\mathrm{Var}_{\mu_K}(r_a)\\
  &\qquad=QW(f_a,f_a)
  -\bigl(\mathscr E_p(r_a)-\widetilde{\mathscr E}_p(r_a)\bigr)<0
  \end{aligned}

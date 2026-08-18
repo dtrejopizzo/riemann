@@ -31,7 +31,7 @@ At the connected finite level, `107_03` and `107_04` currently expose:
    \]
 4. the normalized finite order coming from `107_04`,
    \[
-   \operatorname{ord}_{\mathrm{fin}}=\log p.
+   \mathrm{ord}_{\mathrm{fin}}=\log p.
    \]
 
 So the exact current source packet tested here is

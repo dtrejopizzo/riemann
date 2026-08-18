@@ -13,7 +13,7 @@
 **Proposition 25-B.1** (Off-line zeros in the t-variable). Under the substitution s = 1/2+it:
 
 A zero ρⱼ = (1/2+bⱼ)+iγⱼ of ξ (in the s-variable) with bⱼ > 0 corresponds to a COMPLEX zero of H₀(t) at:
-$$t_j^* = -i(ρ_j - 1/2) = \gamma_j - ib_j \in \mathbb{C}, \quad \operatorname{Im}(t_j^*) = -b_j < 0.$$
+$$t_j^* = -i(ρ_j - 1/2) = \gamma_j - ib_j \in \mathbb{C}, \quad \mathrm{Im}(t_j^*) = -b_j < 0.$$
 
 *Proof.* $H_0(t_j^*) = \xi(1/2 + it_j^*) = \xi(1/2 + i(\gamma_j - ib_j)) = \xi(1/2 + b_j + i\gamma_j) = \xi(\rho_j) = 0$. $\square$
 
@@ -40,7 +40,7 @@ $$\Lambda_j \approx \frac{b_j^2}{2|H_0''(t_j^*)| / |H_0'(t_j^*)|^2}.$$
 
 For an isolated zero far from other zeros: $\Lambda_j \approx b_j^2/2 \cdot (1 + O(b_j^2/\gamma_j^2))$.
 
-*Derivation.* The heat equation for H_λ: $\partial_\lambda H_\lambda = \partial_{tt}H_\lambda$. For an isolated zero $t_j^*(λ)$: differentiating $H_\lambda(t_j^*(λ)) = 0$ twice gives $\dot t_j^* = -H_\lambda''/H_\lambda'$ (the inverse Weierstrass). For λ small: $\dot t_j^*|_{λ=0} = -H_0''/H_0'$ evaluated at $t_j^*$. The zero moves toward the real axis at rate $d(\operatorname{Im}(t_j^*))/dλ \approx +b_j/(b_j^2 + (\operatorname{Re}-\gamma_j)^2)$ ... this calculation requires the residue. The rough result is $\Lambda_j \sim b_j^2/2$ for isolated zeros.
+*Derivation.* The heat equation for H_λ: $\partial_\lambda H_\lambda = \partial_{tt}H_\lambda$. For an isolated zero $t_j^*(λ)$: differentiating $H_\lambda(t_j^*(λ)) = 0$ twice gives $\dot t_j^* = -H_\lambda''/H_\lambda'$ (the inverse Weierstrass). For λ small: $\dot t_j^*|_{λ=0} = -H_0''/H_0'$ evaluated at $t_j^*$. The zero moves toward the real axis at rate $d(\mathrm{Im}(t_j^*))/dλ \approx +b_j/(b_j^2 + (\mathrm{Re}-\gamma_j)^2)$ ... this calculation requires the residue. The rough result is $\Lambda_j \sim b_j^2/2$ for isolated zeros.
 
 **Theorem 25-B.4** (de Bruijn–Newman lower bound on Λ under Hypothesis D).
 
@@ -80,7 +80,7 @@ We would need Λ ≤ f(bⱼ) for some increasing f, i.e., an **upper** bound on 
 **New positive result:** The de Bruijn–Newman approach gives an exact DUAL formulation:
 
 $$\text{RH} \iff \Lambda = 0 \iff \text{all complex zeros of } H_0 \text{ lie on the real axis}$$
-$$\text{Hypothesis D} \iff \Lambda > 0 \iff \text{complex zeros of } H_0 \text{ have } |\operatorname{Im}(t_j^*)| = b_j > 0.$$
+$$\text{Hypothesis D} \iff \Lambda > 0 \iff \text{complex zeros of } H_0 \text{ have } |\mathrm{Im}(t_j^*)| = b_j > 0.$$
 
 The de Bruijn constant Λ is a MEASURE of how far off-line the zeros are. But it's an upper-directional measure (Λ = "how much heat needed to bring zeros to the real axis"), giving bⱼ ≤ √(2Λ), not bⱼ ≥ F(Λ).
 

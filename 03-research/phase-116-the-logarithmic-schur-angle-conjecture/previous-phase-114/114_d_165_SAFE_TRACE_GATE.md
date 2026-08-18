@@ -15,7 +15,7 @@ write
 Put
 
 \[
- \theta=\delta^{-1}\operatorname {tr}(K^{-1}G)
+ \theta=\delta^{-1}\mathrm{tr}(K^{-1}G)
  =\delta^{-1}\|\mathcal R_sK^{-1/2}\|_{HS}^2.
 \]
 

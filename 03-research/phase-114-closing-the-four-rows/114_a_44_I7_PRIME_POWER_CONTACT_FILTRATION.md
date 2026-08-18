@@ -24,7 +24,7 @@ Fix `a>=1` and use
 For `0<=r<a`, let
 
 \[
- \theta_r=t_{p^r}=\operatorname{tr}\circ F_{p^r},
+ \theta_r=t_{p^r}=\mathrm{tr}\,\circ F_{p^r},
  \qquad \theta_a=F_0.                                  \tag{1.2}
 \]
 
@@ -52,10 +52,10 @@ Their scheme-theoretic intersection is
 
 \[
  \boxed{\quad
- \operatorname{Spec}\mathbb Z
- \times_{\operatorname{Spec}\mathcal W_{p^a}}
- \operatorname{Spec}\mathbb Z
- \simeq\operatorname{Spec}(\mathbb Z/p^k\mathbb Z).
+ \mathrm{Spec}\,\mathbb Z
+ \times_{\mathrm{Spec}\,\mathcal W_{p^a}}
+ \mathrm{Spec}\,\mathbb Z
+ \simeq\mathrm{Spec}(\mathbb Z/p^k\mathbb Z).
  \quad}                                                \tag{2.1}
 \]
 

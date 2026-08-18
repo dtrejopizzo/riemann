@@ -280,7 +280,7 @@ separado pierde la cancelación que determina la media.
 | `104_31_EPSILON_FLOW_OBSERVABILITY_STOP_GATE.md` | **flujo birth--death exacto + stop-gate de dominio** | \(c'=Qc\), \(Q=-M_x\); el test backward exige \(\varepsilon<1/2\) y el operador Euler separado exige \(\varepsilon>1/2\); \(A_{\rm flag}\) no es invariante ni mueve el umbral |
 | `104_32_HIGHER_PRIME_POWER_BUDGET.md` | **separación exacta + presupuesto explícito** | \(H_{\ge2}=-\sum_{j\ge2}\mu(j)(-\zeta'/\zeta)(js)\); polo \(j=2\) en \(z=-1\), cota \(\lvert P_{n-1}^{(\ge2)}(1)\rvert<14n+1\) y reducción cuártica exacta al canal primos--polo |
 | `104_33_FLAG_SYMBOL_BOUNDARY_RESIDUE_GATE.md` | **símbolo exacto + stop-gate frontera--residuos** | \(h(z)=-\zeta'/\zeta((1-z)^{-1})-1/(s-1)\); el momento de bandera es frontera más residuos off-line; un cuarteto conserva la frontera real y cambia el momento exponencialmente |
-| `104_34_FLAG_PREFIX_CURVATURE_AND_ADJACENT_SCHUR_GATE.md` | **curvatura refutada + gate de Schur adyacente** | el certificado outward prueba \(\nabla_c^2(\lambda-501A/2002)_{220}<0\); la compresión \(\operatorname{span}\{g_n,\phi_n\}\) da el criterio coercivo suficiente \(4H_nd_n\ge(H_n+d_n-H_{n+1})^2\), todavía abierto uniformemente |
+| `104_34_FLAG_PREFIX_CURVATURE_AND_ADJACENT_SCHUR_GATE.md` | **curvatura refutada + gate de Schur adyacente** | el certificado outward prueba \(\nabla_c^2(\lambda-501A/2002)_{220}<0\); la compresión \(\mathrm{span}\,\{g_n,\phi_n\}\) da el criterio coercivo suficiente \(4H_nd_n\ge(H_n+d_n-H_{n+1})^2\), todavía abierto uniformemente |
 | `104_35_SIMPLE_PRIME_POLE_SELBERG_GATE.md` | **correlación \(\theta\) exacta + stop-gate Selberg simple** | \(B_n^{(p+\mathrm{pole})}=-n-\int(\theta(e^u)-e^u)e^{-u}L_{n-1}^{(2)}\); identidad colectiva solo primos/semiprimos; núcleo inverso no coercivo y testigo sobre soporte primo real |
 | `104_36_SIMPLE_PRIME_CHOLESKY_DOMAIN_GATE.md` | **Cholesky colectivo exacto + stop-gate de dominio** | \(B_{n,a}^{(p+\mathrm{pole})}=\langle V_{n,a},g_n\rangle\) y norma large-sieve exacta para \(a>2\); residuos de ceros impiden continuar la norma a \(a=1\), con divergencia \(\gg(a-1)^{-1}\) incluso por ceros críticos |
 | `104_37_TAPERED_SELBERG_HANKEL_GATE.md` | **taper Schur exacto + stop-gate Hankel de dos puntos** | el test óptimo es \(ae^{-au}[L_{n-1}^{(1)}+tL_n+t(t-1)]\); después de invertir Selberg, todo \(t\) tiene un menor de cola con término principal \(8^d-9^d<0\), también sobre logaritmos de primos reales |
@@ -426,7 +426,7 @@ gaussianos el cruce off-line, el multiplicador residual y la optimización
 de Young para resolventes positivos; su tabla `asinh` solo ilustra la
 divergencia logarítmica probada en `104_40`.
 `full_mangoldt_phase_homotopy_gate_check.py` verifica con `Fraction` la
-cota racional de fase, el conteo \(\operatorname{TV}(W_n)=8n\), la ley de
+cota racional de fase, el conteo \(\mathrm{TV}(W_n)=8n\), la ley de
 cruce \(a=2\Re\rho\), la fase crítica invariante del cuarteto \(w=i/2\) y
 su defecto exponencial en \(n=152\).
 `degree_adapted_noncommutative_gate_check.py` verifica con `Fraction` el
@@ -568,8 +568,8 @@ la masa de las fibras usa PNT en la prueba, no primos flotantes.
 | `104_38` | **la completación Selberg del cuadrado de Schur queda descartada.** Al mantener la identidad centrada completa, \(-\langle G,\mu*\mu\rangle+\mathcal Q_G(\mu)=0\) exactamente. Si se intenta reservar \(\mathcal Q_G\) para dominar la entrada cruzada, el kernel diferencia ya es negativo sobre un solo átomo primo canónico en la cola; además el cuadrado de la respuesta cruzada no es Hankel, con defecto de colisión \(-2n^2a^4x^2+O(x^3)\). Queda abierto únicamente el valor conjunto firmado para toda la medida canónica |
 | `104_39` | **Riccati adyacente cerrado como stop-gate de necesidad.** El determinante equivale a las desigualdades triangulares para \(\sqrt{H_n},\sqrt{d_n},\sqrt{H_{n+1}}\). Un cuarteto sobre la línea mantiene \(H_n>0\) y rompe el gate exactamente, de modo que éste es más fuerte que el margen; bajo RH sí es positivo para todo \(n\) suficientemente grande. Optimizar la referencia da el óptimo circular \(D=H_n+H_{n+1}\), y la referencia de prefijos ortogonales solo cambia \(\Delta B_n\) por \(B_n+B_{n+1}\). No se descarta el gate para la zeta, pero deja de ser el único frente |
 | `104_40` | **resolvente Euler canónico descartado como cota cuadrática conmutativa.** En el rayo fijo, el precondicionador positivo óptimo reemplaza \(\Re M\) por \(-|M|\). Su costo diverge como \(\log(1/(a-1))\) por un cero crítico no resonante, mientras un cero off-line obliga a sumar el residuo al cruzar \(a=2\Re\rho\). Sobrevive únicamente una estimación firmada/no conmutativa o el criterio \(\mathcal T_n\ge0\) |
-| `104_41` | **cota de fase completa probada en el semiplano Euler; transporte descartado sin residuos.** Con \(F=(s-1)\zeta(s)\), \(\mathcal B_{n,a}=-(2\pi)^{-1}\int W_n\,d\arg F\), \(\operatorname{TV}(W_n)=8n\) y \(|\arg F|<3\pi/4\) dan \(|\mathcal B_{n,a}|\le3n\) para \(a\ge4\). El transporte a \(a=1\) cruza exactamente los ceros con \(\Re\rho>1/2\); el defecto es la suma firmada de residuos. El cuarteto \(w=i/2\) deja idéntica la fase completa sobre la línea y aporta \(2(2^{152}+2^{-152})-4>0\) al defecto. Sigue faltando un teorema específico para los pesos exactos \(\Lambda(m)\) que controle esos residuos |
-| `104_42` | **optimización cuadrática no conmutativa descartada; compresión de grado cerrada como stop-gate.** Para el operador Euler--polo completo, con todas las \(\Lambda(p^k)\), el ínfimo algebraico sobre todo precondicionador positivo es exactamente \(|B_n|\); en el régimen peligroso devuelve el objetivo mismo. Si la continuación vectorial está en \(L^2\), todo costo acotado exige \(\operatorname{cond}R\gg(a-1)^{-1}\). La proyección de los primeros \(n\) estados conserva fase y da una fórmula exacta en \(\Delta B_j\), pero el dato nuevo entra con ganancia \(\sqrt{n/2}>1\). No se descarta una cota aritmética nueva para un \(R\) explícito; la optimización por sí sola no la suministra |
+| `104_41` | **cota de fase completa probada en el semiplano Euler; transporte descartado sin residuos.** Con \(F=(s-1)\zeta(s)\), \(\mathcal B_{n,a}=-(2\pi)^{-1}\int W_n\,d\arg F\), \(\mathrm{TV}(W_n)=8n\) y \(|\arg F|<3\pi/4\) dan \(|\mathcal B_{n,a}|\le3n\) para \(a\ge4\). El transporte a \(a=1\) cruza exactamente los ceros con \(\Re\rho>1/2\); el defecto es la suma firmada de residuos. El cuarteto \(w=i/2\) deja idéntica la fase completa sobre la línea y aporta \(2(2^{152}+2^{-152})-4>0\) al defecto. Sigue faltando un teorema específico para los pesos exactos \(\Lambda(m)\) que controle esos residuos |
+| `104_42` | **optimización cuadrática no conmutativa descartada; compresión de grado cerrada como stop-gate.** Para el operador Euler--polo completo, con todas las \(\Lambda(p^k)\), el ínfimo algebraico sobre todo precondicionador positivo es exactamente \(|B_n|\); en el régimen peligroso devuelve el objetivo mismo. Si la continuación vectorial está en \(L^2\), todo costo acotado exige \(\mathrm{cond}\,R\gg(a-1)^{-1}\). La proyección de los primeros \(n\) estados conserva fase y da una fórmula exacta en \(\Delta B_j\), pero el dato nuevo entra con ganancia \(\sqrt{n/2}>1\). No se descarta una cota aritmética nueva para un \(R\) explícito; la optimización por sí sola no la suministra |
 | `104_43` | **factorización size-biased cerrada; orden y energía separada descartados.** El selector divisor canónico conserva exactamente todas las \(\Lambda(p^k)\), pero está por encima del selector uniforme en \(n=2\) y por debajo en \(n=30\). Su error marginal es exactamente \(R\), y la energía Efron--Stein del Laguerre no escalado diverge como \(\{\binom{2n-2}{n-1}-1\}\varepsilon^{-2n+2}\). Queda abierta solo una comparación cruzada, firmada y no monótona |
 | `104_44` | **transporte divisor--Markov cerrado como stop-gate operatorial y de escala.** La desintegración de `104_43` tiene norma uno incluso en media cero, de modo que no existe brecha global. El continuo Gamma sí contrae \(L_r(\varepsilon x)\), pero recomponer \(L_r(x)\) tiene carga \((2/\varepsilon-1)^r\); para \(\varepsilon=1/n\) reproduce la pared \(\exp(n\log n)\). No se descarta una estimación especial que conserve toda la suma alternada |
 | `104_45` | **coupling cruzado cerrado como identidad y stop-gate local.** El kernel Stein es único e independiente del coupling. Tiene patrón \(-,+,-\) alrededor de \(\log2\). El orden \(R(q)<0\) vale para exponenciales y sus mezclas positivas, pero \(-R\) no es completamente monótona; el test Laguerre recompone exactamente \(B_n\) |
@@ -577,7 +577,7 @@ la masa de las fibras usa PNT en la prueba, no primos flotantes.
 | `104_47` | **flujo size-biased cerrado como stop-gate.** La homotopía satisface una ecuación exacta entre grados, pero integrar el flujo da \(\mathcal B_{n,a_0}-B_n\); exigir el signo necesario es exactamente el margen original. Positividad/Markov genérica también vale para \(\zeta(s+c)\zeta(s-c)\) con ceros off-line |
 | `104_48` | **fase por torre cerrada; multiplicidad local descartada.** La fórmula de Poisson da solo un minorante no sumable y también acepta los pesos desplazados. Una torre completa de multiplicidad \(1+t\) conserva soporte, constancia y PNT, pero viola cualquier techo proporcional en \(n=151\). El único input no falsado es la renovación unitaria completa \(\Lambda*{\bf1}=\log\) |
 | `104_49` | **renovación unitaria cerrada como identidad lineal; coercividad aún abierta.** El Palm geométrico selecciona uniformemente una altura de la torre, propiedad que \(\omega_c\) pierde. Sin embargo, en cada grado el defecto selector \(\kappa_r-m_r/r\) y el transporte \(m_r/r-(r-1)!\varepsilon^{-r}\) cancelan exactamente \(m_r\), y el Laguerre recompone \(B_n\). El defecto condicionado ya tiene ambos signos en \(n=151\). Solo sobrevive una correlación no lineal entre varias torres que no desaparezca al promediar |
-| `104_50` | **covarianza Palm cerrada como stop-gate.** El kernel centrado se diagonaliza por torre. Mantener el defecto total da \(\operatorname{Cov}(D_f,D_g)+M_s(f)M_s(g)\); para el test real, completar el cuadrado produce varianza más \((\mathcal B_{n,s}-\kappa A_n)^2\). Derivada, primitiva y score vuelven a coeficientes desconocidos o al flujo ya abierto |
+| `104_50` | **covarianza Palm cerrada como stop-gate.** El kernel centrado se diagonaliza por torre. Mantener el defecto total da \(\mathrm{Cov}(D_f,D_g)+M_s(f)M_s(g)\); para el test real, completar el cuadrado produce varianza más \((\mathcal B_{n,s}-\kappa A_n)^2\). Derivada, primitiva y score vuelven a coeficientes desconocidos o al flujo ya abierto |
 | `104_51` | **inversión Möbius cuadrática cerrada como stop-gate.** La congruencia \(M^TKM=W\) elimina toda correlación `lcm`. Para el kernel infinito, la diferencia entre las energías es indefinida sobre un vector de dos niveles; para \(P_{150}\), el cutoff divisor local tiene signos opuestos en \(p=2,7\). No se afirma ese signo para la forma infinita sobre el Laguerre fijo. Polarizar la diagonal vuelve a una diferencia de cuadrados sin orientación |
 | `104_52` | **flujo conectado de dos torres descartado.** El Hessiano exacto del margen conserva torre, polo y Gamma, pero la proyección logarítmica cancela con coeficiente cero todos los pares de torres distintas. Cambia de signo entre \(s=1\) y \(s=10\), y su cociclo Laguerre también tiene ambos signos |
 | `104_53` | **jerarquía polinómica aditiva clasificada.** En el álgebra universal de momentos, los primitivos son exactamente las combinaciones lineales de cumulantes. Como los cumulantes zeta son sumas de una sola torre, ninguna identidad polinómica aditiva de orden finito puede conservar una reserva multi-torre. El teorema no cubre desigualdades no aditivas arbitrarias |
@@ -864,7 +864,7 @@ los valores ordinarios literales.
 equivalente a \(K=\widehat{\varphi\nu}\) con
 \(0\leq\varphi\leq1\): el minimax PD no relaja el selector unilateral. La
 parte Euler--comparador se escribe en una sola integral contra
-\(d(J-\operatorname {Li})\). Además, para cada prefijo \(M\) se construye
+\(d(J-\mathrm{Li})\). Además, para cada prefijo \(M\) se construye
 un contramodelo que conserva todos los pesos ordinarios hasta \(M\) y
 todas salvo una torre prima remota, junto con
 positividad, PNT/VK y simetría funcional, pero tiene un cero derecho y
@@ -920,7 +920,7 @@ ordinarios y el de potencias propias. La identidad exacta
 Usando solo Chebyshev, el último sumando es
 \(O(\sqrt m/\log m+m^{1/3})\), y por tanto tiene energía discreta
 finita. Se sigue que \(\mathcal E(N)=N^{o(1)}\) equivale exactamente a
-la misma cota para \(\pi(m)-\operatorname {Li}_2(m)\). La inversión de
+la misma cota para \(\pi(m)-\mathrm{Li}_2(m)\). La inversión de
 Möbius muestra además que \(J\leftrightarrow\pi\) es un cambio de
 coordenadas finito e invertible; lcm frente a radical del factorial añade
 precisamente el bloque de potencias de energía finita. Esto descarta que la
@@ -991,7 +991,7 @@ automática de RH; el control general válido bajo RH es solamente la
 sumabilidad de los bloques.
 
 `104_98` factoriza exactamente la energía literal de
-\(P_m=\pi(m)-\operatorname {Li}_2(m)\) sobre la recta Mellin:
+\(P_m=\pi(m)-\mathrm{Li}_2(m)\) sobre la recta Mellin:
 \[
  \sum_{m\le N}{P_m^2\over m(m+1)}
  ={1\over2\pi}\int_{\mathbb R}
@@ -1027,7 +1027,7 @@ exacta
 \]
 Como \(1+\pi(\sqrt m)\) tiene energía finita, RH equivale a energía
 subpolinomial de
-\(\operatorname {Li}_2(m)+\sum_{d\mid P(\sqrt m)}L(\lfloor m/d\rfloor)\).
+\(\mathrm{Li}_2(m)+\sum_{d\mid P(\sqrt m)}L(\lfloor m/d\rfloor)\).
 Esto no prueba esa cota, pero localiza la cancelación completa. Para todo
 nivel \(D\le x^{1-\eta}\), los datos de divisibilidad de \(a^+\) y
 \(a^-\) difieren en \(O_A(x/\log^A x)\) para todo \(A\), mientras sus

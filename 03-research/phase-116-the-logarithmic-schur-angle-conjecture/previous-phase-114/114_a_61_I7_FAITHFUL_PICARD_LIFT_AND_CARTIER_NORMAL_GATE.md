@@ -24,10 +24,10 @@
 For `n>=1`, let
 
 \[
- L_n:=\bigotimes_{p}L_p^{\otimes v_p(n)}\in\operatorname{Pic}(X),
+ L_n:=\bigotimes_{p}L_p^{\otimes v_p(n)}\in\mathrm{Pic}(X),
  \qquad
  \mathcal T_n:=p_1^*T(L_n)
-   \in\operatorname{Pic}_{tor}(Y),                                    \tag{1.1}
+   \in\mathrm{Pic}_{tor}(Y),                                    \tag{1.1}
 \]
 
 where `L_p` is the inverse-uniformizer completed line bundle of `a_18` and
@@ -45,7 +45,7 @@ There are canonical symmetric monoidal isomorphisms
 and the map
 
 \[
- \mathbb N^\times\longrightarrow\operatorname{Pic}_{tor}(Y),
+ \mathbb N^\times\longrightarrow\mathrm{Pic}_{tor}(Y),
  \qquad n\longmapsto[\mathcal T_n]                                    \tag{1.3}
 \]
 

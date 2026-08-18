@@ -122,7 +122,7 @@ By contrast, with \(F=hq\) and the physical Abel connection
  \boxed{
  \mathfrak Q_{\rm KYP}(q)
  =\mathfrak Q_{\rm phys}(q)
-  +2\operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}.}
+  +2\mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}.}
                                                                \tag{9}
 \]
 
@@ -197,7 +197,7 @@ Equation (20) of 106.135 gives
 \[
  2\mathfrak b_K(q)
  =2\mathfrak D_K(q)
-  -2\operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}.
+  -2\mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}.
  \tag{15b}
 \]
 
@@ -207,7 +207,7 @@ Hence
  \boxed{
  \mathfrak Q_{\rm suff}
  =\mathfrak P_{\rm PNT}
-  -2\operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}
+  -2\mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}
   +2\mathfrak D_K+\theta_*\mathfrak b_{\Gamma,*}.}
  \tag{15c}
 \]

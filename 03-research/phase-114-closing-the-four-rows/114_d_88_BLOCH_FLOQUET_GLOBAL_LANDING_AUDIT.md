@@ -191,7 +191,7 @@ The Gamma oscillator commutes with \(S_L\), so it is decomposable under
 and its finite-part multiplier is
 \[
  m_\infty(\tau)=
- \log\pi-\operatorname{Re}\psi
+ \log\pi-\mathrm{Re}\,\psi
  \left({1\over4}+{i\tau\over2}\right).                  \tag{3.7}
 \]
 

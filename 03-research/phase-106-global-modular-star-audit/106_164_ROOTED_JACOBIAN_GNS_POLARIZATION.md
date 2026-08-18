@@ -152,8 +152,8 @@ Define
  J(f,g)=(-g,f),
  \qquad
  g((f,g),(u,v))
- =\operatorname{Re}\langle f,u\rangle
-  +\operatorname{Re}\langle g,v\rangle,
+ =\mathrm{Re}\,\langle f,u\rangle
+  +\mathrm{Re}\,\langle g,v\rangle,
  \tag{10}
 \]
 and
@@ -221,10 +221,10 @@ The local Haar vector is
  \tag{13b}
 \]
 Consequently \(\Omega=\widehat\otimes_p\Omega_p\) in the standard Haar
-representation. For \(\operatorname{Re}s>0\), let
+representation. For \(\mathrm{Re}\,s>0\), let
 \[
  k_{p,s}
- =\sqrt{1-p^{-2\operatorname{Re}s}}
+ =\sqrt{1-p^{-2\mathrm{Re}\,s}}
    \sum_{j\ge0}p^{-js}e_{p,j}.
  \tag{14}
 \]

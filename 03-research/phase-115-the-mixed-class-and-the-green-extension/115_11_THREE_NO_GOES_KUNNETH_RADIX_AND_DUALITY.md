@@ -121,7 +121,7 @@ a lattice functor that is simultaneously
 >
 > *Proof.*  Let \(D\) be effective of positive degree with \(V(D)\ne\{0\}\), of
 > rank \(\rho>0\).  Then \(-D\) is not effective, so (B) gives
-> \(\operatorname{rk}V(-D)=0\); while (A) gives \(V(-D)=V(D)^{*}\), of rank
+> \(\mathrm{rk}\,V(-D)=0\); while (A) gives \(V(-D)=V(D)^{*}\), of rank
 > \(\rho>0\).  \(\square\)
 
 There is no room to weaken (A): `thm:thetaRR` is proved by Poisson summation,

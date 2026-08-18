@@ -24,7 +24,7 @@ Its twisted rank-one operator \(d/dx+s\) has determinant
 Equation (1.1) gives
 
 \[
- \operatorname{Fix}(\phi^t)=
+ \mathrm{Fix}(\phi^t)=
  \begin{cases}
   \varnothing,&t\notin(\log p)\mathbb Z,\\
   C_p,&t\in(\log p)\mathbb Z.

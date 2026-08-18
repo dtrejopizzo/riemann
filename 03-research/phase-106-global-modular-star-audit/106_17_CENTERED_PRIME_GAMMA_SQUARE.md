@@ -63,7 +63,7 @@ Let
 
 \[
  \theta(t)
- =\operatorname {Im}\log\Gamma\!\left(\frac14+\frac{it}{2}\right)
+ =\mathrm{Im}\,\log\Gamma\!\left(\frac14+\frac{it}{2}\right)
    -\frac t2\log\pi .
  \tag{4}
 \]
@@ -79,7 +79,7 @@ The CCM form has the exact diagonal representation
   2\theta'(t)-2\sum_{2\le n\le N}w_n\cos(ta_n)
  \right)\frac{dt}{2\pi}\\
  &\quad
- +2\operatorname {Re}\!\left(
+ +2\mathrm{Re}\,\!\left(
    \widehat F(i/2)\overline{\widehat F(-i/2)}
  \right).
 \end{aligned}
@@ -130,7 +130,7 @@ Then
  &=
  \mathcal D_N(F,F)-\kappa_N\|F\|_2^2\\
  &\quad+
- 2\operatorname {Re}\!\left(
+ 2\mathrm{Re}\,\!\left(
  \widehat F(i/2)\overline{\widehat F(-i/2)}
  \right).
 \end{aligned}}

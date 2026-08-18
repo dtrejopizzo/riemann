@@ -178,7 +178,7 @@ Allowing `R` to tend to zero with the window makes `eta_R` tend to `1`, but
 then
 
 \[
- \inf\operatorname {spec}D_R
+ \inf\mathrm{spec}\,D_R
  =\sqrt{1-\eta_R^2}\longrightarrow0,                       \tag{3.7}
 \]
 

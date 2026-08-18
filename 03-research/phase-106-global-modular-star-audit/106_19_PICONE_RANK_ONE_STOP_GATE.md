@@ -312,7 +312,7 @@ orthonormal.  Add to the fixed Gamma jump measure a positive atom
 \(w\delta_a\), and shift by the corresponding scalar \(2w\), exactly as
 in (7) of 106.17.
 
-On \(V_M=\operatorname {span}\{\phi_1,\ldots,\phi_M\}\), the atomic
+On \(V_M=\mathrm{span}\,\{\phi_1,\ldots,\phi_M\}\), the atomic
 part after the scalar shift is
 
 \[

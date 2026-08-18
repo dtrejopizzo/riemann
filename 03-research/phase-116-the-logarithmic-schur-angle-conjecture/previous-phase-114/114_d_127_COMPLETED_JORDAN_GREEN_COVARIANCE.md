@@ -102,7 +102,7 @@ Let
  \gamma(s)=\pi^{-s/2}\Gamma(s/2)
 \]
 
-and, for \(0<t<\operatorname{Re}s\), put
+and, for \(0<t<\mathrm{Re}\,s\), put
 
 \[
  A_t^\infty(s)={\gamma(s-t)\over\gamma(s)}
@@ -126,7 +126,7 @@ Therefore
 \]
 
 is a positive Hankel kernel whenever
-\(\operatorname{Re}(s+\overline w)>t\), in particular on the central
+\(\mathrm{Re}(s+\overline w)>t\), in particular on the central
 spectral line for \(0<t<1\).
 
 ## 4. Exact Gamma derivative
@@ -141,8 +141,8 @@ Since \(A_0^\infty=1\),
 At \(s=1/2+i\tau\),
 
 \[
- 2\operatorname{Re}\left.\partial_tA_t^\infty(s)\right|_0
- =\log\pi-\operatorname{Re}\psi(1/4+i\tau/2)
+ 2\mathrm{Re}\,\left.\partial_tA_t^\infty(s)\right|_0
+ =\log\pi-\mathrm{Re}\,\psi(1/4+i\tau/2)
  =m_0-\ell_\infty(\tau).                               \tag{4.2}
 \]
 
@@ -177,7 +177,7 @@ positivity inside their common Hankel coefficient category.
 They do **not** form a single positive kernel whose derivative is pulled
 back to the annulus source by one fixed positive landing.  Indeed, if
 \(K_t\geq0\), \(K_0\) vanishes on a subspace \(N\), and \(J:N\to
-\operatorname{Dom}K_t\) is independent of \(t\), then
+\mathrm{Dom}\,K_t\) is independent of \(t\), then
 
 \[
  \langle Jv,K_tJv\rangle\geq0,\qquad
@@ -226,8 +226,8 @@ Row D is
 Equivalently, Douglas factorization asks for a contraction
 
 \[
- C:\overline{\operatorname{Ran}B}\to
-   \overline{\operatorname{Ran}S},\qquad
+ C:\overline{\mathrm{Ran}\,B}\to
+   \overline{\mathrm{Ran}\,S},\qquad
  S=CB,\qquad\|C\|\le1.                                  \tag{7.2}
 \]
 

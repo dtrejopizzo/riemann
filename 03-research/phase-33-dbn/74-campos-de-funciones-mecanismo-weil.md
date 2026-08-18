@@ -42,7 +42,7 @@ $$|\alpha_j| = q^{1/2}.$$
 
 Equivalentemente, los ceros de $Z_C(u)$ (como función meromorfa en $u \in \mathbb{C}$) que provienen de $P_C$ tienen todos módulo exactamente $q^{-1/2}$.
 
-*Observación.* El enunciado usual se formula en términos de la variable $s$ mediante la sustitución $u = q^{-s}$: los ceros de $s \mapsto Z_C(q^{-s})$ satisfacen $\operatorname{Re}(s) = 1/2$, en perfecta analogía con la conjetura de Riemann para $\zeta(s)$.
+*Observación.* El enunciado usual se formula en términos de la variable $s$ mediante la sustitución $u = q^{-s}$: los ceros de $s \mapsto Z_C(q^{-s})$ satisfacen $\mathrm{Re}(s) = 1/2$, en perfecta analogía con la conjetura de Riemann para $\zeta(s)$.
 
 ### 1.2. El polinomio $L_C(u) = P_C(u)$ vía cohomología $\ell$-ádica
 
@@ -239,7 +239,7 @@ El análogo del Pilar III (positividad de la forma de intersección) debería se
 
 **Definición 6.3 (Forma cuadrática de Jacobi).** Sea $J = J^{full}$ el operador de Jacobi de $dm_{full}$, con coeficientes $a_k^{full}, b_k^{full}$. Definimos la forma cuadrática:
 
-$$Q_{J}(v) = \langle v, J v \rangle_{\ell^2} = \sum_{k \geq 0} b_k^{full} |v_k|^2 + 2\sum_{k \geq 0} a_k^{full} \operatorname{Re}(v_k \bar{v}_{k+1}).$$
+$$Q_{J}(v) = \langle v, J v \rangle_{\ell^2} = \sum_{k \geq 0} b_k^{full} |v_k|^2 + 2\sum_{k \geq 0} a_k^{full} \mathrm{Re}(v_k \bar{v}_{k+1}).$$
 
 Si $J$ fuera el análogo del Frobenius, la condición de positividad sería: $Q_J(v) > 0$ para todo $v \neq 0$ en un espacio apropiado.
 

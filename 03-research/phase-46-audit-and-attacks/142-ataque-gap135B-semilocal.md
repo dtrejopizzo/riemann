@@ -10,7 +10,7 @@
 $$F(t):=f(e^t)e^{t/2}\in C_c^\infty(\mathbb R),\qquad \hat F(\xi):=\int_{\mathbb R}F(t)e^{i\xi t}dt,\qquad \hat f(\tfrac12+i\xi)=\hat F(\xi),$$
 $$G(t):=g(e^t)e^{t/2}=\int_{\mathbb R}F(s)\overline{F(s-t)}\,ds,\qquad \hat G(\xi)=|\hat F(\xi)|^2,\qquad G(-t)=\overline{G(t)},$$
 $$\|f\|_w^2:=\int_G|f|^2x\,d^*x=\|F\|_{L^2}^2,\qquad g(1)=G(0)=\|f\|_w^2.$$
-"Ventana de longitud $2T$" = $\operatorname{supp}F$ contenido en un intervalo de longitud $2T$ (posición libre). $L_p:=\log p$. $\psi:=\Gamma'/\Gamma$ es la digamma; $\gamma$ la constante de Euler.
+"Ventana de longitud $2T$" = $\mathrm{supp}\,F$ contenido en un intervalo de longitud $2T$ (posición libre). $L_p:=\log p$. $\psi:=\Gamma'/\Gamma$ es la digamma; $\gamma$ la constante de Euler.
 
 ---
 
@@ -18,7 +18,7 @@ $$\|f\|_w^2:=\int_G|f|^2x\,d^*x=\|F\|_{L^2}^2,\qquad g(1)=G(0)=\|f\|_w^2.$$
 
 GAP-135.B pedía decidir el axioma H para el primer objeto del régimen **destructivo**: $n$ primos con dato $a=\Lambda\ge0$, bloque polar $[0]+[1]$ y término arquimediano de tipo $\zeta$ (el factor $\Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(s/2)$). Resultado, sin adorno: **H falla** — para todo conjunto finito $S$ de primos, e incluso para $S=\varnothing$ (el corazón polar+arquimediano solo). Pero falla de una manera extraordinariamente informativa, y la positividad **sobrevive en dos conos explícitos**. Los hallazgos:
 
-1. **(§1–2)** El objeto semilocal $X_S^{\mathrm{ar}}$ y su forma $Q_S$ quedan definidos en forma cerrada en la normalización de P48. El peso arquimediano es $\Omega(\xi)=\operatorname{Re}\psi(\tfrac14+\tfrac{i\xi}2)-\log\pi$, con tres lemas en forma cerrada: serie explícita, valor exacto
+1. **(§1–2)** El objeto semilocal $X_S^{\mathrm{ar}}$ y su forma $Q_S$ quedan definidos en forma cerrada en la normalización de P48. El peso arquimediano es $\Omega(\xi)=\mathrm{Re}\,\psi(\tfrac14+\tfrac{i\xi}2)-\log\pi$, con tres lemas en forma cerrada: serie explícita, valor exacto
    $$\Omega(0)=\psi(\tfrac14)-\log\pi=-\gamma-\tfrac\pi2-3\log2-\log\pi\approx-5.3722<0,$$
    monotonía estricta en $|\xi|$ (de donde $\mathcal A(f)\ge\Omega(0)\|f\|_w^2$: **la destructividad arquimediana tiene suelo absoluto**, a diferencia de la impureza de Doc 135, que era destructividad sin fondo $p^{M\delta'}$), y cotas logarítmicas efectivas.
 
@@ -41,7 +41,7 @@ GAP-135.B pedía decidir el axioma H para el primer objeto del régimen **destru
 ## 1. [DEFINICIÓN-NUEVA] El objeto semilocal arquimediano
 
 **[DEFINICIÓN-NUEVA 1.1] (peso arquimediano de tipo $\zeta$).** El **peso arquimediano** es la función
-$$\Omega(\xi)\;:=\;\operatorname{Re}\,\psi\Bigl(\frac14+\frac{i\xi}2\Bigr)\;-\;\log\pi,\qquad \xi\in\mathbb R,$$
+$$\Omega(\xi)\;:=\;\mathrm{Re}\,\,\psi\Bigl(\frac14+\frac{i\xi}2\Bigr)\;-\;\log\pi,\qquad \xi\in\mathbb R,$$
 y el **término arquimediano** del programa es el funcional cuadrático
 $$\mathcal A(f)\;:=\;\frac1{2\pi}\int_{\mathbb R}|\hat F(\xi)|^2\,\Omega(\xi)\,d\xi.$$
 Esta es exactamente la contribución de $\Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(s/2)$ en la fórmula explícita de Riemann–Weil: $\frac{d}{ds}\log\Gamma_{\mathbb R}(s)\big|_{s=1/2+i\xi}=\tfrac12[\psi(\tfrac14+\tfrac{i\xi}2)-\log\pi]$, y el doblez $s\leftrightarrow1-\bar s$ produce la parte real. **[DATO]:** Weil 1952; Bombieri 2000, §1; Iwaniec–Kowalski 2004, Teorema 5.12.
@@ -49,11 +49,11 @@ Esta es exactamente la contribución de $\Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(
 **[DEFINICIÓN-NUEVA 1.2] (el objeto semilocal arquimediano).** Sea $S=\{p_1,\dots,p_n\}$ un conjunto finito de primos (se admite $S=\varnothing$). El **objeto semilocal arquimediano** es
 $$X_S^{\mathrm{ar}}\;:=\;\bigl(a_S,\;[0]+[1],\;\omega_\zeta\bigr),\qquad a_S:=\Lambda\cdot\mathbf 1_{\{p^m:\,p\in S,\,m\ge1\}}\;\ge\;0,$$
 es decir: dato aritmético von Mangoldt restringido a $S$ (régimen **destructivo**: $a\ge0$, exactamente la clase de H⁺ y el signo opuesto a los objetos puros de Doc 135), bloque polar estándar $[0]+[1]$, peso arquimediano $\omega_\zeta\leftrightarrow\Omega$. Su forma cuadrática de Weil es, para $f\in C_c^\infty(G)$ y $g=f\star\tilde f$:
-$$\boxed{\;Q_S(f)\;:=\;\underbrace{2\,\operatorname{Re}\bigl(\hat f(0)\,\overline{\hat f(1)}\bigr)}_{\text{bloque polar }=\,\hat g(0)+\hat g(1)}\;+\;\underbrace{\frac1{2\pi}\int_{\mathbb R}|\hat F(\xi)|^2\,\Omega(\xi)\,d\xi}_{\mathcal A(f)}\;-\;\underbrace{\sum_{p\in S}\sum_{m\ge1}\frac{\log p}{p^{m/2}}\;2\operatorname{Re}G(m\log p)}_{P_S(f)}\;}$$
+$$\boxed{\;Q_S(f)\;:=\;\underbrace{2\,\mathrm{Re}\,\bigl(\hat f(0)\,\overline{\hat f(1)}\bigr)}_{\text{bloque polar }=\,\hat g(0)+\hat g(1)}\;+\;\underbrace{\frac1{2\pi}\int_{\mathbb R}|\hat F(\xi)|^2\,\Omega(\xi)\,d\xi}_{\mathcal A(f)}\;-\;\underbrace{\sum_{p\in S}\sum_{m\ge1}\frac{\log p}{p^{m/2}}\;2\mathrm{Re}\,G(m\log p)}_{P_S(f)}\;}$$
 El axioma H para $X_S^{\mathrm{ar}}$ es: $Q_S(f)\ge0$ para todo $f\in C_c^\infty(G)$.
 
 **Observación 1.3 (consistencia con $\zeta$ y con Doc 131; por qué esta es LA definición).**
-(i) *Bloque polar:* $\hat g(0)=\hat f(0)\overline{\hat f(1)}$ y $\hat g(1)=\hat f(1)\overline{\hat f(0)}$ (de $\hat g(s)=\hat f(s)\overline{\hat f(1-\bar s)}$); la suma es $2\operatorname{Re}(\hat f(0)\overline{\hat f(1)})$ — **indefinida en signo**, a diferencia del átomo diagonal constructivo $2\log(pq)\,g(1)$ de Doc 135. Esto ya es información.
+(i) *Bloque polar:* $\hat g(0)=\hat f(0)\overline{\hat f(1)}$ y $\hat g(1)=\hat f(1)\overline{\hat f(0)}$ (de $\hat g(s)=\hat f(s)\overline{\hat f(1-\bar s)}$); la suma es $2\mathrm{Re}(\hat f(0)\overline{\hat f(1)})$ — **indefinida en signo**, a diferencia del átomo diagonal constructivo $2\log(pq)\,g(1)$ de Doc 135. Esto ya es información.
 (ii) *Término de primos:* $\Lambda(p^m)\bigl(g(p^m)+p^{-m}g(p^{-m})\bigr)=\frac{\log p}{p^{m/2}}\bigl(G(mL_p)+\overline{G(mL_p)}\bigr)$, usando $g(x)=G(\log x)x^{-1/2}$. Es el término de Weil de $\zeta$ restringido a potencias de primos de $S$ — el signo menos es el de la fórmula explícita (los primos entran restando contra los ceros).
 (iii) *Caso $S=$ todos los primos:* $Q_{\mathrm{full}}(f)=\sum_\rho\hat g(\rho)$ sobre los ceros no triviales de $\zeta$ (fórmula de Riemann–Weil), y H equivale a RH [DATO: Weil 1952; Bombieri 2000]. La definición 1.2 es la única truncación de esa fórmula compatible con los slots $(a,c,\omega)$ de Doc 131.
 (iv) *Hermiticidad:* $Q_S(f)\in\mathbb R$ para todo $f$ (cada bloque es manifiestamente real). $X_S^{\mathrm{ar}}$ es hermitiano en el sentido de Doc 131, Prop. 2.8.
@@ -68,7 +68,7 @@ El axioma H para $X_S^{\mathrm{ar}}$ es: $Q_S(f)\ge0$ para todo $f\in C_c^\infty
 $$\Omega(\xi)\;=\;-\gamma-\log\pi\;+\;\sum_{n\ge0}\Bigl(\frac1{n+1}\;-\;\frac{n+\tfrac14}{(n+\tfrac14)^2+y^2}\Bigr),$$
 con convergencia absoluta y localmente uniforme.
 
-*Demostración.* De la serie de la digamma $\psi(z)=-\gamma+\sum_{n\ge0}\bigl(\frac1{n+1}-\frac1{n+z}\bigr)$ con $z=\tfrac14+iy$: $\operatorname{Re}\frac1{n+\tfrac14+iy}=\frac{n+1/4}{(n+1/4)^2+y^2}$. El término $n$-ésimo es $O(n^{-2})$ uniformemente en $y$ acotado (numerador $y^2-\tfrac34(n+\tfrac14)$ sobre denominador $\asymp n^3$). $\square$
+*Demostración.* De la serie de la digamma $\psi(z)=-\gamma+\sum_{n\ge0}\bigl(\frac1{n+1}-\frac1{n+z}\bigr)$ con $z=\tfrac14+iy$: $\mathrm{Re}\,\frac1{n+\tfrac14+iy}=\frac{n+1/4}{(n+1/4)^2+y^2}$. El término $n$-ésimo es $O(n^{-2})$ uniformemente en $y$ acotado (numerador $y^2-\tfrac34(n+\tfrac14)$ sobre denominador $\asymp n^3$). $\square$
 
 **[LEMA 2.2] (el valor en el centro, exacto).**
 $$\Omega(0)\;=\;\psi(\tfrac14)-\log\pi\;=\;-\gamma-\frac\pi2-3\log2-\log\pi\;\approx\;-5.3722\;<\;0.$$
@@ -110,7 +110,7 @@ $$Q_S(f)\;\ge\;\frac3{10}\,\|f\|_w^2.$$
 
 *(1) Primos: cero.* $G(t)=0$ para $|t|>2T$ y $2T\le\tfrac1{150}<\log2\le mL_p$: $P_S(f)=0$ para todo $S$. (Aquí entra que el dato $a_S$ vive en $\{p^m:m\ge1\}$, lejos de $1$.)
 
-*(2) Polar: $\ge-4Te^{T}\|f\|_w^2$.* Si $\operatorname{supp}F\subset[\lambda-T,\lambda+T]$,
+*(2) Polar: $\ge-4Te^{T}\|f\|_w^2$.* Si $\mathrm{supp}\,F\subset[\lambda-T,\lambda+T]$,
 $$\bigl|\hat f(0)\overline{\hat f(1)}\bigr|=\Bigl|\int\!\!\int F(t)\overline{F(s)}\,e^{(s-t)/2}\,dt\,ds\Bigr|\le e^{T}\Bigl(\int|F|\Bigr)^2\le e^{T}\cdot2T\,\|F\|_2^2,$$
 usando $|s-t|\le2T$ (la posición $\lambda$ se cancela en $e^{(s-t)/2}$ — el bloque polar es invariante de ventana, como debe) y Cauchy–Schwarz. Luego el bloque polar es $\ge-4Te^{T}\|F\|_2^2$.
 
@@ -128,22 +128,22 @@ Suma en $T=T_0=\tfrac1{300}$: $1-\tfrac{205}{300}-4\cdot\tfrac1{300}e^{1/300}\ge
 
 ## 4. [CÁLCULO] $n=1$: el test de Mertens no muerde en el régimen destructivo
 
-Sea $S=\{p\}$, el primer objeto genuinamente mixto (un primo destructivo + $\Gamma$ + polo). El adversario campeón del régimen constructivo era el test de dos protuberancias (Doc 135 §4): $f=u+\theta\,u(\cdot/p^M)$, con $u(e^t)=\epsilon^{-1/2}\chi(t/\epsilon)$, $\chi$ par, $\operatorname{supp}\chi\subset[-1,1]$, $\int\chi^2=1$. Evaluamos $Q_p$ sobre esa familia, a orden principal en $\epsilon$ (los $O(\epsilon)$ se absorben como en Doc 135).
+Sea $S=\{p\}$, el primer objeto genuinamente mixto (un primo destructivo + $\Gamma$ + polo). El adversario campeón del régimen constructivo era el test de dos protuberancias (Doc 135 §4): $f=u+\theta\,u(\cdot/p^M)$, con $u(e^t)=\epsilon^{-1/2}\chi(t/\epsilon)$, $\chi$ par, $\mathrm{supp}\,\chi\subset[-1,1]$, $\int\chi^2=1$. Evaluamos $Q_p$ sobre esa familia, a orden principal en $\epsilon$ (los $O(\epsilon)$ se absorben como en Doc 135).
 
 Tomamos el perfil **de media cero**: $\int\chi=0$ (permitido: $\chi$ par, signada). Entonces:
 
-- **Polar:** $\hat f(1)=\int F e^{t/2}dt=\epsilon^{1/2}\!\int\chi(v)\bigl(e^{\epsilon v/2}-1\bigr)dv\cdot(1+\theta p^{M/2}\cdot[\,\cdot\,])=O(\epsilon^{3/2})(1+|\theta|p^{M/2})$, e igual $\hat f(0)$ con $p^{-M/2}$. El bloque polar es $O(\epsilon^3)(1+|\theta|^2)p^{M/2}\cdot p^{...}$ — fijado $M$, se absorbe eligiendo $\epsilon$ al final. *(Con $\int\chi\ne0$ el polar entra con $+2I^2\,p^{M/2}\operatorname{Re}\theta$, $I^2=\epsilon(\int\chi)^2$: refuerza la positividad contra el adversario alineado con el primo; el caso de media cero es el peor. )*
-- **Arquimediano:** $|\hat F|^2=|\hat u_\epsilon|^2\bigl(1+|\theta|^2+2\operatorname{Re}(\theta e^{iML_p\xi})\bigr)$ con $\hat u_\epsilon(\xi)=\epsilon^{1/2}\hat\chi(\epsilon\xi)$, luego
-  $$\mathcal A(f)=(1+|\theta|^2)\,A_0+2\operatorname{Re}\theta\cdot\omega_M,\qquad A_0:=\frac1{2\pi}\int|\hat u_\epsilon|^2\Omega\,d\xi,\quad \omega_M:=\frac1{2\pi}\int|\hat u_\epsilon|^2\,\Omega(\xi)\cos(ML_p\xi)\,d\xi.$$
+- **Polar:** $\hat f(1)=\int F e^{t/2}dt=\epsilon^{1/2}\!\int\chi(v)\bigl(e^{\epsilon v/2}-1\bigr)dv\cdot(1+\theta p^{M/2}\cdot[\,\cdot\,])=O(\epsilon^{3/2})(1+|\theta|p^{M/2})$, e igual $\hat f(0)$ con $p^{-M/2}$. El bloque polar es $O(\epsilon^3)(1+|\theta|^2)p^{M/2}\cdot p^{...}$ — fijado $M$, se absorbe eligiendo $\epsilon$ al final. *(Con $\int\chi\ne0$ el polar entra con $+2I^2\,p^{M/2}\mathrm{Re}\,\theta$, $I^2=\epsilon(\int\chi)^2$: refuerza la positividad contra el adversario alineado con el primo; el caso de media cero es el peor. )*
+- **Arquimediano:** $|\hat F|^2=|\hat u_\epsilon|^2\bigl(1+|\theta|^2+2\mathrm{Re}(\theta e^{iML_p\xi})\bigr)$ con $\hat u_\epsilon(\xi)=\epsilon^{1/2}\hat\chi(\epsilon\xi)$, luego
+  $$\mathcal A(f)=(1+|\theta|^2)\,A_0+2\mathrm{Re}\,\theta\cdot\omega_M,\qquad A_0:=\frac1{2\pi}\int|\hat u_\epsilon|^2\Omega\,d\xi,\quad \omega_M:=\frac1{2\pi}\int|\hat u_\epsilon|^2\,\Omega(\xi)\cos(ML_p\xi)\,d\xi.$$
   Con $\int\chi=0$ ($\hat\chi(0)=0$) la masa espectral vive en $|\xi|\asymp1/\epsilon$, donde $\Omega\ge\log\tfrac1{2\epsilon}-O(1)$: $A_0\ge(\log\tfrac1\epsilon)(1-o(1))\to+\infty$. Y $\omega_M$ es **pequeño**, no comparable a $A_0$: integrando por partes una vez, $|\omega_M|\le\frac{\|(|\hat u_\epsilon|^2\Omega)'\|_{L^1}}{ML_p}=O\Bigl(\frac{\epsilon\log(1/\epsilon)}{ML_p}\Bigr)$, pues $\||\hat u_\epsilon|^2{}'\|_1=\epsilon\|(|\hat\chi|^2)'\|_1$ y $\int|\hat u_\epsilon|^2|\Omega'|=O(\epsilon\log\tfrac1\epsilon)$ ($\Omega'=O(1/|\xi|)$ por 2.1 derivada).
-- **Primo:** solo $m=M$ sobrevive en soporte: $P_p(f)=\frac{L_p}{p^{M/2}}\,2\operatorname{Re}G(ML_p)=\frac{2L_p}{p^{M/2}}\operatorname{Re}\theta\,(1+O(\epsilon))$, con $G(ML_p)=\bar\theta(1+O(\epsilon))$... el acople destructivo total del primo a altura $M$ está acotado por
+- **Primo:** solo $m=M$ sobrevive en soporte: $P_p(f)=\frac{L_p}{p^{M/2}}\,2\mathrm{Re}\,G(ML_p)=\frac{2L_p}{p^{M/2}}\mathrm{Re}\,\theta\,(1+O(\epsilon))$, con $G(ML_p)=\bar\theta(1+O(\epsilon))$... el acople destructivo total del primo a altura $M$ está acotado por
   $$\frac{2L_p}{p^{M/2}}\;\le\;\frac{2\log p}{\sqrt p}\;\le\;2\cdot0.736\qquad(\text{máximo en }p=7;\ \text{para }p=2:\ 2\cdot0.490).$$
 
-Con $\operatorname{Re}\theta=-t$ adversario:
+Con $\mathrm{Re}\,\theta=-t$ adversario:
 $$Q_p(f)=(1+t^2)A_0-2t\Bigl(\frac{L_p}{p^{M/2}}+O\bigl(\tfrac{\epsilon\log(1/\epsilon)}{ML_p}\bigr)\Bigr)+O(\epsilon^{3}\!\cdot p^{M})\;\ge\;A_0-\frac{\bigl(L_pp^{-M/2}+o(1)\bigr)^2}{A_0}\;>\;0$$
 para $\epsilon$ pequeño, pues $L_pp^{-M/2}\le0.736\ll A_0\sim\log\tfrac1\epsilon$.
 
-**[PROPOSICIÓN 4.1] (Mertens desactivado).** Sobre toda la familia de dos protuberancias (perfil par, cualquier altura $M\ge1$, cualquier fase $\theta$), $Q_p(f)>0$, con margen $\ge A_0-O(1/A_0)\to\infty$ cuando $\epsilon\to0$. *(Prueba: el cálculo anterior; el caso $\int\chi\ne0$ añade al polar un término $+2I^2p^{M/2}\operatorname{Re}\theta$ que con la fase adversaria del primo, $\operatorname{Re}\theta<0$... su signo es el opuesto al del término del primo, y el análisis se repite con el mínimo en la misma forma cuadrática; los detalles son idénticos.)* $\square$
+**[PROPOSICIÓN 4.1] (Mertens desactivado).** Sobre toda la familia de dos protuberancias (perfil par, cualquier altura $M\ge1$, cualquier fase $\theta$), $Q_p(f)>0$, con margen $\ge A_0-O(1/A_0)\to\infty$ cuando $\epsilon\to0$. *(Prueba: el cálculo anterior; el caso $\int\chi\ne0$ añade al polar un término $+2I^2p^{M/2}\mathrm{Re}\,\theta$ que con la fase adversaria del primo, $\mathrm{Re}\,\theta<0$... su signo es el opuesto al del término del primo, y el análisis se repite con el mínimo en la misma forma cuadrática; los detalles son idénticos.)* $\square$
 
 **Observación 4.2 (la moraleja estructural).** En el régimen constructivo, el acople del adversario al primo **crecía** con la altura ($|c_M|p^{-M/2}=p^{M\delta'}$ si impuro; $=2$ constante si puro). En el régimen destructivo el acople **decae**: $\Lambda(p^m)/p^{m/2}=L_p\,p^{-m/2}\to0$. Cada primo del dato $a\ge0$ es, individualmente, una perturbación compacta y pequeña de $\mathcal A$ — ningún test localizado en UNA escala $p^M$ puede explotar el signo menos. El peligro destructivo no está en ninguna escala: está en el **agregado de la diagonal a lag pequeño**, es decir, en tests anchos y lentos. Eso motiva (y la siguiente sección confirma) cuál es el adversario correcto.
 
@@ -156,7 +156,7 @@ $$\inf\Bigl\{\,Q_S(f)\;:\;f\in C_c^\infty(G),\ \|f\|_w=1\,\Bigr\}\;\le\;\Omega(0
 En particular $X_S^{\mathrm{ar}}$ **no satisface H**, y existe un test explícito (construido en la prueba) con $Q_S<0$. Valores simbólicos:
 $$S=\varnothing:\ \le-5.3722;\qquad S=\{2\}:\ \le-5.3722-2(\sqrt2+1)\log2\approx-8.7190;\qquad S=\{2,3\}:\ \le-11.7207.$$
 
-*Demostración.* **La familia.** Fijemos $\eta,\eta_2\in C_c^\infty(\mathbb R)$ reales, $\eta\not\equiv0$ con $\operatorname{supp}\eta\subset(0,\tfrac38)$, $\eta_2\ge0$ con $\operatorname{supp}\eta_2\subset(\tfrac12,1)$ y $\int_{5/8}^{7/8}\eta_2>0$. Para $T>0$ definimos
+*Demostración.* **La familia.** Fijemos $\eta,\eta_2\in C_c^\infty(\mathbb R)$ reales, $\eta\not\equiv0$ con $\mathrm{supp}\,\eta\subset(0,\tfrac38)$, $\eta_2\ge0$ con $\mathrm{supp}\,\eta_2\subset(\tfrac12,1)$ y $\int_{5/8}^{7/8}\eta_2>0$. Para $T>0$ definimos
 $$F_T(t):=T^{-1/2}\Bigl[\eta\bigl(\tfrac tT\bigr)-c_T\,\eta_2\bigl(\tfrac tT\bigr)\Bigr],\qquad c_T:=\frac{\int\eta(u)\,e^{Tu/2}\,du}{\int\eta_2(u)\,e^{Tu/2}\,du},\qquad f_T(x):=F_T(\log x)\,x^{-1/2}.$$
 Entonces $f_T\in C_c^\infty(G)$ con soporte en $(1,e^T)$ (ventana $2T'=T$), y por construcción
 $$\hat f_T(1)=\int F_T(t)\,e^{t/2}\,dt=T^{1/2}\int\bigl[\eta-c_T\eta_2\bigr](u)\,e^{Tu/2}\,du=0.$$
@@ -195,8 +195,8 @@ $$Q_S(f)\;=\;Q_{\mathrm{full}}(f)\;+\;\bigl[P_{\mathrm{full}}(f)-P_S(f)\bigr]\;=
 donde la suma corre sobre los ceros no triviales de $\zeta$ (fórmula de Riemann–Weil, incondicional [DATO: Weil 1952; Iwaniec–Kowalski 2004, Thm 5.12]). *(Trivial: los tres bloques de $Q_S$ y $Q_{\mathrm{full}}$ coinciden salvo el término de primos; la segunda igualdad es la fórmula explícita.)* $\square$
 
 **[COROLARIO 6.2] (la suma completa sobre primos cambia de signo en el agregado; bajo RH).** Sobre la familia $f_T$ del Teorema 5.1, bajo RH:
-$$\lim_{T\to\infty}P_{\mathrm{full}}(f_T)\;=\;\lim_{T\to\infty}\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,2\operatorname{Re}G_T(\log n)\;=\;\Omega(0)\,\|\eta\|_2^2\;<\;0,$$
-mientras que **cada término individual** tiene límite positivo: $\frac{\Lambda(n)}{\sqrt n}2\operatorname{Re}G_T(\log n)\to\frac{2\Lambda(n)}{\sqrt n}\|\eta\|_2^2>0$.
+$$\lim_{T\to\infty}P_{\mathrm{full}}(f_T)\;=\;\lim_{T\to\infty}\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,2\mathrm{Re}\,G_T(\log n)\;=\;\Omega(0)\,\|\eta\|_2^2\;<\;0,$$
+mientras que **cada término individual** tiene límite positivo: $\frac{\Lambda(n)}{\sqrt n}2\mathrm{Re}\,G_T(\log n)\to\frac{2\Lambda(n)}{\sqrt n}\|\eta\|_2^2>0$.
 
 *Demostración.* Por la Proposición 6.1 con $S=\varnothing$: $P_{\mathrm{full}}(f_T)=\mathcal A(f_T)-\sum_\rho\hat g_T(\rho)$ (polar $=0$). Bajo RH, $\rho=\tfrac12+i\gamma$ y $\hat g_T(\rho)=|\hat F_T(\gamma)|^2=T|\hat\eta_c(T\gamma)|^2$. Como $\zeta(\tfrac12)\ne0$ y el primer cero tiene $|\gamma_1|>0$: $T|\hat\eta_c(T\gamma)|^2\le C_kT(1+T|\gamma_1|)^{-2k}\cdot(1+|\gamma|)^{-2}$-tipo (Paley–Wiener para $\hat\eta_c$, uniforme en $T$ grande), y la suma sobre ceros (densidad $\log\gamma$) tiende a $0$. Con $\mathcal A(f_T)\to\Omega(0)\|\eta\|_2^2$ (Teorema 5.1, paso 2), listo. $\square$
 
@@ -228,7 +228,7 @@ Total: $Q_S\ge(B_S+1-B_S)\|F\|^2=\|F\|^2$. $\square$
 
 **El mapa, en una línea.** El régimen destructivo es un fenómeno de **baja frecuencia y ventana ancha con polo evadido**; la positividad sobrevive exactamente en los dos complementos: ventana corta (toda frecuencia forzada alta — Teorema 3.1) y cono de alta frecuencia (toda ventana — Proposición 7.2). El fallo vive en el rectángulo "frecuencia $\lesssim\xi_*$ × ventana $\gtrsim T_1$", y allí es inevitable.
 
-**[GAP-142.A] (el umbral arquimediano).** Determinar $T_\square:=\sup\{T:\mu_\varnothing(T)\ge0\}$ — el umbral del corazón polar+$\Gamma$, una pregunta de análisis puro sin aritmética (forma cuadrática $2\operatorname{Re}(\hat f(0)\overline{\hat f(1)})+\mathcal A$ sobre ventanas), y los $T_{\mathrm{crit}}(S)\le T_\square$ correspondientes. Probado: $\tfrac1{300}\le T_\square<\infty$. Conjetura natural: $T_\square\asymp1/\xi_*$ por el escalamiento de la Observación 5.2(1), módulo el costo del polo. Es el análogo destructivo de GAP-135.A (que era el módulo del gap; aquí está en juego el **signo** en la región intermedia).
+**[GAP-142.A] (el umbral arquimediano).** Determinar $T_\square:=\sup\{T:\mu_\varnothing(T)\ge0\}$ — el umbral del corazón polar+$\Gamma$, una pregunta de análisis puro sin aritmética (forma cuadrática $2\mathrm{Re}(\hat f(0)\overline{\hat f(1)})+\mathcal A$ sobre ventanas), y los $T_{\mathrm{crit}}(S)\le T_\square$ correspondientes. Probado: $\tfrac1{300}\le T_\square<\infty$. Conjetura natural: $T_\square\asymp1/\xi_*$ por el escalamiento de la Observación 5.2(1), módulo el costo del polo. Es el análogo destructivo de GAP-135.A (que era el módulo del gap; aquí está en juego el **signo** en la región intermedia).
 
 **[GAP-142.B] (espectralidad del objeto semilocal).** Decidir si $X_S^{\mathrm{ar}}$ es espectral en el sentido de Doc 131, Def. 4.1 (¿existe un multiconjunto $Z$ — multiplicidades positivas, densidad polinomial — con $\sum_{\rho\in Z}\hat g(\rho)=Q_S(f)$ para todo $f$?). Evidencia de que NO:
 1. Si existiera tal $Z$ contenido en la línea crítica y $\sigma$-estable, entonces $Q_S\ge0$ — contradicho por el Teorema 5.1. Luego cualquier divisor estaría fuera de la línea. **[Probado.]**
@@ -287,7 +287,7 @@ En cualquier rama: **H⁺ no sobrevive como estaba** — o es falsa, o su único
 **Literatura [DATO]:**
 - A. Weil, *Sur les "formules explicites" de la théorie des nombres premiers*, Comm. Sém. Math. Lund (1952), 252–265. (La forma cuadrática; el criterio H ⟺ RH; los términos locales.)
 - E. Bombieri, *Remarks on Weil's quadratic functional in the theory of prime numbers I*, Rend. Mat. Acc. Lincei (9) 11 (2000), 183–233. (Normalización del funcional; el papel del término arquimediano y del bloque polar.)
-- H. Iwaniec, E. Kowalski, *Analytic Number Theory*, AMS Colloq. Publ. 53, 2004, Teorema 5.12. (La fórmula explícita en la normalización $h(\gamma)$ usada en §1; el peso $\operatorname{Re}\psi(\frac14+\frac{i\xi}2)-\log\pi$.)
+- H. Iwaniec, E. Kowalski, *Analytic Number Theory*, AMS Colloq. Publ. 53, 2004, Teorema 5.12. (La fórmula explícita en la normalización $h(\gamma)$ usada en §1; el peso $\mathrm{Re}\,\psi(\frac14+\frac{i\xi}2)-\log\pi$.)
 - A. Connes, *Trace formula in noncommutative geometry and the zeros of the Riemann zeta function*, Selecta Math. (N.S.) 5 (1999), 29–106. (Los términos locales de la fórmula explícita como distribuciones; el lugar arquimediano.)
 - E. T. Whittaker, G. N. Watson, *A Course of Modern Analysis*, 4ª ed., CUP 1927, §12.3. (Teorema de la digamma de Gauss; $\psi(\frac14)=-\gamma-\frac\pi2-3\log2$.)
 - H. L. Montgomery, R. C. Vaughan, *Multiplicative Number Theory I*, CUP 2007. (Mertens; $\sum_{n\le x}\Lambda(n)n^{-1/2}\sim2\sqrt x$, trasfondo de §6.)

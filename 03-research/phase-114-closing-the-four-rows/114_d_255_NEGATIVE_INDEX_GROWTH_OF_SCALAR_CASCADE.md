@@ -58,7 +58,7 @@ Equation (1.1) is such a reduced representation with Schur numerator
 
 \[
  \boxed{
-\operatorname{ind}_-(K_{C_S})=|S|.
+\mathrm{ind}_-(K_{C_S})=|S|.
 }                                                   \tag{2.2}
 \]
 

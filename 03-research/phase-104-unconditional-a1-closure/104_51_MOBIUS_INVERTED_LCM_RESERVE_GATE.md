@@ -4,7 +4,7 @@
 de `104_50`,
 
 \[
- K_s(d,e)=\zeta(s)\operatorname {lcm}(d,e)^{-s},
+ K_s(d,e)=\zeta(s)\mathrm{lcm}(d,e)^{-s},
  \qquad s>1,                                               \tag{1}
 \]
 
@@ -98,7 +98,7 @@ y columnas por \({\cal D}\) y ponemos
 
 \[
  Z_{m,d}={\bf1}_{d\mid m},\qquad
- W=\operatorname {diag}(w_m:m\in{\cal D}),\qquad w_m>0.  \tag{5}
+ W=\mathrm{diag}(w_m:m\in{\cal D}),\qquad w_m>0.  \tag{5}
 \]
 
 Para dos funciones \(a,b\) sobre \({\cal D}\), su renovación divisora es
@@ -308,7 +308,7 @@ Las desigualdades (19), por ejemplo, siguen de
 
 La obstrucción local alcanza directamente el rango objetivo.
 El checker encierra \(\log2\) y \(\log7=3\log2-\log(8/7)\) mediante la
-serie racional de \(\operatorname {atanh}\), y evalúa \(P_{151}\) por
+serie racional de \(\mathrm{atanh}\,\), y evalúa \(P_{151}\) por
 Horner intervalar con `Fraction`. Certifica
 
 \[

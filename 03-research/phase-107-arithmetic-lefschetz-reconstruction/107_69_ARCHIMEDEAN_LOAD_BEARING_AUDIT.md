@@ -6,9 +6,9 @@
 not merely rhetorical:
 
 \[
- \dim\operatorname{span}\{D_f^{\mathrm{alg}}\}<\infty,
+ \dim\mathrm{span}\,\{D_f^{\mathrm{alg}}\}<\infty,
  \qquad
- \dim\operatorname{span}\{g_{f,\infty}\}=\infty,
+ \dim\mathrm{span}\,\{g_{f,\infty}\}=\infty,
  \]
 
 and a candidate with fixed finite-rank Green component cannot be

@@ -5,7 +5,7 @@
 Connes-Consani declare \(H^1\) open for the idempotent-monoid formulation
 (1805.10501). A candidate rescue exists in principle: Mikhalkin-Zharkov and
 Cartwright construct \(H^1(\Delta,\mathcal A_{\mathbb Z})\cong
-\operatorname{Pic}_{\mathrm{ridge}}\) for the sheaf of \(\mathbb Z\)-affine
+\mathrm{Pic}_{\mathrm{ridge}}\) for the sheaf of \(\mathbb Z\)-affine
 (piecewise-linear, integer-slope) functions on a **finite** \(\Delta\)-complex.
 108_00 SS7 asks whether that machinery is available for the DC objects this
 phase works with (both 107_237's \(D_f\), \(f\in C_c\), and 108.03's graded
@@ -14,7 +14,7 @@ deliverable. It is negative, for two independent reasons.
 
 ## 2. Obstruction 1: DC objects are outside the theorem's hypothesis, by an already-proved theorem
 
-Mikhalkin-Zharkov/Cartwright's \(H^1\cong\operatorname{Pic}_{\mathrm{ridge}}\)
+Mikhalkin-Zharkov/Cartwright's \(H^1\cong\mathrm{Pic}_{\mathrm{ridge}}\)
 is stated for the sheaf \(\mathcal A_{\mathbb Z}\) of piecewise-**linear**
 functions with integer slopes on a **finite** polyhedral complex \(\Delta\):
 functions that are, locally, the maximum (or a fixed combination) of
@@ -55,7 +55,7 @@ objects by construction.
 108_00 SS7 flags this explicitly, and it survives independently of
 Obstruction 1.
 
-\(\operatorname{Pic}_{\mathrm{ridge}}=H^1(\Delta,\mathcal A_{\mathbb
+\(\mathrm{Pic}_{\mathrm{ridge}}=H^1(\Delta,\mathcal A_{\mathbb
 Z}^\times)\) is the cohomology of the **sheaf of units** of
 \(\mathcal A_{\mathbb Z}\) (its multiplicative/invertible-elements sheaf,
 in whatever sense "invertible" is meant for a sheaf of monoid-valued PL
@@ -69,11 +69,11 @@ sheaf** itself, additively: the object whose dimension appears as the
 
 There is, in the sources read for this phase (Mikhalkin-Zharkov, Cartwright,
 Connes-Consani 1805.10501, and every phase-106/107/108 document), no
-constructed comparison map \(H^1(\mathcal O)\to\operatorname{Pic}\) or
-\(\operatorname{Pic}\to H^1(\mathcal O)\) for this category, additive versus
+constructed comparison map \(H^1(\mathcal O)\to\mathrm{Pic}\,\) or
+\(\mathrm{Pic}\,\to H^1(\mathcal O)\) for this category, additive versus
 multiplicative sheaf cohomology in general disagree (e.g. already in
 classical algebraic geometry, \(H^1(X,\mathcal O_X)\) and
-\(H^1(X,\mathcal O_X^\times)=\operatorname{Pic}(X)\) are related by the
+\(H^1(X,\mathcal O_X^\times)=\mathrm{Pic}(X)\) are related by the
 exponential/Kummer exact sequence, not equal, and that sequence is not
 available here since there is no exponential map between the idempotent
 monoid structure sheaf and its units in the relevant category), and nothing
@@ -90,9 +90,9 @@ category. This is an candid gap, not a claim that the two invariants
 for two independent reasons: (1) neither DC category constructed in this
 program (107_237's \(C_c\)-currents, 108.03's graded family) is finite-PL,
 which is the stated hypothesis of the only cited construction of
-\(H^1\cong\operatorname{Pic}\) (Theorem 2.1, Proposition 2.2); (2) even
+\(H^1\cong\mathrm{Pic}\,\) (Theorem 2.1, Proposition 2.2); (2) even
 granting an extension of that theorem past its finite-PL hypothesis, its
-target \(\operatorname{Pic}_{\mathrm{ridge}}\) is not shown, here or
+target \(\mathrm{Pic}_{\mathrm{ridge}}\) is not shown, here or
 anywhere cited, to compute the same invariant Connes-Consani's program
 needs (\(H^1\) of the structure sheaf), and no comparison map is
 constructed (Proposition 3.1).
@@ -106,7 +106,7 @@ Three avenues, named and left open, matching the style of 107_237 SS5 and
    rather than imported from the finite-PL theory -- the candid route, and
    a substantial undertaking on its own, not attempted in this phase.
 2. **A comparison map** \(H^1(\mathcal O_{\mathrm{DC}})\to
-   \operatorname{Pic}_{\mathrm{ridge}}\)-analogue, constructed and proved
+   \mathrm{Pic}_{\mathrm{ridge}}\)-analogue, constructed and proved
    an isomorphism (or at least injective/surjective with controlled
    kernel/cokernel) for this category -- would resolve Obstruction 2 alone,
    leaving Obstruction 1 (finite-PL exclusion) untouched, so it would need
@@ -134,7 +134,7 @@ Proved here:
 
 Not established:
 
-* that \(H^1(\mathcal O)\) and \(\operatorname{Pic}_{\mathrm{ridge}}\)
+* that \(H^1(\mathcal O)\) and \(\mathrm{Pic}_{\mathrm{ridge}}\)
   actually differ in this category (only that nothing shows they agree);
 * any of the three avenues of SS5;
 * any change to `ROW_A_STATUS`.

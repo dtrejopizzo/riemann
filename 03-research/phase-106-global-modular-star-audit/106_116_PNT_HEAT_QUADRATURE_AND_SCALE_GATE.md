@@ -234,7 +234,7 @@ where
  &=\sum_{k=0}^\infty
    \frac{\xi^2}
    {(2k+\tfrac12)((2k+\tfrac12)^2+\xi^2)}\\
- &=\frac12\operatorname {Re}
+ &=\frac12\mathrm{Re}
    \left\{
     \psi_0\!\left(\frac14+\frac{i\xi}{2}\right)
     -\psi_0\!\left(\frac14\right)
@@ -320,7 +320,7 @@ normalized heat state converges in trace norm to
 \[
  \Gamma_\infty
  =\frac{P_\alpha V P_\alpha}
-        {\operatorname {Tr}(P_\alpha V P_\alpha)},
+        {\mathrm{Tr}(P_\alpha V P_\alpha)},
  \tag{24}
 \]
 

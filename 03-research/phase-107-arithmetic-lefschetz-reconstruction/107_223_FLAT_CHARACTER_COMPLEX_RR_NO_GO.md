@@ -28,8 +28,8 @@ If \((a,b)\ne(0,0)\), the cohomology calculation of 107_217 gives
 At every finite prime \(\mathfrak p\),
 
 \[
- \operatorname{length}_{\mathfrak p}H^0
- =\operatorname{length}_{\mathfrak p}H^1
+ \mathrm{length}_{\mathfrak p}H^0
+ =\mathrm{length}_{\mathfrak p}H^1
  =v_{\mathfrak p}(I),
  \tag{1.3}
 \]

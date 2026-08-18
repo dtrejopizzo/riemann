@@ -50,9 +50,9 @@ unquotiented cotangent module is free.
 For every `B`-module `M`, restriction to the second coproduct factor gives
 
 \[
- \operatorname{Der}_{\mathbb Z_1}(B,M)
+ \mathrm{Der}_{\mathbb Z_1}(B,M)
  \simeq
- \operatorname{Der}_{\mathbb F\{\pm1\}}(\mathbb Z_2,M). \tag{2.1}
+ \mathrm{Der}_{\mathbb F\{\pm1\}}(\mathbb Z_2,M). \tag{2.1}
 \]
 
 Thus the induced prime-differential module is
@@ -145,7 +145,7 @@ Under H7-DFLAT, every `sigma>0` defines
 \[
  E_\sigma:A_{12}\longrightarrow\mathbb R,
  \quad E_\sigma(i_1(a)i_2(b))
-      =a\,\operatorname{sgn}(b)|b|^\sigma,               \tag{3.4}
+      =a\,\mathrm{sgn}(b)|b|^\sigma,               \tag{3.4}
 \]
 
 extended first-additively. Then `114_a_25` makes

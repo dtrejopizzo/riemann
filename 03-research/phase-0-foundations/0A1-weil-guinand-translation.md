@@ -20,7 +20,7 @@ $$\boxed{\;\sum_{\rho} h(\gamma_\rho)
 \;-\;\underbrace{2\sum_{n=2}^{\infty}\frac{\Lambda(n)}{\sqrt n}\,g(\log n)}_{\text{PRIME } \Pi(g)}\;}$$
 
 where $\Lambda$ is von Mangoldt, and the archimedean density is
-$$\Omega(r) \;=\; \operatorname{Re}\,\psi\!\left(\tfrac14+\tfrac{ir}{2}\right) - \log\pi ,
+$$\Omega(r) \;=\; \mathrm{Re}\,\,\psi\!\left(\tfrac14+\tfrac{ir}{2}\right) - \log\pi ,
 \qquad \psi=\Gamma'/\Gamma .$$
 *(Constants/normalization to be pinned against a numeric reference; the structure
 ZERO-SIDE = POLAR + ARCH − PRIME is the invariant content.)*

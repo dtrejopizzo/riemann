@@ -142,7 +142,7 @@ ordinary heat operator is diagonal on the orbit:
 Hence
 
 \[
- \operatorname{Tr}(R e^{-t\Delta})=0                     \tag{4.2}
+ \mathrm{Tr}(R e^{-t\Delta})=0                     \tag{4.2}
 \]
 
 on every free orbit.  Equivariant analytic torsion therefore localizes on

@@ -297,7 +297,7 @@ and perturb it by a compactly supported attractive rank-one form
 
 For suitable \(\tau>0\), \(H_\tau\) has an eigenvalue in \((0,1/2)\), while
 its local embedding is compact and every function supported away from
-\(\operatorname {supp}\phi\) still obeys the exact tail floor \(1/2\).
+\(\mathrm{supp}\,\phi\) still obeys the exact tail floor \(1/2\).
 The localized Birman--Schwinger operator then has eigenvalue one at that
 bound-state energy. Hence local compactness plus a \(1/2\) tail floor can
 never prove the strict norm bound.

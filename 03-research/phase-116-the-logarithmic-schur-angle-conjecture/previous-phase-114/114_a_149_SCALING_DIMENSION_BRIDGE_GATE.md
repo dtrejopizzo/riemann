@@ -15,7 +15,7 @@ special-divisor extremal-generator theorem and the squeeze by principal
 translations give
 
 \[
- \operatorname{cdim}^{(2)}H^0(D\boxtimes E)
+ \mathrm{cdim}^{(2)}H^0(D\boxtimes E)
  =\max(\deg D,0)\max(\deg E,0).
 \]
 

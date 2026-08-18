@@ -11,7 +11,7 @@
 
 ### 0.1. La función y el flujo
 
-$\Xi(z) = \xi(\tfrac12 + iz)$, entera de orden 1, par, real en $\mathbb{R}$. Un cero $\rho = \tfrac12 + b + i\gamma$ de $\zeta$ corresponde al cero $z = \gamma - ib$ de $\Xi$; RH $\iff$ todos los ceros de $\Xi$ son reales. La banda crítica da $|\operatorname{Im} z| < \tfrac12$ para todo cero (región libre de ceros de Hadamard–de la Vallée Poussin da la desigualdad estricta).
+$\Xi(z) = \xi(\tfrac12 + iz)$, entera de orden 1, par, real en $\mathbb{R}$. Un cero $\rho = \tfrac12 + b + i\gamma$ de $\zeta$ corresponde al cero $z = \gamma - ib$ de $\Xi$; RH $\iff$ todos los ceros de $\Xi$ son reales. La banda crítica da $|\mathrm{Im} z| < \tfrac12$ para todo cero (región libre de ceros de Hadamard–de la Vallée Poussin da la desigualdad estricta).
 
 Flujo de De Bruijn–Newman en la normalización de Polymath 15: con $\Phi$ la densidad superexponencial estándar y
 
@@ -33,7 +33,7 @@ $\Lambda$ = constante de De Bruijn–Newman: $H_t$ tiene solo ceros reales $\iff
 
 Para una configuración de ceros $Z$ (multiconjunto en $\mathbb{C}$, cerrado bajo $z\mapsto\bar z$ y $z\mapsto -z$):
 
-$$\kappa(Z) := \#\{z \in Z : \operatorname{Im} z > 0\} \quad (\text{con multiplicidad}).$$
+$$\kappa(Z) := \#\{z \in Z : \mathrm{Im} z > 0\} \quad (\text{con multiplicidad}).$$
 
 Para $\zeta$: cada cuádruplo off-line $\{\rho, \bar\rho, 1-\rho, 1-\bar\rho\}$ da 4 ceros no reales de $\Xi$, de los cuales 2 en el semiplano superior; con $m$ = número de cuádruplos, $\kappa = 2m$. Esto **coincide** con el índice de Kreĭn de Phase 26 (κ = neg.ind$(Q)$ = 2m): cada cuádruplo aporta exactamente un plano hiperbólico al espacio negativo de la forma de Weil. Escribimos $\kappa(t) := \kappa(Z_t)$ con $Z_t$ = ceros de $H_t$. Por [KKL], $\kappa(t) < \infty$ para todo $t > 0$ **incondicionalmente**; $\kappa(0) < \infty$ es la mitad de finitud abierta ($m<\infty$), que **no** se prueba aquí.
 
@@ -43,16 +43,16 @@ Para $\zeta$: cada cuádruplo off-line $\{\rho, \bar\rho, 1-\rho, 1-\bar\rho\}$ 
 
 ### 1.1. El espacio de configuraciones
 
-**[DEFINICIÓN-NUEVA 1.1] (espacio de configuraciones $\mathcal{C}$).** $\mathcal{C}$ es el conjunto de multiconjuntos localmente finitos $Z \subset \{|\operatorname{Im} z| \le \tfrac12\}$ tales que:
+**[DEFINICIÓN-NUEVA 1.1] (espacio de configuraciones $\mathcal{C}$).** $\mathcal{C}$ es el conjunto de multiconjuntos localmente finitos $Z \subset \{|\mathrm{Im} z| \le \tfrac12\}$ tales que:
 
 1. *(realidad)* $\bar Z = Z$;
 2. *(ecuación funcional)* $-Z = Z$;
-3. *(densidad RvM)* $N_Z(T) := \#\{z : |\operatorname{Re} z| \le T\} = \frac{T}{\pi}\log\frac{T}{2\pi e} + O(\log T)$;
+3. *(densidad RvM)* $N_Z(T) := \#\{z : |\mathrm{Re} z| \le T\} = \frac{T}{\pi}\log\frac{T}{2\pi e} + O(\log T)$;
 4. *(género)* $\sum_{z \in Z, z\neq 0} |z|^{-2} < \infty$ (automático de 3).
 
-Topología: la inducida por convergencia **local de Hurwitz** — $Z_n \to Z$ si las medidas de conteo convergen vagamente y, en cada compacto cuya frontera evita $Z$, los conteos coinciden eventualmente. Un **camino admisible** es $u \mapsto Z_u$ continuo en esta topología; lo llamamos **propio** si existe un compacto $K$ que contiene $\{z \in Z_u : \operatorname{Im} z \ne 0\}$ para todo $u$ (los ceros no reales no escapan al infinito ni entran desde él).
+Topología: la inducida por convergencia **local de Hurwitz** — $Z_n \to Z$ si las medidas de conteo convergen vagamente y, en cada compacto cuya frontera evita $Z$, los conteos coinciden eventualmente. Un **camino admisible** es $u \mapsto Z_u$ continuo en esta topología; lo llamamos **propio** si existe un compacto $K$ que contiene $\{z \in Z_u : \mathrm{Im} z \ne 0\}$ para todo $u$ (los ceros no reales no escapan al infinito ni entran desde él).
 
-*Por qué hace falta "propio":* en la topología vaga sola, un par no real puede deslizarse hacia $\operatorname{Re} z \to \infty$ y "desaparecer", cambiando κ sin evento local. La propiedad es la hipótesis franca mínima; para el flujo DBN con $\kappa<\infty$ se cumple automáticamente en intervalos compactos de tiempo (los ceros se mueven con velocidad localmente acotada, Lema 2.1).
+*Por qué hace falta "propio":* en la topología vaga sola, un par no real puede deslizarse hacia $\mathrm{Re} z \to \infty$ y "desaparecer", cambiando κ sin evento local. La propiedad es la hipótesis franca mínima; para el flujo DBN con $\kappa<\infty$ se cumple automáticamente en intervalos compactos de tiempo (los ceros se mueven con velocidad localmente acotada, Lema 2.1).
 
 ### 1.2. Los dos muros
 
@@ -63,7 +63,7 @@ Topología: la inducida por convergencia **local de Hurwitz** — $Z_n \to Z$ si
 
 **[PROP 1.3] (paridad).** En $\mathcal{C} \setminus W_{\mathrm{Sieg}}$, $\kappa \in 2\mathbb{Z}$.
 
-*Prueba.* Los ceros no reales del semiplano superior son permutados por $z \mapsto -\bar z$ (composición de las dos simetrías), que preserva $\operatorname{Im} z$. Fuera de $W_{\mathrm{Sieg}}$ esta involución no tiene puntos fijos en $\{\operatorname{Im} z > 0\}$ (un punto fijo cumple $\operatorname{Re} z = 0$). Un conjunto finito —o cada estrato de un multiconjunto— con involución libre tiene cardinal par. $\square$
+*Prueba.* Los ceros no reales del semiplano superior son permutados por $z \mapsto -\bar z$ (composición de las dos simetrías), que preserva $\mathrm{Im} z$. Fuera de $W_{\mathrm{Sieg}}$ esta involución no tiene puntos fijos en $\{\mathrm{Im} z > 0\}$ (un punto fijo cumple $\mathrm{Re} z = 0$). Un conjunto finito —o cada estrato de un multiconjunto— con involución libre tiene cardinal par. $\square$
 
 Esto re-deriva "δ=1 prohibido" (Doc 132) en lenguaje configuracional: la paridad es un fenómeno de **teoría de grupos del grupo de Klein**, no de positividad.
 
@@ -77,7 +77,7 @@ Esto re-deriva "δ=1 prohibido" (Doc 132) en lenguaje configuracional: la parida
 
 $$\kappa(Z_u) = \frac{1}{2\pi i} \oint_{\partial R} \frac{F_u'(z)}{F_u(z)}\,dz = \deg\left(\frac{F_u}{|F_u|} : \partial R \to S^1\right).$$
 
-*Prueba.* (3) es el principio del argumento: los ceros dentro de $R$ son exactamente los no reales del semiplano superior (los reales quedan fuera porque $\eta > 0$; la propiedad y $\kappa<\infty$ permiten elegir $R$). (1): por Hurwitz, si $Z_{u_0}$ no toca $\partial R$, para $u$ cerca de $u_0$ el conteo en $R$ es constante; hay que poder mantener $\eta > 0$ fijo: esto falla solo si ceros no reales se acercan al eje, lo que en el límite produce un cero real de multiplicidad $\ge 2$ (los ceros llegan en pares conjugados, y el punto límite real absorbe ambos) — es decir, solo en $W_{\mathrm{col}}$; o si un cero no real cruza $\operatorname{Re} z = 0$... que no cambia el conteo (la involución lo preserva), salvo que esté *sobre* el eje imaginario aterrizando en $0$, caso $W_{\mathrm{Sieg}} \cap W_{\mathrm{col}}$. La propiedad excluye fugas por los lados verticales (se toman $a,b$ fuera del compacto $K$). (2): localmente, cerca del aterrizaje, $F_u(z) = c(u)\,(z - z_+(u))(z - z_-(u))\,G_u(z)$ con $G$ no nula, $z_\pm = x_0(u) \pm i\beta(u)$ antes del cruce y $z_\pm$ reales después; el conteo en un disco pequeño alrededor de $x_0$ baja de 1 (en el semiplano superior) a 0, y la paridad de $F$ duplica el evento en $-x_0$. $\square$
+*Prueba.* (3) es el principio del argumento: los ceros dentro de $R$ son exactamente los no reales del semiplano superior (los reales quedan fuera porque $\eta > 0$; la propiedad y $\kappa<\infty$ permiten elegir $R$). (1): por Hurwitz, si $Z_{u_0}$ no toca $\partial R$, para $u$ cerca de $u_0$ el conteo en $R$ es constante; hay que poder mantener $\eta > 0$ fijo: esto falla solo si ceros no reales se acercan al eje, lo que en el límite produce un cero real de multiplicidad $\ge 2$ (los ceros llegan en pares conjugados, y el punto límite real absorbe ambos) — es decir, solo en $W_{\mathrm{col}}$; o si un cero no real cruza $\mathrm{Re} z = 0$... que no cambia el conteo (la involución lo preserva), salvo que esté *sobre* el eje imaginario aterrizando en $0$, caso $W_{\mathrm{Sieg}} \cap W_{\mathrm{col}}$. La propiedad excluye fugas por los lados verticales (se toman $a,b$ fuera del compacto $K$). (2): localmente, cerca del aterrizaje, $F_u(z) = c(u)\,(z - z_+(u))(z - z_-(u))\,G_u(z)$ con $G$ no nula, $z_\pm = x_0(u) \pm i\beta(u)$ antes del cruce y $z_\pm$ reales después; el conteo en un disco pequeño alrededor de $x_0$ baja de 1 (en el semiplano superior) a 0, y la paridad de $F$ duplica el evento en $-x_0$. $\square$
 
 **Lectura.** κ **es** un invariante topológico: el grado de $F/|F|$ sobre el borde de la banda de inestabilidad. No es localmente constante en todo $\mathcal{C}$ — y eso es lo correcto: si lo fuera, el flujo DBN no podría llevar κ a 0. Es localmente constante **entre muros**, y los muros son exactamente los eventos de colisión en el eje crítico. La respuesta a "¿de qué espacio es κ un π₀?": κ clasifica las componentes conexas de $\{$caminos propios$\} \setminus (W_{\mathrm{col}} \cup W_{\mathrm{Sieg}})$, es decir, $\kappa$ es la función localmente constante universal del complemento de los muros (junto con los datos discretos triviales).
 
@@ -122,7 +122,7 @@ donde $\sum'$ es la suma simetrizada (agrupando $z_j$ con $-z_j$, o truncando si
 
 **[DEFINICIÓN-NUEVA 2.2] (energía de inestabilidad).**
 
-$$I(t) := \sum_{\substack{z_k(t)\,:\, \operatorname{Im} z_k > 0}} (\operatorname{Im} z_k(t))^2 \;=\; \sum_{k \text{ sup}} \beta_k(t)^2 .$$
+$$I(t) := \sum_{\substack{z_k(t)\,:\, \mathrm{Im} z_k > 0}} (\mathrm{Im} z_k(t))^2 \;=\; \sum_{k \text{ sup}} \beta_k(t)^2 .$$
 
 Es la mitad del segundo momento imaginario total. Para $t > 0$ es una suma finita [KKL]. $I(t) = 0 \iff \kappa(t) = 0$, y $\Lambda = \inf\{t : I(t) = 0\}$ — la versión geométrica del Teorema 4.1 de Doc 70 ($\Lambda$ como tiempo de extinción de $T_\lambda$).
 
@@ -138,17 +138,17 @@ $$D(t) = 4\sum_{k \text{ sup}} \beta_k^2 \left[ \sum_{x_j \in \mathbb{R}} \frac{
 
 (suma sobre pares ordenados; cada sumando es manifiestamente $\ge 0$; si $z_k$ está en el eje imaginario los términos espejo coincidentes se cuentan una vez).
 
-*Prueba.* Por el Lema 2.1, $\dot\beta_k = \operatorname{Im} \dot z_k = -2\sum_{w \in Z \setminus \{z_k\}} \dfrac{\beta_k - \operatorname{Im} w}{|z_k - w|^2}$, luego
+*Prueba.* Por el Lema 2.1, $\dot\beta_k = \mathrm{Im} \dot z_k = -2\sum_{w \in Z \setminus \{z_k\}} \dfrac{\beta_k - \mathrm{Im} w}{|z_k - w|^2}$, luego
 
-$$\frac{dI}{dt} = \sum_{k \text{ sup}} 2\beta_k \dot\beta_k = -4 \sum_{k \text{ sup}} \sum_{w \ne z_k} \frac{\beta_k(\beta_k - \operatorname{Im} w)}{|z_k - w|^2}.$$
+$$\frac{dI}{dt} = \sum_{k \text{ sup}} 2\beta_k \dot\beta_k = -4 \sum_{k \text{ sup}} \sum_{w \ne z_k} \frac{\beta_k(\beta_k - \mathrm{Im} w)}{|z_k - w|^2}.$$
 
 Clasificamos $w$:
 
 1. **El conjugado propio $w = \bar z_k$:** $\beta_k(\beta_k - (-\beta_k))/|2i\beta_k|^2 = 2\beta_k^2/4\beta_k^2 = \tfrac12$. Contribución: $-4 \cdot \tfrac12 = -2$ **por cada cero superior**, total $-2\kappa(t)$. *Este es el término universal: no depende de dónde esté el cero, solo de que exista.*
-2. **El espejo $w = -\bar z_k$:** $\operatorname{Im} w = \beta_k$, contribución $0$.
+2. **El espejo $w = -\bar z_k$:** $\mathrm{Im} w = \beta_k$, contribución $0$.
 3. **El antípoda $w = -z_k$:** $\beta_k(2\beta_k)/|2z_k|^2 = \beta_k^2/(2|z_k|^2)$; contribución $-2\beta_k^2/|z_k|^2 \le 0$.
 4. **Ceros reales $w = x_j$:** $\beta_k^2/|z_k - x_j|^2$; contribución $-4\beta_k^2 \sum_j |z_k - x_j|^{-2} \le 0$ (convergente por RvM).
-5. **Otros ceros superiores y sus órbitas** $w \in \{z_l, \bar z_l, -z_l, -\bar z_l\}$, $l \ne k$: los términos con $\operatorname{Im} w = \beta_l$ dan $\beta_k(\beta_k - \beta_l)/d^2$ con $d \in \{|z_k - z_l|, |z_k + \bar z_l|\}$, simétricos al intercambiar $k \leftrightarrow l$; sumando los pares ordenados $(k,l)$ y $(l,k)$: $\beta_k(\beta_k - \beta_l) + \beta_l(\beta_l - \beta_k) = (\beta_k - \beta_l)^2$. Los términos con $\operatorname{Im} w = -\beta_l$ dan análogamente $(\beta_k + \beta_l)^2$ con $d \in \{|z_k - \bar z_l|, |z_k + z_l|\}$. Todos $\le 0$ tras simetrizar.
+5. **Otros ceros superiores y sus órbitas** $w \in \{z_l, \bar z_l, -z_l, -\bar z_l\}$, $l \ne k$: los términos con $\mathrm{Im} w = \beta_l$ dan $\beta_k(\beta_k - \beta_l)/d^2$ con $d \in \{|z_k - z_l|, |z_k + \bar z_l|\}$, simétricos al intercambiar $k \leftrightarrow l$; sumando los pares ordenados $(k,l)$ y $(l,k)$: $\beta_k(\beta_k - \beta_l) + \beta_l(\beta_l - \beta_k) = (\beta_k - \beta_l)^2$. Los términos con $\mathrm{Im} w = -\beta_l$ dan análogamente $(\beta_k + \beta_l)^2$ con $d \in \{|z_k - \bar z_l|, |z_k + z_l|\}$. Todos $\le 0$ tras simetrizar.
 
 Sumando, $dI/dt = -2\kappa - D$ con $D \ge 0$ como en el enunciado. La convergencia absoluta de cada bloque está garantizada por $\kappa < \infty$ y RvM. $\square$
 

@@ -16,7 +16,7 @@ for Work Package I-C.
 Two ingredients are already fixed:
 
 1. `107_03` supplies the finite-support divisor module
-   \(\operatorname{Div}_{\mathrm{EF}}\), together with connected prime
+   \(\mathrm{Div}_{\mathrm{EF}}\), together with connected prime
    returns \(Z_{p,k}\), the diagonal symbol \(\Delta\), the archimedean
    symbol \(Z_\infty\), and the transpose-compatible raw package.
 2. `106.210` identifies the correct finite cyclotomic local support:
@@ -36,7 +36,7 @@ For \(n\ge1\), write
  \qquad
  B_n=A/(\Phi_n),
  \qquad
- Z_n=\operatorname{Spec}(B_n)=V(\Phi_n)\subset\operatorname{Spec}A.
+ Z_n=\mathrm{Spec}(B_n)=V(\Phi_n)\subset\mathrm{Spec}\,A.
  \tag{3.1}
 \]
 
@@ -50,7 +50,7 @@ For two indices \(m,n\ge1\), the finite derived intersection object is
 \]
 
 When \(m\neq n\), this derived tensor product is perfect of finite
-support over \(\operatorname{Spec}\mathbf Z\).  When \(m=n\), it becomes
+support over \(\mathrm{Spec}\,\mathbf Z\).  When \(m=n\), it becomes
 the excess self-intersection complex discussed in `106.210`.
 
 The finite-place determinant line attached to a perfect complex \(C\) of
@@ -85,12 +85,12 @@ For \(m\neq n\), the norm of the canonical section of
 
 \[
  \left\|s_{m,n}\right\|_{\mathrm{fin}}
- =\left|\operatorname{Res}(\Phi_m,\Phi_n)\right|.
+ =\left|\mathrm{Res}(\Phi_m,\Phi_n)\right|.
  \tag{4.2}
 \]
 
 Proof.  For distinct principal divisors on the regular surface
-\(\operatorname{Spec}\mathbf Z[x]\), the determinant of the Koszul
+\(\mathrm{Spec}\,\mathbf Z[x]\), the determinant of the Koszul
 complex computing the derived intersection is the classical Deligne
 pairing section.  Its norm is the resultant of the defining equations.
 \(\square\)
@@ -112,7 +112,7 @@ For \(m>n>1\),
  \log\left\|s_{m,n}\right\|_{\mathrm{fin}}
  =
  \frac1{\varphi(n)}
- \log\left|\operatorname{Res}(\Phi_m,\Phi_n)\right|
+ \log\left|\mathrm{Res}(\Phi_m,\Phi_n)\right|
  =
  \begin{cases}
  \log p,&m/n=p^a,\\
@@ -132,7 +132,7 @@ This is the precise finite-place support required for Phase 107:
 
 ## 6. Extension to the source divisor module
 
-The connected symbols \(Z_{p,k}\in\operatorname{Div}_{\mathrm{EF}}\) of
+The connected symbols \(Z_{p,k}\in\mathrm{Div}_{\mathrm{EF}}\) of
 `107_03` are source-level placeholders for primitive \(k\)-fold
 prime-power returns.  Their finite local interaction is modeled by the
 cyclotomic indices underlying the same prime tower.
@@ -146,7 +146,7 @@ corresponding cyclotomic strata whose ratio encodes the transition from
 the normalized order law
 
 \[
- \operatorname{ord}_{\mathrm{fin}}
+ \mathrm{ord}_{\mathrm{fin}}
  \langle Z_{p,k},Z_{q,\ell}\rangle_{\mathrm{fin}}
  =
  \begin{cases}
@@ -163,7 +163,7 @@ assign a finite diagonal scalar.
 ### Definition 6.2: bilinear extension away from the diagonal
 
 Extend \(\langle\cdot,\cdot\rangle_{\mathrm{fin}}\) biadditively from
-off-diagonal generator pairs in \(\operatorname{Div}_{\mathrm{EF}}\),
+off-diagonal generator pairs in \(\mathrm{Div}_{\mathrm{EF}}\),
 with
 
 \[
@@ -189,7 +189,7 @@ The key structural point of `106.210` must be carried forward exactly.
 For any \(n\ge1\),
 
 \[
- \operatorname{Res}(\Phi_n,\Phi_n)=0,
+ \mathrm{Res}(\Phi_n,\Phi_n)=0,
  \tag{7.1}
 \]
 
@@ -208,14 +208,14 @@ Proof.  This is exactly Sections 2 and 3 of `106.210`.  \(\square\)
 
 ### Corollary 7.2: diagonal placeholder
 
-The source diagonal symbol \(\Delta\in\operatorname{Div}_{\mathrm{EF}}\)
+The source diagonal symbol \(\Delta\in\mathrm{Div}_{\mathrm{EF}}\)
 must be sent at the finite stage to an excess-intersection line object
 \(\mathcal E_\Delta\), not to a number \(n\), \(\varphi(n)\), or
-\(\log|\operatorname{Disc}(\Phi_n)|\).
+\(\log|\mathrm{Disc}(\Phi_n)|\).
 
 Proof.  Any of those scalar substitutes would import extra information
 not furnished by the same finite determinant theory.  In particular, the
-discriminant arises from \(\operatorname{Res}(\Phi_n,\Phi_n')\), which is
+discriminant arises from \(\mathrm{Res}(\Phi_n,\Phi_n')\), which is
 a normal-torsion invariant rather than a bilinear self-pairing.
 \(\square\)
 
@@ -246,7 +246,7 @@ absolute value in the norm.  \(\square\)
 
 The construction of \(\langle Z_m,Z_n\rangle_{\mathrm{fin}}\) commutes
 with restriction to any finite set of primes containing the support of
-\(\operatorname{Res}(\Phi_m,\Phi_n)\).
+\(\mathrm{Res}(\Phi_m,\Phi_n)\).
 
 Proof.  Off the support of the resultant the intersection is empty, hence
 the localized complex is acyclic.  Therefore the determinant line

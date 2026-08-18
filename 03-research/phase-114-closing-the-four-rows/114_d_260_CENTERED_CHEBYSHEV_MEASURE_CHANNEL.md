@@ -132,7 +132,7 @@ geometry a map
 
 \[
  \mathfrak V_N:\mathcal E_N
- \longrightarrow\overline{\operatorname{Ran}D_N}
+ \longrightarrow\overline{\mathrm{Ran}\,D_N}
 \]
 
 such that

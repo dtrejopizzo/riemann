@@ -136,7 +136,7 @@ separates it as a pole with nonzero residue.
 The estimate
 \[
  \left|\sum_\rho e^{\rho u}/\rho^2\right|
- \ll e^{u/2}\operatorname{poly}(u)                         \tag{7}
+ \ll e^{u/2}\mathrm{poly}(u)                         \tag{7}
 \]
 uniformly on expanding intervals \(0\le u\le4n\), with a constant and a
 fixed polynomial independent of \(n\), covers every \(u\ge0\).  By the

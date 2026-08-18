@@ -50,7 +50,7 @@ For each supported bad fiber, the verifier:
 
 So this artifact is not another purely symbolic governance audit.  It
 is a reproducible local witness on real bad fibers over
-\(\operatorname{Spec}\mathbf Z\), with the network-dependent lookup
+\(\mathrm{Spec}\,\mathbf Z\), with the network-dependent lookup
 replaced by a pinned page snapshot so the check remains stable.
 
 ## 4. Outcome

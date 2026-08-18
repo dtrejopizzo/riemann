@@ -98,7 +98,7 @@ which is why the resulting function is analytic on each contact cell.
 But on oscillatory functions (F_\xi(t)=\chi(t)e^{i\xi t}), (2.1) has
 size comparable to (\log|\xi|)F_\xi) in the interior.  This is the same
 logarithmic order as the Fourier symbol
-(\operatorname {Re}\psi(5/4+i\xi/2)).  Therefore no estimate
+(\mathrm{Re}\,\psi(5/4+i\xi/2)).  Therefore no estimate
 
 \[
  \|R_F\|_2\le C_T\|F\|_2                             \tag{2.2}

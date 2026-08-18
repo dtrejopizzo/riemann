@@ -51,8 +51,8 @@ Hence
 
 \[
  \mathscr L^\square
- =\operatorname{pr}_1^*\mathscr L\otimes
-  \operatorname{pr}_2^*\mathscr L
+ =\mathrm{pr}_1^*\mathscr L\otimes
+  \mathrm{pr}_2^*\mathscr L
  \simeq\mathcal O_{\mathcal H^2}.
  \tag{2.2}
 \]
@@ -87,7 +87,7 @@ becomes \(Z_\infty(s)\).  This is holomorphic and nowhere zero on
 \(\pi^{-s/2}\), nor \(\Gamma(s/2)\) vanishes there.  Consequently
 
 \[
- \operatorname{div}_{\mathcal H}(\sigma)=0.
+ \mathrm{div}_{\mathcal H}(\sigma)=0.
  \tag{3.1}
 \]
 

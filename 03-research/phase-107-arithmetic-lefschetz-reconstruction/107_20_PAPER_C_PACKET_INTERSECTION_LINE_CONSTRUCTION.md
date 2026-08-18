@@ -28,7 +28,7 @@ Four earlier notes are used.
 
 1. `107_04` constructs the off-diagonal determinant line
    \(\langle Z_m,Z_n\rangle_{\rm fin}\) and proves its canonical norm is
-   \(|\operatorname{Res}(\Phi_m,\Phi_n)|\).
+   \(|\mathrm{Res}(\Phi_m,\Phi_n)|\).
 2. `107_17` gives the local chart equations for graph closures in the
    variables \((\xi,q,\theta)\).
 3. `107_18` replaces \(\xi\) by finite visible rooted packets
@@ -44,7 +44,7 @@ visible packet set
 \[
  \mathcal I_T
  :=
- \{(n,\chi): n\in\mathcal N_T,\ \chi\in X_T^\vee,\ \operatorname{ord}(\chi)=n\}.
+ \{(n,\chi): n\in\mathcal N_T,\ \chi\in X_T^\vee,\ \mathrm{ord}(\chi)=n\}.
  \tag{3.1}
 \]
 
@@ -92,7 +92,7 @@ Retain the cyclotomic base algebra of `107_04`:
  \qquad
  B_n=A/(\Phi_n),
  \qquad
- Z_n=\operatorname{Spec}(B_n).
+ Z_n=\mathrm{Spec}(B_n).
  \tag{4.1}
 \]
 
@@ -112,7 +112,7 @@ The corresponding local packet chart is
 \[
  \mathcal P_{n,\chi}^{\rm alg}
  :=
- \operatorname{Spec}(B_{n,\chi}^{\rm pkt}).
+ \mathrm{Spec}(B_{n,\chi}^{\rm pkt}).
  \tag{4.3}
 \]
 
@@ -147,7 +147,7 @@ In the local charts of `107_17`, packet graph equations have the form
 \]
 
 The finite determinant support of `107_04` lives over
-\(\operatorname{Spec}\mathbf Z\) and is detected by torsion in the order
+\(\mathrm{Spec}\,\mathbf Z\) and is detected by torsion in the order
 coordinate.  The equalities \(q_2=q_1\) and \(\theta_2=\theta_1\) are
 shared graph constraints, but in this local finite model they do not
 introduce new finite support away from the diagonal: they are frozen
@@ -282,13 +282,13 @@ For visible distinct orders \(m\neq n\),
  =
  \left\|s_{m,n}\right\|_{\rm fin}
  =
- \left|\operatorname{Res}(\Phi_m,\Phi_n)\right|.
+ \left|\mathrm{Res}(\Phi_m,\Phi_n)\right|.
  \tag{8.2}
 \]
 
 Proof.  Theorem 7.2 identifies the packet line with the cyclotomic
 determinant line tensored by a norm-one rooted factor.  The norm of the
-cyclotomic section is \(|\operatorname{Res}(\Phi_m,\Phi_n)|\) by
+cyclotomic section is \(|\mathrm{Res}(\Phi_m,\Phi_n)|\) by
 Proposition 4.1 of `107_04`.  \(\square\)
 
 ### Corollary 8.3: packetwise Apostol support law
@@ -381,7 +381,7 @@ The present note closes the local missing step left open in `107_19`.
 2. the rooted label contribution is isolated as a norm-one determinant
    factor;
 3. the packet canonical norm is proved to descend exactly to
-   \(|\operatorname{Res}(\Phi_m,\Phi_n)|\);
+   \(|\mathrm{Res}(\Phi_m,\Phi_n)|\);
 4. the off-diagonal comparison morphism to `107_04` is now a proved
    isometric isomorphism in the local packet algebra model;
 5. the diagonal caution remains coherent with Part I.

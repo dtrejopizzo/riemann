@@ -108,9 +108,9 @@ Consequently
 \[
 \begin{aligned}
 \tau^{\mathrm q}_{L,N}(z)
-&:=\operatorname{Tr}(z-D^{\mathrm q}_{L,N})^{-2},\\
+&:=\mathrm{Tr}(z-D^{\mathrm q}_{L,N})^{-2},\\
 \tau^{\mathrm{full}}_{L,N}(z)
-&:=\operatorname{Tr}(z-D^{\mathrm{full}}_{L,N})^{-2},\\
+&:=\mathrm{Tr}(z-D^{\mathrm{full}}_{L,N})^{-2},\\
 \tau^{\mathrm{full}}_{L,N}(z)
 &=\tau^{\mathrm q}_{L,N}(z)
   +\sum_{|k|>N}\frac1{(z-d_k)^2},\\
@@ -219,7 +219,7 @@ then \(s-\Theta^{\mathrm{full}}_{L,N}=i(z-D^{\mathrm{full}}_{L,N})\),
 and therefore
 
 \[
-\operatorname{Tr}(s-\Theta^{\mathrm{full}}_{L,N})^{-2}
+\mathrm{Tr}(s-\Theta^{\mathrm{full}}_{L,N})^{-2}
 =-\tau^{\mathrm{full}}_{L,N}(z)
 =(\log F_{L,N})''(z).
 \tag{17}
@@ -229,7 +229,7 @@ There is no missing sign or scale factor. The global trace target is exactly
 
 \[
 \boxed{
-\operatorname{Tr}(s-\Theta_L)^{-2}
+\mathrm{Tr}(s-\Theta_L)^{-2}
 \longrightarrow
 -\left(\frac{\xi'}{\xi}\right)'(s).
 }
@@ -250,7 +250,7 @@ CCM, with \(L=2\log\lambda\). CCM prove
 \]
 
 locally uniformly on each closed substrip of
-\(|\operatorname{Im}z|<1/2\). Thus, on compact sets avoiding the
+\(|\mathrm{Im}\,z|<1/2\). Thus, on compact sets avoiding the
 zeros of \(\Xi\),
 
 \[
@@ -358,7 +358,7 @@ in E101.095:
 \tag{26}
 \]
 
-Indeed, \(|u^{-iz}|=u^{\operatorname{Im}z}\), so (26) gives the
+Indeed, \(|u^{-iz}|=u^{\mathrm{Im}\,z}\), so (26) gives the
 numerator in (24) uniformly on closed substrips. Condition (26) is stronger
 than the curvature target (21); the latter is the minimal affine-invariant
 statement needed by the second-resolvent route.

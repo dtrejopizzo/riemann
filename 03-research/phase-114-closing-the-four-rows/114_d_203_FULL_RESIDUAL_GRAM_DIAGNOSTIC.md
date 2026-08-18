@@ -41,7 +41,7 @@ Then
 \]
 
 Thus \(H\) contains every cross term of the finite-to-complement
-coupling.  If \(\Lambda=\operatorname{diag}(\lambda_i)\) is the positive
+coupling.  If \(\Lambda=\mathrm{diag}(\lambda_i)\) is the positive
 finite block, the generalized coupling on a safe index set \(S\) is
 
 \[
@@ -49,7 +49,7 @@ finite block, the generalized coupling on a safe index set \(S\) is
  \kappa_S=\lambda_{\max}(M_S).                        \tag{1.2}
 \]
 
-The diagonal-only sum of D.201 is \(\operatorname{tr}M_S\); it can be
+The diagonal-only sum of D.201 is \(\mathrm{tr}\,M_S\); it can be
 much larger than the operator norm and cannot identify the directions
 which must be promoted.
 

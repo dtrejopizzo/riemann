@@ -61,7 +61,7 @@ The nonnegative Schur-complement condition is
 }
 \tag{4}
 \]
-with the usual range condition \(b_n\in\operatorname{Ran}B_n\) in the
+with the usual range condition \(b_n\in\mathrm{Ran}\,B_n\) in the
 semidefinite case.
 
 Since \(b_n^*B_n^\dagger b_n\ge0\), (4) is generally stronger than the A1
@@ -142,7 +142,7 @@ A Schur route can be genuinely stronger than the diagonal only if it proves
 structural data before the A1 sign is known:
 
 1. \(B_n\succeq0\);
-2. \(b_n\in\operatorname{Ran}B_n\);
+2. \(b_n\in\mathrm{Ran}\,B_n\);
 3. the positive Schur margin
    \[
      d_n-b_n^*B_n^\dagger b_n\ge0.

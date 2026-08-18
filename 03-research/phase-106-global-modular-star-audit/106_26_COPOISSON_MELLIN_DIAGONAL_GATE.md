@@ -81,7 +81,7 @@ The BV estimate of 106.12, now applied to \(f_\lambda^{(0)}\) before
 multiplicative inversion, gives
 
 \[
- |H_\lambda(v)|\ll v^{-1/2}\operatorname {Var}(f_\lambda^{(0)}).
+ |H_\lambda(v)|\ll v^{-1/2}\mathrm{Var}(f_\lambda^{(0)}).
  \tag{6}
 \]
 
