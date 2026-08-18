@@ -1,5 +1,5 @@
 # III + IV.1 — Veredicto consolidado del tribunal (· ·) Los tres atacaron **III (estabilidad relativa /ε₀)** y **IV.1 (operador límite)** con matemática
-pura, en paralelo, y **convergieron**. Resultado honesto y con dos wins reales de demostración. --- ## RESULTADO CENTRAL (consenso): III y IV.1 son el MISMO hueco + el muro Los tres separan limpiamente, y coinciden, en tres objetos que el documento maestro mezclaba: | Objeto | Estado demostrado |
+pura, en paralelo, y **convergieron**. Resultado franco y con dos wins reales de demostración. --- ## RESULTADO CENTRAL (consenso): III y IV.1 son el MISMO hueco + el muro Los tres separan limpiamente, y coinciden, en tres objetos que el documento maestro mezclaba: | Objeto | Estado demostrado |
 |---|---|
 | `γ(λ)>0` a cada λ **finito** | **PROBADO** (simplicidad H1; B.3) — incondicional |
 | **tamaño** \|ε₀\| (cuán chico es el menor autovalor) | **ANÁLISIS** — cota incondicional probada |
@@ -14,7 +14,7 @@ El tamaño correcto probado es `O(1/logλ)`, y el **signo** sigue siendo RH. ## 
 > `(H-lim)` (existencia del límite de escala) se prueba **incondicionalmente** por
 > Prokhorov + convergencia fuerte de resolvente (Reed–Simon VIII.21/24). ⟹ `(H-gap)` y `(H-lim)` **colapsan en una sola** hipótesis RH-neutral (T★): *"existe escala de
 borde logarítmica no degenerada"*. Antes eran dos huecos numéricos; ahora es **un** enunciado de
-análisis citable. --- ## IV.1 — operador límite: tres avances + un hueco honesto **A. Obstrucción de compacidad, resuelta (IV.1) [SÓLIDO].**
+análisis citable. --- ## IV.1 — operador límite: tres avances + un hueco franco **A. Obstrucción de compacidad, resuelta (IV.1) [SÓLIDO].**
 La paradoja "Loewner compacto vs. operador diferencial" se resuelve: el SL de 2º orden es el
 **inverso de Green** del compacto de borde. Green del Laplaciano-Dirichlet = `min(x,y)(1−max(x,y))`;
 los `ε_k` medidos son autovalores del **inverso**, no del compacto ordenado. La compacidad NO
@@ -27,7 +27,7 @@ Fijada la escala de borde **logarítmica**, el patrón `n²` está **forzado**: 
 continuo; super-log ⟹ degenerado. `n²` es **equivalente** a la hipótesis (T★). **D. Candidato Airy/Bessel REFUTADO para n² (IV.4) [hallazgo severo].**
 El operador de concentración natural (prolato `P_c`, Landau–Widom) tiene borde **Airy** (`≍k^{2/3}`)
 o **Bessel** (`≍k`) — **ninguno es `n²`**. El `n²` pertenece a un SL regular en intervalo finito,
-otro operador. Mata la esperanza fácil "límite de prolato = n²". **Hueco honesto de IV.1 (los tres):** pinear el **potencial variable `V(x)`** (equivalentemente, la
+otro operador. Mata la esperanza fácil "límite de prolato = n²". **Hueco franco de IV.1 (los tres):** pinear el **potencial variable `V(x)`** (equivalentemente, la
 tasa exacta del carrier `h(λ)=π−ω*(λ)`) por convergencia de resolvente. Es **análisis de capa de
 borde duro, NO RH-hard**. `γ=3` sigue **sin derivarse** hasta identificar `V` (confirma C.4). --- ## SÍNTESIS UNÁNIME — la compresión > Los **cuatro** residuos analíticos abiertos del documento — `(H-gap)` uniforme, `(H-lim)`, la
 > identificación del operador IV.1, y `γ=3` — **se comprimen en UN solo enunciado RH-neutral**:

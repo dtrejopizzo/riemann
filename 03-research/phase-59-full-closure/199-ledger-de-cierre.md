@@ -3,7 +3,7 @@
 **Programa:** Hipótesis de Riemann — Fase 59 (cierre total)
 **Fecha:** 2026-06-12
 **Mandato del director:** "cerrar todos los caminos abiertos: cada GAP termina en TEOREMA, BARRERA-TEOREMA o CALIBRADO-EXACTO, nada queda en 'no sabemos'."
-**Naturaleza de este documento:** archivo certificador. No contiene matemática nueva; cada celda cita el documento que la respalda. Honestidad absoluta: lo abierto se declara abierto, con su precio nombrado.
+**Naturaleza de este documento:** archivo certificador. No contiene matemática nueva; cada celda cita el documento que la respalda. Franqueza absoluta: lo abierto se declara abierto, con su precio nombrado.
 
 **Estados admisibles:**
 - **TEOREMA** — probado, con doc de prueba (y auditoría cuando existe).
@@ -25,7 +25,7 @@
 | GAP-190.A (objeto externo: ζ-carga + anisotropía-con-signo + asa incondicional) | D190 | **CERRADO como DISYUNTIVA-TEOREMA** — [Def 198.1] clase 𝔄 (cinco monedas cerradas), [Thm 198.2] no-go sobre 𝔄, [Thm 198.4]: todo detector paga S1 (fase fina = GAP-141.G1), S2 (molificador largo = Bettin–Gonek/Farmer) o S3 (positividad exacta = Weil/Phase 53). Cierre por reformulación, NO construcción — declarado | D198 |
 | GAP-180.1 (μ₂(T)=o(1): el enunciado mínimo de A) | D180 | **ABIERTO-BIEN-PLANTEADO, género S1** — triangulado por barreras-teorema: 176.9 (densidades, D185), 191.A/197.B (molificadores: teorema en θ<½, pipeline-sellado en [½,1]), 172.9 (techo por ventanas), 183.2 (isotropía). Precio: moneda nueva de fase fina | D180, D185, D191/193, D197, D198 |
 | GAP-141.G1 (evaluación aritmética por ventana mejor que MV) | Phase 47 | **ABIERTO-BIEN-PLANTEADO = S1, el residuo maestro** — con medida exacta de su dureza: [Thm 172.9] prueba que ni correlación de pares + G1 entero supera T/log T por ventanas; la moneda nueva debe ser MÁS fina que G1-promediado | D172, D198 §5 (S1) |
-| GAP-198.1 (combinaciones inter-moneda no factorizables: ¿heredan el no-go?) | D198 | **ABIERTO-BIEN-PLANTEADO (mantenimiento)** — la cláusula de cierre que E-194.4 mató, ahora GAP honesto; pertenencia a 𝔄 verificable caso por caso | D198 |
+| GAP-198.1 (combinaciones inter-moneda no factorizables: ¿heredan el no-go?) | D198 | **ABIERTO-BIEN-PLANTEADO (mantenimiento)** — la cláusula de cierre que E-194.4 mató, ahora GAP franco; pertenencia a 𝔄 verificable caso por caso | D198 |
 | GAP-198.2 (¿crece la lista (A2) de la moneda (iii)? p.ej. Harper incondicional) | D198 | **ABIERTO-BIEN-PLANTEADO (mantenimiento)** — re-verificación obligatoria de [Lema 198.2a] si la lista crece | D198 |
 | 178.C (confinamiento polilog: \|β−½\|≤C(log γ)^{−1−η}) | D178 | **CALIBRADO-EXACTO (conjetural)** — pilar de Torre 2; cuasi-RH-difícil: ida 178.8 certificada (177.B ⟹ confinamiento), equivalencia degradada en D187 | D178, D187 |
 | LP-134∞ (infinitos cuádruplos con b·log γ ≥ c) | D179 | **CALIBRADO (conjetural, insustituible)** — forma mínima [Prop 179.2]; Hadamard satisface todas las leyes dinámicas probadas [179.5, degradada pero la insustituibilidad esencial sobrevive D187]; su moneda analítica exacta es el flujo de borde [Thm 189.2] | D179, D187, D189/194 |
@@ -100,7 +100,7 @@
 
 **Fuera de la disyuntiva (objetos de la Torre 2 y satélites):** GAP-196.A (gaps pequeños sin RH — el más decidible de los abiertos, con literatura activa), LP-134∞, 178.C, CONJ 179.6, GAP-179.B, GAP-192.A, GAP-175.B, más los de mantenimiento GAP-198.1/198.2 y los cosméticos GAP-195.A/196.B y los de literatura (191.L1, 197.L1, 197.L2, [BH95] a nivel de página).
 
-**Declaración honesta final.** El programa NO probó la Hipótesis de Riemann. Lo que probó es el mapa completo: dos torres condicionales con pilares calibrados (RH ⟸ A∧Dic; m<∞ ⟸ 178.C∧LP-134∞), un cuerpo de teoremas incondicionales nuevos (§3), y el cierre por teorema de todos los mecanismos internos de detección — toda vía intentable dentro de la clase 𝔄 está cerrada por [Thm 198.2], y salir de 𝔄 cuesta exactamente S1, S2 o S3, cada precio medido contra un teorema certificado. Nada quedó en "no sabemos": quedó en "sabemos exactamente qué falta y cuánto cuesta".
+**Declaración franca final.** El programa NO probó la Hipótesis de Riemann. Lo que probó es el mapa completo: dos torres condicionales con pilares calibrados (RH ⟸ A∧Dic; m<∞ ⟸ 178.C∧LP-134∞), un cuerpo de teoremas incondicionales nuevos (§3), y el cierre por teorema de todos los mecanismos internos de detección — toda vía intentable dentro de la clase 𝔄 está cerrada por [Thm 198.2], y salir de 𝔄 cuesta exactamente S1, S2 o S3, cada precio medido contra un teorema certificado. Nada quedó en "no sabemos": quedó en "sabemos exactamente qué falta y cuánto cuesta".
 
 ---
 

@@ -52,7 +52,7 @@ These join the P11 five-language map. Phase 8 added a *dynamical* sixth view and
 Every route — static positivity (5 languages), flow-only (N5), statistics-coupled (here) — terminates at the
 **same arithmetic statement**: a control of the *upper-tail clustering of the zeros, uniform in height*. This
 is the genuine open core; we have no special key to it, and inventing one is the "new mathematics" the problem
-demands. The honest odds of cracking it from here are $<2\%$.
+demands. The candid odds of cracking it from here are $<2\%$.
 
 ## Status
 - RT statistics-coupling engaged with real zeros — ✅ lands on the uniform upper pair correlation (B1 wall).

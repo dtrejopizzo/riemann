@@ -2,7 +2,7 @@
 
 **Author: David Alejandro Trejo Pizzo · 2026-06-04.**
 Did all four milestones autonomously. The mechanism genuinely escapes the wrong-sign capstone — and that
-revealed the **second, distinct** fundamental obstruction: the probabilistic–deterministic gap. Honest, in full.
+revealed the **second, distinct** fundamental obstruction: the probabilistic–deterministic gap. Candid, in full.
 
 ---
 
@@ -36,7 +36,7 @@ sharpness (second moment) uses $\mathbb E[\#^2]$, but the *upper* bound is pure 
 > upper-bound machinery (union bound on log-correlated extremes) is *not* a positivity. Phase 12's obstruction
 > is therefore **not** the capstone.
 
-## M12.3 — the pricing, and the barrier it reveals (the honest pivot)
+## M12.3 — the pricing, and the barrier it reveals (the candid pivot)
 
 Applying the bound to our target, two issues surface — the second is fundamental and new.
 
@@ -117,7 +117,7 @@ deterministic, non-positivity tool:
 > bounds* on $\big|\sum b_i\log p_i\big|$ — i.e. bounds *how close the prime frequencies can resonate* —
 > **unconditionally, by transcendence theory, not positivity.** This bounds the near-resonance inflation of the
 > moments, hence the extreme large values, hence the extreme $S(T)$, hence (via the chain) the gap. The
-> mechanism is exactly right: deterministic + upper-direction + non-positivity. The honest open gap is
+> mechanism is exactly right: deterministic + upper-direction + non-positivity. The candid open gap is
 > *quantitative*: Baker's bounds are famously weak, and whether they (or their conjectural sharpenings, the
 > $abc$/Lang–Waldschmidt territory) reach the threshold the extreme needs is the genuine frontier.
 

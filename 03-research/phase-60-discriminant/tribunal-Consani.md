@@ -2,14 +2,14 @@
 (`E2-nucleo-proof.md`, `N5-analytic-loewner.md`, `N5-subpieces-proved.md`,
 `AUDIT-repairs-E1-III.md`, `AUDIT-repairs-norm-N5c-IV2.md`).
 **Veredicto global de entrada:** NO se prueba RH. El documento ya lo admite. Mi trabajo es
-verificar que la honestidad de la auto-auditoría es *suficiente* —y dónde aún sobre-afirma—,
+verificar que la franqueza de la auto-auditoría es *suficiente* —y dónde aún sobre-afirma—,
 y cerrar lo cerrable. Spoiler: la auto-auditoría es en su mayoría correcta y notablemente
-honesta, pero hay **dos sobre-afirmaciones residuales** en el núcleo variacional (§2.6) que
+franca, pero hay **dos sobre-afirmaciones residuales** en el núcleo variacional (§2.6) que
 hay que marcar, y el "lema del horizonte" tiene un **factor de densidad equivocado** que
-invalida el conteo `#{γ_ρ≤T*}=dim` tal como está escrito. Lo arreglo abajo (Tarea 3). Cold honesty primero: el corazón es RH-equivalente, así que **ninguna cantidad de análisis
+invalida el conteo `#{γ_ρ≤T*}=dim` tal como está escrito. Lo arreglo abajo (Tarea 3). Cold candor primero: el corazón es RH-equivalente, así que **ninguna cantidad de análisis
 cierra la cadena**. Lo que SÍ se puede cerrar rigurosamente es el andamiaje y —parcialmente—
 el lema de déficit de frame, con un residual explícito que vuelve a ser RH. Lo hago. --- ## TAREA 1 — Veredicto pieza por pieza Convención: **SOLID** = resiste auditoría como matemática (posiblemente módulo un clásico
-citado honestamente); **GAP** = falta prueba, o la prueba escrita es falsa, o la afirmación
+citado francamente); **GAP** = falta prueba, o la prueba escrita es falsa, o la afirmación
 es RH-equivalente disfrazada. ### E0 — Construcción CCM, identidad `QW=`forma de Weil — **SOLID (con una salvedad)**
 La definición (Def 0.1, núcleos de diferencia dividida de seno, diagonal con ventana de
 Fejér) es correcta y la lectura Loewner (II.1–II.2 de `N5-analytic-loewner.md`) es limpia y
@@ -25,7 +25,7 @@ arquimediano, que NO se truncan y que el documento esconde en "+𝒫". La identi
 ceros con esos constantes exactos* tiene un detalle (factor y el `conj γ_ρ`) que audito
 abajo. Veredicto: SOLID como definición y como forma de Weil; la frase "=Σ_ρ... exacto"
 necesita la calificación de Tarea 2. ### E1 / H1 / H1′ — real-rootedness finita — **GAP (correctamente auto-flagged)**
-La auto-auditoría es **correcta y honesta**, y aquí la firmo sin reservas: la prueba
+La auto-auditoría es **correcta y franca**, y aquí la firmo sin reservas: la prueba
 registrada (interlacing con `ξ_k>0`) **es falsa**, y el contraejemplo `ξ=(−1,2,−1)`,
 `d=(−1,0,1)` → `f(s)=−2/(s³−s)` (cero raíces reales) la refuta de forma terminal. El
 autovector fundamental NO es de signo definido (carrier de borde `ω*≈0.966π`), de modo que
@@ -35,7 +35,7 @@ corrección correcta**, y es la observación más importante de toda la auto-aud
 PSD*. Que H1 "probara QW PSD" habría probado RH; es imposible, y el documento ahora lo
 reconoce. La real-rootedness es cierta empíricamente y se puede citar como CCM Thm 1.1(iii)
 caja negra; prueba propia (Hermite–Biehler desde la realización auto-adjunta) **abierta**.
-Severidad ALTA pero honestamente declarada. **GAP.** ### N0 — `Ξ_T→Ξ` strip-uniforme — **SOLID**
+Severidad ALTA pero francamente declarada. **GAP.** ### N0 — `Ξ_T→Ξ` strip-uniforme — **SOLID**
 La cuenta es correcta y la firmo línea por línea. `Φ(u)≤Ce^{9u/2}e^{−πe^{2u}}` (doble-exp,
 par) es clásica (Riemann/Pólya). El cambio `v=e^{2u}` da `Γ(7/4+δ/2, πλ²)` y la cota de la
 Gamma incompleta `∫_X^∞ v^a e^{−πv}dv ≤ C X^a e^{−πX}` para `X` grande es estándar. Resultado
@@ -46,7 +46,7 @@ Lema 2 correcto. `w=log|F|−τ Im z` subarmónica, acotada superiormente en `H`
 6.2.4 (tipo exponencial + acotada en ℝ ⟹ `|F(z)|≤Γe^{τ|Im z|}`), dos-constantes + medida
 armónica del segmento `ω_{[−R,R]}(iy₀)=(2/π)arctan(R/y₀)≥1−(2/π)(y₀/R)`. Todo correcto. El
 único matiz: requiere que `F=δ̂` sea *acotada en todo ℝ* por `Γ`, no sólo en `[−R,R]`; eso lo
-da N2. Encaja. **SOLID* (clásico citado honestamente).** ### N2 — amplitud global — **SOLID**
+da N2. Encaja. **SOLID* (clásico citado francamente).** ### N2 — amplitud global — **SOLID**
 Dos versiones conviven: `Γ=O(logλ)` (Nikolskii/Plancherel–Pólya, `‖ξ̂‖²_{L²}=πlogλ`) y
 `Γ=O(1)` con la normalización `ξ̂(0)=Ξ(0)`. Ambas correctas; la primera es la robusta y es la
 que necesita N1 (`Γ^{1−ω}=exp(O(λ^{−2}loglogλ))→1`). La ortogonalidad de los `sinc_k` y
@@ -58,7 +58,7 @@ factor `λ^{1/2}` para `|y|≤½`. Correcto. **SOLID*.** ### Reducción (Teorema
 `ξ̂_λ−Ξ=(ξ̂_λ−Ξ_T)+(Ξ_T−Ξ)`; segundo término `O(λ³e^{−πλ²})` (N0, δ=½); primero por N1 con
 `R=T*~λ²` da `≲λ^{1/2}ε_loc`. La conclusión condicional "`ε_loc=o(λ^{−½}) ⟹ ξ̂_λ→Ξ` en
 `|Im z|≤½` ⟹ (E1+Hurwitz) RH" es **lógicamente correcta**. Esta es la joya del programa: una
-reducción limpia de RH a *un único número real medible*. Es honesta porque NO afirma probar
+reducción limpia de RH a *un único número real medible*. Es franca porque NO afirma probar
 `ε_loc=o(λ^{−½})`. **SOLID** como implicación (módulo E1 para el paso Hurwitz). El valor real
 del programa vive aquí. ### III — estabilidad relativa — **GAP (condicional; correctamente degradado)**
 La forma absoluta de Davis–Kahan es inútil (`ε_1−ε_0≈3ε_0≈10^{−20}`); la renormalización
@@ -88,7 +88,7 @@ El espectro relativo medido `ε_k/ε_0→(k+1)²=n²` con paridad alternante `(�
 no un teorema. Todas las identificaciones de coeficiente constante (Dirichlet, Hermite,
 prolato, caja libre, totalmente-no-negativa) están **refutadas** según el propio documento.
 La lectura "Sturm–Liouville 2º orden de coeficientes variables en la capa límite tras `/ε_0`"
-es fenomenológica. Honestamente marcado como análisis (Landau–Widom / de Branges), no RH-hard.
+es fenomenológica. Francamente marcado como análisis (Landau–Widom / de Branges), no RH-hard.
 Coincido: es cerrable *en principio* pero está abierto. **GAP.** Nota: `γ=3` (=2²/1²) está
 sólo medido; (H-gap) de III depende de esto. ### IV.2 ≡ §V — el núcleo — **GAP RH-EQUIVALENTE (correcto, pero con dos sobre-afirmaciones residuales)**
 Esta es la pieza que audito a fondo en Tarea 2. Veredicto: **RH-equivalente, correctamente
@@ -117,7 +117,7 @@ hasta-T***: es equivalente a RH-hasta-T* **más** un teorema de unicidad/rigidez
 minimizador que es el contenido de Landau–Beurling a densidad crítica (Tarea 3). La cadena
 mezcla "la forma es PSD" (=RH local, correcto) con "el minimizador es la función de Riemann
 truncada" (=RH local + rigidez de frame, más fuerte de lo declarado). El documento **lo dice
-honestamente en una línea** ("módulo rigor del déficit de frame, Landau–Beurling") pero el
+francamente en una línea** ("módulo rigor del déficit de frame, Landau–Beurling") pero el
 recuadro `ground state=Ξ_T ⟺ RH` es por tanto **ligeramente sobre-afirmado**: lo correcto es
 `ε_0≥0 ⟺ RH-hasta-T*`, y `ground state=Ξ_T ⟸ RH-hasta-T* + rigidez de frame`. **Conclusión 2.B:** la pieza es genuinamente RH-equivalente (no hay truco, no hay
 circularidad oculta más allá de la confesada). El handwaving NO está en la equivalencia
@@ -167,7 +167,7 @@ Bajo RH-hasta-T* (los `γ_ρ` reales hasta `T*`), `S_λ⪰0` y el ground state b
 ``` g₀:= argmin_{‖g‖=1, g∈H} ⟨g, S_λ g⟩, ε_0:= λ_min(S_λ).
 ```
 La afirmación del programa es: `g₀ → Ξ_T` y `ε_0→0` (déficit). Probémoslo con el residual
-explícito. ### 3.3 Teorema de déficit de frame (progreso parcial honesto) **Teorema (déficit de frame, versión).** Sea `Ω=logλ`, `T*=2πλ²`, y supóngase
+explícito. ### 3.3 Teorema de déficit de frame (progreso parcial franco) **Teorema (déficit de frame, versión).** Sea `Ω=logλ`, `T*=2πλ²`, y supóngase
 **RH-hasta-T*** (i.e. `{γ_ρ}_{|γ_ρ|≤T*}⊂ℝ`). Sea `m:=DOF−# ≈ 2λ²` el déficit del Lema 3.1.
 Entonces: **(i) Cota superior del menor autovalor.** El espacio
 ``` V_λ:= { g∈PW_Ω: g(γ_ρ)=0 ∀ |γ_ρ|≤T* }
@@ -197,7 +197,7 @@ programa quiere, y `QW=S_λ−(arch+polo)` reordenado; la positividad de `QW` (=
 selecciona. **No hay forma de probar `g₀=Ξ_T` usando sólo el frame de ceros + densidad
 crítica.** El residual es exactamente la positividad de la forma de Weil completa. **Residual exacto (lo que NO se cierra):**
 ``` g₀ = Ξ_T ⟺ Ξ_T minimiza QW (no S_λ) sobre PW_Ω ⟺ QW ⪰ 0 con ground state Ξ_T ⟺ Weil-positividad-hasta-T* con rigidez del minimizador = RH-hasta-T* (+ unicidad).
-``` **Conclusión Tarea 3 (honesta).** El "lema de déficit de frame" **NO es cerrable por
+``` **Conclusión Tarea 3 (franca).** El "lema de déficit de frame" **NO es cerrable por
 Landau–Beurling/interpolación sola**, contra lo que el apéndice del documento sugiere
 ("Landau–Beurling cerraría g₀→Ξ_T"). Razón estructural: el frame de ceros `S_λ` tiene un
 *núcleo de dimensión `≈2λ²`* (underspanning, Lema 3.1 corregido), y `Ξ_T` es sólo uno de
@@ -208,7 +208,7 @@ significa que **si** además se prueba que `QW⪰0` (RH-local) **y** que su grou
 en `V_λ`, entonces `g₀=Ξ_T+O(e^{−πλ²})` con la tasa super-exponencial que el programa midió.
 La tasa `o(λ^{−½})` requerida por la Reducción se seguiría holgadamente — *condicional a RH-
 local*. No es un cierre; es la localización limpia del residual. --- ## TAREA 4 — Cerrable vs RH-hard **Genuinamente cerrable (análisis, no RH):**
-- **N0, N1, N2, N3, Reducción (Thm 2), E3, E4**: ya sólidos (algunos módulo clásicos honestamente citados). No requieren trabajo.
+- **N0, N1, N2, N3, Reducción (Thm 2), E3, E4**: ya sólidos (algunos módulo clásicos francamente citados). No requieren trabajo.
 - **Lema del horizonte**: lo cerré aquí corregido (3.1). Cerrado.
 - **N5c (lado RH-falso)**: sólido módulo real-rootedness + conv-eje; la cota inferior `|Ξ_f(x₀)|>0` es correcta (verificar `Ξ_f(x₀)≠0` caso por caso para DH).
 - **IV.1 (identificación del operador límite)**: análisis duro (Landau–Widom/de Branges), abierto pero no RH-hard. Cerrable en principio.
@@ -217,7 +217,7 @@ local*. No es un cierre; es la localización limpia del residual. --- ## TAREA 4
 - **III (vía `/ε_0` con (H-pos))**: la renormalización asume `ε_0>0` = RH-local. RH-hard (la implicación condicional es correcta; las hipótesis no lo son).
 - **IV.2 ≡ §V (`ξ̂_∞=Ξ`, tasa `o(λ^{−½})`)**: RH-equivalente. El núcleo.
 - **El "déficit de frame" `g₀=Ξ_T`**: contra lo que el documento sugería, **lo reclasifico de cerrable a RH-hard** (Tarea 3): la selección de `Ξ_T` es RH-local + unicidad, no muestreo. Esta es mi corrección más sustantiva al estatus del programa. --- ## VEREDICTO FINAL () El documento **NO prueba RH y no lo reclama** — eso lo respeto. La auto-auditoría es, en su
-mayoría, honesta y técnicamente correcta; las degradaciones de E1, III y H1′ son las
+mayoría, franca y técnicamente correcta; las degradaciones de E1, III y H1′ son las
 correctas, y la observación `PF≠PSD` es excelente. El andamiaje de aproximación (N0–N3,
 Reducción) es matemática sólida y reutilizable; la reducción de RH a "un único número real
 `ε_loc=o(λ^{−½})`" es limpia y valiosa. **Mis tres correcciones de referee al estatus declarado:**
@@ -226,6 +226,6 @@ Reducción) es matemática sólida y reutilizable; la reducción de RH a "un ún
 3. **El documento conflaciona `λ_min(S_λ)=0` con `ε_0=λ_min(QW)`** (el que tiene signo=RH). El "déficit `ε_0~C₀/λ²`" es del `QW` completo, no del frame de ceros. La RH-hardness está **distribuida** (H1′, `/ε_0`, IV.2, y ahora también el déficit de frame),
 más de lo que el cuadro original admitía, pero menos catastróficamente de lo que un referee
 hostil temería: no hay circularidad oculta ni conflación `QW≠Weil` (verifiqué que `QW` ES la
-forma de Weil). El programa es una **localización honesta y precisa de RH en un núcleo
-variacional Weil-positividad**, no una prueba. Cold honesty: el "corazón" no se mueve un
+forma de Weil). El programa es una **localización franca y precisa de RH en un núcleo
+variacional Weil-positividad**, no una prueba. Cold candor: el "corazón" no se mueve un
 milímetro con análisis; es RH.

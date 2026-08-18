@@ -13,7 +13,7 @@ This program executes a focused numerical research effort on the localized Weil 
 
 - Implement a single canonical engine and zero solver (R1); before any analysis reproduce the dataset's validation gates (R2), in particular the explicit-formula trace identity tr(M_zeros)=tr(M_arith) to ≈10⁻¹⁵ and GRH-respecting numerical controls; restrict quantitative claims to the GRH controls only (ζ, Dirichlet L(χ₄ mod 5), modular L(Δ,s)) (R3); report all quantities as curves/surfaces over (T₀,σ,J) and show dependence on prime cutoff X (R4); avoid circular/RH claims beyond Lindelöf (R5, R7); cache zero lists and Q matrices and state CPU cost per panel (R8); pair numerical regularities with the sharpest provable mathematical statement and name the precise missing lemma and nearest known theorem (R9); maintain the Bottleneck Ledger table updated for every finding (R10). If any validation gate fails, stop and fix (R2).
 - **Do not use the Davenport-Heilbronn function quantitatively** — treat it only as a qualitative control if referenced.
-- Ensure all reporting is honest: if a hypothesis fails, state it plainly and give the exact numerical evidence and the exact missing lemma/nearest tool that would be needed to convert the empirical observation into a proof.
+- Ensure all reporting is candid: if a hypothesis fails, state it plainly and give the exact numerical evidence and the exact missing lemma/nearest tool that would be needed to convert the empirical observation into a proof.
 
 ### Dataset and engine specification
 

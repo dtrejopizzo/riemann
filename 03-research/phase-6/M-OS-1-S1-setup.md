@@ -23,7 +23,7 @@
 **Phase 6, moonshot step S1.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
 Plan: `riemann-program/PLAN-RH-MOONSHOT-OS-reflection.md`. Goal of S1: set up, rigorously, the structure in
 which **Weil positivity = OS reflection positivity** for the functional-equation reflection, identify the
-"time", the reflection, and the form, and state the OS-reconstruction payoff. Honest from the start: S1 is a
+"time", the reflection, and the form, and state the OS-reconstruction payoff. Candid from the start: S1 is a
 faithful **recasting** of Weil's criterion into OS language (which is solid and opens the machinery); the
 *content* — proving the positivity — is S2–S3.
 
@@ -169,7 +169,7 @@ slice) it sits at the floor (RP holds); at $\delta\ne0$ it goes negative (RP fai
 
 ---
 
-## 7. Honest status of S1
+## 7. Candid status of S1
 
 | Item | Status |
 |---|---|

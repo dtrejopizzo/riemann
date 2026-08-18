@@ -1,0 +1,124 @@
+{
+  "statement": "E79.49 slope transport band audit",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_48_affine_sigma_template_results.json",
+  "cases": [
+    {
+      "label": "zeta",
+      "rows": [
+        {
+          "N": 8,
+          "support_abs": [
+            6,
+            7,
+            8
+          ],
+          "slope": 0.004163647197884757,
+          "scaled_signed": 0.03330917758307805,
+          "scaled_abs": 0.03330917758307805
+        },
+        {
+          "N": 10,
+          "support_abs": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "slope": -0.003878541224547122,
+          "scaled_signed": -0.03878541224547122,
+          "scaled_abs": 0.03878541224547122
+        },
+        {
+          "N": 12,
+          "support_abs": [
+            7
+          ],
+          "slope": -0.002313074628698304,
+          "scaled_signed": -0.02775689554437965,
+          "scaled_abs": 0.02775689554437965
+        },
+        {
+          "N": 14,
+          "support_abs": [
+            10,
+            11,
+            12
+          ],
+          "slope": 0.0025419597694643957,
+          "scaled_signed": 0.03558743677250154,
+          "scaled_abs": 0.03558743677250154
+        },
+        {
+          "N": 16,
+          "support_abs": [
+            11,
+            13
+          ],
+          "slope": -0.001995204316162707,
+          "scaled_signed": -0.031923269058603314,
+          "scaled_abs": 0.031923269058603314
+        }
+      ],
+      "mean_scaled_abs": 0.03347243824080676,
+      "min_scaled_abs": 0.02775689554437965,
+      "max_scaled_abs": 0.03878541224547122,
+      "band_ratio": 1.397325294662669,
+      "mean_scaled_signed": -0.005913792498574917
+    },
+    {
+      "label": "plant",
+      "rows": [
+        {
+          "N": 8,
+          "support_abs": [
+            14
+          ],
+          "slope": -0.6332513077520409,
+          "scaled_signed": -5.066010462016327,
+          "scaled_abs": 5.066010462016327
+        },
+        {
+          "N": 10,
+          "support_abs": [
+            17
+          ],
+          "slope": 0.12747297242901678,
+          "scaled_signed": 1.2747297242901678,
+          "scaled_abs": 1.2747297242901678
+        },
+        {
+          "N": 12,
+          "support_abs": [
+            0
+          ],
+          "slope": 0.015340648438508443,
+          "scaled_signed": 0.18408778126210132,
+          "scaled_abs": 0.18408778126210132
+        },
+        {
+          "N": 14,
+          "support_abs": [
+            25
+          ],
+          "slope": -0.5252599043503046,
+          "scaled_signed": -7.353638660904264,
+          "scaled_abs": 7.353638660904264
+        },
+        {
+          "N": 16,
+          "support_abs": [
+            0
+          ],
+          "slope": 0.03420439947186516,
+          "scaled_signed": 0.5472703915498426,
+          "scaled_abs": 0.5472703915498426
+        }
+      ],
+      "mean_scaled_abs": 2.885147404004541,
+      "min_scaled_abs": 0.18408778126210132,
+      "max_scaled_abs": 7.353638660904264,
+      "band_ratio": 39.94637020712563,
+      "mean_scaled_signed": -2.0827122451636955
+    }
+  ]
+}

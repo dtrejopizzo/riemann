@@ -1,0 +1,198 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\title{Uniform observability restricted to a URGT$_1$ minimizer (v129)}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The generalized Rayleigh problem}
+
+On $E_N=L^2(0,\delta_N)$ write
+\begin{align}
+ \mathfrak a_N[e]
+ &:=\|\mathbf L_Ne\|^2
+ =\int_{\mathbb R}W_N(\tau)|\widehat e(\tau)|^2
+                    \frac{d\tau}{2\pi},                   \tag{1}\\
+ \mathfrak q_N[e]
+ &:=\mathcal E_{\Gamma T,N}(e)
+ =\int_{\mathbb R}g_\Gamma(\tau)W_N(\tau)|\widehat e(\tau)|^2
+                    \frac{d\tau}{2\pi}+\mathfrak t_N[e], \tag{2}
+\end{align}
+where $\mathfrak t_N\ge0$ is the rank-two Tate form.  The URGT assertion
+is $\mathfrak q_N\ge\mathfrak a_N$.  If it fails, put
+\begin{equation}
+ \lambda_N:=\inf\{\mathfrak q_N[e]:\mathfrak a_N[e]=1\}<1. \tag{3}
+\end{equation}
+
+Let
+\begin{equation}
+ B=\{\tau:g_\Gamma(\tau)<1\}
+ \subset\left(-\frac1{\sqrt{12}},\frac1{\sqrt{12}}\right).
+                                                                    \tag{4}
+\end{equation}
+
+\begin{theorem}[A failure produces an actual minimizing mode --- \PROVED]
+If (3) holds, the infimum is attained by a nonzero
+$e_N\in\operatorname{Dom}\mathfrak q_N$, which may be normalized by
+$\mathfrak a_N[e_N]=1$.  It satisfies the weak Euler--Lagrange equation
+\begin{equation}
+ \boxed{
+ \int_{\mathbb R}(g_\Gamma-\lambda_N)W_N
+       \widehat e_N\overline{\widehat h}\frac{d\tau}{2\pi}
+ +\mathfrak t_N(e_N,h)=0
+ \quad(h\in\operatorname{Dom}\mathfrak q_N).}             \tag{5}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For $N=2$ the leakage column is zero, so (3) cannot occur.  Fix $N\ge3$.
+Choose one nonzero depth polynomial, for instance depth one, and list its
+distinct physical delays as
+\[
+ u_1<u_2<\cdots<u_m,
+ \qquad
+ L_{N,1}=\sum_{j=1}^m c_j\tau_{u_j},
+ \qquad c_1\ne0.
+\]
+Project the output onto the interval $u_1+(0,\delta_N)$ and translate this
+interval back to $(0,\delta_N)$.  On zero-extended inputs the resulting
+operator is
+\[
+ c_1(I+D_N),
+ \qquad
+ D_N=\sum_{j=2}^m\frac{c_j}{c_1}S_{u_j-u_1},
+\]
+where $S_v$ is the causal right shift by $v$.  If
+$v_*:=\min_{j\ge2}(u_j-u_1)$ (and $D_N=0$ when $m=1$), then
+$D_N^{r}=0$ for $r>\delta_N/v_*$.  Hence
+\[
+ (I+D_N)^{-1}=\sum_{r=0}^{M_N-1}(-D_N)^r
+\]
+for a finite $M_N$, and therefore there is a constant $c_N>0$ such that
+\begin{equation}
+ \mathfrak a_N[e]\ge \|L_{N,1}e\|_2^2
+ \ge c_N\|e\|_2^2.                                      \tag{6a}
+\end{equation}
+Thus the $\mathfrak a_N$-norm and the ordinary $L^2(0,\delta_N)$ norm
+are equivalent for each fixed $N$.
+
+The negative part of $g_\Gamma-1$ is bounded and supported in the compact
+set $B$.  The map
+\begin{equation}
+ e\longmapsto
+ \mathbf1_B(\tau)W_N(\tau)^{1/2}\widehat e(\tau)           \tag{6}
+\end{equation}
+from the finite time interval $E_N$ to $L^2(B)$ is compact: its kernel is
+square-integrable on $B\times(0,\delta_N)$, and $W_N$ is bounded on $B$.
+By (6a) this compactness is also valid in the $\mathfrak a_N$ topology.
+Thus the negative part of the closed form
+$\mathfrak q_N-\mathfrak a_N$ is relatively compact with respect to its
+nonnegative part.  If the form has a negative direction, the min--max
+principle produces a negative discrete generalized eigenvalue below the
+essential threshold zero.  Its eigenvector attains (3).  Polarization of
+$\mathfrak q_N[e_N]=\lambda_N\mathfrak a_N[e_N]$ gives (5).
+\end{proof}
+
+The theorem removes irrelevant near-kernel baggage: the only source which
+has to be observed is an eigenvector satisfying (5), not an arbitrary
+Paley--Wiener function.
+
+\section{Correctly normalized critical resolvent}
+
+The all-depth result v127 is
+\begin{equation}
+ \left(\frac{\log N}{N}\right)^2W_N(\tau)
+ \longrightarrow
+ C_{\rm W}(\tau^2+\tfrac14)^{-2}                           \tag{7}
+\end{equation}
+locally uniformly.  Therefore the critical source resolvent is
+\begin{equation}
+ \widehat{R_Ne}(\tau)
+ :=\frac{N}{\log N}\frac{\widehat e(\tau)}
+                         {\tau^2+\frac14}.                  \tag{8}
+\end{equation}
+The factor is $N/\log N$; its inverse would not match (7).
+
+\begin{theorem}[Uniform minimizer observability --- \OPEN]
+There is a function $\omega(R)\downarrow0$, independent of $N$, such that
+every normalized minimizer from Theorem 1 with $\lambda_N<1$ satisfies
+\begin{equation}
+ \boxed{
+ \int_{|\tau|>R}|\widehat{R_Ne_N}(\tau)|^2\frac{d\tau}{2\pi}
+ \le\omega(R)\mathfrak a_N[e_N]=\omega(R).}               \tag{9}
+\end{equation}
+Equivalently,
+\begin{equation}
+ \int_{|\tau|>R}
+ \left(\frac{N}{\log N}\right)^2
+ \frac{|\widehat e_N(\tau)|^2}{(\tau^2+\frac14)^2}
+ \frac{d\tau}{2\pi}\le\omega(R).                        \tag{10}
+\end{equation}
+\end{theorem}
+
+Assuming (9), the resolvent compactness lemma of v128 applies.  The only
+possible limits are
+\begin{equation}
+ \frac{c_0+c_1i\tau}{\tau^2+\frac14}.                      \tag{11}
+\end{equation}
+The constant mode has Gamma ratio $>1+1/45$ and the linear mode has ratio
+$3$, contradicting $\lambda_N<1$.  Hence (9) rules out every unbounded
+sequence of minimizing infractors.
+
+\section{What (5) does and does not give automatically}
+
+Splitting (5) at the compact band $B$ gives
+\begin{align}
+ &\int_{B^c}(g_\Gamma-\lambda_N)W_N
+       \widehat e_N\overline{\widehat h}\frac{d\tau}{2\pi}
+ +\mathfrak t_N(e_N,h)                                    \notag\\
+ &\qquad=
+ \int_B(\lambda_N-g_\Gamma)W_N
+       \widehat e_N\overline{\widehat h}\frac{d\tau}{2\pi}.  \tag{12}
+\end{align}
+The right side is a compact, band-limited functional.  Thus the minimizer
+is generated by compact-frequency data through the inverse of the
+positive left side.  Observability (9) would follow from the uniform
+restricted inverse estimate
+\begin{equation}
+ \boxed{
+ \|R_Nh\|_2
+ \le C\left|
+  \mathbf1_BW_N^{1/2}\widehat h
+ \right|_2
+ \quad\text{on the generalized eigenspace of (5)},}       \tag{13}
+\end{equation}
+with $C$ independent of $N$ and $\lambda_N<1$.
+
+Equation (13) is not a consequence of (5) alone: the multiplier $W_N$ can
+have real zeros (already for $N=3$ the depth-one polynomial is a cosine).
+A proof must use time limitation of $h$, the complete all-depth column,
+and the fact that $h$ is an eigenvector.  Assuming that no infractor exists
+would make (13) circular.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.58\linewidth}
+                >{\centering\arraybackslash}p{.14\linewidth}
+                >{\raggedright\arraybackslash}p{.18\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Compactness of the negative frequency part & \PROVED & (4)--(6) \\
+Existence of a genuine minimizing infractor & \PROVED & Theorem 1 \\
+Exact Euler--Lagrange equation & \PROVED & (5) \\
+Correct critical-resolvent normalization & \PROVED & (7)--(8) \\
+Uniform observability on minimizing modes & \OPEN & (9)/(13) \\
+URGT$_1$, $G$, row (d) & \OPEN & after observability and finite audit \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

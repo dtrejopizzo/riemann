@@ -116,7 +116,7 @@ donde $C_\infty(z) = w(z) - \Psi(z)$ es el potencial límite.
 
 **Conclusión de (ii).** Bajo (P1)-(P4) y la normalización de von Mangoldt: la ecuación de punto fijo tiene solución única en $\mathcal{M}^{CCM}$, que es $S_\Xi(z) = \frac{1}{N}\sum_n 1/(z-\gamma_n)$.
 
-**Honestidad.** El argumento del Lema 1 tiene una circularidad: para establecer que $r_n = 1/N$ y que los $\gamma_n$ son los ceros reales de $C_\infty$, ya necesitamos saber que $C_\infty$ tiene ceros reales en $\{\gamma_n\}$ — lo cual, de la Proposición 3 del Doc 09, se demuestra BAJO RH. Sin RH: los ceros de $C_\infty$ podrían no coincidir con los $\gamma_n$ (los ceros de $\Xi$), y la identificación $m_\infty = S_\Xi$ fallaría.
+**Franqueza.** El argumento del Lema 1 tiene una circularidad: para establecer que $r_n = 1/N$ y que los $\gamma_n$ son los ceros reales de $C_\infty$, ya necesitamos saber que $C_\infty$ tiene ceros reales en $\{\gamma_n\}$ — lo cual, de la Proposición 3 del Doc 09, se demuestra BAJO RH. Sin RH: los ceros de $C_\infty$ podrían no coincidir con los $\gamma_n$ (los ceros de $\Xi$), y la identificación $m_\infty = S_\Xi$ fallaría.
 
 ---
 
@@ -215,7 +215,7 @@ Luego todos los ceros $\rho$ satisfacen $\Re(\rho) = 1/2$: RH. $\square$
 
 ## 11. Reformulación final del Ataque A
 
-**El estado honesto del Ataque A:**
+**El estado franco del Ataque A:**
 
 1. El Teorema de Marchenko (unicidad inversa de Jacobi) es válido y aplicable.
 2. El operador $J_\infty$ existe y es único (incondicional, Doc 15).

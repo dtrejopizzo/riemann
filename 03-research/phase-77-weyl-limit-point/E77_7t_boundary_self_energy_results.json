@@ -1,0 +1,1174 @@
+{
+  "statement": "Boundary-coupled self-energy window audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "dps": 60,
+    "sigma0": "1.0",
+    "sigmas": [
+      "0.6",
+      "1.0",
+      "2.0",
+      "3.0"
+    ],
+    "etas": [
+      "0.01",
+      "0.0001",
+      "0.000001",
+      "1.0e-8"
+    ],
+    "capture": "0.9",
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "mu_reference is a finite frozen surrogate. The probe selects the resonant block by anchor-coupled self-energy weight rather than by eigenvalue size alone.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "2.52719644523725779337455e-49",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.01",
+        "0.0001",
+        "0.000001",
+        "1.0e-8"
+      ],
+      "capture": "0.9",
+      "planted": null,
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.955813270319265372576604",
+              "raw_anchor_abs": "0.29223021505415850697656",
+              "regular_anchor_abs": "0.0807414506374657374994408",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.904763462546539972691937",
+              "raw_anchor_abs": "0.657706943447376251192716",
+              "regular_anchor_abs": "0.199367872988869031160096",
+              "raw_max_profile_step_from_previous_eta": "0.173600745154555716816369",
+              "regular_max_profile_step_from_previous_eta": "0.404227051075267318332818"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.931153873956793022337622",
+              "raw_anchor_abs": "1.41114339156400723495702",
+              "regular_anchor_abs": "0.198629584244591540796153",
+              "raw_max_profile_step_from_previous_eta": "0.118855235486558018996296",
+              "regular_max_profile_step_from_previous_eta": "0.187425504556192523952898"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.962675382679074438986744",
+              "raw_anchor_abs": "2.53900406348865855020745",
+              "regular_anchor_abs": "0.172316282695630633370459",
+              "raw_max_profile_step_from_previous_eta": "0.0832057230538094012466536",
+              "regular_max_profile_step_from_previous_eta": "0.0993788434815523078178615"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.98079088744591404046928",
+              "raw_anchor_abs": "0.333618574829518839448315",
+              "regular_anchor_abs": "0.0838630641611062301920323",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.956771673317703301042541",
+              "raw_anchor_abs": "1.12887129751043596493469",
+              "regular_anchor_abs": "0.16412261863379385931554",
+              "raw_max_profile_step_from_previous_eta": "0.15746413371507054641904",
+              "regular_max_profile_step_from_previous_eta": "0.258880054897338175611305"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.912178746214622357589122",
+              "raw_anchor_abs": "2.10488869493090526100007",
+              "regular_anchor_abs": "0.342118027804429821312966",
+              "raw_max_profile_step_from_previous_eta": "0.16986795115435706469721",
+              "regular_max_profile_step_from_previous_eta": "0.11203833231207999112649"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.936924039676221763684658",
+              "raw_anchor_abs": "3.69508544298050464355115",
+              "regular_anchor_abs": "0.295470215442329250489859",
+              "raw_max_profile_step_from_previous_eta": "0.169725960195126714142908",
+              "regular_max_profile_step_from_previous_eta": "0.157277634107965834106377"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.934059295831138617971097",
+              "raw_anchor_abs": "4.3094290629496500061089",
+              "regular_anchor_abs": "0.395880616224209642064827",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.97457482942800773169907",
+              "raw_anchor_abs": "14.4512353171135419200142",
+              "regular_anchor_abs": "0.560787821091769176242911",
+              "raw_max_profile_step_from_previous_eta": "0.12299887940019771412982",
+              "regular_max_profile_step_from_previous_eta": "0.105899257783870366387984"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.930976510563237113480637",
+              "raw_anchor_abs": "30.0061086572568809344194",
+              "regular_anchor_abs": "3.13943956953088086483488",
+              "raw_max_profile_step_from_previous_eta": "0.10295283656202912030905",
+              "regular_max_profile_step_from_previous_eta": "0.0577735976294407990000193"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.922244730822621296765519",
+              "raw_anchor_abs": "66.120512436739009540765",
+              "regular_anchor_abs": "7.26345707894129860219557",
+              "raw_max_profile_step_from_previous_eta": "0.107957973770928552084094",
+              "regular_max_profile_step_from_previous_eta": "0.121529416470839824075968"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.920221090152831451777797",
+              "raw_anchor_abs": "0.313054502395876946540802",
+              "regular_anchor_abs": "0.0518775304490770031454471",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.914182445120614917618793",
+              "raw_anchor_abs": "0.660703014881770381696279",
+              "regular_anchor_abs": "0.10717053347716930482387",
+              "raw_max_profile_step_from_previous_eta": "0.134765452134489801335516",
+              "regular_max_profile_step_from_previous_eta": "0.339175078111153993743024"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.937741614528133720358165",
+              "raw_anchor_abs": "1.3669424816131130895893",
+              "regular_anchor_abs": "0.168752221125811225205667",
+              "raw_max_profile_step_from_previous_eta": "0.102892287337476937499644",
+              "regular_max_profile_step_from_previous_eta": "0.185461009098715081251332"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.915051624046496493605612",
+              "raw_anchor_abs": "3.11539403534215734569152",
+              "regular_anchor_abs": "0.339393456643667380833184",
+              "raw_max_profile_step_from_previous_eta": "0.13370215849046431596408",
+              "regular_max_profile_step_from_previous_eta": "0.132184226146333575716385"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.989948197975970846577479",
+              "raw_anchor_abs": "0.257151521756224861289463",
+              "regular_anchor_abs": "0.0599246428286959727887879",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.979637028272066887845795",
+              "raw_anchor_abs": "0.398948288014526939870251",
+              "regular_anchor_abs": "0.0755145113174436435355249",
+              "raw_max_profile_step_from_previous_eta": "0.110608888171447804624846",
+              "regular_max_profile_step_from_previous_eta": "0.0908551511634904500272651"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.950609721104019016372769",
+              "raw_anchor_abs": "0.688937461988380635109994",
+              "regular_anchor_abs": "0.0816632396750407628633483",
+              "raw_max_profile_step_from_previous_eta": "0.102640987945811550004308",
+              "regular_max_profile_step_from_previous_eta": "0.312047726042803085878476"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 6,
+              "selected_capture_fraction": "0.953228906449908303585061",
+              "raw_anchor_abs": "1.84009451677133775521824",
+              "regular_anchor_abs": "0.0852144521939971760954493",
+              "raw_max_profile_step_from_previous_eta": "0.0765629196312618314924727",
+              "regular_max_profile_step_from_previous_eta": "0.647581391165486552745855"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.978142663429583286266831",
+              "raw_anchor_abs": "0.245089942131171683408179",
+              "regular_anchor_abs": "0.0549526075607110399165349",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.926178527368076366961887",
+              "raw_anchor_abs": "0.45728485267625850058345",
+              "regular_anchor_abs": "0.117298404537515235614802",
+              "raw_max_profile_step_from_previous_eta": "0.100893397253094176165811",
+              "regular_max_profile_step_from_previous_eta": "0.213163127547319280320713"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 6,
+              "selected_capture_fraction": "0.948224923900345685123468",
+              "raw_anchor_abs": "1.17350763198717402929659",
+              "regular_anchor_abs": "0.0979535068795208245175397",
+              "raw_max_profile_step_from_previous_eta": "0.102400483705772371817208",
+              "regular_max_profile_step_from_previous_eta": "0.185524442588778987075501"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.900882511267221629972412",
+              "raw_anchor_abs": "5.37483579996294050302867",
+              "regular_anchor_abs": "0.259429945889901771728042",
+              "raw_max_profile_step_from_previous_eta": "0.0830645050180845320863608",
+              "regular_max_profile_step_from_previous_eta": "0.619870971044797551523839"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.918407605850687262421448",
+              "raw_anchor_abs": "0.551679686118522924653851",
+              "regular_anchor_abs": "0.0414367721232864294233182",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.965514117251812763012152",
+              "raw_anchor_abs": "20.2338524016339842739694",
+              "regular_anchor_abs": "1.1554905472467078691543",
+              "raw_max_profile_step_from_previous_eta": "0.103640941641421150383424",
+              "regular_max_profile_step_from_previous_eta": "0.103646250966864661357971"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.901169897507862122400591",
+              "raw_anchor_abs": "299.995733399198796213748",
+              "regular_anchor_abs": "42.9987056489879600172379",
+              "raw_max_profile_step_from_previous_eta": "0.0962463396048469091875122",
+              "regular_max_profile_step_from_previous_eta": "0.123662838054599173075219"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.950409012007429233556754",
+              "raw_anchor_abs": "882.667834250558111326845",
+              "regular_anchor_abs": "59.3787327278851130006118",
+              "raw_max_profile_step_from_previous_eta": "0.0665241316709363290705625",
+              "regular_max_profile_step_from_previous_eta": "0.133022796058015658262711"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.919187662575371651073951",
+              "raw_anchor_abs": "0.557722195452327679581258",
+              "regular_anchor_abs": "0.082062763468723107529631",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.930253689532922402425876",
+              "raw_anchor_abs": "1.98796849160079240696002",
+              "regular_anchor_abs": "0.204241342804195073678656",
+              "raw_max_profile_step_from_previous_eta": "0.0925999067032964773768042",
+              "regular_max_profile_step_from_previous_eta": "0.129589296006775765820563"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.961303871032981168262368",
+              "raw_anchor_abs": "5.60642303080375346495654",
+              "regular_anchor_abs": "0.270427057298966157043521",
+              "raw_max_profile_step_from_previous_eta": "0.0810415189032974166376203",
+              "regular_max_profile_step_from_previous_eta": "0.164029071474659813211742"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.903323420833514471997222",
+              "raw_anchor_abs": "13.8457519346717904530264",
+              "regular_anchor_abs": "1.51288912065181528589904",
+              "raw_max_profile_step_from_previous_eta": "0.124445562776359317442005",
+              "regular_max_profile_step_from_previous_eta": "0.164725096390265960171458"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.937139062807214199895391",
+              "raw_anchor_abs": "1.53722747045805812377002",
+              "regular_anchor_abs": "0.194392878627778061492533",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.946927699534126462920175",
+              "raw_anchor_abs": "3.91125199109220303581605",
+              "regular_anchor_abs": "0.308638533707131897030717",
+              "raw_max_profile_step_from_previous_eta": "0.0923484310011055230088143",
+              "regular_max_profile_step_from_previous_eta": "0.135900264707044839211285"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.934358975955095843224468",
+              "raw_anchor_abs": "13.6462010433725609862362",
+              "regular_anchor_abs": "0.605082409534482799031928",
+              "raw_max_profile_step_from_previous_eta": "0.0885702608645302616292392",
+              "regular_max_profile_step_from_previous_eta": "0.270035824160315461638209"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.931258672482497476105282",
+              "raw_anchor_abs": "33.3890094584995895359901",
+              "regular_anchor_abs": "1.35865803452848840107574",
+              "raw_max_profile_step_from_previous_eta": "0.0821146197391598677774301",
+              "regular_max_profile_step_from_previous_eta": "0.257091067422167289851095"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.932096594950231674522747",
+              "raw_anchor_abs": "0.51797969207431418312087",
+              "regular_anchor_abs": "0.0673005263794347234248387",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.909612441542942618437393",
+              "raw_anchor_abs": "1.43232602089714006245273",
+              "regular_anchor_abs": "0.210137943683856414579649",
+              "raw_max_profile_step_from_previous_eta": "0.0832757284156820110717349",
+              "regular_max_profile_step_from_previous_eta": "0.181681390999225672503759"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.931480836396930162769188",
+              "raw_anchor_abs": "3.4849308650573399563989",
+              "regular_anchor_abs": "0.224144221880626760066467",
+              "raw_max_profile_step_from_previous_eta": "0.0745249446121686828222746",
+              "regular_max_profile_step_from_previous_eta": "0.279838632911272118115933"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.927565369076311920946276",
+              "raw_anchor_abs": "11.7998192409273117290791",
+              "regular_anchor_abs": "0.587499931711358339471007",
+              "raw_max_profile_step_from_previous_eta": "0.106522976356603261236804",
+              "regular_max_profile_step_from_previous_eta": "0.180433420657336918373145"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.965170601715395859798502",
+              "raw_anchor_abs": "0.318919968638111682607411",
+              "regular_anchor_abs": "0.0548449126946243542073048",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.924021249195577054510272",
+              "raw_anchor_abs": "0.878969717100856220077015",
+              "regular_anchor_abs": "0.103783697474165969925494",
+              "raw_max_profile_step_from_previous_eta": "0.0847041676242714198002896",
+              "regular_max_profile_step_from_previous_eta": "0.217285966344127631504675"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.903120450282575256575855",
+              "raw_anchor_abs": "2.65677474883913926219363",
+              "regular_anchor_abs": "0.125300892278602493456466",
+              "raw_max_profile_step_from_previous_eta": "0.0675063122722441714777818",
+              "regular_max_profile_step_from_previous_eta": "0.206581326485626097986277"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.918759973000334930589612",
+              "raw_anchor_abs": "8.4099783526579625264331",
+              "regular_anchor_abs": "0.333390905463537118375517",
+              "raw_max_profile_step_from_previous_eta": "0.0610458421938500383174785",
+              "regular_max_profile_step_from_previous_eta": "0.219263599123133248040394"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.906078750103554119269969",
+              "raw_anchor_abs": "1.14249297747939473390613",
+              "regular_anchor_abs": "0.200207830598933456729526",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.913759907707548156503464",
+              "raw_anchor_abs": "3.31213863983747386445226",
+              "regular_anchor_abs": "0.318854443555987661539285",
+              "raw_max_profile_step_from_previous_eta": "0.0762449938552505381365395",
+              "regular_max_profile_step_from_previous_eta": "0.170609034395833877261271"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 6,
+              "selected_capture_fraction": "0.934151792725767198571058",
+              "raw_anchor_abs": "10.9094127660894851502138",
+              "regular_anchor_abs": "0.597446584640415959579251",
+              "raw_max_profile_step_from_previous_eta": "0.0707915899184921172222238",
+              "regular_max_profile_step_from_previous_eta": "0.455656819437838707500386"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.917953660615011543494206",
+              "raw_anchor_abs": "37.4508233901382083930314",
+              "regular_anchor_abs": "1.71099411067937279407781",
+              "raw_max_profile_step_from_previous_eta": "0.0803590171325992909828706",
+              "regular_max_profile_step_from_previous_eta": "0.40369271805314692249272"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.924862879171122332295715",
+              "raw_anchor_abs": "0.846818188478522454149788",
+              "regular_anchor_abs": "0.105047985274770394275439",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.903848696663508348093433",
+              "raw_anchor_abs": "4.67909356508773166551016",
+              "regular_anchor_abs": "0.514354591384497018428622",
+              "raw_max_profile_step_from_previous_eta": "0.0774630599825108602894415",
+              "regular_max_profile_step_from_previous_eta": "0.0556264793088896266348117"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.936350586135136338377298",
+              "raw_anchor_abs": "14.6261273449873746986017",
+              "regular_anchor_abs": "0.722540406998027358206923",
+              "raw_max_profile_step_from_previous_eta": "0.0634182451941046102369601",
+              "regular_max_profile_step_from_previous_eta": "0.215425326944228665064484"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 5,
+              "selected_capture_fraction": "0.936271507273619104450566",
+              "raw_anchor_abs": "39.1901378138679016488213",
+              "regular_anchor_abs": "2.19373387421443348074846",
+              "raw_max_profile_step_from_previous_eta": "0.0526668015094046228428164",
+              "regular_max_profile_step_from_previous_eta": "0.175642404288928378147584"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "-1.74469368905726418414397",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.01",
+        "0.0001",
+        "0.000001",
+        "1.0e-8"
+      ],
+      "capture": "0.9",
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.997989780298580143527939",
+              "raw_anchor_abs": "0.104370614658872206560208",
+              "regular_anchor_abs": "0.0946627876108498549705516",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.997989780671641971526814",
+              "raw_anchor_abs": "0.104409289936016987562893",
+              "regular_anchor_abs": "0.0946627603281327281645811",
+              "raw_max_profile_step_from_previous_eta": "0.0000854878414733852131989556",
+              "regular_max_profile_step_from_previous_eta": "0.000000892022347293246250663528"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.997989780671679279068526",
+              "raw_anchor_abs": "0.10440967348925592291322",
+              "regular_anchor_abs": "0.0946627600443974791598076",
+              "raw_max_profile_step_from_previous_eta": "0.000000854520213711371057773097",
+              "regular_max_profile_step_from_previous_eta": "8.92037246596494013607742e-9"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.99798978067167928279928",
+              "raw_anchor_abs": "0.104409677324467272150316",
+              "regular_anchor_abs": "0.0946627600415590367578214",
+              "raw_max_profile_step_from_previous_eta": "8.5451653009196754958089e-9",
+              "regular_max_profile_step_from_previous_eta": "8.92037250645043256165094e-11"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.992630095513273978594798",
+              "raw_anchor_abs": "0.110082446185855869206871",
+              "regular_anchor_abs": "0.0814482772566300285157277",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.992630104047451151978644",
+              "raw_anchor_abs": "0.11019100391450819513848",
+              "regular_anchor_abs": "0.0814479354990357890886702",
+              "raw_max_profile_step_from_previous_eta": "0.000216597162861870296402745",
+              "regular_max_profile_step_from_previous_eta": "0.00000620651303731478140141725"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.992630104048304600570341",
+              "raw_anchor_abs": "0.11019207996282967247562",
+              "regular_anchor_abs": "0.0814479320032289840030931",
+              "raw_max_profile_step_from_previous_eta": "0.00000216369752393838753983116",
+              "regular_max_profile_step_from_previous_eta": "6.20663981672984743440128e-8"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.9926301040483046859152",
+              "raw_anchor_abs": "0.11019209072235731066564",
+              "regular_anchor_abs": "0.0814479319682631040572571",
+              "raw_max_profile_step_from_previous_eta": "2.16367465421592521921578e-8",
+              "regular_max_profile_step_from_previous_eta": "6.20664008158209914513204e-10"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.954925829918402959813407",
+              "raw_anchor_abs": "0.37621819235193486251468",
+              "regular_anchor_abs": "0.0684970357899260385733055",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.954926163674287500923944",
+              "raw_anchor_abs": "0.375832755283197115394955",
+              "regular_anchor_abs": "0.0683699125930207276851305",
+              "raw_max_profile_step_from_previous_eta": "0.000251892792129804302504246",
+              "regular_max_profile_step_from_previous_eta": "0.00079080447111009117852245"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.954926163707664451743586",
+              "raw_anchor_abs": "0.375828809369332556517268",
+              "regular_anchor_abs": "0.0683686410354009564290403",
+              "raw_max_profile_step_from_previous_eta": "0.00000252334381365666245052528",
+              "regular_max_profile_step_from_previous_eta": "0.00000792302256005535002969322"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 4,
+              "selected_capture_fraction": "0.954926163707667789438681",
+              "raw_anchor_abs": "0.375828769901047902064711",
+              "regular_anchor_abs": "0.0683686283197963090448501",
+              "raw_max_profile_step_from_previous_eta": "2.52338795561582706319234e-8",
+              "regular_max_profile_step_from_previous_eta": "7.9231713701783182914035e-8"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.968240432368709947980266",
+              "raw_anchor_abs": "0.145712768737329316654942",
+              "regular_anchor_abs": "0.0663169048334418458617641",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.968241470996308240824992",
+              "raw_anchor_abs": "0.145237741880109888170304",
+              "regular_anchor_abs": "0.0663172048079264895577925",
+              "raw_max_profile_step_from_previous_eta": "0.000749332250187939265751263",
+              "regular_max_profile_step_from_previous_eta": "0.0000291563179070860690675531"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.968241471100173793990438",
+              "raw_anchor_abs": "0.145232935216044421348461",
+              "regular_anchor_abs": "0.0663172081693345198659674",
+              "raw_max_profile_step_from_previous_eta": "0.00000752495463061527571032301",
+              "regular_max_profile_step_from_previous_eta": "0.000000291618798827742266992255"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.968241471100184180545783",
+              "raw_anchor_abs": "0.145232887143776900312389",
+              "regular_anchor_abs": "0.0663172082029847624761499",
+              "raw_max_profile_step_from_previous_eta": "7.52527262198002686748422e-8",
+              "regular_max_profile_step_from_previous_eta": "2.91619305950138235143115e-9"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.929715636324418561666511",
+              "raw_anchor_abs": "0.255496086836312526286544",
+              "regular_anchor_abs": "0.0600592098006254977193465",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.929755081005513083771076",
+              "raw_anchor_abs": "0.254906029010821491919722",
+              "regular_anchor_abs": "0.0599533803679778663645271",
+              "raw_max_profile_step_from_previous_eta": "0.00175157104339244202103484",
+              "regular_max_profile_step_from_previous_eta": "0.000399571235659179048134406"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.929755084952188651644593",
+              "raw_anchor_abs": "0.254898153133636476662975",
+              "regular_anchor_abs": "0.0599523211926964391505835",
+              "raw_max_profile_step_from_previous_eta": "0.0000175654527848349399238492",
+              "regular_max_profile_step_from_previous_eta": "0.00000400280946513945870547462"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.929755084952583319223476",
+              "raw_anchor_abs": "0.25489807417695326843531",
+              "regular_anchor_abs": "0.0599523106008579078406905",
+              "raw_max_profile_step_from_previous_eta": "0.00000017565917792615941586346",
+              "regular_max_profile_step_from_previous_eta": "4.00288014178344891795309e-8"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.946408920351587704546693",
+              "raw_anchor_abs": "0.391327505838730916426936",
+              "regular_anchor_abs": "0.053363393610895223970142",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.946607498864963652020107",
+              "raw_anchor_abs": "0.392447097667632621211007",
+              "regular_anchor_abs": "0.0532637317015658505618821",
+              "raw_max_profile_step_from_previous_eta": "0.00357210862067045083039627",
+              "regular_max_profile_step_from_previous_eta": "0.000415740532769229011257655"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.946607518790906446571072",
+              "raw_anchor_abs": "0.392439501913095670418702",
+              "regular_anchor_abs": "0.0532627345321617236025276",
+              "raw_max_profile_step_from_previous_eta": "0.0000357024462911006824930998",
+              "regular_max_profile_step_from_previous_eta": "0.0000041651806051258081886835"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.946607518792899041535219",
+              "raw_anchor_abs": "0.39243942406009205416389",
+              "regular_anchor_abs": "0.0532627245604147535951959",
+              "raw_max_profile_step_from_previous_eta": "0.000000357020426123063185640486",
+              "regular_max_profile_step_from_previous_eta": "4.1652580811099848864884e-8"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.945535635446628500672914",
+              "raw_anchor_abs": "0.625457604280780730991293",
+              "regular_anchor_abs": "0.0237136825509029022000279",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.946752228490740382176611",
+              "raw_anchor_abs": "0.640327127334074250368364",
+              "regular_anchor_abs": "0.0213229583737604037976175",
+              "raw_max_profile_step_from_previous_eta": "0.00628975235033208796487317",
+              "regular_max_profile_step_from_previous_eta": "0.108069043219892970439717"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.946752351868546716058413",
+              "raw_anchor_abs": "0.6403245761406766904854",
+              "regular_anchor_abs": "0.0212988755832323055523844",
+              "raw_max_profile_step_from_previous_eta": "0.0000626912886909670536126587",
+              "regular_max_profile_step_from_previous_eta": "0.00120268710064057364684513"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.94675235188088451430105",
+              "raw_anchor_abs": "0.640324534917106969075577",
+              "regular_anchor_abs": "0.0212986347418363520881941",
+              "raw_max_profile_step_from_previous_eta": "0.00000062688411746899732313426",
+              "regular_max_profile_step_from_previous_eta": "0.0000120403986682947552834269"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.918342712224070394531698",
+              "raw_anchor_abs": "0.571712565026520119678828",
+              "regular_anchor_abs": "0.0280823271449147688492426",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.921182879829262543762645",
+              "raw_anchor_abs": "0.593685889591710418118414",
+              "regular_anchor_abs": "0.0259024645488012562801067",
+              "raw_max_profile_step_from_previous_eta": "0.00714285581652293954791857",
+              "regular_max_profile_step_from_previous_eta": "0.0509468294660751690375806"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.921183170452298273261802",
+              "raw_anchor_abs": "0.593683383737988544705192",
+              "regular_anchor_abs": "0.025880391954387868975053",
+              "raw_max_profile_step_from_previous_eta": "0.0000712174885784739168606206",
+              "regular_max_profile_step_from_previous_eta": "0.000551900658309471518700161"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.921183170481360645556128",
+              "raw_anchor_abs": "0.593683335089672269745833",
+              "regular_anchor_abs": "0.0258801712050720389773002",
+              "raw_max_profile_step_from_previous_eta": "0.000000712142507866468146295605",
+              "regular_max_profile_step_from_previous_eta": "0.00000552358549497624820265396"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.911149275492141798361349",
+              "raw_anchor_abs": "0.340428049958724991285017",
+              "regular_anchor_abs": "0.0532151681801825015689119",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.916804869055308345741454",
+              "raw_anchor_abs": "0.3781006714011852331307",
+              "regular_anchor_abs": "0.053248114645511804228864",
+              "raw_max_profile_step_from_previous_eta": "0.00337325459408289540301577",
+              "regular_max_profile_step_from_previous_eta": "0.00158059302759803042893513"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.916805485069449277930682",
+              "raw_anchor_abs": "0.378133071449436307810975",
+              "regular_anchor_abs": "0.05324833959761165823613",
+              "raw_max_profile_step_from_previous_eta": "0.0000334643588316009132222851",
+              "regular_max_profile_step_from_previous_eta": "0.0000156493146185584598915842"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.916805485131051258586817",
+              "raw_anchor_abs": "0.378133354962906089960271",
+              "regular_anchor_abs": "0.0532483418369441555638703",
+              "raw_max_profile_step_from_previous_eta": "0.000000334614043193494382072383",
+              "regular_max_profile_step_from_previous_eta": "0.000000156474713086857261027416"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.910347336480330789258102",
+              "raw_anchor_abs": "0.853815826332730376985384",
+              "regular_anchor_abs": "0.020581866044925822500273",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.918632621957765103443938",
+              "raw_anchor_abs": "0.946494597688648449014466",
+              "regular_anchor_abs": "0.0175144392069836794149762",
+              "raw_max_profile_step_from_previous_eta": "0.0107182867467730024397225",
+              "regular_max_profile_step_from_previous_eta": "0.198954225821133919758066"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.91863350521168804410229",
+              "raw_anchor_abs": "0.946477184481354635283968",
+              "regular_anchor_abs": "0.0174836192609705295398666",
+              "raw_max_profile_step_from_previous_eta": "0.000107162002887319602961472",
+              "regular_max_profile_step_from_previous_eta": "0.0023417228763103985281651"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.918633505300014047453774",
+              "raw_anchor_abs": "0.946476899491875032761359",
+              "regular_anchor_abs": "0.0174833110566251286874866",
+              "raw_max_profile_step_from_previous_eta": "0.00000107159569167628673203568",
+              "regular_max_profile_step_from_previous_eta": "0.0000234584150007056559259815"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 2,
+              "selected_capture_fraction": "0.942786666277838997546302",
+              "raw_anchor_abs": "0.898784772397176749556225",
+              "regular_anchor_abs": "0.0367084794260905091265174",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.921728208157185337757949",
+              "raw_anchor_abs": "1.32715862223606385942991",
+              "regular_anchor_abs": "0.0226126641759415614593013",
+              "raw_max_profile_step_from_previous_eta": "0.0136853000092724749201015",
+              "regular_max_profile_step_from_previous_eta": "0.690075712639506673722286"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.921732489568653545833514",
+              "raw_anchor_abs": "1.32721450843262246851108",
+              "regular_anchor_abs": "0.0225898895260623273313064",
+              "raw_max_profile_step_from_previous_eta": "0.000136673700326595655408861",
+              "regular_max_profile_step_from_previous_eta": "0.000859631424382288616075576"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.921732489996809514662362",
+              "raw_anchor_abs": "1.32721428592120557850925",
+              "regular_anchor_abs": "0.0225896617794166877494012",
+              "raw_max_profile_step_from_previous_eta": "0.00000136667441791679078990247",
+              "regular_max_profile_step_from_previous_eta": "0.0000086047633242445072142662"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.907639739979487730683955",
+              "raw_anchor_abs": "0.265126804511560892544818",
+              "regular_anchor_abs": "0.0548142090682091364171792",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.948969825474285035159053",
+              "raw_anchor_abs": "0.62764373865908983893533",
+              "regular_anchor_abs": "0.0546556309210175656517067",
+              "raw_max_profile_step_from_previous_eta": "0.00559613929905663610276593",
+              "regular_max_profile_step_from_previous_eta": "0.00651784702390284715122513"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.948978885628122498897229",
+              "raw_anchor_abs": "0.627873437388264371315153",
+              "regular_anchor_abs": "0.0546535571550592786854492",
+              "raw_max_profile_step_from_previous_eta": "0.0000529834592343148160464869",
+              "regular_max_profile_step_from_previous_eta": "0.0000655114875924711244156428"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 3,
+              "selected_capture_fraction": "0.948978886534287854054148",
+              "raw_anchor_abs": "0.627874320210192031340721",
+              "regular_anchor_abs": "0.0546535363702025094293134",
+              "raw_max_profile_step_from_previous_eta": "0.000000529512946270034694026506",
+              "regular_max_profile_step_from_previous_eta": "0.000000655130910558975280884126"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.925917480175045507652404",
+              "raw_anchor_abs": "1.24918800655108611702153",
+              "regular_anchor_abs": "0.0212915412065703509779814",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.967891852639817995711276",
+              "raw_anchor_abs": "2.99921498615341089335736",
+              "regular_anchor_abs": "0.0179126115994892661337395",
+              "raw_max_profile_step_from_previous_eta": "0.018657933826853241653969",
+              "regular_max_profile_step_from_previous_eta": "0.261376680954795417999387"
+            },
+            {
+              "eta": "0.000001",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.96789934110469121535054",
+              "raw_anchor_abs": "2.99980854613599457397466",
+              "regular_anchor_abs": "0.0178793280611738934498498",
+              "raw_max_profile_step_from_previous_eta": "0.000186905632980391698177298",
+              "regular_max_profile_step_from_previous_eta": "0.00311593404193038473539226"
+            },
+            {
+              "eta": "1.0e-8",
+              "selected_size": 1,
+              "selected_capture_fraction": "0.967899341853633773389971",
+              "raw_anchor_abs": "2.99980732539721630250847",
+              "regular_anchor_abs": "0.0178789953105584065764171",
+              "raw_max_profile_step_from_previous_eta": "0.00000186901742890706953263662",
+              "regular_max_profile_step_from_previous_eta": "0.0000312171471466411411705362"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

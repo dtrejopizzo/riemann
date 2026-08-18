@@ -1,0 +1,1420 @@
+{
+  "cases": [
+    {
+      "lambda": 6,
+      "N": 8,
+      "dim": 17,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "4.61631476081018561917771e-60",
+      "commutator_frobenius": "6.72661759073028004897246",
+      "rank_two_frobenius": "6.72661759073028004897246",
+      "blind_subspace_dimension": 15,
+      "blind_fraction": "0.882352941176470588235294",
+      "generator_gram_det": "72.6311462841023434499855",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "3.67864498056142094313034e-28",
+          "one_moment_normalized": "2.83985799060356954395308e-14",
+          "s_moment_normalized": "1.58289208687867091605577e-52",
+          "generator_mass_l2": "2.83985799060356954395308e-14"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "2.65231334125047400974052e-25",
+          "one_moment_normalized": "9.98659243606756138611038e-53",
+          "s_moment_normalized": "4.34236671873611079392372e-12",
+          "generator_mass_l2": "4.34236671873611079392372e-12"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "1.09208518384913048427537e-22",
+          "one_moment_normalized": "1.63379315621284698033191e-11",
+          "s_moment_normalized": "5.58340451641038553217032e-54",
+          "generator_mass_l2": "1.63379315621284698033191e-11"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "2.92296389385839738544194e-20",
+          "one_moment_normalized": "2.22052011255797946954745e-55",
+          "s_moment_normalized": "1.40531693496441986481957e-9",
+          "generator_mass_l2": "1.40531693496441986481957e-9"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "5.86770318787943529543658e-18",
+          "one_moment_normalized": "3.73658673523564156745952e-9",
+          "s_moment_normalized": "1.16788084863680315117945e-54",
+          "generator_mass_l2": "3.73658673523564156745952e-9"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "7.09080420941114234637253e-16",
+          "one_moment_normalized": "1.22241485850413903036745e-56",
+          "s_moment_normalized": "0.000000187241868651669516711813",
+          "generator_mass_l2": "0.000000187241868651669516711813"
+        }
+      ]
+    },
+    {
+      "lambda": 6,
+      "N": 8,
+      "dim": 17,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "1.49870687320602453162451e-60",
+      "commutator_frobenius": "26.753036889424869025776",
+      "rank_two_frobenius": "26.753036889424869025776",
+      "blind_subspace_dimension": 15,
+      "blind_fraction": "0.882352941176470588235294",
+      "generator_gram_det": "1148.882456540760501967",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-0.720430127892945977947044",
+          "one_moment_normalized": "0.710180083956076620762972",
+          "s_moment_normalized": "3.42795816038279694058236e-61",
+          "generator_mass_l2": "0.710180083956076620762972"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-0.502594692843854386505466",
+          "one_moment_normalized": "8.44782184717093612817996e-61",
+          "s_moment_normalized": "0.180386445741061815733521",
+          "generator_mass_l2": "0.180386445741061815733521"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "2.72285579727902500818304e-23",
+          "one_moment_normalized": "7.54953181521011685213885e-12",
+          "s_moment_normalized": "7.56404775006565121680316e-55",
+          "generator_mass_l2": "7.54953181521011685213885e-12"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "1.13441786073822099984263e-20",
+          "one_moment_normalized": "2.82079201769343172477988e-55",
+          "s_moment_normalized": "1.61826258381585782434997e-10",
+          "generator_mass_l2": "1.61826258381585782434997e-10"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "1.45733820392004295002627e-18",
+          "one_moment_normalized": "1.35792906316882047400609e-9",
+          "s_moment_normalized": "3.26284559337644865179305e-55",
+          "generator_mass_l2": "1.35792906316882047400609e-9"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "1.65006733191141240643937e-16",
+          "one_moment_normalized": "3.51134404527373798517243e-56",
+          "s_moment_normalized": "2.22145662905921030388322e-8",
+          "generator_mass_l2": "2.22145662905921030388322e-8"
+        }
+      ]
+    },
+    {
+      "lambda": 6,
+      "N": 12,
+      "dim": 25,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "7.25822996272553362958555e-60",
+      "commutator_frobenius": "12.0130411362245261837428",
+      "rank_two_frobenius": "12.0130411362245261837428",
+      "blind_subspace_dimension": 23,
+      "blind_fraction": "0.92",
+      "generator_gram_det": "231.651624156555831729737",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "2.40320588207581316433666e-37",
+          "one_moment_normalized": "6.34403555724283198311486e-19",
+          "s_moment_normalized": "2.11793275921108101641968e-46",
+          "generator_mass_l2": "6.34403555724283198311486e-19"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "2.23938523396731338826688e-34",
+          "one_moment_normalized": "4.46865340242095517173914e-48",
+          "s_moment_normalized": "1.03545677190346529736227e-16",
+          "generator_mass_l2": "1.03545677190346529736227e-16"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "1.40916725486283007726172e-31",
+          "one_moment_normalized": "5.57427042390361658002143e-16",
+          "s_moment_normalized": "3.48404405904016548605445e-48",
+          "generator_mass_l2": "5.57427042390361658002143e-16"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "5.36216481059870875293565e-29",
+          "one_moment_normalized": "1.82962598861126616130463e-49",
+          "s_moment_normalized": "4.75794760718998427779552e-14",
+          "generator_mass_l2": "4.75794760718998427779552e-14"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "1.38305867336089624868018e-26",
+          "one_moment_normalized": "1.63474476701596797448295e-13",
+          "s_moment_normalized": "1.48277558970392106030308e-49",
+          "generator_mass_l2": "1.63474476701596797448295e-13"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "2.51247505755231985673684e-24",
+          "one_moment_normalized": "6.61817866316025631597165e-51",
+          "s_moment_normalized": "9.50039698748442937832004e-12",
+          "generator_mass_l2": "9.50039698748442937832004e-12"
+        }
+      ]
+    },
+    {
+      "lambda": 6,
+      "N": 12,
+      "dim": 25,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "2.35145947615315909192144e-60",
+      "commutator_frobenius": "38.0658091296512130436423",
+      "rank_two_frobenius": "38.0658091296512130436423",
+      "blind_subspace_dimension": 23,
+      "blind_fraction": "0.92",
+      "generator_gram_det": "2325.94559559559300724845",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-1.70945938630677984903713",
+          "one_moment_normalized": "0.14103355109034582994574",
+          "s_moment_normalized": "1.53387667307590316826732e-60",
+          "generator_mass_l2": "0.14103355109034582994574"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-1.5639953971071813425977",
+          "one_moment_normalized": "7.0989066799673962725827e-62",
+          "s_moment_normalized": "0.523645029310218822019782",
+          "generator_mass_l2": "0.523645029310218822019782"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "2.33783081202286712763756e-31",
+          "one_moment_normalized": "6.71178818263191440097301e-16",
+          "s_moment_normalized": "1.41099547914563501056968e-48",
+          "generator_mass_l2": "6.71178818263191440097301e-16"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "2.38355510245649039336908e-28",
+          "one_moment_normalized": "4.67306472365195910415691e-50",
+          "s_moment_normalized": "2.94438869790204047449812e-14",
+          "generator_mass_l2": "2.94438869790204047449812e-14"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "1.24395376769525245263607e-25",
+          "one_moment_normalized": "4.87642363741388578471351e-13",
+          "s_moment_normalized": "4.41606023464432441047205e-52",
+          "generator_mass_l2": "4.87642363741388578471351e-13"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "4.44582869516594739936068e-23",
+          "one_moment_normalized": "6.30960270479521628628448e-53",
+          "s_moment_normalized": "1.2675151523697535347943e-11",
+          "generator_mass_l2": "1.2675151523697535347943e-11"
+        }
+      ]
+    },
+    {
+      "lambda": 6,
+      "N": 16,
+      "dim": 33,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "4.9961039639714997483396e-60",
+      "commutator_frobenius": "29.0026461032077599231326",
+      "rank_two_frobenius": "29.0026461032077599231326",
+      "blind_subspace_dimension": 31,
+      "blind_fraction": "0.939393939393939393939394",
+      "generator_gram_det": "1350.22040697145044560261",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "1.54136825009323129579342e-45",
+          "one_moment_normalized": "4.98085708792185195630853e-23",
+          "s_moment_normalized": "4.38273410001269972339748e-44",
+          "generator_mass_l2": "4.98085708792185195630853e-23"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "2.11934756240695882559003e-42",
+          "one_moment_normalized": "4.44622138799949304258304e-44",
+          "s_moment_normalized": "5.54001760653026091300657e-21",
+          "generator_mass_l2": "5.54001760653026091300657e-21"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "1.44877514424095391129234e-39",
+          "one_moment_normalized": "4.74248608073062833444728e-20",
+          "s_moment_normalized": "4.33315473730327684131895e-44",
+          "generator_mass_l2": "4.74248608073062833444728e-20"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "5.91713103846748814838154e-37",
+          "one_moment_normalized": "2.97274926810675450376692e-45",
+          "s_moment_normalized": "2.72410090021184611957793e-18",
+          "generator_mass_l2": "2.72410090021184611957793e-18"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "1.98184309340929604755533e-34",
+          "one_moment_normalized": "1.79873136585254156015513e-17",
+          "s_moment_normalized": "1.39474738869942538944101e-45",
+          "generator_mass_l2": "1.79873136585254156015513e-17"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "5.54005076657753829978711e-32",
+          "one_moment_normalized": "5.97553228636728263375441e-47",
+          "s_moment_normalized": "8.32910482022162358674419e-16",
+          "generator_mass_l2": "8.32910482022162358674419e-16"
+        }
+      ]
+    },
+    {
+      "lambda": 6,
+      "N": 16,
+      "dim": 33,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "2.89514593294198057687714e-60",
+      "commutator_frobenius": "52.4554425586193358909775",
+      "rank_two_frobenius": "52.4554425586193358909775",
+      "blind_subspace_dimension": 31,
+      "blind_fraction": "0.939393939393939393939394",
+      "generator_gram_det": "4416.8284538704068950332",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-1.74001868764442608712258",
+          "one_moment_normalized": "0.084685225111705176558852",
+          "s_moment_normalized": "2.31772691735890736893131e-60",
+          "generator_mass_l2": "0.084685225111705176558852"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-1.62668805417932578565543",
+          "one_moment_normalized": "4.44343624381984317080455e-61",
+          "s_moment_normalized": "0.495664602103866169077836",
+          "generator_mass_l2": "0.495664602103866169077836"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "6.30686109626391254280359e-39",
+          "one_moment_normalized": "1.02067613204041819330187e-19",
+          "s_moment_normalized": "5.31010009945290168760661e-46",
+          "generator_mass_l2": "1.02067613204041819330187e-19"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "1.00120499674729520891361e-35",
+          "one_moment_normalized": "9.87146392721086358844719e-47",
+          "s_moment_normalized": "6.2152135487305642391678e-18",
+          "generator_mass_l2": "6.2152135487305642391678e-18"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "7.77004832716546854253212e-33",
+          "one_moment_normalized": "1.09923628328686651349386e-16",
+          "s_moment_normalized": "1.24375601401130061701015e-47",
+          "generator_mass_l2": "1.09923628328686651349386e-16"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "4.01447117591260040931889e-30",
+          "one_moment_normalized": "7.87882753065209686131969e-49",
+          "s_moment_normalized": "3.85489466681123297223138e-15",
+          "generator_mass_l2": "3.85489466681123297223138e-15"
+        }
+      ]
+    },
+    {
+      "lambda": 6,
+      "N": 18,
+      "dim": 37,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "3.88791550769802489285501e-60",
+      "commutator_frobenius": "39.5334686116915631889228",
+      "rank_two_frobenius": "39.5334686116915631889228",
+      "blind_subspace_dimension": 35,
+      "blind_fraction": "0.945945945945945945945946",
+      "generator_gram_det": "2508.76083891709410890141",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "2.52719644523725779337455e-49",
+          "one_moment_normalized": "6.1728165341940096383938e-25",
+          "s_moment_normalized": "4.5394721222729750013289e-40",
+          "generator_mass_l2": "6.1728165341940096383938e-25"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "3.84597619156321406077874e-46",
+          "one_moment_normalized": "5.21064483140093296251005e-42",
+          "s_moment_normalized": "6.09842011208291059797651e-23",
+          "generator_mass_l2": "6.09842011208291059797651e-23"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "3.2354085503880465021289e-43",
+          "one_moment_normalized": "7.22282696808742363779301e-22",
+          "s_moment_normalized": "1.65998744517857751479779e-42",
+          "generator_mass_l2": "7.22282696808742363779301e-22"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "1.57061016837277746361468e-40",
+          "one_moment_normalized": "1.26026774265552270664519e-43",
+          "s_moment_normalized": "3.55790323098507385785254e-20",
+          "generator_mass_l2": "3.55790323098507385785254e-20"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "4.9846784144393796804455e-38",
+          "one_moment_normalized": "2.59094372622750682246018e-19",
+          "s_moment_normalized": "2.19330728273850263156093e-44",
+          "generator_mass_l2": "2.59094372622750682246018e-19"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "1.40217180182978764704706e-35",
+          "one_moment_normalized": "6.60383204322372258124509e-47",
+          "s_moment_normalized": "1.09295507498969276162453e-17",
+          "generator_mass_l2": "1.09295507498969276162453e-17"
+        }
+      ]
+    },
+    {
+      "lambda": 6,
+      "N": 18,
+      "dim": 37,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "2.62010558002039000431393e-60",
+      "commutator_frobenius": "61.5584753489705629810835",
+      "rank_two_frobenius": "61.5584753489705629810835",
+      "blind_subspace_dimension": 35,
+      "blind_fraction": "0.945945945945945945945946",
+      "generator_gram_det": "6082.82231932684910564826",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-1.74469368905726418414397",
+          "one_moment_normalized": "0.0698972562124377119558063",
+          "s_moment_normalized": "2.12944959616376760434736e-61",
+          "generator_mass_l2": "0.0698972562124377119558063"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-1.64310149619406994295103",
+          "one_moment_normalized": "2.16549135072301608136711e-61",
+          "s_moment_normalized": "0.459560254718273530678351",
+          "generator_mass_l2": "0.459560254718273530678351"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "1.90634532217232097351494e-42",
+          "one_moment_normalized": "1.61630780215687111131401e-21",
+          "s_moment_normalized": "4.41563708991938466309637e-44",
+          "generator_mass_l2": "1.61630780215687111131401e-21"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "3.08888934410078189740733e-39",
+          "one_moment_normalized": "3.55210763835938133278806e-45",
+          "s_moment_normalized": "1.05049776297665816341002e-19",
+          "generator_mass_l2": "1.05049776297665816341002e-19"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "2.8023531883895792036393e-36",
+          "one_moment_normalized": "2.03231890002276284942785e-18",
+          "s_moment_normalized": "1.2214173558610381865649e-45",
+          "generator_mass_l2": "2.03231890002276284942785e-18"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "1.54000489022763502781327e-33",
+          "one_moment_normalized": "9.42194570264416502072264e-47",
+          "s_moment_normalized": "6.92065102200640531859456e-17",
+          "generator_mass_l2": "6.92065102200640531859456e-17"
+        }
+      ]
+    },
+    {
+      "lambda": 7,
+      "N": 8,
+      "dim": 17,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "2.79827133764272296843602e-60",
+      "commutator_frobenius": "7.12323941053027494434966",
+      "rank_two_frobenius": "7.12323941053027494434966",
+      "blind_subspace_dimension": 15,
+      "blind_fraction": "0.882352941176470588235294",
+      "generator_gram_det": "96.0662090433547824188842",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "2.40466753612856041517998e-29",
+          "one_moment_normalized": "7.75576230542402118345444e-15",
+          "s_moment_normalized": "4.23924689174111448059711e-50",
+          "generator_mass_l2": "7.75576230542402118345444e-15"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "1.74597128914526682625327e-26",
+          "one_moment_normalized": "5.00139815967409051446662e-52",
+          "s_moment_normalized": "9.27024582295416264902734e-13",
+          "generator_mass_l2": "9.27024582295416264902734e-13"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "6.12167912741348338402903e-24",
+          "one_moment_normalized": "3.80278363058631766573018e-12",
+          "s_moment_normalized": "1.16177641044296829599521e-52",
+          "generator_mass_l2": "3.80278363058631766573018e-12"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "1.75594879699610699591789e-21",
+          "one_moment_normalized": "4.04991702939502196874609e-54",
+          "s_moment_normalized": "3.21809900071421857028612e-10",
+          "generator_mass_l2": "3.21809900071421857028612e-10"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "4.064152707489386255304e-19",
+          "one_moment_normalized": "1.00342062947479951960096e-9",
+          "s_moment_normalized": "1.33157223983412238114954e-54",
+          "generator_mass_l2": "1.00342062947479951960096e-9"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "6.32643486613117101124628e-17",
+          "one_moment_normalized": "5.85319535637807216251077e-56",
+          "s_moment_normalized": "5.52717430089920412636714e-8",
+          "generator_mass_l2": "5.52717430089920412636714e-8"
+        }
+      ]
+    },
+    {
+      "lambda": 7,
+      "N": 8,
+      "dim": 17,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "7.01410115505250134523437e-60",
+      "commutator_frobenius": "18.2007199671017755688503",
+      "rank_two_frobenius": "18.2007199671017755688503",
+      "blind_subspace_dimension": 15,
+      "blind_fraction": "0.882352941176470588235294",
+      "generator_gram_det": "627.180729842592728333708",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-0.0574831243115185719342726",
+          "one_moment_normalized": "0.258596566516239645841115",
+          "s_moment_normalized": "1.92616295843988771172375e-62",
+          "generator_mass_l2": "0.258596566516239645841115"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-0.0475841560327334213656339",
+          "one_moment_normalized": "3.03709742133244346894797e-61",
+          "s_moment_normalized": "0.0327422195711279328029227",
+          "generator_mass_l2": "0.0327422195711279328029227"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "1.25994728064765359069758e-24",
+          "one_moment_normalized": "1.72711460556295086802721e-12",
+          "s_moment_normalized": "6.17770728593751260465904e-53",
+          "generator_mass_l2": "1.72711460556295086802721e-12"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "8.84946009862872740670228e-22",
+          "one_moment_normalized": "9.31131669180167376305028e-55",
+          "s_moment_normalized": "7.68062506299990922799096e-11",
+          "generator_mass_l2": "7.68062506299990922799096e-11"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "1.98750566368462645580064e-19",
+          "one_moment_normalized": "5.42401100864013202105718e-10",
+          "s_moment_normalized": "3.69721377148884408274543e-55",
+          "generator_mass_l2": "5.42401100864013202105718e-10"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "1.84603457412874487520608e-17",
+          "one_moment_normalized": "6.44699027224397272895691e-56",
+          "s_moment_normalized": "8.65252880491949902626381e-9",
+          "generator_mass_l2": "8.65252880491949902626381e-9"
+        }
+      ]
+    },
+    {
+      "lambda": 7,
+      "N": 12,
+      "dim": 25,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "3.1952554119446014588577e-60",
+      "commutator_frobenius": "13.8361967279536071036129",
+      "rank_two_frobenius": "13.8361967279536071036129",
+      "blind_subspace_dimension": 23,
+      "blind_fraction": "0.92",
+      "generator_gram_det": "362.450770537351182360758",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "2.43277014000202626216811e-39",
+          "one_moment_normalized": "6.68192674679612996545378e-20",
+          "s_moment_normalized": "1.78054845508443598729962e-44",
+          "generator_mass_l2": "6.68192674679612996545378e-20"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "3.08117176586784189855624e-36",
+          "one_moment_normalized": "1.3307195335405315202818e-46",
+          "s_moment_normalized": "1.11238312106650497280341e-17",
+          "generator_mass_l2": "1.11238312106650497280341e-17"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "2.39006067396890441730646e-33",
+          "one_moment_normalized": "7.24652138114925321603612e-17",
+          "s_moment_normalized": "1.03948782913059077619026e-47",
+          "generator_mass_l2": "7.24652138114925321603612e-17"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "9.47470976665505054718395e-31",
+          "one_moment_normalized": "4.37736653351215406054955e-50",
+          "s_moment_normalized": "5.33501240523496968624962e-15",
+          "generator_mass_l2": "5.33501240523496968624962e-15"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "2.34058421479389409658762e-28",
+          "one_moment_normalized": "2.04053646656169316415059e-14",
+          "s_moment_normalized": "8.58488832197093269538787e-50",
+          "generator_mass_l2": "2.04053646656169316415059e-14"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "4.64107496901081608582828e-26",
+          "one_moment_normalized": "4.2403191970711234887859e-52",
+          "s_moment_normalized": "1.1662814766999535109624e-12",
+          "generator_mass_l2": "1.1662814766999535109624e-12"
+        }
+      ]
+    },
+    {
+      "lambda": 7,
+      "N": 12,
+      "dim": 25,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "1.67621124037743604100675e-60",
+      "commutator_frobenius": "98.5693723675120912715297",
+      "rank_two_frobenius": "98.5693723675120912715297",
+      "blind_subspace_dimension": 23,
+      "blind_fraction": "0.92",
+      "generator_gram_det": "18394.9898756726273787312",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-2.34711208931527046932016",
+          "one_moment_normalized": "0.447503464394639497995755",
+          "s_moment_normalized": "2.23858033649782085230278e-61",
+          "generator_mass_l2": "0.447503464394639497995755"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-2.03777721387137676141614",
+          "one_moment_normalized": "6.91003859540235466612125e-61",
+          "s_moment_normalized": "0.130894826053341925886381",
+          "generator_mass_l2": "0.130894826053341925886381"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "2.52295205202581125034515e-33",
+          "one_moment_normalized": "6.75295467888666033904999e-17",
+          "s_moment_normalized": "2.95464936764651483351576e-48",
+          "generator_mass_l2": "6.75295467888666033904999e-17"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "2.86225138925169982369949e-30",
+          "one_moment_normalized": "2.13750888737200078605962e-49",
+          "s_moment_normalized": "1.29942458697999430474775e-15",
+          "generator_mass_l2": "1.29942458697999430474775e-15"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "1.70917707688891338430819e-27",
+          "one_moment_normalized": "5.62416784402700539447273e-14",
+          "s_moment_normalized": "1.46468670046367435520839e-50",
+          "generator_mass_l2": "5.62416784402700539447273e-14"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "5.94520462243755689772759e-25",
+          "one_moment_normalized": "5.66177905802959394667511e-53",
+          "s_moment_normalized": "5.45595616236820710735512e-13",
+          "generator_mass_l2": "5.45595616236820710735512e-13"
+        }
+      ]
+    },
+    {
+      "lambda": 7,
+      "N": 16,
+      "dim": 33,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "3.29566426155673445049246e-60",
+      "commutator_frobenius": "29.0422268034150055864566",
+      "rank_two_frobenius": "29.0422268034150055864566",
+      "blind_subspace_dimension": 31,
+      "blind_fraction": "0.939393939393939393939394",
+      "generator_gram_det": "1596.89145165765815543049",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "3.87341886631211440593655e-48",
+          "one_moment_normalized": "2.60800435969850952407672e-24",
+          "s_moment_normalized": "1.01997316234979277726701e-40",
+          "generator_mass_l2": "2.60800435969850952407672e-24"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "5.79352235062998563096911e-45",
+          "one_moment_normalized": "1.62861025643555185175339e-43",
+          "s_moment_normalized": "2.75653330195027601080383e-22",
+          "generator_mass_l2": "2.75653330195027601080383e-22"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "4.6800180278124579504215e-42",
+          "one_moment_normalized": "2.94071410228729071961101e-21",
+          "s_moment_normalized": "1.00790455964571379086053e-43",
+          "generator_mass_l2": "2.94071410228729071961101e-21"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "2.21395517581518051461687e-39",
+          "one_moment_normalized": "7.39804079067155552963223e-46",
+          "s_moment_normalized": "1.57406523638655011297343e-19",
+          "generator_mass_l2": "1.57406523638655011297343e-19"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "7.70510594144237449902576e-37",
+          "one_moment_normalized": "1.16271131029551876814916e-18",
+          "s_moment_normalized": "6.14022067733788430283477e-45",
+          "generator_mass_l2": "1.16271131029551876814916e-18"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "2.25700624600047520104369e-34",
+          "one_moment_normalized": "4.1517461201734195665948e-46",
+          "s_moment_normalized": "5.06113529652903148897037e-17",
+          "generator_mass_l2": "5.06113529652903148897037e-17"
+        }
+      ]
+    },
+    {
+      "lambda": 7,
+      "N": 16,
+      "dim": 33,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "1.80354439815633724674453e-60",
+      "commutator_frobenius": "115.096152216036649285642",
+      "rank_two_frobenius": "115.096152216036649285642",
+      "blind_subspace_dimension": 31,
+      "blind_fraction": "0.939393939393939393939394",
+      "generator_gram_det": "25080.5571921185134297209",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-2.40923273428034923264293",
+          "one_moment_normalized": "0.345654284742337373638102",
+          "s_moment_normalized": "4.57576599699200471890758e-61",
+          "generator_mass_l2": "0.345654284742337373638102"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-2.09692949845980342126582",
+          "one_moment_normalized": "3.0439361312930367268857e-61",
+          "s_moment_normalized": "0.147771426640470816467754",
+          "generator_mass_l2": "0.147771426640470816467754"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "1.70104946833186763858362e-41",
+          "one_moment_normalized": "5.4975637804787204966352e-21",
+          "s_moment_normalized": "3.35264325999164738208031e-44",
+          "generator_mass_l2": "5.4975637804787204966352e-21"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "2.82051573387966657863992e-38",
+          "one_moment_normalized": "9.13674140953135031023911e-46",
+          "s_moment_normalized": "1.42877153819103502010307e-19",
+          "generator_mass_l2": "1.42877153819103502010307e-19"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "2.12002873624624354985708e-35",
+          "one_moment_normalized": "5.7479313569517222430634e-18",
+          "s_moment_normalized": "8.71340482145049226931837e-47",
+          "generator_mass_l2": "5.7479313569517222430634e-18"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "1.06278321507852219469355e-32",
+          "one_moment_normalized": "1.12113842422008061933817e-47",
+          "s_moment_normalized": "8.62024006500969844522656e-17",
+          "generator_mass_l2": "8.62024006500969844522656e-17"
+        }
+      ]
+    },
+    {
+      "lambda": 7,
+      "N": 18,
+      "dim": 37,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "3.92238957499417295002175e-60",
+      "commutator_frobenius": "31.5520125131492656182648",
+      "rank_two_frobenius": "31.5520125131492656182648",
+      "blind_subspace_dimension": 35,
+      "blind_fraction": "0.945945945945945945945946",
+      "generator_gram_det": "1884.81921969748934145385",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "3.70471554258738644717256e-52",
+          "one_moment_normalized": "2.54521724305435753742162e-26",
+          "s_moment_normalized": "9.92802220998846559984872e-39",
+          "generator_mass_l2": "2.54521724305435753742163e-26"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "7.15801555294560796121567e-49",
+          "one_moment_normalized": "1.59891162499508952839741e-40",
+          "s_moment_normalized": "3.30059432370562789341977e-24",
+          "generator_mass_l2": "3.30059432370562789341977e-24"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "5.37528659049127161933933e-46",
+          "one_moment_normalized": "2.66506329854220878039819e-23",
+          "s_moment_normalized": "5.73586356773135828707038e-42",
+          "generator_mass_l2": "2.66506329854220878039819e-23"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "2.07618275222314479326151e-43",
+          "one_moment_normalized": "7.77592185713301524722026e-43",
+          "s_moment_normalized": "1.53713953811133669981126e-21",
+          "generator_mass_l2": "1.53713953811133669981126e-21"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "7.1800888452119621627444e-41",
+          "one_moment_normalized": "1.04548922883424913565127e-20",
+          "s_moment_normalized": "2.70024457470583505378153e-43",
+          "generator_mass_l2": "1.04548922883424913565127e-20"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "2.17448552835471860549779e-38",
+          "one_moment_normalized": "5.27095509240850022940584e-45",
+          "s_moment_normalized": "5.10003656622172723955798e-19",
+          "generator_mass_l2": "5.10003656622172723955798e-19"
+        }
+      ]
+    },
+    {
+      "lambda": 7,
+      "N": 18,
+      "dim": 37,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "1.93069856369408050822019e-60",
+      "commutator_frobenius": "121.941807729330352000651",
+      "rank_two_frobenius": "121.941807729330352000651",
+      "blind_subspace_dimension": 35,
+      "blind_fraction": "0.945945945945945945945946",
+      "generator_gram_det": "28152.7503121344634428301",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-2.42131327650659399744683",
+          "one_moment_normalized": "0.309126342913122066520062",
+          "s_moment_normalized": "3.45532855657777839601349e-61",
+          "generator_mass_l2": "0.309126342913122066520062"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-2.11304414378572065427792",
+          "one_moment_normalized": "1.21144428871356832607722e-60",
+          "s_moment_normalized": "0.154662732539721238613998",
+          "generator_mass_l2": "0.154662732539721238613998"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "1.98238476704609726697565e-45",
+          "one_moment_normalized": "5.53539598488538543739438e-23",
+          "s_moment_normalized": "2.56273064512500202397887e-44",
+          "generator_mass_l2": "5.53539598488538543739438e-23"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "3.46630199937596889250903e-42",
+          "one_moment_normalized": "7.46980923789724038161608e-44",
+          "s_moment_normalized": "1.68095320450341712169903e-21",
+          "generator_mass_l2": "1.68095320450341712169903e-21"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "3.49317035634684521032135e-39",
+          "one_moment_normalized": "7.74915704299677066817439e-20",
+          "s_moment_normalized": "2.53457255022383842806844e-45",
+          "generator_mass_l2": "7.74915704299677066817439e-20"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "2.19134191802043997353404e-36",
+          "one_moment_normalized": "2.95723204877715490041525e-47",
+          "s_moment_normalized": "1.26719744335952045174367e-18",
+          "generator_mass_l2": "1.26719744335952045174367e-18"
+        }
+      ]
+    },
+    {
+      "lambda": 8,
+      "N": 8,
+      "dim": 17,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "4.60459680842969302421755e-60",
+      "commutator_frobenius": "6.20628782915444335279056",
+      "rank_two_frobenius": "6.20628782915444335279056",
+      "blind_subspace_dimension": 15,
+      "blind_fraction": "0.882352941176470588235294",
+      "generator_gram_det": "83.2774199885755747949514",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "1.69984062782045128253928e-30",
+          "one_moment_normalized": "2.16198602770518911994741e-15",
+          "s_moment_normalized": "1.69745246804880617975554e-49",
+          "generator_mass_l2": "2.16198602770518911994741e-15"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "1.34281473419544179351438e-27",
+          "one_moment_normalized": "1.36947481779747333591199e-51",
+          "s_moment_normalized": "2.78420155817307138880444e-13",
+          "generator_mass_l2": "2.78420155817307138880444e-13"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "5.39557448853911463225042e-25",
+          "one_moment_normalized": "1.21489358709325496893094e-12",
+          "s_moment_normalized": "2.71237496498492671299743e-52",
+          "generator_mass_l2": "1.21489358709325496893094e-12"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "1.66055587018153759256181e-22",
+          "one_moment_normalized": "9.66377111775154305233189e-54",
+          "s_moment_normalized": "1.03713926612818031219095e-10",
+          "generator_mass_l2": "1.03713926612818031219095e-10"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "4.37473806595363702271716e-20",
+          "one_moment_normalized": "3.6497325253341041383071e-10",
+          "s_moment_normalized": "1.51077353444895219844106e-53",
+          "generator_mass_l2": "3.6497325253341041383071e-10"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "8.96920147307900707136014e-18",
+          "one_moment_normalized": "5.09455315366435636504684e-55",
+          "s_moment_normalized": "2.3463870383351634883362e-8",
+          "generator_mass_l2": "2.3463870383351634883362e-8"
+        }
+      ]
+    },
+    {
+      "lambda": 8,
+      "N": 8,
+      "dim": 17,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "1.37409711271258030062314e-60",
+      "commutator_frobenius": "31.1896238098012640510679",
+      "rank_two_frobenius": "31.1896238098012640510679",
+      "blind_subspace_dimension": 15,
+      "blind_fraction": "0.882352941176470588235294",
+      "generator_gram_det": "2103.21518684838813855834",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-0.00148421241444270411583428",
+          "one_moment_normalized": "2.68176940940093376720651e-61",
+          "s_moment_normalized": "0.0240958310151760050567365",
+          "generator_mass_l2": "0.0240958310151760050567365"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-0.000707907667873789532941974",
+          "one_moment_normalized": "0.0126184548745649233716053",
+          "s_moment_normalized": "1.12003079347196888581193e-60",
+          "generator_mass_l2": "0.0126184548745649233716053"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "9.36324230107513862605333e-26",
+          "one_moment_normalized": "5.33031099626672958847666e-13",
+          "s_moment_normalized": "7.14819986604141043178347e-52",
+          "generator_mass_l2": "5.33031099626672958847666e-13"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "9.52895774226112304251458e-23",
+          "one_moment_normalized": "5.51520730423238109569195e-53",
+          "s_moment_normalized": "1.49320142955687934888186e-11",
+          "generator_mass_l2": "1.49320142955687934888186e-11"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "3.86479970479748213287585e-20",
+          "one_moment_normalized": "3.02132977337560370974079e-10",
+          "s_moment_normalized": "4.30637886931790052005486e-55",
+          "generator_mass_l2": "3.02132977337560370974079e-10"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "7.98930434147875743486443e-18",
+          "one_moment_normalized": "1.66307418718724761691954e-55",
+          "s_moment_normalized": "3.73671618096737443303735e-9",
+          "generator_mass_l2": "3.73671618096737443303735e-9"
+        }
+      ]
+    },
+    {
+      "lambda": 8,
+      "N": 12,
+      "dim": 25,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "3.58170342220173733409029e-60",
+      "commutator_frobenius": "19.001254451722726190526",
+      "rank_two_frobenius": "19.001254451722726190526",
+      "blind_subspace_dimension": 23,
+      "blind_fraction": "0.92",
+      "generator_gram_det": "780.598987086389079885754",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "5.49601721197893872581782e-41",
+          "one_moment_normalized": "1.13596904747495530529446e-20",
+          "s_moment_normalized": "1.55101575026357372830693e-44",
+          "generator_mass_l2": "1.13596904747495530529446e-20"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "7.58809911544308635514107e-38",
+          "one_moment_normalized": "2.63834241286097169272495e-47",
+          "s_moment_normalized": "1.12078289989039230248419e-18",
+          "generator_mass_l2": "1.12078289989039230248419e-18"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "4.76428381326092274948995e-35",
+          "one_moment_normalized": "9.98286359428209293639149e-18",
+          "s_moment_normalized": "6.35160797549234504746353e-47",
+          "generator_mass_l2": "9.98286359428209293639149e-18"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "1.98750981452878995138108e-32",
+          "one_moment_normalized": "1.13917945489047196015277e-48",
+          "s_moment_normalized": "5.66433341066989919487338e-16",
+          "generator_mass_l2": "5.66433341066989919487338e-16"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "6.68511472595995140445612e-30",
+          "one_moment_normalized": "3.83226682291620300321109e-15",
+          "s_moment_normalized": "4.4015820482151094467632e-50",
+          "generator_mass_l2": "3.83226682291620300321109e-15"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "1.6006941516565267103897e-27",
+          "one_moment_normalized": "3.3137585337779592625848e-51",
+          "s_moment_normalized": "1.49750906909432086426597e-13",
+          "generator_mass_l2": "1.49750906909432086426597e-13"
+        }
+      ]
+    },
+    {
+      "lambda": 8,
+      "N": 12,
+      "dim": 25,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "1.53037400037347443917916e-60",
+      "commutator_frobenius": "129.986894147822320453425",
+      "rank_two_frobenius": "129.986894147822320453425",
+      "blind_subspace_dimension": 23,
+      "blind_fraction": "0.92",
+      "generator_gram_det": "36531.0848868091120335815",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-2.89430587670171132146444",
+          "one_moment_normalized": "1.01348541083436810557543e-61",
+          "s_moment_normalized": "0.117811170771742858034653",
+          "generator_mass_l2": "0.117811170771742858034653"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-2.70344775931101076435299",
+          "one_moment_normalized": "0.254059506880159396238074",
+          "s_moment_normalized": "1.08800826069812135275647e-62",
+          "generator_mass_l2": "0.254059506880159396238074"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "5.19440724898118038736118e-35",
+          "one_moment_normalized": "1.06422738625557244347888e-17",
+          "s_moment_normalized": "8.87775648418146353616846e-48",
+          "generator_mass_l2": "1.06422738625557244347888e-17"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "6.58461465461297205720222e-32",
+          "one_moment_normalized": "4.62749233677939097921747e-49",
+          "s_moment_normalized": "1.38539951955946115173352e-16",
+          "generator_mass_l2": "1.38539951955946115173352e-16"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "3.25327029436970114233668e-29",
+          "one_moment_normalized": "7.34449267529334919817999e-15",
+          "s_moment_normalized": "6.66129145856892306058759e-52",
+          "generator_mass_l2": "7.34449267529334919817999e-15"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "1.15464481113822423032823e-26",
+          "one_moment_normalized": "4.09947562680446225207409e-51",
+          "s_moment_normalized": "5.94540960964832436224813e-14",
+          "generator_mass_l2": "5.94540960964832436224813e-14"
+        }
+      ]
+    },
+    {
+      "lambda": 8,
+      "N": 16,
+      "dim": 33,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "4.47161299839360962945227e-60",
+      "commutator_frobenius": "27.4478628938334273138741",
+      "rank_two_frobenius": "27.4478628938334273138741",
+      "blind_subspace_dimension": 31,
+      "blind_fraction": "0.939393939393939393939394",
+      "generator_gram_det": "1628.84780613770299147596",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "2.23815746364563304598008e-50",
+          "one_moment_normalized": "1.94044583659140362602409e-25",
+          "s_moment_normalized": "9.87209416265144485929282e-40",
+          "generator_mass_l2": "1.94044583659140362602409e-25"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "3.44897908351956358234954e-47",
+          "one_moment_normalized": "3.04801766006580582017558e-41",
+          "s_moment_normalized": "2.24205129334130043443372e-23",
+          "generator_mass_l2": "2.24205129334130043443372e-23"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "3.12136154275553843233906e-44",
+          "one_moment_normalized": "2.45495159027588120264527e-22",
+          "s_moment_normalized": "1.25583148842133916756093e-42",
+          "generator_mass_l2": "2.45495159027588120264527e-22"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "1.71293968132277752074722e-41",
+          "one_moment_normalized": "1.0560397575878498093019e-44",
+          "s_moment_normalized": "1.48781628145960170010468e-20",
+          "generator_mass_l2": "1.48781628145960170010468e-20"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "8.57711013093983619019774e-39",
+          "one_moment_normalized": "1.39941518537779796188704e-19",
+          "s_moment_normalized": "7.27785649507044713210766e-45",
+          "generator_mass_l2": "1.39941518537779796188704e-19"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "3.23717501531465747517817e-36",
+          "one_moment_normalized": "9.82818085527165054200396e-47",
+          "s_moment_normalized": "6.17883891957224915001155e-18",
+          "generator_mass_l2": "6.17883891957224915001155e-18"
+        }
+      ]
+    },
+    {
+      "lambda": 8,
+      "N": 16,
+      "dim": 33,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "1.65925384906578327015691e-60",
+      "commutator_frobenius": "150.297012870779635887254",
+      "rank_two_frobenius": "150.297012870779635887254",
+      "blind_subspace_dimension": 31,
+      "blind_fraction": "0.939393939393939393939394",
+      "generator_gram_det": "48838.7043710742080519901",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-2.93442601823091526575206",
+          "one_moment_normalized": "8.16339050075372938098892e-62",
+          "s_moment_normalized": "0.11990006324807904965754",
+          "generator_mass_l2": "0.11990006324807904965754"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-2.7219328902411700394727",
+          "one_moment_normalized": "0.240694197129887749746365",
+          "s_moment_normalized": "4.66128651213594452339942e-62",
+          "generator_mass_l2": "0.240694197129887749746365"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "1.431316182045919701006e-43",
+          "one_moment_normalized": "5.71979769652777929099432e-22",
+          "s_moment_normalized": "2.29643945789944274087948e-43",
+          "generator_mass_l2": "5.71979769652777929099432e-22"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "2.95890088770212338821553e-40",
+          "one_moment_normalized": "1.56257457939733072886191e-44",
+          "s_moment_normalized": "1.06839004888032276352083e-20",
+          "generator_mass_l2": "1.06839004888032276352083e-20"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "2.14716232609517745297926e-37",
+          "one_moment_normalized": "5.78332485544716838640215e-19",
+          "s_moment_normalized": "1.97952932199019081262442e-46",
+          "generator_mass_l2": "5.78332485544716838640215e-19"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "8.20082619277818533669316e-35",
+          "one_moment_normalized": "2.15028957170318094625213e-47",
+          "s_moment_normalized": "4.92147689463711059877046e-18",
+          "generator_mass_l2": "4.92147689463711059877046e-18"
+        }
+      ]
+    },
+    {
+      "lambda": 8,
+      "N": 18,
+      "dim": 37,
+      "dps": 60,
+      "planted": null,
+      "commutator_relative_error": "5.46792320439459659893448e-60",
+      "commutator_frobenius": "32.200859654157474400888",
+      "rank_two_frobenius": "32.200859654157474400888",
+      "blind_subspace_dimension": 35,
+      "blind_fraction": "0.945945945945945945945946",
+      "generator_gram_det": "2241.80775906729446626919",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "1.33332909717172188721524e-54",
+          "one_moment_normalized": "1.56389561922276524052649e-27",
+          "s_moment_normalized": "5.15275431266862182356013e-38",
+          "generator_mass_l2": "1.56389561922276524052734e-27"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "2.25590667922937440059293e-51",
+          "one_moment_normalized": "3.77924010293716437511307e-39",
+          "s_moment_normalized": "1.59772369706372388861488e-25",
+          "generator_mass_l2": "1.59772369706372388861488e-25"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "1.63345602576702240503567e-48",
+          "one_moment_normalized": "1.58186838237514904294062e-24",
+          "s_moment_normalized": "3.60327604950443643173567e-40",
+          "generator_mass_l2": "1.58186838237514904294062e-24"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "8.11721108512889555322844e-46",
+          "one_moment_normalized": "1.58491725150762762235746e-42",
+          "s_moment_normalized": "9.59216868101567670974117e-23",
+          "generator_mass_l2": "9.59216868101567670974117e-23"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "2.99442216734648642801743e-43",
+          "one_moment_normalized": "6.63502488820277263995496e-22",
+          "s_moment_normalized": "7.33589444137751937794249e-43",
+          "generator_mass_l2": "6.63502488820277263995496e-22"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "9.01351142265065648944411e-41",
+          "one_moment_normalized": "8.85491369519387712063932e-44",
+          "s_moment_normalized": "3.17212756552712668770275e-20",
+          "generator_mass_l2": "3.17212756552712668770275e-20"
+        }
+      ]
+    },
+    {
+      "lambda": 8,
+      "N": 18,
+      "dim": 37,
+      "dps": 60,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "commutator_relative_error": "1.7937651829828042324957e-60",
+      "commutator_frobenius": "160.678793131174941842893",
+      "rank_two_frobenius": "160.678793131174941842893",
+      "blind_subspace_dimension": 35,
+      "blind_fraction": "0.945945945945945945945946",
+      "generator_gram_det": "55818.8080007213684565301",
+      "lowest_eigenvectors": [
+        {
+          "j": 0,
+          "eigenvalue": "-2.96597681435684037837583",
+          "one_moment_normalized": "3.84392046829072484529101e-61",
+          "s_moment_normalized": "0.116276237140495580321279",
+          "generator_mass_l2": "0.116276237140495580321279"
+        },
+        {
+          "j": 1,
+          "eigenvalue": "-2.73488655209775568149907",
+          "one_moment_normalized": "0.253159508556070764670953",
+          "s_moment_normalized": "1.82409908721034391481529e-61",
+          "generator_mass_l2": "0.253159508556070764670953"
+        },
+        {
+          "j": 2,
+          "eigenvalue": "6.15783759905552104956754e-48",
+          "one_moment_normalized": "3.02493646779248494407524e-24",
+          "s_moment_normalized": "6.12070458544789976130357e-42",
+          "generator_mass_l2": "3.02493646779248494407524e-24"
+        },
+        {
+          "j": 3,
+          "eigenvalue": "1.07178013001466476290635e-44",
+          "one_moment_normalized": "3.38036197891069368651694e-42",
+          "s_moment_normalized": "7.01015015403061638150353e-23",
+          "generator_mass_l2": "7.01015015403061638150353e-23"
+        },
+        {
+          "j": 4,
+          "eigenvalue": "1.14506753707138717051583e-41",
+          "one_moment_normalized": "4.49759333565798607767123e-21",
+          "s_moment_normalized": "2.93690305420750490592893e-45",
+          "generator_mass_l2": "4.49759333565798607767123e-21"
+        },
+        {
+          "j": 5,
+          "eigenvalue": "7.50451904261843866748351e-39",
+          "one_moment_normalized": "4.16027579107023407505012e-46",
+          "s_moment_normalized": "5.53149160774334337564337e-20",
+          "generator_mass_l2": "5.53149160774334337564337e-20"
+        }
+      ]
+    }
+  ]
+}

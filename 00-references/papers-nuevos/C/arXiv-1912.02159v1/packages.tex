@@ -1,0 +1,50 @@
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{cases} 
+\usepackage{tikz-cd}        %diagram
+
+\usepackage[
+backend=biber,
+style=numeric,%alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{mybibliography.bib}
+
+
+\usepackage{hyperref}
+\hypersetup{colorlinks}
+\hypersetup{
+    bookmarksopen=true,     % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new PDF window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=magenta,        % color of links to bibliography
+    filecolor=violet,      % color of file links
+    urlcolor=blue      % color of external links
+}
+%%%%%%%%%%%%%
+\textwidth=14.5cm
+\textheight=21.5cm
+\oddsidemargin=0.8cm
+\evensidemargin=0.8cm
+\topmargin=1cm
+%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem*{remark}{Remark}
+%%%%%%%%%%%%%

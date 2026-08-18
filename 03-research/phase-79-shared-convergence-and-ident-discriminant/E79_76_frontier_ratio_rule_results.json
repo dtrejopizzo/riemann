@@ -1,0 +1,166 @@
+{
+  "statement": "E79.76 frontier ratio rule",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_75_pareto_frontier_reduction_results.json",
+  "rows": [
+    {
+      "N": 8,
+      "kind": "tradeoff",
+      "low": {
+        "name": "pair",
+        "support": [
+          5,
+          7
+        ],
+        "mismatch": 0.029900186331162863,
+        "surcharge": 1.4999999999999998,
+        "score": 1.5299001863311625,
+        "exact_match": false
+      },
+      "high": {
+        "name": "triple",
+        "support": [
+          6,
+          7,
+          8
+        ],
+        "mismatch": 0.027405661727436206,
+        "surcharge": 1.5,
+        "score": 1.5274056617274363,
+        "exact_match": true
+      },
+      "delta_mismatch": 0.002494524603726657,
+      "delta_surcharge": 2.220446049250313e-16,
+      "ratio": 11234340075809.906,
+      "best_rule": "suffix",
+      "winner_is_high": false
+    },
+    {
+      "N": 10,
+      "kind": "tradeoff",
+      "low": {
+        "name": "pair",
+        "support": [
+          5
+        ],
+        "mismatch": 0.02948235840351119,
+        "surcharge": 1.5799999999999998,
+        "score": 1.6094823584035112,
+        "exact_match": true
+      },
+      "high": {
+        "name": "suffix",
+        "support": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "mismatch": 0.00870182150800833,
+        "surcharge": 1.6400000000000001,
+        "score": 1.6487018215080083,
+        "exact_match": false
+      },
+      "delta_mismatch": 0.02078053689550286,
+      "delta_surcharge": 0.060000000000000275,
+      "ratio": 0.34634228159171276,
+      "best_rule": "pair",
+      "winner_is_high": false
+    },
+    {
+      "N": 12,
+      "kind": "tradeoff",
+      "low": {
+        "name": "triple",
+        "support": [
+          7,
+          9,
+          10
+        ],
+        "mismatch": 0.35371168161341404,
+        "surcharge": 2.0,
+        "score": 2.3537116816134143,
+        "exact_match": false
+      },
+      "high": {
+        "name": "pair",
+        "support": [
+          7
+        ],
+        "mismatch": 0.02298785490948674,
+        "surcharge": 2.3,
+        "score": 2.3229878549094867,
+        "exact_match": true
+      },
+      "delta_mismatch": 0.3307238267039273,
+      "delta_surcharge": 0.2999999999999998,
+      "ratio": 1.1024127556797583,
+      "best_rule": "pair",
+      "winner_is_high": true
+    },
+    {
+      "N": 14,
+      "kind": "degenerate",
+      "low": {
+        "name": "suffix",
+        "support": [
+          10,
+          11,
+          12
+        ],
+        "mismatch": 0.02424717475556555,
+        "surcharge": 2.9399999999999995,
+        "score": 2.964247174755565,
+        "exact_match": true
+      },
+      "high": {
+        "name": "triple",
+        "support": [
+          10,
+          11,
+          12
+        ],
+        "mismatch": 0.02424717475556555,
+        "surcharge": 2.9399999999999995,
+        "score": 2.964247174755565,
+        "exact_match": true
+      },
+      "delta_mismatch": 0.0,
+      "delta_surcharge": 0.0,
+      "ratio": null,
+      "best_rule": "suffix",
+      "winner_is_high": false
+    },
+    {
+      "N": 16,
+      "kind": "tradeoff",
+      "low": {
+        "name": "triple",
+        "support": [
+          11,
+          12,
+          13
+        ],
+        "mismatch": 0.4141474018842848,
+        "surcharge": 3.3,
+        "score": 3.7141474018842846,
+        "exact_match": false
+      },
+      "high": {
+        "name": "pair",
+        "support": [
+          11,
+          13
+        ],
+        "mismatch": 0.03554314266742822,
+        "surcharge": 3.66,
+        "score": 3.695543142667428,
+        "exact_match": true
+      },
+      "delta_mismatch": 0.3786042592168566,
+      "delta_surcharge": 0.3600000000000003,
+      "ratio": 1.0516784978246008,
+      "best_rule": "pair",
+      "winner_is_high": true
+    }
+  ]
+}

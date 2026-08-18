@@ -13,7 +13,7 @@ the proved inputs (G1–G5, Phases 60–64) to RH, assembled from the package do
 theorem (D8.5d) and Connes' audit fixes A–E applied. Every load-bearing step lives in the
 absolute-convergence region `Re s > 1` (no zeros) or is automatic from self-adjointness — the structural
 guarantee that no step encodes RH. We prove the remaining sub-lemma (endpoint-source richness, Check 5 /
-fix D) here, then close, then give the honest flagged-items ledger.
+fix D) here, then close, then give the candid flagged-items ledger.
 
 > **Status.** The spine is complete and RH-free. What remains are standard analytic estimates in
 > `Re s > 1` (the flagged ledger, §6), none of which can encode zero locations. We present this for audit
@@ -89,7 +89,7 @@ and by G5,
 
 ---
 
-## §6. The honest flagged-items ledger
+## §6. The candid flagged-items ledger
 
 The spine (§2–§5) is complete. The following are the residual analytic estimates not written in full
 detail; **each lives in `Re s > 1` and uses only `Λ ≥ 0` / G4 — none can encode zero locations.** We list

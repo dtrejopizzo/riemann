@@ -34,7 +34,7 @@ Omega_7  <=>  measure{theta : sigma_A(theta) < sigma_P(theta)} = 0  for every ga
          <=>  RH.
 ```
 
-## Honest scope and the road ahead
+## Candid scope and the road ahead
 
 `sigma >= 0` is the symbol-level form of the terminal positivity; proving it by structure is expected
 to be Weil-positivity-hard (MW-1 in symbol clothing). But the setting is now far more tool-rich than an

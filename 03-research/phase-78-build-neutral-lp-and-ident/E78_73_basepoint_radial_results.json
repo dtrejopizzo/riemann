@@ -1,0 +1,200 @@
+{
+  "statement": "Basepoint radial identity at sigma0=0.55: Re Delta ell_N(i sigma0) = log(|1-theta_old(N)| / |1-theta_old(N+2)|).",
+  "sources": {
+    "phase_g": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5g_schur_phase_increment_results.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell_base": 0.22201071400717606,
+          "old_abs_one_minus_theta": 0.34378641231698,
+          "next_abs_one_minus_theta": 0.2753408696543027,
+          "radial_ratio": 1.2485847551386482,
+          "reconstructed_base": 0.22201071400717648,
+          "reconstruction_error": 4.163336342344337e-16
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell_base": 0.2165885762693645,
+          "old_abs_one_minus_theta": 0.2753408696543027,
+          "next_abs_one_minus_theta": 0.2217213204093008,
+          "radial_ratio": 1.241833077423585,
+          "reconstructed_base": 0.21658857626936448,
+          "reconstruction_error": 2.7755575615628914e-17
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell_base": 0.11211550152134399,
+          "old_abs_one_minus_theta": 0.2217213204093008,
+          "next_abs_one_minus_theta": 0.19820577888618854,
+          "radial_ratio": 1.118642058043197,
+          "reconstructed_base": 0.11211550152134413,
+          "reconstruction_error": 1.3877787807814457e-16
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell_base": 0.12240277022774242,
+          "old_abs_one_minus_theta": 0.19820577888618854,
+          "next_abs_one_minus_theta": 0.17537087341569757,
+          "radial_ratio": 1.1302092247460234,
+          "reconstructed_base": 0.12240277022774249,
+          "reconstruction_error": 6.938893903907228e-17
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell_base": 0.10363063810516267,
+          "old_abs_one_minus_theta": 0.17537087341569757,
+          "next_abs_one_minus_theta": 0.15810705549087828,
+          "radial_ratio": 1.109190686470126,
+          "reconstructed_base": 0.1036306381051627,
+          "reconstruction_error": 2.7755575615628914e-17
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell_base": 0.10274873703680383,
+          "old_abs_one_minus_theta": 0.15810705549087828,
+          "next_abs_one_minus_theta": 0.1426684822584942,
+          "radial_ratio": 1.1082129212281915,
+          "reconstructed_base": 0.10274873703680393,
+          "reconstruction_error": 9.71445146547012e-17
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 20,
+          "to_N": 22,
+          "re_delta_ell_base": 0.048452503204431424,
+          "old_abs_one_minus_theta": 0.1426684822584942,
+          "next_abs_one_minus_theta": 0.13592063235235496,
+          "radial_ratio": 1.0496455158378486,
+          "reconstructed_base": 0.0484525032044305,
+          "reconstruction_error": 9.228728892196614e-16
+        }
+      ],
+      "summary": {
+        "re_delta_ell_base": {
+          "count": 7,
+          "min": 0.048452503204431424,
+          "median": 0.11211550152134399,
+          "max": 0.22201071400717606
+        },
+        "radial_ratio": {
+          "count": 7,
+          "min": 1.0496455158378486,
+          "median": 1.118642058043197,
+          "max": 1.2485847551386482
+        }
+      },
+      "max_reconstruction_error": 9.228728892196614e-16
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell_base": -0.8653107894890959,
+          "old_abs_one_minus_theta": 2.02633668604845,
+          "next_abs_one_minus_theta": 4.814057887724067,
+          "radial_ratio": 0.42092071456299784,
+          "reconstructed_base": -0.8653107894890958,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell_base": -0.3039356946768848,
+          "old_abs_one_minus_theta": 4.814057887724067,
+          "next_abs_one_minus_theta": 6.5239241529171315,
+          "radial_ratio": 0.7379083163576466,
+          "reconstructed_base": -0.30393569467688497,
+          "reconstruction_error": 1.6653345369377348e-16
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell_base": -0.4459840408856278,
+          "old_abs_one_minus_theta": 6.5239241529171315,
+          "next_abs_one_minus_theta": 10.190542657285599,
+          "radial_ratio": 0.6401939889092103,
+          "reconstructed_base": -0.44598404088562793,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell_base": 1.2470836741869524,
+          "old_abs_one_minus_theta": 10.190542657285599,
+          "next_abs_one_minus_theta": 2.9281664013140394,
+          "radial_ratio": 3.4801788083875653,
+          "reconstructed_base": 1.2470836741869524,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell_base": 0.988591936180651,
+          "old_abs_one_minus_theta": 2.9281664013140394,
+          "next_abs_one_minus_theta": 1.0895714887448424,
+          "radial_ratio": 2.6874477090871842,
+          "reconstructed_base": 0.9885919361806512,
+          "reconstruction_error": 2.220446049250313e-16
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell_base": -1.0173905673682724,
+          "old_abs_one_minus_theta": 1.0895714887448424,
+          "next_abs_one_minus_theta": 3.0137195799893832,
+          "radial_ratio": 0.36153711711581366,
+          "reconstructed_base": -1.0173905673682724,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "0.550000000000000044408921",
+          "N": 20,
+          "to_N": 22,
+          "re_delta_ell_base": 1.0659016899013642,
+          "old_abs_one_minus_theta": 3.0137195799893832,
+          "next_abs_one_minus_theta": 1.0379767304564211,
+          "radial_ratio": 2.903455820887415,
+          "reconstructed_base": 1.0659016899013645,
+          "reconstruction_error": 2.220446049250313e-16
+        }
+      ],
+      "summary": {
+        "re_delta_ell_base": {
+          "count": 7,
+          "min": -1.0173905673682724,
+          "median": -0.3039356946768848,
+          "max": 1.2470836741869524
+        },
+        "radial_ratio": {
+          "count": 7,
+          "min": 0.36153711711581366,
+          "median": 0.7379083163576466,
+          "max": 3.4801788083875653
+        }
+      },
+      "max_reconstruction_error": 2.220446049250313e-16
+    }
+  }
+}

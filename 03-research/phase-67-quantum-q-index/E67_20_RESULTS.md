@@ -20,7 +20,7 @@ RIGOROUS eigenvalue-distribution theory (Serra-Capizzano, Garoni; Widom):
 `#{negative eigenvalues}/N -> measure{(x,theta) : kappa(x,theta) < 0}`. E67.18's Szego law holding is
 exactly this distribution at leading (position-averaged) order.
 
-Caveat (honest): the roughness is 0.2-0.76, not `<< 1`, so at these N there is finite-size noise. The
+Caveat (candid): the roughness is 0.2-0.76, not `<< 1`, so at these N there is finite-size noise. The
 GLT reading is a well-motivated hypothesis, not a clean confirmation.
 
 (2) `sigma_min` of the zeta symbol vs N: 0.038, 0.045, 0.037, 0.031 -- hovers ~0.035, not clearly -> 0.

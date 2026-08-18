@@ -91,7 +91,7 @@ The right object is **not** the bulk determinant (dominated by the gapless `e^{�
 **Status of B: confirmed as a sharp, model-free realization of "positivity = edge contractivity".**
 ζ is edge-contractive (no off-line pole); DH violates it with the predicted `λ^{2β−1}` drift. This
 is the cleanest detector the program has produced and it directly instantiates Connes' relative/edge
-finite-part picture. **Caveat (honest):** it remains a *detector* — proving ζ stays at `μ_max=1`
+finite-part picture. **Caveat (candid):** it remains a *detector* — proving ζ stays at `μ_max=1`
 uniformly in λ is still RH (the regularized-positivity proof, Task C, is what would close it). But
 the route is now concrete: the target is "ζ's generalized spectrum stays edge-contractive," with the
 off-line drift exponent `2β−1` quantitatively confirmed on DH.
@@ -115,7 +115,7 @@ contractive Schur, PSD canonical Hamiltonian. This is automatic for any finite s
 (`b_k>0` real), exactly the caveat we flagged. The `H_x` spectral-reality test also fails to separate
 (both show spurious complex modes from the unstable `H_x` build, not real off-line structure).
 
-**Two honest takeaways:**
+**Two candid takeaways:**
 1. **ζ's canonical Hamiltonian is marginally degenerate** (min block eig `~1e-20`, vs DH's `~0.1`):
    ζ sits *exactly at the de Branges boundary* — the same `e^{−cL}` marginality, now in the
    canonical-system Hamiltonian. DH is off the boundary (differently structured, not "more RH").
@@ -202,7 +202,7 @@ the finite-window numerics can scaffold and falsify-test (DH must lack the colli
 themselves carry out. No proof of RH; the route is correctly framed and three of four tasks are
 confirmed/proven.
 
-**Honest:** no proof of RH. But the route is now correctly framed (regularized positivity, not a
+**Candid:** no proof of RH. But the route is now correctly framed (regularized positivity, not a
 finite gap), Task A's reclassification is confirmed, Task D closes a dead end, and Task B has located
 the next concrete obstacle (the positive reference). The live targets are B (correct reference +
 relative determinant) and C (de Branges Schur-contractivity from the Euler product).

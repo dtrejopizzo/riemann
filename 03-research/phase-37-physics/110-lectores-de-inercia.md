@@ -219,7 +219,7 @@ son promedios en t; ninguno separa la caja individual (Doc 108 §5.2: el paso de
 está exactamente en la frecuencia del cero off). ∎
 
 **Observación 2.5 (el entero es decidible caja por caja; el muro es el cuantificador,
-no la decisión).** Honestidad obligada: para cada caja FIJA R_T, el entero N_off(R_T)
+no la decisión).** Franqueza obligada: para cada caja FIJA R_T, el entero N_off(R_T)
 **sí es computable** — es lo que hace el método de Turing [Tur53], con el que RH está
 verificada hasta altura 3·10¹² [PT21]: un cómputo finito por caja. Lo que no existe
 es una **evaluación uniforme**: un argumento que dé N_off(R_T) = 0 para TODA T de una
@@ -451,7 +451,7 @@ un mecanismo elemental.
 
 El Doc 108 probó, para Q₂: valor autónomo, inercia no-autónoma (la partición
 off×off / off×on requiere posiciones; P43 §4). ¿Accidente de Q₂ o teorema de
-imposibilidad? Fijemos la clase honestamente.
+imposibilidad? Fijemos la clase francamente.
 
 **Definición 4.2 (clase ℱ de funcionales cuadráticos aritméticos).** ℱ consta de los
 invariantes de la forma I = neg.ind(Q|_{V′}), donde:
@@ -578,7 +578,7 @@ cohomología de Weil para Spec ℤ.
 
 ---
 
-## 5. (iv) K-teoría y el sitio: inventario honesto contra la especificación
+## 5. (iv) K-teoría y el sitio: inventario franco contra la especificación
 
 Sin re-derivar MW-5 (NO-GO-LIST; Phase 27): la factorización local-global del lado
 de ceros requiere (1) una cohomología H¹(Spec ℤ, F), (2) un Frobenius por lugar,
@@ -706,7 +706,7 @@ Dos niveles, del más cercano al más estructural:
    falsación refutaría la positividad de Weil semilocal en su primer paso; su
    prueba sería el primer teorema de positividad por paso — el germen de la razón
    local que L5 pide. Cada paso adicional (sf_p = 0 con gap c_p subexponencial) es
-   un teorema parcial honesto; la uniformidad en p es MW-6, declarada como muro.
+   un teorema parcial franco; la uniformidad en p es MW-6, declarada como muro.
 
 2. **(Diana estructural, D108 §8.2, reformulada como enrollamiento.) Cota lineal
    del enrollamiento por ventana:** κ_W ≤ C·n_W con C absoluto, que implicaría

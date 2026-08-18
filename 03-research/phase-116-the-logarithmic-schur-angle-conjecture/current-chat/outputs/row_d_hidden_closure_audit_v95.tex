@@ -1,0 +1,201 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\title{Row (d): audit of the possible hidden closure (v95)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose}
+This note audits whether rows (a)--(c), the mixed-line construction in
+\texttt{main.tex}, or the identities collected through v94 already contain a
+non-circular proof of row (d).  Statements are separated strictly into
+\PROVED, \OPEN, and \AUDIT.
+
+\section{The one-line closure that would work}
+
+Let $\mathbb L_{\mathrm{comp}}^{\bar0}=\mathcal H_+^0$ and
+$\mathbb L_{\mathrm{comp}}^{\bar1}=\mathcal H_-^0$ be the completed
+super-representation of row (c), and let $\pi_-$ denote the action on the odd
+quotient.  The even quotient consists of the two Tate characters.
+
+\begin{proposition}[Hilbert--Rosati closure criterion --- \PROVED]
+Suppose that the odd quotient admits a Hilbert completion for which
+\[
+ \pi_-(f^\vee)=\pi_-(f)^*
+\]
+on the test algebra and $\pi_-(f)\pi_-(f)^*$ is trace class.  Then, for every
+primitive $f$,
+\[
+ B_{\rm nuc}(f,f)=-\operatorname{Tr}
+ \bigl(\pi_-(f)\pi_-(f)^*\bigr)\leq0.
+\]
+Consequently row (d), condition $G$, and Weil positivity follow.
+\end{proposition}
+
+\begin{proof}
+Row (c) expresses $B_{\rm nuc}(f,f)$ as the supertrace of the action of
+$f\star f^\vee$.  On the even quotient this action is evaluation at the two
+Tate characters, hence its trace is
+$|\widehat f(0)|^2+|\widehat f(1)|^2$.  It vanishes for primitive $f$.
+Under the asserted adjoint identity the odd action is
+$\pi_-(f)\pi_-(f)^*$, a positive trace-class operator.  The odd parity enters
+the supertrace with a minus sign, which proves the formula and the inequality.
+\end{proof}
+
+This is the genuine potential hidden closure.  It uses all three previous
+rows: the test algebra and geometry from (a), the correspondence action from
+(b), and the supertrace comparison from (c).
+
+\section{Why the hypothesis is not already in rows (a)--(c)}
+
+\begin{proposition}[Type audit --- \PROVED]
+Rows (a)--(c) prove an algebraic Tate involution and Hermitian symmetry of
+$B_{\rm nuc}$, but they do not construct a positive Hilbert norm on
+$\mathcal H_-^0$ for which the odd action is a $*$-representation.
+\end{proposition}
+
+\begin{proof}
+Row (a) constructs Hilbert/cotangent structures on the external ruling
+sector.  Its added nuclear direction is explicitly not asserted to be a
+mixed Cartier divisor.  Row (b) constructs the monoidal action
+$\Gamma_m\Gamma_n\simeq\Gamma_{mn}$ and an adjoint Witt dynamics, but no
+comparison identifies that adjoint with the Tate involution on the completed
+odd Poisson quotient.  Row (c) places $\mathcal H_-^0$ in the category of
+nuclear Fr\'echet scaling representations and proves summability and a
+supertrace formula.  A nuclear Fr\'echet representation is not, from these
+facts alone, a Hilbert $*$-representation.  Thus the adjoint identity used in
+the preceding proposition is absent.
+\end{proof}
+
+\paragraph{Status.} The construction of such a Hilbert--Rosati completion,
+from the source geometry and before using the spectral sign, is \OPEN.  If
+one defines its positive cone or norm using the sign of $B_{\rm nuc}$, the
+argument is circular and is classified \AUDIT.
+
+\section{Audit of the object called $D_f$ in the mixed-line proposal}
+
+The proposal defines $\lambda_{\rm fin}(f,g)$ from the convolution
+$f\star g^\vee$ and, for $g=f$, twists it by an operator $e^{-\Sigma_f}$ so
+that the logarithmic covolume equals $B_{\rm nuc}(f,f)$.
+
+\begin{proposition}[Quadratic determinant versus divisor class --- \PROVED]
+The construction proves a determinant/covolume identity for the quadratic
+pair $(f,f)$.  It does not, as presently written, construct an additive mixed
+divisor class $f\mapsto D_f$ with a tensor law
+\[
+ D_{f+g}=D_f+D_g,
+ \qquad \mathcal O(D+E)\simeq\mathcal O(D)\otimes\mathcal O(E),
+\]
+nor a section functor on its multiples.
+\end{proposition}
+
+\begin{proof}
+The exponent defining $\lambda_{\rm fin}(f,f)$ contains
+$(f\star f^\vee)(\pm\log n)$ and is therefore quadratic in $f$.
+Replacing $f$ by $f+g$ produces the two cross terms
+$f\star g^\vee$ and $g\star f^\vee$; hence the resulting normed line is not
+the tensor product of the lines assigned separately to $f$ and $g$.
+Moreover $e^{-\Sigma_f}$ is an operator metric whose trace records the
+archimedean determinant; a metric on a rank-one line is scalar.  Passing to
+its Fredholm determinant retains the scalar covolume but not an object of the
+mixed Picard groupoid with sections.  Therefore the displayed covolume
+identity constructs the desired self-intersection number, not the underlying
+linear divisor class needed by Riemann--Roch.
+\end{proof}
+
+It follows that the notation $D_f$ in that paragraph must be read as a
+quadratic determinant object unless an additional linearization theorem is
+proved.  Treating it as the already constructed mixed divisor is \AUDIT.
+
+\section{Audit of the theta and Sonin continuation}
+
+\begin{proposition}[Exact status --- \PROVED]
+The theta construction proves the four numerical Riemann--Roch/effectivity
+axioms on the interior of the external ruling cone.  It does not prove them
+on primitive mixed classes.  The Sonin Gram $M(f)$ is positive semidefinite,
+but this does not imply the lower-frame estimate
+\[
+ \lambda_{\min}(M(f))>
+ \frac{\operatorname{tr}M(f)+B_{\rm nuc}(f,f)}{|S_T|}.
+\]
+\end{proposition}
+
+\begin{proof}
+On primitive classes both ruling degrees vanish, so the ruling code has
+bounded rank while mixed Riemann--Roch requires quadratic growth.  For the
+Sonin metric, Gram positivity gives only $\lambda_{\min}(M(f))\geq0$.
+The required right-hand side has no proved nonpositive sign, and positive
+semidefiniteness supplies no comparison between the smallest eigenvalue and
+that scalar.  Thus the displayed strict inequality is an additional theorem,
+not a consequence of Gram positivity.
+\end{proof}
+
+The general-window lower-frame estimate is \OPEN.  Replacing it by positivity
+of $M(f)$ is \AUDIT.
+
+\section{Audit of v91--v94}
+
+The Gamma--Fourier--Tate identities, first-loss reductions, Ward equations,
+and causal formulations in v91--v94 establish exact equivalences and rule out
+several false bridges.  None constructs either
+
+\begin{enumerate}
+\item the Hilbert--Rosati $*$-completion of $\mathcal H_-^0$; or
+\item an additive mixed divisor with a section/effectivity functor satisfying
+mixed Riemann--Roch.
+\end{enumerate}
+
+In particular, equations of the form (565), (661), and the Ward terminal
+identity are analytic forms of the no-first-contact assertion.  They are not
+independent inputs from rows (a)--(c).  Their equivalence to the terminal
+positivity is \PROVED; their source-geometric realization remains \OPEN.
+
+\section{Correct terminal ledger}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.35\linewidth}
+                >{\raggedright\arraybackslash}p{.16\linewidth}
+                >{\raggedright\arraybackslash}p{.39\linewidth}}
+\toprule
+Item & Status & Reason \\
+\midrule
+Rows (a), (b), (c), under their stated typed contracts & \PROVED & Their
+objects, actions, contacts, and nuclear trace comparison are constructed.\\
+Ruling-sector RR/effectivity and Hodge signature & \PROVED & Complete on the
+external two-degree sector.\\
+Full Hilbert-space row (d) for $0<T\leq\log2$ & \PROVED & Certified local
+operator theorem.\\
+Quadratic covolume identity for the proposed mixed determinant & \PROVED & It
+equals $B_{\rm nuc}(f,f)$ without asserting its sign.\\
+Additive mixed divisor and its section functor & \OPEN & No linear tensor law,
+effectivity theory, or mixed RR has been constructed.\\
+Odd Hilbert--Rosati $*$-completion & \OPEN & This would close row (d) by the
+one-line supertrace argument above.\\
+General Sonin lower-frame bound & \OPEN & Gram positivity alone is
+insufficient.\\
+Global row (d), condition $G$ & \OPEN & Follows from either of the two
+preceding genuine constructions, neither of which is proved.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Single next theorem}
+
+The most economical remaining target is:
+
+\medskip
+\noindent\textbf{Nuclear Hodge--Rosati theorem (\OPEN).}
+Construct, directly from the Poisson quotient and the row-(a)/(b) source
+geometry, a Hilbert completion of $\mathcal H_-^0$ such that
+$\pi_-(f^\vee)=\pi_-(f)^*$ and the square is trace class, without defining
+the norm from $B_{\rm nuc}$ or from the zeros.  The first proposition then
+proves row (d) with no further inequality.
+
+\end{document}

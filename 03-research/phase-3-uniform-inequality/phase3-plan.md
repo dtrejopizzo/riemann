@@ -1,7 +1,7 @@
 # Phase 3 — The Structural Assault on the Uniform Inequality
 
 **Status:** research frontier. This is the only phase that could, in principle, touch RH; it is
-also where every prior program has stopped. The honest deliverable is a *sharp reduction* and a
+also where every prior program has stopped. The candid deliverable is a *sharp reduction* and a
 verdict on whether a structural positivity makes the target inequality manifest — **not** a
 proof. Everything below marked ⚑ needs verification by a working analytic number theorist /
 operator theorist before it is trusted.
@@ -111,7 +111,7 @@ program; Conrey–Li caveats below\]. The value of routing through *our localize
 chain condition becomes a **monotonicity of $\lambda_{\min}(Q(T_0,\sigma,J))$ in the
 localization parameters** — a quantity our engine computes directly.
 
-**3.3 Caveat (mandatory honesty).** de Branges' own attempted proof has known gaps; **Conrey–Li
+**3.3 Caveat (mandatory candor).** de Branges' own attempted proof has known gaps; **Conrey–Li
 (2000)** exhibited a structural obstruction (a positivity that the proposed spaces do not have).
 Any de Branges-flank work must be checked against that obstruction first — ⚑ an expert must
 confirm our localized chain does not fall into the Conrey–Li counterexample class before any
@@ -140,7 +140,7 @@ Flank I over Flank II.
 
 ---
 
-## 5. The realistic plan and its honest ceiling
+## 5. The realistic plan and its candid ceiling
 
 **Sequence.**
 1. **0.A.2 / 0.A.3 (now):** rigorously establish the two dictionaries — $Q$ as a Connes
@@ -152,19 +152,19 @@ Flank I over Flank II.
 3. **The frontal attempt (open-ended):** whichever flank survives, attempt (LB) as the
    corresponding structural positivity. This is genuine open research and may not close.
 
-**Tiered outcomes (honest).**
+**Tiered outcomes (candid).**
 - **Realistic:** a sharp, expert-verified reduction of (LB) to *one* operator-positivity
   (Connes) or *one* chain condition (de Branges), with our instrument as the finite-dimensional
   probe — a real contribution to how RH is approached, publishable, RH still open.
 - **Strong (low probability):** prove the stability/monotonicity that reduces (LB) to a *known*
   positivity, narrowing the gap to a single classical statement.
-- **Dream (very low probability, honestly pursued):** establish the structural positivity → a
+- **Dream (very low probability, candidly pursued):** establish the structural positivity → a
   proof, or the last step before one.
 
 **The ceiling, stated plainly.** (LB) **is** RH. No reduction below removes that; the best
 Phase 3 can do is convert RH into the single most structurally natural positivity and hand a
 working specialist an explicit finite-dimensional ladder ($Q(T_0,\sigma,J)$) climbing toward
-it. That is the maximal honest aim — and it requires the community step of PLAN §Phase 4: this
+it. That is the maximal candid aim — and it requires the community step of PLAN §Phase 4: this
 will not be finished by a closed AI+cloud loop.
 
 ---

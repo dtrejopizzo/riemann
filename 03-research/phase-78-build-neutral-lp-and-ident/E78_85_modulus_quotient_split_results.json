@@ -1,0 +1,184 @@
+{
+  "statement": "Exact split of the endpoint quotient into a modulus quotient and an angular denominator factor.",
+  "sources": {
+    "polar_delta_safeu": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_32_delta_safeu_polar_results.json",
+    "weighted_quotient": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_83_weighted_quotient_results.json"
+  },
+  "rows": [
+    {
+      "sigma": "1.0",
+      "N": 8,
+      "quotient": 0.32033520392027215,
+      "modulus_quotient": 0.32009971629837736,
+      "angular_den_factor": 1.0007356695739003,
+      "modulus_share_of_delta": 1.0007356695739003,
+      "relative_angular_correction": 0.0007356695739002422,
+      "reconstructed_quotient": 0.32033520392027215,
+      "reconstruction_error": 0.0
+    },
+    {
+      "sigma": "3.0",
+      "N": 8,
+      "quotient": 0.3066569407269329,
+      "modulus_quotient": 0.30663034999484623,
+      "angular_den_factor": 1.000086719178604,
+      "modulus_share_of_delta": 1.000086719178604,
+      "relative_angular_correction": 8.67191786038927e-05,
+      "reconstructed_quotient": 0.30665694072693284,
+      "reconstruction_error": 5.551115123125783e-17
+    },
+    {
+      "sigma": "1.0",
+      "N": 10,
+      "quotient": 0.21977168960714427,
+      "modulus_quotient": 0.21964417948389175,
+      "angular_den_factor": 1.0005805303994493,
+      "modulus_share_of_delta": 1.0005805303994493,
+      "relative_angular_correction": 0.0005805303994496442,
+      "reconstructed_quotient": 0.21977168960714424,
+      "reconstruction_error": 2.7755575615628914e-17
+    },
+    {
+      "sigma": "3.0",
+      "N": 10,
+      "quotient": 0.2125726647332053,
+      "modulus_quotient": 0.21256083258677125,
+      "angular_den_factor": 1.000055664753897,
+      "modulus_share_of_delta": 1.000055664753897,
+      "relative_angular_correction": 5.566475389695687e-05,
+      "reconstructed_quotient": 0.21257266473320532,
+      "reconstruction_error": 2.7755575615628914e-17
+    },
+    {
+      "sigma": "1.0",
+      "N": 12,
+      "quotient": 0.21345882344908146,
+      "modulus_quotient": 0.21551969970086957,
+      "angular_den_factor": 0.9904376432657965,
+      "modulus_share_of_delta": 0.9904376432657965,
+      "relative_angular_correction": 0.009562356734203447,
+      "reconstructed_quotient": 0.21345882344908146,
+      "reconstruction_error": 0.0
+    },
+    {
+      "sigma": "3.0",
+      "N": 12,
+      "quotient": 0.20972133428015174,
+      "modulus_quotient": 0.20995407382782316,
+      "angular_den_factor": 0.9988914740093956,
+      "modulus_share_of_delta": 0.9988914740093956,
+      "relative_angular_correction": 0.0011085259906044365,
+      "reconstructed_quotient": 0.20972133428015174,
+      "reconstruction_error": 0.0
+    },
+    {
+      "sigma": "1.0",
+      "N": 14,
+      "quotient": 0.1519253930881376,
+      "modulus_quotient": 0.15376394303833477,
+      "angular_den_factor": 0.9880430358778014,
+      "modulus_share_of_delta": 0.9880430358778014,
+      "relative_angular_correction": 0.011956964122198656,
+      "reconstructed_quotient": 0.1519253930881376,
+      "reconstruction_error": 0.0
+    },
+    {
+      "sigma": "3.0",
+      "N": 14,
+      "quotient": 0.14942032825152324,
+      "modulus_quotient": 0.1496348832041686,
+      "angular_den_factor": 0.9985661434817134,
+      "modulus_share_of_delta": 0.9985661434817134,
+      "relative_angular_correction": 0.0014338565182867421,
+      "reconstructed_quotient": 0.14942032825152324,
+      "reconstruction_error": 0.0
+    },
+    {
+      "sigma": "1.0",
+      "N": 16,
+      "quotient": 0.16148347761058626,
+      "modulus_quotient": 0.16087023895345526,
+      "angular_den_factor": 1.003812008119839,
+      "modulus_share_of_delta": 1.003812008119839,
+      "relative_angular_correction": 0.003812008119838992,
+      "reconstructed_quotient": 0.16148347761058626,
+      "reconstruction_error": 0.0
+    },
+    {
+      "sigma": "3.0",
+      "N": 16,
+      "quotient": 0.15993591271436033,
+      "modulus_quotient": 0.15986647113277058,
+      "angular_den_factor": 1.0004343723927709,
+      "modulus_share_of_delta": 1.0004343723927709,
+      "relative_angular_correction": 0.00043437239277079655,
+      "reconstructed_quotient": 0.15993591271436036,
+      "reconstruction_error": 2.7755575615628914e-17
+    },
+    {
+      "sigma": "1.0",
+      "N": 18,
+      "quotient": 0.12692875635722015,
+      "modulus_quotient": 0.131201312151157,
+      "angular_den_factor": 0.9674351138423491,
+      "modulus_share_of_delta": 0.9674351138423491,
+      "relative_angular_correction": 0.03256488615765118,
+      "reconstructed_quotient": 0.12692875635722015,
+      "reconstruction_error": 0.0
+    },
+    {
+      "sigma": "3.0",
+      "N": 18,
+      "quotient": 0.1257811287181933,
+      "modulus_quotient": 0.12631754311244076,
+      "angular_den_factor": 0.9957534450003516,
+      "modulus_share_of_delta": 0.9957534450003516,
+      "relative_angular_correction": 0.004246554999648628,
+      "reconstructed_quotient": 0.1257811287181933,
+      "reconstruction_error": 0.0
+    },
+    {
+      "sigma": "1.0",
+      "N": 20,
+      "quotient": 0.0957479428398766,
+      "modulus_quotient": 0.11237374957350257,
+      "angular_den_factor": 0.8520490168146325,
+      "modulus_share_of_delta": 0.8520490168146325,
+      "relative_angular_correction": 0.14795098318536748,
+      "reconstructed_quotient": 0.0957479428398766,
+      "reconstruction_error": 0.0
+    },
+    {
+      "sigma": "3.0",
+      "N": 20,
+      "quotient": 0.09488479266539632,
+      "modulus_quotient": 0.09677437552791941,
+      "angular_den_factor": 0.9804743471377094,
+      "modulus_share_of_delta": 0.9804743471377094,
+      "relative_angular_correction": 0.019525652862290604,
+      "reconstructed_quotient": 0.0948847926653963,
+      "reconstruction_error": 1.3877787807814457e-17
+    }
+  ],
+  "max_reconstruction_error": 5.551115123125783e-17,
+  "summary": {
+    "modulus_share_of_delta": {
+      "count": 14,
+      "min": 0.8520490168146325,
+      "median": 0.9987288087455545,
+      "max": 1.003812008119839
+    },
+    "relative_angular_correction": {
+      "count": 14,
+      "min": 5.566475389695687e-05,
+      "median": 0.002622932319062867,
+      "max": 0.14795098318536748
+    },
+    "angular_den_factor": {
+      "count": 14,
+      "min": 0.8520490168146325,
+      "median": 0.9987288087455545,
+      "max": 1.003812008119839
+    }
+  }
+}

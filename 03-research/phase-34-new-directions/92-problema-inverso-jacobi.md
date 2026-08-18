@@ -22,7 +22,7 @@ $e_k = a_k^{\mathrm{full}} - a_k^\infty$, se discute la simetría impuesta por
 $b_k^{\mathrm{full}} = 0$, y se identifica la barrera estructural que impide cerrar
 el argumento.
 
-**Resultado honesto:** El mapa inverso $(e_k) \mapsto dm_{\mathrm{full}}$ es bien
+**Resultado franco:** El mapa inverso $(e_k) \mapsto dm_{\mathrm{full}}$ es bien
 definido y controlable en el espectro esencial, pero el acceso a los ceros off-críticos
 requiere información sobre el soporte singular de $dm_{\mathrm{full}}$ que los
 coeficientes $e_k = O(\log k/k)$ solos no determinan localmente.
@@ -845,7 +845,7 @@ con:
   $\delta = 0$, que equivale a RH. Pero este tipo de cota requiere control cuantitativo
   del que no se dispone actualmente.
 
-### 12.4. Conclusión honesta
+### 12.4. Conclusión franca
 
 La Dirección C proporciona un formalismo riguroso y varios resultados estructurales, pero no
 cierra la demostración de RH. El obstáculo central es que los ceros off-críticos afectan los

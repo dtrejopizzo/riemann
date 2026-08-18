@@ -33,7 +33,7 @@ off-line zero =>  convergence STALLS at a nonzero floor (detected)
 This is the operator-convergence analogue of the forced-negativity detector (OK-1), but on the one
 route that does not pass through positivity.
 
-## Honest status
+## Candid status
 
 - **Gained:** the CCM convergence front is (a) off MW-1 (E71.1) and (b) genuinely sensitive to
   off-line zeros (E71.2) -- a live detector, not a blind reformulation. This is real forward motion,

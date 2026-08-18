@@ -86,7 +86,7 @@ is therefore trustworthy as a pre-screen.
   candidates. At \$5k: build + harden the discriminator and run it over a broad candidate generator. At \$500k+:
   invest in the rare I2-survivors (if any) and on independently formalizing the function-field PASS to sharpen I2.
 
-## Honest outcomes (both valuable)
+## Candid outcomes (both valuable)
 
 - **Outcome A — a D0 survivor is found.** A structure passing $I1\wedge I2\wedge I3\wedge I4$ that is not ζ
   re-encoded = a **new conceptual class** (refutes H0 in spirit). Whether it proves RH is then the next question;

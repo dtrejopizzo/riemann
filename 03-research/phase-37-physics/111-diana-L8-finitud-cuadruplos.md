@@ -105,7 +105,7 @@ doble Q₂), que implica 2m·n_W(1+o(1)) ≤ C·n_W y de ahí m ≤ C/2.
 
 ### 1.2. Qué valdría m ≤ C
 
-Tres observaciones sobre el valor del enunciado, para calibrar la honestidad de la medición:
+Tres observaciones sobre el valor del enunciado, para calibrar la franqueza de la medición:
 
 (a) **Sería más fuerte que todo teorema de densidad conocido en su región:** los N(σ,T)
 dan o(T) ceros off hasta altura T; una cota absoluta independiente de T no existe para
@@ -261,7 +261,7 @@ ausencia del teorema en las referencias estándar [T86], [IK04] y en los surveys
 zona). Tampoco existe el recíproco ("existe configuración con m finito realizable por una
 función de la clase de Selberg"): ambas direcciones están abiertas, y el Corolario 2.3
 muestra que cualquier prueba de la primera necesita el producto de Euler de manera
-esencial. Estado honesto: **"m ≥ 1 ⟹ m = ∞" no es un teorema, no es refutable con lo
+esencial. Estado franco: **"m ≥ 1 ⟹ m = ∞" no es un teorema, no es refutable con lo
 conocido, y no hay ataque conocido**. Para la lógica de las salidas (§1.3): la salida (B)
 no puede certificarse hoy en ninguna de sus dos formas (ni el colapso finito = 0, ni la
 equivalencia m-finito ⟺ RH).

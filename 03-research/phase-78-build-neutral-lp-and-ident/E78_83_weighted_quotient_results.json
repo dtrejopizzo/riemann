@@ -1,0 +1,137 @@
+{
+  "statement": "Audit of the exact quotient law Y_N = (-SAFEDELTA_N)/Delta safe_u_N.",
+  "sources": {
+    "weighted_sigma_monotonicity": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_81_weighted_safedelta_sigma_monotonicity_results.json",
+    "theta_coupling": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "schur_phase_increment": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5g_schur_phase_increment_results.json"
+  },
+  "rows": [
+    {
+      "sigma": "1.0",
+      "N": 8,
+      "minus_SAFEDELTA": 0.010199921106503803,
+      "Delta_safe_u": 0.03184139920207599,
+      "quotient": 0.32033520392027215,
+      "weighted_Y": 0.32033520392027215,
+      "identity_error": 0.0
+    },
+    {
+      "sigma": "3.0",
+      "N": 8,
+      "minus_SAFEDELTA": 0.028139076847552374,
+      "Delta_safe_u": 0.09176076948021608,
+      "quotient": 0.3066569407269329,
+      "weighted_Y": 0.30665694072693284,
+      "identity_error": 5.551115123125783e-17
+    },
+    {
+      "sigma": "1.0",
+      "N": 10,
+      "minus_SAFEDELTA": 0.004528911919299904,
+      "Delta_safe_u": 0.020607349051170416,
+      "quotient": 0.21977168960714427,
+      "weighted_Y": 0.21977168960714422,
+      "identity_error": 5.551115123125783e-17
+    },
+    {
+      "sigma": "3.0",
+      "N": 10,
+      "minus_SAFEDELTA": 0.012798196226583578,
+      "Delta_safe_u": 0.06020621815437219,
+      "quotient": 0.2125726647332053,
+      "weighted_Y": 0.21257266473320527,
+      "identity_error": 2.7755575615628914e-17
+    },
+    {
+      "sigma": "1.0",
+      "N": 12,
+      "minus_SAFEDELTA": 0.002998264046991523,
+      "Delta_safe_u": 0.014046100313612616,
+      "quotient": 0.21345882344908146,
+      "weighted_Y": 0.21345882344908143,
+      "identity_error": 2.7755575615628914e-17
+    },
+    {
+      "sigma": "3.0",
+      "N": 12,
+      "minus_SAFEDELTA": 0.008670007535897764,
+      "Delta_safe_u": 0.04134060831558568,
+      "quotient": 0.20972133428015174,
+      "weighted_Y": 0.20972133428015172,
+      "identity_error": 2.7755575615628914e-17
+    },
+    {
+      "sigma": "1.0",
+      "N": 14,
+      "minus_SAFEDELTA": 0.0015693752747575065,
+      "Delta_safe_u": 0.010329907613581445,
+      "quotient": 0.1519253930881376,
+      "weighted_Y": 0.1519253930881376,
+      "identity_error": 0.0
+    },
+    {
+      "sigma": "3.0",
+      "N": 14,
+      "minus_SAFEDELTA": 0.004564865889926924,
+      "Delta_safe_u": 0.030550501015114646,
+      "quotient": 0.14942032825152324,
+      "weighted_Y": 0.14942032825152324,
+      "identity_error": 0.0
+    },
+    {
+      "sigma": "1.0",
+      "N": 16,
+      "minus_SAFEDELTA": 0.0012382995921393068,
+      "Delta_safe_u": 0.007668274243668681,
+      "quotient": 0.16148347761058626,
+      "weighted_Y": 0.1614834776105863,
+      "identity_error": 2.7755575615628914e-17
+    },
+    {
+      "sigma": "3.0",
+      "N": 16,
+      "minus_SAFEDELTA": 0.0036380721159581723,
+      "Delta_safe_u": 0.0227470619588462,
+      "quotient": 0.15993591271436033,
+      "weighted_Y": 0.1599359127143603,
+      "identity_error": 2.7755575615628914e-17
+    },
+    {
+      "sigma": "1.0",
+      "N": 18,
+      "minus_SAFEDELTA": 0.0007620645170153099,
+      "Delta_safe_u": 0.006003876023732592,
+      "quotient": 0.12692875635722015,
+      "weighted_Y": 0.12692875635722015,
+      "identity_error": 0.0
+    },
+    {
+      "sigma": "3.0",
+      "N": 18,
+      "minus_SAFEDELTA": 0.002245157783299736,
+      "Delta_safe_u": 0.017849718842402076,
+      "quotient": 0.1257811287181933,
+      "weighted_Y": 0.12578112871819327,
+      "identity_error": 2.7755575615628914e-17
+    },
+    {
+      "sigma": "1.0",
+      "N": 20,
+      "minus_SAFEDELTA": 0.0004711630050847005,
+      "Delta_safe_u": 0.004920868178574307,
+      "quotient": 0.0957479428398766,
+      "weighted_Y": 0.09574794283987662,
+      "identity_error": 1.3877787807814457e-17
+    },
+    {
+      "sigma": "3.0",
+      "N": 20,
+      "minus_SAFEDELTA": 0.001390511959728158,
+      "Delta_safe_u": 0.014654739928996715,
+      "quotient": 0.09488479266539632,
+      "weighted_Y": 0.0948847926653963,
+      "identity_error": 1.3877787807814457e-17
+    }
+  ],
+  "max_identity_error": 5.551115123125783e-17
+}

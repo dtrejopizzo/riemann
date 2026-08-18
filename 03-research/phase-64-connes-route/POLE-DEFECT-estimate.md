@@ -6,7 +6,7 @@ window, in which the **pole of ζ acts as a repulsive barrier** and Theorem 2's 
 shape of the **prime well**. Positivity then becomes a **Bargmann-type bound-state criterion**, where
 the pole's barrier is exactly what keeps the Bargmann integral below threshold — and which DH (being
 entire, pole-free) lacks. We set it up rigorously, state the criterion, and isolate the one remaining
-estimate. Honest: RH not proved; the uniform Bargmann bound is the crux.*
+estimate. Candid: RH not proved; the uniform Bargmann bound is the crux.*
 
 ---
 
@@ -102,7 +102,7 @@ the Dirichlet metric. **DH fails `(♦)`** because `p_λ=0` (no pole) leaves `\|
 
 ---
 
-## §5. Why this is genuinely a new handle (and the honest gap)
+## §5. Why this is genuinely a new handle (and the candid gap)
 
 **New:** `ε₀≥0` is realized as **absence of a Schrödinger bound state**, with
 - the **pole as an explicit repulsive barrier** (its absence in DH is the cleanest non-positivity
@@ -115,7 +115,7 @@ This converts the marginal `μ_max=1` into a **Birman–Schwinger norm bound `\|
 positive barrier* (`p_λ`) on the well — a concrete inequality with classical tools (Bargmann,
 Birman–Schwinger, Lieb–Thirring) on the table, rather than an abstract positivity.
 
-**Honest gap:** `(♦)` is still `ε₀≥0`, hence RH; it is marginal (`\|K_λ\|=1` at the edge, E96/E101). The
+**Candid gap:** `(♦)` is still `ε₀≥0`, hence RH; it is marginal (`\|K_λ\|=1` at the edge, E96/E101). The
 classical Bargmann bound `∫\mathcal G W^-≤1` is **sufficient but not tight** at marginality, so a naive
 application will not close the razor's edge — one needs the **sharp Birman–Schwinger eigenvalue**, not
 the trace bound. The crux is therefore: **show the top Birman–Schwinger eigenvalue of the

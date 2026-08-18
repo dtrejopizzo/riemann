@@ -1,0 +1,162 @@
+{
+  "statement": "E79.85 cloud symmetry bridge audit",
+  "parameters": {
+    "lambda": 6,
+    "max_n": 12,
+    "dps": 60
+  },
+  "cases": [
+    {
+      "label": "zeta",
+      "planted": null,
+      "rows": [
+        {
+          "N": 8,
+          "outlier_abs": "1673.07410835790237",
+          "second_abs": "120.420692666648407",
+          "outlier_fraction": "13.8935765216809393",
+          "pair_count": 7,
+          "positive_count": 7,
+          "negative_count": 7,
+          "unpaired_count": 0,
+          "mean_pair_defect": "0.0178341599636613987",
+          "max_pair_defect": "0.0821564476789952364"
+        },
+        {
+          "N": 10,
+          "outlier_abs": "1852.67348257365497",
+          "second_abs": "166.772974515175503",
+          "outlier_fraction": "11.108955080759029",
+          "pair_count": 9,
+          "positive_count": 9,
+          "negative_count": 9,
+          "unpaired_count": 0,
+          "mean_pair_defect": "0.0177531810976527468",
+          "max_pair_defect": "0.0961763356315336931"
+        },
+        {
+          "N": 12,
+          "outlier_abs": "2557.55577792836331",
+          "second_abs": "216.229278725589749",
+          "outlier_fraction": "11.8279808960288052",
+          "pair_count": 11,
+          "positive_count": 11,
+          "negative_count": 11,
+          "unpaired_count": 0,
+          "mean_pair_defect": "0.0140528837133243035",
+          "max_pair_defect": "0.0854964170487363057"
+        }
+      ],
+      "summary": {
+        "max_mean_pair_defect": "0.0178341599636613987",
+        "min_mean_pair_defect": "0.0140528837133243035",
+        "max_outlier_fraction": "13.8935765216809393",
+        "min_outlier_fraction": "11.108955080759029"
+      }
+    },
+    {
+      "label": "plant_gamma1_beta030",
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 8,
+          "outlier_abs": "14.2404520449226491",
+          "second_abs": "11.5923762066959833",
+          "outlier_fraction": "1.22843253108858608",
+          "pair_count": 7,
+          "positive_count": 7,
+          "negative_count": 7,
+          "unpaired_count": 0,
+          "mean_pair_defect": "0.130974408274942282",
+          "max_pair_defect": "0.516416123725960385"
+        },
+        {
+          "N": 10,
+          "outlier_abs": "28.0079298165617404",
+          "second_abs": "17.8025325168833396",
+          "outlier_fraction": "1.5732553663362185",
+          "pair_count": 9,
+          "positive_count": 9,
+          "negative_count": 9,
+          "unpaired_count": 0,
+          "mean_pair_defect": "0.0226704394135474922",
+          "max_pair_defect": "0.0995128802666280154"
+        },
+        {
+          "N": 12,
+          "outlier_abs": "30.0146965872478176",
+          "second_abs": "25.9104215539136929",
+          "outlier_fraction": "1.15840248005205404",
+          "pair_count": 11,
+          "positive_count": 11,
+          "negative_count": 11,
+          "unpaired_count": 0,
+          "mean_pair_defect": "0.0118683141750502985",
+          "max_pair_defect": "0.113424675129981524"
+        }
+      ],
+      "summary": {
+        "max_mean_pair_defect": "0.130974408274942282",
+        "min_mean_pair_defect": "0.0118683141750502985",
+        "max_outlier_fraction": "1.5732553663362185",
+        "min_outlier_fraction": "1.15840248005205404"
+      }
+    },
+    {
+      "label": "plant_gamma2_beta030",
+      "planted": {
+        "gamma": "21.022039638771554992",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 8,
+          "outlier_abs": "87.1625433439474684",
+          "second_abs": "14.1691733825914353",
+          "outlier_fraction": "6.15156163245467284",
+          "pair_count": 7,
+          "positive_count": 7,
+          "negative_count": 7,
+          "unpaired_count": 0,
+          "mean_pair_defect": "0.237444539934373641",
+          "max_pair_defect": "0.828588491521655485"
+        },
+        {
+          "N": 10,
+          "outlier_abs": "18.0367167736708765",
+          "second_abs": "16.4540912297979888",
+          "outlier_fraction": "1.09618431803798368",
+          "pair_count": 9,
+          "positive_count": 9,
+          "negative_count": 9,
+          "unpaired_count": 0,
+          "mean_pair_defect": "0.214751910242493013",
+          "max_pair_defect": "0.933759322218991398"
+        },
+        {
+          "N": 12,
+          "outlier_abs": "21.0757697139268032",
+          "second_abs": "18.2148294328057072",
+          "outlier_fraction": "1.15706654249358037",
+          "pair_count": 11,
+          "positive_count": 11,
+          "negative_count": 11,
+          "unpaired_count": 0,
+          "mean_pair_defect": "0.0157907842145119017",
+          "max_pair_defect": "0.110077256863274635"
+        }
+      ],
+      "summary": {
+        "max_mean_pair_defect": "0.237444539934373641",
+        "min_mean_pair_defect": "0.0157907842145119017",
+        "max_outlier_fraction": "6.15156163245467284",
+        "min_outlier_fraction": "1.09618431803798368"
+      }
+    }
+  ]
+}

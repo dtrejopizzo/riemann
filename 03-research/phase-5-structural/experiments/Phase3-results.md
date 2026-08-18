@@ -1,4 +1,4 @@
-# Phase 3 — first-pass numerical results (honest report: one confirmation, one genuine blocker)
+# Phase 3 — first-pass numerical results (candid report: one confirmation, one genuine blocker)
 
 **Route B / Phase 3.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
 Code: `phase3_carleson.py` (numpy + mpmath). **Self-contained Gram, NOT P7's validated engine.**
@@ -15,7 +15,7 @@ Code: `phase3_carleson.py` (numpy + mpmath). **Self-contained Gram, NOT P7's val
 
 ---
 
-## 1. The Carleson constant: the gate fails (honest)
+## 1. The Carleson constant: the gate fails (candid)
 
 $C(L)=\lambda_{\max}(A_\infty^{-1/2}P(L)A_\infty^{-1/2})$; $C\le1\iff$ local positivity (Thm T4-I). Result
 (stable across $X\in\{10^3,2\!\cdot\!10^4,10^5\}$ — the prime tail is already negligible, so the issue is
@@ -36,7 +36,7 @@ against P7's reference behavior, is exactly the Phase-3 engineering task. The hu
 $|C(\zeta)-C(\chi_4)|\approx1.87$ is **confounded by the un-calibrated baseline** (different $\Gamma$-factors
 $a=\tfrac14$ vs $\tfrac34$ give different baselines); it is **not** a clean measurement.
 
-> **Honest conclusion (Carleson).** The Carleson-constant measurement — the sharp Phase-3 target — is
+> **Candid conclusion (Carleson).** The Carleson-constant measurement — the sharp Phase-3 target — is
 > **blocked** on reproducing P7's validated engine (engine-spec §3: $X=10^5$, full archimedean+polar, the
 > validated normalization), and additionally on handling $L_{\mathrm{DH}}$'s **lack of an Euler product** (its
 > arithmetic side is not a clean $\sum\Lambda_L(n)n^{-s}$). This is real engineering, best done with P7's
@@ -61,13 +61,13 @@ The density **rises monotonically to the Hermite turning-point edge** ($\sqrt{2J
 at $p\approx59$ ($\log p\approx4.1$). This is the **basis envelope**, not arithmetic structure — confirming
 T3.4 cleanly (and showing the earlier "band at 3.3–3.7" was simply the rising edge for smaller $J$).
 
-> **Honest conclusion (band).** The observed concentration is a **Hermite-basis artifact**. Deciding whether
+> **Candid conclusion (band).** The observed concentration is a **Hermite-basis artifact**. Deciding whether
 > any *arithmetic* concentration exists requires re-running in the **Slepian (flat-box) basis** — the genuine
 > band test of Phase 2 §A, which needs the prolate construction (and ideally the validated engine).
 
 ## 3. Net for Phase 3
 
-- **Confirmed:** the band is basis-enveloped (T3.4) — a clean, honest negative that *validates* the earlier
+- **Confirmed:** the band is basis-enveloped (T3.4) — a clean, candid negative that *validates* the earlier
   demotion. The Slepian basis is genuinely required to look for arithmetic structure.
 - **Blocked:** the Carleson-constant measurement (the sharp target) needs the validated engine + the
   $L_{\mathrm{DH}}$ no-Euler-product handling. My self-contained build fails the $\zeta$ gate by an apparent
@@ -78,13 +78,13 @@ T3.4 cleanly (and showing the earlier "band at 3.3–3.7" was simply the rising 
 **Recommendation.** Phase 3, done faithfully, requires **P7's validated engine** (Colab/v8 per the index) or a
 careful engine-spec §3 reimplementation validated against the reference behavior ($\zeta$ at the floor,
 $L_{\mathrm{DH}}\ \lambda_{\min}\approx-9\times10^4$). Until then, the Carleson/discriminant numbers are **not**
-trustworthy and should not be reported as measurements. The honest state: **the analytic program is banked
+trustworthy and should not be reported as measurements. The candid state: **the analytic program is banked
 (P9/P10); the numerical confirmation of the Carleson discriminant is the open Phase-3 engineering task.**
 
 ---
 
 ### Status
-- Band test (basis artifact, T3.4 confirmed) — ✅ done; honest negative.
+- Band test (basis artifact, T3.4 confirmed) — ✅ done; candid negative.
 - Carleson constant measurement — ⛔ blocked (validated engine + $L_{\mathrm{DH}}$ Euler-product handling).
 - Slepian band test (the real one) — ⬜ needs prolate basis.
 - Conjecture B2 numerical test — ⬜ needs the engine.

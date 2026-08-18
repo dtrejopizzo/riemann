@@ -7,7 +7,7 @@
 Does the Cesàro-in-λ average of the intrinsic Jacobi of G_λ (a) converge for ζ, and
 (b) reproduce the band-edge ladder k(k+2) — while the Davenport–Heilbronn (DH) falsador does not?
 
-## Result — the discriminator is BOUNDEDNESS, not the ladder (honest refinement)
+## Result — the discriminator is BOUNDEDNESS, not the ladder (candid refinement)
 
 **1. The k(k+2) ladder is NON-discriminating.** Building the period-2 limit ladder from the
 Cesàro-averaged bulk symbol (a_even, a_odd, b) gives:
@@ -47,9 +47,9 @@ var(b_bulk): ζ 5.0e-4 vs DH 6.8e-2 (~130×).
 **Consequence for the plan (C1):** the analytic target is NOT "averaged ladder = k(k+2)".
 It is: **prove the ζ intrinsic Jacobi band-width b_bulk(λ) is bounded (Cesàro) in λ** — i.e.
 the boundedness L1, which is where DH demonstrably fails. The band-edge ladder is then a
-geometric consequence requiring no further arithmetic. This is the honest content of 2.3.F-Loc.
+geometric consequence requiring no further arithmetic. This is the candid content of 2.3.F-Loc.
 
-**Honesty note:** no proof reached. C0 is a numerical gate; it tells us the Cesàro route is
+**Candor note:** no proof reached. C0 is a numerical gate; it tells us the Cesàro route is
 *alive but its load-bearing claim moved* from the ladder to coefficient-boundedness. A false
 victory (claiming "Jacobi → k(k+2) proves 2.3.F") would be worse than failure — and DH explicitly
 refutes that claim here.

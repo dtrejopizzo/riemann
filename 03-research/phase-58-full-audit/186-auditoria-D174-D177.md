@@ -30,7 +30,7 @@ Integración verificada: $d\log I\le-2\,dt/(M_0-2(t-t_0))$ ⟹ $I\le I_0\bigl(1-
 
 ### 1.3. [LEMA 174.3] Principio del máximo — **CERTIFICADO**
 
-Reconstruido: para $\beta_k$ maximal, conjugado propio $=-2$ exacto; cruzados $-4\beta_k(\beta_k-\beta_l)/d^2\le0$ y $-4\beta_k(\beta_k+\beta_l)/d^2\le0$ sin simetrizar (correcto: la maximalidad da el signo directamente); antípoda y reales $\le0$ (parte imaginaria de $1/(z-x)$ es $-\beta/|z-x|^2$). La convergencia absoluta de la suma sobre el mar real exige la densidad RvM de la clase — hipótesis presente vía Thm 167-2.3. La atribución honesta a de Bruijn Thm 13 es correcta. ✓
+Reconstruido: para $\beta_k$ maximal, conjugado propio $=-2$ exacto; cruzados $-4\beta_k(\beta_k-\beta_l)/d^2\le0$ y $-4\beta_k(\beta_k+\beta_l)/d^2\le0$ sin simetrizar (correcto: la maximalidad da el signo directamente); antípoda y reales $\le0$ (parte imaginaria de $1/(z-x)$ es $-\beta/|z-x|^2$). La convergencia absoluta de la suma sobre el mar real exige la densidad RvM de la clase — hipótesis presente vía Thm 167-2.3. La atribución franca a de Bruijn Thm 13 es correcta. ✓
 
 ### 1.4. [THM 174.4] Modelo cerrado del cuádruplo — **CERTIFICADO**
 
@@ -117,7 +117,7 @@ Ceros $z=x_0+2i\sqrt\sigma\,h_j$ ✓ ($w=(z-x_0)/(2i\sqrt\sigma)$). Verificació
 - $c(5)$: $32x^4-160x^2+120=0\iff4x^4-20x^2+15=0\iff x^2=\frac{5\pm\sqrt{10}}2$; $c(5)=2(5+\sqrt{10})\approx16.32$ ✓.
 - Asintótica: $h_{\max}^2=(2n+1)-2^{2/3}|a_1|(2n+1)^{1/3}+O(1)$ ⟹ $c(n)=8n+4-2^{8/3}|a_1|(2n+1)^{1/3}+O(n^{-1/3})$ ✓ (el factor $2^{8/3}=4\cdot2\cdot2^{-1/3}$ verificado). Cota $c(n)\le8n+4$ de $h_{\max}<\sqrt{2n+1}$ (clásica) ✓.
 
-**[PROP 177.2]** (refutación de la constante $2k$ del GAP-174.B): consecuencia inmediata de la tabla, ambas lecturas de $k$ tratadas honestamente. **CERTIFICADO.** La heurística del Doc 174 §2.3(b) muere correctamente.
+**[PROP 177.2]** (refutación de la constante $2k$ del GAP-174.B): consecuencia inmediata de la tabla, ambas lecturas de $k$ tratadas francamente. **CERTIFICADO.** La heurística del Doc 174 §2.3(b) muere correctamente.
 
 ### 2.3. [PROP 177.3] Modelo con resto — **CERTIFICADO-CON-RESERVA**
 
@@ -150,7 +150,7 @@ Calibración contra el monomio ($dI_W/d\sigma=n(n-1)$ exacto: mitad superior de 
 - La validez del rango del mar lejano ($t_j\ll(n_j\log^2\gamma_j)^{-1}$) garantizada a posteriori por la cadena: con $n_j\le2$ y $t_j\log^2\gamma_j\to0$, ✓.
 - $m=\infty$ + KKL ⟹ $t_j\to0^+$; alturas acotadas solo albergan finitos cuádruplos ✓.
 
-**Estatus condicional honesto:** el Lema 177.B está declarado como GAP de literatura no probado, y la plausibilidad difusiva ($\Gamma(t)=\exp(t^{-(1/2-\theta)})<\exp(t^{-1/2})$ = el lado donde el calor ya actuó) es razonable pero no es prueba. Correctamente etiquetado.
+**Estatus condicional franco:** el Lema 177.B está declarado como GAP de literatura no probado, y la plausibilidad difusiva ($\Gamma(t)=\exp(t^{-(1/2-\theta)})<\exp(t^{-1/2})$ = el lado donde el calor ya actuó) es razonable pero no es prueba. Correctamente etiquetado.
 
 ### 2.8. [COR 177.8] — **CERTIFICADO** (condicional a 177.B ∧ LP-134; la implicación lógica es inmediata del Thm 177.7(2) y es válida). La doble consistencia contra el contraejemplo de Hadamard verificada: $b_j=e^{-\gamma_j}$ viola LP-134 ($b_j\log\gamma_j\to0$) y sus aterrizajes ($t_j\approx e^{-2^{j+1}}/2$, $\gamma_j=2^j$) están astronómicamente por debajo de $\Gamma(t_j)$ — el corte es limpio y ninguna de las dos hipótesis es redundante ✓.
 

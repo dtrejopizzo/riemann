@@ -1,6 +1,6 @@
 # ACTA DEL TRIBUNAL — · · ## Veredicto consensuado sobre `RH-PROOF-FULL.md` (cadena E0→E4, programa CCM) Tres referees severos auditaron de forma independiente. Consistencia notable. Este acta
 **consensúa** los veredictos, **asienta como demostración sólida** lo verificado por el
-tribunal, y deja **honestamente abierto** lo demás. Regla: frío; un resultado forzado es
+tribunal, y deja **francamente abierto** lo demás. Regla: frío; un resultado forzado es
 peor que un hueco admitido. **No se prueba RH** (el núcleo es RH-equivalente). --- ## A. VEREDICTO POR PIEZA (consenso de los tres) | Pieza | Veredicto unánime | Salvedades del tribunal |
 |---|---|---|
 | **E0** (def + `QW`=forma de Weil) | **SÓLIDO** | "exacto por soporte" → exacto vía **autocorrelación** `2Ω=L=2logλ` ⟹ corte primos `n'≤λ²` (); el término de polo `𝒫` es **load-bearing**, no decorativo (); **NO hay conflación** `QW=Weil` (los 3 lo verifican) |
@@ -70,5 +70,5 @@ forma de Weil es `Ξ_T`"), **rodeada de un andamiaje de aproximación genuinamen
 auto-auditoría. **No detectamos auto-engaño ni circularidad oculta ni conflación `QW≠Weil`.** El tribunal **corrige** cuatro sobre-optimismos residuales (C.1–C.4): el déficit de frame es
 RH-hard (no Landau–Beurling), el lema del horizonte estaba mal contabilizado (régimen
 sub-crítico), E1 es cita obligada, y `γ=3` no está derivado. Con esas correcciones, **el
-documento es honesto y su localización de RH es precisa**. **Frase final (consenso):** el "corazón" no se mueve un milímetro con análisis — **es RH**.
+documento es franco y su localización de RH es precisa**. **Frase final (consenso):** el "corazón" no se mueve un milímetro con análisis — **es RH**.
 El valor del programa es la localización limpia + el andamiaje probado, no una prueba. — A. · C. · H. (tribunal)

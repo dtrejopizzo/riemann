@@ -1,0 +1,277 @@
+\section{Dynamical zeta functions of fiber bundles over \texorpdfstring{$S^{1}$}{}}\label{section3}
+
+\subsection{Cohomological expression}
+We define the dynamical zeta function of $M$ by
+\begin{equation*}
+    \zeta(M,\Fh_{M},\phi^{t};s):=\prod_{\gamma}(1-N(\gamma)^{-s})^{-1}
+\end{equation*}
+where $\gamma$ runs over periodic orbits of the $\R$-action $\phi^{t}$.
+Denote simply by $\zeta(M;s)$ the dynamical zeta function of $(M,\Fh_{M},\phi^{t})$.
+C. Deninger suggested that the dynamical zeta function can be described in terms of leafwise cohomology groups and infinitesimal generator and is an analogue of the Hasse-Weil zeta function.
+We show that $\zeta(M;s)$ has the leafwise cohomological expression for $(M,\Fh_{M},\phi^{t})$ as C. Deninger conjectured.
+
+\begin{theorem}
+The dynamical zeta function $\zeta(M;s)$ is described in terms of leafwise cohomology groups and infinitesimal generator 
+    \begin{equation*}
+        \zeta(M;s)=\prod_{i}^{d}\det_{\infty}(s\cdot\mbox{id}-\Theta|H^{i}_{\Fh}(M,\C))^{(-1)^{i+1}}
+    \end{equation*}
+where $\det_{\infty}$ is the regularized determinant and $H^{i}_{\Fh}(M,\C)$ is the complexification of $H^{i}_{\Fh}(M)$.
+\end{theorem}
+
+
+We first see that the leafwise cohomological expression is defined for $(M,\Fh_{M},\phi^{t})$. 
+Recall that regularized determinants $\det_{\infty}(\Theta|V)$ is defined if the following condition (1) and (2) hold:
+
+(1) $V$ is a complex vector space of countable dimension.
+An operator $\Theta$ has finitely many eigenvalues whose eigen-space is of finite dimension. Then $V$ is the direct sum of eigen-spaces.
+
+(2) Under condition (1), let $\Sp(\Theta|V)$ be the set of eigenvalues of $\Theta$ with multiplicities.
+We assume that the Dirichlet series
+\begin{equation*}
+    \sum_{\alpha\ne0\in\Sp(\Theta|V)}\frac{1}{\alpha^{s}}\mbox{ with }\alpha^{-s}=|\alpha|^{-s}e^{-is(\Arg{\alpha})},-\pi<\Arg{\alpha}\le\pi
+\end{equation*}
+converges absolutely for $\mbox{Re}{s}\gg0$ and has an analytic continuation to the half plane $\mbox{Re}{s}>-\epsilon$ for some $\epsilon>0$ which is holomorphic at $s=0$.
+
+The following theorem implies that the regularized determinants $\det_{\infty}(s \cdot \mathrm{id} - \Theta | H^{i}_{\Fh}(M,\C))$ satisfy the condition (1) for $s\in\C$. 
+
+\begin{theorem}
+\label{thm:3.1}
+$\Sp(\Theta|H^{i}_{\Fh}(M,\C))$ can be described in terms of $\Sp(\varphi^{*}|H^{i}(S,\C))$
+\begin{equation}
+\label{eq_eigenvalues}
+    \Sp(\Theta|H^{i}_{\Fh}(M,\C))=\left\{ \frac{\log \alpha + 2{\pi}{i}{v}}{\log{r}} |\alpha\in\Sp(\varphi^{*}|H^{i}(S,\C)), v\in\Z \right\}.
+\end{equation}
+
+\end{theorem}
+
+\begin{proof}
+Let $[\omega_{\Fh}] \in H^{i}_{\Fh}(M,\C)$ be an eigenvector of the infinitesimal operator $\Theta$ with an eigenvalue $\alpha\in\C$:
+\begin{equation*}
+     \Theta [\omega_{\Fh}] =\alpha\cdot[\omega_{\Fh}].
+\end{equation*}
+By using Theorem \ref{thm:2.1}, we have the following differential equation:
+\begin{equation*}
+    \frac{d}{dt}\Psi([\omega_{\Fh}])(t)=\alpha\cdot\Psi([\omega_{\Fh}])(t)
+\end{equation*}
+Then the solution is given as a cohomological class on $S$.
+\begin{equation*}
+    \Psi([\omega_{\Fh}])(t)=e^{\alpha{t}}\Psi([\omega_{\Fh}])(0)
+\end{equation*}
+If we note that $\Psi([\omega_{\Fh}])(t+\log{r})=\varphi^{*} (\Psi([\omega_{\Fh}])(t))$, $\Psi([\omega_{\Fh}])(t)$ is an eigenvector of $\varphi^{*}$ with the eigenvalue $e^{\alpha\log{r}}=r^{\alpha}$ for a fixed $t$ in $S^{1}$:
+\begin{equation*}
+    \begin{split}
+    \Psi([\omega_{\Fh}])(t+\log{r})&=e^{\alpha\log{r}} \Psi([\omega_{\Fh}])(t)\\
+    &=\varphi^{*} (\Psi([\omega_{\Fh}])(t)).
+    \end{split}
+\end{equation*}
+Thus, for an eigenvalue $\alpha \in \Sp(\Theta|H^{i}_{\Fh}(M,\C))$ , $r^{\alpha}=e^{\alpha \log{r}}$ should be the eigenvalue of $\varphi^{*}$ on the $H^{i}(S,\C)$.
+
+Conversely, for an eigenvector $[\mu] \in H^{i}(S,\C)$  of $\varphi^{*}$ with an eigenvalue $\beta$, we suspend it to foliation cohomological classes $[\mu_{\Fh}]_{v}$ for all $v\in\Z$ which are defined by:
+\begin{equation*}
+    \Psi([\mu_{\Fh}]_{v})(t) := e^{(\frac{\log\beta+2\pi {i}{v}}{\log{r}})t}[\mu]\ \mathrm{for} \ t \in \R/\log{r}\,\Z,
+\end{equation*}
+where $i$ is $\sqrt{-1}$. They satisfy the boundary condition and are eigenvectors of $\Theta$ on $H^{i}_{\Fh}(M,\C)$ with the eigenvalues $\frac{\log \beta + 2 \pi{i}{v}}{\log{r}}$ for $\forall v \in \Z$. Therefore, $\{ \frac{\log \beta + 2 \pi{i}{v}}{\log{r}} |v \in \Z \}$ is the corresponding eigenvalues of the eigenvalue $\beta$.
+\end{proof}
+To show that the condition (2) holds, we interpret the Dirichlet series by using the Hurwitz zeta function 
+\begin{equation}\label{eq:3.2.1}
+\begin{split}
+    \tr(s \cdot \mathrm{id} - \Theta | H^{i}_{\Fh}(M,\C))^{-z}&=\sum_{\alpha\in\Sp(\varphi^{*}_{i})}\sum_{v\in\Z}(s-\frac{\log{\alpha}+2\pi{i}{v}}{\log{r}})^{-z}\\
+    &=\sum_{\alpha\in\Sp(\varphi^{*}_{i})}\sum_{v\in\Z} \left\{ \frac{2\pi{i}{v}}{\log{r}}\left(\frac{s\cdot\log{r}-\log \alpha}{2{\pi}{i}}+v\right) \right\}^{-z},
+\end{split}
+\end{equation}
+where $\varphi^{*}_{i}$ denotes $\varphi^{*}$ on $H^{i}(S)$.
+
+We recall that the Hurwitz zeta function $\zeta_{\mathfrak{hur}}(z,s)$ is  defined by:
+\begin{equation*}
+    \zeta_{\mathfrak{hur}}(z,s):=\sum_{n=0}^{\infty}(s+n)^{-z}\,\mathrm{for}\,\mathrm{Re}(z)>1,\,\mathrm{Re}(s)>0.
+\end{equation*}
+It is known that the series is absolutely convergent and can be extended to a meromorphic function defined for all $z\ne1$.
+More generally we set
+\begin{equation*}
+    \zeta_{\eta,\mathfrak{hur}}(z,s)=\sum_{n=0}^{\infty}(\eta(s+n))^{-z},
+\end{equation*}
+where $\eta$ is a non-zero complex number.
+If we denote  $\frac{2 \pi i}{\log{r}}$ and $\frac{s\cdot\log{r}-\log \alpha}{2{\pi}{i}}$ in (\ref{eq:3.2.1}) simply by $\eta$ and $s_{\alpha}$, respectively, then the series (\ref{eq:3.2.1}) is expressed by using the Hurwitz zeta function
+\begin{equation*}
+    \sum_{\alpha\in\Sp(\varphi^{*}_{i})}\zeta_{\eta,\mathfrak{hur}}(z,s_{\alpha})+\zeta_{-\eta,\mathfrak{hur}}(z,-s_{\alpha})-(\eta{s_{\alpha}})^{-z}.
+\end{equation*}
+Since the condition (2) holds from the property of the Hurwitz zeta function, the regularized determinant is defined for $(M,\Fh_{M},\phi^{t})$.
+
+
+Next we show that the leafwise cohomological expression coincides with the dynamical zeta function of $(M,\Fh_{M},\phi^{t})$. We define a regularized product by 
+\begin{equation*}
+    \begin{split}
+    \prod_{v\in\Z}\eta(s+v)&=\prod_{n\in\N}\eta(s+n)\cdot(-\eta)(-s+n)/(\eta{s})\\
+    &:=\exp(-\partial_{z}\zeta_{\eta,\mathfrak{hur}}(0,s)-\partial_{z}\zeta_{-\eta,\mathfrak{hur}}(0,-s))\cdot(\eta{s})^{-1},
+    \end{split}
+\end{equation*}
+where $\eta$ is a non-zero complex number. Then the lemma follows from properties of Hurwitz zeta function.
+\begin{lemma}
+\label{lem:3.2}
+The regularized product such as the following form can be computed by using properties of the Hurwitz zeta functions:
+\begin{equation*}
+    \prod_{v\in\Z}\eta(s+v)=1-e^{-2\pi{i}s}
+\end{equation*}
+\end{lemma}
+\begin{proof}
+It is known for the Hurwitz zeta functions that:
+\begin{equation*}
+    \partial_{z}\zeta_{\mathfrak{hur}}(0,s)=\log\Gamma(s)-\frac{1}{2}\log2\pi.
+\end{equation*}
+Then we have
+\begin{equation*}
+    \exp(-\partial_{z}\zeta_{\eta,\mathfrak{hur}}(0,s))=\eta^{\frac{1}{2}-s}\left( \frac{\Gamma(s)}{\sqrt{2\pi}} \right)^{-1}.
+\end{equation*}
+By using the formula:
+\begin{equation*}
+    \frac{1}{s}\left( \frac{\Gamma(s)}{\sqrt{2\pi}} \right)^{-1}\left( \frac{\Gamma(-s)}{\sqrt{2\pi}} \right)^{-1}=e^{\pi{i}(\frac{1}{2}+s)}(1-e^{-2\pi{i}{s}}),
+\end{equation*}
+we get the following equality:
+\begin{equation*}
+    \begin{split}
+        \prod_{v\in\Z}\eta(s+v)&=\eta^{\frac{1}{2}-s}\left( \frac{\Gamma(s)}{\sqrt{2\pi}} \right)^{-1}\cdot(-\eta)^{\frac{1}{2}+s}\left( \frac{\Gamma(-s)}{\sqrt{2\pi}} \right)^{-1}\cdot(\eta{s})^{-1}\\
+        &=(\eta)^{-\frac{1}{2}+s}(-\eta)^{\frac{1}{2}+s}\cdot\frac{1}{s}\left( \frac{\Gamma(s)}{\sqrt{2\pi}} \right)^{-1}\left( \frac{\Gamma(-s)}{\sqrt{2\pi}} \right)^{-1}\\
+        &=\begin{cases}
+        1-e^{-2\pi{i}{s}}&\,\mathrm{If}\,\,0\leq\Arg{\eta}<\pi\\
+        1-e^{2\pi{i}{s}}&\,\mathrm{If}\,\,-\pi\leq\Arg{\eta}<0
+        \end{cases}
+    \end{split}
+\end{equation*}
+In this case, since $0\leq\Arg{\eta}<\pi$, we get the statement of the lemma.
+\end{proof}
+We denote the leafwise cohomological expression by the regularized product as follows
+\begin{equation*}
+\begin{split}
+    \prod_{i}^{d}\det_{\infty}(s\cdot\mbox{id}-\Theta|H^{i}_{\Fh}(M,\C))^{(-1)^{i+1}}&\overset{(\ref{eq_eigenvalues})}{=}\prod_{i}\prod_{\alpha\in\Sp(\varphi^{*}_{i})}\prod_{v\in\Z} (s-\frac{\log{\alpha}+2\pi{i}{v}}{\log{r}})^{(-1)^{i+1}}\\
+    &=\prod_{i}\prod_{\alpha\in\Sp(\varphi^{*}_{i})}\prod_{v\in\Z}  \left\{ \frac{2\pi{i}{v}}{\log{r}}\left(\frac{s\cdot\log{r}-\log \alpha}{2{\pi}{i}}+v\right) \right\}^{(-1)^{i+1}}.
+\end{split}
+\end{equation*}
+By using the Lemma \ref{lem:3.2}, we have the following product form
+\begin{equation*}
+    \prod_{i}^{d}\det_{\infty}(s\cdot\mbox{id}-\Theta|H^{i}_{\Fh}(M,\C))^{(-1)^{i+1}}=\prod_{i}\prod_{\alpha\in\Sp(\varphi^{*}_{i})}(1-\exp(\log\alpha-s\cdot\log{r}))^{(-1)^{i+1}}.
+\end{equation*}
+The corollary follows from the product form.
+\begin{corollary}
+\label{cor:3.2.1}
+The leafwise cohomological expression is described with the cohomology of the fiber $S$:
+\begin{equation}\label{eq:3.5}
+    \prod_{i}^{d}\det_{\infty}(s\cdot\mbox{id}-\Theta|H^{i}_{\Fh}(M,\C))^{(-1)^{i+1}} =\prod_{i=0}^{d}\det(1-\varphi^{*}\cdot r^{-s}|H^{i}(S,\C))^{(-1)^{i+1}}.
+\end{equation}
+\end{corollary}
+
+The relation between periodic orbits of $\Z$-action on $S$ and $\R$-action on $M$ gives the following lemma.
+
+\begin{lemma}
+the dynamical zeta function $\zeta(M;s)$ of $(M,\Fh_{M},\phi^{t})$ has the cohomological expression in terms of the cohomology groups of the fiber $S$
+\begin{equation}\label{eq:3.6}
+    \zeta(M;s) =\prod_{i=0}^{d}\det(1-\varphi^{*}\cdot r^{-s}|H^{i}(S,\C))^{(-1)^{i+1}}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We have the bijective between periodic orbits of $\Z$-action on $S$ and $\R$-action on $M$.
+If we denote by $\mathfrak{o}$ a corresponding periodic orbit of $\Z$-action on $S$ for a periodic orbit $\gamma$ of $\R$-action on $M$, the norm $N(\gamma)$ is defined by $\log{N(\gamma)}=|\mathfrak{o}|\log{r}$ where $|\mathfrak{o}|$ is the period of $\mathfrak{o}$.
+Therefore we have
+\begin{equation*}
+    \zeta(M;s)=\prod_{\mathfrak{o}}(1-e^{-s|\mathfrak{o}|\log{r}})^{-1},
+\end{equation*}
+where $\mathfrak{o}$ runs over periodic orbits of the $\Z$-action on $S$.
+Then the lemma follows from the Lefschetz fixed-point theorem.
+\end{proof}
+
+\begin{proof}[Proof of theorem 3.1]
+The assertion follows from the composite of (\ref{eq:3.5}) and (\ref{eq:3.6}).
+\end{proof}
+
+\subsection{Functional equations}
+
+The zeta function $\zeta(M;s)$ has the functional equation as follows:
+The closed manifold $S$ has the symmetric property which is given by a perfect pairing
+\begin{equation*}
+    \cup:H^{i}(S) \times H^{d-i}(S) \rightarrow H^{d}(S).
+\end{equation*}
+The pullback of the diffeomorphism $\varphi$ of $S$ is compatible with the pairing
+\begin{equation*}
+    \varphi^{*}(v)\cup\varphi^{*}(w)=\varphi^{*}(v\cup{w})\quad\mathrm{for}\,v\in{H}^{i}(S),w\in{H}^{d-i}(S).
+\end{equation*}
+Since $\varphi^{*}$ acts on $H^{d}(S)$ as the identity, the following holds (\cite{Ha},Appendix C, Lemma 4.3.):
+\begin{equation}\label{eq:3.3}
+    \det(\varphi^{*}|H^{d-i}(S))=\frac{1}{\det(\varphi^{*}|H^{i}(S))}
+\end{equation}
+and
+\begin{equation}\label{eq:3.4}
+    \det(1-\varphi^{*}t|H^{d-i}(S))=\frac{(-t)^{\beta(i)}}{\det(\varphi^{*}|H^{i}(S))}\det(1-\varphi^{*}t^{-1}|H^{i}(S)),
+\end{equation}
+where $\beta(i)$ is the $i$-th Betti number.
+\begin{theorem}[Functional equation]
+\label{functional_eq}
+The zeta function is symmetrical about $Re(s)=0$
+\begin{equation*}
+    \zeta(M;s)=(-r^{s})^{\chi(S)} \cdot \zeta(M;-s),
+\end{equation*}
+where $\chi(S)$ is the Euler characteristic of $S$.
+\end{theorem}
+\begin{proof}
+As the result of the corollary \ref{cor:3.2.1}, the zeta function can be described with the cohomology groups of $S$:
+\begin{equation*}
+    \begin{split}
+            \zeta(M;s)&=\prod_{i=0}^{d}\det(1-\varphi^{*}\cdot r^{-s}|H^{d-i}(S,\C))^{(-1)^{i+1}}\\
+            &\overset{(\ref{eq:3.4})}{=}\prod_{i=0}^{d}\left\{\frac{(-r^{-s})^{\beta(i)}}{\det(\varphi^{*}|H^{i}(S))}\det(1-\varphi^{*}r^{s}|H^{i}(S))\right \}^{(-1)^{i+1}}\\
+            &\overset{(\ref{eq:3.3})}{=}(-r^{-s})^{-\chi(S)}\zeta(M;-s).
+    \end{split}
+\end{equation*}
+\end{proof}
+
+
+
+\subsection{Special values of \texorpdfstring{$\zeta(M;s)$}{}}
+
+We compute special values of the dynamical zeta function $\zeta(M;s)$:
+We define the special value of $\zeta(M;s)$ at $s=k$ by
+\begin{equation*}
+    \zeta(M;k)^{*}:=\lim_{s\rightarrow k}\zeta(M;s)\cdot (s-k)^{-\mathrm{ord}_{s=k}\zeta(M;s)},
+\end{equation*}
+where ${-\mathrm{ord}_{s=k}\zeta(M;s)}$ is the order of $\zeta(M;s)$ at $s=k$ for $k\in\C$.
+Note that the order of $\zeta(M;s)$ at $s=k$ for $k\in\C$ is given by
+\begin{equation*}
+    \mathrm{ord}_{s=k}\zeta(M;s)=\sum_{i}(-1)^{i+1}\dim(H^{i}_{\Fh}(M)^{\Theta\sim k}),
+\end{equation*}
+where $H^{\sigma\sim{k}}$ is the eigenspace of $\sigma$ on $H$ whose eigenvalue is $k$. 
+
+
+We show the computation of special values of $\zeta(M;s)$ as follows.
+\begin{theorem}
+If we set the $m$-th Lefschetz number for $m\in\Z$ by 
+\begin{equation*}
+    \Lambda(\varphi^{m}):=\sum_{i}(-1)^{i}\mathrm{tr}(\varphi^{m*}|H^{i}(S)),
+\end{equation*}        
+the special value of $\zeta(M;s)$ at $s=k$ can be expressed  with the order of the function and the Lefschetz number.
+\begin{equation*}
+    \zeta(M;k)^{*}=(\log{r})^{\mathrm{ord}_{s=k}\zeta(M;s)}\exp(\sum_{m\ge1}\frac{r^{-km}\Lambda(\varphi^{m})+\mathrm{ord}_{s=k}\zeta(M;s)}{m}).
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Corollary \ref{cor:3.2.1} allows $\zeta(M;s)$ to be decomposed with respect to eigenvalues of $\varphi^{*}$:
+\begin{equation*}
+    \zeta(M;s)=\prod_{i}(1-r^{k-s})^{(-1)^{i+1}\dim (H^{i}(S))^{\varphi^{*}\sim r^{k}}}\det(1-\varphi^{*}\cdot{r}^{-s}|H^{i}(S)^{\varphi^{*}\nsim r^{k}})^{(-1)^{i+1}}
+\end{equation*}
+We give the Taylor series about $(s-k)$
+\begin{equation*}
+    \begin{split}
+    \zeta(M;s)=(\log{r}(s-k)+&O((s-k)^{2}))^{\mathrm{ord}_{s=k}\zeta(M;s)}\\
+    &\cdot\exp(\sum_{m\ge1}\sum_{i}(-1)^{i}\mathrm{tr}(\varphi^{m*})\cdot \frac{r^{-sm}}{m}|H^{i}(S)^{\varphi^{*}\nsim r^{k}}).
+    \end{split}
+\end{equation*}
+Note that $O(x^{2})$ is the big-O notation. Then we compute the special value at $s=k$
+\begin{equation*}
+    \zeta(M;k)^{*}=(\log{r})^{\mathrm{ord}_{s=k}\zeta(M;s)}\cdot\exp(\sum_{m\ge1}\sum_{i}(-1)^{i}\mathrm{tr}(\varphi^{m*})\cdot \frac{r^{-km}}{m}|H^{i}(S)^{\varphi^{*}\nsim r^{k}}).
+\end{equation*}
+By decomposing the Lefschetz number with respect to $\mathrm{ord}_{s=k}\zeta(M;s)$
+\begin{equation*}
+        \Lambda(\varphi^{m})=-r^{km}\cdot\mathrm{ord}_{s=k}\zeta(M;s)+\sum_{i}(-1)^{i}\mathrm{tr}(\varphi^{m*}|H^{i}(S)^{\varphi^{*}\nsim r^{k}}),
+\end{equation*}
+we get the statement of the theorem
+\begin{equation*}
+    \zeta(M;k)^{*}=(\log{r})^{\mathrm{ord}_{s=k}\zeta(M;s)}\exp(\sum_{m\ge1}\frac{r^{-km}\Lambda(\varphi^{m})+\mathrm{ord}_{s=k}\zeta(M;s)}{m}).
+\end{equation*}
+\end{proof}

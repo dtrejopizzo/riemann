@@ -1,0 +1,189 @@
+{
+  "statement": "Audit of strict decay for A_N = N Delta safe_u_N, equivalent to SAFE-U-WEIGHTED-MONOTONICITY",
+  "sources": {
+    "theta_coupling_zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "theta_coupling_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "A_N": 0.2547311936166079,
+          "A_next": 0.20607349051170415,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "A_N": 0.7340861558417286,
+          "A_next": 0.6020621815437219,
+          "strict_decay": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "A_N": 0.20607349051170415,
+          "A_next": 0.1685532037633514,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "A_N": 0.6020621815437219,
+          "A_next": 0.49608729978702815,
+          "strict_decay": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "A_N": 0.1685532037633514,
+          "A_next": 0.14461870659014023,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "A_N": 0.49608729978702815,
+          "A_next": 0.42770701421160506,
+          "strict_decay": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "A_N": 0.14461870659014023,
+          "A_next": 0.12269238789869889,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "A_N": 0.42770701421160506,
+          "A_next": 0.3639529913415392,
+          "strict_decay": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "A_N": 0.12269238789869889,
+          "A_next": 0.10806976842718666,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "A_N": 0.3639529913415392,
+          "A_next": 0.32129493916323737,
+          "strict_decay": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "A_N": 0.10806976842718666,
+          "A_next": 0.09841736357148614,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "A_N": 0.32129493916323737,
+          "A_next": 0.2930947985799343,
+          "strict_decay": true
+        }
+      ],
+      "strict_decay_count": 12,
+      "strict_decay_fail_count": 0
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "A_N": 1.2248638894285488,
+          "A_next": 0.4832230141574351,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "A_N": 0.2289375509416305,
+          "A_next": 0.20769328528502368,
+          "strict_decay": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "A_N": 0.4832230141574351,
+          "A_next": 0.02086203752444683,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "A_N": 0.20769328528502368,
+          "A_next": 0.05361136100726602,
+          "strict_decay": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "A_N": 0.02086203752444683,
+          "A_next": -0.014306161919014225,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "A_N": 0.05361136100726602,
+          "A_next": -0.007503064497069048,
+          "strict_decay": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "A_N": -0.014306161919014225,
+          "A_next": -0.0074729174328943705,
+          "strict_decay": false
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "A_N": -0.007503064497069048,
+          "A_next": -0.004602124135392628,
+          "strict_decay": false
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "A_N": -0.0074729174328943705,
+          "A_next": 0.003421254633127113,
+          "strict_decay": false
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "A_N": -0.004602124135392628,
+          "A_next": 0.016864053953430415,
+          "strict_decay": false
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "A_N": 0.003421254633127113,
+          "A_next": -0.002618284288462871,
+          "strict_decay": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "A_N": 0.016864053953430415,
+          "A_next": -0.0039510953668681036,
+          "strict_decay": true
+        }
+      ],
+      "strict_decay_count": 8,
+      "strict_decay_fail_count": 4
+    }
+  }
+}

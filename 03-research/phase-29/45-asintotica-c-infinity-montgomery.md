@@ -142,7 +142,7 @@ $$\lim_{N\to\infty} \frac{1}{N}\sum_{n=1}^N P_{y_0}(\gamma_n - \gamma_0) = \frac
 
 Entonces $M_N \to \frac{1}{\pi}\sum_{\rho_0} 2\pi(\sigma_0-1/2) = 2\sum_{\rho_0}(\sigma_0-1/2)$, que es cero si y solo si $\mathcal{Z}_{\mathrm{off}} = \emptyset$.
 
-*Nota honesta.* La hipótesis de equidistribución del Teorema 7.1 es equivalente a la distribución GUE de los ceros (Conjetura de Montgomery). Condicional a GUE, el criterio es que $M_N \to 0$ iff RH. No circular porque GUE es una hipótesis independiente.
+*Nota franca.* La hipótesis de equidistribución del Teorema 7.1 es equivalente a la distribución GUE de los ceros (Conjetura de Montgomery). Condicional a GUE, el criterio es que $M_N \to 0$ iff RH. No circular porque GUE es una hipótesis independiente.
 
 **Teorema 7.2 (Criterio de subsucesión).** Si existe una subsucesión $n_k \to \infty$ tal que $C_\infty(\gamma_{n_k}) \to 0$ y además la subsucesión $\{\gamma_{n_k}\}$ es *densa en $\mathbb{R}^+$* (es decir, $\liminf_{k\to\infty}|\gamma_{n_k}-t| = 0$ para todo $t > 0$), entonces $\mu_{\mathrm{off}} = 0$ (RH).
 

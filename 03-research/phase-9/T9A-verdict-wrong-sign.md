@@ -43,7 +43,7 @@ This is not an isolated accident. It is the **third** appearance of the same dir
 > Positivity gives the wrong inequality direction. This single mismatch — unconditional positivity is lower-bound-
 > oriented, RH is an upper constraint — is, across all six no-gos (N1–N6) and T9-A, the deepest reason RH resists.*
 
-## Honest verdict on T9-A
+## Candid verdict on T9-A
 
 Attacked head-on, T9-A **reduces to upper bounds on $F(\alpha)$ for $\alpha>1$** $=$ prime pair-correlation /
 short-interval variance — a famous open problem — and the **unconditional tool ($F\ge0$) is wrong-signed** for
@@ -53,7 +53,7 @@ bound, and the wrong-sign meta-pattern explains why no current unconditional too
 What remains genuinely **doable and finite** (not a crossing, but real): the **calibration deliverable** —
 use the detector to determine *exactly how much* of the $\alpha>1$ upper bound (which support range, which tail
 exponent) would suffice to force the collision margin $t_c/s^2<0$, giving the community a precise, quantified
-target. This is the program's honest residual contribution.
+target. This is the program's candid residual contribution.
 
 ## Status
 - T9-A engaged head-on; $F(\alpha)$ computed; barrier = upper bounds on $F$ for $\alpha>1$ = short-interval

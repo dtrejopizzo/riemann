@@ -136,7 +136,7 @@ This is a **finite-level falsifiable test** — you can compute both sides for $
 - #1 unblocks #5.
 - #2 closes (or sharply reduces) 2.3 + 3.2.
 - #3 closes 11.5 modulo the $\kappa=\infty$ completion issue 11.5(v).
-- #5 is the bridge to 11.6/12.3 — interesting if positive, structurally informative if negative. --- ## Audit and honest caveats What I'm confident about, in decreasing order: - The verified arXiv references (L1, L2, L3, K1, K2, K3, Conrey–Li) are real and on point. The Langer–Woracek framework for indefinite canonical systems with inner singularities is precisely the technology you need for 11.5, and it is *constructive* (the algorithms in L1 + L3 are implementable).
+- #5 is the bridge to 11.6/12.3 — interesting if positive, structurally informative if negative. --- ## Audit and candid caveats What I'm confident about, in decreasing order: - The verified arXiv references (L1, L2, L3, K1, K2, K3, Conrey–Li) are real and on point. The Langer–Woracek framework for indefinite canonical systems with inner singularities is precisely the technology you need for 11.5, and it is *constructive* (the algorithms in L1 + L3 are implementable).
 - The Lorentz-boost decomposition of $T_p$ is a real algebraic identity that exposes the structure decisively.
 - The structural fact $T_p(0)\neq I\Rightarrow H_S$ is not a regular $L^1$ Hamiltonian is correct and is the right reformulation.
 - Gemini's "Legendre Gerschgorin" argument for 2.3 is **wrong** (small-$c$ limit, irrelevant regime).

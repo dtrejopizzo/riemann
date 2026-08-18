@@ -36,7 +36,7 @@ Both are entire, zero-free in the UHP (legitimate HB). **The conclusion flips wi
 exactly Danger C. I did **not** pin which is "the" archimedean de Branges space; that needs a reference
 (de Branges, *HSEF*; Lagarias, *Hilbert spaces of entire functions and the RH*).
 
-> **Honest downgrade.** Day-9's "$H(E_\gamma)$ trivializes (✅)" → **"◆ conditional on the decaying-modulus
+> **Candid downgrade.** Day-9's "$H(E_\gamma)$ trivializes (✅)" → **"◆ conditional on the decaying-modulus
 > normalization."** What survives unconditionally: **neither Gamma normalization is Goldilocks** — the
 > decaying one trivializes ($\mathfrak t_+$ trace-class), and the growing one fails *uniform* eval-control
 > ($K(t-ib,t-ib)\sim e^{+\pi t/2}\to\infty$ in $t$, so $\mathfrak t_-$'s terms have exploding norms). The

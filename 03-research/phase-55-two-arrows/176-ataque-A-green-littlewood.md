@@ -4,7 +4,7 @@
 **Fecha:** 2026-06-11
 **Mandato:** atacar el Problema A — $I(0^+)<\infty$ — a través de la identidad de Green–Littlewood ([TEOREMA 173.C]). No auditar; construir. No intentar probar RH.
 **Maquinaria aceptada (no re-derivada):** [TEOREMA 173.C] (identidad exacta, Doc 173 §6.1, con su prueba leída en fuente); certificado $E(T)=\sum_{\gamma\le T}b^2\ll T/\log T$ (Teorema 170.5 / Selberg [S46]); dicotomía [TEOREMA 175.2] (LP-112 $\Rightarrow I\in\{0,\infty\}$, condicional a LP-112); arquitectura RH $\Longleftarrow (I<\infty)\wedge$LP-112 ([COR 175.5.2]).
-**Contrato:** [DEFINICIÓN-NUEVA] libre; [TEOREMA]/[PROP]/[LEMA] con prueba completa o sin etiqueta; [GAP] declarado con forma de enunciado. Honestidad absoluta sobre novedad: maquinaria clásica se declara clásica.
+**Contrato:** [DEFINICIÓN-NUEVA] libre; [TEOREMA]/[PROP]/[LEMA] con prueba completa o sin etiqueta; [GAP] declarado con forma de enunciado. Franqueza absoluta sobre novedad: maquinaria clásica se declara clásica.
 
 **Coordenadas (idénticas a Docs 170/173/175).** Cero off-crítico $\rho=\tfrac12+b+i\gamma$, $b\in(0,\tfrac12)$, $\gamma>0$; un representante por cuádruplo. $I(T)=E(T):=\sum_{\gamma_j\le T}b_j^2$, $I(0^+)=\lim_{T\to\infty}I(T)=\sum_j b_j^2$ (monótono). **Problema A:** $I(0^+)<\infty$. Notación de este documento:
 $$D(T)\;:=\;\int_{1/2}^{\infty}\!\!\int_0^T \log|\zeta(\sigma+it)|\,dt\,d\sigma,\qquad
@@ -26,7 +26,7 @@ $$\lim_{T_0\to\infty}\overline D(T_0)\;\text{existe en }[-\tfrac\pi8,+\infty]\;\
 
 4. **[COR 176.5] (cota inferior incondicional del signo).** $D(T)\ge-\frac\pi8-C\log T$ en toda altura no-ordenada, y $\overline D(T_0)\ge-\frac\pi8-C\frac{\log T_0}{T_0}$: la integral de $\log|\zeta|$ en la semibanda derecha **nunca cae por debajo de la masa del polo**. Bajo RH la constante $-\pi/8$ es exacta (caso de igualdad en el límite). La cota inferior es *gratis* ($I\ge0$); **la cota superior ES el Problema A**.
 
-5. **[TEOREMA 176.6] (el teorema inverso de medias).** $D(T)=\pi E(T)-\frac\pi8+O(\log T)$ para toda altura no-ordenada; con el certificado 170.5, $|D(T)|\ll T/\log T$: la media de área de $\log|\zeta|$ en la semibanda es $\ll1/\log T$. Versión por abscisa: $\big|\frac1T\int_0^T\log|\zeta(\sigma+it)|\,dt\big|\ll\frac1{(\sigma-\frac12)\log T}+\frac{\log T}T$ uniforme en $\sigma>\tfrac12$. Honestidad: maquinaria 100% clásica (Littlewood+Selberg); la novedad es de *enunciado y exactitud* (constante $-\pi/8$, validez en toda altura), no de método.
+5. **[TEOREMA 176.6] (el teorema inverso de medias).** $D(T)=\pi E(T)-\frac\pi8+O(\log T)$ para toda altura no-ordenada; con el certificado 170.5, $|D(T)|\ll T/\log T$: la media de área de $\log|\zeta|$ en la semibanda es $\ll1/\log T$. Versión por abscisa: $\big|\frac1T\int_0^T\log|\zeta(\sigma+it)|\,dt\big|\ll\frac1{(\sigma-\frac12)\log T}+\frac{\log T}T$ uniforme en $\sigma>\tfrac12$. Franqueza: maquinaria 100% clásica (Littlewood+Selberg); la novedad es de *enunciado y exactitud* (constante $-\pi/8$, validez en toda altura), no de método.
 
 6. **Posición de A en la jerarquía ([TEOREMA 176.7], [PROP 176.8], [PROP 176.9]):**
 $$\mathrm{RH}\;\Longrightarrow\;(m<\infty)\;\Longrightarrow\;\textbf{A}\;\Longrightarrow\;\mathrm{Lindel\ddot of}\;\Longrightarrow\;\mathrm{Densidad},$$
@@ -71,7 +71,7 @@ se obtiene, incondicionalmente, para $\tfrac12<\sigma<1$ fijo:
 $$-\,2\pi(1-\sigma)-C\log T\;\le\;\int_0^T\log|\zeta(\sigma+it)|\,dt\;\le\;\min\Big(\frac{2\pi E(T)}{\sigma-\frac12},\;8\pi\,T^{1-(\sigma-\frac12)/4}\Big)+C\log T .$$
 La media por abscisa tiende a $0$ para cada $\sigma>\tfrac12$ fijo (esto es esencialmente Bohr–Landau/Littlewood: clásico). **Lo que no es clásico-trivial es la versión integrada en $\sigma$ con peso 1 hasta $\sigma=\tfrac12^+$** — ahí la cota por abscisa estalla como $1/(\sigma-\tfrac12)$ y solo la estructura de segundo momento (173.C) la doma. Eso es §3.
 
-**Presupuesto, resumen.** $D(T)=D_{\mathrm{banda}}(T)+O(1)$; el integrando en la banda tiene tamaño absoluto $\asymp T$ (véase §5.2) y total signado $\ll T/\log T$ (§3): la cancelación lograda es de orden relativo $1/\log T$. **El Problema A pide total signado $O(1)$: cancelación relativa $1/T$.** Esa razón — $\log T$ frente a $T$ — es la medida honesta de la distancia entre lo conocido y A.
+**Presupuesto, resumen.** $D(T)=D_{\mathrm{banda}}(T)+O(1)$; el integrando en la banda tiene tamaño absoluto $\asymp T$ (véase §5.2) y total signado $\ll T/\log T$ (§3): la cancelación lograda es de orden relativo $1/\log T$. **El Problema A pide total signado $O(1)$: cancelación relativa $1/T$.** Esa razón — $\log T$ frente a $T$ — es la medida franca de la distancia entre lo conocido y A.
 
 ---
 
@@ -143,7 +143,7 @@ $$\Big|\frac1T\int_0^T\log|\zeta(\sigma+it)|\,dt\Big|\;\ll\;\frac1{(\sigma-\frac
 
 *Prueba.* (a) es [COR 176.3.1] + 170.5. (b): lema de Littlewood por abscisa (§1.2) con la cota de Chebyshev $\sum(\beta-\sigma)^+\le E(T)/(\sigma-\tfrac12)\ll T/((\sigma-\tfrac12)\log T)$ para la dirección superior, y $-2\pi(1-\sigma)-C\log T$ para la inferior. $\square$
 
-**Honestidad sobre la novedad.** Los ingredientes de (a) y (b) son Littlewood (1924) y Selberg (1946); el layer-cake que conecta (a) con la suma $\sum b^2$ es la misma observación con la que 173.C se verifica de forma cruzada (Doc 173 §6.1). Por tanto: **teorema nuevo de enunciado, no de método**. Lo que sí parece no estar en la literatura *como enunciado* es (a) con la constante exacta $-\pi/8$ y validez en toda altura, y la forma (b) uniforme con el peso $1/((\sigma-\frac12)\log T)$. [GAP de literatura: no localizo (a)/(b) enunciados así; siguen de [L24]+[S46] en pocas líneas y podrían ser folklore. Antes de publicar: revisar Titchmarsh cap. 9 §§9.9–9.16 y la literatura de $\int_0^T\log|\zeta(\sigma+it)|\,dt$.]
+**Franqueza sobre la novedad.** Los ingredientes de (a) y (b) son Littlewood (1924) y Selberg (1946); el layer-cake que conecta (a) con la suma $\sum b^2$ es la misma observación con la que 173.C se verifica de forma cruzada (Doc 173 §6.1). Por tanto: **teorema nuevo de enunciado, no de método**. Lo que sí parece no estar en la literatura *como enunciado* es (a) con la constante exacta $-\pi/8$ y validez en toda altura, y la forma (b) uniforme con el peso $1/((\sigma-\frac12)\log T)$. [GAP de literatura: no localizo (a)/(b) enunciados así; siguen de [L24]+[S46] en pocas líneas y podrían ser folklore. Antes de publicar: revisar Titchmarsh cap. 9 §§9.9–9.16 y la literatura de $\int_0^T\log|\zeta(\sigma+it)|\,dt$.]
 
 **[COR 176.10] (dicotomía de medias; condicional a LP-112).** Bajo LP-112 (vía [TEOREMA 175.2]: $I(0^+)\in\{0,\infty\}$) y [TEOREMA 176.4.b]:
 $$\lim_{T_0\to\infty}\overline D(T_0)\;\in\;\Big\{-\frac\pi8\,,\;+\infty\Big\}.$$
@@ -205,7 +205,7 @@ Bajo RH se da la igualdad en el límite: $\overline D(T_0)\to-\frac\pi8$. *La co
 
 *Prueba.* $D(T)=\pi I(T)-\frac\pi8+\pi\Xi(T)\ge-\frac\pi8-\pi|\Xi(T)|$ con $I(T)\ge0$ y [LEMA 176.3]; la promediada por [TEOREMA 176.4.a] con $\overline I\ge0$; la igualdad bajo RH por 176.4.b con $I(0^+)=0$. $\square$
 
-**Enunciado en limpio (candidato a resultado publicable autónomo, con la honestidad de §3 sobre procedencia clásica de los ingredientes):** *el promedio de $\log|\zeta|$ sobre la semibanda derecha está acotado inferiormente, de forma incondicional, por la masa del polo: $\liminf_{T_0}\overline D(T_0)\ge-\pi/8$, con igualdad (y existencia de límite $=-\pi/8$) si y solo si... el límite siempre existe y vale $\pi\sum b_j^2-\pi/8$.* La forma más citable es directamente [TEOREMA 176.4.b], que contiene a esta cota.
+**Enunciado en limpio (candidato a resultado publicable autónomo, con la franqueza de §3 sobre procedencia clásica de los ingredientes):** *el promedio de $\log|\zeta|$ sobre la semibanda derecha está acotado inferiormente, de forma incondicional, por la masa del polo: $\liminf_{T_0}\overline D(T_0)\ge-\pi/8$, con igualdad (y existencia de límite $=-\pi/8$) si y solo si... el límite siempre existe y vale $\pi\sum b_j^2-\pi/8$.* La forma más citable es directamente [TEOREMA 176.4.b], que contiene a esta cota.
 
 ### 5.2. La asimetría: la dirección difícil es la superior
 
@@ -242,7 +242,7 @@ A queda **reformulado sin pérdida** ([TEOREMA 176.4.c] + [PROP 176.8]) en dos m
 1. **Analítica:** la media de Cesàro de $\iint\log|\zeta|$ sobre la semibanda converge (siempre lo hace) a un valor finito. La cota inferior está cerrada ($-\pi/8$, óptima); falta solo la superior.
 2. **De conteo:** densidad uniforme en $T$ ([GAP-A]). Género "finitud", inalcanzable para el conducto exponencial completo ([PROP 176.9]).
 
-Y queda **posicionado**: estrictamente entre $m<\infty$ y Lindelöf; no consecuencia de ninguna conjetura estándar de densidad/momentos; bajo LP-112, equivalente a RH ([COR 175.5.2]). La pared es honesta: la cancelación probada es $1/\log T$, la pedida es $1/T$, y el conducto estándar tiene techo estructural $T(\log T)^{\kappa-2}$.
+Y queda **posicionado**: estrictamente entre $m<\infty$ y Lindelöf; no consecuencia de ninguna conjetura estándar de densidad/momentos; bajo LP-112, equivalente a RH ([COR 175.5.2]). La pared es franca: la cancelación probada es $1/\log T$, la pedida es $1/T$, y el conducto estándar tiene techo estructural $T(\log T)^{\kappa-2}$.
 
 ### 6.3. Pivotes (la escalera de la envolvente, con diccionario exacto)
 

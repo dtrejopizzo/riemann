@@ -33,7 +33,7 @@ NOT SOLID (the quantum realization):
 - E67.10/12/13 : root of unity as the canonical home -- the diagonal twist contaminates and fabricates.
   The q-realization does NOT turn the detector into a proof.
 
-## Honest distance to Omega_7
+## Candid distance to Omega_7
 
 We have the right OBJECT (signed index = faithful detector) but NOT the structural FORCING that would
 make it a proof. The E67.9 detector COMPUTES `A_N - P_lambda` (which needs zeta); a proof of Omega_7

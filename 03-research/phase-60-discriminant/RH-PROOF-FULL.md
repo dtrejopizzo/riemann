@@ -11,7 +11,7 @@
 > (`densidad ceros/Nyquist = 1−1/(2logλ) < 1`, defecto `≈2λ²`); normalización libre **módulo
 > límite no degenerado**. Documento maestro: ensambla la cadena deductiva del programa ––
 (arXiv:2511.22755) desde la construcción del operador de Weil finito hasta RH, **con el
-estado honesto de cada pieza tras auditoría matemática**. No se reclama prueba de RH: el
+estado franco de cada pieza tras auditoría matemática**. No se reclama prueba de RH: el
 núcleo es RH-equivalente. El valor es la **localización** del problema y un andamiaje de
 aproximación genuinamente probado alrededor de un único núcleo. Notación: `ξ(s)=½s(s−1)π^{−s/2}Γ(s/2)ζ(s)`, `Ξ(t)=ξ(½+it)` (entera, orden 1, par, real en
 ℝ). `RH ⟺ Ξ∈LP` (clase de Laguerre–Pólya, real-rooted). `λ>1`, `L=2logλ`, `d_k=2πk/L`,
@@ -166,7 +166,7 @@ complejo de `Ξ` sería límite de ceros reales de `ξ̂_λ` — contradicción 
 propia), III con (H-gap)+(H-lim)+(H-pos), e IV.2 (`ξ̂_∞=Ξ`). Entonces `ε_loc=o(λ^{−½})`
 (III), `ξ̂_λ→Ξ` (Reducción), `Ξ∈LP` (E1+E3), **RH** (E4). ∎ Pero IV.2 es **RH-equivalente** (§2.6) y (H-pos) **es** Weil-positividad. Luego el ensamble
 **reduce RH a un núcleo RH** — no lo prueba. El valor es la reducción limpia + el andamiaje
-probado. --- ## 6. Evaluación honesta (la auditoría) **Probado genuino (resiste auditoría):**
+probado. --- ## 6. Evaluación franca (la auditoría) **Probado genuino (resiste auditoría):**
 - E0 (def. + identidad `QW=`Weil); E4 (clásico); E3 (clásico, módulo E1).
 - **Andamiaje de aproximación N0, N1, N2, N3** — matemática sólida y reusable.
 - N5b (reducción válida); N5c (módulo inputs nombrados, monotonía correcta).
@@ -177,7 +177,7 @@ probado. --- ## 6. Evaluación honesta (la auditoría) **Probado genuino (resist
 - **IV.2≡§V 🟥:** RH-equivalente (variacional). El único núcleo RH-hard.
 - **IV.1 ⬚:** identificación del operador de borde (2º-orden SL fenomenológico) — análisis, no RH-hard. **Conclusión.** La cadena CCM, auditada, es una **reducción elegante de RH a un único núcleo
 RH-equivalente** (`ξ̂_λ→Ξ`, equivalente a "el ground state de Weil es `Ξ_T`"), rodeada de un
-**andamiaje de aproximación genuinamente probado** (N0–N3) y con tres reparaciones honestas
+**andamiaje de aproximación genuinamente probado** (N0–N3) y con tres reparaciones francas
 pendientes (prueba propia de E1; rigor del déficit de frame `g₀→Ξ_T`; corrección de H1′). La
 positividad de Weil (=RH) aparece, tras auditoría, **distribuida** en H1′, en `/ε_0` (III) y
 en el núcleo IV.2. **No se prueba RH; se la localiza con precisión sin auto-engaño.** --- ### Apéndice — reparaciones pendientes (matemática real, no RH-hard salvo el núcleo)

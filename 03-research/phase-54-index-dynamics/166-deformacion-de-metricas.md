@@ -15,8 +15,8 @@ existencia.
 **Contrato de etiquetado (regla absoluta).** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad aquí, prueba completa; externos con referencia
 verificable. **[CONSTRUCCIÓN]** = objeto definido con precisión. **[PUENTE]** = conexión con estatus
-honesto. **[GAP]/[GAP de literatura]** = declarado; jamás premisa de un teorema. **[DESEO]** =
-declarado. PERMITIDO (y esperable) terminar en B/C/D. **NADA de numéricos/Python. Español. Honestidad
+franco. **[GAP]/[GAP de literatura]** = declarado; jamás premisa de un teorema. **[DESEO]** =
+declarado. PERMITIDO (y esperable) terminar en B/C/D. **NADA de numéricos/Python. Español. Franqueza
 absoluta: una falsa victoria es peor que un fracaso.**
 
 **Prerrequisitos leídos en fuente esta sesión:** Doc 164 (Stone invertido; J unitaria RH-libre pero en
@@ -280,7 +280,7 @@ distancia ≥ ½ de ℝ el funcional con peso e^{−|t|} diverge sobre TODA G (m
 Re s = 1. (ii): G ≥ εI con ε>0 dependiente de G da ⟨Gv_j,v_j⟩₀ ≥ ε‖v_j‖₀² > 0, luego
 𝔇(G) ≥ εφ(|b_j|) > 0. (iii): con ε = 1 uniforme, 𝔇(G) ≥ max_j φ(|b_j|) = φ(b_max). ∎
 
-### 3.3 [TEOREMA 166.7 — el cero de 𝔇 es RH reescrita (la parte honesta-declarada)]
+### 3.3 [TEOREMA 166.7 — el cero de 𝔇 es RH reescrita (la parte franca-declarada)]
 
 **Enunciado.** Bajo (H-26): existe G ∈ 𝕄 con 𝔇(G) = 0 ⟹ m = 0. Recíprocamente, si m = 0 Y la forma
 de Weil es uniformemente positiva (W ≥ ε, el GAP 166.A), entonces G = W ∈ 𝕄 y 𝔇(W) = 0. En suma,
@@ -404,7 +404,7 @@ solo la métrica (con la forma de Weil fija) puede reducir κ** — la única sa
 | RH como frontera | RH ⟺ Λ = 0: Λ ≤ 0 (def. de Λ, Newman 1976) y Λ ≥ 0 (Rodgers–Tao 2020) — "RH apenas verdadera", el punto aritmético está EN la frontera | RH ⟺ el ínfimo de 𝔇 (que es 0) SE ALCANZA — el minimizador está EN la frontera ∂𝕄 (166.11) |
 | mecanismo de cruce | el calor empuja los ceros a la recta (colisiones en t>Λ) | la degeneración aplasta N y cocienta los ceros off-line fuera del espacio |
 
-**Estatus honesto.** La fila "κ(t) no-creciente" del lado DBN es la traducción del teorema de
+**Estatus franco.** La fila "κ(t) no-creciente" del lado DBN es la traducción del teorema de
 monotonía de de Bruijn al lenguaje de índices vía el puente de Phase 26, que NO está probado
 ([PUENTE], no teorema; la igualdad fina conjetural es A.15 de Phase 28: Λ = max b_j²/2). La
 estructura dual es nítida: **DBN mueve la forma con métrica congelada y el índice puede caer; Gram
@@ -500,7 +500,7 @@ de Gram existe SIEMPRE y es canónico — es la forma de Weil W. RH no es la exi
 crítico: es su pertenencia al cono de las métricas (W > 0).** El flujo RH-libre lo encuentra (converge
 a la parte de G₀ apareada como W), pero si m ≥ 1 lo encuentra FUERA del cono, y la trayectoria
 atraviesa ∂𝕄. (d) cuantifica: cada cero off-line es aplastado a tasa 2b_j² — la misma escala
-cuadrática b² de la energía DBN (Phase 28, Conj. A.15: Λ = max b_j²/2). **[PUENTE 166-E, honesto]:**
+cuadrática b² de la energía DBN (Phase 28, Conj. A.15: Λ = max b_j²/2). **[PUENTE 166-E, franco]:**
 la coincidencia de escala 2b_j² ↔ b_j²/2 es un eco estructural (ambas son la primera potencia par
 permitida por la simetría γ↦−γ), no una identidad probada; el factor 4 de discrepancia no está
 explicado. Queda como dato para el [DESEO 166.C] (flujo acoplado).
@@ -621,12 +621,12 @@ métricas pertenezca al cono de las métricas** — y mientras se deforma dentro
 | [PROP 166.7′] Pontryagin–Stone | compatibilidad en 𝕄_Q = descomposición fundamental invariante ⟹ espectro real | **probado** (H-26) |
 | [COR 166.8] | m≥1 ⟹ sin crítico interior; Łojasiewicz–Simon inaplicable | **probado** |
 | [TEOREMA 166.9] conservación | κ(G) = κ en todo 𝕄 (Sylvester); salto solo en ∂𝕄 | **probado** (H-W, H-Π; sin H-26, sin RH) |
-| [PUENTE 166-DBN] | dualidad forma/métrica con De Bruijn–Newman; RH en frontera en ambos | honesto, traducción vía puente Phase 26 no probado |
+| [PUENTE 166-DBN] | dualidad forma/métrica con De Bruijn–Newman; RH en frontera en ambos | franco, traducción vía puente Phase 26 no probado |
 | [PROP 166.11] colapso | inf normalizado = 0 sin alcance si m≥1; minimizantes aplastan N; alcance ⟺ RH | **probado bajo (H-26⁺)**, marcado |
 | [CONSTR 166.12] flujo de Gram | Ġ = −LG, sustituto liso; teoría completa en el modelo finito | definido; [GAP 166.D] HS en dim ∞ |
 | [TEOREMA 166.13] dinámica | W ∈ ker L siempre; ker L apareado λ↔λ̄; expulsión hacia/por ∂𝕄; tasa ℓ(b)=2b²+O(b⁴) | **probado en el modelo** (H-26 restringida) |
 | [TEOREMA 166.10] anti-circularidad | Hessiano = L ≥ 0 ≠ Q; circularidad en pertenencia-al-cono + conservación + escala del valor | **probado** |
-| [PUENTE 166-E] | eco 2b² ↔ Λ=b²/2 (A.15); factor 4 sin explicar | honesto, no identidad |
+| [PUENTE 166-E] | eco 2b² ↔ Λ=b²/2 (A.15); factor 4 sin explicar | franco, no identidad |
 | [GAP 166.A] | no-degeneración/uniformidad del Gram de Weil (radical, W ≥ ε) | declarado |
 | [GAP 166.B] | concentración del índice en N + uniformidad en K₁ (H-26⁺) | declarado |
 | [DESEO 166.C] | flujo acoplado (W_t, G_s) DBN+Gram | declarado |

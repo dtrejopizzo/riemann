@@ -53,7 +53,7 @@ on-line zero contributions, in the de Branges/$H(E)$ geometry — which it furth
 framing (P23) contributes the clean unconditional boundary identity ($\Im m=0$ on the axis) and the positive-residue
 fact, but the interior positivity ($\Im m\ge0$) is RH.
 
-## The honest line
+## The candid line
 Completing the construction — exhibiting the self-adjoint operator with **real** spectrum, built non-circularly —
 **is a proof of RH**. The unconditional half (existence of a self-adjoint realization, B-1; positive residues;
 boundary identity) is in hand; the other half (real spectrum / semiboundedness, B-2 / the RFB) is the open core, and

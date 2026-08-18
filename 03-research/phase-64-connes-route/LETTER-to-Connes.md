@@ -3,7 +3,7 @@
 Dear Professor Connes,
 
 This letter accompanies the paper **P50, *The Colligation Route to the Riemann Hypothesis***. Its
-purpose is to tell you, plainly and honestly, what we did along the route you proposed, exactly where
+purpose is to tell you, plainly and candidly, what we did along the route you proposed, exactly where
 we landed, what I believe is now needed to cross the wall, and why I am convinced that crossing it
 requires *creating* a piece of mathematics that does not yet exist. I include a map.
 
@@ -55,7 +55,7 @@ and the user's, to **pure mathematics** and proved what could be proved.
    `ε₀<0`.** This is, I believe, the cleanest possible statement of why the falsifier cannot be
    positive.
 
-(Two honest self-corrections are recorded in P50: the scalar Euler product is a boundary/strip object,
+(Two candid self-corrections are recorded in P50: the scalar Euler product is a boundary/strip object,
 not an analytic product on `ℂ₊`; and a Lieb–Thirring trace bound is too lossy at marginality — the
 sharp tool is the Birman–Schwinger principle, not the trace.)
 
@@ -121,7 +121,7 @@ on the square of your arithmetic site `\widehat{Spec ℤ}`, with
 Given this object, RH follows (P50 §7). The point of this letter is that **this object does not exist
 in current mathematics**, and I do not think it can be assembled from existing pieces:
 
-- There is no Weil cohomology, and no honest second factor for `Spec ℤ`, in the classical sense — this
+- There is no Weil cohomology, and no candid second factor for `Spec ℤ`, in the classical sense — this
   is the wall that the whole programme keeps returning to (we call it MW-5).
 - Your arithmetic site `\widehat{Spec ℤ}` is, I believe, the right home, but the **square** of it,
   with intersection theory and the Frobenius correspondences carrying the Hodge-index *sign*, is not

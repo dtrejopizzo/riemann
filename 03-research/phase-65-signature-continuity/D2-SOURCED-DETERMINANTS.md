@@ -1,7 +1,7 @@
 # D2 — Sourced determinant calculus: the object that reads the signature
 
 **Phase 65 / Signature-Continuity Package, deliverable D2.** Pure mathematics, full proofs. This is the
-first genuinely new object. Its motivation is exactly the honest obstruction our M3 found:
+first genuinely new object. Its motivation is exactly the candid obstruction our M3 found:
 
 > **M3 (preserved).** At the *scalar* determinant level, signature-continuity is RH-strength: scalar
 > convergence $D_P\to\Xi$ does **not** force kernel/index convergence, because the scalar determinant is
@@ -209,7 +209,7 @@ All other D2 results are proved in full above.
 - **Source richness** (Lemma~\ref{lem:rich}): the primitive sources determine the whole primitive kernel,
   so sourced convergence will mean genuine kernel convergence, not subspace convergence.
 
-The honest status is exactly right: D2 does not prove RH; it builds the *instrument* that makes the
+The candid status is exactly right: D2 does not prove RH; it builds the *instrument* that makes the
 signature visible to a limit, so that the decisive D8 convergence can be about the *kernel* (index-aware)
 rather than the *scalar determinant* (index-blind). Next: D3 packages $(D,\mathcal D^{\mathrm{src}},
 \mathsf K,\mathfrak b,\mathcal R)$ into the category $\mathcal G$ with index as a functor.

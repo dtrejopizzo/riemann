@@ -1,0 +1,253 @@
+{
+  "statement": "E79.69 relational matching selector against ZERO^extra",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_68_sigma_aware_terminal_score_autopsy_results.json",
+  "rows": [
+    {
+      "N": 8,
+      "target_support": [
+        6,
+        7,
+        8
+      ],
+      "suffix": {
+        "mismatch": 0.027405661727436414,
+        "support": [
+          6,
+          7,
+          8
+        ],
+        "packet_sigma1": 0.0005137466266078439,
+        "packet_sigma2": 0.001022334617049935,
+        "exact_match": true
+      },
+      "pair": {
+        "mismatch": 0.029900186331162863,
+        "support": [
+          5,
+          7
+        ],
+        "packet_sigma1": 0.0005123113378837199,
+        "packet_sigma2": 0.0010197125178302317,
+        "exact_match": false
+      },
+      "triple": {
+        "mismatch": 0.027405661727436206,
+        "support": [
+          6,
+          7,
+          8
+        ],
+        "packet_sigma1": 0.000513746626607844,
+        "packet_sigma2": 0.0010223346170499352,
+        "exact_match": true
+      },
+      "best_family": {
+        "name": "triple",
+        "mismatch": 0.027405661727436206,
+        "support": [
+          6,
+          7,
+          8
+        ],
+        "exact_match": true
+      }
+    },
+    {
+      "N": 10,
+      "target_support": [
+        5
+      ],
+      "suffix": {
+        "mismatch": 0.00870182150800833,
+        "support": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "packet_sigma1": 0.0003101082414785083,
+        "packet_sigma2": 0.0006174462561064077,
+        "exact_match": false
+      },
+      "pair": {
+        "mismatch": 0.02948235840351119,
+        "support": [
+          5
+        ],
+        "packet_sigma1": 0.00031674821944227105,
+        "packet_sigma2": 0.000631659597053559,
+        "exact_match": true
+      },
+      "triple": {
+        "mismatch": 0.10657588559867112,
+        "support": [
+          7,
+          8,
+          9
+        ],
+        "packet_sigma1": 0.0002757821267731789,
+        "packet_sigma2": 0.0005491683258362179,
+        "exact_match": false
+      },
+      "best_family": {
+        "name": "suffix",
+        "mismatch": 0.00870182150800833,
+        "support": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "exact_match": false
+      }
+    },
+    {
+      "N": 12,
+      "target_support": [
+        7
+      ],
+      "suffix": {
+        "mismatch": 0.3587708698562733,
+        "support": [
+          8,
+          9,
+          10
+        ],
+        "packet_sigma1": 0.00030990430568782564,
+        "packet_sigma2": 0.000617941594836618,
+        "exact_match": false
+      },
+      "pair": {
+        "mismatch": 0.02298785490948674,
+        "support": [
+          7
+        ],
+        "packet_sigma1": 0.0002033952897746118,
+        "packet_sigma2": 0.0004056877275606518,
+        "exact_match": true
+      },
+      "triple": {
+        "mismatch": 0.35371168161341404,
+        "support": [
+          7,
+          9,
+          10
+        ],
+        "packet_sigma1": 0.00030747835402640403,
+        "packet_sigma2": 0.0006131313171364577,
+        "exact_match": false
+      },
+      "best_family": {
+        "name": "pair",
+        "mismatch": 0.02298785490948674,
+        "support": [
+          7
+        ],
+        "exact_match": true
+      }
+    },
+    {
+      "N": 14,
+      "target_support": [
+        10,
+        11,
+        12
+      ],
+      "suffix": {
+        "mismatch": 0.02424717475556555,
+        "support": [
+          10,
+          11,
+          12
+        ],
+        "packet_sigma1": 0.00013015998821479455,
+        "packet_sigma2": 0.00025956025528327926,
+        "exact_match": true
+      },
+      "pair": {
+        "mismatch": 0.18899725364678438,
+        "support": [
+          9,
+          11
+        ],
+        "packet_sigma1": 0.00010817003635950963,
+        "packet_sigma2": 0.00021573504522126097,
+        "exact_match": false
+      },
+      "triple": {
+        "mismatch": 0.02424717475556555,
+        "support": [
+          10,
+          11,
+          12
+        ],
+        "packet_sigma1": 0.00013015998821479455,
+        "packet_sigma2": 0.00025956025528327926,
+        "exact_match": true
+      },
+      "best_family": {
+        "name": "suffix",
+        "mismatch": 0.02424717475556555,
+        "support": [
+          10,
+          11,
+          12
+        ],
+        "exact_match": true
+      }
+    },
+    {
+      "N": 16,
+      "target_support": [
+        11,
+        13
+      ],
+      "suffix": {
+        "mismatch": 0.15887747026680213,
+        "support": [
+          12,
+          13
+        ],
+        "packet_sigma1": 8.007113398161747e-05,
+        "packet_sigma2": 0.00015976474199148427,
+        "exact_match": false
+      },
+      "pair": {
+        "mismatch": 0.03554314266742822,
+        "support": [
+          11,
+          13
+        ],
+        "packet_sigma1": 9.84777888531815e-05,
+        "packet_sigma2": 0.0001965001019245078,
+        "exact_match": true
+      },
+      "triple": {
+        "mismatch": 0.4141474018842848,
+        "support": [
+          11,
+          12,
+          13
+        ],
+        "packet_sigma1": 0.00016211855859285686,
+        "packet_sigma2": 0.00032348847075041795,
+        "exact_match": false
+      },
+      "best_family": {
+        "name": "pair",
+        "mismatch": 0.03554314266742822,
+        "support": [
+          11,
+          13
+        ],
+        "exact_match": true
+      }
+    }
+  ],
+  "exact_family_hits": {
+    "suffix": 2,
+    "pair": 3,
+    "triple": 2,
+    "best_of_three": 4
+  }
+}

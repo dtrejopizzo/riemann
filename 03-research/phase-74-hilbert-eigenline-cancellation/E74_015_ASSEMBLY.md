@@ -1,4 +1,4 @@
-# E74.15 - Conditional assembly and honest endpoint
+# E74.15 - Conditional assembly and candid endpoint
 
 Date: 2026-07-16.
 
@@ -46,7 +46,7 @@ E74.14: verified that the observed cancellation is eigenline- and
         Gamma-prime-specific, not generic.
 ```
 
-## Honest endpoint
+## Candid endpoint
 
 Phase 74 has not closed Omega7.  It has replaced the vague residual-slot
 instruction from E74.9 with the sharper theorem:

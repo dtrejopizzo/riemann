@@ -4,7 +4,7 @@
 **Fecha:** 2026-06-11
 **Mandato:** Problema B del director por la vía dinámica: coercividad (B2), flujo backward, presupuesto de colisiones (B3), Lyapunov/momentos (B1). NO auditar; construir. NO probar RH.
 **Prerrequisitos (certificados, no re-derivados):** Doc 167 (ley de balance $\dot I=-2\kappa-D$, $D\ge0$; Thm 2.3 CERTIFICADO por Doc 168), Doc 168 (reparaciones: carta única, Cor 2.5 condicional, lema regalo $H_t|_{i\mathbb R}>0$), Doc 170 (envolvente $E(T)\ll T/\log T$; no-go tasa/total, Thm 170.8), Doc 144 (contraejemplo Hadamard $m=\infty$, $I<\infty$).
-**Contrato:** [DEFINICIÓN-NUEVA] libre; [TEOREMA]/[PROP]/[LEMA] prueba completa o sin etiqueta; [PUENTE] honesto; [GAP] declarado.
+**Contrato:** [DEFINICIÓN-NUEVA] libre; [TEOREMA]/[PROP]/[LEMA] prueba completa o sin etiqueta; [PUENTE] franco; [GAP] declarado.
 
 ---
 
@@ -20,7 +20,7 @@ Inputs duros: [dB] de Bruijn 1950; [N] Newman 1976; [CSV] Csordas–Smith–Varg
 
 ---
 
-## 1. El mapa forward (B2): la coercividad, resuelta honestamente
+## 1. El mapa forward (B2): la coercividad, resuelta francamente
 
 ### 1.1. $D\ge cI$ es FALSA — el contraejemplo exacto
 
@@ -49,7 +49,7 @@ $$I(t)\;\le\;I(t_0)\Bigl(1-\frac{2(t-t_0)}{M(t_0)}\Bigr)_+\qquad\text{(extinció
 
 *Prueba.* $M$ es máximo de finitas funciones lisas, luego Lipschitz, con $D^+M=\max\{2\beta_k\dot\beta_k:\beta_k^2=M\}$. Para $k$ con $\beta_k$ maximal, en la descomposición de $\dot\beta_k$ (prueba del Thm 167-2.3): el conjugado propio da exactamente $-2$ a $2\beta_k\dot\beta_k$; el antípoda y los ceros reales dan $\le0$; los términos con otros ceros superiores entran como $-4\beta_k(\beta_k-\beta_l)/d^2$ (con $w\in\{z_l,-\bar z_l\}$, $\operatorname{Im}w=\beta_l$) y $-4\beta_k(\beta_k+\beta_l)/d^2$ (con $w\in\{\bar z_l,-z_l\}$): **para el maximal, $\beta_k-\beta_l\ge0$ y $\beta_k+\beta_l>0$, todos $\le0$ sin necesidad de simetrizar.** Suma total $\le-2$. Convergencia: $\kappa<\infty$ + RvM, como en el Thm 167-2.3. $\square$
 
-*Honestidad de literatura:* el enunciado es el teorema de banda decreciente de de Bruijn 1950 (Thm 13: ceros en $|\operatorname{Im}|\le\Delta$ ⟹ en $|\operatorname{Im}|\le\sqrt{\Delta^2-2t}$); lo nuevo es solo la prueba por el sistema de partículas, que además lo localiza (vale cero a cero para el máximo corriente, no solo para el sup global de la clase).
+*Franqueza de literatura:* el enunciado es el teorema de banda decreciente de de Bruijn 1950 (Thm 13: ceros en $|\operatorname{Im}|\le\Delta$ ⟹ en $|\operatorname{Im}|\le\sqrt{\Delta^2-2t}$); lo nuevo es solo la prueba por el sistema de partículas, que además lo localiza (vale cero a cero para el máximo corriente, no solo para el sup global de la clase).
 
 ### 1.4. El tiempo de aterrizaje exacto del cuádruplo aislado (la pregunta del director, cerrada)
 
@@ -105,7 +105,7 @@ La versión incondicional NO está probada (KILL parcial del Doc 168: el caso $I
 
 **[GAP-174.B] (el lema separador que falta — enunciado preciso).** *Sea $Z_0$ una configuración real (RH) en la clase, con densidad RvM y función de concentración de gaps $\nu(\delta,T):=\#\{n\le N(T):g_n\le\delta\}$. ¿Existe $F$, dependiente solo de $\nu$, tal que para $t<0$ (donde la dinámica esté definida) toda componente compleja a tiempo $t$ con progenitor en la ventana $W$ satisface $\beta(t)^2\le F\bigl(|t|,\;\#\{\text{casi-colisiones de }Z_0\text{ en }W\text{ a escala }\sqrt{8|t|}\}\bigr)$, con $F(|t|,k)=2k|t|(1+o(1))$?* Si tal cota vale, el escenario $0<I(0)<\infty$ es backward-detectable como **par huérfano**: a tiempos $|t|\ll b_{\max}^2/(2k_{\rm loc})$, el cuádruplo heredado tiene altura inalcanzable desde cualquier censo local de progenitores (gaps pequeños de la configuración a tiempo $0^+$ tras su aterrizaje). [DEFINICIÓN-NUEva: **par huérfano** = par complejo a tiempo $t<0$ cuya trayectoria forward no aterriza en $(t,0]$; ¬RH con $I<\infty$ ⟺ existen huérfanos a todo $t<0$ pequeño; RH ⟺ todo par backward tiene progenitor (gap) localizado con $g\lesssim\sqrt{8|t|}\cdot\sqrt{k}$.]
 
-**(c) El veredicto honesto sobre la separación: el muro tasa/total reaparece, ahora dinámico.** El flujo es determinista en ambas direcciones (en la clase, los ceros de $H_t$ determinan $H_t$ módulo normalización, y el flujo es invertible mientras la dinámica esté definida): **el backward no añade información — transporta la dicotomía inicial.** Cualquier "invariante backward computable que separe" computa, en $t\to0^-$, exactamente $I(0)$ — y eso es el muro "momento firmado → momento cuadrático" (Doc 167 §5.1) en otra carta. Más fino: lo que el backward sí reorganiza es *quién porta la información*: la **tasa** de crecimiento backward (despegues, pendientes $2k$) está gobernada por la estadística de gaps — certificable en promedio, envolvente tipo Doc 170 — mientras el **total** (el excedente aditivo $b_{\max}^2$, los huérfanos) es exactamente la parte no separable por promedios (Thm 170.8). La dicotomía tasa/total del Doc 170 (Coordenada 2) no era un artefacto de la fórmula explícita: **es una propiedad del flujo.** Lo que sobrevive como programa: el GAP-174.B es un enunciado de dinámica de partículas puro (sin ζ), decidible en principio, y su mitad aritmética (el censo de progenitores de ζ) es estadística de gaps — el objeto correcto para Phase 56.
+**(c) El veredicto franco sobre la separación: el muro tasa/total reaparece, ahora dinámico.** El flujo es determinista en ambas direcciones (en la clase, los ceros de $H_t$ determinan $H_t$ módulo normalización, y el flujo es invertible mientras la dinámica esté definida): **el backward no añade información — transporta la dicotomía inicial.** Cualquier "invariante backward computable que separe" computa, en $t\to0^-$, exactamente $I(0)$ — y eso es el muro "momento firmado → momento cuadrático" (Doc 167 §5.1) en otra carta. Más fino: lo que el backward sí reorganiza es *quién porta la información*: la **tasa** de crecimiento backward (despegues, pendientes $2k$) está gobernada por la estadística de gaps — certificable en promedio, envolvente tipo Doc 170 — mientras el **total** (el excedente aditivo $b_{\max}^2$, los huérfanos) es exactamente la parte no separable por promedios (Thm 170.8). La dicotomía tasa/total del Doc 170 (Coordenada 2) no era un artefacto de la fórmula explícita: **es una propiedad del flujo.** Lo que sobrevive como programa: el GAP-174.B es un enunciado de dinámica de partículas puro (sin ζ), decidible en principio, y su mitad aritmética (el censo de progenitores de ζ) es estadística de gaps — el objeto correcto para Phase 56.
 
 ---
 

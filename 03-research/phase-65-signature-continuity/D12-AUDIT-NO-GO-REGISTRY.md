@@ -2,7 +2,7 @@
 
 **Phase 65 / Signature-Continuity Package, deliverable D12.** Pure mathematics, continuous audit. This
 document runs the package against the forbidden-inference list (D0 §4), collects every `ASSUMED` ledger
-entry into one place, confirms the DH falsifier, and records the honest bottom line. It is the
+entry into one place, confirms the DH falsifier, and records the candid bottom line. It is the
 anti-self-deception gate: the package is only as sound as this audit.
 
 ---
@@ -82,12 +82,12 @@ moving to sourced/kernel level (D2–D6); the residue is now D8.5, not closednes
 shorting (D4).
 \item \textbf{Open:} D8.5 itself. Not a no-go; the single load-bearing input. If a future audit shows
 D8.5 is itself RH-strength-and-no-easier (i.e. equivalent to the Hurwitz-safe convergence M3 flagged),
-that would be the honest no-go for this route, and must be recorded here.
+that would be the candid no-go for this route, and must be recorded here.
 \end{itemize}
 
 ---
 
-## §5. Honest bottom line of the package
+## §5. Candid bottom line of the package
 
 \begin{resultbox}
 \textbf{Phase 65 delivers a complete reduction:} \emph{D8.5} $\Rightarrow$ \emph{RH}, with every other
@@ -97,7 +97,7 @@ positive-pole Feshbach shorting, the signature topology, and the index functor �
 constructed. The one remaining mathematical input is D8.5 (source-level local-factor convergence, using
 $\Lambda\ge0$), which Connes/Consani report tested and which we have flagged, not faked.
 
-\textbf{This is not a proof of RH by us.} It is an honest, audited reduction of RH to one concrete,
+\textbf{This is not a proof of RH by us.} It is an candid, audited reduction of RH to one concrete,
 falsifiable analytic statement, with the load-bearing assumption named explicitly. A false victory is
 worse than failure; the package's integrity is that it says exactly where it stands.
 \end{resultbox}

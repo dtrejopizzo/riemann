@@ -173,7 +173,7 @@ gives the language; M4 ties to $\zeta$.
 
 ---
 
-## 6. Falsification / honesty hooks (so the phase cannot self-deceive)
+## 6. Falsification / candor hooks (so the phase cannot self-deceive)
 
 - If M3 \emph{fails} — if a definite-signed rank-one renormalization *can* raise the index in the
   required setting — then the construction is impossible *as posed*, an off-line zero is consistent with

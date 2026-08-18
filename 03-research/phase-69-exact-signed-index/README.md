@@ -40,7 +40,7 @@ stable across gauges, so a proof can target the uniform structure directly rathe
    for off-line.
 3. **Falsifier throughout:** Davenport-Heilbronn and planted off-line zeros must break every mechanism.
 
-## Honesty contract
+## Candor contract
 
 Carried from Phase 67-68. No fabricated closure; every lemma passes a numerical gate; audit the audits.
 If the forcer lands on the Weil wall, characterize it precisely -- that is itself a result.

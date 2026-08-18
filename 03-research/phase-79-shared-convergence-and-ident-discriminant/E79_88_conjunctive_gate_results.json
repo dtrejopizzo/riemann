@@ -1,0 +1,187 @@
+{
+  "statement": "E79.88 conjunctive discriminant gate audit",
+  "parameters": {
+    "lambda": 6,
+    "max_n": 12,
+    "dps": 60,
+    "thresholds": {
+      "CLOSE_abs_c_lt": "1e-5",
+      "BAL_Rnet_lt": "1e-6",
+      "BAL_log_ratio_lt": "0.1",
+      "GEOM_outlier_fraction_gt": "5",
+      "GEOM_DN_lt": "5e-3"
+    }
+  },
+  "cases": [
+    {
+      "label": "zeta",
+      "planted": null,
+      "rows": [
+        {
+          "N": 8,
+          "abs_c": "3.92815194771585202e-7",
+          "R_net": "5.76227480447709626e-12",
+          "R_pm": "1.00000000001152455",
+          "balance_log_ratio": "1.15245590848e-11",
+          "outlier_fraction": "13.8935765216809393",
+          "mean_pair_defect": "0.0178341599636613987",
+          "D_N": "0.00128362628124091555",
+          "CLOSE": true,
+          "BAL": true,
+          "GEOM": true,
+          "ALL3": true
+        },
+        {
+          "N": 10,
+          "abs_c": "4.5609463089205588e-9",
+          "R_net": "2.67257223344132963e-14",
+          "R_pm": "0.999999999999946549",
+          "balance_log_ratio": "5.34017274845e-14",
+          "outlier_fraction": "11.108955080759029",
+          "mean_pair_defect": "0.0177531810976527468",
+          "D_N": "0.00159809639777927208",
+          "CLOSE": true,
+          "BAL": true,
+          "GEOM": true,
+          "ALL3": true
+        },
+        {
+          "N": 12,
+          "abs_c": "1.29281239790045469e-7",
+          "R_net": "1.46134700474454737e-16",
+          "R_pm": "1.00000000000000029",
+          "balance_log_ratio": "2.22044604925e-16",
+          "outlier_fraction": "11.8279808960288052",
+          "mean_pair_defect": "0.0140528837133243035",
+          "D_N": "0.00118810503980797771",
+          "CLOSE": true,
+          "BAL": true,
+          "GEOM": true,
+          "ALL3": true
+        }
+      ],
+      "summary": {
+        "ALL3_count": 3,
+        "CLOSE_count": 3,
+        "BAL_count": 3,
+        "GEOM_count": 3
+      }
+    },
+    {
+      "label": "plant_gamma1_beta030",
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 8,
+          "abs_c": "18.3100564640559102",
+          "R_net": "1.0",
+          "R_pm": "0.0",
+          "balance_log_ratio": "inf",
+          "outlier_fraction": "1.22843253108858608",
+          "mean_pair_defect": "0.130974408274942282",
+          "D_N": "0.106619130444940415",
+          "CLOSE": false,
+          "BAL": false,
+          "GEOM": false,
+          "ALL3": false
+        },
+        {
+          "N": 10,
+          "abs_c": "2.31606303137326847",
+          "R_net": "0.540751275562433661",
+          "R_pm": "0.298068047530853308",
+          "balance_log_ratio": "1.21043347113",
+          "outlier_fraction": "1.5732553663362185",
+          "mean_pair_defect": "0.0226704394135474922",
+          "D_N": "0.0144098916797863444",
+          "CLOSE": false,
+          "BAL": false,
+          "GEOM": false,
+          "ALL3": false
+        },
+        {
+          "N": 12,
+          "abs_c": "11.7754485767127307",
+          "R_net": "0.211305673930228035",
+          "R_pm": "0.651110898796302717",
+          "balance_log_ratio": "0.429075299828",
+          "outlier_fraction": "1.15840248005205404",
+          "mean_pair_defect": "0.0118683141750502985",
+          "D_N": "0.0102454150258008627",
+          "CLOSE": false,
+          "BAL": false,
+          "GEOM": false,
+          "ALL3": false
+        }
+      ],
+      "summary": {
+        "ALL3_count": 0,
+        "CLOSE_count": 0,
+        "BAL_count": 0,
+        "GEOM_count": 0
+      }
+    },
+    {
+      "label": "plant_gamma2_beta030",
+      "planted": {
+        "gamma": "21.022039638771554992",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 8,
+          "abs_c": "3.97876987770679786",
+          "R_net": "0.631494421327769695",
+          "R_pm": "4.42732624891660886",
+          "balance_log_ratio": "1.48779584629",
+          "outlier_fraction": "6.15156163245467284",
+          "mean_pair_defect": "0.237444539934373641",
+          "D_N": "0.0385990670534216137",
+          "CLOSE": false,
+          "BAL": false,
+          "GEOM": false,
+          "ALL3": false
+        },
+        {
+          "N": 10,
+          "abs_c": "1.78066366188818833",
+          "R_net": "0.32068589669499196",
+          "R_pm": "0.514364622962195064",
+          "balance_log_ratio": "0.664822881825",
+          "outlier_fraction": "1.09618431803798368",
+          "mean_pair_defect": "0.214751910242493013",
+          "D_N": "0.195908577333845498",
+          "CLOSE": false,
+          "BAL": false,
+          "GEOM": false,
+          "ALL3": false
+        },
+        {
+          "N": 12,
+          "abs_c": "145.992748810836919",
+          "R_net": "1.0",
+          "R_pm": "0.0",
+          "balance_log_ratio": "inf",
+          "outlier_fraction": "1.15706654249358037",
+          "mean_pair_defect": "0.0157907842145119017",
+          "D_N": "0.0136472567778870955",
+          "CLOSE": false,
+          "BAL": false,
+          "GEOM": false,
+          "ALL3": false
+        }
+      ],
+      "summary": {
+        "ALL3_count": 0,
+        "CLOSE_count": 0,
+        "BAL_count": 0,
+        "GEOM_count": 0
+      }
+    }
+  ]
+}

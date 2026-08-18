@@ -1,4 +1,4 @@
-# Demostración de E2-blando: lo que se prueba, y la sutileza que el intento revela Ataque riguroso a la convergencia local ρ̂_n(λ,N) → γ_n. Máxima precisión y honestidad:
+# Demostración de E2-blando: lo que se prueba, y la sutileza que el intento revela Ataque riguroso a la convergencia local ρ̂_n(λ,N) → γ_n. Máxima precisión y franqueza:
 al intentar la prueba COMPLETA, aparece dónde exactamente entra (y no entra) la
 condicionalidad. Eso es, en sí, el resultado. **[P]** probado · **[GAP]** paso a probar · **[!]** hallazgo del intento. --- ## 1. Enunciado y descomposición en dos límites Fijado n, sea ρ̂_n(λ,N) el n-ésimo cero real de ξ̂_{λ,N} y γ_n el n-ésimo cero de Ξ.
 Descomponemos el error en los dos límites independientes:
@@ -27,7 +27,7 @@ band-limited a densidad crítica. **Estructura de la prueba (lo que SÍ es incon
 R(λ,γ_n) = ‖proyección band-limited residual‖ es la asintótica del producto canónico
 truncado a tipo L/2 evaluado en γ_n. Numéricamente R ~ e^{−c(T*−γ_n)} ~ e^{−cλ²}
 (c≈11, medido). La prueba precisa = teoría extremal de de Branges / Beurling–Selberg a
-densidad crítica. **Este es el [GAP] honesto del término dominante.** Es clásico en
+densidad crítica. **Este es el [GAP] franco del término dominante.** Es clásico en
 sabor, no elemental. **[!] Crucial:** este esqueleto usa SÓLO la densidad (conteo de ceros) y el muestreo, NO
 la posición (parte real β) de los ceros. **El término de banda es incondicional.** --- ## 4. Límite λ: corrección Euler — **[!] donde el intento REVELA condicionalidad** El modelo usa primos ≤ λ². Falta la cola. El efecto sobre el cero ρ̂_n:
 ``` |ρ̂_n(λ,∞) − γ_n|_Euler ≈ |R_λ(½+iγ_n)| / |Ξ'(γ_n)|, R_λ(s) = −ζ'/ζ(s) − Σ_{n≤λ²} Λ(n) n^{−s}.
@@ -40,7 +40,7 @@ la posición (parte real β) de los ceros. **El término de banda es incondicion
 (λ²)^{β−½}.** Si todos β=½ (RH), es O(1) y la corrección es chica (consistente con el
 piso <1e-19 medido). PERO un cero off-line ρ₀ con β₀>½ contribuye (λ²)^{β₀−½}, que CRECE. **⟹ El término Euler NO es incondicional: hereda la sensibilidad RH de R_λ.** **Régimen donde SÍ es incondicional:** para Re s ≥ 1+ε la serie de Euler converge
 absolutamente, R_λ → 0 geométrico, **sin condición**. Pero ahí no hay ceros. La cola en
-la recta crítica (donde viven los γ_n) es condicional. --- ## 5. Veredicto honesto del intento de prueba completa Al intentar probar E2-blando con máxima precisión, la estructura se separa así: | Pieza | Estado | Condicional? |
+la recta crítica (donde viven los γ_n) es condicional. --- ## 5. Veredicto franco del intento de prueba completa Al intentar probar E2-blando con máxima precisión, la estructura se separa así: | Pieza | Estado | Condicional? |
 |---|---|---|
 | Límite N (banda completa, λ fijo) | **[P]** (Davis–Kahan + Plancherel–Pólya) | **No** |
 | Banda/horizonte (término dominante ~e^{−cλ²}) | **[GAP]** extremal de Branges | **No** (sólo densidad/conteo) |
@@ -56,7 +56,7 @@ blando/duro es más fina de lo que pensábamos: ``` ESQUELETO (densidad/Nyquist)
 tiene un esqueleto de aproximación pura (densidad/Nyquist) que NO toca posición de ceros
 — ése es real e incondicional. Pero la *última corrección* (Euler en el cero) reintroduce
 los ceros. **La buena noticia:** el esqueleto incondicional existe y es robusto; **la
-honesta:** no es la convergencia al cero exacto, es la convergencia a "el cero módulo la
+franca:** no es la convergencia al cero exacto, es la convergencia a "el cero módulo la
 cola de Euler". --- ## 6. Qué queda, con precisión 1. **[GAP] cerrable (clásico):** el residuo extremal de de Branges para el término de banda. Cerraría el esqueleto incondicional ~e^{−cλ²} con constante.
 2. **[!] RH-sensible:** la corrección Euler R_λ(½+iγ_n). Acotarla incondicionalmente con la fuerza necesaria = controlar (λ²)^{β−½} = regiones libres de ceros → RH-óptimo.
 3. **Pregunta limpia que queda (para el upgrade duro, §3 de eslabon2-soft-theorem):** ¿el esqueleto incondicional (banda, densidad) basta para forzar la convergencia uniforme-en-franja, dejando la corrección Euler como perturbación controlable? Si la banda domina lo suficiente (e^{−cλ²}) sobre la corrección Euler ((λ²)^{β−½}), podría haber un argumento donde el esqueleto incondicional "gana" antes de que la corrección importe. **Ése es el próximo cálculo: comparar e^{−cλ²} (banda) vs (λ²)^{Θ−½} (Euler/posición) y ver si la banda domina para todo Θ<1.**

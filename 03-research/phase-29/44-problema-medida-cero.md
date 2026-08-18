@@ -3,7 +3,7 @@
 **Programa:** CCM Zeta Spectral Triples — Phase 29/32  
 **Fecha:** junio 2026  
 **Prerrequisitos:** Docs 38–43 (especialmente Doc 42 §§3–17 y Doc 43 §§3–5, §15)  
-**Objetivo principal:** (1) Demostrar rigurosamente que la representación $C_\infty(\gamma_n) = \mathcal{P}[\mu_{\mathrm{off}}](\gamma_n)$ es exacta y bien definida, respondiendo la crítica del revisor. (2) Explorar tres rutas de ataque sobre la medida off-crítica $\mu_{\mathrm{off}}$ con diagnóstico honesto de cada una.
+**Objetivo principal:** (1) Demostrar rigurosamente que la representación $C_\infty(\gamma_n) = \mathcal{P}[\mu_{\mathrm{off}}](\gamma_n)$ es exacta y bien definida, respondiendo la crítica del revisor. (2) Explorar tres rutas de ataque sobre la medida off-crítica $\mu_{\mathrm{off}}$ con diagnóstico franco de cada una.
 
 ---
 
@@ -318,7 +318,7 @@ La secuencia $\{C_\infty(\gamma_n)\}_{n=1}^\infty$ es una sucesión de números 
 
 *Prueba.* Si $\mu_{\mathrm{off}} \neq 0$, existe $\rho_0 \in \mathcal{Z}_{\mathrm{off}}$ con $\sigma_0-1/2 = \delta > 0$. Por el Corolario 13.2, para cualquier $n$ grande hay $\gamma_{n^*} \sim \gamma_0$ con $C_\infty(\gamma_{n^*}) \geq 4\delta\log^2\gamma_0/(\delta\log^2\gamma_0+\pi^2) > 0$. Pero esto solo da una cota inferior para $\gamma_{n^*}$ fijo; no impide que $C_\infty(\gamma_n) \to 0$ para $n$ fuera del rango de $\gamma_0$... $\square$ (parcial).
 
-*Nota honesta.* La Proposición 14.1 requiere una forma más fuerte del criterio: si $C_\infty(\gamma_n) \to 0$ para la subsucesión $\gamma_n \to \infty$ (no solo puntualmente), entonces por continuidad de $\mathcal{P}[\mu_{\mathrm{off}}]$ y densidad de $\{\gamma_n\}$, se puede concluir $C_\infty \equiv 0$. La precisión de este argumento es la tarea de Doc 45.
+*Nota franca.* La Proposición 14.1 requiere una forma más fuerte del criterio: si $C_\infty(\gamma_n) \to 0$ para la subsucesión $\gamma_n \to \infty$ (no solo puntualmente), entonces por continuidad de $\mathcal{P}[\mu_{\mathrm{off}}]$ y densidad de $\{\gamma_n\}$, se puede concluir $C_\infty \equiv 0$. La precisión de este argumento es la tarea de Doc 45.
 
 ---
 

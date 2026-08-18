@@ -75,7 +75,7 @@ moments.  Therefore the next finite theorem should not claim:
 delta_A is obtained by imposing two simple moment cancellations.
 ```
 
-The honest object is:
+The candid object is:
 
 ```text
 P_{bad,L} = the rank-three projector obtained from the canonical

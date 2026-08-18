@@ -4,7 +4,7 @@
 **Fecha:** 2026-06-11
 **Mandato (Problema A / Fase A):** representar $I(0^+)=\sum_j b_j^2$ como funcional aritmético natural — idealmente $I=\|F\|_{\mathcal H}^2$ — de modo que $I<\infty$ (y en última instancia $I=0$) sea una pregunta de regularidad/pertenencia y no de localización de ceros. NO se intenta probar RH ni positividad alguna.
 **Maquinaria aceptada (no re-derivada):** ley de balance $\dot I=-2\kappa-D$ (Fase 54); $E(T)=\sum_{\gamma\le T}b^2\ll T/\log T$ (Selberg, certificado); RH $\iff I(0^+)=0$; techo $T/\log T$ para certificación por ventanas (Teorema 172.9 — aquí no se reintentan ventanas).
-**Contrato:** [DEFINICIÓN-NUEVA] libre; [TEOREMA]/[PROP]/[LEMA] con prueba completa o sin etiqueta; [PUENTE] honesto; [GAP] declarado.
+**Contrato:** [DEFINICIÓN-NUEVA] libre; [TEOREMA]/[PROP]/[LEMA] con prueba completa o sin etiqueta; [PUENTE] franco; [GAP] declarado.
 
 **Coordenadas (idénticas al Doc 170/175).** Cero off-crítico $\rho=\tfrac12+b+i\gamma$, $b\in(0,\tfrac12)$, $\gamma>0$; un representante por cuádruplo $\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$. Ceros en línea: pares $\{\tfrac12\pm i\gamma\}$.
 $$I=I(0^+):=\sum_{\text{cuád. }j} b_j^2,\qquad I(T):=\sum_{\gamma_j\le T}b_j^2 .$$
@@ -153,7 +153,7 @@ donde $C(t):=\sum_{\mathrm{Im}\rho>0}e^{-\gamma_\rho t}$ (la sombra de Laplace) 
 
 *Prueba.* $e^{i(\frac12\pm b+i\gamma)t}=e^{it/2}e^{-\gamma t}e^{\pm ibt}$; sumar y usar $2\cos(bt)=2-b^2t^2+2\cdot\frac{(bt)^4}{4!}\cos(\xi)$. $\square$
 
-**Lectura honesta.** La sonda de Cramér está en la clase $X$ (familia $\varphi_t(\gamma)=e^{-\gamma t}$): su peso es $w_t(\gamma)=-2\,\partial_\gamma^2$-curvatura $=-2t^2e^{-\gamma t}$, de masa total $|\int w_t|=2t\to0$ — el límite $t\to0^+$ ilustra la ley de masa (173.A.b) en acción: la ventana de Laplace pierde toda su masa de peso exactamente cuando intenta capturar $I(0^+)$. Y el coeficiente $t^2$ de $V$ está contaminado por el coeficiente $t^2$ de la fluctuación de la sombra $C(t)$ (las ordenadas verdaderas), del mismo tamaño: la soldadura otra vez. **Cálculo cerrado pedido por el director: sí, la singularidad de Cramér en $t=0$ porta $I$ en su coeficiente de segundo orden ($-t^2I_L(t)$, Prop. 173.Cr), y no, no es extraíble dentro de $X$ (Teorema 173.A aplicado a $\varphi_t$).**
+**Lectura franca.** La sonda de Cramér está en la clase $X$ (familia $\varphi_t(\gamma)=e^{-\gamma t}$): su peso es $w_t(\gamma)=-2\,\partial_\gamma^2$-curvatura $=-2t^2e^{-\gamma t}$, de masa total $|\int w_t|=2t\to0$ — el límite $t\to0^+$ ilustra la ley de masa (173.A.b) en acción: la ventana de Laplace pierde toda su masa de peso exactamente cuando intenta capturar $I(0^+)$. Y el coeficiente $t^2$ de $V$ está contaminado por el coeficiente $t^2$ de la fluctuación de la sombra $C(t)$ (las ordenadas verdaderas), del mismo tamaño: la soldadura otra vez. **Cálculo cerrado pedido por el director: sí, la singularidad de Cramér en $t=0$ porta $I$ en su coeficiente de segundo orden ($-t^2I_L(t)$, Prop. 173.Cr), y no, no es extraíble dentro de $X$ (Teorema 173.A aplicado a $\varphi_t$).**
 
 ### 5.2. Funcionales cuadráticas: la obstrucción sube de orden
 
@@ -192,7 +192,7 @@ $$\iint_R u\;-\;2\pi\Big[\sum_{\rho\in R,\ \beta>1/2} v(\rho)\;-\;v(1)\Big]\;=\;
 Entonces la familia de Green con $v_m=(\sigma-\tfrac12)_+^m$ da exactamente:
 - $m=0$: densidades $N(\sigma,T)$ — la entrada de los teoremas de densidad;
 - $m=1$: $\sum_{\gamma\le T}b_j=\frac1{2\pi}\int_0^T\log|\zeta(\tfrac12+it)|\,dt+O(\log T)$ — **lema de Littlewood clásico** (Littlewood 1924; Titchmarsh §9.9): el primer momento es la masa de $\log|\zeta|$ **sobre la línea**;
-- $m=2$: **[TEOREMA 173.C]** — el segundo momento ($=I$) es la masa de $\log|\zeta|$ **sobre la semibanda**. La pieza $m=2$ ensamblada como representación de $I$ es la aportación de este documento; los ingredientes son clásicos (es la misma maquinaria con la que Selberg prueba $E(T)\ll T/\log T$ — honestidad de procedencia).
+- $m=2$: **[TEOREMA 173.C]** — el segundo momento ($=I$) es la masa de $\log|\zeta|$ **sobre la semibanda**. La pieza $m=2$ ensamblada como representación de $I$ es la aportación de este documento; los ingredientes son clásicos (es la misma maquinaria con la que Selberg prueba $E(T)\ll T/\log T$ — franqueza de procedencia).
 
 **Por qué 173.C esquiva 173.A:** $\log|\zeta|=\mathrm{Re}\log\zeta$ no es holomorfa, y la restricción a $\sigma>\tfrac12$ selecciona medio cuádruplo — exactamente las dos operaciones que la clase $X$ (y $X_2$, Prop. 173.D) prohíben. El precio cambió de forma: ya no hay peso multiplicativo en $\gamma$ (es peso 1), hay (a) un **flujo aditivo de borde** a la altura del corte, $O(\log^2T)$ en alturas buenas, y (b) un integrando **con signo** (todavía no una norma).
 
@@ -233,7 +233,7 @@ Primer orden en $b$, peso Poisson $1/(1+\gamma^2)$. La condición de Blaschke es
 
 **(b) $I$ NO es un defecto de Branges natural: el cálculo de la varianza de Cauchy.** La medida de fase de $E$ ve un cero en línea como $\delta_\gamma$ y un cuádruplo off como el par de densidades de Cauchy $\frac1\pi\frac{b}{(t\mp\gamma)^2+b^2}\,dt$. El segundo momento de Cauchy es **infinito**; truncado:
 $$\int_{|t-\gamma|\le1}(t-\gamma)^2\,\frac{b/\pi}{(t-\gamma)^2+b^2}\,dt\;=\;\frac2\pi\,b\,\Big(1-b\arctan\frac1b\Big)\;=\;\frac{2b}\pi+O(b^2),$$
-de nuevo **lineal** en $b$. La teoría HB/dB mide la borrosidad de fase en primer momento; $b^2$ no es su moneda. Veredicto honesto: de Branges es el hogar natural de $J:=\sum b_j$ (y de $\mathfrak B$), no de $I$.
+de nuevo **lineal** en $b$. La teoría HB/dB mide la borrosidad de fase en primer momento; $b^2$ no es su moneda. Veredicto franco: de Branges es el hogar natural de $J:=\sum b_j$ (y de $\mathfrak B$), no de $I$.
 
 **(c) Pero $J$ controla $I$ y $J$ ya tiene representación (es el $m=1$ de §6.2).** Como $b_j<\tfrac12$: $I(T)\le\tfrac12 J(T)$, y $J(T)=\frac1{2\pi}\int_0^T\log|\zeta(\tfrac12+it)|\,dt+O(\log T)$ (Littlewood). **Propuesta de pivote (se registra, no se ejecuta):** si la Fase A admite como objetivo intermedio la energía de primer orden $J$ — también equivalente a RH ($J=0\iff$RH) y cota superior de $2I$ — entonces el hogar de Branges/HB y la representación de Littlewood en la línea (una sola integral, no doble) están disponibles desde ya, con la masa de Blaschke $\mathfrak B$ como versión pesada exacta.
 

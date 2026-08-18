@@ -4,7 +4,7 @@
 that the analytic side (M2) is RH-equivalent (hence not an independent source of positivity), and
 conclude that the **only non-circular input is M3** — a single-class arithmetic Hodge-index
 positivity. We then connect M3 to the program's Abboud thread and propose the realization that would
-close it, with the remaining gap stated honestly.*
+close it, with the remaining gap stated candidly.*
 
 ---
 
@@ -50,7 +50,7 @@ lesson as monotone continuation (Connes): the purely analytic/Hilbert-geometric 
 RH-equivalent. **The non-circular input must be arithmetic** — it must use a structure that ζ has and
 the analytic data alone does not, namely the Euler product *as arithmetic geometry*. That is M3.
 
-*(This is honest and important: it rules out the analytic route (M2) as self-sufficient and forces
+*(This is candid and important: it rules out the analytic route (M2) as self-sufficient and forces
 the arithmetic route (M3). It matches every prior wall in the program — soft/analytic structure is
 DH-symmetric.)*
 
@@ -101,7 +101,7 @@ RH. The **degree-zero condition** is exactly the marginal certificate `μ_max=1`
 
 ---
 
-## §4. The honest remaining gap: the realization map `f ↦ Z_f`
+## §4. The candid remaining gap: the realization map `f ↦ Z_f`
 
 Everything in §3 is in place **except one map**: the **realization**
 ```
@@ -114,7 +114,7 @@ the precise point the program previously flagged as the risk in the Abboud threa
 
 **Why it is hard, and what must be shown.** The arithmetic Chow group / intersection theory of
 `\overline{\mathrm{Spec}\,ℤ}×\overline{\mathrm{Spec}\,ℤ}` is **not** classically defined — there is no
-Weil cohomology / no honest second factor over `\mathrm{Spec}\,ℤ` (this is MW-5). The Connes–Consani
+Weil cohomology / no candid second factor over `\mathrm{Spec}\,ℤ` (this is MW-5). The Connes–Consani
 arithmetic site `\widehat{\mathrm{Spec}\,ℤ}` is the candidate where `\bar X = \widehat{\mathrm{Spec}\,ℤ}^2`
 acquires the needed intersection theory and Frobenius correspondences `F_t`. **Sub-problem M3a (the
 single remaining construction):** define `\widehat{\mathrm{CH}}^1(\widehat{\mathrm{Spec}\,ℤ}^2)` with a
@@ -148,7 +148,7 @@ pairing and one realization map**, not a general cohomology.
    is MW-5, now localized to a single construction + one map, with a concrete proposed path
    (the two-variable kernel + Connes–Consani Frobenius).
 
-**Honest:** M3a is **not** constructed here; it is the open frontier (the Connes–Consani program). No
+**Candid:** M3a is **not** constructed here; it is the open frontier (the Connes–Consani program). No
 false victory — RH remains open. But the obstruction is now a **single, named, localized construction**
 with all surrounding structure (model space, Lax–Phillips realization, Kreĭn–Langer index, Abboud
 inequality, degree-balance `μ_max=1`) **rigorously in place around it**.

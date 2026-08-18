@@ -13,7 +13,7 @@ engine after** — so the engine measures the surviving object $\{R_p\}$, not th
 > and the identity **gradient $=$ anatomy density**, which makes the D2-confirmed gradient *literally* the
 > anatomy profile. **What T3 does NOT yet establish:** any *deep* structural statement about the profile (a
 > sum rule beyond the trivial one, a concentration theorem, a relation to the local Euler data) — that is the
-> open content (T3-open), and the honest target of the validated-engine phase.
+> open content (T3-open), and the candid target of the validated-engine phase.
 
 ---
 
@@ -86,7 +86,7 @@ definition of $\mu_u$. $\square$
 
 ---
 
-## 4. T3.4 — The observed band: honest separation of basis vs arithmetic
+## 4. T3.4 — The observed band: candid separation of basis vs arithmetic
 
 The anatomy density is $\big|\widehat{u_0}(\log p)\big|^2=\big|\sum_{k<J}(u_0)_k\,\widehat{\phi_k}(\log p)\big|^2$.
 For the **Hermite basis** $\phi_k\leftrightarrow h_k(\sigma\,\cdot)$ (Fourier eigenfunctions), each
@@ -155,6 +155,6 @@ engine measures the surviving anatomy profile rather than rescuing the retired s
 - T3.1 anatomy identity — ✅ proved (exact Rayleigh decomposition).
 - T3.2 mass/variational form — ✅ proved.
 - T3.3 gradient = anatomy density — ✅ proved (via D2).
-- T3.4 basis-vs-arithmetic (band) — ✅ honest separation; band demoted to lead.
+- T3.4 basis-vs-arithmetic (band) — ✅ candid separation; band demoted to lead.
 - T3.5 / T3-open — ⬜ the deep targets (concentration; $R_p\leftrightarrow L_p$; discriminant $\Phi$).
 - Phase 2 (Slepian re-derivation + $R_p\leftrightarrow L_p$) — ⬜ next, analytic.

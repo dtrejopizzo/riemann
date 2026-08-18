@@ -1,0 +1,453 @@
+{
+  "statement": "E77.7h Krylov window-resolution audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "refs": [
+      14,
+      16
+    ],
+    "lanczos_steps": 32,
+    "dps": 70,
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "Finite audit. Chebyshev counts are generic interval estimates; they are not proof of impossibility for cyclic pole-capture routes.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 18,
+      "max_dim": 37,
+      "planted": null,
+      "references": [
+        {
+          "reference_modes": 14,
+          "mu_ref": "1.70904698080237686366971e-41",
+          "mu_full_max_section": "2.52719644523900428303032e-49",
+          "delta": "1.70904695553041241127966e-41",
+          "sigma_delta": "1.70904695553041241127966e-41",
+          "shifted_min_denom_a": "3.84344899511797048729195e-46",
+          "shifted_max_denom_b": "4.28543668124384257329642",
+          "ambient_condition_b_over_a": "1.1149976718013674992517e+46",
+          "ambient_condition_log10": "46.047273960545727",
+          "chebyshev_steps_1e_minus_2": 279733805404800493060640,
+          "chebyshev_steps_1e_minus_8": 1009147518216695398205369,
+          "top_support_counts": {
+            "0.5": {
+              "count": 1,
+              "min_denom": "1.10698669266344784730233e-28",
+              "max_denom": "1.10698669266344784730233e-28",
+              "window_condition": "1.0"
+            },
+            "0.9": {
+              "count": 3,
+              "min_denom": "3.74246113512353347812654e-33",
+              "max_denom": "8.21584894491545533115011e-25",
+              "window_condition": "219530641.68946303550371"
+            },
+            "0.99": {
+              "count": 4,
+              "min_denom": "3.74246113512353347812654e-33",
+              "max_denom": "7.66250576649722127241038e-21",
+              "window_condition": "2047450992766.09923431586"
+            },
+            "0.999": {
+              "count": 6,
+              "min_denom": "4.98466957836898901584417e-38",
+              "max_denom": "2.1397881155294601691413e-17",
+              "window_condition": "429273812815013201547.662"
+            }
+          },
+          "lanczos_steps": 32,
+          "top_pole_capture": [
+            {
+              "exact_j": 7,
+              "exact_kappa": "1.10698669266327694260678e-28",
+              "exact_fraction": "0.631996354054637068089407",
+              "nearest_ritz_j": 3,
+              "nearest_ritz_kappa": "1.10698669266327694260678e-28",
+              "kappa_error": "1.23233525031527302744506e-71",
+              "relative_kappa_error": "1.11323402393430992361385e-43",
+              "nearest_ritz_weight": "1.19566899599085186035868e-69"
+            },
+            {
+              "exact_j": 5,
+              "exact_kappa": "3.74246111803306392282242e-33",
+              "exact_fraction": "0.188200846578080812692423",
+              "nearest_ritz_j": 2,
+              "nearest_ritz_kappa": "3.74246111803306392282242e-33",
+              "kappa_error": "1.56865783468008977882258e-70",
+              "relative_kappa_error": "4.19151404705717770700026e-38",
+              "nearest_ritz_weight": "1.20374048323530242091664e-74"
+            },
+            {
+              "exact_j": 9,
+              "exact_kappa": "8.21584894491545516024541e-25",
+              "exact_fraction": "0.158471417756550434265791",
+              "nearest_ritz_j": 5,
+              "nearest_ritz_kappa": "8.21584894491545516024541e-25",
+              "kappa_error": "6.14092736732382428047957e-71",
+              "relative_kappa_error": "7.47448913495940282175651e-47",
+              "nearest_ritz_weight": "2.22514022174130591955315e-66"
+            },
+            {
+              "exact_j": 11,
+              "exact_kappa": "7.66250576649722127239329e-21",
+              "exact_fraction": "0.0141722031271043602525764",
+              "nearest_ritz_j": 7,
+              "nearest_ritz_kappa": "7.66250576649722127239329e-21",
+              "kappa_error": "2.08619283087915217914661e-70",
+              "relative_kappa_error": "2.72259870915936453953483e-50",
+              "nearest_ritz_weight": "1.85593250325348917896417e-63"
+            },
+            {
+              "exact_j": 3,
+              "exact_kappa": "4.98296053141345860343289e-38",
+              "exact_fraction": "0.00517015931486270397508987",
+              "nearest_ritz_j": 1,
+              "nearest_ritz_kappa": "4.98296053141345860343289e-38",
+              "kappa_error": "3.47969897145246476627578e-70",
+              "relative_kappa_error": "6.98319593244985813535613e-33",
+              "nearest_ritz_weight": "4.40447648874037319903863e-81"
+            },
+            {
+              "exact_j": 13,
+              "exact_kappa": "2.13978811552946016914129e-17",
+              "exact_fraction": "0.0018143936997978944887146",
+              "nearest_ritz_j": 9,
+              "nearest_ritz_kappa": "2.13978811552946016914129e-17",
+              "kappa_error": "6.53595799785577376237869e-71",
+              "relative_kappa_error": "3.05448840958654628867255e-54",
+              "nearest_ritz_weight": "6.63523479240390460826956e-61"
+            }
+          ]
+        },
+        {
+          "reference_modes": 16,
+          "mu_ref": "1.54136825009323148669192e-45",
+          "mu_full_max_section": "2.52719644523900428303032e-49",
+          "delta": "1.54111553044870758626361e-45",
+          "sigma_delta": "1.54111553044870758626361e-45",
+          "shifted_min_denom_a": "3.84344899511797048729195e-46",
+          "shifted_max_denom_b": "4.28543668124384257329642",
+          "ambient_condition_b_over_a": "1.1149976718013674992517e+46",
+          "ambient_condition_log10": "46.047273960545727",
+          "chebyshev_steps_1e_minus_2": 279733805404800493060640,
+          "chebyshev_steps_1e_minus_8": 1009147518216695398205369,
+          "top_support_counts": {
+            "0.5": {
+              "count": 1,
+              "min_denom": "4.98467827853648522125921e-38",
+              "max_denom": "4.98467827853648522125921e-38",
+              "window_condition": "1.0"
+            },
+            "0.9": {
+              "count": 2,
+              "min_denom": "3.23441292561801441732901e-43",
+              "max_denom": "4.98467827853648522125921e-38",
+              "window_condition": "154113.849813534226162876"
+            },
+            "0.99": {
+              "count": 3,
+              "min_denom": "3.23441292561801441732901e-43",
+              "max_denom": "3.74246113833989455426082e-33",
+              "window_condition": "11570758664.4176082955035"
+            },
+            "0.999": {
+              "count": 4,
+              "min_denom": "3.23441292561801441732901e-43",
+              "max_denom": "1.10698669266355585841508e-28",
+              "window_condition": "342252742034178.80834358"
+            }
+          },
+          "lanczos_steps": 32,
+          "top_pole_capture": [
+            {
+              "exact_j": 3,
+              "exact_kappa": "4.98467812442493217638845e-38",
+              "exact_fraction": "0.881683556744537168323069",
+              "nearest_ritz_j": 1,
+              "nearest_ritz_kappa": "4.98467812442493217638845e-38",
+              "kappa_error": "1.4137158675893113463828e-65",
+              "relative_kappa_error": "2.83612267893908924366122e-28",
+              "nearest_ritz_weight": "6.77306232039289073931806e-83"
+            },
+            {
+              "exact_j": 1,
+              "exact_kappa": "3.21900177031352734146637e-43",
+              "exact_fraction": "0.0644401786262443964177313",
+              "nearest_ritz_j": 0,
+              "nearest_ritz_kappa": "3.21900177031352763955914e-43",
+              "kappa_error": "2.98092766216403963898136e-59",
+              "relative_kappa_error": "9.26041013600840754398922e-17",
+              "nearest_ritz_weight": "3.21208771596828157091601e-89"
+            },
+            {
+              "exact_j": 5,
+              "exact_kappa": "3.74246113833835343873037e-33",
+              "exact_fraction": "0.0517564487262190111345764",
+              "nearest_ritz_j": 2,
+              "nearest_ritz_kappa": "3.74246113833835343873037e-33",
+              "kappa_error": "2.46985899789495672541883e-70",
+              "relative_kappa_error": "6.59955816933765153060938e-38",
+              "nearest_ritz_weight": "2.98508681286533491999114e-79"
+            },
+            {
+              "exact_j": 7,
+              "exact_kappa": "1.10698669266355584300393e-28",
+              "exact_fraction": "0.00205919953774526700446164",
+              "nearest_ritz_j": 3,
+              "nearest_ritz_kappa": "1.10698669266355584300393e-28",
+              "kappa_error": "5.67374252789250321684803e-71",
+              "relative_kappa_error": "5.1253936162870495782489e-43",
+              "nearest_ritz_weight": "3.51298284706031444776686e-76"
+            },
+            {
+              "exact_j": 9,
+              "exact_kappa": "8.2158489449154553582182e-25",
+              "exact_fraction": "0.0000590695244144620218964743",
+              "nearest_ritz_j": 5,
+              "nearest_ritz_kappa": "8.2158489449154553582182e-25",
+              "kappa_error": "3.2031774568384701258259e-71",
+              "relative_kappa_error": "3.89877841999617266370811e-47",
+              "nearest_ritz_weight": "7.47913060292574644637626e-74"
+            },
+            {
+              "exact_j": 11,
+              "exact_kappa": "7.66250576649722127241062e-21",
+              "exact_fraction": "0.00000146579673441394617612741",
+              "nearest_ritz_j": 7,
+              "nearest_ritz_kappa": "7.66250576649722127241062e-21",
+              "kappa_error": "1.16804846355512534267759e-70",
+              "relative_kappa_error": "1.52436878894393054319225e-50",
+              "nearest_ritz_weight": "1.73093102086277602191659e-71"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 18,
+      "max_dim": 37,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "references": [
+        {
+          "reference_modes": 14,
+          "mu_ref": "-1.72414565172047431765303",
+          "mu_full_max_section": "-1.74469368905726418414397",
+          "delta": "0.0205480373367898664909337",
+          "sigma_delta": "0.0205480373367898664909337",
+          "shifted_min_denom_a": "0.101592192863194241192932",
+          "shifted_max_denom_b": "25.332594296400865419006",
+          "ambient_condition_b_over_a": "249.355719002090680038466",
+          "ambient_condition_log10": "2.39681933326249263",
+          "chebyshev_steps_1e_minus_2": 42,
+          "chebyshev_steps_1e_minus_8": 151,
+          "top_support_counts": {
+            "0.5": {
+              "count": 2,
+              "min_denom": "1.73761904685104267515312",
+              "max_denom": "2.52936225246118373271963",
+              "window_condition": "1.45564832351772281931523"
+            },
+            "0.9": {
+              "count": 3,
+              "min_denom": "1.73761904685104267515312",
+              "max_denom": "5.17630008800626241753328",
+              "window_condition": "2.9789614112407922633538"
+            },
+            "0.99": {
+              "count": 4,
+              "min_denom": "1.73761904685104267515312",
+              "max_denom": "5.17630008800626241753328",
+              "window_condition": "2.9789614112407922633538"
+            },
+            "0.999": {
+              "count": 6,
+              "min_denom": "1.73761904685104267515312",
+              "max_denom": "5.17630008800626241753328",
+              "window_condition": "2.9789614112407922633538"
+            }
+          },
+          "lanczos_steps": 32,
+          "top_pole_capture": [
+            {
+              "exact_j": 27,
+              "exact_kappa": "2.5088142151243938662287",
+              "exact_fraction": "0.40431963889535713933982",
+              "nearest_ritz_j": 23,
+              "nearest_ritz_kappa": "2.5088142151243938662287",
+              "kappa_error": "2.17336297891841096820219e-70",
+              "relative_kappa_error": "8.66290921749520496545394e-71",
+              "nearest_ritz_weight": "0.0210138784504967946904026"
+            },
+            {
+              "exact_j": 1,
+              "exact_kappa": "1.71707100951425280866218",
+              "exact_fraction": "0.400133787439622673453527",
+              "nearest_ritz_j": 1,
+              "nearest_ritz_kappa": "1.71707100951425280866218",
+              "kappa_error": "2.71670372364801371025274e-70",
+              "relative_kappa_error": "1.58217319411650301841903e-70",
+              "nearest_ritz_weight": "0.0142866412559096954494295"
+            },
+            {
+              "exact_j": 31,
+              "exact_kappa": "5.15575205066947255104235",
+              "exact_fraction": "0.130233671285074242299816",
+              "nearest_ritz_j": 27,
+              "nearest_ritz_kappa": "5.15575205066947255104235",
+              "kappa_error": "1.44890865261227397880146e-70",
+              "relative_kappa_error": "2.81027605356648931736355e-71",
+              "nearest_ritz_weight": "0.0138520189056283121357413"
+            },
+            {
+              "exact_j": 25,
+              "exact_kappa": "1.81529107123288602032779",
+              "exact_fraction": "0.0583296975590051859654643",
+              "nearest_ritz_j": 21,
+              "nearest_ritz_kappa": "1.81529107123288602032779",
+              "kappa_error": "4.70895312098989043110474e-70",
+              "relative_kappa_error": "2.59404852236271083062828e-70",
+              "nearest_ritz_weight": "0.00220036479667130719212491"
+            },
+            {
+              "exact_j": 22,
+              "exact_kappa": "1.72748405960500658770122",
+              "exact_fraction": "0.0040047577127833583431355",
+              "nearest_ritz_j": 18,
+              "nearest_ritz_kappa": "1.72748405960500658770122",
+              "kappa_error": "3.26004446837761645230328e-70",
+              "relative_kappa_error": "1.88716327091494755224943e-70",
+              "nearest_ritz_weight": "0.000143845405694841752400739"
+            },
+            {
+              "exact_j": 21,
+              "exact_kappa": "1.72452999910949115080642",
+              "exact_fraction": "0.00210409278913009827904995",
+              "nearest_ritz_j": 17,
+              "nearest_ritz_kappa": "1.72452999910949115080642",
+              "kappa_error": "1.44890865261227397880146e-70",
+              "relative_kappa_error": "8.40175962935094262596128e-71",
+              "nearest_ritz_weight": "0.0000754484091024717344433028"
+            }
+          ]
+        },
+        {
+          "reference_modes": 16,
+          "mu_ref": "-1.74001868764442608712258",
+          "mu_full_max_section": "-1.74469368905726418414397",
+          "delta": "0.00467500141283809702138564",
+          "sigma_delta": "0.00467500141283809702138564",
+          "shifted_min_denom_a": "0.101592192863194241192932",
+          "shifted_max_denom_b": "25.3325943340949655335724",
+          "ambient_condition_b_over_a": "249.355719373124113339052",
+          "ambient_condition_log10": "2.3968193339087091",
+          "chebyshev_steps_1e_minus_2": 42,
+          "chebyshev_steps_1e_minus_8": 151,
+          "top_support_counts": {
+            "0.5": {
+              "count": 1,
+              "min_denom": "2.53538510172378870018559",
+              "max_denom": "2.53538510172378870018559",
+              "window_condition": "1.0"
+            },
+            "0.9": {
+              "count": 2,
+              "min_denom": "1.83516719480038089803501",
+              "max_denom": "2.53538510172378870018559",
+              "window_condition": "1.38155537484941449349956"
+            },
+            "0.99": {
+              "count": 6,
+              "min_denom": "1.74564238330454598325427",
+              "max_denom": "5.17894757318920239761655",
+              "window_condition": "2.96678610849567096303689"
+            },
+            "0.999": {
+              "count": 8,
+              "min_denom": "1.74467613936701143717629",
+              "max_denom": "5.94055447681505344861697",
+              "window_condition": "3.40496115168420593778058"
+            }
+          },
+          "lanczos_steps": 32,
+          "top_pole_capture": [
+            {
+              "exact_j": 27,
+              "exact_kappa": "2.53071010031095060316421",
+              "exact_fraction": "0.507219187022200354250908",
+              "nearest_ritz_j": 23,
+              "nearest_ritz_kappa": "2.53071010031095060316421",
+              "kappa_error": "7.2445432630613698940073e-71",
+              "relative_kappa_error": "2.86265236866570628272328e-71",
+              "nearest_ritz_weight": "0.00601203297704931827744515"
+            },
+            {
+              "exact_j": 25,
+              "exact_kappa": "1.83049219338754280101363",
+              "exact_fraction": "0.420063054418296851755106",
+              "nearest_ritz_j": 21,
+              "nearest_ritz_kappa": "1.83049219338754280101363",
+              "kappa_error": "1.99224939734187672085201e-70",
+              "relative_kappa_error": "1.08836814739700311875395e-70",
+              "nearest_ritz_weight": "0.00360389284562231414541861"
+            },
+            {
+              "exact_j": 21,
+              "exact_kappa": "1.74096738189170788623289",
+              "exact_fraction": "0.0377029310595022983767519",
+              "nearest_ritz_j": 17,
+              "nearest_ritz_kappa": "1.74096738189170788623289",
+              "kappa_error": "9.05567907882671236750912e-71",
+              "relative_kappa_error": "5.20152139150760729979049e-71",
+              "nearest_ritz_weight": "0.000307689118958011299367886"
+            },
+            {
+              "exact_j": 31,
+              "exact_kappa": "5.17427257177636430059517",
+              "exact_fraction": "0.00953474981744010047752668",
+              "nearest_ritz_j": 27,
+              "nearest_ritz_kappa": "5.17427257177636430059517",
+              "kappa_error": "1.44890865261227397880146e-70",
+              "relative_kappa_error": "2.80021709817821485598595e-71",
+              "nearest_ritz_weight": "0.000230851426841790812797505"
+            },
+            {
+              "exact_j": 22,
+              "exact_kappa": "1.74364415952360937213958",
+              "exact_fraction": "0.0094397142718416340513631",
+              "nearest_ritz_j": 18,
+              "nearest_ritz_kappa": "1.74364415952360937213958",
+              "kappa_error": "1.63002223418880822615164e-70",
+              "relative_kappa_error": "9.34836517695305205944862e-71",
+              "nearest_ritz_weight": "0.0000771545091591433429681631"
+            },
+            {
+              "exact_j": 29,
+              "exact_kappa": "4.85920836121637657184839",
+              "exact_fraction": "0.00815811662953060419259272",
+              "nearest_ritz_j": 25,
+              "nearest_ritz_kappa": "4.85920836121637657184839",
+              "kappa_error": "1.44890865261227397880146e-70",
+              "relative_kappa_error": "2.98177922185163786640545e-71",
+              "nearest_ritz_weight": "0.000185504653268361468921834"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

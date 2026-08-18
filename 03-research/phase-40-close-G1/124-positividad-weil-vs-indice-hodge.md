@@ -229,7 +229,7 @@ Por tanto, en la clasificación a/b/c/d del encargo: **NO es (b); la parte globa
 - Lo que existe en fragmento es del **lado espectral** (positividad de Weil incondicional en ventana), cuya extensión es RH (circular), no Hodge.
 - La estructura geométrica que G2 necesita —un espacio de clases con forma bilineal simétrica indefinida de signatura (1,ρ−1) y una polarización que la vuelva definida en (H)^⊥— **está ausente**, confirmando por una tercera ruta independiente los hallazgos de Doc 122 (falta una polarización positiva, Pedido 122.A) y Doc 123 (falta la norma de intersección = C-rank = G2). **Tres derivaciones independientes, mismo veredicto.**
 
-Esto **refuta** (honestamente, evitando la falsa victoria que el encargo §5 advertía como de máximo riesgo) la hipótesis optimista de que "la positividad de Weil de CC YA ES el índice de Hodge que falta". No lo es. Es la positividad-espectral, RH-equivalente. El que CC la realicen operatorialmente (prolate, Sonine, Jacobi) es matemática valiosa para *estudiar* la forma de Weil, pero **no la convierte en una forma de intersección geométrica**, y por tanto no provee G2.
+Esto **refuta** (francamente, evitando la falsa victoria que el encargo §5 advertía como de máximo riesgo) la hipótesis optimista de que "la positividad de Weil de CC YA ES el índice de Hodge que falta". No lo es. Es la positividad-espectral, RH-equivalente. El que CC la realicen operatorialmente (prolate, Sonine, Jacobi) es matemática valiosa para *estudiar* la forma de Weil, pero **no la convierte en una forma de intersección geométrica**, y por tanto no provee G2.
 
 ### 6.3. Lo que faltaría leer / pedir (lista concreta)
 
@@ -240,7 +240,7 @@ Esto **refuta** (honestamente, evitando la falsa victoria que el encargo §5 adv
 
 ---
 
-## 7. Síntesis y honestidad
+## 7. Síntesis y franqueza
 
 Ningún enunciado geométrico nuevo se ha probado aquí. Se ha **leído en fuente** (los dos PDFs de CC + Yoshitomi) y se ha **calculado**:
 

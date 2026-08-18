@@ -477,7 +477,7 @@ en Laurent–Mignotte–Nesterenko 1995]: $|k\log q-l\log p|\ge C'\max(|k|,|l|)^
 con constantes efectivas; en $[-R,R]$, $|k|\le RL_p/2\pi$, $|l|\le RL_q/2\pi$.
 $\square$
 
-**Observación 5.7 (la región intermedia, honesta) + [GAP-135.A].** Entre la
+**Observación 5.7 (la región intermedia, franca) + [GAP-135.A].** Entre la
 ventana $\log q$ (gap uniforme probado, Teorema 5.2(b)) y la ventana $\log pq$
 (definitud sin gap declarado, Teorema 5.4(a)) queda la pregunta:
 $$\mu(T):=\inf\bigl\{Q_X(f,f):\ \|f\|_w=1,\ \text{ventana }2T\bigr\}\;>\;0

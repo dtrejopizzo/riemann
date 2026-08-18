@@ -122,7 +122,7 @@ So the rank-one isolation is closed on the subcritical core, but not at the crit
 
 ## 5. Strongest valid closure theorem
 
-The following theorem is the maximal honest proof statement.
+The following theorem is the maximal candid proof statement.
 
 **Theorem.** Assume:
 

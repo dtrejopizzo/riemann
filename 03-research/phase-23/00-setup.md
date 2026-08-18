@@ -27,7 +27,7 @@ Phase 23 evalúa esa dirección y hace los cálculos exactos.
 - No computación numérica, no Python.
 - Solo definiciones, lemas, proposiciones, teoremas, demostraciones.
 - Todo argumento debe evaluarse según si contribuye a excluir $m \geq 1$.
-- Si una línea no lleva a $m = 0$, se abandona y se documenta honestamente.
+- Si una línea no lleva a $m = 0$, se abandona y se documenta francamente.
 
 ---
 

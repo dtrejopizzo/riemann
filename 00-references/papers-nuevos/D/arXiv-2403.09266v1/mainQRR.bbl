@@ -1,0 +1,212 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{CDFH21}
+
+\bibitem[AGV73]{SGA4}
+M.~Artin, A.~Grothendieck, and J.-L. Verdier, \emph{Th\'eorie des topos et
+  cohomologie \'etale des sch\'emas}, Lecture Notes in Mathematics, vol. 269,
+  270, 305, Springer-Verlag, 1972--1973, S\'eminaire de G\'eom\'etrie
+  Alg\'ebrique du Bois--Marie 1963--64 (SGA~4).
+
+\bibitem[AHW18]{AHW}
+A.~Asok, M.~Hoyois, and M.~Wendt, \emph{Affine representability results in
+  {$\mathbb A^1$}-homotopy theory, {II}: {P}rincipal bundles and homogeneous
+  spaces}, Geom. Topol. \textbf{22} (2018), no.~2, 1181--1225.
+
+\bibitem[BB20]{BBchrom}
+T.~Barthel and A.~Beaudry, \emph{Chromatic structures in stable homotopy
+  theory}, Handbook of homotopy theory, CRC Press/Chapman Hall Handb. Math.
+  Ser., CRC Press, Boca Raton, FL, [2020] \copyright 2020, pp.~163--220.
+
+\bibitem[BD17]{BD1}
+M.~Bondarko and F.~D\'eglise, \emph{Dimensional homotopy t-structures in
+  motivic homotopy theory}, Adv. Math. \textbf{311} (2017), 91--189.
+
+\bibitem[Bea83]{Beauville83}
+A.~Beauville, \emph{{Vari\'et\'es K\"ahleriennes dont la premi\`ere classe de
+  Chern est nulle}}, {J. Differ. Geom.} \textbf{18} (1983), 755--782.
+
+\bibitem[BH20a]{BH}
+T.~Bachmann and M.~J. Hopkins, \emph{{$\eta$-periodic motivic stable homotopy
+  theory over fields}}, arXiv: 2005.06778, 2020.
+
+\bibitem[BH20b]{Bachmann20a}
+\bysame, \emph{{$\eta$-periodic motivic stable homotopy theory over fields}},
+  arXiv:2005.06778, 2020.
+
+\bibitem[BO74]{BlochOgus}
+S.~Bloch and A.~Ogus, \emph{Gersten's conjecture and the homology of schemes},
+  Ann. Sci. \'{E}cole Norm. Sup. (4) \textbf{7} (1974).
+
+\bibitem[CD12]{CD2}
+D.-C. Cisinski and F.~D{\'e}glise, \emph{Mixed weil cohomologies}, Adv. in
+  Math. \textbf{230} (2012), no.~1, 55--130.
+
+\bibitem[CD19]{CD3}
+D.-C. Cisinski and F.~D\'{e}glise, \emph{Triangulated categories of mixed
+  motives}, Springer Monographs in Mathematics, Springer, Cham, 2019.
+
+\bibitem[CDFH21]{CDFH}
+D.~Coulette, F.~D\'{e}glise, J.~Fasel, and J.~Hornbostel, \emph{{Formal ternary
+  laws and Buchstaber's 2-groups}}, arXiv: 2112.03646, 2021.
+
+\bibitem[CHN24]{Calmes24}
+B.~Calm\`es, Y.~Harpaz, and D.~Nardin, \emph{{A motivic spectrum representing
+  Hermitian $K$-theory}}, arXiv:2402.15136, 2024.
+
+\bibitem[D{\'e}g18a]{Deg16}
+F.~D{\'e}glise, \emph{Bivariant theories in motivic stable homotopy}, Doc.
+  Math. \textbf{23} (2018), 997--1076.
+
+\bibitem[D{\'e}g18b]{Deg12}
+\bysame, \emph{Orientation theory in arithmetic geometry},
+  {$K$}-{T}heory---{P}roceedings of the {I}nternational {C}olloquium, {M}umbai,
+  2016, Hindustan Book Agency, New Delhi, 2018, pp.~239--347.
+
+\bibitem[D{\'e}g23]{Deg18}
+\bysame, \emph{Notes on {Milnor-Witt K-theory}}, arXiv: 2305.18609v1, 2023.
+
+\bibitem[Del87]{Del_det}
+P.~Deligne, \emph{Le d\'{e}terminant de la cohomologie}, Current trends in
+  arithmetical algebraic geometry ({A}rcata, {C}alif., 1985), Contemp. Math.,
+  vol.~67, Amer. Math. Soc., Providence, RI, 1987, pp.~93--177.
+
+\bibitem[DF21]{DF3}
+F.~{D{\'e}glise} and J.~{Fasel}, \emph{{The Borel character}}, Journal of the
+  IMJ (2021), 1--51.
+
+\bibitem[DFJK21]{DFJK}
+F.~D\'eglise, J.~Fasel, F.~Jin, and A.~A. Khan, \emph{On the rational motivic
+  homotopy category}, Journal de l'\'Ecole polytechnique --- Math\'ematiques
+  \textbf{8} (2021), 533--583 (en).
+
+\bibitem[DJK21]{DJK}
+F.~D{\'e}glise, F.~Jin, and A.~Khan, \emph{Fundamental classes in motivic
+  homotopy theory}, J. Eur. Math. Soc. (JEMS) \textbf{23} (2021), no.~12,
+  3935--3993.
+
+\bibitem[Fas08]{Fasel08a}
+J.~Fasel, \emph{Groupes de {C}how-{W}itt}, M\'em. Soc. Math. Fr. (N.S.)
+  \textbf{113} (2008), viii+197. \MR{MR2542148}
+
+\bibitem[Fel20]{Feld1}
+N.~Feld, \emph{Milnor-{W}itt cycle modules}, J. Pure Appl. Algebra \textbf{224}
+  (2020), no.~7, 106298, 44.
+
+\bibitem[Fel21]{Feld2}
+\bysame, \emph{Morel homotopy modules and {M}ilnor-{W}itt cycle modules}, Doc.
+  Math. \textbf{26} (2021), 617--659.
+
+\bibitem[FH23]{FH21}
+J.~Fasel and O.~Haution, \emph{{The stable Adams operations on Hermitian
+  K-theory}}, To appear in Geom. Topol., 2023.
+
+\bibitem[FM81]{FMP}
+W.~Fulton and R.~MacPherson, \emph{Categorical framework for the study of
+  singular spaces}, Mem. Amer. Math. Soc. \textbf{31} (1981), no.~243, vi+165.
+
+\bibitem[Ful98]{Fulton98}
+William Fulton, \emph{Intersection theory}, second ed., Ergebnisse der
+  Mathematik und ihrer Grenzgebiete. 3. Folge. A Series of Modern Surveys in
+  Mathematics [Results in Mathematics and Related Areas. 3rd Series. A Series
+  of Modern Surveys in Mathematics], vol.~2, Springer-Verlag, Berlin, 1998.
+  \MR{MR1644323 (99d:14003)}
+
+\bibitem[Gra66]{Gray}
+J.~W. Gray, \emph{Fibred and cofibred categories}, Proc. {C}onf. {C}ategorical
+  {A}lgebra ({L}a {J}olla, {C}alif., 1965), Springer-Verlag New York, Inc., New
+  York, 1966, pp.~21--83.
+
+\bibitem[Har66]{Hart}
+R.~Hartshorne, \emph{Residues and duality}, Lecture Notes in Mathematics, No.
+  20, Springer-Verlag, Berlin-New York, 1966, Lecture notes of a seminar on the
+  work of A. Grothendieck, given at Harvard 1963/64, With an appendix by P.
+  Deligne.
+
+\bibitem[Huy16]{Huybrechts16}
+D.~Huybrechts, \emph{{Lectures on K3 surfaces}}, Cambridge Studies in Advanced
+  Mathematics, vol. 158, Cambridge University Press, 2016.
+
+\bibitem[Kha21]{Khan}
+A.~A. Khan, \emph{Voevodsky's criterion for constructible categories of
+  coefficients}, https://www.preschema.com/papers/six.pdf, 2021.
+
+\bibitem[Kne77]{Kneb}
+M.~Knebusch, \emph{Symmetric bilinear forms over algebraic varieties},
+  Conference on {Q}uadratic {F}orms---1976 ({P}roc. {C}onf., {Q}ueen's {U}niv.,
+  {K}ingston, {O}nt., 1976), Queen's Papers in Pure and Appl. Math., No. 46,
+  Queen's Univ., Kingston, ON, 1977, pp.~103--283.
+
+\bibitem[Lev09]{LevMGL}
+M.~Levine, \emph{Comparison of cobordism theories}, J. Algebra \textbf{322}
+  (2009), no.~9, 3291--3317.
+
+\bibitem[LM07]{LMcobord}
+M.~Levine and F.~Morel, \emph{Algebraic cobordism}, Springer Monographs in
+  Mathematics, Springer, Berlin, 2007.
+
+\bibitem[LZ17]{LZ}
+Y.~Liu and W.~Zheng, \emph{Enhanced six operations and base change theorem for
+  higher artin stacks}, arXiv: 1211.5948, 2017.
+
+\bibitem[Mor04]{MorTri}
+F.~Morel, \emph{An introduction to {$\mathbb A^1$}-homotopy theory},
+  Contemporary developments in algebraic {$\mathrm K$}-theory, ICTP Lect.
+  Notes, XV, Abdus Salam Int. Cent. Theoret. Phys., Trieste, 2004,
+  pp.~357--441.
+
+\bibitem[MV99]{MV}
+F.~{Morel} and V.~Voevodsky, \emph{{\(\mathbb{A}^1\)-homotopy theory of
+  schemes}}, {Publ. Math., Inst. Hautes \'Etud. Sci.} \textbf{90} (1999),
+  45--143.
+
+\bibitem[PPR09]{PPR}
+I.~Panin, K.~Pimenov, and O.~R\"ondigs, \emph{{On Voevodsky's algebraic
+  \(K\)-theory spectrum}}, Algebraic topology. The Abel symposium 2007.
+  Proceedings of the fourth Abel symposium, Oslo, Norway, August 5--10, 2007,
+  Berlin: Springer, 2009, pp.~279--330.
+
+\bibitem[PW18a]{PW_MSP}
+I.~Panin and C.~Walter, \emph{{On the algebraic cobordism spectra
+  $\mathbf{MSL}$ and $\mathbf{MSp}$}}, arXiv: 1011.0651, 2018.
+
+\bibitem[PW18b]{PWcobord}
+\bysame, \emph{{On the algebraic cobordism spectra $\mathbf{MSL}$ and
+  $\mathbf{MSp}$}}, arXiv: 1011.0651, 2018.
+
+\bibitem[PW22]{PWQuaternionic}
+\bysame, \emph{{Quaternionic Grassmannians and Borel classes in algebraic
+  geometry}}, {St. Petersbg. Math. J.} \textbf{33} (2022), no.~1, 136--193.
+
+\bibitem[Qui69]{QuiCob}
+D.~Quillen, \emph{On the formal group laws of unoriented and complex cobordism
+  theory}, Bull. Amer. Math. Soc. \textbf{75} (1969), 1293--1298.
+
+\bibitem[Rav86]{Ra03}
+D.~C. Ravenel, \emph{{Complex cobordism and stable homotopy groups of
+  spheres}}, Pure and Applied Mathematics, vol. 121, Academic Press, Inc.,
+  Orlando, FL, 1986.
+
+\bibitem[Rio10]{Riou}
+J.~Riou, \emph{Algebraic {$K$}-theory, {${\bf A}^1$}-homotopy and
+  {R}iemann-{R}och theorems}, J. Topol. \textbf{3} (2010), no.~2, 229--264.
+
+\bibitem[Sch10]{Schlichting09}
+M.~Schlichting, \emph{Hermitian {$K$}-theory of exact categories}, J. K-Theory
+  \textbf{5} (2010), no.~1, 105--165. \MR{MR2114168 (2005m:19004)}
+
+\bibitem[Vis05]{Vistoli}
+A.~Vistoli, \emph{Grothendieck topologies, fibered categories and descent
+  theory}, Fundamental algebraic geometry, Math. Surveys Monogr., vol. 123,
+  Amer. Math. Soc., Providence, RI, 2005, pp.~1--104.
+
+\bibitem[Voe]{VoeMilnor}
+V.~Voevodsky, \emph{{The Milnor Conjecture}}, {Preprint, December 20, 1996,
+  K-theory Preprint Archives, http://www.math.uiuc.edu/K-theory/0170/}.
+
+\end{thebibliography}

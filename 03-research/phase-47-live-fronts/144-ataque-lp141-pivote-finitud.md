@@ -8,11 +8,11 @@ como el pivote real de la mitad de finitud ($m<\infty$) de la arquitectura $\mat
 El encargo: formalizarlo con cuantificadores totales y distinguirlo de LP-134; testearlo contra el
 contraejemplo de Hadamard que ya mató a LP-134 en la categoría analítica; intentar probarlo en la categoría
 aritmética vía el mecanismo continuación⟹pureza⟹repulsión; mapear la frontera exacta fuerza/utilidad y buscar
-LP más débiles; enunciar qué decide Davenport–Heilbronn. Veredicto honesto, con la parte que duele.
+LP más débiles; enunciar qué decide Davenport–Heilbronn. Veredicto franco, con la parte que duele.
 
 **Contrato creativo (regla absoluta de etiquetado):** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado DE VERDAD acá, prueba completa; resultados externos citados con
-precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con ζ/RH con estatus honesto. **[GAP]** =
+precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con ζ/RH con estatus franco. **[GAP]** =
 declarado. **[DESEO]** = declarado.
 
 **Prerrequisitos leídos en fuente esta sesión (completos):** Doc 141 entero (Def. 141.1/141.2, jerarquía
@@ -55,7 +55,7 @@ PAR (forma, norma de Hilbert)).
    detectable a soporte $\asymp1/\delta'$, NO sostenible bajo continuación — entonces vale la forma fuerte
    "$m\geq1\Rightarrow$ infinitos gordos", que IMPLICA LP-141 para todo calendario $\succeq\log$. El residuo
    exacto es **[GAP-144.C]**: la cota inferior efectiva $\delta_j\gtrsim 1/a(\gamma_j)$ sobre los gordos
-   derivada de la continuación. Honestidad: NO se cierra; se reduce LP-141 (en categoría Euler) a una
+   derivada de la continuación. Franqueza: NO se cierra; se reduce LP-141 (en categoría Euler) a una
    propiedad de rigidez de continuación bien formada, estrictamente más débil que la Conjetura 141.E (que
    pedía la repulsión sobre TODOS los off; 144.D solo pide infinitos gordos).
 
@@ -268,7 +268,7 @@ pudiera ser accesible analíticamente, es **FALSA**: ambos caen ante el mismo me
 sub-resolución calibrados contra el calendario), porque ese mecanismo produce CERO gordos, y "cero gordos"
 viola la conclusión de LP-141 tanto como la de LP-134. $\square$
 
-### 2.3. Honestidad sobre lo que el test establece y lo que no
+### 2.3. Franqueza sobre lo que el test establece y lo que no
 
 **Observación 144.3bis (qué prueba exactamente §2).** La Prop. 144.2 prueba que la categoría analítica
 (estructura de ξ como función entera de la clase de Pólya–Laguerre con ecuación funcional) NO fuerza LP-141.
@@ -282,7 +282,7 @@ decidible junto con RH o por la vía de clase aritmética (§3). **El test de Ha
 programa; mata la esperanza analítica y reconduce a la aritmética — exactamente el mismo veredicto que
 141.R2 dio para LP-134.**
 
-Una sutileza honesta que diferencia LP-141 de LP-134 incluso aquí: para LP-134, había configuraciones
+Una sutileza franca que diferencia LP-141 de LP-134 incluso aquí: para LP-134, había configuraciones
 analíticas que lo SATISFACEN no trivialmente (la familia gorda pura $\delta_j\equiv\tfrac14$: cumple LP-134).
 Para LP-141 lo mismo (esa familia cumple LP-141). Pero la *refutabilidad* es la que importa, y es idéntica:
 ambas se refutan con la familia sub-resolución adaptada. La debilidad relativa de LP-141 no compra
@@ -346,7 +346,7 @@ $\{C\log\}$). Entonces $\delta_{j_k}a(\gamma_{j_k})=\lceil1/c\rceil\,\delta_{j_k
 los $j_k$ son gordos a calendario $a$, infinitos. Luego $|\mathcal G_a|=\infty$: LP-141$(a)$. Por monotonía
 (Obs. 144.0(iii)), LP-141$(a')$ para todo $a'\succeq a$. $\square$
 
-**Observación 144.4bis (lo que 144.4 logra y lo que no — honestidad máxima).** La Prop. 144.4 NO prueba
+**Observación 144.4bis (lo que 144.4 logra y lo que no — franqueza máxima).** La Prop. 144.4 NO prueba
 LP-141. Reduce LP-141 (en la categoría Euler) a la Conjetura 144.D, que es una afirmación de **rigidez de
 continuación cuantitativa**. La ganancia neta sobre el Doc 141:
 1. **144.D es estrictamente más débil que la Conjetura 141.E.** 141.E pedía $\liminf_{\text{TODOS off}}\delta_j\log\gamma_j>0$

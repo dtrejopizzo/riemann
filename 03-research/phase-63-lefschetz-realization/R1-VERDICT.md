@@ -33,7 +33,7 @@ This is a concrete, exact, operator-level statement of MW-5: not only is the pol
 polarization's complex structure, so positivity (a property of the linear/Hermitian sector) cannot
 constrain it. There is no Frobenius (J-linear, spectrum = zeros) on the finite window.
 
-## Honest status
+## Candid status
 
 - This is a **sharp negative**: it identifies *why* the F_q→RH mechanism does not transfer at the
   operator level — a type mismatch (antilinear scaling vs linear Frobenius), exact and reproducible.

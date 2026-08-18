@@ -1,0 +1,177 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{Defect factorization and strict large-threshold induction (v113)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The exact defect identity}
+
+Let $C:\mathscr H\to\mathscr K$ be a contraction and put
+\begin{equation}
+ D=I-C^*C,qquad D_*=I-CC^*.                                  \tag{1}
+\end{equation}
+In the normalized threshold notation let $h$ be the harmonic reference
+lift and let $y$ be the opposite newborn feature.  The normalized cross is
+\begin{equation}
+ q=h-C^*y.                                                     \tag{2}
+\end{equation}
+
+\begin{theorem}[Julia defect reduction --- \PROVED]
+The return load and its normalized inverse are
+\begin{align}
+ u:=Dh-q&=C^*(y-Ch),                                          \tag{3}\\
+ D^{\dagger/2}u&=C^*D_*^{\dagger/2}(y-Ch),                    \tag{4}
+\end{align}
+on the natural closed ranges.  In particular, if the residual innovation
+has a source factorization
+\begin{equation}
+                         y-Ch=D_*^{1/2}z,                      \tag{5}
+\end{equation}
+then
+\begin{equation}
+                         \|D^{\dagger/2}u\|\le\|z\|.          \tag{6}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Substituting (2) gives
+\[
+ Dh-q=(I-C^*C)h-h+C^*y=C^*(y-Ch),
+\]
+which is (3).  Functional calculus applied to
+$C^*D_*=DC^*$ gives the defect intertwining
+$D^{1/2}C^*=C^*D_*^{1/2}$ and its Moore--Penrose version (4).  Under (5),
+(4) becomes $D^{\dagger/2}u=C^*z$ after projection to the supported
+range, proving (6).
+\end{proof}
+
+This identity explains the exact role of a lossless Julia network: it does
+not need to invert the old signed operator.  It has only to produce the
+innovation $z$ in (5).
+
+\section{Arithmetic innovation}
+
+The finite prime Julia colligation of G39 is lossless on the arithmetic
+label space.  The delay synthesis of v111 is an isometry from that label
+space to the two physical newborn delay families.  Their composition
+therefore gives (5) for the arithmetic residual, with
+\begin{equation}
+ \|z_N^{\rm ar}(e)\|^2
+ =s_N\|e\|^2,
+ \qquad
+ s_N:=\sum_{k\ge1}\frac{V_{N,k}}{(\log N)^{2k}}
+ \longrightarrow s_*:=
+ \frac{\sqrt\pi}{2}e^{1/4}\operatorname{erf}\!\left(\frac12\right).
+                                                                    \tag{7}
+\end{equation}
+
+\begin{theorem}[Candidate physical arithmetic defect factorization --- \AUDIT]
+If the G39 divisor-incidence output, after transport by the threshold delay
+isometry of v111, is equal to the arithmetic part of the Kato-normalized
+physical residual, then (5) holds with $z=z_N^{\rm ar}$ and hence
+\begin{equation}
+ \bigl\|D^{\dagger/2}u_N^{\rm ar}(e)\bigr\|^2
+ \le s_N\|e\|^2,
+ \qquad s_N\longrightarrow0.5922965364\ldots<1.               \tag{8}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The prime Julia tensor product is unitary, so its output equation is the
+standard defect equation (5) on the label innovation space.  Theorem 1 of
+v111 identifies every label output with the corresponding physical delay
+and preserves all inner products.  Equation (0) of v110 identifies its
+depth-$k$ input with $(\log N)^{-k}\mathcal C_N^k\delta_1$, the G39
+logarithmic Krylov word.  Under the stated equality with the physical
+residual, its source norm is (7), and Theorem 1 gives (8).
+\end{proof}
+
+The hypothesis in this theorem is not supplied merely by equality of the
+label and delay Grams.  It is the operator intertwining
+\begin{equation}
+ y_N^{\rm ar}-C_Nh_N^{\rm ar}
+ =D_{*,N}^{1/2}\,
+   \mathfrak U_N\mathfrak W_N,                                \tag{8a}
+\end{equation}
+where $\mathfrak U_N$ is the explicit delay isometry of v111.  G39 fixes
+the divergence of the two sides, while (8a) asserts equality of the full
+innovations.  The transfer-coefficient audit in v114 proves that the
+\emph{arithmetic-only} form of (8a) is false: its zeroth-order part would
+unitarily identify $J_{a,-}P_T$ with $J_{a,+}P_T$, although their primitive
+Grams differ by $P_T(S_a+S_{-a})P_T\ne0$.  Thus Theorem 2 is retained only
+as a conditional implication and cannot be used in the proof of row (d).
+A possible replacement must mix the arithmetic ports with Gamma and Tate;
+defining that replacement from the desired Schur return would be circular.
+
+\section{Propagation with the Gamma--Tate remainder}
+
+Suppose the old normalized defect has a fixed gap
+\begin{equation}
+                              D_N\ge\eta I.                    \tag{9}
+\end{equation}
+Then $\|C_N\|^2\le1-\eta$ and also $D_{*,N}\ge\eta I$ on the
+opposite supported space.  By v112, the normalized Gamma--Tate residual
+has norm $\varepsilon_N=O(N^{-1/4})$; it may therefore be written as
+$D_{*,N}^{1/2}z_N^{\Gamma T}$ with
+\begin{equation}
+                    \|z_N^{\Gamma T}\|
+ \le\eta^{-1/2}\varepsilon_N.                                \tag{10}
+\end{equation}
+
+\begin{corollary}[Strict large-threshold induction assuming (8a) --- \PROVED]
+Let $0<\eta<(1-s_*)/4$.  There exists $N_0(\eta)$ such that, whenever
+$N\ge N_0(\eta)$ and the old defect satisfies (9), the complete next-cell
+capacity is at most $1-\eta$ and the next normalized defect again satisfies
+(9).
+\end{corollary}
+
+\begin{proof}
+Combine the arithmetic and Gamma--Tate source innovations.  Equations
+(6)--(8) and (10) give
+\begin{equation}
+ \operatorname{Cap}_{N+1}^{1/2}
+ \le\sqrt{s_N}+\eta^{-1/2}\varepsilon_N.                      \tag{11}
+\end{equation}
+Since $s_N\to s_*<1$ and $\varepsilon_N\to0$, the square of the right
+side is at most $1-\eta$ for all sufficiently large $N$.  The normalized
+Schur complement is $I$ minus this return capacity, so its defect is at
+least $\eta I$.  This propagates (9).
+\end{proof}
+
+The corollary changes the global task substantially: after the exact
+arithmetic transport, no new estimate is required at arbitrarily large
+thresholds.  It remains to produce one certified base threshold
+$N_b\ge N_0(\eta)$ with the normalized defect gap (9), including every
+intermediate cell from the already certified $N=4$ endpoint.  This is a
+finite, falsifiable interval-arithmetic task.  The existing
+$T=\tfrac12\log5$ audit does not yet supply it because its eliminated safe
+block was not coupled to the full complement.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Exact Julia defect reduction & \PROVED & (1)--(6) \\
+Strict norm of the candidate arithmetic innovation & \PROVED & v109--v111 \\
+Arithmetic-only innovation intertwining (8a) & false & v114 \\
+Cross-place Gamma--Tate replacement & \OPEN & independent conservation needed \\
+Gamma--Tate perturbation under a fixed gap & \PROVED & v112, (9)--(10) \\
+Large-threshold propagation assuming (8a) & \PROVED & Corollary 3 \\
+Certified finite bridge from $N=4$ to one $N_b\ge N_0$ & \OPEN & interval computation required \\
+Condition $G$, row (d) & \OPEN & not obtained by this conditional induction \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

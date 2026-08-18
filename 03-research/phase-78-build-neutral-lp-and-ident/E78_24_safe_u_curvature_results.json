@@ -1,0 +1,259 @@
+{
+  "statement": "Exact reconstruction of Q_theta as second drift of safe_u: Q_theta,N = N^2 (N Delta safe_u_N - (N+2) Delta safe_u_{N+2})",
+  "sources": {
+    "theta_coupling_zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "theta_coupling_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "mod4": 0,
+          "delta_u_safe": 0.03184139920207599,
+          "delta_u_safe_next": 0.020607349051170416,
+          "Q_theta": 3.1140929987138395,
+          "reconstructed_Q_theta": 3.11409299871384,
+          "reconstruction_error": 4.440892098500626e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "mod4": 0,
+          "delta_u_safe": 0.09176076948021608,
+          "delta_u_safe_next": 0.06020621815437219,
+          "Q_theta": 8.449534355072435,
+          "reconstructed_Q_theta": 8.44953435507243,
+          "reconstruction_error": 5.329070518200751e-15
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "mod4": 2,
+          "delta_u_safe": 0.020607349051170416,
+          "delta_u_safe_next": 0.014046100313612616,
+          "Q_theta": 3.7520286748352754,
+          "reconstructed_Q_theta": 3.7520286748352754,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "mod4": 2,
+          "delta_u_safe": 0.06020621815437219,
+          "delta_u_safe_next": 0.04134060831558568,
+          "Q_theta": 10.597488175669378,
+          "reconstructed_Q_theta": 10.597488175669378,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "mod4": 0,
+          "delta_u_safe": 0.014046100313612616,
+          "delta_u_safe_next": 0.010329907613581445,
+          "Q_theta": 3.4465675929424084,
+          "reconstructed_Q_theta": 3.446567592942408,
+          "reconstruction_error": 4.440892098500626e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "mod4": 0,
+          "delta_u_safe": 0.04134060831558568,
+          "delta_u_safe_next": 0.030550501015114646,
+          "Q_theta": 9.846761122860924,
+          "reconstructed_Q_theta": 9.846761122860924,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "mod4": 2,
+          "delta_u_safe": 0.010329907613581445,
+          "delta_u_safe_next": 0.007668274243668681,
+          "Q_theta": 4.297558463522502,
+          "reconstructed_Q_theta": 4.297558463522502,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "mod4": 2,
+          "delta_u_safe": 0.030550501015114646,
+          "delta_u_safe_next": 0.0227470619588462,
+          "Q_theta": 12.495788482532904,
+          "reconstructed_Q_theta": 12.49578848253291,
+          "reconstruction_error": 7.105427357601002e-15
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "mod4": 0,
+          "delta_u_safe": 0.007668274243668681,
+          "delta_u_safe_next": 0.006003876023732592,
+          "Q_theta": 3.74339058470713,
+          "reconstructed_Q_theta": 3.7433905847071323,
+          "reconstruction_error": 2.220446049250313e-15
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "mod4": 0,
+          "delta_u_safe": 0.0227470619588462,
+          "delta_u_safe_next": 0.017849718842402076,
+          "Q_theta": 10.92046135764527,
+          "reconstructed_Q_theta": 10.920461357645266,
+          "reconstruction_error": 3.552713678800501e-15
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "mod4": 2,
+          "delta_u_safe": 0.006003876023732592,
+          "delta_u_safe_next": 0.004920868178574307,
+          "Q_theta": 3.127379173246965,
+          "reconstructed_Q_theta": 3.1273791732469665,
+          "reconstruction_error": 1.3322676295501878e-15
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "mod4": 2,
+          "delta_u_safe": 0.017849718842402076,
+          "delta_u_safe_next": 0.014654739928996715,
+          "Q_theta": 9.1368455489902,
+          "reconstructed_Q_theta": 9.136845548990191,
+          "reconstruction_error": 8.881784197001252e-15
+        }
+      ],
+      "max_reconstruction_error": 8.881784197001252e-15
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "mod4": 0,
+          "delta_u_safe": 0.1531079861785686,
+          "delta_u_safe_next": 0.048322301415743514,
+          "Q_theta": 47.46501601735128,
+          "reconstructed_Q_theta": 47.465016017351275,
+          "reconstruction_error": 7.105427357601002e-15
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "mod4": 0,
+          "delta_u_safe": 0.028617193867703814,
+          "delta_u_safe_next": 0.020769328528502367,
+          "Q_theta": 1.359633002022838,
+          "reconstructed_Q_theta": 1.3596330020228375,
+          "reconstruction_error": 4.440892098500626e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "mod4": 2,
+          "delta_u_safe": 0.048322301415743514,
+          "delta_u_safe_next": 0.0017385031270372357,
+          "Q_theta": 46.23609766329883,
+          "reconstructed_Q_theta": 46.23609766329883,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "mod4": 2,
+          "delta_u_safe": 0.020769328528502367,
+          "delta_u_safe_next": 0.004467613417272168,
+          "Q_theta": 15.408192427775765,
+          "reconstructed_Q_theta": 15.408192427775766,
+          "reconstruction_error": 1.7763568394002505e-15
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "mod4": 0,
+          "delta_u_safe": 0.0017385031270372357,
+          "delta_u_safe_next": -0.001021868708501016,
+          "Q_theta": 5.064220719858391,
+          "reconstructed_Q_theta": 5.064220719858392,
+          "reconstruction_error": 8.881784197001252e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "mod4": 0,
+          "delta_u_safe": 0.004467613417272168,
+          "delta_u_safe_next": -0.0005359331783620748,
+          "Q_theta": 8.800477272624248,
+          "reconstructed_Q_theta": 8.80047727262425,
+          "reconstruction_error": 1.7763568394002505e-15
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "mod4": 2,
+          "delta_u_safe": -0.001021868708501016,
+          "delta_u_safe_next": -0.00046705733955589815,
+          "Q_theta": -1.3393159192794917,
+          "reconstructed_Q_theta": -1.3393159192794917,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "mod4": 2,
+          "delta_u_safe": -0.0005359331783620748,
+          "delta_u_safe_next": -0.00028763275846203923,
+          "Q_theta": -0.5685843108885783,
+          "reconstructed_Q_theta": -0.5685843108885783,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "mod4": 0,
+          "delta_u_safe": -0.00046705733955589815,
+          "delta_u_safe_next": 0.00019006970184039517,
+          "Q_theta": -2.7889080489015,
+          "reconstructed_Q_theta": -2.7889080489015,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "mod4": 0,
+          "delta_u_safe": -0.00028763275846203923,
+          "delta_u_safe_next": 0.0009368918863016896,
+          "Q_theta": -5.495341590738699,
+          "reconstructed_Q_theta": -5.495341590738699,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "mod4": 2,
+          "delta_u_safe": 0.00019006970184039517,
+          "delta_u_safe_next": -0.00013091421442314356,
+          "Q_theta": 1.9568106105951548,
+          "reconstructed_Q_theta": 1.9568106105951548,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "mod4": 2,
+          "delta_u_safe": 0.0009368918863016896,
+          "delta_u_safe_next": -0.00019755476834340516,
+          "Q_theta": 6.744108379776719,
+          "reconstructed_Q_theta": 6.74410837977672,
+          "reconstruction_error": 8.881784197001252e-16
+        }
+      ],
+      "max_reconstruction_error": 7.105427357601002e-15
+    }
+  }
+}

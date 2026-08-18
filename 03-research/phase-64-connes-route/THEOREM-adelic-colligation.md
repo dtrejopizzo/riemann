@@ -1,6 +1,6 @@
 # The adelic passive-colligation theorem for RH — statement and proof architecture
 
-*A precise formulation of the RH-strength step of Connes' route. Honest throughout: the final
+*A precise formulation of the RH-strength step of Connes' route. Candid throughout: the final
 positivity is **not proven** — it is RH — and is flagged as the single open crux. What is rigorous
 (the equivalences and the unconditional `ω>½` colligation) is separated from what is open.*
 

@@ -189,7 +189,7 @@ statement so far of the entanglement:
    alternative route.
 2. **Bombieri**, *Remarks on Weil's quadratic functional* — he works the form on a space where these
    evaluations are bounded; extract his norm and compare to $H(E)$.
-3. **v10 reframed (honest).** "Measure $\inf_r(\Omega-\Phi_X)$" is **only heuristic** (no such $\inf$).
+3. **v10 reframed (candid).** "Measure $\inf_r(\Omega-\Phi_X)$" is **only heuristic** (no such $\inf$).
    The rigorous computational probe is at the form level: estimate
    $\inf\{\mathfrak t(g,g)/\|g\|_{H(E)}^2\}$ over the finite localizer family in a *candidate* weighted
    norm, and test **sensitivity to the weight** — a direct experiment on the §5.4 dichotomy.

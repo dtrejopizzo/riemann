@@ -1,0 +1,236 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{The exact moving-Tate terminal cell (v117)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{An exact Hilbert decomposition of a moving primitive space}
+
+Let $H_0,E$ be Hilbert spaces, let $B_0:H_0\to\mathbb C^r$ be bounded
+and onto, and let $B_E:E\to\mathbb C^r$ be bounded.  Put
+\begin{equation}
+ K_0=\ker B_0,
+ \qquad G_0=B_0B_0^*,
+ \qquad C=B_0^*G_0^{-1}B_E,
+ \qquad M=I_E+C^*C=I_E+B_E^*G_0^{-1}B_E.                  \tag{1}
+\end{equation}
+The enlarged moment map is
+\begin{equation}
+ B:H_0\oplus E\longrightarrow\mathbb C^r,
+ \qquad B(h,e)=B_0h+B_Ee.                                  \tag{2}
+\end{equation}
+
+\begin{theorem}[Moving-constraint terminal cell --- \PROVED]
+The enlarged primitive space has the orthogonal decomposition
+\begin{equation}
+ \ker B=(K_0\oplus0)\ \widehat\oplus\
+          \{(-Ce,e):e\in E\}.                              \tag{3}
+\end{equation}
+Moreover
+\begin{equation}
+ W:E\longrightarrow H_0\oplus E,
+ \qquad Wx=\binom{-CM^{-1/2}x}{M^{-1/2}x}                  \tag{4}
+\end{equation}
+is an isometry onto the second summand in (3).  Hence, if $P_0$ denotes
+the projection onto $K_0$ and $P$ the projection onto $\ker B$, then
+\begin{equation}
+                         P=(P_0\oplus0)+WW^*.                \tag{5}
+\end{equation}
+No inverse of an operator compressed to a primitive space occurs in
+(1)--(5); the only inverse is the $r\times r$ Gram matrix $G_0$.
+\end{theorem}
+
+\begin{proof}
+Since $B_0$ is onto,
+\[
+ H_0=K_0\widehat\oplus\operatorname{Ran}B_0^*.
+\]
+Write $h=k+r$ according to this decomposition.  The equation $B(h,e)=0$
+is $B_0r=-B_Ee$.  The restriction of $B_0$ to
+$\operatorname{Ran}B_0^*$ is an isomorphism onto $\mathbb C^r$, and its
+inverse is $B_0^*G_0^{-1}$.  Thus $r=-Ce$, proving (3).  The two summands
+are orthogonal because $K_0\perp\operatorname{Ran}B_0^*$.
+
+For $x\in E$,
+\[
+ \|Wx\|^2
+ =\langle M^{-1/2}x,(I+C^*C)M^{-1/2}x\rangle
+ =\|x\|^2.
+\]
+The range of $W$ is the graph in (3), so the two orthogonal range
+projections add to (5).
+\end{proof}
+
+The terminal column (4) satisfies the exact conservation law
+\begin{equation}
+ \|M^{-1/2}x\|^2+\|CM^{-1/2}x\|^2=\|x\|^2.                 \tag{6}
+\end{equation}
+In particular, both its newborn port $M^{-1/2}$ and its old Tate return
+$CM^{-1/2}$ are contractions.  The column can therefore be completed to
+a unitary Julia colligation without imposing any sign on the physical
+form.
+
+\section{Application to the two Tate moments}
+
+For $I_T=(-T,T)$ define
+\begin{equation}
+ B_Tf=inom{\langle f,e^{t/2}\rangle}{
+                  \langle f,e^{-t/2}\rangle}.               \tag{7}
+\end{equation}
+Its Gram matrix is
+\begin{equation}
+ B_TB_T^*=2
+ \begin{pmatrix}\sinh T&T\\T&\sinh T\end{pmatrix},         \tag{8}
+\end{equation}
+whose eigenvalues $2(\sinh T\pm T)$ are strictly positive for $T>0$.
+Let $T'<T+\infty$, identify
+\[
+ L^2(I_{T'})=L^2(I_T)\oplus L^2(I_{T'}\setminus I_T),
+\]
+and let $B_E$ be (7) restricted to the newborn set
+$E=I_{T'}\setminus I_T$.
+
+\begin{corollary}[Exact Tate threshold update --- \PROVED]
+For every $0<T<T'$, the primitive Hilbert space satisfies
+\begin{equation}
+ \ker B_{T'}=ker B_T\ \widehat\oplus\ W_{T,T'}L^2(E),      \tag{9}
+\end{equation}
+where $W_{T,T'}$ is given explicitly by (1), (4), and (8).  Thus the two
+Tate constraints do not create an uncontrolled moving-projection error:
+their entire old/new coupling is the conservative rank-two terminal cell
+(4)--(6).
+\end{corollary}
+
+\begin{proof}
+Apply Theorem 1 with $r=2$, $H_0=L^2(I_T)$, and with the maps (7).
+Invertibility follows from (8).
+\end{proof}
+
+At the arithmetic thresholds
+\begin{equation}
+ T=T_N=\tfrac12\log N,
+ \qquad T'=T_{N+1},
+ \qquad \delta_N=T'-T,                                      \tag{9a}
+\end{equation}
+the two moment Grams commute.  Indeed,
+\begin{equation}
+ B_EB_E^*=2
+ \begin{pmatrix}
+  \sinh T'-\sinh T&\delta_N\\
+  \delta_N&\sinh T'-\sinh T
+ \end{pmatrix}.                                             \tag{9b}
+\end{equation}
+The nonzero eigenvalues of $C^*C$ are therefore
+\begin{equation}
+ \kappa_{N,\pm}=
+ \frac{\sinh T'-\sinh T\ \pm\delta_N}
+      {\sinh T\ \pm T}.                                    \tag{9c}
+\end{equation}
+
+\begin{corollary}[Vanishing Tate return on thin arithmetic cells ---
+\PROVED]
+As $N\to\infty$,
+\begin{equation}
+ \|C_{T_N,T_{N+1}}\|^2
+ =\max(\kappa_{N,+},\kappa_{N,-})
+ =\frac1{2N}+o(N^{-1}).                                     \tag{9d}
+\end{equation}
+Consequently
+\begin{equation}
+ \|CM^{-1/2}\|=O(N^{-1/2}),
+ \qquad \|M^{-1/2}-I\|=O(N^{-1}).                           \tag{9e}
+\end{equation}
+Thus the moving Tate terminal is not an unbounded threshold connection;
+its old return vanishes at the rate $N^{-1/2}$.
+\end{corollary}
+
+\begin{proof}
+The nonzero spectra of $B_E^*G_0^{-1}B_E$ and
+$G_0^{-1/2}B_EB_E^*G_0^{-1/2}$ agree.  Equations (8)--(9b) diagonalize
+both matrices in the vectors $(1,1)$ and $(1,-1)$, giving (9c).  Since
+$\delta_N=\frac12\log(1+N^{-1})=\frac1{2N}+O(N^{-2})$ and
+\[
+ \sinh(T+\delta_N)-\sinh T
+ =\delta_N\cosh T+O(\delta_N^2\sinh T),
+\]
+while $(\cosh T\pm1)/(\sinh T\pm T)\to1$, equation (9d) follows.
+Finally $M=I+C^*C$ and functional calculus give (9e).
+\end{proof}
+
+\section{Exact compression of an arbitrary physical block}
+
+Let a bounded self-adjoint operator on $H_0\oplus E$ be written
+\begin{equation}
+ \mathcal A=
+ \begin{pmatrix}A_{00}&A_{0E}\\A_{E0}&A_{EE}\end{pmatrix},
+ \qquad N=M^{-1/2}.                                         \tag{10}
+\end{equation}
+Under the unitary identification
+$K_0\oplus E\to\ker B$, $(k,x)\mapsto(k,0)+Wx$, its primitive
+compression is exactly
+\begin{equation}
+ \begin{pmatrix}
+  P_0A_{00}P_0& P_0(A_{0E}-A_{00}C)N\\
+  N(A_{E0}-C^*A_{00})P_0&
+  N(A_{EE}-C^*A_{0E}-A_{E0}C+C^*A_{00}C)N
+ \end{pmatrix}.                                             \tag{11}
+\end{equation}
+
+\begin{theorem}[No hidden moving-Tate correction --- \PROVED]
+Formula (11) is the complete old/new block matrix after primitiveness.
+In particular, every correction caused by the moving Tate projection is
+one of the four displayed terms containing $C$; there is no additional
+connection term.
+\end{theorem}
+
+\begin{proof}
+Let
+\[
+ V=\begin{pmatrix}P_0&-CN\\0&N\end{pmatrix}:K_0\oplus E
+        \longrightarrow H_0\oplus E.
+\]
+By Theorem 1, $V$ is unitary onto $\ker B$.  Direct multiplication of
+$V^*\mathcal AV$ gives (11).
+\end{proof}
+
+Formula (11) isolates the next, genuinely physical calculation.  For the
+Gamma--Euler--Tate operator $\mathcal A_{T'}$, one must factor the Schur
+innovation
+\begin{align}
+ \mathcal S_{T,T'}={}&
+ N(A_{EE}-C^*A_{0E}-A_{E0}C+C^*A_{00}C)N \notag\\
+ &-N(A_{E0}-C^*A_{00})P_0
+   (P_0A_{00}P_0)^\dagger
+   P_0(A_{0E}-A_{00}C)N                                    \tag{12}
+\end{align}
+on the support on which the Moore--Penrose expression is defined.
+The Tate part of (12) is now explicit and conservative by (1), (6), and
+(8); it may not be cited as the source of an unspecified residual.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Orthogonal old-primitive/new-terminal decomposition & \PROVED & (3)--(5) \\
+Exact Hilbert conservation of the Tate terminal & \PROVED & (6) \\
+Explicit two-moment threshold cell & \PROVED & (7)--(9) \\
+Vanishing old Tate return on arithmetic cells & \PROVED & (9a)--(9e) \\
+Complete moving-primitive compression formula & \PROVED & (11) \\
+Positive factorization of the physical innovation (12) & \OPEN & Euler--Gamma calculation \\
+Condition $G$, row (d) & \OPEN & follows only after (12) for all cells \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

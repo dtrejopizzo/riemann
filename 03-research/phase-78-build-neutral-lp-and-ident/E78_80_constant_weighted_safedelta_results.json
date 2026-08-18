@@ -1,0 +1,41 @@
+{
+  "statement": "Audit of the constant-envelope candidate for N*(-SAFEDELTA_N)/A_N.",
+  "source": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_79_weighted_normalized_safedelta_results.json",
+  "global_summary": {
+    "min": 0.1257811287181933,
+    "median": 0.18560240594536898,
+    "max": 0.32033520392027215
+  },
+  "sigma_ratios": [
+    {
+      "N": 8,
+      "sigma3_over_sigma1": 0.9573001561303777,
+      "difference": 0.013678263193339257
+    },
+    {
+      "N": 10,
+      "sigma3_over_sigma1": 0.967243165455898,
+      "difference": 0.007199024873938975
+    },
+    {
+      "N": 12,
+      "sigma3_over_sigma1": 0.9824908190322651,
+      "difference": 0.003737489168929742
+    },
+    {
+      "N": 14,
+      "sigma3_over_sigma1": 0.9835112170145179,
+      "difference": 0.0025050648366143624
+    },
+    {
+      "N": 16,
+      "sigma3_over_sigma1": 0.9904165743819449,
+      "difference": 0.001547564896225928
+    },
+    {
+      "N": 18,
+      "sigma3_over_sigma1": 0.9909584898492424,
+      "difference": 0.0011476276390268436
+    }
+  ]
+}

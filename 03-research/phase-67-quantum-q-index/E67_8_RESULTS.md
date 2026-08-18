@@ -64,7 +64,7 @@ Consequence: the RH-carrying interference lives in the archimedean/Mellin channe
 multiplicative-semigroup channel supplies a real but lateral coherence that is not the one `P_lambda`
 uses. The semigroup coherent-state mechanism is empirically falsified as THE source of QSC-contract.
 
-## Residual open question (honest)
+## Residual open question (candid)
 
 This falsifies the *canonical Mellin coherent state* on the semigroup algebra. It does not prove that
 *no* state on the multiplicative-semigroup C*-algebra carries log-distance coherence — but any such

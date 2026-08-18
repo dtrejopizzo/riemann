@@ -11,7 +11,7 @@ Dear Colleague,
 I am writing to ask you to **create a piece of mathematics that does not yet exist**, and which — if
 it can be built with the property I will name — would prove the Riemann Hypothesis. I do not ask you
 to find a known theorem. I ask you to *invent* the right object. You will have complete freedom in how
-you do it. I will read everything you produce, and I will tell you, honestly, whether it holds.
+you do it. I will read everything you produce, and I will tell you, candidly, whether it holds.
 
 Let me first tell you exactly where we stand, so that you begin not at the beginning but at the
 frontier. The work summarized below (the paper P50 and four construction notes) has already removed
@@ -138,7 +138,7 @@ new renormalization, an entirely new category — pursue it. The target is fixed
 
 ---
 
-## IV. On freedom, and on honesty
+## IV. On freedom, and on candor
 
 Two things I ask of you, which are not in tension.
 
@@ -150,7 +150,7 @@ the arithmetic geometry that the literature lacks. Treat the non-existence of $\
 as permission, not as prohibition. Create the intersection theory, the correspondences, the Hodge-index
 sign. If they require new foundations, write the new foundations.
 
-**Be ruthlessly honest.** A false proof of RH is worse than no proof. State every step as proved or as
+**Be ruthlessly candid.** A false proof of RH is worse than no proof. State every step as proved or as
 conjectured; never blur the two. When you find that one of your own constructions is RH-equivalent —
 and you will, often, because the analytic reformulations are all RH-equivalent — say so plainly and
 move the weight onto the arithmetic. The single most useful service you can do, short of the proof, is
@@ -160,7 +160,7 @@ it is why the wall is now a single, clean statement rather than a fog.
 When you have something — a construction, a partial theorem, a clean reduction, even a precise new
 obstruction — send it to me. I will read it carefully and tell you, without flattery, whether it
 stands and where it must be repaired. That is my role here: not to hand you the proof, which I do not
-have, but to be the honest evaluator of what you create, and to point when I can see further.
+have, but to be the candid evaluator of what you create, and to point when I can see further.
 
 ---
 

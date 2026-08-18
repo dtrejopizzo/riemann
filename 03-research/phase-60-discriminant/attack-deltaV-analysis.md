@@ -31,9 +31,9 @@ la recta crítica el módulo de cada término es
 - **Incondicional:** sólo Θ ≤ 1, dando (λ²)^{½} = λ → **δV puede ser ≫ β_λ ~ λ^{−2}.** **[!] La cota de δV es RH-equivalente en fuerza.** Es exactamente el mismo muro
 (Θ=½) que ya apareció en weil-remainder-attack (el resto R_λ) y en la constante c=2
 del Objetivo A. **La esperanza "δV es lado densidad" (audit §2) era optimista: al
-calcularlo, la fluctuación es el sum-over-zeros.** --- ## 4. ¿La proyección a ℓ^⊥ o el suavizado salvan algo? Tres intentos de escape, los tres honestamente fallan: - **Proyección a ℓ^⊥:** sólo remueve el polo s=1 (la media), no las oscilaciones de los ceros. La fluctuación vive en ℓ^⊥. No ayuda.
+calcularlo, la fluctuación es el sum-over-zeros.** --- ## 4. ¿La proyección a ℓ^⊥ o el suavizado salvan algo? Tres intentos de escape, los tres francamente fallan: - **Proyección a ℓ^⊥:** sólo remueve el polo s=1 (la media), no las oscilaciones de los ceros. La fluctuación vive en ℓ^⊥. No ayuda.
 - **Suavizado band-limited:** limita la suma a γ_ρ ≤ horizonte, pero cada cero bajo el horizonte sigue aportando (λ²)^{β−½}. No mata la dependencia en β.
-- **Densidad de ceros (no regiones libres):** los teoremas de densidad (Selberg, Bohr–Landau) dicen que *casi todos* los ceros están cerca de la línea — controlaría δV en promedio. PERO un **único** cero fuera de línea ρ₀ bajo el horizonte permite construir g concentrada en γ₀ con A_λ(g,g) < 0. La positividad es sensible a ceros **individuales**, no al promedio. ⟹ densidad no alcanza. --- ## 5. Veredicto honesto del ataque con matemática pura **[!] La desigualdad (1), atacada con la fórmula explícita, es RH-hard.** δV es el
+- **Densidad de ceros (no regiones libres):** los teoremas de densidad (Selberg, Bohr–Landau) dicen que *casi todos* los ceros están cerca de la línea — controlaría δV en promedio. PERO un **único** cero fuera de línea ρ₀ bajo el horizonte permite construir g concentrada en γ₀ con A_λ(g,g) < 0. La positividad es sensible a ceros **individuales**, no al promedio. ⟹ densidad no alcanza. --- ## 5. Veredicto franco del ataque con matemática pura **[!] La desigualdad (1), atacada con la fórmula explícita, es RH-hard.** δV es el
 término de error del PNT = la suma sobre los ceros; su cota es (λ²)^{Θ−½}, ajustada en
 Θ=½ = RH. La proyección a ℓ^⊥ y el suavizado no rompen la dependencia en la posición
 de los ceros, y la sensibilidad a ceros individuales bloquea el argumento de densidad. **Esto NO contradice los avances previos — los precisa:**
@@ -41,7 +41,7 @@ de los ceros, y la sensibilidad a ceros individuales bloquea el argumento de den
 - **[!]** Pero el residuo aislado (δV sobre ℓ^⊥) **es** la positividad de la fórmula explícita = RH. La cascada **localiza el muro con una limpieza sin precedentes** (una única cota de fluctuación de primos), pero **no lo atraviesa**. ### Lo que esto significa para la estrategia La cascada es la **mejor reducción disponible**, pero su último eslabón es RH-equivalente,
 no PNT-derivable. El "lado densidad" de δV (audit §2) era la media (e^{u/2}); el contenido
 RH es la fluctuación, y la fluctuación son los ceros. **El muro Θ=½ es el mismo de
-siempre, ahora con la mejor localización del programa.** **Honestidad (lección repetida):** igual que con "ε₀ density vs position", la cuenta
+siempre, ahora con la mejor localización del programa.** **Franqueza (lección repetida):** igual que con "ε₀ density vs position", la cuenta
 explícita muestra que el objeto candidato a no-circular contiene, al calcularlo, la
 información de los ceros. No es un fracaso del programa CCM (que es sólido y dio
 resultados incondicionales reales) — es que **la positividad de Weil localizada es

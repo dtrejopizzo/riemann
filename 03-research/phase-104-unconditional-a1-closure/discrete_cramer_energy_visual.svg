@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720">
+<rect width="100%" height="100%" fill="white"/>
+<text x="560" y="25" text-anchor="middle" font-family="sans-serif" font-size="18">Dyadic discrete Cramer energy: j² Δ_j</text>
+<line x1="90" y1="738.63" x2="1085" y2="738.63" stroke="#dddddd"/>
+<text x="82" y="743.63" text-anchor="end" font-family="monospace" font-size="12">10^-2</text>
+<line x1="90" y1="567.68" x2="1085" y2="567.68" stroke="#dddddd"/>
+<text x="82" y="572.68" text-anchor="end" font-family="monospace" font-size="12">10^-1</text>
+<line x1="90" y1="396.74" x2="1085" y2="396.74" stroke="#dddddd"/>
+<text x="82" y="401.74" text-anchor="end" font-family="monospace" font-size="12">10^0</text>
+<line x1="90" y1="225.79" x2="1085" y2="225.79" stroke="#dddddd"/>
+<text x="82" y="230.79" text-anchor="end" font-family="monospace" font-size="12">10^1</text>
+<line x1="90" y1="54.85" x2="1085" y2="54.85" stroke="#dddddd"/>
+<text x="82" y="59.85" text-anchor="end" font-family="monospace" font-size="12">10^2</text>
+<line x1="90" y1="-116.09" x2="1085" y2="-116.09" stroke="#dddddd"/>
+<text x="82" y="-111.09" text-anchor="end" font-family="monospace" font-size="12">10^3</text>
+<line x1="90.00" y1="45" x2="90.00" y2="642" stroke="#f0f0f0"/>
+<text x="90.00" y="664" text-anchor="middle" font-family="monospace" font-size="12">3</text>
+<line x1="139.75" y1="45" x2="139.75" y2="642" stroke="#f0f0f0"/>
+<text x="139.75" y="664" text-anchor="middle" font-family="monospace" font-size="12">4</text>
+<line x1="189.50" y1="45" x2="189.50" y2="642" stroke="#f0f0f0"/>
+<text x="189.50" y="664" text-anchor="middle" font-family="monospace" font-size="12">5</text>
+<line x1="239.25" y1="45" x2="239.25" y2="642" stroke="#f0f0f0"/>
+<text x="239.25" y="664" text-anchor="middle" font-family="monospace" font-size="12">6</text>
+<line x1="289.00" y1="45" x2="289.00" y2="642" stroke="#f0f0f0"/>
+<text x="289.00" y="664" text-anchor="middle" font-family="monospace" font-size="12">7</text>
+<line x1="338.75" y1="45" x2="338.75" y2="642" stroke="#f0f0f0"/>
+<text x="338.75" y="664" text-anchor="middle" font-family="monospace" font-size="12">8</text>
+<line x1="388.50" y1="45" x2="388.50" y2="642" stroke="#f0f0f0"/>
+<text x="388.50" y="664" text-anchor="middle" font-family="monospace" font-size="12">9</text>
+<line x1="438.25" y1="45" x2="438.25" y2="642" stroke="#f0f0f0"/>
+<text x="438.25" y="664" text-anchor="middle" font-family="monospace" font-size="12">10</text>
+<line x1="488.00" y1="45" x2="488.00" y2="642" stroke="#f0f0f0"/>
+<text x="488.00" y="664" text-anchor="middle" font-family="monospace" font-size="12">11</text>
+<line x1="537.75" y1="45" x2="537.75" y2="642" stroke="#f0f0f0"/>
+<text x="537.75" y="664" text-anchor="middle" font-family="monospace" font-size="12">12</text>
+<line x1="587.50" y1="45" x2="587.50" y2="642" stroke="#f0f0f0"/>
+<text x="587.50" y="664" text-anchor="middle" font-family="monospace" font-size="12">13</text>
+<line x1="637.25" y1="45" x2="637.25" y2="642" stroke="#f0f0f0"/>
+<text x="637.25" y="664" text-anchor="middle" font-family="monospace" font-size="12">14</text>
+<line x1="687.00" y1="45" x2="687.00" y2="642" stroke="#f0f0f0"/>
+<text x="687.00" y="664" text-anchor="middle" font-family="monospace" font-size="12">15</text>
+<line x1="736.75" y1="45" x2="736.75" y2="642" stroke="#f0f0f0"/>
+<text x="736.75" y="664" text-anchor="middle" font-family="monospace" font-size="12">16</text>
+<line x1="786.50" y1="45" x2="786.50" y2="642" stroke="#f0f0f0"/>
+<text x="786.50" y="664" text-anchor="middle" font-family="monospace" font-size="12">17</text>
+<line x1="836.25" y1="45" x2="836.25" y2="642" stroke="#f0f0f0"/>
+<text x="836.25" y="664" text-anchor="middle" font-family="monospace" font-size="12">18</text>
+<line x1="886.00" y1="45" x2="886.00" y2="642" stroke="#f0f0f0"/>
+<text x="886.00" y="664" text-anchor="middle" font-family="monospace" font-size="12">19</text>
+<line x1="935.75" y1="45" x2="935.75" y2="642" stroke="#f0f0f0"/>
+<text x="935.75" y="664" text-anchor="middle" font-family="monospace" font-size="12">20</text>
+<line x1="985.50" y1="45" x2="985.50" y2="642" stroke="#f0f0f0"/>
+<text x="985.50" y="664" text-anchor="middle" font-family="monospace" font-size="12">21</text>
+<line x1="1035.25" y1="45" x2="1035.25" y2="642" stroke="#f0f0f0"/>
+<text x="1035.25" y="664" text-anchor="middle" font-family="monospace" font-size="12">22</text>
+<line x1="1085.00" y1="45" x2="1085.00" y2="642" stroke="#f0f0f0"/>
+<text x="1085.00" y="664" text-anchor="middle" font-family="monospace" font-size="12">23</text>
+<path d="M 90.00 529.93 L 139.75 496.82 L 189.50 527.75 L 239.25 520.02 L 289.00 533.33 L 338.75 546.26 L 388.50 584.91 L 438.25 569.04 L 488.00 573.93 L 537.75 570.90 L 587.50 609.75 L 637.25 581.84 L 687.00 586.24 L 736.75 588.24 L 786.50 616.36 L 836.25 604.97 L 886.00 572.06 L 935.75 607.37 L 985.50 589.78 L 1035.25 589.48 L 1085.00 592.26" fill="none" stroke="#1565c0" stroke-width="2.4"/>
+<circle cx="90.00" cy="529.93" r="2.5" fill="#1565c0"/>
+<circle cx="139.75" cy="496.82" r="2.5" fill="#1565c0"/>
+<circle cx="189.50" cy="527.75" r="2.5" fill="#1565c0"/>
+<circle cx="239.25" cy="520.02" r="2.5" fill="#1565c0"/>
+<circle cx="289.00" cy="533.33" r="2.5" fill="#1565c0"/>
+<circle cx="338.75" cy="546.26" r="2.5" fill="#1565c0"/>
+<circle cx="388.50" cy="584.91" r="2.5" fill="#1565c0"/>
+<circle cx="438.25" cy="569.04" r="2.5" fill="#1565c0"/>
+<circle cx="488.00" cy="573.93" r="2.5" fill="#1565c0"/>
+<circle cx="537.75" cy="570.90" r="2.5" fill="#1565c0"/>
+<circle cx="587.50" cy="609.75" r="2.5" fill="#1565c0"/>
+<circle cx="637.25" cy="581.84" r="2.5" fill="#1565c0"/>
+<circle cx="687.00" cy="586.24" r="2.5" fill="#1565c0"/>
+<circle cx="736.75" cy="588.24" r="2.5" fill="#1565c0"/>
+<circle cx="786.50" cy="616.36" r="2.5" fill="#1565c0"/>
+<circle cx="836.25" cy="604.97" r="2.5" fill="#1565c0"/>
+<circle cx="886.00" cy="572.06" r="2.5" fill="#1565c0"/>
+<circle cx="935.75" cy="607.37" r="2.5" fill="#1565c0"/>
+<circle cx="985.50" cy="589.78" r="2.5" fill="#1565c0"/>
+<circle cx="1035.25" cy="589.48" r="2.5" fill="#1565c0"/>
+<circle cx="1085.00" cy="592.26" r="2.5" fill="#1565c0"/>
+<path d="M 90.00 372.86 L 139.75 397.80 L 189.50 417.09 L 239.25 394.53 L 289.00 426.65 L 338.75 398.56 L 388.50 424.48 L 438.25 405.82 L 488.00 417.75 L 537.75 415.11 L 587.50 410.41 L 637.25 424.64 L 687.00 404.97 L 736.75 431.64 L 786.50 402.78 L 836.25 433.49 L 886.00 404.36 L 935.75 429.61 L 985.50 409.55 L 1035.25 422.08 L 1085.00 417.47" fill="none" stroke="#2e7d32" stroke-width="2.4"/>
+<circle cx="90.00" cy="372.86" r="2.5" fill="#2e7d32"/>
+<circle cx="139.75" cy="397.80" r="2.5" fill="#2e7d32"/>
+<circle cx="189.50" cy="417.09" r="2.5" fill="#2e7d32"/>
+<circle cx="239.25" cy="394.53" r="2.5" fill="#2e7d32"/>
+<circle cx="289.00" cy="426.65" r="2.5" fill="#2e7d32"/>
+<circle cx="338.75" cy="398.56" r="2.5" fill="#2e7d32"/>
+<circle cx="388.50" cy="424.48" r="2.5" fill="#2e7d32"/>
+<circle cx="438.25" cy="405.82" r="2.5" fill="#2e7d32"/>
+<circle cx="488.00" cy="417.75" r="2.5" fill="#2e7d32"/>
+<circle cx="537.75" cy="415.11" r="2.5" fill="#2e7d32"/>
+<circle cx="587.50" cy="410.41" r="2.5" fill="#2e7d32"/>
+<circle cx="637.25" cy="424.64" r="2.5" fill="#2e7d32"/>
+<circle cx="687.00" cy="404.97" r="2.5" fill="#2e7d32"/>
+<circle cx="736.75" cy="431.64" r="2.5" fill="#2e7d32"/>
+<circle cx="786.50" cy="402.78" r="2.5" fill="#2e7d32"/>
+<circle cx="836.25" cy="433.49" r="2.5" fill="#2e7d32"/>
+<circle cx="886.00" cy="404.36" r="2.5" fill="#2e7d32"/>
+<circle cx="935.75" cy="429.61" r="2.5" fill="#2e7d32"/>
+<circle cx="985.50" cy="409.55" r="2.5" fill="#2e7d32"/>
+<circle cx="1035.25" cy="422.08" r="2.5" fill="#2e7d32"/>
+<circle cx="1085.00" cy="417.47" r="2.5" fill="#2e7d32"/>
+<path d="M 90.00 338.42 L 139.75 344.65 L 189.50 348.94 L 239.25 310.19 L 289.00 326.47 L 338.75 283.32 L 388.50 292.95 L 438.25 259.78 L 488.00 255.20 L 537.75 238.22 L 587.50 217.04 L 637.25 216.77 L 687.00 180.88 L 736.75 192.63 L 786.50 148.03 L 836.25 163.22 L 886.00 118.96 L 935.75 128.14 L 985.50 93.48 L 1035.25 89.59 L 1085.00 70.64" fill="none" stroke="#c62828" stroke-width="2.4"/>
+<circle cx="90.00" cy="338.42" r="2.5" fill="#c62828"/>
+<circle cx="139.75" cy="344.65" r="2.5" fill="#c62828"/>
+<circle cx="189.50" cy="348.94" r="2.5" fill="#c62828"/>
+<circle cx="239.25" cy="310.19" r="2.5" fill="#c62828"/>
+<circle cx="289.00" cy="326.47" r="2.5" fill="#c62828"/>
+<circle cx="338.75" cy="283.32" r="2.5" fill="#c62828"/>
+<circle cx="388.50" cy="292.95" r="2.5" fill="#c62828"/>
+<circle cx="438.25" cy="259.78" r="2.5" fill="#c62828"/>
+<circle cx="488.00" cy="255.20" r="2.5" fill="#c62828"/>
+<circle cx="537.75" cy="238.22" r="2.5" fill="#c62828"/>
+<circle cx="587.50" cy="217.04" r="2.5" fill="#c62828"/>
+<circle cx="637.25" cy="216.77" r="2.5" fill="#c62828"/>
+<circle cx="687.00" cy="180.88" r="2.5" fill="#c62828"/>
+<circle cx="736.75" cy="192.63" r="2.5" fill="#c62828"/>
+<circle cx="786.50" cy="148.03" r="2.5" fill="#c62828"/>
+<circle cx="836.25" cy="163.22" r="2.5" fill="#c62828"/>
+<circle cx="886.00" cy="118.96" r="2.5" fill="#c62828"/>
+<circle cx="935.75" cy="128.14" r="2.5" fill="#c62828"/>
+<circle cx="985.50" cy="93.48" r="2.5" fill="#c62828"/>
+<circle cx="1035.25" cy="89.59" r="2.5" fill="#c62828"/>
+<circle cx="1085.00" cy="70.64" r="2.5" fill="#c62828"/>
+<line x1="90" y1="642" x2="1085" y2="642" stroke="black"/>
+<line x1="90" y1="45" x2="90" y2="642" stroke="black"/>
+<text x="587.5" y="695" text-anchor="middle" font-family="sans-serif" font-size="14">dyadic index j (N=2^j)</text>
+<line x1="110" y1="63" x2="138" y2="63" stroke="#1565c0" stroke-width="3"/>
+<text x="145" y="68" font-family="sans-serif" font-size="13">ordinary Lambda</text>
+<line x1="395" y1="63" x2="423" y2="63" stroke="#2e7d32" stroke-width="3"/>
+<text x="430" y="68" font-family="sans-serif" font-size="13">critical control beta=1/2</text>
+<line x1="680" y1="63" x2="708" y2="63" stroke="#c62828" stroke-width="3"/>
+<text x="715" y="68" font-family="sans-serif" font-size="13">off-line control beta=0.65</text>
+</svg>

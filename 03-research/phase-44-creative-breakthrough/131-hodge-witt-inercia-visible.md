@@ -150,7 +150,7 @@ Entonces RH es verdadera.
 
 **[PUENTE]** Si ademas se prueba positividad Hodge-Witt primitiva por una razon geometrica externa, entonces Teorema 4 da RH.
 
-**[DESEO honesto]** La dificultad no es escribir la conjetura. La dificultad es construir una polarizacion que no copie el patron de Deninger-eliptica, donde la metrica usa Hasse como input.
+**[DESEO franco]** La dificultad no es escribir la conjetura. La dificultad es construir una polarizacion que no copie el patron de Deninger-eliptica, donde la metrica usa Hasse como input.
 
 ---
 

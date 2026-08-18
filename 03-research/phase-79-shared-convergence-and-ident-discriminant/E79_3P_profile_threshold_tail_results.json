@@ -1,0 +1,999 @@
+{
+  "statement": "E79.3p profile-threshold tail sweep against extra-root",
+  "cases": [
+    {
+      "label": "zeta",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.000525776522483",
+              "active_len": 9,
+              "taus": {
+                "0.4": {
+                  "take": 2,
+                  "take_over_active": "0.222222222222",
+                  "tail": "8.29829975606e-5",
+                  "minus": "-0.000442793524922",
+                  "abs_minus_over_maxpiece": "0.842170591473",
+                  "N2_abs_minus": "0.028338785595"
+                },
+                "0.5": {
+                  "take": 2,
+                  "take_over_active": "0.222222222222",
+                  "tail": "8.29829975606e-5",
+                  "minus": "-0.000442793524922",
+                  "abs_minus_over_maxpiece": "0.842170591473",
+                  "N2_abs_minus": "0.028338785595"
+                },
+                "0.6": {
+                  "take": 2,
+                  "take_over_active": "0.222222222222",
+                  "tail": "8.29829975606e-5",
+                  "minus": "-0.000442793524922",
+                  "abs_minus_over_maxpiece": "0.842170591473",
+                  "N2_abs_minus": "0.028338785595"
+                },
+                "0.7": {
+                  "take": 4,
+                  "take_over_active": "0.444444444444",
+                  "tail": "0.000978995573589",
+                  "minus": "0.000453219051106",
+                  "abs_minus_over_maxpiece": "0.462942901207",
+                  "N2_abs_minus": "0.0290060192708"
+                },
+                "0.8": {
+                  "take": 4,
+                  "take_over_active": "0.444444444444",
+                  "tail": "0.000978995573589",
+                  "minus": "0.000453219051106",
+                  "abs_minus_over_maxpiece": "0.462942901207",
+                  "N2_abs_minus": "0.0290060192708"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.00105114185516",
+              "active_len": 9,
+              "taus": {
+                "0.4": {
+                  "take": 2,
+                  "take_over_active": "0.222222222222",
+                  "tail": "0.000164907973423",
+                  "minus": "-0.000886233881739",
+                  "abs_minus_over_maxpiece": "0.843115396259",
+                  "N2_abs_minus": "0.0567189684313"
+                },
+                "0.5": {
+                  "take": 2,
+                  "take_over_active": "0.222222222222",
+                  "tail": "0.000164907973423",
+                  "minus": "-0.000886233881739",
+                  "abs_minus_over_maxpiece": "0.843115396259",
+                  "N2_abs_minus": "0.0567189684313"
+                },
+                "0.6": {
+                  "take": 2,
+                  "take_over_active": "0.222222222222",
+                  "tail": "0.000164907973423",
+                  "minus": "-0.000886233881739",
+                  "abs_minus_over_maxpiece": "0.843115396259",
+                  "N2_abs_minus": "0.0567189684313"
+                },
+                "0.7": {
+                  "take": 4,
+                  "take_over_active": "0.444444444444",
+                  "tail": "0.00194852156345",
+                  "minus": "0.000897379708287",
+                  "abs_minus_over_maxpiece": "0.460543893956",
+                  "N2_abs_minus": "0.0574323013304"
+                },
+                "0.8": {
+                  "take": 4,
+                  "take_over_active": "0.444444444444",
+                  "tail": "0.00194852156345",
+                  "minus": "0.000897379708287",
+                  "abs_minus_over_maxpiece": "0.460543893956",
+                  "N2_abs_minus": "0.0574323013304"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.000307409734913",
+              "active_len": 11,
+              "taus": {
+                "0.4": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.000310108241479",
+                  "minus": "2.69850656537e-6",
+                  "abs_minus_over_maxpiece": "0.00870182150755",
+                  "N2_abs_minus": "0.000269850656537"
+                },
+                "0.5": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.000310108241479",
+                  "minus": "2.69850656537e-6",
+                  "abs_minus_over_maxpiece": "0.00870182150755",
+                  "N2_abs_minus": "0.000269850656537"
+                },
+                "0.6": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.000310108241479",
+                  "minus": "2.69850656537e-6",
+                  "abs_minus_over_maxpiece": "0.00870182150755",
+                  "N2_abs_minus": "0.000269850656537"
+                },
+                "0.7": {
+                  "take": 6,
+                  "take_over_active": "0.545454545455",
+                  "tail": "0.000910826123277",
+                  "minus": "0.000603416388364",
+                  "abs_minus_over_maxpiece": "0.662493502265",
+                  "N2_abs_minus": "0.0603416388364"
+                },
+                "0.8": {
+                  "take": 6,
+                  "take_over_active": "0.545454545455",
+                  "tail": "0.000910826123277",
+                  "minus": "0.000603416388364",
+                  "abs_minus_over_maxpiece": "0.662493502265",
+                  "N2_abs_minus": "0.0603416388364"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.000614678199283",
+              "active_len": 11,
+              "taus": {
+                "0.4": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.000617446256106",
+                  "minus": "2.7680568231e-6",
+                  "abs_minus_over_maxpiece": "0.00448307329703",
+                  "N2_abs_minus": "0.00027680568231"
+                },
+                "0.5": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.000617446256106",
+                  "minus": "2.7680568231e-6",
+                  "abs_minus_over_maxpiece": "0.00448307329703",
+                  "N2_abs_minus": "0.00027680568231"
+                },
+                "0.6": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.000617446256106",
+                  "minus": "2.7680568231e-6",
+                  "abs_minus_over_maxpiece": "0.00448307329703",
+                  "N2_abs_minus": "0.00027680568231"
+                },
+                "0.7": {
+                  "take": 6,
+                  "take_over_active": "0.545454545455",
+                  "tail": "0.00181534524644",
+                  "minus": "0.00120066704715",
+                  "abs_minus_over_maxpiece": "0.661398733663",
+                  "N2_abs_minus": "0.120066704715"
+                },
+                "0.8": {
+                  "take": 6,
+                  "take_over_active": "0.545454545455",
+                  "tail": "0.00181534524644",
+                  "minus": "0.00120066704715",
+                  "abs_minus_over_maxpiece": "0.661398733663",
+                  "N2_abs_minus": "0.120066704715"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.000198719668364",
+              "active_len": 11,
+              "taus": {
+                "0.4": {
+                  "take": 2,
+                  "take_over_active": "0.181818181818",
+                  "tail": "0.000104083064252",
+                  "minus": "-9.46366041127e-5",
+                  "abs_minus_over_maxpiece": "0.476231693076",
+                  "N2_abs_minus": "0.0136276709922"
+                },
+                "0.5": {
+                  "take": 2,
+                  "take_over_active": "0.181818181818",
+                  "tail": "0.000104083064252",
+                  "minus": "-9.46366041127e-5",
+                  "abs_minus_over_maxpiece": "0.476231693076",
+                  "N2_abs_minus": "0.0136276709922"
+                },
+                "0.6": {
+                  "take": 2,
+                  "take_over_active": "0.181818181818",
+                  "tail": "0.000104083064252",
+                  "minus": "-9.46366041127e-5",
+                  "abs_minus_over_maxpiece": "0.476231693076",
+                  "N2_abs_minus": "0.0136276709922"
+                },
+                "0.7": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.000513299595462",
+                  "minus": "0.000314579927098",
+                  "abs_minus_over_maxpiece": "0.612858318765",
+                  "N2_abs_minus": "0.0452995095021"
+                },
+                "0.8": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.000513299595462",
+                  "minus": "0.000314579927098",
+                  "abs_minus_over_maxpiece": "0.612858318765",
+                  "N2_abs_minus": "0.0452995095021"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.000397382480892",
+              "active_len": 11,
+              "taus": {
+                "0.4": {
+                  "take": 2,
+                  "take_over_active": "0.181818181818",
+                  "tail": "0.000207443589576",
+                  "minus": "-0.000189938891316",
+                  "abs_minus_over_maxpiece": "0.47797500003",
+                  "N2_abs_minus": "0.0273512003495"
+                },
+                "0.5": {
+                  "take": 2,
+                  "take_over_active": "0.181818181818",
+                  "tail": "0.000207443589576",
+                  "minus": "-0.000189938891316",
+                  "abs_minus_over_maxpiece": "0.47797500003",
+                  "N2_abs_minus": "0.0273512003495"
+                },
+                "0.6": {
+                  "take": 2,
+                  "take_over_active": "0.181818181818",
+                  "tail": "0.000207443589576",
+                  "minus": "-0.000189938891316",
+                  "abs_minus_over_maxpiece": "0.47797500003",
+                  "N2_abs_minus": "0.0273512003495"
+                },
+                "0.7": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.0010236293224",
+                  "minus": "0.000626246841505",
+                  "abs_minus_over_maxpiece": "0.611790643159",
+                  "N2_abs_minus": "0.0901795451768"
+                },
+                "0.8": {
+                  "take": 4,
+                  "take_over_active": "0.363636363636",
+                  "tail": "0.0010236293224",
+                  "minus": "0.000626246841505",
+                  "abs_minus_over_maxpiece": "0.611790643159",
+                  "N2_abs_minus": "0.0901795451768"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.000133017693008",
+              "active_len": 13,
+              "taus": {
+                "0.4": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000181800704189",
+                  "minus": "4.8783011181e-5",
+                  "abs_minus_over_maxpiece": "0.268332355469",
+                  "N2_abs_minus": "0.00956147019148"
+                },
+                "0.5": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000181800704189",
+                  "minus": "4.8783011181e-5",
+                  "abs_minus_over_maxpiece": "0.268332355469",
+                  "N2_abs_minus": "0.00956147019148"
+                },
+                "0.6": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000181800704189",
+                  "minus": "4.8783011181e-5",
+                  "abs_minus_over_maxpiece": "0.268332355469",
+                  "N2_abs_minus": "0.00956147019148"
+                },
+                "0.7": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000181800704189",
+                  "minus": "4.8783011181e-5",
+                  "abs_minus_over_maxpiece": "0.268332355469",
+                  "N2_abs_minus": "0.00956147019148"
+                },
+                "0.8": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000181800704189",
+                  "minus": "4.8783011181e-5",
+                  "abs_minus_over_maxpiece": "0.268332355469",
+                  "N2_abs_minus": "0.00956147019148"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.000266010252359",
+              "active_len": 13,
+              "taus": {
+                "0.4": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000362587064129",
+                  "minus": "9.657681177e-5",
+                  "abs_minus_over_maxpiece": "0.266354818813",
+                  "N2_abs_minus": "0.0189290551069"
+                },
+                "0.5": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000362587064129",
+                  "minus": "9.657681177e-5",
+                  "abs_minus_over_maxpiece": "0.266354818813",
+                  "N2_abs_minus": "0.0189290551069"
+                },
+                "0.6": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000362587064129",
+                  "minus": "9.657681177e-5",
+                  "abs_minus_over_maxpiece": "0.266354818813",
+                  "N2_abs_minus": "0.0189290551069"
+                },
+                "0.7": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000362587064129",
+                  "minus": "9.657681177e-5",
+                  "abs_minus_over_maxpiece": "0.266354818813",
+                  "N2_abs_minus": "0.0189290551069"
+                },
+                "0.8": {
+                  "take": 4,
+                  "take_over_active": "0.307692307692",
+                  "tail": "0.000362587064129",
+                  "minus": "9.657681177e-5",
+                  "abs_minus_over_maxpiece": "0.266354818813",
+                  "N2_abs_minus": "0.0189290551069"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "extra": "9.49775787544e-5",
+              "active_len": 14,
+              "taus": {
+                "0.4": {
+                  "take": 2,
+                  "take_over_active": "0.142857142857",
+                  "tail": "8.00711339816e-5",
+                  "minus": "-1.49064447727e-5",
+                  "abs_minus_over_maxpiece": "0.156946986523",
+                  "N2_abs_minus": "0.00381604986182"
+                },
+                "0.5": {
+                  "take": 3,
+                  "take_over_active": "0.214285714286",
+                  "tail": "0.000162118558593",
+                  "minus": "6.71409798385e-5",
+                  "abs_minus_over_maxpiece": "0.414147401885",
+                  "N2_abs_minus": "0.0171880908387"
+                },
+                "0.6": {
+                  "take": 3,
+                  "take_over_active": "0.214285714286",
+                  "tail": "0.000162118558593",
+                  "minus": "6.71409798385e-5",
+                  "abs_minus_over_maxpiece": "0.414147401885",
+                  "N2_abs_minus": "0.0171880908387"
+                },
+                "0.7": {
+                  "take": 4,
+                  "take_over_active": "0.285714285714",
+                  "tail": "0.000291548454358",
+                  "minus": "0.000196570875603",
+                  "abs_minus_over_maxpiece": "0.674230552984",
+                  "N2_abs_minus": "0.0503221441544"
+                },
+                "0.8": {
+                  "take": 5,
+                  "take_over_active": "0.357142857143",
+                  "tail": "0.00042949927128",
+                  "minus": "0.000334521692526",
+                  "abs_minus_over_maxpiece": "0.778864400698",
+                  "N2_abs_minus": "0.0856375532866"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.000189942293",
+              "active_len": 14,
+              "taus": {
+                "0.4": {
+                  "take": 2,
+                  "take_over_active": "0.142857142857",
+                  "tail": "0.000159764741991",
+                  "minus": "-3.01775510087e-5",
+                  "abs_minus_over_maxpiece": "0.158877470268",
+                  "N2_abs_minus": "0.00772545305824"
+                },
+                "0.5": {
+                  "take": 3,
+                  "take_over_active": "0.214285714286",
+                  "tail": "0.00032348847075",
+                  "minus": "0.00013354617775",
+                  "abs_minus_over_maxpiece": "0.412831336586",
+                  "N2_abs_minus": "0.0341878215041"
+                },
+                "0.6": {
+                  "take": 3,
+                  "take_over_active": "0.214285714286",
+                  "tail": "0.00032348847075",
+                  "minus": "0.00013354617775",
+                  "abs_minus_over_maxpiece": "0.412831336586",
+                  "N2_abs_minus": "0.0341878215041"
+                },
+                "0.7": {
+                  "take": 4,
+                  "take_over_active": "0.285714285714",
+                  "tail": "0.000581872522264",
+                  "minus": "0.000391930229263",
+                  "abs_minus_over_maxpiece": "0.673567171962",
+                  "N2_abs_minus": "0.100334138691"
+                },
+                "0.8": {
+                  "take": 5,
+                  "take_over_active": "0.357142857143",
+                  "tail": "0.000857284297679",
+                  "minus": "0.000667342004679",
+                  "abs_minus_over_maxpiece": "0.778437219118",
+                  "N2_abs_minus": "0.170839553198"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.025942560238",
+              "active_len": 14,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.025942560238",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.66032385523"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.025942560238",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.66032385523"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.025942560238",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.66032385523"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.025942560238",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.66032385523"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.025942560238",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.66032385523"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0513034113696",
+              "active_len": 12,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0513034113696",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.28341832766"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0513034113696",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.28341832766"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0513034113696",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.28341832766"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0513034113696",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.28341832766"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0513034113696",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.28341832766"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.0156278887936",
+              "active_len": 16,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0156278887936",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.56278887936"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0156278887936",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.56278887936"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0156278887936",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.56278887936"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0156278887936",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.56278887936"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0156278887936",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.56278887936"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0310509121697",
+              "active_len": 1,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0310509121697",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.10509121697"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0310509121697",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.10509121697"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0310509121697",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.10509121697"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0310509121697",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.10509121697"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0310509121697",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.10509121697"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.011645313968",
+              "active_len": 1,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.011645313968",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.6769252114"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.011645313968",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.6769252114"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.011645313968",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.6769252114"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.011645313968",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.6769252114"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.011645313968",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.6769252114"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0231801662401",
+              "active_len": 2,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0231801662401",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.33794393857"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0231801662401",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.33794393857"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0231801662401",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.33794393857"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0231801662401",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.33794393857"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0231801662401",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.33794393857"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.00855322674668",
+              "active_len": 2,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00855322674668",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.67643244235"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00855322674668",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.67643244235"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00855322674668",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.67643244235"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00855322674668",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.67643244235"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00855322674668",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.67643244235"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0170441661996",
+              "active_len": 2,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0170441661996",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.34065657512"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0170441661996",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.34065657512"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0170441661996",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.34065657512"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0170441661996",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.34065657512"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0170441661996",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.34065657512"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.00665771637675",
+              "active_len": 1,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00665771637675",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.70437539245"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00665771637675",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.70437539245"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00665771637675",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.70437539245"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00665771637675",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.70437539245"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.00665771637675",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "1.70437539245"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0132781609951",
+              "active_len": 2,
+              "taus": {
+                "0.4": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0132781609951",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.39920921475"
+                },
+                "0.5": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0132781609951",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.39920921475"
+                },
+                "0.6": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0132781609951",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.39920921475"
+                },
+                "0.7": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0132781609951",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.39920921475"
+                },
+                "0.8": {
+                  "take": 0,
+                  "take_over_active": "0.0",
+                  "tail": "0.0",
+                  "minus": "-0.0132781609951",
+                  "abs_minus_over_maxpiece": "1.0",
+                  "N2_abs_minus": "3.39920921475"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -97,7 +97,7 @@ picture — $\lambda_{\min}$ is concave & monotone in the **prime masses** $\Lam
 $\{a_p\}$: in $a_p$-coordinates there is no reason to "check the extreme corner," because the sign-oscillation
 of genuine $a_p$ hides the monotone structure. The anatomy/mass coordinates expose it.
 
-**Honest scope.** The box class $a_{p^k}\in[0,2]$ is **artificial** (genuine primitive L-functions have
+**Candid scope.** The box class $a_{p^k}\in[0,2]$ is **artificial** (genuine primitive L-functions have
 sign-oscillating $a_p$; this is precisely the advisor-sanctioned artificial class). The reduction is to **one
 check** (it does not *prove* the extreme is positive beyond the $\zeta^2$ remark, which is itself local-RH for
 $\zeta$). It is **local** (windowed), not global RH. But it is a *genuine non-trivial structural inequality*

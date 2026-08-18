@@ -154,7 +154,7 @@ Haar-normalized result gives the same norm as the group-like baseline.
 
 ## DH falsifier sharpened
 
-Davenport-Heilbronn may mimic the archimedean side, but it has no honest Euler product. In this
+Davenport-Heilbronn may mimic the archimedean side, but it has no candid Euler product. In this
 framework that should appear as:
 
 ```text

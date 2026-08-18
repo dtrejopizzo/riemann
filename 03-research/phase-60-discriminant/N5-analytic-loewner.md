@@ -1,4 +1,4 @@
-# N5 analítico — la tasa de `ε_loc` vía Loewner + prolata (demostración, estatus honesto) Objetivo: explicar y **probar** por qué `ε_loc(ζ)→0` (a tasa `o(λ^{−½})`, lo que cerraría
+# N5 analítico — la tasa de `ε_loc` vía Loewner + prolata (demostración, estatus franco) Objetivo: explicar y **probar** por qué `ε_loc(ζ)→0` (a tasa `o(λ^{−½})`, lo que cerraría
 RH vía Teorema 2) mientras `ε_loc(DH)` queda separado de 0. No más numérica: estructura. Ruta: (I–II) formalizar `QW` como matriz de **Loewner**; (III) **desigualdad de
 estabilidad** `ε_loc ≤ C‖Â_λ−Â_∞‖` en la forma RELATIVA correcta (resuelve el gap
 exp-pequeño); (IV) el mecanismo **prolata** que fija `ξ̂_∞=Ξ`; (V) el discriminador ζ/DH

@@ -124,7 +124,7 @@ $$\lambda_n = \mathcal{S}_n[d\nu] = \int_0^\infty (1-e^{-t})^n\, d\nu(t).$$
 
 *Demostración (formal).* Para cada cero $\rho$ con $|1-1/\rho| = e^{-t_\rho}$, el término $1-(1-1/\rho)^n = 1 - e^{-nt_\rho}$. Si la parte positiva de $\lambda_n$ (contribuciones de ceros con $|1-1/\rho| \leq 1$) se puede escribir como una integral $\int (1-e^{-t})^n d\nu^+(t)$, entonces la representación existe formalmente. La dificultad es que para los dos miembros del cuádruplo con módulo $> 1$, el término $1 - e^{nt_\rho}$ (con $t_\rho < 0$) diverge en $n$: el término $(1-e^{-t})^n$ con $e^{-t} > 1$ no está en $[0,1]$ y la integral no es de probabilidad. Por tanto la representación de Stieltjes solo captura la parte de los ceros con $|1-1/\rho| < 1$.
 
-**Esto es honestamente una representación parcial.** La parte negativa de $\lambda_n$ (debida a los dos miembros del cuádruplo con módulo $> 1$) no tiene representación como integral de Stieltjes con medida no-negativa. $\square$
+**Esto es francamente una representación parcial.** La parte negativa de $\lambda_n$ (debida a los dos miembros del cuádruplo con módulo $> 1$) no tiene representación como integral de Stieltjes con medida no-negativa. $\square$
 
 ---
 

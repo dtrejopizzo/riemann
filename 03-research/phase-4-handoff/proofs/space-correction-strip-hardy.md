@@ -31,7 +31,7 @@ The same kernel decay makes $\mathfrak t_-$ bounded. **So $\mathfrak t$ is a bou
 > trivializes the instability") was **right**; my Day-5 "de Branges back in play" was over-optimistic — it
 > was the *wrong* de Branges space.
 
-**Downgrades (honest).**
+**Downgrades (candid).**
 - CL.0/DB.3/DB.4 picking $H(E_\gamma)$: ❌ wrong space (too strong). The exponential Gamma weight was the
   error — it is the de Branges space *of the Gamma factor*, not the space *of the archimedean energy*
   $\mathfrak a$ (whose weight is only $\Omega\sim\log$).
@@ -79,7 +79,7 @@ So $K$ **does not decay in $t$** (contrast $H(E_\gamma)$, where it died like $e^
 at the strip edge** $|b|\to d$. The deep off-line zeros ($\beta\to0,1$, $|b|\to\tfrac12$) are near the edge
 (dangerous); the $\epsilon$ keeps them interior.
 
-> **Caveat (honest, flagged not buried).** The *exactly* faithful weight may carry a **mild $\log$
+> **Caveat (candid, flagged not buried).** The *exactly* faithful weight may carry a **mild $\log$
 > correction** to match the $\tfrac1{2\pi}\log$ zero density (a "log-weighted strip" between flat $H^2(S_d)$
 > and $H(E_\gamma)$). The robust facts — *not* exponential, $K$ roughly $t$-flat, edge-blowup — hold for the
 > whole mild family; pinning flat-vs-$\log$ is part of A.2 (§4). I am **not** claiming flat $H^2(S_d)$ is
@@ -111,7 +111,7 @@ and the target is
 $$
 \sum_{\text{off-line}}|\widehat g(t-ib)|^2\ \le\ a\sum_{\text{on-line}}|\widehat g(\gamma)|^2+C\|g\|^2_{H^2(S_d)},\quad a<1 .
 $$
-Both sides are now **honest non-trace-class evaluation sums** in the same space. (RFB) $\iff$ the off-line
+Both sides are now **candid non-trace-class evaluation sums** in the same space. (RFB) $\iff$ the off-line
 measure $\mu_{\mathrm{off}}=\sum\delta_{t-ib}$ is **relatively Carleson** w.r.t. the on-line sampling measure
 $\mu_{\mathrm{on}}=\sum\delta_\gamma$ — a comparison of two measures' Carleson constants for $H^2(S_d)$.
 This is where the **fine geometry** of zeros (separation, $S(T)$, pair correlation) enters, as the referee

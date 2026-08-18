@@ -151,13 +151,13 @@ degenerada. Auditoría del insumo (Doc 98, Prop. 6.1):
    llama "unconditional". Lo incondicional es la *implicación algebraica*
    (signatura $(2m,2m)$ ⟹ $\kappa$ de las potencias); la *atribución* de esa signatura
    al objeto $(\mathcal{K}_{\mathrm{off}},Q)$ del programa hereda V.1 (vía Doc 96
-   Teo. 8.1 y Doc 98 Prop. 6.1, cuya propia tabla de honestidad dice "V.1 de P35
+   Teo. 8.1 y Doc 98 Prop. 6.1, cuya propia tabla de franqueza dice "V.1 de P35
    implícita"). **Corrección requerida en P42**: o declarar V.1/marco en el enunciado
    del Thm 4.3, o reformularlo como condicional ("If $\psi$ has signature $(2m,2m)$ —
    as it does under the framework of §2.4 — then…").
 
 **Conclusión (B): INTACTA como álgebra; condicionalidad del insumo sub-declarada en
-P42** (no en Doc 106, que es honesto).
+P42** (no en Doc 106, que es franco).
 
 ---
 

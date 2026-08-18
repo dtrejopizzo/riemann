@@ -26,7 +26,7 @@ e^{−L} original era correcto en el exponente). El fenómeno nuevo a explicar e
 (−log C₀≈43): domina el valor absoluto pero no la pendiente en L. ## Cotas rigurosas que SÍ enmarcan el [GAP]
 - [OK] ε₀ > 0 (completitud, Paso 1 + Jensen).
 - [OK] ε₀ ≤ C/L² (test sinc).
-⟹ el [GAP] vive en el intervalo (0, C/L²], y lo que falta es la asintótica precisa de R(λ). ## Diagnóstico honesto de no-circularidad (lo más valioso del intento)
+⟹ el [GAP] vive en el intervalo (0, C/L²], y lo que falta es la asintótica precisa de R(λ). ## Diagnóstico franco de no-circularidad (lo más valioso del intento)
 El [GAP] se reduce a (a)-(c), que son sumas Σ_{γ_j≤T*} f(γ_j) sobre ceros. Por la fórmula
 explícita, Σ_{γ_j} f(γ_j) = (arquimediano) − Σ_p (primos). ⟹ las sumas (a)-(c) **se expresan
 vía primos (PNT)** si f es suave. PERO log|1−γ_k/γ_j| tiene una SINGULARIDAD en γ_j→γ_k (cerca

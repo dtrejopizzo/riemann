@@ -3,7 +3,7 @@
 **Programa:** CCM Zeta Spectral Triples — Phase 30  
 **Fecha:** junio 2026  
 **Prerrequisitos:** Docs 52–55  
-**Honestidad:** Este documento construye el emparejamiento de Poincaré en $\mathcal{MM}$, prueba su no-degeneración, e identifica con precisión por qué el argumento de Deligne/Weil no se transfiere al caso aritmético sobre $\mathbb{Q}$. El resultado es negativo pero clarificador.
+**Franqueza:** Este documento construye el emparejamiento de Poincaré en $\mathcal{MM}$, prueba su no-degeneración, e identifica con precisión por qué el argumento de Deligne/Weil no se transfiere al caso aritmético sobre $\mathbb{Q}$. El resultado es negativo pero clarificador.
 
 ---
 

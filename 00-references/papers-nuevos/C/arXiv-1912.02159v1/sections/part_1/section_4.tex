@@ -1,0 +1,94 @@
+\section{Leafwise cohomology}
+
+
+    \subsection{Leafwise de Rham complex}
+    
+    For the triple $(M,\mathcal{F},\phi)$, let $T\mathcal{F}$ be a sub-bundle of the tangent bundle $TM$ which is tangent to the leaves of the foliation.
+    The restriction of $T\mathcal{F}$ on a leaf $\mathcal{L}$ is identified with the tangent bundle $T\mathcal{L}$ of the leaf.
+    We call $T\mathcal{F}$ the \textit{leafwise tangent bundle}.
+
+    We define the space of leafwise $i$-forms by
+    \begin{equation*}
+        \Omega^{i}_{\mathcal{F}}(M):=\Gamma(M,\wedge^{i}T^{*}\mathcal{F})\subset{\Omega^{i}(M)}.
+    \end{equation*}
+    Let $d_{\mathcal{F}}$ (resp. $d_{0}$) be the exterior derivative acting only along leaves (resp. the flow).
+    Then the de Rham complex $(\Omega^{i}(M),d^{i})$  has a decomposition:
+    \begin{center}
+    \begin{tikzcd}
+    \cdots \ar[r]\ar[dr, ""] & \Omega^{i}_{\mathcal{F}}(M) \ar[d, "\oplus"]\ar[r, "d_{\mathcal{F}}^{i}"]\ar[dr, "d_{0}^{i}"] & \Omega^{i+1}_{\mathcal{F}}(M)  \ar[d, "\oplus"]\ar[r]\ar[dr, ""] & \cdots\\
+    \cdots \ar[r] & \Omega^{i}_{0}(M) \ar[r, "d_{\mathcal{F}}^{i}"] & \Omega^{i+1}_{0}(M) \ar[r] & \cdots
+    \end{tikzcd}
+    \end{center}
+    where $\Omega_{0}^{i}(M)$ is the complement of $\Omega^{i}_{\mathcal{F}}(M)$.
+    
+    We simply denote the restriction $d^{i}|_{\Omega^{i}_{\mathcal{F}}(M)}$ by $d_\mathcal{F}^{i}$.
+    Since we have $d^{i+1}_{\mathcal{F}}\circ{d}^{i}_{\mathcal{F}}=0$ on $\Omega^{i}_{\mathcal{F}}(M)$, 
+    the pairs $\{(\Omega^{i}_{\mathcal{F}}(M), d^{i}_{\mathcal{F}})\}_{i}$ form a cochain complex:
+    \begin{equation*}
+        0\overset{}{\rightarrow}\Omega^{0}_{\mathcal{F}}(M)\overset{d^{0}_{\mathcal{F}}}{\rightarrow}\Omega^{1}_{\mathcal{F}}(M)\overset{d^{1}_{\mathcal{F}}}{\rightarrow}\Omega^{2}_{\mathcal{F}}(M)\overset{d^{2}_{\mathcal{F}}}{\rightarrow}0.
+    \end{equation*}
+    We call the complex \textit{leafwise de Rham complex}.
+    
+    \subsection{Leafwise cohomology}
+    We denote the kernel of $d_{\mathcal{F}}^{i}$ by $Z_{\mathcal{F}}^{i}(M)$ and the image of $d_{\mathcal{F}}^{i}$ by $B_{\mathcal{F}}^{i+1}(M)$.
+    Note that a leafwise $i$-th form in $Z_{\mathcal{F}}^{i}(M)$ (resp. $B_{\mathcal{F}}^{i+1}(M)$) is called leafwise closed $i$-th form (resp. leafwise exact $i$-th form).
+    
+    \begin{definition}[Leafwise cohomology]
+    We define the $i$-th leafwise cohomology group by
+    \begin{equation*}
+        H^{i}_{\mathcal{F}}(M):={Z_{\mathcal{F}}^{i}(M)}/{B_{\mathcal{F}}^{i}(M)}.
+    \end{equation*}
+    \end{definition}
+    The leafwise cohomology group is trivial for $i>2$.
+    
+    Unfortunately, the leafwise cohomology group is of infinite dimension in general and not a Hausdorff space.
+    We modify it by taking a quotient with respect to the closure in the smooth topology.
+    \begin{equation*}
+        \bar{H}^{i}_{\mathcal{F}}(M):= {Z_{\mathcal{F}}^{i}(M)}/{\overline{B_{\mathcal{F}}^{i}(M)}}.
+    \end{equation*}
+    We call it the reduced leafwise cohomology group.
+    
+    % \subsection{Scalar product}
+    % Let $<,>_{\mathcal{F}}$ be the induced metric on $\wedge^{i}T^{*}\mathcal{F}$ from the bundle-like metric $g_{\mathcal{F}}$.
+    % If we choose an orientation on $M$, it determines a volume form $\mathrm{vol}$ of $M$.
+    % We set a scalar product on $\Omega^{i}_{\mathcal{F}}(M)$ by
+    % \begin{equation*}
+    %     (\omega,\eta)_{\mathcal{F}} = \int_{M}<\omega,\eta>_{\mathcal{F},x}\mathrm{vol}(x),
+    % \end{equation*}
+    % where $\omega$, $\eta$ are leafwise $i$-th forms.
+    % The scalar product induces $\bar{H}^{i}_{\mathcal{F}}(M)$ a Hilbert structure.
+    
+    \subsection{Leafwise Hodge theorem}
+    
+    For a bundle-like metric $g_{\mathcal{F}}$, we have the Hodge $*$-operator.
+    If we denote by $\delta$ the adjoint operator of the exterior derivative $d$, it has a decomposition into $\delta_{\mathcal{F}}$ and $\delta_{0}$
+    \begin{center}
+    \begin{tikzcd}
+    \cdots  & \ar[l] \Omega^{i}_{\mathcal{F}}(M) \ar[d, "\oplus"] & \ar[l, "\delta_{\mathcal{F}}^{i}"] \Omega^{i+1}_{\mathcal{F}}(M)  \ar[d, "\oplus"] & \ar[l] \cdots\\
+    \cdots & \ar[l]\ar[ul, ""] \Omega^{i}_{0}(M)  & \ar[l, "\delta_{\mathcal{F}}^{i}"]\ar[ul, "\delta_{0}^{i}"] \Omega^{i+1}_{0}(M) & \ar[l]\ar[ul, ""] \cdots.
+    \end{tikzcd}
+    \end{center}
+    
+    \begin{definition}[Leafwise Laplacian]
+    An operator defined by
+    \begin{equation*}
+        \Delta_{\mathcal{F}} := d_{\mathcal{F}}\delta_{\mathcal{F}} + \delta_{\mathcal{F}}d_{\mathcal{F}} \text{ on  } \Omega_{\mathcal{F}}^{i}(M)
+    \end{equation*}
+    is called the \textbf{leafwise Laplacian}.
+    A leafwise form $\omega\in\ker\Delta_{\mathcal{F}}$ is called a leafwise harmonic form.
+    \end{definition}
+    
+    If we define $\Delta_{0}$ on $\Omega_{\mathcal{F}}^{i}(M)$ by $\delta_{0}d_{0}$, the restriction of the Laplacian $\Delta$ on $\Omega_{\mathcal{F}}^{i}(M)$ can be represented by
+    \begin{equation*}
+        \Delta|_{\Omega_{\mathcal{F}}^{i}(M)} = \Delta_{\mathcal{F}} + \Delta_{0}.
+    \end{equation*}
+    
+
+    We have a significant proposition by \'Alvarez L\'opez and Kordyukov (\cite{lopez2001long}):
+    \begin{proposition}[Leafwise Hodge theorem]
+    Given a bundle-like metric, An leafwise cohomology class can be uniquely represented by a leafwise harmonic form.
+    We have an isomorphism
+    \begin{equation*}
+        \bar{H}_{\mathcal{F}}^{i}(M) \cong \ker(\Delta_{\mathcal{F}}^{i}).
+    \end{equation*}
+    \end{proposition}

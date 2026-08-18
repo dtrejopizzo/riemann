@@ -1,0 +1,212 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\title{Uniform minimizer observability: exact spectral-hole reduction (v130)}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The weight seen by the critical resolvent}
+
+Retain the notation of v124--v129 and put $b=\frac12$.  Define
+\begin{align}
+ \widehat r_N(\tau)
+ &:=\widehat{R_Ne_N}(\tau)
+   =\frac{N}{\log N}\frac{\widehat e_N(\tau)}{\tau^2+b^2},       \tag{1}\\
+ V_N(\tau)
+ &:=\left(\frac{\log N}{N}\right)^2
+       (\tau^2+b^2)^2W_N(\tau).                                  \tag{2}
+\end{align}
+Then the normalization of every minimizing infractor is exactly
+\begin{equation}
+ \boxed{
+ \mathfrak a_N[e_N]
+ =\int_{\mathbb R}V_N(\tau)|\widehat r_N(\tau)|^2
+       \frac{d\tau}{2\pi}=1.}                                   \tag{3}
+\end{equation}
+Moreover its Gamma part is
+\begin{equation}
+ \int_{\mathbb R}g_\Gamma(\tau)V_N(\tau)
+       |\widehat r_N(\tau)|^2\frac{d\tau}{2\pi}<1.              \tag{4}
+\end{equation}
+The all-depth theorem v127 says
+\begin{equation}
+ V_N(\tau)\longrightarrow C_{\rm W}                              \tag{5}
+\end{equation}
+locally uniformly on the real line.
+
+\begin{lemma}[Weighted output tightness --- \PROVED]
+For every minimizing infractor and every $R$ large enough,
+\begin{equation}
+ \int_{|\tau|>R}V_N|\widehat r_N|^2\frac{d\tau}{2\pi}
+ \le \frac1{\inf_{|\tau|>R}g_\Gamma(\tau)}.                    \tag{6}
+\end{equation}
+The right side tends to zero independently of $N$.
+\end{lemma}
+
+\begin{proof}
+This is Markov's inequality applied to (4).  The multiplier
+$g_\Gamma$ is even, increasing in $|\tau|$, and tends to infinity.
+\end{proof}
+
+Equation (6) is tightness in the weighted norm $L^2(V_Nd\tau)$.
+Uniform observability asks for tightness in ordinary $L^2(d\tau)$.
+
+\section{Good frequencies and arithmetic holes}
+
+For $0<\eta<C_{\rm W}/2$ set
+\begin{align}
+ G_{N,\eta}&:=\{\tau:V_N(\tau)\ge\eta\},                         \tag{7}\\
+ H_{N,\eta}&:=\{\tau:V_N(\tau)<\eta\}.                          \tag{8}
+\end{align}
+
+\begin{lemma}[The good-frequency contribution --- \PROVED]
+Uniformly over all minimizing infractors,
+\begin{equation}
+ \int_{\{|\tau|>R\}\cap G_{N,\eta}}|\widehat r_N|^2
+       \frac{d\tau}{2\pi}
+ \le
+ \frac1{\eta\inf_{|\tau|>R}g_\Gamma(\tau)}.                   \tag{9}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+On $G_{N,\eta}$ one has $1\le V_N/\eta$.  Apply (6).
+\end{proof}
+
+Thus every possible loss of observability is confined to the explicit
+arithmetic sublevel set $H_{N,\eta}$.  Local uniform convergence (5)
+also gives, for every fixed $R_0$, an $N_0(R_0,\eta)$ such that
+\begin{equation}
+ H_{N,\eta}\cap[-R_0,R_0]=\varnothing
+ \qquad(N\ge N_0(R_0,\eta)).                              \tag{10}
+\end{equation}
+The holes, if relevant, must therefore recede to high frequency.
+
+\begin{theorem}[Exact minimizer-hole criterion --- \PROVED]
+Uniform minimizer observability is equivalent to the following assertion:
+for one (equivalently every) $0<\eta<C_{\rm W}/2$ there is a function
+$\varepsilon_\eta(R)\downarrow0$ such that every normalized minimizing
+infractor satisfies
+\begin{equation}
+ \boxed{
+ \int_{\{|\tau|>R\}\cap H_{N,\eta}}|\widehat r_N(\tau)|^2
+       \frac{d\tau}{2\pi}
+ \le\varepsilon_\eta(R).}                               \tag{11}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+If ordinary $L^2$ tightness holds, (11) follows by restriction.  Conversely,
+split $\{|\tau|>R\}$ into $G_{N,\eta}$ and $H_{N,\eta}$.  Lemma 2 controls
+the first part by the right side of (9), and (11) controls the second.
+Their sum tends to zero independently of $N$.
+\end{proof}
+
+This criterion is strictly weaker than asking for a global pointwise
+lower bound on $V_N$.  Such a lower bound is not supplied by the existing
+estimates: zeros of individual depth polynomials prevent any one-depth
+argument, while a simultaneous all-depth lower bound has not been proved.
+The criterion asks only that an actual Euler--Lagrange minimizer cannot
+place unweighted resolvent mass in the simultaneous all-depth near-zero
+set.
+
+\section{What minimization supplies}
+
+Let
+\[
+ B=\{\tau:g_\Gamma(\tau)<1\}.
+\]
+For a minimizing infractor with eigenvalue $\lambda_N<1$, the weak
+Euler--Lagrange equation of v129 becomes, after the change of variables
+(1)--(2),
+\begin{equation}
+ \int_{\mathbb R}(g_\Gamma-\lambda_N)V_N
+       \widehat r_N\overline{\widehat s}
+       \frac{d\tau}{2\pi}
+ +\widetilde{\mathfrak t}_N(r_N,s)=0                    \tag{12}
+\end{equation}
+for every $s=R_Nh$ with $h$ in the form domain.  Hence
+\begin{align}
+ &\int_{B^c}(g_\Gamma-\lambda_N)V_N
+       \widehat r_N\overline{\widehat s}\frac{d\tau}{2\pi}
+ +\widetilde{\mathfrak t}_N(r_N,s)                       \notag\\
+ &\qquad=
+ \int_B(\lambda_N-g_\Gamma)V_N
+       \widehat r_N\overline{\widehat s}\frac{d\tau}{2\pi}.   \tag{13}
+\end{align}
+The forcing on the right is confined to the fixed compact band $B$.
+
+\begin{proposition}[The exact estimate still required --- \OPEN]
+For every $0<\eta<C_{\rm W}/2$ there should be a function
+$\varepsilon_\eta(R)\downarrow0$, independent of $N$, such that every
+solution of (12) with $\lambda_N<1$ and (3) satisfies (11).
+Equivalently, the compact-band forcing in (13) must have a uniformly
+tight response through the positive form on the left, after restriction
+to the minimizing eigenspace.
+\end{proposition}
+
+The Euler equation does not itself prove this estimate.  On
+$H_{N,\eta}$ the coefficient $V_N$ multiplying both sides of (12) is
+small.  Dividing by it would use an inverse of the arithmetic leakage
+symbol at precisely its near-zero set.  Nor may one infer (11) from the
+nonexistence of an infractor: that nonexistence is the conclusion for
+which observability is being sought.
+
+\section{A complete fixed-$N$ estimate}
+
+The finite causal inverse from v129 gives, for each fixed $N\ge3$, a
+constant $c_N>0$ with
+\begin{equation}
+ \mathfrak a_N[e]\ge c_N\|e\|_2^2.                              \tag{14}
+\end{equation}
+Consequently every normalized minimizing infractor satisfies
+\begin{equation}
+ \boxed{
+ \int_{|\tau|>R}|\widehat r_N(\tau)|^2\frac{d\tau}{2\pi}
+ \le
+ \frac{(N/\log N)^2}{c_N(R^2+\frac14)^2}.}                       \tag{15}
+\end{equation}
+
+\begin{proof}
+By (1), Plancherel, and (14),
+\begin{align*}
+ \int_{|\tau|>R}|\widehat r_N|^2\frac{d\tau}{2\pi}
+ &\le \frac{(N/\log N)^2}{(R^2+\frac14)^2}\|e_N\|_2^2\\
+ &\le \frac{(N/\log N)^2}{c_N(R^2+\frac14)^2}
+       \mathfrak a_N[e_N].
+\end{align*}
+Use $\mathfrak a_N[e_N]=1$.
+\end{proof}
+
+This proves observability for every fixed $N$.  It is not uniform in $N$:
+the elementary causal inverse provides no bound on
+$(N/\log N)^2/c_N$.  Establishing (11) is exactly the improvement that
+uses the minimizing equation rather than arbitrary-source deconvolution.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.58\linewidth}
+                >{\centering\arraybackslash}p{.14\linewidth}
+                >{\raggedright\arraybackslash}p{.18\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Correct resolvent/output identity & \PROVED & (1)--(4) \\
+Weighted output tightness & \PROVED & (6) \\
+Unweighted tightness off the arithmetic holes & \PROVED & (9) \\
+Exact minimizer-hole equivalence & \PROVED & (11) \\
+Observability for each fixed $N$ & \PROVED & (14)--(15) \\
+Uniform exclusion of mass inside moving holes & \OPEN & Proposition 4 \\
+Uniform minimizer observability, URGT$_1$, $G$, row (d) & \OPEN & after Proposition 4 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

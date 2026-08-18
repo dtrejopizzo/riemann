@@ -20,7 +20,7 @@ document refines it in light of the obstruction chain P22–P28).
 
 ---
 
-## 0. Honesty guardrails (carried over, non-negotiable)
+## 0. Candor guardrails (carried over, non-negotiable)
 
 These are the standing rules of the program; they bind everything below.
 
@@ -86,7 +86,7 @@ P28 is valuable precisely because it compresses "realize the Weil form" into two
 - **RH.** Nothing in P22–P28 implies it. The gain is a sharp localization of *where the
   difficulty lives*, not a reduction in its depth.
 
-### 1.4 The map of the path to RH (today's honest version)
+### 1.4 The map of the path to RH (today's candid version)
 
 ```
 RH
@@ -240,7 +240,7 @@ fixed-point / correspondence computation.
 - Then P28 applies: the realized space **is** `H(E)` with `E` sharing `E_ξ`'s wrong-half zeros —
   and we have *constructed* it, not assumed it. P28's (dB2) gap is closed **geometrically**.
 
-### B.4 The honest danger (state it up front, per G-NOFAKE)
+### B.4 The candid danger (state it up front, per G-NOFAKE)
 The risk: any `T` we can write whose resolvent gives (dB2) might secretly be **multiplication by
 the spectral variable on `W*(𝒯)`** — i.e. F-indep *fails*, and we have only re-described the
 zeros. SURF-B must therefore produce `T` **from the geometry first** and *derive* its spectrum,
@@ -304,7 +304,7 @@ This is the **last** rung, and it is the genuinely new theorem (not Yuan–Zhang
 
 ---
 
-## 8. What would make this fail honestly (pre-registered falsifiers)
+## 8. What would make this fail candidly (pre-registered falsifiers)
 
 Per the program's "break it before you build it" discipline, SURF 2.0 is **falsified / stalled**
 if any of these hold, and we say so plainly:

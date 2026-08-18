@@ -1,0 +1,682 @@
+{
+  "statement": "E77.7h Ritz-bracket and bracketed low-mode BTG audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "refs": [
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "top_k": 4,
+    "dps": 70,
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "Finite norms, finite tail eigenvalues, and finite B norms are diagnostics. Only the written tail-bracket theorem states what would require certified infinite D+B constants. The probe audits scale compatibility.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 18,
+      "max_dim": 37,
+      "max_section_mu": "2.52719644523900428303032e-49",
+      "max_section_gap": "3.84344899511797048729195e-46",
+      "planted": null,
+      "references": [
+        {
+          "reference_modes": 8,
+          "reference_dim": 17,
+          "mu_ref_upper_bound_surrogate": "3.67864498056142094313034e-28",
+          "finite_second_ritz_gap": "2.64863469626991258879739e-25",
+          "finite_B_norm_estimate": "1.97416903010411993215869",
+          "tail_diag_min_inside_max_section": "0.0417107174796382844028407",
+          "tail_lower_by_diag_minus_B_estimate": "-1.93245831262448164775585",
+          "finite_tail_gershgorin_lower": "-1.76960608054559931558661",
+          "finite_tail_lambda_min": "1.93835069965679581610268e-14",
+          "finite_cross_norm": "0.737876712836599324621737",
+          "ritz_tail_residual_norm": "9.20365900823456731601165e-15",
+          "coarse_tail_gap_to_mu_ref": "-1.93245831262448164775585",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "1.93835069965675902965288e-14",
+          "directional_residual_epsilon_proxy": "4.37007292616641456897822e-15",
+          "temple_denominator_proxy": "2.64863469626991258879739e-25",
+          "temple_epsilon_proxy": "0.000319815107984317845214788",
+          "btg_reference_S": "11507285985578.1861088562",
+          "btg_reference_log10_S": "13.0609729065599947",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "1.14108331541358008838965e-25",
+              "gap_to_mu_ref": "1.13740467043301866744652e-25",
+              "coeff_abs": "3.8137880702065687038066e-19",
+              "reference_contribution": "11243022954898.27027736",
+              "reference_fraction": "0.977035155725588940636318",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "9.62811159830329751767644e-23",
+              "gap_to_mu_ref": "9.62807481185349190346701e-23",
+              "coeff_abs": "4.83079147717941991599207e-17",
+              "reference_contribution": "251743154866.310894607572",
+              "reference_fraction": "0.021876848735819613382362",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "3.88810643430353325483317e-20",
+              "gap_to_mu_ref": "3.88810639751708344921896e-20",
+              "coeff_abs": "4.18985416513832580410929e-15",
+              "reference_contribution": "11612387834.4479238751728",
+              "reference_fraction": "0.00100913350454672452471099",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "6.8746119339775593862369e-18",
+              "gap_to_mu_ref": "6.87461193360969488818076e-18",
+              "coeff_abs": "1.97204533732078770627411e-13",
+              "reference_contribution": "822881720.610381512409409",
+              "reference_fraction": "0.00007150962630473250029603",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "3.67864498056142094312781e-28",
+          "finite_delta_to_max_log10": "-27.4343121231291518"
+        },
+        {
+          "reference_modes": 10,
+          "reference_dim": 21,
+          "mu_ref_upper_bound_surrogate": "8.92947289710064654996649e-33",
+          "finite_second_ritz_gap": "7.85847846923116806411877e-30",
+          "finite_B_norm_estimate": "1.97416903010411993215869",
+          "tail_diag_min_inside_max_section": "0.0512908475153378507832083",
+          "tail_lower_by_diag_minus_B_estimate": "-1.92287818258878208137548",
+          "finite_tail_gershgorin_lower": "-1.71721726833228054831857",
+          "finite_tail_lambda_min": "6.58585135380785389116784e-9",
+          "finite_cross_norm": "0.874168288377915322722562",
+          "ritz_tail_residual_norm": "5.51136560467127932347138e-18",
+          "coarse_tail_gap_to_mu_ref": "-1.92287818258878208137548",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "6.58585135380785389116783e-9",
+          "directional_residual_epsilon_proxy": "4.61218287454834489377554e-27",
+          "temple_denominator_proxy": "7.85847846923116806411877e-30",
+          "temple_epsilon_proxy": "0.00000386527124140932593734046",
+          "btg_reference_S": "50460432663613.5301184256",
+          "btg_reference_log10_S": "13.7029509699749427",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "1.85053117215286206370408e-30",
+              "gap_to_mu_ref": "1.84160169925576141715412e-30",
+              "coeff_abs": "1.29758118720659187597285e-23",
+              "reference_contribution": "49645245960661.3674445172",
+              "reference_fraction": "0.983845031445004137852498",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "1.57739127487394818924615e-27",
+              "gap_to_mu_ref": "1.5773823454010510885996e-27",
+              "coeff_abs": "1.40072717018152656594112e-21",
+              "reference_contribution": "788557114122.016177686304",
+              "reference_fraction": "0.0156272364800913835049494",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "5.38753633308808995220012e-25",
+              "gap_to_mu_ref": "5.38753624379336098119365e-25",
+              "coeff_abs": "8.578394271245931097044e-20",
+              "reference_contribution": "25353130755.9200220955924",
+              "reference_fraction": "0.000502435857514988952769812",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "1.21294182772407825844508e-22",
+              "gap_to_mu_ref": "1.21294182763478352947408e-22",
+              "coeff_abs": "4.19133382069452842325394e-18",
+              "reference_contribution": "1194055623.09088309590673",
+              "reference_fraction": "0.0000236632062006060371263238",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "8.92947289710064629724685e-33",
+          "finite_delta_to_max_log10": "-32.0491741765691146"
+        },
+        {
+          "reference_modes": 12,
+          "reference_dim": 25,
+          "mu_ref_upper_bound_surrogate": "2.40320588207581316433666e-37",
+          "finite_second_ritz_gap": "2.23698202808523757510254e-34",
+          "finite_B_norm_estimate": "1.97416903010411993215869",
+          "tail_diag_min_inside_max_section": "0.169463710210235477653336",
+          "tail_lower_by_diag_minus_B_estimate": "-1.80470531989388445450535",
+          "finite_tail_gershgorin_lower": "-1.60163308408774215973166",
+          "finite_tail_lambda_min": "0.00000382543785043616969739322",
+          "finite_cross_norm": "1.07235286552363089446208",
+          "ritz_tail_residual_norm": "7.79920650224600997066831e-22",
+          "coarse_tail_gap_to_mu_ref": "-1.80470531989388445450535",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "0.00000382543785043616969739322",
+          "directional_residual_epsilon_proxy": "1.59008261126869392521365e-37",
+          "temple_denominator_proxy": "2.23698202808523757510254e-34",
+          "temple_epsilon_proxy": "2.71918242082357382137725e-9",
+          "btg_reference_S": "1681574175694465274009.73",
+          "btg_reference_log10_S": "21.2257160291792249",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "4.3015277027002730350913e-35",
+              "gap_to_mu_ref": "4.27749564387951490344793e-35",
+              "coeff_abs": "1.74310657933612122569789e-24",
+              "reference_contribution": "1660614143074804888662.63",
+              "reference_fraction": "0.987535469488876872320964",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "4.75206784204916827791089e-32",
+              "gap_to_mu_ref": "4.75204380999034751977925e-32",
+              "coeff_abs": "2.14846793703810167890595e-22",
+              "reference_contribution": "20440752603974078752.2274",
+              "reference_fraction": "0.0121557246176977891116882",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "2.34521711158682729501565e-29",
+              "gap_to_mu_ref": "2.34521708755476847425752e-29",
+              "coeff_abs": "1.65891174159956002501587e-20",
+              "reference_contribution": "500357555835529984.323001",
+              "reference_fraction": "0.00029755306846865063867699",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "6.87397177355552890367354e-27",
+              "gap_to_mu_ref": "6.87397177331520831546596e-27",
+              "coeff_abs": "9.22897171947563328042862e-19",
+              "reference_contribution": "18025658600726501.5202908",
+              "reference_fraction": "0.0000107195144057693268340285",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "2.40320588207328596789142e-37",
+          "finite_delta_to_max_log10": "-36.619209021697878"
+        },
+        {
+          "reference_modes": 14,
+          "reference_dim": 29,
+          "mu_ref_upper_bound_surrogate": "1.70904698080237686366971e-41",
+          "finite_second_ritz_gap": "2.16160624682437210431166e-38",
+          "finite_B_norm_estimate": "1.97416903010411993215869",
+          "tail_diag_min_inside_max_section": "0.28155699223200728097822",
+          "tail_lower_by_diag_minus_B_estimate": "-1.69261203787211265118047",
+          "finite_tail_gershgorin_lower": "-1.033153214841051139603",
+          "finite_tail_lambda_min": "0.000884167965035367576664977",
+          "finite_cross_norm": "1.11755430399170508036616",
+          "ritz_tail_residual_norm": "6.73442279327365663041885e-26",
+          "coarse_tail_gap_to_mu_ref": "-1.69261203787211265118047",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "0.000884167965035367576664977",
+          "directional_residual_epsilon_proxy": "5.12939307371870430976042e-48",
+          "temple_denominator_proxy": "2.16160624682437210431166e-38",
+          "temple_epsilon_proxy": "2.09809027084332771823709e-13",
+          "btg_reference_S": "5486045627667651178825.5",
+          "btg_reference_log10_S": "21.7392594153286415",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "2.26213529149277597648488e-39",
+              "gap_to_mu_ref": "2.24504482168475220784819e-39",
+              "coeff_abs": "1.65507885595898813372466e-28",
+              "reference_contribution": "5434847331895121542997.9",
+              "reference_fraction": "0.990667541021838678085516",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "2.45489391995901248770288e-36",
+              "gap_to_mu_ref": "2.45487682948920446393424e-36",
+              "coeff_abs": "1.74017894657567251995478e-26",
+              "reference_contribution": "50249113760840152427.1381",
+              "reference_fraction": "0.00915944145769038470677086",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "1.15208525290524729420125e-33",
+              "gap_to_mu_ref": "1.15208523581477748617748e-33",
+              "coeff_abs": "1.10738438370103005860084e-24",
+              "reference_contribution": "923905531834308800.243642",
+              "reference_fraction": "0.000168410107122477564056394",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "3.41388181624807729163097e-31",
+              "gap_to_mu_ref": "3.41388181607717259355073e-31",
+              "coeff_abs": "5.33326678946101568311031e-23",
+              "reference_contribution": "24405609254371859.1759534",
+              "reference_fraction": "0.00000444867048339656455495015",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "1.70904695553041241127967e-41",
+          "finite_delta_to_max_log10": "-40.7672460050103274"
+        },
+        {
+          "reference_modes": 16,
+          "reference_dim": 33,
+          "mu_ref_upper_bound_surrogate": "1.54136825009323148669192e-45",
+          "finite_second_ritz_gap": "2.11780619415686559366739e-42",
+          "finite_B_norm_estimate": "1.97416903010411993215869",
+          "tail_diag_min_inside_max_section": "1.00507322839581243652188",
+          "tail_lower_by_diag_minus_B_estimate": "-0.969095801708307495636807",
+          "finite_tail_gershgorin_lower": "-0.129044164363315525705689",
+          "finite_tail_lambda_min": "0.369140130965305261259541",
+          "finite_cross_norm": "1.14989209117395784029813",
+          "ritz_tail_residual_norm": "1.31020371603149801559762e-30",
+          "coarse_tail_gap_to_mu_ref": "-0.969095801708307495636807",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "0.369140130965305261259541",
+          "directional_residual_epsilon_proxy": "4.65035804428451386002865e-60",
+          "temple_denominator_proxy": "2.11780619415686559366739e-42",
+          "temple_epsilon_proxy": "8.10571704927025762803526e-19",
+          "btg_reference_S": "512791768696834618437335.0",
+          "btg_reference_log10_S": "23.7099410452973547",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "1.5722639965554983388243e-43",
+              "gap_to_mu_ref": "1.55685031405456602395738e-43",
+              "coeff_abs": "1.11072242148457133833035e-31",
+              "reference_contribution": "508999505442217323986374.0",
+              "reference_fraction": "0.992604672137669780257089",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "1.8563760248405155154632e-40",
+              "gap_to_mu_ref": "1.85636061115801458314834e-40",
+              "coeff_abs": "1.13481782127301859375931e-29",
+              "reference_contribution": "3737038783593158962648.24",
+              "reference_fraction": "0.00728763410748606875071222",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "1.21558333691649587922241e-37",
+              "gap_to_mu_ref": "1.2155833215028133782901e-37",
+              "coeff_abs": "8.93417920029272207339222e-28",
+              "reference_contribution": "54018168234488081046.0795",
+              "reference_fraction": "0.000105341332548619606104679",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "5.32566273957849744900193e-35",
+              "gap_to_mu_ref": "5.32566273942436062399261e-35",
+              "coeff_abs": "5.7655458340277277211877e-26",
+              "reference_contribution": "1172015991736313779.89692",
+              "reference_fraction": "0.00000228555929186378230399968",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "1.54111553044870758626362e-45",
+          "finite_delta_to_max_log10": "-44.812164802971619"
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 18,
+      "max_dim": 37,
+      "max_section_mu": "-1.74469368905726418414397",
+      "max_section_gap": "0.101592192863194241192932",
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "references": [
+        {
+          "reference_modes": 8,
+          "reference_dim": 17,
+          "mu_ref_upper_bound_surrogate": "-0.720430127892945977947044",
+          "finite_second_ritz_gap": "0.217835435049091591441578",
+          "finite_B_norm_estimate": "3.45286554787543223281443",
+          "tail_diag_min_inside_max_section": "-0.607021531086565776901936",
+          "tail_lower_by_diag_minus_B_estimate": "-4.05988707896199800971636",
+          "finite_tail_gershgorin_lower": "-2.1614758217585070700458",
+          "finite_tail_lambda_min": "-0.986245757117596189876596",
+          "finite_cross_norm": "1.89021871978821108727683",
+          "ritz_tail_residual_norm": "1.24332501184268255637521",
+          "coarse_tail_gap_to_mu_ref": "-3.33945695106905203176932",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "-0.265815629224650211929553",
+          "directional_residual_epsilon_proxy": "inf",
+          "temple_denominator_proxy": "-0.265815629224650211929553",
+          "temple_epsilon_proxy": "inf",
+          "btg_reference_S": "51.916581138542822898166",
+          "btg_reference_log10_S": "1.7153060851491468",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "-0.411328666741726584802306",
+              "gap_to_mu_ref": "0.309101461151219393144738",
+              "coeff_abs": "1.91815327369059936197939",
+              "reference_contribution": "38.5092001852943512372076",
+              "reference_fraction": "0.74175146630957861431254",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "-0.303758086504965095567069",
+              "gap_to_mu_ref": "0.416672041387980882379975",
+              "coeff_abs": "1.51682180440890587540931",
+              "reference_contribution": "13.251968819988927663789",
+              "reference_fraction": "0.255255036625489154047317",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "6.45212036669602870405342e-22",
+              "gap_to_mu_ref": "0.720430127892945977947689",
+              "coeff_abs": "6.94803170886191601434013e-13",
+              "reference_contribution": "9.30121858488051915245658e-25",
+              "reference_fraction": "1.7915699340947747586767e-26",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "2.9992669404731359592744e-19",
+              "gap_to_mu_ref": "0.720430127892945978246971",
+              "coeff_abs": "3.76043238041604342421012e-11",
+              "reference_contribution": "2.7245315066127068253661e-21",
+              "reference_fraction": "5.24790239816083940507084e-23",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "1.02426356116431820619692",
+          "finite_delta_to_max_log10": "0.0104117226860468064"
+        },
+        {
+          "reference_modes": 10,
+          "reference_dim": 21,
+          "mu_ref_upper_bound_surrogate": "-1.64398602971619752920644",
+          "finite_second_ritz_gap": "0.179691719495515754680946",
+          "finite_B_norm_estimate": "3.45286554787543223281443",
+          "tail_diag_min_inside_max_section": "-0.00950091720875315998582366",
+          "tail_lower_by_diag_minus_B_estimate": "-3.46236646508418539280025",
+          "finite_tail_gershgorin_lower": "-1.8452634382058699991327",
+          "finite_tail_lambda_min": "-0.0990544259746414928925002",
+          "finite_cross_norm": "1.1220996454231164435689",
+          "ritz_tail_residual_norm": "0.516367405059044835056225",
+          "coarse_tail_gap_to_mu_ref": "-1.81838043536798786359381",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "1.54493160374155603631394",
+          "directional_residual_epsilon_proxy": "0.172587120595932725216445",
+          "temple_denominator_proxy": "0.179691719495515754680946",
+          "temple_epsilon_proxy": "1.48384854770152957672028",
+          "btg_reference_S": "6.24280330788927552980937",
+          "btg_reference_log10_S": "0.795379651823166944",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "-1.4970539014566867318729",
+              "gap_to_mu_ref": "0.146932128259510797333546",
+              "coeff_abs": "0.339632986064360384344587",
+              "reference_contribution": "5.34301247811475021470042",
+              "reference_fraction": "0.855867502883292136954596",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "-1.27541438383700184885714",
+              "gap_to_mu_ref": "0.3685716458791956803493",
+              "coeff_abs": "0.348758112920218497666613",
+              "reference_contribution": "0.895374649527981627235524",
+              "reference_fraction": "0.143425093722953203565842",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "1.8340850436875764263103e-25",
+              "gap_to_mu_ref": "1.64398602971619752920644",
+              "coeff_abs": "2.91050129164144996449518e-18",
+              "reference_contribution": "3.13429122914222702151139e-36",
+              "reference_fraction": "5.02064709484167184091336e-37",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "1.58326158004987835956782e-22",
+              "gap_to_mu_ref": "1.6439860297161975292066",
+              "coeff_abs": "2.8329276480393123259293e-16",
+              "reference_contribution": "2.96944113580668223486354e-32",
+              "reference_fraction": "4.7565828832923230821588e-33",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "0.100707659341066654937527",
+          "finite_delta_to_max_log10": "-0.996937497837030595"
+        },
+        {
+          "reference_modes": 12,
+          "reference_dim": 25,
+          "mu_ref_upper_bound_surrogate": "-1.70945938630677984903713",
+          "finite_second_ritz_gap": "0.145463989199598506439434",
+          "finite_B_norm_estimate": "3.45286554787543223281443",
+          "tail_diag_min_inside_max_section": "0.148071335439067125048992",
+          "tail_lower_by_diag_minus_B_estimate": "-3.30479421243636510776543",
+          "finite_tail_gershgorin_lower": "-1.66537523136520786659187",
+          "finite_tail_lambda_min": "-0.0287628321721083069373204",
+          "finite_cross_norm": "1.05523979036825204788567",
+          "ritz_tail_residual_norm": "0.288657177421065840656763",
+          "coarse_tail_gap_to_mu_ref": "-1.5953348261295852587283",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "1.68069655413467154209981",
+          "directional_residual_epsilon_proxy": "0.0495764484503251657186926",
+          "temple_denominator_proxy": "0.145463989199598506439434",
+          "temple_epsilon_proxy": "0.572808201776764291928105",
+          "btg_reference_S": "279.909609881941745650036",
+          "btg_reference_log10_S": "2.44701780895939358",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "-1.69983946354891462497424",
+              "gap_to_mu_ref": "0.00961992275786522406289221",
+              "coeff_abs": "0.160496063507337465335656",
+              "reference_contribution": "278.346394390495893647675",
+              "reference_fraction": "0.994415284662412363240555",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "-1.54822786348956311897866",
+              "gap_to_mu_ref": "0.161231522817216730058476",
+              "coeff_abs": "0.201365976630412546910455",
+              "reference_contribution": "1.55981205985346245035947",
+              "reference_fraction": "0.00557255629955451947273898",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "2.1027920301652038557412e-29",
+              "gap_to_mu_ref": "1.70945938630677984903713",
+              "coeff_abs": "3.87915141594679399029256e-19",
+              "reference_contribution": "5.14939123364314370624571e-38",
+              "reference_fraction": "1.83966218087868321595946e-40",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "2.08472072765999815020152e-26",
+              "gap_to_mu_ref": "1.70945938630677984903713",
+              "coeff_abs": "3.69941051307653833967467e-17",
+              "reference_contribution": "4.68325147351085605975725e-34",
+              "reference_fraction": "1.67312993486937588669097e-36",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "0.0352343027504843351068367",
+          "finite_delta_to_max_log10": "-1.45303431830927866"
+        },
+        {
+          "reference_modes": 14,
+          "reference_dim": 29,
+          "mu_ref_upper_bound_surrogate": "-1.72414565172047431765303",
+          "finite_second_ritz_gap": "0.136806851410417826681976",
+          "finite_B_norm_estimate": "3.45286554787543223281443",
+          "tail_diag_min_inside_max_section": "0.273050021426728259538825",
+          "tail_lower_by_diag_minus_B_estimate": "-3.1798155264487039732756",
+          "finite_tail_gershgorin_lower": "-1.05049322900666883973066",
+          "finite_tail_lambda_min": "-0.0000469849072396048667127663",
+          "finite_cross_norm": "1.26431556363635083269243",
+          "ritz_tail_residual_norm": "0.22728969016614714616809",
+          "coarse_tail_gap_to_mu_ref": "-1.45566987472822965562257",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "1.72409866681323471278632",
+          "directional_residual_epsilon_proxy": "0.0299638322621702777872",
+          "temple_denominator_proxy": "0.136806851410417826681976",
+          "temple_epsilon_proxy": "0.377617076361492941045612",
+          "btg_reference_S": "3009.26079515699666088884",
+          "btg_reference_log10_S": "3.47845982715170352",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "-1.72343779555181385817055",
+              "gap_to_mu_ref": "0.000707856168660459482488036",
+              "coeff_abs": "0.0388297167186462534635654",
+              "reference_contribution": "3009.11234319001037753692",
+              "reference_fraction": "0.999950668294610690782986",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "-1.58729487275615796472067",
+              "gap_to_mu_ref": "0.13685077896431635293236",
+              "coeff_abs": "0.00953005393366375467695236",
+              "reference_contribution": "0.00484949113025231720361322",
+              "reference_fraction": "0.00000161152238385484085981335",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "2.20869616635332894999777e-33",
+              "gap_to_mu_ref": "1.72414565172047431765303",
+              "coeff_abs": "2.39489383009335631155639e-23",
+              "reference_contribution": "1.92941045644528979477232e-46",
+              "reference_fraction": "6.411576090548277624596e-50",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "2.97630432432340008627709e-30",
+              "gap_to_mu_ref": "1.72414565172047431765303",
+              "coeff_abs": "2.75977390222641537535681e-21",
+              "reference_contribution": "2.56211786354225521694517e-42",
+              "reference_fraction": "8.51411040101822257185022e-46",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "0.0205480373367898664909367",
+          "finite_delta_to_max_log10": "-1.68722965381264692"
+        },
+        {
+          "reference_modes": 16,
+          "reference_dim": 33,
+          "mu_ref_upper_bound_surrogate": "-1.74001868764442608712258",
+          "finite_second_ritz_gap": "0.113330633465100301467153",
+          "finite_B_norm_estimate": "3.45286554787543223281443",
+          "tail_diag_min_inside_max_section": "0.999510562634421352620085",
+          "tail_lower_by_diag_minus_B_estimate": "-2.45335498524101088019434",
+          "finite_tail_gershgorin_lower": "-0.148322211896801494598246",
+          "finite_tail_lambda_min": "0.350908924541596109399209",
+          "finite_cross_norm": "1.1397541319900833615292",
+          "ritz_tail_residual_norm": "0.102617626363344930217879",
+          "coarse_tail_gap_to_mu_ref": "-0.713336297596584793071759",
+          "coarse_global_bracket_epsilon": "inf",
+          "directional_tail_gap_proxy": "2.09092761218602219652179",
+          "directional_residual_epsilon_proxy": "0.00503622276499460911384768",
+          "temple_denominator_proxy": "0.113330633465100301467153",
+          "temple_epsilon_proxy": "0.092917306808223660413046",
+          "btg_reference_S": "220.331343974316380116656",
+          "btg_reference_log10_S": "2.34307628356381169",
+          "coarse_bracket_lowmode_sum_top_k": "0.0",
+          "coarse_bracket_lowmode_log10_top_k": "-inf",
+          "low_modes": [
+            {
+              "j": 0,
+              "nu_j": "-1.73552701873597729516407",
+              "gap_to_mu_ref": "0.00449166890844879195851101",
+              "coeff_abs": "0.06657767059296045319933",
+              "reference_contribution": "219.705900354076476849322",
+              "reference_fraction": "0.997161349770040843209207",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 1,
+              "nu_j": "-1.61649454731555232997136",
+              "gap_to_mu_ref": "0.123524140328873757151223",
+              "coeff_abs": "0.0960456345978914275075191",
+              "reference_contribution": "0.604576943433846745419457",
+              "reference_fraction": "0.00274394433641870386238415",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 2,
+              "nu_j": "4.74821192925638370344559e-37",
+              "gap_to_mu_ref": "1.74001868764442608712258",
+              "coeff_abs": "2.37152904383364856804414e-26",
+              "reference_contribution": "1.8575866034692164643532e-52",
+              "reference_fraction": "8.43087764982612696809182e-55",
+              "coarse_bracket_contribution": "0.0"
+            },
+            {
+              "j": 3,
+              "nu_j": "6.72402406158995691821456e-34",
+              "gap_to_mu_ref": "1.74001868764442608712258",
+              "coeff_abs": "2.51653700549118215825343e-24",
+              "reference_contribution": "2.09169720898599901342991e-48",
+              "reference_fraction": "9.49341646656421391116928e-51",
+              "coarse_bracket_contribution": "0.0"
+            }
+          ],
+          "finite_delta_to_max_section": "0.00467500141283809702138675",
+          "finite_delta_to_max_log10": "-2.33021825354275826"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "statement": "E79.67 sigma-stability audit for the sparse terminal packet",
+  "sources": [
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_3W_terminal_sparse_packet_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_3V_terminal_two_block_results.json"
+  ],
+  "cases": [
+    {
+      "label": "zeta",
+      "rows": [
+        {
+          "N": 8,
+          "best_sparse": {
+            "1.0": {
+              "name": "W4-K3",
+              "support": [
+                6,
+                7,
+                8
+              ],
+              "mismatch": 0.0228802454288,
+              "N2_abs_minus": 0.000769913336006
+            },
+            "2.0": {
+              "name": "W4-K3",
+              "support": [
+                6,
+                7,
+                8
+              ],
+              "mismatch": 0.0274056617285,
+              "N2_abs_minus": 0.00184366323912
+            }
+          },
+          "best_two_block": {
+            "1.0": {
+              "name": "1+0+2",
+              "support": [
+                6,
+                1,
+                0,
+                7,
+                2
+              ],
+              "mismatch": 0.0228802454288,
+              "N2_abs_minus": 0.000769913336006
+            },
+            "2.0": {
+              "name": "1+0+2",
+              "support": [
+                6,
+                1,
+                0,
+                7,
+                2
+              ],
+              "mismatch": 0.0274056617285,
+              "N2_abs_minus": 0.00184366323912
+            }
+          },
+          "sigma_stable_support": true,
+          "sigma_stable_rule": true,
+          "sparse_matches_two_block_quality_each_sigma": true
+        },
+        {
+          "N": 10,
+          "best_sparse": {
+            "1.0": {
+              "name": "W6-K1",
+              "support": [
+                5
+              ],
+              "mismatch": 0.0294823584031,
+              "N2_abs_minus": 0.000933848452913
+            },
+            "2.0": {
+              "name": "W6-K1",
+              "support": [
+                5
+              ],
+              "mismatch": 0.0268837802029,
+              "N2_abs_minus": 0.00169813977703
+            }
+          },
+          "best_two_block": {
+            "1.0": {
+              "name": "1+0+3",
+              "support": [
+                7,
+                1,
+                0,
+                8,
+                3
+              ],
+              "mismatch": 0.00870182150755,
+              "N2_abs_minus": 0.000269850656537
+            },
+            "2.0": {
+              "name": "1+0+3",
+              "support": [
+                7,
+                1,
+                0,
+                8,
+                3
+              ],
+              "mismatch": 0.00448307329703,
+              "N2_abs_minus": 0.00027680568231
+            }
+          },
+          "sigma_stable_support": true,
+          "sigma_stable_rule": true,
+          "sparse_matches_two_block_quality_each_sigma": false
+        },
+        {
+          "N": 12,
+          "best_sparse": {
+            "1.0": {
+              "name": "W4-K1",
+              "support": [
+                7
+              ],
+              "mismatch": 0.0229878549072,
+              "N2_abs_minus": 0.000673289483061
+            },
+            "2.0": {
+              "name": "W4-K1",
+              "support": [
+                7
+              ],
+              "mismatch": 0.0204720185122,
+              "N2_abs_minus": 0.00119595552031
+            }
+          },
+          "best_two_block": {
+            "1.0": {
+              "name": "1+2+1",
+              "support": [
+                7,
+                1,
+                2,
+                10,
+                1
+              ],
+              "mismatch": 0.205242319032,
+              "N2_abs_minus": 0.00738984833124
+            },
+            "2.0": {
+              "name": "1+2+1",
+              "support": [
+                7,
+                1,
+                2,
+                10,
+                1
+              ],
+              "mismatch": 0.203080178803,
+              "N2_abs_minus": 0.0145822358162
+            }
+          },
+          "sigma_stable_support": true,
+          "sigma_stable_rule": true,
+          "sparse_matches_two_block_quality_each_sigma": false
+        },
+        {
+          "N": 14,
+          "best_sparse": {
+            "1.0": {
+              "name": "W4-K3",
+              "support": [
+                10,
+                11,
+                12
+              ],
+              "mismatch": 0.0214836442336,
+              "N2_abs_minus": 0.0005601101395
+            },
+            "2.0": {
+              "name": "W4-K3",
+              "support": [
+                10,
+                11,
+                12
+              ],
+              "mismatch": 0.024247174755,
+              "N2_abs_minus": 0.00126419942681
+            }
+          },
+          "best_two_block": {
+            "1.0": {
+              "name": "1+0+2",
+              "support": [
+                10,
+                1,
+                0,
+                11,
+                2
+              ],
+              "mismatch": 0.0214836442336,
+              "N2_abs_minus": 0.0005601101395
+            },
+            "2.0": {
+              "name": "1+0+2",
+              "support": [
+                10,
+                1,
+                0,
+                11,
+                2
+              ],
+              "mismatch": 0.024247174755,
+              "N2_abs_minus": 0.00126419942681
+            }
+          },
+          "sigma_stable_support": true,
+          "sigma_stable_rule": true,
+          "sparse_matches_two_block_quality_each_sigma": true
+        },
+        {
+          "N": 16,
+          "best_sparse": {
+            "1.0": {
+              "name": "W4-K2",
+              "support": [
+                11,
+                13
+              ],
+              "mismatch": 0.0355431426679,
+              "N2_abs_minus": 0.000896053785299
+            },
+            "2.0": {
+              "name": "W4-K2",
+              "support": [
+                11,
+                13
+              ],
+              "mismatch": 0.0333730560954,
+              "N2_abs_minus": 0.00167879908462
+            }
+          },
+          "best_two_block": {
+            "1.0": {
+              "name": "1+1+1",
+              "support": [
+                11,
+                1,
+                1,
+                13,
+                1
+              ],
+              "mismatch": 0.0355431426679,
+              "N2_abs_minus": 0.000896053785299
+            },
+            "2.0": {
+              "name": "1+1+1",
+              "support": [
+                11,
+                1,
+                1,
+                13,
+                1
+              ],
+              "mismatch": 0.0333730560954,
+              "N2_abs_minus": 0.00167879908462
+            }
+          },
+          "sigma_stable_support": true,
+          "sigma_stable_rule": true,
+          "sparse_matches_two_block_quality_each_sigma": true
+        }
+      ],
+      "summary": {
+        "num_rows": 5,
+        "sigma_stable_support_count": 5,
+        "sigma_stable_rule_count": 5,
+        "sparse_matches_two_block_quality_count": 3
+      }
+    },
+    {
+      "label": "plant",
+      "rows": [
+        {
+          "N": 8,
+          "best_sparse": {
+            "1.0": {
+              "name": "W4-K2",
+              "support": [
+                10,
+                11
+              ],
+              "mismatch": 0.0152770671085,
+              "N2_abs_minus": 0.0253648789583
+            },
+            "2.0": {
+              "name": "W6-K3",
+              "support": [
+                6,
+                7,
+                11
+              ],
+              "mismatch": 0.00558657966794,
+              "N2_abs_minus": 0.018446128839
+            }
+          },
+          "best_two_block": {
+            "1.0": {
+              "name": "1+1+2",
+              "support": [
+                10,
+                1,
+                1,
+                12,
+                2
+              ],
+              "mismatch": 0.874862162542,
+              "N2_abs_minus": 11.6076364113
+            },
+            "2.0": {
+              "name": "2+1+1",
+              "support": [
+                8,
+                2,
+                1,
+                11,
+                1
+              ],
+              "mismatch": 0.0916629727373,
+              "N2_abs_minus": 0.331339442982
+            }
+          },
+          "sigma_stable_support": false,
+          "sigma_stable_rule": false,
+          "sparse_matches_two_block_quality_each_sigma": false
+        },
+        {
+          "N": 10,
+          "best_sparse": {
+            "1.0": {
+              "name": "W5-K3",
+              "support": [
+                11,
+                13,
+                15
+              ],
+              "mismatch": 0.0137796122439,
+              "N2_abs_minus": 0.0215346247767
+            },
+            "2.0": {
+              "name": "W1-K1",
+              "support": [
+                0
+              ],
+              "mismatch": 0.79510068597,
+              "N2_abs_minus": 2.46886015661
+            }
+          },
+          "best_two_block": {
+            "1.0": {
+              "name": "1+1+1",
+              "support": [
+                13,
+                1,
+                1,
+                15,
+                1
+              ],
+              "mismatch": 0.070046170096,
+              "N2_abs_minus": 0.109467375668
+            },
+            "2.0": null
+          },
+          "sigma_stable_support": false,
+          "sigma_stable_rule": false,
+          "sparse_matches_two_block_quality_each_sigma": false
+        },
+        {
+          "N": 12,
+          "best_sparse": {
+            "1.0": {
+              "name": "W1-K1",
+              "support": [
+                0
+              ],
+              "mismatch": 0.836789450428,
+              "N2_abs_minus": 1.40323332605
+            },
+            "2.0": {
+              "name": "W2-K2",
+              "support": [
+                0,
+                1
+              ],
+              "mismatch": 0.694738711939,
+              "N2_abs_minus": 2.3189988724
+            }
+          },
+          "best_two_block": {
+            "1.0": null,
+            "2.0": {
+              "name": "1+0+1",
+              "support": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "mismatch": 0.694738711939,
+              "N2_abs_minus": 2.3189988724
+            }
+          },
+          "sigma_stable_support": false,
+          "sigma_stable_rule": false,
+          "sparse_matches_two_block_quality_each_sigma": false
+        },
+        {
+          "N": 14,
+          "best_sparse": {
+            "1.0": {
+              "name": "W2-K2",
+              "support": [
+                0,
+                1
+              ],
+              "mismatch": 0.715042566637,
+              "N2_abs_minus": 1.19872055637
+            },
+            "2.0": {
+              "name": "W2-K2",
+              "support": [
+                0,
+                1
+              ],
+              "mismatch": 0.716292139735,
+              "N2_abs_minus": 2.39288604631
+            }
+          },
+          "best_two_block": {
+            "1.0": {
+              "name": "1+0+1",
+              "support": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "mismatch": 0.715042566637,
+              "N2_abs_minus": 1.19872055637
+            },
+            "2.0": {
+              "name": "1+0+1",
+              "support": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "mismatch": 0.716292139735,
+              "N2_abs_minus": 2.39288604631
+            }
+          },
+          "sigma_stable_support": true,
+          "sigma_stable_rule": true,
+          "sparse_matches_two_block_quality_each_sigma": true
+        },
+        {
+          "N": 16,
+          "best_sparse": {
+            "1.0": {
+              "name": "W1-K1",
+              "support": [
+                0
+              ],
+              "mismatch": 0.814579197927,
+              "N2_abs_minus": 1.38834874015
+            },
+            "2.0": {
+              "name": "W2-K2",
+              "support": [
+                0,
+                1
+              ],
+              "mismatch": 0.665657361838,
+              "N2_abs_minus": 2.26270863823
+            }
+          },
+          "best_two_block": {
+            "1.0": null,
+            "2.0": {
+              "name": "1+0+1",
+              "support": [
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "mismatch": 0.665657361838,
+              "N2_abs_minus": 2.26270863823
+            }
+          },
+          "sigma_stable_support": false,
+          "sigma_stable_rule": false,
+          "sparse_matches_two_block_quality_each_sigma": false
+        }
+      ],
+      "summary": {
+        "num_rows": 5,
+        "sigma_stable_support_count": 1,
+        "sigma_stable_rule_count": 1,
+        "sparse_matches_two_block_quality_count": 1
+      }
+    }
+  ]
+}

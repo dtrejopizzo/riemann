@@ -11,14 +11,14 @@
 > **What survives:** the *heuristic* link (zero clustering $\leftrightarrow$ $\zeta$ large $\leftrightarrow$
 > $S(T)$ large) is real but **standard** (the Selberg $S(T)$ story), and it is **not** a new sound reduction.
 > §2–§5 below are kept only as the (correct) identification of the relevant frontier (large values), not as a
-> mechanism. The honest meta-conclusion is in `S2f-PROGRESS-HONEST.md`.
+> mechanism. The candid meta-conclusion is in `S2f-PROGRESS-CANDID.md`.
 
 
 **Phase 6, the lever the $G_p$ computation opens.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
 S2 refuted *per-place* positivity ($G_p$ indefinite). But the exact $G_p$ tells us **what the positivity
 actually is**, and it points to a precise, partly-new attack using assets that are *ours* (the $\omega$-class
 interference work; the validated detector) and the deepest arithmetic input (unique factorization). This note
-makes the reduction rigorous and states honestly where it lands (the large-values frontier).
+makes the reduction rigorous and states candidly where it lands (the large-values frontier).
 
 ---
 
@@ -113,7 +113,7 @@ This frontier is the one our earlier program was built for:
 
 ---
 
-## 5. Honest landing
+## 5. Candid landing
 
 This is **not** a proof and likely not a crossing: §2(i) shows the comb *is* $\zeta$ on the line, so the bound
 "$F\le\Omega_\infty$" is self-referential — it is the **large-values frontier**, itself open and tied to RH
@@ -128,7 +128,7 @@ on a sparse set; RH is about the *typical/structured* bound, not the sparse extr
 **What this is worth.** (i) A rigorous spectral reduction: RH $\iff$ archimedean envelope $\ge$ prime comb,
 pointwise. (ii) The mechanism: incoherence (unique factorization) vs constructive interference (large values).
 (iii) The sharpened, mechanistic B2. (iv) A concrete sub-problem (S2f-1) where our $\omega$-class machinery
-applies. **The honest next move is S2f-1** — bound the prime-comb spike with the $\omega$-class + diophantine
+applies. **The candid next move is S2f-1** — bound the prime-comb spike with the $\omega$-class + diophantine
 incoherence, and see whether the constant lands above or below the envelope. That is the one place left where
 we have a tool the field's standard approaches do not.
 
@@ -139,4 +139,4 @@ we have a tool the field's standard approaches do not.
 - §2 comb $=$ constructive interference $=$ $\zeta$ on the line / large values — ✅ identified.
 - §3 incoherence mechanism + sharpened B2 ($\mathbb Q$-independence) — ◆ mechanism stated; the bound is the open core.
 - §4 $\omega$-class assets for the spike (S2f-1) — ⬜ the attackable sub-problem (our tool).
-- §5 honest: this is the large-values frontier (self-referential), not an obvious crossing — but the right one.
+- §5 candid: this is the large-values frontier (self-referential), not an obvious crossing — but the right one.

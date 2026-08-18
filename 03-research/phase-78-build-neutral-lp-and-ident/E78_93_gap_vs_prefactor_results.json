@@ -1,0 +1,196 @@
+{
+  "statement": "Audit that U-RADIAL-GAP is the rigid half of the weighted-gap split, while PREF_N remains oscillatory and falsifier-unstable.",
+  "sources": {
+    "weighted_gap_split": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_92_weighted_gap_split_results.json",
+    "theta_coupling_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json",
+    "phase_g": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5g_schur_phase_increment_results.json"
+  },
+  "zeta": {
+    "summary": {
+      "1.0": {
+        "gap_values": [
+          0.9210895862217294,
+          0.6373916165165521,
+          0.4723238370776392,
+          0.3695158137414068,
+          0.31212366743804576,
+          0.24404031233619689,
+          0.15253444807726582
+        ],
+        "prefactor_values": [
+          2.3587241218797224,
+          1.3999935861968948,
+          1.2215410983424233,
+          0.7954549195025662,
+          0.8033825434205953,
+          0.5763313655331698,
+          0.3428173573913421
+        ],
+        "gap_monotone_nonincreasing": true,
+        "prefactor_monotone_nonincreasing": false
+      },
+      "3.0": {
+        "gap_values": [
+          0.8775198405740872,
+          0.6166667759913427,
+          0.47136208389877643,
+          0.3734034916204426,
+          0.30532881387567257,
+          0.26053756233323544,
+          0.21259515085730807
+        ],
+        "prefactor_values": [
+          2.1525937267412325,
+          1.3107920333331975,
+          1.187572677150243,
+          0.7822386299931513,
+          0.7809894401513329,
+          0.5923883657238964,
+          0.41147525928959644
+        ],
+        "gap_monotone_nonincreasing": true,
+        "prefactor_monotone_nonincreasing": true
+      }
+    },
+    "gap_stats": {
+      "count": 14,
+      "min": 0.15253444807726582,
+      "median": 0.37145965268092473,
+      "max": 0.9210895862217294
+    },
+    "prefactor_stats": {
+      "count": 14,
+      "min": 0.3428173573913421,
+      "median": 0.7994187314615808,
+      "max": 2.3587241218797224
+    }
+  },
+  "plant": {
+    "gap_stats": {
+      "count": 14,
+      "min": -0.9084270263614087,
+      "median": 2.378177055817053,
+      "max": 82.17896396803413
+    },
+    "prefactor_stats": {
+      "count": 14,
+      "min": -2638.6009747436415,
+      "median": -29.094566402574465,
+      "max": 164.4115816402254
+    },
+    "rows": [
+      {
+        "sigma": "1.0",
+        "N": 8,
+        "u_radial_gap": 3.9334049605019477,
+        "prefactor": -394.990063740381,
+        "minus_SAFEDELTA": -0.10145494212975789,
+        "new_im_share": 0.04595619562105137
+      },
+      {
+        "sigma": "1.0",
+        "N": 10,
+        "u_radial_gap": 14.578930952710753,
+        "prefactor": -784.8202776411457,
+        "minus_SAFEDELTA": -0.03464044489063947,
+        "new_im_share": 0.05110560339809522
+      },
+      {
+        "sigma": "1.0",
+        "N": 12,
+        "u_radial_gap": -0.9084270263614087,
+        "prefactor": 164.4115816402254,
+        "minus_SAFEDELTA": -0.0028576061346558355,
+        "new_im_share": -0.046964669349344755
+      },
+      {
+        "sigma": "1.0",
+        "N": 14,
+        "u_radial_gap": 2.3955524648084694,
+        "prefactor": -20.94154278392285,
+        "minus_SAFEDELTA": 0.00034428565743032535,
+        "new_im_share": -0.02813560070603702
+      },
+      {
+        "sigma": "1.0",
+        "N": 16,
+        "u_radial_gap": 2.3758494344302665,
+        "prefactor": -10.769524984573147,
+        "minus_SAFEDELTA": 7.443042324165727e-05,
+        "new_im_share": -0.01867632914948369
+      },
+      {
+        "sigma": "1.0",
+        "N": 18,
+        "u_radial_gap": 75.97971518762714,
+        "prefactor": -2638.6009747436415,
+        "minus_SAFEDELTA": -0.00019770211318754702,
+        "new_im_share": 0.0065515729188308225
+      },
+      {
+        "sigma": "1.0",
+        "N": 20,
+        "u_radial_gap": 1.034175463485963,
+        "prefactor": -543.3496691385707,
+        "minus_SAFEDELTA": 0.00015820190672917957,
+        "new_im_share": -0.0009108912331417934
+      },
+      {
+        "sigma": "3.0",
+        "N": 8,
+        "u_radial_gap": 2.3805046772038403,
+        "prefactor": 57.47925384365731,
+        "minus_SAFEDELTA": -0.03990162846940704,
+        "new_im_share": -0.27349471212446574
+      },
+      {
+        "sigma": "3.0",
+        "N": 10,
+        "u_radial_gap": 11.333212033773924,
+        "prefactor": -1763.1506447324286,
+        "minus_SAFEDELTA": -0.017721865827108794,
+        "new_im_share": 0.019706326169321085
+      },
+      {
+        "sigma": "3.0",
+        "N": 12,
+        "u_radial_gap": 0.3610081997770642,
+        "prefactor": -37.24759002122608,
+        "minus_SAFEDELTA": -0.002243722841308486,
+        "new_im_share": 0.0969385907478203
+      },
+      {
+        "sigma": "3.0",
+        "N": 14,
+        "u_radial_gap": 0.9620547139542599,
+        "prefactor": 19.0760710687988,
+        "minus_SAFEDELTA": 0.0007568436581192117,
+        "new_im_share": 0.029823077352859308
+      },
+      {
+        "sigma": "3.0",
+        "N": 16,
+        "u_radial_gap": 1.7380667408905681,
+        "prefactor": 141.53684357324403,
+        "minus_SAFEDELTA": 0.0008383013871563135,
+        "new_im_share": 0.012868515754600435
+      },
+      {
+        "sigma": "3.0",
+        "N": 18,
+        "u_radial_gap": 82.17896396803413,
+        "prefactor": -1417.1328502512135,
+        "minus_SAFEDELTA": -0.0006576417631204804,
+        "new_im_share": 0.0401847734606706
+      },
+      {
+        "sigma": "3.0",
+        "N": 20,
+        "u_radial_gap": 0.8986023249556285,
+        "prefactor": 97.97630925018252,
+        "minus_SAFEDELTA": 0.0005672856214952915,
+        "new_im_share": 0.016516047549318538
+      }
+    ]
+  }
+}

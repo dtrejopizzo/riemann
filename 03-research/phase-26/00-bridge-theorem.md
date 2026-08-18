@@ -307,7 +307,7 @@ identificadas. Pero el programa se reduce a un único problema central:
 
 Todo lo demás (V.1, V.3, V.4, la factorización adélica de 26-B) depende de eso.
 
-**Estado honesto de cada componente antes de comenzar 26-A:**
+**Estado franco de cada componente antes de comenzar 26-A:**
 
 | Componente | Estado real |
 |---|---|

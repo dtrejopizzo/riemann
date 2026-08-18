@@ -1,0 +1,224 @@
+{
+  "statement": "E79.47 sigma residual regularity audit",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_44_multisigma_coupled_packet_results.json",
+  "cases": [
+    {
+      "label": "zeta",
+      "rows": [
+        {
+          "N": 8,
+          "support_abs": [
+            6,
+            7,
+            8
+          ],
+          "mismatches": {
+            "0.75": "0.0222174557081",
+            "1.0": "0.0228802454288",
+            "1.5": "0.0247699485574",
+            "2.0": "0.0274056617285"
+          },
+          "direction": "nondecreasing",
+          "total_variation": 0.005188206020400002,
+          "curvature": [
+            0.0012269134079000016,
+            0.0007460100424999984
+          ],
+          "max_abs_curvature": 0.0012269134079000016,
+          "normalized_max_curvature": 0.04476861095545437
+        },
+        {
+          "N": 10,
+          "support_abs": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "mismatches": {
+            "0.75": "0.00931643529417",
+            "1.0": "0.00870182150755",
+            "1.5": "0.00694491195196",
+            "2.0": "0.00448307329703"
+          },
+          "direction": "nonincreasing",
+          "total_variation": 0.00483336199714,
+          "curvature": [
+            -0.0011422957689700003,
+            -0.0007049290993399997
+          ],
+          "max_abs_curvature": 0.0011422957689700003,
+          "normalized_max_curvature": 0.12261081979336252
+        },
+        {
+          "N": 12,
+          "support_abs": [
+            7
+          ],
+          "mismatches": {
+            "0.75": "0.0233545097247",
+            "1.0": "0.0229878549072",
+            "1.5": "0.0219399358836",
+            "2.0": "0.0204720185122"
+          },
+          "direction": "nonincreasing",
+          "total_variation": 0.002882491212500001,
+          "curvature": [
+            -0.0006812642061000025,
+            -0.0004199983477999984
+          ],
+          "max_abs_curvature": 0.0006812642061000025,
+          "normalized_max_curvature": 0.029170563378579067
+        },
+        {
+          "N": 14,
+          "support_abs": [
+            10,
+            11,
+            12
+          ],
+          "mismatches": {
+            "0.75": "0.0210796170059",
+            "1.0": "0.0214836442336",
+            "1.5": "0.0226365861719",
+            "2.0": "0.024247174755"
+          },
+          "direction": "nondecreasing",
+          "total_variation": 0.0031675577490999987,
+          "curvature": [
+            0.0007489147106000023,
+            0.00045764664479999717
+          ],
+          "max_abs_curvature": 0.0007489147106000023,
+          "normalized_max_curvature": 0.030886679300464435
+        },
+        {
+          "N": 16,
+          "support_abs": [
+            11,
+            13
+          ],
+          "mismatches": {
+            "0.75": "0.0358594238946",
+            "1.0": "0.0355431426679",
+            "1.5": "0.0346392158927",
+            "2.0": "0.0333730560954"
+          },
+          "direction": "nonincreasing",
+          "total_variation": 0.002486367799200001,
+          "curvature": [
+            -0.0005876455485000001,
+            -0.0003622330220999989
+          ],
+          "max_abs_curvature": 0.0005876455485000001,
+          "normalized_max_curvature": 0.01638747879015682
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "rows": [
+        {
+          "N": 8,
+          "support_abs": [
+            14
+          ],
+          "mismatches": {
+            "0.75": "1.02548052613",
+            "1.0": "0.915577703949",
+            "1.5": "1.45000376319",
+            "2.0": "0.0106131978184"
+          },
+          "direction": "mixed",
+          "total_variation": 2.0837194467935998,
+          "curvature": [
+            0.6443288814220001,
+            -1.9738166246126
+          ],
+          "max_abs_curvature": 1.9738166246126,
+          "normalized_max_curvature": 1.3612493117053812
+        },
+        {
+          "N": 10,
+          "support_abs": [
+            17
+          ],
+          "mismatches": {
+            "0.75": "0.891272880705",
+            "1.0": "0.24552579467",
+            "1.5": "0.794401232451",
+            "2.0": "0.79510068597"
+          },
+          "direction": "mixed",
+          "total_variation": 1.195321977335,
+          "curvature": [
+            1.194622523816,
+            -0.548175984262
+          ],
+          "max_abs_curvature": 1.194622523816,
+          "normalized_max_curvature": 1.3403555181338507
+        },
+        {
+          "N": 12,
+          "support_abs": [
+            0
+          ],
+          "mismatches": {
+            "0.75": "0.836676631687",
+            "1.0": "0.836789450428",
+            "1.5": "0.837110920302",
+            "2.0": "0.857179885535"
+          },
+          "direction": "nondecreasing",
+          "total_variation": 0.020503253848000003,
+          "curvature": [
+            0.00020865113299994853,
+            0.01974749535900011
+          ],
+          "max_abs_curvature": 0.01974749535900011,
+          "normalized_max_curvature": 0.023037749359546528
+        },
+        {
+          "N": 14,
+          "support_abs": [
+            25
+          ],
+          "mismatches": {
+            "0.75": "1.71479871226",
+            "1.0": "0.843943156972",
+            "1.5": "0.87131782178",
+            "2.0": "0.844669740063"
+          },
+          "direction": "mixed",
+          "total_variation": 0.9248783018129999,
+          "curvature": [
+            0.898230220096,
+            -0.05402274652499994
+          ],
+          "max_abs_curvature": 0.898230220096,
+          "normalized_max_curvature": 0.5238108786028812
+        },
+        {
+          "N": 16,
+          "support_abs": [
+            0
+          ],
+          "mismatches": {
+            "0.75": "0.814515536412",
+            "1.0": "0.814579197927",
+            "1.5": "0.850326447149",
+            "2.0": "0.850642851646"
+          },
+          "direction": "nondecreasing",
+          "total_variation": 0.036127315233999924,
+          "curvature": [
+            0.035683587707000086,
+            -0.03543084472500002
+          ],
+          "max_abs_curvature": 0.035683587707000086,
+          "normalized_max_curvature": 0.04194896558285547
+        }
+      ]
+    }
+  ]
+}

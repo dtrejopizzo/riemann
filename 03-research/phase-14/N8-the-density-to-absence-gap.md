@@ -88,7 +88,7 @@ unconditional square-root / upper-cancellation control of the relevant sums.**
 - The exact zeros-facing lines (explicit formula, Littlewood, Motohashi) are the **right** lines, but they are
   all stopped at the **same** barrier (square-root), which N8 identifies as RH-equivalent. So *refining* them
   will not cross; only an unconditional **square-root cancellation** input would, and that input is RH.
-- The honest frontier is therefore unchanged in location but now **precisely named**: an unconditional
+- The candid frontier is therefore unchanged in location but now **precisely named**: an unconditional
   square-root cancellation / upper-bound for $\sum_p p^{-\sigma-it}$ (equivalently the prime count error term,
   equivalently the Möbius/Λ sums), uniform — which is the Riemann Hypothesis, and for which no current mechanism
   (positivity, dynamics, statistics, cohomology, cancellation) provides an unconditional handle.

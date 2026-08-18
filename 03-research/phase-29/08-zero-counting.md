@@ -196,7 +196,7 @@ $$\frac{1}{N}\sum_n(t_n^{(\lambda)}-\gamma_n)^2 = O\!\left(\frac{1}{\bar\Delta^2
 
 La hipótesis GUE implica que los $t_n^{(\lambda)}$ no pueden "alejarse" sistemáticamente de los $\gamma_n$ — los espaciados locales son los mismos, y la asignación biunívoca $t_n^{(\lambda)} \leftrightarrow \gamma_n$ tiene error cuadrático $O((\log\lambda)^{-2})$.
 
-**Nota honesta.** La hipótesis GUE para los ceros de $\Xi$ es una CONJETURA profunda (Montgomery 1973, probada en distribución débil por Rudnick-Sarnak 1996). Para los ceros de $\hat\xi_\lambda$, es aún más conjetural. Lo que la Proposición 6 establece es una IMPLICACIÓN: si GUE vale para los $t_n^{(\lambda)}$, entonces Pregunta 29.3 sigue.
+**Nota franca.** La hipótesis GUE para los ceros de $\Xi$ es una CONJETURA profunda (Montgomery 1973, probada en distribución débil por Rudnick-Sarnak 1996). Para los ceros de $\hat\xi_\lambda$, es aún más conjetural. Lo que la Proposición 6 establece es una IMPLICACIÓN: si GUE vale para los $t_n^{(\lambda)}$, entonces Pregunta 29.3 sigue.
 
 ---
 

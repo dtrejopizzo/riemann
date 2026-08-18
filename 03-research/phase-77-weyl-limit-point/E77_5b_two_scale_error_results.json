@@ -1,0 +1,65 @@
+{
+  "statement": "Separate N trend from lambda/L trend for SR-LOG-ERR",
+  "fixed_lambda": {
+    "lambda": 6,
+    "rows": [
+      {
+        "N": 8,
+        "max_error": "0.555311137601612353468039"
+      },
+      {
+        "N": 10,
+        "max_error": "0.494154876010436454338657"
+      },
+      {
+        "N": 12,
+        "max_error": "0.454276752102299507406803"
+      },
+      {
+        "N": 14,
+        "max_error": "0.422143733222528601231888"
+      },
+      {
+        "N": 16,
+        "max_error": "0.397609977800012300959285"
+      },
+      {
+        "N": 18,
+        "max_error": "0.37565809500480403575632"
+      },
+      {
+        "N": 20,
+        "max_error": "0.357270178788352845475305"
+      }
+    ],
+    "log_error_vs_N_fit": {
+      "slope": "-0.0357979102823523590015675",
+      "points": 7
+    }
+  },
+  "fixed_N": {
+    "N": 18,
+    "rows": [
+      {
+        "lambda": 6,
+        "N": 18,
+        "max_error": "0.371602239988907631097034"
+      },
+      {
+        "lambda": 7,
+        "N": 18,
+        "max_error": "0.373917985488707041898467"
+      },
+      {
+        "lambda": 8,
+        "N": 18,
+        "max_error": "0.37774303504445074899033"
+      }
+    ],
+    "log_error_vs_log_lambda_fit": {
+      "slope": "0.0565469278148213669310529",
+      "points": 3
+    }
+  },
+  "verdict": "N improves at fixed lambda in the measured range, but lambda does not improve at fixed N=18; IDENT needs a two-scale N(L)/L error theorem."
+}

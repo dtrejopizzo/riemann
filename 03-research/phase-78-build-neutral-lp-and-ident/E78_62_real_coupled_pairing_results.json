@@ -1,0 +1,300 @@
+{
+  "statement": "Exact coupled-pairing formula for the real normalized ternary cocycle: Re(-(A+B+C)/(1-theta)) = -Re((A+B+C) conj(1-theta)) / |1-theta|^2.",
+  "sources": {
+    "cocycle": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5i_schur_cocycle_cell_results.json",
+    "theta_zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "theta_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "real_normalized_cocycle": 0.19766245266357263,
+          "pairing_numerator": 0.023165914219113286,
+          "positive_denominator": 0.11719936642971016,
+          "reconstructed_real_cocycle": 0.19766245266357263,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "real_normalized_cocycle": 0.19410103363322087,
+          "pairing_numerator": 0.014644270098429195,
+          "positive_denominator": 0.07544663634353152,
+          "reconstructed_real_cocycle": 0.19410103363322084,
+          "reconstruction_error": 2.7755575615628914e-17
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "real_normalized_cocycle": 0.10559074862236013,
+          "pairing_numerator": 0.005174007649222889,
+          "positive_denominator": 0.0490005773870158,
+          "reconstructed_real_cocycle": 0.10559074862236013,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "real_normalized_cocycle": 0.1149661542449184,
+          "pairing_numerator": 0.004506545578849212,
+          "positive_denominator": 0.03919888952055126,
+          "reconstructed_real_cocycle": 0.1149661542449184,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "real_normalized_cocycle": 0.09824742056395272,
+          "pairing_numerator": 0.0030165827679234907,
+          "positive_denominator": 0.030703938593073708,
+          "reconstructed_real_cocycle": 0.09824742056395269,
+          "reconstruction_error": 2.7755575615628914e-17
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "real_normalized_cocycle": 0.09752633906981485,
+          "pairing_numerator": 0.002434957061962875,
+          "positive_denominator": 0.024967173844388804,
+          "reconstructed_real_cocycle": 0.09752633906981484,
+          "reconstruction_error": 1.3877787807814457e-17
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "real_normalized_cocycle": 0.04722060720717229,
+          "pairing_numerator": 0.0009602184524293146,
+          "positive_denominator": 0.02033473327050881,
+          "reconstructed_real_cocycle": 0.0472206072071723,
+          "reconstruction_error": 6.938893903907228e-18
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "real_normalized_cocycle": 0.18181535449370023,
+          "pairing_numerator": 0.019405379966775847,
+          "positive_denominator": 0.1067312495185781,
+          "reconstructed_real_cocycle": 0.1818153544937002,
+          "reconstruction_error": 2.7755575615628914e-17
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "real_normalized_cocycle": 0.1869857007964457,
+          "pairing_numerator": 0.013359990132071044,
+          "positive_denominator": 0.07144926096041349,
+          "reconstructed_real_cocycle": 0.1869857007964457,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "real_normalized_cocycle": 0.10030960043368743,
+          "pairing_numerator": 0.004737373844031847,
+          "positive_denominator": 0.0472275218279194,
+          "reconstructed_real_cocycle": 0.10030960043368743,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "real_normalized_cocycle": 0.11223118495487598,
+          "pairing_numerator": 0.004290371384903508,
+          "positive_denominator": 0.038227979029433826,
+          "reconstructed_real_cocycle": 0.11223118495487597,
+          "reconstruction_error": 1.3877787807814457e-17
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "real_normalized_cocycle": 0.09603887839575255,
+          "pairing_numerator": 0.002893565112383669,
+          "positive_denominator": 0.030129101471385377,
+          "reconstructed_real_cocycle": 0.09603887839575254,
+          "reconstruction_error": 1.3877787807814457e-17
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "real_normalized_cocycle": 0.09616241452181727,
+          "pairing_numerator": 0.0023675307266256954,
+          "positive_denominator": 0.024620125632229744,
+          "reconstructed_real_cocycle": 0.09616241452181729,
+          "reconstruction_error": 1.3877787807814457e-17
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "real_normalized_cocycle": 0.04634189879636127,
+          "pairing_numerator": 0.0009320626284651287,
+          "positive_denominator": 0.020112741442918896,
+          "reconstructed_real_cocycle": 0.046341898796361275,
+          "reconstruction_error": 6.938893903907228e-18
+        }
+      ],
+      "max_reconstruction_error": 2.7755575615628914e-17
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "real_normalized_cocycle": -1.266800097197235,
+          "pairing_numerator": -5.80995154440808,
+          "positive_denominator": 4.586320728315745,
+          "reconstructed_real_cocycle": -1.266800097197235,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "real_normalized_cocycle": -0.3280500741453375,
+          "pairing_numerator": -7.7657010112975975,
+          "positive_denominator": 23.672303783284995,
+          "reconstructed_real_cocycle": -0.32805007414533754,
+          "reconstruction_error": 5.551115123125783e-17
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "real_normalized_cocycle": -0.5611667594199841,
+          "pairing_numerator": -23.904054570070922,
+          "positive_denominator": 42.59706080021185,
+          "reconstructed_real_cocycle": -0.5611667594199842,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "real_normalized_cocycle": 0.7126500197533747,
+          "pairing_numerator": 73.99621293251948,
+          "positive_denominator": 103.8324715940192,
+          "reconstructed_real_cocycle": 0.7126500197533746,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "real_normalized_cocycle": 0.6278980682904471,
+          "pairing_numerator": 5.383802057883561,
+          "positive_denominator": 8.574324925925993,
+          "reconstructed_real_cocycle": 0.627898068290447,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "real_normalized_cocycle": -1.765871832376342,
+          "pairing_numerator": -2.0964456477112714,
+          "positive_denominator": 1.1872014770687378,
+          "reconstructed_real_cocycle": -1.7658718323763416,
+          "reconstruction_error": 4.440892098500626e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "real_normalized_cocycle": 0.6555747080849111,
+          "pairing_numerator": 5.954044695296703,
+          "positive_denominator": 9.082175718294376,
+          "reconstructed_real_cocycle": 0.6555747080849111,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "real_normalized_cocycle": -1.1685378820341246,
+          "pairing_numerator": -6.16782253058968,
+          "positive_denominator": 5.278239264141855,
+          "reconstructed_real_cocycle": -1.1685378820341246,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "real_normalized_cocycle": -0.29524700376610813,
+          "pairing_numerator": -7.328725486109521,
+          "positive_denominator": 24.822353462104108,
+          "reconstructed_real_cocycle": -0.29524700376610824,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "real_normalized_cocycle": -0.5569385433492895,
+          "pairing_numerator": -23.81218905842954,
+          "positive_denominator": 42.75550568870485,
+          "reconstructed_real_cocycle": -0.5569385433492895,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "real_normalized_cocycle": 0.7125107002259029,
+          "pairing_numerator": 73.856882936296,
+          "positive_denominator": 103.65722635867716,
+          "reconstructed_real_cocycle": 0.7125107002259031,
+          "reconstruction_error": 2.220446049250313e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "real_normalized_cocycle": 0.627751899887068,
+          "pairing_numerator": 5.379159080480413,
+          "positive_denominator": 8.568925209860964,
+          "reconstructed_real_cocycle": 0.627751899887068,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "real_normalized_cocycle": -1.764557632565393,
+          "pairing_numerator": -2.0954841831199285,
+          "positive_denominator": 1.1875408002817223,
+          "reconstructed_real_cocycle": -1.7645576325653933,
+          "reconstruction_error": 2.220446049250313e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "real_normalized_cocycle": 0.6554664053199016,
+          "pairing_numerator": 5.949647189175439,
+          "positive_denominator": 9.076967394342207,
+          "reconstructed_real_cocycle": 0.6554664053199015,
+          "reconstruction_error": 1.1102230246251565e-16
+        }
+      ],
+      "max_reconstruction_error": 4.440892098500626e-16
+    }
+  }
+}

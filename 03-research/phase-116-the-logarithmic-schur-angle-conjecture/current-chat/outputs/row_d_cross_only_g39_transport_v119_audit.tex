@@ -1,0 +1,157 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{Cross-only transport of the G39 incidence current (v119)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The old/new block does not contain the zeroth-order obstruction}
+
+Let $H=H_0\oplus E$ be an orthogonal old/new decomposition and let
+$P_0,E_0$ denote the two coordinate projection/inclusion maps.  Let $U$ be
+a unitary translation on the ambient zero-extension line and put
+\begin{equation}
+ J_-=(U-I)/\sqrt2,\qquad J_+=(U+I)/\sqrt2.                    \tag{1}
+\end{equation}
+
+\begin{theorem}[Exact cross-only plus/minus identity --- \PROVED]
+On the old/new block one has
+\begin{align}
+ P_0J_-^*J_-E_0&=-\frac12P_0(U+U^*)E_0,\notag\\
+ P_0J_+^*J_+E_0&=+\frac12P_0(U+U^*)E_0,                     \tag{2}\\
+ P_0(J_-^*J_--J_+^*J_+)E_0&=-P_0(U+U^*)E_0.                \tag{3}
+\end{align}
+If in addition $E_0^*(U+U^*)E_0=0$, then
+\begin{equation}
+ E_0^*J_-^*J_-E_0=E_0^*J_+^*J_+E_0=I_E.                   \tag{4}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Direct multiplication gives
+\[
+ J_-^*J_-=I-\tfrac12(U+U^*),\qquad
+ J_+^*J_+=I+\tfrac12(U+U^*).
+\]
+Since $P_0E_0=0$, their old/new blocks are (2), and subtraction gives
+(3).  Compression to $E$ gives (4) under the stated no-self-contact
+condition.
+\end{proof}
+
+Thus the obstruction of v114, $P_0(U+U^*)P_0\ne0$, concerns the old/old
+block.  It is absent from the zeroth coefficient of the old/new block
+because $P_0E_0=0$.  A threshold proof does not require a unitary
+identification of $J_-P_0$ with $J_+P_0$; it requires only (3).
+
+\section{Arithmetic threshold fiberization}
+
+Use
+\[
+ T_N=\tfrac12\log N,\qquad
+ E_N=(-T_{N+1},-T_N)\cup(T_N,T_{N+1}),\qquad I_N=(-T_N,T_N).
+\]
+For $2\le n\le N$ let $U_n=S_{\log n}$ and
+$c_n=\Lambda(n)/\sqrt n$.  Define
+\begin{equation}
+ \mathcal B_N^{\rm ar}
+ :=-P_{I_N}\sum_{2\le n\le N}c_n(U_n+U_n^*)\big|_{L^2(E_N)}.
+                                                                    \tag{5}
+\end{equation}
+Let
+\begin{equation}
+ \mathscr D_N=\ell^2\{2,\ldots,N\}\otimes L^2(E_N),\qquad
+ \mathbf c_N=\sum_{n=2}^Nc_ne_n.                            \tag{6}
+\end{equation}
+The translated interval isometries of v111 give an isometry
+\begin{equation}
+ \mathfrak S_N:\mathscr D_N\longrightarrow L^2(I_N)         \tag{7}
+\end{equation}
+after separating the left and right newborn wings; its $n$th coordinate
+is the unique orientation of $U_n+U_n^*$ which enters $I_N$.
+
+\begin{theorem}[Physical realization of the G39 incidence column ---
+\PROVED]
+For every $e\in L^2(E_N)$,
+\begin{equation}
+ \boxed{\mathcal B_N^{\rm ar}e
+ =-\mathfrak S_N(\mathbf c_N\otimes e).}                    \tag{8}
+\end{equation}
+Consequently
+\begin{equation}
+ (\mathcal B_N^{\rm ar})^*\mathcal B_N^{\rm ar}
+ =\left(\sum_{n=2}^N\frac{\Lambda(n)^2}{n}\right)I_{E_N}.   \tag{9}
+\end{equation}
+Moreover the physical signed old/new block of the authoritative prime
+factors is exactly (5), not merely Gram-equivalent to it.
+\end{theorem}
+
+\begin{proof}
+For a vector on the right newborn wing, only $U_n$ enters the old interval;
+for a vector on the left wing, only $U_n^*$ enters it.  These are exactly
+the $R_n$ and $L_n$ channels of v111, which are pairwise disjoint.  This
+proves (8), and isometry gives (9).  Finally apply (3) to every $U_n$ and
+sum with the fixed coefficients $c_n$.
+\end{proof}
+
+The label vector in (6) is the first logarithmic incidence column
+$\mathcal C_N\delta_1$ of G39.  More generally, multiplication of labels by
+the finite divisibility shift $S_m$ agrees, on every channel which remains
+inside the threshold fiber, with physical translation by $\log m$.
+Iteration gives the word columns
+\begin{equation}
+ (\log N)^{-k}\mathcal C_N^k\delta_1
+ =\left\{\frac{\Lambda_k(n)}{\sqrt n(\log N)^k}\right\}_{n\le N}.
+                                                                    \tag{10}
+\end{equation}
+This constructs the source map for the arithmetic cross identity.  It does
+not identify the finite G39 old Gram with the complete infinite-rank
+physical old Gram, which v94 correctly ruled out.
+
+\section{What remains in the inverse metric}
+
+Let $A_{00}>0$ be the already positive old primitive block.  Equations
+(8)--(10) prove the physical realization of the load
+$b_e^{\rm ar}=\mathcal B_N^{\rm ar}e$.  Its return energy is
+\begin{equation}
+ \langle A_{00}^{-1}b_e^{\rm ar},b_e^{\rm ar}\rangle.        \tag{11}
+\end{equation}
+A coefficient-space word norm bounds (11) only if the threshold
+fiberization is contractive for the shorted old metric, namely if
+\begin{equation}
+ (\mathfrak S_N)^*A_{00}^{-1}\mathfrak S_N
+ \le \mathfrak G_N                                          \tag{12}
+\end{equation}
+for a source Gram $\mathfrak G_N$ whose value on the Witt word vector is
+the strict budget of v109--v110.  Equation (12), rather than a full
+$J_-\to J_+$ intertwiner, is the correctly typed cross-place estimate.
+
+The Gamma old/new cross of v112 and the conservative Tate terminal of v117
+must be adjoined to both sides of (12).  Their source maps are explicit;
+what is not yet proved is that their joint Gram dominates the shorted
+physical inverse metric with unit constant.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Cross-only $J_-/J_+$ identity & \PROVED & (2)--(4) \\
+Threshold incidence fiberization & \PROVED & (5)--(8) \\
+Exact arithmetic cross Gram & \PROVED & (9) \\
+G39 word columns on the threshold fiber & \PROVED & (10) \\
+Shorted inverse-metric domination & \OPEN & (12) \\
+Condition $G$, row (d) & \OPEN & after joint Gamma--Euler--Tate (12) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

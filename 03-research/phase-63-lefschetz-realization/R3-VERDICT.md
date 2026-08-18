@@ -35,7 +35,7 @@ the geometric Frobenius of an actual curve; over Spec ℤ it would be the Froben
 Connes–Consani arithmetic site / Deninger's conjectural Weil cohomology — **which does not exist as
 a realized object.** That is MW-5, now stated precisely and demonstrated by direct contrast.
 
-## Honest status — Phase 63 conclusion
+## Candid status — Phase 63 conclusion
 
 - **No proof of RH.** The MW-5 frontier was attacked head-on and the obstruction is now *exact and
   located*, not vague: the curve mechanism needs (linear Frobenius) + (gapped polarization); the ζ
@@ -53,4 +53,4 @@ A genuine crossing requires constructing (not observing) an operator on a Spec-�
 **both** J-linear (a Hodge morphism) **and** an isometry of a **positive-definite** polarization,
 with spectrum = the zeros. R1+R3 show the naive window operators cannot be both. This is the
 Connes–Consani / Deninger program; the program's role has been to pin down, concretely and
-honestly, exactly what such an object must satisfy and why the finite window cannot supply it.
+candidly, exactly what such an object must satisfy and why the finite window cannot supply it.

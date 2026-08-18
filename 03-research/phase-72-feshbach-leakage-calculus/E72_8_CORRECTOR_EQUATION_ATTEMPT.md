@@ -21,7 +21,7 @@ u_x must not be defined as C_x^{-1}b_x.
 
 It must come from the Sonin/prolate boundary calculus before solving the Feshbach inverse equation.
 
-## 1. What the prolate/Sonin machinery can honestly supply
+## 1. What the prolate/Sonin machinery can candidly supply
 
 The previous phases supply the following usable pieces.
 
@@ -226,7 +226,7 @@ This distinction is crucial:
 
 If the proof of C1 needs the forbidden lower coercivity, Phase 72 collapses back to the Phase 60 wall.
 
-## 6. The honest theorem we can prove now
+## 6. The candid theorem we can prove now
 
 ### Theorem 72.8 -- boundary-corrector principle
 
@@ -333,7 +333,7 @@ sup_v |E_x(v)|/||C_xv|| -> 0.
 
 ## 8. Verdict
 
-The corrector cannot be honestly closed from the existing documents alone.
+The corrector cannot be candidly closed from the existing documents alone.
 
 What is closed here is the exact implication:
 

@@ -2,7 +2,7 @@
 
 **Author:** David Alejandro Trejo Pizzo · `dtrejopizzo@gmail.com`
 **Created:** June 2026
-**Updated:** 2026-07-17
+**Updated:** 2026-08-18
 **Purpose:** A permanent reference. Before attempting any new attack on RH, consult this list.
 If the proposed approach is here, do not try it again. If something new fails, add it.
 
@@ -42,7 +42,7 @@ obstacle, (c) where it is documented.
 
 **[NG-A6] The r4/r5 phase transition as an RH-relevant result**
 - Attempted: claim that the transition N_c ≈ 1.18×10⁵ in ω-class geometry constitutes new insight toward RH.
-- Why it fails: the phase-transition headline was refuted by canonical re-verification. Reframed to the weaker, honest result (ζ MORE constructive at peaks, no transition).
+- Why it fails: the phase-transition headline was refuted by canonical re-verification. Reframed to the weaker, candid result (ζ MORE constructive at peaks, no transition).
 - File: memory `project-p5-transition-refuted.md`
 
 **[NG-A7] TDA (Topological Data Analysis) as an RH detector**
@@ -178,7 +178,7 @@ obstacle, (c) where it is documented.
 **[NG-E6] Reduction S2f §1 — "envelope ≥ pointwise comb" implies RH**
 - Attempted: reduce RH to the pointwise inequality Ω_∞(r) ≥ (Σ_p G_p)_reg(r).
 - Why it fails: the reduction is FLAWED. The comb Σ_p G_p is DISTRIBUTIONAL: it equals Ω_∞ − 2π Σ_ρ δ_{γ_ρ}. "Envelope ≥ comb pointwise" cannot be made precise by taking φ̂ → δ (invalid limit).
-- File: `00-MAP.md §Phase 6 (S2f-PROGRESS-HONEST)`
+- File: `00-MAP.md §Phase 6 (S2f-PROGRESS-CANDID)`
 
 **[NG-E7] L_DH as a reproducible quantitative benchmark**
 - Attempted: use L_DH (the Davenport–Heilbronn L-function) as a rigorous benchmark with reproducible λ_min ≈ −9×10⁴.
@@ -223,6 +223,13 @@ The local-global factorization Q = Q_∞ + Σ_p Q_p requires: (1) a cohomology H
 an arithmetic Frobenius φ_p at each prime; (3) a positive intersection form. This is exactly the
 Connes–Consani "arithmetic site" program, unfinished after decades.
 - File: `phase-27/02-C-wall-analysis.md §Proposition 27-C.5`
+- **Sharpened twice by the arithmetic-Lefschetz programme (Phases 107–119, see §VIII below).**
+  Phase 113 proves the missing positive intersection form cannot be built inside the natural
+  Schwartz-data class (O1–O3), and that the one remaining input is equivalent to RH exactly. Phase
+  118 reaches the identical wall independently, analytically, verified against real zeta zeros.
+  Connes–Consani's own proved Riemann–Roch on the scaling site has real-valued, not even integral,
+  dimensions (`chi(D)=deg(D) in R`) — a negative answer, for that specific object, to whether a
+  quadratic/integral Riemann–Roch is available at all (item R16, `OPTIONS.md` §1d).
 
 **[MW-6] Uniform spectral-gap wall**
 The missing inequality: sup_{X≥X_0} |λ_min(Q_X) − λ_min(Q_∞)| ≤ ε(X_0) → 0. This uniform
@@ -444,8 +451,119 @@ non-circular, per deep research from June 2026.
 > ($\lambda_n\ge0$ for all $n$, equivalently $\Omega_7$) — the same difficulty the whole program
 > has circled since Phase 0, now reached by an independent construction and named precisely. This
 > is the transition this list should not obscure: the program moved from "only walls" to "a
-> complete reduction with a single, precisely named open input." That input is still, honestly,
+> complete reduction with a single, precisely named open input." That input is still, candidly,
 > exactly as hard as RH.
+
+---
+
+## VIII. PHASES 107–119: THE ARITHMETIC LEFSCHETZ RECONSTRUCTION
+
+A structurally different pivot from the ARP-P arc (Phases 77–106, closed above with no crossing):
+imitate Weil's 1948 proof of RH for curves over finite fields, working backward from what row (d)
+— Hodge index / Castelnuovo–Severi — would require over $\operatorname{Spec}\mathbb Z$. Full
+detail in `03-research/THE_BACKWARD_MAP.md` and `03-research/AUDIT_CONSOLIDATED.md`; the resulting
+paper is `04-papers/42-arithmetic-lefschetz-programme/`.
+
+**[NG-107] The Deninger–Morishita bridge annihilates the p-adic transverse direction (Phase 107).**
+- Attempted: import the Deninger–Morishita correspondence to attach row (b)'s shell functionals
+  `Gamma_{p,k}` to actual algebraic cycles.
+- Why it fails: at a point over `p` the residue field is `F_p-bar` with `mu_(p)` of order prime to
+  `p` — the bridge kills exactly the transverse direction row (b) needs (`107_242` Thm 4.1).
+- File: `03-research/phase-107-arithmetic-lefschetz-reconstruction/107_242_*.md`.
+
+**[NG-109] No pairing on the prime-power coefficients sees the zeros, for any kernel (Phase 109).**
+- Attempted: promote row (c)'s identity (`Lambda(n) = deg_det L_n`) to a genuine intersection
+  number by finding a suitable pairing.
+- Why it fails: proved for **every** kernel, not a failed search — Thm 1.1.
+- File: `03-research/phase-109-one-sided-pairing/109_04*.md`.
+
+**[NG-110] xi-divisibility is impossible on compactly supported data (Phase 110).**
+- Attempted: supply row (d)'s missing principal subspace via `xi`-divisibility
+  (`f-hat = xi * g-hat`) on compactly supported test functions.
+- Why it fails: by Stirling, `xi` has infinite exponential type on the real axis while every
+  compactly supported `f` has finite type — dividing forces `g-hat` to decay faster than any
+  exponential, hence `g=0`. **Explicitly not RH in disguise**: the obstruction is carried entirely
+  by `Gamma`; no zero of `zeta` enters it.
+- File: `03-research/phase-110-principal-xi-divisibility/110_02*.md`, `110_03*.md`.
+
+**[NG-113-O1/O2/O3] No lattice inside the Schwartz-data class D, proved three independent ways
+(Phase 113).**
+- Attempted: supply requirement d3 (Riemann–Roch's quadratic growth term) inside the class
+  `D = Schwartz-data` where rows (a)–(c) are otherwise built.
+- Why it fails, three independent times, each killing a different escape route:
+  - **O1.** `D/rad` is a complex vector space, so the effective cone is scaling-stable and
+    `h^0(nD)=h^0(D)` — measured exactly at `n=2,5,100`. No growth argument has anything to grow.
+  - **O2.** Correspondences `delta_n` have infinite mutual intersection, since
+    `|(n/m)^rho| = (n/m)^{1/2}` does not tend to 0 as `n/m -> infinity` — the exponent `1/2` **is
+    the critical line**, encoded directly into the obstruction to discretizing.
+  - **O3.** The negative part has no spectral gap:
+    `sup s(f,f)/||f||^2 = 0` on `D-circ \ rad`, not attained.
+- File: `03-research/phase-113-the-trace-on-schwartz-data/113_10*.md`,
+  `113_11_THE_SECTION_FUNCTOR*.md` (§3, "double dissociation"), `113_13*.md`.
+
+**[NG-113-d3] h^0 cannot be built inside D at all (Phase 113).**
+- Attempted: repair O1 by finding any section functor `h^0` on `D` compatible with the divisor
+  structure already built.
+- Why it fails: divisors and sections are proved **doubly dissociated** — mutually independent,
+  with an explicit two-sided witness (`113_11` Thm 3.1/3.3). The imported Connes–Consani
+  Riemann–Roch is separately shown insufficient in principle: dimension 1, genus 0, and a
+  Pontryagin duality between *different* spaces, carrying no signature.
+- File: `03-research/phase-113-the-trace-on-schwartz-data/113_11*.md`.
+
+**[MW-1, reconfirmed twice, independently] Row (d) is exactly RH (Phases 113, 118).**
+- Phase 113 (algebraic): with O1–O3 closing every route to d3 inside `D`, the one remaining input,
+  effectivity `(E-circ)`, is proved equivalent to RH in both directions (`113_10` Thm 4.2/4.3); the
+  Hodge-index inequality on `H^perp` holds **iff** RH, measured exactly — signature `(1,7)` with
+  the zeros on the line, `(3,5)` off it (`113_12` Thm 4.1).
+- Phase 118 (analytic, independent route): derived and verified against real zeros of zeta, to
+  relative precision `5e-11`–`2e-9`, that for `F` primitive supported in the window `I_T`:
+  `<A_T F,F> = sum_rho h(gamma_rho)`. Row (d) **is** localized Weil positivity on the primitive
+  space — the same wall, reached by the explicit formula rather than Riemann–Roch. Also
+  establishes the constant `m_0` is **forced**
+  (`psi(1/4) = -(gamma+pi/2+3log2)`, checked to 30 digits), not a normalization choice.
+- Consequence: no reformulation internal to the operator theory of paper 42 (factorization, Schur
+  complements, defect operators, scattering) can close row (d) — none of them adds arithmetic
+  input beyond what MW-1 already forbids.
+- File: `03-research/phase-113-the-trace-on-schwartz-data/113_10*.md`, `113_12*.md`;
+  `03-research/phase-118-the-exact-threshold-inequality/PROOF_ARCHITECTURE.md` §2,
+  `PHASE_118_CLOSURE.md`.
+
+**[NG-116] The Logarithmic Schur Angle Conjecture is falsified (Phase 117).**
+- Attempted: complete row (d) conditionally on `rho_N <= 1/(20 log N)` (extracted in Phase 116 as
+  the surviving sufficient estimate after rejecting a Cauchy–Schwarz/Gamma-gap closure attempt).
+- Why it fails: contradicted by paper 42's own audit table at 4 of its 5 tabulated points
+  (N = 20, 40, 80, 120); the companion claim `rho_N log N < 0.047` also fails (reaches 0.0565).
+- File: `03-research/phase-117-the-transfer-comparison-measured/README.md`.
+
+**[NG-117] The Gamma–Tate source model does not reach the exact target (Phase 117).**
+- Attempted: use the unit source estimate (`||L_N e||^2 <= E_{Gamma T,N}(e)`, itself plausible and
+  unrefuted) to imply the exact threshold condition via a comparison constant `c_N`.
+- Why it fails: `c_N < 1` at every threshold `3 <= N <= 37`, decaying like `(log N)^{-0.6}`, and
+  decreasing under mesh refinement. `c_N` is a **minimum**, so Galerkin restriction bounds it from
+  **above** — the measurement is one-sided-robust: the true `c_N` is at most what was measured, so
+  this cannot be a discretization artifact.
+- Consequence: further work sharpening the source estimate does not close row (d), however sharp
+  it becomes.
+- File: `03-research/phase-117-the-transfer-comparison-measured/README.md`.
+
+**[NG-118] No explicit structural formula for the scattering operator found (Phase 118).**
+- Attempted: find an explicit contraction `Phi` with `Y_T = Phi X_T` (Douglas' lemma reformulation
+  of row (d)) with recognizable structure — Toeplitz or Hankel in `log n`, block-diagonal over
+  places, rank-one-plus-diagonal, or an explicit `Psi` with `I - Phi^*Phi = Psi^*Psi`.
+- Why it fails: Toeplitz-in-`log n` and Hankel-in-`log n` both refuted (`R^2 <= 0.16`);
+  block-diagonal-over-places excluded by an elementary obstruction; no `Psi` found matching any
+  candidate built from the problem's own data. Candid negative result, not a near-miss.
+- File: `03-research/phase-118-the-exact-threshold-inequality/W3_SCATTERING.md`.
+
+**Net verdict of Phases 107–119.** Two independent proofs (113 algebraic, 118 analytic) that row
+(d) — the arithmetic-Lefschetz programme's analogue of Weil's own row (d) — is exactly RH, joining
+MW-1 as a second, structurally unrelated route to the same statement. Three objects remain
+genuinely **unbuilt but not proved impossible** (a construction with the required quadratic
+growth; a space with an integral lattice structure compatible with the row-(c) pairing; whether a
+quadratic Riemann–Roch can exist over `Spec Z` at all), and a family of open, **non**-RH-equivalent
+sub-targets from the wider corpus audit was never closed (Diana L8, "Lemma 108," Conjecture
+`C_B`, LP-112, GAP-157.A, an untried boundary-triple classification). Full options list, with file
+citations: `OPTIONS.md`.
 
 ---
 
@@ -460,4 +578,4 @@ Before attacking any new direction:
 
 ---
 
-*Last updated: 2026-07-17. Compiled from Phases 3–76 of the program.*
+*Last updated: 2026-08-18. Compiled from Phases 3–119 of the program. See `OPTIONS.md` for the current options list.*

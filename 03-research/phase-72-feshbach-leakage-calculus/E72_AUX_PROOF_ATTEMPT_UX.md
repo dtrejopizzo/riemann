@@ -12,7 +12,7 @@ closed: the abstract construction of the only admissible non-circular corrector.
 open:   the arithmetic Prolate-Sonin Coboundary Lemma stated in §6.
 ```
 
-I do **not** get an unconditional proof of the Phase 72 leakage estimate here. What I can do honestly is
+I do **not** get an unconditional proof of the Phase 72 leakage estimate here. What I can do candidly is
 reduce it to a first missing lemma that is sharper than the previous Phase 60/65 walls and does not use
 the forbidden moves.
 
@@ -236,7 +236,7 @@ and the same estimate for the model-small error term. This asks only about the e
 
 ## 6. The first exact missing lemma
 
-The honest load-bearing statement is therefore the following.
+The candid load-bearing statement is therefore the following.
 
 ### Lemma PSC -- Pole-relative Prolate-Sonin Coboundary Lemma
 
@@ -415,4 +415,4 @@ The exact missing lemma is PSC:
 
 This is the first lemma to attack. It is narrower than the previous Feshbach/Green endpoint wall and
 narrower than the old prolate uniform-boundedness wall, but it is still genuine new arithmetic. I cannot
-honestly replace it by an unconditional proof from the material currently in the repository.
+candidly replace it by an unconditional proof from the material currently in the repository.

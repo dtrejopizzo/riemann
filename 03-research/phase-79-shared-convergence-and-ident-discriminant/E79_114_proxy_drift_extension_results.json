@@ -1,0 +1,286 @@
+{
+  "VOID": true,
+  "VOID_REASON": "Rows N>=28 computed at dps=70, which E79.115 shows is invalid from N=28 onward (alpha rel spread up to 1.37 vs dps=110/150). The D-turns verdicts here are meaningless. Rows N=24,26 agree with E79.113 to ~1e-18 relative and are the only trustworthy rows. The anchor_check match:false flags are a mis-set ABSOLUTE tolerance (1e-25 against an 18-digit stored value), not a data disagreement. Superseded by E79_115_large_row_precision_control_results.json.",
+  "statement": "E79.114 proxy drift extension, N=24..36",
+  "question": "does |gap_N/alpha_N| keep rising past N=26 (D-continues) or turn over (D-turns)?",
+  "parameters": {
+    "lambda": 6,
+    "min_n": 24,
+    "max_n": 36,
+    "dps": 70
+  },
+  "cases": [
+    {
+      "label": "zeta",
+      "planted": null,
+      "rows": [
+        {
+          "N": 24,
+          "outlier_abs": "4631.42180686121381",
+          "second_abs": "602.41632655981142",
+          "outlier_fraction": "7.6880748456962332",
+          "escape_scale": "4427.33408685513792",
+          "mesh_radius": "40.3271936180672844",
+          "mean_d": "12.0427718387608741",
+          "outlier_over_escape": "1.04609720341909983",
+          "alpha": "0.318791074710767611",
+          "proxy": "0.29371197164606187",
+          "gap": "0.0250791030647057407",
+          "gap_over_alpha": "0.0786694015428740585"
+        },
+        {
+          "N": 26,
+          "outlier_abs": "4975.14809802103556",
+          "second_abs": "678.763636255853343",
+          "outlier_fraction": "7.32972102846373156",
+          "escape_scale": "4735.54779427747112",
+          "mesh_radius": "43.8339061065948744",
+          "mean_d": "13.0899693899574718",
+          "outlier_over_escape": "1.05059611140090322",
+          "alpha": "0.333710178705310175",
+          "proxy": "0.304786413380321006",
+          "gap": "0.0289237653249891686",
+          "gap_over_alpha": "0.0866733086692297472"
+        },
+        {
+          "N": 28,
+          "outlier_abs": "4672.47249082698097",
+          "second_abs": "779.010374398059223",
+          "outlier_fraction": "5.99795926265731343",
+          "escape_scale": "4347.7781794420507",
+          "mesh_radius": "47.3406185951224643",
+          "mean_d": "14.1371669411540696",
+          "outlier_over_escape": "1.07468051450283469",
+          "alpha": "0.398655980266942513",
+          "proxy": "0.34754753246859218",
+          "gap": "0.051108447798350333",
+          "gap_over_alpha": "0.12820188415116161"
+        },
+        {
+          "N": 30,
+          "outlier_abs": "5386.98083763233511",
+          "second_abs": "850.245059333854217",
+          "outlier_fraction": "6.33579787203103554",
+          "escape_scale": "5048.68764353764945",
+          "mesh_radius": "50.8473310836500542",
+          "mean_d": "15.1843644923506673",
+          "outlier_over_escape": "1.06700616436980469",
+          "alpha": "0.380018473562766351",
+          "proxy": "0.337479267899697107",
+          "gap": "0.0425392056630692442",
+          "gap_over_alpha": "0.111939836146000384"
+        },
+        {
+          "N": 32,
+          "outlier_abs": "2954.40216513487727",
+          "second_abs": "1145.53150760122148",
+          "outlier_fraction": "2.57906670006963585",
+          "escape_scale": "2179.05328083097939",
+          "mesh_radius": "54.3540435721776442",
+          "mean_d": "16.2315620435472651",
+          "outlier_over_escape": "1.35581914913444406",
+          "alpha": "0.662676947096781157",
+          "proxy": "0.575236688204591382",
+          "gap": "0.0874402588921897748",
+          "gap_over_alpha": "0.131950053906763556"
+        },
+        {
+          "N": 34,
+          "outlier_abs": "2650.77316594766773",
+          "second_abs": "1332.00772956201364",
+          "outlier_fraction": "1.99005839614706002",
+          "escape_scale": "1534.46347115211613",
+          "mesh_radius": "57.8607560607052341",
+          "mean_d": "17.2787595947438628",
+          "outlier_over_escape": "1.72749186655932349",
+          "alpha": "0.825093511703710191",
+          "proxy": "0.665432050271929435",
+          "gap": "0.159661461431780756",
+          "gap_over_alpha": "0.193507110608712362"
+        },
+        {
+          "N": 36,
+          "outlier_abs": "6510.84944610757857",
+          "second_abs": "1065.21201022167776",
+          "outlier_fraction": "6.11225688748348525",
+          "escape_scale": "6077.19783223472161",
+          "mesh_radius": "61.3674685492328241",
+          "mean_d": "18.3259571459404606",
+          "outlier_over_escape": "1.07135716589193108",
+          "alpha": "0.389899524922258848",
+          "proxy": "0.34687143332815465",
+          "gap": "0.0430280915941041982",
+          "gap_over_alpha": "0.110356871049492734"
+        }
+      ],
+      "anchor_check": [
+        {
+          "N": 24,
+          "abs_delta_vs_E79_113": "2.41515137427634458e-20",
+          "match": false
+        },
+        {
+          "N": 26,
+          "abs_delta_vs_E79_113": "3.84407892674329918e-20",
+          "match": false
+        }
+      ],
+      "summary": {
+        "gap_sign_pattern": "+++++++",
+        "crossings": [],
+        "rel_gap_by_N": {
+          "24": "0.078669402",
+          "26": "0.086673309",
+          "28": "0.12820188",
+          "30": "0.11193984",
+          "32": "0.13195005",
+          "34": "0.19350711",
+          "36": "0.11035687"
+        },
+        "new_rows_monotone_increasing": false,
+        "new_rows_monotone_decreasing": false,
+        "new_rows_turned_over": true,
+        "max_abs_rel_gap": "0.193507110608712362",
+        "verdict": "D-turns"
+      }
+    },
+    {
+      "label": "plant_gamma1_beta030",
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 24,
+          "outlier_abs": "66.6483855468796351",
+          "second_abs": "54.9564998640515408",
+          "outlier_fraction": "1.21274800454451899",
+          "escape_scale": "52.1428844489949775",
+          "mesh_radius": "40.3271936180672844",
+          "mean_d": "12.0427718387608741",
+          "outlier_over_escape": "1.27818754660712373",
+          "alpha": "0.0448123382168797471",
+          "proxy": "0.174258281173342074",
+          "gap": "-0.129445942956462326",
+          "gap_over_alpha": "-2.88862282369597719"
+        },
+        {
+          "N": 26,
+          "outlier_abs": "74.9248718888485516",
+          "second_abs": "68.1658659577899404",
+          "outlier_fraction": "1.09915528594977377",
+          "escape_scale": "51.5243094856536223",
+          "mesh_radius": "43.8339061065948744",
+          "mean_d": "13.0899693899574718",
+          "outlier_over_escape": "1.45416547328422827",
+          "alpha": "0.151257419947133691",
+          "proxy": "0.310781151772164967",
+          "gap": "-0.159523731825031276",
+          "gap_over_alpha": "-1.05465062064913418"
+        },
+        {
+          "N": 28,
+          "outlier_abs": "74.281526681248478",
+          "second_abs": "71.0792885143522092",
+          "outlier_fraction": "1.04505163506595425",
+          "escape_scale": "51.6254697591545177",
+          "mesh_radius": "47.3406185951224643",
+          "mean_d": "14.1371669411540696",
+          "outlier_over_escape": "1.43885425213155492",
+          "alpha": "0.119850524097744324",
+          "proxy": "0.312182310094733074",
+          "gap": "-0.19233178599698875",
+          "gap_over_alpha": "-1.60476382931902904"
+        },
+        {
+          "N": 30,
+          "outlier_abs": "83.6508088305600814",
+          "second_abs": "83.5421118560387938",
+          "outlier_fraction": "1.00130110398344485",
+          "escape_scale": "52.6485227664061115",
+          "mesh_radius": "50.8473310836500542",
+          "mean_d": "15.1843644923506673",
+          "outlier_over_escape": "1.58885386398601598",
+          "alpha": "0.189340695613022299",
+          "proxy": "0.390706968465340593",
+          "gap": "-0.201366272852318294",
+          "gap_over_alpha": "-1.06351290302573976"
+        },
+        {
+          "N": 32,
+          "outlier_abs": "90.9316941857819806",
+          "second_abs": "90.8356247023420784",
+          "outlier_fraction": "1.001057619009664",
+          "escape_scale": "56.1468187549347689",
+          "mesh_radius": "54.3540435721776442",
+          "mean_d": "16.2315620435472651",
+          "outlier_over_escape": "1.61953421764950759",
+          "alpha": "0.204251508679518924",
+          "proxy": "0.401093564073843882",
+          "gap": "-0.196842055394324959",
+          "gap_over_alpha": "-0.963723874878105422"
+        },
+        {
+          "N": 34,
+          "outlier_abs": "107.606819207700837",
+          "second_abs": "93.8068222165451335",
+          "outlier_fraction": "1.14711080351170595",
+          "escape_scale": "72.5065613188593736",
+          "mesh_radius": "57.8607560607052341",
+          "mean_d": "17.2787595947438628",
+          "outlier_over_escape": "1.48409767682241034",
+          "alpha": "0.189980833728256736",
+          "proxy": "0.316870858178777945",
+          "gap": "-0.126890024450521209",
+          "gap_over_alpha": "-0.667909609408395094"
+        },
+        {
+          "N": 36,
+          "outlier_abs": "128.108588059655015",
+          "second_abs": "111.27708958568404",
+          "outlier_fraction": "1.15125753680869428",
+          "escape_scale": "79.0555973213007518",
+          "mesh_radius": "61.3674685492328241",
+          "mean_d": "18.3259571459404606",
+          "outlier_over_escape": "1.6204872570754382",
+          "alpha": "0.276130816386546473",
+          "proxy": "0.380511966643752354",
+          "gap": "-0.104381150257205881",
+          "gap_over_alpha": "-0.378013405468972115"
+        }
+      ],
+      "anchor_check": [
+        {
+          "N": 24,
+          "abs_delta_vs_E79_113": "4.6676888799193637e-19",
+          "match": false
+        },
+        {
+          "N": 26,
+          "abs_delta_vs_E79_113": "2.21217042701960405e-19",
+          "match": false
+        }
+      ],
+      "summary": {
+        "gap_sign_pattern": "-------",
+        "crossings": [],
+        "rel_gap_by_N": {
+          "24": "2.8886228",
+          "26": "1.0546506",
+          "28": "1.6047638",
+          "30": "1.0635129",
+          "32": "0.96372387",
+          "34": "0.66790961",
+          "36": "0.37801341"
+        },
+        "new_rows_monotone_increasing": false,
+        "new_rows_monotone_decreasing": false,
+        "new_rows_turned_over": true,
+        "max_abs_rel_gap": "2.88862282369597719",
+        "verdict": "D-turns"
+      }
+    }
+  ]
+}

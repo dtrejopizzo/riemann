@@ -5,7 +5,7 @@
 **Autor:** David Alejandro Trejo Pizzo.
 **Prerrequisitos:** Doc 80 (Castelnuovo–Severi aritmético: por qué la traza de Jacobi y Markov–Stieltjes no dan la forma; la forma $Q$ semidefinida no distingue medidas); Doc 119 (R-SIG realizaciones (i)/(ii)/(iii); R-LEF; R-PESO; el test R-NC, cláusulas NC1–NC4); Doc 123 (bifurcación C-cok/C-rank; el juguete $C_p\times C_p$; los null elements; C-rank = la norma/número de intersección que falta = G2); Doc 124 (G2 = índice de Hodge sobre el cuadrado, signatura INDEFINIDA $(1,\rho-1)$; la positividad de CC es DEFINIDA, categoría distinta; el ingrediente no existe en el corpus CC).
 
-**Disciplina de etiquetado (regla absoluta, máximo riesgo de falsa victoria):** cada enunciado lleva **[DATO]** (en fuente/probado, con cita exacta), **[CONSTRUCCIÓN]** (objeto que diseño yo — con su estatus: qué asume, qué quedaría por verificar), **[CÁLCULO]** (derivación mía mostrada paso a paso), **[GAP]**, **[CONJETURA]**, **[NO VERIFICADO]**. NUNCA "probado" salvo lo genuinamente probado. El objetivo NO es declarar G2 construido — es construir todo lo construible, computar el juguete honestamente, y aislar el núcleo. **Si la construcción se traba, el punto de traba ES el resultado.**
+**Disciplina de etiquetado (regla absoluta, máximo riesgo de falsa victoria):** cada enunciado lleva **[DATO]** (en fuente/probado, con cita exacta), **[CONSTRUCCIÓN]** (objeto que diseño yo — con su estatus: qué asume, qué quedaría por verificar), **[CÁLCULO]** (derivación mía mostrada paso a paso), **[GAP]**, **[CONJETURA]**, **[NO VERIFICADO]**. NUNCA "probado" salvo lo genuinamente probado. El objetivo NO es declarar G2 construido — es construir todo lo construible, computar el juguete francamente, y aislar el núcleo. **Si la construcción se traba, el punto de traba ES el resultado.**
 
 ---
 
@@ -185,7 +185,7 @@ Nótese: es $G_{\text{clás}}$ con $2-2g=0$ ($g=1$). **El juguete reproduce exac
 
 ---
 
-## 5. El modelo de juguete $C_p\times C_p$ — la evidencia honesta [CÁLCULO]
+## 5. El modelo de juguete $C_p\times C_p$ — la evidencia franca [CÁLCULO]
 
 ### 5.1. Signatura de $G_{\text{toy}}$ [CÁLCULO]
 
@@ -257,9 +257,9 @@ Sea $\Delta_p=\Delta_\mu$ con $\log\mu=\log p$ — pero en el toro de período $
 
 ---
 
-## 7. Síntesis y honestidad
+## 7. Síntesis y franqueza
 
-**No declaro G2 construido.** Lo construido es honesto y acotado:
+**No declaro G2 construido.** Lo construido es franco y acotado:
 
 - **La forma de intersección se DEFINE** (vía Allermann–Rau, §3.1), es simétrica y bilineal; las tres vías candidatas coinciden donde se solapan, pero la vía (c) traza-del-flujo es la fórmula de Lefschetz y por eso es el origen de la circularidad (R-NC NC3).
 - **La matriz de Gram en $C_p\times C_p$ sale $G_{\text{toy}}=\begin{psmallmatrix}0&1&1\\1&0&1\\1&1&0\end{psmallmatrix}$, signatura $(1,2)$, primitivo definido negativo** (§5): el índice de Hodge **SÍ aparece en el juguete finito**. Reproduce exactamente el template clásico de $C\times C$ evaluado en $g=1$ ($\Delta^2=2-2g=0$), con doble chequeo (homología del toro ↔ adjunción tropical). **Esta es la evidencia positiva más fuerte: en el caso más simple, la signatura correcta emerge.**

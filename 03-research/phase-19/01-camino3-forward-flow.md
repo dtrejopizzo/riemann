@@ -18,14 +18,14 @@ RH-proof attempt** (the framing the program's discriminator forces).
 
 ---
 
-## 0. Why this line, and its honest barrier
+## 0. Why this line, and its candid barrier
 
 - **Not the wall.** P29 showed the reverse-flow realizations (Hilbert–Pólya, de Branges,
   Connes, SURF) all supply symmetry and stall at the same positivity (CAP). The forward flow
   touches none of that machinery: it builds from primes directly.
 - **The known barrier (N7, Phase 12).** The probabilistic / multiplicative-chaos machinery
   controls the **ensemble statistics** of ζ (moments, maxima, value distribution), *not* the
-  deterministic count of off-line zeros. So Camino 3 cannot, and does not, attack RH. Its honest
+  deterministic count of off-line zeros. So Camino 3 cannot, and does not, attack RH. Its candid
   product is **RH-independent new mathematics** about the ω-class — exactly the category the
   program's discriminator marks as the only genuinely-new one (P14, alongside P9fp, B2conj).
 
@@ -47,7 +47,7 @@ no operator.
 
 ---
 
-## 2. What the experiment shows (honest)
+## 2. What the experiment shows (candid)
 
 Sieving `ω(n)` for `n ≤ 2×10⁶` (max `ω = 7`, mean `≈ loglog N = 2.68`):
 
@@ -109,7 +109,7 @@ exactly the large-deviation saturation of `ω`.** Parts (A) and (B) are the same
   where the `q^{ω}`-tilted measure condenses onto the large-`ω` tail (`q_c`), and measure the
   arithmetic deviation from the Gaussian (Erdős–Kac) bulk. The freezing point is the analogue of
   the FHK transition on the arithmetic side. → `02-omega-rate-freezing.md`.
-- **Honest scope:** treat any result as RH-independent new math (the N7 barrier stands); the value
+- **Candid scope:** treat any result as RH-independent new math (the N7 barrier stands); the value
   is in the multifractal structure of the ω-class, not in the zeros.
 
 ---
@@ -122,7 +122,7 @@ exactly the large-deviation saturation of `ω`.** Parts (A) and (B) are the same
 2. **The suppression is the structure:** the `2k`-th moment is carried by integers with
    `ω ≈ k²·loglog N` — the large-deviation / multifractal tail of `ω`; that is why finite `N`
    underestimates the exponent. The new computable object is this rate function and its freezing.
-3. **Honest scope:** RH-independent (the N7 barrier — statistics, not zero locations). This is the
+3. **Candid scope:** RH-independent (the N7 barrier — statistics, not zero locations). This is the
    one frontier not absorbed by the wall, pursued as new math, not as an RH attack.
 
 ---

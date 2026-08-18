@@ -1,0 +1,167 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\title{The uniform all-depth compact-frequency tail for URGT$_1$ (v127)}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+Put $L=\log N$ and
+\begin{equation}
+ B_{N,k}(\tau):=rac1{L^k}
+ \sum_{m\le N}\frac{\Lambda_k(m)}{\sqrt m}\,m^{-i\tau}.
+                                                                    \tag{1}
+\end{equation}
+The full ordered-pair polynomial is
+$\overline{A_N(\tau)}B_{N,k}(\tau)$, and the leakage polynomial is
+obtained by deleting its integral labels.  Since all coefficients are
+nonnegative,
+\begin{equation}
+ |\Phi_{N,k}(\tau)|
+ \le A_N(0)B_{N,k}(0).                                    \tag{2}
+\end{equation}
+Chebyshev's bound $\psi(x)\le Cx$ and partial summation give
+\begin{equation}
+ A_N(0)=\sum_{n\le N}\frac{\Lambda(n)}{\sqrt n}le C_0\sqrt N.
+                                                                    \tag{3}
+\end{equation}
+
+\begin{lemma}[Logarithmic-shell convolution bound --- \PROVED]
+There is an absolute constant $C_1$ such that, for $1\le k\le L$,
+\begin{equation}
+ \sum_{m\le N}\frac{\Lambda_k(m)}{\sqrt m}
+ \le
+ C_1^{k+1}\sqrt N
+ \binom{\lfloor L\rfloor+k}{k-1}.                         \tag{4}
+\end{equation}
+Consequently
+\begin{equation}
+ B_{N,k}(0)
+ \le\frac{C_1^{k+1}\sqrt N}{L}
+ \left(\frac{2e}{k-1}\right)^{k-1}qquad(2\le k\le L),   \tag{5}
+\end{equation}
+with the $k=1$ case bounded separately by $C_0\sqrt N/L$.
+\end{lemma}
+
+\begin{proof}
+On logarithmic shell $j\le\log n<j+1$, partial summation from
+$\psi(x)\le Cx$ gives
+\begin{equation}
+ \sum_{e^j\le n<e^{j+1}}\frac{\Lambda(n)}{\sqrt n}
+ \le C_1e^{j/2}.                                          \tag{6}
+\end{equation}
+Expand $\Lambda_k$ as the ordered $k$-fold Dirichlet convolution of
+$\Lambda$.  A tuple $(n_1,\ldots,n_k)$ with product at most $N$ has shell
+indices satisfying $j_1+\cdots+j_k\le L$.  For total shell index $q$, the
+number of nonnegative shell compositions is
+$\binom{q+k-1}{k-1}$.  Hence
+\begin{align*}
+ \sum_{m\le N}\frac{\Lambda_k(m)}{\sqrt m}
+ &\le C_1^k
+ \sum_{q\le L}e^{q/2}\binom{q+k-1}{k-1}\\
+ &\le C_1^{k+1}e^{L/2}
+       \binom{\lfloor L\rfloor+k}{k-1}.
+\end{align*}
+The last inequality follows by comparing successive terms backwards; the
+factor $e^{-1/2}$ makes the resulting geometric majorant absolute.  This
+is (4).  For $k\le L$,
+\[
+ \binom{\lfloor L\rfloor+k}{k-1}
+ \le\left(\frac{e(L+k)}{k-1}\right)^{k-1}
+ \le\left(\frac{2eL}{k-1}\right)^{k-1}.
+\]
+Division by $L^k$ proves (5).
+\end{proof}
+
+\begin{lemma}[Very large depths --- \PROVED]
+There is an absolute $C_2$ such that
+\begin{equation}
+ B_{N,k}(0)\le N\left(\frac{C_2}{L}\right)^k              \tag{7}
+\end{equation}
+for every $k\ge1$.  Therefore
+\begin{equation}
+ \lim_{N\to\infty}
+ \sum_{k>L}
+ \left(\frac L N\right)^2
+ |\Phi_{N,k}(\tau)|^2=0                                   \tag{8}
+\end{equation}
+uniformly in real $\tau$.
+\end{lemma}
+
+\begin{proof}
+For every ordered tuple with $n_1\cdots n_k\le N$,
+$1\le N/(n_1\cdots n_k)$.  Hence
+\begin{align*}
+ \sum_{m\le N}\frac{\Lambda_k(m)}{\sqrt m}
+ &\le N
+ \sum_{n_1,\ldots,n_k\ge2}
+ \prod_{r=1}^k\frac{\Lambda(n_r)}{n_r^{3/2}}\\
+ &=N\left(\sum_{n\ge2}\frac{\Lambda(n)}{n^{3/2}}\right)^k.
+\end{align*}
+This proves (7).  Combine (2)--(3) and (7):
+\[
+ \left(\frac L N\right)^2|\Phi_{N,k}(\tau)|^2
+ \le C_0^2NL^2\left(\frac{C_2}{L}\right)^{2k}.
+\]
+For $k>L$, the geometric sum is
+$O(NL^2(C_2/L)^{2L})=o(1)$, proving (8).
+\end{proof}
+
+\begin{theorem}[Uniform polynomial tail gate --- \PROVED]
+For every fixed $R>0$,
+\begin{equation}
+ \boxed{
+ \lim_{K\to\infty}\limsup_{N\to\infty}
+ \sup_{|\tau|\le R}
+ \left(\frac{\log N}{N}\right)^2
+ \sum_{k>K}|\Phi_{N,k}(\tau)|^2=0.}                       \tag{9}
+\end{equation}
+Consequently the fixed-depth limits of v126 may be summed, and
+\begin{equation}
+ \left(\frac{\log N}{N}\right)^2W_N(\tau)
+ \longrightarrow
+ C_{\rm W}\frac1{(\tau^2+\frac14)^2},
+ \qquad
+ C_{\rm W}=\sum_{k\ge1}\frac1{((k-1)!)^2},               \tag{10}
+\end{equation}
+locally uniformly in $\tau$.
+\end{theorem}
+
+\begin{proof}
+For $K<k\le L$, equations (2)--(3) and (5) give
+\begin{equation}
+ \left(\frac L N\right)^2|\Phi_{N,k}(\tau)|^2
+ \le C_3^{2k}
+ \left(\frac{2e}{k-1}\right)^{2k-2}.                     \tag{11}
+\end{equation}
+The series on the right is summable and its tail tends to zero independently
+of $N$ and $\tau$.  Depths $k>L$ are $o(1)$ by Lemma 2.  This proves (9).
+Fixed-depth convergence (5)--(6) of v126 and dominated convergence then
+give (10).
+\end{proof}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.58\linewidth}
+                >{\centering\arraybackslash}p{.14\linewidth}
+                >{\raggedright\arraybackslash}p{.18\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Log-shell factorial bound & \PROVED & (4)--(6) \\
+Superexponential very-large-depth tail & \PROVED & (7)--(8) \\
+All-depth compact-frequency gate & \PROVED & (9) \\
+Locally uniform all-depth profile & \PROVED & (10) \\
+Uniform source-order compactness & \OPEN & v126, Lemma 2 \\
+Finite-$N$ audit, URGT$_1$, $G$, row (d) & \OPEN & after compactness \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

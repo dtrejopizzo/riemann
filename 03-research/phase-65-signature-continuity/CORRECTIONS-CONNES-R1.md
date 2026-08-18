@@ -3,7 +3,7 @@
 **Phase 65 / Signature-Continuity Package.** Connes audited the D0–D12 package and found several genuine
 errors and one major structural correction. **All are accepted**; none is contested (each is verified
 below). This document records the corrections, the repairs, and — most importantly — the corrected
-honest status of the load-bearing input, now split **D8.5a / D8.5b**. The package is *not* "reduced to
+candid status of the load-bearing input, now split **D8.5a / D8.5b**. The package is *not* "reduced to
 one benign statement"; it is reduced to a statement that is **logically RH-strength**, with the RH-strength
 concentrated in the endpoint identification D8.5b.
 
@@ -37,7 +37,7 @@ Source-determinant convergence then follows formally by the determinant lemma + 
 
 ---
 
-## 1. The corrected honesty: D8.5 *is* RH-strength; the split D8.5a / D8.5b
+## 1. The corrected candor: D8.5 *is* RH-strength; the split D8.5a / D8.5b
 
 \textbf{My over-claim (retracted).} "We believe D8.5 is not RH-strength (it is term-by-term on
 approximants, the pole is shorted, it uses $\Lambda\ge0$)."
@@ -57,7 +57,7 @@ where the RH-strength hides}, and it coincides with the M3 "endpoint identificat
 corrected D9 (see §2.F).
 \end{itemize}
 
-\textbf{Net.} My three structural reasons argue for D8.5a (benign), not for D8.5b. The honest position:
+\textbf{Net.} My three structural reasons argue for D8.5a (benign), not for D8.5b. The candid position:
 D8.5a is plausibly genuinely local; D8.5b carries the RH-strength. The package's real content is D8.5b.
 
 ---
@@ -163,12 +163,12 @@ D10 $\Lambda\ge0$ & needed for D6/D7; useful (not logically required) for D8.5 \
 \textbf{D8.5a} (marked Tate/Binet conv.) & open, plausibly genuinely local \\
 \textbf{D8.5b} (endpoint $=\mathsf K_\Xi^{\mathrm{G5}}$) & open, \textbf{carries the RH-strength} \\
 \hline
-\textbf{Package} & $\textbf{D8.5a}\wedge\textbf{D8.5b}\Rightarrow$ RH; honest split made \\
+\textbf{Package} & $\textbf{D8.5a}\wedge\textbf{D8.5b}\Rightarrow$ RH; candid split made \\
 \hline
 \end{tabular}
 \end{center}
 
-\textbf{Bottom line (corrected, honest).} The package still reduces RH to the convergence
+\textbf{Bottom line (corrected, candid).} The package still reduces RH to the convergence
 $G_P^\circ\to G_\Xi^{\mathrm{G5}}$, but: (i) the route is the Green-matrix determinant lemma, not a
 sourced Euler product; (ii) seven specific errors (A–G) are fixed; (iii) the load-bearing statement is
 **logically RH-strength**, with the strength isolated in **D8.5b** (endpoint identification), exactly

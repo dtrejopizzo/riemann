@@ -20,7 +20,7 @@ to the regularized Euler symbol
 2 Re sum_{n>=2} Lambda(n)n^{-1/2-epsilon+i xi}
 ```
 
-where convergence becomes honest once the effective real part is to the right of the Euler-product
+where convergence becomes candid once the effective real part is to the right of the Euler-product
 line.
 
 The desired terminal operator is the boundary value

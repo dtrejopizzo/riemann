@@ -1,0 +1,914 @@
+{
+  "statement": "Boundary migration plus shell coupling audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 22,
+    "dps": 100,
+    "sigmas": [
+      "0.550000000000000044408921",
+      "0.59999999999999997779554",
+      "0.75",
+      "1.0",
+      "1.5",
+      "2.0",
+      "3.0"
+    ],
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "cases": [
+    {
+      "label": "zeta-lam6",
+      "lambda": 6,
+      "N_max": 22,
+      "dps": 100,
+      "planted": null,
+      "increments": [
+        {
+          "from_N": 8,
+          "to_N": 10,
+          "old_boundary": 8,
+          "new_boundary": 10,
+          "entered_inner": [
+            -9,
+            -8,
+            8,
+            9
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "0.068445728079854716284738",
+          "max_boundary_pole_shift_abs": "0.0142404161732889375831312",
+          "min_boundary_shift_over_delta": "0.208054126572732696097507",
+          "max_boundary_shift_over_delta": "0.231355520218695511870824",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "0.068445728079854716284738",
+              "boundary_pole_shift_abs": "0.0142404161732889375831312",
+              "boundary_shift_over_delta": "0.208054126572732696097507"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "0.0683813372524065457893461",
+              "boundary_pole_shift_abs": "0.0142370089220541543567082",
+              "boundary_shift_over_delta": "0.208200212135411420502058"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "0.0681550897678720766847848",
+              "boundary_pole_shift_abs": "0.0142250227544196027433512",
+              "boundary_shift_over_delta": "0.208715487029190267537772"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "0.0676690354006189385099732",
+              "boundary_pole_shift_abs": "0.0141991971366735018574766",
+              "boundary_shift_over_delta": "0.209833006375965396562563"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "0.066300745612874243467497",
+              "boundary_pole_shift_abs": "0.0141259358596482226719871",
+              "boundary_shift_over_delta": "0.213058476629035917976929"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "0.0644347055366831552357471",
+              "boundary_pole_shift_abs": "0.014024660435229216963594",
+              "boundary_shift_over_delta": "0.217656933765994691697928"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "0.0594034626548556258707888",
+              "boundary_pole_shift_abs": "0.0137433190053059745204648",
+              "boundary_shift_over_delta": "0.231355520218695511870824"
+            }
+          ]
+        },
+        {
+          "from_N": 10,
+          "to_N": 12,
+          "old_boundary": 10,
+          "new_boundary": 12,
+          "entered_inner": [
+            -11,
+            -10,
+            10,
+            11
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "0.0536195959476910277033479",
+          "max_boundary_pole_shift_abs": "0.00949766161849739868752086",
+          "min_boundary_shift_over_delta": "0.17713042126917384805705",
+          "max_boundary_shift_over_delta": "0.185577478596153003714018",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "0.0536195959476910277033479",
+              "boundary_pole_shift_abs": "0.00949766161849739868752086",
+              "boundary_shift_over_delta": "0.17713042126917384805705"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "0.0535943905469383584792141",
+              "boundary_pole_shift_abs": "0.00949615813721594109828937",
+              "boundary_shift_over_delta": "0.17718567261062772007662"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "0.0535057515385819505379512",
+              "boundary_pole_shift_abs": "0.009490867117669249151234",
+              "boundary_shift_over_delta": "0.177380316036222210083683"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "0.053314925116322280389012",
+              "boundary_pole_shift_abs": "0.00947945633329507496512686",
+              "boundary_shift_over_delta": "0.177801175048315960824494"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "0.0527747659620286274765475",
+              "boundary_pole_shift_abs": "0.00944700718458227792253209",
+              "boundary_shift_over_delta": "0.17900614076392848008961"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "0.0520309319887145021802475",
+              "boundary_pole_shift_abs": "0.00940195572421168111710264",
+              "boundary_shift_over_delta": "0.180699352574560134087422"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "0.0499824082252421790573154",
+              "boundary_pole_shift_abs": "0.0092756092926040623250194",
+              "boundary_shift_over_delta": "0.185577478596153003714018"
+            }
+          ]
+        },
+        {
+          "from_N": 12,
+          "to_N": 14,
+          "old_boundary": 12,
+          "new_boundary": 14,
+          "entered_inner": [
+            -13,
+            -12,
+            12,
+            13
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "0.0235155421777296851470325",
+          "max_boundary_pole_shift_abs": "0.00678567777452668657123811",
+          "min_boundary_shift_over_delta": "0.288561400083432471546808",
+          "max_boundary_shift_over_delta": "0.306069696377989726863734",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "0.0235155421777296851470325",
+              "boundary_pole_shift_abs": "0.00678567777452668657123811",
+              "boundary_shift_over_delta": "0.288561400083432471546808"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "0.0235038160024116865638651",
+              "boundary_pole_shift_abs": "0.00678491387136125911970295",
+              "boundary_shift_over_delta": "0.288672863617766181166646"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "0.0234625607716485381270224",
+              "boundary_pole_shift_abs": "0.00678222498857395805084885",
+              "boundary_shift_over_delta": "0.28906584641730144709221"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "0.0233736482386171417872328",
+              "boundary_pole_shift_abs": "0.00677642302862939436246938",
+              "boundary_shift_over_delta": "0.289917216150862582068455"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "0.0231212531746971360985777",
+              "boundary_pole_shift_abs": "0.00675990119791084901078889",
+              "boundary_shift_over_delta": "0.292367422597516561688077"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "0.0227719383596031235945253",
+              "boundary_pole_shift_abs": "0.00673690707687653493782315",
+              "boundary_shift_over_delta": "0.295842495728323578867902"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "0.0217991947001599775514542",
+              "boundary_pole_shift_abs": "0.00667207290316264713110324",
+              "boundary_shift_over_delta": "0.306069696377989726863734"
+            }
+          ]
+        },
+        {
+          "from_N": 14,
+          "to_N": 16,
+          "old_boundary": 14,
+          "new_boundary": 16,
+          "entered_inner": [
+            -15,
+            -14,
+            14,
+            15
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "0.0228352056531995418651459",
+          "max_boundary_pole_shift_abs": "0.00509001870230320684144233",
+          "min_boundary_shift_over_delta": "0.222902249255198705123776",
+          "max_boundary_shift_over_delta": "0.228960452350387710973385",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "0.0228352056531995418651459",
+              "boundary_pole_shift_abs": "0.00509001870230320684144233",
+              "boundary_shift_over_delta": "0.222902249255198705123776"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "0.022829216957405031854091",
+              "boundary_pole_shift_abs": "0.00508959012755206388343145",
+              "boundary_shift_over_delta": "0.222941949215703241537421"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "0.0228081421134809569884353",
+              "boundary_pole_shift_abs": "0.0050880813786041880391006",
+              "boundary_shift_over_delta": "0.223081799178935837104707"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "0.0227626938261323016762553",
+              "boundary_pole_shift_abs": "0.0050848248146024137758568",
+              "boundary_shift_over_delta": "0.223384141325350165939125"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "0.0226334699183212497786308",
+              "boundary_pole_shift_abs": "0.00507554347488583134191687",
+              "boundary_shift_over_delta": "0.224249462994505359413349"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "0.0224541075900110253338236",
+              "boundary_pole_shift_abs": "0.00506260687123995422941718",
+              "boundary_shift_over_delta": "0.225464621604116416665775"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "0.021951428467385376241091",
+              "boundary_pole_shift_abs": "0.00502600899162973377563342",
+              "boundary_shift_over_delta": "0.228960452350387710973385"
+            }
+          ]
+        },
+        {
+          "from_N": 16,
+          "to_N": 18,
+          "old_boundary": 16,
+          "new_boundary": 18,
+          "entered_inner": [
+            -17,
+            -16,
+            16,
+            17
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "0.017264103159237995947504",
+          "max_boundary_pole_shift_abs": "0.00395929588613555841150843",
+          "min_boundary_shift_over_delta": "0.229336899207355875072939",
+          "max_boundary_shift_over_delta": "0.235072597476961299640508",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "0.017264103159237995947504",
+              "boundary_pole_shift_abs": "0.00395929588613555841150843",
+              "boundary_shift_over_delta": "0.229336899207355875072939"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "0.0172601565459106749167238",
+              "boundary_pole_shift_abs": "0.00395903707767178166235849",
+              "boundary_shift_over_delta": "0.229374343572206355161265"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "0.0172462653004073415606046",
+              "boundary_pole_shift_abs": "0.00395812589296691062338739",
+              "boundary_shift_over_delta": "0.229506262603615588831856"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "0.017216294234509681453171",
+              "boundary_pole_shift_abs": "0.00395615872510060343054292",
+              "boundary_shift_over_delta": "0.229791537668458910569154"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "0.0171309696033104955853306",
+              "boundary_pole_shift_abs": "0.00395054907812032520030595",
+              "boundary_shift_over_delta": "0.230608609413263824652641"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "0.0170122746052866629451694",
+              "boundary_pole_shift_abs": "0.0039427224272338129927846",
+              "boundary_shift_over_delta": "0.2317575114857709353309"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "0.0166779610748306560962762",
+              "boundary_pole_shift_abs": "0.00392053163048009565337056",
+              "boundary_shift_over_delta": "0.235072597476961299640508"
+            }
+          ]
+        },
+        {
+          "from_N": 18,
+          "to_N": 20,
+          "old_boundary": 18,
+          "new_boundary": 20,
+          "entered_inner": [
+            -19,
+            -18,
+            18,
+            19
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "0.0154385852101686261864295",
+          "max_boundary_pole_shift_abs": "0.00316765578939452860589368",
+          "min_boundary_shift_over_delta": "0.20517785446480884155806",
+          "max_boundary_shift_over_delta": "0.208286333608920542949413",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "0.0154385852101686261864295",
+              "boundary_pole_shift_abs": "0.00316765578939452860589368",
+              "boundary_shift_over_delta": "0.20517785446480884155806"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "0.0154362408211477669018081",
+              "boundary_pole_shift_abs": "0.00316749035507890526851492",
+              "boundary_shift_over_delta": "0.205198298716577385771875"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "0.0154279880447298490220218",
+              "boundary_pole_shift_abs": "0.00316690787689441968646049",
+              "boundary_shift_over_delta": "0.205270309240110229891715"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "0.0154101768337433404341492",
+              "boundary_pole_shift_abs": "0.00316565017149776521442951",
+              "boundary_shift_over_delta": "0.205425947129043162337157"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "0.0153594293740660566520231",
+              "boundary_pole_shift_abs": "0.00316206225596703047212656",
+              "boundary_shift_over_delta": "0.205871076259257345902522"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "0.0152887339377045685943049",
+              "boundary_pole_shift_abs": "0.00315705289066068591791196",
+              "boundary_shift_over_delta": "0.206495377807240583929056"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "0.0150889782272607532553177",
+              "boundary_pole_shift_abs": "0.00314282795286097174506342",
+              "boundary_shift_over_delta": "0.208286333608920542949413"
+            }
+          ]
+        },
+        {
+          "from_N": 20,
+          "to_N": 22,
+          "old_boundary": 20,
+          "new_boundary": 22,
+          "entered_inner": [
+            -21,
+            -20,
+            20,
+            21
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "0.00674924428587772471337909",
+          "max_boundary_pole_shift_abs": "0.00259184844198835303454756",
+          "min_boundary_shift_over_delta": "0.384020540997693153622262",
+          "max_boundary_shift_over_delta": "0.389466655919560852601269",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "0.00674924428587772471337909",
+              "boundary_pole_shift_abs": "0.00259184844198835303454756",
+              "boundary_shift_over_delta": "0.384020540997693153622262"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "0.00674832010020623714965631",
+              "boundary_pole_shift_abs": "0.00259173779566739448697704",
+              "boundary_shift_over_delta": "0.384056736666683567707555"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "0.00674506727907462391125168",
+              "boundary_pole_shift_abs": "0.0025913482037360937965041",
+              "boundary_shift_over_delta": "0.384184189203759678267942"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "0.00673804978135878175832531",
+              "boundary_pole_shift_abs": "0.00259050689433224712584015",
+              "boundary_shift_over_delta": "0.384459447227451418759281"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "0.00671807650311322225413826",
+              "boundary_pole_shift_abs": "0.00258810617403781979014496",
+              "boundary_shift_over_delta": "0.385245117830746064891664"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "0.00669030420241780908418552",
+              "boundary_pole_shift_abs": "0.00258475266490135411541403",
+              "boundary_shift_over_delta": "0.386343070015747614453441"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "0.0066121684454180694998258",
+              "boundary_pole_shift_abs": "0.00257521913281381685786652",
+              "boundary_shift_over_delta": "0.389466655919560852601269"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant-lam6",
+      "lambda": 6,
+      "N_max": 22,
+      "dps": 100,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "increments": [
+        {
+          "from_N": 8,
+          "to_N": 10,
+          "old_boundary": 8,
+          "new_boundary": 10,
+          "entered_inner": [
+            -9,
+            -8,
+            8,
+            9
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "2.80232506464999655087709",
+          "max_boundary_pole_shift_abs": "0.0142404161732889375831312",
+          "min_boundary_shift_over_delta": "0.00508164322295262710301479",
+          "max_boundary_shift_over_delta": "0.00520675078157644176334563",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "2.80232506464999655087709",
+              "boundary_pole_shift_abs": "0.0142404161732889375831312",
+              "boundary_shift_over_delta": "0.00508164322295262710301479"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "2.78897264016710584035911",
+              "boundary_pole_shift_abs": "0.0142370089220541543567082",
+              "boundary_shift_over_delta": "0.00510475030016828016210843"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "2.75910723866283984841095",
+              "boundary_pole_shift_abs": "0.0142250227544196027433512",
+              "boundary_shift_over_delta": "0.0051556614237703742730572"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "2.73241284694555015002196",
+              "boundary_pole_shift_abs": "0.0141991971366735018574766",
+              "boundary_shift_over_delta": "0.00519657823763571799767454"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "2.71300403115728343217258",
+              "boundary_pole_shift_abs": "0.0141259358596482226719871",
+              "boundary_shift_over_delta": "0.00520675078157644176334563"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "2.70353396223630372689955",
+              "boundary_pole_shift_abs": "0.014024660435229216963594",
+              "boundary_shift_over_delta": "0.00518752885339318129199748"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "2.6848592396591101190537",
+              "boundary_pole_shift_abs": "0.0137433190053059745204648",
+              "boundary_shift_over_delta": "0.00511882291715633086793758"
+            }
+          ]
+        },
+        {
+          "from_N": 10,
+          "to_N": 12,
+          "old_boundary": 10,
+          "new_boundary": 12,
+          "entered_inner": [
+            -11,
+            -10,
+            10,
+            11
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "1.84210613004019510907445",
+          "max_boundary_pole_shift_abs": "0.00949766161849739868752086",
+          "min_boundary_shift_over_delta": "0.00512495791580315428559853",
+          "max_boundary_shift_over_delta": "0.00521561181676562769910499",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "1.82100623132401958585033",
+              "boundary_pole_shift_abs": "0.00949766161849739868752086",
+              "boundary_shift_over_delta": "0.00521561181676562769910499"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "1.82557438454381512756332",
+              "boundary_pole_shift_abs": "0.00949615813721594109828937",
+              "boundary_shift_over_delta": "0.00520173717248387822157575"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "1.83558969566989158211209",
+              "boundary_pole_shift_abs": "0.009490867117669249151234",
+              "boundary_shift_over_delta": "0.00517047308560184129583067"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "1.84210613004019510907445",
+              "boundary_pole_shift_abs": "0.00947945633329507496512686",
+              "boundary_shift_over_delta": "0.00514598815926432610577621"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "1.83694099925776917280262",
+              "boundary_pole_shift_abs": "0.00944700718458227792253209",
+              "boundary_shift_over_delta": "0.00514279293042042034740522"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "1.82653778732474885548942",
+              "boundary_pole_shift_abs": "0.00940195572421168111710264",
+              "boundary_shift_over_delta": "0.00514741922639460982287731"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "1.80988984592480142128223",
+              "boundary_pole_shift_abs": "0.0092756092926040623250194",
+              "boundary_shift_over_delta": "0.00512495791580315428559853"
+            }
+          ]
+        },
+        {
+          "from_N": 12,
+          "to_N": 14,
+          "old_boundary": 12,
+          "new_boundary": 14,
+          "entered_inner": [
+            -13,
+            -12,
+            12,
+            13
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "3.66795148345368781921679",
+          "max_boundary_pole_shift_abs": "0.00678567777452668657123811",
+          "min_boundary_shift_over_delta": "0.00183107107805605355153749",
+          "max_boundary_shift_over_delta": "0.00184999114768480925457067",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "3.66795148345368781921679",
+              "boundary_pole_shift_abs": "0.00678567777452668657123811",
+              "boundary_shift_over_delta": "0.00184999114768480925457067"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "3.6677810843795687433421",
+              "boundary_pole_shift_abs": "0.00678491387136125911970295",
+              "boundary_shift_over_delta": "0.00184986882130370535927356"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "3.66685040463660074048586",
+              "boundary_pole_shift_abs": "0.00678222498857395805084885",
+              "boundary_shift_over_delta": "0.00184960503979057284522693"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "3.66432826772731575785631",
+              "boundary_pole_shift_abs": "0.00677642302862939436246938",
+              "boundary_shift_over_delta": "0.00184929475023051289026496"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "3.65821913877825269886271",
+              "boundary_pole_shift_abs": "0.00675990119791084901078889",
+              "boundary_shift_over_delta": "0.00184786666447994012763785"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "3.65257274355876813117782",
+              "boundary_pole_shift_abs": "0.00673690707687653493782315",
+              "boundary_shift_over_delta": "0.00184442790051393848633359"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "3.64380879755143983923323",
+              "boundary_pole_shift_abs": "0.00667207290316264713110324",
+              "boundary_shift_over_delta": "0.00183107107805605355153749"
+            }
+          ]
+        },
+        {
+          "from_N": 14,
+          "to_N": 16,
+          "old_boundary": 14,
+          "new_boundary": 16,
+          "entered_inner": [
+            -15,
+            -14,
+            14,
+            15
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "7.26249726696016131521296",
+          "max_boundary_pole_shift_abs": "0.00509001870230320684144233",
+          "min_boundary_shift_over_delta": "0.000692827773846752586583352",
+          "max_boundary_shift_over_delta": "0.000700863424136436004592752",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "7.26249726696016131521296",
+              "boundary_pole_shift_abs": "0.00509001870230320684144233",
+              "boundary_shift_over_delta": "0.000700863424136436004592752"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "7.26242330992842655991019",
+              "boundary_pole_shift_abs": "0.00508959012755206388343145",
+              "boundary_shift_over_delta": "0.000700811548755923919949879"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "7.26220791540749703156087",
+              "boundary_pole_shift_abs": "0.0050880813786041880391006",
+              "boundary_shift_over_delta": "0.000700624581101474234239571"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "7.26183717780464845206214",
+              "boundary_pole_shift_abs": "0.0050848248146024137758568",
+              "boundary_shift_over_delta": "0.000700211900942073319313184"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "7.26081881186266075636988",
+              "boundary_pole_shift_abs": "0.00507554347488583134191687",
+              "boundary_shift_over_delta": "0.00069903183186357079488274"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "7.25924707728493114260438",
+              "boundary_pole_shift_abs": "0.00506260687123995422941718",
+              "boundary_shift_over_delta": "0.000697401096469283730118536"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "7.25434109508064089892653",
+              "boundary_pole_shift_abs": "0.00502600899162973377563342",
+              "boundary_shift_over_delta": "0.000692827773846752586583352"
+            }
+          ]
+        },
+        {
+          "from_N": 16,
+          "to_N": 18,
+          "old_boundary": 16,
+          "new_boundary": 18,
+          "entered_inner": [
+            -17,
+            -16,
+            16,
+            17
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "1.83860942663821088302142",
+          "max_boundary_pole_shift_abs": "0.00395929588613555841150843",
+          "min_boundary_shift_over_delta": "0.00213345600591990998252775",
+          "max_boundary_shift_over_delta": "0.00215342871873360007695465",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "1.83860085624935957683973",
+              "boundary_pole_shift_abs": "0.00395929588613555841150843",
+              "boundary_shift_over_delta": "0.00215342871873360007695465"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "1.83860328112790870117794",
+              "boundary_pole_shift_abs": "0.00395903707767178166235849",
+              "boundary_shift_over_delta": "0.00215328511501571597599636"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "1.83860942663821088302142",
+              "boundary_pole_shift_abs": "0.00395812589296691062338739",
+              "boundary_shift_over_delta": "0.00215278233409480057184904"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "1.83860835060375705971687",
+              "boundary_pole_shift_abs": "0.00395615872510060343054292",
+              "boundary_shift_over_delta": "0.00215171367181134095833814"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "1.83853248934826000109632",
+              "boundary_pole_shift_abs": "0.00395054907812032520030595",
+              "boundary_shift_over_delta": "0.00214875130083817684981923"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "1.83834453463861367043245",
+              "boundary_pole_shift_abs": "0.0039427224272338129927846",
+              "boundary_shift_over_delta": "0.00214471354685909469601018"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "1.83764353218506093533716",
+              "boundary_pole_shift_abs": "0.00392053163048009565337056",
+              "boundary_shift_over_delta": "0.00213345600591990998252775"
+            }
+          ]
+        },
+        {
+          "from_N": 18,
+          "to_N": 20,
+          "old_boundary": 18,
+          "new_boundary": 20,
+          "entered_inner": [
+            -19,
+            -18,
+            18,
+            19
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "1.92414823633143338685347",
+          "max_boundary_pole_shift_abs": "0.00316765578939452860589368",
+          "min_boundary_shift_over_delta": "0.00163421897276823567875357",
+          "max_boundary_shift_over_delta": "0.00164626390502737845411815",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "1.92414823633143338685347",
+              "boundary_pole_shift_abs": "0.00316765578939452860589368",
+              "boundary_shift_over_delta": "0.00164626390502737845411815"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "1.92414307033306745969992",
+              "boundary_pole_shift_abs": "0.00316749035507890526851492",
+              "boundary_shift_over_delta": "0.00164618234678911662014146"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "1.92412404477531050098052",
+              "boundary_pole_shift_abs": "0.00316690787689441968646049",
+              "boundary_shift_over_delta": "0.00164589590026366268487068"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "1.92407976596686197139458",
+              "boundary_pole_shift_abs": "0.00316565017149776521442951",
+              "boundary_shift_over_delta": "0.00164528011129881948658342"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "1.92394177395430150422219",
+              "boundary_pole_shift_abs": "0.00316206225596703047212656",
+              "boundary_shift_over_delta": "0.00164353323929757214623653"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "1.9237379478797765391462",
+              "boundary_pole_shift_abs": "0.00315705289066068591791196",
+              "boundary_shift_over_delta": "0.00164110340191614551885383"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "1.92313759981459132499494",
+              "boundary_pole_shift_abs": "0.00314282795286097174506342",
+              "boundary_shift_over_delta": "0.00163421897276823567875357"
+            }
+          ]
+        },
+        {
+          "from_N": 20,
+          "to_N": 22,
+          "old_boundary": 20,
+          "new_boundary": 22,
+          "entered_inner": [
+            -21,
+            -20,
+            20,
+            21
+          ],
+          "old_boundary_enters_new_inner": true,
+          "old_left_boundary_enters_new_inner": true,
+          "max_delta_theta_abs": "1.97574303464673639711304",
+          "max_boundary_pole_shift_abs": "0.00259184844198835303454756",
+          "min_boundary_shift_over_delta": "0.00130402846447643795463803",
+          "max_boundary_shift_over_delta": "0.00131183478647656045899244",
+          "sigmas": [
+            {
+              "sigma": "0.550000000000000044408921",
+              "delta_theta_abs": "1.97574303464673639711304",
+              "boundary_pole_shift_abs": "0.00259184844198835303454756",
+              "boundary_shift_over_delta": "0.00131183478647656045899244"
+            },
+            {
+              "sigma": "0.59999999999999997779554",
+              "delta_theta_abs": "1.97573869106443621637817",
+              "boundary_pole_shift_abs": "0.00259173779566739448697704",
+              "boundary_shift_over_delta": "0.00131178166798519624657077"
+            },
+            {
+              "sigma": "0.75",
+              "delta_theta_abs": "1.97572239595684830562894",
+              "boundary_pole_shift_abs": "0.0025913482037360937965041",
+              "boundary_shift_over_delta": "0.00131159529751703607044654"
+            },
+            {
+              "sigma": "1.0",
+              "delta_theta_abs": "1.97568345302957754966847",
+              "boundary_pole_shift_abs": "0.00259050689433224712584015",
+              "boundary_shift_over_delta": "0.00131119531844024872803544"
+            },
+            {
+              "sigma": "1.5",
+              "delta_theta_abs": "1.97555891936403642162219",
+              "boundary_pole_shift_abs": "0.00258810617403781979014496",
+              "boundary_shift_over_delta": "0.00131006276181880315270514"
+            },
+            {
+              "sigma": "2.0",
+              "delta_theta_abs": "1.97537236184601998114562",
+              "boundary_pole_shift_abs": "0.00258475266490135411541403",
+              "boundary_shift_over_delta": "0.00130848882713224639602738"
+            },
+            {
+              "sigma": "3.0",
+              "delta_theta_abs": "1.97481819068095013477904",
+              "boundary_pole_shift_abs": "0.00257521913281381685786652",
+              "boundary_shift_over_delta": "0.00130402846447643795463803"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

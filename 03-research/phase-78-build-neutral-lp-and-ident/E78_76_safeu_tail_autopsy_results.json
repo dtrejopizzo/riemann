@@ -1,0 +1,97 @@
+{
+  "statement": "Autopsy of the shortcut 'safe_u geometric ratio controls radial tail/base'.",
+  "sources": {
+    "fractional_budget": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_75_fractional_budget_results.json",
+    "safeu_geometric_envelope": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_28_safe_u_geometric_envelope_results.json"
+  },
+  "rows": [
+    {
+      "sigma": "1.0",
+      "N": 8,
+      "safeu_amplitude_A_N": 0.2547311936166079,
+      "safeu_ratio_rho_N": 0.8089841200283554,
+      "tail_over_base": 0.00804141310618043
+    },
+    {
+      "sigma": "3.0",
+      "N": 8,
+      "safeu_amplitude_A_N": 0.7340861558417286,
+      "safeu_ratio_rho_N": 0.8201519355086823,
+      "tail_over_base": 0.09615527100499799
+    },
+    {
+      "sigma": "1.0",
+      "N": 10,
+      "safeu_amplitude_A_N": 0.20607349051170415,
+      "safeu_ratio_rho_N": 0.8179276400123783,
+      "tail_over_base": 0.003655850786158747
+    },
+    {
+      "sigma": "3.0",
+      "N": 10,
+      "safeu_amplitude_A_N": 0.6020621815437219,
+      "safeu_ratio_rho_N": 0.8239801718072242,
+      "tail_over_base": 0.04424610991275501
+    },
+    {
+      "sigma": "1.0",
+      "N": 12,
+      "safeu_amplitude_A_N": 0.1685532037633514,
+      "safeu_ratio_rho_N": 0.858000342688145,
+      "tail_over_base": 0.004670805627133761
+    },
+    {
+      "sigma": "3.0",
+      "N": 12,
+      "safeu_amplitude_A_N": 0.49608729978702815,
+      "safeu_ratio_rho_N": 0.8621607817721216,
+      "tail_over_base": 0.057181538107904634
+    },
+    {
+      "sigma": "1.0",
+      "N": 14,
+      "safeu_amplitude_A_N": 0.14461870659014023,
+      "safeu_ratio_rho_N": 0.8483853215920255,
+      "tail_over_base": 0.0022387643473623367
+    },
+    {
+      "sigma": "3.0",
+      "N": 14,
+      "safeu_amplitude_A_N": 0.42770701421160506,
+      "safeu_ratio_rho_N": 0.8509399641537699,
+      "tail_over_base": 0.02748871032896435
+    },
+    {
+      "sigma": "1.0",
+      "N": 16,
+      "safeu_amplitude_A_N": 0.12269238789869889,
+      "safeu_ratio_rho_N": 0.8808188533783741,
+      "tail_over_base": 0.002085545178177725
+    },
+    {
+      "sigma": "3.0",
+      "N": 16,
+      "safeu_amplitude_A_N": 0.3639529913415392,
+      "safeu_ratio_rho_N": 0.8827924122259216,
+      "tail_over_base": 0.025735481960247088
+    },
+    {
+      "sigma": "1.0",
+      "N": 18,
+      "safeu_amplitude_A_N": 0.10806976842718666,
+      "safeu_ratio_rho_N": 0.9106835797265177,
+      "tail_over_base": 0.0012943260547287215
+    },
+    {
+      "sigma": "3.0",
+      "N": 18,
+      "safeu_amplitude_A_N": 0.32129493916323737,
+      "safeu_ratio_rho_N": 0.9122297392646584,
+      "tail_over_base": 0.01599419826930884
+    }
+  ],
+  "correlations": {
+    "rho_vs_tail_over_base": -0.31893840364556747,
+    "A_vs_tail_over_base": 0.9448531209043781
+  }
+}

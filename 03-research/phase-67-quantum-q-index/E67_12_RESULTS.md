@@ -40,7 +40,7 @@ This is E67.8 reappearing in the signed register: the signed certificate TYPE is
 but the SAME coherence-transmission problem persists -- how does a canonical q-object carry the
 off-diagonal log-distance coherence without fitting?
 
-## Honest state of Phase 67 (signed register)
+## Candid state of Phase 67 (signed register)
 
 ```
 solid : signed index (Jantzen) is the right certificate type        [E67.9-E67.11]

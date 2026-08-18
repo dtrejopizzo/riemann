@@ -4,7 +4,7 @@
 **Fecha:** 2026-06-11
 **Mandato:** ejecutar el cálculo completo del flujo de borde $\mathcal F_{1/2}(T)=-\int_0^T u(\tfrac12+it)\,\partial_\sigma u(\tfrac12+it)\,dt$, $u=\log|\zeta|$ — el único canal anisótropo de la geometría de Green de D183, despachado allí sin cálculo (E-188.4) y señalado por la auditoría D188 como rendija R2 — y decidir: ¿ruta nueva a una cota de $E(T)$, o reabsorción en barreras conocidas?
 **Prerrequisitos (con erratas E-188.x aplicadas):** [THM 183.1] con signo corregido $c(\rho)=-2\pi h(\rho)$ (E-188.2); [183.4.b sustituido] $\int_0^T(\partial_\sigma u)^2\,dt\asymp T\log^2T$ FINITA (E-188.6); [183.1.b degradado] orden de $\mathcal D_R$ indeterminado entre $T\log T\log\log T$ y $T\log^2T$ (E-188.3); [183.3.b refutado] $N_{\rm off}=o(N)$ NO es incondicional (E-188.5); [PROP 180.4] (barrera #3, con E-188.1); [PROP 176.9] (barrera #1); [Thm 170.5] $E(T)\ll T/\log T$.
-**Contrato:** [TEOREMA]/[PROP]/[LEMA] solo con prueba completa; sin numérica; backward-only; honestidad total.
+**Contrato:** [TEOREMA]/[PROP]/[LEMA] solo con prueba completa; sin numérica; backward-only; franqueza total.
 
 **Coordenadas.** $\rho=\tfrac12+b+i\gamma$, $b\in(0,\tfrac12)$, un representante por cuádruplo; $E(T)=\sum_{\gamma\le T}b^2$; $J(T):=\sum_{\gamma\le T}b$ (primer momento, Littlewood); **A** $\iff E(T)=O(1)$.
 

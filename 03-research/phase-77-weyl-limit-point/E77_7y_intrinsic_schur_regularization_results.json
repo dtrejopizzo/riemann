@@ -1,0 +1,911 @@
+{
+  "statement": "Intrinsic Schur regularization audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "dps": 80,
+    "sigma0": "1.0",
+    "sigmas": [
+      "0.59999999999999997779554",
+      "1.0",
+      "2.0",
+      "3.0"
+    ],
+    "etas": [
+      "0.0100000000000000002081668",
+      "0.000100000000000000004792174",
+      "0.000000999999999999999954748112",
+      "1.00000000000000002092256e-8"
+    ],
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "mu_reference is a finite frozen surrogate. The probe acts only on the intrinsic 2x2 Schur package Sigma^{-1}kappa and the paired factor 1-theta.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "2.5271964452390042830301e-49",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.59999999999999997779554",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.0100000000000000002081668",
+        "0.000100000000000000004792174",
+        "0.000000999999999999999954748112",
+        "1.00000000000000002092256e-8"
+      ],
+      "planted": null,
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "2.83599036668118131148109e-15",
+          "nearest_sigma_mode_overlap_abs": "4.03811671378900834477971e-14",
+          "min_sigma_eigenvalue_abs_across_sigmas": "2.83599036668118131148109e-15",
+          "raw_anchor_abs": "0.54083449170672666681298",
+          "deflated_anchor_abs": "0.997004248861870040138388",
+          "max_deflated_vs_raw_projective_relative_difference": "0.233896886433406738571799",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000064221833959",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000006422183395577",
+              "shift_max_profile_step_from_previous_eta": "1.1699288204048272920026e-10"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000642218336475307",
+              "shift_max_profile_step_from_previous_eta": "1.16992881230692750112221e-8"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000064221802821759861",
+              "shift_max_profile_step_from_previous_eta": "0.0000011699280025028719043216"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "1.16089802229564054784112e-15",
+          "nearest_sigma_mode_overlap_abs": "2.79671995093616981459084e-14",
+          "min_sigma_eigenvalue_abs_across_sigmas": "1.16089802229564054784112e-15",
+          "raw_anchor_abs": "0.418360295479723495701395",
+          "deflated_anchor_abs": "0.998149689763588512386293",
+          "max_deflated_vs_raw_projective_relative_difference": "0.20541825862047253605469",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000015656855403",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000001565685540321",
+              "shift_max_profile_step_from_previous_eta": "2.92283316666206179173035e-11"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000156568553805396",
+              "shift_max_profile_step_from_previous_eta": "2.92283316162094585441334e-9"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000015656853112978141",
+              "shift_max_profile_step_from_previous_eta": "0.000000292283265750544581364221"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "2.47945819960846617896899e-16",
+          "nearest_sigma_mode_overlap_abs": "6.80890714583725524802491e-14",
+          "min_sigma_eigenvalue_abs_across_sigmas": "2.47945819960846617896899e-16",
+          "raw_anchor_abs": "0.342343930031934628316667",
+          "deflated_anchor_abs": "0.998037741608069543532135",
+          "max_deflated_vs_raw_projective_relative_difference": "0.171597336203913893849989",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000004907837464",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000490783746406",
+              "shift_max_profile_step_from_previous_eta": "9.33976521644550030868034e-12"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000049078374619599",
+              "shift_max_profile_step_from_previous_eta": "9.33976521164844535109148e-10"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000004907837252267612",
+              "shift_max_profile_step_from_previous_eta": "9.3397647319413828497353e-8"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "8.21236398446895283137457e-15",
+          "nearest_sigma_mode_overlap_abs": "1.13470018469028713017607e-14",
+          "min_sigma_eigenvalue_abs_across_sigmas": "8.21236398446895283137457e-15",
+          "raw_anchor_abs": "0.314096486245866325674803",
+          "deflated_anchor_abs": "0.9984228957806325604743",
+          "max_deflated_vs_raw_projective_relative_difference": "0.14692435236056595744831",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000097295066363",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000009729506635213",
+              "shift_max_profile_step_from_previous_eta": "1.86937703595292206678034e-10"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000972950653020984",
+              "shift_max_profile_step_from_previous_eta": "1.86937701662545485670693e-8"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000097294960282260612",
+              "shift_max_profile_step_from_previous_eta": "0.00000186937508371485791878716"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "9.32936069823200865854721e-18",
+          "nearest_sigma_mode_overlap_abs": "1.33434623922527245334322e-16",
+          "min_sigma_eigenvalue_abs_across_sigmas": "9.32936069823200865854721e-18",
+          "raw_anchor_abs": "0.274675511000765270274511",
+          "deflated_anchor_abs": "0.998779508821108454072837",
+          "max_deflated_vs_raw_projective_relative_difference": "0.130938246205467425179991",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000000090050456",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000009005045621",
+              "shift_max_profile_step_from_previous_eta": "1.74149491548731078369094e-13"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000000900504562134",
+              "shift_max_profile_step_from_previous_eta": "1.7414949154706361895616e-11"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000000090050456107871",
+              "shift_max_profile_step_from_previous_eta": "1.74149491380316004004077e-9"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "8.78555503609647626788493e-19",
+          "nearest_sigma_mode_overlap_abs": "2.9150724646370692973498e-17",
+          "min_sigma_eigenvalue_abs_across_sigmas": "8.78555503609647626788493e-19",
+          "raw_anchor_abs": "0.249425605620141191533968",
+          "deflated_anchor_abs": "0.998938365585562151929697",
+          "max_deflated_vs_raw_projective_relative_difference": "0.116663505001466000327102",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000000006903793",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000000690379267",
+              "shift_max_profile_step_from_previous_eta": "1.34173174076896556954351e-14"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000000069037926737",
+              "shift_max_profile_step_from_previous_eta": "1.34173174076798076029066e-12"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000000006903792672955",
+              "shift_max_profile_step_from_previous_eta": "1.34173174066948707862082e-10"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "3.79283098791337363621632e-19",
+          "nearest_sigma_mode_overlap_abs": "8.95311957795232324969405e-16",
+          "min_sigma_eigenvalue_abs_across_sigmas": "3.79283098791337363621632e-19",
+          "raw_anchor_abs": "0.221360740392274149012017",
+          "deflated_anchor_abs": "0.999106034667076508157704",
+          "max_deflated_vs_raw_projective_relative_difference": "0.106089477377614529653061",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000000002902601",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000000290260085",
+              "shift_max_profile_step_from_previous_eta": "5.6610534278379250498345e-15"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.0000000000002902600852",
+              "shift_max_profile_step_from_previous_eta": "5.66105342783619376655007e-13"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.0000000000290260085186",
+              "shift_max_profile_step_from_previous_eta": "5.66105342766301161956358e-11"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "7.86509213149197269793687e-16",
+          "nearest_sigma_mode_overlap_abs": "3.29808238010089598082384e-16",
+          "min_sigma_eigenvalue_abs_across_sigmas": "7.86509213149197269793687e-16",
+          "raw_anchor_abs": "0.218277885908575129848541",
+          "deflated_anchor_abs": "0.999210560264551531566357",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0937657478070138515068308",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000004135247096",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000413524709634",
+              "shift_max_profile_step_from_previous_eta": "8.08580153027037112187536e-12"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000041352470919189",
+              "shift_max_profile_step_from_previous_eta": "8.08580152669983099317939e-10"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000004135246649923178",
+              "shift_max_profile_step_from_previous_eta": "8.08580116964237355236733e-8"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "8.44269359288016886329146e-20",
+          "nearest_sigma_mode_overlap_abs": "6.10680005417756068082392e-18",
+          "min_sigma_eigenvalue_abs_across_sigmas": "8.44269359288016886329146e-20",
+          "raw_anchor_abs": "0.197987094328269955148022",
+          "deflated_anchor_abs": "0.999378491320317716126138",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0873339482327757791131854",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000000000372407",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000000037240701",
+              "shift_max_profile_step_from_previous_eta": "7.29478507163141114283118e-16"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000000003724070116",
+              "shift_max_profile_step_from_previous_eta": "7.29478507163112049411191e-14"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000000000372407011614",
+              "shift_max_profile_step_from_previous_eta": "7.29478507160198627325699e-12"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "1.82712629968869306081183e-19",
+          "nearest_sigma_mode_overlap_abs": "1.82719077818949179641423e-18",
+          "min_sigma_eigenvalue_abs_across_sigmas": "1.82712629968869306081183e-19",
+          "raw_anchor_abs": "0.181963413376613980793008",
+          "deflated_anchor_abs": "0.999432817995417112910013",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0804337384434920731563522",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.0000000000000000081482",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000000081481971",
+              "shift_max_profile_step_from_previous_eta": "1.59881299818872704637376e-15"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000000008148197051",
+              "shift_max_profile_step_from_previous_eta": "1.59881299818858903771368e-13"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000000000814819705097",
+              "shift_max_profile_step_from_previous_eta": "1.59881299817477297232841e-11"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "7.98046512206554812692532e-21",
+          "nearest_sigma_mode_overlap_abs": "1.68057140704799207733701e-19",
+          "min_sigma_eigenvalue_abs_across_sigmas": "7.98046512206554812692532e-21",
+          "raw_anchor_abs": "0.175225393687883331656592",
+          "deflated_anchor_abs": "0.99949923094654822888217",
+          "max_deflated_vs_raw_projective_relative_difference": "0.074321722702250238209823",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000000000027278",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000000002727804",
+              "shift_max_profile_step_from_previous_eta": "5.35883471034283211114165e-17"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000000000272780406",
+              "shift_max_profile_step_from_previous_eta": "5.35883471034281696779041e-15"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000000000027278040629",
+              "shift_max_profile_step_from_previous_eta": "5.35883471034125168815287e-13"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "1.53036606720633605993249e-21",
+          "nearest_sigma_mode_overlap_abs": "1.60387981578134738489305e-19",
+          "min_sigma_eigenvalue_abs_across_sigmas": "1.53036606720633605993249e-21",
+          "raw_anchor_abs": "0.168462295623319872096587",
+          "deflated_anchor_abs": "0.999564020145826320335654",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0675907561400293670738199",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000000000005048",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000000000504848",
+              "shift_max_profile_step_from_previous_eta": "9.92798193024559485943128e-18"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000000000050484825",
+              "shift_max_profile_step_from_previous_eta": "9.92798193024559045803371e-16"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000000000005048482468",
+              "shift_max_profile_step_from_previous_eta": "9.9279819302450559365259e-14"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "2.5271964452390042830301e-49",
+          "nearest_sigma_eigenvalue_abs": "1.06230068519073220520651e-20",
+          "nearest_sigma_mode_overlap_abs": "3.49364332612645431233063e-19",
+          "min_sigma_eigenvalue_abs_across_sigmas": "1.06230068519073220520651e-20",
+          "raw_anchor_abs": "0.158010043492142622231755",
+          "deflated_anchor_abs": "0.999632011832566505245335",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0652573433561067549952744",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.00000000000000000025248",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.00000000000000002524757",
+              "shift_max_profile_step_from_previous_eta": "4.96841773775478748035623e-17"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.00000000000000252475692",
+              "shift_max_profile_step_from_previous_eta": "4.96841773775477434538835e-15"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.00000000000025247569201",
+              "shift_max_profile_step_from_previous_eta": "4.96841773775341361564076e-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "-1.74469368905726418414397",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.59999999999999997779554",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.0100000000000000002081668",
+        "0.000100000000000000004792174",
+        "0.000000999999999999999954748112",
+        "1.00000000000000002092256e-8"
+      ],
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "0.0931804803601747700255419",
+          "nearest_sigma_mode_overlap_abs": "0.0366667132111614575746646",
+          "min_sigma_eigenvalue_abs_across_sigmas": "0.0931804803601747700255419",
+          "raw_anchor_abs": "1.35427017533745007900768",
+          "deflated_anchor_abs": "1.33274201730605708872146",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0696628035778227094168854",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.3583189464420153611592",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.35434556610628375007397",
+              "shift_max_profile_step_from_previous_eta": "0.00242049088527197991322282"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.3542709327069227865897",
+              "shift_max_profile_step_from_previous_eta": "0.0000243941322133735521311637"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.35427018291149092108073",
+              "shift_max_profile_step_from_previous_eta": "0.000000243952211193414815849315"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "0.325754878874894979874542",
+          "nearest_sigma_mode_overlap_abs": "0.12178810162579336121319",
+          "min_sigma_eigenvalue_abs_across_sigmas": "0.325754878874894979874542",
+          "raw_anchor_abs": "1.26990105458907972386982",
+          "deflated_anchor_abs": "1.20941153569233943979188",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0472854859582162164458434",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.27055328246668543522025",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.26990963520833611495501",
+              "shift_max_profile_step_from_previous_eta": "0.000715331815090431650638109"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.26990114060098747701128",
+              "shift_max_profile_step_from_previous_eta": "0.00000715584696319866346653089"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.26990105544921937264093",
+              "shift_max_profile_step_from_previous_eta": "7.15584712882224140659832e-8"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "0.389272945287533094099505",
+          "nearest_sigma_mode_overlap_abs": "1.93292246929482619460674",
+          "min_sigma_eigenvalue_abs_across_sigmas": "0.389272945287533094099505",
+          "raw_anchor_abs": "2.14156968794287593141797",
+          "deflated_anchor_abs": "1.64887147837337468193894",
+          "max_deflated_vs_raw_projective_relative_difference": "0.101143078252110426678946",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "2.14246445889826454601384",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "2.141583166388836764613",
+              "shift_max_profile_step_from_previous_eta": "0.00112942795891567562973363"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "2.14156982318242137069672",
+              "shift_max_profile_step_from_previous_eta": "0.0000112866301915966172003373"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "2.14156968929531689619736",
+              "shift_max_profile_step_from_previous_eta": "0.000000112865316296151661668912"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "17.8774249382835234329564",
+          "nearest_sigma_mode_overlap_abs": "1.98315460535461513192804",
+          "min_sigma_eigenvalue_abs_across_sigmas": "17.8774249382835234329564",
+          "raw_anchor_abs": "1.49891155740200165088843",
+          "deflated_anchor_abs": "1.08894429161266696843308",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0448078442991774678191186",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.49893891557371564468932",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.49891183223037342156108",
+              "shift_max_profile_step_from_previous_eta": "0.0000104043855415120334271251"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.49891156015041003446649",
+              "shift_max_profile_step_from_previous_eta": "0.00000010404502717940877051469"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.4989115574294857471908",
+              "shift_max_profile_step_from_previous_eta": "1.04045038797437114273081e-9"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "0.296641857904954774349025",
+          "nearest_sigma_mode_overlap_abs": "0.449300514201076325010219",
+          "min_sigma_eigenvalue_abs_across_sigmas": "0.296641857904954774349025",
+          "raw_anchor_abs": "4.86541917857906630290442",
+          "deflated_anchor_abs": "1.1477816883731570532103",
+          "max_deflated_vs_raw_projective_relative_difference": "0.174675684744052403488086",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "4.85828037706145318628438",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "4.86537367838005931429997",
+              "shift_max_profile_step_from_previous_eta": "0.000857256501957549641167771"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "4.86541872617479156565964",
+              "shift_max_profile_step_from_previous_eta": "0.00000855425642387351689413148"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "4.86541917405528333376074",
+              "shift_max_profile_step_from_previous_eta": "8.55405964772520072149825e-8"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "0.48873817248793736085182",
+          "nearest_sigma_mode_overlap_abs": "0.545835930018072390393253",
+          "min_sigma_eigenvalue_abs_across_sigmas": "0.48873817248793736085182",
+          "raw_anchor_abs": "3.3099934216549099039348",
+          "deflated_anchor_abs": "1.00862489563555372049057",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0810300908345277457826685",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "3.30823595073239033502756",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "3.30998206796937604172564",
+              "shift_max_profile_step_from_previous_eta": "0.00035330858586587188643067"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "3.30999330874076583729915",
+              "shift_max_profile_step_from_previous_eta": "0.00000353120979935132423776505"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "3.30999342052583073480327",
+              "shift_max_profile_step_from_previous_eta": "3.53118912765848129870269e-8"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "0.261464419894788444265616",
+          "nearest_sigma_mode_overlap_abs": "0.770546445019303278353463",
+          "min_sigma_eigenvalue_abs_across_sigmas": "0.261464419894788444265616",
+          "raw_anchor_abs": "6.5266423833554615218849",
+          "deflated_anchor_abs": "1.00105635883417761556788",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0552143225901838491770751",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "6.52041743856421382412197",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "6.52662621740019445703971",
+              "shift_max_profile_step_from_previous_eta": "0.000292255085822039120228898"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "6.52664222631065990742061",
+              "shift_max_profile_step_from_previous_eta": "0.00000292173099655864007435114"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "6.52664238178547498215344",
+              "shift_max_profile_step_from_previous_eta": "2.92172168095002159636267e-8"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "3.18628990549908846244597",
+          "nearest_sigma_mode_overlap_abs": "1.04481791532042214302923",
+          "min_sigma_eigenvalue_abs_across_sigmas": "3.18628990549908846244597",
+          "raw_anchor_abs": "1.61771779917107996034993",
+          "deflated_anchor_abs": "1.00001471437521257120523",
+          "max_deflated_vs_raw_projective_relative_difference": "0.00945671380382268282919258",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.61769865819674414811485",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.61771765649540608750309",
+              "shift_max_profile_step_from_previous_eta": "0.0000161402186596143611639797"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.61771779774919677514198",
+              "shift_max_profile_step_from_previous_eta": "0.000000161400974130434542640084"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.61771779915686161585331",
+              "shift_max_profile_step_from_previous_eta": "1.61400958569198953771513e-9"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "0.0912253814481716895027786",
+          "nearest_sigma_mode_overlap_abs": "0.409500696331324055492076",
+          "min_sigma_eigenvalue_abs_across_sigmas": "0.0912253814481716895027786",
+          "raw_anchor_abs": "10.1898219608597277854775",
+          "deflated_anchor_abs": "0.999962707438149288780696",
+          "max_deflated_vs_raw_projective_relative_difference": "0.00311739383306572990889664",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "10.1289535908645919915869",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "10.1898080611314893213829",
+              "shift_max_profile_step_from_previous_eta": "0.0000375113620322678229802647"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "10.1898218818881537344196",
+              "shift_max_profile_step_from_previous_eta": "0.00000037389016108071814733121"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "10.1898219600760146259441",
+              "shift_max_profile_step_from_previous_eta": "3.73878236334161118179845e-9"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "4.0239625625287071334002",
+          "nearest_sigma_mode_overlap_abs": "1.06588569761926481704995",
+          "min_sigma_eigenvalue_abs_across_sigmas": "4.0239625625287071334002",
+          "raw_anchor_abs": "1.159943932039826466598",
+          "deflated_anchor_abs": "1.00000200626069555991657",
+          "max_deflated_vs_raw_projective_relative_difference": "0.0026608687548328081956483",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.1599446910131994524896",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.15994394873438212023414",
+              "shift_max_profile_step_from_previous_eta": "0.00000469477292503216631913306"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.15994393220768250346111",
+              "shift_max_profile_step_from_previous_eta": "4.69477495957032776361449e-8"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.15994393204150511801466",
+              "shift_max_profile_step_from_previous_eta": "4.69477486978161667830964e-10"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "0.574757509103485862347089",
+          "nearest_sigma_mode_overlap_abs": "0.588946215685745646030456",
+          "min_sigma_eigenvalue_abs_across_sigmas": "0.574757509103485862347089",
+          "raw_anchor_abs": "2.92819482376531665362281",
+          "deflated_anchor_abs": "1.00000010478135441234826",
+          "max_deflated_vs_raw_projective_relative_difference": "0.015064832515797920775791",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "2.92779036151063457293293",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "2.92819465416202453813138",
+              "shift_max_profile_step_from_previous_eta": "0.0000859357989924885185243941"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "2.92819482245688022645631",
+              "shift_max_profile_step_from_previous_eta": "0.000000859373906208364889380157"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "2.92819482375227104900372",
+              "shift_max_profile_step_from_previous_eta": "8.59373897202976780684563e-9"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "0.0518815631805679638568232",
+          "nearest_sigma_mode_overlap_abs": "0.296552114425267292979641",
+          "min_sigma_eigenvalue_abs_across_sigmas": "0.0518815631805679638568232",
+          "raw_anchor_abs": "15.1622662233627410650373",
+          "deflated_anchor_abs": "0.999999335984729943104216",
+          "max_deflated_vs_raw_projective_relative_difference": "0.00156757214152222839463836",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "14.8889632272463271568954",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "15.1622333998936160874591",
+              "shift_max_profile_step_from_previous_eta": "0.0000183062258653851172138757"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "15.1622661727466987263632",
+              "shift_max_profile_step_from_previous_eta": "0.00000018158936966644976199895"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "15.1622662228843425936079",
+              "shift_max_profile_step_from_previous_eta": "1.81574568980749525796595e-9"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_sigma_eigenvalue_abs": "3.67876310758325478912194",
+          "nearest_sigma_mode_overlap_abs": "1.02189773174595988668647",
+          "min_sigma_eigenvalue_abs_across_sigmas": "3.67876310758325478912194",
+          "raw_anchor_abs": "1.08958775556112845419696",
+          "deflated_anchor_abs": "0.999999293458740905286839",
+          "max_deflated_vs_raw_projective_relative_difference": "0.000919317777157229849897783",
+          "eta_profiles": [
+            {
+              "eta": "0.0100000000000000002081668",
+              "shift_anchor_abs": "1.0895885138988101980943",
+              "shift_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.000100000000000000004792174",
+              "shift_anchor_abs": "1.08958776942874219278077",
+              "shift_max_profile_step_from_previous_eta": "0.00000273373733111937209169604"
+            },
+            {
+              "eta": "0.000000999999999999999954748112",
+              "shift_anchor_abs": "1.08958775570043301083603",
+              "shift_max_profile_step_from_previous_eta": "2.73375563778709594576991e-8"
+            },
+            {
+              "eta": "1.00000000000000002092256e-8",
+              "shift_anchor_abs": "1.08958775556252156260526",
+              "shift_max_profile_step_from_previous_eta": "2.73375573765372811062978e-10"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

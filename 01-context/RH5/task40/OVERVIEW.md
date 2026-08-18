@@ -22,7 +22,7 @@ The `mpmath` library can reliably generate and validate zero lists that satisfy 
 - Cell-level 900 s timeout: An initial monolithic generation of 2000 ζ zeros timed out; I redesigned to write progress to disk in 500-zero chunks so each chunk fits inside the cell limit.
 - Per-zero cost of `mp.zetazero` grows with n (≈0.27→0.71 s/zero from n=1..500 to n=1501..2000 at dps=50); naïve extrapolation from the first few zeros under-estimates total compute substantially.
 - For the complex character χ₄ mod 5 the magnitude-only local-minimum detector produced out-of-order roots when two nearby minima refined to the same zero. Switching to simultaneous Re(L)/Im(L) sign-change bracketing fixed this but required care with scan step (0.20–0.25) so as not to skip closely-spaced zeros at large t (mean gap shrinks like 2π/log(qT/2π)).
-- Overall the 3600 s budget was insufficient for the full {2k,5k,10k,20k}×{50,80} grid; honest scope reduction was unavoidable.
+- Overall the 3600 s budget was insufficient for the full {2k,5k,10k,20k}×{50,80} grid; candid scope reduction was unavoidable.
 - The dataset spec does not pin which of the two conjugate order-4 characters mod 5 is meant; I used χ(2)=i which yields the same zero set (up to conjugation of the L-function, the zeros agree).
 </challenges>
 <discussion>

@@ -55,12 +55,12 @@ Quedan abiertos [O]: (O-4b) derivar el −d²/dx² desde A_λ; (O-4a.2') explica
 y fijar S=1; limpiar la precisión de modos impares (parity OK, perfil ruidoso). ## ACTUALIZACIÓN 3 (revisión: separar existencia de identificación) Reformulación adoptada (correcta): NO afirmar "firma inequívoca de Dirichlet". Lo defendible:
 **evidencia muy fuerte de un operador efectivo de 2º orden tipo Sturm–Liouville**. Y separar:
 - **O-4b.1 (existencia de 𝓛):** (1/ε_0)A_λ ⟹ 𝓛 autoadjunto en [−½,½], SIN identificar 𝓛. Esencialmente establecido por: colapso de perfiles (A) + paridad alternante (B) + espectro (k+1)² (C) + correcciones O(1/L) (D) — las 4 piezas juntas ⟹ los autopares convergen ⟹ 𝓛 existe (operador con autobase {φ_k} completa ON y autovalores (k+1)²).
-- **O-4b.2 (identificación de 𝓛):** ¿qué operador es? ABIERTO. **Intento de identificación (reveal_L.py): V(x)=φ_0''/φ_0.** Resultado HONESTO:
+- **O-4b.2 (identificación de 𝓛):** ¿qué operador es? ABIERTO. **Intento de identificación (reveal_L.py): V(x)=φ_0''/φ_0.** Resultado FRANCO:
 - Numéricamente RUIDOSO (φ'' de perfil band-limited amplifica ruido); no identifica 𝓛 limpio.
 - Robusto: **singularidad central** (V→∞ en x=0; φ_0~x² ahí) ⟹ 𝓛 NO es el Laplaciano PLANO (cuyo fundamental cos(πx) tiene pico central, no nodo). Es Sturm–Liouville con término **centrífugo/Bessel** en x=0, espectro (k+1)². Coherente con que x=0 (u=1) es el punto fijo de ι donde la estructura de primos es singular.
 - ⟹ confirma la cautela de: (k+1)² es 2º-orden pero NO Dirichlet plano; 𝓛 tiene potencial. La identificación precisa requiere derivación analítica (no φ'' numérico). **Estado:** 𝓛 existe (O-4b.1, vía convergencia de autopares); 𝓛 ≈ Sturm–Liouville de 2º orden
 con singularidad central, espectro (k+1)² [O-4b.2, abierto]; identificación precisa = derivar el
-operador efectivo desde A_λ (analítico), no por φ'' numérico (demasiado ruidoso). ## Estado honesto del borrador **Riguroso [P]:** Lemas 0, 1, 2 (restricción exacta, forma de muestreo, horizonte ~λ²).
+operador efectivo desde A_λ (analítico), no por φ'' numérico (demasiado ruidoso). ## Estado franco del borrador **Riguroso [P]:** Lemas 0, 1, 2 (restricción exacta, forma de muestreo, horizonte ~λ²).
 **Establecido numéricamente [N], a verificar analíticamente:** localización de borde, ancho
 fijo a≈1.5, √(ε_k/ε_0)=k+1 (segundo orden / Dirichlet), ε_0∝λ^{−2}.
 **Abierto [O] — el missing step de, NO fabricado:** (4-O) reducción de A_λ al Laplaciano de Dirichlet vía la ODE prolate de segundo orden + identificación de a(L); (5-O) tunneling κ=1. **Lo nuevo y fuerte de este borrador:** (a) la forma de muestreo + horizonte ~λ² [P]; (b) la

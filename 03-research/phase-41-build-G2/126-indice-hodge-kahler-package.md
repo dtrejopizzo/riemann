@@ -203,7 +203,7 @@ Aplico el test de no-circularidad de Doc 119 §4.3. La pregunta crítica de toda
 
 ### 4.3. ¿Es NÚCLEO-G2 un teorema genuino o RH-equivalente disfrazado?
 
-**[CÁLCULO — la respuesta brutalmente honesta].** El cuantificador maestro P43 (Doc 119 §4.2) **predice que reaparece**: toda propiedad verificable sin posiciones de ceros que implique RH debe provenir de una estructura **externa** a ζ; las internas son RH-equivalentes. La pregunta es si NÚCLEO-G2 es externo (geométrico genuino) o interno (Weil renombrado).
+**[CÁLCULO — la respuesta brutalmente franca].** El cuantificador maestro P43 (Doc 119 §4.2) **predice que reaparece**: toda propiedad verificable sin posiciones de ceros que implique RH debe provenir de una estructura **externa** a ζ; las internas son RH-equivalentes. La pregunta es si NÚCLEO-G2 es externo (geométrico genuino) o interno (Weil renombrado).
 
 **Reaparece, salvo que el cuadrado sea genuinamente del tipo AHK.** El análisis de §3.4 + §4.2 muestra:
 - NÚCLEO-G2 **en abstracto** (signatura para toda clase) es un teorema de paquete de Kähler tropical **genuino**, del tipo AHK — **externo**, sobregenera, no circular. Es un enunciado **concebible** (AHK probó algo análogo para matroides por métodos nuevos).
@@ -254,7 +254,7 @@ Aplico el test de no-circularidad de Doc 119 §4.3. La pregunta crítica de toda
 
 ### 5.3. Consecuencia para el programa y lista de lo que faltaría
 
-**[CONSTRUCCIÓN] Consecuencia:** Phase 41 ("CONSTRUIR G2") tiene un objetivo bien definido pero un **núcleo irreducible que se ha desplazado**: no es construir la forma (Doc 125) ni probar su signatura directamente, sino **probar que el objeto es del subtipo Kähler-package tropical** — y ese teorema, si existe, debe ser **externo** (NC2-A) para no ser circular. El estado actual (NC2-B) es honestamente **circular**: coincide con Doc 124 (positividad de Weil = espectral = circular), Doc 123 (la norma de intersección = G2, ausente), y Doc 80 (Castelnuovo–Severi aritmético: la forma que distingue las medidas es RH-equivalente). **Cuatro derivaciones independientes, mismo veredicto.**
+**[CONSTRUCCIÓN] Consecuencia:** Phase 41 ("CONSTRUIR G2") tiene un objetivo bien definido pero un **núcleo irreducible que se ha desplazado**: no es construir la forma (Doc 125) ni probar su signatura directamente, sino **probar que el objeto es del subtipo Kähler-package tropical** — y ese teorema, si existe, debe ser **externo** (NC2-A) para no ser circular. El estado actual (NC2-B) es francamente **circular**: coincide con Doc 124 (positividad de Weil = espectral = circular), Doc 123 (la norma de intersección = G2, ausente), y Doc 80 (Castelnuovo–Severi aritmético: la forma que distingue las medidas es RH-equivalente). **Cuatro derivaciones independientes, mismo veredicto.**
 
 **Lista de lo que faltaría (para mover de (b)/(d) hacia (a)):**
 
@@ -270,7 +270,7 @@ Aplico el test de no-circularidad de Doc 119 §4.3. La pregunta crítica de toda
 
 ---
 
-## 6. Síntesis y honestidad
+## 6. Síntesis y franqueza
 
 Ningún teorema geométrico nuevo se ha probado aquí. Se ha **leído en fuente** (AHK arXiv:1511.02888 + surveys Eur–Larson y arXiv:2211.05724; Babaee–Huh arXiv:1502.00299 verbatim Thm 1.1, 1.3, 1.5, Huh14 Thm 38 vía BH) y se ha **calculado**:
 
@@ -280,7 +280,7 @@ Ningún teorema geométrico nuevo se ha probado aquí. Se ha **leído en fuente*
 - **Hoy sólo NC2-B está disponible** ⟹ el índice sobre el primitivo es, en el estado actual, **positividad de Weil RH-circular** (coincidente con Docs 124, 123, 80 — cuatro derivaciones).
 - **La analogía con cuerpos de funciones se rompe en el punto (3)–(4) de §4.4:** allá la geometría algebraica genuina da el índice de Hodge para **toda** superficie gratis (Castelnuovo no circular, NC2-A automático); acá el cuadrado es **tropical**, su índice **no es gratis** (BH lo puede romper) y **no está construido**. El cuantificador maestro P43 reaparece exactamente donde la geometría deja de ser genuina y se vuelve tropical-sin-índice-garantizado.
 
-**El punto de traba ES el resultado:** G2 no está obstruido de manera demostrada (no se ha probado que el cuadrado sea del lado BH), pero **no hay credencial de que esté del lado AHK**, y la dimensión infinita rompe el único método (AHK) que prueba paquetes de Kähler combinatoriamente. El veredicto honesto es **(d) indeterminable, con el estado actual en (b) circular**, y el camino a (a) pasando por dos teoremas hoy ausentes: la forma de intersección (Doc 125) y, sobre ella, un teorema externo de matroidalidad/Lefschetz tropical infinito-dimensional que excluya el caso Babaee–Huh.
+**El punto de traba ES el resultado:** G2 no está obstruido de manera demostrada (no se ha probado que el cuadrado sea del lado BH), pero **no hay credencial de que esté del lado AHK**, y la dimensión infinita rompe el único método (AHK) que prueba paquetes de Kähler combinatoriamente. El veredicto franco es **(d) indeterminable, con el estado actual en (b) circular**, y el camino a (a) pasando por dos teoremas hoy ausentes: la forma de intersección (Doc 125) y, sobre ella, un teorema externo de matroidalidad/Lefschetz tropical infinito-dimensional que excluya el caso Babaee–Huh.
 
 ---
 

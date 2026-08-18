@@ -145,7 +145,7 @@ The finitization route to RH is blocked under LI (P15). The convergence route is
 purely analytic uniform-convergence statement about the Jensen polynomials --- on which the LI obstruction has no
 purchase. This is the first identification of an RH-approach that is \emph{provably outside} the LI obstruction.
 
-\textbf{The honest caveats (so this is not a hidden circle).}
+\textbf{The candid caveats (so this is not a hidden circle).}
 \begin{itemize}
 \item ``Uniform'' must mean the \emph{full} two-dimensional grid $\{(d,n)\}$, not merely ``above one height for all
 degrees.'' GORZ cover $n>N(d)$ (a staircase); RH is the whole grid. The convergence route must control the low-$n$
@@ -160,7 +160,7 @@ in new clothes. \emph{Deciding this dichotomy is the precise next question.}
 > finitization route is LI-blocked, but the \emph{uniform-convergence} route is a distinct analytic mechanism that LI
 > does not block. Its status --- non-circular sub/over-RH target vs. RH-equivalent restatement --- is the one
 > question that decides whether the finite-to-full framework offers a genuinely new opening or another circle. This
-> is, by construction, exactly the kind of sharply-posed fork the program seeks, and it is RH-honest: stated as a
+> is, by construction, exactly the kind of sharply-posed fork the program seeks, and it is RH-candid: stated as a
 > dichotomy to be resolved, not a claim.
 
 ---
@@ -196,7 +196,7 @@ margin of \emph{some} hyperbolic polynomial'' --- is just ``$J_{d,n}$ hyperbolic
 (finite type or bounded threshold, \S2), the non-empty bounded-threshold class (\S5), and the dichotomy resolution
 above are positivity-theory results independent of RH. The RH-relevance of the framework is now precisely bounded:
 it explains \emph{why} the finite-to-full gap exists (no finitization under LI; convergence route over-RH or
-circular) but offers no passage. This is an honest terminus for Front 4 as an RH route, and a clean standalone
+circular) but offers no passage. This is an candid terminus for Front 4 as an RH route, and a clean standalone
 contribution as positivity theory.
 
 ---

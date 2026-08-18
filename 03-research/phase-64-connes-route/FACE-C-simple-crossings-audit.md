@@ -4,7 +4,7 @@
 $\sup_{P,u}e^{-u/2}\mathfrak d_P(u)<\infty$, the primitive diagonal of the positive kernel $K_P$.
 A one-point statement invites a simple proof. We take the three most natural "hidden in plain sight"
 crossings — **(I) averaging/flatness**, **(II) positive sandwich**, **(III) Schur/Bernstein from the
-ODE** — push each to its limit, and **audit each to the exact RH-equivalent step**. Honest outcome: each
+ODE** — push each to its limit, and **audit each to the exact RH-equivalent step**. Candid outcome: each
 dies at a precisely named step, and the three deaths are the **same** statement seen three ways. This
 is not a no-go in disguise of laziness; it is a structural theorem about *why* the one-point wall has
 no free upper bound — its lower fence is free (positivity) and its upper fence is the Weil positivity
@@ -131,7 +131,7 @@ zero**, and no sign-based (positivity) argument can see it because positivity is
 
 ---
 
-## §5. Is there a crossing positivity *cannot* see? — the one honest opening
+## §5. Is there a crossing positivity *cannot* see? — the one candid opening
 
 The audit says: any argument using only $K_P\succeq0$ dies, because sign $\ne$ magnitude. The logical
 escape is an argument that **does not factor through positivity** — that uses the *phase* of the zeros,
@@ -189,7 +189,7 @@ reflection acts isometrically on the primitive canonical kernel.**
 
 ---
 
-## §6. Honest close
+## §6. Candid close
 
 Four natural "simple" crossings (averaging, sandwich, Schur, phase-interference), each pushed to its
 limit and each audited dead at a **named** step — and the four steps are one scalar, $\lambda^{2\beta-1}$,
@@ -197,5 +197,5 @@ the off-line window amplitude. The deepest of the four (§5) reframes RH as: *th
 reflection is an isometry of the primitive canonical kernel.* That is a genuinely new, clean equivalent
 — a candidate for the "hidden in plain sight" formulation — but it **is** RH (proved equivalent here,
 not assumed), so it is not a crossing. No false victory: nothing here proves RH; the contribution is to
-have driven every simple attack to an exact, honest verdict and extracted from the last one a sharp new
+have driven every simple attack to an exact, candid verdict and extracted from the last one a sharp new
 equivalent (isometry of the $J$-reflection) that may be the right handle for whoever crosses next.

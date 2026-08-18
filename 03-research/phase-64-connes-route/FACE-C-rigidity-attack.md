@@ -118,7 +118,7 @@ more concrete target than "bound the zero-sum."
 
 ---
 
-## §5. Why this is the right thing to attack next (and what tool, honestly)
+## §5. Why this is the right thing to attack next (and what tool, candidly)
 
 The directive: attack the equivalence, make it simplest. Theorem~\ref{thm:hbstab} is the simplest yet —
 it is a **continuity/stability of a closed condition (HB) under a rank-one perturbation of the
@@ -128,7 +128,7 @@ Hamiltonian's normalization.** The relevant non-positivity tools are exactly the
   rank-one (pole) perturbation moves zeros by a rank-one resolvent term; whether any zero is pushed off
   $\mathbb R$ is a **monotonicity/interlacing** question (Hadamard variation, eigenvalue interlacing
   under rank-one updates) — *not* a positivity bound.
-- The honest hope: a finite-rank perturbation of an HB function stays HB **iff** the perturbation is
+- The candid hope: a finite-rank perturbation of an HB function stays HB **iff** the perturbation is
   in the right one-sided cone (de Branges' theory of $\mathcal H(E)\subset\mathcal H(E')$ inclusions: an
   HB $E$ embeds in a larger de Branges space iff a sign condition on the difference holds). The pole is
   one-dimensional; the question is whether its sign is the admissible one.
@@ -147,7 +147,7 @@ next probe.
 
 ---
 
-## §6. Honest status
+## §6. Candid status
 
 \textbf{Established (unconditional):}
 \begin{itemize}

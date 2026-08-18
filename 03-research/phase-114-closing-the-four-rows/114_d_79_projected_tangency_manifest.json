@@ -1,0 +1,19 @@
+{
+  "certificate": "D79 T=log(2) projected tangency only",
+  "endpoint": "log(2)",
+  "gamma_depth": 160,
+  "tail_anchor_b": "320.5",
+  "tail_anchor_weight_lower": "80.625",
+  "legendre_degree": 9,
+  "cells": 96,
+  "parity_dimension": 480,
+  "claimed_lower_bound": "-0.0000001",
+  "even_preconditioned_disk_lower": "0.9999999237912",
+  "odd_preconditioned_disk_lower": "0.9999999998462",
+  "independent_full_runs": 2,
+  "outputs_identical_at_recorded_precision": true,
+  "typical_runtime_seconds": "approximately 540",
+  "status": "PASS_PROJECTED_ONLY",
+  "full_space_feshbach": false,
+  "row_d_closed": false
+}

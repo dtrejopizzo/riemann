@@ -1,0 +1,34 @@
+{
+  "certificate": "D80 cutoff-free Fourier Galerkin audit at c=4",
+  "source": "https://arxiv.org/src/2607.02828v1/anc/arb_ldlt_certify.py",
+  "arxiv_version": "2607.02828v1",
+  "source_sha256": "02462e7f75a601ed8a5cc4d5c22064ece8088140ff45b9a21fd0295162c72039",
+  "license_noted_upstream": "CC-BY-4.0 paper; ancillary carries upstream LICENSE files",
+  "external_code_copied": false,
+  "runs": [
+    {
+      "c": 4,
+      "N": 40,
+      "precision_bits": 500,
+      "dimension": 81,
+      "n_pos": 81,
+      "n_neg": 0,
+      "status": "CERTIFIED_PD"
+    },
+    {
+      "c": 4,
+      "N": 200,
+      "precision_bits": 2000,
+      "dimension": 401,
+      "n_pos": 401,
+      "n_neg": 0,
+      "build_seconds": "53.0",
+      "ldlt_seconds": "128.2",
+      "status": "CERTIFIED_PD"
+    }
+  ],
+  "scope": "FINITE_GALERKIN_ONLY",
+  "uses_zero_side_for_sign": false,
+  "full_space": false,
+  "row_d_closed": false
+}

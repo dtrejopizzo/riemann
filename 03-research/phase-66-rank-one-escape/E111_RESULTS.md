@@ -10,7 +10,7 @@ The rank-one escape wall (phase-64 `CONSTRUCTION-TW-canonical-system.md §5`):
 `N(P) := ‖P_prim K_P P_prim‖` bounded ⟺ RH, with `P_prim = I − |H⟩⟨H|/⟨H,H⟩`
 removing the single pole/degree direction H.
 
-**Honest object.** A fully faithful `K_P = ∫ Y_P* dH_P Y_P` needs the canonical ODE
+**Candid object.** A fully faithful `K_P = ∫ Y_P* dH_P Y_P` needs the canonical ODE
 (transfer matrix Y_P), which the validated engine does NOT integrate. Per the task's
 authorised fallback, E111 uses the **best validated proxy = the E101 object**: the
 generalized spectrum `L_pr x = μ L_arch x` and its mass past the contractive edge μ=1
@@ -70,7 +70,7 @@ DH (control):
 - **DH:** N(P) ~ λ^{**+0.76**}, primitive past-edge ~ λ^{+0.72}. On E101's own grid the
   raw (μ_max−1) fit is **0.41**.
 
-## Honest caveats (do not over-read the exponent)
+## Candid caveats (do not over-read the exponent)
 
 1. **The robust, faithful finding** is the *dichotomy*, not a precise exponent: after
    removing the pole H, zeta escape is O(0.1) noise-floor while DH escape is O(4–10)

@@ -13,9 +13,9 @@ intento matarla por adelantado, por tres vías independientes.
 
 **Contrato de etiquetado.** **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad aquí o
 citado con referencia verificable. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con
-estatus honesto. **[GAP]** = declarado. **[GAP de literatura]** = dato no verificado a
+estatus franco. **[GAP]** = declarado. **[GAP de literatura]** = dato no verificado a
 nivel de página esta sesión, NO usado como premisa de ningún teorema. Jamás se fabrica una
-prueba de RH ni una muerte que no esté. **NADA de numéricos.** Honestidad absoluta: si las
+prueba de RH ni una muerte que no esté. **NADA de numéricos.** Franqueza absoluta: si las
 tres vías fallan en matar, lo digo, y entrego el complemento (qué tendría que ser verdad).
 
 **Prerrequisitos leídos en fuente esta sesión:** Doc 157 completo (catálogo tauberiano,
@@ -395,7 +395,7 @@ es Beurling–Malliavin otra vez, y reintroduce el divisor de $\zeta$.
 
 ### 4.3. La rendija: ¿hay una cuantificación diofántica que NO sea densidad de resonancia?
 
-Aquí soy escrupulosamente honesto, porque es donde la muerte podría no consumarse.
+Aquí soy escrupulosamente franco, porque es donde la muerte podría no consumarse.
 
 La independencia ℚ-lineal de $\{\log p\}$ es un enunciado CUALITATIVO (sí/no sobre la
 existencia de relaciones $\sum a_p\log p = 0$ con $a_p\in\mathbb Z$). Su forma cuantitativa
@@ -473,13 +473,13 @@ resonancia ni un producto de Euler. **Lo que es vacío, o no, es la IMPLICACIÓN
 propiedad diofántica fuerce individuación.** Eso es el GAP de literatura central
 (GAP-159.C = GAP-157.A afilado).
 
-**No fuerzo la tercera muerte.** Sería deshonesto declarar "muerta" la hebra: he matado las
+**No fuerzo la tercera muerte.** Sería engañoso declarar "muerta" la hebra: he matado las
 dos lecturas accesibles (ambiente y densidad-efectiva), pero la lectura
 diofántica-efectiva genuina sobrevive porque NO conozco —y declaro no conocer— un teorema
 que la conecte con los ceros ni uno que pruebe que no puede conectarse. La hebra está
 REDUCIDA a su núcleo más delgado, idéntico al GAP-157.A, y ese núcleo NO está cerrado.
 
-### 5.3. El estatus honesto de la grieta superviviente
+### 5.3. El estatus franco de la grieta superviviente
 
 La grieta superviviente es la MISMA de la pinza P43 (LP-112 / LP-152) y del GAP-157.A. Las
 tres coordenadas independientes —recurrencia (Doc 112), tauberiana (Doc 157), y ahora la
@@ -543,7 +543,7 @@ universal.** Este es el punto más esperanzador del complemento, y el más incie
 propiedad diofántica EFECTIVA y UNIFORME de $\{\log p\}$ (no funcional de $Q$, no densidad
 de resonancia, no Euler en la línea, más fina que PNT) que implique la ausencia de ceros
 off-críticos. Las cinco condiciones C1–C5 son el perfil exacto de tal propiedad. Ninguna
-es contradictoria; ninguna está establecida. Es el complemento honesto de tres muertes,
+es contradictoria; ninguna está establecida. Es el complemento franco de tres muertes,
 dos de las cuales se consumaron.
 
 ---

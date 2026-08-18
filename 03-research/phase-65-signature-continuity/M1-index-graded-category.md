@@ -206,7 +206,7 @@ the analytic content (N3 must be defeated: the renormalized limit is not classic
 sign $\Rightarrow$ no negative square created). This is where RH actually lives.
 \end{itemize}
 
-\textbf{Honest status.} M1 is \emph{definitional scaffolding with two genuine lemmas}
+\textbf{Candid status.} M1 is \emph{definitional scaffolding with two genuine lemmas}
 (functoriality; DH separation). It does not approach RH; it makes "index-continuity" a precise
 categorical statement ($\sigma_{\Phi_\infty}=0$) and hands M2/M3 well-posed targets. The decisive
 reduction achieved: \textbf{RH $=$ the renormalization morphism $\Phi_\infty$ lies in $\mathcal G^+$ with

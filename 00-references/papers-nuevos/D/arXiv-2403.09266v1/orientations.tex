@@ -1,0 +1,1197 @@
+\subsection{Recollections on bivariant theories}\label{sec:bivariant}
+
+\begin{num}
+In this section, we recall the bivariant formalism that automatically comes out of
+the six functors formalism for ring spectra, as explained in \cite{Deg16}.\footnote{Recall
+that bivariant theories were introduced by Fulton and MacPherson in \cite{FMP}. We refer the 
+interested reader to the introduction of \cite{Deg16} for more historical remarks.}
+
+Let $\EE$ be a spectrum (resp. ring spectrum) over $\Sigma$. For any ($\Sigma$-)scheme $S$
+with structural map $p:S \rightarrow \Sigma$, we put $\EE_S=p^*\EE$  (resp. equipped with its ring structure)
+--- this produces an \emph{absolute (resp. ring) spectrum} over $\base$
+in the sense of \cite[Def. 1.1.1]{Deg16} (for $\mathscr T=\SH$).
+
+Recall from \cite{LZ} and \cite[Th. 2.34]{Khan} that the existence of the exceptional functors
+$(f_!,f^!)$ on the motivic category $\SH$ has been extended to all finite type morphisms,
+instead of separated morphisms of finite type as in \cite{CD3}.
+Therefore, one can slightly extend the definitions of \cite[Sec. 1.2]{Deg16}.\footnote{Unlike in \cite[Def. 1.2.2]{Deg16},
+we will not call this the \emph{Borel-Moore homology} of $X/S$ with coefficients in $\E$.
+This terminology appears a bit unfortunate as $f^!(\E_S)$ is not a dualizing object of $\SH(X)$ in general.}
+\end{num}
+\begin{df}\label{df:bivariant}
+Let $\E$ be a spectrum over $\Sigma$.
+We define the \emph{bivariant theory} with coefficients in $\E$ as follows.
+Let $f:X \rightarrow S$ be a morphism of finite type and  $(n,m)$ be a couple of integers,
+or more generally of Zariski locally constant functions $X \rightarrow \ZZ$.
+The bivariant group of $X/S$ in degree $(n,m)$ and coefficients in $\E$ is:
+$$
+\E_{n,m}(X/S)=[\un_X(m)[n],f^!\E_S].
+$$
+The natural cohomology associated with this bivariant theory is for any scheme $X$:
+\begin{equation}\label{eq:biv->coh}
+\E^{n,m}(X)=\E_{-n,-m}(X/X)=[\un_X,\E_X(m)[n]].
+\end{equation}
+%Given a vector bundle $V$ over $X$, it is also customary to consider
+% the cohomology of the Thom space of $V$:
+%$$
+%\E^{n,m}(\Th(V))=[\Th(V),\E_X(m)[n]].
+%$$
+\end{df}
+
+\begin{rem} \emph{Twisting conventions}. There are three possible, and useful, choices of indexes for a bivariant (and therefore also for cohomology/homology theories)
+associated with (ring) spectra. Apart from the above choice, one can also introduce:
+\begin{enumerate}
+%\item the above convention.
+\item (See \cite[\textsection 1]{DJK}) For any integer $n \in \ZZ$ and any virtual vector bundle $v$ over $X$,
+$$
+\E_{n}(X/S,v)=[\Th(v)[n],f^!\E_S].
+$$
+\item For an integer $n \in \ZZ$ and a graded line bundle $(\cL,r)$ over $X$,
+$$
+\E_{n}(X/S,\cL,r)=[\Th(\cL)(r-1)[n+2r-2],f^!\E_S].
+$$
+\end{enumerate}
+The indexing (1) is the most general one, and covers all the other cases according to
+the following rules:
+\begin{align*}
+\E_{n,m}(X/S)&=\E_{n-2m}(X/S,\tw m), \\
+\E_{n}(X/S,\cL,r)&=\E_n(X/S,[\cL] \oplus \tw{r-1}),
+\end{align*}
+where $[\cL]$ (resp. $\tw n$) denotes the virtual vector bundles associated with $\cL$
+(resp. $\AA^n$).
+When dealing with $\SL$-oriented theories,
+convention (2) is the natural one (see \cite[\textsection 7]{DFJK}).
+When dealing with ($\mathrm{GL}$ or $\Sp$)-oriented ring spectra, convention \eqref{eq:biv->coh} is the most relevant,
+because of Thom isomorphisms. 
+
+When following the indexing convention (1), note that the associated cohomology theory is of the form
+\[
+\E^{n}(X,v)=\E_{-n}(X/X,-v)\simeq [\un_X,\E_X\otimes \Th(v)[n]].
+\] 
+\end{rem}
+
+Thanks to the motivic six functors formalism, bivariant theories enjoy a rich structure
+that we will briefly survey for completeness. We start by the functorial properties.\footnote{We state
+ these properties taking care about possible twists even though we will be mainly interested in trivial twists
+ when dealing with $G$-oriented spectra.}
+%\jean{It might be a good idea to make virtual vector bundles strictly functorial with respect to pull-backs.}
+%\fred{Indeed, twisted cohomology is not strictly functorial: it only defines a pseudo-functor  because one only gets that $g^*f^*(v) \simeq (fg)^*(v)$ (+the cocyle condition). There are various ways to correct this (for once, any pseudo functor admits a strictifaction by a theorem of Giraud!), but I am not really sure this is necessary. Most of all, as mentioned in the footnote, the interest of the oriented case is to trivialize (i.e. get rid of) twists! Thus I think the consideration of abstract twisting is a bit out of topic here! :)} 
+\begin{prop}\label{prop:biv_functorial}
+Consider the assumptions of the previous definition.
+\begin{enumerate}
+\item \emph{Base change map}. For any cartesian square
+$$
+\xymatrix@=10pt{
+Y\ar[r]^-{f'}\ar[d]\ar@{}|\Delta[rd] & X\ar[d] \\
+T\ar_-f[r] & S,
+}
+$$
+any virtual vector bundle $v$ over $X$ and any integer $n\in \ZZ$
+there exists a morphism $\Delta^*:\E_{n}(X/S,v) \rightarrow \E_{n}(Y/T,(f')^*v)$, functorial
+with respect to horizontal composition of cartesian squares. We sometimes write abusively: $f^*=\Delta^*$.
+\item \emph{Proper covariance}. For any proper morphism $p:Y \rightarrow X$ of $S$-schemes, any virtual vector bundle $v$ on $X$ and any integer $n\in\ZZ$
+there exists a morphism $p_*:\E_{n}(Y/S,p^*v) \rightarrow \E_{n}(X/S,v)$,
+corresponding to a covariant functor on the category of $S$-schemes (with proper morphisms as morphisms).
+\item \emph{\'Etale contravariance}. For any étale morphism $f:Y \rightarrow X$ of $S$-schemes, any virtual vector bundle $v$ on $X$ and any integer $n\in\ZZ$
+there exists a morphism $f^*:\E_{n}(X/S,v) \rightarrow \E_{n}(Y/S,f^*v)$,
+corresponding to a contravariant functor on the category of $S$-schemes and étale morphisms.
+\end{enumerate}
+These structural maps satisfy the following properties:
+\begin{enumerate}[resume]
+\item \emph{Homotopy invariance}. For any vector bundle $p:E \rightarrow S$, any $S$-scheme $X$ and any virtual vector bundle $v$ over $X$
+the base change map $p^*:\E_{n}(X/S,v) \rightarrow \E_{n}(X \times_S E/E,(p')^*v)$ is an isomorphism.
+\item \emph{\'Etale invariance}. For any étale morphism $f:T \rightarrow S$,
+there exists an isomorphism $f^\sharp:\E_{n}(X/S,v) \rightarrow \E_{n}(X/T,v)$ which is natural
+with respect to base change maps, proper covariance and étale contravariance.
+\item \emph{Base change formulas}. Base change maps are compatible with proper covariance and étale covariance.
+Moreover, for any cartesian square of $S$-schemes
+$$
+\xymatrix@=10pt{
+W\ar^g[r]\ar_q[d] & Y\ar^p[d] \\
+V\ar_f[r] & X
+}
+$$
+such that $p$ is proper and $f$ is étale, one has: $f^*p_*=q_*g^*$.
+\item \emph{Localization}. For any closed immersion $i:Z \rightarrow X$ of $S$-schemes, 
+with complementary open immersion $j:U \rightarrow X$, and any virtual vector bundle $v$ on $X$ there exists a long exact sequence of the form:
+$$
+\E_{n}(Z/S,i^*v) \xrightarrow{i_*}
+\E_{n}(X/S,v) \xrightarrow{j^*}
+\E_{n}(U/S,j^*v) \xrightarrow{\partial}
+\E_{n-1}(Z/S,i^*v)
+$$
+which is natural with respect to base change, proper covariance and  \'etale contravariance.
+\item \emph{Nisnevich descent}. For any Nisnevich distinguished square\footnote{i.e. the square is cartesian, $p$ \'etale, $j$ open immersion,
+and $p$ induces an isomorphism $(V-W)_{red} \rightarrow (X-U)_{red}$} of $S$-schemes 
+$$
+\xymatrix@=10pt{
+W\ar^-l[r]\ar_-q[d] & V\ar^-p[d] \\
+U\ar_-j[r] & X
+}
+$$
+and any virtual vector bundle $v$ on $X$ there exists a long exact sequence:
+$$
+\E_{n}(X/S,v)
+\xrightarrow{j^*+p^*} \E_{n}(U/S,j^*v) \oplus \E_{n}(V/S,p^*v)
+\xrightarrow{q^*-l^*} \E_{n}(W/S,q^*j^*v)
+\rightarrow \E_{n-1}(X/S,v),
+$$
+functorial with respect to base change maps, proper covariance and étale contravariance.
+\item \emph{cdh-descent}. For any cdh-distinguished square\footnote{i.e. the square is cartesian, $p$ proper, $i$ closed immersion,
+and $p$ is an isomorphism over $(X-Z)$} of $S$-schemes 
+$$
+\xymatrix@=10pt{
+T\ar_-q[d]\ar^-k[r] & Y\ar^-p[d] \\
+Z\ar_-i[r] & X
+}
+$$
+and any virtual vector bundle $v$ on $X$ there exists a long exact sequence
+\[
+\E_{n}(T/S,q^*i^*v)
+\xrightarrow{q_*+k_*} \E_{n}(Z/S,i^*v) \oplus \E_{n}(Y/S,p^*v)
+\xrightarrow{i_*-p_*} \E_{n}(X/S,v)
+\rightarrow \E_{n-1}(T/S,q^*i^*v)
+\]
+which is again functorial with respect to base change maps, proper covariance and étale contravariance.
+\end{enumerate}
+\end{prop}
+
+%\begin{prop}\label{prop:biv_functorial}
+%Consider the assumptions of the previous definition.
+%\begin{enumerate}
+%\item \emph{Base change map}. For any cartesian square
+%$$
+%\xymatrix@=10pt{
+%Y\ar[r]\ar[d]\ar@{}|\Delta[rd] & X\ar[d] \\
+%T\ar_f[r] & S
+%}
+%$$
+%there exists a morphism $\Delta^*:\E_{n,m}(X/S) \rightarrow \E_{n,m}(Y/T)$, functorial
+%with respect to horizontal composition of cartesian squares. We sometimes write abusively: $f^*=\Delta^*$.
+%\item \emph{Proper covariance}. For any proper morphism $p:Y \rightarrow X$ of $S$-schemes,
+%there exists a morphism $p_*:\E_{n,m}(Y/S) \rightarrow \E_{n,m}(X/S)$,
+%corresponding to a covariant functor.
+%\item \emph{Étale contravariance}. For any étale morphism $f:Y \rightarrow X$ of $S$-schemes,
+%there exists a morphism $f^*:\E_{n,m}(X/S) \rightarrow \E_{n,m}(Y/S)$,
+%corresponding to a contravariant functor.
+%\end{enumerate}
+%These structural maps satisfy the following properties:
+%\begin{enumerate}[resume]
+%\item \emph{Homotopy invariance}. For any vector bundle $E \rightarrow S$ and any $S$-scheme $X$,
+%the base change map $\E_{n,m}(X/S) \rightarrow \E_{n,m}(X \times_S E/E)$ is an isomorphism.
+%\item \emph{Étale invariance}. For any étale morphism $f:T \rightarrow S$,
+%there exists an isomorphism $f^\sharp:\E_{n,m}(X/S) \rightarrow \E_{n,m}(X/T)$ which is natural
+%with respect to base change maps, proper covariance and étale contravariance.
+%\item \emph{Base change formulas}. Base change maps are compatible with proper covariance and étale covariance.
+%Moreover, for any cartesian square of $S$-schemes
+%$$
+%\xymatrix@=10pt{
+%W\ar^g[r]\ar_q[d] & Y\ar^p[d] \\
+%V\ar_f[r] & X
+%}
+%$$
+%such that $p$ is proper and $f$ is étale, one has: $f^*p_*=q_*g^*$.
+%\item \emph{Localization}. For any closed immersion $i:Z \rightarrow X$ of $S$-schemes, 
+%with complementary open immersion $j:U \rightarrow X$, there exists a long exact sequence of the form:
+%$$
+%\E_{n,m}(Z/S) \xrightarrow{i_*}
+%\E_{n,m}(X/S) \xrightarrow{j^*}
+%\E_{n,m}(U/S) \xrightarrow{\partial_i}
+%\E_{n-1,m}(Z/S)
+%$$
+%which is natural with respect to base change, proper covariance and  \'etale contravariance.
+%\item \emph{Nisnevich descent}. For any Nisnevich distinguished square\footnote{i.e. the square is cartesian, $p$ \'etale, $j$ open aimmersion,
+%and $p$ induces an isomorphism $(V-W)_{red} \rightarrow (X-U)_{red}$} of $S$-schemes
+%$$
+%\xymatrix@=10pt{
+%W\ar^l[r]\ar_q[d] & V\ar^p[d] \\
+%U\ar^j[r] & X
+%}
+%$$
+%there exists a long exact sequence:
+%$$
+%\E_{n,m}(X/S)
+%\xrightarrow{j^*+p^*} \E_{n,m}(U/S) \oplus \E_{n,m}(V/S)
+%\xrightarrow{q^*-l^*} \E_{n,m}(W/S)
+%\rightarrow \E_{n-1,m}(X/S),
+%$$
+%functorial with respect to base change maps, proper covariance and étale contravariance.
+%\item \emph{cdh-descent}. For any cdh-distinguished square\footnote{i.e. the square is cartesian, $p$ proper, $i$ closed immersion,
+%and $p$ is an isomorphism over $(X-Z)$} of $S$-schemes
+%$$
+%\xymatrix@=10pt{
+%T\ar_q[d]\ar^k[r] & Y\ar^p[d] \\
+%Z\ar^i[r] & X
+%}
+%$$
+%there exists a long exact sequence:
+%$$
+%\E_{n,m}(T/S)
+%\xrightarrow{q_*+k_*} \E_{n,m}(Z/S) \oplus \E_{n,m}(Y/S)
+%\xrightarrow{i_*-p_*} \E_{n,m}(X/S)
+%\rightarrow \E_{n-1,m}(T/S)
+%$$
+%again functorial with respect to base change maps, proper covariance and étale contravariance.
+%\end{enumerate}
+%\end{prop}
+These properties follow from the Grothendieck six functors formalism,
+as stated in \cite[Introduction]{CD3}. This is a good exercise for the interested reader
+(see \cite{Deg16} after Prop. 1.2.4 for hints).
+
+\begin{rem}\label{rem:biv->cohsup}
+As can be guessed from the localization exact sequence, the bivariant theory can be thought of as an extension of
+cohomology with support. Indeed, when considering a closed immersion $i:Z \rightarrow X$ and a virtual vector bundle $v$ on $X$, if we view $Z$ as
+an $X$-scheme (of finite type!), then one has:
+$$
+\E^{n}_Z(X,v)=\E_{-n}(Z/X,-i^*v),
+$$
+where one can define the left hand-side, cohomology of $X$ with support in $Z$, as:
+$$
+\E^{n}_Z(X,v)=[\Sigma^\infty X/(X-Z),\E_X\otimes \Th(v)[n]].
+$$
+So bivariant theory of closed immersions is really cohomology with support (see also \cite[Rem. 1.2.5]{Deg16}).
+This can shed light on the bivariant formalism.
+\end{rem}
+
+
+\begin{num}\textit{Theories with proper support}.\label{num:biv_support}
+It is possible to introduce
+two variants of the bivariant theory for a (ring) spectrum $\E$ over $\base$,
+a morphism $f:X \rightarrow S$ of finite type, integers $(n,m) \in \ZZ^2$
+and a virtual vector bundle $v$ over $X$
+(\cite[Def. 2.2.1]{DJK}):
+\begin{itemize}
+\item Bivariant theory with proper support:
+\begin{align*}
+\E_{n,m}^c(X/S)&=[\un_S(m)[n],f_!(f^!\E_S)] \\
+\E_{n}^c(X/S,v)&=[\un_S[n],f_!(f^!\E_S \otimes \Th(-v))]
+\end{align*}
+\item Cohomology with proper support:
+\begin{align*}
+\E^{n,m}_c(X/S)&=[\un_S,f_!(\E_X)(m)[n]] \\
+\E_{n}^c(X/S,v)&=[\un_S,f_!(\E_X \otimes \Th(v))[n]].
+\end{align*}
+\end{itemize}
+Using again the six functors formalism, one deduces that they satisfy properties similar
+to that of (plain) bivariant theory:
+bivariant theory (resp. cohomology) with proper support is covariant (resp. contravariant) 
+in $X$ with respect to any morphism (resp. proper morphisms), contravariant (resp. covariant)
+in $X$ with respect to \'etale morphisms. The base change map (point (1)) exists for any cartesian square
+in cohomology with proper support,
+but only when $f$ is smooth for bivariant homology with proper support.
+
+The properties (4) to (9) hold true for these two theories, with the following changes:
+\begin{itemize}
+\item for (5), one needs to assume that $f$ is \'etale and finite;
+\item for (7) and cohomology with proper support, one needs to consider $j_*$ and $i^*$
+instead of $i_*$ and $j^*$;
+\item for (9) and cohomology with proper support,
+the exact sequence  must be formulated in terms of pullbacks.
+\end{itemize}
+\end{num}
+
+We next explain product structures on (plain) bivariant theories coming from ring spectra. We state the definition and properties for bivariant theories under the convention \eqref{eq:biv->coh}. The reader may consult \cite[\S 2.2.7 (4)]{DJK} for the most general indexing convention. 
+
+
+\begin{prop}\label{prop:biv_product}
+Let $\E$ be a ring spectrum over $\Sigma$ and consider the assumptions of the previous definition.
+
+For any composable morphisms of finite type $Y \xrightarrow g X \xrightarrow f S$,
+there exists a product of the form
+$$
+\E_{n,m}(Y/X)\otimes \E_{s,t}(X/S) \rightarrow \E_{n+s,m+t}(Y/S), (y,x) \mapsto y.x
+$$
+which satisfies the following properties:
+\begin{enumerate}
+\item \emph{Associativity}.-- Consider four morphisms of finite type $Z/Y/X/S$,
+and a triple $(z,y,x) \in  \E_{**}(Z/Y) \times \E_{**}(Y/X) \times \E_{**}(X/S)$, we have:
+$$(z.y).x=z.(y.x).$$
+\item \emph{Compatibility with pullbacks}.-- Consider morphisms of finite type $Y/X/S$ and any morphism $f:S' \rightarrow S$.
+We let $g:X' \rightarrow X$ be the pullback of $f$ along $X/S$.
+Then for any pair $(y,x) \in \E_{**}(Y/X) \times \E_{**}(X/S)$, the following formula holds:
+$$
+f^*(y.x)=g^*(y).f^*(x).
+$$
+\item \emph{(First) projection formula}.-- Consider morphisms $Z \xrightarrow f Y \rightarrow X \rightarrow S$ of finite type
+such that $f$ is proper. Then for any pair $(z,y) \in  \E_{**}(Z/Y) \times \E_{**}(Y/X)$, one has:
+$$
+f_*(z.y)=f_*(z).y.
+$$
+\item \emph{(Second) projection formula}.-- Given a cartesian square in the category
+of $S$-schemes of finite type:
+$$
+\xymatrix@=10pt{
+Y'\ar^g[r]\ar[d]\ar@{}|\Delta[rd] & Y\ar[d] \\
+X'\ar_f[r] & X,
+}
+$$
+such that $f$ is proper, for any pair $(y,x') \in \E_{**}(Y/X) \times \E_{**}(X'/S)$, one has: 
+$$
+g_*(\Delta^*(y).x')=y.f_*(x').
+$$
+\end{enumerate}
+\end{prop}
+For the construction of the product, we start with maps
+$$
+y:\un_Y(m)[n] \rightarrow g^!(\E_X), x:\un_X(t)[s] \rightarrow f^!(\E_S)
+$$
+and then define $y.x$ as the following composite:
+\begin{align*}
+\un_Y(m+t)[n+s] &\xrightarrow{y(t)[s]} g^!(\E_X)(t)[s] \simeq g^!(\E_X \otimes \un_X(t)[s]) \\
+& \xrightarrow{g^!(Id \otimes x)} g^!\big(\E_X \otimes f^!(\E_S)\big)=g^!\big(f^*(\E_S) \otimes f^!(\E_S)\big) \\
+& \xrightarrow{Ex^{!*}_\otimes} g^!\big(f^!(\E_S \otimes \E_S)\big) \simeq (fg)^!(\E_S \otimes \E_S) \\
+& \xrightarrow{(fg)^!(\mu)} (fg)^!(\E_S).
+\end{align*}
+Here, the isomorphism on the first line holds as Tate twists are invertible.
+Second, the map labeled $Ex_\otimes^{!*}$ stand for the map obtained by adjunction
+from canonical map:
+$$
+f_!\big(f^*(\E_S) \otimes f^!(\E_S)\big) \xrightarrow \sim \E_S \otimes f!f^!(\E_S) \xrightarrow{ad(f_!,f^!)} \E_S \otimes \E_S
+$$
+where the first map is the projection formula isomorphism and the second one is the unit map of the indicated adjunction.
+Finally, $\mu$ is the product map of the ring spectrum $\E$.
+
+The stated properties now follows from the six functors formalism,
+again left as an exercise to the reader (hints can be found in the proof of \cite[Prop. 1.2.10]{Deg12}).
+
+\begin{rem}
+\begin{enumerate}[leftmargin=*]
+\item The above product corresponds to the usual cup-product on cohomology, via formula \eqref{eq:biv->coh}.
+More generally, it also induces the cup-product on cohomology with support (recall \Cref{rem:biv->cohsup}).
+Given a scheme $X$ and closed subschemes $Z$ and $T$ of $X$, one can indeed recover the usual cup product as follows:
+\begin{align*}
+\E^{n,m}_T(X) \otimes \E^{s,t}_Z(X)=\E_{-n,-m}(T/X) & \otimes \E_{-s,-t}(Z/X)
+\rightarrow \E_{-n,-m}(T/X) \otimes \E_{-s,-t}(Z \times_X T/T) \\
+& \rightarrow \E_{-n-s,-m-t}(Z \times_X T/X)=\E^{n+s,m+t}_{Z \times_X T}(X) \\
+(\tau,\zeta) &\mapsto \tau.\Delta^*(\zeta)=:\tau \cupp \zeta
+\end{align*}
+where $\Delta$ stands for the obvious cartesian square.
+
+It is the opportunity to recall that cup-products in $\AA^1$-homotopy are not merely graded commutative, because of the double indexing.
+Rather, using the above notation, one gets:
+$$
+\tau \cupp \zeta=(-1)^{(n-m)(s-t)}\epsilon^{mt}.\zeta \cupp \tau.
+$$
+This follows from the fact the permutation on the sphere $S^1$ is $(-1)$
+and that on the sphere $\GG=\un(1)[1]$ is $\epsilon$ (see e.g. \cite[Lem. 6.1.1]{MorTri}).
+\item Note also that given $X/S$,
+one gets as a particular case both a left and right action of cohomology on bivariant theory:
+\begin{align*}
+\E^{s,t}(X) \otimes \E_{n,m}(X/S) & \rightarrow \E_{n-s,m-t}(X/S), \\
+\E_{n,m}(X/S) \otimes \E^{s,t}(S) & \rightarrow \E_{n-s,m-t}(X/S).
+\end{align*}
+\end{enumerate}
+\end{rem}
+
+\begin{num}\textit{Fundamental classes}.\label{num:fdl_class}
+Let $f:X \rightarrow S$ be a smoothable lci morphism, with virtual tangent bundle $\tau_f$.
+According to \cite[Th. 3.3.2, Def. 4.1.3]{DJK}, one associates to $f$ its \emph{fundamental
+class}:
+$$
+\eta_f^\E \in \E_{0,0}(X/S,\tau_f).
+$$
+By definition, this is the map: $\Th(\tau_f) \rightarrow f^!(\E_S)$ in $\SH(X)$.
+Working with $\E$-modules, one obtains by adjunction an $\E$-linear morphism:
+\begin{equation}\label{eq:fdl_biv}
+\eta_f^\E:\E_X \otimes \Th(\tau_f) \rightarrow f^!(\E_S).
+\end{equation}
+Note also that this map is simply obtained by evaluating the purity
+natural transformation $\pur_f$ of \cite[4.3.1]{DJK} at $\E$.
+In particular, if $f$ is smooth, $\eta_f^\E$ is an isomorphism (\cite[Rem. 4.3.8]{DJK}).
+Recall more generally the following definition (\cite[Def. 4.3.7]{DJK}):
+\end{num}
+\begin{df}\label{df:f-pure}
+Let $f:X \rightarrow S$ be a smoothable lci map,
+ and $\E$ be a ring spectrum over $X$.
+ One says that $\E$ is \emph{$f$-pure} if the natural transformation $\eta_f^\E$ defined above is an isomorphism.
+\end{df}
+
+\begin{rem}
+A spectrum $\E$ over $\ZZ$ is said to be \emph{absolutely pure} (\cite[4.3.11]{DJK}, \cite[1.3.2]{Deg12})
+ if for any smoothable morphism $f:X \rightarrow S$ between regular schemes, $\E_S$ is $f$-pure.
+ It is known that the K-theory spectrum, the rational motivic Eilenberg MacLane spectrum (\cite[14.4.1]{CD3}),
+ the rational sphere spectrum (\cite{DFJK}), and the rational cobordism spectrum are absolute pure.
+ It is conjectured that the sphere spectrum, and therefore, the algebraic cobordism spectrum, is absolutely pure.
+\end{rem}
+
+\subsection{Orientations and associated virtual Thom classes}
+
+%\fred{1) The arguments here are generalizations of \cite{Deg12, Deg16} as the preceding paragraph.
+%I believe one should not write any proof and insert appropriate references for the GL-oriented
+%corresponding statement. Except \Cref{prop:virt_thom_G-orient} which require a somewhat specific
+%argument for G-torsors?}
+%
+%\fred{2) Je me suis rendu compte qu'une partie des considérations développées ci-dessous
+%étaient déjà expliquées dans \cite{DFJK}, dans le cas particulier des $\SL$-orientations...}
+
+In this section, we will make use of the following terminology.
+
+\begin{df}\label{df:graded_lin_alg_group}
+Given a positive integer $d$, a \emph{linear algebraic group of degree $d$} is a $\ZZ$-graded linear algebraic group $G_*$
+with a homogeneous embeding $G_* \rightarrow \GL_*$ of degree $d$.
+To simplify notation, we simply write $G$ for $G_*$.
+\end{df}
+
+\begin{num}\label{num:lin_gps&torsors}
+Let us recall the theory of orientations in motivic homotopy theory after Panin and Walter,
+following the point of view of \cite[\textsection 2]{DF3}.
+
+Let $G$ be a linear algebraic group of degree $d$.\footnote{The most relevant cases for us are $G_*=\GL_*, \SL_*, \Sp_*$,
+corresponding to $d=1, 1, 2$. Recall from \emph{loc. cit.} that one can also consider
+the case of $\SL_*^c$. Besides, the orthogonal and spinor cases $ \Orth_*$ and $\Spin_*$ are also of interest.}
+We will consider the category $\Tors_G(X)$ of Nisnevich $G$-torsors over a
+scheme $X$.\footnote{Recall
+this category is a groupoid: every morphism must be an isomorphism.}
+In the classical cases, this can be viewed as the category of vector bundles over $X$
+with some additional data. In any case, there is a canonical functor
+$$
+o:\Tors_G(X) \rightarrow \Tors_{\GL}(X)=\VB(X).
+$$
+The rank $r$ of a $G$-torsor $\cV$ is the rank of the associated vector bundle,
+seen as a Zariski locally constant function $r:X \rightarrow \NN$.
+We assume there exists a $G$-torsor $\un^G_X$ (called the \emph{unit} $G$-torsor)
+such that $o(\un^G_X)=\AA^d_X$.
+
+For convenience, let us recall the definition of $G$-orientation (under the form we use, this definition is due to Panin and Walter,
+see \cite[Def. 2.1.3]{DF3})
+\end{num}
+\begin{df}\label{df:G-orientation}
+Let $\E$ be a ring spectrum over $\Sigma$.
+A $G$-orientation $\thom$ (or absolute orientation) of $\E$
+is the data for all schemes $X$ and all $G$-torsors $\cV$ of rank $r$ of an element
+$\thom(\cV) \in \E^{2r,r}(\Th(o(\cV)))$ such that the following properties hold:
+\begin{enumerate}
+\item \textit{Isomorphisms compatibility}. $\phi^*\thom(\cW)=\thom(\cV)$ for an isomorphism
+$\phi:\cV \xrightarrow \sim \cW$.
+\item \textit{Pullbacks compatibility}. $f^*\thom(\cV)=\thom(f^{-1}\cV)$ for a morphism of schemes $f:Y \rightarrow X$.
+\item \textit{Products compatibility}. $\thom(\cV \oplus \cW)=\thom(\cV) \cdot \thom(\cW)$.
+\item \textit{Normalization}. $\thom(\un_X^G)=1_X^\E$ via the identification
+$\E^{2d,d}(\Th(\AA^d_X)) \simeq \E^{0,0}(X)$, where $d$ is the degree of $G$.
+\end{enumerate}
+One also says that $(\E,\thom)$ is a $G$-oriented ring spectrum.
+\end{df}
+
+\begin{ex} Recall the following classical examples:
+\begin{enumerate}
+\item $\GL$-oriented: $\mathbf{H}_{\mathrm{M}}R$ ($R$-linear motivic cohomology), $\KGL$, $\MGL$, any ring spectrum associated
+with a mixed Weil theory (\cite{CD2}).
+\item $\mathrm{SL}^c$-oriented: $\mathbf{H}_{\mathrm{MW}}R$ ($R$-linear MW-motivic cohomology), 
+the ring spectrum $\mathbf{H}M$ associated to any MW-module $M$ over a perfect field (\cite{Feld1, Feld2}),
+more generaly any ring spectrum which belong to the perverse ($\delta$-)homotopy heart of $\SH(S)$ (\cite{BD1}).
+These examples include the Chow-Witt groups. Other examples include $\KO$, the ring spectrum representing higher Grothendieck-Witt groups, and
+$\W=\KO[\eta^{-1}]$ (higher Balmer-Witt groups).
+\end{enumerate}
+Recall moreover:
+\begin{itemize}
+\item  If $\E$ is $G$-oriented over $S$, any $\E$-algebra in $\SH(S)$ inherits
+an induced $G$-orientation. 
+\item We have the following string of implications: $\GL$-oriented $\Rightarrow$ $\SL^c$-oriented $\Rightarrow$ $\SL$-oriented $\Rightarrow$ $\Sp$-oriented.
+\end{itemize}
+\end{ex}
+
+\begin{num}
+Recall that a (commutative) Picard groupoid is a symmetric monoidal category $\mathscr C$
+which is a groupoid and such that all objects are invertible for the tensor product.
+We will generically denote by $+$ the tensor product of all the groupoids considered
+in this paper.
+
+Quillen's Q-construction is a basic tool to construct Picard groupoids (see \cite{Del_det}).
+Given a scheme $X$, we let $\uK(X)$ be the Picard groupoid of \emph{virtual vector bundles} over $X$:
+this is the groupoid associated with the category $Q\VB(X)$.
+Similarly, in the notation of the preceding definition, we let $\uK^G(X)$ be
+the groupoid of \emph{virtual $G$-torsors} associated with the category $Q\Tors_G(X)$,
+where the exact structure on $\Tors^G(X)$ is induced by the exact structure on $\VB(X)$
+(\emph{i.e.} from exactness of sequences of $\cO_X$-modules).
+We let $0^G_X$ be the $0$-object of $\uK^G(X)$.
+In particular, we get a canonical functor 
+\begin{equation}\label{eq:forget_virtual}
+o_X:\uK^G(X) \rightarrow \uK(X)
+\end{equation}
+A morphism of schemes $f:Y \rightarrow X$ induces a pullback functor $f^*:\uK^G(X) \rightarrow \uK^G(Y)$
+compatible with the functors $o_X$ and $o_Y$ (see also \Cref{num:fibred_cat&K} for more discussion).
+The rank $\rk(v)$ of a virtual $G$-torsor $v$ is the rank of the associated virtual vector bundle.
+
+Using homotopy invariance, one can easily extend the existence of Thom classes
+from the previous definition to virtual objects.
+\end{num}
+\begin{prop}\label{prop:virt_thom_G-orient}\label{prop:thom_virtual}
+Let $(\E,\thom)$ be a $G$-oriented ring spectrum over $\Sigma$.
+Then for any virtual $G$-torsor $\tilde v$ of rank $r$,
+ there exists a unique class $\thom(\tilde v) \in \E^{2r,r}(\Th(o(\tilde v)))$ such that:
+\begin{enumerate}
+\item For a $G$-torsor $\cV$, $\thom([\cV])=\thom(\cV)$.
+\item The Thom class of virtual $G$-torsors satisfies the same properties as for $G$-torsors:
+$$
+\phi^*\thom(\tilde w)=\thom(\tilde v), f^*\thom(\tilde v)=\thom(f^*\tilde v), \thom(\tilde v+\tilde w)=\thom(\tilde v).\thom(\tilde w), \thom(0^G_X)=1_X^\EE,
+$$
+where $\phi:\tilde v \rightarrow \tilde w$ is an isomorphism in the first relation.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+The proof works as in \cite[proof of 4.1.1]{Riou}. Given an exact sequence of $G$-torsors:
+$$
+0 \rightarrow \cV' \rightarrow \cV \rightarrow \cV'' \rightarrow 0,
+$$
+we have to show that one has $\thom(\cV)=\thom(\cV').\thom(\cV'')$ through
+the canonical identification $\Th(o(\cV))=\Th(o(\cV')) \otimes \Th(o(\cV''))$ produced in \emph{loc. cit.}
+As the $\infty$-category $\SH$ satisfies Nisnevich descent, is it sufficient to check
+this over local henselian schemes. In other words, one can assume the $G$-torsors
+in the above sequence are trivial, which implies that the sequence is split,
+the splitting being $G$-equivariant.
+In this latter case, the desired relation follows from property (3) of \Cref{df:G-orientation}.
+\end{proof}
+
+
+
+
+\begin{num}\textit{Cohomology of Thom spaces}.
+Let $\E$ be a spectrum over $\Sigma$.
+One usually extends the definition of the cohomology associated with $\E$ 
+(\Cref{df:bivariant}) to Thom spaces. Given a virtual vector bundle $v$ over a scheme $X$,
+and $(n,m) \in \uZ(X)^2$, one puts:
+$$
+\E^{n,m}(\Th(v)):=[\Th(v),\E_X(m)[n]].
+$$
+More generally, for any virtual vector bundle $w$ on $X$ and any $n\in\uZ(X)$ we set
+\[
+\E^n(\Th(v),w):=[\Th(v),\E_X\otimes\Th(w)[n]]\simeq [\Th(v-w),\E_X[n]],
+\]
+so that $\E^{n,m}(\Th(v))=\E^{n-2m}(\Th(v),\langle m\rangle)=\E^{n-2m}(\Th(v-\langle m\rangle)$. Therefore the locally constant integer $m$ is somewhat redundant, but we keep it for the sake of clarity.
+
+The above abelian group is functorial in $v$ with respect to isomorphisms of virtual vector bundles,
+thus producing a functor
+$$
+\uZ(X)^2 \times \uK(X) \rightarrow \Ab, (n,m,v) \mapsto \E^{n,m}(\Th(v)).
+$$
+If $\E$ has a ring structure, one obtains a product:
+$$
+\E^{n,m}(\Th(v)) \otimes_\ZZ \E^{s,t}(\Th(w)) \rightarrow \E^{n+s,m+t}(\Th(v+w)).
+$$
+In other words, $\E^{**}(\Th(*))$ is a $\uZ(X)^2 \times \uK(X)$-graded ring.
+Note in particular that, fixing $v$, $\E^{**}(\Th(v))$ is an $\E^{**}(X)$-graded module.
+\end{num}
+
+As in classical cases, one deduces from Thom classes the so-called \emph{Thom isomorphisms}.
+\begin{prop}
+Let $(\E,\thom)$ be a $G$-oriented ring spectrum.
+Then for any virtual $G$-torsor $\tilde v$ of rank $n$ over a scheme $X$, the map
+$$
+\E^{**}(X) \rightarrow \E^{*+2n,*+n}(\Th(\tilde v)), \lambda \mapsto \lambda.\thom(\tilde v)
+$$
+is an isomorphism. In other words, $\E^{**}(\Th(\tilde v))$ is a free rank one $\E^{**}(X)$-module
+with basis given by the singleton $\big(\thom(\tilde v)\big)$.
+\end{prop}
+\begin{proof}
+By the compatibility with product of Thom classes, one reduces to the case where
+$\tilde v$ is associated to the class of a $G$-torsor $\cV$. The question is Nisnevich local
+in $X$, so we can assume that $\cV$ is a trivial $G$-torsor. By compatibility with isomorphisms
+and products, one can assume that $\cV=\un_X^G$, in which case the result follows
+from the normalization property. 
+\end{proof}
+
+\begin{num}\label{num:E-modules}
+Let $(\E,\thom)$ be a $G$-oriented ring spectrum over $\Sigma$.
+For a scheme $X$, we can consider the category $\E_X\modd$ of $\E_X$-modules
+in the monoidal category $\SH(X)$.\footnote{Beware that this category is only additive, which is sufficient for our needs. See \ref{} to get a theory with more structure.}
+Given a virtual $G$-torsor $v$ of rank $r$,
+the Thom class is by definition a map (in the homotopy category)
+$$
+\thom(\tilde v):\Th(o(\tilde v)) \rightarrow \E_X(r)[2r].
+$$
+By adjunction, one gets a morphism in $\E_X\modd$:
+$$
+\gamma_{\thom(\tilde v)}:\E_X \otimes \Th(o(\tilde v)) \rightarrow \E_X(r)[2r]
+$$
+which after forgetting the module structure can be written as the composite
+\begin{equation}\label{eq:thomclass}
+\E_X \otimes \Th(\tilde v) \xrightarrow{\Id_{\E_X} \otimes \thom(\tilde v)} \E_X \otimes \E_X(r)[2r]
+\xrightarrow{\mu_X} \E_X(r)[2r]
+\end{equation}
+where $\mu_X$ is the multiplication map of the ring spectrum $\E_X$. In other words,
+$\gamma_{\thom(\tilde v)}$ is the multiplication by the class $\thom(\tilde v)$ seen internally.
+The next result is merely a reformulation of the preceding proposition.
+\end{num}
+\begin{cor}\label{cor:stable-thom}
+Consider the above notation. Then the map $\gamma_{\thom(v)}$ is an isomorphism
+of $\E_X$-modules.
+\end{cor}
+
+\begin{num}\label{num:virtual_Thom_iso}
+One deduces from the previous corollary Thom isomorphisms for the various theories associated
+ with a ring spectrum (\Cref{df:bivariant}, \Cref{num:biv_support}). As an example,
+ for a finite type $S$-scheme $X$, locally constant integers $(n,m) \in \uZ(X)^2$ and a virtual $G$-torsor $\tilde v$ of rank $r$,
+ one gets Thom isomorphisms:
+\begin{equation}\label{eq:virtual_Thom_iso}
+\begin{split}
+\gamma_{\thom(\tilde v)}&:\E_{n,m}(X/S,\tilde v) \simeq \E_{n+2r,m+r}(X/S) \\
+\gamma_{\thom(\tilde v)}&:\E^{n,m}(X,\tilde v) \simeq \E^{n-2r,m-r}(X)
+\end{split}
+\end{equation}
+The second case is obviously a particular case of the first one!
+ Both isomorphisms are induced by multiplication with another form of the Thom
+ class: $\thom(v) \in \E^{2r,r}(X,-v)$, which corresponds to the Thom class of \Cref{prop:thom_virtual}
+ via the isomorphism: $\E^{2r,r}(Th(v)) \simeq \E^{2r,r}(X,-v)$
+ (which comes from definitions and the invertibility of the Thom space $\Th(v)$).
+\end{num}
+
+
+%We introduce the following practical terminology.
+%\begin{df}\label{df:graded_lin_alg_group}
+%Given a positive integer $d$, a \emph{linear algebraic group of degree $d$} is a $\ZZ$-graded linear algebra group $G_*$
+%with a homogeneous embeding $G_* \rightarrow \GL_*$ of degree $d$.
+%To simplify notation, we simply write $G$ for $G_*$.
+%\end{df}
+
+%\begin{num}\label{num:lin_gps&torsors}
+%Let us recall the theory of orientations in motivic homotopy theory after Panin and Walter,
+%following the point of view of \cite[\textsection 2]{DF3}.
+%
+%Let $G$ be a linear algebraic group of degree $d$.\footnote{The most relevant cases for us are $G_*=\GL_*, \SL_*, \Sp_*$,
+%corresponding to $d=1, 1, 2$. Recall from \emph{loc. cit.} that one can also consider
+%the case of $\SL_*^c$. Besides, the orthogonal and spinor cases $ \Orth_*$ and $\Spin_*$ are also of interest.}
+%We will consider the category $\Tors_G(X)$ of Nisnevich $G$-torsors over a
+%scheme $X$.\footnote{Recall
+%this category is a groupoid: every morphism must be an isomorphism.}
+%In the classical cases, this can be viewed as the category of vector bundles over $X$
+%with some additional data. In any case, there is a canonical map:
+%$$
+%o:\Tors_G(X) \rightarrow \Tors_{\GL}(X)=\VB(X).
+%$$
+%The rank $r$ of a $G$-torsor $\cV$ is the rank of the associated vector bundle,
+%seen as a Zariski locally constant function $r:X \rightarrow \NN$.
+%We assume there exists a $G$-torsor $\un^G_X$ (called the \emph{unit} $G$-torsor)
+%such that $o(\un^G_X)=\AA^d_X$.
+%
+%For convenience, let us recall the definition of $G$-orientation (under the form we use, this definition is due to Panin and Walter,
+%see \cite[Def. 2.1.3]{DF3})
+%\end{num}
+%\begin{df}\label{df:G-orientation}
+%Let $\E$ be a ring spectrum over $\Sigma$.
+%A $G$-orientation $\thom$ (or absolute orientation) of $\E$
+%is the data for all scheme $X$ and all $G$-torsor $\cV$ of rank $r$ of an element
+%$\thom(\cV) \in \E^{2r,r}(\Th(o(\cV)))$ such that the following properties hold:
+%\begin{enumerate}
+%\item \textit{Isomorphisms compatibility}. $\phi^*\thom(\cV)=\thom(\cW)$ for an isomorphism
+%$\phi:\cV \xrightarrow \sim \cW$.
+%\item \textit{Pullbacks compatibility}. $f^*\thom(\cV)=\thom(f^{-1}\cV)$ for a morphism of schemes $f:Y \rightarrow X$.
+%\item \textit{Products compatibility}. $\thom(\cV \oplus \cW)=\thom(\cV) \cdot \thom(\cW)$.
+%\item \textit{Normalization}. $\thom(\un_X^G)=1_X^\E$ via the identification
+%$\E^{2d,d}(\Th(\AA^r_X)) \simeq \E^{0,0}(X)$, where $d$ is the degree of $G$.
+%\end{enumerate}
+%One also says that $(\E,\thom)$ is a $G$-oriented ring spectrum.
+%\end{df}
+%
+%\begin{ex} Recall the following classical examples:
+%\begin{enumerate}
+%\item $\GL$-oriented: $\mathbf{H}_{\mathrm{M}}R$ ($R$-linear motivic cohomology), $\KGL$, $\MGL$, any ring spectrum associated
+%with a mixed Weil theory (\cite{CD2}).
+%\item $\mathrm{SL}^c$-oriented: $\mathbf{H}_{\mathrm{MW}}R$ ($R$-linear MW-motivic cohomology), 
+%the ring spectrum $\mathbf{H}M$ associated to any MW-module $M$ over a perfect field (\cite{Feld1, Feld2}),
+%more generaly any ring spectrum which belong to the perverse ($\delta$-)homotopy heart of $\SH(S)$ (\cite{BD1}).
+%These examples include the Chow-Witt groups. Other examples include $\GW$, the ring spectrum representing higher Grothendieck-Witt groups, and
+%$\W=\GW[\eta^{-1}]$ (higher Balmer-Witt groups).
+%\end{enumerate}
+%Recall moreover:
+%\begin{itemize}
+%\item  If $\E$ is $G$-oriented over $S$, any $\E$-algebra in $\SH(S)$ inherits
+%an induced $G$-orientation. 
+%\item We have the following string of implications: $\GL$-oriented $\Rightarrow$ $\SL^c$-oriented $\Rightarrow$ $\SL$-oriented $\Rightarrow$ $\Sp$-oriented.
+%\end{itemize}
+%\end{ex}
+
+\subsection{Euler classes}
+
+As usual, one can associate to a Thom class an Euler class (e.g. \cite[Def. 2.1.7]{DF3}). We give here a convenient definition for our purposes.
+
+\begin{df}\label{df:Euler_class}
+Consider a $G$-oriented ring spectrum $(E,\thom)$ as above.
+
+Given a vector bundle $V$ over a scheme $X$,
+ a stable $G$-orientation of $V$ is a pair $(\cV,\omega)$, where $\cV \in \uK^G(X)$
+ and $\omega\colon V\simeq o(\cV)$ in $\uK(X)$.
+Given an orientation $(\cV,\omega)$ on $V$,
+ one defines the ($G$-oriented) \emph{Euler class} of $(V,\cV,\omega)$ as
+$$
+e(V,\cV,\omega)=p^*(\th(\cV)) \in  \E^{2r,r}(X),
+$$ 
+where $r=\mathrm{rank}(V)$ and $p$ is the composite
+\[
+p:X \xrightarrow{s_0} V \rightarrow \Th(V)\xrightarrow{\omega}\Th(o(\cV))
+\]
+of the zero section and the quotient map. We say that the stable orientations $(\cV,\omega)$ and $(\cW,\psi)$ are isomorphic if there exists an isomorphism $f:\cV\to \cW$ in $\uK^G(X)$ making the diagram
+\[
+\xymatrix{V\ar[r]^-{\omega}\ar@{=}[d] & o(\cV)\ar[d]^-{o(f)} \\
+V\ar[r]_-{\psi} & o(\cW)}
+\]
+commutative.
+\end{df}
+
+\begin{rem}\label{rem:invariantGisom}
+It is easy to check that the $G$-oriented Euler class of $(V,\cV,\omega)$ depends only on the isomorphism class
+ of the $G$-orientation $(\cV,\omega)$. 
+\end{rem}
+
+%\jean{
+%\begin{rem}\label{rem:dependsonisom} In general, the Euler class does depend on $\cV$ and on the choice of $\omega$. Indeed, suppose that there are two $G$-torsors $V$ and $V'$ for which there exists an isomorphism of vector bundles $\omega:V'\to V$ which is not an isomorphism of $G$-torsors. Then, $\omega^*(\thom(V))\neq \thom(V')$ in general and the Euler class may be different. For a concrete example, let $A=\RR[x,y,z]/(x^2+y^2+z^2-1)$ and set $X=\Spec(A)$. Let respectively $P:=\ker (A^3\xrightarrow{(x,y,z)}A)$ and $P':=\ker (A^3\xrightarrow{(-x,y,z)}A)$. If $v=(x,y,z)$ and $w=(-x,y,z)$, we get generators of $P$ of the form $f_1=e_1-xv, f_2=e_2-yv$ and $f_3=e_3-zv$ and generators of $P'$ of the form $t_1=e_1+xw, t_2=e_2-yw$ and $t_3=e_3-zw$. We have generators $\omega_1:=zf_1\wedge f_2-yf_1\wedge f_3+zf_2\wedge f_3$ of $\det(P)$ and $\omega_2:=zt_1\wedge t_2-yt_1\wedge t_3-xt_2\wedge t_3$, yielding symplectic forms $\theta_1:\det(P)\to \OO_X$ and $\theta_2:\det(P')\to \OO_X$ defined by $\theta_i(\omega_i)=1$. Now, the isomorphism
+%\[
+%\begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}:A^3\to A^3
+%\]
+%induces an isomorphism $\omega:P'\to P$ satisfying $\omega(t_1)=-f_1$ and $\omega(t_i)=f_i$ for $i=2,3$. We obtain that $\det\omega:\det(P')\to \det(P)$ has the property that $\det\omega(\omega_2)=-\omega_1$ and therefore that $\omega$ is \emph{not} an isomorphism of $\mathrm{Sp}_2$-torsors. It is known that $\widetilde{\mathrm{CH}}^2(X)\simeq \ZZ$ with $e(P,\theta_1)=2$ (or actually $e(P,\theta_1)=-2$ depending on the choices). Now, $e(P,\theta_1)=e(P',-\theta_2)$ using the isomorphism $\omega$, but $2=e(P',-\theta_2)=-e(P',\theta_2)$ from which it follows that $e(P',\theta_2)=-2$. So, it depends if we choose $(\cV,\omega)=((P,\theta_1),\mathrm{Id})$ or $(\cV,\omega)=((P',\theta_2),\omega)$.
+%\end{rem}
+%}
+
+%\jean{
+%\begin{rem}\label{rem:invariantGisom}
+%Note however that if $(\cV,\omega)$ and $(\cV',\omega')$ are two stable $G$-orientations such that $\omega_2\omega_1^{-1}:o(\cV)\to o(\cV')$ is of the form $\omega_2\omega_1^{-1}=o(\psi)$ for some $\psi:\cV\to \cV'$ then $e(V,\cV,\omega)=e(V,\cV',\omega')$. 
+%\end{rem}}
+
+\begin{rem}
+When $E$ is $\GL$-oriented, the Euler class of a vector bundle $V$ is the top Chern class of $V$
+(see eg. \cite[Rem. 2.4.5]{Deg12}). In Chow-Witt groups (of MW-motivic cohomology),
+the Euler class of an $\SL^c$-torsor was first considered by Barge and Morel, and the second author
+(see \cite{Fasel08a}).
+\end{rem}
+
+%\begin{num}
+%Recall that a (commutative) Picard groupoid is a symmetric monoidal category $\mathscr C$
+%which is a groupoid and such that all objects are invertible for the tensor product.
+%We will generically denote by $+$ the tensor product of all the groupoids considered
+%in this paper.
+%
+%Quillen's Q-construction is a basic tool to construct Picard groupoids (see \cite{Del_det}).
+%Given a scheme $X$, we let $\uK(X)$ be the Picard groupoid of \emph{virtual vector bundles} over $X$:
+%this is the groupoid associated with the category $Q\VB(X)$.
+%Similarly, in the notation of the preceding definition, we let $\uK^G(X)$ be
+%the groupoid of \emph{virtual $G$-torsors} associated with the category $Q\Tors_G(X)$,
+%where the exact structure on $\Tors^G(X)$ is induced by the exact structure on $\VB(X)$
+%(\emph{i.e.} from exactness of sequences of $\cO_X$-modules).
+%We let $0^G_X$ be the $0$-object of $\uK^G(X)$.
+%In particular, we get a canonical functor 
+%\begin{equation}\label{eq:forget_virtual}
+%o_X:\uK^G(X) \rightarrow \uK(X)
+%\end{equation}
+%A morphism of schemes $f:Y \rightarrow X$ induces a pullback functor $f^*:\uK^G(X) \rightarrow \uK^G(Y)$
+%compatible with the functors $o_X$ and $o_Y$ (see also \Cref{num:fibred_cat&K} for more discussion).
+%The rank $\rk(v)$ of a virtual $G$-torsor $v$ is the rank of the associated virtual vector.
+%
+%Using homotopy invariance, one can easily extend the existence of Thom classes
+%from the previous definition to virtual objects.
+%\end{num}
+%\begin{prop}\label{prop:virt_thom_G-orient}\label{prop:thom_virtual}
+%Let $(\E,\thom)$ be a $G$-oriented ring spectrum over $\Sigma$.
+%Then for any virtual $G$-torsor $\tilde v$ of rank $r$,
+% there exists a unique class $\thom(\tilde v) \in \E^{2r,r}(\Th(o(\tilde v))$ such that:
+%\begin{enumerate}
+%\item For a $G$-torsor $\cV$, $\thom([\cV])=\thom(\cV)$.
+%\item The thom class of virutal $G$-torsors satisfies the same properties than for $G$-torsors:
+%$$
+%\phi^*\thom(\tilde v)=\thom(\tilde w), f^*\thom(\tilde v)=\thom(f^*\tilde v), \thom(\tilde v+\tilde w)=\thom(\tilde v).\thom(\tilde w), \thom(0^G_X)=1_X^\EE,
+%$$
+%where $\phi:\tilde v \rightarrow \tilde w$ is an isomorphism in the first relation.
+%\end{enumerate}
+%\end{prop}
+%\begin{proof}
+%The proof works as in \cite[proof of 4.1.1]{Riou}. Given an exact sequence of $G$-torsors:
+%$$
+%0 \rightarrow \cV' \rightarrow \cV \rightarrow \cV'' \rightarrow 0,
+%$$
+%we have to show that one has $\thom(\cV)=\thom(\cV').\thom(\cV'')$ through
+%the canonical identification $\Th(o(\cV))=\Th(o(\cV')) \otimes \Th(o(\cV''))$ produced in \emph{loc. cit.}
+%As the $\infty$-category $\SH$ satisfies Nisnevich descent, is it sufficient to check
+%this over local henselian schemes. In other words, one can assume the $G$-torsors
+%in the above sequence are trivial, which implies that the sequence is split,
+%the splitting being $G$-equivariant.
+%In this latter case, the desired relation follows from property (3) of \Cref{df:G-orientation}.
+%\end{proof}
+%
+\begin{rem}\label{ex:virtual_Euler_classes}
+Note that the definition of Euler classes (\Cref{df:Euler_class})
+cannot be extended to virtual $G$-torsors $\tilde v$ over a scheme $X$,
+as there is no map $X \rightarrow \Th(\tilde v)$ in general.
+\end{rem}
+
+%As in classical cases, one deduces from Thom classes the so-called \emph{Thom isomorphisms}.
+%\begin{prop}
+%Let $(\E,\thom)$ be a $G$-oriented ring spectrum.
+%Then for any virtual $G$-torsor $\tilde v$ of rank $n$ over a scheme $X$, the map
+%$$
+%\E^{**}(X) \rightarrow \E^{*+2n,*+n}(\Th(\tilde v)), \lambda \mapsto \lambda.\thom(\tilde v)
+%$$
+%is an isomorphism. In other words, $\E^{**}(\Th(\tilde v))$ is a free rank one $\E^{**}(X)$-module
+%with basis given by the singleton $\big(\thom(\tilde v)\big)$.
+%\end{prop}
+%\begin{proof}
+%By the compatibility with product of Thom classes, one reduces to the case where
+%$\tilde v$ is associated to the class of a $G$-torsor $\cV$. The question is Nisnevich local
+%in $X$, so we can assume that $\cV$ is a trivial $G$-torsor. By compatibility with isomorphisms
+%and products, one can assume that $\cV=\un_X^G$, in which case the result follows
+%from the normalization property. 
+%\end{proof}
+%
+%\begin{num}\label{num:E-modules}
+%Let $(\E,\thom)$ be a $G$-oriented ring spectrum over $\Sigma$.
+%For a scheme $X$, we can consider the category $\E_X\modd$ of $\E_X$-modules
+%in the monoidal category $\SH(X)$.\footnote{Mind this category is only additive.
+%It is sufficient for our needs. See \ref{} to get a theory with more structure.}
+%Given a virtual $G$-torsor $v$ of rank $r$,
+%the Thom class is by definition a map (in the homotopy category)
+%$$
+%\thom(\tilde v):\Th(o\tilde v) \rightarrow \E_X(r)[2r].
+%$$
+%By adjunction, one gets a morphism in $\E_X\modd$:
+%$$
+%\gamma_{\thom(\tilde v)}:\E_X \otimes \Th(o\tilde v) \rightarrow \E_X(r)[2r]
+%$$
+%which after forgetting the module structure can be written as the composite
+%$$
+%\E_X \otimes \Th(\tilde v) \xrightarrow{\Id_{\E_X} \otimes \thom(\tilde v)} \E_X \otimes \E_X(r)[2r]
+%\xrightarrow{\mu_X} \E_X(r)[2r]
+%$$
+%where $\mu_X$ is the multiplication map of the ring spectrum $\E_X$. In other words,
+%$\gamma_{\thom(\tilde v)}$ is the multiplication by the class $\thom(\tilde v)$ seen internally.
+%The next result is merely a reformulation of the preceding proposition.
+%\end{num}
+%\begin{cor}\label{cor:stable-thom}
+%Consider the notation above. Then the map $\gamma_{\thom(v)}$ is an isomorphism
+%of $\E_X$-modules.
+%\end{cor}
+%
+%\begin{num}\label{num:virtual_Thom_iso}
+%One deduces from the previous corollary Thom isomorphisms for the various theories associated
+% with a ring spectrum (\Cref{df:bivariant}, \Cref{num:biv_support}). As an example,
+% for a finite type $S$-scheme $X$, integers $(n,m) \in \ZZ^2$ and a virtual $G$-torsor $\tilde v$,
+% one gets Thom isomorphisms:
+%\begin{equation}\label{eq:virtual_Thom_iso}
+%\begin{split}
+%\gamma_{\thom(\tilde v)}&:\E_{n,m}(X/S,v) \simeq \E_{n+2r,m+r}(X/S) \\
+%\gamma_{\thom(\tilde v)}&:\E^{n,m}(X,v) \simeq \E_{n+2r,m+r}(X)
+%\end{split}
+%\end{equation}
+%The second case is obviously a particular case of the first one!
+% Both isomorphisms are induced by multiplication with another form of the Thom
+% class: $\thom(v) \in \E^{2r,r}(X,-v)$, which corresponds to the Thom class of \Cref{prop:thom_virtual}
+% via the isomorphism: $\E^{2r,r}(Th(v)) \simeq \E^{2r,r}(X,-v)$
+% (which comes from definitions and the invertibility of the Thom space $\Th(v)$).
+%\end{num}
+
+%\begin{ex}\label{ex:virtual_Euler_classes}
+%As an example, one can recover $G$-oriented Euler classes (\Cref{df:Euler_class}),
+% associated to a $G$-oriented ring spectrum $(\E,\thom)$, with more generality.
+% Let $V$ be a vector bundle over a scheme $X$.
+% Recall that one can associate to $V$ its canonical Euler class (\cite[3.1.2]{DJK})
+% $e(V,\E) \in \E^{00}(X,-\tw{V})$ given by the following composite map:
+%$$
+%\un_X=X \xrightarrow{s_0} V \rightarrow \Th(V) \xrightarrow{\eta_\E \otimes \Id} \E \otimes \Th(V)
+%$$
+%where $s_0$ is the zero section of $V/X$, the second map is the canonical projection, and $\eta_\E$ is the unit
+% map of $\E$.
+%
+%A \emph{stable $G$-orientation} of $V$ will be a pair consisting of an element $\tilde v \in \uK^G(X)$ 
+% and an isomorphism $v \simeq o(\tilde v)$ in $\uK(X)$. Then one can define the $G$-oriented Euler class
+% associated with $\tilde v$ as the element $e(\tilde v,\E) \in \E^{2r,r}(X)$ obtained as the image of $e(V,\E)$
+%  by the following isomorphism
+%$$
+%\E^{00}(X,-\tw V) \simeq \E^{00}(X,-o(\tilde v))\xrightarrow{\gamma_{\thom(\tilde v)}} \E^{2r,r}(X).
+%$$
+%One can check that, when $\tilde v$ is the virtual $G$-torsor associated to a $G$-torsor $\tilde \cV$ whose underlying
+% vector bundle is isomorphic to $V$, the preceding Euler class recovers that of \Cref{df:Euler_class}.
+%\end{ex}
+
+\subsection{Fibred categories and virtual Thom classes}
+
+\begin{num}\label{num:fibred_cat&K}
+There is a more concise way of encoding
+a $G$-orientation on a ring spectrum, using the language of \emph{fibred categories}.
+We refer the reader to \cite{Vistoli} (see also \cite{Gray}).
+ By what is classicaly called the Grothendieck construction,
+ a fibred category $\phi:\mathscr S \rightarrow \mathscr B$ (\cite[Def. 3.5]{Vistoli})
+ can equivalently be described by a (contravariant) \emph{pseudo-functor} (\cite[Prop. 3.13]{Vistoli}):
+$$
+\psi:\mathscr B^{\mathrm{op}} \rightarrow \Cat
+$$
+where $\Cat$ is the category of (small) categories, such that for any object $S$ of $\mathscr B$,
+$\psi(S)$ is the \emph{fibre category} of $\phi$ over $S$: \emph{i.e.} the full subcategory of $\mathscr S$ whose objects
+$X$ satisfy $\phi(X)=S$. Such a pseudo-functor is uniquely associated to the choice of a \emph{cleavage},
+which amounts for any morphism $f:T \rightarrow S$ of a pullback functor
+$f^*:\psi(S) \rightarrow \psi(T)$. Recall that the word pseudo-functor refers to the fact that one
+only gets isomorphism $(\Id_S)^* \simeq \Id_{\psi(S)}$ and $g^*f^* \simeq (gf)^*$, satisfying
+natural compatibility conditions and uniquely determined by the cleavage (see \cite[Def. 3.10]{Vistoli}).
+
+All our fibred categories come with an exclicit choice of cleavage, so that we will consider them
+as pseudo-functors. Beware however that a morphism of fibred categories (\cite[Def. 3.6]{Vistoli})
+only corresponds to what is called a pseudonatural transformation (see \cite[end of 1.5 and 1.6(c)]{Gray}).
+Considering a sub-category $\Cat_0$ of $\Cat$,
+a fibred category over $\mathscr B$ in $\Cat_0$ (or simply \emph{$\mathscr B$-fibred $\Cat_0$-category})
+will be a fibred category whose pseudo-functor has
+the form $\psi_0:\mathscr B \rightarrow \Cat_0$.
+In our main example, $\Cat_0$ will the be category of Picard groupoids,
+but many other cases can appear (additive, triangulated monoidal).
+
+Consider a graded linear algebraic group $G$ as in \Cref{num:lin_gps&torsors}.
+Then $X \mapsto \Tors_G(X)$ is a fibred additive category over $\base$,
+whose pullback functor is given by the pullback of $G$-torsors.
+One deduces (from the functoriality of the associated Picard groupoid)
+that $X \mapsto \uK^G(X)$ is a fibred Picard groupoid over $\base$.
+Moreover, the functor \eqref{eq:forget_virtual} induces a morphism
+of $\base$-fibred Picard groupoids:
+$$
+o:\uK^G \rightarrow \uK.
+$$
+
+%First, recall that $\uK(X)$ is the fiber
+% of a fibered Picard groupoid $\phi_{\uK}:\VB \rightarrow \base$ 
+% over the category of schemes (in our case, $\base$).\footnote{For recall
+% on fibred category, we refer the reader to \cite{Vistoli}.}
+% More precisely, an object of $\VB$ is a pair $(v,X)$ where $X$ is a scheme,
+% and $v$ is a virtual vector bundle over $X$.
+% The functor $\phi_{\uK}$ associates to $(v,X)$ the scheme $X$.
+% There is a natural \emph{cleavage} (cf. \cite[Def. 3.9]{Vistoli}) associated with $\phi_{\uK}$.
+% More precisely, there exists a \emph{pseudo-functor} (cf. \cite[Def. 3.10]{Vistoli})
+% $\uK:\base \rightarrow \mathscr P$ where $\mathscr P$ is the category of (small)
+% Picard groupoids\footnote{We have specialized the framework of \cite{Vistoli}
+% from the $2$-category of (small) categories $\mathscr Cat$ to that of
+% (small) Picard groupoids $\mathscr P$ as this is our natural framework}:
+%\begin{itemize}
+%\item for a scheme $X$,
+% $\uK(X)$ is the category made of virtual vector bundles over $X$
+% (the \emph{fiber} of $\phi_{\uK}$ over $X$)
+%\item given a morphism $f:Y \rightarrow X$ of schemes,
+% one has a pullback functor $f^*:\uK(X) \rightarrow \uK(Y)$.\footnote{In our concrete case,
+% the pseudo-functor is given with the construction of virtual vector bundles.
+% Beware that in general, for composable morphisms of schemes $f$ and $g$,
+% one only has a natural isomorphism $c_{f,g}:g^* \circ f^* \xrightarrow{\sim} (f \circ g)^*$.
+% See \emph{loc. cit.} for more details.}
+%\end{itemize}
+%The term \emph{fibred Picard groupoid} refers not only to the fact that for all scheme $X$,
+% $\uK(X)$ is a Picard groupoid, but also to the fact that for all morphisms of scheme
+% $f:Y \rightarrow X$,
+% $f^*$ is a symmetric monoidal functor (with respect to the operation $+$ on virtual
+% vector bundle).
+%
+%Similarly, for any $\ZZ.r$-graded algebraic group $G$ as above, $\uK^G$ is a pseudo-functor
+% corresponding to a fiberd Picard groupoid on $\base$.
+
+
+The following definition gives an axiomatization of this situation
+(it will be useful in the symplectic and orthogonal cases,
+see \Cref{sec:sp_orientaiton}).
+\end{num}
+\begin{df}\label{df:stable_structure}
+Let $d>0$ be an integer.
+A \emph{stable structure} of degree $d$ on vector bundles (over $\Sigma$) will be:
+\begin{itemize}
+\item A pseudo-functor $\uK^\sigma:\base \rightarrow \mathscr P$ 
+from  $\base$ to the category of Picard groupoids.
+\item A natural transformation of pseudo-functors:
+$o:\uK^\sigma \rightarrow \uK$.
+\item An integer $d>0$ and a cartesian section\footnote{\emph{i.e.} a collection of objects $\un^\sigma_X
+\in \uK^\sigma(X)$ indexed by schemes $X$ in $\base$ and stable under pullbacks} $\un^\sigma$ of $\uK^\sigma$
+such that $o(\un_X^\sigma)=\tw d$.
+\end{itemize}
+As a companion, we slightly extend the first part of \Cref{df:Euler_class}. 
+ Let $v$ be a virtual vector bundle $v \in \uK(X)$ (resp. $V$ be a vector bundle over $X$).
+ A \emph{$\sigma$-orientation} of $v$ (resp. $V$) is a pair $(\tilde v,\omega)$, where $\tilde v \in \uK^\sigma(X)$
+ and $\omega$ is an isomorphism $o(\tilde v) \simeq v$ (resp. $o(\tilde v) \simeq \tw V$).
+\end{df}
+
+\begin{ex}\label{ex:stable_G-structure}
+Let $G$ be a linear algebraic group of degree $d$.
+The fibered Picard groupoid $\uK^G$ and the functor $o$ defines a stable structure $\sigma_G$
+on vector bundles, as explained in \Cref{num:lin_gps&torsors},
+which we call the \emph{$G$-stable structure}.
+The main cases for us are $G=\SL$ ($d=1$) and $G=\Sp$ ($d=2$).
+Note that the tautological case $G=\GL$ ($\sigma=\Id$, $d=1$) is also interesting
+from the point of view of orientations.
+\end{ex}
+
+%\begin{ex}
+%Our main examples come from a graded linear algebraic group
+%$$
+%G=G_* \rightarrow \GL_*,
+%$$
+%among $G_*=\Sp_{2*}, \SL_*, \Orth_*$.
+% Then the category of $G_n$-torsors for the fppf-topology over a scheme $X$ naturally maps to that of 
+% vector bundles over $X$. In fact, over a scheme $X$:
+%\begin{itemize}
+%\item $\Sp_{2n}$-torsors for the fppf-topology, equivalently the Zariski topology,
+% corresponds to \emph{symplectic bundles}: that is vector bundles $V$ of rank $2n$
+% equipped with a symplectic form
+% $\psi:V \otimes V \rightarrow \AA^1_X$ (\emph{i.e.} non-degenerate and anti-symmetric).
+% The constant object $\un_X^{\Sp}$ is the $2$-dimensional affine space $\AA^{2}_X$ equipped
+% with the symplectic form $\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$.
+%\item $\SL_n$-torsors for the fppf-topology, equivalently the Zariski topology,
+% corresponds to what is sometimes called, after Barge and Morel,
+% \emph{oriented vector bundles}: vector bundles $V$ of rank $n$ equipped with a trivialization of its determinant
+% $\lambda:\det(V) \rightarrow \AA^1_X$. The affine line $\AA^1_X$ admits an obvious orientation,
+% and we take this as the constant $\SL_*$-torsor.
+%\item $\Orth_n$-torsors for the fppf-topology, equivalently the étale topology (but not the Nisnevich one),
+% correspond to the so-called \emph{symmetric bundles}: 
+% $V$ of rank $n$ equipped with a non-degenerate symmetric form $\phi:V \otimes V \rightarrow \AA^1_X$.
+% The affine line admits an obvious trivial non-degenerate symmetric form and we take
+% this as the constant symmetric bundle.
+%\end{itemize}
+%The first case corresponds to our main example (see the previous section).
+% Note that the rank of the constant object is $r=2$ for symplectic bundles,
+% while it is $r=1$ in the other cases.
+%
+%For any scheme $X$, one can define the Picard category of virtual $G_*$-torsors
+% over $X$, say $\uK^G(X)$ and one gets a natural map of Picard categories
+% (which essentially forgets the extra data):
+%$$
+%\phi^G:\uK^G(X) \rightarrow \uK(X),
+%$$
+%obviously compatible with pullbacks.
+%\end{ex}
+%
+%\begin{ex}
+%\fred{To be developed: examples come also from Schlichting GW-spectra.}
+%\end{ex}
+
+\begin{num}
+The stable homotopy category $\SH$ is a monoidal triangulated fibred category over $\base$.
+We will consider $\SH^\times$ the underlying Picard groupoid of $\otimes$-invertible objects:
+for a scheme $S$, $\SH^\times(S)$ is the monoidal category of spectra which are $\otimes$-invertible,
+and whose morphisms are isomorphism is $\SH(S)$.
+
+Given a ring spectrum $\E$ (over $\Sigma$), the fibred structure of $\SH$ induces
+a fibred structure on $X \mapsto \E_X\modd$, which is therefore an additive $\base$-fibred category $\E\modd$.
+As the ring structure on $\E$ is only considered in the homotopy category,
+it is not possible to put a monoidal structure on the latter fibred category. However,
+there is a morphism $L_{L_\E}:\SH \rightarrow \E\modd$ of additive fibred categories, induced by the
+free $\E$-module functor. Given a scheme $S$, we consider the category $\E_X\modd^\times$
+whose objects are the $\otimes$-invertible spectra $\F$, and morphismes from $\F$ to $\F'$ are given 
+by the sub-abelian group of
+$$
+\Hom_{\SH(X)}(\F,\E_X \otimes \F') \simeq \Hom_{\E_X\modd}(\E_X \otimes \F,\E_X \otimes \F')
+$$
+consisting of isomorphisms of $\E_X$-modules.
+There is a natural tensor product $\otimes_\E$ on this category, given on objects by the tensor structure
+on $\SH(X)$ and on morphisms by the cup-product:
+\begin{align*}
+&u:\F \rightarrow \E_X \otimes \G, v:\F' \rightarrow \E_X \otimes \G', \\
+& u \otimes_\E v:\F \otimes \F' \xrightarrow{u \otimes v} \E_X \otimes \E_X \otimes \G \otimes \G'
+\xrightarrow{\mu_X^\E} \E_X \otimes \G \otimes \G'.
+\end{align*}
+This defines a $\base$-fibred Picard groupoid $\E\modd^\times$, and the free $\E$-module functor
+induces a morphism of fibred Picard groupoids: $\SH^\times \xrightarrow{L_\E} \E\modd^\times$.
+\end{num}
+\begin{df}\label{df:sigma-orientation}
+Consider a stable structure $\sigma$ on vector bundles
+and an absolute ring spectrum $\E$.
+
+A \emph{$\sigma$-orientation} on the ring spectrum $\E$ will be the data of a natural isomorphism
+$\gamma$ 
+% admits \emph{$\sigma$-stable Thom classes}
+% if there exists the data of a natural isomorphism $\thom$ 
+pictured by the double arrow in the following diagram 
+whose objects are pseudo-functors,
+and simple arrows are natural transformations of pseudo-functors of fibred Picard groupoids:
+$$
+\xymatrix@R=6pt@C=30pt{
+\uK^\sigma\ar^\sigma[r]\ar_{\rk \circ \sigma}[ddd]\ar@{=>}_{\gamma}[rdd]
+& \uK\ar^-{\Th}[r]
+& \SH^\times\ar^-{L_\E}[r]
+&  \E\modd^\times \\
+&&& \\
+&&& \\
+\uZ\ar_{tw^\E_{\PP^1}}[rrruuu] &&&
+}
+$$
+where $\rk:\uK \rightarrow \uZ$ is the pseudo-functor induced by the rank of a virtual bundle,
+and $tw^\E_{\PP^1}$ is the pseudo-functor which to an element $n \in \uZ(X)$, associates
+the object
+$$
+tw_{\PP^1}(n)=\bigoplus_{x \in X^{(0)}} \E(n(x))[2n(x)].
+$$
+One requires further the following normalization condition:
+For any scheme $X$, there exists an isomorphism
+$\gamma_{(\un^\sigma_X)} \simeq \Id_{\E(d)[2d]}$ compatible with pullbacks.
+
+In this situation, we call $\gamma$ the \emph{$\sigma$-stable Thom isomorphism} on $\E$.
+\end{df}
+
+
+\begin{num}\label{num:Thom_iso_explicit}
+Explicitly, a $\sigma$-orientation is the data for any scheme $X$,
+and for every $\tilde v \in \uK^\sigma(X)$, of a \emph{Thom isomorphism} in the
+category of $\E$-modules over $X$:
+\begin{equation}\label{eq:sigma_Thom_iso_map}
+\gamma_{\tilde v}:\E_X \otimes \Th(v) \xrightarrow{\sim} \E_X(r)[2r],
+\end{equation}
+where $v=o(\tilde v)$ is the associated virtual bundle, and $r$ is the rank of $v$.
+In addition, this Thom isomorphism is functorial in $\tilde v$ with respect to isomorphisms,
+compatible with base change, and compatible with the addition of $v$.
+
+The isomorphism $\gamma_{\tilde v}$ defines a cohomology class:
+\begin{equation}\label{eq:sigma-Thom_class}
+\th(\tilde v) \in \E^{2r,r}(\Th(v)) \simeq \Hom_{\E\modd_X}(\E_X \otimes \Th(v),\E_X(r)[2r])
+\end{equation}
+which will be called the \emph{Thom class} of $\tilde v$ with coefficients in $\E$.
+ One readily deduces that multiplication by this Thom class induces isomorphisms:
+$$
+\E^{*,*}(X) \xrightarrow{\sim} \E^{*+2r,*+r}(\Th(v))
+$$
+and similarly for the other theories associated with $E$ (as in \Cref{num:virtual_Thom_iso}).
+\end{num}
+
+The following result is merely a reformulation of \Cref{cor:stable-thom},
+showing that \Cref{df:sigma-orientation} is in fact a generalization of 
+\Cref{df:G-orientation}.
+\begin{prop}\label{prop:stable_G-orientations}
+Let $\E$ be a ring spectrum and $G$ a linear algebraic group of degree $d$ (\Cref{df:graded_lin_alg_group}).
+Then the map $\thom \mapsto \gamma_\thom$ of \Cref{cor:stable-thom} gives a bijection between the following structures:
+\begin{enumerate}
+\item the $G$-orientations $\thom$ on $\E$;
+\item the $\sigma_G$-stable Thom isomorphisms $\gamma$ on $\E$ (\Cref{ex:stable_G-structure}).
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Indeed, the fact that $\gamma_\thom$ is a natural transformation of pseudo-functors comes from the construction
+and the compatibility with pullbacks and products in \Cref{df:G-orientation}. 
+\end{proof}
+
+\begin{rem}
+Using hermitian K-theory, we will give a finer statement in the symplectic case in \Cref{sec:virt_symplect}.
+\end{rem}
+
+%\fred{L'intérêt de la définition précédente vient du résultat suivant: \\
+%Une orientation orthogonale (resp. symplectique) correspond à un $\KO$-orientation
+%(resp. $\KSp$-orientation). Autrement dit, l'isomorphisme de Thom $\thom(v)$
+%associé à un $\Orth$-fibré (resp. $\Sp$-fibré) principal virtuel ne dépend que de la classe
+%de $v$ dans $\KO(X)$ (resp. $\KSp(X)$). \\
+%Notons en effet, que le pseudo-foncteur $\uK^G \rightarrow \uK$ se factorise à équivalence prêt
+%par $\underline{\KO}$ ou $\underline{\KSp}$ respectivement. \\
+%Au niveau de la rédaction, je ne sais pas encore comment m'organiser.
+%Est-ce que ça vaut le coup de faire la définition abstraite ci-dessus ?
+%Elle contient au moins le cas orthogonal, et le cas symplectique, donc je dirais oui...}
+
+\begin{num}\textit{$\sigma$-oriented Euler classes}.\label{num:sigma-Thom&Euler}
+As in \Cref{num:virtual_Thom_iso}, one gets Thom isomorphisms \eqref{eq:virtual_Thom_iso}
+ associated with an element $\tilde v \in \uK^\sigma(X)$ in the various theories
+ (cohomology with/without proper support, bivariant with/without proper support)
+ with coefficients in $\E$.
+
+One can therefore extend \Cref{ex:virtual_Euler_classes}.
+ Let $V/X$ be a vector bundle of rank $r$,
+  with a given $\sigma$-orientation $(\tilde v,\omega)$, where $\tilde v \in \uK^{\sigma}(X)$ and $\omega:V\simeq o(\tilde v)$
+  (\Cref{df:sigma-orientation}). Then one defines the associated Euler class as follows:
+$$
+e(V,\tilde v,\omega,\E)=\gamma_{\thom(\tilde v)}\big(e(V,\E)\big) \in \E^{2r,r}(X).
+$$
+Note that when $\sigma=\sigma_G$ as above, this definition obviously extend
+ \Cref{df:Euler_class}.
+ Moreover, as in \Cref{rem:invariantGisom},
+ one deduces that once $\omega$ is chosen this $\sigma$-oriented Euler class depends only on the isomorphism
+ class of $\tilde v$ in $\uK^\sigma(X)$. In other words,
+ one can consider that $\tilde v$ belongs to the abelian group
+ $K_0^\sigma(X)=\pi_0(\uK^\sigma(X))$.
+\end{num}
+
+
+
+%\subsection{$\infty$-categorical orientations}
+%\fred{Comme dans le paragraphe précédent mais avec des $\infty$-catégories partout! Cela permet de définir le $G$-cobordisme,
+%et même le $\sigma$-cobordisme, et la formulation $\infty$-catégorique des classes de Thom donne automatiquement
+%la propriété universelle du $\sigma$-cobordisme.}
+%
+%\subsection{Cobordism theories}

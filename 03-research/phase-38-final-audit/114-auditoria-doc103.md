@@ -110,7 +110,7 @@ Pero todo esto es ahora insuficiente: con $W_{\lambda_0}$ **indefinido**, $T_{\l
 - $T_\lambda=\int W_\lambda\,d\nu$ con $d\nu\geq0$ (Doc 83) y la fórmula correcta de Abel del §3: todo eso es sólido como *identidad*.
 - $\int W_\lambda\,dm_\infty=0$: nueva identidad exacta, gratis, que cualquier reconstrucción debe respetar.
 - Lema 2.1 / entrelazamiento (Szegő 3.3.1–3.3.2): disponible para futuros usos legítimos.
-- Posible vía de reparación: probar $T_\lambda>0$ bajo ¬RH directamente desde Doc 63 §6 (Poisson), o encontrar pesos $w_n>0$ tales que $\sum w_n\kappa_n$ sí sea suma de cuadrados (requeriría $w_n$ **decrecientes**, p. ej. tipo Abel genuino $w_n=e^{-\lambda n}$: con $u_n$ decreciente la suma por partes da coeficientes interiores positivos $+(u_{n-1}-u_n)$, frontera inferior $-u_{n_0}v_{n_0}$ aún negativa — habría que absorberla; no es trivial pero es la dirección correcta si se quiere un kernel positivo honesto).
+- Posible vía de reparación: probar $T_\lambda>0$ bajo ¬RH directamente desde Doc 63 §6 (Poisson), o encontrar pesos $w_n>0$ tales que $\sum w_n\kappa_n$ sí sea suma de cuadrados (requeriría $w_n$ **decrecientes**, p. ej. tipo Abel genuino $w_n=e^{-\lambda n}$: con $u_n$ decreciente la suma por partes da coeficientes interiores positivos $+(u_{n-1}-u_n)$, frontera inferior $-u_{n_0}v_{n_0}$ aún negativa — habría que absorberla; no es trivial pero es la dirección correcta si se quiere un kernel positivo franco).
 
 ## §10. Tabla de veredictos
 

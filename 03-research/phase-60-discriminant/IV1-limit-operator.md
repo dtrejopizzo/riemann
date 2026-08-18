@@ -1,4 +1,4 @@
-# IV.1 — Identificación del operador límite `Â_∞` (espectro `n²`) > **AVISO (2026-06-18, cierre honesto): la identificación "Dirichlet Laplaciano" de abajo
+# IV.1 — Identificación del operador límite `Â_∞` (espectro `n²`) > **AVISO (2026-06-18, cierre franco): la identificación "Dirichlet Laplaciano" de abajo
 > está REFUTADA por los autovectores.** El test E12 (mpmath, λ=7, dim 29) da: autovectores
 > crudos con 15–18 cambios de signo, envelope de-modulado `v_k·(−1)^j` con **10–13 nodos**
 > (no 0,1,2,…), y overlap con los modos de Dirichlet `sin((k+1)π·)` de **sólo 0.04–0.35**.
@@ -8,7 +8,7 @@
 > valores muy negativos: `2θ'(0)≈−5.4`, parte aritmética `−2ΣΛ(n)/√n` grande negativa),
 > mientras `QW` es PSD con `ε_0>0` — así que `QW` **no es** la sección finita de
 > multiplicación por `W_λ`. Las dos imágenes (símbolo y Dirichlet) eran erróneas.
-> **IV.1 queda ABIERTO.** Ver §"Estado honesto" al final. --- ## (Intento refutado, conservado) El operador límite como Laplaciano de Dirichlet Identificación del operador renormalizado límite desde la estructura de la forma de Weil.
+> **IV.1 queda ABIERTO.** Ver §"Estado franco" al final. --- ## (Intento refutado, conservado) El operador límite como Laplaciano de Dirichlet Identificación del operador renormalizado límite desde la estructura de la forma de Weil.
 Resultado: el espectro `n²` (medido en E11) **no es un misterio** — es el espectro de
 autovalores pequeños de un operador de sección finita (Toeplitz) cerca de un mínimo
 no-degenerado de su símbolo, vía la teoría clásica de Kac–Murdock–Szegő / Parter–Widom. Marcadores: **[P]** probado · **[P\*]** módulo resultado clásico estándar · **[GAP]** núcleo. --- ## IV.1a — `A_λ` es una sección finita con símbolo de Weil `W_λ` — [P] Por la fórmula explícita de Weil, la forma cuadrática sobre funciones band-limited
@@ -64,7 +64,7 @@ en sí es robusta y clásica (2º orden + sección finita = Dirichlet). ### Sub-
 | IV.1a símbolo `W_λ` (fórmula explícita) | **[P]** |
 | IV.1b mínimo no-degenerado, no desplazado | **[P]** existencia · **[GAP-menor]** no-desplazamiento |
 | IV.1c bajo-espectro `∝ n²` (KMS/Parter/Widom) | **[P\*]** clásico |
-| **IV.1 ⟹ `Â_∞`=Dirichlet, espectro `n²`** | **[P\*]** (módulo IV.1b) | Queda IV.2 (rigidez `n² ⟹ ξ̂_∞=Ξ`) y §V (positividad global bajo `/ε_0`). --- ## Estado honesto de IV.1 (tras la refutación) **Refutado (dos identificaciones falsas):**
+| **IV.1 ⟹ `Â_∞`=Dirichlet, espectro `n²`** | **[P\*]** (módulo IV.1b) | Queda IV.2 (rigidez `n² ⟹ ξ̂_∞=Ξ`) y §V (positividad global bajo `/ε_0`). --- ## Estado franco de IV.1 (tras la refutación) **Refutado (dos identificaciones falsas):**
 1. `Â_∞ = −d²/dx²` Dirichlet — NO (autovectores no coinciden, overlap <0.35, nodos 10–13).
 2. `QW =` sección finita de mult. por símbolo `W_λ` — NO (`W_λ` indefinida, `QW` PSD). **Sólido (no refutado):**
 - `ε_k/ε_0 → (k+1)² = n²`, **medido robusto y mejorando con λ** (E11). Es el dato más estable de todo el programa.
@@ -78,4 +78,4 @@ contenido se reduce a IV.1★ (gap relativo uniforme), que **sigue abierto** —
 sólido (`ε_1/ε_0→4`, estable, mejora con λ) pero no demostrado. El Teorema III queda
 **condicional a IV.1★**. **Lección (anti-auto-engaño):** registramos la refutación en vez de esconderla. El `n²` es
 real pero su operador no es el ingenuo; forzar "Dirichlet" habría sido un gap que vuelve.
-Mejor un gap nombrado y honesto (IV.1★) que una proposición falsa.
+Mejor un gap nombrado y franco (IV.1★) que una proposición falsa.

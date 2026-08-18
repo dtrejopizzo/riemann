@@ -1,0 +1,164 @@
+\section{Leafwise cohomology of fiber bundles over \texorpdfstring{$S^{1}$}{}}\label{section2}
+
+In this section, we give a concrete description of the leafwise cohomology groups for fiber bundles over $S^{1}$.
+
+\subsection{Fiber bundles over \texorpdfstring{$S^{1}$}{}}
+
+%fiber bundles
+Let $S$ be a orientable closed manifold of $d$ dimension and $\varphi$ be an orientation preserving diffeomorphism of $S$.
+Assume that the number of periodic orbits of $\varphi$ is countably many.
+
+\begin{example}
+We call $\varphi$ an Anosov diffeomorphism if a tangent bundle splits into two sub-bundles which are invariant with respect to the differential of  $\varphi$, one of which is contracting and the other is expanding under $\varphi$ for some Riemannian metric.
+It is known that if $\varphi$ is an Anosov diffeomorphism, it has countably many periodic points.
+
+\end{example}
+
+We define the mapping torus of $\varphi$ as follows:
+\begin{equation} \label{eq:3.1}
+    M:=S \times \R / (\varphi(x),t) \sim (x,t+\log{r})\quad\mathrm{for}\, r>1.
+\end{equation}
+The manifold $M$ is the fiber bundle over $S^{1}$ of $(d+1)$ dimension with the projection $\pi : M \rightarrow S^{1};[x,t]\mapsto{t\mbox{ mod }\Z}$.
+We give additional structures on $M$; a foliation of 1-codimension and the transverse flow.
+
+A foliation structure is given by the partition $\Fh=\{ \pi^{-1}(t) | t\in{S^{1}} \}$. Every fiber over the circle is leaves of the foliation.
+Denote by $\mathcal{L}_{t}$ the leaf $\pi^{-1}(t)$ for $t\in{S^{1}}$.
+The transverse flow $\phi$, which maps leaves to leaves, is defined by a smooth $\R$-action on $M$
+\begin{equation*}
+    \phi^{t}[x,s] = [x, s+ t]\quad\mbox{for}\,t\in\R.
+\end{equation*}
+The flow can be seen as the $\R$-action being suspended from the $\Z$-action on $S$ via the powers of $\varphi$.
+Therefore we have a periodic obit $\mathfrak{o}$ of the $\Z$-action on $S$ for any closed orbit $\gamma$ of the $\R$-action on $M$.
+The period of a closed orbit $\gamma$ is $\log{r}$ times the period $|\mathfrak{o}|$ of corresponding periodic orbit and the norm of $\gamma$ is defined by $\log N(\gamma):=|\mathfrak{o}|\log{r}$.
+
+
+\subsection{The leafwise cohomology groups}
+
+We describe leafwise differential forms more explicitly for $M$.
+Choosing a fixed $t$ in $S^{1}$, we give a restriction map to the leaf  $\mathcal{L}_{t}=\pi^{-1}(t)$:
+\begin{equation*}
+\begin{matrix}
+P_{i,t} : &\mathcal{A}^{i}_{\Fh}(M) &\rightarrow &\mathcal{A}^{i}(\mathcal{L}_{t})\\ &w_{\Fh} &\mapsto &w_{\Fh}|_{\mathcal{L}_{t}}.
+\end{matrix}
+\end{equation*}
+Since $M$ is suspended by $\varphi$, leafwise differential forms have a natural boundary condition about the time parameter $t$; $\omega_{\Fh}|_{\mathcal{L}_{t+\log{r}}} = \varphi^{*}(\omega_{\Fh}|_{\mathcal{L}_{t}})$. 
+It is easy to check that the $\R$-action $\phi^{\log{r} *}$ on $\mathcal{A}^{i}_{\Fh}(M)$ coincides with $\varphi^{*}$.
+
+
+Leafwise differential forms can be described as paths in $\mathcal{A}^{i}(S)$ as follows: Denote by $\tilde{M}$ a $\Z$-covering of $M$ which is homeomorphic to $S\times\R$. 
+It has the induced foliation $\tilde{\Fh}$ whose leaves are the slices $S\times \{ * \}$.
+First, we have an injective map
+\begin{equation}\label{eq:2.2}
+    \begin{split}
+        C^{\infty}(\R,\mathcal{A}^{i}(S)) &\hookrightarrow {\Gamma(S\times\R;\wedge^{i}T^{*}S)}=\mathcal{A}_{\tilde{\Fh}}^{i}(\tilde{M})\\
+        [t\mapsto{s_{t}}] &\mapsto [(x,t)\mapsto{s_{t}(x)}].
+    \end{split}
+\end{equation}
+Here we set a topology on $C^{\infty}(\R,\mathcal{A}^{i}(S))$ induced by $C^{\infty}$-topology on $\mathcal{A}_{\tilde{\Fh}}^{i}(\tilde{M})$.
+Note that we also have an injective map
+\begin{equation}\label{eq:2.3}
+    \begin{split}
+        \mathcal{A}_{\tilde{\Fh}}^{i}(\tilde{M})&\hookrightarrow{C}^{\infty}(\R,\mathcal{A}^{i}(S))\\
+        \omega_{\tilde{\Fh}}&\mapsto{[t\mapsto{\omega_{\tilde{\Fh}}|_{S\times\left\{t\right\} }}]}.
+    \end{split}
+\end{equation}
+By (\ref{eq:2.2}) and (\ref{eq:2.3}), we have the homeomorphism between $C^{\infty}(\R,\mathcal{A}^{i}(S))$ and $\mathcal{A}_{\tilde{\Fh}}^{i}(\tilde{M})$.
+
+Leafwise differential forms on $M$ are injectively lifted into $\mathcal{A}_{\tilde{\Fh}}^{i}(\tilde{M})$ by the covering map.
+Then we have the following map via the homeomorphism
+\begin{equation*}
+\begin{split}
+    P : \mathcal{A}^{i}_{\Fh}(M) &\rightarrow {C}^{\infty}(\R,\mathcal{A}^{i}(S))\cong\mathcal{A}_{\tilde{\Fh}}^{i}(\tilde{M}) \\
+    \omega_{\Fh}&\mapsto(t\mapsto\omega_{\Fh}|_{\mathcal{L}_{t}} ).
+\end{split}
+\end{equation*}
+The image of $P$ is a subspace of ${C}^{\infty}(\R,\mathcal{A}^{i}(S))$ which satisfies the boundary condition.
+We denote by ${C}^{\infty}_{\varphi}(\R,\mathcal{A}^{i}(S))$ the subspace.
+We have the following homeomorphism:
+\begin{equation*}
+    P:\mathcal{A}^{i}_{\Fh}(M) \overset{\sim}{\longrightarrow} {C}^{\infty}_{\varphi}(\R,\mathcal{A}^{i}(S)).
+\end{equation*}
+We describe the leafwise cohomology groups as path spaces in the following theorem.
+\begin{theorem}
+\label{thm:2.1}
+We have a homeomorphism:
+\begin{equation} \label{eq_Psi}
+    \begin{split}
+            \Psi:{H}^{i}_{\Fh}(M) &\overset{\sim}{\longrightarrow} C^{\infty}_{\varphi}(\R,H^{i}(S))\\
+            [\omega_{\Fh}]&\mapsto[t\mapsto[\omega_{\Fh}]|_{\mathcal{L}_{t}}].
+    \end{split}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Let
+\begin{equation*}
+\begin{matrix}
+    {D}^{i}:&{C}^{\infty}(\R,\mathcal{A}^{i}(S)) &\rightarrow &{C}^{\infty}(\R,\mathcal{A}^{i+1}(S)) \\
+     &(c:t \mapsto c(t)) &\mapsto & ({D}^{i}c : t \mapsto d^{i}_{s}c(t))
+\end{matrix}
+\end{equation*}
+be an operator, where $d^{i}_{s}$ is the exterior derivative on $S$. 
+Since it satisfies ${D}^{i} \circ {D}^{i+1}=0$, the pairs $({C}^{\infty}(\R,\mathcal{A}^{i}(S)), {D}^{i})$ form a cochain complex.
+
+For a path $c$ in ${C}^{\infty}_{\varphi}(\R,\mathcal{A}^{i}(S))$, the operator ${D}^{i}$ is compatible with the boundary condition as follows:
+\begin{equation*}
+\begin{split}
+    {D}^{i}c(t+\log{r}) &= d^{i}_{s}c(t+\log{r})\\
+    &=d^{i}_{s}(\varphi^{*}(c(t))) \\
+    &=\varphi^{*}(d^{i}_{s}c(t)) \\
+    &=\varphi^{*}({D}^{i}c(t)).
+\end{split}
+\end{equation*}
+Denote by ${D}^{i}_{r}$ the restricted operator.
+It is easy to check that the restricted operator satisfies ${D}^{i}_{r} \circ {D}^{i+1}_{r}=0$. 
+Hence the pairs $({C}^{\infty}_{\varphi}(\R,\mathcal{A}^{i}(S)),{D}^{i}_{r})$ form a cochain complex too.
+Moreover, the homology groups of the cochain complex have the following isomorphisms
+\begin{equation*}
+    \begin{split}
+        \mbox{Ker}(D^{i}_{r})/\mbox{Im}(D^{i-1}_{r})&\overset{\cong}{\rightarrow}{C}^{\infty}_{\varphi}(\R,{H}^{i}(S))\\
+        {c \mbox{ mod }\mbox{Im}(D^{i-1}_{r})}&\mapsto[{t\mapsto{c(t)\mbox{ mod }\mbox{Im}(d^{i-1}_{s})}}].
+    \end{split}
+\end{equation*}
+
+Finally, since the following diagram is commutative
+\begin{center}
+    \begin{tikzcd}
+    \cdots\ar[r]&\mathcal{A}^{i}_{\Fh}(M) \ar[r, "d_{\Fh}^{i}"] \ar[d, "P"] & \mathcal{A}^{i+1}_{\Fh}(M) \ar[d, "P"]\ar[r]& \cdots\\
+    \cdots\ar[r]&{C}^{\infty}_{\varphi}(\R,\mathcal{A}^{i}(S)) \ar[r, "D^{i}_{r}"] & {C}^{\infty}_{\varphi}(\R,\mathcal{A}^{i+1}(S))\ar[r] &\cdots,
+\end{tikzcd}
+\end{center}
+the homeomorphism $p$ induces the quasi-isomorphism $\Psi$ between cochain complexes.
+\end{proof}
+
+
+Let $\frac{d}{dt}$ be a differential operator on $ C^{\infty}_{\varphi}(\R,H^{i}(S))$ given by
+\begin{equation*}
+(\frac{d}{dt}c)(t):=\lim_{h\rightarrow0}\frac{c(t+h)-c(t)}{h}\quad\mbox{for }t\in\R.
+\end{equation*}
+We have the following corollary for the operator:
+\begin{theorem}
+The infinitesimal generator $\Theta$ on  $\bar{H}^{i}_{\Fh}(M)$ corresponds to the differential operator $\frac{d}{dt}$ on $C^{\infty}_{\varphi}(\R,H^{i}(S))$:
+\begin{equation*}
+({H}^{i}_{\Fh}(M),\Theta) \cong (C^{\infty}_{\varphi}(\R,H^{i}(S)),\frac{d}{dt}).
+\end{equation*}
+\end{theorem}
+
+\begin{proof}
+For $[\omega_{\Fh}]\in{H}^{i}_{\Fh}(M)$, we have the following correspondence via the homeomorphism
+    \begin{equation*}
+        \Psi:\phi^{h*}[\omega_{\Fh}]\mapsto[t\mapsto[\omega_{\Fh}]|_{\mathcal{L}_{t+h}}].
+    \end{equation*}
+    Therefore we have $\Psi(\phi^{h*}[\omega_{\Fh}])(t)=\Psi([\omega_{\Fh}])(t+h)$.
+    
+    By using the property, we can show that the infinitesimal generator and the differential operator are commutative with $\Psi$
+    \begin{equation*}
+        \begin{split}
+                \Psi(\Theta[\omega_{\Fh}])(t) &= \Psi\left(\lim_{h\rightarrow0} \frac{\phi^{h*}([\omega_{\Fh}]) - [\omega_{\Fh}]}{h}\right)(t)\\
+                &= \lim_{h\rightarrow0}  \frac{ \Psi(\phi^{h*}([\omega_{\Fh}]))(t) - \Psi([\omega_{\Fh}])(t)}{h}\\
+                &=\lim_{h\rightarrow0}  \frac{ \Psi([\omega_{\Fh}])(t+h) - \Psi([\omega_{\Fh}])(t)}{h}\\
+                &=\left(\frac{d}{dt}\Psi([\omega_{\Fh}])\right)(t).
+        \end{split}
+    \end{equation*}
+\end{proof}
+

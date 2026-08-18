@@ -1,0 +1,779 @@
+{
+  "statement": "E79.3l edge coupling with extra-root and remainder",
+  "cases": [
+    {
+      "label": "zeta",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.0038856850916",
+              "extra_total": "0.000525776522483",
+              "outer99": "0.00388246763527",
+              "remainder99": "3.21745632659e-6",
+              "m99": 9,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00174529447552",
+                  "abs_over_outer99": "0.449532266454",
+                  "abs_over_extra": "3.31946064704",
+                  "abs_over_remainder": "542.445428426"
+                },
+                "Q2": {
+                  "sum": "0.00115817758616",
+                  "abs_over_outer99": "0.298309656374",
+                  "abs_over_extra": "2.20279441291",
+                  "abs_over_remainder": "359.966839827"
+                },
+                "Q3": {
+                  "sum": "0.000896012576028",
+                  "abs_over_outer99": "0.230784300142",
+                  "abs_over_extra": "1.70416999945",
+                  "abs_over_remainder": "278.484767182"
+                },
+                "Q4": {
+                  "sum": "8.29829975606e-5",
+                  "abs_over_outer99": "0.0213737770295",
+                  "abs_over_extra": "0.157829408527",
+                  "abs_over_remainder": "25.7914915192"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.13542328536",
+              "abs_edge_plus_remainder_over_outer99": "1.00082871427"
+            },
+            "2.0": {
+              "common_total": "0.00775031857931",
+              "extra_total": "0.00105114185516",
+              "outer99": "0.00774395996423",
+              "remainder99": "6.358615084e-6",
+              "m99": 9,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00348608587313",
+                  "abs_over_outer99": "0.450168374995",
+                  "abs_over_extra": "3.31647517983",
+                  "abs_over_remainder": "548.246092439"
+                },
+                "Q2": {
+                  "sum": "0.00230935252765",
+                  "abs_over_outer99": "0.298213386733",
+                  "abs_over_extra": "2.19699417002",
+                  "abs_over_remainder": "363.184828323"
+                },
+                "Q3": {
+                  "sum": "0.00178361359003",
+                  "abs_over_outer99": "0.230323193594",
+                  "abs_over_extra": "1.69683433427",
+                  "abs_over_remainder": "280.503469146"
+                },
+                "Q4": {
+                  "sum": "0.000164907973423",
+                  "abs_over_outer99": "0.021295044678",
+                  "abs_over_extra": "0.156884603741",
+                  "abs_over_remainder": "25.9345739983"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.13573699503",
+              "abs_edge_plus_remainder_over_outer99": "1.0008211064"
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00281226360364",
+              "extra_total": "0.000307409734913",
+              "outer99": "0.00280854269933",
+              "remainder99": "3.72090431639e-6",
+              "m99": 11,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00102295987253",
+                  "abs_over_outer99": "0.364231554242",
+                  "abs_over_extra": "3.32767559499",
+                  "abs_over_remainder": "274.922380569"
+                },
+                "Q2": {
+                  "sum": "0.00119150492296",
+                  "abs_over_outer99": "0.424243121975",
+                  "abs_over_extra": "3.87595052349",
+                  "abs_over_remainder": "320.219178363"
+                },
+                "Q3": {
+                  "sum": "0.000500299573893",
+                  "abs_over_outer99": "0.178134935963",
+                  "abs_over_extra": "1.62746821936",
+                  "abs_over_remainder": "134.456446969"
+                },
+                "Q4": {
+                  "sum": "9.37783299414e-5",
+                  "abs_over_outer99": "0.0333903878207",
+                  "abs_over_extra": "0.305059727428",
+                  "abs_over_remainder": "25.2031017106"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.10945524702",
+              "abs_edge_plus_remainder_over_outer99": "1.00132485232"
+            },
+            "2.0": {
+              "common_total": "0.00561353751115",
+              "extra_total": "0.000614678199283",
+              "outer99": "0.00560614363886",
+              "remainder99": "7.39387228978e-6",
+              "m99": 11,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00204440479126",
+                  "abs_over_outer99": "0.364672210161",
+                  "abs_over_extra": "3.3259757604",
+                  "abs_over_remainder": "276.499878702"
+                },
+                "Q2": {
+                  "sum": "0.00237805319821",
+                  "abs_over_outer99": "0.424186990453",
+                  "abs_over_extra": "3.86877751803",
+                  "abs_over_remainder": "321.624867865"
+                },
+                "Q3": {
+                  "sum": "0.000997147060314",
+                  "abs_over_outer99": "0.177866841192",
+                  "abs_over_extra": "1.62222616887",
+                  "abs_over_remainder": "134.861277181"
+                },
+                "Q4": {
+                  "sum": "0.000186538589071",
+                  "abs_over_outer99": "0.0332739581944",
+                  "abs_over_extra": "0.303473572494",
+                  "abs_over_remainder": "25.2288086351"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.10964367645",
+              "abs_edge_plus_remainder_over_outer99": "1.00131888741"
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00246967255598",
+              "extra_total": "0.000198719668364",
+              "outer99": "0.00245843666355",
+              "remainder99": "1.12358924354e-5",
+              "m99": 11,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.000675884527945",
+                  "abs_over_outer99": "0.274924523364",
+                  "abs_over_extra": "3.40119593349",
+                  "abs_over_remainder": "60.1540582408"
+                },
+                "Q2": {
+                  "sum": "0.000958932747349",
+                  "abs_over_outer99": "0.390057942744",
+                  "abs_over_extra": "4.82555529224",
+                  "abs_over_remainder": "85.3454901659"
+                },
+                "Q3": {
+                  "sum": "0.000719536324001",
+                  "abs_over_outer99": "0.292680439838",
+                  "abs_over_extra": "3.6208611353",
+                  "abs_over_remainder": "64.039089742"
+                },
+                "Q4": {
+                  "sum": "0.000104083064252",
+                  "abs_over_outer99": "0.0423370940546",
+                  "abs_over_extra": "0.523768306924",
+                  "abs_over_remainder": "9.26344434591"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.08083172176",
+              "abs_edge_plus_remainder_over_outer99": "1.00457034041"
+            },
+            "2.0": {
+              "common_total": "0.00493174719241",
+              "extra_total": "0.000397382480892",
+              "outer99": "0.00490937126802",
+              "remainder99": "2.23759243906e-5",
+              "m99": 11,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00135113112964",
+                  "abs_over_outer99": "0.275214697743",
+                  "abs_over_extra": "3.40007724197",
+                  "abs_over_remainder": "60.3832541642"
+                },
+                "Q2": {
+                  "sum": "0.00191519303745",
+                  "abs_over_outer99": "0.390109635815",
+                  "abs_over_extra": "4.81952056152",
+                  "abs_over_remainder": "85.5916834548"
+                },
+                "Q3": {
+                  "sum": "0.00143560351135",
+                  "abs_over_outer99": "0.292421052103",
+                  "abs_over_extra": "3.61264922433",
+                  "abs_over_remainder": "64.1584001758"
+                },
+                "Q4": {
+                  "sum": "0.000207443589576",
+                  "abs_over_outer99": "0.0422546143388",
+                  "abs_over_extra": "0.52202499997",
+                  "abs_over_remainder": "9.27083886925"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.08094366044",
+              "abs_edge_plus_remainder_over_outer99": "1.00455779838"
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00195712828482",
+              "extra_total": "0.000133017693008",
+              "outer99": "0.00194252343837",
+              "remainder99": "1.46048464528e-5",
+              "m99": 13,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00069547924869",
+                  "abs_over_outer99": "0.358028755253",
+                  "abs_over_extra": "5.22847173907",
+                  "abs_over_remainder": "47.6197576562"
+                },
+                "Q2": {
+                  "sum": "0.000678519687898",
+                  "abs_over_outer99": "0.349298069972",
+                  "abs_over_extra": "5.10097320555",
+                  "abs_over_remainder": "46.4585293718"
+                },
+                "Q3": {
+                  "sum": "0.000438364513566",
+                  "abs_over_outer99": "0.22566755433",
+                  "abs_over_extra": "3.29553538069",
+                  "abs_over_remainder": "30.0150032376"
+                },
+                "Q4": {
+                  "sum": "0.000130159988215",
+                  "abs_over_outer99": "0.0670056204439",
+                  "abs_over_extra": "0.978516355766",
+                  "abs_over_remainder": "8.91210932175"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.06847675059",
+              "abs_edge_plus_remainder_over_outer99": "1.00751849175"
+            },
+            "2.0": {
+              "common_total": "0.00390952949867",
+              "extra_total": "0.000266010252359",
+              "outer99": "0.00388042403882",
+              "remainder99": "2.91054598555e-5",
+              "m99": 13,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00139032264934",
+                  "abs_over_outer99": "0.358291422647",
+                  "abs_over_extra": "5.22657543087",
+                  "abs_over_remainder": "47.7684481277"
+                },
+                "Q2": {
+                  "sum": "0.00135552384816",
+                  "abs_over_outer99": "0.34932363953",
+                  "abs_over_extra": "5.0957579121",
+                  "abs_over_remainder": "46.5728373607"
+                },
+                "Q3": {
+                  "sum": "0.000875017286035",
+                  "abs_over_outer99": "0.225495275074",
+                  "abs_over_extra": "3.28941188648",
+                  "abs_over_remainder": "30.0636818789"
+                },
+                "Q4": {
+                  "sum": "0.000259560255283",
+                  "abs_over_outer99": "0.06688966275",
+                  "abs_over_extra": "0.975752825245",
+                  "abs_over_remainder": "8.91792318596"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.06855185147",
+              "abs_edge_plus_remainder_over_outer99": "1.00750058745"
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00181877881651",
+              "extra_total": "9.49775787544e-5",
+              "outer99": "0.00180388106607",
+              "remainder99": "1.48977504451e-5",
+              "m99": 14,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.000502798169823",
+                  "abs_over_outer99": "0.278731330619",
+                  "abs_over_extra": "5.29386173471",
+                  "abs_over_remainder": "33.7499390715"
+                },
+                "Q2": {
+                  "sum": "0.00053521687502",
+                  "abs_over_outer99": "0.296702972878",
+                  "abs_over_extra": "5.63519182147",
+                  "abs_over_remainder": "35.9260196359"
+                },
+                "Q3": {
+                  "sum": "0.000603747462631",
+                  "abs_over_outer99": "0.334693608125",
+                  "abs_over_extra": "6.35673672196",
+                  "abs_over_remainder": "40.5260824349"
+                },
+                "Q4": {
+                  "sum": "0.000162118558593",
+                  "abs_over_outer99": "0.089872088378",
+                  "abs_over_extra": "1.70691399717",
+                  "abs_over_remainder": "10.8820831166"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.05265179647",
+              "abs_edge_plus_remainder_over_outer99": "1.008258721"
+            },
+            "2.0": {
+              "common_total": "0.00363365015242",
+              "extra_total": "0.000189942293",
+              "outer99": "0.00360393341817",
+              "remainder99": "2.97167342559e-5",
+              "m99": 14,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00100526810235",
+                  "abs_over_outer99": "0.278936369157",
+                  "abs_over_extra": "5.29249219049",
+                  "abs_over_remainder": "33.8283505075"
+                },
+                "Q2": {
+                  "sum": "0.00106955874578",
+                  "abs_over_outer99": "0.296775390019",
+                  "abs_over_extra": "5.63096679989",
+                  "abs_over_remainder": "35.9917996563"
+                },
+                "Q3": {
+                  "sum": "0.00120561809929",
+                  "abs_over_outer99": "0.334528405329",
+                  "abs_over_extra": "6.34728622176",
+                  "abs_over_remainder": "40.5703429222"
+                },
+                "Q4": {
+                  "sum": "0.00032348847075",
+                  "abs_over_outer99": "0.0897598354952",
+                  "abs_over_extra": "1.70308816241",
+                  "abs_over_remainder": "10.8857342117"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.05270416264",
+              "abs_edge_plus_remainder_over_outer99": "1.00824563909"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "common_total": "-0.213757027492",
+              "extra_total": "0.025942560238",
+              "outer99": "0.255872338178",
+              "remainder99": "-0.46962936567",
+              "m99": 14,
+              "blocks": {
+                "Q1": {
+                  "sum": "-0.000327177801192",
+                  "abs_over_outer99": "0.00127867593474",
+                  "abs_over_extra": "0.0126116234554",
+                  "abs_over_remainder": "0.000696672365718"
+                },
+                "Q2": {
+                  "sum": "-0.00324126691135",
+                  "abs_over_outer99": "0.0126675158965",
+                  "abs_over_extra": "0.124940132416",
+                  "abs_over_remainder": "0.00690175518885"
+                },
+                "Q3": {
+                  "sum": "-0.010843138823",
+                  "abs_over_outer99": "0.0423771436186",
+                  "abs_over_extra": "0.417967183019",
+                  "abs_over_remainder": "0.0230887155183"
+                },
+                "Q4": {
+                  "sum": "0.270283921713",
+                  "abs_over_outer99": "1.05632333545",
+                  "abs_over_extra": "10.4185523415",
+                  "abs_over_remainder": "0.575526024288"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "1.10138868634",
+              "abs_edge_plus_remainder_over_outer99": "0.83540498756"
+            },
+            "2.0": {
+              "common_total": "-0.0256763323528",
+              "extra_total": "0.0513034113696",
+              "outer99": "0.0285336483639",
+              "remainder99": "-0.0542099807167",
+              "m99": 12,
+              "blocks": {
+                "Q1": {
+                  "sum": "-0.00118161553694",
+                  "abs_over_outer99": "0.0414113022587",
+                  "abs_over_extra": "0.0230319096799",
+                  "abs_over_remainder": "0.021797010833"
+                },
+                "Q2": {
+                  "sum": "-3.60486221856e-5",
+                  "abs_over_outer99": "0.00126337234292",
+                  "abs_over_extra": "0.000702655461367",
+                  "abs_over_remainder": "0.000664981276677"
+                },
+                "Q3": {
+                  "sum": "-0.010486984178",
+                  "abs_over_outer99": "0.367530434392",
+                  "abs_over_extra": "0.204411049831",
+                  "abs_over_remainder": "0.19345116968"
+                },
+                "Q4": {
+                  "sum": "0.0402382967009",
+                  "abs_over_outer99": "1.41020510899",
+                  "abs_over_extra": "0.784320099321",
+                  "abs_over_remainder": "0.742267312568"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "2.7979969023",
+              "abs_edge_plus_remainder_over_outer99": "0.899861525782"
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "common_total": "-0.00689644094266",
+              "extra_total": "0.0156278887936",
+              "outer99": "0.0149318506383",
+              "remainder99": "-0.0218282915809",
+              "m99": 16,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.0040681911007",
+                  "abs_over_outer99": "0.272450562174",
+                  "abs_over_extra": "0.260316102478",
+                  "abs_over_remainder": "0.186372400497"
+                },
+                "Q2": {
+                  "sum": "3.66573583419e-5",
+                  "abs_over_outer99": "0.00245497756641",
+                  "abs_over_extra": "0.00234563726593",
+                  "abs_over_remainder": "0.0016793507731"
+                },
+                "Q3": {
+                  "sum": "0.000557470714357",
+                  "abs_over_outer99": "0.0373343350306",
+                  "abs_over_extra": "0.0356715306668",
+                  "abs_over_remainder": "0.0255389072612"
+                },
+                "Q4": {
+                  "sum": "0.0102695314649",
+                  "abs_over_outer99": "0.687760125229",
+                  "abs_over_extra": "0.657128522",
+                  "abs_over_remainder": "0.470468860415"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "2.04661432612",
+              "abs_edge_plus_remainder_over_outer99": "0.461861098783"
+            },
+            "2.0": {
+              "common_total": "0.00581752438377",
+              "extra_total": "0.0310509121697",
+              "outer99": "0.00636231060359",
+              "remainder99": "-0.000544786219821",
+              "m99": 1,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00636231060359",
+                  "abs_over_outer99": "1.0",
+                  "abs_over_extra": "0.20489931403",
+                  "abs_over_remainder": "11.6785454039"
+                },
+                "Q2": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q3": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q4": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "5.88044581668",
+              "abs_edge_plus_remainder_over_outer99": "0.914372897872"
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.000427346882535",
+              "extra_total": "0.011645313968",
+              "outer99": "0.00190063809266",
+              "remainder99": "-0.00147329121013",
+              "m99": 1,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00190063809266",
+                  "abs_over_outer99": "1.0",
+                  "abs_over_extra": "0.163210549572",
+                  "abs_over_remainder": "1.29006273817"
+                },
+                "Q2": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q3": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q4": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "7.1270549154",
+              "abs_edge_plus_remainder_over_outer99": "0.22484390068"
+            },
+            "2.0": {
+              "common_total": "0.00483387678162",
+              "extra_total": "0.0231801662401",
+              "outer99": "0.00707600740392",
+              "remainder99": "-0.00224213062229",
+              "m99": 2,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00376541340819",
+                  "abs_over_outer99": "0.532138138537",
+                  "abs_over_extra": "0.162441173596",
+                  "abs_over_remainder": "1.67939074145"
+                },
+                "Q2": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q3": {
+                  "sum": "0.00331059399572",
+                  "abs_over_outer99": "0.467861861463",
+                  "abs_over_extra": "0.142820114465",
+                  "abs_over_remainder": "1.47653930721"
+                },
+                "Q4": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "4.27588213478",
+              "abs_edge_plus_remainder_over_outer99": "0.683136196119"
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "common_total": "-0.00118918450649",
+              "extra_total": "0.00855322674668",
+              "outer99": "0.00243730554071",
+              "remainder99": "-0.00362649004719",
+              "m99": 2,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00110251597691",
+                  "abs_over_outer99": "0.452350334622",
+                  "abs_over_extra": "0.128900590335",
+                  "abs_over_remainder": "0.304017372878"
+                },
+                "Q2": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q3": {
+                  "sum": "0.00133478956379",
+                  "abs_over_outer99": "0.547649665378",
+                  "abs_over_extra": "0.156056843028",
+                  "abs_over_remainder": "0.368066517879"
+                },
+                "Q4": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "4.50929606643",
+              "abs_edge_plus_remainder_over_outer99": "0.48790949129"
+            },
+            "2.0": {
+              "common_total": "0.00253642802567",
+              "extra_total": "0.0170441661996",
+              "outer99": "0.0048355639225",
+              "remainder99": "-0.00229913589683",
+              "m99": 2,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.0021880891563",
+                  "abs_over_outer99": "0.452499272344",
+                  "abs_over_extra": "0.128377600328",
+                  "abs_over_remainder": "0.951700662549"
+                },
+                "Q2": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q3": {
+                  "sum": "0.00264747476619",
+                  "abs_over_outer99": "0.547500727656",
+                  "abs_over_extra": "0.155330259937",
+                  "abs_over_remainder": "1.15150860367"
+                },
+                "Q4": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "4.52475253616",
+              "abs_edge_plus_remainder_over_outer99": "0.524536138147"
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00108684085546",
+              "extra_total": "0.00665771637675",
+              "outer99": "0.00123447911055",
+              "remainder99": "-0.000147638255086",
+              "m99": 1,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00123447911055",
+                  "abs_over_outer99": "1.0",
+                  "abs_over_extra": "0.185420802073",
+                  "abs_over_remainder": "8.36151246726"
+                },
+                "Q2": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q3": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q4": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "6.39313814211",
+              "abs_edge_plus_remainder_over_outer99": "0.880404412011"
+            },
+            "2.0": {
+              "common_total": "0.0037044944082",
+              "extra_total": "0.0132781609951",
+              "outer99": "0.00443945537705",
+              "remainder99": "-0.000734960968851",
+              "m99": 2,
+              "blocks": {
+                "Q1": {
+                  "sum": "0.00245626711543",
+                  "abs_over_outer99": "0.55328118132",
+                  "abs_over_extra": "0.184985489808",
+                  "abs_over_remainder": "3.34203749523"
+                },
+                "Q2": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                },
+                "Q3": {
+                  "sum": "0.00198318826162",
+                  "abs_over_outer99": "0.44671881868",
+                  "abs_over_extra": "0.149357148354",
+                  "abs_over_remainder": "2.6983586145"
+                },
+                "Q4": {
+                  "sum": "0.0",
+                  "abs_over_outer99": "0.0",
+                  "abs_over_extra": "0.0",
+                  "abs_over_remainder": "0.0"
+                }
+              },
+              "abs_edge_plus_extra_over_outer99": "3.99094367831",
+              "abs_edge_plus_remainder_over_outer99": "0.834447943175"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

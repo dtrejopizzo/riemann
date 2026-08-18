@@ -1,0 +1,40 @@
+% \documentclass[reqno,11pt]{article}
+\documentclass[reqno,11pt]{amsart}
+
+% \setlength{\parskip}{\baselineskip}
+% \setlength{\parindent}{0pt}
+
+% 패키지 삽입
+\input{packages}
+
+% 시작
+\begin{document}
+\sffamily %applying sans serif font
+
+% 전문
+\input{frontmatters}
+\maketitle
+
+% \setcounter{tocdepth}{1}
+% \tableofcontents
+
+% 서문
+\input{sections/introduction/section_1.tex}
+
+% part 1
+\input{sections/part_1/section_3.tex}
+\input{sections/part_1/section_4.tex}
+\input{sections/part_1/section_5.tex}
+\input{sections/part_1/section_6.tex}
+
+% part 2
+\input{sections/part_2/section_7.tex}
+\input{sections/part_2/section_8.tex}
+\input{sections/part_2/section_9.tex}
+
+% 참고문헌
+\medskip
+\printbibliography
+
+% 끝
+\end{document}

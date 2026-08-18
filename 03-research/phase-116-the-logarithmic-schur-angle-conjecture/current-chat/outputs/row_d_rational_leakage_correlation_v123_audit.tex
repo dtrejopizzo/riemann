@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{The exact rational-leakage correlation left by G39 (v123)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Aggregation on reduced rational labels}
+
+Let $x=(x_m)_{m\le N}$ be an integer-fiber coefficient vector.  The
+oppositely oriented Euler shift with label $n$ sends $m$ to $m/n$ with
+weight $\Lambda(n)/\sqrt n$.  For a reduced positive fraction $r=a/b$,
+define
+\begin{equation}
+ (\mathcal L_Nx)_{a/b}
+ :=\sum_{\substack{d\ge1\\ad\le N,\ bd\le N}}
+       \frac{\Lambda(bd)}{\sqrt{bd}}\,x_{ad}.                 \tag{1}
+\end{equation}
+
+\begin{theorem}[Exact rational aggregation --- \PROVED]
+The coefficient of the physical Euler output on the cell labelled by the
+reduced fraction $a/b$ is exactly $(\mathcal L_Nx)_{a/b}$.  The integral
+labels $b=1$ give the divisibility/G39 part; the labels $b>1$ are the
+rational leakage.
+\end{theorem}
+
+\begin{proof}
+The equality $m/n=a/b$ with $(a,b)=1$ holds exactly when
+$m=ad$ and $n=bd$ for one integer $d\ge1$.  Substitution of the Euler
+weight gives (1).  If $b=1$, then $n=d$ divides $m=ad$, which is precisely
+the adjoint divisibility shift.  If $b>1$, the output label is nonintegral.
+\end{proof}
+
+Let $e\in L^2(0,\delta_N)$ be the cell profile and put
+\begin{equation}
+ \kappa_e(u)=\langle e(\,\cdot+u),e\rangle,                  \tag{2}
+\end{equation}
+with zero extension.  Then $\kappa_e(u)=0$ for $|u|\ge\delta_N$.
+
+\begin{theorem}[Exact leakage Gram --- \PROVED]
+Writing $\mathscr R_N$ for the reduced fractions occurring in (1), the
+physical leakage norm is
+\begin{equation}
+ \boxed{
+ \|\mathrm{Leak}_N(x\otimes e)\|_2^2
+ =\sum_{\substack{r,s\in\mathscr R_N\\r,s\notin\mathbb N}}
+  (\mathcal L_Nx)_r\,
+  \overline{(\mathcal L_Nx)_s}\,
+  \kappa_e\!\left(\log\frac rs\right).}                     \tag{3}
+\end{equation}
+Only pairs satisfying
+$|\log(r/s)|<\delta_N$ occur.  Equal reduced fractions have already been
+aggregated in (1), so (3) contains every coherent multiplicity exactly
+once.
+\end{theorem}
+
+\begin{proof}
+The output on label $r$ is a translate of the common profile $e$ by
+$\log r$.  The inner product of the $r$ and $s$ translates is (2) at
+$\log(r/s)$.  Expanding the squared norm proves (3), and support of
+$\kappa_e$ gives the last assertion.
+\end{proof}
+
+\section{What the Witt moments do and do not control}
+
+For the depth-$k$ G39 word state put
+\begin{equation}
+ x_m^{(k)}=
+ \frac{\Lambda_k(m)}{\sqrt m(\log N)^k}.                     \tag{4}
+\end{equation}
+Substitution in (1) gives
+\begin{equation}
+ \boxed{
+ (\mathcal L_Nx^{(k)})_{a/b}
+ =\frac1{\sqrt{ab}(\log N)^k}
+ \sum_{d\le N/\max(a,b)}
+ \frac{\Lambda(bd)\Lambda_k(ad)}d.}                         \tag{5}
+\end{equation}
+
+\begin{corollary}[Shifted-correlation form of the missing mode ---
+\PROVED]
+The transported rational mode is governed by the shifted correlations in
+(5).  In contrast,
+\begin{align}
+ V_{N,k}&=\sum_{m\le N}\frac{\Lambda_k(m)^2}{m},\notag\\
+ H_{N,k}&=\frac{\Lambda_{2k}(N)}{\sqrt N}                    \tag{6}
+\end{align}
+control the diagonal norm and the divisor-reflection cross of the integer
+fiber.  Equations (6) do not algebraically determine the family (5) for
+$a\ne b$.
+\end{corollary}
+
+\begin{proof}
+Equation (5) is direct substitution.  The two quantities in (6) are,
+respectively, the diagonal Gram and the single multiplicative convolution
+at $N$.  The sums in (5) correlate two independently shifted arguments
+$ad$ and $bd$.  Varying $(a,b)$ changes these correlations while leaving
+the definitions in (6) unchanged; no Dirichlet-convolution identity turns
+all of (5) into (6).
+\end{proof}
+
+\section{The terminal cross-place inequality}
+
+Let $\mathcal E_{\Gamma T,N}(x,e)$ denote the explicit complete Gamma gap
+resistance of v121, including the two outer Tate states of v122 and without
+resetting internal states.  The remaining theorem is
+\begin{equation}
+ \boxed{
+ \sum_{k\ge1}
+ \|\mathrm{Leak}_N(x^{(k)}\otimes e)\|_2^2
+ \le \mathcal E_{\Gamma T,N}(e)
+ \quad\text{with the normalization required by the unit Schur budget}.}
+                                                                    \tag{7}
+\end{equation}
+By (3)--(5), (7) is a completely explicit inequality involving only
+$\Lambda$, $\Lambda_k$, the compact-cell autocorrelation $\kappa_e$, the
+Gamma parameters $a_j=2j+\frac12$, and the two Tate moments.  It contains
+no zero of $\xi$ and no inverse of the desired row-(d) operator.
+
+The local estimate v122 proves (7) on a single state cell.  The missing
+content is the uniform bound for the correlated family of reduced fractions
+in (3).  Once (7) is proved, v119--v122 give the shorted inverse-metric
+domination, hence (8c), condition $G$, and row (d).
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Aggregation on reduced rational labels & \PROVED & (1) \\
+Exact physical leakage Gram & \PROVED & (3) \\
+Exact G39-word leakage coefficients & \PROVED & (5) \\
+Uniform Gamma--Tate domination of the correlated leakage & \OPEN & (7) \\
+Contractivity (8c), condition $G$, row (d) & \OPEN & after (7) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

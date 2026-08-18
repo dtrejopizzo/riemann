@@ -183,7 +183,7 @@ Luego $N_{off}(T) \leq 1 + O((\log T)^{-1})$, i.e., $N_{off}(T) = O(1)$: finitos
 
 *Prueba.* Directa del Teorema 2: si $N_{off}(T) \to \infty$, la condición $(\dagger)$ falla — los ceros de $C_\infty^{off}$ son demasiado densos para estar en $\{\gamma_n\}$. Pero $(\dagger)$ es EQUIVALENTE a la inclusión inversa (Inc. Inv.) por el Lema 1. Y (Inc. Inv.) se combina con el Teorema 2 del Doc 19 para dar que los ceros de $C_\infty$ son exactamente $\{\gamma_n\}$, es decir RH (por Teorema 3 del Doc 19). Contradicción con $N_{off}(T)\to\infty$. $\square$
 
-**Honestidad.** El Corolario 2 es un resultado genuino pero NO prueba RH: no descarta que $\zeta$ tenga un número finito (pero positivo) de ceros fuera de la recta crítica. La hipótesis estándar de Backlund-Rosser (verificada computacionalmente hasta alturas enormes) dice que no hay NINGÚN cero fuera de la recta crítica, pero el Corolario 2 solo descarta infinitos.
+**Franqueza.** El Corolario 2 es un resultado genuino pero NO prueba RH: no descarta que $\zeta$ tenga un número finito (pero positivo) de ceros fuera de la recta crítica. La hipótesis estándar de Backlund-Rosser (verificada computacionalmente hasta alturas enormes) dice que no hay NINGÚN cero fuera de la recta crítica, pero el Corolario 2 solo descarta infinitos.
 
 ---
 
@@ -274,7 +274,7 @@ da el siguiente resultado condicional:
 
 *Si los ceros de $\zeta$ fuera de la recta crítica (si los hay) están en la región $1/2 < |\Re(\rho)-1/2| < 1/4$ (i.e., $\sigma \in (1/4, 3/4)$) y satisfacen la condición de ortogonalidad $(\dagger)$, entonces el número de tales ceros es finito y acotado uniformemente.*
 
-**Honestidad del resultado.** El Teorema 5 es un resultado débil: descarta INFINITOS ceros fuera de la recta crítica en ciertas regiones, pero no prueba que no haya NINGUNO. El gap central — la condición $(\dagger)$ para un número finito de ceros — permanece abierto.
+**Franqueza del resultado.** El Teorema 5 es un resultado débil: descarta INFINITOS ceros fuera de la recta crítica en ciertas regiones, pero no prueba que no haya NINGUNO. El gap central — la condición $(\dagger)$ para un número finito de ceros — permanece abierto.
 
 ---
 

@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{The two-contour Julia rotation and the physical plus port (v116)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{A non-circular zeroth-order swap}
+
+Let $U$ be a unitary translation on the ambient zero-extension line and put
+\[
+ J_-F=\frac{UF-F}{\sqrt2},
+ \qquad
+ J_+F=\frac{UF+F}{\sqrt2}.
+\]
+Use two independent contour copies and the source embedding
+\begin{equation}
+                         \mathbf JF=\binom{J_-F}{J_+F}.         \tag{1}
+\end{equation}
+For $0\le q\le1$, $d=(1-q^2)^{1/2}$, define the Julia rotation
+\begin{equation}
+ R_q=\begin{pmatrix}d&q\\q&-d\end{pmatrix},
+ \qquad R_q^*R_q=I.                                           \tag{2}
+\end{equation}
+
+\begin{theorem}[Two-contour resolution of the zeroth coefficient ---
+\PROVED]
+Writing
+\begin{equation}
+ \binom{O_+}{O_-}=R_q\binom{J_-F}{J_+F},                       \tag{3}
+\end{equation}
+one has, as $q\to1$ and $d\to0$,
+\begin{equation}
+                         O_+\longrightarrow J_+F,
+ \qquad                  O_-\longrightarrow J_-F.             \tag{4}
+\end{equation}
+Here $J_+$ is an independent second-contour input in (1); it is not defined
+as the desired output.  Thus (1)--(4) remove the zeroth-order objection of
+v114 at the doubled-contour level.
+\end{theorem}
+
+\begin{proof}
+Equation (2) follows by direct multiplication, and (4) follows from
+$R_q\to\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$.
+\end{proof}
+
+The cross inner product
+\begin{equation}
+ \langle J_-F,J_+F\rangle
+ =\frac12\bigl(\langle UF,F\rangle-\langle F,UF\rangle\bigr)  \tag{5}
+\end{equation}
+is purely imaginary.  Consequently
+\begin{align}
+ \|O_+\|^2&=d^2\|J_-F\|^2+q^2\|J_+F\|^2,\notag\\
+ \|O_-\|^2&=q^2\|J_-F\|^2+d^2\|J_+F\|^2.                    \tag{6}
+\end{align}
+
+\section{Hilbert defect versus Krein difference}
+
+Let $\mathfrak j=\operatorname{diag}(I,-I)$.  From (6),
+\begin{equation}
+ \langle R_q\mathbf JF,\mathfrak jR_q\mathbf JF\rangle
+ =(d^2-q^2)
+   \bigl(\|J_-F\|^2-\|J_+F\|^2\bigr).                        \tag{7}
+\end{equation}
+The physical signed prime contribution is proportional to
+\begin{equation}
+ \|J_-F\|^2-\|J_+F\|^2
+ =-\langle(S_a+S_{-a})F,F\rangle.                             \tag{8}
+\end{equation}
+
+\begin{theorem}[The doubled Julia cell is conservative in Hilbert space
+but signed in the physical reduction --- \PROVED]
+The total two-contour Hilbert energy is conserved:
+\begin{equation}
+                         \|O_+\|^2+\|O_-\|^2
+ =\|J_-F\|^2+\|J_+F\|^2.                                    \tag{9}
+\end{equation}
+Its physical first-order contribution (8), however, occurs in the Krein
+difference (7), not as the squared norm of a discarded Hilbert output.
+Therefore the two-contour swap alone does not prove the sign of (8).
+\end{theorem}
+
+\begin{proof}
+Equation (9) is unitarity of $R_q$.  Equations (7)--(8) show that selecting
+the physical signed contribution requires the fundamental symmetry
+$\mathfrak j$.  A Hilbert defect is nonnegative by construction, whereas
+the right side of (8) takes both signs on an overlapping translation
+channel.  Hence it cannot equal an isolated Hilbert defect before an
+additional cross-place restriction is imposed.
+\end{proof}
+
+This identifies the precise remaining role of the Gamma--Tate attachment.
+It would have to select a subspace
+\begin{equation}
+ \mathscr M_T\subset
+ \mathscr K_T^>\oplus\mathscr K_T^<\oplus
+ \mathscr K_{\Gamma,T}^{\rm aff}\oplus\mathbb C^2_{\rm Tate}              \tag{10}
+\end{equation}
+on which the conserved Krein form is nonnegative, while its physical
+pullback is exactly $P_TA_TP_T$.  But nonnegativity of this particular
+physical subspace is equivalent to its being the graph of a contraction,
+and hence equivalent to $G$ by the authoritative balanced factorization.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.56\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.19\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Independent two-contour source containing both $J_-$ and $J_+$ & \PROVED & (1) \\
+Correct zeroth-order swap & \PROVED & (2)--(4) \\
+Hilbert conservation of the doubled system & \PROVED & (9) \\
+Physical signed form is the Krein reduction & \PROVED & (7)--(8) \\
+Independent theorem making the physical subspace nonnegative & \OPEN & not supplied by the swap \\
+Condition $G$, row (d) & \OPEN & equivalent to that nonnegativity \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

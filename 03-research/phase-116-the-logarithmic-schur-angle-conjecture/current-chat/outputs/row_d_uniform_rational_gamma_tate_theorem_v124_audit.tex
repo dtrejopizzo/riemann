@@ -1,0 +1,289 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+\title{The uniform rational-leakage Gamma--Tate theorem (v124)}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The arithmetic leakage operator}
+
+Fix an integer $N\ge2$ and put
+\begin{equation}
+ T_N=\frac12\log N,
+ \qquad
+ \delta_N=\frac12\log\frac{N+1}{N},
+ \qquad
+ E_N=L^2(0,\delta_N).                                      \tag{1}
+\end{equation}
+Every element of $E_N$ is extended by zero to the real line.  Write
+$\Lambda_k=\Lambda^{*k}$ for the $k$-fold Dirichlet convolution of the
+von Mangoldt function.  For relatively prime positive integers $a,b$ with
+$b>1$ define
+\begin{equation}
+ \ell_{N,k}(a,b)
+ :=\frac1{\sqrt{ab}(\log N)^k}
+ \sum_{d\le N/\max(a,b)}
+       \frac{\Lambda(bd)\Lambda_k(ad)}d.                    \tag{2}
+\end{equation}
+The sum is empty when $\max(a,b)>N$.  Hence only the finite set
+\begin{equation}
+ \mathscr R_N^{\rm leak}
+ :=\{a/b:(a,b)=1,\ b>1,\ \max(a,b)\le N\}                 \tag{3}
+\end{equation}
+can occur.  Let $\tau_u$ denote translation on the zero-extension line,
+$(\tau_ue)(t)=e(t-u)$.  Define
+\begin{equation}
+ L_{N,k}e
+ :=\sum_{a/b\in\mathscr R_N^{\rm leak}}
+       \ell_{N,k}(a,b)\,\tau_{\log(a/b)}e,                 \tag{4}
+\end{equation}
+and give different word depths orthogonal output copies:
+\begin{equation}
+ \mathbf L_Ne:=\bigoplus_{k\ge1}L_{N,k}e.
+                                                                    \tag{5}
+\end{equation}
+For fixed $N$ only finitely many $k$ occur, because
+$\Lambda_k(m)=0$ for $k>\log m/\log2$.
+
+For $e\in E_N$ put
+\begin{equation}
+ \kappa_e(u):=\langle\tau_ue,e\rangle_{L^2(\mathbb R)}.    \tag{6}
+\end{equation}
+
+\begin{proposition}[Exact leakage form --- \PROVED]
+For every $e\in E_N$,
+\begin{align}
+ \|\mathbf L_Ne\|^2
+ ={}&\sum_{k\ge1}
+ \sum_{a/b,c/d\in\mathscr R_N^{\rm leak}}
+ \ell_{N,k}(a,b)\overline{\ell_{N,k}(c,d)}
+ \kappa_e\!\left(\log\frac{ad}{bc}\right).               \tag{7}
+\end{align}
+Thus (7) contains all coherent collisions between equal or nearby reduced
+fractions.  No orthogonality between overlapping rational cells is being
+assumed.
+\end{proposition}
+
+\begin{proof}
+Expand the squared norm of (4).  The inner product of the two translates
+labelled by $a/b$ and $c/d$ is (6) at
+$\log((a/b)/(c/d))=\log(ad/bc)$.  Summing the mutually orthogonal word
+depths gives (7).  This is exactly the aggregation formula of v123.
+\end{proof}
+
+\section{The unreset Gamma form and the two Tate terminals}
+
+Put
+\begin{equation}
+ a_j=2j+\frac12\qquad(j\ge0).                               \tag{8}
+\end{equation}
+For $f\in C_c^\infty(\mathbb R)$ let $z_{j,f}$ be the unique causal state
+\begin{equation}
+ z_{j,f}'=-a_jz_{j,f}+\sqrt{2a_j}\,f,
+ \qquad z_{j,f}(-\infty)=0.                                \tag{9}
+\end{equation}
+Define the complete unreset Gamma energy
+\begin{align}
+ \mathcal G_\Gamma[f]
+ &: =\sum_{j\ge0}\frac1{a_j^2}
+       \int_{\mathbb R}|z_{j,f}'(t)|^2\,dt                 \tag{10}\\
+ &=\int_{\mathbb R}g_\Gamma(\tau)|\widehat f(\tau)|^2
+       \frac{d\tau}{2\pi},\qquad
+ g_\Gamma(\tau)=
+ \sum_{j\ge0}\frac{2\tau^2}{a_j(a_j^2+\tau^2)}.          \tag{11}
+\end{align}
+Equation (9) is solved once on the whole line.  In particular, the state
+leaving one rational cell is the state entering the next one; (10) does
+not reset any state at an internal endpoint.
+
+For a compactly supported $f$ define its two Tate moments
+\begin{equation}
+ M_+(f)=\int_{\mathbb R}e^{t/2}f(t)\,dt,
+ \qquad
+ M_-(f)=\int_{\mathbb R}e^{-t/2}f(t)\,dt.                  \tag{12}
+\end{equation}
+If $I=(L,R)$ contains $\operatorname{supp}f$, the Gram of the two Tate
+vectors on $I$ is
+\begin{equation}
+ G_I=
+ \begin{pmatrix}
+ e^R-e^L&R-L\\
+ R-L&e^{-L}-e^{-R}
+ \end{pmatrix}.                                             \tag{13}
+\end{equation}
+It is strictly positive for $L<R$.  Set
+\begin{equation}
+ \mathcal T_I[f]
+ :=
+ \begin{pmatrix}\overline{M_+(f)}&\overline{M_-(f)}\end{pmatrix}
+ G_I^{-1}
+ \binom{M_+(f)}{M_-(f)}.                                   \tag{14}
+\end{equation}
+This is the squared norm of the orthogonal Tate component of $f$ in
+$L^2(I)$.  The interval $I$ must therefore be fixed before the estimate;
+one may not replace it cell by cell or reset the two terminal coordinates
+at internal endpoints.
+
+Fix one open interval containing the supports of all $L_{N,k}e$ when
+$e\in C_c^\infty(0,\delta_N)$.  Uniformly in the arithmetic of $N$, take
+\begin{equation}
+ I_N=\left(-\log N,\ \log\frac N2+\delta_N\right),          \tag{15}
+\end{equation}
+which contains every interval
+$\log(a/b)+(0,\delta_N)$ occurring in (4).  Define the Gamma--Tate form
+on the physical leakage column by
+\begin{equation}
+ \mathcal E_{\Gamma T,N}(e)
+ :=\sum_{k\ge1}
+ \left\{\mathcal G_\Gamma[L_{N,k}e]
+             +\mathcal T_{I_N}[L_{N,k}e]\right\}.           \tag{16}
+\end{equation}
+Its natural form domain is
+\begin{equation}
+ \mathscr D_N:=\{e\in E_N:\mathcal E_{\Gamma T,N}(e)<\infty\}.
+                                                                    \tag{17}
+\end{equation}
+The space $C_c^\infty(0,\delta_N)$ is contained in $\mathscr D_N$ and is
+dense in $E_N$.  Both sides of (16) are constructed from $\Lambda$,
+$\Lambda_k$, translations, the Gamma parameters (8), and the two Tate
+moments.  No zero of $\xi$ and no inverse of the desired row-(d) operator
+occurs.
+
+\section{Uniform rational-leakage Gamma--Tate domination}
+
+\begin{theorem}[URGT$_1$, exact unit form --- \OPEN]
+For every integer $N\ge2$ and every $e\in\mathscr D_N$,
+\begin{equation}
+ \boxed{
+        \|\mathbf L_Ne\|^2
+        \le \mathcal E_{\Gamma T,N}(e).}                  \tag{18}
+\end{equation}
+Equivalently, in the order of nonnegative closed quadratic forms on
+$E_N$,
+\begin{equation}
+ \boxed{
+        \mathbf L_N^*\mathbf L_N
+        \le \mathbf Q_{\Gamma T,N},}                       \tag{19}
+\end{equation}
+where $\mathbf Q_{\Gamma T,N}$ is the positive self-adjoint operator
+associated by the representation theorem to the closed form (16).
+The constant in (18)--(19) is exactly one and is independent of
+$N$, of the word depth, of the reduced rational labels, and of the cell
+profile $e$.
+\end{theorem}
+
+The theorem is deliberately stated on the aggregated physical output
+(4), not term by term in $(a,b)$.  Therefore it controls destructive and
+constructive interference alike.  It is also an all-depth assertion: the
+sum over $k$ is part of the operator, not an asymptotic remainder.
+
+\begin{proposition}[Completely expanded scalar form --- \PROVED]
+The statement URGT$_1$ is equivalent to the following single explicit
+inequality, valid for every $N\ge2$ and
+$e\in C_c^\infty(0,\delta_N)$:
+\begin{align}
+ &\sum_{k\ge1}
+ \sum_{a/b,c/d\in\mathscr R_N^{\rm leak}}
+ \ell_{N,k}(a,b)\overline{\ell_{N,k}(c,d)}
+ \kappa_e\!\left(\log\frac{ad}{bc}\right)                \notag\\
+ &\quad\le
+ \sum_{k\ge1}\int_{\mathbb R}g_\Gamma(\tau)
+     \left|
+       \widehat e(\tau)
+       \sum_{a/b\in\mathscr R_N^{\rm leak}}
+          \ell_{N,k}(a,b)e^{-i\tau\log(a/b)}
+     \right|^2\frac{d\tau}{2\pi}                         \notag\\
+ &\qquad+
+ \sum_{k\ge1}
+ \begin{pmatrix}\overline{M_+(L_{N,k}e)}&
+                 \overline{M_-(L_{N,k}e)}\end{pmatrix}
+ G_{I_N}^{-1}
+ \binom{M_+(L_{N,k}e)}{M_-(L_{N,k}e)}.                    \tag{20}
+\end{align}
+Closure of the two sides extends (20) from the test core to
+$\mathscr D_N$.
+\end{proposition}
+
+\begin{proof}
+The left side is (7).  Translation gives
+\[
+ \widehat{L_{N,k}e}(\tau)
+ =\widehat e(\tau)
+   \sum_{a/b}\ell_{N,k}(a,b)e^{-i\tau\log(a/b)}.
+\]
+Substitution in (11), followed by (12)--(16), gives the right side of
+(20).  Thus (18) and (20) agree on the dense test core.  The standard
+closure theorem for ordered nonnegative forms gives the equivalence with
+(19) and the extension to (17).
+\end{proof}
+
+\section{What proving URGT$_1$ would close}
+
+\begin{proposition}[Conditional logical cascade --- \PROVED]
+Assume URGT$_1$.  Assume also the already audited identifications of
+v117--v123: the G39 word column is the integral-label part of the physical
+Euler boundary current; (10) is the unreset Gamma resistance; and (14) is
+the conservative moving-Tate terminal.  Then the joint
+Gamma--Euler--Tate source map is contractive with the unit Schur
+normalization.  Consequently the shorted inverse-metric domination of
+v119--v121 holds on every arithmetic threshold cell.
+\end{proposition}
+
+\begin{proof}
+The physical Euler output decomposes orthogonally into its integral-label
+part and its nonintegral rational part.  The integral part is the G39 Witt
+current by v119.  The nonintegral part is exactly $\mathbf L_Ne$ by
+(2)--(5).  URGT$_1$ charges its complete Gram to the positive unreset
+Gamma--Tate form with coefficient one.  The moving-Tate column is
+isometric by v117, so no additional norm is created at the two exterior
+ports.  Orthogonal addition of the integral and leakage ports therefore
+gives the joint unit source contraction.  Shorting a passive source
+network preserves passivity, yielding the inverse-metric domination.
+\end{proof}
+
+The proposition fixes the exact role of (18).  It does not mark the final
+consequences as proved before (18) itself is proved.  In particular, the
+status is
+\[
+ \text{URGT$_1$}
+ \Longrightarrow \text{shorted domination}
+ \Longrightarrow (8c)
+ \Longrightarrow G40
+ \Longrightarrow G
+ \Longrightarrow \text{row (d)}.
+\]
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.57\linewidth}
+                >{\centering\arraybackslash}p{.14\linewidth}
+                >{\raggedright\arraybackslash}p{.19\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Exact aggregated leakage operator & \PROVED & (2)--(7) \\
+Unreset complete Gamma energy & \PROVED & (8)--(11), v121 \\
+Two-dimensional Tate terminal form & \PROVED & (12)--(16), v117--v122 \\
+Equivalence of operator and expanded forms & \PROVED & (18)--(20) \\
+Uniform unit domination URGT$_1$ & \OPEN & (18)/(20) \\
+Shorted domination, (8c), $G40$, $G$, row (d) & \OPEN & after URGT$_1$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Audit warning.}
+It would be circular to define $\mathbf Q_{\Gamma T,N}$ as
+$\mathbf L_N^*\mathbf L_N$ or to insert the desired positive Schur
+complement into (16).  Equations (8)--(16) define the right side before
+URGT$_1$ and entirely from source-labelled Gamma and Tate data.  The next
+step is a proof of (20), not a further reformulation of it.
+
+\end{document}

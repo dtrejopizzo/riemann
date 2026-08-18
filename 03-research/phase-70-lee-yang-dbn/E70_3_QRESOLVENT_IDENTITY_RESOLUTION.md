@@ -178,7 +178,7 @@ Still open and RH-equivalent:
 prove that the residue is zero for the actual terminal defect.
 ```
 
-Therefore I cannot honestly "solve" the q-resolvent identity without proving RH. The mathematically
+Therefore I cannot candidly "solve" the q-resolvent identity without proving RH. The mathematically
 correct resolution is that the identity is exactly the thing to be proved, not a separate mechanism
 that proves it.
 

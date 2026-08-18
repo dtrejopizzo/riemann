@@ -4,7 +4,7 @@
 **Fecha:** junio 2026
 **Autor:** David Alejandro Trejo Pizzo
 **Prerrequisitos:** Doc 110 (Teorema 4.3: imposibilidad en la clase ℱ; Prop. 4.5: contraejemplo de rango finito; axiomas L1–L6), Doc 113 (dicotomía de seminormas §5.4; Teorema 5.2; cadena Montel+B² §4; LP-113), Doc 102 (obstrucción de la órbita individual; Prop. 7.2; observable de Euler), Doc 112 (LP-112, Thm. 2.3, Prop. 2.6, Obs. 2.4), Doc 108 (dicotomía sub-resolución/resolución; Teoremas 3.3, 3.4; Prop. 2.3, 2.5), Doc 106 (identidad tensorial del índice), P43 (cuantificador maestro, valor/inercia).
-**Contrato creativo de la fase:** **[DEFINICIÓN-NUEVA]** = libertad total; **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad, prueba completa o estatus declarado línea por línea; **[PUENTE]** = conexión con ζ/RH con estatus honesto; **[DESEO]** = declarado como deseo. Ninguna prueba se fabrica; todo insumo externo o interno se cita; los GAPs se marcan.
+**Contrato creativo de la fase:** **[DEFINICIÓN-NUEVA]** = libertad total; **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad, prueba completa o estatus declarado línea por línea; **[PUENTE]** = conexión con ζ/RH con estatus franco; **[DESEO]** = declarado como deseo. Ninguna prueba se fabrica; todo insumo externo o interno se cita; los GAPs se marcan.
 
 ---
 
@@ -363,7 +363,7 @@ vale, *entonces* la dicotomía es completa.
 $$\mathrm{RH} \iff \lim_{k\to\infty} \sigma^{(k)}(\mathcal{S}^*) = 0
 \iff \lim_k \sigma^{(k)} \neq \tfrac12.$$
 
-**Rastreo honesto de la transmutación.** Comparemos con el inventario del
+**Rastreo franco de la transmutación.** Comparemos con el inventario del
 cuantificador maestro (P43, Principio 3.1) coordenada por coordenada:
 
 1. *Lo que era:* certificar RH vía índices exigía una cota uniforme estándar
@@ -557,7 +557,7 @@ están en ningún disco. ∎
 
 ### 3.4. [PUENTE] Transmutación: el crecimiento sube un nivel de derivada
 
-Lo que el objeto da sobre ζ, con el rastreo honesto:
+Lo que el objeto da sobre ζ, con el rastreo franco:
 
 1. **El no-go queda genuinamente violado** (Thm. 3.4): la dicotomía de seminormas
    no era el muro — era un teorema sobre la categoría equivocada. Esto corrige el
@@ -766,7 +766,7 @@ mismo anclaje aplicado al punto base — declaramos (ii) incluyendo τ = 0). Lue
 sup_D |ζ(s+iτ_k) − ζ(s)| → 0: LP-112. La conclusión m ∈ {0,∞} es D112 Thm. 2.3
 (Rouché con constantes congeladas). ∎
 
-**Observación 4.9 (honestidad sobre el Teorema 4.8).** El teorema es un
+**Observación 4.9 (franqueza sobre el Teorema 4.8).** El teorema es un
 condicional puro y se enuncia para CONTABILIZAR, no para celebrar: muestra que el
 par (i)+(ii) es exactamente suficiente, y el puente de abajo muestra que el muro
 viejo se reparte exactamente entre (i) y (ii).

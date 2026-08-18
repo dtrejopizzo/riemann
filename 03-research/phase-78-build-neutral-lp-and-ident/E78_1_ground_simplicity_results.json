@@ -1,0 +1,59 @@
+{
+  "run": "2026-07-18",
+  "probe_files": [
+    "E78_1_ground_simplicity_probe.py",
+    "E78_1b_low_spectrum_probe.py",
+    "E78_1c_gap_confirm_probe.py"
+  ],
+  "infrastructure": "P76_002_mp_entry_audit.build_mp (zeta build + planted falsifier), verbatim",
+  "planted": ["14.134725141734693790", "0.30", "5.0"],
+  "lambda": 6,
+  "dps": {"E78_1": 70, "E78_1b": 90, "E78_1c": 70},
+
+  "parity_symmetry": {
+    "claim": "entry(-m,-n) == entry(m,n), so H_L commutes with J:(Jv)_n=v_{-n}",
+    "status": "proved algebraically; spectrum splits even/odd"
+  },
+
+  "offdiagonal_sign_census": {
+    "note": "count of positive/negative/zero strictly-upper off-diagonal entries; gauge_balanced = exists diagonal D in {+-1} with all off-diagonals of DHD of one sign",
+    "zeta":  [{"N":4,"pos":36,"neg":0,"balanced":false},
+              {"N":6,"pos":78,"neg":0,"balanced":false},
+              {"N":8,"pos":136,"neg":0,"balanced":false},
+              {"N":10,"pos":206,"neg":4,"balanced":false}],
+    "plant": [{"N":4,"pos":32,"neg":4,"balanced":false},
+              {"N":6,"pos":40,"neg":38,"balanced":false},
+              {"N":8,"pos":71,"neg":65,"balanced":false},
+              {"N":10,"pos":139,"neg":71,"balanced":false}],
+    "reading": "zeta off-diagonals essentially all POSITIVE (wrong sign for bottom-state Perron-Frobenius, and a uniformly-positive off-diagonal pattern on >=3 modes is not gauge-reducible to nonpositive); plant off-diagonals genuinely MIXED sign. Neither build admits the PF sign structure."
+  },
+
+  "parity_resolved_low_spectrum": {
+    "note": "lowest eigenvalues of even and odd sectors, dps=90 (E78.1b)",
+    "zeta": {
+      "even0": {"6":"5.68e-23","8":"3.68e-28","10":"8.93e-33","12":"2.40e-37","14":"1.71e-41"},
+      "odd0":  {"6":"2.74e-20","8":"2.65e-25","10":"7.87e-30","12":"2.24e-34","14":"2.16e-38"},
+      "even1": {"6":"3.80e-18","8":"1.09e-22","10":"3.57e-27","12":"1.41e-31","14":"1.30e-35"},
+      "reading": "ALL low eigenvalues (both sectors, multiple indices) collapse geometrically toward 0. mu_L=inf spec -> 0; ground gap vanishes."
+    },
+    "plant": {
+      "even0": {"6":"-0.12008954","8":"-0.72043013","10":"-1.643986","12":"-1.7094594","14":"-1.7241457"},
+      "odd0":  {"6":"-0.09732395","8":"-0.50259469","10":"-1.4642943","12":"-1.5639954","14":"-1.5873388"},
+      "reading": "even-sector ground converges to an isolated NEGATIVE eigenvalue ~ -1.73; odd-sector ground ~ -1.59; both isolated with an order-one gap. mu_L simple and isolated for the plant."
+    }
+  },
+
+  "ground_gap_dichotomy": {
+    "note": "global ground gap g_N = (2nd smallest) - (smallest) and g_N/g_{N-2} (E78.1c, dps=70)",
+    "zeta":  [{"N":12,"gap":"2.237e-34"},{"N":14,"gap":"2.162e-38","ratio":"9.66e-5"},{"N":16,"gap":"2.118e-42","ratio":"9.80e-5"}],
+    "plant": [{"N":12,"gap":"0.14546"},{"N":14,"gap":"0.13681","ratio":"0.9405"},{"N":16,"gap":"0.11333","ratio":"0.8284"}],
+    "reading": "zeta ground gap collapses GEOMETRICALLY (ratio ~1e-4 per 2 modes); plant ground gap is ORDER-ONE stable (ratio ~0.85). ~4 orders of magnitude difference in collapse rate -- robust, matches E77.7f N<=18 data."
+  },
+
+  "conclusions": {
+    "PF_mechanism": "DEAD for both builds: no diagonal +-1 gauge makes B_L single-signed; zeta off-diagonals are uniformly positive (wrong sign), plant mixed. The planner's Perron-Frobenius route to item 4 does not exist.",
+    "item4_build_neutrality": "REFUTED as posed. 'dim E_L=1 with isolation/gap at mu_L' is build-DISCRIMINATING: it holds cleanly for the plant (isolated simple ground state) and degenerates for zeta (ground gap -> 0). Simplicity is not the build-neutral object subclause (e) requires.",
+    "detector_status": "The discriminating quantity is the ground-state gap at mu_L, which by E77.7f equals the LP/BTG divergence signature (gap->0 <=> S_N->infinity <=> Weyl contraction). Being order-one build-discriminating, it is a DETECTOR under the E77.7az / E72.16 gate, not an admissible forcing mechanism.",
+    "flag_for_review": "The plant's order-one-stable ground gap means S_N(mu_L^plant) need not diverge at the plant's OWN mu_L -- Outcome-B-flavored evidence. Presented as data for Fable-5; not a unilateral overturn of the settled E77.7az gate."
+  }
+}

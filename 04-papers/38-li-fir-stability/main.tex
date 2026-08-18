@@ -1,0 +1,1131 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.12in]{geometry}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage[final,expansion=false]{microtype}
+\setlength{\parskip}{4pt plus 1pt}
+\emergencystretch=2.5em
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Open closure problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\C}{\mathbb C}
+\newcommand{\D}{\mathbb D}
+\newcommand{\N}{\mathbb N}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\rad}{rad}
+
+\title[The Li sequence as a sampled control system]
+{The Li Sequence as a Sampled Control System:\\
+FIR Window Stability, Off-Line Modes, and the Arithmetic Closure Problem}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+\begin{document}
+
+\begin{abstract}
+We formulate the Li--Keiper sequence of the Riemann zeta function as the
+sampled output of a discrete-time spectral system. Under the Cayley map
+\[
+ w_\rho=1-\rho^{-1},
+\]
+a zero on the critical line becomes a unit-circle mode, while a zero to the
+right becomes an unstable mode \(w_\rho^{-n}\). The symmetric zero orbit has
+the exact response
+\[
+ 4-4\cosh(na_\rho)\cos(n\theta_\rho).
+\]
+Permanent cancellation of an unstable mode by the remaining zeros is
+impossible: the exponential rate of the full Li sequence is the reciprocal
+of the smallest modulus of an interior Cayley pole.
+
+For every fixed moving-window length \(L\), the output
+\[
+ Y_L(N)=\sum_{j=0}^{L-1}\lambda_{N+j}
+\]
+is subexponential if and only if RH holds. More strongly, RH is equivalent
+to eventual nonnegativity of every sliding output \(Y_L(N)\). Repeated
+window averaging is a cascade of FIR filters
+\(H_L(z)=1+\cdots+z^{L-1}\). Since all zeros of \(H_L\) lie on the unit
+circle, no such cascade can cancel an off-line mode. We also construct an
+adjacent-window bank with no blind spot:
+\[
+ |H_L(z)|^2+|H_{L+1}(z)|^2\ge \tfrac12|z|^{2L}.
+\]
+
+The signal representation lifts exactly to the ordinary von Mangoldt
+weights. A sliding window collapses the prime--Laguerre kernel to
+\[
+ L_{N+L-2}^{(2)}(x)-L_{N-2}^{(2)}(x).
+\]
+Nested linear averages remain FIR filters and therefore detect, but do not
+bound, every unstable mode. A rational off-line quartet proves that a
+signed block average may be negative while a pointwise exponential
+violation occurs inside the same block. For the deterministic blocks
+
+\[
+ I_L=\{L^2,\ldots,L^2+L-1\},
+\]
+
+we prove that the \(L^2\)-th root of
+\(1+\sum_{n\in I_L}|\lambda_n|\) converges exactly to the largest Cayley
+modulus of a zeta zero. The remaining arithmetic task is a
+one-sided dissipativity estimate for the complete prime--pole output, or a
+nonlinear positive-part estimate. We state that estimate exactly. It is not
+proved here; accordingly this paper does not claim a proof of RH. Its
+contribution is a rigorous signals-and-systems architecture, exact RH
+criteria, and a precise identification of the plant-specific inequality
+still missing for the literal weights \(\Lambda(m)\). A lossless prefix
+compression reduces the absolute block problem from all \(2^L\) sign
+selectors to only \(L\) differences of two Laguerre boundary degrees.
+\end{abstract}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+The Riemann Hypothesis is usually presented as a geometric statement about
+the zero set of \(\zeta(s)\): every nontrivial zero should lie on
+\(\Re s=1/2\). The equivalent Li criterion replaces this infinite geometry
+by the sign of a sampled sequence \((\lambda_n)_{n\ge1}\). That replacement
+suggests a third language, familiar from electrical engineering.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.35\textwidth}
+                >{\raggedright\arraybackslash}p{0.50\textwidth}}
+\toprule
+Discrete-time signals and control & Zeta/Li object\\
+\midrule
+sample number & Li degree \(n\)\\
+complex modal frequency & \(w_\rho=1-\rho^{-1}\)\\
+unit-circle mode & zero with \(\Re\rho=1/2\)\\
+unstable mode & zero with \(\Re\rho>1/2\)\\
+sampled plant output & \(\lambda_n\)\\
+FIR moving window & \(\sum_{j=0}^{L-1}\lambda_{N+j}\)\\
+spectral radius test & \(\limsup|\lambda_n|^{1/n}\)\\
+one-sided dissipativity & eventual positivity of a window output\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The fundamental point is the exact identity
+\[
+ \left|1-\frac1\rho\right|^2
+ =1+\frac{1-2\Re\rho}{|\rho|^2}.
+\]
+The critical line maps to the unit circle. A zero to the right maps inside
+the circle, and the coefficient sequence sees its reciprocal, an unstable
+mode. In this language RH asks whether the zeta plant is marginally stable:
+polynomial growth is allowed, but a fixed exponential rate is not.
+
+The formulation separates two tasks. The zero-side task is to prove that an
+off-line zero creates an unstable output and cannot be hidden forever by
+modal interference. We complete it in Sections~\ref{sec:modes}
+and~\ref{sec:global-modes}. The
+arithmetic-side task is to prove, from the literal weights \(\Lambda(m)\),
+that a suitable filtered output is subexponential or one-sided dissipative.
+We derive its exact kernel in Section~\ref{sec:arithmetic}. That second
+estimate remains open.
+
+This distinction is essential. Computation of finitely many critical zeros
+tests the response of known unit-circle modes, but does not control an
+unknown unstable mode above the verified height. Conversely, an FIR filter
+can be proved to detect every unstable mode without thereby proving that the
+actual plant has none. Detection and exclusion are separate steps.
+
+\section{Li coefficients and the Cayley plant}
+\label{sec:modes}
+
+Let
+\[
+ \xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)
+\]
+be the completed Riemann function. The Li coefficients are given by
+\[
+ \lambda_n=\sum_\rho\left\{1-\left(1-\frac1\rho\right)^n\right\},
+                                                        \tag{2.1}
+\]
+with the standard symmetric interpretation of the zero sum. Equivalently,
+\[
+ G(z):=z\frac{d}{dz}\log\xi\!\left(\frac1{1-z}\right)
+      =\sum_{n\ge1}\lambda_nz^n.                         \tag{2.2}
+\]
+
+\begin{lemma}[Cayley modulus]
+For \(\rho=\beta+i\gamma\) and \(w_\rho=1-\rho^{-1}\),
+\[
+ |w_\rho|^2=1+\frac{1-2\beta}{|\rho|^2}.                 \tag{2.3}
+\]
+Thus \(|w_\rho|=1\) exactly on the critical line and
+\(|w_\rho|<1\) exactly when \(\beta>1/2\).
+\end{lemma}
+
+\begin{proof}
+Direct expansion gives
+\[
+ |w_\rho|^2
+ =\frac{(\beta-1)^2+\gamma^2}{\beta^2+\gamma^2}
+ =1+\frac{1-2\beta}{\beta^2+\gamma^2}.
+\]
+\end{proof}
+
+\section{FIR windows and filtered Li outputs}
+
+For a finite real impulse response
+\[
+ h=(h_0,\ldots,h_{L-1}),
+\]
+define
+\[
+ H_h(z)=\sum_{j=0}^{L-1}h_jz^j,\qquad
+ Y_h(N)=\sum_{j=0}^{L-1}h_j\lambda_{N+j}.                \tag{3.1}
+\]
+This is a forward-index convention. A mode \(w^{-n}\) is multiplied by
+\(H_h(w^{-1})\).
+
+\begin{theorem}[No-cancellation FIR criterion]
+\label{thm:fir-general}
+Assume that \(H_h(z)\ne0\) for every \(|z|>1\). Then
+\[
+ \RH\quad\Longleftrightarrow\quad
+ \limsup_{N\to\infty}|Y_h(N)|^{1/N}\le1.                 \tag{3.2}
+\]
+\end{theorem}
+
+\begin{proof}
+Under RH, \(Y_h(N)=O_h(N\log N)\). If RH is false, insert
+\((2.10)\) into \((3.1)\):
+\[
+ Y_h(N)
+ =-\sum_{|w|=r_0}m_ww^{-N}H_h(w^{-1})+O_h(r_1^{-N}).
+                                                        \tag{3.3}
+\]
+Every multiplier in the dominant sum is nonzero. After equal phases are
+grouped, the same mean-square argument as in Theorem~\ref{thm:rate} shows
+that the dominant trigonometric polynomial is nonzero. Thus the left side
+of \((3.2)\) equals \(r_0^{-1}>1\).
+\end{proof}
+
+\subsection{Moving averages}
+
+The unnormalised moving-window filter is
+\[
+ H_L(z)=1+z+\cdots+z^{L-1}=\frac{1-z^L}{1-z}.            \tag{3.4}
+\]
+Its zeros are the nontrivial \(L\)-th roots of unity, so it has no zero
+outside the unit circle.
+
+\begin{corollary}[Sliding-window stability criterion]
+\label{cor:window-stability}
+For each fixed \(L\ge1\), put
+\[
+ Y_L(N)=\sum_{j=0}^{L-1}\lambda_{N+j}.                   \tag{3.5}
+\]
+Then
+\[
+ \boxed{\RH\quad\Longleftrightarrow\quad
+ \limsup_{N\to\infty}|Y_L(N)|^{1/N}\le1.}                \tag{3.6}
+\]
+\end{corollary}
+
+This criterion does not require every sample \(\lambda_n\) to have a fixed
+sign. It asks only that one FIR output have no unstable exponential rate.
+
+\subsection{Cascades and averages of averages}
+
+Suppose a window output is averaged again, with lengths
+\(L_1,\ldots,L_k\). The resulting transfer function is
+\[
+ H_{\boldsymbol L}(z)=\prod_{\nu=1}^kH_{L_\nu}(z).       \tag{3.7}
+\]
+All its zeros remain on the unit circle.
+
+\begin{corollary}[Cascade invariance]
+\label{cor:cascade}
+Every finite cascade of moving averages satisfies
+\[
+ \RH\quad\Longleftrightarrow\quad
+ \limsup_{N\to\infty}|Y_{\boldsymbol L}(N)|^{1/N}\le1.
+                                                        \tag{3.8}
+\]
+No finite number of linear window averages can stabilize or erase an
+off-line mode.
+\end{corollary}
+
+\begin{remark}
+This proves the useful part of averaging windows and then averaging those
+averages. The cascade remains a valid detector. It does not prove that the
+detector output is subexponential for the actual prime weights. A filter
+transfer identity is not a plant estimate.
+\end{remark}
+
+\section{One-sided window dissipativity}
+
+Subexponential stability is bilateral. A one-sided sign condition is
+sometimes more compatible with arithmetic positivity.
+
+\begin{theorem}[Eventual moving-window positivity]
+\label{thm:window-positive}
+For every fixed \(L\ge1\), the following are equivalent:
+\begin{enumerate}
+\item RH;
+\item there exists \(N_0\) such that
+      \[
+        Y_L(N)=\sum_{j=0}^{L-1}\lambda_{N+j}\ge0
+        \qquad(N\ge N_0).                                \tag{4.1}
+      \]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Under RH, Li's criterion gives \(\lambda_n\ge0\) for every \(n\), hence
+\((4.1)\).
+
+If RH is false, formula \((3.3)\) with \(H_h=H_L\) has a nonzero dominant
+real trigonometric polynomial and exponential factor \(r_0^{-N}\). Every
+frequency in the polynomial is nontrivial: a nontrivial zeta zero has
+nonzero ordinate, so its Cayley phase is not zero modulo \(2\pi\). On the
+compact orbit closure the dominant polynomial has Haar mean zero. Since it
+is not identically zero, it takes both signs. Minimality on the orbit
+closure supplies infinitely many, in fact syndetically many, returns to
+each strict sign region. Consequently \(Y_L(N)\) has negative exponential
+excursions and cannot satisfy \((4.1)\).
+\end{proof}
+
+\begin{remark}
+The quantifier for every sufficiently large sliding position is essential.
+The existence of some positive long windows does not exclude an off-line
+mode: the same unstable sinusoid also has positive phases.
+\end{remark}
+
+\section{An adjacent-window filter bank with no blind spot}
+
+A single moving average may annihilate a unit-circle frequency. That is not
+dangerous for detecting off-line modes, but it obscures the total
+oscillatory content. Two adjacent window lengths remove this blind spot.
+
+\begin{proposition}[Adjacent-bank coercivity]
+\label{prop:bank}
+For every \(z\in\C\) and \(L\ge1\),
+\[
+ H_{L+1}(z)-H_L(z)=z^L,                                  \tag{5.1}
+\]
+and
+\[
+ \boxed{
+ |H_L(z)|^2+|H_{L+1}(z)|^2
+ \ge\frac12|z|^{2L}.}                                    \tag{5.2}
+\]
+\end{proposition}
+
+\begin{proof}
+Identity \((5.1)\) is immediate. Since
+\[
+ |b-a|^2\le2(|a|^2+|b|^2),
+\]
+take \(a=H_L(z)\), \(b=H_{L+1}(z)\) and use \((5.1)\).
+\end{proof}
+
+Define the two-channel energy
+\[
+ \mathcal E_L(N)=|Y_L(N)|^2+|Y_{L+1}(N)|^2.              \tag{5.3}
+\]
+
+\begin{corollary}[Two-channel energy criterion]
+\label{cor:energy}
+For every fixed \(L\ge1\),
+\[
+ \RH\quad\Longleftrightarrow\quad
+ \limsup_{N\to\infty}\mathcal E_L(N)^{1/(2N)}\le1.
+                                                        \tag{5.4}
+\]
+\end{corollary}
+
+\begin{proof}
+Under RH both channels have polynomial growth. If RH is false,
+Theorem~\ref{thm:rate} and \((5.2)\) show that the dominant off-line modal
+vector cannot vanish in both channels. Its exponential rate is
+\(r_0^{-1}>1\).
+\end{proof}
+
+Inequality \((5.2)\) is a genuine observability inequality. It solves the
+phase-blindness problem of a single window bank. It does not solve the
+arithmetic upper-bound problem for \(\mathcal E_L(N)\).
+
+\section{Global modal analysis}
+\label{sec:global-modes}
+
+The functional equation and conjugation complete a noncritical zero to
+\[
+ \rho,\quad\overline\rho,\quad1-\rho,\quad1-\overline\rho.
+                                                        \tag{2.4}
+\]
+Their Cayley images are
+\[
+ w,\quad\overline w,\quad\overline w^{-1},\quad w^{-1}.
+                                                        \tag{2.5}
+\]
+
+\begin{theorem}[Exact quartet response]
+\label{thm:quartet}
+Suppose \(\Re\rho>1/2\), and write
+\[
+ w_\rho=e^{-a+i\theta},\qquad a>0.
+\]
+The contribution of the orbit \((2.4)\) to \(\lambda_n\) is
+\[
+ Q_n(\rho)=4-4\cosh(na)\cos(n\theta).                    \tag{2.6}
+\]
+It has exponentially large excursions. On the critical line the orbit
+coalesces into a conjugate pair whose contribution is
+\[
+ 2-2\cos(n\theta)\in[0,4].                               \tag{2.7}
+\]
+\end{theorem}
+
+\begin{proof}
+Using \((2.5)\),
+\[
+\begin{aligned}
+ Q_n(\rho)
+ &=4-\{w^n+\overline w^n+w^{-n}+\overline w^{-n}\}\\
+ &=4-2(e^{-na}+e^{na})\cos(n\theta),
+\end{aligned}
+\]
+which is \((2.6)\). Returns of \(n\theta\) to a fixed neighbourhood of zero
+give \(\cos(n\theta)\ge1/2\) infinitely often, and then
+\[
+ Q_n(\rho)\le4-e^{na}.
+\]
+For irrational rotation these returns are syndetic; for rational rotation
+they are periodic. If \(a=0\), the formal quartet is twice the actual
+conjugate pair, giving \((2.7)\).
+\end{proof}
+
+\begin{theorem}[Global exponential rate]
+\label{thm:rate}
+If RH is false, define
+\[
+ r_0=\min_{\Re\rho>1/2}\left|1-\frac1\rho\right|<1.
+                                                        \tag{2.8}
+\]
+Then
+\[
+ \limsup_{n\to\infty}|\lambda_n|^{1/n}=r_0^{-1}>1.       \tag{2.9}
+\]
+More precisely, for some \(r_1\in(r_0,1)\),
+\[
+ \lambda_n=-r_0^{-n}P(n)+O(r_1^{-n}),                   \tag{2.10}
+\]
+where \(P\) is a nonzero finite real trigonometric polynomial.
+\end{theorem}
+
+\begin{proof}
+The substitution \(s=(1-z)^{-1}\) maps \(\mathbb D\) onto
+\(\Re s>1/2\). A zero \(\rho\) of multiplicity \(m_\rho\) produces in
+\((2.2)\) a simple pole at \(w_\rho\), with
+\[
+ \Res_{z=w_\rho}G(z)=m_\rho w_\rho\ne0.                  \tag{2.11}
+\]
+The minimum in \((2.8)\) exists because \(|w_\rho|\to1\) as
+\(|\Im\rho|\to\infty\). Therefore the radius of convergence of \((2.2)\)
+is \(r_0\), and Cauchy--Hadamard proves \((2.9)\).
+
+There are finitely many poles on \(|z|=r_0\). Subtract their principal
+parts and continue to a circle of radius \(r_1>r_0\) before the next pole.
+Coefficient extraction gives
+\[
+ \lambda_n=-\sum_{|w|=r_0}m_ww^{-n}+O(r_1^{-n}),
+\]
+which is \((2.10)\). Grouping equal phases, the Cesaro mean square of
+\(P(n)\) equals the sum of the squares of its nonzero grouped coefficients.
+Hence \(P\) is bounded away from zero on an infinite subsequence.
+\end{proof}
+
+\begin{corollary}[Two-sided syndetic excursions]
+\label{cor:two-sided}
+If RH is false, there exist \(c>0\), \(R>1\), and two syndetic sets
+\(D_+,D_-\subset\mathbb N\) such that, for every sufficiently large index
+in the respective set,
+\[
+ \lambda_n\ge cR^n\quad(n\in D_+),\qquad
+ \lambda_n\le-cR^n\quad(n\in D_-).                       \tag{2.12a}
+\]
+\end{corollary}
+
+\begin{proof}
+In \((2.10)\), restrict the dominant real trigonometric polynomial to the
+compact closure of its phase orbit. Its Haar mean is zero and it is not
+identically zero, so it has two nonempty strict sign regions. Return times
+to either open region are syndetic by minimality of the orbit rotation.
+The smaller-radius remainder is absorbed after increasing the starting
+index.
+\end{proof}
+
+\begin{corollary}[Marginal-stability criterion]
+\label{cor:raw-stability}
+\[
+ \RH\quad\Longleftrightarrow\quad
+ \limsup_{n\to\infty}|\lambda_n|^{1/n}\le1.              \tag{2.12}
+\]
+\end{corollary}
+
+\begin{proof}
+The reverse implication is Theorem~\ref{thm:rate}. Under RH, the standard
+Li asymptotic gives \(\lambda_n=O(n\log n)\).
+\end{proof}
+
+\section{Exact lift to the ordinary prime weights}
+\label{sec:arithmetic}
+
+We now express the FIR output before passing to zeros. Let
+\[
+ A_n
+ =1-\frac n2\{\gamma+\log(4\pi)\}
+  +\sum_{\substack{\ell\ge1\\ \ell\ {\rm odd}}}
+   \left\{\left(1-\frac1\ell\right)^n-1+\frac n\ell\right\}
+                                                        \tag{6.1}
+\]
+be the archimedean Li block. For \(\eps>0\), define
+\[
+\begin{aligned}
+ p_n(\eps)
+ &=n\sum_{j=1}^n\binom{n-1}{j-1}
+       \frac{(-1)^{j-1}}{j\eps^j},\\
+ Q_{n,\eps}
+ &=\sum_{m\ge2}\frac{\Lambda(m)}{m^{1+\eps}}
+       L_{n-1}^{(1)}(\log m),\\
+ \lambda_{n,\eps}
+ &=A_n+p_n(\eps)-Q_{n,\eps}.
+\end{aligned}                                            \tag{6.2}
+\]
+The complete prime--pole cancellation gives
+\[
+ \lambda_n=\lim_{\eps\downarrow0}\lambda_{n,\eps}.
+                                                        \tag{6.3}
+\]
+
+\begin{lemma}[Laguerre window collapse]
+\label{lem:lag-window}
+For \(N\ge2\) and \(L\ge1\),
+\[
+ \sum_{j=0}^{L-1}L_{N+j-1}^{(1)}(x)
+ =L_{N+L-2}^{(2)}(x)-L_{N-2}^{(2)}(x).                  \tag{6.4}
+\]
+\end{lemma}
+
+\begin{proof}
+Use
+\[
+ \sum_{k=0}^{M}L_k^{(\alpha)}(x)=L_M^{(\alpha+1)}(x)
+\]
+at \(M=N+L-2\) and \(M=N-2\), and subtract.
+\end{proof}
+
+Set
+\[
+\begin{aligned}
+ A_{N,L}&=\sum_{j=0}^{L-1}A_{N+j},\\
+ p_{N,L}(\eps)&=\sum_{j=0}^{L-1}p_{N+j}(\eps),\\
+ K_{N,L}(x)&=L_{N+L-2}^{(2)}(x)-L_{N-2}^{(2)}(x).
+\end{aligned}                                            \tag{6.5}
+\]
+
+\begin{theorem}[Prime--Laguerre FIR identity]
+\label{thm:prime-fir}
+For every fixed \(N\ge2\) and \(L\ge1\),
+\[
+\boxed{
+ Y_L(N)=\lim_{\eps\downarrow0}
+ \left[
+ A_{N,L}+p_{N,L}(\eps)
+ -\sum_{m\ge2}\frac{\Lambda(m)}{m^{1+\eps}}
+        K_{N,L}(\log m)
+ \right].}                                              \tag{6.6}
+\]
+All primes, prime powers, the pole and the archimedean block remain coupled
+until after the FIR operation.
+\end{theorem}
+
+\begin{proof}
+Sum \((6.2)\) over \(n=N,\ldots,N+L-1\), use
+Lemma~\ref{lem:lag-window}, and then apply \((6.3)\).
+\end{proof}
+
+\begin{corollary}[Exact arithmetic window criterion]
+\label{cor:arithmetic-window}
+For every fixed \(L\ge1\), RH is equivalent to the existence of \(N_0\)
+such that, for all \(N\ge N_0\),
+\[
+ \lim_{\eps\downarrow0}
+ \left[
+ A_{N,L}+p_{N,L}(\eps)
+ -\sum_{m\ge2}\frac{\Lambda(m)}{m^{1+\eps}}
+        K_{N,L}(\log m)
+ \right]\ge0.                                           \tag{6.7}
+\]
+\end{corollary}
+
+\section{Why repeated linear averaging does not close the estimate}
+
+The moving average improves phase variation and retains all unstable modes.
+These are useful facts, but neither determines the sign of \((6.6)\).
+
+\subsection{A rational off-line control}
+
+Let
+\[
+ w=\frac{4i}{5},\qquad
+ \rho=\frac1{1-w}=\frac{25+20i}{41}.                    \tag{7.1}
+\]
+Then \(\Re\rho>1/2\) and \(|w|=4/5\). Its quartet contribution is
+\[
+ q_n=4-2\Re(w^n+w^{-n})
+ =\begin{cases}
+ 4-2\{(5/4)^n+(4/5)^n\},&n\equiv0\pmod4,\\
+ 4+2\{(5/4)^n+(4/5)^n\},&n\equiv2\pmod4,\\
+ 4,&n\ {\rm odd}.
+ \end{cases}                                            \tag{7.2}
+\]
+Every four consecutive sufficiently late samples contain a positive
+exponential violation. Nevertheless, for blocks aligned at \(4K+1\),
+\[
+ \sum_{n=4K+1}^{4K+4M}q_n\longrightarrow-\infty
+ \qquad(K\to\infty)                                     \tag{7.3}
+\]
+for each fixed \(M\ge1\). Thus a signed mean can have the desired upper
+sign while hiding a bad sample in every four positions.
+
+\begin{proposition}[Linear-cascade limitation]
+\label{prop:linear-limit}
+No inference from the sign or boundedness of a signed linear block mean to
+a pointwise block barrier is valid on the class of symmetric zero orbits.
+Repeating the average does not repair the inference: it only replaces
+\(H_L\) by a product of moving-average polynomials, and the off-line mode
+survives by Corollary~\ref{cor:cascade}.
+\end{proposition}
+
+The control \((7.1)\) is not claimed to arise from the ordinary Euler
+product. It falsifies a signal-processing inference, not the desired
+arithmetic inequality.
+
+\subsection{Energy also needs an upper bound}
+
+Squaring a filter-bank output prevents sign cancellation:
+\(\mathcal E_L(N)\ge0\). But nonnegativity is the wrong orientation. To
+exclude an unstable mode one needs an upper bound
+\[
+ \mathcal E_L(N)\le e^{o(N)}.                            \tag{7.4}
+\]
+After insertion of \((6.6)\), this square contains separately divergent
+prime and polar channels. Expanding them before the Abel limit destroys the
+cancellation that defines \(\lambda_n\). Parseval gives an exact detector,
+but not estimate \((7.4)\).
+
+\section{Robust nonlinear statistics of the modal growth rate}
+\label{sec:robust}
+
+The raw values \(\lambda_n\) are signed and may differ by exponential
+factors, so robust estimators should not be applied to them directly. The
+scale-invariant sample is
+\[
+ a_n:=\frac1n\log(1+|\lambda_n|)\ge0.                    \tag{8.1}
+\]
+Critical behaviour means \(a_n\to0\). An off-line mode gives
+\(a_n\ge c>0\) on a syndetic set.
+
+\subsection{Why fixed trimming and the median are blind}
+
+The syndetic excursion set in Corollary~\ref{cor:two-sided} has positive
+density, but there is no universal positive lower bound for that density
+over all possible phase systems. A median discards every exceptional set
+of density below \(1/2\). A trimmed mean that removes a fixed fraction
+\(\tau>0\) of the largest observations can likewise remove an off-line
+excursion set whose density is smaller than \(\tau\).
+
+The correct robust operation is a vanishing trim. Let
+\[
+ I_L=\{L^2,L^2+1,\ldots,L^2+L-1\},                       \tag{8.2}
+\]
+and write the corresponding samples in increasing order,
+\[
+ a_{L,(1)}\le\cdots\le a_{L,(L)}.
+\]
+Choose integers \(k_L=o(L)\), and define
+\[
+\begin{aligned}
+ \operatorname{TM}_L
+   &=\frac1{L-k_L}\sum_{j=1}^{L-k_L}a_{L,(j)},\\
+ \operatorname{Q}_L
+   &=a_{L,(L-k_L)}.
+\end{aligned}                                            \tag{8.3}
+\]
+
+\begin{theorem}[Vanishing-trim criterion]
+\label{thm:trim}
+For every sequence \(k_L=o(L)\),
+\[
+ \boxed{
+ \RH\Longleftrightarrow
+ \operatorname{TM}_L\longrightarrow0
+ \Longleftrightarrow
+ \operatorname{Q}_L\longrightarrow0.}                   \tag{8.4}
+\]
+\end{theorem}
+
+\begin{proof}
+Under RH, \(\lambda_n=O(n\log n)\), hence
+\[
+ \max_{n\in I_L}a_n\longrightarrow0.
+\]
+Both statistics therefore tend to zero.
+
+If RH is false, Corollary~\ref{cor:two-sided} supplies \(c>0\), \(R>1\)
+and a syndetic set \(D\) on which \(|\lambda_n|\ge cR^n\). If \(G\) is a
+gap bound for \(D\), then every sufficiently large interval of length
+\(L\) contains at least \(L/G-O(1)\) members of \(D\). On those members,
+\[
+ a_n\ge\frac12\log R
+\]
+for all sufficiently large \(n\). Since \(k_L=o(L)\), deleting the
+\(k_L\) largest samples leaves at least \(L/G-o(L)\) such observations.
+Consequently
+\[
+ \liminf_L\operatorname{Q}_L\ge\frac12\log R,\qquad
+ \liminf_L\operatorname{TM}_L\ge\frac1{2G}\log R>0.
+\]
+\end{proof}
+
+\subsection{A geometric-mean criterion}
+
+Define the geometric mean of the per-sample growth factors by
+\[
+ \operatorname{GM}_L
+ =\left\{\prod_{n\in I_L}(1+|\lambda_n|)^{1/n}\right\}^{1/L}.
+                                                               \tag{8.5}
+\]
+Its logarithm is \(L^{-1}\sum_{n\in I_L}a_n\).
+
+\begin{corollary}[Geometric growth criterion]
+\label{cor:geom}
+\[
+ \boxed{\RH\Longleftrightarrow\operatorname{GM}_L\to1.} \tag{8.6}
+\]
+\end{corollary}
+
+\begin{proof}
+Under RH the maximum of the \(a_n\) on \(I_L\) tends to zero. Under
+non-RH, the syndetic set used in Theorem~\ref{thm:trim} contributes a
+positive lower density of samples with \(a_n\ge\frac12\log R\). Thus
+\(\liminf\log\operatorname{GM}_L>0\).
+\end{proof}
+
+\subsection{Exact block spectral radius}
+
+The robust statistic above has a sharper unlogged form. Put
+
+\[
+ S_L=\sum_{n=L^2}^{L^2+L-1}|\lambda_n|,
+ \qquad
+ \mathcal R_\zeta
+ =\max\left\{1,\max_\rho\left|1-\frac1\rho\right|\right\}.
+                                                               \tag{8.7}
+\]
+
+If an off-line zero exists, the maximum is attained because the Cayley
+moduli tend to one with the zero height.
+
+\begin{theorem}[Block spectral-radius identity]
+\label{thm:block-radius}
+\[
+ \boxed{
+ \lim_{L\to\infty}(1+S_L)^{1/L^2}=\mathcal R_\zeta.}    \tag{8.8}
+\]
+In particular,
+\[
+ \boxed{
+ \RH\quad\Longleftrightarrow\quad
+ \log(1+S_L)=o(L^2).}                                   \tag{8.9}
+\]
+\end{theorem}
+
+\begin{proof}
+Under RH, the estimate in the proof of
+Corollary~\ref{cor:raw-stability} can be obtained directly by splitting the
+critical zeros at height \(n\):
+\[
+ \lambda_n
+ \le4N(n)+n^2\sum_{\gamma>n}\gamma^{-2}
+ \ll n\log(n+2).
+\]
+Thus \(S_L\ll L^3\log(L+2)\), which gives the value one in (8.8).
+
+Suppose RH is false. Use the notation of Theorem~\ref{thm:rate}, so that
+\[
+ \lambda_n=-R^nP(n)+O(R_1^n),
+ \qquad R=r_0^{-1}>R_1,
+\]
+where, after equal phases have been grouped,
+\[
+ P(n)=\sum_{j=1}^dM_ju_j^n,\qquad |u_j|=1,\quad u_j\ne u_k.
+\]
+Uniformly in the initial index \(N\), finite geometric summation gives
+\[
+ \sum_{n=N}^{N+L-1}|P(n)|^2
+ =L\sum_jM_j^2+O_P(1).                                  \tag{8.10}
+\]
+Hence every sufficiently long block contains an \(n\) for which
+\(|P(n)|\ge c_P>0\). Taking \(N=L^2\), the smaller exponential in the
+remainder is absorbed and
+\[
+ cR^{L^2}\le S_L\le CL R^{L^2+L}.                       \tag{8.11}
+\]
+It follows that \(L^{-2}\log S_L\to\log R\). Functional symmetry pairs
+the innermost Cayley pole with the largest reciprocal modulus, so
+\(R=\mathcal R_\zeta\). This proves (8.8)--(8.9).
+\end{proof}
+
+\begin{remark}
+Winsorisation with a fixed clipping fraction has the same blindness as
+fixed trimming. A harmonic mean is dominated by samples near zero and can
+miss an unstable oscillatory mode. Poisson, negative-binomial and Bayesian
+count models require stochastic assumptions not supplied by the zeta
+problem. The deterministic compact-group return theorem, rather than an
+independence model, is the relevant substitute.
+\end{remark}
+
+\section{The nonlinear closure problem}
+
+There are two exact versions of the missing estimate.
+
+\subsection{One-sided dissipativity for a fixed FIR output}
+
+The cleanest signals-and-systems target is
+\[
+ Y_L(N)\ge0\quad(N\ge N_0).                              \tag{9.1}
+\]
+It is weaker than coefficientwise Li positivity because individual
+\(\lambda_n\) may be negative and be compensated inside the moving window.
+It is nevertheless equivalent to RH because the FIR transfer has no zero
+off the unit circle.
+
+\subsection{Positive-part supply on growing blocks}
+
+For a growing interval \(I=[N,N+M-1]\), define
+\[
+ \mathcal S(I)=\sum_{n\in I}(\lambda_n-e^{\sqrt n})_+.
+                                                        \tag{9.2}
+\]
+The pointwise upper barrier holds on \(I\) exactly when
+\(\mathcal S(I)=0\). Its arithmetic representation is
+\[
+\begin{aligned}
+\mathcal S(I)
+=\lim_{\eps\downarrow0}\sum_{n\in I}
+\bigg(
+ A_n+p_n(\eps)
+ -\sum_{m\ge2}\frac{\Lambda(m)}{m^{1+\eps}}
+       L_{n-1}^{(1)}(\log m)
+ -e^{\sqrt n}
+\bigg)_+ .
+\end{aligned}                                            \tag{9.3}
+\]
+The positive part is taken only after pole, Gamma, primes and all prime
+powers have been combined.
+
+\subsection{Absolute-block selector}
+
+The block norm in Theorem~\ref{thm:block-radius} also has a literal-prime
+form which keeps the two divergent channels coupled. Define
+\[
+ d\nu_\eps(u)
+ =e^{-\eps u}\,du
+ -\sum_{m\ge2}\frac{\Lambda(m)}{m^{1+\eps}}
+       \delta_{\log m}(du),                              \tag{9.4}
+\]
+and, for \(\sigma\in[-1,1]^L\),
+\[
+ P_{\sigma,L}(u)
+ =\sum_{j=0}^{L-1}\sigma_jL_{L^2+j-1}^{(1)}(u).         \tag{9.5}
+\]
+Since
+\[
+ p_n(\eps)=\int_0^\infty e^{-\eps u}L_{n-1}^{(1)}(u)\,du,
+\]
+finite-dimensional \(\ell^1\)--\(\ell^\infty\) duality gives
+\[
+\boxed{
+ S_L=\lim_{\eps\downarrow0}\sup_{\sigma\in[-1,1]^L}
+ \left\{
+ \sum_{j=0}^{L-1}\sigma_jA_{L^2+j}
+ +\int_0^\infty P_{\sigma,L}(u)\,d\nu_\eps(u)
+ \right\}.}                                             \tag{9.6}
+\]
+The interchange is legitimate because the block is finite: the difference
+between the two suprema is at most
+\(\sum_{j<L}|\lambda_{L^2+j,\eps}-\lambda_{L^2+j}|\).
+Consequently, the direct ordinary-prime closure corresponding to (8.9) is
+\[
+ \log\!\left[1+\lim_{\eps\downarrow0}
+ \sup_{\sigma\in[-1,1]^L}
+ \left\{
+ \sum_{j<L}\sigma_jA_{L^2+j}
+ +\int P_{\sigma,L}\,d\nu_\eps
+ \right\}\right]=o(L^2).                               \tag{9.7}
+\]
+By Theorem~\ref{thm:block-radius}, (9.7) is exactly equivalent to RH.
+It is not inferred by placing separate moduli on the continuum and prime
+parts of (9.4).
+
+\subsection{Lossless prefix compression}
+
+Put \(N=L^2\) and
+\[
+ T_{L,j}=\sum_{r=0}^{j}\lambda_{N+r},\qquad
+ M_L=\max_{0\le j<L}|T_{L,j}|.                          \tag{9.8}
+\]
+
+\begin{proposition}[Prefix compression]
+\label{prop:prefix-compression}
+For every \(L\ge1\),
+\[
+ \boxed{M_L\le S_L\le(2L-1)M_L.}                       \tag{9.9}
+\]
+Consequently
+\[
+ \boxed{\RH\Longleftrightarrow\log(1+M_L)=o(L^2).}     \tag{9.10}
+\]
+\end{proposition}
+
+\begin{proof}
+The first inequality is the triangle inequality. Conversely, if
+\(x_r=\lambda_{N+r}\), then \(x_0=T_{L,0}\) and
+\(x_r=T_{L,r}-T_{L,r-1}\) for \(r\ge1\). Hence
+\[
+ \sum_{r<L}|x_r|
+ \le |T_{L,0}|+\sum_{r=1}^{L-1}
+ (|T_{L,r}|+|T_{L,r-1}|)
+ \le(2L-1)M_L.
+\]
+Since \(\log(2L-1)=o(L^2)\), (9.10) follows from
+Theorem~\ref{thm:block-radius}.
+\end{proof}
+
+This elementary compression has a useful exact arithmetic consequence.
+Define
+\[
+ \Delta(u)=\gamma-u+\sum_{m\le e^u}\frac{\Lambda(m)}m,
+ \qquad
+ H_{N,j}(u)=L_{N+j-2}^{(3)}(u)-L_{N-3}^{(3)}(u).        \tag{9.11}
+\]
+Abel summation of the coupled measure (9.4), followed by
+\[
+ \sum_{r=0}^{j}L_{N+r-1}^{(1)}
+ =L_{N+j-1}^{(2)}-L_{N-2}^{(2)},                        \tag{9.12}
+\]
+gives
+\[
+\begin{split}
+ T_{L,j}={}&\sum_{r=0}^{j}A_{N+r}
+ +\gamma\left\{
+ \binom{N+j+1}{2}-\binom N2\right\}\\
+ &-\int_0^\infty H_{N,j}(u)\Delta(u)\,du.
+\end{split}                                               \tag{9.13}
+\]
+The two explicit terms are \(\exp\{o(N)\}\), uniformly for
+\(j<L=\sqrt N\). Therefore the remaining ordinary-prime estimate is
+precisely
+\[
+ \boxed{
+ \log\!\left(1+\max_{0\le j<L}\left|
+ \int_0^\infty
+ \bigl(L_{L^2+j-2}^{(3)}-L_{L^2-3}^{(3)}\bigr)(u)
+ \left(\gamma-u+\sum_{m\le e^u}\frac{\Lambda(m)}m\right)du
+ \right|\right)=o(L^2).}                                \tag{9.14}
+\]
+By (9.10)--(9.13), (9.14) is equivalent to RH.  Its advantage over
+(9.7) is combinatorial rather than logical: only \(L\) two-boundary
+kernels remain.  No estimate for (9.14) is asserted here.
+
+\begin{problem}[Arithmetic dissipativity]
+\label{prob:closure}
+Prove one of the following directly for the ordinary von Mangoldt weights:
+\begin{enumerate}
+\item for one fixed \(L\), inequality \((9.1)\) holds for all sufficiently
+      large \(N\);
+\item there exist consecutive intervals \(I_k\), with
+      \(|I_k|\to\infty\), such that \(\mathcal S(I_k)=0\);
+\item for one fixed \(L\), the adjacent-bank energy satisfies
+      \(\mathcal E_L(N)\le e^{o(N)}\).
+\end{enumerate}
+Each assertion proves RH.
+\end{problem}
+
+Indeed, item 1 closes by Theorem~\ref{thm:window-positive}, and item 3 by
+Corollary~\ref{cor:energy}. For item 2, if RH were false then
+Corollary~\ref{cor:two-sided} would provide a syndetic set \(D_+\) on
+which \(\lambda_n\ge cR^n\). Eventually \(cR^n>e^{\sqrt n}\), and every
+sufficiently long interval would meet \(D_+\); hence its supply
+\(\mathcal S(I)\) would be strictly positive. This contradicts the
+existence of zero-supply intervals of unbounded length.
+
+The three targets encode unstable-mode exclusion with different
+nonlinearities: a half-space, a positive-part supply, and an energy upper
+bound. The first is closest to classical dissipativity; the second is the
+weakest pointwise block formulation; the third is phase blind.
+
+\section{Status table}
+
+The results separate observability from stability.
+
+\begin{center}
+\begin{tabular}{p{0.30\textwidth}p{0.17\textwidth}p{0.36\textwidth}}
+\toprule
+Statement & Status & Meaning\\
+\midrule
+Off-line quartet has exponential envelope & proved & unstable mode exists\\
+Other zeros cannot cancel it forever & proved & global observability\\
+Moving averages preserve it & proved & FIR detector has no off-unit zero\\
+Adjacent windows have no common blind spot & proved & quantitative observability\\
+Vanishing-trim and geometric-rate criteria & proved & robust nonlinear detection\\
+Exact absolute-block spectral radius & proved & block rate equals largest Cayley modulus\\
+Prime--Laguerre window identity & proved & exact arithmetic realization\\
+Signed average implies a good pointwise block & false & rational quartet witness\\
+Ordinary-prime FIR output is subexponential & open & stability estimate\\
+Ordinary-prime FIR output is eventually nonnegative & open & one-sided dissipativity\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The fact that all computed zeros are critical validates the marginally
+stable response over the verified spectral range. It does not prove the
+last two rows. Similarly, the exact decomposition into primes, pole and
+Gamma factor identifies every component of the plant, but a decomposition
+does not provide the signed upper estimate needed to establish stability.
+
+\section{Reproducibility}
+
+The companion script
+\begin{center}
+\path{03-research/phase-105-a1-geometry-and-deep-limit/tools/}\
+\path{fir_window_bank_check.py}
+\end{center}
+uses exact rational arithmetic for the Laguerre degree-sum identity and
+checks the FIR identities, the adjacent-bank inequality, survival of an
+off-unit mode through a cascade, and the rational signed-average witness.
+It is run from the repository root with
+\begin{center}
+\texttt{python3}\
+\path{03-research/phase-105-a1-geometry-and-deep-limit/tools/fir_window_bank_check.py}.
+\end{center}
+These computations audit algebraic identities; the analytic proofs are the
+arguments in the preceding sections.
+
+\section{Conclusion}
+
+The Cayley transform makes the signals-and-systems content of the Li
+criterion exact. Critical zeros are unit-circle modes. Off-line zeros are
+unstable modes. The Li coefficients are the sampled output. Moving windows
+are FIR filters. Repeated averaging is a filter cascade. A pair of adjacent
+windows is an observable filter bank with the quantitative lower bound
+\((5.2)\).
+
+For every fixed \(L\),
+\[
+ \RH\iff
+ \limsup_N\left|\sum_{j=0}^{L-1}\lambda_{N+j}\right|^{1/N}
+ \le1,
+\]
+and also
+\[
+ \RH\iff
+ \sum_{j=0}^{L-1}\lambda_{N+j}\ge0
+ \quad\hbox{for every sufficiently large }N.
+\]
+The corresponding prime-side output uses one difference of two Laguerre
+polynomials of parameter \(2\).
+
+The remaining issue is not whether the filter detects an off-line zero; it
+does. It is whether the literal arithmetic plant satisfies a subexponential
+upper bound or a one-sided supply inequality. Repeated linear averaging
+alone cannot prove that bound, and a quadratic detector still requires an
+upper estimate after exact prime--pole cancellation.
+Problem~\ref{prob:closure} records the closure in three control-theoretic
+forms. Solving any one of them would complete a proof of RH.
+
+\begin{thebibliography}{99}
+
+\bibitem{Titchmarsh}
+E.~C.~Titchmarsh,
+\emph{The Theory of the Riemann Zeta-Function}, 2nd ed.,
+revised by D.~R.~Heath-Brown, Oxford University Press, 1986.
+
+\bibitem{Keiper}
+J.~B.~Keiper,
+\emph{Power series expansions of Riemann's \(\xi\) function},
+Math. Comp. \textbf{58} (1992), 765--773.
+
+\bibitem{Li}
+X.-J.~Li,
+\emph{The positivity of a sequence of numbers and the Riemann hypothesis},
+J. Number Theory \textbf{65} (1997), 325--333.
+
+\bibitem{BombieriLagarias}
+E.~Bombieri and J.~C.~Lagarias,
+\emph{Complements to Li's criterion for the Riemann hypothesis},
+J. Number Theory \textbf{77} (1999), 274--287.
+
+\bibitem{Lagarias}
+J.~C.~Lagarias,
+\emph{Li coefficients for automorphic \(L\)-functions},
+Ann. Inst. Fourier (Grenoble) \textbf{57} (2007), 1689--1740.
+
+\bibitem{Coffey}
+M.~W.~Coffey,
+\emph{Toward verification of the Riemann hypothesis: application of the
+Li criterion},
+Math. Phys. Anal. Geom. \textbf{8} (2005), 211--255.
+
+\bibitem{Szego}
+G.~Szeg\H{o},
+\emph{Orthogonal Polynomials}, 4th ed.,
+American Mathematical Society, 1975.
+
+\bibitem{Oppenheim}
+A.~V.~Oppenheim and R.~W.~Schafer,
+\emph{Discrete-Time Signal Processing}, 3rd ed.,
+Pearson, 2010.
+
+\bibitem{Kailath}
+T.~Kailath,
+\emph{Linear Systems},
+Prentice--Hall, 1980.
+
+\bibitem{ZhouDoyleGlover}
+K.~Zhou, J.~C.~Doyle, and K.~Glover,
+\emph{Robust and Optimal Control},
+Prentice--Hall, 1996.
+
+\end{thebibliography}
+
+\end{document}

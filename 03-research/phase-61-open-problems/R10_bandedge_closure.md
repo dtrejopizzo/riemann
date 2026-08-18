@@ -75,7 +75,7 @@ requiere redactar (1)–(3) — análisis estándar e incondicional, **nuestro, 
 
 ---
 
-## CORRECCIÓN HONESTA (2026-06-25, posterior) — el Lema 1 NO es RH-neutral
+## CORRECCIÓN FRANCA (2026-06-25, posterior) — el Lema 1 NO es RH-neutral
 
 Al **intentar probar el Lema 1** (acotación) en vez de solo verificarlo, descompuse la entrada:
 `A_ij = (∫e^{-u/2}q_ij − WR_ij)[acotado] − (PRIME − PRIME_smooth)_ij[fluctuación de CEROS]`.

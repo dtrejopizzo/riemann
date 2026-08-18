@@ -1,0 +1,39 @@
+{
+  "scope": "T=log(2) full Hilbert-space endpoint",
+  "full_space_endpoint": true,
+  "global_row_d": false,
+  "paper_touched": false,
+  "python_flint_path": "/tmp/d61-flint",
+  "interval_cells": 2000,
+  "interval_width": "0.01",
+  "bounds": {
+    "even_projected_high_gap": "0.5",
+    "odd_projected_complement_gap": "0.05",
+    "high_Q_alpha_lower": "1.5396358725647215",
+    "PQ_beta_square_upper": "0.000365731341571119",
+    "even_rayleigh_defect_upper": "0.000001746475",
+    "even_total_residual_square_upper": "4.441e-24",
+    "even_complement_gap": "0.0015",
+    "capacity_deficit_lower": "1.27084620358308",
+    "capacity_threshold_upper": "1.2111",
+    "odd_rayleigh_lower": "0.00000813856175479",
+    "odd_total_residual_square_upper": "9.741e-22"
+  },
+  "sha256": {
+    "114_d_84_log2_degree23_projected_gap_arb_verify.py": "0fa04adb160afd46d459e474644c1fe1752473c837406c1317a19d2099108a95",
+    "114_d_85_fixed_vector_analytic_verify.py": "238cf3eb19221972bc1c1ce3d7521c2d1217f6eaa1ec40d08546cf9e246ccda7",
+    "114_d_85_capacity_arb_prototype.py": "4c31b74cc80a8859156e5eef76d7238fff94d31be34b2a3471a359c6bb4730b8",
+    "114_d_85_two_level_endpoint_budget_verify.py": "cef4ef7f410999d78e5ce0b982c6a6001b941a4d0fa82c543e5a8d836ea96c0b",
+    "114_d_85_LOG2_FULL_SPACE_ENDPOINT_CERTIFICATE.md": "cc1b5d6f2923c7abe1ab2c0bd63b75cce3ed498d1c6e8ea87d059bf17db722bb"
+  },
+  "directed_runs": [
+    "D84_DEG=9 D84_HIGH_GAP=1 PYTHONPATH=/tmp/d61-flint python3 114_d_84_log2_degree23_projected_gap_arb_verify.py",
+    "D84_DEG=9 D84_ODD_GAP=1 PYTHONPATH=/tmp/d61-flint python3 114_d_84_log2_degree23_projected_gap_arb_verify.py",
+    "PYTHONPATH=/tmp/d61-flint python3 114_d_85_fixed_vector_analytic_verify.py",
+    "D85_VECTOR=2 PYTHONPATH=/tmp/d61-flint python3 114_d_85_fixed_vector_analytic_verify.py",
+    "D85_VECTOR=odd PYTHONPATH=/tmp/d61-flint python3 114_d_85_fixed_vector_analytic_verify.py",
+    "D85_GENERIC_BOUNDS=1 PYTHONPATH=/tmp/d61-flint python3 114_d_85_fixed_vector_analytic_verify.py",
+    "PYTHONPATH=/tmp/d61-flint python3 114_d_85_capacity_arb_prototype.py",
+    "python3 114_d_85_two_level_endpoint_budget_verify.py"
+  ]
+}

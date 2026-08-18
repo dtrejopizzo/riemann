@@ -1,0 +1,99 @@
+{
+  "statement": "E79.58 ray-amplitude vs primitive edge observables",
+  "sources": [
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_56_ray_amplitude_autopsy_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_3F_edge_profile_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_3G_edge_budget_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_3I_effective_edge_width_results.json"
+  ],
+  "rows": [
+    {
+      "N": 8,
+      "abs_rho": 0.0331799142465018,
+      "common_total": 0.0038856850916,
+      "edge0_N2": 0.0260257314065,
+      "edge1_N2": 0.0430304564892,
+      "edge2_N2": 0.0426426585376,
+      "N_abs_common": 0.0310854807328,
+      "m90": 7,
+      "m90_over_N": 0.875,
+      "avg_N2_shell_90": 0.0347381452591,
+      "peak_N2_shell_90": 0.0430304564892,
+      "effective_width_90": 5.65104432193,
+      "effective_over_N_90": 0.706380540242
+    },
+    {
+      "N": 10,
+      "abs_rho": 0.038684833336302744,
+      "common_total": 0.00281226360364,
+      "edge0_N2": 0.0236687582612,
+      "edge1_N2": 0.0390001849989,
+      "edge2_N2": 0.0396270439931,
+      "N_abs_common": 0.0281226360364,
+      "m90": 8,
+      "m90_over_N": 0.8,
+      "avg_N2_shell_90": 0.0327560467539,
+      "peak_N2_shell_90": 0.0456332013677,
+      "effective_width_90": 5.74249375844,
+      "effective_over_N_90": 0.574249375844
+    },
+    {
+      "N": 12,
+      "abs_rho": 0.027682487754282833,
+      "common_total": 0.00246967255598,
+      "edge0_N2": 0.0228640972298,
+      "edge1_N2": 0.035995766072,
+      "edge2_N2": 0.0384675087224,
+      "N_abs_common": 0.0296360706718,
+      "m90": 9,
+      "m90_over_N": 0.75,
+      "avg_N2_shell_90": 0.0376696575887,
+      "peak_N2_shell_90": 0.0483224887166,
+      "effective_width_90": 7.01592420637,
+      "effective_over_N_90": 0.584660350531
+    },
+    {
+      "N": 14,
+      "abs_rho": 0.03546470265657091,
+      "common_total": 0.00195712828482,
+      "edge0_N2": 0.0202641377702,
+      "edge1_N2": 0.0351319937749,
+      "edge2_N2": 0.0370754561486,
+      "N_abs_common": 0.0273997959875,
+      "m90": 10,
+      "m90_over_N": 0.714285714286,
+      "avg_N2_shell_90": 0.035522323623,
+      "peak_N2_shell_90": 0.0452562102971,
+      "effective_width_90": 7.84916001359,
+      "effective_over_N_90": 0.560654286685
+    },
+    {
+      "N": 16,
+      "abs_rho": 0.03183731099877623,
+      "common_total": 0.00181877881651,
+      "edge0_N2": 0.018860391851,
+      "edge1_N2": 0.0319073765427,
+      "edge2_N2": 0.0342820868364,
+      "N_abs_common": 0.0291004610642,
+      "m90": 11,
+      "m90_over_N": 0.6875,
+      "avg_N2_shell_90": 0.038208291083,
+      "peak_N2_shell_90": 0.0478297116905,
+      "effective_width_90": 8.78724096504,
+      "effective_over_N_90": 0.549202560315
+    }
+  ],
+  "correlations_against_abs_rho": {
+    "common_total": 0.10865855118092571,
+    "edge0_N2": 0.09396233431990958,
+    "edge1_N2": 0.27639424074588603,
+    "edge2_N2": 0.17476536378904176,
+    "N_abs_common": -0.5224845999918696,
+    "m90": -0.22751860565015516,
+    "m90_over_N": 0.21538703991794933,
+    "avg_N2_shell_90": -0.8463621784444295,
+    "peak_N2_shell_90": -0.540679339166465,
+    "effective_width_90": -0.33684036174405013,
+    "effective_over_N_90": -0.07117520082194596
+  }
+}

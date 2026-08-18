@@ -72,7 +72,7 @@ This independently re-derives the program's standing Phase-4 finding — *the wa
 correlation* (the relative form bound / RFB) — now from the negative-direction side: the obstacle
 to `κ=0` sits in the sub-spacing structure, exactly the pair-correlation regime.
 
-## 4. Honest landing for Camino 2
+## 4. Candid landing for Camino 2
 
 - **Step 1** gave a precise portrait of the negative directions (shallow, imaginary-mode,
   `γ`-localized, near-orthogonal).
@@ -80,7 +80,7 @@ to `κ=0` sits in the sub-spacing structure, exactly the pair-correlation regime
   sees them; the only protection is the global `A_∞ − P` = the Weil criterion = **CAP**, localized
   to the **sub-spacing / pair-correlation** regime.
 
-So Camino 2 — the direct attack on `κ` — **did not escape CAP**. It did something honestly useful:
+So Camino 2 — the direct attack on `κ` — **did not escape CAP**. It did something candidly useful:
 it *localized* the obstacle with new precision (the negative directions are sub-spacing packets,
 invisible to local arithmetic, constrained only by the fine pair-correlation balance of `A_∞ − P`).
 This is consistent with, and sharpens, the standing CAP/RFB map. We report it as what it is: not a
@@ -92,7 +92,7 @@ crossing, a sharper portrait of the wall.
 - The handle, if any, is **global and in the pair-correlation regime** — i.e. the same RFB the
   program already identified as RH-conditional. No new non-CAP handle emerged.
 
-## 5. Next — honest options (no pretending the wall moved)
+## 5. Next — candid options (no pretending the wall moved)
 
 Per the strategic review and this result:
 1. **Consolidate (P29).** The Phase-17 symmetry-vs-positivity dichotomy plus this localization
@@ -106,7 +106,7 @@ Per the strategic review and this result:
    locally unprotected and CAP-bound. Further sub-steps would re-derive pair correlation.
 
 We do **not** recommend continuing to push Camino 2 toward `κ=0`: step 2 shows that road is the
-pair-correlation wall again. The honest move is to bank the portrait (P29) and open Camino 3.
+pair-correlation wall again. The candid move is to bank the portrait (P29) and open Camino 3.
 
 ---
 

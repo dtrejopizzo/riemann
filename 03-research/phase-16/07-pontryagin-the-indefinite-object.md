@@ -5,7 +5,7 @@ The geometric hunt converges. The indefinite object that carries the off-line in
 surface provably cannot supply (P22; the unified $\beta$-blind/definite negative) — **is the de Branges/Pontryagin
 space $H(E_\xi)$**, with Frobenius $=$ multiplication-by-$z$ (spectrum $=$ the zeros) and $\kappa=$ Pontryagin index
 $=$ off-line count. We demonstrate it genuinely detects off-line zeros (where every modular-surface pairing failed).
-It is the canonical Hilbert--P\'olya object (already the subject of P16). The catch is honest: $\kappa$-detection is
+It is the canonical Hilbert--P\'olya object (already the subject of P16). The catch is candid: $\kappa$-detection is
 by construction; proving $\kappa=0$ is RH, and equals the de Branges positivity $=$ the program's wrong-sign capstone.
 
 ---
@@ -33,7 +33,7 @@ So $H(E)$ is the indefinite object with the correct $\kappa$ — in sharp contra
 hunt's conclusion: **the indefinite Hilbert--P\'olya object is $H(E_\xi)$**, and the modular surface failed precisely
 because its $L^2$/symplectic pairings are definite and cannot be $H(E_\xi)$.
 
-## The honest catch — and the wall
+## The candid catch — and the wall
 $\kappa$-detection is **by construction**: $K_w(w)$ is built from $E_\xi$, whose zeros *are* the spectrum. Knowing
 $K_w(w)\ge0$ (i.e. $\kappa=0$, RH) requires an **independent** reason the zeros are on-line — which is RH itself.
 Concretely, $K_w(w)\ge0$ for all $w$ is equivalent to the Weil positivity / $Q\succeq0$ (the de Branges and Weil
@@ -44,7 +44,7 @@ canonical-system positivity**, for which:
   positive unconditionally; the full positivity is RH) $=$ the Laguerre--P\'olya/Jensen hyperbolicity of P13/P20 $=$
   the **wrong-sign capstone** (CAP).
 
-## Status (honest, and the convergence)
+## Status (candid, and the convergence)
 - **Found (the hunt's payoff):** the indefinite object is $H(E_\xi)$ — Pontryagin space, $\kappa=$ off-line count,
   Frobenius $=$ mult-by-$z$, spectrum $=$ zeros. It genuinely detects $\kappa$ (demonstrated). This *is* the
   Hilbert--P\'olya indefinite structure; the modular surface could not be it (P22). The object is **not missing** — it

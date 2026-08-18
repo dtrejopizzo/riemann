@@ -3,7 +3,7 @@
 **The path past the wall.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
 A genuinely novel synthesis — not another reformulation, a *mechanism to force the sign*. High-risk,
 principled, and it unifies the entire program (the Kreĭn $J$, the anatomy $R_p$, Conjecture B2, the validated
-engine) into one attack. Honest odds for full RH: $<1\%$; but every sub-step is a real result, and the route
+engine) into one attack. Candid odds for full RH: $<1\%$; but every sub-step is a real result, and the route
 is one no one has assembled.
 
 ---
@@ -89,7 +89,7 @@ RH." The whole program's discriminant lands here.
 > its spectrum. Real spectrum $\Rightarrow$ RH. *This step is standard once S1–S3 hold* — it is the payoff of
 > doing positivity the OS way rather than the bound way.
 
-## 4. Why this is genuinely new (and honest about it)
+## 4. Why this is genuinely new (and candid about it)
 
 - **New synthesis, not new pieces.** Reflection positivity, OS reconstruction, the Euler product, Hilbert–Pólya,
   Connes' archimedean positivity — all exist. **What no one has assembled** is: *use the functional-equation
@@ -115,7 +115,7 @@ $\delta$-displaced (i.e. $\Theta$-paired) configurations:
 This converts an abstract program into a **falsifiable, instrument-guided** one — the way physics actually
 finds new structure.
 
-## 6. Tiered outcomes (honest)
+## 6. Tiered outcomes (candid)
 
 | Outcome | Prob. | Value |
 |---|---|---|
@@ -148,7 +148,7 @@ controls the sign.
 - **Magnitude $\ne$ sign:** OS positivity is a *structure*, not a bound; do not slip back into bounding $\|K\|$.
 - **Audit before pillarizing; the engine falsifies.** Every step gets the numerical stress-test before it
   becomes a foundation. A failed gate kills a step early.
-- **Honest priors up front.** $<1\%$ for RH; high for durable structural results. We mine the moonshot for
+- **Candid priors up front.** $<1\%$ for RH; high for durable structural results. We mine the moonshot for
   structure, with RH as the target we genuinely attack, not assume.
 
 ---
@@ -165,5 +165,5 @@ reflection-positivity test). If the identification is clean, S2 (per-place) is t
 Osterwalder–Schrader reflection positivity for the functional-equation reflection, with the Euler product as
 the reflection-positive lattice and OS reconstruction delivering Hilbert–Pólya. It is the one path that turns
 "the Euler product controls RH" from a slogan into a mechanism, it explains $\zeta$ vs $L_{\mathrm{DH}}$, and
-it is instrument-guided by our validated engine. Odds are long; the route is new; and it is the honest place
+it is instrument-guided by our validated engine. Odds are long; the route is new; and it is the candid place
 to point a serious, ambitious effort.*

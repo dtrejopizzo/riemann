@@ -109,7 +109,7 @@ La integral $\int_{\mathbb{R}} \Gamma(a+it)\Gamma(b-it)\,e^{i\omega t}\,dt$ pued
 
 $$\int_{-\infty}^{+\infty} \Gamma(1/4+it)\Gamma(1/4-it)\,e^{2irt}\,dt = \frac{2\pi\,\Gamma(1/2)}{e^r + e^{-r}} \cdot \frac{e^r}{\Gamma(1)} \quad (\text{fórmula de Barnes a verificar}).$$
 
-**Observación (honestidad).** La evaluación exacta de $\hat{w}(r)$ en forma cerrada requiere la fórmula de transformada de Fourier del producto de dos funciones Gamma del tipo $\Gamma(a+it)\Gamma(b-it)$. Esta clase de integrales fue estudiada por Barnes (1908). El resultado exacto implica funciones hipergeométricas o la función Beta, y su forma explícita depende de la relación entre $a$, $b$ y el parámetro de traslación. Para $a = b$ y mediante la fórmula de reflexión y duplicación de $\Gamma$, se puede mostrar (ver, p.ej., Bateman-Erdélyi Vol.~1 §6.5 o la derivación vía la convolución de Mellin):
+**Observación (franqueza).** La evaluación exacta de $\hat{w}(r)$ en forma cerrada requiere la fórmula de transformada de Fourier del producto de dos funciones Gamma del tipo $\Gamma(a+it)\Gamma(b-it)$. Esta clase de integrales fue estudiada por Barnes (1908). El resultado exacto implica funciones hipergeométricas o la función Beta, y su forma explícita depende de la relación entre $a$, $b$ y el parámetro de traslación. Para $a = b$ y mediante la fórmula de reflexión y duplicación de $\Gamma$, se puede mostrar (ver, p.ej., Bateman-Erdélyi Vol.~1 §6.5 o la derivación vía la convolución de Mellin):
 
 $$\hat{w}(r) = \frac{1}{2\pi}\cdot\frac{1}{\cosh(r/2 - \pi/4) + \cdots}$$
 
@@ -232,7 +232,7 @@ donde se usó que $\mathrm{sgn}(\Phi'') = -1$ contribuye un factor $e^{-i\pi/4}$
 
 **Para $|r| < 2\pi$:** El punto estacionario $s_* = 8\pi k/|r|^2 > a_k = 2k/\pi$ está fuera del soporte, y $I_{\mathrm{osc}}$ decae superpolinomialmente en $k$ (como $O(k^{-N})$ para todo $N$). La contribución dominante a $\phi_k(r)$ es la parte DC.
 
-**Observación de honestidad.** Los cálculos de §3.3–3.4 son *heurísticos* en el sentido de que la asintótica de Plancherel-Rotach del borde izquierdo (Doc 66) es válida para $s$ fijo y $k\to\infty$, pero la integral $\phi_k(r)$ involucra $s$ que varía a la vez que $k$. El intercambio de la asintótica con la integración requiere dominar el error de aproximación uniformemente en $s$, lo cual es técnico y se deja como tarea de justificación rigurosa.
+**Observación de franqueza.** Los cálculos de §3.3–3.4 son *heurísticos* en el sentido de que la asintótica de Plancherel-Rotach del borde izquierdo (Doc 66) es válida para $s$ fijo y $k\to\infty$, pero la integral $\phi_k(r)$ involucra $s$ que varía a la vez que $k$. El intercambio de la asintótica con la integración requiere dominar el error de aproximación uniformemente en $s$, lo cual es técnico y se deja como tarea de justificación rigurosa.
 
 ---
 
@@ -273,7 +273,7 @@ $$\sum_{k=1}^{N} k\,\phi_k(\log p) \approx \frac{C^2\psi(\log p)}{2}\sum_{k=1}^N
 $$\widehat{W_\lambda\,dm_\infty}(\log p) \sim K_p\,N(\lambda)^{5/4},$$
 donde $K_p = \frac{2C^2}{5}\psi(\log p)$ es una constante que depende del primo $p$.
 
-**Observación de honestidad.** La asintótica $\phi_k(r) \sim \frac{C^2}{2}k^{-3/4}\psi(r)$ para $r > 0$ fijo es heurística (depende de la validez uniforme de la Plancherel-Rotach de borde). Una cota rigurosa requeriría estimados más finos.
+**Observación de franqueza.** La asintótica $\phi_k(r) \sim \frac{C^2}{2}k^{-3/4}\psi(r)$ para $r > 0$ fijo es heurística (depende de la validez uniforme de la Plancherel-Rotach de borde). Una cota rigurosa requeriría estimados más finos.
 
 ### 4.4. Para $r = \log(n/m)$ general
 
@@ -314,7 +314,7 @@ Esto indica que la contribución off-diagonal escala como $N^{5/4}$, contra $N^2
 **Proposición 5.2** (Dominio del diagonal). Para $N(\lambda) \to\infty$:
 $$A_\lambda = D_\lambda\,(1 + O(N(\lambda)^{-3/4})).$$
 
-**Advertencia de honestidad.** Esta estimación requiere intercambiar suma y asintótica, lo cual no está justificado rigurosamente aquí. En particular, la serie sobre $(n,m)$ con $n \neq m$ es potencialmente grande si hay muchos pares con $\log(n/m)$ pequeño. Una estimación rigurosa requiere combinar la asintótica de $\phi_k$ con cotas para los coeficientes aritméticos $d(n)d(m)/\sqrt{nm}$.
+**Advertencia de franqueza.** Esta estimación requiere intercambiar suma y asintótica, lo cual no está justificado rigurosamente aquí. En particular, la serie sobre $(n,m)$ con $n \neq m$ es potencialmente grande si hay muchos pares con $\log(n/m)$ pequeño. Una estimación rigurosa requiere combinar la asintótica de $\phi_k$ con cotas para los coeficientes aritméticos $d(n)d(m)/\sqrt{nm}$.
 
 ### 5.4. Asintótica principal de $A_\lambda$
 
@@ -356,7 +356,7 @@ La diferencia $|\zeta(1/2+is)|^2 - |\zeta_{on}(1/2+is)|^2$ para $s$ real viene c
 $$T_\lambda \lesssim C(\sigma_0,\gamma_0)\cdot\widehat{W_\lambda dm_\infty}(0)\cdot (\sigma_0 - 1/2)^2,$$
 pero esto no es una cota superior que anule $T_\lambda$ — solo una cota que muestra que $T_\lambda$ es pequeño cuando $\sigma_0 - 1/2$ es pequeño.
 
-**Observación de honestidad.** La representación aritmética de $A_\lambda$ no proporciona por sí sola una prueba de que $T_\lambda = 0$. Lo que sí proporciona es una descripción completamente explícita de $A_\lambda$ en términos de coeficientes aritméticos: la cantidad $A_\lambda = \sum_{n,m} d(n)d(m)/\sqrt{nm}\cdot \widehat{W_\lambda dm_\infty}(\log(n/m))$ es computable. La igualdad $T_\lambda = 0$ ($\Leftrightarrow$ RH) requiere un argumento adicional que conecte las transformadas de Fourier de $W_\lambda dm_\infty$ con las de $W_\lambda dm_\infty^{on}$: este es precisamente el contenido abierto del programa.
+**Observación de franqueza.** La representación aritmética de $A_\lambda$ no proporciona por sí sola una prueba de que $T_\lambda = 0$. Lo que sí proporciona es una descripción completamente explícita de $A_\lambda$ en términos de coeficientes aritméticos: la cantidad $A_\lambda = \sum_{n,m} d(n)d(m)/\sqrt{nm}\cdot \widehat{W_\lambda dm_\infty}(\log(n/m))$ es computable. La igualdad $T_\lambda = 0$ ($\Leftrightarrow$ RH) requiere un argumento adicional que conecte las transformadas de Fourier de $W_\lambda dm_\infty$ con las de $W_\lambda dm_\infty^{on}$: este es precisamente el contenido abierto del programa.
 
 ---
 

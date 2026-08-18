@@ -2,7 +2,7 @@
 
 *This consolidates the entire phase-64 route into the single irreducible statement that must be proven,
 why nothing we have reaches it, and the precise new mathematical object whose construction would cross
-it. Everything else in the program is established or surrounding; this is the only thing left. Honest:
+it. Everything else in the program is established or surrounding; this is the only thing left. Candid:
 this statement IS RH (not a lemma below it). It is stated this sharply so that building the object is a
 well-posed task.*
 
@@ -98,7 +98,7 @@ definite-signed renormalizations of positive canonical systems is a concrete, we
 possibly-new theorem. If it is true in the needed form, RH follows; if it is false, there is an
 off-line zero and the failure is exactly the index jump.
 
-## §5. What this is, honestly
+## §5. What this is, candidly
 
 - It **is** RH (the de Branges join; not a sub-lemma). The program has proven this is the irreducible
   bottom — every road ends here because the canonical-system formulation of RH *is* this join (§Floor

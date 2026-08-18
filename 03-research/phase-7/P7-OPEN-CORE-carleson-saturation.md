@@ -3,7 +3,7 @@
 **Author: David Alejandro Trejo Pizzo · 2026-06-03.**
 The user chose to engage the open core (option 2), eyes open at <1% odds, with the standing rule:
 *if it doesn't work, find another path.* This records the first lever — the $\omega$-class / incoherence
-hope, made into a **rigorous, finite, computable** object — and its **measured** verdict. Honest: it is a
+hope, made into a **rigorous, finite, computable** object — and its **measured** verdict. Candid: it is a
 clean negative, established with numbers, and it sharpens "the sign has no slack" into a theorem-shaped
 statement.
 

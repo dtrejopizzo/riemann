@@ -2,7 +2,7 @@
 
 **Programa:** Hipótesis de Riemann — Fase 59 (cierre total)
 **Fecha:** 2026-06-12
-**Mandato:** decidir el [GAP-192.B] (D192 §5): ¿existe sucesión de ceros off de la función de Davenport–Heilbronn con b_j·log γ_j → 0 (o b_j ≤ (log γ_j)^{−1−η})? Si SÍ, la repulsión polilog es propiedad-Euler y la [CONJ 179.6-fuerte] está bien apuntada; si NO, el mecanismo-Euler está mal apuntado. Dos vías: (1) CLT/cruce de niveles en la línea (principal); (2) universalidad efectiva (backup). Honestidad total; sin numérica; citas backward-only.
+**Mandato:** decidir el [GAP-192.B] (D192 §5): ¿existe sucesión de ceros off de la función de Davenport–Heilbronn con b_j·log γ_j → 0 (o b_j ≤ (log γ_j)^{−1−η})? Si SÍ, la repulsión polilog es propiedad-Euler y la [CONJ 179.6-fuerte] está bien apuntada; si NO, el mecanismo-Euler está mal apuntado. Dos vías: (1) CLT/cruce de niveles en la línea (principal); (2) universalidad efectiva (backup). Franqueza total; sin numérica; citas backward-only.
 **Prerrequisitos:** D192 (GAP-192.B, test 192.2, E-192.1); D179 (Conj 179.6-fuerte/∞); **D150 (Prop 150.2 — DECLARACIÓN: D150 NO está auditado por tercero, deuda E-194.6 de D194 §5.3; riesgo calificado BAJO, input libro de texto; todo uso aquí queda marcado)**.
 
 ---

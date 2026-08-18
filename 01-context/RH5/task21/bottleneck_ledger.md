@@ -32,7 +32,7 @@ n=1..200; Step 0.5 power calibration table. --- | Function | Observable | Result
 | L_DH, L(χ), L(Δ), ζ_δ | Moment ratios | Not computed | — | Same as ζ; need Dirichlet partial sum D_F(t;N) infrastructure | --- ## Per-observable summary statements (R9 sharpest statement) ### Front I — Jacobi b_n (descriptive only)
 - For all five panel functions, the off-diagonal Jacobi b_n on the stable c=0.1 window is best modelled by a **power law** b_n ≈ c · n^δ with δ ∈ [−0.018, −0.011] (AIC selects power over log/constant by ~400–700 units).
 - ζ and ζ_δ (strong) give Jacobi coefficients **identical to float64 precision** under both weighting choices — Front I is structurally blind to real-part perturbations.
-- Verdict: descriptive phenomenology, no discriminator survives the spectral-weight audit. (Per R3/Front-I "Honest pivot clause": stop investing here.) ### Front II.5 — Li coefficients
+- Verdict: descriptive phenomenology, no discriminator survives the spectral-weight audit. (Per R3/Front-I "Candid pivot clause": stop investing here.) ### Front II.5 — Li coefficients
 - For L_DH, λ_n > 0 for **all** n ≤ 200, with the 110 off-line zeros contributing positively to λ_n (λ_1 contribution ≈ +0.00039, λ_200 contribution ≈ +0.02). The Li-positivity ⇔ RH equivalence (Bombieri–Lagarias) is therefore **uninformative at this scale**.
 - The predicted crossover where λ_n turns negative is at **n ≈ 86,000**, beyond cloud-compute reach. ### Front II.6 — Weil/Gram positivity
 - A Hermite-window Gram form Q_jk = Σ_ρ φ_j(γ)φ_k(γ) is **always PSD by construction** and yields λ_min(Q_10) ∈ [3e-9, 5e-9] across the panel — at the conditioning floor (cond ≈ 2e16).

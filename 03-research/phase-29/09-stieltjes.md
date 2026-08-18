@@ -272,7 +272,7 @@ Esta cadena es el argumento original de CCM, que el programa Phase 29 está inte
 | $\sum_n(t_n^{(\lambda)}-\gamma_n)^2 < C$ incondicional | Abierto (Pregunta 29.3) |
 | Hacer el argumento CCM $t_n\in\mathbb{R}\implies\gamma_n\in\mathbb{R}$ riguroso | El paso central que daría RH |
 
-### El paso crítico que falta para RH (honesto):
+### El paso crítico que falta para RH (franco):
 
 El argumento de Hurwitz en el Teorema 5 necesita H2 INCONDICIONAL (sin asumir RH). La implicación directa es:
 

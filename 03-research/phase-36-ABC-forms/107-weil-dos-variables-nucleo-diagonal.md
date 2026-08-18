@@ -547,7 +547,7 @@ Teorema 1.4 aplicado a esa rebanada da la identidad mostrada, término a términ
 la suma sobre $n$ es finita (soporte compacto). La identificación con los bloques del
 Teorema 2.4 es la definición iterada (Lema 2.2). $\square$
 
-### 4.5. Delimitación honesta: dónde reaparecería MW-7
+### 4.5. Delimitación franca: dónde reaparecería MW-7
 
 El Teorema 4.4 no es un truco: es la observación de que el objeto $\mathcal{W}_2 =
 \mathcal{W}\otimes\mathcal{W}$ hereda **dos** presentaciones (espectral y aritmética)
@@ -866,7 +866,7 @@ la dificultad.
 ### 6.4. Lema 5.3: ¿hay fuente de finitud no espectral en el lado casi-primo?
 
 Esta es la pregunta del análogo de la racionalidad de Deligne. Tres observaciones, en
-orden de honestidad creciente.
+orden de franqueza creciente.
 
 **(α) Existe por primera vez un candidato a segunda fuente que pasa I2a.** El lado
 casi-primo $\sum_N g(N)(\Lambda\star_\varphi\Lambda)(N)$ admite **cotas superiores
@@ -1015,7 +1015,7 @@ MW-7 reaparece y el Candidato 2 muere". Ocurrió lo primero, con prueba:
    transversal $\hat\varphi$ (Corolario 5.6) — la conjetura "los negativos están en las
    sumas reales $\pm2\delta$" es falsa.
 
-**Calificación honesta del "VIVO".** Vivo significa: el Lema Faltante 5.2 del Doc 106
+**Calificación franca del "VIVO".** Vivo significa: el Lema Faltante 5.2 del Doc 106
 pasó de gap nombrado a **candidato con construcción explícita y verificación en el
 juguete**. No significa que la Forma B esté cerca de cerrar: todo el peso está ahora en
 el Lema Faltante 7.2 (puente criba→índice, heredero del 5.3), con sus dos modos de

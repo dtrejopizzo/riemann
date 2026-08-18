@@ -4,7 +4,7 @@
 Attempt 7 reduced RH to a single missing object: a compatible $(1,1)$-Kähler form $\omega$ on the constructed
 arithmetic cohomology $\mathcal H_W^{\mathrm{prim}}$, with $J$ (the spectral complex structure from the flow
 $\mathcal T$) and $Q$ (the Weil pairing) in hand. We attack $\omega$ directly. The result is the deepest structural
-statement of the capstone, executed honestly; it routes to the missing geometric Lefschetz/Kähler structure. No
+statement of the capstone, executed candidly; it routes to the missing geometric Lefschetz/Kähler structure. No
 crossing.
 
 ---
@@ -71,7 +71,7 @@ class $\omega$** — the ample geometry of the surface — is the lone missing s
 $\mathcal T$ alone (Props.~\ref{prop:sl2}–\ref{prop:contr}); it is the geometric input SURF, in its sharpest form: a
 single hard-Lefschetz $\mathfrak{sl}_2$-action.
 
-## 5. Status — the honest terminus of the spectral construction
+## 5. Status — the candid terminus of the spectral construction
 - **Established:** $\omega=Q(J\cdot,\cdot)$ is determined by the spectral triple, with positivity $=$ RH
   (Prop.~\ref{prop:omega}); the flow $\mathcal T$ is the Frobenius (zeros as spectrum), \emph{not} the Lefschetz
   grading (Prop.~\ref{prop:sl2}); and it is unitary, \emph{not} a contraction (Prop.~\ref{prop:contr}). So no
@@ -79,13 +79,13 @@ single hard-Lefschetz $\mathfrak{sl}_2$-action.
 - **The capstone, deepest form:** RH $=$ the existence of an independent hard-Lefschetz $\mathfrak{sl}_2$ (Kähler
   class $\omega$) on $\mathcal H_W^{\mathrm{prim}}$ commuting with $\mathcal T$. This is the ample geometry of the
   arithmetic surface --- SURF --- reduced to a single $\mathfrak{sl}_2$-action.
-- **Honest terminus.** Through eight attempts the program has built the zero-carrying cohomology and the Frobenius
+- **Candid terminus.** Through eight attempts the program has built the zero-carrying cohomology and the Frobenius
   explicitly, and reduced RH to one missing structure: a hard-Lefschetz/Kähler $\mathfrak{sl}_2$-action — the ample
   class of the (missing) arithmetic surface. The spectral tools of this program supply everything *except* this one
   geometric input, and Props.~\ref{prop:sl2}–\ref{prop:contr} show it cannot be manufactured from the flow alone.
   This is the sharpest, most structural, and final form of the capstone the spectral construction reaches.
 
-> The eight-attempt arc terminates here, honestly: $\mathcal H_W$, $\mathcal T$, $J$, $Q$, the trace formula, the
+> The eight-attempt arc terminates here, candidly: $\mathcal H_W$, $\mathcal T$, $J$, $Q$, the trace formula, the
 > anatomy/Frobenius, and the ample cone are built; RH is the existence of one independent Kähler/Lefschetz class
 > $\omega$ (an $\mathfrak{sl}_2$), the ample geometry of $\operatorname{Spec}\mathbb Z\times\operatorname{Spec}
 > \mathbb Z$. That object is the Connes–Consani/Deninger target, now reduced to a single hard-Lefschetz action and

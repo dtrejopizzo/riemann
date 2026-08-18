@@ -18,10 +18,10 @@ Toda / k-invariante / e-invariante de Adams), y los secundarios son homotópicos
 **Contrato de etiquetado (regla absoluta).** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad aquí, prueba completa; externos con
 referencia verificable. **[CONSTRUCCIÓN]** = objeto definido con precisión. **[PUENTE]** =
-conexión con estatus honesto. **[GAP]/[GAP de literatura]** = declarado; el de literatura NO se
+conexión con estatus franco. **[GAP]/[GAP de literatura]** = declarado; el de literatura NO se
 usa como premisa de ningún teorema. **[DESEO]** = declarado. Jamás se fabrica una prueba de RH
 ni una falsa victoria (DESENLACE A). Está PERMITIDO (y es lo esperable) terminar en B/C/D.
-**NADA de numéricos/Python.** **Español.** Honestidad absoluta.
+**NADA de numéricos/Python.** **Español.** Franqueza absoluta.
 
 **Prerrequisitos leídos en fuente esta sesión:** Memoria Phase 26 (κ = 2m = neg.ind(H_C) en
 Pontryagin (𝒦,Q); ítems V.1–V.4). Memoria Phase 44 D132 (K_off Witt-trivial; δ = neg.ind sobre
@@ -261,7 +261,7 @@ tanto **evaluar e_ζ = evaluar la cuenta de ceros**: el espectro de la aplicaci�
 {γ_ρ}. Conocer ese espectro RH-libremente = conocer las posiciones de los ceros = lo que se
 quería deducir. La homotopía pura no porta ζ, pero Φ sí. ∎(c) ∎
 
-**[PUENTE 162-B — honestidad sobre (b).** El eslabón (b) usa el diccionario κ=spectral flow=η de
+**[PUENTE 162-B — franqueza sobre (b).** El eslabón (b) usa el diccionario κ=spectral flow=η de
 D156, que es un PUENTE probado *bajo Fredholmicidad* (m<∞). Si m=∞ el secundario ni siquiera está
 definido como entero — igual que el índice de D156. Así que (b) hereda la condicionalidad de
 Fredholmicidad de Phase 49. No es un defecto nuevo; es el mismo. Lo marco.]**
@@ -286,7 +286,7 @@ de Weil, ζ reentra y colapsamos (= Phase 51).*
 **Diagnóstico de la guardia.** El modo de fallo predicho por el mandato ("que 'secundario sin
 métrica' resulte ser la métrica disfrazada") NO es exactamente lo que ocurre — y esto es lo
 genuinamente nuevo de este documento. La definición del secundario *no* es la métrica disfrazada:
-e_ζ se define honestamente sin Q (§2.3a PASA). La reentrada ocurre un escalón más adentro: **en la
+e_ζ se define francamente sin Q (§2.3a PASA). La reentrada ocurre un escalón más adentro: **en la
 identificación del espectro de la aplicación portadora Φ con {γ_ρ}.** Es decir, ζ no entra por la
 *métrica de lectura* (Phase 51) sino por el *dato de homotopía mismo*: la clase fundamental
 [C_Φ] que el carácter de Chern integra es la distribución de los ceros. El secundario lee
@@ -391,14 +391,14 @@ corchetes ⟨,,⟩; Massey products en la sucesión espectral de Adams). La conj
 >   hereda la reentrada de ζ de §2.3(c), §4 (no la evita).
 
 No tengo prueba de que ⟨[Φ_off], 2, σ⟩ = 2m; lo dejo como **[GAP CENTRAL]** explícito, junto con
-la advertencia honesta de que, *aun si se probara*, su cómputo RH-libre tropieza con la misma
+la advertencia franca de que, *aun si se probara*, su cómputo RH-libre tropieza con la misma
 reentrada de §4 (el carácter de Chern de Φ porta {γ_ρ}). Es decir: subir de piso resuelve la
 *ceguera* (C), pero NO la *reentrada* (B). Las dos obstrucciones son independientes; este
 documento las separa.
 
 ---
 
-## 6. Veredicto honesto (A/B/C/D) y el GAP central
+## 6. Veredicto franco (A/B/C/D) y el GAP central
 
 **VEREDICTO: B (reentrada localizada) con un fragmento probado de C (propagación de la ceguera al
 primer secundario).** No es A (no construí un secundario RH-libre que dé 2m — desconfiaba de A y

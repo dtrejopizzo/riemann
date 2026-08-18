@@ -7,7 +7,7 @@ W^*(\mathcal T)$ (M4.2, the first explicit clearing of the independence filter),
 $Q=A_\infty-P$ (M4.3). M4.3 showed the discrete positivity $Q\ge0$ is the near-cancellation residual of
 $A_\infty-P$ (CAP), not the transported upstairs positivity. M5 settles the one remaining handle — the **full**
 Hodge–Riemann form across $\mathfrak{sl}_2$-degrees — and in doing so proves a clean structural dichotomy that closes
-the direction honestly. No crossing.
+the direction candidly. No crossing.
 
 ---
 
@@ -78,7 +78,7 @@ on the continuum costs the lowest-weight property that Hodge–Riemann needs. **
 spectrum + lowest-weight grading) are incompatible under LI.** That is the sharp, structural reason the
 hard-Lefschetz route to RH for $\zeta$ does not close.
 
-## 5. Status — honest terminus of the archimedean–modular direction
+## 5. Status — candid terminus of the archimedean–modular direction
 
 - **Built and verified (real gains):** the positive bulk metric $g_\infty=|\Psi|$ (M4.1, $\Psi$ = the smooth
   zero-density, positive on the spectrum); the **first explicit operator clearing the independence filter** — the

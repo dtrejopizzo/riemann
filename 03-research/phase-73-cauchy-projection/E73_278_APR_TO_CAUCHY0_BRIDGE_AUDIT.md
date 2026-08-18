@@ -86,7 +86,7 @@ mechanism.
 
 ## 5. Updated obstruction
 
-After E73.278, the only honest statement is:
+After E73.278, the only candid statement is:
 
 ```text
 APR-U4 remains a coupled canonical-sector cancellation:

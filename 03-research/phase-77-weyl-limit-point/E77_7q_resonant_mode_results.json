@@ -1,0 +1,1145 @@
+{
+  "statement": "One-mode resonant subtraction audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "dps": 60,
+    "sigma0": "1.0",
+    "sigmas": [
+      "0.6",
+      "1.0",
+      "2.0",
+      "3.0"
+    ],
+    "etas": [
+      "0.01",
+      "0.0001",
+      "0.000001",
+      "1.0e-8"
+    ],
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "mu_reference is a finite frozen surrogate. The probe checks whether subtracting the nearest resonant mode stabilizes the regularized projective profile.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "2.52719644523725779337455e-49",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.01",
+        "0.0001",
+        "0.000001",
+        "1.0e-8"
+      ],
+      "planted": null,
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "7.4348808641654420969885e-21",
+          "nearest_inner_gap_abs": "7.4348808641654420969885e-21",
+          "boundary_overlap_nearest_mode_abs": "2.36799601329596239546832e-17",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.29223021505415850697656",
+              "regular_anchor_abs": "0.292230215054158572978481",
+              "resonant_anchor_abs": "0.0946292373583415309777321",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.657706943447376251192716",
+              "regular_anchor_abs": "0.65770694344731480993839",
+              "resonant_anchor_abs": "0.0946292373582487327678034",
+              "raw_max_profile_step_from_previous_eta": "0.173600745154555716816369",
+              "regular_max_profile_step_from_previous_eta": "0.17360074515450787338052"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "1.41114339156400723495702",
+              "regular_anchor_abs": "1.41114339157336459096992",
+              "resonant_anchor_abs": "0.0946292373489689117749379",
+              "raw_max_profile_step_from_previous_eta": "0.118855235486558018996296",
+              "regular_max_profile_step_from_previous_eta": "0.11885523548920433416932"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "2.53900406348865855020745",
+              "regular_anchor_abs": "2.53900406353922639754887",
+              "resonant_anchor_abs": "0.0946292364209868125299754",
+              "raw_max_profile_step_from_previous_eta": "0.0832057230538094012466536",
+              "regular_max_profile_step_from_previous_eta": "0.0832057230556875568570663"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "5.67857981289355695541481e-23",
+          "nearest_inner_gap_abs": "5.67857981289355695541481e-23",
+          "boundary_overlap_nearest_mode_abs": "1.87151487545682316099567e-18",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.333618574829518839448315",
+              "regular_anchor_abs": "0.333618574829518871015065",
+              "resonant_anchor_abs": "0.0812072957373482192241113",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "1.12887129751043596493469",
+              "regular_anchor_abs": "1.12887129751043392493494",
+              "resonant_anchor_abs": "0.0812072957373552962390572",
+              "raw_max_profile_step_from_previous_eta": "0.15746413371507054641904",
+              "regular_max_profile_step_from_previous_eta": "0.157464133715069782660499"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "2.10488869493090526100007",
+              "regular_anchor_abs": "2.10488869493045175044432",
+              "resonant_anchor_abs": "0.081207295738062997733647",
+              "raw_max_profile_step_from_previous_eta": "0.16986795115435706469721",
+              "regular_max_profile_step_from_previous_eta": "0.169867951154405993758357"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "3.69508544298050464355115",
+              "regular_anchor_abs": "3.69508544303928169276768",
+              "resonant_anchor_abs": "0.0812072958088331471928307",
+              "raw_max_profile_step_from_previous_eta": "0.169725960195126714142908",
+              "regular_max_profile_step_from_previous_eta": "0.169725960179631488087355"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "1.14108331541358008838964e-25",
+          "nearest_inner_gap_abs": "1.14108331541358008838964e-25",
+          "boundary_overlap_nearest_mode_abs": "3.8137880702065687038066e-19",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "4.3094290629496500061089",
+              "regular_anchor_abs": "4.30942906294964999229458",
+              "resonant_anchor_abs": "0.0711113604215919970416058",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "14.4512353171135419200142",
+              "regular_anchor_abs": "14.4512353171135432639122",
+              "resonant_anchor_abs": "0.0711113604215905988528155",
+              "raw_max_profile_step_from_previous_eta": "0.12299887940019771412982",
+              "regular_max_profile_step_from_previous_eta": "0.122998879400197769958524"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "30.0061086572568809344194",
+              "regular_anchor_abs": "30.0061086572568808146305",
+              "resonant_anchor_abs": "0.0711113604214507799737816",
+              "raw_max_profile_step_from_previous_eta": "0.10295283656202912030905",
+              "regular_max_profile_step_from_previous_eta": "0.10295283656202896285778"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "66.120512436739009540765",
+              "regular_anchor_abs": "66.1205124367258102334168",
+              "resonant_anchor_abs": "0.071111360407468892070395",
+              "raw_max_profile_step_from_previous_eta": "0.107957973770928552084094",
+              "regular_max_profile_step_from_previous_eta": "0.107957973770823779463703"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "3.67864498056142094312781e-28",
+          "nearest_inner_gap_abs": "3.67864498056142094312781e-28",
+          "boundary_overlap_nearest_mode_abs": "5.83785089933566404837131e-22",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.313054502395876946540802",
+              "regular_anchor_abs": "0.313054502395876946534574",
+              "resonant_anchor_abs": "0.0632436676008840700715936",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.660703014881770381696279",
+              "regular_anchor_abs": "0.660703014881770380270367",
+              "resonant_anchor_abs": "0.0632436676008840679866635",
+              "raw_max_profile_step_from_previous_eta": "0.134765452134489801335516",
+              "regular_max_profile_step_from_previous_eta": "0.134765452134489800261282"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "1.3669424816131130895893",
+              "regular_anchor_abs": "1.36694248161311327801804",
+              "resonant_anchor_abs": "0.063243667600883859493656",
+              "raw_max_profile_step_from_previous_eta": "0.102892287337476937499644",
+              "regular_max_profile_step_from_previous_eta": "0.102892287337476816031417"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "3.11539403534215734569152",
+              "regular_anchor_abs": "3.1153940353421624511191",
+              "resonant_anchor_abs": "0.0632436676008630101929034",
+              "raw_max_profile_step_from_previous_eta": "0.13370215849046431596408",
+              "regular_max_profile_step_from_previous_eta": "0.133702158490461715909205"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "1.85053117215286206345136e-30",
+          "nearest_inner_gap_abs": "1.85053117215286206345136e-30",
+          "boundary_overlap_nearest_mode_abs": "1.29758118720659187597285e-23",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.257151521756224861289463",
+              "regular_anchor_abs": "0.25715152175622486128974",
+              "resonant_anchor_abs": "0.0569409412204830872324781",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.398948288014526939870251",
+              "regular_anchor_abs": "0.398948288014526939878043",
+              "resonant_anchor_abs": "0.0569409412204830872778569",
+              "raw_max_profile_step_from_previous_eta": "0.110608888171447804624846",
+              "regular_max_profile_step_from_previous_eta": "0.110608888171447804630773"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.688937461988380635109994",
+              "regular_anchor_abs": "0.688937461988380631637234",
+              "resonant_anchor_abs": "0.0569409412204830918157289",
+              "raw_max_profile_step_from_previous_eta": "0.102640987945811550004308",
+              "regular_max_profile_step_from_previous_eta": "0.102640987945811547499816"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "1.84009451677133775521824",
+              "regular_anchor_abs": "1.84009451677133819018826",
+              "resonant_anchor_abs": "0.0569409412204835456029287",
+              "raw_max_profile_step_from_previous_eta": "0.0765629196312618314924727",
+              "regular_max_profile_step_from_previous_eta": "0.0765629196312619368960498"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "8.92947289710064629724685e-33",
+          "nearest_inner_gap_abs": "8.92947289710064629724685e-33",
+          "boundary_overlap_nearest_mode_abs": "5.93008901530249204812874e-25",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.245089942131171683408179",
+              "regular_anchor_abs": "0.245089942131171683408162",
+              "resonant_anchor_abs": "0.0517790623188801983220015",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.45728485267625850058345",
+              "regular_anchor_abs": "0.457284852676258500584507",
+              "resonant_anchor_abs": "0.0517790623188801983199651",
+              "raw_max_profile_step_from_previous_eta": "0.100893397253094176165811",
+              "regular_max_profile_step_from_previous_eta": "0.100893397253094176167319"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "1.17350763198717402929659",
+              "regular_anchor_abs": "1.17350763198717402929866",
+              "resonant_anchor_abs": "0.0517790623188801981163297",
+              "raw_max_profile_step_from_previous_eta": "0.102400483705772371817208",
+              "regular_max_profile_step_from_previous_eta": "0.102400483705772371803805"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "5.37483579996294050302867",
+              "regular_anchor_abs": "5.37483579996294050143742",
+              "resonant_anchor_abs": "0.05177906231888017775279",
+              "raw_max_profile_step_from_previous_eta": "0.0830645050180845320863608",
+              "regular_max_profile_step_from_previous_eta": "0.0830645050180845317597872"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "4.30152770270024776312684e-35",
+          "nearest_inner_gap_abs": "4.30152770270024776312684e-35",
+          "boundary_overlap_nearest_mode_abs": "1.74310657933612122569789e-24",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.551679686118522924653851",
+              "regular_anchor_abs": "0.551679686118522924653869",
+              "resonant_anchor_abs": "0.047474306429385366962253",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "20.2338524016339842739694",
+              "regular_anchor_abs": "20.2338524016339842739645",
+              "resonant_anchor_abs": "0.04747430642938536695636",
+              "raw_max_profile_step_from_previous_eta": "0.103640941641421150383424",
+              "regular_max_profile_step_from_previous_eta": "0.103640941641421150383245"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "299.995733399198796213748",
+              "regular_anchor_abs": "299.995733399198796214263",
+              "resonant_anchor_abs": "0.0474743064293853663670596",
+              "raw_max_profile_step_from_previous_eta": "0.0962463396048469091875122",
+              "regular_max_profile_step_from_previous_eta": "0.0962463396048469091885438"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "882.667834250558111326845",
+              "regular_anchor_abs": "882.667834250558111269131",
+              "resonant_anchor_abs": "0.0474743064293853074370174",
+              "raw_max_profile_step_from_previous_eta": "0.0665241316709363290705625",
+              "regular_max_profile_step_from_previous_eta": "0.066524131670936329038245"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "2.40320588207328596789142e-37",
+          "nearest_inner_gap_abs": "2.40320588207328596789142e-37",
+          "boundary_overlap_nearest_mode_abs": "1.03702668021280998909311e-27",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.557722195452327679581258",
+              "regular_anchor_abs": "0.557722195452327679581258",
+              "resonant_anchor_abs": "0.0438297438149928536398974",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "1.98796849160079240696002",
+              "regular_anchor_abs": "1.98796849160079240696002",
+              "resonant_anchor_abs": "0.0438297438149928536399009",
+              "raw_max_profile_step_from_previous_eta": "0.0925999067032964773768042",
+              "regular_max_profile_step_from_previous_eta": "0.092599906703296477376803"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "5.60642303080375346495654",
+              "regular_anchor_abs": "5.60642303080375346495671",
+              "resonant_anchor_abs": "0.0438297438149928536402466",
+              "raw_max_profile_step_from_previous_eta": "0.0810415189032974166376203",
+              "regular_max_profile_step_from_previous_eta": "0.0810415189032974166376365"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "13.8457519346717904530264",
+              "regular_anchor_abs": "13.8457519346717904530409",
+              "resonant_anchor_abs": "0.0438297438149928536748198",
+              "raw_max_profile_step_from_previous_eta": "0.124445562776359317442005",
+              "regular_max_profile_step_from_previous_eta": "0.124445562776359317441437"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "2.26213529124005633196091e-39",
+          "nearest_inner_gap_abs": "2.26213529124005633196091e-39",
+          "boundary_overlap_nearest_mode_abs": "1.65507885595898813372466e-28",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "1.53722747045805812377002",
+              "regular_anchor_abs": "1.53722747045805812377002",
+              "resonant_anchor_abs": "0.0407044340721373588859296",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "3.91125199109220303581605",
+              "regular_anchor_abs": "3.91125199109220303581605",
+              "resonant_anchor_abs": "0.0407044340721373588859291",
+              "raw_max_profile_step_from_previous_eta": "0.0923484310011055230088143",
+              "regular_max_profile_step_from_previous_eta": "0.0923484310011055230088143"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "13.6462010433725609862362",
+              "regular_anchor_abs": "13.6462010433725609862362",
+              "resonant_anchor_abs": "0.0407044340721373588858745",
+              "raw_max_profile_step_from_previous_eta": "0.0885702608645302616292392",
+              "regular_max_profile_step_from_previous_eta": "0.0885702608645302616292369"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "33.3890094584995895359901",
+              "regular_anchor_abs": "33.3890094584995895359943",
+              "resonant_anchor_abs": "0.0407044340721373588804196",
+              "raw_max_profile_step_from_previous_eta": "0.0821146197391598677774301",
+              "regular_max_profile_step_from_previous_eta": "0.0821146197391598677772687"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "1.70904695553041241127555e-41",
+          "nearest_inner_gap_abs": "1.70904695553041241127555e-41",
+          "boundary_overlap_nearest_mode_abs": "2.72315850671371699746145e-30",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.51797969207431418312087",
+              "regular_anchor_abs": "0.51797969207431418312087",
+              "resonant_anchor_abs": "0.0379948622459119751667688",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "1.43232602089714006245273",
+              "regular_anchor_abs": "1.43232602089714006245273",
+              "resonant_anchor_abs": "0.0379948622459119751667688",
+              "raw_max_profile_step_from_previous_eta": "0.0832757284156820110717349",
+              "regular_max_profile_step_from_previous_eta": "0.0832757284156820110717349"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "3.4849308650573399563989",
+              "regular_anchor_abs": "3.4849308650573399563989",
+              "resonant_anchor_abs": "0.0379948622459119751667679",
+              "raw_max_profile_step_from_previous_eta": "0.0745249446121686828222746",
+              "regular_max_profile_step_from_previous_eta": "0.0745249446121686828222746"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "11.7998192409273117290791",
+              "regular_anchor_abs": "11.799819240927311729079",
+              "resonant_anchor_abs": "0.0379948622459119751666791",
+              "raw_max_profile_step_from_previous_eta": "0.106522976356603261236804",
+              "regular_max_profile_step_from_previous_eta": "0.106522976356603261236802"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "1.57226146935905309959376e-43",
+          "nearest_inner_gap_abs": "1.57226146935905309959376e-43",
+          "boundary_overlap_nearest_mode_abs": "1.11072242148457133828513e-31",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.318919968638111682607411",
+              "regular_anchor_abs": "0.318919968638111682607411",
+              "resonant_anchor_abs": "0.0356232971832343118693316",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.878969717100856220077015",
+              "regular_anchor_abs": "0.878969717100856220077015",
+              "resonant_anchor_abs": "0.0356232971832343118693316",
+              "raw_max_profile_step_from_previous_eta": "0.0847041676242714198002896",
+              "regular_max_profile_step_from_previous_eta": "0.0847041676242714198002896"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "2.65677474883913926219363",
+              "regular_anchor_abs": "2.65677474883913926219363",
+              "resonant_anchor_abs": "0.0356232971832343118693316",
+              "raw_max_profile_step_from_previous_eta": "0.0675063122722441714777818",
+              "regular_max_profile_step_from_previous_eta": "0.0675063122722441714777818"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "8.4099783526579625264331",
+              "regular_anchor_abs": "8.4099783526579625264331",
+              "resonant_anchor_abs": "0.0356232971832343118693352",
+              "raw_max_profile_step_from_previous_eta": "0.0610458421938500383174785",
+              "regular_max_profile_step_from_previous_eta": "0.0610458421938500383174783"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "1.54111553044870757479131e-45",
+          "nearest_inner_gap_abs": "1.54111553044870757479131e-45",
+          "boundary_overlap_nearest_mode_abs": "2.30836652652143925161181e-32",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "1.14249297747939473390613",
+              "regular_anchor_abs": "1.14249297747939473390613",
+              "resonant_anchor_abs": "0.0335302385565897176905706",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "3.31213863983747386445226",
+              "regular_anchor_abs": "3.31213863983747386445226",
+              "resonant_anchor_abs": "0.0335302385565897176905706",
+              "raw_max_profile_step_from_previous_eta": "0.0762449938552505381365395",
+              "regular_max_profile_step_from_previous_eta": "0.0762449938552505381365395"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "10.9094127660894851502138",
+              "regular_anchor_abs": "10.9094127660894851502138",
+              "resonant_anchor_abs": "0.0335302385565897176905706",
+              "raw_max_profile_step_from_previous_eta": "0.0707915899184921172222238",
+              "regular_max_profile_step_from_previous_eta": "0.0707915899184921172222238"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "37.4508233901382083930314",
+              "regular_anchor_abs": "37.4508233901382083930314",
+              "resonant_anchor_abs": "0.0335302385565897176905698",
+              "raw_max_profile_step_from_previous_eta": "0.0803590171325992909828706",
+              "regular_max_profile_step_from_previous_eta": "0.0803590171325992909828706"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "nearest_inner_eigenvalue_to_zero": "2.33142498577327724276229e-47",
+          "nearest_inner_gap_abs": "2.33142498577327724276229e-47",
+          "boundary_overlap_nearest_mode_abs": "2.23097757569302964334954e-33",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.846818188478522454149788",
+              "regular_anchor_abs": "0.846818188478522454149788",
+              "resonant_anchor_abs": "0.0316693707012912701455791",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "4.67909356508773166551016",
+              "regular_anchor_abs": "4.67909356508773166551016",
+              "resonant_anchor_abs": "0.0316693707012912701455791",
+              "raw_max_profile_step_from_previous_eta": "0.0774630599825108602894415",
+              "regular_max_profile_step_from_previous_eta": "0.0774630599825108602894415"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "14.6261273449873746986017",
+              "regular_anchor_abs": "14.6261273449873746986017",
+              "resonant_anchor_abs": "0.0316693707012912701455791",
+              "raw_max_profile_step_from_previous_eta": "0.0634182451941046102369601",
+              "regular_max_profile_step_from_previous_eta": "0.0634182451941046102369601"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "39.1901378138679016488213",
+              "regular_anchor_abs": "39.1901378138679016488213",
+              "resonant_anchor_abs": "0.031669370701291270145579",
+              "raw_max_profile_step_from_previous_eta": "0.0526668015094046228428164",
+              "regular_max_profile_step_from_previous_eta": "0.0526668015094046228428164"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "-1.74469368905726418414397",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.01",
+        "0.0001",
+        "0.000001",
+        "1.0e-8"
+      ],
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "1.70650543840880281070199",
+          "nearest_inner_gap_abs": "1.70650543840880281070199",
+          "boundary_overlap_nearest_mode_abs": "0.033716353681465757868858",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.104370614658872206560208",
+              "regular_anchor_abs": "0.0958000315991012629276275",
+              "resonant_anchor_abs": "0.103293988254675327334823",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.104409289936016987562893",
+              "regular_anchor_abs": "0.0958467527507195928618025",
+              "resonant_anchor_abs": "0.103289899584618614433522",
+              "raw_max_profile_step_from_previous_eta": "0.0000854878414733852131989556",
+              "regular_max_profile_step_from_previous_eta": "0.0000852377255604926627439882"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.10440967348925592291322",
+              "regular_anchor_abs": "0.0958472194828540980128565",
+              "resonant_anchor_abs": "0.103289855875186804281876",
+              "raw_max_profile_step_from_previous_eta": "0.000000854520213711371057773097",
+              "regular_max_profile_step_from_previous_eta": "0.000000852248726848108898249094"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.104409677324467272150316",
+              "regular_anchor_abs": "0.0958472241501260514380706",
+              "resonant_anchor_abs": "0.103289855437810341763642",
+              "raw_max_profile_step_from_previous_eta": "8.5451653009196754958089e-9",
+              "regular_max_profile_step_from_previous_eta": "8.5224731306873922815175e-9"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "1.62460414733747212119859",
+          "nearest_inner_gap_abs": "1.62460414733747212119859",
+          "boundary_overlap_nearest_mode_abs": "0.146701078027822785089742",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.110082446185855869206871",
+              "regular_anchor_abs": "0.107153996812567440050911",
+              "resonant_anchor_abs": "0.0828143130337687597238645",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.11019100391450819513848",
+              "regular_anchor_abs": "0.107213469186319542508699",
+              "resonant_anchor_abs": "0.0828813256203858964359717",
+              "raw_max_profile_step_from_previous_eta": "0.000216597162861870296402745",
+              "regular_max_profile_step_from_previous_eta": "0.000308731203540083664987051"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.11019207996282967247562",
+              "regular_anchor_abs": "0.107214055562517359290612",
+              "resonant_anchor_abs": "0.0828819948765039596046824",
+              "raw_max_profile_step_from_previous_eta": "0.00000216369752393838753983116",
+              "regular_max_profile_step_from_previous_eta": "0.00000308501241689133759714232"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.11019209072235731066564",
+              "regular_anchor_abs": "0.107214061425443303257885",
+              "resonant_anchor_abs": "0.0828820015689756987226109",
+              "raw_max_profile_step_from_previous_eta": "2.16367465421592521921578e-8",
+              "regular_max_profile_step_from_previous_eta": "3.08498914804601835753934e-8"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "1.33336502231553759934166",
+          "nearest_inner_gap_abs": "1.33336502231553759934166",
+          "boundary_overlap_nearest_mode_abs": "1.91815327369059936197939",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.37621819235193486251468",
+              "regular_anchor_abs": "0.240408500493804886607649",
+              "resonant_anchor_abs": "0.227588221705595681421693",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.375832755283197115394955",
+              "regular_anchor_abs": "0.240163966998105989265572",
+              "resonant_anchor_abs": "0.227082556425379745164629",
+              "raw_max_profile_step_from_previous_eta": "0.000251892792129804302504246",
+              "regular_max_profile_step_from_previous_eta": "0.000604902168595976484605526"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.375828809369332556517268",
+              "regular_anchor_abs": "0.240161469001509435045319",
+              "resonant_anchor_abs": "0.227077436780618033374856",
+              "raw_max_profile_step_from_previous_eta": "0.00000252334381365666245052528",
+              "regular_max_profile_step_from_previous_eta": "0.00000605567792241833911803319"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.375828769901047902064711",
+              "regular_anchor_abs": "0.240161444016286044344184",
+              "resonant_anchor_abs": "0.227077385577885433908436",
+              "raw_max_profile_step_from_previous_eta": "2.52338795561582706319234e-8",
+              "regular_max_profile_step_from_previous_eta": "6.0557442849689658597533e-8"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "1.02426356116431820619692",
+          "nearest_inner_gap_abs": "1.02426356116431820619692",
+          "boundary_overlap_nearest_mode_abs": "0.600404002905132684849375",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.145712768737329316654942",
+              "regular_anchor_abs": "0.051032649012568428714673",
+              "resonant_anchor_abs": "0.121341143304708800843461",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.145237741880109888170304",
+              "regular_anchor_abs": "0.0506406344282953760554491",
+              "resonant_anchor_abs": "0.120806220567099694435972",
+              "raw_max_profile_step_from_previous_eta": "0.000749332250187939265751263",
+              "regular_max_profile_step_from_previous_eta": "0.00459411936411799123865188"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.145232935216044421348461",
+              "regular_anchor_abs": "0.0506367145052858904446844",
+              "resonant_anchor_abs": "0.120800817491133082676988",
+              "raw_max_profile_step_from_previous_eta": "0.00000752495463061527571032301",
+              "regular_max_profile_step_from_previous_eta": "0.0000462803329953060145916559"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.145232887143776900312389",
+              "regular_anchor_abs": "0.0506366753061003273419277",
+              "resonant_anchor_abs": "0.120800763455015447268535",
+              "raw_max_profile_step_from_previous_eta": "7.52527262198002686748422e-8",
+              "regular_max_profile_step_from_previous_eta": "0.000000462837359564863412062078"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "0.247639787600577452271069",
+          "nearest_inner_gap_abs": "0.247639787600577452271069",
+          "boundary_overlap_nearest_mode_abs": "0.339632986064360384344587",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.255496086836312526286544",
+              "regular_anchor_abs": "0.0327030149174464564968638",
+              "resonant_anchor_abs": "0.240698018852286135497481",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.254906029010821491919722",
+              "regular_anchor_abs": "0.0317563476245523861581555",
+              "resonant_anchor_abs": "0.238655693577601530776279",
+              "raw_max_profile_step_from_previous_eta": "0.00175157104339244202103484",
+              "regular_max_profile_step_from_previous_eta": "0.0227874965906857386248124"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.254898153133636476662975",
+              "regular_anchor_abs": "0.0317469228913350768510524",
+              "resonant_anchor_abs": "0.238633331930250474199448",
+              "raw_max_profile_step_from_previous_eta": "0.0000175654527848349399238492",
+              "regular_max_profile_step_from_previous_eta": "0.00023450663308859399559021"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.25489807417695326843531",
+              "regular_anchor_abs": "0.0317468286486956925966613",
+              "resonant_anchor_abs": "0.238633108121525971884752",
+              "raw_max_profile_step_from_previous_eta": "0.00000017565917792615941586346",
+              "regular_max_profile_step_from_previous_eta": "0.0000023457411120842599283507"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "0.100707659341066654937523",
+          "nearest_inner_gap_abs": "0.100707659341066654937523",
+          "boundary_overlap_nearest_mode_abs": "0.218755779763273112429499",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.391327505838730916426936",
+              "regular_anchor_abs": "0.0269231013489275263574707",
+              "resonant_anchor_abs": "0.377710070523617173563101",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.392447097667632621211007",
+              "regular_anchor_abs": "0.0252394274256554166624699",
+              "resonant_anchor_abs": "0.374496188157940273706791",
+              "raw_max_profile_step_from_previous_eta": "0.00357210862067045083039627",
+              "regular_max_profile_step_from_previous_eta": "0.054422589023193623756694"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.392439501913095670418702",
+              "regular_anchor_abs": "0.0252225685325314593236343",
+              "resonant_anchor_abs": "0.374445663025898189460547",
+              "raw_max_profile_step_from_previous_eta": "0.0000357024462911006824930998",
+              "regular_max_profile_step_from_previous_eta": "0.000580333333223061724487316"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.39243942406009205416389",
+              "regular_anchor_abs": "0.0252223999432244618728242",
+              "resonant_anchor_abs": "0.374445155947225210580572",
+              "raw_max_profile_step_from_previous_eta": "0.000000357020426123063185640486",
+              "regular_max_profile_step_from_previous_eta": "0.00000580715606956086417438804"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "0.0448542255083495591697271",
+          "nearest_inner_gap_abs": "0.0448542255083495591697271",
+          "boundary_overlap_nearest_mode_abs": "0.160496063507337465335656",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.625457604280780730991293",
+              "regular_anchor_abs": "0.0237136825509029022000279",
+              "resonant_anchor_abs": "0.617499049989381721064449",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.640327127334074250368364",
+              "regular_anchor_abs": "0.0213229583737604037976175",
+              "resonant_anchor_abs": "0.622183547228304410383873",
+              "raw_max_profile_step_from_previous_eta": "0.00628975235033208796487317",
+              "regular_max_profile_step_from_previous_eta": "0.108069043219892970439717"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.6403245761406766904854",
+              "regular_anchor_abs": "0.0212988755832323055523844",
+              "resonant_anchor_abs": "0.622080353897152725299536",
+              "raw_max_profile_step_from_previous_eta": "0.0000626912886909670536126587",
+              "regular_max_profile_step_from_previous_eta": "0.00120268710064057364684513"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.640324534917106969075577",
+              "regular_anchor_abs": "0.0212986347418363520881941",
+              "resonant_anchor_abs": "0.622079306657490604377242",
+              "raw_max_profile_step_from_previous_eta": "0.00000062688411746899732313426",
+              "regular_max_profile_step_from_previous_eta": "0.0000120403986682947552834269"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "0.0352343027504843351068349",
+          "nearest_inner_gap_abs": "0.0352343027504843351068349",
+          "boundary_overlap_nearest_mode_abs": "0.114561226724731646118574",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.571712565026520119678828",
+              "regular_anchor_abs": "0.0280823271449147688492426",
+              "resonant_anchor_abs": "0.558803326127508848193232",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.593685889591710418118414",
+              "regular_anchor_abs": "0.0259024645488012562801067",
+              "resonant_anchor_abs": "0.568562717698534827358028",
+              "raw_max_profile_step_from_previous_eta": "0.00714285581652293954791857",
+              "regular_max_profile_step_from_previous_eta": "0.0509468294660751690375806"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.593683383737988544705192",
+              "regular_anchor_abs": "0.025880391954387868975053",
+              "resonant_anchor_abs": "0.568441924335664109932743",
+              "raw_max_profile_step_from_previous_eta": "0.0000712174885784739168606206",
+              "regular_max_profile_step_from_previous_eta": "0.000551900658309471518700161"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.593683335089672269745833",
+              "regular_anchor_abs": "0.0258801712050720389773002",
+              "resonant_anchor_abs": "0.568440693734412167394934",
+              "raw_max_profile_step_from_previous_eta": "0.000000712142507866468146295605",
+              "regular_max_profile_step_from_previous_eta": "0.00000552358549497624820265396"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "0.0212558935054503259734217",
+          "nearest_inner_gap_abs": "0.0212558935054503259734217",
+          "boundary_overlap_nearest_mode_abs": "0.0388297167186462534635654",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.340428049958724991285017",
+              "regular_anchor_abs": "0.0546932621918864746837488",
+              "resonant_anchor_abs": "0.311172430363604674158409",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.3781006714011852331307",
+              "regular_anchor_abs": "0.0546452621820591746103238",
+              "resonant_anchor_abs": "0.324991076805349295946915",
+              "raw_max_profile_step_from_previous_eta": "0.00337325459408289540301577",
+              "regular_max_profile_step_from_previous_eta": "0.00146891013277704042712062"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.378133071449436307810975",
+              "regular_anchor_abs": "0.0546448000664298428948066",
+              "resonant_anchor_abs": "0.324805772067391248741734",
+              "raw_max_profile_step_from_previous_eta": "0.0000334643588316009132222851",
+              "regular_max_profile_step_from_previous_eta": "0.0000147196598647473603810364"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.378133354962906089960271",
+              "regular_anchor_abs": "0.0546447954463916332222827",
+              "resonant_anchor_abs": "0.324803883422006510810162",
+              "raw_max_profile_step_from_previous_eta": "0.000000334614043193494382072383",
+              "regular_max_profile_step_from_previous_eta": "0.000000147196815935594998480488"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "0.0205480373367898664909337",
+          "nearest_inner_gap_abs": "0.0205480373367898664909337",
+          "boundary_overlap_nearest_mode_abs": "0.10706976029013403617412",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.853815826332730376985384",
+              "regular_anchor_abs": "0.020581866044925822500273",
+              "resonant_anchor_abs": "0.851357518454870890205414",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.946494597688648449014466",
+              "regular_anchor_abs": "0.0175144392069836794149762",
+              "resonant_anchor_abs": "0.928506989923464291468794",
+              "raw_max_profile_step_from_previous_eta": "0.0107182867467730024397225",
+              "regular_max_profile_step_from_previous_eta": "0.198954225821133919758066"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.946477184481354635283968",
+              "regular_anchor_abs": "0.0174836192609705295398666",
+              "resonant_anchor_abs": "0.928334926593744221492175",
+              "raw_max_profile_step_from_previous_eta": "0.000107162002887319602961472",
+              "regular_max_profile_step_from_previous_eta": "0.0023417228763103985281651"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.946476899491875032761359",
+              "regular_anchor_abs": "0.0174833110566251286874866",
+              "resonant_anchor_abs": "0.928333097116453028831058",
+              "raw_max_profile_step_from_previous_eta": "0.00000107159569167628673203568",
+              "regular_max_profile_step_from_previous_eta": "0.0000234584150007056559259815"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "0.00916667032128688897989664",
+          "nearest_inner_gap_abs": "0.00916667032128688897989664",
+          "boundary_overlap_nearest_mode_abs": "0.06657767059296045319933",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.898784772397176749556225",
+              "regular_anchor_abs": "0.0248778578769592034505198",
+              "resonant_anchor_abs": "0.907297137840398216953495",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "1.32715862223606385942991",
+              "regular_anchor_abs": "0.0226126641759415614593013",
+              "resonant_anchor_abs": "1.30415274191582618164671",
+              "raw_max_profile_step_from_previous_eta": "0.0136853000092724749201015",
+              "regular_max_profile_step_from_previous_eta": "0.0780985799278420246402617"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "1.32721450843262246851108",
+              "regular_anchor_abs": "0.0225898895260623273313064",
+              "resonant_anchor_abs": "1.30384561612935103872777",
+              "raw_max_profile_step_from_previous_eta": "0.000136673700326595655408861",
+              "regular_max_profile_step_from_previous_eta": "0.000859631424382288616075576"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "1.32721428592120557850925",
+              "regular_anchor_abs": "0.0225896617794166877494012",
+              "resonant_anchor_abs": "1.30384177670568193508728",
+              "raw_max_profile_step_from_previous_eta": "0.00000136667441791679078990247",
+              "regular_max_profile_step_from_previous_eta": "0.0000086047633242445072142662"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "0.00467500141283809702138564",
+          "nearest_inner_gap_abs": "0.00467500141283809702138564",
+          "boundary_overlap_nearest_mode_abs": "0.0151017213672968519507241",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.265126804511560892544818",
+              "regular_anchor_abs": "0.0431021997148780038357234",
+              "resonant_anchor_abs": "0.277836596541546040306826",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.62764373865908983893533",
+              "regular_anchor_abs": "0.0435576435457432013215422",
+              "resonant_anchor_abs": "0.584919266769304861110664",
+              "raw_max_profile_step_from_previous_eta": "0.00559613929905663610276593",
+              "regular_max_profile_step_from_previous_eta": "0.00853768393371849546707503"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.627873437388264371315153",
+              "regular_anchor_abs": "0.0435622974600554384859317",
+              "resonant_anchor_abs": "0.584343202068340835918612",
+              "raw_max_profile_step_from_previous_eta": "0.0000529834592343148160464869",
+              "regular_max_profile_step_from_previous_eta": "0.0000844288484082888605792066"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.627874320210192031340721",
+              "regular_anchor_abs": "0.0435623440044444141767953",
+              "resonant_anchor_abs": "0.584336116934701918761151",
+              "raw_max_profile_step_from_previous_eta": "0.000000529512946270034694026506",
+              "regular_max_profile_step_from_previous_eta": "0.00000084416277020931800244122"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "-1.74469368905726418414397",
+          "nearest_inner_eigenvalue_to_zero": "0.00455404171175921590194235",
+          "nearest_inner_gap_abs": "0.00455404171175921590194235",
+          "boundary_overlap_nearest_mode_abs": "0.0749220581970581736063604",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "1.24918800655108611702153",
+              "regular_anchor_abs": "0.0212915412065703509779814",
+              "resonant_anchor_abs": "1.26455831018589132825393",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "2.99921498615341089335736",
+              "regular_anchor_abs": "0.0179126115994892661337395",
+              "resonant_anchor_abs": "2.98161872095577694574875",
+              "raw_max_profile_step_from_previous_eta": "0.018657933826853241653969",
+              "regular_max_profile_step_from_previous_eta": "0.261376680954795417999387"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "2.99980854613599457397466",
+              "regular_anchor_abs": "0.0178793280611738934498498",
+              "resonant_anchor_abs": "2.98164908993443743264978",
+              "raw_max_profile_step_from_previous_eta": "0.000186905632980391698177298",
+              "regular_max_profile_step_from_previous_eta": "0.00311593404193038473539226"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "2.99980732539721630250847",
+              "regular_anchor_abs": "0.0178789953105584065764171",
+              "resonant_anchor_abs": "2.98164227875498726698318",
+              "raw_max_profile_step_from_previous_eta": "0.00000186901742890706953263662",
+              "regular_max_profile_step_from_previous_eta": "0.0000312171471466411411705362"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

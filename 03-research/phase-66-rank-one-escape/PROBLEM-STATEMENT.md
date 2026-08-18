@@ -36,7 +36,7 @@ $$\text{rank-one escape}\iff\text{no off-line zeros}\iff\textnormal{RH}.$$
 
 ---
 
-## 2. Honest scope: what is RH-strength and what is genuinely below it
+## 2. Candid scope: what is RH-strength and what is genuinely below it
 
 The escape statement itself **is RH** (all three faces). This phase does NOT aim to prove it. The
 deliverables below are the things that are (a) genuinely open, (b) NOT catalogued as failed, and

@@ -30,7 +30,7 @@ El presente trabajo corona una serie de resultados (Docs 01–39 del programa) a
 
 ### 1.1 Estructura del trabajo
 
-La Sección 2 recuerda las construcciones fundamentales del programa CCM. La Sección 3 introduce el potencial espectral y sus propiedades analíticas. La Sección 4 enuncia y prueba los resultados estructurales conocidos (Teoremas B y D). La Sección 5 establece la región libre de ceros complejos. La Sección 6 estudia la geometría de los ceros complejos en la franja crítica. La Sección 7 reformula Inc. Inv. en términos analíticos del ínfimo de $C_\lambda$. La Sección 8 contiene el resultado central nuevo: la prueba de RH $\Rightarrow$ Inc. Inv. via la fórmula de Hadamard. La Sección 9 consolida la equivalencia y su interpretación aritmética. La Sección 10 diagnostica honestamente el estado abierto del programa.
+La Sección 2 recuerda las construcciones fundamentales del programa CCM. La Sección 3 introduce el potencial espectral y sus propiedades analíticas. La Sección 4 enuncia y prueba los resultados estructurales conocidos (Teoremas B y D). La Sección 5 establece la región libre de ceros complejos. La Sección 6 estudia la geometría de los ceros complejos en la franja crítica. La Sección 7 reformula Inc. Inv. en términos analíticos del ínfimo de $C_\lambda$. La Sección 8 contiene el resultado central nuevo: la prueba de RH $\Rightarrow$ Inc. Inv. via la fórmula de Hadamard. La Sección 9 consolida la equivalencia y su interpretación aritmética. La Sección 10 diagnostica francamente el estado abierto del programa.
 
 ---
 
@@ -470,7 +470,7 @@ La equivalencia RH $\iff$ Inc. Inv. tiene la siguiente lectura:
 
 ## 10. El Cuello de Botella Final: Demostración Incondicional de Inc. Inv.
 
-### 10.1 Diagnóstico honesto
+### 10.1 Diagnóstico franco
 
 El programa ha establecido la equivalencia **bidireccional y completa**:
 

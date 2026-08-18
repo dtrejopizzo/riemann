@@ -51,7 +51,7 @@ Scientific implications.  The evidence strongly supports the “diagonalizable m
 <discussion>
 The main limitation is a mismatch between two mature theories:
 
-• In λ-ring/K-theoretic representation theory, the eigenvalues of ψ^n are rigid (n^j on weight-j components), and the decomposition is algebraic, often requiring rational coefficients and sometimes yielding generalized eigenspaces (nilpotent error terms) rather than honest diagonalization on integral groups (levine2005lambdaoperations pages 33-37, walker2020adamsoperationsin pages 113-116, hiller1981λringsandalgebraic pages 8-12).
+• In λ-ring/K-theoretic representation theory, the eigenvalues of ψ^n are rigid (n^j on weight-j components), and the decomposition is algebraic, often requiring rational coefficients and sometimes yielding generalized eigenspaces (nilpotent error terms) rather than candid diagonalization on integral groups (levine2005lambdaoperations pages 33-37, walker2020adamsoperationsin pages 113-116, hiller1981λringsandalgebraic pages 8-12).
 
 • In spectral realizations of zeta zeros (Connes, Connes–Consani, Deninger), the relevant “monoid action” is scaling/Frobenius on adèlic or topos-theoretic objects; while these are sometimes philosophically compared to Frobenius lifts/Adams operations, the retrieved sources do not construct a direct bridge identifying this scaling action with ψ^n on algebraic K-theory or TC of Spec ℤ, nor do they compute an Adams-spectrum on K_i(ℤ) whose eigenparameters are the nontrivial zeros (connes2014thearithmeticsite pages 3-6, connes2602theriemannhypothesis pages 16-19, deninger2007dynamicalsystemsand pages 1-3).
 

@@ -1,0 +1,89 @@
+{
+  "statement": "Audit of the left-endpoint reduction candidate for the modulus quotient branch.",
+  "sources": {
+    "modulus_quotient_split": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_85_modulus_quotient_split_results.json"
+  },
+  "all_audited_pairs_decrease": true,
+  "endpoint_summary_sigma_1": {
+    "count": 7,
+    "min": 0.11237374957350257,
+    "median": 0.16087023895345526,
+    "max": 0.32009971629837736
+  },
+  "worst_audited_row": {
+    "sigma": "1.0",
+    "N": 8,
+    "quotient": 0.32033520392027215,
+    "modulus_quotient": 0.32009971629837736,
+    "angular_den_factor": 1.0007356695739003,
+    "modulus_share_of_delta": 1.0007356695739003,
+    "relative_angular_correction": 0.0007356695739002422,
+    "reconstructed_quotient": 0.32033520392027215,
+    "reconstruction_error": 0.0
+  },
+  "comparisons": [
+    {
+      "N": 8,
+      "sigma_left": "1.0",
+      "sigma_right": "3.0",
+      "modulus_quotient_left": 0.32009971629837736,
+      "modulus_quotient_right": 0.30663034999484623,
+      "difference_right_minus_left": -0.013469366303531127,
+      "decreases": true
+    },
+    {
+      "N": 10,
+      "sigma_left": "1.0",
+      "sigma_right": "3.0",
+      "modulus_quotient_left": 0.21964417948389175,
+      "modulus_quotient_right": 0.21256083258677125,
+      "difference_right_minus_left": -0.007083346897120507,
+      "decreases": true
+    },
+    {
+      "N": 12,
+      "sigma_left": "1.0",
+      "sigma_right": "3.0",
+      "modulus_quotient_left": 0.21551969970086957,
+      "modulus_quotient_right": 0.20995407382782316,
+      "difference_right_minus_left": -0.005565625873046404,
+      "decreases": true
+    },
+    {
+      "N": 14,
+      "sigma_left": "1.0",
+      "sigma_right": "3.0",
+      "modulus_quotient_left": 0.15376394303833477,
+      "modulus_quotient_right": 0.1496348832041686,
+      "difference_right_minus_left": -0.004129059834166171,
+      "decreases": true
+    },
+    {
+      "N": 16,
+      "sigma_left": "1.0",
+      "sigma_right": "3.0",
+      "modulus_quotient_left": 0.16087023895345526,
+      "modulus_quotient_right": 0.15986647113277058,
+      "difference_right_minus_left": -0.0010037678206846756,
+      "decreases": true
+    },
+    {
+      "N": 18,
+      "sigma_left": "1.0",
+      "sigma_right": "3.0",
+      "modulus_quotient_left": 0.131201312151157,
+      "modulus_quotient_right": 0.12631754311244076,
+      "difference_right_minus_left": -0.004883769038716235,
+      "decreases": true
+    },
+    {
+      "N": 20,
+      "sigma_left": "1.0",
+      "sigma_right": "3.0",
+      "modulus_quotient_left": 0.11237374957350257,
+      "modulus_quotient_right": 0.09677437552791941,
+      "difference_right_minus_left": -0.015599374045583161,
+      "decreases": true
+    }
+  ]
+}

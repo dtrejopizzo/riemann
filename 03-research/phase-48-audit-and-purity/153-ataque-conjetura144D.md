@@ -13,7 +13,7 @@ en la jerarquía; (5) veredicto.
 
 **Contrato creativo (regla absoluta de etiquetado):** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado DE VERDAD acá, prueba completa; resultados externos citados con
-precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con ζ/RH con estatus honesto. **[GAP]** =
+precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con ζ/RH con estatus franco. **[GAP]** =
 declarado. **[GAP de literatura]** = dato no verificado en fuente esta sesión, no usado como premisa.
 
 **Prerrequisitos leídos en fuente esta sesión (completos):** Doc 144 entero (Def. 144.0, Props. 144.1–144.9,
@@ -101,7 +101,7 @@ y auditable, fijo los axiomas que USO (todo lo probado abajo declara cuáles nec
   $h(s)=\int F(u)e^{(s-1/2)u}du$, suma sobre los ceros no triviales con multiplicidad. (Consecuencia estándar
   de (A1)–(A3) por el argumento de contorno clásico; la doy por axioma para no re-probar Stirling.)
 
-Nota honesta: (A1)–(A4) son la lectura mínima de "producto de Euler genuino + dato local hermitiano positivo
+Nota franca: (A1)–(A4) son la lectura mínima de "producto de Euler genuino + dato local hermitiano positivo
 + continuación + ecuación funcional" del Doc 144 §3. No incluyen la cota de Ramanujan de la clase de Selberg
 ni una noción de grado; eso importa en §3 ([GAP-153.E]).
 
@@ -376,7 +376,7 @@ lado primo** — eso es §4.
   **182** (1999), 207–241: el resultado se extiende a la clase extendida $\mathcal S^\sharp$ (sin Euler), y
   el grado $d=1$ queda **clasificado**: en $\mathcal S$, los elementos de grado 1 son $\zeta(s)$ y las
   $L(s+i\theta,\chi)$ con $\chi$ primitivo no principal, $\theta\in\mathbb R$ (desplazadas). *(Nota de
-  honestidad: la clasificación de $d=1$ pertenece a la serie KP; si la prueba completa para $\mathcal S$
+  franqueza: la clasificación de $d=1$ pertenece a la serie KP; si la prueba completa para $\mathcal S$
   está en KP I o en una entrega posterior de la serie es un detalle de atribución que no verifiqué en fuente
   esta sesión — [GAP de literatura], sin efecto sobre el uso: el enunciado clasificatorio mismo es estándar
   y citado así por la literatura secundaria.)*
@@ -511,7 +511,7 @@ módulo $\leq8L_j[\tfrac{\cosh1-1}{1}-\tfrac12]\cdot\Theta(\#)$… los dejo del 
 exceso de CUALQUIER cuádruplo con $|\gamma'-\gamma_j|<\tfrac1{L_j}$ es positivo por continuidad del cálculo
 153.6(b) (el factor $\cos(\gamma'u)\cos(\gamma_ju)\geq\cos^2(\gamma_ju)-|u||\gamma'-\gamma_j|$ y el término
 de error se absorbe en $R$); y los con $\tfrac1{L_j}\leq|\gamma'-\gamma_j|<1$ se acotan por la integración
-por partes con denominador $(\gamma_j-\gamma')^2\geq L_j^{-2}$… que NO es pequeño. **Honestidad:** el
+por partes con denominador $(\gamma_j-\gamma')^2\geq L_j^{-2}$… que NO es pequeño. **Franqueza:** el
 control de vecinos a distancia $[L_j^{-1},1)$ requiere separación $\gtrsim1$ de los centros elegidos
 respecto de los demás off del enjambre; esto se garantiza si en cada ventana unitaria que contiene un cero
 de $\delta$ máximo local no hay otro cuádruplo off con $\kappa'$ cerca de 1 a distancia $<1$ — una
@@ -522,7 +522,7 @@ $\sum_\rho h(\rho)\geq L_k/3-o(L_k)\geq\tfrac13L_k$ ajustando constantes. Entonc
 $-\mathcal P_F(\gamma_k,L_k)\geq\tfrac13L_k$ en infinitas ventanas super-logarítmicas — contradice 153.M.
 Luego (ENJAMBRE) es imposible: vale la conclusión de 144.D. $\square$
 
-**Observación 153.10bis (estatus honesto de la prueba).** La columna vertebral (test de auto-escala, exceso
+**Observación 153.10bis (estatus franco de la prueba).** La columna vertebral (test de auto-escala, exceso
 positivo dominante, transferencia por (A4)) es sólida; la contabilidad de interferencia entre cuádruplos del
 enjambre (el párrafo de casos) es correcta pero fea, y un caso —ventanas con múltiples cuádruplos a
 auto-escalas comparables y fases adversas a TODO centro— está cerrado por el argumento del punto medio solo

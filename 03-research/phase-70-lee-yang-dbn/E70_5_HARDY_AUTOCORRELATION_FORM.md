@@ -156,6 +156,6 @@ Omega_7 closure
   = Lambda <= 0.
 ```
 
-I do not have a proof of this inequality. But any honest proof of `Omega_7` from the current program
+I do not have a proof of this inequality. But any candid proof of `Omega_7` from the current program
 must prove exactly this or an equivalent statement.
 

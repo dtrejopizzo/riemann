@@ -1,0 +1,123 @@
+{
+  "statement": "Audit showing that the isolated growth quotient is not sigma-monotone on the certified ladder, even though the weighted modulus quotient remains sigma-decreasing.",
+  "sources": {
+    "modulus_growth_split": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_88_modulus_growth_split_results.json"
+  },
+  "all_growth_pairs_decrease": false,
+  "growth_diff_stats": {
+    "count": 7,
+    "min": -0.2512751311448713,
+    "median": -0.028052028623895886,
+    "max": 0.04622739127477127
+  },
+  "largest_growth_violation": {
+    "N": 18,
+    "growth_left": 2.2094855281554713,
+    "growth_right": 2.2557129194302425,
+    "growth_diff_right_minus_left": 0.04622739127477127,
+    "growth_decreases": false,
+    "weighted_left": 2.361623618720826,
+    "weighted_right": 2.2737157760239337,
+    "weighted_diff_right_minus_left": -0.08790784269689222,
+    "new_im_share_left": 0.93557902734401,
+    "new_im_share_right": 0.9920821868838978
+  },
+  "largest_growth_drop": {
+    "N": 20,
+    "growth_left": 2.1799831911119276,
+    "growth_right": 1.9287080599670563,
+    "growth_diff_right_minus_left": -0.2512751311448713,
+    "growth_decreases": true,
+    "weighted_left": 2.2474749914700514,
+    "weighted_right": 1.9354875105583882,
+    "weighted_diff_right_minus_left": -0.3119874809116632,
+    "new_im_share_left": 0.9699699437750013,
+    "new_im_share_right": 0.9964972904478334
+  },
+  "comparisons": [
+    {
+      "N": 8,
+      "growth_left": 2.55604730607022,
+      "growth_right": 2.4525168415972076,
+      "growth_diff_right_minus_left": -0.10353046447301217,
+      "growth_decreases": true,
+      "weighted_left": 2.560797730387019,
+      "weighted_right": 2.45304279995877,
+      "weighted_diff_right_minus_left": -0.10775493042824902,
+      "new_im_share_left": 0.9981449435617543,
+      "new_im_share_right": 0.9997855894069312
+    },
+    {
+      "N": 10,
+      "growth_left": 2.148085626097571,
+      "growth_right": 2.1200335974736753,
+      "growth_diff_right_minus_left": -0.028052028623895886,
+      "growth_decreases": true,
+      "weighted_left": 2.1964417948389174,
+      "weighted_right": 2.1256083258677125,
+      "weighted_diff_right_minus_left": -0.0708334689712049,
+      "new_im_share_left": 0.9779843158808164,
+      "new_im_share_right": 0.9973773491916665
+    },
+    {
+      "N": 12,
+      "growth_left": 2.5729612453230346,
+      "growth_right": 2.5179693850503426,
+      "growth_diff_right_minus_left": -0.054991860272691984,
+      "growth_decreases": true,
+      "weighted_left": 2.5862363964104347,
+      "weighted_right": 2.519448885933878,
+      "weighted_diff_right_minus_left": -0.06678751047655673,
+      "new_im_share_left": 0.9948670001296765,
+      "new_im_share_right": 0.999412768049475
+    },
+    {
+      "N": 14,
+      "growth_left": 2.0970136814831357,
+      "growth_right": 2.088545920053774,
+      "growth_diff_right_minus_left": -0.008467761429361786,
+      "growth_decreases": true,
+      "weighted_left": 2.1526952025366866,
+      "weighted_right": 2.0948883648583605,
+      "weighted_diff_right_minus_left": -0.05780683767832606,
+      "new_im_share_left": 0.9741340432273285,
+      "new_im_share_right": 0.996972418716443
+    },
+    {
+      "N": 16,
+      "growth_left": 2.552030319770605,
+      "growth_right": 2.5553804061159626,
+      "growth_diff_right_minus_left": 0.0033500863453577168,
+      "growth_decreases": false,
+      "weighted_left": 2.573923823255284,
+      "weighted_right": 2.5578635381243293,
+      "weighted_diff_right_minus_left": -0.01606028513095481,
+      "new_im_share_left": 0.9914941136614563,
+      "new_im_share_right": 0.9990292163865053
+    },
+    {
+      "N": 18,
+      "growth_left": 2.2094855281554713,
+      "growth_right": 2.2557129194302425,
+      "growth_diff_right_minus_left": 0.04622739127477127,
+      "growth_decreases": false,
+      "weighted_left": 2.361623618720826,
+      "weighted_right": 2.2737157760239337,
+      "weighted_diff_right_minus_left": -0.08790784269689222,
+      "new_im_share_left": 0.93557902734401,
+      "new_im_share_right": 0.9920821868838978
+    },
+    {
+      "N": 20,
+      "growth_left": 2.1799831911119276,
+      "growth_right": 1.9287080599670563,
+      "growth_diff_right_minus_left": -0.2512751311448713,
+      "growth_decreases": true,
+      "weighted_left": 2.2474749914700514,
+      "weighted_right": 1.9354875105583882,
+      "weighted_diff_right_minus_left": -0.3119874809116632,
+      "new_im_share_left": 0.9699699437750013,
+      "new_im_share_right": 0.9964972904478334
+    }
+  ]
+}

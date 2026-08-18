@@ -1,0 +1,227 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{Source audit of the Witt--Loewy contractivity estimate (8c) (v100)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Only one orientation is needed}
+
+Use the conventions of row (c):
+\[
+ (\lambda_t f)(x)=f(t^{-1}x),\qquad
+ U_n=\lambda_n^{-1}=\lambda_{1/n}.
+\]
+On the transpose character with Mellin parameter $\rho$, $\lambda_t$ acts
+by $t^\rho$.  Hence the half-Tate centered Witt operator
+\begin{equation}
+                    S_n:=\sqrt n\,U_n                \tag{1}
+\end{equation}
+acts on the corresponding simple factor by
+\begin{equation}
+                    \chi_\rho(S_n)=n^{1/2-\rho}.     \tag{2}
+\end{equation}
+
+\begin{theorem}[One-sided Witt contractivity closes the spectral gap ---
+\PROVED]
+Assume that for one integer $n\ge2$, on every simple Loewy factor of the
+odd row-(c) representation,
+\begin{equation}
+                         \|\pi(S_n)\|\le1.           \tag{3}
+\end{equation}
+Then every nontrivial spectral parameter satisfies
+$\Re\rho=1/2$.  Consequently it is unnecessary to prove both inequalities
+in (8c); (3), together with the already proved Fourier--Poisson involution,
+is enough.
+\end{theorem}
+
+\begin{proof}
+Equations (2)--(3) give
+$n^{1/2-\Re\rho}\le1$, hence $\Re\rho\ge1/2$.  Row (c) is invariant under
+the functional-equation involution $\rho\mapsto1-\bar\rho$.  Applying the
+same estimate to the mirror parameter gives
+$1-\Re\rho\ge1/2$, hence $\Re\rho\le1/2$.  Both inequalities force
+$\Re\rho=1/2$.
+\end{proof}
+
+This is a genuine simplification of v99: the sought norm promotion is
+one-sided and can be attacked directly from the Verschiebung shift.
+
+\section{The algebraic Witt map does not extend to the required Hilbert map}
+
+The nuclear Dirichlet algebra in row (a) is
+\[
+ \mathcal C_{\mathbb R}
+ =\{a:q_k(a)=\sum_{r\ge1}|a_r|r^k<\infty
+       \text{ for every }k\ge0\}.
+\]
+The row-(b) intertwiner is algebraically
+\[
+ J\phi_r=\delta_r.
+\]
+In the half-Tate Hilbert norm of v96,
+$\|\phi_r\|_{1/2}=r^{-1/2}$.
+
+\begin{proposition}[Failure of the evident continuous promotion ---
+\PROVED]
+The algebraic map $J$ has no continuous extension from the half-Tate Witt
+Hilbert completion to $\mathcal C_{\mathbb R}$.  The same conclusion holds
+for Haran's original Hilbert norm.
+\end{proposition}
+
+\begin{proof}
+For every $k\ge0$,
+\[
+ q_k(J\phi_r)=q_k(\delta_r)=r^k,
+ \qquad
+ \frac{q_k(J\phi_r)}{\|\phi_r\|_{1/2}}=r^{k+1/2}\longrightarrow\infty.
+\]
+Thus no defining seminorm $q_k$ is bounded by the half-Tate Hilbert norm.
+For Haran's norm $\|\phi_r\|_H=\sqrt{\varphi(r)}$, take $k=1$ and use
+$\varphi(r)\le r$:
+\[
+ \frac{q_1(\delta_r)}{\|\phi_r\|_H}
+ \ge\sqrt r\longrightarrow\infty.
+\]
+Hence neither Hilbert completion maps continuously into the nuclear
+coefficient algebra through $J$.
+\end{proof}
+
+Therefore a simple factor of row (c) is not presently a continuous Hilbert
+quotient of the Witt shift.  Algebraic covariance alone does not allow the
+quotient norm to be transported.
+
+\section{Why the metric line alone cannot prove an operator bound}
+
+\begin{proposition}[Metric/contact data do not determine operator norm ---
+\PROVED]
+Fix the multiplicative correspondence labels $\Gamma_n$, their metric
+lines of norm $n^{-1/2}$ and their contact degrees $\Lambda(n)$.  For every
+$\alpha\in\mathbb C$, the assignment
+\begin{equation}
+             \mathcal R_\alpha(\Gamma_n)=n^\alpha\in\operatorname{End}(\mathbb C)
+                                                               \tag{4}
+\end{equation}
+is a strict monoidal realization and leaves the metric-line and contact
+data unchanged.  Its centered operator norm is
+\begin{equation}
+             \|n^{-1/2}\mathcal R_\alpha(\Gamma_n)\|
+             =n^{\Re\alpha-1/2}.                    \tag{5}
+\end{equation}
+Thus the scalar identity $\|\mathcal T_n\|^{1/2}=n^{-1/2}$ does not imply a
+contractive bound on the image of $\Gamma_n$ unless the realization is
+proved to be metric-enriched or dagger-contract-ive.
+\end{proposition}
+
+\begin{proof}
+Multiplicativity follows from $(mn)^\alpha=m^\alpha n^\alpha$.  The
+determinant line and the number $\Lambda(n)$ are separate components of the
+typed row-(b) correspondence, so (4) does not alter them.  Formula (5) is
+the scalar operator norm.  Taking $\Re\alpha>1/2$ violates contractivity
+while preserving all the stated algebraic and scalar data.
+\end{proof}
+
+This proposition does not modify the actual row-(c) character.  It proves
+the logical point needed in the audit: contractivity cannot be inferred
+from the existing labelwise determinant comparison; a norm-enriched
+comparison theorem is required.
+
+\section{The obstruction already occurs inside the actual source space}
+
+For $s\in\mathbb C$ define the Mellin functional
+\begin{equation}
+             \ell_s(f)=\int_0^\infty f(x)x^s\,d^*x.             \tag{5a}
+\end{equation}
+
+\begin{proposition}[Nuclear continuity does not imply critical
+contractivity --- \PROVED]
+For every $s\in\mathbb C$, $\ell_s$ is a continuous functional on
+$\mathcal H_-=\mathcal S_{(-\infty,\infty)}$.  Its kernel is a closed
+scaling-invariant hyperplane and the quotient character obeys
+\begin{equation}
+ \ell_s(U_nf)=n^{-s}\ell_s(f),\qquad
+ \ell_s(\sqrt n\,U_nf)=n^{1/2-s}\ell_s(f).           \tag{5b}
+\end{equation}
+Consequently this one-dimensional nuclear quotient is contractive for
+$\sqrt nU_n$ exactly when $\Re s\ge1/2$, although $\sqrt nU_n$ is unitary
+on the ambient $L^2(dx)$ completion.
+\end{proposition}
+
+\begin{proof}
+Choose real numbers $a<\Re s<b$.  By definition of
+$\mathcal S_{(-\infty,\infty)}$, both $x^af(x)$ and $x^bf(x)$ are Schwartz
+in logarithmic coordinates.  Splitting the integral at $1$ bounds (5a) by
+one defining seminorm near zero and another near infinity, proving
+continuity.  A change of variables gives
+\[
+ \ell_s(U_nf)=\int_0^\infty f(nx)x^s\,d^*x
+ =n^{-s}\ell_s(f),
+\]
+which proves (5b).  A continuous functional has closed kernel, and (5b)
+gives invariance.  The scalar norm is $n^{1/2-\Re s}$.  Finally
+$\|\sqrt nU_nf\|_{L^2(dx)}=\|f\|_{L^2(dx)}$ by the same change of variables;
+the apparent contradiction is absent because $\ell_s$ is not continuous
+for the $L^2(dx)$ norm.
+\end{proof}
+
+By the row-(c) spectral theorem, precisely the Mellin characters attached
+to the cokernel of $Z$ survive in the odd quotient.  On the initial
+half-plane the identity
+\[
+                     \ell_s(Zf)=\zeta(s)\ell_s(f)
+\]
+and its source-defined continuation explain the mechanism: at a spectral
+zero the functional annihilates $Z\mathcal H_\cap$ and descends to
+$\mathcal H_-^0$.  Thus the existing nuclear topology deliberately retains
+the very off-critical characters which ordinary $L^2$ would collapse.
+Proving (3) is therefore a new boundary theorem, not a consequence of the
+continuity already stated in row (c).
+
+\section{The exact new construction which would prove (3)}
+
+Let $M$ run over the finite Loewy subquotients of the odd object.  It is
+enough to construct, directly from rows (a)--(c), Hilbert spaces
+$\mathscr K_M$ and injective maps
+\begin{equation}
+ \Theta_M:\operatorname{gr}_LM\longrightarrow\mathscr K_M             \tag{6}
+\end{equation}
+such that
+\begin{equation}
+ \Theta_M(\sqrt n\,U_n)=V_{n,M}\Theta_M,
+ \qquad \|V_{n,M}\|\le1.                            \tag{7}
+\end{equation}
+Then (3) follows from injectivity, the one-sided theorem gives the critical
+line, and the global Hilbert assembly of v99 gives row (d).
+
+The map $J$ is not such a $\Theta_M$ by the preceding proposition.  The
+files contain no other map from the Witt Hilbert completion to the Loewy
+subquotients.  Accordingly (6)--(7) are \OPEN.  Defining the norm on
+$\operatorname{gr}_LM$ by pulling it back from the desired conclusion
+would be circular; constructing $\Theta_M$ from a contact complex or a
+Poisson boundary frame would be a valid proof.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.57\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.18\linewidth}}
+\toprule
+Statement & Status & Evidence \\
+\midrule
+One-sided contractivity suffices & \PROVED & (1)--(3) \\
+Algebraic Witt intertwiner $J$ & \PROVED & row (b) \\
+$J$ extends from either Witt Hilbert completion & false & Proposition 2 \\
+Metric determinant implies operator contractivity & false in this type & (4)--(5) \\
+Source construction of $\Theta_M$ satisfying (6)--(7) & \OPEN & not in rows (a)--(c) \\
+Row (d), condition $G$ & \OPEN & immediate after (6)--(7) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

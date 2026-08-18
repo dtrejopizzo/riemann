@@ -192,7 +192,7 @@ Pero la identidad $C_\infty = K\Xi^2$ NO es compatible con la definición explí
 
 ---
 
-## 9. Conclusión honesta de la Dirección B
+## 9. Conclusión franca de la Dirección B
 
 **Resultado neto.** La Dirección B revela una INCONSISTENCIA interna en la EF2-emp tal como se aplica a la cuestión de conteo de ceros. La ecuación fundamental de conteo $N_{C_\infty}(T) = 2N_\Xi(T) + O(1)$ es incompatible con el Teorema B.
 
@@ -200,7 +200,7 @@ Pero la identidad $C_\infty = K\Xi^2$ NO es compatible con la definición explí
 
 **Lección de la Dirección B.** El camino de la EF2-emp al conteo de ceros no es directo. La EF2-emp relaciona $C_\infty'/C_\infty$ con $\Xi'/\Xi$ y $m^{emp}$, pero la triple relación contiene circularidad cuando se toma el límite.
 
-**Lo que sí aporta.** La Dirección B clarifica que la EF2-emp, la inclusión directa y la normalización $N$ son tres piezas que deben ser reconciliadas con cuidado. La inconsistencia del cómputo directo de $N_{C_\infty}$ via EF2-emp es un resultado honesto: señala que no puede obtenerse Inc. Inv. trivialmente desde la EF2-emp sin información adicional.
+**Lo que sí aporta.** La Dirección B clarifica que la EF2-emp, la inclusión directa y la normalización $N$ son tres piezas que deben ser reconciliadas con cuidado. La inconsistencia del cómputo directo de $N_{C_\infty}$ via EF2-emp es un resultado franco: señala que no puede obtenerse Inc. Inv. trivialmente desde la EF2-emp sin información adicional.
 
 **Remisión a la Dirección A.** La cuestión de si $C_\infty(z) = K\Xi(z)^2$ o una relación más rica se abordará en Doc 33 via la fórmula explícita y la estructura de punto fijo.
 

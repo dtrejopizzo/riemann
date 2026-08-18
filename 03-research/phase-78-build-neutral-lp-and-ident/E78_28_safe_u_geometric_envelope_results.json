@@ -1,0 +1,215 @@
+{
+  "statement": "Audit of the geometric-envelope form 0 < A_{N+2} <= rho_* A_N for A_N = N Delta safe_u_N",
+  "sources": {
+    "theta_coupling_zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "theta_coupling_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "A_N": 0.2547311936166079,
+          "A_next": 0.20607349051170415,
+          "ratio": 0.8089841200283554,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "A_N": 0.7340861558417286,
+          "A_next": 0.6020621815437219,
+          "ratio": 0.8201519355086823,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "A_N": 0.20607349051170415,
+          "A_next": 0.1685532037633514,
+          "ratio": 0.8179276400123783,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "A_N": 0.6020621815437219,
+          "A_next": 0.49608729978702815,
+          "ratio": 0.8239801718072242,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "A_N": 0.1685532037633514,
+          "A_next": 0.14461870659014023,
+          "ratio": 0.858000342688145,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "A_N": 0.49608729978702815,
+          "A_next": 0.42770701421160506,
+          "ratio": 0.8621607817721216,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "A_N": 0.14461870659014023,
+          "A_next": 0.12269238789869889,
+          "ratio": 0.8483853215920255,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "A_N": 0.42770701421160506,
+          "A_next": 0.3639529913415392,
+          "ratio": 0.8509399641537699,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "A_N": 0.12269238789869889,
+          "A_next": 0.10806976842718666,
+          "ratio": 0.8808188533783741,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "A_N": 0.3639529913415392,
+          "A_next": 0.32129493916323737,
+          "ratio": 0.8827924122259216,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "A_N": 0.10806976842718666,
+          "A_next": 0.09841736357148614,
+          "ratio": 0.9106835797265177,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "A_N": 0.32129493916323737,
+          "A_next": 0.2930947985799343,
+          "ratio": 0.9122297392646584,
+          "positive_envelope": true
+        }
+      ],
+      "positive_envelope_count": 12,
+      "positive_envelope_fail_count": 0,
+      "rho_star_observed": 0.9122297392646584
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "A_N": 1.2248638894285488,
+          "A_next": 0.4832230141574351,
+          "ratio": 0.39451160110767836,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "A_N": 0.2289375509416305,
+          "A_next": 0.20769328528502368,
+          "ratio": 0.90720497546502,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "A_N": 0.4832230141574351,
+          "A_next": 0.02086203752444683,
+          "ratio": 0.043172690275984936,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "A_N": 0.20769328528502368,
+          "A_next": 0.05361136100726602,
+          "ratio": 0.25812756023235683,
+          "positive_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "A_N": 0.02086203752444683,
+          "A_next": -0.014306161919014225,
+          "ratio": -0.6857509436578181,
+          "positive_envelope": false
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "A_N": 0.05361136100726602,
+          "A_next": -0.007503064497069048,
+          "ratio": -0.13995288230142391,
+          "positive_envelope": false
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "A_N": -0.014306161919014225,
+          "A_next": -0.0074729174328943705,
+          "ratio": 0.5223565534346543,
+          "positive_envelope": false
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "A_N": -0.007503064497069048,
+          "A_next": -0.004602124135392628,
+          "ratio": 0.6133659303062601,
+          "positive_envelope": false
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "A_N": -0.0074729174328943705,
+          "A_next": 0.003421254633127113,
+          "ratio": -0.45782047826025707,
+          "positive_envelope": false
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "A_N": -0.004602124135392628,
+          "A_next": 0.016864053953430415,
+          "ratio": -3.6644065777664356,
+          "positive_envelope": false
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "A_N": 0.003421254633127113,
+          "A_next": -0.002618284288462871,
+          "ratio": -0.7652994498306878,
+          "positive_envelope": false
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "A_N": 0.016864053953430415,
+          "A_next": -0.0039510953668681036,
+          "ratio": -0.23429095861404003,
+          "positive_envelope": false
+        }
+      ],
+      "positive_envelope_count": 4,
+      "positive_envelope_fail_count": 8,
+      "rho_star_observed": 0.90720497546502
+    }
+  }
+}

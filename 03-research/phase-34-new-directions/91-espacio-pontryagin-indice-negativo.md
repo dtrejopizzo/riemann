@@ -17,7 +17,7 @@ La Dirección B busca probar $\mathrm{neg.ind}(H_C) = 0$ mediante herramientas d
 4. Estudia la semiacotación inferior como ruta al índice negativo cero.
 5. Examina el análogo de la función característica de Livsic en espacios de Pontryagin.
 6. Formula el obstáculo preciso que bloquea cada ruta.
-7. Concluye con una evaluación honesta de si existe una ruta genuinamente nueva.
+7. Concluye con una evaluación franca de si existe una ruta genuinamente nueva.
 
 **Resultado principal del análisis:** Cada ruta conocida en la Dirección B se reduce a una condición equivalente al conocimiento de los ceros de $\zeta$ (directamente o vía la barrera de cuadrado-raíz del Opt-B). La Dirección B no está bloqueada en principio, pero ninguna herramienta estándar de la teoría de Pontryagin/Kreĭn cierra el argumento sin asumir información equivalente a RH.
 
@@ -611,7 +611,7 @@ Aunque la completitud del sistema de eigenvectores con eigenvalores reales es ci
 
 ### Sección 9.4 — Evaluación final: ¿es la Dirección B prometedora?
 
-**Respuesta honesta:** La Dirección B es la formulación correcta del problema en lenguaje de operadores, pero no proporciona herramientas nuevas que superen la dificultad intrínseca de RH.
+**Respuesta franca:** La Dirección B es la formulación correcta del problema en lenguaje de operadores, pero no proporciona herramientas nuevas que superen la dificultad intrínseca de RH.
 
 **Lo que la Dirección B da:**
 - Un lenguaje preciso: $\kappa = 0 \iff$ RH, con el operador $H_C$ como objeto central.

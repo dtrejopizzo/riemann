@@ -45,7 +45,7 @@ upper-bound technology.**
 This is the first route whose **direction** (upper) and **mechanism** (probabilistic extremes, not positivity)
 are both what the capstone demands. It does not pre-reduce to a positivity the way Hodge and hyperbolicity did.
 
-## 4. The honest open part, and the new mathematics
+## 4. The candid open part, and the new mathematics
 
 - **What is known (unconditional):** the leading-order max of $\zeta$ and of $S(T)$ over $[T,T+1]$
   (log-correlated leading term); the moments / multiplicative chaos in the subcritical regime (Saksman–Webb);
@@ -74,14 +74,14 @@ are both what the capstone demands. It does not pre-reduce to a positivity the w
   a positivity at its foundation (first/second-moment + Girsanov are not PSD certificates) — i.e. that this route
   truly sits outside the capstone, unlike Phases 10–11. *This is the make-or-break of the whole phase.*
 
-## 6. Honest assessment
+## 6. Candid assessment
 
 - **Genuinely new to the program, recent, and — for the first time — direction-correct and mechanism-correct:**
   native **upper** bounds via **probability** (log-correlated extremes), not positivity. The capstone itself
   points here.
 - **Direct, not speculative, connection** to our cornered target: Phase 10 already reduced RH to extremal $S(T)$
   regularity, and $S(T)$ is log-correlated. The two halves were built to meet.
-- **Honest risk:** the extreme tail / freezing at minimal scale is open (it is, after all, RH-strength at the
+- **Candid risk:** the extreme tail / freezing at minimal scale is open (it is, after all, RH-strength at the
   end), and the route may still hit a wall — but it is the **first** wall that would *not* be the wrong-sign
   capstone (the mechanism is upper-bound-native). Even a sharp pricing (M12.3) would be the first *upper*-side
   quantification the program has produced.

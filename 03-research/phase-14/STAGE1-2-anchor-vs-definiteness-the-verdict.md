@@ -92,7 +92,7 @@ content**:
 > (the capstone), now pinpointed not as "a missing positivity" in the abstract but as **a missing
 > two-dimensional arithmetic geometry with a Hodge index theorem.**
 
-## Honest status
+## Candid status
 
 - **Stage 1:** ✅ the anchor is ζ-free (Theorem A) — a real object — **but** it is classical positive-coefficient
   zero-free-region machinery, and its ceiling is the **edge**; it never reaches the center, structurally.

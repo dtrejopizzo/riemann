@@ -172,7 +172,7 @@ Bajo RH, los dos términos se cancelan exactamente, dando $T_\lambda = 0$. Este 
 2. Para todo $\lambda > 0$: $\displaystyle\sum_p \frac{\log p}{\sqrt{p}} B_\lambda(\log p) = A_\lambda^{off} = 0$.
 3. Para todo $\lambda > 0$ y todo primo $p$: los coeficientes de Fourier $B_\lambda(\log p)$ de la función de prueba $W_\lambda w$ son exactamente los que la fórmula de Weil predice a partir de los ceros críticos.
 
-*Honestidad:* Esta proposición es una reformulación de RH via la fórmula de Weil — no es más difícil ni más fácil que RH. Pero da una interpretación aritmética concreta de $T_\lambda$: **la traza CCM mide cuánto se desvían los coeficientes de Fourier del espectro de Jacobi respecto a lo que la fórmula de Weil predice para ceros críticos**.
+*Franqueza:* Esta proposición es una reformulación de RH via la fórmula de Weil — no es más difícil ni más fácil que RH. Pero da una interpretación aritmética concreta de $T_\lambda$: **la traza CCM mide cuánto se desvían los coeficientes de Fourier del espectro de Jacobi respecto a lo que la fórmula de Weil predice para ceros críticos**.
 
 ---
 

@@ -6,7 +6,7 @@ is $J$-indefinite in $\C_+$). The correct atomic object is the **positive von Ma
 measure**, and the global object is a **renormalized canonical system**, whose kernel is positive by
 the canonical Gram identity. The architecture of P50 (positivity free; the wall is rank-one escape) is
 preserved with the corrected, valid positivity. The load-bearing open theorem is the **rank-one escape
-theorem**; if it holds, RH follows. Honest: that theorem is RH-strength and is the object to create.*
+theorem**; if it holds, RH follows. Candid: that theorem is RH-strength and is the object to create.*
 
 Notation: $J=\begin{psmallmatrix}0&-1\\1&0\end{psmallmatrix}$ (symplectic) for the canonical system;
 $z\in\C_+$; $t$ the scaling variable on $\R$.

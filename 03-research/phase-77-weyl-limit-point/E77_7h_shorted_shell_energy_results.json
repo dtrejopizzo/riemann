@@ -1,0 +1,175 @@
+{
+  "statement": "E77.7h shorted shell-energy anatomy probe",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 20,
+    "pairs": [
+      [
+        16,
+        18
+      ],
+      [
+        18,
+        20
+      ]
+    ],
+    "ref_modes": 14,
+    "dps": 60,
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "Finite anatomy probe. It identifies the cancellation object but does not prove the infinite shorted-shell energy estimate.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 20,
+      "ref_modes": 14,
+      "planted": null,
+      "rows": [
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "ref_modes": 14,
+          "shell_labels": [
+            "('coord', -18)",
+            "('coord', -17)",
+            "('coord', 17)",
+            "('coord', 18)"
+          ],
+          "eta": "1.70904695553041241127617e-41",
+          "fixed_shell_increment": "1.54186511592689568242438e-45",
+          "shorted_energy": "1.54186511592689568242438e-45",
+          "energy_over_eta": "0.0000902178322800012889538742",
+          "identity_relative_defect": "1.79533817422485241082977e-74",
+          "identity_log10_defect": "-73.7458537346250621",
+          "direct_shell_norm": "6.73441573112701201232205e-26",
+          "mediated_shell_norm": "6.73428494424314875552411e-26",
+          "residual_norm": "1.31029311948869303411363e-30",
+          "cancellation_ratio": "0.0000194566711026230929403741",
+          "cos_direct_mediated": "0.999999999999300225627944",
+          "schur_min_eigenvalue": "2.3093057949965033435366e-23",
+          "schur_max_eigenvalue": "1.13649062350922033022577e-15",
+          "schur_condition": "49213518.0179089776148253",
+          "crude_residual_bound": "7.43456350691749774307116e-38",
+          "crude_bound_over_energy": "48217988.9156399596534215",
+          "direct_energy": "6.37662394940095494529285e-32",
+          "mediated_energy": "6.37662365185534206727967e-32",
+          "cross_energy": "6.37662380062807141303046e-32",
+          "energy_expansion_defect": "1.84934090504123448796994e-67"
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "ref_modes": 14,
+          "shell_labels": [
+            "('coord', -20)",
+            "('coord', -19)",
+            "('coord', 19)",
+            "('coord', 20)"
+          ],
+          "eta": "1.70904698079730443402777e-41",
+          "fixed_shell_increment": "2.53064819122389454491485e-49",
+          "shorted_energy": "2.53064819122389454491485e-49",
+          "energy_over_eta": "1.48073646872088723551477e-8",
+          "identity_relative_defect": "1.18426383254214797600925e-73",
+          "identity_log10_defect": "-72.9265515338859324",
+          "direct_shell_norm": "1.53408408160788246679458e-24",
+          "mediated_shell_norm": "1.53408407893740841362959e-24",
+          "residual_norm": "3.11358078624921845829413e-33",
+          "cancellation_ratio": "2.02960243416766067335263e-9",
+          "cos_direct_mediated": "0.999999999999999999455482",
+          "schur_min_eigenvalue": "1.67483593655963764653993e-23",
+          "schur_max_eigenvalue": "3.92288511400263585155158e-17",
+          "schur_condition": "2342250.38307980535208528",
+          "crude_residual_bound": "5.78825967420666413319033e-43",
+          "crude_bound_over_energy": "2287263.67192402773391453",
+          "direct_energy": "3.42324372909050627310881e-27",
+          "mediated_energy": "3.42324372908127810226168e-27",
+          "cross_energy": "3.42324372908589218768512e-27",
+          "energy_expansion_defect": "6.42719401116414679821314e-63"
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 20,
+      "ref_modes": 14,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "ref_modes": 14,
+          "shell_labels": [
+            "('coord', -18)",
+            "('coord', -17)",
+            "('coord', 17)",
+            "('coord', 18)"
+          ],
+          "eta": "0.0205480373367898664909337",
+          "fixed_shell_increment": "0.0047100389932903443864783",
+          "shorted_energy": "0.0047100389932903443864783",
+          "energy_over_eta": "0.229220869910399626612466",
+          "identity_relative_defect": "6.07716335728627119838288e-64",
+          "identity_log10_defect": "-63.216299089436051",
+          "direct_shell_norm": "0.126835978149327644947339",
+          "mediated_shell_norm": "0.0720041514039476009866364",
+          "residual_norm": "0.102998631521426514069852",
+          "cancellation_ratio": "0.812061632860695589721982",
+          "cos_direct_mediated": "0.583793689622480927807242",
+          "schur_min_eigenvalue": "1.84157639566454389753098",
+          "schur_max_eigenvalue": "4.36604401484791943252883",
+          "schur_condition": "2.3708188403839777931125",
+          "crude_residual_bound": "0.00576067228069480978260911",
+          "crude_bound_over_energy": "1.22306254553330413122583",
+          "direct_energy": "0.00725711095730791242761427",
+          "mediated_energy": "0.0013319244347417977292219",
+          "cross_energy": "0.00193949819937968288517893",
+          "energy_expansion_defect": "0.0"
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "ref_modes": 14,
+          "shell_labels": [
+            "('coord', -20)",
+            "('coord', -19)",
+            "('coord', 19)",
+            "('coord', 20)"
+          ],
+          "eta": "0.0252341962633672048746034",
+          "fixed_shell_increment": "0.00472946188758441190381552",
+          "shorted_energy": "0.00472946188758441190381552",
+          "energy_over_eta": "0.187422727406231292523117",
+          "identity_relative_defect": "0.0",
+          "identity_log10_defect": "-inf",
+          "direct_shell_norm": "0.0999931053055810911193368",
+          "mediated_shell_norm": "0.0597343351381300561683652",
+          "residual_norm": "0.146783621657791094452833",
+          "cancellation_ratio": "1.46793742637772048388155",
+          "cos_direct_mediated": "-0.667888058421968717649643",
+          "schur_min_eigenvalue": "1.85288057304052399587121",
+          "schur_max_eigenvalue": "4.85595172306585370994718",
+          "schur_condition": "2.62075807460022957483544",
+          "crude_residual_bound": "0.0116280735523186592548642",
+          "crude_bound_over_energy": "2.45864621149484212802912",
+          "direct_energy": "0.00283481991501199796048822",
+          "mediated_energy": "0.000850341419886300226536423",
+          "cross_energy": "-0.000522150276343056858395436",
+          "energy_expansion_defect": "0.0"
+        }
+      ]
+    }
+  ]
+}

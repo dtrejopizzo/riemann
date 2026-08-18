@@ -204,9 +204,9 @@ Si esto es correcto: Inc. Inv. (= deslocalización uniforme) NO seguiría del co
 
 ---
 
-## 11. Honestidad: la Dirección D como obstáculo más que como herramienta
+## 11. Franqueza: la Dirección D como obstáculo más que como herramienta
 
-**El resultado sorprendente (y honesto).** El análisis de la deslocalización sugiere que el operador $J_\infty$, con sus coeficientes específicos $b_n = \gamma_n$ y $a_n = \pi/\log\gamma_n$, NO exhibe deslocalización uniforme en general. Los eigenvectores de operadores de Jacobi no-acotados son generalmente LOCALIZADOS (pesos que decaen con el índice).
+**El resultado sorprendente (y franco).** El análisis de la deslocalización sugiere que el operador $J_\infty$, con sus coeficientes específicos $b_n = \gamma_n$ y $a_n = \pi/\log\gamma_n$, NO exhibe deslocalización uniforme en general. Los eigenvectores de operadores de Jacobi no-acotados son generalmente LOCALIZADOS (pesos que decaen con el índice).
 
 **La resolución (si existe).** Inc. Inv. sería cierta SOLO SI los pesos $|c_n|^2$ de $J_\infty$ son exactamente $1/N$ — una condición ESPECIAL que va contra el comportamiento genérico de los operadores de Jacobi no-acotados. Esto solo puede ocurrir si hay una razón estructural profunda (aritmética o espectral) que FUERZA la uniformidad de los pesos.
 

@@ -1,0 +1,1490 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[margin=1.08in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage[final,expansion=false]{microtype}
+\setlength{\parskip}{4pt plus 1pt}
+\emergencystretch=2.5em
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{entry}[theorem]{Entry}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\dd}{\,d}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\QW}{\mathcal Q_W}
+\newcommand{\K}{\mathcal K}
+\newcommand{\XiR}{\Xi}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\EK}{\mathscr E_K}
+\newcommand{\NK}{\mathcal N_K}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\dist}{dist}
+
+\newcommand{\NOGO}{\textup{[NO-GO]}}
+\newcommand{\FALS}{\textup{[FALSIFIER]}}
+\newcommand{\CTMD}{\textup{[COUNTERMODEL]}}
+\newcommand{\SCAL}{\textup{[SCALE]}}
+
+\title[Obstructions to Weil positivity]
+{Obstructions to Weil Positivity:\\
+A Catalogue of No-Go Theorems, Falsifiers\\
+and Countermodels in the Prime--Gamma Doob Coordinate}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+
+\begin{document}
+
+\begin{abstract}
+The companion paper reduces the Riemann Hypothesis, along the
+Connes--Consani--Moscovici and Suzuki route, to a single strict inequality
+on a cofinal family of finite rows: the physical source surplus
+\(\mathfrak g>\delta\).  This paper does not attempt that inequality.  It
+does the complementary and, we argue, currently more useful thing: it
+records in one place the mechanisms which provably cannot prove it.
+
+We work throughout in the full-kernel Doob coordinate, in which Weil
+positivity is the single sharp Poincar\'e inequality
+\(\EK(r)\ge\frac12\Var_{\mu_K}(r)\), with \(\EK\) the positive jump energy
+retaining every ordinary von Mangoldt atom and the complete Gamma jump
+measure.  The catalogue contains thirty-one entries in eight families:
+order and total positivity; coupling, transport and martingale routings;
+local squares, sums of squares and Hodge--Korn completions; determinants
+and minor charging; finite heads and adaptive filtering; spectral and
+operator-theoretic detectors; realization and factorization rigidity; and
+the semilocal branch-selection coordinate.  Each entry is classified as a
+no-go theorem inside the literal Riemann system, a conditional falsifier
+valid under the off-line counterfactual, a countermodel satisfying all
+structural hypotheses of a proposed mechanism, or a scale obstruction.
+
+Three structural principles account for every entry.  \emph{Radical
+saturation}: the infinite-dimensional family \(K^{(2j)}/K\) attains
+equality, and its first member is unbounded, so no decomposition into
+nonnegative summands may contain a local edge square.  \emph{Measure
+capacity}: the source carries singular mass on the lines
+\(t\pm s=\log p^k\) while the polar pair law is absolutely continuous, so
+no endpoint-preserving positive coupling exists.  \emph{Counterfactual
+invariance}: under the existence of an off-line orbit, every positive
+datum of the system persists while the strict surplus fails, so no
+implication insensitive to the location of the mean-periodic frequencies
+can succeed.
+
+We also record the unconditional structure that survives, including an
+exact and fully explicit Gamma absorption theorem
+\(2K(u)<\frac{1501}{2000}r_\Gamma(u)\) which removes the Hermitian
+connection power with a fixed margin, and a rigidity theorem showing that
+the remaining contraction threshold is invariant under every change of
+signed realization.  We conclude by delimiting the narrow corridor of
+mechanisms that remain admissible.  No statement in this paper proves the
+Riemann Hypothesis, and by the counterfactual invariance principle none
+of them could.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+\section{Purpose}
+
+A research programme that reduces a famous conjecture to a single
+inequality produces two kinds of output.  The first is the reduction
+itself.  The second, usually discarded, is the record of everything that
+was tried against the surviving inequality and provably cannot work.
+
+The second output is the subject of this paper.  Our reason for
+publishing it separately is stated precisely in
+Section~\ref{sec:circularity}: in the coordinate developed here, the
+surviving inequality is not a preliminary estimate from which Weil
+positivity follows.  It \emph{is} Weil positivity, evaluated at a
+stationary residual.  Consequently a catalogue of obstructions is not a
+consolation prize for having failed to close the gate.  It is the part of
+the work whose validity does not depend on the gate ever being closed,
+and it is directly useful to anyone else approaching the same wall.
+
+We have tried to make each entry falsifiable in the ordinary sense: it
+either exhibits an explicit object in the literal Riemann system, or it
+exhibits a model satisfying a stated list of hypotheses and violating the
+proposed conclusion.  Where an entry rules out a mechanism we ourselves
+proposed in earlier work, we say so.
+
+\subsection{What is not claimed}
+
+We do not claim that the Riemann Hypothesis is false, nor that the
+Connes--CCM route is unviable.  Every entry below rules out a
+\emph{method}, not the conclusion.  We also do not claim the catalogue is
+exhaustive; it is exhaustive only over the mechanisms we tested.
+
+\section{The canonical coordinate}
+\label{sec:coordinate}
+
+All obstructions are stated in one coordinate, so that they can be
+compared.  We recall its construction.
+
+Let \(\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)\) and
+\(\XiR(z)=\xi(\frac12+iz)\).  Let \(K\) be Riemann's even kernel,
+normalized by
+\[
+ \widehat K=\XiR .
+\tag{2.1}
+\]
+The theta representation gives, for \(x\ge0\),
+\[
+ K(x)=2\pi e^{5x/2}\sum_{m\ge1}m^2\bigl(2\pi m^2e^{2x}-3\bigr)
+ e^{-\pi m^2e^{2x}},
+\tag{2.2}
+\]
+in which every summand is positive because \(2\pi m^2e^{2x}>3\).  Hence
+\(K\) is smooth, even, strictly positive and double-exponentially
+decreasing.  Put
+\[
+ h(x)=\cosh(x/2),
+ \qquad
+ c_K=\int_\R h(x)K(x)\dd x=\widehat K(i/2)=\xi(0)=\tfrac12 .
+\tag{2.3}
+\]
+
+\begin{theorem}[Full-kernel Doob--variance identity]
+\label{thm:doob}
+For every even compactly supported smooth multiplier \(r\),
+\[
+ \boxed{
+ \QW(Kr,Kr)=\EK(r)-\tfrac12\Var_{\mu_K}(r),}
+\tag{2.4}
+\]
+where
+\[
+ \EK(r)=\int_0^\infty\!\!\int_\R
+ K(x)K(x-u)|r(x)-r(x-u)|^2\dd x\dd\nu_\zeta(u),
+\tag{2.5}
+\]
+\[
+ \dd\nu_\zeta(u)=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}(\dd u)
+ +\frac{e^{-u/2}}{1-e^{-2u}}\dd u,
+ \qquad
+ \dd\mu_K=\frac{hK\dd x}{c_K}.
+\tag{2.6}
+\]
+The identity is unconditional.  Consequently the Riemann Hypothesis is
+equivalent to the single sharp Poincar\'e inequality
+\[
+ \boxed{\EK(r)\ge\tfrac12\Var_{\mu_K}(r)}
+\tag{2.7}
+\]
+for all even compactly supported smooth \(r\).
+\end{theorem}
+
+The virtue of (2.4) is that it is an identity, not an estimate: no prime,
+Gamma or polar term has been separated, bounded, or discarded.  Every
+obstruction below is therefore an obstruction to proving (2.7), and can
+be compared with every other.  We write \(\mathcal J_u(r)\) for the inner
+displacement form in (2.5),
+\[
+ \mathcal J_u(r)=\int_\R K(x)K(x-u)|r(x)-r(x-u)|^2\dd x\ \ge0 ,
+\tag{2.8}
+\]
+so that \(\EK(r)=\int_0^\infty\mathcal J_u(r)\dd\nu_\zeta(u)\).
+
+\subsection{The radical}
+
+Let \(L\ge0\) be the self-adjoint generator associated with the closed
+form \(\EK\) on \(L^2_{\rm even}(\mu_K)\), and set
+\[
+ \mathcal R=\overline{\operatorname{span}}
+ \Bigl\{\,\tfrac{K^{(2j)}}{K}\ :\ j\ge1\,\Bigr\}_{\rm centered},
+ \qquad
+ \mathscr C=(\mathbf 1\oplus\mathcal R)^\perp .
+\tag{2.9}
+\]
+Then \(L\mathbf 1=0\) and \(Lr=\frac12r\) for \(r\in\mathcal R\): the
+radical is exactly the threshold eigenspace.  Equivalently, in multiplier
+coordinates, \(\mathcal R^\perp\) is characterized by the convolution
+equation
+\[
+ (hq)*K=0 ,
+\tag{2.10}
+\]
+whose analytic solutions are mean-periodic with frequencies in the zero
+divisor of \(\XiR\), including the explicit modes
+\(\chi_z(x)=\cos(zx)/h(x)\).  We write
+\(\NK=\{F:F*K=0\}\).
+
+\section{Unconditional structure that survives}
+\label{sec:positive}
+
+Before the catalogue we record what is proved, since several obstructions
+are sharp precisely because these positive facts are available.
+
+\begin{theorem}[Essential threshold]
+\label{thm:ess}
+\(\sigma_{\rm ess}(L|_{\mathbf 1^\perp})\subset[1/2,\infty)\).  Hence,
+after shorting the exact threshold radical, every spectral point of
+\(L|_{\mathscr C}\) in \((0,1/2)\) is an isolated eigenvalue of finite
+multiplicity.
+\end{theorem}
+
+The proof combines local compactness of the form domain, obtained from the
+Gamma small-jump estimate
+\(\mathscr E_\Gamma+C\|f\|^2\gtrsim\int\log(2+|\xi|)|\widehat f(\xi)|^2\dd\xi\),
+with a moving prime-number-theorem quadrature giving the exact tail mass
+\(2c_K^2=1/2\).
+
+\begin{theorem}[Heat-core Galerkin exhaustion]
+\label{thm:heat}
+The form \(\EK\) is closed on its maximal domain.  With
+\(S_{\mathscr C}=L|_{\mathscr C}+\frac12I\ge\frac12I\) and any
+Hilbert-dense \((g_j)\subset\mathscr C\), the nested spaces
+\(V_M^{\rm heat}=\operatorname{span}\{e^{-S_{\mathscr C}/k}g_j:1\le j,k\le M\}\)
+form a form core.  On every fixed finite-dimensional \(E\subset D(\EK)\)
+the omitted Euler tail satisfies
+\(\|N_E^{-1/2}(\mathcal T_X)_EN_E^{-1/2}\|\to0\).  A finite omitted block
+containing two distinct primes has positive definite Gram form on every
+finite centered space.
+\end{theorem}
+
+The last assertion uses only that \(\log p/\log r\notin\Q\), so the group
+generated by the two displacements is dense; a vector killed by both is
+invariant under a dense subgroup, hence constant, hence zero after
+centering.  Theorem~\ref{thm:heat} removes weighted spectral synthesis of
+the zero modes as a separate hypothesis.
+
+\begin{theorem}[Bounded prime generator]
+\label{thm:bounded}
+The literal ordinary-prime jump generator is bounded on the Doob space.
+Consequently every normalized subthreshold eigenstate of the complete
+prime--Gamma operator lies in the Gamma operator domain and has a uniform
+local second logarithmic Fourier moment.
+\end{theorem}
+
+\subsection{The Gamma absorption theorem}
+\label{subsec:absorption}
+
+The following is the sharpest unconditional gain currently available and
+is used in Entries~C5 and G2 below.  Set
+\[
+ r_\Gamma(u)=\frac{e^{-5u/2}}{1-e^{-2u}}\quad(u>0),
+ \qquad
+ a=\frac Kh,
+ \qquad
+ \mathcal C=T_{K'+K/2}M_a ,
+\tag{3.1}
+\]
+where \(\mathcal C\) is the physical Abel connection of the delay-bank
+realization.  For a nonnegative even displacement density \(v\) write
+\[
+ \mathfrak b_v(q)=\tfrac12\iint_{\R^2}v(x-y)K(x)K(y)|q(x)-q(y)|^2\dd x\dd y .
+\tag{3.2}
+\]
+
+\begin{theorem}[Pointwise theta--Gamma margin]
+\label{thm:margin}
+For all \(u>0\),
+\[
+ \boxed{2K(u)<\frac{1501}{2000}\,r_\Gamma(u)},
+ \qquad\text{hence}\qquad
+ w_\Gamma:=r_\Gamma-2K\ \ge\ \frac{499}{2000}r_\Gamma>0 .
+\tag{3.3}
+\]
+\end{theorem}
+
+\begin{proof}
+Put \(t=e^{2u}\ge1\).  From (2.2) and (3.1),
+\[
+ \frac{2K(u)}{r_\Gamma(u)}
+ =4\pi t^{3/2}(t-1)\sum_{m\ge1}m^2(2\pi m^2t-3)e^{-\pi m^2t}.
+\tag{3.4}
+\]
+Write \(R_1(t)=4\pi t^{3/2}(t-1)(2\pi t-3)e^{-\pi t}\) for the first
+atom.  Its logarithmic derivative
+\(d(t)=\frac3{2t}+\frac1{t-1}+\frac{2\pi}{2\pi t-3}-\pi\) satisfies
+\(d'(t)<0\), so \(R_1\) has a single global maximum.  Using
+\(\frac{333}{106}<\pi<\frac{355}{113}\) and monotonicity of \(d\) in
+\(\pi\), rational arithmetic gives \(d(169/100)>0>d(17/10)\), so the
+maximizer lies in \((169/100,17/10)\).  On that interval
+\(t^{3/2}<\frac{17}{10}\cdot\frac{131}{100}\) since
+\((131/100)^2>17/10\); also \(t-1<7/10\) and
+\(e^{-\pi t}<e^{-56277/10600}<1/202\).  Hence
+\[
+ R_1(t)<4\cdot\tfrac{355}{113}\cdot\tfrac{17}{10}\cdot\tfrac{131}{100}
+ \cdot\tfrac7{10}
+ \Bigl(2\cdot\tfrac{355}{113}\cdot\tfrac{17}{10}-3\Bigr)\tfrac1{202}
+ =\tfrac{240179723}{322417250}<\tfrac34 .
+\tag{3.5}
+\]
+For \(m\ge2\), discard \(-3\) and use
+\(\frac{(m+1)^4e^{-\pi(m+1)^2t}}{m^4e^{-\pi m^2t}}\le(\tfrac32)^4e^{-5\pi}<10^{-5}\)
+to get \(\sum_{m\ge2}m^4e^{-\pi m^2t}<17e^{-4\pi t}\).  With \(s=t-1\) and
+\((1+s)^{5/2}\le e^{5s/2}\),
+\[
+ t^{5/2}(t-1)e^{-4\pi t}\le\frac{e^{-4\pi}}{e(4\pi-5/2)} .
+\tag{3.6}
+\]
+Using only \(\pi^2<10\), \(\pi>3\), \(e>2\) and \(e^{4\pi}>e^{12}>160000\),
+the tail contributes less than \(1360/(19\cdot160000)<1/2000\).  Adding
+(3.5) proves (3.3).
+\end{proof}
+
+\begin{remark}
+The proof uses no floating-point input.  The true maximum of (3.4) is
+\(\approx0.71779\), attained at \(t\approx1.69610\), so the stated
+constant has genuine slack; the tightest step is
+\(e^{-\pi\cdot169/100}<1/202\), where the true value is \(1/202.24\).
+Any application needing only a constant below \(1\) may replace \(3/4\)
+by \(4/5\) throughout and avoid that step.
+\end{remark}
+
+\begin{theorem}[Exact Gamma--connection factorization]
+\label{thm:absorption}
+Let \(q\) lie in the common form core and put \(F=hq\), \(f=Kq\).  Then
+\[
+ \boxed{
+ \mathfrak b_{\Gamma,*}(q)+2\operatorname{Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ =\mathfrak b_{w_\Gamma}(q)+2\int_\R(K*K)(x)K(x)|q(x)|^2\dd x .}
+\tag{3.7}
+\]
+Both terms on the right are nonnegative, and consequently
+\[
+ \mathfrak b_{\Gamma,*}(q)+2\operatorname{Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ \ \ge\ \frac{499}{2000}\,\mathfrak b_{\Gamma,*}(q).
+\tag{3.8}
+\]
+\end{theorem}
+
+\begin{proof}
+Since \(r_\Gamma=w_\Gamma+2K\) we have
+\(\mathfrak b_{\Gamma,*}=\mathfrak b_{w_\Gamma}+2\mathfrak b_K\).  The
+adjoint computation for \(\mathcal C\) together with \(c_K=1/2\) gives
+\(\operatorname{Re}\langle F,\mathcal CF\rangle_{\omega_K}=\langle f,T_Kf\rangle_2\).
+Expanding the difference square in \(\mathfrak b_K\) and using
+\(\int K(x-y)K(y)\dd y=(K*K)(x)\) yields the exact identity
+\[
+ \mathfrak b_K(q)+\langle f,T_Kf\rangle_2
+ =\int_\R(K*K)(x)K(x)|q(x)|^2\dd x .
+\tag{3.9}
+\]
+Combining the three displays proves (3.7); Theorem~\ref{thm:margin} and
+monotonicity of \(v\mapsto\mathfrak b_v\) give (3.8).
+\end{proof}
+
+The argument is performed entirely at the difference-form level and never
+splits the singular Gamma kernel into separately divergent diagonal and
+convolution pieces.  Its consequence is that the Hermitian part of the
+connection is no longer an open sign: it is absorbed by the completed
+Gamma remainder with the explicit margin \(499/2000\), on every heat row,
+every hybrid row, and indeed the full common core.  The \(K'\) part of
+\(\mathcal C\) is exactly skew-adjoint and therefore lossless.
+
+\subsection{The common PNT Stieltjes form}
+
+Let
+\[
+ \mathcal D(u)=\sum_{\log n\le u}\frac{\Lambda(n)}{\sqrt n}-2(e^{u/2}-1),
+ \qquad
+ k_D(u)=e^{-u/2}\{\psi(e^u)-e^u+1\} .
+\tag{3.10}
+\]
+
+\begin{proposition}[Common primitive]
+\label{prop:pnt}
+As distributions on \((0,\infty)\),
+\(\dd\mathcal D=\dd k_D+\frac12k_D(u)\dd u\).  Consequently the outgoing
+prime-number-theorem quadrature and the incoming Abel flux are the two
+halves of a single Stieltjes form,
+\[
+ \boxed{
+ \mathfrak P_{\rm PNT}(q)
+ =\int_{[0,\infty)}\mathcal J_u(q)\dd\mathcal D(u)
+ =-\int_0^\infty k_D(u)\{\mathcal J_u'(q)-\tfrac12\mathcal J_u(q)\}\dd u .}
+\tag{3.11}
+\]
+\end{proposition}
+
+Together with Theorem~\ref{thm:absorption}, the exact remaining physical
+form is
+\[
+ \mathfrak P_{\rm PNT}(q)+\mathfrak b_{w_\Gamma}(q)
+ +2\int_\R(K*K)K|q|^2\dd x\ \ge\ 0,
+\tag{3.12}
+\]
+with the simpler sufficient version
+\[
+ \boxed{\mathfrak P_{\rm PNT}(q)+\tfrac{499}{2000}\mathfrak b_{\Gamma,*}(q)\ \ge\ 0 .}
+\tag{3.13}
+\]
+Entry~C5 shows that (3.12)--(3.13) cannot be proved by any
+displacement-local mechanism.
+
+\section{The circularity boundary}
+\label{sec:circularity}
+
+This section states the organizing theorem of the paper.  It explains why
+the catalogue is the correct output, and it is also the sharpest single
+constraint on any future attempt.
+
+\begin{theorem}[Off-line anti-surplus]
+\label{thm:antisurplus}
+Assume \(\XiR\) has an off-line zero orbit.  Then there is a real even
+\(F\in\NK\) in the common form domain, \(q=F/h\), such that for every
+finite prime-power head \(X\):
+\begin{enumerate}
+\item the finite-head pivot is negative,
+ \(\mathcal A_X(q,q)=-\delta_X<0\);
+\item the exact adaptive gain is the complete omitted-prime response,
+ \(G_X=\mathcal T_X(q,q)\);
+\item the source surplus is strictly negative,
+\[
+ \boxed{G_X-\delta_X=\mathcal A_\infty(q,q)<0 ;}
+\tag{4.1}
+\]
+\item for every finite tail cutoff \(Y>X\) the physical bordered
+ determinant is negative,
+ \(\mathfrak C_X(Y)-\delta_X<0\).
+\end{enumerate}
+All displacement forms here are the literal maps
+\(q\mapsto\sqrt{K(x)K(x-\log n)}\{q(x)-q(x-\log n)\}\) with the ordinary
+weights \(\Lambda(n)/\sqrt n\), with the complete Gamma channel, the
+polar threshold, and the equation \((hq)*K=0\) all retained jointly.
+\end{theorem}
+
+\begin{proof}
+An off-line orbit produces a real even \(F\in\NK\) with
+\(\mathcal A_\infty(q,q)<0\).  The exact decomposition
+\(\mathcal A_\infty=\mathcal A_X+\mathcal T_X\) and nonnegativity of every
+omitted atom give (1).  In the scalar row there is no old-mode regression
+and no radical shorting, so the resolvent defining the adaptive gain is
+the identity, giving (2); adding the two identities gives (3).
+Nonnegativity of the omitted atoms gives \(\mathfrak C_X(Y)\le G_X\), and
+with no nuisance coordinate the deleted principal determinant is \(1\),
+which gives (4).
+\end{proof}
+
+\begin{corollary}[Counterfactual invariance]
+\label{cor:invariance}
+The positive data
+\[
+ \Lambda(p^k)>0,\quad K>0,\quad \mathcal J_{\log p^k}(q,q)\ge0,
+ \quad (hq)*K=0
+\]
+all hold for the vector constructed under the off-line counterfactual,
+while the strict surplus \(G_X>\delta_X\) does not.  Hence no implication
+which is insensitive to the location of the mean-periodic frequencies can
+prove the surplus.
+\end{corollary}
+
+\begin{remark}[The surplus is not a lemma]
+\label{rem:notlemma}
+Identity (4.1) says that the desired surplus is not a preliminary
+estimate from which completed positivity follows.  It is completed
+positivity, evaluated at the stationary residual.  Any proposed proof
+should therefore be audited at the first line where (4.1) is assigned a
+positive sign; that line carries the entire Riemann-strength input.  This
+is the single most useful practical consequence of the present work.
+\end{remark}
+
+\section{Taxonomy}
+
+Each entry below carries one of four tags.
+
+\begin{description}
+\item[\NOGO] A theorem in the literal Riemann system showing that a class
+ of arguments cannot produce (2.7).  Strongest form.
+\item[\FALS] A construction, valid under the off-line counterfactual and
+ inside the literal system, on which the proposed inequality is false.
+ By Corollary~\ref{cor:invariance} such an entry shows the mechanism
+ cannot be counterfactual-insensitive.
+\item[\CTMD] An explicit model satisfying every structural hypothesis of a
+ proposed mechanism and violating its conclusion.  Rules out proofs using
+ only the listed hypotheses; does not itself concern \(\zeta\).
+\item[\SCAL] A quantitative envelope mismatch: the mechanism is valid but
+ provably loses more than the quantity it must control.
+\end{description}
+
+We emphasize the difference between \NOGO{} and \CTMD.  A countermodel
+rules out an \emph{axiomatization}: it shows that the properties invoked
+are insufficient.  It leaves open that the actual Riemann system has
+additional properties which close the argument.  A no-go rules out the
+mechanism in the actual system.
+
+\section{Family A. Order, positivity preservation, total positivity}
+
+\begin{entry}[\NOGO{} Failure of the first Beurling--Deny criterion]
+\label{ent:A1}
+In the completed source formula, let \(\varphi_1,\varphi_2\ge0\) be
+disjointly supported bumps whose separation \(d\) avoids every prime-power
+logarithm.  Their cross form is strictly positive: the polar kernel grows
+like \(e^{d/2}\) while the opposing Gamma kernel decays like \(e^{-d/2}\).
+Hence the completed heat semigroup is not positivity preserving, in the
+full sector and in the even sector.
+\end{entry}
+
+\emph{Consequence.} No Perron--Frobenius, Harnack, or ground-state
+domination argument based on the natural pointwise cone applies to the
+completed operator.  This is significant because the ground-state
+heuristic --- ``the bottom eigenvector should be positive, hence the
+radical should be the bottom'' --- is the most natural first attack, and
+it is unavailable.
+
+\begin{entry}[\NOGO{} The system is not \(\mathrm{TP}_2\)]
+\label{ent:A2}
+The exact Gamma density \(g\) is strictly log-convex, so
+\(g(t)^2-g(t-\eps)g(t+\eps)<0\).  Hence neither the Gamma kernel nor the
+short-time full semigroup is totally positive of order two.
+\end{entry}
+
+\emph{Consequence.} Variation-diminishing spectral ordering is
+unavailable.  In particular one cannot conclude from the fact that the
+threshold state \(K''/K\) has a single sign change that it is the first
+centered mode.
+
+\begin{entry}[\NOGO{} Failure of stochastic monotonicity]
+\label{ent:A3}
+The folded ordinary-prime--Gamma Doob process has, for each displacement
+\(u\), the reflected branch \(t\mapsto|t-u|\).  With the literal atom
+\(p=2\), at \(t_0=\frac14\log2\) and \(z=\frac34\log2\), the upper-tail
+jump rate has a downward discontinuity of exactly
+\(c_K\Lambda(2)K(z)/(\sqrt2\,h(t_0))>0\); the Gamma continuum and every
+other prime-power atom form a continuous remainder because no other
+displacement meets that boundary.  This violates the necessary tail-rate
+order.
+\end{entry}
+
+\emph{Consequence.} Both the short-time semigroup and the
+large-parameter resolvent reverse the increasing cone on explicit smooth
+generator tests.  Ordering \(K''/K\) as the first centered mode by
+stochastic monotonicity or by an invariant increasing cone is impossible.
+Together with A2, the entire ``order'' family is closed.
+
+\section{Family B. Coupling, transport, martingale routing}
+
+\begin{entry}[\NOGO{} No radical-sharp first-chaos coupling]
+\label{ent:B1}
+Restore the continuous theta coordinate and the integer and rational
+theta marks in all four channels (Gamma, divisible, nondivisible
+fractional, central crossing), giving an exact positive latent Dirichlet
+form with the literal coefficients.  No positive conditional-expectation
+or first-chaos projection maps this lift to the polar pair gradient while
+preserving the full equality family
+\(\{K^{(2j)}/K\}\).
+\end{entry}
+
+\emph{Mechanism.} Equality in conditional Jensen makes every radical edge
+signature deterministic; the signatures separate oriented endpoints and
+therefore force endpoint preservation.  But the literal prime edges carry
+singular source mass on the lines \(t-s=\log n\) and \(t+s=\log n\), while
+the polar pair law is absolutely continuous.  This is an exact
+measure-capacity contradiction.  A second, independent capacity
+obstruction holds in the Gamma channel alone: its density lacks polar
+capacity on remote fixed-displacement rectangles.
+
+\begin{entry}[\NOGO{} No positive martingale routing]
+\label{ent:B2}
+In the folded polar theta law with dilation variable \(S=Be^T\), choosing
+a prime-power divisor \(N\mid b\) with probability \(\Lambda(N)/\log b\)
+identifies the divisor current and the cross-divisor dispersion as the
+conditional mean and variance of one increment, and the resulting ANOVA
+transform is unitary.  Nevertheless every finite or countable positive
+martingale routing retaining all currents, dispersions, fractional and
+central fibres, and Gamma, obeys an exact nonnegative defect identity;
+radical equality forces every martingale difference and every unused
+source square to vanish, hence endpoint preservation, hence the
+contradiction of B1.  The natural separated assignment already fails on
+the two-state fibre \(2<S<3\).
+\end{entry}
+
+\begin{entry}[\NOGO{} Shorting is not a weakening]
+\label{ent:B3}
+Polarization shows that shorting subtracts exactly the same radical square
+from the source and from the target.  Hence the complementary inequality
+is \emph{equivalent} to, not weaker than, the original all-prime
+inequality.  Moreover radical completeness is refuted exactly: for every
+zero \(z\), the mode \(\chi_z(x)=\cos(zx)/\cosh(x/2)\) is a nonzero
+\(L^2(\mu_K)\) element orthogonal to all \(K^{(2j)}/K\).
+\end{entry}
+
+\emph{Consequence.} One cannot buy room by passing to the radical
+complement.  Every reformulation obtained by shorting inherits the exact
+original difficulty.  This entry is used repeatedly below.
+
+\section{Family C. Local squares, sums of squares, Hodge--Korn}
+
+This family contains the master obstruction of the paper.
+
+\begin{entry}[\NOGO{} Radical saturation: no local positive remainder]
+\label{ent:C1}
+The family \(r_j=K^{(2j)}/K\), \(j\ge1\), satisfies
+\[
+ \EK(r_j)=\tfrac12\Var_{\mu_K}(r_j)\qquad(j\ge1),
+\tag{7.1}
+\]
+so the sharp inequality (2.7) is saturated on an infinite-dimensional
+space.  Suppose a proposed proof has the form
+\[
+ \EK(r)-\tfrac12\Var_{\mu_K}(r)=\sum_\alpha\mathcal S_\alpha(r),
+ \qquad \mathcal S_\alpha\ge0,
+\tag{7.2}
+\]
+and that one summand dominates a local edge square,
+\[
+ \mathcal S_{\alpha_0}(r)\ \ge\
+ \int_0^\infty\!\!\int_\R w(x,u)|r(x)-r(x-u)|^2\dd x\dd u
+\tag{7.3}
+\]
+with \(w\ge0\) positive on a set of positive measure.  Then (7.2) is
+impossible.
+\end{entry}
+
+\begin{proof}
+Take \(r_1=K''/K\).  By (7.1) the left side of (7.2) vanishes, so every
+nonnegative summand vanishes; (7.3) then forces \(r_1(x)=r_1(x-u)\) for
+almost every \((x,u)\) in the positive set of \(w\).  As \(r_1\) is real
+analytic, Fubini and analytic continuation make it periodic for at least
+one nonzero displacement.  But the leading positive theta term gives
+\(K''(x)/K(x)\asymp e^{4x}\) as \(x\to+\infty\), so \(r_1\) is unbounded
+and cannot be periodic.
+\end{proof}
+
+\emph{Consequence.} The following are all excluded:
+\begin{enumerate}
+\item canonical-path comparison using only divisible theta indices;
+\item Efron--Stein decomposition over individual prime towers;
+\item any Cheeger estimate with a strict edge surplus;
+\item any sum-of-squares proof whose individual squares are local
+ translation differences.
+\end{enumerate}
+What survives is a \emph{signed} global decomposition with genuine
+cancellation between different prime channels.  Entry~C1 is the reason
+every later entry in this paper insists on the word ``signed''.
+
+\begin{entry}[\NOGO{} Finite-incidence Hodge--Korn rigidity]
+\label{ent:C2}
+The vertex signatures \((K^{(2j)}(x)/K(x))_{j\ge0}\) are finitely linearly
+independent.  Hence a local linear combination of edge increments which
+vanishes on the complete radical is divergence free; it is an incidence
+cycle and therefore vanishes on every gradient.  Since the theta-divisor
+fibres are stars, every radical-sharp local amplitude on their current,
+dispersion or residue-character coordinates is zero.
+\end{entry}
+
+\emph{Consequence.} No nontrivial integral of finite-local squares can
+complete the signed Gamma--polar channel.  After the exact global radical
+anti-short one obtains the sharp identity
+\(\QW=\|G_\perp r\|^2-\|D_\perp r\|^2\), whose remaining Korn contraction
+is globally nonlocal and is violated by a hypothetical subthreshold mode
+by the factor \((2\alpha)^{-1/2}>1\).
+
+\begin{entry}[\NOGO{} No infinite boundary escape]
+\label{ent:C3}
+In the literal source norm, with every von Mangoldt and theta weight
+retained, the conductance of the folded spatial cut at \(R\) is
+\(O(\exp\{-ce^R\})\).  Compact smooth even multipliers form a core of the
+closed prime--Gamma form, so every bounded locally divergence-free current
+is orthogonal to all form-domain gradients and has zero flux at the folded
+end.  A nonzero cofinal boundary flux would require squared source norm at
+least \(\exp\{ce^R\}\).
+\end{entry}
+
+\emph{Consequence.} C2 cannot be evaded by moving the missing amplitude to
+infinity.  There is no extra bounded boundary-homology sector.
+
+\begin{entry}[\NOGO{} Primitive and Volterra squares are indefinite]
+\label{ent:C4}
+Pushing the identities \(k_y=\frac12(D^2-\frac14)f_y\) and
+\(\phi(y)=-\pi(y^3e^{-\pi y^2})'\) through the complete source, the
+multiplicative pushforward is the single literal signed measure
+\[
+ \dd\eta=\sum_{n\ge2}\Lambda(n)\delta_n
+ +\Bigl\{-1+\frac1{z(z^2-1)}\Bigr\}\dd z .
+\tag{7.4}
+\]
+Fibrewise positivity is false: before the first prime, \(\eta\) is
+strictly negative on \((4/3,2)\), and even the quadratic increment
+satisfies \(A_{(\log z)^2}(2^-)<-\frac{43}{4500}\).  Summing every theta
+and character fibre gives exactly \(F_r(z)=z^{-1/2}J_{\log z}(r)\), whose
+cumulative rises to the plastic root, then has strictly negative
+continuous drift between prime powers with upward jumps
+\(\Lambda(n)n^{-1/2}J_{\log n}\).
+\end{entry}
+
+\emph{Consequence.} Neither the fibrewise nor the fully aggregated
+coordinate is a local positive square.  The endpoint terms vanish, so
+Gamma and the pole cannot be appended afterwards as a boundary
+correction: they are already inside the signed cumulative.
+
+\begin{entry}[\NOGO{} No centered-path or local Stieltjes completion]
+\label{ent:C5}
+Let \(C_uq=\{K(x)K(x-u)\}^{1/2}\{q(x)-q(x-u)\}\) and
+\(Z_q(u)=e^{-u/4}C_uq\), so \(\|Z_q(u)\|^2=e^{-u/2}\mathcal J_u(q)\).  For
+\(0<\theta\le1\) set \(a_\theta(u)=\theta e^{u/2}r_\Gamma(u)>0\).  Then
+\[
+ \mathfrak P_{\rm PNT}+\theta\mathfrak b_{\Gamma,*}
+ =\int_0^\infty a_\theta\Bigl\|Z_q-\frac{E_1(e^u)}{a_\theta}Z_q'\Bigr\|^2\dd u
+ -\int_0^\infty\frac{E_1(e^u)^2}{a_\theta(u)}\|Z_q'(u)\|^2\dd u ,
+\tag{7.5}
+\]
+with \(E_1(T)=\psi(T)-T+1\).  The second line has the wrong sign and is
+not an omitted Gamma term: the entire Gamma budget is already inside
+\(a_\theta\).  Moreover, at the available margin \(\theta_*=499/2000\),
+the scalar density of the sufficient form (3.13) is
+\(w_*(u)=-e^{u/2}+\theta_*r_\Gamma(u)\), and with \(z=e^u\)
+\[
+ \frac{\theta_*r_\Gamma(u)}{e^{u/2}}=\frac{\theta_*}{z^3-z},
+ \qquad
+ z\ge\tfrac98\ \Longrightarrow\ z^3-z\ge\tfrac{153}{512}>\tfrac{499}{2000},
+\tag{7.6}
+\]
+since \(306000>255488\).  Hence
+\[
+ \boxed{w_*(u)<0\qquad\bigl(\log\tfrac98\le u<\log2\bigr).}
+\tag{7.7}
+\]
+In the exact residual (3.12) the density \(-e^{u/2}+r_\Gamma-2K\) is
+likewise strictly negative on \([\log\frac32,\log2)\), because
+\(z^3-z\ge\frac{15}8>1\) and \(K>0\).
+\end{entry}
+
+\emph{Quantitative version.}  Let \(q_N=\chi\cos(Nx)\) with
+\(0\ne\chi\in C_c^\infty\) chosen so that its support overlaps its
+translates on a fixed \(I\Subset(0,\log2)\).  Then
+\(\int_I\|Z_{q_N}'(u)\|^2\dd u\ge c_IN^2\) for large \(N\), whereas
+\[
+ \mathfrak b_{\Gamma,*}(q_N)=O(\log N),
+ \qquad
+ \mathfrak P_{\rm PNT}(q_N)=O(1).
+\tag{7.8}
+\]
+The two \(N^2\) terms in (7.5) cancel each other exactly; estimating
+either separately destroys the cancellation by a factor larger than any
+fixed Gamma margin.  Projection off any fixed finite radical block changes
+these quantities by \(O(N^{-A})\) for every \(A\).
+
+\emph{Consequence.} None of the following can be the next step: positivity
+of the common displacement density; a pointwise completion of the centered
+Abel derivative; a bound of \(\mathcal J_u'\) or \(Z_q'\) by the Gamma
+form; or a finite-radical version of any of these.  Note that (7.7)
+locates the failure \emph{below the first prime}, where the arithmetic is
+entirely explicit --- the obstruction is not an artifact of prime
+irregularity.
+
+\section{Family D. Determinants, minors, charging}
+
+\begin{entry}[\NOGO{} Cauchy--Binet charging is circular]
+\label{ent:D1}
+In exterior-power coordinates, an abstract contractive charge exists
+exactly when \(\tau_{d+1}\ge\delta_J\tau_d\), i.e. exactly when the
+inequality to be proved holds.  Consequently the squared-minor expansion
+supplies no sign.  Moreover a universal positive endpoint-local
+weight-preserving charge would saturate Jensen on every radical signature,
+hence preserve endpoints, and then contradict B1.
+\end{entry}
+
+\emph{Consequence.} The only surviving possibility is a row-dependent,
+globally nonlocal charge after the complete radical anti-short, whose
+strict norm bound is precisely the projected Pl\"ucker-frame inequality.
+That is the surplus again, not a route to it.
+
+\begin{entry}[\CTMD{} Network positivity does not force crossing]
+\label{ent:D2}
+There is an exact four-state rational model with a connected full-rank
+tail, nontrivial adaptation, an exact threshold radical, positive Gamma
+and head graph channels, literal weights \(\Lambda(n)/\sqrt n\), and a
+theta-sized envelope, for which the bordered determinant remains negative.
+\end{entry}
+
+\emph{Consequence.} Effective resistance, matrix-tree expansions, generic
+network positivity and summability do not force the crossing.
+
+\begin{entry}[\CTMD{} Exact saturation with the literal theta data]
+\label{ent:D3}
+A one-dimensional model using the actual theta displacement forms, the
+actual lengths \(\log p^k\), and the ordinary weights
+\(\Lambda(p^k)=\log p\), with the free source diagonal set equal to the
+complete positive tail, has every proper determinant strictly below the
+deficit, converging to it.  Permanent non-crossing is exactly
+\(\sigma_\infty\le0\).
+\end{entry}
+
+\emph{Consequence.} This rules out any proof from source algebra, positive
+ordinary-prime increments, inertia and summability alone.  Total
+positivity supplies no missing input either: the Gamma kernel is not
+\(\mathrm{TP}_2\) (A2), the literal prime tower has a \(\mathrm{PF}_2\)
+failure, and the polarized jet \(j_2\) is already indefinite on
+\(\{p,p^2\}\).
+
+\begin{entry}[\SCAL{} The observation-only determinant is strictly lossy]
+\label{ent:D4}
+The pure Gram ratio
+\(\det G_{\mathcal B}^{(M)}/\det G_{\mathcal B}^{(M-1)}\) is a valid but
+strictly weaker certificate than the exact adaptive gain.  In stable
+floating-point diagnostics at dimensions \(4,7,12\) it misses the initial
+deficit while the exact Kalman gain crosses it, sometimes by five orders
+of magnitude.  The missing energy is the component parallel to the old
+observation range, priced by the positive preceding prime--Gamma block.
+\end{entry}
+
+\emph{Consequence.} The force-bearing object is the augmented determinant
+\[
+ \Delta_{\mathcal B}
+ =\frac{\det\begin{pmatrix}A+U^*U&U^*r\\ r^*U&\|r\|^2\end{pmatrix}}
+        {\det(A+U^*U)},
+\tag{8.1}
+\]
+not the observation Gram ratio.  We record this because the weaker
+certificate is the one that suggests itself first.
+
+\section{Family E. Finite heads, staircases, adaptive filtering}
+
+\begin{entry}[\NOGO{} No finite-head telescope]
+\label{ent:E1}
+Every proper finite prime-power head is strictly negative on each
+nonconstant exact Riemann-radical direction.  Hence its signed short over
+the radical is unbounded below, and the full infinite prime--Gamma--polar
+limit must be assembled \emph{before} radical shorting.
+\end{entry}
+
+\emph{Consequence.} A finite-head Cholesky or Pick telescope is
+impossible.  This is the finite-level shadow of B3.
+
+\begin{entry}[\CTMD{} Discrete levels and full-rank sensors are not enough]
+\label{ent:E2}
+There is an exact three-state reversible graph generator with a constant
+ground state, an exact completed \(1/2\)-radical, discrete levels, and an
+infinite norm-convergent bank of strictly positive full-rank sensors
+carrying the literal weights \(\Lambda(p^k)/p^{k/2}\), which nevertheless
+retains a complementary eigenvalue \(1/4\).
+\end{entry}
+
+\begin{entry}[\CTMD{} Adaptation loss defeats tail energy]
+\label{ent:E3}
+There is an injective two-mode theta-scale model whose residual tail energy
+strictly exceeds its deficit, but which loses enough energy to adaptive
+regression that its completed pivot remains negative.
+\end{entry}
+
+\emph{Consequence.} Schur adaptivity, positive literal weights, strict
+observability and summability do not force crossing.  The missing input is
+an estimate of the adaptation-loss term itself.
+
+\begin{entry}[\CTMD{} Exact equality saturation over the prime powers]
+\label{ent:E4}
+There is a saturation model indexed by the ordinary prime powers, with the
+literal weights \(\Lambda(m)/\sqrt m\), an \(e^{-2\pi m}\) theta envelope,
+injective atom features and zero adaptive leakage, whose cumulative gain
+equals \(\delta\) exactly: every finite pivot is negative and the
+completed pivot is zero.
+\end{entry}
+
+\emph{Consequence.} Stieltjes positivity and theta summability perform the
+finite selection only \emph{after} a strict surplus has been proved.
+Equality does not suffice.  This entry is the reason the target inequality
+must be strict, and the reason a compensated vanishing-tolerance form is
+needed for the limit.
+
+\begin{entry}[\NOGO{} Response--inertia bound]
+\label{ent:E5}
+For a Hermitian \(H\) and any \(T\),
+\(\nu_-(H|_{\ker T})\ge\nu_-(H)-\operatorname{rank}T\).  Hence whenever a
+signed finite spectral block has more negative directions than available
+prime-midpoint rows, some negative vector annihilates every one of those
+rows.
+\end{entry}
+
+\emph{Consequence.} No arbitrary-vector midpoint frame floor may be used.
+For the actual staircase the dimension obstruction disappears, because
+\(A\succ0\) with a negative Schur pivot forces negative index exactly one;
+but no inertia identity then bounds the regression residual from below.
+
+\begin{entry}[\NOGO{} Local observability does not pay the deficit]
+\label{ent:E6}
+On every finite analytic even mode space the literal displacement feature
+restricted to any nonempty midpoint aperture is injective, giving the
+computable Christoffel bound
+\(\mathcal J_{u,W}(q^*)\ge\kappa_M(u,W)>0\).  However, for a nonzero
+completed radical vector the finite-head deficit equals the sum of
+\emph{all} omitted positive atom energies.  Hence every proper finite
+omitted block gains strictly less than the deficit, and its
+moving-midpoint mass can tend to zero.
+\end{entry}
+
+\emph{Consequence.} Any surviving estimate must use the completed
+anti-short \(q^*\in\mathcal R^\perp\) quantitatively; local observability,
+the adaptive source equation, and tail localization are individually
+insufficient.
+
+\begin{entry}[\SCAL{} Prime-sampling envelope mismatch]
+\label{ent:E7}
+On every fixed spectral block \(|\operatorname{Im}z|\le b<1/2\) with jets
+of order at most \(J\), and every fixed \(\delta>0\),
+\[
+ \sum_{X<p\le(1+\delta)X}\beta_p|A_p(q)+\rho_p(q)|^2
+ \ \ge\ c'_{\mathcal Z,\delta}X^{3-b}(1+\log X)^{-2J}
+ e^{-2\pi(1+\delta)X}\|q\|_{\rm coeff}^2 .
+\tag{9.1}
+\]
+This is a genuine quantitative sampling theorem, proved from the prime
+number theorem, but compared with the natural tail scale \(e^{-2\pi X}\)
+it loses \(e^{-2\pi\delta X}\).
+\end{entry}
+
+\emph{Consequence.} A relative-interval attack cannot place the response
+inside the \(O(1)\) prime window where the theta weight is comparable to
+its leading tail value.  Remez and Tur\'an localization on the same
+relative interval do not repair this.  Any successful estimate must be a
+short-window statement.
+
+\section{Family F. Spectral and operator-theoretic detectors}
+
+\begin{entry}[\NOGO{} Birman--Schwinger supplies no sign]
+\label{ent:F1}
+A compactly supported positive boost produces a compact
+Birman--Schwinger operator \(\mathcal K_{\lambda,R,M}\) whose eigenvalue
+\(1\) detects each isolated subthreshold bound state.  But the exact
+Rayleigh quotient shows that \(\|\mathcal K_{\lambda,R,M}\|\le1\) is,
+term for term, equivalent to \(\EK\ge\lambda\|\cdot\|^2\).
+\end{entry}
+
+\emph{Consequence.} Localization proves Fredholm compactness and supplies
+no sign.  This is the faithful nonlocal version of the earlier
+Birman--Schwinger wall, not a new mechanism.
+
+\begin{entry}[\NOGO{} Mourre and dilation commutators]
+\label{ent:F2}
+After ground-state conjugation, the translation commutator is parity odd
+and has identically zero quadratic form on the physical even sector.
+Dilation is parity even, but every prime power at \(a=\log n\) contributes
+the isolated order-one distribution \(a(\delta_a'-\delta_{-a}')\), and the
+complete raw dilation commutator is unbounded in both signs on compact
+oscillatory even rows.  In the exact complement, translation is tangent to
+\(F*K=0\) but changes parity, while dilation preserves parity and has
+transverse leakage \(t\XiR'(t)\widehat F(t)\) at every simple zero.  Below
+the essential threshold a strict projected Mourre estimate holds exactly
+when the corresponding spectral projection is zero, and the normalized
+commutator vanishes on heat or hybrid rows concentrating on a bound
+cluster.
+\end{entry}
+
+\begin{entry}[\NOGO{} Heat moments and operator-monotone transforms]
+\label{ent:F3}
+Every raw heat Hankel matrix is automatically positive, whereas eventual
+positivity of any one odd moment shifted to the threshold is already
+equivalent to the physical surplus.  The same wall persists after every
+strictly increasing operator-monotone transform.
+\end{entry}
+
+\emph{Consequence.} Heat summability and scalar moment positivity supply
+no hidden fraction of the missing bound.  Relatedly, the relative-heat
+observable has logarithmic decay rate exactly
+\(-\{\inf\sigma(L|_{\mathscr C})+\frac12\}\), so the desired surplus is
+equivalent to rate at most \(-1\) while the unconditional energy gives
+only \(-1/2\).
+
+\begin{entry}[\NOGO{} Positive source atoms tolerate a subthreshold mode]
+\label{ent:F4}
+If a subthreshold ground cluster \(\alpha<1/2\) of multiplicity
+\(m_\alpha\) exists, the Birman--Solomyak relative measure has exact local
+density \(m_\alpha\dd\lambda\), so
+\(\Theta_V(t)\sim m_\alpha e^{-t(\alpha+1/2)}\) for every positive
+injective trace-class boost, and the heat-weighted source satisfies
+\(\frac12A_V-E_V\sim(\frac12-\alpha)m_\alpha t^{-1}e^{-t(\alpha+1/2)}>0\).
+\end{entry}
+
+\emph{Consequence.} Positive source atoms and all unshifted heat moments
+remain compatible with a subthreshold mode.  A closure must estimate the
+\emph{compensated} source itself.
+
+\begin{entry}[\SCAL{} Non-uniformity as the deficit vanishes]
+\label{ent:F5}
+For every fixed \(\delta>0\) the subthreshold spectral projection below
+\(1/2-\delta\) is finite rank, and one finite heat-core compression detects
+every such eigenstate below \(1/2-\delta/2\).  The reduction is not
+uniform as \(\delta\downarrow0\): packets of amplitude \((\log N)^{-1/2}\)
+have vanishing Hilbert mass at frequency \(N\) but fixed Gamma form
+energy, and Hilbert accuracy \(\eta^2\asymp\delta\) already requires
+\(\Omega\gtrsim\exp(C_R/\delta)\).
+\end{entry}
+
+\emph{Consequence.} Fixed-gap violations genuinely reduce to finite
+arithmetic; near-threshold violations do not.  Any finite-dimensional
+computational strategy must therefore come with a proof that the deficit
+is bounded away from zero, which is itself part of the problem.
+
+\begin{entry}[\NOGO{} No central tightness from mean periodicity]
+\label{ent:F6}
+Multiplicity jets are essential to local \(\XiR\)-universality: a
+compactly supported annihilator would have an entire Fourier--Laplace
+transform with \(O(T)\) zeros, while Riemann--von Mangoldt gives
+\(\asymp T\log T\) zeros with multiplicity.  Hence exact mean-periodic
+zero modes approximate zero on any central window and an arbitrary profile
+on a disjoint window.  A diagonal construction gives normalized real-even
+graph-domain vectors in the exact radical complement whose mass escapes
+equally to both tails while every localized second-log norm tends to zero.
+\end{entry}
+
+\emph{Consequence.} Mean periodicity, evenness, and the regularity of
+Theorem~\ref{thm:bounded} cannot yield central tightness.  The remaining
+input must be a global threshold-resolvent or eigenstate-observability
+estimate using the literal operator equation.
+
+\section{Family G. Realization and factorization rigidity}
+
+This family is the most structurally informative: it shows that the
+missing constant is invariant under every repackaging of the problem.
+
+\begin{entry}[\NOGO{} Canonical signed transfer has a universal threshold]
+\label{ent:G1}
+After constants and the complete radical have been shorted, the unique
+exact signed transfer is
+\(C_0=2^{-1/2}U_DA^{-1/2}U_A^*\), with
+\[
+ \boxed{\|C_0\|=(2\inf\sigma(A))^{-1/2}.}
+\tag{10.1}
+\]
+Hence every exact signed kernel has the \emph{same} contraction threshold,
+and a subthreshold eigenmode is amplified by precisely
+\((2\alpha)^{-1/2}>1\).  A virial identity further shows that a square
+plus a trace-zero commutator cannot conceal such a mode.
+\end{entry}
+
+\begin{entry}[\NOGO{} Compact all-atom factorization is unique-minimal]
+\label{ent:G2}
+Let \(\widetilde{\mathcal G}\) be the complete literal von
+Mangoldt--Gamma displacement gradient and
+\(\widetilde A=\widetilde{\mathcal G}^*\widetilde{\mathcal G}\) after exact
+anti-shorting.  Both \(\mathcal J=[T_K,M_a]\) and
+\(\mathcal C=T_{K'+K/2}M_a\) are Hilbert--Schmidt on the physical
+mean-periodic space, with
+\(\|\mathcal T_b\|_{\rm HS}^2=c_K^2\iint|b(x-y)|^2\dd\omega_K\dd\omega_K\).
+Moreover \(\widetilde A\succeq\alpha_0I\) for some \(\alpha_0>0\), by
+Theorem~\ref{thm:ess} together with triviality of the kernel after
+removing constants.  Hence \(\mathcal C=H_C\widetilde{\mathcal G}\) with
+\(H_C=\mathcal C\widetilde A^{-1/2}U_A^*\) compact and of minimal norm,
+\[
+ \inf_{\mathcal C=H\widetilde{\mathcal G}}\|H\|^2
+ =\|\mathcal C\widetilde A^{-1}\mathcal C^\sharp\|,
+ \qquad
+ \boxed{\|H_C\|\le1\iff\mathcal C^\sharp\mathcal C\preceq\widetilde A .}
+\tag{10.2}
+\]
+These gains are operator-norm limits of common-cutoff regularized
+factorizations containing every prime power cofinally.
+\end{entry}
+
+\emph{Consequence.} A change of realization cannot manufacture the strict
+gain.  Entries G1 and G2 together constitute a rigidity theorem about the
+entire programme: the remaining constant is not a design parameter, and
+any future reformulation will land on the same threshold.  We regard this
+as the single most decision-relevant fact for anyone continuing the work.
+
+\begin{entry}[\NOGO{} Local passivity cells cannot be multiplied]
+\label{ent:G3}
+The explicit positive periodic kernel
+\(K_L=1+\eps\cos(4\pi x/L)+\eps\cos(6\pi x/L)\) has exact mean-periodic
+row \(F_L=\cos(2\pi x/L)\), fixed Hermitian connection power
+\(\eps^3/16\), and Gamma plus any fixed finite bank of literal delays
+\((\log n,\Lambda(n)/\sqrt n)\) of size \(O(L^{-2})\).  The full minimal
+Schur cost also stays bounded away from zero, and the witness is exactly
+representable on a heat or hybrid Galerkin row.  A moving bank can avoid
+the obstruction only if its weighted second delay moment is
+\(\gtrsim L^2\), whereas an individual phase-resolving delay has
+\(\log n\asymp L\).
+\end{entry}
+
+\emph{Consequence.} Derivative storage cannot create the missing sign, and
+independently passive prime cells cannot be multiplied to obtain it.  This
+is explicitly an abstract positive-kernel falsifier, not the theta kernel;
+its content is that any certificate must use the cofinal prime
+\emph{placement} jointly with Gamma, theta, and the polar channel, rather
+than Gamma or a fixed prime head.
+
+\begin{entry}[\NOGO{} Nonlinear amplification is unavailable]
+\label{ent:G4}
+On the exact complement \((hq)*K=0\): translation, M\"obius and Jordan
+multipliers preserve each frequency and cannot amplify its transverse
+exponent.  Pointwise powers do amplify it, but an off-axis mode
+\(\cos(zx)^k\) necessarily leaves the zero divisor once
+\(k|\operatorname{Im}z|>1/2\); tensor powers retain the equations only
+before the non-intertwining diagonal restriction.  The spatial M\"obius
+inverse cannot be passed through the zero-mode convolution: the required
+squarefree absolute series diverges, and the regularized symbol is
+\(\zeta(s)/\zeta(s+\eps)\), singular at exactly the hypothetical zero.
+\end{entry}
+
+\begin{entry}[\NOGO{} The bar homotopy has no critical contraction]
+\label{ent:G5}
+The normalized multiplicative bar homotopy
+\(Z_\eps^{-1}=\sum_{k\ge0}(-X_\eps)^k\) recovers every literal von
+Mangoldt weight from \(Z_\eps^{-1}\delta Z_\eps\).  If ordered
+factorization chains remain orthogonal, the signed collapse on an
+\(r\)-prime squarefree fibre has exact norm
+\((\sum_kk!S(r,k))^{1/2}\ge\sqrt{r!}\); if they are cancelled before the
+norm, the result is the M\"obius inverse itself.  On
+\(q_\gamma=\cos(\gamma x)/\cosh(x/2)\), a critical zero of multiplicity
+\(m\) forces homotopy gain \(1/|\zeta(\bar\rho+\eps)|\asymp\eps^{-m}\) and
+connection gain \(m/\eps+O(1)\).  The specialized bar complex has nonzero
+zeroth homology.
+\end{entry}
+
+\emph{Consequence.} Gamma and the pole are analytic and nonzero at the
+zero, so completion preserves the residue.  Supplying the zero-fibre map
+separately returns exactly to the canonical transfer of G1.
+
+\section{Family H. The semilocal branch-selection coordinate}
+
+The remaining entries concern the finite CCM coordinate rather than the
+Doob coordinate, and are included because that is where the programme
+began.
+
+\begin{entry}[\NOGO{} Fixed derivative models miss off-line channels]
+\label{ent:H1}
+Every fixed span of cutoff derivatives of Riemann's full kernel is
+asymptotically orthogonal to a hypothetical off-line evaluation channel,
+since every transform in that span contains the common factor \(\XiR\).
+In particular, coupling \(K\) and \(K'\) does not repair selection.
+\end{entry}
+
+\begin{entry}[\NOGO{} Many-vector co-Poisson frames do not improve the quotient]
+\label{ent:H2}
+If \(a_-(Q_L)\) is the lower frame bound of the low-mode
+co-Poisson/prolate family on the negative spectral space, then
+\[
+ \sum_j\|P_-A_Lq_{j,L}\|^2\ \ge\ a_-(Q_L)
+ \sum_{\epsilon_{\ell,L}<0}\epsilon_{\ell,L}^2 ,
+\tag{11.1}
+\]
+so a fixed negative branch forces the aggregate overlap and residual to
+vanish at the same rate.  The scale audit is also adverse: Gamma
+coercivity and the absolute \(O(\lambda)\) prime--pole norm control at most
+an \(O(Le^{C\lambda})\)-dimensional negative space, while the Slepian
+family has only \(O(\lambda^2)\) modes.
+\end{entry}
+
+\begin{entry}[\NOGO{} Unquantified cyclicity diverges]
+\label{ent:H3}
+Although translates and derivatives of \(K\) are cyclic in ordinary
+\(L^2\), an off-line zero \(\rho=\beta+i\gamma\) forces every truncated
+radical approximant of a detecting test to have squared error
+\(\gg\lambda^{-2(\beta-1/2)}\).  The semilocal lower-bound cost is
+therefore \(\gg\lambda^{2(1-\beta)}\), which diverges rather than
+vanishes.
+\end{entry}
+
+\begin{entry}[\NOGO{} A previously proposed lemma is false as stated]
+\label{ent:H4}
+The divisor covariance introduced in the companion paper has Fourier
+symbol of order \(N\log N\) at quadratic scale, whereas the original von
+Mangoldt jump has order \(\sqrt N(\log N)^2\); no extraction identity
+connects them.  Under the literal Gamma--pole--threshold interpretation, a
+fixed compact even core orthogonal to both \(q_L^+\) and the pole has
+value \(-\kappa_N+O(1)=-4\lambda+o(\lambda)\), contradicting the proposed
+\(-O(d_8)\) floor.
+\end{entry}
+
+\emph{Consequence.} We record this entry explicitly because the lemma in
+question was ours.  Its viable successor is the complete coupled
+prime--Gamma--pole complement inequality, i.e. the surplus.
+
+\begin{entry}[\CTMD{} Qualitative positivity improvement is insufficient]
+\label{ent:H5}
+There is an explicit two-dimensional positivity-improving family with a
+fixed negative ground state, a strictly positive near-radical model, and
+overlap tending to zero at exactly the residual rate.
+\end{entry}
+
+\emph{Consequence.} Endpoint normalization is angle-blind and qualitative
+positivity improvement cannot supply the denominator in the
+anti-orthogonality quotient.  A viable positivity route must prove the
+quantitative Harnack--tightness estimate for the actual ordinary-prime
+operator.
+
+\section{Three structural principles}
+\label{sec:principles}
+
+Every entry above is an instance of one of three principles.  We state
+them because they are more useful than the individual entries: they
+predict, without further computation, whether a proposed mechanism can
+work.
+
+\begin{proposition}[P1. Radical saturation]
+The equality set of (2.7) contains the infinite-dimensional family
+\(\{K^{(2j)}/K\}_{j\ge1}\), whose first member is real analytic and
+unbounded.  Therefore no decomposition of
+\(\EK-\frac12\Var_{\mu_K}\) into nonnegative summands may contain a
+summand dominating a local edge square.
+\end{proposition}
+
+P1 governs C1, C2, C3, C4, C5, D1 and D3.  \emph{Diagnostic:} if a
+proposed argument produces a nonnegative leftover supported on
+displacements, it is already refuted.
+
+\begin{proposition}[P2. Measure capacity]
+The source carries positive singular mass on the lines
+\(t\pm s=\log p^k\), while the polar pair law is absolutely continuous;
+and the Gamma density alone lacks polar capacity on remote
+fixed-displacement rectangles.  Therefore no endpoint-preserving positive
+coupling, conditional expectation, martingale routing, or weight-preserving
+charge from the source to the polar gradient exists.
+\end{proposition}
+
+P2 governs B1, B2, D1 and, through Jensen equality, the endpoint clause of
+D2.  \emph{Diagnostic:} if a proposed argument routes source energy to
+target energy through a positive kernel that respects endpoints, it is
+already refuted.
+
+\begin{proposition}[P3. Counterfactual invariance]
+Under the existence of an off-line orbit, all of \(\Lambda(p^k)>0\),
+\(K>0\), \(\mathcal J_{\log p^k}\ge0\) and \((hq)*K=0\) persist, while the
+strict surplus fails; and the surplus itself equals the completed form at
+the stationary residual.  Therefore no implication insensitive to the
+location of the mean-periodic frequencies can prove it.
+\end{proposition}
+
+P3 governs A1--A3, E1--E7, F1--F6, G1--G5, H1--H5, and ultimately every
+entry.  \emph{Diagnostic:} if a proposed argument would remain valid
+verbatim in a system with an off-line zero, it is already refuted.  This
+is the cheapest available audit and should be applied first.
+
+\section{The admissible corridor}
+\label{sec:corridor}
+
+Negative results are only useful if they leave something.  We state what
+the three principles jointly permit.
+
+\begin{enumerate}
+\item The decomposition must be \emph{signed}, with genuine cancellation
+ between distinct prime channels (P1).  Individual squares are forbidden;
+ signed differences of squares are not.
+\item The transfer must be \emph{nonlocal} in the displacement variable,
+ and must not preserve endpoints (P2).  It may be row dependent.
+\item It must be applied \emph{after} the complete mean-periodic
+ anti-short, and must use the actual prime-power locations \emph{before}
+ any norm is taken (P3).  A mechanism that takes norms atom by atom has
+ already discarded the placement information which is the only thing that
+ distinguishes \(\zeta\) from the countermodels of D2, D3, E2, E3 and E4.
+\end{enumerate}
+
+Concretely, the surviving target admits two equivalent exact forms.  The
+first is the displacement form
+\[
+ \boxed{
+ \mathfrak P_{\rm PNT}(q)+\mathfrak b_{w_\Gamma}(q)
+ +2\int_\R(K*K)K|q|^2\dd x\ \ge\ 0 ,}
+\tag{13.1}
+\]
+with the sufficient uniform-margin version (3.13).  The second is the
+relative operator form
+\[
+ \boxed{\mathcal C^\sharp\mathcal C\ \preceq\ \widetilde A ,}
+\tag{13.2}
+\]
+equivalently \(\|H_C\|\le1\) for the minimal-norm compact factor of
+Entry~G2.  By Theorem~\ref{thm:absorption} the Hermitian connection power
+in (13.1) has already been absorbed with margin \(499/2000\); what remains
+is exactly the common outgoing and incoming ordinary-prime power, which by
+Entry~C5 may not be split, and by Entry~E7 may not be estimated on a
+relative interval.
+
+\begin{remark}[Honest accounting]
+By Theorem~\ref{thm:antisurplus} both (13.1) and (13.2) are equivalent to
+the Riemann Hypothesis, not weaker than it.  The corridor described here
+is therefore a description of where a proof must live, not evidence that
+one exists.  We state this plainly because the recurrence of the same
+threshold constant across a dozen independent reformulations
+(Entries G1, G2) is easily mistaken for convergence toward a proof, when
+it is in fact a rigidity phenomenon: the constant is invariant precisely
+because the problem has not moved.
+\end{remark}
+
+\section{Summary table}
+
+\begin{center}
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.055\textwidth}
+                  >{\raggedright\arraybackslash}p{0.40\textwidth}
+                  >{\raggedright\arraybackslash}p{0.115\textwidth}
+                  >{\raggedright\arraybackslash}p{0.30\textwidth}}
+\toprule
+Entry & Mechanism excluded & Type & Principle / witness\\
+\midrule
+\endhead
+A1 & Perron--Frobenius, Harnack, pointwise cone & \NOGO & Beurling--Deny fails; \(e^{d/2}\) vs \(e^{-d/2}\)\\
+A2 & Variation-diminishing ordering & \NOGO & Gamma density log-convex, not \(\mathrm{TP}_2\)\\
+A3 & Stochastic monotonicity, invariant cone & \NOGO & \(p=2\) tail-rate jump at \(t_0=\frac14\log2\)\\
+B1 & Conditional expectation, first chaos & \NOGO & P2 capacity\\
+B2 & Positive martingale routing & \NOGO & P2 capacity; two-state fibre \(2<S<3\)\\
+B3 & Passing to the radical complement & \NOGO & Shorting is an equivalence\\
+C1 & Canonical paths, Efron--Stein, Cheeger, local SOS & \NOGO & P1; \(K''/K\asymp e^{4x}\)\\
+C2 & Local Hodge/Korn completion & \NOGO & P1; incidence cycles\\
+C3 & Boundary flux at infinity & \NOGO & Conductance \(O(e^{-ce^R})\)\\
+C4 & Gaussian/Volterra primitive squares & \NOGO & \(\eta<0\) on \((4/3,2)\)\\
+C5 & Centered-path, local Stieltjes & \NOGO & \(w_*<0\) on \([\log\frac98,\log2)\); \(N^2\) loss\\
+D1 & Cauchy--Binet charging & \NOGO & Circular; P2 for universal charges\\
+D2 & Effective resistance, matrix-tree & \CTMD & Four-state rational model\\
+D3 & Source algebra, inertia, summability & \CTMD & Literal-theta saturation model\\
+D4 & Observation-only Gram ratio & \SCAL & Misses deficit by \(10^5\) at \(M=12\)\\
+E1 & Finite-head Cholesky/Pick telescope & \NOGO & Head negative on every radical direction\\
+E2 & Discrete levels + full-rank sensors & \CTMD & Three-state model, eigenvalue \(1/4\)\\
+E3 & Tail energy exceeding deficit & \CTMD & Two-mode adaptation-loss model\\
+E4 & Stieltjes positivity + summability & \CTMD & Exact equality saturation\\
+E5 & Arbitrary-vector midpoint frame floor & \NOGO & Response--inertia bound\\
+E6 & Local Christoffel observability & \NOGO & Deficit \(=\) full omitted energy\\
+E7 & Relative-interval prime sampling & \SCAL & Loses \(e^{-2\pi\delta X}\)\\
+F1 & Birman--Schwinger localization & \NOGO & Term-for-term equivalent\\
+F2 & Mourre, dilation commutator & \NOGO & Odd/unbounded; vanishes on bound rows\\
+F3 & Heat moments, operator-monotone maps & \NOGO & Equivalent to the surplus\\
+F4 & Positive source atoms, heat moments & \NOGO & Compatible with \(\alpha<1/2\)\\
+F5 & Finite-dimensional reduction as \(\delta\downarrow0\) & \SCAL & \(\Omega\gtrsim e^{C_R/\delta}\)\\
+F6 & Central tightness from mean periodicity & \NOGO & \(T\log T\) vs \(O(T)\) zeros\\
+G1 & Changing the signed kernel & \NOGO & Universal threshold \((2\inf\sigma A)^{-1/2}\)\\
+G2 & Changing the realization & \NOGO & Minimal-norm compact factor\\
+G3 & Multiplying passive local cells & \NOGO & \(K_L\) periodic falsifier\\
+G4 & Nonlinear amplification & \NOGO & Leaves divisor; \(\zeta(s)/\zeta(s+\eps)\)\\
+G5 & Bar homotopy, M\"obius inversion & \NOGO & \(\eps^{-m}\) gain, nonzero \(H_0\)\\
+H1 & Fixed derivative models & \NOGO & Common factor \(\XiR\)\\
+H2 & Many-vector co-Poisson frames & \NOGO & Frame identity; \(O(\lambda^2)\) vs \(O(Le^{C\lambda})\)\\
+H3 & Unquantified cyclicity & \NOGO & Cost \(\gg\lambda^{2(1-\beta)}\)\\
+H4 & Divisor-covariance extraction lemma & \NOGO & False as stated; \(-4\lambda+o(\lambda)\)\\
+H5 & Qualitative positivity improvement & \CTMD & Two-dimensional family\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\section{Conclusion}
+
+The companion paper reduces the Riemann Hypothesis, along the
+Connes--CCM--Suzuki route, to the strict physical surplus.  This paper
+establishes three things about that surplus.
+
+First, it is not a lemma.  By Theorem~\ref{thm:antisurplus} it equals the
+completed Weil form evaluated at the stationary residual, so a proof of it
+is a proof of the Riemann Hypothesis and nothing less.  The practical form
+of this observation is Remark~\ref{rem:notlemma}: audit any candidate
+argument at the first line where (4.1) receives a positive sign.
+
+Second, the space of mechanisms available to prove it is much smaller than
+it appears.  Thirty-one entries in eight families are excluded, and the
+exclusions are not independent: they follow from three principles ---
+radical saturation, measure capacity, and counterfactual invariance ---
+each of which can be checked against a proposed argument in a few lines.
+
+Third, the missing constant is rigid.  By Entries G1 and G2, every exact
+signed kernel and every realization of the same physical bank yields the
+identical contraction threshold.  The repeated appearance of that constant
+across independent reformulations is therefore not evidence of progress
+toward it; it is a theorem that the problem is invariant under
+reformulation.
+
+What survives is narrow and precisely stated: a signed, globally nonlocal,
+non-endpoint-preserving contraction applied after the complete
+mean-periodic anti-short, using the actual prime-power placements before
+any norm is taken, in either of the equivalent forms (13.1) or (13.2).
+The unconditional gain of Theorem~\ref{thm:absorption} removes the
+Hermitian connection power from that obligation with the explicit margin
+\(499/2000\), leaving the common outgoing and incoming ordinary-prime
+power as the sole remaining supply.
+
+We close with the observation that motivated this paper.  A programme of
+this kind produces far more refutations than theorems, and the refutations
+are the part whose value does not depend on the conjecture ever being
+settled.  We would have saved considerable time had a catalogue of this
+kind existed when we began.
+
+\begin{thebibliography}{99}
+
+\bibitem{Weil1952}
+A.~Weil,
+\emph{Sur les ``formules explicites'' de la theorie des nombres premiers},
+Comm. Sem. Math. Univ. Lund (1952), 252--265.
+
+\bibitem{Connes1999}
+A.~Connes,
+\emph{Trace formula in noncommutative geometry and the zeros of the
+Riemann zeta function},
+Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
+
+\bibitem{Connes2026}
+A.~Connes,
+\emph{The Riemann Hypothesis: Past, Present and a Letter Through Time},
+arXiv:2602.04022 (2026).
+
+\bibitem{CCM2025}
+A.~Connes, C.~Consani, and H.~Moscovici,
+\emph{Zeta spectral triples},
+arXiv:2511.22755 (2025).
+
+\bibitem{CCJacobian}
+A.~Connes and C.~Consani,
+\emph{On the Jacobian of \(\overline{\operatorname{Spec}\mathbb Z}\)},
+arXiv:2602.15941 (2026).
+
+\bibitem{CCAbsolute}
+A.~Connes and C.~Consani,
+\emph{On the Absolute Geometry of \(\operatorname{Spec}\mathbb Z\)},
+arXiv:2606.06604 (2026).
+
+\bibitem{Suzuki2025}
+M.~Suzuki,
+\emph{On the Hilbert space derived from the Weil distribution},
+Canadian Journal of Mathematics, FirstView (2025).
+
+\bibitem{SuzukiScrew}
+M.~Suzuki,
+\emph{Weil's quadratic form via the screw function},
+arXiv:2606.09096 (2026).
+
+\bibitem{BeurlingDeny}
+A.~Beurling and J.~Deny,
+\emph{Dirichlet spaces},
+Proc. Nat. Acad. Sci. U.S.A. \textbf{45} (1959), 208--215.
+
+\bibitem{FukushimaOshimaTakeda}
+M.~Fukushima, Y.~Oshima, and M.~Takeda,
+\emph{Dirichlet Forms and Symmetric Markov Processes},
+2nd ed., de Gruyter, 2011.
+
+\bibitem{BirmanSolomyak}
+M.~Sh. Birman and M.~Z. Solomyak,
+\emph{Spectral Theory of Self-Adjoint Operators in Hilbert Space},
+Reidel, 1987.
+
+\bibitem{Douglas}
+R.~G. Douglas,
+\emph{On majorization, factorization, and range inclusion of operators on
+Hilbert space},
+Proc. Amer. Math. Soc. \textbf{17} (1966), 413--415.
+
+\bibitem{Haynsworth}
+E.~V. Haynsworth,
+\emph{Determination of the inertia of a partitioned Hermitian matrix},
+Linear Algebra Appl. \textbf{1} (1968), 73--81.
+
+\bibitem{Karlin}
+S.~Karlin,
+\emph{Total Positivity, Vol. I},
+Stanford University Press, 1968.
+
+\bibitem{TrejoPizzo40}
+D.~A. Trejo Pizzo,
+\emph{Branch Selection in the Connes--CCM Route to RH: Weil Positivity,
+Prolate Zeta-Cycles, and Cofinal Prime--Gamma Inertia Matching},
+companion paper (2026).
+
+\end{thebibliography}
+
+\end{document}

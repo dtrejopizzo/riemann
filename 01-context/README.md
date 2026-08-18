@@ -2,7 +2,7 @@
 
 These nine folders (`RH1` … `RH9`) are the **computational foundation** of the whole project:
 nine large research programs. Together they produced the data, the calibrations, and the phenomenology that the
-61-phase theoretical program (*Program 10*, [`../03-research/`](../03-research/)) was built on.
+theoretical program (*Program 10*, [`../03-research/`](../03-research/), currently through phase 119) was built on.
 
 Each `RHk/` folder is a full local download of that program's run: one subfolder per
 **task**, each containing an `OVERVIEW.md` (metadata + the full answer), the
@@ -38,7 +38,7 @@ Tests whether Euler-product (multiplicative) structure suppresses the coherent p
 
 ### RH2 — Resonance Suppression for RH Proof (2018)
 
-Extends the resonance-suppression program with strict methodological rules (single implementation, N-dependence tracking, honest reporting) across 8 function classes including Liouville and Möbius.
+Extends the resonance-suppression program with strict methodological rules (single implementation, N-dependence tracking, candid reporting) across 8 function classes including Liouville and Möbius.
 
 - Confirmed persistent, pre-asymptotic Weibull-type extreme-value tails (GEV shape ξ<0) for ζ and DH, stable across N∈[10⁴,10⁶].
 - Discovered the **Liouville counterexample**: L(s,λ) is fully multiplicative yet exhibits large, N-stable, sign-organized resonance — a "multiplicativity illusion."

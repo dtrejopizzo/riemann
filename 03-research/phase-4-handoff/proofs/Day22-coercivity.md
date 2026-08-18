@@ -65,7 +65,7 @@ zero-density is classical) — *but it needs careful execution* (§4).
 
 ---
 
-## 4. Honest status — recalibrated
+## 4. Candid status — recalibrated
 The Day-21 promise ("B-2 $\Leftarrow$ no Nyquist gaps, all else unconditional") was **too clean**. The
 truth, from attacking §2½:
 - $D^-=\infty$ alone is **insufficient** (referee right);

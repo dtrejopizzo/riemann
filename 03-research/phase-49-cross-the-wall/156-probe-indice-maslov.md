@@ -10,7 +10,7 @@ otra equivalencia RH ⟺ X. El objeto es atacar el cruce **valor → inercia** d
 codifica RH en secreto?**
 
 **Contrato de etiquetado:** **[DEFINICIÓN-NUEVA]** = libertad total. **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = con
-prueba completa, estándar máximo. **[PUENTE]** = conexión honesta, NO una equivalencia de RH. **[TEST DE ESTRÉS]**
+prueba completa, estándar máximo. **[PUENTE]** = conexión franca, NO una equivalencia de RH. **[TEST DE ESTRÉS]**
 = la guardia anti-círculo, al frente. **[GAP]/[GAP de literatura]/[DESEO]** = declarados sin vergüenza.
 **Restricciones:** español; sin numéricos/Python; citas a literatura publicada real.
 
@@ -18,7 +18,7 @@ prueba completa, estándar máximo. **[PUENTE]** = conexión honesta, NO una equ
 
 ## 0. Resumen ejecutivo y veredicto adelantado
 
-Coloco el veredicto al principio (honestidad: no quiero que el lector lo descubra como sorpresa al final).
+Coloco el veredicto al principio (franqueza: no quiero que el lector lo descubra como sorpresa al final).
 
 > **VEREDICTO: caso (b) — κ ES de tipo índice, pero el símbolo codifica RH, y RH entra en la FREDHOLMICIDAD,
 > no en la clase.** Más finamente: el operador autoadjunto $H_C$ en el espacio de Pontryagin $(\mathcal K,Q)$

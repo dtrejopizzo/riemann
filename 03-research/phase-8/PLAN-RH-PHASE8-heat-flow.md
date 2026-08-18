@@ -4,11 +4,11 @@
 Mandate from the principal: *do not give up; RH is computationally certain, so a proof must exist, even if it
 needs new mathematics; build a methodology like the OpenAI autonomous-proof effort (precise statement →
 autonomous iterated attack → rigorous verification → self-refutation).* This document designs that path.
-It is honest about odds (<5%) and about why this surface is **new** and **not** one of our five mapped walls.
+It is candid about odds (<5%) and about why this surface is **new** and **not** one of our five mapped walls.
 
 ---
 
-## 0. Honest triage of the three proposed directions (engaged, not dismissed)
+## 0. Candid triage of the three proposed directions (engaged, not dismissed)
 
 The principal forwarded three "out-of-the-box" suggestions. I engaged each critically:
 
@@ -57,7 +57,7 @@ with $\Phi_{\mathrm{dBN}}$ the standard super-exponentially decaying kernel. $H_
 > the self-referential positivity. *The time parameter $t$ is the new degree of freedom the five-language map
 > said we needed.*
 
-**The honest catch (and why it is still worth it).** $\Lambda=0$ is **marginal** — propagation must hold all
+**The candid catch (and why it is still worth it).** $\Lambda=0$ is **marginal** — propagation must hold all
 the way to $t=0$ with no slack. That marginality is **exactly our measured saturation $C\equiv1$ (N3)**: RH is
 true *with zero margin*. So the difficulty does not vanish; it **relocates** from a static positivity to a
 **dynamical criticality** — a different question, possibly with a dynamical answer.
@@ -112,7 +112,7 @@ attack**, **rigorous verification at every step**, and **mandatory self-refutati
   against ground truth first) carries over.
 - **Self-refutation mandatory.** Try to **break** each lemma before building on it. A false monotonicity must
   be caught at the computer, not in the write-up. ("Una falsa victoria sería peor que un fracaso.")
-- **Honest logging.** Map, proof log, memory updated every step (the faithful bitácora).
+- **Candid logging.** Map, proof log, memory updated every step (the faithful bitácora).
 
 **Decision gates (so we don't loop forever):**
 - **Gate A (is L8.1 even true?):** numerically evolve real zeros under the Coulomb flow and measure
@@ -120,7 +120,7 @@ attack**, **rigorous verification at every step**, and **mandatory self-refutati
   or stop. *(This is the first seed computation, §4.)*
 - **Gate B (is the monotonicity provable from the ODE, or RH-equivalent?):** if L8.1 holds numerically,
   attempt the proof from the Coulomb ODE; if the proof needs an input equivalent to "no complex zeros," we
-  have hit the wall again (sixth language) — log it honestly and reassess.
+  have hit the wall again (sixth language) — log it candidly and reassess.
 - **Gate C (uniformity):** even a local monotonicity must be **uniform in $T_0$** to close (the recurring
   uniform-passage wall). Test whether the detector-coupled bound is uniform or degrades with height.
 
@@ -142,7 +142,7 @@ measure vs. the equilibrium GUE density).
 
 ---
 
-## 5. Honest expectations
+## 5. Candid expectations
 
 - **Odds:** <5%. $\Lambda=0$'s marginality means any Lyapunov inequality is razor-thin; it may be
   RH-equivalent (Gate B failure). But the **attack surface is new** (dynamical, time-parametrized), has a

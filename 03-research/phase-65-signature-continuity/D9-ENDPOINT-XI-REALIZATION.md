@@ -69,7 +69,7 @@ object, and that showing is D8.5b, not a definition.
 
 ## §3. The role of D8.5 in the identification
 
-\begin{remark}[honest dependency]
+\begin{remark}[candid dependency]
 Theorem~\ref{thm:a3} rests on D8.5: the *first variation* of the limit germ must be the $\Xi$-system's
 primitive resolvent response $\langle R_\Xi u,v\rangle$ (so that its Weyl function is $-\Xi'/\Xi$). D8.5 is
 exactly what supplies this (the source-level local factors assemble to the $\Xi$-resolvent, not to some
@@ -86,7 +86,7 @@ validity of D8.5.
 - **A3** (Thm~\ref{thm:a3}, conditional on D8.5): the limit kernel *is* the fixed $\mathsf K_\Xi^{\mathrm{G5}}$,
   by differentiation of the identified limit germ — not by assignment.
 - Hence $\kappa(A_\infty)=\kappa(\Xi)$, connecting the *constructed* limit index to the *given* G5 index.
-- The honest dependency: D9 = D8.5 cashed out; the endpoint identification is the second face of the one
+- The candid dependency: D9 = D8.5 cashed out; the endpoint identification is the second face of the one
   load-bearing input. D6 (positivity closed) + D9 (limit is the $\Xi$ kernel) together give
   $\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0$, i.e. $\kappa(\Xi)=0$ — assembled in D11.
 

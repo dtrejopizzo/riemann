@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{Lambda and determinant control of Witt contractivity (v103)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Exterior-power criterion}
+
+Let $T$ act on a finite-dimensional semisimple complex vector space $M$.
+Give every simple summand a positive metric and the direct sum its
+orthogonal metric.
+
+\begin{theorem}[Compound-operator criterion --- \PROVED]
+The following are equivalent:
+\begin{enumerate}
+\item $\|T\|\le1$;
+\item $\|\bigwedge^kT\|\le1$ for every $1\le k\le\dim M$;
+\item the largest singular value of $T$ is at most one.
+\end{enumerate}
+If only the top determinant bound
+$|\det T|\le1$ is known, none of these conclusions follows when
+$\dim M\ge2$.
+\end{theorem}
+
+\begin{proof}
+The singular values of $\bigwedge^kT$ are all products of $k$ singular
+values of $T$; in particular the largest is the product of the $k$ largest
+singular values.  Taking $k=1$ proves the equivalence immediately.  For the
+last assertion, $T=\operatorname{diag}(R,R^{-1})$ has determinant one and
+operator norm $R>1$.
+\end{proof}
+
+For a one-dimensional Loewy factor $M_\rho$ no exterior-power ambiguity is
+left:
+\begin{equation}
+ \det(\sqrt n,U_n|M_\rho)=n^{1/2-\rho}.             \tag{1}
+\end{equation}
+Thus a metric determinant comparison on each simple factor would already
+be exactly (8c).
+
+\section{The three determinant constructions in the supplied rows}
+
+The files construct three different objects:
+\begin{enumerate}
+\item row (a): the top determinant
+$\det\mathbf H_t^{\rm cot}(D,E)$ of a finite free code-cotangent module,
+with an explicitly selected degree-matching norm;
+\item row (b): Haran's lambda characteristic
+$\chi_T(\phi_n)=\Phi_n(T)$ and the determinant of the local complex
+$[\mathbb Z\xrightarrow{\Phi_n(1)}\mathbb Z]$;
+\item row (c): the nuclear trace of the completed Poisson quotient.
+\end{enumerate}
+
+They are compared by the scalar identity
+\begin{equation}
+ -\log\|\det_{\rm tor}\mathbb L_n\|=\Lambda(n),       \tag{2}
+\end{equation}
+and by the monoidal multiplier label $\Gamma_n\mapsto U_n$.  There is no
+displayed morphism which sends an exterior power of the row-(a) cotangent
+module or Haran's lambda object to
+$\bigwedge^k\operatorname{gr}_LM$ for a row-(c) Loewy quotient.
+
+\begin{proposition}[The existing lambda comparison is not a compound
+operator comparison --- \PROVED]
+The identity $\chi_T(\phi_n)=\Phi_n(T)$ does not compute the characteristic
+polynomial of $\sqrt nU_n$ on any finite Loewy quotient of row (c).
+Likewise (2) computes a torsion contact degree, not the determinant in
+(1).
+\end{proposition}
+
+\begin{proof}
+The row-(b) definition applies $\lambda_T$ to the cyclic Witt vector
+$\phi_n=V_n\phi_1$ and obtains the cyclotomic polynomial $\Phi_n(T)$.  Its
+subsequent derived intersection evaluates that polynomial at $T=1$.  No
+row-(c) module $M$, no action matrix on $M$, and no exterior power of that
+matrix occurs in the construction.  Formula (2) is the determinant of the
+two-term torsion complex resulting from this evaluation.  In contrast,
+(1) is the determinant of the scaling action on a spectral quotient.  The
+objects have different sources and targets, so the first cannot be
+substituted for the second without a new functor.
+\end{proof}
+
+\section{The exact lambda-metric promotion}
+
+Let $\mathfrak M_{\rm fin}(E)$ be the finite Loewy subquotients of the odd
+object.  A sufficient new structure is a family of positive metric functors
+\begin{equation}
+ \mathfrak F_M:
+ \langle\Gamma_n,\mathbb L_n\rangle_{\lambda,\rm met}
+ \longrightarrow\operatorname{End}^{\le1}(\operatorname{gr}_LM)        \tag{3}
+\end{equation}
+such that
+\begin{align}
+ \mathfrak F_M(\Gamma_n)&=\sqrt n,U_n|_{\operatorname{gr}_LM},          \tag{4}\\
+ \mathfrak F_M(\lambda^k\Gamma_n)&=igwedge^k\mathfrak F_M(\Gamma_n),  \tag{5}\\
+ \mathfrak F_M(\Gamma_n^\dagger)&=mathfrak F_M(\Gamma_n)^*.            \tag{6}
+\end{align}
+
+\begin{theorem}[Lambda-metric promotion closes row (d) --- \PROVED]
+If (3)--(6) are constructed from rows (a)--(c), then (8c), the positive
+Hilbert Loewy assembly and row (d) follow.
+\end{theorem}
+
+\begin{proof}
+The target of (3) consists of contractions, so (4) gives (8c).  Alternatively
+(5) and the compound-operator criterion give the same conclusion.  Equation
+(6) supplies the Hilbert adjoint.  The v99 trace-preserving Loewy assembly
+then identifies the primitive supertrace with the negative trace of a
+Hilbert square.
+\end{proof}
+
+The actual functor in row (c) is
+\[
+ \mathcal R:\mathsf{Corr}^{\rm arith}_{\mathbb C}(X)
+ \longrightarrow\mathsf{Mult}(\mathcal S_>).
+\]
+It is proved strict monoidal and complex-linear.  Its target is not a
+metric/dagger category, it is not defined on the Loewy factors, and no
+claim corresponding to (5) or (6) appears in its contract.  Hence
+(3)--(6) remain \OPEN.
+
+The dimension-one test shows that adding all exterior determinants cannot
+hide the missing step: on $M_\rho$, (3) itself says
+\[
+                    |n^{1/2-\rho}|\le1,
+\]
+which is the desired half-plane inequality.  Therefore the needed
+lambda-metric promotion must be constructed by a new positive fiber functor
+or boundary frame; it cannot be obtained by reinterpreting (2).
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.58\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.17\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Exterior-power contraction criterion & \PROVED & Theorem 1 \\
+Row-(a) and row-(b) determinant constructions & \PROVED & supplied files \\
+Identification with compound operators on Loewy factors & false as stated & type audit \\
+Metric lambda-functor (3)--(6) & \OPEN & new construction \\
+Row (d), condition $G$ & \OPEN & follows from (3)--(6) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

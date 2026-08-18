@@ -328,7 +328,7 @@ E74.14       Certification and falsifiers.
              controls remain pending in the current finite-cell harness.
 
 E74.15       Conditional assembly.
-             Result: records the conditional closure theorem and honest
+             Result: records the conditional closure theorem and candid
              endpoint.  Phase 74 has not closed Omega7; it has reduced the
              live theorem to exact quotient basis + QLIFT-DIV.
 

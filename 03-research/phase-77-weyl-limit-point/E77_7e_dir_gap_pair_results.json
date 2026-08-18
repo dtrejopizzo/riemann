@@ -1,0 +1,1366 @@
+{
+  "statement": "Paired interlacing-gap audit for directional mu freezing",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 20,
+    "dps": 60,
+    "sigmas": [
+      "0.6",
+      "1.0",
+      "2.0",
+      "3.0"
+    ],
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "mu_reference is the largest measured section, not the abstract mu_L proved by E77.7d.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 20,
+      "mu_reference": "5.07242962097690848565414e-53",
+      "planted": null,
+      "rows": [
+        {
+          "N": 6,
+          "mu_N": "5.67857981289355695541481e-23",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "5.67857981289355695541481e-23",
+          "inner_ground_nu": "7.4348808641654420969885e-21",
+          "interlacing_gap": "7.37809506603650652743435e-21",
+          "boundary_norm": "0.0727979925867636579731843",
+          "ground_boundary_overlap": "2.36799601329596239546832e-17",
+          "normalized_ground_boundary_overlap": "3.25283147124378027775184e-16",
+          "ground_component_overlap_over_gap": "3209.49512320128411217704",
+          "ground_vector_left_five_mass": "0.316824421872702889702356",
+          "ground_vector_center_five_mass": "0.985057748456003780495657",
+          "double_response_norm": "431680811430112149373565.0",
+          "prefactored_double_response_norm": "24.5133394140054509190114",
+          "max_paired_freeze_ratio": "0.00811975755378314917743669",
+          "resolvent_identity_relative_error": "8.04900108060699751993088e-42",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "2673.35023790924131007074",
+              "double_pair_abs": "370518615188780080968174.0",
+              "paired_freeze_ratio": "0.00787034747141018963256965"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "1235.49656246252559278637",
+              "double_pair_abs": "171648203318661029332556.0",
+              "paired_freeze_ratio": "0.00788928153990199373706283"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "241.983710943215623109851",
+              "double_pair_abs": "33992782568354429331730.6",
+              "paired_freeze_ratio": "0.00797701333384520385847306"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "54.9941035362610586819292",
+              "double_pair_abs": "7863564523442906569786.29",
+              "paired_freeze_ratio": "0.00811975755378314917743669"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_N": "1.14108331541358008838965e-25",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "1.14108331541358008838965e-25",
+          "inner_ground_nu": "5.67857981289355695541481e-23",
+          "interlacing_gap": "5.66716897973942115453091e-23",
+          "boundary_norm": "0.0862661718096365343012061",
+          "ground_boundary_overlap": "1.87151487545682316099567e-18",
+          "normalized_ground_boundary_overlap": "2.16946554622441455027091e-17",
+          "ground_component_overlap_over_gap": "33023.8057511190748498183",
+          "ground_vector_left_five_mass": "0.0887978659980879902496876",
+          "ground_vector_center_five_mass": "0.976798514339929186995487",
+          "double_response_norm": "5.81550471512833588833154e+26",
+          "prefactored_double_response_norm": "66.3597540114194912000401",
+          "max_paired_freeze_ratio": "0.00211178907008860914214871",
+          "resolvent_identity_relative_error": "9.70752868257739189597274e-39",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "26735.0283822706183778137",
+              "double_pair_abs": "4.83319730443651080241272e+26",
+              "paired_freeze_ratio": "0.00206286700927975366061618"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "12305.9585190685587322284",
+              "double_pair_abs": "2.22866893472208476990161e+26",
+              "paired_freeze_ratio": "0.00206655737791680437938362"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "2365.87329327760150304389",
+              "double_pair_abs": "4.32027917832811123401698e+25",
+              "paired_freeze_ratio": "0.00208371196476431808460024"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "521.873792777006485498224",
+              "double_pair_abs": "9.65825506924289602779272e+24",
+              "paired_freeze_ratio": "0.00211178907008860914214871"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_N": "3.67864498056142094313034e-28",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "3.67864498056142094313034e-28",
+          "inner_ground_nu": "1.14108331541358008838965e-25",
+          "interlacing_gap": "1.13740467043301866744652e-25",
+          "boundary_norm": "0.331677431126703112281438",
+          "ground_boundary_overlap": "3.8137880702065687038066e-19",
+          "normalized_ground_boundary_overlap": "1.14984853122239566195429e-18",
+          "ground_component_overlap_over_gap": "3353061.72846523514122785",
+          "ground_vector_left_five_mass": "0.0161286722571379861781348",
+          "ground_vector_center_five_mass": "0.96774265548572402764373",
+          "double_response_norm": "2.9384898857956062503414e+31",
+          "prefactored_double_response_norm": "10809.6610688125100019374",
+          "max_paired_freeze_ratio": "0.00336079407397102099226166",
+          "resolvent_identity_relative_error": "3.11049253161724996978793e-36",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "2649409.98381577656955676",
+              "double_pair_abs": "2.37462555974857609462808e+31",
+              "paired_freeze_ratio": "0.00329711311176570229230174"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "1215413.56023950048889394",
+              "double_pair_abs": "1.0909355300427338039506e+31",
+              "paired_freeze_ratio": "0.00330189216493274203701799"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "230057.520661263325484203",
+              "double_pair_abs": "2.07888521244553216839854e+30",
+              "paired_freeze_ratio": "0.00332416024911711972014774"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "49478.7712572607327618781",
+              "double_pair_abs": "4.52035904816754869459487e+29",
+              "paired_freeze_ratio": "0.00336079407397102099226166"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_N": "1.85053117215286206370408e-30",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "1.85053117215286206370403e-30",
+          "inner_ground_nu": "3.67864498056142094313034e-28",
+          "interlacing_gap": "3.6601396688398923224933e-28",
+          "boundary_norm": "0.220060123944778581899177",
+          "ground_boundary_overlap": "5.83785089933566404837131e-22",
+          "normalized_ground_boundary_overlap": "2.65284359323572947752811e-21",
+          "ground_component_overlap_over_gap": "1594980.36346411147023208",
+          "ground_vector_left_five_mass": "0.00195041928664216120703515",
+          "ground_vector_center_five_mass": "0.958563447799207249106391",
+          "double_response_norm": "4.3357823316563461596062e+33",
+          "prefactored_double_response_norm": "8023.50036039968759496223",
+          "max_paired_freeze_ratio": "0.00519802894745210249571099",
+          "resolvent_identity_relative_error": "5.59454814304386207951338e-34",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "1235815.45124913795282184",
+              "double_pair_abs": "3.42132859770058790023475e+33",
+              "paired_freeze_ratio": "0.00512315589987440949165048"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "565489.612100625221328732",
+              "double_pair_abs": "1.56725986554683620026362e+33",
+              "paired_freeze_ratio": "0.00512876483315919991735267"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "105781.649708686199282499",
+              "double_pair_abs": "2.94670042260831967629492e+32",
+              "paired_freeze_ratio": "0.0051549214840661924960316"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "22316.1402725272350450478",
+              "double_pair_abs": "6.26846739344826938703619e+31",
+              "paired_freeze_ratio": "0.00519802894745210249571099"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_N": "8.92947289710064654996649e-33",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "8.92947289710064654991577e-33",
+          "inner_ground_nu": "1.85053117215286206370408e-30",
+          "interlacing_gap": "1.84160169925576141715412e-30",
+          "boundary_norm": "0.134384650039483091772889",
+          "ground_boundary_overlap": "1.29758118720659187597285e-23",
+          "normalized_ground_boundary_overlap": "9.65572471874841368243144e-23",
+          "ground_component_overlap_over_gap": "7045938.25978211133547952",
+          "ground_vector_left_five_mass": "0.000149996152660942744665539",
+          "ground_vector_center_five_mass": "0.950128308460208903250028",
+          "double_response_norm": "3.80752210112763726012093e+36",
+          "prefactored_double_response_norm": "33999.1654071309440151037",
+          "max_paired_freeze_ratio": "0.00496167914086214169002306",
+          "resolvent_identity_relative_error": "7.22634795554689679538351e-32",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "5367669.60340716973765043",
+              "double_pair_abs": "2.94733117816010068158718e+36",
+              "paired_freeze_ratio": "0.00490308007360488619297683"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "2451315.3401714220044096",
+              "double_pair_abs": "1.34719387928665056178996e+36",
+              "paired_freeze_ratio": "0.00490745969524621818909382"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "454354.735108873392122178",
+              "double_pair_abs": "2.5074460651987771641749e+35",
+              "paired_freeze_ratio": "0.00492790543379479991426939"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "94419.6334954551986411173",
+              "double_pair_abs": "5.24644546661160082515407e+34",
+              "paired_freeze_ratio": "0.00496167914086214169002306"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_N": "4.3015277027002730350913e-35",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "4.30152770270027303001887e-35",
+          "inner_ground_nu": "8.92947289710064654996649e-33",
+          "interlacing_gap": "8.88645762007364381961558e-33",
+          "boundary_norm": "0.133540495836799936958007",
+          "ground_boundary_overlap": "5.93008901530249204812874e-25",
+          "normalized_ground_boundary_overlap": "4.4406672134493672540824e-24",
+          "ground_component_overlap_over_gap": "66731753.7407368880894703",
+          "ground_vector_left_five_mass": "0.00000684093564847248167930536",
+          "ground_vector_center_five_mass": "0.942038939570306977800716",
+          "double_response_norm": "7.47320195697636553523243e+39",
+          "prefactored_double_response_norm": "321461.852458077302874351",
+          "max_paired_freeze_ratio": "0.00493148938062220613432593",
+          "resolvent_identity_relative_error": "2.33396404585718377892531e-29",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "50103878.6684455569383426",
+              "double_pair_abs": "5.68882838089042107446443e+39",
+              "paired_freeze_ratio": "0.00488398374070764813898905"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "22844404.5029046525687414",
+              "double_pair_abs": "2.59565239281100063139284e+39",
+              "paired_freeze_ratio": "0.00488752975497221328159692"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "4202344.81900029080113524",
+              "double_pair_abs": "4.79101695771187131868834e+38",
+              "paired_freeze_ratio": "0.00490409356093892942807343"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "862498.636031142331330593",
+              "double_pair_abs": "9.88812151952119920729641e+37",
+              "paired_freeze_ratio": "0.00493148938062220613432593"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_N": "2.40320588207581316433666e-37",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "2.4032058820758126570937e-37",
+          "inner_ground_nu": "4.3015277027002730350913e-35",
+          "interlacing_gap": "4.27749564387951490344793e-35",
+          "boundary_norm": "0.127845154693734720300876",
+          "ground_boundary_overlap": "1.74310657933612122569789e-24",
+          "normalized_ground_boundary_overlap": "1.36345142177026539343183e-23",
+          "ground_component_overlap_over_gap": "40750633652.4329997891543",
+          "ground_vector_left_five_mass": "0.000000133147332496089548306532",
+          "ground_vector_center_five_mass": "0.934548580801154991564711",
+          "double_response_norm": "9.47352584347006042344651e+44",
+          "prefactored_double_response_norm": "227668330.310244736667613",
+          "max_paired_freeze_ratio": "0.00570362802871580646352064",
+          "resolvent_identity_relative_error": "4.44361347196778821633291e-27",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "30202208299.4859148801582",
+              "double_pair_abs": "7.10868448629107901713153e+44",
+              "paired_freeze_ratio": "0.00565641829957400358879881"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "13751769253.1854639158208",
+              "double_pair_abs": "3.23876328089259045785491e+44",
+              "paired_freeze_ratio": "0.0056599371498974783138357"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "2513768664.72294910432825",
+              "double_pair_abs": "5.93753480951838831934419e+43",
+              "paired_freeze_ratio": "0.00567638493530077009580619"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "510584340.755523691254082",
+              "double_pair_abs": "1.21179095751926846366148e+43",
+              "paired_freeze_ratio": "0.00570362802871580646352064"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_N": "2.26213529149277597648465e-39",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "2.26213529149272525218844e-39",
+          "inner_ground_nu": "2.40320588207581316433666e-37",
+          "interlacing_gap": "2.38058452916088540457181e-37",
+          "boundary_norm": "0.25152913547293784384757",
+          "ground_boundary_overlap": "1.03702668021280998909311e-27",
+          "normalized_ground_boundary_overlap": "4.12288889819042157148057e-27",
+          "ground_component_overlap_over_gap": "4356185077.69746717207034",
+          "ground_vector_left_five_mass": "8.91290733659474252242839e-11",
+          "ground_vector_center_five_mass": "0.92741391220351077845267",
+          "double_response_norm": "1.81265580918957076193145e+46",
+          "prefactored_double_response_norm": "41004726.7729703142042066",
+          "max_paired_freeze_ratio": "0.00957352853366629670089221",
+          "resolvent_identity_relative_error": "3.38397211000210384750725e-25",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "3194093825.94493449955252",
+              "double_pair_abs": "1.34276578598641017474173e+46",
+              "paired_freeze_ratio": "0.00950979538551975046903522"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "1452705289.43444806852359",
+              "double_pair_abs": "6.11008056980358224882804e+45",
+              "paired_freeze_ratio": "0.00951454434106014184208532"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "264154039.241169654029907",
+              "double_pair_abs": "1.11362470216533456074441e+45",
+              "paired_freeze_ratio": "0.00953674510328537858082439"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "53189270.3396823664372923",
+              "double_pair_abs": "2.25101035820817583430682e+44",
+              "paired_freeze_ratio": "0.00957352853366629670089221"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_N": "1.70904698080237686364875e-41",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "1.70904698079730443402777e-41",
+          "inner_ground_nu": "2.26213529149277597648465e-39",
+          "interlacing_gap": "2.24504482168475220784816e-39",
+          "boundary_norm": "0.933609104266391128658088",
+          "ground_boundary_overlap": "1.65507885595898813372466e-28",
+          "normalized_ground_boundary_overlap": "1.77277497444662515568723e-28",
+          "ground_component_overlap_over_gap": "73721417050.2379962424903",
+          "ground_vector_left_five_mass": "1.94701249405740615731134e-10",
+          "ground_vector_center_five_mass": "0.921233192979654448087367",
+          "double_response_norm": "3.25893051652876227138738e+49",
+          "prefactored_double_response_norm": "556966535.990168099406934",
+          "max_paired_freeze_ratio": "0.00767067909872270176856967",
+          "resolvent_identity_relative_error": "6.91148062185792589932026e-23",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "53531547116.2649510442018",
+              "double_pair_abs": "2.38864637217135619278127e+49",
+              "paired_freeze_ratio": "0.00762598708698917394318642"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "24324112908.1802664383487",
+              "double_pair_abs": "1.08584664028485768727714e+49",
+              "paired_freeze_ratio": "0.00762931387957681494060469"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "4403891415.56262026524988",
+              "double_pair_abs": "1.9699395375560084505342e+48",
+              "paired_freeze_ratio": "0.00764487336612321601302463"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "880432116.561342339063856",
+              "double_pair_abs": "3.95162468336629943382974e+47",
+              "paired_freeze_ratio": "0.00767067909872270176856967"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_N": "1.57226399655549833699041e-43",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "1.57226399604825537489272e-43",
+          "inner_ground_nu": "1.70904698080237686364875e-41",
+          "interlacing_gap": "1.69332434083682188027884e-41",
+          "boundary_norm": "0.960377337093919439776654",
+          "ground_boundary_overlap": "2.72315850671371699746142e-30",
+          "normalized_ground_boundary_overlap": "2.83550892085181263303104e-30",
+          "ground_component_overlap_over_gap": "160817301271.885256969987",
+          "ground_vector_left_five_mass": "1.63968663424351932062025e-11",
+          "ground_vector_center_five_mass": "0.915369748036725110873465",
+          "double_response_norm": "9.4097648276953196035148e+51",
+          "prefactored_double_response_norm": "1479463444.98665663997321",
+          "max_paired_freeze_ratio": "0.0093255577434129211486606",
+          "resolvent_identity_relative_error": "3.44157602017767806147173e-22",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "115754368191.381167539891",
+              "double_pair_abs": "6.83047486623829174161819e+51",
+              "paired_freeze_ratio": "0.00927767122389996866333701"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "52554241491.0516428265347",
+              "double_pair_abs": "3.10233004266026564356888e+51",
+              "paired_freeze_ratio": "0.00928123342958741350650298"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "9478512154.32239208123661",
+              "double_pair_abs": "5.60530860496499568940682e+50",
+              "paired_freeze_ratio": "0.0092978990403119537199447"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "1882957848.20948619465053",
+              "double_pair_abs": "1.11683738774306778171237e+50",
+              "paired_freeze_ratio": "0.0093255577434129211486606"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_N": "1.54136825009323129579342e-45",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "1.54136819936893508602433e-45",
+          "inner_ground_nu": "1.57226399655549833699041e-43",
+          "interlacing_gap": "1.55685031405456602403248e-43",
+          "boundary_norm": "0.465780132873053682703753",
+          "ground_boundary_overlap": "1.11072242148457133829011e-31",
+          "normalized_ground_boundary_overlap": "2.38464962993020964003119e-31",
+          "ground_component_overlap_over_gap": "713442012669.717484657933",
+          "ground_vector_left_five_mass": "2.97741550403248066693826e-13",
+          "ground_vector_center_five_mass": "0.909902159926094926309546",
+          "double_response_norm": "4.53767316647581066105146e+54",
+          "prefactored_double_response_norm": "6994225117.93555429571394",
+          "max_paired_freeze_ratio": "0.00991969447881926479869995",
+          "resolvent_identity_relative_error": "3.50563993003394443265302e-19",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "509585151069.889443654473",
+              "double_pair_abs": "3.26523873939950965553664e+54",
+              "paired_freeze_ratio": "0.00987653416841349091073328"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "231196357214.75841629918",
+              "double_pair_abs": "1.48190471169894768079244e+54",
+              "paired_freeze_ratio": "0.00987974388794538708242764"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "41560657632.6461171978312",
+              "double_pair_abs": "2.6679727204805480659263e+53",
+              "paired_freeze_ratio": "0.00989476236031040523155003"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "8211319971.24492912960792",
+              "double_pair_abs": "5.28451186523280991084034e+52",
+              "paired_freeze_ratio": "0.00991969447881926479869995"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_N": "2.35669695022564892003865e-47",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "2.35669187779602794313016e-47",
+          "inner_ground_nu": "1.54136825009323129579342e-45",
+          "interlacing_gap": "1.51780128059097480659303e-45",
+          "boundary_norm": "1.00717426650021701710981",
+          "ground_boundary_overlap": "2.3083665265214392515713e-32",
+          "normalized_ground_boundary_overlap": "2.29192365541930956883091e-32",
+          "ground_component_overlap_over_gap": "15208621550395.8992157532",
+          "ground_vector_left_five_mass": "3.77568280049799963546913e-17",
+          "ground_vector_center_five_mass": "0.904963277622933010416733",
+          "double_response_norm": "9.86696208077239695868633e+57",
+          "prefactored_double_response_norm": "232533893942.777033284561",
+          "max_paired_freeze_ratio": "0.0154506053716543157951563",
+          "resolvent_identity_relative_error": "8.35423052131953035049875e-18",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "10789141239203.6772818003",
+              "double_pair_abs": "7.04593282766978362552814e+57",
+              "paired_freeze_ratio": "0.0153905600995648515490035"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "4891962160211.35047151649",
+              "double_pair_abs": "3.19566049724233225757419e+57",
+              "paired_freeze_ratio": "0.0153950232879954366642725"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "876862344272.114427979102",
+              "double_pair_abs": "5.73585052883206395923085e+56",
+              "paired_freeze_ratio": "0.0154159115645131235915841"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "172419023117.373197935893",
+              "double_pair_abs": "1.13038887682000308142049e+56",
+              "paired_freeze_ratio": "0.0154506053716543157951563"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_N": "2.52719644523725779337455e-49",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "2.52668920227516010252598e-49",
+          "inner_ground_nu": "2.35669695022564892003865e-47",
+          "interlacing_gap": "2.3314249857732763421049e-47",
+          "boundary_norm": "1.14588804577900110761165",
+          "ground_boundary_overlap": "2.2309775756930295413212e-33",
+          "normalized_ground_boundary_overlap": "1.94694201053154329632742e-33",
+          "ground_component_overlap_over_gap": "95691587304194.0972127487",
+          "ground_vector_left_five_mass": "1.58430504326943790007775e-16",
+          "ground_vector_center_five_mass": "0.900487639639829335989028",
+          "double_response_norm": "4.06041996331096064923225e+60",
+          "prefactored_double_response_norm": "1025941927800.03060140652",
+          "max_paired_freeze_ratio": "0.0108231675622565880803268",
+          "resolvent_identity_relative_error": "4.46442355846474801380306e-15",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "67459660104890.1508037133",
+              "double_pair_abs": "2.87993861932705699873549e+60",
+              "paired_freeze_ratio": "0.0107867573025933745135764"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "30571229271969.4098966725",
+              "double_pair_abs": "1.30545199212487416241185e+60",
+              "paired_freeze_ratio": "0.0107894629399638405015736"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "5466351012712.19562272637",
+              "double_pair_abs": "2.33697992066625733122735e+59",
+              "paired_freeze_ratio": "0.0108021272650611297840787"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "1070501964131.45804945342",
+              "double_pair_abs": "4.58553514341484330622952e+58",
+              "paired_freeze_ratio": "0.0108231675622565880803268"
+            }
+          ]
+        },
+        {
+          "N": 19,
+          "mu_N": "4.62435979744664295154512e-51",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "4.57363550123687386668857e-51",
+          "inner_ground_nu": "2.52719644523725779337455e-49",
+          "interlacing_gap": "2.4809528472627913638591e-49",
+          "boundary_norm": "1.04996519095694973911859",
+          "ground_boundary_overlap": "2.50740011651083736479152e-34",
+          "normalized_ground_boundary_overlap": "2.38807927930026472731979e-34",
+          "ground_component_overlap_over_gap": "1010660125716304.9225645",
+          "ground_vector_left_five_mass": "8.55133585818229727017351e-19",
+          "ground_vector_center_five_mass": "0.896264715166792811241749",
+          "double_response_norm": "3.99993844082115289941201e+63",
+          "prefactored_double_response_norm": "18294260455701.6933774934",
+          "max_paired_freeze_ratio": "0.0182539330826906168095689",
+          "resolvent_identity_relative_error": "8.83607011857144740782482e-14",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "708559288348348.315638673",
+              "double_pair_abs": "2.81932513612370917246296e+63",
+              "paired_freeze_ratio": "0.0181982873475021549649221"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "320947564589452.627437982",
+              "double_pair_abs": "1.27732581947901623873548e+63",
+              "paired_freeze_ratio": "0.0182024210779996640502866"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "57257488180470.7028018778",
+              "double_pair_abs": "2.28118951011288732238554e+62",
+              "paired_freeze_ratio": "0.0182217726624969872380996"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "11170833902136.7346238408",
+              "double_pair_abs": "4.45841507204303196904728e+61",
+              "paired_freeze_ratio": "0.0182539330826906168095689"
+            }
+          ]
+        },
+        {
+          "N": 20,
+          "mu_N": "5.07242962097690848565414e-53",
+          "mu_reference": "5.07242962097690848565414e-53",
+          "delta_mu_abs": "0.0",
+          "inner_ground_nu": "4.62435979744664295154512e-51",
+          "interlacing_gap": "4.57363550123687386668857e-51",
+          "boundary_norm": "0.846651371272849572552919",
+          "ground_boundary_overlap": "5.67863243852324702479504e-36",
+          "normalized_ground_boundary_overlap": "6.70716735506614951069907e-36",
+          "ground_component_overlap_over_gap": "1241601443094348.60888867",
+          "ground_vector_left_five_mass": "2.29899864156787161586029e-19",
+          "ground_vector_center_five_mass": "0.892495734015187957599394",
+          "double_response_norm": "2.71469259874881475410696e+65",
+          "prefactored_double_response_norm": "0.0",
+          "max_paired_freeze_ratio": "0.0",
+          "resolvent_identity_relative_error": "6.01844804846868502219155e-47",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "865914831267885.269190215",
+              "double_pair_abs": "1.90295516246419321645708e+65",
+              "paired_freeze_ratio": "0.0"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "392061211296828.90816984",
+              "double_pair_abs": "8.61777537961603647163048e+64",
+              "paired_freeze_ratio": "0.0"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "69809370900239.6309434978",
+              "double_pair_abs": "1.53591224220866451334009e+64",
+              "paired_freeze_ratio": "0.0"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "13576116633185.1107638788",
+              "double_pair_abs": "2.99165328436263152426131e+63",
+              "paired_freeze_ratio": "0.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 20,
+      "mu_reference": "-1.74937984798384152252764",
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 6,
+          "mu_N": "-0.120089541719792062945377",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "1.62929030626404945958226",
+          "inner_ground_nu": "-0.0381882506484613734419728",
+          "interlacing_gap": "0.0819012910713306895034044",
+          "boundary_norm": "0.0576800282458073264525033",
+          "ground_boundary_overlap": "0.033716353681465757868858",
+          "normalized_ground_boundary_overlap": "0.584541213082997204502456",
+          "ground_component_overlap_over_gap": "0.411670600553793591398643",
+          "ground_vector_left_five_mass": "0.5",
+          "ground_vector_center_five_mass": "0.0495371166103641576853981",
+          "double_response_norm": "0.376292941403428475064729",
+          "prefactored_double_response_norm": "0.613090441744191997409519",
+          "max_paired_freeze_ratio": "0.205645635325924023049794",
+          "resolvent_identity_relative_error": "4.01138818055258525471366e-62",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "0.218451344764569719770511",
+              "double_pair_abs": "0.126217921100548332356921",
+              "paired_freeze_ratio": "0.205645635325924023049794"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "0.206796126495986219697773",
+              "double_pair_abs": "0.119752046800170611782584",
+              "paired_freeze_ratio": "0.195110849006796760164907"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "0.190238912923562191328093",
+              "double_pair_abs": "0.110104973954376747518961",
+              "paired_freeze_ratio": "0.179392966735321679874424"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "0.176018590834776864665799",
+              "double_pair_abs": "0.101776048890078049727746",
+              "paired_freeze_ratio": "0.165822729866460136712645"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_N": "-0.411328666741726584802306",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "1.33805118124211493772533",
+          "inner_ground_nu": "-0.120089541719792062945377",
+          "interlacing_gap": "0.291239125021934521856929",
+          "boundary_norm": "0.184862127087418408485958",
+          "ground_boundary_overlap": "0.146701078027822785089742",
+          "normalized_ground_boundary_overlap": "0.793570215485241819327132",
+          "ground_component_overlap_over_gap": "0.503713496655966365740564",
+          "ground_vector_left_five_mass": "0.495508366494689220529139",
+          "ground_vector_center_five_mass": "0.0213689657093959144451358",
+          "double_response_norm": "0.370732827358116653074055",
+          "prefactored_double_response_norm": "0.496059497571757052990053",
+          "max_paired_freeze_ratio": "0.155658423554707981472115",
+          "resolvent_identity_relative_error": "6.87552547250484464362049e-63",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "0.19645516030276439975671",
+              "double_pair_abs": "0.116332189483372400730236",
+              "paired_freeze_ratio": "0.155658423554707981472115"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "0.178157211554900194788478",
+              "double_pair_abs": "0.105965971307211143034102",
+              "paired_freeze_ratio": "0.14178789307908192829719"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "0.16807002670030882795601",
+              "double_pair_abs": "0.10022959325172220458359",
+              "paired_freeze_ratio": "0.134112325645883607855372"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "0.16138735964700871648616",
+              "double_pair_abs": "0.0963957073999914920567207",
+              "paired_freeze_ratio": "0.128982390153227896030585"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_N": "-0.720430127892945977947044",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "1.02894972009089554458059",
+          "inner_ground_nu": "-0.411328666741726584802306",
+          "interlacing_gap": "0.309101461151219393144738",
+          "boundary_norm": "2.46367996046090222904111",
+          "ground_boundary_overlap": "1.91815327369059936197939",
+          "normalized_ground_boundary_overlap": "0.77857242193574265922075",
+          "ground_component_overlap_over_gap": "6.20557815076841581123406",
+          "ground_vector_left_five_mass": "0.484282127698106958738298",
+          "ground_vector_center_five_mass": "0.0314357446037860825234042",
+          "double_response_norm": "5.28193637374952915914577",
+          "prefactored_double_response_norm": "5.43484695330749786156688",
+          "max_paired_freeze_ratio": "0.735661796636692491192325",
+          "resolvent_identity_relative_error": "2.58027052844024296844109e-62",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "1.71808919153082089134204",
+              "double_pair_abs": "1.21478355169324334264439",
+              "paired_freeze_ratio": "0.727524043365919595388599"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "1.56345396960604577111076",
+              "double_pair_abs": "1.10695882193815766775278",
+              "paired_freeze_ratio": "0.728518390773229937410396"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "1.50931787261172332490474",
+              "double_pair_abs": "1.07392915546826672780005",
+              "paired_freeze_ratio": "0.732131464132469373142067"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "1.48456416403594001372352",
+              "double_pair_abs": "1.06140962849054634931459",
+              "paired_freeze_ratio": "0.735661796636692491192325"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_N": "-1.4970539014566867318729",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.252325946527154790654739",
+          "inner_ground_nu": "-0.720430127892945977947044",
+          "interlacing_gap": "0.776623773563740753925854",
+          "boundary_norm": "1.26007264193740977111605",
+          "ground_boundary_overlap": "0.600404002905132684849375",
+          "normalized_ground_boundary_overlap": "0.476483643023936000291086",
+          "ground_component_overlap_over_gap": "0.773095060108734905810466",
+          "ground_vector_left_five_mass": "0.463222826948449795319843",
+          "ground_vector_center_five_mass": "0.0462673154495120097096911",
+          "double_response_norm": "0.835948935788598619782651",
+          "prefactored_double_response_norm": "0.210931606471225888994642",
+          "max_paired_freeze_ratio": "0.0549885865756009615117326",
+          "resolvent_identity_relative_error": "8.94561748992614422970305e-62",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "0.254300795204869904303214",
+              "double_pair_abs": "0.217926801949728165695124",
+              "paired_freeze_ratio": "0.0549885865756009615117326"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "0.224033829182187705162912",
+              "double_pair_abs": "0.192390384447031525851679",
+              "paired_freeze_ratio": "0.0485450858583204294895079"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "0.212114908555916662495858",
+              "double_pair_abs": "0.184237551477248180583113",
+              "paired_freeze_ratio": "0.0464879145623420525221432"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "0.206438305407604303961579",
+              "double_pair_abs": "0.181309102980950191985529",
+              "paired_freeze_ratio": "0.0457489910236576393973515"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_N": "-1.64398602971619752920644",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.105393818267643993321193",
+          "inner_ground_nu": "-1.4970539014566867318729",
+          "interlacing_gap": "0.146932128259510797333546",
+          "boundary_norm": "0.804537390062885493772348",
+          "ground_boundary_overlap": "0.339632986064360384344587",
+          "normalized_ground_boundary_overlap": "0.422146925996582292413798",
+          "ground_component_overlap_over_gap": "2.31149572314437783272497",
+          "ground_vector_left_five_mass": "0.450953131800481181401283",
+          "ground_vector_center_five_mass": "0.0442019100254947388725432",
+          "double_response_norm": "9.37582313376158326680818",
+          "prefactored_double_response_norm": "0.988153799469240706406999",
+          "max_paired_freeze_ratio": "0.201037629062693273908947",
+          "resolvent_identity_relative_error": "1.34380909729805198507862e-61",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "0.514164753852509081937266",
+              "double_pair_abs": "1.9074897595242739707047",
+              "paired_freeze_ratio": "0.201037629062693273908947"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "0.43209226349087216001616",
+              "double_pair_abs": "1.59681376567744790344427",
+              "paired_freeze_ratio": "0.168294299827081203876251"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "0.402194577633409293878544",
+              "double_pair_abs": "1.49286627478957813197072",
+              "paired_freeze_ratio": "0.157338876863067477216918"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "0.390054491234989693620589",
+              "double_pair_abs": "1.45566562727042118701337",
+              "paired_freeze_ratio": "0.153418158578994768790485"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_N": "-1.69983946354891462497424",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.0495403844349268975533968",
+          "inner_ground_nu": "-1.64398602971619752920644",
+          "interlacing_gap": "0.0558534338327170957677961",
+          "boundary_norm": "0.56638595180721585829466",
+          "ground_boundary_overlap": "0.218755779763273112429499",
+          "normalized_ground_boundary_overlap": "0.386230942108063289507305",
+          "ground_component_overlap_over_gap": "3.91660395345528793253483",
+          "ground_vector_left_five_mass": "0.427045494919067835915008",
+          "ground_vector_center_five_mass": "0.0452564746514209842741853",
+          "double_response_norm": "37.346959085995192486973",
+          "prefactored_double_response_norm": "1.85018271059568790628409",
+          "max_paired_freeze_ratio": "0.381906974782696118438746",
+          "resolvent_identity_relative_error": "1.96262503119452768172988e-60",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "0.841379794047250080120874",
+              "double_pair_abs": "7.70900305152748388079166",
+              "paired_freeze_ratio": "0.381906974782696118438746"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "0.699966064495929696949756",
+              "double_pair_abs": "6.40689061039879686681219",
+              "paired_freeze_ratio": "0.31739982387167984606461"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "0.646827647905203063360339",
+              "double_pair_abs": "5.93037962287319531112407",
+              "paired_freeze_ratio": "0.293793286362194889710208"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "0.624280597972640905078821",
+              "double_pair_abs": "5.73368509784102451237963",
+              "paired_freeze_ratio": "0.284048963975855796448841"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_N": "-1.70945938630677984903713",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.0399204616770616734905046",
+          "inner_ground_nu": "-1.69983946354891462497424",
+          "interlacing_gap": "0.00961992275786522406289221",
+          "boundary_norm": "0.444569276189028171390742",
+          "ground_boundary_overlap": "0.160496063507337465335656",
+          "normalized_ground_boundary_overlap": "0.361014744165756313760436",
+          "ground_component_overlap_over_gap": "16.6837164442007912485843",
+          "ground_vector_left_five_mass": "0.381285735836233070727493",
+          "ground_vector_center_five_mass": "0.04665844901967945617978",
+          "double_response_norm": "336.827254704733274778319",
+          "prefactored_double_response_norm": "13.4462995132301959587893",
+          "max_paired_freeze_ratio": "0.800354645244073494451122",
+          "resolvent_identity_relative_error": "3.86518417122836682492492e-61",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "3.52692633027530668870826",
+              "double_pair_abs": "70.6899342203464721884493",
+              "paired_freeze_ratio": "0.8001229812410265748656"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "2.92376575335970960591281",
+              "double_pair_abs": "58.6010317459427469577825",
+              "paired_freeze_ratio": "0.800125741729477411079383"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "2.69263668191242005214454",
+              "double_pair_abs": "53.9777471898589002461388",
+              "paired_freeze_ratio": "0.800262658004215894526984"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "2.59125093139842620961161",
+              "double_pair_abs": "51.9512959723468885126561",
+              "paired_freeze_ratio": "0.800354645244073494451122"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_N": "-1.72343779555181385817055",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.0259420524320276643570914",
+          "inner_ground_nu": "-1.70945938630677984903713",
+          "interlacing_gap": "0.0139784092450340091334132",
+          "boundary_norm": "0.395935380079674849175207",
+          "ground_boundary_overlap": "0.114561226724731646118574",
+          "normalized_ground_boundary_overlap": "0.289343242580843032784995",
+          "ground_component_overlap_over_gap": "8.19558396928683721693136",
+          "ground_vector_left_five_mass": "0.245277236668729118376983",
+          "ground_vector_center_five_mass": "0.0472182943426765326436555",
+          "double_response_norm": "205.352459607258035409331",
+          "prefactored_double_response_norm": "5.32726427417733102611436",
+          "max_paired_freeze_ratio": "0.637630959374863332969086",
+          "resolvent_identity_relative_error": "3.84950336595738356424383e-60",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "1.76375345150291698398863",
+              "double_pair_abs": "43.3489326526378393636902",
+              "paired_freeze_ratio": "0.637594944343788312064205"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "1.46163738489188447233121",
+              "double_pair_abs": "35.9194735616085894799763",
+              "paired_freeze_ratio": "0.637521232077002083591558"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "1.34479090307200762950962",
+              "double_pair_abs": "33.0528359595822482823457",
+              "paired_freeze_ratio": "0.637614666735129589526798"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "1.29306605336490362294603",
+              "double_pair_abs": "31.7823329631474274535886",
+              "paired_freeze_ratio": "0.637630959374863332969086"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_N": "-1.72414565172047431765303",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.0252341962633672048746034",
+          "inner_ground_nu": "-1.72343779555181385817055",
+          "interlacing_gap": "0.000707856168660459482488036",
+          "boundary_norm": "0.918102613735932069017601",
+          "ground_boundary_overlap": "0.0388297167186462534635654",
+          "normalized_ground_boundary_overlap": "0.0422934388135993198960691",
+          "ground_component_overlap_over_gap": "54.855376611504640890612",
+          "ground_vector_left_five_mass": "0.236793589706038951709462",
+          "ground_vector_center_five_mass": "0.0486142824249637742299563",
+          "double_response_norm": "2114.53500370172122489459",
+          "prefactored_double_response_norm": "53.3585912891691324607817",
+          "max_paired_freeze_ratio": "0.967220038315494935739606",
+          "resolvent_identity_relative_error": "4.42383186945707987913156e-61",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "11.8138192987377510385818",
+              "double_pair_abs": "452.820554913632961188693",
+              "paired_freeze_ratio": "0.967220038315494935739606"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "9.78271936910794422209723",
+              "double_pair_abs": "374.946886144317420456224",
+              "paired_freeze_ratio": "0.96716290801326203375885"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "8.98992196702436475663845",
+              "double_pair_abs": "344.506759067473608634829",
+              "paired_freeze_ratio": "0.967010748730965873529249"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "8.63422094493039151103491",
+              "double_pair_abs": "330.8116962754289117629",
+              "paired_freeze_ratio": "0.966823448609224123894758"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_N": "-1.73552701873597729516407",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.0138528292478642273635663",
+          "inner_ground_nu": "-1.72414565172047431765303",
+          "interlacing_gap": "0.0113813670155029775110371",
+          "boundary_norm": "1.01764355067930444253569",
+          "ground_boundary_overlap": "0.10706976029013403617412",
+          "normalized_ground_boundary_overlap": "0.105213421947854031237716",
+          "ground_component_overlap_over_gap": "9.40746046975643506404067",
+          "ground_vector_left_five_mass": "0.0556323924688850564646103",
+          "ground_vector_center_five_mass": "0.0491459216055129611291168",
+          "double_response_norm": "372.867574907122370443611",
+          "prefactored_double_response_norm": "5.16527084725359044311058",
+          "max_paired_freeze_ratio": "0.543250106679715670629342",
+          "resolvent_identity_relative_error": "7.44877288338018855819721e-60",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "2.04956654072780637965627",
+              "double_pair_abs": "80.2886259062439652290463",
+              "paired_freeze_ratio": "0.542663340332386606893967"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "1.69676300236598048400413",
+              "double_pair_abs": "66.4790816068294809623617",
+              "paired_freeze_ratio": "0.542753092075968775110004"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "1.55811843498005279705975",
+              "double_pair_abs": "61.0790509566186815743421",
+              "paired_freeze_ratio": "0.543038092951174715137351"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "1.49557653882320243776358",
+              "double_pair_abs": "58.6502655685767787803478",
+              "paired_freeze_ratio": "0.543250106679715670629342"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_N": "-1.74001868764442608712258",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.00936116033941543540505532",
+          "inner_ground_nu": "-1.73552701873597729516407",
+          "interlacing_gap": "0.00449166890844879195851101",
+          "boundary_norm": "0.517774350082729211562161",
+          "ground_boundary_overlap": "0.06657767059296045319933",
+          "normalized_ground_boundary_overlap": "0.128584335207649379557633",
+          "ground_component_overlap_over_gap": "14.8224795616009023002747",
+          "ground_vector_left_five_mass": "0.021221806162045435228605",
+          "ground_vector_center_five_mass": "0.0499742860945142245621532",
+          "double_response_norm": "1070.01255441955335535621",
+          "prefactored_double_response_norm": "10.0165590871089231352145",
+          "max_paired_freeze_ratio": "0.66972184877648811447372",
+          "resolvent_identity_relative_error": "1.13684236199970575753487e-59",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "3.24682496481383478726203",
+              "double_pair_abs": "232.286334091844406058522",
+              "paired_freeze_ratio": "0.66972184877648811447372"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "2.68665801468524058978874",
+              "double_pair_abs": "192.209703556019846341188",
+              "paired_freeze_ratio": "0.669718975747723260614547"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "2.46499081895065399932407",
+              "double_pair_abs": "176.351564903778057014047",
+              "paired_freeze_ratio": "0.66972065878681969178462"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "2.36407913185249507004713",
+              "double_pair_abs": "169.119113242687616163007",
+              "paired_freeze_ratio": "0.669669265378606869571332"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_N": "-1.74013964734550496824202",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.00924020063833655428561204",
+          "inner_ground_nu": "-1.74001868764442608712258",
+          "interlacing_gap": "0.000120959701078881119443287",
+          "boundary_norm": "1.00037799262641921408585",
+          "ground_boundary_overlap": "0.0151017213672968519507241",
+          "normalized_ground_boundary_overlap": "0.0150960151848686591085968",
+          "ground_component_overlap_over_gap": "124.849195497338470176115",
+          "ground_vector_left_five_mass": "0.00792285481275286156875442",
+          "ground_vector_center_five_mass": "0.0507340024577866467377296",
+          "double_response_norm": "13336.9360541074111752644",
+          "prefactored_double_response_norm": "123.23596504061710624815",
+          "max_paired_freeze_ratio": "0.985161924936657370129873",
+          "resolvent_identity_relative_error": "1.22065113645911039835643e-60",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "27.3607833901651621969893",
+              "double_pair_abs": "2917.12302442845105536704",
+              "paired_freeze_ratio": "0.985161924936657370129873"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "22.6350098164122139580172",
+              "double_pair_abs": "2413.22195575286740841416",
+              "paired_freeze_ratio": "0.985140065626439616263095"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "20.7579410387007046753371",
+              "double_pair_abs": "2212.96273893569495095032",
+              "paired_freeze_ratio": "0.985079381177803319110848"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "19.8989910919614242011829",
+              "double_pair_abs": "2121.2295354491639492868",
+              "paired_freeze_ratio": "0.985004034472569155776803"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_N": "-1.74469368905726418414397",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.00468615892657733838366969",
+          "inner_ground_nu": "-1.74013964734550496824202",
+          "interlacing_gap": "0.00455404171175921590194235",
+          "boundary_norm": "1.17617935562275825434677",
+          "ground_boundary_overlap": "0.0749220581970581736063604",
+          "normalized_ground_boundary_overlap": "0.0636995181380213674027598",
+          "ground_component_overlap_over_gap": "16.4517724999308260198926",
+          "ground_vector_left_five_mass": "0.00700440163607873435718117",
+          "ground_vector_center_five_mass": "0.0509234213966085380516333",
+          "double_response_norm": "1780.48101173419855349303",
+          "prefactored_double_response_norm": "8.34361698673966532037682",
+          "max_paired_freeze_ratio": "0.5042349661317506314284",
+          "resolvent_identity_relative_error": "6.5863225802491329612767e-61",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "3.62793303230024369461844",
+              "double_pair_abs": "390.186080708572043757575",
+              "paired_freeze_ratio": "0.503998824911985922087548"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "3.0009307002418853953426",
+              "double_pair_abs": "322.784594537724283088281",
+              "paired_freeze_ratio": "0.504050263117599160766438"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "2.75129880875728618984001",
+              "double_pair_abs": "295.999294531433736304937",
+              "paired_freeze_ratio": "0.504161791483347374422924"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "2.63690982310858455971887",
+              "double_pair_abs": "283.733897245086137815826",
+              "paired_freeze_ratio": "0.5042349661317506314284"
+            }
+          ]
+        },
+        {
+          "N": 19,
+          "mu_N": "-1.748323149417549089218",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.00105669856629243330963471",
+          "inner_ground_nu": "-1.74469368905726418414397",
+          "interlacing_gap": "0.00362946036028490507403498",
+          "boundary_norm": "1.08708763974864573987827",
+          "ground_boundary_overlap": "0.0918867611083149922417648",
+          "normalized_ground_boundary_overlap": "0.0845256240146018658875401",
+          "ground_component_overlap_over_gap": "25.3169209708911307680504",
+          "ground_vector_left_five_mass": "0.00481955377758223930706333",
+          "ground_vector_center_five_mass": "0.0514483749596548789291844",
+          "double_response_norm": "5402.52167601852427388207",
+          "prefactored_double_response_norm": "5.7088369094125684837387",
+          "max_paired_freeze_ratio": "0.225681181556586857578039",
+          "resolvent_identity_relative_error": "9.67335079469173185259256e-59",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "5.57557973377465734208326",
+              "double_pair_abs": "1189.93589688566075008417",
+              "paired_freeze_ratio": "0.22551978740472940055034"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "4.61054504411675637335138",
+              "double_pair_abs": "984.114690918016356966998",
+              "paired_freeze_ratio": "0.225550899733071671740051"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "4.2241799487820777401101",
+              "double_pair_abs": "901.922057075698053628019",
+              "paired_freeze_ratio": "0.225620062633505950772767"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "4.04586545299850018328616",
+              "double_pair_abs": "864.083405597230914725679",
+              "paired_freeze_ratio": "0.225681181556586857578039"
+            }
+          ]
+        },
+        {
+          "N": 20,
+          "mu_N": "-1.74937984798384152252764",
+          "mu_reference": "-1.74937984798384152252764",
+          "delta_mu_abs": "0.0",
+          "inner_ground_nu": "-1.748323149417549089218",
+          "interlacing_gap": "0.00105669856629243330963471",
+          "boundary_norm": "0.861372183514464034376557",
+          "ground_boundary_overlap": "0.0324081085554042363555304",
+          "normalized_ground_boundary_overlap": "0.0376238160178062497037572",
+          "ground_component_overlap_over_gap": "30.6692084092745312162463",
+          "ground_vector_left_five_mass": "0.0053257253505806869419064",
+          "ground_vector_center_five_mass": "0.0513982011747801518059506",
+          "double_response_norm": "29023.6122770240272551882",
+          "prefactored_double_response_norm": "0.0",
+          "max_paired_freeze_ratio": "0.0",
+          "resolvent_identity_relative_error": "8.0813230990291526224638e-61",
+          "sigmas": [
+            {
+              "sigma": "0.6",
+              "moving_pair_abs": "6.77251446126240849953352",
+              "double_pair_abs": "6388.40152826372230304325",
+              "paired_freeze_ratio": "0.0"
+            },
+            {
+              "sigma": "1.0",
+              "moving_pair_abs": "5.59984807516489617823849",
+              "double_pair_abs": "5282.17632994221088866729",
+              "paired_freeze_ratio": "0.0"
+            },
+            {
+              "sigma": "2.0",
+              "moving_pair_abs": "5.1296599127672002476752",
+              "double_pair_abs": "4838.44349567216070088918",
+              "paired_freeze_ratio": "0.0"
+            },
+            {
+              "sigma": "3.0",
+              "moving_pair_abs": "4.91222659316255953058707",
+              "double_pair_abs": "4633.00252458958156810573",
+              "paired_freeze_ratio": "0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -13,7 +13,7 @@ This program implements a single, validated computational pipeline (one engine/s
 - **Front III:** run a topological data analysis (TDA) pipeline (Vietoris-Rips on unfolded zeros, H0/H1), compute permutation p-values and CIs, test injected off-line zeros for stable invariant changes, and cap effort as specified.
 - For every analytic step, enforce validation gates (R2), five parallel controls (R3), track N_zeros and precision dps grids and proper error models (R4), respect compute-budget and caching (R8), and adhere to pure-math discipline in reporting (R9–R10).
 - **Synthesize per-front:** the sharpest proven/conditional/open statements with exact missing lemma and nearest lemma target, produce the Bottleneck Ledger, and produce the full deliverables (cached engine/notebooks, model-selected (a_n,b_n), spectral measures, Carleman/Hankel report, λ_n results with dual convergence checks, GORZ map, Q_N(φ) and λ_min(Q_N) bound with missing-lemma-statement, ω-moment decomposition vs Keating-Snaith, TDA tests, Step-0.5 power table, compute-cost notes, and 300-dpi figures).
-- **Report negative/abortive results honestly** and quantify CPU-hours/memory per step; do not exceed the single-VM/cloud compute constraint and never produce multiple independent implementations.
+- **Report negative/abortive results candidly** and quantify CPU-hours/memory per step; do not exceed the single-VM/cloud compute constraint and never produce multiple independent implementations.
 
 ### Dataset and controls
 

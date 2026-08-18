@@ -268,11 +268,11 @@ $$\{t \in \mathbb{R}: C_\infty(t) = 0\} \subseteq \{t \in \mathbb{R}: \Xi(t) = 0
 
 **Si además $\{t \in \mathbb{R}: \Xi(t) = 0\} = \{\gamma_n : \rho_n \text{ está en la recta crítica}\}$** — es decir, si los ceros de $\Xi$ EN $\mathbb{R}$ son exactamente las partes imaginarias de los ceros de $\zeta$ en $\Re(s) = 1/2$ — entonces las dos inclusiones se combinan para dar RH.
 
-**Honestidad.** El enunciado "ceros de $\Xi$ en $\mathbb{R}$" = "$\{\gamma_n\}$ con $\sigma_n = 1/2$" es PRECISAMENTE la definición de RH (interpretada correctamente): $\Xi(t) = \xi(1/2+it) = 0$ para $t \in \mathbb{R}$ iff $1/2+it$ es un cero no-trivial de $\zeta$, i.e., $\sigma = 1/2$. Luego el argumento es circular: RH equivale a que los ceros de $\Xi$ en $\mathbb{R}$ sean los $\gamma_n$.
+**Franqueza.** El enunciado "ceros de $\Xi$ en $\mathbb{R}$" = "$\{\gamma_n\}$ con $\sigma_n = 1/2$" es PRECISAMENTE la definición de RH (interpretada correctamente): $\Xi(t) = \xi(1/2+it) = 0$ para $t \in \mathbb{R}$ iff $1/2+it$ es un cero no-trivial de $\zeta$, i.e., $\sigma = 1/2$. Luego el argumento es circular: RH equivale a que los ceros de $\Xi$ en $\mathbb{R}$ sean los $\gamma_n$.
 
 ---
 
-## 12. Estado final honesto del programa Phase 29
+## 12. Estado final franco del programa Phase 29
 
 **La cadena de resultados incondicionales:**
 

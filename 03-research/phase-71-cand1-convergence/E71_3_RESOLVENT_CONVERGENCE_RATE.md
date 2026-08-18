@@ -161,7 +161,7 @@ on every bounded height window.
 Since each `H_lambda` is self-adjoint, the limiting zeros in that window are real. Therefore the theorem
 implies RH.
 
-## Honest status
+## Candid status
 
 E71.3 does **not** close RH. It narrows CAND-1 to the one non-circular theorem that would close it:
 
@@ -172,7 +172,7 @@ prove zero-independent CCM resolvent convergence.
 This is materially different from Phases 67-70. The missing statement is not positivity of the Weil
 form; it is compactness/rigidity of an explicit self-adjoint approximation scheme.
 
-## Important correction to keep the route honest
+## Important correction to keep the route candid
 
 The slogan "real rational function with real simple poles has all real roots" is false for arbitrary
 residues. The E71.1 numerics show that the CCM ground vector produces all-real roots in the tested

@@ -10,7 +10,7 @@ la forma de Weil QW_λ^N. Contra ceros de ζ de alta precisión (mpmath): | λ (
 | 7.0 (p≤49) | 20 | 1.8e-15 | 0 | 3.2e-14 | 1.1e-11 | — | Precisión de máquina (float64) para los primeros ~6 ceros con **primos ≤13**. Reproduce la
 afirmación central del paper. Los "miss" son huecos saltados por el buscador de raíces (dos
 ceros en un hueco del retículo), no fallo de fondo. A N grande (80) float64 se degrada
-(QW mal condicionada); el régimen N→∞ del paper requiere alta precisión (mpmath) — pendiente. ## Por qué importa para RH (honesto) - El operador es **auto-adjunto por construcción** ⇒ espectro real automáticamente. Evita el muro del signo (MW-4): no hay que probar positividad de ninguna forma.
+(QW mal condicionada); el régimen N→∞ del paper requiere alta precisión (mpmath) — pendiente. ## Por qué importa para RH (franco) - El operador es **auto-adjunto por construcción** ⇒ espectro real automáticamente. Evita el muro del signo (MW-4): no hay que probar positividad de ninguna forma.
 - Cada nivel finito (λ,N) da ceros reales del aproximante ξ̂. **RH ⟺ la convergencia N,λ→∞ preserva la realidad de las raíces** (Hurwitz). Esa convergencia es el ÚNICO gap — y es un problema de teoría de aproximación, NO de positividad. mismo no lo tiene (Secciones 7–8 del paper: "missing steps"). Esto **no prueba RH**. Da, por primera vez en el programa, un instrumento validado para
 atacar el gap real. ## Lo genuinamente nuevo que ahora podemos hacer (que no) Tenemos un violador explícito de RH (L_DH, ζ_δ). El mecanismo a probar:
 > Si una función tiene un cero OFF-line (complejo), la auto-adjuntez fuerza autovalores
@@ -21,7 +21,7 @@ atacar el gap real. ## Lo genuinamente nuevo que ahora podemos hacer (que no) Te
 Evidencia empirica solida de que el limite N->inf converge (Eslabon 2a). El plateau ~5e-19
 es piso de tolerancia (quad + root-finder), NO el limite-λ real — no sobreinterpretar. **Eslabon 2b (λ->inf):** NO medido. El diseno a N=14 fijo esta confundido (al subir λ el
 reticulo d_k=2πk/L se densifica y N=14 sub-resuelve). La tasa de 2b queda PENDIENTE:
-rediseno con N escalando con λ + dps mayor. (Honesto: no afirmar una tasa-λ con estos datos.) ## Sutileza de diseno para E5 (importante) En CCM los ceros son OUTPUT, no input: no hay perilla "δ off-line". El violador correcto es
+rediseno con N escalando con λ + dps mayor. (Franco: no afirmar una tasa-λ con estos datos.) ## Sutileza de diseno para E5 (importante) En CCM los ceros son OUTPUT, no input: no hay perilla "δ off-line". El violador correcto es
 **L_DH** (Davenport-Heilbronn): ecuacion funcional (-> factor arquimediano) + coeficientes de
 Dirichlet computables, ceros OFF-line. Construir QW_LDH y medir si la convergencia se rompe:
 > L_DH tiene ceros complejos; el operador CCM es auto-adjunto -> espectro real SIEMPRE ->

@@ -1,7 +1,7 @@
 # Phase 19 — Closure document
 
 **Date:** 2026-06-07.  
-**Status:** CLOSED (5 steps complete, unification written, honest scope established).
+**Status:** CLOSED (5 steps complete, unification written, candid scope established).
 
 ---
 
@@ -53,7 +53,7 @@ The constant C_k = G_q(1)/Γ(q+1) is also prime-theoretic (Euler product G_q(1)=
 
 ---
 
-## The honest assessment (advisor's framing)
+## The candid assessment (advisor's framing)
 
 **Two separate branches of the program now exist:**
 

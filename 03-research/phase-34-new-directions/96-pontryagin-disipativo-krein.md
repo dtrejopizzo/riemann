@@ -328,7 +328,7 @@ $$\mu = \mu_\infty + \sum_p \mu_p.$$
 
 *Estado.* La Proposición 3.12 es **especulativa** y requeriría hacer explícita la teoría local de $H_C$ en $\mathbb{Q}_p$, que no está desarrollada en los documentos anteriores del programa.
 
-**Evaluación honesta del Ángulo 3.** La conexión entre índice de Maslov y $\kappa$ existe formalmente en dimensión finita, pero:
+**Evaluación franca del Ángulo 3.** La conexión entre índice de Maslov y $\kappa$ existe formalmente en dimensión finita, pero:
 
 1. Su extensión a dimensión infinita en el contexto de $H_C$ es especulativa.
 2. El cálculo del índice de Maslov via contribuciones locales (Proposición 3.12) requiere desarrollar la teoría local de $H_C$ en $\mathbb{Q}_p$, que no está en la literatura.
@@ -642,7 +642,7 @@ A pesar del obstáculo, el Ángulo 3 sugiere una conjetura que podría escapar a
 
 **Estado de la Conjetura $\mathbf{C}_D$.** Los puntos (i) y (ii) son conjeturales y requerirían desarrollar la teoría del índice de Maslov en dimensión infinita para $H_C$. Los puntos (iii) y (iv) son plausibles pero no demostrados. El punto (v) es la conclusión deseada.
 
-**Evaluación honesta.** La Conjetura $\mathbf{C}_D$ es especulativa en todos sus puntos. No existe aún una teoría del índice de Maslov para operadores de Connes–Weil en grupos de idèles. El punto (iii) es el más cuestionable: la no-nulidad del factor local no implica directamente que la contribución al índice de Maslov sea cero, ya que el índice de Maslov es una propiedad de familias de subespacios lagrangianos, no directamente de la función de valores propios.
+**Evaluación franca.** La Conjetura $\mathbf{C}_D$ es especulativa en todos sus puntos. No existe aún una teoría del índice de Maslov para operadores de Connes–Weil en grupos de idèles. El punto (iii) es el más cuestionable: la no-nulidad del factor local no implica directamente que la contribución al índice de Maslov sea cero, ya que el índice de Maslov es una propiedad de familias de subespacios lagrangianos, no directamente de la función de valores propios.
 
 El valor de la Conjetura $\mathbf{C}_D$ no está en su veracidad (que no se puede determinar actualmente), sino en que señala un programa de investigación concreto (desarrollar la teoría local de $H_C$ en $\mathbb{Q}_p$ y el índice de Maslov adélico) que no está cubierto por la literatura existente y podría producir nueva estructura aritmética.
 

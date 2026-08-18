@@ -1,7 +1,7 @@
 # Bin three, second attempt: what a finitization *is*, and the obstruction to it
 
 **Auditor build · 2026-06-05.** Bin three's only possible occupant was characterized as a **finitization** of ζ's
-full positivity. The honest next move is the fork: **construct** such a finitization, or **prove an obstruction**
+full positivity. The candid next move is the fork: **construct** such a finitization, or **prove an obstruction**
 to it. I make the finitization concept exact (it is a *Frobenius periodicity*), then find the obstruction — which
 is conditional (it rests on the Linear Independence conjecture) but sharp, and it explains, structurally, why the
 one live program is hard. No RH proof; a sharper true statement about the wall.
@@ -55,7 +55,7 @@ finitizes ($q>1$ periodicity) is singular at $q=1$. Building $\overline{\operato
 attempt to extract a *finite residue* from this divergence — and that is exactly where it is stuck (the $H^1$/
 arithmetic Hodge index, the "$2g$" of $\operatorname{Spec}\mathbb Z$, has no finite home as the period blows up).
 
-## 4. The fork, stated honestly
+## 4. The fork, stated candidly
 
 Under LI, the search splits with no middle:
 

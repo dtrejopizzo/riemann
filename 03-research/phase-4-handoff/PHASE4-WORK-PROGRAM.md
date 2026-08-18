@@ -6,7 +6,7 @@
 
 This document states, self-contained and precisely, the one mathematical question to which the
 entire computational program has reduced, and decomposes it into a dependency-ordered list of
-problems a pure-math team can attack. It is deliberately honest about logical strength: it
+problems a pure-math team can attack. It is deliberately candid about logical strength: it
 distinguishes what is *proven*, what is *empirically supported*, and what is *open theory*.
 
 > **The single instruction that governs everything.** Do **not** attempt to prove
@@ -104,7 +104,7 @@ $L(\Delta,s)$:
 - small-$\sigma$ negativity is a **truncation** artifact, not spectral structure (it grows with the
   cutoff $X$), so the localization injects no spurious geometry.
 
-**Honest ceiling.** These are GRH controls, where $\lambda_{\min}\approx0$ trivially; the numerics
+**Candid ceiling.** These are GRH controls, where $\lambda_{\min}\approx0$ trivially; the numerics
 are a *weak confirmer* of faithfulness, not a proof. The implication is **one-way**: faithfulness
 $\Rightarrow$ the observed stability, but the observed stability $\not\Rightarrow$ faithfulness
 (spectral pollution can produce clean finite numerics). The theoretical core is untouched and is
@@ -138,7 +138,7 @@ the negativity mechanism is *finite per zero*. That is exactly the behavior expe
 is **strictly weaker** than "$\succeq0$" — our own proven asset suggests the separation B $\not\Rightarrow$
 RH is real.
 
-**Where the resistance is predicted to appear (the honest caveat).** P7-A controls *one* quartet; the
+**Where the resistance is predicted to appear (the candid caveat).** P7-A controls *one* quartet; the
 full form sums over *all* off-line zeros. If RH failed with positive proportion off the line, the finite
 dips could **accumulate** to $-\infty$, and whether they do is governed by the **density** of off-line
 zeros. Hence the realistic outcome is not collapse but conditionality:
@@ -285,7 +285,7 @@ suggestive, not decisive). **Nearest tools:** de Branges, *Hilbert Spaces of Ent
 - **Realistic strong outcome (the achievable target):** establish A ∧ B ∧ C $\Rightarrow$ a faithful
   spectral reformulation. RH still open, but reduced to the sign of the limit of a convergent
   *explicit finite-dimensional ladder* — a reformulation in the lineage of Li, Nyman–Beurling, Weil,
-  de Branges. The distinguishing feature is the explicit ladder; the honest claim is **faithful
+  de Branges. The distinguishing feature is the explicit ladder; the candid claim is **faithful
   convergence**, not effective decidability (preamble caution).
 - **Either flank's structural positivity** (Problem B's realization made positive, or Problem D's
   chain proved) would touch RH itself — very low probability, but this is where it would come from.

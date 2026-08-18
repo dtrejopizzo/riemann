@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{Poisson--Tate audit of the half-Tate Banach descent (v102)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Mellin form of the two orientations}
+
+For $a=(a_n)\in\mathcal B_{1/2}$ put
+\[
+ A_af(x)=\sum_{n\ge1}a_nf(nx),\qquad
+ D_a(s)=\sum_{n\ge1}a_nn^{-s}.
+\]
+With $\mathscr Jf(x)=x^{-1}f(x^{-1})$, direct calculation gives
+\begin{align}
+ \widehat{A_af}(s)&=D_a(s)\widehat f(s),             \tag{1}\\
+ \widehat{\mathscr JA_a\mathscr Jf}(s)
+     &=D_a(1-s)\widehat f(s).                        \tag{2}
+\end{align}
+Thus the Poisson-symmetric sum has multiplier
+\begin{equation}
+                         D_a(s)+D_a(1-s).             \tag{3}
+\end{equation}
+
+\begin{proof}
+For (1), substitute $y=nx$ in the Mellin integral.  Moreover
+$\mathscr JU_n\mathscr J=n^{-1}U_{1/n}$; its Mellin eigenvalue is
+$n^{s-1}$.  Summing gives (2).
+\end{proof}
+
+\section{A two-pole test family}
+
+Fix $0<\varepsilon<1/2$ and take
+\begin{equation}
+                         a_n=n^{-1/2-\varepsilon}.    \tag{4}
+\end{equation}
+Then
+\[
+ \|a\|_{1/2}=\sum_{n\ge1}n^{-1-\varepsilon}<\infty,
+ \qquad D_a(s)=\zeta(s+1/2+\varepsilon).             \tag{5}
+\]
+The two terms in (3) have poles at
+\begin{equation}
+ s_-=\frac12-\varepsilon,
+ \qquad s_+=\frac12+\varepsilon.                    \tag{6}
+\end{equation}
+
+\begin{theorem}[Two Tate modes do not renormalize the Banach action ---
+\PROVED]
+Choose $f\in\mathcal H_-$ such that
+$\widehat f(s_-)\widehat f(s_+)\ne0$.  Mellin inversion of the two
+oriented action produces nonzero power asymptotics proportional to
+\begin{equation}
+                 x^{-s_-}\quad\text{and}\quad x^{-s_+}.        \tag{7}
+\end{equation}
+Neither exponent is a Tate exponent $0$ or $1$.  Consequently subtracting
+the two polar/Tate modes cannot make the symmetrized half-Tate Banach action
+preserve $\mathcal H_-$.  This remains true before any question about the
+zeros of $\zeta$.
+\end{theorem}
+
+\begin{proof}
+Equations (3)--(6) show that the Mellin transform of the symmetrized output
+has simple poles at $s_-$ and $s_+$ with respective nonzero residues
+$\widehat f(s_-)$ and $\widehat f(s_+)$.  Moving the Mellin inversion line
+across these poles yields their residue terms (7).  Elements of
+$\mathcal H_-=\mathcal S_{(-\infty,\infty)}$ decay faster than every power
+at both ends, so either nonzero term excludes membership in $\mathcal H_-$.
+The even quotient of row (c) removes only the characters $s=0$ and $s=1$;
+because $0<s_-<s_+<1$, those two corrections cannot cancel (7).
+\end{proof}
+
+The test function exists because the two Mellin evaluations are distinct
+continuous nonzero functionals on $\mathcal H_-$; the union of their two
+kernels is not the whole vector space.
+
+\section{Consequence for the proposed descent}
+
+Theorem 1 rules out the following route:
+\[
+ \mathcal B_{1/2}\curvearrowright\mathcal S_>
+ \quad\xrightarrow{\text{Poisson orientation + two Tate subtractions}}\quad
+ \mathcal B_{1/2}\curvearrowright\mathcal H_-^0.
+\]
+The failure is not an uncontrolled remainder: it is the explicit pair
+(7), and it occurs for a perfectly valid element (4) of the half-Tate
+Banach algebra.
+
+This does not invalidate the finite-character criterion of v101.  If the
+simple odd characters are critical, their algebraic action extends
+abstractly to $\mathcal B_{1/2}$.  What fails is constructing that extension
+by applying an arbitrary Banach multiplier to a representative in
+$\mathcal H_-$ and removing only the two Tate powers.
+
+Therefore a proof of (8c) must operate on the finite Loewy quotients or on a
+new boundary space which contains all the power tails (7) with a positive
+contractive norm.  Merely adjoining those tails with their natural Mellin
+characters does not solve the problem: the centered generator on
+$x^{-s}$ has modulus $n^{1/2-\Re s}$, so positivity plus contractivity again
+forces $\Re s\ge1/2$.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.58\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.17\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Two-oriented Mellin multiplier & \PROVED & (1)--(3) \\
+Exact non-Tate residual powers & \PROVED & (4)--(7) \\
+Cancellation by the two Tate modes & false & Theorem 1 \\
+Abstract Banach extension on critical simple factors & conditional & v101 \\
+Contractive boundary realization of all Loewy factors & \OPEN & new theorem required \\
+Row (d), condition $G$ & \OPEN & equivalent to the last line \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

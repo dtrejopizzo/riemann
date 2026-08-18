@@ -53,7 +53,7 @@ Putting the two halves together:
 > **free and γ-blind.** All the nontrivial content is the **spectrum `{γ}`**, i.e. the operator
 > `T`. **SURF-A reduces to SURF-B.**
 
-This is the honest outcome, and it is exactly the bottleneck anticipated in the step-2 review:
+This is the candid outcome, and it is exactly the bottleneck anticipated in the step-2 review:
 `b` was the easy half (a transverse coordinate to `Fix(j)`); `γ` is the hard half, and it is
 **irreducible arithmetic data** that no F-indep geometric scaffolding supplies. The off-axis
 functional factorizes conceptually as
@@ -66,7 +66,7 @@ and only the second factor carries content.
 ### 2.1 What this is, and is not
 - **It is** a roadmap sharpening: the two stages SURF-A and SURF-B are really **one** object —
   build the operator `T`. We do not have two problems; we have one (plus a constraint, §2.2).
-- **It is not** progress toward RH (G-CAP honesty). Producing `T` with spectrum `{γ_ρ}` from
+- **It is not** progress toward RH (G-CAP candor). Producing `T` with spectrum `{γ_ρ}` from
   natural F-indep data **is** the Hilbert–Pólya problem; we have not made it easier, we have shown
   the geometric dressing around it is weightless. A green box on the scaffolding is a hollow
   green box; we mark it as such.
@@ -113,7 +113,7 @@ is entirely in the operator `T`, not in the geometry `(X, j)`.** The wall did no
    `{γ_ρ}`; the geometric dressing is weightless. This confirms `γ`, not `b`, is the bottleneck.
 4. **The net deliverable of SURF-A is the constraint catalogue (T1)–(T4) for `T`**, including the
    genuinely new **real-structure compatibility (T2)**.
-5. **Honesty:** the scaffolding green box is hollow (G-CAP); we have clarified the problem, not
+5. **Candor:** the scaffolding green box is hollow (G-CAP); we have clarified the problem, not
    advanced on RH. The Hilbert–Pólya content is untouched and is now the sole target.
 
 ---
@@ -132,7 +132,7 @@ wrong-sign capstone (the program's standing wall). The *new* leverage to test in
 whether the **real-structure constraint (T2)** changes that picture at all — i.e. whether
 requiring `T` to be `j`-compatible adds a usable handle on the sign, or whether it too is
 satisfied vacuously by the explicit-formula operator (in which case SURF-B re-confirms CAP from
-the real-structure side, an honest negative). → `04-SURF-B-resolvent.md`.
+the real-structure side, an candid negative). → `04-SURF-B-resolvent.md`.
 
 **Pre-registered:** if the `j`-compatible arithmetic `T` reproduces only the explicit-formula
 positivity with no new sign handle, that is **CAP again**, reported as such — not a failure to

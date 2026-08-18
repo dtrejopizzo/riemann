@@ -83,7 +83,7 @@ y todos los términos son positivos. $\square$
 
 ---
 
-## 5. El resultado negativo honesto para la Pregunta 28.1
+## 5. El resultado negativo franco para la Pregunta 28.1
 
 **Proposición 1** (la Pregunta 28.1 tiene respuesta negativa para $\xi$). La afirmación
 

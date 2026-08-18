@@ -1,6 +1,6 @@
 # The Riemann Hypothesis, in Plain Language
 
-After 76 phases of work, my simple explanation is no longer the textbook one. It goes in
+After 119 phases of work, my simple explanation is no longer the textbook one. It goes in
 layers, from the simplest to the deepest — and the last layer is what *we* learned.
 
 ## Layer 1 — The problem, without formulas
@@ -58,7 +58,7 @@ real physical question behind RH.
 
 ## Layer 4 — Why it is fiendishly hard (what our program understood)
 
-Here is the synthesis of 76 phases in simple language:
+Here is the synthesis of the program's first long arc (phases 0–76) in simple language:
 
 We can prove the orchestra is balanced *on average*. We cannot rule out a rogue instrument —
 because all our methods listen to the whole orchestra at once.
@@ -77,7 +77,7 @@ The only time in history that bridge was crossed was in the parallel world of fu
 counts the zeros one by one, without averaging. For the integers, that space is not known. That
 is what is missing.
 
-## Layer 5 — Where the search actually landed (phases 62–76)
+## Layer 5 — Where the first search landed (phases 62–76)
 
 The later phases did something more useful than a new attempt: they gave the "rogue instrument"
 problem a single, named face. Fifteen steps of arithmetic reasoning (an architecture we called
@@ -91,20 +91,58 @@ somewhere," but "prove this one specific, classical, textbook-statable inequalit
 this program tried to prove it by (phases 64–76) ran back into the same handful of structural
 walls the earlier phases had already named.
 
+## Layer 6 — A second, independent attempt at the missing geometry (phases 107–119)
+
+Layer 4 named the missing thing precisely: for function fields (Weil, Deligne), the bridge from
+"true on average" to "true without exception" was crossed by *geometry* — a space whose rigidity
+counts the zeros one by one. For the integers, no one has ever built that space.
+
+After phase 76, instead of pushing the Li–Keiper reduction further, the program went back and
+tried to build that space directly — literally imitating Weil's 1948 argument, step by step, over
+the integers. Four ingredients, the way Weil needed them for curves: a space, a way to count
+coincidences on it (correspondences), an intersection number, and — the ingredient that actually
+proves positivity in Weil's original argument — the Hodge index theorem, which for curves is a
+consequence of Riemann–Roch: count the sections of a bundle, watch them grow, and growth alone
+forces the sign you need.
+
+Three of the four ingredients were built (phases 107–116; the results are paper 42). The fourth —
+Riemann–Roch's growth argument — turned out to be **impossible to build inside the natural home
+for this construction**, and we could prove why, three independent ways: the space of divisors is
+a plain vector space with no room to grow (nothing to count); the natural way of discretizing the
+correspondences fails because of a number that is exactly `1/2` — the very location of the critical
+line, showing up as an obstruction to the geometry rather than as its conclusion; and the relevant
+operator has no gap in its spectrum, so no compactness argument can close it either.
+
+With growth blocked, the one thing left to supply — call it "the space has enough sections to be
+positive" — turned out, when checked directly, to **be** RH exactly. Not close to it, not a
+reformulation of it dressed up in geometry: the same statement, provably, in both directions. And
+then, completely independently, by a different and much more classical method — summing the
+explicit formula itself directly against real zeros of zeta, and checking the arithmetic to ten
+decimal digits — the program found the *same* wall a second time, from the analytic side instead
+of the geometric one.
+
+Two structurally unrelated routes, one algebraic and one analytic, landing on the identical
+statement is not proof of anything about RH itself. But it is real information: it means the
+difficulty is not an accident of either construction. It is something RH itself is doing.
+
 ## A closing thought
 
-That is my honest understanding. And notice that the intuition "the primes must have an order
+That is my candid understanding. And notice that the intuition "the primes must have an order
 inside the apparent chaos" has a precise answer from this map: the order is *already* proved
 (the GUE statistics, the balance on average, the critical point $\Lambda \geq 0$); what remains
 to prove is that the order has not a single exception. RH is not "find the hidden pattern" — it
-is "prove the visible pattern is exact," and after 76 phases that exactness now has one name:
-Li–Keiper positivity.
+is "prove the visible pattern is exact," and after 119 phases that exactness now has two names,
+reached independently: Li–Keiper positivity, and the Hodge-index step of the arithmetic-Lefschetz
+construction.
 
 And Layer 3 holds the two places where thinking like physicists can really bite:
 
 1. *What physical principle forces a system to sit exactly at its critical point?*
 2. *What kind of object "counts modes one by one" instead of averaging?*
 
-Those two questions — together with the six structural walls this program mapped and named
+Those two questions — together with the structural walls this program mapped and named
 (catalogued in `NO-GO-LIST.md`) — are the live edges where the next real idea, if there is one,
-would have to come from.
+would have to come from. Not every open question in this corpus is as hard as RH itself, though:
+`OPTIONS.md` lists several genuinely weaker targets nobody has closed, including one — does the
+number of off-line zeros even have a finite upper bound? — that would be real progress without
+needing to be RH at all.

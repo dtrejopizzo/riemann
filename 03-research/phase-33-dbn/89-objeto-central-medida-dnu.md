@@ -8,7 +8,7 @@
 
 ## Resumen
 
-Los documentos 74–88 desarrollaron tres caminos independientes hacia la Hipótesis de Riemann: el Camino 1 via la función de Nevanlinna $\mathcal{G}(z)$ y la diferencia de medidas; el Camino 2 via el exceso de Jensen $\delta$ y las propiedades analíticas de $F(z) = \xi(z/(z-1))$; el Camino 3 via la velocidad inicial del flujo De Bruijn-Newman $\partial_t T_\lambda|_{t=0}$. Este documento realiza la síntesis de los tres caminos, identificando el objeto matemático que subyace a todos: la medida $d\nu = dm_{full} - dm_{full,on} \geq 0$. Se establece con rigor que las tres cantidades centrales de cada camino son funcionales distintos de $d\nu$ que se anulan simultáneamente si y solo si RH. Se formula la equivalencia como un teorema de síntesis (§10) y se discute con honestidad el obstáculo estructural que el programa no ha superado (§11).
+Los documentos 74–88 desarrollaron tres caminos independientes hacia la Hipótesis de Riemann: el Camino 1 via la función de Nevanlinna $\mathcal{G}(z)$ y la diferencia de medidas; el Camino 2 via el exceso de Jensen $\delta$ y las propiedades analíticas de $F(z) = \xi(z/(z-1))$; el Camino 3 via la velocidad inicial del flujo De Bruijn-Newman $\partial_t T_\lambda|_{t=0}$. Este documento realiza la síntesis de los tres caminos, identificando el objeto matemático que subyace a todos: la medida $d\nu = dm_{full} - dm_{full,on} \geq 0$. Se establece con rigor que las tres cantidades centrales de cada camino son funcionales distintos de $d\nu$ que se anulan simultáneamente si y solo si RH. Se formula la equivalencia como un teorema de síntesis (§10) y se discute con franqueza el obstáculo estructural que el programa no ha superado (§11).
 
 ---
 
@@ -149,7 +149,7 @@ Así, **$\{T_\lambda\}_{\lambda > 0}$ determina $\mathcal{G}$** si el sistema $\
 
 *Demostración.* Por la estructura de $W_\lambda = \sum_{k \leq N(\lambda)} k|P_k|^2 + \ldots$ y el hecho de que $\{P_k^2\}_{k \geq 0}$ genera un subconjunto denso de funciones no-negativas en $L^1(dm_{full,on})$ (los polinomios cuadráticos son densos en las funciones continuas que decaen), si $\int W_\lambda \, d\nu = 0$ para todo $\lambda$, entonces $\int p \, d\nu = 0$ para todo polinomio no-negativo $p$, lo que fuerza $d\nu = 0$ por la teoría de momentos (unicidad del problema de Hamburger bajo las condiciones de crecimiento de $dm_{full,on}$). $\square$
 
-Nota de honestidad: el argumento de densidad en la demostración anterior requiere verificar que los $\{W_\lambda\}$ son suficientemente ricos para determinar $d\nu$; la afirmación es correcta en principio pero la justificación detallada de la completitud en la clase de funciones integrables respecto a $d\nu$ requiere hipótesis sobre el crecimiento de $d\nu$ en $|s| \to \infty$ que son satisfechas por $d\nu \leq (R_{max}-1)dm_{full,on}$ con $R_{max}$ acotado sobre compactos.
+Nota de franqueza: el argumento de densidad en la demostración anterior requiere verificar que los $\{W_\lambda\}$ son suficientemente ricos para determinar $d\nu$; la afirmación es correcta en principio pero la justificación detallada de la completitud en la clase de funciones integrables respecto a $d\nu$ requiere hipótesis sobre el crecimiento de $d\nu$ en $|s| \to \infty$ que son satisfechas por $d\nu \leq (R_{max}-1)dm_{full,on}$ con $R_{max}$ acotado sobre compactos.
 
 ---
 
@@ -216,7 +216,7 @@ La medida $d\nu = (R-1)dm_{full,on}$ hereda las simetrías de $\zeta$.
 
 *Demostración.* Por la ecuación funcional $\xi(s) = \xi(1-s)$, los ceros de $\zeta$ son simétricos respecto a $\mathrm{Re}(s) = 1/2$, y en la parametrización $\zeta(1/2 + is)$ la variable $s$ satisface $\zeta(1/2+is) = \overline{\zeta(1/2-is)}$ (si $\zeta$ es real sobre la recta real). En consecuencia $|\zeta(1/2+is)|^2 = |\zeta(1/2-is)|^2$, y lo mismo para $\zeta_{on}$. Luego $R(s) = R(-s)$ y $d\nu(s) = R(s)dm_{full,on}(s) - dm_{full,on}(s) = d\nu(-s)$ (dado que $dm_\infty$ y $dm_{full,on}$ también son pares). $\square$
 
-**Proposición 8.2 (honesta).** *No se conoce ninguna ecuación funcional para $d\nu$ —distinta de la paridad y de la positividad $d\nu \geq 0$— que sea independiente de la posición de los ceros de $\zeta$ y que implique $d\nu = 0$.*
+**Proposición 8.2 (franca).** *No se conoce ninguna ecuación funcional para $d\nu$ —distinta de la paridad y de la positividad $d\nu \geq 0$— que sea independiente de la posición de los ceros de $\zeta$ y que implique $d\nu = 0$.*
 
 La búsqueda de tal ecuación funcional es, en la perspectiva del programa, la pregunta fundamental no resuelta: ¿existe alguna propiedad intrínseca de $\zeta$ (holomorfa, entera de orden 1, satisfaciendo la ecuación funcional, con ciertos ceros sobre $\mathrm{Re} = 1/2$...) que force $d\nu = 0$ sin conocer la posición exacta de los ceros?
 
@@ -284,7 +284,7 @@ No se conoce ninguna propiedad $\mathcal{P}$ con ambas características. La úni
 
 Ninguna de estas propiedades, ni su combinación, implica $d\nu = 0$.
 
-**Proposición 11.1 (obstáculo honesto).** *La positividad $d\nu \geq 0$, la paridad $d\nu(-s) = d\nu(s)$, y la finitud $\|d\nu\| < \infty$ son compatibles con $d\nu \neq 0$. No implican $d\nu = 0$.*
+**Proposición 11.1 (obstáculo franco).** *La positividad $d\nu \geq 0$, la paridad $d\nu(-s) = d\nu(s)$, y la finitud $\|d\nu\| < \infty$ son compatibles con $d\nu \neq 0$. No implican $d\nu = 0$.*
 
 *Ejemplo:* Cualquier medida positiva par de masa finita sobre $\mathbb{R}$ satisface estas propiedades.
 

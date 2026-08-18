@@ -1,0 +1,351 @@
+{
+  "statement": "Candidate weighted observables for mod2 Q spike",
+  "groups": [
+    {
+      "label": "plant-lam6",
+      "sigma": "1.0",
+      "mod4": 0,
+      "rows": [
+        {
+          "label": "plant-lam6",
+          "N": 8,
+          "mod4": 0,
+          "sigma": "1.0",
+          "Q": -101.71758757748601,
+          "odd_ratio": 0.8766489258172542,
+          "old_boundary_ratio": 0.32607188573559653,
+          "outer_ratio": 0.6795097249689476,
+          "old_shell_ratio": 0.3361283905820284
+        },
+        {
+          "label": "plant-lam6",
+          "N": 12,
+          "mod4": 0,
+          "sigma": "1.0",
+          "Q": 6.033886027258697,
+          "odd_ratio": 0.13125554584560048,
+          "old_boundary_ratio": 0.3663857338506487,
+          "outer_ratio": 0.6336142847858406,
+          "old_shell_ratio": 2.10368576708095
+        },
+        {
+          "label": "plant-lam6",
+          "N": 16,
+          "mod4": 0,
+          "sigma": "1.0",
+          "Q": 4.995936910287828,
+          "odd_ratio": 0.43480035052688004,
+          "old_boundary_ratio": 0.7586741841687498,
+          "outer_ratio": 0.24132772839025365,
+          "old_shell_ratio": 1.448734911546899
+        }
+      ],
+      "correlations": {
+        "odd_ratio": -0.9177180824355394,
+        "old_boundary_ratio": 0.5643646086292704,
+        "outer_ratio": -0.5733972722824179,
+        "old_shell_ratio": 0.9334697990514921
+      }
+    },
+    {
+      "label": "plant-lam6",
+      "sigma": "1.0",
+      "mod4": 2,
+      "rows": [
+        {
+          "label": "plant-lam6",
+          "N": 10,
+          "mod4": 2,
+          "sigma": "1.0",
+          "Q": -5.732206140344914,
+          "odd_ratio": 0.7174039526740983,
+          "old_boundary_ratio": 0.6700215595163955,
+          "outer_ratio": 0.3300137705002767,
+          "old_shell_ratio": 2.6045706374781608
+        },
+        {
+          "label": "plant-lam6",
+          "N": 14,
+          "mod4": 2,
+          "sigma": "1.0",
+          "Q": -4.065455003470629,
+          "odd_ratio": 0.14372479852015874,
+          "old_boundary_ratio": 0.2924911588961476,
+          "outer_ratio": 0.7075097833527064,
+          "old_shell_ratio": 1.0619973970135212
+        }
+      ],
+      "correlations": {
+        "odd_ratio": -1.0,
+        "old_boundary_ratio": -1.0,
+        "outer_ratio": 1.0,
+        "old_shell_ratio": -1.0000000000000002
+      }
+    },
+    {
+      "label": "plant-lam6",
+      "sigma": "3.0",
+      "mod4": 0,
+      "rows": [
+        {
+          "label": "plant-lam6",
+          "N": 8,
+          "mod4": 0,
+          "sigma": "3.0",
+          "Q": -6.218859619965421,
+          "odd_ratio": 0.8710139270176704,
+          "old_boundary_ratio": 0.3422457047803848,
+          "outer_ratio": 0.6652258745235221,
+          "old_shell_ratio": 0.44136377413070077
+        },
+        {
+          "label": "plant-lam6",
+          "N": 12,
+          "mod4": 0,
+          "sigma": "3.0",
+          "Q": 12.368355307534316,
+          "odd_ratio": 0.062381601384416036,
+          "old_boundary_ratio": 0.36647447796109395,
+          "outer_ratio": 0.6335256574025634,
+          "old_shell_ratio": 2.108692584730536
+        },
+        {
+          "label": "plant-lam6",
+          "N": 16,
+          "mod4": 0,
+          "sigma": "3.0",
+          "Q": 13.544748846546014,
+          "odd_ratio": 0.4394208758827586,
+          "old_boundary_ratio": 0.7583700075703719,
+          "outer_ratio": 0.2416307341319998,
+          "old_shell_ratio": 1.4477535180082333
+        }
+      ],
+      "correlations": {
+        "odd_ratio": -0.8588643958036599,
+        "old_boundary_ratio": 0.5879872834120666,
+        "outer_ratio": -0.6003243163219316,
+        "old_shell_ratio": 0.8971046499907269
+      }
+    },
+    {
+      "label": "plant-lam6",
+      "sigma": "3.0",
+      "mod4": 2,
+      "rows": [
+        {
+          "label": "plant-lam6",
+          "N": 10,
+          "mod4": 2,
+          "sigma": "3.0",
+          "Q": 4.902664972580595,
+          "odd_ratio": 0.4724014425623167,
+          "old_boundary_ratio": 0.6742272930362203,
+          "outer_ratio": 0.3258223075690547,
+          "old_shell_ratio": 2.740902062367267
+        },
+        {
+          "label": "plant-lam6",
+          "N": 14,
+          "mod4": 2,
+          "sigma": "3.0",
+          "Q": 4.283370277730909,
+          "odd_ratio": 0.1516870964024372,
+          "old_boundary_ratio": 0.29332491431354646,
+          "outer_ratio": 0.70667526261703,
+          "old_shell_ratio": 1.062667806675382
+        }
+      ],
+      "correlations": {
+        "odd_ratio": 0.9999999999999999,
+        "old_boundary_ratio": 1.0,
+        "outer_ratio": -1.0000000000000002,
+        "old_shell_ratio": 1.0000000000000002
+      }
+    },
+    {
+      "label": "zeta-lam6",
+      "sigma": "1.0",
+      "mod4": 0,
+      "rows": [
+        {
+          "label": "zeta-lam6",
+          "N": 8,
+          "mod4": 0,
+          "sigma": "1.0",
+          "Q": 0.29362369110125774,
+          "odd_ratio": 0.39435695648119456,
+          "old_boundary_ratio": 2.740084136005668,
+          "outer_ratio": 1.740084373732831,
+          "old_shell_ratio": 1.4594188420040328
+        },
+        {
+          "label": "zeta-lam6",
+          "N": 12,
+          "mod4": 0,
+          "sigma": "1.0",
+          "Q": 0.41548470606114585,
+          "odd_ratio": 0.6062070986448733,
+          "old_boundary_ratio": 3.499201959866689,
+          "outer_ratio": 2.499202091837182,
+          "old_shell_ratio": 1.6368352684924472
+        },
+        {
+          "label": "zeta-lam6",
+          "N": 16,
+          "mod4": 0,
+          "sigma": "1.0",
+          "Q": 0.382930700375546,
+          "odd_ratio": 0.7758591230570561,
+          "old_boundary_ratio": 4.069496824576457,
+          "outer_ratio": 3.0694968934536466,
+          "old_shell_ratio": 1.7942488213521268
+        }
+      ],
+      "correlations": {
+        "odd_ratio": 0.7513091952834363,
+        "old_boundary_ratio": 0.763095962554995,
+        "outer_ratio": 0.7630959573467883,
+        "old_shell_ratio": 0.7316550592285387
+      }
+    },
+    {
+      "label": "zeta-lam6",
+      "sigma": "1.0",
+      "mod4": 2,
+      "rows": [
+        {
+          "label": "zeta-lam6",
+          "N": 10,
+          "mod4": 2,
+          "sigma": "1.0",
+          "Q": -0.058858301218459724,
+          "odd_ratio": 0.5114892118379192,
+          "old_boundary_ratio": 3.1662820403960907,
+          "outer_ratio": 2.166283279699147,
+          "old_shell_ratio": 1.5537947666839542
+        },
+        {
+          "label": "zeta-lam6",
+          "N": 14,
+          "mod4": 2,
+          "sigma": "1.0",
+          "Q": -0.2516349227444187,
+          "odd_ratio": 0.7055112605908893,
+          "old_boundary_ratio": 3.833342970675931,
+          "outer_ratio": 2.833343351107798,
+          "old_shell_ratio": 1.728718047696902
+        },
+        {
+          "label": "zeta-lam6",
+          "N": 18,
+          "mod4": 2,
+          "sigma": "1.0",
+          "Q": 1.1145144326534697,
+          "odd_ratio": 0.861080899765046,
+          "old_boundary_ratio": 4.347113586850308,
+          "outer_ratio": 3.347113916822506,
+          "old_shell_ratio": 1.8759958898271312
+        }
+      ],
+      "correlations": {
+        "odd_ratio": 0.7532882034369281,
+        "old_boundary_ratio": 0.7457482518954178,
+        "outer_ratio": 0.7457484755208758,
+        "old_shell_ratio": 0.7623710906919914
+      }
+    },
+    {
+      "label": "zeta-lam6",
+      "sigma": "3.0",
+      "mod4": 0,
+      "rows": [
+        {
+          "label": "zeta-lam6",
+          "N": 8,
+          "mod4": 0,
+          "sigma": "3.0",
+          "Q": 1.5828711783824705,
+          "odd_ratio": 0.40654274292792786,
+          "old_boundary_ratio": 2.7792994329589087,
+          "outer_ratio": 1.7793015236544585,
+          "old_shell_ratio": 1.4631082532634372
+        },
+        {
+          "label": "zeta-lam6",
+          "N": 12,
+          "mod4": 0,
+          "sigma": "3.0",
+          "Q": 1.6582690853478144,
+          "odd_ratio": 0.6130504444135783,
+          "old_boundary_ratio": 3.522051299725573,
+          "outer_ratio": 2.522052474173698,
+          "old_shell_ratio": 1.6420466198796517
+        },
+        {
+          "label": "zeta-lam6",
+          "N": 16,
+          "mod4": 0,
+          "sigma": "3.0",
+          "Q": 1.4170355051596246,
+          "odd_ratio": 0.780224644506226,
+          "old_boundary_ratio": 4.083810899577517,
+          "outer_ratio": 3.0838115160258392,
+          "old_shell_ratio": 1.7980820223207814
+        }
+      ],
+      "correlations": {
+        "odd_ratio": -0.6257250462460748,
+        "old_boundary_ratio": -0.6106053039937702,
+        "outer_ratio": -0.6106053575233192,
+        "old_shell_ratio": -0.6421527075675473
+      }
+    },
+    {
+      "label": "zeta-lam6",
+      "sigma": "3.0",
+      "mod4": 2,
+      "rows": [
+        {
+          "label": "zeta-lam6",
+          "N": 10,
+          "mod4": 2,
+          "sigma": "3.0",
+          "Q": 0.3604516822205389,
+          "odd_ratio": 0.5201535508618774,
+          "old_boundary_ratio": 3.195647761666744,
+          "outer_ratio": 2.195658790700705,
+          "old_shell_ratio": 1.5591951785908642
+        },
+        {
+          "label": "zeta-lam6",
+          "N": 14,
+          "mod4": 2,
+          "sigma": "3.0",
+          "Q": -0.41566848456466,
+          "odd_ratio": 0.7109397572479211,
+          "old_boundary_ratio": 3.851345117822179,
+          "outer_ratio": 2.8513485144554145,
+          "old_shell_ratio": 1.7332744965604747
+        },
+        {
+          "label": "zeta-lam6",
+          "N": 18,
+          "mod4": 2,
+          "sigma": "3.0",
+          "Q": 3.557502428022666,
+          "odd_ratio": 0.8646338803848714,
+          "old_boundary_ratio": 4.358700447443945,
+          "outer_ratio": 3.358703402809257,
+          "old_shell_ratio": 1.879221083950552
+        }
+      ],
+      "correlations": {
+        "odd_ratio": 0.7172038387885082,
+        "old_boundary_ratio": 0.7091996733786617,
+        "outer_ratio": 0.7092018180718044,
+        "old_shell_ratio": 0.7250851662266852
+      }
+    }
+  ]
+}

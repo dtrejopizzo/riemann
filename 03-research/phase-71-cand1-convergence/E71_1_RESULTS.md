@@ -25,7 +25,7 @@ but generic residues would not be enough to force all roots real. The tested CCM
 mixed signs and still give an all-real spectrum. Thus the all-real spectrum is not coming from
 sign-definite Weil positivity; it is coming from the self-adjoint finite operator structure.
 
-## Consequence (two honest faces)
+## Consequence (two candid faces)
 
 1. **CAND-1 is genuinely off MW-1.** Reality of `sp(H)` is not a Weil-positivity condition; it is
    automatic from the real-rational/interlacing structure. There is no positivity inequality to prove

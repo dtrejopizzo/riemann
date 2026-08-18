@@ -1,7 +1,7 @@
 # Phase 9 / T9-cal — The calibration deliverable: an exchange rate between Montgomery support and analytic RH
 
 **Author: David Alejandro Trejo Pizzo · 2026-06-04.** `experiments/T9cal_support_requirement.py`.
-This is the program's honest finite contribution: not a proof of RH, but a precise, quantified statement of
+This is the program's candid finite contribution: not a proof of RH, but a precise, quantified statement of
 **exactly how much** unconditional progress on Montgomery's pair correlation would certify the extremal
 collision margin (analytic RH) up to a given height — a concrete target for the community, calibrated by our
 detector and the extremal reduction of P12.
@@ -42,7 +42,7 @@ $\sim A^{3}$ zeros.** A clean exchange rate:
 $\beta_{\min}=0.29,0.22,0.19$ at $T\approx310,1591,10^4$, i.e. $\alpha_{\mathrm{req}}=1/\beta_{\min}=3.4,4.5,5.2$
 for a fixed $300$-zero window; the height-$T$ requirement over all $N(T)$ zeros follows the $N^{1/3}$ law above.)*
 
-## What this says, precisely and honestly
+## What this says, precisely and candidly
 
 - **Montgomery's proven range $\alpha<1$ is, for the extremal target, essentially empty.** It controls only
   gaps $\beta>1$ — the *bulk/average* (the marginal $C\approx1$, the GUE mean). It **never** reaches the
@@ -61,6 +61,6 @@ for a fixed $300$-zero window; the height-$T$ requirement over all $N(T)$ zeros 
   derived (bridge rigorous up to O(1); GUE scaling), illustrated numerically.
 - This is **not** RH and **not** a crossing — it is the precise, quantified target: *how much* unconditional
   pair-correlation suffices, height by height.
-- It is the honest, finite residual contribution after N1–N6 + T9-A + the wrong-sign capstone. With it, the
+- It is the candid, finite residual contribution after N1–N6 + T9-A + the wrong-sign capstone. With it, the
   program's analytic arc is complete: the wall is mapped, the target is cornered, and the cost of crossing is
   priced.

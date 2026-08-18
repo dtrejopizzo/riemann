@@ -18,7 +18,7 @@ The script's auto-verdict "CLEAN comb" was misled: the small fit residual comes 
 CLUSTERING at one point, not from a meaningful affine map. The peak location is fixed by the gauge
 (`e^{-i z0 L}`, `z0 = t0 - iy`), not by the frequency `log n`. The frequencies do not resolve in theta.
 
-## Honest structure
+## Candid structure
 
 `sigma_P` is a **single piled-up peak** near `theta ~ pi/2`, not a comb: all primes contribute at the
 same location with heights `~ Lambda(n) n^{-1/2-y}`. So:

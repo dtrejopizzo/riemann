@@ -1,0 +1,126 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\title{Terminal completion audit for the Witt--Loewy route to row (d) (v104)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Objective}
+
+The requested objective has four clauses:
+\begin{enumerate}
+\item derive the contractivity
+\begin{equation}
+ \|\pi(\sqrt nU_n)\|\le1                              \tag{C}
+\end{equation}
+on every simple Loewy factor from rows (a)--(c);
+\item construct the positive Hilbert completion with the Witt adjoint;
+\item preserve the odd nuclear character, including multiplicities;
+\item conclude row (d), condition $G$, without circularity.
+\end{enumerate}
+
+\section{Equivalence of the load-bearing clause}
+
+On the simple factor with Mellin parameter $\rho$, row (c) gives
+\begin{equation}
+                 \pi(\sqrt nU_n)=n^{1/2-\rho}.        \tag{1}
+\end{equation}
+Consequently (C) is equivalent to $\Re\rho\ge1/2$.  Applying the same
+inequality to the source-defined mirror $1-\bar\rho$ is equivalent to
+$\Re\rho\le1/2$.  Therefore
+\begin{equation}
+ \boxed{\text{(C) on all simple factors}
+ \iff \Re\rho=\tfrac12\text{ for all spectral parameters}.}  \tag{2}
+\end{equation}
+This equivalence is \PROVED.  It shows that (C) is the terminal theorem,
+not a formal consequence of choosing the scalar normalization $n^{-1/2}$.
+
+\section{Exhaustive source audit}
+
+The following possible sources of (C) have been checked.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.29\linewidth}
+                >{\centering\arraybackslash}p{.14\linewidth}
+                >{\raggedright\arraybackslash}p{.47\linewidth}}
+\toprule
+Candidate & Verdict & Authoritative calculation \\
+\midrule
+Half-Tate Witt Hilbert map $J$ & fails &
+$q_k(J\phi_r)/\|\phi_r\|_{1/2}=r^{k+1/2}\to\infty$; $J$ has no continuous
+extension to $\mathcal C_{\mathbb R}$ (v100). \\
+Ambient $L^2(dx)$ quotient & fails &
+$\sqrt nU_n$ is unitary, but Mellin characters are not $L^2$-continuous;
+the critical Poisson range becomes dense and loses the nuclear quotient
+(v96--v100). \\
+Positive Euler--Gamma GNS space & fails trace comparison &
+it gives a cyclic matrix coefficient, not the odd nuclear operator trace;
+the evident quotient map does not descend (v97). \\
+Half-Tate Banach algebra $\mathcal B_{1/2}$ & partial &
+it is constructed and acts on $\mathcal S_>$, but does not preserve
+$\mathcal H_-$; continuity on the odd simple factors is equivalent to (C)
+(v101). \\
+Poisson symmetry plus two Tate modes & fails &
+the valid coefficient $a_n=n^{-1/2-\varepsilon}$ produces the non-Tate
+residual powers $x^{-(1/2-\varepsilon)}$ and
+$x^{-(1/2+\varepsilon)}$ (v102). \\
+Lambda/determinant promotion & absent &
+rows (a)--(b) take determinants of code and torsion-contact complexes, not
+exterior powers of $\sqrt nU_n$ on row-(c) Loewy factors (v103). \\
+Metric/dagger fiber functor & absent &
+the actual row-(c) functor is strict monoidal into
+$\mathsf{Mult}(\mathcal S_>)$; its contract contains no operator norm,
+dagger, Hilbert target or map to Loewy factors. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The last two assertions are verified directly in the supplied source
+files: row (b) compares the scalar contact $\Lambda(n)$, while row (c)
+explicitly separates the multiplier target of individual correspondences
+from the nuclear-Fr\'echet target of the completed superobject.
+
+\section{Completion status}
+
+Finite Loewy semisimplification and preservation of finite traces are
+\PROVED in v99.  If (C) were proved, the simple factors would be unitary;
+their Hilbert direct sum, repeated with Loewy multiplicity, would be trace
+class for every test action and would have the same odd character.  This
+conditional assembly is also \PROVED in v99.
+
+What is not proved is the premise (C).  No source map in rows (a)--(c)
+defines a positive norm on the simple Loewy factors, and every attempted
+existing map either fails continuity, loses the quotient, fails the trace
+comparison or leaves the explicit non-Tate residual displayed above.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.54\linewidth}
+                >{\centering\arraybackslash}p{.16\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Required clause & Status & Evidence \\
+\midrule
+Contractivity (C) from rows (a)--(c) & \OPEN & no metric/dagger descent \\
+Positive Hilbert assembly assuming (C) & \PROVED & v99 \\
+Trace and multiplicity preservation assuming (C) & \PROVED & v99 \\
+Unconditional row (d), condition $G$ & \OPEN & equivalent to (C) by (2) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Terminal verdict}
+
+The current files do not prove the requested objective.  Marking (C), row
+(d), or $G$ as \PROVED would insert a missing norm-enriched fiber functor
+whose one-dimensional assertion is already equation (2).  A valid
+continuation requires new mathematical input constructing such a functor
+or an independent proof of the one-sided half-plane bound.  Neither is
+present in the supplied sources or in v89--v103.
+
+\end{document}

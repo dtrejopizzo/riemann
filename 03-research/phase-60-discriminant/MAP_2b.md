@@ -37,7 +37,7 @@ la cota 1/gap. Identificar ese mecanismo = resolver 2b. **Reformulación promete
 perturbado D_λ) son un funcional MÁS ROBUSTO del operador que el autovector ξ_λ de QW. La
 convergencia espectral de operadores auto-adjuntos es más estable que la de autovectores. ⟹
 atacar (ii) vía convergencia del **espectro de D_λ** (no del ground state de QW). Posible vuelta
-al gap exponencial. **Veredicto de circularidad (provisional, honesto):**
+al gap exponencial. **Veredicto de circularidad (provisional, franco):**
 - (i) forma: no circular (PNT). ✔
 - (ii) minimizador: el mecanismo de estabilidad es el crux abierto; si se controla por la estructura CF (que produce los ceros como OUTPUT del símbolo de primos) ⟹ no circular; si requiere cota de gap que equivalga a regiones libres de ceros ⟹ circular. **Indeciso, pero la estructura (ceros como output, no input) inclina a no-circular** — consistente con. ## 8. RESULTADO: el gap relativo es O(1) — (ii) probablemente auto-controlada Medición (gap.py, mpmath dps=40, N=12): | λ | primos≤λ² | ε0 | gap=ε1−ε0 | gap/ε0 |
 |---|---|---|---|---|
@@ -50,10 +50,10 @@ de la cola de primos sobre el near-null space del ground state) vive en la escal
 la perturbación RELATIVA ~ ε0/gap ~ O(1) — **acotada, no explota por 1/gap**. El ground state
 está bien separado a su propia escala. ⟹ mi preocupación previa (fragilidad por gap exp-chico)
 queda **desactivada**: (ii) es probablemente AUTO-CONTROLADA por el gap relativo, propiedad
-estructural del espectro geométrico, NO de RH. **Veredicto de circularidad (actualizado, honesto):**
+estructural del espectro geométrico, NO de RH. **Veredicto de circularidad (actualizado, franco):**
 - (i) forma: NO circular (PNT). ✔
 - (ii) minimizador: gap relativo O(1) ⟹ estabilidad probablemente auto-controlada, **NO circular**.
-- ⟹ la evidencia inclina a **2b NO circular** — el programa CCM puede llegar a RH. Consistente con la convicción de. **Caveat honesto:** gap/ε0 decrece lento (68→3.9→3.6→3.3→3.1); falta confirmar que se estabiliza
+- ⟹ la evidencia inclina a **2b NO circular** — el programa CCM puede llegar a RH. Consistente con la convicción de. **Caveat franco:** gap/ε0 decrece lento (68→3.9→3.6→3.3→3.1); falta confirmar que se estabiliza
 en O(1) y no decae a 0 asintóticamente. Y falta la cota rigurosa de perturbación de autovector
 en la escala relativa (que δA_eff proyectado sí escala como ε0). Pero la dirección es buena. ## 9. (i) CERRADO exacto + (ii) reformulado correctamente **(i) [CERRADO]** — ver `2b_part_i_EXACT.md`. A_λ = A_∞|_{E_λ} EXACTO (verificado 0.00e+00):
 los primos >λ² contribuyen cero por soporte (f**g ⊂ [λ⁻²,λ²]). NO hay cola de primos / defecto

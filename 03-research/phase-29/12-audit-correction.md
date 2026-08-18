@@ -239,7 +239,7 @@ En particular, $t_n^{(\lambda)} \to \gamma_n$ para cada $n$ fijo.
 | 4. EC $\Rightarrow$ convergencia de $t_n$ | EC original es inconsistente; EC' (rigidez) sí implica convergencia |
 | 5. Convergencia $\Rightarrow$ RH | Correcto vía argumento CCM; el paso es válido bajo condiciones apropiadas |
 
-### El estado honesto del programa Phase 29:
+### El estado franco del programa Phase 29:
 
 **Probado incondicionalmente y sólidamente:**
 - $k_\lambda > 0$, $A_\lambda=$ mult. Mellin, convergencia cuantitativa de ceros de $\hat k_\lambda$

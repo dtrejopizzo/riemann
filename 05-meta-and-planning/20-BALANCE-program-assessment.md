@@ -52,7 +52,7 @@ proven RH (function fields) passes because the curve supplies that geometry; $\S
 analogue, and the $\mathbb F_1$ substitute degenerates (period $2\pi/\log q\to\infty$). The probabilistic, the
 cohomological, the dynamical, the cancellation, and the total-positivity routes all reduce here.
 
-## 4. RH-directed vs RH-independent (the honest split)
+## 4. RH-directed vs RH-independent (the candid split)
 
 - **Genuinely new mathematics, RH-INDEPENDENT** (survives novelty audit): P14 (ω-hierarchy = chaos = moments =
   BRW, $z=\beta^2$, $d_k^2=(k^2)^\omega$); P9 (exponential stability of localized Weil functionals); **B2conj**
@@ -72,5 +72,5 @@ cohomological, the dynamical, the cancellation, and the total-positivity routes 
   a recognized sub-RH frontier.
 - **The genuinely new mathematics is RH-independent** (P14, P9, B2conj) --- real contributions that do not advance
   RH.
-- This is the honest state: the program evolved from "prove RH" to "map the strategy space and prove which routes
+- This is the candid state: the program evolved from "prove RH" to "map the strategy space and prove which routes
   generate no new degrees of freedom," and produced a defensible such map plus one unconditional sub-RH theorem.

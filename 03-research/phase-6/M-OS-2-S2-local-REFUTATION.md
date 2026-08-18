@@ -1,4 +1,4 @@
-# M-OS-2 / Step S2 — Per-place reflection positivity: COMPUTED and REFUTED (an honest no-go)
+# M-OS-2 / Step S2 — Per-place reflection positivity: COMPUTED and REFUTED (an candid no-go)
 
 **Phase 6, moonshot step S2.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
 S2 was to prove **local reflection positivity at each place** (the heart of the Euler-lattice mechanism:
@@ -56,11 +56,11 @@ S2.1 kills the first hypothesis for every finite prime. Therefore:
 This is the same wall, reached from the OS side: positivity = archimedean beats the integrated indefinite
 primes = a conspiracy, not a factorization.
 
-**The honest residue (the only possible salvage, and it is Connes' problem).** S2.1 refutes RP of the
+**The candid residue (the only possible salvage, and it is Connes' problem).** S2.1 refutes RP of the
 *additive* local distribution $W_p$ (the log-derivative). It does **not** refute a deeper RP of the
 *multiplicative* local factor $L_p(s)=(1-p^{-s})^{-1}$ read as a **local partition function** (a Bost–Connes
 KMS state, whose positivity is structural). But making that precise — and gluing the KMS states across places
-— is precisely the Connes–Bost–Connes program. So the OS route, pushed honestly, **reduces to Connes**, with
+— is precisely the Connes–Bost–Connes program. So the OS route, pushed candidly, **reduces to Connes**, with
 no new mechanism gained. The pretty $J=$reflection recasting is correct (S1.1) but does not, by itself, supply
 the sign.
 
@@ -85,7 +85,7 @@ the sign.
 
 ---
 
-## 4. Honest verdict on the moonshot (after one real step of computation)
+## 4. Candid verdict on the moonshot (after one real step of computation)
 
 | Claim | Status after S2 |
 |---|---|
@@ -101,11 +101,11 @@ computation**. The OS route, pushed rigorously, lands back exactly where every r
 cross-place conspiracy (archimedean vs. the indefinite primes), and the only structural hope is the
 Connes–Bost–Connes KMS/partition-function positivity, which is the field's open core, not something our
 $J$-reflection insight unlocks. **This is a rigorous no-go for the OS-lattice mechanism, computed, not
-guessed.** It is the durable output of attempting the moonshot honestly.
+guessed.** It is the durable output of attempting the moonshot candidly.
 
 **What survives, what to do.**
 - *Survives:* the recasting (Weil = RP for the involution) and the precise reason it does not help (oscillatory
-  + indefinite primes). A short, honest note "Why reflection positivity does not localize for $\zeta$" is a
+  + indefinite primes). A short, candid note "Why reflection positivity does not localize for $\zeta$" is a
   legitimate small result.
 - *To do:* either (i) attack the **multiplicative/KMS** salvage (Bost–Connes — but that *is* Connes, low odds),
   or (ii) accept that the program's durable deliverables (P9 stability; the validated detector; the precise map
@@ -117,4 +117,4 @@ guessed.** It is the durable output of attempting the moonshot honestly.
 - S2.1 (local prime form indefinite, $G_p$ computed) — ✅ proved.
 - No-go S2.2 (Euler-lattice mechanism fails; positivity is cross-place) — ✅ proved.
 - S1 corrections (S1.1 reflection; S1.4 retraction) — ✅ logged.
-- Salvage (multiplicative/KMS per-place positivity) — ⬜ = Connes/Bost–Connes; low odds; the honest frontier.
+- Salvage (multiplicative/KMS per-place positivity) — ⬜ = Connes/Bost–Connes; low odds; the candid frontier.

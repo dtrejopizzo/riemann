@@ -81,7 +81,7 @@ mechanism.  `DATA` is closest to the original NAT-PROJ identity.
 
 ## 5. Corrected chain
 
-The honest chain is:
+The candid chain is:
 
 ```text
 E72.327 CRIT-POLY

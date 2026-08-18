@@ -1,0 +1,323 @@
+{
+  "statement": "Scalarized old-old log-q bridge: PAIRNUM_N = |q_N|^2 [1 - exp(-Re Delta ell_N) cos(Im Delta ell_N)].",
+  "sources": {
+    "bridge": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_67_old_old_logq_bridge_results.json",
+    "phase_g": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5g_schur_phase_increment_results.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell": 0.22022543414184628,
+          "im_delta_ell": -0.0009418641866544112,
+          "wrapped_im_delta_ell": -0.0009418641866543176,
+          "scalar_gain": 0.1976624526635823,
+          "pairnum_from_logq": 0.02316591421911442,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell": 0.21579676075253715,
+          "im_delta_ell": 0.0005205399524801991,
+          "wrapped_im_delta_ell": 0.0005205399524803589,
+          "scalar_gain": 0.19410103363200404,
+          "pairnum_from_logq": 0.01464427009833739,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell": 0.11159183180594917,
+          "im_delta_ell": -4.8161553171501615e-05,
+          "wrapped_im_delta_ell": -4.816155317133308e-05,
+          "scalar_gain": 0.10559074862237405,
+          "pairnum_from_logq": 0.005174007649223571,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell": 0.12212873926973816,
+          "im_delta_ell": -6.28204369028223,
+          "wrapped_im_delta_ell": 0.0011416168973559238,
+          "scalar_gain": 0.11496615424493595,
+          "pairnum_from_logq": 0.0045065455788499,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell": 0.10341451172755096,
+          "im_delta_ell": 6.282101797114268,
+          "wrapped_im_delta_ell": -0.0010835100653174834,
+          "scalar_gain": 0.09824742056406877,
+          "pairnum_from_logq": 0.0030165827679270543,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell": 0.10261574666936663,
+          "im_delta_ell": -0.00023279405701332883,
+          "wrapped_im_delta_ell": -0.00023279405701348566,
+          "scalar_gain": 0.09752633906984443,
+          "pairnum_from_logq": 0.0024349570619636137,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell": 0.20066321363580295,
+          "im_delta_ell": -0.0028376779602368295,
+          "wrapped_im_delta_ell": -0.0028376779602368174,
+          "scalar_gain": 0.1818153544936989,
+          "pairnum_from_logq": 0.01940537996677571,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell": 0.20700537431790308,
+          "im_delta_ell": 0.001553755025182886,
+          "wrapped_im_delta_ell": 0.0015537550251827348,
+          "scalar_gain": 0.18698570079887233,
+          "pairnum_from_logq": 0.013359990132244426,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell": 0.10570456469861442,
+          "im_delta_ell": -0.00014575866568512937,
+          "wrapped_im_delta_ell": -0.000145758665685225,
+          "scalar_gain": 0.10030960043365955,
+          "pairnum_from_logq": 0.00473737384403053,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell": 0.11903807593348922,
+          "im_delta_ell": -6.279768478824014,
+          "wrapped_im_delta_ell": 0.003416828355572221,
+          "scalar_gain": 0.11223118495487827,
+          "pairnum_from_logq": 0.004290371384903595,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell": 0.10096365368767836,
+          "im_delta_ell": 6.279937879635606,
+          "wrapped_im_delta_ell": -0.0032474275439806632,
+          "scalar_gain": 0.0960388783957834,
+          "pairnum_from_logq": 0.002893565112384599,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell": 0.10110535336471611,
+          "im_delta_ell": -0.000697779471880855,
+          "wrapped_im_delta_ell": -0.0006977794718809882,
+          "scalar_gain": 0.09616241452186203,
+          "pairnum_from_logq": 0.002367530726626797,
+          "reconstruction_error": 0.0
+        }
+      ],
+      "summary": {
+        "re_delta_ell": {
+          "count": 12,
+          "min": 0.10096365368767836,
+          "median": 0.1153149538697192,
+          "max": 0.22022543414184628
+        },
+        "wrapped_im_delta_ell_abs": {
+          "count": 12,
+          "min": 4.816155317133308e-05,
+          "median": 0.0010126871259859005,
+          "max": 0.003416828355572221
+        },
+        "scalar_gain": {
+          "count": 12,
+          "min": 0.0960388783957834,
+          "median": 0.10891096678862616,
+          "max": 0.1976624526635823
+        }
+      },
+      "max_reconstruction_error": 0.0
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell": -0.8206138148249932,
+          "im_delta_ell": -0.06697682712990184,
+          "wrapped_im_delta_ell": -0.06697682712990183,
+          "scalar_gain": -1.266800097197235,
+          "pairnum_from_logq": -5.80995154440808,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell": -0.29373975377889017,
+          "im_delta_ell": -0.14138261286488565,
+          "wrapped_im_delta_ell": -0.14138261286488563,
+          "scalar_gain": -0.3280500741453376,
+          "pairnum_from_logq": -7.765701011297598,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell": -0.4454967473375394,
+          "im_delta_ell": 0.011250030300597019,
+          "wrapped_im_delta_ell": 0.011250030300597125,
+          "scalar_gain": -0.5611667594199843,
+          "pairnum_from_logq": -23.904054570070926,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell": 1.2470032430782496,
+          "im_delta_ell": 0.010111263257074536,
+          "wrapped_im_delta_ell": 0.010111263257074565,
+          "scalar_gain": 0.7126500197533746,
+          "pairnum_from_logq": 73.99621293251948,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell": 0.9885867132607753,
+          "im_delta_ell": 0.0012157384528068188,
+          "wrapped_im_delta_ell": 0.0012157384528066473,
+          "scalar_gain": 0.6278980682904471,
+          "pairnum_from_logq": 5.383802057883562,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell": -1.0173574714350537,
+          "im_delta_ell": 0.0017754311278169704,
+          "wrapped_im_delta_ell": 0.0017754311278168622,
+          "scalar_gain": -1.7658718323763423,
+          "pairnum_from_logq": -2.0964456477112723,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "re_delta_ell": -0.7740760135373091,
+          "im_delta_ell": 0.006761654875123043,
+          "wrapped_im_delta_ell": 0.006761654875123035,
+          "scalar_gain": -1.168537882034125,
+          "pairnum_from_logq": -6.167822530589682,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "re_delta_ell": -0.27187668932609216,
+          "im_delta_ell": -0.16197231229341225,
+          "wrapped_im_delta_ell": -0.16197231229341202,
+          "scalar_gain": -0.29524700376610835,
+          "pairnum_from_logq": -7.328725486109524,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "re_delta_ell": -0.4427957900850762,
+          "im_delta_ell": -0.0121956847868262,
+          "wrapped_im_delta_ell": -0.012195684786826089,
+          "scalar_gain": -0.5569385433492893,
+          "pairnum_from_logq": -23.81218905842953,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "re_delta_ell": 1.246473621820296,
+          "im_delta_ell": 0.013857324498729479,
+          "wrapped_im_delta_ell": 0.01385732449872945,
+          "scalar_gain": 0.712510700225903,
+          "pairnum_from_logq": 73.856882936296,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "re_delta_ell": 0.9881288485956662,
+          "im_delta_ell": -0.01147703644330771,
+          "wrapped_im_delta_ell": -0.011477036443307664,
+          "scalar_gain": 0.6277518998870681,
+          "pairnum_from_logq": 5.379159080480415,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "re_delta_ell": -1.0169277674756656,
+          "im_delta_ell": 0.009709045536097543,
+          "wrapped_im_delta_ell": 0.009709045536097527,
+          "scalar_gain": -1.7645576325653929,
+          "pairnum_from_logq": -2.095484183119928,
+          "reconstruction_error": 0.0
+        }
+      ],
+      "summary": {
+        "re_delta_ell": {
+          "count": 12,
+          "min": -1.0173574714350537,
+          "median": -0.3682677719319832,
+          "max": 1.2470032430782496
+        },
+        "wrapped_im_delta_ell_abs": {
+          "count": 12,
+          "min": 0.0012157384528066473,
+          "median": 0.011363533371952395,
+          "max": 0.16197231229341202
+        },
+        "scalar_gain": {
+          "count": 12,
+          "min": -1.7658718323763423,
+          "median": -0.44249430874731344,
+          "max": 0.7126500197533746
+        }
+      },
+      "max_reconstruction_error": 0.0
+    }
+  }
+}

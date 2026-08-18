@@ -1,0 +1,132 @@
+\section{Proof of theorem \ref{theorem:1.2}}
+
+    \subsection{Dynamical Lefschetz trace formula}
+    For the foliated dynamical system $(M,\mathcal{F},\phi, g_{\mathcal{F}})$ whose closed orbits are all non-degenerate, Alvarez-Lopez and Kordyukov developed the \textbf{dynamical Lefschetz trace formula}:
+    \begin{proposition}[\cite{lopez2002distributional}]
+    For every test function $\varphi\in\mathcal{D}(\mathbb{R})=C^{\infty}_{0}(\mathbb{R})$, the operator
+    \begin{equation*}
+        A_{\varphi}=\int_{\mathbb{R}}\varphi(t)\phi^{t*}dt
+    \end{equation*}
+    on $\bar{H}^{i}_{\mathcal{F}}(M)$ is of trace class.
+    Setting:
+    \begin{equation*}
+        \mathrm{Tr}(\phi^{t*}|\bar{H}^{i}_{\mathcal{F}}(M))
+        =\mathrm{tr}A_{\varphi}
+    \end{equation*}
+    defines a distribution on $\mathbb{R}$.
+    The following formula holds in $\mathcal{D}^{'}(\mathbb{R})$:
+    \begin{equation*}
+        \sum_{i=0}^{\dim{\mathcal{F}}}(-1)^{i}\mathrm{Tr}(\phi^{t*}|\bar{H}^{i}_{\mathcal{F}}(M))
+        =\chi_{\mathrm{Co}}(\mathcal{F},g_{\mathcal{F}})\delta_{0}
+        +\sum_{\gamma}l(\gamma)\sum_{k\in\mathbb{Z}\backslash0}\epsilon_{\gamma}\delta_{kl(\gamma)}.
+    \end{equation*}
+    Here $\chi_{\mathrm{Co}}(\mathcal{F},\mu)$ denotes Connes' Euler characteristic of the foliation with respect to the bundle-like metric (c.f. \cite{connes2000noncommutative}) and $\delta_{\tau}$ is the Dirac delta function in $\mathcal{D}^{'}(\mathbb{R})$ which is non-zero at $\tau$.
+    \end{proposition}
+    
+    The lemma \ref{lem:1.3} (Stone's theorem) leads to the corollary:
+    \begin{corollary} \label{cor:2.1.1.}
+    The following equality holds in $\mathcal{D}^{'}(\mathbb{R}_{>0})$:
+    \begin{equation*}
+        \sum_{i=0}^{2}(-1)^{i}\mathrm{Tr}(\phi^{t*}|\bar{H}^{i}_{\mathcal{F}}(M))
+        =\sum_{i=0}^{2}(-1)^{i}\sum_{\rho\in\mathrm{Sp}(\Theta_{i})}e^{\rho{t}}.
+    \end{equation*}
+    where $\Theta_{i}$ denotes the operator $\Theta$ acting on $\bar{H}^{i}_{\mathcal{F}}(M)$.
+    \end{corollary}
+
+
+It is enough to show that the zeta-regularized determinant coincides with the infinite product of periodic orbits on some right-half plane of the topological entropy, $i.e.$,
+\begin{equation*}
+    \begin{split}
+        \zeta_{\mathcal{F}}(s) 
+        &= \prod_{\gamma}(1-e^{-sl(\gamma)})^{-\epsilon_{\gamma}}\\
+        &= \prod_{i=0}^{2}\det_{\infty}(s-\Theta|\bar{H}^{i}_{\mathcal{F}}(M))^{(-1)^{i+1}} \quad\text{for }\mathrm{Re}(s)>{P},
+    \end{split}
+\end{equation*}
+where $P$ is a sufficiently large number $P>h(\phi)$.
+Then the assertion follows from the uniqueness of analytic continuation.
+
+
+We apply the Laplace transform for the dynamical Lefschetz trace formula.
+We have
+\begin{equation}\label{lhs}
+    \mathcal{L}\left[ \sum_{i=0}^{2}(-1)^{i}\sum_{\rho\in\mathrm{Sp}(\Theta_{i})} t^{z-1}e^{\rho{t}} \right](s) = \Gamma(z)\sum_{i=0}^{2}(-1)^{i}\sum_{\rho\in\mathrm{Sp}(\Theta_{i})}(s-\rho)^{-z}
+\end{equation}
+for the left hand side, and
+\begin{equation}\label{rhs}
+    \mathcal{L}\left[ \sum_{\gamma}\sum_{n\in\mathbb{N}}l(\gamma)\epsilon_{\gamma}\delta_{nl(\gamma)}t^{z-1} \right](s) 
+    = \sum_{\gamma}\sum_{n\in\mathbb{N}}\frac{l(\gamma)\epsilon_{\gamma}}{e^{nl(\gamma)s}}(nl(\gamma))^{z-1}
+\end{equation}
+for the right hand side.
+Both sides are defined for $\mathrm{Re}(z)>1$ over where the former infinite series (\ref{lhs}) is defined from the proof of theorem \ref{theorem:1.1}, and $\mathrm{Re}(s)> h(\phi)$ over where the latter infinite series (\ref{rhs}) is defined.
+We denote by $P$ a sufficiently large number bigger than $h(\phi)$.
+
+
+Let $\mathrm{L}_{\delta-}$ be a contour consisting of the lower edge of the cut from $-\infty$ to $-\delta$, the circle $t=\delta{e^{i\phi}}$ for $-\pi\le\phi\le\pi$ and the upper edge of the cut from $-\delta$ to $-\infty$.
+\begin{equation*}
+    \int_{\mathrm{L}_{\delta-}}e^{\lambda{t}}t^{-z}dt = 2i\sin(z\pi)\int_{\delta}^{\infty}e^{-v}v^{-z}dv + I
+\end{equation*}
+where $I$ denotes the integral along the circle $t=|\delta|$.
+Since $I$ tends to zero as $\delta\rightarrow{0}$, we have
+\begin{equation*}
+    \begin{split}
+        \lim_{\delta\rightarrow{0}}\int_{\mathrm{L}_{\delta-}}e^{\lambda{t}}t^{-z}dt 
+        &= 2i\sin(z\pi)\Gamma(1-z)\\
+        &= \frac{2\pi{i}}{\Gamma(z)}
+    \end{split}
+\end{equation*}
+Hence we have the formula for $\lambda>0$
+\begin{equation*}
+    \frac{\lambda^{z-1}}{\Gamma(z)}=\frac{1}{2\pi{i}}\lim_{\delta\rightarrow{0}}\int_{\mathrm{L}_{\delta-}}e^{\lambda{t}}t^{-z}dt.
+\end{equation*}
+By applying the formula for the series (\ref{rhs}), we get
+\begin{equation*}
+    \begin{split}
+        \frac{1}{\Gamma(z)}
+        \sum_{\gamma}\sum_{n\in\mathbb{N}}
+        \frac{l(\gamma)\epsilon_{\gamma}}{e^{nl(\gamma)s}}
+        (nl(\gamma))^{z-1}
+        &=\frac{1}{2\pi{i}}
+        \lim_{\delta\rightarrow{0}}\int_{\mathrm{L}_{\delta-}}\left(\sum_{\gamma}\sum_{n\in\mathbb{N}} l(\gamma)\epsilon_{\gamma}e^{-nl(\gamma)(s-t)} \right)t^{-z}dt\\
+        &=\frac{-1}{2\pi{i}}
+        \lim_{\delta\rightarrow{0}}\int_{\mathrm{L}_{\delta-}}
+        \frac{\zeta^{'}_{\mathcal{F}}}{\zeta_{\mathcal{F}}}(s-t)t^{-z}dt.
+    \end{split}
+\end{equation*}
+
+Since the series (\ref{lhs}) has a meromorphic extension and is holomorphic at $z=0$ from theorem \ref{theorem:1.1}, we obtain the two equalities for $-\pi\le\mathrm{arg}(t)\le\pi$
+\begin{equation*}
+    \begin{split}
+        \sum_{i=0}^{2}(-1)^{i}\xi_{i}(s,z) 
+        &=\frac{-1}{2\pi{i}}
+        \lim_{\delta\rightarrow{0}}\int_{\mathrm{L}_{\delta-}}\frac{\zeta^{'}_{\mathcal{F}}}{\zeta_{\mathcal{F}}}(s-t)t^{-z}dt, \\
+        \sum_{i=0}^{2}(-1)^{i}\partial_{z}\xi_{i}(s,0) 
+        &= \frac{1}{2\pi{i}}
+        \lim_{\delta\rightarrow{0}}\int_{\mathrm{L}_{\delta-}}\frac{\zeta^{'}_{\mathcal{F}}}{\zeta_{\mathcal{F}}}(s-t)\log(|t|e^{\mathrm{arg}(t)i})dt
+    \end{split}
+\end{equation*}
+
+It remains to see the following:
+\begin{equation*}
+    \begin{split}
+        &\frac{1}{2\pi{i}}
+        \lim_{\delta\rightarrow{0}}\int_{\mathrm{L}_{\delta-}}\frac{\zeta^{'}_{\mathcal{F}}}{\zeta_{\mathcal{F}}}(s-t)\log(|t|e^{\mathrm{arg}(t)i})dt\\
+        &=\frac{1}{2\pi{i}}
+        \int_{-\infty}^{0}\frac{\zeta^{'}_{\mathcal{F}}}{\zeta_{\mathcal{F}}}(s-t)
+        ( \log(|t|) - \pi{i} )dt 
+        +\frac{1}{2\pi{i}}
+        \int_{0}^{-\infty}\frac{\zeta^{'}_{\mathcal{F}}}{\zeta_{\mathcal{F}}}(s-t)
+        ( \log(|t|) + \pi{i} )dt\\
+        &=\int_{0}^{-\infty}\frac{\zeta^{'}_{\mathcal{F}}}{\zeta_{\mathcal{F}}}(s-t)dt = -\int_{0}^{\infty}\frac{\zeta^{'}_{\mathcal{F}}}{\zeta_{\mathcal{F}}}(s+t)dt \\
+        &=\log(\zeta_{\mathcal{F}}(s))
+    \end{split}
+\end{equation*}
+
+Therefore we have
+\begin{equation*}
+    \begin{split}
+        \zeta_{\mathcal{F}}(s) &= \prod_{i=0}^{2}\exp(-\partial_{z}\xi(s,0))^{(-1)^{i+1}} \\
+        &= \prod_{i=0}^{2} \mathrm{det}_{\infty}(s-\Theta | \bar{H}^{i}_{\mathcal{F}}(M))^{(-1)^{i+1}}
+    \end{split}
+\end{equation*}
+for $\mathrm{Re}(s)>P\ge{h(\phi)}$.
+Hence the theorem \ref{theorem:1.2} follows from the uniqueness of  the analytic continuation.

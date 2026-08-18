@@ -16,10 +16,10 @@ fracaso; está PERMITIDO (y es lo más probable) terminar en un no-go genuino.
 **Contrato de etiquetado (regla absoluta).** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad aquí, prueba completa; resultados
 externos citados con referencia verificable. **[CÁLCULO]** = mostrado. **[CONSTRUCCIÓN]** =
-objeto definido con precisión. **[PUENTE]** = conexión con estatus honesto de cada eslabón.
+objeto definido con precisión. **[PUENTE]** = conexión con estatus franco de cada eslabón.
 **[GAP]/[GAP de literatura]** = declarado; el de literatura NO se usa como premisa de ningún
 teorema. **[DESEO]** = declarado. Jamás se fabrica una prueba de RH ni el DESENLACE 2 (grial).
-**NADA de numéricos/Python.** **Español.** Honestidad absoluta.
+**NADA de numéricos/Python.** **Español.** Franqueza absoluta.
 
 **Prerrequisitos leídos en fuente esta sesión:** Doc 160 completo (𝔉_KMS Prop. 160.7; el test
 de polarización Prop. 160.10; GAP-160.A la métrica de inercia RH-libre; DESEO 160.B la
@@ -34,7 +34,7 @@ Pontryagin (𝒦,Q)). Memoria Phase 43 (la métrica de polarización porta ζ; l
 
 ## 0. Resumen ejecutivo y veredicto adelantado
 
-Coloco el veredicto al frente (honestidad: no quiero que se descubra como sorpresa).
+Coloco el veredicto al frente (franqueza: no quiero que se descubra como sorpresa).
 
 > **VEREDICTO: DESENLACE 1 — NO-GO ESTRUCTURAL.** La métrica de inercia canónica que la
 > dualidad de Poincaré no-conmutativa asociaría a 𝒜 = C(𝕋)⋊_φ ℝ se define, por construcción,
@@ -166,7 +166,7 @@ modular** del ciclo fundamental tuerce el emparejamiento de fase hasta darle sig
 orientación modular es el **peso dual** — que es el objeto donde, para este sistema, vive ζ.
 Esto es el test modular del §2, el corazón del documento.
 
-### 1.4. [PUENTE 161-A] Estatus honesto de la existencia de [Δ]
+### 1.4. [PUENTE 161-A] Estatus franco de la existencia de [Δ]
 
 La existencia de [Δ_{C(𝕋)}] (clase fundamental del toro de Bohr) es **[GAP de literatura
 parcial]**: el toro de Bohr 𝕋 = ∏_p S¹ es un grupo compacto abeliano de dimensión infinita
@@ -230,14 +230,14 @@ verificados [BC95; Wikipedia "Bost–Connes system"; CM-lectures math/0409520]:*
   extremal sobre los generadores aritméticos es una serie sobre primos (∏_p factores de Euler
   locales), y la temperatura inversa β es la coordenada dual a la altura/escala.
 
-**La conexión con 𝒜 = C(𝕋)⋊_φ ℝ (el puente, con estatus honesto).** El flujo de Kronecker
+**La conexión con 𝒜 = C(𝕋)⋊_φ ℝ (el puente, con estatus franco).** El flujo de Kronecker
 φ_t(z) = (p^{-it} z_p)_p sobre el toro de Bohr 𝕋 = ∏_p S¹ tiene por generadores de frecuencia
 exactamente {log p}; el generador del flujo dual θ_s(U_{log p}) = e^{is log p} U_{log p}
 multiplica por p^{is}. **Esto es, sobre los generadores primos, la MISMA dinámica que el flujo
 BC σ_t(μ_p) = p^{it} μ_p.** El toro de Bohr 𝕋 = ∏_p S¹ es precisamente el grupo dual de
 ⊕_p ℤ ≅ ℚ^×_{>0} (los racionales positivos bajo multiplicación, vía factorización única), y
 ℚ^×_{>0} es el semigrupo-grupo cuya completación da la parte multiplicativa de los idèles de
-BC. **Estatus honesto [PUENTE 161-B]:** el producto cruzado de Kronecker C(𝕋)⋊_φ ℝ y el sistema
+BC. **Estatus franco [PUENTE 161-B]:** el producto cruzado de Kronecker C(𝕋)⋊_φ ℝ y el sistema
 BC NO son literalmente isomorfos como C*-álgebras (BC usa el SEMIGRUPO ℕ^× y una álgebra de
 Hecke con isometrías no-unitarias μ_n; Kronecker usa el GRUPO ℝ con unitarios U_t y el flujo
 diagonal). Pero comparten **exactamente la estructura modular relevante**: el flujo dual/modular
@@ -528,7 +528,7 @@ parte RH-libre es la clase topológica de fase (signatura 0 efectiva sobre inerc
 la única orientación canónica no-plana porta ζ. No hay tercera opción canónica (§4.3: el peso
 plano no es canónico para el flujo de Kronecker). $\square$
 
-**[GAP declarado, honesto]:** el TEOREMA 161.9 descansa en (a) PUENTE 161-B (la identificación
+**[GAP declarado, franco]:** el TEOREMA 161.9 descansa en (a) PUENTE 161-B (la identificación
 de la partición del peso dual de Kronecker con ζ vía la analogía Bost–Connes; el CÁLCULO 161.5
 es elemental dado que el espectro es {log k}, pero la identificación literal del peso dual con el
 estado de Gibbs de H requiere que la condición de positividad/energía del peso dual seleccione
@@ -542,7 +542,7 @@ robusto a ambos GAP: es un teorema sobre dónde DEBE entrar ζ, no sobre un cál
 
 ### 5.3. Qué familia de approaches cierra esto
 
-El TEOREMA 161.9 cierra honestamente la familia: **"obtener la métrica de inercia de la
+El TEOREMA 161.9 cierra francamente la familia: **"obtener la métrica de inercia de la
 dualidad de Poincaré-NC / clase fundamental KK del producto cruzado de Kronecker (o de
 cualquier sistema cuya parte aritmética sea Bost–Connes)."** Incluye: la sugerencia DESEO 160.B;
 la lectura natural del marco adélico de Connes [Con99] restringido a la parte de fase
@@ -552,7 +552,7 @@ es el peso dual, cuyo flujo modular tiene función de partición ζ (Bost–Conn
 orientación de Poincaré-NC porta ζ por la teoría de Tomita–Takesaki.** No es un defecto técnico;
 es la identidad "función de partición del sistema BC = ζ" leída como obstrucción.
 
-**Lo que NO cierra (frontera honesta):** approaches donde el álgebra NO sea un producto cruzado
+**Lo que NO cierra (frontera franca):** approaches donde el álgebra NO sea un producto cruzado
 del flujo de los primos —p. ej., un triple espectral cuyo operador de Dirac D NO tenga espectro
 {log k} ni función de partición ζ, sino otro espectro cuya partición sea analítica y benigna,
 PERO cuyo carácter de Chern aún produzca κ=2m. Eso es el [GAP de literatura central] heredado de
@@ -620,7 +620,7 @@ símbolo/peso.**
 3. **[TEOREMA 161.9 — circularidad estructural] — No existe métrica de inercia canónica RH-libre
    sobre el producto cruzado de Kronecker; la canonicidad (orientación = peso dual) y la
    RH-libertad son incompatibles porque el peso dual tiene a ζ por función de partición.** Cierra
-   honestamente la familia de approaches "métrica de inercia vía dualidad de Poincaré-NC del
+   francamente la familia de approaches "métrica de inercia vía dualidad de Poincaré-NC del
    producto cruzado de los primos" (= DESEO 160.B, = Connes restringido a fase). El no-go es
    robusto a los dos GAP declarados (existencia en dim ∞; rigor del peso dual = Gibbs): si la
    clase no existe en dim ∞, no-go de nodo (i); si existe, no-go de nodo (ii). **Frontera viva

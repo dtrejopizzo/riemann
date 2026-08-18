@@ -25,7 +25,7 @@ Reconstrucción independiente. Con $\dot z_k=2\sum'_{j\ne k}(z_k-z_j)^{-1}$ y $g
 
 Reconstrucción de la saturación. Reticulado a paso $g_*$: el $m$-ésimo vecino a la derecha de $x_{k+1}$ dista $mg_*$ de $x_{k+1}$ y $(m+1)g_*$ de $x_k$; término $=\frac{2}{mg_*\cdot(m+1)g_*}=\frac2{g_*^2}\cdot\frac1{m(m+1)}$. Suma por lado: $\frac2{g_*^2}\sum_{m\ge1}\frac1{m(m+1)}=\frac2{g_*^2}$ (telescópica $=1$ ✓). Dos lados: $S=\frac4{g_*^2}$ ⟹ $\dot g=\frac4{g_*}-g_*\cdot\frac4{g_*^2}=0$ **exacto** ✓.
 
-Convención de signo del calor (ataque del mandato): el doc usa $\partial_tH=-\partial_z^2H$ (carta P15). Con $H=\cos(\lambda z)$: $-\partial_z^2\cos(\lambda z)=\lambda^2\cos(\lambda z)$ ⟹ $H_t=e^{t\lambda^2}\cos(\lambda z)$ — **consistente con la convención declarada del propio doc** (la advertencia del mandato sobre $e^{-\lambda^2t}$ corresponde a la convención opuesta; el doc detecta y aísla la discrepancia con el mandato en §0 honestamente). Los ceros no se mueven (factor escalar) ⟹ estacionariedad exacta ✓. La conclusión metodológica (ningún principio del mínimo desnudo cierra 177.B; hace falta conteo) es correcta y es además la que desactiva la heurística "$g^2\ge8t$, $\theta=\frac12$".
+Convención de signo del calor (ataque del mandato): el doc usa $\partial_tH=-\partial_z^2H$ (carta P15). Con $H=\cos(\lambda z)$: $-\partial_z^2\cos(\lambda z)=\lambda^2\cos(\lambda z)$ ⟹ $H_t=e^{t\lambda^2}\cos(\lambda z)$ — **consistente con la convención declarada del propio doc** (la advertencia del mandato sobre $e^{-\lambda^2t}$ corresponde a la convención opuesta; el doc detecta y aísla la discrepancia con el mandato en §0 francamente). Los ceros no se mueven (factor escalar) ⟹ estacionariedad exacta ✓. La conclusión metodológica (ningún principio del mínimo desnudo cierra 177.B; hace falta conteo) es correcta y es además la que desactiva la heurística "$g^2\ge8t$, $\theta=\frac12$".
 
 **Veredicto: CERTIFICADO.** Clasificación: CORRELACIONAL (no-go de calibración; no empuja, delimita).
 
@@ -63,7 +63,7 @@ Dos defectos:
 
 **Veredicto: DEGRADADO** (versión superviviente: desplazamiento $O(1)$ en tiempo $\le C'L^{-2}$, prueba por bootstrap a redactar). Clasificación: COERCIVO auxiliar.
 
-### 1.6. [Puente 178.5 / GAP-178.A] — estatus honesto ✓
+### 1.6. [Puente 178.5 / GAP-178.A] — estatus franco ✓
 
 (RvM-t) está declarado como GAP de literatura, marcado en cada uso. Nada que destruir; la auditoría añade (de §1.3) que **el valor de $C_0$ importa más de lo que el doc cree**: cualquier cierre futuro de GAP-178.A debe dar $C_0$ explícito porque los umbrales de gap del tipo $\frac1{2\rho}$ interactúan con $C_0$ (la refutación de 178.3 es la demostración).
 
@@ -106,7 +106,7 @@ El círculo pierde el exponente $\eta$ en cada vuelta. 178.10 es: **ida completa
 
 Verificación de "sin dinámica escondida": la prueba usa SOLO las dos desigualdades $b_j\ge c/\log\gamma_j$ (LP-134) y $b_j\le C(\log\gamma_j)^{-1-\eta}$ (178.C) e incompatibilidad para $\gamma_j\to\infty$ ✓ — aritmética de exponentes pura, ninguna apelación al flujo, a (RvM-t), a (R) ni a 177.B. El flujo es genealogía, no premisa. ✓ Observación de la auditoría que el doc no registra: **basta LP-134∞** (solo se necesita la incompatibilidad en infinitos $j$... de hecho en UNO por cada cola), lo que D179 §1 confirma después; la pinza es entonces 178.C ∧ LP-134∞ ⟹ $m<\infty$ — la forma óptima de la torre 2. El "auto-mejoramiento $n\le2$ gratis" pertenece a 178.8(2) (donde es legítimo, §1.8), no a 178.11, que no menciona $n$: la frase del veredicto de D178 está bien dirigida.
 
-**Veredicto: CERTIFICADO.** Clasificación: REDUNDANTE-lógico (modus tollens inmediato de sus dos premisas) pero arquitectónicamente central: es la deflación misma. La auditoría confirma que la deflación de la torre 2 a pinza estática ES legítima — condicionada solo a la honestidad de la genealogía (la ida de 178.10, que sobrevive).
+**Veredicto: CERTIFICADO.** Clasificación: REDUNDANTE-lógico (modus tollens inmediato de sus dos premisas) pero arquitectónicamente central: es la deflación misma. La auditoría confirma que la deflación de la torre 2 a pinza estática ES legítima — condicionada solo a la franqueza de la genealogía (la ida de 178.10, que sobrevive).
 
 ---
 
@@ -122,7 +122,7 @@ Verificación de "sin dinámica escondida": la prueba usa SOLO las dos desiguald
 
 ### 2.2. [Prop 179.3] CSV complejo — CERTIFICADO
 
-Dirección de la palanca contra CSV (ataque del mandato): Csordas–Smith–Varga prueban "par de Lehmer ⟹ cota INFERIOR de $\Lambda$" — hacia arriba. 179.3 es la versión compleja del mismo sentido: cuádruplo off ⟹ $\Lambda\ge t_c\ge\frac{b^2}{2n^2}(1-C\varepsilon)$. $\Lambda\ge t_c$ es por definición (ceros no reales para $t<t_c$) ✓; la cota de $t_c$ es 177.6 leído forward, citado ✓. **Cartas verificadas a mano:** la ley $b^2\le2n^2t_c$ es invariante bajo $(b,t)\mapsto(2b,4t)$ — $(2b)^2\le2n^2(4t)$ ⟺ $b^2\le2n^2t$ ✓; la declaración de D179 §0 ("las leyes $\beta^2=ct$ son invariantes de carta") es correcta, y es la razón por la que la mezcla de cartas de D178 (E-187.6) no muerde aquí. La lectura de saturación (la palanca trabaja hacia arriba; LP-134 necesita una prohibición hacia abajo; el techo $\Lambda\le0.22$ da $b\le n\sqrt{0.44}$, vacuo) es exacta y honesta ✓.
+Dirección de la palanca contra CSV (ataque del mandato): Csordas–Smith–Varga prueban "par de Lehmer ⟹ cota INFERIOR de $\Lambda$" — hacia arriba. 179.3 es la versión compleja del mismo sentido: cuádruplo off ⟹ $\Lambda\ge t_c\ge\frac{b^2}{2n^2}(1-C\varepsilon)$. $\Lambda\ge t_c$ es por definición (ceros no reales para $t<t_c$) ✓; la cota de $t_c$ es 177.6 leído forward, citado ✓. **Cartas verificadas a mano:** la ley $b^2\le2n^2t_c$ es invariante bajo $(b,t)\mapsto(2b,4t)$ — $(2b)^2\le2n^2(4t)$ ⟺ $b^2\le2n^2t$ ✓; la declaración de D179 §0 ("las leyes $\beta^2=ct$ son invariantes de carta") es correcta, y es la razón por la que la mezcla de cartas de D178 (E-187.6) no muerde aquí. La lectura de saturación (la palanca trabaja hacia arriba; LP-134 necesita una prohibición hacia abajo; el techo $\Lambda\le0.22$ da $b\le n\sqrt{0.44}$, vacuo) es exacta y franca ✓.
 
 **Veredicto: CERTIFICADO.** Clasificación: CORRELACIONAL (puente exacto pero saturado; el doc lo dice él mismo).
 
@@ -130,7 +130,7 @@ Dirección de la palanca contra CSV (ataque del mandato): Csordas–Smith–Varg
 
 **(1)** Álgebra: $b_j^2\le2n_j^2t_j(1+C\varepsilon)$ ⟹ $t_j\ge\frac{(b_j\log\gamma_j)^2}{2n_j^2}(\log\gamma_j)^{-2}(1-C\varepsilon)$ ✓; con testigos $b_j\log\gamma_j\ge c$ y $n_j\le n_0$: $t_j\ge c't_{\rm dif}$ ✓. Nótese: (1) da solo UNA dirección y **requiere $n_j\le n_0$ en la subsucesión testigo** — hipótesis no removida.
 
-**(2)** El "⟺" exacto vale SOLO bajo aislamiento ($n_j=2$, mar a distancia $\gg\sqrt{t_j}$), que es **hipótesis del enunciado**, no conclusión: dentro de ella, $t_j=\frac12b_j^2(1+o(1))$ ⟹ $\frac{t_j}{t_{\rm dif}}=\frac12(b_j\log\gamma_j)^2(1+o(1))$ y "$\limsup>0$ ⟺ $\ge c$ i.v." es insensible a constantes (lo que también neutraliza el descuido de las constantes $4\pi$ en $t_{\rm dif}:=(\log\gamma)^{-2}$ y los factores de carta — verificado: el cociente $t_j/t_{\rm dif}$ es invariante de carta, $t\mapsto4t$, espaciado$^2\mapsto4\,$espaciado$^2$) ✓. La cláusula "autoconsistente en ⟸" usa "genéricamente $n_j=2$" — palabra-comadreja, pero inocua porque el aislamiento ya está asumido en el enunciado de (2). **El veredicto §7.2 de D179 cuantifica honestamente** ("bajo las hipótesis de cluster del 177.6 y exactamente para aislados") — el mandato preguntaba si la cuantificación es honesta: SÍ, en el veredicto; el titular suelto "LP-134∞ ⟺ no todos los aterrizajes son sub-difusivos" debe llevar siempre la cláusula.
+**(2)** El "⟺" exacto vale SOLO bajo aislamiento ($n_j=2$, mar a distancia $\gg\sqrt{t_j}$), que es **hipótesis del enunciado**, no conclusión: dentro de ella, $t_j=\frac12b_j^2(1+o(1))$ ⟹ $\frac{t_j}{t_{\rm dif}}=\frac12(b_j\log\gamma_j)^2(1+o(1))$ y "$\limsup>0$ ⟺ $\ge c$ i.v." es insensible a constantes (lo que también neutraliza el descuido de las constantes $4\pi$ en $t_{\rm dif}:=(\log\gamma)^{-2}$ y los factores de carta — verificado: el cociente $t_j/t_{\rm dif}$ es invariante de carta, $t\mapsto4t$, espaciado$^2\mapsto4\,$espaciado$^2$) ✓. La cláusula "autoconsistente en ⟸" usa "genéricamente $n_j=2$" — palabra-comadreja, pero inocua porque el aislamiento ya está asumido en el enunciado de (2). **El veredicto §7.2 de D179 cuantifica francamente** ("bajo las hipótesis de cluster del 177.6 y exactamente para aislados") — el mandato preguntaba si la cuantificación es franca: SÍ, en el veredicto; el titular suelto "LP-134∞ ⟺ no todos los aterrizajes son sub-difusivos" debe llevar siempre la cláusula.
 
 **Pregunta despiadada del director (¿dos monedas o la misma?): LA MISMA.** Dado el modelo del cuádruplo (174.4/177.6), $t_j$ y $b_j$ son la misma cantidad en dos cartas ($t_j=\frac12b_j^2$): 179.4 es un **cambio de variables**, no un teorema-puente entre monedas independientes (contrástese con la ida de 178.10, que sí cruza de $t>0$ a $t=0$ vía el pliegue). Su valor es organizador (el eje único $t_j/t_{\rm dif}$ para las dos mitades de la torre), no probatorio. Todo el contenido no trivial vive en 174.4/177.6, que están aguas arriba.
 
@@ -149,9 +149,9 @@ El punto exacto que el mandato ordenaba atacar, y el ataque conecta. La proposic
 ### 2.5. Vías 1, 2 y 4 de D179 (§2.1, §3, §5) — CERTIFICADAS como consolidaciones
 
 - §2.1 (ceguera de la industria de densidad): consolidación de resultados citados, sin pasos nuevos que auditar; la lectura de 170.5 (holgura infinita bajo ¬LP-134∞) es correcta. ✓
-- §3 (Jensen/discriminante): el cálculo $\frac{2b^2}{w(w^2-b^2)}\asymp b^2/|w|^3$ vs ruido $O(\log\gamma)$ ⟹ resolución $|w|\lesssim b^{2/3}L^{-1/3}$ — verificado ($b^2/|w|^3\ge L\iff|w|\le b^{2/3}L^{-1/3}$ ✓). El [GAP-179.B] (Liouville para el discriminante de ξ) está honestamente declarado como ausente incluso conjeturalmente. ✓
+- §3 (Jensen/discriminante): el cálculo $\frac{2b^2}{w(w^2-b^2)}\asymp b^2/|w|^3$ vs ruido $O(\log\gamma)$ ⟹ resolución $|w|\lesssim b^{2/3}L^{-1/3}$ — verificado ($b^2/|w|^3\ge L\iff|w|\le b^{2/3}L^{-1/3}$ ✓). El [GAP-179.B] (Liouville para el discriminante de ξ) está francamente declarado como ausente incluso conjeturalmente. ✓
 - §5.1: **errata** — "¬LP-134∞ fuerza $\sum b_j^2<\infty$" es falsa sin tasa de crecimiento de $\gamma_j$ (contraejemplo: $\gamma_j=e^{\sqrt j}$, $\varepsilon_j=1/\log j$: $\sum\varepsilon_j^2/j$ converge... tómese $\varepsilon_j\to0$ tan lento que $\sum\varepsilon_j^2(\log\gamma_j)^{-2}=\sum\varepsilon_j^2/j=\infty$ — posible). El propio paréntesis del doc contiene la corrección ("convergente si $\gamma_j\gg e^{j^{1/2+}}$"); el enunciado principal debe llevar la condición. Sin impacto: el uso (compatibilidad con 170.5 y con Littlewood) solo necesita la versión de la esquina (γ superexponenciales), donde es cierta. **E-187.7.**
-- §5.2 + [GAP-179.A]: la observación de que la señal del enemigo mínimo es $o((b_jL_j)^2)\to0$ — i.e. que debilitar la hipótesis ENCARECE la verificación analítica — es correcta y es la moraleja estructural honesta del documento. ✓
+- §5.2 + [GAP-179.A]: la observación de que la señal del enemigo mínimo es $o((b_jL_j)^2)\to0$ — i.e. que debilitar la hipótesis ENCARECE la verificación analítica — es correcta y es la moraleja estructural franca del documento. ✓
 - [Conj 179.6]: registro limpio, sin pretensión de progreso. ✓
 
 ---
@@ -165,7 +165,7 @@ El punto exacto que el mandato ordenaba atacar, y el ataque conecta. La proposic
 | Lema 178.3 (bloques cortos) | **REFUTADO** | — | troceo no cierra; reticulado a paso $\frac1{2\rho}$ es RvM-t-consistente; **sin impacto: 178.4 no lo usa** (E-187.1) |
 | Thm 178.4/178.4′ | **CERTIFICADO-CON-ERRATA** | COERCIVO condicional | agujero de borde reparable (E-187.2); banda exacta ✓ |
 | Lema 178.6 (deriva) | **DEGRADADO** | COERCIVO auxiliar | velocidad falsa; desplazamiento $O(1)$ recuperable (E-187.3) |
-| Puente 178.5 / GAP-178.A | estatus honesto | — | $C_0$ explícito ahora obligatorio (lección de 178.3) |
+| Puente 178.5 / GAP-178.A | estatus franco | — | $C_0$ explícito ahora obligatorio (lección de 178.3) |
 | Thm 178.7 | **CERTIFICADO-CON-ERRATA** | MIXTO | ventanas ±5/±10 (E-187.4) |
 | Prop 178.8 | **CERTIFICADO-CON-ERRATA** | COERCIVO | "incondicional" matizado: insumo de conteo $n\le C\sqrt t\log\gamma$ (E-187.5); $n\le2$ legítimo |
 | Cor 178.9 (calibración) | **CERTIFICADO** (cond. 178.8) | CORRELACIONAL | VK-comparación correcta |
@@ -175,7 +175,7 @@ El punto exacto que el mandato ordenaba atacar, y el ataque conecta. La proposic
 | Prop 179.3 (CSV complejo) | **CERTIFICADO** | CORRELACIONAL (saturado) | cartas invariantes verificadas |
 | Thm 179.4 (diccionario) | **CERTIFICADO-CON-ERRATA** | REDUNDANTE-organizador | misma moneda (cambio de variables vía 174.4); cláusula de aislamiento obligatoria en el titular |
 | Prop 179.5 (inevitabilidad) | **DEGRADADO** | MIXTO | superviviente: imposibilidad para leyes dinámicas; con 177.B en la lista: condicional a verificar 177.B en la config (no hecho) |
-| GAP-179.A / 179.B / Conj 179.6 | bien planteados | — | honestidad confirmada |
+| GAP-179.A / 179.B / Conj 179.6 | bien planteados | — | franqueza confirmada |
 
 ## 4. Impacto aguas abajo
 

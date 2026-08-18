@@ -1,0 +1,17 @@
+{
+  "schema": "phase114-d77-log3-endpoint-v1",
+  "generator": "114_d_77_log3_legendre_arb_verify.py",
+  "support_endpoint": "log(3)/2",
+  "gamma_depth": 80,
+  "legendre_degree": 9,
+  "cells": [28, 20, 28],
+  "parity_dimension": 380,
+  "projected_lower_gt": "-0.00050",
+  "high_block_lower_gt": "1.8997318247",
+  "schur_loss_lt": "0.000003961",
+  "tail_even_gt": "0.0011586663336",
+  "tail_odd_gt": "0.0006199539287",
+  "final_even_gt": "0.0006547053",
+  "final_odd_gt": "0.0001159929",
+  "status": "PASS"
+}

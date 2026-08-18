@@ -59,7 +59,7 @@ apareamiento inducido por la dualidad de Serre con tolerancia en el punto autodu
 D₀ = −{2}. Finito, en la categoría de CC, dos salidas limpias.
 
 **Síntesis (§4):** G1 es "ellos ya casi lo tienen y no lo han cruzado" (años); G2 es
-"nadie tiene una signatura en ninguna parte del corpus" (sin cota superior honesta de
+"nadie tiene una signatura en ninguna parte del corpus" (sin cota superior franca de
 tiempo); y el cuantificador maestro reaparece, en lenguaje geométrico, en exactamente
 dos lugares identificados: la uniformización semilocal→global y la pertenencia de clase
 de Krein–Langer.
@@ -295,7 +295,7 @@ w(c_ρ) ∈ ℤ computable por pertenencia a graduado/signo bajo forma/clase alg
 la corta — sin mencionar ρ. **[DATO]** (Doc 110 Thm 4.3(b); Doc 108 §7.4): dentro de la
 clase ℱ esto es imposible; el gap es construir la categoría DONDE sea posible.
 
-**(d) [CONJETURA-INTERFAZ]** Ninguna corta y honesta. La más cercana es la composición
+**(d) [CONJETURA-INTERFAZ]** Ninguna corta y franca. La más cercana es la composición
 de los cruces A y B: forma del punto autodual (mecanismo) + H¹ del cuadrado con
 tolerancia (portador) + signo bajo la forma como definición de w. Tres eslabones, dos de
 ellos conjeturas a su vez. Se declara la cadena, no se acorta.
@@ -509,7 +509,7 @@ forma sobre un solo espacio, construida así:
   construcción de B en cualquier punto fijo de σ módulo equivalencia (∀ D con 2D ~ K),
   y los falsadores F-A1–F-A3 son preguntas sobre TODA la categoría ΓT∗, no sobre un
   objeto que codifique ζ.
-- **NC3/NC4:** NO EVALUABLES aún — y esta es la calificación honesta: la forma del
+- **NC3/NC4:** NO EVALUABLES aún — y esta es la calificación franca: la forma del
   cruce A, si existe, es un teorema de SU geometría (dimensión 1), y precisamente por
   eso **no individúa ceros**: H¹(D₀) no porta clases c_ρ. La positividad/signatura de
   B sería matemática de CC, no RH-disfrazada — porque está demasiado lejos de ζ para
@@ -806,7 +806,7 @@ y la especificación de la polarización pasa a ser el problema número uno del 
 
 ---
 
-## 4. SÍNTESIS HONESTA
+## 4. SÍNTESIS FRANCA
 
 ### 4.1. ¿Años o décadas?
 
@@ -819,7 +819,7 @@ Separando por nodo, sin promediar lo imparangonable:
   con el equipo CC activo (papers de 2025 y 2026 en el corpus), el orden razonable es
   años, no décadas. Misma categoría: R-LEF-POLO, R-LEF-REG, la mitad dinámica de
   R-LEF-FLUJO.
-- **G2 (mecanismo): sin cota superior honesta.** No hay UNA signatura en todo el corpus
+- **G2 (mecanismo): sin cota superior franca.** No hay UNA signatura en todo el corpus
   CC (búsqueda negativa verificada, Doc 120 §7.7); no hay forma sobre un solo espacio;
   no hay polarización; y el precedente clásico advierte que la dualidad sola
   (probablemente alternante en grado 1) no basta — hace falta el análogo de la teoría
@@ -827,7 +827,7 @@ Separando por nodo, sin promediar lo imparangonable:
   — CON una excepción medible: el experimento 121.E puede convertir "nadie tiene idea"
   en "se sabe exactamente qué ingrediente falta", que es un estado epistémico
   estrictamente mejor. Decir "décadas" aquí sería fingir una estimación que no tenemos;
-  lo honesto es: G2 no está acotado por trabajo de tipo conocido.
+  lo franco es: G2 no está acotado por trabajo de tipo conocido.
 
 La distancia G1→G2 total es, por tanto, la suma de un tramo corto medible y un tramo no
 medible. Quien pregunte "¿cuánto falta?" debe recibir esta respuesta de dos partes, no

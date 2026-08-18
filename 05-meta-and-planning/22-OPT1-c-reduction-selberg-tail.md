@@ -50,7 +50,7 @@ $c$ is exactly the cost of converting *typical* $\log\log T$ control into *unifo
 - a Montgomery--Vaughan **weighted** large sieve, replacing the boxcar $\widehat\phi$ by a smooth majorant and
   using $F\ge0$ to drop the negative part, reduces the lossy power but does not reach $c=0$.
 
-> **Net (honest).** The $|\alpha|<1$ part is unconditionally $O(N)$ (no loss). The entire loss is the **uniform**
+> **Net (candid).** The $|\alpha|<1$ part is unconditionally $O(N)$ (no loss). The entire loss is the **uniform**
 > high-frequency form factor $\int_{1}^{A}F(\alpha)\,d\alpha$, for which positivity $+$ Selberg give *typical*
 > $\log\log T$ but only *power-of-$\log$* uniform control. **Reducing $c$ $=$ improving the uniform-vs-typical
 > conversion at $|\alpha|\ge1$**, which is the Goldston--Montgomery short-interval prime variance — a recognized
@@ -127,7 +127,7 @@ Everything beyond this --- removing the exceptional set entirely, i.e. the unifo
 > is unconditionally semibounded with the clean constant for all heights outside a super-polynomially thin set of
 > anomalous-cluster heights, and semibounded up to a logarithmic power everywhere.} Further reduction of the
 > exceptional set is the recognized sub-RH frontier and is the point at which specialized ANT, not the program's
-> own machinery, must take over. This is the honest stopping point — a genuine unconditional theorem with the
+> own machinery, must take over. This is the candid stopping point — a genuine unconditional theorem with the
 > residue named and located, not a circle.
 
 ---

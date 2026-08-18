@@ -223,7 +223,7 @@ Luego $|S_n^{(2)}| \lesssim \frac{\lambda^2}{\gamma_n^2 L^3\delta_n} = O\!\left(
 
 Con $\delta_n \sim L^{-1}$ (genérico): $|S_n^{(2)}| = O(\lambda^2/(\gamma_n^2(\log\lambda)^2))$ — crece con $\lambda$, NO decae.
 
-**Diagnóstico honesto:** El argumento de momentos iterado, combinado con cotas crudas sobre $|\Delta_m|$, no da decaimiento de $S_n$ por sí solo. La convergencia de $S_n \to 0$ requiere un ESTIMADO MÁS FINO de los coeficientes $\Delta_m$.
+**Diagnóstico franco:** El argumento de momentos iterado, combinado con cotas crudas sobre $|\Delta_m|$, no da decaimiento de $S_n$ por sí solo. La convergencia de $S_n \to 0$ requiere un ESTIMADO MÁS FINO de los coeficientes $\Delta_m$.
 
 ---
 

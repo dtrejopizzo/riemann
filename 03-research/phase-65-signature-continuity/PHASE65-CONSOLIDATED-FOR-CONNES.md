@@ -10,7 +10,7 @@
 > - **Flagged ledger (§6):** L1 uniform Gram bound (=G4 Carleson), L2 per-word Tate identity, L3 `−ζ'/ζ=ΣΛ(n)n^{−s}` paired — all `Re s>1`, all zero-free. **The location of the zeros enters nowhere in L1–L3.**
 > - **DH (not gated):** breaks at §2 — signed `H^χ` is Pontryagin, not a bounded self-adjoint Hilbert resolvent.
 
-> **Honest posture:** not asserted as a verified/peer-reviewed proof — a complete, RH-free chain modulo three named standard estimates in the half-plane of absolute convergence, handed to Connes + the user to audit.
+> **Candid posture:** not asserted as a verified/peer-reviewed proof — a complete, RH-free chain modulo three named standard estimates in the half-plane of absolute convergence, handed to Connes + the user to audit.
 
 > **Corrections applied:** R1 (no Euler product; 7 fixes), R2 (no-emergence; wall → strong-resolvent across strip), R3 (Check 4 must be a theorem — now proved via word expansion; fixes A–E: Schur-resolvent identity, Pick-form block 5, Check-3-via-words, endpoint richness, D9 sign).
 
@@ -25,7 +25,7 @@
 **Phase 65 / Signature-Continuity Package.** Connes audited the D0–D12 package and found several genuine
 errors and one major structural correction. **All are accepted**; none is contested (each is verified
 below). This document records the corrections, the repairs, and — most importantly — the corrected
-honest status of the load-bearing input, now split **D8.5a / D8.5b**. The package is *not* "reduced to
+candid status of the load-bearing input, now split **D8.5a / D8.5b**. The package is *not* "reduced to
 one benign statement"; it is reduced to a statement that is **logically RH-strength**, with the RH-strength
 concentrated in the endpoint identification D8.5b.
 
@@ -59,7 +59,7 @@ Source-determinant convergence then follows formally by the determinant lemma + 
 
 ---
 
-## 1. The corrected honesty: D8.5 *is* RH-strength; the split D8.5a / D8.5b
+## 1. The corrected candor: D8.5 *is* RH-strength; the split D8.5a / D8.5b
 
 \textbf{My over-claim (retracted).} "We believe D8.5 is not RH-strength (it is term-by-term on
 approximants, the pole is shorted, it uses $\Lambda\ge0$)."
@@ -79,7 +79,7 @@ where the RH-strength hides}, and it coincides with the M3 "endpoint identificat
 corrected D9 (see §2.F).
 \end{itemize}
 
-\textbf{Net.} My three structural reasons argue for D8.5a (benign), not for D8.5b. The honest position:
+\textbf{Net.} My three structural reasons argue for D8.5a (benign), not for D8.5b. The candid position:
 D8.5a is plausibly genuinely local; D8.5b carries the RH-strength. The package's real content is D8.5b.
 
 ---
@@ -185,12 +185,12 @@ D10 $\Lambda\ge0$ & needed for D6/D7; useful (not logically required) for D8.5 \
 \textbf{D8.5a} (marked Tate/Binet conv.) & open, plausibly genuinely local \\
 \textbf{D8.5b} (endpoint $=\mathsf K_\Xi^{\mathrm{G5}}$) & open, \textbf{carries the RH-strength} \\
 \hline
-\textbf{Package} & $\textbf{D8.5a}\wedge\textbf{D8.5b}\Rightarrow$ RH; honest split made \\
+\textbf{Package} & $\textbf{D8.5a}\wedge\textbf{D8.5b}\Rightarrow$ RH; candid split made \\
 \hline
 \end{tabular}
 \end{center}
 
-\textbf{Bottom line (corrected, honest).} The package still reduces RH to the convergence
+\textbf{Bottom line (corrected, candid).} The package still reduces RH to the convergence
 $G_P^\circ\to G_\Xi^{\mathrm{G5}}$, but: (i) the route is the Green-matrix determinant lemma, not a
 sourced Euler product; (ii) seven specific errors (A–G) are fixed; (iii) the load-bearing statement is
 **logically RH-strength**, with the strength isolated in **D8.5b** (endpoint identification), exactly
@@ -341,7 +341,7 @@ the proved inputs (G1–G5, Phases 60–64) to RH, assembled from the package do
 theorem (D8.5d) and Connes' audit fixes A–E applied. Every load-bearing step lives in the
 absolute-convergence region `Re s > 1` (no zeros) or is automatic from self-adjointness — the structural
 guarantee that no step encodes RH. We prove the remaining sub-lemma (endpoint-source richness, Check 5 /
-fix D) here, then close, then give the honest flagged-items ledger.
+fix D) here, then close, then give the candid flagged-items ledger.
 
 > **Status.** The spine is complete and RH-free. What remains are standard analytic estimates in
 > `Re s > 1` (the flagged ledger, §6), none of which can encode zero locations. We present this for audit
@@ -417,7 +417,7 @@ and by G5,
 
 ---
 
-## §6. The honest flagged-items ledger
+## §6. The candid flagged-items ledger
 
 The spine (§2–§5) is complete. The following are the residual analytic estimates not written in full
 detail; **each lives in `Re s > 1` and uses only `Λ ≥ 0` / G4 — none can encode zero locations.** We list
@@ -684,7 +684,7 @@ construction, line by line) and the Davenport–Heilbronn remark.
 
 > **Audit posture.** Every step below is tagged **[THEOREM]** (proved here or from cited proved results)
 > or **[CONSTRUCTION]** (a definition we *make*, with full creative freedom, to be scrutinized). The one
-> load-bearing construction is §D (Check 4). The honesty of the whole is: §D is where to look.
+> load-bearing construction is §D (Check 4). The candor of the whole is: §D is where to look.
 
 ---
 
@@ -839,7 +839,7 @@ resolvent} is the construction.
 \end{remark}
 
 \begin{auditbox}[\textbf{the decisive verdict — does §D secretly assume RH?}]
-\textbf{Honest analysis.} The identity $\mathcal W^\circ=G_\Xi^{\mathrm G5}$ \emph{on $U_-$} does
+\textbf{Candid analysis.} The identity $\mathcal W^\circ=G_\Xi^{\mathrm G5}$ \emph{on $U_-$} does
 \textbf{not} assume RH: it is the explicit formula in the half-plane of absolute convergence, where there
 are \emph{no} zeros, so no zero-location information enters. The construction $\iota$ realizes the marked
 pairing as a compressed resolvent of the \emph{self-adjoint} $A_P$ — and self-adjointness of the
@@ -902,7 +902,7 @@ Check 5 (residue-detecting) & \textbf{[THEOREM]} & D2 density (non-circular) \\
 \end{center}
 
 \begin{resultbox}
-\textbf{Honest end-state for audit.} D8.5 — hence RH — is closed \textbf{modulo the single construction §D}
+\textbf{Candid end-state for audit.} D8.5 — hence RH — is closed \textbf{modulo the single construction §D}
 (Check 4): the realization of the marked Tate–Weil pairing as a uniform, fixed-channel, self-adjoint
 \emph{compressed resolvent}. Everything else (the Vitali bridge, the compressed-resolvent bound and
 Herglotz property, the fixed channel, convergence below the strip, residue-detection, the assembly) is a
@@ -1515,7 +1515,7 @@ N1 at the operator level — the finite-dimensional template being Stage 1, S1).
 # D2 — Sourced determinant calculus: the object that reads the signature
 
 **Phase 65 / Signature-Continuity Package, deliverable D2.** Pure mathematics, full proofs. This is the
-first genuinely new object. Its motivation is exactly the honest obstruction our M3 found:
+first genuinely new object. Its motivation is exactly the candid obstruction our M3 found:
 
 > **M3 (preserved).** At the *scalar* determinant level, signature-continuity is RH-strength: scalar
 > convergence $D_P\to\Xi$ does **not** force kernel/index convergence, because the scalar determinant is
@@ -1723,7 +1723,7 @@ All other D2 results are proved in full above.
 - **Source richness** (Lemma~\ref{lem:rich}): the primitive sources determine the whole primitive kernel,
   so sourced convergence will mean genuine kernel convergence, not subspace convergence.
 
-The honest status is exactly right: D2 does not prove RH; it builds the *instrument* that makes the
+The candid status is exactly right: D2 does not prove RH; it builds the *instrument* that makes the
 signature visible to a limit, so that the decisive D8 convergence can be about the *kernel* (index-aware)
 rather than the *scalar determinant* (index-blind). Next: D3 packages $(D,\mathcal D^{\mathrm{src}},
 \mathsf K,\mathfrak b,\mathcal R)$ into the category $\mathcal G$ with index as a functor.
@@ -2217,7 +2217,7 @@ K_\Xi^{\mathrm{G5}}$) is D8/D9.
 # D6 — Positive-pole closedness: index zero is closed in $\tau_\kappa$
 
 **Phase 65 / Signature-Continuity Package, deliverable D6.** Pure mathematics, full proofs. This is M3 in
-its correct form. It absorbs and supersedes `M3-signature-closedness.md` — whose honest finding (closedness
+its correct form. It absorbs and supersedes `M3-signature-closedness.md` — whose candid finding (closedness
 is RH-strength *at the scalar level*) is exactly *why* D2–D5 moved everything to the sourced/kernel level.
 With the D4 shorting and the D5 kernel topology, closedness becomes a clean **Schur-complement positivity
 theorem**: a $\tau_\kappa$-limit of positive shorted kernels is positive. The decisive arithmetic content
@@ -2290,7 +2290,7 @@ Thm~\ref{thm:closed} suffices.
 
 ---
 
-## §3. Acceptance criteria (the honesty gate for D6)
+## §3. Acceptance criteria (the candor gate for D6)
 
 D6 is accepted only if its proof uses exactly: (i) positivity of the finite kernels $\mathsf K_i$ (G2);
 (ii) positivity of the pole line (G4); (iii) Feshbach shorting (D4, not subtraction); (iv) pointwise
@@ -2319,7 +2319,7 @@ is closed; D9 = the closed-positive limit *is* the $\Xi$ kernel.
   bound.
 - **Upper semicontinuity** of the index in general (Thm~\ref{thm:usc}); continuity via the divisor at
   $\kappa>0$ (for D10).
-- The honest localization, completing the M3 story: **closedness is free; the entire remaining content is
+- The candid localization, completing the M3 story: **closedness is free; the entire remaining content is
   the convergence τ3 of the arithmetic shorted kernels to the fixed endpoint** — D8 (that they converge)
   and D9 (that the limit is $\mathsf K_\Xi^{\mathrm{G5}}$).
 
@@ -2434,13 +2434,13 @@ mathematical burden of the package.
 **Phase 65 / Signature-Continuity Package, deliverable D8.** Pure mathematics. This is the whole
 mathematical burden of the package: upgrade the *scalar* convergence G3 ($D_P^\circ\to\Xi$) to *sourced,
 pole-shorted kernel* convergence. We structure it into Connes/Consani's seven subclaims, **prove the five
-that are genuinely provable from G3+G4 + the machinery D2–D7**, and **isolate with full honesty the one
+that are genuinely provable from G3+G4 + the machinery D2–D7**, and **isolate with full candor the one
 load-bearing input** (D8.5, the source-level local-factor identity) that is the real new analytic content
 — the upgrade of Tate's local computation and the Binet archimedean cell from the scalar determinant to
 the sourced determinant germ. We do **not** fake this input; we state it precisely, record what
 Connes/Consani report about its status, and prove that *given* it the package closes.
 
-> **Honest framing.** D8 reduces RH to a single, concrete, checkable analytic statement (D8.5). Subclaims
+> **Candid framing.** D8 reduces RH to a single, concrete, checkable analytic statement (D8.5). Subclaims
 > D8.1–8.3, 8.6–8.7 are proved here in full. D8.4 follows from D8.5. D8.5 itself is the genuine crux; it
 > is flagged in the `ASSUMED` ledger (§9), not asserted as our own theorem.
 
@@ -2574,7 +2574,7 @@ locally uniformly, meromorphically with divisor control. Then D8.5 (sourced-germ
 Lemma~\ref{lem:detlemma} + G3.
 \end{theorem*}
 
-\begin{redflag}[honest status — the a/b split, Connes R1 §1]
+\begin{redflag}[candid status — the a/b split, Connes R1 §1]
 D8.5$'$ splits, and the RH-strength is \emph{not} uniformly spread:
 \begin{itemize}
 \item \textbf{D8.5a — marked Tate/Binet convergence.} $G_P^\circ(z)$ converges (to \emph{some} limit) via
@@ -2631,7 +2631,7 @@ shorted kernels converge to $\mathsf K_\Xi^{\mathrm{G5}}$.
 
 ---
 
-## §10. What D8 establishes, honestly
+## §10. What D8 establishes, candidly
 
 - **Proved in full (from G3+G4+D2–D7):** D8.1 (source algebra), D8.2 (Feshbach source factorization),
   D8.3 (primitive compactness/normality from G4), D8.4 (coefficient convergence $\Rightarrow$ germ
@@ -2642,7 +2642,7 @@ shorted kernels converge to $\mathsf K_\Xi^{\mathrm{G5}}$.
   `ASSUMED` ledger; Connes/Consani report it tested; we have not independently re-derived it.
 - **Net:** Phase 65 reduces RH to the single concrete statement D8.5 (plus D9's identification of the
   limit with the *fixed* $\mathsf K_\Xi^{\mathrm{G5}}$). Everything else in D0–D8 is proved. This is the
-  honest position: not a proof of RH by us, but a complete reduction to one checkable analytic input,
+  candid position: not a proof of RH by us, but a complete reduction to one checkable analytic input,
   with no scalar-only inference, no faked convergence, no endpoint reassignment.
 
 Next: D9 (the limit kernel is the *fixed* $\mathsf K_\Xi^{\mathrm{G5}}$, by differentiation — the second
@@ -2670,9 +2670,9 @@ matrices (block 7), and extend to all finite source planes (block 8).
 > `ASSUMED` ledger (D8.5a): two flagged technical inputs (G4 box bound in block 5; Schwartz–Bruhat
 > density in block 2), both unconditional and named in §2/§5. No RH, no zero locations.
 
-> **Honest scope.** D8.5a is the part our heuristics actually support (term-by-term on explicit finite
+> **Candid scope.** D8.5a is the part our heuristics actually support (term-by-term on explicit finite
 > local factors; pole shorted; sign-aware tail estimate). Whether it is *genuinely* RH-free is checked at
-> the block-5 honesty checkpoint (§5). The RH-strength, if any, is deferred to D8.5b.
+> the block-5 candor checkpoint (§5). The RH-strength, if any, is deferred to D8.5b.
 
 ---
 
@@ -2801,7 +2801,7 @@ kernel). Hence $\sum_{Q<p^k\le P}\Pi_{p,k}\to0$, and the tail of $G_{p,k}^\circ$
 integrating the Pick kernel along a ray from $\infty$ (where $G\to0$, R4), giving the stated norm tail.
 $\square$
 
-\begin{auditbox}[\textbf{honesty checkpoint — is block 5 secretly RH-strength?}]
+\begin{auditbox}[\textbf{candor checkpoint — is block 5 secretly RH-strength?}]
 The estimate uses (i) the \emph{unconditional} smooth Carleson/box bound (G4 — proved in Phase 64 without
 RH) and (ii) the \emph{positivity} of the local cells ($\Lambda\ge0$, G2). Neither uses the location of
 the zeros of $\Xi$. The sum $\sum G_{p,k}^\circ$ is a sum of \emph{positive} primitive Gram blocks with
@@ -2891,7 +2891,7 @@ $G_P^\circ\to G^{\lim}$ on $F$. $\square$
 G^{\lim}(z)$, for every finite primitive source plane, meromorphically with divisor control — built from
 the marked local Tate identity, primitive pole cancellation, the primitive marked tail estimate (the
 analytic heart, genuinely local: G4 + $\Lambda\ge0$ Schur–Cauchy–Schwarz), the source-level Binet
-identity, and additive assembly. \emph{Honesty checkpoint passed:} no hidden RH-strength in blocks 1–8;
+identity, and additive assembly. \emph{Candor checkpoint passed:} no hidden RH-strength in blocks 1–8;
 the work rests on the unconditional smooth Carleson bound and finite positivity.
 \end{resultbox}
 
@@ -2902,7 +2902,7 @@ and it is where the RH-strength is concentrated (Connes R1 §1). D8.5a alone yie
 at $V=0$ (G3) plus convergence of the marked Green matrices to a limit whose identity is open.
 \end{redflag}
 
-Next: D8.5b (block 9) — prove $G^{\lim}=G_\Xi^{\mathrm{G5}}$, with the decisive honesty gate.
+Next: D8.5b (block 9) — prove $G^{\lim}=G_\Xi^{\mathrm{G5}}$, with the decisive candor gate.
 
 
 ---
@@ -2910,7 +2910,7 @@ Next: D8.5b (block 9) — prove $G^{\lim}=G_\Xi^{\mathrm{G5}}$, with the decisiv
 
 <!-- ===================== D8.5b-ENDPOINT-IDENTIFICATION.md ===================== -->
 
-# D8.5b — Endpoint identification (block 9): the decisive crux, and the honest gate
+# D8.5b — Endpoint identification (block 9): the decisive crux, and the candid gate
 
 > **⚠ VERDICT CORRECTED (Connes R2 — see `CORRECTIONS-CONNES-R2.md`).** The "outcome (ii): D8.5b-ii is
 > RH-strength" conclusion below is **withdrawn**. By the interior no-emergence lemma (Cauchy), an
@@ -2928,7 +2928,7 @@ Next: D8.5b (block 9) — prove $G^{\lim}=G_\Xi^{\mathrm{G5}}$, with the decisiv
 **Phase 65 / Signature-Continuity Package, deliverable D8.5b.** Pure mathematics. This is block 9 — the
 identification of the D8.5a limit $G^{\lim}$ with the *fixed* endpoint resolvent $G_\Xi^{\mathrm{G5}}$ —
 and it is where the RH-strength is concentrated (Connes R1 §1). We prove the identification *as
-meromorphic objects* (it plausibly holds, and we give the argument), then run the **decisive honesty
+meromorphic objects* (it plausibly holds, and we give the argument), then run the **decisive candor
 gate** of the plan: does the identification, combined with D8.5a and D6, actually yield $\kappa(\Xi)=0$
 (RH), or does it require an extra input that is itself RH-strength? The cold verdict is **outcome (ii)**:
 the route is an exact, clean reformulation, but the RH-strength is real and is now localized with full
@@ -2936,7 +2936,7 @@ precision — to the **convergence of the principal parts (the divisor) at the o
 where the positive approximants fail to converge. This matches M3 and Connes' own prediction. No false
 victory.
 
-> `ASSUMED` ledger (D8.5b): inherits D8.5a. The new content is the honest analysis of where positivity
+> `ASSUMED` ledger (D8.5b): inherits D8.5a. The new content is the candid analysis of where positivity
 > stops; no RH, no faked closure.
 
 ---
@@ -2972,7 +2972,7 @@ genuine $\Xi$-resolvent, not some impostor with the same scalar determinant. But
 
 ---
 
-## §2. The decisive honesty gate
+## §2. The decisive candor gate
 
 We must determine whether D8.5b $+$ D8.5a $+$ D6 yields $\kappa(\Xi)=0$. They do **not**, and here is the
 exact reason.
@@ -3029,7 +3029,7 @@ proven at the level of the marked Green matrices.}
 ## §3. The gate verdict, stated plainly
 
 \begin{resultbox}
-\textbf{Outcome (ii) of the plan's honesty gate.} Block 9 (D8.5b) splits cleanly:
+\textbf{Outcome (ii) of the plan's candor gate.} Block 9 (D8.5b) splits cleanly:
 \begin{itemize}
 \item \textbf{Identification (Thm~\ref{thm:idmero}):} $G^{\lim}=G_\Xi^{\mathrm{G5}}$ as meromorphic
 objects — plausibly unconditional; the limit is the genuine $\Xi$-resolvent. \emph{This part is real and
@@ -3063,8 +3063,8 @@ poles," \emph{without} assuming uniform convergence there. Everything in the pro
 exactly the wall: positivity (a $\mathcal N_0$/Herglotz statement) is *compatible* with off-$\R$ poles in
 a non-uniform limit, so it cannot exclude them by itself.
 
-\begin{remark}[honest status of the whole package, after D8.5]
-D8.5a (blocks 1–8) is proved and genuinely local (no hidden RH-strength; honesty checkpoint passed).
+\begin{remark}[candid status of the whole package, after D8.5]
+D8.5a (blocks 1–8) is proved and genuinely local (no hidden RH-strength; candor checkpoint passed).
 D8.5b's *identification* (Thm~\ref{thm:idmero}) is real. D8.5b's *index conclusion* is **RH-strength**
 (Thm~\ref{thm:gate}), localized to divisor convergence at the off-line poles (Thm~\ref{thm:residue}). So
 the Signature-Continuity Package is an exact reformulation of RH whose irreducible core is the
@@ -3086,7 +3086,7 @@ divisor-convergence phenomenon, and proves everything around it.
 - **The precise residue** (Thm~\ref{thm:residue}): RH $\Leftrightarrow$ the marked Weil distribution has
   no off-$\R$ principal parts — the irreducible core, the M3 wall at finest resolution.
 
-This closes the D8.5 attack with a cold, honest verdict: **D8.5a holds; D8.5b's identification holds;
+This closes the D8.5 attack with a cold, candid verdict: **D8.5a holds; D8.5b's identification holds;
 D8.5b's index conclusion is RH-strength.** The package is an exact reformulation, not a reduction. Next:
 propagate this verdict to D8/D9/D11/D12 (the assembly is conditional on the off-line divisor vanishing,
 not on a benign input), and record the residue as the program's current frontier.
@@ -3237,7 +3237,7 @@ renormalization — exactly the two-Hamiltonians gap of Phase 64, now in resolve
 
 ---
 
-## §6. Honest status and the question for Connes
+## §6. Candid status and the question for Connes
 
 \textbf{Established (unconditional):} each $A_P^\circ$ is self-adjoint; $G_P^\circ$ is a normal family
 ($\le1/|\Im z|$); $G_P^\circ\to G_\Xi^{\mathrm G5}$ genuinely for $\Im z<-\tfrac12$ (below the strip);
@@ -3332,7 +3332,7 @@ object, and that showing is D8.5b, not a definition.
 
 ## §3. The role of D8.5 in the identification
 
-\begin{remark}[honest dependency]
+\begin{remark}[candid dependency]
 Theorem~\ref{thm:a3} rests on D8.5: the *first variation* of the limit germ must be the $\Xi$-system's
 primitive resolvent response $\langle R_\Xi u,v\rangle$ (so that its Weyl function is $-\Xi'/\Xi$). D8.5 is
 exactly what supplies this (the source-level local factors assemble to the $\Xi$-resolvent, not to some
@@ -3349,7 +3349,7 @@ validity of D8.5.
 - **A3** (Thm~\ref{thm:a3}, conditional on D8.5): the limit kernel *is* the fixed $\mathsf K_\Xi^{\mathrm{G5}}$,
   by differentiation of the identified limit germ — not by assignment.
 - Hence $\kappa(A_\infty)=\kappa(\Xi)$, connecting the *constructed* limit index to the *given* G5 index.
-- The honest dependency: D9 = D8.5 cashed out; the endpoint identification is the second face of the one
+- The candid dependency: D9 = D8.5 cashed out; the endpoint identification is the second face of the one
   load-bearing input. D6 (positivity closed) + D9 (limit is the $\Xi$ kernel) together give
   $\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0$, i.e. $\kappa(\Xi)=0$ — assembled in D11.
 
@@ -3469,7 +3469,7 @@ Next: D11 (assembly), D12 (audit — recording D8.5 as load-bearing and the DH c
 
 **Phase 65 / Signature-Continuity Package, deliverable D11.** Pure mathematics. The final deduction. It is
 short: once D0–D10 are in place, RH is a one-line corollary, **conditional on the single load-bearing
-input D8.5**. We state the assembly, then state with full honesty exactly what is proved unconditionally
+input D8.5**. We state the assembly, then state with full candor exactly what is proved unconditionally
 and what rests on D8.5.
 
 ---
@@ -3530,7 +3530,7 @@ endpoint $=\mathsf K_\Xi^{\mathrm{G5}}$ & D9 (A3) & \textbf{conditional on D8.5}
 \end{center}
 
 \begin{resultbox}
-\textbf{Honest final statement (updated after Connes R2 + the Vitali close, `D8.5-COMPLETE.md`).} The
+\textbf{Candid final statement (updated after Connes R2 + the Vitali close, `D8.5-COMPLETE.md`).} The
 strip-crossing is achieved by \textbf{Vitali normal-family continuation}: the shorted Green matrices are
 compressed resolvents of the self-adjoint $A_P$ (bounded by $\|\phi\|\|\psi\|/|\Im z|$, matrix-Herglotz),
 so convergence below the strip ($\Im z<-\tfrac12$, where Ξ has no zeros) forces convergence on all of
@@ -3549,7 +3549,7 @@ See `D8.5-COMPLETE.md` §D–§G. The box below is the superseded earlier framin
    \underbrace{\textbf{off-$\R$ divisor vanishes}}_{=\,\textbf{RH}}\ \Longrightarrow\ \textbf{RH}.
 \]
 \textbf{D8.5a} (the marked Tate–Binet convergence $G_P^\circ\to G^{\lim}$, blocks 1–8) is \emph{proved
-and genuinely local} (no hidden RH-strength; honesty checkpoint passed). \textbf{D8.5b's identification}
+and genuinely local} (no hidden RH-strength; candor checkpoint passed). \textbf{D8.5b's identification}
 ($G^{\lim}=G_\Xi^{\mathrm{G5}}$ as meromorphic objects) is \emph{proved}. But \textbf{D8.5b's index
 conclusion is RH-strength} (`D8.5b-...md` Thm gate, outcome ii): $\operatorname{sq}_-(G_\Xi^{\mathrm{G5}})
 =0$ does \emph{not} follow, because the negative squares live at the off-line poles, where the positive
@@ -3586,7 +3586,7 @@ confirms the DH falsifier.
 
 **Phase 65 / Signature-Continuity Package, deliverable D12.** Pure mathematics, continuous audit. This
 document runs the package against the forbidden-inference list (D0 §4), collects every `ASSUMED` ledger
-entry into one place, confirms the DH falsifier, and records the honest bottom line. It is the
+entry into one place, confirms the DH falsifier, and records the candid bottom line. It is the
 anti-self-deception gate: the package is only as sound as this audit.
 
 ---
@@ -3666,12 +3666,12 @@ moving to sourced/kernel level (D2–D6); the residue is now D8.5, not closednes
 shorting (D4).
 \item \textbf{Open:} D8.5 itself. Not a no-go; the single load-bearing input. If a future audit shows
 D8.5 is itself RH-strength-and-no-easier (i.e. equivalent to the Hurwitz-safe convergence M3 flagged),
-that would be the honest no-go for this route, and must be recorded here.
+that would be the candid no-go for this route, and must be recorded here.
 \end{itemize}
 
 ---
 
-## §5. Honest bottom line of the package
+## §5. Candid bottom line of the package
 
 \begin{resultbox}
 \textbf{Phase 65 delivers a complete reduction:} \emph{D8.5} $\Rightarrow$ \emph{RH}, with every other
@@ -3681,7 +3681,7 @@ positive-pole Feshbach shorting, the signature topology, and the index functor �
 constructed. The one remaining mathematical input is D8.5 (source-level local-factor convergence, using
 $\Lambda\ge0$), which Connes/Consani report tested and which we have flagged, not faked.
 
-\textbf{This is not a proof of RH by us.} It is an honest, audited reduction of RH to one concrete,
+\textbf{This is not a proof of RH by us.} It is an candid, audited reduction of RH to one concrete,
 falsifiable analytic statement, with the load-bearing assumption named explicitly. A false victory is
 worse than failure; the package's integrity is that it says exactly where it stands.
 \end{resultbox}

@@ -7,7 +7,7 @@ bottom: (i) the precise mechanism by which an off-line zero breaks boundedness (
 $\times$ functional-equation pairing), (ii) the trace structure of $K_P$ and what "rank-one
 divergence" means quantitatively, (iii) the unconditional partial results (PNT / zero-free region) and
 the exact gap to the needed bound, (iv) the precise arithmetic input that must be **created**: a
-critical-line bound on the Euler-product fluctuation of RH-strength. Honest: this is RH; no proof. The
+critical-line bound on the Euler-product fluctuation of RH-strength. Candid: this is RH; no proof. The
 contribution is the exact localization of the one remaining inequality and identification of the new
 theorem required.*
 
@@ -139,7 +139,7 @@ provide.
 
 This is where genuinely new mathematics is required, and where the Critical Tate–Weil Hodge Module
 $\mathsf{TW}_\Z$ is meant to supply it: the divergence structure of the restricted product of local
-Tate cells at $\Re s=\half$. Two honest observations on what such a theorem must use:
+Tate cells at $\Re s=\half$. Two candid observations on what such a theorem must use:
 
 1. **It must be critical-line, not edge.** All classical unconditional inputs (PNT, zero-free region,
 zero-density near $\Re=1$) control the \emph{edge} of the critical strip. The boundedness is a
@@ -174,7 +174,7 @@ mechanism made completely explicit. Positivity, curvature, the colligation, the 
 unconditional. The one remaining inequality is the rank-one divergence $(\mathsf B)$, and it requires
 a new arithmetic theorem at the center of the critical strip, of a kind no existing estimate provides.
 
-\textbf{Honest endpoint.} This is the wall, mapped to its exact bottom. The proof of RH along this
+\textbf{Candid endpoint.} This is the wall, mapped to its exact bottom. The proof of RH along this
 route is the proof of $(\mathsf B)$, which is a genuinely new theorem about the divergence structure of
 the Euler product on the critical line — to be \emph{created}, with $\mathsf{TW}_\Z$ as the proposed
 home. No estimate on $A^{\mathrm{osc}}_\lambda$, no analytic continuation, and no positivity argument

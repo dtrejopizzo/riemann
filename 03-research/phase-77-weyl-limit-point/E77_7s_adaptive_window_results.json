@@ -1,0 +1,1174 @@
+{
+  "statement": "Eta-adaptive resonant window audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "dps": 60,
+    "sigma0": "1.0",
+    "sigmas": [
+      "0.6",
+      "1.0",
+      "2.0",
+      "3.0"
+    ],
+    "etas": [
+      "0.01",
+      "0.0001",
+      "0.000001",
+      "1.0e-8"
+    ],
+    "alpha": "100.0",
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "mu_reference is a finite frozen surrogate. The probe checks whether an eta-adaptive resonant window stabilizes the projective profile better than fixed mode counts.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "2.52719644523725779337455e-49",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.01",
+        "0.0001",
+        "0.000001",
+        "1.0e-8"
+      ],
+      "alpha": "100.0",
+      "planted": null,
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 11,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.29223021505415850697656",
+              "regular_anchor_abs": "0.094629237358342468333388",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 10,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.657706943447376251192716",
+              "regular_anchor_abs": "0.186331002170661557198984",
+              "raw_max_profile_step_from_previous_eta": "0.173600745154555716816369",
+              "regular_max_profile_step_from_previous_eta": "0.21260977698084659590253"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 8,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "1.41114339156400723495702",
+              "regular_anchor_abs": "0.515700365800522809270614",
+              "raw_max_profile_step_from_previous_eta": "0.118855235486558018996296",
+              "regular_max_profile_step_from_previous_eta": "0.226071933648236302990009"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 7,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "2.53900406348865855020745",
+              "regular_anchor_abs": "0.83113649362379497036036",
+              "raw_max_profile_step_from_previous_eta": "0.0832057230538094012466536",
+              "regular_max_profile_step_from_previous_eta": "0.265628914364155632564836"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 13,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.333618574829518839448315",
+              "regular_anchor_abs": "0.0812072957373481477391119",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 12,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "1.12887129751043596493469",
+              "regular_anchor_abs": "0.166743955099212372097027",
+              "raw_max_profile_step_from_previous_eta": "0.15746413371507054641904",
+              "regular_max_profile_step_from_previous_eta": "0.206831923891999149580762"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 9,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "2.10488869493090526100007",
+              "regular_anchor_abs": "1.00629941714305370840126",
+              "raw_max_profile_step_from_previous_eta": "0.16986795115435706469721",
+              "regular_max_profile_step_from_previous_eta": "0.234735805818278491228113"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 8,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "3.69508544298050464355115",
+              "regular_anchor_abs": "1.79175775932253974745604",
+              "raw_max_profile_step_from_previous_eta": "0.169725960195126714142908",
+              "regular_max_profile_step_from_previous_eta": "0.315875700245645065263287"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 15,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "4.3094290629496500061089",
+              "regular_anchor_abs": "0.0711113604215920111647249",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 13,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "14.4512353171135419200142",
+              "regular_anchor_abs": "2.380634191362169335361",
+              "raw_max_profile_step_from_previous_eta": "0.12299887940019771412982",
+              "regular_max_profile_step_from_previous_eta": "0.20307282487156418634604"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 11,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "30.0061086572568809344194",
+              "regular_anchor_abs": "9.75593032739639681345574",
+              "raw_max_profile_step_from_previous_eta": "0.10295283656202912030905",
+              "regular_max_profile_step_from_previous_eta": "0.161522487078181222036645"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 10,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "66.120512436739009540765",
+              "regular_anchor_abs": "17.5793002547282102891793",
+              "raw_max_profile_step_from_previous_eta": "0.107957973770928552084094",
+              "regular_max_profile_step_from_previous_eta": "0.286805417300424222264815"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 15,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.313054502395876946540802",
+              "regular_anchor_abs": "0.0689764802987072019095586",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 14,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.660703014881770381696279",
+              "regular_anchor_abs": "0.158988299546862131724592",
+              "raw_max_profile_step_from_previous_eta": "0.134765452134489801335516",
+              "regular_max_profile_step_from_previous_eta": "0.208663609323959506472829"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 12,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "1.3669424816131130895893",
+              "regular_anchor_abs": "0.556379997915896058362558",
+              "raw_max_profile_step_from_previous_eta": "0.102892287337476937499644",
+              "regular_max_profile_step_from_previous_eta": "0.19359468733941359484428"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 11,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "3.11539403534215734569152",
+              "regular_anchor_abs": "1.02483287780156381923862",
+              "raw_max_profile_step_from_previous_eta": "0.13370215849046431596408",
+              "regular_max_profile_step_from_previous_eta": "0.246409354563467125555076"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 17,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.257151521756224861289463",
+              "regular_anchor_abs": "0.0595514607621142551702085",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 15,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.398948288014526939870251",
+              "regular_anchor_abs": "0.205736176500036102111808",
+              "raw_max_profile_step_from_previous_eta": "0.110608888171447804624846",
+              "regular_max_profile_step_from_previous_eta": "0.214675999837290052240431"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 14,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.688937461988380635109994",
+              "regular_anchor_abs": "0.268380647065012346924239",
+              "raw_max_profile_step_from_previous_eta": "0.102640987945811550004308",
+              "regular_max_profile_step_from_previous_eta": "0.239097832987750616473772"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 12,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "1.84009451677133775521824",
+              "regular_anchor_abs": "0.574833680482320356251373",
+              "raw_max_profile_step_from_previous_eta": "0.0765629196312618314924727",
+              "regular_max_profile_step_from_previous_eta": "0.136139861484446128830092"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 19,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.245089942131171683408179",
+              "regular_anchor_abs": "0.0534087527744597197464857",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 17,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.45728485267625850058345",
+              "regular_anchor_abs": "0.180986188460781594817883",
+              "raw_max_profile_step_from_previous_eta": "0.100893397253094176165811",
+              "regular_max_profile_step_from_previous_eta": "0.192883975890179070177629"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 15,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "1.17350763198717402929659",
+              "regular_anchor_abs": "0.372675948931751126910858",
+              "raw_max_profile_step_from_previous_eta": "0.102400483705772371817208",
+              "regular_max_profile_step_from_previous_eta": "0.117016520571657235469251"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 14,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "5.37483579996294050302867",
+              "regular_anchor_abs": "0.737011504053199565746035",
+              "raw_max_profile_step_from_previous_eta": "0.0830645050180845320863608",
+              "regular_max_profile_step_from_previous_eta": "0.266558673909162953904257"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 21,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.551679686118522924653851",
+              "regular_anchor_abs": "0.0487136560317097852038544",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 19,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "20.2338524016339842739694",
+              "regular_anchor_abs": "0.0860495118417586461373456",
+              "raw_max_profile_step_from_previous_eta": "0.103640941641421150383424",
+              "regular_max_profile_step_from_previous_eta": "0.226710996718689068369884"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 17,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "299.995733399198796213748",
+              "regular_anchor_abs": "6.60130893014390279827102",
+              "raw_max_profile_step_from_previous_eta": "0.0962463396048469091875122",
+              "regular_max_profile_step_from_previous_eta": "0.188895630785423619388948"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 14,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "882.667834250558111326845",
+              "regular_anchor_abs": "303.446593050012710332637",
+              "raw_max_profile_step_from_previous_eta": "0.0665241316709363290705625",
+              "regular_max_profile_step_from_previous_eta": "0.288693638022444212034537"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 21,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.557722195452327679581258",
+              "regular_anchor_abs": "0.042874290684460750159768",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 19,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "1.98796849160079240696002",
+              "regular_anchor_abs": "0.285709777461865208569064",
+              "raw_max_profile_step_from_previous_eta": "0.0925999067032964773768042",
+              "regular_max_profile_step_from_previous_eta": "0.155319523324921143836664"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 17,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "5.60642303080375346495654",
+              "regular_anchor_abs": "1.35368749356028718642188",
+              "raw_max_profile_step_from_previous_eta": "0.0810415189032974166376203",
+              "regular_max_profile_step_from_previous_eta": "0.115127136138632663810804"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 15,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "13.8457519346717904530264",
+              "regular_anchor_abs": "4.80816907384988955909383",
+              "raw_max_profile_step_from_previous_eta": "0.124445562776359317442005",
+              "regular_max_profile_step_from_previous_eta": "0.110921125447205829994147"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 23,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "1.53722747045805812377002",
+              "regular_anchor_abs": "0.0349311226280231483321563",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 20,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "3.91125199109220303581605",
+              "regular_anchor_abs": "0.985984735467049033966665",
+              "raw_max_profile_step_from_previous_eta": "0.0923484310011055230088143",
+              "regular_max_profile_step_from_previous_eta": "0.191483498526097291029495"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 18,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "13.6462010433725609862362",
+              "regular_anchor_abs": "2.7912439479779408140843",
+              "raw_max_profile_step_from_previous_eta": "0.0885702608645302616292392",
+              "regular_max_profile_step_from_previous_eta": "0.0997702958913666934758958"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 17,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "33.3890094584995895359901",
+              "regular_anchor_abs": "6.01316929702885075944604",
+              "raw_max_profile_step_from_previous_eta": "0.0821146197391598677774301",
+              "regular_max_profile_step_from_previous_eta": "0.227854477166446849980406"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 23,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.51797969207431418312087",
+              "regular_anchor_abs": "0.0640633246223255004949341",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 21,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "1.43232602089714006245273",
+              "regular_anchor_abs": "0.356872044448894818223375",
+              "raw_max_profile_step_from_previous_eta": "0.0832757284156820110717349",
+              "regular_max_profile_step_from_previous_eta": "0.140944424110937536983666"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 19,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "3.4849308650573399563989",
+              "regular_anchor_abs": "1.12600698022884067219622",
+              "raw_max_profile_step_from_previous_eta": "0.0745249446121686828222746",
+              "regular_max_profile_step_from_previous_eta": "0.100608997831350161004668"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 18,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "11.7998192409273117290791",
+              "regular_anchor_abs": "1.8831120726754572018574",
+              "raw_max_profile_step_from_previous_eta": "0.106522976356603261236804",
+              "regular_max_profile_step_from_previous_eta": "0.246122617355132904776166"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 25,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.318919968638111682607411",
+              "regular_anchor_abs": "0.0426653709612985840659383",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 22,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.878969717100856220077015",
+              "regular_anchor_abs": "0.247247746477451080049315",
+              "raw_max_profile_step_from_previous_eta": "0.0847041676242714198002896",
+              "regular_max_profile_step_from_previous_eta": "0.201952493797529937263881"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 20,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "2.65677474883913926219363",
+              "regular_anchor_abs": "0.775997273902798651561933",
+              "raw_max_profile_step_from_previous_eta": "0.0675063122722441714777818",
+              "regular_max_profile_step_from_previous_eta": "0.0964580336569984098941496"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 19,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "8.4099783526579625264331",
+              "regular_anchor_abs": "1.62026167911147299237685",
+              "raw_max_profile_step_from_previous_eta": "0.0610458421938500383174785",
+              "regular_max_profile_step_from_previous_eta": "0.227586146245503648687255"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 27,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "1.14249297747939473390613",
+              "regular_anchor_abs": "0.0346635131260328434651349",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 24,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "3.31213863983747386445226",
+              "regular_anchor_abs": "0.675660154795887792769486",
+              "raw_max_profile_step_from_previous_eta": "0.0762449938552505381365395",
+              "regular_max_profile_step_from_previous_eta": "0.202226639271439706096316"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 22,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "10.9094127660894851502138",
+              "regular_anchor_abs": "2.0207805835240452007938",
+              "raw_max_profile_step_from_previous_eta": "0.0707915899184921172222238",
+              "regular_max_profile_step_from_previous_eta": "0.077041019595694722309433"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 20,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "37.4508233901382083930314",
+              "regular_anchor_abs": "6.1513890121651556527411",
+              "raw_max_profile_step_from_previous_eta": "0.0803590171325992909828706",
+              "regular_max_profile_step_from_previous_eta": "0.0726281261666038996633271"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 27,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.846818188478522454149788",
+              "regular_anchor_abs": "0.0716174173597127919453742",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 25,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "4.67909356508773166551016",
+              "regular_anchor_abs": "0.444458644233446352059743",
+              "raw_max_profile_step_from_previous_eta": "0.0774630599825108602894415",
+              "regular_max_profile_step_from_previous_eta": "0.10605200627589889726707"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 23,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "14.6261273449873746986017",
+              "regular_anchor_abs": "2.40890532140432492942335",
+              "raw_max_profile_step_from_previous_eta": "0.0634182451941046102369601",
+              "regular_max_profile_step_from_previous_eta": "0.0708196707489868282462397"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 21,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "39.1901378138679016488213",
+              "regular_anchor_abs": "9.2946015207938791874122",
+              "raw_max_profile_step_from_previous_eta": "0.0526668015094046228428164",
+              "regular_max_profile_step_from_previous_eta": "0.0838375536732340630175403"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "-1.74469368905726418414397",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.01",
+        "0.0001",
+        "0.000001",
+        "1.0e-8"
+      ],
+      "alpha": "100.0",
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 0,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.104370614658872206560208",
+              "regular_anchor_abs": "0.104370614658872206560208",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.104409289936016987562893",
+              "regular_anchor_abs": "0.104409289936016987562893",
+              "raw_max_profile_step_from_previous_eta": "0.0000854878414733852131989556",
+              "regular_max_profile_step_from_previous_eta": "0.0000854878414733852131989556"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.10440967348925592291322",
+              "regular_anchor_abs": "0.10440967348925592291322",
+              "raw_max_profile_step_from_previous_eta": "0.000000854520213711371057773097",
+              "regular_max_profile_step_from_previous_eta": "0.000000854520213711371057773097"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.104409677324467272150316",
+              "regular_anchor_abs": "0.104409677324467272150316",
+              "raw_max_profile_step_from_previous_eta": "8.5451653009196754958089e-9",
+              "regular_max_profile_step_from_previous_eta": "8.5451653009196754958089e-9"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 0,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.110082446185855869206871",
+              "regular_anchor_abs": "0.110082446185855869206871",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.11019100391450819513848",
+              "regular_anchor_abs": "0.11019100391450819513848",
+              "raw_max_profile_step_from_previous_eta": "0.000216597162861870296402745",
+              "regular_max_profile_step_from_previous_eta": "0.000216597162861870296402745"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.11019207996282967247562",
+              "regular_anchor_abs": "0.11019207996282967247562",
+              "raw_max_profile_step_from_previous_eta": "0.00000216369752393838753983116",
+              "regular_max_profile_step_from_previous_eta": "0.00000216369752393838753983116"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.11019209072235731066564",
+              "regular_anchor_abs": "0.11019209072235731066564",
+              "raw_max_profile_step_from_previous_eta": "2.16367465421592521921578e-8",
+              "regular_max_profile_step_from_previous_eta": "2.16367465421592521921578e-8"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 0,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.37621819235193486251468",
+              "regular_anchor_abs": "0.37621819235193486251468",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.375832755283197115394955",
+              "regular_anchor_abs": "0.375832755283197115394955",
+              "raw_max_profile_step_from_previous_eta": "0.000251892792129804302504246",
+              "regular_max_profile_step_from_previous_eta": "0.000251892792129804302504246"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.375828809369332556517268",
+              "regular_anchor_abs": "0.375828809369332556517268",
+              "raw_max_profile_step_from_previous_eta": "0.00000252334381365666245052528",
+              "regular_max_profile_step_from_previous_eta": "0.00000252334381365666245052528"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.375828769901047902064711",
+              "regular_anchor_abs": "0.375828769901047902064711",
+              "raw_max_profile_step_from_previous_eta": "2.52338795561582706319234e-8",
+              "regular_max_profile_step_from_previous_eta": "2.52338795561582706319234e-8"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 0,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.145712768737329316654942",
+              "regular_anchor_abs": "0.145712768737329316654942",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.145237741880109888170304",
+              "regular_anchor_abs": "0.145237741880109888170304",
+              "raw_max_profile_step_from_previous_eta": "0.000749332250187939265751263",
+              "regular_max_profile_step_from_previous_eta": "0.000749332250187939265751263"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.145232935216044421348461",
+              "regular_anchor_abs": "0.145232935216044421348461",
+              "raw_max_profile_step_from_previous_eta": "0.00000752495463061527571032301",
+              "regular_max_profile_step_from_previous_eta": "0.00000752495463061527571032301"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.145232887143776900312389",
+              "regular_anchor_abs": "0.145232887143776900312389",
+              "raw_max_profile_step_from_previous_eta": "7.52527262198002686748422e-8",
+              "regular_max_profile_step_from_previous_eta": "7.52527262198002686748422e-8"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 2,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.255496086836312526286544",
+              "regular_anchor_abs": "0.0600592098006254977193465",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.254906029010821491919722",
+              "regular_anchor_abs": "0.254906029010821491919722",
+              "raw_max_profile_step_from_previous_eta": "0.00175157104339244202103484",
+              "regular_max_profile_step_from_previous_eta": "0.203176695971546648775657"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.254898153133636476662975",
+              "regular_anchor_abs": "0.254898153133636476662975",
+              "raw_max_profile_step_from_previous_eta": "0.0000175654527848349399238492",
+              "regular_max_profile_step_from_previous_eta": "0.0000175654527848349399238492"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.25489807417695326843531",
+              "regular_anchor_abs": "0.25489807417695326843531",
+              "raw_max_profile_step_from_previous_eta": "0.00000017565917792615941586346",
+              "regular_max_profile_step_from_previous_eta": "0.00000017565917792615941586346"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 2,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.391327505838730916426936",
+              "regular_anchor_abs": "0.053363393610895223970142",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.392447097667632621211007",
+              "regular_anchor_abs": "0.392447097667632621211007",
+              "raw_max_profile_step_from_previous_eta": "0.00357210862067045083039627",
+              "regular_max_profile_step_from_previous_eta": "0.197968705339041270626045"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.392439501913095670418702",
+              "regular_anchor_abs": "0.392439501913095670418702",
+              "raw_max_profile_step_from_previous_eta": "0.0000357024462911006824930998",
+              "regular_max_profile_step_from_previous_eta": "0.0000357024462911006824930998"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.39243942406009205416389",
+              "regular_anchor_abs": "0.39243942406009205416389",
+              "raw_max_profile_step_from_previous_eta": "0.000000357020426123063185640486",
+              "regular_max_profile_step_from_previous_eta": "0.000000357020426123063185640486"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 2,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.625457604280780730991293",
+              "regular_anchor_abs": "0.0499957461731071760892324",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.640327127334074250368364",
+              "regular_anchor_abs": "0.640327127334074250368364",
+              "raw_max_profile_step_from_previous_eta": "0.00628975235033208796487317",
+              "regular_max_profile_step_from_previous_eta": "0.196006215921790604194284"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.6403245761406766904854",
+              "regular_anchor_abs": "0.6403245761406766904854",
+              "raw_max_profile_step_from_previous_eta": "0.0000626912886909670536126587",
+              "regular_max_profile_step_from_previous_eta": "0.0000626912886909670536126587"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.640324534917106969075577",
+              "regular_anchor_abs": "0.640324534917106969075577",
+              "raw_max_profile_step_from_previous_eta": "0.00000062688411746899732313426",
+              "regular_max_profile_step_from_previous_eta": "0.00000062688411746899732313426"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 2,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.571712565026520119678828",
+              "regular_anchor_abs": "0.0427670691101110882614426",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.593685889591710418118414",
+              "regular_anchor_abs": "0.593685889591710418118414",
+              "raw_max_profile_step_from_previous_eta": "0.00714285581652293954791857",
+              "regular_max_profile_step_from_previous_eta": "0.172917209924502109593464"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.593683383737988544705192",
+              "regular_anchor_abs": "0.593683383737988544705192",
+              "raw_max_profile_step_from_previous_eta": "0.0000712174885784739168606206",
+              "regular_max_profile_step_from_previous_eta": "0.0000712174885784739168606206"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.593683335089672269745833",
+              "regular_anchor_abs": "0.593683335089672269745833",
+              "raw_max_profile_step_from_previous_eta": "0.000000712142507866468146295605",
+              "regular_max_profile_step_from_previous_eta": "0.000000712142507866468146295605"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 2,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.340428049958724991285017",
+              "regular_anchor_abs": "0.0553157646115320578702738",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.3781006714011852331307",
+              "regular_anchor_abs": "0.3781006714011852331307",
+              "raw_max_profile_step_from_previous_eta": "0.00337325459408289540301577",
+              "regular_max_profile_step_from_previous_eta": "0.065745430714558086518171"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.378133071449436307810975",
+              "regular_anchor_abs": "0.378133071449436307810975",
+              "raw_max_profile_step_from_previous_eta": "0.0000334643588316009132222851",
+              "regular_max_profile_step_from_previous_eta": "0.0000334643588316009132222851"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.378133354962906089960271",
+              "regular_anchor_abs": "0.378133354962906089960271",
+              "raw_max_profile_step_from_previous_eta": "0.000000334614043193494382072383",
+              "regular_max_profile_step_from_previous_eta": "0.000000334614043193494382072383"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 2,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.853815826332730376985384",
+              "regular_anchor_abs": "0.0516787880086254583527605",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 0,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.946494597688648449014466",
+              "regular_anchor_abs": "0.946494597688648449014466",
+              "raw_max_profile_step_from_previous_eta": "0.0107182867467730024397225",
+              "regular_max_profile_step_from_previous_eta": "0.195542382636104557679647"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.946477184481354635283968",
+              "regular_anchor_abs": "0.946477184481354635283968",
+              "raw_max_profile_step_from_previous_eta": "0.000107162002887319602961472",
+              "regular_max_profile_step_from_previous_eta": "0.000107162002887319602961472"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.946476899491875032761359",
+              "regular_anchor_abs": "0.946476899491875032761359",
+              "raw_max_profile_step_from_previous_eta": "0.00000107159569167628673203568",
+              "regular_max_profile_step_from_previous_eta": "0.00000107159569167628673203568"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 2,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.898784772397176749556225",
+              "regular_anchor_abs": "0.0367084794260905091265174",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 1,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "1.32715862223606385942991",
+              "regular_anchor_abs": "0.0226126641759415614593013",
+              "raw_max_profile_step_from_previous_eta": "0.0136853000092724749201015",
+              "regular_max_profile_step_from_previous_eta": "0.690075712639506673722286"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "1.32721450843262246851108",
+              "regular_anchor_abs": "1.32721450843262246851108",
+              "raw_max_profile_step_from_previous_eta": "0.000136673700326595655408861",
+              "regular_max_profile_step_from_previous_eta": "0.785840050532941147647225"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "1.32721428592120557850925",
+              "regular_anchor_abs": "1.32721428592120557850925",
+              "raw_max_profile_step_from_previous_eta": "0.00000136667441791679078990247",
+              "regular_max_profile_step_from_previous_eta": "0.00000136667441791679078990247"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 2,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "0.265126804511560892544818",
+              "regular_anchor_abs": "0.0452495214877446471551304",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 1,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "0.62764373865908983893533",
+              "regular_anchor_abs": "0.0435576435457432013215422",
+              "raw_max_profile_step_from_previous_eta": "0.00559613929905663610276593",
+              "regular_max_profile_step_from_previous_eta": "0.0980087646183133586780001"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "0.627873437388264371315153",
+              "regular_anchor_abs": "0.627873437388264371315153",
+              "raw_max_profile_step_from_previous_eta": "0.0000529834592343148160464869",
+              "regular_max_profile_step_from_previous_eta": "0.0399635526959956076993407"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "0.627874320210192031340721",
+              "regular_anchor_abs": "0.627874320210192031340721",
+              "raw_max_profile_step_from_previous_eta": "0.000000529512946270034694026506",
+              "regular_max_profile_step_from_previous_eta": "0.000000529512946270034694026506"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "-1.74469368905726418414397",
+          "profiles": [
+            {
+              "eta": "0.01",
+              "window_size": 2,
+              "window_edge_abs": "1.0",
+              "raw_anchor_abs": "1.24918800655108611702153",
+              "regular_anchor_abs": "0.0480931447645631689657736",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "window_size": 1,
+              "window_edge_abs": "0.01",
+              "raw_anchor_abs": "2.99921498615341089335736",
+              "regular_anchor_abs": "0.0179126115994892661337395",
+              "raw_max_profile_step_from_previous_eta": "0.018657933826853241653969",
+              "regular_max_profile_step_from_previous_eta": "1.39057535916683903564569"
+            },
+            {
+              "eta": "0.000001",
+              "window_size": 0,
+              "window_edge_abs": "0.0001",
+              "raw_anchor_abs": "2.99980854613599457397466",
+              "regular_anchor_abs": "2.99980854613599457397466",
+              "raw_max_profile_step_from_previous_eta": "0.000186905632980391698177298",
+              "regular_max_profile_step_from_previous_eta": "1.48612637348044717038382"
+            },
+            {
+              "eta": "1.0e-8",
+              "window_size": 0,
+              "window_edge_abs": "0.000001",
+              "raw_anchor_abs": "2.99980732539721630250847",
+              "regular_anchor_abs": "2.99980732539721630250847",
+              "raw_max_profile_step_from_previous_eta": "0.00000186901742890706953263662",
+              "regular_max_profile_step_from_previous_eta": "0.00000186901742890706953263662"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

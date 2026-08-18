@@ -21,7 +21,7 @@ enteras (Laguerre–Pólya, Hermite–Biehler, de Branges, Boas, Phragmén–Lin
 | IV.2 ≡ §V | **GAP = RH-equivalente** | El núcleo. Correctamente etiquetado RH-hard. |
 | E3 (Hurwitz) | **SOLID** (módulo E1) | Clásico, bien aplicado. Ver §4. |
 | E4 | **SOLID** | `Ξ∈LP ⟺ RH`, clásico. | **Frase del referee:** El andamiaje analítico (N0–N3, Reducción, Hurwitz) **resiste la
-auditoría severa** — es matemática correcta y reutilizable. El documento es **honesto** en
+auditoría severa** — es matemática correcta y reutilizable. El documento es **franco** en
 sus etiquetas: no hay auto-engaño en la localización. Los tres puntos vivos son (i) E1 sin
 prueba propia, (ii) III condicional con (H-pos)=RH, (iii) el núcleo IV.2 RH-equivalente.
 **No se prueba RH.** Abajo cierro parcialmente E1 y delimito *exactamente* qué falta. --- ## 1. Auditoría del andamiaje — veredictos detallados ### 1.0 E0 — SOLID (como definición)
@@ -34,7 +34,7 @@ ceros reales**. La prueba registrada (interlacing con `ξ_k>0`) está **correcta
 por `ξ=(−1,2,−1)`, `d=(−1,0,1)`: `f(s)=−2/(s³−s)`, numerador constante, **cero raíces**.
 El contraejemplo es válido y demoledor para la prueba vieja. Acepto la refutación. Además el documento observa que la real-rootedness vale empíricamente también para
 Davenport–Heilbronn (donde `Λ≥0` falla), luego **no puede provenir de Perron–Frobenius**.
-Esto es un argumento correcto y honesto: descarta la vía de positividad de coeficientes. ### 2.2 La estructura real del problema (Hermite–Biehler)
+Esto es un argumento correcto y franco: descarta la vía de positividad de coeficientes. ### 2.2 La estructura real del problema (Hermite–Biehler)
 Reescribo. Sea `f(s)=Σ_k ξ_k/(s−d_k)` la secular. Los ceros de `ξ̂` (aparte de cancelar los
 polos `d_k`) son los ceros de `f`. La afirmación "`ξ̂∈LP`" equivale a "**`f` tiene sólo ceros
 reales**", porque `sin(Ls/2)` ya es LP y entera de tipo `L/2`, el producto de dos funciones
@@ -92,7 +92,7 @@ Requiere uno de: - **(A)** una propiedad de **interlacing de de Branges**: que `
 (Herglotz, Lema M1), e identifico (c) que el caso real *debe* citarse de CCM 1.1(iii). La
 hipótesis extra precisa que el ground state debe satisfacer es **membresía en un espacio de
 de Branges `H(E)` con `E` de tipo HB** (equivalente: interlacing `A`/`B` de su función de
-estructura), que es la realización autoadjunta — no una propiedad combinatoria de los signos. ### 2.5 Honestidad sobre la severidad
+estructura), que es la realización autoadjunta — no una propiedad combinatoria de los signos. ### 2.5 Franqueza sobre la severidad
 E1 alimenta Hurwitz (E3) y N5c. Ambos heredan "módulo E1". La etiqueta **🔧/GAP del documento
 es correcta y no sobre-afirma**. Mi único refinamiento: el documento sugiere que la prueba
 propia HB "queda abierta como reparación"; yo soy más duro: **al nivel de la información
@@ -168,10 +168,10 @@ es `Ξ_f(x_0)≠0`, que el documento justifica (proyección real de un cero off-
 on-line). **Correcto, aunque conviene notar:** podría en principio existir un cero on-line de
 `Ξ_f` que coincida con `x_0`; para DH esto es genéricamente falso y el argumento se sostiene,
 pero es una hipótesis genérica, no incondicional al 100%. Inocuo. **SOLID* módulo E1.** Buen
-resultado: certifica que `ε_loc` separa RH-verdadera de RH-falsa, con el lado falso probado. --- ## 6. Piezas RH-hard / condicionales — confirmación de etiquetas - **H1′ (QW PSD ⟺ RH-hasta-T*):** correctamente identificado como RH-equivalente. PF da estructura (fondo simple, envolvente positiva), **no** positividad espectral `ε_0≥0`. La corrección "PF≠PSD" es **correcta y honesta**. GAP=RH.
+resultado: certifica que `ε_loc` separa RH-verdadera de RH-falsa, con el lado falso probado. --- ## 6. Piezas RH-hard / condicionales — confirmación de etiquetas - **H1′ (QW PSD ⟺ RH-hasta-T*):** correctamente identificado como RH-equivalente. PF da estructura (fondo simple, envolvente positiva), **no** positividad espectral `ε_0≥0`. La corrección "PF≠PSD" es **correcta y franca**. GAP=RH.
 - **III:** teorema condicional correcto dado (H-gap)+(H-lim). La observación de que **(H-pos) `ε_0>0` ≈ Weil-pos ≈ RH-hasta-T*** ("la renormalización lleva RH horneada") es **aguda y correcta** — Davis–Kahan sobre `Â=A/ε_0` presupone `ε_0>0` con gap relativo, lo cual es justamente lo que se quiere demostrar. No es teorema incondicional. GAP condicional.
 - **IV.1:** identificación del operador límite — refutadas las id. de coef. constante; la lectura "SL de 2º orden con coef. variables / núcleo de Loewner compacto" es razonable pero **no demostrada**. Es **análisis (Landau–Widom/de Branges), no RH-hard**. Coincido. GAP.
-- **IV.2 ≡ §V:** la caracterización variacional ("ground state de Weil = `Ξ_T` ⟺ todos los `γ_ρ` reales ⟺ RH") es **correcta como equivalencia** y es **el núcleo RH**. Bajo RH, la forma `Σ_ρ|g(γ_ρ)|²≥0` es suma de cuadrados y su minimizador band-limited se anula en los `γ_ρ≤T*` (módulo rigor del déficit de frame Landau–Beurling). Sin RH es indefinida. **La etiqueta 🟥 RH-equivalente es correcta y honesta.** Lo que falta —la tasa `o(λ^{−½})`— **es** RH. Sin objeción a la etiqueta; el "rigor del déficit de frame" (`g_0=Ξ_T+O(ε_0)`) es un sub-gap real de teoría de Beurling–Landau, pero vive *bajo* la hipótesis RH, así que no rescata nada incondicionalmente. --- ## 7. Cerrable vs RH-hard (pregunta 4) **Cerrable (análisis genuino, no RH):**
+- **IV.2 ≡ §V:** la caracterización variacional ("ground state de Weil = `Ξ_T` ⟺ todos los `γ_ρ` reales ⟺ RH") es **correcta como equivalencia** y es **el núcleo RH**. Bajo RH, la forma `Σ_ρ|g(γ_ρ)|²≥0` es suma de cuadrados y su minimizador band-limited se anula en los `γ_ρ≤T*` (módulo rigor del déficit de frame Landau–Beurling). Sin RH es indefinida. **La etiqueta 🟥 RH-equivalente es correcta y franca.** Lo que falta —la tasa `o(λ^{−½})`— **es** RH. Sin objeción a la etiqueta; el "rigor del déficit de frame" (`g_0=Ξ_T+O(ε_0)`) es un sub-gap real de teoría de Beurling–Landau, pero vive *bajo* la hipótesis RH, así que no rescata nada incondicionalmente. --- ## 7. Cerrable vs RH-hard (pregunta 4) **Cerrable (análisis genuino, no RH):**
 - **IV.1** — identificar el operador de borde (Landau–Widom / de Branges). Análisis duro pero no RH. Cerrable en principio.
 - **El "déficit de frame"** `g_0→Ξ_T` bajo RH (Beurling–Landau a densidad crítica). Cerrable, pero sólo refina el lado-RH del núcleo; no avanza incondicionalmente.
 - **N1 matiz `x₀≠0`** y **retirar `Γ=O(1)`** → usar `O(logλ)`: correcciones expositivas triviales, cerrables ya. **Esencialmente cita obligada (no cerrable como prueba propia a este nivel):**
@@ -190,6 +190,6 @@ de CCM Thm 1.1(iii) (realización autoadjunta / espacio de de Branges `H(E)`), n
 de funciones enteras pendiente. Soy más severo que el documento aquí: **no es "cerrable con
 más trabajo"; es cita obligada.** **Lo que permanece abierto:** (i) E1 sin prueba propia (cita obligada CCM 1.1(iii)); (ii) III
 condicional con (H-pos)=RH; (iii) el núcleo IV.2≡§V que **es** RH. **No se prueba RH.** El
-documento es **honesto**: no detecto auto-engaño en la localización. Las correcciones que pido
+documento es **franco**: no detecto auto-engaño en la localización. Las correcciones que pido
 (retirar `Γ=O(1)`, precisar la libertad de normalización, severizar el estatus de E1 a "cita
 obligada", marcar la hipótesis genérica en N5c) son **expositivas, no estructurales**. *— H., referee.*

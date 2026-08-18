@@ -52,7 +52,7 @@ $$
 | **over-sampling (flat Hardy, $K\asymp$const)** | $\to\infty$ | **unbounded** | **genuine** |
 So the genuine space is **flat (or sub-critical-weight) Hardy-band**, where $R\sim\log t\to\infty$. The
 "critical scaling law $K\asymp1/\rho$" highlighted Days 12–13 is the **boundary of T2-triviality**, *not*
-the canonical faithful space — an honest reversal.
+the canonical faithful space — an candid reversal.
 
 > **Note on the necessary scaling law.** "faithful $\Rightarrow K\rho\notin L^1$" (DENS.1) is still correct
 > as a *necessary* condition, but it is not *sufficient* for genuine B-2: the critical case $R\asymp1$

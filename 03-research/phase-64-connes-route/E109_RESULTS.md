@@ -45,7 +45,7 @@ critical value the Euler product does not converge, so `Θ_{≤P,0}` is not even
 
 So the genuine finite-prime object must be the **`J`-unitary matrix colligation** `T_{≤P,ω}` assembled
 on the adelic Hilbert space, with a **renormalized** critical limit (the Critical Gram Realization).
-The scalar product cannot be that object — it diverges at `ω=0`. This is an honest negative result
+The scalar product cannot be that object — it diverges at `ω=0`. This is an candid negative result
 that correctly localizes the difficulty: the convergence/passivity must be proved at the
 **matrix/Hilbert** level with renormalization, exactly the open `THEOREM-adelic-colligation.md` step.
 

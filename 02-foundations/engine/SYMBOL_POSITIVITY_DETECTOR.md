@@ -53,7 +53,7 @@ rho = mp.mpf("0.8") + mp.mpc(0,1)*mp.mpf("100")
 detect(t0=100.0, Xi_deriv=planted_zero(z0, rho))   # off-line: strongly negative -> RH false
 ```
 
-## Honest scope
+## Candid scope
 
 This is a *detector*, not a proof, on two counts:
 

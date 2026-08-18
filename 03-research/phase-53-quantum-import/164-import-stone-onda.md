@@ -18,10 +18,10 @@ conservación estructural.
 **Contrato de etiquetado (regla absoluta).** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad aquí, prueba completa; externos con
 referencia verificable. **[CONSTRUCCIÓN]** = objeto definido con precisión. **[PUENTE]** = conexión
-con estatus honesto. **[GAP]/[GAP de literatura]** = declarado; el de literatura NO se usa como
+con estatus franco. **[GAP]/[GAP de literatura]** = declarado; el de literatura NO se usa como
 premisa de ningún teorema. **[DESEO]** = declarado. Jamás se fabrica una prueba de RH ni una falsa
 victoria (DESENLACE A). PERMITIDO (y esperable) terminar en B/C/D. **NADA de numéricos/Python.**
-**Español.** Honestidad absoluta. Una falsa victoria es peor que un fracaso.
+**Español.** Franqueza absoluta. Una falsa victoria es peor que un fracaso.
 
 **Prerrequisitos leídos en fuente esta sesión:** Doc 162 (Phase 52: e-invariante aritmético
 RH-libre, pero ζ reentra en la *clase fundamental del portador* [C_Φ]=Σ_ρ δ_{γ_ρ}; trifurcación de
@@ -125,7 +125,7 @@ analogía es *literal*, no metafórica. El problema —que aíslo en §2–§3�
 (existe: es el espacio de clases de adeles con su flujo de escala), sino **cuál es la "energía"
 conservada que da la unitariedad**, porque ahí es donde el diccionario se rompe.
 
-**[PUENTE 164-A].** El diccionario es honesto y casi todo RH-libre EXCEPTO dos casillas, ambas la
+**[PUENTE 164-A].** El diccionario es franco y casi todo RH-libre EXCEPTO dos casillas, ambas la
 misma: "energía conservada" y "producto interno de ℋ". En QM esas dos casillas vienen gratis de la
 física (probabilidad). En RH son justo lo que falta, y la guardia (§2) muestra que son ζ.
 
@@ -374,7 +374,7 @@ estructura nueva (Stone invertido) y descarta limpiamente la ruta de la simetrí
   (Connes) ES "U(t) unitario sobre el espacio correcto" (Prop. 164.4(iii)). El defecto de índices de
   deficiencia (Berry–Keating) ES "qué extensión autoadjunta = qué producto interno" (Prop. 164.4(ii)).
   Son la misma cosa. Stone los unifica: ambos son "la métrica que falta".
-- Lo NUEVO de este documento (no de Stone, sino de su importación honesta):
+- Lo NUEVO de este documento (no de Stone, sino de su importación franca):
   1. **El diagnóstico Stone-invertido** (Prop. 164.4): explicita POR QUÉ Stone no transfiere —en QM la
      métrica es axioma (Born), en RH es teorema (positividad de Weil). Esto reordena el muro de Connes
      como "falta el axioma de Born aritmético", lo cual es más preciso que "falta la positividad".
@@ -449,7 +449,7 @@ propiedades deseadas son mutuamente excluyentes sin ζ. El potencial real ⟺ RH
 
 ---
 
-## 6. Veredicto honesto (A/B/C/D) y el GAP central
+## 6. Veredicto franco (A/B/C/D) y el GAP central
 
 **VEREDICTO: B (la unitariedad/autoadjunción es la métrica de Weil disfrazada, nodo localizado) con
 un fragmento nuevo de D (la discrepancia de los dos grupos de un parámetro).** NO es A: no construí una
@@ -495,7 +495,7 @@ equivocado.
 > (Phase 52): es la **no-compatibilidad de las dos métricas naturales (reflexión vs. evolución)**, y
 > es, creo, una formulación nueva del muro: *RH ⟺ la métrica de la reflexión funcional = la métrica de
 > la evolución de escala.* No tengo prueba de que esta reformulación sea más tratable; la dejo como
-> [GAP central], honestamente, porque podría ser circular (la igualdad de métricas ES Q≥0). Pero la
+> [GAP central], francamente, porque podría ser circular (la igualdad de métricas ES Q≥0). Pero la
 > *forma* —"unificar dos grupos de un parámetro en una métrica común"— es un problema de física
 > matemática estándar (representaciones del grupo de Galilei/Poincaré: una métrica, varios generadores)
 > y nombra el muro en lenguaje de teoría de representaciones, que el programa no había usado.

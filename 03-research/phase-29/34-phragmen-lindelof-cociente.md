@@ -196,7 +196,7 @@ Y si además $Q$ es holomorfa en $\mathcal{S}_\varepsilon$ (sin polos, i.e., sin
 
 *Prueba.* Directa del Teorema PL aplicado a $Q$ bajo las hipótesis (C1)-(C2). $\square$
 
-**Honestidad.** La condición (C1) es una hipótesis sobre la distribución de los ceros de $\zeta$ en la franja, y requiere conocimiento que no está disponible incondicionalmente. La hipótesis "sin ceros de $\Xi$ en $\mathcal{S}_\varepsilon$" es exactamente RH. Circular nuevamente.
+**Franqueza.** La condición (C1) es una hipótesis sobre la distribución de los ceros de $\zeta$ en la franja, y requiere conocimiento que no está disponible incondicionalmente. La hipótesis "sin ceros de $\Xi$ en $\mathcal{S}_\varepsilon$" es exactamente RH. Circular nuevamente.
 
 ---
 
@@ -210,7 +210,7 @@ Y si además $Q$ es holomorfa en $\mathcal{S}_\varepsilon$ (sin polos, i.e., sin
 
 **El obstáculo estructural.** El PL es una herramienta para ACOTAR funciones holomorfas, no para DEMOSTRAR holomorfia. Para probar que $Q$ no tiene polos en $\mathbb{R}$ (= Inc. Inv.), se necesita un argumento DIFERENTE — no el PL.
 
-**Lo que el PL SÍ da (resultado honesto).** 
+**Lo que el PL SÍ da (resultado franco).** 
 
 Bajo RH (como hipótesis): $Q$ es holomorfa en $\mathcal{S}$ y satisface $|Q| \leq C_\varepsilon$ uniformemente en $\mathcal{S}_\varepsilon$, con $C_\varepsilon \to 0$ cuando $\varepsilon \to 0$. Esto da la cota $|Q(t)| = O(1)$ en $\mathbb{R}$ (condicionalmente a RH). Consistente pero no probatorio.
 

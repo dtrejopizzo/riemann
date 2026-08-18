@@ -6,7 +6,7 @@ bound whose smooth part is unconditional and whose fluctuation is the wall (`FAC
 The natural lever: does the **sign we already have for free** buy anything on the **size that is the
 wall**? We prove it buys exactly two things — a Cauchy–Schwarz diagonal domination that collapses the
 **all-intervals** Carleson condition to a **single primitive diagonal sup**, and a **one-sided (lower)
-bound** on the fluctuation. We then prove, honestly, why this does **not** cross: the diagonal sup is
+bound** on the fluctuation. We then prove, candidly, why this does **not** cross: the diagonal sup is
 the same center-of-strip second moment, and positivity is structurally a statement about sign, not
 magnitude. This sharpens the wall to its tightest one-point form and explains the shape/sign split.*
 
@@ -118,7 +118,7 @@ explicit-formula zero basis gives the displayed double zero-sum, which is the se
 diagonal $\gam=\gam'$, $\beta=\tfrac12$ is the pair-correlation form. $\square$
 
 \begin{resultbox}
-\textbf{Honest verdict.} Positivity buys (Lemma~\ref{lem:cs}) the collapse to a one-point diagonal sup
+\textbf{Candid verdict.} Positivity buys (Lemma~\ref{lem:cs}) the collapse to a one-point diagonal sup
 and (Prop.~\ref{prop:onesided}) a one-sided lower bound — but the one-point sup is
 (Thm~\ref{thm:nocross}) the \emph{same} center-of-strip second moment that the Carleson norm was. The
 sign we have for free controls **whether** off-line zeros appear (lower bound, detector), never **how
@@ -138,7 +138,7 @@ has a sharp pointwise avatar:
 | off-line pair block $B_\rho$ | $\succeq0$: cannot cancel (Prop.~\ref{prop:onesided}) | — (lower bound only) |
 | diagonal $e^{-u/2}\mathfrak d_P(u)$ | exists, $\ge0$, detects off-line | $\sup<\infty$ $=$ pair correlation $=$ RH |
 
-The honest content: we have pushed positivity as far as it structurally goes. It removes the interval
+The candid content: we have pushed positivity as far as it structurally goes. It removes the interval
 geometry (Lever 1) and certifies detection (Lever 2), leaving the wall in its **irreducible one-point
 form** — $\sup_{P,u}e^{-u/2}\mathfrak d_P(u)<\infty$ — which is the short-interval prime variance at
 $\sqrt n$ scale. No positivity argument can cross it, because positivity is a sign statement and the

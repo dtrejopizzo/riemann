@@ -5,7 +5,7 @@ fix). It correctly classifies the object as a **Krein-space** problem, *not* a d
 positive) one. It can be sharpened to the **angular-operator** form, which unifies B-2 and RH on a single
 axis $\|K\|$ and even removes the factor-4 slack in `B2-THEOREM.md`. **But** the bibliography check
 (below, §6) shows this framework is **the Connes–Consani frontier**, not new ground — and it does **not**
-break the sign barrier. Honest audit, kept and discarded items marked.
+break the sign barrier. Candid audit, kept and discarded items marked.
 
 ---
 
@@ -82,7 +82,7 @@ $$
 $$
 - $\|K\|<\infty$ ⟺ $R(E)$ uniformly positive-projecting ⟺ the coercivity B-2 needs; **(H) is a *sufficient*
   condition for it**, not a glib equivalence. *(Correction: the earlier "$(H)\iff\|K\|<\infty$" overstated;
-  the honest direction is $(H)\Rightarrow\|K\|<\infty\Rightarrow$ B-2.)*
+  the candid direction is $(H)\Rightarrow\|K\|<\infty\Rightarrow$ B-2.)*
 - $\|K\|\le1$ ⟺ $\|P_-EF\|\le\|P_+EF\|\ \forall F$ ⟺ $\mathfrak t\ge0$ ⟺ **RH** — clean and unconditional
   given $K$ defined (if $K$ unbounded then $\|K\|>1$, RH false — consistent).
 - The 22 days gave $\|K\|<\infty$ modulo (H), with $\|K\|\ge e^{d/2}>1$ from the magnitude side. **RH is the
@@ -138,7 +138,7 @@ as depths $\to0$ — shallow off-line zeros cannot, by themselves, push $\|K\|$ 
 
 ---
 
-## 6. ⚠️ BIBLIOGRAPHY — the honest, uncomfortable finding (audit)
+## 6. ⚠️ BIBLIOGRAPHY — the candid, uncomfortable finding (audit)
 
 I searched specifically for this construction. Two papers occupy essentially this ground:
 
@@ -161,7 +161,7 @@ I searched specifically for this construction. Two papers occupy essentially thi
   been exhibited, and in fact the two realizations differ (ours is *zero-side*, depending on $\{t_\rho,b_\rho\}$;
   theirs is *archimedean*, built from the explicit local factor, independent of the zeros). So they are
   **two distinct realizations of the same form $\mathfrak t$**, strongly analogous, not proven identical. The
-  honest claim is: *the structure obtained is strongly analogous to Connes–Consani and yields a spectral
+  candid claim is: *the structure obtained is strongly analogous to Connes–Consani and yields a spectral
   reduction of the same type.*
 - **It does not break the sign barrier** (now *proved*, not asserted — see §8). The $e^{d/2}>1$ lower bound on
   $\|K\|$ from magnitude estimates is on the **wrong side**, consistent with RH-ENDGAME.
@@ -183,7 +183,7 @@ sign* (it reaches the Connes–Consani wall and stops, §6).
 
 **Best path, with reasons:**
 1. **Fold §§1–4 into the A write-up as the structural section**, citing Connes–Consani (2006.13771) and
-   2301.00421 as the lineage, and stating the distinguishing axis honestly (unconditional Krein realization +
+   2301.00421 as the lineage, and stating the distinguishing axis candidly (unconditional Krein realization +
    explicit sampling ladder). This makes A's write-up *correct and properly situated* — a referee will ask
    exactly these citations; better we raise them first.
 2. **Do not invest in "is 𝒯 a square / is $\|K\|\le1$" as if it were open ground.** It is the

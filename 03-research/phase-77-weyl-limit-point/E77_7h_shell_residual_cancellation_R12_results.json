@@ -1,0 +1,317 @@
+{
+  "statement": "E77.7h shell residual-cancellation scaling probe",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 20,
+    "ref_modes": 12,
+    "pairs": [
+      [
+        14,
+        16
+      ],
+      [
+        16,
+        18
+      ],
+      [
+        18,
+        20
+      ]
+    ],
+    "dps": 60,
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "Finite scaling probe. Trends across a short shell range suggest the next theorem but do not prove cofinal summability.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 20,
+      "ref_modes": 12,
+      "pairs": [
+        [
+          14,
+          16
+        ],
+        [
+          16,
+          18
+        ],
+        [
+          18,
+          20
+        ]
+      ],
+      "planted": null,
+      "rows": [
+        {
+          "old_modes": 14,
+          "new_modes": 16,
+          "ref_modes": 12,
+          "shell_labels": [
+            "('coord', -16)",
+            "('coord', -15)",
+            "('coord', 15)",
+            "('coord', 16)"
+          ],
+          "eta": "2.40320586666213066340435e-37",
+          "fixed_shell_increment": "1.71017240998445673332712e-41",
+          "shorted_energy": "1.71017240998445673332712e-41",
+          "energy_over_eta": "0.000071162126961672058018485",
+          "identity_relative_defect": "4.65982716504780947221937e-73",
+          "identity_log10_defect": "-72.331630191176529",
+          "direct_shell_norm": "5.12082743334556577338959e-24",
+          "mediated_shell_norm": "5.12073034792600873635259e-24",
+          "residual_norm": "9.75386057364895784193869e-29",
+          "cancellation_ratio": "0.0000190474307142908633713997",
+          "cos_direct_mediated": "0.999999999998318212717307",
+          "schur_min_eigenvalue": "2.11501226500647180526209e-23",
+          "schur_max_eigenvalue": "5.63391110170048388977379e-16",
+          "schur_condition": "26637723.0757252581423524",
+          "crude_residual_bound": "4.49821486448412918490435e-34",
+          "crude_bound_over_energy": "26302698.1269392140996163",
+          "direct_energy": "9.89668975653775289457446e-28",
+          "mediated_energy": "9.89668944709625493743869e-28",
+          "cross_energy": "9.89668960181691840738607e-28",
+          "energy_expansion_defect": "7.11989619915073754794631e-66",
+          "shell_distance_from_ref": 4,
+          "energy_over_eta_ratio_to_previous_shell": "NA",
+          "cancellation_ratio_to_previous_shell": "NA",
+          "residual_norm_ratio_to_previous_shell": "NA",
+          "direct_norm_ratio_to_previous_shell": "NA",
+          "energy_over_eta_log10": "-4.14775107978551801",
+          "cancellation_ratio_log10": "-4.72016359751375832",
+          "residual_norm_log10": "-28.0108234567132517"
+        },
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "ref_modes": 12,
+          "shell_labels": [
+            "('coord', -18)",
+            "('coord', -17)",
+            "('coord', 17)",
+            "('coord', 18)"
+          ],
+          "eta": "2.40320588207328596789142e-37",
+          "fixed_shell_increment": "1.54488093067918470929469e-45",
+          "shorted_energy": "1.54488093067918470929469e-45",
+          "energy_over_eta": "6.42841690012172429362085e-9",
+          "identity_relative_defect": "2.54557882892109699308788e-72",
+          "identity_log10_defect": "-71.5942134496243391",
+          "direct_shell_norm": "7.79903828784218237713398e-22",
+          "mediated_shell_norm": "7.79903827486039777495517e-22",
+          "residual_norm": "1.31128987492162520700798e-30",
+          "cancellation_ratio": "1.68134816951184564326918e-9",
+          "cos_direct_mediated": "0.999999999999999999971875",
+          "schur_min_eigenvalue": "2.3093057949965033435366e-23",
+          "schur_max_eigenvalue": "1.13600836312749949965426e-15",
+          "schur_condition": "49192634.6692088735304947",
+          "crude_residual_bound": "7.44587892949264022464933e-38",
+          "crude_bound_over_energy": "48197105.560874303184832",
+          "direct_energy": "4.59925618150154402953582e-23",
+          "mediated_energy": "4.59925618149378182742352e-23",
+          "cross_energy": "4.59925618149766292847959e-23",
+          "energy_expansion_defect": "1.9886088064732372945632e-61",
+          "shell_distance_from_ref": 6,
+          "energy_over_eta_ratio_to_previous_shell": "0.0000903348055291274736469399",
+          "cancellation_ratio_to_previous_shell": "0.0000882716516853040725049975",
+          "residual_norm_ratio_to_previous_shell": "0.0134438037638574371717911",
+          "direct_norm_ratio_to_previous_shell": "152.300353592405160870558",
+          "energy_over_eta_log10": "-8.19189596583040863",
+          "cancellation_ratio_log10": "-8.77434234459694949",
+          "residual_norm_log10": "-29.8823012921672149"
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "ref_modes": 12,
+          "shell_labels": [
+            "('coord', -20)",
+            "('coord', -19)",
+            "('coord', 19)",
+            "('coord', 20)"
+          ],
+          "eta": "2.4032058820758126570937e-37",
+          "fixed_shell_increment": "2.53802336496650719784741e-49",
+          "shorted_energy": "2.53802336496650719784734e-49",
+          "energy_over_eta": "1.05609901502664578005728e-12",
+          "identity_relative_defect": "7.10857792754753444956928e-72",
+          "identity_log10_defect": "-71.148217271280104",
+          "direct_shell_norm": "7.60710869793474445102981e-21",
+          "mediated_shell_norm": "7.60710869793256779585609e-21",
+          "residual_norm": "3.1175599777634304757281e-33",
+          "cancellation_ratio": "4.09821931243051317686245e-13",
+          "cos_direct_mediated": "1.0",
+          "schur_min_eigenvalue": "1.67483593655963764658189e-23",
+          "schur_max_eigenvalue": "3.92152270357459115262323e-17",
+          "schur_condition": "2341436.92404283048702864",
+          "crude_residual_bound": "5.80306405110757547882052e-43",
+          "crude_bound_over_energy": "2286450.20814619454981805",
+          "direct_energy": "1.63177752497714983418819e-19",
+          "mediated_energy": "1.63177752497714920201731e-19",
+          "cross_energy": "1.63177752497714951810275e-19",
+          "energy_expansion_defect": "1.03318939135761971387426e-57",
+          "shell_distance_from_ref": 8,
+          "energy_over_eta_ratio_to_previous_shell": "0.000164286018071828568018932",
+          "cancellation_ratio_to_previous_shell": "0.000243746023979100653035747",
+          "residual_norm_ratio_to_previous_shell": "0.00237747582543468098645242",
+          "direct_norm_ratio_to_previous_shell": "9.75390608069377678911218",
+          "energy_over_eta_log10": "-11.9762953624235947",
+          "cancellation_ratio_log10": "-12.3874048044438932",
+          "residual_norm_log10": "-32.5061851825130514"
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 20,
+      "ref_modes": 12,
+      "pairs": [
+        [
+          14,
+          16
+        ],
+        [
+          16,
+          18
+        ],
+        [
+          18,
+          20
+        ]
+      ],
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "old_modes": 14,
+          "new_modes": 16,
+          "ref_modes": 12,
+          "shell_labels": [
+            "('coord', -16)",
+            "('coord', -15)",
+            "('coord', 15)",
+            "('coord', 16)"
+          ],
+          "eta": "0.0305593013376462380854493",
+          "fixed_shell_increment": "0.0159848992226717928104333",
+          "shorted_energy": "0.0159848992226717928104333",
+          "energy_over_eta": "0.523078032644020976233776",
+          "identity_relative_defect": "0.0",
+          "identity_log10_defect": "-inf",
+          "direct_shell_norm": "0.168315897384808965800923",
+          "mediated_shell_norm": "0.0235712684798930420153535",
+          "residual_norm": "0.189217261347819904867465",
+          "cancellation_ratio": "1.12417938107905279950897",
+          "cos_direct_mediated": "-0.871766458419324602433393",
+          "schur_min_eigenvalue": "1.57552609231566317325166",
+          "schur_max_eigenvalue": "2.25020770163932065387047",
+          "schur_condition": "1.42822623669280510263662",
+          "crude_residual_bound": "0.0227245820723582576338601",
+          "crude_bound_over_energy": "1.42162811011829212334165",
+          "direct_energy": "0.0126068663550657091117286",
+          "mediated_energy": "0.000267103356611474294560117",
+          "cross_energy": "-0.00155546475549730470207232",
+          "energy_expansion_defect": "0.0",
+          "shell_distance_from_ref": 4,
+          "energy_over_eta_ratio_to_previous_shell": "NA",
+          "cancellation_ratio_to_previous_shell": "NA",
+          "residual_norm_ratio_to_previous_shell": "NA",
+          "direct_norm_ratio_to_previous_shell": "NA",
+          "energy_over_eta_log10": "-0.281433518362565331",
+          "cancellation_ratio_log10": "0.0508356155008524546",
+          "residual_norm_log10": "-0.723039247605666525"
+        },
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "ref_modes": 12,
+          "shell_labels": [
+            "('coord', -18)",
+            "('coord', -17)",
+            "('coord', 17)",
+            "('coord', 18)"
+          ],
+          "eta": "0.0352343027504843351068349",
+          "fixed_shell_increment": "0.00474595562392379688610251",
+          "shorted_energy": "0.00474595562392379688610251",
+          "energy_over_eta": "0.134697021182249970590318",
+          "identity_relative_defect": "1.21543267145725423967658e-63",
+          "identity_log10_defect": "-62.9152690937720698",
+          "direct_shell_norm": "0.131594625421255817207787",
+          "mediated_shell_norm": "0.0860920709945769978682325",
+          "residual_norm": "0.103385533487647101242368",
+          "cancellation_ratio": "0.785636443408636023287757",
+          "cos_direct_mediated": "0.619653412252869713450993",
+          "schur_min_eigenvalue": "1.84157639566454389753098",
+          "schur_max_eigenvalue": "4.36565806926256749753794",
+          "schur_condition": "2.37060926689777296792003",
+          "crude_residual_bound": "0.00580403211058119914342918",
+          "crude_bound_over_energy": "1.22294276864363517076961",
+          "direct_energy": "0.00753358455368548827855365",
+          "mediated_energy": "0.00183676644650294383043964",
+          "cross_energy": "0.00231219768813231761144539",
+          "energy_expansion_defect": "0.0",
+          "shell_distance_from_ref": 6,
+          "energy_over_eta_ratio_to_previous_shell": "0.257508464848719010378905",
+          "cancellation_ratio_to_previous_shell": "0.69885327611553988763721",
+          "residual_norm_ratio_to_previous_shell": "0.54638531786803219797442",
+          "direct_norm_ratio_to_previous_shell": "0.781831232022012450686906",
+          "energy_over_eta_log10": "-0.870642008571121343",
+          "cancellation_ratio_log10": "-0.104778379085441928",
+          "residual_norm_log10": "-0.985540226871001442"
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "ref_modes": 12,
+          "shell_labels": [
+            "('coord', -20)",
+            "('coord', -19)",
+            "('coord', 19)",
+            "('coord', 20)"
+          ],
+          "eta": "0.0399204616770616734905046",
+          "fixed_shell_increment": "0.00476548582209966710143012",
+          "shorted_energy": "0.00476548582209966710143012",
+          "energy_over_eta": "0.119374516774136375885365",
+          "identity_relative_defect": "1.21543267145725423967658e-63",
+          "identity_log10_defect": "-62.9152690937720698",
+          "direct_shell_norm": "0.0902845362133364595929561",
+          "mediated_shell_norm": "0.0726559208963747354159131",
+          "residual_norm": "0.147327202252659359697178",
+          "cancellation_ratio": "1.63180992484177808260304",
+          "cos_direct_mediated": "-0.630754187004733509094709",
+          "schur_min_eigenvalue": "1.85288057304052399587121",
+          "schur_max_eigenvalue": "4.85501098266265639143006",
+          "schur_condition": "2.62025035682452124062967",
+          "crude_residual_bound": "0.0117143570068189627219176",
+          "crude_bound_over_energy": "2.45816637466306250706581",
+          "direct_energy": "0.00250985046020217939346039",
+          "mediated_energy": "0.00122317166850276060316814",
+          "cross_energy": "-0.000516231846697363552400795",
+          "energy_expansion_defect": "0.0",
+          "shell_distance_from_ref": 8,
+          "energy_over_eta_ratio_to_previous_shell": "0.886244667672481867778123",
+          "cancellation_ratio_to_previous_shell": "2.07705477327636986908527",
+          "residual_norm_ratio_to_previous_shell": "1.4250272478427804119872",
+          "direct_norm_ratio_to_previous_shell": "0.686080726506276092036757",
+          "energy_over_eta_log10": "-0.923088373420769756",
+          "cancellation_ratio_log10": "0.212669570226754688",
+          "residual_norm_log10": "-0.831717058333751035"
+        }
+      ]
+    }
+  ]
+}

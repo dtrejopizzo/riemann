@@ -56,7 +56,7 @@ Denotamos $\hat{h}(r) = \int_{-\infty}^\infty h(s) e^{irs} ds$ la transformada d
 $$\sum_\rho h(\gamma_\rho) = 2h(i/2) + \hat{h}(0)\log\frac{1}{2\pi} - \int_{-\infty}^\infty h(s)\frac{\Gamma'}{\Gamma}\!\left(\frac{1}{4} + \frac{is}{2}\right)\frac{ds}{4\pi} - 2\sum_p \sum_{m=1}^\infty \frac{\log p}{p^{m/2}}\,\hat{h}(m\log p),$$
 *donde la suma del lado izquierdo corre sobre todos los ceros no triviales $\rho = 1/2 + i\gamma_\rho$ de $\zeta$ (con multiplicidad, contando $\gamma$ y $-\gamma$ por separado si $\rho$ y $\bar{\rho}$ son ceros distintos).*
 
-**Nota de honestidad sobre el Teorema 2.1:** La fórmula es clásica (Guinand 1948, Weil 1952). La forma aquí enunciada es la versión estándar que aparece, por ejemplo, en Iwaniec-Kowalski, Analytic Number Theory, cap. 5. No se asume RH en el enunciado; la suma del lado izquierdo corre sobre todos los ceros no triviales con sus partes imaginarias reales (bajo RH todos los $\gamma_\rho$ son reales; sin RH la suma debe entenderse como $\sum_\rho h(\mathrm{Im}(\rho))$ donde la convergencia se garantiza bajo (W3) por la densidad de ceros $N(T) = (T/2\pi)\log(T/2\pi e) + O(\log T)$).
+**Nota de franqueza sobre el Teorema 2.1:** La fórmula es clásica (Guinand 1948, Weil 1952). La forma aquí enunciada es la versión estándar que aparece, por ejemplo, en Iwaniec-Kowalski, Analytic Number Theory, cap. 5. No se asume RH en el enunciado; la suma del lado izquierdo corre sobre todos los ceros no triviales con sus partes imaginarias reales (bajo RH todos los $\gamma_\rho$ son reales; sin RH la suma debe entenderse como $\sum_\rho h(\mathrm{Im}(\rho))$ donde la convergencia se garantiza bajo (W3) por la densidad de ceros $N(T) = (T/2\pi)\log(T/2\pi e) + O(\log T)$).
 
 ### 2.2. El término arquimediano
 
@@ -168,7 +168,7 @@ Cuando $\lambda \to \infty$, $N(\lambda) \to \infty$ y $W_\lambda(s)$ crece (inc
 $$B_\lambda(r) = \int W_\lambda(s)\cos(rs)\,dm_\infty(s) \to \sum_{k=0}^\infty k \int |P_k(s)|^2\cos(rs)\,dm_\infty(s) \quad (\lambda \to \infty),$$
 *si la serie del lado derecho converge. Esta convergencia no está garantizada en general; depende del decaimiento de los coeficientes de Fourier de $|P_k|^2 dm_\infty$.*
 
-**Nota de honestidad sobre 4.6:** No se conoce si la serie $\sum_k k \widehat{|P_k|^2 dm_\infty}(r)$ converge para los polinomios ortogonales $P_k$ de $L^2(dm_{\mathrm{full,on}})$. Este punto es un obstáculo técnico (no fundamental) para el análisis asintótico en $\lambda$.
+**Nota de franqueza sobre 4.6:** No se conoce si la serie $\sum_k k \widehat{|P_k|^2 dm_\infty}(r)$ converge para los polinomios ortogonales $P_k$ de $L^2(dm_{\mathrm{full,on}})$. Este punto es un obstáculo técnico (no fundamental) para el análisis asintótico en $\lambda$.
 
 ---
 
@@ -243,7 +243,7 @@ $$T_\lambda \geq 4\delta_0^2 \sum_{j:\, \gamma_j \in [T,2T]} K_\lambda(\gamma_j)
 *Si además $K_\lambda(\gamma_j) \geq K_{\min}(\lambda, T) > 0$ uniforme en $j$, entonces*
 $$T_\lambda \geq 4\delta_0^2 K_{\min}(\lambda, T) \cdot T^c.$$
 
-**Nota de honestidad:** Esta proposición es válida pero inutilizable directamente: bajo $\neg$RH no sabemos cómo se distribuyen los ceros (por eso $\neg$RH sigue siendo abierta). Es una proposición condicional.
+**Nota de franqueza:** Esta proposición es válida pero inutilizable directamente: bajo $\neg$RH no sabemos cómo se distribuyen los ceros (por eso $\neg$RH sigue siendo abierta). Es una proposición condicional.
 
 ### 6.4. ¿Puede crecer $\mathcal{P}_\lambda$ tan rápido?
 
@@ -457,7 +457,7 @@ $$\mathcal{P}_\lambda = 2\sum_p \frac{\log p}{\sqrt{p}} B_\lambda(\log p) \leq \
 
 Si $\mathbf{C}_A$ fuera verdadera, y además $4\delta_0^2 K_\lambda(\gamma_0) > \mathcal{R}_\lambda - 2\mathcal{P}_\lambda$ para $\lambda$ grande bajo $\neg$RH, se obtendría la contradicción buscada.
 
-**Nota de honestidad crítica:** La Conjetura $\mathbf{C}_A$ es actualmente sin soporte analítico. No hay ninguna razón a priori para creer que la suma de primos deba ser menor que $\mathcal{R}_\lambda - \eta_\lambda$: la fórmula de Weil impone exactamente que $\mathcal{P}_\lambda = (\mathcal{R}_\lambda - T_\lambda)/2$, luego si $T_\lambda = 0$ (RH) entonces $\mathcal{P}_\lambda = \mathcal{R}_\lambda/2$, y si $T_\lambda > 0$ ($\neg$RH) entonces $\mathcal{P}_\lambda < \mathcal{R}_\lambda/2$. La Conjetura $\mathbf{C}_A$ dice que esta segunda posibilidad ($\mathcal{P}_\lambda < \mathcal{R}_\lambda/2$) implica algo contradictorio — pero la fórmula de Weil no impone ninguna contradicción aquí.
+**Nota de franqueza crítica:** La Conjetura $\mathbf{C}_A$ es actualmente sin soporte analítico. No hay ninguna razón a priori para creer que la suma de primos deba ser menor que $\mathcal{R}_\lambda - \eta_\lambda$: la fórmula de Weil impone exactamente que $\mathcal{P}_\lambda = (\mathcal{R}_\lambda - T_\lambda)/2$, luego si $T_\lambda = 0$ (RH) entonces $\mathcal{P}_\lambda = \mathcal{R}_\lambda/2$, y si $T_\lambda > 0$ ($\neg$RH) entonces $\mathcal{P}_\lambda < \mathcal{R}_\lambda/2$. La Conjetura $\mathbf{C}_A$ dice que esta segunda posibilidad ($\mathcal{P}_\lambda < \mathcal{R}_\lambda/2$) implica algo contradictorio — pero la fórmula de Weil no impone ninguna contradicción aquí.
 
 ### 11.2. Variante: la conjetura sobre la positividad de $B_\lambda$
 

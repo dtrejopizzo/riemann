@@ -1,0 +1,1389 @@
+{
+  "statement": "E79.74 incremental acceptance autopsy",
+  "sources": [
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_68_sigma_aware_terminal_score_autopsy_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_69_relational_matching_selector_results.json"
+  ],
+  "summary": {
+    "num_rows": 5,
+    "free_greedy_exact_count": 0,
+    "terminal_anchor_exact_count": 0
+  },
+  "rows": [
+    {
+      "N": 8,
+      "target_support": [
+        6,
+        7,
+        8
+      ],
+      "extra_sigma1": 0.0005281825090824222,
+      "extra_sigma2": 0.00105114185516,
+      "free_greedy": {
+        "support": [
+          0
+        ],
+        "exact": false,
+        "final": {
+          "score": 0.010091784121009195,
+          "mismatch": 0.2300917841210092,
+          "cardinality": 1,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 0.9899082158789908,
+            "add": 0,
+            "support": [
+              0
+            ],
+            "after": {
+              "score": 0.010091784121009195,
+              "mismatch": 0.2300917841210092,
+              "cardinality": 1,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      },
+      "terminal_anchor_greedy": {
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "exact": false,
+        "final": {
+          "score": -1.1157369950277767,
+          "mismatch": 0.8642630049722234,
+          "cardinality": 9,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 2.8900067703655576,
+            "add": 0,
+            "support": [
+              0,
+              8
+            ],
+            "after": {
+              "score": 0.702083839821203,
+              "mismatch": 0.16208383982120295,
+              "cardinality": 2,
+              "gaps": 7,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.44910251682617996,
+            "add": 7,
+            "support": [
+              0,
+              7,
+              8
+            ],
+            "after": {
+              "score": 0.2529813229950231,
+              "mismatch": 0.07298132299502305,
+              "cardinality": 3,
+              "gaps": 6,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.005766601244982517,
+            "add": 6,
+            "support": [
+              0,
+              6,
+              7,
+              8
+            ],
+            "after": {
+              "score": 0.24721472175004056,
+              "mismatch": 0.4272147217500405,
+              "cardinality": 4,
+              "gaps": 5,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.16788004095697873,
+            "add": 5,
+            "support": [
+              0,
+              5,
+              6,
+              7,
+              8
+            ],
+            "after": {
+              "score": 0.07933468079306183,
+              "mismatch": 0.6193346807930619,
+              "cardinality": 5,
+              "gaps": 4,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.25163518429779175,
+            "add": 4,
+            "support": [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "after": {
+              "score": -0.17230050350472992,
+              "mismatch": 0.7276994964952701,
+              "cardinality": 6,
+              "gaps": 3,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.2949974759024463,
+            "add": 3,
+            "support": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "after": {
+              "score": -0.4672979794071762,
+              "mismatch": 0.7927020205928238,
+              "cardinality": 7,
+              "gaps": 2,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.31691295841977385,
+            "add": 2,
+            "support": [
+              0,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "after": {
+              "score": -0.7842109378269501,
+              "mismatch": 0.8357890621730499,
+              "cardinality": 8,
+              "gaps": 1,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3315260572008266,
+            "add": 1,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "after": {
+              "score": -1.1157369950277767,
+              "mismatch": 0.8642630049722234,
+              "cardinality": 9,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "N": 10,
+      "target_support": [
+        5
+      ],
+      "extra_sigma1": 0.0003078331458410208,
+      "extra_sigma2": 0.0006132627769007301,
+      "free_greedy": {
+        "support": [
+          0
+        ],
+        "exact": false,
+        "final": {
+          "score": 0.011117292567370957,
+          "mismatch": 0.23111729256737096,
+          "cardinality": 1,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 0.9888827074326291,
+            "add": 0,
+            "support": [
+              0
+            ],
+            "after": {
+              "score": 0.011117292567370957,
+              "mismatch": 0.23111729256737096,
+              "cardinality": 1,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      },
+      "terminal_anchor_greedy": {
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "exact": false,
+        "final": {
+          "score": -1.5293911994423617,
+          "mismatch": 0.8906088005576382,
+          "cardinality": 11,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 3.3290560197829797,
+            "add": 0,
+            "support": [
+              0,
+              10
+            ],
+            "after": {
+              "score": 0.9396084600420491,
+              "mismatch": 0.1196084600420489,
+              "cardinality": 2,
+              "gaps": 9,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.4091537353712448,
+            "add": 9,
+            "support": [
+              0,
+              9,
+              10
+            ],
+            "after": {
+              "score": 0.5304547246708043,
+              "mismatch": 0.07045472467080424,
+              "cardinality": 3,
+              "gaps": 8,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.15403683913701682,
+            "add": 8,
+            "support": [
+              0,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": 0.3764178855337875,
+              "mismatch": 0.2764178855337875,
+              "cardinality": 4,
+              "gaps": 7,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.19870763940912284,
+            "add": 7,
+            "support": [
+              0,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": 0.17771024612466468,
+              "mismatch": 0.4377102461246647,
+              "cardinality": 5,
+              "gaps": 6,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.16783864481136568,
+            "add": 6,
+            "support": [
+              0,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": 0.009871601313299005,
+              "mismatch": 0.629871601313299,
+              "cardinality": 6,
+              "gaps": 5,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.2578414307591531,
+            "add": 5,
+            "support": [
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -0.2479698294458541,
+              "mismatch": 0.7320301705541459,
+              "cardinality": 7,
+              "gaps": 4,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.2919247396450392,
+            "add": 1,
+            "support": [
+              0,
+              1,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -0.5398945690908933,
+              "mismatch": 0.8001054309091067,
+              "cardinality": 8,
+              "gaps": 3,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.31899208701660464,
+            "add": 2,
+            "support": [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -0.8588866561074979,
+              "mismatch": 0.8411133438925019,
+              "cardinality": 9,
+              "gaps": 2,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.33173224986406313,
+            "add": 4,
+            "support": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -1.190618905971561,
+              "mismatch": 0.869381094028439,
+              "cardinality": 10,
+              "gaps": 1,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3387722934708006,
+            "add": 3,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -1.5293911994423617,
+              "mismatch": 0.8906088005576382,
+              "cardinality": 11,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "N": 12,
+      "target_support": [
+        7
+      ],
+      "extra_sigma1": 0.000198719668364,
+      "extra_sigma2": 0.00039628786539330454,
+      "free_greedy": {
+        "support": [
+          0
+        ],
+        "exact": false,
+        "final": {
+          "score": -0.01900723613217553,
+          "mismatch": 0.20099276386782447,
+          "cardinality": 1,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 1.0190072361321756,
+            "add": 0,
+            "support": [
+              0
+            ],
+            "after": {
+              "score": -0.01900723613217553,
+              "mismatch": 0.20099276386782447,
+              "cardinality": 1,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      },
+      "terminal_anchor_greedy": {
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "exact": false,
+        "final": {
+          "score": -1.5007206959422952,
+          "mismatch": 0.9192793040577049,
+          "cardinality": 11,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 3.290938929646901,
+            "add": 0,
+            "support": [
+              0,
+              10
+            ],
+            "after": {
+              "score": 0.854483411155154,
+              "mismatch": 0.03448341115515383,
+              "cardinality": 2,
+              "gaps": 9,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.14942587814155261,
+            "add": 9,
+            "support": [
+              0,
+              9,
+              10
+            ],
+            "after": {
+              "score": 0.7050575330136014,
+              "mismatch": 0.2450575330136013,
+              "cardinality": 3,
+              "gaps": 8,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.030893144329855238,
+            "add": 7,
+            "support": [
+              0,
+              7,
+              9,
+              10
+            ],
+            "after": {
+              "score": 0.6741643886837462,
+              "mismatch": 0.5741643886837461,
+              "cardinality": 4,
+              "gaps": 7,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.22965675681986175,
+            "add": 8,
+            "support": [
+              0,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": 0.4445076318638844,
+              "mismatch": 0.7045076318638844,
+              "cardinality": 5,
+              "gaps": 6,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.27978786928053745,
+            "add": 1,
+            "support": [
+              0,
+              1,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": 0.16471976258334697,
+              "mismatch": 0.784719762583347,
+              "cardinality": 6,
+              "gaps": 5,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.311594642554447,
+            "add": 2,
+            "support": [
+              0,
+              1,
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -0.14687487997110005,
+              "mismatch": 0.8331251200288999,
+              "cardinality": 7,
+              "gaps": 4,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3255713522755178,
+            "add": 4,
+            "support": [
+              0,
+              1,
+              2,
+              4,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -0.47244623224661786,
+              "mismatch": 0.8675537677533821,
+              "cardinality": 8,
+              "gaps": 3,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.33728369930796687,
+            "add": 6,
+            "support": [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -0.8097299315545847,
+              "mismatch": 0.8902700684454153,
+              "cardinality": 9,
+              "gaps": 2,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.34374539577328034,
+            "add": 3,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -1.153475327327865,
+              "mismatch": 0.9065246726721352,
+              "cardinality": 10,
+              "gaps": 1,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3472453686144301,
+            "add": 5,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "after": {
+              "score": -1.5007206959422952,
+              "mismatch": 0.9192793040577049,
+              "cardinality": 11,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "N": 14,
+      "target_support": [
+        10,
+        11,
+        12
+      ],
+      "extra_sigma1": 0.00013338899684189597,
+      "extra_sigma2": 0.000266010252359,
+      "free_greedy": {
+        "support": [
+          0
+        ],
+        "exact": false,
+        "final": {
+          "score": 0.004910146570685947,
+          "mismatch": 0.22491014657068595,
+          "cardinality": 1,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 0.995089853429314,
+            "add": 0,
+            "support": [
+              0
+            ],
+            "after": {
+              "score": 0.004910146570685947,
+              "mismatch": 0.22491014657068595,
+              "cardinality": 1,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      },
+      "terminal_anchor_greedy": {
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "exact": false,
+        "final": {
+          "score": -1.9285518514724553,
+          "mismatch": 0.9314481485275444,
+          "cardinality": 13,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 3.732586412324008,
+            "add": 0,
+            "support": [
+              0,
+              12
+            ],
+            "after": {
+              "score": 1.1220608362416873,
+              "mismatch": 0.022060836241687306,
+              "cardinality": 2,
+              "gaps": 11,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.13435926282486066,
+            "add": 10,
+            "support": [
+              0,
+              10,
+              12
+            ],
+            "after": {
+              "score": 0.9877015734168266,
+              "mismatch": 0.24770157341682658,
+              "cardinality": 3,
+              "gaps": 10,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.19026081194137745,
+            "add": 9,
+            "support": [
+              0,
+              9,
+              10,
+              12
+            ],
+            "after": {
+              "score": 0.7974407614754492,
+              "mismatch": 0.41744076147544895,
+              "cardinality": 4,
+              "gaps": 9,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.2446731748639024,
+            "add": 11,
+            "support": [
+              0,
+              9,
+              10,
+              11,
+              12
+            ],
+            "after": {
+              "score": 0.5527675866115468,
+              "mismatch": 0.5327675866115468,
+              "cardinality": 5,
+              "gaps": 8,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.17951090576563222,
+            "add": 1,
+            "support": [
+              0,
+              1,
+              9,
+              10,
+              11,
+              12
+            ],
+            "after": {
+              "score": 0.37325668084591457,
+              "mismatch": 0.7132566808459145,
+              "cardinality": 6,
+              "gaps": 7,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.27696163412794095,
+            "add": 2,
+            "support": [
+              0,
+              1,
+              2,
+              9,
+              10,
+              11,
+              12
+            ],
+            "after": {
+              "score": 0.09629504671797362,
+              "mismatch": 0.7962950467179736,
+              "cardinality": 7,
+              "gaps": 6,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.31396604216187507,
+            "add": 8,
+            "support": [
+              0,
+              1,
+              2,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "after": {
+              "score": -0.21767099544390145,
+              "mismatch": 0.8423290045560985,
+              "cardinality": 8,
+              "gaps": 5,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3303508189907819,
+            "add": 7,
+            "support": [
+              0,
+              1,
+              2,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "after": {
+              "score": -0.5480218144346833,
+              "mismatch": 0.8719781855653166,
+              "cardinality": 9,
+              "gaps": 4,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3375397582223486,
+            "add": 6,
+            "support": [
+              0,
+              1,
+              2,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "after": {
+              "score": -0.885561572657032,
+              "mismatch": 0.8944384273429683,
+              "cardinality": 10,
+              "gaps": 3,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3440946494452154,
+            "add": 3,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "after": {
+              "score": -1.2296562221022473,
+              "mismatch": 0.9103437778977527,
+              "cardinality": 11,
+              "gaps": 2,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3481429578803381,
+            "add": 4,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "after": {
+              "score": -1.5777991799825855,
+              "mismatch": 0.9222008200174144,
+              "cardinality": 12,
+              "gaps": 1,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3507526714898699,
+            "add": 5,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "after": {
+              "score": -1.9285518514724553,
+              "mismatch": 0.9314481485275444,
+              "cardinality": 13,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "N": 16,
+      "target_support": [
+        11,
+        13
+      ],
+      "extra_sigma1": 9.505024064978429e-05,
+      "extra_sigma2": 0.00018965824160575091,
+      "free_greedy": {
+        "support": [
+          0
+        ],
+        "exact": false,
+        "final": {
+          "score": 0.00490037727191292,
+          "mismatch": 0.22490037727191292,
+          "cardinality": 1,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 0.995099622728087,
+            "add": 0,
+            "support": [
+              0
+            ],
+            "after": {
+              "score": 0.00490037727191292,
+              "mismatch": 0.22490037727191292,
+              "cardinality": 1,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      },
+      "terminal_anchor_greedy": {
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "exact": false,
+        "final": {
+          "score": -2.1326253455875843,
+          "mismatch": 0.9473746544124155,
+          "cardinality": 14,
+          "gaps": 0,
+          "start": 0
+        },
+        "trace": [
+          {
+            "gain": 3.995141328585336,
+            "add": 0,
+            "support": [
+              0,
+              13
+            ],
+            "after": {
+              "score": 1.2920405914405408,
+              "mismatch": 0.052040591440540726,
+              "cardinality": 2,
+              "gaps": 12,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.029628385323194006,
+            "add": 12,
+            "support": [
+              0,
+              12,
+              13
+            ],
+            "after": {
+              "score": 1.2624122061173468,
+              "mismatch": 0.3824122061173469,
+              "cardinality": 3,
+              "gaps": 11,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.1452385021549214,
+            "add": 11,
+            "support": [
+              0,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": 1.1171737039624254,
+              "mismatch": 0.5971737039624254,
+              "cardinality": 4,
+              "gaps": 10,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.22057532502157473,
+            "add": 1,
+            "support": [
+              0,
+              1,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": 0.8965983789408507,
+              "mismatch": 0.7365983789408506,
+              "cardinality": 5,
+              "gaps": 9,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.2904400132957572,
+            "add": 10,
+            "support": [
+              0,
+              1,
+              10,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": 0.6061583656450935,
+              "mismatch": 0.8061583656450935,
+              "cardinality": 6,
+              "gaps": 8,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.31835126078684606,
+            "add": 2,
+            "support": [
+              0,
+              1,
+              2,
+              10,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": 0.28780710485824745,
+              "mismatch": 0.8478071048582474,
+              "cardinality": 7,
+              "gaps": 7,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.33245254100159405,
+            "add": 9,
+            "support": [
+              0,
+              1,
+              2,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": -0.044645436143346595,
+              "mismatch": 0.8753545638566533,
+              "cardinality": 8,
+              "gaps": 6,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.33837609442210226,
+            "add": 8,
+            "support": [
+              0,
+              1,
+              2,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": -0.38302153056544885,
+              "mismatch": 0.8969784694345511,
+              "cardinality": 9,
+              "gaps": 5,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.34420499850095865,
+            "add": 4,
+            "support": [
+              0,
+              1,
+              2,
+              4,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": -0.7272265290664075,
+              "mismatch": 0.9127734709335927,
+              "cardinality": 10,
+              "gaps": 4,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3481756434671963,
+            "add": 3,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": -1.0754021725336038,
+              "mismatch": 0.924597827466396,
+              "cardinality": 11,
+              "gaps": 3,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.35073301657371303,
+            "add": 7,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": -1.4261351891073168,
+              "mismatch": 0.9338648108926833,
+              "cardinality": 12,
+              "gaps": 2,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.35257160981539526,
+            "add": 6,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": -1.778706798922712,
+              "mismatch": 0.9412932010772876,
+              "cardinality": 13,
+              "gaps": 1,
+              "start": 0
+            }
+          },
+          {
+            "gain": 0.3539185466648722,
+            "add": 5,
+            "support": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "after": {
+              "score": -2.1326253455875843,
+              "mismatch": 0.9473746544124155,
+              "cardinality": 14,
+              "gaps": 0,
+              "start": 0
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 The audit's directive: of the program's branches, the only one possibly not yet forced to collapse into a known
 barrier is the original **structural / arithmetic-Weil-form** line (P7, T2, D2, T3, T4). Audit it: is there an
 object here that is *not* reducible to {a prime sum, a power of $\zeta$, a value-statistic, a known spectral
-identity}? This is that audit, performed honestly, object by object — with one correction the auditor should
+identity}? This is that audit, performed candidly, object by object — with one correction the auditor should
 have: **this line was, in fact, already pushed to its reduction** (it became P11/P13), and the audit makes the
 collapse explicit and traces it to the square-root barrier (N8). One genuinely un-reduced object survives, but
 it is RH-*independent*.
@@ -63,7 +63,7 @@ the **same prime-sum cancellation** whose square-root control is RH (**N8**). So
 So **all branches now converge to the same wall**: the prime-count (ω) branch was self-referential (M14.3); the
 linear exact tools (Littlewood, Motohashi) give density (N8); and the structural/positivity branch (P7) is the
 capstone itself, reducing to the same square-root barrier through $\lambda_{\min}=\tfrac{\pi^2}6\beta_{\min}^2$.
-The auditor's instinct was right to check it; the honest outcome is that it, too, collapses — completing the map.
+The auditor's instinct was right to check it; the candid outcome is that it, too, collapses — completing the map.
 
 ## 4. The one genuinely un-reduced object — and why it does not help RH
 
@@ -84,6 +84,6 @@ zeros routes through the explicit formula $=$ the prime sum $=$ N8.)
   $\zeta$-power / self-referential, value-statistic, known spectral identity}, i.e. to the one wall, now mapped
   from five sides (positivity, dynamics, probability, cohomology, cancellation).
 - The single un-reduced object (Conjecture B2) is **RH-independent** — classification, not location of zeros.
-- **Honest consequence:** the program has now audited *every* branch to the same wall. There is no remaining
+- **Candid consequence:** the program has now audited *every* branch to the same wall. There is no remaining
   un-collapsed RH-directed line. The frontier is the square-root / upper-cancellation barrier itself, for which
   no available mechanism — including the structural/positivity one — provides an unconditional handle.

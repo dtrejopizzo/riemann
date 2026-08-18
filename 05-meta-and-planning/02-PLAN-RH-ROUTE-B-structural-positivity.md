@@ -106,22 +106,22 @@ whose positivity structure is studied.
   guardrail B0.)*
 - **B1.3.** Refutation track: prove $\mathcal T$ is **not** a square in any admissible way (a structural
   no-go), e.g. by exhibiting an essential negative-type obstruction in the prime part. A clean no-go here
-  would be a strong result and would *close route B* honestly.
+  would be a strong result and would *close route B* candidly.
 
 ---
 
-## 3. What success / partial success / failure looks like (tiered, honest)
+## 3. What success / partial success / failure looks like (tiered, candid)
 
-| Outcome | Probability (honest) | Value |
+| Outcome | Probability (candid) | Value |
 |---|---|---|
 | Full square $\mathcal T=A^*A$, admissible ⟹ **RH** | $<1\%$ | the theorem |
 | Sharper residual control (Connes route) on $PW_d$ | $\sim10\%$ | real contribution, not RH |
-| Clean **no-go** (structural obstruction to the square) | $\sim25\%$ | durable; closes route B honestly |
+| Clean **no-go** (structural obstruction to the square) | $\sim25\%$ | durable; closes route B candidly |
 | Precise identification $\mathcal T \leftrightarrow$ Connes/de Branges object | $\sim40\%$ | expository/structural, publishable |
 | Nothing new beyond P8 | remainder | time-boxed, cut losses |
 
 **The realistic target is a no-go or an identification, not RH.** That is not defeatism — it is the same
-honesty that made P8's Theorem C the most valuable output of the zero-side line.
+candor that made P8's Theorem C the most valuable output of the zero-side line.
 
 ---
 
@@ -161,5 +161,5 @@ honesty that made P8's Theorem C the most valuable output of the zero-side line.
 
 **One-line framing for the team.** *P8 proved the zero side cannot reach the sign; route B asks the only
 remaining question — does $\mathcal T$ carry an independently-given positive structure (a square)? — with
-the honest expectation that the deliverable is most likely another no-go or a clean identification with
+the candid expectation that the deliverable is most likely another no-go or a clean identification with
 Connes/de Branges, not RH itself.*

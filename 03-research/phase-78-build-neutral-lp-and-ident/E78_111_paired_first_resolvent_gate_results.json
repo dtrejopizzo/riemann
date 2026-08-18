@@ -1,0 +1,58 @@
+{
+  "statement": "E78.111 paired first-resolvent gate audit",
+  "cases": [
+    {
+      "label": "zeta",
+      "rows": [
+        {
+          "z": "(0.0 + 0.59999999999999997779554j)",
+          "pair_tail_abs": "5.05192410714586688926209e+29",
+          "identity_rel_error": "3.48579674467384199713305e-20",
+          "paired_cauchy_bound": "7.49692944905555604624554e+31",
+          "cauchy_first_resolvent_offground_ratio": "0.000334563093372273203631945"
+        },
+        {
+          "z": "(0.0 + 1.0j)",
+          "pair_tail_abs": "2.62467903667554791920435e+29",
+          "identity_rel_error": "3.08238315200777325210375e-20",
+          "paired_cauchy_bound": "5.73923013946204998916884e+31",
+          "cauchy_first_resolvent_offground_ratio": "0.000557499260724889242759969"
+        },
+        {
+          "z": "(0.0 + 2.0j)",
+          "pair_tail_abs": "7.70804635663140394968523e+28",
+          "identity_rel_error": "2.00009178222302675740778e-20",
+          "paired_cauchy_bound": "2.18550721636957348652154e+31",
+          "cauchy_first_resolvent_offground_ratio": "0.00111406739001920528877871"
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "rows": [
+        {
+          "z": "(0.0 + 0.59999999999999997779554j)",
+          "pair_tail_abs": "2.59686799756168860458478e+32",
+          "identity_rel_error": "3.17535955055865222380753e-39",
+          "paired_cauchy_bound": "2.59688021236546067064491e+32",
+          "cauchy_first_resolvent_offground_ratio": "3055991970748392435541.7"
+        },
+        {
+          "z": "(0.0 + 1.0j)",
+          "pair_tail_abs": "1.19862082091839551537858e+32",
+          "identity_rel_error": "5.29068243069278542435365e-39",
+          "paired_cauchy_bound": "1.19862690118875981099508e+32",
+          "cauchy_first_resolvent_offground_ratio": "1604092209124652612752.37"
+        },
+        {
+          "z": "(0.0 + 2.0j)",
+          "pair_tail_abs": "2.33408107476272755462101e+31",
+          "identity_rel_error": "1.05677615524700358567591e-38",
+          "paired_cauchy_bound": "2.33409694014420763142455e+31",
+          "cauchy_first_resolvent_offground_ratio": "302555332545713433398.348"
+        }
+      ]
+    }
+  ],
+  "identity": "<r, (I-P0)A^-2 1> = <(I-P0)A^-1 r, (I-P0)A^-1 1>"
+}

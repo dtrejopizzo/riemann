@@ -20,7 +20,7 @@ reduces to a positivity*, we built the ω-class decomposition (P2: $B(N)\le N^\v
 calibrated it against the canonical RH-violator $L_{\mathrm{DH}}$ (P3: no power-law growth, onset bound
 $N^*\gtrsim10^{14}$), identified coefficient architecture as the discriminant (P4), studied the geometry at
 extreme peaks (P5), and — crucially — **self-corrected** the headline (P6: the inter-class interference sign is
-conditioning-dependent; the "phase transition" was an artifact). Arc A ended honestly: a publishable
+conditioning-dependent; the "phase transition" was an artifact). Arc A ended candidly: a publishable
 fingerprint, not a path to RH.
 
 **Arc B — the inverse-operator / Weil program (P7–P11).** The localized Weil quadratic form $Q$ became the one
@@ -253,7 +253,7 @@ unique such machinery connected to $\zeta$ is **log-correlated fields / multipli
 
 ---
 
-## PART X — HONEST VERDICT
+## PART X — CANDID VERDICT
 
 We did not prove RH, and — stated plainly — **no crossing is reachable from here without an idea neither we
 nor the field possesses in 2026.** We pushed every named approach to its provable floor, including the two most

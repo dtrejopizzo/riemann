@@ -1,4 +1,4 @@
-# C1 — Analytic decomposition of `b_bulk(λ)`, and an honest NO-GO for the Cesàro route
+# C1 — Analytic decomposition of `b_bulk(λ)`, and an candid NO-GO for the Cesàro route
 
 **Date:** 2026-06-26 · Phase 62, step C1.
 
@@ -20,7 +20,7 @@ set established in C0 the Lanczos map `A ↦ b` is locally Lipschitz, so
 E91 confirmed this shape numerically for ζ: `b_bulk(λ) ≈ 0.13 + oscillation`, slope ≈ 0,
 Cesàro mean converging.
 
-## The hope, and why it fails (honest)
+## The hope, and why it fails (candid)
 
 **Hope (O11 / the Phase 62 thesis):** the Cesàro average `(1/Λ)Σ_{λ≤Λ} A^osc(λ) → 0` is
 **unconditional** — provable from the zero-count `N(T) ~ (T/2π)log T` alone, no zero locations.
@@ -64,12 +64,12 @@ oscillation into growth. This both validates the mechanism and refutes the uncon
   sharpens R10's "pointwise L1 touches the wall": **averaging does not move it off the wall.**
 - What survives is a **detector**, not a proof: `b_bulk(λ)` bounded (Cesàro-convergent) ⟺ ζ's
   zeros on the line; DH's growth is the off-line control. This is consistent with — and adds a
-  new, intrinsic-Jacobi instance of — the program's standing result that every honest route
+  new, intrinsic-Jacobi instance of — the program's standing result that every candid route
   reduces to the wall.
 - **Do not** record "2.3.F closed in Cesàro topology". That would be a false victory; the DH
   growth term refutes it directly.
 
-## What this leaves open (honest)
+## What this leaves open (candid)
 
 The only way `b_bulk` boundedness becomes a genuine *input* (rather than RH-restated) is an
 **independent** bound on `A^osc` that does not presuppose `β = 1/2` — i.e. a positivity/geometric

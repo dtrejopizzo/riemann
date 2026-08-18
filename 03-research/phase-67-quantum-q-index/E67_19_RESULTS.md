@@ -1,4 +1,4 @@
-# E67.19 -- honesty check: the Toeplitz structure is only approximate
+# E67.19 -- candor check: the Toeplitz structure is only approximate
 
 **Date:** 2026-07-06.
 **Script:** [E67_19_toeplitz_exactness.py](E67_19_toeplitz_exactness.py).
@@ -23,7 +23,7 @@ Clean quadratic touch at `theta* ~ 1.54` (near pi/2), `sigma_min = +0.037` (posi
 `sigma_min` decreasing with N (0.045 at N=12 -> 0.037 at N=16), consistent with an exact touch at 0 in
 the limit. Descriptive, but heuristic by (A).
 
-## Consequence -- temper the optimism honestly
+## Consequence -- temper the optimism candidly
 
 - The symbol-positivity detector (E67.16-18, saved to 02-foundations) remains a **faithful
   leading-order detector**: it works because the Toeplitz part is dominant.
@@ -45,5 +45,5 @@ open forcer: unchanged -- and cannot be closed by constant-symbol Szego
 ```
 
 No regression: the detector is still beautiful and useful, and Omega_7 is exactly as open as before.
-The honest correction is that the Szego/Fisher-Hartwig rigor is not available here; the varying-symbol
+The candid correction is that the Szego/Fisher-Hartwig rigor is not available here; the varying-symbol
 (pseudodifferential) refinement is the real object, and it is harder.

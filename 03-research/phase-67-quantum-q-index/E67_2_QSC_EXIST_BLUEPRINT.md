@@ -225,7 +225,7 @@ relations?
 
 Expected: no. If yes, the structure is too weak and cannot force RH.
 
-The anticipated failure mode is precise: DH has a functional equation but no honest Euler product. It
+The anticipated failure mode is precise: DH has a functional equation but no candid Euler product. It
 may mimic the archimedean/Gamma carrier, but it should fail the prime-local tensor factorization, the
 cyclic Euler logarithm, or the Haar/fusion orthogonality relations.
 

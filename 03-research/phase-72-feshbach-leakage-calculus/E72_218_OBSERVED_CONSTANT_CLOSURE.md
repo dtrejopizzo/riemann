@@ -78,7 +78,7 @@ The resonant proof needs one of the following sharper inputs:
 3. improve coercivity by using directional information rather than lambda_min(C_x).
 ```
 
-The most honest next target is option 2:
+The most candid next target is option 2:
 
 ```text
 sum_{n in S_j} (Lambda(n)^2/n)

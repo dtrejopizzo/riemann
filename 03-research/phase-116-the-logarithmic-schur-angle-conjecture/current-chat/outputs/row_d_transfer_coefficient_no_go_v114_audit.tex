@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{Transfer-coefficient audit of the proposed arithmetic intertwiner (v114)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The zeroth coefficient}
+
+For $0<a<2T$, on $L^2(I_T)$ let
+\[
+ J_{a,-}F=\frac{\tau_aE_TF-E_TF}{\sqrt2},
+ \qquad
+ J_{a,+}F=\frac{\tau_aE_TF+E_TF}{\sqrt2}.
+\]
+Their exact Gram difference is
+\begin{equation}
+ J_{a,+}^*J_{a,+}-J_{a,-}^*J_{a,-}=S_a+S_{-a}.                 \tag{1}
+\end{equation}
+Let $P_T$ be the primitive projection and $Q_T=I-P_T$.  The range of
+$Q_T$ is the two-dimensional Tate space.
+
+\begin{theorem}[No arithmetic-only unitary changes the minus port into the
+plus port --- \PROVED]
+There is no isometry $U$ between arithmetic port spaces such that
+\begin{equation}
+                         UJ_{a,-}P_T=J_{a,+}P_T                 \tag{2}
+\end{equation}
+for every primitive source.
+\end{theorem}
+
+\begin{proof}
+If (2) held, equality of the two pulled-back Grams and (1) would give
+\begin{equation}
+                         P_T(S_a+S_{-a})P_T=0.                 \tag{3}
+\end{equation}
+The operator $S_a+S_{-a}$ has infinite rank when $0<a<2T$: choose
+infinitely many mutually orthogonal functions supported in sufficiently
+small disjoint subintervals of an overlap region; their nonzero translated
+images remain linearly independent.
+
+On the other hand, if (3) held, decomposition by $P_T+Q_T=I$ would write
+\[
+ S_a+S_{-a}=P_T(S_a+S_{-a})Q_T
+            +Q_T(S_a+S_{-a})P_T
+            +Q_T(S_a+S_{-a})Q_T.
+\]
+Every term on the right has finite rank because $Q_T$ has rank two.  This
+contradicts the infinite rank of the left side.
+\end{proof}
+
+\begin{corollary}[Minimal-realization uniqueness cannot prove (8a) ---
+\PROVED]
+The G39/prime-Julia label realization and the physical plus-delay
+realization do not have the same transfer function.  They agree in the
+logarithmic defect coefficient, but their zeroth coefficients are
+$J_{a,-}P_T$ and $J_{a,+}P_T$, respectively.  Therefore equality of their
+Krylov word Grams and minimality cannot produce a unitary intertwiner.
+\end{corollary}
+
+\begin{proof}
+Uniqueness of minimal conservative realizations applies only after equality
+of the complete transfer functions.  Equality of their zeroth coefficients
+would be (2), excluded by Theorem 1.
+\end{proof}
+
+\section{Consequence for the strict Witt budget}
+
+The results of v109--v112 remain valid:
+\begin{enumerate}
+\item the all-depth arithmetic word norm tends to
+$0.5922965364\ldots<1$;
+\item the newborn label-to-delay synthesis is an isometry;
+\item the Gamma--Tate old/new cross is uniformly bounded.
+\end{enumerate}
+What fails is the inference that the Witt word vector is the defect source
+of the physical Kato residual.  The arithmetic-only version of equation
+(8a) in v113 would entail the forbidden zeroth-order intertwining (2).
+It is therefore false as stated.
+
+The only type-correct replacement is a cross-place scattering
+\begin{equation}
+ \mathscr S_T^{\rm jump}:
+ \mathscr K_T^>\oplus\mathscr K_T^<\oplus
+ \mathscr K_{\Gamma,T}^{\rm aff}\oplus\mathbb C^2_{\rm Tate}
+ \longrightarrow
+ \mathscr K_T^>\oplus\mathscr K_T^<\oplus
+ \mathscr K_{\Gamma,T}^{\rm aff}\oplus\mathbb C^2_{\rm Tate},            \tag{4}
+\end{equation}
+whose full source pullback sends the joint minus/Gamma/Tate input to the
+authoritative plus/Gamma-head output.  It cannot be a direct sum of
+arithmetic channel unitaries, by Theorem 1.
+
+For such a source-defined map the required quantitative assertion is
+\begin{equation}
+ \left\|\mathscr S_T^{\rm jump}ight\|_{\rm physical\ pullback}\le1.
+                                                                    \tag{5}
+\end{equation}
+By the exact balanced factorization, (5) is equivalent to
+$P_TA_TP_T\ge0$.  Hence merely defining (4) from its desired action, or
+declaring it passive because its scalar continuation is unimodular, would
+be circular.  A proof must derive (4)--(5) from an independent
+cross-place conservation law.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.56\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.19\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Minus and plus physical ports have different primitive Grams & \PROVED & (1)--(3) \\
+Arithmetic-only unitary intertwiner & false & Theorem 1 \\
+Minimal-realization proof of v113 (8a) & false & Corollary 2 \\
+Strict Witt budget and newborn delay isometry & \PROVED & v109--v112 \\
+Independent cross-place conservation proving (4)--(5) & \OPEN & not supplied by rows (a)--(c) \\
+Condition $G$, row (d) & \OPEN & equivalent to the physical passivity (5) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

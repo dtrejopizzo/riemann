@@ -59,13 +59,13 @@ criterion:
 
 The object is concrete, computable with our tools, and behaves as RH predicts.
 
-## 5. The honest open part, and the new mathematics
+## 5. The candid open part, and the new mathematics
 
 RH $=$ hyperbolicity of $J^{d,n}$ for **all** $d,n$. GORZ gives "each $d$, large $n$." The gap:
 - **Uniformity in $d$** (the genuine open core, like every uniformity we met) — but here attackable by
   *interlacing families* (bound the largest non-real excursion uniformly) and *stability preservers* (build
   $J^{d,n}$ from hyperbolic building blocks by stability-preserving, arithmetic-carrying operations).
-- **Honest caveat:** the *low*-degree hyperbolicity ($d=2$ = Turán = Li-coefficient positivity) IS a
+- **Candid caveat:** the *low*-degree hyperbolicity ($d=2$ = Turán = Li-coefficient positivity) IS a
   positivity, so it inherits the capstone there. The **bet is the high-degree régime**, where MSS-type
   interlacing replaces positivity. Whether the interlacing argument can be made arithmetic (carry the primes)
   and uniform is the new mathematics to develop — and it is genuinely different from everything in Phases 0–10.
@@ -80,17 +80,17 @@ RH $=$ hyperbolicity of $J^{d,n}$ for **all** $d,n$. GORZ gives "each $d$, large
 - **M11.4 — uniformity probe.** Quantify the *margin* of hyperbolicity (least root gap / discriminant) of
   $J^{d,n}$ as $d$ grows at fixed scaled height; does it stay bounded below (uniform, RH-viable) or shrink
   (the familiar marginality)? Compare to the GORZ Hermite limit. (Mirrors the M10 deep-run discipline.)
-- **M11.5 — capstone test.** Determine, honestly, whether the high-degree interlacing argument reduces to a
+- **M11.5 — capstone test.** Determine, candidly, whether the high-degree interlacing argument reduces to a
   positivity (capstone again) or is genuinely positivity-free. This is the decisive question.
 
-## 7. Honest assessment
+## 7. Candid assessment
 
 - **Genuinely new to us, recent, powerful machinery, different mechanism** (real-rootedness, not positivity) —
   the strongest "new path" candidate after the capstone analysis, precisely because hyperbolicity is the one
   classical route to an *upper* (root-location) bound that is not a quadratic-form positivity.
 - **Real partial result exists** (GORZ), and the modern toolbox (MSS interlacing, Borcea–Brändén) is exactly
   the kind that proves real-rootedness without positivity.
-- **Honest risk:** it may reduce to the capstone in disguise (the low-degree positivity; the GORZ Hermite/GUE
+- **Candid risk:** it may reduce to the capstone in disguise (the low-degree positivity; the GORZ Hermite/GUE
   limit echoes pair correlation). M11.5 is the make-or-break: is the high-degree interlacing positivity-free?
 - **Odds:** small (it is RH), but this is the first path in the program whose *mechanism* is structurally
   outside the positivity paradigm the capstone obstructs — which is exactly what the capstone said we need.

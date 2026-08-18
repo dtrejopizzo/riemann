@@ -40,7 +40,7 @@ touch), `-> -infinity` for off-line. So the corrected target is symbol-DEPTH non
 2. **Analytic form of `kappa`.** Relate `kappa_A` to the Gamma_q/polygamma archimedean data and
    `kappa_P` to the Euler symbol; identify `kappa = kappa_A - kappa_P` with an explicit special-function
    expression (the position variable x is expected to track the gauge/height flow).
-3. **Nonnegativity attack.** Two honest sub-targets:
+3. **Nonnegativity attack.** Two candid sub-targets:
    - (a) show `kappa >= 0` reduces to a 1-parameter family of pointwise inequalities that Widom /
      Borodin-Okounkov / a positivity certificate can address;
    - (b) locate exactly where `kappa` would go negative for an off-line zero, and prove that the Euler
@@ -48,7 +48,7 @@ touch), `-> -infinity` for off-line. So the corrected target is symbol-DEPTH non
 4. **Falsifier throughout.** Davenport-Heilbronn and planted off-line zeros must make `kappa` go
    negative; any mechanism that also certifies them is wrong.
 
-## Honesty contract (carried from Phase 67)
+## Candor contract (carried from Phase 67)
 
 No fabricated closure. Every lemma passes a numerical gate before being written. The detector is not a
 proof. If the forcer lands on the Weil wall again, characterize the wall precisely in GLT language --

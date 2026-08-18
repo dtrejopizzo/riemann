@@ -1,0 +1,285 @@
+{
+  "statement": "Exact phase form of denominator-direction chord defect for normalized (1-theta_N)",
+  "sources": {
+    "zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "phase_step": 0.00197085894960783,
+          "abs_phase_step": 0.00197085894960783,
+          "dirdef_b": 1.9421418709919536e-06,
+          "reconstructed_dirdef": 1.9421418709919536e-06,
+          "half_angle_form": 1.9421418709718065e-06,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "phase_step": -0.0024900808541071374,
+          "abs_phase_step": 0.0024900808541071374,
+          "dirdef_b": 3.1002497280496755e-06,
+          "reconstructed_dirdef": 3.1002497280496755e-06,
+          "half_angle_form": 3.100249728069412e-06,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "phase_step": 0.0007434478084437678,
+          "abs_phase_step": 0.0007434478084437678,
+          "dirdef_b": 2.7635730914798984e-07,
+          "reconstructed_dirdef": 2.7635730925901214e-07,
+          "half_angle_form": 2.76357309211026e-07,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "phase_step": -0.0011171681800664335,
+          "abs_phase_step": 0.0011171681800664335,
+          "dirdef_b": 6.240323064954367e-07,
+          "reconstructed_dirdef": 6.240323063844144e-07,
+          "half_angle_form": 6.240323063737428e-07,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "phase_step": 0.0009817007284471737,
+          "abs_phase_step": 0.0009817007284471737,
+          "dirdef_b": 4.818681215157383e-07,
+          "reconstructed_dirdef": 4.81868121404716e-07,
+          "half_angle_form": 4.818681214173697e-07,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "phase_step": -0.000834654272971457,
+          "abs_phase_step": 0.000834654272971457,
+          "dirdef_b": 3.4832385753524875e-07,
+          "reconstructed_dirdef": 3.4832385742422645e-07,
+          "half_angle_form": 3.4832385747316886e-07,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "phase_step": 0.005924045792726611,
+          "abs_phase_step": 0.005924045792726611,
+          "dirdef_b": 1.7547107960091957e-05,
+          "reconstructed_dirdef": 1.7547107960091957e-05,
+          "half_angle_form": 1.7547107960087843e-05,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "phase_step": -0.007445162316356419,
+          "abs_phase_step": 0.007445162316356419,
+          "dirdef_b": 2.7715092936309027e-05,
+          "reconstructed_dirdef": 2.771509293642005e-05,
+          "half_angle_form": 2.7715092936437925e-05,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "phase_step": 0.002228539694457763,
+          "abs_phase_step": 0.002228539694457763,
+          "dirdef_b": 2.4831935573343955e-06,
+          "reconstructed_dirdef": 2.483193557223373e-06,
+          "half_angle_form": 2.4831935571778956e-06,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "phase_step": -0.003341617855335107,
+          "abs_phase_step": 0.003341617855335107,
+          "dirdef_b": 5.583199750081036e-06,
+          "reconstructed_dirdef": 5.583199750192058e-06,
+          "half_angle_form": 5.583199750186223e-06,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "phase_step": 0.002942443189067096,
+          "abs_phase_step": 0.002942443189067096,
+          "dirdef_b": 4.328982836865336e-06,
+          "reconstructed_dirdef": 4.328982837087381e-06,
+          "half_angle_form": 4.328982837091331e-06,
+          "reconstruction_error": 2.220446049250313e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "phase_step": -0.0025014425811421513,
+          "abs_phase_step": 0.0025014425811421513,
+          "dirdef_b": 3.128605861824063e-06,
+          "reconstructed_dirdef": 3.1286058620461077e-06,
+          "half_angle_form": 3.1286058620117533e-06,
+          "reconstruction_error": 2.220446049250313e-16
+        }
+      ],
+      "max_reconstruction_error": 2.220446049250313e-16,
+      "max_abs_phase_step": 0.007445162316356419
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "phase_step": 0.2991643218040757,
+          "abs_phase_step": 0.2991643218040757,
+          "dirdef_b": 0.044416884693419534,
+          "reconstructed_dirdef": 0.044416884693419534,
+          "half_angle_form": 0.04441688469341949,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "phase_step": 0.3757554599459294,
+          "abs_phase_step": 0.3757554599459294,
+          "dirdef_b": 0.06976934781590105,
+          "reconstructed_dirdef": 0.06976934781590105,
+          "half_angle_form": 0.06976934781590108,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "phase_step": -0.0392512478286807,
+          "abs_phase_step": 0.0392512478286807,
+          "dirdef_b": 0.0007702313316898524,
+          "reconstructed_dirdef": 0.0007702313316898524,
+          "half_angle_form": 0.0007702313316898586,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "phase_step": -0.006875420231995025,
+          "abs_phase_step": 0.006875420231995025,
+          "dirdef_b": 2.3635608575656164e-05,
+          "reconstructed_dirdef": 2.3635608575656164e-05,
+          "half_angle_form": 2.3635608575677628e-05,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "phase_step": 0.003922072570291441,
+          "abs_phase_step": 0.003922072570291441,
+          "dirdef_b": 7.69131676392476e-06,
+          "reconstructed_dirdef": 7.69131676392476e-06,
+          "half_angle_form": 7.691316763903774e-06,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "phase_step": -0.0012015033131550907,
+          "abs_phase_step": 0.0012015033131550907,
+          "dirdef_b": 7.218050190882508e-07,
+          "reconstructed_dirdef": 7.218050189772285e-07,
+          "half_angle_form": 7.218050189275656e-07,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "phase_step": 0.30536133033987906,
+          "abs_phase_step": 0.30536133033987906,
+          "dirdef_b": 0.046261614731918144,
+          "reconstructed_dirdef": 0.046261614731918144,
+          "half_angle_form": 0.046261614731918144,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "phase_step": 0.46522075079285974,
+          "abs_phase_step": 0.46522075079285974,
+          "dirdef_b": 0.10627744585980115,
+          "reconstructed_dirdef": 0.10627744585980115,
+          "half_angle_form": 0.10627744585980112,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "phase_step": -0.03236711389305529,
+          "abs_phase_step": 0.03236711389305529,
+          "dirdef_b": 0.0005237693021156176,
+          "reconstructed_dirdef": 0.0005237693021155065,
+          "half_angle_form": 0.0005237693021154968,
+          "reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "phase_step": -0.00532275001725073,
+          "abs_phase_step": 0.00532275001725073,
+          "dirdef_b": 1.4165800428012076e-05,
+          "reconstructed_dirdef": 1.4165800428012076e-05,
+          "half_angle_form": 1.4165800427961353e-05,
+          "reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "phase_step": 0.012601821913515584,
+          "abs_phase_step": 0.012601821913515584,
+          "dirdef_b": 7.940190697042215e-05,
+          "reconstructed_dirdef": 7.94019069706442e-05,
+          "half_angle_form": 7.94019069705928e-05,
+          "reconstruction_error": 2.220446049250313e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "phase_step": 0.0014958967164838079,
+          "abs_phase_step": 0.0014958967164838079,
+          "dirdef_b": 1.1188532844652599e-06,
+          "reconstructed_dirdef": 1.1188532845762822e-06,
+          "half_angle_form": 1.1188532845546778e-06,
+          "reconstruction_error": 1.1102230246251565e-16
+        }
+      ],
+      "max_reconstruction_error": 2.220446049250313e-16,
+      "max_abs_phase_step": 0.46522075079285974
+    }
+  }
+}

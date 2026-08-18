@@ -18,7 +18,7 @@ Por sumación parcial con ψ(t)~t (PNT): Σ_{n≤X}Λ(n)/√n = 2√X − 1 + o(
 - borde x=±½: N~O(1) mínimo ⟹ localización de borde. **Naturaleza:** N_λ(w) es la fuerza de HOPPING (peso total de traslaciones) desde w — término
 cinético posición-dependiente, NO un potencial directo. ⟹ 𝓛 es Sturm–Liouville de coeficiente
 variable −(p(w)u')'+… con p(w) ligado a N_λ(w), no −∂²+V con V=N_λ. (Consistente con:
-"muchos −(pu')'+q dan espectro cuadrático".) ## Paso 3b [DERIVADO + corrección honesta]: momentos M_0,M_2 y la NO-LOCALIDAD (: computar momentos 0 y 2 de las traslaciones permitidas antes de identificar 𝓛.) M_0(w)=Σ_{n≤X}Λ(n)/√n ~ 2√X = 2λ^{1/2−|x|} (verificado, ratio→1).
+"muchos −(pu')'+q dan espectro cuadrático".) ## Paso 3b [DERIVADO + corrección franca]: momentos M_0,M_2 y la NO-LOCALIDAD (: computar momentos 0 y 2 de las traslaciones permitidas antes de identificar 𝓛.) M_0(w)=Σ_{n≤X}Λ(n)/√n ~ 2√X = 2λ^{1/2−|x|} (verificado, ratio→1).
 M_2(w)=Σ_{n≤X}Λ(n)/√n(log n)² ~ 2√X(log X)² = 2λ^{1/2−|x|}(logλ)²(1−2|x|)² (verificado).
 ⟹ M_2/M_0 ~ (log X)² = (logλ)²(1−2|x|)². **Ambos con la geometría λ^{1/2−|x|}** (hope de ✓). **PERO la expansión local FALLA [corrección]:** el 85% del peso de V está en hops GRANDES
 (log n > ½ log X), no pasos chicos. ⟹ Taylor f(w±log n)≈f+½h²f'' INVÁLIDA ⟹ **V es NO-LOCAL**,
@@ -33,7 +33,7 @@ el bulk/centro, O(1) en el borde. V_nonlocal **confina** (mata modos donde M_0 g
 - (k+1)² RELATIVO = espectro del cinético LOCAL c(−∂²) con esas BC Dirichlet (2º orden de M_θ, V sólo confina). Paridad alternante = autofunciones Dirichlet. Singularidad central = M_0 máx en x=0 ⟹ nodo. Localización de borde = modos donde M_0~O(1). TODO reconciliado. **Núcleo abierto (= missing step de), 2 asintóticas:**
 - (3c-a) probar que el confinamiento no-local da EXACTAMENTE el espectro Dirichlet (k+1)².
 - (3c-b) probar que el residual de muestreo (Lema 2) da ε_0 ~ e^{−L} con S=1. (La escala e^{−L} NO sale del confinamiento simple —ancho W~1/logλ daría autovalores crecientes en L— sino del residual del muestreo más allá del horizonte; mecanismo distinto.)
-Ambas = asintótica de Branges/concentración, nivel investigación. NO fabricadas. ## SÍNTESIS HONESTA (tras todas las rondas)
+Ambas = asintótica de Branges/concentración, nivel investigación. NO fabricadas. ## SÍNTESIS FRANCA (tras todas las rondas)
 Reducción lograda: RH ⟸ Eslabón 2 ⟸ (i) exacto + (ii) (1/ε_0)A_λ→𝓛, 𝓛 caracterizado con
 coeficientes DERIVADOS: cinético c=−ψ''(1/4)/8, potencial aritmético no-local M_0~2λ^{1/2−|x|}
 (PNT), horizonte T*~2πλ². El núcleo abierto: 2 asintóticas (3c-a),(3c-b) de un operador no-local
@@ -49,7 +49,7 @@ contra 𝓔_D efectiva en la región de borde ⟹ equivalencia de formas ⟹ (v�
 ceros hasta T*~2πλ² = problema extremal de Beurling–Selberg/de Branges. Localizado. ## (resto: identificación detallada del operador no-local) Derivar W(w) explícito = la suma de primos resuelta por la frontera (qué primos "caben" en
 cada w), y mostrar que el bottom del operador resultante da ε_0 ~ e^{−L} con espectro relativo
 (k+1)². Esto es el cálculo de capa límite / la asintótica del balance arquimediano−primos. Es
-el corazón analítico restante de O-4b. NO cerrado. ## Estado honesto
+el corazón analítico restante de O-4b. NO cerrado. ## Estado franco
 - [DERIVADO] 2º orden desde M_θ, c=−ψ''(¼)/8 exacto.
 - [ESTRUCTURAL] frontera esencial ⟹ potencial w-dependiente ⟹ singularidad central (coherente con el dato). Explica por qué NO es Dirichlet plano (cautela de confirmada).
 - [ABIERTO] el balance de frontera explícito (W(w) + escala e^{−L} + espectro (k+1)²) = Paso 3.

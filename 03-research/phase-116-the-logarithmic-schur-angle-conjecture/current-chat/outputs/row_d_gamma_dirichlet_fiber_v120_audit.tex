@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{The Gamma--Dirichlet metric on an arithmetic threshold fiber (v120)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Pullback of one Gamma resolvent}
+
+Fix $0<\delta<\frac12\log(1+1/N)$ and $E=L^2(0,\delta)$.
+For $1\le n\le N$ put $x_n=\alpha-\log n$ and define the translation
+isometry
+\[
+ (T_ne)(x_n+u)=e(u),\qquad 0<u<\delta.
+\]
+The intervals $x_n+(0,\delta)$ are pairwise disjoint.  For
+$v=(v_1,\ldots,v_N)\in\mathbb C^N$ set
+\begin{equation}
+ \mathfrak S_N(v\otimes e)=\sum_{n\le N}v_nT_ne.             \tag{1}
+\end{equation}
+This extends to an isometry $\mathbb C^N\widehat\otimes E\to L^2(\mathbb R)$.
+
+For $a>0$ let $K_a$ be convolution by $e^{-a|t|}$.  Its Fourier multiplier
+is $2a/(a^2+\tau^2)$.  Define the cell quantities
+\begin{align}
+ Q_{a,0}(e)&=\int_0^\delta\!\!\int_0^\delta
+ e^{-a|u-v|}e(u)\overline{e(v)}\,du\,dv,\notag\\
+ M_{a,+}(e)&=\int_0^\delta e^{au}e(u)\,du,\qquad
+ M_{a,-}(e)=\int_0^\delta e^{-au}e(u)\,du.                   \tag{2}
+\end{align}
+
+\begin{theorem}[Exact Gamma--Dirichlet pullback --- \PROVED]
+For every $v\in\mathbb C^N$ and $e\in E$,
+\begin{align}
+ \langle K_a\mathfrak S_N(v\otimes e),
+               \mathfrak S_N(v\otimes e)\rangle
+={}&\left(\sum_{n\le N}|v_n|^2\right)Q_{a,0}(e)\notag\\
+ &+2\Re\left[
+ M_{a,+}(e)\overline{M_{a,-}(e)}
+ \sum_{n>m}v_n\overline{v_m}\left(\frac mn\right)^a
+ \right].                                                   \tag{3}
+\end{align}
+Equivalently, every off-diagonal Gamma coupling on the threshold fiber is
+the explicit Dirichlet ratio kernel $(m/n)^a$ multiplied by the two
+oriented cell moments in (2).
+\end{theorem}
+
+\begin{proof}
+The diagonal terms in the double sum obtained from (1) give $Q_{a,0}$.
+If $n>m$, then $x_n<x_m$ and
+\[
+ (x_m+v)-(x_n+u)=\log(n/m)+v-u>0
+\]
+because $\log(n/m)>\delta$.  Therefore
+\[
+ e^{-a|(x_n+u)-(x_m+v)|}
+ =\left(\frac mn\right)^ae^{au}e^{-av}.
+\]
+The $(n,m)$ term is the product in (3), and the $(m,n)$ term is its complex
+conjugate.  Summation proves the formula.
+\end{proof}
+
+\section{A positive source Gram for the complete Gamma place}
+
+Put
+\begin{equation}
+ \mathcal Q_{a,N}:=\frac2aI-\mathfrak S_N^*K_a\mathfrak S_N
+ \quad\text{on }\mathbb C^N\widehat\otimes E.                \tag{4}
+\end{equation}
+
+\begin{theorem}[Positive Gamma source metric --- \PROVED]
+For every $a>0$,
+\begin{equation}
+                         0\le\mathcal Q_{a,N}\le\frac2aI.    \tag{5}
+\end{equation}
+For $a_j=2j+\frac12$, the increasing form sum
+\begin{equation}
+ \mathcal G_{\Gamma,N}^{\rm src}
+ :=\sum_{j\ge0}\mathcal Q_{a_j,N}                            \tag{6}
+\end{equation}
+is closed on its natural domain and satisfies the exact pullback identity
+\begin{equation}
+ \boxed{
+ \mathcal G_{\Gamma,N}^{\rm src}
+ =\mathfrak S_N^*G_\Gamma\mathfrak S_N.}                    \tag{7}
+\end{equation}
+Thus the archimedean part of the threshold fiber has a positive
+source-defined Gram before any Schur inversion or sign assumption.
+\end{theorem}
+
+\begin{proof}
+The Fourier multiplier of $\frac2aI-K_a$ is
+\[
+ \frac2a-\frac{2a}{a^2+\tau^2}
+ =\frac{2\tau^2}{a(a^2+\tau^2)}\ge0.
+\]
+Compression by the isometry $\mathfrak S_N$ proves (5).  Summing these
+multipliers over $a_j$ gives the defining multiplier $g_\Gamma$.
+Monotone convergence of positive closed forms proves (6)--(7).
+\end{proof}
+
+For the logarithmic incidence vector
+\begin{equation}
+ c_N(n)=\frac{\Lambda(n)}{\sqrt n},                           \tag{8}
+\end{equation}
+Theorem 1 becomes a completely explicit cross-place identity:
+\begin{align}
+ \langle K_a\mathfrak S_N(c_N\otimes e),
+                  \mathfrak S_N(c_N\otimes e)\rangle
+={}&V_{N,1}Q_{a,0}(e)\notag\\
+ &+2\Re\left[
+ M_{a,+}(e)\overline{M_{a,-}(e)}
+ \sum_{n>m}\frac{\Lambda(n)\Lambda(m)}{\sqrt{mn}}
+              \left(\frac mn\right)^a
+ \right].                                                   \tag{9}
+\end{align}
+All terms in (9) are absolutely finite.  No zero of $\xi$ and no desired
+row-(d) sign appears.
+
+\section{Relation with the shorted return}
+
+Equations (7)--(9) construct the Gamma part of the source metric
+$\mathfrak G_N$ requested in v119 (12).  The Euler part is the finite
+divisibility action $\mathcal C_N$ transported by the same isometry, while
+the two moment corrections are the terminal graph of v117.  Consequently
+the joint Gamma--Euler--Tate source Gram is now explicit as a closed form.
+
+What is not automatic is the direction needed for the inverse metric:
+\begin{equation}
+ (\mathfrak S_N)^*A_{00}^{-1}\mathfrak S_N
+ \le \mathfrak G_N^{\rm GET}.                               \tag{10}
+\end{equation}
+The equality (7) concerns compression of $G_\Gamma$ to the boundary fiber.
+The left side of (10) is the inverse of the shorted complete physical form;
+compression and inversion cannot be interchanged.  A proof of (10) must
+control the coupling of the boundary fiber to its orthogonal complement.
+This is now the only place where the continuum old space remains.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Exact exponential-kernel pullback & \PROVED & (3) \\
+Positive one-cell Gamma source Gram & \PROVED & (4)--(5) \\
+Complete Gamma pullback to the arithmetic fiber & \PROVED & (6)--(7) \\
+Explicit incidence/Gamma coupling & \PROVED & (9) \\
+Shorted inverse-metric domination & \OPEN & (10) \\
+Condition $G$, row (d) & \OPEN & after joint GET domination \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

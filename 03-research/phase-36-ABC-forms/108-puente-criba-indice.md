@@ -586,7 +586,7 @@ MV74). Sobre la forma Q₂ restringida no hay ninguna cota espectral directa: la
 criba acota momentos segundos promediados de evaluaciones lineales, es decir,
 **trazas de compresiones promediadas en ventanas** — de nuevo la media, no el supremo.
 El diccionario con la correlación de pares (Doc 107, Obs. 3.8): la versión con dos
-funciones de prueba de F(α,T) de Montgomery [Mon73]. El estatus honesto de F(α,T):
+funciones de prueba de F(α,T) de Montgomery [Mon73]. El estatus franco de F(α,T):
 la asintótica F(α,T) = (1+o(1))T^{−2α}log T + α + o(1) en 0 ≤ α ≤ 1 está probada
 **bajo RH**; incondicionalmente solo hay versiones parciales/promediadas. Los errores
 de la versión RH son o(1) **relativos** (primer orden); los términos de orden inferior
@@ -806,7 +806,7 @@ Forma B.
 **Próximo paso (fuera de este puente).** Ninguno dentro de la Forma B por esta vía. Si
 el programa continúa, la única dirección no descartada por este documento es la
 señalada en §8.2/§5.3: el estudio de los términos de orden inferior de la correlación
-de pares como déficits casi-primos — terreno de teoremas parciales honestos, sin
+de pares como déficits casi-primos — terreno de teoremas parciales francos, sin
 pretensión de RH.
 
 ---

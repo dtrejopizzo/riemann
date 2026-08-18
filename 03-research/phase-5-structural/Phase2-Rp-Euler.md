@@ -1,11 +1,11 @@
 # Phase 2 — The anatomy profile vs the local Euler factor: Slepian, the $R_p\leftrightarrow a_p$ factorization, and a stability theorem
 
 **Route B / M5, Phase 2 (analytic, no engine).** Author: David Alejandro Trejo Pizzo · 2026-06-03.
-Follows T3 (`T3-anatomy.md`). Steps A/B/C per the advisor. **The question Phase 2 must answer honestly:**
+Follows T3 (`T3-anatomy.md`). Steps A/B/C per the advisor. **The question Phase 2 must answer candidly:**
 *does the anatomy profile $\{R_p\}$ carry new information, or is it merely the coefficients $\{a_p\}$
 re-packaged?*
 
-> **Verdict, up front (honest).** To leading order **the anatomy profile factorizes as $R_p\approx a_p\,W(\log p)$**
+> **Verdict, up front (candid).** To leading order **the anatomy profile factorizes as $R_p\approx a_p\,W(\log p)$**
 > with $W$ a *universal window weight* — so the leading term is the coefficient $a_p$ re-weighted, i.e.
 > **partly the reformulation the advisor feared.** But three things are genuinely *not* just $\{a_p\}$ and are
 > the real content: **(i)** the higher-frequency corrections probe the full **local factor $L_p$** (Satake
@@ -72,7 +72,7 @@ $\sqrt{p^k}=e^{kx/2}$:
 **Proof.** Substitute $\Lambda_L(p^k)=a_{p^k}\log p$ into $R_p(u_0)=\sum_k\frac{\Lambda_L(p^k)}{\sqrt{p^k}}|\widehat{u_0}(k\log p)|^2$
 and collect $W_k$. $\square$
 
-**Reading — the honest answer to the critical question.**
+**Reading — the candid answer to the critical question.**
 - **Leading order is $a_p$ re-weighted.** $R_p\approx a_p W_1(\log p)$: the first-order anatomy *is* the
   coefficient $a_p$ times a window factor. For $\zeta$ ($a_p\equiv1$) the leading anatomy is **pure window**
   (no arithmetic modulation); for $L(\chi)$ it is $a_p=\chi(p)$ modulated; for automorphic $L$, $a_p=$ Satake
@@ -139,7 +139,7 @@ theorem.
 - **A** — the anatomy is subspace-intrinsic; the **Slepian subspace** gives a flat envelope, turning the
   "band" into a clean, decidable test (no engine needed).
 - **B** — $R_p=\sum_k a_{p^k}W_k(\log p)$: a **windowed functional of the local factor**; leading order $=a_p$
-  (the tautological part, honestly conceded); new content $=$ Satake corrections, self-consistent window, and
+  (the tautological part, candidly conceded); new content $=$ Satake corrections, self-consistent window, and
   **factorizability $\equiv$ Euler product** (the $\zeta$-vs-$L_{\mathrm{DH}}$ discriminant).
 - **C** — the profile is **exponentially stable** in the shared local data (quantitative T1).
 
@@ -151,7 +151,7 @@ $$
 i.e. does the *windowed local-factor repackaging* make the positivity (the sign) readable — does
 factorizability $+$ a Ramanujan-type bound $|a_p|\le2$ force $\sum_p R_p\le R_\infty$ on a structural
 sub-class? That is T4, and it is the first point where the repackaging could *earn its keep* — by making the
-sign visible where $\{a_p\}$ does not. Honest prior: this is hard (it is RH on the full class), but a partial
+sign visible where $\{a_p\}$ does not. Candid prior: this is hard (it is RH on the full class), but a partial
 result on a positivity-structured sub-class (e.g. $L$ with $a_p\ge0$, or Rankin–Selberg squares) is the
 realistic, publishable target.
 

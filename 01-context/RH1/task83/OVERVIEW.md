@@ -14,7 +14,7 @@ This analysis implemented a rigorous statistical comparison of four arithmetic f
 - Computed R_comp(t) as the mean resultant length of composite squarefree terms: R_comp = |Σ_ω S_ω| / √(Σ_ω |S_ω|²), where S_ω represents the partial sum partitioned by ω(n) ≥ 2 **Statistical Analysis:**
 1. Descriptive statistics: Mean, standard deviation, quartiles, and range for each function's R_comp distribution
 2. One-way ANOVA to test for differences in mean R_comp across functions
-3. Tukey's Honestly Significant Difference (HSD) post-hoc test for all pairwise comparisons (α = 0.05)
+3. Tukey's Candidly Significant Difference (HSD) post-hoc test for all pairwise comparisons (α = 0.05)
 4. Extreme Value Theory (EVT) analysis: - Extracted block maxima (block size = 100) from R_comp time series - Fitted Generalized Extreme Value (GEV) distribution using maximum likelihood estimation - Computed 95% confidence intervals for shape parameter ξ using bootstrap (1,000 iterations) - Compared tail behavior across functions **Software and Libraries:**
 Python 3.x with NumPy 1.x (array operations, random number generation), SciPy 1.x (statistical tests: stats.f_oneway, stats.tukey_hsd, stats.genextreme), Pandas 1.x (data organization), and Matplotlib 3.x (visualization).
 </methods> <results>

@@ -1,0 +1,328 @@
+{
+  "statement": "Exact transfer-ratio polarization for PAIRNUM_N: with q_N := 1-theta_N = T_N/t0_N, PAIRNUM_N = (|q_N|^2 - |q_{N+2}|^2 + |q_N-q_{N+2}|^2)/2.",
+  "sources": {
+    "pairnum": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_63_pairnum_ternary_results.json",
+    "theta_zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "theta_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "old_q_abs": 0.34234393003193464,
+          "new_q_abs": 0.23779267622316178,
+          "delta_q_abs": 0.10455181522434252,
+          "reconstructed_pairnum": 0.03579254581552089,
+          "pairnum": 0.02316591421911207,
+          "reconstruction_error": 0.012626631596408817
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "old_q_abs": 0.27467551100076526,
+          "new_q_abs": 0.11752281067689511,
+          "delta_q_abs": 0.1571532109958425,
+          "reconstructed_pairnum": 0.04316607852021899,
+          "pairnum": 0.01464427009841529,
+          "reconstruction_error": 0.0285218084218037
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "old_q_abs": 0.22136074039227416,
+          "new_q_abs": 0.07108491034298936,
+          "delta_q_abs": 0.15027583359700264,
+          "reconstructed_pairnum": 0.033265169535909495,
+          "pairnum": 0.005174007649224988,
+          "reconstruction_error": 0.028091161886684507
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "old_q_abs": 0.19798709432826994,
+          "new_q_abs": 0.04622914389846101,
+          "delta_q_abs": 0.15175797796717538,
+          "reconstructed_pairnum": 0.030046119825826167,
+          "pairnum": 0.00450654557884933,
+          "reconstruction_error": 0.025539574246976837
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "old_q_abs": 0.17522539368788334,
+          "new_q_abs": 0.03358794853986888,
+          "delta_q_abs": 0.1416374651036996,
+          "reconstructed_pairnum": 0.024818479913479276,
+          "pairnum": 0.003016582767926934,
+          "reconstruction_error": 0.02180189714555234
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "old_q_abs": 0.15801004349214262,
+          "new_q_abs": 0.024654757436502802,
+          "delta_q_abs": 0.1333552973216406,
+          "reconstructed_pairnum": 0.021071476051939587,
+          "pairnum": 0.002434957061962173,
+          "reconstruction_error": 0.018636518989977414
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "old_q_abs": 0.14259990627805058,
+          "new_q_abs": 0.018075118350486655,
+          "delta_q_abs": 0.12452478829807694,
+          "reconstructed_pairnum": 0.017757223133902794,
+          "pairnum": 0.0009602184524286628,
+          "reconstruction_error": 0.01679700468147413
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "old_q_abs": 0.32669748930559306,
+          "new_q_abs": 0.2131945567316631,
+          "delta_q_abs": 0.1135068711189221,
+          "reconstructed_pairnum": 0.037081570144887686,
+          "pairnum": 0.019405379966772607,
+          "reconstruction_error": 0.01767619017811508
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "old_q_abs": 0.26729994567978027,
+          "new_q_abs": 0.10980891337746398,
+          "delta_q_abs": 0.15749517701135357,
+          "reconstructed_pairnum": 0.04209799714255585,
+          "pairnum": 0.01335999013235778,
+          "reconstruction_error": 0.028738007010198068
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "old_q_abs": 0.21731894033406154,
+          "new_q_abs": 0.06787193857961868,
+          "delta_q_abs": 0.14944703161006803,
+          "reconstructed_pairnum": 0.03247766851921227,
+          "pairnum": 0.004737373844034165,
+          "reconstruction_error": 0.027740294675178107
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "old_q_abs": 0.19551976633945178,
+          "new_q_abs": 0.04472610205726457,
+          "delta_q_abs": 0.15079390155712266,
+          "reconstructed_pairnum": 0.02948317778550809,
+          "pairnum": 0.004290371384903846,
+          "reconstruction_error": 0.025192806400604242
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "old_q_abs": 0.1735773645133068,
+          "new_q_abs": 0.03276848669593694,
+          "delta_q_abs": 0.14080905189562085,
+          "reconstructed_pairnum": 0.024441258423393612,
+          "pairnum": 0.002893565112387364,
+          "reconstruction_error": 0.021547693311006248
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "old_q_abs": 0.15690801646898014,
+          "new_q_abs": 0.024191888629560232,
+          "delta_q_abs": 0.13271622681878506,
+          "reconstructed_pairnum": 0.02082423750888995,
+          "pairnum": 0.0023675307266275425,
+          "reconstruction_error": 0.018456706782262407
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "old_q_abs": 0.1418193972731477,
+          "new_q_abs": 0.017800777908744823,
+          "delta_q_abs": 0.12401862265262839,
+          "reconstructed_pairnum": 0.017588246256708736,
+          "pairnum": 0.0009320626284647915,
+          "reconstruction_error": 0.016656183628243944
+        }
+      ],
+      "max_reconstruction_error": 0.028738007010198068
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "old_q_abs": 2.1415696879428756,
+          "new_q_abs": 6.681441742202085,
+          "delta_q_abs": 4.845290284320196,
+          "reconstructed_pairnum": -8.2892525433985,
+          "pairnum": -5.809951544408081,
+          "reconstruction_error": 2.4793009989904196
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "old_q_abs": 4.865419178579066,
+          "new_q_abs": 52.114747227783354,
+          "delta_q_abs": 47.37757684879423,
+          "reconstructed_pairnum": -223.81989338453263,
+          "pairnum": -7.76570101129758,
+          "reconstruction_error": 216.05419237323505
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "old_q_abs": 6.526642383355461,
+          "new_q_abs": 30.360682090481966,
+          "delta_q_abs": 23.834995204288933,
+          "reconstructed_pairnum": -155.53347990531205,
+          "pairnum": -23.904054570070926,
+          "reconstruction_error": 131.62942533524114
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "old_q_abs": 10.189821960859728,
+          "new_q_abs": 5.850546432605075,
+          "delta_q_abs": 4.3404078707698,
+          "reconstructed_pairnum": 44.22135925929584,
+          "pairnum": 73.99621293251948,
+          "reconstruction_error": 29.774853673223646
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "old_q_abs": 2.9281948237653164,
+          "new_q_abs": 5.568207552686655,
+          "delta_q_abs": 2.6402975445852004,
+          "reconstructed_pairnum": -7.7297196499640375,
+          "pairnum": 5.383802057883561,
+          "reconstruction_error": 13.1135217078476
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "old_q_abs": 1.0895877555611286,
+          "new_q_abs": 5.8397188870778916,
+          "delta_q_abs": 4.750144491514846,
+          "reconstructed_pairnum": -5.175621256378335,
+          "pairnum": -2.0964456477112714,
+          "reconstruction_error": 3.0791756086670636
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "old_q_abs": 3.01366483177781,
+          "new_q_abs": 3.911787958966904,
+          "delta_q_abs": 0.8982225534080208,
+          "reconstructed_pairnum": -2.706552781086628,
+          "pairnum": 5.954044695296704,
+          "reconstruction_error": 8.660597476383332
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "old_q_abs": 2.2974418957052767,
+          "new_q_abs": 6.883949406828428,
+          "delta_q_abs": 5.157056245634284,
+          "reconstructed_pairnum": -7.757645525498017,
+          "pairnum": -6.167822530589681,
+          "reconstruction_error": 1.589822994908336
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "old_q_abs": 4.982203675293103,
+          "new_q_abs": 52.24777017367646,
+          "delta_q_abs": 47.49466158454186,
+          "reconstructed_pairnum": -224.6321278145274,
+          "pairnum": -7.328725486109491,
+          "reconstruction_error": 217.30340232841792
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "old_q_abs": 6.538769432294187,
+          "new_q_abs": 30.32478004876745,
+          "delta_q_abs": 23.786764539400412,
+          "reconstructed_pairnum": -155.51330603227137,
+          "pairnum": -23.81218905842954,
+          "reconstruction_error": 131.70111697384183
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "old_q_abs": 10.181219296266885,
+          "new_q_abs": 5.849820610703404,
+          "delta_q_abs": 4.338048569338515,
+          "reconstructed_pairnum": 44.127745285603375,
+          "pairnum": 73.85688293629599,
+          "reconstruction_error": 29.729137650692614
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "old_q_abs": 2.9272726572461547,
+          "new_q_abs": 5.568363345077145,
+          "delta_q_abs": 2.6426633550046343,
+          "reconstructed_pairnum": -7.72703776252671,
+          "pairnum": 5.379159080480414,
+          "reconstruction_error": 13.106196843007124
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "old_q_abs": 1.089743456177518,
+          "new_q_abs": 5.837219304631781,
+          "delta_q_abs": 4.747784188259355,
+          "reconstructed_pairnum": -5.172066855899335,
+          "pairnum": -2.0954841831199285,
+          "reconstruction_error": 3.076582672779406
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "old_q_abs": 3.012800589873516,
+          "new_q_abs": 3.911291406505203,
+          "delta_q_abs": 0.8991794019621886,
+          "reconstructed_pairnum": -2.7063547376730823,
+          "pairnum": 5.94964718917544,
+          "reconstruction_error": 8.656001926848523
+        }
+      ],
+      "max_reconstruction_error": 217.30340232841792
+    }
+  }
+}

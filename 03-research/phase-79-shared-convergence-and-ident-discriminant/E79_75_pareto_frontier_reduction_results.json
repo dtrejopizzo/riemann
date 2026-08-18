@@ -1,0 +1,275 @@
+{
+  "statement": "E79.75 Pareto frontier reduction",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_70_linear_penalized_matching_rule_results.json",
+  "summary": {
+    "num_rows": 5,
+    "all_rows_reduce_to_at_most_two_frontier_points": true
+  },
+  "rows": [
+    {
+      "N": 8,
+      "target_support": [
+        6,
+        7,
+        8
+      ],
+      "frontier": [
+        "pair",
+        "triple"
+      ],
+      "dominated": {
+        "suffix": [
+          "triple"
+        ],
+        "pair": [],
+        "triple": []
+      },
+      "candidates": {
+        "suffix": {
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "mismatch": 0.027405661727436414,
+          "surcharge": 1.5,
+          "score": 1.5274056617274363,
+          "exact_match": true
+        },
+        "pair": {
+          "support": [
+            5,
+            7
+          ],
+          "mismatch": 0.029900186331162863,
+          "surcharge": 1.4999999999999998,
+          "score": 1.5299001863311625,
+          "exact_match": false
+        },
+        "triple": {
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "mismatch": 0.027405661727436206,
+          "surcharge": 1.5,
+          "score": 1.5274056617274363,
+          "exact_match": true
+        }
+      },
+      "best_rule": "suffix"
+    },
+    {
+      "N": 10,
+      "target_support": [
+        5
+      ],
+      "frontier": [
+        "pair",
+        "suffix"
+      ],
+      "dominated": {
+        "suffix": [],
+        "pair": [],
+        "triple": [
+          "suffix",
+          "pair"
+        ]
+      },
+      "candidates": {
+        "suffix": {
+          "support": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "mismatch": 0.00870182150800833,
+          "surcharge": 1.6400000000000001,
+          "score": 1.6487018215080083,
+          "exact_match": false
+        },
+        "pair": {
+          "support": [
+            5
+          ],
+          "mismatch": 0.02948235840351119,
+          "surcharge": 1.5799999999999998,
+          "score": 1.6094823584035112,
+          "exact_match": true
+        },
+        "triple": {
+          "support": [
+            7,
+            8,
+            9
+          ],
+          "mismatch": 0.10657588559867112,
+          "surcharge": 1.8599999999999999,
+          "score": 1.966575885598671,
+          "exact_match": false
+        }
+      },
+      "best_rule": "pair"
+    },
+    {
+      "N": 12,
+      "target_support": [
+        7
+      ],
+      "frontier": [
+        "triple",
+        "pair"
+      ],
+      "dominated": {
+        "suffix": [
+          "triple"
+        ],
+        "pair": [],
+        "triple": []
+      },
+      "candidates": {
+        "suffix": {
+          "support": [
+            8,
+            9,
+            10
+          ],
+          "mismatch": 0.3587708698562733,
+          "surcharge": 2.2199999999999998,
+          "score": 2.5787708698562732,
+          "exact_match": false
+        },
+        "pair": {
+          "support": [
+            7
+          ],
+          "mismatch": 0.02298785490948674,
+          "surcharge": 2.3,
+          "score": 2.3229878549094867,
+          "exact_match": true
+        },
+        "triple": {
+          "support": [
+            7,
+            9,
+            10
+          ],
+          "mismatch": 0.35371168161341404,
+          "surcharge": 2.0,
+          "score": 2.3537116816134143,
+          "exact_match": false
+        }
+      },
+      "best_rule": "pair"
+    },
+    {
+      "N": 14,
+      "target_support": [
+        10,
+        11,
+        12
+      ],
+      "frontier": [
+        "suffix",
+        "triple"
+      ],
+      "dominated": {
+        "suffix": [],
+        "pair": [
+          "suffix",
+          "triple"
+        ],
+        "triple": []
+      },
+      "candidates": {
+        "suffix": {
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "mismatch": 0.02424717475556555,
+          "surcharge": 2.9399999999999995,
+          "score": 2.964247174755565,
+          "exact_match": true
+        },
+        "pair": {
+          "support": [
+            9,
+            11
+          ],
+          "mismatch": 0.18899725364678438,
+          "surcharge": 2.94,
+          "score": 3.128997253646784,
+          "exact_match": false
+        },
+        "triple": {
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "mismatch": 0.02424717475556555,
+          "surcharge": 2.9399999999999995,
+          "score": 2.964247174755565,
+          "exact_match": true
+        }
+      },
+      "best_rule": "suffix"
+    },
+    {
+      "N": 16,
+      "target_support": [
+        11,
+        13
+      ],
+      "frontier": [
+        "triple",
+        "pair"
+      ],
+      "dominated": {
+        "suffix": [
+          "pair"
+        ],
+        "pair": [],
+        "triple": []
+      },
+      "candidates": {
+        "suffix": {
+          "support": [
+            12,
+            13
+          ],
+          "mismatch": 0.15887747026680213,
+          "surcharge": 3.8800000000000003,
+          "score": 4.038877470266803,
+          "exact_match": false
+        },
+        "pair": {
+          "support": [
+            11,
+            13
+          ],
+          "mismatch": 0.03554314266742822,
+          "surcharge": 3.66,
+          "score": 3.695543142667428,
+          "exact_match": true
+        },
+        "triple": {
+          "support": [
+            11,
+            12,
+            13
+          ],
+          "mismatch": 0.4141474018842848,
+          "surcharge": 3.3,
+          "score": 3.7141474018842846,
+          "exact_match": false
+        }
+      },
+      "best_rule": "pair"
+    }
+  ]
+}

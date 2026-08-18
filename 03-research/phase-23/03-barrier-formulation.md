@@ -56,7 +56,7 @@ Phases 22 y 23 han establecido el siguiente panorama completo:
 
 ---
 
-## Evaluación honesta de las tres vías
+## Evaluación franca de las tres vías
 
 ### Vía (F1): ¿Es accesible?
 

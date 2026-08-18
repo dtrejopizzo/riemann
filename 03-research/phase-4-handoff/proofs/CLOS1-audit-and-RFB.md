@@ -90,14 +90,14 @@ So $S_{\mathrm{off}}<\infty$ is a **weighted zero-density integral** — converg
 sparse enough that their count, *weighted by the edge-blowup of $K$*, integrates. This is the precise
 content, and it is genuinely a **Carleson/density** statement, finer than a bare count (the referee's #3).
 
-### B.4 Honest limits of B.2 (when $a=0$ is too much to hope for) ⬜
+### B.4 Candid limits of B.2 (when $a=0$ is too much to hope for) ⬜
 If $S_{\mathrm{off}}=\infty$ (e.g. RH fails so badly that off-line zeros are too dense or too deep), the
 crude norm bound dies and one must use the *relative* term: control each off-line evaluation
 $\widehat g(t-ib)$ by **nearby on-line evaluations** $\widehat g(\gamma)$, $\gamma\approx t$ real — a genuine
 **interpolation** estimate (off-axis value from on-axis samples), exploiting that an off-line zero at
 $t-ib$ has on-line zeros at real ordinates clustering near $t$. This is the $a>0$ regime, and it is where
 the fine geometry (Carleson boxes, the actual fluctuation $S(T)$ of zeros, not just the smooth density)
-enters. **So the honest statement is the referee's:**
+enters. **So the candid statement is the referee's:**
 $$
 \boxed{\ \text{B-2}\ \Longleftarrow\ \text{($\mu_{\mathrm{off}}$ is Carleson for }H(E_\gamma)\text{)}\ \Longleftarrow\ \text{a zero-density / zero-free-region input;}\quad\text{B-2}\neq\text{raw density.}\ }
 $$

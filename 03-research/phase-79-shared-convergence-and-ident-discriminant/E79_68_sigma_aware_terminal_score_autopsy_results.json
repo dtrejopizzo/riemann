@@ -1,0 +1,1617 @@
+{
+  "statement": "E79.68 sigma-aware intrinsic terminal score autopsy",
+  "active_rows": {
+    "8": {
+      "1.0": [
+        0.0004066520532261366,
+        0.000672350882643544,
+        0.0006662915396496792,
+        0.0006070111369292647,
+        0.0005511664492333391,
+        0.0004652489469809095,
+        0.0004307636290472242,
+        4.7062390902810424e-05,
+        3.592060665780928e-05
+      ],
+      "2.0": [
+        0.0008128065694895851,
+        0.0013427916311698198,
+        0.0013304876724671393,
+        0.0012104532954911673,
+        0.0010988992321638053,
+        0.0009261869463986317,
+        0.0008574266436272625,
+        9.352557143160002e-05,
+        7.138240199107253e-05
+      ]
+    },
+    "10": {
+      "1.0": [
+        0.00023668758261174744,
+        0.0003900018499888378,
+        0.0003962704399306908,
+        0.0004563320136768873,
+        0.00041842468984270155,
+        0.00031674821944227105,
+        0.0002839696623563016,
+        0.00012204928246526789,
+        9.428062907182198e-05,
+        5.945221523608901e-05,
+        3.4326114705329446e-05
+      ],
+      "2.0": [
+        0.00047320633479372095,
+        0.0007793795771273458,
+        0.000791818879339499,
+        0.0009110899455252143,
+        0.0008353036556330878,
+        0.000631659597053559,
+        0.0005662393932781309,
+        0.0002431153665270043,
+        0.00018779230050855534,
+        0.0001182606588006583,
+        6.827793027018976e-05
+      ]
+    },
+    "12": {
+      "1.0": [
+        0.00015877845298462216,
+        0.00024997059772210344,
+        0.0002671354772387629,
+        0.0003143442859819316,
+        0.0003090156230572306,
+        0.0003355728383093883,
+        0.0003103197927904171,
+        0.0002033952897746118,
+        0.0002058212414360334,
+        5.7440294472769654e-05,
+        4.664276977902257e-05
+      ],
+      "2.0": [
+        0.00031748100100288814,
+        0.0004996896968373229,
+        0.000533960431796612,
+        0.0006280078477241035,
+        0.0006173055257689435,
+        0.0006698796639546548,
+        0.0006194177785335199,
+        0.0004056877275606518,
+        0.0004104980052608122,
+        0.00011448330974329439,
+        9.296027983251144e-05
+      ]
+    },
+    "14": {
+      "1.0": [
+        0.00010338845801126838,
+        0.00017924486619852809,
+        0.0001891604905539134,
+        0.00022368543392600195,
+        0.00022627880609576493,
+        0.00023089903212787378,
+        0.0002213418496746189,
+        0.00019572569361378926,
+        0.00019099810397823453,
+        5.1640715974402555e-05,
+        4.089481676708457e-05,
+        5.6529320385107076e-05,
+        3.27358510626029e-05
+      ],
+      "2.0": [
+        0.00020674469611834181,
+        0.000358362922034318,
+        0.000378165818767324,
+        0.00044704921241915506,
+        0.0004521882608486397,
+        0.00046123308566441135,
+        0.0004421025016442148,
+        0.00039072867898458494,
+        0.00038126179820526245,
+        0.00010302680884558869,
+        8.158567158159235e-05,
+        0.00011270823637567227,
+        6.526634732601462e-05
+      ]
+    },
+    "16": {
+      "1.0": [
+        7.367340566786169e-05,
+        0.00012463818962009523,
+        0.0001339144017047688,
+        0.0001705721728301347,
+        0.0001667740374311048,
+        0.00018683481129118626,
+        0.00018160802629729048,
+        0.00017645605195883282,
+        0.0001599106979849217,
+        0.0001379508169223883,
+        0.0001294298957647772,
+        8.204742461123941e-05,
+        6.364076973967535e-05,
+        1.6430364241942106e-05
+      ],
+      "2.0": [
+        0.00014733044914467278,
+        0.00024921553108181243,
+        0.00026775163856090743,
+        0.0003409704835606037,
+        0.00033336100911019725,
+        0.0003733324471387469,
+        0.00036286528953031967,
+        0.0003524468611243637,
+        0.0003193754112379217,
+        0.000275411775415183,
+        0.00025838405151314375,
+        0.00016372372875893366,
+        0.00012698836882591013,
+        3.277637316557415e-05
+      ]
+    }
+  },
+  "target_supports": {
+    "8": [
+      6,
+      7,
+      8
+    ],
+    "10": [
+      5
+    ],
+    "12": [
+      7
+    ],
+    "14": [
+      10,
+      11,
+      12
+    ],
+    "16": [
+      11,
+      13
+    ]
+  },
+  "top_configs": [
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 0,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 1,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 2,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 1,
+      "sigma2_x_power": 0,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 1,
+      "sigma2_x_power": 1,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 1,
+      "sigma2_x_power": 2,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 2,
+      "sigma2_x_power": 0,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 2,
+      "sigma2_x_power": 1,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "prod",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 0,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "prod",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 1,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "prod",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 2,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "prod",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 1,
+      "sigma2_x_power": 0,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "prod",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 1,
+      "sigma2_x_power": 1,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "prod",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 2,
+      "sigma2_x_power": 0,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "min",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 0,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "min",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 1,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "min",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 1,
+      "sigma2_x_power": 0,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "min",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 1,
+      "sigma2_x_power": 1,
+      "tail_power": 0,
+      "exact_match_count": 0,
+      "total_rank_error": 21,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            2,
+            4,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 0,
+      "tail_power": 1,
+      "exact_match_count": 0,
+      "total_rank_error": 24,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            1,
+            2,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "sigma_mode": "sum",
+      "base1": "drop",
+      "base2": "lap",
+      "sigma1_x_power": 0,
+      "sigma2_x_power": 1,
+      "tail_power": 1,
+      "exact_match_count": 0,
+      "total_rank_error": 24,
+      "rows": [
+        {
+          "N": 8,
+          "target": [
+            6,
+            7,
+            8
+          ],
+          "pick": [
+            1,
+            2,
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 10,
+          "target": [
+            5
+          ],
+          "pick": [
+            6
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 12,
+          "target": [
+            7
+          ],
+          "pick": [
+            8
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 14,
+          "target": [
+            10,
+            11,
+            12
+          ],
+          "pick": [
+            6,
+            8,
+            11
+          ],
+          "exact_match": false
+        },
+        {
+          "N": 16,
+          "target": [
+            11,
+            13
+          ],
+          "pick": [
+            10,
+            12
+          ],
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "best_exact_match_count": 0,
+  "best_total_rank_error": 21
+}

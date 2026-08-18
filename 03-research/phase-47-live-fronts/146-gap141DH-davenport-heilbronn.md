@@ -11,7 +11,7 @@ LP-141 y discrimina entre "Euler-aproximado basta para repulsión" vs. "se neces
 
 **Contrato de etiquetado (absoluto):** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad acá; resultados externos citados con precisión.
-**[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con el programa con estatus honesto. **[GAP de
+**[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con el programa con estatus franco. **[GAP de
 literatura]** = dato que NO pude verificar en fuente esta sesión, declarado como tal y NO usado como premisa
 de ningún [TEOREMA]. **[VEREDICTO]** = la decisión de GAP-141.DH con su soporte.
 
@@ -263,7 +263,7 @@ fija: **gordos**. Esto es la evidencia empírica directa de que la estructura ti
 Esto **confirma la expectativa del encargo** (paso 4). Soporte: Hecho 146.4 (ceros $\beta>1$, verificado),
 Hecho 146.6 (densidad lineal en franja fija, cualitativo verificado), Hecho 146.5 (testigo $\delta\approx0.31$,
 verificado), y los Cálculos 146.A/§3.2 que muestran que el régimen de franja está forzado por la estructura
-(no es accidente numérico). Honestidad: las **constantes exactas** $\sigma_1,\sigma_2,c$ son [GAP de
+(no es accidente numérico). Franqueza: las **constantes exactas** $\sigma_1,\sigma_2,c$ son [GAP de
 literatura]; el veredicto solo necesita su **positividad cualitativa**, que sí está verificada (existencia de
 $\sigma_1>\tfrac12$ fijo con $\infty$ ceros a su derecha — basta de hecho $\beta>1$).
 

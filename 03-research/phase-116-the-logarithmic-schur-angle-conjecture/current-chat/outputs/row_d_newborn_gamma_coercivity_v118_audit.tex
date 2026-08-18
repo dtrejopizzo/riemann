@@ -1,0 +1,218 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{Exact newborn arithmetic cancellation and Gamma coercivity (v118)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{A support-only lower bound for the Gamma energy}
+
+Use the Fourier convention
+\[
+ \widehat f(\tau)=\int_{\mathbb R}f(t)e^{i\tau t}\,dt,
+ \qquad
+ \|f\|_2^2=\int_{\mathbb R}|\widehat f(\tau)|^2\frac{d\tau}{2\pi}.
+\]
+At the critical normalization the positive Gamma multiplier is
+\begin{equation}
+ g_\Gamma(\tau)=\sum_{j\ge0}
+ \frac{2\tau^2}{a_j(a_j^2+\tau^2)},
+ \qquad a_j=2j+\frac12.                                     \tag{1}
+\end{equation}
+
+\begin{theorem}[Logarithmic uncertainty bound --- \PROVED]
+If $f\in L^2(\mathbb R)$ is supported on a measurable set of measure
+$m\le\pi/2$, then
+\begin{equation}
+ \boxed{
+ \int_{\mathbb R}g_\Gamma(\tau)|\widehat f(\tau)|^2
+                 \frac{d\tau}{2\pi}
+ \ge \frac38\log\!\left(\frac{\pi}{2m}\right)\|f\|_2^2.} \tag{2}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For $\tau\ge\tfrac12$, retain in (1) all $j$ such that $a_j\le\tau$.
+Each retained summand is at least $1/a_j$.  If
+$J=\lfloor(\tau-\frac12)/2\rfloor$, then
+\begin{align*}
+ g_\Gamma(\tau)
+ &\ge\sum_{j=0}^J\frac1{2j+1/2}
+ \ge\int_0^{J+1}\frac{dx}{2x+1/2}\\
+ &=\frac12\log(4J+5)
+ \ge\frac12\log(2\tau).                                   \tag{3}
+\end{align*}
+The same bound holds with $|\tau|$ by evenness.
+
+Cauchy--Schwarz on the support gives
+$|\widehat f(\tau)|^2\le m\|f\|_2^2$.  Put
+$R=\pi/(4m)\ge1/2$.  Then
+\begin{equation}
+ \int_{-R}^R|\widehat f(\tau)|^2\frac{d\tau}{2\pi}
+ \le\frac{Rm}{\pi}\|f\|_2^2
+ =\frac14\|f\|_2^2.                                       \tag{4}
+\end{equation}
+Thus at least three quarters of the Fourier mass lies in $|\tau|\ge R$.
+Equations (3)--(4), positivity of $g_\Gamma$, and monotonicity of every
+summand of (1) in $|\tau|$ give
+\[
+ \langle G_\Gamma f,f\rangle
+ \ge\frac34\,g_\Gamma(R)\|f\|_2^2
+ \ge\frac38\log(2R)\|f\|_2^2,
+\]
+and $2R=\pi/(2m)$.  This proves (2).
+\end{proof}
+
+\section{The newborn arithmetic block}
+
+Put
+\begin{equation}
+ T_N=\frac12\log N,
+ \qquad \delta_N=T_{N+1}-T_N,
+ \qquad
+ E_N=(-T_{N+1},-T_N)\cup(T_N,T_{N+1}).                       \tag{7}
+\end{equation}
+Let $S_a$ denote translation after zero extension.
+
+\begin{theorem}[Exact vanishing of every newborn self-contact ---
+\PROVED]
+For every integer $n$ with $2\le n\le N$ and every
+$f\in L^2(E_N)$,
+\begin{equation}
+                    \langle(S_{\log n}+S_{-\log n})f,f\rangle=0.
+                                                                    \tag{8}
+\end{equation}
+Consequently the complete arithmetic part of the localized row-(d)
+operator has zero newborn/newborn block.
+\end{theorem}
+
+\begin{proof}
+Each component of $E_N$ has length $\delta_N$.  Since
+$\log n\ge\log2>\delta_N$, a translated component cannot overlap itself.
+An overlap between opposite components would require simultaneously
+\[
+ 2T_N<\log n<2T_{N+1},
+\]
+which is exactly $N<n<N+1$.  No integer satisfies this.  Endpoint contacts
+have measure zero.  Hence every correlation in (8) vanishes.
+\end{proof}
+
+Let
+\begin{equation}
+ A_{T_{N+1}}=G_{\Gamma,T_{N+1}}-m_0I-
+ \sum_{2\le n<N+1}\frac{\Lambda(n)}{\sqrt n}
+        (S_{\log n}+S_{-\log n}).                            \tag{9}
+\end{equation}
+
+\begin{corollary}[Exact raw newborn diagonal --- \PROVED]
+The $E_N$ diagonal block of (9) is
+\begin{equation}
+                         A_{EE}=G_{\Gamma,EE}-m_0I.           \tag{10}
+\end{equation}
+Since $|E_N|=2\delta_N$, (2) gives
+\begin{equation}
+ A_{EE}\ge
+ \left[
+  \frac38\log\!\left(\frac{\pi}{4\delta_N}\right)
+  -m_0\right]I.                                             \tag{11}
+\end{equation}
+In particular the raw newborn diagonal is strictly positive for all
+sufficiently large $N$ and grows at least as
+$\frac38\log N+O(1)$.
+\end{corollary}
+
+\begin{proof}
+Equation (10) follows from Theorem 2 term by term.  Apply (2) with
+$m=2\delta_N$.  Finally
+$\delta_N=\frac1{2N}+O(N^{-2})$.
+\end{proof}
+
+\section{Exact norm of the arithmetic old/new cross}
+
+Let $P_{0,N}$ be restriction to the old interval $I_N=(-T_N,T_N)$ and
+define
+\begin{equation}
+ B_N^{\rm ar}:=-P_{0,N}\sum_{2\le n\le N}
+       \frac{\Lambda(n)}{\sqrt n}(S_{\log n}+S_{-\log n})
+       \big|_{L^2(E_N)}.                                    \tag{12}
+\end{equation}
+
+\begin{theorem}[Orthogonal arithmetic cross synthesis --- \PROVED]
+One has the exact norm identity
+\begin{equation}
+ \boxed{
+ \|B_N^{\rm ar}f\|_2^2
+ =\left(\sum_{2\le n\le N}\frac{\Lambda(n)^2}{n}\right)
+   \|f\|_2^2,\qquad f\in L^2(E_N).}                         \tag{13}
+\end{equation}
+In particular
+\begin{equation}
+ \|B_N^{\rm ar}\|^2
+ =\frac12(\log N)^2+o((\log N)^2).                          \tag{14}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Split $f=f_-\oplus f_+$ on the left and right components of $E_N$.
+After restriction to $I_N$, only $S_{-\log n}f_-$ and
+$S_{\log n}f_+$ survive.  Their supports are precisely the intervals
+$L_n$ and $R_n$ of v111.  The no-overlap theorem there says that all these
+$2N-2$ ranges are pairwise orthogonal.  Every surviving translation is an
+isometry, so Pythagoras gives (13).
+
+Only prime powers contribute to the sum.  The primes give, by partial
+summation and the prime number theorem,
+\[
+ \sum_{p\le N}\frac{(\log p)^2}{p}
+ =\frac12(\log N)^2+o((\log N)^2).
+\]
+The powers $p^k$, $k\ge2$, contribute $O(1)$ because
+$\sum_p(\log p)^2/[p(p-1)]<\infty$.  This proves (14).
+\end{proof}
+
+Explicitly,
+\[
+ \sum_p\sum_{k\ge2}\frac{(\log p)^2}{p^k}
+ =\sum_p\frac{(\log p)^2}{p(p-1)}<\infty.                   \tag{15}
+\]
+
+This result identifies the remaining large-cell issue sharply.  It is not
+the sign of the raw newborn diagonal.  It is the return through the old
+space after the moving-Tate graph of v117:
+\begin{equation}
+ B_N^*A_{00}^\dagger B_N,
+ \qquad
+ B_N=P_0(A_{0E}-A_{00}C_N)M_N^{-1/2}.                        \tag{16}
+\end{equation}
+The prime part of $A_{0E}$ has pairwise orthogonal delay ranges, while the
+Gamma part is the Carleman-bounded cross of v112 and
+$\|C_N\|=O(N^{-1/2})$ by v117.  Turning these three facts into a sharp
+bound strictly below (11) is the physical return estimate; none of
+(8)--(11) assumes it.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Support-only Gamma lower bound & \PROVED & (2) \\
+All newborn arithmetic self-correlations vanish & \PROVED & (8) \\
+Raw newborn block is exactly Gamma minus $m_0$ & \PROVED & (10) \\
+Large-$N$ raw newborn positivity & \PROVED & (11) \\
+Exact arithmetic old/new cross norm & \PROVED & (13)--(15) \\
+Sharp old-space return domination & \OPEN & final display \\
+Condition $G$, row (d) & \OPEN & requires (16) in every cell \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

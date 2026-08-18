@@ -1,4 +1,4 @@
-# Phase 60 — Discriminante: RESULTADOS (cierre honesto) **Autor:** David Alejandro Pizzo · **Ejecutado:** 2026-06-16
+# Phase 60 — Discriminante: RESULTADOS (cierre franco) **Autor:** David Alejandro Pizzo · **Ejecutado:** 2026-06-16
 **Veredicto:** NO-GO. La tesis central (multiplicatividad controla el signo de Weil, medible
 vía el discriminante de la forma localizada) queda **refutada** por experimentos reales y
 reproducibles. Todo el código corre en el venv y reproduce las gates validadas. --- ## Tesis testeada > El signo del residual de Weil no lo controla la ubicación de los ceros sino la
@@ -35,6 +35,6 @@ forma localizada la integra y la borra. Esto es coherente con T3.4 (la "banda" a
 artefacto de base) — el mismo dedo apuntando: **no sobrevive estructura aritmética fina en la
 forma localizada.** Es MW-2 (propagación aritmética) con disfraz nuevo. ## Consecuencia para RH La ruta del discriminante de multiplicatividad **no lleva a una condición para el signo de
 Weil** con los observables disponibles. RH permanece detrás del muro cross-place (MW-3/MW-5),
-intacto. Esta phase se **cierra**. Se registra como [NG-F1] en NO-GO-LIST. ## Lo que SÍ deja (honesto)
+intacto. Esta phase se **cierra**. Se registra como [NG-F1] en NO-GO-LIST. ## Lo que SÍ deja (franco)
 1. Un instrumento de discriminante relativo (A fija, varía multiplicatividad) que **cancela la normalización** — desbloquea el confound de baseline de Phase3-results, y es reutilizable.
 2. La constatación dura: la forma de Weil localizada es ciega a multiplicatividad por ambos lados, con razón estructural. Cierra limpiamente la dirección δ del PLAN-RH-FRONTIER.

@@ -37,7 +37,7 @@ zeros)` exactly, and **ζ has `ind₋=0`.**
 - It is the theorem-level form of the numerical detector: the RH-strength statement is
   `ind₋(K_{S_κ})=0` unconditionally (= no UHP poles = RH), and DH has `ind₋ = 2·(#off-line zeros) > 0`.
 
-## Honest status
+## Candid status
 
 Still a criterion: `ind₋=0` for ζ *is* RH. But it is the **sharpest and most robust** form — an exact
 integer index, faithful and falsifiable (off-line count exact). The proof target (Connes) is the

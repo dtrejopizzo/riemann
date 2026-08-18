@@ -4,7 +4,7 @@
 The mandate: a path *more* novel than anything we have done, one that requires developing **new mathematics**.
 The wrong-sign capstone (Part VII of the master document) tells us exactly what such a path must do, and there
 is essentially **one** structure in mathematics known to do it. This document explains the rationale, the
-program, our concrete entry point, a first computable milestone, and the honest horizon.
+program, our concrete entry point, a first computable milestone, and the candid horizon.
 
 ---
 
@@ -118,7 +118,7 @@ finite first brick of the new mathematics.
   explicitly and numerically, which the abstract programs (Deninger, Connes–Consani) do not have in hand. We
   can *build and test the finite model*, which is a different and complementary mode of attack.
 
-**Honest odds.** Constructing the arithmetic cohomology is a generational problem; full RH this way is $\ll1\%$
+**Candid odds.** Constructing the arithmetic cohomology is a generational problem; full RH this way is $\ll1\%$
 and decades-deep. But M10.1 is finite, novel, and either falsifies or sharpens the surface picture — and even a
 negative result (the Lorentzian envelope does **not** close) would be a genuine structural theorem (a seventh
 no-go, the first one *about the cohomological route*).
@@ -128,7 +128,7 @@ no-go, the first one *about the cohomological route*).
 ## 6. The methodology (unchanged, proven)
 
 Precise milestones stated to prove or break (M10.1 first); verify-first with the engine; self-refute before
-building; the anti-circularity gate against the six-language map; honest logging in the bitácora. The same
+building; the anti-circularity gate against the six-language map; candid logging in the bitácora. The same
 discipline that produced N1–N6 and the capstone — now aimed at the one structure that, in principle, could turn
 the corner.
 
@@ -137,4 +137,4 @@ the corner.
 - Program + lineage (Deninger, Connes–Consani, $\mathbb F_1$) + our dictionary — ✅ laid out.
 - **Next: M10.1** — reconstruct the Lorentzian envelope of the Weil–Carleson form from the detector; test the
   Hodge-index signature and the Castelnuovo–Severi shape. Buildable now.
-- Honest: a generational bet; M10.1 is the finite, novel first brick; either outcome is informative.
+- Candid: a generational bet; M10.1 is the finite, novel first brick; either outcome is informative.

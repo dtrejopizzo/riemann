@@ -4,7 +4,7 @@
 M1–M3 closed the identification phase of Route B.
 
 This continues `PLAN-RH-ROUTE-B-structural-positivity.md`. M1–M3 (`phase-5-structural/`) established the
-honest map: the **only** zero-free, unobstructed structural attack surface is the **Connes–Consani
+candid map: the **only** zero-free, unobstructed structural attack surface is the **Connes–Consani
 semi-local residual**, and the sign — if it exists — lives in **cross-place cancellation** (archimedean
 manifest square vs. prime negativity), i.e. a *global* square over the adèle class space (Connes' geometric
 program). de Branges and the P8 zero-side are spent.
@@ -30,7 +30,7 @@ RH, and (ii) the most plausible route to a *sufficient condition* for the sign.
 
 ---
 
-## 1. Four ambitious directions (ranked; each falsifiable, honest prior)
+## 1. Four ambitious directions (ranked; each falsifiable, candid prior)
 
 ### α — The semi-local spectral flow (operative, do first)
 **Idea.** P7's localized Gram matrix $Q=M_{\text{zeros}}-M_{\text{arith}}$ is *already semi-local* (it carries
@@ -116,7 +116,7 @@ machinery already exists; add the prolate basis and the $L_{\mathrm{DH}}$ data f
 - **Magnitude ≠ sign:** a numerical/analytic bound $\|K\|\le1$ for $\zeta$ is magnitude/evidence; the sign is
   RH. Never present a sharper estimate as the proof.
 - **Audit before pillarizing; retraction is cheap, false victory is expensive.** The panel sees every claim.
-- **Honest priors up front.** RH from any of these: $<1\%$. Real structural results: plausible. That asymmetry
+- **Candid priors up front.** RH from any of these: $<1\%$. Real structural results: plausible. That asymmetry
   is the point — we are mining the frontier for durable structure, with RH as the north star, not the
   deliverable.
 
@@ -138,5 +138,5 @@ where the only zero-free surface is (the Connes semi-local residual), we now mix
 the literature lacks — a computable semi-local localized Weil engine and an explicit RH-violator — to ask the
 sharper, falsifiable question: which arithmetic invariant forces the residual operator's norm below 1 for
 $\zeta$ but not for an RH-false L-function? The first experiment reads the spectral flow, the RH-true/false
-discriminant, and a possible GUE/sine-kernel identification simultaneously. Honest prior: durable structure,
+discriminant, and a possible GUE/sine-kernel identification simultaneously. Candid prior: durable structure,
 not RH — with the global adèle-class square as the declared north star.*

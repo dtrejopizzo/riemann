@@ -1,15 +1,15 @@
 # Riemann Hypothesis Research Program — Complete Summary
 
 **Author:** David Alejandro Trejo Pizzo — dtrejopizzo@gmail.com
-**Compiled:** June 2026 · **Updated:** 2026-07-17 (covers phases through 76)
+**Compiled:** June 2026 · **Updated:** 2026-08-18 (covers phases through 119)
 **Purpose:** An exhaustive reference for everything investigated — roads traveled, blocks found,
 routes exhausted, routes still live.
-**Absolute honesty:** no proof of RH has been found. A false victory would be worse than a failure.
+**Absolute candor:** no proof of RH has been found. A false victory would be worse than a failure.
 
 > This summary is organized as: the two empirical/theoretical arcs and the CCM framework
 > (Parts 1–4), the structural walls (Part 5), the papers (Part 6, catalogued in
 > [`04-papers/README.md`](04-papers/README.md)), what was proved
-> unconditionally (Part 9), the honest final assessment (Part 10), and a compact verdict log
+> unconditionally (Part 9), the candid final assessment (Part 10), and a compact verdict log
 > for Phases 35–76.
 
 ---
@@ -54,7 +54,7 @@ class $\omega(n)\bmod 2$ (parity of the number of prime factors). Hypothesis: th
 - **Wrong sign.** Every unconditional tool gives *lower* bounds on positivity; RH needs an
   *upper* bound ($\lambda_{\min}(Q)\ge0$). Confirmed in 8 independent paradigms.
 - **P5 refuted.** The r4/r5 phase transition at $N_c\approx1.18\times10^5$ was refuted by
-  canonical re-verification; the honest result is that ζ is *more* constructive at peaks, no
+  canonical re-verification; the candid result is that ζ is *more* constructive at peaks, no
   transition.
 - **TDA refuted.** Persistent homology (H0/H1) does not detect off-line zeros.
 - **Per-place positivity fails (Phase 6).** The local OS form $\int|\hat\psi|^2 G_p$ is
@@ -188,7 +188,7 @@ file.
 
 ---
 
-## PART 10 — Honest final assessment
+## PART 10 — Candid final assessment
 
 **What the program achieved.** It mapped the territory around RH with surgical precision:
 named the structural walls (MW-1…MW-7) from many independent directions; proved real
@@ -242,7 +242,7 @@ exhausted with a theorem or barrier.
 | 52 | Homotopy inertia | (A) — the best new idea, aimed at the root — confirmed the wall, did not cross it. The metric was not ζ's last hiding place: removing it (the metric-free e-invariant was genuinely built), ζ reappears one level deeper, in the fundamental class of the zeros↔primes duality. New parity obstruction (a ℚ/ℤ invariant cannot transport an integer). |
 | 53 | Quantum import | Sharpest diagnostic: QM resolves its duality because its metric (Born positivity) is an axiom. The primes↔zeros duality lives in an indefinite Kreĭn space (κ=2m) where definiteness IS RH. Same structure, opposite epistemic direction. |
 | 54 | Index dynamics κ | Certified theorems: the balance law $\dot I=-2\kappa-D$ (pure dissipation, ζ-free law); $E(T)\ll T/\log T$ (first unconditional second-order); the pinned-moment identity $\equiv2/3$; $\int\Sigma^2\ll T_0$; the ceiling theorem. Definitive closures: individual-window (false even under RH), almost-every-window (collapses onto E). |
-| 55 | Two arrows | Program CLOSED honestly: the P41 trichotomy complete; the 7 walls unified into one master quantifier; no live routes in known argument forms. Delivers a complete wall map, the unconditional ledger (L1–L8), and the direction of the missing mechanism. |
+| 55 | Two arrows | Program CLOSED candidly: the P41 trichotomy complete; the 7 walls unified into one master quantifier; no live routes in known argument forms. Delivers a complete wall map, the unconditional ledger (L1–L8), and the direction of the missing mechanism. |
 | 56 | Two towers (recalibrated) | Each tower = a calibrated hard pillar + LP repulsion. Final symmetry of the towers. |
 | 57–58 | Brick-A attempt + full audit | The architecture RH ⟸ A∧Dic and the tower-2 static pinch are AUDITED AND FIRM. ~5/40 refuted/degraded. Reopenings toward A: R1 (non-standard mollifiers), R2 (anisotropic edge flow — the new concrete front). |
 | 59 | Full closure | Ledger: 4 THEOREM + 2 BARRIER + 5 EXACT-CALIBRATED + 1 disjunction + ~12 open-with-price; no hard leaks. Final: RH = A ∧ Dic, each half calibrated (A: Lindelöf-hard, prices S1/S2; Dic: purity, price S3); ~18 new unconditional theorems; the no-go axiomatized; the exact interface for an external attack. |
@@ -277,12 +277,58 @@ fourteen of its fifteen steps closed. The missing mathematics is no longer descr
 cohomology over Spec ℤ that reads inertia, not value" — it is now named precisely: the classical
 **Li–Keiper criterion**, $\lambda_n\ge0$ for all $n$ (equivalently the terminal-defect positivity
 $\Omega_7$). This is the concrete object the program's abstract "missing cohomology" cashes out
-to, reached by an independent construction. It remains, honestly, exactly as hard as RH: the
+to, reached by an independent construction. It remains, candidly, exactly as hard as RH: the
 crossing requires a proof of $\Omega_7$, and every attempt to supply one so far (Phases 64–76)
 has returned to one of the structural walls MW-1 through MW-6.
 
 ---
 
-*Compiled June 2026; updated 2026-07-17. Covers Phases 3–76. Author: David Alejandro Trejo
+## PART 12 — Phases 77–106: the ARP-P architecture reaches its limit
+
+Thirty phases of exact, verified finite algebra, closing one sub-gate of the ARP-P/$\Omega_7$
+chain after another without ever crossing the sign. Full detail: `00-MAP.md` Part 13.
+
+| Phase(s) | Theme | Verdict |
+|---|---|---|
+| 77–79 | LP / IDENT, the two halves phase 76 left | Both resolved; shared convergence lemma GAP-Z supplied. |
+| 80–99 | A long chain of exact finite identities (relative determinant, secular anchor, coupled generator continuum, Gamma–Euler coboundary, endpoint module, parity Weyl defect, signed spectral Abel, Euler deformation discriminant, endpoint/projective layer constructions, cluster/cofactor/Jacobian currents, sensitivity commutator/shell split, adjugate boundary sandwich) | Each closes one identity; planted-falsifier controls introduced at phase 101. |
+| 100–103 | Characteristic cofactor factorization → exact $\Omega_7$ target → direct-A1 reduction | $\Omega_7\iff\lambda_n^{prime}\ge-\lambda_n^{arch}$; finite certificates $1\le n\le149$; everything reduces to (A1) for $n\ge150$. |
+| 104 | Unconditional A1 closure | **Not proved.** Cofinal-cutoff correction sharpens the sufficient front to $4\lambda_n>A_n$, still open for all remaining $n$. |
+| 105 | A1 geometry and the Deep limit | Two genuine unconditional theorems: the off-line quartet law (any off-line zero forces exponential Li-sequence growth) and a block spectral radius theorem. Coupled selector and nodal-flux gates remain open. |
+| 106 | Global modular-star audit | Four-way closure of the last spectral-construction candidate: an ordinary self-adjoint perturbation determinant cannot match the finite Tate identity (106_00); the adelic half-density generator collapses under the arithmetic quotient (106_02); the completed heat semigroup fails Beurling–Deny — not positivity-preserving (106_13); branch selection is a pure sign question magnitude data provably cannot decide (106_16/17). |
+
+**Net.** No crossing. Two durable RH-independent theorems survive (105_02, 106_13). No further
+phase continued this architecture.
+
+## PART 13 — Phases 107–119: Arc C, the arithmetic Lefschetz reconstruction
+
+A structurally different pivot: imitate Weil's 1948 proof for curves over finite fields directly
+over $\operatorname{Spec}\mathbb Z$, working backward from what row (d) — Hodge index /
+Castelnuovo–Severi — would require. Full detail: `00-MAP.md` Part 14,
+`03-research/THE_BACKWARD_MAP.md`, `03-research/AUDIT_CONSOLIDATED.md`.
+
+| Phase | Theme | Verdict |
+|---|---|---|
+| 107 | Reverse-engineer the four-row programme | Deninger–Morishita bridge computed and closed (residue field mismatch, `107_242` Thm 4.1); a dozen further no-go/partial-bridge results on Deninger's actual orbit geometry. |
+| 108 | Row (a): the graded family over $\mathbb Z$ | Built; both natural pairing routes to row (c) closed. |
+| 109 | Row (b)/(c): can any pairing see the zeros? | **No** — proved for every kernel (Thm 1.1), a general obstruction. |
+| 110 | $\xi$-divisibility on compact support | **Impossible** (Stirling growth); explicitly not RH in disguise — the obstruction is carried entirely by $\Gamma$. |
+| 111 | Extend to Schwartz-class data | Built (Assumption T). |
+| 112 | The effective cone | Built formally; superseded by 113. |
+| **113** | **Row (d) proved equivalent to RH — algebraically** | d0/d2/d4/d5/$K{=}0$ built; **d3 (Riemann–Roch growth) proved impossible inside $\mathcal D$** by three independent obstructions O1 (scaling-stable effective cone), O2 (infinite mutual intersection — the exponent $1/2$ *is* the critical line), O3 (no spectral gap). The one remaining input $(E^\circ)$ **is equivalent to RH** in both directions; the Hodge-index inequality holds iff RH (signature $(1,7)$ on-line, $(3,5)$ off it, measured). |
+| 114 | Rows (a)–(c) written up as paper 42 | Row (d) reduced further (Douglas gate, one joint residual); re-proves two obstructions already recorded — self-repeating signal. |
+| 115 | Diagnosis | Row (d) missing an **object**, not an inequality; row (a)'s Green term is row (d)'s equality case. |
+| 116 | The Logarithmic Schur Angle Conjecture | Extracted and named, $\rho_N\le1/(20\log N)$; row (d) completed *conditionally* in paper 42. |
+| 117 | The conjecture, measured | Source-model route dies ($c_N<1$, decaying, Galerkin-bounded above — one-sided-robust); the conjecture itself **falsified** against paper 42's own audit table (4/5 points violate it). Redirect: the exact threshold condition. |
+| **118** | **Row (d) proved equivalent to RH — analytically, independently** | Derived and verified to $5\times10^{-11}$–$2\times10^{-9}$ against real zeta zeros: $\langle A_TF,F\rangle=\sum_\rho h(\gamma_\rho)$. Row (d) **is** localized Weil positivity. $m_0$ shown forced, not chosen; balanced factorization re-verified independently; scattering-operator candidates refuted; $T\le\log2$ certificate reproduced, its limit diagnosed as analytic (not numerical). |
+| 119 | Pivot: what does a finite compression certify unconditionally? | **Opened, unresolved.** Gated on the Davenport–Heilbronn test; plan only. |
+
+**Net.** Two independent proofs (113 algebraic, 118 analytic) that row (d) is exactly RH. Three
+genuinely unbuilt (not proved impossible) objects remain, plus a family of open non-RH-equivalent
+sub-targets — both listed in `OPTIONS.md`.
+
+---
+
+*Compiled June 2026; updated 2026-08-18. Covers Phases 3–119. Author: David Alejandro Trejo
 Pizzo. No proof of RH; this is a faithful record, including the corrections where the program
-corrected itself.*
+corrected itself. See `OPTIONS.md` for the current options list.*

@@ -2,7 +2,7 @@
 
 **Author: David Alejandro Trejo Pizzo · 2026-06-04.**
 A self-contained account of what the three milestones M10.1–M10.3 established, why they matter, and what is
-honestly still open. Reproducible with `experiments/colab_phase10_M1_to_M3.py` (runs all three, deeper).
+candidly still open. Reproducible with `experiments/colab_phase10_M1_to_M3.py` (runs all three, deeper).
 
 ---
 
@@ -112,7 +112,7 @@ which is exactly what the wrong-sign capstone said was needed and what every pri
 
 ---
 
-## 5. Honest status and the next step
+## 5. Candid status and the next step
 
 - **Established (measured + framed):** the intersection form is definite for finite genus and degenerates
   toward $\zeta$ (M10.1, the four-way unification); the *regularized* form is definite with a real gap (M10.2);

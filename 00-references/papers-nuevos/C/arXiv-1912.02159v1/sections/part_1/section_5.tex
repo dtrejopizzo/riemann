@@ -1,0 +1,75 @@
+\section{Infinitesimal generator}
+
+Assume that the $\mathbb{R}$-action $\phi$ is conformal on $\Omega_{\mathcal{F}}^{i}(M)$ with respect to the bundle-like metric $g_{\mathcal{F}}$, i.e.
+\begin{equation*}
+    (\phi^{t*}\omega,\phi^{t*}\eta)=(\omega,\eta)\text{ for } \forall{t}\in\mathbb{R}.
+\end{equation*}
+It is easy to check that $\phi^{t*}$ on $\bar{H}^{i}_{\mathcal{F}}(M)$ is surjective and strongly continuous, i.e.
+\begin{equation*}
+    \lim_{t\rightarrow{t_{0}}}\phi^{t*}[h]=\phi^{t_{0}*}[h]\quad\text{for}\,\,\forall{t}_{0}\in\mathbb{R}, [h]\in\bar{H}^{i}_{\mathcal{F}}(M).
+\end{equation*}
+Then the following lemma follows from the Stone's theorem
+\begin{lemma}[Stone's theorem]\label{lem:1.3}
+We define the infinitesimal generator of $(\phi^{t*})_{t\in\mathbb{R}}$ by
+\begin{equation*}
+    \Theta := \underset{t\rightarrow0}{\mathrm{lim}} \frac{\phi^{t*}- \mathrm{id}}{t}.
+\end{equation*}
+Since $(\phi^{t*})_{t\in\mathbb{R}}$ is the strongly continuous one-parameter unitary group on the Hilbert space $\bar{H}^{i}_{\mathcal{F}}(M)$,
+then $A:=-i\Theta$ is self-adjoint on $\bar{H}^{i}_{\mathcal{F}}(M)$ and we have
+\begin{equation*}
+    \phi^{t*}=e^{itA}=e^{t\Theta}\text{ for }\forall{t}\in\mathbb{R}.
+\end{equation*}
+\end{lemma}
+The infinitesimal generator is a first-order differential operator along the transversal flow.
+Then the exterior derivative $d_{0}$ along the flow (resp. adjoint operator $\delta_{0}$) can be represented by
+\begin{equation*}
+\begin{split}
+    & d_{0}\omega = \Theta\omega \wedge \omega_{\phi},\\
+    & \delta_{0}(\omega \wedge \omega_{\phi}) = -\Theta\omega.
+\end{split}
+\end{equation*}
+It leads the following lemma.
+\begin{lemma}\label{lem:5.2}
+The negative square of the infinitesimal generator on a leafwise cohomology group coincide with the Laplacian on a space of leafwise harmonic forms
+\begin{equation*}
+    \begin{split}
+        -\Theta^{2}|_{\bar{H}_{\mathcal{F}}^{i}(M)} &= \Delta_{0}|_{\ker(\Delta_{\mathcal{F}})} \\
+        &= \Delta|_{\ker(\Delta_{\mathcal{F}})}.
+    \end{split}
+\end{equation*}
+\end{lemma}
+Since $M$ is compact and closed, the Laplacian has pure point spectrum which consists of non-negative eigenvalues with finite multiplicity.
+Hence the infinitesimal generator has pure imaginary eigenvalues with finite multiplicity.\\
+
+For a leafwise harmonic form $\omega_{\mathcal{F}}\in\ker\Delta_{\mathcal{F}}$, a fundamental solution of the heat equation whose initial value is $\omega_{\mathcal{F}}$, i.e.
+\begin{equation*}
+    \begin{cases}
+        \left(\frac{\partial}{\partial{t}} + \Delta_{0} \right) \omega_{\mathcal{F}}^{t} = 0, \\
+        \omega_{\mathcal{F}}^{0} = \omega_{\mathcal{F}},
+    \end{cases}
+\end{equation*}
+is given by
+\begin{equation*}
+        \omega_{\mathcal{F}}^{t}(x,y,s) =
+        \begin{cases}
+            \int_{S^{1}} K(t,s,s')\omega_{\mathcal{F}}(x,y,s')ds' & \text{if } (x,y,s) \text{ is periodic},\\
+            \int_{\mathbb{R}} K(t,s,s')\omega_{\mathcal{F}}(x,y,s')ds' & \text{otherwise}
+        \end{cases}
+\end{equation*}
+where $K(t,s,s')$ is a factor of the heat kernel of the Laplacian $\Delta$.
+Hence we have an asymptotic expansion for the heat kernel around $t=0$
+\begin{equation*}
+    \mathrm{tr}(e^{-\Delta_{0}t}|\ker\Delta_{\mathcal{F}}) \overset{t\downarrow0}{\sim} t^{-\frac{1}{2}}(a_{0} + a_{1}t + a_{2}t^{2} + \cdots).
+\end{equation*}
+Then the spectral zeta function $\zeta_{\Delta_{0}}(s)$ associated with $\Delta_{0}$ has only simple poles at $s=\frac{1}{2}-n$ $(n=0,1,2, \cdots)$.
+
+Fixing a positive number $T>0$, we consider a series
+\begin{equation*}
+    V^{p}(t) = \sum_{\text{Im}(\rho)>T} e^{\rho{it}}
+\end{equation*}
+where $\rho$ runs over the spectrum of $\Theta$ on $\bar{H}_{\mathcal{F}}^{p}(M)$.
+It follows from the lemma \ref{lem:5.2} that it is a partial sum of $\mathrm{tr}(e^{-\sqrt{\Delta_{0}}t}|\ker\Delta_{\mathcal{F}})$.
+Since $\mathrm{tr}(e^{-\sqrt{\Delta_{0}}t}|\ker\Delta_{\mathcal{F}})$ is the inverse Mellin transform of $\Gamma(s)\zeta_{\Delta_{0}}(\frac{s}{2})$ with simple poles at $s=1, -2n$  and double poles at $s=-2n-1$ $(n=0,1,2,\cdots)$, we deduce that the series $V^{p}(t)$ converges absolutely and has an asymptotic expansion around $t=0$ as follows:
+\begin{equation*}
+    V^{p}(t) \overset{t\downarrow0}{\sim} at^{-1} + \sum_{k=0}^{N} (b_{k} + c_{k}{t}\log{t})t^{2k} + \mathcal{O}_{1}(t^{N-1}) + \mathcal{O}_{2}(t^{N-1})t\log{t}.
+\end{equation*}

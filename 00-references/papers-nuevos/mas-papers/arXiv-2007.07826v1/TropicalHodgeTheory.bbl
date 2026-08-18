@@ -1,0 +1,1154 @@
+% \bib, bibdiv, biblist are defined by the amsrefs package.
+\begin{bibdiv}
+\begin{biblist}
+
+\bib{AB}{article}{
+      author={Adiprasito, Karim~Alexander},
+      author={Bj{\"o}rner, Anders},
+       title={Filtered geometric lattices and {L}efschetz section theorems over
+  the tropical semiring},
+        date={2014},
+     journal={arXiv preprint arXiv:1401.7301},
+}
+
+\bib{AB15}{article}{
+      author={Amini, Omid},
+      author={Baker, Matthew},
+       title={Linear series on metrized complexes of algebraic curves},
+        date={2015},
+     journal={Mathematische Annalen},
+      volume={362},
+      number={1-2},
+       pages={55\ndash 106},
+}
+
+\bib{ADH}{article}{
+      author={Ardila, Federico},
+      author={Denham, Graham},
+      author={Huh, June},
+       title={Lagrangian geometry of matroids},
+        date={2020},
+     journal={arXiv preprint arXiv:2004.13116},
+}
+
+\bib{Adi18}{article}{
+      author={Adiprasito, Karim},
+       title={Combinatorial {L}efschetz theorems beyond positivity},
+        date={2018},
+     journal={arXiv preprint arXiv:1812.10454},
+}
+
+\bib{AHK}{article}{
+      author={Adiprasito, Karim},
+      author={Huh, June},
+      author={Katz, Eric},
+       title={Hodge theory for combinatorial geometries},
+        date={2018},
+     journal={Annals of Mathematics},
+      volume={188},
+      number={2},
+       pages={381\ndash 452},
+}
+
+\bib{AK}{article}{
+      author={Ardila, Federico},
+      author={Klivans, Caroline~J},
+       title={The {B}ergman complex of a matroid and phylogenetic trees},
+        date={2006},
+     journal={Journal of Combinatorial Theory, Series B},
+      volume={96},
+      number={1},
+       pages={38\ndash 49},
+}
+
+\bib{AKMW}{article}{
+      author={Abramovich, Dan},
+      author={Karu, Kalle},
+      author={Matsuki, Kenji},
+      author={W{\l}odarczyk, Jaros{\l}aw},
+       title={Torification and factorization of birational maps},
+        date={2002},
+     journal={Journal of the American Mathematical Society},
+      volume={15},
+      number={3},
+       pages={531\ndash 572},
+}
+
+\bib{Ami14}{article}{
+      author={Amini, Omid},
+       title={Equidistribution of {W}eierstrass points on curves over
+  non-{A}rchimedean fields},
+        date={2014},
+     journal={preprint},
+       pages={revised version 2020},
+}
+
+\bib{Ami}{article}{
+      author={Amini, Omid},
+       title={The combinatorial {C}how ring of products of graphs},
+        date={2016},
+     journal={preprint},
+       pages={revised version 2020},
+}
+
+\bib{AMR}{article}{
+      author={Abramovich, Dan},
+      author={Matsuki, Kenji},
+      author={Rashid, Suliman},
+       title={A note on the factorization theorem of toric birational maps
+  after morelli and its toroidal extension},
+        date={1999},
+     journal={Tohoku Mathematical Journal, Second Series},
+      volume={51},
+      number={4},
+       pages={489\ndash 537},
+}
+
+\bib{AMRT}{book}{
+      author={Ash, Avner},
+      author={Mumford, David},
+      author={Scholze, Peter},
+      author={Rapoport, Michael},
+      author={Tai, Yung-sheng},
+       title={Smooth compactifications of locally symmetric varieties},
+   publisher={Cambridge University Press},
+        date={2010},
+}
+
+\bib{HybridModuli}{article}{
+      author={Amini, Omid},
+      author={Nicolussi, Noema},
+       title={Moduli of hybrid curves and variations of canonical measures in
+  families},
+        date={2020},
+     journal={preprint},
+}
+
+\bib{AP-geom}{article}{
+      author={Amini, Omid},
+      author={Piquerez, Matthieu},
+       title={Geometry of tropical varieties and extended polyhedral
+  complexes},
+        date={2020},
+     journal={in preparation},
+}
+
+\bib{AP}{article}{
+      author={Amini, Omid},
+      author={Piquerez, Matthieu},
+       title={Hodge isomorphism for matroids},
+        date={2020},
+     journal={preprint},
+}
+
+\bib{ARS}{article}{
+      author={Arnal, Charles},
+      author={Renaudineau, Arthur},
+      author={Shaw, Kristin},
+       title={Lefschetz section theorems for tropical hypersurfaces},
+        date={2019},
+     journal={arXiv preprint arXiv:1907.06420},
+}
+
+\bib{AT}{article}{
+      author={Abramovich, Dan},
+      author={Temkin, Michael},
+       title={Functorial factorization of birational maps for qe schemes in
+  characteristic 0},
+        date={2019},
+     journal={Algebra \& Number Theory},
+      volume={13},
+      number={2},
+       pages={379\ndash 424},
+}
+
+\bib{BB}{article}{
+      author={Belkale, Prakash},
+      author={Brosnan, Patrick},
+       title={Matroids, motives, and a conjecture of {K}ontsevich},
+        date={2003},
+     journal={Duke Mathematical Journal},
+      volume={116},
+      number={1},
+       pages={147\ndash 188},
+}
+
+\bib{BBFK}{article}{
+      author={Barthel, Gottfried},
+      author={Brasselet, Jean-Paul},
+      author={Fieseler, Karl-Heinz},
+      author={Kaup, Ludger},
+       title={Combinatorial intersection cohomology for fans},
+        date={2002},
+     journal={Tohoku Mathematical Journal, Second Series},
+      volume={54},
+      number={1},
+       pages={1\ndash 41},
+}
+
+\bib{BDP90}{article}{
+      author={Bifet, Emili},
+      author={{De Concini}, Corrado},
+      author={Procesi, Claudio},
+       title={Cohomology of regular embeddings},
+        date={1990},
+     journal={Advances in mathematics},
+      volume={82},
+      number={1},
+       pages={1\ndash 34},
+}
+
+\bib{Berkovich}{incollection}{
+      author={Berkovich, Vladimir~G},
+       title={A non-archimedean interpretation of the weight zero subspaces of
+  limit mixed {H}odge structures},
+        date={2009},
+   booktitle={Algebra, arithmetic, and geometry},
+   publisher={Springer},
+       pages={49\ndash 67},
+}
+
+\bib{Bergman}{article}{
+      author={Bergman, George~M},
+       title={The logarithmic limit-set of an algebraic variety},
+        date={1971},
+     journal={Transactions of the American Mathematical Society},
+      volume={157},
+       pages={459\ndash 469},
+}
+
+\bib{BFJ15}{article}{
+      author={Boucksom, S{\'e}bastien},
+      author={Favre, Charles},
+      author={Jonsson, Mattias},
+       title={Solution to a non-{A}rchimedean {M}onge-{A}mp{\`e}re equation},
+        date={2015},
+     journal={Journal of the American Mathematical Society},
+      volume={28},
+      number={3},
+       pages={617\ndash 667},
+}
+
+\bib{BGJK}{article}{
+      author={{Burgos Gil}, Jos{\'e}},
+      author={Gubler, Walter},
+      author={Jell, Philipp},
+      author={K{\"u}nnemann, Klaus},
+       title={A comparison of positivity in complex and tropical toric
+  geometry},
+        date={2020},
+     journal={arXiv preprint arXiv:2003.08644},
+}
+
+\bib{BGS}{article}{
+      author={Bloch, Spencer},
+      author={Gillet, Henri},
+      author={Soul{\'e}, Christophe},
+       title={Non-archimedean {A}rakelov theory},
+        date={1995},
+     journal={Journal of Algebraic Geometry},
+      volume={4},
+      number={4},
+       pages={427\ndash 486},
+}
+
+\bib{BH17}{article}{
+      author={Babaee, Farhad},
+      author={Huh, June},
+       title={A tropical approach to a generalized {H}odge conjecture for
+  positive currents},
+        date={2017},
+     journal={Duke Mathematical Journal},
+      volume={166},
+      number={14},
+       pages={2749\ndash 2813},
+}
+
+\bib{BHMPW}{article}{
+      author={Braden, Tom},
+      author={Huh, June},
+      author={Matherne, Jacob~P.},
+      author={Proudfoot, Nicholas},
+      author={Wang, Botong},
+       title={A semi-small decomposition of the {C}how ring of a matroid},
+        date={2020},
+     journal={preprint arXiv:2002.03341},
+}
+
+\bib{BJ16}{incollection}{
+      author={Baker, Matthew},
+      author={Jensen, David},
+       title={Degeneration of linear series from the tropical point of view and
+  applications},
+        date={2016},
+   booktitle={Nonarchimedean and tropical geometry},
+   publisher={Springer},
+       pages={365\ndash 433},
+}
+
+\bib{BJ}{article}{
+      author={Boucksom, S{\'e}bastien},
+      author={Jonsson, Mattias},
+       title={Tropical and non-archimedean limits of degenerating families of
+  volume forms},
+        date={2017},
+     journal={Journal de l'{\'E}cole {P}olytechnique-Math{\'e}matiques},
+      volume={4},
+       pages={87\ndash 139},
+}
+
+\bib{BL}{article}{
+      author={Baker, Matthew},
+      author={Lorscheid, Oliver},
+       title={The moduli space of matroids},
+        date={2018},
+     journal={arXiv preprint arXiv:1809.03542},
+}
+
+\bib{BN07}{article}{
+      author={Baker, Matthew},
+      author={Norine, Serguei},
+       title={{R}iemann--{R}och and {A}bel--{J}acobi theory on a finite graph},
+        date={2007},
+     journal={Advances in Mathematics},
+      volume={215},
+      number={2},
+       pages={766\ndash 788},
+}
+
+\bib{Bou}{incollection}{
+      author={Boucksom, S{\'e}bastien},
+       title={Variational and non-archimedean aspects of the
+  {Y}au--{T}ian--{D}onaldson conjecture},
+        date={2019},
+   booktitle={Proceedings of the {I}nternational {C}ongress of {M}athematicians
+  ({ICM} 2018)},
+       pages={591\ndash 617},
+}
+
+\bib{Bri96}{article}{
+      author={Brion, Michel},
+       title={Piecewise polynomial functions, convex polytopes and enumerative
+  geometry},
+        date={1996},
+     journal={Banach Center Publications},
+      volume={36},
+      number={1},
+       pages={25\ndash 44},
+}
+
+\bib{BS11}{article}{
+      author={{Burgos Gil}, Jos{\'e}~Ignacio},
+      author={Sombra, Mart{\'\i}n},
+       title={When do the recession cones of a polyhedral complex form a fan?},
+        date={2011},
+     journal={Discrete \& Computational Geometry},
+      volume={46},
+      number={4},
+       pages={789\ndash 798},
+}
+
+\bib{Cart}{article}{
+      author={Cartwright, Dustin},
+       title={Tropical complexes},
+        date={2019},
+     journal={Manuscripta mathematica},
+       pages={1\ndash 35},
+}
+
+\bib{CDPR}{article}{
+      author={Cools, Filip},
+      author={Draisma, Jan},
+      author={Payne, Sam},
+      author={Robeva, Elina},
+       title={A tropical proof of the {B}rill--{N}oether theorem},
+        date={2012},
+     journal={Advances in Mathematics},
+      volume={230},
+      number={2},
+       pages={759\ndash 776},
+}
+
+\bib{CLD}{article}{
+      author={Chambert-Loir, Antoine},
+      author={Ducros, Antoine},
+       title={Formes diff\'erentielles r\'eelles et courants sur les espaces de
+  {B}erkovich},
+        date={2012},
+     journal={arXiv preprint arXiv:1204.6277},
+}
+
+\bib{Coppens}{article}{
+      author={Coppens, Marc},
+       title={Clifford's theorem for graphs},
+        date={2016},
+     journal={Advances in Geometry},
+      volume={16},
+      number={3},
+       pages={389\ndash 400},
+}
+
+\bib{CV10}{article}{
+      author={Caporaso, Lucia},
+      author={Viviani, Filippo},
+       title={{T}orelli theorem for graphs and tropical curves},
+        date={2010},
+     journal={Duke Mathematical Journal},
+      volume={153},
+      number={1},
+       pages={129\ndash 171},
+}
+
+\bib{Dan78}{article}{
+      author={Danilov, Vladimir~{I}vanovich},
+       title={The geometry of toric varieties},
+        date={1978},
+     journal={Uspekhi Matematicheskikh Nauk},
+      volume={33},
+      number={2},
+       pages={85\ndash 134},
+}
+
+\bib{CM05}{inproceedings}{
+      author={de~Cataldo, Mark Andrea~A},
+      author={Migliorini, Luca},
+       title={The {H}odge theory of algebraic maps},
+        date={2005},
+   booktitle={Annales scientifiques de l'{\'e}cole normale sup{\'e}rieure},
+      volume={38},
+       pages={693\ndash 750},
+}
+
+\bib{Deligne-Hodge2}{article}{
+      author={Deligne, Pierre},
+       title={{Th{\'e}orie de {H}odge II}},
+        date={1971},
+     journal={Publications Math{\'e}matiques de l'IH{\'E}S},
+      volume={40},
+       pages={5\ndash 57},
+}
+
+\bib{deligne-md}{article}{
+      author={Deligne, Pierre},
+       title={Local behavior of {H}odge structures at infinity},
+        date={1997},
+     journal={AMS/IP Studies in advanced mathematics},
+      volume={1},
+       pages={683\ndash 699},
+}
+
+\bib{CP95}{article}{
+      author={{De Concini}, Corrado},
+      author={Procesi, Claudio},
+       title={Wonderful models of subspace arrangements},
+        date={1995},
+     journal={Selecta Mathematica},
+      volume={1},
+      number={3},
+       pages={459\ndash 494},
+}
+
+\bib{DRS}{book}{
+      author={{De Loera}, Jes{\'u}s~A},
+      author={Rambau, J{\"o}rg},
+      author={Santos, Francisco},
+       title={Triangulations: {S}tructures for algorithms and applications},
+   publisher={Springer},
+        date={2010},
+}
+
+\bib{EW}{article}{
+      author={Elias, Ben},
+      author={Williamson, Geordie},
+       title={The {H}odge theory of {S}oergel bimodules},
+        date={2014},
+     journal={Annals of Mathematics},
+      volume={180},
+      number={3},
+       pages={1089\ndash 1136},
+}
+
+\bib{FJP}{article}{
+      author={Farkas, Gavril},
+      author={Jensen, David},
+      author={Payne, Sam},
+       title={The {K}odaira dimensions of $\overline{{M}}_{22}$ and
+  $\overline{{M}}_{23}$},
+        date={2020},
+     journal={arXiv preprint arXiv:2005.00622},
+}
+
+\bib{FS}{article}{
+      author={Fulton, William},
+      author={Sturmfels, Bernd},
+       title={Intersection theory on toric varieties},
+        date={1997},
+     journal={Topology},
+      volume={36},
+      number={2},
+       pages={335\ndash 353},
+}
+
+\bib{FY}{article}{
+      author={Feichtner, Eva~Maria},
+      author={Yuzvinsky, Sergey},
+       title={Chow rings of toric varieties defined by atomic lattices},
+        date={2004},
+     journal={Inventiones mathematicae},
+      volume={155},
+      number={3},
+       pages={515\ndash 536},
+}
+
+\bib{GGW}{inproceedings}{
+      author={Geelen, Jim},
+      author={Gerards, Bert},
+      author={Whittle, Geoff},
+       title={Towards a structure theory for matrices and matroids},
+organization={Eur. Math. Soc. Z{\"u}rich},
+        date={2006},
+   booktitle={International {C}ongress of {M}athematicians},
+      volume={3},
+       pages={827\ndash 842},
+}
+
+\bib{GK08}{article}{
+      author={Gathmann, Andreas},
+      author={Kerber, Michael},
+       title={A {R}iemann--{R}och theorem in tropical geometry},
+        date={2008},
+     journal={Mathematische Zeitschrift},
+      volume={259},
+      number={1},
+       pages={217\ndash 230},
+}
+
+\bib{GK17}{article}{
+      author={Gubler, Walter},
+      author={K{\"u}nnemann, Klaus},
+       title={A tropical approach to nonarchimedean {Arakelov} geometry},
+        date={2017},
+     journal={Algebra \& Number Theory},
+      volume={11},
+      number={1},
+       pages={77\ndash 180},
+}
+
+\bib{GKZ}{book}{
+      author={Gelfand, Israel~M.},
+      author={Kapranov, Mikhail~M.},
+      author={Zelvinsky, Andrei~V.},
+       title={Discriminants, resultants, and multidimensional determinants},
+   publisher={Birkh{\"a}user Boston Inc., Boston, MA},
+        date={1994},
+}
+
+\bib{GM92}{article}{
+      author={Gelfand, Israel},
+      author={{MacPherson}, Robert~D.},
+       title={A combinatorial formula for the {P}ontrjagin classes},
+        date={1992},
+     journal={Bulletin of the American Mathematical Society},
+      volume={26},
+      number={2},
+       pages={304\ndash 309},
+}
+
+\bib{GNA90}{article}{
+      author={Guill{\'e}n, Francisco},
+      author={{Navarro Aznar}, Vicente},
+       title={Sur le th{\'e}oreme local des cycles invariants},
+        date={1990},
+     journal={Duke Math. J},
+      volume={61},
+      number={1},
+       pages={133\ndash 155},
+}
+
+\bib{Grom81}{article}{
+      author={Gromov, Michael},
+       title={Groups of polynomial growth and expanding maps \emph{(with an
+  appendix by {J}acques {T}its)}},
+        date={1981},
+     journal={Publications {M}ath{\'e}matiques de l'{IH{\'E}S}},
+      volume={53},
+       pages={53\ndash 78},
+}
+
+\bib{Grom83}{article}{
+      author={Gromov, Mikhael},
+       title={Filling {R}iemannian manifolds},
+        date={1983},
+     journal={Journal of Differential Geometry},
+      volume={18},
+      number={1},
+       pages={1\ndash 147},
+}
+
+\bib{GS06}{article}{
+      author={Gross, Mark},
+      author={Siebert, Bernd},
+       title={Mirror symmetry via logarithmic degeneration data i},
+        date={2006},
+     journal={Journal of Differential Geometry},
+      volume={72},
+      number={2},
+       pages={169\ndash 338},
+}
+
+\bib{GS10}{article}{
+      author={Gross, Mark},
+      author={Siebert, Bernd},
+       title={Mirror symmetry via logarithmic degeneration data, ii},
+        date={2010},
+     journal={Journal of Algebraic Geometry},
+      volume={19},
+      number={4},
+       pages={679\ndash 780},
+}
+
+\bib{GS11}{article}{
+      author={Gross, Mark},
+      author={Siebert, Bernd},
+       title={From real affine geometry to complex geometry},
+        date={2011},
+     journal={Annals of mathematics},
+       pages={1301\ndash 1428},
+}
+
+\bib{GS}{article}{
+      author={Gross, Andreas},
+      author={Shokrieh, Farbod},
+       title={Cycles, cocycles, and duality on tropical manifolds},
+        date={2019},
+     journal={arXiv preprint arXiv:1910.04805},
+}
+
+\bib{GS-sheaf}{article}{
+      author={Gross, Andreas},
+      author={Shokrieh, Farbod},
+       title={A sheaf-theoretic approach to tropical homology},
+        date={2019},
+     journal={arXiv preprint arXiv:1906.09245},
+}
+
+\bib{GV}{article}{
+      author={Gessel, Ira},
+      author={Viennot, G{\'e}rard},
+       title={Binomial determinants, paths, and hook length formulae},
+        date={1985},
+     journal={Advances in mathematics},
+      volume={58},
+      number={3},
+       pages={300\ndash 321},
+}
+
+\bib{IKMZ}{article}{
+      author={Itenberg, Ilia},
+      author={Katzarkov, Ludmil},
+      author={Mikhalkin, Grigory},
+      author={Zharkov, Ilia},
+       title={Tropical homology},
+        date={2019},
+     journal={Mathematische Annalen},
+      volume={374},
+      number={1-2},
+       pages={963\ndash 1006},
+}
+
+\bib{Jell}{article}{
+      author={Jell, Philipp},
+       title={A {P}oincar{\'e} lemma for real-valued differential forms on
+  {B}erkovich spaces},
+        date={2016},
+     journal={Mathematische Zeitschrift},
+      volume={282},
+      number={3-4},
+       pages={1149\ndash 1167},
+}
+
+\bib{Jell-MC}{article}{
+      author={Jell, Philipp},
+       title={Constructing smooth and fully faithful tropicalizations for
+  {M}umford curves},
+        date={2018},
+     journal={arXiv preprint arXiv:1805.11594},
+}
+
+\bib{Jell19}{article}{
+      author={Jell, Philipp},
+       title={Tropical cohomology with integral coefficients for analytic
+  spaces},
+        date={2019},
+     journal={arXiv preprint arXiv:1909.12633},
+}
+
+\bib{JP}{article}{
+      author={Jensen, David},
+      author={Payne, Sam},
+       title={Tropical independence {II}: {T}he maximal rank conjecture for
+  quadrics},
+        date={2016},
+     journal={Algebra \& Number Theory},
+      volume={10},
+      number={8},
+       pages={1601\ndash 1640},
+}
+
+\bib{JRS19}{article}{
+      author={Jell, Philipp},
+      author={Rau, Johannes},
+      author={Shaw, Kristin},
+       title={Lefschetz $(1, 1)$-theorem in tropical geometry},
+        date={2018},
+     journal={{\'E}pijournal de G{\'e}om{\'e}trie Alg{\'e}brique},
+      volume={2},
+}
+
+\bib{JSS}{article}{
+      author={Jell, Philipp},
+      author={Shaw, Kristin},
+      author={Smacka, Jascha},
+       title={Superforms, tropical cohomology, and {P}oincar{\'e} duality},
+        date={2019},
+     journal={Advances in Geometry},
+      volume={19},
+      number={1},
+       pages={101\ndash 130},
+}
+
+\bib{Kaj}{article}{
+      author={Kajiwara, Takeshi},
+       title={Tropical toric geometry},
+        date={2008},
+     journal={Contemporary Mathematics},
+      volume={460},
+       pages={197\ndash 208},
+}
+
+\bib{Karu}{article}{
+      author={Karu, Kalle},
+       title={Hard {L}efschetz theorem for nonrational polytopes},
+        date={2004},
+     journal={Inventiones mathematicae},
+      volume={157},
+      number={2},
+       pages={419\ndash 447},
+}
+
+\bib{Keel}{article}{
+      author={Keel, Sean},
+       title={Intersection theory of moduli space of stable $n$-pointed curves
+  of genus zero},
+        date={1992},
+     journal={Transactions of the American Mathematical Society},
+       pages={545\ndash 574},
+}
+
+\bib{KKMS}{book}{
+      author={Kempf, George},
+      author={Knudsen, Finn},
+      author={Mumford, David},
+      author={{Saint-Donat}, Bernard},
+       title={{Toroidal embeddings 1}},
+   publisher={Springer},
+        date={2006},
+      volume={339},
+}
+
+\bib{KRZ}{article}{
+      author={Katz, Eric},
+      author={Rabinoff, Joseph},
+      author={{Zureick-Brown}, David},
+       title={Uniform bounds for the number of rational points on curves of
+  small {M}ordell--{W}eil rank},
+        date={2016},
+     journal={Duke Mathematical Journal},
+      volume={165},
+      number={16},
+       pages={3189\ndash 3240},
+}
+
+\bib{KS}{incollection}{
+      author={Kontsevich, Maxim},
+      author={Soibelman, Yan},
+       title={Affine structures and non-archimedean analytic spaces},
+        date={2006},
+   booktitle={The unity of mathematics},
+   publisher={Springer},
+       pages={321\ndash 385},
+}
+
+\bib{KT}{article}{
+      author={Kontsevich, Maxim},
+      author={Tschinkel, Yuri},
+       title={Non-archimedean {K}{\"a}hler geometry},
+        date={2002},
+}
+
+\bib{kung}{book}{
+      author={Kung, Joseph~PS},
+       title={A source book in matroid theory},
+   publisher={Springer},
+        date={1986},
+}
+
+\bib{Laf}{book}{
+      author={Lafforgue, Laurent},
+       title={Chirurgie des grassmanniennes},
+   publisher={American Mathematical Soc.},
+        date={2003},
+      number={19},
+}
+
+\bib{Lagerberg}{article}{
+      author={Lagerberg, Aron},
+       title={Super currents and tropical geometry},
+        date={2012},
+     journal={Mathematische Zeitschrift},
+      volume={270},
+      number={3-4},
+       pages={1011\ndash 1050},
+}
+
+\bib{Lin}{article}{
+      author={Lindstr{\"o}m, Bernt},
+       title={On the vector representations of induced matroids},
+        date={1973},
+     journal={Bulletin of the London Mathematical Society},
+      volume={5},
+      number={1},
+       pages={85\ndash 90},
+}
+
+\bib{Liu19}{article}{
+      author={Liu, Yifeng},
+       title={Monodromy map for tropical {D}olbeault cohomology},
+        date={2019},
+     journal={Algebraic Geometry},
+      volume={6},
+      number={4},
+       pages={384\ndash 409},
+}
+
+\bib{LRS}{article}{
+      author={{L{\'o}pez de Medrano}, Luc{\'\i}a},
+      author={Rinc{\'o}n, Felipe},
+      author={Shaw, Kristin},
+       title={{Chern--Schwartz--MacPherson cycles of matroids}},
+        date={2020},
+     journal={Proceedings of the London Mathematical Society},
+      volume={120},
+      number={1},
+       pages={1\ndash 27},
+}
+
+\bib{Mac91}{inproceedings}{
+      author={{MacPherson}, Robert~D},
+       title={Combinatorial differential manifolds},
+        date={1991},
+   booktitle={Topological methods in modern mathematics, {P}roc. of a symposium
+  in honor of {J}ohn {M}ilnor's sixtieth birthday, {SUNY} {S}tony {B}rook},
+       pages={203\ndash 221},
+}
+
+\bib{McD}{article}{
+      author={McDaniel, Chris},
+       title={The strong {L}efschetz property for coinvariant rings of finite
+  reflection groups},
+        date={2011},
+     journal={Journal of Algebra},
+      volume={331},
+      number={1},
+       pages={68\ndash 95},
+}
+
+\bib{Mcmullen}{article}{
+      author={McMullen, Peter},
+       title={On simple polytopes},
+        date={1993},
+     journal={Inventiones mathematicae},
+      volume={113},
+      number={1},
+       pages={419\ndash 444},
+}
+
+\bib{Mik06}{incollection}{
+      author={Mikhalkin, Grigory},
+       title={Tropical geometry and its applications},
+        date={2006},
+   booktitle={Proceedings of the {I}nternational {C}ongress of {M}athematicians
+  ({ICM} 2006)},
+       pages={827\ndash 852},
+}
+
+\bib{Mnev}{inproceedings}{
+      author={Mn{\"e}v, Nicolai~E.},
+       title={The universality theorems on the classification problem of
+  configuration varieties and convex polytopes varieties},
+organization={Springer},
+        date={1988},
+   booktitle={Topology and geometry--rohlin seminar},
+       pages={527\ndash 543},
+}
+
+\bib{Mor96}{article}{
+      author={Morelli, Robert},
+       title={The birational geometry of toric varieties},
+        date={1996},
+     journal={Journal of Algebraic Geometry},
+      volume={5},
+      number={4},
+       pages={751\ndash 782},
+}
+
+\bib{MirPer}{article}{
+      author={Mirsky, Leon},
+      author={Perfect, Hazel},
+       title={Applications of the notion of independence to problems of
+  combinatorial analysis},
+        date={1967},
+     journal={Journal of Combinatorial Theory},
+      volume={2},
+      number={3},
+       pages={327\ndash 357},
+}
+
+\bib{MS}{book}{
+      author={Maclagan, Diane},
+      author={Sturmfels, Bernd},
+       title={Introduction to tropical geometry},
+   publisher={American Mathematical Soc.},
+        date={2015},
+      volume={161},
+}
+
+\bib{MZ08}{article}{
+      author={Mikhalkin, Grigory},
+      author={Zharkov, Ilia},
+       title={Tropical curves, their {J}acobians and theta functions},
+        date={2008},
+     journal={Curves and abelian varieties},
+      volume={465},
+       pages={203\ndash 230},
+}
+
+\bib{MZ}{incollection}{
+      author={Mikhalkin, Grigory},
+      author={Zharkov, Ilia},
+       title={Tropical eigenwave and intermediate {J}acobians},
+        date={2014},
+   booktitle={Homological mirror symmetry and tropical geometry},
+   publisher={Springer},
+       pages={309\ndash 349},
+}
+
+\bib{Nelson}{article}{
+      author={Nelson, Peter},
+       title={Almost all matroids are non-representable},
+        date={2018},
+     journal={Bull. London Math. Soc.},
+      volume={50},
+       pages={245\ndash 248},
+}
+
+\bib{Oda}{misc}{
+      author={Oda, Tadao},
+       title={Convex bodies and algebraic geometry},
+   publisher={Ergebnisse der Mathematik und ihrer Grenzgebiete,
+  Springer-Verlag, Berlin},
+        date={1988},
+      volume={15},
+}
+
+\bib{Oxl11}{book}{
+      author={Oxley, James},
+       title={Matroid theory},
+   publisher={Oxford Graduate Texts in Mathematics},
+        date={2011},
+      volume={21},
+}
+
+\bib{Payne}{article}{
+      author={Payne, Sam},
+       title={Analytification is the limit of all tropicalizations},
+        date={2009},
+     journal={Mathematical Research Letters},
+      volume={16},
+      number={3},
+       pages={543\ndash 556},
+}
+
+\bib{Piquerez}{article}{
+      author={Piquerez, Matthieu},
+       title={A multidimensional generalization of {S}ymanzik polynomials},
+        date={2019},
+     journal={arXiv preprint arXiv:1901.09797},
+}
+
+\bib{Saito}{article}{
+      author={Saito, Morihiko},
+       title={Modules de {H}odge polarisables},
+        date={1988},
+     journal={Publications of the Research Institute for Mathematical
+  Sciences},
+      volume={24},
+      number={6},
+       pages={849\ndash 995},
+}
+
+\bib{schrijver}{book}{
+      author={Schrijver, Alexander},
+       title={{C}ombinatorial {O}ptimization: {P}olyhedra and {E}fficiency},
+   publisher={Springer},
+        date={2003},
+      volume={24},
+}
+
+\bib{Sha13b}{article}{
+      author={Shaw, Kristin},
+       title={Tropical $(1, 1)$-homology for floor decomposed surfaces},
+        date={2013},
+     journal={Algebraic and combinatorial aspects of tropical geometry},
+      volume={589},
+       pages={529\ndash 550},
+}
+
+\bib{Sha13a}{article}{
+      author={Shaw, Kristin~M},
+       title={A tropical intersection product in matroidal fans},
+        date={2013},
+     journal={SIAM Journal on Discrete Mathematics},
+      volume={27},
+      number={1},
+       pages={459\ndash 491},
+}
+
+\bib{Spe08}{article}{
+      author={Speyer, David~E},
+       title={Tropical linear spaces},
+        date={2008},
+     journal={SIAM Journal on Discrete Mathematics},
+      volume={22},
+      number={4},
+       pages={1527\ndash 1558},
+}
+
+\bib{SS14}{article}{
+      author={Scott, Alexander~D},
+      author={Sokal, Alan~D},
+       title={Complete monotonicity for inverse powers of some combinatorially
+  defined polynomials},
+        date={2014},
+     journal={Acta Mathematica},
+      volume={213},
+      number={2},
+       pages={323\ndash 392},
+}
+
+\bib{SabSch}{book}{
+      author={Sabbah, Claude},
+      author={Schnell, Christian},
+       title={{The MHM Project}},
+   publisher={\url{http://www.cmls.polytechnique.fr/perso/sabbah/MHMProject/mhm.html}},
+        date={2020},
+}
+
+\bib{Ste76}{article}{
+      author={Steenbrink, Joseph},
+       title={{Limits of {H}odge structures}},
+        date={1976},
+     journal={Inventiones mathematicae},
+      volume={31},
+      number={3},
+       pages={229\ndash 257},
+}
+
+\bib{sturmfels}{book}{
+      author={Sturmfels, Bernd},
+       title={Solving systems of polynomial equations},
+   publisher={American Mathematical Soc.},
+        date={2002},
+      number={97},
+}
+
+\bib{Thuillier}{article}{
+      author={Thuillier, Amaury},
+       title={G\'{e}om\'{e}trie toro\"{\i}dale et g\'{e}om\'{e}trie analytique
+  non archim\'{e}dienne. {A}pplication au type d'homotopie de certains
+  sch\'{e}mas formels},
+        date={2007},
+     journal={Manuscripta Math.},
+      volume={123},
+      number={4},
+       pages={381\ndash 451},
+}
+
+\bib{Tutte}{article}{
+      author={Tutte, William~Thomas},
+       title={Lectures on matroids},
+        date={1965},
+     journal={J. Research of the National Bureau of Standards (B)},
+      volume={69},
+       pages={1\ndash 47},
+}
+
+\bib{vdw}{book}{
+      author={{van der Waerden}, Bartel~Leendert},
+       title={Moderne {A}lgebra},
+   publisher={2nd. ed., Springer, Berlin},
+        date={1937},
+}
+
+\bib{Whitney}{article}{
+      author={Whitney, Hassler},
+       title={On the abstract properties of linear dependence},
+        date={1935},
+     journal={American Journal of Mathematics},
+      volume={57},
+      number={3},
+       pages={509\ndash 533},
+}
+
+\bib{wilson}{article}{
+      author={Wilson, Robin~J},
+       title={An introduction to matroid theory},
+        date={1973},
+     journal={The American Mathematical Monthly},
+      volume={80},
+      number={5},
+       pages={500\ndash 525},
+}
+
+\bib{Wlo97}{article}{
+      author={W{\l}odarczyk, Jaroslaw},
+       title={Decomposition of birational toric maps in blow-ups and
+  blow-downs},
+        date={1997},
+     journal={Transactions of the American Mathematical Society},
+       pages={373\ndash 411},
+}
+
+\bib{Yu}{article}{
+      author={Yu, Tony~Yue},
+       title={Gromov compactness in non-archimedean analytic geometry},
+        date={2018},
+     journal={Journal f{\"u}r die reine und angewandte Mathematik (Crelle's
+  Journal)},
+      volume={2018},
+      number={741},
+       pages={179\ndash 210},
+}
+
+\bib{Zhang}{article}{
+      author={Zhang, Shou-Wu},
+       title={Positive line bundles on arithmetic varieties},
+        date={1995},
+     journal={Journal of the American Mathematical Society},
+      volume={8},
+      number={1},
+       pages={187\ndash 221},
+}
+
+\end{biblist}
+\end{bibdiv}

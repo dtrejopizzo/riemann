@@ -5,9 +5,15 @@ researcher. This is the single index for the corpus — the three older `.md` in
 are gone; this file is now the only source of truth.
 
 **No paper in this corpus claims a proof of the Riemann Hypothesis.** The corpus is a set of
-rigorous partial results, reformulations, no-go theorems, and — in paper **36** — an obstruction
-ledger that reduces RH to one classical open input (Li–Keiper positivity). Read the "Key content"
-column below before citing any single paper out of context.
+rigorous partial results, reformulations, no-go theorems, and — in papers **36** and **42** — two
+independent, structurally different reductions of RH to a single classical open input. Paper 36
+reaches the Li–Keiper criterion via a fifteen-step arithmetic Pick/Nevanlinna chain (phases 0–76).
+Paper 42 imitates Weil's own 1948 method for curves over finite fields directly over
+$\operatorname{Spec}\mathbb Z$ (phases 107–119); its row (d) is proved equivalent to RH twice,
+independently — algebraically (phase 113) and analytically, verified against real zeta zeros
+(phase 118). Read the "Key content" column below before citing any single paper out of context.
+See [`../OPTIONS.md`](../OPTIONS.md) for where the corpus's own audit says work can still usefully
+continue.
 
 ## How to read this table
 
@@ -22,7 +28,7 @@ column below before citing any single paper out of context.
 | 01 | `01-critical-line-survey` | The Critical Line: A Survey of Recent Progress on the Riemann Hypothesis | **Survey** | — | Frames the whole program: state of the art across the analytic, spectral, and algebro-geometric approaches; the thesis that every front reduces to a positivity condition. |
 | 02 | `02-omega-class-decomposition` | The ω-Class Decomposition of Dirichlet Polynomials: A New Framework for the Lindelöf Hypothesis | Original result | — | ω-class decomposition of Dirichlet polynomials; $B(N)\le N^\varepsilon\Rightarrow$ Lindelöf (a sufficient, plausibly-stronger-than-LH condition); moment-exponent fingerprint. |
 | 03 | `03-sign-interclass-interference` | On the Sign of Inter-Class Interference in Dirichlet Partial Sums: A Peak–Trough Reconciliation | Original result | — | The conditioning correction: inter-class interference $r$ is constructive at peaks, destructive at troughs, mean zero. Prerequisite consistency note for 04. |
-| 04 | `04-davenport-heilbronn-null` | Absence of Power-Law Growth in Partial Sums of the Davenport–Heilbronn Function at Off-Line Zeros | Original result | 03 | Honest null result: no power-law growth at off-line DH zeros up to $N=10^9$; converts into an onset-scale lower bound $N^*\gtrsim10^{14}$. |
+| 04 | `04-davenport-heilbronn-null` | Absence of Power-Law Growth in Partial Sums of the Davenport–Heilbronn Function at Off-Line Zeros | Original result | 03 | Candid null result: no power-law growth at off-line DH zeros up to $N=10^9$; converts into an onset-scale lower bound $N^*\gtrsim10^{14}$. |
 | 05 | `05-omega-hierarchy-chaos` | The ω-Class Hierarchy of the Riemann Zeta Function: Per-Prime Weights, Multiplicative Chaos, and the Branching Structure of the Maximum | **RH-independent** | — | Structural dictionary $z=\beta^2$ linking the moment exponent, multiplicative-chaos freezing, large deviations of $\omega(n)$, and a branching-random-walk picture of the maximum. |
 | 06 | `06-why-rh-resists` | Why the Riemann Hypothesis resists: a classifier for zero-absence mechanisms, the finite-to-full positivity gap, and a finitization obstruction under linear independence | Structural | — | Conceptual classifier $D_0$; identifies the finitization-under-linear-independence obstruction common to the finite-dimensional routes. |
 | 07 | `07-localized-weil-detector` | A Rigorous Localized Weil Detector for Off-Critical Zeros: Forced Negativity, Unconditional Truncation Control, and the Logical Status of the Truncation Lemma | **Flagship** | — | The localized Weil quadratic form $Q$; forced negativity with explicit constants; unconditional truncation control (PNT only). Names the RH-equivalent inequality precisely. |
@@ -55,22 +61,35 @@ column below before citing any single paper out of context.
 | 34 | `34-architecture-of-obstruction` | The Architecture of Obstruction: A Complete Mathematical Map of the Riemann Hypothesis Program: from ω-Class Statistics to the Symmetry/Positivity Wall | **Survey** | 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 16, 17, 18 | The full obstruction map: every approach catalogued in this corpus, its precise logical status, and where it stops. The pre-Pick synthesis that **36** builds on and supersedes as the final ledger. |
 | 35 | `35-colligation-route` | The Colligation Route to the Riemann Hypothesis: de Branges Realization, a Curvature Theorem, and the Pole-Pinned Spectral Radius at the Wall | Reformulation | — | de Branges/Lax–Phillips colligation; curvature theorem $\Gamma_2\ge0$; crystallizes RH as the *sign* $\varepsilon_0\ge0$ — the one quantity invisible to all Doob/scale-invariant structure. |
 | **36** | `36-obstruction-ledger` | The Riemann Hypothesis: An Obstruction Ledger and the Arithmetic Pick Architecture It Shaped | **Culmination** | — | **The current endpoint of the program.** A fifteen-step arithmetic Pick/Nevanlinna chain (ARP-P) reducing RH to one open input: the classical Li–Keiper criterion $\lambda_n\ge0$. Fourteen of fifteen steps are fully closed; catalogues the structural walls blocking every other route in this corpus and assigns each a precise logical status. Already on arXiv. |
+| 37 | `37-death-of-the-positivity-family` | The Limits of the Positivity Family in the Li–Keiper Route to the Riemann Hypothesis | Structural no-go | 36 | Audits the adaptive-cutoff margin, records exact witnesses against sixteen positivity transfers, and isolates density-relaxed and signed non-local successors without claiming their missing arithmetic estimate. | — |
+| 38 | `38-li-fir-stability` | The Li Sequence as a Sampled Control System: FIR Window Stability, Off-Line Modes, and the Arithmetic Closure Problem | Structural/control reformulation | — | Maps critical zeros to unit-circle modes and off-line zeros to unstable modes; proves fixed-window, cascaded-FIR, adjacent-bank energy, eventual-window-positivity, vanishing-trim and geometric-rate criteria; gives the exact prime–Laguerre FIR lift and isolates the unproved ordinary-prime dissipativity estimate. | — |
+| 39 | `39-cofinal-weil-summability` | Cofinal Weil Quotients: Exact Transport Defects, Fixed-Cutoff Summability, and the Global Curvature Gate | Spectral/operator analysis | — | Builds canonical cross-level maps for the CCM radical quotients; derives the exact rank-two/Loewner transport defect, scalar Cauchy-trace formula, cofinal fixed-cutoff summability, shell reduction, divisor rigidity, bilateral negative tests, the moving co-Poisson gate, the centered prime--Gamma jump square, and the exact PNT-discrepancy compensation formula. | — |
+| 40 | `40-connes-proof-skeleton` | Branch Selection and Global Polarization in the Connes–CCM Route to RH: Finite Prime–Gamma Inertia, Tate Boundary Geometry, and the Divisor-Sensitivity Obstruction | Spectral/operator analysis | 39 | Joint prime–Gamma finite-source refinement removing finite-selection, tail, and form-core losses; identifies the local geometric data (a cyclic root Laplacian) the surviving sign was trying to express; isolates the remaining sign as a strict physical source surplus over an anti-shorted deficit. | — |
+| 41 | `41-obstruction-catalogue` | Obstructions to Weil Positivity: A Catalogue of No-Go Theorems, Falsifiers and Countermodels in the Prime–Gamma Doob Coordinate | Structural no-go catalogue | 40 | Companion to 40: does not attempt the surviving inequality, but records thirty-one mechanisms across eight families (order/total positivity, coupling/transport/martingale, local squares and Hodge–Korn completions, determinants, finite heads, spectral/operator detectors, realization/factorization rigidity, semilocal branch selection) which provably cannot prove it, each classified as a no-go, a conditional falsifier, or a countermodel. | — |
+| **42** | `42-arithmetic-lefschetz-programme` | An Arithmetic Lefschetz Programme over $\Z$: A Metrized Bivariant Correspondence Square, its Determinant Pairing and its Corner Trace | **Culmination (Arc C)** | — | **The second current endpoint of the program.** Constructs rows (a)–(c) of Weil's own 1948 method directly over $\operatorname{Spec}\mathbb Z$: a noncollapsed spherical square with periodic section cohomology, a faithful Witt–Frobenius correspondence family of degree $\Lambda(n)$, and the complete nuclear Lefschetz character in Meyer's Poisson quotient. For row (d), gives the primitive operator a balanced channel factorization, proves full-space positivity for $0<T\le\log2$ unconditionally, and proves the threshold condition equivalent to a unit capacity bound — then proves that bound **equivalent to RH**, independently, twice: algebraically (phase 113, inside the corpus) and analytically, verified against real zeta zeros to $10^{-10}$ relative precision (phase 118). |
 
 ## Surveys vs. results
 
 Two papers are surveys rather than original-result papers, and should be read as maps, not
 theorems: **01** (early framing — state of the art as of the start of the program) and **34** (the
-mid-program obstruction map, once the corpus had grown large enough to need one). **36** is neither
-a survey nor a single result: it is the **culmination** — the paper that takes every wall
-catalogued across 01–35 and shows they all terminate at the same open input.
+mid-program obstruction map, once the corpus had grown large enough to need one). **36** and **42**
+are neither surveys nor single results: they are the corpus's **two culminations**, reached by
+independent constructions. **36** takes every wall catalogued across 01–35 and shows they all
+terminate at the same open input (Li–Keiper positivity). **42** is Arc C — a direct, Weil-style
+construction over $\operatorname{Spec}\mathbb Z$, built in phases 107–119, whose own open input
+(row d) is shown equivalent to RH by two unrelated methods inside that construction. **37**–**41**
+continue **36**'s Li–Keiper route (37, 38, 39 pushing the architecture further; 40, 41 the
+Connes–CCM branch-selection route and its own catalogue of obstructions) without superseding it.
 
-## Honesty
+## Candor
 
 Per the program's governing principle, **no paper claims a proof of RH.** Several papers are
 explicitly negative or no-go results; several are RH-independent theorems that stand on their own
-regardless of RH's truth (05, 09, 10, 21, 32). Paper 36 states plainly that the open input, being
-equivalent to RH, carries the full difficulty of the Hypothesis — closing nothing, but locating
-precisely where the whole program still needs one classical positivity statement.
+regardless of RH's truth (05, 09, 10, 21, 32). Papers 36 and 42 both state plainly that their open
+input, being equivalent to RH, carries the full difficulty of the Hypothesis — closing nothing, but
+locating precisely where the corpus still needs one classical positivity statement, reached by two
+structurally unrelated routes. See [`../OPTIONS.md`](../OPTIONS.md) for the sub-RH targets the
+corpus's own audit found and never closed.
 
 ## What was archived or removed
 
@@ -84,7 +103,7 @@ precisely where the whole program still needs one classical positivity statement
 
 ## Publication flow
 
-1. Publish in ascending order (01 → 36); dependencies in the table above tell you what must
+1. Publish in ascending order (01 → 42); dependencies in the table above tell you what must
    already have an arXiv id before a given paper is submitted.
 2. When each arXiv id arrives, paste it into the **arXiv** column above.
 3. Update the corresponding bibitem in every later paper that cites it (replace "preprint, 2026"

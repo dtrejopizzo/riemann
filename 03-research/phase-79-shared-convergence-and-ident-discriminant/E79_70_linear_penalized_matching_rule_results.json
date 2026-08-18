@@ -1,0 +1,337 @@
+{
+  "statement": "E79.70 linear penalized rule on the E79.69 tiny family",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_69_relational_matching_selector_results.json",
+  "coefficients": {
+    "mismatch": 1.0,
+    "cardinality": -1.0,
+    "span": 0.78,
+    "gaps": -0.64,
+    "start": 0.36
+  },
+  "rows": [
+    {
+      "N": 8,
+      "target_support": [
+        6,
+        7,
+        8
+      ],
+      "candidates": {
+        "suffix": {
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "mismatch": 0.027405661727436414,
+          "score": 1.5274056617274363,
+          "cardinality": 3,
+          "span": 3,
+          "gaps": 0,
+          "start": 6,
+          "exact_match": true
+        },
+        "pair": {
+          "support": [
+            5,
+            7
+          ],
+          "mismatch": 0.029900186331162863,
+          "score": 1.5299001863311625,
+          "cardinality": 2,
+          "span": 3,
+          "gaps": 1,
+          "start": 5,
+          "exact_match": false
+        },
+        "triple": {
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "mismatch": 0.027405661727436206,
+          "score": 1.5274056617274363,
+          "cardinality": 3,
+          "span": 3,
+          "gaps": 0,
+          "start": 6,
+          "exact_match": true
+        }
+      },
+      "best_rule": {
+        "name": "suffix",
+        "support": [
+          6,
+          7,
+          8
+        ],
+        "mismatch": 0.027405661727436414,
+        "score": 1.5274056617274363,
+        "cardinality": 3,
+        "span": 3,
+        "gaps": 0,
+        "start": 6,
+        "exact_match": true,
+        "best_exact_match": true
+      }
+    },
+    {
+      "N": 10,
+      "target_support": [
+        5
+      ],
+      "candidates": {
+        "suffix": {
+          "support": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "mismatch": 0.00870182150800833,
+          "score": 1.6487018215080083,
+          "cardinality": 4,
+          "span": 4,
+          "gaps": 0,
+          "start": 7,
+          "exact_match": false
+        },
+        "pair": {
+          "support": [
+            5
+          ],
+          "mismatch": 0.02948235840351119,
+          "score": 1.6094823584035112,
+          "cardinality": 1,
+          "span": 1,
+          "gaps": 0,
+          "start": 5,
+          "exact_match": true
+        },
+        "triple": {
+          "support": [
+            7,
+            8,
+            9
+          ],
+          "mismatch": 0.10657588559867112,
+          "score": 1.966575885598671,
+          "cardinality": 3,
+          "span": 3,
+          "gaps": 0,
+          "start": 7,
+          "exact_match": false
+        }
+      },
+      "best_rule": {
+        "name": "pair",
+        "support": [
+          5
+        ],
+        "mismatch": 0.02948235840351119,
+        "score": 1.6094823584035112,
+        "cardinality": 1,
+        "span": 1,
+        "gaps": 0,
+        "start": 5,
+        "exact_match": true,
+        "best_exact_match": true
+      }
+    },
+    {
+      "N": 12,
+      "target_support": [
+        7
+      ],
+      "candidates": {
+        "suffix": {
+          "support": [
+            8,
+            9,
+            10
+          ],
+          "mismatch": 0.3587708698562733,
+          "score": 2.5787708698562732,
+          "cardinality": 3,
+          "span": 3,
+          "gaps": 0,
+          "start": 8,
+          "exact_match": false
+        },
+        "pair": {
+          "support": [
+            7
+          ],
+          "mismatch": 0.02298785490948674,
+          "score": 2.3229878549094867,
+          "cardinality": 1,
+          "span": 1,
+          "gaps": 0,
+          "start": 7,
+          "exact_match": true
+        },
+        "triple": {
+          "support": [
+            7,
+            9,
+            10
+          ],
+          "mismatch": 0.35371168161341404,
+          "score": 2.3537116816134143,
+          "cardinality": 3,
+          "span": 4,
+          "gaps": 1,
+          "start": 7,
+          "exact_match": false
+        }
+      },
+      "best_rule": {
+        "name": "pair",
+        "support": [
+          7
+        ],
+        "mismatch": 0.02298785490948674,
+        "score": 2.3229878549094867,
+        "cardinality": 1,
+        "span": 1,
+        "gaps": 0,
+        "start": 7,
+        "exact_match": true,
+        "best_exact_match": true
+      }
+    },
+    {
+      "N": 14,
+      "target_support": [
+        10,
+        11,
+        12
+      ],
+      "candidates": {
+        "suffix": {
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "mismatch": 0.02424717475556555,
+          "score": 2.964247174755565,
+          "cardinality": 3,
+          "span": 3,
+          "gaps": 0,
+          "start": 10,
+          "exact_match": true
+        },
+        "pair": {
+          "support": [
+            9,
+            11
+          ],
+          "mismatch": 0.18899725364678438,
+          "score": 3.128997253646784,
+          "cardinality": 2,
+          "span": 3,
+          "gaps": 1,
+          "start": 9,
+          "exact_match": false
+        },
+        "triple": {
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "mismatch": 0.02424717475556555,
+          "score": 2.964247174755565,
+          "cardinality": 3,
+          "span": 3,
+          "gaps": 0,
+          "start": 10,
+          "exact_match": true
+        }
+      },
+      "best_rule": {
+        "name": "suffix",
+        "support": [
+          10,
+          11,
+          12
+        ],
+        "mismatch": 0.02424717475556555,
+        "score": 2.964247174755565,
+        "cardinality": 3,
+        "span": 3,
+        "gaps": 0,
+        "start": 10,
+        "exact_match": true,
+        "best_exact_match": true
+      }
+    },
+    {
+      "N": 16,
+      "target_support": [
+        11,
+        13
+      ],
+      "candidates": {
+        "suffix": {
+          "support": [
+            12,
+            13
+          ],
+          "mismatch": 0.15887747026680213,
+          "score": 4.038877470266803,
+          "cardinality": 2,
+          "span": 2,
+          "gaps": 0,
+          "start": 12,
+          "exact_match": false
+        },
+        "pair": {
+          "support": [
+            11,
+            13
+          ],
+          "mismatch": 0.03554314266742822,
+          "score": 3.695543142667428,
+          "cardinality": 2,
+          "span": 3,
+          "gaps": 1,
+          "start": 11,
+          "exact_match": true
+        },
+        "triple": {
+          "support": [
+            11,
+            12,
+            13
+          ],
+          "mismatch": 0.4141474018842848,
+          "score": 3.7141474018842846,
+          "cardinality": 3,
+          "span": 3,
+          "gaps": 0,
+          "start": 11,
+          "exact_match": false
+        }
+      },
+      "best_rule": {
+        "name": "pair",
+        "support": [
+          11,
+          13
+        ],
+        "mismatch": 0.03554314266742822,
+        "score": 3.695543142667428,
+        "cardinality": 2,
+        "span": 3,
+        "gaps": 1,
+        "start": 11,
+        "exact_match": true,
+        "best_exact_match": true
+      }
+    }
+  ],
+  "exact_match_count": 5
+}

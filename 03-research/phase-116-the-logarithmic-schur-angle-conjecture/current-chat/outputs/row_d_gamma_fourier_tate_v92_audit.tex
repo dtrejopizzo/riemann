@@ -1,0 +1,4307 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\PROVED}{\textcolor{green!45!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!75!black}{\textbf{AUDIT}}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\old}{\mathrm{old}}
+\newcommand{\Hod}{\mathrm{Hod}}
+\newcommand{\comp}{\mathrm{comp}}
+\newcommand{\cC}{\mathscr C}
+\newcommand{\cZ}{\mathscr Z}
+\newcommand{\cL}{\mathscr L}
+\title{Row (d): Gamma--Fourier--Tate amplitude audit\\
+v92 (finite-head physical angular construction)}
+\author{}
+\date{12 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note attacks the amplitude identity left by v83--v86 and reconciles the
+result with the supplied files \texttt{main.tex} and
+\texttt{row-d-local-analysis.tex}.  It constructs a
+source-defined doubled logarithmic Tate port and proves that its divergence is
+exactly $-B_Q$, thereby closing G39 at every finite threshold.  It also derives
+the connection term lost when the Fourier--Gamma identity is differentiated
+after a moving compression.  The calculation does not prove the required
+positive energy estimate G40.  A new exact balanced factorization of the
+localized primitive operator is proved below; it supplies explicit meanings
+for the previously abstract factors $X_T,Y_T$.  It also shows precisely why
+the local Gamma--Tate normalizations do not by themselves imply the missing
+unit contraction.  New critical gcd and Archimedean Gamma GNS boundaries,
+an exact Gamma ratio--scale formula deriving $m_0$, and the coherent completed
+Euler--Gamma metric are constructed.  A domain theorem rules out unweighted
+Gamma deconvolution on every nonzero compact-window source.  The critical
+form boundary is then constructed and identified with divisor incidence, the
+gcd GNS state and M\"obius whitening.  Explicit Julia, beta--Gamma and Euler
+Markov colligations derive $g_\Gamma$, $m_0$ and every prime-power coefficient
+as metric/defect rates.  A physical Gamma ODE realization further absorbs
+$m_0$ into an explicit four-state head and turns every Gamma/shift commutator
+into positive rank-one storage.  Every prime-power channel is resummed into
+one Julia filter and one boundary port per prime.  The resulting physical
+angular operator is explicit and is certified strictly contractive for
+$0<T\le\log2$.  Its global contractivity and old-compatible residual remain
+the final bridge; neither condition $G$ nor row (d) is declared closed.
+\end{abstract}
+
+\section{Input from v83--v86}
+
+The following identities are taken as the proved input of the preceding
+notes.  At the unweighted endpoint let
+\[
+ G'=R^*\cL R-\frac12(QG+GQ),\qquad Gv=S\delta_1,
+ \qquad Q\delta_d=(\log d)\delta_d .
+\]
+Let $P_{\old}$ be the old-coordinate projection and let $M_0$ be the old
+block of $G$.  Differentiation of the harmonic normal equation gives
+\begin{equation}
+ P_{\old}G'v=M_0h'.                                      \tag{1}
+\end{equation}
+The natural Hodge current and its old analysis operator are
+\[
+ W_{\Hod}=\cL^{1/2}Rv,
+ \qquad H_0=\cL^{1/2}RP_{\old}.
+\]
+Consequently
+\begin{equation}
+ H_0^*W_{\Hod}=M_0h'+B_Q,
+ \qquad B_Q:=\frac12P_{\old}GQv.                         \tag{2}
+\end{equation}
+In the Zeta gauge, with $m=\cZ^{-1}\delta_1$, this is
+\begin{equation}
+ B_Q=\frac S2P_{\old}
+ \left[-\cC\delta_1+\cZ\cC^*m\right].                  \tag{3}
+\end{equation}
+The first summand is the directed von--Mangoldt forcing; the second is its
+adjoint return through the Zeta triangular system.
+
+The desired archimedean cancellation is
+\begin{equation}
+ H_{\infty,0}^*W_\infty=-B_Q.                            \tag{6}
+\end{equation}
+
+\paragraph{Status.} Equations (1)--(3) are \PROVED{} within the stated
+finite-dimensional conventions of v83--v86.  Equation (6) is proved below in
+Theorem G39, equations (27e)--(27h).
+
+\section{Exact solvability of the amplitude equation}
+
+The next statement is elementary, but it is the correct non-circular test for
+any proposed Gamma--Tate construction.
+
+\begin{theorem}[Amplitude range theorem --- \PROVED]
+Let $H:\mathcal K_0\to\mathcal K_\infty$ and
+$B:E\to\mathcal K_0$ be bounded operators (all spaces may be finite
+dimensional).  The equation
+\[
+ H^*W=-B,\qquad W:E\to\mathcal K_\infty,
+\]
+has a solution if and only if
+\begin{equation}
+ \Ran B\subseteq\Ran H^*.                                \tag{4}
+\end{equation}
+Equivalently, in finite dimension,
+\begin{equation}
+ \Ker H\subseteq\Ker B^*.                               \tag{5}
+\end{equation}
+When it exists, the unique solution whose range is orthogonal to $\Ker H^*$ is
+\begin{equation}
+ W_{\min}=-(H^*)^\dagger B,                              \tag{7}
+\end{equation}
+and every solution is $W_{\min}+K$ with $\Ran K\subseteq\Ker H^*$.  Moreover
+\begin{equation}
+ W^*W\ge W_{\min}^*W_{\min}
+ =B^*(H^*H)^\dagger B.                                  \tag{8}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The equation is solvable precisely when every column of $B$ lies in
+$\Ran H^*$.  The orthogonal-complement identity
+$(\Ran H^*)^\perp=\Ker H$ gives (5).  Moore--Penrose inversion gives (7).
+The general solution differs from it by a map into $\Ker H^*$; this summand is
+orthogonal to $W_{\min}$, proving (8).
+\end{proof}
+
+Applied to (6), the first genuinely new target is therefore
+\begin{equation}
+ \boxed{\Ran B_Q\subseteq\Ran H_{\infty,0}^*.}           \tag{9}
+\end{equation}
+This is an amplitude/range statement.  It is not implied by equality of the
+associated quadratic-form generators.
+
+\section{Why the known Fourier--Gamma identity does not yet give (6)}
+
+The proved Fourier--Gamma bridge has the form
+\begin{equation}
+ G_\Gamma-m_0I=-(K+X).                                  \tag{10}
+\end{equation}
+It identifies an archimedean generator.  The desired equation (6), however,
+contains an old/new matrix coefficient of a factorization of that generator.
+Factorizations are not determined by their Gram operator: if
+$G_\Gamma-m_0I=J^*\Sigma J$, then $UJ$ gives the same Gram identity for every
+unitary $U$ commuting with the signature, while its compressed amplitudes can
+change.
+
+There is a second, independent issue: the relevant harmonic/old projection
+moves under the deformation.
+
+\begin{lemma}[Moving-compression connection --- \PROVED]
+Let $U(t)$ be a differentiable unitary family, $A=U(0)^*U'(0)$, and
+$P(t)=U(t)P U(t)^*$.  Then
+\begin{equation}
+ P'(0)=U(0)[A,P]U(0)^*.                                  \tag{11}
+\end{equation}
+For a differentiable operator family $L(t)$,
+\begin{align}
+ \frac d{dt}\bigg|_0 P(t)L(t)P(t)
+  ={}&P'(0)L(0)P(0)+P(0)L'(0)P(0)\notag\\
+    &+P(0)L(0)P'(0).                                    \tag{12}
+\end{align}
+Thus a formula for $L'(0)$ alone does not determine the differentiated
+compressed block.
+\end{lemma}
+
+\begin{proof}
+Differentiate $U(t)PU(t)^*$ and then apply the product rule to the compression.
+\end{proof}
+
+In the present problem the two terms containing $P'(0)$ are precisely the
+kind of connection terms capable of producing the adjoint-return summand
+$\cZ\cC^*m$ in (3).  Therefore a valid derivation of (6) from Tate must specify
+the boundary embeddings and prove the differentiated compressed intertwining,
+not only cite (10).
+
+\section{A sharp conditional completion}
+
+Assume a source-defined Gamma--Tate factor $H_{\infty,0}$ is given.  Then (9)
+constructs, without choice,
+\[
+ W_{\infty,\min}=-(H_{\infty,0}^*)^\dagger B_Q .
+\]
+Combining it with (2) yields
+\[
+ (H_0^*\oplus H_{\infty,0}^*)
+ (W_{\Hod}\oplus W_{\infty,\min})=M_0h'.               \tag{13}
+\]
+This proves the required divergence identity.  To obtain the Pythagorean
+storage identity one still needs the independently derived energy budget
+\begin{equation}
+ S_M'\ge B_Q^*(H_{\infty,0}^*H_{\infty,0})^\dagger B_Q
+       +\text{the finite-part minimum energy}.           \tag{14}
+\end{equation}
+Defining a residual as the square root of the difference in (14) would be
+circular unless positivity of that difference has already been proved from
+the source network.
+
+\section{Source audit: Hilbertian transport is not yet unitary amplitude}
+
+The semilocal Sonin theorem of Connes--Consani--Moscovici supplies a
+hilbertian isomorphism
+\[
+ \theta_S:{\bf S}_\lambda(\mathbb R,e_\infty)
+ \longrightarrow {\bf S}_\lambda(X_S,\alpha).
+\]
+This is enough to transport the underlying topological Hilbert space and to
+prove stability when places are added.  It is not, as stated, an isometry for
+the fixed physical metrics entering row (d).  In the same discussion the
+authors explicitly note that the finite set $S$ plays a key role in fixing the
+inner product of the corresponding space of entire functions.
+
+This distinction has an exact operator consequence.  Put
+\begin{equation}
+ D_S:=\theta_S^*\theta_S>0.                               \tag{15}
+\end{equation}
+Then the canonically normalized isometry is
+\begin{equation}
+ U_S:=\theta_SD_S^{-1/2},\qquad U_S^*U_S=I.              \tag{16}
+\end{equation}
+For a differentiable deformation $S=S(t)$ one has
+\begin{equation}
+ U_S'=\theta_S'D_S^{-1/2}
+       +\theta_S(D_S^{-1/2})'.                           \tag{17}
+\end{equation}
+The second summand is a metric-connection term.  It vanishes only if
+$D_S'=0$, i.e. only if the raw hilbertian transport is already isometric along
+the deformation.
+
+\begin{proposition}[Metric correction identity --- \PROVED]
+Let $D(t)=\theta(t)^*\theta(t)>0$ and
+$U(t)=\theta(t)D(t)^{-1/2}$.  Then $U(t)$ is isometric and
+\begin{equation}
+ U^*U'=D^{-1/2}\theta^*\theta'D^{-1/2}
+       +D^{1/2}(D^{-1/2})',                              \tag{18}
+\end{equation}
+whose Hermitian part is zero.  Hence the Hermitian part of the raw logarithmic
+connection $D^{-1/2}\theta^*\theta'D^{-1/2}$ is cancelled exactly by the
+derivative of the metric normalization.
+\end{proposition}
+
+\begin{proof}
+Equation (18) follows by the product rule.  Differentiating $U^*U=I$ gives
+$U'^*U+U^*U'=0$.
+\end{proof}
+
+The correction in (17) is computable without assuming that $D$ and $D'$ commute.
+If $X=(D^{-1/2})'$, differentiation of
+$D^{-1/2}DD^{-1/2}=I$ gives the Sylvester equation
+\begin{equation}
+ XD^{1/2}+D^{1/2}X=-D^{-1/2}D'D^{-1/2}.                  \tag{19}
+\end{equation}
+Since $D^{1/2}>0$, (19) has a unique bounded selfadjoint solution for
+selfadjoint $D'$.  Thus the next calculation has no unitary gauge freedom at
+the metric-correction level: once the semilocal Gram derivative $D'$ is known,
+the missing connection $X$ is uniquely fixed.
+
+Thus the published stability theorem cannot be used to infer a norm-one
+storage law without explicitly carrying $D_S^{-1/2}$ and its derivative.
+The missing correction is of exactly the same structural type as the moving
+harmonic-lift term found in v83--v86.  This rules out the shortcut
+``Sonin stability $\Rightarrow$ (6)'', while leaving open the possibility that
+the fully normalized connection in (17) produces $-B_Q$.
+
+\section{Exact CCM multiplier and its normalized connection}
+
+The source definitions permit the metric correction to be evaluated
+explicitly.  On the multiplicative Fourier line put
+\begin{equation}
+ a_{S,t}(s):=\prod_{p\in S_f}
+ \left(1-p^{-t/2-is}\right).                             \tag{20}
+\end{equation}
+The dual Sonin map $\theta_{S,t}$ is multiplication by $a_{S,t}$, while the
+Zeta map $\eta_{S,t}$ is multiplication by
+$\overline{a_{S,t}}^{-1}$ (for real $s$).  Hence
+\begin{equation}
+ \theta_{S,t}^*\eta_{S,t}=I,
+ \qquad
+ D_{S,t}=\theta_{S,t}^*\theta_{S,t}=M_{|a_{S,t}|^2}.     \tag{21}
+\end{equation}
+In particular, the polar normalization is not abstract:
+\begin{equation}
+ U_{S,t}=\theta_{S,t}D_{S,t}^{-1/2}
+ =M_{a_{S,t}/|a_{S,t}|}.                                \tag{22}
+\end{equation}
+
+Define the finite Euler logarithmic multiplier
+\begin{equation}
+ c_{S,t}(s):=\sum_{p\in S_f}(\log p)
+ \frac{p^{-t/2-is}}{1-p^{-t/2-is}}.                     \tag{23}
+\end{equation}
+
+\begin{theorem}[Normalized Euler connection --- \PROVED]
+On any compact $t$-interval on which the factors in (20) do not vanish on the
+real Fourier line,
+\begin{align}
+ \theta_{S,t}^{-1}\partial_t\theta_{S,t}
+   &=\frac12M_{c_{S,t}},                                 \tag{24}\\
+ D_{S,t}^{-1}D_{S,t}'
+   &=\frac12M_{c_{S,t}+\overline{c_{S,t}}},              \tag{25}\\
+ U_{S,t}^*U_{S,t}'
+   &=\frac14M_{c_{S,t}-\overline{c_{S,t}}}.              \tag{26}
+\end{align}
+Thus metric normalization cancels exactly the Hermitian Euler component and
+retains exactly its skew-Hermitian component.
+\end{theorem}
+
+\begin{proof}
+For one factor, with $r_p(t)=p^{-t/2}$,
+\[
+ \partial_t\log(1-r_p(t)p^{-is})
+ =\frac{\log p}{2}\frac{p^{-t/2-is}}
+ {1-p^{-t/2-is}}.
+\]
+Summation gives (24).  Equations (25) and (26) follow by differentiating
+$|a|^2$ and $a/|a|$, respectively.
+\end{proof}
+
+This theorem sharpens the target.  The normalized CCM transport contributes
+only the oriented difference $c-\bar c$.  Therefore the symmetric Hodge
+energy and the amplitude $B_Q$ cannot be read from this phase connection
+alone.  They can arise only after the old/new (Sonin/cutoff) compression and
+the two moving boundary embeddings are differentiated.  Equivalently, the
+remaining source identity is now the explicit compressed formula
+\begin{equation}
+ P_{\old}\left(
+ j_{\old}'{}^*U^*j_{\new}
+ +j_{\old}^*U^*U'j_{\new}
+ +j_{\old}^*U^*j_{\new}'
+ \right)
+ =-B_Q,                                                  \tag{27}
+\end{equation}
+with $U^*U'$ fixed by (26).  There is no longer an unspecified bulk
+connection in (27); the only unknown data are the differentiated Tate/cutoff
+boundary maps.
+
+\paragraph{Source boundary.}
+The cited CCM theorem proves (at fixed finite set of places $S$ and fixed
+cutoff $\lambda$) the stability of the Sonin space and the duality
+$\theta_S^*\eta_S=I$.  It does not state a differentiable family of Tate
+boundary embeddings $j_{\old}(t),j_{\new}(t)$, nor formula (27).  Consequently
+those maps cannot be silently imported from that theorem.  The finite
+divisibility model below constructs the required logarithmic boundary port
+directly, without attributing it to the fixed-parameter CCM theorem.
+
+\section{Closure of G39: the doubled logarithmic Tate port}
+
+We now give a source-defined realization of the boundary amplitude.  Let
+$\mathcal H_N=\operatorname{span}\{\delta_d:1\le d\le N\}$ and let
+$S_n\delta_d=\delta_{nd}$ when $nd\le N$ and zero otherwise.  Put
+\begin{align}
+ \cZ_t&:=\sum_{n\le N}n^{-t/2}S_n,\notag\\
+ \cC_t&:=\sum_{n\le N}\Lambda(n)n^{-t/2}S_n,
+ \qquad Q\delta_d=(\log d)\delta_d.                     \tag{27a}
+\end{align}
+All sums and products are in the finite divisibility algebra, so there are no
+domain or convergence issues.
+
+\begin{lemma}[Finite logarithmic connection --- \PROVED]
+One has
+\begin{align}
+ [Q,\cZ_t]&=\cZ_t\cC_t=\cC_t\cZ_t,                    \tag{27b}\\
+ \cZ_t'&=-\frac12\cZ_t\cC_t,                           \tag{27c}\\
+ (\cZ_t^{-1})'&=\frac12\cC_t\cZ_t^{-1}.                \tag{27d}
+\end{align}
+Thus $\cC_t=-2\cZ_t^{-1}\cZ_t'$ is the logarithmic
+derivative of the Zeta transport, and $\cC_t^*$ is its adjoint-return
+connection.
+\end{lemma}
+
+\begin{proof}
+Since $[Q,S_n]=(\log n)S_n$, the coefficient of $S_k$ in
+$[Q,\cZ_t]$ is $(\log k)k^{-t/2}$.  The coefficient of $S_k$ in
+$\cZ_t\cC_t$ is
+\[
+ k^{-t/2}\sum_{d\mid k}\Lambda(d)
+ =k^{-t/2}\log k.
+\]
+This proves (27b).  Direct differentiation gives (27c), and differentiating
+$\cZ_t^{-1}\cZ_t=I$ gives (27d).
+\end{proof}
+
+At the critical endpoint suppress the subscript $t$, put
+\[
+ m=\cZ^{-1}\delta_1,\qquad
+ \mathcal K_\infty^{(1)}:=\mathcal H_N\oplus\mathcal H_N,
+\]
+and define, before invoking any sign condition,
+\begin{align}
+ W_\infty
+ &:=\sqrt{\frac S2}
+ \binom{\cC\delta_1}{\cC^*m},                           \tag{27e}\\
+ H_{\infty,0}x
+ &:=\sqrt{\frac S2}
+ \binom{P_{\old}^*x}{-\cZ^*P_{\old}^*x}.              \tag{27f}
+\end{align}
+The first component of (27e) is the differentiated Zeta/Möbius incoming
+port; the second is its adjoint return.  Formula (27f) is the graph analysis
+of the dual Tate termination $[I,-\cZ]$.
+
+\begin{theorem}[G39, exact Gamma--Tate amplitude --- \PROVED]
+The doubled logarithmic port (27e)--(27f) is source-defined by the finite
+Euler transport and satisfies
+\begin{equation}
+ \boxed{H_{\infty,0}^*W_\infty=-B_Q}.                   \tag{27g}
+\end{equation}
+Equivalently, it supplies exactly the missing divergence in (2), and hence
+\begin{equation}
+ (H_0^*\oplus H_{\infty,0}^*)
+ (W_{\Hod}\oplus W_\infty)=M_0h'.                       \tag{27h}
+\end{equation}
+No positivity of $G$, no Moore--Penrose choice, and no residual square root is
+used in this construction.
+\end{theorem}
+
+\begin{proof}
+Taking the adjoint of (27f) and applying it to (27e) gives
+\[
+ H_{\infty,0}^*W_\infty
+ =\frac S2P_{\old}
+ \left(\cC\delta_1-\cZ\cC^*m\right).
+\]
+By the already proved v84 formula (3), the right-hand side is exactly $-B_Q$.
+Adding this equality to (2) proves (27h).
+\end{proof}
+
+The construction also explains the two moving-boundary contributions in
+(27): they are the two orientations of the logarithmic derivative of the
+dual pair $\cZ_t^{-1}$ and $\cZ_t^{-*}$.  The bulk normalized phase accounts
+for their skew part, while the graph termination $[I,-\cZ]$ retains their
+oriented difference.  Thus G39 is closed at every finite threshold.  This
+does not assert the Hilbert-space energy bound G40.
+
+\section{Reverse-engineered completed boundary object}
+
+We now construct the object required by the proof without presupposing its
+positivity.  This separates existence from the load-bearing sign theorem.
+Let
+\[
+ A_0=\mathcal G_0^*\mathcal G_0\ge0,
+ \qquad q=M_0h',\qquad \beta=S_M'.
+\]
+All operators below are understood on the finite threshold space; the same
+formulas hold for closed ranges in the Hilbert-space setting.
+
+\begin{theorem}[Canonical completed boundary colligation --- \PROVED]
+Assume $q\in\Ran A_0^{1/2}$ and define
+\begin{equation}
+ w_0:=\mathcal G_0A_0^\dagger q,
+ \qquad
+ \Delta_T:=\beta-q^*A_0^\dagger q.                      \tag{28}
+\end{equation}
+Let $\Delta_T=J_T|\Delta_T|$ be its polar decomposition, where
+$J_T=\operatorname{sgn}(\Delta_T)$ on
+$\overline{\Ran|\Delta_T|}$, and put
+\begin{equation}
+ \mathcal K_T^{\rm bd}:=\overline{\Ran|\Delta_T|},
+ \qquad r_T:=|\Delta_T|^{1/2}.                           \tag{29}
+\end{equation}
+Then the map
+\begin{equation}
+ \mathcal W_Te:=w_0e\oplus r_Te                         \tag{30}
+\end{equation}
+into the Krein boundary space
+$\overline{\Ran\mathcal G_0}\oplus(\mathcal K_T^{\rm bd},J_T)$
+satisfies the two exact identities
+\begin{align}
+ \mathcal G_0^*P_0\mathcal W_T&=q,                      \tag{31}\\
+ \mathcal W_T^*(I\oplus J_T)\mathcal W_T&=\beta.        \tag{32}
+\end{align}
+It is minimal: any other realization of (31)--(32) contains this one up to a
+Krein-isometric summand orthogonal to the generated boundary space.
+\end{theorem}
+
+\begin{proof}
+Since $q\in\Ran A_0^{1/2}$, Moore--Penrose calculus gives
+\[
+ \mathcal G_0^*w_0
+ =A_0A_0^\dagger q=q,
+ \qquad
+ w_0^*w_0=q^*A_0^\dagger q.
+\]
+Moreover $r_T^*J_Tr_T=\Delta_T$.  Adding the last two identities proves
+(31)--(32).  Minimality follows from the minimum-norm property of $w_0$ and
+the minimal polar realization of the selfadjoint form $\Delta_T$.
+\end{proof}
+
+This is the desired inverse-engineered object: it always exists once the
+previously proved range condition holds, but in general its boundary metric is
+Krein rather than Hilbert.
+
+\begin{theorem}[Exact positivity threshold --- \PROVED]
+The following assertions are equivalent:
+\begin{enumerate}
+\item the canonical boundary metric in (29) is positive, $J_T=I$;
+\item $\Delta_T\ge0$;
+\item there exist Hilbert-space operators $W,R$ such that
+\[
+ \mathcal G_0^*W=q,
+ \qquad W^*W+R^*R=\beta;
+\]
+\item the block completion is positive,
+\begin{equation}
+ \begin{pmatrix}A_0&q\\q^*&\beta\end{pmatrix}\ge0;      \tag{33}
+\end{equation}
+\item the v85 Pythagorean identity, hence the corresponding threshold case of
+condition $G$, holds.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The equivalence of (1) and (2) is the definition of $J_T$.  If (2) holds take
+$W=w_0$ and $R=\Delta_T^{1/2}$.  Conversely minimum norm gives
+$W^*W\ge q^*A_0^\dagger q$, so any Hilbert realization implies
+$\Delta_T\ge0$.  The equivalence with (33) is the generalized Schur-complement
+criterion, including $q\in\Ran A_0^{1/2}$.  The last equivalence is precisely
+the reduction proved in v85--v86.
+\end{proof}
+
+The theorem shows both the power and the limit of pure inverse engineering.
+It constructs the unique missing port and its exact metric, but proving that
+the metric is Hilbert rather than Krein is exactly the remaining content of
+$G$.  Renaming $r_T$ a ``Tate residual'' would therefore be circular.
+
+\subsection{The genuinely new theorem sufficient to close row (d)}
+
+The preceding construction identifies a source-level statement which is
+strictly stronger than a formal completion and is independently falsifiable:
+
+\begin{quote}
+\textbf{Tate boundary positivity theorem (OPEN).}
+There is an isomorphism
+\[
+ \Phi_T:\mathcal K_T^{\rm bd}\longrightarrow
+ \mathcal T_T^{\rm out}
+\]
+onto a boundary space obtained from the two terminated Tate evaluations and
+the Gamma storage tail, constructed before using $\Delta_T$, such that
+\begin{equation}
+ \langle\Phi_Tx,\Phi_Ty\rangle_{\mathcal T_T^{\rm out}}
+ =\langle J_Tx,y\rangle.                                \tag{34}
+\end{equation}
+The target carries its ordinary positive $L^2$/Gamma-storage inner product.
+\end{quote}
+
+If (34) is proved from Fourier--Gamma--Tate, then its left-hand side is
+positive, hence $J_T=I$ on the minimal boundary space.  The preceding theorem
+then gives $G$ immediately.  Unlike defining
+$R=\Delta_T^{1/2}$, statement (34) is non-circular only when
+$\mathcal T_T^{\rm out}$ and $\Phi_T$ are given by explicit source formulas
+which do not use $\Delta_T$ or its sign.
+
+The proved amplitude identity (27g) is the divergence part of (34).  The missing
+norm identity is
+\begin{equation}
+ \Phi_T^*\Phi_T=J_T                                    \tag{35}
+\end{equation}
+on the generated boundary space.  Thus (27g) alone is necessary but not
+sufficient; (35) is exactly what prevents an indefinite completion from being
+mistaken for a conservative Hilbert-space network.
+
+\section{Intermediate status ledger (superseded by the final ledger below)}
+
+\subsection*{PROVED}
+\begin{itemize}
+\item The v83 Möbius/von--Mangoldt forcing and the v84 excess divergence
+      formula (2)--(3), subject to their stated finite Zeta-gauge definitions.
+\item The range/kernel criterion (4)--(5), the canonical current (7), and its
+      exact minimum energy (8).
+\item The moving-compression connection formula (11)--(12).
+\item The metric-normalization correction (15)--(18).
+\item The exact CCM multiplier identities (20)--(26).
+\item G39: the source-defined doubled logarithmic port (27e)--(27f), the exact
+      amplitude identity (27g), and the completed divergence (27h).
+\item The canonical Krein boundary colligation (28)--(32) and the exact
+      equivalence between its positivity, block positivity (33), the v85
+      storage identity, and $G$.
+\item The amplitude range inclusion (9) for the constructed port, since
+      $-B_Q=H_{\infty,0}^*W_\infty$, and the composite divergence (13)/(27h).
+\end{itemize}
+
+\subsection*{OPEN}
+\begin{itemize}
+\item The non-circular source energy balance (14), hence the v85 Pythagorean
+      identity, condition $G$, and row (d).
+\item The Tate boundary positivity theorem (34)--(35), with a source-defined
+      positive target and an intertwiner independent of $\Delta_T$.
+\end{itemize}
+
+\subsection*{AUDIT / forbidden shortcuts}
+\begin{itemize}
+\item Equation (10) is an operator-generator identity, not an amplitude
+      identity; it does not by itself imply (6).
+\item Möbius/Zeta adjoint-inverse triangularity does not determine the moving
+      old/new connection block.
+\item A hilbertian Sonin isomorphism is not automatically an isometry in the
+      row-(d) physical metric.  The derivative of $D_S^{-1/2}$ cannot be
+      discarded.
+\item The parameter deformation and the differentiated Tate boundary maps are
+      not supplied by the fixed-$S$, fixed-$\lambda$ Sonin stability theorem.
+\item Choosing $W_\infty$ by Moore--Penrose inversion is legitimate only after
+      (9); claiming the desired budget for that choice is equivalent to the
+      remaining inequality and cannot serve as its proof.
+\item The inverse-engineered boundary space exists canonically, but its metric
+      is a priori Krein.  Declaring it positive or calling
+      $|\Delta_T|^{1/2}$ a Hilbert residual would assume $G$.
+\item No statement in this note declares $G$ or row (d) proved.
+\end{itemize}
+
+\section{Next exact calculation}
+With G39 closed, the next calculation is exclusively the G40 energy theorem.
+For the explicitly constructed port it asks whether its source norm, together
+with the finite Hodge current and the Gamma storage tail, telescopes to
+\[
+ S_M'=(M_0h')^*A_0^\dagger(M_0h')+R_T^*R_T
+\]
+with $R_T$ constructed before assuming the sign of the difference.  The
+divergence is no longer an unknown.  The remaining task is to identify the
+positive Gamma--Tate storage realization (34)--(35); this is G40, not G39.
+
+\section{G40 bridge audit: KYP completion and the circularity barrier}
+
+The completion of G39 supplies an exact current, but amplitude and passivity
+are logically different.  The following theorem determines, without guesswork,
+the least energy compatible with the proved amplitude.
+
+Put $H:=H_0\oplus H_{\infty,0}$ and
+$q:=M_0h'$.  By (27h), $q\in\Ran H^*$.  Define
+\begin{equation}
+ W_{\min}:=(H^*)^\dagger q,\qquad
+ E_{\min}:=q^*(H^*H)^\dagger q.                         \tag{36}
+\end{equation}
+
+\begin{theorem}[Minimal passive completion test --- \PROVED]
+For the source budget $\beta=S_M'$, the following are equivalent:
+\begin{enumerate}
+\item there are a Hilbert-space current $W$ and residual $R$ satisfying
+\[
+ H^*W=q,\qquad \beta=W^*W+R^*R;
+\]
+\item $\beta-E_{\min}\ge0$;
+\item the KYP block
+\begin{equation}
+ \mathfrak K_T:=
+ \begin{pmatrix}H^*H&q\\q^*&\beta\end{pmatrix}          \tag{37}
+\end{equation}
+is positive.
+\end{enumerate}
+If these conditions hold, the canonical solution is
+\begin{equation}
+ W=W_{\min},\qquad R=(\beta-E_{\min})^{1/2}.             \tag{38}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Moore--Penrose minimality gives $W^*W\ge E_{\min}$ for every solution of
+$H^*W=q$.  Hence a passive completion implies (2).  Conversely (2) gives
+(38).  Equivalence with (3) is the generalized Schur-complement theorem,
+using $q\in\Ran H^*$, which is already supplied by G39.
+\end{proof}
+
+This theorem is a useful advance: G39 has discharged the entire range part of
+the generalized Schur criterion.  G40 consists only of the remaining scalar
+operator inequality
+\begin{equation}
+ \boxed{S_M'-q^*(H^*H)^\dagger q\ge0.}                  \tag{39}
+\end{equation}
+However, inverse engineering cannot prove (39) by defining the residual in
+(38): the square root exists as a Hilbert operator if and only if (39) is
+already true.
+
+\begin{theorem}[No-free-bridge theorem --- \PROVED]
+Suppose a proposed G40 bridge is constructed only from the already fixed data
+$(H,q,\beta)$ and is required to satisfy the exact amplitude and energy
+identities.  Then its existence as a Hilbert-space colligation is equivalent
+to (39).  In particular, polar decomposition, Julia completion, graph
+normalization, Moore--Penrose lifting, or adjoining a formal residual cannot
+establish G40 unless one independently proves positivity of (39).
+\end{theorem}
+
+\begin{proof}
+Every such bridge gives a pair $(W,R)$ in item (1) of the preceding theorem,
+so it implies (39).  Conversely (39) constructs the bridge by (38).  Each of
+the listed procedures is a realization of this same completion and therefore
+cannot change the equivalence.
+\end{proof}
+
+Thus the non-circular content still required from Gamma--Tate is an
+\emph{independently positive} source formula for the left side of (39), for
+example
+\begin{equation}
+ S_M'-q^*(H^*H)^\dagger q
+ =\int_{\Omega_T}K_T(\omega)^*K_T(\omega)\,d\mu_T(\omega)
+  +E_{0,T}^*E_{0,T}+E_{1,T}^*E_{1,T},                  \tag{40}
+\end{equation}
+where $K_T,E_{0,T},E_{1,T}$ must be given explicitly from the Gamma tail and
+the two Tate evaluations without using the left side or its spectral
+decomposition.  Formula (40), not a formal completion, is the precise new
+mathematical theorem which would prove G40.
+
+\subsection{Compatibility with the fixed old factor}
+
+There is one indispensable bookkeeping point.  The analysis operator $H$ in
+(36) is the explicit amplitude realization of G39.  The old factor used in
+the threshold induction is fixed independently by
+\[
+ A_0=\mathcal G_0^*\mathcal G_0.
+\]
+One may replace $\mathcal G_0$ by $H$ in the storage argument only after
+proving the Gram compatibility
+\begin{equation}
+H^*H=A_0,                                               \tag{41}
+\end{equation}
+or, more generally, constructing a source-defined isometry between their
+minimal factorizations.  G39 proves $H^*W=q$; it does not by itself prove
+(41).
+
+The notation must be reconciled with the supplied row (d).  There
+$R_0=X_0^*X_0$ is the \emph{positive reference} and
+$L_0=Y_0^*Y_0$ is the opposite channel; neither $X_0$ alone nor $Y_0$ alone
+factors the signed old block.  Under the old-core hypothesis set
+\begin{equation}
+ T_0=R_0^{\dagger/2}L_0R_0^{\dagger/2},
+ \qquad D_0=I-T_0.                                    \tag{41a}
+\end{equation}
+On the support of $R_0$, one has the exact form identity
+\begin{equation}
+ A_0=R_0-L_0
+ =R_0^{1/2}D_0R_0^{1/2}.                              \tag{41b}
+\end{equation}
+Consequently, if and only if $D_0\ge0$, a minimal source factor of the signed
+old block is
+\begin{equation}
+ \mathcal G_0=D_0^{1/2}R_0^{1/2},
+ \qquad \mathcal G_0^*\mathcal G_0=A_0,               \tag{41c}
+\end{equation}
+up to the standard support projections.  Thus the actual compatibility test
+for the G39 current is (41) with $\mathcal G_0$ from (41c), not
+$H^*H=X_0^*X_0$.
+
+\begin{proof}
+Since $L_0=R_0^{1/2}T_0R_0^{1/2}$ on
+$\overline{\Ran R_0}$, subtraction gives (41b).  The old-core hypothesis is
+$0\le T_0\le I$, hence $D_0\ge0$ and functional calculus gives (41c).
+Conversely existence of a Hilbert factor of (41b) forces the signed old block
+to be nonnegative.
+\end{proof}
+
+This correction also locates the return-load condition in the current
+language.  A normalized old load can be lifted through $\mathcal G_0^*$
+exactly when it lies in $\Ran D_0^{1/2}$ after reference normalization.  This
+is the range condition explicitly left open before (and used conditionally
+in) \texttt{eq:returnsum} of the supplied row (d).  Hence replacing
+$\mathcal G_0$ by the reference factor $X_0$ would erase precisely the
+capacity defect that G40 is required to control.
+
+\begin{theorem}[Exact reference-harmonic capacity identity --- \PROVED]
+Write the old/new columns of the authoritative factors as
+\[
+ X=(X_0,X_E),\qquad Y=(Y_0,Y_E),
+\]
+and put
+\[
+ R_0=X_0^*X_0,\quad L_0=Y_0^*Y_0,\quad
+ r=X_0^*X_E,\quad \ell=Y_0^*Y_E.
+\]
+Let $H=R_0^\dagger r$ and assume the usual reference range condition
+$r\in\Ran R_0$.  Define
+\begin{align}
+ S_E&:=X_E^*X_E-r^*R_0^\dagger r,                     \tag{41d}\\
+ Z_E&:=Y_E-Y_0H,                                      \tag{41e}\\
+ b_E&:=L_0H-\ell.                                     \tag{41f}
+\end{align}
+Then the reference-harmonic column $v_E=(-H,I)^t$ satisfies
+\begin{align}
+ v_E^*(X^*X-Y^*Y)v_E&=S_E-Z_E^*Z_E,                  \tag{41g}\\
+ P_{\rm old}(X^*X-Y^*Y)v_E&=b_E.                     \tag{41h}
+\end{align}
+If $A_0=R_0-L_0\ge0$, the full old/new signed block is nonnegative if and
+only if
+\begin{equation}
+ b_E\in\Ran A_0^{1/2},\qquad
+ \boxed{S_E-Z_E^*Z_E-b_E^*A_0^\dagger b_E\ge0.}       \tag{41i}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The normal equation $R_0H=r$ gives
+$X_0^*(X_E-X_0H)=0$ and
+$(X_E-X_0H)^*(X_E-X_0H)=S_E$.  This proves the reference part of
+(41g); its opposite part is $Z_E^*Z_E$ by definition.  The old cross of the
+signed block against $v_E$ is
+\[
+ (r-\ell)-(R_0-L_0)H=L_0H-\ell=b_E,
+\]
+which proves (41h).  Congruence by the invertible triangular change from the
+coordinate newborn column to $v_E$ leaves the old block equal to $A_0$ and
+changes the other entries to (41h) and (41g).  The generalized Schur
+criterion gives exactly (41i).
+\end{proof}
+
+Formula (41i) is the authoritative version of the G40 storage target.  It
+also proves why the derivative calculation in v83 found a moving-lift square:
+$v_E$ is harmonic for $R_0$, but its signed old divergence is the generally
+nonzero $b_E$.  The Moore--Penrose term in (41i) is the energy required to
+remove that divergence.  Any proposed Hodge residual must be identified with
+the entire left side of (41i), not merely with $S_E-Z_E^*Z_E$.
+
+On supported vectors for which $S_E^{-1/2}$ is defined, the normalized
+variables of the supplied row (d) obey the exact translation
+\begin{equation}
+ u_e=D_0h_e-q_e
+ =-R_0^{\dagger/2}b_ES_E^{\dagger/2}e.                \tag{41j}
+\end{equation}
+Indeed, substitute $R_0H=r$ into the definitions of $D_0,h_e,q_e$.  Thus the
+apparently different range obstruction in \texttt{eq:returnsum} is precisely
+the normalized form of the Feshbach range condition in (41i), and its return
+energy is the normalized Moore--Penrose term there.  This closes the
+bookkeeping equivalence between the threshold-capacity and balanced-factor
+languages; it does not prove their common sign.
+
+\begin{theorem}[Physical old-compatible amplitude port --- \PROVED]
+Assume the inductive old-core hypothesis $A_0\ge0$ and the range condition
+$b_E\in\Ran A_0^{1/2}$.  With $\mathcal G_0$ as in (41c), define
+\begin{equation}
+ W_{0,E}:=\mathcal G_0A_0^\dagger b_E.                 \tag{41k}
+\end{equation}
+Then
+\begin{align}
+ \mathcal G_0^*W_{0,E}&=b_E,                           \tag{41l}\\
+ W_{0,E}^*W_{0,E}&=b_E^*A_0^\dagger b_E.              \tag{41m}
+\end{align}
+Moreover (41m) is the least Hilbert-current energy among all solutions of
+$\mathcal G_0^*W=b_E$.
+\end{theorem}
+
+\begin{proof}
+Moore--Penrose calculus and the range hypothesis give
+$A_0A_0^\dagger b_E=b_E$, proving (41l).  Using
+$\mathcal G_0^*\mathcal G_0=A_0$ gives (41m).  Every other solution differs
+from (41k) by a vector in $\ker\mathcal G_0^*$, orthogonal to the minimal
+solution, proving minimality.
+\end{proof}
+
+Thus amplitude and old-factor compatibility are completely realized inside
+the authoritative threshold model once the inductive old sign and its range
+condition are available.  The remaining newborn energy after paying this
+minimal old current is exactly the boxed form (41i).  Identifying the finite
+divisibility G39 port with (41k) would require a source-defined unitary (or
+isometry plus null channels) preserving both the old Gram and the cross; the
+present files provide no such comparison map.
+
+\begin{theorem}[Joint-Gram identification criterion --- \PROVED]
+Let $(K,W):E_0\oplus E\to\mathcal K$ and
+$(\widetilde K,\widetilde W):E_0\oplus E\to\widetilde{\mathcal K}$ be two
+old/new analysis pairs.  There is a unique unitary
+\begin{equation}
+ U:\overline{\Ran(K,W)}\longrightarrow
+   \overline{\Ran(\widetilde K,\widetilde W)},
+ \qquad UK=\widetilde K,\quad UW=\widetilde W,          \tag{41n}
+\end{equation}
+if and only if their complete joint Grams agree:
+\begin{equation}
+ \begin{pmatrix}K^*K&K^*W\\W^*K&W^*W\end{pmatrix}
+ =
+ \begin{pmatrix}
+ \widetilde K^*\widetilde K&\widetilde K^*\widetilde W\\
+ \widetilde W^*\widetilde K&\widetilde W^*\widetilde W
+ \end{pmatrix}.                                       \tag{41o}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Necessity follows from $U^*U=I$.  Conversely define
+$U(Kx+We)=\widetilde Kx+\widetilde We$.  Equality (41o) shows that this rule
+is well defined and preserves every inner product.  It extends to an
+isometry of the closed generated ranges and is onto by construction.
+\end{proof}
+
+For G39 versus the physical threshold port one must first construct source
+maps $\iota_0:E_0^{\rm phys}\to E_0^{\rm div}$ and
+$\iota_E:E^{\rm phys}\to E^{\rm div}$.  After these have been specified,
+(41o) requires simultaneously
+\begin{align}
+ \iota_0^*H_{\infty,0}^*H_{\infty,0}\iota_0&=A_0,   \tag{41p}\\
+ \iota_0^*(-B_Q)\iota_E&=b_E,                         \tag{41q}\\
+ \iota_E^*W_\infty^*W_\infty\iota_E
+ &=b_E^*A_0^\dagger b_E.                               \tag{41r}
+\end{align}
+The adjoint cross is automatic once (41q) holds.  Equation (27g) establishes
+the left cross in its finite divisibility model, but the source maps and none
+of (41p)--(41r) are constructed in the supplied continuum row (d): the two
+models use different source spaces and different deformation variables.  In
+particular, (42) expands the untransported G39 old Gram, while (41a)--(41c)
+expand the physical old Gram; their equality after transport is not a
+normalization convention.  This joint-Gram test is
+the exact, correctly typed interface required before G39 may be used as the
+physical G40 current.
+
+\begin{theorem}[Finite-port/full-Hodge dimension obstruction --- \PROVED]
+Suppose the physical old block $A_0$ has infinite rank (in particular, suppose
+it is strictly positive on an infinite-dimensional old primitive core).  No
+map $\iota_0:E_0^{\rm phys}\to\mathcal H_N$ can satisfy (41p), because
+$H_{\infty,0}$ in (27f) has finite-dimensional codomain.  Consequently the
+finite divisibility G39 port cannot be unitarily identified with the complete
+physical old/Hodge factor of the supplied row (d).
+\end{theorem}
+
+\begin{proof}
+The rank of
+$\iota_0^*H_{\infty,0}^*H_{\infty,0}\iota_0$ is at most
+$\dim\mathcal K_\infty^{(1)}=2N$, whereas $A_0$ has infinite rank.  Thus
+(41p) is impossible.  Under strict positivity the contradiction can also be
+seen from injectivity: (41p) would force $\iota_0$ to be injective into a
+finite-dimensional space.
+\end{proof}
+
+Hence Theorem G39 remains a valid finite arithmetic amplitude identity, but
+it is not a factorization of the full continuum row-(d) current.  It may be
+used for compatible finite compressions only.  A full G40 proof requires an
+infinite-dimensional continuum port constructed directly from (81)--(84),
+not an isometric embedding of (27e)--(27f).
+
+For the doubled logarithmic port its additional old Gram is explicitly
+\begin{equation}
+ H_{\infty,0}^*H_{\infty,0}
+ =\frac S2P_{\old}(I+\cZ\cZ^*)P_{\old}^*.               \tag{42}
+\end{equation}
+Thus (41) is a concrete, falsifiable operator identity, not a normalization
+convention.
+
+The complete G40 bridge can be stated without subdivision as the single
+source factorization
+\begin{equation}
+ \boxed{
+ \begin{pmatrix}A_0&q\\q^*&S_M'\end{pmatrix}
+ =\mathfrak T_T^*\mathfrak T_T,}                        \tag{43}
+\end{equation}
+where the old/new columns of $\mathfrak T_T$ must restrict to the G39
+amplitude realization and the remaining rows must be explicit Gamma-tail and
+Tate-terminal outputs.  Equality (43) simultaneously enforces the correct old
+Gram, the proved cross amplitude, and the positive source budget.
+
+Reverse engineering always produces a Krein factorization of the left side of
+(43), but it produces a Hilbert factorization if and only if that block is
+positive.  By the generalized Schur theorem this is equivalent to
+$S_M'-q^*A_0^\dagger q\ge0$, namely G42/G.  Therefore (43) proves G40 only if
+$\mathfrak T_T$ is constructed independently from Gamma--Tate formulas; taking
+a square root or polar factor of the block would be circular.
+
+\section{The unitary midpoint bridge}
+
+There is a non-circular mechanism capable of proving (43): the midpoint split
+of a source-defined unitary Poisson--Fourier operator.  It avoids defining a
+Schur residual.
+
+\begin{theorem}[Unitary midpoint storage --- \PROVED]
+Let $\mathcal U$ be unitary on a Hilbert space $\mathcal K$, let $W$ be a
+current, and define
+\begin{equation}
+ W_+:=\frac12(I+\mathcal U)W,
+ \qquad
+ W_-:=\frac12(I-\mathcal U)W.                           \tag{44}
+\end{equation}
+Then
+\begin{equation}
+ W^*W=W_+^*W_++W_-^*W_-.                               \tag{45}
+\end{equation}
+If an analysis operator $H$ satisfies
+\begin{equation}
+ H^*W=q+B,\qquad H^*W_-=B,                             \tag{46}
+\end{equation}
+then
+\begin{equation}
+ H^*W_+=q                                               \tag{47}
+\end{equation}
+and (45) is the required non-circular positive storage identity.
+\end{theorem}
+
+\begin{proof}
+Expanding the two squares in (44), the mixed terms cancel and
+\[
+ W_+^*W_++W_-^*W_-
+ =\frac12W^*W+\frac12W^*\mathcal U^*\mathcal UW=W^*W.
+\]
+Equation (47) follows by subtracting the two equations in (46).
+\end{proof}
+
+For the present problem take $W=W_{\Hod}$, so that $W^*W=S_M'$.  G39 has
+constructed a current with divergence $-B_Q$.  Consequently the single bridge
+identity which would finish G40 is
+\begin{equation}
+ \boxed{
+ W_\infty=-W_-
+ =-\frac12(I-\mathcal U_{\rm PF})W_{\Hod},}             \tag{48}
+\end{equation}
+where $\mathcal U_{\rm PF}$ must be the normalized Poisson--Fourier transport
+in the same current Hilbert space.  Indeed, (2) and G39 give
+\[
+ H^*W_{\Hod}=q+B_Q,\qquad H^*(-W_\infty)=B_Q.
+\]
+Thus (44)--(48) yield
+\begin{align}
+ H^*W_+&=q,\notag\\
+ S_M'&=W_+^*W_++W_-^*W_-,                              \tag{49}
+\end{align}
+which is exactly the desired Hilbert storage theorem; $W_-$ is the positive
+Tate residual and no square root of $\Delta_T$ has been introduced.
+
+The differentiated Poisson identity from the preceding row-(c) work,
+\begin{equation}
+ (C+C^\sharp-K-X)f=(\mathcal U_{\rm PF}-I)Kf,           \tag{50}
+\end{equation}
+has precisely the algebraic form required by (48): the two Euler orientations
+give the doubled G39 port and $K+X$ is converted to Gamma by the proved
+Fourier--Gamma bridge.  Hence (50) proves (48) at the level of unnormalized
+source coefficients.
+
+The remaining referee-level requirement is metric: the map carrying $Kf$ to
+$W_{\Hod}$ and the left side of (50) to the doubled current (27e) must be shown
+to be isometric for the physical current norm.  The fixed-parameter CCM
+theorem gives a hilbertian isomorphism, not this isometry; its normalization
+derivative is (25)--(26).  Therefore the exact final identity to check is
+\begin{equation}
+ \mathcal I_T(\mathcal U_{\rm PF}-I)Kf
+ =(\mathcal U_{\rm cur}-I)\mathcal I_TKf,\qquad
+ \mathcal I_T^*\mathcal I_T=I,                          \tag{51}
+\end{equation}
+with $\mathcal I_TKf=W_{\Hod}$.  If (51) is established from the source
+normalizations, (48)--(49) prove G40 completely.  Without the second equality
+in (51), replacing a hilbertian transport by an isometry would assume the
+missing energy statement.
+
+\section{Restricted polar normalization on the Sonin space}
+
+The metric part of (51) can in fact be obtained directly from the available
+CCM normalizations, provided the polar normalization is performed after
+restriction to the Sonin space.
+
+Let $\mathcal S_T$ be the archimedean Sonin space at the fixed cutoff and
+$\mathcal S_T^S$ its semilocal counterpart.  Write
+\[
+ \Theta_T:=\theta_S|_{\mathcal S_T}:\mathcal S_T
+ \longrightarrow\mathcal S_T^S.
+\]
+The CCM stability theorem says that $\Theta_T$ is bounded and bijective with
+bounded inverse, and the Fourier intertwining says
+\begin{equation}
+ \mathcal F_S\Theta_T=\Theta_T\mathcal F_T.              \tag{52}
+\end{equation}
+Define the restricted Gram and its polar normalization by
+\begin{equation}
+ D_T:=\Theta_T^*\Theta_T>0,\qquad
+ \mathcal I_T:=\Theta_TD_T^{-1/2}.                       \tag{53}
+\end{equation}
+
+\begin{theorem}[Sonin polar isometry --- \PROVED]
+The operator $D_T$ commutes with the restricted Fourier symmetry
+$\mathcal F_T$, the operator $D_T^{-1/2}$ preserves $\mathcal S_T$, and
+\begin{align}
+ \mathcal I_T^*\mathcal I_T&=I_{\mathcal S_T},           \tag{54}\\
+ \mathcal F_S\mathcal I_T&=\mathcal I_T\mathcal F_T.    \tag{55}
+\end{align}
+Thus $\mathcal I_T$ is a source-defined unitary from $\mathcal S_T$ onto
+$\mathcal S_T^S$; no positivity statement from row (d) is used.
+\end{theorem}
+
+\begin{proof}
+Both Fourier transforms are unitary and (52) holds.  Hence
+\[
+ \mathcal F_T^*D_T\mathcal F_T
+ =\mathcal F_T^*\Theta_T^*\Theta_T\mathcal F_T
+ =\Theta_T^*\mathcal F_S^*\mathcal F_S\Theta_T
+ =D_T.
+\]
+Therefore $D_T$ and every bounded Borel function of $D_T$, in particular
+$D_T^{-1/2}$, commute with $\mathcal F_T$.  Since $D_T$ is an operator on the
+already restricted space $\mathcal S_T$, its functional calculus preserves
+that space.  Equation (54) follows directly:
+\[
+ \mathcal I_T^*\mathcal I_T
+ =D_T^{-1/2}\Theta_T^*\Theta_TD_T^{-1/2}=I.
+\]
+Finally, using (52) and commutation with $D_T^{-1/2}$,
+\[
+ \mathcal F_S\mathcal I_T
+ =\mathcal F_S\Theta_TD_T^{-1/2}
+ =\Theta_T\mathcal F_TD_T^{-1/2}
+ =\mathcal I_T\mathcal F_T.
+\]
+Surjectivity follows from the invertibility of $\Theta_T$ and $D_T^{-1/2}$.
+\end{proof}
+
+Consequently the second equality in (51) and the unitary intertwining portion
+of the first equality are proved.  The normalization is canonical: it is the
+unitary factor in the polar decomposition of the restricted CCM map.
+
+\paragraph{Remaining identification.}
+To apply (54)--(55) to (48), one must still prove that the source tangent vector
+$Kf$ and the physical Hodge current use these restricted Sonin coordinates:
+\begin{equation}
+ \boxed{\mathcal I_TKf=W_{\Hod}.}                        \tag{56}
+\end{equation}
+Equation (56) is not the normalization identity; it is the observation
+identity between the Poisson tangent feature and the finite-threshold Hodge
+feature.  The multiplier/connection calculations (24)--(27) and G39 prove its
+logarithmic boundary component, but equality of the complete feature vectors
+must be checked from the definitions of $K$, $R$, and $\cL$.  Thus the
+normalization requested in (51) is closed, while the application to the
+specific Hodge current retains the explicit observation check (56).
+
+\section{Type audit of the final observation}
+
+As written, (56) suppresses two different codomains.  The polar map has type
+\[
+ \mathcal I_T:\mathcal S_T\longrightarrow\mathcal S_T^S,
+\]
+whereas the Hodge feature has type
+\[
+ W_{\Hod}:E_T\longrightarrow
+ \mathcal K_{\Hod,T}:=\overline{\Ran\cL^{1/2}R}.
+\]
+Thus a referee-level statement requires an additional map
+\begin{equation}
+ J_T:\mathcal S_T^S\longrightarrow\mathcal K_{\Hod,T}  \tag{57}
+\end{equation}
+and the correctly typed observation is
+\begin{equation}
+ J_T\mathcal I_TK_T=W_{\Hod}.                            \tag{58}
+\end{equation}
+
+\begin{theorem}[Unitary observation criterion --- \PROVED]
+Let $A:E\to\mathcal H_1$ and $B:E\to\mathcal H_2$ be bounded.  There is an
+isometry $J:\overline{\Ran A}\to\overline{\Ran B}$ satisfying $JA=B$ if and
+only if
+\begin{equation}
+ A^*A=B^*B.                                              \tag{59}
+\end{equation}
+In that case $J$ is uniquely determined on $\overline{\Ran A}$ and is unitary
+onto $\overline{\Ran B}$.
+\end{theorem}
+
+\begin{proof}
+Necessity follows from $A^*J^*JA=A^*A$.  Conversely, define $J(Ae)=Be$.
+Equation (59) shows first that this is well defined and then that it preserves
+inner products (by polarization).  It therefore extends uniquely to an
+isometry of the closed ranges, and its range is dense in and closed in
+$\overline{\Ran B}$.
+\end{proof}
+
+Apply the theorem with $A=\mathcal I_TK_T$ and $B=W_{\Hod}$.  Since
+$\mathcal I_T$ is isometric, (59) becomes
+\begin{equation}
+ \boxed{K_T^*K_T=W_{\Hod}^*W_{\Hod}=S_M'.}              \tag{60}
+\end{equation}
+Consequently the CCM polar normalization proves the isometry inside the Sonin
+transport, but it cannot by itself prove the observation into the Hodge
+current space.  The latter exists isometrically precisely when the source
+tangent Gram is the physical Hodge Gram.
+
+Equation (60) is a concrete coefficient identity to be proved from the actual
+definitions of $K_T$, $R$, and $\cL$:
+\begin{equation}
+ \boxed{K_T^*K_T=v^*R^*\cL Rv.}                         \tag{61}
+\end{equation}
+The current local dossier specifies the right side and the logarithmic
+boundary of the left side, but it does not contain a definition of $K_T$ as an
+operator into the restricted Sonin space sufficient to expand the left side.
+Therefore identifying $J_T$ by inverse engineering before proving (61) would
+simply define an isometry whose existence is equivalent to the desired Gram
+identity.
+
+\section{Audit of the symbol $K$: the midpoint candidate fails}
+
+The preceding row-(c) notes define
+\begin{equation}
+ K=\mathcal F^{-1}X\mathcal F,                           \tag{62}
+\end{equation}
+where $X$ is the position/scaling-coordinate operator.  Thus $K$ is a
+first-order unbounded operator; it was not defined as a Kolmogorov factor of
+the Hodge quadratic form.  Consequently the use of $Kf$ as though it were the
+source energy feature in (56) requires the Gram identity (60), which is not a
+formal consequence of differentiated Poisson.
+
+In fact the identity fails on the full natural domain.
+
+\begin{theorem}[Order mismatch no-go --- \PROVED]
+Let $K=\mathcal F^{-1}X\mathcal F$ on $L^2(\mathbb R)$ and let
+$G_\Gamma$ be the archimedean Weil operator whose Fourier multiplier has
+logarithmic growth.  Then no isometry $J$ can satisfy
+\begin{equation}
+ J Kf=G_\Gamma^{1/2}f                              \tag{63}
+\end{equation}
+for all functions in a common invariant core.  In particular
+$K^*K\ne G_\Gamma$ and the proposed observation (56) cannot hold with the
+row-(c) operator $K$.
+\end{theorem}
+
+\begin{proof}
+By unitarity of Fourier,
+\[
+ K^*K=\mathcal F^{-1}X^2\mathcal F.
+\]
+Choose normalized Fourier-localized functions $f_n$ supported where
+$|x-n|\le1$.  Then
+\[
+ \langle K^*Kf_n,f_n\rangle=n^2+O(n).
+\]
+The Gamma multiplier obtained from the logarithmic derivative of the Gamma
+factor is $O(\log(2+|x|))$; hence
+\[
+ \langle G_\Gamma f_n,f_n\rangle=O(\log n).
+\]
+The two quadratic forms cannot agree.  If (63) held with $J$ isometric, their
+norm squares would agree for every $f_n$, a contradiction.
+\end{proof}
+
+The finite Euler terms do not repair the order mismatch: at a fixed threshold
+they are a finite sum of bounded translations, hence contribute $O(1)$ on the
+sequence above.  Therefore the full finite-threshold Hodge energy still cannot
+be $K^*K$.
+
+\paragraph{Consequence for G40.}
+The unitary midpoint theorem (44)--(47) is correct, but its application
+(48)--(51) with the row-(c) vector $Kf$ is \AUDIT{} and cannot be used as a
+proof of G40.  Differentiated Poisson proves a connection/amplitude identity,
+not equality of source and Hodge energy features.  A valid midpoint proof
+would require an independently constructed feature $B_T$ satisfying
+\[
+ B_T^*B_T=S_M'
+\]
+and a source-defined unitary acting on its range whose difference port is the
+G39 current.  Taking $B_T=(S_M')^{1/2}$ without deriving that unitary from the
+Gamma--Tate network would merely restate the missing theorem.
+
+\section{Unitary-orbit audit of the G39 auxiliary port}
+
+For vectors/operators $W,Z$ in one Hilbert current space, a unitary $U$ can
+satisfy
+\begin{equation}
+ Z=-\frac12(I-U)W                                      \tag{64}
+\end{equation}
+only if
+\begin{equation}
+ W^*Z+Z^*W+2Z^*Z=0.                                    \tag{65}
+\end{equation}
+Indeed $UW=W+2Z$, and (65) is exactly
+$(W+2Z)^*(W+2Z)=W^*W$.
+
+\begin{proposition}[Orthogonal-port no-go --- \PROVED]
+If $Z\perp W$ and $Z\ne0$, no unitary $U$ satisfies (64).
+\end{proposition}
+
+\begin{proof}
+Under orthogonality, (65) reduces to $2Z^*Z=0$, a contradiction.
+\end{proof}
+
+The G39 construction (27e) was adjoined as an auxiliary direct-sum port to the
+Hodge current.  In that realization it is orthogonal to $W_{\Hod}$, so it
+cannot be the midpoint residual asserted in (48).  A successful G40 network
+must instead construct a nonorthogonal embedding
+\[
+ \jmath_T:\mathcal K_\infty^{(1)}\to\mathcal K_{\Hod,T}
+\]
+such that
+\begin{align}
+ H^*\jmath_TW_\infty&=-B_Q,\notag\\
+ W_{\Hod}^*\jmath_TW_\infty
+ +(\jmath_TW_\infty)^*W_{\Hod}
+ +2(\jmath_TW_\infty)^*\jmath_TW_\infty&=0.            \tag{66}
+\end{align}
+The first line is amplitude; G39 proves it only before this embedding.  The
+second line is the exact unitary-orbit energy constraint.  Constructing
+$\jmath_T$ from Gamma--Tate, independently of (66), would give the desired
+midpoint bridge.  Choosing it by solving (66) is equivalent to the missing
+passivity theorem.
+
+\section{Oriented-delay realization of the positive source metric}
+
+Let $E_T:L^2(-T,T)\to L^2(\mathbb R)$ be extension by zero, let $S_u$ be
+the unitary translation group on the \emph{ambient} space $L^2(\mathbb R)$,
+and let $\mathfrak F$ be an involutive unitary satisfying
+\begin{equation}
+ \mathfrak F S_u\mathfrak F=S_{-u}.                     \tag{67}
+\end{equation}
+For $u>0$ define the oriented-delay feature
+\begin{equation}
+ \mathcal B_uF:=\frac1{\sqrt2}
+ \binom{(I-S_u)F}{(I-S_{-u})F}.                         \tag{68}
+\end{equation}
+
+\begin{theorem}[Oriented-delay Fourier colligation --- \PROVED]
+Define $\widehat{\mathfrak F}$ on the doubled current space by
+\begin{equation}
+ \widehat{\mathfrak F}\binom{x}{y}
+ :=\binom{\mathfrak Fy}{\mathfrak Fx}.                 \tag{69}
+\end{equation}
+Then $\widehat{\mathfrak F}$ is an involutive unitary,
+\begin{align}
+ \mathcal B_u^*\mathcal B_uF
+ &\text{ has quadratic form }\|(I-S_u)F\|^2,           \tag{70}\\
+ \widehat{\mathfrak F}\mathcal B_u
+ &=\mathcal B_u\mathfrak F.                            \tag{71}
+\end{align}
+Consequently the midpoint currents
+\begin{equation}
+ \mathcal B_{u,\pm}:=\frac12
+ (I\pm\widehat{\mathfrak F})\mathcal B_u              \tag{72}
+\end{equation}
+satisfy the exact positive conservation law
+\begin{equation}
+ \mathcal B_u^*\mathcal B_u
+ =\mathcal B_{u,+}^*\mathcal B_{u,+}
+ +\mathcal B_{u,-}^*\mathcal B_{u,-}.                  \tag{73}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Equation (69) is plainly an involutive unitary.  Since $S_u$ is unitary,
+$\|(I-S_{-u})F\|=\|(I-S_u)F\|$, which proves (70).
+From (67),
+\[
+ \mathfrak F(I-S_{-u})=(I-S_u)\mathfrak F,
+ \qquad
+ \mathfrak F(I-S_u)=(I-S_{-u})\mathfrak F,
+\]
+giving (71).  Equation (73) is the unitary midpoint identity.
+\end{proof}
+
+Let
+\[
+ w_\Gamma(u)=\frac{e^{-u/2}}{1-e^{-2u}}\qquad(u>0),
+ \qquad c_n=\frac{\Lambda(n)}{\sqrt n}.
+\]
+The completed finite-threshold feature is the direct integral/sum
+\begin{equation}
+ \mathcal B_TF:=
+ \left(
+   \{w_\Gamma(u)^{1/2}\mathcal B_uF\}_{u>0},
+   \{c_n^{1/2}\mathcal B_{\log n}F\}_{n<e^{2T}}
+ \right).                                               \tag{74}
+\end{equation}
+Using the already proved Gamma delay identity, (70) gives
+\begin{equation}
+ \|\mathcal B_TF\|^2
+ =\int_0^\infty w_\Gamma(u)\|(I-S_u)F\|^2du
+ +\sum_{n<e^{2T}}c_n\|(I-S_{\log n})F\|^2.             \tag{75}
+\end{equation}
+Here the argument of every $\mathcal B_u$ is $E_TF$.  Thus $\mathcal B_T$
+is a source-defined Kolmogorov factor of the positive Euler--Gamma reference
+metric.  The direct-integral unitary obtained from (69)
+intertwines $\mathcal B_T$ with $\mathfrak F$ and gives
+\begin{equation}
+ \mathcal B_T^*\mathcal B_T
+ =\mathcal B_{T,+}^*\mathcal B_{T,+}
+ +\mathcal B_{T,-}^*\mathcal B_{T,-}.                  \tag{76}
+\end{equation}
+This construction has the correct logarithmic spectral order and replaces the
+invalid use of $K=\mathcal F^{-1}X\mathcal F$.
+
+The preceding display proves a Gram identity for the positive reference.
+It does \emph{not} identify that Gram with the independently defined Hodge
+operator $\cL$ or with $S_M'$.  Defining $\cL:=\mathcal B_T^*\mathcal B_T$
+would merely rename the reference form and would not prove compatibility
+with the old factor used by the threshold induction.  The former equations
+(76a)--(76b) are therefore withdrawn and classified as \AUDIT{}.
+
+\paragraph{Interface still to prove.}
+For G40 it remains to restrict the difference port to the harmonic newborn
+input and verify the exact identity
+\begin{equation}
+ H^*\mathcal B_{T,-}Rv=B_Q.                              \tag{78}
+\end{equation}
+Equation (78) is the required identification of the
+oriented difference port with the algebraic G39 port.  Unlike the former
+$K$-bridge, (78) has the correct logarithmic order.  It remains only a
+candidate until both its type map and its compatibility with the independently
+defined Hodge/old Gram have been constructed.
+
+\section{Authoritative balanced factorization of the supplied row (d)}
+
+We now use the definitions in the supplied
+\texttt{row-d-local-analysis.tex}.  Let $I_T=(-T,T)$, let $E_T$ denote
+extension by zero to $\mathbb R$, and put
+\[
+ S_a:=E_T^*\tau_aE_T,
+ \qquad (\tau_aF)(t)=F(t+a).
+\]
+Then $S_a^*=S_{-a}$.  For $a>0$ define the two \emph{ambient}
+zero-extension channels from $L^2(I_T)$ to $L^2(\mathbb R)$
+\begin{equation}
+ J_{a,-}F:=\frac{\tau_aE_TF-E_TF}{\sqrt2},
+ \qquad J_{a,+}F:=\frac{\tau_aE_TF+E_TF}{\sqrt2}.     \tag{79}
+\end{equation}
+They obey the exact polarization identity
+\begin{equation}
+ J_{a,-}^*J_{a,-}-J_{a,+}^*J_{a,+}
+ =-(S_a+S_{-a}).                                      \tag{80}
+\end{equation}
+Indeed $\tau_a$ is unitary on the ambient line and
+$E_T^*\tau_aE_T=S_a$.  This is the exact zero-extension factorization used
+by the supplied row (d).  Both signs receive the same diagonal energy.
+
+The Gamma multiplier in the supplied file is
+\[
+ g_\Gamma(\tau)=\Re\psi\left(\frac14+\frac{i\tau}{2}\right)
+                  -\psi\left(\frac14\right).
+\]
+The integral formula for the digamma function and the substitution $t=2u$
+give
+\begin{equation}
+ g_\Gamma(\tau)
+ =2\int_0^\infty
+ \frac{e^{-u/2}}{1-e^{-2u}}(1-\cos(\tau u))\,du.       \tag{81}
+\end{equation}
+Equivalently, on the natural form core,
+\begin{equation}
+ \langle G_{\Gamma,T}F,F\rangle
+ =\int_0^\infty\frac{e^{-u/2}}{1-e^{-2u}}
+       \|(I-\tau_u)E_TF\|_{L^2(\mathbb R)}^2\,du.     \tag{82}
+\end{equation}
+Thus $G_{\Gamma,T}\ge0$ and (82) is a source-defined Gamma Kolmogorov
+factor, not a square root chosen from the desired signed operator.
+
+Recall
+\[
+ m_0=\log\pi+\gamma+\frac\pi2+3\log2
+     =\log\pi-\psi\left(\frac14\right)>0,
+ \qquad w_n=\frac{\Lambda(n)}{\sqrt n}.
+\]
+Let $\mathcal X_T$ be the direct-sum analysis map whose components are the
+Gamma feature in (82) and $w_n^{1/2}J_{\log n,-}$, and let
+$\mathcal Y_T$ have components $m_0^{1/2}I$ and
+$w_n^{1/2}J_{\log n,+}$, for $2\le n<e^{2T}$.
+
+\begin{theorem}[Exact Gamma--Tate balanced factorization --- \PROVED]
+On the form domain of the localized primitive operator in the supplied row
+(d),
+\begin{equation}
+ A_T=\mathcal X_T^*\mathcal X_T-
+     \mathcal Y_T^*\mathcal Y_T.                       \tag{83}
+\end{equation}
+After imposing the two Tate moments, with $P_T$ the orthogonal projection
+onto $\mathcal P_T=\ker M_-\cap\ker M_+$,
+\begin{equation}
+ P_TA_TP_T=(\mathcal X_TP_T)^*(\mathcal X_TP_T)
+           -(\mathcal Y_TP_T)^*(\mathcal Y_TP_T).      \tag{84}
+\end{equation}
+In particular this gives explicit, source-defined meanings to the abstract
+factors $X_T,Y_T$ used in the return calculation of the supplied file.
+\end{theorem}
+
+\begin{proof}
+The Gamma and constant pieces of (83) are respectively
+$G_{\Gamma,T}$ and $-m_0I$.  For every prime power, (80), multiplied by
+$w_n$, is exactly
+$-w_n(S_{\log n}+S_{-\log n})$.  Summing gives the displayed definition of
+$A_T$.  Compression by $P_T$ proves (84).
+\end{proof}
+
+The factorization also isolates the missing theorem without any notation
+from v83--v86.
+
+\begin{theorem}[Exact Douglas form of the remaining gate --- \PROVED]
+The following are equivalent:
+\begin{enumerate}
+\item $P_TA_TP_T\ge0$;
+\item $\|\mathcal Y_TP_TF\|\le\|\mathcal X_TP_TF\|$ for every $F$;
+\item there is a contraction
+\[
+ C_T:\overline{\Ran(\mathcal X_TP_T)}
+       \longrightarrow\overline{\Ran(\mathcal Y_TP_T)}
+ \]
+such that $C_T\mathcal X_TP_T=\mathcal Y_TP_T$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The equivalence of the first two statements is (84).  The inequality makes
+$C_T(\mathcal X_TP_TF):=\mathcal Y_TP_TF$ well-defined and contractive on
+the range; continuity extends it to the closure.  Conversely such a
+contraction gives the norm inequality.
+\end{proof}
+
+There is a useful refinement: the source angular object exists before its
+contractivity is known.
+
+\begin{theorem}[Canonical source angular operator --- \PROVED]
+The Gamma feature in $\mathcal X_T$ is injective.  Hence the rule
+\begin{equation}
+ \mathfrak C_T^{\rm src}(\mathcal X_TP_TF)
+ :=\mathcal Y_TP_TF                                    \tag{84a}
+\end{equation}
+defines a linear operator on $\Ran(\mathcal X_TP_T)$ without assuming row
+(d).  In the sense of sesquilinear forms on source vectors, its defect pulls
+back to the primitive operator:
+\begin{equation}
+ \langle P_TA_TP_TF,G\rangle
+ =\langle\mathcal X_TP_TF,\mathcal X_TP_TG\rangle
+ -\langle\mathfrak C_T^{\rm src}\mathcal X_TP_TF,
+          \mathfrak C_T^{\rm src}\mathcal X_TP_TG\rangle. \tag{84b}
+\end{equation}
+For every old/new decomposition of the primitive source, restriction of
+(84a) gives the same old columns as (83); thus its compatibility with the
+authoritative old factor is automatic.  It extends to a contraction on the
+closed range if and only if row (d) holds at $T$.
+\end{theorem}
+
+\begin{proof}
+By (81), $g_\Gamma(\tau)>0$ for every $\tau\ne0$.  If the Gamma feature of
+$F$ vanishes, Plancherel gives
+$g_\Gamma(\tau)|\widehat{E_TF}(\tau)|^2=0$ almost
+everywhere.  An $L^2$ function supported at the singleton $\{0\}$ is zero,
+so $E_TF=0$ and $F=0$.  Therefore $\mathcal X_T$ and its restriction to
+$\mathcal P_T$ are injective, proving that (84a) is well defined.
+
+For source vectors $F,G$, the sesquilinear form of the right side of (84b)
+is
+\[
+ \langle\mathcal X_TP_TF,\mathcal X_TP_TG\rangle
+ -\langle\mathcal Y_TP_TF,\mathcal Y_TP_TG\rangle,
+\]
+which is (84) by polarization.  Restriction to old/new columns commutes with
+the source definition, proving compatibility.  Finally, bounded extension
+with norm at most one is equivalent to the norm inequality in the preceding
+theorem.
+\end{proof}
+
+Thus inverse engineering has produced a correctly typed, source-defined
+bridge rather than a square root of the desired Schur remainder.  Its
+unproved property is now a single quantitative statement,
+\begin{equation}
+ \boxed{\|\mathfrak C_T^{\rm src}\|\le1
+        \quad\hbox{for every }T>0.}                    \tag{84c}
+\end{equation}
+Within the authoritative balanced factorization, no normalization or
+old-column ambiguity remains in (84a)--(84b); the missing content is precisely
+the global passivity bound (84c).  Identification of these columns with the
+separately introduced v83--v86 Hodge factor remains subject to the Gram
+compatibility audit (41).
+
+\begin{theorem}[Correctly typed Poisson--Sonin observation --- \PROVED]
+Let $U_T^X$ be any source-defined isometry from
+$\overline{\Ran(\mathcal X_TP_T)}$ into a proposed normalized Sonin current
+space.  Define on $U_T^X\Ran(\mathcal X_TP_T)$
+\begin{equation}
+ \Pi_T^{\rm src}\,U_T^X\mathcal X_TP_TF
+ :=\mathcal Y_TP_TF.                                   \tag{86}
+\end{equation}
+Then $\Pi_T^{\rm src}$ is well defined, and
+\begin{align}
+ &\langle P_TA_TP_TF,G\rangle \notag\\
+ &\quad=
+ \langle U_T^X\mathcal X_TP_TF,U_T^X\mathcal X_TP_TG\rangle
+ -\langle\Pi_T^{\rm src}U_T^X\mathcal X_TP_TF,
+          \Pi_T^{\rm src}U_T^X\mathcal X_TP_TG\rangle. \tag{87}
+\end{align}
+The observation $\Pi_T^{\rm src}$ extends contractively to the closed current
+space if and only if row (d) holds at $T$.  Requiring it to be isometric would
+instead force $P_TA_TP_T=0$.
+\end{theorem}
+
+\begin{proof}
+Injectivity of $\mathcal X_TP_T$ and isometry of $U_T^X$ make (86) well
+defined.  Isometry and (84b) give (87).  The contractive-extension criterion
+is exactly (84c).  If $\Pi_T^{\rm src}$ were isometric, the two terms on the
+right of (87) would agree for every $F,G$, so the compressed primitive form
+would vanish identically.
+\end{proof}
+
+Thus the normalized Sonin map $\mathcal I_T$ from (53) can serve as the
+isometry $U_T^X$ only after one supplies a correctly typed source isometry
+\begin{equation}
+ V_T:\overline{\Ran(\mathcal X_TP_T)}\longrightarrow\mathcal S_T,
+ \qquad V_T^*V_T=I,                                    \tag{88}
+\end{equation}
+derived from the Gamma--Tate Gram.  The actual normalized transport is then
+$U_T^X=\mathcal I_TV_T$, and (86), not an isometric observation, is the
+correct Poisson--Sonin--Gamma--Tate diagram.  Equation (88) is the precise
+Gram/type interface absent from the supplied files.  Even after (88), the
+contractivity of (86) remains the global sign theorem.
+
+\paragraph{Audit against the Sonin metric in \texttt{main.tex}.}
+The later section ``A derived metric: the Sonin compression'' defines instead
+the positive Hilbert--Schmidt Gram
+\[
+ M(f)_{mn}=\operatorname{Tr}
+ \bigl(\vartheta(\psi_m^f)\mathbf S
+       \vartheta(\psi_n^f)^*\bigr).
+\]
+That positivity is unconditional, but the supplied manuscript explicitly
+states that comparison with the Weil form is proved only in the prime-free
+window and that the semilocal extension is not carried out.  For general
+windows it leaves open the quantitative lower-frame estimate labelled
+\texttt{eq:framebound}.  No equality in the supplied files identifies this
+$M(f)$ with $(\mathcal X_TP_T)^*(\mathcal X_TP_T)$, so it does not construct
+$V_T$ in (88).  Treating two positive Grams as identical merely because both
+come from Sonin/Gamma data would be a Gram substitution and is forbidden.
+
+\begin{theorem}[Global equivalence audit --- \PROVED]
+The following assertions are equivalent:
+\begin{enumerate}
+\item $\|\mathfrak C_T^{\rm src}\|\le1$ for every $T>0$;
+\item $P_TA_TP_T\ge0$ for every $T>0$;
+\item the Weil quadratic form has the required sign on every compactly
+supported test function satisfying the two Tate moment conditions;
+\item the Riemann hypothesis holds.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The equivalence of the first two assertions is (84b)--(84c).  Extension by
+zero identifies the union over $T$ of the primitive spaces with the compactly
+supported two-moment test core, so the second and third assertions are
+equivalent.  The equivalence of the third and fourth assertions is Weil's
+positivity criterion, with the sign convention fixed by
+$A_T=-B_{\rm nuc}$ in the supplied manuscript.
+\end{proof}
+
+This theorem is not a proof of the final sign.  It records that any derivation
+of (84c) from Poisson--Sonin data is itself a proof of RH and therefore must
+contain a new global estimate beyond the currently available local
+normalizations and intertwining identities.
+
+\begin{theorem}[No channelwise Gamma--Tate contraction --- \PROVED]
+Fix $a>0$.  For all sufficiently large $T$ there is an
+$F\in\mathcal P_T$ such that
+\begin{equation}
+ \|J_{a,+}F\|^2-\|J_{a,-}F\|^2
+ =2\Re\langle S_aF,F\rangle>0.                         \tag{89}
+\end{equation}
+Consequently a contraction implementing the global identity in the preceding
+theorem cannot be a direct sum of contractions which send each arithmetic
+difference channel $J_{a,-}$ to the corresponding sum channel $J_{a,+}$.
+It must mix different places and/or the Gamma and Tate-terminal channels.
+\end{theorem}
+
+\begin{proof}
+Choose a nonzero nonnegative smooth bump $\varphi$ supported in an interval
+of length smaller than $a/4$.  For $T$ large, choose three numbers $x_j$,
+separated from one another by more than $3a$, so that all six translates
+supporting
+\[
+ F_j(t):=\varphi(t-x_j)+\varphi(t-x_j-a),\qquad 1\le j\le3,
+\]
+lie in $I_T$ and are mutually disjoint.  The two Tate moments of the three
+$F_j$ form a $2\times3$ matrix.  Hence there is a nonzero real vector
+$c=(c_1,c_2,c_3)$ such that
+$F=\sum_jc_jF_j$ satisfies $M_-F=M_+F=0$.
+
+By the disjointness of the three pairs, cross terms between different $j$
+vanish.  Inside each pair exactly one overlap survives after translation by
+$a$, and therefore
+\[
+ \Re\langle S_aF,F\rangle
+ =\|\varphi\|^2\sum_{j=1}^3c_j^2>0.
+\]
+Expanding (79) gives (89).  A channelwise contraction would imply the
+opposite weak inequality for every primitive $F$, a contradiction.
+\end{proof}
+
+This no-go result is important for the Poisson--Sonin proposal.  Polar
+normalization of each local multiplier, even when isometric, cannot be the
+missing $C_T$.  Any successful source construction must contain a genuinely
+global off-diagonal mixing law whose Gram includes the centered atomic--
+continuous cross $Q_c$.
+
+\paragraph{Normalization audit.}
+Equations (79)--(83) use all available local normalizations: the unique
+self-dual coefficient $w_n=\Lambda(n)/\sqrt n$, the constant $m_0$, the
+complete Gamma place, and the two exact Tate moments.  They determine the
+two Grams and their signed difference, but they do not supply the contraction
+$C_T$.  Producing $C_T$ from (83) by polar decomposition is legitimate only
+after proving the norm inequality, and is therefore circular.  In the
+threshold notation of the supplied file, the same missing assertion is the
+factorization of the centered cross $Q_c$ through $D_0^{1/2}$ with unit
+shorted-capacity budget.  Hence (83) is a genuine completion of the balanced
+factorization bookkeeping, but not a proof of G40.
+
+\paragraph{Notation audit.}
+The symbol $\mathcal H_{5/4}$ occurs once in the supplied row (d), in the
+definition of $\widehat{\mathcal R}_T$, and is not defined in any of the five
+supplied files.  Formula (82) provides an explicit positive Gamma reference.
+Identifying $\mathcal H_{5/4}$ with that reference requires either a stated
+definition or a separately proved equality of forms; it must not be used
+silently in the G40 argument.
+
+The labels G39--G42 likewise do not occur in any of the five supplied files.
+In this audit they refer only to the v83--v87 decomposition.  The authoritative
+row-(d) target is (84), or equivalently the unit Douglas contraction above;
+no status assigned to a G-label may override that operator inequality.
+
+\section{Primitive-potential reduction and the continuous defect kernel}
+
+The two Tate moments admit an exact differential parametrization which
+removes the moving two-moment projection from the global estimate.  Put
+\[
+ L:=\partial_t^2-\frac14,
+ \qquad H_0^2(I_T):=\{\phi\in H^2(I_T):
+ \phi(\pm T)=\phi'(\pm T)=0\}.
+\]
+
+\begin{theorem}[Tate potential isomorphism --- \PROVED]
+The map
+\begin{equation}
+ L:H_0^2(I_T)\longrightarrow
+ \mathcal P_T=\ker M_-\cap\ker M_+                 \tag{90}
+\end{equation}
+is a continuous bijection onto the $L^2$ primitive space.  Its inverse is
+the causal Green formula
+\begin{equation}
+ \phi(t)=\int_{-T}^{t}2\sinh\!\left(\frac{t-u}{2}\right)F(u)\,du.
+                                                               \tag{91}
+\end{equation}
+After extension by zero, $L$ commutes distributionally with every ambient
+translation $\tau_a$.
+\end{theorem}
+
+\begin{proof}
+The kernel $k(x)=2\sinh(x/2)\mathbf1_{x\ge0}$ satisfies $Lk=\delta_0$.
+Thus (91) gives $L\phi=F$ and the left endpoint conditions.  For $t\ge T$ it
+equals
+\[
+ e^{t/2}\int_{-T}^{T}e^{-u/2}F(u)\,du
+ -e^{-t/2}\int_{-T}^{T}e^{u/2}F(u)\,du,
+\]
+which vanishes together with its derivative exactly when $M_-F=M_+F=0$.
+Hence its zero extension lies in $H^2(\mathbb R)$ and gives the right endpoint
+conditions.  Conversely, integration by parts twice shows that $L\phi$ has
+both moments zero for every clamped $\phi$.  The homogeneous equation
+$L\phi=0$ and the two left boundary conditions give injectivity.  Standard
+one-dimensional Green estimates give continuity of the inverse.  Constant-
+coefficient differentiation commutes with translations on distributions.
+\end{proof}
+
+Let
+\begin{equation}
+ a_T(\tau):=g_\Gamma(\tau)-m_0
+ -2\sum_{2\le n<e^{2T}}\frac{\Lambda(n)}{\sqrt n}
+        \cos(\tau\log n).                              \tag{92}
+\end{equation}
+
+\begin{theorem}[Exact continuous defect representation --- \PROVED]
+For $F=L\phi\in\mathcal P_T$,
+\begin{align}
+ \langle A_TF,F\rangle
+ &=\frac1{2\pi}\int_{\mathbb R}
+       a_T(\tau)(\tau^2+\tfrac14)^2
+       |\widehat\phi(\tau)|^2\,d\tau                 \tag{93}\\
+ &=\int_0^\infty w_\Gamma(u)
+       \|(I-\tau_u)L\phi\|^2\,du
+   -m_0\|L\phi\|^2 \notag\\
+ &\quad-\sum_{2\le n<e^{2T}}\frac{\Lambda(n)}{\sqrt n}
+       \bigl(\langle\tau_{\log n}L\phi,L\phi\rangle
+             +\langle\tau_{-\log n}L\phi,L\phi\rangle\bigr). \tag{94}
+\end{align}
+Here every function is extended by zero before translation.  Thus row (d)
+is equivalent to nonnegativity of the explicit scalar kernel (93) on Fourier
+transforms of clamped potentials; no moving projection or unspecified Hodge
+operator remains.
+\end{theorem}
+
+\begin{proof}
+On the ambient line, Plancherel turns $S_a+S_{-a}$ into multiplication by
+$2\cos(a\tau)$, and (81)--(82) give the Gamma term.  Since
+$\widehat{L\phi}(\tau)=-(\tau^2+1/4)\widehat\phi(\tau)$, this proves (93).
+Expanding the same terms before Fourier transformation gives (94).
+\end{proof}
+
+Formula (93) is not a pointwise multiplier test: $a_T$ changes sign, while
+$\widehat\phi$ belongs to the Paley--Wiener class forced by support and four
+clamped boundary conditions.  Replacing that constrained class by arbitrary
+$L^2$ Fourier data would destroy the problem.  Any new Poisson--Tate square
+decomposition must therefore act on this Paley--Wiener subspace and include
+cross-place terms; theorem (89) rules out a placewise decomposition.
+
+\subsection{The global differentiated Poisson current}
+
+On Meyer's common nuclear Fr\'echet core let $Z$ be the Zeta convolution
+operator, let $\partial$ denote multiplication by $\log x$ (the derivation of
+multiplicative convolution), and put
+\begin{equation}
+ C:=Z\partial(Z^{-1})=\sum_{n\ge2}\Lambda(n)U_n.       \tag{95}
+\end{equation}
+Let $\mathscr Jf(x)=x^{-1}f(x^{-1})$ and let $\mathcal F$ be the self-dual
+additive Fourier transform.
+
+\begin{theorem}[Differentiated Poisson mixing identity --- \PROVED]
+For every $f$ in the Poisson core
+$\mathcal H_\cap=\{f:f(0)=\mathcal Ff(0)=0\}$,
+\begin{align}
+ Z\partial f+\mathscr JZ\partial\mathcal Ff
+ &=CZf+\mathscr JCZ\mathcal Ff                         \tag{96}\\
+ &=(C+\mathscr JC\mathscr J)Zf.                        \tag{97}
+\end{align}
+Thus all Euler places and both orientations occur in one source-defined
+Poisson current before any positivity or spectral decomposition is invoked.
+\end{theorem}
+
+\begin{proof}
+The derivation rule and $C=Z\partial(Z^{-1})$ give
+$\partial Z=-CZ$.  Differentiate the Poisson identity
+$Zf=\mathscr JZ\mathcal Ff$.  Since
+$\partial\mathscr J=-\mathscr J\partial$, one obtains
+\[
+ -CZf+Z\partial f
+ =\mathscr JCZ\mathcal Ff-\mathscr JZ\partial\mathcal Ff,
+\]
+which is (96).  Applying $\mathscr J$ to Poisson gives
+$Z\mathcal Ff=\mathscr JZf$ and proves (97).
+\end{proof}
+
+Under the self-dual critical normalization, conjugation by $\mathscr J$
+turns $U_n$ into the opposite weighted translation; consequently the right
+side of (97) is the global source representative of the symmetric arithmetic
+operator appearing in (92).  Unlike (27e), it acts on the full continuum
+Poisson core and contains cross-place mixing through $Z$.
+
+Define the unnormalized Poisson current
+\begin{equation}
+ \mathcal W_{\rm P}f:=Z\partial f+\mathscr JZ\partial\mathcal Ff. \tag{98}
+\end{equation}
+Equations (96)--(97) prove its divergence, but not its physical Gram.  The
+next required identity is the continuum metric comparison
+\begin{equation}
+ \langle\mathcal W_{\rm P}f,
+          (ZZ^*)^\dagger\mathcal W_{\rm P}f\rangle
+ \stackrel{?}{=}
+ \int_{\mathbb R}a_T(\tau)|\widehat f(\tau)|^2
+       \frac{d\tau}{2\pi}+\text{explicit Tate terminals},       \tag{99}
+\end{equation}
+with all compressions and domains made precise.  Formula (99) is recorded as
+\OPEN{}, not as an identity: $Z$ is a topological isomorphism on Meyer's
+weighted space, not a bounded invertible operator on the physical critical
+$L^2$ space, so $(ZZ^*)^\dagger$ cannot be imported without a closed-form
+domain construction.  The restricted Sonin polar normalization (53) is the
+available mechanism for such a construction, but equality with the
+Gamma--Tate Gram remains to be derived.
+
+\begin{proposition}[Poisson-current Gram homogeneity obstruction --- \PROVED]
+The divergence identity (97) cannot be converted into the signed arithmetic
+term in $A_T$ by a parameter-independent quadratic normalization of the
+Euler current alone.  More precisely, scale the contact operator in the
+right side of (97) and set
+$\mathcal W_{\rm E}(\lambda):=\lambda(C+\mathscr JC\mathscr J)Zf$.
+Its divergence is linear in $\lambda$, whereas every quadratic Gram
+\begin{equation}
+ \mathcal W_{\rm E}(\lambda)^*M\mathcal W_{\rm E}(\lambda) \tag{100}
+\end{equation}
+with $M$ independent of $\lambda$ is quadratic in $\lambda$.  Hence no
+contact-scale-stable identity of this form can equal the affine family
+$G_{\Gamma,T}-m_0I-\lambda(C+C^*)$.
+\end{proposition}
+
+\begin{proof}
+By definition
+$\mathcal W_{\rm E}(\lambda)=\lambda\mathcal W_{\rm E}(1)$.
+Therefore (100) is multiplied by $\lambda^2$, while the arithmetic
+piece of (92) is multiplied by $\lambda$.  Equality on an interval of
+$\lambda$ is impossible unless the arithmetic operator vanishes.
+\end{proof}
+
+This homogeneity argument does not rule out an isolated numerical coincidence
+at $\lambda=1$; it rules out deriving the desired linear form as a structural
+Gram identity of the differentiated Euler current.  A valid construction
+must use an affine background/cross term or, equivalently, a metric variation.
+
+The correct linear object is the first variation of the Zeta metric.  For
+the weighted Euler family
+\[
+ Z_t=\sum_{n\ge1}n^{-t/2}U_n,\qquad
+ C_t=\sum_{n\ge2}\Lambda(n)n^{-t/2}U_n,\qquad
+ G_t=Z_t^*Z_t,
+\]
+one has on the common core
+\begin{align}
+ Z_t'&=-\frac12Z_tC_t,                                 \tag{101}\\
+ G_t'&=-\frac12(C_t^*G_t+G_tC_t),                     \tag{102}\\
+ -2\frac d{dt}\|Z_tf\|^2
+ &=\langle(C_t^*G_t+G_tC_t)f,f\rangle.                \tag{103}
+\end{align}
+These identities are algebraic consequences of the Euler logarithmic
+derivative and require no sign assumption.
+
+Thus the viable global theorem is not positivity of a current norm, but
+monotonicity of a \emph{normalized} Poisson--Sonin metric after the complete
+Gamma and Tate boundary corrections have been included.  Writing
+$\widetilde G_t$ for that still-to-be-constructed physical normalized Gram,
+the required source theorem has the form
+\begin{equation}
+ -2P_T\widetilde G_t'P_T
+ =\mathcal R_t^*\mathcal R_t,
+ \qquad t=1,                                           \tag{104}
+\end{equation}
+with $\widetilde G_t$ and $\mathcal R_t$ defined independently of the left
+side.  Equation (104) would supply the missing global square.  The raw
+$G_t=Z_t^*Z_t$ does not suffice: its derivative (102) has no automatic sign,
+and restricted Sonin polar normalization makes its internal Gram constant,
+moving the whole derivative into the cutoff/Tate embeddings.  Computing
+those boundary derivatives is therefore the remaining load-bearing step.
+
+\subsection{Exact motion and energy of the two Tate terminals}
+
+The Tate part of that boundary motion can be computed explicitly.  On
+$H_T=L^2(-T,T)$ define, for $t>0$,
+\begin{equation}
+ B_tF:=\binom{\displaystyle\int_{-T}^TF(x)e^{-tx/2}\,dx}
+                 {\displaystyle\int_{-T}^TF(x)e^{tx/2}\,dx},
+ \qquad P_t:=I-B_t^*K_t^{-1}B_t,                       \tag{105}
+\end{equation}
+where
+\begin{equation}
+ K_t:=B_tB_t^*
+ =\begin{pmatrix}
+ 2\sinh(tT)/t&2T\\2T&2\sinh(tT)/t
+ \end{pmatrix}.                                       \tag{106}
+\end{equation}
+For $t>0$ the eigenvalues of $K_t$ are
+$2\sinh(tT)/t\pm2T>0$, so the inverse is ordinary, not generalized.
+
+\begin{theorem}[Tate boundary velocity and terminal square --- \PROVED]
+For $F\in\ker B_t$,
+\begin{equation}
+ P_t'F=-B_t^*K_t^{-1}B_t'F.                            \tag{107}
+\end{equation}
+This vector is the unique minimum-norm normal velocity $\nu_t(F)$ satisfying
+the differentiated primitive constraint
+\begin{equation}
+ B_t\nu_t(F)+B_t'F=0.                                  \tag{108}
+\end{equation}
+Its energy is the explicit positive terminal form
+\begin{equation}
+ \boxed{
+ \|\nu_t(F)\|^2
+ =\langle B_t'F,K_t^{-1}B_t'F\rangle_{\mathbb C^2}.}   \tag{109}
+\end{equation}
+At $t=1$, $B_t'F$ consists exactly of the two logarithmic Tate moments
+\begin{equation}
+ \frac12\binom{-\int xF(x)e^{-x/2}\,dx}
+                    {\int xF(x)e^{x/2}\,dx}.           \tag{110}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Differentiate $P_t=I-B_t^*K_t^{-1}B_t$ and apply the result to a vector with
+$B_tF=0$.  Every term containing $B_tF$ vanishes, leaving (107).  Applying
+$B_t$ proves (108).  The normal space is $\Ran B_t^*$; hence any other
+solution of (108) differs from (107) by an element of $\ker B_t$, orthogonal
+to it.  Finally
+\[
+ \|B_t^*K_t^{-1}B_t'F\|^2
+ =\langle B_t'F,K_t^{-1}B_tB_t^*K_t^{-1}B_t'F\rangle,
+\]
+which is (109).  Direct differentiation of (105) gives (110).
+\end{proof}
+
+Writing $a_t=2\sinh(tT)/t$, $b=2T$, and
+$B_t'F=(u_-,u_+)^t$, the terminal square is completely scalar:
+\begin{equation}
+ \|\nu_t(F)\|^2
+ =\frac{|u_-+u_+|^2}{2(a_t+b)}
+  +\frac{|u_--u_+|^2}{2(a_t-b)}.                       \tag{111}
+\end{equation}
+This separates the even and odd Tate boundary modes and proves that no
+undetermined normalization constant remains in the terminal contribution.
+
+For the potential parametrization $F=L\phi$ of (90), integration by parts
+and the clamped boundary conditions give
+\begin{equation}
+ \boxed{
+ B_1'(L\phi)=\frac12
+ \binom{\displaystyle\int_{-T}^T\phi(x)e^{-x/2}\,dx}
+       {\displaystyle\int_{-T}^T\phi(x)e^{x/2}\,dx}.} \tag{111a}
+\end{equation}
+Indeed
+$L(xe^{x/2})=e^{x/2}$ and
+$L(xe^{-x/2})=-e^{-x/2}$.  Thus the two moving Tate terminals of the
+primitive vector are exactly the two ordinary exponential moments of its
+potential.  This gives a direct type-compatible link between the
+Paley--Wiener reduction (93) and the terminal Gram (109).
+
+\begin{theorem}[Kato transport of the primitive metric --- \PROVED]
+Let $M_t=M_t^*$ be a differentiable ambient metric and set
+\begin{equation}
+ \Omega_t:=[P_t',P_t].                                 \tag{112}
+\end{equation}
+Then $\Omega_t^*=-\Omega_t$.  If $U_t$ solves
+$U_t'=\Omega_tU_t$, $U_{t_0}=I$, it is unitary and transports the primitive
+spaces:
+\begin{equation}
+ P_tU_t=U_tP_{t_0}.                                    \tag{113}
+\end{equation}
+On the fixed source $P_{t_0}H_T$, the transported compression
+\begin{equation}
+ \widehat M_t:=P_{t_0}U_t^*M_tU_tP_{t_0}              \tag{114}
+\end{equation}
+satisfies
+\begin{equation}
+ \widehat M_t'
+ =P_{t_0}U_t^*P_t
+   \bigl(M_t'+[M_t,\Omega_t]\bigr)
+   P_tU_tP_{t_0}.                                      \tag{115}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The commutator of two selfadjoint operators is skew-adjoint, so the evolution
+is unitary.  Differentiating $P_t^2=P_t$ gives
+$P_t'=P_tP_t'+P_t'P_t$ and $P_tP_t'P_t=0$.  These imply
+$P_t'+[P_t,\Omega_t]=0$, which proves (113) by differentiation.  Finally,
+differentiate (114), use $U_t'=\Omega_tU_t$ and
+$(U_t^*)'=-U_t^*\Omega_t$, and insert (113); this gives (115).
+\end{proof}
+
+For the raw Zeta metric $M_t=G_t=Z_t^*Z_t$, equations (102) and (115) give
+the completely explicit primitive derivative
+\begin{equation}
+ \widehat G_t'
+ =P_{t_0}U_t^*P_t
+ \left[-\frac12(C_t^*G_t+G_tC_t)+[G_t,\Omega_t]\right]
+ P_tU_tP_{t_0}.                                       \tag{116}
+\end{equation}
+Here $P_t'$ and hence $\Omega_t$ are given by (105)--(107), so (116) has no
+unknown connection.  The remaining issue is not differentiation but the
+identification of the complete Gamma-corrected physical metric whose
+derivative equals the kernel (93), followed by a proof that the resulting
+operator in (115) is negative semidefinite.
+
+\subsection{The completed Euler--Gamma logarithmic metric}
+
+The ambient metric can be identified before taking its critical boundary
+value.  Put
+\begin{equation}
+ \Lambda_{\mathbb Q}(s):=\pi^{-s/2}\Gamma(s/2)\zeta(s),
+ \qquad s=\frac t2+i\tau,                              \tag{117}
+\end{equation}
+and, away from its zeros and poles,
+$\mathfrak M_t(\tau):=|\Lambda_{\mathbb Q}(t/2+i\tau)|^2$.
+
+\begin{theorem}[Completed logarithmic-metric identity --- \PROVED]
+For $t>2$ one has the absolutely convergent identity
+\begin{align}
+ 2\partial_t\log\mathfrak M_t(\tau)
+ &=2\Re\frac{\Lambda_{\mathbb Q}'}
+                  {\Lambda_{\mathbb Q}}(t/2+i\tau)    \tag{118}\\
+ &=\Re\psi\left(\frac t4+\frac{i\tau}{2}\right)
+   -\log\pi
+   -2\sum_{n\ge2}\Lambda(n)n^{-t/2}
+          \cos(\tau\log n).                           \tag{119}
+\end{align}
+At $t=1$, the Gamma part of (119) is exactly
+$g_\Gamma(\tau)-m_0$.  When (119) is continued distributionally to $t=1$
+and paired with $|\widehat F(\tau)|^2$ for
+$F\in\mathcal P_T$, the polar terms at $s=0,1$ vanish by the two Tate
+moments, and every arithmetic term with $\log n\ge2T$ pairs to zero by
+support.  The resulting pairing is precisely
+$\langle A_TF,F\rangle$ in (93).
+\end{theorem}
+
+\begin{proof}
+Differentiate the logarithm of (117).  Since $ds/dt=1/2$, differentiating
+$\log|\Lambda_{\mathbb Q}(s)|^2$ gives
+$\Re(\Lambda_{\mathbb Q}'/\Lambda_{\mathbb Q})(s)$;
+the extra factor two yields (118).  The logarithmic derivative of the Gamma
+factor is
+$-\tfrac12\log\pi+\tfrac12\psi(s/2)$, while
+$\zeta'/\zeta(s)=-\sum_{n\ge2}\Lambda(n)n^{-s}$ for
+$\Re s>1$.  Taking twice the real part proves (119).
+
+At $t=1$,
+$\Re\psi(1/4+i\tau/2)-\log\pi=g_\Gamma(\tau)-m_0$ by
+the definitions in the supplied row (d).  The distributional continuation
+is the standard explicit-formula continuation already realized in row (c).
+The Mellin values at $0$ and $1$ are the two moments $M_-,M_+$, so their
+polar contributions vanish.  Finally
+$\langle\tau_{\log n}F,F\rangle=0$ when $\log n\ge2T$ (endpoint equality is
+null), which truncates the arithmetic sum and gives (92)--(93).
+\end{proof}
+
+This theorem supplies the previously unspecified complete physical
+Gamma--Euler metric variation.  It does not yet supply a positive Hilbert
+boundary metric at $t=1$: $\mathfrak M_1$ vanishes at critical-line zeros,
+and continuation from $t>2$ crosses possible zeros with real part greater
+than $1/2$.  A proof of (104) must therefore construct a source boundary
+space whose positive defect kernel includes exactly the residues encountered
+in this continuation, rather than applying an inverse to
+$\mathfrak M_1$ pointwise.
+
+\begin{proposition}[Three-lines inverse-metric obstruction --- \PROVED]
+Let $H$ be a Hilbert-valued holomorphic function in a vertical strip, with
+the usual Hardy decay.  The function
+\begin{equation}
+ N_H(\sigma):=\int_{\mathbb R}|H(\sigma+i\tau)|^2\,d\tau \tag{120}
+\end{equation}
+is log-convex.  If it is symmetric about $\sigma=1/2$, its right derivative
+at the center is nonnegative.  Applied to
+$H(s)=\Lambda_{\mathbb Q}(s)\Phi(s)$, however, this controls a derivative
+weighted by $|\Lambda_{\mathbb Q}|^2$ and does not imply (93).
+
+To obtain the unweighted physical logarithmic derivative from (120), the
+boundary datum would have to be divided by $\Lambda_{\mathbb Q}$ (up to an
+outer factor of the same modulus).  Such a division is holomorphic across a
+domain only if the datum cancels every zero there; requiring this for the
+full primitive test space is equivalent to requiring the relevant domain to
+be zero-free.  Therefore a bare three-lines/functional-equation argument
+cannot prove row (d) without importing the missing zero information.
+\end{proposition}
+
+\begin{proof}
+Log-convexity of Hardy $L^2$ norms is the Hilbert-valued three-lines theorem;
+symmetry makes the center a minimum.  Differentiating
+$|\Lambda_{\mathbb Q}\Phi|^2$ produces the logarithmic derivative multiplied
+by $|\Lambda_{\mathbb Q}Phi|^2$, together with the derivative of $\Phi$.
+The target (93) instead has the arbitrary Paley--Wiener weight
+$|\widehat F|^2$.  Matching the weights requires boundary modulus
+$|\Phi|=|\widehat F|/|\Lambda_{\mathbb Q}|$.  A holomorphic quotient with
+this prescribed cancellation cannot exist for arbitrary $F$ at a zero of
+$\Lambda_{\mathbb Q}$.  Hence the cancellation step assumes the missing
+zero-free assertion.
+\end{proof}
+
+\subsection{Residue boundary space and its exact signature}
+
+For $F\in\mathcal P_T$ use the entire Mellin--Fourier transform
+\begin{equation}
+ \Phi_F(z):=\int_{-T}^TF(t)e^{izt}\,dt,                \tag{121}
+\end{equation}
+and for a nontrivial zero $\rho=\beta+i\gamma$ put
+$z_\rho=(\rho-1/2)/i=\gamma-i(\beta-1/2)$.  The involution
+$\rho\mapsto1-\bar\rho$ becomes $z\mapsto\bar z$.
+
+\begin{theorem}[Exact residue Krein boundary --- \PROVED]
+After the two polar modes have been killed by $F\in\mathcal P_T$, the
+distributional boundary value in (118)--(119) has the source realization
+\begin{equation}
+ \langle A_TF,F\rangle
+ =\sum_{\mathcal O}\langle
+     \mathcal E_{\mathcal O}F,
+     J_{\mathcal O}\mathcal E_{\mathcal O}F\rangle,   \tag{122}
+\end{equation}
+where the sum is over functional-equation orbits of nontrivial zeros,
+with multiplicity.  For a critical-line orbit $\rho=1/2+i\gamma$,
+\begin{equation}
+ \mathcal K_{\mathcal O}=\mathbb C,\qquad
+ J_{\mathcal O}=1,\qquad
+ \mathcal E_{\mathcal O}F=\Phi_F(\gamma).             \tag{123}
+\end{equation}
+For an off-line two-point orbit
+$\{\rho,1-\bar\rho\}$,
+\begin{equation}
+ \mathcal K_{\mathcal O}=\mathbb C^2,\qquad
+ J_{\mathcal O}=\begin{pmatrix}0&1\\1&0\end{pmatrix},\qquad
+ \mathcal E_{\mathcal O}F=
+ \binom{\Phi_F(z_\rho)}{\Phi_F(\bar z_\rho)}.         \tag{124}
+\end{equation}
+In the eigenbasis of $J_{\mathcal O}$ its contribution is
+\begin{equation}
+ \frac12|\Phi_F(z_\rho)+\Phi_F(\bar z_\rho)|^2
+ -\frac12|\Phi_F(z_\rho)-\Phi_F(\bar z_\rho)|^2.     \tag{125}
+\end{equation}
+Thus the source residue boundary is canonically Krein; its metric is Hilbert
+on every residue fiber if and only if every nontrivial zero lies on the
+critical line.
+\end{theorem}
+
+\begin{proof}
+The nuclear Lefschetz identity in the supplied row (c), equivalently the
+contour shift of (118), identifies the primitive explicit form with the sum
+of the autocorrelation transform at the nontrivial zeros.  The entire
+continuation of the real-line identity
+$\widehat{F*F^*}(\tau)=|\Phi_F(\tau)|^2$ is
+\[
+ \Phi_F(z)\overline{\Phi_F(\bar z)}.
+\]
+For a fixed critical zero this is $|\Phi_F(\gamma)|^2$, giving (123).  The
+two members of an off-line functional-equation orbit contribute
+\[
+ \Phi_F(z)\overline{\Phi_F(\bar z)}
+ +\Phi_F(\bar z)\overline{\Phi_F(z)},
+\]
+which is exactly the Gram in (124).  Diagonalizing the exchange matrix gives
+(125).  Absolute convergence for compactly supported autocorrelations is the
+convergence statement used by the supplied nuclear explicit formula.
+\end{proof}
+
+The negative vector in (125) is not an artifact of coordinates.  If
+$z\ne\bar z$ and neither point is one of the two polar evaluation points,
+the map
+\begin{equation}
+ F\longmapsto\bigl(M_-F,M_+F,Phi_F(z),\Phi_F(\bar z)\bigr) \tag{126}
+\end{equation}
+from $L^2(-T,T)$ onto $\mathbb C^4$ is surjective: its four representing
+exponentials have distinct exponents and are linearly independent on every
+nonempty interval.  Consequently the restricted evaluation
+$F\in\mathcal P_T\mapsto(\Phi_F(z),\Phi_F(\bar z))$ is onto
+$\mathbb C^2$.  Hence each off-line residue fiber contains a genuine negative
+direction already on the primitive source.  A positive Hodge realization
+must eliminate that fiber structurally; it cannot turn (124) positive by a
+change of basis.
+
+\subsection{A new global Hodge object: the unitarized Poisson quotient}
+
+Let $\pi_0(u)$ denote the centrally normalized scaling action on the
+source-defined quotient $\mathcal H_-^0=\mathcal H_-/Z\mathcal H_\cap$ of
+the supplied row (c); central normalization means that the spectral
+character attached to a zero $\rho$ is $e^{u(\rho-1/2)}$.
+
+\begin{theorem}[Amenable unitarization Hodge bridge --- \PROVED]
+Assume that $\mathcal H_-^0$ admits a Hilbert completion
+$\mathscr H_{\rm P}$ satisfying the following source conditions:
+\begin{enumerate}
+\item the quotient map and the nuclear test-action of row (c) extend
+continuously to a dense subspace of $\mathscr H_{\rm P}$;
+\item $\pi_0(u)$ extends to a strongly continuous group on
+$\mathscr H_{\rm P}$;
+\item there is a source-derived constant $M<\infty$ such that
+\begin{equation}
+ \sup_{u\in\mathbb R}\|\pi_0(u)\|\le M.               \tag{127}
+\end{equation}
+\end{enumerate}
+Then there is an equivalent positive Hilbert metric
+$\langle\cdot,\cdot\rangle_{\rm Hod}$ on $\mathscr H_{\rm P}$ for which
+every $\pi_0(u)$ is unitary.  Consequently the generator of the centered
+scaling group is skew-adjoint, every transpose eigencharacter supplied by
+row (c) has exponent in $i\mathbb R$, and all nontrivial zeros satisfy
+$\Re\rho=1/2$.
+\end{theorem}
+
+\begin{proof}
+Let $m$ be a translation-invariant mean on $L^\infty(\mathbb R)$ and define
+\begin{equation}
+ \langle x,y\rangle_{\rm Hod}
+ :=m_u\,\langle\pi_0(u)x,\pi_0(u)y\rangle_{\mathscr H_{\rm P}}. \tag{128}
+\end{equation}
+Uniform boundedness gives the upper estimate
+$\|x\|_{\rm Hod}\le M\|x\|$.  Since (127) also applies to $-u$,
+$\|\pi_0(u)x\|\ge M^{-1}\|x\|$, giving the lower estimate
+$\|x\|_{\rm Hod}\ge M^{-1}\|x\|$.  Thus (128) is a positive equivalent
+Hilbert norm.  Translation invariance of $m$ makes the group unitary in this
+metric.  Stone's theorem makes its generator skew-adjoint.  A character
+$e^{u(\rho-1/2)}$ belonging to the transpose spectrum of a unitary group is
+bounded for both signs of $u$, hence $\Re(\rho-1/2)=0$.
+\end{proof}
+
+The new object is (128): it is constructed without selecting spectral
+subspaces and, once (127) is proved, supplies the missing positive Hodge
+metric directly.  The load-bearing analytic theorem has therefore been
+reduced to the source estimate (127), together with construction of the
+Hilbert completion.  Sonin compression is a natural candidate norm, but the
+supplied files only prove positivity of each compressed trace; they do not
+prove that the centered scaling action descends to the quotient as a
+uniformly bounded group.
+
+There is an equivalent closed-range formulation.  If the image
+$Z\mathcal H_\cap$ is a closed invariant subspace in a critical Hilbert
+realization on which centered scaling is unitary, then the Hilbert quotient
+is itself unitary and (127) holds with $M=1$.  Conversely, failure of closed
+range is exactly where an off-line hyperbolic residue plane can enter the
+nuclear quotient without contradicting unitarity of the ambient scaling
+action.  Thus a source proof of critical closed range for the Poisson map is
+a concrete alternative formulation of the missing Hodge theorem.
+
+\begin{theorem}[Local Witt Hilbert completion and global Zeta obstruction
+--- \PROVED]
+Give the algebraic Witt orbit the Hilbert norm for which
+$\{\phi_r\}_{r\ge1}$ is orthonormal, and give the Dirichlet coefficient
+space the norm of $\ell^2(\mathbb N)$.  Then the row-(b) intertwiner
+\begin{equation}
+ J_2\phi_r=\delta_r                                      \tag{129}
+\end{equation}
+extends unitarily, and every $V_n$ (equivalently, convolution by $\delta_n$)
+is an isometry.  However Meyer's global Zeta sum has no bounded extension to
+this Hilbert completion, since
+\begin{equation}
+ Z\delta_1=\sum_{n\ge1}\delta_n\notin\ell^2(\mathbb N). \tag{130}
+\end{equation}
+Thus the positive Hilbert structure available in row (b) does not by itself
+construct the Hilbert Poisson quotient required in (127).
+\end{theorem}
+
+\begin{proof}
+Equation (129) maps one orthonormal basis to the other.  The rule
+$V_n\phi_r=\phi_{nr}$ maps the basis injectively to an orthonormal subset,
+so it is isometric; the same holds for
+$\delta_r\mapsto\delta_{nr}$.  Formula (130) follows directly from the
+definition $Z=\sum_nU_n$, and its coefficient sequence has infinite squared
+norm.  A bounded operator must send $\delta_1$ to a Hilbert vector, proving
+the obstruction.
+\end{proof}
+
+For $t>1$, the weighted cyclic vector
+\begin{equation}
+ Z_t\delta_1=\sum_{n\ge1}n^{-t/2}\delta_n             \tag{131}
+\end{equation}
+does lie in $\ell^2$, with norm squared $\zeta(t)$.  Its divergence as
+$t\downarrow1$ is exactly the critical loss of the naive Hilbert completion.
+Any successful completion must renormalize this pole while retaining the
+two-dimensional Tate quotient and the nontrivial residue boundary; simply
+discarding the divergent cyclic direction would also discard the Poisson
+extension data.
+
+\begin{theorem}[Critical gcd boundary state --- \PROVED]
+For $t>1$ put
+\begin{equation}
+ e_t:=\zeta(t)^{-1/2}\sum_{n\ge1}n^{-t/2}\delta_n
+ \in\ell^2(\mathbb N).                                 \tag{132}
+\end{equation}
+Then, for all $m,n\ge1$ and $g=(m,n)$,
+\begin{equation}
+ \langle V_ne_t,V_me_t\rangle
+ =\left(\frac{mn}{g^2}\right)^{-t/2}.                 \tag{133}
+\end{equation}
+Consequently the critical kernel
+\begin{equation}
+ K(m,n):=\lim_{t\downarrow1}\langle V_ne_t,V_me_t\rangle
+ =\frac{(m,n)}{\sqrt{mn}}                              \tag{134}
+\end{equation}
+is positive definite.  It extends to the group positive-definite function
+on $\mathbb Q_+^\times$
+\begin{equation}
+ \varphi(q)=\prod_p p^{-|v_p(q)|/2}.                   \tag{135}
+\end{equation}
+Its GNS representation is a unitary representation of
+$\mathbb Q_+^\times$, carries a cyclic vector $\Omega$, and satisfies
+$\langle U_n\Omega,U_m\Omega\rangle=K(m,n)$.
+\end{theorem}
+
+\begin{proof}
+The supports of $V_ne_t$ and $V_me_t$ meet when $nr=ms$.  Writing
+$m=ga$, $n=gb$ with $(a,b)=1$, all solutions are $r=ak$, $s=bk$.  Therefore
+\[
+ \langle V_ne_t,V_me_t\rangle
+ =\frac1{\zeta(t)}\sum_{k\ge1}(ak)^{-t/2}(bk)^{-t/2}
+ =(ab)^{-t/2},
+\]
+which is (133) and tends to (134).  A pointwise limit of positive-definite
+kernels is positive definite.  Since
+$K(m,n)=\varphi(m^{-1}n)$ and (135) is the corresponding reduced-prime
+factorization, the GNS theorem gives the unitary group representation.
+\end{proof}
+
+This boundary is fully explicit.  For each prime let $r_p=p^{-1/2}$ and put
+\begin{equation}
+ d\mu_p(e^{i\theta})
+ :=\frac{1-r_p^2}{|1-r_pe^{i\theta}|^2}\frac{d\theta}{2\pi}. \tag{136}
+\end{equation}
+Its Fourier moments are
+$\int e^{ik\theta}d\mu_p=r_p^{|k|}$.  Hence the GNS space in the theorem is
+realized by the infinite product probability space
+\begin{equation}
+ \mathscr H_{\gcd}:=L^2\left(\prod_p\mathbb T,
+                              \bigotimes_p\mu_p\right), \tag{137}
+\end{equation}
+with $U_q$ multiplication by
+$\prod_pz_p^{v_p(q)}$ and $\Omega=1$.  Inversion
+$q\mapsto q^{-1}$ is unitary because every $\mu_p$ is invariant under
+$z_p\mapsto\bar z_p$.
+
+The gcd boundary supplies exactly the cross-place structure absent from a
+direct sum of local ports and realizes the central coefficient
+$\langle U_n\Omega,\Omega\rangle=n^{-1/2}$.  It does not yet include the
+archimedean Gamma channel or prove that the physical observation from
+clamped potentials into $\mathscr H_{\gcd}$ has Gram (93).  That observation
+is now a concrete map to construct, rather than an unspecified positive
+space.
+
+\begin{theorem}[Gcd--Gamma reference observation --- \PROVED]
+Let $\mathcal A_T=\{n:2\le n<e^{2T},\ \Lambda(n)>0\}$ and let
+$K_T=(K(m,n))_{m,n\in\mathcal A_T}$.  This matrix is strictly positive.
+Writing $\chi_n=U_n\Omega\in\mathscr H_{\gcd}$, define
+\begin{equation}
+ \eta_n:=\sum_{m\in\mathcal A_T}
+          (K_T^{-1/2})_{mn}\chi_m.                    \tag{138}
+\end{equation}
+Then $\{\eta_n:n\in\mathcal A_T\}$ is orthonormal.  If
+$\mathscr K_{\Gamma,T}$ denotes the Gamma delay space in (82), the map
+\begin{equation}
+ \mathcal V_T^X(\mathcal X_TF):=
+ \left(
+   \{w_\Gamma(u)^{1/2}(I-\tau_u)E_TF\}_{u>0},
+   \sum_{n\in\mathcal A_T}\eta_n\otimes
+        w_n^{1/2}J_{\log n,-}F
+ \right)                                               \tag{139}
+\end{equation}
+is a source-defined isometry from
+$\overline{\Ran\mathcal X_T}$ onto its generated range in
+\begin{equation}
+ \mathscr K_T^X:=\mathscr K_{\Gamma,T}
+ \oplus(\mathscr H_{\gcd}\otimes L^2(\mathbb R)).      \tag{140}
+\end{equation}
+In particular
+\begin{equation}
+ (\mathcal V_T^X\mathcal X_T)^*
+ (\mathcal V_T^X\mathcal X_T)=\mathcal X_T^*\mathcal X_T. \tag{141}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The vectors $\chi_n$ are distinct characters on the product torus (137).
+Because the product Poisson measure has full support, a finite linear
+combination of them which vanishes in $L^2$ is the zero trigonometric
+polynomial.  Thus their Gram $K_T$ is strictly positive.  Equation (138)
+gives
+\[
+ (\langle\eta_m,\eta_n\rangle)_{m,n}
+ =K_T^{-1/2}K_TK_T^{-1/2}=I.
+\]
+Orthogonality makes the squared norm of the arithmetic component of (139)
+equal to
+$\sum_nw_n\|J_{\log n,-}F\|^2$.  Equation (82) gives equality for the Gamma
+component.  Their direct sum is precisely the defining Gram of
+$\mathcal X_T$, proving (141).
+\end{proof}
+
+This closes the Gram/type interface (88) after replacing the previously
+unspecified Sonin target by the new source-derived gcd--Gamma Hodge reference
+space (140).  It is compatible with restriction to old contact sets because
+all finite Grams are compressions of the single global kernel (134), although
+the positive square roots $K_T^{-1/2}$ themselves need not be nested.  The
+canonical object is the unorthogonalized GNS span; (138) is only a coordinate
+choice inside it.
+
+The opposite observation is defined on the same arithmetic labels by
+replacing $J_{\log n,-}$ with $J_{\log n,+}$ and adjoining the constant
+channel $m_0^{1/2}F$.  The resulting angular map is exactly
+$\mathfrak C_T^{\rm src}$ transported by $\mathcal V_T^X$.  Its
+contractivity is still (84c); the GNS construction proves that its domain
+Gram and cross-place type are correct, but does not yet prove the norm-one
+bound.
+
+\begin{theorem}[Global gcd-oriented midpoint colligation --- \PROVED]
+Let $I_T=\mathcal A_T\times\{+,-\}$ and put
+$\chi_{n,+}=U_n\Omega$, $\chi_{n,-}=U_{n^{-1}}\Omega$.  Let
+$\mathbf K_T$ be their Gram matrix and define the orthonormal family
+\begin{equation}
+ \eta_{n,\epsilon}:=\sum_{(m,\delta)\in I_T}
+ (\mathbf K_T^{-1/2})_{(m,\delta),(n,\epsilon)}
+ \chi_{m,\delta}.                                      \tag{142}
+\end{equation}
+The inversion unitary $\mathfrak J_{\gcd}$ satisfies
+\begin{equation}
+ \mathfrak J_{\gcd}\eta_{n,+}=\eta_{n,-},
+ \qquad \mathfrak J_{\gcd}\eta_{n,-}=\eta_{n,+}.     \tag{143}
+\end{equation}
+Let $\mathfrak F$ be any involutive unitary on $L^2(\mathbb R)$ with
+$\mathfrak F\tau_a\mathfrak F=\tau_{-a}$, and define
+\begin{equation}
+ \mathbb U_T:=\mathfrak J_{\gcd}\otimes\mathfrak F.   \tag{144}
+\end{equation}
+The arithmetic feature
+\begin{equation}
+ \mathbb B_T^{\rm ar}F
+ :=\sum_{n\in\mathcal A_T}\frac{w_n^{1/2}}2
+ \left[
+  \eta_{n,+}\otimes(I-\tau_{\log n})E_TF
+ +\eta_{n,-}\otimes(I-\tau_{-\log n})E_TF
+ \right]                                               \tag{145}
+\end{equation}
+satisfies
+\begin{align}
+ (\mathbb B_T^{\rm ar})^*\mathbb B_T^{\rm ar}
+ &=\sum_{n\in\mathcal A_T}w_nJ_{\log n,-}^*J_{\log n,-}, \tag{146}\\
+ \mathbb U_T\mathbb B_T^{\rm ar}
+ &=\mathbb B_T^{\rm ar}\mathfrak F.                  \tag{147}
+\end{align}
+Consequently
+\begin{equation}
+ \mathbb B_T^{\rm ar}
+ =\mathbb B_{T,+}^{\rm ar}+\mathbb B_{T,-}^{\rm ar},
+ \qquad
+ (\mathbb B_T^{\rm ar})^*\mathbb B_T^{\rm ar}
+ =\sum_{\epsilon=\pm}
+   (\mathbb B_{T,\epsilon}^{\rm ar})^*
+    \mathbb B_{T,\epsilon}^{\rm ar},                  \tag{148}
+\end{equation}
+where
+$\mathbb B_{T,\pm}^{\rm ar}=\tfrac12(I\pm\mathbb U_T)
+\mathbb B_T^{\rm ar}$.
+\end{theorem}
+
+\begin{proof}
+The characters indexed by $I_T$ are distinct, so the proof used for (138)
+shows $\mathbf K_T>0$.  Inversion permutes the characters by the swap
+$P(n,+)=(n,-)$, hence $P\mathbf K_TP=\mathbf K_T$.
+Functional calculus gives $P\mathbf K_T^{-1/2}P=\mathbf K_T^{-1/2}$,
+proving (143).  Orthogonality of the $\eta_{n,\epsilon}$ and equality of the
+two translation-difference norms give
+\[
+ \|\mathbb B_T^{\rm ar}F\|^2
+ =\sum_n\frac{w_n}{4}
+  \left(\|(I-\tau_{\log n})E_TF\|^2
+       +\|(I-\tau_{-\log n})E_TF\|^2\right)
+ =\sum_nw_n\|J_{\log n,-}F\|^2,
+\]
+which is (146).  Equations (143)--(144) and
+$\mathfrak F(I-\tau_a)=(I-\tau_{-a})\mathfrak F$ give (147).
+The unitary midpoint identity proves (148).
+\end{proof}
+
+Adding the Gamma-oriented feature (68), integrated with weight
+$w_\Gamma(u)$, gives a single source-defined reference current
+$\mathbb B_T^X$ with
+\begin{equation}
+ (\mathbb B_T^X)^*\mathbb B_T^X=\mathcal X_T^*\mathcal X_T, \tag{149}
+\end{equation}
+and an exact positive midpoint conservation law.  Therefore normalization,
+global cross-place typing, reference Gram and conservation are closed in this
+new gcd--Gamma colligation.  The remaining load-bearing identity is to show
+that its appropriate midpoint observation equals the opposite factor
+$\mathcal Y_T$ (including the constant and Tate-terminal channels) with no
+extra energy.  That equality would prove (84c).
+
+\begin{theorem}[M\"obius whitening of the gcd boundary --- \PROVED]
+For a finite set of primes $S$, let $m_S$ be Haar probability measure on
+$\mathbb T^S$, let $r_p=p^{-1/2}$, and put
+\begin{equation}
+ d\mu_S(z)=\prod_{p\in S}
+ \frac{1-r_p^2}{|1-r_pz_p|^2}\,dm_S(z),
+ \qquad
+ b_S(z)=\prod_{p\in S}
+ \frac{1-r_pz_p}{\sqrt{1-r_p^2}}.                     \tag{150}
+\end{equation}
+Then multiplication by $b_S$ is a unitary
+\begin{equation}
+ M_{b_S}:L^2(\mathbb T^S,m_S)longrightarrow
+          L^2(\mathbb T^S,\mu_S),                     \tag{151}
+\end{equation}
+and
+\begin{equation}
+ |b_S(z)|^2d\mu_S(z)=dm_S(z).                         \tag{152}
+\end{equation}
+The numerator of $b_S$ is the finite M\"obius Euler multiplier and its
+denominator is the unique positive normalization making it isometric.
+\end{theorem}
+
+\begin{proof}
+For each prime the Poisson density in (136) gives
+\[
+ \frac{|1-r_pz_p|^2}{1-r_p^2}
+ \frac{1-r_p^2}{|1-r_pz_p|^2}=1.
+\]
+Multiplying these identities proves (152), and integration proves (151).
+\end{proof}
+
+For the deformation $r_p(t)=p^{-t/2}$ the same construction gives
+$b_{S,t}$.  Its unnormalized numerator is exactly $a_{S,t}$ in (20), while
+the derivative of the positive denominator is real scalar.  Passing to the
+polar phase therefore yields
+\begin{equation}
+ (M_{b_{S,t}}^{\rm polar})^*
+ \partial_tM_{b_{S,t}}^{\rm polar}
+ =\frac14M_{c_{S,t}-\overline{c_{S,t}}},               \tag{153}
+\end{equation}
+which agrees with (26).  Thus the gcd boundary, finite Euler polar
+normalization and CCM Sonin normalization are three realizations of the same
+source isometry at finite $S$.
+
+What survives after whitening is not an Euler norm defect---that Hermitian
+part is exactly absorbed by the change from $m_S$ to $\mu_S$---but the motion
+of the Poisson/cutoff observation inside the whitened space.  This confirms
+from a second construction that the remaining G40 term must be a boundary
+second fundamental form, now combining (107)--(116) with the finite-product
+measure variation in (150).
+
+\begin{theorem}[Centered Euler score and exact Fisher budget --- \PROVED]
+Let $r_p(t)=p^{-t/2}$ and let $\mu_{p,t}$ be the Poisson measure (136) with
+$r_p$ replaced by $r_p(t)$.  Its logarithmic score is
+\begin{equation}
+ \sigma_{p,t}(z):=\partial_t\log\frac{d\mu_{p,t}}{dm}(z)
+ =(\log p)\left[
+ \frac{r_p(t)^2}{1-r_p(t)^2}
+ -\Re\frac{r_p(t)z}{1-r_p(t)z}
+ \right].                                              \tag{154}
+\end{equation}
+It is centered and has the exact Fisher energy
+\begin{equation}
+ \int_{\mathbb T}\sigma_{p,t}\,d\mu_{p,t}=0,
+ \qquad
+ \int_{\mathbb T}|\sigma_{p,t}|^2d\mu_{p,t}
+ =\frac{(\log p)^2r_p(t)^2}
+        {2(1-r_p(t)^2)^2}.                             \tag{155}
+\end{equation}
+For a finite set $S$, the product score
+$\sigma_{S,t}=\sum_{p\in S}\sigma_{p,t}$ satisfies
+\begin{equation}
+ \|\sigma_{S,t}\|_{L^2(\mu_{S,t})}^2
+ =\sum_{p\in S}\frac{(\log p)^2r_p(t)^2}
+        {2(1-r_p(t)^2)^2}.                             \tag{156}
+\end{equation}
+Moreover, for every differentiable observable $H_t$,
+\begin{equation}
+ \partial_t\int H_t\,d\mu_{S,t}
+ =\int\partial_tH_t\,d\mu_{S,t}
+  +\int(H_t-\mathbb E_tH_t)\sigma_{S,t}\,d\mu_{S,t}. \tag{157}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Differentiate the density in (150), using
+$r_p'=-(\log p)r_p/2$, to obtain (154).  The Poisson moments are
+$\int z^k d\mu_{p,t}=r_p(t)^k$ for $k\ge0$, so the expression is centered.
+Put $r=r_p(t)$ and $W=rz/(1-rz)=\sum_{k\ge1}r^kz^k$.
+The same moments give
+\[
+ \mathbb EW=\frac{r^2}{1-r^2},\qquad
+ \operatorname{Var}(\Re W)=\frac{r^2}{2(1-r^2)^2}.
+\]
+This proves (155).  Independence makes distinct prime scores orthogonal and
+gives (156).  Differentiation under the finite product integral gives (157);
+centering the second term uses $\mathbb E_t\sigma_{S,t}=0$.
+\end{proof}
+
+Expanding (154),
+\begin{equation}
+ \sigma_{p,t}(z)
+ =(\log p)\sum_{k\ge1}r_p(t)^k
+       \bigl(r_p(t)^k-\Re z^k\bigr),                  \tag{158}
+\end{equation}
+so it contains every prime power with the central coefficient and subtracts
+exactly its Poisson expectation.  Formula (157) is therefore a probability-
+space realization of the centered atomic cross denoted $Q_c$ in the supplied
+threshold analysis.  Cauchy--Schwarz gives the sharp covariance estimate
+\begin{equation}
+ |\operatorname{Cov}_t(H,\sigma_{S,t})|^2
+ \le\operatorname{Var}_t(H)\,
+      \|\sigma_{S,t}\|_2^2.                           \tag{159}
+\end{equation}
+To finish G40 by this route one must identify the old defect form $D_0$ with
+the relevant conditional variance and show that the born/reference
+normalization makes the Fisher factor in (159) exactly the available unit
+budget.  The score and its complete prime-power budget are now explicit;
+that final variance identification remains \OPEN{}.
+
+\begin{theorem}[Exact arithmetic innovation budget --- \PROVED]
+Order the finite contact characters by their integer label.  Let
+$\mathscr E_{N-1}$ be the span of the characters $\chi_m=U_m\Omega$ with
+$\Lambda(m)>0$ and $m<N$, and suppose $\Lambda(N)>0$.  Write $K_{N-1}$ for
+their Gram matrix and
+\begin{equation}
+ k_N=(\langle\chi_m,\chi_N\rangle)_{m<N},
+ \qquad
+ \kappa_N:=1-k_N^*K_{N-1}^{-1}k_N.                    \tag{160}
+\end{equation}
+Then
+\begin{equation}
+ 0<\kappa_N\le1,
+ \qquad
+ \|P_{\mathscr E_{N-1}}\chi_N\|^2
+ =k_N^*K_{N-1}^{-1}k_N\le1,                           \tag{161}
+\end{equation}
+and the normalized innovation
+\begin{equation}
+ r_N:=\kappa_N^{-1/2}
+ \left(\chi_N-\sum_{m<N}(K_{N-1}^{-1}k_N)_m\chi_m\right) \tag{162}
+\end{equation}
+is a unit vector orthogonal to $\mathscr E_{N-1}$.
+\end{theorem}
+
+\begin{proof}
+The enlarged character family is linearly independent in the full-support
+product measure, so its Gram matrix
+\[
+ \begin{pmatrix}K_{N-1}&k_N\\k_N^*&1\end{pmatrix}
+\]
+is strictly positive.  Its Schur complement is $\kappa_N>0$; since the
+subtracted term is nonnegative, $\kappa_N\le1$.  The normal equations for
+orthogonal projection give the coefficients $K_{N-1}^{-1}k_N$, and direct
+expansion gives (161)--(162).
+\end{proof}
+
+This theorem pays the exact unit Schur budget for every purely arithmetic
+birth in the global gcd metric, with all prime-power correlations retained.
+It strengthens mere all-depth summability: no estimate is used.  To transfer
+(160)--(162) to the physical threshold capacity (41i), one must prove that
+the Gamma--continuous and Tate-terminal columns enlarge
+$\mathscr E_{N-1}$ so that the physical centered load $b_E$ is precisely the
+projection load in this augmented Hilbert space.  That is the remaining
+mixed observation identity.
+
+\begin{corollary}[Closed prime-power innovation --- \PROVED]
+Augment the old contact space by the Tate cyclic vector,
+\begin{equation}
+ \mathscr E_{N-1}^{\rm aug}
+ :=\operatorname{span}\bigl(\Omega,
+       \{\chi_m:\Lambda(m)>0,\ m<N\}\bigr).           \tag{163}
+\end{equation}
+If $N=p^k$, with the convention $\chi_{p^0}=\Omega$, then
+\begin{align}
+ P_{\mathscr E_{N-1}^{\rm aug}}\chi_{p^k}
+ &=p^{-1/2}\chi_{p^{k-1}},                             \tag{164}\\
+ \left\|\chi_{p^k}-
+ P_{\mathscr E_{N-1}^{\rm aug}}\chi_{p^k}\right\|^2
+ &=1-p^{-1}.                                           \tag{165}
+\end{align}
+The normalized innovations
+\begin{equation}
+ e_{p,k}(z):=\frac{(z_p-p^{-1/2})z_p^{k-1}}
+                   {\sqrt{1-p^{-1}}}                  \tag{166}
+\end{equation}
+are orthonormal as $(p,k)$ varies.
+\end{corollary}
+
+\begin{proof}
+For one Poisson factor with parameter $r=p^{-1/2}$,
+\begin{equation}
+ |z-r|^2d\mu_p(z)=(1-r^2)dm(z).                        \tag{167}
+\end{equation}
+Therefore the functions
+$(z-r)z^{k-1}/\sqrt{1-r^2}$ are orthonormal and have mean zero.  Independence
+makes functions belonging to different primes orthogonal.  Since
+\[
+ z_p^k-rz_p^{k-1}=(z_p-r)z_p^{k-1},
+\]
+the right side is orthogonal to the augmented old span, proving
+(164)--(166).
+\end{proof}
+
+Thus the entire prime-power return chain is an exact AR(1)-type orthogonal
+innovation process in the gcd boundary.  The factor $1-p^{-1}$ is the same
+local denominator appearing in the M\"obius whitening (150).  This provides
+an inverse-free, all-depth arithmetic capacity factorization; no Witt-moment
+majorant is needed for the arithmetic part.
+
+\begin{theorem}[Archimedean Gamma GNS boundary --- \PROVED]
+Put $a_j=2j+\tfrac12$ and let
+\begin{equation}
+ d\nu_{a_j}(x):=\frac{a_j}{2}e^{-a_j|x|}\,dx
+ \qquad(x\in\mathbb R).                                \tag{168}
+\end{equation}
+On $L^2(\nu_{a_j})$ let $U_\tau$ be multiplication by $e^{i\tau x}$ and
+$\Omega_j=1$.  Then
+\begin{align}
+ \langle U_\tau\Omega_j,\Omega_j\rangle
+ &=\frac{a_j^2}{a_j^2+\tau^2},                         \tag{169}\\
+ \frac1{a_j}\|(U_\tau-I)\Omega_j\|^2
+ &=\frac{2\tau^2}{a_j(a_j^2+\tau^2)}.                 \tag{170}
+\end{align}
+Consequently
+\begin{equation}
+ g_\Gamma(\tau)
+ =\sum_{j\ge0}\frac1{a_j}\|(U_\tau-I)\Omega_j\|^2,  \tag{171}
+\end{equation}
+and the infinite product boundary has characteristic function
+\begin{equation}
+ \prod_{j\ge0}\frac{a_j^2}{a_j^2+\tau^2}
+ =\frac{|\Gamma(\frac14+\frac{i\tau}{2})|^2}
+        {\Gamma(\frac14)^2}.                           \tag{172}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The Fourier transform of the two-sided exponential density (168) is
+$a_j^2/(a_j^2+\tau^2)$, proving (169); expanding the difference norm proves
+(170).  The digamma series with
+$a_j=2(j+1/4)$ is exactly (171).  Finally the Weierstrass product for the
+ratio
+$\Gamma(1/4+i\tau/2)\Gamma(1/4-i\tau/2)/\Gamma(1/4)^2$
+is the product in (172).
+\end{proof}
+
+For the metric deformation set $a_j(t)=2j+t/2$ and let $\nu_{a_j(t)}$ be
+as in (168).  Its centered score and Fisher energy are
+\begin{equation}
+ \sigma_{\Gamma,j,t}(x)
+ =\frac12\left(\frac1{a_j(t)}-|x|\right),
+ \qquad
+ \|\sigma_{\Gamma,j,t}\|_2^2=\frac1{4a_j(t)^2}.       \tag{173}
+\end{equation}
+Indeed $|x|$ is exponentially distributed with rate $a_j(t)$.  The scores
+are independent in the product boundary and
+$\sum_j1/(4a_j(t)^2)<\infty$, so the complete Gamma score is an honest
+$L^2$ random variable.  Combining it with the finite Euler score (154)
+gives a single centered Gamma--Euler score whose Fisher energies add.
+
+The constant $m_0$ is not an external correction to this boundary.  It is
+the scale coordinate paired with the Gamma ratio coordinate, as follows.
+
+\begin{theorem}[Gamma ratio--scale normalization --- \PROVED]
+Let $R_+,R_-$ be independent Gamma random variables with shape
+$a=\tfrac14$ and unit scale, and put
+\begin{equation}
+ X:=\frac12\log\frac{R_+}{R_-},
+ \qquad
+ Y:=\log\pi-\frac12\log(R_+R_-).                    \tag{174}
+\end{equation}
+Then
+\begin{align}
+ \phi_\Gamma(\tau):=\mathbb E e^{i\tau X}
+ &=\frac{|\Gamma(\frac14+\frac{i\tau}{2})|^2}
+         {\Gamma(\frac14)^2},                       \tag{175}\\
+ \mathbb EY&=\log\pi-\psi\left(\frac14\right)=m_0,\tag{176}\\
+ \mathbb E\!\left(Ye^{i\tau X}\right)
+ &=\bigl(m_0-g_\Gamma(\tau)\bigr)\phi_\Gamma(\tau).
+                                                               \tag{177}
+\end{align}
+Moreover the conditional scale is the explicit positive function
+\begin{equation}
+ h_\Gamma(x):=\mathbb E(Y\mid X=x)
+ =\log\pi-\psi\left(\frac12\right)+\log(2\cosh x)>0. \tag{178}
+\end{equation}
+Thus the finite positive measure $h_\Gamma\,d\mu_X$ has Fourier transform
+$\phi_\Gamma(\tau)(m_0-g_\Gamma(\tau))$.
+The ratio law itself is explicit:
+\begin{equation}
+ d\mu_X(x)=\frac{\sqrt2}{B(\frac14,\frac14)}
+             (\cosh x)^{-1/2}\,dx.                  \tag{178a}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For a unit-scale Gamma variable $R$ of shape $a$,
+$\mathbb E R^z=\Gamma(a+z)/\Gamma(a)$.  Independence with
+$z=\pm i\tau/2$ proves (175), and
+$\mathbb E\log R=\psi(a)$ proves (176).  Differentiating the two Mellin
+moments gives
+\[
+ \mathbb E\!\left(e^{i\tau X}\log R_+\right)
+ =\phi_\Gamma(\tau)\psi\left(a+\frac{i\tau}{2}\right),
+ \quad
+ \mathbb E\!\left(e^{i\tau X}\log R_-\right)
+ =\phi_\Gamma(\tau)\psi\left(a-\frac{i\tau}{2}\right).
+\]
+Substitution in (174), followed by
+$g_\Gamma(\tau)-m_0=\Re\psi(a+i\tau/2)-\log\pi$, proves (177).
+
+For (178), write $S=R_++R_-$ and $U=R_+/S$.  The beta--Gamma algebra says
+that $S\sim\mathrm{Gamma}(2a,1)$, $U\sim\mathrm{Beta}(a,a)$, and $S,U$
+are independent.  Also
+$X=\tfrac12\log(U/(1-U))$ and
+\[
+ Y=\log\pi-\log S-\frac12\log(U(1-U)).
+\]
+For $a=1/4$, $U(1-U)=(4\cosh^2X)^{-1}$ and
+$\mathbb E\log S=\psi(1/2)$, giving (178).  Positivity follows at
+$x=0$ from $\psi(1/2)=-\gamma-2\log2$ and then from $\cosh x\ge1$.
+The change of variables $u=e^{2x}/(1+e^{2x})$ in the beta density gives
+(178a).
+\end{proof}
+
+Equation (177) is the exact Gamma--Tate normalization identity sought in
+the preceding constructions: the Gamma multiplier and the constant channel
+are respectively the ratio and scale matrix coefficients of one canonical
+Mellin probability space.  It is stronger than merely checking the numerical
+value of $m_0$.
+
+It does not, by itself, prove (84c).  Passing from the positive Fourier
+transform in (177) to the unweighted multiplier $m_0-g_\Gamma$ requires
+division by $\phi_\Gamma$.  Stirling's formula gives
+\begin{equation}
+ \phi_\Gamma(\tau)^{-1/2}
+ \asymp e^{\pi|\tau|/4}|\tau|^{1/4}
+ \qquad(|\tau|\to\infty),                            \tag{179}
+\end{equation}
+so this deconvolution is unbounded on $L^2(\mathbb R)$ and on the general
+Paley--Wiener image of compactly supported $L^2$ sources.  Consequently
+(177) may be used as a weighted boundary identity, but treating its
+deconvolution as a Hilbert-space contraction would require exponential
+regularity absent from the ambient compact-window source.
+
+In fact the two Tate constraints cannot supply that regularity.
+
+\begin{proposition}[Gamma deconvolution domain no-go --- \PROVED]
+Let $F\in L^2(I_T)$ and let $E_TF$ be its zero extension.  If
+\begin{equation}
+ \phi_\Gamma^{-1/2}\widehat{E_TF}\in L^2(\mathbb R), \tag{180}
+\end{equation}
+then $F=0$.  This remains true after restriction to the primitive space
+$\mathcal P_T$.  Therefore no nonzero physical compact-window source can be
+obtained by applying the unbounded Gamma deconvolution in (179), even after
+the Tate moment conditions.
+\end{proposition}
+
+\begin{proof}
+By Stirling's formula, (180) implies
+$e^{b|\tau|}\widehat{E_TF}(\tau)\in L^2(\mathbb R)$ for every
+$0<b<\pi/4$ (a polynomial factor is harmless after slightly decreasing
+$b$).  Fourier inversion and Cauchy--Schwarz then extend $E_TF$ to a
+holomorphic function on the strip $|\Im z|<b$.  Its boundary value on the
+real axis vanishes on each open half-line outside $[-T,T]$.  The identity
+theorem therefore gives $E_TF=0$.  The primitive space is a subspace of
+$L^2(I_T)$, so the same conclusion holds there.
+\end{proof}
+
+Thus the weighted matrix coefficient (177) is a valid normalization theorem,
+but deconvolution is not the missing G40 observation.  A successful bridge
+must retain the Gamma ratio law inside its Hilbert metric and combine it with
+the Euler/Tate channels before taking the physical compression.
+
+This combined metric is exact in the absolutely convergent half-plane.
+
+\begin{theorem}[Coherent completed Euler--Gamma metric --- \PROVED]
+For $t>2$ put $r_p(t)=p^{-t/2}$ and evaluate the finite/infinite product
+Poisson density on the scaling orbit $z_p(\tau)=p^{-i\tau}$:
+\begin{equation}
+ D_{E,t}(\tau):=prod_p
+ \frac{1-r_p(t)^2}{|1-r_p(t)z_p(\tau)|^2}
+ =\frac{|\zeta(\frac t2+i\tau)|^2}{\zeta(t)}.        \tag{181}
+\end{equation}
+Let
+\begin{equation}
+ \phi_{\Gamma,t}(\tau):=
+ \frac{|\Gamma(\frac t4+\frac{i\tau}{2})|^2}
+      {\Gamma(\frac t4)^2},
+ \qquad
+ c_t:=\pi^{-t/2}\Gamma\left(\frac t4\right)^2\zeta(t).
+                                                               \tag{182}
+\end{equation}
+Then the completed metric has the exact factorization
+\begin{equation}
+ \left|\Lambda_{\mathbb Q}\left(\frac t2+i\tau\right)\right|^2
+ =c_tD_{E,t}(\tau)\phi_{\Gamma,t}(\tau).             \tag{183}
+\end{equation}
+Thus the Euler Poisson boundary and the Gamma ratio boundary are not merely
+analogous: their normalized coherent-orbit density is exactly the completed
+Zeta metric, up to the scalar $c_t$.
+\end{theorem}
+
+\begin{proof}
+Absolute convergence for $t>2$ permits multiplication of the Euler factors:
+\[
+ \prod_p(1-p^{-t})=\zeta(t)^{-1},\qquad
+ \prod_p|1-p^{-t/2-i\tau}|^{-2}
+ =|\zeta(t/2+i\tau)|^2,
+\]
+which proves (181).  Multiplication by (182) and the definition
+$\Lambda_{\mathbb Q}(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)$ prove (183).
+\end{proof}
+
+The identity also locates the critical difficulty without hiding it in a
+formal product.  As $t\downarrow1$, $c_t$ has the pole of $\zeta(t)$ while
+the normalized Euler density loses its ordinary product-probability meaning;
+only their product in (183) has the meromorphic continuation used in (119).
+Consequently a critical Hilbert compression must renormalize the pair
+$c_tD_{E,t}$ jointly.  Substituting the pointwise continuation of (183) for
+such a renormalized boundary operator would be circular.
+
+The required renormalization cannot be a vector limit in the original
+$\ell^2$ completion.
+
+\begin{theorem}[Euler coherent-orbit escape of mass --- \PROVED]
+For $t>1$ let $e_t$ be the unit vector (131), and let
+$W_\tau\delta_n=n^{-i\tau}\delta_n$ on $\ell^2(\mathbb N)$.  Then
+\begin{equation}
+ \left\langle W_\tau e_t,W_\sigma e_t\right\rangle
+ =\frac{\zeta(t+i(\tau-\sigma))}{\zeta(t)}.           \tag{184}
+\end{equation}
+For every fixed $\tau$, $W_\tau e_t\rightharpoonup0$ as $t\downarrow1$,
+although its norm is one.  Moreover
+\begin{equation}
+ \lim_{t\downarrow1}
+ \left\langle W_\tau e_t,W_\sigma e_t\right\rangle
+ =\begin{cases}1,&\tau=\sigma,\\0,&\tau\ne\sigma.
+ \end{cases}                                          \tag{185}
+\end{equation}
+For $t>2$, the formal boundary-sum functional is absolutely defined on this
+vector and satisfies
+\begin{equation}
+ \left|\sum_{n\ge1}(W_\tau e_t)_n\right|^2
+ =\frac{|\zeta(\frac t2+i\tau)|^2}{\zeta(t)}
+ =D_{E,t}(\tau).                                      \tag{186}
+\end{equation}
+Thus (181) is the squared boundary evaluation of the coherent vector, but
+that evaluation and the vector itself have no ordinary critical limit.
+The kernel (185) also cannot be realized by nonzero vectors indexed by all
+$\tau\in\mathbb R$ in a separable Hilbert space.
+\end{theorem}
+
+\begin{proof}
+Expanding in the standard basis gives
+\[
+ \langle W_\tau e_t,W_\sigma e_t\rangle
+ =\zeta(t)^{-1}\sum_{n\ge1}n^{-t-i(\tau-\sigma)},
+\]
+which is (184).  Every fixed coordinate tends to zero because
+$\zeta(t)^{-1/2}\to0$; boundedness of the norms and density of finitely
+supported vectors imply weak convergence to zero.  If $\tau\ne\sigma$,
+$\zeta(t+i(\tau-\sigma))$ has a finite limit while $\zeta(t)\to\infty$,
+proving (185).  Equation (186) follows by summing the coordinates when
+$t/2>1$.  Finally, a separable Hilbert space contains at most a countable
+orthonormal set, whereas the limiting kernel in (185) indexes an uncountable
+one.
+\end{proof}
+
+The gcd limit (134) uses the multiplicative isometries $V_n$, not the
+continuous diagonal orbit $W_\tau$.  The two constructions therefore capture
+different matrix coefficients of the same precritical vector $e_t$.  A valid
+Poisson--Tate bridge must join them after removing the escaping polar
+direction at the level of quadratic forms.  Identifying either limit with the
+other without this quotient is an \AUDIT{} error.
+
+There is nevertheless a canonical critical limit at the level of forms.
+
+\begin{theorem}[Rigged critical Euler form --- \PROVED]
+For $t>1$ set $k_t(u)=\zeta(t+iu)$.  If $f\in\mathcal S(\mathbb R)$ and
+\begin{equation}
+ \widehat f(x):=\int_{\mathbb R}f(\tau)e^{-i\tau x}\,d\tau,
+\end{equation}
+then
+\begin{align}
+ \mathfrak q_t(f)
+ &:=\iint_{\mathbb R^2}f(\tau)\overline{f(\sigma)}
+       k_t(\tau-\sigma)\,d\tau d\sigma                 \notag\\
+ &=\sum_{n\ge1}n^{-t}|\widehat f(\log n)|^2\ge0.      \tag{187}
+\end{align}
+Moreover
+\begin{equation}
+ \lim_{t\downarrow1}\mathfrak q_t(f)
+ =\mathfrak q_1(f)
+ :=\sum_{n\ge1}\frac1n|\widehat f(\log n)|^2.         \tag{188}
+\end{equation}
+Hence $k_t\to\zeta(1+i\,\cdot)$ in the sense of positive tempered
+distributions, where the boundary value on the right is the Fourier transform
+of the positive locally finite measure
+\begin{equation}
+ \mu_{E,\mathrm{crit}}:=\sum_{n\ge1}\frac1n\delta_{\log n}. \tag{189}
+\end{equation}
+The completion of the form (188) is
+$L^2(\mu_{E,\mathrm{crit}})$ (modulo the null space of the sampling map).
+It is the canonical form-level renormalization of the escaping coherent
+orbit.
+\end{theorem}
+
+\begin{proof}
+For $t>1$, absolute convergence of the Dirichlet series and Fubini give
+(187).  For every $N>1$, Schwartz decay gives
+$|\widehat f(\log n)|\ll_N(1+\log n)^{-N}$, and
+\[
+ \sum_{n\ge2}\frac1{n(1+\log n)^{2N}}<\infty.
+\]
+Dominated convergence proves (188).  Equations (187)--(188) identify the
+distributional Fourier transform and prove positivity.  The last assertion
+is the standard completion of a sampled $L^2$ form.
+\end{proof}
+
+This critical form produces the arithmetic reference weights without an
+Euler product or a sign assumption.  On the vector-valued space
+$L^2(\mu_{E,\mathrm{crit}};L^2(\mathbb R))$, define for a fixed window
+\begin{equation}
+ (D_Tg)(\log n):=
+ \mathbf1_{\{2\le n<e^{2T}\}}\mathbf1_{\{\Lambda(n)>0\}}
+ (\Lambda(n)\sqrt n)^{1/2}g(\log n).                 \tag{190}
+\end{equation}
+Then, exactly,
+\[
+ \|D_Tg\|^2
+ =\sum_{\substack{2\le n<e^{2T}\\\Lambda(n)>0}}
+   \frac{\Lambda(n)}{\sqrt n}\|g(\log n)\|^2.
+\]
+Taking $g(\log n)=J_{\log n,-}F$ recovers the complete arithmetic part of
+$\|\mathcal X_TF\|^2$.  Thus the arithmetic reference port is now obtained
+as a diagonal observation of a source-defined critical Euler form, rather
+than inserted as an unrelated direct sum.
+
+What (187)--(190) do not yet provide is the opposite $J_{\log n,+}$ channel
+or its global mixing with Gamma and the two Tate terminals.  That is precisely
+the observation, rather than the reference Gram, which remains in G40.
+
+The Euler critical form and the Gamma ratio law admit a positive joint
+completion.
+
+\begin{theorem}[Joint critical Euler--Gamma rigged boundary --- \PROVED]
+For $t>1$ let
+\begin{equation}
+ \phi_{\Gamma,t}(u)=
+ \frac{|\Gamma(\frac t4+\frac{iu}{2})|^2}
+      {\Gamma(\frac t4)^2},
+ \qquad
+ K_t^{E\Gamma}(u):=\zeta(t+iu)\phi_{\Gamma,t}(u).     \tag{191}
+\end{equation}
+Then $K_t^{E\Gamma}$ is a positive-definite tempered distribution.  For
+every $f\in\mathcal S(\mathbb R)$ its quadratic form has a finite critical
+limit
+\begin{equation}
+ \mathfrak q_1^{E\Gamma}(f)
+ =\int_{\mathbb R}|\widehat f(x)|^2
+       d(\mu_{E,\mathrm{crit}}*\mu_{\Gamma,1})(x)\ge0, \tag{192}
+\end{equation}
+where $\mu_{\Gamma,1}$ is the probability law of the Gamma ratio $X$ in
+(174).  Equivalently,
+\begin{equation}
+ K_t^{E\Gamma}\longrightarrow
+ K_1^{E\Gamma}:=\zeta(1+i\,\cdot)\phi_{\Gamma,1}
+ \quad\hbox{as positive tempered distributions}.     \tag{193}
+\end{equation}
+Consequently
+\begin{equation}
+ \mathscr H_{E\Gamma}^{\mathrm{crit}}
+ :=L^2(\mu_{E,\mathrm{crit}}*\mu_{\Gamma,1})          \tag{194}
+\end{equation}
+is a canonical positive critical Euler--Gamma boundary constructed without
+$\Delta_T$, the Weil sign, or a zero-free hypothesis.
+\end{theorem}
+
+\begin{proof}
+The first factor in (191) is the Fourier transform of
+$\sum_n n^{-t}\delta_{\log n}$ and the second is the characteristic function
+of the Gamma ratio.  Their product is therefore the Fourier transform of the
+convolution of two positive measures.  The density (178a), with $1/4$
+replaced by $t/4$, has exponential tails uniformly for $t$ in a compact
+right-neighbourhood of one.  Combined with the Schwartz decay of
+$\widehat f$ and the summability argument in the proof of (188), this gives
+an integrable majorant for the convolved sampling sum.  Dominated convergence
+proves (192)--(193).  Positivity and the Hilbert completion (194) follow.
+\end{proof}
+
+This theorem constructs the positive target space required in the open
+Tate-boundary statement (34) at the level of the global critical
+Euler--Gamma form.  To prove (35), one must still construct the actual
+intertwiner $\Phi_T$ into the windowed subspace of (194) and prove that its
+compressed norm equals the Schur boundary form $J_T$.  The target is now
+source-defined independently of that sign; the remaining equality is no
+longer allowed to choose its codomain ad hoc.
+
+The relation between this form boundary and the gcd boundary is exact, not
+heuristic.
+
+\begin{theorem}[Divisor-incidence realization of the gcd boundary --- \PROVED]
+Let
+\begin{equation}
+ \mathscr E_N:=\ell^2\left(\{1,\ldots,N\},\frac1k\right),
+ \qquad H_N:=\sum_{k\le N}\frac1k,
+\end{equation}
+and, for $n\le N$, define the truncated Zeta-incidence column
+\begin{equation}
+ z_n^{(N)}(k):=\sqrt n\,\mathbf1_{\{n\mid k\}}.
+                                                               \tag{195}
+\end{equation}
+Then
+\begin{equation}
+ \frac1{H_N}\langle z_m^{(N)},z_n^{(N)}\rangle_{\mathscr E_N}
+ =\frac{(m,n)}{\sqrt{mn}}
+   \frac{H_{\lfloor N/[m,n]\rfloor}}{H_N},           \tag{196}
+\end{equation}
+where $[m,n]$ denotes the least common multiple.  Consequently, for fixed
+$m,n$,
+\begin{equation}
+ \lim_{N\to\infty}\frac1{H_N}
+ \langle z_m^{(N)},z_n^{(N)}\rangle
+ =\frac{(m,n)}{\sqrt{mn}}=K(m,n).                    \tag{197}
+\end{equation}
+The inverse incidence relation is the exact finite M\"obius formula
+\begin{equation}
+ \mathbf1_{\{k=n\}}
+ =\sum_{d\le N/n}\mu(d)\mathbf1_{\{nd\mid k\}}
+ =\sum_{d\le N/n}\frac{\mu(d)}{\sqrt{nd}}
+       z_{nd}^{(N)}(k).                               \tag{198}
+\end{equation}
+Thus the critical gcd GNS state is the harmonic-density renormalization of
+the Zeta divisor-incidence columns in the rigged Euler boundary, and its
+whitening is precisely M\"obius inversion.
+\end{theorem}
+
+\begin{proof}
+The simultaneous support of the two columns consists of multiples of
+$[m,n]$.  Hence
+\[
+ \langle z_m^{(N)},z_n^{(N)}\rangle
+ =\sqrt{mn}\sum_{j\le N/[m,n]}\frac1{j[m,n]}
+ =\frac{(m,n)}{\sqrt{mn}}H_{\lfloor N/[m,n]\rfloor},
+\]
+which proves (196).  Since $H_{\lfloor N/c\rfloor}/H_N\to1$ for fixed $c$,
+(197) follows.  Finally, if $n\mid k$, the last sum in (198) is
+$\sum_{d\mid k/n}\mu(d)$, equal to one only when $k=n$; if $n\nmid k$ it
+is zero.  This proves (198).
+\end{proof}
+
+\begin{corollary}[Deformed incidence/GNS equivalence --- \PROVED]
+For $t>1$ equip sequences with weight $k^{-t}$ and put
+$z_{n,t}(k)=n^{t/2}\mathbf1_{\{n\mid k\}}$.  With
+$H_M^{(t)}=\sum_{j\le M}j^{-t}$,
+\begin{equation}
+ \langle z_{m,t}^{(N)},z_{n,t}^{(N)}\rangle
+ =\left(\frac{(m,n)}{\sqrt{mn}}\right)^t
+   H_{\lfloor N/[m,n]\rfloor}^{(t)}.                \tag{199}
+\end{equation}
+After $N\to\infty$ and normalization by $\zeta(t)$,
+\begin{equation}
+ \frac1{\zeta(t)}\langle z_{m,t},z_{n,t}\rangle
+ =\left(\frac{(m,n)}{\sqrt{mn}}\right)^t
+ =\langle V_ne_t,V_me_t\rangle.                     \tag{200}
+\end{equation}
+Thus the cyclic spans of normalized incidence columns and of the shifted
+Zeta vector $e_t$ are canonically isometric.  Their common critical limit is
+the gcd GNS space (134)--(137).
+If $A_t\delta_k=k^{t/2}\delta_k$, regarded as a unitary from the standard
+finite $\ell^2$ space to the space with weight $k^{-t}$, then the Zeta
+transport (27a) satisfies the exact identity
+\begin{equation}
+ z_{n,t}^{(N)}=A_t\mathscr Z_t\delta_n.               \tag{201}
+\end{equation}
+Hence the incidence model is unitarily the same finite Zeta transport used
+in G39, before passing to either critical limit.
+\end{corollary}
+
+\begin{proof}
+The calculation proving (196), with $k^{-1}$ replaced by $k^{-t}$, gives
+(199).  Letting $N\to\infty$ gives the factor $\zeta(t)$; (133) gives the
+last equality in (200).  Equality of all Gram matrices defines the canonical
+isometry of the generated cyclic spans, and their pointwise Gram limit is
+(134).  Finally, at $k=nd$ the $k$-th coordinate of
+$A_t\mathscr Z_t\delta_n$ is
+$(nd)^{t/2}d^{-t/2}=n^{t/2}$, and it vanishes when $n\nmid k$; this is
+(201).
+\end{proof}
+
+Equations (195)--(198) close the previously open compatibility between the
+finite Zeta gauge used in G39 and the global gcd GNS space: both arise from
+one divisor-incidence system, and the normalizing scalar is forced by the
+escaping harmonic mass.  In particular, the unorthogonalized incidence
+columns are nested under $N\mapsto N'$, solving the nesting defect of the
+coordinate square roots $K_T^{-1/2}$ noted after (141).
+
+This does not yet identify the Gamma/Tate opposite observation.  It does,
+however, place its arithmetic divergence (27e)--(27h), its reference Gram
+(139)--(149), and the M\"obius normalization (150)--(153) in a single
+source-derived boundary model.
+
+There is a necessary affine component at the Gamma place.
+
+\begin{theorem}[Linear/affine Gamma boundary separation --- \PROVED]
+Let $\mathscr K_\Gamma=\bigoplus_{j\ge0}L^2(\nu_{a_j})$ and let
+$\mathbf U_\tau=\bigoplus_jU_{j,\tau}$.  The vector-valued function
+\begin{equation}
+ b_\Gamma(\tau):=igoplus_{j\ge0}
+ a_j^{-1/2}(U_{j,\tau}-I)\Omega_j                  \tag{202}
+\end{equation}
+is a continuous $1$-cocycle:
+\begin{equation}
+ b_\Gamma(\tau+\sigma)
+ =b_\Gamma(\tau)+\mathbf U_\tau b_\Gamma(\sigma),
+ \qquad
+ \|b_\Gamma(\tau)\|^2=g_\Gamma(\tau).              \tag{203}
+\end{equation}
+In contrast, in the infinite tensor-product Gamma-ratio representation,
+the coherent orbit $\Omega_\Gamma(\tau)$ satisfies
+\begin{equation}
+ \langle\Omega_\Gamma(\tau),\Omega_\Gamma(0)\rangle
+ =\phi_\Gamma(\tau),
+ \qquad
+ \|\Omega_\Gamma(\tau)-\Omega_\Gamma(0)\|^2
+ =2(1-\phi_\Gamma(\tau))\le2.                         \tag{204}
+\end{equation}
+There is no bounded operator $B$ such that
+$B(\Omega_\Gamma(\tau)-\Omega_\Gamma(0))=b_\Gamma(\tau)$ for all $\tau$.
+Thus the Gamma coherent metric and the Gamma energy feature are respectively
+the linear and affine parts of the boundary and cannot be identified by a
+bounded change of coordinates.
+\end{theorem}
+
+\begin{proof}
+The cocycle identity follows from
+$U_{\tau+\sigma}-I=(U_\tau-I)+U_\tau(U_\sigma-I)$.
+Equations (170)--(171) show that (202) belongs to the direct sum and give its
+norm in (203).  The tensor-product coefficient is (172), and the difference
+norm gives (204).  Finally $g_\Gamma(\tau)\to\infty$ like $\log|\tau|$ by
+the digamma asymptotic, whereas the norm in (204) is bounded.  A bounded
+$B$ would contradict these two estimates.
+\end{proof}
+
+Consequently the source-defined positive target obtained so far must be
+enlarged from (194) to an affine Hodge boundary carrying both
+$\mathscr H_{E\Gamma}^{\mathrm{crit}}$ and the cocycle space
+$\mathscr K_\Gamma$.  The Gamma channel of $\mathcal X_T$ lands in the
+second component by (202)--(203); the scale vector (177) belongs to the first.
+The missing G40 intertwiner is therefore a coupling between these two
+components and the moving Tate terminal, not an isometry between either pair
+alone.
+
+The arithmetic component of that coupling has an exact lossless realization.
+
+\begin{theorem}[Prime Julia colligation and M\"obius innovation --- \PROVED]
+For a prime $p$ put $r=p^{-1/2}$, $s=(1-r^2)^{1/2}$, and
+\begin{equation}
+ \mathcal J_p:=
+ \begin{pmatrix}r&s\\s&-r\end{pmatrix}.              \tag{205}
+\end{equation}
+Then $\mathcal J_p$ is a selfadjoint unitary colligation and its transfer
+function is the Blaschke factor
+\begin{equation}
+ \Theta_p(z)=-r+zs(1-zr)^{-1}s
+ =\frac{z-r}{1-rz},\qquad |\Theta_p(z)|=1\quad(|z|=1). \tag{206}
+\end{equation}
+With the M\"obius whitening multiplier
+$b_p(z)=(1-rz)/s$, the prime-power innovations (166) obey
+\begin{equation}
+ e_{p,k}(z)=b_p(z)\Theta_p(z)z^{k-1}.                 \tag{207}
+\end{equation}
+For every finite set of primes $S$, the tensor product
+$\bigotimes_{p\in S}\mathcal J_p$ is unitary and has transfer multiplier
+$\Theta_S=\prod_{p\in S}\Theta_p$.  Hence the complete finite arithmetic
+whitening/innovation system is a source-defined lossless scattering network.
+\end{theorem}
+
+\begin{proof}
+The rows of (205) are orthonormal, so $\mathcal J_p^*\mathcal J_p=I$.
+The standard transfer formula $D+zC(I-zA)^{-1}B$, with
+$A=r$, $B=C=s$, $D=-r$, gives (206).  Its boundary modulus is one because
+$|z-r|=|1-rz|$ on the unit circle.  Finally
+\[
+ b_p(z)\Theta_p(z)z^{k-1}
+ =\frac{(z-r)z^{k-1}}s=e_{p,k}(z),
+\]
+which proves (207).  Finite tensor products of unitaries are unitary, and
+scalar transfer functions multiply under the corresponding cascade.
+\end{proof}
+
+Together, (195)--(207) prove amplitude typing, nested Gram, M\"obius
+normalization, prime-power innovation and positive conservation for the
+arithmetic \emph{label} network.  The remaining physical cell must identify
+its lossless output with the $J_{\log n,+}$ delay observation while coupling
+the scale vector (177), the Gamma cocycle (202), and the moving two-moment
+square (109).  Only after that joint affine Gamma--Tate termination is proved
+does the network output equal the full factor $\mathcal Y_T$.
+
+The intrinsic normalization of the Archimedean cell can now be closed.
+
+\begin{theorem}[Exact affine Gamma--Tate termination identity --- \PROVED]
+For $t>0$ set $a_j(t)=2j+t/2$ and
+\begin{align}
+ g_{\Gamma,t}(\tau)
+ &:=\sum_{j\ge0}\frac{2\tau^2}
+ {a_j(t)(a_j(t)^2+\tau^2)},                            \tag{208}\\
+ c_\Gamma(t)&:=\pi^{-t/2}\Gamma\left(\frac t4\right)^2.
+\end{align}
+With $\phi_{\Gamma,t}$ from (191), one has the exact logarithmic metric
+identity
+\begin{equation}
+ 2\partial_t\log\!\left(c_\Gamma(t)\phi_{\Gamma,t}(\tau)\right)
+ =g_{\Gamma,t}(\tau)+\psi\left(\frac t4\right)-\log\pi. \tag{209}
+\end{equation}
+At the critical endpoint this becomes
+\begin{equation}
+ \left.2\partial_t\log\!\left(
+ c_\Gamma(t)\phi_{\Gamma,t}(\tau)\right)\right|_{t=1}
+ =g_\Gamma(\tau)-m_0.                                 \tag{210}
+\end{equation}
+Thus the positive Gamma coherent metric, its affine energy cocycle and the
+constant Tate scale channel form one differentiable Hilbert metric cell; the
+normalization $m_0$ is forced by its scalar metric derivative.
+\end{theorem}
+
+\begin{proof}
+For one factor,
+\[
+ \partial_t\log\frac{a_j(t)^2}{a_j(t)^2+\tau^2}
+ =\frac1{a_j(t)}-\frac{a_j(t)}{a_j(t)^2+\tau^2}
+ =\frac{\tau^2}{a_j(t)(a_j(t)^2+\tau^2)}.
+\]
+The series and its derivative converge locally uniformly, so summing gives
+$2\partial_t\log\phi_{\Gamma,t}=g_{\Gamma,t}$.  Also
+\[
+ 2\partial_t\log c_\Gamma(t)
+ =-\log\pi+\psi(t/4).
+\]
+Adding proves (209).  At $t=1$, (171) identifies
+$g_{\Gamma,1}=g_\Gamma$ and
+$\psi(1/4)-\log\pi=-m_0$, proving (210).
+\end{proof}
+
+Equation (210) is the non-deconvolved form of (177).  It supplies the exact
+normalization of the affine Gamma--Tate termination in the moving-metric
+picture: the coherent metric must be transported, not cancelled.  The
+remaining G40 identity is therefore the equality between the Kato-transported
+physical compression of this cell, joined to the Julia arithmetic cascade,
+and the opposite delay block $\mathcal Y_T$, including the already computed
+second fundamental form (109).
+
+The Euler cell has the complementary exact normalization.
+
+\begin{theorem}[Exact coherent Euler--Gamma bulk normalization --- \PROVED]
+For $t>2$, with $s=t/2+i\tau$, one has
+\begin{align}
+ 2\partial_t\log\!\left(\zeta(t)D_{E,t}(\tau)\right)
+ &=2\Re\frac{\zeta'}{\zeta}(s)                       \notag\\
+ &=-2\sum_{n\ge2}\Lambda(n)n^{-t/2}
+                  \cos(\tau\log n),                  \tag{211}\\
+ 2\partial_t\log\!\left(
+ c_\Gamma(t)\zeta(t)D_{E,t}(\tau)
+ \phi_{\Gamma,t}(\tau)\right)
+ &=\Re\psi\left(\frac t4+\frac{i\tau}{2}\right)
+   -\log\pi
+   -2\sum_{n\ge2}\Lambda(n)n^{-t/2}
+                  \cos(\tau\log n).                 \tag{212}
+\end{align}
+The product inside the logarithm in (212) is exactly
+$|\Lambda_{\mathbb Q}(s)|^2$.  Its distributional continuation to $t=1$,
+paired with a source supported in $I_T$, is
+\begin{equation}
+ g_\Gamma(\tau)-m_0
+ -2\sum_{2\le n<e^{2T}}\frac{\Lambda(n)}{\sqrt n}
+       \cos(\tau\log n)=a_T(\tau).                  \tag{213}
+\end{equation}
+Thus the entire Gamma, constant and prime-power bulk symbol of the
+authoritative row-(d) operator is the covariant logarithmic derivative of the
+single positive coherent Euler--Gamma metric, with no fitted scalar and no
+omitted prime powers.
+\end{theorem}
+
+\begin{proof}
+Equation (181) gives
+$\zeta(t)D_{E,t}(\tau)=|\zeta(s)|^2$.  Differentiation yields the first line
+of (211), and the absolutely convergent logarithmic Euler derivative gives
+the series.  Adding (209), or differentiating (183) directly, proves (212).
+The distributional continuation and compact-support localization were proved
+in (93) and (117)--(119): a translation by $\log n\ge2T$ has zero quadratic
+pairing with the zero-extended source, and the endpoint contact has null
+overlap.  At $t=1$, (210) supplies $g_\Gamma-m_0$, proving (213).
+\end{proof}
+
+Equations (208)--(213) complete the normalization identity of the proposed
+G40 bridge.  They do not assert that the derivative of the compressed metric
+is positive: a differentiable family of positive metrics need not be
+monotone.  The last load-bearing step is now solely the Kato/Julia compression
+identity which must turn that covariant derivative, after removal of (109),
+into the squared norm of the physical output residual.
+
+The moving Gamma boundary embeddings themselves are explicit.
+
+\begin{theorem}[Beta--Gamma Markov transport --- \PROVED]
+Let $0<t<t'$, put $a=t/4$, $b=t'/4$, and let $X_t$ have the Gamma-ratio law
+with characteristic function $\phi_{\Gamma,t}$.  If $B_+,B_-$ are independent
+$\mathrm{Beta}(a,b-a)$ variables and
+\begin{equation}
+ Z_{t,t'}:=\frac12\log\frac{B_+}{B_-},                \tag{214}
+\end{equation}
+then there is a coupling with
+\begin{equation}
+ X_t=X_{t'}+Z_{t,t'},\qquad X_{t'}\perp Z_{t,t'},     \tag{215}
+\end{equation}
+and
+\begin{equation}
+ \mathbb E e^{i\tau Z_{t,t'}}
+ =\frac{\phi_{\Gamma,t}(\tau)}{\phi_{\Gamma,t'}(\tau)}
+ =\left|
+ \frac{\Gamma(a+\frac{i\tau}{2})\Gamma(b)}
+      {\Gamma(a)\Gamma(b+\frac{i\tau}{2})}
+ \right|^2.                                          \tag{216}
+\end{equation}
+Consequently
+\begin{equation}
+ (\mathcal C_{t,t'}f)(x)
+ :=\mathbb E\bigl[f(x+Z_{t,t'})\bigr]                \tag{217}
+\end{equation}
+defines a Markov contraction
+$L^2(\mu_{\Gamma,t})\to L^2(\mu_{\Gamma,t'})$ under the coupling (215).
+Its action on characters is multiplication by the explicit coefficient
+(216).  These maps give a source-defined differentiable transport of the
+Gamma boundary; no spectral sign or choice of $\Delta_T$ occurs.
+\end{theorem}
+
+\begin{proof}
+Take independent Gamma variables $R_{a,\pm}$ of shape $a$ and
+$G_{b-a,\pm}$ of shape $b-a$.  The beta--Gamma algebra gives
+$R_{b,\pm}=R_{a,\pm}+G_{b-a,\pm}$ and
+$B_\pm=R_{a,\pm}/R_{b,\pm}$, with $B_\pm$ independent of
+$R_{b,\pm}$.  Taking half the difference of logarithms proves (215).
+The beta Mellin formula
+$\mathbb EB^z=\Gamma(a+z)\Gamma(b)/(\Gamma(a)\Gamma(b+z))$
+proves (216).  Finally (217) is conditional expectation in the joint model,
+and is therefore positivity preserving, unital and contractive on $L^2$.
+\end{proof}
+
+The infinitesimal logarithmic derivative of the character coefficient in
+(216) is $-g_{\Gamma,t}(\tau)/2$, while the scalar metric derivative is the
+remaining term in (209).  Hence (214)--(217) give the previously missing
+boundary motion whose covariant generator is the affine Gamma--Tate cell.
+What remains is to tensor this Markov transport with the finite Julia cascade
+and prove that compression by the moving two-moment projector agrees with the
+authoritative old/new decomposition.
+
+The Euler transport exists as well, but with the opposite orientation.
+
+\begin{theorem}[Oppositely oriented Euler and Gamma Markov transports
+--- \PROVED]
+Let $0<t<t'$ and, for every prime, put
+$r_{p,t}=p^{-t/2}$ and $q_p=p^{-(t'-t)/2}$.  If
+$Z_{p,t}$ has Poisson law $\mu_{r_{p,t}}$ and $Y_p$ independently has
+Poisson law $\mu_{q_p}$, then
+\begin{equation}
+ Z_{p,t'}\ \buildrel d\over=\ Z_{p,t}Y_p,             \tag{218}
+\end{equation}
+because Poisson measures on the circle satisfy
+$\mu_r*\mu_q=\mu_{rq}$.  Hence, on every finite prime window,
+\begin{equation}
+ (\mathcal C^E_{t,t'}f)(z)
+ :=\mathbb E_Y f(zY)                                  \tag{219}
+\end{equation}
+is a Markov contraction
+$L^2(\mu_{E,t'})\to L^2(\mu_{E,t})$.
+The Gamma contraction (217), however, has direction
+\begin{equation}
+ \mathcal C^\Gamma_{t,t'}:
+ L^2(\mu_{\Gamma,t})\longrightarrow
+ L^2(\mu_{\Gamma,t'}).                               \tag{220}
+\end{equation}
+Thus the canonical Euler and Gamma conditional expectations point in
+opposite directions.  There is no direct tensor-product Markov contraction
+implementing both metric motions with the same time orientation.
+\end{theorem}
+
+\begin{proof}
+The $k$-th Fourier coefficient of $\mu_r*\mu_q$ is
+$r^{|k|}q^{|k|}=(rq)^{|k|}$, proving (218).  Jensen's inequality in the
+coupling $Z_{t'}=Z_tY$ proves (219).  Equation (220) is (217).  Since the
+domain of one canonical conditional expectation is the codomain of the other
+with the time indices reversed, their tensor product is not a Markov map in
+either common direction.
+\end{proof}
+
+This orientation theorem explains the role of the arithmetic Julia
+colligation: its input/output swap is the source-defined lossless operation
+available to reverse the Euler arrow before coupling it to (217).  The final
+G40 bridge is now the concrete intertwining statement that this Julia-reversed
+Euler transport, tensored with the beta--Gamma transport and then Kato
+compressed by $P_t$, has output feature exactly $\mathcal Y_TP_T$ and defect
+the terminal square (109) plus the old-compatible residual.
+
+The infinitesimal Euler defects recover the authoritative prime-power weights
+exactly.
+
+\begin{theorem}[Prime-power Markov defect normalization --- \PROVED]
+Let $\varepsilon=t'-t>0$.  On the $k$-th character of the $p$-th Poisson
+factor, the Euler Markov contraction (219) acts by
+\begin{equation}
+ \mathcal C^E_{t,t'}z_p^k
+ =p^{-k\varepsilon/2}z_p^k.                           \tag{221}
+\end{equation}
+Put $r_p=p^{-1/2}$.  The Julia defect of this scalar contraction, amplified
+in an independent port for every prime power, has normalized squared energy
+\begin{equation}
+ d_{p,k}(\varepsilon)^2
+ :=\frac{r_p^k}{k\varepsilon}
+       \left(1-p^{-k\varepsilon}\right).             \tag{222}
+\end{equation}
+Then
+\begin{equation}
+ \lim_{\varepsilon\downarrow0}d_{p,k}(\varepsilon)^2
+ =\frac{\log p}{p^{k/2}}
+ =\frac{\Lambda(p^k)}{\sqrt{p^k}}.                  \tag{223}
+\end{equation}
+Thus every arithmetic coefficient in (83), including all prime powers, is
+the positive infinitesimal defect rate of a source-defined Euler Markov/Julia
+cell.  The factor $1/k$ is forced by the logarithmic Euler expansion and is
+exactly cancelled by the character decay rate $k\log p$.
+\end{theorem}
+
+\begin{proof}
+Equation (221) follows because the $k$-th moment of the independent Poisson
+noise in (218) is $q_p^k=p^{-k\varepsilon/2}$.  A scalar contraction of
+modulus $q_p^k$ has squared Julia defect $1-q_p^{2k}=1-p^{-k\varepsilon}$,
+which gives (222) after the logarithmic Euler weight and the critical central
+amplitude are inserted.  Finally
+$(1-e^{-k\varepsilon\log p})/\varepsilon\to k\log p$,
+proving (223).
+\end{proof}
+
+Equations (208)--(223) now derive all scalar normalizations of the proposed
+bridge from positive metric motions: $g_\Gamma$, $m_0$ and every
+$\Lambda(n)/\sqrt n$.  The remaining statement is not a scalar
+normalization; it is the operator-level assertion that the amplified Julia
+defect ports, after tensoring with the physical translated source and Kato
+compressing by $P_t$, assemble with the plus orientation
+$J_{\log n,+}$ and the old block required by (41p)--(41r).
+
+The complete reference factor is the infinitesimal defect of these explicit
+contractions.
+
+\begin{theorem}[Markov-defect realization of $\mathcal X_T$ --- \PROVED]
+Let
+\begin{equation}
+ \beta_\varepsilon(\tau):=
+ \frac{\phi_{\Gamma,1}(\tau)}
+      {\phi_{\Gamma,1+\varepsilon}(\tau)},
+ \qquad
+ d_{\Gamma,\varepsilon}(\tau)^2
+ :=\frac{1-|\beta_\varepsilon(\tau)|^2}{\varepsilon}. \tag{224}
+\end{equation}
+For a prime power $n=p^k$ put
+\begin{equation}
+ d_{n,\varepsilon}^2
+ :=\frac{p^{-k/2}}{k\varepsilon}
+       (1-p^{-k\varepsilon}).                         \tag{225}
+\end{equation}
+On the form domain of $\mathcal X_T$, define the explicit defect analysis
+map
+\begin{equation}
+ \mathcal D_{T,\varepsilon}F:=
+ \left(
+   \mathcal F^{-1}d_{\Gamma,\varepsilon}\widehat{E_TF},
+   \{d_{n,\varepsilon}J_{\log n,-}F\}_{n\in\mathcal A_T}
+ \right).                                             \tag{226}
+\end{equation}
+Then
+\begin{equation}
+ \lim_{\varepsilon\downarrow0}
+ \|\mathcal D_{T,\varepsilon}F\|^2
+ =\langle G_{\Gamma,T}F,F\rangle
+  +\sum_{n\in\mathcal A_T}\frac{\Lambda(n)}{\sqrt n}
+       \|J_{\log n,-}F\|^2
+ =\|\mathcal X_TF\|^2.                               \tag{227}
+\end{equation}
+Every finite-$\varepsilon$ summand in (226) is a Julia defect of one of the
+source-defined Markov contractions (217), (219).  Thus the full reference
+Gram is a positive infinitesimal defect rate independently of row (d).
+\end{theorem}
+
+\begin{proof}
+By (216) and (209),
+\[
+ -\log|\beta_\varepsilon(\tau)|^2
+ =\int_1^{1+\varepsilon}g_{\Gamma,t}(\tau)\,dt.
+\]
+Hence $d_{\Gamma,\varepsilon}^2\to g_\Gamma$ pointwise.
+Since $g_{\Gamma,t}\le g_{\Gamma,1}$ for $t\ge1$ and
+$1-e^{-x}\le x$, the defect multipliers are dominated by $g_\Gamma$.
+Dominated convergence on the Gamma form domain and (82) give the first
+summand in (227).  Equations (222)--(223) give convergence of every
+arithmetic coefficient; the contact set $\mathcal A_T$ is finite.  Summing
+proves (227).  The defect interpretation is the definition of the Julia
+defect operator $D_C=(I-C^*C)^{1/2}$ applied to the character eigenchannels.
+\end{proof}
+
+Therefore the input/reference half of the G40 network is now completely
+constructed from positive contractions.  The remaining output construction
+and identity are
+\begin{equation}
+ \boxed{\quad
+ \operatorname*{form-lim}_{\varepsilon\downarrow0}
+ \mathcal O_{T,\varepsilon}P_T
+ =\mathcal Y_TP_T,
+ \quad}                                                \tag{228}
+\end{equation}
+where $\mathcal O_{T,\varepsilon}$ must be constructed as the main output of
+the coupled Julia dilations of the Euler contraction (219) and beta--Gamma
+contraction (217), with the Euler ports reversed as required by (218)--(220),
+and then transported by (112)--(116).  The admissible construction is thus
+restricted to explicit source contractions, but its precise physical port
+interconnection has not yet been proved.  Constructing it and proving (228),
+with its orthogonal defect equal to (109) plus the old residual, would give
+$\|\mathcal Y_TP_TF\|\le\|\mathcal X_TP_TF\|$ and close G40 without
+circularity.
+
+There is also a physical state-space realization of the same Archimedean
+termination, which is better adapted to the windowed shifts.
+
+\begin{theorem}[Gamma ODE storage and finite-head termination --- \PROVED]
+Put $A_j=j+\tfrac14$.  On an interval $[a,b]$, let $y$ solve
+\begin{equation}
+ \frac12y'+A_jy=\sqrt{A_j}\,F.                        \tag{229}
+\end{equation}
+Then, for arbitrary initial state,
+\begin{equation}
+ \frac1{A_j}\int_a^b|F|^2+\frac{|y(a)|^2}{2A_j}
+ =\int_a^b|y|^2+
+  \int_a^b\left|\frac{y'}{2A_j}\right|^2
+  +\frac{|y(b)|^2}{2A_j}.                             \tag{230}
+\end{equation}
+For the causal zero-state filter on $I_T$,
+\begin{equation}
+ (C_j^+F)(t)=2\sqrt{A_j}\int_{-T}^t
+ e^{-2A_j(t-s)}F(s)\,ds,                              \tag{231}
+\end{equation}
+and the compressed shift $V_aF(t)=\widetilde F(t+a)$, one has, for
+$t\le T-a$,
+\begin{equation}
+ (V_aC_j^+-C_j^+V_a)F(t)
+ =e^{-2A_j(t+T)}(C_j^+F)(-T+a).                       \tag{232}
+\end{equation}
+Thus every Gamma/shift commutator is a rank-one free response whose energy is
+the positive boundary storage in (230).
+
+On the whole-line spectral realization write $C_jF=y_j$ and
+$D_jF=y_j'/(2A_j)$.  Then
+\begin{equation}
+ C_j^*C_j+D_j^*D_j=\frac1{A_j}I,
+ \qquad
+ G_\Gamma=\sum_{j\ge0}D_j^*D_j.                      \tag{233}
+\end{equation}
+Choose finitely supported numbers $0\le\theta_j\le1$ with
+\begin{equation}
+ \sum_j\frac{\theta_j}{A_j}=m_0,                     \tag{234}
+\end{equation}
+which is possible because $\sum_jA_j^{-1}=\infty$.  Define
+\begin{align}
+ C_H&:=\bigoplus_{j:\theta_j>0}\sqrt{\theta_j}\,C_j,
+ &D_H&:=\bigoplus_{j:\theta_j>0}\sqrt{\theta_j}\,D_j,\notag\\
+ D_{\rm tail}&:=\left(\bigoplus_{j:\theta_j>0}
+                   \sqrt{1-\theta_j}\,D_j\right)
+       \oplus\left(\bigoplus_{j:\theta_j=0}D_j\right), \tag{235}
+\end{align}
+where in the last display each index is included exactly once: a head index
+uses its complementary coefficient and every index beyond the finite head
+uses coefficient one.  Then
+\begin{equation}
+ C_H^*C_H+D_H^*D_H=m_0I,
+ \qquad
+ D_H^*D_H+D_{\rm tail}^*D_{\rm tail}=G_\Gamma,
+\end{equation}
+and therefore
+\begin{equation}
+ \boxed{G_\Gamma-m_0I=D_{\rm tail}^*D_{\rm tail}-C_H^*C_H.} \tag{236}
+\end{equation}
+The negative Archimedean output is finite, the Gamma tail is a positive loss
+reservoir, and all internal cell states telescope by (230).  On the primitive
+source the only external states are the two Tate moments, hence vanish.
+\end{theorem}
+
+\begin{proof}
+Substitute
+$F=(\frac12y'+A_jy)/\sqrt{A_j}$, expand the square, and integrate
+$\Re(y'\overline y)=(|y|^2)'/2$ to obtain (230).  Formula (232) follows by
+writing the two integrals in (231), translating the second variable, and
+observing that their difference is precisely the integral over
+$[-T,-T+a]$ propagated freely to $t$.
+
+The Fourier multipliers of $C_j$ and $D_j$ are respectively
+\[
+ \frac{2\sqrt{A_j}}{2A_j+i\tau},
+ \qquad
+ \frac{i\tau}{\sqrt{A_j}(2A_j+i\tau)}.
+\]
+Their squared moduli sum to $1/A_j$, while the second is
+$\tau^2/[A_j(4A_j^2+\tau^2)]$, the $j$-th summand of (171) because
+$a_j=2A_j$.  This proves (233).  Take the shortest initial segment for which
+the reciprocal sum exceeds $m_0$ and fractionally weight its last member to
+obtain (234).  Weighted summation of (233) proves the two identities before
+(236), and subtraction proves (236).  Summing (230) over adjacent cells
+cancels every internal terminal with the next initial storage.  For
+For the Gamma index $j=0$, $A_{j}=1/4$, and the two outer oriented states
+are scalar multiples of $M_+F$ and
+$M_-F$; the primitive conditions annihilate them.  All $j\ge1$ outer
+remainders are stable positive storages retained in $D_{\rm tail}$.
+\end{proof}
+
+\begin{corollary}[Explicit four-state Gamma head --- \PROVED]
+In (234) one may take
+\begin{equation}
+ \theta_0=\theta_1=\theta_2=1,
+ \qquad
+ \theta_3=\frac{13}{4}
+ \left(m_0-\frac{236}{45}\right),
+ \qquad
+ \theta_j=0\quad(j\ge4).                              \tag{239}
+\end{equation}
+Moreover $0<\theta_3<1$ (numerically
+$\theta_3=0.4151516680\ldots$).  Thus the negative Gamma head $C_H$ has
+exactly four scalar ODE states.
+\end{corollary}
+
+\begin{proof}
+Since $A_0=1/4$, $A_1=5/4$, $A_2=9/4$, and $A_3=13/4$,
+\[
+ \frac1{A_0}+\frac1{A_1}+\frac1{A_2}
+ =4+\frac45+\frac49=\frac{236}{45}.
+\]
+The elementary bounds
+$1.14<\log\pi<1.15$, $0.57<\gamma<0.58$,
+$1.57<\pi/2<1.572$, and $0.69<\log2<0.694$ give
+\[
+ \frac{236}{45}<m_0<\frac{236}{45}+\frac4{13}.
+\]
+(Each displayed logarithmic bound follows, for example, from the alternating
+series for $\log(1+x)$ after a rational range reduction.)  Hence (239) lies
+strictly between zero and one, and its contribution is
+$\theta_3/A_3=m_0-236/45$, proving (234).
+\end{proof}
+
+Replacing the Gamma and constant components in (83) by (236) gives the
+equivalent source-defined balanced factorization
+\begin{equation}
+ \mathcal X_T^\sharp F=
+ \left(D_{\rm tail}F,\{w_n^{1/2}J_{\log n,-}F\}_{n\in\mathcal A_T}\right),
+ \quad
+ \mathcal Y_T^\sharp F=
+ \left(C_HF,\{w_n^{1/2}J_{\log n,+}F\}_{n\in\mathcal A_T}\right), \tag{237}
+\end{equation}
+with
+\begin{equation}
+ A_T=(\mathcal X_T^\sharp)^*\mathcal X_T^\sharp
+     -(\mathcal Y_T^\sharp)^*\mathcal Y_T^\sharp.    \tag{238}
+\end{equation}
+This removes the separate $m_0^{1/2}I$ output and makes the opposite Gamma
+head finite without changing the signed physical operator.
+
+The prime-power outputs can likewise be collected into one lossless cell per
+prime, including the exact zero-extension boundary storage.
+
+\begin{theorem}[Compressed Euler--Julia resolvent identity --- \PROVED]
+Fix a prime $p$, put $r=p^{-1/2}$, $s=(1-r^2)^{1/2}$, and let
+$S_p=S_{\log p}$ be the positive zero-extension shift on $L^2(I_T)$.  It is
+nilpotent and $S_p^k=S_{k\log p}$.  Define
+\begin{align}
+ C_{p,T}&:=rS_p(I-rS_p)^{-1}
+          =\sum_{k\ge1}r^kS_p^k,                     \tag{240}\\
+ K_{p,T}&:=s(I-rS_p)^{-1},\notag\\
+ B_{p,T}&:=(I-S_p^*S_p)^{1/2}(I-rS_p)^{-1}.          \tag{241}
+\end{align}
+All sums are finite.  Then
+\begin{equation}
+ \boxed{I+C_{p,T}+C_{p,T}^*
+ =K_{p,T}^*K_{p,T}+r^2B_{p,T}^*B_{p,T}.}             \tag{242}
+\end{equation}
+Consequently the complete contribution of all active powers of $p$ is
+\begin{equation}
+ -\sum_{k\ge1}\frac{\Lambda(p^k)}{p^{k/2}}
+   (S_{k\log p}+S_{-k\log p})
+ = (\log p)\bigl(I-K_{p,T}^*K_{p,T}
+                    -r^2B_{p,T}^*B_{p,T}\bigr).      \tag{243}
+\end{equation}
+The boundary term vanishes for a bilateral unitary shift and is positive for
+the compressed physical shift.
+\end{theorem}
+
+\begin{proof}
+Nilpotence and convexity of the interval give $S_p^k=S_{k\log p}$ and the
+finite Neumann series (240).  Since
+$I+C_{p,T}=(I-rS_p)^{-1}$, multiplication on the left by
+$I-rS_p^*$ and on the right by $I-rS_p$ gives
+\[
+ (I-rS_p^*)(I+C_{p,T}+C_{p,T}^*)(I-rS_p)
+ =I-r^2S_p^*S_p.
+\]
+But
+\[
+ I-r^2S_p^*S_p=s^2I+r^2(I-S_p^*S_p).
+\]
+Conjugating back proves (242).  Finally
+$\Lambda(p^k)=\log p$ and (240) identify the left side of (243) with
+$-(\log p)(C_{p,T}+C_{p,T}^*)$; subtracting (242) from $I$ proves (243).
+\end{proof}
+
+Combining (236) and (243) gives a second, polar-free balanced factorization
+of the authoritative operator:
+\begin{align}
+ \mathcal X_T^{\rm free}F
+ &:=\left(D_{\rm tail}F,
+          \{(\log p)^{1/2}F\}_{p<e^{2T}}\right),      \tag{244}\\
+ \mathcal Y_T^{\rm fin}F
+ &:=\left(C_HF,
+   \{(\log p)^{1/2}K_{p,T}F\}_{p<e^{2T}},
+   \{(\log p)^{1/2}p^{-1/2}B_{p,T}F\}_{p<e^{2T}}
+          \right),                                   \tag{245}\\
+ A_T&=(\mathcal X_T^{\rm free})^*\mathcal X_T^{\rm free}
+     -(\mathcal Y_T^{\rm fin})^*\mathcal Y_T^{\rm fin}. \tag{246}
+\end{align}
+Only primes with $\log p<2T$ occur.  Formula (246) contains the four-state
+Gamma head, one rational Julia filter and one positive boundary-storage port
+per active prime; every prime power is already resummed in (240).
+
+\begin{theorem}[Finite-head physical angular operator --- \PROVED]
+The positive Gamma-tail feature in $\mathcal X_T^{\rm free}$ is injective.
+Consequently
+\begin{equation}
+ \mathfrak C_T^{\rm fin}
+   (\mathcal X_T^{\rm free}P_TF)
+ :=\mathcal Y_T^{\rm fin}P_TF                         \tag{247}
+\end{equation}
+defines a source operator on
+$\Ran(\mathcal X_T^{\rm free}P_T)$ without assuming a sign.  Its exact
+defect law is
+\begin{equation}
+ \|\mathcal X_T^{\rm free}P_TF\|^2
+ -\|\mathfrak C_T^{\rm fin}\mathcal X_T^{\rm free}P_TF\|^2
+ =\langle A_TP_TF,P_TF\rangle.                       \tag{248}
+\end{equation}
+It extends to a contraction on the closed generated range if and only if
+\begin{equation}
+ \boxed{\|\mathfrak C_T^{\rm fin}\|\le1,}             \tag{249}
+\end{equation}
+equivalently if and only if row (d) holds at the window $T$.
+\end{theorem}
+
+\begin{proof}
+The squared Fourier multiplier of $D_{\rm tail}$ is a sum of positive
+$D_j$ multipliers and is strictly positive for every $\tau\ne0$, because
+infinitely many full tail indices remain after removing the four-state head.
+If $D_{\rm tail}E_TF=0$, the Fourier transform of $E_TF$ is supported at the
+singleton $\{0\}$ and therefore vanishes in $L^2$; hence $F=0$.  This proves
+well-definedness of (247).  Equation (248) is (246) after compression by
+$P_T$.  The norm inequality in (249) is therefore equivalent to
+$P_TA_TP_T\ge0$.
+\end{proof}
+
+\begin{corollary}[Certified initial passivity --- \PROVED]
+For every $0<T\le\log2$, the operator (247) extends to a strict contraction
+on its generated primitive range:
+\begin{equation}
+ \|\mathfrak C_T^{\rm fin}
+       \mathcal X_T^{\rm free}P_TF\|
+ <\|\mathcal X_T^{\rm free}P_TF\|qquad(F\ne0).       \tag{250}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+The certified-initial-interval theorem in the supplied
+\texttt{row-d-local-analysis.tex} proves
+$\langle A_TF,F\rangle>0$ for every nonzero $F\in\mathcal P_T$ and every
+$0<T\le\log2$.  Substitute this strict inequality in the exact defect law
+(248).
+\end{proof}
+
+\begin{theorem}[First-loss zero-mode reduction --- \PROVED]
+For each $T>0$, the primitive Friedrichs operator
+\begin{equation}
+ H_T:=P_TA_TP_T\big|_{\mathcal P_T}                  \tag{251}
+\end{equation}
+is selfadjoint, bounded below and has compact resolvent.  After transporting
+$L^2(I_T)$ to a fixed interval by dilation, its closed quadratic forms depend
+continuously on $T$; the same is true at contact thresholds because a newborn
+translated overlap has measure zero.  Consequently, if row (d) fails at some
+finite window, there is a first $T_*>\log2$ and a nonzero
+$F_*\in\mathcal P_{T_*}$ such that
+\begin{equation}
+ H_{T_*}F_*=0.                                        \tag{252}
+\end{equation}
+Equivalently, for some scalars $\alpha,\beta$,
+\begin{equation}
+ A_{T_*}F_*
+ =\alpha e^{-t/2}+\beta e^{t/2}quad\hbox{on }I_{T_*}. \tag{253}
+\end{equation}
+Thus global row (d) follows once nonzero solutions of (252)--(253) are
+excluded at every finite window.
+\end{theorem}
+
+\begin{proof}
+The Gamma multiplier satisfies
+$g_\Gamma(\tau)=\log(2+|\tau|)+O(1)$, while the constant and the finitely
+many active zero-extension shifts are bounded.  Hence the closed Gamma form
+domain, equipped with its graph norm, embeds compactly into $L^2(I_T)$: in a
+Fourier basis its coercive weights tend to infinity.  Bounded perturbation and
+finite-codimensional compression preserve selfadjointness, semiboundedness
+and compact resolvent.
+
+Conjugate by the unitary dilation from $I_T$ to $(-1,1)$.  On the common form
+core of smooth compactly supported functions, the Gamma kernel, moment
+vectors and each active translated overlap vary continuously with $T$.
+Uniform lower bounds on compact $T$-intervals and form-core approximation
+give norm-resolvent, hence eigenvalue, continuity by the standard theorem for
+continuous closed forms.  At $2T=\log n$ the new overlap is supported on a
+null set, so its form enters continuously from zero.
+
+The lowest primitive eigenvalue is strictly positive for
+$T\le\log2$ by the supplied certified theorem.  If it is negative at a later
+finite window, zero extension from $I_T$ to $I_{T'}$ preserves both Tate
+moments and the global quadratic value; hence the lowest eigenvalue is
+nonincreasing under enlargement.  Continuity gives a first zero $T_*$ and
+compact resolvent gives an eigenvector $F_*$, proving (252).  Since
+$\mathcal P_T=\ker M_-\cap\ker M_+$, its orthogonal complement in $L^2(I_T)$
+is the span of $e^{-t/2},e^{t/2}$.  Equation (252) is therefore equivalent to
+(253).
+\end{proof}
+
+\begin{corollary}[Parity reduction of a first-loss mode --- \PROVED]
+The operator $A_T$, the primitive space and the finite-head angular system
+commute with reflection $(\mathcal RF)(t)=F(-t)$.  Hence a nonzero first-loss
+mode may be chosen either even or odd.  In the even sector (252)--(253) reduce
+to
+\begin{equation}
+ A_TF=c\cosh(t/2),
+ \qquad \int_{-T}^TF(t)\cosh(t/2)\,dt=0,              \tag{254}
+\end{equation}
+while in the odd sector they reduce to
+\begin{equation}
+ A_TF=c\sinh(t/2),
+ \qquad \int_{-T}^TF(t)\sinh(t/2)\,dt=0.              \tag{255}
+\end{equation}
+The other Tate moment follows automatically from parity.  Thus it suffices to
+exclude the two scalar equality systems (254)--(255).
+\end{corollary}
+
+\begin{proof}
+The Gamma kernel is even, reflection interchanges $S_a$ and $S_{-a}$, and
+$A_T$ contains their symmetric sum.  Reflection also interchanges $M_+$ and
+$M_-$, so it preserves their joint kernel.  The kernel of $H_T$ therefore
+splits into its even and odd parts.  In (253), an even right side requires
+$\alpha=\beta$ and is a multiple of $\cosh(t/2)$; an odd right side requires
+$\alpha=-\beta$ and is a multiple of $\sinh(t/2)$.  The two primitive moments
+then coincide up to sign and give the displayed scalar conditions.
+\end{proof}
+
+\begin{theorem}[Homogeneous exterior-leakage form of a zero mode --- \PROVED]
+Let $\mathcal A_\infty$ denote the global translation-invariant explicit-form
+operator whose distributional Fourier symbol is
+\begin{equation}
+ a_\infty(\tau)=g_\Gamma(\tau)-m_0
+ -2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+      \cos(\tau\log n),                               \tag{256}
+\end{equation}
+understood by the continuation in (117)--(119).  Let
+$L=\partial_t^2-\tfrac14$.  For $\phi\in H_0^2(I_T)$ put
+$F=L\phi$.  Then the primitive zero-mode equation (252)--(253) is equivalent
+to the homogeneous exterior-leakage condition
+\begin{equation}
+ \boxed{P_{I_T}\mathcal A_\infty L^2E_T\phi=0.}       \tag{257}
+\end{equation}
+Equivalently, the distribution
+$\mathcal A_\infty L^2E_T\phi$ is supported in
+$\mathbb R\setminus I_T$.  In Fourier variables its generating entire
+function is
+\begin{equation}
+ a_\infty(\tau)(\tau^2+	frac14)^2\widehat\phi(\tau), \tag{258}
+\end{equation}
+with the product interpreted distributionally.  Thus a first-loss mode is
+exactly a nonzero clamped potential whose differentiated Euler--Gamma current
+has complete interior cancellation.
+\end{theorem}
+
+\begin{proof}
+Because $\phi$ and $\phi'$ vanish at both endpoints, distributional
+differentiation creates no endpoint deltas and
+$L(E_T\phi)=E_T(L\phi)=E_TF$.  The global operator is a function of
+translations/derivatives and therefore commutes with $L$ on this compactly
+supported core.  For $t\in I_T$, translations by $\log n\ge2T$ do not meet
+the support, so the restriction of $\mathcal A_\infty F$ is $A_TF$.
+Applying $L$ to (253) kills both $e^{-t/2}$ and $e^{t/2}$ and gives (257).
+
+Conversely, (257) says that $L(\mathcal A_\infty F)=0$ distributionally on
+$I_T$.  Every distributional solution of $Lg=0$ on an interval is a linear
+combination of $e^{-t/2}$ and $e^{t/2}$, so (253) follows.  Since
+$F=L\phi$ with clamped boundary data, integration by parts gives
+$M_-F=M_+F=0$, hence $F\in\mathcal P_T$.  Fourier transformation gives
+(258).
+\end{proof}
+
+Equation (257) is the precise Poisson--Sonin equality case still to exclude.
+It is stronger and better typed than the withdrawn fixed-vector shortcut:
+both the interior projection and the global distributional operator are
+explicit.  A proof that the only clamped potential satisfying (257) is zero
+would make the first-loss theorem contradict itself and establish (249) for
+all windows.
+
+This replaces the unspecified output symbol in (228) by an exact physical
+source formula.  The four-state Gamma ODE realization and the prime Julia
+resolvents specify every row of (247).  What remains is solely to prove its
+passivity (249) by interconnecting those source systems; defining a defect
+operator from the left side of (248) would still be circular.
+
+This probabilistic boundary realizes the positive metric
+$\mathfrak M_t$ of (117) before critical continuation: the finite Euler
+Poisson factors supply the Zeta modulus, while (172) supplies the Gamma
+modulus.  The remaining constant/polar normalization and the two Tate
+terminal motions are already explicit in (105)--(111).  The final G40 task
+is therefore reduced to showing that the physical clamped-potential
+observation is the conditional-expectation martingale associated with this
+product boundary; then (157) and orthogonal innovations would give the
+required unit contraction.
+
+Thus the two ``explicit Tate terminals'' in (99) are no longer unspecified:
+their canonical combined square is (109).  What remains in (104) is the
+continuum Gamma--Poisson bulk comparison after subtracting this finite-rank
+second-fundamental-form contribution.  The positivity of (109) alone cannot
+fix the sign of that bulk term.
+
+\section{Requirement-by-requirement completion audit}
+
+\begin{center}
+\begin{tabular}{p{0.20\textwidth}p{0.16\textwidth}p{0.54\textwidth}}
+\hline
+Requirement & Status & Authoritative evidence \\
+\hline
+Amplitude & \PROVED/\OPEN & (27g)--(27h) prove the finite divisibility
+amplitude; identification with the continuum Hodge/old factor is not supplied.
+\\
+Normalization & \PROVED & (53)--(55) give the restricted Sonin polar
+isometry without using row (d). \\
+Gamma--Tate Gram & \PROVED & (81)--(84) give the exact source Gram and
+balanced factorization; (138)--(149) construct a global gcd--Gamma reference
+space, its Gram isometry and its positive midpoint conservation. \\
+Typed observation & \PROVED/\OPEN & (84a)--(84c) define the canonical source
+angular operator and (138)--(149) give the global cross-place type.  Its
+contractive bound remains open.
+\\
+Continuous reduction & \PROVED & (90)--(94) identify the primitive space
+with clamped potentials and give the exact Paley--Wiener defect kernel. \\
+Global Poisson mixing & \PROVED/\OPEN & (96)--(98) give the full continuum
+Euler divergence; its normalized physical Gram and boundary variation (104)
+remain open. \\
+Gamma normalization & \PROVED/\OPEN & (168)--(178a) give Gamma GNS and the
+exact ratio--scale identity deriving $m_0-g_\Gamma$ from one Mellin law;
+the unweighted deconvolution is excluded on every nonzero compact-window
+source by (179)--(180).  Equations (181)--(183) identify the exact completed
+Euler--Gamma coherent metric for $t>2$; its joint critical compression remains
+open.  Equations (184)--(186) prove why it cannot be an ordinary vector
+limit, while (187)--(194) construct its positive form-level and joint
+Euler--Gamma replacement.  Equations (208)--(210) prove the exact
+non-deconvolved Gamma--Tate metric termination. \\
+Tate terminal motion & \PROVED & (105)--(111) give the exact moving
+projection, minimum normal lift and positive even/odd terminal square. \\
+Conservation & \PROVED/\OPEN & Krein/indefinite conservation and the defect
+identity are exact; positive Hilbert conservation is equivalent to (84c). \\
+Positivity & \PROVED/\OPEN & The supplied certified theorem and (248)--(250)
+give strict passivity for $0<T\le\log2$.  The estimate for every $T$, namely
+(249), is the Weil criterion and remains open. \\
+Old-factor compatibility & \PROVED/\OPEN & Restriction of (83) fixes the
+authoritative $X_0,Y_0$ columns, while (41a)--(41j) construct the correct
+signed old factor and capacity load.  Equations (195)--(201) identify the
+finite Zeta gauge, gcd Gram and M\"obius normalization; equality with the
+separate v83--v86 physical Hodge Gram (41) is still unproved. \\
+Condition G / row (d) & \OPEN & The preceding two open Gram/passivity
+requirements prevent a non-circular closure. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Corrected final ledger after the type audit}
+
+\subsection*{PROVED}
+\begin{itemize}
+\item The algebraic G39 divergence realization (27e)--(27h) in the finite
+      divisibility model.
+\item The restricted CCM polar isometry (52)--(55).
+\item The unitary midpoint identity (44)--(47) as an abstract Hilbert-space
+      theorem.
+\item The typed observation criterion (57)--(61).
+\item The order-mismatch no-go (62)--(63), excluding the row-(c) operator
+      $K=\mathcal F^{-1}X\mathcal F$ as the Hodge energy feature.
+\item The oriented-delay Kolmogorov factor and conservation identity
+      (67)--(76) for its own positive reference Gram.
+\item The exact Gamma delay formula (81)--(82) and the authoritative balanced
+      factorization (83)--(84), including explicit factors
+      $\mathcal X_T,\mathcal Y_T$.
+\item The signed old-factor correction (41a)--(41c), the exact
+      reference-harmonic capacity formula (41d)--(41i), and its equivalence
+      (41j) with the return load in the supplied row (d).
+\item The physical minimal amplitude current (41k)--(41m) and the complete
+      joint-Gram criterion (41n)--(41o) for comparison with G39.
+\item The finite-port/full-Hodge dimension obstruction: algebraic G39 cannot
+      factor the infinite-dimensional physical old block.
+\item The equivalence between the remaining sign and the unit Douglas
+      contraction $C_T$.
+\item The canonical source angular operator
+      $\mathfrak C_T^{\rm src}$ and its exact defect pullback
+      (84a)--(84b), constructed without a sign assumption.
+\item The correctly typed observation theorem (86)--(87): normalized Sonin
+      transport is isometric, whereas the physical observation must be
+      contractive; an isometric observation would force $A_T=0$.
+\item The equivalence of the all-window passivity estimate (84c), the Weil
+      sign criterion, and RH.
+\item The no-channelwise-contraction theorem (89): any valid $C_T$ must mix
+      places and/or Gamma--Tate terminal channels.
+\item The Tate-potential isomorphism and exact continuous kernel
+      (90)--(94).
+\item The differentiated global Poisson identity (96)--(98), the Gram
+      homogeneity obstruction (100), and the exact Zeta metric variation
+      (101)--(103).
+\item The exact Tate boundary velocity and terminal energy (105)--(111).
+\item The Kato primitive transport (112)--(116), the completed
+      Euler--Gamma logarithmic metric (117)--(119), and the three-lines
+      inverse-metric obstruction (120).
+\item The exact residue Krein boundary and its fiber signatures
+      (121)--(126), and the amenable unitarization theorem (127)--(128).
+\item The critical gcd boundary state and explicit product-Poisson GNS
+      realization (133)--(137).
+\item The gcd--Gamma reference observation, global oriented midpoint
+      colligation and exact source Gram (138)--(149).
+\item M\"obius whitening, the centered Euler Fisher score, and the exact
+      prime-power innovations (150)--(167).
+\item The Archimedean Gamma GNS boundary (168)--(173), and the exact
+      Gamma ratio--scale identity (174)--(178a), which derives both
+      $g_\Gamma$ and $m_0$ from one canonical Mellin probability law.
+\item The Gamma deconvolution domain no-go (179)--(180): neither compact
+      support nor the two Tate moments permit removal of the Gamma
+      characteristic factor as an $L^2$ operator.
+\item The coherent completed Euler--Gamma factorization (181)--(183) in the
+      absolutely convergent half-plane.
+\item The Euler coherent-orbit escape theorem (184)--(186), separating the
+      continuous scaling limit from the multiplicative gcd GNS limit.
+\item The positive rigged critical Euler form, exact arithmetic diagonal
+      observation, and joint Euler--Gamma boundary (187)--(194).
+\item The divisor-incidence realization and deformed GNS equivalence
+      (195)--(200), identifying the finite Zeta gauge, harmonic-mass
+      renormalization, gcd boundary and M\"obius whitening in one model.
+\item The linear/affine Gamma separation (202)--(204), identifying
+      $g_\Gamma$ as an unbounded affine cocycle energy rather than a bounded
+      coherent-orbit distance.
+\item The prime Julia colligations and their exact M\"obius-innovation
+      cascade (205)--(207), giving a lossless realization of the arithmetic
+      label network.
+\item The exact affine Gamma--Tate termination identity (208)--(210), deriving
+      $g_\Gamma-m_0$ as the logarithmic derivative of one positive coherent
+      metric cell.
+\item The complete coherent Euler--Gamma bulk normalization (211)--(213),
+      recovering the authoritative localized symbol $a_T$ with every prime
+      power and the exact constant.
+\item The beta--Gamma and oppositely oriented Euler Markov transports
+      (214)--(220), supplying explicit moving boundary embeddings.
+\item The prime-power Markov defect rates (221)--(223), deriving exactly
+      every coefficient $\Lambda(p^k)/p^{k/2}$ from positive Julia defects.
+\item The complete Markov-defect realization (224)--(227) of the physical
+      reference factor $\mathcal X_T$.
+\item The Gamma ODE Green identity, rank-one shift commutator, finite-head
+      absorption of $m_0$, and polar-free balanced factorization
+      (229)--(238).
+\item The explicit four-state Gamma head and the compressed Euler--Julia
+      resolvent/factorization (239)--(246), resumming every active prime power
+      into one filter and one positive boundary port per prime.
+\item The finite-head physical angular operator, exact defect law, and
+      certified strict passivity on $0<T\le\log2$ (247)--(250).
+\item The first-loss zero-mode theorem (251)--(253), reducing any global
+      failure to a finite-window primitive solution of an explicit
+      Gamma--Euler equation with only two Tate forcing terms.
+\item The parity and homogeneous exterior-leakage reductions (254)--(258),
+      identifying the equality case with a clamped potential whose global
+      differentiated Euler--Gamma current vanishes throughout its support.
+\end{itemize}
+
+\subsection*{OPEN}
+\begin{itemize}
+\item Compatibility of that feature with the fixed old Gram
+      $A_0=\mathcal G_0^*\mathcal G_0$.
+      Concretely, the three comparison identities (41p)--(41r).
+\item Identification of the new source-derived gcd--Gamma reference space
+      (138)--(149) with the independently defined CCM Sonin target, if that
+      particular target is required; the source Gram/type isometry itself is
+      now constructed.
+\item The general-window Sonin lower-frame estimate
+      \texttt{eq:framebound} from the supplied \texttt{main.tex}; its known
+      comparison theorem covers only the prime-free window.
+\item Construction of the normalized physical Poisson--Sonin Gram in (99)
+      and proof of the boundary monotonicity/square identity (104).
+\item Proof that the clamped-potential observation is the conditional
+      expectation/martingale of the joint Gamma--Euler product boundary,
+      while retaining the Gamma characteristic factor in the Hilbert metric;
+      the direct deconvolution route is ruled out by (180).
+      More precisely after (214)--(223): prove that the Julia-reversed Euler
+      transport and beta--Gamma transport, amplified by the physical delay
+      channels and Kato-compressed by $P_t$, have main output
+      $\mathcal Y_TP_T$ and defect equal to (109) plus the old-compatible
+      Schur residual.
+\item Construction of the windowed intertwiner from the authoritative
+      clamped-potential/old-new source into the positive joint critical space
+      (194), proving its Gram is the Schur boundary form and making it
+      compatible with the gcd GNS limit and moving Tate projection.
+\item Construction of the Hilbert completion of the Poisson quotient and the
+      uniform centered-scaling estimate (127), or an equivalent critical
+      closed-range theorem in a source RKHS realization.
+\item Construction, from source formulas, of the contraction
+      $C_T\mathcal X_TP_T=\mathcal Y_TP_T$ with $\|C_T\|\le1$; equivalently,
+      the unit-budget factorization of $Q_c$ through $D_0^{1/2}$.
+      Equivalently, prove the global bound (84c) for the already constructed
+      source angular operator.
+      In the finite-head realization it is enough, by (251)--(253), to exclude
+      a nonzero first-loss zero mode and prove the corresponding equality case
+      of the ODE/Julia storage network is trivial.  Equivalently, prove the
+      exterior-leakage uniqueness statement (257) for clamped potentials.
+\item Identification of the undefined symbol $\mathcal H_{5/4}$ with a
+      precise Gamma form, if that notation is to be retained.
+\item The positive factorization (43), hence G40, G41, G42, condition $G$, and
+      row (d).
+\end{itemize}
+
+\subsection*{AUDIT}
+\begin{itemize}
+\item Equations (48)--(51) are only a candidate application of the midpoint
+      theorem and are not a proof of G40.
+\item The proposed shortcut
+      $\langle(\mathcal U_{\rm PF}-I)Kf,x\rangle=0$ for every old primitive
+      $x$ is unavailable: no supplied theorem says that the physical old
+      primitive space is fixed pointwise by $\mathcal U_{\rm PF}$, and the
+      row-(c) vector $Kf$ has the order mismatch proved in (62)--(63).
+      Differentiated Poisson gives the divergence (96)--(98), not the signed
+      normal equation for the physical harmonic minimizer.
+\item Equation (56) is ill typed without (57), and it is false when its $K$ is
+      interpreted as the row-(c) operator (62).
+\item The auxiliary direct-sum G39 port cannot be the midpoint residual:
+      Proposition (64)--(66) proves the required unitary orbit is impossible
+      under that orthogonal embedding.
+\item A full-space identification in (78) with the finite G39 port is ruled
+      out by the dimension obstruction.  At most (78) can describe compatible
+      finite compressions; it cannot close the continuum row (d).
+\item The former identification
+      $\mathcal B_T^*\mathcal B_T=\cL$ and
+      $\|\mathcal B_TRv\|^2=S_M'$ was a redefinition, not a derivation from
+      the supplied row-(d) operators; it has been withdrawn.
+\item A direct sum of locally normalized Gamma/Euler isometries cannot supply
+      the global contraction; theorem (89) gives an explicit primitive
+      obstruction in every fixed arithmetic channel for large windows.
+\item Positivity of the Sonin Hilbert--Schmidt Gram $M(f)$ does not identify
+      it with the Gamma--Tate reference Gram and does not imply its open lower
+      frame bound.
+\item Three-lines convexity for the natural completed metric carries the
+      wrong $|\Lambda_{\mathbb Q}|^2$ weight; cancelling it by division is a
+      zero-free assumption.
+\item The analogous attempt to cancel the Gamma characteristic factor in
+      (177) is impossible on every nonzero compact-window source by (180),
+      including on the primitive Tate subspace.
+\item The Gamma ratio coherent orbit cannot replace the Gamma energy current:
+      (202)--(204) prove that the former is bounded and the latter is an
+      unbounded affine cocycle.
+\item The gcd state limit and the continuous scaling-orbit limit cannot be
+      identified as ordinary vectors: (185) proves escape of mass and an
+      uncountable delta kernel.  They must be joined only after a polar/Tate
+      quotient at form level.
+\item The formal Krein completion and any square root of the desired Schur
+      remainder remain equivalent to the unproved sign and cannot close G.
+\end{itemize}
+
+\end{document}

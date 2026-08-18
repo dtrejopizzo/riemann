@@ -45,7 +45,7 @@ unchanged by adding the real structure.
 > **Verdict on (T2):** the real-structure constraint is a **symmetry, not a positivity**. It is
 > satisfied vacuously (weak reading) or equals RH (strong reading). The real structure adds **no
 > new handle on the sign**. This is the pre-registered outcome (`00-SURF-2.0-design.md` §8,
-> S5-fail) reached one level deeper — honestly, a negative.
+> S5-fail) reached one level deeper — candidly, a negative.
 
 ---
 
@@ -87,7 +87,7 @@ formulation:
 - its positivity is the **wrong-sign capstone** (CAP): the canonical system supplies the
   symmetry and the resolvent, but `H(t) ⪰ 0` carrying the sign is exactly what is unproven.
 
-**So SURF 2.0, pursued honestly, lands back on the de Branges canonical-system wall** — now
+**So SURF 2.0, pursued candidly, lands back on the de Branges canonical-system wall** — now
 reached from the real-structure side, and *stripped of the geometric ambiguity*: it was never
 "find a mysterious surface," it is "solve the F-indep inverse spectral problem for the canonical
 system," a single identifiable object.
@@ -116,7 +116,7 @@ place, and it is provable, RH-independent, and citable (it would be the natural 
 
 ---
 
-## 5. Honest net for Phase 17 (SURF 2.0)
+## 5. Candid net for Phase 17 (SURF 2.0)
 
 - **Search space collapsed to one object.** The program no longer chases a surface; it chases the
   F-indep canonical-system Hamiltonian `H(t)` / `E_ξ` (= P28's `(dB2)`+identification). This is
@@ -132,13 +132,13 @@ place, and it is provable, RH-independent, and citable (it would be the natural 
 
 ---
 
-## 6. Next — two honest options
+## 6. Next — two candid options
 
 1. **Write P29** (the symmetry-vs-positivity dichotomy, §4): an RH-independent structural theorem
    explaining why real-structure / canonical-system realizations cannot decide RH. This
    *consolidates* Phase 17 into a publishable result, in the program's "why RH resists" lineage
    (P15, P21), now at the operator/real-structure level. **Recommended:** it banks the durable
-   output and is honest about the wall.
+   output and is candid about the wall.
 2. **Attack the inverse spectral problem (T1)+(T3) directly** — construct `H(t)` from primes
    (F-indep) — knowing in advance it terminates at `H(t) ⪰ 0` = CAP / Conrey–Li. Only worth doing
    if there is a *specific* new idea for the positivity; absent one, it re-derives the known wall.

@@ -3,7 +3,7 @@
 
 **David Alejandro Trejo Pizzo**
 
-*Phase-4 deliverable of the Riemann program. Self-contained. Honest about what is and is not proved.*
+*Phase-4 deliverable of the Riemann program. Self-contained. Candid about what is and is not proved.*
 
 ---
 
@@ -119,7 +119,7 @@ exposing an **explicit finite sampling ladder**. We do **not** claim an identifi
 Connes–Consani $K$; Theorem C in fact explains why the zero-side realization, unlike the archimedean one,
 cannot be a computational handle.
 
-### 1.5 Honest scope
+### 1.5 Candid scope
 
 Theorem A is conditional on (H); (H) is much weaker than RH but is **not** established unconditionally by
 current methods (§4.3). Theorems B and C are unconditional. **None of the three proves RH**, and Theorem C
@@ -250,7 +250,7 @@ $\qquad\square$
 > **Why $O(\rho)$ and not $o(\rho)$.** Zero-density makes off-line zeros *globally* sparse, but they may
 > *cluster locally*; the cell count is bounded by the **total** $O(\rho)$, not by the (smaller) off-line
 > density. Replacing it by the off-line density would yield $o(\mathfrak t_+)$ = RH — forbidden by possible
-> clustering. The honest output is the $O$ of B-2.
+> clustering. The candid output is the $O$ of B-2.
 
 ---
 
@@ -293,7 +293,7 @@ So B-2 reduces to: *deep off-line zeros do not dominate any Nyquist cell at larg
 > $\mathfrak t_+$ only on the on-line subset and the $\kappa=1+O(\delta)$ amplification is bounded; taking
 > $\delta$ small gives (4.1). $\qquad\square$
 
-### 4.3 The honest status of (H)
+### 4.3 The candid status of (H)
 
 (H) is **strictly weaker than RH**: RH says there are *no* off-line zeros; (H) says only that deep ones do
 not *locally dominate* (they may exist, even infinitely many, provided they do not fill a Nyquist cell). It
@@ -437,7 +437,7 @@ $$
 > \underbrace{\|K\|\le1\iff \textbf{RH}}_{\text{given }K\text{ defined}}.\ }
 > $$
 > - $\|K\|<\infty\iff R(E)$ uniformly positive-projecting $\iff$ the coercivity B-2 needs; **(H) is sufficient
->   for it.** (The earlier "$(H)\iff\|K\|<\infty$" overstated; the honest direction is
+>   for it.** (The earlier "$(H)\iff\|K\|<\infty$" overstated; the candid direction is
 >   $(H)\Rightarrow\|K\|<\infty\Rightarrow$ B-2.)
 > - $\|K\|\le1\iff\|P_-EF\|\le\|P_+EF\|\ \forall F\iff\mathfrak t\ge0\iff$ RH (unconditional given $K$ defined;
 >   if $K$ unbounded then $\|K\|>1$, RH false — consistent).
@@ -542,7 +542,7 @@ positivity.
 
 ---
 
-## 10. Honest status, and open problems
+## 10. Candid status, and open problems
 
 **What is proved.**
 | Statement | Status |

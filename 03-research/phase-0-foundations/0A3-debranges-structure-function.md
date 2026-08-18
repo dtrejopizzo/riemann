@@ -1,6 +1,6 @@
 # Phase 0.A.3 — Q and the de Branges structure function
 
-**Status:** honest first draft of the dictionary. ⚑ = requires verification by a specialist in
+**Status:** candid first draft of the dictionary. ⚑ = requires verification by a specialist in
 de Branges spaces before it is trusted, **and** must be checked against the Conrey–Li
 obstruction (§4) before any effort is invested. Goal: write the open inequality (LB) as a
 chain (ordering) condition on a structure function $E(z)$.

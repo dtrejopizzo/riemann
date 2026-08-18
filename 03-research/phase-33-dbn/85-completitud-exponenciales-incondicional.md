@@ -295,4 +295,4 @@ El Doc 85 cierra el análisis del obstáculo circular del Camino 3 con una formu
 
 ---
 
-*Documento 85 concluido. La completitud incondicional del span lineal de exponenciales está establecida (módulo V.1). El obstáculo para RH reside en la brecha entre aproximación lineal e incondicional y aproximación no-lineal condicionada por los ceros críticos. No hay demostración nueva de RH; hay una reformulación más honesta del obstáculo.*
+*Documento 85 concluido. La completitud incondicional del span lineal de exponenciales está establecida (módulo V.1). El obstáculo para RH reside en la brecha entre aproximación lineal e incondicional y aproximación no-lineal condicionada por los ceros críticos. No hay demostración nueva de RH; hay una reformulación más franca del obstáculo.*

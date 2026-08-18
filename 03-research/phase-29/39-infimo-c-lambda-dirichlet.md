@@ -105,7 +105,7 @@ $$\text{Residuo en }\gamma_n + \sum_{k \neq n} \frac{-2}{\gamma_n - \gamma_k} + 
 
 Esto es la conjetura de que la función $C_\infty$ tiene un CERO SIMPLE en $\gamma_n$ (que cancela exactamente el polo logarítmico) — relacionado con la hipótesis de LI (Independencia Lineal de los $\gamma_n$, Doc 24) y con la no-degeneración del cero.
 
-*Comentario de honestidad.* La fórmula $(W)$ no simplifica directamente la prueba de Inc. Inv. — la cancelación de polos que requiere es exactamente equivalente a la hipótesis. No se obtiene nueva información.
+*Comentario de franqueza.* La fórmula $(W)$ no simplifica directamente la prueba de Inc. Inv. — la cancelación de polos que requiere es exactamente equivalente a la hipótesis. No se obtiene nueva información.
 
 ---
 
@@ -175,13 +175,13 @@ $$F_\lambda(\gamma_n) - F_\infty(\gamma_n) = -2\sum_{p > \lambda^2} \frac{\log p
 
 *Prueba.* La fórmula explícita para $\psi(\lambda^2) - \lambda^2 = \sum_\rho \lambda^{2\rho}/\rho + \ldots$ Da el error en $F_\lambda(\gamma_n)$ como $O(\lambda^2 \cdot e^{-c\sqrt{\log\lambda^2}} / \lambda^2) \cdot |\gamma_n|^{-1+\epsilon}$ en promedio sobre los ceros... pero esto no es una estimación puntual en $n$. $\square$
 
-*Nota de honestidad.* La estimación puntual $F_\lambda(\gamma_n) - F_\infty(\gamma_n) = O(\lambda e^{-c\sqrt{\log\lambda}})$ requiere que el error en la fórmula explícita de PNT sea distribuido de manera controlada en los ceros $\gamma_n$. Esto no está probado uniformemente en $n$.
+*Nota de franqueza.* La estimación puntual $F_\lambda(\gamma_n) - F_\infty(\gamma_n) = O(\lambda e^{-c\sqrt{\log\lambda}})$ requiere que el error en la fórmula explícita de PNT sea distribuido de manera controlada en los ceros $\gamma_n$. Esto no está probado uniformemente en $n$.
 
 ---
 
 ## 7. El obstáculo central: convergencia condicional en los ceros
 
-**Teorema 2** (el obstáculo — diagnóstico honesto). La convergencia $F_\lambda(\gamma_n) \to F_\infty(\gamma_n)$ cuando $\lambda \to \infty$ (para cada $n$ fijo) ES verdadera, en el siguiente sentido:
+**Teorema 2** (el obstáculo — diagnóstico franco). La convergencia $F_\lambda(\gamma_n) \to F_\infty(\gamma_n)$ cuando $\lambda \to \infty$ (para cada $n$ fijo) ES verdadera, en el siguiente sentido:
 
 $$F_\lambda(\gamma_n) = 2\sum_{p \leq \lambda^2} \frac{\log p}{\sqrt{p}}\cos(\gamma_n\log p) \to 2\sum_p \frac{\log p}{\sqrt{p}}\cos(\gamma_n\log p) = F_\infty(\gamma_n)$$
 

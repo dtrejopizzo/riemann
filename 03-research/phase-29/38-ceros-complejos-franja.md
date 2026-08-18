@@ -176,7 +176,7 @@ $$y_c \geq c\sqrt{\delta_0 / \lambda} \to 0.$$
 
 Los ceros complejos de Tipo A se ACERCAN al eje real a tasa no peor que $1/\sqrt{\lambda}$ — pero lo hacen INCONDICIONALMENTE.
 
-*Comentario de honestidad.* Este resultado dice que los ceros complejos se acercan al eje real a tasa $\geq 1/\sqrt{\lambda}$, pero NO dice que llegan. Para que lleguen se necesita que $C_\lambda(x_c) \to 0$ — que es Inc. Inv.
+*Comentario de franqueza.* Este resultado dice que los ceros complejos se acercan al eje real a tasa $\geq 1/\sqrt{\lambda}$, pero NO dice que llegan. Para que lleguen se necesita que $C_\lambda(x_c) \to 0$ — que es Inc. Inv.
 
 ---
 
@@ -214,7 +214,7 @@ $$y_c \leq \sqrt{\frac{2\cdot O(\lambda^{1-2\alpha-\epsilon})}{|C_\lambda''(x_c)
 
 Para $\alpha > 1/2$: $y_c = O(\lambda^{-\epsilon/2}) \to 0$. Entonces los ceros complejos de Tipo A están BAJO la línea $\Im(z) = \lambda^{-\alpha}$ para $\alpha > 1/2$.
 
-*Nota de honestidad.* Este resultado asume que $C_\lambda(x_c) = O(\lambda^{1-2\alpha-\epsilon})$ en los mínimos — que es una hipótesis adicional no probada. Sin ella, el resultado es vacío.
+*Nota de franqueza.* Este resultado asume que $C_\lambda(x_c) = O(\lambda^{1-2\alpha-\epsilon})$ en los mínimos — que es una hipótesis adicional no probada. Sin ella, el resultado es vacío.
 
 **Proposición 11** (caso probado: mínimos cerca de $\gamma_n$). Para los mínimos de $C_\lambda$ que caen EXACTAMENTE en las posiciones de los eigenvalores $t_n^{(\lambda)}$ (que bajo Inc. Inv. son aproximadamente los $\gamma_n$):
 
@@ -278,7 +278,7 @@ El lado derecho es una función suave de $x$ (variación lenta), mientras que el
 
 (A2) **La pregunta del escape incondicional:** ¿existe una cota $y_c \leq f(\lambda) \to 0$ incondicional (sin asumir Inc. Inv.)? De Corolario 4: la cota es $y_c \geq c/\sqrt{\lambda}$ desde abajo, pero no hay cota superior incondicional que vaya a 0.
 
-**La barrera estructural (diagnóstico honesto):**
+**La barrera estructural (diagnóstico franco):**
 
 El escape de los ceros complejos al eje real ES equivalente a Inc. Inv. No hay forma de probar el escape sin probar Inc. Inv. primero — la condición son la misma cosa analíticamente (Proposición 5).
 

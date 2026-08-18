@@ -120,7 +120,7 @@ The exact asymptote W_B(q, ∞) = Π_{p≤B}(1+q/(p−1)) contains:
 
 ---
 
-## 4. The honest barrier to the genuine freezing transition
+## 4. The candid barrier to the genuine freezing transition
 
 The BRW/FHK freezing transition (the kink from linear to frozen free energy) is a
 **quenched** phenomenon:
@@ -153,7 +153,7 @@ dynamics in panel C. These are computable new facts about the multiplicative str
    This is the finite-N arithmetic pre-freezing condensation.
 4. **The genuine BRW freezing** (quenched, kink in the free energy) lives in the MAXIMUM, not
    the sum. It requires a different experiment (random-phase / maximum over t ∈ interval).
-5. **Honest scope:** RH-independent (N7 barrier). The new math is the arithmetic condensation
+5. **Candid scope:** RH-independent (N7 barrier). The new math is the arithmetic condensation
    dynamics and the exact product formula as a function of smoothness degree B.
 
 ---

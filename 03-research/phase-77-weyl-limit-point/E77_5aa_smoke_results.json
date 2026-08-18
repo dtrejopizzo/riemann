@@ -1,0 +1,68 @@
+{
+  "statement": "Exact Schur decomposition Q_logT = Q_t0 + Q_theta",
+  "identity_source": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5y_q_functional_identity_results.json",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 12,
+    "dps": 50,
+    "sigmas": [
+      "3.0"
+    ]
+  },
+  "cases": [
+    {
+      "label": "zeta-lam6",
+      "deltas": [
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "delta_logt": 0.08148306198794537,
+          "delta_t0": -0.01027770749227071,
+          "delta_theta": 0.09176076948021608,
+          "delta_component_error": 1.50343014942686e-51,
+          "old_identity_error": 5.882387592114129e-51,
+          "new_identity_error": 1.7627301590419375e-51,
+          "theta_abs_old": 1.3266972140639717,
+          "theta_abs_new": 1.2131922910339883,
+          "one_minus_theta_abs_old": 0.32669748930559306,
+          "one_minus_theta_abs_new": 0.2131945567316631
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "delta_logt": 0.054427778610015576,
+          "delta_t0": -0.0057784395443566125,
+          "delta_theta": 0.06020621815437219,
+          "delta_component_error": 0.0,
+          "old_identity_error": 1.7627301590419375e-51,
+          "new_identity_error": 1.8356772752762595e-51,
+          "theta_abs_old": 1.2672979658299215,
+          "theta_abs_new": 1.1098029250748724,
+          "one_minus_theta_abs_old": 0.26729994567978027,
+          "one_minus_theta_abs_new": 0.10980891337746397
+        }
+      ],
+      "qrows": [
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "mod4": 0,
+          "Q_logT_reconstructed": 6.885549427418064,
+          "Q_t0": -1.5639849276543725,
+          "Q_theta": 8.449534355072435,
+          "Q_component_error": 1.1179300136041501e-49,
+          "theta_abs_old": 1.3266972140639717,
+          "theta_abs_new": 1.2131922910339883,
+          "one_minus_theta_abs_old": 0.32669748930559306,
+          "one_minus_theta_abs_new": 0.2131945567316631,
+          "Q_logT_reference": 6.885549427418063,
+          "Q_logT_reference_error": 1.289916555044139e-16,
+          "Q_reference": 1.5828711783824705,
+          "Q_ext_reference": 8.468420605800532
+        }
+      ]
+    }
+  ]
+}

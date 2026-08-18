@@ -4,13 +4,13 @@
 **Fecha:** junio 2026
 **Autor:** David Alejandro Trejo Pizzo
 **Prerrequisitos:** Docs 63, 64, 69, 70, 71, 72, 99, 103; P39, P41 (§ Form A, Problema 6.2)
-**Regla de honestidad:** todo paso no probado se declara GAP ABIERTO; toda afirmación no verificada contra fuente lleva [NO VERIFICADO]. Sin numéricos: todos los valores que aparecen son formas cerradas exactas (aritmética racional y radicales), con verificación algebraica en el Apéndice A.
+**Regla de franqueza:** todo paso no probado se declara GAP ABIERTO; toda afirmación no verificada contra fuente lleva [NO VERIFICADO]. Sin numéricos: todos los valores que aparecen son formas cerradas exactas (aritmética racional y radicales), con verificación algebraica en el Apéndice A.
 
 ---
 
 ## 0. Resumen ejecutivo
 
-La Forma A de P41 (Problema 6.2) propone una traza conjunta $\mathcal{T}(t,x)$ —el aproximante de Euler finito indexado por $x$, evolucionado por el flujo de De Bruijn–Newman (DBN) hasta tiempo $t$— y pregunta si una desigualdad diferencial que acople $\partial_t$ con $\partial_x$ puede propagar la positividad desde los dos bordes (teoremas incondicionales) hasta la esquina $(t,x)=(0,\infty)$ (RH). Este documento ejecuta el primer test finito y honesto declarado en P41: el aproximante de dos primos $S=\{2,3\}$.
+La Forma A de P41 (Problema 6.2) propone una traza conjunta $\mathcal{T}(t,x)$ —el aproximante de Euler finito indexado por $x$, evolucionado por el flujo de De Bruijn–Newman (DBN) hasta tiempo $t$— y pregunta si una desigualdad diferencial que acople $\partial_t$ con $\partial_x$ puede propagar la positividad desde los dos bordes (teoremas incondicionales) hasta la esquina $(t,x)=(0,\infty)$ (RH). Este documento ejecuta el primer test finito y franco declarado en P41: el aproximante de dos primos $S=\{2,3\}$.
 
 **Resultados principales:**
 
@@ -271,7 +271,7 @@ Las únicas variaciones no triviales viven sobre la recta $\{x=\infty\}$ (donde 
 - **Dirección $x$ (Teorema 5.4):** los incrementos $\delta_p$ cambian de signo (positivos para $p^m\in\{2,3,4,5,7\}$; negativos para todo $p^m\geq8$, en particular todo primo $p\geq11$), con cruce exacto en $\mathrm{sech}^2(\log u_*)=y_-=(39-2\sqrt{249})/105$, $u_*\in(7,8)$. Además la serie diverge (Teorema 5.5): no hay cantidad acumulada cuyos incrementos sean los $\delta_p$. El punto de cruce **depende de la ventana $\lambda_0$** (los coeficientes $105,-78,5$ son los de $N=1$; para $N$ mayores el polinomio cambia y el cruce se mueve), de modo que ninguna diagonal $t=\alpha/\log p_x$ puede ser monótona uniformemente en la escala.
 - **Dirección $t$ (Observación 4.5):** el signo de $\partial_tT_{\lambda_0}(0)$ bajo $\neg$RH es un GAP ABIERTO; la única evidencia previa (Doc 71 §4) queda invalidada por el signo de la EDP y el bloque on-critical omitido.
 
-Conclusión del test: **no existe relación de signo fija** $\partial_t\mathcal{T}\lessgtr c\,\Delta_x\mathcal{T}$ ni en el interior (donde es $0=0$, vacua) ni en la frontera (donde un lado oscila con cruce dependiente de la escala y el otro tiene signo desconocido). El primer test finito y honesto declarado en P41 §Form A se ejecutó y **el falsador se activa**, en modo degenerado (interior) y en modo oscilatorio (frontera) simultáneamente.
+Conclusión del test: **no existe relación de signo fija** $\partial_t\mathcal{T}\lessgtr c\,\Delta_x\mathcal{T}$ ni en el interior (donde es $0=0$, vacua) ni en la frontera (donde un lado oscila con cruce dependiente de la escala y el otro tiene signo desconocido). El primer test finito y franco declarado en P41 §Form A se ejecutó y **el falsador se activa**, en modo degenerado (interior) y en modo oscilatorio (frontera) simultáneamente.
 
 ### 6.3. ¿Puede salvarse con otra cantidad monótona $M(t,x)$?
 
@@ -294,7 +294,7 @@ La fila clave es la última. Por la dicotomía (Prop. 3.3), un interior no trivi
 
 > **El acoplamiento $\partial_t$–$\partial_x$, en cualquier versión no vacua, requiere en el paso del borde aritmético una positividad/tasa RH-equivalente.** La Forma A no encuentra un mecanismo nuevo: re-presenta el muro MW-1/MW-6 (vía C2) o MW-2 (vía la divergencia de la cola prima, ahora con constante exacta $\tfrac{5\sqrt2}{8}$ en el marco Jacobi). La transmutación del Doc 99 se reproduce sin residuo.
 
-Un punto fino de honestidad en la dirección opuesta: nada de lo anterior usa positividad RH-equivalente *en los pasos probados de este documento*. Los Teoremas 3.2, 4.3, 5.3, 5.4, 5.5 son incondicionales (módulo ES$_x$, que es no-degeneración finita verificable, no positividad). La circularidad no contamina los resultados; contamina —como siempre— el único paso que falta, y la contribución de este documento es demostrar que ese paso no puede ser un principio de propagación 2D sobre la traza de discrepancia.
+Un punto fino de franqueza en la dirección opuesta: nada de lo anterior usa positividad RH-equivalente *en los pasos probados de este documento*. Los Teoremas 3.2, 4.3, 5.3, 5.4, 5.5 son incondicionales (módulo ES$_x$, que es no-degeneración finita verificable, no positividad). La circularidad no contamina los resultados; contamina —como siempre— el único paso que falta, y la contribución de este documento es demostrar que ese paso no puede ser un principio de propagación 2D sobre la traza de discrepancia.
 
 ---
 

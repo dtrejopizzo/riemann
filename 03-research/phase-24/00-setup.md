@@ -100,7 +100,7 @@ El paso de la derecha requiere, para ser riguroso:
 - (24-A.2) La identidad de Hadamard en $t=\gamma_j$: la evaluación de $\log|\zeta(1/2+i\gamma_j)|$ proviene del producto de todos los ceros; ¿puede acotarse desde abajo?
 - (24-A.3) Momentos de $|\zeta|$: $\int_T^{2T}|\zeta(1/2+it)|^{2k}dt$ y la contribución de la órbita fuera de línea.
 - (24-A.4) Identidades de van der Corput / estimaciones de suma exponencial.
-- **Honestidad a priori:** mi expectativa es que no exista ninguna cota inferior, pero el diagnóstico preciso de por qué no existe es en sí mismo un resultado publicable.
+- **Franqueza a priori:** mi expectativa es que no exista ninguna cota inferior, pero el diagnóstico preciso de por qué no existe es en sí mismo un resultado publicable.
 
 ### Phase 24-B: Perfil local universal de $\log|\zeta|$ inducido por $\mathcal{O}_j$
 
@@ -135,7 +135,7 @@ El programa $\omega$-clase identificó la correspondencia $z = \beta^2$ (conexi�
 
 - No computación numérica.
 - Solo definiciones, lemas, proposiciones, teoremas, demostraciones.
-- Honestidad absoluta: si 24-A no produce ninguna cota inferior, documentar precisamente por qué no.
+- Franqueza absoluta: si 24-A no produce ninguna cota inferior, documentar precisamente por qué no.
 - Criterio de éxito: o bien $b_j \geq F(\gamma_j)$ (un resultado nuevo), o bien el diagnóstico preciso de por qué ningún argumento estándar puede dar tal cota.
 
 ---

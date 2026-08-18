@@ -3,7 +3,7 @@
 **Programa:** Hipótesis de Riemann — Fase 34, Nuevas Direcciones  
 **Fecha:** 2026-06-09  
 **Prerrequisitos:** Docs 82, 83, 86, 88, 89, 93  
-**Nivel:** Investigación avanzada — análisis de obstáculos, resultados parciales, obstáculos honestos
+**Nivel:** Investigación avanzada — análisis de obstáculos, resultados parciales, obstáculos francos
 
 ---
 
@@ -210,7 +210,7 @@ Por densidad de $\mathcal{M}$ en $\overline{\mathcal{M}}$ y continuidad de $\til
 
 Bajo $\neg$RH, $\tilde\delta_\lambda^2 > 0$. Si el infimum es alcanzado por $g^* \in \overline{\mathcal{M}}$, hay dos subcasos:
 
-**Subcaso 3.4(a):** $g^* \in \mathcal{M}$. Entonces $g^* = |\eta^*|^2$ con $\eta^* \in \mathcal{E}$: todos los ceros de $\eta^*$ están en la línea crítica y $g^*$ es el minimizador "honesto". Las condiciones ND1 y ND3 serían verdaderas.
+**Subcaso 3.4(a):** $g^* \in \mathcal{M}$. Entonces $g^* = |\eta^*|^2$ con $\eta^* \in \mathcal{E}$: todos los ceros de $\eta^*$ están en la línea crítica y $g^*$ es el minimizador "franco". Las condiciones ND1 y ND3 serían verdaderas.
 
 **Subcaso 3.4(b):** $g^* \in \overline{\mathcal{M}} \setminus \mathcal{M}$. Entonces $g^* = |\eta^*|^2$ con $\eta^*$ entera, pero $\eta^*$ tiene algún cero fuera de la línea crítica, o bien $\eta^*$ corresponde a un producto de Hadamard "incompleto" (infinitely many ceros de $\mathcal{E}$ han escapado a infinito). En este caso, el infimum es alcanzado en la clausura pero no en $\mathcal{M}$: ND1 falla, ND3 falla, y el criterio variacional sigue siendo válido.
 
@@ -481,7 +481,7 @@ Entonces $\tilde\delta_\lambda^2 = 0 \iff$ RH.
 
 **Observación 8.1.** Nótese que la implicación $\tilde\delta_\lambda^2 = 0 \Rightarrow$ RH ya está establecida en el Doc 82. Lo que $\mathbf{C}_D$ afirma que las hipótesis (I) y (II) implican la dirección $\neg$RH $\Rightarrow \tilde\delta_\lambda^2 > 0$, que también está en el Doc 82. Por tanto, $\mathbf{C}_D$ bajo las hipótesis (I) y (II) no añade contenido nuevo al Doc 82.
 
-**Reformulación honesta.** La Conjetura $\mathbf{C}_D$ tiene interés como afirmación sobre las hipótesis (I) y (II), no sobre la conclusión:
+**Reformulación franca.** La Conjetura $\mathbf{C}_D$ tiene interés como afirmación sobre las hipótesis (I) y (II), no sobre la conclusión:
 
 **Conjetura $\mathbf{C}_D$ (reformulada).** *Bajo las condiciones del marco CCM y asumiendo RH verdadera, las hipótesis (I) y (II) de $\mathbf{C}_D$ son verdaderas. Bajo $\neg$RH, al menos una de las hipótesis (I) y (II) es falsa.*
 
@@ -505,9 +505,9 @@ Para el caso (a): las hipótesis (I) y (II) son afirmaciones sobre la geometría
 
 Para el caso (b): bajo RH, $f_0 = f_0^{on} \in \mathcal{M}$ y $\Phi(f_0^{on}) = 0$ es el mínimo absoluto. La hipótesis (I) bajo RH diría que la segunda variación es positiva en todo punto de $\mathcal{M}$, lo cual sería una afirmación sobre la geometría de $\mathcal{M}$ independiente de la posición de $f_0$. La hipótesis (II) bajo RH diría que el flujo DBN es monótono en un sentido específico, lo cual es una afirmación sobre la dinámica de las funciones enteras bajo el calor de De Bruijn.
 
-**Evaluación honesta.** No hay razón a priori para que RH implique (I) o (II), ni para que (I) y (II) impliquen RH. La Conjetura $\mathbf{C}_D$ es, en su estado actual, una afirmación plausible pero sin soporte demostrativo. Es posible que sea equivalente a RH, pero también es posible que sea independiente.
+**Evaluación franca.** No hay razón a priori para que RH implique (I) o (II), ni para que (I) y (II) impliquen RH. La Conjetura $\mathbf{C}_D$ es, en su estado actual, una afirmación plausible pero sin soporte demostrativo. Es posible que sea equivalente a RH, pero también es posible que sea independiente.
 
-**Declaración explícita de honestidad 8.2.** La Conjetura $\mathbf{C}_D$ no es, en su estado actual, ni una demostración ni un esquema de demostración de RH. Es una guía para la investigación que señala dos propiedades analíticas concretas ((I) y (II)) cuya verdad o falsedad bajo $\neg$RH sería informativa sobre la geometría del problema variacional.
+**Declaración explícita de franqueza 8.2.** La Conjetura $\mathbf{C}_D$ no es, en su estado actual, ni una demostración ni un esquema de demostración de RH. Es una guía para la investigación que señala dos propiedades analíticas concretas ((I) y (II)) cuya verdad o falsedad bajo $\neg$RH sería informativa sobre la geometría del problema variacional.
 
 ### 8.3. Una versión más manejable de $\mathbf{C}_D$
 

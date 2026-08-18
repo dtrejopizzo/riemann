@@ -1,0 +1,34 @@
+
+\section{Proof of Theorem \ref{mainglobalintro}}
+
+Let $ \mathbb{A}^f$ be the ring of finite adeles of $\Q$. Let $(a,\lambda)\in \mathbb{A}^f\times \R= \A_\Q$ be an adele with $\lambda>0$. 
+ Let $\Phi$ be the map from $\left(\mathbb{A}^f / \hat{\mathbb{Z}}^{\times}\right) \times \mathbb{R}_{+}^{\times}$ to subgroups of $\mathbb{R}$ defined by
+$$
+\Phi(a, \lambda):=\lambda H_a,\ \  H_a:=\{q \in \mathbb{Q} \mid a q \in \hat{\mathbb{Z}}\}.
+$$
+Then (\cite{CCas}, Lemma 3.7) $\Phi$ is a bijection between the subset of $X_\Q=\Q^\times \backslash \A_\Q/\hatz$  formed  of adele classes with non-zero archimedean component,   and the set of non-zero subgroups of $\mathbb{R}$ whose elements are pairwise commensurable. 
+Let $\tilde \pi:\A_\Q\to\Q^\times \backslash \A_\Q\to X_\Q$ be the projection.
+\[
+\begin{tikzcd}
+\A_\Q \arrow[rr]\arrow[dr,"\tilde\pi"'] & & \Q^\times \backslash \A_\Q\arrow[dl,"\pi"]\\
+& X_\Q &
+\end{tikzcd}
+\]
+Then  $\tilde\pi^{-1}(C_p)\subset \A_\Q$ is the saturation  $\Q^\times F$,  of the subset 
+$$
+F=\{a=(a_v), \ \ a_\infty >0, \ a_p=0, \ a_v\in \Z_v^* \qqq v\notin \{p,\infty\}\}\subset \A_\Q.
+$$
+The residual diagonal action of $\Q^\times$ on $F$ is given by  $p^\Z\subset \Q^\times$. Thus one obtains
+\begin{equation}\label{inverseim}
+\pi^{-1}(C_p)=\left(\R_+^*\times \prod_{q\neq p} \Z_q^*\right) /p^\Z
+\end{equation}
+where $p$ is diagonally embedded in the product. This quotient is by construction the mapping torus of the multiplication by $p$ in the compact group $\prod_{q\neq p} \Z_q^*$. We now interpret these terms in the language of \'etale abelianized fundamental groups. This derives from the following facts:
+
+\begin{itemize}
+\item The abelianized \'etale fundamental group\footnote{The abelianization takes care of the need to specify the base point} $\pi_1^{e t}(\Spec \, \Z_{(p)})$  is canonically isomorphic to $\prod_{q\neq p} \Z_q^*$.
+\item The image $\pi_1^{e t}(r^*)\left\{F r o b_{p}\right\}$ in the étale abelianized fundamental group $\pi_1^{e t}(\Spec \, \Z_{(p)})\simeq \prod_{q\neq p} \Z_q^*$ is equal to $p$ diagonally embedded in $\prod_{q\neq p} \Z_q^*$ (see \eqref{residue}).
+\end{itemize}
+The first fact follows from \cite{Lenstra} (Corollary 6.17), together with the determination of the maximal abelian extension of $\Q$ in which $p$ is unramified as obtained by adjoining all roots of unity of order prime to $p$\footnote{following  the local to global proof of the Kronecker-Weber theorem}. Its Galois group is $\prod_{q\neq p} \Z_q^*$. The second fact follows since the action of $\left\{F r o b_{p}\right\}$ on roots of unity is given by raising to the power $p$.\vspace{.1in}
+
+The above proof elucidates the geometric aspects of the well-known analogy between primes and knots through  the role of the scaling site $X_\Q$, its periodic orbits and their liftings to the adele class space of the rationals viewed as an abelian cover of $X_\Q$.
+

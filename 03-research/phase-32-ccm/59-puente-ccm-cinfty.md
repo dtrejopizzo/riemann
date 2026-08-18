@@ -212,7 +212,7 @@ $$d_n^S = 0 \text{ para todo } n \geq 0 \text{ y todo } S \iff C_\infty(\gamma_n
 
 ---
 
-## §10. Barreras honestas
+## §10. Barreras francas
 
 **Barrera B1 (La C.P. no está probada).** La Conjetura Puente es el ingrediente central faltante. Sin ella, los resultados de esta fase son fundacionales pero no constituyen un ataque sobre RH.
 

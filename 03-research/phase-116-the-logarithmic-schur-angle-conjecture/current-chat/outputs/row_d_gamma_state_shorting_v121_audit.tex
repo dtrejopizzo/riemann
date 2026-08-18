@@ -1,0 +1,195 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{Gamma state shorting and rational Euler leakage (v121)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{A causal state factor for one Gamma cell}
+
+For $a>0$ and $f\in C_c^\infty(\mathbb R)$ let $z_a$ be the causal state
+\begin{equation}
+ z_a'=-az_a+\sqrt{2a}\,f,\qquad z_a(-\infty)=0,              \tag{1}
+\end{equation}
+and define the all-pass output
+\begin{equation}
+ g_a=\sqrt{2a}\,z_a-f.                                      \tag{2}
+\end{equation}
+
+\begin{theorem}[Lossless Gamma state and difference energy --- \PROVED]
+The state satisfies
+\begin{align}
+ \frac d{dt}|z_a|^2&=|f|^2-|g_a|^2,                         \tag{3}\\
+ f-g_a&=\sqrt{\frac2a}\,z_a'.                               \tag{4}
+\end{align}
+Consequently
+\begin{equation}
+ \boxed{
+ \frac1{2a}\|f-g_a\|_2^2
+ =\frac1{a^2}\int_{\mathbb R}|z_a'(t)|^2\,dt
+ =\int_{\mathbb R}
+   \frac{2\tau^2}{a(a^2+\tau^2)}
+   |\widehat f(\tau)|^2\frac{d\tau}{2\pi}.}                 \tag{5}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Equations (1)--(2) give
+\[
+ |g_a|^2=2a|z_a|^2+|f|^2-2\sqrt{2a}\Re(\overline z_af),
+\]
+which is (3).  Solving (1) for $f$ and substituting in (2) gives (4).
+In Fourier coordinates the transfer function of $f-g_a$ has squared
+modulus $4\tau^2/(a^2+\tau^2)$.  This proves (5).
+\end{proof}
+
+For $a_j=2j+\frac12$, summing (5) gives the complete positive Gamma form:
+\begin{equation}
+ \langle G_\Gamma f,f\rangle
+ =\sum_{j\ge0}\frac1{a_j^2}\int|z_{a_j}'(t)|^2\,dt.          \tag{6}
+\end{equation}
+This is the state-space version of the Gram (6)--(7) in v120.
+
+\section{Exact shorting across a gap}
+
+Let $J=(r,r+L)$ be a gap on which the physical source is free.  For one
+Gamma state prescribe $z_a(r)=\zeta_0$ and $z_a(r+L)=\zeta_1$.
+
+\begin{theorem}[Gamma gap resistance --- \PROVED]
+Among all absolutely continuous state paths with those endpoint values,
+\begin{equation}
+ \inf\frac1{a^2}\int_r^{r+L}|z_a'(t)|^2\,dt
+ =\frac{|\zeta_1-\zeta_0|^2}{a^2L}.                         \tag{7}
+\end{equation}
+The minimizer is the affine state path.  Its corresponding physical source,
+obtained from (1), is
+\begin{equation}
+ f(t)=\frac{z_a'(t)+az_a(t)}{\sqrt{2a}}.                    \tag{8}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Cauchy--Schwarz gives
+\[
+ |\zeta_1-\zeta_0|^2
+ =\left|\int_r^{r+L}z_a'(t)\,dt\right|^2
+ \le L\int_r^{r+L}|z_a'|^2.
+\]
+Equality holds exactly for constant $z_a'$, proving (7); (8) is (1).
+\end{proof}
+
+For the full Gamma place the same physical source $f$ drives every state
+$z_{a_j}$.  If this common-control constraint is relaxed and each channel
+is allowed its own gap source, (7) gives the rigorous lower bound
+\begin{equation}
+ \operatorname{Short}_{J}(G_\Gamma)
+ \ge
+ \sum_{j\ge0}\frac{|\zeta_{j,1}-\zeta_{j,0}|^2}{a_j^2L}.     \tag{9}
+\end{equation}
+Indeed, relaxation enlarges the class over which the positive energy is
+minimized.  Thus the right side is an independently positive boundary
+network; it is not obtained by taking a square root of the desired Schur
+complement.
+
+\section{Integer incidence and rational leakage}
+
+On the right-oriented threshold fiber label the interval
+$T_N-\log m+(0,\delta_N)$ by the integer $m\le N$.  Translation by
+$+\log n$ on the source corresponds to multiplication of labels,
+\begin{equation}
+                         m\longmapsto mn,                     \tag{10}
+\end{equation}
+and remains in the integer fiber exactly when $mn\le N$.  Translation in
+the opposite direction corresponds geometrically to
+\begin{equation}
+                         m\longmapsto m/n.                    \tag{11}
+\end{equation}
+It lies in the integer fiber exactly when $n\mid m$.
+
+\begin{theorem}[Exact decomposition of the Euler boundary action ---
+\PROVED]
+On the arithmetic threshold fiber, every finite Euler translation splits
+orthogonally into
+\begin{equation}
+ S_{\log n}=S_{\log n}^{\rm div}\oplus S_{\log n}^{\rm leak},\tag{12}
+\end{equation}
+where the first part is the finite divisibility shift (10), together with
+its adjoint on divisible labels, and the second part has support on the
+nonintegral rational labels $m/n$ with $n\nmid m$.  Distinct rational
+labels whose logarithmic cells do not overlap give orthogonal leakage
+channels.  Every possible overlap is determined by the explicit condition
+\begin{equation}
+ \left|\log\frac{m/n}{m'/n'}\right|<\delta_N.                 \tag{13}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Translation of the interval positions gives (10)--(11).  A noninteger
+label $m/n$ cannot overlap an integer label $k$ in positive measure.
+Indeed, if $m>kn$, then the weakest possible separation occurs at the
+largest numerator and
+\[
+ \frac{m}{kn}\ge\frac{N}{N-1}>\frac{N+1}{N}=e^{2\delta_N}.
+\]
+If $m<kn$, then $kn/m\ge(N+1)/N=e^{2\delta_N}$, with equality
+giving only an endpoint contact.  Thus the integer and noninteger support
+unions are orthogonal.  Two intervals of length $\delta_N$ overlap
+precisely when the distance between their logarithmic left endpoints is
+less than $\delta_N$, which is (13).  The integral part is exactly the
+truncated divisibility representation used in G39.
+\end{proof}
+
+\paragraph{Scope audit.}
+The word Grams of v109--v110 and the cross transport of v119 control
+$S^{\rm div}$.  Equations (6)--(9) construct a positive Gamma boundary
+network for the gaps.  The only Euler component not yet assigned to that
+network is the clustered rational leakage in (13).  Calling all leakage
+channels orthogonal would be false because distinct fractions can fall
+within one cell width.
+
+The sharp remaining cross-place theorem can therefore be stated without a
+global inverse:
+\begin{equation}
+ \boxed{\text{the Gram of the clustered rational leakage is dominated,
+ gap by gap, by the Gamma resistance (9) plus the Tate terminal of v117}.}
+                                                                    \tag{14}
+\end{equation}
+If (14) holds with unit constant, elimination of every gap is passive;
+cascading the cells proves the shorted domination v120 (10), hence (8c).
+
+\paragraph{Cascade audit after v122 --- \AUDIT.}
+The local boundary-state estimate v122 (12) has a strict numerical margin,
+but it may not be applied by resetting the incoming Gamma state to zero on
+each rational cell.  In a connected leakage cluster the state exiting one
+cell enters the next.  The signed endpoint term in v122 (8) telescopes,
+whereas the transported nearly constant state survives.  Therefore the
+local estimate proves the one-cell gate but not (14) for an arbitrarily
+long cluster.  Closing (14) requires a multiscale estimate for the complete
+tower $a_j=2j+\frac12$, or an equivalent global discrete Poincar\'e
+inequality including the two outer Tate states.  No reset assumption is
+used in the ledger.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Causal lossless Gamma factor & \PROVED & (1)--(6) \\
+Exact Gamma gap resistance & \PROVED & (7)--(9) \\
+Divisibility/rational-leakage split & \PROVED & (10)--(13) \\
+Unit domination of clustered leakage by Gamma--Tate resistance & \OPEN & (14) \\
+Contractivity (8c), condition $G$, row (d) & \OPEN & after (14) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

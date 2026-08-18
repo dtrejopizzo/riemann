@@ -154,7 +154,7 @@ $$|\lambda_i|^2 = \langle\alpha_i, \Phi_\zeta^*\alpha_i\rangle / \|\alpha_i\|^2 
 
 es decir, todos los eigenvalores de $\Phi_\zeta^*$ tienen el mismo módulo — el análogo de los ceros en la línea crítica.
 
-**El estado honesto:** La Conjetura 7.3 es el ingrediente que falta para que la Dirección III cierre el argumento. No hay evidencia matemática directa de que $\mathcal{MM}$ tenga dualidad de Poincaré — es la pregunta central de esta dirección.
+**El estado franco:** La Conjetura 7.3 es el ingrediente que falta para que la Dirección III cierre el argumento. No hay evidencia matemática directa de que $\mathcal{MM}$ tenga dualidad de Poincaré — es la pregunta central de esta dirección.
 
 ---
 

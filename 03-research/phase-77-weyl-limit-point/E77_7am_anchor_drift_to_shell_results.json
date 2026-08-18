@@ -1,0 +1,107 @@
+{
+  "statement": "Anchor/drift to shell alignment audit",
+  "cases": [
+    {
+      "label": "zeta",
+      "rows": [
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "energy_over_eta": 9.021783228000129e-05,
+          "cancellation_ratio": 1.9456671102623094e-05,
+          "crude_bound_over_energy": 48217988.91563996,
+          "comparisons": {
+            "1.0": {
+              "Q_abs": 0.382930700375546,
+              "Q_logt_abs": 3.336137610253541,
+              "Q_cancel_index": 18.42423685007083,
+              "Q_theta_abs": 3.74339058470713,
+              "one_minus_theta_new": 0.033587948539868885
+            },
+            "3.0": {
+              "Q_abs": 1.4170355051596246,
+              "Q_logt_abs": 9.740169426727647,
+              "Q_cancel_index": 14.747248239387616,
+              "Q_theta_abs": 10.92046135764527,
+              "one_minus_theta_new": 0.03276848669593693
+            }
+          }
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "energy_over_eta": 1.4807364687208873e-08,
+          "cancellation_ratio": 2.0296024341676606e-09,
+          "crude_bound_over_energy": 2287263.6719240276,
+          "comparisons": {
+            "1.0": {
+              "Q_abs": 1.1145144326534697,
+              "Q_logt_abs": 2.732959802672708,
+              "Q_cancel_index": 5.904305808164364,
+              "Q_theta_abs": 3.127379173246965,
+              "one_minus_theta_new": 0.024654757436502802
+            },
+            "3.0": {
+              "Q_abs": 3.557502428022666,
+              "Q_logt_abs": 7.984920277955841,
+              "Q_cancel_index": 5.4890596363662905,
+              "Q_theta_abs": 9.1368455489902,
+              "one_minus_theta_new": 0.024191888629560232
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "rows": [
+        {
+          "old_modes": 16,
+          "new_modes": 18,
+          "energy_over_eta": 0.22922086991039964,
+          "cancellation_ratio": 0.8120616328606955,
+          "crude_bound_over_energy": 1.2230625455333042,
+          "comparisons": {
+            "1.0": {
+              "Q_abs": 4.995936910287828,
+              "Q_logt_abs": 1.2768685996587408,
+              "Q_cancel_index": 1.0,
+              "Q_theta_abs": 2.7889080489015,
+              "one_minus_theta_new": 5.568207552686655
+            },
+            "3.0": {
+              "Q_abs": 13.544748846546014,
+              "Q_logt_abs": 2.387543914658764,
+              "Q_cancel_index": 1.0,
+              "Q_theta_abs": 5.495341590738699,
+              "one_minus_theta_new": 5.568363345077145
+            }
+          }
+        },
+        {
+          "old_modes": 18,
+          "new_modes": 20,
+          "energy_over_eta": 0.18742272740623128,
+          "cancellation_ratio": 1.4679374263777205,
+          "crude_bound_over_energy": 2.458646211494842,
+          "comparisons": {
+            "1.0": {
+              "Q_abs": 0.8158066810585411,
+              "Q_logt_abs": 4.663280916384715,
+              "Q_cancel_index": 10.432318525104353,
+              "Q_theta_abs": 1.9568106105951548,
+              "one_minus_theta_new": 5.8397188870778916
+            },
+            "3.0": {
+              "Q_abs": 6.1377177647885315,
+              "Q_logt_abs": 5.4047049411900066,
+              "Q_cancel_index": 2.761144825588518,
+              "Q_theta_abs": 6.744108379776719,
+              "one_minus_theta_new": 5.837219304631781
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

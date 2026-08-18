@@ -25,7 +25,7 @@ The zero set of `ξ` is invariant under `V` (functional equation + real coeffici
 
 ---
 
-## 1. I1 — Which involution fixes the critical line? (an honest correction)
+## 1. I1 — Which involution fixes the critical line? (an candid correction)
 
 A natural first guess is that the functional equation `ι` fixes the critical line. **It does
 not.** Algebraically `ι(s)=s ⟺ 1−s=s ⟺ s=½`: a single point. Likewise `σ` fixes the real

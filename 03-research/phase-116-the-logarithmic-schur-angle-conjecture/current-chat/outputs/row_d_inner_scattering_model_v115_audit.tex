@@ -1,0 +1,156 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{The completed inner scattering model and its Tate centering (v115)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{A cross-place inner function}
+
+Let $\xi$ be the completed entire Riemann function, normalized by
+$\xi(s)=\xi(1-s)$ and $\xi(\overline s)=\overline{\xi(s)}$.  Put
+\begin{equation}
+                         \Theta(z)=\frac{\xi(z)}{\xi(z+1)}.    \tag{1}
+\end{equation}
+
+\begin{theorem}[Completed meromorphic inner scattering --- \PROVED]
+The function $\Theta$ is analytic in the right half-plane, has unimodular
+boundary values on $i\mathbb R$, and satisfies
+\begin{equation}
+                         \Theta(-z)=\Theta(z)^{-1}.             \tag{2}
+\end{equation}
+Its zeros in the right half-plane are exactly the nontrivial zeros $\rho$
+of $\xi$, with their multiplicities.
+\end{theorem}
+
+\begin{proof}
+The denominator has no zero for $\Re(z+1)>1$.  On $z=i\tau$, the functional
+equation and reality give
+\[
+ \xi(i\tau)=\xi(1-i\tau)=\overline{\xi(1+i\tau)},
+\]
+so $|\Theta(i\tau)|=1$ away from a null set, and continuation supplies the
+boundary values.  Also
+\[
+ \Theta(-z)=\frac{\xi(-z)}{\xi(1-z)}
+            =\frac{\xi(1+z)}{\xi(z)}=\Theta(z)^{-1}.
+\]
+The zero statement follows directly from (1), since every nontrivial zero
+has $0<\Re\rho<1$ and the denominator is zero-free in the domain.  The
+Hadamard product pairs every zero with its reflected pole across the
+boundary; together with the boundary modulus this is the meromorphic-inner
+factorization of (1).
+\end{proof}
+
+Thus (1) mixes the Euler and Gamma data before scalar continuation cancels
+the finite-place labels.  Let
+\begin{equation}
+ \mathscr K_\Theta=H^2(\mathbb C_+)\ominus\Theta H^2(\mathbb C_+)          \tag{3}
+\end{equation}
+be its positive model Hilbert space.
+
+\section{The model semigroup and the spectral characters}
+
+For $t\ge0$, multiplication by $e^{-tz}$ is a contraction on
+$H^2(\mathbb C_+)$.  Let $T_t$ be its compression to $\mathscr K_\Theta$.
+If $k_\rho$ is the reproducing kernel at a zero $\rho$ of $\Theta$, then
+\begin{equation}
+                         T_t^*k_\rho=e^{-t\overline\rho}k_\rho.            \tag{4}
+\end{equation}
+
+\begin{theorem}[Positive Hilbert realization of finite zero blocks ---
+\PROVED]
+Every finite collection of zero kernels and their derivative kernels spans
+a finite-dimensional $T_t^*$-invariant Hilbert space.  Its characteristic
+values are $e^{-t\overline\rho}$, with the zero multiplicities.  Hence its
+finite trace is
+\begin{equation}
+                         \operatorname{Tr}T_t^*
+ =\sum_\rho m_\rho e^{-t\overline\rho}                         \tag{5}
+\end{equation}
+over the selected finite multiset.
+\end{theorem}
+
+\begin{proof}
+Equation (4) is the reproducing-kernel identity
+$\langle f,T_t^*k_\rho\rangle=(T_tf)(\rho)
+=e^{-t\rho}f(\rho)$.  Differentiating at a multiple zero gives the usual
+upper-triangular derivative-kernel block, whose diagonal repeats the same
+character.  Finite-dimensional trace is the sum of diagonal characters.
+\end{proof}
+
+This supplies a genuine positive cross-place Hilbert realization of every
+finite Loewy block, with the correct spectral multiplicities.  The issue is
+the half-Tate centering.  Put
+\begin{equation}
+                         S_t=e^{t/2}T_t.                         \tag{6}
+\end{equation}
+On $k_\rho$, its adjoint character is
+$e^{-t(\overline\rho-1/2)}$.
+
+\section{The centering obstruction}
+
+\begin{theorem}[Tate centering is not a finite-rank correction --- \PROVED]
+Suppose a positive Hilbert inner product on the full functional pair
+$\rho,1-\overline\rho$ makes the centered action (6) contractive and
+preserves both spectral characters.  Then
+\begin{equation}
+                              \Re\rho=\frac12.                   \tag{7}
+\end{equation}
+Moreover, changing the inner product or adjoining/removing the two polar
+Tate lines cannot repair an off-critical pair.
+\end{theorem}
+
+\begin{proof}
+On the paired semisimple block the centered action has eigenvalues
+\[
+ e^{-t(\rho-1/2)},\qquad e^{t(\overline\rho-1/2)},
+\]
+whose determinant has modulus one.  A contraction similar to this block
+has both singular values at most one, while their product is one; it is
+therefore unitary and both eigenvalues have modulus one.  This is (7).
+The argument permits every positive Gram matrix on the pair, so changing
+the metric cannot help.  The primitive form removes the two polar Tate
+lines before testing the odd pair, so a rank-two polar correction does not
+alter this determinant argument.
+\end{proof}
+
+\begin{corollary}[Verdict on the completed inner scattering --- \PROVED]
+The model space (3) constructs an unconditional positive Hilbert
+realization with the correct finite spectral traces, but it does not prove
+the centered Witt contractivity.  Promoting $T_t$ to the half-Tate centered
+semigroup $S_t$ is contractive on every functional pair if and only if all
+those pairs lie on the critical line.
+\end{corollary}
+
+Thus the scalar completed scattering solves the existence and trace side of
+the Hilbert problem but not row (d).  Its failure is of infinite spectral
+rank if there are off-critical pairs; it cannot be absorbed by the two Tate
+terminals.  A successful cross-place construction must therefore derive a
+new positive conservation law for the centered semigroup, not merely use
+the already-inner uncentered scattering (1).
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.56\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.19\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Completed Euler--Gamma inner scattering $\Theta$ & \PROVED & (1)--(3) \\
+Positive Hilbert realization of finite zero blocks and traces & \PROVED & (4)--(5) \\
+Half-Tate centered contractivity & \OPEN & equivalent to (7) for all zeros \\
+Finite Tate correction closes the centered gap & false & Theorem 3 \\
+Condition $G$, row (d) & \OPEN & not supplied by uncentered innerness \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

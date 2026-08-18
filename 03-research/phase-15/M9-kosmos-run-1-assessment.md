@@ -3,7 +3,7 @@
 **Author: David Alejandro Trejo Pizzo · 2026-06-06.**
 The guarded Lise Science prompt (attack G1–G4 / construct $\mathcal K_{\mathrm{geom}}$, with anti-fabrication gates)
 returned a four-discovery report. **Headline: the run did NOT fabricate a proof — the gates held.** It returned three
-honest negatives (one per route) that converge with our M5/M6/M8, plus one genuinely new RH-independent constraint.
+candid negatives (one per route) that converge with our M5/M6/M8, plus one genuinely new RH-independent constraint.
 This is the best realistic outcome short of a proof, and it sharpens the map. Below, the per-discovery audit.
 
 ---
@@ -33,7 +33,7 @@ metric-variation argument lives on an Arakelov variety where the zero-Frobenius 
 W^*(T)$" is not yet posed on the right object. This run's own open items are exactly the bridge: the $\mathfrak{sl}_2$
 $H$ aligns with **cohomological degree, not Adams weight**; the lowering $\Lambda$ exists geometrically only for
 abelian varieties (Fourier–Mukai); **the absolute surface is unbuilt**. So Discovery 2 is real progress that lands
-**precisely on Attempt 6 (heights↔zeros) + SURF**, not on a crossing. Honest status: a clean *blueprint* whose two
+**precisely on Attempt 6 (heights↔zeros) + SURF**, not on a crossing. Candid status: a clean *blueprint* whose two
 "passed" gates become real only once the surface realizes $\Pi^\perp$ as the relevant cohomology.
 
 ## Discovery 3 (Route B, prismatic) — confirms M6 verbatim
@@ -57,7 +57,7 @@ the proof path, but a real validation target for any future surface.
 ---
 
 ## Bottom line
-- **No proof, no crossing** — and, crucially, **no fabrication**: the gates converted a "prove RH" request into honest
+- **No proof, no crossing** — and, crucially, **no fabrication**: the gates converted a "prove RH" request into candid
   research output. The prompt design worked.
 - **Convergent confirmation:** the run independently re-derived our three-route obstruction (A = Arakelov controls
   heights not zeros + unbuilt surface = Attempt 6/SURF; B = prismatic is local not global = M6; C = noncompact, no

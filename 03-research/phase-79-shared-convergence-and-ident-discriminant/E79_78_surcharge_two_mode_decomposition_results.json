@@ -1,0 +1,133 @@
+{
+  "statement": "E79.78 surcharge two-mode decomposition",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_76_frontier_ratio_rule_results.json",
+  "rows": [
+    {
+      "N": 8,
+      "low": {
+        "name": "pair",
+        "support": [
+          5,
+          7
+        ],
+        "mismatch": 0.029900186331162863,
+        "surcharge": 1.4999999999999998,
+        "score": 1.5299001863311625,
+        "exact_match": false
+      },
+      "high": {
+        "name": "triple",
+        "support": [
+          6,
+          7,
+          8
+        ],
+        "mismatch": 0.027405661727436206,
+        "surcharge": 1.5,
+        "score": 1.5274056617274363,
+        "exact_match": true
+      },
+      "delta_surcharge": 2.220446049250313e-16,
+      "delta_anchor_minus_mass": 0,
+      "delta_span": 0,
+      "anchor_minus_mass_contribution": 0.0,
+      "span_contribution": 0.0,
+      "recomposed_delta_surcharge": 0.0
+    },
+    {
+      "N": 10,
+      "low": {
+        "name": "pair",
+        "support": [
+          5
+        ],
+        "mismatch": 0.02948235840351119,
+        "surcharge": 1.5799999999999998,
+        "score": 1.6094823584035112,
+        "exact_match": true
+      },
+      "high": {
+        "name": "suffix",
+        "support": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "mismatch": 0.00870182150800833,
+        "surcharge": 1.6400000000000001,
+        "score": 1.6487018215080083,
+        "exact_match": false
+      },
+      "delta_surcharge": 0.060000000000000275,
+      "delta_anchor_minus_mass": -1,
+      "delta_span": 3,
+      "anchor_minus_mass_contribution": -0.36,
+      "span_contribution": 0.42000000000000004,
+      "recomposed_delta_surcharge": 0.06000000000000005
+    },
+    {
+      "N": 12,
+      "low": {
+        "name": "triple",
+        "support": [
+          7,
+          9,
+          10
+        ],
+        "mismatch": 0.35371168161341404,
+        "surcharge": 2.0,
+        "score": 2.3537116816134143,
+        "exact_match": false
+      },
+      "high": {
+        "name": "pair",
+        "support": [
+          7
+        ],
+        "mismatch": 0.02298785490948674,
+        "surcharge": 2.3,
+        "score": 2.3229878549094867,
+        "exact_match": true
+      },
+      "delta_surcharge": 0.2999999999999998,
+      "delta_anchor_minus_mass": 2,
+      "delta_span": -3,
+      "anchor_minus_mass_contribution": 0.72,
+      "span_contribution": -0.42000000000000004,
+      "recomposed_delta_surcharge": 0.29999999999999993
+    },
+    {
+      "N": 16,
+      "low": {
+        "name": "triple",
+        "support": [
+          11,
+          12,
+          13
+        ],
+        "mismatch": 0.4141474018842848,
+        "surcharge": 3.3,
+        "score": 3.7141474018842846,
+        "exact_match": false
+      },
+      "high": {
+        "name": "pair",
+        "support": [
+          11,
+          13
+        ],
+        "mismatch": 0.03554314266742822,
+        "surcharge": 3.66,
+        "score": 3.695543142667428,
+        "exact_match": true
+      },
+      "delta_surcharge": 0.3600000000000003,
+      "delta_anchor_minus_mass": 1,
+      "delta_span": 0,
+      "anchor_minus_mass_contribution": 0.36,
+      "span_contribution": 0.0,
+      "recomposed_delta_surcharge": 0.36
+    }
+  ]
+}

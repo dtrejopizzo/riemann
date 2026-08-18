@@ -1,0 +1,368 @@
+{
+  "statement": "E79.61 intensity-normalized modal-amplitude predictors",
+  "sources": [
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_56_ray_amplitude_autopsy_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_3J_normalized_edge_profile_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_58_ray_edge_intensity_results.json"
+  ],
+  "zeta_rows": [
+    {
+      "N": 8,
+      "abs_rho": 0.0331799142465018,
+      "gap": 1.346211644176,
+      "slope": -0.16507495518136453,
+      "intensity": 0.0347381452591,
+      "gap_over_intensity": 38.75312381058532,
+      "slope_over_intensity": -4.751979529998698
+    },
+    {
+      "N": 10,
+      "abs_rho": 0.038684833336302744,
+      "gap": 1.6578383704619999,
+      "slope": -0.3196810946820139,
+      "intensity": 0.0327560467539,
+      "gap_over_intensity": 50.61167432436316,
+      "slope_over_intensity": -9.759452875489378
+    },
+    {
+      "N": 12,
+      "abs_rho": 0.027682487754282833,
+      "gap": 0.7275179835889998,
+      "slope": 0.057766786479176505,
+      "intensity": 0.0376696575887,
+      "gap_over_intensity": 19.31310317530568,
+      "slope_over_intensity": 1.5335097310920385
+    },
+    {
+      "N": 14,
+      "abs_rho": 0.03546470265657091,
+      "gap": 1.134918969254,
+      "slope": -0.08994038803670595,
+      "intensity": 0.035522323623,
+      "gap_over_intensity": 31.949457510126464,
+      "slope_over_intensity": -2.5319398863443534
+    },
+    {
+      "N": 16,
+      "abs_rho": 0.03183731099877623,
+      "gap": 0.35231520383199966,
+      "slope": 0.23930459869123524,
+      "intensity": 0.038208291083,
+      "gap_over_intensity": 9.220909751411392,
+      "slope_over_intensity": 6.263158908923538
+    }
+  ],
+  "plant_rows": [
+    {
+      "N": 8,
+      "abs_rho": 2.819294715954925,
+      "gap": -0.8515288609418209,
+      "slope": 0.415367868310972,
+      "intensity": 0.0347381452591,
+      "gap_over_intensity": -24.512790035004947,
+      "slope_over_intensity": 11.957111273871545
+    },
+    {
+      "N": 10,
+      "abs_rho": 1.3806467369671989,
+      "gap": 0.06427292761819414,
+      "slope": -0.10200421302023799,
+      "intensity": 0.0327560467539,
+      "gap_over_intensity": 1.962169858319111,
+      "slope_over_intensity": -3.114057498653837
+    },
+    {
+      "N": 12,
+      "abs_rho": 0.01922405500541514,
+      "gap": 1.0,
+      "slope": 0.0,
+      "intensity": 0.0376696575887,
+      "gap_over_intensity": 26.54656463614833,
+      "slope_over_intensity": 0.0
+    },
+    {
+      "N": 14,
+      "abs_rho": 12.99292077639287,
+      "gap": 1.0,
+      "slope": 0.0,
+      "intensity": 0.035522323623,
+      "gap_over_intensity": 28.151311569959343,
+      "slope_over_intensity": 0.0
+    },
+    {
+      "N": 16,
+      "abs_rho": 0.5953933261340493,
+      "gap": 1.0,
+      "slope": 0.0,
+      "intensity": 0.038208291083,
+      "gap_over_intensity": 26.172329922521175,
+      "slope_over_intensity": 0.0
+    }
+  ],
+  "models": {
+    "gap_plus_slope": {
+      "keys": [
+        "gap",
+        "slope"
+      ],
+      "beta": [
+        0.003243072898590823,
+        0.03223267364505184,
+        0.06333024535670895
+      ],
+      "zeta_max_relative_error": 0.09640822982104874,
+      "zeta_rows": [
+        {
+          "N": 8,
+          "actual": 0.0331799142465018,
+          "predicted": 0.03618083606860094
+        },
+        {
+          "N": 10,
+          "actual": 0.038684833336302744,
+          "predicted": 0.03643415388782377
+        },
+        {
+          "N": 12,
+          "actual": 0.027682487754282833,
+          "predicted": 0.0303513073957161
+        },
+        {
+          "N": 14,
+          "actual": 0.03546470265657091,
+          "predicted": 0.03412859880629143
+        },
+        {
+          "N": 16,
+          "actual": 0.03183731099877623,
+          "predicted": 0.029754352834002285
+        }
+      ],
+      "plant_diagnostic_rows": [
+        {
+          "N": 8,
+          "actual": 2.819294715954925,
+          "predicted_from_zeta_fit": 0.0021013700379374084
+        },
+        {
+          "N": 10,
+          "actual": 1.3806467369671989,
+          "predicted_from_zeta_fit": -0.0011451906392695634
+        },
+        {
+          "N": 12,
+          "actual": 0.01922405500541514,
+          "predicted_from_zeta_fit": 0.03547574654364266
+        },
+        {
+          "N": 14,
+          "actual": 12.99292077639287,
+          "predicted_from_zeta_fit": 0.03547574654364266
+        },
+        {
+          "N": 16,
+          "actual": 0.5953933261340493,
+          "predicted_from_zeta_fit": 0.03547574654364266
+        }
+      ]
+    },
+    "gap_and_intensity": {
+      "keys": [
+        "gap",
+        "intensity"
+      ],
+      "beta": [
+        0.24498515918989508,
+        -0.017035878476362606,
+        -5.4175497890610815
+      ],
+      "zeta_max_relative_error": 0.06366448296530335,
+      "zeta_rows": [
+        {
+          "N": 8,
+          "actual": 0.0331799142465018,
+          "predicted": 0.03385562969543801
+        },
+        {
+          "N": 10,
+          "actual": 0.038684833336302744,
+          "predicted": 0.03928491199518758
+        },
+        {
+          "N": 12,
+          "actual": 0.027682487754282833,
+          "predicted": 0.028514005708439677
+        },
+        {
+          "N": 14,
+          "actual": 0.03546470265657091,
+          "predicted": 0.0332068606984221
+        },
+        {
+          "N": 16,
+          "actual": 0.03183731099877623,
+          "predicted": 0.03198784089494716
+        }
+      ],
+      "plant_diagnostic_rows": [
+        {
+          "N": 8,
+          "actual": 2.819294715954925,
+          "predicted_from_zeta_fit": 0.071296069863205
+        },
+        {
+          "N": 10,
+          "actual": 1.3806467369671989,
+          "predicted_from_zeta_fit": 0.06643269922360559
+        },
+        {
+          "N": 12,
+          "actual": 0.01922405500541514,
+          "predicted_from_zeta_fit": 0.023872035189867608
+        },
+        {
+          "N": 14,
+          "actual": 12.99292077639287,
+          "predicted_from_zeta_fit": 0.035505323862789345
+        },
+        {
+          "N": 16,
+          "actual": 0.5953933261340493,
+          "predicted_from_zeta_fit": 0.02095396141644143
+        }
+      ]
+    },
+    "slope_and_intensity": {
+      "keys": [
+        "slope",
+        "intensity"
+      ],
+      "beta": [
+        0.21589053177992762,
+        0.037151969170379745,
+        -5.04369487339374
+      ],
+      "zeta_max_relative_error": 0.0586328036822878,
+      "zeta_rows": [
+        {
+          "N": 8,
+          "actual": 0.0331799142465018,
+          "predicted": 0.03454906697969801
+        },
+        {
+          "N": 10,
+          "actual": 0.038684833336302744,
+          "predicted": 0.038802244520657114
+        },
+        {
+          "N": 12,
+          "actual": 0.027682487754282833,
+          "predicted": 0.028042422787650123
+        },
+        {
+          "N": 14,
+          "actual": 0.03546470265657091,
+          "predicted": 0.03338530770805748
+        },
+        {
+          "N": 16,
+          "actual": 0.03183731099877623,
+          "predicted": 0.03207020699637164
+        }
+      ],
+      "plant_diagnostic_rows": [
+        {
+          "N": 8,
+          "actual": 2.819294715954925,
+          "predicted_from_zeta_fit": 0.05611366086325348
+        },
+        {
+          "N": 10,
+          "actual": 1.3806467369671989,
+          "predicted_from_zeta_fit": 0.04688936931725979
+        },
+        {
+          "N": 12,
+          "actual": 0.01922405500541514,
+          "predicted_from_zeta_fit": 0.025896272917303842
+        },
+        {
+          "N": 14,
+          "actual": 12.99292077639287,
+          "predicted_from_zeta_fit": 0.03672677023156917
+        },
+        {
+          "N": 16,
+          "actual": 0.5953933261340493,
+          "predicted_from_zeta_fit": 0.02317956992346476
+        }
+      ]
+    },
+    "gap_slope_over_intensity": {
+      "keys": [
+        "gap_over_intensity",
+        "slope_over_intensity"
+      ],
+      "beta": [
+        -0.0030726061274007725,
+        0.0014169714724540778,
+        0.0032572085434477995
+      ],
+      "zeta_max_relative_error": 0.09588217097674637,
+      "zeta_rows": [
+        {
+          "N": 8,
+          "actual": 0.0331799142465018,
+          "predicted": 0.03636127645727867
+        },
+        {
+          "N": 10,
+          "actual": 0.038684833336302744,
+          "predicted": 0.036854119277938135
+        },
+        {
+          "N": 12,
+          "actual": 0.027682487754282833,
+          "predicted": 0.029288471114142973
+        },
+        {
+          "N": 14,
+          "actual": 0.03546470265657091,
+          "predicted": 0.033951807495535044
+        },
+        {
+          "N": 16,
+          "actual": 0.03183731099877623,
+          "predicted": 0.03039357464753974
+        }
+      ],
+      "plant_diagnostic_rows": [
+        {
+          "N": 8,
+          "actual": 2.819294715954925,
+          "predicted_from_zeta_fit": 0.0011402746789510206
+        },
+        {
+          "N": 10,
+          "actual": 1.3806467369671989,
+          "predicted_from_zeta_fit": -0.010435402103456295
+        },
+        {
+          "N": 12,
+          "actual": 0.01922405500541514,
+          "predicted_from_zeta_fit": 0.03454311865367968
+        },
+        {
+          "N": 14,
+          "actual": 12.99292077639287,
+          "predicted_from_zeta_fit": 0.036816999279398036
+        },
+        {
+          "N": 16,
+          "actual": 0.5953933261340493,
+          "predicted_from_zeta_fit": 0.03401283874046798
+        }
+      ]
+    }
+  }
+}

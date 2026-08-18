@@ -86,7 +86,7 @@ gap $\gtrsim d$** — which holds (max gap $\sim1/\rho\ll d$). So both coercivit
 **$S(T)=O(\log)$-level regularity alone**, *not* pair correlation. The over-sampling that *broke* the
 $\ell^1$ routes is exactly what *makes* the cancellation route robust (redundancy).
 
-**Where genuine arithmetic still enters (the honest residual):** the constant $\kappa(b)\to\infty$ as
+**Where genuine arithmetic still enters (the candid residual):** the constant $\kappa(b)\to\infty$ as
 $|b|\to d=\tfrac12+\epsilon$, so **deep off-line zeros** ($\beta\to0,1$) are amplified. Their contribution
 is $\sum_{\text{deep}}\kappa(b_\rho)$ — controlled only by a **zero-density** bound on how many off-line
 zeros lie near the critical-strip edge. This is exactly the §3.3 "zero-density tier," **not** full GUE.

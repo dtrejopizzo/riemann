@@ -45,7 +45,7 @@ $$\sum_\rho\frac{\log|\rho|}{|\rho|}\sin(t_0\log|\rho|) = 0. \quad (\text{II})$$
 
 *Argumento.* Bajo (LI): el vector $(t_0\log|\rho_1|, t_0\log|\rho_2|, \ldots)$ módulo $2\pi$ es equidistribuido en el toro infinito (Kronecker-Weyl). Las condiciones (I) y (II) dicen que en el punto $t_0$, los ángulos $\{t_0\log|\rho_k|\}$ satisfacen dos restricciones de suma (que el coseno y el seno con pesos den valores específicos). Bajo (LI) y equidistribución, estas dos condiciones SIMULTÁNEAS tienen probabilidad cero — es decir, si (LI) se satisface "genéricamente", casi ningún $t_0$ puede satisfacer ambas condiciones a la vez.
 
-*Nota de honestidad.* El argumento de Kronecker-Weyl aplica formalmente, pero la hipótesis (LI) sobre las frecuencias $\log|\rho|$ de los CEROS de $\zeta$ (no de los primos) es más fuerte que la hipótesis estándar de independencia lineal de $\log\gamma_n$ (los imaginarios de los ceros). Una prueba rigurosa de la Proposición 2 requeriría establecer (LI) para los $\log|\rho|$ específicos, lo cual es una conjetura abierta. $\square$
+*Nota de franqueza.* El argumento de Kronecker-Weyl aplica formalmente, pero la hipótesis (LI) sobre las frecuencias $\log|\rho|$ de los CEROS de $\zeta$ (no de los primos) es más fuerte que la hipótesis estándar de independencia lineal de $\log\gamma_n$ (los imaginarios de los ceros). Una prueba rigurosa de la Proposición 2 requeriría establecer (LI) para los $\log|\rho|$ específicos, lo cual es una conjetura abierta. $\square$
 
 ---
 
@@ -113,7 +113,7 @@ Entonces RH.
 
 6. Por el Teorema 3 del Doc 19: RH. $\square$
 
-**Honestidad.** (LI) y (S) son CONJETURAS abiertas, más fuertes que RH. El Teorema 2 es así una implicación: conjeturas conocidas $\Rightarrow$ RH. No es independiente.
+**Franqueza.** (LI) y (S) son CONJETURAS abiertas, más fuertes que RH. El Teorema 2 es así una implicación: conjeturas conocidas $\Rightarrow$ RH. No es independiente.
 
 ---
 

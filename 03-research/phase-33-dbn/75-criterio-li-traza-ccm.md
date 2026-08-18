@@ -17,7 +17,7 @@ El criterio de Li (1997) establece que RH es equivalente a la positividad de los
 5. Establecemos una cota cuantitativa $T_\lambda \geq C(\lambda,n_0)|\lambda_{n_0}|$ bajo $\neg$RH (§5).
 6. Exploramos si los dos criterios son transformadas el uno del otro (§6).
 
-**Advertencia de honestidad:** Los §§1–3 contienen resultados probados o directamente deducibles de resultados previos del programa. El §4 contiene comparaciones precisas. El §5 contiene una cota cuantitativa que se prueba bajo hipótesis explícitas. El §6 contiene conjeturas bien formuladas que quedan abiertas.
+**Advertencia de franqueza:** Los §§1–3 contienen resultados probados o directamente deducibles de resultados previos del programa. El §4 contiene comparaciones precisas. El §5 contiene una cota cuantitativa que se prueba bajo hipótesis explícitas. El §6 contiene conjeturas bien formuladas que quedan abiertas.
 
 ---
 

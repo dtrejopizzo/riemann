@@ -79,7 +79,7 @@ construye el inverso por ventanas con cola uniformemente acotada y resto de sopo
 Punto fino verificado: la invertibilidad por izquierda y derecha de $(A_n-\lambda)B_n$,
 $B_n(A_n-\lambda)$ para $n$ grande sí da invertibilidad de $A_n-\lambda$ (inverso a derecha + inverso a
 izquierda ⟹ invertible). Es el caso diagonal-trivial de la teoría de operadores límite de RRS, como el
-doc declara honestamente. **El Corolario 3.4 es correcto** y la identificación cuantificador-uniforme =
+doc declara francamente. **El Corolario 3.4 es correcto** y la identificación cuantificador-uniforme =
 positividad estricta del símbolo es exacta (sin metáfora): verificada leyendo 3.3 dos veces, con el punto
 fino de que "débil" ⟺ $\liminf_n\lambda_{\min}(A_n)\geq0$ (una sucesión acotada con
 $\lambda_{\min}(A_{n_k})\leq-\varepsilon$ i.o. produce punto límite $\leq-\varepsilon$).
@@ -128,7 +128,7 @@ $1-r$ pero el certificado pierde completitud). Mi re-derivación del Teorema 2.2
 (el detector de gap por sucesiones ortonormales es el criterio de Weyl en forma cuadrática; la prueba con
 $E$ de rango finito y $u_n\rightharpoonup0$ es estándar y sin fisuras). **Conclusión adversarial:** B.4
 sobrevive como teorema; "positividad esencial del Gram de Weil" como objetivo del programa es un
-enunciado **incompleto hasta fijar la realización**, y las dos realizaciones honestas conocidas fallan o
+enunciado **incompleto hasta fijar la realización**, y las dos realizaciones francas conocidas fallan o
 quedan condicionadas (Thm 2.2 / GAP-134.R). Esto no es un error de los docs — es su hallazgo central —
 pero queda registrado como **regla de cita obligatoria**: ninguna invocación futura de B.4/8.D1 sin
 especificar la norma.
@@ -194,7 +194,7 @@ tanto la frase-titular **"los ceros viven en la frontera símbolo/compacto" es:*
   gordos NO viven en la frontera (viven en el interior negativo del símbolo, 5.1) y los sub-resolución NO
   viven en la frontera (viven en el ideal, 5.4) — la frase exacta sería "el estrato intermedio vive en la
   frontera"; (3) la instancia Weil de los axiomas (S1)–(S3),(V2) es mixta/GAP (tabla Obs. 4.5, declarada).
-  La Observación 5.6 del Doc 134 es honesta (tabla por estrato); el titular del resumen y de P47
+  La Observación 5.6 del Doc 134 es franca (tabla por estrato); el titular del resumen y de P47
   (Remark rem:trichotomy: "off-critical zeros live exactly on the symbol/compact boundary") **eleva el
   estrato intermedio a global**. Deslizamiento retórico declarado; no hay error matemático detrás porque
   los enunciados formales sí están estratificados.
@@ -265,7 +265,7 @@ contenido real es el CÁLCULO 4.3 (Paley–Wiener) más el Teorema 3.3 del Doc 1
 una extensión declarable del modelo), pero la etiqueta [TEOREMA] sobre-vende: la ceguera sub-resolución
 es esencialmente el axioma de absorción, y el único ancla no-axiomática es D108 Teo. 3.3. El no-go 5.5 y
 la Prop. 5.5bis (re-derivados: construcción explícita $\delta_j=\min(\tfrac14,1/(ja(\gamma_j)))$,
-monotonía, cofinalidad) son correctos — y son la parte honesta y dura del documento: el cuantificador
+monotonía, cofinalidad) son correctos — y son la parte franca y dura del documento: el cuantificador
 maestro reaparece como cuantificador de resolución, dicho por los propios docs.
 
 ### 4.5. Lemma 5.0, Thm 5.1, Thm 7.2, Teorema 6.1/6.1bis, Prop. 6.3/7.4 — CORRECTOS
@@ -365,7 +365,7 @@ caracteres colapsan; irrelevante para el uso) queda en pie.
    lo prueba); (ii) D.4/paridad/Witt jamás sin "$z^2\notin\mathbb R$" (los ceros reales tipo Siegel rompen
    la paridad; para ζ inocuo, para la categoría no).
 9. **Lo que esta auditoría NO toca:** la sección logística de P47 (thm:logistic, thm:realiz, thm:main) no
-   fue objeto del mandato (a)–(e); sus dependencias declaradas (rem:deps) son honestas. Queda como
+   fue objeto del mandato (a)–(e); sus dependencias declaradas (rem:deps) son francas. Queda como
    objetivo natural de una auditoría separada (en particular el Step 3 de thm:realiz: el presupuesto de
    colas vía lem:tail, y la afirmación "the caveat was an artifact" del rem:key, que des-condiciona la
    Hipótesis D de P40 — es exactamente el tipo de des-condicionamiento que en este programa ha muerto

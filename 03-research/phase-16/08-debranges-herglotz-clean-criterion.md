@@ -45,7 +45,7 @@ $=$ **Hilbert--P\'olya**.
 > construct the self-adjoint operator whose Weyl function is $\xi'/\xi$ (Hilbert--P\'olya). This is the open core, in
 > harmonic-function / Nevanlinna form.
 
-## Why it does not cross (honest)
+## Why it does not cross (candid)
 The minimum-principle argument needs *no interior poles*, which is RH; the Herglotz/Weyl realization is
 Hilbert--P\'olya. So this clean criterion is **RH-equivalent**: it reformulates, it does not cross. It is the
 wrong-sign capstone (CAP) once more — the unconditional input (boundary value $0$, growth at infinity) is a

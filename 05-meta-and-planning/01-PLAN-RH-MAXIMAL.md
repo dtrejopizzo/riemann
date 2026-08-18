@@ -20,7 +20,7 @@ things we *can* do, and this plan does all three at once:
 If RH is reachable along this line, this is the plan that finds it. If it is not, we will
 know *exactly why* — which, on a 166-year-old problem, is itself a real contribution.
 
-**Honesty clause, kept visible throughout:** the probability that this program *proves* RH is
+**Candor clause, kept visible throughout:** the probability that this program *proves* RH is
 very low (independent advisors: ~3/10 even for "direct progress"). The probability it
 produces *new, publishable mathematics* and a *sharply named obstruction* is high. The plan
 is built so we pursue the first while guaranteeing the second.
@@ -65,7 +65,7 @@ and answered Phase 0.B. It is the most concrete advance the program has made.
 **Consequences:**
 1. **Phase 0.B confirmed with rigor.** The truncation lemma is *Technical*, not RH-in-disguise — exactly the cartography prediction. The advisor's worry is resolved: the RH-equivalent content is cleanly quarantined in the *uniform* statement, not the truncation lemma.
 2. **Phase 1 / P7 essentially delivered.** Front A (forced negativity, explicit constants) + Front B (unconditional truncation) = a **rigorous, unconditional localized Weil detector theorem** — the realistic Tier-1 win. Now to be written up as paper **P7**.
-3. **Honesty caveat.** L_DH is **downgraded to a qualitative control**: its arithmetic side (von Mangoldt of a sum of L-functions, "log of a sum") is not benchmark-reproducible from public definitions, so the v7 "λ_min≈−9×10⁴" is not rigorously recoverable. The rigorous results rest on the **ζ_δ artificial deformation** (clean), not on L_DH. The engine still separates L_DH from controls by ~13 orders.
+3. **Candor caveat.** L_DH is **downgraded to a qualitative control**: its arithmetic side (von Mangoldt of a sum of L-functions, "log of a sum") is not benchmark-reproducible from public definitions, so the v7 "λ_min≈−9×10⁴" is not rigorously recoverable. The rigorous results rest on the **ζ_δ artificial deformation** (clean), not on L_DH. The engine still separates L_DH from controls by ~13 orders.
 
 ---
 
@@ -90,7 +90,7 @@ lemma (Phase 1), and whose one deep prerequisite is a structural positivity (Pha
 
 ---
 
-## 3. The proof architecture (be honest about which links are provable)
+## 3. The proof architecture (be candid about which links are provable)
 
 Assume RH is false: ∃ zero $\rho_0=\beta_0+i\gamma_0$ with $\beta_0>\tfrac12$. Build $Q$ centered
 at $T_0=\gamma_0$, width $\sigma$, dimension $J$. v7 established (numerically) two quantitative facts:
@@ -103,7 +103,7 @@ at $T_0=\gamma_0$, width $\sigma$, dimension $J$. v7 established (numerically) t
 $\lambda_{\min}(Q)$ can be for the *true* arithmetic of ζ — a bound smaller than (A) would force —
 then no off-line zero can exist. RH follows.
 
-Now the honesty, link by link:
+Now the candor, link by link:
 
 | Link | Provable now? | Where it lives |
 |---|---|---|
@@ -147,7 +147,7 @@ so our instrument is connected to the machinery that could actually prove positi
   GRH baseline cannot reach it."* This is a genuine, citable theorem.
 - **Deliverable:** paper **P7 — "A rigorous localized Weil detector for off-critical zeros"**
   (target: *Experimental Mathematics* / *Math. Comp.*). This is the realistic high-value output.
-- **Honest ceiling:** this proves the *easy* direction rigorously. It does **not** prove RH. It
+- **Candid ceiling:** this proves the *easy* direction rigorously. It does **not** prove RH. It
   makes the instrument trustworthy and sets up Phase 2/3.
 
 ### Phase 2 — The contradiction architecture (mapping the wall precisely)
@@ -182,7 +182,7 @@ genuine L-functions and fails exactly for off-line zeros. This is open research;
 - 3.4 Every candidate structure is **filtered by the v7 instrument first**: it must reproduce
   control behavior (positive on ζ/L(χ)/L(Δ), negative on L_DH, monotone in δ) before any proof
   effort. This is the program's unique asset — a fast falsifier of structural guesses.
-- **Deliverable:** whichever flank survives → the actual attempt at (LB). Honestly: this is where
+- **Deliverable:** whichever flank survives → the actual attempt at (LB). Candidly: this is where
   the wall is, and where the attempt most likely stops with "here is precisely the open lemma."
 
 ### Phase 4 — Community & dissemination (non-negotiable for a real attempt)
@@ -203,7 +203,7 @@ The full proof requires the unconditional lower bound **(LB)** on the localized 
 ζ's true arithmetic. **(LB) is equivalent to a localized RH.** No finite computation can establish
 it (R7: finite-N positivity ⇏ infinite). It can only come from a *structural* reason positivity
 must hold — Phase 3. Every prior RH program has died here; we will too, *unless* the Connes or
-de Branges structure genuinely makes positivity automatic. The plan's honesty is that it treats
+de Branges structure genuinely makes positivity automatic. The plan's candor is that it treats
 Phase 3 as a real research gamble, not a guaranteed step, while Phases 0–2 deliver real value
 regardless.
 
@@ -216,7 +216,7 @@ regardless.
   named to a precision it has never had.
 - **Tier 2 — plausible:** the (LB) inequality + a clean empirical floor law (P8), handed to experts
   — a genuine new conditional reformulation of RH with computational backing.
-- **Tier 3 — the dream, low probability, honestly pursued:** a structural proof of (LB) via Connes
+- **Tier 3 — the dream, low probability, candidly pursued:** a structural proof of (LB) via Connes
   or de Branges → the last step before, or a piece of, a proof of RH.
 
 We pursue Tier 3 while *guaranteeing* Tier 1. That is what "maximal attempt" means here.

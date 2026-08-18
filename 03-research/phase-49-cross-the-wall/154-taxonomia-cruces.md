@@ -2,7 +2,7 @@
 
 **Phase 49 — Cruzar el muro.**
 **Objeto de estudio:** EL MURO — el fenómeno por el cual un enunciado individual/exacto no se deja derivar de datos promediados/gruesos. **NO** es RH ni ninguna equivalencia de RH.
-**Contrato:** libertad total en [DEFINICIÓN-NUEVA]; [TEOREMA]/[PROPOSICIÓN]/[LEMA] llevan etiqueta solo con prueba completa; [PUENTE] honesto; [GAP] declarado; [GAP de literatura] para lo que no puedo verificar de memoria.
+**Contrato:** libertad total en [DEFINICIÓN-NUEVA]; [TEOREMA]/[PROPOSICIÓN]/[LEMA] llevan etiqueta solo con prueba completa; [PUENTE] franco; [GAP] declarado; [GAP de literatura] para lo que no puedo verificar de memoria.
 **Restricciones:** español; sin numéricos; citas reales y verificables.
 
 ---
@@ -139,7 +139,7 @@ Refs: Voisin, *Hodge Theory and Complex Algebraic Geometry I*, CUP 2002 (relacio
 
 **(e) Falla sin input.** Una estructura de Hodge **no polarizada** no tiene signatura controlada; las relaciones de Hodge–Riemann son específicamente del caso polarizado/Kähler. El input es la polarización. (Es exactamente el muro de Phases 40–43 del programa: ¿admite el espacio foliado de Spec ℤ una Hodge polarizable? GAP abierto.)
 
-### M9 — Grandes desviaciones (un cruce de tipo distinto — declarado honesto)
+### M9 — Grandes desviaciones (un cruce de tipo distinto — declarado franco)
 
 **(a) Arquetipo.** Principio de grandes desviaciones (Cramér 1938, Sanov, Donsker–Varadhan): la probabilidad de una desviación **rara** (un evento individual atípico) decae como $e^{-n I(x)}$ con $I$ la función de tasa, y el **valor exacto** del exponente está determinado por la transformada de Legendre de la cumulante (un dato promedio/generador).
 Refs: H. Cramér, Actualités Sci. Indust. 736 (1938); Dembo–Zeitouni, *Large Deviations Techniques and Applications*, Springer 1998.
@@ -217,7 +217,7 @@ Aquí desarrollo el punto 2 del encargo como teoría, con teoremas reales (eleme
 
 **Tesis a juzgar (encargo, punto 3):** ¿todo cruce promedio→individual es uno de M1–M5 (o composición)? ¿O existe un mecanismo nuevo?
 
-No puedo dar una prueba de exhaustividad en sentido literal —no hay un "espacio de todos los teoremas" sobre el que cuantificar— y declararlo es parte de la honestidad. Lo que sí puedo dar es un **teorema de estructura** que muestra que la lista es exhaustiva *relativa a una clasificación de los inputs por su tipo lógico*, y luego una búsqueda honesta de un mecanismo fuera de la lista.
+No puedo dar una prueba de exhaustividad en sentido literal —no hay un "espacio de todos los teoremas" sobre el que cuantificar— y declararlo es parte de la franqueza. Lo que sí puedo dar es un **teorema de estructura** que muestra que la lista es exhaustiva *relativa a una clasificación de los inputs por su tipo lógico*, y luego una búsqueda franca de un mecanismo fuera de la lista.
 
 **[TEOREMA 154.9 — exhaustividad relativa por tipo de certificado].** *Todo cruce promedio→individual, en el esquema 154.1, requiere un certificado de que $\mathcal F\cap N(A)=\{0\}$ (por 154.5). Tal certificado es, lógicamente, de exactamente uno de estos cinco tipos, y cada tipo corresponde a un mecanismo del catálogo:*
 *(T1) un control de la **cola** de $F$ que la excluye de $N(A)$ por una desigualdad de un lado → TAUBERIANO (M1);*
@@ -233,7 +233,7 @@ No puedo dar una prueba de exhaustividad en sentido literal —no hay un "espaci
 - la **discretitud** de un funcional $\nu(F)\in\mathbb Z$ (cuantificador sobre un invariante topológico) — T5.
 Estos cinco son los modos en que la lógica de primer/segundo orden sobre un espacio vectorial topológico con orden y acción de grupo puede **distinguir** un objeto de un subespacio: por orden unilateral, por orden cuadrático, por ecuación, por simetría, o por invariante discreto. No conozco un sexto modo *primitivo*. $\square$
 
-**Estatus honesto de 154.9.** Esto es **[TEOREMA]** sobre la *clasificación de los certificados por tipo lógico*, no un teorema metamatemático de que "no puede existir otro mecanismo": eso último sería un enunciado sobre todas las matemáticas posibles y **no es demostrable** con estos medios. Lo marco así: **la lista M1–M5 es exhaustiva módulo la hipótesis de que todo certificado de transversalidad a un subespacio es de uno de los cinco tipos lógicos T1–T5.** Esa hipótesis es fuerte pero estructuralmente sólida; su negación —un mecanismo nuevo— sería un hallazgo de primer orden.
+**Estatus franco de 154.9.** Esto es **[TEOREMA]** sobre la *clasificación de los certificados por tipo lógico*, no un teorema metamatemático de que "no puede existir otro mecanismo": eso último sería un enunciado sobre todas las matemáticas posibles y **no es demostrable** con estos medios. Lo marco así: **la lista M1–M5 es exhaustiva módulo la hipótesis de que todo certificado de transversalidad a un subespacio es de uno de los cinco tipos lógicos T1–T5.** Esa hipótesis es fuerte pero estructuralmente sólida; su negación —un mecanismo nuevo— sería un hallazgo de primer orden.
 
 **Búsqueda de un mecanismo nuevo (el "oro" del encargo).** Examiné candidatos que *parecen* externos a M1–M5:
 

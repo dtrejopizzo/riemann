@@ -71,9 +71,9 @@ $$
 
 La autoadjunción no es estructural: es una **elección de von Neumann** entre un continuo de operadores, y el único miembro de la familia con espectro $\{\gamma\}$ es el que tiene a $\zeta$ codificada en su frontera. La simetría funcional restringe pero **no determina** la condición de borde.
 
-### Matiz honesto — [GAP]
+### Matiz franco — [GAP]
 
-Hay una sutileza que conviene declarar: la ecuación funcional **sí** impone una condición de borde (la involución $s\leftrightarrow 1-s$ se traduce en un emparejamiento de los dos extremos / de las dos asíntotas vía el factor $\chi$). En ese sentido, la simetría estructural **no deja la condición totalmente libre**. PERO el factor $\chi(s)=2^s\pi^{s-1}\sin(\pi s/2)\Gamma(1-s)$ es la parte **arquimediana/gamma** de la ecuación funcional; la información que falta para llegar a $\{\gamma\}$ es la parte **finita** (el producto de Euler / los primos). [GAP de literatura, honesto]: no conozco una prueba publicada de que la condición de borde fijada por la ecuación funcional completa (incluyendo el lado de Euler) determine unívocamente la extensión, **ni** una que muestre que queda un grado de libertad RH-dependiente. Lo que es sólido: el caso semirrecta da índices $(1,0)$ (no-autoadjunción total), y el caso intervalo da una familia donde el miembro correcto codifica $\zeta$. La esperanza de "autoadjunción gratuita" muere por cualquiera de estas dos.
+Hay una sutileza que conviene declarar: la ecuación funcional **sí** impone una condición de borde (la involución $s\leftrightarrow 1-s$ se traduce en un emparejamiento de los dos extremos / de las dos asíntotas vía el factor $\chi$). En ese sentido, la simetría estructural **no deja la condición totalmente libre**. PERO el factor $\chi(s)=2^s\pi^{s-1}\sin(\pi s/2)\Gamma(1-s)$ es la parte **arquimediana/gamma** de la ecuación funcional; la información que falta para llegar a $\{\gamma\}$ es la parte **finita** (el producto de Euler / los primos). [GAP de literatura, franco]: no conozco una prueba publicada de que la condición de borde fijada por la ecuación funcional completa (incluyendo el lado de Euler) determine unívocamente la extensión, **ni** una que muestre que queda un grado de libertad RH-dependiente. Lo que es sólido: el caso semirrecta da índices $(1,0)$ (no-autoadjunción total), y el caso intervalo da una familia donde el miembro correcto codifica $\zeta$. La esperanza de "autoadjunción gratuita" muere por cualquiera de estas dos.
 
 ### Veredicto Vía 2: **MATA** (con un [GAP] menor sobre la unicidad de la condición arquimediana).
 Nodo **CONOCIDO**: condiciones de borde. Es la pared clásica de Berry–Keating, no una obstrucción nueva. El programa la había encontrado como "la elección de extensión autoadjunta de $H_C$ = RH" (implícito en Phase 26, $H_C$ $Q$-simétrico pero su autoadjunción genuina $\equiv$ RH).
@@ -130,7 +130,7 @@ Estos tres nodos son, en la síntesis de Phase 52, **manifestaciones del único 
 
 Es el mismo patrón "quita un accesorio, $\zeta$ baja un piso" de Phase 51→52, ahora con accesorios cuánticos. **El import cuántico no escapa: re-deriva el muro en vocabulario de Hilbert–Pólya.**
 
-### ¿Qué tendría que ser verdad para que el import escapara? (lista honesta)
+### ¿Qué tendría que ser verdad para que el import escapara? (lista franca)
 
 Para que la esperanza sobreviviera, harían falta SIMULTÁNEAMENTE:
 1. **(contra Vía 1)** Un espacio de Hilbert **genuino** (forma definida positiva) RH-libre respecto del cual la evolución sea unitaria, distinto de $(L^2(C_\mathbb{Q}),Q)$. Equivale a un triple espectral cuyo $D$ **NO** sea el flujo de los primos (espectro $\neq\{\log k\}$, partición $\neq\zeta$) con Chern/signatura $=\kappa=2m$. Es el [GAP central] heredado de Phase 49 D156 §4.5 / Phase 51 D161 — **no construido, [GAP de literatura]**.

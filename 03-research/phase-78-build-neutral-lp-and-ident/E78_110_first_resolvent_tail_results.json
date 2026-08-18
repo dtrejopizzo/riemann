@@ -1,0 +1,96 @@
+{
+  "statement": "E78.110 first-resolvent tail gate audit",
+  "cases": [
+    {
+      "label": "zeta",
+      "rows": [
+        {
+          "N": 6,
+          "nu0": "7.4348808641654420969885e-21",
+          "nu1": "3.0262515608158794387323e-18",
+          "gap_factor_abs_nu0_over_nu1": "0.00245679538358040309720743",
+          "first_resolvent_offground_ratio": "0.00341614333362255149956764",
+          "second_resolvent_tail_ratio": "2.71185731026985952919444e-8",
+          "certificate_bound": "0.00000839276517169285336015656",
+          "certificate_over_actual": "309.484025575729175286361"
+        },
+        {
+          "N": 8,
+          "nu0": "1.14108331541358008838965e-25",
+          "nu1": "9.62811159830329751767644e-23",
+          "gap_factor_abs_nu0_over_nu1": "0.00118515796557101200883737",
+          "first_resolvent_offground_ratio": "0.00165404718709607591654063",
+          "second_resolvent_tail_ratio": "4.8542043923597296580274e-9",
+          "certificate_bound": "0.00000196030719921724039974833",
+          "certificate_over_actual": "403.836971163114605045868"
+        },
+        {
+          "N": 10,
+          "nu0": "1.85053117215286206370023e-30",
+          "nu1": "1.57739127487394818924615e-27",
+          "gap_factor_abs_nu0_over_nu1": "0.00117315925454243488955392",
+          "first_resolvent_offground_ratio": "0.00164002352019884681959604",
+          "second_resolvent_tail_ratio": "5.63314205991112659102737e-9",
+          "certificate_bound": "0.00000192400877038853904358246",
+          "certificate_over_actual": "341.551615408558309992972"
+        },
+        {
+          "N": 12,
+          "nu0": "4.30152770270027265871862e-35",
+          "nu1": "4.75206784204916827782448e-32",
+          "gap_factor_abs_nu0_over_nu1": "0.000905190718162261032384453",
+          "first_resolvent_offground_ratio": "0.00126445306300487944769886",
+          "second_resolvent_tail_ratio": "2.31920483319987372246462e-9",
+          "certificate_bound": "0.00000114457117618385752417083",
+          "certificate_over_actual": "493.518795666124797772352"
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "rows": [
+        {
+          "N": 6,
+          "nu0": "-0.0381882506484613734419728",
+          "nu1": "-0.0333337032182473521544724",
+          "gap_factor_abs_nu0_over_nu1": "1.14563480686288019990305",
+          "first_resolvent_offground_ratio": "4.3638038814348148082333e+57",
+          "second_resolvent_tail_ratio": "2.71800433468195836785548e+74",
+          "certificate_bound": "4.99932561689506103002645e+57",
+          "certificate_over_actual": "1.83933688151385775250676e-17"
+        },
+        {
+          "N": 8,
+          "nu0": "-0.411328666741726584802306",
+          "nu1": "-0.303758086504965095567069",
+          "gap_factor_abs_nu0_over_nu1": "1.35413240014271418589916",
+          "first_resolvent_offground_ratio": "27401219586.7030737343426",
+          "second_resolvent_tail_ratio": "1.74684532071137541166512e+31",
+          "certificate_bound": "37104879245.7797840692227",
+          "certificate_over_actual": "2.12410788785061992997836e-21"
+        },
+        {
+          "N": 10,
+          "nu0": "-1.4970539014566867318729",
+          "nu1": "-1.27541438383700184885714",
+          "gap_factor_abs_nu0_over_nu1": "1.17377843658380008272465",
+          "first_resolvent_offground_ratio": "16807807654494.2162900736",
+          "second_resolvent_tail_ratio": "1.37191899939254673444704e+38",
+          "certificate_bound": "19728642191093.4490671221",
+          "certificate_over_actual": "1.43803258062821674879229e-25"
+        },
+        {
+          "N": 12,
+          "nu0": "-1.69983946354891462497424",
+          "nu1": "-1.54822786348956311897866",
+          "gap_factor_abs_nu0_over_nu1": "1.09792589555753951647985",
+          "first_resolvent_offground_ratio": "3409005912288007.35960131",
+          "second_resolvent_tail_ratio": "2.75574425554873373545374e+44",
+          "certificate_bound": "3742835869209757.48607087",
+          "certificate_over_actual": "1.35819420168380991809753e-29"
+        }
+      ]
+    }
+  ],
+  "bound": "||tail(A^-2 1)|| / ||ground(A^-2 1)|| <= |nu0/nu1| * ||off(A^-1 1)|| / ||ground(A^-1 1)||"
+}
