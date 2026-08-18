@@ -44,7 +44,7 @@ of \(H\) by \(\nu_-(H)\).
 If
 
 \[
- \nu_-(H)>\operatorname {rank}T,                         \tag{2}
+ \nu_-(H)>\mathrm{rank}\,T,                         \tag{2}
 \]
 
 then there is a nonzero \(q\in\ker T\) such that
@@ -59,7 +59,7 @@ at least
 \[
  \boxed{
  \nu_-(H|_{\ker T})\ge
- \nu_-(H)-\operatorname {rank}T.}                        \tag{4}
+ \nu_-(H)-\mathrm{rank}\,T.}                        \tag{4}
 \]
 
 #### Proof
@@ -68,14 +68,14 @@ Choose a maximal negative subspace \(N\subset V\), so
 \(\dim N=\nu_-(H)\) and \(H(q,q)<0\) for every nonzero \(q\in N\).  Since
 
 \[
- \operatorname {codim}\ker T=\operatorname {rank}T,
+ \mathrm{codim}\,\ker T=\mathrm{rank}\,T,
 \]
 
 the dimension formula gives
 
 \[
  \dim(N\cap\ker T)
- \ge \dim N-\operatorname {rank}T.
+ \ge \dim N-\mathrm{rank}\,T.
 \]
 
 The restriction of \(H\) to this intersection is negative definite.  This
@@ -209,7 +209,7 @@ stable rows at meshes \(1.5\cdot10^{-3},10^{-3},5\cdot10^{-4}\) are
 
 \[
 \begin{array}{c|c|c|c}
-K&\operatorname {rank}T_K&\dim\ker T_K&
+K&\mathrm{rank}\,T_K&\dim\ker T_K&
 \lambda_{\min}(H_\Gamma|_{\ker T_K})\\ \hline
 10&10&14&-0.22488917\ldots\\
 12&12&12&-0.06385456\ldots\\

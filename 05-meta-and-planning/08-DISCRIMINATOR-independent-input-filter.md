@@ -78,8 +78,8 @@ is therefore trustworthy as a pre-screen.
 > deep-compute investment.
 
 - **Where independent input could come from** (the only I2-passing reservoir on record is *geometry*): enrichments
-  of $\operatorname{Spec}\mathbb Z$ that carry data beyond ζ. The known candidate (Connes–Consani $\mathbb F_1$ /
-  $\overline{\operatorname{Spec}\mathbb Z}$) currently **fails I2** because the sought geometry does not yet supply
+  of $\mathrm{Spec}\,\mathbb Z$ that carry data beyond ζ. The known candidate (Connes–Consani $\mathbb F_1$ /
+  $\overline{\mathrm{Spec}\,\mathbb Z}$) currently **fails I2** because the sought geometry does not yet supply
   an input that pins the sign — it is RH-equivalent precisely there. A genuinely new node would be a *different*
   enrichment, or a non-geometric source of I2 that no one has exhibited.
 - **Spend rule.** The marginal RH-*reformulation* has value ≈ 0 (guaranteed I2-failure). Fund only D0-passing

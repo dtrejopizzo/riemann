@@ -52,7 +52,7 @@ zero is not in the spectrum of its compression to `P_T`.  Decompose
 
 \[
  H_T=P_T\oplus E_T,
- \qquad E_T=(P_T)^\perp=\operatorname{span}\{e^{-t/2},e^{t/2}\}.
+ \qquad E_T=(P_T)^\perp=\mathrm{span}\,\{e^{-t/2},e^{t/2}\}.
 \]
 
 Relative to this decomposition, write the form operator as

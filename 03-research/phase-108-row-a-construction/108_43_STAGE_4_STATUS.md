@@ -6,7 +6,7 @@
 |---|---|---|---|
 | G1 | Explicit archimedean space + explicit symmetric form, built from $\Theta/\Gamma_\R$ only | **Constructed, but stipulated.** $W_\infty=A\oplus A^-\oplus B\oplus B^*$ and $B_\infty$ are fully written down; the Gram entries are hand-specified, not derived | 108_41 §3 |
 | G2 | Polar page as a proved isomorphism of forms, or a proved non-isomorphism | **Not proved.** The matching is **by construction**: $B_\infty$ is *defined* to make $\{b_0,b_0^*\}$ hyperbolic, so "the Gram matrices coincide" is a normalization, not a theorem | 108_41 §4, Prop. 4.1 |
-| G3 | Full inertia of $B_\infty$, blockwise | **Proved.** $n_+=n_-=\aleph_0$ unconditionally; $\operatorname{rad}B_\infty=\{0\}$. Content: the archimedean form has **no arithmetic invariant** | 108_42 §2, Thm 2.1 |
+| G3 | Full inertia of $B_\infty$, blockwise | **Proved.** $n_+=n_-=\aleph_0$ unconditionally; $\mathrm{rad}\,B_\infty=\{0\}$. Content: the archimedean form has **no arithmetic invariant** | 108_42 §2, Thm 2.1 |
 | G4 | Recover $\pi\cot(\pi a/2)$ from $B_\infty$ on explicit vectors, or prove it cannot | **Not proved as geometry.** Reduces to the Mittag-Leffler expansion of $\cot$; the vector $U$ was reverse-engineered from the target. Retracted in full | 108_42 §3.4, Thm 3.6 |
 | **NEW** | — | **Proved: the embedding no-go.** If RH holds, there is no isometric injection $(W_\infty,B_\infty)\hookrightarrow(V,\overline I_\partial)$ | 108_42 §4, Thm 4.3 / Cor. 4.4 |
 
@@ -37,7 +37,7 @@ simple poles on $2\Z$ and residues $2c_n$. Choosing $U$ to be all-ones is
 precisely the choice making the residues constant, which is precisely what
 reproduces $\cot$. And the resulting identity — that $\cot$ has poles on $2\Z$
 with constant residue — is 108_40 Proposition 6.1, i.e. the **input**, since
-$\operatorname{spec}\Theta$ was read off $\Gamma_\R$'s poles in the first
+$\mathrm{spec}\,\Theta$ was read off $\Gamma_\R$'s poles in the first
 place. Nothing came out that did not go in.
 
 **A structural symptom, recorded.** G2 lives on $B\oplus B^*$ and G4 on
@@ -51,7 +51,7 @@ geometry.
 ## 2. What Stage 4 did establish
 
 **G3, and its meaning.** $n_+(B_\infty)=n_-(B_\infty)=\aleph_0$, computed
-blockwise and unconditionally, with $\operatorname{rad}B_\infty=\{0\}$. The
+blockwise and unconditionally, with $\mathrm{rad}\,B_\infty=\{0\}$. The
 point is the *unconditionality*: 107_241 Corollary 3.3 makes
 $n_+(\overline I_\partial)=1$ equivalent to RH, so on the Stage-0 side the
 size of $n_+$ is exactly where the arithmetic lives. On the archimedean side

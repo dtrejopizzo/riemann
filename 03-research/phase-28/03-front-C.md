@@ -104,7 +104,7 @@ proyección espectral positiva.
 
 **Proposición C.10.** El índice de Kreĭn $\kappa(Q)$ es la imagen de $[H_C]$ bajo el
 mapa de índice:
-$$\operatorname{Ind}: KK(\mathbb{C}, C^*(C_\mathbb{Q})) \to K_0(C^*(C_\mathbb{Q})) \cong \mathbb{Z}.$$
+$$\mathrm{Ind}: KK(\mathbb{C}, C^*(C_\mathbb{Q})) \to K_0(C^*(C_\mathbb{Q})) \cong \mathbb{Z}.$$
 
 *Prueba:* El mapa de índice en KK-teoría extrae la diferencia de dimensiones entre los
 subespacios positivo y negativo de un operador. Para $H_C$ con espectro parcialmente
@@ -114,16 +114,16 @@ no-real en $(\mathcal{K}, Q)$, la diferencia es $-\kappa(Q)$. $\square$
 C^*(C_\mathbb{Q}))$?
 
 Si $[H_C] = [1]$ (el operador de Connes es KK-equivalente al operador identidad), entonces
-$\operatorname{Ind}([H_C]) = 0$, luego $\kappa = 0$, luego RH.
+$\mathrm{Ind}([H_C]) = 0$, luego $\kappa = 0$, luego RH.
 
 ---
 
 ## 7. La conexión con la traza de Connes
 
-**Proposición C.12.** El carácter de Chern $\operatorname{ch}: K_0(C^*(C_\mathbb{Q})) \to
+**Proposición C.12.** El carácter de Chern $\mathrm{ch}: K_0(C^*(C_\mathbb{Q})) \to
 HC_0(C^*(C_\mathbb{Q}))$ (cohomología cíclica) mapea $[P_-]$ a:
-$$\operatorname{ch}([P_-]) = \operatorname{tr}(P_-) \in HC_0,$$
-donde $\operatorname{tr}$ es la traza canónica sobre $C^*(C_\mathbb{Q})$.
+$$\mathrm{ch}([P_-]) = \mathrm{tr}(P_-) \in HC_0,$$
+donde $\mathrm{tr}$ es la traza canónica sobre $C^*(C_\mathbb{Q})$.
 
 La traza de la proyección negativa es exactamente $\kappa(Q) = 2m$.
 
@@ -132,7 +132,7 @@ está relacionada con la traza del operador del flujo sobre las órbitas periód
 que vía la fórmula de trazas de Selberg produce la fórmula explícita de Weil.
 
 Por tanto:
-$$\operatorname{ch}([P_-]) = \kappa(Q) \overset{!}{=} 0$$
+$$\mathrm{ch}([P_-]) = \kappa(Q) \overset{!}{=} 0$$
 sería una afirmación sobre el carácter de Chern del bimodulo del operador de Connes,
 calculable (en principio) via la cohomología cíclica de $C^*(C_\mathbb{Q})$.
 
@@ -143,7 +143,7 @@ calculable (en principio) via la cohomología cíclica de $C^*(C_\mathbb{Q})$.
 **Proposición C.13** (obstáculo al vanishing K-teórico). $[P_-] = 0$ en $K_0$ si y
 sólo si la proyección $P_-$ es homotópica a cero dentro de las proyecciones de
 $C^*(C_\mathbb{Q})$. Para proyecciones de rango finito en $\mathcal{B}(\mathcal{K})$,
-$P_- \sim_{\text{MvN}} 0$ si y sólo si $\operatorname{rango}(P_-) = 0$.
+$P_- \sim_{\text{MvN}} 0$ si y sólo si $\mathrm{rango}(P_-) = 0$.
 
 *Consecuencia:* En $K_0$, la clase $[P_-]$ es el entero $\kappa(Q) \in \mathbb{Z}$. Para
 que sea cero, hay que demostrar $\kappa(Q) = 0$ directamente. El aparato K-teórico
@@ -159,7 +159,7 @@ El camino correcto del Frente C:
    construcción directa (mostrar KK-equivalencia entre $H_C$ e identidad).
 2. De $[H_C] = [1]$ deducir $\kappa = 0$.
 
-Esto requiere construir un homotopía explícita $H_C \sim_{\text{KK}} \operatorname{Id}$.
+Esto requiere construir un homotopía explícita $H_C \sim_{\text{KK}} \mathrm{Id}$.
 La homotopía natural sería el flujo de de Bruijn–Newman: $H_{C,t}$ para $t \in [0, \Lambda]$.
 
 **Esto conecta el Frente C con el Frente A.** Los tres frentes A, C, D convergen al

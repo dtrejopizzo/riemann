@@ -26,7 +26,7 @@ the intersection pairing) forces the eigenvalue bound. **A higher-level positivi
 zero-level upper bound (RH) by duality.** The wrong-sign capstone is escaped because the positivity is *not on
 the zeros* — it is on the intersection form of an algebraic **surface**, and duality flips it.
 
-**The new path, in one line.** *Build, for $\operatorname{Spec}\mathbb Z$, the arithmetic analogue of the
+**The new path, in one line.** *Build, for $\mathrm{Spec}\,\mathbb Z$, the arithmetic analogue of the
 surface $C\times C$ and its Hodge-index positivity — and RH follows by the same duality.* The missing
 ingredient is the **cohomology theory** (and the surface) themselves. Constructing them is the new mathematics.
 
@@ -39,10 +39,10 @@ This is the deepest and most novel frontier, pursued in pieces by the field for 
   (an "infinitesimal Frobenius") such that $\zeta(s)=\det_\infty\!\big(\tfrac{1}{2\pi}(s-\Theta)\big)^{-1}$-type
   regularized determinants hold, and RH $=$ self-adjointness/positivity of a Lefschetz cup-product form. The
   cohomology is missing.
-- **Connes–Consani's arithmetic/scaling site and "Riemann–Roch for $\operatorname{Spec}\mathbb Z$":** a topos
+- **Connes–Consani's arithmetic/scaling site and "Riemann–Roch for $\mathrm{Spec}\,\mathbb Z$":** a topos
   and an intersection theory aiming at the surface and a Hodge-index analogue. Incomplete — the positivity
   (the analogue of Castelnuovo–Severi) is exactly what is open.
-- **$\mathbb F_1$-geometry (the field with one element):** the program to see $\operatorname{Spec}\mathbb Z$ as
+- **$\mathbb F_1$-geometry (the field with one element):** the program to see $\mathrm{Spec}\,\mathbb Z$ as
   a "curve over $\mathbb F_1$", so that base-change to "$\mathbb F_1$-bar" and a Frobenius give the Weil proof.
   $\mathbb F_1$ is not yet a rigorous enough object to run the argument.
 
@@ -59,7 +59,7 @@ The dictionary, made explicit:
 
 | Weil-conjectures object (curve $C/\mathbb F_q$) | Our object (for $\zeta$) |
 |---|---|
-| surface $C\times C$ | the hypothetical "arithmetic surface" $\overline{\operatorname{Spec}\mathbb Z}\times_{\mathbb F_1}\overline{\operatorname{Spec}\mathbb Z}$ |
+| surface $C\times C$ | the hypothetical "arithmetic surface" $\overline{\mathrm{Spec}\,\mathbb Z}\times_{\mathbb F_1}\overline{\mathrm{Spec}\,\mathbb Z}$ |
 | Lefschetz trace $\sum(\mathrm{Frob}^n\cdot\Delta)$ | the **Weil explicit formula** $\sum_\rho\hat g(\rho)=\text{arch}-\text{primes}$ |
 | intersection form on $\mathrm{NS}$, Lorentzian sig. $(1,\rho{-}1)$ | the **Weil quadratic form** + a missing **ample/polarization** direction |
 | Hodge index: neg.-definite on primitive part | **Weil positivity** $\mathfrak t\succeq0$ (= RH) |

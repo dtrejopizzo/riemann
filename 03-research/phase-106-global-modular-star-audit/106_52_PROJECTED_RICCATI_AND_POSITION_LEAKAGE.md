@@ -130,15 +130,15 @@ Set
 For every skew-adjoint \(C\),
 
 \[
- \operatorname {Tr}P[X,C]
- =2\operatorname {Re}\langle CP,DP\rangle_{\rm HS},  \tag{10}
+ \mathrm{Tr}\,P[X,C]
+ =2\mathrm{Re}\,\langle CP,DP\rangle_{\rm HS},  \tag{10}
 \]
 
 and consequently
 
 \[
 \boxed{
- \|CP\|_{\rm HS}^2+2\operatorname {Tr}P[X,C]
+ \|CP\|_{\rm HS}^2+2\mathrm{Tr}\,P[X,C]
  =\|CP+2DP\|_{\rm HS}^2-4\|DP\|_{\rm HS}^2.}         \tag{11}
 \]
 
@@ -147,19 +147,19 @@ and consequently
 Cyclicity is legitimate because \(P\) has finite rank:
 
 \[
- \operatorname {Tr}P[X,C]
- =\operatorname {Tr}([P,X]C).                        \tag{12}
+ \mathrm{Tr}\,P[X,C]
+ =\mathrm{Tr}([P,X]C).                        \tag{12}
 \]
 
 Write the operators in the decomposition
-\(\operatorname {Ran}P\oplus\operatorname {Ran}(I-P)\). Only the two
+\(\mathrm{Ran}\,P\oplus\mathrm{Ran}(I-P)\). Only the two
 off-diagonal blocks contribute to (12). Using \(C^*=-C\) and \(X^*=X\)
 gives
 
 \[
- \operatorname {Tr}P[X,C]
- =2\operatorname {Re}
-   \operatorname {Tr}\{(CP)^*DP\},                   \tag{13}
+ \mathrm{Tr}\,P[X,C]
+ =2\mathrm{Re}
+   \mathrm{Tr}\,\{(CP)^*DP\},                   \tag{13}
 \]
 
 which is (10). Expanding the square in (11) and invoking (10) proves the
@@ -172,9 +172,9 @@ Combining Theorem 1 and Lemma 2 gives the principal formula of this note.
 \[
 \boxed{
 \begin{aligned}
- \operatorname {Tr}(PH^2)
+ \mathrm{Tr}(PH^2)
  ={}&\|CP+2[X,P]P\|_{\rm HS}^2\\
- &+2\operatorname {Tr}\{P(B+B^*)\}
+ &+2\mathrm{Tr}\,\{P(B+B^*)\}
  -4\|[X,P]P\|_{\rm HS}^2.
 \end{aligned}}                                       \tag{14}
 \]
@@ -182,9 +182,9 @@ Combining Theorem 1 and Lemma 2 gives the principal formula of this note.
 #### Proof
 
 Since \(H\) is symmetric,
-\(\operatorname {Tr}(PH^2)=\|HP\|_{\rm HS}^2\). Take the trace of (6)
+\(\mathrm{Tr}(PH^2)=\|HP\|_{\rm HS}^2\). Take the trace of (6)
 against \(P\), use
-\(\operatorname {Tr}(PC^*C)=\|CP\|_{\rm HS}^2\), and apply (11).
+\(\mathrm{Tr}(PC^*C)=\|CP\|_{\rm HS}^2\), and apply (11).
 \(\square\)
 
 ## 4. Geometry of the leakage
@@ -194,8 +194,8 @@ The negative term in (14) has several equivalent exact forms:
 \[
 \begin{aligned}
  \|[X,P]P\|_{\rm HS}^2
- &=\operatorname {Tr}\{PX(I-P)XP\}\\
- &=\operatorname {Tr}\{PX^2P-(PXP)^2\}.              \tag{15}
+ &=\mathrm{Tr}\,\{PX(I-P)XP\}\\
+ &=\mathrm{Tr}\,\{PX^2P-(PXP)^2\}.              \tag{15}
 \end{aligned}
 \]
 
@@ -228,7 +228,7 @@ Define \(\mathfrak G_{\Gamma,0}(P)\) to be the complete Gamma and polar
 part of the three-point curvature, including all prime--Gamma mixed
 triangles and the threshold subtraction. Define
 \(\mathfrak J_2(P)\) to be the spatial theta lift of
-\(2\operatorname {Re}\operatorname {Tr}(PB)\). The exact remaining
+\(2\mathrm{Re}\,\mathrm{Tr}(PB)\). The exact remaining
 statement is
 
 \[
@@ -247,7 +247,7 @@ If (18) holds, (14) and the exact three-point formula yield
 
 \[
  \mathfrak T(P)
- =\operatorname {Tr}\{P_\mu(L^2-\tfrac12L)\}\ge0.    \tag{19}
+ =\mathrm{Tr}\,\{P_\mu(L^2-\tfrac12L)\}\ge0.    \tag{19}
 \]
 
 But every nonzero cluster in a compact interval

@@ -6,10 +6,10 @@ The chart \(Z_n=V(\Phi_n)\) is the closure of primitive \(n\)-th roots.
 Therefore a rooted label \((n,\chi)\) on that chart must satisfy
 
 \[
- \operatorname{ord}(\chi)=n,
+ \mathrm{ord}(\chi)=n,
 \]
 
-not merely \(\operatorname{ord}(\chi)\mid n\).  The latter condition
+not merely \(\mathrm{ord}(\chi)\mid n\).  The latter condition
 duplicates a character on several cyclotomic charts and contradicts the
 order-forgetting map to \(V(\Phi_n)\).
 
@@ -24,13 +24,13 @@ Define
  \mathcal R_T
  =
  \coprod_{n\mid L_T}
- \operatorname{Spec}\mathbb Z[x]/(\Phi_n(x))
+ \mathrm{Spec}\,\mathbb Z[x]/(\Phi_n(x))
  =
  \coprod_{n\mid L_T}
- \operatorname{Spec}\mathbb Z[\zeta_n].
+ \mathrm{Spec}\,\mathbb Z[\zeta_n].
 \]
 
-Then \(\mathcal R_T\to\operatorname{Spec}\mathbb Z\) is:
+Then \(\mathcal R_T\to\mathrm{Spec}\,\mathbb Z\) is:
 
 1. finite and flat, since every \(\Phi_n\) is monic and
    \(\mathbb Z[\zeta_n]\) is free of rank \(\varphi(n)\);

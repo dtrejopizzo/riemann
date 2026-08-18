@@ -278,7 +278,7 @@ subspace.
 
 ## 6. Operator form on a compact support chart
 
-If \(\operatorname{supp}F\subset[-T,T]\), only integers
+If \(\mathrm{supp}\,F\subset[-T,T]\), only integers
 \(2\le n<e^{2T}\) occur in (5.1).  Let
 
 \[

@@ -19,7 +19,7 @@ Work first with the finite-rate cutoff (10) of 106.49. Let
 
 \[
  \mathcal S_{\varepsilon,N}
- =\{(u,\sigma):u\in\operatorname {supp}\nu_{\varepsilon,N},
+ =\{(u,\sigma):u\in\mathrm{supp}\,\nu_{\varepsilon,N},
  \ \sigma=\pm1\},
 \]
 
@@ -84,7 +84,7 @@ Substitute (3) in 106.49(6) and use the symmetrized version of
 106.49(7),
 
 \[
- \operatorname {Tr}(PL)
+ \mathrm{Tr}(PL)
  =\frac12\int K(x)S_P(x)\,dx .
 \]
 
@@ -198,7 +198,7 @@ center in (4), and the mixed continuous terms (13) have been combined.
 ## 4. Use of the reducing-projection equation
 
 For the cluster feature, there is a Hermitian matrix
-\(\boldsymbol\Lambda=\operatorname {diag}(\lambda_1,\ldots,\lambda_m)\)
+\(\boldsymbol\Lambda=\mathrm{diag}(\lambda_1,\ldots,\lambda_m)\)
 such that
 
 \[
@@ -236,7 +236,7 @@ For a triangle with vertices \(x,y,z\), define the cyclic current defect
 \begin{aligned}
  \mathcal C_P(x,y,z)
  :=&\frac{K(x)K(y)K(z)}{h(x)h(y)h(z)}\\
- &\times\operatorname {Re}\Big[
+ &\times\mathrm{Re}\,\Big[
  \langle h(x)\mathbf Q(x)-h(y)\mathbf Q(y),
           \mathbf Q(y)-\mathbf Q(z)\rangle\\
  &\hspace{35mm}
@@ -249,7 +249,7 @@ If \(h\) is replaced by a constant, the real part of the cyclic bracket in
 
 \[
 \begin{aligned}
- \operatorname {Re}\{&
+ \mathrm{Re}\,\{&
  \langle Q_x-Q_y,Q_y-Q_z\rangle
  +\langle Q_y-Q_z,Q_z-Q_x\rangle\\
  &+\langle Q_z-Q_x,Q_x-Q_y\rangle\}\\

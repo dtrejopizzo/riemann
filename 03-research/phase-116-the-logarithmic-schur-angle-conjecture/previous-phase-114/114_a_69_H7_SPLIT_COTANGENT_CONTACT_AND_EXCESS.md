@@ -50,7 +50,7 @@ Functoriality and derived extension of scalars applied to `i` and `r` give
 The composite is
 
 \[
- \rho\circ s=\operatorname{id}_{L_X}.                                 \tag{2.3}
+ \rho\circ s=\mathrm{id}_{L_X}.                                 \tag{2.3}
 \]
 
 Indeed, the composite morphism of quotient arrows is the identity, and the

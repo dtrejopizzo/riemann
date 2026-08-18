@@ -73,11 +73,11 @@ Since \(A\) is skew-adjoint, it is normal and
 \]
 
 The initial space of the polar partial isometry is
-\(\overline{\operatorname {Ran}|A|}=(\ker A)^\perp=H_0\).
+\(\overline{\mathrm{Ran}|A|}=(\ker A)^\perp=H_0\).
 Its final space is
 
 \[
- \overline{\operatorname {Ran}A}
+ \overline{\mathrm{Ran}\,A}
  =(\ker A^*)^\perp
  =(\ker A)^\perp=H_0.                                      \tag{8}
 \]
@@ -86,7 +86,7 @@ Thus the polar part \(J\) is unitary on all of \(H_0\).  Functional
 calculus for the skew-adjoint normal operator gives \(J^*=-J\) and
 \(J^2=-I\).  Equivalently, write \(A=iB\) on the complexification, where
 \(B\) is injective self-adjoint; then
-\(J=i\,\operatorname {sgn}B\).
+\(J=i\,\mathrm{sgn}\,B\).
 
 Using \(A=J|A|\),
 

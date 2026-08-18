@@ -28,13 +28,13 @@ systems, via sourced determinants and Feshbach shorting. All of the following ar
 
 | # | result | status |
 |---|---|---|
-| **D0** | Fix the endpoint kernel $\mathsf K_\Xi^{\mathrm G5}=\mathsf N_{M_\Xi}$, $M_\Xi=-\Xi'/\Xi$ (Herglotz), **before any limit**; $\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm G5})=\#\{$off-line zeros$\}$ | proved |
+| **D0** | Fix the endpoint kernel $\mathsf K_\Xi^{\mathrm G5}=\mathsf N_{M_\Xi}$, $M_\Xi=-\Xi'/\Xi$ (Herglotz), **before any limit**; $\mathrm{sq}_-(\mathsf K_\Xi^{\mathrm G5})=\#\{$off-line zeros$\}$ | proved |
 | **D1** | HB / Schur / Nevanlinna / Pontryagin charts give one index $\kappa$ and one Kreĭn–Langer divisor $\mathfrak b$; $\mathfrak b_\Xi=1\Leftrightarrow$ RH | proved |
 | **D2** | **Sourced determinant** $\mathcal D_A^{\mathrm{src}}(V)=\det_{\mathrm{reg}}(I+A+V)$; its source Hessian recovers the Kreĭn–Langer kernel ⟹ **defeats signature-blindness (N1)** | proved |
 | **D3** | The index-graded category $\mathcal G$; index is a **functor**; Witt principle (a positive pole is a positive line: $\kappa=0$ despite divergent scalar norm) | proved |
 | **D4** | **Feshbach/Schur shorting** of the one positive divergent pole (\emph{not} subtraction — subtraction makes a spurious negative square); $D_P=\Delta_P\,D_P^\circ$ | proved |
 | **D5** | The signature topology $\tau_\kappa$; source-germ convergence ⟹ kernel convergence | proved |
-| **D6** | **Closedness:** a limit of positive shorted kernels is positive ($\operatorname{sq}_-=0$ closed) — clean Schur positivity, no RH, no norm bound | proved |
+| **D6** | **Closedness:** a limit of positive shorted kernels is positive ($\mathrm{sq}_-=0$ closed) — clean Schur positivity, no RH, no norm bound | proved |
 | **D7** | The finite von Mangoldt systems are positive: $\kappa(A_P)=0$, $\mathfrak b_P=1$, from $\Lambda\ge0$ | proved |
 | **D8.5a** | **Marked Tate–Binet convergence:** the Feshbach-shorted primitive Green matrices converge, $G_P^\circ(z)\to G^{\lim}(z)$, via the marked local Tate identity, primitive pole cancellation, the **primitive marked tail estimate** (G4 + Schur–Cauchy–Schwarz, $\Lambda\ge0$), the source-level Binet identity, additive assembly | proved, **genuinely local** |
 | **D8.5b-i** | **Identification:** $G^{\lim}=G_\Xi^{\mathrm G5}$ **as meromorphic objects** (both equal the marked global Tate–Weil distribution $=\mathsf N_{-\Xi'/\Xi}$) — the limit is the genuine $\Xi$-resolvent | proved |
@@ -43,9 +43,9 @@ systems, via sourced determinants and Feshbach shorting. All of the following ar
 
 The logical chain to RH:
 $$
-\underbrace{\kappa(A_P)=0}_{\text{D7}}\xrightarrow{\text{D4}}\operatorname{sq}_-(\mathsf K_P^\circ)=0
+\underbrace{\kappa(A_P)=0}_{\text{D7}}\xrightarrow{\text{D4}}\mathrm{sq}_-(\mathsf K_P^\circ)=0
 \xrightarrow{\text{D8.5a}}G_P^\circ\to G^{\lim}\xrightarrow{\text{D8.5b-i}}G^{\lim}=G_\Xi^{\mathrm G5}
-\xrightarrow{\textbf{D8.5b-ii}}\operatorname{sq}_-(G_\Xi^{\mathrm G5})=0\xrightarrow{\text{D0/G5}}\text{RH}.
+\xrightarrow{\textbf{D8.5b-ii}}\mathrm{sq}_-(G_\Xi^{\mathrm G5})=0\xrightarrow{\text{D0/G5}}\text{RH}.
 $$
 Every arrow is proved **except the last structural one, D8.5b-ii.**
 
@@ -61,7 +61,7 @@ function
    \qquad z\in\C\setminus\R,
 \]
 the Feshbach-shorted primitive resolvent of the \emph{positive} von Mangoldt canonical system
-$A_P^\circ$ (self-adjoint; $\Im G_P^\circ(z)\cdot\operatorname{sgn}\Im z\succeq0$; holomorphic on
+$A_P^\circ$ (self-adjoint; $\Im G_P^\circ(z)\cdot\mathrm{sgn}\,\Im z\succeq0$; holomorphic on
 $\C\setminus\R$). We are given (D8.5a + D8.5b-i) that
 \[
    G_P^\circ\ \longrightarrow\ G_\Xi^{\mathrm G5}=\mathsf N_{-\Xi'/\Xi}\quad\text{\textbf{meromorphically}},
@@ -92,9 +92,9 @@ exactly by the failure of uniform convergence at that point. Hence:
 \end{proposition}
 \begin{itemize}
 \item \textbf{D6 (closedness) cannot see it.} D6 transfers positivity only at finite configurations
-$z_1,\dots,z_m$ \emph{avoiding} the poles; but $\operatorname{sq}_-(G_\Xi^{\mathrm G5})$ is attained only
+$z_1,\dots,z_m$ \emph{avoiding} the poles; but $\mathrm{sq}_-(G_\Xi^{\mathrm G5})$ is attained only
 at configurations \emph{meeting} the off-line poles (the negative directions live in the residues), where
-the $G_P^\circ$ do not converge. So $\operatorname{sq}_-=0$ is not delivered.
+the $G_P^\circ$ do not converge. So $\mathrm{sq}_-=0$ is not delivered.
 \item \textbf{Herglotz positivity cannot exclude the pole.} $\Im G_P^\circ\succeq0$ in $\C^+$ forbids a
 $\C^+$ pole \emph{under uniform convergence}; an emergent pole is precisely the non-uniform case, and the
 emergent negative square is the signature of that non-uniformity. Positivity is therefore \emph{compatible}

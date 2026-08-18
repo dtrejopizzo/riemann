@@ -10,7 +10,7 @@
 **Convenciones.** Normalización del Doc 135: $F(t)=f(e^t)e^{t/2}\in C_c^\infty(\mathbb R)$, $\hat F(\xi)=\int F(t)e^{i\xi t}\,dt$, $\|f\|_w=\|F\|_{L^2}$. Bajo pureza ($|\alpha|=\sqrt p$, $|\alpha'|=\sqrt q$, fases $\phi,\phi'$),
 $$Q_X(f,f)=2\sum_{\xi\in\Lambda_p}|\hat F(\xi)|^2+2\sum_{\xi\in\Lambda_q}|\hat F(\xi)|^2,\qquad
 \Lambda_r=\Bigl\{\tfrac{\phi_r+2\pi k}{L_r}:k\in\mathbb Z\Bigr\},\ \ L_r=\log r.$$
-Escribo $\Lambda:=\Lambda_p\cup\Lambda_q$ y $E(\Lambda):=\{e^{i\xi t}\}_{\xi\in\Lambda}$. Ventana de longitud $2T$ $\Leftrightarrow$ $\operatorname{supp}F\subset$ intervalo de longitud $2T$; por invariancia traslación trabajo en $I=(-T,T)$, $L^2(I)=L^2(-T,T)$.
+Escribo $\Lambda:=\Lambda_p\cup\Lambda_q$ y $E(\Lambda):=\{e^{i\xi t}\}_{\xi\in\Lambda}$. Ventana de longitud $2T$ $\Leftrightarrow$ $\mathrm{supp}\,F\subset$ intervalo de longitud $2T$; por invariancia traslación trabajo en $I=(-T,T)$, $L^2(I)=L^2(-T,T)$.
 
 ---
 
@@ -34,7 +34,7 @@ Tres resultados con etiqueta (§1–§3) y el [PUENTE] franco con ζ (§5) cierr
 ### 1.1. La traducción exacta
 
 **[PROPOSICIÓN 1.1] (la forma de Weil de dos primos ES la forma de Gram del sistema de exponenciales).**
-Sea $T>0$ y $\mathcal H_T:=\{F\in L^2(\mathbb R):\operatorname{supp}F\subset[-T,T]\}\cong L^2(-T,T)$. Para $F\in\mathcal H_T$,
+Sea $T>0$ y $\mathcal H_T:=\{F\in L^2(\mathbb R):\mathrm{supp}\,F\subset[-T,T]\}\cong L^2(-T,T)$. Para $F\in\mathcal H_T$,
 $$\hat F(\xi)=\langle F,\ e_{-\xi}\rangle_{L^2(-T,T)},\qquad e_\xi(t):=e^{i\xi t}\ (t\in(-T,T)),$$
 de modo que
 $$Q_X(F,F)=2\sum_{\xi\in\Lambda}|\langle F,e_{-\xi}\rangle|^2 .$$
@@ -52,7 +52,7 @@ $$\tfrac12\,Q_X(F,F)=\sum_{\xi\in\Lambda}|\langle F,e_{\xi}\rangle_{L^2(-T,T)}|^
 | **Riesz basis de $L^2(-T,T)$** | frame + minimal ($=$ exacto) |
 
 La **cota de frame inferior** $A>0$ es exactamente la cantidad
-$$\mu(T)=\inf_{\|F\|_w=1,\ \operatorname{supp}F\subset[-T,T]}Q_X(F,F)$$
+$$\mu(T)=\inf_{\|F\|_w=1,\ \mathrm{supp}\,F\subset[-T,T]}Q_X(F,F)$$
 de la Observación 5.7 del Doc 135. **GAP-135.A = "¿$\mu(T)>0$ en $\log q<2T<\log pq$?" = "¿$E(\Lambda)$ es un frame para $L^2(-T,T)$ en ese rango?"** La traducción es una identidad, no una analogía: el módulo de positividad de la forma de Weil de dos primos puros *es* la cota inferior de frame del sistema de exponenciales sobre la unión de las dos progresiones de frecuencias.
 
 **Observación 1.2 (por qué la cota superior es gratis y la inferior es el problema).** La cota superior $B$ siempre existe aquí: cada $\Lambda_r$ es uniformemente discreta (separación $2\pi/L_r$), luego es conjunto de Bessel en cualquier $L^2$ de intervalo acotado (Plancherel–Pólya / Ingham [DATO]), y la unión de dos Bessel es Bessel. Lo que puede fallar es $A>0$: la **estabilidad inferior**. Esto es estructural en frames y es donde la no-separación muerde.
@@ -124,10 +124,10 @@ Aquí está el matiz que salva la cota inferior de positividad y que el Doc 135 
 - La pregunta viva: ¿es $E(\Lambda)$ un **frame** (no exacto, redundante por las colisiones) con $A=\mu(T)>0$, o es solo un sistema completo SIN cota inferior (un "frame deficiente"/sistema de Markushevich completo pero no frame)?
 
 **[PROPOSICIÓN 2.3] (reducción del problema al par colisionante).** $\mu(T)>0$ falla syss existe una sucesión normalizada $F_n\in\mathcal H_T$ con $Q_X(F_n,F_n)\to0$, i.e. con $\hat F_n\to0$ en $\ell^2(\Lambda)$ mientras $\|F_n\|=1$. Por compacidad débil y completitud (núcleo trivial), tal $F_n$ debe "escaparse a alta frecuencia": su masa $\hat F_n$ se concentra en pares de near-collision $(\xi_n,\eta_n)$ de $\Lambda_p\times\Lambda_q$ donde el sistema es casi-dependiente. El módulo $\mu(T)$ está controlado por la velocidad de degeneración del menor de Gram $2\times2$
-$$G_n=\begin{pmatrix}\|e_{\xi_n}\|^2 & \langle e_{\xi_n},e_{\eta_n}\rangle\\ \langle e_{\eta_n},e_{\xi_n}\rangle & \|e_{\eta_n}\|^2\end{pmatrix}=2T\begin{pmatrix}1 & \operatorname{sinc}(T(\xi_n-\eta_n))\\ \overline{\cdots} & 1\end{pmatrix},$$
-cuyo menor autovalor es $2T(1-|\operatorname{sinc}(T(\xi_n-\eta_n))|)\asymp 2T\cdot\tfrac{T^2}{6}|\xi_n-\eta_n|^2$ cuando $|\xi_n-\eta_n|\to0$.
+$$G_n=\begin{pmatrix}\|e_{\xi_n}\|^2 & \langle e_{\xi_n},e_{\eta_n}\rangle\\ \langle e_{\eta_n},e_{\xi_n}\rangle & \|e_{\eta_n}\|^2\end{pmatrix}=2T\begin{pmatrix}1 & \mathrm{sinc}(T(\xi_n-\eta_n))\\ \overline{\cdots} & 1\end{pmatrix},$$
+cuyo menor autovalor es $2T(1-|\mathrm{sinc}(T(\xi_n-\eta_n))|)\asymp 2T\cdot\tfrac{T^2}{6}|\xi_n-\eta_n|^2$ cuando $|\xi_n-\eta_n|\to0$.
 
-*Demostración.* Estándar para frames: la cota inferior global está dominada por la peor casi-dependencia local; la localización a pares es porque tres o más puntos de $\Lambda$ no pueden colisionar simultáneamente (un punto de $\Lambda_p$ está a distancia $\ge$ algo de los demás de $\Lambda_p$; las colisiones son $\Lambda_p$–$\Lambda_q$ de a dos, Lema 1.7). $\operatorname{sinc}(x)=\sin x/x$, $1-|\operatorname{sinc}(x)|\sim x^2/6$. $\square$
+*Demostración.* Estándar para frames: la cota inferior global está dominada por la peor casi-dependencia local; la localización a pares es porque tres o más puntos de $\Lambda$ no pueden colisionar simultáneamente (un punto de $\Lambda_p$ está a distancia $\ge$ algo de los demás de $\Lambda_p$; las colisiones son $\Lambda_p$–$\Lambda_q$ de a dos, Lema 1.7). $\mathrm{sinc}(x)=\sin x/x$, $1-|\mathrm{sinc}(x)|\sim x^2/6$. $\square$
 
 **Lectura.** El gap de frame $\mu(T)$ se degrada como el **cuadrado** de la separación en la peor near-collision dentro de la "banda visible" del intervalo. Por Baker (Prop. 2.1(b)) la peor colisión a frecuencia $\le R$ tiene $|\xi-\eta|\ge C R^{-\kappa}$, pero **el intervalo $L^2(-T,T)$ no impone cota superior a $R$**: las funciones de $\mathcal H_T$ tienen frecuencias arbitrarias. Por tanto, ingenuamente, $\inf$ sobre todas las near-collisions (a toda frecuencia) daría $\mu(T)=0$. La salvación, si existe, debe venir de que **una $F_n$ con $\|F_n\|=1$ no puede concentrar masa unitaria en exponenciales de frecuencia arbitrariamente alta sin pagar en $\|F_n\|$** vía la regularidad de Paley–Wiener — pero $\mathcal H_T$ no acota frecuencias. Esto sugiere fuertemente:
 
@@ -166,12 +166,12 @@ La esperanza del Doc 135 (Obs. 5.7, GAP-135.A) era: *"¿se puede dar una caracte
 
 ### 3.3. Dónde SÍ podría vivir matemática diofántica nueva (la versión salvable de la intuición)
 
-Si uno reemplaza $L^2(-T,T)$ por un espacio con **decaimiento espectral impuesto** — e.g. tests $F$ con $\hat F$ soportada en $[-R,R]$ además de $\operatorname{supp}F\subset[-T,T]$ (imposible exactamente por Paley–Wiener, pero aproximable: clase de Gevrey/banda efectiva) — entonces la peor near-collision SÍ está a frecuencia $\le R$, Baker da $|\xi-\eta|\ge CR^{-\kappa}$, y el módulo
+Si uno reemplaza $L^2(-T,T)$ por un espacio con **decaimiento espectral impuesto** — e.g. tests $F$ con $\hat F$ soportada en $[-R,R]$ además de $\mathrm{supp}\,F\subset[-T,T]$ (imposible exactamente por Paley–Wiener, pero aproximable: clase de Gevrey/banda efectiva) — entonces la peor near-collision SÍ está a frecuencia $\le R$, Baker da $|\xi-\eta|\ge CR^{-\kappa}$, y el módulo
 $$\mu_R(T)\gtrsim T^2\cdot(CR^{-\kappa})^2=C'\,T^2R^{-2\kappa}>0$$
 es **positivo con pérdida polinomial en la escala $R$ controlada por la medida de irracionalidad**. Este es un enunciado verdadero y posiblemente nuevo en su forma aritmética explícita, pero es un enunciado sobre **frames con banda efectiva**, no sobre la forma de Weil pura.
 
 **[DEFINICIÓN-NUEVA 3.3] (gap de frame con banda efectiva).** Para $R,T>0$ y un peso de localización espectral $w_R$ (e.g. $w_R(\xi)=(1+\xi^2/R^2)^{-N}$), defino
-$$\mu_R(T):=\inf\Bigl\{Q_X(F,F):\operatorname{supp}F\subset[-T,T],\ \|w_R^{-1}\hat F\|_2=1\Bigr\}.$$
+$$\mu_R(T):=\inf\Bigl\{Q_X(F,F):\mathrm{supp}\,F\subset[-T,T],\ \|w_R^{-1}\hat F\|_2=1\Bigr\}.$$
 
 **[PROPOSICIÓN 3.4] (gap con banda efectiva, positivo y diofánticamente cuantificado).** Para $\log q<2T<\log pq$ y $N$ grande,
 $$\mu_R(T)\ \ge\ c(p,q,T)\,R^{-2\kappa(p,q)}\ >\ 0,$$

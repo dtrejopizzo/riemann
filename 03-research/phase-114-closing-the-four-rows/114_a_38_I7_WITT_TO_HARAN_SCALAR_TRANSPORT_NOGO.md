@@ -84,9 +84,9 @@ coincide and collapses `Z tensor_F Z` to `Z`. QED.
 Contravariance turns (2.3) into
 
 \[
- \operatorname{Spec}\mathcal W_N
- \longrightarrow\operatorname{Spec}\mathbb Z
- \xrightarrow{\Delta}\operatorname{Spec}B.             \tag{3.1}
+ \mathrm{Spec}\,\mathcal W_N
+ \longrightarrow\mathrm{Spec}\,\mathbb Z
+ \xrightarrow{\Delta}\mathrm{Spec}\,B.             \tag{3.1}
 \]
 
 Thus the image lies on the diagonal of the generic arithmetic plane. After

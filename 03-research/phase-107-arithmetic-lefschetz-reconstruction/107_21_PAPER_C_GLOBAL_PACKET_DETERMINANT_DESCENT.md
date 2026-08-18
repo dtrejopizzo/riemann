@@ -152,7 +152,7 @@ Since every rooted factor is a trivial norm-one line, the overlap map on
 the full local packet lines is
 
 \[
- \operatorname{id}_{\langle Z_m,Z_n\rangle_{\rm fin}}
+ \mathrm{id}_{\langle Z_m,Z_n\rangle_{\rm fin}}
  \otimes
  g_{(\chi_1,\chi_2),(\chi_1',\chi_2')}.
  \tag{5.3}
@@ -202,7 +202,7 @@ isometric identification
 
 In particular, its finite off-diagonal norm is locally constant in the
 rooted labels and equals
-\(|\operatorname{Res}(\Phi_m,\Phi_n)|\).
+\(|\mathrm{Res}(\Phi_m,\Phi_n)|\).
 
 Proof.  Existence follows from the cocycle of Proposition 5.2.  The
 local norm statement is Theorem 8.2 of `107_20`.  \(\square\)
@@ -296,9 +296,9 @@ The future realization map
 
 \[
  \mathcal A_T:
- \operatorname{Div}_{\rm EF}(T)
+ \mathrm{Div}_{\rm EF}(T)
  \longrightarrow
- \widehat{\operatorname{Pic}}^0(\mathcal X_T^{(1)})
+ \widehat{\mathrm{Pic}}^0(\mathcal X_T^{(1)})
  \tag{9.1}
 \]
 

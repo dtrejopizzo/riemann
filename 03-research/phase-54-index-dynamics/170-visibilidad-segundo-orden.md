@@ -8,9 +8,9 @@
 
 **Coordenadas.** Trabajamos en coordenadas de ζ: cero off $\rho=\tfrac12+b_j+i\gamma_j$, $b_j\in(0,\tfrac12)$, $\gamma_j>0$, un representante por cuádruplo $\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$. $I(0):=\sum_j b_j^2$ (mitad superior; en la carta $H_t$ de Polymath 15 la energía es $4\sum_j b_j^2$ — factor de la dilatación por 2, Doc 168 KILL-2; aquí todo en carta ζ, sin mezclas). Para un test $h$ y un cero escribimos $h(\gamma_\rho)$ con $\gamma_\rho=\gamma_j-ib_j$ (convención $\rho=\tfrac12+i\gamma_\rho$).
 
-**Clase admisible $\mathcal A$.** $h:\mathbb R\to\mathbb R$ par, que se extiende holomorfa a $|\operatorname{Im}z|\le\tfrac12+\varepsilon$ con $|h(z)|\le C(1+|\operatorname{Re}z|)^{-1-\delta}$ uniformemente en la franja, y $g(u):=\frac1{2\pi}\int_{\mathbb R}h(r)e^{-iru}\,dr$ (par, real). Es la clase de la fórmula explícita de Weil [W52; IK04, Thm. 5.12]:
+**Clase admisible $\mathcal A$.** $h:\mathbb R\to\mathbb R$ par, que se extiende holomorfa a $|\mathrm{Im}\,z|\le\tfrac12+\varepsilon$ con $|h(z)|\le C(1+|\mathrm{Re}\,z|)^{-1-\delta}$ uniformemente en la franja, y $g(u):=\frac1{2\pi}\int_{\mathbb R}h(r)e^{-iru}\,dr$ (par, real). Es la clase de la fórmula explícita de Weil [W52; IK04, Thm. 5.12]:
 $$\sum_{\rho}h(\gamma_\rho)\;=\;h(\tfrac i2)+h(-\tfrac i2)\;-\;2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,g(\log n)\;+\;\frac1{2\pi}\int_{\mathbb R}h(r)\,\Omega(r)\,dr,$$
-con $\Omega(r)=\operatorname{Re}\frac{\Gamma'}{\Gamma}(\tfrac14+\tfrac{ir}2)-\log\pi$ (Stirling: $\Omega(r)=\log\frac{|r|}{2\pi}+O((1+r^2)^{-1})$).
+con $\Omega(r)=\mathrm{Re}\,\frac{\Gamma'}{\Gamma}(\tfrac14+\tfrac{ir}2)-\log\pi$ (Stirling: $\Omega(r)=\log\frac{|r|}{2\pi}+O((1+r^2)^{-1})$).
 
 ---
 
@@ -30,8 +30,8 @@ con $\Omega(r)=\operatorname{Re}\frac{\Gamma'}{\Gamma}(\tfrac14+\tfrac{ir}2)-\lo
 
 **[PROP 170.1] (huella exacta).** Sea $h\in\mathcal A$ y sea $Z$ la configuración de ceros de ζ, $Z^\flat$ su proyección a la línea (ordenadas idénticas). Entonces:
 
-(i) *(descomposición espectral)* $\displaystyle\sum_{\rho\in Z}h(\gamma_\rho)-\sum_{\rho\in Z^\flat}h(\gamma_\rho)\;=\;2\sum_j\Delta_j(h),\qquad \Delta_j(h):=2\operatorname{Re}h(\gamma_j+ib_j)-2h(\gamma_j),$
-(el factor 2 externo: los dos lados $\pm\gamma_j$ del cuádruplo, $h$ par; $2\operatorname{Re}h(\gamma_j+ib_j)=h(\gamma_j+ib_j)+h(\gamma_j-ib_j)$ por reflexión de Schwarz, $h$ real en $\mathbb R$).
+(i) *(descomposición espectral)* $\displaystyle\sum_{\rho\in Z}h(\gamma_\rho)-\sum_{\rho\in Z^\flat}h(\gamma_\rho)\;=\;2\sum_j\Delta_j(h),\qquad \Delta_j(h):=2\mathrm{Re}\,h(\gamma_j+ib_j)-2h(\gamma_j),$
+(el factor 2 externo: los dos lados $\pm\gamma_j$ del cuádruplo, $h$ par; $2\mathrm{Re}\,h(\gamma_j+ib_j)=h(\gamma_j+ib_j)+h(\gamma_j-ib_j)$ por reflexión de Schwarz, $h$ real en $\mathbb R$).
 
 (ii) *(desarrollo)* $\displaystyle \Delta_j(h)\;=\;-\,b_j^2\,h''(\gamma_j)\;+\;R_j,\qquad |R_j|\;\le\;\tfrac1{12}\,b_j^4\sup_{|y|\le b_j}\bigl|h^{(4)}(\gamma_j+iy)\bigr|,$
 y de hecho $\Delta_j(h)=2\sum_{k\ge1}\frac{(-1)^k b_j^{2k}}{(2k)!}h^{(2k)}(\gamma_j)$ (serie convergente, $h$ holomorfa en la franja). **Nota de signo:** la huella es $-\sum_j b_j^2h''(\gamma_j)$, no $+$; el enunciado del Doc 168 §5.2 tiene el signo cambiado (errata E-170.1, §6; inocua allí). Para un test con pico en $\gamma_j$ ($h''(\gamma_j)<0$) el lado de ceros tiene **exceso positivo** respecto del mundo proyectado.
@@ -39,14 +39,14 @@ y de hecho $\Delta_j(h)=2\sum_{k\ge1}\frac{(-1)^k b_j^{2k}}{(2k)!}h^{(2k)}(\gamm
 (iii) *(el funcional de primos que la iguala)* Con $N^\flat(t)$ el conteo de ordenadas, $\bar N(t)=\frac t{2\pi}\log\frac t{2\pi e}+\frac78$ y $S(t)=N^\flat(t)-\bar N(t)+O(1/t)$ (Riemann–von Mangoldt, [T86, Thm. 9.4]; idéntica en $Z$ y $Z^\flat$, Lema 141.B0):
 $$\boxed{\;-2\sum_j b_j^2\,h''(\gamma_j)\;+\;2\sum_j R_j\;=\;\underbrace{h(\tfrac i2)+h(-\tfrac i2)-2\sum_n\frac{\Lambda(n)}{\sqrt n}g(\log n)+\Bigl[\tfrac1{2\pi}\!\int h\,\Omega-\!\int h\,d\bar N\Bigr]}_{=:\ \mathfrak D(h)\ \text{(sesgo de von Mangoldt vs. predicción RvM — computable)}}\;-\;\underbrace{\int h\,dS}_{=:\ F(h)\ \text{(fluctuación del mar)}}\;}$$
 
-*Prueba.* (i): contar el cuádruplo contra su proyección. (ii): $f(b):=2\operatorname{Re}h(\gamma+ib)$ es par y real-analítica; Taylor con resto integral en $b^2$; la cota de $R_j$ por Cauchy en el segmento. (iii): fórmula de Weil para $Z$ (exacta) menos $\sum_{Z^\flat}h=\int h\,dN^\flat=\int h\,d\bar N+\int h\,dS+O(\|h\|_\infty)$ pequeño. $\square$
+*Prueba.* (i): contar el cuádruplo contra su proyección. (ii): $f(b):=2\mathrm{Re}\,h(\gamma+ib)$ es par y real-analítica; Taylor con resto integral en $b^2$; la cota de $R_j$ por Cauchy en el segmento. (iii): fórmula de Weil para $Z$ (exacta) menos $\sum_{Z^\flat}h=\int h\,dN^\flat=\int h\,d\bar N+\int h\,dS+O(\|h\|_\infty)$ pequeño. $\square$
 
 **Lectura.** La huella de segundo orden de $I$ es el **sesgo de la suma de primos respecto de la predicción lisa RvM, módulo la fluctuación del mar $F(h)$**. Todo certificado debe separar tres números: $\mathfrak D(h)$ (computable solo trivialmente sin RH), $F(h)$ (estadística de ordenadas — σ-ciega pero desconocida), y la señal. Esta es la estructura exacta sobre la que operan §2–§3.
 
 ### 1.2. El espectro de impureza de D152 ES la ventana de segundo orden
 
 **[PROP 170.2] (comparación término a término con D152).** Tómese $g(u)=e^{-u^2/4T^2}\cos(\tau u)$, i.e. el test del espectro de impureza $S_T(\tau)=\sum_n\Lambda(n)n^{-1/2}e^{-(\log n)^2/4T^2}\cos(\tau\log n)$. Entonces $h_\tau(t)=\sqrt\pi\,T\bigl[e^{-T^2(t-\tau)^2}+e^{-T^2(t+\tau)^2}\bigr]$ y la contribución de un cuádruplo $(\gamma_j,b_j)$, término núcleo, es **exactamente**
-$$2\operatorname{Re}h_\tau(\gamma_j+ib_j)-2h_\tau(\gamma_j)\;=\;2\sqrt\pi\,T\,e^{-T^2(\gamma_j-\tau)^2}\Bigl[e^{T^2 b_j^2}\cos\bigl(2T^2(\gamma_j-\tau)b_j\bigr)-1\Bigr].$$
+$$2\mathrm{Re}\,h_\tau(\gamma_j+ib_j)-2h_\tau(\gamma_j)\;=\;2\sqrt\pi\,T\,e^{-T^2(\gamma_j-\tau)^2}\Bigl[e^{T^2 b_j^2}\cos\bigl(2T^2(\gamma_j-\tau)b_j\bigr)-1\Bigr].$$
 En consecuencia:
 1. *(régimen sub-resolución $b_jT\le1$)* el corchete es $-b_j^2\,\partial_t^2\bigl[\sqrt\pi Te^{-T^2(t-\tau)^2}\bigr]_{t=\gamma_j}/(\sqrt\pi T e^{-T^2(\gamma_j-\tau)^2})\cdot(1+O(b^2T^2))$: la huella de la Prop. 170.1 al orden principal — en $\tau=\gamma_j$, $+2\sqrt\pi\,b_j^2T^3$ del lado ceros, sesgo **negativo** en $S_T$ (los ceros entran con signo $-$): el sesgo permanente de D152.
 2. *(régimen súper-resolución $b_jT\gg1$)* el factor $e^{T^2b_j^2}$ es la **resumación completa** de la serie de (ii) de la Prop. 170.1 (la gaussiana suma su Taylor exactamente), y la tasa exponencial $\frac1{T^2}\log|\cdot|\to b_j^2-(\gamma_j-\tau)^2$ reproduce **exactamente** el peso de impureza $\omega(\tau)=\max\bigl(0,\max_j(b_j^2-(\gamma_j-\tau)^2)\bigr)$ del Teorema 152.2.

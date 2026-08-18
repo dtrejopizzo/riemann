@@ -66,7 +66,7 @@ therefore what makes the statements below admissible.
 > $\Phi$ is not constant on $(0,1)$; hence $L_g$ is not constant, and by
 > 108_33 Theorem 2.1 there exist $s_0,s_1$ and admissible $g$ with
 > $\Lambda_g^{0}(\divv U_{s_0}-\divv U_{s_1})\ne0$.  The pairing does **not**
-> descend to $\operatorname{Pic}$.
+> descend to $\mathrm{Pic}$.
 
 Verified: $\Phi$ takes the values $7.325,\,0.868,\,-2.231,\,-5.415,\,-12.013$
 at $s=0.1,0.25,0.5,0.75,0.9$.
@@ -81,7 +81,7 @@ would have been everything and the whole construction empty.  It does not.
 
 > ### Theorem 3.3 (the radical, in closed form)
 > \[
->  \operatorname{rad}\Lambda^{0}
+>  \mathrm{rad}\,\Lambda^{0}
 >  =\Big\{\textstyle\sum_i\lambda_i\delta_{s_i}\ :\ \sum_i\lambda_i=0,\
 >  \ \lambda_i=0 \text{ whenever } \Phi(s_i)\ne0\Big\},
 > \]
@@ -100,7 +100,7 @@ $\Phi(s_i)=0$. $\square$
 >  s^\ast=0.301692388160\ldots
 > \]
 > so the radical meets the real segment only there.  The quotient
-> $\Prin'/\operatorname{rad}$ is therefore large, and the induced form is
+> $\Prin'/\mathrm{rad}$ is therefore large, and the induced form is
 > nondegenerate on it.
 
 Verified by bisection to $\Phi(s^\ast)=-2.2\times10^{-16}$, and by a scan of
@@ -109,12 +109,12 @@ $1999$ points detecting exactly one sign change.
 ## 4. What Stage 2 settles
 
 **Settled.**  The descent question, in both directions: the pairing does not
-descend to $\operatorname{Pic}$ (Theorem 3.1), but it does descend to the
+descend to $\mathrm{Pic}$ (Theorem 3.1), but it does descend to the
 quotient by an explicitly described discrete radical (Theorem 3.3,
 Corollary 3.4), and that quotient is not trivial (Theorem 3.2).
 
 **Why the negative half is not fatal.**  Weil's argument does not use the
-intersection pairing on $\operatorname{Pic}$; it uses it on classes modulo
+intersection pairing on $\mathrm{Pic}$; it uses it on classes modulo
 algebraic or numerical equivalence.  The Hodge-index statements available in
 the literature are likewise stated on $NS\otimes\Q$.  A pairing that descends
 to a quotient by a discrete radical is of that type.

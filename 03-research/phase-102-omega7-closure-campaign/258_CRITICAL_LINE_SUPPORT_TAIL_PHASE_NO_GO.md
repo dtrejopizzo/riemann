@@ -49,7 +49,7 @@ define the phase functional
 The actual zeta divisor would give one special arithmetic measure.  The
 point here is weaker and logical: the assertion
 \[
-  \operatorname{supp}\mu\subset\mathbb R,\qquad \mu\ge0
+  \mathrm{supp}\,\mu\subset\mathbb R,\qquad \mu\ge0
 \]
 does not imply a numerical upper bound for \(\mathcal P_{n,T}(\mu)\).
 
@@ -116,7 +116,7 @@ Under RH this becomes
 where \(\mu_\zeta\) is the positive counting measure of ordinates on the
 critical line.  The statement is still an oriented inequality against the
 specific oscillatory weight \(q_{n,T_n}\).  The support condition
-\(\operatorname{supp}\mu_\zeta\subset\mathbb R\) supplies the domain of
+\(\mathrm{supp}\,\mu_\zeta\subset\mathbb R\) supplies the domain of
 integration, but not the sign or size of that integral.
 
 Thus the compact A1 route

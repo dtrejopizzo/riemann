@@ -11,7 +11,7 @@ Let
 
 \[
  V_{M-1}\subset V_M
- =\operatorname {span}\{\phi_1,\ldots,\phi_M\}     \tag{1}
+ =\mathrm{span}\,\{\phi_1,\ldots,\phi_M\}     \tag{1}
 \]
 
 be a finite elementary even zero-mode space, including any prescribed
@@ -186,7 +186,7 @@ Expanding (15) gives
 
 \[
  \mathcal J_{u,W}(q,q)
- =c^*G_{M-1}c+2\operatorname {Re}(c^*g)+h.
+ =c^*G_{M-1}c+2\mathrm{Re}(c^*g)+h.
                                                                \tag{17}
 \]
 
@@ -310,7 +310,7 @@ Since
  \mathcal A_X(r,r)=-\mathcal T_X(r,r)<0.}         \tag{26}
 \]
 
-Take the one-dimensional ordered space \(V_1=\operatorname {span}\{r\}\).
+Take the one-dimensional ordered space \(V_1=\mathrm{span}\,\{r\}\).
 After fixing the scale of its basis vector, the adaptive residual is
 literally \(q^*=r\), and its Schur deficit is
 

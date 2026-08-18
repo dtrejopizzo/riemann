@@ -18,18 +18,18 @@ With that,
 
 \[
  \boxed{
- M(C_\Lambda)=\operatorname{diag}(\ell),
+ M(C_\Lambda)=\mathrm{diag}(\ell),
  \qquad
  M(B_{\rm int})=\ell\ell^{\!\top},
  \qquad
- M(G)=\ell\ell^{\!\top}-\operatorname{diag}(\ell).
+ M(G)=\ell\ell^{\!\top}-\mathrm{diag}(\ell).
  }
 \]
 
 The inertia of \(\begin{pmatrix}0&M\\M^{\!\top}&0\end{pmatrix}\) is
-\((\operatorname{rank}M,\operatorname{rank}M,\cdot)\).  Therefore
+\((\mathrm{rank}\,M,\mathrm{rank}\,M,\cdot)\).  Therefore
 
-| | \(\operatorname{rank}M\) | inertia |
+| | \(\mathrm{rank}\,M\) | inertia |
 |---|---|---|
 | \(C_\Lambda\) (local contact) | \(r\) | \((r,r,0)\) |
 | \(B_{\rm int}\) (row-(a) total) | \(1\) | \((1,1,2r-2)\) |
@@ -37,7 +37,7 @@ The inertia of \(\begin{pmatrix}0&M\\M^{\!\top}&0\end{pmatrix}\) is
 > **The Green term of `eq:greenline` is exactly a rank cut \(r\to1\).**
 
 And it is a rank cut of precisely the advertised kind: \(\ell\ell^{\!\top}\)
-**couples every pair of distinct primes**, while \(-\operatorname{diag}(\ell)\)
+**couples every pair of distinct primes**, while \(-\mathrm{diag}(\ell)\)
 **subtracts nothing but the local contact**.  That is, verbatim, what
 `main.tex` says is missing from row (d) after `eq:finitealternative`:
 *"a global Green term which couples distinct primes while preserving their
@@ -55,7 +55,7 @@ the same.  Measured (`115_01` verifier, \(r=7\)):
 
 The first line is the Hodge conclusion itself: on the orthogonal complement of
 the polarization, the form has zero positive index.  Row (a) satisfies it, and
-it does so **because** of the rank cut — \(\operatorname{rank}M=1\) leaves one
+it does so **because** of the rank cut — \(\mathrm{rank}\,M=1\) leaves one
 positive direction in the whole space, and that one direction is \(H\).
 
 The second line is the analogue of \(\mathcal T^0\), which is also cut out by
@@ -73,9 +73,9 @@ weaker than the full Hodge index on \(H^\perp\), which
 ## 2. Division of labour: where each sign has to come from
 
 A cross form \(\begin{pmatrix}0&M\\M^{\!\top}&0\end{pmatrix}\) has inertia
-\((\operatorname{rank}M,\operatorname{rank}M,\cdot)\) — always **neutral**,
+\((\mathrm{rank}\,M,\mathrm{rank}\,M,\cdot)\) — always **neutral**,
 equal positive and negative counts.  That is not an obstruction; after the cut
-\(\operatorname{rank}M=1\) it gives exactly \((1,1,\cdot)\), one polarization
+\(\mathrm{rank}\,M=1\) it gives exactly \((1,1,\cdot)\), one polarization
 plus one negative.  But it does force a conclusion:
 
 > The infinitely many negative directions row (d) needs **cannot come from the
@@ -107,7 +107,7 @@ in D.262 §3 and in `main.tex`: it is one interior band, not a diffuse defect.
 
 Extend the contact from primes to prime powers, \(M_{mn}\) supported where
 \(m,n\) are powers of the same \(p\).  \(M\) is block diagonal with one
-all-ones block per prime, so \(\operatorname{rank}M=r\) regardless of \(|S|\).
+all-ones block per prime, so \(\mathrm{rank}\,M=r\) regardless of \(|S|\).
 Measured:
 
 | \(|S|\) | \(r\) | SELF \(K_S(e_m,e_n)=\Lambda(mn)\) | CROSS \(\begin{pmatrix}0&M\\M&0\end{pmatrix}\) |
@@ -124,7 +124,7 @@ leftovers are:
   positive-semidefinite form.  This is `thm:finitecontactobstruction`.
 * **CROSS** (row (a)'s shape) pairs them into hyperbolic planes — the exact
   situation row (a) demonstrably cancels, since \(\ell\ell^{\!\top}\) is the
-  rank-one cut of \(\operatorname{diag}(\ell)\).
+  rank-one cut of \(\mathrm{diag}(\ell)\).
 
 So the shape choice is not cosmetic.  It decides whether the Green term is
 being asked to do something row (a) has already done, or something it has not.
@@ -158,7 +158,7 @@ D.260's centred measure dPsi - dx   -- the extended vector itself
 **Working hypothesis for this phase.**  \(d\Psi-dx\) is the centred degree
 vector of the mixed classes, and the row-(d) Green term is its outer square
 minus the local contact — the exact analogue of
-\(\ell\ell^{\!\top}-\operatorname{diag}(\ell)\).
+\(\ell\ell^{\!\top}-\mathrm{diag}(\ell)\).
 
 That is a statement about an object, not an estimate, so it is not excluded by
 `main.tex` §1 and it does not use the sign.  It is also falsifiable: the
@@ -167,9 +167,9 @@ pinned exactly by row (c).
 
 ## 5. Classification
 
-* Block form and \(M(G)=\ell\ell^{\!\top}-\operatorname{diag}(\ell)\):
+* Block form and \(M(G)=\ell\ell^{\!\top}-\mathrm{diag}(\ell)\):
   **PROVED** (exact, verified).
-* Inertia \(=(\operatorname{rank}M,\operatorname{rank}M,\cdot)\) and the
+* Inertia \(=(\mathrm{rank}\,M,\mathrm{rank}\,M,\cdot)\) and the
   \(r\to1\) cut: **PROVED**.
 * \(G=-C_\Lambda\) on the radical; \(B_{\rm int}\equiv0\) on the
   codimension-two space; \((0,1,\cdot)\) on \(H^\perp\): **PROVED** (computed).

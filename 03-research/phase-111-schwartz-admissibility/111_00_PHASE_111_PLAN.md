@@ -3,7 +3,7 @@
 ## 0. The single question
 
 Requirement d1 (Riemann–Roch via $h^0$, via linear equivalence, via a principal
-subspace $\mathcal P\subseteq\operatorname{rad}I_\partial$) needs the corner
+subspace $\mathcal P\subseteq\mathrm{rad}\,I_\partial$) needs the corner
 pairing
 
 $$I_\partial(D_f,D_g)=\mathfrak T(f\star\widetilde g),\qquad

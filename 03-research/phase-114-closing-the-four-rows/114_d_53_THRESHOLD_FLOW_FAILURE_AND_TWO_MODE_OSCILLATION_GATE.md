@@ -48,7 +48,7 @@ the Feynman--Hellmann formula gives
 \[
  \boxed{\lambda'(s)=
   \langle f(s),W_af(s)\rangle
-  =2c_a\operatorname{Re}\langle f(s),S_af(s)\rangle.}     \tag{2.3}
+  =2c_a\mathrm{Re}\,\langle f(s),S_af(s)\rangle.}     \tag{2.3}
 \]
 
 In particular, at a regular zero crossing the spectral-flow orientation is
@@ -245,7 +245,7 @@ The continuous gate (6.3) and the direct D.52 gate
 
 \[
  n_+(B_T)=1,\qquad
- \operatorname{In}(M_TB_T^{-1}M_T^*)=(1,1,0)               \tag{7.1}
+ \mathrm{In}(M_TB_T^{-1}M_T^*)=(1,1,0)               \tag{7.1}
 \]
 
 are two Schur-complement presentations of the same primitive conclusion,

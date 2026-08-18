@@ -38,7 +38,7 @@ space.
 
 Recall (108_40 Definition 1.1) $\Theta$ on $\mathcal H=\ell^2(\Z_{\ge0})$,
 orthonormal basis $\{e_n\}_{n\ge0}$, $\Theta e_n=-2n\,e_n$, each eigenvalue
-simple; and (108_40 Proposition 6.1) $\operatorname{spec}\Theta=\{-2n:n\ge0\}$
+simple; and (108_40 Proposition 6.1) $\mathrm{spec}\,\Theta=\{-2n:n\ge0\}$
 is exactly the pole set of $\Gamma_\R(s)=\pi^{-s/2}\Gamma(s/2)$.
 
 > ### Definition 1.1 (the two mirrors)
@@ -51,8 +51,8 @@ is exactly the pole set of $\Gamma_\R(s)=\pi^{-s/2}\Gamma(s/2)$.
 > introduced.
 
 > ### Lemma 1.2 (pole correspondence for the mirrors)
-> $\operatorname{spec}\Theta^-=\{2n:n\ge0\}$ is exactly the pole set of
-> $s\mapsto\Gamma_\R(-s)$, and $\operatorname{spec}\Theta^*=\{1+2n:n\ge0\}$ is
+> $\mathrm{spec}\,\Theta^-=\{2n:n\ge0\}$ is exactly the pole set of
+> $s\mapsto\Gamma_\R(-s)$, and $\mathrm{spec}\,\Theta^*=\{1+2n:n\ge0\}$ is
 > exactly the pole set of $s\mapsto\Gamma_\R(1-s)$; all poles in both sets are
 > simple.
 
@@ -78,8 +78,8 @@ holomorphic with $g(s_0)=0$. Then $f'/f(s)=-\dfrac1{s-s_0}+\dfrac{g'(s)}
 > ### Corollary 2.2 (the two residues used below)
 > Write $G:=\log\Gamma_\R$ as in 108_39. Then
 > \[
->  \operatorname*{Res}_{s=-2n}G'(s)=-1,\qquad
->  \operatorname*{Res}_{s=1+2n}G'(1-s)=+1,\qquad n\ge0.
+>  \mathop{\mathrm{Res}}_{s=-2n}G'(s)=-1,\qquad
+>  \mathop{\mathrm{Res}}_{s=1+2n}G'(1-s)=+1,\qquad n\ge0.
 > \]
 
 **Proof.** $G'=\Gamma_\R'/\Gamma_\R$, and $\Gamma_\R$ has a simple pole at
@@ -147,8 +147,8 @@ $\mathcal H$.
 
 **Motivating $B_\infty$ on $B\oplus B^*$ from residues.** Definition 3.2's
 off-diagonal weight $1$ on $B\times B^*$ is not an arbitrary normalization;
-with $r_n:=\operatorname*{Res}_{s=-2n}G'(s)=-1$ and
-$r_n^*:=\operatorname*{Res}_{s=1+2n}G'(1-s)=+1$ (Corollary 2.2), both
+with $r_n:=\mathop{\mathrm{Res}}_{s=-2n}G'(s)=-1$ and
+$r_n^*:=\mathop{\mathrm{Res}}_{s=1+2n}G'(1-s)=+1$ (Corollary 2.2), both
 constants **independent of $n$** because every eigenvalue of $\Theta$ is
 simple (108_40 Def. 1.1), the natural residue-coupling
 \[
@@ -180,7 +180,7 @@ form — is put in by hand. §4 draws the consequence of this candidly.
 
 Recall (Stage 0, 107_241 §1–§2) the evaluation coordinates
 $f\mapsto(\widehat f(0),\widehat f(1),\dots)$ of Lemma 2.2, and Theorem
-3.1(1): the polar block $H_{\mathrm{ruling}}=\operatorname{span}\{v_0,v_1\}$
+3.1(1): the polar block $H_{\mathrm{ruling}}=\mathrm{span}\,\{v_0,v_1\}$
 (with $v_0,v_1$ the two polar coordinates, i.e. evaluation of $\widehat f$ at
 $s=0$ and $s=1$) carries the Gram matrix $\left(\begin{smallmatrix}0&1\\1&0
 \end{smallmatrix}\right)$, from the cross terms $\widehat f(0)\overline{
@@ -188,7 +188,7 @@ $s=0$ and $s=1$) carries the Gram matrix $\left(\begin{smallmatrix}0&1\\1&0
 
 > ### Proposition 4.1 (G2: a matching by construction — the circularity
 > ### stated in full, not deferred)
-> The Gram matrix of $B_\infty$ on $\operatorname{span}\{b_0,b_0^*\}$, in the
+> The Gram matrix of $B_\infty$ on $\mathrm{span}\,\{b_0,b_0^*\}$, in the
 > basis $(b_0,b_0^*)$, equals $\left(\begin{smallmatrix}0&1\\1&0
 > \end{smallmatrix}\right)$: the same matrix as $I_\partial|_{H_{\mathrm
 > {ruling}}}$ in the basis $(v_0,v_1)$.
@@ -212,7 +212,7 @@ one.** The candid content of G2, after this correction, is:
   archimedean data, and can be realized using only quantities ($\Theta$'s
   simple spectrum, the pole set of $\Gamma_\R(1-s)$) that are themselves
   legitimately archimedean.
-* But *which* rank-2 form to put on $\operatorname{span}\{b_0,b_0^*\}$ was a
+* But *which* rank-2 form to put on $\mathrm{span}\,\{b_0,b_0^*\}$ was a
   free choice at Definition 3.2, constrained only by "match the target,"
   not derived from any property of $\Theta$, $\Gamma_\R$, or their residues
   that would have produced *this* matrix (rather than, say, $2\delta_{nm}$,
@@ -315,10 +315,10 @@ stipulation was transcribed correctly, not an independent derivation.
    $|\Gamma_\R(1-s)|$ near $s=1,3,5,7$, confirming pole-like (doubling)
    behavior as the offset halves — the same test 108_40 used for $\Theta$
    itself.
-2. Corollary 2.2, first identity: $\operatorname*{Res}_{s=-2n}G'(s)=-1$ at
+2. Corollary 2.2, first identity: $\mathop{\mathrm{Res}}_{s=-2n}G'(s)=-1$ at
    $n=0,1,2,3$, via central difference with step $h$ and $h/2$, confirming
    the residual shrinks.
-3. Corollary 2.2, second identity: $\operatorname*{Res}_{s=1+2n}G'(1-s)=+1$
+3. Corollary 2.2, second identity: $\mathop{\mathrm{Res}}_{s=1+2n}G'(1-s)=+1$
    at $n=0,1,2,3$, same convergence test.
 4. The algebraic identity $-r_nr_n^*=1$ at the four tested $n$, from the
    numerically computed residues.

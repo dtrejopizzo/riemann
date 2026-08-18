@@ -13,7 +13,7 @@ For \(a\notin\{0,-1,-2,\ldots\}\), the resolvent has diagonal entries
 Hadamard finite part exists:
 
 \[
- \operatorname{Tr}_{\rm reg}(N+a)^{-1}
+ \mathrm{Tr}_{\rm reg}(N+a)^{-1}
  :=\lim_{M\to\infty}left(
  \sum_{n=0}^{M}{1\over n+a}-\log M
  \right)
@@ -30,7 +30,7 @@ Set \(a=s/2\).  Equation (1.1) gives
 
 \[
  \mathscr G_\Gamma(s)
- ={1\over2}\operatorname{Tr}_{\rm reg}(N+s/2)^{-1}
+ ={1\over2}\mathrm{Tr}_{\rm reg}(N+s/2)^{-1}
  +{1\over2}\log\pi
  =-{1\over2}\psi(s/2)+{1\over2}\log\pi.
  \tag{2.1}

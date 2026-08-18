@@ -15,17 +15,17 @@ $0<\beta_\rho<1$. The resonance kernel
 $$
 K_{\rho\sigma}=\frac{1}{s_\rho+\overline{s_\sigma}-1}
 $$
-(the Maass–Selberg denominator, up to the residue weights $D=\operatorname{diag}(R_\rho)$, which do not change the
+(the Maass–Selberg denominator, up to the residue weights $D=\mathrm{diag}(R_\rho)$, which do not change the
 signature) is **negative-definite** for every such configuration — on-line or off-line.
 \end{theorem}
 \begin{proof}
-Put $w_\rho=\tfrac12-s_\rho$; then $\operatorname{Re}(w_\rho)=\tfrac12-\tfrac{\beta_\rho}{2}=\tfrac{1-\beta_\rho}{2}>0$
+Put $w_\rho=\tfrac12-s_\rho$; then $\mathrm{Re}(w_\rho)=\tfrac12-\tfrac{\beta_\rho}{2}=\tfrac{1-\beta_\rho}{2}>0$
 since $\beta_\rho<1$. And
 $$
 K_{\rho\sigma}=\frac1{s_\rho+\overline{s_\sigma}-1}=\frac{-1}{(\tfrac12-s_\rho)+\overline{(\tfrac12-s_\sigma)}}
 =\frac{-1}{w_\rho+\overline{w_\sigma}}=-\int_0^\infty e^{-w_\rho t}\,\overline{e^{-w_\sigma t}}\,dt.
 $$
-The integral represents the **positive-definite Cauchy/Hardy kernel** of the right half-plane $\{\operatorname{Re}>0\}$
+The integral represents the **positive-definite Cauchy/Hardy kernel** of the right half-plane $\{\mathrm{Re}>0\}$
 (reproducing kernel of $H^2$), so $-K$ is positive-definite, i.e. $K\prec0$. The full Gram matrix $G=D\,K\,D^*$ has
 the same signature as $K$ ($D$ invertible since $R_\rho\ne0$), hence $G\prec0$. $\square$
 \end{proof}
@@ -47,14 +47,14 @@ Route A's Pillar 2 via resonances definitively, and it is RH-independent.
 
 ## Where the indefiniteness actually lives
 By the explicit formula $Q(f,f)=\sum_\rho h(\gamma_\rho)$: on-line zeros contribute $|\widehat f(\gamma)|^2\ge0$;
-**off-line zeros contribute $4\operatorname{Re}[\widehat f(t-ib)^2]$, $b=\beta-\tfrac12$ — an off-axis point
+**off-line zeros contribute $4\mathrm{Re}[\widehat f(t-ib)^2]$, $b=\beta-\tfrac12$ — an off-axis point
 evaluation, the sole indefinite term.** The Theorem says the *bulk/regularized* resonance pairing is blind to this:
 the indefiniteness is the **off-axis evaluation functional**, which is **unbounded on $L^2$** (Phase-4, Day 1), not a
 bulk pairing. So $\kappa$ requires either:
 - the **de Branges** reproducing-kernel structure where off-axis evals are bounded — which Phase 4 (Days 9–15) showed
   trivializes or reproduces the wrong-sign capstone; or
-- the **indefinite intersection form** of the arithmetic surface $\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}
-  \operatorname{Spec}\mathbb Z$ (Hodge-index signature) — **SURF**, which does not exist.
+- the **indefinite intersection form** of the arithmetic surface $\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}
+  \mathrm{Spec}\,\mathbb Z$ (Hodge-index signature) — **SURF**, which does not exist.
 
 Every natural pairing the modular surface supplies (analytic Maass–Selberg; arithmetic Arakelov/Néron–Tate) is
 **definite**; the indefinite $Q$ is not among them. This is the wrong-sign capstone (CAP), now **proven** on Route A.

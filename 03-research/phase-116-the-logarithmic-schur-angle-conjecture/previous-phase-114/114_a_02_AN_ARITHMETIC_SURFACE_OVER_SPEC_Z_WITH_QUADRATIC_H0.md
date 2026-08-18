@@ -81,8 +81,8 @@
 
 ## 1. The object
 
-**Definition 1.1.** Let $X=\mathbb P^1_{\mathbb Z}=\operatorname{Proj}\mathbb Z[T_0,T_1]$,
-a regular, projective, flat arithmetic surface over $\operatorname{Spec}\mathbb Z$ of
+**Definition 1.1.** Let $X=\mathbb P^1_{\mathbb Z}=\mathrm{Proj}\,\mathbb Z[T_0,T_1]$,
+a regular, projective, flat arithmetic surface over $\mathrm{Spec}\,\mathbb Z$ of
 relative dimension $1$. On $X(\mathbb C)=\mathbb P^1(\mathbb C)$ let $\mu$ be the
 normalised Haar measure of the compact torus
 $$
@@ -132,8 +132,8 @@ of rank $k+1$ with basis the monomials $T_0^{\,i}T_1^{\,k-i}$, $0\le i\le k$;
 for $k<0$ it is $0$.
 
 *Proof (elementary glueing, no citation needed).* Cover $X$ by
-$U_0=\operatorname{Spec}\mathbb Z[t]$, $t=T_1/T_0$, and
-$U_1=\operatorname{Spec}\mathbb Z[u]$, $u=T_0/T_1=1/t$. In the standard
+$U_0=\mathrm{Spec}\,\mathbb Z[t]$, $t=T_1/T_0$, and
+$U_1=\mathrm{Spec}\,\mathbb Z[u]$, $u=T_0/T_1=1/t$. In the standard
 trivialisations of $\mathcal O(k)$ the transition function is $t^{k}$, so a global
 section is a pair $(f_0(t),f_1(u))\in\mathbb Z[t]\times\mathbb Z[u]$ with
 $f_0(t)=t^{k}f_1(1/t)$. Writing $f_1(u)=\sum_{j\ge0}c_ju^j$ (a finite sum) gives
@@ -254,7 +254,7 @@ and the bound on $\eta$ is Lemma 3.3 together with $\log(1+x)\le x$. $\square$
 
 1. The proof is *Poisson summation and nothing else*. arXiv:2512.01811v2 §1 says
    of the arithmetic-curve case: *"the Riemann–Roch formula
-   $\chi_{\mathcal O}(\mathcal F)=\widehat{\deg}\det\mathcal F+\chi_{\mathcal O}(\mathcal O)\operatorname{rank}_{\mathcal O}\mathcal F$
+   $\chi_{\mathcal O}(\mathcal F)=\widehat{\deg}\det\mathcal F+\chi_{\mathcal O}(\mathcal O)\mathrm{rank}_{\mathcal O}\mathcal F$
    is equivalent to Poisson summation formula."* Theorem 3.4 is the
    two-dimensional instance of the same mechanism for this particular surface,
    and it is quadratic because the rank of $f_*\mathcal O(k)$ is $k+1$, itself a
@@ -417,15 +417,15 @@ $\Theta(m)$; the rank of $\widehat H^0$ is $\deg_{\mathrm{fin}}+1$ and the log
 radius is $\deg_\infty$.
 
 **Corollary 6.4 (item a4-weak).** *There exists a two-dimensional arithmetic
-structure over $\operatorname{Spec}\mathbb Z$, with a genuine integral section
+structure over $\mathrm{Spec}\,\mathbb Z$, with a genuine integral section
 lattice, on which the absolute dimension grows quadratically in $\deg D$ and
 obeys an exact Riemann–Roch identity with quadratic leading term.* **BUILT.**
 
 **Corollary 6.5 (R16 of `113_12`/`113_15` §7).** R16 asks: *"decide whether a
-quadratic $\chi$ can exist over $\operatorname{Spec}\mathbb Z$ at all. Every
+quadratic $\chi$ can exist over $\mathrm{Spec}\,\mathbb Z$ at all. Every
 Riemann–Roch actually available there is one-dimensional with a linear $\chi$."*
 **ANSWERED: YES.** Theorem 3.4 is a quadratic $\chi$ over
-$\operatorname{Spec}\mathbb Z$, proved here from Poisson summation; and
+$\mathrm{Spec}\,\mathbb Z$, proved here from Poisson summation; and
 arXiv:2512.01811v2 Theorem `main1` (§8 below) is a quadratic $\chi$ for
 *arbitrary* arithmetic surfaces, in the literature. R16 therefore does **not**
 kill Ansatz A on the grounds it named. It does not thereby support Ansatz A —
@@ -438,18 +438,18 @@ see §7.
 ### 7.1 It is not the square
 
 $\overline{\mathbb P^1_{\mathbb Z}}$ is not
-$\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z$.
-Its generic fibre is $\mathbb P^1_{\mathbb Q}$, not $\operatorname{Spec}\mathbb Q$;
+$\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$.
+Its generic fibre is $\mathbb P^1_{\mathbb Q}$, not $\mathrm{Spec}\,\mathbb Q$;
 its "second direction" is a projective line, supplied by hand, not a second copy
-of $\operatorname{Spec}\mathbb Z$. What Theorem 3.4 establishes is that the
-*shape* a4 asks for is achievable over $\operatorname{Spec}\mathbb Z$ — the
+of $\mathrm{Spec}\,\mathbb Z$. What Theorem 3.4 establishes is that the
+*shape* a4 asks for is achievable over $\mathrm{Spec}\,\mathbb Z$ — the
 obstruction is not a theorem of arithmetic. It does not establish that the
 *specific* square Weil's analogy wants exists.
 
 - **a4-weak: CLOSED POSITIVELY (Corollary 6.4).**
 - **a4-strong: OPEN.** Restated as: *is there a two-dimensional arithmetic
-  structure over $\operatorname{Spec}\mathbb Z$, with quadratic $h^0$, whose two
-  rulings are both copies of $\operatorname{Spec}\mathbb Z$ and which carries the
+  structure over $\mathrm{Spec}\,\mathbb Z$, with quadratic $h^0$, whose two
+  rulings are both copies of $\mathrm{Spec}\,\mathbb Z$ and which carries the
   Frobenius correspondences $\Gamma_n$ with $\Gamma_n\cdot\Delta=\psi(n)$?*
   `114_a_03` applies the two tests to every candidate for this.
 
@@ -466,7 +466,7 @@ Nothing in this file quantifies over zeros of $\xi$. In particular Theorem
 (E$^o$) in `113_10`, because the two divisor groups are unrelated: there is no
 map
 $$
- \widehat{\mathrm{Div}}(\overline{\mathbb P^1_{\mathbb Z}})\ \longrightarrow\ \mathcal D/\operatorname{rad}I_d
+ \widehat{\mathrm{Div}}(\overline{\mathbb P^1_{\mathbb Z}})\ \longrightarrow\ \mathcal D/\mathrm{rad}\,I_d
 $$
 carrying $\langle\cdot,\cdot\rangle$ to $s$. Constructing one is **Gap G-3**,
 and `114_a_04` shows that constructing it is RH-hard.
@@ -494,11 +494,11 @@ Theorem `main1`, quoted verbatim:
 > =\tfrac12\bigl(\mathcal L,\mathcal L\otimes\omega_{\mathcal X}^\vee\bigr)
 > +\Bigl(\chi_{\mathcal X}(\mathcal O_{\mathcal X})+\tfrac12\log\det\Delta_{\mathcal O_{\mathcal X_\infty}}\Bigr),$$
 > where $(\ ,\ )$ is the Arakelov intersection pairing on
-> $\widehat{\operatorname{Pic}}(\mathcal X)$.
+> $\widehat{\mathrm{Pic}}(\mathcal X)$.
 
 This is exactly the shape of Theorem 3.4: $\chi=\tfrac12(\mathcal L,\mathcal L-K)+\chi(\mathcal O)$,
 with an analytic-torsion correction $\tfrac12\log\det\Delta$ replacing my
-$\eta$. It is a **quadratic $\chi$ over $\operatorname{Spec}\mathbb Z$ in the
+$\eta$. It is a **quadratic $\chi$ over $\mathrm{Spec}\,\mathbb Z$ in the
 literature, for arbitrary arithmetic surfaces**, and it settles R16
 independently of anything proved here.
 
@@ -644,7 +644,7 @@ $[0.43,0.75]$ for $m\ge40$.
 - **Gap G-3.** *(The one that matters.)* There is no known homomorphism
   $$
    \Phi:\ \widehat{\mathrm{Div}}\bigl(\overline{\mathbb P^1_{\mathbb Z}}\bigr)
-   \ \longrightarrow\ \mathcal D/\operatorname{rad}I_d
+   \ \longrightarrow\ \mathcal D/\mathrm{rad}\,I_d
    \quad\text{with}\quad
    s\bigl(\Phi D,\Phi D'\bigr)=\langle D,D'\rangle,\ \ \Phi H=H^\wedge .
   $$
@@ -662,7 +662,7 @@ $[0.43,0.75]$ for $m\ge40$.
 ## 11. Refutation conditions, pre-registered (continuing from R27)
 
 - **R28.** If any future file cites Theorem 3.4 as a Riemann–Roch for
-  $\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z$
+  $\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$
   rather than for $\mathbb P^1_{\mathbb Z}$, it fires this condition. §7.1 is
   the standing correction: the object built here is an arithmetic surface, not
   the square.
@@ -733,7 +733,7 @@ $[0.43,0.75]$ for $m\ge40$.
 **Not established.**
 
 - That $\overline{\mathbb P^1_{\mathbb Z}}$ is, or maps to, the square
-  $\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z$.
+  $\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$.
   It is not (§7.1).
 - Any statement about rows (b), (c) or (d). In particular there are no Frobenius
   correspondences here with $\Gamma_n\cdot\Delta=\psi(n)$ (§7.2).

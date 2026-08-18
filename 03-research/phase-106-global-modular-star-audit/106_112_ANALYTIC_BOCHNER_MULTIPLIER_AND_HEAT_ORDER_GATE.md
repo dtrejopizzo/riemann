@@ -250,7 +250,7 @@ The orbit \(\{s,-s,\bar s,-\bar s\}\), together with reality and
 evenness, contributes
 
 \[
- 4m_s\operatorname {Re}F_j(s)^2
+ 4m_s\mathrm{Re}\,F_j(s)^2
  =4m_s(u_j^2-v_j^2)
  \tag{20}
 \]
@@ -301,9 +301,9 @@ and Theorem 1 gives
 There are radical rows \(P_+\) and \(P_-\) such that
 
 \[
- \operatorname {Var}(\beta_{P_-})
- <\operatorname {Var}(\beta_K)
- <\operatorname {Var}(\beta_{P_+}),
+ \mathrm{Var}(\beta_{P_-})
+ <\mathrm{Var}(\beta_K)
+ <\mathrm{Var}(\beta_{P_+}),
  \tag{25}
 \]
 
@@ -314,7 +314,7 @@ while both rows satisfy the exact equality (24).
 Take \(P_+(\xi)=\xi^2\).  Then
 
 \[
- \operatorname {Var}(\beta_{P_+})=\frac{M_6}{M_4}.
+ \mathrm{Var}(\beta_{P_+})=\frac{M_6}{M_4}.
  \tag{26}
 \]
 
@@ -323,11 +323,11 @@ Strict positive association of the increasing functions \(y\) and
 
 \[
  M_6-M_2M_4
- =\operatorname {Cov}(Y,Y^2)>0.
+ =\mathrm{Cov}(Y,Y^2)>0.
  \tag{27}
 \]
 
-Therefore \(M_6/M_4>M_2=\operatorname {Var}(\beta_K)\).
+Therefore \(M_6/M_4>M_2=\mathrm{Var}(\beta_K)\).
 
 For the opposite direction take
 
@@ -399,8 +399,8 @@ Then \(B_1=T^*T\), and for a positive heat state \(\Gamma_t\),
 
 \[
  \mathbb E_{\beta_{\Gamma_t}}\varphi
- =\frac{\operatorname {Tr}(B_\varphi\Gamma_t)}
-        {\operatorname {Tr}(B_1\Gamma_t)}.
+ =\frac{\mathrm{Tr}(B_\varphi\Gamma_t)}
+        {\mathrm{Tr}(B_1\Gamma_t)}.
  \tag{33}
 \]
 
@@ -415,14 +415,14 @@ Recall
 ### Theorem 6 — Exact heat derivative of a Bochner observable
 
 Put \(m_\varphi(t)=\mathbb E_{\beta_{\Gamma_t}}\varphi\) and
-\(D(t)=\operatorname {Tr}(B_1\Gamma_t)\).  On every common heat-form
+\(D(t)=\mathrm{Tr}(B_1\Gamma_t)\).  On every common heat-form
 core,
 
 \[
  \boxed{
  m_\varphi'(t)
  =-\frac{1}{2D(t)}
-   \operatorname {Tr}\!\left(
+   \mathrm{Tr}\,\!\left(
     \Gamma_t\{S,B_\varphi-m_\varphi(t)B_1\}
    \right).}
  \tag{35}
@@ -437,8 +437,8 @@ Differentiate the numerator and denominator in (33), use (34), and use
 trace cyclicity on the common core:
 
 \[
- \frac{d}{dt}\operatorname {Tr}(B_\varphi\Gamma_t)
- =-\frac12\operatorname {Tr}
+ \frac{d}{dt}\mathrm{Tr}(B_\varphi\Gamma_t)
+ =-\frac12\mathrm{Tr}
    \bigl(\Gamma_t\{S,B_\varphi\}\bigr).
  \tag{36}
 \]

@@ -91,7 +91,7 @@ at the finite zero divisor of \(\Xi\) in \(D\).  On a local factor
 \(\mathcal O_a/(\Xi)\), the ordinary Grothendieck residue
 \[
  ([u],[v])\longmapsto
- \operatorname{Res}_{z=a}\frac{u(z)v(z)}{\Xi(z)}\,dz
+ \mathrm{Res}_{z=a}\frac{u(z)v(z)}{\Xi(z)}\,dz
  \tag{7}
 \]
 is perfect.  The involution \(z\mapsto-z\) identifies the factor at
@@ -120,7 +120,7 @@ trace of multiplication.  Define the holomorphic involution
 and
 \[
  \mathfrak h_D([f],[g])
- =\operatorname {Tr}_{\mathcal H_D}
+ =\mathrm{Tr}_{\mathcal H_D}
      M_{\,f g^\sharp}.
  \tag{8b}
 \]
@@ -138,14 +138,14 @@ The form (8b) is Hermitian.  Its radical is the nilradical of the Artin
 algebra (3), so it is nondegenerate on the separated quotient
 \[
  \mathcal H_D^{\rm sep}
- =\mathcal H_D/\operatorname {Nil}(\mathcal H_D).
+ =\mathcal H_D/\mathrm{Nil}(\mathcal H_D).
  \tag{8d}
 \]
 On that quotient define
 \[
- \Omega_D^{\rm Ros}=-\operatorname {Im}\mathfrak h_D,
+ \Omega_D^{\rm Ros}=-\mathrm{Im}\,\mathfrak h_D,
  \qquad
- g_D^{\rm Ros}=\operatorname {Re}\mathfrak h_D.
+ g_D^{\rm Ros}=\mathrm{Re}\,\mathfrak h_D.
  \tag{8e}
 \]
 This is the finite analytic model of the form in 106.157.  In evaluation
@@ -233,7 +233,7 @@ such that
 \]
 Then every zero \(\rho\) of \(\xi\) represented in \(D\) satisfies
 \[
- \boxed{\operatorname{Re}\rho=\frac12.}
+ \boxed{\mathrm{Re}\,\rho=\frac12.}
  \tag{14}
 \]
 
@@ -253,7 +253,7 @@ Hence \(U_t\) is a finite-dimensional orthogonal group for the positive
 metric \(g_D\).  Its generator \(A_D\) is skew-adjoint.  Therefore
 \(A_D\) is diagonalizable and
 \[
- \operatorname{Spec}(A_D)\subset i\mathbb R.
+ \mathrm{Spec}(A_D)\subset i\mathbb R.
 \tag{16}
 \]
 The spectrum of multiplication by \(z\) on (8d) is the reduced zero
@@ -311,7 +311,7 @@ whose matrix is (16d) and whose eigenvalues are \(1,-1\).  Summing the
 orthogonal orbit blocks proves (16e). \(\square\)
 
 In the original variable, \(j(a)=a\) is exactly
-\(\operatorname{Re}\rho=1/2\).  Thus the polarization problem has no
+\(\mathrm{Re}\,\rho=1/2\).  Thus the polarization problem has no
 unseen finite-dimensional remainder: its negative index is literally the
 number of off-line functional-equation pairs in the window.
 

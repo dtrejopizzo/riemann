@@ -264,7 +264,7 @@ donde \(P_r\) es el kernel de Poisson. Todos los \(g_r\) tienen media
 cero y, crucialmente,
 
 \[
- \operatorname {sgn}g_r(\theta)=\operatorname {sgn}\cos\theta
+ \mathrm{sgn}\,g_r(\theta)=\mathrm{sgn}\,\cos\theta
  \quad\text{para todo }r.                              \tag{24}
 \]
 

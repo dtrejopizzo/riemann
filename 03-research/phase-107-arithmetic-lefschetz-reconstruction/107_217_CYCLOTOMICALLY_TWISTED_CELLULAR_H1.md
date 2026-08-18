@@ -59,16 +59,16 @@ Every syzygy \((x,y)\) of \((a,b)\) has the form
 \[
  (x,y)=(-bc,ac),
  \qquad c\in I^{-1}
- =\{c\in\operatorname{Frac}(O):ca,cb\in O\}.
+ =\{c\in\mathrm{Frac}(O):ca,cb\in O\}.
 \]
 
-Under this identification, \(\operatorname{im}d_2\) is the submodule
+Under this identification, \(\mathrm{im}\,d_2\) is the submodule
 with \(c\in O\).  Hence \(H^1=I^{-1}/O\), proving (2.1).
 
 Both finite groups have the same cardinal:
 
 \[
- |H^0|=|H^1|=\operatorname N(I).
+ |H^0|=|H^1|=\mathrm{N}(I).
  \tag{2.2}
 \]
 
@@ -99,7 +99,7 @@ The elementary cyclotomic ideal identity gives
 Consequently
 
 \[
- \operatorname N(I)
+ \mathrm{N}(I)
  =\Phi_m(1)^{\varphi(n)/\varphi(m)}.
  \tag{3.2}
 \]

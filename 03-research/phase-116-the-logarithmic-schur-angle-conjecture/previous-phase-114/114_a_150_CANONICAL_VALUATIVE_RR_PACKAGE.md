@@ -46,7 +46,7 @@ No interpolation base or auxiliary prime occurs.
 Put
 
 \[
- \widehat{\operatorname{Div}}(\overline{\operatorname{Spec}\mathbb Z})
+ \widehat{\mathrm{Div}}(\overline{\mathrm{Spec}\,\mathbb Z})
  =\bigoplus_p\mathbb Z[p]\oplus\mathbb R[\infty]
 \]
 
@@ -60,7 +60,7 @@ and
 For `r in Q^times`, define
 
 \[
- \widehat{\operatorname{div}}(r)
+ \widehat{\mathrm{div}}(r)
  =\sum_pv_p(r)[p]-\log|r|[\infty].
 \]
 
@@ -70,7 +70,7 @@ zero is principal: for its finite part take `r=product p^(a_p)`; subtracting
 the infinity coordinate.  Hence
 
 \[
- \widehat{\operatorname{Div}}/widehat{\operatorname{Prin}}
+ \widehat{\mathrm{Div}}/widehat{\mathrm{Prin}}
  \xrightarrow[\widehat\deg]{\sim}\mathbb R.
 \]
 
@@ -100,14 +100,14 @@ the periodic orbit
 of length `log p`.  On `C_p`, Connes--Consani prove
 
 \[
- \operatorname{Div}(C_p)/\operatorname{Prin}(C_p)
+ \mathrm{Div}(C_p)/\mathrm{Prin}(C_p)
  \simeq\mathbb R\times\mathbb Z/(p-1)\mathbb Z
 \]
 
 and
 
 \[
- \operatorname{cdim}H^0(C_p,D)=\max(\deg D,0).
+ \mathrm{cdim}\,H^0(C_p,D)=\max(\deg D,0).
 \]
 
 For delta in R, let [D_p(delta)] be the unique divisor class with
@@ -130,7 +130,7 @@ be the functionally reduced external tropical tensor module.  The exact
 external-dimension theorem gives
 
 \[
- \operatorname{cdim}^{(2)}\mathcal T_{p,q}(\delta,\eta)=\delta\eta.
+ \mathrm{cdim}^{(2)}\mathcal T_{p,q}(\delta,\eta)=\delta\eta.
 \]
 
 Let PerExt be the category of finite-support families of filtered external
@@ -251,7 +251,7 @@ The canonical package
 
 \[
  \mathscr A_{\rm val}=
- (\mathscr Y_A,\operatorname{Div}_A,\operatorname{Prin}_A,
+ (\mathscr Y_A,\mathrm{Div}_A,\mathrm{Prin}_A,
   \mathcal H_{\rm val},\lambda_{RR}^{\rm val},\lambda_C,
   \lambda_G^{\rm val},N^1_{\rm val})
 \]

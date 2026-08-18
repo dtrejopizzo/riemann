@@ -303,7 +303,7 @@ phase continued this architecture.
 ## PART 13 — Phases 107–119: Arc C, the arithmetic Lefschetz reconstruction
 
 A structurally different pivot: imitate Weil's 1948 proof for curves over finite fields directly
-over $\operatorname{Spec}\mathbb Z$, working backward from what row (d) — Hodge index /
+over $\mathrm{Spec}\,\mathbb Z$, working backward from what row (d) — Hodge index /
 Castelnuovo–Severi — would require. Full detail: `00-MAP.md` Part 14,
 `03-research/THE_BACKWARD_MAP.md`, `03-research/AUDIT_CONSOLIDATED.md`.
 

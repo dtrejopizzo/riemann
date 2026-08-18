@@ -134,7 +134,7 @@ En particular, **$W_n(\gamma_n) \neq 0$** para todo $n$ suficientemente grande, 
 
 Falta controlar el denominador de la Prop. 8.1 de Doc 65:
 
-$$\operatorname{Res}_{z=\gamma_n} F_n = \frac{W_n(\gamma_n)}{P_n(\gamma_n)P_{n+1}(\gamma_n) \cdot m'_\infty(\gamma_n)}.$$
+$$\mathrm{Res}_{z=\gamma_n} F_n = \frac{W_n(\gamma_n)}{P_n(\gamma_n)P_{n+1}(\gamma_n) \cdot m'_\infty(\gamma_n)}.$$
 
 **Estimación de $P_n(\gamma_n)P_{n+1}(\gamma_n)$:** Del Cor. 3.1:
 
@@ -161,7 +161,7 @@ La integración cerca de $s = 0$ contribuye $\sim \gamma_n^{-2} \cdot dm_\infty(
 
 **Proposición 5.2** (Residuo del PPP sin simpleza). Para casi todo $n$ (en el sentido de densidad 1):
 
-$$R_n := \operatorname{Res}_{z=\gamma_n} F_n \asymp \frac{(\sqrt{\log n}/n) \cdot n^{3/4}\gamma_n^{3/4}}{\gamma_n^{-3/2}} = \frac{\gamma_n^{9/4}\sqrt{\log n}}{n^{1/4}}.$$
+$$R_n := \mathrm{Res}_{z=\gamma_n} F_n \asymp \frac{(\sqrt{\log n}/n) \cdot n^{3/4}\gamma_n^{3/4}}{\gamma_n^{-3/2}} = \frac{\gamma_n^{9/4}\sqrt{\log n}}{n^{1/4}}.$$
 
 Con $\gamma_n \sim 2\pi n/\log n$: $\gamma_n^{9/4} \sim n^{9/4}/(\log n)^{9/4}$, luego
 

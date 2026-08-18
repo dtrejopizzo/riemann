@@ -113,7 +113,7 @@ D_{\rm out}=I-A_NA_N^*.
 The enlarged cell is positive exactly when
 
 \[
-y_N\in\operatorname{Ran}D_{\rm out}^{1/2},\qquad
+y_N\in\mathrm{Ran}\,D_{\rm out}^{1/2},\qquad
 y_N^*D_{\rm out}^\dagger y_N\le I.
 \]
 
@@ -138,7 +138,7 @@ Q_c=R_0^{\dagger/2}(X_0^*X_E-Y_0^*Y_E)S_E^{\dagger/2}.
 For (h_e=R_0^{1/2}HS_E^{\dagger/2}e) and (q_e=Q_ce), the return load
 is (u_e=D_0h_e-q_e).  The telescoping formula and return-dissipation
 identities are **ALGEBRAIC IDENTITIES** under (0\le T_0\le I).  The
-claim (q_e\in\operatorname{Ran}D_0^{1/2}) with the unit budget is
+claim (q_e\in\mathrm{Ran}\,D_0^{1/2}) with the unit budget is
 **OPEN** and is another coordinate form of the Douglas gate.
 
 ## Toeplitz--Hankel support block
@@ -172,7 +172,7 @@ For an exhaustive cell family, row D is equivalent to constructing from
 the source, independently of the desired sign, a contraction
 
 \[
-v_N:E_N\longrightarrow\overline{\operatorname{Ran}D_{\rm out}}
+v_N:E_N\longrightarrow\overline{\mathrm{Ran}\,D_{\rm out}}
 \]
 
 such that
@@ -326,7 +326,7 @@ With \(u=A_N^*y_N\), \(D=I-A_N^*A_N\), and the D.175 identity
 
 \[
 y_N^*D_{\rm out}^\dagger y_N
-=y_N^*y_N+h^*Dh-2\operatorname {Re}(h^*q)+q^*D^\dagger q.
+=y_N^*y_N+h^*Dh-2\mathrm{Re}(h^*q)+q^*D^\dagger q.
 \]
 
 This is a **PROVED OPERATOR IDENTITY**.  The range conditions for \(y_N\),
@@ -335,7 +335,7 @@ restate the original Douglas gate.  The authoritative sharp target is
 
 \[
 q^*D^\dagger q\le
-I-y_N^*y_N-h^*Dh+2\operatorname {Re}(h^*q).
+I-y_N^*y_N-h^*Dh+2\mathrm{Re}(h^*q).
 \]
 
 The equality kernel is the kernel of the difference between these two

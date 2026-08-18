@@ -28,7 +28,7 @@ Sin embargo, ninguna de las tres orientaciones canónicas aporta (1):
 
    \[
    \mathbb E[(Z^{(1)}-Z^{(2)})^2(Z^{(3)}-c)]
-   =2\operatorname{Var}(D_f)\{M_s(f)-c\},                 \tag{3}
+   =2\mathrm{Var}(D_f)\{M_s(f)-c\},                 \tag{3}
    \]
 
    recupera la orientación correcta, pero su signo es **equivalente** al
@@ -110,7 +110,7 @@ cancelar los tres denominadores en la esperanza condicionada se obtiene
  \boxed{
  \mathbb E_s[J_fJ_gJ_h]
  =\sum_{d,e,r\ge2}{\Lambda(d)\Lambda(e)\Lambda(r)
- \over\operatorname{lcm}(d,e,r)^s}
+ \over\mathrm{lcm}(d,e,r)^s}
  f(\log d)g(\log e)h(\log r).}                            \tag{8}
 \]
 
@@ -120,7 +120,7 @@ coprimos. Solo desaparecen al formar el cumulante conectado, como explica
 
 ## 2. Comparador polar de tercer orden
 
-Sea \(Y\sim\operatorname{Exp}(\varepsilon)\) y
+Sea \(Y\sim\mathrm{Exp}(\varepsilon)\) y
 
 \[
  C_f(Y)=\int_0^Y f(x)\,dx.                                \tag{9}
@@ -183,9 +183,9 @@ Ponga \(\widetilde D_f=D_f-\mathbb E_sD_f\). Para tres tests,
 \begin{aligned}
  \mathbb E_s[Z_fZ_gZ_h]
  ={}&\mathbb E_s[\widetilde D_f\widetilde D_g\widetilde D_h]\\
- &+M_s(f)\operatorname{Cov}_s(D_g,D_h)
-  +M_s(g)\operatorname{Cov}_s(D_f,D_h)\\
- &+M_s(h)\operatorname{Cov}_s(D_f,D_g)
+ &+M_s(f)\mathrm{Cov}_s(D_g,D_h)
+  +M_s(g)\mathrm{Cov}_s(D_f,D_h)\\
+ &+M_s(h)\mathrm{Cov}_s(D_f,D_g)
   +M_s(f)M_s(g)M_s(h).
 \end{aligned}}                                             \tag{16}
 \]
@@ -194,7 +194,7 @@ Para \(f=g=h\),
 
 \[
  \mathbb E_sZ_f^3
- =\mu_{3,s}(D_f)+3M_s(f)\operatorname{Var}_s(D_f)+M_s(f)^3. \tag{17}
+ =\mu_{3,s}(D_f)+3M_s(f)\mathrm{Var}_s(D_f)+M_s(f)^3. \tag{17}
 \]
 
 El primer término de (17) no tiene signo. Desplazar por una constante
@@ -203,7 +203,7 @@ El primer término de (17) no tiene signo. Desplazar por una constante
 \[
  \boxed{
  \mathbb E_s(Z_f-c)^3
- =\mu_{3,s}(D_f)+3\{M_s(f)-c\}\operatorname{Var}_s(D_f)
+ =\mu_{3,s}(D_f)+3\{M_s(f)-c\}\mathrm{Var}_s(D_f)
    +\{M_s(f)-c\}^3.}                                     \tag{18}
 \]
 
@@ -219,7 +219,7 @@ La identidad de U-estadística
  \boxed{
  \mathcal O_{s,c}(f):=
  \mathbb E_s[(Z_f^{(1)}-Z_f^{(2)})^2(Z_f^{(3)}-c)]
- =2\operatorname{Var}_s(D_f)\{M_s(f)-c\}}                \tag{19}
+ =2\mathrm{Var}_s(D_f)\{M_s(f)-c\}}                \tag{19}
 \]
 
 elimina exactamente \(\mu_3(D_f)\) y conserva la orientación. Pero no la
@@ -260,7 +260,7 @@ Entonces
 \[
  \boxed{
  {s\over2}\mathcal O_{s,c_{n,s}}(f_{n,s})
- =\operatorname{Var}_s(D_{f_{n,s}})
+ =\mathrm{Var}_s(D_{f_{n,s}})
    \{\mathcal B_{n,s}-\kappa A_n\}.}                     \tag{22}
 \]
 
@@ -316,7 +316,7 @@ Condicionado a haber elegido la torre \(p\) con exponente total \(a\), el
 selector de zeta satisface
 
 \[
- K\mid(p,a)\sim\operatorname{Unif}\{1,\ldots,a\}.         \tag{27}
+ K\mid(p,a)\sim\mathrm{Unif}\,\{1,\ldots,a\}.         \tag{27}
 \]
 
 Por reflexión,

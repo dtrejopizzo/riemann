@@ -49,7 +49,7 @@ Por `104_22`, sobre \(u=c\varepsilon\),
 \]
 
 **Teorema 1.1 (Fejér--Carathéodory).** Supóngase que
-\(\Phi\in\operatorname{Hol}(\mathbb D)\), que sus coeficientes son reales y
+\(\Phi\in\mathrm{Hol}(\mathbb D)\), que sus coeficientes son reales y
 que
 
 \[

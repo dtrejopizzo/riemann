@@ -1,7 +1,7 @@
 # Phase 15 · M3 · Attempt 7 — building the zero-carrying cohomology explicitly (and pinning the capstone to one structural compatibility)
 
 **Author: David Alejandro Trejo Pizzo · 2026-06-06.**
-Attempt 6 isolated the missing object: a zero-carrying arithmetic cohomology $H^1_?(\operatorname{Spec}\mathbb Z)$
+Attempt 6 isolated the missing object: a zero-carrying arithmetic cohomology $H^1_?(\mathrm{Spec}\,\mathbb Z)$
 with a flow $\Phi$ whose spectrum is $\{\gamma_\rho\}$, plus a Hodge index. Here we **construct it explicitly** from
 this program's tools — not name it — and show precisely which single structural compatibility is the capstone.
 Connes' spectral realization (1999) already places the zeros as a spectrum; our addition is the explicit Kreĭn
@@ -19,8 +19,8 @@ $\langle f,g\rangle=\sum_\rho\widehat f(\gamma_\rho)\overline{\widehat g(\gamma_
 negative index $\kappa=\#$off-line zeros (P16). It is the candidate $H^1$.
 \item[\rm(H2)] \emph{(the flow)} the self-adjoint operator $\mathcal T$ (P8) — $\mathcal T=\Omega(D)+\Pi-2\sum_n
 \tfrac{\Lambda(n)}{\sqrt n}\,\mathrm{Re}\,T_{\log n}$ — acts on $\mathcal H_W$ with
-$\operatorname{spec}(\mathcal T)=\{\gamma_\rho\}$: the Frobenius-analogue/flow generator, eigenvalues $=$ the zeros.
-\item[\rm(H3)] \emph{(the trace formula)} for a test function $h$, $\operatorname{Tr}\,h(\mathcal T)=\sum_\rho
+$\mathrm{spec}(\mathcal T)=\{\gamma_\rho\}$: the Frobenius-analogue/flow generator, eigenvalues $=$ the zeros.
+\item[\rm(H3)] \emph{(the trace formula)} for a test function $h$, $\mathrm{Tr}\,\,h(\mathcal T)=\sum_\rho
 h(\gamma_\rho)=(\text{poles})-2\Gamma(g)+(\infty)$ — the explicit formula as the Lefschetz trace of the flow
 (M1, Thm A, verified to $10^{-12}$).
 \item[\rm(H4)] \emph{(local Frobenius data)} the anatomy $\mathcal R$ recovers, at each prime $p$, the Satake
@@ -94,7 +94,7 @@ structural compatibility is RH (Theorem~\ref{thm:polar}).
 
 ## 5. Status
 - **New (constructive):** the zero-carrying arithmetic cohomology is **built explicitly** for $\zeta$ — Kreĭn space
-  $\mathcal H_W$ (H1), flow $\mathcal T$ with $\operatorname{spec}=\{\gamma_\rho\}$ (H2), Lefschetz trace formula
+  $\mathcal H_W$ (H1), flow $\mathcal T$ with $\mathrm{spec}=\{\gamma_\rho\}$ (H2), Lefschetz trace formula
   (H3, verified), anatomy/Satake local Frobenius (H4), positive ample cone (H5), candidate weight-$1$ Hodge
   structure $(J,Q,\iota)$. The Deninger/Connes object is concrete, not conjectural, for $\zeta$.
 - **The capstone pinned to one compatibility:** RH $=$ the candidate Hodge structure is **polarized** (the Riemann

@@ -8,7 +8,7 @@
 > question therefore has nothing to answer *in §3*; the invariance
 > requirement is entirely Definition 6.1's (§6), a separate, later choice.
 > Reading Definition 6.1 at the level of rays, the positivity of
-> $\chi_s(m,n)$ **does** make $\operatorname{Div}(U_s)$ and its
+> $\chi_s(m,n)$ **does** make $\mathrm{Div}(U_s)$ and its
 > Frobenius-transform lie on a common ray, for **every** real $s$ — but
 > this is a content-free triviality of one-dimensional linear algebra
 > (§2 below), not a mathematically load-bearing fact about $\chi_s$. Route
@@ -41,15 +41,15 @@ No zero of $\xi$ is used anywhere.
 
 **exactly, with no affine correction** — a statement about the *value* of
 the section $U_s$ at the rescaled point, nothing more. Section 3 does not
-mention $\operatorname{Div}$, does not mention invariance, and does not
+mention $\mathrm{Div}$, does not mention invariance, and does not
 impose any requirement to be satisfied. It is Definition 6.1, in §6, that
 first introduces "genuinely invariant (fixed, not merely covariant)" as the
 criterion for principality — a definitional choice made three sections
 later, using §3's covariance law as *input* but not dictated by it.
 
 **Consequence.** The question "does §3 require pointwise equality of
-$\operatorname{Div}$, or equality of class/ray?" is answered: **neither** —
-§3 requires nothing about $\operatorname{Div}$ at all. Whatever notion of
+$\mathrm{Div}$, or equality of class/ray?" is answered: **neither** —
+§3 requires nothing about $\mathrm{Div}$ at all. Whatever notion of
 invariance is used to define "principal" is supplied entirely by Definition
 6.1, and is therefore open to revision on its own merits, which is exactly
 what 108_31 undertakes.
@@ -59,19 +59,19 @@ what 108_31 undertakes.
 ### Proposition 2.1 (same ray, for every weight, always)
 
 For every $s\in\mathbb R\setminus\{0,-1\}$ and every $m,n\in\mathbb N^\times$,
-$\operatorname{Div}(U_s)$ and its Frobenius/chart-transform
-$\chi_s(m,n)\operatorname{Div}(U_s)$ lie on the same ray
-$\mathbb R_{>0}\cdot\operatorname{Div}(U_s)$ in the space of currents.
+$\mathrm{Div}(U_s)$ and its Frobenius/chart-transform
+$\chi_s(m,n)\mathrm{Div}(U_s)$ lie on the same ray
+$\mathbb R_{>0}\cdot\mathrm{Div}(U_s)$ in the space of currents.
 
 **Proof.** By 108_03 Definition 4.1, $\mathcal L_s:=\mathbb R\cdot U_s$ is
-**one-dimensional** by construction. Hence $\operatorname{Div}(\mathcal
-L_s)=\mathbb R\cdot\operatorname{Div}(U_s)$ is a single line through the
+**one-dimensional** by construction. Hence $\mathrm{Div}(\mathcal
+L_s)=\mathbb R\cdot\mathrm{Div}(U_s)$ is a single line through the
 origin, for *every* $s$, independent of any property of $\chi_s$
 whatsoever — this is a fact about the dimension of $\mathcal L_s$, proved
 already in 108_03/108_26, not re-derived here. Multiplication by any
 nonzero scalar preserves this line as a *set*; multiplication by a
 *positive* scalar preserves each of its two rays separately, keeping
-$\operatorname{Div}(U_s)$ and $\chi_s(m,n)\operatorname{Div}(U_s)$ on the
+$\mathrm{Div}(U_s)$ and $\chi_s(m,n)\mathrm{Div}(U_s)$ on the
 same ray. Positivity holds because $\chi_s(m,n)=n^{1+s}m^{-s}$ is a real
 power of positive integers $m,n>0$, hence strictly positive for *every*
 real $s$ (elementary: $x^t>0$ for $x>0$, any real $t$). $\square$
@@ -215,7 +215,7 @@ Proved here:
 
 * §1: 108_03 §3 imposes no invariance requirement; Definition 6.1 (§6) is
   the sole source of the invariance criterion under examination;
-* Proposition 2.1: $\operatorname{Div}(U_s)$ and its transform lie on a
+* Proposition 2.1: $\mathrm{Div}(U_s)$ and its transform lie on a
   common ray, for every real $s$;
 * Proposition 2.2: this holds for a reason (one-dimensionality of
   $\mathcal L_s$, positivity of real powers) independent of the value of
@@ -242,7 +242,7 @@ Not established, and explicitly not claimed:
 $\chi_s(m,n)=n^{1+s}m^{-s}$ across a bank of $s$ (including negative $s$)
 and $(m,n)$ pairs, confirming Proposition 2.1's hypothesis holds
 unconditionally; that the one-dimensionality of $\mathcal L_s$ (by
-construction, $\operatorname{Div}(cU_s)$ for varying $c$ always samples a
+construction, $\mathrm{Div}(cU_s)$ for varying $c$ always samples a
 single line) holds regardless of $s$; the exact ratio-homogeneity of
 Proposition 3.1 by direct substitution; and Lemma 3.2 concretely, by
 applying several different candidate normalizations $k(s)$ to $\chi_s$ and

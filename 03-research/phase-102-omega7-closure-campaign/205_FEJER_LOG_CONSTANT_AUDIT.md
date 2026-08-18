@@ -94,7 +94,7 @@ If
 \]
 then the singular real kernel is
 \[
-  \operatorname{Re}{1\over1-re^{i\theta}}
+  \mathrm{Re}{1\over1-re^{i\theta}}
   =
   {1-r\cos\theta\over |1-re^{i\theta}|^2}.
 \tag{8}
@@ -111,7 +111,7 @@ The \(O(1)\) part contributes only \(O(1)\) after integration against
 \(\log(e/|\theta|)\) on a fixed small arc.  Hence
 \[
 \begin{aligned}
-  \operatorname{Re}G_\nu(r)
+  \mathrm{Re}\,G_\nu(r)
   &=
   {a\over2\pi}
   \int_{-\theta_0}^{\theta_0}
@@ -145,7 +145,7 @@ axis,
 Therefore
 \[
 \boxed{
-  \operatorname{Re}\mathcal G_+(r)
+  \mathrm{Re}\,\mathcal G_+(r)
   =
   {1\over2}\log {1\over1-r}+O(1).
 }
@@ -300,7 +300,7 @@ with the \(O(1)\) term made explicit enough to cover every \(n\ge8\).
 
 The Abel asymptotic
 \[
-  \operatorname{Re}\mathcal G_+(r)
+  \mathrm{Re}\,\mathcal G_+(r)
   =
   {1\over2}\log {1\over1-r}+O(1)
 \tag{29}

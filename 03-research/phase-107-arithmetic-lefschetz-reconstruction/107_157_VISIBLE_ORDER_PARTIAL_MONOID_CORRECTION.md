@@ -73,7 +73,7 @@ subject to \(e_p+f_p\le K_p(T)\).  Moreover
  \tau(L_T)=\prod_{p\le e^T}(K_p(T)+1).
 \]
 
-Since \(L_T=\operatorname{lcm}(1,\ldots,\lfloor e^T\rfloor)\), the
+Since \(L_T=\mathrm{lcm}(1,\ldots,\lfloor e^T\rfloor)\), the
 prime number theorem gives \(\log L_T\sim e^T\).  Enumeration is already
 infeasible at \(T=5\), where \(\tau(L_T)=773094113280\).  The verifier
 therefore works only with \(\mathbf K(T)\), through \(T=8\), and never

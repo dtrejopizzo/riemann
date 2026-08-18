@@ -67,10 +67,10 @@ which is established anywhere in this programme to date.
 
 > ### Condition III (the radicals correspond)
 > The map $s\mapsto[D_{f_{s,T}}]$, $T\to\infty$, sends
-> $\operatorname{rad}\Lambda^0$ (108_38 Theorem 3.3: spanned by point masses
-> at the zeros of $\Phi$) into $\operatorname{rad}I_{\mathrm{partial}}$, so
+> $\mathrm{rad}\,\Lambda^0$ (108_38 Theorem 3.3: spanned by point masses
+> at the zeros of $\Phi$) into $\mathrm{rad}\,I_{\mathrm{partial}}$, so
 > that it descends to a well-defined map on the quotients
-> $\operatorname{Prin}'/\operatorname{rad}\Lambda^0\to V$ under which the two
+> $\mathrm{Prin}'/\mathrm{rad}\,\Lambda^0\to V$ under which the two
 > pairings agree — not merely at the level of individual values (Condition
 > II) but as forms on the quotient spaces.
 
@@ -84,7 +84,7 @@ which is established anywhere in this programme to date.
 None of Conditions I, II, III is proved or disproved here. Condition I is
 architecturally unproblematic (any reasonable cutoff produces compactly
 supported data). Condition III cannot even be examined with the material
-available to this note, because $\operatorname{rad}I_{\mathrm{partial}}$'s
+available to this note, because $\mathrm{rad}\,I_{\mathrm{partial}}$'s
 generating description was not read here (108_50 §5, Scope). Condition II
 is examined directly in §3, and found to fail in the naive form.
 
@@ -115,7 +115,7 @@ form,
 > pair)
 > Let $s_1=0.3,\ s_2=0.7$, $\lambda_1=1,\ \lambda_2=-1$ (so
 > $\lambda_1+\lambda_2=0$, matching the mass-zero condition of
-> $\operatorname{Prin}'$), and set
+> $\mathrm{Prin}'$), and set
 > $Q(T)=\lambda_1P(T;s_1)+\lambda_2P(T;s_2)$. Then $Q(T)\to-\infty$ as
 > $T\to\infty$.
 
@@ -192,7 +192,7 @@ proving any of them is future work, not attempted here).
 **Read from source and applied, not re-derived.** 108_90's design condition
 and its own self-description as retrodictive-not-theorem.
 
-**Explicitly not attempted.** Any comparison of $\operatorname{rad}
+**Explicitly not attempted.** Any comparison of $\mathrm{rad}
 I_{\mathrm{partial}}$'s generating data against the zeros of $\Phi$
 (Condition III), for the reason given in 108_50 §5: this note does not have
 Stage 0's internal definitions.

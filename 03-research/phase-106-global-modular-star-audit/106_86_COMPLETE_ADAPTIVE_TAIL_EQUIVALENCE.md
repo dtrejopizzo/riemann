@@ -62,7 +62,7 @@ space.
 Let
 
 \[
- V_{M-1}=\operatorname{span}\{\phi_1,\ldots,\phi_{M-1}\}
+ V_{M-1}=\mathrm{span}\,\{\phi_1,\ldots,\phi_{M-1}\}
  \subset V_M
 \]
 

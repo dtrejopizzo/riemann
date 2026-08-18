@@ -139,7 +139,7 @@ No queda en (11) ninguna tupla de primos distintos. En cambio los momentos
 Teorema 2.1 prueba que esos productos deben cancelarse en cualquier
 observable aditivo exacto.
 
-El comparador polar \(X_0\sim\operatorname{Exp}(\varepsilon)\) tiene
+El comparador polar \(X_0\sim\mathrm{Exp}(\varepsilon)\) tiene
 
 \[
  \kappa_r^{(0)}=(r-1)!\varepsilon^{-r}.                    \tag{12}

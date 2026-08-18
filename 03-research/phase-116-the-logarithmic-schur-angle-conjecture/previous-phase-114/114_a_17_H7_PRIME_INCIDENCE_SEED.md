@@ -17,8 +17,8 @@
 Put
 
 \[
- S=\operatorname{Spec}\mathbb F\{\pm1\},\qquad
- X=\overline{\operatorname{Spec}\mathbb Z},\qquad
+ S=\mathrm{Spec}\,\mathbb F\{\pm1\},\qquad
+ X=\overline{\mathrm{Spec}\,\mathbb Z},\qquad
  Y=X\times_S X.
 \]
 
@@ -27,7 +27,7 @@ fiber square.  Ordinary schemes embed fully faithfully in the generalized
 category, so for every rational prime `p` the ordinary closed point
 
 \[
- i_p:x_p=\operatorname{Spec}\mathbb F_p\longrightarrow X                 \tag{1.1}
+ i_p:x_p=\mathrm{Spec}\,\mathbb F_p\longrightarrow X                 \tag{1.1}
 \]
 
 is present in the ordinary dense chart and is compatible with the transition
@@ -75,7 +75,7 @@ second ruling is symmetric. QED.
 Define the finite arithmetic mass of a zero-dimensional ordinary incidence by
 
 \[
- \deg_{\rm fin}(\operatorname{Spec}A)=\log\#A.                             \tag{2.3}
+ \deg_{\rm fin}(\mathrm{Spec}\,A)=\log\#A.                             \tag{2.3}
 \]
 
 Then

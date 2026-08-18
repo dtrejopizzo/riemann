@@ -66,7 +66,7 @@ Writing \(y=s-1/2\), its zeros satisfy
 \]
 Thus
 \[
- y=\pm\operatorname{arcosh}(q/2)+(2k+1)\pi i,qquad k\in\mathbb Z,
+ y=\pm\mathrm{arcosh}(q/2)+(2k+1)\pi i,qquad k\in\mathbb Z,
 \tag{9}
 \]
 and all these zeros have nonzero real part.  This countermodel is more

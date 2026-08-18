@@ -85,7 +85,7 @@ Define
 
 \[
  C_n(x)
- :=U_n\,\operatorname {diag}
+ :=U_n\,\mathrm{diag}
        \bigl(M_{n,0}(x),\ldots,M_{n,n-1}(x)\bigr)U_n^*.
  \tag{6}
 \]
@@ -134,7 +134,7 @@ The fractional covariance is obtained by deleting the divisible residue:
 
 \[
  C_n^\circ(x)
- :=U_n\operatorname {diag}
+ :=U_n\mathrm{diag}
        \bigl(0,M_{n,1}(x),\ldots,M_{n,n-1}(x)\bigr)U_n^*.
  \tag{9}
 \]
@@ -154,7 +154,7 @@ Moreover,
 
 \[
  \boxed{
- \operatorname {Tr}C_n^\circ(x)=2\sqrt n\,R_n(x).}
+ \mathrm{Tr}\,C_n^\circ(x)=2\sqrt n\,R_n(x).}
  \tag{11}
 \]
 
@@ -169,11 +169,11 @@ roots
 \[
 \begin{aligned}
  B_n(x)
- &=U_n\operatorname {diag}
+ &=U_n\mathrm{diag}
        \bigl(\sqrt{M_{n,0}(x)},\ldots,
              \sqrt{M_{n,n-1}(x)}\bigr)U_n^*,\\
  B_n^\circ(x)
- &=U_n\operatorname {diag}
+ &=U_n\mathrm{diag}
        \bigl(0,\sqrt{M_{n,1}(x)},\ldots,
              \sqrt{M_{n,n-1}(x)}\bigr)U_n^*.
 \end{aligned}                                      \tag{12}
@@ -217,7 +217,7 @@ basis.  For (14), use
 
 \[
  \|B_n^\circ(x)\|_{\mathfrak S_2}^2
- =\operatorname {Tr}C_n^\circ(x)=2\sqrt nR_n(x)
+ =\mathrm{Tr}\,C_n^\circ(x)=2\sqrt nR_n(x)
 \]
 
 and note that the spatial increment is common to every theta residue.
@@ -298,7 +298,7 @@ domain such that
  \mathcal B^*\mathcal B=A.                         \tag{20}
 \]
 
-On \(\operatorname {ran}\mathcal B\), let \(T\) satisfy the exact polar
+On \(\mathrm{ran}\,\mathcal B\), let \(T\) satisfy the exact polar
 interpolation equation
 
 \[
@@ -391,9 +391,9 @@ grouped exact amplitude satisfying (20).  Then
 \[
 \begin{aligned}
  \|\mathcal B\Gamma_t^{1/2}\|_{\mathfrak S_2}^2
- &=\operatorname {Tr}(A\Gamma_t),\\
+ &=\mathrm{Tr}(A\Gamma_t),\\
  \|D_\mu\Gamma_t^{1/2}\|_{\mathfrak S_2}^2
- &=\frac12\operatorname {Tr}\Gamma_t.
+ &=\frac12\mathrm{Tr}\,\Gamma_t.
 \end{aligned}                                      \tag{28}
 \]
 
@@ -406,15 +406,15 @@ Consequently the exact transfer gain on the heat row is
           {\|\mathcal B\Gamma_t^{1/2}\|_{\mathfrak S_2}^2}
  =\frac1{2R_V(t)},
  \qquad
- R_V(t)=\frac{\operatorname {Tr}(A\Gamma_t)}
-                   {\operatorname {Tr}\Gamma_t}.}
+ R_V(t)=\frac{\mathrm{Tr}(A\Gamma_t)}
+                   {\mathrm{Tr}\,\Gamma_t}.}
  \tag{29}
 \]
 
 By the faithful spectral-measure calculation of 106.103,
 
 \[
- R_V'(t)=-\operatorname {Var}_t(\lambda)\leq0,
+ R_V'(t)=-\mathrm{Var}_t(\lambda)\leq0,
  \qquad
  R_V(t)\downarrow\alpha:=\inf\sigma(A).           \tag{30}
 \]

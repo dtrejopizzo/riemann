@@ -23,7 +23,7 @@ A--B--C form is
 
 \[
  \boxed{B_{\rm nuc}(a,b)
- =-\operatorname {Tr}_{\rm nuc,V}
+ =-\mathrm{Tr}_{\rm nuc,V}
    \bigl(\mathscr Q_-(a)\mathscr Q_-(b^\vee)\bigr).}        \tag{0.3}
 \]
 
@@ -39,7 +39,7 @@ range is dense.  Hence the Hausdorff Hilbert cokernel is zero.  Keeping the
 algebraic cokernel makes it non-Hausdorff and supplies no bounded adjoint or
 contractive norm.  Consequently the source Plancherel identity cannot
 simultaneously retain Meyer's odd quotient and turn (0.3) into
-\(-\operatorname {Tr}(TT^*)\).
+\(-\mathrm{Tr}(TT^*)\).
 
 More generally, any faithful trace-compatible Hilbertization on which the
 centrally normalized scaling group is contractive in both directions is
@@ -83,14 +83,14 @@ Use the central logarithmic coordinate
  F(u)=e^{u/2}a(e^u),\qquad a(x)=x^{-1/2}F(\log x).          \tag{1.3}
 \]
 
-If \(\operatorname {supp}F\subset[-T,T]\), then (0.2) is an integral only
+If \(\mathrm{supp}\,F\subset[-T,T]\), then (0.2) is an integral only
 over scalings \(e^{-T}\le x\le e^T\).  On representatives in logarithmic
 coordinates it has propagation at most \(T\):
 
 \[
- \operatorname {supp}g\subset K
+ \mathrm{supp}\,g\subset K
  \quad\Longrightarrow\quad
- \operatorname {supp}\mathscr Q_-(a)g
+ \mathrm{supp}\,\mathscr Q_-(a)g
  \subset K+[-T,T].                                        \tag{1.4}
 \]
 
@@ -169,7 +169,7 @@ For any \(a,b\), its character on \(a*b^\vee\) is
  \begin{aligned}
  \chi_M(a*b^\vee)
  ={}&j_0(a)\overline{j_1(b)}+j_1(a)\overline{j_0(b)}\\
- &-\operatorname {Tr}_{\rm nuc,V}
+ &-\mathrm{Tr}_{\rm nuc,V}
  \left(\mathscr Q_-(a)\mathscr Q_-(b^\vee)\right),
  \end{aligned}                                             \tag{3.2}
 \]
@@ -227,14 +227,14 @@ The function \(\Xi\) is bounded there and is nonzero almost everywhere.
 For a multiplication operator,
 
 \[
- \overline{\operatorname {Ran}M_\Xi}
+ \overline{\mathrm{Ran}\,M_\Xi}
  =(\ker M_{\bar\Xi})^\perp=L^2(\mathbb R).                  \tag{4.4}
 \]
 
 Therefore
 
 \[
- \boxed{L^2(\mathbb R)/\overline{\operatorname {Ran}M_\Xi}=0.} \tag{4.5}
+ \boxed{L^2(\mathbb R)/\overline{\mathrm{Ran}\,M_\Xi}=0.} \tag{4.5}
 \]
 
 The range is not closed: \(\Xi(\tau)\to0\) exponentially along the
@@ -245,7 +245,7 @@ tending to zero.  Hence the inverse on the range is unbounded.
 Equations (4.4)--(4.5) give the exact alternatives:
 
 * Hausdorff Hilbert quotient: the odd object vanishes;
-* algebraic quotient by \(\operatorname {Ran}M_\Xi\): it is non-Hausdorff,
+* algebraic quotient by \(\mathrm{Ran}\,M_\Xi\): it is non-Hausdorff,
   so there is no Hilbert adjoint or bounded quotient norm;
 * intrinsic nuclear Fréchet quotient: it is faithful and has the character
   (0.3), but Plancherel positivity does not descend to it.
@@ -259,7 +259,7 @@ Define on the image of \(\mathscr Q_-\) the nuclear character pairing
 
 \[
  \langle\mathscr Q_-(a),\mathscr Q_-(b)\rangle_{\rm char}
- :=\operatorname {Tr}_{\rm nuc,V}
+ :=\mathrm{Tr}_{\rm nuc,V}
  \bigl(\mathscr Q_-(a)\mathscr Q_-(b)^\sharp\bigr).         \tag{5.1}
 \]
 
@@ -270,13 +270,13 @@ spectral parameters \(s\) and \(1-\bar s\); it is not a positive
 (5.1), but not
 
 \[
- \operatorname {Tr}_{\rm nuc}(AA^\sharp)\ge0.              \tag{5.2}
+ \mathrm{Tr}_{\rm nuc}(AA^\sharp)\ge0.              \tag{5.2}
 \]
 
 Even a finite-dimensional Krein model shows the logical distinction.  If
 \(A^\sharp=JA^*J\) for a self-adjoint unitary \(J\), then
-\(\operatorname {Tr}(AA^\sharp)\) takes both signs, whereas
-\(\operatorname {Tr}(AA^*)\ge0\).  The companion verifier gives explicit
+\(\mathrm{Tr}(AA^\sharp)\) takes both signs, whereas
+\(\mathrm{Tr}(AA^*)\ge0\).  The companion verifier gives explicit
 matrices.
 
 Accordingly (0.3) is best called an exact character-pairing realization,
@@ -305,7 +305,7 @@ so \(\widetilde\rho_t\) is unitary.  Then
 
 \[
  \mathscr Q_-(a^\vee)=\mathscr Q_-(a)^*,\qquad
- \operatorname {Tr}\bigl(
+ \mathrm{Tr}\,\bigl(
  \mathscr Q_-(a)\mathscr Q_-(a)^*\bigr)\ge0.              \tag{6.2}
 \]
 
@@ -318,7 +318,7 @@ For primitive \(a\), (0.3) yields
 This is exactly Weil's criterion.  Equivalently, the generator of the
 unitary central scaling has imaginary spectrum; row C identifies its
 transpose spectrum with \(\rho-\tfrac12\), forcing
-\(\operatorname {Re}\rho=\tfrac12\).
+\(\mathrm{Re}\,\rho=\tfrac12\).
 
 Hence a faithful two-sided source contractivity theorem is neither supplied
 nor suggested by Plancherel alone: if constructed with trace compatibility,
@@ -358,9 +358,9 @@ The script `114_d_191_pretrace_plancherel_verify.py` checks:
 2. growth of the Moore--Penrose inverse for a dense nonclosed multiplication
    range model;
 3. collapse of the Hausdorff cokernel at each finite section;
-4. positivity of \(\operatorname {Tr}(AA^*)\);
+4. positivity of \(\mathrm{Tr}(AA^*)\);
 5. both signs for the Tate/Krein pairing
-   \(\operatorname {Tr}(AA^\sharp)\).
+   \(\mathrm{Tr}(AA^\sharp)\).
 
 The model certifies the functional-analytic distinction; it is not a
 numerical test of RH.

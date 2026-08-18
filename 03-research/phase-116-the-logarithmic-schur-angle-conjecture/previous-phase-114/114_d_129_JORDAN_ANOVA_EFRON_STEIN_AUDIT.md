@@ -34,13 +34,13 @@ Then
 \[
  \mathbb EX_p=x-1,\qquad
  \mathbb EX_p^2=x(x-1),\qquad
- \operatorname{Var}(X_p)=x-1.                          \tag{1.2}
+ \mathrm{Var}(X_p)=x-1.                          \tag{1.2}
 \]
 
 Hence
 
 \[
- \operatorname{Var}(X_p)=t\log p+O(t^2).               \tag{1.3}
+ \mathrm{Var}(X_p)=t\log p+O(t^2).               \tag{1.3}
 \]
 
 The normalized centered variable spans the one-dimensional local
@@ -106,7 +106,7 @@ yet an isometric identification of the full physical landing.
 For \(f=\sum_Sf_S\) in (2.1),
 
 \[
- \operatorname{Var}(f)=\sum_{S\ne\varnothing}\|f_S\|^2. \tag{4.1}
+ \mathrm{Var}(f)=\sum_{S\ne\varnothing}\|f_S\|^2. \tag{4.1}
 \]
 
 Let \(\mathbb E_{-p}\) condition on all coordinates except \(p\).  The
@@ -121,7 +121,7 @@ Efron--Stein energy is
 Therefore
 
 \[
- \boxed{\operatorname{Var}(f)\le\mathcal E_{\rm ES}(f)} \tag{4.3}
+ \boxed{\mathrm{Var}(f)\le\mathcal E_{\rm ES}(f)} \tag{4.3}
 \]
 
 with sharp constant one, and equality holds on the entire first chaos.

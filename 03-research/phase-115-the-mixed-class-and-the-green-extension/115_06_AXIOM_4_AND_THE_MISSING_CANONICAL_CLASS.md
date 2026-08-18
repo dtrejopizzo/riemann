@@ -136,7 +136,7 @@ precondition for extending it — not a step toward RH by itself.
 Two items, in order:
 
 1. **The canonical class.**  Either construct a dualizing object in
-   \(\operatorname{Perf}_{IDN}\), or prove the curve-type assignment is forced
+   \(\mathrm{Perf}_{IDN}\), or prove the curve-type assignment is forced
    (for instance by showing the square's cohomological dimension collapses in
    the relevant range, which \(h^2=0\) makes plausible).
 2. **The mixed classes** — extend one lattice-with-metric family from the

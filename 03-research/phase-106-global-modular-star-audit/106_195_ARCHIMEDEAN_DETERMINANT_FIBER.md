@@ -37,7 +37,7 @@ For \(\Re z>-1/2\), the spectral zeta function of \(N_\Gamma+z\) is
 \[
  \begin{aligned}
  Z_\Gamma(w;z)
- &=\operatorname {Tr}(N_\Gamma+z)^{-w}\\
+ &=\mathrm{Tr}(N_\Gamma+z)^{-w}\\
  &=\sum_{m\ge0}(2m+1/2+z)^{-w}\\
  &=2^{-w}\zeta_H\!\left(w,\frac{s}{2}\right),             \tag{4}
  \end{aligned}
@@ -90,7 +90,7 @@ The heat trace underlying (4) is exactly the previously constructed
 Gamma spin page:
 
 \[
- \operatorname {Tr}e^{-uN_\Gamma}
+ \mathrm{Tr}\,e^{-uN_\Gamma}
  =\frac{e^{-u/2}}{1-e^{-2u}}.                              \tag{9}
 \]
 
@@ -119,7 +119,7 @@ This is the \(H^0/H^2\) plane of 106.160.  In the centered coordinate,
 The same plane has heat trace
 
 \[
- \operatorname {Tr}e^{-uN_{\rm triv}}=2\cosh(u/2),        \tag{12}
+ \mathrm{Tr}\,e^{-uN_{\rm triv}}=2\cosh(u/2),        \tag{12}
 \]
 
 so the determinant and fixed-point descriptions are two realizations of

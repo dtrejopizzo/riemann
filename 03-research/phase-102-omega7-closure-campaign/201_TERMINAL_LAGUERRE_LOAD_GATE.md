@@ -85,7 +85,7 @@ On each open interval \((b_\ell,b_{\ell+1})\), the sign is constant.  Let
 \[
   \sigma_\ell
   =
-  \operatorname{sgn}L_{n-1}^{(2)}(u)
+  \mathrm{sgn}\,L_{n-1}^{(2)}(u)
   \qquad(b_\ell<u<b_{\ell+1}).
 \tag{6}
 \]
@@ -204,7 +204,7 @@ For any measurable subinterval
 \]
 define
 \[
-  \varepsilon_J=\operatorname*{ess\,inf}_{u\in J}\varepsilon(u).
+  \varepsilon_J=\mathop{\mathrm{ess\,inf}}_{u\in J}\varepsilon(u).
 \]
 
 Then

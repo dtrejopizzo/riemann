@@ -31,7 +31,7 @@ using `python-flint==0.9.0`.  Its generator reported
 \[
  \left|\sum_iw_i-2\right|\le 3.82\,10^{-162},
  \qquad
- \max_{ij}\operatorname {rad}C_{ij}le1.282\,10^{-161}
+ \max_{ij}\mathrm{rad}\,C_{ij}le1.282\,10^{-161}
 \]
 
 before binary serialization.  The serialized balls are inflated to cover

@@ -174,7 +174,7 @@ order, so its Fourier--Laplace transform
 is entire and satisfies, for some \(R,N,C<\infty\),
 
 \[
- |A(z)|\leq C(1+|z|)^N e^{R|\operatorname {Im}z|}.
+ |A(z)|\leq C(1+|z|)^N e^{R|\mathrm{Im}\,z|}.
  \tag{11}
 \]
 
@@ -350,7 +350,7 @@ The first assertions in (22) follow from (8), the exact equivalence of
 lower bound (20) give the central \(L^2\) limit after choosing
 \(\varepsilon_j\downarrow0\) sufficiently fast.
 
-For fixed \(\chi\), one has \(\operatorname {supp}\chi\subset I_j\) for
+For fixed \(\chi\), one has \(\mathrm{supp}\,\chi\subset I_j\) for
 all large \(j\).  Multiplication by \(\chi/h\) is bounded in the local
 space (4), so (19)--(21) give the last limit in (22).  Finally, both
 \(q_j\) and \(\mu_K\) are even.  The two tails therefore have equal mass;
@@ -439,7 +439,7 @@ Failure of (27) for every \(R\), followed by a diagonal choice, gives a
 normalized sequence converging locally to zero.  If a subsequence of its
 eigenvalues stayed below \(1/2-\delta\), it would lie in the finite-rank
 spectral space
-\(\operatorname {Ran}\mathbf1_{(0,1/2-\delta]}(A)\), whose unit sphere is
+\(\mathrm{Ran}\,\mathbf1_{(0,1/2-\delta]}(A)\), whose unit sphere is
 compact and cannot converge locally to zero.  Thus (28) follows.  The
 converse is immediate. \(\square\)
 

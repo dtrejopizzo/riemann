@@ -44,15 +44,15 @@ estimates (§3). We use $\det_2$; the role of the modification appears as the an
 For $V$ finite-rank with $R_A:=(I+A)^{-1}$,
 \[
    \left.\frac{d}{d\varepsilon}\log\det\nolimits_{\mathrm{reg}}(I+A+\varepsilon V)\right|_{\varepsilon=0}
-   =\operatorname{Tr}\big(R_AV\big)\ -\ \operatorname{Tr}(V)\quad(\text{the } \det_2\text{ anomaly}),
+   =\mathrm{Tr}\,\big(R_AV\big)\ -\ \mathrm{Tr}(V)\quad(\text{the } \det_2\text{ anomaly}),
 \]
-i.e. $\operatorname{Tr}\big((R_A-I)V\big)=\operatorname{Tr}\big(-A R_A V\big)$. For the ordinary
-($\det_1$) determinant the anomaly term $-\operatorname{Tr}(V)$ is absent.
+i.e. $\mathrm{Tr}\,\big((R_A-I)V\big)=\mathrm{Tr}\,\big(-A R_A V\big)$. For the ordinary
+($\det_1$) determinant the anomaly term $-\mathrm{Tr}(V)$ is absent.
 \end{lemma}
-\emph{Proof.} $\log\det_2(I+T)=\operatorname{Tr}\big(\log(I+T)-T\big)$. With $T=A+\varepsilon V$,
-$\partial_\varepsilon\operatorname{Tr}\big(\log(I+A+\varepsilon V)-(A+\varepsilon V)\big)
-=\operatorname{Tr}\big((I+A+\varepsilon V)^{-1}V-V\big)$; at $\varepsilon=0$ this is
-$\operatorname{Tr}((R_A-I)V)$. $\square$
+\emph{Proof.} $\log\det_2(I+T)=\mathrm{Tr}\,\big(\log(I+T)-T\big)$. With $T=A+\varepsilon V$,
+$\partial_\varepsilon\mathrm{Tr}\,\big(\log(I+A+\varepsilon V)-(A+\varepsilon V)\big)
+=\mathrm{Tr}\,\big((I+A+\varepsilon V)^{-1}V-V\big)$; at $\varepsilon=0$ this is
+$\mathrm{Tr}((R_A-I)V)$. $\square$
 
 \begin{lemma}[higher variations]\label{lem:higher}
 For finite-rank $V_1,\dots,V_n$,
@@ -60,16 +60,16 @@ For finite-rank $V_1,\dots,V_n$,
    \left.\partial_{\varepsilon_1}\!\cdots\partial_{\varepsilon_n}
    \log\det\nolimits_{\mathrm{reg}}\!\Big(I+A+\textstyle\sum_j\varepsilon_jV_j\Big)\right|_0
    =(-1)^{n+1}\!\!\sum_{\sigma\in\mathrm{cyc}(n)}\!\!
-   \operatorname{Tr}\big(R_AV_{\sigma(1)}R_AV_{\sigma(2)}\cdots R_AV_{\sigma(n)}\big)+\mathcal A_n,
+   \mathrm{Tr}\,\big(R_AV_{\sigma(1)}R_AV_{\sigma(2)}\cdots R_AV_{\sigma(n)}\big)+\mathcal A_n,
 \]
-with $\mathcal A_1=-\operatorname{Tr}(\sum V_j)$ and $\mathcal A_n=0$ for $n\ge2$ (the $\det_2$ anomaly is
+with $\mathcal A_1=-\mathrm{Tr}(\sum V_j)$ and $\mathcal A_n=0$ for $n\ge2$ (the $\det_2$ anomaly is
 first-order only). For $n=2$,
 \[
    \partial_{\varepsilon_1}\partial_{\varepsilon_2}\log\det\nolimits_{\mathrm{reg}}\big|_0
-   =-\operatorname{Tr}\big(R_AV_1R_AV_2\big).
+   =-\mathrm{Tr}\,\big(R_AV_1R_AV_2\big).
 \]
 \end{lemma}
-\emph{Proof.} Differentiate $\operatorname{Tr}\log(I+A+\sum\varepsilon_jV_j)$ repeatedly using
+\emph{Proof.} Differentiate $\mathrm{Tr}\,\log(I+A+\sum\varepsilon_jV_j)$ repeatedly using
 $\partial_\varepsilon\log(I+T)=\int_0^1(I+sT)^{-1}\partial_\varepsilon T\,(\dots)$; the trace and
 cyclicity collapse the result to the cyclic resolvent sum. The $-\sum\varepsilon_jV_j$ term in $\det_2$
 contributes only to $\mathcal A_1$. $\square$
@@ -77,7 +77,7 @@ contributes only to $\mathcal A_1$. $\square$
 \begin{remark}
 Higher anomalies vanish for $\det_2$, so **the two-variable kernel (the $n=2$ Hessian) is anomaly-free**
 — this is why $\det_2$ is the right regularization for reading the signature: the object we need
-($\operatorname{Tr}(R_AV_1R_AV_2)$) has no anomaly correction.
+($\mathrm{Tr}(R_AV_1R_AV_2)$) has no anomaly correction.
 \end{remark}
 
 ---
@@ -92,7 +92,7 @@ For probe sources $V=|u\rangle\langle v|$ ($u,v\perp H$), define the \textbf{res
 read off the first variation (Lemma~\ref{lem:first}, anomaly-subtracted). By polarization of the second
 variation (Lemma~\ref{lem:higher}) define the two-variable form $\mathsf K_A$ via
 \[
-   \mathsf K_A(z,w)=\operatorname{Pol}\big(d^2\log\mathcal D_A^{\mathrm{src}}(0)\big)(z,w),
+   \mathsf K_A(z,w)=\mathrm{Pol}\,\big(d^2\log\mathcal D_A^{\mathrm{src}}(0)\big)(z,w),
 \]
 the Hermitian kernel whose finite Gram matrices are built from $\rho_A$.
 \end{definition}
@@ -102,21 +102,21 @@ Suppose $\mathfrak S_{\mathrm{prim}}$ is \emph{total} for the primitive realizat
 lemma, §5). If two admissible operators $A,B$ have equal sourced germs on a source plane rich enough to
 separate the primitive Gram data, $\mathcal D_A^{\mathrm{src}}=\mathcal D_B^{\mathrm{src}}$, then
 \[
-   \mathsf K_A=\mathsf K_B,\qquad\text{hence}\qquad\kappa(A)=\operatorname{sq}_-(\mathsf K_A)
-   =\operatorname{sq}_-(\mathsf K_B)=\kappa(B).
+   \mathsf K_A=\mathsf K_B,\qquad\text{hence}\qquad\kappa(A)=\mathrm{sq}_-(\mathsf K_A)
+   =\mathrm{sq}_-(\mathsf K_B)=\kappa(B).
 \]
 In particular, equality of \emph{scalar} determinants $D_A=D_B$ does \textbf{not} imply $\kappa(A)=
 \kappa(B)$ (N1), but equality of \emph{sourced germs} does.
 \end{theorem}
 \emph{Proof.} The first variation recovers all primitive resolvent matrix elements $\langle R_Au,v
-\rangle$ ($u,v\perp H$); the second variation (anomaly-free, $n=2$) recovers $\operatorname{Tr}(R_AV_1
+\rangle$ ($u,v\perp H$); the second variation (anomaly-free, $n=2$) recovers $\mathrm{Tr}(R_AV_1
 R_AV_2)$, and by polarization the two-variable kernel $\mathsf K_A$. Equal germs give equal variations
 to all orders, hence equal $\rho_A=\rho_B$ and equal $\mathsf K_A=\mathsf K_B$. The index is a function
 of the kernel (D1, Def. sq), so the indices agree. The N1 clause is Stage 1, Prop. 3.1(a) lifted: the
 scalar shadow forgets the resolvent's off-diagonal/sign data that the germ retains. $\square$
 
 \begin{remark}[the precise sense in which the germ is signature-faithful]
-$\kappa$ is $\operatorname{sq}_-$ of $\mathsf K_A$, and $\mathsf K_A$ is the Hessian of $\log\mathcal
+$\kappa$ is $\mathrm{sq}_-$ of $\mathsf K_A$, and $\mathsf K_A$ is the Hessian of $\log\mathcal
 D_A^{\mathrm{src}}$ at $0$. So the signature is the *inertia of the source Hessian*. This is the operator
 analogue of "the sourced determinant separates signature" (Stage 1, S1), now with the kernel itself
 recovered, not merely the fact of separation.

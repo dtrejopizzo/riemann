@@ -10,14 +10,14 @@ problems a pure-math team can attack. It is deliberately candid about logical st
 distinguishes what is *proven*, what is *empirically supported*, and what is *open theory*.
 
 > **The single instruction that governs everything.** Do **not** attempt to prove
-> $\inf\operatorname{spec}(\mathcal T)\ge0$ directly — that is the Riemann Hypothesis. The target of
+> $\inf\mathrm{spec}(\mathcal T)\ge0$ directly — that is the Riemann Hypothesis. The target of
 > this program is **faithfulness**, which is logically *weaker* than RH and is RH-independent.
 > If faithfulness is established, RH is reduced to the **sign of the limit of a rigorously
 > convergent finite-dimensional approximation scheme**. That is the achievable goal; the sign
 > itself is not.
 >
 > **A caution we keep in front of us:** $\text{faithfulness}\ne\text{effective decidability}$.
-> Even with A$\wedge$B$\wedge$C, the convergence $\lambda_{\min}(Q_J)\to\inf\operatorname{spec}(\mathcal T)$
+> Even with A$\wedge$B$\wedge$C, the convergence $\lambda_{\min}(Q_J)\to\inf\mathrm{spec}(\mathcal T)$
 > carries **no a-priori rate**: the sequence could approach $0$ so slowly that deciding its sign is
 > exactly as hard as RH. We therefore sell the outcome as a *new faithful approximation scheme*,
 > **not** as "RH becomes computable." Attaching the word *computable* to the limit without an
@@ -58,7 +58,7 @@ Connes (1999) realizes $B$ as a trace: there is a regularized Hilbert space $\ma
 on the adèle class space $X=\mathbb A_{\mathbb Q}/\mathbb Q^\times$, and a densely defined
 (formally self-adjoint) operator $\mathcal T$ whose quadratic form is $B$, with
 $$
-\mathrm{RH}\iff \mathcal T\succeq0\iff \inf\operatorname{spec}(\mathcal T)\ge0.
+\mathrm{RH}\iff \mathcal T\succeq0\iff \inf\mathrm{spec}(\mathcal T)\ge0.
 $$
 
 ---
@@ -90,7 +90,7 @@ $$
 ## 3. The reduction and the empirical state
 
 ### 3.1 The named inequality
-Modulo P7, $\mathrm{RH}\iff$ **(LB)** $\inf\operatorname{spec}(\mathcal T)\ge0$ — *provided* $Q$ is a
+Modulo P7, $\mathrm{RH}\iff$ **(LB)** $\inf\mathrm{spec}(\mathcal T)\ge0$ — *provided* $Q$ is a
 faithful compression of $\mathcal T$ (Section 4). The faithfulness is the prior question.
 
 ### 3.2 What the numerics established (and did not)
@@ -124,8 +124,8 @@ require it?** B splits into two claims of very different status.
   to **semiboundedness of the form** $B$. The logical ladder is
   $$
   \underbrace{\mathrm{RH}}_{B\succeq0,\ \inf=0}\ \Longrightarrow\
-  \underbrace{B\ \text{semibounded by }C<0}_{\inf\operatorname{spec}=C\in(-\infty,0)}\ \Longrightarrow\
-  \underbrace{B\ \text{not semibounded}}_{\inf\operatorname{spec}=-\infty},
+  \underbrace{B\ \text{semibounded by }C<0}_{\inf\mathrm{spec}=C\in(-\infty,0)}\ \Longrightarrow\
+  \underbrace{B\ \text{not semibounded}}_{\inf\mathrm{spec}=-\infty},
   $$
   each implication strict. There is an **entire interval** $C\in(-\infty,0)$ of worlds where *"B holds,
   RH fails."* For B to collapse into RH one would need a **spectral dichotomy** — "bounded below
@@ -177,7 +177,7 @@ $H(E)$, preservation of the Weil spectral bottom, and semiboundedness$\iff$order
 logically prior question is **closability** of the Weil form in $H(E)$, which reduces to one
 distribution-free inequality (an $H(E)$-relative KLMN bound on the prime form), *gated by* the archimedean
 de Branges weight asymptotic (logarithmic vs exponential — currently unverified). A guard-rail holds
-throughout: **sign/value invariance** — "$\inf\operatorname{spec}\ge0$" $=$ RH is norm-independent, so no
+throughout: **sign/value invariance** — "$\inf\mathrm{spec}\,\ge0$" $=$ RH is norm-independent, so no
 choice of norm can hide or fabricate RH; only the *finiteness* of the bottom (B-2) is norm-dependent, and
 closability is exactly what makes the sign survive completion. *(Derivations:
 `proofs/B2.4a-de-branges-norm.md`, `proofs/B2.4a-closability.md`.)*
@@ -217,7 +217,7 @@ dependency order.
 
 ### Problem A — the algebraic compression identity (Part I) ⚑
 $$
-Q(T_0,\sigma,J)=P_J\,\mathcal T\,P_J,\qquad P_J=\text{orth. projection onto }\operatorname{span}\{U(\varphi_j)\}.
+Q(T_0,\sigma,J)=P_J\,\mathcal T\,P_J,\qquad P_J=\text{orth. projection onto }\mathrm{span}\,\{U(\varphi_j)\}.
 $$
 **Task.** Verify, at the level of matrix entries and domains, that
 $B(\varphi_j,\varphi_k)=\langle\varphi_j,\mathcal T\varphi_k\rangle_{\mathcal H}$: the $\varphi_j$
@@ -234,14 +234,14 @@ self-adjoint operator is Problem B.
 bounded below by *any* constant, possibly negative — **without assuming positivity (RH).**
 **Why this is the crux.** By the min-max principle, *if* $\mathcal T$ is self-adjoint, bounded below,
 and the localized family is form-complete (Problem C), then
-$\lambda_{\min}(P_J\mathcal T P_J)\downarrow\inf\operatorname{spec}(\mathcal T)$ — faithfulness for the
+$\lambda_{\min}(P_J\mathcal T P_J)\downarrow\inf\mathrm{spec}(\mathcal T)$ — faithfulness for the
 bottom eigenvalue. The danger is **entanglement**: the regularization that yields a good realization
 might itself require positivity. The yes/no question is:
 $$
 \boxed{\text{Can a self-adjoint, bounded-below realization of }\mathcal T\text{ be built without assuming }\mathcal T\succeq0\,?}
 $$
 - **Yes** $\Rightarrow$ (with Problem C) a *faithful spectral reformulation*:
-  $\mathrm{RH}\iff\operatorname{sign}\big(\inf_{T_0,\sigma}\lim_J\lambda_{\min}(Q)\big)\ge0$ — RH as the
+  $\mathrm{RH}\iff\mathrm{sign}\,\big(\inf_{T_0,\sigma}\lim_J\lambda_{\min}(Q)\big)\ge0$ — RH as the
   sign of the limit of a **rigorously convergent finite-dimensional ladder**. **This is the program's
   dream outcome, and it is RH-independent.** (Recall the preamble caution: faithful convergence is not
   an *effective* sign test unless a rate is also proven.)
@@ -319,7 +319,7 @@ references**, valued for the tools they built, not for settling the conjecture.
 problem stops being computational and becomes a single, classical, clearly-isolated question of
 spectral theory:
 $$
-\inf\operatorname{spec}(\mathcal T)\ge0\,?
+\inf\mathrm{spec}(\mathcal T)\ge0\,?
 $$
 That isolation — the difficulty of RH concentrated in *one* identified operator-theoretic statement
 rather than dispersed across truncations, localizations, numerical controls and faithfulness doubts —

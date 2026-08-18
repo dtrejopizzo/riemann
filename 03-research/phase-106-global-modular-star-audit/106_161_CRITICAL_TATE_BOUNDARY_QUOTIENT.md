@@ -267,7 +267,7 @@ relative-trace construction:
 3. all higher prime modes remain jointly faithful.
 
 The quotient deliberately removes the first Euler layer.  That layer is
-not discarded: it is the boundary space \(\operatorname {Ran}B_s\).
+not discarded: it is the boundary space \(\mathrm{Ran}\,B_s\).
 The next gluing step must identify its renormalized critical limit with the
 Gamma spin page and the \(H^0/H^2\) polar plane of 106.160.  Only after
 that identification can the resulting mapping fibre be compared with CCM
@@ -292,7 +292,7 @@ differential.  The required identity is
 
 \[
 \boxed{
- \operatorname {FP}_{s\downarrow1/2}
+ \mathrm{FP}_{s\downarrow1/2}
  \|B_sF\|^2
  +\|B_\infty F\|_{\rm graded}^2=0}
 \tag{24}

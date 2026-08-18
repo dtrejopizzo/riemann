@@ -268,7 +268,7 @@ D.35, then
 \[
  \begin{aligned}
  B_Q(F,F)
- &=\operatorname{Tr}
+ &=\mathrm{Tr}
    \bigl(M_Q(F)^*A_{U_Q}M_Q(F)\bigr)\\
  &=-\|Q_Q U_QM_Q(F)\|_{\rm HS}^2                    \tag{7.1}
 \end{aligned}
@@ -326,7 +326,7 @@ One subroute survives the audit and is sharper than the earlier statement:
 > projection, but as the **minimal-norm Poisson extension of the two-chart
 > relation into `P_QH`**, and prove the intertwining identity
 > \[
-> \operatorname{Tr}M_Q(F)^*A_{U_Q}M_Q(F)=B_Q(F,F).              \tag{9.1}
+> \mathrm{Tr}\,M_Q(F)^*A_{U_Q}M_Q(F)=B_Q(F,F).              \tag{9.1}
 > \]
 
 If the extension is constructed by an independently proved support theorem,

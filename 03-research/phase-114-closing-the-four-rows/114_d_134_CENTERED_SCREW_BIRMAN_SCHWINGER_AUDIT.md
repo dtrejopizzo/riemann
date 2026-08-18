@@ -74,7 +74,7 @@ and, for a two-Tate primitive \(F\) supported in \(I_T=[-T,T]\),
 
 \[
  -B_{\rm nuc}(F,F)=\mathcal H_{5/4}(F)
- -2\int_{[1,e^{2T}]}x^{-1/2}\operatorname {Re}C_F(\log x)\,dE_\beta(x). \tag{1.2}
+ -2\int_{[1,e^{2T}]}x^{-1/2}\mathrm{Re}\,C_F(\log x)\,dE_\beta(x). \tag{1.2}
 \]
 
 Put \(a=\log x\).  Before using the Tate identity, the symmetrized
@@ -94,8 +94,8 @@ On the primitive space, the exact Tate identity changes the continuous
 quadratic form according to
 
 \[
- -2\int_0^{2T}e^{a/2}\operatorname {Re}C_F(a)\,da
- =2\int_0^{2T}e^{-a/2}\operatorname {Re}C_F(a)\,da.    \tag{1.4}
+ -2\int_0^{2T}e^{a/2}\mathrm{Re}\,C_F(a)\,da
+ =2\int_0^{2T}e^{-a/2}\mathrm{Re}\,C_F(a)\,da.    \tag{1.4}
 \]
 
 The right side is the positive resolvent form
@@ -127,7 +127,7 @@ renormalization.
 The positive Gamma multiplier is
 
 \[
- h_{5/4}(\tau)=\operatorname {Re}\psi(5/4+i\tau/2)-\psi(5/4). \tag{2.1}
+ h_{5/4}(\tau)=\mathrm{Re}\,\psi(5/4+i\tau/2)-\psi(5/4). \tag{2.1}
 \]
 
 The integral representation of the digamma difference gives
@@ -211,7 +211,7 @@ Then
 
 \[
  \|J_{n,+}F\|^2-\|J_{n,-}F\|^2
- =2\operatorname {Re}C_F(a_n)
+ =2\mathrm{Re}\,C_F(a_n)
  =\langle F,(S_{a_n}+S_{-a_n})F\rangle.               \tag{3.3}
 \]
 
@@ -312,9 +312,9 @@ The Birman--Schwinger principle applied to (3.6) gives
 \[
 \begin{aligned}
  d_T&:=\dim E_{K_T}((1,\infty))\\
- &=\operatorname {ind}_-
+ &=\mathrm{ind}_-
     \left(\mathcal R_T-\mathcal W_T^*\mathcal W_T\right)
- =\operatorname {ind}_-(-B_{\rm nuc}^{\rm prim}).      \tag{5.4}
+ =\mathrm{ind}_-(-B_{\rm nuc}^{\rm prim}).      \tag{5.4}
 \end{aligned}
 
 Thus \(d_T<\infty\) for every finite window.  It is the exact number of
@@ -430,7 +430,7 @@ Therefore
 The corresponding shorted capacity in channel space is
 
 \[
- \operatorname {Cap}_T=I-\mathcal W_T\mathcal R_T^{-1}\mathcal W_T^*
+ \mathrm{Cap}_T=I-\mathcal W_T\mathcal R_T^{-1}\mathcal W_T^*
  =I-\mathcal K_T.                                      \tag{8.4}
 \]
 

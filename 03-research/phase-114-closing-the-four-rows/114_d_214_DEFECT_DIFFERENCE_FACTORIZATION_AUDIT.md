@@ -27,9 +27,9 @@ as an equality of extended positive forms.  In particular,
 
 \[
  \boxed{
- yE\subset\operatorname {Dom}D_{\rm out}^{\dagger/2}
+ yE\subset\mathrm{Dom}\,D_{\rm out}^{\dagger/2}
  \quad\Longleftrightarrow\quad
- uE\subset\operatorname {Dom}D^{\dagger/2}.
+ uE\subset\mathrm{Dom}\,D^{\dagger/2}.
  }                                                     \tag{0.3}
 \]
 
@@ -44,7 +44,7 @@ If \(q=Dh-u\), then
 \]
 
 Thus the harmonic term is completely paid, while the only unresolved
-range datum is \(q\in\operatorname {Dom}D^{\dagger/2}\).  Factoring \(u\)
+range datum is \(q\in\mathrm{Dom}\,D^{\dagger/2}\).  Factoring \(u\)
 instead would merely restate that datum and the original output capacity.
 
 Equations (0.2)--(0.4) are **PROVED OPERATOR IDENTITIES**.  They eliminate
@@ -106,7 +106,7 @@ Taking the Gram proves (0.4).  Expanded,
 
 \[
  u^*D^\dagger u
- =h^*Dh-2\operatorname {Re}(h^*q)+q^*D^\dagger q.   \tag{2.3}
+ =h^*Dh-2\mathrm{Re}(h^*q)+q^*D^\dagger q.   \tag{2.3}
 \]
 
 This is exactly the telescoping identity of D.175.  The first two terms
@@ -114,20 +114,20 @@ are finite whenever the harmonic lift is in the reference form domain.
 Consequently
 
 \[
- u\in\operatorname {Dom}D^{\dagger/2}
+ u\in\mathrm{Dom}\,D^{\dagger/2}
  \quad\Longleftrightarrow\quad
- q\in\operatorname {Dom}D^{\dagger/2}.              \tag{2.4}
+ q\in\mathrm{Dom}\,D^{\dagger/2}.              \tag{2.4}
 \]
 
 Combining (0.3) and (2.4) proves that all three range statements are
 equivalent:
 
 \[
- y\in\operatorname {Dom}D_{\rm out}^{\dagger/2}
+ y\in\mathrm{Dom}\,D_{\rm out}^{\dagger/2}
  \Longleftrightarrow
- u\in\operatorname {Dom}D^{\dagger/2}
+ u\in\mathrm{Dom}\,D^{\dagger/2}
  \Longleftrightarrow
- q\in\operatorname {Dom}D^{\dagger/2}.              \tag{2.5}
+ q\in\mathrm{Dom}\,D^{\dagger/2}.              \tag{2.5}
 \]
 
 ## 3. Budget identity
@@ -137,7 +137,7 @@ Substitution of (2.3) into (0.2) gives the complete output capacity
 \[
  \boxed{
  y^*D_{\rm out}^\dagger y
- =y^*y+h^*Dh-2\operatorname {Re}(h^*q)
+ =y^*y+h^*Dh-2\mathrm{Re}(h^*q)
    +q^*D^\dagger q.
  }                                                     \tag{3.1}
 \]
@@ -147,7 +147,7 @@ is not an informal margin.  It is the finite form
 
 \[
  \mathcal M_N
- :=I-y^*y-h^*Dh+2\operatorname {Re}(h^*q),          \tag{3.2}
+ :=I-y^*y-h^*Dh+2\mathrm{Re}(h^*q),          \tag{3.2}
 \]
 
 with the identity operator replaced by the normalized born reference if

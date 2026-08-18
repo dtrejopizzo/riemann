@@ -40,7 +40,7 @@ representative rather than an auxiliary choice.  Let
 be the selected full-bio evaluation and define
 
 \[
- h_{\rm fresh}(D)=\log\#\operatorname{im}\mathcal E_D.                 \tag{1.2}
+ h_{\rm fresh}(D)=\log\#\mathrm{im}\,\mathcal E_D.                 \tag{1.2}
 \]
 
 Every denominator of `D` is invertible in `T_D`, so (1.1) is typed.  On the
@@ -104,7 +104,7 @@ unit `+/-1`.  All retained exponents are odd, so the two image sets in
 (1.2) differ by coordinatewise sign, a bijection.  Hence
 
 \[
- h_{\rm fresh}(D+\operatorname{div}f)=h_{\rm fresh}(D).                 \tag{4.1}
+ h_{\rm fresh}(D+\mathrm{div}\,f)=h_{\rm fresh}(D).                 \tag{4.1}
 \]
 
 This is the same valid per-block argument retained in `a53`, now without the

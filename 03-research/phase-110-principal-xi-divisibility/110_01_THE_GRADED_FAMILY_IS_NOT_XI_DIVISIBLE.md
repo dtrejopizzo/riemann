@@ -2,9 +2,9 @@
 
 ## 0. Answer
 
-**No.** Neither a single weight-$s$ witness $\operatorname{div}(cU_s)$ (via
+**No.** Neither a single weight-$s$ witness $\mathrm{div}(cU_s)$ (via
 $f_s(r)=cr^s$) nor a mass-zero difference $f_{s_0}-f_{s_1}$
-($\operatorname{div}(U_{s_0})-\operatorname{div}(U_{s_1})$, 108\_31 §5) is
+($\mathrm{div}(U_{s_0})-\mathrm{div}(U_{s_1})$, 108\_31 §5) is
 ξ-divisible. The mechanism is not "we compute $\hat f(\rho)$ and it is
 nonzero at some zero $\rho$"; it is more basic: $f_s$ and $f_{s_0}-f_{s_1}$
 **have no ordinary Mellin transform at all** — the defining integral diverges
@@ -32,7 +32,7 @@ $$\hat f_s(w)=c\int_0^\infty r^{s-w-1}\,dr. \tag{1.2}$$
 For every $s\in\mathbb R$, $c\ne0$, and every $w\in\mathbb C$, the integral
 (1.2) diverges.
 
-**Proof.** Write $\sigma=\operatorname{Re}(w)$. Near $r=0$,
+**Proof.** Write $\sigma=\mathrm{Re}(w)$. Near $r=0$,
 $|r^{s-w-1}|=r^{s-\sigma-1}$; $\int_0 r^{s-\sigma-1}dr$ converges at $0$ iff
 $s-\sigma>0$, i.e. $\sigma<s$. Near $r=\infty$, the same integrand converges
 at $\infty$ iff $s-\sigma<0$, i.e. $\sigma>s$. No $\sigma\in\mathbb R$
@@ -82,7 +82,7 @@ while $K_\varepsilon(0)=2/\varepsilon\to\infty$. Hence
 $\widehat{f_s^\varepsilon}(s+i\cdot)\to 2\pi c\,\delta_0$ weakly as
 $\varepsilon\to0$ (a Dirac mass of total weight $2\pi c$ at $t=0$, i.e. at
 $w=s$), while $\widehat{f_s^\varepsilon}\to0$ pointwise off the line
-$\operatorname{Re}(w)=s$.
+$\mathrm{Re}(w)=s$.
 
 **Proof.** Substitute $x=\log r$: $f_s^\varepsilon(e^x)=c\,e^{sx-\varepsilon
 |x|}$, and (1.1) becomes $\int_{-\infty}^\infty
@@ -96,7 +96,7 @@ divergent-then-regularized integrals that vanish as $\varepsilon\to0$ for
 fixed $t$ when $\sigma\ne s$ (direct computation: the antiderivative picks up
 a factor $1/(s-w\mp\varepsilon)$, finite for $\varepsilon>0$, and $\to0$ only
 in the sense that, for the identity to hold at all we need
-$|\operatorname{Re}(s-w)|<\varepsilon$, a shrinking window). The mass
+$|\mathrm{Re}(s-w)|<\varepsilon$, a shrinking window). The mass
 identity $\int K_\varepsilon\,dt=2\pi$ is the elementary
 $\int_{-\infty}^\infty \frac{2\varepsilon}{\varepsilon^2+t^2}dt=2\pi$
 (antiderivative $2\arctan(t/\varepsilon)$). Positivity, the pointwise
@@ -113,9 +113,9 @@ assigned a transform at all.
 
 ### Theorem 110.1.4 (no principal witness of the graded family is ξ-divisible)
 
-No nonzero element of $\operatorname{Prin}'(\mathcal G)$ — neither
-$\operatorname{div}(cU_s)$ for any $s\in\mathbb R,c\ne0$, nor a mass-zero
-difference $\operatorname{div}(U_{s_0})-\operatorname{div}(U_{s_1})$ for
+No nonzero element of $\mathrm{Prin}'(\mathcal G)$ — neither
+$\mathrm{div}(cU_s)$ for any $s\in\mathbb R,c\ne0$, nor a mass-zero
+difference $\mathrm{div}(U_{s_0})-\mathrm{div}(U_{s_1})$ for
 $s_0\ne s_1$ — is ξ-divisible in the sense $\hat f=\xi\cdot\hat g$ for an
 admissible $g$ (Definition (ADM), 110\_00 §1).
 
@@ -147,13 +147,13 @@ One might try to read off the radical condition directly from Proposition
 $\widehat{f_s^\varepsilon}$) at every point $w\ne s$, and every zero $\rho$
 of $\xi$ has $\rho\ne s$ whenever $s$ is real (Lemma 110.1.6 below: $\xi$ has
 no real zero), one might claim $\hat f_s(\rho)=0$ "automatically" for every
-zero $\rho$, hence $f_s\in\operatorname{rad}I_\partial$ for free. **This is
+zero $\rho$, hence $f_s\in\mathrm{rad}\,I_\partial$ for free. **This is
 not a valid argument**, for two independent reasons. First, per Theorem
 110.1.4, $f_s$ is not ξ-divisible in the required functional sense at all —
 "vanishing away from an atom" is not the same predicate as "divisible by the
 entire function $\xi$", and the source rule's containment
-$\mathcal P\subseteq\operatorname{rad}I_\partial$ needs the latter (or a
-comparably rigorous route into $\operatorname{rad}I_\partial$), not a
+$\mathcal P\subseteq\mathrm{rad}\,I_\partial$ needs the latter (or a
+comparably rigorous route into $\mathrm{rad}\,I_\partial$), not a
 distributional coincidence. Second, and more basically, $I_\partial$'s
 defining Weil-formula identity (110\_00 §1) is a theorem about admissible
 $f,g$; $f_s\notin(\text{ADM})$ (108\_03 §1 already records that $f_s$'s
@@ -180,13 +180,13 @@ remark in Corollary 110.1.5, and is flagged as such).
   ordinary (absolutely convergent) Mellin transform, for any $w$.
 * Proposition 110.1.2: the exact closed-form regularization and its weak
   limit to a Dirac mass at $w=s$.
-* Theorem 110.1.4: no nonzero element of $\operatorname{Prin}'(\mathcal G)$
+* Theorem 110.1.4: no nonzero element of $\mathrm{Prin}'(\mathcal G)$
   is ξ-divisible, by a category mismatch (distribution vs. entire function).
 * Corollary 110.1.5: why the superficially "free" vanishing does not
-  constitute a proof of containment in $\operatorname{rad}I_\partial$.
+  constitute a proof of containment in $\mathrm{rad}\,I_\partial$.
 
 **Read from source, not re-derived:** the graded family $f_s$, $\mathcal
-L_s$, $\operatorname{Prin}'(\mathcal G)$ (108\_03, 108\_31); the statement
+L_s$, $\mathrm{Prin}'(\mathcal G)$ (108\_03, 108\_31); the statement
 that $U_f$'s defining integral diverges for $f=f_s$ (108\_03 §1); the
 corner-pairing Weil-formula identity for $I_\partial$ (quoted in the phase
 prompt, 110\_00 §1).

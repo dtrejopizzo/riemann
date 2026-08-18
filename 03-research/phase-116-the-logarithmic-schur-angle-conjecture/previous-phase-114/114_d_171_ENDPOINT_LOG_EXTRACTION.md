@@ -24,7 +24,7 @@ Writing (y=e^{-x/2}), one obtains
 
 \[
  H_1(x)=2\sum_{j\geq0}{y^{4j+1}\over4j+1}
-       =\operatorname {arctanh}y+\arctan y.             \tag{1}
+       =\mathrm{arctanh}\,y+\arctan y.             \tag{1}
 \]
 
 Consequently
@@ -36,7 +36,7 @@ Consequently
 where (R_1) is real analytic at (x=0).  Indeed,
 
 \[
- \operatorname {arctanh}(e^{-x/2})+\frac12\log x
+ \mathrm{arctanh}(e^{-x/2})+\frac12\log x
  =\frac12\log\!\left(
  {x(1+e^{-x/2})\over1-e^{-x/2}}
  \right),                                             \tag{3}
@@ -128,8 +128,8 @@ so that (R_1(0)=\log2+\pi/4).  Both are analytic at zero.  If
 \[
 \begin{aligned}
  U_F(t)={}&
- \int_{-T}^{t}q(t-s)\operatorname {DD}_F(t,s)\,ds
- -\int_t^Tq(s-t)\operatorname {DD}_F(t,s)\,ds\\
+ \int_{-T}^{t}q(t-s)\mathrm{DD}_F(t,s)\,ds
+ -\int_t^Tq(s-t)\mathrm{DD}_F(t,s)\,ds\\
  &+\{R_1(t+T)+R_1(T-t)\}F(t)
    -m_0F(t)-\text{the three contact translations}.    \tag{7b}
 \end{aligned}
@@ -144,7 +144,7 @@ without subtraction by the Horner recurrence
  P\leftarrow c_k+tPquad(k=d-1,\ldots,0).             \tag{7c}
 \]
 
-At termination (D=\operatorname {DD}_F(t,s)).  The nearest poles of
+At termination (D=\mathrm{DD}_F(t,s)).  The nearest poles of
 (q) are at (pm\pi i), leaving a wide Bernstein ellipse on every
 contact cell at the present value (2T=\log5).
 

@@ -8,7 +8,7 @@ builds it, or proves it cannot exist.
 ## The target
 
 For each \(f\in\mathcal T^0\), a perfect object
-\(\mathbf M_f\in\operatorname{Perf}_{IDN}(\mathscr Y_{\mathbb S})\) with:
+\(\mathbf M_f\in\mathrm{Perf}_{IDN}(\mathscr Y_{\mathbb S})\) with:
 
 1. reduced derived contact with \(\Delta\) reproducing the row-(b) family with
    weights \(\Lambda(n)/\sqrt n\), **in the cross form \(C_\Lambda\), not the
@@ -41,9 +41,9 @@ Axiom 4 of that theorem is **already proved** on the ruled cone:
 ## What `115_01` already established
 
 \[
- M(C_\Lambda)=\operatorname{diag}(\ell),\quad
+ M(C_\Lambda)=\mathrm{diag}(\ell),\quad
  M(B_{\rm int})=\ell\ell^{\!\top},\quad
- M(G)=\ell\ell^{\!\top}-\operatorname{diag}(\ell),
+ M(G)=\ell\ell^{\!\top}-\mathrm{diag}(\ell),
  \qquad \ell_p=\log p,
 \]
 
@@ -70,7 +70,7 @@ as an operator on \(\mathcal T^0\).
 
 **Falsifier.** The resulting Green term must reproduce `thm:forcedgreen`'s
 \(G_\infty\) — which row (c) pins *exactly*, with no freedom
-(`eq:archmultiplier`, \(m_\infty(\tau)=\log\pi-\operatorname{Re}\psi(\frac14+i\frac\tau2)\)).
+(`eq:archmultiplier`, \(m_\infty(\tau)=\log\pi-\mathrm{Re}\,\psi(\frac14+i\frac\tau2)\)).
 If the outer square does not give that multiplier, the hypothesis is dead and
 the phase says so.
 
@@ -80,7 +80,7 @@ constructed from row (a), and they were built independently.
 ### Step 2 — the object
 
 Only if Step 1 survives.  Build \(\mathbf M_f\) in
-\(\operatorname{Perf}_{IDN}\) with clauses 1–4.  Clause 2 is where
+\(\mathrm{Perf}_{IDN}\) with clauses 1–4.  Clause 2 is where
 `thm:infiniterankcontact` is waiting.
 
 ### Step 3 — where it is allowed to live
@@ -119,14 +119,14 @@ produced by floating point. Anything rigorous is redone in interval arithmetic.
 * Step 1 survives and \(\mathbf M_f\) is built → row (d) reduces to the
   remaining clauses of `thm:mixedsectionforcing`;
 * Step 1 survives and the object provably cannot exist in
-  \(\operatorname{Perf}_{IDN}\) → the Riemann–Roch route named in `main.tex` §1
+  \(\mathrm{Perf}_{IDN}\) → the Riemann–Roch route named in `main.tex` §1
   is closed, which is a result about the whole programme.
 
 ## Index of notes, and where the phase actually went
 
 | note | content | verdict |
 |---|---|---|
-| `115_01` | Green term is a rank cut \(r\to1\); \(M(G)=\ell\ell^\top-\operatorname{diag}\ell\) | proved |
+| `115_01` | Green term is a rank cut \(r\to1\); \(M(G)=\ell\ell^\top-\mathrm{diag}\,\ell\) | proved |
 | `115_02` | architecture of row (d), 7 design decisions | — |
 | `115_03` | literature against the blueprint | — |
 | `115_04` | theta construction on row (a)'s lattices; two-term RR exact | proved |

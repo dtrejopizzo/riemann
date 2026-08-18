@@ -14,7 +14,7 @@ Carta de Polymath 15 como en el Doc 167 §0.1: $H_t(z)=\int_0^\infty e^{tu^2}\Ph
 $$\dot z_k \;=\; 2\sum_{j\ne k}{}^{\!\!'}\frac{1}{z_k-z_j},$$
 **repulsiva entre ceros reales** (gaps tienden a abrirse con $t$) y **atractiva entre un cero y su conjugado** ($\dot\beta\le-1/\beta+\text{mar}$: los pares complejos caen y aterrizan). Nota de signo: el enunciado del mandato escribe $\partial_tH=\partial_z^2H$ "convención forward"; la carta de P15/Doc 167 tiene el signo opuesto en la EDP pero **la misma dinámica de ceros y el mismo sentido regularizador**; todo lo que sigue usa solo la dinámica de ceros, así que no hay ambigüedad.
 
-Notación: $\rho=\rho(\gamma):=\frac{\log\gamma}{4\pi}$ (densidad local en la carta $H$, RvM), $L:=\log\gamma$, $g_{\rm norm}=g\rho$. "Altura" = $|\operatorname{Re}z|$ (los ceros de $\zeta$ a altura $\gamma$ son ceros de $\Xi$ con $\operatorname{Re}z=\gamma$, $\operatorname{Im}z=b$, $b<\tfrac12$). Aterrizaje = instante $t_c$ en que un par conjugado toca el eje real.
+Notación: $\rho=\rho(\gamma):=\frac{\log\gamma}{4\pi}$ (densidad local en la carta $H$, RvM), $L:=\log\gamma$, $g_{\rm norm}=g\rho$. "Altura" = $|\mathrm{Re}\,z|$ (los ceros de $\zeta$ a altura $\gamma$ son ceros de $\Xi$ con $\mathrm{Re}\,z=\gamma$, $\mathrm{Im}\,z=b$, $b<\tfrac12$). Aterrizaje = instante $t_c$ en que un par conjugado toca el eje real.
 
 **Verificación exacta de calibración (se usará dos veces).** $H(z)=\cos(\lambda z)$ evoluciona a $e^{t\lambda^2}\cos(\lambda z)$: **el reticulado equiespaciado es exactamente estacionario** bajo el flujo. Toda cota inferior de gaps que pretenda crecer con $t$ debe usar algo más que "los gaps vecinos no son menores": debe usar un input de conteo.
 
@@ -36,7 +36,7 @@ Notación: $\rho=\rho(\gamma):=\frac{\log\gamma}{4\pi}$ (densidad local en la ca
 
 ### 2.1. La ODE exacta del gap
 
-**[LEMA 178.1] (ODE del gap).** Sea $J$ un intervalo de tiempos en que los ceros de $H_t$ en la ventana $|{\operatorname{Re}z-\gamma}|\le10$ son reales y simples, y sean $x_k<x_{k+1}$ consecutivos en esa ventana, $g=x_{k+1}-x_k$. Entonces
+**[LEMA 178.1] (ODE del gap).** Sea $J$ un intervalo de tiempos en que los ceros de $H_t$ en la ventana $|{\mathrm{Re}\,z-\gamma}|\le10$ son reales y simples, y sean $x_k<x_{k+1}$ consecutivos en esa ventana, $g=x_{k+1}-x_k$. Entonces
 $$\dot g\;=\;\frac4g\;-\;g\,S,\qquad S\;:=\;\sum_{j\notin\{k,k+1\}}\frac{2}{(x_j-x_k)(x_j-x_{k+1})}\;+\;\mathcal{E},$$
 donde la suma corre sobre los demás ceros **reales** de la ventana y de fuera de ella (agrupada simétricamente como en Lema 167-2.1, absolutamente convergente por RvM), cada término con $x_j\notin(x_k,x_{k+1})$ es $\ge0$ (ambos factores del denominador tienen el mismo signo), y $\mathcal{E}$ recoge ceros no reales y el espejo $-Z$: si no hay ceros no reales a distancia $\le D\ge1$ de la ventana, $|\mathcal{E}|\le C\rho/D^2+C\gamma^{-2}$ por el argumento del Lema 177.4.
 
@@ -65,10 +65,10 @@ Esto refuta la versión ingenua de la vía 2 (la desigualdad $g\dot g\ge4-\text{
 ### 2.4. El teorema sub-difusivo condicional: lo que la vía 2 sí prueba
 
 **[TEOREMA 178.4] (crecimiento del gap mínimo; condicional a (RvM-t) y a realidad local).** Existen $c_1,c_2,C>0$ absolutos tales que: sea $[s,t]\subset(0,1]$, $\gamma$ grande, y supóngase
-- **(R)** *realidad local:* $H_{t'}$ no tiene ceros no reales con $|\operatorname{Re}z-\gamma|\le10$ para ningún $t'\in[s,t]$, y $t-s\le L^{-2}\cdot C'$ (de modo que la deriva horizontal no vacía la ventana; Lema 178.6 abajo);
+- **(R)** *realidad local:* $H_{t'}$ no tiene ceros no reales con $|\mathrm{Re}\,z-\gamma|\le10$ para ningún $t'\in[s,t]$, y $t-s\le L^{-2}\cdot C'$ (de modo que la deriva horizontal no vacía la ventana; Lema 178.6 abajo);
 - **(RvM-t)** en la ventana.
 
-Sea $g_*(t')$ el mínimo de los gaps consecutivos en $|\operatorname{Re}z-\gamma|\le5$. Entonces
+Sea $g_*(t')$ el mínimo de los gaps consecutivos en $|\mathrm{Re}\,z-\gamma|\le5$. Entonces
 $$g_*(t)^2\;\ge\;\min\Bigl\{\,g_*(s)^2+\frac{c_1\,(t-s)}{\log\gamma}\,,\;\frac{c_2}{\rho^2\log\gamma}\,\Bigr\}.$$
 
 *Prueba.* $g_*$ es mínimo de finitas funciones reales-analíticas (los ceros son simples y reales en $[s,t]$ por (R); los instantes de cambio de minimizador son localmente finitos), luego localmente Lipschitz y derivable salvo en finitos puntos; en cada punto de derivabilidad su derivada es la $\dot g$ de un par minimizador (Danskin). Fijamos un instante y un par minimizador $(x_k,x_{k+1})$, $g=g_*$, y acotamos $S$ del Lema 178.1, suponiendo (caso no trivial) $g\le\frac1{2\rho}$ y $\rho^2g^2\log\gamma$ menor que una constante pequeña (si no, ya estamos en el techo del enunciado).
@@ -96,7 +96,7 @@ $$t^{-(1-2\theta_2)}\;\le\;\log\gamma\;\le\;c\,t^{-1/2},\qquad \theta_2\in(\tfra
 
 ### 2.6. El estatus de (RvM-t)
 
-**[PUENTE 178.5 / GAP-178.A] (RvM uniforme en $t$).** *Enunciado necesitado:* la hipótesis (RvM-t) de §2.3 (solo la cota superior de conteo en ventanas de longitud $\le1$, uniforme en $t\in[0,1]$). *Estatus:* para $t=0$ es clásico. Para $t>0$ fijo, [KKL] obtienen asintóticas de $H_t$ que la implican a alturas grandes dependientes de $t$. La uniformidad en $t\in[0,1]$ debería seguirse del esquema estándar (Jensen en discos de radio $O(1)$ + cota superior de $|H_t|$ en la banda, que es efectiva y uniforme desde la representación integral con $\Phi$ superexponencial + cota inferior de $|H_t|$ en un punto por ventana a distancia $\asymp1$ del eje); el ingrediente no trivial es la cota inferior, que para $H_0$ se hace con $\zeta(s)\ne0$ en $\operatorname{Re}s\ge2$ y para $H_t$ debería darla la aproximación efectiva de [P15] (sus cotas de $|H_t|$ y de los errores $A+B-C$ son explícitas y uniformes en $t\in[0,1/2]$ en bandas $|\operatorname{Im}z|=O(1)$). **No verificado línea a línea aquí: [GAP de literatura], creído estándar, sin novedad conceptual.** Todo teorema de este documento que lo usa lo declara.
+**[PUENTE 178.5 / GAP-178.A] (RvM uniforme en $t$).** *Enunciado necesitado:* la hipótesis (RvM-t) de §2.3 (solo la cota superior de conteo en ventanas de longitud $\le1$, uniforme en $t\in[0,1]$). *Estatus:* para $t=0$ es clásico. Para $t>0$ fijo, [KKL] obtienen asintóticas de $H_t$ que la implican a alturas grandes dependientes de $t$. La uniformidad en $t\in[0,1]$ debería seguirse del esquema estándar (Jensen en discos de radio $O(1)$ + cota superior de $|H_t|$ en la banda, que es efectiva y uniforme desde la representación integral con $\Phi$ superexponencial + cota inferior de $|H_t|$ en un punto por ventana a distancia $\asymp1$ del eje); el ingrediente no trivial es la cota inferior, que para $H_0$ se hace con $\zeta(s)\ne0$ en $\mathrm{Re}\,s\ge2$ y para $H_t$ debería darla la aproximación efectiva de [P15] (sus cotas de $|H_t|$ y de los errores $A+B-C$ son explícitas y uniformes en $t\in[0,1/2]$ en bandas $|\mathrm{Im}\,z|=O(1)$). **No verificado línea a línea aquí: [GAP de literatura], creído estándar, sin novedad conceptual.** Todo teorema de este documento que lo usa lo declara.
 
 ---
 
@@ -105,7 +105,7 @@ $$t^{-(1-2\theta_2)}\;\le\;\log\gamma\;\le\;c\,t^{-1/2},\qquad \theta_2\in(\tfra
 ### 3.1. El objeto correcto
 
 **[DEFINICIÓN-NUEVA 178.6′] (constante de De Bruijn–Newman local en altura).**
-$$\Lambda_{\rm loc}(\gamma)\;:=\;\inf\bigl\{\tau>0:\ \forall t\in[\tau,1],\ H_t\ \text{no tiene ceros no reales con}\ |\operatorname{Re}z-\gamma|\le5\bigr\}.$$
+$$\Lambda_{\rm loc}(\gamma)\;:=\;\inf\bigl\{\tau>0:\ \forall t\in[\tau,1],\ H_t\ \text{no tiene ceros no reales con}\ |\mathrm{Re}\,z-\gamma|\le5\bigr\}.$$
 Bien definida en $[0,\Lambda]$ ($\Lambda\le1/2$, [dB]); $\sup_\gamma\Lambda_{\rm loc}(\gamma)=\Lambda$ salvo efectos de frontera de la ventana, que el Lema 178.6 controla en las escalas temporales relevantes ($\tau\le L^{-2}$: deriva horizontal $O(1)$, absorbida tomando ventana $\pm5$ en la definición y $\pm1$ en las conclusiones. Para $\tau$ grande la definición es solo un infimum franco, no pretendemos monotonía local exacta).
 
 ### 3.2. Dirección A: $\Lambda_{\rm loc}$ pequeño ⟹ 177.B (en la banda)

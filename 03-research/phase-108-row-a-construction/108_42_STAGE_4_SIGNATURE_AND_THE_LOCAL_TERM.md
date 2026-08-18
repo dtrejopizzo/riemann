@@ -36,7 +36,7 @@ $W_\infty$ and Stage 0.
 > justification, to make the pairing sum reproduce exactly that expansion.
 > The expansion itself states that $\cot$'s poles are at $2\Z$ with constant
 > residue — which is 108_40 Proposition 6.1, the fact used to *define*
-> $\operatorname{spec}\Theta$ in the first place. Nothing is produced here
+> $\mathrm{spec}\,\Theta$ in the first place. Nothing is produced here
 > that was not already an input. §3.4 states this without softening.
 >
 > **The genuine new theorem is §4's embedding no-go**, built from Theorem
@@ -54,7 +54,7 @@ $W_\infty$ and Stage 0.
 > the Hilbert space completion $W_\infty=A\oplus A^-\oplus B\oplus B^*$, via
 > $B_\infty(x,y)=\langle \mathcal Gx,y\rangle$ ($\langle\cdot,\cdot\rangle$
 > the $\ell^2$ inner product). Consequently $B_\infty$ is nondegenerate on
-> all of $W_\infty$: $\operatorname{rad}B_\infty=\{0\}$.
+> all of $W_\infty$: $\mathrm{rad}\,B_\infty=\{0\}$.
 
 **Proof.** On $A\oplus A^-$, $\mathcal G=2\cdot\mathrm{Id}$ by Def. 3.2's
 diagonal entries: bounded (norm $2$), boundedly invertible (inverse
@@ -84,7 +84,7 @@ an ad hoc truncation — is the same type of statement.
 >  W_\infty=\underbrace{\bigoplus_{n\ge0}\langle a_n\rangle\ \oplus\
 >  \bigoplus_{n\ge1}\langle a_n^-\rangle}_{\text{definite sector}}
 >  \ \oplus\ \underbrace{\bigoplus_{n\ge0}H_n}_{\text{hyperbolic sector}},
->  \qquad H_n:=\operatorname{span}\{b_n,b_n^*\},
+>  \qquad H_n:=\mathrm{span}\,\{b_n,b_n^*\},
 > \]
 > where each line $\langle a_n\rangle,\langle a_n^-\rangle$ carries the form
 > $2x\bar x$ (signature $(1,0)$) and each $H_n$ carries the matrix
@@ -94,7 +94,7 @@ an ad hoc truncation — is the same type of statement.
 >  \boxed{n_+(B_\infty)=\aleph_0,\qquad n_-(B_\infty)=\aleph_0,}
 > \]
 > both realized as maximal definite subspaces of countably infinite
-> dimension, and $\operatorname{rad}B_\infty=\{0\}$ (Prop. 1.1).
+> dimension, and $\mathrm{rad}\,B_\infty=\{0\}$ (Prop. 1.1).
 
 **Proof.** Orthogonality across sectors and within each is immediate from
 Def. 3.2 (every cross term not listed there is $0$ by definition). The
@@ -143,8 +143,8 @@ candid disclosure (the pairing vector $U$ below is not square-summable).
 ### 3.1 The attachment map
 
 > ### Definition 3.1 (resolvent vector)
-> For $a\in\C\setminus2\Z$ (avoiding $\operatorname{spec}\Theta\cup
-> \operatorname{spec}\Theta^-=2\Z$), define $R(a)\in A\oplus A^-$ by
+> For $a\in\C\setminus2\Z$ (avoiding $\mathrm{spec}\,\Theta\cup
+> \mathrm{spec}\,\Theta^-=2\Z$), define $R(a)\in A\oplus A^-$ by
 > \[
 >  R(a):=\frac1a\,a_0\ +\ \sum_{n\ge1}\frac1{a+2n}\,a_n\ +\
 >  \sum_{n\ge1}\frac1{a-2n}\,a_n^-.
@@ -282,7 +282,7 @@ own proof:
    applied to the statement that $2\Z$, with constant residue, is the pole
    set of $\Gamma_\R(s)\Gamma_\R(-s)$. That statement is exactly 108_40
    Proposition 6.1 (extended to $\Gamma_\R(-s)$ by 108_41 Lemma 1.2): the
-   fact used to *define* $\operatorname{spec}\Theta$ (and $\Theta^-$) at
+   fact used to *define* $\mathrm{spec}\,\Theta$ (and $\Theta^-$) at
    the very start of this construction.
 
 **So Theorem 3.6 $\iff$ Mittag-Leffler for $\cot$ $\iff$ 108_40 Proposition

@@ -63,7 +63,7 @@ Its kernel is the Gamma line
 On that kernel, the polar boundary map is
 
 \[
- \operatorname {ev}_{\rm pol}:\mathcal L_\gamma
+ \mathrm{ev}_{\rm pol}:\mathcal L_\gamma
  \longrightarrow\mathbb C^2,
  \qquad
  (u_+,u_-)\longmapsto(u_+(1),u_-(0)).                       \tag{1.3}
@@ -74,7 +74,7 @@ kernel,
 
 \[
  \mathcal L_\gamma^0
- =\ker(\operatorname {ev}_{\rm pol})\subseteq\ker d_\gamma.
+ =\ker(\mathrm{ev}_{\rm pol})\subseteq\ker d_\gamma.
                                                                   \tag{1.4}
 \]
 
@@ -158,7 +158,7 @@ By D.41--D.42, (2.4) has the explicit two-chart divisibility criterion
  \qquad
  {c\over\zeta(1-s)}\in\mathcal U_-,
  \qquad
- \operatorname {ev}_{\rm pol}=0.                           \tag{2.5}
+ \mathrm{ev}_{\rm pol}=0.                           \tag{2.5}
 \]
 
 Thus the forcing is a genuine cohomology class unless (2.5) is proved for

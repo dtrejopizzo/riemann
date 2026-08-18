@@ -49,7 +49,7 @@ Luego, sin convención global ni estimación alguna,
 
 \[
 \boxed{
-\operatorname*{Res}_{s=\rho-1}F_n(s)
+\mathop{\mathrm{Res}}_{s=\rho-1}F_n(s)
 =-m_\rho k_n(\rho-1)
 =m_\rho\left[1-\left(\frac{\rho}{\rho-1}\right)^n\right].}
 \tag{1.1}
@@ -64,7 +64,7 @@ antihorario como en el artículo. Para contornos anidados,
 \[
 \frac1{2\pi i}\int_{C_2}F_n
 -\frac1{2\pi i}\int_{C_1}F_n
-=\sum_{C_2\setminus C_1}\operatorname{Res}F_n.
+=\sum_{C_2\setminus C_1}\mathrm{Res}\,F_n.
 \tag{1.2}
 \]
 
@@ -470,7 +470,7 @@ subsucesiones, con la formulación precisa de Bombieri–Lagarias para evitar su
 aislada. Por eso una cota inferior uniforme como (4.2) sigue siendo RH-strength.
 
 El factor \(4\) corresponde al coeficiente de Li, que suma una vez los cuatro ceros. La forma
-de Weil/autocorrelación \(2\operatorname{Re}\lambda_n\) duplica esta expresión y produce
+de Weil/autocorrelación \(2\mathrm{Re}\,\lambda_n\) duplica esta expresión y produce
 \(8-8\cosh(n\alpha)\cos(n\vartheta)\); no deben mezclarse ambas normalizaciones.
 
 El erratum no prueba A1; identifica correctamente el lado que debe atacarse.

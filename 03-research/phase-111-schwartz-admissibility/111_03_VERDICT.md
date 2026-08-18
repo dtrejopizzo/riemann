@@ -36,7 +36,7 @@ Verified: $|\widehat f(\tfrac12+it)|=7.1\times10^{-1},\ 9.9\times10^{-13},\
 > ### Proposition 1.2 (the extra conditions, and they are harmless)
 > $\xi(0)=\xi(1)=\tfrac12\ne0$, so $\xi$-divisibility gives
 > $\widehat f(\rho)=0$ at every zero but **not** $\widehat f(0)=
-> \widehat f(1)=0$.  Membership in $\operatorname{rad}I_\partial$ needs the
+> \widehat f(1)=0$.  Membership in $\mathrm{rad}\,I_\partial$ needs the
 > additional $\widehat g(0)=\widehat g(1)=0$: two linear conditions, cutting
 > a codimension-2 subspace of an infinite-dimensional space.
 

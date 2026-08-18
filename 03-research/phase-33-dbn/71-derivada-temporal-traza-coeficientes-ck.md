@@ -10,7 +10,7 @@
 
 En Doc 70, §8.2, derivamos la fórmula
 
-$$\partial_t T_\lambda \bigg|_{t=0} = -4\int W_\lambda(s)\operatorname{Re}(\overline{H_0(s)}\, H_0''(s))\, dm_\infty(s).$$
+$$\partial_t T_\lambda \bigg|_{t=0} = -4\int W_\lambda(s)\mathrm{Re}(\overline{H_0(s)}\, H_0''(s))\, dm_\infty(s).$$
 
 Queremos calcular este integral de manera explícita en términos de los coeficientes $c_k = \langle \Xi, P_k \rangle_{dm_\infty}$ y los autovalores $\mu_k$ del operador de Schrödinger $\mathcal{L}_0$.
 
@@ -78,7 +78,7 @@ $$B_\lambda(\overline{\Xi}, \Xi'') = -B_\lambda(\overline{\Xi'}, \Xi') - \int W_
 
 Por tanto:
 
-$$\operatorname{Re}\, B_\lambda(\overline{\Xi}, \Xi'') = -\int W_\lambda |\Xi'|^2\, dm_\infty - \frac{1}{2}\int W_\lambda' \partial_s|\Xi|^2\, dm_\infty.$$
+$$\mathrm{Re}\,\, B_\lambda(\overline{\Xi}, \Xi'') = -\int W_\lambda |\Xi'|^2\, dm_\infty - \frac{1}{2}\int W_\lambda' \partial_s|\Xi|^2\, dm_\infty.$$
 
 Integrando por partes el segundo término:
 

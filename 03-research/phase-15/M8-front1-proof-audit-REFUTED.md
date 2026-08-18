@@ -77,6 +77,6 @@ object (F6).
 > still requires an **independent geometric definition of $\mathcal K_{\mathrm{geom}}$** whose integer grading and
 > Kähler positivity are established *before* and *without* the spectrum — which Connes' scaling generator, having
 > continuous spectrum, does not provide. That object (SURF / a genuine arithmetic surface for
-> $\operatorname{Spec}\mathbb Z$) remains unconstructed.
+> $\mathrm{Spec}\,\mathbb Z$) remains unconstructed.
 
 Certificate: `experiments/m8_falsify_clean.py`. Consistent with M1–M7, P21, and the program's standing CAP/SURF map.

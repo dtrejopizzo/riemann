@@ -62,7 +62,7 @@ donde el error $E(N,T) = O((T+N)\log^c(TN))$ para alguna constante $c$.
 
 Los **términos de Landau** provienen de la correlación entre las sumas de Dirichlet evaluadas en los ceros de $\zeta$ y los coeficientes de la derivada logarítmica $-\zeta'/\zeta$. La versión precisa:
 
-$$\sum_{0 < \gamma_j \leq T} \left|\sum_{n \leq N} a_n n^{-i\gamma_j}\right|^2 = \frac{T}{2\pi}\log\frac{T}{2\pi} \sum_{n\leq N}|a_n|^2 - 2\operatorname{Re}\sum_{n\leq N}a_n\bar{a}_n\sum_{m\leq N}\frac{a_m\bar{a}_m}{m^{i(\gamma_j - \cdot)}} + \ldots$$
+$$\sum_{0 < \gamma_j \leq T} \left|\sum_{n \leq N} a_n n^{-i\gamma_j}\right|^2 = \frac{T}{2\pi}\log\frac{T}{2\pi} \sum_{n\leq N}|a_n|^2 - 2\mathrm{Re}\,\sum_{n\leq N}a_n\bar{a}_n\sum_{m\leq N}\frac{a_m\bar{a}_m}{m^{i(\gamma_j - \cdot)}} + \ldots$$
 
 Para los coeficientes $a_n = 2\Lambda(n)n^{-1/2}$ que corresponden a $D_\lambda$:
 
@@ -303,7 +303,7 @@ $$C_\infty(\gamma_n) = 0 \iff -\Re[\zeta'/\zeta(1/2+i\gamma_n)] = w(\gamma_n)/2.
 
 La energía espectral es:
 
-$$E_2(\lambda,T) = \sum_{\gamma_n\leq T}|C_\lambda(\gamma_n) - C_\infty(\gamma_n)|^2 + 2\operatorname{Re}\sum_{\gamma_n\leq T}(C_\lambda(\gamma_n)-C_\infty(\gamma_n))\overline{C_\infty(\gamma_n)} + \sum_{\gamma_n\leq T}|C_\infty(\gamma_n)|^2.$$
+$$E_2(\lambda,T) = \sum_{\gamma_n\leq T}|C_\lambda(\gamma_n) - C_\infty(\gamma_n)|^2 + 2\mathrm{Re}\,\sum_{\gamma_n\leq T}(C_\lambda(\gamma_n)-C_\infty(\gamma_n))\overline{C_\infty(\gamma_n)} + \sum_{\gamma_n\leq T}|C_\infty(\gamma_n)|^2.$$
 
 El término $\sum_{\gamma_n\leq T}|C_\infty(\gamma_n)|^2$ es exactamente la energía en los ceros del potencial límite — que bajo Inc. Inv. es 0, y en general mide cuánto fallan los ceros de $\Xi$ en ser ceros de $C_\infty$.
 
@@ -423,11 +423,11 @@ $$\sigma^2(T) := \frac{1}{N_\Xi(T)}\sum_{\gamma_n\leq T}\left(\Re[g_n(\rho_n)] -
 
 **Ruta A (incondicional):** Usar la representación de Hadamard $(g_n)$ para expresar $\Re[g_n(\rho_n)] - w(\gamma_n)/2$ como una suma sobre los ceros off-críticos (si los hay):
 
-$$\Re[g_n(\rho_n)] - w(\gamma_n)/2 = \operatorname{Re}\!\left[\sum_{\rho\neq\rho_n}\frac{1}{\rho_n-\rho}\right].$$
+$$\Re[g_n(\rho_n)] - w(\gamma_n)/2 = \mathrm{Re}\,\!\left[\sum_{\rho\neq\rho_n}\frac{1}{\rho_n-\rho}\right].$$
 
 Incondicionalmente: si hay ceros con $\Re(\rho) \neq 1/2$, contribuyen con $\Re[1/(\rho_n-\rho)] = \frac{\Re(\rho_n-\rho)}{|\rho_n-\rho|^2} = \frac{1/2-\Re(\rho)}{|\rho_n-\rho|^2} \neq 0$.
 
-**Observación fundamental.** La cantidad $\Re[g_n(\rho_n)] - w(\gamma_n)/2 = \operatorname{Re}\sum_{\rho\neq\rho_n}1/(\rho_n-\rho)$ es:
+**Observación fundamental.** La cantidad $\Re[g_n(\rho_n)] - w(\gamma_n)/2 = \mathrm{Re}\,\sum_{\rho\neq\rho_n}1/(\rho_n-\rho)$ es:
 - = 0 si y solo si RH (Lema 8.1 del paper).
 - $\neq 0$ si hay ceros off-críticos.
 

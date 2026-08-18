@@ -46,7 +46,7 @@ $$
 $$
 **Why it is geometric, not accidental.** $K_{11}(t)\asymp K(t,t)/d^2$ — the kinetic density is the trace
 density times the squared bandwidth $\sim1/d^2$ (verified on the explicit strip kernel
-$K(s)=\tfrac1{4d}\operatorname{sech}\tfrac{\pi s}{2d}$: $K_{11}=-K''(0)=\tfrac{\pi^2}{16d^3}>0$, with
+$K(s)=\tfrac1{4d}\mathrm{sech}\,\tfrac{\pi s}{2d}$: $K_{11}=-K''(0)=\tfrac{\pi^2}{16d^3}>0$, with
 $K(t,t)=\tfrac1{4d}$, so $K_{11}/K=\tfrac{\pi^2}{4d^2}$). Meanwhile $K''(t)$ (diagonal curvature) $\asymp
 K(t,t)/L^2$ where $L$ = the diagonal's variation scale. For a **density-matched** strip space the diagonal
 varies on scale $L\sim t$ (it tracks $\rho\sim\log t$, slow), so $K''\sim K/t^2\lll K_{11}\sim K/d^2$. Thus

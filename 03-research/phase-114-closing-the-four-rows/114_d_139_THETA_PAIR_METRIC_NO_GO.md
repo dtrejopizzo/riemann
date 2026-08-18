@@ -209,7 +209,7 @@ Equations (1.4) and (3.1)--(3.2) imply
 \]
 
 Using (1.5), \(s=0\) almost everywhere.  Hence \(S=0\).  If the metric is
-supposed to be nondegenerate on \(\operatorname{Ran}C\), this is impossible,
+supposed to be nondegenerate on \(\mathrm{Ran}\,C\), this is impossible,
 because
 
 \[
@@ -265,7 +265,7 @@ One may try to define
  \|Lu\|_2:=\|u\bmod\mathbb Ck\|_{L^2}.                \tag{5.1}
 \]
 
-This is a legitimate quotient norm on \(\operatorname{Ran}L\), but it
+This is a legitimate quotient norm on \(\mathrm{Ran}\,L\), but it
 does not make the original pair symmetric.  The reason is that \(D\) does
 not preserve \(\ker L=\mathbb Ck\):
 

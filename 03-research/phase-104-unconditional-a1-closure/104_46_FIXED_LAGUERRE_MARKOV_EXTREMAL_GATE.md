@@ -111,7 +111,7 @@ cada \(s\in(1,s_0)\), al tender \(r\to\infty\),
 
 \[
  \begin{aligned}
- \mathcal L_s\,\operatorname {Var}_{\nu_s}(F_r)
+ \mathcal L_s\,\mathrm{Var}_{\nu_s}(F_r)
  &=(1+o_s(1))M_r,\\
  M_r&:=\sum_{p\ \mathrm{primo}}{\log p\over p^s}
              \bigl(F_r(\log p)-\mu_{r,s}\bigr)^2,

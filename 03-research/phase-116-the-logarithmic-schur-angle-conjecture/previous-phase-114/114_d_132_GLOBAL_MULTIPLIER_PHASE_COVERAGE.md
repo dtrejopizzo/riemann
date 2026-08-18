@@ -7,7 +7,7 @@ Paley--Wiener compression of
 
 \[
  r_T(\tau)=
- \operatorname {Re}\psi\!\left({1\over4}+{i\tau\over2}\right)-\log\pi
+ \mathrm{Re}\,\psi\!\left({1\over4}+{i\tau\over2}\right)-\log\pi
  -2\sum_{2\leq n<e^{2T}}{\Lambda(n)\over\sqrt n}
        \cos(\tau\log n).                                  \tag{0.1}
 \]
@@ -69,14 +69,14 @@ and
 
 \[
  \Gamma(\tau)=
- \operatorname {Re}\psi\!\left({1\over4}+{i\tau\over2}\right)-\log\pi .
+ \mathrm{Re}\,\psi\!\left({1\over4}+{i\tau\over2}\right)-\log\pi .
                                                                     \tag{1.2}
 \]
 
 Then
 
 \[
- r_T(\tau)=\Gamma(\tau)-2\operatorname {Re}D_T(\tau).    \tag{1.3}
+ r_T(\tau)=\Gamma(\tau)-2\mathrm{Re}\,D_T(\tau).    \tag{1.3}
 \]
 
 The elementary bounds \(\Lambda(n)\leq\log n\) and
@@ -179,7 +179,7 @@ inequality for the centered local prime sums gives schematically
 
 \[
  \mathbb P_{\mathrm{Bohr}}\{
- \operatorname {Re}D_T>u\}
+ \mathrm{Re}\,D_T>u\}
  \leq
  \exp\!\left[-c\min\!\left({u^2\over V_T},{u\over b_*}\right)\right],
                                                                     \tag{3.3}
@@ -272,12 +272,12 @@ Indeed the leading contribution of each nonempty band is at most
 
 > **Theorem 4.1 (multiscale no-long-excursion).**  
 > No interval of length \(a_T\) can satisfy
-> \(\operatorname {Re}D_T(\tau)>\varepsilon\) at every point.
+> \(\mathrm{Re}\,D_T(\tau)>\varepsilon\) at every point.
 > Consequently, wherever \(\Gamma(\tau)\geq2\varepsilon\), every connected
 > component of \(\{r_T<0\}\) has length less than \(a_T\).
 
 The proof is immediate: averaging a strict inequality
-\(\operatorname {Re}D_T>\varepsilon\) against the probability kernel
+\(\mathrm{Re}\,D_T>\varepsilon\) against the probability kernel
 \(\kappa_T\) contradicts (4.6).  This establishes (0.2).
 
 ## 5. From one good point to measurable thickness
@@ -308,7 +308,7 @@ Choose a fixed \(g>0\), and let \(R_0\) be fixed so that
 \(\Gamma\geq2\varepsilon+2g\) on \(|\tau|\geq R_0\).
 Equation (4.6) supplies in every interval of length \(a_T\) lying outside
 that central band a point with
-\(\operatorname {Re}D_T\leq\varepsilon\), hence \(r_T\geq2g\).
+\(\mathrm{Re}\,D_T\leq\varepsilon\), hence \(r_T\geq2g\).
 The derivative bound gives an interval of length at least \(2g/L_T\) on
 which \(r_T\geq g\).  Thus the set
 
@@ -429,7 +429,7 @@ do not.
 The prime phases do give a uniform structural restriction:
 
 \[
- \operatorname {length}(\text{each high negative component})
+ \mathrm{length}(\text{each high negative component})
  =O(\log(2+T)).
 \]
 

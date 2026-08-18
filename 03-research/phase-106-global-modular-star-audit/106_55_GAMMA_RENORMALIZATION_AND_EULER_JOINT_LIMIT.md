@@ -278,7 +278,7 @@ from a *common finite cutoff* before using \(j_2\). The remaining estimate
 is the joint lower bound for
 
 \[
- \operatorname {Tr}\widetilde P
+ \mathrm{Tr}\,\widetilde P
  \left\{\widetilde L_{\varepsilon,N}^2
  -\frac12\widetilde L_{\varepsilon,N}\right\},       \tag{16}
 \]

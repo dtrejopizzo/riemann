@@ -70,7 +70,7 @@ de \(L\) grados \(N,\ldots,N+L-1\),
 Su variación exacta es
 
 \[
- \operatorname {TV}_{\mathbb R}(W^{\rm unif}_{N,L})
+ \mathrm{TV}_{\mathbb R}(W^{\rm unif}_{N,L})
  ={4\over L}\int_0^\pi
  \left|\sum_{n=N}^{N+L-1}n\sin(n\theta)\right|d\theta.   \tag{6}
 \]
@@ -78,7 +78,7 @@ Su variación exacta es
 Ortogonalidad y Cauchy--Schwarz dan
 
 \[
- \operatorname {TV}_{\mathbb R}(W^{\rm unif}_{N,L})
+ \mathrm{TV}_{\mathbb R}(W^{\rm unif}_{N,L})
  \le {2\sqrt2\pi\over L}
        \left(\sum_{n=N}^{N+L-1}n^2\right)^{1/2}.           \tag{7}
 \]
@@ -148,7 +148,7 @@ la identidad exacta
 
 \[
  \boxed{
- \operatorname {TV}_{\mathbb R}(W^\triangle_{N,L})
+ \mathrm{TV}_{\mathbb R}(W^\triangle_{N,L})
  =4\int_0^\pi
    \left|{d\over d\theta}{H_L(\theta)\cos(N\theta)\}
    \right|d\theta.}                                      \tag{13}
@@ -165,7 +165,7 @@ variación de \(H_L\):
 
 \[
  \boxed{
- \operatorname {TV}_{[0,\pi]}(H_L)
+ \mathrm{TV}_{[0,\pi]}(H_L)
  \le {4\over3}\left(1-{1\over L^2}\right).}              \tag{15}
 \]
 
@@ -200,7 +200,7 @@ Aplicando la regla del producto en (13), y luego (14)--(15),
 
 \[
  \boxed{
- \operatorname {TV}_{\mathbb R}(W^\triangle_{N,L})
+ \mathrm{TV}_{\mathbb R}(W^\triangle_{N,L})
  \le4\left\{{\pi N\over L}
        +{4\over3}\left(1-{1\over L^2}\right)\right\}.}  \tag{19}
 \]
@@ -228,7 +228,7 @@ allí. De (19),
  \begin{aligned}
  |\mathcal B^\triangle_{N,L,a}|
  &\le {1\over2\pi}{3\pi\over4}
-       \operatorname {TV}_{\mathbb R}(W^\triangle_{N,L})\\
+       \mathrm{TV}_{\mathbb R}(W^\triangle_{N,L})\\
  &\le {3\pi\over2}{N\over L}
        +2\left(1-{1\over L^2}\right),
  \end{aligned}                                             \tag{21}

@@ -140,7 +140,7 @@ y Cauchy en la métrica \(R\) da
  \ge|\langle v,g\rangle|.                                  \tag{13}
 \]
 
-Si \(b\ne0\), sea \(\sigma=\operatorname{sgn}b\). Existe \(R>0\) tal que
+Si \(b\ne0\), sea \(\sigma=\mathrm{sgn}\,b\). Existe \(R>0\) tal que
 
 \[
  Rv=\sigma g.                                               \tag{14}
@@ -149,7 +149,7 @@ Si \(b\ne0\), sea \(\sigma=\operatorname{sgn}b\). Existe \(R>0\) tal que
 En efecto, para \(u=v/\|v\|\), descomponga
 \(\sigma g/\|v\|=\alpha u+\beta e\), donde \(e\perp u\) es unitario y
 \(\alpha=|b|/\|v\|^2>0\). Sobre
-\(\operatorname{span}\{u,e\}\), tome
+\(\mathrm{span}\,\{u,e\}\), tome
 
 \[
  R=\begin{pmatrix}\alpha&\beta\\ \beta&d\end{pmatrix},
@@ -218,7 +218,7 @@ Defina
 
 \[
  m(R)=\|R^{-1}\|^{-1},\qquad
- \operatorname{cond}(R)={\|R\|\over m(R)}.
+ \mathrm{cond}(R)={\|R\|\over m(R)}.
 \]
 
 Si \(\mathcal C_{n,a}[R_{n,a}]\le C_0\), entonces
@@ -231,7 +231,7 @@ Si \(\mathcal C_{n,a}[R_{n,a}]\le C_0\), entonces
 Por (19),
 
 \[
- \boxed{\operatorname{cond}(R_{n,a})
+ \boxed{\mathrm{cond}(R_{n,a})
  \ge {n c_{n,\rho}\over4C_0^2(a-1)}.}                       \tag{21}
 \]
 
@@ -252,7 +252,7 @@ Entonces \(b_{n,a}=\langle\mathcal X_ag_n,g_n\rangle\).
 Sea \(P_n\) la proyección ortogonal sobre
 
 \[
- \mathcal V_n=\operatorname{span}\{\phi_0,\ldots,\phi_{n-1}\},
+ \mathcal V_n=\mathrm{span}\,\{\phi_0,\ldots,\phi_{n-1}\},
  \qquad \phi_j=e^{-x/2}L_j(x).                              \tag{23}
 \]
 

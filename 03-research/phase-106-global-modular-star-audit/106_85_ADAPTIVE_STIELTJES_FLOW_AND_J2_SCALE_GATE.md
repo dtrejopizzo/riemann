@@ -128,7 +128,7 @@ Differentiate the Schur complement in (8).  The terms containing
 
 \[
  \sigma_t'
- =\|v\|^2-2\operatorname {Re}\langle Ua_t,v\rangle
+ =\|v\|^2-2\mathrm{Re}\,\langle Ua_t,v\rangle
    +\|Ua_t\|^2
  =\|r_t\|^2.
 \]
@@ -137,7 +137,7 @@ Finally, (9) gives
 
 \[
  R_t'
- =2\operatorname {Re}\langle r_t,r_t'\rangle
+ =2\mathrm{Re}\,\langle r_t,r_t'\rangle
  =-2\langle U^*r_t,A_t^{-1}U^*r_t\rangle
  =-2C_t.
 \]

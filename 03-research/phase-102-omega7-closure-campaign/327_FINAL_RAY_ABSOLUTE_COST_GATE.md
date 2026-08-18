@@ -29,7 +29,7 @@ ray is
 \]
 On this ray \(K_n\) has a fixed sign
 \[
-  \sigma_{n,\infty}=\operatorname{sgn}K_n(u)
+  \sigma_{n,\infty}=\mathrm{sgn}\,K_n(u)
   \qquad(u>\xi_{n,*}).
 \]
 

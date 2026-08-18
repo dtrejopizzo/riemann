@@ -50,8 +50,8 @@ Write \(M_{200}\) for the two Tate moments restricted to \(V_{200}\).
 The orthogonal complement of \(\ker M_{200}\) inside \(V_{200}\) is
 
 \[
- \operatorname{Ran}M_{200}^*
- =\operatorname{span}\{g_+,g_-\},
+ \mathrm{Ran}\,M_{200}^*
+ =\mathrm{span}\,\{g_+,g_-\},
 \]
 
 where \(g_\pm\) are the two finite Tate representers.  For each high

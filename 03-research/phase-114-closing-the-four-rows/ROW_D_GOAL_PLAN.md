@@ -23,7 +23,7 @@ sharp capacity inequality
  \mathcal M_N,
  \qquad
  \mathcal M_N=I-y_N^*y_N-h_N^*D_Nh_N
-       +2\operatorname {Re}(h_N^*q_N),
+       +2\mathrm{Re}(h_N^*q_N),
 \]
 
 together with the corresponding range inclusion.  Equivalently, one must
@@ -182,7 +182,7 @@ formula proves
 
 \[
 y^*D_{\rm out}^\dagger y=y^*y+u^*D^\dagger u
-=y^*y+h^*Dh-2\operatorname {Re}(h^*q)+q^*D^\dagger q.
+=y^*y+h^*Dh-2\mathrm{Re}(h^*q)+q^*D^\dagger q.
 \]
 
 Hence factoring \(u\) is equivalent to the original output gate and is
@@ -190,7 +190,7 @@ not a new route.  The exact remaining budget is
 
 \[
 q^*D^\dagger q\le
-I-y^*y-h^*Dh+2\operatorname {Re}(h^*q).
+I-y^*y-h^*Dh+2\mathrm{Re}(h^*q).
 \]
 
 All future asymptotic estimates must be compared to this operator-valued
@@ -297,7 +297,7 @@ gate.
 The D.208 Plancherel certificate has now been rerun at cutoff \(400\):
 
 \[
- \operatorname{tr}(R_{400}A_TS_{\rm flat}B_{\rm flat}^{-1}
+ \mathrm{tr}(R_{400}A_TS_{\rm flat}B_{\rm flat}^{-1}
  S_{\rm flat}^*A_TR_{400})
  <5.220\,10^{-6}.
 \]
@@ -493,7 +493,7 @@ mutually orthogonal and the even channels have coherent cross-prime
 couplings.  Their signed Gram is
 
 \[
- A_S\bigl(xx^*-\operatorname{diag}(|x_p|^2)\bigr),
+ A_S\bigl(xx^*-\mathrm{diag}(|x_p|^2)\bigr),
  \qquad x_p=-{\log p\over p+1},
 \]
 
@@ -526,8 +526,8 @@ D.246 proves the archimedean analogue.  For the self-Fourier Gaussian
 
 \[
  {2\mathcal Md_{\infty,+}(s)\over\mathcal Mg_0(s)}
- =2\operatorname{Re}{L_\infty'(s)\over L_\infty(s)}
- \quad(\operatorname{Re}s=\tfrac12).
+ =2\mathrm{Re}{L_\infty'(s)\over L_\infty(s)}
+ \quad(\mathrm{Re}\,s=\tfrac12).
 \]
 
 This is the complete Gamma/digamma score.  Hence the source tangent--dual
@@ -575,7 +575,7 @@ D.249 constructs the missing Gamma scattering network.  For
 \(a_n=2n+\tfrac52\),
 
 \[
- \operatorname{Re}\psi(\tfrac54+\tfrac{i\tau}{2})-\psi(\tfrac54)
+ \mathrm{Re}\,\psi(\tfrac54+\tfrac{i\tau}{2})-\psi(\tfrac54)
  =\sum_{n\ge0}
  \left({2\over a_n}-{2a_n\over\tau^2+a_n^2}\right),
 \]
@@ -598,7 +598,7 @@ to the balanced D.137 features.  The exact odd intertwiner is
 \]
 
 which vanishes at \(U_p=-1\) although \(W_{p,-}\) does not.  The even
-intertwiner likewise vanishes at \(\operatorname{Re}U_p=p^{-1/2}\).
+intertwiner likewise vanishes at \(\mathrm{Re}\,U_p=p^{-1/2}\).
 Therefore the tangent contraction cannot be moved to \(X_T,Y_T\) through a
 bounded inverse.  The full four-port colligation—odd plus degree versus
 even plus contact—must be compared by state-space elimination, with Gamma
@@ -711,7 +711,7 @@ functor''.  It is the source-level estimate
  q_N^*D_N^\dagger q_N\le \mathcal M_N,
  \qquad
  \mathcal M_N=I-y_N^*y_N-h_N^*D_Nh_N
-       +2\operatorname {Re}(h_N^*q_N),
+       +2\mathrm{Re}(h_N^*q_N),
 \]
 
 for the complete Poisson--prime--Gamma centered column at every birth.  A

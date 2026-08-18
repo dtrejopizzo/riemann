@@ -115,7 +115,7 @@ Let \(P\) be the orthogonal projection onto
 sign gauge making every entry of \(C\) nonnegative is
 
 \[
- D=\operatorname{diag}(1,-1,-1,1).                     \tag{3.2}
+ D=\mathrm{diag}(1,-1,-1,1).                     \tag{3.2}
 \]
 
 One computes

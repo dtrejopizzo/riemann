@@ -67,7 +67,7 @@ It does **not** prove:
 1. the full common-phase fixed-point geometry of `107_09`;
 2. the one-step joint production of the prime, Gamma, and polar sectors
    from a single flow correspondence;
-3. any arithmetic surface realization over \(\operatorname{Spec}\mathbf
+3. any arithmetic surface realization over \(\mathrm{Spec}\,\mathbf
    Z\).
 
 So the correct reading is:

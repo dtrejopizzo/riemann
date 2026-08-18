@@ -55,7 +55,7 @@ Recall the completed Picard realization
 
 \[
  \rho:\mathfrak D_{\rm pr}\longrightarrow
- \operatorname{Pic}_{\rm cmp}(Y^{\rm reg}).                            \tag{2.1}
+ \mathrm{Pic}_{\rm cmp}(Y^{\rm reg}).                            \tag{2.1}
 \]
 
 A bilinear form on `rho(mathfrak D_pr)` pulls back to (1.3) if and only if

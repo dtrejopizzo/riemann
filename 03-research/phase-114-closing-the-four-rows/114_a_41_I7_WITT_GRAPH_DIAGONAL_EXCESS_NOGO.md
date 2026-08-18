@@ -79,13 +79,13 @@ the diagonal have fiber product
 
 \[
  \Gamma(f)\times_{Z_a\times_{\mathbb Z}Z_a}\Delta
- \simeq\operatorname{Spec}(A_a/I_{p,a}).                \tag{3.1}
+ \simeq\mathrm{Spec}(A_a/I_{p,a}).                \tag{3.1}
 \]
 
 Theorem 2.1 therefore gives
 
 \[
- \boxed{\quad\Gamma(f)\cap\Delta\simeq\operatorname{Spec}\mathbb Z.\quad} \tag{3.2}
+ \boxed{\quad\Gamma(f)\cap\Delta\simeq\mathrm{Spec}\,\mathbb Z.\quad} \tag{3.2}
 \]
 
 This fixed locus is horizontal and one-dimensional. It has no ordinary
@@ -112,7 +112,7 @@ Accordingly H7-WLEF must be replaced by the sharper statement:
 > its normal/determinant class through a non-total H7-WBASE kernel, and prove
 > that its Arakelov degree is
 > \[
-> \log|\operatorname{tr}(\lambda_1(V_n\phi_1))|=\Lambda(n).               \tag{4.1}
+> \log|\mathrm{tr}(\lambda_1(V_n\phi_1))|=\Lambda(n).               \tag{4.1}
 > \]
 
 Any proposal must state which complex removes the free `Z` direction and

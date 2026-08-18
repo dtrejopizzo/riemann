@@ -42,7 +42,7 @@ where
 
 \[
  W_T(\tau)=
- \operatorname {Re}\psi\!\left({1\over4}+{i\tau\over2}\right)
+ \mathrm{Re}\,\psi\!\left({1\over4}+{i\tau\over2}\right)
  -\log\pi
  -2\sum_{p^k\le e^{2T}}{\log p\over p^{k/2}}
        \cos(k\tau\log p).                            \tag{1.2}
@@ -52,7 +52,7 @@ At \(2T=\log6\), the finite sum consists exactly of
 \(2,3,4,5\), with the coefficient of \(4\) equal to
 \(\Lambda(4)/2=(\log2)/2\).  Formula (1.2) is the Fourier transform of the
 complete oscillator expression of D.150: the Gamma sum is
-\(\operatorname {Re}\psi(1/4+i\tau/2)-\psi(1/4)\), and subtraction of
+\(\mathrm{Re}\,\psi(1/4+i\tau/2)-\psi(1/4)\), and subtraction of
 \(m_0=\log\pi-\psi(1/4)\) leaves the first two terms of (1.2).
 
 ## 2. Weighted derivative domination
@@ -127,7 +127,7 @@ The required multiplier bound is elementary.  Put \(a=1/4\) and
 \(y=|\tau|/2\).  The digamma difference has the positive series
 
 \[
- G(y)=\operatorname {Re}\psi(a+iy)-\psi(a)
+ G(y)=\mathrm{Re}\,\psi(a+iy)-\psi(a)
  =\sum_{j\ge0}{y^2\over(j+a)((j+a)^2+y^2)}.           \tag{3.3}
 \]
 

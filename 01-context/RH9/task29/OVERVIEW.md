@@ -40,7 +40,7 @@ The literature supports the hypothesis: on X = P¹_ℤ with L = O(1), choosing t
 In Gillet–Soulé arithmetic intersection theory (as presented in Tamvakis’ exposition), an arithmetic cycle of codimension p is a pair (Z, g_Z) where Z is an algebraic cycle and g_Z is a Green current on X(ℂ) satisfying a dd^c-equation against the delta-current δ_{Z(ℂ)}. (tamvakis1996bottchernformsand pages 16-20, gillet1992anarithmeticriemannroch pages 12-15)
 For a hermitian line bundle \(\overline L=(L,\|\cdot\|)\), the first arithmetic Chern class \(\hat c_1(\overline L)\) is explicitly defined as the class of the arithmetic divisor
 \[
-\hat c_1(\overline L)\;=\;\big[(\operatorname{div}(s),\,-\log\|s\|^2)\big]
+\hat c_1(\overline L)\;=\;\big[(\mathrm{div}(s),\,-\log\|s\|^2)\big]
 \]
 for any nonzero rational section s of L (independence of s being enforced by the quotient by principal arithmetic divisors). (tamvakis1996bottchernformsand pages 12-16, tamvakis1996bottchernformsand media 16aad8c8)
 

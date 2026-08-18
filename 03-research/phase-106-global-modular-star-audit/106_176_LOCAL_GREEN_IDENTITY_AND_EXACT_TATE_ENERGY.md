@@ -216,7 +216,7 @@ where \(g_\Gamma\) is the Gamma density in (1) of 106.160.  Let
 
 \[
  \chi_{\epsilon,\gamma}(u)
- =\operatorname {sgn}(u)^\epsilon|u|^{i\gamma},
+ =\mathrm{sgn}(u)^\epsilon|u|^{i\gamma},
  \qquad \epsilon\in\{0,1\}.                               \tag{14c}
 \]
 
@@ -238,7 +238,7 @@ Thus the Lévy density of the archimedean Green energy is four times the
 positive spin trace
 
 \[
- \operatorname {Tr}(e^{-tN_\Gamma})
+ \mathrm{Tr}(e^{-tN_\Gamma})
  ={e^{-t/2}\over1-e^{-2t}}
 \]
 
@@ -296,7 +296,7 @@ Schwartz space.  Therefore
 \[
  \boxed{
  \mathfrak h_{\rm Ros}(f,g)
- =\operatorname {FP}_{S\nearrow\Sigma_{\mathbb Q}}
+ =\mathrm{FP}_{S\nearrow\Sigma_{\mathbb Q}}
   \left[\sum_{v\in S}\mathcal E_v(f,g)+\mathcal B_S(f,g)\right].}
                                                                     \tag{17}
 \]

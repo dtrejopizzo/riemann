@@ -10,9 +10,9 @@
 > This file takes the other road. In the coordinate model of 113_08 the radical
 > is not a thing to be guessed — **it can be computed**, and it comes out as an
 > explicit ideal:
-> $$\operatorname{rad}I_\partial=\bigl\{f\in\mathcal D:\ \widehat f(s)=s(s-1)\,\xi(s)\,v(s),\ v\ \text{holomorphic in the strip}\bigr\}.$$
+> $$\mathrm{rad}\,I_\partial=\bigl\{f\in\mathcal D:\ \widehat f(s)=s(s-1)\,\xi(s)\,v(s),\ v\ \text{holomorphic in the strip}\bigr\}.$$
 > It is a nonzero $*$-ideal of the algebra $\mathcal D$, $I_\partial$ descends to
-> a nondegenerate Hermitian form on $\mathcal D/\operatorname{rad}$, and — the
+> a nondegenerate Hermitian form on $\mathcal D/\mathrm{rad}$, and — the
 > part that was not expected — **the two rulings are realised by candid elements
 > of $\mathcal D$**:
 > $$\widehat f_v(s)=-2(s-1)\xi(s),\qquad \widehat f_h(s)=2s\,\xi(s),\qquad
@@ -46,7 +46,7 @@ $\widehat f(s)=\widehat F(s-\tfrac12)$, membership is a statement about $\wideha
 
 > ### Lemma 1.1 (sufficient condition)
 > Let $\theta>0$ and let $\Phi$ be holomorphic on the closed strip
-> $|\operatorname{Re}s-\tfrac12|\le\theta'$ for some $\theta'>\theta$, with
+> $|\mathrm{Re}\,s-\tfrac12|\le\theta'$ for some $\theta'>\theta$, with
 > $$\int_{\mathbb R}\bigl|\Phi(\sigma+it)\bigr|\,(1+|t|)^N\,dt<\infty
 > \qquad\text{for every }N\ge0\text{ and every }|\sigma-\tfrac12|\le\theta'.$$
 > Then $F(x):=\frac1{2\pi}\int_{\mathbb R}\Phi(\tfrac12+it)e^{-itx}\,dt$ lies in
@@ -54,29 +54,29 @@ $\widehat f(s)=\widehat F(s-\tfrac12)$, membership is a statement about $\wideha
 > with $\widehat f=\Phi$.
 
 **Proof.** Put $\Psi(w)=\Phi(\tfrac12+w)$, so
-$F(x)=\frac1{2\pi i}\int_{\operatorname{Re}w=0}\Psi(w)e^{-wx}\,dw$. The
+$F(x)=\frac1{2\pi i}\int_{\mathrm{Re}\,w=0}\Psi(w)e^{-wx}\,dw$. The
 integrand is holomorphic and integrable on every vertical line in
-$|\operatorname{Re}w|\le\theta'$, so the contour may be shifted to
-$\operatorname{Re}w=a$ with $|a|\le\theta$, giving
+$|\mathrm{Re}\,w|\le\theta'$, so the contour may be shifted to
+$\mathrm{Re}\,w=a$ with $|a|\le\theta$, giving
 $$|F(x)|\le e^{-ax}\cdot\frac1{2\pi}\int_{\mathbb R}|\Psi(a+it)|\,dt .$$
-Choosing $a=\theta\operatorname{sgn}(x)$ yields $|F(x)|\le C\,e^{-\theta|x|}$.
+Choosing $a=\theta\mathrm{sgn}(x)$ yields $|F(x)|\le C\,e^{-\theta|x|}$.
 For the polynomial factor, integrate by parts $N$ times on the shifted line:
-$x^NF(x)=\frac{1}{2\pi i}\int_{\operatorname{Re}w=a}\Psi^{(N)}(w)e^{-wx}\,dw$,
+$x^NF(x)=\frac{1}{2\pi i}\int_{\mathrm{Re}\,w=a}\Psi^{(N)}(w)e^{-wx}\,dw$,
 and $\Psi^{(N)}$ is bounded on that line by Cauchy's estimate from the strip
-$|\operatorname{Re}w|\le\theta'$ together with the hypothesis at
+$|\mathrm{Re}\,w|\le\theta'$ together with the hypothesis at
 $\sigma=\tfrac12\pm\theta'$. Hence $|x^NF(x)|\le C_Ne^{-\theta|x|}$ for every
 $N$, which is $\mathcal S_\theta$. Mellin inversion (113_06 Lemma 1.2) gives
 $\widehat f=\Phi$. $\square$
 
 > ### Lemma 1.2 (the ξ-factor supplies the hypothesis for every θ)
 > Let $p$ be a polynomial and $v$ holomorphic and polynomially bounded on
-> $|\operatorname{Re}s-\tfrac12|\le\theta'$. Then $\Phi=p\cdot\xi\cdot v$
+> $|\mathrm{Re}\,s-\tfrac12|\le\theta'$. Then $\Phi=p\cdot\xi\cdot v$
 > satisfies the hypothesis of Lemma 1.1 for that $\theta'$. Consequently
 > $p\,\xi\,v$ is $\widehat f$ for some $f\in\mathcal D_\theta$, for **every**
 > $\theta>0$; in particular such $f$ lie in $\mathcal D$.
 
 **Proof.** $\xi$ is entire, so $\Phi$ is holomorphic on the strip. On any
-vertical line $\operatorname{Re}s=\sigma$ in a bounded strip, Stirling gives
+vertical line $\mathrm{Re}\,s=\sigma$ in a bounded strip, Stirling gives
 $$|\xi(\sigma+it)|=\tfrac12|s(s-1)|\,\pi^{-\sigma/2}\,|\Gamma(\tfrac{s}2)|\,|\zeta(s)|
 =O\bigl(|t|^{A(\sigma)}e^{-\pi|t|/4}\bigr),$$
 using $|\Gamma(\tfrac{\sigma+it}2)|\sim c|t|^{(\sigma-1)/2}e^{-\pi|t|/4}$ and the
@@ -95,18 +95,18 @@ this: ξ itself may be used; only a *zero* of ξ may not.
 ## 2. The radical
 
 > ### Definition 2.1
-> $\operatorname{rad}I_\partial:=\{f\in\mathcal D:\ I_\partial(f,g)=0\ \text{for all }g\in\mathcal D\}$.
+> $\mathrm{rad}\,I_\partial:=\{f\in\mathcal D:\ I_\partial(f,g)=0\ \text{for all }g\in\mathcal D\}$.
 
 Write $\mathcal Z$ for the multiset of zeros of $\xi$ (equivalently the
 nontrivial zeros of $\zeta$), with multiplicities $m_\rho$; recall $\xi$ is
-entire and its zeros are exactly $\mathcal Z$, all inside $0<\operatorname{Re}s<1$,
-hence all inside every strip $|\operatorname{Re}s-\tfrac12|<\theta$ with
+entire and its zeros are exactly $\mathcal Z$, all inside $0<\mathrm{Re}\,s<1$,
+hence all inside every strip $|\mathrm{Re}\,s-\tfrac12|<\theta$ with
 $\theta>\tfrac12$.
 
 > ### Theorem 2.2 (the radical, computed)
-> $$\operatorname{rad}I_\partial
+> $$\mathrm{rad}\,I_\partial
 > =\Bigl\{f\in\mathcal D:\ \widehat f(0)=\widehat f(1)=0\ \text{ and }\
-> \operatorname{ord}_\rho\widehat f\ge m_\rho\ \ \forall\rho\in\mathcal Z\Bigr\}
+> \mathrm{ord}_\rho\widehat f\ge m_\rho\ \ \forall\rho\in\mathcal Z\Bigr\}
 > =\Bigl\{f\in\mathcal D:\ \tfrac{\widehat f(s)}{s(s-1)\xi(s)}\ \text{is holomorphic on the strip}\Bigr\}.$$
 
 **Proof.** The second equality is immediate: $s(s-1)\xi(s)$ is holomorphic on the
@@ -121,7 +121,7 @@ vanishes.
 
 *Polar slots.* By Theorem 3.1 below, $f_h$ with $\widehat f_h(s)=2s\,\xi(s)$ lies
 in $\mathcal D$ and has $\widehat f_h(0)=0$, $\widehat f_h(1)=2\xi(1)=1$,
-$\widehat f_h(\rho)=0$. Then $I_\partial(f,f_h)=\widehat f(0)$, so $f\in\operatorname{rad}$
+$\widehat f_h(\rho)=0$. Then $I_\partial(f,f_h)=\widehat f(0)$, so $f\in\mathrm{rad}$
 forces $\widehat f(0)=0$. Symmetrically $f_v$ with $\widehat f_v(s)=-2(s-1)\xi(s)$
 gives $I_\partial(f,f_v)=\widehat f(1)=0$.
 
@@ -135,7 +135,7 @@ $\rho\ne\rho_0$, and
 $\widehat g(\rho_0)=\rho_0(\rho_0-1)\,\xi^{(m_{\rho_0})}(\rho_0)/m_{\rho_0}!\ne0$.
 Applying this at $\rho_0=\rho'$ gives
 $I_\partial(f,g_{\rho'})=-m_\rho\widehat f(\rho)\overline{\widehat g_{\rho'}(\rho')}$,
-so $f\in\operatorname{rad}$ forces $\widehat f(\rho)=0$. Iterating with
+so $f\in\mathrm{rad}$ forces $\widehat f(\rho)=0$. Iterating with
 $\widehat g(s)=s(s-1)\xi(s)(s-\rho')^{j-m_{\rho'}}$ for $j<m_{\rho'}$ — or simply
 observing that the argument applies verbatim to $\widehat f$ replaced by
 $\widehat f/(s-\rho)^{k}$ — upgrades this to order $m_\rho$. $\square$
@@ -147,7 +147,7 @@ $\widehat f/(s-\rho)^{k}$ — upgrades this to order $m_\rho$. $\square$
 > and nothing downstream depends on them. Crucially the argument uses only the
 > **existence** of the zeros of the entire function $\xi$ and the order of
 > vanishing there — it never locates a zero, never assumes anything about
-> $\operatorname{Re}\rho$, and would read identically if RH were false. The
+> $\mathrm{Re}\,\rho$, and would read identically if RH were false. The
 > inclusion ($\supseteq$), which is the direction all later files use, mentions
 > no zero at all. Reviewers who wish to hold the rule at its strictest may read
 > Theorem 2.2 as the inclusion ($\supseteq$) plus the polar half of
@@ -155,9 +155,9 @@ $\widehat f/(s-\rho)^{k}$ — upgrades this to order $m_\rho$. $\square$
 > conditional; nothing else in this file or in 113_10–113_14 changes.
 
 > ### Theorem 2.4 (structure)
-> 1. $\operatorname{rad}I_\partial$ is a $*$-ideal of the commutative $*$-algebra $\mathcal D$.
-> 2. It is nonzero: $\widehat w(s)=s(s-1)\xi(s)$ defines $w\in\operatorname{rad}I_\partial\setminus\{0\}$.
-> 3. $I_\partial$ descends to a nondegenerate Hermitian form on $\mathcal D/\operatorname{rad}I_\partial$.
+> 1. $\mathrm{rad}\,I_\partial$ is a $*$-ideal of the commutative $*$-algebra $\mathcal D$.
+> 2. It is nonzero: $\widehat w(s)=s(s-1)\xi(s)$ defines $w\in\mathrm{rad}\,I_\partial\setminus\{0\}$.
+> 3. $I_\partial$ descends to a nondegenerate Hermitian form on $\mathcal D/\mathrm{rad}\,I_\partial$.
 
 **Proof.** (1) $\mathcal D$ is a convolution algebra and Mellin transforms
 multiply: $\widehat{f\star g}=\widehat f\,\widehat g$ (113_07 Lemma 1.4). So the
@@ -176,7 +176,7 @@ radical. $\square$
 
 Part (2) is worth pausing on. The radical is not a degenerate accident: it is a
 large, natural ideal — every $f$ whose Mellin transform is divisible by
-$s(s-1)\xi(s)$ — and the quotient $\mathcal D/\operatorname{rad}$ is precisely the
+$s(s-1)\xi(s)$ — and the quotient $\mathcal D/\mathrm{rad}$ is precisely the
 coordinate space in which 107_241 and 113_08 work. **This is what d1 was for**:
 a canonical "linear equivalence" under which the intersection pairing becomes
 nondegenerate. It exists, it is explicit, and it required no geometry.
@@ -216,7 +216,7 @@ are $(1,0)$ and $(0,1)$) and meet $\mathcal D^\circ$ only in $0$. $\square$
 > holds by Theorem 3.1 plus 113_08 Proposition 2.2, and the projection
 > $y=x-\widehat x(0)f_v-\widehat x(1)f_h$ of its proof stays inside $\mathcal D$
 > by Corollary 3.2. Hence the conclusion
-> $$Q(f)\ \le\ 2\operatorname{Re}\bigl[\widehat f(0)\overline{\widehat f(1)}\bigr]
+> $$Q(f)\ \le\ 2\mathrm{Re}\,\bigl[\widehat f(0)\overline{\widehat f(1)}\bigr]
 > \qquad\text{for all }f\in\mathcal D$$
 > is *equivalent* to Weil positivity on $\mathcal D^\circ$, with no gap.
 
@@ -242,7 +242,7 @@ $I_\partial(f,g)=\widehat h(0)+\widehat h(1)-\sum_\rho m_\rho\widehat h(\rho)$, 
 113_06 Theorem 2.2 it equals the arithmetic side
 $$P(h)-A(h),\qquad
 P(h)=\sum_n\Lambda(n)\Bigl[h(n)+\tfrac{h(1/n)}n\Bigr],\quad
-A(h)=\frac1{2\pi}\int_{\mathbb R}\Bigl[\tfrac12\operatorname{Re}\psi(\tfrac14+\tfrac{it}2)-\tfrac12\log\pi\Bigr]G(t)\,dt$$
+A(h)=\frac1{2\pi}\int_{\mathbb R}\Bigl[\tfrac12\mathrm{Re}\,\psi(\tfrac14+\tfrac{it}2)-\tfrac12\log\pi\Bigr]G(t)\,dt$$
 with $G(t)=\widehat h(\tfrac12+it)+\widehat h(\tfrac12-it)$.
 
 Two simplifications make this computable in closed form. First, everything is
@@ -327,9 +327,9 @@ nodes on $[0,70]$; $\Xi$ from mpmath at 25 digits):
 **Not delivered — and this is the candid residue of d1.** The programme wanted
 $\mathcal P$ to be the group of *principal divisors of an independently
 constructed geometric object* (rows a and b), and then to prove
-$\mathcal P\subseteq\operatorname{rad}I_\partial$ as a theorem linking the two
+$\mathcal P\subseteq\mathrm{rad}\,I_\partial$ as a theorem linking the two
 sides. What is proved here is the analytic half only: the radical is the
-ξ-ideal. Whether any geometry over $\operatorname{Spec}\mathbb Z$ has a principal
+ξ-ideal. Whether any geometry over $\mathrm{Spec}\,\mathbb Z$ has a principal
 divisor group mapping onto it is untouched. In particular:
 
 - $\mathcal P$ is still not defined anywhere in the corpus. It should now be
@@ -341,7 +341,7 @@ divisor group mapping onto it is untouched. In particular:
   the ξ-ideal, which is built analytically and never passes through those
   generators. The two are simply not yet connected, and pretending otherwise
   would be the error this file is written to avoid.
-- Nothing here supplies a degree map. $\operatorname{rad}$ is defined by
+- Nothing here supplies a degree map. $\mathrm{rad}$ is defined by
   vanishing, not by mass; $\deg$ and the balanced subgroup are 113_10.
 
 ---
@@ -357,7 +357,7 @@ $\widehat h=\widehat f\,\overline{\widehat g(1-\bar\cdot)}$ evaluated on
 ξ-divisible data, and the reduction of $P(h)$ to a single even real $G$).
 
 **Read from source, not re-derived.** $\xi$ entire with zero set exactly the
-nontrivial zeros of $\zeta$, all in $0<\operatorname{Re}s<1$; $\xi(1-s)=\xi(s)$;
+nontrivial zeros of $\zeta$, all in $0<\mathrm{Re}\,s<1$; $\xi(1-s)=\xi(s)$;
 $\overline{\xi(\bar s)}=\xi(s)$; $\xi(0)=\xi(1)=\tfrac12$; Stirling and the
 convexity bound for $\zeta$ in a vertical strip (used in Lemma 1.2). 113_05
 Lemma 2.3 and Theorem 3.1; 113_06 Theorem 2.2 and Lemma 1.2; 113_07 Lemma 1.4;
@@ -370,7 +370,7 @@ $\Xi(t)$ real; $\xi(\tfrac12)=0.497120778188314$; $|\xi(\rho)|<10^{-20}$ at the
 first ten computed zeros. Theorem 3.1's coordinate values. Theorem 2.4(1)
 $*$-invariance of the generator, and the sharper fact that the involution
 **swaps** $f_v\leftrightarrow f_h$. Lemma 1.1: the contour shift to
-$\operatorname{Re}s=\tfrac12\pm\theta$ is legal for $\theta=2,3,4$ (shifted and
+$\mathrm{Re}\,s=\tfrac12\pm\theta$ is legal for $\theta=2,3,4$ (shifted and
 unshifted evaluations agree), the resulting bound $|F(x)|\le Ce^{-\theta|x|}$
 holds, and the hypothesis moments $\int|\widehat f_v(\sigma+it)|(1+|t|)^N dt$
 are finite for $N=0,4,8$ at $\sigma=\tfrac12\pm4$. Theorem 4.1: all seven
@@ -385,7 +385,7 @@ in the radical (arithmetic side $\tfrac12$, not $0$); and $w\star(\text{Gaussian
 *is* in the radical and is nonzero ($|{\cdot}|=0.0235$ at $s=\tfrac12+14i$),
 confirming the ideal property is not vacuous.
 
-**Not established, and explicitly not claimed.** That $\operatorname{rad}I_\partial$
+**Not established, and explicitly not claimed.** That $\mathrm{rad}\,I_\partial$
 is the principal divisor group of any geometric object. Rows (a), (b), (c). (E)
 and (R) of 113_08 §4. Hypothesis (2) of Connes' Lemma 2.1. Weil positivity. A
 degree map. **Anything about RH.**

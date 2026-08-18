@@ -172,9 +172,9 @@ temporarily that `G_(T,N)` and
 are invertible.  The constrained Haynsworth identity of D.47 gives
 
 \[
- \operatorname{In}\bigl(G_{T,N}|_{\ker N_T}\bigr)
- =\operatorname{In}(G_{T,N})-
-  \operatorname{In}(\mathcal G_{T,N}).                      \tag{5.4}
+ \mathrm{In}\,\bigl(G_{T,N}|_{\ker N_T}\bigr)
+ =\mathrm{In}(G_{T,N})-
+  \mathrm{In}(\mathcal G_{T,N}).                      \tag{5.4}
 \]
 
 This is the continuous screw-kernel version of the two-ruling Green

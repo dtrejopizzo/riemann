@@ -45,10 +45,10 @@ one-dimensional.
 For every \(T>0\),
 
 \[
- \boxed{\operatorname{rank}\mathcal C_{S,T}=\infty.} \tag{2.1}
+ \boxed{\mathrm{rank}\,\mathcal C_{S,T}=\infty.} \tag{2.1}
 \]
 
-Indeed \(\mathcal P_T=\operatorname{Ran}\Pi_T\) has codimension two in
+Indeed \(\mathcal P_T=\mathrm{Ran}\,\Pi_T\) has codimension two in
 the infinite-dimensional space \(L^2(I_T)\), hence is infinite-dimensional.
 The zero-extension \(J_T\), Fourier transform \(\mathcal F\), and
 multiplication operator \(M_{\eta_S}\) are all injective.  Therefore their

@@ -68,7 +68,7 @@ The full-return middle space is
 
 \[
  \mathscr W_I^{\rm mid}
- =\operatorname {Ran}(\Gamma_I)^\perp
+ =\mathrm{Ran}(\Gamma_I)^\perp
  =\left\{(x_i,y_i):
    \sum_i\sqrt{w_i}x_i=0,
    \ \sum_i\sqrt{w_i}y_i=0\right\}.                     \tag{7}
@@ -346,7 +346,7 @@ single cofinal assertion:
 
 \[
  \boxed{
- \operatorname {FP}_{S\nearrow\Sigma_{\mathbb Q}}[\Phi_Sf,\Phi_Sf]_S
+ \mathrm{FP}_{S\nearrow\Sigma_{\mathbb Q}}[\Phi_Sf,\Phi_Sf]_S
  \ge0
  \quad\text{on the CCM relative cokernel}.}                \tag{32}
 \]

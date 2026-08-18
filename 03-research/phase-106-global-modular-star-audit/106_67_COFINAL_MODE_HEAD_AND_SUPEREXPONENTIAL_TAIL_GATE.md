@@ -56,14 +56,14 @@ Use the frequency normalization
 Every nontrivial zero lies in
 
 \[
- |\operatorname {Im}z|<\frac12.                    \tag{1}
+ |\mathrm{Im}\,z|<\frac12.                    \tag{1}
 \]
 
 For \(M>0\), let \(\mathcal Z_M\) be the finite zero multiset
 
 \[
  \mathcal Z_M
- =\{z:\Xi(z)=0,\ |\operatorname {Re}z|\leq M\},     \tag{2}
+ =\{z:\Xi(z)=0,\ |\mathrm{Re}\,z|\leq M\},     \tag{2}
 \]
 
 with representatives chosen modulo \(z\mapsto-z\), and with conjugate
@@ -78,7 +78,7 @@ orbits retained.  If \(z\) has multiplicity \(m_z\), define
 Let
 
 \[
- V_M=\operatorname {span}_{\mathbb C}
+ V_M=\mathrm{span}_{\mathbb C}
  \{\chi_{z,k}:z\in\mathcal Z_M,\ 0\leq k<m_z\}.     \tag{4}
 \]
 
@@ -210,7 +210,7 @@ Absorbing \(u\) and decreasing \(a\) proves (14).  \(\square\)
 Because \(\mathcal Z_M\) is finite, define
 
 \[
- \sigma_M=\max_{z\in\mathcal Z_M}|\operatorname {Im}z|<\frac12,
+ \sigma_M=\max_{z\in\mathcal Z_M}|\mathrm{Im}\,z|<\frac12,
  \qquad
  d_M=\max_{z\in\mathcal Z_M}(m_z-1).                \tag{15}
 \]

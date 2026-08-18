@@ -95,7 +95,7 @@ ground-state representation at every finite contact cutoff.
 Let
 
 \[
- H(t)=\operatorname{diag}(e^{-t/2},e^{t/2}).           \tag{2.1}
+ H(t)=\mathrm{diag}(e^{-t/2},e^{t/2}).           \tag{2.1}
 \]
 
 For the two components \(s=\mp1/2\), apply (1.4) diagonally.  Since

@@ -32,14 +32,14 @@ lattice need not be saturated.
 For the cycle graph `C_n`,
 
 \[
- \operatorname{coker}(L_{C_n})\cong \mathbb Z\oplus\mathbb Z/n\mathbb Z.
+ \mathrm{coker}(L_{C_n})\cong \mathbb Z\oplus\mathbb Z/n\mathbb Z.
                                                                          \tag{1.2}
 \]
 
 Equivalently its Smith normal form is
 
 \[
- \operatorname{diag}(1,\ldots,1,n,0).                               \tag{1.3}
+ \mathrm{diag}(1,\ldots,1,n,0).                               \tag{1.3}
 \]
 
 ### Proof

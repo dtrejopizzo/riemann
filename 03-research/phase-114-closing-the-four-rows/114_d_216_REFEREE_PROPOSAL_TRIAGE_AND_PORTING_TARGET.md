@@ -13,11 +13,11 @@ The smallest current theorem is still
  q_N^*D_N^\dagger q_N\leq \mathcal M_N,
  \qquad
  \mathcal M_N=I-y_N^*y_N-h_N^*D_Nh_N
-       +2\operatorname {Re}(h_N^*q_N),               \tag{0.1}
+       +2\mathrm{Re}(h_N^*q_N),               \tag{0.1}
 \]
 
 including the supported-range condition
-\(q_NE_N\subset\operatorname {Dom}D_N^{\dagger/2}\).  Here \(q_N\) is
+\(q_NE_N\subset\mathrm{Dom}\,D_N^{\dagger/2}\).  Here \(q_N\) is
 the complete Tate-centred Poisson--prime--Gamma column of D.175, not its
 Witt majorant or its two moments.  Equation (0.1) is equivalent to the
 sharp birth capacity, by D.214.

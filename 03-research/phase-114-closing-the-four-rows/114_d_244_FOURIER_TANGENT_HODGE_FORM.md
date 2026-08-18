@@ -142,14 +142,14 @@ Equivalently,
 
 \[
  [\mathfrak h_S]
- =A_S\left(xx^*-\operatorname{diag}(|x_p|^2)\right). \tag{2.7}
+ =A_S\left(xx^*-\mathrm{diag}(|x_p|^2)\right). \tag{2.7}
 \]
 
 ## 3. Exact inertia
 
 \[
  \boxed{
- \operatorname{Inertia}(\mathfrak h_S)
+ \mathrm{Inertia}(\mathfrak h_S)
  =\begin{cases}
  (0,0,1),&|S|=1,\\
  (1,|S|-1,0),&|S|\ge2.
@@ -175,7 +175,7 @@ for \(c\ne0\).  Thus the positive index is at most one.  For
 gives
 
 \[
- \det(xx^*-\operatorname{diag}(|x_p|^2))
+ \det(xx^*-\mathrm{diag}(|x_p|^2))
  =(-1)^r(1-r)\prod_p|x_p|^2\ne0.                  \tag{3.2}
 \]
 

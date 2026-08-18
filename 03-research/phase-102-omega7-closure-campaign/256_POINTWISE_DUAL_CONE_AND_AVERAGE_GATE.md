@@ -174,7 +174,7 @@ Let \(K_\alpha|_{\mathcal I_N}\) be a finite family of tested nonnegative
 weights.  If
 \[
   \delta_j\notin
-  \operatorname{cone}\{K_\alpha|_{\mathcal I_N}\},
+  \mathrm{cone}\,\{K_\alpha|_{\mathcal I_N}\},
 \]
 then finite-dimensional separation gives a vector \(v=(v_n)_{n\in\mathcal
 I_N}\) such that

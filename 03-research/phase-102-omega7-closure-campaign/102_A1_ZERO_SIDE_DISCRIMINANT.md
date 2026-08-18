@@ -33,7 +33,7 @@ If a zero lies off the critical line, one member of its symmetry quartet has
 The quartet then contains a term of the form
 
 [
-  -2\operatorname{Re}(w_\rho^n)
+  -2\mathrm{Re}(w_\rho^n)
 ]
 
 along a subsequence, with geometric size.  This eventually dominates the

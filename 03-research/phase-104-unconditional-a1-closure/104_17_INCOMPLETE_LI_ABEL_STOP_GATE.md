@@ -70,7 +70,7 @@ La contribución del cuarteto al coeficiente de Li es, por tanto,
 \]
 
 El factor es \(4\), no \(8\). La forma de Weil
-\(2\operatorname {Re}\lambda_n\) duplica (3); esa es la fuente del factor
+\(2\mathrm{Re}\,\lambda_n\) duplica (3); esa es la fuente del factor
 \(8\) en `103_69` y `104_14`.
 
 ## 3. Los dos promedios finitos conservan la obstrucción exponencial
@@ -92,22 +92,22 @@ Sumando (3) se obtiene exactamente
 
 \[
  \sum_{n=1}^NQ_n
- =4N-2\operatorname {Re}\{G_N(w)+G_N(w^{-1})\},     \tag{5}
+ =4N-2\mathrm{Re}\,\{G_N(w)+G_N(w^{-1})\},     \tag{5}
 \]
 
 y, para el promedio triangular,
 
 \[
  \sum_{n=1}^N(N+1-n)Q_n
- =2N(N+1)-2\operatorname {Re}\{V_N(w)+V_N(w^{-1})\}.\tag{6}
+ =2N(N+1)-2\mathrm{Re}\,\{V_N(w)+V_N(w^{-1})\}.\tag{6}
 \]
 
 Si \(r>1\), las partes dominantes de (5)--(6) son, respectivamente,
 
 \[
- 2\operatorname {Re}{w^{N+1}\over1-w},
+ 2\mathrm{Re}{w^{N+1}\over1-w},
  \qquad
- -2\operatorname {Re}{w^{N+2}\over(1-w)^2}.        \tag{7}
+ -2\mathrm{Re}{w^{N+2}\over(1-w)^2}.        \tag{7}
 \]
 
 Luego las dos sumaciones retienen una carga de tamaño \(r^N\); no la
@@ -163,7 +163,7 @@ En la última igualdad se usaron
 
 \[
  \mathcal A_\rho(q)
- ={2q\over(1-q)^2}\operatorname {Re}
+ ={2q\over(1-q)^2}\mathrm{Re}
  \left({1\over x+\rho}+{1\over x+1-\rho}\right).  \tag{11}
 \]
 
@@ -179,7 +179,7 @@ y
  (x+\rho)(x+1-\rho)=X+iY.                         \tag{13}
 \]
 
-Como \(\operatorname {Re}(X+iY)^{-1}=X/(X^2+Y^2)\) y
+Como \(\mathrm{Re}(X+iY)^{-1}=X/(X^2+Y^2)\) y
 \(1+2x=(1+q)/(1-q)\), (8) sigue de (11)--(13). Todos
 los factores son estrictamente positivos. \(\square\)
 

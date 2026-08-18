@@ -160,7 +160,7 @@ ledger below. Candid status tags: ✅ proved · 🟡 reduced-to / conditional ·
 | **depth split (Day 22)** | coercivity only needed NEAR off-line zeros; **shallow** off-line ($\kappa\approx1$) harmless; **deep** off-line (large $\kappa$) locally $o(\rho)$ by short-interval zero-density | Day22 §2–3 | ◆ |
 | **B-2 ⟸ short-interval density** | **B-2 ⟸ uniform short-interval zero-density for $\sigma>\tfrac12+\delta$** (deep off-line locally $o(\rho)$). ≪ RH, sharper than "no gaps". Frontier: is the *uniform* version unconditional? | Day22 §3–4 | ◆ THE input / ⬜ frontier |
 | **(H) = the hypothesis (Day 23)** | (H): on-line+shallow zeros keep fraction $\eta$ of every Nyquist cell (deep off-line don't locally dominate). $(H)\Rightarrow$ coercivity (Beurling). **(H) NOT unconditional** by current methods (global $N(\tfrac12+\delta,T)\ll T^{1-c\delta}$ allows a $\log T$-cluster in one cell); ≪ RH | B2-THEOREM §4 | ◆ frontier |
-| **Theorem A (B-2, Day 23)** | modulo (H): $\mathfrak t$ closable in $H_+$, self-adjoint $\mathcal T$, $\inf\operatorname{spec}\ge1-4C>-\infty$; **RH ⟺ sign of bottom**. Lemmas A–D unconditional | B2-THEOREM §5; PAPER-A §5 | ✅ modulo (H) |
+| **Theorem A (B-2, Day 23)** | modulo (H): $\mathfrak t$ closable in $H_+$, self-adjoint $\mathcal T$, $\inf\mathrm{spec}\,\ge1-4C>-\infty$; **RH ⟺ sign of bottom**. Lemmas A–D unconditional | B2-THEOREM §5; PAPER-A §5 | ✅ modulo (H) |
 | **Kreĭn identity (Day 23)** | $\mathfrak t=E^*JE$, $E$=evaluation at $t_\rho+ib_\rho$, $J=J^*$, $J^2=I$ involution $\rho\mapsto1-\bar\rho$. Negativity of $J$ = exactly off-line zeros. Team's antilinear $J$ = convention slip | B3-KREIN §1–2; PAPER-A §6 | ✅ unconditional |
 | **angular operator $K$ (Day 23)** | exact split $\mathfrak t=\|P_+EF\|^2-\|P_-EF\|^2$ (no factor-4); $K$ defined uncond. (type-density); **$\|K\|<\infty\Leftarrow$(H)=B-2; $\|K\|\le1\iff$RH**; $\|K\|\ge e^{d/2}$ magnitude side | B3-KREIN §3; PAPER-A §7 | ✅ unconditional |
 | **$P_+\|_{R(E)}$ injective** | QUALITATIVE (type-density uniqueness, $K$ defined, maybe unbounded) — uncond., NOT circular. ≠ QUANTITATIVE boundedness (=(H)/coercivity, not free). Referee caught the conflation | B3-KREIN §3; PAPER-A §7.2 | ✅ (qualitative) |
@@ -170,7 +170,7 @@ ledger below. Candid status tags: ✅ proved · 🟡 reduced-to / conditional ·
 | **$K_{S_d}$ (flat)** | $K_{S_d}(t-ib,t-ib)=\kappa(b)$ **$t$-flat**, $\asymp(d-|b|)^{-1}$ edge-blowup (flat strip Hardy case) | Day 9 §3 | ◆ |
 | **CLOS.1** | $\mathfrak t_+|_{\mathcal D}$ **closable** (Kato). VACUOUS in $H(E_\gamma)$ (bounded); **non-vacuous in $H^2(S_d)$** ($\mathfrak t_+$ unbounded) | CLOS §1, Day9 C1 | ✅ (in $H^2(S_d)$) / ⬜ identification |
 | **CLOS.1-core** | **form-core**: is $\overline{\mathfrak t_+|_{\mathcal D}}=\mathfrak t_+$ (Hermite dense in graph norm)? — else operator-from-core $\neq$ maximal | audit A.2 | ⬜ open (load-bearing) |
-| **CLOS.2** | RH $\Rightarrow$ $\mathfrak t=\mathfrak t_+$ closable, $\inf\operatorname{spec}\ge0$ — unconditional in the RH/control world | CLOS §2 | ✅ |
+| **CLOS.2** | RH $\Rightarrow$ $\mathfrak t=\mathfrak t_+$ closable, $\inf\mathrm{spec}\,\ge0$ — unconditional in the RH/control world | CLOS §2 | ✅ |
 | **CLOS.3 = (RFB)** | $\,|\mathfrak t_-|\le a\,\mathfrak t_++C\|\cdot\|^2$ ($a<1$) $\Rightarrow$ **closable AND semibounded** in one stroke | CLOS §3 | ⬜ **the single open target** |
 | **(RFB) = Carleson** | (RFB) $\Leftarrow$ $\mu_{\mathrm{off}}=\sum\delta_{t-ib}$ is a **Carleson measure** for $H(E_\gamma)$ — NOT raw density | RFB B.1 | ✅ reduction |
 | **(RFB) sufficient** | ~~$S_{\mathrm{off}}<\infty\Rightarrow a=0$~~ — in $H^2(S_d)$, $S_{\mathrm{off}}\ge\kappa(0)\cdot\#\text{off-line}=\infty$. **$a=0$ FALSE** (referee right) | Day9 C2 | ❌ (relevant case) |
@@ -265,7 +265,7 @@ second produced the day's real content. Record in [`B2.4a-closability.md`](B2.4a
   *density of states* $\varphi'\sim\log$ (logarithmic). Which one is the weight **gates the whole worry**
   (CL §0): exponential ⟹ trivialization real; logarithmic ⟹ norm $\approx$ Weil energy, no trivialization.
   Flagged ⚠️, not built upon. (Exactly the $\Phi$-type slip, caught early this time.)
-- **The contribution (CL §2) — sign/value invariance principle.** "$\inf\operatorname{spec}\ge0$" $=$ RH
+- **The contribution (CL §2) — sign/value invariance principle.** "$\inf\mathrm{spec}\,\ge0$" $=$ RH
   is **norm-independent** (it never mentions the inner product); only *finiteness* of the bottom is
   norm-dependent. So the norm can corrupt the **value** (B-2) but **never the sign** (RH). Closability is
   exactly the guarantee that the sign *transfers to the completion*. This both answers the referee
@@ -377,7 +377,7 @@ before building on EF-id, audit it (three questions). Record in [`EF-identity-au
   monotone convergence theorem for forms**. ⟹ a non-negative self-adjoint operator $T_+\ge0$ on
   $H(E_\gamma)$ exists **unconditionally** (B-1 concrete + positive half of B-2, no hypotheses).
 - **CLOS.2 ✅** Under RH (all GRH controls), $\mathfrak t_-=0$ ⟹ $\mathfrak t=\mathfrak t_+$ **closable**,
-  $\inf\operatorname{spec}\ge0$. **The Weil form closes in $H(E_\gamma)$, unconditionally in the world the
+  $\inf\mathrm{spec}\,\ge0$. **The Weil form closes in $H(E_\gamma)$, unconditionally in the world the
   numerics live in.** de Branges geometry vindicated; chain/Fock detours unnecessary.
 - **CLOS.3 = (RFB) ⬜** RH-false residual: closability AND semiboundedness BOTH follow from ONE inequality
   $|\mathfrak t_-(g)|\le a\,\mathfrak t_+(g)+C\|g\|^2$, $a<1$ (KLMN). It is a **zero-density comparison of
@@ -424,7 +424,7 @@ before building on EF-id, audit it (three questions). Record in [`EF-identity-au
 Front 2 ("compute $K$ quantitatively") + the $S_{\mathrm{off}}$ suspicion. Record in
 [`space-correction-strip-hardy.md`](space-correction-strip-hardy.md).
 - **❌ $H(E_\gamma)$ TRIVIALIZES.** $K_{H(E_\gamma)}(\gamma,\gamma)\sim\log\gamma\,e^{-\pi\gamma/2}\to0$
-  (Stirling on $|E_\gamma|\asymp|\gamma|$), so $\operatorname{Tr}T_+=\sum_\gamma K(\gamma,\gamma)<\infty$
+  (Stirling on $|E_\gamma|\asymp|\gamma|$), so $\mathrm{Tr}\,T_+=\sum_\gamma K(\gamma,\gamma)<\infty$
   ⟹ **$\mathfrak t_+$ (and $\mathfrak t_-$) BOUNDED** ⟹ $\mathfrak t$ bounded ⟹ CLOS.1/CLOS.2 are
   **correct but VACUOUS** (Day-3 trichotomy **case 2**: trivializes, no RH separation). The Day-3 worry
   ("too-strong norm trivializes") was RIGHT; my Day-5 "de Branges back in play" used the WRONG de Branges
@@ -815,7 +815,7 @@ multi-part day driven by the external team (hostile-referee mode). Records: `RH-
 `B3-KREIN-STRUCTURE.md`, **`PAPER-A.md`** (the deliverable).
 
 - **RH end-game reconnection (`RH-ENDGAME.md`).** Candid reconnection to the actual goal: the 22 days give
-  $\inf\operatorname{spec}(\mathcal T)\ge1-4C$, $C\ge e^d>1$ finite = **B-2 (the bottom is FINITE)**. RH is
+  $\inf\mathrm{spec}(\mathcal T)\ge1-4C$, $C\ge e^d>1$ finite = **B-2 (the bottom is FINITE)**. RH is
   the **SIGN** ($\ge0$). All machinery bounds **magnitude** ($|\mathfrak t_-|\le C\mathfrak t_+$, $C>1$),
   which gives B-2 but **cannot supply the sign** — lowering $C\le1$ *is* RH. Two end-games: **(A)** faithful
   reformulation (achievable, NOT a proof); **(B)** structural positivity $\mathcal T=A^*A$ (the only route to

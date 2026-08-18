@@ -47,7 +47,7 @@ directional series (2) must be retained.
 Let
 
 \[
- V_M=\operatorname{span}\{\phi_1,\ldots,\phi_M\},
+ V_M=\mathrm{span}\,\{\phi_1,\ldots,\phi_M\},
  \qquad V_{M-1}\subset V_M,                         \tag{3}
 \]
 

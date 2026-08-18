@@ -351,8 +351,8 @@ Sea \(\Pi_0(x)\) la función de Riemann que cuenta \(p^k\) con peso
 ceros tomada simétricamente,
 
 \[
- \Pi_0(x)=\operatorname {li}(x)
- -\sum_\rho^{*}\operatorname {li}(x^\rho)
+ \Pi_0(x)=\mathrm{li}(x)
+ -\sum_\rho^{*}\mathrm{li}(x^\rho)
  -\log2+\int_x^\infty{du\over u(u^2-1)\log u}.
  \tag{30}
 \]
@@ -369,14 +369,14 @@ entonces \(\Pi_0(x)=\pi(x)+Q(x)\), y por ello
 \[
  \boxed{
  \pi(x)-L_2(x)=C_0(x)-Q(x)
- -\sum_\rho^{*}\operatorname {li}(x^\rho),}
+ -\sum_\rho^{*}\mathrm{li}(x^\rho),}
  \tag{32}
 \]
 
 donde
 
 \[
- C_0(x)=\operatorname {li}(x)-L_2(x)-\log2
+ C_0(x)=\mathrm{li}(x)-L_2(x)-\log2
        +\int_x^\infty{du\over u(u^2-1)\log u}
  \tag{33}
 \]
@@ -390,7 +390,7 @@ por conjugación, la parte de exponente \(\beta\) satisface, con
 \(x=e^y\),
 
 \[
- -\sum_j\operatorname {li}(e^{\rho_jy})
+ -\sum_j\mathrm{li}(e^{\rho_jy})
  ={2e^{\beta y}\over y}\Re\sum_{\gamma_j>0}
  c_je^{i\gamma_jy}+O_{\mathcal Z}(e^{\beta y}/y^2),
  \qquad c_j=-{1\over\rho_j}.

@@ -16,7 +16,7 @@ En Docs 70–71 la traza $T_\lambda$ apareció como un objeto que "siente" la po
 
 ### 2.1. Forma estándar
 
-Sea $h: \mathbb{R} \to \mathbb{C}$ una función de prueba que satisface: es par, analítica en la franja $|\operatorname{Im}(s)| < 1/2 + \varepsilon$ para algún $\varepsilon > 0$, y $|h(s)| = O((1+|s|)^{-2-\varepsilon})$. Sea $\hat{h}(r) = \int_{\mathbb{R}} h(s)e^{irs}\, ds$ su transformada de Fourier.
+Sea $h: \mathbb{R} \to \mathbb{C}$ una función de prueba que satisface: es par, analítica en la franja $|\mathrm{Im}(s)| < 1/2 + \varepsilon$ para algún $\varepsilon > 0$, y $|h(s)| = O((1+|s|)^{-2-\varepsilon})$. Sea $\hat{h}(r) = \int_{\mathbb{R}} h(s)e^{irs}\, ds$ su transformada de Fourier.
 
 La fórmula explícita de Weil dice:
 
@@ -26,7 +26,7 @@ donde la suma del lado izquierdo corre sobre las partes imaginarias $\gamma$ de 
 
 ### 2.2. Variante para funciones de prueba $h = h_\lambda$
 
-Queremos aplicar la fórmula con $h(s) = \operatorname{Im} G_{kk}^{full}(s + i0^+)/\pi$ (la parte imaginaria normalizada del resolvent diagonal), que satisface $h(s) = |P_k(s)|^2 w(s)$ donde $w$ es la densidad de $dm_\infty$.
+Queremos aplicar la fórmula con $h(s) = \mathrm{Im} G_{kk}^{full}(s + i0^+)/\pi$ (la parte imaginaria normalizada del resolvent diagonal), que satisface $h(s) = |P_k(s)|^2 w(s)$ donde $w$ es la densidad de $dm_\infty$.
 
 Para la diferencia $\Delta_n^{full} - \Delta_n^{full,on}$, la función de prueba relevante sería
 
@@ -50,7 +50,7 @@ La diferencia $|\zeta(1/2+is)|^2 - |\zeta_{on}(1/2+is)|^2$ puede expandirse usan
 
 $$\log|\zeta(1/2+is)|^2 = \log|\zeta_{on}(1/2+is)|^2 + 2\sum_{\rho\notin\text{crit.}} \log\left|\frac{1/2+is - \rho}{1/2+is - \rho'}\right|,$$
 
-donde $\rho$ son los ceros off-critical de $\zeta$ y $\rho' = 1/2 + i\operatorname{Im}(\rho)$ son sus imágenes críticas. Exponenciando y tomando la diferencia:
+donde $\rho$ son los ceros off-critical de $\zeta$ y $\rho' = 1/2 + i\mathrm{Im}(\rho)$ son sus imágenes críticas. Exponenciando y tomando la diferencia:
 
 $$|\zeta|^2 - |\zeta_{on}|^2 = |\zeta_{on}|^2 \left(\prod_{\rho\notin\text{crit.}}\left|\frac{1/2+is-\rho}{1/2+is-\rho'}\right|^2 - 1\right).$$
 
@@ -58,11 +58,11 @@ $$|\zeta|^2 - |\zeta_{on}|^2 = |\zeta_{on}|^2 \left(\prod_{\rho\notin\text{crit.
 
 Para la estimación principal (asumiendo que si $\neg$RH hay un número finito de ceros off-critical o que la contribución de uno domina):
 
-$$|\zeta|^2 - |\zeta_{on}|^2 \approx 2|\zeta_{on}|^2 \sum_{\rho\notin\text{crit.}}\operatorname{Re}\log\frac{1/2+is-\rho}{1/2+is-\rho'}.$$
+$$|\zeta|^2 - |\zeta_{on}|^2 \approx 2|\zeta_{on}|^2 \sum_{\rho\notin\text{crit.}}\mathrm{Re}\,\log\frac{1/2+is-\rho}{1/2+is-\rho'}.$$
 
 El logaritmo:
 
-$$\operatorname{Re}\log\frac{1/2+is-\rho}{1/2+is-\rho'} = \log\frac{|1/2+is-\rho|}{|1/2+is-\rho'|}.$$
+$$\mathrm{Re}\,\log\frac{1/2+is-\rho}{1/2+is-\rho'} = \log\frac{|1/2+is-\rho|}{|1/2+is-\rho'|}.$$
 
 Para $\rho = \sigma_0 + i\gamma_0$ con $\sigma_0 > 1/2$:
 

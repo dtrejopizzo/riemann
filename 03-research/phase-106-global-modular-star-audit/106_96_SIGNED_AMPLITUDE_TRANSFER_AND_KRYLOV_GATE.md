@@ -179,7 +179,7 @@ Let
  B=\Pi UA^{-1}U^*\Pi.                            \tag{12}
 \]
 
-On \(\operatorname {ran}\Pi\), the exact finite adaptive gain is
+On \(\mathrm{ran}\,\Pi\), the exact finite adaptive gain is
 
 \[
  \boxed{G_Y=\langle z,(I+B)^{-1}z\rangle.}       \tag{13}
@@ -220,7 +220,7 @@ Take no radical, \(A=1\), \(U=(0,3)^{\mathsf T}\),
 \(z=v=(1,1)^{\mathsf T}\), and \(\delta=1\).  Then
 
 \[
- B=\operatorname {diag}(0,9),\qquad R=2,\qquad L=9,
+ B=\mathrm{diag}(0,9),\qquad R=2,\qquad L=9,
 \]
 
 so
@@ -256,7 +256,7 @@ Put
 For \(k\geq1\), let
 
 \[
- \mathcal K_k=\operatorname {span}
+ \mathcal K_k=\mathrm{span}
  \{z,Bz,\ldots,B^{k-1}z\}.                       \tag{18}
 \]
 
@@ -297,7 +297,7 @@ support points, then
  \boxed{Q_r=G_Y.}                                 \tag{23}
 \]
 
-In particular, \(r\leq\operatorname {rank}B+1\leq M\).
+In particular, \(r\leq\mathrm{rank}\,B+1\leq M\).
 
 #### Proof
 

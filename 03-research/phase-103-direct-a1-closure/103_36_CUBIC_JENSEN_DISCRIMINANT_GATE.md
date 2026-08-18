@@ -25,7 +25,7 @@ and the no-go for extrapolating the degree-two proof.
 For a cubic \(AX^3+BX^2+CX+D\), direct elimination of a common root with
 its derivative gives
 \[
- \operatorname {disc}=B^2C^2-4AC^3-4B^3D-27A^2D^2+18ABCD.
+ \mathrm{disc}=B^2C^2-4AC^3-4B^3D-27A^2D^2+18ABCD.
 \]
 Substituting
 \[

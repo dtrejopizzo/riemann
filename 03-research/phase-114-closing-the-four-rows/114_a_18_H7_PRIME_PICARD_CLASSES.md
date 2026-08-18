@@ -21,7 +21,7 @@
 Let `X=overline{Spec Z}`.  Haran's equation (11.19) gives
 
 \[
- \operatorname{Pic}(X)
+ \mathrm{Pic}(X)
  =\mathbb Q^*\backslash\mathbb A_{\mathbb Q}^*/
        \prod_v\widehat{\mathbb Z}_v^*
  \simeq\mathbb R_+.                                                       \tag{1.1}
@@ -32,7 +32,7 @@ inverse uniformizer `p^{-1}` and whose other finite and real components are
 one.  Let
 
 \[
- L_p=[a^{(p)}]\in\operatorname{Pic}(X).                                   \tag{1.2}
+ L_p=[a^{(p)}]\in\mathrm{Pic}(X).                                   \tag{1.2}
 \]
 
 Use normalized absolute values and define the additive arithmetic degree

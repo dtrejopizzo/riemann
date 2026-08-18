@@ -127,7 +127,7 @@ The row-C supercharacter identity therefore gives, on primitive tests,
 \[
  \boxed{
  B_{\rm nuc}(f,f)
- =-\operatorname{Tr}_{(V,g)}(T_gT_g^*)\le0.}          \tag{3.6}
+ =-\mathrm{Tr}_{(V,g)}(T_gT_g^*)\le0.}          \tag{3.6}
 \]
 
 No spectral expansion is used in (3.6): it follows from the source quotient,

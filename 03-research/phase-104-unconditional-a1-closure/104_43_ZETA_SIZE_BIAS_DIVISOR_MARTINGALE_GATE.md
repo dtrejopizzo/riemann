@@ -12,8 +12,8 @@ factorización size-biased exacta: al sesgar por \(\log N\), se obtiene
 exactamente los pesos \(\Lambda(d)d^{-s}\). Condicionado a
 \(N^\star=n\), el divisor \(D\) se elige con probabilidad
 \(\Lambda(d)/\log n\). El comparador polar es la factorización continua
-\(\Gamma(2,\varepsilon)=\operatorname{Exp}(\varepsilon)+
-\operatorname{Exp}(\varepsilon)\), cuyo selector condicionado es uniforme
+\(\Gamma(2,\varepsilon)=\mathrm{Exp}(\varepsilon)+
+\mathrm{Exp}(\varepsilon)\), cuyo selector condicionado es uniforme
 en el intervalo logarítmico.
 
 La factorización es exacta y conserva simultáneamente todas las potencias
@@ -146,7 +146,7 @@ torre ni tomado valores absolutos.
 
 ## 3. Comparador polar y selector uniforme
 
-Sea \(Y_0\sim\operatorname{Exp}(\varepsilon)\). Su sesgo por el valor es
+Sea \(Y_0\sim\mathrm{Exp}(\varepsilon)\). Su sesgo por el valor es
 \(S_0^\star\sim\Gamma(2,\varepsilon)\), y admite la factorización
 
 \[
@@ -178,8 +178,8 @@ Las dos identidades de conservación de la media son
 Jensen condicional da data processing, por ejemplo
 
 \[
- \operatorname{Var}_{\mathbb P_s^\star}(Kf)
- \le \operatorname{Var}_{\mathbb P_s(D)}(f),                 \tag{15}
+ \mathrm{Var}_{\mathbb P_s^\star}(Kf)
+ \le \mathrm{Var}_{\mathbb P_s(D)}(f),                 \tag{15}
 \]
 
 y la desigualdad análoga para \(U\). Es una contracción de la parte
@@ -318,7 +318,7 @@ Efron--Stein, primero sobre un número finito de primos y luego por límite,
 da
 
 \[
- \operatorname{Var}f(X_\varepsilon)
+ \mathrm{Var}\,f(X_\varepsilon)
  \le\mathcal E_\varepsilon(f).                               \tag{29}
 \]
 
@@ -342,7 +342,7 @@ líderes,
 
 \[
  \boxed{
- \operatorname{Var}\varphi_n(X_\varepsilon)
+ \mathrm{Var}\,\varphi_n(X_\varepsilon)
  =\left\{{2d\choose d}-1+O_n(\varepsilon)\right\}
    \varepsilon^{-2d}.}                                        \tag{32}
 \]

@@ -382,7 +382,7 @@ Hilbert completion,
 with the following properties:
 
 1. its finite-orbit component is
-   \(\mathcal L_{\rm conn}\mathfrak e_1\operatorname {Tr}_{\rm orb}\);
+   \(\mathcal L_{\rm conn}\mathfrak e_1\mathrm{Tr}_{\rm orb}\);
 2. its infinite component is the operator-valued Gamma row
    \(\mathbb B_\infty\), not the scalar zero-mode row;
 3. its polar component is the determinant boundary of 106.195;

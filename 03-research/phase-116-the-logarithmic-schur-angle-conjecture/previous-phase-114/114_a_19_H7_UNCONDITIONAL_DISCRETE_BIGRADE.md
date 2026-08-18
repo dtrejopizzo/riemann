@@ -38,7 +38,7 @@ coordinates are
 The homomorphism
 
 \[
- \beta_{p,q}:\mathbb Z^2\longrightarrow\operatorname{Pic}_{\rm ext}(Y),
+ \beta_{p,q}:\mathbb Z^2\longrightarrow\mathrm{Pic}_{\rm ext}(Y),
  \qquad (m,n)\longmapsto[\mathcal B_{m,n}]                                 \tag{2.1}
 \]
 

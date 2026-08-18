@@ -2,7 +2,7 @@
 
 ## 1. New published geometric input
 
-Connes--Consani, *On the Absolute Geometry of* \(\operatorname{Spec}\mathbb Z\)
+Connes--Consani, *On the Absolute Geometry of* \(\mathrm{Spec}\,\mathbb Z\)
 [arXiv:2606.06604v1, Proposition 4.1], identify the space of
 archimedean-local complex points over the stalk at \(p\) with \(\mathbb C\):
 

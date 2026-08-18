@@ -132,7 +132,7 @@ For every bounded \(Y\),
 
 \[
 \boxed{
- \operatorname {Tr}\bigl(P[\widetilde L,Y]\bigr)=0.} \tag{10}
+ \mathrm{Tr}\,\bigl(P[\widetilde L,Y]\bigr)=0.} \tag{10}
 \]
 
 #### Proof
@@ -141,8 +141,8 @@ Because \(P\) has finite rank, cyclicity is legitimate, and (9) gives
 
 \[
 \begin{aligned}
- \operatorname {Tr}(P\widetilde LY-PY\widetilde L)
- &=\operatorname {Tr}(\widetilde LPY-\widetilde LPY)=0.
+ \mathrm{Tr}(P\widetilde LY-PY\widetilde L)
+ &=\mathrm{Tr}(\widetilde LPY-\widetilde LPY)=0.
 \end{aligned}
 \]
 
@@ -160,9 +160,9 @@ holds, then
 
 \[
 \boxed{
- \operatorname {Tr}(PA)
- =\|CP\|_{\rm HS}^2+\operatorname {Tr}(PJ)
-  +\operatorname {Tr}(PR).}                         \tag{12}
+ \mathrm{Tr}(PA)
+ =\|CP\|_{\rm HS}^2+\mathrm{Tr}(PJ)
+  +\mathrm{Tr}(PR).}                         \tag{12}
 \]
 
 In particular, the commutator may rearrange the integrand, but it supplies
@@ -182,7 +182,7 @@ Let \(S=C^*C+J\geq0\) be any bounded positive operator and set
 Assume that the cluster is spectrally isolated,
 
 \[
- d=\operatorname {dist}\{\sigma(\widetilde L|_{P\mathcal H}),
+ d=\mathrm{dist}\,\{\sigma(\widetilde L|_{P\mathcal H}),
                           \sigma(\widetilde L|_{Q\mathcal H})\}>0. \tag{14}
 \]
 
@@ -295,7 +295,7 @@ If the eigenvalues in the cluster are \(\lambda_1,\ldots,\lambda_m\),
 then
 
 \[
- \operatorname {Tr}(PA)
+ \mathrm{Tr}(PA)
  =\sum_{k=1}^m\lambda_k(\lambda_k-1/2)<0.           \tag{20}
 \]
 
@@ -307,17 +307,17 @@ Under (19), every identity (11) with \(J\geq0\) satisfies
 
 \[
 \boxed{
- \operatorname {Tr}(PR)
+ \mathrm{Tr}(PR)
  =\sum_{k=1}^m\lambda_k(\lambda_k-1/2)
-  -\|CP\|_{\rm HS}^2-\operatorname {Tr}(PJ)<0.}     \tag{21}
+  -\|CP\|_{\rm HS}^2-\mathrm{Tr}(PJ)<0.}     \tag{21}
 \]
 
 In particular, no choice of \(Y\) can make \(PRP\geq0\).  For the exact
 physical square in (5),
 
 \[
- \operatorname {Tr}(PR_T)
- =\operatorname {Tr}(PA)-\|TP\|_{\rm HS}^2<0.      \tag{22}
+ \mathrm{Tr}(PR_T)
+ =\mathrm{Tr}(PA)-\|TP\|_{\rm HS}^2<0.      \tag{22}
 \]
 
 For the primitive square in (6), the residual is smaller still by the
@@ -391,7 +391,7 @@ vector has eigenvalue \(\lambda\).  Taking \(P=P_1\),
 
 \[
 \boxed{
- \operatorname {Tr}P
+ \mathrm{Tr}\,P
  \left(L_\lambda^2-\frac12L_\lambda\right)
  =\lambda(\lambda-1/2)<0.}                          \tag{28}
 \]
@@ -423,7 +423,7 @@ remaining literal-prime statement is still
 
 \[
 \boxed{
- \operatorname {Tr}P
+ \mathrm{Tr}\,P
  \left(L^2-\frac12L\right)\geq0}                    \tag{30}
 \]
 

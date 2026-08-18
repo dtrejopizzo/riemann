@@ -100,7 +100,7 @@ Retain
 Document 106.172 proves
 
 \[
- \operatorname {FP}_{s\downarrow1/2}C_s=-\kappa_\infty.
+ \mathrm{FP}_{s\downarrow1/2}C_s=-\kappa_\infty.
 \tag{8}
 \]
 
@@ -114,7 +114,7 @@ exists and equals
 \[
  \boxed{
  \begin{aligned}
- \operatorname {FP}_{s\downarrow1/2}\mathfrak Q_s(x,y)
+ \mathrm{FP}_{s\downarrow1/2}\mathfrak Q_s(x,y)
  &=\sum_p\sum_{k\geq1}w_{p,k}
  \bigl(
    \langle r_{p,k},G\rangle
@@ -129,7 +129,7 @@ In particular, on the common generic diagonal,
 
 \[
  \boxed{
- \operatorname {FP}_{s\downarrow1/2}
+ \mathrm{FP}_{s\downarrow1/2}
  \mathfrak Q_s((F,0),(G,0))=0.}
 \tag{10}
 \]
@@ -197,14 +197,14 @@ terms belong to the connected Euler localization and must not be moved
 into the Gamma counterspace.
 
 Let \(\eta\) extract the common component \(F\) in (3), and let
-\(\operatorname {res}(F,r)=r\).  On the algebraic restricted-product
+\(\mathrm{res}(F,r)=r\).  On the algebraic restricted-product
 core, the full boundary localization therefore decomposes as
 
 \[
  \boxed{
- \operatorname {Loc}_{\rm bd}(F,r)
+ \mathrm{Loc}_{\rm bd}(F,r)
  =d_{\rm bd}\eta(F,r)
-  +\operatorname {Loc}_{\rm Euler}(r),}
+  +\mathrm{Loc}_{\rm Euler}(r),}
 \tag{14}
 \]
 

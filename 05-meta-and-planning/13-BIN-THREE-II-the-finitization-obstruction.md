@@ -21,7 +21,7 @@ lattice $\mathrm{NS}(C\times C)$.
 
 > **Finitization $=$ a periodicity.** The Frobenius gives a period $2\pi/\log q$ that folds infinitely many zeros
 > into $2g$ orbits. *This* is what makes ζ's "infinite-order positivity" a finite one. Bin three's occupant, made
-> concrete: **a Frobenius-like periodicity for $\operatorname{Spec}\mathbb Z$** that folds the zeros of $\zeta_
+> concrete: **a Frobenius-like periodicity for $\mathrm{Spec}\,\mathbb Z$** that folds the zeros of $\zeta_
 > {\mathbb Q}$ into finitely many per period.
 
 ## 2. The obstruction (conditional on the Linear Independence conjecture)
@@ -36,7 +36,7 @@ The zeros of $\zeta_{\mathbb Q}$ have **no such period**, and there is a believe
 
 > **Obstruction.** Under LI, $\{\gamma_n\}$ admits **no** Frobenius-type periodicity — hence **no finite-dimensional
 > algebraic model** (a finite-rank cohomology with the zeros as Frobenius arguments). The function-field
-> finitization **cannot transfer** to $\operatorname{Spec}\mathbb Z$: the very independence the zeros are believed
+> finitization **cannot transfer** to $\mathrm{Spec}\,\mathbb Z$: the very independence the zeros are believed
 > to possess is the negation of the structure a finitization needs.
 
 This is not an artifact — it is the $\mathbb F_1$ difficulty in exact form:
@@ -51,9 +51,9 @@ $$
 **The fundamental domain that holds finitely many zeros becomes infinite exactly in the $\mathbb F_1$ limit.** The
 $2g$ folded zeros spread out and fill the line; the finite structure **dissolves precisely where it is needed.**
 So the Connes–Consani program is not stalled by a missing lemma but by a **degeneration**: the device that
-finitizes ($q>1$ periodicity) is singular at $q=1$. Building $\overline{\operatorname{Spec}\mathbb Z}$ is the
+finitizes ($q>1$ periodicity) is singular at $q=1$. Building $\overline{\mathrm{Spec}\,\mathbb Z}$ is the
 attempt to extract a *finite residue* from this divergence — and that is exactly where it is stuck (the $H^1$/
-arithmetic Hodge index, the "$2g$" of $\operatorname{Spec}\mathbb Z$, has no finite home as the period blows up).
+arithmetic Hodge index, the "$2g$" of $\mathrm{Spec}\,\mathbb Z$, has no finite home as the period blows up).
 
 ## 4. The fork, stated candidly
 

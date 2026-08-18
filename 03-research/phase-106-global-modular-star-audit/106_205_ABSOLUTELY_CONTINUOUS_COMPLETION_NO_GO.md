@@ -37,7 +37,7 @@ be a measurable field of closed densely defined operators.  Denote by
 
 \[
  \boxed{
- \overline{\operatorname {Ran}\mathcal M}
+ \overline{\mathrm{Ran}\,\mathcal M}
  =L^2(X,\mu;\mathfrak h)
  \quad\Longleftrightarrow\quad
  \ker M(x)^*=0\ \text{for almost every }x.}
@@ -54,7 +54,7 @@ The adjoint of a maximal decomposable operator is the decomposable
 operator with fibers (M(x)^*).  Hence
 
 \[
- (\overline{\operatorname {Ran}\mathcal M})^\perp
+ (\overline{\mathrm{Ran}\,\mathcal M})^\perp
  =\ker\mathcal M^*
  =\int_X^\oplus\ker M(x)^*\,d\mu(x).
 \tag{3}

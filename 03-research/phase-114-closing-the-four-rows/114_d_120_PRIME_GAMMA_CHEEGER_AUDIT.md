@@ -87,7 +87,7 @@ Dominated convergence in (2.2) gives
 
 After smoothing the two endpoints, the same holds for form-domain tests.
 Thus the infinite translation graph has Cheeger constant zero and
-\(\inf\operatorname{Spec}L_X=0\) for every fixed \(X\).
+\(\inf\mathrm{Spec}\,L_X=0\) for every fixed \(X\).
 
 ## 3. Exact removal of both Tate moments
 

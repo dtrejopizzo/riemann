@@ -54,7 +54,7 @@ on the positive half-line.  For \(a\geq0\), define the analytic germ
 \]
 
 The theta series makes (2) analytic in the connected strip
-\(|\operatorname {Im}z|<\pi/4\).
+\(|\mathrm{Im}\,z|<\pi/4\).
 
 ### Lemma 1 — Finite vertex independence
 
@@ -117,7 +117,7 @@ multigraph with endpoint maps \(s,t:E\to V\).  For a function \(r\) on
 For coefficients \(c=(c_e)_{e\in E}\), use the incidence divergence
 
 \[
- (\operatorname {div}c)_v
+ (\mathrm{div}\,c)_v
  =\sum_{e:t(e)=v}c_e-\sum_{e:s(e)=v}c_e.
  \tag{8}
 \]
@@ -126,7 +126,7 @@ Then the discrete integration-by-parts identity is
 
 \[
  \sum_{e\in E}c_e(\nabla_Vr)_e
- =\sum_{v\in V}(\operatorname {div}c)_v r(v).
+ =\sum_{v\in V}(\mathrm{div}\,c)_v r(v).
  \tag{9}
 \]
 
@@ -135,7 +135,7 @@ Then the discrete integration-by-parts identity is
 For \(c\in\mathbb C^E\), the following are equivalent:
 
 1. \(\sum_ec_e(\nabla_Vr_j)_e=0\) for every \(j\geq0\);
-2. \(\operatorname {div}c=0\);
+2. \(\mathrm{div}\,c=0\);
 3. \(\sum_ec_e(\nabla_Vr)_e=0\) for every function \(r:V\to\mathbb C\).
 
 In particular, if the underlying unoriented graph is a forest, then all
@@ -146,12 +146,12 @@ coefficients on its nondegenerate edges vanish.
 By (9), condition 1 is
 
 \[
- \sum_{v\in V}(\operatorname {div}c)_v r_j(v)=0
+ \sum_{v\in V}(\mathrm{div}\,c)_v r_j(v)=0
  \qquad(j\geq0).
  \tag{10}
 \]
 
-Lemma 1 gives \(\operatorname {div}c=0\), proving 1 implies 2.  Equation
+Lemma 1 gives \(\mathrm{div}\,c=0\), proving 1 implies 2.  Equation
 (9) gives 2 implies 3, and 3 implies 1 is immediate.  On a finite forest
 the incidence kernel is the cycle space and is zero after degenerate edges
 are removed.  \(\square\)
@@ -298,7 +298,7 @@ Let
 
 \[
  \mathscr M_H=
- \overline{\operatorname {span}}
+ \overline{\mathrm{span}}
  \{\mathcal G_Hr_j:j\geq0\}.
  \tag{20}
 \]
@@ -364,7 +364,7 @@ For a positive heat or hybrid state \(\Gamma_t\), (24) lifts by a common
 form-core approximation to
 
 \[
- \operatorname {Tr}\{(A-\tfrac12I)\Gamma_t\}
+ \mathrm{Tr}\,\{(A-\tfrac12I)\Gamma_t\}
  =\|G_\perp\Gamma_t^{1/2}\|_{\mathfrak S_2}^2
   -\|D_\perp\Gamma_t^{1/2}\|_{\mathfrak S_2}^2.
  \tag{27}

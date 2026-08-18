@@ -26,7 +26,7 @@ be the literal Haran square and the regular reflection of `a109`--`a110`.
 Chartwise, (1.1) is contravariant to the quotient
 
 \[
- A\longrightarrow\operatorname{Reg}_{\mathbb Z}(A).                  \tag{1.2}
+ A\longrightarrow\mathrm{Reg}_{\mathbb Z}(A).                  \tag{1.2}
 \]
 
 Thus `i` behaves as a closed restriction, not as a retraction.  The two

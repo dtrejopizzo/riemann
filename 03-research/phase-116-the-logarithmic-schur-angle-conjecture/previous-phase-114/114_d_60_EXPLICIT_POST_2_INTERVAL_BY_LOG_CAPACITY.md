@@ -224,7 +224,7 @@ space the polar block vanishes, so
 
 \[
  QW_T(F,F)=L_{\infty,T}(F,F)-m_0\|F\|^2
- -2c\,\operatorname{Re}\langle F,S_aF\rangle.           \tag{5.1}
+ -2c\,\mathrm{Re}\,\langle F,S_aF\rangle.           \tag{5.1}
 \]
 
 Combining (4.2)--(4.5), and using `c<1/2`, gives

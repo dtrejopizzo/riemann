@@ -42,7 +42,7 @@ D.75 gives the canonical compact potential
 with
 
 \[
- \operatorname {supp}(W_TF)\subseteq I_T.                   \tag{1.3}
+ \mathrm{supp}(W_TF)\subseteq I_T.                   \tag{1.3}
 \]
 
 Thus `W_T` is injective, commutes with translation and with zero extension,
@@ -84,7 +84,7 @@ Then for `u=W_TF`,
   &=\log p\sum_{k\ne0}p^{-|k|/2}
        \langle F,S_{k\log p}F\rangle\\
   &=2\sum_{k\ge1}{\Lambda(p^k)\over\sqrt{p^k}}
-       \operatorname {Re}\langle F,S_{k\log p}F\rangle.
+       \mathrm{Re}\,\langle F,S_{k\log p}F\rangle.
  \end{aligned}                                               \tag{2.4}
 \]
 
@@ -211,9 +211,9 @@ squares.
 Let
 
 \[
- \mathcal R_{B,T}=\overline{\operatorname {Ran}(\mathbf B_TW_T)},
+ \mathcal R_{B,T}=\overline{\mathrm{Ran}(\mathbf B_TW_T)},
  \qquad
- \mathcal R_{S,T}=\overline{\operatorname {Ran}(\mathbf S_TW_T)}. \tag{6.1}
+ \mathcal R_{S,T}=\overline{\mathrm{Ran}(\mathbf S_TW_T)}. \tag{6.1}
 \]
 
 Because every finite-place `B_p` contains a nonzero scalar multiple of
@@ -312,7 +312,7 @@ For `u=W_TF`, define
 where `C_u` is convolution by `u`.  Since
 
 \[
- J_{L,T}+\operatorname {supp}u\subseteq I_L,                 \tag{7.3}
+ J_{L,T}+\mathrm{supp}\,u\subseteq I_L,                 \tag{7.3}
 \]
 
 the range is supported:
@@ -349,7 +349,7 @@ Thus (7.2) is an actual supported and faithful lift, not a specification.
 The missing equality is the **adelic guard-band trace theorem**
 
 \[
- \operatorname {Tr}\bigl(mathcal G_{T,L}(F)^*
+ \mathrm{Tr}\,\bigl(mathcal G_{T,L}(F)^*
  (U_{\rm ad}^*P_{I_L}U_{\rm ad}-P_{I_L})
  \mathcal G_{T,L}(G)\bigr)
  =B_{{\rm nuc},T}(F,G),                                    \tag{7.7}

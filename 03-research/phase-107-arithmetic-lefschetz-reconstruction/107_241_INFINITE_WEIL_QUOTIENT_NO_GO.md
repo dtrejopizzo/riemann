@@ -126,7 +126,7 @@ is infinite-dimensional.
 ### Proof
 
 For every bilinear form, the map induced by \(T_W\) identifies the quotient
-by its left radical with \(\operatorname{im}T_W\).  Theorem 3.1 says that
+by its left radical with \(\mathrm{im}\,T_W\).  Theorem 3.1 says that
 this image has infinite dimension. \(\square\)
 
 ### Corollary 4.2 -- finite-target no-go

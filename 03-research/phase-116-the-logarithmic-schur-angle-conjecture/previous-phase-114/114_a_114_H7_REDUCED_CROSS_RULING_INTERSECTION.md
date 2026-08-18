@@ -21,7 +21,7 @@ On an affine chart `A` of `Y^reg`, put
 By the quotient-pushout theorem of `a113`,
 
 \[
- \operatorname{Spec}Q_{p,q}
+ \mathrm{Spec}\,Q_{p,q}
  \simeq D_{p,1}\times_{Y^{\rm reg}}D_{q,2}.                            \tag{1.2}
 \]
 
@@ -41,7 +41,7 @@ Each ruling map also descends modulo `p` to a section
 
 \[
  s_{p,i}:F(\mathbb F_p)\longrightarrow Q_{p,p},
- \qquad \bar\nabla_p s_{p,i}=\operatorname{id}.                        \tag{2.2}
+ \qquad \bar\nabla_p s_{p,i}=\mathrm{id}.                        \tag{2.2}
 \]
 
 ### Proposition 2.1 (canonical same-prime contact retract)

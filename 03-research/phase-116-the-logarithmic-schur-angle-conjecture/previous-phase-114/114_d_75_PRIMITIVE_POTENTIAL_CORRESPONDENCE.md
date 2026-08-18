@@ -128,8 +128,8 @@ If `t<a`, similarly
 Therefore
 
 \[
- \boxed{\operatorname {supp}(\mathcal W\mu)
- \subseteq\operatorname {conv}(\operatorname {supp}\mu).}   \tag{2.7}
+ \boxed{\mathrm{supp}(\mathcal W\mu)
+ \subseteq\mathrm{conv}(\mathrm{supp}\,\mu).}   \tag{2.7}
 \]
 
 For a finite Dirac combination
@@ -184,9 +184,9 @@ Thus `W` is a morphism from the regular primitive ideal to the convolution
 module of compact potentials.  It is compatible with support addition:
 
 \[
- \operatorname {supp}\mathcal W(\mu*\nu)
- \subseteq \operatorname {conv}(\operatorname {supp}\mu)
-           +\operatorname {conv}(\operatorname {supp}\nu).   \tag{3.2}
+ \mathrm{supp}\,\mathcal W(\mu*\nu)
+ \subseteq \mathrm{conv}(\mathrm{supp}\,\mu)
+           +\mathrm{conv}(\mathrm{supp}\,\nu).   \tag{3.2}
 \]
 
 For windows this gives exact directed maps

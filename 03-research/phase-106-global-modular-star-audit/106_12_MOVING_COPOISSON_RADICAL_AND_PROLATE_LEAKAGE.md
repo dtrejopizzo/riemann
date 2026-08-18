@@ -89,7 +89,7 @@ Connes' semilocal trace formula keeps the local terms coupled:
 \[
  -\sum_{v\in S}W_v(H)
  =\log(TW)H(1)
-  +\operatorname {Tr}\!\left(
+  +\mathrm{Tr}\,\!\left(
        \vartheta(H)(1-P_T^S-\widehat P_W^S)\right).
  \tag{6}
 \]
@@ -122,7 +122,7 @@ Put \(F=\mathcal E(f)\). Then:
 1. \(F(u)=0\) for \(u>\lambda\) and
 
    \[
-   |F(u)|\leq u^{1/2}\operatorname {Var}(f),
+   |F(u)|\leq u^{1/2}\mathrm{Var}(f),
    \qquad u>0;
    \tag{8}
    \]
@@ -167,8 +167,8 @@ Partition the positive half-line into the half-open intervals
  &=\left|\sum_{n\geq1}
      \left(uf(nu)-\int_{I_n}f(t)\,dt\right)\right| \\
  &\leq \sum_{n\geq1}\int_{I_n}|f(nu)-f(t)|\,dt \\
- &\leq u\sum_{n\geq1}\operatorname {Var}_{I_n}(f)
- \leq u\operatorname {Var}(f).
+ &\leq u\sum_{n\geq1}\mathrm{Var}_{I_n}(f)
+ \leq u\mathrm{Var}(f).
 \end{aligned}
  \tag{12}
 \]
@@ -314,7 +314,7 @@ finite semilocal expression. Thus (18) is equivalently
 \boxed{
  W_{0,2}(H)
  +\log(TW)H(1)
- +\operatorname {Tr}\!\left(
+ +\mathrm{Tr}\,\!\left(
    \vartheta(H)(1-P_T^S-\widehat P_W^S)\right)
  =-QW(R_\lambda,G).}
 \tag{21}
@@ -745,7 +745,7 @@ formula. In operator language, if \(A_L\) is the semilocal Weil operator,
 \[
 \boxed{
  \|A_LP_I\mathcal E f\|_2
- =\sup_{\substack{G\in\operatorname {Dom}(A_L)\\\|G\|_2=1}}
+ =\sup_{\substack{G\in\mathrm{Dom}(A_L)\\\|G\|_2=1}}
  \left|QW(R_\lambda,G)\right|.}
 \tag{54}
 \]
@@ -755,7 +755,7 @@ supported piecewise-smooth vector \(P_I\mathcal E f\) has Fourier transform
 \(O(|t|^{-1})\). Since the archimedean multiplier is
 \(O(\log(2+|t|))\), its square times \(|t|^{-2}\) is integrable; the polar
 and finite prime blocks are bounded. Hence
-\(P_I\mathcal E f\in\operatorname {Dom}(A_L)\), and (18) identifies the
+\(P_I\mathcal E f\in\mathrm{Dom}(A_L)\), and (18) identifies the
 right side with the norm of its represented form functional.
 
 The right side is a form-dual norm, not the \(L^2\) norm of the prolate

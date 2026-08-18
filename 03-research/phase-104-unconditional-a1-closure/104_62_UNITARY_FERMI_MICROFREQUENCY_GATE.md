@@ -108,7 +108,7 @@ La suma exterior es finita, de modo que (5) implica exactamente
 
 \[
  \boxed{\mathfrak F_t(X)={1\over2}-\int_0^\infty
- {\operatorname {Im}\mathcal C_{t,X}(s)\over\sinh(\pi s)}\,ds.}
+ {\mathrm{Im}\,\mathcal C_{t,X}(s)\over\sinh(\pi s)}\,ds.}
                                                                     \tag{7}
 \]
 
@@ -150,7 +150,7 @@ acotados, lo que domina el integrando cerca de cero; en infinito se usa
 \[
  \boxed{\mathfrak F_t(X)={1\over2}
  -\lim_{\varepsilon\downarrow0}\int_0^\infty
- {\operatorname {Im}\mathcal C_{t,X,\varepsilon}(s)
+ {\mathrm{Im}\,\mathcal C_{t,X,\varepsilon}(s)
  \over\sinh(\pi s)}\,ds.}                                  \tag{10}
 \]
 
@@ -182,7 +182,7 @@ el Teorema 3.2 de `104_61` y (7) dan la equivalencia exacta
 
 \[
  \boxed{\mathrm {RH}\iff
- \int_0^\infty{\operatorname {Im}\mathcal D_{t,X}(s)
+ \int_0^\infty{\mathrm{Im}\,\mathcal D_{t,X}(s)
  \over\sinh(\pi s)}\,ds\longrightarrow0.}                  \tag{13}
 \]
 
@@ -260,7 +260,7 @@ grado.
 Para el cuarteto de `104_17`, \(w=2i\),
 
 \[
- Q_n=4-2\operatorname {Re}(w^n+w^{-n}),
+ Q_n=4-2\mathrm{Re}(w^n+w^{-n}),
 \]
 
 y, si \(n\equiv0\pmod4\),
@@ -442,7 +442,7 @@ La versión aritmética regulada usa
 \]
 
 En (27), \(\sin(t e^{-nv}x_n)\) es el límite de
-\(\operatorname {Im}U_{n,\varepsilon}(v)\). Polo, bloque arquimediano,
+\(\mathrm{Im}\,U_{n,\varepsilon}(v)\). Polo, bloque arquimediano,
 primos y potencias primas permanecen acoplados hasta después de aplicar la
 no linealidad.
 
@@ -474,7 +474,7 @@ del clasificador de `104_53`.
 ### 6.1 La franja no lineal tiene ancho explícito
 
 Usemos el hecho certificado de que cada cero no trivial satisface
-\(|\operatorname {Im}\rho|>14\). Si
+\(|\mathrm{Im}\,\rho|>14\). Si
 \(z_\rho=1-1/\rho\), \(\rho=\beta+i\gamma\), entonces
 
 \[
@@ -601,7 +601,7 @@ La estimación que habría que probar sigue siendo
 
 \[
  \boxed{\int_{-\infty}^{\infty}\sum_{n\le X}
- {e^{-nv}\operatorname {Im}U_{n,0}(v)
+ {e^{-nv}\mathrm{Im}\,U_{n,0}(v)
   \over\sinh(\pi e^{-nv})}\,dv
  ={1\over2}H_X+o(H_X).}                                    \tag{37}
 \]

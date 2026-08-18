@@ -114,7 +114,7 @@ calculation as (5):
 Nevertheless it has the off-imaginary zeros
 
 \[
- w=\pm\operatorname{arcosh}(1/a)+(2k+1)\pi i. \tag{8}
+ w=\pm\mathrm{arcosh}(1/a)+(2k+1)\pi i. \tag{8}
 \]
 
 This is not an artefact of atoms or lack of decay.  If

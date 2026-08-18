@@ -142,7 +142,7 @@ cone.  In expanded form,
 
 \[
  \sum_{k\ge1}c_k
- =h^*Dh-2\operatorname {Re}(h^*q)+q^*D^\dagger q.   \tag{2.5}
+ =h^*Dh-2\mathrm{Re}(h^*q)+q^*D^\dagger q.   \tag{2.5}
 \]
 
 If (q=0), the entire infinite return series is simply (h^*Dh).  Hence

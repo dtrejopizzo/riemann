@@ -66,7 +66,7 @@ choice to make.
 ## 3. The gap in (H), measured
 
 (H) asks for
-\(\operatorname{Tr}(\vartheta(f)\mathbf S_S)=\sum_{v\in S}W_v^{CC}(f)+E_S(f)\).
+\(\mathrm{Tr}(\vartheta(f)\mathbf S_S)=\sum_{v\in S}W_v^{CC}(f)+E_S(f)\).
 Compare the two sides after Proposition 1.
 
 **What the Sonin side supplies.**  Expanding the weight,
@@ -92,7 +92,7 @@ coefficients \(\Lambda(n)/\sqrt n\), **von Mangoldt**, and the structure is
 > 2310.18423 does not perform.**
 
 This is not a guess about their paper.  Searching the source for any evaluation
-of \(\operatorname{Tr}(\vartheta(f)\mathbf S_S)\) returns nothing; the only
+of \(\mathrm{Tr}(\vartheta(f)\mathbf S_S)\) returns nothing; the only
 statements are programmatic (lines 197–198):
 
 > *"We **expect** that the use of such operator-theoretic tools in the semilocal
@@ -129,7 +129,7 @@ the invariant local Sonin space has dimension one per prime.
 * Proposition 1 (change of spectral measure): **PROVED**, read off
   `sonintensor` + \eqref{ess}.
 * Proposition 2 (the gap is a logarithmic derivative): **PROVED**.
-* \(\operatorname{Tr}(\vartheta(f)\mathbf S_S)\): **not computed anywhere**;
+* \(\mathrm{Tr}(\vartheta(f)\mathbf S_S)\): **not computed anywhere**;
   CCM state a strategy, not a theorem.
 * (H): **OPEN**, and now localised to one named computation.
 * \(E_S\le0\): **OPEN**, downstream of (H).

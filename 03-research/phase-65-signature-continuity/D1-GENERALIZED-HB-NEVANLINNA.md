@@ -35,8 +35,8 @@ half-plane analogue.
 Pontryagin space of negative index $\kappa$ and $\Gamma(z)\in\Pi$ a realization map such that
 $\mathsf K(z,w)=[\Gamma(w),\Gamma(z)]$.
 \end{enumerate}
-The associated index in each chart: $\operatorname{sq}_-(\mathsf K_E)$, $\operatorname{sq}_-(\mathsf N_M)$,
-$\operatorname{sq}_-(\mathsf S)$, $\operatorname{ind}_-\Pi$.
+The associated index in each chart: $\mathrm{sq}_-(\mathsf K_E)$, $\mathrm{sq}_-(\mathsf N_M)$,
+$\mathrm{sq}_-(\mathsf S)$, $\mathrm{ind}_-\Pi$.
 \end{definition}
 
 ---
@@ -59,8 +59,8 @@ $E^\#=SE$, $\overline{E^\#(w)}=\overline{S(w)}\,\overline{E(w)}$, giving $E(z)\o
 
 \begin{corollary}\label{cor:hbn}
 A strictly positive scalar gauge $g(z)\overline{g(w)}$ does not change negative squares (congruence of
-every finite Gram matrix by $\operatorname{diag}(g(z_i))$). Hence $\operatorname{sq}_-(\mathsf K_E)=
-\operatorname{sq}_-(\mathsf S)$.
+every finite Gram matrix by $\mathrm{diag}(g(z_i))$). Hence $\mathrm{sq}_-(\mathsf K_E)=
+\mathrm{sq}_-(\mathsf S)$.
 \end{corollary}
 
 This is the gauge morphism of D3, here at the kernel level.
@@ -77,7 +77,7 @@ The Nevanlinna function is obtained from the Schur coordinate by the **inverse C
 
 \begin{lemma}[Cayley invariance]\label{lem:ns}
 The Schur kernel and the Nevanlinna kernel of the Cayley-related $S,M$ have equal negative squares:
-$\operatorname{sq}_-(\mathsf S)=\operatorname{sq}_-(\mathsf N_M)$.
+$\mathrm{sq}_-(\mathsf S)=\mathrm{sq}_-(\mathsf N_M)$.
 \end{lemma}
 \emph{Proof.} The Cayley transform is a Möbius map; the corresponding kernel transformation is a
 congruence by the nonvanishing multiplier $(1-S(z))^{-1}$ (equivalently $(M(z)+i)^{-1}$):
@@ -95,12 +95,12 @@ matrix (Sylvester, Stage 1 Thm 1.1). $\square$
 We include the classical theorem (statement and proof sketch in full enough form to be self-contained).
 
 \begin{theorem}[Kreĭn–Langer]\label{thm:kl}
-Let $S$ be a generalized Schur function with $\operatorname{sq}_-(\mathsf S)=\kappa<\infty$. Then $S$ has
+Let $S$ be a generalized Schur function with $\mathrm{sq}_-(\mathsf S)=\kappa<\infty$. Then $S$ has
 a unique coprime factorization
 \[
    S=\frac{S_0}{B},\qquad B(z)=\prod_{j=1}^\kappa\frac{z-\alpha_j}{1-\bar\alpha_j z}\ (\,|\alpha_j|<1\,),
 \]
-where $S_0$ is an ordinary Schur function ($\operatorname{sq}_-=0$, i.e. $\|S_0\|_\infty\le1$) and $B$ is
+where $S_0$ is an ordinary Schur function ($\mathrm{sq}_-=0$, i.e. $\|S_0\|_\infty\le1$) and $B$ is
 a finite Blaschke product of degree $\kappa$. The zeros $\alpha_j$ of $B$ are exactly the points where
 the kernel $\mathsf S$ carries its negative squares (the generalized poles of $M$ in $\C\setminus\R$).
 \end{theorem}
@@ -122,14 +122,14 @@ $\mathfrak b:=B$, the Blaschke denominator, regarded as a divisor $\sum_j[\alpha
 ## §5. P: the Pontryagin realization computes the same $\kappa$
 
 \begin{theorem}[realization]\label{thm:realiz}
-Every kernel $\mathsf K$ with $\operatorname{sq}_-(\mathsf K)=\kappa<\infty$ admits a Pontryagin
-realization $(\Pi,[\cdot,\cdot],\Gamma)$ with $\operatorname{ind}_-\Pi=\kappa$ and $\mathsf K(z,w)=
+Every kernel $\mathsf K$ with $\mathrm{sq}_-(\mathsf K)=\kappa<\infty$ admits a Pontryagin
+realization $(\Pi,[\cdot,\cdot],\Gamma)$ with $\mathrm{ind}_-\Pi=\kappa$ and $\mathsf K(z,w)=
 [\Gamma(w),\Gamma(z)]$, unique up to isomorphism (minimal realization). Conversely any such realization
-gives $\operatorname{sq}_-(\mathsf K)=\operatorname{ind}_-\Pi$.
+gives $\mathrm{sq}_-(\mathsf K)=\mathrm{ind}_-\Pi$.
 \end{theorem}
 \emph{Proof.} The reproducing-kernel space construction: span $\{\mathsf K(\cdot,w)\}$ with the inner
 product $[\mathsf K(\cdot,w),\mathsf K(\cdot,z)]:=\mathsf K(z,w)$, completed to a Pontryagin space; by
-definition of $\operatorname{sq}_-$ its negative index is $\kappa$. Minimality and uniqueness are the
+definition of $\mathrm{sq}_-$ its negative index is $\kappa$. Minimality and uniqueness are the
 standard reproducing-kernel argument. $\square$
 
 ---
@@ -140,8 +140,8 @@ standard reproducing-kernel argument. $\square$
 For an object presented in any of the four charts (Def.~\ref{def:charts}) with the standard transforms
 $E\leftrightarrow M=E^\#/E\leftrightarrow S=(M-i)/(M+i)\leftrightarrow(\Pi,\Gamma)$,
 \[
-   \boxed{\ \operatorname{sq}_-(\mathsf K_E)=\operatorname{sq}_-(\mathsf N_M)=\operatorname{sq}_-(\mathsf S)
-   =\operatorname{ind}_-\Pi=\deg\mathfrak b\ =:\ \kappa.\ }
+   \boxed{\ \mathrm{sq}_-(\mathsf K_E)=\mathrm{sq}_-(\mathsf N_M)=\mathrm{sq}_-(\mathsf S)
+   =\mathrm{ind}_-\Pi=\deg\mathfrak b\ =:\ \kappa.\ }
 \]
 The integer $\kappa$ and the divisor $\mathfrak b$ are therefore chart-independent invariants of the
 object.
@@ -153,14 +153,14 @@ boxed identity. $\square$
 \begin{corollary}[the endpoint, in charts]\label{cor:xi}
 For $\Xi$ with $M_\Xi=-\Xi'/\Xi$ (Herglotz, D0 sign-corrected) and $\mathsf K_\Xi^{\mathrm{G5}}=\mathsf
 N_{M_\Xi}$ (D0, Def. KG5),
-$\kappa(\Xi)=\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=\deg\mathfrak b_\Xi$, and RH $\Leftrightarrow
+$\kappa(\Xi)=\mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=\deg\mathfrak b_\Xi$, and RH $\Leftrightarrow
 \mathfrak b_\Xi=1$. The grading divisor $\mathfrak b_\Xi$ is supported exactly on the off-line zeros
 (the off-$\R$ generalized poles of $M_\Xi$).
 \end{corollary}
 
 \begin{remark}[why the divisor matters downstream]
 Theorem~\ref{thm:d1} gives not just the integer $\kappa$ but the \emph{divisor} $\mathfrak b$. Plain
-$\operatorname{sq}_-$ is only upper semicontinuous under limits (Stage 1, Thm 4.1: a negative square can
+$\mathrm{sq}_-$ is only upper semicontinuous under limits (Stage 1, Thm 4.1: a negative square can
 vanish in a limit but cannot appear from a positive limit). The divisor $\mathfrak b$ refines this to
 \emph{exact} continuity: tracking $\mathfrak b$ (D5's divisor-convergence requirement) prevents negative
 squares from disappearing invisibly, which is what "index continuity," not just "index upper

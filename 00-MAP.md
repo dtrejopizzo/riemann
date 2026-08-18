@@ -828,7 +828,7 @@ $\Theta^*=1-\Theta$ and $\det_\infty(s-\Theta)=e^{a+bs}\xi(s)$. Four results clo
 
 - **106\_00.** An ordinary self-adjoint perturbation determinant is holomorphic and zero-free off
   the real axis; a finite critical Euler factor has prime-dependent zeros or poles **on**
-  $\operatorname{Im}z=1/2$. So the finite Tate identity of phase 64 cannot be an ordinary
+  $\mathrm{Im}\,z=1/2$. So the finite Tate identity of phase 64 cannot be an ordinary
   self-adjoint perturbation-determinant identity — a structural mismatch, not a missing estimate.
 - **106\_02.** The adelic half-density generator has exactly the right adjoint but cannot descend
   through the arithmetic quotient without collapsing (positive weight) or being already zero
@@ -854,7 +854,7 @@ one.
 
 Instead of pushing the ARP-P chain forward again, phase 107 works **backward** from Weil's actual
 1948 proof of RH for curves over finite fields, asking precisely what a literal imitation over
-$\operatorname{Spec}\mathbb Z$ would require: a space $X$ with $X\times X$, a diagonal,
+$\mathrm{Spec}\,\mathbb Z$ would require: a space $X$ with $X\times X$, a diagonal,
 correspondences $\Gamma_n$ carrying Weil's coefficients $\Lambda(n)$ as intersection numbers, an
 intersection pairing (row c), and the Hodge index theorem / Castelnuovo–Severi (row d).
 
@@ -940,7 +940,7 @@ $\Lambda(n)=\deg_{\det}\mathbb L_n$ — rows (a)–(c)'s cohomological origin fo
 imposes any property Davenport–Heilbronn's coefficients violate. Plan only; nothing executed.
 
 **Net verdict of phases 107–119.** The program now has **two independent, structurally different
-proofs** that the natural target of a Weil-style construction over $\operatorname{Spec}\mathbb Z$
+proofs** that the natural target of a Weil-style construction over $\mathrm{Spec}\,\mathbb Z$
 equals RH exactly: phase 113's algebraic route (Riemann–Roch and effectivity, inside a Frobenius
 $*$-algebra) and phase 118's analytic route (the explicit formula, checked against real zeros).
 This is Arc C's analogue of Part 12's Li–Keiper reduction — a different, independently constructed
@@ -950,7 +950,7 @@ RH. Phase 119 is the live frontier: the corpus's own audit
 [`03-research/THE_BACKWARD_MAP.md`](03-research/THE_BACKWARD_MAP.md)) finds three genuinely
 unbuilt — not proved impossible — objects (a construction with the required quadratic growth; a
 space with an integral lattice structure; whether a quadratic Riemann–Roch can exist over
-$\operatorname{Spec}\mathbb Z$ at all), plus a family of open, **non**-RH-equivalent sub-targets
+$\mathrm{Spec}\,\mathbb Z$ at all), plus a family of open, **non**-RH-equivalent sub-targets
 (Diana L8, "Lemma 108," Conjecture $\mathbf C_B$, LP-112, GAP-157.A, boundary triples for the CCM
 operator family) that the corpus never closed and never showed equivalent to RH. See
 [`OPTIONS.md`](OPTIONS.md) for the full options list with file citations.
@@ -965,7 +965,7 @@ The program's endpoint is now **two** independent reductions, not one:
    architecture, ARP-P, proved equivalent to RH; fourteen of fifteen steps closed; the remaining
    step is the classical Li–Keiper criterion, $\lambda_n\ge0$ for all $n$.
 2. **The arithmetic-Lefschetz reduction (Part 14, paper 42).** A Weil-style four-row construction
-   over $\operatorname{Spec}\mathbb Z$; rows (a)–(c) built; row (d) proved equivalent to RH twice,
+   over $\mathrm{Spec}\,\mathbb Z$; rows (a)–(c) built; row (d) proved equivalent to RH twice,
    independently — algebraically (phase 113, via Riemann–Roch/effectivity) and analytically
    (phase 118, via the explicit formula, verified against real zeros).
 

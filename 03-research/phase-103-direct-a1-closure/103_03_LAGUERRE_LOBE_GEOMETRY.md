@@ -129,7 +129,7 @@ Define, for a lobe \(J_{n,j}\) between consecutive zeros,
 \[
   W_{n,j}=\int_{J_{n,j}}|K_n(u)|\,du,
   \qquad
-  \sigma_{n,j}=\operatorname{sgn}K_n|_{J_{n,j}} .
+  \sigma_{n,j}=\mathrm{sgn}\,K_n|_{J_{n,j}} .
 \]
 
 Three budgets control every estimate in the phase:

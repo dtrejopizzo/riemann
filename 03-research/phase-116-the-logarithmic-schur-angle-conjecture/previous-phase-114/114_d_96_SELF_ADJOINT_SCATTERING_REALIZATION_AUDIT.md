@@ -105,7 +105,7 @@ At an upper-half-plane zero `z_rho` of `E_a` for which
 
 \[
  K_a(z_\rho,z_\rho)
- =-{ |E_a^\#(z_\rho)|^2\over4\pi\operatorname{Im}z_\rho}<0.
+ =-{ |E_a^\#(z_\rho)|^2\over4\pi\mathrm{Im}\,z_\rho}<0.
                                                                     \tag{2.4}
 \]
 
@@ -136,7 +136,7 @@ For the finite-order completed function, (2.2) gives
 \[
  E_a\text{ Hermite--Biehler}
  \quad\Longleftrightarrow\quad
- \Xi\text{ has no zero with }\operatorname{Re}\rho>1/2+a.
+ \Xi\text{ has no zero with }\mathrm{Re}\,\rho>1/2+a.
                                                                     \tag{3.1}
 \]
 
@@ -157,7 +157,7 @@ realization.  On the other hand,
  \boxed{
  E_a\text{ is Hermite--Biehler for every }a>0
  \quad\Longleftrightarrow\quad
- \operatorname{Re}\rho=1/2
+ \mathrm{Re}\,\rho=1/2
  \text{ for every nontrivial zero}.}                      \tag{3.3}
 \]
 
@@ -180,7 +180,7 @@ corresponding infinitesimal transfer generator to have the Herglotz/Pick
 sign throughout `C_+`.  A pole enters (4.1) exactly when `a` crosses
 
 \[
- a_\rho=\operatorname{Re}\rho-1/2                         \tag{4.2}
+ a_\rho=\mathrm{Re}\,\rho-1/2                         \tag{4.2}
 \]
 
 for a zero to the right of the centre.  Thus preservation of the positive

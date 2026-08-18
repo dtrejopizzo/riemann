@@ -9,7 +9,7 @@ of the Bismut equivariant \(R\)-genus reduces in degree zero to
  R(\zeta)=D(\zeta)-D(\zeta^{-1}),
  \qquad
  D(z)=\left.{\partial\over\partial\nu}
- \operatorname{Li}_{\nu}(z)\right|_{\nu=0}.
+ \mathrm{Li}_{\nu}(z)\right|_{\nu=0}.
  \tag{1.1}
 \]
 
@@ -23,8 +23,8 @@ of the polylogarithm.
 For \(x>1\), the standard polylogarithm continuation satisfies
 
 \[
- \operatorname{Li}_{\nu}(x+i0)
- -\operatorname{Li}_{\nu}(x-i0)
+ \mathrm{Li}_{\nu}(x+i0)
+ -\mathrm{Li}_{\nu}(x-i0)
  =
  {2\pi i(\log x)^{\nu-1}\over\Gamma(\nu)}.
  \tag{2.1}
@@ -49,7 +49,7 @@ Consequently the two boundary continuations of (1.1) at
 \(q=p^{-s}\) differ by the nonzero quantity
 
 \[
- \operatorname{Disc}R(p^{-s})
+ \mathrm{Disc}\,R(p^{-s})
  =\pm {2\pi i\over s\log p}.
  \tag{2.3}
 \]
@@ -71,7 +71,7 @@ numerical normalization.
 Multiplying (2.3) by the arithmetic degree of the prime support gives
 
 \[
- \log p\cdot\operatorname{Disc}R(p^{-s})
+ \log p\cdot\mathrm{Disc}\,R(p^{-s})
  =\pm {2\pi i\over s}.
  \tag{3.1}
 \]

@@ -21,7 +21,7 @@ split pair
 \[
  \mathbb F_p[1]\xrightarrow{s_p}C_p
  \xrightarrow{\rho_p}\mathbb F_p[1],
- \qquad \rho_p s_p=\operatorname{id}.                                \tag{1.1}
+ \qquad \rho_p s_p=\mathrm{id}.                                \tag{1.1}
 \]
 
 Passing to homology gives a canonical split retract
@@ -97,7 +97,7 @@ complexes.
 The reduced diagonal-contact functor on the arithmetic submonoid satisfies
 
 \[
- \operatorname{Cont}^{red}(\mathbf K_n)=\mathcal M_n,\qquad
+ \mathrm{Cont}^{red}(\mathbf K_n)=\mathcal M_n,\qquad
  \log\#\Gamma(Y,\mathcal M_n)=\Lambda(n).                             \tag{3.3}
 \]
 

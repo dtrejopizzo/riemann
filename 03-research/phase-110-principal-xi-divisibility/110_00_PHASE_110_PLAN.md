@@ -4,7 +4,7 @@
 
 Row (d) (Hodge index) needs Riemann–Roch, which needs linear (not merely
 numerical) equivalence, which needs a principal subspace $\mathcal P$ with
-$\mathcal P\subseteq\operatorname{rad}I_\partial$, where $I_\partial$ is the
+$\mathcal P\subseteq\mathrm{rad}\,I_\partial$, where $I_\partial$ is the
 zero-free corner pairing whose radical a source theorem identifies as
 $\{f:\hat f(0)=\hat f(1)=0,\ \hat f(\rho)=0\ \forall\text{ zeros }\rho\text{ of
 }\xi\}$. The source rule forbids defining $\mathcal P$ using a zero of $\xi$,
@@ -31,7 +31,7 @@ re-derivation)
   analytic continuation, which we take as known).
 * The graded family $\mathcal G=\{\mathcal L_s\}_{s\in\mathbb R}$,
   $f_s(r)=c\,r^s$, and the principal witnesses
-  $\operatorname{Prin}'(\mathcal G)=\bigcup_s\operatorname{div}(\mathcal
+  $\mathrm{Prin}'(\mathcal G)=\bigcup_s\mathrm{div}(\mathcal
   L_s)$ at every weight $s\in\mathbb R$, including mass-zero differences
   $f_{s_0}-f_{s_1}$: read from 108\_03 and 108\_31 (the only two files this
   phase is permitted to open), not re-derived.
@@ -55,7 +55,7 @@ This is the weakest reading consistent with 108\_31 §5's own description
 ("smooth, compactly supported profile") and is the reading under which the
 Weil explicit formula sum in $I_\partial$ literally converges term by term
 (entire $\hat f,\hat g$ of finite exponential type, decaying rapidly on
-verticals, matching known unconditional bounds on $\#\{\rho:|\operatorname{Im}\rho|\le T\}$
+verticals, matching known unconditional bounds on $\#\{\rho:|\mathrm{Im}\,\rho|\le T\}$
 so the zero-sum converges absolutely). Nothing in Task 1–3 below depends on
 sharpening (ADM); a strictly *smaller* admissible class only makes the
 negative results of this phase easier to obtain, never harder — see Lemma
@@ -66,7 +66,7 @@ negative results of this phase easier to obtain, never harder — see Lemma
 This section is written first, before Task 1's computation, per the
 governing instructions. It commits, in advance, to what outcome would count
 as a **refutation** of the hypothesis that ξ-divisibility is a viable,
-non-circular route to $\mathcal P\subseteq\operatorname{rad}I_\partial$, and
+non-circular route to $\mathcal P\subseteq\mathrm{rad}\,I_\partial$, and
 what would count as *support* — so that the later verdict cannot be steered
 by the result.
 
@@ -108,7 +108,7 @@ either
 prompt asks to watch for and, if found, to stop at): a demonstration that the
 *only* way to secure $\mathcal P_0\subseteq\{\hat f=\xi\hat g\}$ — after
 excluding (N1) and (N2) — requires, at some step, information about *where*
-the zeros $\rho$ lie (e.g. that they lie on $\operatorname{Re}=1/2$), or a
+the zeros $\rho$ lie (e.g. that they lie on $\mathrm{Re}=1/2$), or a
 positivity statement classically known to be equivalent to RH (e.g. a
 sign-definite quadratic form built from the same data as RH's classical
 Weil-positivity criterion). This is logically distinct from (N2): (N2) is an

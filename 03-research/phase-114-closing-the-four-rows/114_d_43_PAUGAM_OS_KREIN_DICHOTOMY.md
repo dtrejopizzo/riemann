@@ -70,7 +70,7 @@ continuous nondegenerate antisymmetric pairing
 At test-function level it is the antisymmetrized compact supertrace
 
 \[
- \psi(F,G)=\operatorname{Tr}
+ \psi(F,G)=\mathrm{Tr}
    \bigl(F*JG-G*JF\mid H_+^1\bigr),                             \tag{2.4}
 \]
 
@@ -145,7 +145,7 @@ characters on every finite-dimensional generalized eigenspace.  Therefore
 
 \[
  |t^{\rho-1/2}|=1\quad\hbox{for all }t>0,
- \qquad\text{hence}\qquad \operatorname{Re}\rho=\tfrac12.     \tag{4.3}
+ \qquad\text{hence}\qquad \mathrm{Re}\,\rho=\tfrac12.     \tag{4.3}
 \]
 
 Trace compatibility prevents deleting an offending class: deleting it
@@ -249,7 +249,7 @@ characters in (6.1), then gives the exact pullback proved in D.37:
 \[
  \boxed{
  B_{\rm nuc}(f,f)
-   =-\operatorname{Tr}_{(V,H_P)}(T_gT_g^*)\le0.}                 \tag{6.4}
+   =-\mathrm{Tr}_{(V,H_P)}(T_gT_g^*)\le0.}                 \tag{6.4}
 \]
 
 Thus the diagonal reflected Paugam form and `B_nuc` are two realizations of

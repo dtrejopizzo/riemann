@@ -159,7 +159,7 @@ is self-adjoint Fredholm.  Its essential spectrum is the singleton
 \[
 \begin{aligned}
  \ker D_T&=E_{K_T}(\{1\}),\\
- \operatorname{ind}_-(D_T)
+ \mathrm{ind}_-(D_T)
  &=\dim E_{K_T}((1,\infty))<\infty.                    \tag{2.3}
 \end{aligned}
 \]
@@ -171,13 +171,13 @@ complex with finite Morse defect on every bounded window.
 For a Fredholm operator (D:H\to H), its determinant line is
 
 \[
- \operatorname{Det}(D)=
+ \mathrm{Det}(D)=
  \Lambda^{\max}\ker D\otimes
- (\Lambda^{\max}\operatorname{coker}D)^*.              \tag{2.4}
+ (\Lambda^{\max}\mathrm{coker}\,D)^*.              \tag{2.4}
 \]
 
-Thus (\operatorname{Det}(D_T)) exists.  Self-adjointness identifies
-(\operatorname{coker}D_T\simeq\ker D_T), but this finite-dimensional
+Thus (\mathrm{Det}(D_T)) exists.  Self-adjointness identifies
+(\mathrm{coker}\,D_T\simeq\ker D_T), but this finite-dimensional
 line only changes when an eigenvalue passes through (0), equivalently
 when an eigenvalue of (K_T) passes through (1).  Eigenvalues of (K_T)
 strictly larger than one are invisible to the isomorphism class of (2.4).
@@ -274,7 +274,7 @@ according to the spectrum of (K_T) below, at, and above one.  On the
 nondegenerate quotient of (D_T), the fundamental symmetry
 
 \[
- J_T=\operatorname{sgn}(D_T)                           \tag{5.2}
+ J_T=\mathrm{sgn}(D_T)                           \tag{5.2}
 \]
 
 turns (|D_T|^{1/2}) into an indefinite defect operator.  Standard Krein
@@ -282,7 +282,7 @@ completion then gives a (J)-unitary colligation for (A_T).  Its negative
 index is
 
 \[
- \operatorname{ind}_-(J_T)=\dim E_T^>
+ \mathrm{ind}_-(J_T)=\dim E_T^>
  =\#\{\lambda_j(K_T)>1\}=d_T.                          \tag{5.3}
 \]
 

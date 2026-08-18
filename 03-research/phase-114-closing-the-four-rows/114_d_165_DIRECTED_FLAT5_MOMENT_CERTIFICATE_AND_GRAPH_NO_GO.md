@@ -131,7 +131,7 @@ The rank-60 spatial audit reduces the safe part to two directed assertions:
 1. positivity of its finite graph shorting \(\mathcal S_{ss}\);
 2. the scalar trace bound
    \[
-   \operatorname {Tr}
+   \mathrm{Tr}
    (\mathcal S_{ss}^{-1/2}R_{ss}^*R_{ss}
     \mathcal S_{ss}^{-1/2})<\delta.
    \]

@@ -65,7 +65,7 @@ Let
 
 \[
  h_-(t)=e^{-t/2},\qquad h_+(t)=e^{t/2},qquad
- E_T=\operatorname{span}\{h_-,h_+\}\subset L^2(I_T).      \tag{2.1}
+ E_T=\mathrm{span}\,\{h_-,h_+\}\subset L^2(I_T).      \tag{2.1}
 \]
 
 For ordinary min--max/Sturm reasoning to identify

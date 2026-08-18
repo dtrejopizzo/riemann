@@ -265,7 +265,7 @@ one has
 
 \[
  \|\nabla_0r\|_{L^2(\rho)}^2
- =\frac12\operatorname {Var}_{\mu_K}(r).           \tag{16}
+ =\frac12\mathrm{Var}_{\mu_K}(r).           \tag{16}
 \]
 
 The most general positive conditional-expectation construction relevant
@@ -314,7 +314,7 @@ first inequality of (19) is exactly
  \boxed{
  \mathfrak d_Q(v)
  :=\int_{\mathsf S}
- \operatorname {Var}_Q(v(E)\mid Z=z)\,d\rho(z)
+ \mathrm{Var}_Q(v(E)\mid Z=z)\,d\rho(z)
  =\int|v|^2\,dQ_{\mathsf E_\Theta}-\|C_Qv\|^2.}    \tag{21}
 \]
 
@@ -381,7 +381,7 @@ For \(a\geq0\), Taylor's formula gives the even analytic germ
 \]
 
 The theta series is analytic in the connected strip
-\(|\operatorname {Im}z|<\pi/4\).  Thus equality of the Taylor germs in
+\(|\mathrm{Im}\,z|<\pi/4\).  Thus equality of the Taylor germs in
 (27) continues throughout that strip, in particular along the entire real
 axis.  The family \(\{A_a:a\geq0\}\) is finitely linearly independent.
 To see this, take distinct \(0\leq a_1<\cdots<a_m\) and let

@@ -10,9 +10,9 @@ Let (D) be differentiation in the Legendre basis
 ((P_0,\ldots,P_{N-1})), let
 
 \[
- W=\operatorname {diag}\left({1\over2m+1}\right)_{m=0}^{N-1},
+ W=\mathrm{diag}\,\left({1\over2m+1}\right)_{m=0}^{N-1},
  \qquad
- S=\operatorname {diag}\left(\sqrt{2m+1}\right)_{m=0}^{N-1},       \tag{0.1}
+ S=\mathrm{diag}\,\left(\sqrt{2m+1}\right)_{m=0}^{N-1},       \tag{0.1}
 \]
 
 and define the normalization
@@ -207,7 +207,7 @@ sum with the oscillator sum is justified entry by entry.
 The Fourier multiplier represented by (0.5) is
 
 \[
- \operatorname {Re}\psi(1/4+i\tau/2)-\psi(1/4).      \tag{4.1}
+ \mathrm{Re}\,\psi(1/4+i\tau/2)-\psi(1/4).      \tag{4.1}
 \]
 
 Consequently the completed archimedean matrix is

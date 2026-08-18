@@ -93,14 +93,14 @@ Suppose the global principal subspace \(\mathcal P\) is eventually
 constructed.  Descent of \(I_\partial\) to classes is equivalent to
 
 \[
- \mathcal P\subseteq\operatorname{rad}I_\partial
+ \mathcal P\subseteq\mathrm{rad}\,I_\partial
  :=\{f:\ N(f\star\widetilde g)=0\ \ \forall g\}.
  \tag{4.1}
 \]
 
 > **Theorem D.**  Under Weil's explicit formula,
 > \[
->  \operatorname{rad}I_\partial
+>  \mathrm{rad}\,I_\partial
 >  =\{f:\ \widehat f(0)=\widehat f(1)=0
 >  \text{ and }\widehat f(\rho)=0\text{ for every zero }\rho\text{ of }\xi\}.
 > \]
@@ -140,7 +140,7 @@ form on the quotient by its radical is well defined and nondegenerate.  So
 
 \[
  \overline{I_\partial}\ \text{ on }\
- \{\text{DC divisors}\}/\operatorname{rad}I_\partial
+ \{\text{DC divisors}\}/\mathrm{rad}\,I_\partial
  \tag{5.1}
 \]
 
@@ -174,7 +174,7 @@ Proved here:
 Not proved, and not promoted:
 
 * existence of global rational functions on the DC quotient topos;
-* \(\mathcal P\subseteq\operatorname{rad}I_\partial\);
+* \(\mathcal P\subseteq\mathrm{rad}\,I_\partial\);
 * any change to `ROW_A_STATUS`, which remains `partial`.
 
 ## 7. Verifier

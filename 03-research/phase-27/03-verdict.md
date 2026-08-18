@@ -39,7 +39,7 @@ La contribución genuina de Phase 27 es el diagnóstico de Wall A con precisión
 Más precisamente:
 
 La factorización $Q = Q_\infty + \sum_p Q_p$ requiere la existencia de una cohomología
-aritmética $H^1(\operatorname{Spec}\mathbb{Z}, \mathcal{F})$ con:
+aritmética $H^1(\mathrm{Spec}\,\mathbb{Z}, \mathcal{F})$ con:
 1. Un operador de Frobenius aritmético $\phi_p$ en cada prima $p$;
 2. Una forma de intersección en $H^1$ que factoriza sobre primos;
 3. Positividad de esa forma = RH (análogo del teorema de índice de Hodge).
@@ -50,10 +50,10 @@ Esto es el programa de Connes–Consani en su formulación más precisa.
 
 $$\text{RH}
 \iff \kappa(Q) = 0
-\iff \operatorname{neg.ind}(H_C) = 0
+\iff \mathrm{neg.ind}(H_C) = 0
 \iff Q \ge 0
 \iff \text{Wall A resuelto + } Q_p \ge 0 \forall p
-\iff H^1(\operatorname{Spec}\mathbb{Z}) \text{ tiene forma de intersección } \ge 0.$$
+\iff H^1(\mathrm{Spec}\,\mathbb{Z}) \text{ tiene forma de intersección } \ge 0.$$
 
 Cada equivalencia es un teorema o una conjetura que el programa ha identificado.
 La última equivalencia es el contenido del programa de Connes–Consani.
@@ -75,13 +75,13 @@ el programa ha producido hasta la fecha.
 
 **Logro 3 (Diagrama de equivalencias):** Se establece una cadena completa de equivalencias:
 
-$$\text{RH} \iff \kap = 0 \iff \operatorname{neg.ind}(H_C) = 0 \iff \text{Wall A + positividad local} \iff \text{Connes–Consani.}$$
+$$\text{RH} \iff \kap = 0 \iff \mathrm{neg.ind}(H_C) = 0 \iff \text{Wall A + positividad local} \iff \text{Connes–Consani.}$$
 
 Esta cadena no existía antes de Phases 26–27. Es un mapa preciso de la estructura del problema.
 
 ### Lo que Phase 27 no logra
 
-No prueba $\operatorname{neg.ind}(H_C) = 0$.
+No prueba $\mathrm{neg.ind}(H_C) = 0$.
 
 No resuelve V.2.
 
@@ -103,7 +103,7 @@ El programa ha producido la siguiente cadena de reformulaciones, cada una más p
 | Phase 27 | neg.ind($H_C$) = 0 ↔ sitio aritmético | Adèles + cohomología aritmética |
 
 El programa ha llegado al punto donde RH equivale a la positividad de la forma de
-intersección en una cohomología aritmética sobre $\operatorname{Spec}\mathbb{Z}$.
+intersección en una cohomología aritmética sobre $\mathrm{Spec}\,\mathbb{Z}$.
 
 Éste es exactamente el punto donde el programa de Connes–Consani trabaja.
 

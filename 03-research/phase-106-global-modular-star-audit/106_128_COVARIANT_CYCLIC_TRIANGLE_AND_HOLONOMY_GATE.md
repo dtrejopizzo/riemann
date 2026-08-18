@@ -104,7 +104,7 @@ the exact finite-cutoff curvature is the expression 106.51(16):
        \,d\mu_K(x)\\
  &-\frac14\int\sum_s c_s(x)\|a_s(x)\|^2
        \,d\mu_K(x)\\
-={}&\operatorname {Tr}P(L_{\varepsilon,N}^2
+={}&\mathrm{Tr}\,P(L_{\varepsilon,N}^2
                       -\tfrac12L_{\varepsilon,N}).
                                                                \tag{7}
 \end{aligned}
@@ -152,7 +152,7 @@ For every section \(Q\),
 
 \[
  \boxed{
- \operatorname {Re}\sum_{0\le i<j\le2}
+ \mathrm{Re}\,\sum_{0\le i<j\le2}
        \langle A_i(Q),A_j(Q)\rangle
  =-\frac12\sum_{i=0}^2\|d_{i,i+1}^UQ\|^2
   +\frac12\|(I-H_0)Q_0\|^2.}                      \tag{12}
@@ -184,7 +184,7 @@ section \((hQ)_i=h_iQ_i\).  Define the symmetrized cyclic cross term
 
 \[
  \mathcal C_{h,U}^{(0)}(Q)
- =\frac12\operatorname {Re}
+ =\frac12\mathrm{Re}
    \sum_{i\ne j}\langle A_i(hQ),A_j(Q)\rangle.      \tag{14}
 \]
 
@@ -241,7 +241,7 @@ gives
  \mathcal C_{h,U}^{(0)}(Q)
  =\frac{h_0}{2}\|(I-H_0)Q_0\|^2
   -\frac12\sum_i
-    \operatorname {Re}\langle
+    \mathrm{Re}\,\langle
       d_{i,i+1}^U(hQ),d_{i,i+1}^UQ\rangle.          \tag{18}
 \]
 
@@ -249,7 +249,7 @@ For one edge, unitarity gives
 
 \[
 \begin{aligned}
- \operatorname {Re}\langle d_{ij}^U(hQ),d_{ij}^UQ\rangle
+ \mathrm{Re}\,\langle d_{ij}^U(hQ),d_{ij}^UQ\rangle
 ={}&\frac{h_i+h_j}{2}\|d_{ij}^UQ\|^2\\
  &+\frac{h_i-h_j}{2}
    \{\|Q_i\|^2-\|Q_j\|^2\}.                      \tag{19}
@@ -407,8 +407,8 @@ gauge and
 then \(U'\) is flat and
 
 \[
- \operatorname {Re}\langle Q_x',U_{xy}'Q_y'\rangle
- =\operatorname {Re}\langle Q_x,Q_y\rangle.        \tag{34}
+ \mathrm{Re}\,\langle Q_x',U_{xy}'Q_y'\rangle
+ =\mathrm{Re}\,\langle Q_x,Q_y\rangle.        \tag{34}
 \]
 
 Therefore a genuine gauge does not change any negative radical
@@ -436,7 +436,7 @@ At the form level the exact change is
 \[
 \boxed{
  \mathscr E^U(Q)-\mathscr E(Q)
- =\iint\operatorname {Re}
+ =\iint\mathrm{Re}
    \langle Q_x,(I-U_{xy})Q_y\rangle
    \,d\mathfrak j(x,y),}                           \tag{36}
 \]
@@ -635,7 +635,7 @@ The associated Hermitian power is the signed Abel flux
 \[
 \begin{aligned}
  \mathcal P_D(q)
- =-2\operatorname {Re}\int_{x>y}
+ =-2\mathrm{Re}\,\int_{x>y}
  &D(e^{x-y})e^{(x-y)/2}\overline{K(x)q(x)}\\
  &\times\{(Kq)'(y)+\tfrac12K(y)q(y)\}\,dy\,dx.
                                                                \tag{54}

@@ -67,7 +67,7 @@ ya que el número de primos $p^k$ con $\log p^k \approx \gamma_m$ (en la ventana
 
 $$h_\varepsilon(t) = \varepsilon^{-1}\phi\!\left(\frac{t-\gamma_m/(2\pi)}{\varepsilon}\right),$$
 
-con $\phi \in \mathcal{S}(\mathbb{R})$, $\int \phi = 1$, $\operatorname{supp}\phi \subset [-1,1]$.
+con $\phi \in \mathcal{S}(\mathbb{R})$, $\int \phi = 1$, $\mathrm{supp}\,\phi \subset [-1,1]$.
 
 **Proposición 1** (la fórmula de Weil a escala $\varepsilon$). Para $h_\varepsilon$ como arriba:
 

@@ -95,7 +95,7 @@ is even and real, and has all zeros real when
 At \(t_*=\log(q/2)\), it has the double real zeros
 \(z=(2k+1)\pi\).  For \(t<t_*\), the zeros are
 \[
- z=(2k+1)\pi\ \pm i\,\operatorname{arcosh}\!\left({q\over2e^t}\right),
+ z=(2k+1)\pi\ \pm i\,\mathrm{arcosh}\,\!\left({q\over2e^t}\right),
  \qquad k\in\mathbb Z,                                           \tag{11}
 \]
 and are nonreal.

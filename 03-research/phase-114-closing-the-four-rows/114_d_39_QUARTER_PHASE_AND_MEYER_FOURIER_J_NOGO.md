@@ -249,10 +249,10 @@ Schwartz decay, and the two divisibility conditions
 
 \[
  \frac{\widehat h(s)}{\zeta(s)}\in\mathcal S
- \quad(\operatorname{Re}s\ge1/2),
+ \quad(\mathrm{Re}\,s\ge1/2),
  \qquad
  \frac{\widehat h(s)}{\zeta(1-s)}\in\mathcal S
- \quad(\operatorname{Re}s\le1/2).                  \tag{5.2}
+ \quad(\mathrm{Re}\,s\le1/2).                  \tag{5.2}
 \]
 
 Multiplication by `gamma(s)` preserves both conditions wherever it is

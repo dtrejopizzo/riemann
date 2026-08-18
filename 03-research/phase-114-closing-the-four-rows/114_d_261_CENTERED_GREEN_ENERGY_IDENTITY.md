@@ -111,7 +111,7 @@ Substitute (1.4) and (2.1) into the D.214 inverse term.  Polarization gives
 \begin{aligned}
  q_N^*D_N^\dagger q_N
 ={}&q_{N,\infty}^*D_N^\dagger q_{N,\infty}\\
- &-2\operatorname{Re}
+ &-2\mathrm{Re}
    \int_{[1,N]}
    \mathcal K_N(x)^*D_N^\dagger q_{N,\infty}\,dA(x)\\
  &+\int_{[1,N]}\!\int_{[1,N]}

@@ -22,7 +22,7 @@ codifferent
 
 \[
  \mathfrak D_K^{-1}
- =\{y\in K:\operatorname{Tr}_{K/\mathbb Q}(yO_K)\subset\mathbb Z\},
+ =\{y\in K:\mathrm{Tr}_{K/\mathbb Q}(yO_K)\subset\mathbb Z\},
 \]
 
 not \(O_K\) itself.
@@ -58,7 +58,7 @@ The trace pairing
  \longrightarrow\mathbb Q/\mathbb Z,
  \qquad
  (\bar x,\bar y)\longmapsto
- \operatorname{Tr}_{K/\mathbb Q}(xy)\bmod\mathbb Z
+ \mathrm{Tr}_{K/\mathbb Q}(xy)\bmod\mathbb Z
  \tag{2.3}
 \]
 

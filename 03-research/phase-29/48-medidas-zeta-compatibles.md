@@ -24,7 +24,7 @@ $$\mathcal{R}_\eta := \left\{(x,y)\in\mathbb{H} : y \leq \frac{1}{2} - \frac{\et
 $$\mu\!\left(\{(x,y): |x|\leq T,\, y = \sigma_0-1/2\}\right) \leq C(\sigma_0)\cdot T^{2(1-\sigma_0)}\log T$$
 
 **Axioma 5 (Auto-consistencia de Poisson).** La transformada de Poisson $\mathcal{P}[\mu]$ satisface:
-$$\mathcal{P}[\mu](\gamma_n) = -2\operatorname{Re}\!\left[\sum_{\substack{\rho\in\mathcal{Z}\\\rho\neq\rho_n}} \frac{1}{\rho_n - \rho}\right] \quad \forall n\geq 1$$
+$$\mathcal{P}[\mu](\gamma_n) = -2\mathrm{Re}\,\!\left[\sum_{\substack{\rho\in\mathcal{Z}\\\rho\neq\rho_n}} \frac{1}{\rho_n - \rho}\right] \quad \forall n\geq 1$$
 
 donde $\rho_n = 1/2+i\gamma_n$ son los ceros de $\Xi$ en la línea crítica.
 
@@ -90,7 +90,7 @@ $$\mathcal{C}(\sigma_0) = \{(x, \sigma_0-1/2) \in \mathbb{H} : |x| \leq T(\sigma
 donde $T(\sigma_0)$ es la cota de altura determinada por el Axioma 4.
 
 **Teorema 4.2 (Estructura del soporte).** Si $\mu \in \mathcal{M}_\zeta^{1-4}$, el soporte de $\mu$ está contenido en la unión:
-$$\operatorname{sop}(\mu) \subseteq \bigcup_{\sigma_0 > 1/2} \mathcal{C}(\sigma_0) \cap \mathcal{R}_\eta$$
+$$\mathrm{sop}(\mu) \subseteq \bigcup_{\sigma_0 > 1/2} \mathcal{C}(\sigma_0) \cap \mathcal{R}_\eta$$
 
 y satisface la estimación de cuentas:
 $$\#\{k : (x_k, y_k) \in \mathcal{C}(\sigma_0),\, |x_k| \leq T\} \leq C(\sigma_0)\cdot T^{2(1-\sigma_0)}\log T$$
@@ -98,7 +98,7 @@ $$\#\{k : (x_k, y_k) \in \mathcal{C}(\sigma_0),\, |x_k| \leq T\} \leq C(\sigma_0
 *Prueba.* Inmediata de los Axiomas 3 y 4. $\square$
 
 **Proposición 4.3 (Restricción de altura mínima).** Por el Axioma 3 (región libre de ceros de Korobov-Vinogradov en su forma actual):
-$$\operatorname{sop}(\mu) \subseteq \left\{(x,y): y \geq \frac{\eta}{\log(|x|+2)}\right\} \cap \{y \leq 1/2\}$$
+$$\mathrm{sop}(\mu) \subseteq \left\{(x,y): y \geq \frac{\eta}{\log(|x|+2)}\right\} \cap \{y \leq 1/2\}$$
 
 Los átomos están acotados lejos del eje real cuando $|x|$ es grande: la altura mínima de un átomo en posición $x$ es $\sim 1/\log|x|$.
 
@@ -118,7 +118,7 @@ $$\int_\mathbb{H} P_y(\gamma_n - x)\,d\mu(x,y) = 2\sum_{k} y_k\left[\frac{1}{y_k
 Esto es idénticamente verdad si $\mu = 2\sum_k y_k[\delta_{(x_k,y_k)}+\delta_{(-x_k,y_k)}]$, que es la forma de $\mu_{\mathrm{off}}$. El Axioma 5 no añade información nueva respecto a la definición de $\mu_{\mathrm{off}}$ — es una condición de auto-referencia.
 
 **Proposición 5.2 (La auto-consistencia como condición de soporte).** El Axioma 5 impone que la medida $\mu$ está *soportada* en los ceros off-críticos de $\zeta$. En particular:
-$$\mu \in \mathcal{M}_\zeta \implies \operatorname{sop}(\mu) \subseteq \mathcal{Z}_{\mathrm{off}} \times \{y = \sigma_0-1/2\}$$
+$$\mu \in \mathcal{M}_\zeta \implies \mathrm{sop}(\mu) \subseteq \mathcal{Z}_{\mathrm{off}} \times \{y = \sigma_0-1/2\}$$
 
 La auto-consistencia fuerza la coincidencia entre los átomos de $\mu$ y los ceros off-críticos de $\zeta$.
 
@@ -172,7 +172,7 @@ El Axioma 5 puede reformularse como una ecuación integral no lineal sobre el so
 
 **Definición 9.1 (Ecuación de auto-consistencia).** Una medida positiva $\mu = \sum_k c_k\delta_{(x_k,y_k)}$ satisface la ecuación de auto-consistencia si:
 
-$$\sum_j c_j \frac{y_j}{y_j^2+(\gamma_n-x_j)^2} = -2\operatorname{Re}\!\left[\sum_k \frac{1}{\rho_n - \rho_k}\right]$$
+$$\sum_j c_j \frac{y_j}{y_j^2+(\gamma_n-x_j)^2} = -2\mathrm{Re}\,\!\left[\sum_k \frac{1}{\rho_n - \rho_k}\right]$$
 
 donde $\rho_k = (1/2+y_k)+ix_k$ (los ceros correspondientes a los átomos de $\mu$).
 

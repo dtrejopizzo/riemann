@@ -146,7 +146,7 @@ orientation, is closed on `H_T`).  The vector space carries
 and the intrinsic cone
 
 \[
- \operatorname {Form}_{T,+}
+ \mathrm{Form}_{T,+}
  =\{q:q(F,F)\ge0\text{ for every }F\in\mathcal D_T\}.     \tag{3.2}
 \]
 
@@ -316,7 +316,7 @@ have codimension at most two.  If `b` vanished on
 whose dimension is at most two.  Thus
 
 \[
- \operatorname {rank}b>2                                 \tag{7.4}
+ \mathrm{rank}\,b>2                                 \tag{7.4}
 \]
 
 forces a primitive `y in QH` with `PUy!=0`.
@@ -346,7 +346,7 @@ choose
 
 \[
  \mathcal M_T(F)=
- \operatorname*{argmin}_{h\in PH,\ Ah=F}\|h\|.            \tag{8.1}
+ \mathop{\mathrm{argmin}}_{h\in PH,\ Ah=F}\|h\|.            \tag{8.1}
 \]
 
 When it exists, this is the Moore--Penrose formula

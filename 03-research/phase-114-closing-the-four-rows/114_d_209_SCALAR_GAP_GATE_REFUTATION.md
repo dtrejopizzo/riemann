@@ -10,7 +10,7 @@ At FFT resolution `2^20`, the split-invariant scalar-gap Schur matrix on
 the 198-dimensional primitive finite block is
 
 \[
- K_{\rm scalar}=\operatorname{diag}(\lambda)-{1\over0.219}H,
+ K_{\rm scalar}=\mathrm{diag}(\lambda)-{1\over0.219}H,
 \]
 
 where `H=C C*` is the complete measured finite-to-complement residual

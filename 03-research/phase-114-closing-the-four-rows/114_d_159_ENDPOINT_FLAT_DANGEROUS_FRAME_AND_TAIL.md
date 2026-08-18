@@ -119,7 +119,7 @@ Repeated integration by parts and (0.2) give, for real (\tau\ne0),
 For the complete endpoint multiplier
 
 \[
- r_T(\tau)=\operatorname {Re}\psi
+ r_T(\tau)=\mathrm{Re}\,\psi
  \left({1\over4}+{i\tau\over2}\right)-\log\pi
  -2\sum_{n=2,3,4}{\Lambda(n)\over\sqrt n}
  \cos(\tau\log n),                                    \tag{3.2}

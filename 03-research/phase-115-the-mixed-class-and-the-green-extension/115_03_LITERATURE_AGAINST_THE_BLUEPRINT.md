@@ -13,8 +13,8 @@ active programme found is analytic or spectral:
 |---|---|---|
 | Connes–Consani–Moscovici, *Zeta Spectral Triples* (2511.22755) | Nov 2025 | spectral realization; rank-one perturbations of the scaling operator on \([\lambda^{-1},\lambda]\).  No intersection form, signature, Riemann–Roch, effective cone or section functor. |
 | Connes, *The Riemann Hypothesis: Past, Present and a Letter Through Time* (2602.04022) | Feb 2026 | survey + new material; the proposed strategy is *"convergence of zeros from finite to infinite Euler products"* — spectral |
-| Connes–Consani, *On the Absolute Geometry of \(\operatorname{Spec}\mathbf Z\)* (2606.06604) | Jun 2026 | \(\mathbb F_1\)-structures via perfectoids, untilts, Fargues–Fontaine.  Not the square. |
-| Connes–Consani, *On the Jacobian of \(\overline{\operatorname{Spec}\mathbb Z}\)* (2602.15941) | Feb 2026 | Picard group / Jacobian of the arithmetic **curve**; dimension one |
+| Connes–Consani, *On the Absolute Geometry of \(\mathrm{Spec}\,\mathbf Z\)* (2606.06604) | Jun 2026 | \(\mathbb F_1\)-structures via perfectoids, untilts, Fargues–Fontaine.  Not the square. |
+| Connes–Consani, *On the Jacobian of \(\overline{\mathrm{Spec}\,\mathbb Z}\)* (2602.15941) | Feb 2026 | Picard group / Jacobian of the arithmetic **curve**; dimension one |
 | Suzuki, *Weil's quadratic form via the screw function* (2606.09096) | Jun 2026 | screw functions, de Branges spaces, Hilbert–Pólya |
 
 So the architecture of `115_02` is not duplicated.  That is a real fact — but
@@ -130,7 +130,7 @@ Why this is the right candidate rather than another Arakelov result:
   invariant is far more transportable than an candid cohomology.
 
 **The gap, stated candidly.**  Wei He works on classical Arakelov arithmetic
-surfaces \(f:\mathcal X\to\operatorname{Spec}\mathcal O\) with Hermitian line
+surfaces \(f:\mathcal X\to\mathrm{Spec}\,\mathcal O\) with Hermitian line
 bundles.  \(\mathscr Y_{\mathbb S}\) is not one of those, and `main.tex`'s own
 Hodge-route audit says exactly why: the spherical ringed square is not a
 regular proper arithmetic variety in the sense those theorems assume.  So this

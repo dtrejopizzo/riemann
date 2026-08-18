@@ -6,7 +6,7 @@ Connes--Consani construct the visible Abel--Jacobi pullback
 
 \[
  \pi:\mathcal X_{\mathbb Q}\longrightarrow
- \overline{\operatorname{Spec}\mathbb Z}.
+ \overline{\mathrm{Spec}\,\mathbb Z}.
 \]
 
 Its fiber over a finite prime \(p\) is the periodic orbit
@@ -16,14 +16,14 @@ Its fiber over a finite prime \(p\) is the periodic orbit
 \]
 
 Their 2026 arithmetic-Jacobian paper also constructs the structure sheaf
-\(\mathcal O_{\overline{\operatorname{Spec}\mathbb Z}}\) and the divisor
+\(\mathcal O_{\overline{\mathrm{Spec}\,\mathbb Z}}\) and the divisor
 modules \(\mathcal O(\mathcal D)\) on the base curve.  It does not define
 a relative structure sheaf on \(\mathcal X_{\mathbb Q}\).
 
 The first possible square is therefore the fiber product
 
 \[
- Y=\mathcal X_{\mathbb Q}\times_{\overline{\operatorname{Spec}\mathbb Z}}
+ Y=\mathcal X_{\mathbb Q}\times_{\overline{\mathrm{Spec}\,\mathbb Z}}
  \mathcal X_{\mathbb Q}
  \tag{1.1}
 \]
@@ -38,7 +38,7 @@ Let \(\pi:Z\to X\) be a continuous map and equip \(Z\) with
 generated only by the two base pullbacks.  Since
 
 \[
- \pi\circ\operatorname{pr}_1=\pi\circ\operatorname{pr}_2,
+ \pi\circ\mathrm{pr}_1=\pi\circ\mathrm{pr}_2,
 \]
 
 both pullbacks are the same inverse-image sheaf on \(W\).

@@ -105,7 +105,7 @@ Entonces, con \(\varepsilon=\sigma^2/(4M)\),
 
 \[
  \boxed{
- \underline{\operatorname {dens}}
+ \underline{\mathrm{dens}}
  \{n:P_n>\varepsilon\}\ge {\sigma^2\over4M^2}>0.} \tag{8}
 \]
 
@@ -142,7 +142,7 @@ Finalmente,
 Se promedia y se usa (10), obteniendo (8). \(\square\)
 
 La misma prueba vale para un polinomio real no nulo
-\(\operatorname {Re}\sum_jd_je^{in\theta_j}\), después de agrupar
+\(\mathrm{Re}\,\sum_jd_je^{in\theta_j}\), después de agrupar
 frecuencias. Lo único que cambia es la constante positiva.
 
 ## 4. Teorema dominante: una violación de RH produce densidad mala positiva
@@ -160,7 +160,7 @@ En particular,
 
 \[
  \boxed{
- \underline{\operatorname {dens}}\{n:D_n<0\}>0.} \tag{12}
+ \underline{\mathrm{dens}}\{n:D_n<0\}>0.} \tag{12}
 \]
 
 **Demostración.** Los ceros a la derecha de la línea crítica se transforman
@@ -211,13 +211,13 @@ todo \(n\) suficientemente grande, y \(D_n<0\). \(\square\)
 \[
  D_n>0
  \quad\hbox{para todo }n\notin\mathcal E,\qquad
- \operatorname {dens}(\mathcal E)=0,               \tag{17}
+ \mathrm{dens}(\mathcal E)=0,               \tag{17}
 \]
 
 entonces RH es cierta.
 
 No se obtiene de esta prueba una constante universal \(\delta_0>0\) tal
-que baste \(\overline{\operatorname {dens}}(\mathcal E)<\delta_0\). La cota
+que baste \(\overline{\mathrm{dens}}(\mathcal E)<\delta_0\). La cota
 de (8) depende del número y de las multiplicidades de los ceros dominantes;
 sin una cota uniforme para ese dato puede ser arbitrariamente pequeña.
 La relajación robusta es «excepciones de densidad cero».
@@ -228,7 +228,7 @@ La relajación robusta es «excepciones de densidad cero».
 
 \[
  \boxed{
- \underline{\operatorname {dens}}
+ \underline{\mathrm{dens}}
  \left\{N:\sum_{h=0}^{L-1}D_{N+h}<0\right\}>0.}    \tag{18}
 \]
 
@@ -236,7 +236,7 @@ La relajación robusta es «excepciones de densidad cero».
 \(w_j=q^{-1}e^{-i\theta_j}\), el término dominante se convierte en
 
 \[
- -8q^{-N}\operatorname {Re}
+ -8q^{-N}\mathrm{Re}
  \sum_jm_j e^{-iN\theta_j}A_L(w_j).                \tag{19}
 \]
 
@@ -261,7 +261,7 @@ Tómese el cuarteto de `104_17`
 Su contribución al coeficiente de Li es
 
 \[
- Q_n=4-2\operatorname {Re}(w^n+w^{-n}),            \tag{20}
+ Q_n=4-2\mathrm{Re}(w^n+w^{-n}),            \tag{20}
 \]
 
 y al margen (1) es \(D_n^{\mathcal O}=4Q_n\). Por tanto
@@ -269,17 +269,17 @@ y al margen (1) es \(D_n^{\mathcal O}=4Q_n\). Por tanto
 \[
  \boxed{
  \sum_{h=0}^{L-1}D_{N+h}^{\mathcal O}
- =16L-8\operatorname {Re}\left{
+ =16L-8\mathrm{Re}\,\left{
  w^NA_L(w)+w^{-N}A_L(w^{-1})\right}.}             \tag{21}
 \]
 
 Escriba \(A_L(2i)=a_L+ib_L\). Es un entero gaussiano no nulo, porque
 \((2i)^L\ne1\). Alguna de las cuatro cantidades
-\(\operatorname {Re}(i^jA_L(2i))\) es estrictamente positiva. En la clase
+\(\mathrm{Re}(i^jA_L(2i))\) es estrictamente positiva. En la clase
 \(N\equiv j\pmod4\) correspondiente, el término dominante de (21) es
 
 \[
- -8\,2^N\operatorname {Re}(i^jA_L(2i)),
+ -8\,2^N\mathrm{Re}(i^jA_L(2i)),
 \]
 
 mientras el término recíproco tiende a cero. Así (21) es negativo para

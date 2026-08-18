@@ -48,7 +48,7 @@ block"*.
 |---|---|---|
 | D.195--D.196 | boundary state space is two full \(L^2\) modules, inertia \((\infty,\infty)\) | per-prime two-chart colligation |
 | D.197 | explicit two-cell counterexample to the local isometric boundary relation | periodic boundary graph |
-| D.258 (2.1) | \(\operatorname{rank}\mathcal C_{S,T}=\infty\) | coherent dual-central port |
+| D.258 (2.1) | \(\mathrm{rank}\,\mathcal C_{S,T}=\infty\) | coherent dual-central port |
 | D.259 (2.1) | Tate primitivity does not annihilate the coherent port | same |
 
 ### Relation
@@ -77,7 +77,7 @@ This correspondence is verbatim, not merely structural.
 
 `eq:archmultiplier` defines
 \[
- m_\infty(\tau)=\log\pi-\operatorname{Re}\psi(\tfrac14+i\tfrac\tau2),
+ m_\infty(\tau)=\log\pi-\mathrm{Re}\,\psi(\tfrac14+i\tfrac\tau2),
 \]
 and the text following `eq:archenergy` proves
 

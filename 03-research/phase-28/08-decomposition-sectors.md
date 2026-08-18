@@ -65,14 +65,14 @@ Corrección: $G_{\text{poly}}(0) = 2\cdot(1/4)/(1/4)^2 = (1/2)/(1/16) = 8$. Y pa
 
 ## 4. Sector Gamma: cálculo y comportamiento
 
-$$G_\Gamma(t) = \frac{d^2}{dt^2}\log\!\left|\Gamma\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right| = \operatorname{Re}\frac{d^2}{dt^2}\log\Gamma\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right).$$
+$$G_\Gamma(t) = \frac{d^2}{dt^2}\log\!\left|\Gamma\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right| = \mathrm{Re}\,\frac{d^2}{dt^2}\log\Gamma\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right).$$
 
 La segunda derivada de $\log\Gamma(s)$ es la función poligamma $\psi^{(1)}(s)$ (primera derivada de digamma). Por la regla de la cadena con $s(t) = 1/4 + it/2$:
 
 $$\frac{d^2}{dt^2}\log\Gamma\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right) = \left(\tfrac{i}{2}\right)^2 \psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right) = -\tfrac{1}{4}\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right).$$
 
 **Resultado exacto:**
-$$\boxed{G_\Gamma(t) = -\tfrac{1}{4}\operatorname{Re}\!\left[\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right]}$$
+$$\boxed{G_\Gamma(t) = -\tfrac{1}{4}\mathrm{Re}\,\!\left[\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right]}$$
 
 ### 4.1 Identidad de reflexión y duplicación
 
@@ -80,7 +80,7 @@ La función $\psi^{(1)}$ satisface la ecuación de reflexión:
 $$\psi^{(1)}(z) + \psi^{(1)}(1-z) = \frac{\pi^2}{\sin^2(\pi z)}.$$
 
 Tomando $z = 1/4 + it/2$: $1-z = 3/4 - it/2$. Como $\psi^{(1)}$ es analítica y $\overline{\psi^{(1)}(z)} = \psi^{(1)}(\bar z)$:
-$$\operatorname{Re}\!\left[\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right] + \operatorname{Re}\!\left[\psi^{(1)}\!\left(\tfrac{3}{4}-\tfrac{it}{2}\right)\right] = \operatorname{Re}\!\left[\frac{\pi^2}{\sin^2\!\left(\pi(\tfrac{1}{4}+\tfrac{it}{2})\right)}\right].$$
+$$\mathrm{Re}\,\!\left[\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right] + \mathrm{Re}\,\!\left[\psi^{(1)}\!\left(\tfrac{3}{4}-\tfrac{it}{2}\right)\right] = \mathrm{Re}\,\!\left[\frac{\pi^2}{\sin^2\!\left(\pi(\tfrac{1}{4}+\tfrac{it}{2})\right)}\right].$$
 
 Calculamos $\sin(\pi/4 + i\pi t/2) = \sin(\pi/4)\cosh(\pi t/2) + i\cos(\pi/4)\sinh(\pi t/2)$, entonces:
 $$|\sin(\pi/4 + i\pi t/2)|^2 = \tfrac{1}{2}\cosh^2(\pi t/2) + \tfrac{1}{2}\sinh^2(\pi t/2) = \tfrac{1}{2}\cosh(\pi t).$$
@@ -88,12 +88,12 @@ $$|\sin(\pi/4 + i\pi t/2)|^2 = \tfrac{1}{2}\cosh^2(\pi t/2) + \tfrac{1}{2}\sinh^
 Por la identidad del cuadrado: $\sin^2(\pi z)|_{z=1/4+it/2}$ tiene parte real $\frac{1}{2}\cosh(\pi t)$, pero el argumento completo requiere cuidado. La identidad útil viene de la fórmula de duplicación y reflexión combinadas:
 
 **Identidad clave** (consecuencia de reflexión para $\psi^{(1)}$):
-$$\operatorname{Re}\!\left[\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right] + \operatorname{Re}\!\left[\psi^{(1)}\!\left(\tfrac{3}{4}+\tfrac{it}{2}\right)\right] = 2\pi^2\operatorname{sech}^2(\pi t).$$
+$$\mathrm{Re}\,\!\left[\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right] + \mathrm{Re}\,\!\left[\psi^{(1)}\!\left(\tfrac{3}{4}+\tfrac{it}{2}\right)\right] = 2\pi^2\mathrm{sech}^2(\pi t).$$
 
 *Derivación:* De la fórmula de duplicación de $\psi^{(1)}$:
 $$\psi^{(1)}(z) + \psi^{(1)}\!\left(z+\tfrac{1}{2}\right) = \tfrac{1}{2}\psi^{(1)}\!\left(\tfrac{z}{2}\right) + \tfrac{1}{2}\psi^{(1)}\!\left(\tfrac{z+1}{2}\right),$$
 y de la reflexión, se obtiene (véase Abramowitz–Stegun §6.4.7):
-$$\operatorname{Re}\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right) + \operatorname{Re}\psi^{(1)}\!\left(\tfrac{3}{4}+\tfrac{it}{2}\right) = 2\pi^2\operatorname{sech}^2(\pi t).$$
+$$\mathrm{Re}\,\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right) + \mathrm{Re}\,\psi^{(1)}\!\left(\tfrac{3}{4}+\tfrac{it}{2}\right) = 2\pi^2\mathrm{sech}^2(\pi t).$$
 
 ### 4.2 Comportamiento asintótico para $t \to \infty$
 
@@ -105,10 +105,10 @@ $$\frac{d^2}{ds^2}\log\Gamma(s) = \psi^{(1)}(s) \approx \frac{1}{s} + \frac{1}{2
 Con $s = 1/4 + it/2 \approx it/2$ para $t$ grande:
 $$\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right) \approx \frac{1}{it/2} = \frac{-2i}{t} + O(1/t^2).$$
 
-Esto da $\operatorname{Re}[\psi^{(1)}(1/4+it/2)] \approx O(1/t^2)$ (el término principal es imaginario puro). A segundo orden:
+Esto da $\mathrm{Re}[\psi^{(1)}(1/4+it/2)] \approx O(1/t^2)$ (el término principal es imaginario puro). A segundo orden:
 $$\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right) \approx \frac{2}{it} + \frac{1}{2(it/2)^2} = \frac{-2i}{t} + \frac{1}{2 \cdot (-t^2/4)} = \frac{-2i}{t} - \frac{2}{t^2}.$$
 
-Por tanto $\operatorname{Re}[\psi^{(1)}(1/4+it/2)] \approx -2/t^2$ y:
+Por tanto $\mathrm{Re}[\psi^{(1)}(1/4+it/2)] \approx -2/t^2$ y:
 
 $$\boxed{G_\Gamma(t) \approx \frac{1}{2t^2} \quad (t \to +\infty).}$$
 
@@ -156,17 +156,17 @@ Estima burda: el cruce ocurre donde $G_{\text{poly}}(t) \approx -G_\Gamma(t)$, i
 $$G_\zeta(t) = \frac{d^2}{dt^2}\log|\zeta\!\left(\tfrac{1}{2}+it\right)|.$$
 
 Usando el logaritmo de la función zeta y la función de von Mangoldt $\Lambda(n)$:
-$$\log\zeta(s) = \sum_{p,k} \frac{1}{k p^{ks}} \quad (\operatorname{Re}(s) > 1),$$
+$$\log\zeta(s) = \sum_{p,k} \frac{1}{k p^{ks}} \quad (\mathrm{Re}(s) > 1),$$
 y la fórmula explícita de Guinand–Weil:
 $$-\frac{d^2}{dt^2}\log|\zeta\!\left(\tfrac{1}{2}+it\right)| = \sum_\rho \frac{d^2}{dt^2}\log\!\left|\tfrac{1}{2}+it-\rho\right|.$$
 
-**El muro de convergencia.** El producto de Euler $\zeta(s) = \prod_p (1-p^{-s})^{-1}$ converge absolutamente sólo para $\operatorname{Re}(s) > 1$. En la recta crítica $\sigma = 1/2$, la convergencia es condicional (si ocurre) y no uniforme. Por tanto:
+**El muro de convergencia.** El producto de Euler $\zeta(s) = \prod_p (1-p^{-s})^{-1}$ converge absolutamente sólo para $\mathrm{Re}(s) > 1$. En la recta crítica $\sigma = 1/2$, la convergencia es condicional (si ocurre) y no uniforme. Por tanto:
 
 1. **No se puede intercambiar** derivada e integral en el producto de Euler en $\sigma = 1/2$.
 2. **La serie de Dirichlet** $\sum_n \Lambda(n)/n^{1/2+it}$ diverge absolutamente; la convergencia condicional de $-\zeta'/\zeta$ en $\sigma = 1/2$ depende de la distribución de primos.
 3. **Sin asumir RH**, la función $t \mapsto \log|\zeta(1/2+it)|$ puede tener puntos donde el logaritmo es $-\infty$ (ceros de $\zeta$ fuera de la recta crítica), haciendo $G_\zeta(t)$ no definido.
 
-**Proposición 1** (el muro aritmético). La afirmación $G_\zeta(t) > -G_{\text{ana}}(t)$ para todo $t > t_*$ es equivalente a la no-existencia de ceros de $\zeta$ con $\operatorname{Re}(\rho) \neq 1/2$. En particular, probar esta desigualdad sin asumir RH es equivalente a probar RH.
+**Proposición 1** (el muro aritmético). La afirmación $G_\zeta(t) > -G_{\text{ana}}(t)$ para todo $t > t_*$ es equivalente a la no-existencia de ceros de $\zeta$ con $\mathrm{Re}(\rho) \neq 1/2$. En particular, probar esta desigualdad sin asumir RH es equivalente a probar RH.
 
 *Prueba.* Si $\rho_0 = 1/2 + b_0 + i\gamma_0$ con $b_0 \neq 0$ es un cero de $\zeta$, entonces por la ecuación funcional también $1 - \rho_0 = 1/2 - b_0 + i\gamma_0$ es cero. La contribución del par $\{\rho_0, 1-\rho_0, \bar\rho_0, \overline{1-\rho_0}\}$ a $G_\zeta$ en $t = \gamma_0$ incluye el término:
 $$\frac{d^2}{dt^2}\log\!\left|1/2+it-\rho_0\right|\bigg|_{t=\gamma_0} = \frac{d^2}{dt^2}\log\!\left|i(t-\gamma_0)-b_0\right|\bigg|_{t=\gamma_0}.$$
@@ -215,7 +215,7 @@ Esto es esencialmente el programa de la clase de Laguerre–Pólya y el problema
 | Sector | Fórmula exacta | Signo para $t$ pequeño | Signo para $t$ grande | Controlable sin RH |
 |--------|----------------|----------------------|---------------------|-------------------|
 | $G_{\text{poly}}$ | $\tfrac{2(1/4-t^2)}{(t^2+1/4)^2}$ | $+ $ (para $t < 1/2$) | $-$ ($\sim -2/t^2$) | Sí (exacto) |
-| $G_\Gamma$ | $-\tfrac{1}{4}\operatorname{Re}\psi^{(1)}(1/4+it/2)$ | $-$ (en $t=0$: $\approx -4.30$) | $+$ ($\sim +1/(2t^2)$) | Sí (exacto) |
+| $G_\Gamma$ | $-\tfrac{1}{4}\mathrm{Re}\,\psi^{(1)}(1/4+it/2)$ | $-$ (en $t=0$: $\approx -4.30$) | $+$ ($\sim +1/(2t^2)$) | Sí (exacto) |
 | $G_{\text{ana}}$ | suma de arriba | $+$ ($\approx 3.70$ en $t=0$) | $-$ ($\sim -3/(2t^2)$) | Sí |
 | $G_\zeta$ | $\tfrac{d^2}{dt^2}\log|\zeta(1/2+it)|$ | Desconocido | Desconocido | **No sin RH** |
 
@@ -227,7 +227,7 @@ Phase 28 comenzó con cuatro frentes distintos (A, B, C, D) y los unificó progr
 
 1. **Unificación A = D** (doc 04): el flujo de de Bruijn–Newman es el gradiente de $E_{\log}$; los Frentes A y D son el mismo programa.
 
-2. **Segunda variación** (doc 05): $\delta^2_b Q(f,f) = -8\sum_j c_j^2 [\operatorname{Re}(\hat h''(\rho_j)\bar{\hat h}(\rho_j)) + |\hat h'(\rho_j)|^2]$. La condición de mínimo en $b_j = 0$ equivale a la clase LP.
+2. **Segunda variación** (doc 05): $\delta^2_b Q(f,f) = -8\sum_j c_j^2 [\mathrm{Re}(\hat h''(\rho_j)\bar{\hat h}(\rho_j)) + |\hat h'(\rho_j)|^2]$. La condición de mínimo en $b_j = 0$ equivale a la clase LP.
 
 3. **Curvatura de $\xi$** (doc 06): $\partial^2_{\sigma\sigma}\log|\xi| = \mathcal{C}(\gamma) = \sum_\rho ((\gamma-\gamma_\rho)^2-(\sigma-\beta_\rho)^2)/|s-\rho|^4$. RH equivale a $\mathcal{C}(t) > 0$.
 
@@ -246,8 +246,8 @@ La franqueza exige reconocer que Phase 28, como todas las fases anteriores, iden
 | Resultado | Estado |
 |---|---|
 | Fórmula exacta $G_{\text{poly}}(t) = 2(1/4-t^2)/(t^2+1/4)^2$ | **Nuevo (derivado aquí)** |
-| Fórmula exacta $G_\Gamma(t) = -\tfrac{1}{4}\operatorname{Re}\psi^{(1)}(1/4+it/2)$ | **Nuevo (derivado aquí)** |
-| Identidad: $\operatorname{Re}\psi^{(1)}(1/4+it/2) + \operatorname{Re}\psi^{(1)}(3/4+it/2) = 2\pi^2\operatorname{sech}^2(\pi t)$ | Conocida (Abramowitz–Stegun), explicitada aquí |
+| Fórmula exacta $G_\Gamma(t) = -\tfrac{1}{4}\mathrm{Re}\,\psi^{(1)}(1/4+it/2)$ | **Nuevo (derivado aquí)** |
+| Identidad: $\mathrm{Re}\,\psi^{(1)}(1/4+it/2) + \mathrm{Re}\,\psi^{(1)}(3/4+it/2) = 2\pi^2\mathrm{sech}^2(\pi t)$ | Conocida (Abramowitz–Stegun), explicitada aquí |
 | $G_{\text{ana}}(t) < 0$ para $t > t_*$ (sector analítico no controla $G$) | **Nuevo diagnóstico** |
 | Equivalencia $G(t)>0 \iff $ RH con localización precisa del muro | **Nueva presentación** |
 | Proposición 1: existencia de cero off-line $\Rightarrow$ $G < 0$ cerca | **Nueva prueba** |

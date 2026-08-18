@@ -24,7 +24,7 @@ repository; all exit 0. No status was promoted.
   of $f(r/n)=\chi(n)f(r)$ are exactly $f=c\,r^{s}$, $\chi(n)=n^{-s}$; the
   log-periodic factor 108_00 §5 anticipated is **forced trivial**.
 * **Stage 1's bridge (108_33).** For $s_0,s_1\in(0,1)$ off the singular set,
-  $\Lambda_g^0(\operatorname{div}U_{s_0}-\operatorname{div}U_{s_1})
+  $\Lambda_g^0(\mathrm{div}\,U_{s_0}-\mathrm{div}\,U_{s_1})
   =L_g(s_0)-L_g(s_1)$, finite, with the divergent constant of 108_12
   contributing exactly zero at every finite regularization depth. This made
   principal invariance a **well-formed statement** for the first time.
@@ -40,7 +40,7 @@ repository; all exit 0. No status was promoted.
 * **The strip is one-dimensional (108_91 Thm 2.1, Cor. 2.2–2.3).**
   $\Phi'(s)=-\psi_1(1-s)-\tfrac14\psi_1(\tfrac s2)-\tfrac14\psi_1(1-\tfrac s2)
   <0$ on $(0,1)$, so $\Phi$ has **exactly one** zero there, simple, at
-  $s^*=0.301692388160422091519371\ldots$, and $\operatorname{rad}\Lambda^0$
+  $s^*=0.301692388160422091519371\ldots$, and $\mathrm{rad}\,\Lambda^0$
   restricted to the strip is **one-dimensional**.
 * **The embedding no-go (108_42 Thm 4.3, Cor. 4.4).** If RH holds, there is
   no isometric injection $(W_\infty,B_\infty)\hookrightarrow

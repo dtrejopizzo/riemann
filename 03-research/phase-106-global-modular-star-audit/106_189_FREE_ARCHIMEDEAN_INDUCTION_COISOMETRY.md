@@ -157,8 +157,8 @@ Let \(\gamma(\xi)\) be any measurable scalar multiplier and put
 
 \[
  \boxed{
- \operatorname {Ran}\mathcal T_{c,\gamma}
- =\operatorname {Ran}M_\gamma,}                             \tag{15}
+ \mathrm{Ran}\,\mathcal T_{c,\gamma}
+ =\mathrm{Ran}\,M_\gamma,}                             \tag{15}
 \]
 
 and

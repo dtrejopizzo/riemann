@@ -239,13 +239,13 @@ For every nontrivial local boost (3),
 In particular,
 
 \[
- \boxed{\operatorname {Tr}\mathcal K_\lambda=\infty.}
+ \boxed{\mathrm{Tr}\,\mathcal K_\lambda=\infty.}
  \tag{20}
 \]
 
 #### Proof
 
-Let \(F_N=\operatorname {span}\{q_{\gamma_1},\ldots,q_{\gamma_N}\}\).
+Let \(F_N=\mathrm{span}\,\{q_{\gamma_1},\ldots,q_{\gamma_N}\}\).
 In the coefficient basis denote the compressions of the forms of \(C\)
 and \(V\) by \(C_N\) and \(V_N\).  Lemma 1 gives
 
@@ -257,7 +257,7 @@ and \(V\) by \(C_N\) and \(V_N\).  Lemma 1 gives
 and Lemma 2, (13), and positivity give
 
 \[
- \operatorname {Tr}C_N
+ \mathrm{Tr}\,C_N
  \leq C\sum_{j\leq N}\log(2+\gamma_j)
  \leq CN\log(2+N).
  \tag{22}
@@ -267,7 +267,7 @@ Compress \(\mathcal K_\lambda\) to \(C^{1/2}F_N\).  Its trace there is
 the generalized trace
 
 \[
- \operatorname {Tr}(C_N^{-1}V_N).
+ \mathrm{Tr}(C_N^{-1}V_N).
  \tag{23}
 \]
 
@@ -276,9 +276,9 @@ By (21), the arithmetic--harmonic mean inequality, and (22),
 \[
  \begin{aligned}
  \sum_{j=1}^Ns_j(\mathcal K_\lambda)
- &\geq\operatorname {Tr}(C_N^{-1}V_N)\\
- &\geq aM\operatorname {Tr}(C_N^{-1})\\
- &\geq {aMN^2\over\operatorname {Tr}C_N}
+ &\geq\mathrm{Tr}(C_N^{-1}V_N)\\
+ &\geq aM\mathrm{Tr}(C_N^{-1})\\
+ &\geq {aMN^2\over\mathrm{Tr}\,C_N}
  \geq c{N\over\log(2+N)}.
  \end{aligned}
  \tag{24}
@@ -313,7 +313,7 @@ One can choose an injective smoothing boost \(V_s\) for which
 is trace class.  Then the sufficient estimate
 
 \[
- \operatorname {Tr}\mathcal K_{\lambda,s}<1
+ \mathrm{Tr}\,\mathcal K_{\lambda,s}<1
  \tag{27}
 \]
 
@@ -346,7 +346,7 @@ Put
 
 \[
  \mathscr H_\delta
- =\operatorname {Ran}\mathbf1_{(0,1/2-\delta]}(A),
+ =\mathrm{Ran}\,\mathbf1_{(0,1/2-\delta]}(A),
  \qquad 0<\delta<1/2.
  \tag{28a}
 \]
@@ -434,7 +434,7 @@ the plane of 106.45.  Its matrix is
 Therefore its real signature is
 
 \[
- \boxed{\operatorname {sig}M_{s_0}=(1,1).}
+ \boxed{\mathrm{sig}\,M_{s_0}=(1,1).}
  \tag{30}
 \]
 
@@ -491,7 +491,7 @@ This is a methodological falsifier, not a replacement for the ordinary
 primes.  It proves that PNT-envelope decay, Gamma compactness and exact
 anti-shorting cannot imply a finite total count.  In the literal problem,
 106.127 identifies the missing extra datum: the sign of the compressed
-moving Abel flux on \(\operatorname {Ran}Q_R\).  The theta boundary width
+moving Abel flux on \(\mathrm{Ran}\,Q_R\).  The theta boundary width
 \(\varepsilon_R\asymp e^{-2R}\) tends to zero, so strong smallness of the
 boundary correction gives no norm or counting smallness on those moving
 ranges.

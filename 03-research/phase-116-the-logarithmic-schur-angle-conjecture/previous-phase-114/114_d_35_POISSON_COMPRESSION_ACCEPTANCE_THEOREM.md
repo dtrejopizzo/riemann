@@ -20,7 +20,7 @@ For every `x in Ran(P)`,
 More generally, if `M:K -> H` is Hilbert--Schmidt and `PM=M`, then
 
 \[
- \operatorname{Tr}(M^*A_UM)
+ \mathrm{Tr}(M^*A_UM)
  =-\|(1-P)UM\|_{\rm HS}^2.                           \tag{1.3}
 \]
 
@@ -67,7 +67,7 @@ and the finite part of D.34 can be written as
 
 \[
  K_Q(F,F)=
- \operatorname{Tr}\left(M_{\widehat F}^*M_{\widehat F}
+ \mathrm{Tr}\,\left(M_{\widehat F}^*M_{\widehat F}
                  (P_B-P_Z)\right).                  \tag{2.3}
 \]
 
@@ -98,7 +98,7 @@ with the following three properties:
 \]
 
 \[
- \operatorname{Tr}\left(\mathcal M_Q(F)^*
+ \mathrm{Tr}\,\left(\mathcal M_Q(F)^*
    \bigl((U_Q^{adel})^*P_Q^{adel}U_Q^{adel}-P_Q^{adel}\bigr)
    \mathcal M_Q(F)\right)=B_Q(F,F),                  \tag{3.3}
 \]

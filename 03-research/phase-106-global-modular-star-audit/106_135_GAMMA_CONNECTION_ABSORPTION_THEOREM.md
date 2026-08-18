@@ -54,7 +54,7 @@ Then
 \boxed{
 \begin{aligned}
  &\mathfrak b_{\Gamma,*}(q)
- +2\operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ +2\mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}
  \\
  &\qquad=\mathfrak b_{w_\Gamma}(q)
  +2\int_{\mathbb R}(K*K)(x)K(x)|q(x)|^2\,dx.
@@ -67,7 +67,7 @@ Both terms on the right are nonnegative.  More precisely,
 \[
  \boxed{
  \mathfrak b_{\Gamma,*}(q)
- +2\operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ +2\mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}
  \ge \frac{499}{2000}\mathfrak b_{\Gamma,*}(q).}
  \tag{4}
 \]
@@ -77,7 +77,7 @@ For every \(0\le\eta\le1\), therefore,
 \[
 \boxed{
  \mathfrak b_{\Gamma,*}(q)
- +2\eta\operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ +2\eta\mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}
  \ge
  \left(1-\frac{1501}{2000}\eta\right)
  \mathfrak b_{\Gamma,*}(q)\ge0.}
@@ -303,10 +303,10 @@ Put \(f=Kq=aF\).  The adjoint calculation of 106.133 and \(c_K=1/2\)
 give
 
 \[
- \operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ \mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}
  =\langle f,T_Kf\rangle_2
  =\iint K(x-y)K(x)K(y)
-       \operatorname {Re}\{\overline{q(x)}q(y)\}\,dx\,dy.
+       \mathrm{Re}\,\{\overline{q(x)}q(y)\}\,dx\,dy.
  \tag{19}
 \]
 
@@ -323,10 +323,10 @@ Combining (18)--(20) proves (3).  Equations (2), (17), and (3) give (4).
 Finally,
 
 \[
- \mathfrak b_{\Gamma,*}+2\eta\operatorname {Re}\langle F,\mathcal CF\rangle
+ \mathfrak b_{\Gamma,*}+2\eta\mathrm{Re}\,\langle F,\mathcal CF\rangle
  =(1-\eta)\mathfrak b_{\Gamma,*}
  +\eta\bigl(\mathfrak b_{\Gamma,*}
- +2\operatorname {Re}\langle F,\mathcal CF\rangle\bigr),
+ +2\mathrm{Re}\,\langle F,\mathcal CF\rangle\bigr),
 \]
 
 which proves (5).
@@ -342,7 +342,7 @@ and they must not be conflated.  Equation (4) absorbs the **linear
 Hermitian power**
 
 \[
- 2\operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K}
+ 2\mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K}
 \]
 
 inside the connection-corrected KYP supply.  By contrast, the Douglas

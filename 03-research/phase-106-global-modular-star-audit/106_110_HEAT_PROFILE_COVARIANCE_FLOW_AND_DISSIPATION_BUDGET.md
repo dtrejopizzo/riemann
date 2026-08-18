@@ -33,10 +33,10 @@ The resulting exact target is a first-versus-second source budget:
 
 \[
  \boxed{
- \int_t^\infty \operatorname {Var}_s(A)\,ds
+ \int_t^\infty \mathrm{Var}_s(A)\,ds
  \leq
  \frac{\displaystyle\int_0^\infty J_t(u)\,d\sigma(u)}
-      {\operatorname {Tr}\Gamma_t}.}
+      {\mathrm{Tr}\,\Gamma_t}.}
  \tag{2}
 \]
 
@@ -95,7 +95,7 @@ For every real \(u\),
 \[
  \boxed{
  \mathcal J_u[\Gamma]
- =2\{W_\Gamma(u)-\operatorname {Re}C_\Gamma(u)\}.}
+ =2\{W_\Gamma(u)-\mathrm{Re}\,C_\Gamma(u)\}.}
  \tag{7}
 \]
 
@@ -104,7 +104,7 @@ The function \(C_\Gamma\) is positive definite.  If
 \[
  G_\Gamma(u)
  :=\sum_j\gamma_j\|f_j-\tau_uf_j\|_2^2
- =2\{C_\Gamma(0)-\operatorname {Re}C_\Gamma(u)\},
+ =2\{C_\Gamma(0)-\mathrm{Re}\,C_\Gamma(u)\},
  \tag{8}
 \]
 
@@ -128,7 +128,7 @@ Expand the jump square.  The first diagonal term is
 
 After the change of variable \(x\mapsto x+u\), the second diagonal term is
 \(W_\Gamma(-u)=W_\Gamma(u)\).  The cross term is
-\(2\operatorname {Re}C_\Gamma(u)\), proving (7).
+\(2\mathrm{Re}\,C_\Gamma(u)\), proving (7).
 
 For arbitrary \(c_a\in\mathbb C\) and \(u_a\in\mathbb R\),
 
@@ -177,7 +177,7 @@ double exponentially at infinity.  Define
 \[
  W_\Gamma^\circ(u)=W_\Gamma(u)-W_\Gamma(0)\chi_K(u),
  \qquad
- C_\Gamma^\circ(u)=\operatorname {Re}C_\Gamma(u)
+ C_\Gamma^\circ(u)=\mathrm{Re}\,C_\Gamma(u)
                     -C_\Gamma(0)\chi_K(u).
  \tag{10b}
 \]
@@ -224,7 +224,7 @@ Then
 
 \[
  W_r^\circ(u)
- =\operatorname {Re}\int_{\mathbb R}g(x)K(x-u)\,dx
+ =\mathrm{Re}\,\int_{\mathbb R}g(x)K(x-u)\,dx
  \tag{10g}
 \]
 
@@ -266,7 +266,7 @@ common subtraction is not defined.
 Assume \(C_\Gamma(0)>0\) and put
 
 \[
- \Phi_\Gamma(u)=\frac{\operatorname {Re}C_\Gamma(u)}{C_\Gamma(0)}.
+ \Phi_\Gamma(u)=\frac{\mathrm{Re}\,C_\Gamma(u)}{C_\Gamma(0)}.
  \tag{10i}
 \]
 
@@ -336,7 +336,7 @@ where \(V\) is the faithful positive trace-class boost of 106.103.  Let
 \(B_u=D_u^*D_u\) denote the positive displacement-form operator, so that
 
 \[
- \mathcal J_u[\Gamma_t]=\operatorname {Tr}(B_u\Gamma_t).
+ \mathcal J_u[\Gamma_t]=\mathrm{Tr}(B_u\Gamma_t).
  \tag{12}
 \]
 
@@ -370,7 +370,7 @@ domain,
  \partial_tJ_t(u)
  =-\frac12J_t(u)
  -\int_0^\infty
-   \operatorname {Re}\operatorname {Tr}
+   \mathrm{Re}\,\mathrm{Tr}
       (\Gamma_tB_vB_u)\,d\nu_+(v).}
  \tag{15}
 \]
@@ -390,7 +390,7 @@ Differentiate (12), use trace cyclicity on the hybrid row, and substitute
 \[
  \partial_tJ_t(u)
  =-\frac12J_t(u)
-  -\frac12\operatorname {Tr}
+  -\frac12\mathrm{Tr}
        \{\Gamma_t(AB_u+B_uA)\}.
  \tag{17}
 \]
@@ -413,7 +413,7 @@ already visible in dimension two.  The positive matrices
 have the same diagonal, while
 
 \[
- \operatorname {Tr}(HM_\pm)=1\pm cr.
+ \mathrm{Tr}(HM_\pm)=1\pm cr.
  \tag{19}
 \]
 
@@ -458,9 +458,9 @@ Moreover,
 
 \[
  \boxed{
- \operatorname {Tr}M_t=\operatorname {Tr}(A\Gamma_t),
+ \mathrm{Tr}\,M_t=\mathrm{Tr}(A\Gamma_t),
  \qquad
- \operatorname {Tr}(HM_t)=\operatorname {Tr}(A^2\Gamma_t).}
+ \mathrm{Tr}(HM_t)=\mathrm{Tr}(A^2\Gamma_t).}
  \tag{23}
 \]
 
@@ -487,9 +487,9 @@ the phase covariance is collapsed to its displacement diagonal.
 Put
 
 \[
- Z(t)=\operatorname {Tr}\Gamma_t,
+ Z(t)=\mathrm{Tr}\,\Gamma_t,
  \qquad
- R(t)=\frac{\operatorname {Tr}(A\Gamma_t)}{Z(t)},
+ R(t)=\frac{\mathrm{Tr}(A\Gamma_t)}{Z(t)},
  \qquad
  \alpha=\inf\sigma(A).
  \tag{25}
@@ -499,15 +499,15 @@ Let \(\mathbb P_t\) be the heat-tilted spectral probability measure of
 106.103 and write
 
 \[
- \operatorname {Var}_t(A)
- =\frac{\operatorname {Tr}(A^2\Gamma_t)}{Z(t)}-R(t)^2.
+ \mathrm{Var}_t(A)
+ =\frac{\mathrm{Tr}(A^2\Gamma_t)}{Z(t)}-R(t)^2.
  \tag{26}
 \]
 
 The exact Rayleigh flow is
 
 \[
- R'(t)=-\operatorname {Var}_t(A),
+ R'(t)=-\mathrm{Var}_t(A),
  \qquad R(t)\downarrow\alpha.
  \tag{27}
 \]
@@ -522,7 +522,7 @@ For every \(t>0\),
  \boxed{
  \alpha-\frac12
  =\frac{\displaystyle\int_0^\infty J_t(u)\,d\sigma(u)}{Z(t)}
-  -\int_t^\infty\operatorname {Var}_s(A)\,ds.}
+  -\int_t^\infty\mathrm{Var}_s(A)\,ds.}
  \tag{28}
 \]
 
@@ -545,7 +545,7 @@ Equation (27) gives
 
 \[
  R(t)-\alpha
- =\int_t^\infty\operatorname {Var}_s(A)\,ds.
+ =\int_t^\infty\mathrm{Var}_s(A)\,ds.
  \tag{30}
 \]
 
@@ -556,9 +556,9 @@ The first term in (28) is the literal signed prime--Gamma--polar source.
 The variance is a second-order source quantity.  By (23),
 
 \[
- \operatorname {Var}_t(A)
- =\frac{\operatorname {Tr}(HM_t)}{Z(t)}
-  -\left(\frac{\operatorname {Tr}M_t}{Z(t)}\right)^2.
+ \mathrm{Var}_t(A)
+ =\frac{\mathrm{Tr}(HM_t)}{Z(t)}
+  -\left(\frac{\mathrm{Tr}\,M_t}{Z(t)}\right)^2.
  \tag{31}
 \]
 
@@ -591,10 +591,10 @@ and Gamma fibers.  Therefore
 It follows exactly that
 
 \[
- \operatorname {Tr}\widetilde M_t=\operatorname {Tr}M_t,
+ \mathrm{Tr}\,\widetilde M_t=\mathrm{Tr}\,M_t,
  \qquad
- \operatorname {Tr}(\widetilde H\widetilde M_t)
- =\operatorname {Tr}(HM_t).
+ \mathrm{Tr}(\widetilde H\widetilde M_t)
+ =\mathrm{Tr}(HM_t).
  \tag{34}
 \]
 
@@ -611,7 +611,7 @@ If \(\alpha<1/2\), then (28) reads
 \[
  \boxed{
  \frac{\int J_t\,d\sigma}{Z(t)}
- -\int_t^\infty\operatorname {Var}_s(A)\,ds
+ -\int_t^\infty\mathrm{Var}_s(A)\,ds
  =-\left(\frac12-\alpha\right)<0}
  \tag{35}
 \]
@@ -622,7 +622,7 @@ concentration additionally gives
 \[
  \frac{\int J_t\,d\sigma}{Z(t)}\longrightarrow\alpha-\frac12,
  \qquad
- \int_t^\infty\operatorname {Var}_s(A)\,ds\longrightarrow0.
+ \int_t^\infty\mathrm{Var}_s(A)\,ds\longrightarrow0.
  \tag{36}
 \]
 
@@ -675,8 +675,8 @@ losses:
 > \[
 >  \int_t^\infty
 >  \left\{
->   \frac{\operatorname {Tr}(HM_s)}{Z(s)}
->   -\left(\frac{\operatorname {Tr}M_s}{Z(s)}\right)^2
+>   \frac{\mathrm{Tr}(HM_s)}{Z(s)}
+>   -\left(\frac{\mathrm{Tr}\,M_s}{Z(s)}\right)^2
 >  \right\}ds
 >  \leq
 >  \frac{\displaystyle\int_0^\infty J_t(u)\,d\sigma(u)}{Z(t)}.

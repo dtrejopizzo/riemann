@@ -42,7 +42,7 @@ For `n >= 2`, `a=log n`, and `h=f star f^vee`, one has
 
 \[
  h(n)+n^{-1}h(n^{-1})
- =2n^{-1/2}\operatorname{Re}\langle F,S_aF\rangle_{L^2(\mathbb R)}.
+ =2n^{-1/2}\mathrm{Re}\,\langle F,S_aF\rangle_{L^2(\mathbb R)}.
 \]
 
 Consequently, if
@@ -83,7 +83,7 @@ and similarly
 The two integrals are complex conjugates.  The unitary translation identity
 
 \[
- 2\operatorname{Re}\langle F,S_aF\rangle
+ 2\mathrm{Re}\,\langle F,S_aF\rangle
  =2\|F\|_2^2-\|F-S_aF\|_2^2
 \]
 
@@ -107,7 +107,7 @@ The archimedean multiplier already obtained from the Fourier finite part is
 
 \[
  m_\infty(\tau)=\log\pi-
- \operatorname{Re}\psi\left(\frac14+\frac{i\tau}{2}\right).
+ \mathrm{Re}\,\psi\left(\frac14+\frac{i\tau}{2}\right).
 \]
 
 Put `a_j=j+1/4`,

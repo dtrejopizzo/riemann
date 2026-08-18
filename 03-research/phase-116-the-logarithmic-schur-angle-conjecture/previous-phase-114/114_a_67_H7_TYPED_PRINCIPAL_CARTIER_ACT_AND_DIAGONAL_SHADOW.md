@@ -31,8 +31,8 @@ on every operation set under consideration.  Its regular principal
 generalized Cartier datum is
 
 \[
- D_A(s):=\operatorname{Spec}\bigl(A/E((s))\bigr)\longrightarrow
- \operatorname{Spec}A,                                                \tag{1.2}
+ D_A(s):=\mathrm{Spec}\,\bigl(A/E((s))\bigr)\longrightarrow
+ \mathrm{Spec}\,A,                                                \tag{1.2}
 \]
 
 together with the principal right `A`-act

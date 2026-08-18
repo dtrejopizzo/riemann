@@ -292,7 +292,7 @@ calculation.  Directly from Dunster's Liouville variable,
  \xi(\sigma,x)+J(\sigma)
  ={}&\sqrt{x^2-1}\\
  &+\sigma^2\left(
-       \frac{\pi}{4}-\frac12\operatorname {arcsec}x
+       \frac{\pi}{4}-\frac12\mathrm{arcsec}\,x
      \right)
  +O\!\left(\sigma^4(1+x^{-1})\right).
 \end{aligned}
@@ -306,7 +306,7 @@ Here
             +\frac{\pi}{32}\sigma^4+O(\sigma^6),
 \qquad
  \int_1^x\frac{dt}{t\sqrt{t^2-1}}
- =\operatorname {arcsec}x .
+ =\mathrm{arcsec}\,x .
  \tag{20e}
 \]
 

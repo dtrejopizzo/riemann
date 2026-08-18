@@ -28,7 +28,7 @@ $\tilde g(x):=g(e^x)$, compactly supported on some $[\alpha,\beta]\subset
 
 ### Lemma 110.2.1 (compact support $\Rightarrow$ finite exponential type in $\sigma$)
 
-For $g$ admissible with $\operatorname{supp}\tilde g\subseteq[\alpha,\beta]$,
+For $g$ admissible with $\mathrm{supp}\,\tilde g\subseteq[\alpha,\beta]$,
 $$|\hat g(\sigma+i\tau)|\ \le\ \|\tilde g\|_1\cdot\max\!\big(e^{-\alpha\sigma},\,e^{-\beta\sigma}\big)\ \le\ C\,e^{A|\sigma|}\qquad(A:=\max(|\alpha|,|\beta|)),\tag{1.1}$$
 for every $\sigma,\tau\in\mathbb R$ — a bound uniform in $\tau$, i.e. $\hat g$
 has finite exponential type $A$ in the $\sigma$-direction.
@@ -50,7 +50,7 @@ unconditional) — but this decay-in-$\tau$ is not where the obstruction to
 
 ### Fact 110.2.A (standard: Laplace-transform exponential rate matches the support endpoint)
 
-*If $h\in L^1[\alpha,\beta]$ is not a.e. zero and $\alpha=\inf(\operatorname{supp}h)$,
+*If $h\in L^1[\alpha,\beta]$ is not a.e. zero and $\alpha=\inf(\mathrm{supp}\,h)$,
 its transform $H(\sigma)=\int h(x)e^{-\sigma x}dx$ satisfies
 $\lim_{\sigma\to+\infty}\tfrac1\sigma\log|H(\sigma)|=-\alpha$ exactly; in
 particular $H$ cannot decay faster than every exponential rate as
@@ -175,7 +175,7 @@ Then:
 * $\hat f(\rho)=\xi(\rho)\cdot\sqrt\pi e^{\rho^2/4}=0$ for **every** zero
   $\rho$ of $\xi$ — ξ-divisibility holds, by construction, exactly as the
   general mechanism of the phase prompt predicts;
-* on every vertical line $\operatorname{Re}(w)=\sigma$ fixed, $|\hat
+* on every vertical line $\mathrm{Re}(w)=\sigma$ fixed, $|\hat
   f(\sigma+i\tau)|\to0$ **superexponentially** as $|\tau|\to\infty$ (the
   Gaussian factor $e^{-\tau^2/4}$ overwhelms $\xi$'s own $e^{-\pi|\tau|/4}$
   decay and any polynomial factors) — far more than enough for the

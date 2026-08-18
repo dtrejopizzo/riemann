@@ -7,7 +7,7 @@ ring \(\mathbb Z[\mu_L^2]\).  It does not apply to the normalized rooted
 scheme
 
 \[
- \mathcal R_L=\coprod_{n\mid L}\operatorname{Spec}\mathbb Z[\zeta_n]
+ \mathcal R_L=\coprod_{n\mid L}\mathrm{Spec}\,\mathbb Z[\zeta_n]
 \]
 
 of 107_160.  If \(L\mid L'\), every old component occurs unchanged as an
@@ -16,7 +16,7 @@ open-and-closed component of \(\mathcal R_{L'}\).
 For two rooted labels \((n,u)\) and \((m,v)\), put
 
 \[
- \ell=\operatorname{lcm}(n,m),\qquad O_\ell=\mathbb Z[\zeta_\ell],
+ \ell=\mathrm{lcm}(n,m),\qquad O_\ell=\mathbb Z[\zeta_\ell],
 \]
 
 \[
@@ -93,7 +93,7 @@ the normalized rooted square.  It repairs the transition failure of
 map after seeing the data.
 
 It does not yet make \(\mathcal R_L^2\) the Phase 107 surface: its
-components are finite over \(\operatorname{Spec}\mathbb Z\), and the
+components are finite over \(\mathrm{Spec}\,\mathbb Z\), and the
 complexes (1.2) are character local systems rather than the divisor
 modules \(O(D)\).  The next required comparison is a morphism from the
 finite-support divisor modules to these component complexes, compatible

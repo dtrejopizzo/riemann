@@ -124,7 +124,7 @@ unitary Fourier transform.  The complete full moments are
 where
 
 \[
- r_T(\tau)=\operatorname {Re}\psi
+ r_T(\tau)=\mathrm{Re}\,\psi
  \left({1\over4}+{i\tau\over2}\right)-\log\pi
  -2\sum_{p^k\le e^{2T}}{\log p\over p^{k/2}}
        \cos(k\tau\log p).                             \tag{3.2}

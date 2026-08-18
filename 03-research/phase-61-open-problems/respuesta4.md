@@ -38,7 +38,7 @@ u_\lambda
 \] en \(L^2(m_\lambda)\). Por construcción, \[
 L_\lambda 1=0
 \] y \[
-\operatorname{Spec}(L_\lambda)
+\mathrm{Spec}(L_\lambda)
 =
 \left\{
 \frac{\varepsilon_{k,\lambda}-\varepsilon_{0,\lambda}}
@@ -74,7 +74,7 @@ L_\infty
 \] por tanto \[
 L_\infty U_k(\cos\theta)=k(k+2)U_k(\cos\theta).
 \] Luego \[
-\operatorname{Spec}(L_\infty)
+\mathrm{Spec}(L_\infty)
 =
 \{0,3,8,15,\dots,k(k+2),\dots\}.
 \] Esto explica \[
@@ -201,7 +201,7 @@ R_{\delta,\lambda}\to0.
 2.3 \Longrightarrow 3.2.
 \] Más precisamente: Mosco da \[
 \lambda_1(L_\lambda)\to3,
-\] por tanto la proyección sobre el estado fundamental está aislada uniformemente; Kato da convergencia de las proyecciones; Montel da convergencia compacta de las transformadas enteras; Hurwitz conserva real-rootedness. --- # 10. Qué insertar en el paper Recomiendo añadir una subsección: ## Step 2.3 — Doob–Mosco convergence Con los siguientes resultados: 1. **Lemma 2.3.1.** Ground-state transform: \[ \operatorname{Spec}(\mathcal G_\lambda) = \left\{ \frac{\varepsilon_k-\varepsilon_0}{|\varepsilon_0|} \right\}. \] 2. **Lemma 2.3.2.** Beurling–Deny representation: \[ \mathcal G_\lambda(v) = \frac12\iint(v(\theta)-v(\phi))^2d\eta_\lambda. \] 3. **Lemma 2.3.3.** Moment convergence M0–M3. 4. **Theorem 2.3.4.** Mosco convergence: \[ \mathcal G_\lambda\to\mathcal G_\infty. \] 5. **Corollary 2.3.5.** \[ \frac{\varepsilon_1-\varepsilon_0}{|\varepsilon_0|}\to3. \] --- # 11. Resumen El cierre técnico de 2.3 ya no es “identificar autovectores”. Es probar los tres momentos del carré-du-champ transformado: \[
+\] por tanto la proyección sobre el estado fundamental está aislada uniformemente; Kato da convergencia de las proyecciones; Montel da convergencia compacta de las transformadas enteras; Hurwitz conserva real-rootedness. --- # 10. Qué insertar en el paper Recomiendo añadir una subsección: ## Step 2.3 — Doob–Mosco convergence Con los siguientes resultados: 1. **Lemma 2.3.1.** Ground-state transform: \[ \mathrm{Spec}(\mathcal G_\lambda) = \left\{ \frac{\varepsilon_k-\varepsilon_0}{|\varepsilon_0|} \right\}. \] 2. **Lemma 2.3.2.** Beurling–Deny representation: \[ \mathcal G_\lambda(v) = \frac12\iint(v(\theta)-v(\phi))^2d\eta_\lambda. \] 3. **Lemma 2.3.3.** Moment convergence M0–M3. 4. **Theorem 2.3.4.** Mosco convergence: \[ \mathcal G_\lambda\to\mathcal G_\infty. \] 5. **Corollary 2.3.5.** \[ \frac{\varepsilon_1-\varepsilon_0}{|\varepsilon_0|}\to3. \] --- # 11. Resumen El cierre técnico de 2.3 ya no es “identificar autovectores”. Es probar los tres momentos del carré-du-champ transformado: \[
 \boxed{
 \text{M0 medida}
 \quad+\quad

@@ -49,7 +49,7 @@ contact degree, equal to \(\log p\) for \(n=p^k\) and zero otherwise.  By
 D.117,
 
 \[
- H_{N,T}=-B_{{\rm nuc},N,T}\quad\text{on }\operatorname{Ran}P_T. \tag{1.2}
+ H_{N,T}=-B_{{\rm nuc},N,T}\quad\text{on }\mathrm{Ran}\,P_T. \tag{1.2}
 \]
 
 Row D is
@@ -113,7 +113,7 @@ where
 
 \[
  \ell_\infty(R)
- =\operatorname{Re}\psi(1/4+iR/2)-\psi(1/4)
+ =\mathrm{Re}\,\psi(1/4+iR/2)-\psi(1/4)
  =\log R+O(1).                                          \tag{3.2}
 \]
 
@@ -201,10 +201,10 @@ decomposition write
 Assuming \(A_N\ge0\), positivity propagates if and only if
 
 \[
- \operatorname{Ran}B_N\subseteq\operatorname{Ran}A_N^{1/2}
+ \mathrm{Ran}\,B_N\subseteq\mathrm{Ran}\,A_N^{1/2}
  \quad\text{and}\quad
  \boxed{
- \operatorname{Cap}_N:=D_N-B_N^*A_N^\dagger B_N\ge0.} \tag{5.3}
+ \mathrm{Cap}_N:=D_N-B_N^*A_N^\dagger B_N\ge0.} \tag{5.3}
 \]
 
 This is the operator-valued shorted capacity of D.79.  It retains the whole
@@ -215,7 +215,7 @@ An inductive proof of D would follow from the source-defined invariant
 
 \[
  \boxed{
- \operatorname{Cap}_N\ge0\quad\text{for every }N,
+ \mathrm{Cap}_N\ge0\quad\text{for every }N,
  \text{ uniformly in the directed smoothing.}}          \tag{5.4}
 \]
 
@@ -260,7 +260,7 @@ The multiscale programme reaches a sharper frontier:
 
 All threshold updates, prime-power coefficients, two Tate constraints and
 Gamma terms are exact.  The missing theorem is the uniform nonnegativity of
-the operator-valued capacities \(\operatorname{Cap}_N\).
+the operator-valued capacities \(\mathrm{Cap}_N\).
 
 The elementary frequency/localization proof cannot establish it because of
 the nonsummable tradeoff (4.2)--(4.4).  A successful continuation must use

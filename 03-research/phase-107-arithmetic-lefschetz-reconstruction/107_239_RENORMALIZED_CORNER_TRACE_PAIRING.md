@@ -34,7 +34,7 @@ For a compactly supported test \(h\), define the finite-part trace
  \mathfrak T_S(h)=
  \lim_{\Lambda\to\infty}
  \left(
- \operatorname{Tr}_{\mathcal H_S}(\theta(h)R_\Lambda)
+ \mathrm{Tr}_{\mathcal H_S}(\theta(h)R_\Lambda)
  -2h(1)\log\Lambda
  \right).
  \tag{1.4}
@@ -76,7 +76,7 @@ that intersection means the right-hand side.
 
 Embed a compactly supported test on \(\mathbb R_+^*\) into the idele class
 group through the module, \(h(u)=h(|u|)\).  If
-\(\operatorname{supp}h\subset[e^{-T},e^T]\), a finite prime can contribute
+\(\mathrm{supp}\,h\subset[e^{-T},e^T]\), a finite prime can contribute
 only if
 
 \[

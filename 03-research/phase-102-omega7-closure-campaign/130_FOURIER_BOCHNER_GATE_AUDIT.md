@@ -57,7 +57,7 @@ But its zeros solve
 \]
 Since \(1/\varepsilon>1\), these zeros are non-real:
 \[
-  az=(2m+1)\pi\pm i\,\operatorname{arcosh}(1/\varepsilon),
+  az=(2m+1)\pi\pm i\,\mathrm{arcosh}(1/\varepsilon),
   \qquad m\in\mathbb Z.
 \]
 

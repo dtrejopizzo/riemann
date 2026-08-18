@@ -95,7 +95,7 @@ formula follows by diagonalizing `U`:
 
 \[
  -\partial_\sigma[-\log|\det(I-p^{-s}U)|^2]
- =2L\operatorname{Re}\sum_{k\ge1}p^{-ks}{\operatorname{tr}U^k}.
+ =2L\mathrm{Re}\,\sum_{k\ge1}p^{-ks}{\mathrm{tr}\,U^k}.
                                                                     \tag{1.7}
 \]
 
@@ -120,7 +120,7 @@ determinant of the shifted oscillator `N+s/2`.  Its normal connection is
 \[
  \begin{aligned}
  -\partial_\sigma\log|D_\infty(s)|^2
- &=\log\pi-\operatorname{Re}\psi(s/2).                    \tag{2.3}
+ &=\log\pi-\mathrm{Re}\,\psi(s/2).                    \tag{2.3}
  \end{aligned}
 \]
 
@@ -129,7 +129,7 @@ On the central line this becomes
 \[
  \boxed{
  m_\infty(\tau)
- =\log\pi-\operatorname{Re}\psi(1/4+i\tau/2).}           \tag{2.4}
+ =\log\pi-\mathrm{Re}\,\psi(1/4+i\tau/2).}           \tag{2.4}
 \]
 
 Writing `a_j=j+1/4`, the digamma difference formula gives the exact split
@@ -165,7 +165,7 @@ Combining (1.3) and (2.3) yields
  -\partial_\sigma\log|\Lambda(s)|^2
  ={}&2\sum_{p,k\ge1}{\Lambda(p^k)\over p^{k\sigma}}
        \cos(k\tau\log p)\\
- &+\log\pi-\operatorname{Re}\psi(s/2).                   \tag{3.2}
+ &+\log\pi-\mathrm{Re}\,\psi(s/2).                   \tag{3.2}
  \end{aligned}
 \]
 

@@ -5,8 +5,8 @@
 The local Riesz reduction of 106.48 asks for the sign of
 
 \[
- \mathfrak T(P)=\operatorname {Tr}(PL^2)
- -\frac12\operatorname {Tr}(PL)                       \tag{1}
+ \mathfrak T(P)=\mathrm{Tr}(PL^2)
+ -\frac12\mathrm{Tr}(PL)                       \tag{1}
 \]
 
 on a finite spectral cluster. This note expands (1) directly in the
@@ -74,7 +74,7 @@ On every finite subthreshold spectral cluster,
 
 \[
 \boxed{
- \operatorname {Tr}(PL^2)
+ \mathrm{Tr}(PL^2)
  =c_K\int_{\mathbb R}\frac{K(x)}{h(x)}
  \|\mathbf B_P(x)\|_{\mathbb C^m}^2\,dx}              \tag{6}
 \]
@@ -84,7 +84,7 @@ and
 \[
 \boxed{
 \begin{aligned}
- \operatorname {Tr}(PL)
+ \mathrm{Tr}(PL)
  =\int_0^\infty\int_{\mathbb R}
  K(x)K(x-u)
  \|\mathbf Q(x)-\mathbf Q(x-u)\|^2\,dx\,d\nu_\zeta(u).
@@ -200,7 +200,7 @@ After writing (7) with both orientations, the cutoff version of (1) is
 The symmetrized form of (7) is
 
 \[
- \operatorname {Tr}(PL)
+ \mathrm{Tr}(PL)
  =\frac12\int K(x)W_{\varepsilon,N}(x)
  \int\|V_x\|^2d\pi_x\,dx.                            \tag{16}
 \]

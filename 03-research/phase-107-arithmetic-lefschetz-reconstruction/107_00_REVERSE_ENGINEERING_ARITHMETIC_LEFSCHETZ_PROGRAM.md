@@ -9,8 +9,8 @@ surface with minus twice its Neron--Tate height.  Yuan--Zhang and related
 work extend the arithmetic Hodge-index theorem to broad adelic settings.
 
 This statement has a strict categorical scope.  A hypothetical
-\(\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}
-\operatorname{Spec}\mathbb Z\), a scaling topos or a foliated dynamical
+\(\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}
+\mathrm{Spec}\,\mathbb Z\), a scaling topos or a foliated dynamical
 space is not automatically an arithmetic surface in that category.  For
 such a new object the Hodge-index theorem must either be transported by a
 comparison theorem or proved anew.
@@ -120,15 +120,15 @@ powers.  The construction must exploit this without truncating the
 arithmetic base:
 
 \[
- \operatorname{supp}f\subset[-T,T]
+ \mathrm{supp}\,f\subset[-T,T]
  \quad\Longrightarrow\quad
  D_f\text{ has finite nonarchimedean support on a regular proper model }
- \mathcal X_T/\operatorname{Spec}\mathbb Z.
+ \mathcal X_T/\mathrm{Spec}\,\mathbb Z.
  \tag{6}
 \]
 
 Here \(\mathcal X_T\) is global over the whole base.  It is not
-\(\operatorname{Spec}\mathbb Z\) with the places \(p>T\) deleted, and it
+\(\mathrm{Spec}\,\mathbb Z\) with the places \(p>T\) deleted, and it
 is not a nonproper truncation.  The word ``finite'' refers only to the
 support of \(D_f\), or to a finite-type proper model carrying it.
 
@@ -266,7 +266,7 @@ The following pieces are already proved:
 ### Deliverable
 
 A presentation by generators and relations of a finite-support module
-\(\operatorname{Div}_{\mathrm{EF}}\), together with degree, transpose and
+\(\mathrm{Div}_{\mathrm{EF}}\), together with degree, transpose and
 connected-trace maps.
 
 ### Stop tests
@@ -329,7 +329,7 @@ For distinct strata the local order must recover Apostol's resultant:
 
 \[
  \frac1{\varphi(n)}\log
- |\operatorname{Res}(\Phi_m,\Phi_n)|
+ |\mathrm{Res}(\Phi_m,\Phi_n)|
  =\begin{cases}
  \log p,&m/n=p^a,\\
  0,&\text{otherwise}.
@@ -427,7 +427,7 @@ the numbers from one coherent theory.
 
 ### Objective
 
-Construct a category \(\operatorname{Corr}_{\mathrm{EF}}\) whose
+Construct a category \(\mathrm{Corr}_{\mathrm{EF}}\) whose
 morphisms are decorated spans of root/cyclotomic strata.  It must have:
 
 \[
@@ -478,7 +478,7 @@ lines.
 ### Deliverable
 
 A source-defined scaling action whose closed-orbit return category is
-\(\operatorname{Corr}_{\mathrm{EF}}\).
+\(\mathrm{Corr}_{\mathrm{EF}}\).
 
 ### Stop tests
 
@@ -539,7 +539,7 @@ its Lefschetz numbers without yet constructing the global surface.
 ### Objective
 
 For each support bound \(T\), construct a regular proper arithmetic model
-\(\mathcal Y_T/\operatorname{Spec}\mathbb Z\) of relative dimension two
+\(\mathcal Y_T/\mathrm{Spec}\,\mathbb Z\) of relative dimension two
 containing all cycles with
 \(k\log p\leq T\), together with two projections, a diagonal and the
 correspondences of Part II.  The model remains proper over the complete
@@ -635,7 +635,7 @@ outside products to larger levels.  This removes a hidden contradiction
 and makes the rooted cyclotomic charts compatible with the pro-Frobenius
 system of `107_154`.
 
-Because \(L_T=\operatorname{lcm}(1,\ldots,\lfloor e^T\rfloor)\), its
+Because \(L_T=\mathrm{lcm}(1,\ldots,\lfloor e^T\rfloor)\), its
 logarithm is asymptotic to \(e^T\), and even its divisor set is
 intractable from \(T=5\).  All later finite-level constructions must
 therefore retain the exponent vector \((K_p(T))_p\) and must not
@@ -665,7 +665,7 @@ the finite rooted labels.
 After correcting packet labels to exact order, the finite regular
 arithmetic scheme
 \[
- \mathcal R_T=\coprod_{n\mid L_T}\operatorname{Spec}\mathbb Z[\zeta_n]
+ \mathcal R_T=\coprod_{n\mid L_T}\mathrm{Spec}\,\mathbb Z[\zeta_n]
 \]
 normalizes the visible root scheme and represents every primitive rooted
 label once.  The missing representability is now confined to the
@@ -723,7 +723,7 @@ This supplies a coefficient object, not yet a cohomology theory.
 monoid-action topos.  For \(r\) visible primes, its two rulings give the
 polynomial ring on \(2r\) generators, and the constant module has
 \[
- \operatorname{Ext}^k\cong\bigwedge^k\mathbb Z^{2r}.
+ \mathrm{Ext}^k\cong\bigwedge^k\mathbb Z^{2r}.
 \]
 The amplitude is therefore \([0,2r]\), unbounded with \(T\), rather
 than the surface amplitude \([0,2]\).  A genuine geometric three-term
@@ -776,12 +776,12 @@ surface \(E_{\rm CM}\times E_{\rm CM}\) satisfy
 and their centered intersection matrices are exactly those of Paper 0.
 This proves that a genuine complex top class preserves the complete Weil
 chain for the fixed CM control.  It does not construct the universal
-space over \(\operatorname{Spec}\mathbb Z\), nor does it evade the
+space over \(\mathrm{Spec}\,\mathbb Z\), nor does it evade the
 finite-place source no-go.
 
 `107_172` places the finite-field and complex fibres in one arithmetic
 family.  Over
-\(U=\operatorname{Spec}\mathcal O_{\mathbb Q(\sqrt{-11})}[1/11]\),
+\(U=\mathrm{Spec}\,\mathcal O_{\mathbb Q(\sqrt{-11})}[1/11]\),
 the CM curve is an abelian scheme and
 \[
  \Gamma_{\alpha^n}\cap\Delta=\ker(\alpha^n-1)
@@ -798,10 +798,10 @@ extension.  If \(w^2=2\alpha+3\), then
 has discriminant 1 over the quartic field \(L=\mathbb Q(\alpha,w)\).
 Hence \(\mathcal E_L\times_{\mathcal O_L}\mathcal E_L\) is a proper
 smooth relative surface over the entire arithmetic base
-\(\operatorname{Spec}\mathcal O_L\), carrying all Paper-0 graphs and
+\(\mathrm{Spec}\,\mathcal O_L\), carrying all Paper-0 graphs and
 intersections.  This proves the architecture for one CM control after
 base extension; it is not the universal space over
-\(\operatorname{Spec}\mathbb Z\).
+\(\mathrm{Spec}\,\mathbb Z\).
 
 The obvious descent of this calibration is closed by `107_174`.
 Conjugation exchanges \(\Gamma_\alpha\) and
@@ -817,7 +817,7 @@ covered by this no-go.
 `107_175` tests that new channel against the forcing component pair.
 Universal arithmetic linking at \(p=2\) contains characters with both
 Frobenius signs, so it is genuinely Galois-sensitive.  Nevertheless its
-source object is the same \(\operatorname{lk}_2\) for 20a1 and 36a4,
+source object is the same \(\mathrm{lk}_2\) for 20a1 and 36a4,
 while their \(IV^*\) component groups require opposite actions.  A
 target-independent selector cannot choose both.  Thus rooted/linking
 capacity alone does not reopen \(S3\); a quotient character must be
@@ -930,7 +930,7 @@ Green bridge is therefore constructed on Deninger's existing geometry.
 `107_186` supplies the archimedean analogue.  For the number operator
 \(Ne_n=ne_n\),
 \[
- \operatorname{FP}_{M\to\infty}left(
+ \mathrm{FP}_{M\to\infty}left(
  \sum_{n=0}^M{1\over n+a}-\log M\right)=-\psi(a).
 \]
 At \(a=s/2\), one half of this regularized resolvent trace plus
@@ -962,7 +962,7 @@ the exact cocycle, and the cofinal canonical section converges to
 descent to a sheaf and then to the absolute square remain separate.
 
 Sheaf descent on the arithmetic curve is proved in `107_189`.  On
-\(U_S=\operatorname{Spec}\mathbb Z\setminus S\), set
+\(U_S=\mathrm{Spec}\,\mathbb Z\setminus S\), set
 \(\mathscr L(U_S)=\mathcal O(\Re s>1)e_S\), with restrictions multiplied
 by the missing local inverse Euler factors.  The frame change dividing
 by \(g_S=\prod_{p\in S}(1-p^{-s})^{-1}\) identifies this presheaf with a
@@ -975,8 +975,8 @@ The external product is constructed in `107_190` on the actual product
 of semilocal sites.  On \(U_S\boxtimes U_T\),
 \[
  \mathscr L^\square=
- \operatorname{pr}_1^*\mathscr L\otimes
- \operatorname{pr}_2^*\mathscr L,
+ \mathrm{pr}_1^*\mathscr L\otimes
+ \mathrm{pr}_2^*\mathscr L,
 \]
 and division by
 \(g_S(s_1)g_T(s_2)\) proves all two-coordinate Cech equalizers.  Its
@@ -1101,7 +1101,7 @@ must remain on the prime side or use a larger branched determinant line.
 
 `107_203` constructs the canonical prime-side order-change correction
 at every finite support:
-\(\det_2=\det_5\exp(-\operatorname{Tr}D^2/2-\operatorname{Tr}D^4/4)\).
+\(\det_2=\det_5\exp(-\mathrm{Tr}\,D^2/2-\mathrm{Tr}\,D^4/4)\).
 It then proves that ordinary cofinal convergence still fails on the
 critical line.  At \(s=1/2\), the finite Euler determinants tend to
 zero while \(\zeta(1/2)^{-1}\ne0\).  Thus analytic continuation cannot
@@ -1282,8 +1282,8 @@ to the published RR formula on the base.
 
 107_224 eliminates the integral-\(c_1\) option for the archimedean real
 direction.  Divisibility forces every additive map
-\(\mathbb R\{\infty\}\to\operatorname{NS}(X)\) to vanish when
-\(\operatorname{NS}(X)\) is finitely generated, while the CC integer
+\(\mathbb R\{\infty\}\to\mathrm{NS}(X)\) to vanish when
+\(\mathrm{NS}(X)\) is finitely generated, while the CC integer
 Euler characteristic varies along the same direction.  Hence the next
 construction must keep the algebraic class fixed and place the real
 variation in the metric/Green or bounded tolerance data, exactly as
@@ -1312,7 +1312,7 @@ nonlinearly after retaining metric, Green, mass, or tolerance data.
 107_228 corrects the local stabilization program.  On every periodic
 orbit \(C_p\), the published theorem gives
 \[
- p^{-n}\operatorname{tdim}H^0(D)^{p^n}\longrightarrow\deg D>0
+ p^{-n}\mathrm{tdim}\,H^0(D)^{p^n}\longrightarrow\deg D>0
 \]
 for positive-degree divisors.  The filtered dimensions are therefore
 unbounded, so no finite set of rays and no eventual finite-depth
@@ -1473,7 +1473,7 @@ bundle
 
 \[
  D_f\longmapsto \overline M_f\in
- \widehat{\operatorname{Pic}}_{\rm int}(\mathcal Y_T),
+ \widehat{\mathrm{Pic}}_{\rm int}(\mathcal Y_T),
  \qquad M_f\cdot H_T=0
  \tag{15}
 \]
@@ -1486,7 +1486,7 @@ candidate, but the map and its metric compatibility must be constructed.
 ordinary Grothendieck group, as that codomain.  The Abel--Jacobi prime
 class \(H_p=\mathbb Z[1/p]\) is idempotent and noninvertible.  Therefore
 it cannot receive a generator of the signed group
-\(\operatorname{Div}_{\mathrm{EF}}\) under an additive map; after group
+\(\mathrm{Div}_{\mathrm{EF}}\) under an additive map; after group
 completion it becomes zero.  The live target must be a non-idempotent
 derived/spectral enhancement or a genuine group of metrized line bundles
 on a regular proper arithmetic model of relative dimension two.
@@ -1698,9 +1698,9 @@ component is the archimedean Green datum:
  f\longmapsto
  \bigl(D_f^{\mathrm{alg}},g_{f,\infty}\bigr),
  \qquad
- \dim\operatorname{span}\{D_f^{\mathrm{alg}}\}<\infty,
+ \dim\mathrm{span}\,\{D_f^{\mathrm{alg}}\}<\infty,
  \quad
- \dim\operatorname{span}\{g_{f,\infty}\}=\infty.
+ \dim\mathrm{span}\,\{g_{f,\infty}\}=\infty.
  \tag{18b}
 \]
 

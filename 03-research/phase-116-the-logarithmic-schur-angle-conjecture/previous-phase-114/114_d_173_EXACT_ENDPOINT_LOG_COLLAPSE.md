@@ -28,7 +28,7 @@ Recall
 The elementary closed form
 
 \[
- H_1(x)=\operatorname {atanh}(e^{-x/2})
+ H_1(x)=\mathrm{atanh}(e^{-x/2})
         +\arctan(e^{-x/2})                            \tag{1.2}
 \]
 

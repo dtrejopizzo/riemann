@@ -42,7 +42,7 @@ Las dos fórmulas anteriores no pueden importarse como teoremas en esa forma. En
 \(s_0=\rho-1\), el integrando de la prueba del Teorema 6.1 satisface
 
 \[
-\operatorname*{Res}_{s=s_0}
+\mathop{\mathrm{Res}}_{s=s_0}
 k_n(s)\left(-\frac{L'}L(s+1,\pi)\right)
 =-m_\rho k_n(\rho-1),
 \qquad
@@ -238,7 +238,7 @@ magnitud"** sin uniformidad ni lado. La advertencia correcta es sobre **uniformi
 sobre "asintótico".
 
 Aquí la normalización es la del coeficiente de Li. En una forma de Weil/autocorrelación
-\(2\operatorname{Re}\lambda_n\), el mismo cuarteto aporta
+\(2\mathrm{Re}\,\lambda_n\), el mismo cuarteto aporta
 \(8-8\cosh(n\alpha)\cos(n\theta)\).
 
 **Veredicto:** `adyacente`. Las conclusiones de Voros **no se transfieren automáticamente a

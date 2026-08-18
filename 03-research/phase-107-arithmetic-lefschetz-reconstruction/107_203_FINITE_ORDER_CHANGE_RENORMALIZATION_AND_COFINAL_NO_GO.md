@@ -16,8 +16,8 @@ be the balanced operator of 107_199.  The order-change identity is
  =
  \det{}_5(1-D_{S,s})
  \exp\left(
- -\frac12\operatorname{Tr}D_{S,s}^2
- -\frac14\operatorname{Tr}D_{S,s}^4
+ -\frac12\mathrm{Tr}\,D_{S,s}^2
+ -\frac14\mathrm{Tr}\,D_{S,s}^4
  \right).
  }
  \tag{1.1}
@@ -26,9 +26,9 @@ be the balanced operator of 107_199.  The order-change identity is
 Indeed each prime block contributes
 
 \[
- \frac12\operatorname{Tr}D_{p,s}^2=p^{-s},
+ \frac12\mathrm{Tr}\,D_{p,s}^2=p^{-s},
  \qquad
- \frac14\operatorname{Tr}D_{p,s}^4=\frac12p^{-2s},
+ \frac14\mathrm{Tr}\,D_{p,s}^4=\frac12p^{-2s},
 \]
 
 which cancels exactly the order-five counterterm of 107_201.  Therefore

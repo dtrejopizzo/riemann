@@ -78,7 +78,7 @@ $$C_\lambda(z) := w(z) - \Psi_\lambda(z),$$
 
 donde:
 - $\displaystyle\Psi_\lambda(z) = 2\sum_{n \leq \lambda^2} \Lambda(n)\, n^{-1/2}\, e^{iz\log n}$, (suma de von Mangoldt truncada)
-- $\displaystyle w(z) = \frac{1}{2}\log\pi - \frac{1}{2}\operatorname{Re}\,\psi_{\text{dig}}\!\left(\tfrac{1}{4}+\tfrac{iz}{2}\right)$ (contribución arquimediana).
+- $\displaystyle w(z) = \frac{1}{2}\log\pi - \frac{1}{2}\mathrm{Re}\,\,\psi_{\text{dig}}\!\left(\tfrac{1}{4}+\tfrac{iz}{2}\right)$ (contribución arquimediana).
 
 Aquí $\Lambda(n)$ es la función de von Mangoldt ($\Lambda(p^k) = \log p$, $\Lambda(n)=0$ si $n$ no es potencia prima) y $\psi_{\text{dig}}$ es la función digamma.
 
@@ -238,7 +238,7 @@ $$C_\lambda(x_0+iy) = C_\lambda(x_0) + iy\, C_\lambda'(x_0) - \frac{y^2}{2}\, C_
 
 Para que $C_\lambda(x_0+iy) = \mu_\lambda$ con $y \neq 0$ pequeño, la parte imaginaria de la ecuación requiere:
 
-$$y\,\operatorname{Re}[C_\lambda'(x_0)] + O(y^3) = 0.$$
+$$y\,\mathrm{Re}[C_\lambda'(x_0)] + O(y^3) = 0.$$
 
 Luego: para $y$ pequeño, los ceros complejos de $C_\lambda - \mu_\lambda$ se ubican cerca de puntos $x_0$ donde $C_\lambda'(x_0) = 0$, es decir, **puntos críticos de $C_\lambda$ sobre $\mathbb{R}$**.
 
@@ -318,11 +318,11 @@ $$\boxed{2\sum_p\sum_{k=1}^\infty \frac{\Lambda(p)}{p^{k/2}}\cos(\gamma_n\log p^
 
 (i) Inc. Inv.: $C_\infty(\gamma_n) = 0$ para todo $n$.
 
-(ii) $\operatorname{Re}[-\zeta'/\zeta(1/2+i\gamma_n)] = w(\gamma_n)/2$ para todo $n$ (el valor principal de la parte real de la derivada logarítmica en los ceros).
+(ii) $\mathrm{Re}[-\zeta'/\zeta(1/2+i\gamma_n)] = w(\gamma_n)/2$ para todo $n$ (el valor principal de la parte real de la derivada logarítmica en los ceros).
 
-(iii) El límite $g_n(\rho_n) := \lim_{s\to\rho_n}[-\zeta'/\zeta(s) - 1/(s-\rho_n)]$ satisface $\operatorname{Re}[g_n(\rho_n)] = w(\gamma_n)/2$ para todo $n$.
+(iii) El límite $g_n(\rho_n) := \lim_{s\to\rho_n}[-\zeta'/\zeta(s) - 1/(s-\rho_n)]$ satisface $\mathrm{Re}[g_n(\rho_n)] = w(\gamma_n)/2$ para todo $n$.
 
-*Prueba.* De la fórmula real $(R_\lambda)$: $C_\infty(\gamma_n) = w(\gamma_n) - 2\operatorname{Re}[\sum_p \Lambda(p)p^{-1/2-i\gamma_n}]$. La serie $\sum_n\Lambda(n)n^{-1/2-i\gamma_n} = -\zeta'/\zeta(1/2+i\gamma_n)$ (convergencia condicional). Para $s = 1/2+i(\gamma_n+\epsilon)$: el polo de $-\zeta'/\zeta$ es $1/(i\epsilon)$, puramente imaginario, luego $\operatorname{Re}[-\zeta'/\zeta] = \operatorname{Re}[g_n] + O(\epsilon)$. Las equivalencias siguen. $\square$
+*Prueba.* De la fórmula real $(R_\lambda)$: $C_\infty(\gamma_n) = w(\gamma_n) - 2\mathrm{Re}[\sum_p \Lambda(p)p^{-1/2-i\gamma_n}]$. La serie $\sum_n\Lambda(n)n^{-1/2-i\gamma_n} = -\zeta'/\zeta(1/2+i\gamma_n)$ (convergencia condicional). Para $s = 1/2+i(\gamma_n+\epsilon)$: el polo de $-\zeta'/\zeta$ es $1/(i\epsilon)$, puramente imaginario, luego $\mathrm{Re}[-\zeta'/\zeta] = \mathrm{Re}[g_n] + O(\epsilon)$. Las equivalencias siguen. $\square$
 
 **Observación 7.2.** La interpretación (iii) es notable: Inc. Inv. requiere que el **residuo regular** de $-\zeta'/\zeta$ en cada polo $\rho_n$ tenga parte real prescrita por la función arquimediana $w(\gamma_n)/2$. Esto es una condición sobre el comportamiento local de una función meromorfa en sus propios polos.
 
@@ -338,7 +338,7 @@ Esta sección contiene el resultado central nuevo del presente trabajo. Probamos
 
 $$-\frac{\zeta'}{\zeta}(s) = B + \sum_\rho\left[\frac{1}{s-\rho}+\frac{1}{\rho}\right] - \frac{1}{s-1} + \frac{1}{2}\log\pi - \frac{1}{2}\psi_{\text{dig}}\!\left(\frac{s}{2}+1\right), \quad (Had)$$
 
-donde la suma corre sobre todos los ceros no-triviales $\rho$ de $\zeta$ (pares $(\rho, 1-\bar\rho)$), y $B = \operatorname{Re}\!\left(\sum_\rho \frac{1}{\rho}\right) - 1 + \frac{1}{2}\log(4\pi)$ es una constante real.
+donde la suma corre sobre todos los ceros no-triviales $\rho$ de $\zeta$ (pares $(\rho, 1-\bar\rho)$), y $B = \mathrm{Re}\,\!\left(\sum_\rho \frac{1}{\rho}\right) - 1 + \frac{1}{2}\log(4\pi)$ es una constante real.
 
 La convergencia de $(Had)$ es condicional: se suma por pares $(\rho, \bar\rho)$ para asegurar la convergencia absoluta de las partes reales.
 
@@ -364,11 +364,11 @@ $$\rho_n - \rho = i(\gamma_n - \gamma) \in i\mathbb{R} \setminus\{0\}, \quad \fr
 
 Por lo tanto:
 
-$$\operatorname{Re}\!\left[\frac{1}{\rho_n-\rho}\right] = 0 \quad \forall\, \rho \neq \rho_n \text{ (bajo RH)}.$$
+$$\mathrm{Re}\,\!\left[\frac{1}{\rho_n-\rho}\right] = 0 \quad \forall\, \rho \neq \rho_n \text{ (bajo RH)}.$$
 
 Y consecuentemente:
 
-$$\operatorname{Re}\!\left[\sum_{\rho \neq \rho_n}\frac{1}{\rho_n-\rho}\right] = 0 \quad \text{(suma condicional bajo RH)}.$$
+$$\mathrm{Re}\,\!\left[\sum_{\rho \neq \rho_n}\frac{1}{\rho_n-\rho}\right] = 0 \quad \text{(suma condicional bajo RH)}.$$
 
 *Prueba.* Bajo RH, todos los ceros no-triviales tienen la forma $\rho = 1/2+i\gamma$ con $\gamma \in \mathbb{R}$. Para $\rho_n = 1/2+i\gamma_n$: $\rho_n - \rho = (1/2+i\gamma_n) - (1/2+i\gamma) = i(\gamma_n-\gamma)$, que es puramente imaginario para $\gamma \neq \gamma_n$. El recíproco $1/(i(\gamma_n-\gamma)) = -i/(\gamma_n-\gamma)$ es también puramente imaginario, con parte real 0. La suma (tomada condicionalmente por pares para garantizar convergencia) preserva la parte real nula. $\square$
 
@@ -376,21 +376,21 @@ $$\operatorname{Re}\!\left[\sum_{\rho \neq \rho_n}\frac{1}{\rho_n-\rho}\right] =
 
 **Proposición 8.2** (Los términos restantes igualan $w(\gamma_n)/2$). Bajo RH, la parte real del residuo regular $g_n(\rho_n)$ es:
 
-$$\operatorname{Re}[g_n(\rho_n)] = B + \operatorname{Re}\!\left[\sum_{\rho \neq \rho_n}\frac{1}{\rho}\right] + \operatorname{Re}\!\left[\frac{-1}{\rho_n-1}\right] + \frac{1}{2}\log\pi - \frac{1}{2}\operatorname{Re}\,\psi_{\text{dig}}\!\!\left(\tfrac{\rho_n}{2}+1\right).$$
+$$\mathrm{Re}[g_n(\rho_n)] = B + \mathrm{Re}\,\!\left[\sum_{\rho \neq \rho_n}\frac{1}{\rho}\right] + \mathrm{Re}\,\!\left[\frac{-1}{\rho_n-1}\right] + \frac{1}{2}\log\pi - \frac{1}{2}\mathrm{Re}\,\,\psi_{\text{dig}}\!\!\left(\tfrac{\rho_n}{2}+1\right).$$
 
 Estos son exactamente los términos que definen la función arquimediana $w(\gamma_n)/2$:
 
-$$\operatorname{Re}[g_n(\rho_n)] = \frac{w(\gamma_n)}{2}.$$
+$$\mathrm{Re}[g_n(\rho_n)] = \frac{w(\gamma_n)}{2}.$$
 
-*Prueba.* El Lema 8.1 anula la contribución $\operatorname{Re}[\sum_{\rho\neq\rho_n}1/(\rho_n-\rho)]$. Los términos restantes de $(g_n)$ son:
+*Prueba.* El Lema 8.1 anula la contribución $\mathrm{Re}[\sum_{\rho\neq\rho_n}1/(\rho_n-\rho)]$. Los términos restantes de $(g_n)$ son:
 
-- $B + \operatorname{Re}[\sum_{\rho\neq\rho_n}1/\rho]$: la constante de normalización y la contribución global de todos los ceros via $1/\rho$.
-- $\operatorname{Re}[-1/(\rho_n-1)] = \operatorname{Re}[-1/(-1/2+i\gamma_n)] = \operatorname{Re}[(1/2-i\gamma_n)/(1/4+\gamma_n^2)]$: la contribución del polo en $s=1$.
-- $\frac{1}{2}\log\pi - \frac{1}{2}\operatorname{Re}\,\psi_{\text{dig}}(\rho_n/2+1)$: la contribución de la función $\Gamma$.
+- $B + \mathrm{Re}[\sum_{\rho\neq\rho_n}1/\rho]$: la constante de normalización y la contribución global de todos los ceros via $1/\rho$.
+- $\mathrm{Re}[-1/(\rho_n-1)] = \mathrm{Re}[-1/(-1/2+i\gamma_n)] = \mathrm{Re}[(1/2-i\gamma_n)/(1/4+\gamma_n^2)]$: la contribución del polo en $s=1$.
+- $\frac{1}{2}\log\pi - \frac{1}{2}\mathrm{Re}\,\,\psi_{\text{dig}}(\rho_n/2+1)$: la contribución de la función $\Gamma$.
 
 La suma de todos estos términos es, por definición, la función arquimediana $w(\gamma_n)/2$ que aparece en la fórmula explícita de Guinand-Weil aplicada al punto $s = \rho_n = 1/2+i\gamma_n$. Esto es una identidad de definición: $w$ se define exactamente como la contribución de todos los factores no-ceros (polo en $s=1$, ceros triviales, factores $\Gamma$) a la fórmula explícita. $\square$
 
-**Observación 8.1** (¿Por qué es una tautología condicional, no un círculo vicioso?). La igualdad $\operatorname{Re}[g_n(\rho_n)] = w(\gamma_n)/2$ tiene dos partes: (1) La suma $\sum_{\rho\neq\rho_n}\operatorname{Re}[1/(\rho_n-\rho)] = 0$ requiere RH — no es tautológica. Sin RH, hay ceros $\rho = \sigma+i\gamma$ con $\sigma \neq 1/2$, y $\rho_n - \rho = (1/2-\sigma)+i(\gamma_n-\gamma)$ con $\operatorname{Re}[1/(\rho_n-\rho)] \neq 0$ en general. (2) Dado (1), los términos restantes son arquimedianos y coinciden con $w(\gamma_n)/2$ por construcción de $w$. Luego: la parte no-trivial de la prueba es (1) — el Lema 8.1 — que sí usa RH esencialmente.
+**Observación 8.1** (¿Por qué es una tautología condicional, no un círculo vicioso?). La igualdad $\mathrm{Re}[g_n(\rho_n)] = w(\gamma_n)/2$ tiene dos partes: (1) La suma $\sum_{\rho\neq\rho_n}\mathrm{Re}[1/(\rho_n-\rho)] = 0$ requiere RH — no es tautológica. Sin RH, hay ceros $\rho = \sigma+i\gamma$ con $\sigma \neq 1/2$, y $\rho_n - \rho = (1/2-\sigma)+i(\gamma_n-\gamma)$ con $\mathrm{Re}[1/(\rho_n-\rho)] \neq 0$ en general. (2) Dado (1), los términos restantes son arquimedianos y coinciden con $w(\gamma_n)/2$ por construcción de $w$. Luego: la parte no-trivial de la prueba es (1) — el Lema 8.1 — que sí usa RH esencialmente.
 
 ### 8.5 El Teorema Principal: RH $\Rightarrow$ Inc. Inv.
 
@@ -402,19 +402,19 @@ Es decir, RH $\Rightarrow$ Inc. Inv.
 
 *Prueba.* Fijemos $n \geq 1$ y sea $\rho_n = 1/2+i\gamma_n$. Calculamos $C_\infty(\gamma_n)$ directamente.
 
-Por la Proposición 7.3, $C_\infty(\gamma_n) = 0$ equivale a $\operatorname{Re}[g_n(\rho_n)] = w(\gamma_n)/2$.
+Por la Proposición 7.3, $C_\infty(\gamma_n) = 0$ equivale a $\mathrm{Re}[g_n(\rho_n)] = w(\gamma_n)/2$.
 
 Por la Proposición 8.1:
 
 $$g_n(\rho_n) = B + \sum_{\rho \neq \rho_n}\!\left[\frac{1}{\rho_n-\rho}+\frac{1}{\rho}\right] - \frac{1}{\rho_n-1} + \frac{1}{2}\log\pi - \frac{1}{2}\psi_{\text{dig}}\!\!\left(\tfrac{\rho_n}{2}+1\right).$$
 
-Tomando la parte real y usando el Lema 8.1 (que bajo RH da $\operatorname{Re}[1/(\rho_n-\rho)] = 0$ para todo $\rho \neq \rho_n$):
+Tomando la parte real y usando el Lema 8.1 (que bajo RH da $\mathrm{Re}[1/(\rho_n-\rho)] = 0$ para todo $\rho \neq \rho_n$):
 
-$$\operatorname{Re}[g_n(\rho_n)] = B + \operatorname{Re}\!\left[\sum_{\rho \neq \rho_n}\frac{1}{\rho}\right] + \operatorname{Re}\!\left[\frac{-1}{\rho_n-1}\right] + \frac{1}{2}\log\pi - \frac{1}{2}\operatorname{Re}\,\psi_{\text{dig}}\!\!\left(\tfrac{\rho_n}{2}+1\right).$$
+$$\mathrm{Re}[g_n(\rho_n)] = B + \mathrm{Re}\,\!\left[\sum_{\rho \neq \rho_n}\frac{1}{\rho}\right] + \mathrm{Re}\,\!\left[\frac{-1}{\rho_n-1}\right] + \frac{1}{2}\log\pi - \frac{1}{2}\mathrm{Re}\,\,\psi_{\text{dig}}\!\!\left(\tfrac{\rho_n}{2}+1\right).$$
 
 Por la Proposición 8.2, esta expresión es igual a $w(\gamma_n)/2$.
 
-Luego $\operatorname{Re}[g_n(\rho_n)] = w(\gamma_n)/2$, que por la Proposición 7.3 equivale a $C_\infty(\gamma_n) = 0$. $\square$
+Luego $\mathrm{Re}[g_n(\rho_n)] = w(\gamma_n)/2$, que por la Proposición 7.3 equivale a $C_\infty(\gamma_n) = 0$. $\square$
 
 ---
 
@@ -427,7 +427,7 @@ Luego $\operatorname{Re}[g_n(\rho_n)] = w(\gamma_n)/2$, que por la Proposición 
 $$\textbf{(RH)} \quad \iff \quad \textbf{(Inc. Inv.)} \quad \iff \quad \textbf{(CondMin)}$$
 
 donde:
-- **RH**: todos los ceros no-triviales de $\zeta(s)$ tienen $\operatorname{Re}(s) = 1/2$.
+- **RH**: todos los ceros no-triviales de $\zeta(s)$ tienen $\mathrm{Re}(s) = 1/2$.
 - **Inc. Inv.**: $C_\infty(\gamma_n) = 0$ para todo $n \geq 1$.
 - **CondMin**: $\displaystyle\lim_{\lambda\to\infty} \min_{x_c \in \mathcal{C}_\lambda(T)} C_\lambda(x_c) = 0$ para todo $T > 0$.
 
@@ -464,7 +464,7 @@ La equivalencia RH $\iff$ Inc. Inv. tiene la siguiente lectura:
 
 **Dirección RH $\Rightarrow$ Inc. Inv.** (Teorema 8.2): Si todos los ceros de $\zeta$ están en la línea crítica, entonces la suma de interacción de cada cero $\rho_n$ con todos los demás ceros (via la suma de Hadamard) tiene parte real nula, y la condición de vanecimiento $C_\infty(\gamma_n) = 0$ se reduce a una identidad de naturaleza arquimediana — automáticamente satisfecha por definición.
 
-**El mecanismo de cancelación:** La clave es que bajo RH, las diferencias $\rho_n - \rho = i(\gamma_n-\gamma)$ son puramente imaginarias, haciendo que $\operatorname{Re}[1/(\rho_n-\rho)] = 0$. Esta es la manifestación analítica de que, si todos los ceros están en la misma recta vertical, su interacción mutua no tiene componente "horizontal" — la alineación en la línea crítica produce una cancelación exacta en las sumas de Hadamard.
+**El mecanismo de cancelación:** La clave es que bajo RH, las diferencias $\rho_n - \rho = i(\gamma_n-\gamma)$ son puramente imaginarias, haciendo que $\mathrm{Re}[1/(\rho_n-\rho)] = 0$. Esta es la manifestación analítica de que, si todos los ceros están en la misma recta vertical, su interacción mutua no tiene componente "horizontal" — la alineación en la línea crítica produce una cancelación exacta en las sumas de Hadamard.
 
 ---
 
@@ -527,7 +527,7 @@ Hemos establecido los siguientes resultados:
 
 3. **Reformulación analítica** (Proposición 7.1): Inc. Inv. $\iff$ el ínfimo de $C_\lambda$ tiende a 0. Esto convierte RH en una pregunta de análisis real sobre el mínimo de una función explícita.
 
-4. **RH $\Rightarrow$ Inc. Inv.** (Teorema 8.2): Bajo RH, la suma de Hadamard $\sum_{\rho\neq\rho_n}\operatorname{Re}[1/(\rho_n-\rho)]$ se anula (los ceros alineados en la línea crítica producen diferencias puramente imaginarias), y $C_\infty(\gamma_n) = 0$ se reduce a una identidad arquimediana de definición. Esta implicación es nueva en el programa CCM.
+4. **RH $\Rightarrow$ Inc. Inv.** (Teorema 8.2): Bajo RH, la suma de Hadamard $\sum_{\rho\neq\rho_n}\mathrm{Re}[1/(\rho_n-\rho)]$ se anula (los ceros alineados en la línea crítica producen diferencias puramente imaginarias), y $C_\infty(\gamma_n) = 0$ se reduce a una identidad arquimediana de definición. Esta implicación es nueva en el programa CCM.
 
 5. **Equivalencia completa** (Teorema 9.1): RH $\iff$ Inc. Inv. $\iff$ CondMin, con ambas direcciones establecidas.
 

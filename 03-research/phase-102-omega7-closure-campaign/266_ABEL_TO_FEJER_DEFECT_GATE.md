@@ -16,7 +16,7 @@ Let
 \[
   P_r(e^{i\theta})
   =
-  \operatorname{Re}{1+re^{i\theta}\over1-re^{i\theta}}
+  \mathrm{Re}{1+re^{i\theta}\over1-re^{i\theta}}
   =
   1+2\sum_{m\ge1}r^m\cos(m\theta)
 \]
@@ -155,7 +155,7 @@ on the positive radius.  Hence
 \boxed{
   \int P_n\,d\nu_g
   =
-  \operatorname{Re}H_g(r_n)
+  \mathrm{Re}\,H_g(r_n)
   =
   \log n+O(1).
 }

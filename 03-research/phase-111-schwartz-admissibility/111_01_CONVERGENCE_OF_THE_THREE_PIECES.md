@@ -29,37 +29,37 @@ class. $w=1$ is a different story.
 There exists $\tilde f\in\mathcal S(\mathbb R)$ with $\widehat f(1)=\int
 \tilde f(x)e^{-x}dx$ divergent.
 
-**Proof.** Take $\tilde f(x)=\operatorname{sech}(x)=2/(e^x+e^{-x})$: smooth,
+**Proof.** Take $\tilde f(x)=\mathrm{sech}(x)=2/(e^x+e^{-x})$: smooth,
 and every derivative decays exponentially (hence faster than every
 polynomial), so $\tilde f\in\mathcal S(\mathbb R)$. As $x\to-\infty$,
 $\tilde f(x)=2/(e^x+e^{-x})\sim 2e^{x}$, so $\tilde f(x)e^{-x}\to2$: the
 integrand does not tend to $0$ on the ray $x\to-\infty$, so
 $\int_{-\infty}^0\tilde f(x)e^{-x}dx$ diverges (to $+\infty$). $\square$
 
-This is not a pathology invented for the occasion: $\operatorname{sech}$ is
+This is not a pathology invented for the occasion: $\mathrm{sech}$ is
 one of the best-behaved Schwartz functions there is (it is the density of
 the logistic/hyperbolic-secant distribution, real-analytic, everywhere
 positive). The mechanism is exactly the one flagged in Remark 111.0.1 —
 Schwartz decay controls polynomial weight, not exponential weight, and
-$e^{-wx}$ for $\operatorname{Re}(w)>0$ grows exponentially as $x\to-\infty$.
+$e^{-wx}$ for $\mathrm{Re}(w)>0$ grows exponentially as $x\to-\infty$.
 
 ### Theorem 111.1.3 (the polar terms exist on $\mathcal S_{>1}$, and are sharp there)
 
 If $\tilde f,\tilde g\in\mathcal S_\eta$ for some $\eta>1$, then
 $\widehat f(w),\widehat g(w)$ extend to holomorphic functions on the strip
-$|\operatorname{Re}w|<\eta\supset[0,1]$, and in particular $\widehat f(0),
+$|\mathrm{Re}\,w|<\eta\supset[0,1]$, and in particular $\widehat f(0),
 \widehat f(1),\widehat g(0),\widehat g(1)$ are finite; the polar terms are a
 well-defined complex number. The threshold $\eta=1$ is sharp: $\eta=1$
 (not $>1$) already fails, by Lemma 111.1.2 applied with a function whose
-decay rate is exactly $1$ (e.g. $\operatorname{sech}$, rate exactly $1$
-since $\operatorname{sech}(x)\sim2e^{-|x|}$).
+decay rate is exactly $1$ (e.g. $\mathrm{sech}$, rate exactly $1$
+since $\mathrm{sech}(x)\sim2e^{-|x|}$).
 
-**Proof.** For $|\operatorname{Re}w|=\sigma_0<\eta$, pick $\eta'$ with
+**Proof.** For $|\mathrm{Re}\,w|=\sigma_0<\eta$, pick $\eta'$ with
 $\sigma_0<\eta'<\eta$; membership in $\mathcal S_\eta$ gives $|\tilde
 f(x)|\le C_0 e^{-\eta|x|}\le C_0e^{-\eta'|x|}$, so
 $|\tilde f(x)e^{-wx}|\le C_0e^{-\eta'|x|+\sigma_0|x|}=C_0e^{-(\eta'-\sigma_0)|x|}$,
 integrable; dominated convergence and Morera's theorem give holomorphy on
-$|\operatorname{Re}w|<\eta$. Since $\eta>1\Rightarrow[0,1]\subset(-\eta,\eta)$,
+$|\mathrm{Re}\,w|<\eta$. Since $\eta>1\Rightarrow[0,1]\subset(-\eta,\eta)$,
 evaluation at $w=0,1$ is legitimate. Sharpness is Lemma 111.1.2 (rate exactly
 $1$, the boundary case, already fails at $w=1$). $\square$
 
@@ -78,7 +78,7 @@ exponential-weight bound, only possibly the polynomial one, which is
 absorbed by redefining $C_N$) gives
 $$w^N\widehat f(w)=\int(-1)^N\tilde f^{(N)}(x)e^{-wx}dx,$$
 using that boundary terms vanish (exponential decay kills every polynomial
-growth of $e^{-wx}$ at $x\to\pm\infty$ for $|\operatorname{Re}w|<\eta$). The
+growth of $e^{-wx}$ at $x\to\pm\infty$ for $|\mathrm{Re}\,w|<\eta$). The
 right side is bounded, by Theorem 111.1.3's argument applied to $\tilde
 f^{(N)}$, uniformly for $\sigma\in[0,1]\subset(-\eta,\eta)$: call the bound
 $M_N$. So $|w|^N|\widehat f(w)|\le M_N$, and for $|\tau|\ge1$, $|w|\ge|\tau|$,
@@ -170,7 +170,7 @@ present in the evaluated formula:
 > proved by a mechanism (Mellin/contour manipulation matching a truncated
 > spectral side against a truncated arithmetic side) that depends on $h$
 > only through the existence and decay of $\widehat h$ on the strip
-> $0\le\operatorname{Re}(w)\le1$ — not on $h$ having compact support *per
+> $0\le\mathrm{Re}(w)\le1$ — not on $h$ having compact support *per
 > se*. Under this assumption, the identity extends verbatim to every
 > $h=\tilde f\star\widetilde{\tilde g}$ with $\tilde f,\tilde g\in
 > \mathcal S_\eta$, $\eta>1$, and Theorems 111.1.3 and 111.1.5 (which show
@@ -194,7 +194,7 @@ the phase's conclusion, not smoothed over.
 **Proved here:**
 * Lemma 111.1.1: $\widehat f(0)$ exists for every Schwartz $f$.
 * Lemma 111.1.2: $\widehat f(1)$ does **not** exist for every Schwartz $f$ —
-  explicit counterexample ($\operatorname{sech}$).
+  explicit counterexample ($\mathrm{sech}$).
 * Theorem 111.1.3: both polar terms exist, and are holomorphic in a strip
   around $[0,1]$, once $\tilde f,\tilde g\in\mathcal S_\eta$ for some
   $\eta>1$; $\eta=1$ is sharp (fails).
@@ -209,8 +209,8 @@ Theorem D / phase prompt); the Riemann–von Mangoldt asymptotic
 $N(T)\sim(T/2\pi)\log T$ (classical, unconditional, cited).
 
 **Verified numerically:** Lemma 111.1.2's divergence and Theorem 111.1.3's
-convergence, contrasted on a matched pair ($\operatorname{sech}$, rate
-exactly $1$, diverges; $\operatorname{sech}^2$, rate $2$, converges), under
+convergence, contrasted on a matched pair ($\mathrm{sech}$, rate
+exactly $1$, diverges; $\mathrm{sech}^2$, rate $2$, converges), under
 truncation refinement; Theorem 111.1.5's absolute convergence for actual
 zeros (via `mp.zetazero`), contrasted against a synthetic harmonic-density
 control that diverges, to show the check is not vacuous; the
@@ -225,9 +225,9 @@ rather than assumed away, and it is exactly Refutation R3.
 ## 5. Verifier
 
 `111_01_convergence_of_the_three_pieces.py` checks: (1) $\widehat f(1)$
-diverges under refinement for $\operatorname{sech}$ (rate $1$) and
+diverges under refinement for $\mathrm{sech}$ (rate $1$) and
 converges (to a stable value, matching a closed form) for
-$\operatorname{sech}^2$ (rate $2$), directly testing Lemma 111.1.2 /
+$\mathrm{sech}^2$ (rate $2$), directly testing Lemma 111.1.2 /
 Theorem 111.1.3's sharp threshold; (2) $\widehat f(0)$ converges for a
 Schwartz function with *no* exponential decay at all
 ($e^{-\sqrt{|x|}}$-type), confirming Lemma 111.1.1 needs nothing beyond bare

@@ -13,14 +13,14 @@ Let (\Omega\subset\mathbb R) have measure at most (2T), let
  \mathcal H_a(f)={1\over2\pi}\int_{\mathbb R}
  h_a(\tau)|\widehat f(\tau)|^2,d\tau,
  \qquad
- h_a(\tau)=\operatorname {Re}\psi(a+i\tau/2)-\psi(a),                \tag{0.1}
+ h_a(\tau)=\mathrm{Re}\,\psi(a+i\tau/2)-\psi(a),                \tag{0.1}
 \]
 
 where (a=5/4).  Define the pure-Gamma shorted form on the born set by
 
 \[
  q_{E,\Omega}^{\Gamma}(g)=
- \inf\{\mathcal H_a(f):\operatorname {supp}f\subset\Omega,
+ \inf\{\mathcal H_a(f):\mathrm{supp}\,f\subset\Omega,
                        \mathbf1_Ef=g\}.              \tag{0.2}
 \]
 

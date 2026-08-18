@@ -28,7 +28,7 @@ orthogonal projection \(P_S\) onto \(\mathcal B_\lambda\), a reproducing-kernel
 space with kernel \(K_S\).  For such a projection,
 
 \[
- \operatorname{Tr}\bigl(M_{\widehat f}P_S\bigr)
+ \mathrm{Tr}\,\bigl(M_{\widehat f}P_S\bigr)
  =\int_{\mathbb R}\widehat f(s)\,K_S(s,s)\,\frac{ds}{|E_S(s)|^2},
 \]
 
@@ -38,7 +38,7 @@ cancels:**
 
 > **Proposition 1 (formal).**
 > \[
->  \boxed{\;\operatorname{Tr}\bigl(\vartheta(f)\,\mathbf S_S\bigr)
+>  \boxed{\;\mathrm{Tr}\,\bigl(\vartheta(f)\,\mathbf S_S\bigr)
 >   =\frac1\pi\int_{\mathbb R}\widehat f(s)\,\varphi_S'(s)\,ds. \;}
 > \]
 
@@ -74,8 +74,8 @@ Combining with Fourier inversion \(\int\widehat f(s)\cos(s\log n)\,ds=\pi\bigl(f
 
 > **Corollary 3.**
 > \[
->  \operatorname{Tr}\bigl(\vartheta(f)\mathbf S_S\bigr)
->  =\operatorname{Tr}\bigl(\vartheta(f)\mathbf S\bigr)
+>  \mathrm{Tr}\,\bigl(\vartheta(f)\mathbf S_S\bigr)
+>  =\mathrm{Tr}\,\bigl(\vartheta(f)\mathbf S\bigr)
 >  +\sum_{n\ S\text{-smooth}}\frac{\Lambda(n)}{\sqrt n}\bigl(f(n)+f(n^{-1})\bigr),
 > \]
 > the second term being exactly \(W_{\rm fin,S}\) of `eq:Ktest` in the
@@ -87,10 +87,10 @@ the phase; no separate trace formula is needed.
 
 ## 3. What (H) becomes
 
-With CC's Theorem 3, \(\operatorname{Tr}(\vartheta(f)\mathbf S)=W_\infty^{CC}(f)+E(f)=-G_\infty(f)+E(f)\),
+With CC's Theorem 3, \(\mathrm{Tr}(\vartheta(f)\mathbf S)=W_\infty^{CC}(f)+E(f)=-G_\infty(f)+E(f)\),
 
 \[
- \operatorname{Tr}\bigl(\vartheta(f)\mathbf S_S\bigr)
+ \mathrm{Tr}\,\bigl(\vartheta(f)\mathbf S_S\bigr)
  =-G_\infty(f)+E(f)+K_S(f),
 \]
 

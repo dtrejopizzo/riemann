@@ -53,14 +53,14 @@ $$Q_{\text{zero},\epsilon}(f,f) = -4\sum_{j=1}^m |\hat h(\rho_j(\epsilon))|^2.$$
 ## 3. Primera variación: la recta crítica es punto estacionario
 
 **Proposición 1** (gradiente nulo). Para toda $f$ simétrica:
-$$\frac{d}{d\epsilon} Q_\epsilon(f,f)\bigg|_{\epsilon=0} = -8 \sum_{j=1}^m c_j\, \operatorname{Re}\!\left(\hat h'(\rho_j)\,\overline{\hat h(\rho_j)}\right).$$
+$$\frac{d}{d\epsilon} Q_\epsilon(f,f)\bigg|_{\epsilon=0} = -8 \sum_{j=1}^m c_j\, \mathrm{Re}\,\!\left(\hat h'(\rho_j)\,\overline{\hat h(\rho_j)}\right).$$
 
-*Prueba.* $\frac{d}{d\epsilon}|\hat h(\rho_j + \epsilon c_j)|^2 = 2c_j\,\operatorname{Re}(\hat h'(\rho_j + \epsilon c_j)\,\overline{\hat h(\rho_j+\epsilon c_j)})$. A $\epsilon = 0$ da el resultado. $\square$
+*Prueba.* $\frac{d}{d\epsilon}|\hat h(\rho_j + \epsilon c_j)|^2 = 2c_j\,\mathrm{Re}(\hat h'(\rho_j + \epsilon c_j)\,\overline{\hat h(\rho_j+\epsilon c_j)})$. A $\epsilon = 0$ da el resultado. $\square$
 
 **Corolario.** En $b_j = 0$ (recta crítica): $\rho_j = \frac{1}{2} + i\gamma_j$. Si $f$ es par
 bajo $x \mapsto 1/x$ (condición natural de simetría), entonces $\hat h(s)$ es real y
 positivo en la recta crítica, y $\hat h'(\rho_j)$ es puramente imaginario. Luego:
-$$\operatorname{Re}\!\left(\hat h'(\rho_j)\,\overline{\hat h(\rho_j)}\right) = 0.$$
+$$\mathrm{Re}\,\!\left(\hat h'(\rho_j)\,\overline{\hat h(\rho_j)}\right) = 0.$$
 
 Por tanto la primera variación de $Q_\epsilon$ se anula en $b_j = 0$: **la recta crítica
 es punto estacionario de $Q$ en la dirección transversal**. (Confirma la Proposición D.13.)
@@ -72,14 +72,14 @@ es punto estacionario de $Q$ en la dirección transversal**. (Confirma la Propos
 **Teorema 1** (fórmula de la segunda variación transversal). Para $f$ con la simetría
 del Lema 1:
 $$\boxed{\frac{d^2}{d\epsilon^2} Q_\epsilon(f,f)\bigg|_{\epsilon=0}
-  = -8\sum_{j=1}^m c_j^2 \left[\operatorname{Re}\!\left(\hat h''(\rho_j)\,\overline{\hat h(\rho_j)}\right) + |\hat h'(\rho_j)|^2\right].}$$
+  = -8\sum_{j=1}^m c_j^2 \left[\mathrm{Re}\,\!\left(\hat h''(\rho_j)\,\overline{\hat h(\rho_j)}\right) + |\hat h'(\rho_j)|^2\right].}$$
 
 *Prueba.* Sea $g_j(\epsilon) := |\hat h(\rho_j + \epsilon c_j)|^2$. Entonces:
-$$g_j'(\epsilon) = 2c_j\,\operatorname{Re}\!\left(\hat h'(\rho_j + \epsilon c_j)\,\overline{\hat h(\rho_j+\epsilon c_j)}\right),$$
-$$g_j''(\epsilon) = 2c_j^2\,\operatorname{Re}\!\left(\hat h''(\rho_j + \epsilon c_j)\,\overline{\hat h(\rho_j+\epsilon c_j)}\right) + 2c_j^2\,|\hat h'(\rho_j+\epsilon c_j)|^2.$$
+$$g_j'(\epsilon) = 2c_j\,\mathrm{Re}\,\!\left(\hat h'(\rho_j + \epsilon c_j)\,\overline{\hat h(\rho_j+\epsilon c_j)}\right),$$
+$$g_j''(\epsilon) = 2c_j^2\,\mathrm{Re}\,\!\left(\hat h''(\rho_j + \epsilon c_j)\,\overline{\hat h(\rho_j+\epsilon c_j)}\right) + 2c_j^2\,|\hat h'(\rho_j+\epsilon c_j)|^2.$$
 A $\epsilon = 0$ y sumando con el factor $-4$:
 $$\frac{d^2}{d\epsilon^2} Q_{\text{zero},\epsilon}(f,f)\bigg|_{\epsilon=0}
-  = -4\sum_j g_j''(0) = -8\sum_j c_j^2 \left[\operatorname{Re}\!\left(\hat h''(\rho_j)\,\overline{\hat h(\rho_j)}\right) + |\hat h'(\rho_j)|^2\right]. \quad \square$$
+  = -4\sum_j g_j''(0) = -8\sum_j c_j^2 \left[\mathrm{Re}\,\!\left(\hat h''(\rho_j)\,\overline{\hat h(\rho_j)}\right) + |\hat h'(\rho_j)|^2\right]. \quad \square$$
 
 ---
 
@@ -87,18 +87,18 @@ $$\frac{d^2}{d\epsilon^2} Q_{\text{zero},\epsilon}(f,f)\bigg|_{\epsilon=0}
 
 La segunda variación es positiva (recta crítica = mínimo local de $-Q$ = mínimo local
 de energía) si y sólo si:
-$$\operatorname{Re}\!\left(\hat h''(\rho_j)\,\overline{\hat h(\rho_j)}\right) + |\hat h'(\rho_j)|^2 < 0 \quad \forall j.$$
+$$\mathrm{Re}\,\!\left(\hat h''(\rho_j)\,\overline{\hat h(\rho_j)}\right) + |\hat h'(\rho_j)|^2 < 0 \quad \forall j.$$
 
-Reformulando en términos de $\log|\hat h(s)|$: sea $\sigma \mapsto u(\sigma) := \log|\hat h(\sigma + i\gamma_j)|$ la función de $\sigma = \operatorname{Re}(s)$. En $\sigma_0 = \frac{1}{2} + b_j$:
+Reformulando en términos de $\log|\hat h(s)|$: sea $\sigma \mapsto u(\sigma) := \log|\hat h(\sigma + i\gamma_j)|$ la función de $\sigma = \mathrm{Re}(s)$. En $\sigma_0 = \frac{1}{2} + b_j$:
 
 **Proposición 2** (condición de log-concavidad). La desigualdad
-$\operatorname{Re}(\hat h'' \overline{\hat h}) + |\hat h'|^2 < 0$ en $\rho_j$ es equivalente a:
-$$u''(\sigma_0) < 0 \quad \text{(concavidad de } \log|\hat h| \text{ en la dirección } \operatorname{Re}(s)\text{)}.$$
+$\mathrm{Re}(\hat h'' \overline{\hat h}) + |\hat h'|^2 < 0$ en $\rho_j$ es equivalente a:
+$$u''(\sigma_0) < 0 \quad \text{(concavidad de } \log|\hat h| \text{ en la dirección } \mathrm{Re}(s)\text{)}.$$
 
 *Prueba.* Escribiendo $\hat h = r e^{i\theta}$ con $r = |\hat h|$, $\theta$ la fase:
 $$\hat h' = (r' + ir\theta') e^{i\theta}, \quad \hat h'' = (r'' - r(\theta')^2 + i(2r'\theta' + r\theta''))e^{i\theta}.$$
 Entonces:
-$$\operatorname{Re}(\hat h'' \overline{\hat h}) + |\hat h'|^2 = r''r - r^2(\theta')^2 + (r')^2 + r^2(\theta')^2 = r''r + (r')^2.$$
+$$\mathrm{Re}(\hat h'' \overline{\hat h}) + |\hat h'|^2 = r''r - r^2(\theta')^2 + (r')^2 + r^2(\theta')^2 = r''r + (r')^2.$$
 La condición $r''r + (r')^2 < 0$ equivale a $(r^2)'' < 0$, o sea $r'' < -(r')^2/r$, o sea
 $(\log r)'' = (r'r - (r')^2)/r^2 < 0$, que es exactamente $u'' < 0$. $\square$
 
@@ -198,10 +198,10 @@ $$\log|\zeta(\tfrac{1}{2} + i\gamma)| = -c\sqrt{\log\gamma/\log\log\gamma} + O(\
 
 La derivada en $\sigma$:
 $$\partial_\sigma \log|\zeta(\sigma + i\gamma)|\bigg|_{\sigma=1/2}$$
-está relacionada con $\operatorname{Re}(\zeta'/\zeta(\frac{1}{2}+i\gamma))$.
+está relacionada con $\mathrm{Re}(\zeta'/\zeta(\frac{1}{2}+i\gamma))$.
 
 La segunda derivada:
-$$\partial_\sigma^2 \log|\zeta(\sigma + i\gamma)| = \operatorname{Re}\!\left[\frac{\zeta''}{\zeta} - \left(\frac{\zeta'}{\zeta}\right)^2\right]_{\sigma + i\gamma}$$
+$$\partial_\sigma^2 \log|\zeta(\sigma + i\gamma)| = \mathrm{Re}\,\!\left[\frac{\zeta''}{\zeta} - \left(\frac{\zeta'}{\zeta}\right)^2\right]_{\sigma + i\gamma}$$
 
 El signo de esta cantidad en $\sigma = 1/2$ es la condición de log-concavidad. Relacionado
 con la Pregunta 28.1, es una pregunta analítica concreta sobre $\zeta$.

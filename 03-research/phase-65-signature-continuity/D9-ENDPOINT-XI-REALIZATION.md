@@ -25,7 +25,7 @@ $\mathsf K_\Xi^{\mathrm{G5}}$ be the *fixed* endpoint kernel of D0 (Def. KG5), $
 \end{definition}
 
 \begin{redflag}
-D6 gives $\operatorname{sq}_-(\mathsf K_\infty^\circ)=0$. By itself this says nothing about RH: it is the
+D6 gives $\mathrm{sq}_-(\mathsf K_\infty^\circ)=0$. By itself this says nothing about RH: it is the
 index of *the limit kernel*, which is not yet known to be $\mathsf K_\Xi^{\mathrm{G5}}$. The package is
 RH \textbf{only if} $\mathsf K_\infty^\circ=\mathsf K_\Xi^{\mathrm{G5}}$ — equality with the pre-fixed
 object. Asserting this without proof is the forbidden reassignment.
@@ -40,11 +40,11 @@ Conditional on D8 (in particular D8.5), the limit kernel equals the fixed endpoi
 \[
    \boxed{\ \mathsf K_\infty^\circ(z,w)=\mathsf K_\Xi^{\mathrm{G5}}(z,w)\ \ \text{for all }z,w.\ }
 \]
-Consequently $\kappa(A_\infty)=\operatorname{sq}_-(\mathsf K_\infty^\circ)=\operatorname{sq}_-(\mathsf
+Consequently $\kappa(A_\infty)=\mathrm{sq}_-(\mathsf K_\infty^\circ)=\mathrm{sq}_-(\mathsf
 K_\Xi^{\mathrm{G5}})=\kappa(\Xi)$.
 \end{theorem}
 \emph{Proof (corrected, Connes R1.F — now rests on D8.5b, not on the scalar slice).} By D8.7, $\mathsf
-K_\infty^\circ=\operatorname{Pol}(d_V^2\log\mathcal D_\Xi^{\mathrm{src}}(0))$, the polarized second
+K_\infty^\circ=\mathrm{Pol}(d_V^2\log\mathcal D_\Xi^{\mathrm{src}}(0))$, the polarized second
 \emph{source} variation of the limit germ. \textbf{Caution:} $D_\infty^\circ=\Xi$ (G3) does \emph{not}
 by itself give the first source variation — \emph{derivative in $V$ is not derivative in $z$}. The
 identification of the limit's marked source Hessian with the fixed kernel must come from the
@@ -88,7 +88,7 @@ validity of D8.5.
 - Hence $\kappa(A_\infty)=\kappa(\Xi)$, connecting the *constructed* limit index to the *given* G5 index.
 - The candid dependency: D9 = D8.5 cashed out; the endpoint identification is the second face of the one
   load-bearing input. D6 (positivity closed) + D9 (limit is the $\Xi$ kernel) together give
-  $\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0$, i.e. $\kappa(\Xi)=0$ — assembled in D11.
+  $\mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0$, i.e. $\kappa(\Xi)=0$ — assembled in D11.
 
 Next: D10 (the DH falsifier — DH must break D8.5 or finite positivity, forcing $\deg\mathfrak b_{\mathrm
 {DH}}>0$), then D11 (assembly), D12 (audit).

@@ -482,7 +482,7 @@ El falsificador racional de `104_17`,
 tiene coeficientes de cuarteto
 
 \[
- Q_n=4-2\operatorname{Re}(w^n+w^{-n}),             \tag{27}
+ Q_n=4-2\mathrm{Re}(w^n+w^{-n}),             \tag{27}
 \]
 
 y su germen Abel racional es positivo en todo \(0<q<1\). Sin embargo,

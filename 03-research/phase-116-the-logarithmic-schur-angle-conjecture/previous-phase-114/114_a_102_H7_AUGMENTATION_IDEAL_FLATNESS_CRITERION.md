@@ -90,7 +90,7 @@ injective, proving the equivalence of (1)--(3).  Tensor the exact sequence
 with `K`.  Its long exact Tor sequence identifies
 
 \[
- \operatorname{Tor}_1^{\mathbb Z}(K,\mathbb Z/p)
+ \mathrm{Tor}_1^{\mathbb Z}(K,\mathbb Z/p)
  \cong\ker(p:K\to K)=K[p],                                    \tag{2.1}
 \]
 

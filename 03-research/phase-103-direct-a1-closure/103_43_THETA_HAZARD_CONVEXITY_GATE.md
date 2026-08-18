@@ -48,7 +48,7 @@ cumulant identity
 \[
  \boxed{\quad
  (\log\Phi)'''=\mathbb E_w\ell'''
- +3\operatorname {Cov}_w(\ell',\ell'')
+ +3\mathrm{Cov}_w(\ell',\ell'')
  +\mathbb E_w(\ell'-\mathbb E_w\ell')^3.\quad}                  \tag{6}
 \]
 Unlike the variance identity used for log-concavity, the last term in (6)
@@ -180,7 +180,7 @@ global theorem.
 Let
 \[
  d\nu_p(u)={u^p\Phi(u)du\over M_p},\qquad
- \Gamma_p=\operatorname {Cov}_{\nu_p}(u,h),                     \tag{18}
+ \Gamma_p=\mathrm{Cov}_{\nu_p}(u,h),                     \tag{18}
 \]
 as in `103_39`.  The exact identities there are
 \[
@@ -195,12 +195,12 @@ pointwise tangent inequality
 \]
 and hence the already useful one-tilt bound
 \[
- \Gamma_p\ge h'(0)\operatorname {Var}_{\nu_p}(u).               \tag{21}
+ \Gamma_p\ge h'(0)\mathrm{Var}_{\nu_p}(u).               \tag{21}
 \]
 
 It does not automatically order consecutive \(\Gamma_p\).  Size biasing
 gives an exact formula for the change.  Put
-\(\mu_p=\mathbb E_pu\), \(V_p=\operatorname {Var}_p(u)\), and
+\(\mu_p=\mathbb E_pu\), \(V_p=\mathrm{Var}_p(u)\), and
 \[
  T_p=\mathbb E_p[(u-\mu_p)^2(h-\mathbb E_ph)].
 \]

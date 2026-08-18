@@ -1229,7 +1229,7 @@ si ese subespacio contiene \(p_n=1-z^n\), o si
 \[
   p_np_n^*
   \in
-  \overline{\operatorname{cone}}\{v_\alpha v_\alpha^*\}
+  \overline{\mathrm{cone}}\{v_\alpha v_\alpha^*\}
 \]
 para las direcciones testeadas.  Sin esta reconstrucción positiva, hay
 formas hermíticas positivas en todos los tests pero negativas en la

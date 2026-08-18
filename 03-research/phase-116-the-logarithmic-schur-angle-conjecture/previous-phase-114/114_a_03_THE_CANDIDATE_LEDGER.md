@@ -142,7 +142,7 @@ arXiv:1507.05818v2 §1 verbatim:
 > The appearance of arbitrary positive real numbers as continuous dimensions in
 > this formula is due to the density in $\mathbb R$ of the subgroup
 > $H_p\subset\mathbb Q$ … and the fact that continuous dimensions are obtained as
-> limits of normalized dimensions $p^{-n}\operatorname{tdim}(H^0(D)^{p^n})$. We
+> limits of normalized dimensions $p^{-n}\mathrm{tdim}(H^0(D)^{p^n})$. We
 > view this outcome as the analogue in characteristic $1$ of what happens for
 > matroid $C^*$-algebras and the type II normalized traces …
 
@@ -166,7 +166,7 @@ whole Connes–Consani list; see §3.
 
 ## 3. The Connes–Consani programme
 
-### 3.1 $\overline{\operatorname{Spec}\mathbb Z}$ and the Riemann–Roch of arXiv:2205.01391
+### 3.1 $\overline{\mathrm{Spec}\,\mathbb Z}$ and the Riemann–Roch of arXiv:2205.01391
 
 Their $\dim_{\mathbb S_\pm}\|H\mathbb Z\|_n=\lceil\log_3(2n+1)\rceil$ with
 $n=\lfloor e^{\deg D}\rfloor$; `107_146` Cor C then gives
@@ -198,20 +198,20 @@ $\hat{\mathbb Z}^*$.
 
 Their Theorem `RRperiodic`, quoted verbatim:
 
-> **Theorem.** $(i)$ Let $D\in\operatorname{div}(C_p)$ be a divisor with
+> **Theorem.** $(i)$ Let $D\in\mathrm{div}(C_p)$ be a divisor with
 > $\deg(D)\ge0$. Then the limit in $(\ast)$ converges and one has
-> $\operatorname{cdim}(H^0(D))=\deg(D)$.
+> $\mathrm{cdim}(H^0(D))=\deg(D)$.
 > $(ii)$ The following Riemann–Roch formula holds
-> $\operatorname{cdim}(H^0(D))-\operatorname{cdim}(H^0(-D))=\deg(D)$, for all
-> $D\in\operatorname{div}(C_p)$.
+> $\mathrm{cdim}(H^0(D))-\mathrm{cdim}(H^0(-D))=\deg(D)$, for all
+> $D\in\mathrm{div}(C_p)$.
 
 - **GROWTH-TEST:** **FAIL, exactly and not merely asymptotically.**
-  $\operatorname{cdim}H^0(mD)=\deg(mD)=m\deg D$, which is hypothesis (L) of
+  $\mathrm{cdim}\,H^0(mD)=\deg(mD)=m\deg D$, which is hypothesis (L) of
   Theorem 2.1 on the nose. Hence $\delta=1$ identically (§8, check B1: measured
   $1.000000000000$).
 - **Independent confirmation of the criterion.** CC also record the exact
   sequence
-  $0\to\mathbb Z/(p-1)\mathbb Z\to\operatorname{div}(C_p)/\mathcal P
+  $0\to\mathbb Z/(p-1)\mathbb Z\to\mathrm{div}(C_p)/\mathcal P
   \xrightarrow{\deg}\mathbb R\to0$. The discrete part is **finite**, so the
   lattice rank is bounded and Theorem 2.3 predicts $\delta\le1$ *before* looking
   at their theorem. Their theorem then gives $\delta=1$. The criterion of
@@ -242,7 +242,7 @@ in $[0,n]\times[0,n^2]\subseteq[0,N]^2$. Since $x\mapsto x^2$ is strictly convex
 for $i<j<k$ the cross product
 $(P_j-P_i)\times(P_k-P_i)=(j-i)(k^2-i^2)-(j^2-i^2)(k-i)=(j-i)(k-i)(k-j)>0$, so
 the $n+1$ points are in strictly convex position and every subset $S$ has
-$\operatorname{vert}(\operatorname{conv}S)=S$. Distinct subsets therefore give
+$\mathrm{vert}(\mathrm{conv}\,S)=S$. Distinct subsets therefore give
 distinct polygons, and there are $2^{n+1}$ of them. $\square$
 
 (Machine-checked for $n\le80$: §8 checks F1–F3.)
@@ -250,7 +250,7 @@ distinct polygons, and there are $2^{n+1}$ of them. $\square$
 **Corollary 3.6.** If, on the reduced square, the sections of a divisor of degree
 $d$ are taken to be the Newton polygons inside a box of side $e^{d}$ — the only
 normalisation consistent with the archimedean normalisation
-$n=\lfloor e^{\deg D}\rfloor$ used by CC on $\overline{\operatorname{Spec}\mathbb Z}$ —
+$n=\lfloor e^{\deg D}\rfloor$ used by CC on $\overline{\mathrm{Spec}\,\mathbb Z}$ —
 then
 $$
  \log\#H^0(D)\ \ge\ e^{d/2}\log 2,
@@ -271,17 +271,17 @@ not quadratic.
 
 ### 3.7 The 2026 papers
 
-*On the Jacobian of $\overline{\operatorname{Spec}\mathbb Z}$* (arXiv:2602.15941),
+*On the Jacobian of $\overline{\mathrm{Spec}\,\mathbb Z}$* (arXiv:2602.15941),
 abstract, verbatim: *"We identify the elements of this space with torsion-free
 **rank-1** abelian groups $L$ endowed with rigidifying data. In the Riemann
 sector, this data corresponds to a norm, extending the classical notion of
 metrized line bundles in Arakelov geometry."*
 
-*On the Absolute Geometry of $\operatorname{Spec}\mathbb Z$ and the
+*On the Absolute Geometry of $\mathrm{Spec}\,\mathbb Z$ and the
 Fargues–Fontaine curve* (arXiv:2606.06604), abstract, verbatim: *"We construct
-the absolute $\mathbb F_1$-arithmetic **curve** $\operatorname{Spec}(\mathbb Z)_{\mathbb F_1}$
+the absolute $\mathbb F_1$-arithmetic **curve** $\mathrm{Spec}(\mathbb Z)_{\mathbb F_1}$
 by pulling back the $\mathbb F_1$-structure sheaf of the arithmetic site to
-$\operatorname{Spec}(\mathbb Z)$."*
+$\mathrm{Spec}(\mathbb Z)$."*
 
 - **VERDICT (both): CLOSED NEGATIVE.** *Mechanism: rank one, by the authors' own
   descriptions* — "torsion-free rank-1 abelian groups", "the absolute
@@ -333,8 +333,8 @@ Introduction and two theorems, read:
 > Frobenius and Verschiebung endomorphisms and may be viewed as an uncompleted
 > version of $W(A)$.
 
-> **Theorem 2.8.** The $\operatorname{ind}$-scheme $W_J$ is a subring in
-> $\operatorname{Indsch}$ of $W$. It is equipped with Frobenius ring
+> **Theorem 2.8.** The $\mathrm{ind}$-scheme $W_J$ is a subring in
+> $\mathrm{Indsch}$ of $W$. It is equipped with Frobenius ring
 > endomorphisms $F_N$ and additive Verschiebung endomorphisms $V_N$ which are
 > compatible with those of $W$. More precisely, for the closed affine subschemes
 > $W_J^{\le n}$ of $W_J$ we have factorizations
@@ -342,7 +342,7 @@ Introduction and two theorems, read:
 
 > **Theorem 5.1.** On the category of normal, Noetherian, affine schemes $X$
 > there is a unique functorial factorization of the map (25) over a functorial
-> ring isomorphism $W_{\mathrm{rat}}(\mathcal O(X))\xrightarrow{\ \sim\ }\underline{\operatorname{Corr}}(X,\mathbb A)$.
+> ring isomorphism $W_{\mathrm{rat}}(\mathcal O(X))\xrightarrow{\ \sim\ }\underline{\mathrm{Corr}}(X,\mathbb A)$.
 
 ### 5.2 The test
 
@@ -375,7 +375,7 @@ this object and on no other in the ledger.
    proposes as descent data to $\mathbb F_1$, and it is here as a theorem about
    an ind-scheme, not as a philosophy.
 3. **Cycles, from the source.** Theorem 5.1 identifies
-   $W_{\mathrm{rat}}(\mathcal O(X))$ with $\underline{\operatorname{Corr}}(X,\mathbb A)$,
+   $W_{\mathrm{rat}}(\mathcal O(X))$ with $\underline{\mathrm{Corr}}(X,\mathbb A)$,
    a ring of **finite algebraic cycles**. That is row (b) sitting inside a row-(a)
    candidate — the one place in this ledger where the two rows meet inside a
    single object.
@@ -399,7 +399,7 @@ norm requires Jensen's formula and is **not carried out here**.
 The task records that "the ledger does not record it as having been tested. Test
 it." Two candid statements:
 
-1. **Attribution.** The identification of $\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z$
+1. **Attribution.** The identification of $\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$
    with a Witt-vector object is attributed to Borger's programme. **I have not
    read a Borger paper in this session and cite no theorem of his.** No paper of
    his is in `00-references/papers-nuevos`.
@@ -449,22 +449,22 @@ only, or the space too". Read in full; the answer is unambiguous.
 ### 6.2 Haran's non-additive geometry, and the only actual square
 
 Haran, arXiv:1709.05831v1 §10 ("Arithmetical surface, and new commutative
-rings"), read: he constructs $\operatorname{Spec}\mathcal O_K\times_{\operatorname{Spec}\mathbb F\{\mu_K\}}\operatorname{Spec}\mathcal O_K$
+rings"), read: he constructs $\mathrm{Spec}\,\mathcal O_K\times_{\mathrm{Spec}\,\mathbb F\{\mu_K\}}\mathrm{Spec}\,\mathcal O_K$
 and in particular
 $$
- \operatorname{Spec}\mathbb Z\times_{\operatorname{Spec}\mathbb F\{\pm1\}}\operatorname{Spec}\mathbb Z
- =\{X_N\times_{\operatorname{spec}\mathbb F\{\pm1\}}X_M\}
+ \mathrm{Spec}\,\mathbb Z\times_{\mathrm{Spec}\,\mathbb F\{\pm1\}}\mathrm{Spec}\,\mathbb Z
+ =\{X_N\times_{\mathrm{spec}\,\mathbb F\{\pm1\}}X_M\}
 $$
 as a pro-object containing the affine dense sub-scheme
-$\operatorname{spec}(\mathbb Z\otimes_{\mathbb F\{\pm1\}}\mathbb Z)$, with
+$\mathrm{spec}(\mathbb Z\otimes_{\mathbb F\{\pm1\}}\mathbb Z)$, with
 $\mathbb Z^{\otimes n}$ generated by $\delta_1,\dots,\delta_n$ and the scalar
 $(-1)$, and with every element of $(\mathbb Z^{\otimes n})_{Y,X}$ represented as
 a quadruple $(F_y,G_x,\sigma,\varepsilon)$ — finite rooted trees with labelled
 non-leaf vertices, a bijection of leaves, and signs.
 
 This is, of everything read in this phase, **the only construction that is
-literally the square $\operatorname{Spec}\mathbb Z\times_{\mathbb F_1}\operatorname{Spec}\mathbb Z$**
-with both factors equal to $\operatorname{Spec}\mathbb Z$.
+literally the square $\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$**
+with both factors equal to $\mathrm{Spec}\,\mathbb Z$.
 
 - **O1-TEST: structurally PASS.** $\mathbb Z^{\otimes n}$ has $n$ generating
   vectors $\delta_1,\dots,\delta_n$; the rank grows with $n$.
@@ -475,7 +475,7 @@ with both factors equal to $\operatorname{Spec}\mathbb Z$.
 - **VERDICT: UNTESTABLE — Gap G-7, and this is the frontier of a4-strong.**
 
 **Gap G-7 (the Haran gap).** Define, on
-$\operatorname{spec}(\mathbb Z\otimes_{\mathbb F\{\pm1\}}\mathbb Z)$, (i) a divisor
+$\mathrm{spec}(\mathbb Z\otimes_{\mathbb F\{\pm1\}}\mathbb Z)$, (i) a divisor
 group with a $\mathbb Z\oplus\mathbb R$ (or $\mathbb Z^2\oplus\mathbb R^2$)
 bigrading, (ii) a section functor $H^0$, (iii) a degree charging both
 $\mathbb Z$-directions. Then run the two tests. Until (i)–(iii) exist, a4-strong
@@ -507,8 +507,8 @@ Tropical surfaces do have genuine quadratic self-intersection and a Hodge index
 (the `mas-papers` folder holds *Hodge theory for tropical varieties*,
 *combinatorial tropical surfaces*, *Lefschetz $(1,1)$ in tropical geometry*).
 **Titles only were read; no theorem is cited.** They are not over
-$\operatorname{Spec}\mathbb Z$: the base is $\mathbb R$ or a value group.
-The one place tropical geometry enters $\operatorname{Spec}\mathbb Z$ in the
+$\mathrm{Spec}\,\mathbb Z$: the base is $\mathbb R$ or a value group.
+The one place tropical geometry enters $\mathrm{Spec}\,\mathbb Z$ in the
 material read is CC's scaling site, which §3.3 closes negative, and CC's reduced
 square, which §3.4 shows overshoots. **VERDICT: OUT OF SCOPE, no verdict
 claimed.**
@@ -519,11 +519,11 @@ claimed.**
 
 | # | candidate | source read | O1 | GROWTH | verdict | mechanism |
 |---|---|---|---|---|---|---|
-| 1 | CC $\overline{\operatorname{Spec}\mathbb Z}$, RR | 2205.01391 §2–3 | weak pass | **FAIL** $\delta{=}1$ | CLOSED NEGATIVE | rank one |
+| 1 | CC $\overline{\mathrm{Spec}\,\mathbb Z}$, RR | 2205.01391 §2–3 | weak pass | **FAIL** $\delta{=}1$ | CLOSED NEGATIVE | rank one |
 | 2 | CC arithmetic site | 1502.05580 §sectsquare | — | no $h^0$ | UNTESTABLE **G-5** | no dimension theory |
 | 3 | CC scaling site $C_p$ | 1507.05818 Thm RRperiodic | pass | **FAIL** $\delta{=}1$ exact | CLOSED NEGATIVE | continuous (type-II) dimension |
 | 4 | CC **square** of the arithmetic site | 1502.05580 §sectsquare | — | **OVERSHOOTS** $\ge e^{\sqrt N}$ | CLOSED NEGATIVE / **G-6** | Newton polygons are too many |
-| 5 | CC Jacobian of $\overline{\operatorname{Spec}\mathbb Z}$ | 2602.15941 abstract | — | **FAIL** | CLOSED NEGATIVE | "torsion-free rank-1 groups" |
+| 5 | CC Jacobian of $\overline{\mathrm{Spec}\,\mathbb Z}$ | 2602.15941 abstract | — | **FAIL** | CLOSED NEGATIVE | "torsion-free rank-1 groups" |
 | 6 | CC absolute $\mathbb F_1$-curve + FF | 2606.06604 abstract | — | **FAIL** | CLOSED NEGATIVE | it is a curve, by name |
 | 7 | Segal $\Gamma$-rings / $\mathbb S_\pm$-modules | 2205.01391 §2 | — | neutral | INSTRUMENT, not a space | measures whatever it is pointed at |
 | 8 | **Arakelov arithmetic surfaces** | 2512.01811 Thm main1; `114_a_02` | **PASS** | **PASS** $\delta{=}2$ | **BUILT** (a4-weak) | rank $mk{+}1$, radius $e^{ma}$ |
@@ -533,7 +533,7 @@ claimed.**
 | 12 | **Haran** $\mathbb Z\otimes_{\mathbb F\{\pm1\}}\mathbb Z$ | 1709.05831 §§10–11 | formal Picard/sections; external sector in `a_12` | cannot fire | PARTIAL **G-7** — *the a4-strong frontier* | anti-diagonal kernel, gauge/Kunneth and intersection open |
 | 13 | Durov, Toën–Vaquié, hyperrings | **not read** | — | — | NO VERDICT CLAIMED | — |
 | 14 | Bost–Connes and its square | not read | — | (L) applies | CLOSED NEGATIVE *conditional on (L)* | trace $\Rightarrow$ linear (Thm 2.1) |
-| 15 | Tropical surfaces | titles only | — | — | OUT OF SCOPE | not over $\operatorname{Spec}\mathbb Z$ |
+| 15 | Tropical surfaces | titles only | — | — | OUT OF SCOPE | not over $\mathrm{Spec}\,\mathbb Z$ |
 
 **Summary in one line.** Of fifteen candidates, two pass ( #8, #9/#10 ), six are
 closed negative with a named mechanism, four are untestable with the missing
@@ -602,7 +602,7 @@ No check in this verifier was weakened; it ran green on the first execution.
 
 - **Theorem 2.1** quantifies over dimension functions satisfying (L). CLEAN: no
   zero of $\xi$, no sign of a quadratic form. NOT VACUOUS: (L) is satisfied by
-  CC's own $\operatorname{cdim}$, by their Theorem `RRperiodic`.
+  CC's own $\mathrm{cdim}$, by their Theorem `RRperiodic`.
 - **Theorem 2.3** is `114_a_01` Thm 4.3, already audited CLEAN there.
 - **Proposition 3.5** is a finite convexity computation over $\mathbb Z^2$.
   CLEAN, NOT VACUOUS.
@@ -643,7 +643,7 @@ No check in this verifier was weakened; it ran green on the first execution.
   instance of the mechanism of `114_a_02`, not an alternative to it.
 - **Gap G-7 (Haran / a4-strong).** *Statement:* a divisor group with a bigraded
   degree and a section functor on
-  $\operatorname{spec}(\mathbb Z\otimes_{\mathbb F\{\pm1\}}\mathbb Z)$, with both
+  $\mathrm{spec}(\mathbb Z\otimes_{\mathbb F\{\pm1\}}\mathbb Z)$, with both
   $\mathbb Z$-directions charged to $\deg$. **Status: OPEN.** **Closes if:** such
   a structure is written down; then the two tests fire in one line.
   **Hard? Unknown, and this is the candid frontier of a4-strong.** Not obviously
@@ -706,7 +706,7 @@ No check in this verifier was weakened; it ran green on the first execution.
 
 - $\delta=1$ for every fixed rank $r_0\in\{1,2,5,50\}$ and $\delta=2$ for
   rank $\sim m$.
-- $\delta=1$ exactly for CC's $\operatorname{cdim}$; $\delta=0.99605$ for CC's
+- $\delta=1$ exactly for CC's $\mathrm{cdim}$; $\delta=0.99605$ for CC's
   own rank-one absolute dimension.
 - $\delta=2$ for $\overline{\mathbb P^1_{\mathbb Z}}$ ($1.99641$) and for the
   Witt lattice ($2.02143$, leading ratio $0.98490$).

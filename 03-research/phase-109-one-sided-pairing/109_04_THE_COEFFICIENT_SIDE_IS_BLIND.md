@@ -12,7 +12,7 @@ the *same* index.  A general bilinear form built from the same functionals is
  B_K(f,g)=\sum_{n,m\ge2}K(n,m)\,f(n)\,g(m),
 \]
 and 109_01 took $K(n,m)=\Lambda(n)\delta_{nm}$.  That is a choice, not a
-consequence, and 109_02's verdict — that $\operatorname{rad}B$ is
+consequence, and 109_02's verdict — that $\mathrm{rad}\,B$ is
 prime-power-determined — is therefore, as stated there, a fact about one
 kernel.
 
@@ -29,7 +29,7 @@ by proving the conclusion for **every** kernel.  The result is stronger than
 > \[
 >  Z:=\{f:\ f(p^k)=0\ \text{for every prime }p\text{ and every }k\ge1\}.
 > \]
-> Then $Z\subseteq\operatorname{rad}B_K$.
+> Then $Z\subseteq\mathrm{rad}\,B_K$.
 
 **Proof.**  If $f\in Z$ then $f(n)=0$ at every $n$ in the support of $K$, so
 every term $K(n,m)f(n)g(m)$ vanishes and $B_K(f,g)=0$ for all $g$.  $\square$
@@ -82,11 +82,11 @@ $\widehat F$ and non-vanishing of $\Gamma$ off $2\Z$) for off-line zeros too.
 
 > ### Corollary 1.3
 > For every kernel $K$ supported on the prime powers,
-> $\operatorname{rad}B_K$ is **not** contained in the zero-determined space
+> $\mathrm{rad}\,B_K$ is **not** contained in the zero-determined space
 > $\{f:\widehat f(0)=\widehat f(1)=0,\ \widehat f(\rho)=0\ \forall\rho\}$ of
 > 107_240 Theorem D.
 
-**Proof.**  $F\in Z\subseteq\operatorname{rad}B_K$ by Theorems 1.1–1.2, while
+**Proof.**  $F\in Z\subseteq\mathrm{rad}\,B_K$ by Theorems 1.1–1.2, while
 $\widehat F(\rho)\ne0$. $\square$
 
 ## 2. What this actually says

@@ -45,10 +45,10 @@ Refs: N. Wiener, *Tauberian theorems*, Ann. of Math. 33 (1932) 1–100; S. Ikeha
 
 ### M2 — Positividad
 
-**(a) Arquetipo.** Principio del máximo / unicidad por positividad: una medida (o forma cuadrática PSD, o función subarmónica) con **integral/traza cero** y **signo definido** es **idénticamente cero**. Forma analítica: si $\mu \ge 0$ y $\int d\mu = 0$ entonces $\mu = 0$. Forma operatorial: $Q \succeq 0$ y $\operatorname{tr}(Q) = 0 \Rightarrow Q = 0$. Forma PDE: una función subarmónica $\le 0$ con máximo $0$ alcanzado en el interior es constante (Hopf).
+**(a) Arquetipo.** Principio del máximo / unicidad por positividad: una medida (o forma cuadrática PSD, o función subarmónica) con **integral/traza cero** y **signo definido** es **idénticamente cero**. Forma analítica: si $\mu \ge 0$ y $\int d\mu = 0$ entonces $\mu = 0$. Forma operatorial: $Q \succeq 0$ y $\mathrm{tr}(Q) = 0 \Rightarrow Q = 0$. Forma PDE: una función subarmónica $\le 0$ con máximo $0$ alcanzado en el interior es constante (Hopf).
 Refs: cualquier tratado de teoría de la medida; para el principio del máximo, Protter–Weinberger, *Maximum Principles in Differential Equations*, Springer 1984; Gilbarg–Trudinger cap. 3.
 
-**(b) Promedio.** El **escalar** $\int d\mu$ o $\operatorname{tr}(Q)$ — un único número, el promedio total.
+**(b) Promedio.** El **escalar** $\int d\mu$ o $\mathrm{tr}(Q)$ — un único número, el promedio total.
 
 **(c) Individual.** La **medida/forma completa** $\mu$ (todos sus valores puntuales) o el operador $Q$ entero.
 
@@ -88,7 +88,7 @@ Refs: G. D. Mostow, *Strong rigidity of locally symmetric spaces*, Ann. Math. St
 ### M5 — Índice / K-teoría (el cruce VALOR → INERCIA por excelencia)
 
 **(a) Arquetipo.** Teorema del índice de Atiyah–Singer (1963): para un operador elíptico $D$ sobre una variedad compacta,
-$$\operatorname{ind}(D) = \dim\ker D - \dim\operatorname{coker} D = \int_M \widehat{\operatorname{ch}}(\sigma(D))\,\operatorname{Td}(M),$$
+$$\mathrm{ind}(D) = \dim\ker D - \dim\mathrm{coker} D = \int_M \widehat{\mathrm{ch}}(\sigma(D))\,\mathrm{Td}(M),$$
 un **entero** (el índice analítico) igual a un dato topológico (el índice topológico). Antecesores y parientes: Gauss–Bonnet–Chern (la característica de Euler como integral de curvatura), Riemann–Roch–Hirzebruch, Atiyah–Patodi–Singer (1975, frontera; el invariante $\eta$ y el defecto espectral). El teorema del índice de Krein / la teoría espectral de operadores en espacios de Pontryagin (el $\kappa$ de P35 del programa) es el avatar funcional-analítico.
 Refs: M. F. Atiyah, I. M. Singer, Bull. AMS 69 (1963) 422–433, y Ann. of Math. 87 (1968) 484–530 (I) y 546–604 (III); Atiyah–Patodi–Singer, Math. Proc. Camb. Phil. Soc. 77 (1975) 43–69.
 
@@ -207,7 +207,7 @@ Aquí desarrollo el punto 2 del encargo como teoría, con teoremas reales (eleme
 **[PUENTE 154.7 — por qué el muro es genuino y no solo inyectividad].** La distinción entre 154.5 (inyectividad cualitativa) y 154.6 (cota cuantitativa) es **el muro mismo del programa**. En el caso de RH, el "ángulo" $\theta$ entre la clase estructural y $N(A)$ **degenera a cero** en el límite (la constante $1/\sin\theta$ diverge): es exactamente el patrón de error recurrente del programa —$W_\lambda$, la "constante" $C_3(M)$ que diverge, el coseno oscilante de Doc 149—. La inyectividad **abstracta** se tiene (el objeto está determinado), pero la **estabilidad uniforme** no, y por eso ningún dato finito/promedio la captura con cota uniforme. Esto identifica el muro como **un fenómeno de no-uniformidad del ángulo**, no de no-inyectividad. (Es una observación, no un teorema sobre RH; vale para cualquier $(E,A,\mathcal F)$ donde $\mathcal F$ "besa" $N(A)$ asintóticamente.)
 
 **[PROPOSICIÓN 154.8 — valor → inercia como caso degenerado del esquema].** *El cruce "valor → inercia" (M5) es el caso del esquema 154.1 en el que el promediador $A$ tiene rango de dimensión infinita pero la clase $\mathcal F$ se aplica a un invariante $\nu:\mathcal F\to\mathbb Z$ que es localmente constante en la topología cociente $E/N(A)$. Entonces $\nu$ factoriza por $A$ —es función solo de $A(F)$— aunque $F$ no se recupere.*
-**Prueba.** Para Fredholm, $A$ = proyección de Calkin $B(H)\to B(H)/K(H)$, $N(A)=K(H)$ (compactos). El índice $\nu=\operatorname{ind}$ es invariante bajo $K(H)$ (Atkinson) y localmente constante en la norma de $B(H)/K(H)$. Luego $\operatorname{ind}$ desciende a una función continua $\mathbb Z$-valuada en el grupo de Fredholm módulo compactos, i.e. **es función de $A(F)$ solamente**. Así un dato individual (entero) **sí** se lee del promedio, precisamente porque es discreto y estable. $\square$
+**Prueba.** Para Fredholm, $A$ = proyección de Calkin $B(H)\to B(H)/K(H)$, $N(A)=K(H)$ (compactos). El índice $\nu=\mathrm{ind}$ es invariante bajo $K(H)$ (Atkinson) y localmente constante en la norma de $B(H)/K(H)$. Luego $\mathrm{ind}$ desciende a una función continua $\mathbb Z$-valuada en el grupo de Fredholm módulo compactos, i.e. **es función de $A(F)$ solamente**. Así un dato individual (entero) **sí** se lee del promedio, precisamente porque es discreto y estable. $\square$
 
 **Comentario.** 154.8 explica la paradoja registrada en Phase 44: *el espectro esencial es ciego al rango finito —vive en $R(A)$— y sin embargo su positividad implica $\delta<\infty$.* No es paradoja: el invariante de inercia es justamente la clase de funciones individuales que **sí** sobreviven al promedio porque son discretas. El valor→inercia es el **único** cruce donde el individual se lee del promedio sin reconstruir $F$; los otros cuatro reconstruyen $F$ (o un funcional continuo de $F$).
 

@@ -57,7 +57,7 @@ It does **not** prove:
 
 1. the full analytic archimedean metric theorem of `107_05`;
 2. a published arithmetic-surface realization over
-   \(\operatorname{Spec}\mathbf Z\);
+   \(\mathrm{Spec}\,\mathbf Z\);
 3. the later Lefschetz, Picard/Jacobian, or Hodge steps of Phase 107.
 
 So the correct reading is:

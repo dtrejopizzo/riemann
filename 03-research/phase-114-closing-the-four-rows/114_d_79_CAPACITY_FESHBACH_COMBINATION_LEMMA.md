@@ -30,7 +30,7 @@ If
 
 \[
  \boxed{
- \operatorname{cap}_{h}(v;R)
+ \mathrm{cap}_{h}(v;R)
  ={1\over\langle v,(R+hI)^{-1}v\rangle}-h
  >\ell_{\rm eff},}                                    \tag{3}
 \]
@@ -62,7 +62,7 @@ Thus a directed lower quadrature on a finite frequency interval proves
 For `x=av+y`, `y in QH`, Cauchy--Schwarz and Young's inequality give
 
 \[
- 2\operatorname{Re}(\bar a\langle r,y\rangle)
+ 2\mathrm{Re}(\bar a\langle r,y\rangle)
  \ge -{\varepsilon^2\over\eta}|a|^2-\eta\|y\|^2.
                                                                     \tag{6}
 \]

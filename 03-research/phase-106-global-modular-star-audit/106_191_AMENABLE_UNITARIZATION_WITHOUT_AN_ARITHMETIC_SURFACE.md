@@ -4,8 +4,8 @@
 
 The fixed-Rosati branch asks for an arithmetic intersection product and a
 Hodge-index theorem.  An arithmetic surface
-\(\operatorname {Spec}\mathbb Z\times_{\mathbb F_1}
-\operatorname {Spec}\mathbb Z\) would provide such a source, but it is not
+\(\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}
+\mathrm{Spec}\,\mathbb Z\) would provide such a source, but it is not
 logically necessary.
 
 This note gives a precise analytic replacement.  Exact unitarity of the

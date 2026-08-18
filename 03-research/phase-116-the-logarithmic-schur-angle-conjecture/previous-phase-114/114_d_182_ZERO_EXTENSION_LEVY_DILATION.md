@@ -67,7 +67,7 @@ Put \(b=\log n\le2T\), and retain the regional channels of D.134 on
 
 \[
  \|\widehat J_{n,\pm}F\|_2^2
- =\|F\|_2^2\pm\operatorname {Re}C_F(b),              \tag{1.1}
+ =\|F\|_2^2\pm\mathrm{Re}\,C_F(b),              \tag{1.1}
 \]
 
 whereas
@@ -75,7 +75,7 @@ whereas
 \[
  \|J_{n,\pm}F\|_2^2
  =\|F\|_2^2-B_{n,T}(F)
-   \pm\operatorname {Re}C_F(b),                      \tag{1.2}
+   \pm\mathrm{Re}\,C_F(b),                      \tag{1.2}
 \]
 
 with
@@ -91,7 +91,7 @@ Consequently
 \[
  \|\widehat J_{n,+}F\|^2-\|\widehat J_{n,-}F\|^2
  =\|J_{n,+}F\|^2-\|J_{n,-}F\|^2
- =2\operatorname {Re}C_F(b).                        \tag{1.4}
+ =2\mathrm{Re}\,C_F(b).                        \tag{1.4}
 \]
 
 Define
@@ -209,7 +209,7 @@ The Green operator after imposing \(MF=0\) is
 Thus
 
 \[
- \operatorname {rank}
+ \mathrm{rank}
  (G_{T,\lambda}-G_{T,\lambda}^{\rm prim})\le2.       \tag{4.3}
 \]
 

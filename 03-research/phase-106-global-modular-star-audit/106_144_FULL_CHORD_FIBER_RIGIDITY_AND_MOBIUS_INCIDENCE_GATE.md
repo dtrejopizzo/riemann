@@ -157,7 +157,7 @@ are nonnegative.  If (U_n) denotes the unitary finite Fourier matrix,
 then
 
 \[
- C_n(x)=U_n\operatorname {diag}(M_{n,r}(x))U_n^*\succeq0
+ C_n(x)=U_n\mathrm{diag}(M_{n,r}(x))U_n^*\succeq0
  \tag{11}
 \]
 

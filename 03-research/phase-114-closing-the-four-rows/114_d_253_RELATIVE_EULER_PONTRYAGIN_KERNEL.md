@@ -75,7 +75,7 @@ their ratio
 
 is nonconstant.  Choose two distinct points for which the two evaluation
 vectors are independent.  In that two-dimensional span, (1.5) is the
-pullback of \(\operatorname{diag}(1,-1)\), so its inertia is \((1,1)\).
+pullback of \(\mathrm{diag}(1,-1)\), so its inertia is \((1,1)\).
 Consequently \(K_{c_r}\) has exactly one negative square.
 
 Thus \(c_r\) belongs to the generalized Schur class of index one on its

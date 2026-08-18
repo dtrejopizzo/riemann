@@ -109,7 +109,7 @@ Step 2 assumes the support statement equivalent to RH.
 If an off-line zero yields \(|w|>1\), then its contribution to the Li
 sequence contains a geometric term
 \[
-  -2\operatorname{Re}(w^n)
+  -2\mathrm{Re}(w^n)
 \]
 along the paired quartet.  Along a subsequence this term is negative with
 exponential size.  No archimedean term of polynomial-logarithmic size can

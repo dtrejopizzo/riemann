@@ -77,7 +77,7 @@ Write
 
 \[
  Zq=(Z_pq,Z_\Gamma q,Z_0q),\qquad
- \mathcal J=\operatorname {diag}(I,I,-I).
+ \mathcal J=\mathrm{diag}(I,I,-I).
 \tag{5}
 \]
 
@@ -278,7 +278,7 @@ Then (18) is exactly
 \tag{19}
 \]
 
-For a diagonal scaling \(\Psi=\operatorname {diag}(D_+,D_-)\), this
+For a diagonal scaling \(\Psi=\mathrm{diag}(D_+,D_-)\), this
 reduces to
 
 \[
@@ -291,7 +291,7 @@ prime/Gamma ports and amplifies the negative polar port.  For example,
 
 \[
  \Psi_\varepsilon
- =\operatorname {diag}(\sqrt{1-\varepsilon}\,I_+,
+ =\mathrm{diag}(\sqrt{1-\varepsilon}\,I_+,
                        \sqrt{1+\varepsilon}\,I_-)
 \tag{21}
 \]
@@ -464,7 +464,7 @@ direction.  If \(\Pi\) is instead selected so that
 implication back to the physical form is lost.
 
 On a finite completely anti-shorted heat or hybrid row
-\(E=\operatorname {span}\{q_1,\ldots,q_m\}\), the exact audit is the pair
+\(E=\mathrm{span}\,\{q_1,\ldots,q_m\}\), the exact audit is the pair
 of matrices
 
 \[

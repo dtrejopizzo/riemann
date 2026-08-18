@@ -119,7 +119,7 @@ La integral de \(H_L\) en un período es \(2\pi/L\). La cota de variación
 probada en `104_107` implica
 
 \[
- \operatorname {TV}_{[0,2\pi]}(H_L)
+ \mathrm{TV}_{[0,2\pi]}(H_L)
  \le {8\over3}\left(1-{1\over L^2}\right)<{8\over3}.   \tag{7}
 \]
 
@@ -140,7 +140,7 @@ longitud \(\pi\) a un período completo,
 Las dos semirrectas de \(t\) dan entonces
 
 \[
- \operatorname {TV}_{\mathbb R}(V_{N,L,\phi})
+ \mathrm{TV}_{\mathbb R}(V_{N,L,\phi})
  \le {8\pi N\over L}+{32\over3}.                        \tag{9}
 \]
 
@@ -150,7 +150,7 @@ Para \(a\ge4\), `104_41` da
 \[
  |\mathcal B^{\triangle}_{N,L,a}(\phi)|
  \le {1\over2\pi}{3\pi\over4}
-       \operatorname {TV}_{\mathbb R}(V_{N,L,\phi})
+       \mathrm{TV}_{\mathbb R}(V_{N,L,\phi})
  \le3\pi {N\over L}+4,                                  \tag{10}
 \]
 

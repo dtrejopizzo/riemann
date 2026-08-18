@@ -25,12 +25,12 @@ Evaluando en $s = 1/2 + it$: $\overline{\xi(1/2+it)} = \xi(\overline{1/2+it}) = 
 Los ceros de $f$ como función de $t \in \mathbb{C}$ corresponden a los ceros de $\xi$ vía:
 $$f(t_0) = 0 \iff \xi\!\left(\tfrac{1}{2}+it_0\right) = 0 \iff \tfrac{1}{2}+it_0 = \rho, \quad \rho \text{ cero de } \zeta.$$
 
-Si $\rho = \tfrac{1}{2} + b_\rho + i\gamma_\rho$ (con $b_\rho = \operatorname{Re}(\rho)-\tfrac{1}{2}$), entonces $t_0 = \gamma_\rho - ib_\rho$.
+Si $\rho = \tfrac{1}{2} + b_\rho + i\gamma_\rho$ (con $b_\rho = \mathrm{Re}(\rho)-\tfrac{1}{2}$), entonces $t_0 = \gamma_\rho - ib_\rho$.
 
 **El zero de $f$ es real $\iff$ $b_\rho = 0$ $\iff$ $\rho$ está en la recta crítica.**
 
 **Proposición 2.** Las siguientes afirmaciones son equivalentes:
-1. RH (todos los ceros no-triviales de $\zeta$ tienen $\operatorname{Re}(\rho) = 1/2$).
+1. RH (todos los ceros no-triviales de $\zeta$ tienen $\mathrm{Re}(\rho) = 1/2$).
 2. Todos los ceros de la función entera real $f(t) = \xi(1/2+it)$ son reales.
 
 ---
@@ -60,7 +60,7 @@ $$\log|f(t)| = \log|c| - \alpha t^2 + \beta t + \sum_k \log\!\left|1-\frac{t}{t_
 Segunda derivada:
 $$\frac{d^2}{dt^2}\log|f(t)| = -2\alpha - \sum_{k} \frac{1}{(t-t_k)^2} < 0 \quad \forall t \notin \{t_k\}.$$
 Cóncava. Recíprocamente, si $f$ tiene un cero complejo $t_0 = \gamma + ib$ ($b > 0$), el par $(t_0, \bar t_0)$ contribuye:
-$$\operatorname{Re}\!\left(-\frac{1}{(t-t_0)^2} - \frac{1}{(t-\bar t_0)^2}\right) = \frac{-2(t-\gamma)^2+2b^2}{[(t-\gamma)^2+b^2]^2},$$
+$$\mathrm{Re}\,\!\left(-\frac{1}{(t-t_0)^2} - \frac{1}{(t-\bar t_0)^2}\right) = \frac{-2(t-\gamma)^2+2b^2}{[(t-\gamma)^2+b^2]^2},$$
 que es **positivo** para $|t-\gamma| < b$. Entonces $d^2/dt^2 \log|f| > 0$ para $t$ en la franja $(\gamma-b, \gamma+b)$: convexidad. Por tanto la concavidad $\Rightarrow$ no hay ceros complejos. $\square$
 
 **Corolario 1.** Para la función $f(t) = \xi(1/2+it)$:

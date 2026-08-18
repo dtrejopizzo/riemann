@@ -41,7 +41,7 @@ Here is the separation argument, including the point needed by the regular
 reflection.  For every `u>0`, transport the ordinary addition of `R` through
 
 \[
- T_u(x)=\operatorname{sgn}(x)|x|^{1/u}.
+ T_u(x)=\mathrm{sgn}(x)|x|^{1/u}.
 \]
 
 The integer of the transported field is then
@@ -49,9 +49,9 @@ The integer of the transported field is then
 the commutative involutive homogeneous-endomorphism bio
 
 \[
- \mathcal D=\operatorname{End}_{\mathbb R^\times\text{-Set}}(\mathbb R)
+ \mathcal D=\mathrm{End}_{\mathbb R^\times\text{-Set}}(\mathbb R)
  \times
- \operatorname{End}_{\mathbb R^\times\text{-Set}}(\mathbb R)^{op}.
+ \mathrm{End}_{\mathbb R^\times\text{-Set}}(\mathbb R)^{op}.
 \]
 
 Consequently its scalar shadow sends a Laurent label `[r]` to `r^u`.

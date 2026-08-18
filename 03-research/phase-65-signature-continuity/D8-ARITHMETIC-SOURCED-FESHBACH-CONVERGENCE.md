@@ -29,7 +29,7 @@ and compact $K\Subset\Omega$,
    \sup_{V\in B_F(r),\,z\in K}\Big|\mathcal D_P^{\circ,\mathrm{src}}(V;z)-\mathcal D_\Xi^{\mathrm{src}}
    (V;z)\Big|\ \xrightarrow[P\to\infty]{}\ 0,
 \]
-and by differentiation $\mathsf K_P^\circ(z,w)\to\operatorname{Pol}(d^2\log\mathcal D_\Xi^{\mathrm{src}}
+and by differentiation $\mathsf K_P^\circ(z,w)\to\mathrm{Pol}(d^2\log\mathcal D_\Xi^{\mathrm{src}}
 (0))(z,w)$, with the right side $=\mathsf K_\Xi^{\mathrm{G5}}$ (D9). The $V=0$ slice is G3.
 \end{theorem*}
 
@@ -90,8 +90,8 @@ RH-strength norm control is needed (cf. M2: the size question was dissolved, not
 \begin{lemma}\label{lem:84}
 If for every $n$ and every $V_1,\dots,V_n\in F$ the multilinear resolvent traces converge,
 \[
-   \operatorname{Tr}\big(R_P^\circ(z)V_1\cdots R_P^\circ(z)V_n\big)\ \to\
-   \operatorname{Tr}\big(R_\Xi(z)V_1\cdots R_\Xi(z)V_n\big)\qquad(\text{loc. unif. in }z),
+   \mathrm{Tr}\,\big(R_P^\circ(z)V_1\cdots R_P^\circ(z)V_n\big)\ \to\
+   \mathrm{Tr}\,\big(R_\Xi(z)V_1\cdots R_\Xi(z)V_n\big)\qquad(\text{loc. unif. in }z),
 \]
 where $R_P^\circ=(F_P)^{-1}$, $R_\Xi$ the primitive resolvent of the $\Xi$-system, then $\mathcal D_P^{
 \circ,\mathrm{src}}\to\mathcal D_\Xi^{\mathrm{src}}$ on $B_F(r)$ (uniformly), and hence (D5,
@@ -104,7 +104,7 @@ $B_F(r)$. $\square$
 
 \begin{remark}[why D8.4 is not free from G3]
 G3 gives only the $V=0$ slice (the determinant, one functional of the resolvent). The multilinear traces
-$\operatorname{Tr}(R_P^\circ V_1\cdots R_P^\circ V_n)$ are *additional* functionals — the full primitive
+$\mathrm{Tr}(R_P^\circ V_1\cdots R_P^\circ V_n)$ are *additional* functionals — the full primitive
 resolvent matrix elements. Their convergence is the genuine new content; it does \emph{not} follow from
 determinant convergence alone (that would be the forbidden scalar-only inference N1). It follows from
 D8.5 (the resolvent kernel converges because each *local factor's* source response converges).
@@ -134,7 +134,7 @@ finite Green matrices $G_P^\circ(z)$ together with $D_P^\circ\to\Xi$ (G3).
 F_P\cdot\det_m(I_m+C\Phi^*F_P^{-1}\Phi)$ with the $\det_2$ anomaly. $\square$
 
 \begin{theorem*}[\textbf{D8.5$'$} — the corrected target]
-For every finite primitive source plane $F=\operatorname{span}\{\phi_\alpha\}$,
+For every finite primitive source plane $F=\mathrm{span}\,\{\phi_\alpha\}$,
 \[
    \boxed{\ \Pi_F R_P^\circ(z)\,\Pi_F\ \longrightarrow\ \Pi_F R_\Xi^{\mathrm{G5}}(z)\,\Pi_F\ }
    \qquad(\text{i.e. }G_P^\circ(z)\to G_\Xi^{\mathrm{G5}}(z))
@@ -175,7 +175,7 @@ subsequential limit converges. Vitali on $B_F(r)$. $\square$
 ## §8. D8.7 — Kernel convergence by differentiation *(proved, given the above)*
 
 \begin{theorem}\label{thm:87}
-$\mathsf K_P^\circ(z,w)\to\operatorname{Pol}(d^2\log\mathcal D_\Xi^{\mathrm{src}}(0))(z,w)$ locally
+$\mathsf K_P^\circ(z,w)\to\mathrm{Pol}(d^2\log\mathcal D_\Xi^{\mathrm{src}}(0))(z,w)$ locally
 uniformly.
 \end{theorem}
 \emph{Proof.} D8.6 gives uniform germ convergence on source balls; D5, Thm germ-kernel (Cauchy

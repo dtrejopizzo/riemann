@@ -30,7 +30,7 @@ variable):
 $$
    \int |m_X(\xi)|^2\,d\mu(\xi)\ \ll\ \sum_{n\le X}\frac{\Lambda(n)^2}{n}\ \sim\ \tfrac12(\log X)^2 .
 $$
-This is exactly the trace growth $\operatorname{Tr}K_P\sim\tfrac12(\log P)^2$ of phase-64: the
+This is exactly the trace growth $\mathrm{Tr}\,K_P\sim\tfrac12(\log P)^2$ of phase-64: the
 **mean** grows like $(\log X)^2$, and that entire growth **is the pole/principal channel** (the $H$
 direction). Removing it (the $\Pi_{\mathrm{prim}}$ / $P_{\mathrm{prim}}$ projection) is precisely
 subtracting this divergent mean.

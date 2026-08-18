@@ -26,7 +26,7 @@ Entrywise, hence matrix-valued. $\square$
 \begin{corollary}[D8.5b-ii is trivial under genuine convergence]
 If the holomorphic resolvents $G_P^\circ$ converge locally uniformly on $D(a,r)\setminus\{a\}$ to
 $G_\Xi^{\mathrm G5}$ for $a\in\C^+$ (so $\overline{D(a,r)}\subset\C^+$), then $G_\Xi^{\mathrm G5}$ has no
-pole at $a$. Same in $\C^-$. Hence $\operatorname{sq}_-(G_\Xi^{\mathrm G5})=0$, RH.
+pole at $a$. Same in $\C^-$. Hence $\mathrm{sq}_-(G_\Xi^{\mathrm G5})=0$, RH.
 \end{corollary}
 
 \textbf{So D8.5b-ii is not RH-strength.} The earlier "outcome (ii)" verdict is withdrawn.

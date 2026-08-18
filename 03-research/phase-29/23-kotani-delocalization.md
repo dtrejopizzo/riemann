@@ -89,7 +89,7 @@ Luego $\gamma(E) = +\infty$ para $E \neq 0$.
 
 (b) Si el espectro singular continuo también es vacío (lo cual se discute abajo): el espectro de $J_\infty$ es puro puntual.
 
-(c) Bajo el Teorema C1 (Doc 17): $\operatorname{spec}_{pp}(J_\infty) = \{t: C_\infty(t) = 0\}$.
+(c) Bajo el Teorema C1 (Doc 17): $\mathrm{spec}_{pp}(J_\infty) = \{t: C_\infty(t) = 0\}$.
 
 *Prueba de (a).* El crecimiento super-exponencial de las soluciones (Proposición 3) implica que no existe ninguna medida de Borel AC en el eje real tal que la restricción del operador a esa parte del espectro tenga soluciones acotadas (criterio de Weyl). $\square$
 
@@ -131,13 +131,13 @@ $$\langle e_0, \psi_n^\infty\rangle \to 0 \quad \text{automáticamente (como }n\
 
 **Teorema 2** (completitud de eigenvectores $\iff$ espectro puro puntual). Para un operador autoadjunto $A$ en un espacio de Hilbert separable:
 
-$$\text{base completa de eigenvectores} \iff \operatorname{spec}(A) = \operatorname{spec}_{pp}(A) \quad (\text{espectro puro puntual}).$$
+$$\text{base completa de eigenvectores} \iff \mathrm{spec}(A) = \mathrm{spec}_{pp}(A) \quad (\text{espectro puro puntual}).$$
 
 *Prueba.* Teorema espectral. $\square$
 
 **Proposición 6** (el espectro de $J_\infty$ es puro puntual incondicional, bajo la ausencia de ceros acumulados de $C_\infty$). La cadena:
 
-1. $\operatorname{spec}(J_\infty) = \{C_\infty = 0 \text{ en }\mathbb{R}\}$ (Teorema C1, Doc 17).
+1. $\mathrm{spec}(J_\infty) = \{C_\infty = 0 \text{ en }\mathbb{R}\}$ (Teorema C1, Doc 17).
 2. Los ceros de $C_\infty$ son aislados (no se acumulan en ningún punto finito) — Proposición 4.
 3. El espectro de $J_\infty$ es discreto y puro puntual (del punto 1 + punto 2).
 4. Los eigenvectores de $J_\infty$ forman una base completa de $\ell^2$ (Teorema 2).
@@ -182,11 +182,11 @@ Reformulación final:
 
 **Proposición 8** (los pesos de $\mu_{WT}^\infty$ expresados via el residuo de $C_\infty'/C_\infty$). Por la EF2 (Doc 17): $N\cdot m_\infty^{WT}(z) = C_\infty'(z)/C_\infty(z)$. Si $\gamma_n$ es un cero simple de $C_\infty$:
 
-$$\operatorname{Res}_{z=\gamma_n}\frac{C_\infty'(z)}{C_\infty(z)} = 1 \implies w_n = \operatorname{Res}_{z=\gamma_n}m_\infty^{WT}(z) = \frac{1}{N}.$$
+$$\mathrm{Res}_{z=\gamma_n}\frac{C_\infty'(z)}{C_\infty(z)} = 1 \implies w_n = \mathrm{Res}_{z=\gamma_n}m_\infty^{WT}(z) = \frac{1}{N}.$$
 
 Luego: si todos los ceros de $C_\infty$ son simples, todos los pesos son iguales a $1/N$ — la medida WT es la MEDIDA EMPÍRICA NORMALIZADA, exactamente $\mu_{emp}^\infty = \mu_\gamma^{real}$!
 
-*Prueba.* $C_\infty(z) \approx C_\infty'(\gamma_n)(z-\gamma_n)$ cerca de un cero simple $\gamma_n$. Luego $C_\infty'/C_\infty(z) \approx 1/(z-\gamma_n)$. El residuo es 1 en cada cero simple. Por EF2: $N\cdot\operatorname{Res}_{z=\gamma_n}m_\infty^{WT}(z) = 1$, luego $w_n = \mu_{WT}^\infty(\{\gamma_n\}) = 1/N$. $\square$
+*Prueba.* $C_\infty(z) \approx C_\infty'(\gamma_n)(z-\gamma_n)$ cerca de un cero simple $\gamma_n$. Luego $C_\infty'/C_\infty(z) \approx 1/(z-\gamma_n)$. El residuo es 1 en cada cero simple. Por EF2: $N\cdot\mathrm{Res}_{z=\gamma_n}m_\infty^{WT}(z) = 1$, luego $w_n = \mu_{WT}^\infty(\{\gamma_n\}) = 1/N$. $\square$
 
 ---
 

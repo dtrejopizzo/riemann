@@ -60,11 +60,11 @@ El fondo $\log|\zeta(1/2+i(\gamma_j+ub_j))|$ sin la contribución de $\mathcal{O
 $$\ell_j^{(0)}(u) := \ell_j(u) - \delta_j\ell_j(u) \approx \text{campo log-correlacionado evaluado en }t = \gamma_j + ub_j.$$
 
 Para $u = O(1)$ la escala de variación es $b_j$, que es la escala de la "depresión". El campo log-correlacionado tiene correlaciones:
-$$\operatorname{Cov}(\ell_j^{(0)}(u), \ell_j^{(0)}(v)) \approx \log\frac{1}{|u-v|b_j} \cdot \mathbf{1}_{|u-v| \leq 1/(b_j^2)}$$
+$$\mathrm{Cov}(\ell_j^{(0)}(u), \ell_j^{(0)}(v)) \approx \log\frac{1}{|u-v|b_j} \cdot \mathbf{1}_{|u-v| \leq 1/(b_j^2)}$$
 (estructura del campo log-correlado a escala $b_j$).
 
 **La tensión:** el perfil determinístico $P(u) = \log(1+u^2)$ tiene variación $O(\log |u|)$ a escala $O(1)$ en $u$. La variación típica del campo aleatorio a la misma escala $O(1)$ en $u$ (correspondiente a escala $b_j$ en $t$) es:
-$$\Delta\ell^{(0)} \sim \left(\operatorname{Cov}(\ell^{(0)}(0),\ell^{(0)}(0)) - \operatorname{Cov}(\ell^{(0)}(0),\ell^{(0)}(1))\right)^{1/2} \sim (\log(1/b_j))^{1/2}.$$
+$$\Delta\ell^{(0)} \sim \left(\mathrm{Cov}(\ell^{(0)}(0),\ell^{(0)}(0)) - \mathrm{Cov}(\ell^{(0)}(0),\ell^{(0)}(1))\right)^{1/2} \sim (\log(1/b_j))^{1/2}.$$
 
 Para $b_j \to 0$: $(\log(1/b_j))^{1/2} \to \infty$, así que la variación del campo dominará eventualmente sobre el perfil $P(u) = O(\log u)$.
 

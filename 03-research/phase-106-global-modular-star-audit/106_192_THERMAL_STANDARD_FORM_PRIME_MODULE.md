@@ -43,7 +43,7 @@ and its standard-form Hilbert space
 
 \[
  \mathcal K_p=\mathfrak S_2(H_p),\qquad
- \langle X,Y\rangle_2=\operatorname {Tr}(X^*Y),\qquad
+ \langle X,Y\rangle_2=\mathrm{Tr}(X^*Y),\qquad
  \Omega_p=\rho_p^{1/2}.                                    \tag{3}
 \]
 
@@ -89,7 +89,7 @@ one obtains
 \[
  \begin{aligned}
  \left\langle S^k\rho_p^{1/2},\rho_p^{1/2}S^k\right\rangle_2
- &=\operatorname {Tr}\left(
+ &=\mathrm{Tr}\,\left(
     \rho_p^{1/2}S^{*k}\rho_p^{1/2}S^k\right)\\
  &=(1-r)\sum_{j\ge0}r^{j/2}r^{(j+k)/2}
  =r^{k/2}.

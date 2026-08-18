@@ -51,10 +51,10 @@ Define
 
 \[
  \begin{split}
- \operatorname{Prin}_A&=\operatorname{im}
+ \mathrm{Prin}_A&=\mathrm{im}
    \bigl(GL_1(\mathcal K)\to D_1^{\rm met}(\mathscr Y_A)\bigr),\\
- \operatorname{Div}_A&=\operatorname{Prin}_A+\mathfrak D_{\rm pr},\\
- \operatorname{Pic}_A&=\operatorname{Div}_A/\operatorname{Prin}_A
+ \mathrm{Div}_A&=\mathrm{Prin}_A+\mathfrak D_{\rm pr},\\
+ \mathrm{Pic}_A&=\mathrm{Div}_A/\mathrm{Prin}_A
    \simeq\mathfrak D_{\rm pr}.                                    \tag{1.3}
 \end{split}
 \]
@@ -72,7 +72,7 @@ For (x=(x_{p,i})\in\mathfrak D_{\rm pr}), define the two geometric degrees
 \]
 
 They are the logarithmic boundary norms, hence are intrinsic on
-(\operatorname{Pic}_A).  Tensor product of metrized Cartier torsors adds
+(\mathrm{Pic}_A).  Tensor product of metrized Cartier torsors adds
 the two degrees.
 
 Let \(H_X(tA)\) and \(H_X(tB)\) be the fixed-rank curve section objects on
@@ -133,7 +133,7 @@ The determinant isometry is
  \delta\lambda_{RR}\simeq\lambda_C\otimes\lambda_G.               \tag{3.4}
 \]
 
-It supplies the canonical Green line and gauge on \(\operatorname{Pic}_A\).
+It supplies the canonical Green line and gauge on \(\mathrm{Pic}_A\).
 
 For every (n\ge1), take the contact-framed kernel of a140,
 
@@ -163,8 +163,8 @@ ordinary undecorated Chow representative is assumed.
 The metrized bivariant object
 
 \[
- \mathscr A=(\mathscr Y_A,\operatorname{Div}_A,
- \operatorname{Prin}_A,h_A,\delta\lambda_{RR},
+ \mathscr A=(\mathscr Y_A,\mathrm{Div}_A,
+ \mathrm{Prin}_A,h_A,\delta\lambda_{RR},
  \lambda_C,\lambda_G,\{\Gamma_n\})                                 \tag{4.1}
 \]
 
@@ -176,7 +176,7 @@ satisfies the five requirements of row A.
    Cartier divisor group, actual global principal subgroup and faithful
    all-prime quotient on the repaired Haran square.
 2. **a2 (principal invariance).** All three determinant lines live on
-   \(\operatorname{Pic}_A\).  Changing a representative by the divisor of a
+   \(\mathrm{Pic}_A\).  Changing a representative by the divisor of a
    global fraction gives the canonical isometric principal
    trivialization, so (3.1)--(3.4) are unchanged.
 3. **a3 (curve dimension).** On either axis the cross factor in (2.2) is

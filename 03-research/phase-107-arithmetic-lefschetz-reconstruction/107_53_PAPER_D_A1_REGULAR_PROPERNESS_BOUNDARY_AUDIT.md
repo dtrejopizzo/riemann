@@ -26,7 +26,7 @@ This note turns that distinction into an explicit audit boundary.
 By `107_12`, A1 requires one of the following.
 
 1. a regular proper arithmetic surface
-   \(\mathcal X_T\to\operatorname{Spec}\mathbf Z\), or
+   \(\mathcal X_T\to\mathrm{Spec}\,\mathbf Z\), or
 2. an exact adelic substitute together with a proved comparison to such
    a regular proper model.
 
@@ -105,7 +105,7 @@ with the exact target-side comparison maps.
 `107_17` reduces parts of the problem to finitely many local conditions,
 but finite-type chart control does not by itself establish:
 
-1. global properness over all of \(\operatorname{Spec}\mathbf Z\);
+1. global properness over all of \(\mathrm{Spec}\,\mathbf Z\);
 2. regularity after all required blowups;
 3. compatibility of the resulting global object with the adelic
    categories used in Route A.
@@ -120,7 +120,7 @@ Proof.  `107_10`, `107_15`, `107_16`, and `107_17` jointly fix the
 global target, exclude several structurally wrong envelopes, and provide
 an explicit candidate-model and chartwise compactification protocol.
 However, none of them proves the existence of a regular proper
-arithmetic surface \(\mathcal X_T\to\operatorname{Spec}\mathbf Z\), nor
+arithmetic surface \(\mathcal X_T\to\mathrm{Spec}\,\mathbf Z\), nor
 an exact adelic substitute with a proved comparison theorem to such a
 surface.  By the definition of A1 in `107_12`, that means A1 is not yet
 proved.  The current exact shadows are still only candidate-level

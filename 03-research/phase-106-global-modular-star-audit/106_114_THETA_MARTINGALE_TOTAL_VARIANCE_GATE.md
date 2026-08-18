@@ -31,7 +31,7 @@ prime-power lines, which have zero polar-pair measure.
 Consequently a law-of-total-variance proof cannot establish
 
 \[
- \mathscr E_K(r)\geq\frac12\operatorname {Var}_{\mu_K}(r)
+ \mathscr E_K(r)\geq\frac12\mathrm{Var}_{\mu_K}(r)
 \]
 
 with equality on all \(K^{(2j)}/K\), even when every divisor dispersion and
@@ -114,13 +114,13 @@ Therefore the ordinary law of total variance gives the exact identity
 \[
 \boxed{
 \begin{aligned}
- \operatorname {Var}_{\mu_K}(r)
+ \mathrm{Var}_{\mu_K}(r)
 ={}&2\int_1^\infty\phi(s)
  \left\{
   \sum_{b<s}q_s(b)|R_s(b)|^2
   -\frac{\left|\sum_{b<s}q_s(b)R_s(b)\right|^2}{Q(s)}
  \right\}ds\\
- &+\operatorname {Var}_{\nu}
+ &+\mathrm{Var}_{\nu}
  \left(
    \frac1{Q(S)}\sum_{b<S}q_S(b)R_S(b)
  \right).
@@ -163,10 +163,10 @@ Equations 106.104(12)--(14) are exactly
 \boxed{
 \begin{aligned}
  D_b^+r(y)&=\mathbb E_bX_{b,y},\\
- V_b^+(r;y)&=(\log b)\operatorname {Var}_b(X_{b,y}),\\
+ V_b^+(r;y)&=(\log b)\mathrm{Var}_b(X_{b,y}),\\
  \sum_{n\mid b}\Lambda(n)|\Delta_n^+r(y)|^2
  &=(\log b)|\mathbb E_bX_{b,y}|^2
-   +(\log b)\operatorname {Var}_b(X_{b,y}).
+   +(\log b)\mathrm{Var}_b(X_{b,y}).
 \end{aligned}}
 \tag{12}
 \]
@@ -186,7 +186,7 @@ With \(X_{b,x}=r(\log N-x)-r(x)\), one obtains
 \boxed{
  D_{b,x}^-r=\mathbb E_{b,x}X_{b,x},
  \qquad
- V_{b,x}^-(r)=\ell_b(x)\operatorname {Var}_{b,x}(X_{b,x}).}
+ V_{b,x}^-(r)=\ell_b(x)\mathrm{Var}_{b,x}(X_{b,x}).}
 \tag{14}
 \]
 
@@ -339,7 +339,7 @@ Then
 \[
  \int|V_r|^2d\Omega_\Theta=\mathscr E_K(r),
  \qquad
- \int|v_r|^2d\rho=\frac12\operatorname {Var}_{\mu_K}(r).
+ \int|v_r|^2d\rho=\frac12\mathrm{Var}_{\mu_K}(r).
  \tag{24}
 \]
 
@@ -389,7 +389,7 @@ Every complete positive martingale routing would satisfy
 \[
 \boxed{
 \begin{aligned}
- \mathscr E_K(r)-\frac12\operatorname {Var}_{\mu_K}(r)
+ \mathscr E_K(r)-\frac12\mathrm{Var}_{\mu_K}(r)
 ={}&\sum_{k\geq1}\|M_k^r-M_{k-1}^r\|_{L^2(Q)}^2\\
  &+\int_{\mathsf E_\Theta}|V_r(e)|^2
  \,d(\Omega_\Theta-Q_{\mathsf E_\Theta})(e).
@@ -433,7 +433,7 @@ The exact radical identity gives
 
 \[
  \mathscr E_K(r_j)
- =\frac12\operatorname {Var}_{\mu_K}(r_j).
+ =\frac12\mathrm{Var}_{\mu_K}(r_j).
  \tag{31}
 \]
 
@@ -555,7 +555,7 @@ Proved here:
 Not proved here:
 
 \[
- \mathscr E_K(r)\geq\frac12\operatorname {Var}_{\mu_K}(r).
+ \mathscr E_K(r)\geq\frac12\mathrm{Var}_{\mu_K}(r).
 \]
 
 The remaining heat/hybrid physical surplus must use a globally signed,

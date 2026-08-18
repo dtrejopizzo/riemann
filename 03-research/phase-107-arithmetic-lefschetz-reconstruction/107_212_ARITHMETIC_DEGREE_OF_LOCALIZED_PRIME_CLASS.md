@@ -2,7 +2,7 @@
 
 ## 1. Why ordinary coherent support is insufficient
 
-On \(\operatorname{Spec}\mathbb Z\), the prime torsion sheaf has the
+On \(\mathrm{Spec}\,\mathbb Z\), the prime torsion sheaf has the
 resolution
 
 \[
@@ -14,7 +14,7 @@ resolution
 Consequently
 
 \[
- [\mathbb F_p]=0\quad\text{in }G_0(\operatorname{Spec}\mathbb Z).
+ [\mathbb F_p]=0\quad\text{in }G_0(\mathrm{Spec}\,\mathbb Z).
  \tag{1.2}
 \]
 
@@ -53,7 +53,7 @@ For every prime define the finite-support class
  \widehat\gamma_p
  =\widehat{[p]}\otimes{\chi_p\over1-\chi_p}
  \in
- \widehat{\mathrm{CH}}^1(\overline{\operatorname{Spec}\mathbb Z})
+ \widehat{\mathrm{CH}}^1(\overline{\mathrm{Spec}\,\mathbb Z})
  \otimes R_{T,p}^{\mathrm{loc}}.
  \tag{2.2}
 \]

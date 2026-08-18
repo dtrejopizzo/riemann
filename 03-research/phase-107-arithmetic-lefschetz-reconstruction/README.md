@@ -125,7 +125,7 @@ the current real tests.
 
 A compactly supported test sees finitely many prime powers, but its
 divisor must live on a regular proper model over the whole of
-\(\operatorname{Spec}\mathbb Z\).  Deleting all places beyond a cutoff
+\(\mathrm{Spec}\,\mathbb Z\).  Deleting all places beyond a cutoff
 produces a nonproper object and lies outside the scope of
 Faltings--Hriljac.  The construction must prove the sign on each proper
 global model before any pro-limit.
@@ -155,7 +155,7 @@ finite-support-on-a-proper-global-model mechanism.
   calibration written out as a proof.
 - `107_03_PAPER_A_FREE_ARITHMETIC_DIVISOR_MODULE.md` — Work Package I-A:
   raw decorated correspondences, Eulerian connected extraction and the
-  finite-support source divisor module \(\operatorname{Div}_{\mathrm{EF}}\).
+  finite-support source divisor module \(\mathrm{Div}_{\mathrm{EF}}\).
 - `107_04_PAPER_A_LOCAL_DERIVED_INTERSECTION_LINES.md` — Work Package
   I-B: finite-place determinant lines, Apostol/resultant support and the
   excess-intersection status of the diagonal.
@@ -167,11 +167,11 @@ finite-support-on-a-proper-global-model mechanism.
   intersection package.
 - `107_07_PAPER_B_DECORATED_ABSOLUTE_FROBENIUS_CATEGORY.md` — Work
   Package II-A: the decorated correspondence category
-  \(\operatorname{Corr}_{\mathrm{EF}}\), with raw composition,
+  \(\mathrm{Corr}_{\mathrm{EF}}\), with raw composition,
   transpose, degree and connected cyclic trace.
 - `107_08_PAPER_B_SUSPENSION_TO_ARITHMETIC_FLOW.md` — Work Package
   II-B: suspension/groupoid with prime closed orbits of length \(\log p\)
-  and return category \(\operatorname{Corr}_{\mathrm{EF}}\).
+  and return category \(\mathrm{Corr}_{\mathrm{EF}}\).
 - `107_09_PAPER_B_ARITHMETIC_LEFSCHETZ_FORMULA.md` — Work Package II-C:
   fixed-point derivation of the complete prime--Gamma--polar arithmetic
   Lefschetz formula from the suspended correspondence flow.
@@ -805,7 +805,7 @@ new paper supplies the geometric chain
 The next source layer is also now fixed at the algebraic interface
 level: `107_03` defines the raw correspondence package, separates
 transpose from connected extraction, and presents the finite-support
-module \(\operatorname{Div}_{\mathrm{EF}}\) required by Work Package
+module \(\mathrm{Div}_{\mathrm{EF}}\) required by Work Package
 I-A.
 
 The finite local intersection layer is now fixed as well: `107_04`
@@ -828,14 +828,14 @@ Its finite cyclotomic support law now also has a separate exact audit in
 layer as strong as Paper 0.
 
 Part II is now formally started as well: `107_07` fixes the algebraic
-correspondence category \(\operatorname{Corr}_{\mathrm{EF}}\) and makes
+correspondence category \(\mathrm{Corr}_{\mathrm{EF}}\) and makes
 explicit the key separation between raw composition and Eulerian
 connected extraction.
 
 The suspension step is now also written in `107_08`: the local prime
 circles are glued through a common archimedean phase boundary, producing
 an arithmetic flow object whose closed-orbit return category is
-\(\operatorname{Corr}_{\mathrm{EF}}\).
+\(\mathrm{Corr}_{\mathrm{EF}}\).
 
 Work Package II-C now also has a formal draft in `107_09`: the
 renormalized test correspondence \(Z_f\) intersects the diagonal in one
@@ -856,12 +856,12 @@ explicit joint Gamma--pole factor is now consistency-audited in
 
 Part III is now also opened in `107_10`: the realization problem is
 fixed at the correct level of generality, namely regular proper models
-\(\mathcal X_T/\operatorname{Spec}\mathbb Z\) for finite-support data
+\(\mathcal X_T/\mathrm{Spec}\,\mathbb Z\) for finite-support data
 without deleting places outside the cutoff, and with nontrivial
 degree-one geometry retained from the absolute Picard/Jacobian side.
 
 The companion realization target for III-B is now fixed in `107_11`:
-the sought divisor map to \(\widehat{\operatorname{Pic}}^0\) or to the
+the sought divisor map to \(\widehat{\mathrm{Pic}}^0\) or to the
 precise Yuan--Zhang adelic category must preserve the source
 Gamma--polar metric, transport the intersection pairing, and have real
 kernel exactly equal to the explicit Weil radical
@@ -978,7 +978,7 @@ remaining denominator problem is therefore quantitative rather than
 structural.
 
 No arithmetic Lefschetz surface, divisor map over
-\(\operatorname{Spec}\mathbb Z\), or proof of RH is claimed at this
+\(\mathrm{Spec}\,\mathbb Z\), or proof of RH is claimed at this
 stage; those remain later work packages of Phase 107.
 
 One important limitation is now made explicit by `107_28`: the original
@@ -1020,7 +1020,7 @@ with dimension linear in the degree.  The exact verifier checks
 The natural arithmetic-Jacobian target is also sharply restricted by
 `107_148`.  Connes--Consani's published prime class
 \(\mathbb Z[1/p]\) is idempotent and noninvertible, so their Picard
-monoid cannot receive the signed group \(\operatorname{Div}_{\mathrm{EF}}\)
+monoid cannot receive the signed group \(\mathrm{Div}_{\mathrm{EF}}\)
 additively; its Grothendieck completion kills those prime classes.  The
 Jacobian remains a support space, but the Phase 107 realization target
 must be a non-idempotent enhancement or a genuine metrized Picard group.
@@ -1080,7 +1080,7 @@ gcd/lcm lattice with partial multiplication, not a finite
 multiplicative monoid.  Products leaving the lattice pass to the next
 support level, consistently with `107_154`.
 
-Here \(L_T=\operatorname{lcm}(1,\ldots,\lfloor e^T\rfloor)\), so
+Here \(L_T=\mathrm{lcm}(1,\ldots,\lfloor e^T\rfloor)\), so
 \(\log L_T\sim e^T\) and enumerating its divisors is already impossible
 at \(T=5\).  The implementation therefore stores only the exponent
 vector \((K_p(T))_p\); this is now a required representation invariant.
@@ -1102,7 +1102,7 @@ theory to a proper relative-dimension-two model.
 
 The discrete coordinate is represented geometrically in `107_160`
 by the finite flat proper regular scheme
-\(\coprod_{n\mid L_T}\operatorname{Spec}\mathbb Z[\zeta_n]\).
+\(\coprod_{n\mid L_T}\mathrm{Spec}\,\mathbb Z[\zeta_n]\).
 Packet characters now have exact order \(n\), as required by the
 primitive cyclotomic chart.  Only the dynamical and archimedean factors
 remain to produce the required relative dimension two.
@@ -1185,7 +1185,7 @@ Riemann zeta.
 
 `107_172` strengthens this from two matching fibres to one arithmetic
 family over
-\(\operatorname{Spec}\mathcal O_{\mathbb Q(\sqrt{-11})}[1/11]\):
+\(\mathrm{Spec}\,\mathcal O_{\mathbb Q(\sqrt{-11})}[1/11]\):
 the graph--diagonal intersection is the finite flat kernel
 \(\ker(\alpha^n-1)\), of constant rank \(N_n\).  The fixed
 characteristic-5 and complex intersections are its special and generic
@@ -1196,8 +1196,8 @@ quartic extension \(L=\mathbb Q(\alpha,w)\),
 \(w^2=2\alpha+3\).  The integral equation
 \(y^2+w y=x^3+\alpha x^2-(\alpha+1)x\) has discriminant 1.  Its square
 is therefore a proper smooth relative surface over all of
-\(\operatorname{Spec}\mathcal O_L\), carrying the complete Paper-0
-package.  The base is not \(\operatorname{Spec}\mathbb Z\), and the
+\(\mathrm{Spec}\,\mathcal O_L\), carrying the complete Paper-0
+package.  The base is not \(\mathrm{Spec}\,\mathbb Z\), and the
 construction realizes the fixed CM elliptic zeta function rather than
 Riemann zeta.
 
@@ -1308,11 +1308,11 @@ yet a determinant-line sheaf on the arithmetic space.
 system on Connes--Consani's semilocal index category.  Inclusion of
 finite place sets tensors by the missing local Euler factors; all triple
 transitions satisfy the cocycle, and the cofinal section converges to
-\(\xi\).  Sheaf descent on \(\operatorname{Spec}\mathbb Z\), and then
+\(\xi\).  Sheaf descent on \(\mathrm{Spec}\,\mathbb Z\), and then
 descent to its absolute square, are not yet asserted.
 
 `107_189` proves the curve-level sheaf descent.  On each semilocal open
-of \(\operatorname{Spec}\mathbb Z\), restriction multiplies by the
+of \(\mathrm{Spec}\,\mathbb Z\), restriction multiplies by the
 missing Euler factors; division by the accumulated product trivializes
 all restrictions and proves the Cech equalizers.  The resulting
 rank-one spectral sheaf has completed generic section \(\xi\) for
@@ -1578,7 +1578,7 @@ or work componentwise on the cyclotomic normalization.
 
 107_219 implements the componentwise repair.  For labels of orders
 \(n,m\), their two-root Koszul complex lives over
-\(\mathbb Z[\zeta_{\operatorname{lcm}(n,m)}]\); open-and-closed inclusion
+\(\mathbb Z[\zeta_{\mathrm{lcm}(n,m)}]\); open-and-closed inclusion
 of normalized components leaves the complex and its cohomology literally
 unchanged at every later level.  This constructs finite-support twisted
 \(H^1\) descent, including mixed acyclic components and genuine torsion.

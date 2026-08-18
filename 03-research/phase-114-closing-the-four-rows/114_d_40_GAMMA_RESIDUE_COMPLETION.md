@@ -6,7 +6,7 @@ D.39 shows that the canonical scaling multiplier `A=mathcal FJ` fails as
 an endomorphism because its Mellin multiplier has the Gamma divisor
 
 \[
- \operatorname{div}(\gamma)
+ \mathrm{div}(\gamma)
  =\sum_{n\ge0}[1+2n]-\sum_{n\ge0}[-2n].              \tag{1.1}
 \]
 
@@ -40,13 +40,13 @@ the exact sequences
 
 \[
  0\longrightarrow E\longrightarrow E(D_-^{(N)})
- \xrightarrow{\operatorname{res}}
+ \xrightarrow{\mathrm{res}}
  \mathbb C^{N+1}\longrightarrow0,                  \tag{2.2}
 \]
 
 \[
  0\longrightarrow E(-D_+^{(N)})\longrightarrow E
- \xrightarrow{\operatorname{ev}}
+ \xrightarrow{\mathrm{ev}}
  \mathbb C^{N+1}\longrightarrow0.                  \tag{2.3}
 \]
 
@@ -72,8 +72,8 @@ It preserves every finite-level space and the pro-systems.  On the
 residue/value coordinates it acts by the explicit characters
 
 \[
- \operatorname{res}_{-2n}:\ t^{-2n},\qquad
- \operatorname{ev}_{1+2n}:\ t^{1+2n}.               \tag{2.5}
+ \mathrm{res}_{-2n}:\ t^{-2n},\qquad
+ \mathrm{ev}_{1+2n}:\ t^{1+2n}.               \tag{2.5}
 \]
 
 Thus the completion is scaling equivariant and is defined entirely by the

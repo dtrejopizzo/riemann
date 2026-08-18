@@ -122,7 +122,7 @@ The coefficient identity in (7) is the normalized multiplicative bar
 resolution. For \(N>1\), let
 
 \[
- \operatorname {Fact}_k(N)
+ \mathrm{Fact}_k(N)
  =\{(n_1,\ldots,n_k):n_i>1,\ n_1\cdots n_k=N\}.    \tag{8}
 \]
 
@@ -131,7 +131,7 @@ The coefficient of \(T_{N,\varepsilon}\) in (7) is
 \[
  \boxed{
  \mu(N)=\sum_{k\geq1}(-1)^k
-             \#\operatorname {Fact}_k(N).}         \tag{9}
+             \#\mathrm{Fact}_k(N).}         \tag{9}
 \]
 
 This is locally finite and follows simply by reading the coefficient of
@@ -160,7 +160,7 @@ into \(k\) factors is exactly an ordered partition of the \(r\) primes into
 \(k\) nonempty blocks. Hence
 
 \[
- \#\operatorname {Fact}_k(N)=k!S(r,k),             \tag{12}
+ \#\mathrm{Fact}_k(N)=k!S(r,k),             \tag{12}
 \]
 
 where \(S(r,k)\) is a Stirling number of the second kind. Equation (9)
@@ -171,13 +171,13 @@ becomes the familiar exact cancellation
 \]
 
 Let \(\mathcal B_N\) be the Hilbert space with orthonormal basis indexed by
-all chains in \(\bigcup_k\operatorname {Fact}_k(N)\), and define the signed
+all chains in \(\bigcup_k\mathrm{Fact}_k(N)\), and define the signed
 bar collapse
 
 \[
  \mathfrak m_N(c)
  =\sum_{k=1}^r(-1)^k
-   \sum_{\mathbf n\in\operatorname {Fact}_k(N)}c_{\mathbf n}. \tag{14}
+   \sum_{\mathbf n\in\mathrm{Fact}_k(N)}c_{\mathbf n}. \tag{14}
 \]
 
 ### Theorem 1 — Exact factorial obstruction

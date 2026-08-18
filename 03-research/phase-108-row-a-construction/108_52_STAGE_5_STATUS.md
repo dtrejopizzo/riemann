@@ -50,7 +50,7 @@ comparison specifically. The candidates listed in the task (different
 test-function categories; disjoint domains) are both confirmed; the
 candidate about radicals being "described by different data" is **not
 examined**, because this note does not have access to
-$\operatorname{rad}I_{\mathrm{partial}}$'s generating description (108_50
+$\mathrm{rad}\,I_{\mathrm{partial}}$'s generating description (108_50
 §5 Scope) — that comparison is left explicitly open, not claimed either
 way.
 
@@ -96,10 +96,10 @@ be proved to move it, and §4 confirms the one architectural constraint
   difficulty, not a proof of failure for the real operator, whose
   definition this note did not read.
 * Condition III: not examined at all; requires access to
-  $\operatorname{rad}I_{\mathrm{partial}}$'s generating description, which
+  $\mathrm{rad}\,I_{\mathrm{partial}}$'s generating description, which
   lies in Stage 0's own paper(s), outside this note's read scope.
 * The candidate "radicals described by different data" (zeros of $\Phi$
-  versus whatever generates $\operatorname{rad}I_{\mathrm{partial}}$),
+  versus whatever generates $\mathrm{rad}\,I_{\mathrm{partial}}$),
   flagged in the task as worth checking, is **not checked** here, for the
   same reason.
 * Off-real-segment zeros of $\Phi$ remain unexamined (inherited from
@@ -116,7 +116,7 @@ This note is a synthesis of 108_50 and 108_51, written in this session; it
 introduces no new mathematical content beyond aggregating their verdicts
 into the closing table above. Its own Scope restrictions are exactly the
 union of 108_50 §5 and 108_51 §5: Stage 0's internal definitions
-($D_f$, $T(\cdot)$, $\operatorname{rad}I_{\mathrm{partial}}$) were not read
+($D_f$, $T(\cdot)$, $\mathrm{rad}\,I_{\mathrm{partial}}$) were not read
 and are not reconstructed; every claim above is traceable to a proved
 theorem, a numerically verified closed form, or an explicit statement of
 what is not known.

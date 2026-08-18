@@ -241,7 +241,7 @@ in (6), so \(\ker\widetilde A=\{0\}\).  If \(0\) belonged to
 \(\sigma(\widetilde A)\), then, being below the essential spectrum, it
 would be an isolated eigenvalue of finite multiplicity.  That contradicts
 the trivial kernel.  Since the spectrum is closed and nonnegative,
-\(\alpha_0=\operatorname {dist}(0,\sigma(\widetilde A))>0\).  \(\square\)
+\(\alpha_0=\mathrm{dist}(0,\sigma(\widetilde A))>0\).  \(\square\)
 
 The polar decomposition is consequently
 
@@ -250,7 +250,7 @@ The polar decomposition is consequently
 \]
 
 where \(U_A\) is an isometry from \(\mathcal N_K\) onto
-\(\overline{\operatorname {Ran}\widetilde{\mathcal G}}\).
+\(\overline{\mathrm{Ran}\,\widetilde{\mathcal G}}\).
 
 ## 5. Canonical signed factorization
 
@@ -302,7 +302,7 @@ first on the form core and then by closure.  The factor
 and \(\widetilde A^{-1/2}\) is bounded.  Hence \(H_B\) is compact.
 
 Any other factor \(H\) satisfying (24) agrees with \(H_B\) on
-\(\operatorname {Ran}\widetilde{\mathcal G}\), since that equation
+\(\mathrm{Ran}\,\widetilde{\mathcal G}\), since that equation
 fixes its value there.  Its norm is therefore at least the norm of the
 zero extension (23).  Finally,
 

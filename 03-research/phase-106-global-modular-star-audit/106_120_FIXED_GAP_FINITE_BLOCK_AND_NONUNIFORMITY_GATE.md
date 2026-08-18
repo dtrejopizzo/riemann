@@ -58,7 +58,7 @@ For \(0<\delta<1/2\), put
 
 \[
  P_\delta=\mathbf1_{(0,1/2-\delta]}(A),
- \qquad \mathcal H_\delta=\operatorname {Ran}P_\delta.
+ \qquad \mathcal H_\delta=\mathrm{Ran}\,P_\delta.
  \tag{3}
 \]
 
@@ -273,8 +273,8 @@ and its quartet contribution to the signed evaluation form is
 
 \[
  \boxed{
- 4m_s\{(\operatorname {Re}F(s))^2
-       -(\operatorname {Im}F(s))^2\}
+ 4m_s\{(\mathrm{Re}\,F(s))^2
+       -(\mathrm{Im}\,F(s))^2\}
  =-4m_sb^2F'(\gamma)^2+O(b^4).}
  \tag{20}
 \]

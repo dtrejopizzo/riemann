@@ -119,7 +119,7 @@ to vanish.
 Equation (2.3) has a bounded solution only if
 
 \[
- \operatorname {Ran}\beta\subseteq\operatorname {Ran}D.     \tag{3.1}
+ \mathrm{Ran}\,\beta\subseteq\mathrm{Ran}\,D.     \tag{3.1}
 \]
 
 At a fixed regularized window, its minimal solution is

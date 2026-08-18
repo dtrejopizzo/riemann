@@ -63,7 +63,7 @@ In particular,
 The base measure \(\Phi(|u|)du\) is even.  Its moment generating function
 is even and strictly log-convex, so at the positive tilt \(a-1/2>0\),
 \[
- \kappa_1(a)>0,\qquad\kappa_2(a)=\operatorname{Var}_{\mu_a}(U)>0.
+ \kappa_1(a)>0,\qquad\kappa_2(a)=\mathrm{Var}_{\mu_a}(U)>0.
 \]
 Consequently (6) proves \(\lambda_1(\varepsilon)>0\) and
 \(\lambda_2(\varepsilon)>0\) without any assertion about zeros.  This is
@@ -115,7 +115,7 @@ Writing \(x=\cos t\), its zeros satisfy
 More explicitly, with \(y=s-1/2\), equation (10) also gives
 \(\cosh y=x_-\).  Since \(x_-<-1\), it has the solutions
 \[
- y=\pm\operatorname{arcosh}(-x_-)+i(2k+1)\pi,\qquad k\in\mathbb Z,
+ y=\pm\mathrm{arcosh}(-x_-)+i(2k+1)\pi,\qquad k\in\mathbb Z,
 \]
 whose real parts are nonzero.  Hence the positive even measure \(\nu_q\),
 despite its functional symmetry, has a transform with zeros off the

@@ -33,7 +33,7 @@ acts as the identity.  Equivalently,
 **Theorem.**  For \(0\le k\le2r\),
 
 \[
- \operatorname{Ext}_{R_P}^k(\mathbb Z,\mathbb Z)
+ \mathrm{Ext}_{R_P}^k(\mathbb Z,\mathbb Z)
  \cong\bigwedge^k\mathbb Z^{2r},
  \tag{2.1}
 \]
@@ -48,7 +48,7 @@ and it vanishes only for \(k>2r\).
 
 is a regular sequence of length \(2r\) in the polynomial ring \(R_P\).
 Its Koszul complex is a free resolution of \(\mathbb Z\).  Applying
-\(\operatorname{Hom}_{R_P}(-,\mathbb Z)\) kills every differential,
+\(\mathrm{Hom}_{R_P}(-,\mathbb Z)\) kills every differential,
 because all \(x_p-1,y_p-1\) act as zero on \(\mathbb Z\).  The degree
 \(k\) term is therefore the \(k\)-th exterior power in (2.1). \(\square\)
 
@@ -90,7 +90,7 @@ For the actual visible prime sets at \(T=2,3,4,5\), the verifier computes
 all ranks
 
 \[
- \operatorname{rank}\operatorname{Ext}^k
+ \mathrm{rank}\,\mathrm{Ext}^k
  =\binom{2\pi(e^T)}k
 \]
 

@@ -31,8 +31,8 @@ contains a color-2 binary child.
 Under the diagonal fold `delta_2=delta_1`, associativity gives
 
 \[
- \operatorname{fold}(D_0)=x_1+x_2+x_3
- =\operatorname{fold}(D_1).                                         \tag{1.2}
+ \mathrm{fold}(D_0)=x_1+x_2+x_3
+ =\mathrm{fold}(D_1).                                         \tag{1.2}
 \]
 
 The distinction also survives the Haran quotient.  In the positive real

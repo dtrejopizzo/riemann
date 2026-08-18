@@ -71,7 +71,7 @@ The connection-corrected KYP supply of 106.133 is
 \[
  \mathfrak Q_{\rm KYP}(q)
  =\mathfrak Q_{\rm phys}(q)
- +2\operatorname {Re}\langle F,\mathcal CF\rangle_{\omega_K},
+ +2\mathrm{Re}\,\langle F,\mathcal CF\rangle_{\omega_K},
  \qquad F=hq.
  \tag{5b}
 \]
@@ -225,7 +225,7 @@ quadrature formula of 106.116, with its endpoint convention now explicit.
 Expanding the difference square in (1) and using evenness gives
 
 \[
- J_u(q)=B_-(u)+B_+(u)-2\operatorname {Re}C(u),
+ J_u(q)=B_-(u)+B_+(u)-2\mathrm{Re}\,C(u),
  \tag{15}
 \]
 
@@ -258,8 +258,8 @@ boundary normalization choice.
 For the correlation term, (12) gives
 
 \[
- -2\operatorname {Re}\int C\,d\mathcal D
- =2\operatorname {Re}\int_0^\infty
+ -2\mathrm{Re}\,\int C\,d\mathcal D
+ =2\mathrm{Re}\,\int_0^\infty
  k_D(u)\{C'(u)-\tfrac12C(u)\}\,du.
  \tag{18}
 \]
@@ -279,7 +279,7 @@ Consequently
  \boxed{
 \begin{aligned}
  \mathfrak P_{\rm in}(q)
- =-2\operatorname {Re}\int_{x>y}
+ =-2\mathrm{Re}\,\int_{x>y}
  D_1(e^{x-y})e^{(x-y)/2}\,
  \overline{K(x)q(x)}
  \{(Kq)'(y)+\tfrac12K(y)q(y)\}\,dy\,dx.
@@ -335,7 +335,7 @@ Equations (14), (23), and (24) give the exact path form
  +\theta\mathfrak b_{\Gamma,*}(q)
  =\int_0^\infty
  \{a_\theta\|Z_q\|^2
- -2E_1(e^u)\operatorname {Re}\langle Z_q,Z_q'\rangle\}\,du.
+ -2E_1(e^u)\mathrm{Re}\,\langle Z_q,Z_q'\rangle\}\,du.
 \end{aligned}}
  \tag{25}
 \]

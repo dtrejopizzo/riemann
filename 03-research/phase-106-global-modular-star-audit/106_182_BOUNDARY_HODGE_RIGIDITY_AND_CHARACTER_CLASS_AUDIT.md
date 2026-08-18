@@ -37,9 +37,9 @@ be the separated nonreduced CCM degree one of 106.157 and 106.181.  Regard
 \(H\) as a real vector space and write
 
 \[
- g(u,v)=\operatorname {Re}\mathfrak h_{\rm Ros}(u,v),
+ g(u,v)=\mathrm{Re}\,\mathfrak h_{\rm Ros}(u,v),
  \qquad
- \Omega(u,v)=-\operatorname {Im}\mathfrak h_{\rm Ros}(u,v).
+ \Omega(u,v)=-\mathrm{Im}\,\mathfrak h_{\rm Ros}(u,v).
 \tag{3}
 \]
 
@@ -97,7 +97,7 @@ and complex linearity in that argument give
 
 \[
  \Omega(J_0u,w)
- =-\operatorname {Im}\bigl(i\mathfrak h_{\rm Ros}(u,w)\bigr)
+ =-\mathrm{Im}\,\bigl(i\mathfrak h_{\rm Ros}(u,w)\bigr)
  =-g(u,w)=0
 \]
 
@@ -111,7 +111,7 @@ The triple \((\Omega,J_0,g)\) is a positive polarization if and only if
 
 \[
  \boxed{
- \operatorname {Re}\tau(f*f^\sharp)\geq0
+ \mathrm{Re}\,\tau(f*f^\sharp)\geq0
  \quad\text{for every }[f]\in H.}                           \tag{9}
 \]
 
@@ -242,7 +242,7 @@ trace.
 Theorem 3.1 does not exclude a different compatible complex structure
 \(J'\) for the same alternating form when the associated metric
 \(g'(u,v)=\Omega(u,J'v)\) is allowed to differ from
-\(\operatorname {Re}\mathfrak h_{\rm Ros}\).  That distinct unitarization
+\(\mathrm{Re}\,\mathfrak h_{\rm Ros}\).  That distinct unitarization
 branch is developed in 106.184.  Its load-bearing input is a faithful,
 scale-covariant positive Hilbert majorant on the nonreduced CCM degree one;
 it is not another choice inside the Rosati identity.

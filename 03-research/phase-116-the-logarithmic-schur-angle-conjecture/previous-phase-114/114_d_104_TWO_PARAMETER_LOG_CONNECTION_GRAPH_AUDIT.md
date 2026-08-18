@@ -200,14 +200,14 @@ Its exact normal connection is
 
 \[
  \partial_\sigma\log g_\infty(s)
- =-\log\pi+\operatorname{Re}\psi(s/2).                   \tag{5.2}
+ =-\log\pi+\mathrm{Re}\,\psi(s/2).                   \tag{5.2}
 \]
 
 With the orientation used for the completed contact, its negative is
 
 \[
  m_\infty(\tau)
- =\log\pi-\operatorname{Re}\psi(1/4+i\tau/2)
+ =\log\pi-\mathrm{Re}\,\psi(1/4+i\tau/2)
  =m_0-\ell_\infty(\tau).                                 \tag{5.3}
 \]
 

@@ -64,7 +64,7 @@ This audit proves a narrow but useful point:
 It does **not** prove:
 
 1. existence of a genuine regular proper arithmetic surface
-   \(\mathcal X_T/\operatorname{Spec}\mathbf Z\);
+   \(\mathcal X_T/\mathrm{Spec}\,\mathbf Z\);
 2. the full finite-support realization theorem of `107_10`;
 3. theorem-level Route A applicability or the terminal identity.
 

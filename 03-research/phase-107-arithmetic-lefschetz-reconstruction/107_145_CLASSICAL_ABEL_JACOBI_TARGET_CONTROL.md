@@ -6,8 +6,8 @@ This note adds one genuine geometric control for Work Package III-B of
 `107_00`.  It does not construct the Phase 107 realization map
 
 \[
- \mathcal A_T:\operatorname{Div}_{\mathrm{EF}}(T)\to
- \widehat{\operatorname{Pic}}^0(\mathcal X_T),
+ \mathcal A_T:\mathrm{Div}_{\mathrm{EF}}(T)\to
+ \widehat{\mathrm{Pic}}^0(\mathcal X_T),
 \]
 
 and it does not build the required arithmetic surface \(\mathcal X_T\).
@@ -88,7 +88,7 @@ For `37a1`, Sage returns rank \(1\) with generator \((0,-1)\).  For
 2. the height Gram determinant is positive in ranks \(1\) and \(2\).
 
 This gives an actual nondegeneracy check on the free quotient of
-\(\operatorname{Pic}^0\) for real elliptic curves over \(\mathbf Q\).
+\(\mathrm{Pic}^0\) for real elliptic curves over \(\mathbf Q\).
 
 ## 4. Paper 0 and genus-2 Jacobian controls
 
@@ -99,7 +99,7 @@ The fixed Paper 0 control
 \]
 has \(9\) rational points.  The verifier checks that explicit nonzero
 points have nontrivial orders \(3\) or \(9\) in the Jacobian
-\(E(\mathbf F_5)\cong\operatorname{Pic}^0(E)\).
+\(E(\mathbf F_5)\cong\mathrm{Pic}^0(E)\).
 
 For the genus-\(2\) curve
 \[

@@ -50,7 +50,7 @@ Para una contradicción se necesitaría: $e^{2b_j T} \gg e^T e^{-c\sqrt{T}}$, es
 
 ## El espectro de $X_0(t)$ y su función de estructura
 
-Para completar el cuadro, calculamos la función de estructura del componente en línea $X_0(t) = -2\operatorname{Re}\sum_{Z_{\rm CL}} x^\rho/\rho|_{x=e^t}$.
+Para completar el cuadro, calculamos la función de estructura del componente en línea $X_0(t) = -2\mathrm{Re}\,\sum_{Z_{\rm CL}} x^\rho/\rho|_{x=e^t}$.
 
 **Proposición 23-B.4** (Función de estructura de $X_0$). Bajo la hipótesis de que los ceros en línea satisfacen $\sum_\rho 1/|\rho|^2 < \infty$ (que se sigue de la distribución de ceros estándar):
 $$\lim_{T\to\infty} S_2^{X_0}(\tau, T) = 8\sum_{\rho \in Z_{\rm CL}} \frac{\sin^2(\gamma\tau/2)}{|\rho|^2} < \infty$$

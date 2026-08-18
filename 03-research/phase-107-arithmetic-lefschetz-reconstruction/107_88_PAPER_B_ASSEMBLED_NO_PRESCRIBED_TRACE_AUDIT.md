@@ -60,7 +60,7 @@ It does **not** prove:
 
 1. the full suspended-flow geometry of `107_08`;
 2. the actual one-step geometric fixed-point theorem of `107_09`;
-3. any target-side realization over \(\operatorname{Spec}\mathbf Z\).
+3. any target-side realization over \(\mathrm{Spec}\,\mathbf Z\).
 
 So the correct reading is:
 

@@ -84,13 +84,13 @@ Write the polar decompositions
 \]
 
 By (2), \(U_A\) is an isometry from \(\mathscr C\) onto
-\(\overline{\operatorname {ran}\mathcal G}\); by (6), \(U_D\) is an
+\(\overline{\mathrm{ran}\,\mathcal G}\); by (6), \(U_D\) is an
 isometry from \(\mathscr C\) onto
-\(\overline{\operatorname {ran}D_\mu}\).
+\(\overline{\mathrm{ran}\,D_\mu}\).
 
 ## 3. Exact formula for the canonical signed transfer
 
-On \(\operatorname {ran}\mathcal G\), the coefficient equation fixes a
+On \(\mathrm{ran}\,\mathcal G\), the coefficient equation fixes a
 linear map by
 
 \[
@@ -111,7 +111,7 @@ The operator in (8) is the closed densely defined operator
  \tag{9}
 \]
 
-on \(\overline{\operatorname {ran}\mathcal G}\), with its natural
+on \(\overline{\mathrm{ran}\,\mathcal G}\), with its natural
 domain.  If
 
 \[
@@ -317,7 +317,7 @@ For the faithful heat state of 106.103,
 the literal source identity is
 
 \[
- \operatorname {Tr}\{(A-\tfrac12I)\Gamma_t\}
+ \mathrm{Tr}\,\{(A-\tfrac12I)\Gamma_t\}
  =\int_0^\infty\mathcal J_u[\Gamma_t],d\sigma(u).
  \tag{23}
 \]
@@ -325,8 +325,8 @@ the literal source identity is
 If \(\alpha<1/2\), heat concentration and injectivity of \(V\) give
 
 \[
- \frac{\operatorname {Tr}\{(A-\tfrac12I)\Gamma_t\}}
-      {\operatorname {Tr}\Gamma_t}
+ \frac{\mathrm{Tr}\,\{(A-\tfrac12I)\Gamma_t\}}
+      {\mathrm{Tr}\,\Gamma_t}
  \longrightarrow\alpha-\frac12<0.
  \tag{24}
 \]
@@ -334,10 +334,10 @@ If \(\alpha<1/2\), heat concentration and injectivity of \(V\) give
 Suppose a current decomposition of the numerator has the form
 
 \[
- \operatorname {Tr}\{(A-\tfrac12I)\Gamma_t\}
+ \mathrm{Tr}\,\{(A-\tfrac12I)\Gamma_t\}
  =\|B\Gamma_t^{1/2}\|_{\mathfrak S_2}^2
-  +\operatorname {Tr}\{i[A,X]\Gamma_t\}
-  +\operatorname {Tr}(R\Gamma_t),
+  +\mathrm{Tr}\,\{i[A,X]\Gamma_t\}
+  +\mathrm{Tr}(R\Gamma_t),
  \tag{25}
 \]
 
@@ -367,7 +367,7 @@ In the literal source coordinate this is the cofinal estimate of 106.102,
 
 \[
  \int_0^\infty\mathcal J_u[\Gamma_{t_k}]\,d\sigma(u)
- \ge-o(\operatorname {Tr}\Gamma_{t_k}),
+ \ge-o(\mathrm{Tr}\,\Gamma_{t_k}),
  \tag{27}
 \]
 

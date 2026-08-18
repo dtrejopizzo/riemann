@@ -92,9 +92,9 @@ independent of $A$; prove richness as density of this fixed core, then extend by
 Connes' Step 1 of §6.)
 
 ### D. D4 $\det_2$ anomaly imprecise *(accepted, fix applied)*
-$\det_2((I+A)(I+B))=\det_2(I+A)\det_2(I+B)e^{-\operatorname{Tr}(AB)}$; the block-Feshbach anomaly is
-**not** simply $\operatorname{Tr}(\beta\alpha^{-1}\beta^*)$ unless checked in the relevant Schatten class.
-\textbf{Fix:} D4 anomaly stated as the genuine $e^{-\operatorname{Tr}(AB)}$ correction with the Feshbach
+$\det_2((I+A)(I+B))=\det_2(I+A)\det_2(I+B)e^{-\mathrm{Tr}(AB)}$; the block-Feshbach anomaly is
+**not** simply $\mathrm{Tr}(\beta\alpha^{-1}\beta^*)$ unless checked in the relevant Schatten class.
+\textbf{Fix:} D4 anomaly stated as the genuine $e^{-\mathrm{Tr}(AB)}$ correction with the Feshbach
 blocks in $\mathfrak S_2$, to be verified there; flagged, not hand-waved.
 
 ### E. D8.3 false lower bound *(accepted, fix applied)*
@@ -106,7 +106,7 @@ kernel — so the topology must carry them.)
 ### F. D9 false inference *(accepted — important — fix applied)*
 $D_\infty^\circ=\Xi$ does **not** imply the *source* derivative of the limit germ is $\Xi'/\Xi$:
 **derivative in $V$ is not derivative in $z$.** My D9 proof used exactly this false step. \textbf{Fix:}
-the endpoint identification $\operatorname{Pol}(d_V^2\log\mathcal D_\Xi^{\mathrm{src}}(0))=\mathsf
+the endpoint identification $\mathrm{Pol}(d_V^2\log\mathcal D_\Xi^{\mathrm{src}}(0))=\mathsf
 K_\Xi^{\mathrm{G5}}$ must come from **D8.5b itself**, not from the scalar G3 slice. This is precisely why
 D8.5b carries the RH-strength: D9 is *not* free.
 

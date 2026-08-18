@@ -38,7 +38,7 @@ ground state for the radically shorted operator.  There is an exact answer.
       QW(Kq,Kq)
       =\mathscr D_y(q/v_y)
        -{\cosh^2(y/2)\over2}
-        \operatorname {Var}_{\nu_y}(q/v_y).
+        \mathrm{Var}_{\nu_y}(q/v_y).
       \tag{4}
     \]
 
@@ -89,7 +89,7 @@ The full-kernel identity and its polarization are
 \[
  QW(Kf,Kg)
  =\mathscr E_K(f,g)
-  -{1\over2}\operatorname {Cov}_{\mu_K}(f,g).
+  -{1\over2}\mathrm{Cov}_{\mu_K}(f,g).
  \tag{7}
 \]
 
@@ -189,7 +189,7 @@ For every compact core multiplier (q), with (a=q/v_y),
  \boxed{
  QW(Kq,Kq)
  =\mathscr D_y(a)
-  -{h(y)^2\over2}\operatorname {Var}_{\nu_y}(a).}
+  -{h(y)^2\over2}\mathrm{Var}_{\nu_y}(a).}
  \tag{15}
 \]
 
@@ -257,7 +257,7 @@ If (0\ne q\in\mathscr C) belongs to the common core, then for every
 
 \[
  \boxed{
- \operatorname {Var}_{\nu_y}(q/v_y)>0.}
+ \mathrm{Var}_{\nu_y}(q/v_y)>0.}
  \tag{21}
 \]
 
@@ -283,7 +283,7 @@ which the following integrals are finite.  Averaging (15) gives
  QW(Kq,Kq)
  =\int\mathscr D_y(q/v_y)\,d\alpha(y)
  -{1\over2}\int h(y)^2
-  \operatorname {Var}_{\nu_y}(q/v_y)\,d\alpha(y).}
+  \mathrm{Var}_{\nu_y}(q/v_y)\,d\alpha(y).}
  \tag{23}
 \]
 

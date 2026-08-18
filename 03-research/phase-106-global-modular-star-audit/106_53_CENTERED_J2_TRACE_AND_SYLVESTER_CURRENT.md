@@ -6,7 +6,7 @@ The projected Riccati formula 106.52 leaves two objects which must not be
 estimated independently:
 
 \[
- 2\operatorname {Tr}\widetilde P(B+B^*),\qquad
+ 2\mathrm{Tr}\,\widetilde P(B+B^*),\qquad
  4\|[X,P_\mu]P_\mu\|_{\rm HS}^2.                    \tag{1}
 \]
 
@@ -58,9 +58,9 @@ For every finite-rank orthogonal projection \(P\) in \(L^2(dx)\), with orthonorm
 \[
 \boxed{
 \begin{aligned}
- 2\operatorname {Tr}\{P(B_N+B_N^*)\}
+ 2\mathrm{Tr}\,\{P(B_N+B_N^*)\}
  ={}&4m\kappa_N^{(2)}
-      -4\operatorname {Tr}(PG_N^{(2)})\\
+      -4\mathrm{Tr}(PG_N^{(2)})\\
  ={}&4m\kappa_N^{(2)}
  -2\sum_{n\le N}b_n\sum_{k=1}^m
    \|q_k-S_{\log n}q_k\|_2^2.
@@ -73,7 +73,7 @@ Equation (4) gives the first line. For a unitary shift,
 
 \[
  \|q-S_aq\|_2^2
- =2\|q\|_2^2-2\operatorname {Re}\langle q,S_aq\rangle.
+ =2\|q\|_2^2-2\mathrm{Re}\,\langle q,S_aq\rangle.
                                                                \tag{6}
 \]
 
@@ -168,7 +168,7 @@ Since \(P_\mu\) reduces \(L\),
 \(\square\)
 
 If \(q_k\) is an orthonormal eigenbasis of
-\(\operatorname {Ran}P_\mu\), with
+\(\mathrm{Ran}\,P_\mu\), with
 \(Lq_k=\lambda_kq_k\), the spectral theorem gives the exact formula
 
 \[
@@ -182,7 +182,7 @@ If \(q_k\) is an orthonormal eigenbasis of
 In particular, if
 
 \[
- d(P_\mu)=\operatorname {dist}
+ d(P_\mu)=\mathrm{dist}
  \{\sigma(L_P),\sigma(L_Q)\}>0,                      \tag{13}
 \]
 
@@ -205,10 +205,10 @@ at finite Euler cutoff,
 \[
 \boxed{
 \begin{aligned}
- \operatorname {Tr}(\widetilde PH_N^2)
+ \mathrm{Tr}(\widetilde PH_N^2)
 ={}&\|C_N\widetilde P+2[X,\widetilde P]\widetilde P\|_{\rm HS}^2
  +4m\kappa_N^{(2)}\\
-&-4\operatorname {Tr}(\widetilde PG_N^{(2)})
+&-4\mathrm{Tr}(\widetilde PG_N^{(2)})
  -4\|[X,P_\mu]P_\mu\|_{\rm HS}^2.
 \end{aligned}}                                       \tag{15}
 \]
@@ -224,7 +224,7 @@ force-bearing estimate has the shape
  &\bigl[\text{joint current square}
        +\text{Gamma--polar scalar completion}\bigr](P)\\
  &\qquad\ge
- 4\operatorname {Tr}(\widetilde PG^{(2)})
+ 4\mathrm{Tr}(\widetilde PG^{(2)})
  +4\|[X,P_\mu]P_\mu\|_{\rm HS}^2,                   \tag{16}
 \end{aligned}}
 \]

@@ -193,9 +193,9 @@ which proves (0.3).  The critical Tate evaluations are the two poles
 \(z=r^{-1}\) and \(z=r\).  Their residues are
 
 \[
- \operatorname {Res}_{z=r^{-1}}P_r(z)=-r^{-1},
+ \mathrm{Res}_{z=r^{-1}}P_r(z)=-r^{-1},
  \qquad
- \operatorname {Res}_{z=r}P_r(z)=r.                       \tag{4.3}
+ \mathrm{Res}_{z=r}P_r(z)=r.                       \tag{4.3}
 \]
 
 Thus the natural residue/feedthrough form on the two chart variables is,
@@ -210,7 +210,7 @@ It has one positive and one negative direction in every periodic fiber.
 After tensoring with \(L^2(C_p)\),
 
 \[
- \operatorname {inertia}(J_{p,\partial})=(\infty,\infty). \tag{4.5}
+ \mathrm{inertia}(J_{p,\partial})=(\infty,\infty). \tag{4.5}
 \]
 
 Imposing (2.2) removes at most one dimension from each chart.  The

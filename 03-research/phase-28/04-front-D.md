@@ -8,7 +8,7 @@
 ## 1. El punto de partida: $b$ como la única variable que importa
 
 Todo el programa desde Phase 21 converge en un único parámetro:
-$$b_j := \operatorname{Re}(\rho_j) - \frac{1}{2},$$
+$$b_j := \mathrm{Re}(\rho_j) - \frac{1}{2},$$
 la distancia transversal del cero $\rho_j$ a la recta crítica. Las tres descripciones
 del obstáculo son:
 
@@ -40,7 +40,7 @@ el potencial que reproduce la densidad correcta en la dirección $\gamma$ (altur
 recta crítica).
 
 **Definición D.3** (energía transversal, nueva). El ingrediente novedoso:
-$$\Phi(Z) := \sum_n b_n^2 = \sum_n \left(\operatorname{Re}(z_n) - 0\right)^2,$$
+$$\Phi(Z) := \sum_n b_n^2 = \sum_n \left(\mathrm{Re}(z_n) - 0\right)^2,$$
 la energía de confinamiento en la dirección *transversal* a la recta crítica.
 
 **Definición D.4** (energía aritmética total):
@@ -63,14 +63,14 @@ formulación como problema de minimización es nueva.
 **Proposición D.6** (propiedades básicas de $\Phi$).
 1. $\Phi(Z) \ge 0$ para toda configuración.
 2. $\Phi(Z) = 0 \iff b_n = 0$ para todo $n \iff$ todos los ceros están en la recta crítica.
-3. $\Phi(Z) = -\operatorname{tr}(Q|_{\text{neg}}) / C$ para alguna normalización $C > 0$,
-   donde $\operatorname{tr}(Q|_{\text{neg}})$ es la traza del operador de Weil restringido
+3. $\Phi(Z) = -\mathrm{tr}(Q|_{\text{neg}}) / C$ para alguna normalización $C > 0$,
+   donde $\mathrm{tr}(Q|_{\text{neg}})$ es la traza del operador de Weil restringido
    a su subespacio negativo.
 
 *Prueba de (3):* Los valores propios negativos de $T_0$ (operador de Weil) son, bajo
 Hipótesis D, proporcionales a $-b_j^2$ (el valor propio $j$-ésimo mide la "profundidad"
 de la dirección negativa, que escala como $b_j^2$). La traza sobre el subespacio negativo
-es $\sum_j (-b_j^2) \cdot C^{-1}$, luego $\Phi = -\operatorname{tr}(Q|_{\text{neg}})/C$. $\square$
+es $\sum_j (-b_j^2) \cdot C^{-1}$, luego $\Phi = -\mathrm{tr}(Q|_{\text{neg}})/C$. $\square$
 
 *Consecuencia de (3):* $\Phi$ es un invariante del operador de Weil, no una cantidad
 artificial. Se desprende naturalmente de la forma de Weil.
@@ -126,7 +126,7 @@ El Frente D busca el análogo de la positividad para $\mathbb{Z}$:
 
 | Objeto | Curvas sobre $\mathbb{F}_q$ | $\zeta$ sobre $\mathbb{Z}$ |
 |---|---|---|
-| Eigenvalores de Frobenius | $\alpha_i$ con $|\alpha_i| = q^{1/2}$ | Ceros $\rho_j$ con $\operatorname{Re}(\rho_j) = 1/2$ |
+| Eigenvalores de Frobenius | $\alpha_i$ con $|\alpha_i| = q^{1/2}$ | Ceros $\rho_j$ con $\mathrm{Re}(\rho_j) = 1/2$ |
 | Forma canónica | Intersección $\langle D, D \rangle$ | Forma de Weil $Q$ |
 | Positividad probada | Sí (Weil 1948) | No (abierto) |
 | Energía transversal | $\sum_i |\alpha_i - q^{1/2}|^2 = 0$ iff Weil | $\Phi = \sum_j b_j^2 = 0$ iff RH |
@@ -139,7 +139,7 @@ El Frente D busca el análogo de la positividad para $\mathbb{Z}$:
 **Definición D.8** (energía transversal derivada de la forma de Weil). Para la forma
 de Weil $Q$ con operador $T_0 = T_0^+  + T_0^-$ (descomposición en parte positiva y
 negativa), define:
-$$\Phi_{\text{Weil}}(Q) := \|T_0^-\|_{\text{tr}} = \operatorname{tr}(-T_0^-)
+$$\Phi_{\text{Weil}}(Q) := \|T_0^-\|_{\text{tr}} = \mathrm{tr}(-T_0^-)
   = \sum_j |\lambda_j^-|,$$
 donde la suma es sobre los valores propios negativos de $T_0$.
 
@@ -177,7 +177,7 @@ con $b \ne 0$:
   que DIVERGE cuando $b \to 0$ (por el término $-\log|2b|$).
 
 **Observación D.11** (nueva). El potencial $V(b) = -\log|2b|$ tiene una singularidad
-logarítmica en $b = 0$: los dos ceros de la órbita con $\operatorname{Re} = 1/2 \pm b$
+logarítmica en $b = 0$: los dos ceros de la órbita con $\mathrm{Re} = 1/2 \pm b$
 se *repelen logarítmicamente* entre sí. Cuanto más pequeño es $b$, más fuerte es la
 repulsión.
 
@@ -213,7 +213,7 @@ es siempre un punto estacionario de $E_{\text{arith}}$ en la dirección transver
 
 *Prueba:* Por simetría. Si $b_j = 0$ para todo $j$, la configuración es simétrica bajo
 $z_n \mapsto -\bar z_n$ (reflexión en la recta crítica, que en la coordenada $z$ es la
-recta $\operatorname{Re} z = 0$). La energía $E_{\text{arith}}$ es simétrica bajo esta
+recta $\mathrm{Re} z = 0$). La energía $E_{\text{arith}}$ es simétrica bajo esta
 reflexión. Por tanto, el gradiente en la dirección transversal $b_j$ es cero en $b_j = 0$.
 $\square$
 
@@ -253,7 +253,7 @@ El análogo para $\zeta$ sería:
 > de Euler.
 
 Esto es exactamente la afirmación RH expresada como un enunciado sobre el *índice de
-Hodge* del "espacio de correspondencias aritméticas" de $\operatorname{Spec}\mathbb{Z}$.
+Hodge* del "espacio de correspondencias aritméticas" de $\mathrm{Spec}\,\mathbb{Z}$.
 
 Formulado de esta manera, **el Frente D es isomorfo al Frente B en lenguaje variacional:**
 

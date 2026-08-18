@@ -56,9 +56,9 @@ In the canonical low-temperature representation,
 For \(\beta>1\), the Gibbs partition function and state are
 
 \[
- Z(\beta)=\operatorname{Tr}(e^{-\beta H})=\zeta(\beta),
+ Z(\beta)=\mathrm{Tr}(e^{-\beta H})=\zeta(\beta),
  \qquad
- \varphi_\beta(x)={\operatorname{Tr}(e^{-\beta H}x)\over\zeta(\beta)}.
+ \varphi_\beta(x)={\mathrm{Tr}(e^{-\beta H}x)\over\zeta(\beta)}.
                                                                   \tag{1.3}
 \]
 
@@ -153,7 +153,7 @@ is not a KMS probability expectation.
 Thermodynamic convexity gives
 
 \[
- \operatorname{Var}_\beta(H)
+ \mathrm{Var}_\beta(H)
  =\partial_\beta^2\log Z(\beta)
  =\sum_{n\geq2}\Lambda(n)(\log n)n^{-\beta}>0.         \tag{4.1}
 \]
@@ -161,7 +161,7 @@ Thermodynamic convexity gives
 Locally,
 
 \[
- \operatorname{Var}_{\beta,p}(H_p)
+ \mathrm{Var}_{\beta,p}(H_p)
  ={(\log p)^2p^{-\beta}\over(1-p^{-\beta})^2}
  =\sum_{k\geq1}k(\log p)^2p^{-k\beta}.                 \tag{4.2}
 \]
@@ -213,7 +213,7 @@ the quarter-shift oscillator
 The ordinary thermal partition of this oscillator is
 
 \[
- \operatorname{Tr}(e^{-xA_\infty})
+ \mathrm{Tr}(e^{-xA_\infty})
  ={e^{-x/4}\over1-e^{-x}},                             \tag{5.3}
 \]
 

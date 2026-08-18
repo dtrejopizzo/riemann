@@ -35,7 +35,7 @@ exactly where spectral programs die. **What we can say now:**
 - **CLOS.2 (corrected):** under RH, $\mathfrak t|_{\mathcal D}=\mathfrak t_+|_{\mathcal D}$ closable; a
   bounded-below (by $0$) self-adjoint realization **from the core** exists in $H(E_\gamma)$. ✅ *This much
   needs no form-core claim* — closability of the restriction is automatic.
-- **Downgraded:** identifying $\operatorname{spec}(\overline{T_+})$ with the zeros / the maximal operator
+- **Downgraded:** identifying $\mathrm{spec}(\overline{T_+})$ with the zeros / the maximal operator
   (needs A.2).
 
 > **Net of Part A.** The *existence* of a legitimate closed Weil form and bounded-below operator from the

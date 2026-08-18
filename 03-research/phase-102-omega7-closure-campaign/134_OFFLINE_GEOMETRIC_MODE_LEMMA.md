@@ -18,7 +18,7 @@ Let
 Then there exist a number \(\delta>0\) and infinitely many integers \(n\ge1\)
 such that
 \[
-  \operatorname{Re}(w^n)\ge \delta r^n.
+  \mathrm{Re}(w^n)\ge \delta r^n.
 \tag{1}
 \]
 
@@ -61,7 +61,7 @@ If a functional-equation quartet contains a member with
 then the paired zero-side contribution to \(\lambda_n\) contains a term of
 the shape
 \[
-  -2\operatorname{Re}(w_\rho^n)
+  -2\mathrm{Re}(w_\rho^n)
 \tag{2}
 \]
 plus terms whose exponential rate is no larger than the reciprocal partner
@@ -69,7 +69,7 @@ or the unit-circle partners, depending on the normalization of the quartet.
 
 By the lemma, there is an infinite subsequence for which
 \[
-  -2\operatorname{Re}(w_\rho^n)
+  -2\mathrm{Re}(w_\rho^n)
   \le
   -2\delta |w_\rho|^n.
 \tag{3}

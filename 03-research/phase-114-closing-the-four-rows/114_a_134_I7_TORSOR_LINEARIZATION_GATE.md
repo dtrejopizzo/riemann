@@ -53,7 +53,7 @@ convolution law
 \[
  K_m star K_n \simeq K_{mn},
  \qquad
- \log\#\Gamma\,\operatorname{Cont}(K_n)=\Lambda(n).                 \tag{2.1}
+ \log\#\Gamma\,\mathrm{Cont}(K_n)=\Lambda(n).                 \tag{2.1}
 \]
 
 The first equality also requires the relevant pushforward and convolution

@@ -99,7 +99,7 @@ Its real singular size is controlled by the Poisson-type denominator
 \]
 near \(\theta=0\).  More precisely, the real part has kernel
 \[
-  \operatorname{Re}{1\over1-re^{i\theta}}
+  \mathrm{Re}{1\over1-re^{i\theta}}
   =
   {1-r\cos\theta\over |1-re^{i\theta}|^2}
   \asymp

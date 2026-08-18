@@ -32,7 +32,7 @@ point are scalar multiples of the same rank-one matrix \(v_rv_r^T\).
 For symmetric \(2\times2\) matrices define the mixed determinant by
 
 \[
- \operatorname{MD}(A,B)
+ \mathrm{MD}(A,B)
  =\frac12\bigl(\det(A+B)-\det A-\det B\bigr).
  \tag{2.1}
 \]
@@ -44,7 +44,7 @@ For every pair of correspondence potentials \(U_f,U_g\) constructed in
 
 \[
  \boxed{
- \operatorname{MD}(\nabla^2U_f,\nabla^2U_g)=0
+ \mathrm{MD}(\nabla^2U_f,\nabla^2U_g)=0
  }
  \tag{2.2}
 \]

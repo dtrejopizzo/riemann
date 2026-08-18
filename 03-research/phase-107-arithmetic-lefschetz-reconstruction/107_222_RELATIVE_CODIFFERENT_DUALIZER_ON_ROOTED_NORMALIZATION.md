@@ -12,16 +12,16 @@ Connes--Consani's canonical divisor on the arithmetic base is
 For a normalized rooted component
 
 \[
- \pi_n:\operatorname{Spec}O_n
- =\operatorname{Spec}\mathbb Z[\zeta_n]
- \longrightarrow\operatorname{Spec}\mathbb Z,
+ \pi_n:\mathrm{Spec}\,O_n
+ =\mathrm{Spec}\,\mathbb Z[\zeta_n]
+ \longrightarrow\mathrm{Spec}\,\mathbb Z,
 \]
 
 the trace-dualizing module is
 
 \[
  \omega_{n/\mathbb Z}
- =\operatorname{Hom}_{\mathbb Z}(O_n,\mathbb Z)
+ =\mathrm{Hom}_{\mathbb Z}(O_n,\mathbb Z)
  =\mathfrak D_n^{-1}.
  \tag{1.2}
 \]
@@ -43,13 +43,13 @@ The pullback of (1.1) is supported only above 2.  For \(n=5\), the
 different has norm
 
 \[
- |\operatorname{disc}\mathbb Q(\zeta_5)|=5^3,
+ |\mathrm{disc}\,\mathbb Q(\zeta_5)|=5^3,
 \]
 
 and is supported above 5.  For \(n=9\), its norm is
 
 \[
- |\operatorname{disc}\mathbb Q(\zeta_9)|=3^9,
+ |\mathrm{disc}\,\mathbb Q(\zeta_9)|=3^9,
 \]
 
 and is supported above 3.  These nonzero odd-prime divisors cannot be
@@ -65,7 +65,7 @@ At level \(L\), define
  \omega^{\mathrm{rel}}_L
  =\coprod_{n\mid L}\mathfrak D_n^{-1}
  \quad\text{on}\quad
- \mathcal R_L=\coprod_{n\mid L}\operatorname{Spec}O_n.
+ \mathcal R_L=\coprod_{n\mid L}\mathrm{Spec}\,O_n.
  \tag{3.1}
 \]
 

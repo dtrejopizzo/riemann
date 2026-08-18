@@ -22,7 +22,7 @@ In the Fourier normalization of D.137 and D.240 put
 
 \[
  R_\Gamma(\tau)
- =\operatorname {Re}\psi(5/4+i\tau/2)-\psi(5/4),
+ =\mathrm{Re}\,\psi(5/4+i\tau/2)-\psi(5/4),
  \qquad D_a(\tau)={2a\over \tau^2+a^2}.
 \]
 
@@ -118,7 +118,7 @@ On the other hand the classical digamma asymptotic, uniformly in every
 closed angular sector avoiding the negative real axis, gives
 
 \[
- \operatorname {Re}\psi(1/4+i\tau/2)
+ \mathrm{Re}\,\psi(1/4+i\tau/2)
  =\log(|\tau|/2)+O(\tau^{-2}).                       \tag{3.2}
 \]
 

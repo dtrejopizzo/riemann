@@ -21,9 +21,9 @@ Esta crítica es **matemáticamente legítima** y merece respuesta rigurosa ante
 
 Recordamos la cadena de igualdades de Doc 42. Sea $\rho_n = 1/2 + i\gamma_n$ un cero en la línea crítica (con $\gamma_n > 0$). Por la expansión de Hadamard y la definición del potencial espectral $C_\infty$ (ver Doc 42, §3):
 
-$$C_\infty(\gamma_n) = -2\operatorname{Re}\left[\sum_{\substack{\rho \in \mathcal{Z} \\ \rho \neq \rho_n}} \frac{1}{\rho_n - \rho}\right]$$
+$$C_\infty(\gamma_n) = -2\mathrm{Re}\,\left[\sum_{\substack{\rho \in \mathcal{Z} \\ \rho \neq \rho_n}} \frac{1}{\rho_n - \rho}\right]$$
 
-donde la suma está ordenada por $|\operatorname{Im}(\rho)|$ (convergencia condicional de Hadamard). Los ceros de $\zeta$ se clasifican en dos categorías:
+donde la suma está ordenada por $|\mathrm{Im}(\rho)|$ (convergencia condicional de Hadamard). Los ceros de $\zeta$ se clasifican en dos categorías:
 
 **Tipo I (ceros en la línea crítica):** $\rho = 1/2 + i\gamma_m$, $m \neq n$. Entonces:
 $$\frac{1}{\rho_n - \rho} = \frac{1}{i(\gamma_n - \gamma_m)} \in i\mathbb{R}$$
@@ -32,11 +32,11 @@ su parte real es exactamente cero.
 
 **Tipo II (ceros off-críticos):** $\rho_0 = \sigma_0 + i\gamma_0$ con $\sigma_0 \neq 1/2$. La ecuación funcional garantiza que $\bar\rho_0 = \sigma_0 - i\gamma_0$ también es cero (con mismo $\sigma_0$, $\gamma_0$ real, signo de parte imaginaria opuesto). Calculamos:
 
-$$\operatorname{Re}\left[\frac{1}{\rho_n - \rho_0}\right] = \operatorname{Re}\left[\frac{1}{(1/2-\sigma_0)+i(\gamma_n-\gamma_0)}\right] = \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2}$$
+$$\mathrm{Re}\,\left[\frac{1}{\rho_n - \rho_0}\right] = \mathrm{Re}\,\left[\frac{1}{(1/2-\sigma_0)+i(\gamma_n-\gamma_0)}\right] = \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2}$$
 
-$$\operatorname{Re}\left[\frac{1}{\rho_n - \bar\rho_0}\right] = \operatorname{Re}\left[\frac{1}{(1/2-\sigma_0)+i(\gamma_n+\gamma_0)}\right] = \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n+\gamma_0)^2}$$
+$$\mathrm{Re}\,\left[\frac{1}{\rho_n - \bar\rho_0}\right] = \mathrm{Re}\,\left[\frac{1}{(1/2-\sigma_0)+i(\gamma_n+\gamma_0)}\right] = \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n+\gamma_0)^2}$$
 
-Por lo tanto, la contribución del par $(\rho_0, \bar\rho_0)$ a $-2\operatorname{Re}[\cdots]$ es:
+Por lo tanto, la contribución del par $(\rho_0, \bar\rho_0)$ a $-2\mathrm{Re}[\cdots]$ es:
 
 $$-2\left[\frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n-\gamma_0)^2} + \frac{1/2-\sigma_0}{(1/2-\sigma_0)^2+(\gamma_n+\gamma_0)^2}\right]$$
 
@@ -370,11 +370,11 @@ Doc 45 explorará el comportamiento asintótico de $C_\infty(\gamma_n)$ para $n 
 
 **A.1. Separación sin error residual.** La suma de Hadamard $\sum_\rho[1/(\rho_n-\rho)+1/\rho]$ converge condicionalmente ordenada por $|\text{Im}(\rho)|$. Al tomar la parte real y restar la contribución de $\rho = \rho_n$ (el polo), obtenemos la suma:
 
-$$C_\infty(\gamma_n) = -2\operatorname{Re}\left[\sum_{\rho\neq\rho_n} \frac{1}{\rho_n - \rho}\right]$$
+$$C_\infty(\gamma_n) = -2\mathrm{Re}\,\left[\sum_{\rho\neq\rho_n} \frac{1}{\rho_n - \rho}\right]$$
 
 La separación Tipo I / Tipo II es:
 
-$$C_\infty(\gamma_n) = \underbrace{-2\operatorname{Re}\left[\sum_{\rho_m:\,\text{on-crit}}\frac{1}{\rho_n-\rho_m}\right]}_{=\,0} + \underbrace{-2\operatorname{Re}\left[\sum_{\rho_0:\,\text{off-crit}}\frac{1}{\rho_n-\rho_0}\right]}_{\geq\,0}$$
+$$C_\infty(\gamma_n) = \underbrace{-2\mathrm{Re}\,\left[\sum_{\rho_m:\,\text{on-crit}}\frac{1}{\rho_n-\rho_m}\right]}_{=\,0} + \underbrace{-2\mathrm{Re}\,\left[\sum_{\rho_0:\,\text{off-crit}}\frac{1}{\rho_n-\rho_0}\right]}_{\geq\,0}$$
 
 La primera suma es cero (cada término es puramente imaginario). La segunda es $\sum_{\rho_0}\Delta(\gamma_n;\rho_0) \geq 0$.
 

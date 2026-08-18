@@ -99,8 +99,8 @@ Apply this with `S=mathbf S_P` and `X=X_(P,z,C)`.  We obtain:
 > \[
 > \boxed{
 > \mathfrak K_{P,z,C}:
-> \overline{\operatorname {Ran}X_{P,z,C}}longrightarrow
-> \overline{\operatorname {Ran}\mathbf S_P},qquad
+> \overline{\mathrm{Ran}\,X_{P,z,C}}longrightarrow
+> \overline{\mathrm{Ran}\,\mathbf S_P},qquad
 > \mathbf S_P=\mathfrak K_{P,z,C}X_{P,z,C}.}               \tag{2.3}
 > \]
 > Consequently any source construction of (0.1) must supply either this
@@ -126,7 +126,7 @@ the enriched presheaf category
 
 \[
  \mathsf A_{p,q}
- =\operatorname {PSh}_{\mathsf V_{p,q}}
+ =\mathrm{PSh}_{\mathsf V_{p,q}}
    (\mathsf {Sec}_{p,q}^{\rm op},\mathsf V_{p,q}),         \tag{3.2}
 \]
 
@@ -146,7 +146,7 @@ and determinant lines.  They do **not** specify
 
 \[
  f\longmapsto f^*,\qquad
- \operatorname {End}(H)_+,qquad
+ \mathrm{End}(H)_+,qquad
  \|f\|,\qquad
  f^*f\ge0.                                                 \tag{3.3}
 \]
@@ -192,7 +192,7 @@ The resulting type table is
  \begin{array}{c|c|c}
  \text{structure}&\text{constructed operation}&\text{missing for (2.3)}\\ \hline
  \mathsf A_{p,q}&\text{Yoneda/Day multiplication}&\text{dagger and norm}\\
- \operatorname {Perf}_{IDN}&\text{dual, tensor, cofiber}&\text{positive cone}\\
+ \mathrm{Perf}_{IDN}&\text{dual, tensor, cofiber}&\text{positive cone}\\
  K_n^W&\text{perfect contact/determinant}&\text{positive operator lift}\\
  \mathsf {NFRep}^{\rm sup}&\text{nuclear supertrace}&\text{Hilbert order}\\
  \text{Gamma Fourier block}&\text{analytic unitary/trace}&

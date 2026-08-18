@@ -32,7 +32,7 @@ Specializing Haran 2022, (12.16), to the equal prime-power exponents
 The two ring characters of (12.22)--(12.30) are
 
 \[
- F_0(e_1)=p-1,qquad \operatorname{tr}(e_1)=-1.         \tag{1.3}
+ F_0(e_1)=p-1,qquad \mathrm{tr}(e_1)=-1.         \tag{1.3}
 \]
 
 ## 2. Exact nodal presentation
@@ -43,7 +43,7 @@ The character pair induces a ring isomorphism
 
 \[
  \boxed{\quad
- (F_0,\operatorname{tr}):\mathcal W_p
+ (F_0,\mathrm{tr}):\mathcal W_p
  \xrightarrow{\sim}
  \mathbb Z\times_{\mathbb F_p}\mathbb Z
  =\{(r,s)\in\mathbb Z^2:r\equiv s\pmod p\}.
@@ -80,7 +80,7 @@ with the two roots congruent precisely modulo `p`. QED.
 Put `Z_p^W=Spec W_p`. The two projections in (2.1) give closed immersions
 
 \[
- s_0,s_1:\operatorname{Spec}\mathbb Z
+ s_0,s_1:\mathrm{Spec}\,\mathbb Z
  \hookrightarrow Z_p^W.                               \tag{3.1}
 \]
 
@@ -90,9 +90,9 @@ Their scheme-theoretic intersection is
 
 \[
  \boxed{\quad
- s_0(\operatorname{Spec}\mathbb Z)
- \cap s_1(\operatorname{Spec}\mathbb Z)
- \simeq\operatorname{Spec}\mathbb F_p.
+ s_0(\mathrm{Spec}\,\mathbb Z)
+ \cap s_1(\mathrm{Spec}\,\mathbb Z)
+ \simeq\mathrm{Spec}\,\mathbb F_p.
  \quad}                                                \tag{3.2}
 \]
 
@@ -133,7 +133,7 @@ The correct cyclotomic determinant appears instead as the difference of the
 two branch values in (1.3):
 
 \[
- F_0(e_1)-\operatorname{tr}(e_1)=p
+ F_0(e_1)-\mathrm{tr}(e_1)=p
  =N_{\mathbb Q(\zeta_p)/\mathbb Q}(1-\zeta_p).         \tag{4.1}
 \]
 
@@ -145,7 +145,7 @@ Thus H7-WLEF-cyc has a concrete local geometric model: intersect the
 `a_17` independently proves on the literal square
 
 \[
- \Delta\cap V_p\simeq\operatorname{Spec}\mathbb F_p.  \tag{5.1}
+ \Delta\cap V_p\simeq\mathrm{Spec}\,\mathbb F_p.  \tag{5.1}
 \]
 
 Equations (3.2) and (5.1) have the same integral branches, residue field and

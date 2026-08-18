@@ -15,7 +15,7 @@ reduce to are not constructed.  That distinction is kept explicit throughout.
 Let \(S=\{\infty,p_1,\dots,p_k\}\) be a finite set of places,
 \(\mathbb A_S=\prod_{v\in S}\mathbb Q_v\), and let \(\mathbf S_S\) denote the
 orthogonal projection onto the orthocomplement of
-\(\operatorname{Ran}(\mathcal P_\Lambda\vee\widehat{\mathcal P}_\Lambda)\) in
+\(\mathrm{Ran}(\mathcal P_\Lambda\vee\widehat{\mathcal P}_\Lambda)\) in
 \(L^2(\mathbb A_S)\) at \(\Lambda=1\) — the semi-local Sonin space.  This is
 the object Connes–Consani point at in their closing paragraph: *"All the
 ingredients and tools used above make sense in the general semi-local case,
@@ -25,7 +25,7 @@ Suppose the semi-local analogue of their Theorem 3 holds, i.e. that there is a
 distribution \(\epsilon_S\) with
 
 \[
- \operatorname{Tr}\bigl(\vartheta(f)\,\mathbf S_S\bigr)
+ \mathrm{Tr}\,\bigl(\vartheta(f)\,\mathbf S_S\bigr)
  =\sum_{v\in S}W_v^{CC}(f)+E_S(f),
  \qquad E_S(f)=\int f\,\epsilon_S\,d^*\rho .
 \tag{H}
@@ -35,7 +35,7 @@ distribution \(\epsilon_S\) with
 > by the primes in \(S\), and \(B^S_{\rm nuc}:=K_S+G_\infty\).  Then for every
 > \(f=g\star g^\vee\) with \(g\in C_c^\infty(\mathbb R_+^*)\),
 > \[
->  \mathcal S_S(g):=\operatorname{Tr}\bigl(\vartheta(g)\mathbf S_S\vartheta(g)^*\bigr)
+>  \mathcal S_S(g):=\mathrm{Tr}\,\bigl(\vartheta(g)\mathbf S_S\vartheta(g)^*\bigr)
 >  =-B^S_{\rm nuc}(g,g)+E_S(g\star g^\vee).
 > \]
 > Consequently, since \(\mathcal S_S\ge0\) by construction,
@@ -44,28 +44,28 @@ distribution \(\epsilon_S\) with
 >  \;\Longrightarrow\;B^S_{\rm nuc}(g,g)\le0 .\;}
 > \]
 
-*Proof.*  \(\operatorname{Tr}(\vartheta(g)\mathbf S_S\vartheta(g)^*)
-=\operatorname{Tr}(\vartheta(g\star g^\vee)\mathbf S_S)\) by cyclicity and
+*Proof.*  \(\mathrm{Tr}(\vartheta(g)\mathbf S_S\vartheta(g)^*)
+=\mathrm{Tr}(\vartheta(g\star g^\vee)\mathbf S_S)\) by cyclicity and
 \(\vartheta(g)^*=\vartheta(g^\vee)\).  Apply (H) to \(f=g\star g^\vee\).  By
 `115_08` §0 the sign dictionary is \(W_v^{CC}=-W_v^{\text{ours}}\) at every
 place, so \(\sum_{v\in S}W_v^{CC}(f)=-(K_S+G_\infty)(g,g)=-B^S_{\rm nuc}(g,g)\).
 Positivity of \(\mathcal S_S\) is by construction: it is
 \(\|\vartheta(g)\mathbf S_S^{1/2}\|_{HS}^2\). \(\square\)
 
-> **Proposition 2 (exhaustion).**  If \(\operatorname{supp}g\subset(p_k^{-1},p_k)\)
+> **Proposition 2 (exhaustion).**  If \(\mathrm{supp}\,g\subset(p_k^{-1},p_k)\)
 > and \(S=\{\infty,2,3,\dots,p_k\}\) contains every prime \(\le p_k\), then
 > \(K_S=K\), hence \(B^S_{\rm nuc}=B_{\rm nuc}\).  Since every
 > \(f\in\mathcal T^0\cap C_c^\infty\) has support in some \((p^{-1},p)\), the
 > family of statements \(\{B^S_{\rm nuc}\le0\}_S\) exhausts row (d) on a dense
 > subspace.
 >
-> *Proof.*  \(\operatorname{supp}(g\star g^\vee)\subset(p_k^{-2},p_k^{2})\), and
+> *Proof.*  \(\mathrm{supp}(g\star g^\vee)\subset(p_k^{-2},p_k^{2})\), and
 > `eq:Ktest` samples only at \(p^{\pm j}\).  A prime power \(p^{j}\) in
 > \((1,p_k^2)\) has \(p\le p_k\) unless \(p>p_k\) and \(j=1\), i.e.
 > \(p\in(p_k,p_k^2)\); those terms are absent from \(K_S\) but are also absent
 > from \(K\) restricted to the support only when \(g\star g^\vee\) vanishes
-> there.  Taking \(\operatorname{supp}g\subset(p_k^{-1/2},p_k^{1/2})\) instead
-> gives \(\operatorname{supp}(g\star g^\vee)\subset(p_k^{-1},p_k)\) and removes
+> there.  Taking \(\mathrm{supp}\,g\subset(p_k^{-1/2},p_k^{1/2})\) instead
+> gives \(\mathrm{supp}(g\star g^\vee)\subset(p_k^{-1},p_k)\) and removes
 > the exception, at the cost of only shrinking the exhausting family — still
 > dense. \(\square\)
 

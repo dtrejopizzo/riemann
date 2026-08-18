@@ -272,7 +272,7 @@ The physical-adjoint identity of 106.133, with \(c_L=1\), now yields
 
 \[
  \boxed{
- \operatorname {Re}
+ \mathrm{Re}
  \langle F_L,\mathcal C_LF_L\rangle_{\omega_L}
  =\frac12I_L
  =\frac{\varepsilon^3}{16}.}
@@ -439,7 +439,7 @@ by the nonzero coefficients in (20). Since \(\mathcal M_L\) is closed,
 
 \[
  d_\varepsilon
- :=\operatorname {dist}(v_\infty,\mathcal M_L)>0.
+ :=\mathrm{dist}(v_\infty,\mathcal M_L)>0.
  \tag{38}
 \]
 
@@ -486,7 +486,7 @@ failure again persists by continuity.
 All scalar heat constraints remain valid. In particular,
 
 \[
- Z_V(t)=\operatorname {Tr}(Ve^{-tS_L})
+ Z_V(t)=\mathrm{Tr}(Ve^{-tS_L})
  \tag{42}
 \]
 
@@ -574,7 +574,7 @@ complement. In the notation of 106.133, it remains the joint estimate
 
 \[
  \mathfrak b_{\Gamma,*}(F/h)
- +2\eta_{\rm phys}\operatorname {Re}
+ +2\eta_{\rm phys}\mathrm{Re}
    \langle F,\mathcal C_{K,h}F\rangle_{\omega_K}
  +\mathfrak P_{\rm PNT}(F)\geq0,
  \tag{46}

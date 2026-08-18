@@ -105,7 +105,7 @@ Hence
 This is exactly Haran's lambda-trace formula used in `a_36`:
 
 \[
- \operatorname{tr}(\lambda_1(\phi_n))
+ \mathrm{tr}(\lambda_1(\phi_n))
  =\prod_{\zeta\in\mu_n^*}(1-\zeta)=\Phi_n(1).          \tag{3.3}
 \]
 

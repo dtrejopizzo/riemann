@@ -41,7 +41,7 @@ Choose the prolate parameters of D.180 and put
 If \(E_{<a}=\mathbf1_{(0,a)}(\overline{\mathcal R}_T)\), then
 
 \[
- \boxed{\operatorname {rank}E_{<a}\le r_{T,R,\eta}.} \tag{0.5}
+ \boxed{\mathrm{rank}\,E_{<a}\le r_{T,R,\eta}.} \tag{0.5}
 \]
 
 Consequently
@@ -49,7 +49,7 @@ Consequently
 \[
  H_a=H_a^{\rm hi}+H_a^{\rm lo},\qquad
  \|H_a^{\rm hi}\|\le {e^{-1}\over a},\qquad
- \operatorname {rank}H_a^{\rm lo}\le r_{T,R,\eta}.  \tag{0.6}
+ \mathrm{rank}\,H_a^{\rm lo}\le r_{T,R,\eta}.  \tag{0.6}
 \]
 
 Finally impose the exact two A--B--C Tate jets.  The constrained Green
@@ -69,7 +69,7 @@ two.  Combining (0.2), (0.5)--(0.7) gives the exact localization
  G_T^{\rm prim}=K_a+H_a^{\rm hi}+F_a,\quad
  \|K_a\|_{1,\infty}\le a^{-1},\quad
  \|H_a^{\rm hi}\|\le e^{-1}a^{-1},\quad
- \operatorname {rank}F_a\le r_{T,R,\eta}+2.}         \tag{0.8}
+ \mathrm{rank}\,F_a\le r_{T,R,\eta}+2.}         \tag{0.8}
 \]
 
 All prime powers and the complete Gamma place occur inside the same
@@ -172,10 +172,10 @@ Plancherel argument gives
 Moreover
 
 \[
- \operatorname {rank}P_{\rm lo}\le{2TR\over\pi\eta}. \tag{3.2}
+ \mathrm{rank}\,P_{\rm lo}\le{2TR\over\pi\eta}. \tag{3.2}
 \]
 
-If \(\dim E_{<a}>\operatorname {rank}P_{\rm lo}\), the range of
+If \(\dim E_{<a}>\mathrm{rank}\,P_{\rm lo}\), the range of
 \(E_{<a}\) contains a nonzero vector orthogonal to \(P_{\rm lo}\), hence
 in \(P_{\rm hi}\).  Its Rayleigh quotient is strictly below \(a\) by
 the spectral definition of \(E_{<a}\), but at least \(a\) by (3.1), a
@@ -199,7 +199,7 @@ For a load \(f\), the unconstrained minimizer of
 
 \[
  {1\over2}\langle u,\overline{\mathcal R}_Tu\rangle
- -\operatorname {Re}\langle f,u\rangle               \tag{4.2}
+ -\mathrm{Re}\,\langle f,u\rangle               \tag{4.2}
 \]
 
 is \(u=\overline G_Tf\).  Adding a multiplier \(M^*\lambda\) and imposing

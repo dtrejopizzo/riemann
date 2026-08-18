@@ -99,7 +99,7 @@ the local Li pairing is
 \[
   q_w(p)
   =
-  2\operatorname{Re}\left(p(w)\overline{p(\sigma(w))}\right).
+  2\mathrm{Re}\,\left(p(w)\overline{p(\sigma(w))}\right).
 \tag{8}
 \]
 
@@ -107,7 +107,7 @@ For \(p=e_n\), this gives
 \[
   q_w(e_n)
   =
-  2\operatorname{Re}\left((1-w^n)(1-w^{-n})\right),
+  2\mathrm{Re}\,\left((1-w^n)(1-w^{-n})\right),
 \tag{9}
 \]
 which is exactly the quartet contribution to the paired Li sum.
@@ -137,7 +137,7 @@ linear polynomial \(r\) with
 
 On the value pair \((x,y)\), the Li cross-pairing (8) is
 \[
-  q_w(x,y)=2\operatorname{Re}(x\overline y).
+  q_w(x,y)=2\mathrm{Re}(x\overline y).
 \tag{12}
 \]
 
@@ -200,7 +200,7 @@ Let a candidate vanishing-test form be assembled orbit by orbit from the
 zero divisor, and suppose that on every two-point functional-equation orbit
 \(\{w,\sigma(w)\}\) its principal local residue is the Li cross-pairing
 \[
-  2\operatorname{Re}\left(p(w)\overline{p(\sigma(w))}\right).
+  2\mathrm{Re}\,\left(p(w)\overline{p(\sigma(w))}\right).
 \]
 
 If the form is positive semidefinite on all of \(\mathcal V\), then no

@@ -7,7 +7,7 @@ is detected by the resultant:
 
 \[
  \frac{1}{\varphi(n)}
- \log\left|\operatorname {Res}(\Phi_m,\Phi_n)\right|
+ \log\left|\mathrm{Res}(\Phi_m,\Phi_n)\right|
  =\begin{cases}
  \log p,&m/n=p^a,\\
  0,&m/n\text{ is not a prime power},
@@ -22,7 +22,7 @@ Before using (1) in a Gram matrix, the same intersection theory must
 define the diagonal \(Z_n^2\), where
 
 \[
- Z_n=V(\Phi_n)\subset\operatorname {Spec}\mathbb Z[x].
+ Z_n=V(\Phi_n)\subset\mathrm{Spec}\,\mathbb Z[x].
  \tag{2}
 \]
 
@@ -42,14 +42,14 @@ compactification.
 For any nonconstant polynomial \(f\),
 
 \[
- \operatorname {Res}(f,f)=0.
+ \mathrm{Res}(f,f)=0.
  \tag{3}
 \]
 
 Hence
 
 \[
- \boxed{\operatorname {Res}(\Phi_n,\Phi_n)=0.}
+ \boxed{\mathrm{Res}(\Phi_n,\Phi_n)=0.}
  \tag{4}
 \]
 
@@ -89,9 +89,9 @@ Tensoring (6) with \(B_n\) makes the differential zero.  Therefore
 and
 
 \[
- \operatorname {Tor}_0^A(B_n,B_n)\cong B_n,
+ \mathrm{Tor}_0^A(B_n,B_n)\cong B_n,
  \qquad
- \operatorname {Tor}_1^A(B_n,B_n)\cong B_n.
+ \mathrm{Tor}_1^A(B_n,B_n)\cong B_n.
  \tag{8}
 \]
 
@@ -99,8 +99,8 @@ Both modules are horizontal and infinite as abelian groups.  Their
 lengths are not finite, so the usual local Euler characteristic
 
 \[
- \sum_i(-1)^i\operatorname {length}
- \operatorname {Tor}_i^A(B_n,B_n)
+ \sum_i(-1)^i\mathrm{length}
+ \mathrm{Tor}_i^A(B_n,B_n)
  \tag{9}
 \]
 
@@ -108,8 +108,8 @@ is not a number.  Formally the two identical classes cancel in \(K_0\),
 but this zero does not provide the required metric self-intersection.
 
 There is a second affine obstruction.  The ring \(\mathbb Z[x]\) is a
-UFD, and \(Z_n=\operatorname {div}(\Phi_n)\) is principal.  Its class in
-\(\operatorname {CH}^1(\operatorname {Spec}\mathbb Z[x])\) is zero.
+UFD, and \(Z_n=\mathrm{div}(\Phi_n)\) is principal.  Its class in
+\(\mathrm{CH}^1(\mathrm{Spec}\,\mathbb Z[x])\) is zero.
 Thus the nonzero logarithmic resultants are local intersection
 contributions; they are not the values of a complete numerical
 intersection pairing on the affine surface.
@@ -121,7 +121,7 @@ Let \(\overline Z_n\) be the closure of \(Z_n\) in
 infinity.  Homogenizing \(\Phi_n\) gives the divisor relation
 
 \[
- \operatorname {div}(\Phi_n(x))
+ \mathrm{div}(\Phi_n(x))
  =\overline Z_n-\varphi(n)D_\infty.
  \tag{10}
 \]
@@ -140,7 +140,7 @@ Hermitian metric on the associated line bundle.  Changing that metric
 changes the archimedean self-intersection.  The finite cyclotomic divisor
 does not determine it.
 
-Thus \(\operatorname {Spec}\mathbb Z[x]\) supplies a genuine arithmetic
+Thus \(\mathrm{Spec}\,\mathbb Z[x]\) supplies a genuine arithmetic
 surface and genuine local intersections, but not a canonical global
 diagonal by itself.
 
@@ -150,8 +150,8 @@ One may move one copy infinitesimally by replacing \(\Phi_n\) with its
 derivative.  This gives
 
 \[
- \left|\operatorname {Res}(\Phi_n,\Phi_n')\right|
- =\left|\operatorname {Disc}(\Phi_n)\right|.
+ \left|\mathrm{Res}(\Phi_n,\Phi_n')\right|
+ =\left|\mathrm{Disc}(\Phi_n)\right|.
  \tag{12}
 \]
 
@@ -159,7 +159,7 @@ The cyclotomic discriminant is
 
 \[
  \boxed{
- \left|\operatorname {Disc}(\Phi_n)\right|
+ \left|\mathrm{Disc}(\Phi_n)\right|
  =\frac{n^{\varphi(n)}}
  {\displaystyle\prod_{p\mid n}
   p^{\varphi(n)/(p-1)}}.}
@@ -170,7 +170,7 @@ Hence its normalized logarithm is
 
 \[
  \frac{1}{\varphi(n)}
- \log\left|\operatorname {Disc}(\Phi_n)\right|
+ \log\left|\mathrm{Disc}(\Phi_n)\right|
  =\log n-\sum_{p\mid n}\frac{\log p}{p-1}.
  \tag{14}
 \]
@@ -207,7 +207,7 @@ The cyclotomic resultant construction makes a genuine advance over
 set-theoretic root overlap:
 
 * it lives on the classical arithmetic surface
-  \(\operatorname {Spec}\mathbb Z[x]\);
+  \(\mathrm{Spec}\,\mathbb Z[x]\);
 * its local intersections are scheme-theoretic;
 * it vanishes on mixed ratios;
 * it gives exactly \(\log p\) on prime-power transitions.
@@ -246,6 +246,6 @@ Verdict:
 
 > Cyclotomic resultants provide the correct finite local intersection
 > support, but they do not close the diagonal.  The standalone
-> \(\operatorname {Spec}\mathbb Z[x]\) route stops at the fifth test.  Its
+> \(\mathrm{Spec}\,\mathbb Z[x]\) route stops at the fifth test.  Its
 > resultant identities remain valid local input for any future, richer
 > arithmetic intersection theory.

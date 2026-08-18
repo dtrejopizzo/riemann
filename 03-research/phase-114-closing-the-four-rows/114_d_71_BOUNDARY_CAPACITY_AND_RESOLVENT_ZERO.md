@@ -54,7 +54,7 @@ Define the upper boundary capacity
 \[
  \boxed{
  \mathcal C_u(z)=
- \sup\{q_z(f): f\in\operatorname {Dom}(q_B),\ \ell(f)=1\}.}
+ \sup\{q_z(f): f\in\mathrm{Dom}(q_B),\ \ell(f)=1\}.}
                                                                     \tag{1.4}
 \]
 
@@ -66,7 +66,7 @@ the single source form `q_z`; no spectral zero is used in the definition.
 Write `f=u+x`, with `x in u^perp`.  Then
 
 \[
- q_z(u+x)=a-z+2\operatorname {Re}\langle b,x\rangle
+ q_z(u+x)=a-z+2\mathrm{Re}\,\langle b,x\rangle
                  +\langle x,(D-z)x\rangle.                \tag{2.1}
 \]
 
@@ -76,7 +76,7 @@ The standard completion theorem for a semidefinite quadratic form gives:
 > and only if
 > \[
 > D-z\le0,qquad
-> b\in\operatorname {Ran}(z-D)^{1/2}.                      \tag{2.2}
+> b\in\mathrm{Ran}(z-D)^{1/2}.                      \tag{2.2}
 > \]
 > In that case
 > \[
@@ -101,7 +101,7 @@ Thus finiteness forces the first condition in (2.2).  Put `A=z-D>=0`.
 The remaining quadratic expression is
 
 \[
- 2\operatorname {Re}\langle b,x\rangle-|A^{1/2}x\|^2.   \tag{2.6}
+ 2\mathrm{Re}\,\langle b,x\rangle-|A^{1/2}x\|^2.   \tag{2.6}
 \]
 
 It is bounded above precisely when the functional defined by `b` is
@@ -109,7 +109,7 @@ continuous in the seminorm `||A^(1/2)x||`, which is the range condition in
 (2.2).  Riesz representation and completion of the square give
 
 \[
- 2\operatorname {Re}\langle b,x\rangle-|A^{1/2}x\|^2
+ 2\mathrm{Re}\,\langle b,x\rangle-|A^{1/2}x\|^2
  =\|A^{\dagger/2}b\|^2
   -\|A^{1/2}x-A^{\dagger/2}b\|^2.                         \tag{2.7}
 \]
@@ -121,7 +121,7 @@ This proves (2.3); if `A` is invertible it also proves (2.4).
 Let
 
 \[
- \mu_u=\sup\operatorname {spec}(D).                       \tag{3.1}
+ \mu_u=\sup\mathrm{spec}(D).                       \tag{3.1}
 \]
 
 For every `z>mu_u`, the operator `z-D` is strictly positive and Theorem 2.1
@@ -176,7 +176,7 @@ Equations (3.5)--(3.6) are a source-side variational inequality for both
 The capacity has an equivalent operator meaning.  For a real constant `C`,
 
 \[
- q_z(f)\le C|\ell(f)|^2\quad(f\in\operatorname {Dom}(q_B)) \tag{4.1}
+ q_z(f)\le C|\ell(f)|^2\quad(f\in\mathrm{Dom}(q_B)) \tag{4.1}
 \]
 
 holds if and only if `C_u(z)` is finite and
@@ -241,7 +241,7 @@ the capacity is infinite.
 Take the cyclic example from D.70:
 
 \[
- B=\operatorname {diag}(4,3,2,-1),\qquad u=(1,1,1,1)^T.   \tag{6.1}
+ B=\mathrm{diag}(4,3,2,-1),\qquad u=(1,1,1,1)^T.   \tag{6.1}
 \]
 
 Use the unnormalized boundary functional `ell(f)=u^T f`.  Since

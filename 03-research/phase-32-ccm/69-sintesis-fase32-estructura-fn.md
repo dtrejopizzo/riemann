@@ -33,7 +33,7 @@ Esta es una identidad algebraica exacta, válida para todo $z \in \mathbb{C} \se
 Los únicos polos de $F_n(z)$ son:
 - Los ceros reales simples de $P_n$ (que son los nodos de Gauss de $P_n$, en número $n$).
 - Los ceros reales simples de $P_{n+1}$ (en número $n+1$).
-- Los ceros de $m_\infty(z)$, que no existen en $\mathbb{R}$ (pues $\operatorname{Im} m_\infty(x+i0^+) = -\pi w(x) \neq 0$).
+- Los ceros de $m_\infty(z)$, que no existen en $\mathbb{R}$ (pues $\mathrm{Im} m_\infty(x+i0^+) = -\pi w(x) \neq 0$).
 
 Los polos de $F_n$ son exactamente los $2n+1$ ceros reales de $P_n \cdot P_{n+1}$, todos simples e intercalados.
 

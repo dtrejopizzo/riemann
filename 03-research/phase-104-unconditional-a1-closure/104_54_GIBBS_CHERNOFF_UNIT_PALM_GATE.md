@@ -48,7 +48,7 @@ del parámetro. Para \(t\ne0\), medidas delta apoyadas en las sucesiones
 prima o semiprima hacen
 
 \[
- t\,\mathbb E_QD_{n,s}-\operatorname{KL}(Q\|\mathbb P_s)
+ t\,\mathbb E_QD_{n,s}-\mathrm{KL}(Q\|\mathbb P_s)
  \longrightarrow+\infty.                                  \tag{5}
 \]
 
@@ -133,7 +133,7 @@ Por tanto existe \(x_0(n,s)\) tal que, para todo primo
 \(p>e^{x_0}\),
 
 \[
- \operatorname{sgn}D_{n,s}(p)=(-1)^{n-1},\qquad
+ \mathrm{sgn}\,D_{n,s}(p)=(-1)^{n-1},\qquad
  |D_{n,s}(p)|\ge c_{n,s}(\log p)^n                         \tag{11}
 \]
 
@@ -181,7 +181,7 @@ Los términos de grado menor desaparecen. En consecuencia, para todo
 \(J\) suficientemente grande,
 
 \[
- \operatorname{sgn}D_{n,s}(p_Jq_J)=(-1)^n,\qquad
+ \mathrm{sgn}\,D_{n,s}(p_Jq_J)=(-1)^n,\qquad
  |D_{n,s}(p_Jq_J)|\ge c'_{n,s}
        \{\log(p_Jq_J)\}^n                                 \tag{17}
 \]
@@ -241,14 +241,14 @@ La fórmula extendida de Gibbs es
  \log\mathbb E_s e^{tD_{n,s}}
  =\sup_{Q\ll\mathbb P_s}
  \left\{t\mathbb E_QD_{n,s}
-             -\operatorname{KL}(Q\|\mathbb P_s)\right\}.  \tag{22}
+             -\mathrm{KL}(Q\|\mathbb P_s)\right\}.  \tag{22}
 \]
 
 No hace falta importar (22) para probar la divergencia: sus testigos son
 explícitos. Para \(Q_j=\delta_{m_j}\),
 
 \[
- \operatorname{KL}(Q_j\|\mathbb P_s)
+ \mathrm{KL}(Q_j\|\mathbb P_s)
  =s\log m_j+\log\zeta(s).                                  \tag{23}
 \]
 
@@ -256,7 +256,7 @@ Por (19),
 
 \[
  t\mathbb E_{Q_j}D_{n,s}
- -\operatorname{KL}(Q_j\|\mathbb P_s)\longrightarrow+\infty.
+ -\mathrm{KL}(Q_j\|\mathbb P_s)\longrightarrow+\infty.
                                                                     \tag{24}
 \]
 

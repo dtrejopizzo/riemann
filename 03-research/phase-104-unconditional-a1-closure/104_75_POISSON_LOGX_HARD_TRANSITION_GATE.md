@@ -342,7 +342,7 @@ el target aritmético lógicamente más débil.
 
 ## 4. Poissonización localizada del mismo gate
 
-Sea \(N_t\sim\operatorname {Pois}(t)\) y defina
+Sea \(N_t\sim\mathrm{Pois}(t)\) y defina
 
 \[
  \mathfrak P(t)=e^{-t}\sum_{n\ge1}{t^n\over n!}
@@ -530,7 +530,7 @@ operación \(x\mapsto{\bf1}_{x\le B}\), o su suavizado Fermi, se aplica
 Considere el cuarteto racional
 
 \[
- q_n=4-2\operatorname {Re}\{w^n+w^{-n}\},
+ q_n=4-2\mathrm{Re}\,\{w^n+w^{-n}\},
  \qquad w=2i.                                             \tag{37}
 \]
 
@@ -539,7 +539,7 @@ Su media lineal poissonizada tiene la fórmula exacta
 \[
 \boxed{
  e^{-t}\sum_{n\ge1}{q_nt^n\over n!}
- =4-2\operatorname {Re}\left{
+ =4-2\mathrm{Re}\,\left{
  e^{(w-1)t}+e^{(w^{-1}-1)t}\right}\longrightarrow4.}    \tag{38}
 \]
 

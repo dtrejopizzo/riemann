@@ -11,7 +11,7 @@ On the two ruling directions and the correspondence direction the central
 generator is
 
 \[
- A=\operatorname {diag}\left(-\tfrac12,\tfrac12,D_\Gamma\right),
+ A=\mathrm{diag}\,\left(-\tfrac12,\tfrac12,D_\Gamma\right),
  \qquad (D_\Gamma h)(s)=(s-\tfrac12)h(s).                  \tag{0.1}
 \]
 
@@ -31,7 +31,7 @@ invariant kernel can be supported only on
 
 For distinct reflected points this is an off-diagonal hyperbolic block with
 eigenvalues of opposite sign.  A positive kernel can therefore survive only
-where \(s=t\), and (0.3) then gives \(\operatorname {Re}s=1/2\).
+where \(s=t\), and (0.3) then gives \(\mathrm{Re}\,s=1/2\).
 
 The perfect Witt contact changes determinant masses but not (0.2).  It
 cannot turn the hyperbolic Tate pairing into a positive invariant metric.
@@ -54,7 +54,7 @@ transform its generator is multiplication by \(s-1/2\).  Hence the action
 is
 
 \[
- U_u=\operatorname {diag}
+ U_u=\mathrm{diag}
  \left(e^{-u/2},e^{u/2},e^{uD_\Gamma}\right).              \tag{1.2}
 \]
 
@@ -124,7 +124,7 @@ The last equation of (2.1) reads
 Hence
 
 \[
- \operatorname {supp}K\subseteq\{(s,t):t=1-\bar s\}.      \tag{3.2}
+ \mathrm{supp}\,K\subseteq\{(s,t):t=1-\bar s\}.      \tag{3.2}
 \]
 
 This is exactly the functional-equation/Tate reflection.  It exists
@@ -147,7 +147,7 @@ intersection of the reflection graph with the diagonal:
 
 \[
  s=t=1-\bar s
- \quad\Longleftrightarrow\quad\operatorname {Re}s=\tfrac12. \tag{3.4}
+ \quad\Longleftrightarrow\quad\mathrm{Re}\,s=\tfrac12. \tag{3.4}
 \]
 
 This conclusion is derived from the source scaling law and positivity; no
@@ -190,7 +190,7 @@ For primitive \(a\), D.191 would give
 
 \[
  B_{\rm nuc}(a,a)
- =-\operatorname {Tr}_W\bigl(
+ =-\mathrm{Tr}_W\bigl(
  \mathscr Q_-(a)\mathscr Q_-(a)^{*W}\bigr)\le0.           \tag{5.2}
 \]
 
@@ -245,4 +245,4 @@ The companion script `114_d_193_three_component_lyapunov_verify.py` checks:
    \(\bar\alpha_i+\alpha_j=0\);
 2. the ruling and reflected-pair invariant blocks;
 3. their opposite eigenvalues;
-4. positivity only for central exponents \(\operatorname {Re}\alpha=0\).
+4. positivity only for central exponents \(\mathrm{Re}\,\alpha=0\).

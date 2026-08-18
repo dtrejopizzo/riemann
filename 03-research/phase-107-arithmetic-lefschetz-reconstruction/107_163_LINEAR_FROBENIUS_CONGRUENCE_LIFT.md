@@ -6,7 +6,7 @@ For coprime positive integers \(n,m\), Connes--Consani's rational
 Frobenius correspondence is induced on the square by
 
 \[
- \mu\circ\operatorname{Fr}_{n,m}:
+ \mu\circ\mathrm{Fr}_{n,m}:
  q^a\otimes q^b\longmapsto q^{na+mb}.
  \tag{1.1}
 \]

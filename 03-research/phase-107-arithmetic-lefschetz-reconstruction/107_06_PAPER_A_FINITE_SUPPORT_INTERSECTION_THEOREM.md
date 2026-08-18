@@ -21,10 +21,10 @@ far.
 ### Input A: the free source divisor module
 
 `107_03` constructs the finite-support divisor module
-\(\operatorname{Div}_{\mathrm{EF}}\), together with:
+\(\mathrm{Div}_{\mathrm{EF}}\), together with:
 
 1. the raw decorated correspondence package
-   \(\operatorname{Corr}_{\mathrm{raw}}\);
+   \(\mathrm{Corr}_{\mathrm{raw}}\);
 2. transpose before connected extraction;
 3. the connected-trace map;
 4. the connected prime-power generators \(Z_{p,k}\);
@@ -38,7 +38,7 @@ off-diagonal cyclotomic sector and proves:
 
 \[
  \frac1{\varphi(n)}
- \log\left|\operatorname{Res}(\Phi_m,\Phi_n)\right|
+ \log\left|\mathrm{Res}(\Phi_m,\Phi_n)\right|
  =
  \begin{cases}
  \log p,&m/n=p^a,\\
@@ -71,7 +71,7 @@ Call a divisor
  +a_\Delta\Delta
  +a_\infty Z_\infty
  +\sum_{(p,k)\in S} c_{p,k} Z_{p,k}
- \in\operatorname{Div}_{\mathrm{EF}}
+ \in\mathrm{Div}_{\mathrm{EF}}
  \tag{3.1}
 \]
 
@@ -119,7 +119,7 @@ Weil quadratic form of Phase 107.
 
 ### Theorem 5.1: finite-support intersection theorem
 
-For every admissible finite-support pair \(D,E\in\operatorname{Div}_{\mathrm{EF}}\),
+For every admissible finite-support pair \(D,E\in\mathrm{Div}_{\mathrm{EF}}\),
 the source construction produces a metrized determinant line
 \(\overline{\langle D,E\rangle}\) with finite arithmetic degree
 \(I(D,E)\).  This construction has the following properties.
@@ -153,7 +153,7 @@ the source construction produces a metrized determinant line
 
 #### Proof
 
-Existence of \(\operatorname{Div}_{\mathrm{EF}}\) and of the source
+Existence of \(\mathrm{Div}_{\mathrm{EF}}\) and of the source
 generators is exactly `107_03`.  Existence of the finite determinant line
 and its symmetry on the off-diagonal sector is exactly `107_04`.
 Existence of the archimedean norm and of the diagonal closure by the same
@@ -211,7 +211,7 @@ requested by Milestone I.
 With Paper A closed, the next stage of Phase 107 is Part II:
 
 1. construct the decorated correspondence category
-   \(\operatorname{Corr}_{\mathrm{EF}}\);
+   \(\mathrm{Corr}_{\mathrm{EF}}\);
 2. define its composition and transpose at the derived level;
 3. suspend it to the logarithmic prime-orbit flow;
 4. derive the arithmetic Lefschetz trace formula from fixed points.

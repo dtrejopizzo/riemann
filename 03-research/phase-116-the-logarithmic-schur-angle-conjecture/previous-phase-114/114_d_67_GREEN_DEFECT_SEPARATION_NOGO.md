@@ -37,7 +37,7 @@ The arithmetic form and its continuum discrepancy are
  \begin{aligned}
  V_{\rm ar}(F,F)
  &=2\sum_{n\ge2}{\Lambda(n)\over\sqrt n}
-             \operatorname {Re}\langle F,S_{\log n}F\rangle,\\
+             \mathrm{Re}\,\langle F,S_{\log n}F\rangle,\\
  V_\varepsilon(F,F)&=V_{\rm ar}(F,F)-V_0(F,F).
  \end{aligned}                                             \tag{1.3}
 \]
@@ -102,7 +102,7 @@ on this family to the single `n=2` contact:
 \[
  V_{\rm ar}(F_j,F_j)
  ={2\log2\over\sqrt2}
-       \operatorname {Re}\langle F_j,S_{\log2}F_j\rangle.  \tag{2.6}
+       \mathrm{Re}\,\langle F_j,S_{\log2}F_j\rangle.  \tag{2.6}
 \]
 
 This is not a truncation: all omitted terms vanish by disjoint support.
@@ -121,7 +121,7 @@ Since `exp(-i N_j a)=1`, expansion of (3.1), followed by
 Cauchy--Schwarz for the lower-order terms, gives
 
 \[
- \operatorname {Re}\langle F_j,S_aF_j\rangle
+ \mathrm{Re}\,\langle F_j,S_aF_j\rangle
  =N_j^4 I_2+O_\chi(N_j^3).                                \tag{3.2}
 \]
 
@@ -153,7 +153,7 @@ We have proved:
 > **Theorem 3.1 (separate-defect no-go).**  For every fixed
 > `T>(log 2)/2`,
 > \[
-> \sup_{0\ne F=Lu\in\mathcal P,\ \operatorname {supp}u\subset(-T,T)}
+> \sup_{0\ne F=Lu\in\mathcal P,\ \mathrm{supp}\,u\subset(-T,T)}
 > {V_\varepsilon(F,F)\over E_G(u)}=+\infty.               \tag{3.6}
 > \]
 > In particular there is no finite constant `C_T` for which
@@ -174,7 +174,7 @@ The no-go is not a counterexample to row D.  Let
 
 \[
  m_\infty(\tau)=\log\pi-
- \operatorname {Re}\psi\left({1\over4}+{i\tau\over2}\right).       \tag{4.1}
+ \mathrm{Re}\,\psi\left({1\over4}+{i\tau\over2}\right).       \tag{4.1}
 \]
 
 Stirling's formula in a fixed vertical sector gives
@@ -237,7 +237,7 @@ remainder.  Put
 
 \[
  E(x)=\psi(x)-x,qquad
- C_F(a)=2\operatorname {Re}\langle F,S_aF\rangle.          \tag{5.1}
+ C_F(a)=2\mathrm{Re}\,\langle F,S_aF\rangle.          \tag{5.1}
 \]
 
 Since

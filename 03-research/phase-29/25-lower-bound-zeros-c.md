@@ -149,7 +149,7 @@ luego $N_{C_\infty}(T) = N_\Xi^{crit}(T) + O(\log T)$.
 | 04 | $k(u) > 0$ incondicionalmente | Nuevo, riguroso |
 | 08 | $N_\xi(T;\lambda) = N_\Xi(T) + O(\log T)$ | Nuevo, riguroso |
 | 15 | $\mu_{emp}^\lambda \Rightarrow \mu_\gamma^{real}$ | Nuevo, riguroso |
-| 17 | $\operatorname{spec}(J_\infty) = \{C_\infty = 0\}$ | Nuevo, riguroso (bajo EF2) |
+| 17 | $\mathrm{spec}(J_\infty) = \{C_\infty = 0\}$ | Nuevo, riguroso (bajo EF2) |
 | 19 | $\{C_\infty=0\}\subseteq\{\Xi=0\}$ | Nuevo, riguroso |
 | 19 | RH $\iff$ $\{C_\infty=0\}=\{\Xi=0\}$ | Nueva equivalencia |
 | 21 | $N_{off}(T) = O(1)$ ó RH | Nuevo, riguroso |

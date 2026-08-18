@@ -40,7 +40,7 @@ Let
 It is positive, self-adjoint and has compact resolvent.  Its heat trace is
 
 \[
- \Theta_\infty(x)=\operatorname{Tr}(e^{-xA_\infty})
+ \Theta_\infty(x)=\mathrm{Tr}(e^{-xA_\infty})
  =\sum_{k\ge0}e^{-x(k+1/4)}
  =\frac{e^{-x/4}}{1-e^{-x}}.                            \tag{3}
 \]
@@ -96,7 +96,7 @@ If
 
 \[
  m_\infty(\tau)=\log\pi-
- \operatorname{Re}\psi(\tfrac14+i\tfrac\tau2),
+ \mathrm{Re}\,\psi(\tfrac14+i\tfrac\tau2),
  \qquad m_0=m_\infty(0),                               \tag{7}
 \]
 
@@ -114,7 +114,7 @@ with the Fourier normalization of row (c).
 The standard digamma difference formula is
 
 \[
- \operatorname{Re}\psi(a+ib)-\psi(a)
+ \mathrm{Re}\,\psi(a+ib)-\psi(a)
  =\int_0^\infty\frac{e^{-ax}}{1-e^{-x}}
                   (1-\cos bx)\,dx .                    \tag{9}
 \]
@@ -197,7 +197,7 @@ does not imply the required lower bound: that bound is the Hodge-index
 content.  The next obligation is to construct a boundary restriction map
 
 \[
- \operatorname{Tr}_X:\operatorname{Dom}(\partial_X)
+ \mathrm{Tr}_X:\mathrm{Dom}(\partial_X)
        \longrightarrow\mathbb C^2                       \tag{15}
 \]
 
@@ -205,7 +205,7 @@ whose kernel is exactly the two-moment primitive space, and prove an
 intrinsic closed-range/coercivity theorem for the complex
 
 \[
- 0\longrightarrow\ker\operatorname{Tr}_X
+ 0\longrightarrow\ker\mathrm{Tr}_X
  \xrightarrow{\ \partial_X\ }\mathcal K_X.             \tag{16}
 \]
 

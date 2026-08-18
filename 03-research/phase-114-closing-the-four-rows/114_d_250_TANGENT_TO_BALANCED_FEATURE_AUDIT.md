@@ -80,7 +80,7 @@ Thus
 \]
 
 The numerator vanishes at the two unit-circle points satisfying
-\(\operatorname{Re}U=r\).  The balanced symmetric feature is strictly
+\(\mathrm{Re}\,U=r\).  The balanced symmetric feature is strictly
 positive there.  Hence this channel also loses modes and cannot be inverted
 uniformly.
 
@@ -153,7 +153,7 @@ local obstruction to the global D.190 transfer theorem.
 
 * Intertwining filters (1.1) and (2.1): **PROVED IDENTITIES**.
 * Loss of the \(U=-1\) odd mode and the
-  \(\operatorname{Re}U=r\) even modes: **PROVED**.
+  \(\mathrm{Re}\,U=r\) even modes: **PROVED**.
 * Bounded invertible transport of the tangent contraction to
   \(W_{p,\pm}\): **IMPOSSIBLE**.
 * First-order tangent--dual score identity: **UNAFFECTED AND PROVED**.

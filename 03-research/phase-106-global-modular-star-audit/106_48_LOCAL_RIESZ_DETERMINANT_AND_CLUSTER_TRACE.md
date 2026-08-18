@@ -55,7 +55,7 @@ eigenvalues in \(J\), and
 
 \[
  -\partial_z\log D_J(z)
- =\operatorname {Tr}_{H_J}(L_\perp|_{H_J}-z)^{-1}.   \tag{3}
+ =\mathrm{Tr}_{H_J}(L_\perp|_{H_J}-z)^{-1}.   \tag{3}
 \]
 
 #### Proof
@@ -74,8 +74,8 @@ For every finite-rank spectral projection \(P=P_J\), define
 
 \[
  \mathfrak T(P)
- =\operatorname {Tr}(PL_\perp^2)
- -\frac12\operatorname {Tr}(PL_\perp).               \tag{4}
+ =\mathrm{Tr}(PL_\perp^2)
+ -\frac12\mathrm{Tr}(PL_\perp).               \tag{4}
 \]
 
 ### Theorem 2 — Exact sign alternative
@@ -151,10 +151,10 @@ The two traces in (4) are
 
 \[
 \begin{aligned}
- \operatorname {Tr}(PL)
+ \mathrm{Tr}(PL)
  &=\frac12\int d\mu_K(x)\int J_x(dy)
- \{\Pi(x,x)+\Pi(y,y)-2\operatorname {Re}\Pi(x,y)\}, \tag{11}\\
- \operatorname {Tr}(PL^2)
+ \{\Pi(x,x)+\Pi(y,y)-2\mathrm{Re}\,\Pi(x,y)\}, \tag{11}\\
+ \mathrm{Tr}(PL^2)
  &=\int d\mu_K(x)\iint J_x(dy)J_x(dz)\\
  &\quad\times\{\Pi(x,x)-\Pi(x,z)-\Pi(y,x)+\Pi(y,z)\}. \tag{12}
 \end{aligned}
@@ -183,9 +183,9 @@ identity
 
 Integrating (13) against
 \(d\mu_K(x)J_x(dy)J_x(dz)\) gives
-\(\sum_k\|Lq_k\|^2=\operatorname {Tr}(PL^2)\).
+\(\sum_k\|Lq_k\|^2=\mathrm{Tr}(PL^2)\).
 Remove the two cutoffs in the graph norm of \(L\). This is legitimate
-because a bounded spectral subspace lies in \(\operatorname {Dom}L\);
+because a bounded spectral subspace lies in \(\mathrm{Dom}\,L\);
 the small Gamma differences cancel its \(u^{-1}\) singularity, while the
 theta factor dominates the large-displacement and prime-power tails. □
 

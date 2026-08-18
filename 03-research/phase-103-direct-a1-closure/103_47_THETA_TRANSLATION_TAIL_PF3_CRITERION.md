@@ -76,7 +76,7 @@ exact update
 \[
  \boxed{\quad
  \epsilon_{p+1}-\epsilon_p
- ={\operatorname{Cov}_{\nu_p}(U,R(U))\over\mathbb E_{\nu_p}U}<0.
+ ={\mathrm{Cov}_{\nu_p}(U,R(U))\over\mathbb E_{\nu_p}U}<0.
  \quad}                                                        \tag{9}
 \]
 The strict sign follows from the elementary two-copy covariance identity,

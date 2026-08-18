@@ -322,7 +322,7 @@ This is the degree counterpart of the chartwise reduction achieved in
 
 ## 9. Compatibility with the future Picard/Jacobian realization
 
-### Proposition 9.1: degree-zero on divisors is the exact precursor of degree-zero in \(\widehat{\operatorname{Pic}}^0\)
+### Proposition 9.1: degree-zero on divisors is the exact precursor of degree-zero in \(\widehat{\mathrm{Pic}}^0\)
 
 If the candidate metrized realization of `107_22` respects the divisor
 class correction

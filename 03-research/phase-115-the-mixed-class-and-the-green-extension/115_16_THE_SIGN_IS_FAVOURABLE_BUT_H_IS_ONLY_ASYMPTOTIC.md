@@ -80,7 +80,7 @@ phase satisfies \(\varphi_S'=\pi K_S(s,s)/|\mathscr E^S_\lambda(\tfrac12+is)|^2\
 with a *different* denominator.  What is exactly true is the intrinsic form
 
 \[
- \operatorname{Tr}\bigl(P_SM_{\widehat f}P_S\bigr)=\int_{\mathbb R}\widehat f(s)\,K_S(s,s)\,d\mu_S(s),
+ \mathrm{Tr}\,\bigl(P_SM_{\widehat f}P_S\bigr)=\int_{\mathbb R}\widehat f(s)\,K_S(s,s)\,d\mu_S(s),
  \qquad d\mu_S=\frac{ds}{|E_S(s)|^2},
  \qquad \rho_S:=\frac{K_S(s,s)}{|E_S(s)|^2}\ \ge 0 .
 \]
@@ -147,7 +147,7 @@ Positivity \(\rho_S\ge0\) **rules out both signs as exact statements**:
 > error \(o(1)\) as the cutoff \(\Lambda\to\infty\).
 
 So hypothesis (H) of `115_09`, in the form
-\(\operatorname{Tr}(\vartheta(f)\mathbf S_S)=-B^S_{\rm nuc}(f)+E(f)\), is **not an
+\(\mathrm{Tr}(\vartheta(f)\mathbf S_S)=-B^S_{\rm nuc}(f)+E(f)\), is **not an
 exact identity at fixed \(\lambda\)**.  Whatever it delivers, it delivers
 asymptotically, with \(\lambda\)-dependent corrections restoring positivity —
 the same phenomenon already seen for \(\mathscr E_\infty\) in `115_14` §4.

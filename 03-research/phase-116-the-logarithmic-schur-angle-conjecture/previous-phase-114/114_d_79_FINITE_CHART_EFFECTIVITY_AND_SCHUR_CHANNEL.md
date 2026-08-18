@@ -51,8 +51,8 @@ D.75 proves, without a Fourier division, that
 \[
  L\mathcal WF=F,
  \qquad
- \operatorname {supp}(\mathcal WF)
- \subseteq\operatorname {conv}(\operatorname {supp}F).    \tag{1.3}
+ \mathrm{supp}(\mathcal WF)
+ \subseteq\mathrm{conv}(\mathrm{supp}\,F).    \tag{1.3}
 \]
 
 The two equations in (1.1) are exactly what cancels the two exponential

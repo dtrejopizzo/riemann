@@ -80,8 +80,8 @@ $$D_j(x) = \frac{x^{\sigma_j + i\gamma_j}}{\sigma_j+i\gamma_j}
 
 Usando $x^{a+ib} = x^a e^{ib\log x}$ y agrupando pares conjugados:
 
-$$D_j(x) = 2\operatorname{Re}\!\left[\frac{x^{\sigma_j+i\gamma_j}}{\sigma_j+i\gamma_j}\right]
-           + 2\operatorname{Re}\!\left[\frac{x^{(1-\sigma_j)+i\gamma_j}}{(1-\sigma_j)+i\gamma_j}\right]$$
+$$D_j(x) = 2\mathrm{Re}\,\!\left[\frac{x^{\sigma_j+i\gamma_j}}{\sigma_j+i\gamma_j}\right]
+           + 2\mathrm{Re}\,\!\left[\frac{x^{(1-\sigma_j)+i\gamma_j}}{(1-\sigma_j)+i\gamma_j}\right]$$
 
 Sea $\theta_j^+ = \arg(\sigma_j+i\gamma_j)$ y $\theta_j^- = \arg((1-\sigma_j)+i\gamma_j)$. Entonces:
 

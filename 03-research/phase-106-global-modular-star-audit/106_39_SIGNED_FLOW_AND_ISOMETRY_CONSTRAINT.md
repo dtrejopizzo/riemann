@@ -49,7 +49,7 @@ be the four weighted edge spaces in 106.38, and let
 Their normalizations give
 
 \[
- \|D_\mu r\|^2=\frac12\operatorname {Var}_{\mu_K}(r),
+ \|D_\mu r\|^2=\frac12\mathrm{Var}_{\mu_K}(r),
  \qquad
  \|\mathcal G r\|^2
  =\mathscr E_\Gamma+\widetilde{\mathscr E}_p
@@ -66,7 +66,7 @@ displayed in 106.38.
 Put
 
 \[
- \mathscr R_G=\overline{\operatorname {ran}\mathcal G}.
+ \mathscr R_G=\overline{\mathrm{ran}\,\mathcal G}.
 \]
 
 Since the Gamma measure is positive for every displacement \(u>0\),
@@ -79,7 +79,7 @@ Consequently \(D_\mu r=0\).  The rule
 
 is therefore a well-defined densely defined linear map from
 \(\mathscr R_G\) to \(\mathscr H_\mu\).  It is the unique map on
-\(\operatorname {ran}\mathcal G\) which can close the diagram
+\(\mathrm{ran}\,\mathcal G\) which can close the diagram
 
 \[
  \begin{CD}
@@ -95,7 +95,7 @@ closable and contractive:
 
 \[
  \boxed{\|C_0v\|\leq\|v\|
-        \quad(v\in\operatorname {ran}\mathcal G).}       \tag{8}
+        \quad(v\in\mathrm{ran}\,\mathcal G).}       \tag{8}
 \]
 
 When (8) holds, \(C_0\) extends to a contraction \(C\) on
@@ -140,7 +140,7 @@ combination \(r=\sum_{j=0}^J a_jr_j\),
 Define the radical-gradient space
 
 \[
- \mathscr M=\overline{\operatorname {span}}
+ \mathscr M=\overline{\mathrm{span}}
  \{\mathcal G r_j:j\geq0\}\subset\mathscr R_G.          \tag{13}
 \]
 
@@ -324,7 +324,7 @@ For every zero \(z\) of \(\Xi\),
 
 \[
  \boxed{0\ne e_z\perp
- \overline{\operatorname {span}}\{r_j:j\geq0\}
+ \overline{\mathrm{span}}\{r_j:j\geq0\}
  \quad\text{in }L^2(\mu_K).}                            \tag{23}
 \]
 

@@ -28,13 +28,13 @@ or not at all."*
 
 | from | material | reference |
 |---|---|---|
-| (a) | a stable symmetric monoidal category with duals, \(\operatorname{Perf}_{IDN}\) | `eq:PerfDN` |
+| (a) | a stable symmetric monoidal category with duals, \(\mathrm{Perf}_{IDN}\) | `eq:PerfDN` |
 | (a) | invertible divisor lines, tensor law, principal descent | `prop:divisorlines` |
 | (a) | an effective cone \(\to\mathbb R_{\ge0}^2\) | `prop:externaleffectivity` |
 | (a) | intrinsic cohomology with **quadratic growth** \(\dim\sim t^2ab\) | `cor:cotangentRRdimension` |
 | (a) | a coefficient-one determinant \(\lambda_{\rm int}\), exponent \(B_{\rm int}\) | `prop:continuousRRdet` |
 | (a) | derived prime contact \(C_p\), torsion determinant \(\log p\) | `prop:derivedPrimeContact` |
-| (a) | **the Green rank cut** \(M(G)=\ell\ell^{\!\top}-\operatorname{diag}(\ell)\) | `eq:greenline`, `115_01` |
+| (a) | **the Green rank cut** \(M(G)=\ell\ell^{\!\top}-\mathrm{diag}(\ell)\) | `eq:greenline`, `115_01` |
 | (a) | ruling plane with \(H\!\cdot\!H=2\), signature \((1,1)\) | `eq:rulingquotient` |
 | (b) | a faithful multiplicative family, \(\Gamma_m\circ\Gamma_n\simeq\Gamma_{mn}\) | `thm:rowbcompose` |
 | (b) | contact weights \(\Lambda(n)\), self-dual \(\Lambda(n)/\sqrt n\) | `eq:centralLocalCoefficient` |
@@ -83,7 +83,7 @@ Forced by `thm:mixedsectionforcing` (four axioms suffice) and `main.tex` §1
 determinant is \(B_{\rm nuc}\), so that its signature becomes computable the
 way \(B_{\rm int}\)'s is.
 
-**D2 — it lives in \(\operatorname{Perf}_{IDN}\), not in \(\mathcal D\).**
+**D2 — it lives in \(\mathrm{Perf}_{IDN}\), not in \(\mathcal D\).**
 Forced by `113_11`: obstruction O1 is a category error *inside* \(\mathcal D\),
 where divisors and sections are the same type, so the divisor map is linear
 instead of scaling-invariant.  Row (a) does not have that defect —
@@ -103,7 +103,7 @@ Supplied by row (a); measured independently from primes in `113_09` Thm 4.1.
 **D5 — the form carries three blocks with distinct jobs.**
 This is the structural core, and it is forced by an inertia fact: a cross form
 \(\begin{pmatrix}0&M\\M^{\!\top}&0\end{pmatrix}\) has inertia
-\((\operatorname{rank}M,\operatorname{rank}M,\cdot)\) — always neutral.  So the
+\((\mathrm{rank}\,M,\mathrm{rank}\,M,\cdot)\) — always neutral.  So the
 negatives row (d) needs cannot come from the contact.
 
 ```text
@@ -115,7 +115,7 @@ archimedean      diagonal multiplier -> the infinitely many negatives (tail of m
 
 **D6 — \(h^0\) is a cohomology dimension, not a section set.**
 Forced by `113_11` Thm 3.3: any \(h^0\) defined by section sets
-\(\{g\in\operatorname{rad}:f+g\ge0\}\) is scale-invariant, so \(h^0(nD)=h^0(D)\)
+\(\{g\in\mathrm{rad}:f+g\ge0\}\) is scale-invariant, so \(h^0(nD)=h^0(D)\)
 and the growth argument has nothing to grow.  Row (a)'s
 \(\mathbf H^{\rm int}_t\) does grow, quadratically.
 
@@ -132,7 +132,7 @@ classes, not to establish it.
 |---|---|---|---|
 | 1 | exactly one positive direction, and it is \(H\) | row (a)'s ruling plane after the rank cut | **PROVED** in row (a): \((1,1,2r-2)\), and \((0,1,\cdot)\) on \(H^\perp\) |
 | 2 | infinitely many negative directions | the tail of \(m_\infty\), \(|\tau|>2\pi\) | **PROVED** (digamma asymptotics) |
-| 3 | the contact's \(r\) positives are cut away | the Green term \(\ell\ell^{\!\top}-\operatorname{diag}(\ell)\) | **PROVED for primes**; **OPEN for prime powers** |
+| 3 | the contact's \(r\) positives are cut away | the Green term \(\ell\ell^{\!\top}-\mathrm{diag}(\ell)\) | **PROVED for primes**; **OPEN for prime powers** |
 | 4 | \(h^0,h^1,h^2\) with the four axioms | intrinsic periodic cohomology | axiom 4 **PROVED** on the ruled cone; 1–3 **OPEN** |
 
 ### The residual budget, and a measured asymmetry
@@ -142,7 +142,7 @@ After load 3 does its work, the positives that remain are those of
 finite-dimensional on a window of length \(2T\).
 
 Diagnostic measurement (`phase-114` session, floating point):
-\(\operatorname{ind}_-(\Gamma)\) on \(\mathcal P_T\) reads
+\(\mathrm{ind}_-(\Gamma)\) on \(\mathcal P_T\) reads
 \(1,1,2,3,5,7,10\) for \(T=0.69,\,0.80,\,0.90,\,1.24,\,1.70,\,2.30,\,3.00\) —
 growing roughly like \(3.3\,T\).  Over the same range \(r\) reads
 \(2,2,3,5,10,25,78\), i.e. exponentially in \(T\).
@@ -181,7 +181,7 @@ classes, and row (d)'s Green term is its outer square minus the local contact.
 
 **Falsifier.**  The resulting term must reproduce \(G_\infty\) — which row (c)
 pins *exactly*, with no freedom (`thm:forcedgreen`), as the multiplier
-\(m_\infty(\tau)=\log\pi-\operatorname{Re}\psi(\frac14+i\frac\tau2)\).  One side
+\(m_\infty(\tau)=\log\pi-\mathrm{Re}\,\psi(\frac14+i\frac\tau2)\).  One side
 is forced by row (c), the other constructed from row (a), and they were built
 independently.  If they disagree, the hypothesis is dead.
 

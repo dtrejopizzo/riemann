@@ -23,7 +23,7 @@ Let `M=(R,multiplication)` act on the set `R` by scalar multiplication, and
 let `E=M-Set` with cartesian product carrying the diagonal action. Put
 
 \[
- \mathcal B:=\operatorname{End}_{\mathcal E}(\mathbb R).                 \tag{1.1}
+ \mathcal B:=\mathrm{End}_{\mathcal E}(\mathbb R).                 \tag{1.1}
 \]
 
 Thus

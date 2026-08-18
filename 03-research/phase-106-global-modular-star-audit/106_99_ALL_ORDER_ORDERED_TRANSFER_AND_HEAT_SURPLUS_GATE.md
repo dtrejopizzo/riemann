@@ -315,7 +315,7 @@ Let \(A=A^*\), \(C=C^*\), \(0\le C^2\le I\), and assume
 \[
  D=(I-C^2)^{1/2},
  \qquad Vx=(Cx,Dx),
- \qquad X=\operatorname{diag}(A,0).
+ \qquad X=\mathrm{diag}(A,0).
 \]
 
 Then \(V\) is an isometry and \(V^*XV=CAC\).  Since
@@ -468,7 +468,7 @@ so
 
 \[
  \ker(F\mapsto F*K)
- =\operatorname{span}\{(1,0,-1,0),(0,1,0,-1)\}
+ =\mathrm{span}\,\{(1,0,-1,0),(0,1,0,-1)\}
  =(1\oplus\mathbb Rr)^\perp_{L^2(\mu)}.             \tag{33}
 \]
 

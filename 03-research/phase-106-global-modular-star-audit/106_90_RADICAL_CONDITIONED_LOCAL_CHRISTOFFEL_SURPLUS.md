@@ -11,9 +11,9 @@ Let (V_M) be a finite elementary even zero-mode and multiplicity-jet
 space of the kind used in 106.70, 106.73, and 106.87, and let
 
 \[
- V_M=V_{M-1}\oplus\operatorname {span}\{\phi_M\},
+ V_M=V_{M-1}\oplus\mathrm{span}\,\{\phi_M\},
  \qquad
- \mathcal R_J=\operatorname {span}\{r_1,\ldots,r_J\},             \tag{1}
+ \mathcal R_J=\mathrm{span}\,\{r_1,\ldots,r_J\},             \tag{1}
 \]
 
 where
@@ -317,7 +317,7 @@ Every member of the affine class in (4) has coordinate vector
 
 \[
  \mathcal J_{u,W}(q,q)
- =c^*G_{M-1,J}c+2\operatorname {Re}(c^*g)+h.                    \tag{26}
+ =c^*G_{M-1,J}c+2\mathrm{Re}(c^*g)+h.                    \tag{26}
 \]
 
 Its unique minimum occurs at

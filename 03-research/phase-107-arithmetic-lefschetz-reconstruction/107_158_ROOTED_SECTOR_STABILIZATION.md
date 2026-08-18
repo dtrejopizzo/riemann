@@ -55,7 +55,7 @@ finite set
 
 \[
  \{(n,\chi):n\mid L_T,\ \chi\in X_T^\vee,\
- \operatorname{ord}(\chi)=n\}.
+ \mathrm{ord}(\chi)=n\}.
 \]
 
 Therefore their monomial-ray support is finite before any dimension is

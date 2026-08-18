@@ -16,7 +16,7 @@ adelic metrized realization
 \[
  \widehat{\mathcal M}_{f,T}^{\rm cand}
  \in
- \widehat{\operatorname{Pic}}_{\rm int}^0(\mathcal X_T^{(1)})
+ \widehat{\mathrm{Pic}}_{\rm int}^0(\mathcal X_T^{(1)})
  \tag{1.1}
 \]
 
@@ -102,7 +102,7 @@ numerical correction.
 ### Proposition 4.2: finite global pairing transports the Paper A support law
 
 Off the diagonal, the finite norm of (4.2) is exactly
-\(|\operatorname{Res}(\Phi_m,\Phi_n)|\), hence obeys the normalized
+\(|\mathrm{Res}(\Phi_m,\Phi_n)|\), hence obeys the normalized
 prime-power support law of `107_04`.
 
 Proof.  This is Theorem 6.2 of `107_21`, which descends the local
@@ -169,7 +169,7 @@ This is a definition of target status, not yet a proved theorem.
 
 At the current state of Part III, the most natural theorem-compatible
 target is
-\(\widehat{\operatorname{Pic}}^0_{\rm int}(\mathcal X_T^{(1)})\), not
+\(\widehat{\mathrm{Pic}}^0_{\rm int}(\mathcal X_T^{(1)})\), not
 yet the smooth classical Arakelov category.
 
 Proof.  `107_21` leaves the metric completed through the compactified

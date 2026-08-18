@@ -31,7 +31,7 @@ kept as the positive control.  More importantly, this note uses
 adjunction and the classical intersection theory of \(C\times C\).  It
 therefore proves that the classical curve-surface route produces the
 genus factor.  It does not, by itself, prove that the Phase 107
-arithmetic source route over \(\operatorname{Spec}\mathbf Z\) derives
+arithmetic source route over \(\mathrm{Spec}\,\mathbf Z\) derives
 that same factor without importing classical surface input.
 
 ## 2. Setup
@@ -347,7 +347,7 @@ What is not yet closed:
 2. this note does not rewrite the full Frobenius--Lefschetz--Euler chain
    for arbitrary genus in the same level of detail;
 3. it does not validate any arithmetic surface over
-   \(\operatorname{Spec}\mathbf Z\).
+   \(\mathrm{Spec}\,\mathbf Z\).
 
 ## 9. Status consequence
 

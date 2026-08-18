@@ -6,7 +6,7 @@ The local Evans reduction of 106.58 leaves the joint coherence estimate
 
 \[
  c_K\int_{\mathbb R}\frac{K(x)}{h(x)}\|\mathbf B_P(x)\|^2\,dx
- \geq \frac12\operatorname {Tr}(PL).                 \tag{1}
+ \geq \frac12\mathrm{Tr}(PL).                 \tag{1}
 \]
 
 The proposed next move was to combine, without separating them,
@@ -54,7 +54,7 @@ Put
 \[
  \mathbf Q(x)=(q_1(x),\ldots,q_m(x)),
  \qquad
- \boldsymbol\Lambda_P=\operatorname {diag}
+ \boldsymbol\Lambda_P=\mathrm{diag}
    (\lambda_1,\ldots,\lambda_m).                    \tag{3}
 \]
 
@@ -86,7 +86,7 @@ substitution of (4) gives
 Orthonormality gives, independently,
 
 \[
- \frac12\operatorname {Tr}(PL)
+ \frac12\mathrm{Tr}(PL)
  =\frac12\sum_{j=1}^m\lambda_j.                    \tag{7}
 \]
 
@@ -227,7 +227,7 @@ constant and an exact $1/2$-threshold radical.  Nevertheless,
 
 \[
 \boxed{
- \operatorname {Tr}P(L^2-\tfrac12L)
+ \mathrm{Tr}\,P(L^2-\tfrac12L)
  =\frac16\left(\frac16-\frac12\right)
  =-\frac1{18}.}                                     \tag{22}
 \]
@@ -274,7 +274,7 @@ The exact radical identity of 106.41 is
 Therefore the rank-one threshold projection $P_{r_1}$ satisfies
 
 \[
- \operatorname {Tr}P_{r_1}(L^2-\tfrac12L)=0.         \tag{27}
+ \mathrm{Tr}\,P_{r_1}(L^2-\tfrac12L)=0.         \tag{27}
 \]
 
 Conjugate to $L^2(\mathbb R,dx)$ by the exact ground-state unitary and
@@ -332,7 +332,7 @@ not the $j_2$ piece alone.  Schematically, if $C_N$ denotes a cell map,
 the radical-compatible nonnegative object is
 
 \[
- \operatorname {dist}
+ \mathrm{dist}
  \bigl(C_Nf,\overline{C_N\mathcal R}\bigr)^2,        \tag{32}
 \]
 

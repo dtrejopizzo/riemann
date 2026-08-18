@@ -58,7 +58,7 @@ It does **not** prove:
 1. the full suspended flow geometry of `107_08`;
 2. the full one-step fixed-point production theorem of `107_09`;
 3. the final arithmetic-surface realization over
-   \(\operatorname{Spec}\mathbf Z\).
+   \(\mathrm{Spec}\,\mathbf Z\).
 
 So the correct reading is:
 

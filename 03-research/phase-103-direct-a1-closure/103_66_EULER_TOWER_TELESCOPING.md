@@ -53,7 +53,7 @@ Here the identity in the annular interior is
 \[
  \sum_{p\leq x}\left\lfloor{\log x\over\log p}\right\rfloor\log p
  =\psi(x)
- =\log\operatorname {lcm}(1,2,\ldots,\lfloor x\rfloor).
+ =\log\mathrm{lcm}(1,2,\ldots,\lfloor x\rfloor).
 \tag{5}
 \]
 
@@ -231,7 +231,7 @@ The boundary term is zero because (2) is
 \[
  C_{n,\varepsilon}
  =\int_1^\infty
- \{\log\operatorname {lcm}(1,\ldots,\lfloor x\rfloor)-x+1\}
+ \{\log\mathrm{lcm}(1,\ldots,\lfloor x\rfloor)-x+1\}
  x^{-2-\varepsilon}K_{n,\varepsilon}(\log x)\,dx.
 \tag{21}
 \]

@@ -222,7 +222,7 @@ Meanwhile the entering perturbation is not nonnegative.  D.53 proves
 
 \[
  \dot Q_2(F,F)=-2{\log2\over\sqrt2}
- \operatorname{Re}\langle F,S_{\log2}F\rangle,            \tag{6.4}
+ \mathrm{Re}\,\langle F,S_{\log2}F\rangle,            \tag{6.4}
 \]
 
 and exhibits compactly supported smooth vectors for both signs of the

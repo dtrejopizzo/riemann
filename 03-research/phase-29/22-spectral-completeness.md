@@ -57,11 +57,11 @@ $$\mu_{emp}^\lambda \Rightarrow \mu_\gamma^{real} \quad (\text{Doc 15, incondici
 
 Pero la convergencia de $m_\lambda^{(2)}(z) \to m_\infty^{WT}(z)$ (Weyl-Titchmarsh) da una medida $\mu_{WT}^\infty$ que es la medida espectral de $J_\infty$ asociada al vector $e_0$. Esta medida satisface:
 
-$$\operatorname{spec}(J_\infty) = \operatorname{supp}(\mu_{WT}^\infty),$$
+$$\mathrm{spec}(J_\infty) = \mathrm{supp}(\mu_{WT}^\infty),$$
 
 por el teorema espectral para operadores autoadjuntos con vector cíclico.
 
-**Si $\mu_{WT}^\infty = \mu_\gamma^{real}$:** entonces $\operatorname{spec}(J_\infty) = \operatorname{supp}(\mu_\gamma^{real}) = \{\gamma_n\}$. Combinando con Teorema C1 (Doc 17): $\{\text{ceros reales de }C_\infty\} = \{\gamma_n\}$. Por Teorema 3 del Doc 19: RH.
+**Si $\mu_{WT}^\infty = \mu_\gamma^{real}$:** entonces $\mathrm{spec}(J_\infty) = \mathrm{supp}(\mu_\gamma^{real}) = \{\gamma_n\}$. Combinando con Teorema C1 (Doc 17): $\{\text{ceros reales de }C_\infty\} = \{\gamma_n\}$. Por Teorema 3 del Doc 19: RH.
 
 **Si $\mu_{WT}^\infty \neq \mu_\gamma^{real}$:** las dos medidas tienen distinto soporte y las conclusiones anteriores no se aplican directamente.
 
@@ -77,7 +77,7 @@ uniformemente en $\lambda \geq \lambda_0$ (con $N = N(\lambda) \to \infty$).
 
 **Proposición 4** (UD implica que las dos medidas tienen el mismo soporte). Si $J_\lambda$ es uniformemente deslocalizado, entonces:
 
-$$\operatorname{supp}(\mu_{WT}^{(\lambda,N)}) = \operatorname{supp}(\mu_{emp}^{(\lambda,N)}) = \{t_1^{(\lambda)},\ldots,t_N^{(\lambda)}\}.$$
+$$\mathrm{supp}(\mu_{WT}^{(\lambda,N)}) = \mathrm{supp}(\mu_{emp}^{(\lambda,N)}) = \{t_1^{(\lambda)},\ldots,t_N^{(\lambda)}\}.$$
 
 *Prueba.* $\mu_{WT} = \sum_n |c_n|^2\delta_{t_n}$. Si $|c_n|^2 > 0$ para todo $n$ (lo cual se sigue de UD ya que $\sum_n|c_n|^2 = \|e_0\|^2 = 1$ y $|c_n|^2 \leq O(N^{-1+\varepsilon})$ implica que cada $|c_n|^2 \geq c/N$ para alguna constante $c > 0$ para la mayoría de los $n$): el soporte de $\mu_{WT}$ incluye todos los $t_n$. El soporte de $\mu_{emp}$ es exactamente $\{t_n\}$. $\square$
 
@@ -99,14 +99,14 @@ entonces $\mu_{WT}^\infty = \mu_\gamma^{real}$ (las dos medidas límite coincide
 
 *Prueba.* En el ensamble GUE de tamaño $N$: con probabilidad $1 - e^{-cN}$, $\max_n|c_n|^2 \leq C\log N/N$. Luego UD se cumple. En el límite $N\to\infty$: $\max_n|c_n|^2 \to 0$. $\square$
 
-**Corolario 1** (bajo GUE: $\operatorname{spec}(J_\infty) = \{\gamma_n\}$, implicando RH). Bajo la hipótesis GUE para los autovectores de $J_\lambda$:
+**Corolario 1** (bajo GUE: $\mathrm{spec}(J_\infty) = \{\gamma_n\}$, implicando RH). Bajo la hipótesis GUE para los autovectores de $J_\lambda$:
 
 1. $\mu_{WT}^\infty = \mu_\gamma^{real}$ (Proposición 6).
-2. $\operatorname{spec}(J_\infty) = \operatorname{supp}(\mu_{WT}^\infty) = \operatorname{supp}(\mu_\gamma^{real}) = \{\gamma_n\}$ (teorema espectral).
+2. $\mathrm{spec}(J_\infty) = \mathrm{supp}(\mu_{WT}^\infty) = \mathrm{supp}(\mu_\gamma^{real}) = \{\gamma_n\}$ (teorema espectral).
 3. Por Teorema C1 (Doc 17): $\{\text{ceros reales de }C_\infty\} = \{\gamma_n\}$.
 4. Por Teorema 3 (Doc 19): RH.
 
-*Prueba.* La cadena de equivalencias es directa de los pasos 1-4. El único punto no-trivial es el paso 2: que $\operatorname{supp}(\mu_\gamma^{real}) = \{\gamma_n\}$. Esto sigue de que $\mu_\gamma^{real} = \sum_n w_n\delta_{\gamma_n}$ con $w_n > 0$ para todo $n$ (pesos positivos), luego cada $\gamma_n$ está en el soporte. $\square$
+*Prueba.* La cadena de equivalencias es directa de los pasos 1-4. El único punto no-trivial es el paso 2: que $\mathrm{supp}(\mu_\gamma^{real}) = \{\gamma_n\}$. Esto sigue de que $\mu_\gamma^{real} = \sum_n w_n\delta_{\gamma_n}$ con $w_n > 0$ para todo $n$ (pesos positivos), luego cada $\gamma_n$ está en el soporte. $\square$
 
 ---
 
@@ -126,13 +126,13 @@ En particular: si la localización ocurre en $n_0$, y la función $C_\infty$ tie
 
 ## 7. El resultado incondicional: acotación de los pesos de $\mu_{WT}^\infty$
 
-**Teorema 1** (acotación incondicional de los pesos de la medida WT). Sea $w_n^{WT} = \mu_{WT}^\infty(\{\gamma_n\})$ el peso del átomo de $\mu_{WT}^\infty$ en $\gamma_n$ (si $\gamma_n \in \operatorname{spec}(J_\infty)$). Entonces:
+**Teorema 1** (acotación incondicional de los pesos de la medida WT). Sea $w_n^{WT} = \mu_{WT}^\infty(\{\gamma_n\})$ el peso del átomo de $\mu_{WT}^\infty$ en $\gamma_n$ (si $\gamma_n \in \mathrm{spec}(J_\infty)$). Entonces:
 
 $$w_n^{WT} \leq \liminf_\lambda |c_n^{(\lambda)}|^2 \leq C \cdot \|\psi_n^{(\lambda)}\|^2 = C,$$
 
 donde $\psi_n^{(\lambda)}$ son los autovectores normalizados de $J_\lambda$.
 
-Si $\operatorname{spec}(J_\infty) = \{\gamma_n\}_{n\geq 1}$ (completitud espectral): la suma de los pesos debe ser 1:
+Si $\mathrm{spec}(J_\infty) = \{\gamma_n\}_{n\geq 1}$ (completitud espectral): la suma de los pesos debe ser 1:
 
 $$\sum_{n\geq 1} w_n^{WT} = \|e_0\|^2 = 1.$$
 
@@ -167,13 +167,13 @@ Esta función:
 - Tiene picos (crece como $\eta^{-1}$) cuando $t$ está cerca de un cero simple de $C_\infty$.
 - Es $O(1)$ cuando $t$ está lejos de los ceros de $C_\infty$.
 
-En los puntos $t = \gamma_n$ donde $C_\infty(\gamma_n) = 0$ (si la inclusión inversa se satisface): $\Im m_\infty^{WT}(\gamma_n + i0^+) = +\infty$ (polo del m-function). Esto significa que $\mu_{WT}^\infty$ tiene masa positiva en $\gamma_n$ — i.e., $\gamma_n \in \operatorname{spec}_{pp}(J_\infty)$.
+En los puntos $t = \gamma_n$ donde $C_\infty(\gamma_n) = 0$ (si la inclusión inversa se satisface): $\Im m_\infty^{WT}(\gamma_n + i0^+) = +\infty$ (polo del m-function). Esto significa que $\mu_{WT}^\infty$ tiene masa positiva en $\gamma_n$ — i.e., $\gamma_n \in \mathrm{spec}_{pp}(J_\infty)$.
 
 *Prueba.* El comportamiento de la parte imaginaria de $C_\infty'/C_\infty$ en un cero simple $\gamma_n$ de $C_\infty$: $C_\infty(z) \approx C_\infty'(\gamma_n)(z-\gamma_n)$ cerca de $\gamma_n$. Luego $C_\infty'(z)/C_\infty(z) \approx 1/(z-\gamma_n)$, cuya parte imaginaria $\Im(1/(t+i\eta - \gamma_n)) = -\eta/((t-\gamma_n)^2+\eta^2) \to -\pi\delta(t-\gamma_n)$ cuando $\eta\to 0$. $\square$
 
-**Conclusión de la Proposición 9.** Si (Inc. Inv.) se satisface — es decir, $C_\infty(\gamma_n) = 0$ para todos los $\gamma_n$ — entonces $\mu_{WT}^\infty$ tiene masa positiva en cada $\gamma_n$. Luego $\{\gamma_n\} \subseteq \operatorname{spec}_{pp}(J_\infty) \subseteq \operatorname{spec}(J_\infty)$.
+**Conclusión de la Proposición 9.** Si (Inc. Inv.) se satisface — es decir, $C_\infty(\gamma_n) = 0$ para todos los $\gamma_n$ — entonces $\mu_{WT}^\infty$ tiene masa positiva en cada $\gamma_n$. Luego $\{\gamma_n\} \subseteq \mathrm{spec}_{pp}(J_\infty) \subseteq \mathrm{spec}(J_\infty)$.
 
-**Inversamente:** Si $\gamma_n \in \operatorname{spec}_{pp}(J_\infty)$ (i.e., $\mu_{WT}^\infty(\{\gamma_n\}) > 0$): por EF2, $m_\infty^{WT}$ tiene un polo en $\gamma_n$, luego $C_\infty(\gamma_n) = 0$. Esto da (Inc. Inv.) — PERO usando la Weyl-Titchmarsh m-function, no la empírica.
+**Inversamente:** Si $\gamma_n \in \mathrm{spec}_{pp}(J_\infty)$ (i.e., $\mu_{WT}^\infty(\{\gamma_n\}) > 0$): por EF2, $m_\infty^{WT}$ tiene un polo en $\gamma_n$, luego $C_\infty(\gamma_n) = 0$. Esto da (Inc. Inv.) — PERO usando la Weyl-Titchmarsh m-function, no la empírica.
 
 ---
 
@@ -183,7 +183,7 @@ En los puntos $t = \gamma_n$ donde $C_\infty(\gamma_n) = 0$ (si la inclusión in
 
 (i) (Inc. Inv.): $\Xi(\gamma_n) = 0$ para $\gamma_n \in \mathbb{R}$ $\implies$ $C_\infty(\gamma_n) = 0$.
 
-(ii) $\{\gamma_n\} \subseteq \operatorname{spec}_{pp}(J_\infty)$ (todos los $\gamma_n$ son eigenvalores de $J_\infty$).
+(ii) $\{\gamma_n\} \subseteq \mathrm{spec}_{pp}(J_\infty)$ (todos los $\gamma_n$ son eigenvalores de $J_\infty$).
 
 (iii) $\mu_{WT}^\infty(\{\gamma_n\}) > 0$ para todo $n$ (la medida de Weyl-Titchmarsh tiene masa en cada $\gamma_n$).
 
@@ -199,7 +199,7 @@ En los puntos $t = \gamma_n$ donde $C_\infty(\gamma_n) = 0$ (si la inclusión in
 
 ## 10. El muro final: la relación entre $\mu_{WT}^\infty$ y $\mu_{emp}^\infty$
 
-**Proposición 11** (condición suficiente para $\mu_{WT}^\infty = \mu_{emp}^\infty$). Sea $G_N(z) = (1/N)\operatorname{Tr}(J_\lambda^N - z)^{-1} = m_\lambda^{emp}(z)$ y $F_N(z) = \langle e_0, (J_\lambda^N - z)^{-1}e_0\rangle = m_\lambda^{WT}(z)$. Entonces:
+**Proposición 11** (condición suficiente para $\mu_{WT}^\infty = \mu_{emp}^\infty$). Sea $G_N(z) = (1/N)\mathrm{Tr}(J_\lambda^N - z)^{-1} = m_\lambda^{emp}(z)$ y $F_N(z) = \langle e_0, (J_\lambda^N - z)^{-1}e_0\rangle = m_\lambda^{WT}(z)$. Entonces:
 
 $$G_N(z) - F_N(z) = \frac{1}{N}\sum_{j=1}^N\langle e_j, (J-z)^{-1}e_j\rangle - \langle e_0, (J-z)^{-1}e_0\rangle = \frac{1}{N}\sum_{j=1}^N [R_{jj}(z) - R_{00}(z)],$$
 
@@ -227,7 +227,7 @@ implica RH.
 
 $$\text{RH} \iff \lim_{n\to\infty}\langle e_0, \psi_n^\infty\rangle = 0 \quad (\text{deslocalización asintótica del vector } e_0 \text{ en la base de autovectores de }J_\infty).$$
 
-*Prueba.* $(\Leftarrow)$: Teorema 3. $(\Rightarrow)$: Bajo RH, $\operatorname{spec}(J_\infty) = \{\gamma_n\}$, la base $\{\psi_n^\infty\}$ es completa en el espacio de Hilbert y $\langle e_0, \psi_n^\infty\rangle \to 0$ por el lema de Riemann-Lebesgue para bases ortonormales en espacio de Hilbert. $\square$
+*Prueba.* $(\Leftarrow)$: Teorema 3. $(\Rightarrow)$: Bajo RH, $\mathrm{spec}(J_\infty) = \{\gamma_n\}$, la base $\{\psi_n^\infty\}$ es completa en el espacio de Hilbert y $\langle e_0, \psi_n^\infty\rangle \to 0$ por el lema de Riemann-Lebesgue para bases ortonormales en espacio de Hilbert. $\square$
 
 ---
 

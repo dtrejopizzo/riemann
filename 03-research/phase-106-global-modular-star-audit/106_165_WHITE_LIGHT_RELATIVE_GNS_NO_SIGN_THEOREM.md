@@ -141,7 +141,7 @@ Proved:
 Still required:
 
 * a source-defined intersection pairing for the pair
-  \((\operatorname{Pic}_{\rm ar},\eta)\) which includes Gamma and the
+  \((\mathrm{Pic}_{\rm ar},\eta)\) which includes Gamma and the
   polar plane before renormalization;
 * a Hodge-index statement for that pairing whose primitive part is the
   finite Rosati form of 106.163.

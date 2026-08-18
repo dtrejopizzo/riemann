@@ -27,7 +27,7 @@ The correct finite space is instead
 \]
 
 where \(P_T\) is the exact Tate orthogonal projector.  Under the verified
-nondegeneracy condition \(L_N\cap\operatorname {Ran}M^*=0\),
+nondegeneracy condition \(L_N\cap\mathrm{Ran}\,M^*=0\),
 \(\dim W_N=N\), and
 
 \[
@@ -99,8 +99,8 @@ Its Gram matrix is explicit:
 \]
 
 It is positive definite precisely when
-\(L_N\cap\operatorname {Ran}M^*=0\).  In the present problem
-\(\operatorname {Ran}M^*=\operatorname {span}(e^{-t/2},e^{t/2})\),
+\(L_N\cap\mathrm{Ran}\,M^*=0\).  In the present problem
+\(\mathrm{Ran}\,M^*=\mathrm{span}(e^{-t/2},e^{t/2})\),
 and no nonzero linear combination of these exponentials is a polynomial
 on an interval.  Hence (1.6) is strictly positive for every finite \(N\).
 
@@ -139,7 +139,7 @@ Consequently \(y\perp W_N\) if and only if \(y\perp L_N\), proving
 
 Work now in the Hilbert space \(H_0=\mathcal P_T\).  Let \(A\) be the
 self-adjoint operator associated with the closed primitive quadratic form,
-and assume \(W=\operatorname {Ran}S\subset\operatorname {Dom}A\), with
+and assume \(W=\mathrm{Ran}\,S\subset\mathrm{Dom}\,A\), with
 \(S:\mathbb C^N\to H_0\) injective.  Put
 
 \[
@@ -157,7 +157,7 @@ For \(x=Sc\in W\) and \(y\in QH_0\), completion of the square gives
 \[
 \begin{aligned}
  \langle A(x+y),x+y\rangle
- &\ge c^*Bc+2\operatorname {Re}\langle QASc,y\rangle
+ &\ge c^*Bc+2\mathrm{Re}\,\langle QASc,y\rangle
        +\delta\|y\|^2\\
  &\ge c^*Bc-\delta^{-1}\|QASc\|^2.                  \tag{3.3}
 \end{aligned}

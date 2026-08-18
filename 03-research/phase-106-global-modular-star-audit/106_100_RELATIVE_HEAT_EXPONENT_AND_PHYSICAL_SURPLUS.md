@@ -28,7 +28,7 @@ There is a positive injective trace-class operator \(V\) on \(\mathscr C\)
 for which
 
 \[
- \Theta_V(t)=\operatorname {Tr}
+ \Theta_V(t)=\mathrm{Tr}
  \bigl(e^{-tS}-e^{-t(S+V)}\bigr),\qquad t>0,          \tag{3}
 \]
 
@@ -61,7 +61,7 @@ every \(u_j\) in the heat core.  Define
 Then \(V\geq0\), \(\ker V=\{0\}\), and
 
 \[
- \|V\|_1=\operatorname {Tr}V=1.                    \tag{6}
+ \|V\|_1=\mathrm{Tr}\,V=1.                    \tag{6}
 \]
 
 The particular weights \(2^{-j}\) are immaterial; any strictly positive
@@ -80,8 +80,8 @@ bounded, the Duhamel derivative in trace norm gives
 Cyclicity of the trace yields
 
 \[
- \frac{d}{ds}\operatorname {Tr}_{\rm rel}e^{-tS_s}
- =-t\operatorname {Tr}(V e^{-tS_s}).               \tag{8}
+ \frac{d}{ds}\mathrm{Tr}_{\rm rel}e^{-tS_s}
+ =-t\mathrm{Tr}(V e^{-tS_s}).               \tag{8}
 \]
 
 Here only the difference of two heat operators is traced; (7) proves that
@@ -91,7 +91,7 @@ this difference is trace class.  Integrating (8) in \(s\) proves
 \boxed{
  \begin{aligned}
  \Theta_V(t)
- &=t\int_0^1\operatorname {Tr}(V e^{-tS_s})\,ds\\
+ &=t\int_0^1\mathrm{Tr}(V e^{-tS_s})\,ds\\
  &=t\int_0^1
  \bigl\|e^{-tS_s/2}V^{1/2}\bigr\|_{\mathfrak S_2}^2\,ds
  \geq0.
@@ -160,7 +160,7 @@ cluster \(P_s\) satisfies
  \sup\sigma\!\left((A+sV)|_{P_s\mathscr C}\right)
  \leq\alpha+c_1s,
  \qquad
- \operatorname {Tr}(V P_s)\geq c_2.                \tag{15}
+ \mathrm{Tr}(V P_s)\geq c_2.                \tag{15}
 \]
 
 The contribution of this cluster to (9), integrated over
@@ -195,7 +195,7 @@ This proves the reverse implication in (4).
 Put
 
 \[
- a_s(t)=\operatorname {Tr}(V e^{-tS_s}),
+ a_s(t)=\mathrm{Tr}(V e^{-tS_s}),
  \qquad A_V(t)=\int_0^1a_s(t)\,ds,
  \qquad \Theta_V(t)=tA_V(t).                       \tag{19}
 \]
@@ -207,15 +207,15 @@ quotient
  \boxed{
  -\frac{d}{dt}\log\frac{\Theta_V(t)}t
  =\frac{\displaystyle\int_0^1
-       \operatorname {Tr}(V S_s e^{-tS_s})\,ds}
+       \mathrm{Tr}(V S_s e^{-tS_s})\,ds}
       {\displaystyle\int_0^1
-       \operatorname {Tr}(V e^{-tS_s})\,ds}.}       \tag{20}
+       \mathrm{Tr}(V e^{-tS_s})\,ds}.}       \tag{20}
 \]
 
 Both traces have positive Hilbert--Schmidt realizations.  For example,
 
 \[
- \operatorname {Tr}(V S_s e^{-tS_s})
+ \mathrm{Tr}(V S_s e^{-tS_s})
  =\bigl\|S_s^{1/2}e^{-tS_s/2}V^{1/2}
    \bigr\|_{\mathfrak S_2}^2.                     \tag{21}
 \]
@@ -224,7 +224,7 @@ Subtracting the target value \(1\) from (20) leaves the numerator
 
 \[
  \int_0^1
-  \operatorname {Tr}\!\left[
+  \mathrm{Tr}\,\!\left[
   V^{1/2}(A-\tfrac12I+sV)e^{-tS_s}V^{1/2}
   \right]ds.                                      \tag{22}
 \]
@@ -245,8 +245,8 @@ and put
 
 \[
  \begin{aligned}
- E_V(t)&=\int_0^1\operatorname {Tr}(L\Gamma_{s,t})\,ds,\\
- B_V(t)&=\int_0^1s\operatorname {Tr}(V\Gamma_{s,t})\,ds.
+ E_V(t)&=\int_0^1\mathrm{Tr}(L\Gamma_{s,t})\,ds,\\
+ B_V(t)&=\int_0^1s\mathrm{Tr}(V\Gamma_{s,t})\,ds.
  \end{aligned}                                      \tag{22b}
 \]
 
@@ -287,12 +287,12 @@ These values are independent of the spectral decomposition of \(\Gamma\)
 because they are traces of the associated closed positive forms.
 
 To estimate \(B_V\), set
-\(g_s(t)=\operatorname {Tr}(V e^{-tS_s})\).
+\(g_s(t)=\mathrm{Tr}(V e^{-tS_s})\).
 Duhamel's formula gives
 
 \[
  -\partial_s g_s(t)=\int_0^t
- \operatorname {Tr}\!\left(
+ \mathrm{Tr}\,\!\left(
  V e^{-(t-r)S_s}V e^{-rS_s}\right)dr.
 \]
 
@@ -310,7 +310,7 @@ spectral measure therefore gives
 
 \[
  -\partial_s g_s(t)
- \geq t\operatorname {Tr}(V\Gamma_{s,t}).
+ \geq t\mathrm{Tr}(V\Gamma_{s,t}).
 \]
 
 Integration by parts in \(s\) now yields
@@ -335,7 +335,7 @@ The positive measure
 
 \[
  d\nu_V(\lambda)
- =\int_0^1\operatorname {Tr}
+ =\int_0^1\mathrm{Tr}
  \bigl(V^{1/2}E_{S_s}(d\lambda)V^{1/2}\bigr)\,ds
 \]
 
@@ -392,7 +392,7 @@ Every raw heat moment is nonnegative:
 
 \[
  M_k(t):=(-1)^kA_V^{(k)}(t)
- =\int_0^1\operatorname {Tr}
+ =\int_0^1\mathrm{Tr}
    (V S_s^k e^{-tS_s})\,ds\geq0,
  \qquad k\geq0.                                    \tag{24a}
 \]

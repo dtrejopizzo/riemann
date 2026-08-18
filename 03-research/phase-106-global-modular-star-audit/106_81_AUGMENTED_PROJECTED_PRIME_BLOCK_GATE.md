@@ -74,7 +74,7 @@ The conclusion is two-sided.
 Let
 
 \[
- V_{M-1}=\operatorname{span}\{\phi_1,\ldots,\phi_{M-1}\}
+ V_{M-1}=\mathrm{span}\,\{\phi_1,\ldots,\phi_{M-1}\}
  \subset V_M
 \]
 
@@ -411,7 +411,7 @@ in the projection integral, using
 \(\mu_{4,p}/\mu_{2,p}=O(p^{-1})\), and the exact identity
 
 \[
- 2\chi_z'(t_p)=-\operatorname {sech}(t_p/2)A_p(z).
+ 2\chi_z'(t_p)=-\mathrm{sech}(t_p/2)A_p(z).
 \]
 
 The normalization is exactly (24), up to the additive error (26).

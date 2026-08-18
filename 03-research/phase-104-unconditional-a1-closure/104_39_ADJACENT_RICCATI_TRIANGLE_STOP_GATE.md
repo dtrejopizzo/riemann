@@ -290,7 +290,7 @@ Como \(g_{n+1}=g_n+\phi_n\), se tiene
 \]
 
 Para \(\mathsf M=\kappa\mathsf A-\mathsf Q_0\), la compresión sobre
-\(\operatorname{span}\{g_n,\phi_n\}\) tiene diagonal \(H_n,D_n\) y
+\(\mathrm{span}\,\{g_n,\phi_n\}\) tiene diagonal \(H_n,D_n\) y
 determinante, multiplicado por cuatro,
 
 \[

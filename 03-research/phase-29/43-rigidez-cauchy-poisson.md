@@ -112,7 +112,7 @@ $$F(t+i\eta) > 0 \quad \forall t \in \mathbb{R}$$
 
 *Prueba.* El núcleo $(y+\eta)/[(y+\eta)^2+(t-x)^2] > 0$ para $y+\eta > 0$ (que se cumple para $y > 0$, $\eta > 0$). La misma prueba que Teorema 3.1 con $t_0 = t$. $\square$
 
-**Corolario 5.4 (Principio del Mínimo).** Bajo RH ($\mu_{\mathrm{off}} = 0$): $F \equiv 0$. Sin RH ($\mu_{\mathrm{off}} \neq 0$): $F(z) > 0$ para todo $z$ con $\operatorname{Im}(z) \geq 0$, con la única excepción de los puntos del borde donde $\mathcal{P}[\mu_{\mathrm{off}}](t) = 0$ — pero por Teorema 3.1, no existen tales puntos. Por lo tanto: $F(z) > 0$ en TODO $\{z: \operatorname{Im}(z) \geq 0\}$ si $\mu_{\mathrm{off}} \neq 0$.
+**Corolario 5.4 (Principio del Mínimo).** Bajo RH ($\mu_{\mathrm{off}} = 0$): $F \equiv 0$. Sin RH ($\mu_{\mathrm{off}} \neq 0$): $F(z) > 0$ para todo $z$ con $\mathrm{Im}(z) \geq 0$, con la única excepción de los puntos del borde donde $\mathcal{P}[\mu_{\mathrm{off}}](t) = 0$ — pero por Teorema 3.1, no existen tales puntos. Por lo tanto: $F(z) > 0$ en TODO $\{z: \mathrm{Im}(z) \geq 0\}$ si $\mu_{\mathrm{off}} \neq 0$.
 
 **Observación 5.5 (No hay ceros de frontera sin RH).** Si RH es falsa, entonces $F(t) = C_\infty(t)/2 > 0$ para todo $t\in\mathbb{R}$. En particular, $C_\infty(\gamma_n) > 0$ para todo $n$ — lo que es Inc. Inv. fallida. El Corolario 5.4 confirma que si RH falla, la función $F$ no tiene ceros en ningún punto del semiplano cerrado.
 
@@ -188,7 +188,7 @@ Esta es la convergencia de la serie de Dirichlet condicionalmente convergente al
 
 $$D_\lambda(\gamma_{n_0}) = 2\sum_{m\leq\lambda^2}\frac{\Lambda(m)}{\sqrt{m}}\cos(\gamma_{n_0}\log m) = w(\gamma_{n_0}) - C_\lambda(\gamma_{n_0})$$
 
-El "error" $C_\lambda(\gamma_{n_0})$ se controla via los ceros de $\zeta$ en la fórmula de Hadamard — específicamente via la suma $\sum_\rho \operatorname{Re}[1/(\rho_{n_0}-\rho)]$. Esta suma se anula bajo RH (Teorema 4, Doc 39). Probar que se anula incondicionalmente requiere excluir ceros off-críticos — RH misma.
+El "error" $C_\lambda(\gamma_{n_0})$ se controla via los ceros de $\zeta$ en la fórmula de Hadamard — específicamente via la suma $\sum_\rho \mathrm{Re}[1/(\rho_{n_0}-\rho)]$. Esta suma se anula bajo RH (Teorema 4, Doc 39). Probar que se anula incondicionalmente requiere excluir ceros off-críticos — RH misma.
 
 **Diagnóstico 8.3 (La barrera es sólida).** El Teorema de Rigidez 3.1 comprime la dificultad de RH a un punto, pero no la elimina. Para superar la barrera se necesita:
 
@@ -229,26 +229,26 @@ $$\liminf_{n\to\infty} C_\infty(\gamma_n) = 0$$
 
 La extensión armónica $F(z) = \mathcal{P}[\mu_{\mathrm{off}}](z)$ tiene una representación analítica via la función de Herglotz.
 
-**Definición 10.1 (Función de Herglotz).** Define la función analítica en $\mathbb{H}^+ = \{z: \operatorname{Im}(z) > 0\}$:
+**Definición 10.1 (Función de Herglotz).** Define la función analítica en $\mathbb{H}^+ = \{z: \mathrm{Im}(z) > 0\}$:
 $$H_{\mathrm{off}}(z) := \int_{\mathbb{H}} \frac{1}{z - \overline{w}}\,d\mu_{\mathrm{off}}(w)$$
 
-donde $\overline{w} = x_0 - iy_0$ está en $\mathbb{H}^- = \{w: \operatorname{Im}(w) < 0\}$.
+donde $\overline{w} = x_0 - iy_0$ está en $\mathbb{H}^- = \{w: \mathrm{Im}(w) < 0\}$.
 
 **Proposición 10.2 (Propiedades de $H_{\mathrm{off}}$).** Con $z = t + i\eta$ ($\eta > 0$) y $w_0 = x_0+iy_0$ ($y_0 > 0$):
 $$H_{\mathrm{off}}(z) = \int_{\mathbb{H}} \frac{1}{(t-x_0)+i(\eta+y_0)}\,d\mu_{\mathrm{off}}(x_0,y_0)$$
 
 1. $H_{\mathrm{off}}$ es analítica en $\mathbb{H}^+$ (singularidades en $\overline{\mathcal{Z}_{\mathrm{off}}} \subset \mathbb{H}^-$).
-2. $\operatorname{Im}[H_{\mathrm{off}}(z)] < 0$ para $z \in \mathbb{H}^+$: $H_{\mathrm{off}}$ mapea $\mathbb{H}^+$ en $\mathbb{H}^-$ (anti-Herglotz).
-3. $\operatorname{Re}[H_{\mathrm{off}}(t)] = \mathcal{P}[\mu_{\mathrm{off}}](t) = C_\infty(t)/2$ para $t \in \mathbb{R}$ (valor frontera).
+2. $\mathrm{Im}[H_{\mathrm{off}}(z)] < 0$ para $z \in \mathbb{H}^+$: $H_{\mathrm{off}}$ mapea $\mathbb{H}^+$ en $\mathbb{H}^-$ (anti-Herglotz).
+3. $\mathrm{Re}[H_{\mathrm{off}}(t)] = \mathcal{P}[\mu_{\mathrm{off}}](t) = C_\infty(t)/2$ para $t \in \mathbb{R}$ (valor frontera).
 
-*Prueba.* (1) El polo $1/(z-\overline{w_0})$ tiene $\overline{w_0} \in \mathbb{H}^-$, así que no hay singularidades para $z\in\mathbb{H}^+$. (2) $\operatorname{Im}[1/((t-x_0)+i(\eta+y_0))] = -(\eta+y_0)/[(t-x_0)^2+(\eta+y_0)^2] < 0$. (3) $\operatorname{Re}[1/((t-x_0)+iy_0)] = y_0/[y_0^2+(t-x_0)^2] = P_{y_0}(t-x_0)$. $\square$
+*Prueba.* (1) El polo $1/(z-\overline{w_0})$ tiene $\overline{w_0} \in \mathbb{H}^-$, así que no hay singularidades para $z\in\mathbb{H}^+$. (2) $\mathrm{Im}[1/((t-x_0)+i(\eta+y_0))] = -(\eta+y_0)/[(t-x_0)^2+(\eta+y_0)^2] < 0$. (3) $\mathrm{Re}[1/((t-x_0)+iy_0)] = y_0/[y_0^2+(t-x_0)^2] = P_{y_0}(t-x_0)$. $\square$
 
 **Proposición 10.3 (Inc. Inv. como condición sobre $H_{\mathrm{off}}$).** Inc. Inv. equivale a:
-$$\operatorname{Re}[H_{\mathrm{off}}(\gamma_n)] = 0 \quad \forall n \iff H_{\mathrm{off}}(\gamma_n) \in i\mathbb{R} \quad \forall n$$
+$$\mathrm{Re}[H_{\mathrm{off}}(\gamma_n)] = 0 \quad \forall n \iff H_{\mathrm{off}}(\gamma_n) \in i\mathbb{R} \quad \forall n$$
 
 Es decir, $H_{\mathrm{off}}$ toma valores puramente imaginarios en todos los ceros de $\Xi$.
 
-**Proposición 10.4 (Rigidez de la parte real).** Si $\operatorname{Re}[H_{\mathrm{off}}(t_0)] = 0$ para algún $t_0\in\mathbb{R}$, entonces por el Teorema 3.1: $\mu_{\mathrm{off}} = 0$, y $H_{\mathrm{off}} \equiv 0$.
+**Proposición 10.4 (Rigidez de la parte real).** Si $\mathrm{Re}[H_{\mathrm{off}}(t_0)] = 0$ para algún $t_0\in\mathbb{R}$, entonces por el Teorema 3.1: $\mu_{\mathrm{off}} = 0$, y $H_{\mathrm{off}} \equiv 0$.
 
 *Interpretación.* La condición $H_{\mathrm{off}}(\gamma_n) \in i\mathbb{R}$ es como pedir que una función analítica tome valores en una recta al evaluarla en un conjunto discreto. Esto es una condición de "tipo Schwarz reflection" — pero el conjunto $\{\gamma_n\}$ es DISCRETO (no una curva real-analítica), lo que previene la aplicación directa del principio de Schwarz.
 

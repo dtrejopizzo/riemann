@@ -12,7 +12,7 @@ $$\xi(s) = e^{A+Bs}\prod_\rho \left(1-\frac{s}{\rho}\right)e^{s/\rho}$$
 
 donde la suma recorre todos los ceros no-triviales, con pares conjugados. El logaritmo en la línea crítica $s = 1/2+it$:
 $$\log|\zeta(1/2+it)| = \log|\xi(1/2+it)| - \log|\tfrac{s(s-1)}{2}\pi^{-s/2}\Gamma(s/2)|_{s=1/2+it}$$
-$$= \operatorname{Re}\sum_\rho \left[\log\left(1-\frac{1/2+it}{\rho}\right) + \frac{1/2+it}{\rho}\right] + O(1)$$
+$$= \mathrm{Re}\,\sum_\rho \left[\log\left(1-\frac{1/2+it}{\rho}\right) + \frac{1/2+it}{\rho}\right] + O(1)$$
 
 ### Contribución exacta de la órbita $\mathcal{O}_j$ a $\log|\zeta(1/2+it)|$
 

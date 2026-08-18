@@ -114,9 +114,9 @@ independent of $A$; prove richness as density of this fixed core, then extend by
 Connes' Step 1 of §6.)
 
 ### D. D4 $\det_2$ anomaly imprecise *(accepted, fix applied)*
-$\det_2((I+A)(I+B))=\det_2(I+A)\det_2(I+B)e^{-\operatorname{Tr}(AB)}$; the block-Feshbach anomaly is
-**not** simply $\operatorname{Tr}(\beta\alpha^{-1}\beta^*)$ unless checked in the relevant Schatten class.
-\textbf{Fix:} D4 anomaly stated as the genuine $e^{-\operatorname{Tr}(AB)}$ correction with the Feshbach
+$\det_2((I+A)(I+B))=\det_2(I+A)\det_2(I+B)e^{-\mathrm{Tr}(AB)}$; the block-Feshbach anomaly is
+**not** simply $\mathrm{Tr}(\beta\alpha^{-1}\beta^*)$ unless checked in the relevant Schatten class.
+\textbf{Fix:} D4 anomaly stated as the genuine $e^{-\mathrm{Tr}(AB)}$ correction with the Feshbach
 blocks in $\mathfrak S_2$, to be verified there; flagged, not hand-waved.
 
 ### E. D8.3 false lower bound *(accepted, fix applied)*
@@ -128,7 +128,7 @@ kernel — so the topology must carry them.)
 ### F. D9 false inference *(accepted — important — fix applied)*
 $D_\infty^\circ=\Xi$ does **not** imply the *source* derivative of the limit germ is $\Xi'/\Xi$:
 **derivative in $V$ is not derivative in $z$.** My D9 proof used exactly this false step. \textbf{Fix:}
-the endpoint identification $\operatorname{Pol}(d_V^2\log\mathcal D_\Xi^{\mathrm{src}}(0))=\mathsf
+the endpoint identification $\mathrm{Pol}(d_V^2\log\mathcal D_\Xi^{\mathrm{src}}(0))=\mathsf
 K_\Xi^{\mathrm{G5}}$ must come from **D8.5b itself**, not from the scalar G3 slice. This is precisely why
 D8.5b carries the RH-strength: D9 is *not* free.
 
@@ -233,7 +233,7 @@ Entrywise, hence matrix-valued. $\square$
 \begin{corollary}[D8.5b-ii is trivial under genuine convergence]
 If the holomorphic resolvents $G_P^\circ$ converge locally uniformly on $D(a,r)\setminus\{a\}$ to
 $G_\Xi^{\mathrm G5}$ for $a\in\C^+$ (so $\overline{D(a,r)}\subset\C^+$), then $G_\Xi^{\mathrm G5}$ has no
-pole at $a$. Same in $\C^-$. Hence $\operatorname{sq}_-(G_\Xi^{\mathrm G5})=0$, RH.
+pole at $a$. Same in $\C^-$. Hence $\mathrm{sq}_-(G_\Xi^{\mathrm G5})=0$, RH.
 \end{corollary}
 
 \textbf{So D8.5b-ii is not RH-strength.} The earlier "outcome (ii)" verdict is withdrawn.
@@ -406,7 +406,7 @@ family + identity theorem), it converges locally uniformly on all of `Ω_-` to a
 `G_Ξ^{G5}` has no off-real pole in `Ω_-`; by the `z ↦ −z` symmetry (functional equation), none in `Ω_+`.
 Hence
 \[
-   \operatorname{sq}_-(G_\Xi^{\mathrm G5}) = 0,
+   \mathrm{sq}_-(G_\Xi^{\mathrm G5}) = 0,
 \]
 and by G5,
 \[
@@ -734,7 +734,7 @@ the source channel (it inherits the resolvent identity on the channel), and \emp
 \[
    \|G_P^\circ(z)\|\le\frac{\max_\alpha\|\phi_\alpha\|^2}{|\Im z|},
 \]
-uniformly in $P$, and $G_P^\circ$ is matrix-Herglotz ($\Im G_P^\circ(z)\cdot\operatorname{sgn}\Im z
+uniformly in $P$, and $G_P^\circ$ is matrix-Herglotz ($\Im G_P^\circ(z)\cdot\mathrm{sgn}\,\Im z
 \succeq0$).
 \end{theorem}
 \emph{Proof (with the explicit Schur–resolvent identity, Connes R3.A).} Split $\mathcal H_P=\C H\oplus
@@ -874,7 +874,7 @@ limit, so $G_\Xi^{\mathrm G5}$ has no pole in $\Omega_-$;
 \item (Check 5) since the channel is residue-detecting, the \emph{full} $G_\Xi^{\mathrm G5}$ has no
 off-real pole in $\Omega_-$; by symmetry, none in $\Omega_+$.
 \end{enumerate}
-Hence $\operatorname{sq}_-(G_\Xi^{\mathrm G5})=0$, and by D0/G5,
+Hence $\mathrm{sq}_-(G_\Xi^{\mathrm G5})=0$, and by D0/G5,
 \[
    \#\{\rho:\zeta(\rho)=0,\ \Re\rho\ne\tfrac12\}=0,\qquad\textbf{RH.}
 \]
@@ -992,7 +992,7 @@ A Hermitian kernel $\mathsf K$ on a domain $\Omega$ (matrix- or scalar-valued) h
 $\kappa$ negative squares} if for every finite $z_1,\dots,z_m\in\Omega$ and vectors $u_1,\dots,u_m$ the
 Gram matrix $G_{ij}=\langle\mathsf K(z_i,z_j)u_j,u_i\rangle$ has at most $\kappa$ strictly negative
 eigenvalues; \textbf{exactly $\kappa$} if some finite Gram matrix attains $\kappa$. Write
-$\operatorname{sq}_-(\mathsf K)=\kappa$.
+$\mathrm{sq}_-(\mathsf K)=\kappa$.
 \end{definition}
 
 \begin{definition}[the fixed endpoint kernel — sign corrected, Connes R1.A]\label{def:KG5}
@@ -1013,16 +1013,16 @@ Kreĭn–Langer negative squares — as required.
 \end{definition}
 
 \begin{proposition}[G5 restated]\label{prop:g5}
-$\operatorname{sq}_-\!\big(\mathsf K_\Xi^{\mathrm{G5}}\big)=\#\{\rho:\zeta(\rho)=0,\ \Re\rho\ne\tfrac12\}
+$\mathrm{sq}_-\!\big(\mathsf K_\Xi^{\mathrm{G5}}\big)=\#\{\rho:\zeta(\rho)=0,\ \Re\rho\ne\tfrac12\}
 =:\kappa(\Xi)$, with the standard counting (functional-equation/conjugate symmetry collapses each
 off-line quadruple appropriately). This is the Kreĭn–Langer index of $M_\Xi$; it is the *given* G5
 (Phase 64, E108). RH $\Leftrightarrow\kappa(\Xi)=0$.
 \end{proposition}
 
 \begin{redflag}
-The target theorem D9 is $\displaystyle\lim_P\operatorname{Short}_{H_P}\mathsf K_{A_P}=
+The target theorem D9 is $\displaystyle\lim_P\mathrm{Short}_{H_P}\mathsf K_{A_P}=
 \mathsf K_\Xi^{\mathrm{G5}}$, with the right-hand side the object of Def.~\ref{def:KG5}, fixed here.
-\textbf{It is forbidden} to set $\mathsf K_\Xi:=\lim_P\operatorname{Short}_{H_P}\mathsf K_{A_P}$ and then
+\textbf{It is forbidden} to set $\mathsf K_\Xi:=\lim_P\mathrm{Short}_{H_P}\mathsf K_{A_P}$ and then
 assert its index is $\kappa(\Xi)$; D9 must prove equality with the pre-fixed Def.~\ref{def:KG5}.
 \end{redflag}
 
@@ -1149,14 +1149,14 @@ definitional error in the package surfaces here first.
 
 $\mathrm{Herm}_n$ = $n\times n$ complex Hermitian matrices. For $G\in\mathrm{Herm}_n$, $\nu_-(G),
 \nu_0(G),\nu_+(G)$ are the numbers of negative, zero, positive eigenvalues (the inertia
-$\operatorname{In}(G)=(\nu_+,\nu_0,\nu_-)$). For a block form with a distinguished positive line we write
+$\mathrm{In}(G)=(\nu_+,\nu_0,\nu_-)$). For a block form with a distinguished positive line we write
 \[
    G=\begin{pmatrix} a & b^*\\ b & C\end{pmatrix},\qquad a>0\ (\text{scalar, the pole block}),\ \
    C\in\mathrm{Herm}_{n-1},\ b\in\C^{n-1}.
 \]
 The \textbf{Schur complement} (Feshbach short) of the pole block is
 \[
-   \operatorname{Short}_a(G)\ :=\ C-b\,a^{-1}b^*\ \in\ \mathrm{Herm}_{n-1}.
+   \mathrm{Short}_a(G)\ :=\ C-b\,a^{-1}b^*\ \in\ \mathrm{Herm}_{n-1}.
 \]
 
 ---
@@ -1166,23 +1166,23 @@ The \textbf{Schur complement} (Feshbach short) of the pole block is
 \begin{theorem}[Haynsworth inertia additivity]\label{thm:haynsworth}
 If $a>0$ then
 \[
-   \operatorname{In}(G)=\operatorname{In}(a)+\operatorname{In}\big(\operatorname{Short}_a(G)\big)
-   =(1,0,0)+\operatorname{In}\big(C-ba^{-1}b^*\big).
+   \mathrm{In}(G)=\mathrm{In}(a)+\mathrm{In}\,\big(\mathrm{Short}_a(G)\big)
+   =(1,0,0)+\mathrm{In}\,\big(C-ba^{-1}b^*\big).
 \]
-In particular $\nu_-(G)=\nu_-\!\big(\operatorname{Short}_a(G)\big)$ and $\nu_+(G)=1+\nu_+\!\big(
-\operatorname{Short}_a(G)\big)$.
+In particular $\nu_-(G)=\nu_-\!\big(\mathrm{Short}_a(G)\big)$ and $\nu_+(G)=1+\nu_+\!\big(
+\mathrm{Short}_a(G)\big)$.
 \end{theorem}
 \emph{Proof.} Congruence by the block-triangular $T=\begin{psmallmatrix}1&0\\-ba^{-1}&I\end{psmallmatrix}$:
 \[
    T\,G\,T^*=\begin{pmatrix}a&0\\0&C-ba^{-1}b^*\end{pmatrix}.
 \]
-Sylvester's law of inertia (congruence preserves $\operatorname{In}$) gives
-$\operatorname{In}(G)=\operatorname{In}(a)\oplus\operatorname{In}(C-ba^{-1}b^*)$. With $a>0$,
-$\operatorname{In}(a)=(1,0,0)$. $\square$
+Sylvester's law of inertia (congruence preserves $\mathrm{In}$) gives
+$\mathrm{In}(G)=\mathrm{In}(a)\oplus\mathrm{In}(C-ba^{-1}b^*)$. With $a>0$,
+$\mathrm{In}(a)=(1,0,0)$. $\square$
 
 \begin{corollary}[positive pole shorting does not increase the negative index]\label{cor:shorting}
-For $a>0$, $\ \nu_-\!\big(\operatorname{Short}_a(G)\big)=\nu_-(G)\le\nu_-(G)$. Hence if $G\succeq0$
-(so $\nu_-(G)=0$) then $\operatorname{Short}_a(G)\succeq0$.
+For $a>0$, $\ \nu_-\!\big(\mathrm{Short}_a(G)\big)=\nu_-(G)\le\nu_-(G)$. Hence if $G\succeq0$
+(so $\nu_-(G)=0$) then $\mathrm{Short}_a(G)\succeq0$.
 \end{corollary}
 
 This is the finite-dimensional skeleton of D4/D6: \emph{shorting a positive line cannot create a negative
@@ -1196,12 +1196,12 @@ square.}
 Let, for $R>0$,
 \[
    G_R=\begin{pmatrix}R&\sqrt R\\ \sqrt R&1\end{pmatrix}\succeq0
-   \qquad(\det G_R=R-R=0,\ \operatorname{tr}=R+1>0).
+   \qquad(\det G_R=R-R=0,\ \mathrm{tr}=R+1>0).
 \]
 \textbf{Subtracting} the pole block $R\,e_1e_1^*$ gives
 $\begin{psmallmatrix}0&\sqrt R\\ \sqrt R&1\end{psmallmatrix}$, with determinant $-R<0$, hence
 $\nu_-=1$: a negative square has been \emph{created}. \textbf{Shorting} the pole block gives
-$\operatorname{Short}_R(G_R)=1-(\sqrt R)R^{-1}(\sqrt R)=1-1=0\succeq0$: the index is preserved
+$\mathrm{Short}_R(G_R)=1-(\sqrt R)R^{-1}(\sqrt R)=1-1=0\succeq0$: the index is preserved
 (Cor.~\ref{cor:shorting}).
 \end{proposition}
 \emph{Proof.} Direct computation; $\det\begin{psmallmatrix}0&\sqrt R\\\sqrt R&1\end{psmallmatrix}=-R<0$
@@ -1230,16 +1230,16 @@ and its scalar shadow is $\mathcal D_G^{\mathrm{src}}(0)=\det(I+G)$.
 \nu_-(G')$. \emph{(b)} If $\mathcal D_G^{\mathrm{src}}=\mathcal D_{G'}^{\mathrm{src}}$ as germs at $0$,
 then $G=G'$, hence $\nu_-(G)=\nu_-(G')$.
 \end{proposition}
-\emph{Proof.} (a) Take $n=2$, $G=\operatorname{diag}(1,-\tfrac12)$ and $G'=\operatorname{diag}(0,0)$.
+\emph{Proof.} (a) Take $n=2$, $G=\mathrm{diag}(1,-\tfrac12)$ and $G'=\mathrm{diag}(0,0)$.
 Then $\det(I+G)=(1+1)(1-\tfrac12)=2\cdot\tfrac12=1=\det(I+G')$, while $\nu_-(G)=1\ne0=\nu_-(G')$. The
 scalar determinant, depending only on the product $\prod_i(1+\lambda_i)$, loses the sign pattern of the
-$\lambda_i$. (b) The first variation $d\mathcal D_G^{\mathrm{src}}(0)[V]=\det(I+G)\operatorname{tr}\!
+$\lambda_i$. (b) The first variation $d\mathcal D_G^{\mathrm{src}}(0)[V]=\det(I+G)\mathrm{tr}\,\!
 \big((I+G)^{-1}V\big)$
 determines $(I+G)^{-1}$ as a linear functional on all $V\in\mathrm{Herm}_n$, hence determines $G$;
 $\nu_-$ is then a function of $G$. $\square$
 
 \begin{remark}[the separation mechanism, made precise]
-The map $V\mapsto\operatorname{tr}((I+G)^{-1}V)$ \emph{is} the resolvent, and by polarization the second
+The map $V\mapsto\mathrm{tr}((I+G)^{-1}V)$ \emph{is} the resolvent, and by polarization the second
 variation recovers the two-variable Hermitian form. So the germ sees the whole of $G$, in particular its
 inertia, while $\det(I+G)$ sees only $\prod(1+\lambda_i)$. This is N1 defeated in finite dimensions and
 the template for D2.
@@ -1250,14 +1250,14 @@ the template for D2.
 ## §4. (S3) The positive-pole chart closes the index-$0$ cone
 
 Model the chart of D5 in finite dimensions: to $G$ (with pole block $a>0$) associate
-$\chi(G)=\operatorname{Short}_a(G)\in\mathrm{Herm}_{n-1}$, and topologize by entrywise convergence.
+$\chi(G)=\mathrm{Short}_a(G)\in\mathrm{Herm}_{n-1}$, and topologize by entrywise convergence.
 
 \begin{theorem}[closedness of the PSD cone under shorting limits]\label{thm:closed}
 Let $G^{(k)}\succeq0$ with pole blocks $a^{(k)}>0$, and suppose the shorted matrices converge,
-$\operatorname{Short}_{a^{(k)}}(G^{(k)})\to S$. Then $S\succeq0$; i.e. $\nu_-(S)=0$. More generally if
+$\mathrm{Short}_{a^{(k)}}(G^{(k)})\to S$. Then $S\succeq0$; i.e. $\nu_-(S)=0$. More generally if
 $\nu_-(G^{(k)})\le\kappa$ for all $k$ then $\nu_-(S)\le\kappa$.
 \end{theorem}
-\emph{Proof.} By Cor.~\ref{cor:shorting}, $\nu_-\!\big(\operatorname{Short}_{a^{(k)}}(G^{(k)})\big)
+\emph{Proof.} By Cor.~\ref{cor:shorting}, $\nu_-\!\big(\mathrm{Short}_{a^{(k)}}(G^{(k)})\big)
 =\nu_-(G^{(k)})\le\kappa$. The set $\{M\in\mathrm{Herm}_{n-1}:\nu_-(M)\le\kappa\}$ is closed (it is
 $\{M:\lambda_{\kappa+1}(M)\ge0\}$, and the $(\kappa{+}1)$-st smallest eigenvalue is continuous in $M$).
 The entrywise limit $S$ therefore satisfies $\nu_-(S)\le\kappa$; for $\kappa=0$, $S\succeq0$. $\square$
@@ -1276,8 +1276,8 @@ semicontinuous.
 
 \begin{proposition}[a negative line raises the index]\label{prop:signed}
 Let the pole block be \emph{negative}, $a<0$, $G=\begin{psmallmatrix}a&b^*\\ b&C\end{psmallmatrix}$ with
-$C\succ0$ and $b\ne0$. Then $\operatorname{In}(G)=(\nu_+(\operatorname{Short}_a G),0,1+\nu_-(
-\operatorname{Short}_a G))$ by Haynsworth with $\operatorname{In}(a)=(0,0,1)$; in particular $\nu_-(G)\ge1$.
+$C\succ0$ and $b\ne0$. Then $\mathrm{In}(G)=(\nu_+(\mathrm{Short}_a G),0,1+\nu_-(
+\mathrm{Short}_a G))$ by Haynsworth with $\mathrm{In}(a)=(0,0,1)$; in particular $\nu_-(G)\ge1$.
 Even if every \emph{primitive} increment is positive, a single negative pole line forces
 $\nu_-\ge1$.
 \end{proposition}
@@ -1312,7 +1312,7 @@ load-bearing; template for D10.
 Every later deliverable is the infinite-dimensional / arithmetic lift of one of these five finite facts.
 No definitional error survives Stage 1: in particular, the package uses shorting (not subtraction) and
 relies on the positivity of the pole, both verified here. Proceed to D1 (the analytic substrate that
-makes "$\nu_-$ of a Hermitian matrix" into "$\operatorname{sq}_-$ of a kernel").
+makes "$\nu_-$ of a Hermitian matrix" into "$\mathrm{sq}_-$ of a kernel").
 
 
 ---
@@ -1357,8 +1357,8 @@ half-plane analogue.
 Pontryagin space of negative index $\kappa$ and $\Gamma(z)\in\Pi$ a realization map such that
 $\mathsf K(z,w)=[\Gamma(w),\Gamma(z)]$.
 \end{enumerate}
-The associated index in each chart: $\operatorname{sq}_-(\mathsf K_E)$, $\operatorname{sq}_-(\mathsf N_M)$,
-$\operatorname{sq}_-(\mathsf S)$, $\operatorname{ind}_-\Pi$.
+The associated index in each chart: $\mathrm{sq}_-(\mathsf K_E)$, $\mathrm{sq}_-(\mathsf N_M)$,
+$\mathrm{sq}_-(\mathsf S)$, $\mathrm{ind}_-\Pi$.
 \end{definition}
 
 ---
@@ -1381,8 +1381,8 @@ $E^\#=SE$, $\overline{E^\#(w)}=\overline{S(w)}\,\overline{E(w)}$, giving $E(z)\o
 
 \begin{corollary}\label{cor:hbn}
 A strictly positive scalar gauge $g(z)\overline{g(w)}$ does not change negative squares (congruence of
-every finite Gram matrix by $\operatorname{diag}(g(z_i))$). Hence $\operatorname{sq}_-(\mathsf K_E)=
-\operatorname{sq}_-(\mathsf S)$.
+every finite Gram matrix by $\mathrm{diag}(g(z_i))$). Hence $\mathrm{sq}_-(\mathsf K_E)=
+\mathrm{sq}_-(\mathsf S)$.
 \end{corollary}
 
 This is the gauge morphism of D3, here at the kernel level.
@@ -1399,7 +1399,7 @@ The Nevanlinna function is obtained from the Schur coordinate by the **inverse C
 
 \begin{lemma}[Cayley invariance]\label{lem:ns}
 The Schur kernel and the Nevanlinna kernel of the Cayley-related $S,M$ have equal negative squares:
-$\operatorname{sq}_-(\mathsf S)=\operatorname{sq}_-(\mathsf N_M)$.
+$\mathrm{sq}_-(\mathsf S)=\mathrm{sq}_-(\mathsf N_M)$.
 \end{lemma}
 \emph{Proof.} The Cayley transform is a Möbius map; the corresponding kernel transformation is a
 congruence by the nonvanishing multiplier $(1-S(z))^{-1}$ (equivalently $(M(z)+i)^{-1}$):
@@ -1417,12 +1417,12 @@ matrix (Sylvester, Stage 1 Thm 1.1). $\square$
 We include the classical theorem (statement and proof sketch in full enough form to be self-contained).
 
 \begin{theorem}[Kreĭn–Langer]\label{thm:kl}
-Let $S$ be a generalized Schur function with $\operatorname{sq}_-(\mathsf S)=\kappa<\infty$. Then $S$ has
+Let $S$ be a generalized Schur function with $\mathrm{sq}_-(\mathsf S)=\kappa<\infty$. Then $S$ has
 a unique coprime factorization
 \[
    S=\frac{S_0}{B},\qquad B(z)=\prod_{j=1}^\kappa\frac{z-\alpha_j}{1-\bar\alpha_j z}\ (\,|\alpha_j|<1\,),
 \]
-where $S_0$ is an ordinary Schur function ($\operatorname{sq}_-=0$, i.e. $\|S_0\|_\infty\le1$) and $B$ is
+where $S_0$ is an ordinary Schur function ($\mathrm{sq}_-=0$, i.e. $\|S_0\|_\infty\le1$) and $B$ is
 a finite Blaschke product of degree $\kappa$. The zeros $\alpha_j$ of $B$ are exactly the points where
 the kernel $\mathsf S$ carries its negative squares (the generalized poles of $M$ in $\C\setminus\R$).
 \end{theorem}
@@ -1444,14 +1444,14 @@ $\mathfrak b:=B$, the Blaschke denominator, regarded as a divisor $\sum_j[\alpha
 ## §5. P: the Pontryagin realization computes the same $\kappa$
 
 \begin{theorem}[realization]\label{thm:realiz}
-Every kernel $\mathsf K$ with $\operatorname{sq}_-(\mathsf K)=\kappa<\infty$ admits a Pontryagin
-realization $(\Pi,[\cdot,\cdot],\Gamma)$ with $\operatorname{ind}_-\Pi=\kappa$ and $\mathsf K(z,w)=
+Every kernel $\mathsf K$ with $\mathrm{sq}_-(\mathsf K)=\kappa<\infty$ admits a Pontryagin
+realization $(\Pi,[\cdot,\cdot],\Gamma)$ with $\mathrm{ind}_-\Pi=\kappa$ and $\mathsf K(z,w)=
 [\Gamma(w),\Gamma(z)]$, unique up to isomorphism (minimal realization). Conversely any such realization
-gives $\operatorname{sq}_-(\mathsf K)=\operatorname{ind}_-\Pi$.
+gives $\mathrm{sq}_-(\mathsf K)=\mathrm{ind}_-\Pi$.
 \end{theorem}
 \emph{Proof.} The reproducing-kernel space construction: span $\{\mathsf K(\cdot,w)\}$ with the inner
 product $[\mathsf K(\cdot,w),\mathsf K(\cdot,z)]:=\mathsf K(z,w)$, completed to a Pontryagin space; by
-definition of $\operatorname{sq}_-$ its negative index is $\kappa$. Minimality and uniqueness are the
+definition of $\mathrm{sq}_-$ its negative index is $\kappa$. Minimality and uniqueness are the
 standard reproducing-kernel argument. $\square$
 
 ---
@@ -1462,8 +1462,8 @@ standard reproducing-kernel argument. $\square$
 For an object presented in any of the four charts (Def.~\ref{def:charts}) with the standard transforms
 $E\leftrightarrow M=E^\#/E\leftrightarrow S=(M-i)/(M+i)\leftrightarrow(\Pi,\Gamma)$,
 \[
-   \boxed{\ \operatorname{sq}_-(\mathsf K_E)=\operatorname{sq}_-(\mathsf N_M)=\operatorname{sq}_-(\mathsf S)
-   =\operatorname{ind}_-\Pi=\deg\mathfrak b\ =:\ \kappa.\ }
+   \boxed{\ \mathrm{sq}_-(\mathsf K_E)=\mathrm{sq}_-(\mathsf N_M)=\mathrm{sq}_-(\mathsf S)
+   =\mathrm{ind}_-\Pi=\deg\mathfrak b\ =:\ \kappa.\ }
 \]
 The integer $\kappa$ and the divisor $\mathfrak b$ are therefore chart-independent invariants of the
 object.
@@ -1475,14 +1475,14 @@ boxed identity. $\square$
 \begin{corollary}[the endpoint, in charts]\label{cor:xi}
 For $\Xi$ with $M_\Xi=-\Xi'/\Xi$ (Herglotz, D0 sign-corrected) and $\mathsf K_\Xi^{\mathrm{G5}}=\mathsf
 N_{M_\Xi}$ (D0, Def. KG5),
-$\kappa(\Xi)=\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=\deg\mathfrak b_\Xi$, and RH $\Leftrightarrow
+$\kappa(\Xi)=\mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=\deg\mathfrak b_\Xi$, and RH $\Leftrightarrow
 \mathfrak b_\Xi=1$. The grading divisor $\mathfrak b_\Xi$ is supported exactly on the off-line zeros
 (the off-$\R$ generalized poles of $M_\Xi$).
 \end{corollary}
 
 \begin{remark}[why the divisor matters downstream]
 Theorem~\ref{thm:d1} gives not just the integer $\kappa$ but the \emph{divisor} $\mathfrak b$. Plain
-$\operatorname{sq}_-$ is only upper semicontinuous under limits (Stage 1, Thm 4.1: a negative square can
+$\mathrm{sq}_-$ is only upper semicontinuous under limits (Stage 1, Thm 4.1: a negative square can
 vanish in a limit but cannot appear from a positive limit). The divisor $\mathfrak b$ refines this to
 \emph{exact} continuity: tracking $\mathfrak b$ (D5's divisor-convergence requirement) prevents negative
 squares from disappearing invisibly, which is what "index continuity," not just "index upper
@@ -1558,15 +1558,15 @@ estimates (§3). We use $\det_2$; the role of the modification appears as the an
 For $V$ finite-rank with $R_A:=(I+A)^{-1}$,
 \[
    \left.\frac{d}{d\varepsilon}\log\det\nolimits_{\mathrm{reg}}(I+A+\varepsilon V)\right|_{\varepsilon=0}
-   =\operatorname{Tr}\big(R_AV\big)\ -\ \operatorname{Tr}(V)\quad(\text{the } \det_2\text{ anomaly}),
+   =\mathrm{Tr}\,\big(R_AV\big)\ -\ \mathrm{Tr}(V)\quad(\text{the } \det_2\text{ anomaly}),
 \]
-i.e. $\operatorname{Tr}\big((R_A-I)V\big)=\operatorname{Tr}\big(-A R_A V\big)$. For the ordinary
-($\det_1$) determinant the anomaly term $-\operatorname{Tr}(V)$ is absent.
+i.e. $\mathrm{Tr}\,\big((R_A-I)V\big)=\mathrm{Tr}\,\big(-A R_A V\big)$. For the ordinary
+($\det_1$) determinant the anomaly term $-\mathrm{Tr}(V)$ is absent.
 \end{lemma}
-\emph{Proof.} $\log\det_2(I+T)=\operatorname{Tr}\big(\log(I+T)-T\big)$. With $T=A+\varepsilon V$,
-$\partial_\varepsilon\operatorname{Tr}\big(\log(I+A+\varepsilon V)-(A+\varepsilon V)\big)
-=\operatorname{Tr}\big((I+A+\varepsilon V)^{-1}V-V\big)$; at $\varepsilon=0$ this is
-$\operatorname{Tr}((R_A-I)V)$. $\square$
+\emph{Proof.} $\log\det_2(I+T)=\mathrm{Tr}\,\big(\log(I+T)-T\big)$. With $T=A+\varepsilon V$,
+$\partial_\varepsilon\mathrm{Tr}\,\big(\log(I+A+\varepsilon V)-(A+\varepsilon V)\big)
+=\mathrm{Tr}\,\big((I+A+\varepsilon V)^{-1}V-V\big)$; at $\varepsilon=0$ this is
+$\mathrm{Tr}((R_A-I)V)$. $\square$
 
 \begin{lemma}[higher variations]\label{lem:higher}
 For finite-rank $V_1,\dots,V_n$,
@@ -1574,16 +1574,16 @@ For finite-rank $V_1,\dots,V_n$,
    \left.\partial_{\varepsilon_1}\!\cdots\partial_{\varepsilon_n}
    \log\det\nolimits_{\mathrm{reg}}\!\Big(I+A+\textstyle\sum_j\varepsilon_jV_j\Big)\right|_0
    =(-1)^{n+1}\!\!\sum_{\sigma\in\mathrm{cyc}(n)}\!\!
-   \operatorname{Tr}\big(R_AV_{\sigma(1)}R_AV_{\sigma(2)}\cdots R_AV_{\sigma(n)}\big)+\mathcal A_n,
+   \mathrm{Tr}\,\big(R_AV_{\sigma(1)}R_AV_{\sigma(2)}\cdots R_AV_{\sigma(n)}\big)+\mathcal A_n,
 \]
-with $\mathcal A_1=-\operatorname{Tr}(\sum V_j)$ and $\mathcal A_n=0$ for $n\ge2$ (the $\det_2$ anomaly is
+with $\mathcal A_1=-\mathrm{Tr}(\sum V_j)$ and $\mathcal A_n=0$ for $n\ge2$ (the $\det_2$ anomaly is
 first-order only). For $n=2$,
 \[
    \partial_{\varepsilon_1}\partial_{\varepsilon_2}\log\det\nolimits_{\mathrm{reg}}\big|_0
-   =-\operatorname{Tr}\big(R_AV_1R_AV_2\big).
+   =-\mathrm{Tr}\,\big(R_AV_1R_AV_2\big).
 \]
 \end{lemma}
-\emph{Proof.} Differentiate $\operatorname{Tr}\log(I+A+\sum\varepsilon_jV_j)$ repeatedly using
+\emph{Proof.} Differentiate $\mathrm{Tr}\,\log(I+A+\sum\varepsilon_jV_j)$ repeatedly using
 $\partial_\varepsilon\log(I+T)=\int_0^1(I+sT)^{-1}\partial_\varepsilon T\,(\dots)$; the trace and
 cyclicity collapse the result to the cyclic resolvent sum. The $-\sum\varepsilon_jV_j$ term in $\det_2$
 contributes only to $\mathcal A_1$. $\square$
@@ -1591,7 +1591,7 @@ contributes only to $\mathcal A_1$. $\square$
 \begin{remark}
 Higher anomalies vanish for $\det_2$, so **the two-variable kernel (the $n=2$ Hessian) is anomaly-free**
 — this is why $\det_2$ is the right regularization for reading the signature: the object we need
-($\operatorname{Tr}(R_AV_1R_AV_2)$) has no anomaly correction.
+($\mathrm{Tr}(R_AV_1R_AV_2)$) has no anomaly correction.
 \end{remark}
 
 ---
@@ -1606,7 +1606,7 @@ For probe sources $V=|u\rangle\langle v|$ ($u,v\perp H$), define the \textbf{res
 read off the first variation (Lemma~\ref{lem:first}, anomaly-subtracted). By polarization of the second
 variation (Lemma~\ref{lem:higher}) define the two-variable form $\mathsf K_A$ via
 \[
-   \mathsf K_A(z,w)=\operatorname{Pol}\big(d^2\log\mathcal D_A^{\mathrm{src}}(0)\big)(z,w),
+   \mathsf K_A(z,w)=\mathrm{Pol}\,\big(d^2\log\mathcal D_A^{\mathrm{src}}(0)\big)(z,w),
 \]
 the Hermitian kernel whose finite Gram matrices are built from $\rho_A$.
 \end{definition}
@@ -1616,21 +1616,21 @@ Suppose $\mathfrak S_{\mathrm{prim}}$ is \emph{total} for the primitive realizat
 lemma, §5). If two admissible operators $A,B$ have equal sourced germs on a source plane rich enough to
 separate the primitive Gram data, $\mathcal D_A^{\mathrm{src}}=\mathcal D_B^{\mathrm{src}}$, then
 \[
-   \mathsf K_A=\mathsf K_B,\qquad\text{hence}\qquad\kappa(A)=\operatorname{sq}_-(\mathsf K_A)
-   =\operatorname{sq}_-(\mathsf K_B)=\kappa(B).
+   \mathsf K_A=\mathsf K_B,\qquad\text{hence}\qquad\kappa(A)=\mathrm{sq}_-(\mathsf K_A)
+   =\mathrm{sq}_-(\mathsf K_B)=\kappa(B).
 \]
 In particular, equality of \emph{scalar} determinants $D_A=D_B$ does \textbf{not} imply $\kappa(A)=
 \kappa(B)$ (N1), but equality of \emph{sourced germs} does.
 \end{theorem}
 \emph{Proof.} The first variation recovers all primitive resolvent matrix elements $\langle R_Au,v
-\rangle$ ($u,v\perp H$); the second variation (anomaly-free, $n=2$) recovers $\operatorname{Tr}(R_AV_1
+\rangle$ ($u,v\perp H$); the second variation (anomaly-free, $n=2$) recovers $\mathrm{Tr}(R_AV_1
 R_AV_2)$, and by polarization the two-variable kernel $\mathsf K_A$. Equal germs give equal variations
 to all orders, hence equal $\rho_A=\rho_B$ and equal $\mathsf K_A=\mathsf K_B$. The index is a function
 of the kernel (D1, Def. sq), so the indices agree. The N1 clause is Stage 1, Prop. 3.1(a) lifted: the
 scalar shadow forgets the resolvent's off-diagonal/sign data that the germ retains. $\square$
 
 \begin{remark}[the precise sense in which the germ is signature-faithful]
-$\kappa$ is $\operatorname{sq}_-$ of $\mathsf K_A$, and $\mathsf K_A$ is the Hessian of $\log\mathcal
+$\kappa$ is $\mathrm{sq}_-$ of $\mathsf K_A$, and $\mathsf K_A$ is the Hessian of $\log\mathcal
 D_A^{\mathrm{src}}$ at $0$. So the signature is the *inertia of the source Hessian*. This is the operator
 analogue of "the sourced determinant separates signature" (Stage 1, S1), now with the kernel itself
 recovered, not merely the fact of separation.
@@ -1756,15 +1756,15 @@ An object is a quintuple
    \mathbf X=\big(D,\ \mathcal D^{\mathrm{src}},\ \mathsf K,\ \mathfrak b,\ \mathcal R\big),
 \]
 where: $D$ is a real-symmetric entire determinant section; $\mathcal D^{\mathrm{src}}$ a holomorphic
-finite-rank source germ (D2) with $\mathcal D^{\mathrm{src}}(0)=D$; $\mathsf K=\operatorname{Pol}(d^2\log
+finite-rank source germ (D2) with $\mathcal D^{\mathrm{src}}(0)=D$; $\mathsf K=\mathrm{Pol}(d^2\log
 \mathcal D^{\mathrm{src}}(0))$ the recovered Hermitian kernel (D2, Def. rec) with finitely many negative
 squares; $\mathfrak b$ the Kreĭn–Langer grading divisor (D1, Def. divisor) with $\deg\mathfrak b=
-\operatorname{sq}_-(\mathsf K)$; and $\mathcal R$ a Pontryagin/de Branges realization (D1, Thm realiz)
+\mathrm{sq}_-(\mathsf K)$; and $\mathcal R$ a Pontryagin/de Branges realization (D1, Thm realiz)
 certifying that $D,\mathcal D^{\mathrm{src}},\mathsf K,\mathfrak b$ are mutually compatible (come from one
 operator).
 The index is \textbf{computed, not declared}:
 \[
-   \kappa(\mathbf X):=\operatorname{sq}_-(\mathsf K)=\deg\mathfrak b\qquad(\text{equal by D1, Thm d1}).
+   \kappa(\mathbf X):=\mathrm{sq}_-(\mathsf K)=\deg\mathfrak b\qquad(\text{equal by D1, Thm d1}).
 \]
 $\mathcal G_0:=\{\mathbf X:\kappa(\mathbf X)=0\}=\{\mathfrak b=1\}$ is the full subcategory of
 Hermite–Biehler / Hilbert objects.
@@ -1805,7 +1805,7 @@ $\kappa:\mathcal G\to(\Z_{\ge0},\le)$, $\mathbf X\mapsto\kappa(\mathbf X)$, $\Ph
 a functor: $\sigma$ is additive under composition and $\kappa(\mathbf X')=\kappa(\mathbf X)+\sigma(\Phi)$.
 Along $\mathcal G^+$ (positive extensions and gauges only), $\sigma\equiv0$ and $\kappa$ is preserved.
 \end{lemma}
-\emph{Proof.} (P+) and (G) preserve $\operatorname{sq}_-$ (Stage 1, S2 / D1 Cor. hbn); (P$-$) adds at
+\emph{Proof.} (P+) and (G) preserve $\mathrm{sq}_-$ (Stage 1, S2 / D1 Cor. hbn); (P$-$) adds at
 most one negative square (Stage 1, S4 mechanism). Additivity of $\sigma$ is additivity of negative-square
 count under successive rank-one extensions (interlacing). On $\mathcal G^+$ there are no $(\mathrm P-)$
 generators, so $\sigma=0$. $\square$
@@ -1835,7 +1835,7 @@ squares of a direct-sum kernel add; the Blaschke divisors multiply. $\square$
 
 \begin{remark}[the Witt content]
 A finite Hermitian form is not determined by its determinant; its correct invariant is the determinant
-line *graded by inertia* (the Witt class). $\mathcal G$ is the categorification: $\operatorname{For}(
+line *graded by inertia* (the Witt class). $\mathcal G$ is the categorification: $\mathrm{For}(
 \mathbf X)=D$ is the scalar shadow, and the extra data $(\mathcal D^{\mathrm{src}},\mathsf K,\mathfrak b)$
 is the Witt/inertia grading. A positive pole tensors by a positive line: its scalar norm diverges, but
 its negative index is $0$ — which is precisely why the positive pole can be quotiented (shorted, D4)
@@ -1856,7 +1856,7 @@ The assignment
 from admissible canonical operators to $\mathcal G$ is a functor; it \textbf{separates signature-blind
 coincidences} ($D_A=D_B$ with $\kappa(A)\ne\kappa(B)$ are distinct objects of $\mathcal G$,
 Thm~D2-recon); it is \textbf{monoidal} (Prop.~\ref{prop:add}); and it \textbf{agrees with the classical
-Kreĭn–Langer index} ($\kappa(\widetilde D(A))=\operatorname{ind}_-\mathcal H_\kappa(E_A)$, D1).
+Kreĭn–Langer index} ($\kappa(\widetilde D(A))=\mathrm{ind}_-\mathcal H_\kappa(E_A)$, D1).
 \end{theorem}
 \emph{Proof.} Functoriality and monoidality are §2–§3; signature separation is D2, Thm recon; agreement
 with classical index is D1, Thm d1 applied to $\mathsf K_A=\mathsf N_{M_A}$. $\square$
@@ -1954,7 +1954,7 @@ $\mathsf K_P-(\text{pole block})$.
 \begin{redflag}[subtraction vs shorting — the canonical correction]
 The earlier M2 used pole \emph{subtraction}. By Stage 1, Prop.~$G_R$, subtracting a divergent positive
 rank-one block creates a spurious negative square; the Schur complement does not. \textbf{D4 supersedes
-M2: every pole removal is $\operatorname{Short}_{H_P}$, the second formula of Def.~\ref{def:short}, with
+M2: every pole removal is $\mathrm{Short}_{H_P}$, the second formula of Def.~\ref{def:short}, with
 the cross-term $\beta\alpha^{-1}\beta^*$, not just $-\alpha$.} The cross-term is the entire difference.
 \end{redflag}
 
@@ -1984,15 +1984,15 @@ The outer factors are unipotent (determinant $1$ for $\det_1$). Taking $\det_1$ 
 \det\alpha_P\cdot\det F_P$. For $\det_2$ the multiplicative law is \emph{not} anomaly-free: for
 Hilbert–Schmidt $A,B$,
 \[
-   \det\nolimits_2\big((I+A)(I+B)\big)=\det\nolimits_2(I+A)\,\det\nolimits_2(I+B)\,e^{-\operatorname{Tr}(AB)},
+   \det\nolimits_2\big((I+A)(I+B)\big)=\det\nolimits_2(I+A)\,\det\nolimits_2(I+B)\,e^{-\mathrm{Tr}(AB)},
 \]
 so writing $I+T_P=(I+A_{\mathrm{pole}})(I+B_{\mathrm{Sch}})$ for the block-triangular $\times$ diagonal
 $\times$ block-triangular factorization, the genuine anomaly is
 \[
-   \mathcal A_P^{\mathrm{pole}}(z)=-\sum\operatorname{Tr}(A_iB_j)\ \text{(the cross-traces of the three
+   \mathcal A_P^{\mathrm{pole}}(z)=-\sum\mathrm{Tr}(A_iB_j)\ \text{(the cross-traces of the three
    factors)},
 \]
-\emph{not} simply $\operatorname{Tr}(\beta\alpha^{-1}\beta^*)$. This is finite provided the Feshbach
+\emph{not} simply $\mathrm{Tr}(\beta\alpha^{-1}\beta^*)$. This is finite provided the Feshbach
 blocks lie in $\mathfrak S_2$ (Hilbert–Schmidt); that membership is the content of the D4 ledger entry
 (§5) and must be checked in the relevant Schatten class, not assumed. With $\mathcal A_P^{\mathrm{pole}}$
 so defined, $D_P=\Delta_PD_P^\circ$ with $\Delta_P=\det_2\alpha_P\cdot e^{\mathcal A_P^{\mathrm{pole}}}$.
@@ -2012,7 +2012,7 @@ object of D8 (its $V=0$ slice is $D_P^\circ$).
 \begin{theorem}[positive-pole shorting is index-monotone]\label{thm:index}
 For the positive pole ($\alpha_P(z)\succ0$ on the relevant set),
 \[
-   \operatorname{sq}_-\!\big(\mathsf K_P^\circ\big)=\operatorname{sq}_-\!\big(\mathsf K_P\big).
+   \mathrm{sq}_-\!\big(\mathsf K_P^\circ\big)=\mathrm{sq}_-\!\big(\mathsf K_P\big).
 \]
 In particular if $\mathsf K_P\succeq0$ (G2) then $\mathsf K_P^\circ\succeq0$, i.e. $\kappa(A_P^\circ)=0$.
 \end{theorem}
@@ -2020,7 +2020,7 @@ In particular if $\mathsf K_P\succeq0$ (G2) then $\mathsf K_P^\circ\succeq0$, i.
 $\begin{psmallmatrix}a&b^*\\ b&C\end{psmallmatrix}$ with $a$ the (positive) pole block; the Gram matrix
 of $\mathsf K_P^\circ$ is its Schur complement $C-ba^{-1}b^*$. By Haynsworth (Stage 1, Thm 1.1),
 $\nu_-(C-ba^{-1}b^*)=\nu_-\begin{psmallmatrix}a&b^*\\ b&C\end{psmallmatrix}$ since $a\succ0$. Taking the
-supremum over finite configurations gives $\operatorname{sq}_-(\mathsf K_P^\circ)=\operatorname{sq}_-(
+supremum over finite configurations gives $\mathrm{sq}_-(\mathsf K_P^\circ)=\mathrm{sq}_-(
 \mathsf K_P)$. $\square$
 
 \begin{corollary}[independence of normalization]\label{cor:norm}
@@ -2061,10 +2061,10 @@ the limit.
 
 > `OPEN (technical, Connes R1.D): the Feshbach factors $A_{pole},B_{Sch}$ of $I+T_P$ lie in $\mathfrak
 > S_2$ on compact $z$-sets away from the pole spectrum, so the genuine det₂ anomaly $\mathcal
-> A_P^{pole}=-\sum\operatorname{Tr}(A_iB_j)$ is finite and holomorphic.` — needed for
+> A_P^{pole}=-\sum\mathrm{Tr}(A_iB_j)$ is finite and holomorphic.` — needed for
 > Thm~\ref{thm:factor}; expected from the trace-class structure of the primitive block (D2 ledger) and
 > $\alpha_P\succ0$, but must be verified in the Schatten class $\mathfrak S_2$, not assumed in the naive
-> $\operatorname{Tr}(\beta\alpha^{-1}\beta^*)$ form (which was wrong). Does not use RH.
+> $\mathrm{Tr}(\beta\alpha^{-1}\beta^*)$ form (which was wrong). Does not use RH.
 
 ---
 
@@ -2075,7 +2075,7 @@ the limit.
 - The **determinant factorization** $D_P=\Delta_P D_P^\circ$ with the anomaly explicit
   (Thm~\ref{thm:factor}).
 - **Index-monotonicity of shorting** (Thm~\ref{thm:index}): positive-pole shorting preserves
-  $\operatorname{sq}_-$; finite von Mangoldt shorted kernels stay $\succeq0$.
+  $\mathrm{sq}_-$; finite von Mangoldt shorted kernels stay $\succeq0$.
 - Normalization-independence and the well-defined positive-pole chart (Cor.~\ref{cor:norm},
   Def.~\ref{def:chart}).
 
@@ -2149,7 +2149,7 @@ Equivalently, $\tau_\kappa$ is the initial topology for the family of evaluation
 source balls (with uniform local boundedness), then $\mathsf K_i^\circ\to\mathsf K^\circ$ locally
 uniformly.
 \end{theorem}
-\emph{Proof.} The kernel is the polarized Hessian $\mathsf K^\circ=\operatorname{Pol}(d^2\log\mathcal
+\emph{Proof.} The kernel is the polarized Hessian $\mathsf K^\circ=\mathrm{Pol}(d^2\log\mathcal
 D^{\circ,\mathrm{src}}(0))$ (D2, Def. rec; anomaly-free at second order). On a fixed finite-dimensional
 source plane the germs are holomorphic functions of $(V,z)$; uniform convergence of holomorphic functions
 on $B_F(r)\times K$ implies uniform convergence of all $V$-derivatives at $0$ on slightly smaller compacts
@@ -2158,7 +2158,7 @@ $\mathsf K_i^\circ\to\mathsf K^\circ$ locally uniformly. (Local boundedness, sup
 arithmetic case, licenses the Cauchy estimates.) $\square$
 
 \begin{corollary}[index is a continuous functional]\label{cor:index-cont}
-On $\tau_\kappa$-convergent nets, $\operatorname{sq}_-(\mathsf K^\circ)$ is upper semicontinuous, and on
+On $\tau_\kappa$-convergent nets, $\mathrm{sq}_-(\mathsf K^\circ)$ is upper semicontinuous, and on
 the index-$0$ stratum (τ4: $\mathfrak b\equiv1$) it is continuous: $\kappa=0$ is both attained and
 preserved. (Proof of preservation is D6.)
 \end{corollary}
@@ -2252,7 +2252,7 @@ By (τ3), $\mathsf K_i^\circ(z_j,z_k)\to\mathsf K^\circ(z_j,z_k)$, so passing to
 \[
    \sum_{j,k}c_j\overline{c_k}\,\mathsf K^\circ(z_j,z_k)\ \ge\ 0.
 \]
-As the configuration was arbitrary, $\mathsf K^\circ\succeq0$, i.e. $\operatorname{sq}_-(\mathsf K^\circ)
+As the configuration was arbitrary, $\mathsf K^\circ\succeq0$, i.e. $\mathrm{sq}_-(\mathsf K^\circ)
 =0$. By (τ4) the grading divisor stays $\mathfrak b^\circ=1$, so no negative square vanished silently and
 $\kappa(\mathbf X)=0$. $\square$
 
@@ -2270,16 +2270,16 @@ scalar non-uniformity that defeated M3 is decoupled from the kernel positivity. 
 ## §2. The finite-index version
 
 \begin{theorem}[upper semicontinuity of the index]\label{thm:usc}
-If $\mathbf X_i$ have $\operatorname{sq}_-(\mathsf K_i^\circ)\le\kappa$ and $\mathbf X_i\to\mathbf X$ in
-$\tau_\kappa$, then $\operatorname{sq}_-(\mathsf K^\circ)\le\kappa$.
+If $\mathbf X_i$ have $\mathrm{sq}_-(\mathsf K_i^\circ)\le\kappa$ and $\mathbf X_i\to\mathbf X$ in
+$\tau_\kappa$, then $\mathrm{sq}_-(\mathsf K^\circ)\le\kappa$.
 \end{theorem}
 \emph{Proof.} Each finite Gram matrix of $\mathsf K_i^\circ$ has $\nu_-\le\kappa$; the set $\{M:\nu_-(M)
 \le\kappa\}$ is closed (Stage 1, Thm 4.1: $\lambda_{\kappa+1}(M)\ge0$ is closed and $\lambda_{\kappa+1}$
 is continuous). The (τ3) limit of each Gram matrix therefore has $\nu_-\le\kappa$; supremum over
-configurations gives $\operatorname{sq}_-(\mathsf K^\circ)\le\kappa$. $\square$
+configurations gives $\mathrm{sq}_-(\mathsf K^\circ)\le\kappa$. $\square$
 
 \begin{remark}[upper semicontinuity vs continuity, and where the divisor is needed]
-Thm~\ref{thm:usc} gives $\operatorname{sq}_-(\mathsf K^\circ)\le\liminf\operatorname{sq}_-(\mathsf K_i^\circ)$
+Thm~\ref{thm:usc} gives $\mathrm{sq}_-(\mathsf K^\circ)\le\liminf\mathrm{sq}_-(\mathsf K_i^\circ)$
 — a negative square can \emph{vanish} in the limit but cannot \emph{appear}. For the index-$0$ stratum
 this is already equality ($0\le0$), so Thm~\ref{thm:closed} needs nothing more. For genuine
 \emph{continuity} at $\kappa>0$ (needed only if one wanted to track DH's index through a limit, D10) one
@@ -2349,13 +2349,13 @@ For each finite $P$, $\widetilde D(A_P)=(E_P,\mathcal D_{A_P}^{\mathrm{src}},\ma
 R_P)\in\mathcal G_0$, with
 \[
    \mathsf K_{A_P}(z,w)=\int_0^{\ell_P}Y_P(t,w)^*H_P(t)Y_P(t,z)\,dt\ \succeq\ 0,\qquad
-   \kappa(A_P)=\operatorname{sq}_-(\mathsf K_{A_P})=0,\qquad\mathfrak b_P=1.
+   \kappa(A_P)=\mathrm{sq}_-(\mathsf K_{A_P})=0,\qquad\mathfrak b_P=1.
 \]
 \end{theorem}
 \emph{Proof.} G2 (canonical Gram identity, `CANONICAL-FOUNDATION.md` Thm) gives the displayed integral
 representation, manifestly $\succeq0$ since $H_P\ge0$ (G1): for any finite $\{z_i\}$, $\{c_i\}$,
 $\sum_{i,j}\bar c_i c_j\mathsf K_{A_P}(z_i,z_j)=\int_0^{\ell_P}\big\|H_P(t)^{1/2}\sum_j c_jY_P(t,z_j)
-\big\|^2dt\ge0$. Hence $\operatorname{sq}_-(\mathsf K_{A_P})=0$, so the Kreĭn–Langer divisor is empty,
+\big\|^2dt\ge0$. Hence $\mathrm{sq}_-(\mathsf K_{A_P})=0$, so the Kreĭn–Langer divisor is empty,
 $\mathfrak b_P=1$ (D1, Def. divisor), and $E_P$ is Hermite–Biehler (D1, Thm d1). $\square$
 
 ---
@@ -2366,7 +2366,7 @@ $\mathfrak b_P=1$ (D1, Def. divisor), and $E_P$ is Hermite–Biehler (D1, Thm d1
 The recovered kernel of the sourced determinant germ (D2, Def. rec) coincides with the canonical Gram
 kernel:
 \[
-   \operatorname{Pol}\big(d^2\log\mathcal D_{A_P}^{\mathrm{src}}(0)\big)(z,w)=\mathsf K_{A_P}(z,w)
+   \mathrm{Pol}\,\big(d^2\log\mathcal D_{A_P}^{\mathrm{src}}(0)\big)(z,w)=\mathsf K_{A_P}(z,w)
    =\int_0^{\ell_P}Y_P(t,w)^*H_P(t)Y_P(t,z)\,dt.
 \]
 \end{theorem}
@@ -2374,7 +2374,7 @@ kernel:
 finite-rank signed source $\delta H$ is the canonical pairing
 \[
    \partial_\varepsilon\log\mathcal D_{A_P,\varepsilon}^{\mathrm{src}}(0)
-   =\int_0^{\ell_P}\operatorname{tr}\big(Y_P(t,\cdot)^*\,\delta H(t)\,Y_P(t,\cdot)\big)\,dt
+   =\int_0^{\ell_P}\mathrm{tr}\,\big(Y_P(t,\cdot)^*\,\delta H(t)\,Y_P(t,\cdot)\big)\,dt
 \]
 (Duhamel/variation-of-parameters for $J\partial_tY=z(H_P+\varepsilon\delta H)Y$). Polarizing the second
 variation in two such sources reconstructs the bilinear form $\int Y_P^*H_PY_P$, which is $\mathsf
@@ -2460,7 +2460,7 @@ and compact $K\Subset\Omega$,
    \sup_{V\in B_F(r),\,z\in K}\Big|\mathcal D_P^{\circ,\mathrm{src}}(V;z)-\mathcal D_\Xi^{\mathrm{src}}
    (V;z)\Big|\ \xrightarrow[P\to\infty]{}\ 0,
 \]
-and by differentiation $\mathsf K_P^\circ(z,w)\to\operatorname{Pol}(d^2\log\mathcal D_\Xi^{\mathrm{src}}
+and by differentiation $\mathsf K_P^\circ(z,w)\to\mathrm{Pol}(d^2\log\mathcal D_\Xi^{\mathrm{src}}
 (0))(z,w)$, with the right side $=\mathsf K_\Xi^{\mathrm{G5}}$ (D9). The $V=0$ slice is G3.
 \end{theorem*}
 
@@ -2521,8 +2521,8 @@ RH-strength norm control is needed (cf. M2: the size question was dissolved, not
 \begin{lemma}\label{lem:84}
 If for every $n$ and every $V_1,\dots,V_n\in F$ the multilinear resolvent traces converge,
 \[
-   \operatorname{Tr}\big(R_P^\circ(z)V_1\cdots R_P^\circ(z)V_n\big)\ \to\
-   \operatorname{Tr}\big(R_\Xi(z)V_1\cdots R_\Xi(z)V_n\big)\qquad(\text{loc. unif. in }z),
+   \mathrm{Tr}\,\big(R_P^\circ(z)V_1\cdots R_P^\circ(z)V_n\big)\ \to\
+   \mathrm{Tr}\,\big(R_\Xi(z)V_1\cdots R_\Xi(z)V_n\big)\qquad(\text{loc. unif. in }z),
 \]
 where $R_P^\circ=(F_P)^{-1}$, $R_\Xi$ the primitive resolvent of the $\Xi$-system, then $\mathcal D_P^{
 \circ,\mathrm{src}}\to\mathcal D_\Xi^{\mathrm{src}}$ on $B_F(r)$ (uniformly), and hence (D5,
@@ -2535,7 +2535,7 @@ $B_F(r)$. $\square$
 
 \begin{remark}[why D8.4 is not free from G3]
 G3 gives only the $V=0$ slice (the determinant, one functional of the resolvent). The multilinear traces
-$\operatorname{Tr}(R_P^\circ V_1\cdots R_P^\circ V_n)$ are *additional* functionals — the full primitive
+$\mathrm{Tr}(R_P^\circ V_1\cdots R_P^\circ V_n)$ are *additional* functionals — the full primitive
 resolvent matrix elements. Their convergence is the genuine new content; it does \emph{not} follow from
 determinant convergence alone (that would be the forbidden scalar-only inference N1). It follows from
 D8.5 (the resolvent kernel converges because each *local factor's* source response converges).
@@ -2565,7 +2565,7 @@ finite Green matrices $G_P^\circ(z)$ together with $D_P^\circ\to\Xi$ (G3).
 F_P\cdot\det_m(I_m+C\Phi^*F_P^{-1}\Phi)$ with the $\det_2$ anomaly. $\square$
 
 \begin{theorem*}[\textbf{D8.5$'$} — the corrected target]
-For every finite primitive source plane $F=\operatorname{span}\{\phi_\alpha\}$,
+For every finite primitive source plane $F=\mathrm{span}\,\{\phi_\alpha\}$,
 \[
    \boxed{\ \Pi_F R_P^\circ(z)\,\Pi_F\ \longrightarrow\ \Pi_F R_\Xi^{\mathrm{G5}}(z)\,\Pi_F\ }
    \qquad(\text{i.e. }G_P^\circ(z)\to G_\Xi^{\mathrm{G5}}(z))
@@ -2606,7 +2606,7 @@ subsequential limit converges. Vitali on $B_F(r)$. $\square$
 ## §8. D8.7 — Kernel convergence by differentiation *(proved, given the above)*
 
 \begin{theorem}\label{thm:87}
-$\mathsf K_P^\circ(z,w)\to\operatorname{Pol}(d^2\log\mathcal D_\Xi^{\mathrm{src}}(0))(z,w)$ locally
+$\mathsf K_P^\circ(z,w)\to\mathrm{Pol}(d^2\log\mathcal D_\Xi^{\mathrm{src}}(0))(z,w)$ locally
 uniformly.
 \end{theorem}
 \emph{Proof.} D8.6 gives uniform germ convergence on source balls; D5, Thm germ-kernel (Cauchy
@@ -2678,7 +2678,7 @@ matrices (block 7), and extend to all finite source planes (block 8).
 
 ## §0. Setup
 
-Fix a finite primitive source plane $F=\operatorname{span}\{\phi_1,\dots,\phi_m\}$ with $\phi_\alpha\in
+Fix a finite primitive source plane $F=\mathrm{span}\,\{\phi_1,\dots,\phi_m\}$ with $\phi_\alpha\in
 \mathcal S_{\mathrm{alg}}^\circ$ (D2, Def. core; $\perp H$). $R_P^\circ(z)=F_P(z)^{-1}$ is the
 Feshbach-shorted primitive resolvent (D4); $G_P^\circ(z)_{\alpha\beta}=\langle R_P^\circ(z)\phi_\beta,
 \phi_\alpha\rangle$. All convergence is in the meromorphic/divisor topology (D8.3, corrected).
@@ -2967,7 +2967,7 @@ identification is of *meromorphic* objects: both sides have poles exactly at the
 So $G^{\lim}=G_\Xi^{\mathrm{G5}}$ \emph{as meromorphic functions} — plausibly \textbf{unconditionally}
 (both are the marked Weil sum over the zeros, wherever they are). This is good: it shows the limit is the
 genuine $\Xi$-resolvent, not some impostor with the same scalar determinant. But — crucially — it does
-\textbf{not} by itself give $\operatorname{sq}_-(G_\Xi^{\mathrm{G5}})=0$. The next section is why.
+\textbf{not} by itself give $\mathrm{sq}_-(G_\Xi^{\mathrm{G5}})=0$. The next section is why.
 \end{redflag}
 
 ---
@@ -2980,7 +2980,7 @@ exact reason.
 \begin{lemma}[the approximants are matrix-Nevanlinna; the limit is generalized-Nevanlinna]\label{lem:gap}
 Each $G_P^\circ(z)=\langle(A_P^\circ-z)^{-1}\phi_\beta,\phi_\alpha\rangle$ is a \textbf{matrix Nevanlinna
 (Herglotz)} function: $A_P^\circ$ is self-adjoint (G2), so $\Im G_P^\circ(z)/\Im z\succeq0$ and
-$G_P^\circ$ is holomorphic on $\C\setminus\R$ ($\operatorname{sq}_-=0$, $\mathcal N_0$). The limit
+$G_P^\circ$ is holomorphic on $\C\setminus\R$ ($\mathrm{sq}_-=0$, $\mathcal N_0$). The limit
 $G_\Xi^{\mathrm{G5}}$ lies in $\mathcal N_\kappa$ with $\kappa=\#\{$off-line zeros$\}$: it has $\kappa$
 poles in $\C\setminus\R$ (the off-line $z_\rho$), and these poles carry its negative squares
 (Kreĭn–Langer, D1).
@@ -2998,15 +2998,15 @@ poles in $\C\setminus\R$ only by \emph{failing to converge uniformly at those po
 \item D6 (closedness) transfers positivity only at \textbf{regular} configurations $z_1,\dots,z_m$
 avoiding the poles: there $\sum c_j\bar c_k G_\Xi^{\mathrm{G5}}(z_j,z_k)=\lim\sum c_j\bar c_k G_P^\circ
 \succeq0$;
-\item but $\operatorname{sq}_-(G_\Xi^{\mathrm{G5}})$ is \textbf{attained only at configurations meeting
+\item but $\mathrm{sq}_-(G_\Xi^{\mathrm{G5}})$ is \textbf{attained only at configurations meeting
 the off-line poles} (the negative squares live in the principal parts at the off-line $z_\rho$) — exactly
 where $G_P^\circ$ does \textbf{not} converge.
 \end{itemize}
-Therefore $\operatorname{sq}_-(G_\Xi^{\mathrm{G5}})=0$ does \textbf{not} follow. The missing input is
+Therefore $\mathrm{sq}_-(G_\Xi^{\mathrm{G5}})=0$ does \textbf{not} follow. The missing input is
 \textbf{convergence of the principal parts / the divisor at the off-line poles}, and that input is
 RH-strength: it holds iff there are no off-line poles iff RH.
 \end{theorem}
-\emph{Proof.} Lemma~\ref{lem:gap} + the structure of $\operatorname{sq}_-$ for generalized Nevanlinna
+\emph{Proof.} Lemma~\ref{lem:gap} + the structure of $\mathrm{sq}_-$ for generalized Nevanlinna
 functions: the negative squares of $\mathsf N_M\in\mathcal N_\kappa$ are realized by Gram matrices at
 points approaching the off-$\R$ poles (the residues give the negative directions). D6's hypothesis is
 pointwise (finite-Gram) convergence, available only off the poles (D8.3, the corrected meromorphic
@@ -3034,7 +3034,7 @@ proven at the level of the marked Green matrices.}
 \item \textbf{Identification (Thm~\ref{thm:idmero}):} $G^{\lim}=G_\Xi^{\mathrm{G5}}$ as meromorphic
 objects — plausibly unconditional; the limit is the genuine $\Xi$-resolvent. \emph{This part is real and
 not RH-strength.}
-\item \textbf{Index conclusion (Thm~\ref{thm:gate}):} $\operatorname{sq}_-(G_\Xi^{\mathrm{G5}})=0$ does
+\item \textbf{Index conclusion (Thm~\ref{thm:gate}):} $\mathrm{sq}_-(G_\Xi^{\mathrm{G5}})=0$ does
 \textbf{not} follow from D8.5a + D6, because the negative squares live at the off-line poles where the
 positive approximants do not converge. The missing input — \textbf{principal-part / divisor convergence
 at the off-line locus} — is RH-strength (it is the absence of off-line poles, i.e. RH).
@@ -3122,7 +3122,7 @@ Each $A_P^\circ$ (Feshbach-shorted finite von Mangoldt canonical operator) is se
 space, with real spectrum and resolvent $G_P^\circ(z)=\langle(A_P^\circ-z)^{-1}\cdot,\cdot\rangle$,
 $\|G_P^\circ(z)\|\le1/|\Im z|$. RH is equivalent to: \textbf{there is a self-adjoint limit $A_\infty^\circ$
 with $G_P^\circ\to(A_\infty^\circ-z)^{-1}$ in strong resolvent sense off $\R$, and
-$\operatorname{spec}(A_\infty^\circ)=\{z_\rho\}$ (the zeros of $\Xi$).}
+$\mathrm{spec}(A_\infty^\circ)=\{z_\rho\}$ (the zeros of $\Xi$).}
 \end{definition}
 
 The two clauses are both needed: a self-adjoint limit with the *wrong* (non-zero-set) spectrum says
@@ -3134,9 +3134,9 @@ conjunction.
 ## §2. Candidate 1 — limit-point self-adjointness *(refuted)*
 
 \begin{claim}[seductive]
-A $2\times2$ canonical system on $[0,\infty)$ with $\int_0^\infty\operatorname{tr}H(t)\,dt=\infty$ is in
+A $2\times2$ canonical system on $[0,\infty)$ with $\int_0^\infty\mathrm{tr}\,H(t)\,dt=\infty$ is in
 the \textbf{limit-point} case, hence essentially self-adjoint. The von Mangoldt system has $\int
-\operatorname{tr}H=\infty$ (indeed $\Tr K_P\sim\tfrac12(\log P)^2\to\infty$, G4). So $A_\infty^\circ$ is
+\mathrm{tr}\,H=\infty$ (indeed $\Tr K_P\sim\tfrac12(\log P)^2\to\infty$, G4). So $A_\infty^\circ$ is
 essentially self-adjoint — real spectrum — and RH follows.
 \end{claim}
 
@@ -3161,9 +3161,9 @@ convergence of the renormalized $P$-family, and not the spectrum-$=$-zeros claus
 
 \begin{claim}[seductive]
 $D_P^\circ=\det F_P$ is the characteristic function of $A_P^\circ$, so its zeros are
-$\operatorname{spec}(A_P^\circ)$. By G3, $D_P^\circ\to\Xi$, so $\operatorname{spec}(A_P^\circ)\to\{$zeros
+$\mathrm{spec}(A_P^\circ)$. By G3, $D_P^\circ\to\Xi$, so $\mathrm{spec}(A_P^\circ)\to\{$zeros
 of $\Xi\}$. If also $A_P^\circ\to A_\infty^\circ$ self-adjoint (Candidate 1), then
-$\operatorname{spec}(A_\infty^\circ)=\{$zeros$\}\subset\R$, RH.
+$\mathrm{spec}(A_\infty^\circ)=\{$zeros$\}\subset\R$, RH.
 \end{claim}
 
 \begin{auditbox}[\textbf{flaw}]
@@ -3171,7 +3171,7 @@ $\operatorname{spec}(A_\infty^\circ)=\{$zeros$\}\subset\R$, RH.
 strip} (Hurwitz). But $D_P^\circ\to\Xi$ is the \emph{renormalized} limit, which (Connes R2,
 `CORRECTIONS-CONNES-R2.md`) is genuine only for $\Im z<-\tfrac12$ — \textbf{below the strip, where there
 are no zeros}. Inside the strip (where the zeros live) the convergence is exactly what is in question.
-So "$\operatorname{spec}(A_P^\circ)\to$ zeros of $\Xi$" near the critical line is \textbf{not} given by
+So "$\mathrm{spec}(A_P^\circ)\to$ zeros of $\Xi$" near the critical line is \textbf{not} given by
 G3; asserting it \emph{is} the R2 wall. Moreover $D_P^\circ=\det_{\mathrm{reg}}F_P$ is a \emph{regularized
 Fredholm} determinant, not literally the characteristic polynomial; the relation "zeros $=$ eigenvalues"
 holds up to the regularization, which is the same $\tfrac12(\log P)^2$ renormalization.
@@ -3194,7 +3194,7 @@ holomorphic where the sum converges; pushing convergence up to the line would gi
 \textbf{Resolvents/Green matrices are not additive over cells:} $(A+B-z)^{-1}\ne(A-z)^{-1}+(B-z)^{-1}$,
 and (Connes R1 §0) sourced determinants do not Euler-factor, so $\log D_P^\circ$ is not $\sum_v\log(\text
 {local})$ either. Only the \emph{first-order} trace (spectral shift) is additive; the Green matrix
-(second variation) carries all the cross terms $\operatorname{Tr}(R^\circ V_1R^\circ V_2\cdots)$. So
+(second variation) carries all the cross terms $\mathrm{Tr}(R^\circ V_1R^\circ V_2\cdots)$. So
 \textbf{D8.5a block 7's "additive assembly" overstated the structure}: $G_P^\circ$ is the genuine
 Feshbach resolvent $\Phi^*F_P^{-1}\Phi$, not $\sum_v G_{p,k}^\circ$. The marked local Tate identity
 (block 3) and tail estimate (block 5) control the \emph{first-order/diagonal} local masses (which do add)
@@ -3288,7 +3288,7 @@ $\mathsf K_\Xi^{\mathrm{G5}}$ be the *fixed* endpoint kernel of D0 (Def. KG5), $
 \end{definition}
 
 \begin{redflag}
-D6 gives $\operatorname{sq}_-(\mathsf K_\infty^\circ)=0$. By itself this says nothing about RH: it is the
+D6 gives $\mathrm{sq}_-(\mathsf K_\infty^\circ)=0$. By itself this says nothing about RH: it is the
 index of *the limit kernel*, which is not yet known to be $\mathsf K_\Xi^{\mathrm{G5}}$. The package is
 RH \textbf{only if} $\mathsf K_\infty^\circ=\mathsf K_\Xi^{\mathrm{G5}}$ — equality with the pre-fixed
 object. Asserting this without proof is the forbidden reassignment.
@@ -3303,11 +3303,11 @@ Conditional on D8 (in particular D8.5), the limit kernel equals the fixed endpoi
 \[
    \boxed{\ \mathsf K_\infty^\circ(z,w)=\mathsf K_\Xi^{\mathrm{G5}}(z,w)\ \ \text{for all }z,w.\ }
 \]
-Consequently $\kappa(A_\infty)=\operatorname{sq}_-(\mathsf K_\infty^\circ)=\operatorname{sq}_-(\mathsf
+Consequently $\kappa(A_\infty)=\mathrm{sq}_-(\mathsf K_\infty^\circ)=\mathrm{sq}_-(\mathsf
 K_\Xi^{\mathrm{G5}})=\kappa(\Xi)$.
 \end{theorem}
 \emph{Proof (corrected, Connes R1.F — now rests on D8.5b, not on the scalar slice).} By D8.7, $\mathsf
-K_\infty^\circ=\operatorname{Pol}(d_V^2\log\mathcal D_\Xi^{\mathrm{src}}(0))$, the polarized second
+K_\infty^\circ=\mathrm{Pol}(d_V^2\log\mathcal D_\Xi^{\mathrm{src}}(0))$, the polarized second
 \emph{source} variation of the limit germ. \textbf{Caution:} $D_\infty^\circ=\Xi$ (G3) does \emph{not}
 by itself give the first source variation — \emph{derivative in $V$ is not derivative in $z$}. The
 identification of the limit's marked source Hessian with the fixed kernel must come from the
@@ -3351,7 +3351,7 @@ validity of D8.5.
 - Hence $\kappa(A_\infty)=\kappa(\Xi)$, connecting the *constructed* limit index to the *given* G5 index.
 - The candid dependency: D9 = D8.5 cashed out; the endpoint identification is the second face of the one
   load-bearing input. D6 (positivity closed) + D9 (limit is the $\Xi$ kernel) together give
-  $\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0$, i.e. $\kappa(\Xi)=0$ — assembled in D11.
+  $\mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0$, i.e. $\kappa(\Xi)=0$ — assembled in D11.
 
 Next: D10 (the DH falsifier — DH must break D8.5 or finite positivity, forcing $\deg\mathfrak b_{\mathrm
 {DH}}>0$), then D11 (assembly), D12 (audit).
@@ -3401,7 +3401,7 @@ primitive shorted kernel acquires negative squares (the signed cells contribute 
 D3);
 \item \textbf{closedness input:} consequently the shorted limit carries a nontrivial Kreĭn–Langer
 denominator, $\mathfrak b_{\mathrm{DH}}\ne1$;
-\item \textbf{source limit:} the sourced limit germ has negative squares, $\operatorname{sq}_-(\mathsf
+\item \textbf{source limit:} the sourced limit germ has negative squares, $\mathrm{sq}_-(\mathsf
 K^{\mathrm{DH}}_\infty)>0$.
 \end{enumerate}
 In particular, whenever $L_{\mathrm{DH}}$ has off-line zeros, $\deg\mathfrak b_{\mathrm{DH}}=\#\{$off-line
@@ -3411,7 +3411,7 @@ zeros$\}>0$, and the package does **not** conclude $\kappa_{\mathrm{DH}}=0$.
 negative line forces $\nu_-\ge1$; here the signed cells are exactly negative extensions, D3 (P$-$)). Thus
 the finite DH objects are not in $\mathcal G_0$: $\kappa(A^\chi_P)>0$ already, so the hypothesis of D6/D7
 (finite index $0$) fails at the first signed cell. The Kreĭn–Langer divisor of the limit then has degree
-$=\operatorname{sq}_-(\mathsf K^{\mathrm{DH}}_\infty)$, which by the D9-analogue (the limit germ is the
+$=\mathrm{sq}_-(\mathsf K^{\mathrm{DH}}_\infty)$, which by the D9-analogue (the limit germ is the
 DH-local-factor object with Weyl function $L_{\mathrm{DH}}'/L_{\mathrm{DH}}$) equals the number of
 off-$\R$ poles of that Weyl function $=$ the off-line zeros of $L_{\mathrm{DH}}$. $\square$
 
@@ -3481,16 +3481,16 @@ Assume D8.5 (the source-level local-factor convergence; D8 §9 ledger). Then:
 \[
    \underbrace{\kappa(A_P)=0\ \forall P}_{\text{D7 (A1), from G1–G2}}
    \ \xRightarrow{\ \text{D4 shorting}\ }\
-   \underbrace{\operatorname{sq}_-(\mathsf K_P^\circ)=0}_{\text{D4 Thm index}}
+   \underbrace{\mathrm{sq}_-(\mathsf K_P^\circ)=0}_{\text{D4 Thm index}}
    \ \xRightarrow{\ \text{D8 (incl. 8.5)}\ }\
    \underbrace{\mathsf K_P^\circ\to\mathsf K_\infty^\circ}_{\text{D8.7}}
 \]
 \[
-   \xRightarrow{\ \text{D6 closedness}\ }\ \operatorname{sq}_-(\mathsf K_\infty^\circ)=0
+   \xRightarrow{\ \text{D6 closedness}\ }\ \mathrm{sq}_-(\mathsf K_\infty^\circ)=0
    \ \xRightarrow{\ \text{D9 (A3)}\ }\ \mathsf K_\infty^\circ=\mathsf K_\Xi^{\mathrm{G5}}
-   \ \Rightarrow\ \operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0.
+   \ \Rightarrow\ \mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=0.
 \]
-By G5 (D0, Prop. g5), $\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=\#\{\rho:\zeta(\rho)=0,\ \Re\rho
+By G5 (D0, Prop. g5), $\mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})=\#\{\rho:\zeta(\rho)=0,\ \Re\rho
 \ne\tfrac12\}$. Therefore
 \[
    \#\{\rho:\zeta(\rho)=0,\ \Re\rho\ne\tfrac12\}=0,\qquad\text{i.e. }\boxed{\text{RH.}}
@@ -3551,7 +3551,7 @@ See `D8.5-COMPLETE.md` §D–§G. The box below is the superseded earlier framin
 \textbf{D8.5a} (the marked Tate–Binet convergence $G_P^\circ\to G^{\lim}$, blocks 1–8) is \emph{proved
 and genuinely local} (no hidden RH-strength; candor checkpoint passed). \textbf{D8.5b's identification}
 ($G^{\lim}=G_\Xi^{\mathrm{G5}}$ as meromorphic objects) is \emph{proved}. But \textbf{D8.5b's index
-conclusion is RH-strength} (`D8.5b-...md` Thm gate, outcome ii): $\operatorname{sq}_-(G_\Xi^{\mathrm{G5}})
+conclusion is RH-strength} (`D8.5b-...md` Thm gate, outcome ii): $\mathrm{sq}_-(G_\Xi^{\mathrm{G5}})
 =0$ does \emph{not} follow, because the negative squares live at the off-line poles, where the positive
 matrix-Nevanlinna approximants $G_P^\circ$ do not converge (a $\mathcal N_0$ limit develops $\mathcal
 N_\kappa$ poles only non-uniformly). The irreducible residue is the \textbf{convergence of the principal
@@ -3602,7 +3602,7 @@ anti-self-deception gate: the package is only as sound as this audit.
 \emph{sourced} germ convergence (D8.5), kernel via differentiation (D8.7); never $D_P^\circ\to\Xi
 \Rightarrow\mathsf K_P^\circ\to\mathsf K_\Xi$. \\
 2. fake index $\kappa(A_\infty):=\lim\kappa(A_P)$ & D9, D11 & \textbf{avoided}: $\kappa(A_\infty)=
-\operatorname{sq}_-(\mathsf K_\infty^\circ)$ computed from the limit kernel (D9), not defined as a limit
+\mathrm{sq}_-(\mathsf K_\infty^\circ)$ computed from the limit kernel (D9), not defined as a limit
 of indices. \\
 3. naive pole subtraction & D4 & \textbf{avoided}: D4 uses Feshbach/Schur shorting (cross-term
 $\beta\alpha^{-1}\beta^*$); the $G_R$ counterexample (Stage 1) forbids subtraction. \\
@@ -3613,7 +3613,7 @@ K_\Xi^{\mathrm{G5}}$ fixed in D0 \emph{before} any limit; D9 \emph{proves} $\mat
 pole-factor anomaly absorbed into $\Delta_P$, D4). \\
 \hline
 6. use of RH / zero locations & everywhere & \textbf{avoided}: no step uses zero locations; G5 is invoked
-only as the final \emph{reading} of $\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})$. \\
+only as the final \emph{reading} of $\mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})$. \\
 \hline
 \end{tabular}
 \end{center}

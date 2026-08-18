@@ -87,7 +87,7 @@ The second term is
 
 \[
 -\frac12\sum_{s,t}c_s(x)
-\operatorname {Re}\left\langle
+\mathrm{Re}\,\left\langle
 a_s,\{c_t(sx)-c_t(x)\}a_t+c_t(sx)b_{s,t}
 \right\rangle .                                      \tag{8}
 \]
@@ -97,7 +97,7 @@ Replace \(c_t(sx)\) in the terms not containing a rate difference by
 
 \[
  \sum_{s,t}c_s(x)c_t(x)
- \operatorname {Re}\langle a_t-a_s,b_{s,t}\rangle
+ \mathrm{Re}\,\langle a_t-a_s,b_{s,t}\rangle
 \]
 
 vanishes after interchanging \(s\) and \(t\), because \(b_{s,t}=b_{t,s}\).
@@ -107,8 +107,8 @@ rate-difference terms combine as
 \[
 \begin{aligned}
  &\|b_{s,t}\|^2
- +2\operatorname {Re}\langle a_t-a_s,b_{s,t}\rangle
- +\|a_t\|^2-2\operatorname {Re}\langle a_s,a_t\rangle\\
+ +2\mathrm{Re}\,\langle a_t-a_s,b_{s,t}\rangle
+ +\|a_t\|^2-2\mathrm{Re}\,\langle a_s,a_t\rangle\\
  &\qquad
  =\|a_t+b_{s,t}-a_s\|^2-\|a_s\|^2,
 \end{aligned}
@@ -151,14 +151,14 @@ Since \(\mathcal A=-L\), the integrated sign is unchanged at second order:
 
 \[
  \int\Gamma_2(\mathbf Q)\,d\mu_K
- =\sum_j\|Lq_j\|^2=\operatorname {Tr}(PL^2),          \tag{12}
+ =\sum_j\|Lq_j\|^2=\mathrm{Tr}(PL^2),          \tag{12}
 \]
 
 while
 
 \[
  \int\Gamma(\mathbf Q)\,d\mu_K
- =\operatorname {Tr}(PL).                            \tag{13}
+ =\mathrm{Tr}(PL).                            \tag{13}
 \]
 
 Consequently

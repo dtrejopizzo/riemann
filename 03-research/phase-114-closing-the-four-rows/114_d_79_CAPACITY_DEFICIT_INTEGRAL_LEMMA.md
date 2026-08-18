@@ -29,7 +29,7 @@ Let `Q_v=I-|v><v|`.  The shorted capacity of `gQ_v+R` on `span(v)` is
 
 \[
  \boxed{
- \operatorname{cap}_g(v;R)
+ \mathrm{cap}_g(v;R)
  ={1\over a_g}-g
  ={g^2\delta_g\over1-g\delta_g}.}                      \tag{3}
 
@@ -39,7 +39,7 @@ Consequently, for `ell>0`,
  \boxed{
  \delta_g>{\ell\over g(g+\ell)}
  \quad\Longrightarrow\quad
- \operatorname{cap}_g(v;R)>\ell.}                      \tag{4}
+ \mathrm{cap}_g(v;R)>\ell.}                      \tag{4}
 
 ### Proof
 
@@ -58,7 +58,7 @@ the rank-one resolvent formula, or the one-dimensional Schur complement,
 gives
 
 \[
- \operatorname{cap}_g={1-ga_g\over a_g}={1\over a_g}-g.
+ \mathrm{cap}_g={1-ga_g\over a_g}={1\over a_g}-g.
                                                                     \tag{7}
 \]
 

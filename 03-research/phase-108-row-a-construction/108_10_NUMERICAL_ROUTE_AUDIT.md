@@ -3,7 +3,7 @@
 ## 1. Purpose
 
 107_240 SS5 constructs, unconditionally, the numerical quotient
-\(V:=\{\text{DC divisors}\}/\operatorname{rad}I_\partial\) with a
+\(V:=\{\text{DC divisors}\}/\mathrm{rad}\,I_\partial\) with a
 nondegenerate induced form \(\overline I_\partial\); 107_241 goes on to
 compute the full signature of \(\overline I_\partial\) on \(V\) and shows
 the Hodge-index statement there is exactly equivalent to RH. Both are
@@ -18,7 +18,7 @@ so Part I's constructive step does not yet feed Part II.
 
 | object | needs principal invariance? | source | status |
 |---|---|---|---|
-| \(V=\{\text{divisors}\}/\operatorname{rad}I_\partial\) | no | 107_240 SS5 (5.1) | constructed unconditionally |
+| \(V=\{\text{divisors}\}/\mathrm{rad}\,I_\partial\) | no | 107_240 SS5 (5.1) | constructed unconditionally |
 | \(\overline I_\partial\), nondegenerate on \(V\) | no | 107_240 SS5 | constructed unconditionally |
 | evaluation coordinates \(f\mapsto(\hat f(0),\hat f(1),(\hat f(\rho))_\rho)\) | no | 107_241 Lemma 2.2 | injective on \(V\) |
 | full blockwise signature of \(\overline I_\partial\) | no | 107_241 Theorem 3.1 | \(n_+=1+\#P\), \(n_-=1+\#L+\#P\) |
@@ -47,10 +47,10 @@ strictly weaker than \(D-D'\) being principal.
 
 Any construction of \(H^0\), Riemann-Roch, or an effectivity/positivity
 statement about *sections* (not just intersection numbers) genuinely
-requires knowing \(\mathcal P\subseteq\operatorname{rad}I_\partial\)
+requires knowing \(\mathcal P\subseteq\mathrm{rad}\,I_\partial\)
 (107_240 Theorem D), i.e. requires the principal subspace to be identified
 and shown to lie in the radical. \(V\) alone, by construction, only ever
-sees divisors modulo \(\operatorname{rad}I_\partial\); it has no memory of
+sees divisors modulo \(\mathrm{rad}\,I_\partial\); it has no memory of
 which classes in that radical came from an actual global rational
 (Frobenius-invariant) section versus an accidental numerical coincidence.
 
@@ -66,7 +66,7 @@ here as the audit's negative half:
 
 This is the substantive new content of this audit. It was not asked for by
 name in 108_00, but it is the direct obstruction to using 108.03's
-explicit \(\operatorname{Prin}(\mathcal G)\) (108.03 Theorem 6.2, 108.04
+explicit \(\mathrm{Prin}(\mathcal G)\) (108.03 Theorem 6.2, 108.04
 Theorem 1.1) to make progress on Proposition 3.1's blockage.
 
 ### Proposition 4.1
@@ -89,7 +89,7 @@ generator of a weight space of \(\mathcal G\)) has full support. \(\square\)
 ### Corollary 4.2 (108.04's domain gap, restated as a fact about \(V\))
 
 108.04 Proposition 2.1 found that \(I_\partial\) does not accept
-\(\operatorname{Prin}(\mathcal G)\) as an input. Proposition 4.1 sharpens
+\(\mathrm{Prin}(\mathcal G)\) as an input. Proposition 4.1 sharpens
 this: it is not merely that the *specific* generator \(U_0\) falls outside
 \(I_\partial\)'s stated domain, it is that the **entire ambient category**
 \(\mathcal G\) is disjoint from the category \(\{D_f:f\in C_c\}\) that \(V\)

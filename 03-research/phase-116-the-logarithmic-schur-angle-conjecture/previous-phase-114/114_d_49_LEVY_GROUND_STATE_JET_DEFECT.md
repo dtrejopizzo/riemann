@@ -21,7 +21,7 @@ The polar block in the CCM convention is genuinely crossed.  Indeed, for
 Consequently the CCM term `W_(0,2)` is
 
 \[
- W_{0,2}(h)=2\operatorname{Re}
+ W_{0,2}(h)=2\mathrm{Re}
    \bigl(M_-(F)\overline{M_+(F)}\bigr)
  =\langle M_TF,CM_TF\rangle,                                 \tag{1.3}
 \]
@@ -269,8 +269,8 @@ The jet term vanishes as a form on `K_T=ker M_T`, but `K_T` need not reduce
 D.47 gives the exact inertia identity
 
 \[
- \operatorname{In}(H_{0,T}|_{K_T})
- =\operatorname{In}(H_{0,T})-\operatorname{In}(\mathcal G_T). \tag{6.2}
+ \mathrm{In}(H_{0,T}|_{K_T})
+ =\mathrm{In}(H_{0,T})-\mathrm{In}(\mathcal G_T). \tag{6.2}
 \]
 
 In Markov language the missing primitive sign is

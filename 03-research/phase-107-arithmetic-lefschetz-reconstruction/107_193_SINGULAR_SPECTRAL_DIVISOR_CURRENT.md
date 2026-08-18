@@ -31,7 +31,7 @@ Let
 
 be the locally finite analytic divisor of the derived entire function.
 Normalize \(dd^c\) so that the Poincare--Lelong formula reads
-\(dd^c\log|f|=[\operatorname{div}(f)]\).  Then
+\(dd^c\log|f|=[\mathrm{div}(f)]\).  Then
 
 \[
  dd^c\log|\xi|=[Z_\xi].
@@ -43,7 +43,7 @@ Equivalently, the flat connection of `107_192` extends meromorphically:
 \[
  A=-d\log\xi,
  \qquad
- \operatorname{res}_{s=\rho}A=-m_\rho.
+ \mathrm{res}_{s=\rho}A=-m_\rho.
  \tag{2.3}
 \]
 

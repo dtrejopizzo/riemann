@@ -22,7 +22,7 @@ quantitative source estimates:
 \qquad
 \frac{\Delta_N}{m_N^2}
 \quad\text{with}\quad
-m_N=\min\operatorname{Spec}S_N.
+m_N=\min\mathrm{Spec}\,S_N.
 \tag{1}
 \]
 
@@ -37,7 +37,7 @@ identify the limiting divisor with that of \(\Xi\).
 Fix \(L\) and let
 
 \[
-V_N=\operatorname{span}\{U_k:|k|\leq N\},
+V_N=\mathrm{span}\,\{U_k:|k|\leq N\},
 \qquad
 D_{0,N}U_k=kU_k.
 \tag{2}
@@ -57,7 +57,7 @@ archimedean and prime-power formula.
 Assume the lowest eigenvalue is simple and its ground state is even. Write
 
 \[
-\varepsilon_N=\min\operatorname{Spec}W_N,
+\varepsilon_N=\min\mathrm{Spec}\,W_N,
 \qquad
 T_N=W_N-\varepsilon_NI,
 \qquad
@@ -306,7 +306,7 @@ f_\Delta(t)=\frac1\pi\int_0^1
 \]
 
 Since \(f_\Delta\) is operator-monotone, its Loewner matrix is positive.
-Writing \(m_N=\min\operatorname{Spec}S_N\), the corresponding completely
+Writing \(m_N=\min\mathrm{Spec}\,S_N\), the corresponding completely
 positive Schur multiplier yields
 
 \[
@@ -459,7 +459,7 @@ G_{N+1}(z)\mathsf U_N-\mathsf U_NG_N(z)
 \tag{38}
 \]
 
-Consequently, with \(d=|\operatorname{Im}z|\),
+Consequently, with \(d=|\mathrm{Im}\,z|\),
 
 \[
 \|G_{N+1}\mathsf U_N-\mathsf U_NG_N\|_{\mathcal S_1}
@@ -479,10 +479,10 @@ The exact second-resolvent increment is
 \[
 \boxed{
 \begin{aligned}
-\operatorname{Tr}G_{N+1}(z)^2-\operatorname{Tr}G_N(z)^2
-={}&\operatorname{Tr}\mathsf U_N^*
+\mathrm{Tr}\,G_{N+1}(z)^2-\mathrm{Tr}\,G_N(z)^2
+={}&\mathrm{Tr}\,\mathsf U_N^*
 \bigl(G_{N+1}E_N+E_NG_N\bigr)\\
-&+\operatorname{Tr}Q_N^{\mathrm{new}}
+&+\mathrm{Tr}\,Q_N^{\mathrm{new}}
 G_{N+1}(z)^2Q_N^{\mathrm{new}},
 \end{aligned}}
 \tag{41}

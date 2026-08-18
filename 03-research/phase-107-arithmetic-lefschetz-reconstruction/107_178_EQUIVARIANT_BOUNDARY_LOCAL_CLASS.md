@@ -103,7 +103,7 @@ This supplies the correct local realization of the geometric side of
 the explicit formula.  It does **not** yet supply:
 
 1. a global compactified boundary object over
-   \(\operatorname{Spec}\mathbb Z\);
+   \(\mathrm{Spec}\,\mathbb Z\);
 2. a global bilinear intersection pairing on localized classes;
 3. the archimedean Green-current completion;
 4. an arithmetic Hodge-index theorem for this equivariant theory.

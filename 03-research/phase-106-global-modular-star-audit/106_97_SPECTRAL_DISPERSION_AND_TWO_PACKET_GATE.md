@@ -246,7 +246,7 @@ regression for each prime.
 ## 4. Support separation criteria
 
 The spectral formula gives two convenient sufficient tests.  Suppose
-\(\operatorname {supp}\rho\subset[0,u]\).  Then
+\(\mathrm{supp}\,\rho\subset[0,u]\).  Then
 
 \[
  \kappa_\wedge\le(1+u)^2.                        \tag{22}
@@ -485,7 +485,7 @@ smaller than the two-row energy in (33) or (36).
 The condition \(Q_2>\delta\) is not forced by \(G>\delta\).  Take
 
 \[
- B=\operatorname {diag}(1,2,3),
+ B=\mathrm{diag}(1,2,3),
  \qquad
  z=\sqrt{12/13}\,(1,1,1),
  \qquad

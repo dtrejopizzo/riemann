@@ -146,7 +146,7 @@ complex rather than quotienting by its closure:
 \[
  \boxed{
  \mathfrak C_{\rm der}
- =\operatorname{Cone}\bigl(
+ =\mathrm{Cone}\,\bigl(
    \mathcal L_{\rm pr}\longrightarrow\mathcal V_{\rm loc}
   \bigr).}
 \tag{12}

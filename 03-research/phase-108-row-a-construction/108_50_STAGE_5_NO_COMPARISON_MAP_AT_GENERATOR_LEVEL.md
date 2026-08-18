@@ -44,7 +44,7 @@ corner pairing is
 \]
 defined on correspondence divisors $D_f,D_g$ built from **compactly
 supported** data $f,g$; it descends unconditionally to the numerical
-quotient $V=\{\text{correspondence divisors}\}/\operatorname{rad}
+quotient $V=\{\text{correspondence divisors}\}/\mathrm{rad}
 I_{\mathrm{partial}}$, nondegenerate there. Neither the precise map
 $f\mapsto D_f$ nor the operator $T$ is examined further here: this note
 works only with the one property that is load-bearing for the argument —
@@ -58,8 +58,8 @@ definitions, which lie outside this note's read scope.
  =\sum_i\lambda_i\,c_g(s_i)\,\Phi(s_i),\qquad \sum_i\lambda_i=0,
 \]
 on mass-zero combinations of point masses $\delta_{s_i}$, each representing
-a graded principal witness $\operatorname{div}(U_{s_i})$ (108_37 §2 uses the
-notation $\operatorname{div}\,U_{s_0}-\operatorname{div}\,U_{s_1}$ for such a
+a graded principal witness $\mathrm{div}(U_{s_i})$ (108_37 §2 uses the
+notation $\mathrm{div}\,\,U_{s_0}-\mathrm{div}\,\,U_{s_1}$ for such a
 combination).
 
 **Read from source, verbatim (108_37 §2).**
@@ -92,9 +92,9 @@ $\mathbb N^\times$").
 **Proof.** Suppose $f\not\equiv0$; pick $x_0>0$ with $f(x_0)\ne0$. For every
 $\lambda\in\Lambda$, $f(\lambda x_0)=\chi(\lambda)f(x_0)$, and this is
 nonzero because $\chi(\lambda)\ne0$ and $f(x_0)\ne0$. Hence
-$\lambda x_0\in\operatorname{supp}(f)$ for every $\lambda\in\Lambda$. Since
+$\lambda x_0\in\mathrm{supp}(f)$ for every $\lambda\in\Lambda$. Since
 $\Lambda$ is unbounded and $x_0>0$ is fixed, the set
-$\{\lambda x_0:\lambda\in\Lambda\}$ is unbounded, so $\operatorname{supp}(f)$
+$\{\lambda x_0:\lambda\in\Lambda\}$ is unbounded, so $\mathrm{supp}(f)$
 is unbounded. This contradicts compact support. Hence $f\equiv0$. $\blacksquare$
 
 The proof uses nothing beyond the definition of support and the fact that a
@@ -170,33 +170,33 @@ computation at $s=2\pi ik/\log2$ gives $\hat f'(s)=-2^{-s}\log2/s=-\log2/s
 \ne0$. $\blacksquare$
 
 > ### Theorem 2.2 (reverse obstruction)
-> The map $D_f\mapsto\operatorname{div}(\hat f):=\sum_{\hat f(s)=0}
-> \operatorname{ord}_s(\hat f)\,\delta_s$ does not land in the graded
+> The map $D_f\mapsto\mathrm{div}(\hat f):=\sum_{\hat f(s)=0}
+> \mathrm{ord}_s(\hat f)\,\delta_s$ does not land in the graded
 > quotient's generating set of **mass-zero, finite** combinations
 > $\sum_i\lambda_i\delta_{s_i}$, $\sum_i\lambda_i=0$: for a generic
-> compactly supported $f$ (Fact 2.1 exhibits one), $\operatorname{div}(\hat
+> compactly supported $f$ (Fact 2.1 exhibits one), $\mathrm{div}(\hat
 > f)$ is an infinite, unweighted-mass-zero (indeed unsummable in the naive
 > sense) divisor.
 
 **Proof.** By Fact 2.1 the zero set of $\hat f$ for $f=\mathbf1_{[1,2]}$ is
 countably infinite (indexed by $k\in\mathbb Z\setminus\{0\}$), each with
-coefficient $\operatorname{ord}_s(\hat f)=1$. The formal sum
+coefficient $\mathrm{ord}_s(\hat f)=1$. The formal sum
 $\sum_{k\ne0}\delta_{2\pi ik/\log2}$ is not a finite combination, and "mass
 zero" — $\sum\lambda_i=0$ — is not even meaningful for it without a
 prescribed (and unproved) summation convention, since the naive sum of
 coefficients $\sum_{k\ne0}1$ diverges. Hence this natural candidate does not
-produce an element of $\operatorname{Prin}'$ as Theorem 3.3 of 108_38
+produce an element of $\mathrm{Prin}'$ as Theorem 3.3 of 108_38
 describes it. $\blacksquare$
 
 Nothing here rules out that *some* regularized or zeta-counted version of
-$\operatorname{div}(\hat f)$ could be made sense of; that is not attempted,
+$\mathrm{div}(\hat f)$ could be made sense of; that is not attempted,
 and is listed as open in §5.
 
 ## 4. Conclusion
 
 > ### Theorem 3 (no comparison map at generator level)
 > There is no map of generators, in either direction, between the graded
-> quotient $\operatorname{Prin}'/\operatorname{rad}\Lambda^0$ of Stage 2 and
+> quotient $\mathrm{Prin}'/\mathrm{rad}\,\Lambda^0$ of Stage 2 and
 > the numerical quotient $V$ of Stage 0, that sends a nonzero generator to a
 > nonzero generator by the literal, unregularized identification available
 > from the two constructions' own definitions.
@@ -221,11 +221,11 @@ compact-support restriction, the numerical quotient $V$, and its
 nondegeneracy).
 
 **Not read, and not reconstructed.** Stage 0's own paper(s): the precise
-definition of $D_f$, of $T$, and of $\operatorname{rad}I_{\mathrm
+definition of $D_f$, of $T$, and of $\mathrm{rad}\,I_{\mathrm
 partial}$. Consequently:
 
 * this note does **not** compare the two radicals' generating data (zeros
-  of $\Phi$ versus whatever generates $\operatorname{rad}I_{\mathrm
+  of $\Phi$ versus whatever generates $\mathrm{rad}\,I_{\mathrm
   partial}$) — that comparison is not attempted, for lack of access to the
   latter's description, and is listed as open in 108_52;
 * this note does **not** rule out a regularized comparison map built by

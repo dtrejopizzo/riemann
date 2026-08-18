@@ -12,7 +12,7 @@ is one no one has assembled.
 
 Everything we proved is equivalent to RH and stuck at the **sign**:
 $$
-\mathrm{RH}\iff \mathfrak t\succeq0\iff \inf\operatorname{spec}(\mathcal T)\ge0\iff\|K\|\le1\iff \nu\ \text{Carleson}\le1\iff \mathrm{Id}-K_{\mathrm{CC}}\succeq0.
+\mathrm{RH}\iff \mathfrak t\succeq0\iff \inf\mathrm{spec}(\mathcal T)\ge0\iff\|K\|\le1\iff \nu\ \text{Carleson}\le1\iff \mathrm{Id}-K_{\mathrm{CC}}\succeq0.
 $$
 The **magnitude** (finiteness, $\|K\|<\infty$, the Carleson bound is finite) is unconditional from Ramanujan.
 The **sign** ($\le1$, $\succeq0$) is RH. P8 Theorem C: the zero side cannot supply it (circular). Connes'

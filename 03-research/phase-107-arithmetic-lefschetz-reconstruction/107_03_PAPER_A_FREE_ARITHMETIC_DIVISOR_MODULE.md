@@ -88,7 +88,7 @@ For a finite support set \(S\subset\mathcal P\), define the free abelian
 module
 
 \[
- \operatorname{Corr}_{\mathrm{raw}}(S)
+ \mathrm{Corr}_{\mathrm{raw}}(S)
  =
  \mathbf Z F_{\mathrm v}
  \oplus \mathbf Z F_{\mathrm h}
@@ -101,16 +101,16 @@ module
 The finite-support raw correspondence module is the filtered union
 
 \[
- \operatorname{Corr}_{\mathrm{raw}}
- =\varinjlim_{S\Subset\mathcal P}\operatorname{Corr}_{\mathrm{raw}}(S).
+ \mathrm{Corr}_{\mathrm{raw}}
+ =\varinjlim_{S\Subset\mathcal P}\mathrm{Corr}_{\mathrm{raw}}(S).
  \tag{3.5}
 \]
 
 ### Definition 3.1: raw transpose
 
 The transpose involution
-\(\tau_{\mathrm{raw}}:\operatorname{Corr}_{\mathrm{raw}}
-\to\operatorname{Corr}_{\mathrm{raw}}\) is defined by
+\(\tau_{\mathrm{raw}}:\mathrm{Corr}_{\mathrm{raw}}
+\to\mathrm{Corr}_{\mathrm{raw}}\) is defined by
 
 \[
  \tau_{\mathrm{raw}}(F_{\mathrm v})=F_{\mathrm h},
@@ -141,7 +141,7 @@ Define the raw bidegree map
 
 \[
  \deg_{\mathrm{raw}}=(d_{\mathrm v},d_{\mathrm h}):
- \operatorname{Corr}_{\mathrm{raw}}\to\mathbf Z^2
+ \mathrm{Corr}_{\mathrm{raw}}\to\mathbf Z^2
  \tag{3.8}
 \]
 
@@ -173,7 +173,7 @@ its geometric contribution is metric, not algebraic.
 The balanced weight is the map
 
 \[
- w:\operatorname{Corr}_{\mathrm{raw}}\to\mathbf R_{>0}
+ w:\mathrm{Corr}_{\mathrm{raw}}\to\mathbf R_{>0}
  \tag{3.11}
 \]
 
@@ -195,7 +195,7 @@ Let \(X_{p,k}\) be a formal symbol for the connected \(k\)-fold return at
 the prime \(p\).  For finite \(S\subset\mathcal P\), let
 
 \[
- \mathcal H_S=\operatorname{Sym}\!\left(
+ \mathcal H_S=\mathrm{Sym}\,\!\left(
  \bigoplus_{a\in S}\mathbf Q X_a
  \right)
  \tag{4.1}
@@ -244,7 +244,7 @@ It is not an operation on correspondence composition.
 For finite \(S\subset\mathcal P\), define
 
 \[
- \operatorname{Div}_{\mathrm{EF}}(S)
+ \mathrm{Div}_{\mathrm{EF}}(S)
  =
  \mathbf Z F_{\mathrm v}
  \oplus \mathbf Z F_{\mathrm h}
@@ -258,8 +258,8 @@ where \(Z_a\) is the connected divisor symbol attached to the primitive
 return \(X_a\).  The finite-support source divisor module is
 
 \[
- \operatorname{Div}_{\mathrm{EF}}
- =\varinjlim_{S\Subset\mathcal P}\operatorname{Div}_{\mathrm{EF}}(S).
+ \mathrm{Div}_{\mathrm{EF}}
+ =\varinjlim_{S\Subset\mathcal P}\mathrm{Div}_{\mathrm{EF}}(S).
  \tag{5.2}
 \]
 
@@ -268,27 +268,27 @@ return \(X_a\).  The finite-support source divisor module is
 Define the connected trace map
 
 \[
- \operatorname{ctr}:
- \operatorname{Corr}_{\mathrm{raw}}\to\operatorname{Div}_{\mathrm{EF}}
+ \mathrm{ctr}:
+ \mathrm{Corr}_{\mathrm{raw}}\to\mathrm{Div}_{\mathrm{EF}}
  \tag{5.3}
 \]
 
 on generators by
 
 \[
- \operatorname{ctr}(F_{\mathrm v})=F_{\mathrm v},
+ \mathrm{ctr}(F_{\mathrm v})=F_{\mathrm v},
  \quad
- \operatorname{ctr}(F_{\mathrm h})=F_{\mathrm h},
+ \mathrm{ctr}(F_{\mathrm h})=F_{\mathrm h},
  \quad
- \operatorname{ctr}(\Delta)=\Delta,
+ \mathrm{ctr}(\Delta)=\Delta,
  \quad
- \operatorname{ctr}(Z_\infty)=Z_\infty,
+ \mathrm{ctr}(Z_\infty)=Z_\infty,
  \tag{5.4}
 \]
 
 \[
- \operatorname{ctr}(\Gamma_{p,k})
- =\operatorname{ctr}(\Gamma_{p,k}^t)
+ \mathrm{ctr}(\Gamma_{p,k})
+ =\mathrm{ctr}(\Gamma_{p,k}^t)
  =Z_{p,k}.
  \tag{5.5}
 \]
@@ -299,12 +299,12 @@ orientation-free.
 
 ### Definition 5.2: divisor degree and length
 
-The source degree on \(\operatorname{Div}_{\mathrm{EF}}\) is the pair of
+The source degree on \(\mathrm{Div}_{\mathrm{EF}}\) is the pair of
 maps
 
 \[
  \deg=(d,\ell):
- \operatorname{Div}_{\mathrm{EF}}
+ \mathrm{Div}_{\mathrm{EF}}
  \to \mathbf Z[\mathcal P]\oplus\mathbf R.
  \tag{5.6}
 \]
@@ -332,12 +332,12 @@ added, which prime tower and which logarithmic return length are present.
 
 ### Proposition 5.1: finite support
 
-Every element of \(\operatorname{Div}_{\mathrm{EF}}\) has only finitely
+Every element of \(\mathrm{Div}_{\mathrm{EF}}\) has only finitely
 many nonzero coefficients of the form \(Z_{p,k}\).
 
 Proof.  By construction,
-\(\operatorname{Div}_{\mathrm{EF}}\) is the filtered union of the finite
-modules \(\operatorname{Div}_{\mathrm{EF}}(S)\).  Each element belongs to
+\(\mathrm{Div}_{\mathrm{EF}}\) is the filtered union of the finite
+modules \(\mathrm{Div}_{\mathrm{EF}}(S)\).  Each element belongs to
 one such finite stage.  \(\square\)
 
 This is the module-theoretic shadow of the Phase 107 principle that a
@@ -349,22 +349,22 @@ The actual deliverable of Work Package I-A is the quintuple
 
 \[
  \bigl(
- \operatorname{Corr}_{\mathrm{raw}},
+ \mathrm{Corr}_{\mathrm{raw}},
  \tau_{\mathrm{raw}},
  \deg_{\mathrm{raw}},
- \operatorname{Div}_{\mathrm{EF}},
- \operatorname{ctr}
+ \mathrm{Div}_{\mathrm{EF}},
+ \mathrm{ctr}
  \bigr),
  \tag{6.1}
 \]
 
 with the following meaning:
 
-1. \(\operatorname{Corr}_{\mathrm{raw}}\) stores oriented source
+1. \(\mathrm{Corr}_{\mathrm{raw}}\) stores oriented source
    correspondences and therefore admits transpose.
-2. \(\operatorname{Div}_{\mathrm{EF}}\) stores connected fixed-orbit
+2. \(\mathrm{Div}_{\mathrm{EF}}\) stores connected fixed-orbit
    divisors with finite support.
-3. \(\operatorname{ctr}\) is the bridge from raw correspondences to
+3. \(\mathrm{ctr}\,\) is the bridge from raw correspondences to
    connected orbit divisors.
 4. The Eulerian idempotent acts on the Euler Hopf algebra generating the
    \(Z_{p,k}\), not on categorical composition.
@@ -401,7 +401,7 @@ at the exact intended point.
 
 If the arithmetic object has no Euler product by primitive prime towers,
 then the Hopf algebra \(\mathcal H_S\) of connected prime-power returns
-is undefined, and therefore \(\operatorname{Div}_{\mathrm{EF}}\) cannot
+is undefined, and therefore \(\mathrm{Div}_{\mathrm{EF}}\) cannot
 be formed.
 
 Proof.  The symbols \(X_{p,k}\) are not formal decoration added after the
@@ -425,7 +425,7 @@ The relations do not identify connected and disconnected returns.
 
 Reason.  The connected symbols \(Z_{p,k}\) are introduced only after
 \(\mathfrak e_1\) is applied to the Euler Hopf algebra.  No relation in
-\(\operatorname{Div}_{\mathrm{EF}}\) equates \(Z_{p,k}\) with a product
+\(\mathrm{Div}_{\mathrm{EF}}\) equates \(Z_{p,k}\) with a product
 of two or more primitive return symbols.
 
 ### Stop test 2
@@ -433,8 +433,8 @@ of two or more primitive return symbols.
 Transpose is defined before connected extraction.
 
 Reason.  The transpose \(\tau_{\mathrm{raw}}\) is part of
-\(\operatorname{Corr}_{\mathrm{raw}}\), while connected extraction is the
-separate map \(\operatorname{ctr}\) built only afterward.
+\(\mathrm{Corr}_{\mathrm{raw}}\), while connected extraction is the
+separate map \(\mathrm{ctr}\,\) built only afterward.
 
 ### Stop test 3
 

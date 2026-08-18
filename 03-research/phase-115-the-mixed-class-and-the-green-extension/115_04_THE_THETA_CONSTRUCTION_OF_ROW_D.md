@@ -8,7 +8,7 @@ constant.  What remains open is stated precisely at the end.
 ## 0. Why a recipe and not a theorem
 
 Wei He, arXiv:2512.01811, constructs numerical \(h^0,h^1,h^2\) for **classical
-Arakelov arithmetic surfaces** \(f:\mathcal X\to\operatorname{Spec}\mathcal O\)
+Arakelov arithmetic surfaces** \(f:\mathcal X\to\mathrm{Spec}\,\mathcal O\)
 with Hermitian line bundles.  \(\mathscr Y_{\mathbb S}\) is not one of those,
 and `main.tex`'s Hodge-route audit says exactly why.  Importing his *theorem*
 fails on the same category gap as Faltings–Hriljac–Moriwaki and Yuan–Zhang.
@@ -48,7 +48,7 @@ A theta series needs a Euclidean metric on the lattice, not merely a norm on
 its determinant.  Row (a) has a **distinguished basis** — the ordered
 digit-pair coordinates — so the natural choice is the one making that basis
 orthogonal with a common scale \(\sigma_t\).  Then
-\(\operatorname{covol}=\sigma_t^{N_t}\), and matching `eq:finiteRRmetric`
+\(\mathrm{covol}=\sigma_t^{N_t}\), and matching `eq:finiteRRmetric`
 forces \(\sigma_t^{N_t}=e^{-(\log2)^2N_t}\), i.e.
 
 \[
@@ -184,7 +184,7 @@ Three items, in order of difficulty.
 1. **Axiom 1\('\)** — the threshold-to-effectivity implication on row (a)'s
    lattices.  Lattice geometry; no arithmetic input needed.
 2. **\(h^1\) and the three-term \(\chi\)** — transport Wei He's Leray step.
-   Requires a Leray-type filtration in \(\operatorname{Perf}_{IDN}\); row (a)
+   Requires a Leray-type filtration in \(\mathrm{Perf}_{IDN}\); row (a)
    has the category and the duals, so this is a construction, not an import.
 3. **The mixed classes.**  Everything above is on the **ruled** cone, where
    \(V_{t,\mathbb Z}(D,E)\) exists.  The classes row (d) needs are the

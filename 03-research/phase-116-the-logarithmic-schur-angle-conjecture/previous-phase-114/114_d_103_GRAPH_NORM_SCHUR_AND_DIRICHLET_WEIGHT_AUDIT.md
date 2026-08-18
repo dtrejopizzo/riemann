@@ -81,8 +81,8 @@ For the unweighted target metric,
 
 \[
  (Z_N^*Z_N)_{i,j}
- =\#\{m\le N:\operatorname{lcm}(i,j)\mid m\}
- =\left\lfloor{N\over\operatorname{lcm}(i,j)}\right\rfloor.
+ =\#\{m\le N:\mathrm{lcm}(i,j)\mid m\}
+ =\left\lfloor{N\over\mathrm{lcm}(i,j)}\right\rfloor.
                                                                     \tag{2.2}
 \]
 
@@ -134,7 +134,7 @@ Let `W_N=diag(w_1,...,w_N)` with every `w_m>=0`.  Then
 
 \[
  (Z_N^*W_NZ_N)_{i,j}
- =\sum_{\substack{m\le N\\\operatorname{lcm}(i,j)\mid m}}w_m.
+ =\sum_{\substack{m\le N\\\mathrm{lcm}(i,j)\mid m}}w_m.
                                                                     \tag{3.1}
 \]
 

@@ -10,13 +10,13 @@ imposed, while the allowed pole divisor lies in the opposite half-plane:
 
 \[
  \mathcal U_+=\{u_+:\ u_+\text{ is meromorphic, vertically Schwartz for }
-     \operatorname{Re}s\ge1/2,\text{ with poles only at }-2\mathbb N_0\},
+     \mathrm{Re}\,s\ge1/2,\text{ with poles only at }-2\mathbb N_0\},
                                                                \tag{1.1}
 \]
 
 \[
  \mathcal U_-=\{u_-:\ u_-\text{ is meromorphic, vertically Schwartz for }
-     \operatorname{Re}s\le1/2,\text{ with poles only at }1+2\mathbb N_0\}.
+     \mathrm{Re}\,s\le1/2,\text{ with poles only at }1+2\mathbb N_0\}.
                                                                \tag{1.2}
 \]
 
@@ -227,9 +227,9 @@ Finally `Xi E subset Z H_cap=ran(sigma_zeta)`.  Thus the target Hilbert
 cokernel is zero:
 
 \[
- \overline{\operatorname{ran}\sigma_\zeta}^{\,L^2}=L^2,
+ \overline{\mathrm{ran}\,\sigma_\zeta}^{\,L^2}=L^2,
  \qquad
- L^2/\overline{\operatorname{ran}\sigma_\zeta}=0.   \tag{4.5}
+ L^2/\overline{\mathrm{ran}\,\sigma_\zeta}=0.   \tag{4.5}
 \]
 
 This recovers D.26 inside the algebraically correctly typed Gamma line and

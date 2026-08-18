@@ -490,7 +490,7 @@ Hermitian quadratic contribution is, up to the theta endpoint (37),
 \boxed{
 \begin{aligned}
  \mathcal P_D(q)
- =-2\operatorname {Re}\int_{x>y}
+ =-2\mathrm{Re}\,\int_{x>y}
  D(e^{x-y})e^{(x-y)/2}\,
  \overline{K(x)q(x)}
  \{(Kq)'(y)+\tfrac12K(y)q(y)\}\,dy\,dx.
@@ -521,7 +521,7 @@ The exact compressed form is
 \boxed{
  A_R-\frac12I
  =Q_R\mathcal B_{\sigma,R}Q_R
- \quad\hbox{on }\operatorname {Ran}Q_R.}
+ \quad\hbox{on }\mathrm{Ran}\,Q_R.}
  \tag{41}
 \]
 
@@ -539,7 +539,7 @@ exactly the spatial observability issue isolated in 106.70 and 106.123.
 
 Consequently Theorem 1 proves the ambient strong-resolvent limit, while for
 \(A_R\) it proves only the Mosco liminf.  Any limit profile of actual
-subthreshold eigenstates already belongs to \(\operatorname {Ran}Q_R\),
+subthreshold eigenstates already belongs to \(\mathrm{Ran}\,Q_R\),
 and its first correction is not (30) with an arbitrary \(g\), but
 
 \[
@@ -554,7 +554,7 @@ and its first correction is not (30) with an arbitrary \(g\), but
 where \(\mathcal T_R\) contains the exact incoming flux (38), the
 small-jump remainder and theta-superexponential terms.  It tends to zero
 strongly on every fixed smooth ambient profile, but not in norm and not
-uniformly on the moving ranges \(\operatorname {Ran}Q_R\).
+uniformly on the moving ranges \(\mathrm{Ran}\,Q_R\).
 
 ## 9. The signed passivity theorem now required
 
@@ -563,7 +563,7 @@ the statement that the tail operator tends to \(1/2I\).  That convergence
 has zero margin and is already exhausted by (20).
 
 The exact successor is the following one-sided statement.  For every
-normalized sequence \(g_R\in\operatorname {Ran}Q_R\) which can arise from
+normalized sequence \(g_R\in\mathrm{Ran}\,Q_R\) which can arise from
 an actual subthreshold eigenstate and is tight in the theta boundary
 coordinate,
 
@@ -591,7 +591,7 @@ separately.  On a fixed Dirichlet profile, (44) reduces at first order to
 
 For actual mean-periodic profiles the nonlocal flux (39) is also leading.
 Proving (44), or proving instead that no nonzero tight profile can belong
-to the moving ranges \(\operatorname {Ran}Q_R\), excludes the threshold
+to the moving ranges \(\mathrm{Ran}\,Q_R\), excludes the threshold
 escape of 106.123.  The present calculation proves neither alternative;
 it identifies their exact operators, scales and signs without replacing
 the literal von Mangoldt discrepancy by an absolute envelope.

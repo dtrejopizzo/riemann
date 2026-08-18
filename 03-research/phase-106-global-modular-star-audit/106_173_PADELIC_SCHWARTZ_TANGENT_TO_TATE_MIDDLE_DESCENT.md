@@ -5,7 +5,7 @@
 Documents 106.169--106.172 construct the polarized Tate middle spaces,
 their odd orientation, and the scalar primitive--Gamma boundary
 normalization.  One comparison map was still only denoted by
-\(\operatorname {Loc}_{\rm Tate}\): the passage from the actual local
+\(\mathrm{Loc}_{\rm Tate}\): the passage from the actual local
 Schwartz functions in the adelic source to the two harmonic coordinates
 of each complex Tate fibre.
 
@@ -24,7 +24,7 @@ kernel; that is a derived global assertion.
 ## 2. The spherical tangent at one prime
 
 Fix a prime \(p\).  Normalize additive Haar measure on \(\mathbb Q_p\)
-by \(\operatorname {vol}(\mathbb Z_p)=1\), and choose the standard
+by \(\mathrm{vol}(\mathbb Z_p)=1\), and choose the standard
 self-dual additive character.  Let
 
 \[
@@ -221,7 +221,7 @@ projector of 106.169 onto
 It commutes with \(J_S^{\rm Tate}\).  Put
 
 \[
- \operatorname {Loc}_S^{\rm mid}
+ \mathrm{Loc}_S^{\rm mid}
  =P_S^{\rm mid}L_S:\bigoplus_{p\in S}\mathscr D_p
                  \longrightarrow IH_S^1.                    \tag{19}
 \]
@@ -235,7 +235,7 @@ surjection.  Its right inverse is the restriction
  \boxed{
  \sigma_S=s_S|_{IH_S^1},
  \qquad
- \operatorname {Loc}_S^{\rm mid}\sigma_S=I.}                \tag{20}
+ \mathrm{Loc}_S^{\rm mid}\sigma_S=I.}                \tag{20}
 \]
 
 #### Proof
@@ -244,7 +244,7 @@ If \(v\in IH_S^1\), then \(P_S^{\rm mid}v=v\).  Equations (13) and
 (19) therefore give
 
 \[
- \operatorname {Loc}_S^{\rm mid}s_Sv
+ \mathrm{Loc}_S^{\rm mid}s_Sv
  =P_S^{\rm mid}L_Ss_Sv=P_S^{\rm mid}v=v.                    \tag{21}
 \]
 
@@ -282,7 +282,7 @@ equals \((v,0)\), is complex-linear, and (19) gives the commutative
 identity
 
 \[
- \operatorname {Loc}_{S'}^{\rm mid}
+ \mathrm{Loc}_{S'}^{\rm mid}
  \bigl(s_{S'}\iota_{S,S'}^{\rm mid}v\bigr)
  =\iota_{S,S'}^{\rm mid}v.                                  \tag{24}
 \]
@@ -305,8 +305,8 @@ to the actual Tate Hodge star rather than to a formally chosen copy.
 What has not yet been proved is the following derived kernel identity:
 
 \[
- \ker H^1(\operatorname {Loc}^{\rm mid})
- =\overline{\operatorname {Ran}\rho^\natural}                \tag{25}
+ \ker H^1(\mathrm{Loc}^{\rm mid})
+ =\overline{\mathrm{Ran}\,\rho^\natural}                \tag{25}
 \]
 
 inside the CCM nuclear cyclic target.  Theorem 5.1 proves local

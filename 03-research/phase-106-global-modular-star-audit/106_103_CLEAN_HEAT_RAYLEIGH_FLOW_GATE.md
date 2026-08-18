@@ -51,10 +51,10 @@ proved heat core and put
 \]
 
 Then \(V>0\) in the strict quadratic-form sense, \(\ker V=\{0\}\), and
-\(\operatorname {Tr}V=1\). Define, for \(t>0\),
+\(\mathrm{Tr}\,V=1\). Define, for \(t>0\),
 
 \[
- \boxed{Z_V(t)=\operatorname {Tr}(Ve^{-tS}).}
+ \boxed{Z_V(t)=\mathrm{Tr}(Ve^{-tS}).}
  \tag{4}
 \]
 
@@ -72,7 +72,7 @@ positive measure
 
 \[
  d\nu_V(\lambda)
- =\operatorname {Tr}\!\left(
+ =\mathrm{Tr}\,\!\left(
  V^{1/2}E_S(d\lambda)V^{1/2}\right).
  \tag{6}
 \]
@@ -87,7 +87,7 @@ Then
 ### Lemma 1 — The heat state sees the complete spectrum
 
 \[
- \boxed{\operatorname {supp}\nu_V=\sigma(S).}
+ \boxed{\mathrm{supp}\,\nu_V=\sigma(S).}
  \tag{8}
 \]
 
@@ -97,7 +97,7 @@ If an open set \(O\) meets \(\sigma(S)\), then \(E_S(O)\ne0\). If
 \(\nu_V(O)=0\), then
 
 \[
- 0=\operatorname {Tr}(V^{1/2}E_S(O)V^{1/2})
+ 0=\mathrm{Tr}(V^{1/2}E_S(O)V^{1/2})
   =\|E_S(O)V^{1/2}\|_{\mathfrak S_2}^2.
 \]
 
@@ -112,7 +112,7 @@ For every integer \(k\geq0\), spectral calculus and trace cyclicity give
 \[
  \boxed{
  (-1)^kZ_V^{(k)}(t)
- =\operatorname {Tr}(VS^ke^{-tS})
+ =\mathrm{Tr}(VS^ke^{-tS})
  =\int\lambda^ke^{-t\lambda}\,d\nu_V(\lambda)\geq0.}
  \tag{9}
 \]
@@ -125,7 +125,7 @@ Put
 \[
  \Gamma_t=e^{-tS/2}Ve^{-tS/2},
  \qquad
- \mathcal E_V(t)=\operatorname {Tr}(A\Gamma_t),
+ \mathcal E_V(t)=\mathrm{Tr}(A\Gamma_t),
  \tag{10}
 \]
 
@@ -151,7 +151,7 @@ variance law
 
 \[
  \boxed{
- R_V'(t)=-\operatorname {Var}_{\mathbb P_t}(\lambda)\leq0.}
+ R_V'(t)=-\mathrm{Var}_{\mathbb P_t}(\lambda)\leq0.}
  \tag{13}
 \]
 
@@ -206,7 +206,7 @@ Equations (11), (15), and (16) yield the boost-free physical criterion
  \mathscr E_\Gamma[\Gamma_t]
  +\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
  \mathcal J_{\log n}[\Gamma_t]}
- {\operatorname {Tr}\Gamma_t}
+ {\mathrm{Tr}\,\Gamma_t}
  \geq\frac12.}
  \tag{17}
 \]
@@ -246,7 +246,7 @@ unconditionally and contains no threshold information.
 
 #### Proof
 
-If \(A\geq1/2\), then \(\operatorname {supp}\nu_V\subset[1,\infty)\),
+If \(A\geq1/2\), then \(\mathrm{supp}\,\nu_V\subset[1,\infty)\),
 and (19) proves both positivity statements.
 
 Conversely, suppose \(\lambda_*<1\). Divide (19) by \(Y_V(t)>0\). The
@@ -336,7 +336,7 @@ The same representation gives at most affine growth. Define
 \[
  \mathcal R_{\phi,V}(t)
  =\frac{
- \operatorname {Tr}\!\left(
+ \mathrm{Tr}\,\!\left(
  V\{\phi(S)-\phi(1)I\}e^{-tS}\right)}
  {Z_V(t)}.
  \tag{24}
@@ -401,7 +401,7 @@ It also makes the remaining sign maximally explicit:
  \mathscr E_\Gamma[\Gamma_t]
  +\sum_{n\ge2}\Lambda(n)n^{-1/2}
        \mathcal J_{\log n}[\Gamma_t]}
- {\operatorname {Tr}\Gamma_t}
+ {\mathrm{Tr}\,\Gamma_t}
  \downarrow\inf\sigma(A).}
  \tag{28}
 \]

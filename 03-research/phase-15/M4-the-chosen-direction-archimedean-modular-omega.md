@@ -52,7 +52,7 @@ that separates a construction of $\omega$ from a re-encoding of RH.
    positivity is RH verbatim. A1's claim to *prove* RH is the M3 equivalence wearing new notation. (We will still run
    it — as a numerical probe of the criterion on $10^5$ zeros, which is genuinely informative.)
 2. It shows the other three **converge** on the same independent ingredient from three sides: the **archimedean
-   place** $W(r)=\operatorname{Re}\psi(\tfrac14+\tfrac{ir}{2})-\log\pi$ (A2's curvature, A3-D's potential, A4-iv's
+   place** $W(r)=\mathrm{Re}\,\psi(\tfrac14+\tfrac{ir}{2})-\log\pi$ (A2's curvature, A3-D's potential, A4-iv's
    Hessian) — the one smooth, positive datum external to the prime/zero spectrum.
 3. It identifies the **mechanism** that makes an archimedean $L$ provably outside $W^*(\mathcal T)$: the
    Tomita–Takesaki modular flow (A4-i). The modular group of a type-III factor is the canonical example of an
@@ -74,7 +74,7 @@ The archimedean place contributes to the Weil quadratic form the term
 $$
 A_\infty(f,f) \;=\; \frac{1}{2\pi}\int_{-\infty}^{\infty} |\widehat f(r)|^2\, \Psi(r)\,dr,
 \qquad
-\Psi(r) \;=\; \operatorname{Re}\psi\bigl(\tfrac14+\tfrac{ir}{2}\bigr)-\log\pi,
+\Psi(r) \;=\; \mathrm{Re}\,\psi\bigl(\tfrac14+\tfrac{ir}{2}\bigr)-\log\pi,
 $$
 the smooth density of the $\infty$-factor $\Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(s/2)$ in the explicit formula.
 **The original guess (that a constant shift $c_0$ makes the density $\ge0$ everywhere) is FALSE, and the computation
@@ -84,7 +84,7 @@ M4.1 shows it cleanly — but it also shows the true, usable positivity.**
 $\Psi$ satisfies:
 \begin{itemize}
 \item[\rm(i)] \emph{even}, $\Psi(-r)=\Psi(r)$;
-\item[\rm(ii)] \emph{strictly increasing on $r>0$}: $\Psi'(r)=-\tfrac12\operatorname{Im}\psi'(\tfrac14+\tfrac{ir}{2})
+\item[\rm(ii)] \emph{strictly increasing on $r>0$}: $\Psi'(r)=-\tfrac12\mathrm{Im}\,\psi'(\tfrac14+\tfrac{ir}{2})
   =\sum_{n\ge0}\frac{(\tfrac14+n)\,r}{\bigl((\tfrac14+n)^2+(r/2)^2\bigr)^2}>0$
   (every term positive — a one-line proof, no estimate);
 \item[\rm(iii)] \emph{unique sign change} at $r_0=6.28983598883690\ldots$, with global minimum
@@ -184,7 +184,7 @@ survives the sampling bridge down to the LI zeros** — which is exactly M4.3.
 ### Piece 3 — the hard-Lefschetz compatibility (the reduced capstone)
 
 With Pieces 1–2 in hand we now hold, **explicitly and verified**, on the archimedean continuum: a positive metric
-$g_\infty=|\Psi|$ (M4.1), a grading sign $S=\operatorname{sgn}(\mathcal T_{\mathrm{cont}}^2-r_0^2)$ (M4.1b), and a
+$g_\infty=|\Psi|$ (M4.1), a grading sign $S=\mathrm{sgn}(\mathcal T_{\mathrm{cont}}^2-r_0^2)$ (M4.1b), and a
 full hard-Lefschetz $\mathfrak{sl}_2$ $(L=T_c,\Lambda,H=\frac2c\mathcal T_{\mathrm{cont}})$ with $L\notin
 W^*(\mathcal T_{\mathrm{cont}})$ (M4.2). The remaining node is now a single transport question:
 
@@ -247,7 +247,7 @@ worth one explicit test before declaring the direction closed. *(Certificate: `m
    $\widehat f(r)=(r^2+\tfrac14)e^{-r^2/2\sigma^2}$ (pole/ample term $\equiv0$) in the band — got $A_\infty/\|f\|^2$
    down to $-1.82$ ($\sigma=1$), crossing to $+$ near $\sigma\approx5$. So **M2 does NOT absorb the band**; $A_\infty$
    is *indefinite on primitives*. Sharper reading: $A_\infty=g_\infty(S\cdot,\cdot)$ with $g_\infty=|\Psi|(\mathcal
-   T_{\mathrm{cont}})\succ0$ (a genuine positive metric) and $S=\operatorname{sgn}(\mathcal T_{\mathrm{cont}}^2-r_0^2)$
+   T_{\mathrm{cont}})\succ0$ (a genuine positive metric) and $S=\mathrm{sgn}(\mathcal T_{\mathrm{cont}}^2-r_0^2)$
    a $\pm1$ **grading involution** — the (positive metric)$\times$(degree sign) shape of a Hodge–Riemann form. The
    indefiniteness is the **Lefschetz grading**, not a defect; the sign-flip at $r_0$ is its parity. *(Certificate:
    `m4_1b_band_test.py`.)*
@@ -285,7 +285,7 @@ H_W^{\mathrm{prim}}$, **independent of** the Frobenius $\mathcal T$. Attempt 8's
 into a *filter*: a candidate raising operator is admissible only if it lies outside the von Neumann algebra
 $W^*(\mathcal T)$ — which immediately classifies the proposed routes (the "$L=f(\mathcal T)$" route restates M3; the
 archimedean route does not). We therefore construct $\omega$ from the **archimedean place**: the $\Gamma$-factor
-density $w(r)=\frac1{2\pi}(\operatorname{Re}\psi(\frac14+\frac{ir}{2})-\log\pi)+c_0$ gives a positive metric
+density $w(r)=\frac1{2\pi}(\mathrm{Re}\,\psi(\frac14+\frac{ir}{2})-\log\pi)+c_0$ gives a positive metric
 $A_\infty$ (Piece 1, M4.1); the **Tomita–Takesaki modular flow** $H=\log\Delta$ of the adele-class factor gives the
 canonical non-inner grading and clears the independence filter (Piece 2, M4.2); and the reduced capstone is the
 single compatibility statement that the archimedean hard-Lefschetz polarizes the same Hodge structure $\mathcal T$

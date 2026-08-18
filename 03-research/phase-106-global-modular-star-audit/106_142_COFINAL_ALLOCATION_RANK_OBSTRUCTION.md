@@ -34,13 +34,13 @@ and is required to repair the signed block,
 Then necessarily
 
 \[
- \boxed{\operatorname {rank}R_E\ge n_-(B_E)}              \tag{4}
+ \boxed{\mathrm{rank}\,R_E\ge n_-(B_E)}              \tag{4}
 \]
 
 and
 
 \[
- \boxed{\operatorname {Tr}R_E\ge\operatorname {Tr}(B_E)_-.} \tag{5}
+ \boxed{\mathrm{Tr}\,R_E\ge\mathrm{Tr}(B_E)_-.} \tag{5}
 \]
 
 Thus no bounded-rank memory, finite number of signed ports, or fixed
@@ -69,21 +69,21 @@ Let \(E\) be a finite-dimensional Hilbert space, let \(B=B^*\), and let
 then
 
 \[
- \operatorname {rank}R\ge n_-(B),                         \tag{7}
+ \mathrm{rank}\,R\ge n_-(B),                         \tag{7}
 \]
 
 and
 
 \[
- \operatorname {Tr}R\ge\operatorname {Tr}B_-.             \tag{8}
+ \mathrm{Tr}\,R\ge\mathrm{Tr}\,B_-.             \tag{8}
 \]
 
-Here \(B_-=(-B)_+\) and \(n_-(B)=\operatorname {rank}B_-\).
+Here \(B_-=(-B)_+\) and \(n_-(B)=\mathrm{rank}\,B_-\).
 
 #### Proof
 
-Let \(N=\operatorname {ran}\mathbf1_{(-\infty,0)}(B)\), so that
-\(\dim N=n_-(B)\).  If \(\operatorname {rank}R<\dim N\), then the map
+Let \(N=\mathrm{ran}\,\mathbf1_{(-\infty,0)}(B)\), so that
+\(\dim N=n_-(B)\).  If \(\mathrm{rank}\,R<\dim N\), then the map
 
 \[
  R^{1/2}|_N:N\longrightarrow E
@@ -110,10 +110,10 @@ Since \(R\succeq0\), completing this basis to an orthonormal basis of
 \(E\) yields
 
 \[
- \operatorname {Tr}R
+ \mathrm{Tr}\,R
  \ge\sum_{j=1}^r\langle e_j,Re_j\rangle
  \ge\sum_{j=1}^r\beta_j
- =\operatorname {Tr}B_-.
+ =\mathrm{Tr}\,B_-.
 \]
 
 This proves (8). \(\square\)
@@ -193,16 +193,16 @@ positive allocations \(R_m\preceq W_{E_m}\) and repairs every row:
 Theorem 1 gives the exact necessary conditions
 
 \[
- \operatorname {rank}R_m\ge n_-(B_{E_m}),
+ \mathrm{rank}\,R_m\ge n_-(B_{E_m}),
  \qquad
- \operatorname {Tr}R_m\ge\operatorname {Tr}(B_{E_m})_-.
+ \mathrm{Tr}\,R_m\ge\mathrm{Tr}(B_{E_m})_-.
                                                                \tag{15}
 \]
 
 Consequently:
 
 1. if \(n_-(B_{E_m})\to\infty\), every bounded-state realization fails;
-2. if \(\operatorname {Tr}(B_{E_m})_-\) exhausts the available Gamma
+2. if \(\mathrm{Tr}(B_{E_m})_-\) exhausts the available Gamma
    trace, no uniform positive reserve survives;
 3. allowing full-rank \(R_m\) does not solve the sign, because existence
    of \(R_m\) is exactly (11).

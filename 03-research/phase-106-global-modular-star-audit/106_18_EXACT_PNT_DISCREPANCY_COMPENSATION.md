@@ -212,7 +212,7 @@ The polar term is
 \boxed{
  P_L(U)
  =
- 2\operatorname {Re}A_+(L,U)^2
+ 2\mathrm{Re}\,A_+(L,U)^2
  =
  2\bigl(M_+(L,U)+M_-(L,U)\bigr).}
 \tag{14}

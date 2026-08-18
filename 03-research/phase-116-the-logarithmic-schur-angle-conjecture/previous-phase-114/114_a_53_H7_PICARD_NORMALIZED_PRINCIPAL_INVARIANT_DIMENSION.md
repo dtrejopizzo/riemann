@@ -19,7 +19,7 @@
 Haran's computation gives
 
 \[
- \operatorname{Pic}(X)\simeq\mathbb R_{>0},qquad
+ \mathrm{Pic}(X)\simeq\mathbb R_{>0},qquad
  d(\lambda)=\log\lambda.                                                   \tag{1.1}
 \]
 
@@ -75,7 +75,7 @@ For effective external classes `(lambda,mu)`, define
 
 \[
  h_{\rm FM}^{\rm Pic}(\lambda,\mu)
- :=\log\#\operatorname{im}
+ :=\log\#\mathrm{im}
  \left(H^0_{\rm scal}(S(\lambda)\boxtimes S(\mu))
        \longrightarrow\mathcal W_j\right),                              \tag{2.1}
 

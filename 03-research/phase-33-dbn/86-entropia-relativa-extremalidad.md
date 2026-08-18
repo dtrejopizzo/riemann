@@ -250,11 +250,11 @@ El paso 3 es el que fracasa. La acotación del operador de Szegő para la medida
 
 ### 9.1. La función de Herglotz asociada a $dm_{full}$
 
-Para $z \in \mathbb{C}$ con $\operatorname{Im}(z) > 0$, la **función de Herglotz** (también llamada función de Cauchy-Stieltjes o de Carathéodory, según la normalización) asociada a $dm_{full}$ es
+Para $z \in \mathbb{C}$ con $\mathrm{Im}(z) > 0$, la **función de Herglotz** (también llamada función de Cauchy-Stieltjes o de Carathéodory, según la normalización) asociada a $dm_{full}$ es
 
 $$\mathcal{F}(z) = \int_{\mathbb{R}} \frac{s+z}{s-z}\, dm_{full}(s).$$
 
-Esta función satisface $\operatorname{Re}\mathcal{F}(z) > 0$ para $\operatorname{Im}(z) > 0$ (es una función de Carathéodory). Análogamente se define $\mathcal{F}_{on}(z)$ con $dm_{full,on}$.
+Esta función satisface $\mathrm{Re}\,\mathcal{F}(z) > 0$ para $\mathrm{Im}(z) > 0$ (es una función de Carathéodory). Análogamente se define $\mathcal{F}_{on}(z)$ con $dm_{full,on}$.
 
 ### 9.2. La diferencia $\mathcal{F}(z) - \mathcal{F}_{on}(z)$
 
@@ -262,23 +262,23 @@ Esta función satisface $\operatorname{Re}\mathcal{F}(z) > 0$ para $\operatornam
 
 $$\mathcal{G}(z) := \mathcal{F}(z) - \mathcal{F}_{on}(z) = \int_{\mathbb{R}} \frac{s+z}{s-z}\, (dm_{full} - dm_{full,on})(s)$$
 
-es también una función de Herglotz: $\operatorname{Re}\mathcal{G}(z) \geq 0$ para $\operatorname{Im}(z) > 0$, con $\operatorname{Re}\mathcal{G}(z) = 0$ (identicamente) si y solo si $dm_{full} = dm_{full,on}$ (iff RH).
+es también una función de Herglotz: $\mathrm{Re}\,\mathcal{G}(z) \geq 0$ para $\mathrm{Im}(z) > 0$, con $\mathrm{Re}\,\mathcal{G}(z) = 0$ (identicamente) si y solo si $dm_{full} = dm_{full,on}$ (iff RH).
 
-*Demostración.* Para $\operatorname{Im}(z) > 0$ y $s \in \mathbb{R}$, el cociente $(s+z)/(s-z)$ tiene parte real $\operatorname{Re}[(s+z)/(s-z)] = [(s^2-|z|^2)/|s-z|^2 + 2s\operatorname{Im}(z)/|s-z|^2\cdot\operatorname{Re}(z/z)]$... calculamos directamente: escribamos $z = x+iy$, $y > 0$. Entonces $s-z = (s-x)-iy$ y $s+z = (s+x)+iy$. El cociente
+*Demostración.* Para $\mathrm{Im}(z) > 0$ y $s \in \mathbb{R}$, el cociente $(s+z)/(s-z)$ tiene parte real $\mathrm{Re}[(s+z)/(s-z)] = [(s^2-|z|^2)/|s-z|^2 + 2s\mathrm{Im}(z)/|s-z|^2\cdot\mathrm{Re}(z/z)]$... calculamos directamente: escribamos $z = x+iy$, $y > 0$. Entonces $s-z = (s-x)-iy$ y $s+z = (s+x)+iy$. El cociente
 
 $$\frac{s+z}{s-z} = \frac{(s+x+iy)(s-x+iy)}{(s-x)^2+y^2} = \frac{(s^2-x^2+y^2) + 2iys}{(s-x)^2+y^2}.$$
 
 La parte real es $(s^2-x^2+y^2)/((s-x)^2+y^2)$, cuyo signo puede ser positivo o negativo dependiendo de $s$. Corrijamos la afirmación.
 
-Para $z = iy$ puramente imaginario con $y > 0$: $\operatorname{Re}[(s+iy)/(s-iy)] = (s^2-y^2+y^2)/(s^2+y^2) = s^2/(s^2+y^2) \geq 0$. Para $z$ general la parte real no es necesariamente no negativa.
+Para $z = iy$ puramente imaginario con $y > 0$: $\mathrm{Re}[(s+iy)/(s-iy)] = (s^2-y^2+y^2)/(s^2+y^2) = s^2/(s^2+y^2) \geq 0$. Para $z$ general la parte real no es necesariamente no negativa.
 
 La corrección relevante es la siguiente: $\mathcal{G}(z)$ es una función de Nevanlinna (con parte imaginaria no negativa) en el semiplano superior, no necesariamente de Carathéodory. Pero para la representación de Nevanlinna:
 
-$$\operatorname{Im}\mathcal{G}(z) = \int_{\mathbb{R}} \operatorname{Im}\!\left[\frac{s+z}{s-z}\right] (dm_{full}-dm_{full,on})(s).$$
+$$\mathrm{Im}\,\mathcal{G}(z) = \int_{\mathbb{R}} \mathrm{Im}\,\!\left[\frac{s+z}{s-z}\right] (dm_{full}-dm_{full,on})(s).$$
 
 Para $z = x+iy$, $y > 0$:
 
-$$\operatorname{Im}\!\left[\frac{s+z}{s-z}\right] = \operatorname{Im}\!\left[\frac{(s+x+iy)(s-x+iy)}{|s-z|^2}\right] = \frac{y(s+x) + y(s-x)}{|s-z|^2} = \frac{2ys}{|s-z|^2}.$$
+$$\mathrm{Im}\,\!\left[\frac{s+z}{s-z}\right] = \mathrm{Im}\,\!\left[\frac{(s+x+iy)(s-x+iy)}{|s-z|^2}\right] = \frac{y(s+x) + y(s-x)}{|s-z|^2} = \frac{2ys}{|s-z|^2}.$$
 
 Esto tiene el signo de $s$, no es no negativo en general.
 

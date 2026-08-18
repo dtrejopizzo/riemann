@@ -5,7 +5,7 @@ after P8.
 
 This is the companion plan to **P8** (`06-papers/P8-weil-krein-realization/`). P8 closed the
 explicit-formula / **zero-side** line: it built a faithful semibounded realization $\mathcal T$ of the Weil
-form with $\mathrm{RH}\iff\inf\operatorname{spec}(\mathcal T)\ge0\iff\|K\|\le1$, **and proved a no-go**
+form with $\mathrm{RH}\iff\inf\mathrm{spec}(\mathcal T)\ge0\iff\|K\|\le1$, **and proved a no-go**
 (P8 Thm C) — the zero side cannot decide the sign, because the off-line depths enter only through
 $\mathfrak t$ itself. **Route B is what remains: produce the sign from an *independently-given* positive
 structure.**

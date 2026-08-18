@@ -197,8 +197,8 @@ Consider the two-term Hilbert complex
 Its reduced first cohomology is
 
 \[
- \overline H^1_{\rm rel}:=\mathbb H_C/\overline{\operatorname{Ran}d}
- \simeq(\overline{\operatorname{Ran}d})^\perp.                \tag{20}
+ \overline H^1_{\rm rel}:=\mathbb H_C/\overline{\mathrm{Ran}\,d}
+ \simeq(\overline{\mathrm{Ran}\,d})^\perp.                \tag{20}
 \]
 
 ### Theorem 5.1 — Unconditional polarization of the reduced relative cohomology
@@ -231,7 +231,7 @@ For the weight-one flow \(\vartheta_t=e^{t/2}\overline{\mathbb T}_t\),
 
 #### Proof
 
-Theorem 4.1 makes \(\overline{\operatorname{Ran}d}\) invariant under
+Theorem 4.1 makes \(\overline{\mathrm{Ran}\,d}\) invariant under
 (J_C) and \(\mathbb T_t\).  Since both operators are orthogonal, its
 orthogonal complement is also invariant.  Restrict (8)--(11) to that
 complement.  Positivity in (21) is the ambient Hilbert norm.  The scaling
@@ -273,8 +273,8 @@ CCM's object is not merely the Hilbert cokernel of the degree-zero map
 
 \[
  H^1_{\rm CCM}
- =\operatorname{Tor}(\mathbb C^\natural,
-     \operatorname{coker}(\rho^\natural)),                    \tag{24}
+ =\mathrm{Tor}(\mathbb C^\natural,
+     \mathrm{coker}(\rho^\natural)),                    \tag{24}
 \]
 
 formed in cyclic modules with a Schwartz/Meyer topology chosen so that all
@@ -287,10 +287,10 @@ valid comparison target:
 
 \[
  \boxed{
- \mathbf R\operatorname{Coker}(\rho^\natural)
+ \mathbf R\mathrm{Coker}(\rho^\natural)
  \ \widehat\otimes^{\mathbf L}_{\rm cyc}\ \mathbb C^\natural
  \longrightarrow
- \operatorname{Cone}(d)\widehat\otimes\mathscr K
+ \mathrm{Cone}(d)\widehat\otimes\mathscr K
  }
                                                                     \tag{25}
 \]
@@ -314,7 +314,7 @@ The correct bridge must instead be a cyclic enhancement
 
 \[
  \boxed{
- \mathfrak D:\operatorname{Cone}(\rho^\natural)
+ \mathfrak D:\mathrm{Cone}(\rho^\natural)
  \longrightarrow \mathfrak C_{\rm FP}}
                                                                     \tag{26}
 \]

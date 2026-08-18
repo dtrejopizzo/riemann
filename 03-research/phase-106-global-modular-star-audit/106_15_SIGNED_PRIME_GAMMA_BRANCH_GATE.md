@@ -16,7 +16,7 @@ trace expression
 
 \[
  W_{0,2}(H)+\log(TW)H(1)
- +\operatorname {Tr}\!\left(
+ +\mathrm{Tr}\,\!\left(
    \vartheta(H)(1-P_T^S-\widehat P_W^S)\right)
  =-QW(R_\lambda,G),
  \quad H=V_\lambda^**G.
@@ -48,7 +48,7 @@ stated in Section 5. No assertion below proves that estimate or RH.
 
 ## 1. Principal-angle normal form
 
-Let \(P,Q\) be two orthogonal projections and let \(e\in\operatorname {Ran}P\)
+Let \(P,Q\) be two orthogonal projections and let \(e\in\mathrm{Ran}\,P\)
 be a principal vector with
 
 \[
@@ -120,7 +120,7 @@ Let \(A=\vartheta(V_\lambda)\) and \(C=\vartheta(G)\). The trace term in
 (2) is
 
 \[
- \operatorname {Tr}(A^*CB).
+ \mathrm{Tr}(A^*CB).
  \tag{10}
 \]
 
@@ -129,7 +129,7 @@ negative principal branches of \(B\). For a cross term it has no sign even
 formally, since replacing \(G\) by \(-G\) reverses it. The generic bound is
 
 \[
- \left|\operatorname {Tr}(A^*CB)\right|
+ \left|\mathrm{Tr}(A^*CB)\right|
  \le\|A\|_{\mathrm {HS}}\|C\|_{\mathrm {HS}},
  \tag{11}
 \]
@@ -309,7 +309,7 @@ For the normalized first moving vector \(q_L\), uniformly for unit
  \boxed{
  \left|
  W_{0,2}(H)+\log(TW)H(1)
- +\operatorname {Tr}\!\left(
+ +\mathrm{Tr}\,\!\left(
    \vartheta(H)(1-P_T^S-\widehat P_W^S)\right)
  \right|
  =o(\lambda^{-B}d_8),}
@@ -323,7 +323,7 @@ together with
  \inf_{\substack{g\perp q_L\\\|g\|=1}}
  \left[
  W_{0,2}(g^**g)+\log(TW)(g^**g)(1)
- +\operatorname {Tr}\!\left(
+ +\mathrm{Tr}\,\!\left(
   \vartheta(g^**g)(1-P_T^S-\widehat P_W^S)\right)
  \right]
  \ge c d_8.}

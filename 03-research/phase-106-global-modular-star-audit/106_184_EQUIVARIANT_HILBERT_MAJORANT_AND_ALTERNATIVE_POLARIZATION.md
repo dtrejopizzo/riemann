@@ -6,8 +6,8 @@ The rigidity theorem of 106.182 fixes the compatible complex structure
 only after both pieces
 
 \[
- \Omega=-\operatorname {Im}\mathfrak h_{\rm Ros},
- \qquad g=\operatorname {Re}\mathfrak h_{\rm Ros}             \tag{1}
+ \Omega=-\mathrm{Im}\,\mathfrak h_{\rm Ros},
+ \qquad g=\mathrm{Re}\,\mathfrak h_{\rm Ros}             \tag{1}
 \]
 
 have been prescribed.  It does not rule out a different complex structure
@@ -165,7 +165,7 @@ This equivalence is distinct from the GNS equivalence in 106.182.
 It does not ask that
 
 \[
- g'=\operatorname {Re}\mathfrak h_{\rm Ros}.                \tag{15}
+ g'=\mathrm{Re}\,\mathfrak h_{\rm Ros}.                \tag{15}
 \]
 
 It asks for a new positive metric on the same symplectic degree one.
@@ -186,7 +186,7 @@ It does not yet produce \(g_0\) on the CCM degree one.  The reason is
 precise:
 
 \[
- \overline{\operatorname {Ran}\rho}^{\,L^2}
+ \overline{\mathrm{Ran}\,\rho}^{\,L^2}
  =\text{the whole Hilbert target},                           \tag{16}
 \]
 
@@ -237,8 +237,8 @@ necessary.  Theorem 3.1 gives a second possible source:
 \]
 
 Thus one need not first construct a full
-\(\operatorname {Spec}\mathbb Z\times_{\mathbb F_1}
-\operatorname {Spec}\mathbb Z\).  It is enough to construct the restricted
+\(\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}
+\mathrm{Spec}\,\mathbb Z\).  It is enough to construct the restricted
 analytic shadow used in (17).  Conversely, a proposed non-geometric proof
 must exhibit the majorant from the prime/root/Gamma source; defining it
 from the zero divisor or from \(|\mathfrak h_{\rm Ros}|\) would reverse the

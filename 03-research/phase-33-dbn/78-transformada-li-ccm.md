@@ -141,7 +141,7 @@ donde $\gamma$ recorre las partes imaginarias de los ceros no triviales (con mul
 Para obtener $\lambda_n = \sum_\rho [1-(1-1/\rho)^n]$, necesitamos una función de prueba $h_n$ cuya suma sobre $\gamma$ sea $\lambda_n$. Usando la relación entre $\rho = 1/2 + i\gamma$ y $1-1/\rho$, definimos:
 
 **Proposición 3.1** (función de prueba de Weil para $\lambda_n$). La función
-$$h_n(u) = \operatorname{Re}\left[1 - \left(\frac{1/2 + iu - 1}{1/2 + iu}\right)^n\right] = 1 - \operatorname{Re}\left[\left(\frac{-1/2+iu}{1/2+iu}\right)^n\right]$$
+$$h_n(u) = \mathrm{Re}\,\left[1 - \left(\frac{1/2 + iu - 1}{1/2 + iu}\right)^n\right] = 1 - \mathrm{Re}\,\left[\left(\frac{-1/2+iu}{1/2+iu}\right)^n\right]$$
 satisface $\sum_\gamma h_n(\gamma) = \lambda_n$ (salvo contribuciones de los polos de $\zeta$ y de los ceros triviales). Las contribuciones explícitas de los términos no espectrales (polo de $\zeta$ en $s=1$ y ceros triviales) son:
 - Polo en $s=1$: contribución $+1$ (el término de Li correspondiente al polo simple).
 - Ceros triviales $\rho = -2k$, $k = 1, 2, \ldots$: contribución $1-(1-1/(-2k))^n = 1-(1+1/(2k))^n$, que es $< 0$ para todo $n \geq 1$.
@@ -154,23 +154,23 @@ La transformada de Fourier de $h_n$ requiere extender $h_n$ a una función de la
 
 $$\hat{h}_n(r) = \int_{\mathbb{R}} h_n(u)\, e^{iru}\, du.$$
 
-**Lema 3.2** (cálculo de $\hat{h}_n$). Escribiendo $h_n(u) = 1 - \operatorname{Re}[e^{in\theta(u)}]$ donde $e^{i\theta(u)} = (-1/2+iu)/(1/2+iu)$, la transformada de Fourier es
+**Lema 3.2** (cálculo de $\hat{h}_n$). Escribiendo $h_n(u) = 1 - \mathrm{Re}[e^{in\theta(u)}]$ donde $e^{i\theta(u)} = (-1/2+iu)/(1/2+iu)$, la transformada de Fourier es
 
-$$\hat{h}_n(r) = 2\pi\delta(r) - \int_{\mathbb{R}} \operatorname{Re}\left[e^{in\theta(u)}\right] e^{iru}\, du.$$
+$$\hat{h}_n(r) = 2\pi\delta(r) - \int_{\mathbb{R}} \mathrm{Re}\,\left[e^{in\theta(u)}\right] e^{iru}\, du.$$
 
 La segunda integral puede calcularse por residuos. El integrando $e^{in\theta(u)} e^{iru}$ tiene polos en $u = i/2$ (de $1/(1/2+iu)^n$). Para $r > 0$, cerrando el contorno en el semiplano superior:
 
-$$\int_{\mathbb{R}} e^{in\theta(u)} e^{iru}\, du = 2\pi i \cdot \operatorname{Res}_{u = i/2}\left[\left(\frac{-1/2+iu}{1/2+iu}\right)^n e^{iru}\right].$$
+$$\int_{\mathbb{R}} e^{in\theta(u)} e^{iru}\, du = 2\pi i \cdot \mathrm{Res}_{u = i/2}\left[\left(\frac{-1/2+iu}{1/2+iu}\right)^n e^{iru}\right].$$
 
 El residuo en $u = i/2$ (polo de orden $n$ de $(1/2+iu)^{-n}$):
 
-$$\operatorname{Res}_{u=i/2}\left[e^{iru}(-1/2+iu)^n(1/2+iu)^{-n}\right] = \frac{1}{(n-1)!}\frac{d^{n-1}}{du^{n-1}}\left[e^{iru}(-1/2+iu)^n\right]_{u=i/2}.$$
+$$\mathrm{Res}_{u=i/2}\left[e^{iru}(-1/2+iu)^n(1/2+iu)^{-n}\right] = \frac{1}{(n-1)!}\frac{d^{n-1}}{du^{n-1}}\left[e^{iru}(-1/2+iu)^n\right]_{u=i/2}.$$
 
 En $u = i/2$: $-1/2 + iu = -1/2 + i\cdot i/2 = -1/2 - 1/2 = -1$. Expandiendo por Leibniz:
 
 $$\frac{d^{n-1}}{du^{n-1}}\left[e^{iru}(-1/2+iu)^n\right]_{u=i/2} = \sum_{k=0}^{n-1}\binom{n-1}{k}(ir)^k e^{-r/2}\cdot \frac{n!}{(n-k)!}(-1)^{n-k}i^{n-k} \cdot (i)^{n-k}\cdot(\text{evaluado en }-1).$$
 
-El cálculo completo es técnico; denotemos el resultado como $\hat{h}_n(r) = e^{-r/2} P_n(r)$ donde $P_n(r)$ es un polinomio en $r$ de grado $n-1$. El decaimiento $e^{-r/2}$ para $r \to +\infty$ es consistente con las propiedades de $h_n$ como función analítica en la franja $|\operatorname{Im}(u)| < 1/2$.
+El cálculo completo es técnico; denotemos el resultado como $\hat{h}_n(r) = e^{-r/2} P_n(r)$ donde $P_n(r)$ es un polinomio en $r$ de grado $n-1$. El decaimiento $e^{-r/2}$ para $r \to +\infty$ es consistente con las propiedades de $h_n$ como función analítica en la franja $|\mathrm{Im}(u)| < 1/2$.
 
 **Proposición 3.3** (representación aritmética de $\lambda_n$). Aplicando la fórmula de Weil con función de prueba $h_n$:
 
@@ -458,7 +458,7 @@ Esto es la Conjetura 6.3 en forma primo a primo (cero a cero). El lado derecho e
 
 **Obstáculo O.3** (de Laplace). La transformada de Laplace de $T_\lambda$ crece exponencialmente en $|\gamma_j|$ (vía los factores $e^{-s|\gamma_j|}$) mientras que los coeficientes $\lambda_n$ crecen exponencialmente en $n$ (vía los factores $(1/r_j)^n$). La identificación $s \leftrightarrow n$ requiere $s = n\log(1/r_j)/|\gamma_j|$, que depende del cero $j$: no existe una transformada uniforme.
 
-**Obstáculo O.4** (de holomorfia). $\phi_n(z)$ es holomorfa en $z$ y su estructura global depende de la geometría en el plano complejo. $\phi_{CTP,\lambda}(z)$ depende solo de $\operatorname{Re}(z)-1/2$ y $\operatorname{Im}(z)$ de forma separada. Una transformada $\mathcal{T}$ debería conectar funciones de variable compleja con funciones de dos variables reales separadas; la estructura de holomorfia impone restricciones que no son obvias.
+**Obstáculo O.4** (de holomorfia). $\phi_n(z)$ es holomorfa en $z$ y su estructura global depende de la geometría en el plano complejo. $\phi_{CTP,\lambda}(z)$ depende solo de $\mathrm{Re}(z)-1/2$ y $\mathrm{Im}(z)$ de forma separada. Una transformada $\mathcal{T}$ debería conectar funciones de variable compleja con funciones de dos variables reales separadas; la estructura de holomorfia impone restricciones que no son obvias.
 
 ### 7.3. Las preguntas clave abiertas
 

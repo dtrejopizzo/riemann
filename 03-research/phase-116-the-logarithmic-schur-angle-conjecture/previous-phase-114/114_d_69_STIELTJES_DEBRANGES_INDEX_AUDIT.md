@@ -45,7 +45,7 @@ where
 
 \[
  \mathfrak a(\tau)=
- \operatorname {Re}\psi\left({1\over4}+{i\tau\over2}\right)
+ \mathrm{Re}\,\psi\left({1\over4}+{i\tau\over2}\right)
  -\log\pi.                                                 \tag{1.4}
 \]
 
@@ -249,13 +249,13 @@ self-adjointness.
 Cyclicity cannot be silently omitted.  Consider
 
 \[
- B=\operatorname {diag}(2,1,-1),\qquad u=e_1.              \tag{5.1}
+ B=\mathrm{diag}(2,1,-1),\qquad u=e_1.              \tag{5.1}
 \]
 
 Then relative to `C u direct-sum u^perp`, one has
 
 \[
- a=2,\qquad b=0,qquad D=\operatorname {diag}(1,-1),
+ a=2,\qquad b=0,qquad D=\mathrm{diag}(1,-1),
  \qquad s(z)=2-z.                                          \tag{5.2}
 \]
 

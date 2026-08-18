@@ -9,25 +9,25 @@
 
 But the proof localises the obstruction somewhere unexpected and actionable:
 not in the family $\mathcal G$, and not in the analysis, but in the fact that
-$\operatorname{Div}$ as defined in 107_237 is **linear** in $f$ rather than
+$\mathrm{Div}$ as defined in 107_237 is **linear** in $f$ rather than
 **logarithmic**.  §4 states what would unforce it.
 
 No zero of $\xi$ is used anywhere.
 
 ## 1. The three inputs
 
-**(a) $\operatorname{Div}$ is linear.**  107_237 (2.3) defines the potential
+**(a) $\mathrm{Div}$ is linear.**  107_237 (2.3) defines the potential
 by $u_f''(r)=f(r)/r$, so $u_{cf}''=c\,u_f''$ and
 
 \[
- \operatorname{Div}(cU)=c\operatorname{Div}(U).
+ \mathrm{Div}(cU)=c\mathrm{Div}(U).
  \tag{1.1}
 \]
 
 Verified to $2\times10^{-7}$ relative error over three weights and three
 constants.
 
-**(b) $\operatorname{Div}$ forgives *additive* affine shifts.**  107_237
+**(b) $\mathrm{Div}$ forgives *additive* affine shifts.**  107_237
 Theorem 2.1: $U_f$ is unique modulo affine functions, and affine functions
 have vanishing second derivative.  Verified in two pieces to avoid
 catastrophic cancellation: the second difference of an affine function is
@@ -42,13 +42,13 @@ Verified exactly (error $0$).
 
 > ### Theorem 2.1
 > Let $U$ be a nonzero element of $\mathcal G$ of weight $s$.  Then
-> $\operatorname{Div}(U)$ is invariant under the Frobenius action if and only
+> $\mathrm{Div}(U)$ is invariant under the Frobenius action if and only
 > if $s=0$.
 
 **Proof.**  By (c) the action sends $f_s$ to $\chi(n)f_s$, hence by (a)
-sends $\operatorname{Div}(U)$ to $\chi(n)\operatorname{Div}(U)$.  Invariance
-therefore requires $\chi(n)\operatorname{Div}(U)=\operatorname{Div}(U)$ for
-every $n\in\mathbb N^\times$, i.e. either $\operatorname{Div}(U)=0$ — which
+sends $\mathrm{Div}(U)$ to $\chi(n)\mathrm{Div}(U)$.  Invariance
+therefore requires $\chi(n)\mathrm{Div}(U)=\mathrm{Div}(U)$ for
+every $n\in\mathbb N^\times$, i.e. either $\mathrm{Div}(U)=0$ — which
 forces $f_s\equiv0$ by 107_237 Theorem 2.1, excluded — or $\chi(n)=1$ for
 every $n$.  Since $\chi(n)=n^{s}$, that holds for all $n$ iff $s=0$. $\square$
 
@@ -56,7 +56,7 @@ Verified: $\chi(n)=n^{s}$ is trivial for all $n\in\{2,3,5,7,11,101\}$ exactly
 when $s=0$, tested at $s=0,10^{-3},0.1,0.5,0.9,1$.
 
 > ### Corollary 2.2
-> $\operatorname{Prin}(\mathcal G)$ of 108_03 Definition 6.1 is the **only**
+> $\mathrm{Prin}(\mathcal G)$ of 108_03 Definition 6.1 is the **only**
 > principal subspace available in $\mathcal G$.  By 108_26 it lies on the
 > excluded boundary, at an accumulation point of the singular set.
 > **Stage 1 is terminally obstructed on this route.**
@@ -65,24 +65,24 @@ when $s=0$, tested at $s=0,10^{-3},0.1,0.5,0.9,1$.
 
 The proof turns on a mismatch that is worth isolating:
 
-> $\operatorname{Div}$ forgives **addition** of a constant but not
+> $\mathrm{Div}$ forgives **addition** of a constant but not
 > **multiplication** by one, while the Frobenius action acts by
 > **multiplication**.
 
 Verified directly: for $s=\tfrac12$ at $r=2$, replacing $U$ by $U+3.1r+0.7$
-leaves $\operatorname{Div}$ unchanged; replacing $U$ by $2U$ does not.
+leaves $\mathrm{Div}$ unchanged; replacing $U$ by $2U$ does not.
 
-This is a departure from classical divisor theory, where $\operatorname{div}$
-is **logarithmic**, $\operatorname{div}(c\varphi)=\operatorname{div}(\varphi)$
+This is a departure from classical divisor theory, where $\mathrm{div}$
+is **logarithmic**, $\mathrm{div}(c\varphi)=\mathrm{div}(\varphi)$
 for every nonzero constant $c$, which is precisely why principal divisors
-form a group and $\operatorname{Pic}=\operatorname{Div}/\operatorname{Prin}$
+form a group and $\mathrm{Pic}=\mathrm{Div}/\mathrm{Prin}$
 is well behaved.
 
 Verified: a logarithmic model $D_{\log}(U):=(\log U)''$ satisfies
 $D_{\log}(cU)=D_{\log}(U)$ for $c=2,5,0.3$.
 
 > **So the obstruction is not the graded family, and not the analysis.  It is
-> that 107_237's $\operatorname{Div}$ is linear where the classical one is
+> that 107_237's $\mathrm{Div}$ is linear where the classical one is
 > logarithmic.**
 
 ## 4. What would unforce it
@@ -108,10 +108,10 @@ principle, not a construction.
 
 Proved here:
 
-* Theorem 2.1: invariance of $\operatorname{Div}$ forces $s=0$;
+* Theorem 2.1: invariance of $\mathrm{Div}$ forces $s=0$;
 * Corollary 2.2: no principal witness exists inside the open strip, so
   Stage 1 is terminally obstructed on the present route;
-* §3: the obstruction is the linearity of $\operatorname{Div}$, isolated by
+* §3: the obstruction is the linearity of $\mathrm{Div}$, isolated by
   the additive/multiplicative mismatch.
 
 Verified numerically: linearity (1.1); affine-insensitivity in two pieces;
@@ -133,7 +133,7 @@ Not established, and explicitly not claimed:
 ## 6. Verifier
 
 `108_27_weight_zero_forced_by_linear_div.py` checks: linearity of
-$\operatorname{Div}$; vanishing of the second difference of affine functions
+$\mathrm{Div}$; vanishing of the second difference of affine functions
 and linearity of that operator, composing to affine-insensitivity; exactness
 of $f_s(r/n)=\chi(n)f_s(r)$; that $\chi$ is trivial on six primes exactly
 when $s=0$; the additive-yes / multiplicative-no asymmetry at $s=\tfrac12$;

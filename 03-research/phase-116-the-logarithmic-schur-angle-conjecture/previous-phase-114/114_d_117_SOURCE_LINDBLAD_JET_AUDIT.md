@@ -142,7 +142,7 @@ On the Fourier vector of frequency \(\tau\), its symbol is
 \begin{aligned}
  \ell_\infty(\tau)
  &=2\int_0^\infty g_\infty(r)(1-\cos\tau r)\,dr\\
- &=\operatorname{Re}\psi\!\left({1\over4}+{i\tau\over2}\right)
+ &=\mathrm{Re}\,\psi\!\left({1\over4}+{i\tau\over2}\right)
       -\psi\!\left({1\over4}\right)\geq0.           \tag{3.5}
 \end{aligned}
 \]

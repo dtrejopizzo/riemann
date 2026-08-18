@@ -4,7 +4,7 @@
 Attacking the resonance realization directly. The scattering matrix $\varphi(s)=\xi(2s-1)/\xi(2s)$ has poles at
 $s=\rho/2$ with residue $r_\rho=\xi(\rho-1)/(2\xi'(\rho))$ — the candidate Kreĭn self-weight of each resonance. Two
 findings: **(1) the resonance space is genuinely non-trivial** ($|r_\rho|=O(1)$, escaping the Phase-4 de Branges
-trivialization); **(2) self-refuted:** the residue sign is **not** the negative-index detector ($\operatorname{Re}(r_\rho)$
+trivialization); **(2) self-refuted:** the residue sign is **not** the negative-index detector ($\mathrm{Re}(r_\rho)$
 is sign-stable across $\beta$, so it does not witness RH). The Kreĭn sign $\varepsilon_\rho$ must be a different,
 $\beta$-sensitive real quantity — still open.
 
@@ -20,17 +20,17 @@ self-weights — it does **not** collapse the way Phase-4's de Branges space $H(
 `pillar2_residue_pairing.py`.)*
 
 ## Finding 2 (self-refutation): the residue sign is not the κ-detector
-$\operatorname{Re}(r_\rho)<0$ for all 15 on-line zeros — a consistent sign, naively suggesting a definite (RH-true)
+$\mathrm{Re}(r_\rho)<0$ for all 15 on-line zeros — a consistent sign, naively suggesting a definite (RH-true)
 form. **But the sensitivity probe kills this:** evaluating the analytic weight $r(s_0)=\xi(s_0-1)/(2\xi'(s_0))$ at
-$s_0=\beta+i\gamma_1$ for $\beta=0.30,0.40,0.50,0.60,0.70$ gives $\operatorname{Re}(r)=-0.56,-0.50,-0.43,-0.37,-0.31$
-— **negative throughout, no sign flip off the line.** So an off-line zero would also give $\operatorname{Re}(r)<0$:
-the residue sign does **not** detect off-line-ness. The consistent negativity of $\operatorname{Re}(r_\rho)$ is a
+$s_0=\beta+i\gamma_1$ for $\beta=0.30,0.40,0.50,0.60,0.70$ gives $\mathrm{Re}(r)=-0.56,-0.50,-0.43,-0.37,-0.31$
+— **negative throughout, no sign flip off the line.** So an off-line zero would also give $\mathrm{Re}(r)<0$:
+the residue sign does **not** detect off-line-ness. The consistent negativity of $\mathrm{Re}(r_\rho)$ is a
 $\beta$-stable property of the analytic weight, **not** a witness for $\kappa=0$. *(Certificate:
 `pillar2_residue_sign.py`.)*
 
 > **Lesson (logged):** the residue $r_\rho$ supplies the resonance **magnitude** (Finding 1, non-trivial), not the
 > Kreĭn **sign** $\varepsilon_\rho$. The negative index $\kappa$ — the indefiniteness that equals RH — must come from
-> a **$\beta$-sensitive real** pairing that flips sign according to which side of $\operatorname{Re}(s)=1/4$ the
+> a **$\beta$-sensitive real** pairing that flips sign according to which side of $\mathrm{Re}(s)=1/4$ the
 > resonance sits. The scalar residue is sign-stable and cannot be it.
 
 ## Where this leaves Route A

@@ -47,7 +47,7 @@ For every compactly supported test, the realized class \(\overline M_f\)
  lies either in
 
 \[
- \widehat{\operatorname{Pic}}_{\rm int}(\mathcal Y_T),
+ \widehat{\mathrm{Pic}}_{\rm int}(\mathcal Y_T),
  \qquad M_f\cdot H_T=0
  \tag{3.1}
 \]
@@ -56,7 +56,7 @@ for a regular proper arithmetic surface, or in the precise integrable
 adelic category
 
 \[
- \widehat{\operatorname{Pic}}_{\rm int}(\mathcal Y_T),
+ \widehat{\mathrm{Pic}}_{\rm int}(\mathcal Y_T),
  \qquad M_f\cdot H_T=0
  \tag{3.2}
 \]
@@ -65,7 +65,7 @@ to which Yuan--Zhang applies.
 
 For the direct square route, the generic fibre is a surface and the
 relevant instance is Yuan--Zhang in dimension two.  Thus the model has
-relative dimension two over \(\operatorname{Spec}\mathbb Z\), and the
+relative dimension two over \(\mathrm{Spec}\,\mathbb Z\), and the
 Hodge expression contains one fixed nef and big polarization
 \(\overline H_T\).  The relative-dimension-one
 Faltings--Hriljac route is admissible only after an independently proved
@@ -88,7 +88,7 @@ admissible \(f\).
 
 ### A1. Regularity and properness
 
-There must exist a model \(\mathcal Y_T\to\operatorname{Spec}\mathbb Z\)
+There must exist a model \(\mathcal Y_T\to\mathrm{Spec}\,\mathbb Z\)
 of relative dimension two that is regular and proper, or an exact
 adelic substitute with a proved comparison to such models.
 

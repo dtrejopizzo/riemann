@@ -56,7 +56,7 @@ support projections, let \(\Pi_T\) remove the two Tate characters, and put
 The theorem to prove is the supported sharp Douglas inequality
 
 \[
- \operatorname{Ran}X_{OE}\subseteq\operatorname{Ran}A_O^{1/2},
+ \mathrm{Ran}\,X_{OE}\subseteq\mathrm{Ran}\,A_O^{1/2},
  \qquad
  X_{OE}^{*}A_O^{\dagger}X_{OE}\leq B_E.              \tag{D}
 \]
@@ -78,7 +78,7 @@ In the return notation of D.214, the same theorem is
  q_N^*D_N^\dagger q_N\leq\mathcal M_N,
  \qquad
  \mathcal M_N=I-y_N^*y_N-h_N^*D_Nh_N
-     +2\operatorname{Re}(h_N^*q_N),                 \tag{D''}
+     +2\mathrm{Re}(h_N^*q_N),                 \tag{D''}
 \]
 
 together with the supported-range condition.  Formulas (D), (D') and

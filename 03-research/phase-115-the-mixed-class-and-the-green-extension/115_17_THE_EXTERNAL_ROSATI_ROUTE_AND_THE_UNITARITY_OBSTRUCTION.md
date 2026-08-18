@@ -86,7 +86,7 @@ v3 proposed \(\lambda_1(T_0)=0\Rightarrow\lambda_1'(T_0)>0\).
 > unchanged, so \(\tilde F\in\mathcal P_{T'}\); the Gamma part is the
 > compression of the same full-line multiplier and \(\tilde F\) has the same
 > Fourier transform; and every new term has \(\log n\ge2T\), hence zero
-> overlap on \(\operatorname{supp}\tilde F\).  So
+> overlap on \(\mathrm{supp}\,\tilde F\).  So
 > \(\langle A_{T'}\tilde F,\tilde F\rangle=\langle A_TF,F\rangle\), and the
 > Rayleigh quotients on \(\mathcal P_T\) form a subset of those on
 > \(\mathcal P_{T'}\). \(\square\)
@@ -209,7 +209,7 @@ kernel is \(-\tfrac12\,\mathrm{f.p.}\,|u|^{-1}\)), and let
 ### 3.2 The polar cancellation is real — and it is the PNT main term
 
 v5 conjectures (7.1): the zeroth-order newborn leakage lies in
-\(\operatorname{span}\{e^{\pm t/2}\}\).  For the **arithmetic** cross this is
+\(\mathrm{span}\,\{e^{\pm t/2}\}\).  For the **arithmetic** cross this is
 true, and the mechanism is explicit.  With \(\phi\) an old mode and
 \(\delta\) the newborn width,
 \[
@@ -352,12 +352,12 @@ The following covers v6, v7, and every construction of that shape.
 > space carrying a **unitary** representation \(t\mapsto U_t\) of
 > \(\mathbb R_+^\times\), and suppose \(\lambda(f)\) is trace class on
 > \(\mathscr K\) with
-> \(\operatorname{Tr}_{\mathscr K}\lambda(f)=\sum_\rho m_\rho\hat f(\rho)\)
+> \(\mathrm{Tr}_{\mathscr K}\lambda(f)=\sum_\rho m_\rho\hat f(\rho)\)
 > (Meyer's trace).  Then every \(\rho\) has \(\Re\rho=\tfrac12\).
 >
 > *Proof.*  By Stone/SNAG, \(U_t=\int_{\mathbb R}t^{i\tau}dE(\tau)\) with
 > \(\tau\) **real**, so
-> \(\operatorname{Tr}_{\mathscr K}\lambda(f)=\int_{\mathbb R}\hat f(\tfrac12+i\tau)\,d\nu(\tau)\)
+> \(\mathrm{Tr}_{\mathscr K}\lambda(f)=\int_{\mathbb R}\hat f(\tfrac12+i\tau)\,d\nu(\tau)\)
 > for a measure \(\nu\) on \(\mathbb R\).  Equating with
 > \(\sum_\rho m_\rho\hat f(\rho)\) for all test \(f\) forces the divisor onto
 > \(\Re s=\tfrac12\). \(\square\)
@@ -402,7 +402,7 @@ The multiplicativity defect is exact:
 
 > **Proposition 4.**  Put \(L_c:=\Sigma U_{-c}\mathbf S\).  Then, using
 > \(\Sigma^2=\Sigma\) and \(U_a^*=U_{-a}\),
-> \(\operatorname{Tr}(\mathbf S U_a\Sigma U_{-b}\mathbf S)=\operatorname{Tr}(L_a^*L_b)=\langle L_b,L_a\rangle_{HS}\),
+> \(\mathrm{Tr}(\mathbf S U_a\Sigma U_{-b}\mathbf S)=\mathrm{Tr}(L_a^*L_b)=\langle L_b,L_a\rangle_{HS}\),
 > so
 > \[
 >  \mathfrak D(f,f)=\iint f(e^a)\overline{f(e^b)}\langle L_b,L_a\rangle_{HS}\,da\,db
@@ -411,7 +411,7 @@ The multiplicativity defect is exact:
 
 Hence v8's (6.2) is an exact decomposition into two nonnegative pieces:
 \[
- \boxed{\;\operatorname{Tr}_{\rm reg}T(f\star f^\vee)=\|T(f)\|_{HS}^2+\mathfrak D(f,f).\;}
+ \boxed{\;\mathrm{Tr}_{\rm reg}T(f\star f^\vee)=\|T(f)\|_{HS}^2+\mathfrak D(f,f).\;}
 \]
 v8 asserts \(\mathfrak D\ge0\) only as part of its target; the proof above is
 elementary and makes it unconditional.
@@ -421,7 +421,7 @@ elementary and makes it unconditional.
 **Only one insertion occurs.**  \(T(f)T(f)^*\) has two factors, so the
 identity above is already complete: there is no depth two, no words, no
 series.  And \(T(g)=\mathbf S\vartheta(g)\mathbf S\), so by cyclicity
-\(\operatorname{Tr}T(h)=\operatorname{Tr}(\vartheta(h)\mathbf S)\) — which is
+\(\mathrm{Tr}\,T(h)=\mathrm{Tr}(\vartheta(h)\mathbf S)\) — which is
 **Connes–Consani's Theorem 3**.  With the sign dictionary of `115_08`
 (\(W_\infty^{CC}=-G_\infty\)):
 \[
@@ -455,7 +455,7 @@ of v8 directly.
   semidefinite Gram, which has no sign.  Only integration against
   \(f\otimes\bar f\) produces a diagonal — which is Proposition 4, the one
   place positivity actually appears.
-* **§14 is malformed.**  \(\operatorname{Tr}(\mathbf S U^*_{k\log p}\Sigma U_{k\log p}\mathbf S)\)
+* **§14 is malformed.**  \(\mathrm{Tr}(\mathbf S U^*_{k\log p}\Sigma U_{k\log p}\mathbf S)\)
   is independent of \(f\), while (14.2) depends on \(h=f\star f^\vee\); they
   cannot agree for all \(f\).  The proposed "decisive depth-1 calculation" is
   not a test of (12.1), and need not be run.
@@ -469,7 +469,7 @@ of v8 directly.
   pairs**; a successful indefinite-metric proof must control the absolute
   positive index.  This closes an entire further family of attempts and was
   not written down here before.
-* **Proposition 4 and the corrected §6**: \(\operatorname{Tr}(\vartheta(h)\mathbf S)=\|T(f)\|_{HS}^2+\mathfrak D(f,f)\),
+* **Proposition 4 and the corrected §6**: \(\mathrm{Tr}(\vartheta(h)\mathbf S)=\|T(f)\|_{HS}^2+\mathfrak D(f,f)\),
   an exact decomposition of CC's archimedean Sonin trace into two nonnegative
   pieces.  Not in their paper.  It bounds \(E\) from below; whether it can be
   turned against `115_15`'s question (the growth of \(\#\{\lambda_j(K_I)>1\}\))
@@ -511,7 +511,7 @@ falsifier in this whole phase.
 * **Poisson has rank-two defect.**  \(Z\phi-\mathscr JZ\mathcal F\phi=\tfrac12(x^{-1}\widehat\phi(0)-\phi(0))\)
   follows from \(\sum_{n\in\mathbb Z}\phi(nx)=x^{-1}\sum_n\widehat\phi(n/x)\).
   Under \(u(t)=e^{t/2}\phi(e^t)\) the two defect states are \(e^{\pm t/2}\),
-  i.e. \(\operatorname{span}\{h_e,h_o\}\).  Correct, and it is v10's best
+  i.e. \(\mathrm{span}\,\{h_e,h_o\}\).  Correct, and it is v10's best
   structural observation: \(M^*\) **is** the Poisson defect map.
 
 ### 9.2 The exact hyperbolic decomposition
@@ -543,8 +543,8 @@ Under RH (\(\sum_\rho\widehat h(\rho)=\sum_\gamma|\widehat F(\gamma)|^2\ge0\)):
 
 Haynsworth additivity applied to the bordered matrix
 \(\bigl(\begin{smallmatrix}A_T&M^*\\M&0\end{smallmatrix}\bigr)\) with \(M\) of
-full row rank 2 gives \(\operatorname{In}=\operatorname{In}(A_T|_{\ker M})+(2,2,0)\)
-on one side and \(\operatorname{In}(A_T)+\operatorname{In}(-\mathcal W_T)\) on
+full row rank 2 gives \(\mathrm{In}=\mathrm{In}(A_T|_{\ker M})+(2,2,0)\)
+on one side and \(\mathrm{In}(A_T)+\mathrm{In}(-\mathcal W_T)\) on
 the other, hence
 
 > **Proposition 6.**
@@ -678,7 +678,7 @@ exactly what the external note wants.  It then shows the defect is wrong:
 
 * \(I-S_p^kS_p^{*k}=\sum_{j<k}|j\rangle\langle j|\) has rank \(k\), while
   \(\Lambda(p^k)=\log p\) is independent of \(k\) — (2.1)–(2.3);
-* for \(n=p^kq^\ell\) the vacuum lies in \(\operatorname{Ran}D_n\), so
+* for \(n=p^kq^\ell\) the vacuum lies in \(\mathrm{Ran}\,D_n\), so
   \(\langle\Omega,D_n\Omega\rangle=1\) while \(\Lambda(n)=0\) — (2.4)–(2.5);
 * on the full tensor product \(D_n\) has infinite rank.
 
@@ -788,7 +788,7 @@ signature \((1,1)\), not of the form \(dd^\top-K\).
    no-go): all the weight in row (d) is on the finite term.
 4. The identity \(\sqrt\delta\,e^{T/2}M_-\phi=0\) (§3.2).
 5. Proposition 4 and the exact decomposition
-   \(\operatorname{Tr}(\vartheta(h)\mathbf S)=\|T(f)\|_{HS}^2+\mathfrak D(f,f)\)
+   \(\mathrm{Tr}(\vartheta(h)\mathbf S)=\|T(f)\|_{HS}^2+\mathfrak D(f,f)\)
    into two nonnegative pieces (§8.1) — not in Connes–Consani.
 6. \(\mathscr D_M\subset\bigcap_{\Re\rho>1/2}\ker\mathrm{ev}_\rho\) as a
    criterion against Hilbertizations of Meyer's quotient (§5).
@@ -821,6 +821,6 @@ governing identity closes without it, no later expansion can add it.
 
 **Live leads, unchanged from `115_15`.**  (i) The eigenvalue count of
 \(K_I\) for \(|I|>\log2\) — never examined by anyone in six years, decidable by
-computation, with \(\operatorname{tr}K_I=0\) (CC Remark 5.6) as the favourable
+computation, with \(\mathrm{tr}\,K_I=0\) (CC Remark 5.6) as the favourable
 structural hint.  (ii) Point 6: \(A(f)\prec0\) from a non-single-place
 realization.

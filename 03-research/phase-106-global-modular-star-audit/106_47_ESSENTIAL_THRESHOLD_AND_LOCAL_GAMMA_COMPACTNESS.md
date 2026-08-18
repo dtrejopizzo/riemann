@@ -232,7 +232,7 @@ equals one outside \([-R-1,R+1]\). The exact nonlocal IMS identity is
 \begin{aligned}
  &\mathscr E_K(\eta_Rf_j)+\mathscr E_K(\chi_Rf_j)
  -\mathscr E_K(f_j)\\
- &\quad=2\operatorname {Re}\iint
+ &\quad=2\mathrm{Re}\,\iint
  \overline{f_j(x)}f_j(y)
  \{1-\eta_R(x)\eta_R(y)-\chi_R(x)\chi_R(y)\}
  \,d\mathfrak j(x,y).                                \tag{18}

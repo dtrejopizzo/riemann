@@ -28,11 +28,11 @@ con parte lineal `Σ V_n = i·sgn(n)·V_{−n}`. MEDIDO exacto: `∗² = −1` (
 
 **Caracterización algebraica de la ∗-compatibilidad (DERIVADA y VERIFICADA hoy):** como el núcleo
 `q_{mn}(u)` cumple `q_{−m,−n} = q_{mn}` y los pesos son funciones de `u` solo, se tiene
-`A_{−m,−n} = A_{mn}`, de donde `(Σ^H A_λ Σ)_{mn} = \operatorname{sgn}(m)\operatorname{sgn}(n)\,A_{mn}`
+`A_{−m,−n} = A_{mn}`, de donde `(Σ^H A_λ Σ)_{mn} = \mathrm{sgn}(m)\mathrm{sgn}(n)\,A_{mn}`
 y por tanto
 
 $$\boxed{\;\delta_\lambda \;:=\; \max_{m,n}\big|(\Sigma^H A_\lambda \Sigma - A_\lambda)_{mn}\big|
-\;=\; 2\,\max_{\operatorname{sgn} m \ne \operatorname{sgn} n}\big|A_{mn}\big|\;}$$
+\;=\; 2\,\max_{\mathrm{sgn} m \ne \mathrm{sgn} n}\big|A_{mn}\big|\;}$$
 
 VERIFICADO a máquina (`δ = 2·max|A_opp-sign|` exacto, λ=7,11,15). Es decir: **la ∗-incompatibilidad
 de `A_λ` es exactamente su bloque de acoplamiento entre frecuencias positivas y negativas.**

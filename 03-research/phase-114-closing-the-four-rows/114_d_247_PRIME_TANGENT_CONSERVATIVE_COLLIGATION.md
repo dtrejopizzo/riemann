@@ -70,7 +70,7 @@ Because \(\mathcal E_-\) is injective, \(\mathcal I_S\) is injective.
 
 ## 2. Canonical partial isometry
 
-On \(\operatorname{Ran}\mathcal I_S\), define
+On \(\mathrm{Ran}\,\mathcal I_S\), define
 
 \[
  \mathcal U_S(\mathcal I_Sc)=\mathcal O_Sc.         \tag{2.1}
@@ -82,9 +82,9 @@ uniquely by continuity to
 \[
  \boxed{
  \mathcal U_S:
- \overline{\operatorname{Ran}\mathcal I_S}
+ \overline{\mathrm{Ran}\,\mathcal I_S}
  \xrightarrow{\ \simeq\ }
- \overline{\operatorname{Ran}\mathcal O_S}.
+ \overline{\mathrm{Ran}\,\mathcal O_S}.
  }                                                   \tag{2.2}
 \]
 
@@ -119,12 +119,12 @@ Thus the contraction of D.244 has the exact defect operator
  I-\Theta_S^*\Theta_S
  =A_S\,
  (\mathcal E_-|_{\mathcal K_S})^{-\!*}
- \operatorname{diag}(|x_p|^2)
+ \mathrm{diag}(|x_p|^2)
  (\mathcal E_-|_{\mathcal K_S})^{-1}
  }                                                   \tag{3.2}
 \]
 
-as a quadratic form on \(\operatorname{Ran}
+as a quadratic form on \(\mathrm{Ran}
 \mathcal E_-|_{\mathcal K_S}\).  Formula (3.1), rather than the formal
 inverse notation in (3.2), is the definition on the source range.
 

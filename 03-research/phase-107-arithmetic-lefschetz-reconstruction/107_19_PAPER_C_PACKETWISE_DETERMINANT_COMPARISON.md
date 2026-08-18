@@ -138,7 +138,7 @@ packet intersection line
 has normalized finite order
 
 \[
- \operatorname{ord}_{\rm pkt}(m,\chi_1;n,\chi_2)
+ \mathrm{ord}_{\rm pkt}(m,\chi_1;n,\chi_2)
  =
  \begin{cases}
  \log p,&m/n=p^a,\\
@@ -184,7 +184,7 @@ Equivalently, after forgetting the rooted label,
 \[
  \bigl\|\Comp_{m,n}^{\chi_1,\chi_2}(s_{\rm pkt})\bigr\|
  =
- \left|\operatorname{Res}(\Phi_m,\Phi_n)\right|.
+ \left|\mathrm{Res}(\Phi_m,\Phi_n)\right|.
  \tag{7.2}
 \]
 

@@ -134,7 +134,7 @@ $\dim_r(n)\ \le\ r\,\lceil \log_2(n+1)\rceil$ for all $r\ge1,\ n\ge1$.
 *Proof.* Put $k=\lceil\log_2(n+1)\rceil$, so $n\le 2^k-1$, and take
 $F=\{\,2^i e_j : 0\le i\le k-1,\ 1\le j\le r\,\}$, $|F|=rk$. Let $v\in I_r(n)$.
 Each $|v_j|\le n\le 2^k-1$, so $|v_j|=\sum_{i\in S_j}2^i$ for a unique
-$S_j\subseteq\{0,\dots,k-1\}$. Set $\alpha(2^ie_j)=\operatorname{sign}(v_j)$ for
+$S_j\subseteq\{0,\dots,k-1\}$. Set $\alpha(2^ie_j)=\mathrm{sign}(v_j)$ for
 $i\in S_j$ and $0$ otherwise. Then $\sum_f\alpha(f)f=v$, and the mass is
 $$
  \sum_{j=1}^r\sum_{i\in S_j} \bigl|2^ie_j\bigr|_1

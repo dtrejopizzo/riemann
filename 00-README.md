@@ -46,7 +46,7 @@ RH to a single named open input, reached by two unrelated constructions. Paper *
 chain (ARP-P) equivalent to RH, terminating at the classical Li–Keiper criterion
 ($\lambda_n\ge0$ for all $n$). Paper **42** (`04-papers/42-arithmetic-lefschetz-programme/`,
 phases 107–119) imitates Weil's 1948 proof for curves over finite fields directly over
-$\operatorname{Spec}\mathbb Z$; its row (d) — the Hodge-index/Castelnuovo–Severi input — is
+$\mathrm{Spec}\,\mathbb Z$; its row (d) — the Hodge-index/Castelnuovo–Severi input — is
 proved equivalent to RH **twice**, independently: algebraically (phase 113, via Riemann–Roch and
 effectivity) and analytically (phase 118, via the explicit formula, verified against real zeros of
 $\zeta$ to $10^{-10}$ relative precision). Neither reduction is a proof — each open input is

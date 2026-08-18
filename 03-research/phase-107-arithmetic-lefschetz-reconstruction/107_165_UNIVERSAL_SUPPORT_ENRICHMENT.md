@@ -42,23 +42,23 @@ Let \(\mathcal U(M)\) be the semiring of finitely generated upper sets
 of \(M\) for the product order, with union and Minkowski sum.  Define
 
 \[
- \operatorname{Trop}_+(f)
- =\operatorname{Supp}(f)+M_+.
+ \mathrm{Trop}_+(f)
+ =\mathrm{Supp}(f)+M_+.
  \tag{2.1}
 \]
 
 For positive coefficients,
 
 \[
- \operatorname{Trop}_+(f+g)
- =\operatorname{Trop}_+(f)\cup\operatorname{Trop}_+(g),
+ \mathrm{Trop}_+(f+g)
+ =\mathrm{Trop}_+(f)\cup\mathrm{Trop}_+(g),
 \]
 
 and
 
 \[
- \operatorname{Trop}_+(fg)
- =\operatorname{Trop}_+(f)+\operatorname{Trop}_+(g).
+ \mathrm{Trop}_+(fg)
+ =\mathrm{Trop}_+(f)+\mathrm{Trop}_+(g).
 \]
 
 Thus (2.1) is a surjective semiring morphism onto the unreduced Boolean

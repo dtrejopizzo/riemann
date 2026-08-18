@@ -435,7 +435,7 @@ physical rows.
 At each point \(x\), evaluation on the radical is the map
 
 \[
- \operatorname {ev}_x:\mathcal R_m\to\mathbb C,
+ \mathrm{ev}_x:\mathcal R_m\to\mathbb C,
  \qquad r\mapsto r(x).
  \tag{28}
 \]

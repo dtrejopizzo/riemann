@@ -9,7 +9,7 @@ Let
 \]
 
 be a real Euclidean torus of dimension \(d\), with the metric normalized
-so that \(\operatorname{vol}(T)=1\).  Give \(T\) the Connes--Consani
+so that \(\mathrm{vol}(T)=1\).  Give \(T\) the Connes--Consani
 tolerance relation at radius \(\lambda>0\).
 
 For a cyclotomic component the canonical instance is
@@ -17,7 +17,7 @@ For a cyclotomic component the canonical instance is
 \[
  V=K_\mathbb R,
  \qquad \Lambda=\mathfrak D_K^{-1},
- \qquad \|x\|^2=\operatorname{Tr}_{K/\mathbb Q}(x\bar x),
+ \qquad \|x\|^2=\mathrm{Tr}_{K/\mathbb Q}(x\bar x),
 \]
 
 followed by covolume-one normalization.
@@ -50,7 +50,7 @@ one Euclidean radius-\(\lambda\) ball has volume at most
 \(v_d\lambda^d\), even beyond the injectivity radius.  Therefore
 
 \[
- 1=\operatorname{vol}(T)
+ 1=\mathrm{vol}(T)
  \le3^k v_d\lambda^d,
 \]
 

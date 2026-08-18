@@ -32,7 +32,7 @@ file, because it tells the team exactly what kind of input is required.
 ## 2. The free part is bounded below (Result B2.1)
 $\mathfrak a(g)=\frac1{2\pi}\int|\widehat g(r)|^2\Omega(r)\,dr=\langle g,\Omega(D)g\rangle$ with
 $\Omega(r)=\mathrm{Re}\,\psi(\tfrac14+\tfrac{ir}2)-\log\pi$. Since $\Omega(D)$ is a real Fourier
-multiplier, it is self-adjoint with $\operatorname{spec}=\overline{\operatorname{ran}\Omega}$. From
+multiplier, it is self-adjoint with $\mathrm{spec}=\overline{\mathrm{ran}\,\Omega}$. From
 digamma asymptotics $\mathrm{Re}\,\psi(\tfrac14+\tfrac{ir}2)=\log\tfrac{|r|}2+O(r^{-2})\to+\infty$, and
 $\Omega$ attains its minimum near $r=0$:
 $$

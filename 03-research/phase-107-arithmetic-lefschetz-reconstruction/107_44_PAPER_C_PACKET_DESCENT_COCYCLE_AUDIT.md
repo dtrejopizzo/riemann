@@ -63,7 +63,7 @@ In this finite shadow:
 2. edges are rooted transition isometries between vertices with the
    same order pair;
 3. the descended norm is the order-only norm
-   \(|\operatorname{Res}(\Phi_m,\Phi_n)|\);
+   \(|\mathrm{Res}(\Phi_m,\Phi_n)|\);
 4. the finite action is the level-window version of `107_18`'s
    \(\mu_r(n,\chi)=(rn,\chi^{(r)})\).
 

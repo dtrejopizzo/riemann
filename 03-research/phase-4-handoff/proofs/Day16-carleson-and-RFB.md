@@ -15,7 +15,7 @@ and fixed. **Tags:** ✅ rigorous (mod stated regularity) · ◆ standard · ❌
 $\mathfrak t_+(F)=\sum_\gamma|F(\gamma)|^2=\langle F,TF\rangle$, $T=\sum_\gamma k_\gamma\otimes k_\gamma$.
 Normalize $e_\gamma=k_\gamma/\|k_\gamma\|$; Gram $G_{\gamma\gamma'}=\langle e_\gamma,e_{\gamma'}\rangle$.
 The Hardy-band kernel decays exponentially off-diagonal,
-$|K(t,s)|\le\sqrt{K(t,t)K(s,s)}\,e^{-c|t-s|/\ell}$ (from $\operatorname{sech}$), so for a **separated**
+$|K(t,s)|\le\sqrt{K(t,t)K(s,s)}\,e^{-c|t-s|/\ell}$ (from $\mathrm{sech}$), so for a **separated**
 sequence (gaps $\ge\delta_0$),
 $$
 \sup_\gamma\sum_{\gamma'}|G_{\gamma\gamma'}|\ \le\ \sup_\gamma\sum_{\gamma'}e^{-c|\gamma-\gamma'|/\ell}\ \asymp\ \rho\ell=P .

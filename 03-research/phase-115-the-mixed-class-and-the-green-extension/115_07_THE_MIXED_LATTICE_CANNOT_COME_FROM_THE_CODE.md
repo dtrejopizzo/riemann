@@ -6,7 +6,7 @@ The extension to the mixed classes reduces, by Poisson, to **one scalar
 condition**: produce a lattice \(\mathcal V_t(f)\) with
 
 \[
- -\log\operatorname{covol}\bigl(\mathcal V_t(f)\bigr)
+ -\log\mathrm{covol}\,\bigl(\mathcal V_t(f)\bigr)
  =\tfrac{t^2}{2}B_{\rm nuc}(f,f)+O(t).
 \tag{$\ast$}
 \]
@@ -28,7 +28,7 @@ more useful:
 ## 1. The obstruction: degrees vanish on \(\mathcal T^0\)
 
 In row (a) the covolume is
-\(-\log\operatorname{covol}=(\log2)^2N_t\) with \(N_t=r(m_t)r(n_t)\), and by
+\(-\log\mathrm{covol}=(\log2)^2N_t\) with \(N_t=r(m_t)r(n_t)\), and by
 `lem:negabinaryradius`
 
 \[
@@ -48,7 +48,7 @@ Now take a mixed class \(D_f\) with \(f\in\mathcal T^0\).  By
 mechanism gives \(N_t=0\), covolume \(1\), and
 
 \[
- -\log\operatorname{covol}=0\neq\tfrac{t^2}{2}B_{\rm nuc}(f,f).
+ -\log\mathrm{covol}=0\neq\tfrac{t^2}{2}B_{\rm nuc}(f,f).
 \]
 
 The right-hand side is not zero: by `eq:rowcspectral`, for \(f\in\mathcal T^0\)
@@ -120,8 +120,8 @@ Quantitatively, deforming the metric by a positive operator \(M\), i.e.
 \((\det M)^{1/2}\), so
 
 \[
- -\log\operatorname{covol}_M
- =-\log\operatorname{covol}-\tfrac12\log\det M .
+ -\log\mathrm{covol}_M
+ =-\log\mathrm{covol}-\tfrac12\log\det M .
 \]
 
 The requirement is therefore explicit:
@@ -136,7 +136,7 @@ The requirement is therefore explicit:
 
 The natural candidate \(M=e^{-c\mathcal G_\infty}\), with \(\mathcal G_\infty\)
 the multiplier operator of \(m_\infty\), gives
-\(\log\det M=-c\operatorname{tr}\mathcal G_\infty\).  But
+\(\log\det M=-c\mathrm{tr}\,\mathcal G_\infty\).  But
 \(m_\infty(\tau)=\log(2\pi/|\tau|)+O(\tau^{-2})\to-\infty\), so the trace over
 a window diverges logarithmically and the determinant is not defined without
 regularization.

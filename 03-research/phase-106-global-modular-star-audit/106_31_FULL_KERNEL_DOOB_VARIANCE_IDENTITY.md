@@ -12,7 +12,7 @@ the exact representation
 
 \[
  \boxed{
- QW(Kr,Kr)=\mathscr E_K(r)-2c_K^2\operatorname {Var}_{\mu_K}(r).}
+ QW(Kr,Kr)=\mathscr E_K(r)-2c_K^2\mathrm{Var}_{\mu_K}(r).}
  \tag{1}
 \]
 
@@ -180,7 +180,7 @@ Their contribution to the same subtraction is
  \begin{aligned}
  2\left|\int hKr\right|^2
  -2\left(\int hK\right)\left(\int hK|r|^2\right)
- &=-2c_K^2\operatorname {Var}_{\mu_K}(r).
+ &=-2c_K^2\mathrm{Var}_{\mu_K}(r).
  \end{aligned}
  \tag{14}
 \]
@@ -193,7 +193,7 @@ before removing the prime cutoff, the identity is
  \begin{aligned}
  &QW_N(Kr,Kr)-QW_N(K,K|r|^2)\\
  &\qquad=\mathscr E_{K,N}(r)
- -2c_K^2\operatorname {Var}_{\mu_K}(r),
+ -2c_K^2\mathrm{Var}_{\mu_K}(r),
  \end{aligned}
  \tag{14a}
 \]
@@ -236,7 +236,7 @@ the full Weil criterion.  Therefore Theorem 1 gives the exact equivalence
  \mathrm{RH}
  \quad\Longleftrightarrow\quad
  \mathscr E_K(r)\geq
- \frac12\operatorname {Var}_{\mu_K}(r)
+ \frac12\mathrm{Var}_{\mu_K}(r)
  \quad\text{for every even }r\in C_c^\infty(\mathbb R).}
  \tag{15}
 \]

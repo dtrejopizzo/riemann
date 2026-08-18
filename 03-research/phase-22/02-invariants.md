@@ -45,7 +45,7 @@ $$\sum_\rho F(\gamma_\rho) = [\text{lado aritmético}] + [\text{factor gamma}]$$
 donde para ceros en línea $\rho = \tfrac{1}{2} + i\gamma$, $\gamma_\rho = \gamma \in \mathbb{R}$, y para ceros fuera de línea $\rho = \sigma_j + i\gamma_j$, el parámetro es $\gamma_\rho = \gamma_j - ib_j \in \mathbb{C}$.
 
 Bajo Hipótesis D, el lado izquierdo se descompone como:
-$$\sum_\rho F(\gamma_\rho) = \underbrace{\sum_{Z_{\rm CL}} F(\gamma)}_{\geq\, 0 \text{ si } F \geq 0} + \underbrace{4\sum_{j=1}^m \operatorname{Re} F(\gamma_j - ib_j)}_{\text{contribución fuera de línea}}$$
+$$\sum_\rho F(\gamma_\rho) = \underbrace{\sum_{Z_{\rm CL}} F(\gamma)}_{\geq\, 0 \text{ si } F \geq 0} + \underbrace{4\sum_{j=1}^m \mathrm{Re} F(\gamma_j - ib_j)}_{\text{contribución fuera de línea}}$$
 
 El lado aritmético es:
 $$[\text{lado aritmético}] = -2\sum_p \sum_k \frac{\log p}{p^{k/2}} \hat F(k\log p)$$
@@ -55,9 +55,9 @@ donde $\hat F$ es la transformada de Fourier de $F$.
 ### C.2.2 El teorema de Paley-Wiener y la cota del defecto
 
 **Lema 22-C.3** (Cota de Paley-Wiener sobre el defecto). Para cualquier $F \in C_c^\infty(\mathbb{R})$ par, soportada en $[-T,T]$, y para cada órbita fuera de línea $\mathcal{O}_j$:
-$$|\operatorname{Re} F(\gamma_j - ib_j)| \leq \|F\|_1 \cdot e^{T b_j}$$
+$$|\mathrm{Re} F(\gamma_j - ib_j)| \leq \|F\|_1 \cdot e^{T b_j}$$
 
-*Demostración*. Por el teorema de Paley-Wiener, si $F$ está soportada en $[-T,T]$, su extensión entera satisface $|F(z)| \leq \|F\|_1 e^{T|\operatorname{Im}(z)|}$ para todo $z \in \mathbb{C}$. Con $z = \gamma_j - ib_j$ se tiene $|\operatorname{Im}(z)| = b_j$, lo que da la cota. $\square$
+*Demostración*. Por el teorema de Paley-Wiener, si $F$ está soportada en $[-T,T]$, su extensión entera satisface $|F(z)| \leq \|F\|_1 e^{T|\mathrm{Im}(z)|}$ para todo $z \in \mathbb{C}$. Con $z = \gamma_j - ib_j$ se tiene $|\mathrm{Im}(z)| = b_j$, lo que da la cota. $\square$
 
 **Lema 22-C.4** (Cota del lado aritmético). Para $F \geq 0$ soportada en $[-T,T]$:
 $$\left|\sum_p \sum_k \frac{\log p}{p^{k/2}} \hat F(k\log p)\right| \leq \|F\|_\infty \cdot \psi_2(e^T)$$
@@ -114,7 +114,7 @@ Para $b_j \leq 1/2$ (el caso real): $M(x) = O(x^{b_j - 1/2})$ que es $O(x^0) = O
 
 $$W_\zeta(h) = \sum_\rho h(\gamma_\rho) \geq 0 \quad \text{para toda } h \geq 0 \text{ admisible (criterio W1)}$$
 
-Bajo Hipótesis D: $W_\zeta(h) = \sum_{Z_{\rm CL}} h(\gamma) + 4\sum_j \operatorname{Re}[h(\gamma_j - ib_j)]$. Para $h$ que hace $\operatorname{Re}[h(\gamma_j - ib_j)] < 0$ y suficientemente negativo, $W_\zeta(h) < 0$.
+Bajo Hipótesis D: $W_\zeta(h) = \sum_{Z_{\rm CL}} h(\gamma) + 4\sum_j \mathrm{Re}[h(\gamma_j - ib_j)]$. Para $h$ que hace $\mathrm{Re}[h(\gamma_j - ib_j)] < 0$ y suficientemente negativo, $W_\zeta(h) < 0$.
 
 Encontrar tal $h$ requiere conocer $\gamma_j, b_j$. Además, la positividad $W_\zeta(h) \geq 0$ es EXACTAMENTE el enunciado de Wall W1 (equivalente a RH vía Weil). Ninguna información nueva.
 
@@ -142,7 +142,7 @@ Esto es el **punto ciego aritmético**: el producto de Euler es una herramienta 
 El criterio de Beurling-Nyman dice: RH $\iff$ $d = 0$ donde
 $$d^2 = \inf_{A \in \mathcal{D}} \int_0^1 \left|1 - A(x)\right|^2 dx$$
 y $\mathcal{D}$ es la clausura en $L^2(0,1)$ del espacio de "funciones de Beurling"
-$\mathcal{B} = \operatorname{span}\{f_\theta : \theta \in (0,1)\}$, $f_\theta(x) = \{\theta/x\} - \theta\{1/x\}$.
+$\mathcal{B} = \mathrm{span}\,\{f_\theta : \theta \in (0,1)\}$, $f_\theta(x) = \{\theta/x\} - \theta\{1/x\}$.
 
 El resultado de Báez-Duarte (2003) da la versión con series de Dirichlet:
 $$d_N^2 = \inf_{A_N} \frac{1}{2\pi}\int_{-\infty}^\infty \left|\frac{1}{\zeta(1/2+it)} - A_N(it)\right|^2 \frac{dt}{1/4+t^2}$$

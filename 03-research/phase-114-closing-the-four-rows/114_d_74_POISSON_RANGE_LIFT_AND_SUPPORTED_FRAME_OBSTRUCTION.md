@@ -153,8 +153,8 @@ Let `rho_+^0` denote the even quotient representation (1.4), and let `rho_-^0`
 be the induced scaling representation on `V`.  Meyer's character theorem is
 
 \[
- \chi_M(h)=\operatorname {Tr}_{\rm nuc}\rho_+^0(h)
-            -\operatorname {Tr}_{\rm nuc}\rho_-^0(h).          \tag{3.1}
+ \chi_M(h)=\mathrm{Tr}_{\rm nuc}\rho_+^0(h)
+            -\mathrm{Tr}_{\rm nuc}\rho_-^0(h).          \tag{3.1}
 \]
 
 For `h=a\star b^\vee`, the A--B--C realization theorem identifies (3.1)
@@ -168,7 +168,7 @@ If `a,b` are primitive, Theorem 1.1 kills the even term, so
 
 \[
  B_{\rm nuc}(a,b)
- =-\operatorname {Tr}_{\rm nuc}\rho_-^0(a\star b^\vee).       \tag{3.3}
+ =-\mathrm{Tr}_{\rm nuc}\rho_-^0(a\star b^\vee).       \tag{3.3}
 \]
 
 This is the exact trace pullback through the range--cokernel triangle.  To
@@ -360,7 +360,7 @@ three exact defects audited in D.45:
 \]
 
 \[
- \operatorname {Tr}(A[P,A^*])
+ \mathrm{Tr}(A[P,A^*])
  =\|QAP\|_{\rm HS}^2-\|PAQ\|_{\rm HS}^2,                   \tag{6.5}
 \]
 

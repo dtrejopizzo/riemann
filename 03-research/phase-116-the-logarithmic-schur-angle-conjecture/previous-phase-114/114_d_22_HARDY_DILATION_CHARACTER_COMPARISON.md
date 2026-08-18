@@ -14,7 +14,7 @@ the finite-prime/primitive coupling.
 Let
 
 \[
- H^2_{\rm ev}=\overline{\operatorname{span}}\{z^{2k}:k\ge0\}
+ H^2_{\rm ev}=\overline{\mathrm{span}}\{z^{2k}:k\ge0\}
 \]
 
 inside the Hardy space of the disk.  For `x>1` define
@@ -39,7 +39,7 @@ Take two identical copies and write `Pi_infty(x)=T_x direct-sum T_x`.
 For every `x>1`,
 
 \[
- \operatorname{Tr}\Pi_\infty(x)
+ \mathrm{Tr}\,\Pi_\infty(x)
  =\frac{2}{1-x^{-2}}
  =\frac{x}{x-1}+\frac{x}{x+1}.                       \tag{3}
 \]
@@ -65,7 +65,7 @@ If `h` is compactly supported in `(1,infinity)`, then
 
 \[
  W_\infty(h)
- =\operatorname{Tr}\left(
+ =\mathrm{Tr}\,\left(
    \int_1^\infty h(x)\Pi_\infty(x)\,d^\times x
                          \right).                    \tag{5}
 \]

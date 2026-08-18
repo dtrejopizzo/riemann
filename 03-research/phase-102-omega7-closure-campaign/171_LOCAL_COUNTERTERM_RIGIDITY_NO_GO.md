@@ -64,7 +64,7 @@ Their determinant is
 
 By the assumptions, this is nonzero.  Hence
 \[
-  \operatorname{span}\{v_1,v_2\}=\mathbb C^2.
+  \mathrm{span}\,\{v_1,v_2\}=\mathbb C^2.
 \tag{3}
 \]
 
@@ -196,7 +196,7 @@ unchanged.
 
 The local Li cross-pairing from `170` is
 \[
-  q_w(x,y)=2\operatorname{Re}(x\overline y),
+  q_w(x,y)=2\mathrm{Re}(x\overline y),
 \tag{16}
 \]
 with Hermitian matrix

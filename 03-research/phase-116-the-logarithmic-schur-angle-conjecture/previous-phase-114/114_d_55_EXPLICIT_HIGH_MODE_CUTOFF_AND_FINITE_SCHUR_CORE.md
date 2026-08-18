@@ -105,7 +105,7 @@ is evaluated with directed error.  Put
 
 \[
  \mathfrak a(\tau)=
- \operatorname{Re}\psi\left({1\over4}+{i\tau\over2}\right)
+ \mathrm{Re}\,\psi\left({1\over4}+{i\tau\over2}\right)
  -\log\pi.                                                   \tag{3.5}
 \]
 
@@ -158,7 +158,7 @@ be the prolate time--band concentration operator on `L^2([-T,T])`.  It is a
 positive trace-class contraction and
 
 \[
- \operatorname{Tr}C_{T,R}={2TR\over\pi}.                  \tag{4.2}
+ \mathrm{Tr}\,C_{T,R}={2TR\over\pi}.                  \tag{4.2}
 \]
 
 Equations (2.5) and either (3.4) or (3.9) imply, with respectively
@@ -182,7 +182,7 @@ eigenvalues exceed `beta_T`.  The trace bound gives
 \[
  \boxed{
  d_T:=\dim E_T
- \leq {\operatorname{Tr}C_{T,R}\over\beta_T}
+ \leq {\mathrm{Tr}\,C_{T,R}\over\beta_T}
  ={4TR(M_T+\eta)\over\pi\eta}.}                           \tag{4.5}
 \]
 
@@ -238,7 +238,7 @@ calculation of D.47 is finite-dimensional.  Thus both requirements
 
 \[
  n_+(B_T)=1,
- \qquad\operatorname{In}(M_TB_T^{-1}M_T^*)=(1,1,0)        \tag{5.5}
+ \qquad\mathrm{In}(M_TB_T^{-1}M_T^*)=(1,1,0)        \tag{5.5}
 \]
 
 are reduced to the finite Schur core plus two boundary coordinates.

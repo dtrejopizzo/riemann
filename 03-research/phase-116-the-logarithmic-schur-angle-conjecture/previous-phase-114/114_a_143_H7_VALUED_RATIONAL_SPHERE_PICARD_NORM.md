@@ -37,7 +37,7 @@ for lifted unary scalars.  Morphisms of metrized torsors are isometries.
 This is the rank-one Arakelov category
 
 \[
- \operatorname{Pic}^{\rm met}_{\rm tor}(B_i^{\rm locreg}).          \tag{1.3}
+ \mathrm{Pic}^{\rm met}_{\rm tor}(B_i^{\rm locreg}).          \tag{1.3}
 \]
 
 It is not a retraction (K\to S): higher rational-sphere operations remain
@@ -74,7 +74,7 @@ Green biextension.
 ### Theorem 2.1 (metrized boundary faithfulness)
 
 The pullback of the prime lattice to either valued mixed boundary is
-faithful in \(\operatorname{Pic}^{\rm met}_{\rm tor}\).
+faithful in \(\mathrm{Pic}^{\rm met}_{\rm tor}\).
 
 ### Proof
 

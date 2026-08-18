@@ -72,7 +72,7 @@ the sign of \(P_{\ell,n}\) is constant.  Choose
 \[
   \sigma_{\ell,r}
   =
-  \operatorname{sgn}P_{\ell,n}(u)
+  \mathrm{sgn}\,P_{\ell,n}(u)
   \qquad(u\in I_{\ell,r}).
 \tag{7}
 \]

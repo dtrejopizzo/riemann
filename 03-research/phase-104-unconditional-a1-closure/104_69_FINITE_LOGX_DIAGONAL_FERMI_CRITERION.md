@@ -231,7 +231,7 @@ pero no da una cota uniforme útil cuando \(X\to\infty\).
 Para
 
 \[
- Q_n=4-2\operatorname {Re}\{(2i)^n+(2i)^{-n}\},            \tag{21}
+ Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\},            \tag{21}
 \]
 
 ponga \(a_n^Q=[1+(n+1)e^{Q_n}]^{-1}\). Entonces

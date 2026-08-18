@@ -145,8 +145,8 @@ If H7-LNF holds, equality of two values in (2.4) yields, under every power
 character,
 
 \[
- \sum_j3^j\operatorname{sgn}(c_j)|c_j|^\sigma
- =\sum_j3^j\operatorname{sgn}(c'_j)|c'_j|^\sigma.       \tag{4.3}
+ \sum_j3^j\mathrm{sgn}(c_j)|c_j|^\sigma
+ =\sum_j3^j\mathrm{sgn}(c'_j)|c'_j|^\sigma.       \tag{4.3}
 \]
 
 Independence of the functions `a^sigma`, followed by uniqueness of balanced

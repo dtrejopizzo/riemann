@@ -100,7 +100,7 @@ It does **not** prove:
 
 1. the full suspended-flow geometry of `107_08`;
 2. the actual one-step geometric fixed-point theorem of `107_09`;
-3. any arithmetic-surface realization over \(\operatorname{Spec}\mathbf
+3. any arithmetic-surface realization over \(\mathrm{Spec}\,\mathbf
    Z\), or the later realization/Hodge/terminal steps of Phase 107.
 
 So the correct reading is:

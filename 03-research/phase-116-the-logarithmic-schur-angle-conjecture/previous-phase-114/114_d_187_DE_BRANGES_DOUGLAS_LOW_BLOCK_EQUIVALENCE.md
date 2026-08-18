@@ -26,7 +26,7 @@ Then the following are equivalent:
 \[
 \begin{array}{ll}
 \text{(i)}&Q_T\geq0;\\
-\text{(ii)}&q\in\operatorname {Ran}Q_{00}^{1/2}
+\text{(ii)}&q\in\mathrm{Ran}\,Q_{00}^{1/2}
  \text{ and }
  Q_{EE}-q^*Q_{00}^{\dagger}q\geq0;\\
 \text{(iii)}&q=Q_{00}^{1/2}C
@@ -90,8 +90,8 @@ If (M\geq0), then (X^*u=0) for every (u\in\ker A): apply positivity
 to ((tu,v)) and vary real and imaginary (t).  Hence
 
 \[
- \operatorname {Ran}X\subset
- \overline{\operatorname {Ran}A^{1/2}}.              \tag{1.2}
+ \mathrm{Ran}\,X\subset
+ \overline{\mathrm{Ran}\,A^{1/2}}.              \tag{1.2}
 \]
 
 On finite cells, or whenever the relevant range is closed, Douglas'
@@ -110,7 +110,7 @@ Thus (M\geq0) if and only if (B-C^*C\geq0), equivalently
 \]
 
 For nonclosed range, (1.2) is replaced by the form-domain condition
-(Xv\in\operatorname {Dom}A^{\dagger/2}), and (1.4) is interpreted as a
+(Xv\in\mathrm{Dom}\,A^{\dagger/2}), and (1.4) is interpreted as a
 closed quadratic form.  This is exactly the output-capacity formulation
 of D.170 and the actual-cross formulation of D.179.
 
@@ -179,7 +179,7 @@ let (G_{00}=Q_{00}^\dagger) on the supported old range.  If (q_N) is
 the old--born cross after the reference harmonic lift, define
 
 \[
- \operatorname {Cap}_{\rm lo}(N,R)
+ \mathrm{Cap}_{\rm lo}(N,R)
  =q_N^*P_{\rm lo}G_{00}P_{\rm lo}q_N.                \tag{3.1}
 \]
 
@@ -195,8 +195,8 @@ the actual obligation is
 
 \[
  {\|y_{\rm hi}\|^2\over1-\rho^2}
- +\operatorname {Cap}_{\rm lo}
- +\operatorname {Cap}_{\rm cross}\leq1.             \tag{3.2}
+ +\mathrm{Cap}_{\rm lo}
+ +\mathrm{Cap}_{\rm cross}\leq1.             \tag{3.2}
 \]
 
 Once the high and cross terms are fixed, (3.2) is the corresponding
@@ -219,7 +219,7 @@ The following statements are equivalent:
 \begin{array}{cl}
  E_a\text{ is Hermite--Biehler}
  &\Longleftrightarrow |\Theta_a(z)|<1
-   \quad(\operatorname {Im}z>0),\\
+   \quad(\mathrm{Im}\,z>0),\\
  &\Longleftrightarrow
  {1-\Theta_a(z)\overline{\Theta_a(w)}
   \over2\pi i(\overline w-z)}\geq0

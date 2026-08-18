@@ -189,7 +189,7 @@ route.  It helps only through weighted \(L^1\)-smallness of
 The previous conditions can be read contrapositively.  For any measurable
 set \(A_n\subset[0,T_n]\), define
 \[
-  r_n(A_n)=\operatorname*{ess\,inf}_{u\in A_n}R(u)e^{-u}.
+  r_n(A_n)=\mathop{\mathrm{ess\,inf}}_{u\in A_n}R(u)e^{-u}.
 \tag{17}
 \]
 

@@ -19,7 +19,7 @@ Positivity is **free**. The single wall is the boundedness/escape statement:
 > **Rank-one escape (RH-strength).**
 > $$\sup_P\big\|P_{\mathrm{prim}}K_PP_{\mathrm{prim}}\big\|<\infty,\qquad
 >   P_{\mathrm{prim}}=I-\frac{|H\rangle\langle H|}{\langle H,H\rangle},$$
-> i.e. all divergent mass of $K_P$ ($\operatorname{Tr}K_P\sim\tfrac12(\log P)^2$) escapes **only**
+> i.e. all divergent mass of $K_P$ ($\mathrm{Tr}\,K_P\sim\tfrac12(\log P)^2$) escapes **only**
 > through the pole direction $H$.
 
 **Corollary (escape ⟹ RH).** Uniform boundedness ⟹ weak-$*$ limit $K_{\mathrm{crit}}\succeq0$ ⟹

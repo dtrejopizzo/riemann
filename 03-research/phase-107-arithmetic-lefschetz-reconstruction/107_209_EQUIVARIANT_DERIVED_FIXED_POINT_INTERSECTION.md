@@ -36,10 +36,10 @@ with the linearization chosen according to (1.1).  Pulling back
 derivedly to \(Z\) makes the differential zero and gives
 
 \[
- \operatorname{Tor}^{\mathcal O_Y}_0(\mathcal O_Z,\mathcal O_Z)
+ \mathrm{Tor}^{\mathcal O_Y}_0(\mathcal O_Z,\mathcal O_Z)
  =\mathcal O_Z,
  \qquad
- \operatorname{Tor}^{\mathcal O_Y}_1(\mathcal O_Z,\mathcal O_Z)=L.
+ \mathrm{Tor}^{\mathcal O_Y}_1(\mathcal O_Z,\mathcal O_Z)=L.
  \tag{2.2}
 \]
 
@@ -56,7 +56,7 @@ Hence in equivariant \(K\)-theory
 Evaluating the character at the prime twist gives
 
 \[
- \operatorname{ch}_{p,s}(i^*i_*1)=1-p^{-s}.
+ \mathrm{ch}_{p,s}(i^*i_*1)=1-p^{-s}.
  \tag{2.4}
 \]
 

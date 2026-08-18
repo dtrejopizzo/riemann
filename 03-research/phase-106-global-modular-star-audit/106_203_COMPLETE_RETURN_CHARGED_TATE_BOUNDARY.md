@@ -283,7 +283,7 @@ The remaining identity is now attached to the explicit norm (17):
 \[
  \boxed{
  \ker D_\infty
- =\overline{\operatorname {Ran}\rho^\natural}^{\,\rm CCM}.}
+ =\overline{\mathrm{Ran}\,\rho^\natural}^{\,\rm CCM}.}
 \tag{23}
 \]
 

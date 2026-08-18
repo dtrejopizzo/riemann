@@ -119,7 +119,7 @@ subspace:
 \]
 where \(\mathcal V_n\) is any subspace containing \(1-z^n\), for example
 \[
-  \mathcal V_n=\operatorname{span}\{1,z,\ldots,z^n\}
+  \mathcal V_n=\mathrm{span}\,\{1,z,\ldots,z^n\}
 \]
 or the vanishing-test subspace
 \[

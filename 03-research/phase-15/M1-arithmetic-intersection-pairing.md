@@ -2,7 +2,7 @@
 
 **Author: David Alejandro Trejo Pizzo · 2026-06-06.**
 Milestone M1 of the Anatomy–Kreĭn–Hodge program: construct, with full proofs, the data of an arithmetic
-intersection theory for $\operatorname{Spec}\mathbb Z$ — a symmetric pairing, the trivial-cohomology (pole)
+intersection theory for $\mathrm{Spec}\,\mathbb Z$ — a symmetric pairing, the trivial-cohomology (pole)
 classes, the diagonal and Frobenius classes, the Lefschetz trace identity, and the self-intersection via the
 anatomy / Rankin–Selberg — and reduce RH to a single arithmetic Hodge-index statement (M3). **Everything in M1 is
 proved**; M3 is identified, not claimed. The construction is RH-independent.
@@ -14,7 +14,7 @@ RH), and $\Lambda$ is von Mangoldt.
 
 ## 1. Test space and transforms
 Let $\mathcal V$ be the space of even Schwartz functions $f$ on $\mathbb R$ whose Fourier transform
-$\widehat f(r)=\int_{\mathbb R}f(u)e^{iru}\,du$ extends holomorphically to a strip $|\operatorname{Im}r|<\tfrac12+\varepsilon$
+$\widehat f(r)=\int_{\mathbb R}f(u)e^{iru}\,du$ extends holomorphically to a strip $|\mathrm{Im}\,r|<\tfrac12+\varepsilon$
 with $\widehat f(r)\ll(1+|r|)^{-2-\delta}$ there (e.g.\ $f$ band-limited and Gaussian-localized, the admissible
 class of P7–P17). For $f_1,f_2\in\mathcal V$ write $h=\widehat f_1\,\overline{\widehat f_2}$ (an even function
 in the strip) and let $g$ be its inverse transform, $g(u)=\tfrac1{2\pi}\int h(r)e^{-iur}dr$.
@@ -44,7 +44,7 @@ For $f_1,f_2\in\mathcal V$, with $h=\widehat f_1\overline{\widehat f_2}$ and $g$
 \;-\;\underbrace{2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,g(\log n)}_{\text{primes }=\,\text{Frobenius}}
 \;+\;\underbrace{\frac1{2\pi}\int_{\mathbb R}h(r)\,W(r)\,dr}_{\text{archimedean }=\,\infty\text{-place}},
 \]
-where $W(r)=\operatorname{Re}\psi(\tfrac14+\tfrac{ir}2)-\log\pi$. The left side is the global intersection number;
+where $W(r)=\mathrm{Re}\,\psi(\tfrac14+\tfrac{ir}2)-\log\pi$. The left side is the global intersection number;
 the right side is the sum of local intersection numbers over the places of $\mathbb Q$ (the two ``trivial''
 cohomology poles, the finite Frobenius places $p$, and the archimedean place).
 \end{theorem}
@@ -97,7 +97,7 @@ is nonnegative, unconditionally. Via the explicit formula it equals the prime se
 \]
 whose diagonal $\sum_{n\le e^{2d}}\Lambda(n)^2/n\sim2d^2$ is the residue at $s=1$ of the Rankin–Selberg
 $\zeta\times\zeta$ second moment. For a cuspidal automorphic $\pi$ of $\mathrm{GL}(n)$ the analogous
-self-intersection is $\operatorname{Res}_{s=1}L(s,\pi\times\bar\pi)>0$, i.e.
+self-intersection is $\mathrm{Res}_{s=1}L(s,\pi\times\bar\pi)>0$, i.e.
 $(\Gamma\cdot\Gamma)=\sum_p\sum_k|s_k(p)|^2\cdot(\text{weight})\ge0$ where $s_k(p)=\sum_i\alpha_{i,p}^k$ are the
 anatomy power sums (P19). The positivity is the Rankin–Selberg \emph{effectivity} of the Frobenius class, holding
 for free as a square.

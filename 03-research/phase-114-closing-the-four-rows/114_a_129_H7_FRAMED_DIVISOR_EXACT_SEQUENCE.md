@@ -35,7 +35,7 @@ where the rank-one operations are defined, this gives the exact pattern
 
 \[
  GL_1(\mathcal O(Z))\longrightarrow GL_1(\mathcal K(Z))
- \xrightarrow{\operatorname{div}}D_1^{\rm cmp}(Z)
+ \xrightarrow{\mathrm{div}}D_1^{\rm cmp}(Z)
  \longrightarrow Pic_{\rm cmp}(Z)\longrightarrow0.                   \tag{1.3}
 \]
 
@@ -53,7 +53,7 @@ For `Z=Y^reg`, let
 The corrected calculation `a128` gives in the completed divisor object
 
 \[
- A_p=\operatorname{div}(h_p)+B_p^\infty.                              \tag{2.2}
+ A_p=\mathrm{div}(h_p)+B_p^\infty.                              \tag{2.2}
 \]
 
 Here `div(h_p)` cancels all finite local multipliers.  The residual
@@ -75,7 +75,7 @@ For a finite vector `a=(a_p)`, tensoring (2.2) gives
 
 \[
  \sum_pa_pA_p=
- \operatorname{div}\!\left(\prod_p(p_2/p_1)^{a_p}\right)
+ \mathrm{div}\,\!\left(\prod_p(p_2/p_1)^{a_p}\right)
  +\sum_pa_pB_p^\infty.                                                \tag{3.1}
 \]
 

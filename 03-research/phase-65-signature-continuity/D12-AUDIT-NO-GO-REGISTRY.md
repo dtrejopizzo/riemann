@@ -18,7 +18,7 @@ anti-self-deception gate: the package is only as sound as this audit.
 \emph{sourced} germ convergence (D8.5), kernel via differentiation (D8.7); never $D_P^\circ\to\Xi
 \Rightarrow\mathsf K_P^\circ\to\mathsf K_\Xi$. \\
 2. fake index $\kappa(A_\infty):=\lim\kappa(A_P)$ & D9, D11 & \textbf{avoided}: $\kappa(A_\infty)=
-\operatorname{sq}_-(\mathsf K_\infty^\circ)$ computed from the limit kernel (D9), not defined as a limit
+\mathrm{sq}_-(\mathsf K_\infty^\circ)$ computed from the limit kernel (D9), not defined as a limit
 of indices. \\
 3. naive pole subtraction & D4 & \textbf{avoided}: D4 uses Feshbach/Schur shorting (cross-term
 $\beta\alpha^{-1}\beta^*$); the $G_R$ counterexample (Stage 1) forbids subtraction. \\
@@ -29,7 +29,7 @@ K_\Xi^{\mathrm{G5}}$ fixed in D0 \emph{before} any limit; D9 \emph{proves} $\mat
 pole-factor anomaly absorbed into $\Delta_P$, D4). \\
 \hline
 6. use of RH / zero locations & everywhere & \textbf{avoided}: no step uses zero locations; G5 is invoked
-only as the final \emph{reading} of $\operatorname{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})$. \\
+only as the final \emph{reading} of $\mathrm{sq}_-(\mathsf K_\Xi^{\mathrm{G5}})$. \\
 \hline
 \end{tabular}
 \end{center}

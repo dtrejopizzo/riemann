@@ -17,7 +17,7 @@ inside the Minkowski torus
 Give \(K_\mathbb R\) the positive trace norm
 
 \[
- \|x\|^2=\operatorname{Tr}_{K/\mathbb Q}(x\bar x)
+ \|x\|^2=\mathrm{Tr}_{K/\mathbb Q}(x\bar x)
 \]
 
 and normalize it so that the codifferent lattice has covolume one.  The

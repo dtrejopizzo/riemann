@@ -193,7 +193,7 @@ La fórmula de Fourier de `104_62` implica, con el orden de límites escrito,
  \mathfrak A_t(h)
  ={1\over2}-\lim_{N\to\infty}\lim_{\varepsilon\downarrow0}
  \int_0^\infty
- {\operatorname {Im}\mathcal C_{h,N,\varepsilon}(s)
+ {\mathrm{Im}\,\mathcal C_{h,N,\varepsilon}(s)
   \over\sinh(\pi s)}\,ds.}
  \tag{13}
 \]
@@ -210,7 +210,7 @@ permutación es justamente la capa que se audita a continuación.
 Use el falsificador exacto
 
 \[
- Q_n=4-2\operatorname {Re}\{(2i)^n+(2i)^{-n}\}.
+ Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\}.
  \tag{14}
 \]
 

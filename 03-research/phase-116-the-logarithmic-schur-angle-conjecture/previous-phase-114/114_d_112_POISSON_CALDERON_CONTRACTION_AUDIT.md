@@ -220,7 +220,7 @@ At the real place, the Fourier multiplier of
 
 \[
  \ell_\infty(\tau)
- =\operatorname{Re}\psi(1/4+i\tau/2)-\psi(1/4),        \tag{5.4}
+ =\mathrm{Re}\,\psi(1/4+i\tau/2)-\psi(1/4),        \tag{5.4}
 \]
 
 which vanishes at \(\tau=0\).  Hence the Gamma differential has no bounded

@@ -12,7 +12,7 @@ and let \(\nu_p\) be the probability measure with density
 covariance representation
 \[
  \boxed{\quad q_j-q_{j+1}
- ={q_j\over j+2}\,\operatorname {Cov}_{\nu_{j+1}}(u,h).\quad} \tag{2}
+ ={q_j\over j+2}\,\mathrm{Cov}_{\nu_{j+1}}(u,h).\quad} \tag{2}
 \]
 Consequently the cubic condition of `103_36` can indeed be written wholly
 in tilted covariances.  This makes explicit what the first-minor proof
@@ -46,7 +46,7 @@ Integration by parts under \(\nu_p\), for \(p\geq1\), gives
 \]
 Hence, on putting
 \[
- \Gamma_p:=\operatorname {Cov}_{\nu_p}(u,h),
+ \Gamma_p:=\mathrm{Cov}_{\nu_p}(u,h),
 \]
 one obtains the exact identity
 \[
@@ -82,8 +82,8 @@ natural vanishing scale.
 The curvature lower bound \(h'\geq\kappa\) only supplies the elementary
 one-tilt estimate
 \[
- \Gamma_p=\operatorname {Cov}_{\nu_p}(u,h)
- \geq\kappa\operatorname {Var}_{\nu_p}(u).                    \tag{9}
+ \Gamma_p=\mathrm{Cov}_{\nu_p}(u,h)
+ \geq\kappa\mathrm{Var}_{\nu_p}(u).                    \tag{9}
 \]
 Indeed \(h(u)-\kappa u\) is increasing and the covariance square used in
 `103_34` applies.  It contains no comparison between \(\Gamma_p\) and

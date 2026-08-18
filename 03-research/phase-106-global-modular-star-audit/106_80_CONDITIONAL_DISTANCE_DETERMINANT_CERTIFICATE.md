@@ -55,7 +55,7 @@ optimal among lower bounds that use only the prime observation
 geometry of \(\mathcal B\) and are uniform in the positive preceding
 signed block. Numerically, however, it can lose several orders of
 magnitude because it discards the component of \(r\) parallel to
-\(\operatorname{ran}U\). The augmented determinant (2) retains that
+\(\mathrm{ran}\,U\). The augmented determinant (2) retains that
 component through \(A^{1/2}\) and is therefore the force-bearing target.
 
 Each prime-power channel is an infinite-dimensional displacement feature.
@@ -69,9 +69,9 @@ multiplicity jets.
 Let
 
 \[
- V_{M-1}=\operatorname{span}\{\phi_1,\ldots,\phi_{M-1}\}
+ V_{M-1}=\mathrm{span}\,\{\phi_1,\ldots,\phi_{M-1}\}
  \subset
- V_M=\operatorname{span}\{\phi_1,\ldots,\phi_M\}. \tag{5}
+ V_M=\mathrm{span}\,\{\phi_1,\ldots,\phi_M\}. \tag{5}
 \]
 
 The basis may be complex. It may contain conjugate nonreal zero-orbit
@@ -195,7 +195,7 @@ The vector \(q^*\) has coefficient one on \(\phi_M\). Define
 \[
  \boxed{
  d_M(\mathcal B)^2
- :=\operatorname{dist}\!\left(
+ :=\mathrm{dist}\,\!\left(
  \mathcal D_{\mathcal B}q^*,
  \mathcal D_{\mathcal B}V_{M-1}
  \right)^2.}                                     \tag{17}
@@ -325,8 +325,8 @@ Define the augmented maps
  \boxed{
  \begin{aligned}
  \Delta_{\mathcal B}
- &=\operatorname{dist}(
-     \widetilde r,\operatorname{ran}\widetilde U)^2\\
+ &=\mathrm{dist}(
+     \widetilde r,\mathrm{ran}\,\widetilde U)^2\\
  &=\frac{
  \det\begin{pmatrix}
  A+U^*U&U^*r\\
@@ -344,8 +344,8 @@ The Gram matrix of the old augmented columns
 Moreover,
 
 \[
- \operatorname{dist}(
- \widetilde r,\operatorname{ran}\widetilde U)^2
+ \mathrm{dist}(
+ \widetilde r,\mathrm{ran}\,\widetilde U)^2
  =\min_y\{\|A^{1/2}y\|^2+\|r-Uy\|^2\}
  =\Delta_{\mathcal B},                            \tag{27c}
 \]
@@ -405,13 +405,13 @@ For optimality, fix \(U,v\), fix any \(a\), take
 \]
 
 The finite-dimensional range of \(U\) is closed. On
-\(\operatorname{ran}U\), the operator in (31) tends strongly to zero; on
+\(\mathrm{ran}\,U\), the operator in (31) tends strongly to zero; on
 \(\ker U^*\), it is the identity. Therefore
 
 \[
  \Delta_\varepsilon\longrightarrow
  \|P_{\ker U^*}r\|^2
- =\operatorname{dist}(v,\operatorname{ran}U)^2
+ =\mathrm{dist}(v,\mathrm{ran}\,U)^2
  =d_M(\mathcal B)^2.                             \tag{32}
 \]
 
@@ -533,7 +533,7 @@ Expand the determinant and its conjugate:
 
 \[
  \sum_{\pi,\tau\in S_d}
- \operatorname{sgn}(\pi)\operatorname{sgn}(\tau)
+ \mathrm{sgn}(\pi)\mathrm{sgn}(\tau)
  \prod_{i=1}^d
  F_{\pi(i)}(\omega_i)\overline{F_{\tau(i)}(\omega_i)}.          \tag{44}
 \]
@@ -588,15 +588,15 @@ For a finite quadrature with observation points
 
 \[
  \boxed{
- \det(Z^*\operatorname{diag}(\alpha)Z)
+ \det(Z^*\mathrm{diag}(\alpha)Z)
  =\sum_{\substack{I\subset\{1,\ldots,R\}\\|I|=d}}
  \left(\prod_{\ell\in I}\alpha_\ell\right)
  |\det Z_I|^2.}                                  \tag{47}
 \]
 
 Indeed, apply Cauchy--Binet to
-\((\operatorname{diag}\sqrt\alpha\,Z)^*
-(\operatorname{diag}\sqrt\alpha\,Z)\). Formula (47) is useful for
+\((\mathrm{diag}\,\sqrt\alpha\,Z)^*
+(\mathrm{diag}\,\sqrt\alpha\,Z)\). Formula (47) is useful for
 outward-interval certificates; (43)--(46) are the exact continuum
 identities.
 
@@ -620,7 +620,7 @@ Gram and define
 
 \[
  \nu_M
- =\operatorname{dist}_{\mu_K}(\phi_M,V_{M-1})^2
+ =\mathrm{dist}_{\mu_K}(\phi_M,V_{M-1})^2
  =\frac{\det N_M}{\det N_{M-1}}.                 \tag{48}
 \]
 
@@ -678,7 +678,7 @@ but its literal joint-prime application is not a duplicate.
 * `E72_117_GRAM_DETERMINANT_ORTHOGONALITY.md` already proves the generic
   identity
   \(
-  \operatorname{dist}(y,\operatorname{ran}U)^2
+  \mathrm{dist}(y,\mathrm{ran}\,U)^2
   =\det G[U,y]/\det G[U]
   \).
   Thus the Schur-to-distance algebra is not new by itself.
@@ -722,7 +722,7 @@ M&X_0\to X_1&\sigma_{M,X_0}&d_M(\mathcal B)^2&\Delta_{\mathcal B}\\ \hline
 In all three rows the exact block gain crosses, whereas the pure
 observation distance does not pay the initial deficit. The loss has a
 precise geometric source. The pure distance retains only the component of
-the observation residual perpendicular to \(\operatorname{ran}U\). The
+the observation residual perpendicular to \(\mathrm{ran}\,U\). The
 exact Kalman gain also retains the parallel component, with its cost
 measured by the already-positive preceding signed block \(A\). That
 parallel component dominates in (52).

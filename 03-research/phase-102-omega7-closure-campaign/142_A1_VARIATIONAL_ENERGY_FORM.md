@@ -76,7 +76,7 @@ Let \(H\) be a positive definite Hermitian matrix, \(v\) a column vector and
 \[
   \mathcal E_{H,v,a}(\eta)
   =
-  a+2\operatorname{Re}\langle \eta,v\rangle
+  a+2\mathrm{Re}\,\langle \eta,v\rangle
   +\langle \eta,H\eta\rangle .
 \tag{5}
 \]
@@ -136,7 +136,7 @@ cutoff \(T=T_n\), such that:
 2. the affine energy is nonnegative,
    \[
      a_{n,T}
-     +2\operatorname{Re}\langle \eta,v_{n,T}\rangle
+     +2\mathrm{Re}\,\langle \eta,v_{n,T}\rangle
      +\langle \eta,H_{n,T}\eta\rangle
      \ge0
      \qquad(\hbox{all }\eta).
@@ -218,7 +218,7 @@ admits a finite Friedrichs decomposition
 such that the associated affine energy is nonnegative for all variations:
 \[
   a_{n,T_n}
-  +2\operatorname{Re}\langle \eta,v_{n,T_n}\rangle
+  +2\mathrm{Re}\,\langle \eta,v_{n,T_n}\rangle
   +\langle \eta,H_{n,T_n}\eta\rangle
   \ge0 .
 \tag{16}

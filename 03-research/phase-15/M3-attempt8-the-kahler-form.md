@@ -32,7 +32,7 @@ $\mathfrak{sl}_2$ representation theory (the primitive decomposition). The candi
 related to the flow $\mathcal T$.
 \begin{proposition}[$\mathcal T$ is not the Lefschetz grading]\label{prop:sl2}
 $\mathcal T$ cannot be the $\mathfrak{sl}_2$-grading operator $H$: the eigenvalues of $H$ are integers (Lefschetz
-weights), while $\operatorname{spec}(\mathcal T)=\{\gamma_\rho\}$ is a real, irrational, asymptotically dense set
+weights), while $\mathrm{spec}(\mathcal T)=\{\gamma_\rho\}$ is a real, irrational, asymptotically dense set
 (density $\sim\tfrac1{2\pi}\log\tfrac{\gamma}{2\pi}$). $\mathcal T$ is the Frobenius/eigenvalue datum *within* a
 weight, not the weight grading.
 \end{proposition}
@@ -52,8 +52,8 @@ line, contradicting the functional-equation symmetry. So the positivity of $\ome
 structure of $\mathcal T$.
 \end{proposition}
 \begin{proof}
-Self-adjoint $\mathcal T\Rightarrow e^{it\mathcal T}$ unitary; a strict contraction needs $\operatorname{Im}\mathcal T
-\succ0$, i.e.\ $\operatorname{Im}\gamma_\rho>0$ for all $\rho$, impossible under $\rho\mapsto1-\rho$. $\square$
+Self-adjoint $\mathcal T\Rightarrow e^{it\mathcal T}$ unitary; a strict contraction needs $\mathrm{Im}\,\mathcal T
+\succ0$, i.e.\ $\mathrm{Im}\,\gamma_\rho>0$ for all $\rho$, impossible under $\rho\mapsto1-\rho$. $\square$
 \end{proof}
 
 ## 4. The deepest structural form of the capstone
@@ -65,7 +65,7 @@ Both natural sources fail to supply an *independent* $\omega$ from the spectral 
 Kähler class), commuting with the Frobenius }\mathcal T.\ }
 \]
 This is precisely what a **surface** supplies: on $C\times C$ the ample class $\omega$ gives the hard Lefschetz, the
-Frobenius $\mathcal T$ acts on $H^1$, and Hodge–Riemann (the Kähler positivity) gives RH. For $\operatorname{Spec}
+Frobenius $\mathcal T$ acts on $H^1$, and Hodge–Riemann (the Kähler positivity) gives RH. For $\mathrm{Spec}
 \mathbb Z$ we have built the Frobenius $\mathcal T$ and the cohomology (Attempt 7), but the **Lefschetz/Kähler
 class $\omega$** — the ample geometry of the surface — is the lone missing structure. It cannot be generated from
 $\mathcal T$ alone (Props.~\ref{prop:sl2}–\ref{prop:contr}); it is the geometric input SURF, in its sharpest form: a
@@ -87,6 +87,6 @@ single hard-Lefschetz $\mathfrak{sl}_2$-action.
 
 > The eight-attempt arc terminates here, candidly: $\mathcal H_W$, $\mathcal T$, $J$, $Q$, the trace formula, the
 > anatomy/Frobenius, and the ample cone are built; RH is the existence of one independent Kähler/Lefschetz class
-> $\omega$ (an $\mathfrak{sl}_2$), the ample geometry of $\operatorname{Spec}\mathbb Z\times\operatorname{Spec}
+> $\omega$ (an $\mathfrak{sl}_2$), the ample geometry of $\mathrm{Spec}\,\mathbb Z\times\mathrm{Spec}
 > \mathbb Z$. That object is the Connes–Consani/Deninger target, now reduced to a single hard-Lefschetz action and
 > proven not generable from the flow — the most precise statement of what a proof must still supply.

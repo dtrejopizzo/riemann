@@ -53,11 +53,11 @@ Thus \(\ell_m''<-4m^2x\le-4x\).  The log-sum identity has the correct
 sign
 \[
  (\log\Phi)''=\sum_mw_m\ell_m''+
- \operatorname{Var}_w(\ell_m').                                  \tag{8}
+ \mathrm{Var}_w(\ell_m').                                  \tag{8}
 \]
 With \(a=m^2-1\ge3\), the bounds in `103_34` give
 \[
- \operatorname{Var}_w(\ell_m')
+ \mathrm{Var}_w(\ell_m')
  \le18x^2\sum_{m\ge2}m^4(m^2-1)^2e^{-(m^2-1)x}.                  \tag{9}
 \]
 Every numerical constant checks:
@@ -66,7 +66,7 @@ Every numerical constant checks:
 \]
 and (x^2e^{-ax}) decreases for \(x\ge\pi,a\ge3\).  Therefore
 \[
- \operatorname{Var}_w(\ell_m')
+ \mathrm{Var}_w(\ell_m')
  \le32\pi^2\sum_{a=3}^\infty a^4e^{-a\pi}.
 \tag{11}
 \]
@@ -102,7 +102,7 @@ For \(m_p=\int_0^\infty u^pf(u)du\), \(p\ge1\), and
 There is no lost endpoint: \(u^pf(u)\) vanishes at zero and rapid decrease
 handles infinity.  Strict log-concavity makes \(h\) strictly increasing, so
 \[
- 2\operatorname{Cov}_{\nu_p}(u,h)
+ 2\mathrm{Cov}_{\nu_p}(u,h)
  =\iint(u-v)(h(u)-h(v))d\nu_p(u)d\nu_p(v)>0.                      \tag{16}
 \]
 Substitution of (15) proves

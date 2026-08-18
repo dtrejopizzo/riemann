@@ -7,14 +7,14 @@ whether the uniform complement gap `delta=0.219` could absorb the safe-tail
 coupling by the trace estimate
 
 \[
- \kappa\le\operatorname {tr}(A_{SS}^{-1}R_{SS}).       \tag{0.1}
+ \kappa\le\mathrm{tr}(A_{SS}^{-1}R_{SS}).       \tag{0.1}
 \]
 
 It cannot.  In a central FFT evaluation of the complete Gamma symbol and
 the contacts `2,3,4,5`, the D8/S190 split gives
 
 \[
- \operatorname {tr}(A_{SS}^{-1}R_{SS})\approx16.03.    \tag{0.2}
+ \mathrm{tr}(A_{SS}^{-1}R_{SS})\approx16.03.    \tag{0.2}
 \]
 
 This is a diagnostic, not a directed lower or upper bound.  It rejects only
@@ -64,7 +64,7 @@ Thus simply enlarging the slow block does not make the trace smaller than
 The trace inequality uses
 
 \[
- \|X\|\le\operatorname {tr}X                              \tag{2.1}
+ \|X\|\le\mathrm{tr}\,X                              \tag{2.1}
 \]
 
 for a positive matrix and can lose a factor comparable to the safe rank.

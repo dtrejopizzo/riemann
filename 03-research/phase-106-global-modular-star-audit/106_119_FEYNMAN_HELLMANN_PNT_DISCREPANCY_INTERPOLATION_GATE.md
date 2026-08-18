@@ -290,10 +290,10 @@ The failure is not caused by domains or crossings.  On
 \(\mathbb C r\oplus\mathbb C e_-\oplus\mathbb C e_+\), let
 
 \[
- A_0=\operatorname {diag}
+ A_0=\mathrm{diag}
  \left(\frac12,\frac12+\delta,\frac12+M\right),
  \qquad
- R=\operatorname {diag}
+ R=\mathrm{diag}
  \left(0,-\delta-\varepsilon,\delta+\varepsilon\right),       \tag{22}
 \]
 

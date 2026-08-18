@@ -47,11 +47,11 @@ For elliptic local rows, the new source packet is
 \[
 R_{A5}(row)=
 \bigl(
-p,\ v(c_4),\ v(c_6),\ v(\Delta),\ v(j),\ \operatorname{ainv}_{\min}\bmod 32
+p,\ v(c_4),\ v(c_6),\ v(\Delta),\ v(j),\ \mathrm{ainv}_{\min}\bmod 32
 \bigr).
 \]
 
-Here \(\operatorname{ainv}_{\min}\bmod 32\) means the residue class of
+Here \(\mathrm{ainv}_{\min}\bmod 32\) means the residue class of
 the five Weierstrass coefficients of the local minimal model modulo
 \(32\).
 

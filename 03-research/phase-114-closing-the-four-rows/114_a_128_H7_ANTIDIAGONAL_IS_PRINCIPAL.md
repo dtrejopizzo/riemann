@@ -82,7 +82,7 @@ at all finite valuation charts and by the nonunit norm ratios on the mixed
 real-boundary charts.  In the generically trivialized divisor object,
 
 \[
- \mathcal A_p=\operatorname{div}(h_p)+B_p^\infty,                     \tag{3.1}
+ \mathcal A_p=\mathrm{div}(h_p)+B_p^\infty,                     \tag{3.1}
 \]
 
 where (3.1) is a decomposition of local fraction data, not an assertion

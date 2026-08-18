@@ -36,7 +36,7 @@ By (τ3), $\mathsf K_i^\circ(z_j,z_k)\to\mathsf K^\circ(z_j,z_k)$, so passing to
 \[
    \sum_{j,k}c_j\overline{c_k}\,\mathsf K^\circ(z_j,z_k)\ \ge\ 0.
 \]
-As the configuration was arbitrary, $\mathsf K^\circ\succeq0$, i.e. $\operatorname{sq}_-(\mathsf K^\circ)
+As the configuration was arbitrary, $\mathsf K^\circ\succeq0$, i.e. $\mathrm{sq}_-(\mathsf K^\circ)
 =0$. By (τ4) the grading divisor stays $\mathfrak b^\circ=1$, so no negative square vanished silently and
 $\kappa(\mathbf X)=0$. $\square$
 
@@ -54,16 +54,16 @@ scalar non-uniformity that defeated M3 is decoupled from the kernel positivity. 
 ## §2. The finite-index version
 
 \begin{theorem}[upper semicontinuity of the index]\label{thm:usc}
-If $\mathbf X_i$ have $\operatorname{sq}_-(\mathsf K_i^\circ)\le\kappa$ and $\mathbf X_i\to\mathbf X$ in
-$\tau_\kappa$, then $\operatorname{sq}_-(\mathsf K^\circ)\le\kappa$.
+If $\mathbf X_i$ have $\mathrm{sq}_-(\mathsf K_i^\circ)\le\kappa$ and $\mathbf X_i\to\mathbf X$ in
+$\tau_\kappa$, then $\mathrm{sq}_-(\mathsf K^\circ)\le\kappa$.
 \end{theorem}
 \emph{Proof.} Each finite Gram matrix of $\mathsf K_i^\circ$ has $\nu_-\le\kappa$; the set $\{M:\nu_-(M)
 \le\kappa\}$ is closed (Stage 1, Thm 4.1: $\lambda_{\kappa+1}(M)\ge0$ is closed and $\lambda_{\kappa+1}$
 is continuous). The (τ3) limit of each Gram matrix therefore has $\nu_-\le\kappa$; supremum over
-configurations gives $\operatorname{sq}_-(\mathsf K^\circ)\le\kappa$. $\square$
+configurations gives $\mathrm{sq}_-(\mathsf K^\circ)\le\kappa$. $\square$
 
 \begin{remark}[upper semicontinuity vs continuity, and where the divisor is needed]
-Thm~\ref{thm:usc} gives $\operatorname{sq}_-(\mathsf K^\circ)\le\liminf\operatorname{sq}_-(\mathsf K_i^\circ)$
+Thm~\ref{thm:usc} gives $\mathrm{sq}_-(\mathsf K^\circ)\le\liminf\mathrm{sq}_-(\mathsf K_i^\circ)$
 — a negative square can \emph{vanish} in the limit but cannot \emph{appear}. For the index-$0$ stratum
 this is already equality ($0\le0$), so Thm~\ref{thm:closed} needs nothing more. For genuine
 \emph{continuity} at $\kappa>0$ (needed only if one wanted to track DH's index through a limit, D10) one

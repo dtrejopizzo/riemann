@@ -6,7 +6,7 @@ The 2026 arithmetic-Jacobian construction interprets the local term in
 the explicit formula as
 
 \[
- \operatorname{Tr}_{\rm distr}(x\mapsto ux\text{ on }\mathbb Q_v)
+ \mathrm{Tr}_{\rm distr}(x\mapsto ux\text{ on }\mathbb Q_v)
  =\frac1{|1-u|_v}.
  \tag{1.1}
 \]

@@ -40,9 +40,9 @@ QED.
 Thus there is no nonempty affine-scheme correspondence
 
 \[
- \operatorname{Spec}\mathbb F_p
+ \mathrm{Spec}\,\mathbb F_p
  \longleftarrow Z\longrightarrow
- \operatorname{Spec}\mathbb F_q                                       \tag{1.3}
+ \mathrm{Spec}\,\mathbb F_q                                       \tag{1.3}
 \]
 
 over `Spec Z`: its coordinate ring would satisfy (1.1). The opposite diagram
@@ -78,9 +78,9 @@ homology group vanishes:
 Equivalently,
 
 \[
- \operatorname{Tor}^{\mathbb Z}_0(\mathbb F_p,\mathbb F_q)=0,
+ \mathrm{Tor}^{\mathbb Z}_0(\mathbb F_p,\mathbb F_q)=0,
  \qquad
- \operatorname{Tor}^{\mathbb Z}_1(\mathbb F_p,\mathbb F_q)=0.           \tag{2.4}
+ \mathrm{Tor}^{\mathbb Z}_1(\mathbb F_p,\mathbb F_q)=0.           \tag{2.4}
 \]
 
 For `p=q`, (2.2) has zero differential and

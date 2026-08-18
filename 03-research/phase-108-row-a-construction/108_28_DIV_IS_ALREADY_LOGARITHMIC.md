@@ -5,7 +5,7 @@
 > **Open question (108_27 §4).** Is there a logarithmic divisor operator on
 > the DC potentials, compatible with 107_237's defining relation?
 
-> **Yes, trivially: it is $\operatorname{Div}$ itself.** $\operatorname{Div}$
+> **Yes, trivially: it is $\mathrm{Div}$ itself.** $\mathrm{Div}$
 > already has both hallmarks of a classical logarithmic divisor operator —
 > it forgets units and it obeys the power rule — once "logarithmic" is read
 > correctly, in the additive (tropical) language 107_237 already works in.
@@ -17,7 +17,7 @@ This corrects 108_27 §4, not its Theorem 2.1: that theorem (weight $s=0$
 forced by literal Frobenius-invariance) is untouched and remains correct.
 What changes is the diagnosis of *why* — and, consequently, where the
 search for a fix should go next (108_29, 108_31: the definition of
-"principal", not the operator $\operatorname{Div}$).
+"principal", not the operator $\mathrm{Div}$).
 
 No zero of $\xi$ is used anywhere.
 
@@ -30,11 +30,11 @@ $f$. Classical divisor theory, by contrast, is stated **multiplicatively**:
 for a rational function $\varphi$ on a variety $X$,
 
 \[
- \operatorname{div}(\varphi\psi)=\operatorname{div}(\varphi)+\operatorname{div}(\psi),
+ \mathrm{div}(\varphi\psi)=\mathrm{div}(\varphi)+\mathrm{div}(\psi),
  \qquad
- \operatorname{div}(\varphi^{c})=c\,\operatorname{div}(\varphi)\ (c\in\mathbb Z),
+ \mathrm{div}(\varphi^{c})=c\,\mathrm{div}(\varphi)\ (c\in\mathbb Z),
  \qquad
- \operatorname{div}(u\varphi)=\operatorname{div}(\varphi)\ \text{for a unit }u .
+ \mathrm{div}(u\varphi)=\mathrm{div}(\varphi)\ \text{for a unit }u .
  \tag{1.1}
 \]
 
@@ -45,75 +45,75 @@ $\log(\varphi^c)=c\log\varphi$, $\log(u\varphi)=\log u+\log\varphi$ (a
 the relevant sense). **107_237's potentials $U_f$ are already the additive
 (logarithmic) objects** — this is the entire point of building them from a
 linear ODE rather than from a product formula. The question is only whether
-$\operatorname{Div}$, read in *this* additive language, reproduces (1.1)
+$\mathrm{Div}$, read in *this* additive language, reproduces (1.1)
 correctly. It does, term by term.
 
 ## 2. Div reproduces all three classical laws, correctly translated
 
-### Proposition 2.1 (the sum law: $\operatorname{Div}$ is additive over sums of potentials)
+### Proposition 2.1 (the sum law: $\mathrm{Div}$ is additive over sums of potentials)
 
 For test data $f,g$ with potentials $U_f,U_g$ (107_237 Theorem 2.1),
 
 \[
- \operatorname{Div}(U_f+U_g)=\operatorname{Div}(U_f)+\operatorname{Div}(U_g).
+ \mathrm{Div}(U_f+U_g)=\mathrm{Div}(U_f)+\mathrm{Div}(U_g).
  \tag{2.1}
 \]
 
 **Proof.** $(u_f+u_g)''=u_f''+u_g''=f(r)/r+g(r)/r=(f+g)(r)/r$, so $U_f+U_g$
 solves the defining ODE for $f+g$; by uniqueness mod affine (107_237
 Theorem 2.1), $U_f+U_g$ *is* a potential of $f+g$, hence
-$\operatorname{Div}(U_f+U_g)=(f+g)(r)\,d^*r=\operatorname{Div}(U_f)+\operatorname{Div}(U_g)$
+$\mathrm{Div}(U_f+U_g)=(f+g)(r)\,d^*r=\mathrm{Div}(U_f)+\mathrm{Div}(U_g)$
 by Definition 5.1 of 108_03. $\square$
 
 This is the exact translation, into the additive picture, of the first law
-of (1.1): $\operatorname{div}(\varphi\psi)=\operatorname{div}(\varphi)+\operatorname{div}(\psi)$
-becomes "$\operatorname{Div}$ of a **sum** of potentials is the sum of the
-$\operatorname{Div}$s" precisely because sums of potentials play the role
+of (1.1): $\mathrm{div}(\varphi\psi)=\mathrm{div}(\varphi)+\mathrm{div}(\psi)$
+becomes "$\mathrm{Div}$ of a **sum** of potentials is the sum of the
+$\mathrm{Div}$s" precisely because sums of potentials play the role
 products of functions play classically.
 
-### Proposition 2.2 (the power law: $\operatorname{Div}(cU)=c\operatorname{Div}(U)$ is correct, not a defect)
+### Proposition 2.2 (the power law: $\mathrm{Div}(cU)=c\mathrm{Div}(U)$ is correct, not a defect)
 
 This is 108_27 fact (a), cited, not re-derived: $u_{cf}''=c\,u_f''$, so
-$\operatorname{Div}(cU)=c\operatorname{Div}(U)$ for every real $c$.
+$\mathrm{Div}(cU)=c\mathrm{Div}(U)$ for every real $c$.
 
 Under the dictionary of §1, $cU$ (scalar multiple of a potential) is the
 additive avatar of $\varphi^c$ (raising the underlying multiplicative
 object to the $c$-th power): $\log(\varphi^c)=c\log\varphi$. The classical
-law $\operatorname{div}(\varphi^c)=c\operatorname{div}(\varphi)$ is a
+law $\mathrm{div}(\varphi^c)=c\mathrm{div}(\varphi)$ is a
 **standard, unremarkable, expected scaling law** — divisors of powers scale
-by the power. $\operatorname{Div}(cU)=c\operatorname{Div}(U)$ is exactly
+by the power. $\mathrm{Div}(cU)=c\mathrm{Div}(U)$ is exactly
 this law, correctly transplanted. It is not the departure from "logarithmic"
 behaviour that 108_27 §3 suggested; it is a confirmation of it.
 
-### Proposition 2.3 (the unit law: $\operatorname{Div}$ already forgets units — via *affine* shift, not scalar multiplication)
+### Proposition 2.3 (the unit law: $\mathrm{Div}$ already forgets units — via *affine* shift, not scalar multiplication)
 
 107_237 Theorem 2.1, cited: $U_f$ is unique modulo **affine** functions of
-$(x,y)$, and $\operatorname{Div}(U+\text{affine})=\operatorname{Div}(U)$
+$(x,y)$, and $\mathrm{Div}(U+\text{affine})=\mathrm{Div}(U)$
 (this is 108_27 fact (b), re-verified in the verifier below at two further
 weights for completeness).
 
 Under the dictionary of §1, multiplying $\varphi$ by a nonvanishing
 constant unit $u$ corresponds, additively, to *adding* the constant
 $\log u$ — **not** to scalar-multiplying $\log\varphi$. The classical law
-$\operatorname{div}(u\varphi)=\operatorname{div}(\varphi)$ therefore
-translates to "$\operatorname{Div}$ is insensitive to *additive* (affine)
+$\mathrm{div}(u\varphi)=\mathrm{div}(\varphi)$ therefore
+translates to "$\mathrm{Div}$ is insensitive to *additive* (affine)
 shifts of the potential" — which is exactly what 107_237 Theorem 2.1
 already supplies. This is the correct, and already-present, "divisor
 forgets units" clause; it was never missing.
 
 ### Corollary 2.4 (the three laws (1.1) are all already present, correctly matched)
 
-$\operatorname{Div}$ satisfies the additive avatar of each of the three
+$\mathrm{Div}$ satisfies the additive avatar of each of the three
 classical laws (1.1): the sum law (Prop. 2.1), the power law (Prop. 2.2),
 and the unit law (Prop. 2.3, via affine shift rather than scalar
 multiplication). There is no fourth classical law it is missing.
 
-**In particular:** $\operatorname{Div}(cU)=\operatorname{Div}(U)$ for
+**In particular:** $\mathrm{Div}(cU)=\mathrm{Div}(U)$ for
 scalar $c\ne1$ — the property 108_27 §4 asked a "fix" to supply — is
 **not** one of the classical laws (1.1) at all. It would assert
-$\operatorname{div}(\varphi^c)=\operatorname{div}(\varphi)$, which is false
-classically for $c\ne1$ (e.g. $\operatorname{div}(x^2)=2\operatorname{div}(x)\ne\operatorname{div}(x)$
-on $\mathbb A^1$, for $\operatorname{div}(x)\ne0$). Seeking an operator with
+$\mathrm{div}(\varphi^c)=\mathrm{div}(\varphi)$, which is false
+classically for $c\ne1$ (e.g. $\mathrm{div}(x^2)=2\mathrm{div}(x)\ne\mathrm{div}(x)$
+on $\mathbb A^1$, for $\mathrm{div}(x)\ne0$). Seeking an operator with
 that property was seeking something with **no classical counterpart**;
 108_27 Theorem 2.1's conclusion (only $s=0$ is literally
 Frobenius-invariant) is exactly what a correctly-behaved logarithmic
@@ -151,7 +151,7 @@ one 108_27 itself already gave.
 
 ## 4. What this settles, and what it leaves open
 
-$\operatorname{Div}$ is not defective and needs no replacement: it already
+$\mathrm{Div}$ is not defective and needs no replacement: it already
 implements a logarithmic (valuation-type) divisor operator, correctly, in
 the additive language 107_237 is built in. 108_27 Theorem 2.1 stands as a
 *correct* instance of the power law (Prop. 2.2), not as a symptom to be
@@ -162,14 +162,14 @@ positive-for-the-diagnosis sense: no new operator is needed or wanted. It
 throws the entire weight of unforcing $s=0$ onto the definition of
 "principal" itself (108_03 Definition 6.1) — precisely the object 108_29
 and 108_31 examine next. Nothing here decides whether that definition
-should be revised; it only establishes that $\operatorname{Div}$ is not
+should be revised; it only establishes that $\mathrm{Div}$ is not
 the place to look.
 
 ## 5. Scope
 
 Proved here:
 
-* Proposition 2.1: $\operatorname{Div}$ is additive over sums of potentials
+* Proposition 2.1: $\mathrm{Div}$ is additive over sums of potentials
   of different test data (new; not stated in 108_03/108_27);
 * Proposition 3.1: $D_{\log}$'s constant-invariance is independent of $s$
   and of $\chi_s$, a second, independent reason it cannot serve as a
@@ -190,7 +190,7 @@ Not established, and explicitly not claimed:
 ## 6. Verifier
 
 `108_28_div_is_already_logarithmic.py` checks: Proposition 2.1 (additivity
-of $\operatorname{Div}$ across two different weights, by finite
+of $\mathrm{Div}$ across two different weights, by finite
 differences, avoiding cancellation by testing the ODE residual directly);
 Proposition 2.2 is cited from 108_27 and re-confirmed at one further weight
 pair; Proposition 2.3 (affine-insensitivity) re-confirmed at two further

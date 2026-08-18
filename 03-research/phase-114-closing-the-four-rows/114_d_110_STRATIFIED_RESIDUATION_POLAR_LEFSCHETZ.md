@@ -131,7 +131,7 @@ Put \(d=N-p+1\), \(D=M-p+1\), and \(m=D-d+1\).  Equations
 Consequently
 
 \[
- R_{N,M}^*R_{N,M}=\operatorname{diag}(1,\ldots,1,m).    \tag{2.4}
+ R_{N,M}^*R_{N,M}=\mathrm{diag}(1,\ldots,1,m).    \tag{2.4}
 \]
 
 This calculation also shows why the zero-extension used provisionally in
@@ -151,7 +151,7 @@ It is characterized without a choice by
 
 \[
  V_{N,M}^*V_{N,M}=I,qquad
- \operatorname{Ran}V_{N,M}=\operatorname{Ran}R_{N,M}.  \tag{3.2}
+ \mathrm{Ran}\,V_{N,M}=\mathrm{Ran}\,R_{N,M}.  \tag{3.2}
 \]
 
 Explicitly,

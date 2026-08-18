@@ -10,7 +10,7 @@ which, if verified, proves simultaneously
 \[
  n_+(B_T)=1,
  \qquad
- \operatorname{In}(M_TB_T^{-1}M_T^*)=(1,1,0).             \tag{1.1}
+ \mathrm{In}(M_TB_T^{-1}M_T^*)=(1,1,0).             \tag{1.1}
 \]
 
 The certificate includes all prime powers and the complete Gamma term
@@ -69,13 +69,13 @@ matrix.  Its Gram Laplacian is
 
 \[
  L=\begin{pmatrix}1&-1&0\\-1&2&-1\\0&-1&1\end{pmatrix},
- \qquad \operatorname{spec}(L)=\{0,1,3\}.                 \tag{3.2}
+ \qquad \mathrm{spec}(L)=\{0,1,3\}.                 \tag{3.2}
 \]
 
 For `m=2`,
 
 \[
- \operatorname{spec}(2I-L)=\{2,1,-1\},                   \tag{3.3}
+ \mathrm{spec}(2I-L)=\{2,1,-1\},                   \tag{3.3}
 \]
 
 so the positive index is two despite positivity of the energy, connected
@@ -88,7 +88,7 @@ map; connectivity and Perron--Frobenius simplicity are not enough.
 Let
 
 \[
- B_e=\operatorname{diag}(1,-1),\quad u_e=(0,1),
+ B_e=\mathrm{diag}(1,-1),\quad u_e=(0,1),
  \qquad B_o=(-2),\quad u_o=1.                              \tag{4.1}
 \]
 

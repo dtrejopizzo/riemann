@@ -226,13 +226,13 @@ The complement is \(e^{-cp^{1/5}}\) times the main scale by (10).  \(\square\)
 Let \(\mathcal B\) be a compact subset of
 
 \[
- \{z\in\mathbb C:|\operatorname {Im}z|<1/2\},
+ \{z\in\mathbb C:|\mathrm{Im}\,z|<1/2\},
 \]
 
 and put
 
 \[
- b=\max_{z\in\mathcal B}|\operatorname {Im}z|<\frac12. \tag{13}
+ b=\max_{z\in\mathcal B}|\mathrm{Im}\,z|<\frac12. \tag{13}
 \]
 
 For fixed derivative order \(j\), uniformly on \(\mathcal B\),
@@ -247,7 +247,7 @@ At \(s=t=(\log p)/2\), direct differentiation gives
 \[
 \boxed{
  2\chi_z'(t)
- =-\operatorname {sech}(t/2)A_p(z),}               \tag{15}
+ =-\mathrm{sech}(t/2)A_p(z),}               \tag{15}
 \]
 
 with \(A_p\) as in (2).  Taylor expansion about the midpoint therefore
@@ -256,7 +256,7 @@ gives, uniformly for \(|y|\le p^{-2/5}\),
 \[
 \boxed{
  d_{p,z}(y)
- =-\operatorname {sech}(t/2)A_p(z)y
+ =-\mathrm{sech}(t/2)A_p(z)y
  +O_{\mathcal B}\!\left(
  p^{-1/4+b/2}|y|^3\right).}                        \tag{16}
 \]
@@ -291,7 +291,7 @@ where
 \begin{aligned}
  \alpha_p
  &=\frac{C_\Xi^2\pi^3}{4}p^3
-   \operatorname {sech}^2\!\left(\frac{\log p}{4}\right)
+   \mathrm{sech}^2\!\left(\frac{\log p}{4}\right)
    e^{-2\pi p}\\
  &=C_\Xi^2\pi^3p^{5/2}e^{-2\pi p}
    (1+p^{-1/2})^{-2},                              \tag{19}\\
@@ -311,7 +311,7 @@ After multiplying by the literal von Mangoldt weight, (1) holds with
 Insert (9) and (16) in (7).  The leading product is
 
 \[
- \operatorname {sech}^2(t/2)
+ \mathrm{sech}^2(t/2)
  \overline{A_p(z)}A_p(w)y^2.
 \]
 
@@ -319,7 +319,7 @@ Combining it with (12) gives
 
 \[
  4C_\Xi^2\pi^4p^{9/2}
- \operatorname {sech}^2(t/2)
+ \mathrm{sech}^2(t/2)
  \frac{e^{-2\pi p}}{16\pi p^{3/2}},
 \]
 
@@ -407,7 +407,7 @@ For exactly \(d\) leading rank-one channels \(p_1,\ldots,p_d\), let
 
 \[
  V=(A_{p_i}(z_j))_{1\le i,j\le d},
- \qquad W=\operatorname {diag}(\beta_{p_1},\ldots,\beta_{p_d}).
+ \qquad W=\mathrm{diag}(\beta_{p_1},\ldots,\beta_{p_d}).
                                                                \tag{28}
 \]
 
@@ -499,8 +499,8 @@ is
 \]
 
 More explicitly, the proof gives on
-\(\{|z|,|w|\le Z,\ |\operatorname {Im}z|,
-|\operatorname {Im}w|\le b\}\)
+\(\{|z|,|w|\le Z,\ |\mathrm{Im}\,z|,
+|\mathrm{Im}\,w|\le b\}\)
 \[
  |R_p(z,w)|
  \le C_b\alpha_pp^b

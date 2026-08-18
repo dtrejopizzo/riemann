@@ -31,7 +31,7 @@ For (c_N\ge0), the following are equivalent:
 \text{(ii)}&z_Nz_N^*\le c_ND_N;\\
 \text{(iii)}&
  \begin{pmatrix}c_NI_{E_N}&z_N^*\\z_N&D_N\end{pmatrix}\ge0;\\
-\text{(iv)}&\operatorname {Ran}z_N\subseteq\operatorname {Ran}D_N^{1/2}
+\text{(iv)}&\mathrm{Ran}\,z_N\subseteq\mathrm{Ran}\,D_N^{1/2}
  \quad\hbox{and}\quad z_N^*D_N^\dagger z_N\le c_NI_{E_N}.
 \end{array}                                                    \tag{0.3}
 \]
@@ -62,7 +62,7 @@ Shorting the lower-right corner of the block in (iii) gives
 \]
 
 again with (operatorname {Ran}z_N\subseteq
-\operatorname {Ran}D_N^{1/2}).  The generalized Schur theorem proves
+\mathrm{Ran}\,D_N^{1/2}).  The generalized Schur theorem proves
 (iii) (Longleftrightarrow) (iv).  Applying the same theorem after
 shorting the upper-left scalar corner gives (ii).  Hence all four
 statements are equivalent.

@@ -164,7 +164,7 @@ centering jump (10) creates a false monotone flow.
 Define the bottom Rayleigh value
 
 \[
- \mu_L=\inf_{0\ne f\in\operatorname{Dom}Q_L}
+ \mu_L=\inf_{0\ne f\in\mathrm{Dom}\,Q_L}
  \frac{Q_L(f,f)}{\|f\|^2}.
 \tag{11}
 \]
@@ -180,7 +180,7 @@ For \(M\ge L\),
 
 #### Proof
 
-The zero-extended copy of \(\operatorname{Dom}Q_L\) is a trial subspace for
+The zero-extended copy of \(\mathrm{Dom}\,Q_L\) is a trial subspace for
 \(Q_M\), and its Rayleigh quotients are unchanged by (6). \(\square\)
 
 Consequently a negative branch, once present, cannot be lifted by increasing
@@ -204,7 +204,7 @@ and write the form matrix as
 If \(C_{L,M}>0\) is invertible, exact shorting gives
 
 \[
- \operatorname{Short}_{\mathcal H_L}(Q_M)
+ \mathrm{Short}_{\mathcal H_L}(Q_M)
  =Q_L-B_{L,M}C_{L,M}^{-1}B_{L,M}^*
  \le Q_L.
 \tag{15}
@@ -319,7 +319,7 @@ one has the finite identity
  \boxed{
  \frac d{da}Q_T(q_a,q_a)
  =
- 2\operatorname{Re}\sum_{z\in\mathcal Z_T}
+ 2\mathrm{Re}\,\sum_{z\in\mathcal Z_T}
  \overline{\widehat q_a(\bar z)}\,b_a(z).
  }
 \tag{24}

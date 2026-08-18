@@ -69,13 +69,13 @@ arithmetic target, not a proof of its strict sign.
 Fix one mode row
 
 \[
- V_M=V_{M-1}\oplus\operatorname {span}\{\phi_M\},
+ V_M=V_{M-1}\oplus\mathrm{span}\,\{\phi_M\},
 \]
 
 and a finite radical space
 
 \[
- \mathcal R_J=\operatorname {span}\{r_1,\ldots,r_J\}.
+ \mathcal R_J=\mathrm{span}\,\{r_1,\ldots,r_J\}.
 \]
 
 Choose coordinate maps
@@ -109,7 +109,7 @@ involving \(\mathcal R_J\) vanish. For a finite prime head \(X\), let
 \]
 
 The finite-head matrix on
-\(V_{M-1}\oplus\operatorname {span}\{\phi_M\}\oplus\mathcal R_J\)
+\(V_{M-1}\oplus\mathrm{span}\,\{\phi_M\}\oplus\mathcal R_J\)
 is therefore exactly
 
 \[
@@ -137,7 +137,7 @@ Define
 \]
 
 Thus \(P_W\) is the orthogonal projection onto
-\(V\mathcal R_J=\operatorname {ran}W\).
+\(V\mathcal R_J=\mathrm{ran}\,W\).
 
 ### Theorem 1 — Exact radical anti-short
 
@@ -442,7 +442,7 @@ take \(A=1\),
 
 Then \(L_I=0\), while \(L_\Pi=1/2\). In the opposite direction, with
 \(U=r=(1,0)^T\) and
-\(\Pi=\operatorname {diag}(0,1)\), one has \(L_I=1/2\) and
+\(\Pi=\mathrm{diag}(0,1)\), one has \(L_I=1/2\) and
 \(L_\Pi=0\).
 
 In the anti-short problem the current matrix also changes when the

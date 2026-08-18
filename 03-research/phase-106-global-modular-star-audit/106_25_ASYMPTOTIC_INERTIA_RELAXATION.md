@@ -36,7 +36,7 @@ three items proves the remaining literal-von-Mangoldt complement estimate.
 
 Let \(A_L\) be a lower-semibounded self-adjoint operator with compact
 resolvent on a Hilbert space \(\mathcal H_L\), and let \(q_L\in
-\operatorname{Dom}(A_L)\) be normalized.  Put
+\mathrm{Dom}(A_L)\) be normalized.  Put
 
 \[
  r_L=\|A_Lq_L\|,

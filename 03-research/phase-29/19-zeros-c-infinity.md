@@ -238,9 +238,9 @@ Esto da: la "distribución espectral" de los $\gamma_n$ — i.e., la distribuci�
 
 **Lo que esto implica.** La identidad
 
-$$\operatorname{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$$
+$$\mathrm{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$$
 
-(Teorema C1, Doc 17) y la fórmula de Weil juntas implican que $\operatorname{spec}(J_\infty)$ está relacionado con las partes imaginarias de los ceros de $\zeta$ via la fórmula explícita. La pregunta es si esta relación es una IGUALDAD o solo una correspondencia más débil.
+(Teorema C1, Doc 17) y la fórmula de Weil juntas implican que $\mathrm{spec}(J_\infty)$ está relacionado con las partes imaginarias de los ceros de $\zeta$ via la fórmula explícita. La pregunta es si esta relación es una IGUALDAD o solo una correspondencia más débil.
 
 ---
 
@@ -248,7 +248,7 @@ $$\operatorname{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$$
 
 **Teorema 2** (RH via la estructura de la fórmula de Weil, provisional). La combinación del Teorema C1 (Doc 17) con la fórmula de Weil da el siguiente argumento:
 
-Sea $t_0 \in \operatorname{spec}(J_\infty)$ (i.e., $C_\infty(t_0) = 0$). Por la ecuación de punto fijo (EF2) y el Teorema C1: $t_0$ es un polo de $m_\infty$, luego es un átomo de la medida espectral $\mu_\infty$. Por Doc 15: $\mu_\infty = \mu_\gamma^{real}$ — la medida de ceros reales de $\Xi$.
+Sea $t_0 \in \mathrm{spec}(J_\infty)$ (i.e., $C_\infty(t_0) = 0$). Por la ecuación de punto fijo (EF2) y el Teorema C1: $t_0$ es un polo de $m_\infty$, luego es un átomo de la medida espectral $\mu_\infty$. Por Doc 15: $\mu_\infty = \mu_\gamma^{real}$ — la medida de ceros reales de $\Xi$.
 
 Luego $t_0$ debe ser un cero de $\Xi$, i.e., $\Xi(t_0) = 0$. Esto implica que $C_\infty(t_0) = 0 \Rightarrow \Xi(t_0) = 0$.
 
@@ -302,7 +302,7 @@ $$\{t \in \mathbb{R}: C_\infty(t) = 0\} = \{t \in \mathbb{R}: \Xi(t) = 0\} \iff 
 
 *Prueba.* (i) $\Rightarrow$ (ii): bajo RH, los ceros de $\Xi$ en $\mathbb{R}$ son exactamente los $\gamma_n$ con $\sigma_n = 1/2$, y esos son los ceros de $C_\infty$ por la fórmula explícita (incondicionalmente para ceros en la recta crítica). ✓
 
-(ii) $\Rightarrow$ (iii): Si los ceros de $C_\infty$ en $\mathbb{R}$ son los ceros de $\Xi$ en $\mathbb{R}$: por el Teorema C1 (Doc 17), $\operatorname{spec}(J_\infty)$ = ceros de $\Xi$ en $\mathbb{R}$. Luego $\mu_\infty$ = medida de distribución de ceros de $\Xi$ en $\mathbb{R}$. Si todos los ceros de $\Xi$ están en $\mathbb{R}$: $\mu_\infty = \mu_\gamma$. ✓
+(ii) $\Rightarrow$ (iii): Si los ceros de $C_\infty$ en $\mathbb{R}$ son los ceros de $\Xi$ en $\mathbb{R}$: por el Teorema C1 (Doc 17), $\mathrm{spec}(J_\infty)$ = ceros de $\Xi$ en $\mathbb{R}$. Luego $\mu_\infty$ = medida de distribución de ceros de $\Xi$ en $\mathbb{R}$. Si todos los ceros de $\Xi$ están en $\mathbb{R}$: $\mu_\infty = \mu_\gamma$. ✓
 
 (iii) $\Rightarrow$ (i): Si $\mu_\infty = \mu_\gamma$ y $\mu_\infty$ tiene soporte real (auto-adjuntez): todos los ceros de $\Xi$ son reales: RH. ✓
 
@@ -318,11 +318,11 @@ Pese a no probar RH, el programa ha logrado:
 
 **Resultado 1** (incondicional, sólido): La medida espectral de $J_\infty$ tiene soporte $\subseteq \{t \in \mathbb{R}: \Xi(t) = 0\}$ (es decir, los ceros del operador CCM límite solo pueden ser ceros REALES de $\Xi$). Este es el argumento CCM original, hecho riguroso.
 
-**Resultado 2** (incondicional, nuevo, Teorema C1 del Doc 17): $\operatorname{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$, donde $C_\infty$ es el potencial explícito construido desde las sumas sobre primos.
+**Resultado 2** (incondicional, nuevo, Teorema C1 del Doc 17): $\mathrm{spec}(J_\infty) = \{t \in \mathbb{R}: C_\infty(t) = 0\}$, donde $C_\infty$ es el potencial explícito construido desde las sumas sobre primos.
 
 **Resultado 3** (nueva equivalencia, Teorema 3 de este doc): RH es equivalente a que los ceros reales de $C_\infty$ sean exactamente los ceros reales de $\Xi$ — es decir, el operador CCM límite tiene exactamente los ceros de $\Xi$ como espectro y no menos.
 
-**El gap que permanece:** Demostrar que $\operatorname{spec}(J_\infty)$ es DENSO en $\{\gamma_n\}$ (que el operador CCM no "pierde" ceros en el límite) — equivalentemente, que los ceros de $C_\infty$ en $\mathbb{R}$ incluyen TODOS los $\gamma_n$.
+**El gap que permanece:** Demostrar que $\mathrm{spec}(J_\infty)$ es DENSO en $\{\gamma_n\}$ (que el operador CCM no "pierde" ceros en el límite) — equivalentemente, que los ceros de $C_\infty$ en $\mathbb{R}$ incluyen TODOS los $\gamma_n$.
 
 ---
 

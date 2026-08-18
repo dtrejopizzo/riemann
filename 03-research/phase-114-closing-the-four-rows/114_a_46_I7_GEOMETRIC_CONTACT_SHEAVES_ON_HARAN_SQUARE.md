@@ -24,7 +24,7 @@
 Let
 
 \[
- Y=X\times_{\operatorname{Spec}\mathbb F\{\pm1\}}X.   \tag{1.1}
+ Y=X\times_{\mathrm{Spec}\,\mathbb F\{\pm1\}}X.   \tag{1.1}
 \]
 
 For every rational prime `p`, Theorem 2.1 of `a_17` gives the closed
@@ -32,7 +32,7 @@ incidence
 
 \[
  i_p:Z_p:=\Delta\times_YV_p\hookrightarrow Y,
- \qquad Z_p\simeq\operatorname{Spec}\mathbb F_p.       \tag{1.2}
+ \qquad Z_p\simeq\mathrm{Spec}\,\mathbb F_p.       \tag{1.2}
 \]
 
 For distinct primes, these supports are disjoint:

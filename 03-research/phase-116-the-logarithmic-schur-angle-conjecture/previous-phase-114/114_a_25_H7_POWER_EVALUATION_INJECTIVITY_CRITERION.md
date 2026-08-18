@@ -65,7 +65,7 @@ such that on the two rational rulings
 \[
  E_\sigma(p_1^*a)=a,
  \qquad
- E_\sigma(p_2^*b)=\operatorname{sgn}(b)|b|^\sigma.       \tag{2.2}
+ E_\sigma(p_2^*b)=\mathrm{sgn}(b)|b|^\sigma.       \tag{2.2}
 \]
 
 Only faithfulness on the finite family (1.3) is needed: equality in `A` must
@@ -89,8 +89,8 @@ Suppose `P_{m,n}(c)=P_{m,n}(d)`.  Apply `E_sigma` and cancel the common
 positive denominators. For every `sigma>0`,
 
 \[
- \sum_{j=0}^{m}p^j\operatorname{sgn}(c_j)|c_j|^\sigma
- =\sum_{j=0}^{m}p^j\operatorname{sgn}(d_j)|d_j|^\sigma.  \tag{3.2}
+ \sum_{j=0}^{m}p^j\mathrm{sgn}(c_j)|c_j|^\sigma
+ =\sum_{j=0}^{m}p^j\mathrm{sgn}(d_j)|d_j|^\sigma.  \tag{3.2}
 \]
 
 Group terms by the positive magnitude `a`.  The functions
@@ -100,8 +100,8 @@ independent on every open interval of `sigma`: order the `a` and let
 for every `a>=1`,
 
 \[
- \sum_{|c_j|=a}p^j\operatorname{sgn}(c_j)
- =\sum_{|d_j|=a}p^j\operatorname{sgn}(d_j).              \tag{3.3}
+ \sum_{|c_j|=a}p^j\mathrm{sgn}(c_j)
+ =\sum_{|d_j|=a}p^j\mathrm{sgn}(d_j).              \tag{3.3}
 \]
 
 Balanced base-`p` digits are unique for `p>=3`.  Indeed, if

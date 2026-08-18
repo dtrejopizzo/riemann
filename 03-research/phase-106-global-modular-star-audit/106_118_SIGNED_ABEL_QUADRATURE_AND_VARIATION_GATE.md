@@ -410,7 +410,7 @@ the signed quadrature is kept intact.
 Let
 
 \[
- \mathcal R_M=\operatorname {span}\{r_1,\ldots,r_M\},
+ \mathcal R_M=\mathrm{span}\,\{r_1,\ldots,r_M\},
  \qquad r_j=K^{(2j)}/K,
 \tag{29}
 \]
@@ -529,7 +529,7 @@ Proved here:
 Not proved here:
 
 \[
- \int_0^\infty J_t(u)\,d\sigma(u)\geq-o(\operatorname {Tr}\Gamma_t)
+ \int_0^\infty J_t(u)\,d\sigma(u)\geq-o(\mathrm{Tr}\,\Gamma_t)
 \]
 
 along a cofinal globally anti-shorted heat sequence.  The remaining

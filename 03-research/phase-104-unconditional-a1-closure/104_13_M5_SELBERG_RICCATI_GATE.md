@@ -263,7 +263,7 @@ y
 
 \[
  \beta_1
- =b(2)2^{-a}L_1(\log2)+O(3^{-a}\operatorname{poly}(a))>0,
+ =b(2)2^{-a}L_1(\log2)+O(3^{-a}\mathrm{poly}(a))>0,
 \tag{21}
 \]
 

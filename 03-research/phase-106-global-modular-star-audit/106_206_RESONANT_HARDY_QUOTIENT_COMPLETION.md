@@ -18,7 +18,7 @@ norm is not automatically invariant; the defect is computed exactly.
 Put
 
 \[
- \Sigma=\{z\in\mathbb C:|\operatorname {Re}z|<1/2\},
+ \Sigma=\{z\in\mathbb C:|\mathrm{Re}\,z|<1/2\},
  \qquad
  \Xi(z)=2\xi(1/2+z).
 \tag{1}
@@ -58,9 +58,9 @@ Define
 \[
  \boxed{
  \mathscr K_\Xi
- =H^2(\Sigma)/\overline{\operatorname {Ran}M_\Xi}
+ =H^2(\Sigma)/\overline{\mathrm{Ran}\,M_\Xi}
  \simeq
- \left(\overline{\operatorname {Ran}M_\Xi}\right)^\perp.}
+ \left(\overline{\mathrm{Ran}\,M_\Xi}\right)^\perp.}
 \tag{4}
 \]
 
@@ -86,7 +86,7 @@ decays exponentially with vertical height.
 
 \[
  \boxed{
- \overline{\operatorname {Ran}M_\Xi}
+ \overline{\mathrm{Ran}\,M_\Xi}
  =B_\Xi H^2(\Sigma),
  \qquad
  \mathscr K_\Xi=H^2(\Sigma)\ominus B_\Xi H^2(\Sigma).}
@@ -141,7 +141,7 @@ finite zero scheme in (D), induces a surjection
 
 \[
  \boxed{
- \operatorname {Loc}_D:\mathscr K_\Xi
+ \mathrm{Loc}_D:\mathscr K_\Xi
  \longrightarrow\mathcal H_D.}
 \tag{9}
 \]
@@ -171,7 +171,7 @@ Regard \(\mathscr K_\Xi\) as a real Hilbert space and define
 \[
  J_Hf=if,
  \qquad
- g_H(f,g)=\operatorname {Re}\langle f,g\rangle,
+ g_H(f,g)=\mathrm{Re}\,\langle f,g\rangle,
  \qquad
  \Omega_H(f,g)=g_H(J_Hf,g).
 \tag{10}
@@ -245,7 +245,7 @@ Consequently, if the positive metric (10), or any equivalent positive
 metric, makes (U_t) unitary, then
 
 \[
- \boxed{\operatorname {Re}a=0}
+ \boxed{\mathrm{Re}\,a=0}
 \tag{16}
 \]
 
@@ -266,7 +266,7 @@ For every class (f),
 
 which is (15), with the conjugation determined by the Hilbert convention.
 If (U_t) is unitary, the norm of the nonzero vector (k_a) is constant;
-(15) then gives (e^{t\operatorname {Re}a}=1) for all (t\), proving
+(15) then gives (e^{t\mathrm{Re}\,a}=1) for all (t\), proving
 (16).  Differentiated evaluation gives the jet statement. \(\square\)
 
 ## 7. What this changes

@@ -23,7 +23,7 @@ consist of symmetric scalars whose action remains injective on **all**
 arities, all smaller opens and all later pro-levels.  The fraction sheaf is
 
 \[
- \mathcal K_{X,N}=\operatorname{sh}
+ \mathcal K_{X,N}=\mathrm{sh}
    \bigl(S_X(-)^{-1}\mathcal O_{X_N}(-)\bigr).                         \tag{1.1}
 \]
 

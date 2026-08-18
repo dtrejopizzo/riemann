@@ -279,9 +279,9 @@ Use the orbit notation of 106.37.  On real even \(F\in\mathcal N_K\), set
 (\mathcal B_0F)_\gamma
  &=\sqrt{2m_\gamma}\,\widehat{wF}(\gamma),\\
 (\mathcal B_+F)_s
- &=2\sqrt{m_s}\,\operatorname {Re}\widehat{wF}(s),\\
+ &=2\sqrt{m_s}\,\mathrm{Re}\,\widehat{wF}(s),\\
 (\mathcal B_-F)_s
- &=2\sqrt{m_s}\,\operatorname {Im}\widehat{wF}(s),
+ &=2\sqrt{m_s}\,\mathrm{Im}\,\widehat{wF}(s),
 \end{aligned}                                       \tag{24}
 \]
 
@@ -363,7 +363,7 @@ finite-rank projection \(P\) in the form core,
 
 \[
 \boxed{
-\operatorname {Tr}(PT_F)
+\mathrm{Tr}(PT_F)
 =\|\mathcal B_0P\|_{\mathrm {HS}}^2
  +\|\mathcal B_+P\|_{\mathrm {HS}}^2
  -\|\mathcal B_-P\|_{\mathrm {HS}}^2.}             \tag{31}

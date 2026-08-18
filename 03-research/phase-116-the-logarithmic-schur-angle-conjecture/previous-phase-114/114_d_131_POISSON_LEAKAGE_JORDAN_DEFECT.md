@@ -113,7 +113,7 @@ where the Hermitian quadratic defect is
 
 \[
  \mathcal E_T(F,F)
- =\operatorname {Re}\langle A_TF,Q\widehat PPA_TF\rangle. \tag{2.4}
+ =\mathrm{Re}\,\langle A_TF,Q\widehat PPA_TF\rangle. \tag{2.4}
 \]
 
 Taking the established semilocal limit proves (0.2).  It is the full
@@ -131,7 +131,7 @@ The sign of (2.4) is not fixed.  On a generic two-projection angle fiber,
 and for \(v=(x,y)\),
 
 \[
- \mathcal E(v,v)=cs\operatorname {Re}(\overline yx).       \tag{2.6}
+ \mathcal E(v,v)=cs\mathrm{Re}(\overline yx).       \tag{2.6}
 \]
 
 This changes sign between \(y=x\) and \(y=-x\), so it cannot be the square
@@ -229,7 +229,7 @@ and
 \[
  \|\partial_\infty F\|^2
  ={1\over2\pi}\int_{\mathbb R}
- \left(\operatorname {Re}\psi(1/4+i\tau/2)-\psi(1/4)\right)
+ \left(\mathrm{Re}\,\psi(1/4+i\tau/2)-\psi(1/4)\right)
  |\widehat F(\tau)|^2\,d\tau.                            \tag{4.4}
 \]
 
@@ -239,7 +239,7 @@ Equations (4.2)--(4.4) yield exactly
  \begin{aligned}
  \mathbf S^*\mathbf S-\mathbf B^*\mathbf B
  ={}&2\sum_{p,k\geq1}{\log p\over p^{k/2}}
-       \operatorname {Re}S_{k\log p}\\
+       \mathrm{Re}\,S_{k\log p}\\
  &+m_0I-\partial_\infty^*\partial_\infty
  =B_{\mathrm{nuc}}.                                      \tag{4.5}
  \end{aligned}
@@ -325,7 +325,7 @@ At infinity the mismatch is rigid: (1.3) decays as \(|\tau|^{-4}\), whereas
 the completed Gamma boundary in \(-B_{\mathrm{nuc}}\) has multiplier
 
 \[
- \operatorname {Re}\psi(1/4+i\tau/2)-\log\pi
+ \mathrm{Re}\,\psi(1/4+i\tau/2)-\log\pi
  =\log|\tau|+O(1).                                      \tag{6.3}
 \]
 

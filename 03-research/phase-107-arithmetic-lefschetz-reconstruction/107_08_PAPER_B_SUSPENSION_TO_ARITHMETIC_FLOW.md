@@ -24,7 +24,7 @@ already isolated in Phase 106.
 Three earlier pieces are the minimum source data for II-B.
 
 1. `107_07` provides the decorated correspondence category
-   \(\operatorname{Corr}_{\mathrm{EF}}\).
+   \(\mathrm{Corr}_{\mathrm{EF}}\).
 2. `106.153` constructs for each prime \(p\) a weight-one polarized local
    coefficient system over the periodic orbit
 
@@ -200,11 +200,11 @@ For times belonging to different prime towers, the common phase gluing
 retains the mixed refinement square rather than collapsing it to a
 connected return.
 
-### Proposition 6.1: return category equals \(\operatorname{Corr}_{\mathrm{EF}}\)
+### Proposition 6.1: return category equals \(\mathrm{Corr}_{\mathrm{EF}}\)
 
 The closed-orbit return category of
 \((\mathfrak X_{\mathrm{EF}},\vartheta_t)\) is canonically identified
-with \(\operatorname{Corr}_{\mathrm{EF}}\).
+with \(\mathrm{Corr}_{\mathrm{EF}}\).
 
 Proof.  On a fixed prime orbit \(C_p\), the return correspondence at
 \(k\log p\) composes by time addition:
@@ -221,7 +221,7 @@ components; their simultaneous return data survive as mixed refinement
 spans, which is exactly the role of the raw mixed correspondences in
 `107_07`.  Transpose is time reversal on the same return spans, and the
 logarithmic labels are the flow times.  Therefore the return category is
-precisely \(\operatorname{Corr}_{\mathrm{EF}}\).  \(\square\)
+precisely \(\mathrm{Corr}_{\mathrm{EF}}\).  \(\square\)
 
 ## 7. Degree-one cohomology and the diagonal class
 
@@ -262,9 +262,9 @@ continuous average over holonomy parameters.
 ### Proposition 8.1: continuous averaging is insufficient
 
 A purely absolutely continuous average over local holonomies does not
-realize \(\operatorname{Corr}_{\mathrm{EF}}\) as a return category.
+realize \(\mathrm{Corr}_{\mathrm{EF}}\) as a return category.
 
-Proof.  The category \(\operatorname{Corr}_{\mathrm{EF}}\) retains
+Proof.  The category \(\mathrm{Corr}_{\mathrm{EF}}\) retains
 discrete tower labels \((p,k)\), mixed refinement squares, and connected
 cyclic traces landing in the atomic divisor symbols \(Z_{p,k}\).  A
 continuous average over holonomies erases those discrete return classes
@@ -336,7 +336,7 @@ Averaging over continuous holonomies may not replace geometry by an
 absolutely continuous weight.
 
 Reason.  Proposition 8.1 shows that such averaging erases the discrete
-return classes needed by \(\operatorname{Corr}_{\mathrm{EF}}\).
+return classes needed by \(\mathrm{Corr}_{\mathrm{EF}}\).
 
 ### Stop test 3
 
@@ -354,7 +354,7 @@ interface level:
    \(\mathbb R_+^\times/p^\mathbb Z\);
 2. their lengths are \(\log p\);
 3. they are glued through one common archimedean phase boundary;
-4. their return category is \(\operatorname{Corr}_{\mathrm{EF}}\).
+4. their return category is \(\mathrm{Corr}_{\mathrm{EF}}\).
 
 What remains for Milestone II is the true arithmetic Lefschetz formula:
 one must turn these return correspondences into a fixed-point trace

@@ -31,7 +31,7 @@ ideal is an invertible right act, and its inverse completed lattice is
 Define the two-prime Cartier-act group to be the formal group
 
 \[
- \operatorname{Div}^{\rm act}_{p,q}(Y^{\rm reg})
+ \mathrm{Div}^{\rm act}_{p,q}(Y^{\rm reg})
  :=\mathbb Z D_{p,1}\oplus\mathbb Z D_{q,2}.                              \tag{1.3}
 \]
 
@@ -44,8 +44,8 @@ it is not a definition of all Weil or Cartier divisors on `Y^reg`.
 There is a homomorphism
 
 \[
- \rho_{p,q}:\operatorname{Div}^{\rm act}_{p,q}(Y^{\rm reg})
- \longrightarrow \operatorname{Pic}_{\rm cmp}(Y^{\rm reg}),
+ \rho_{p,q}:\mathrm{Div}^{\rm act}_{p,q}(Y^{\rm reg})
+ \longrightarrow \mathrm{Pic}_{\rm cmp}(Y^{\rm reg}),
  \quad
  mD_{p,1}+nD_{q,2}\longmapsto
  (\mathcal L^{\rm reg}_{p,1})^{\otimes m}\otimes
@@ -85,7 +85,7 @@ The reflected quotient retains the exact fiber products
 
 \[
  \Delta^{\rm reg}\times_{Y^{\rm reg}}D_{r,i}
- \simeq\operatorname{Spec}\mathbb F_r,
+ \simeq\mathrm{Spec}\,\mathbb F_r,
  \qquad r\in\{p,q\}.                                                     \tag{3.1}
 \]
 

@@ -137,7 +137,7 @@ It now counts points on:
 \[
  y^2+y=a
  \quad\Longleftrightarrow\quad
- \operatorname{Tr}_{\mathbf F_{2^n}/\mathbf F_2}(a)=0,
+ \mathrm{Tr}_{\mathbf F_{2^n}/\mathbf F_2}(a)=0,
  \tag{4.1}
 \]
 
@@ -217,7 +217,7 @@ What it does not prove:
 2. it does not show that the Phase 107 source operations already derive
    the factor \(g\) rather than merely fitting the elliptic case;
 3. it does not validate any of Part III or Part IV over
-   \(\operatorname{Spec}\mathbf Z\).
+   \(\mathrm{Spec}\,\mathbf Z\).
 
 ## 7. Status consequence
 

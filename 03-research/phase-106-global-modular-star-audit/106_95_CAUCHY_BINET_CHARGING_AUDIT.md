@@ -102,8 +102,8 @@ The following are equivalent.
 \begin{aligned}
  &\tau_{d+1}(Y)\geq\delta_J\tau_d(Y);              \tag{7a}\\
  &\text{there is a contraction }C:
-   \operatorname {span}\{v\}\longrightarrow
-   \operatorname {span}\{u\}
+   \mathrm{span}\,\{v\}\longrightarrow
+   \mathrm{span}\,\{u\}
    \text{ such that }Cv=u.                         \tag{7b}
 \end{aligned}
 \]
@@ -210,7 +210,7 @@ for which
 
 \[
  \|\nabla_0r\|_{L^2(\rho)}^2
- =\frac12\operatorname {Var}_{\mu_K}(r).            \tag{15}
+ =\frac12\mathrm{Var}_{\mu_K}(r).            \tag{15}
 \]
 
 A positive endpoint-local minor charge, specialized to exterior degree

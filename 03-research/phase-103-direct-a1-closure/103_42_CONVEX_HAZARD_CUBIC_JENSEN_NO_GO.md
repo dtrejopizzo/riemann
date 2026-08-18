@@ -40,7 +40,7 @@ equation (13) of `103_36`.
 The integration-by-parts covariance identity remains valid,
 \[
  \delta_j={q_j\over j+2}\,
- \operatorname {Cov}_{\nu_{j+1}}(u,h).                         \tag{5}
+ \mathrm{Cov}_{\nu_{j+1}}(u,h).                         \tag{5}
 \]
 Convexity of \(h\) does add a genuine three-point sign.  For
 \(x<y<z\),

@@ -17,7 +17,7 @@ La formulación alternativa es el **PPP** (Problema del Pseudo-Polo):
 
 > **Conjetura PPP (Doc 62, Def. 5.1).** Para cada $n$,
 > $$F_n(z) = \frac{c_n^2}{z - \gamma_n} + R_n(z)$$
-> donde $c_n = \langle \Xi, P_n \rangle_{dm_\infty}$ y $R_n$ es analítica en $\operatorname{Im} z > -\varepsilon$ para algún $\varepsilon > 0$.
+> donde $c_n = \langle \Xi, P_n \rangle_{dm_\infty}$ y $R_n$ es analítica en $\mathrm{Im} z > -\varepsilon$ para algún $\varepsilon > 0$.
 
 El presente documento ataca el PPP directamente:
 computamos los coeficientes $c_k = \langle \Xi, P_k \rangle_{dm_\infty}$ usando la ecuación de autovalor del operador prolate $W_\lambda$, derivamos la recurrencia que satisfacen, identificamos el punto de inflexión de la recurrencia, y estudiamos si las soluciones se concentran cerca de $k = n(\lambda)$.
@@ -161,17 +161,17 @@ $$\sum_{|k - n| > n^\delta} c_k^2 = o\left(\sum_{|k - n| \leq n^\delta} c_k^2\ri
 
 Si los coeficientes $c_k$ se concentran cerca de $k = n$ en el sentido de Def. 5.1, entonces existe $c > 0$ tal que
 
-$$\left|\operatorname{Im} F_n(\gamma_n + i\varepsilon)\right| \geq c \cdot c_n^2 / \varepsilon + O(1)$$
+$$\left|\mathrm{Im} F_n(\gamma_n + i\varepsilon)\right| \geq c \cdot c_n^2 / \varepsilon + O(1)$$
 
 cuando $\varepsilon \to 0^+$, lo que constituye el comportamiento de pseudo-polo afirmado en la Conjetura PPP.
 
 *Demostración.* La parte imaginaria de $G_{kk}(\gamma_n + i\varepsilon)$ satisface
 
-$$\operatorname{Im} G_{kk}(\gamma_n + i\varepsilon) = \int_{\mathbb{R}} \frac{\varepsilon |P_k(s)|^2}{(s - \gamma_n)^2 + \varepsilon^2}\, dm_\infty(s).$$
+$$\mathrm{Im} G_{kk}(\gamma_n + i\varepsilon) = \int_{\mathbb{R}} \frac{\varepsilon |P_k(s)|^2}{(s - \gamma_n)^2 + \varepsilon^2}\, dm_\infty(s).$$
 
 Para $k$ próximo a $n$, $|P_k(\gamma_n)|^2 w(\gamma_n) \sim c_n^2 / \varepsilon$ por la identidad de Christoffel-Darboux en la forma de Poisson:
 
-$$\operatorname{Im} G_{nn}(\gamma_n + i\varepsilon) \to \pi |P_n(\gamma_n)|^2 w(\gamma_n) \quad \text{cuando } \varepsilon \to 0^+.$$
+$$\mathrm{Im} G_{nn}(\gamma_n + i\varepsilon) \to \pi |P_n(\gamma_n)|^2 w(\gamma_n) \quad \text{cuando } \varepsilon \to 0^+.$$
 
 Bajo la hipótesis de concentración, los términos con $|k - n| > n^\delta$ contribuyen $O(1)$ a $F_n = G_{n+1,n+1} - G_{nn}$, mientras que el término principal viene de $k = n$. Esto da el comportamiento de pseudo-polo. $\square$
 

@@ -40,7 +40,7 @@ donde:
 $$\langle f \mid T(n) f\rangle = n^{-1/2}\left[(f^* * f)(n) + (f^* * f)(n^{-1})\right],$$
 con convolución multiplicativa $(f^* * g)(n) = \int f(u^{-1})g(nu)\,d^*u$.
 
-**Proposición 1** (estructura matricial). En la base $\{V_n\}_{|n|\leq N}$, la matrix de $QW_\lambda^N$ (la restricción a $E_N = \operatorname{span}\{V_n : |n|\leq N\}$) tiene la forma:
+**Proposición 1** (estructura matricial). En la base $\{V_n\}_{|n|\leq N}$, la matrix de $QW_\lambda^N$ (la restricción a $E_N = \mathrm{span}\,\{V_n : |n|\leq N\}$) tiene la forma:
 $$\tau_{n,n} = a_n \in \mathbb{R}, \quad \tau_{n,m} = \frac{b_n - b_m}{n-m} \text{ para } n\neq m,$$
 con $a_{-n} = a_n$ y $b_{-n} = -b_n$ (i.e., $\{a_n\}$ es par y $\{b_n\}$ es impar). Esta es la estructura de **Cauchy–Toeplitz** clave para el teorema de Carathéodory–Fejér.
 
@@ -48,13 +48,13 @@ con $a_{-n} = a_n$ y $b_{-n} = -b_n$ (i.e., $\{a_n\}$ es par y $\{b_n\}$ es impa
 
 ## 3. La involución de simetría y los subespacios par/impar
 
-La **involución funcional** $\gamma: \mathcal{H}_\lambda \to \mathcal{H}_\lambda$ definida por $\gamma(f)(u) := f(u^{-1})$ satisface $\gamma^2 = \operatorname{id}$. En la base: $\gamma(V_n) = V_{-n}$ (ya que $V_n(u^{-1}) = e^{-2\pi i n\log(\lambda u)/L}\cdot e^{2\cdot 2\pi i n \log\lambda/L}$... más precisamente: $V_n(u^{-1}) = L^{-1/2}e^{2\pi in\log(\lambda/u)/L} = L^{-1/2}e^{-2\pi in\log(\lambda u)/L} \cdot e^{4\pi in\log\lambda/L}$. Con $L = 2\log\lambda$: $= L^{-1/2}e^{-2\pi in\log(\lambda u)/L} \cdot e^{2\pi in} = V_{-n}(u)$).
+La **involución funcional** $\gamma: \mathcal{H}_\lambda \to \mathcal{H}_\lambda$ definida por $\gamma(f)(u) := f(u^{-1})$ satisface $\gamma^2 = \mathrm{id}$. En la base: $\gamma(V_n) = V_{-n}$ (ya que $V_n(u^{-1}) = e^{-2\pi i n\log(\lambda u)/L}\cdot e^{2\cdot 2\pi i n \log\lambda/L}$... más precisamente: $V_n(u^{-1}) = L^{-1/2}e^{2\pi in\log(\lambda/u)/L} = L^{-1/2}e^{-2\pi in\log(\lambda u)/L} \cdot e^{4\pi in\log\lambda/L}$. Con $L = 2\log\lambda$: $= L^{-1/2}e^{-2\pi in\log(\lambda u)/L} \cdot e^{2\pi in} = V_{-n}(u)$).
 
 Por tanto: $\gamma(V_n) = V_{-n}$.
 
 **Subespacios:**
-$$E_N^+ := \{f \in E_N : \gamma f = f\} = \operatorname{span}\{U_n^+ : 0 \leq n \leq N\}, \quad U_0^+ := V_0,\ U_n^+ := (V_n+V_{-n})/\sqrt{2}\ (n\geq 1)$$
-$$E_N^- := \{f \in E_N : \gamma f = -f\} = \operatorname{span}\{U_n^- : 1 \leq n \leq N\}, \quad U_n^- := (V_n-V_{-n})/\sqrt{2}$$
+$$E_N^+ := \{f \in E_N : \gamma f = f\} = \mathrm{span}\,\{U_n^+ : 0 \leq n \leq N\}, \quad U_0^+ := V_0,\ U_n^+ := (V_n+V_{-n})/\sqrt{2}\ (n\geq 1)$$
+$$E_N^- := \{f \in E_N : \gamma f = -f\} = \mathrm{span}\,\{U_n^- : 1 \leq n \leq N\}, \quad U_n^- := (V_n-V_{-n})/\sqrt{2}$$
 
 **Proposición 2** (la forma respeta la involución). La forma $QW_\lambda^N$ preserva $E_N^\pm$, i.e., $QW_\lambda^N(f^+, f^-) = 0$ para $f^\pm \in E_N^\pm$. Por tanto:
 $$QW_\lambda^N = QW_\lambda^{N,+}\!\oplus\, QW_\lambda^{N,-}$$

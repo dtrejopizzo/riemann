@@ -31,10 +31,10 @@ donde $\theta_\rho(s) := \arg(s-\rho) \in (-\pi,\pi]$ es el ángulo desde el cer
 $$\frac{d}{ds}\frac{\xi'}{\xi}(s) = \frac{\xi''\xi - (\xi')^2}{\xi^2}(s) = -\sum_\rho \frac{1}{(s-\rho)^2}.$$
 Como $\frac{\partial}{\partial\sigma}$ actúa sobre $g(\sigma+i\gamma)$ como $\frac{d}{ds}g(s)$:
 $$\frac{\partial^2}{\partial\sigma^2}\log|\xi(s)|
-= \operatorname{Re}\!\left[\frac{d^2}{ds^2}\log\xi(s)\right]
-= \operatorname{Re}\!\left[-\sum_\rho \frac{1}{(s-\rho)^2}\right].$$
+= \mathrm{Re}\,\!\left[\frac{d^2}{ds^2}\log\xi(s)\right]
+= \mathrm{Re}\,\!\left[-\sum_\rho \frac{1}{(s-\rho)^2}\right].$$
 Usando $s - \rho = |s-\rho|\,e^{i\theta_\rho}$:
-$$\operatorname{Re}\!\left(-\frac{1}{(s-\rho)^2}\right) = -\frac{\cos(2\theta_\rho)}{|s-\rho|^2}.$$
+$$\mathrm{Re}\,\!\left(-\frac{1}{(s-\rho)^2}\right) = -\frac{\cos(2\theta_\rho)}{|s-\rho|^2}.$$
 Sumando sobre todos los ceros: $\square$
 
 **Forma alternativa** (útil para análisis de signo):
@@ -42,7 +42,7 @@ $$\frac{\partial^2}{\partial\sigma^2}\log|\xi(s)|
 = \sum_\rho \frac{(\gamma-\gamma_\rho)^2 - (\sigma-\beta_\rho)^2}{\bigl[(\sigma-\beta_\rho)^2+(\gamma-\gamma_\rho)^2\bigr]^2}.$$
 
 *Verificación:* $-\cos(2\theta) = -\text{Re}(e^{-2i\theta}) = -(b^2-a^2)/(a^2+b^2)$ donde
-$a = \operatorname{Re}(s-\rho)$, $b = \operatorname{Im}(s-\rho)$. Y $|s-\rho|^2 = a^2+b^2$. $\square$
+$a = \mathrm{Re}(s-\rho)$, $b = \mathrm{Im}(s-\rho)$. Y $|s-\rho|^2 = a^2+b^2$. $\square$
 
 ---
 
@@ -57,7 +57,7 @@ dirección imaginaria. **Solo los ceros en el cono vertical contribuyen positiva
 la curvatura (hacia convexidad). Los ceros en el cono horizontal contribuyen negativamente
 (hacia concavidad).
 
-Analíticamente: la contribución es positiva sii $|\operatorname{Im}(s-\rho)| > |\operatorname{Re}(s-\rho)|$,
+Analíticamente: la contribución es positiva sii $|\mathrm{Im}(s-\rho)| > |\mathrm{Re}(s-\rho)|$,
 i.e.,
 $$|\gamma - \gamma_\rho| > |\sigma - \beta_\rho|.$$
 
@@ -196,8 +196,8 @@ sino una propiedad de curvatura directamente calculable).
 ## 10. El cálculo de $\mathcal{C}(\gamma)$
 
 La función $\mathcal{C}(\gamma)$ es calculable, en principio, mediante la fórmula explícita:
-$$\mathcal{C}(\gamma) = -\operatorname{Re}\!\left[\frac{d}{ds}\frac{\xi'}{\xi}(s)\bigg|_{s=1/2+i\gamma}\right]
-= \operatorname{Re}\!\left[\sum_\rho \frac{1}{(1/2+i\gamma-\rho)^2}\right].$$
+$$\mathcal{C}(\gamma) = -\mathrm{Re}\,\!\left[\frac{d}{ds}\frac{\xi'}{\xi}(s)\bigg|_{s=1/2+i\gamma}\right]
+= \mathrm{Re}\,\!\left[\sum_\rho \frac{1}{(1/2+i\gamma-\rho)^2}\right].$$
 
 Conectando con la función $F(s) := -\frac{d}{ds}\frac{\xi'}{\xi}(s) = \sum_\rho \frac{1}{(s-\rho)^2}$,
 la condición RH es: **$F(s)$ es real y positivo para $s = 1/2 + i\gamma$.**
@@ -209,7 +209,7 @@ Hmm, más directamente:
 $$F(s) = \sum_\rho \frac{1}{(s-\rho)^2} = -\frac{d}{ds}\left(\sum_\rho \frac{1}{s-\rho}\right) = -\frac{d}{ds}\frac{\xi'}{\xi}(s) = \left(\frac{\xi'}{\xi}\right)'(s) \cdot (-1).$$
 
 Entonces:
-$$\mathcal{C}(\gamma) = \operatorname{Re}[F(1/2+i\gamma)], \quad F(s) = -\left(\frac{\xi'}{\xi}\right)'(s) = \frac{(\xi')^2 - \xi\xi''}{\xi^2}(s).$$
+$$\mathcal{C}(\gamma) = \mathrm{Re}[F(1/2+i\gamma)], \quad F(s) = -\left(\frac{\xi'}{\xi}\right)'(s) = \frac{(\xi')^2 - \xi\xi''}{\xi^2}(s).$$
 
 ---
 
@@ -226,12 +226,12 @@ operador diferencial $-d^2/ds^2$ evaluada en los ceros de $\xi$.
 $H_C = -ix\partial_x$ actúa en $L^2(C_\mathbb{Q})$ con eigenvalores en $\{\gamma_\rho\}$.
 La función $F(s)$ evaluada en la recta crítica es la traza de $(H_C - \gamma I)^{-2}$
 restringida a los eigenvalores:
-$$F(1/2+i\gamma) = \operatorname{Tr}[(H_C - \gamma I)^{-2}|_{\text{spec}}].$$
+$$F(1/2+i\gamma) = \mathrm{Tr}[(H_C - \gamma I)^{-2}|_{\text{spec}}].$$
 
 Bajo RH, esta traza es real y positiva. La equivalencia del Teorema 4 puede formularse
 como:
 
-> **RH $\iff$ $\operatorname{Tr}[(H_C - \gamma I)^{-2}|_{\text{spec}}] \in \mathbb{R}_{>0}$ para todo $\gamma$.**
+> **RH $\iff$ $\mathrm{Tr}[(H_C - \gamma I)^{-2}|_{\text{spec}}] \in \mathbb{R}_{>0}$ para todo $\gamma$.**
 
 ---
 
@@ -246,7 +246,7 @@ como:
 | Equivalencia exacta RH $\iff$ $\mathcal{C}(\gamma) = \sum_\rho 1/(\gamma-\gamma_\rho)^2$ | **Demostrado (Teorema 4) — nuevo** |
 | Interpretación geométrica (cono de $45°$) | Nueva |
 | Reformulación: Frente D = maximizar $Q$, no minimizar | Corrección del setup |
-| Conexión $F(s) = \operatorname{Tr}[(H_C-\gamma)^{-2}]$ | Nueva |
+| Conexión $F(s) = \mathrm{Tr}[(H_C-\gamma)^{-2}]$ | Nueva |
 
 ---
 

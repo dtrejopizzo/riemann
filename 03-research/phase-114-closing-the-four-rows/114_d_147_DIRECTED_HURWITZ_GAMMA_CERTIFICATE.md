@@ -5,7 +5,7 @@
 The finite Legendre compression of the **complete** archimedean multiplier
 
 \[
- \operatorname {Re}\psi(1/4+i\tau/2)-\psi(1/4)
+ \mathrm{Re}\,\psi(1/4+i\tau/2)-\psi(1/4)
 \]
 
 can be enclosed directly by Arb intervals.  The calculation contains every
@@ -42,9 +42,9 @@ Let \(D\) be differentiation in the Legendre basis
 \((P_0,\ldots,P_{N-1})\),
 
 \[
- W=\operatorname {diag}\bigl((2m+1)^{-1}\bigr),\qquad
+ W=\mathrm{diag}\,\bigl((2m+1)^{-1}\bigr),\qquad
  \mathcal N_T(M)={T\over2}S M S,
- \quad S=\operatorname {diag}\sqrt{2m+1}.
+ \quad S=\mathrm{diag}\,\sqrt{2m+1}.
 \]
 
 Since \(D^N=0\),

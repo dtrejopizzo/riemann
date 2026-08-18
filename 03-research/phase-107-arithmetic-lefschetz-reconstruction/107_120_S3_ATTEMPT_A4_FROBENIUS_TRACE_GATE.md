@@ -116,7 +116,7 @@ But it still does **not** prove:
    information to recover this Frobenius coefficient without additional
    input;
 3. any global realization theorem on arithmetic surfaces over
-   \(\operatorname{Spec}\mathbf Z\).
+   \(\mathrm{Spec}\,\mathbf Z\).
 
 So the correct reading is:
 

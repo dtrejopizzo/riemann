@@ -165,7 +165,7 @@ This is uniform in the deficit \(1/2-\alpha\).
 
 Let \(I\Subset I_1\) be bounded intervals and choose
 \(\chi,\chi_1\in C_c^\infty(I_1)\), with \(\chi_1=1\) near
-\(\operatorname {supp}\chi\).  Define the translation-invariant
+\(\mathrm{supp}\,\chi\).  Define the translation-invariant
 small-jump operator
 
 \[
@@ -297,7 +297,7 @@ For a fixed \(\delta>0\), the finite-dimensional space
 
 \[
  \mathcal H_\delta
- =\operatorname {Ran}\mathbf1_{(0,1/2-\delta]}(A)
+ =\mathrm{Ran}\,\mathbf1_{(0,1/2-\delta]}(A)
  \tag{24}
 \]
 

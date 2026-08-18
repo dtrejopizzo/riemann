@@ -47,18 +47,18 @@ Let `S` be a central multiplicative system in `A_(1,1)`.  There is a
 canonical isomorphism in the regular category
 
 \[
- \operatorname{Reg}_{\mathbb Z}(S^{-1}A)
+ \mathrm{Reg}_{\mathbb Z}(S^{-1}A)
  \simeq
- \operatorname{Reg}_{\mathbb Z}
- \left(S^{-1}\operatorname{Reg}_{\mathbb Z}(A)\right).          \tag{2.1}
+ \mathrm{Reg}_{\mathbb Z}
+ \left(S^{-1}\mathrm{Reg}_{\mathbb Z}(A)\right).          \tag{2.1}
 \]
 
 The unreflected central localization on the right is already Z-regular, so
 (2.1) becomes
 
 \[
- \operatorname{Reg}_{\mathbb Z}(S^{-1}A)
- \simeq S^{-1}\operatorname{Reg}_{\mathbb Z}(A).                \tag{2.2}
+ \mathrm{Reg}_{\mathbb Z}(S^{-1}A)
+ \simeq S^{-1}\mathrm{Reg}_{\mathbb Z}(A).                \tag{2.2}
 \]
 
 ### Proof
@@ -76,7 +76,7 @@ Let `Y={Y_(N,M)}` be Haran's literal pro-square.  Choose its standard affine
 cover
 
 \[
- Y_{N,M}=\bigcup_\alpha\operatorname{Spec}A_\alpha.             \tag{3.1}
+ Y_{N,M}=\bigcup_\alpha\mathrm{Spec}\,A_\alpha.             \tag{3.1}
 \]
 
 Replace each chart by `Spec Reg_Z(A_alpha)`.  On a standard central overlap

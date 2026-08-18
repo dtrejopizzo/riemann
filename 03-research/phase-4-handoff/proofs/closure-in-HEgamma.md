@@ -56,7 +56,7 @@ of zeros), $\mathfrak t_+|_{\mathcal D}$ is **closable** (the closed $\mathfrak 
 If RH holds (in particular for every GRH control the program uses — $\zeta$, $L(\chi_4)$, $L(\Delta)$),
 there are **no off-line zeros**, so $\mathfrak t_-=0$ and $\mathfrak t=\mathfrak t_+$. By CLOS.1,
 $$
-\boxed{\ \text{RH}\ \Longrightarrow\ \mathfrak t\ \text{is closed/closable in }H(E_\gamma),\ \text{with }\inf\operatorname{spec}=\inf\mathfrak t_+/\|\cdot\|^2\ \ge0.\ }
+\boxed{\ \text{RH}\ \Longrightarrow\ \mathfrak t\ \text{is closed/closable in }H(E_\gamma),\ \text{with }\inf\mathrm{spec}=\inf\mathfrak t_+/\|\cdot\|^2\ \ge0.\ }
 $$
 So in the world the numerics actually live in, the Weil form **has a legitimate self-adjoint, bounded-below
 (by $0$) realization in $H(E_\gamma)$.** The de Branges geometry is *vindicated* as the correct home — the
@@ -100,7 +100,7 @@ retracted Day 5). (RFB) is a different inequality entirely: it bounds the *off-l
 |---|---|---|
 | B-1 | self-adjoint realization exists (von Neumann conjugation) | ✅ unconditional |
 | CLOS.1 | $\mathfrak t_+$ closed; $T_+\ge0$ exists on $H(E_\gamma)$ | ✅ (Kato + DB.3) |
-| CLOS.2 | RH $\Rightarrow$ $\mathfrak t$ closable, $\inf\operatorname{spec}\ge0$ | ✅ unconditional in RH-world |
+| CLOS.2 | RH $\Rightarrow$ $\mathfrak t$ closable, $\inf\mathrm{spec}\,\ge0$ | ✅ unconditional in RH-world |
 | CLOS.3 = (RFB) | $|\mathfrak t_-|\le a\,\mathfrak t_++C\|\cdot\|^2$, $a<1$ $\Rightarrow$ closable **and** semibounded | ⬜ **the single open target** |
 | (RFB) content | a zero-density comparison of off-line vs on-line zeros | = §3.3, re-derived |
 
