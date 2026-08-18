@@ -1,0 +1,54 @@
+{
+  "statement": "Lock-predicted residual alignment audit in the even shell block",
+  "inputs": [
+    "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_7aq_even_odd_shell_results.json",
+    "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_7aq_even_odd_shell_plant_16_18.json"
+  ],
+  "rows": [
+    {
+      "label": "zeta",
+      "old_modes": 16,
+      "new_modes": 18,
+      "a": "7.01045261193173217e-19",
+      "b": "-2.81984281430628321e-17",
+      "c": "1.13466311374367157e-15",
+      "rho": "-0.999812133257266367",
+      "residual_ratio_r2_over_r1": "-40.1266792770250689",
+      "predicted_large_ratio": "-40.2309640283790628",
+      "cos_small_orth": "6.45592101609355053e-05",
+      "cos_large_align": "0.999999997916054095",
+      "raw_small_dot": "-2.85876867334202751e-42",
+      "raw_large_dot": "-4.42813451443731657e-38"
+    },
+    {
+      "label": "zeta",
+      "old_modes": 18,
+      "new_modes": 20,
+      "a": "5.06056635459283466e-19",
+      "b": "4.42411573938175487e-18",
+      "c": "3.86911733651354145e-17",
+      "rho": "0.999818038425249411",
+      "residual_ratio_r2_over_r1": "8.71966794558981917",
+      "predicted_large_ratio": "8.74392428614601158",
+      "cos_small_orth": "0.000314021837738791471",
+      "cos_large_align": "0.999999950695141582",
+      "raw_small_dot": "-6.14691123740582606e-45",
+      "raw_large_dot": "-1.95747881058079155e-41"
+    },
+    {
+      "label": "plant",
+      "old_modes": 16,
+      "new_modes": 18,
+      "a": "3.77835948135842514",
+      "b": "-0.982123374806208704",
+      "c": "2.72065080668580217",
+      "rho": "-0.306321872305194198",
+      "residual_ratio_r2_over_r1": "4.64934855793587332",
+      "predicted_large_ratio": "-0.848564315208439224",
+      "cos_small_orth": "0.881482585650979256",
+      "cos_large_align": "0.47221652998816549",
+      "raw_small_dot": "0.23592178198283148",
+      "raw_large_dot": "-0.126384987122897252"
+    }
+  ]
+}

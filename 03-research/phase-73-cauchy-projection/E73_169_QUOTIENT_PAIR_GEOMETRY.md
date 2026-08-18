@@ -67,7 +67,7 @@ Therefore the proof target should not be:
 Pi_Q is almost orthogonal to G_Q.
 ```
 
-The honest target is a weighted quotient norm/pairing estimate:
+The candid target is a weighted quotient norm/pairing estimate:
 
 ```text
 e^(alpha L)||Pi_Q(A)|| ||G_Q|| <= L^B

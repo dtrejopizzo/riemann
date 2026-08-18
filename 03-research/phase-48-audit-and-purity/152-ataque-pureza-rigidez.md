@@ -14,7 +14,7 @@ mínima que lo salvaría, comparada con RH y con LP-112; (5) veredicto.
 
 **Contrato creativo (regla absoluta de etiquetado):** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado DE VERDAD acá, prueba completa; resultados externos citados
-con precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con estatus honesto. **[GAP]** = declarado.
+con precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con estatus franco. **[GAP]** = declarado.
 **[DESEO]** = declarado. **[GAP de literatura]** = dato no verificado al nivel de página esta sesión, NO
 usado como premisa de ningún [TEOREMA]. Jamás se fabrica una prueba de RH ni de la rigidez.
 
@@ -492,7 +492,7 @@ el diccionario exacto 152.2.** El valor del diccionario no es nulo (§4); el cam
 ### 3.4. La ruta de oscilaciones (Ingham/Pintz) y su inversión exacta
 
 La idea (2) del encargo: un cero off fuerza oscilación de $\psi(x)-x$ de amplitud creciente; ¿con
-$m<\infty$ la oscilación "no se puede cancelar" y contradice algo? Inventario honesto:
+$m<\infty$ la oscilación "no se puede cancelar" y contradice algo? Inventario franco:
 
 - **[Dato clásico, verificado en lo cualitativo].** Si ζ tiene un cero $\rho_0=\beta_0+i\gamma_0$,
   entonces $\psi(x)-x=\Omega_\pm(x^{\beta_0-\epsilon})$; las formas finas dan oscilación bilateral de
@@ -591,7 +591,7 @@ $|\gamma_j-\tau_0|<\delta_j$. Consecuencias inmediatas, todas probadas:
    hipotético): la rigidez completa $m<\infty\Rightarrow m=0$ equivale a la familia
    $\{\mathrm{LP\text{-}152}(\tau)\}$ sobre las finitas frecuencias adversarias.
 
-**Honestidad sobre el estatus.** No afirmo que LP-152$(\tau_0)$ sea demostrable para ningún $\tau_0$ más
+**Franqueza sobre el estatus.** No afirmo que LP-152$(\tau_0)$ sea demostrable para ningún $\tau_0$ más
 allá de lo que las regiones clásicas dan (para ventanas dentro de la zona verificada
 $\gamma\le3\cdot10^{12}$ [PT21], LP-152 vale trivialmente: no hay ceros off ahí; la zona no verificada es
 exactamente donde vive el problema). El contenido de la definición es **el diccionario y la dualidad**,
@@ -609,7 +609,7 @@ no una promesa de demostrabilidad.
 | insumo aritmético | independencia $\mathbb Q$-lineal de $\{\log p\}$, soporte de Bagchi | equidistribución fina de $\Lambda$ contra $\cos(\tau\log n)$ |
 | forma del muro | producir un punto de un conjunto excepcional | excluir un punto de un conjunto excepcional |
 
-**Comparación de fuerza, honesta.** No conozco implicación en ninguna dirección entre LP-112 y la familia
+**Comparación de fuerza, franca.** No conozco implicación en ninguna dirección entre LP-112 y la familia
 relevante de instancias LP-152: LP-112 ataca H(m) por la geometría de auto-aproximación de ζ (toro de
 Kronecker, D112 §3); LP-152 por la estadística de los primos en una frecuencia. Bajo H(m) AMBOS son
 enunciados sobre eventos individuales que toda la maquinaria de promedios clasifica como excepcionales:

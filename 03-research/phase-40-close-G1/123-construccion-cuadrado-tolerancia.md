@@ -17,7 +17,7 @@ El hallazgo de fuente que organiza todo (§1.3): CC mismos nombran la **raíz** 
 
 Diagnóstico central (§3): la tolerancia (2205.01391) es exactamente un **reparador de conúcleo** para un complejo corto *presentado* ψ — neutraliza la obstrucción "no hay buen cociente en el mundo idempotente". Eso **se solapa** con una mitad del obstáculo del cuadrado (la mitad "cokernel mal definido"), pero **no toca** la otra mitad (la no-invarianza del rango bajo isomorfismo de módulos = ausencia de una dimensión funtorial). La tolerancia mata los null elements *cuando el H¹ se presenta como conúcleo de un único morfismo con norma controlada*; no los mata cuando aparecen como cociclos de Čech de un recubrimiento con intersecciones múltiples, que es el régimen genuino de dimensión 2.
 
-El caso de prueba C_p × C_p (§4): el cálculo es honesto pero **se traba en el paso de presentar el complejo de Čech del cuadrado como un único ψ**. En dimensión 1 (C_p) no hay H¹ en absoluto (su rol lo juega H⁰(−D), §2.4) **[DATO]**; en el cuadrado, un Künneth ingenuo produce un término H¹(C_p) ⊗ H⁰(C_q) que **no existe como objeto** porque H¹(C_p) no está definido. Conclusión: el cuadrado no hereda su H¹ de los factores; hay que construirlo *de novo* sobre el recubrimiento del producto, y ahí reaparecen los cociclos absorbentes.
+El caso de prueba C_p × C_p (§4): el cálculo es franco pero **se traba en el paso de presentar el complejo de Čech del cuadrado como un único ψ**. En dimensión 1 (C_p) no hay H¹ en absoluto (su rol lo juega H⁰(−D), §2.4) **[DATO]**; en el cuadrado, un Künneth ingenuo produce un término H¹(C_p) ⊗ H⁰(C_q) que **no existe como objeto** porque H¹(C_p) no está definido. Conclusión: el cuadrado no hereda su H¹ de los factores; hay que construirlo *de novo* sobre el recubrimiento del producto, y ahí reaparecen los cociclos absorbentes.
 
 Finitud (§5): la única finitud abordable en G1 es la **finitud de los grupos de Čech graduados por grado/soporte** del recubrimiento — una finitud combinatoria del nervio, NO la finitud de la parte impura (R-FIN), que necesita la graduación de pesos (G2) que no tenemos. Las distingo con precisión.
 
@@ -120,7 +120,7 @@ un 𝕊-módulo con tolerancia, **en el cual los cociclos soportados en elemento
 - **Define:** un candidato a objeto $H^1_{\mathrm{tol}}$.
 - **Queda por verificar:** TODO lo anterior (A1–A3) y, sobre todo, lo de §3.2.
 
-**Esta es la mejor construcción honesta de "la tolerancia se aplica" — y nótese que es enteramente condicional.** Repara (C-cok). Pero no toca (C-rank), que es la raíz que CC señalan.
+**Esta es la mejor construcción franca de "la tolerancia se aplica" — y nótese que es enteramente condicional.** Repara (C-cok). Pero no toca (C-rank), que es la raíz que CC señalan.
 
 ### 3.2. La parte que NO coincide: (C-rank) — el núcleo
 
@@ -195,13 +195,13 @@ PERO: para decir "la dimensión de $H^1_{\mathrm{tol}}(C_p\times C_p)$ es tal n�
 3. **La dimensión resultante es finita y entera:** **NO.** Sigue siendo **real-valuada / continua tipo II** (por la densidad de $H_p$ en $\mathbb R$, idéntico al fenómeno de $\mathrm{Dim}_{\mathbb R}$ de la RR tropical), porque falta la norma canónica que en dim 1 venía del divisor de Arakelov. La dimensión es del orden de "2 × (dimensión continua tipo II)" — el "2" de los dos ciclos del toro, cada uno con dimensión continua.
 4. **El Künneth no existe** (los factores no tienen $H^1$); el $H^1$ del cuadrado es genuinamente 2D.
 
-**Veredicto del Paso 4:** el caso de prueba **NO cierra G1**. Confirma exactamente el diagnóstico del Paso 3: la tolerancia entrega el **objeto** pero no la **finitud entera**; la finitud entera necesita la norma = forma de intersección = G2. **Es la mejor evidencia honesta de que el Cruce B funciona para (C-cok) y se traba en (C-rank).**
+**Veredicto del Paso 4:** el caso de prueba **NO cierra G1**. Confirma exactamente el diagnóstico del Paso 3: la tolerancia entrega el **objeto** pero no la **finitud entera**; la finitud entera necesita la norma = forma de intersección = G2. **Es la mejor evidencia franca de que el Cruce B funciona para (C-cok) y se traba en (C-rank).**
 
 ---
 
 ## 5. PASO 5 — Finitud (R-FIN): las dos finitudes, distinguidas
 
-**[DATO Doc 119 §2.4]:** la $\dim H^1$ **total** debe ser $\infty$ (infinitos ceros); lo que debe ser finito es la parte **impura** (peso $\ne 1/2$, o $\ne 1$ según normalización), y la separación en pesos **es G2**, que no tengo. Por tanto debo ser honesto sobre **qué finitud** estoy abordando.
+**[DATO Doc 119 §2.4]:** la $\dim H^1$ **total** debe ser $\infty$ (infinitos ceros); lo que debe ser finito es la parte **impura** (peso $\ne 1/2$, o $\ne 1$ según normalización), y la separación en pesos **es G2**, que no tengo. Por tanto debo ser franco sobre **qué finitud** estoy abordando.
 
 **[CONSTRUCCIÓN] Hay tres finitudes distintas en juego, y solo la primera es de G1:**
 
@@ -211,7 +211,7 @@ PERO: para decir "la dimensión de $H^1_{\mathrm{tol}}(C_p\times C_p)$ es tal n�
 
 3. **Finitud de la parte impura (R-FIN, NO abordable en G1).** Requiere la graduación de pesos $W$ para definir "impura"; sin $W$ (= sin G2) el enunciado "$\dim(\bigoplus_{w\ne 1}\mathrm{gr}^W_w H^1) < \infty$" **no es ni siquiera formulable** (Doc 119 §2.4, "R-FIN no es enunciable sin R-SIG"). **[DATO]**
 
-**Declaración honesta de cuál obtengo [CONSTRUCCIÓN]:** obtengo **la finitud combinatoria de los grupos de Čech graduados por grado/soporte** (finitud de tipo 1), condicional a A1–A3. **NO** obtengo la finitud entera de la dimensión (tipo 2: falta la norma), ni mucho menos la finitud de la parte impura (tipo 3: es R-FIN, necesita G2). Esto es exactamente lo que el encargo anticipaba: "la finitud que podés abordar en G1 es la finitud de los grupos de Čech graduados por grado/soporte, NO la finitud de la parte impura".
+**Declaración franca de cuál obtengo [CONSTRUCCIÓN]:** obtengo **la finitud combinatoria de los grupos de Čech graduados por grado/soporte** (finitud de tipo 1), condicional a A1–A3. **NO** obtengo la finitud entera de la dimensión (tipo 2: falta la norma), ni mucho menos la finitud de la parte impura (tipo 3: es R-FIN, necesita G2). Esto es exactamente lo que el encargo anticipaba: "la finitud que podés abordar en G1 es la finitud de los grupos de Čech graduados por grado/soporte, NO la finitud de la parte impura".
 
 **Coherencia con la tensión T1 (Doc 119 §6.3) [CONSTRUCCIÓN].** T1 dice: un $H^1$ finito-dimensional total no puede portar la traza con soporte singular en $\{k\log p\}$. Mi construcción es consistente con T1: $H^1_{\mathrm{tol}}(C_p\times C_p)$ tiene dimensión tipo II **infinita/continua** (densidad de $H_p$), no finita — así que **puede** portar el soporte singular. La finitud que obtengo (tipo 1, combinatoria) es de la *presentación*, no del *tamaño* del módulo. No hay contradicción con T1. Bien.
 
@@ -243,7 +243,7 @@ Enunciado exacto:
 **[CONSTRUCCIÓN — el resultado estructural de este documento]:**
 > **G1 no es independiente de G2.** La construcción del cuadrado vía tolerancia separa G1 en (C-cok), que es TÉCNICO y cerrable, y (C-rank), cuya resolución *es* la norma de intersección, que *es* G2. El "muro" no está entre G1 y G2 como dos nodos secuenciales: **la parte numérica de G1 (finitud entera) y G2 (signatura) son el mismo objeto** — una forma de intersección sobre el cuadrado. La tolerancia construye el receptáculo; el contenido numérico del receptáculo es G2.
 
-Esto coincide, por una segunda ruta independiente, con la inversión de orden de Doc 119 §2.4 ($\text{R-SIG}\prec\text{R-FIN}$: "el muro G2 está aguas arriba de la propia formulación de la finitud"). **Dos derivaciones independientes, mismo veredicto** — es la evidencia más fuerte de honestidad del diagnóstico. **[CONSTRUCCIÓN]** + **[DATO Doc 119]**.
+Esto coincide, por una segunda ruta independiente, con la inversión de orden de Doc 119 §2.4 ($\text{R-SIG}\prec\text{R-FIN}$: "el muro G2 está aguas arriba de la propia formulación de la finitud"). **Dos derivaciones independientes, mismo veredicto** — es la evidencia más fuerte de franqueza del diagnóstico. **[CONSTRUCCIÓN]** + **[DATO Doc 119]**.
 
 ### 6.3. Qué necesito de Connes — lista concreta
 
@@ -259,7 +259,7 @@ Esto coincide, por una segunda ruta independiente, con la inversión de orden de
 
 ---
 
-## 7. Síntesis y honestidad
+## 7. Síntesis y franqueza
 
 **No declaro G1 cerrado.** El caso de prueba (Paso 4) **no cierra** y la construcción (Paso 3) **no es completa**: produce el objeto $H^1_{\mathrm{tol}}$ (condicional a tres gaps técnicos) pero no su dimensión entera funtorial.
 
@@ -267,7 +267,7 @@ Esto coincide, por una segunda ruta independiente, con la inversión de orden de
 - La identificación de la **bifurcación (C-cok)/(C-rank)** del obstáculo del cuadrado, anclada en la cita de fuente sobre la raíz (Example 6.5 de [yoshi]).
 - La **construcción condicional de $H^1_{\mathrm{tol}}(X\times X)$** vía Dold–Kan sobre el complejo de Čech tolerante (§3.1), con sus tres asunciones aisladas.
 - El **cálculo de juguete C_p × C_p** (§4): null elements explícitos, colapso de las clases parásitas por tolerancia, dimensión que **permanece tipo II / continua** por falta de norma.
-- La **distinción de las tres finitudes** (§5) y la declaración honesta de que solo obtengo la combinatoria.
+- La **distinción de las tres finitudes** (§5) y la declaración franca de que solo obtengo la combinatoria.
 - El **aislamiento del núcleo** (§6.2): la norma de intersección = dimensión entera funtorial = G2, con la consecuencia estructural de que la parte numérica de G1 y G2 son el mismo objeto.
 
 **El punto de traba ES el resultado:** la tolerancia construye el receptáculo (C-cok, técnico); el contenido numérico del receptáculo (C-rank) es una forma de intersección que es G2 y no existe. El Cruce B, correctamente entendido, **no es independiente del muro** — es su mitad sintáctica.

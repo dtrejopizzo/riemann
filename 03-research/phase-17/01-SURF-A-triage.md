@@ -115,7 +115,7 @@ That different structure is precisely what SURF must supply; the existing surfac
   Faltings–Hriljac (arithmetic Hodge index, to confirm the `(1, n−1)` signature and that its
   negative part is heights). Read before constructing Route 2.
 
-## 6. Pre-registered honesty checkpoint
+## 6. Pre-registered candor checkpoint
 
 If the Route-2 testbed can only reproduce the target by **feeding in `{γ_ρ}`** (F-indep fails), or
 can only get the `(1,1)` by placing the `Z_ρ` in the **height** part (F-heights fails), then

@@ -46,7 +46,7 @@ parte de (H-pos). Lema III.1 es correcto **como implicación condicional**, no m
 ``` ε_loc(λ) ≤ (C/γ_0)·√(logλ)·‖Â_λ−Â_∞‖_{low} + Cλ³e^{−πλ²}.
 ``` *Prueba.* `‖ξ̂_λ−ξ̂_∞‖_{L²}≲‖P_λ−P_∞‖` (Lema III.1) `≲γ_0^{-1}‖Â_λ−Â_∞‖`. Pasar de `L²` a
 `sup` band-limited cuesta `√(logλ)` por Nikolskii/Plancherel–Pólya (N2, ahora con el factor
-honesto `O(logλ)^{1/2}`, **no** `O(1)`). El término doble-exponencial es N0. ∎ Esto es exactamente el Teorema condicional III del documento, **con las hipótesis
+franco `O(logλ)^{1/2}`, **no** `O(1)`). El término doble-exponencial es N0. ∎ Esto es exactamente el Teorema condicional III del documento, **con las hipótesis
 correctamente expuestas**. No añade ni quita carga RH. El trabajo real está en **(H-lim)**. --- ### El núcleo analítico de III: ¿existe `Â_∞`? El documento pone (H-lim) como "los `ξ̂_λ` renormalizados son de Cauchy en `L²`" — una
 hipótesis numérica. La pregunta de: **¿se puede probar (H-lim) incondicionalmente,
 por compacidad / convergencia de resolventes, SIN tocar el signo de `ε_0`?** Respuesta: **sí, bajo una hipótesis de tightness explícita y RH-neutral; y NO sin ella.** Lo
@@ -84,7 +84,7 @@ débil que (H-gap)+(H-lim) juntas, es:
 `liminf γ(λ)>0` [el gap de borde se vuelve el gap discreto del operador límite, ver Parte
 II]. (T★) es una afirmación de **asintótica de borde RH-neutral**, del tipo que prueba
 Landau–Widom para núcleos de tipo seno. **No menciona el signo de `ε_0`.** Es el hueco
-analítico honesto de III, y es **uno solo** (no tres). > **Veredicto III.** El documento listaba tres hipótesis (H-gap, H-lim, H-pos). El análisis
+analítico franco de III, y es **uno solo** (no tres). > **Veredicto III.** El documento listaba tres hipótesis (H-gap, H-lim, H-pos). El análisis
 > riguroso las **reorganiza**:
 > - **(H-pos)** = signo `ε_0` = **RH-hard, irreductible** (F2, Obs. III.1b). No se mueve.
 > - **(H-gap)+(H-lim)** se **funden** en la **única** hipótesis analítica **(T★)** (escala de
@@ -169,7 +169,7 @@ por dureza**:
 - **Teorema IV.3** (obstrucción exacta): el patrón `n²` es **forzado por invarianza de escala módulo la única tasa `h(λ)`**; `γ=3` no derivado **porque y sólo porque** falta `h(λ)`. **Lo que NO se prueba, con razón demostrada:**
 - **(H-pos)/signo `ε_0`** = **RH**. Irreductible. La perturbación no lo alcanza por construcción (presupone la hoja). No se intentó forzar.
 - **(T★)** = escala de borde logarítmica. **RH-neutral**, cita obligada a Landau–Widom / asintótica de operadores de concentración de borde. Implica todo el resto de III+IV.1. **Frase de referee.** El documento decía "III condicional a tres hipótesis, IV.1 abierto y
-fenomenológico". La verdad analítica es más limpia y **más honesta**: **III y IV.1 son el
+fenomenológico". La verdad analítica es más limpia y **más franca**: **III y IV.1 son el
 mismo hueco** — la tasa de cierre del carrier de borde `h(λ)=π−ω*(λ)` — más el muro RH
 (`ε_0>0`). Ese hueco es **una sola asintótica RH-neutral de tipo Landau–Widom**, no tres
 conjeturas numéricas, y de ella se siguen el límite de escala, el gap uniforme y el espectro

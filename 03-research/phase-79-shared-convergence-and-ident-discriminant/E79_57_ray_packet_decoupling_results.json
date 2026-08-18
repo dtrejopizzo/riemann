@@ -1,0 +1,72 @@
+{
+  "statement": "E79.57 ray-amplitude vs packet diagnostic audit",
+  "sources": [
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_56_ray_amplitude_autopsy_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_44_multisigma_coupled_packet_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_3W_terminal_sparse_packet_results.json"
+  ],
+  "rows": [
+    {
+      "N": 8,
+      "abs_rho": 0.0331799142465018,
+      "N_abs_rho": 0.2654393139720144,
+      "packet_mean_mismatch": 0.0243183278557,
+      "packet_size": 3,
+      "packet_mismatch_sigma_1.0": 0.0228802454288,
+      "sparse_minus_abs": 1.20298958751e-05,
+      "sparse_mismatch": 0.0228802454288,
+      "sparse_N2_abs_minus": 0.000769913336006
+    },
+    {
+      "N": 10,
+      "abs_rho": 0.038684833336302744,
+      "N_abs_rho": 0.38684833336302743,
+      "packet_mean_mismatch": 0.00736156051268,
+      "packet_size": 4,
+      "packet_mismatch_sigma_1.0": 0.00870182150755,
+      "sparse_minus_abs": 3.162760814e-05,
+      "sparse_mismatch": 0.102884211357,
+      "sparse_N2_abs_minus": 0.003162760814
+    },
+    {
+      "N": 12,
+      "abs_rho": 0.027682487754282833,
+      "N_abs_rho": 0.332189853051394,
+      "packet_mean_mismatch": 0.0221885797569,
+      "packet_size": 1,
+      "packet_mismatch_sigma_1.0": 0.0229878549072,
+      "sparse_minus_abs": 0.000108758685662,
+      "sparse_mismatch": 0.353711681612,
+      "sparse_N2_abs_minus": 0.0156612507353
+    },
+    {
+      "N": 14,
+      "abs_rho": 0.03546470265657091,
+      "N_abs_rho": 0.4965058371919927,
+      "packet_mean_mismatch": 0.0223617555416,
+      "packet_size": 3,
+      "packet_mismatch_sigma_1.0": 0.0214836442336,
+      "sparse_minus_abs": 2.85770479337e-06,
+      "sparse_mismatch": 0.0214836442336,
+      "sparse_N2_abs_minus": 0.0005601101395
+    },
+    {
+      "N": 16,
+      "abs_rho": 0.03183731099877623,
+      "N_abs_rho": 0.5093969759804197,
+      "packet_mean_mismatch": 0.0348537096377,
+      "packet_size": 2,
+      "packet_mismatch_sigma_1.0": 0.0355431426679,
+      "sparse_minus_abs": 6.71409798385e-05,
+      "sparse_mismatch": 0.414147401885,
+      "sparse_N2_abs_minus": 0.0171880908387
+    }
+  ],
+  "correlations_against_abs_rho": {
+    "packet_mean_mismatch": -0.6102577831882605,
+    "packet_mismatch_sigma_1.0": -0.6296824544239573,
+    "sparse_minus_abs": -0.7683604966571116,
+    "sparse_mismatch": -0.6687055268121754,
+    "sparse_N2_abs_minus": -0.7198601494675007
+  }
+}

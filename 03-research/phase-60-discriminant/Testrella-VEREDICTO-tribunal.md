@@ -1,6 +1,6 @@
 # (T★) — Veredicto del tribunal (· ·) Los tres atacaron (T★) — el único pendiente declarado no-RH-hard. **No convergieron.** Hay
 acuerdo total en varios wins reales, y **un desacuerdo agudo en el último paso** que es,
-honestamente, el resultado del día: revela que (T★) **no era un solo enunciado RH-neutral**. --- ## ACUERDO UNÁNIME — wins reales, RH-neutrales, demostrados **W1 — La escala de borde es logarítmica no degenerada [PROBADO, RH-neutral].**
+francamente, el resultado del día: revela que (T★) **no era un solo enunciado RH-neutral**. --- ## ACUERDO UNÁNIME — wins reales, RH-neutrales, demostrados **W1 — La escala de borde es logarítmica no degenerada [PROBADO, RH-neutral].**
 `h(λ)=π−ω*=π/(2N+1)` exacto; `2N+1≍2logλ`; por tanto `(logλ)·h(λ)→π/2 ∈(0,∞)` (Thm 2.3).
 Ni colapsa (sub-log⟹espectro continuo) ni diverge (super-log⟹degenera). **La escala está cerrada.** **W2 — Capa de Landau–Widom, ancho `Θ(logλ)` [PROBADO vía teorema LW, ].**
 El ancho de rampa del prolato `P_c` (`c=2πλ²logλ`) es `W(λ)=Θ(logλ)`, y coincide con `Γ` de N2 y
@@ -36,7 +36,7 @@ prueba por inverso-de-Green, con circularidad si se intenta al revés. Lo marco.
 de la familia, o la tightness exige además controlar el pozo negativo `q` (= signo de ε₀ = RH)?**
 - Si la EXISTENCIA del límite (posiblemente con masa escapando a 0) sólo necesita CONF ⟹ gana: el operador límite y su espectro RELATIVO `(k+1)²` son RH-neutrales.
 - Si la NO-DEGENERACIÓN del límite (que no se escape masa) necesita `q` controlado ⟹ gana: esa pieza es RH. ya lo formuló como dicotomía (su punto 5): **existencia del límite = RH-neutral;
-no-degeneración del límite = RH.** afirma que CONF da AMBAS. **Ese es el punto abierto.** --- ## ESTADO HONESTO DE (T★) **Probado RH-neutral (los tres):** escala log (W1), capa LW `Θ(logλ)` (W2), reconciliación Airy↦n²
+no-degeneración del límite = RH.** afirma que CONF da AMBAS. **Ese es el punto abierto.** --- ## ESTADO FRANCO DE (T★) **Probado RH-neutral (los tres):** escala log (W1), capa LW `Θ(logλ)` (W2), reconciliación Airy↦n²
 (W3), resolución de la tensión de escalas (W4), espectro `n²` forzado bajo (T) (W5). El **espectro
 RELATIVO** `(k+1)²` y la **existencia** del operador límite están esencialmente cerrados. **El punto de choque (no resuelto):** ¿la tightness/cota-inferior es CONF (RH-neutral,)
 o es ε₀>0 (RH,)? la marca como riesgo de circularidad. **El muro RH (intacto, los tres coinciden):** el **signo de ε₀** = (H-pos) = Weil-positividad =

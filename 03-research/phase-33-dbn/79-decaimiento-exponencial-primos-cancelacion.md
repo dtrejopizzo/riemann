@@ -8,7 +8,7 @@
 
 ## Resumen
 
-El Doc 76 estableció que $|\widehat{W_\lambda\,dm_\infty}(r)| = O(e^{-\pi|r|/4})$ para $|r|\to\infty$, y el Doc 72 demostró que $T_\lambda = A_\lambda^{off} - \sum_p \frac{\log p}{\sqrt{p}} B_\lambda(\log p)$ donde $B_\lambda(r) = \mathrm{Re}[\widehat{W_\lambda\,dm_\infty}(r)]$. Este documento explora sistemáticamente las consecuencias del decaimiento exponencial para la suma sobre primos: convergencia absoluta (§1), estructura del término $A_\lambda^{off}$ (§2), la suma de primos como condición de cancelación (§3), análisis cuantitativo de $B_\lambda(\log p)$ (§4 y §5), las sumas geométricas que aparecen en los primos grandes (§6), la reformulación del criterio (§7), y la conexión con el criterio de Nyman-Beurling (§8 y §9). Concluimos con una evaluación honesta del estado del Camino 3.
+El Doc 76 estableció que $|\widehat{W_\lambda\,dm_\infty}(r)| = O(e^{-\pi|r|/4})$ para $|r|\to\infty$, y el Doc 72 demostró que $T_\lambda = A_\lambda^{off} - \sum_p \frac{\log p}{\sqrt{p}} B_\lambda(\log p)$ donde $B_\lambda(r) = \mathrm{Re}[\widehat{W_\lambda\,dm_\infty}(r)]$. Este documento explora sistemáticamente las consecuencias del decaimiento exponencial para la suma sobre primos: convergencia absoluta (§1), estructura del término $A_\lambda^{off}$ (§2), la suma de primos como condición de cancelación (§3), análisis cuantitativo de $B_\lambda(\log p)$ (§4 y §5), las sumas geométricas que aparecen en los primos grandes (§6), la reformulación del criterio (§7), y la conexión con el criterio de Nyman-Beurling (§8 y §9). Concluimos con una evaluación franca del estado del Camino 3.
 
 **Notación permanente en este documento:**
 

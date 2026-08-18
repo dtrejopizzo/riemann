@@ -88,7 +88,7 @@ prolate basis, and is the one **operative** sub-task this milestone surfaces.
 
 ---
 
-## 4. The magnitude-vs-sign trap, reapplied (the honest limit)
+## 4. The magnitude-vs-sign trap, reapplied (the candid limit)
 
 Even granting the P7↔CC prolate bridge, what could it deliver? CC's archimedean argument **estimates**
 $\|K_{\mathrm{CC}}\|$ via Toeplitz/prolate spectral analysis and **lowers the top eigenvalue below 1** by
@@ -141,7 +141,7 @@ zero-independent (hence unobstructed by P8) but beyond a bounded milestone.*
 - §1 (semi-local residual = open RH-frontier) — ✅ faithfully from CC (eq. 2, Thms 1, 3, 6.11).
 - §2 (B2.2-(a): $PW_d$ vs CC prolate **superficial**) — ✅ argued (different cutoffs); a small no-go.
 - §3 (B2.2-(b): P7 ↔ CC prolate **real**) — ◆ the operative redirection; concrete finite experiment proposed.
-- §4 (magnitude-vs-sign caution) — ✅ P8 lesson reapplied; bounds the upside honestly.
+- §4 (magnitude-vs-sign caution) — ✅ P8 lesson reapplied; bounds the upside candidly.
 - §5 (cross-place cancellation = the true frontier) — ⬜ Connes geometric program; terminal target.
 
 *Next operative sub-task (if pursued): build the Slepian-prolate localized Gram matrix (P7 engine) and

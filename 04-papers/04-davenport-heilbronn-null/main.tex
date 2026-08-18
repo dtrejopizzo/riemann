@@ -51,7 +51,7 @@
 \title[A Davenport--Heilbronn Null Result]{Absence of Power-Law Growth in Partial Sums of the\\
 Davenport--Heilbronn Function at Off-Line Zeros}
 \author{David Alejandro Trejo Pizzo}
-\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+\thanks{Researcher at Universidad CAECE. \texttt{dtrejopizzo@caece.edu.ar}}
 
 
 \begin{document}
@@ -94,8 +94,8 @@ off-line zeros, partial Dirichlet sums, computational number theory
 % ══════════════════════════════════════════════════════════════════════════
 
 
-\tableofcontents
-\newpage
+%\tableofcontents
+%\newpage
 
 % ══════════════════════════════════════════════════════════════════════════
 \section{Introduction}\label{sec:intro}
@@ -1038,13 +1038,6 @@ analysis, rooted in the presence or absence of the Euler product,
 provides the most reliable structural fingerprint for separating
 RH-violating from RH-satisfying Dirichlet series.
 
-% ══════════════════════════════════════════════════════════════════════════
-\section*{Acknowledgments}
-
-Computations were performed using custom implementations in Python and
-Go, with arbitrary-precision validation via \texttt{mpmath}.
-The author thanks the developers of the open-source numerical
-libraries used in this work.
 
 % ══════════════════════════════════════════════════════════════════════════
 \begin{thebibliography}{99}
@@ -1093,18 +1086,6 @@ E.~C.\ Titchmarsh,
 \emph{The Theory of the Riemann Zeta-Function},
 2nd ed., revised by D.~R.~Heath-Brown,
 Oxford University Press, 1986.
-
-\bibitem{Torres2026}
-D.~A.~Trejo Pizzo,
-\emph{Resonance detection and phase structure in partial sums of
-Dirichlet series: a computational survey},
-preprint, 2026.
-
-\bibitem{TrejoSignNote}
-D.~A.~Trejo Pizzo,
-\emph{On the sign of inter-class interference in Dirichlet partial sums:
-a peak--trough reconciliation},
-companion note, 2026.
 
 \end{thebibliography}
 
@@ -1202,44 +1183,6 @@ All computational results reported in this paper are supported by
 Jupyter notebooks available as supplementary material.  The notebooks
 are organized by task, as listed in Table~\ref{tab:notebooks}.
 
-\begin{table}[ht]
-\centering
-\caption{Supporting computational notebooks.  All notebooks are
-  located in the \texttt{research\_compelte/} directory of the
-  project repository.}
-\label{tab:notebooks}
-\begin{tabular}{@{}lp{8.5cm}@{}}
-\toprule
-Task & Description \\
-\midrule
-\texttt{task1}  & Numerical validation of partial-sum implementations \\
-\texttt{task4}  & Resonance detection across function classes \\
-\texttt{task5}  & Extended validation suite \\
-\texttt{task6}  & Phase analysis at resonance peaks \\
-\texttt{task8}  & Scaling analysis of partial-sum magnitudes \\
-\texttt{task10} & Peak tracking across values of~$N$ \\
-\texttt{task11} & Killer signature test at off-line zeros
-  (\emph{critical}) \\
-\texttt{task14} & Phase analysis at multiple off-line zeros \\
-\texttt{task15} & Prime-phase uniformity tests \\
-\texttt{task20} & Implementation resolution and numerical details \\
-\texttt{task25} & Composite-phase coherence by $\omega$-class \\
-\texttt{task26} & Phase coherence ratios and inter-class
-  interference \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\noindent
-All notebooks are available as supplementary material and can be
-executed to reproduce the results presented in this paper.  The
-computational pipeline requires Python~$\ge 3.9$ with
-\texttt{numpy}, \texttt{scipy}, \texttt{mpmath}, and
-\texttt{matplotlib}, as well as a Go~$\ge 1.20$ toolchain for the
-high-performance partial-sum evaluation at large~$N$.
-
-\medskip
-\noindent\textbf{Self-contained Colab reproduction.}
 For convenience, a single self-contained Google Colab notebook,
 \texttt{reproduce\_colab.py}, accompanies this paper. With no external
 data it (i)~constructs the Davenport--Heilbronn coefficients from the

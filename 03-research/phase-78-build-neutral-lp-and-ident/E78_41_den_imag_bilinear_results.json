@@ -1,0 +1,261 @@
+{
+  "statement": "Exact bilinear formula for Im((1-theta_{N+2})/(1-theta_N)) as a symplectic quotient",
+  "sources": {
+    "zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "quotient_im": 0.0009740448567951879,
+          "bilinear_im_formula": 0.0009740448567951879,
+          "reconstruction_error": 0.0,
+          "old_den_abs_sq": 0.056545356865373445,
+          "symplectic_numerator": 5.5077714030365475e-05
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "quotient_im": -0.0015061500854115792,
+          "bilinear_im_formula": -0.0015061500854115792,
+          "reconstruction_error": 0.0,
+          "old_den_abs_sq": 0.013811611029397333,
+          "symplectic_numerator": -2.0802359131598302e-05
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "quotient_im": 0.0004834915368911984,
+          "bilinear_im_formula": 0.0004834915368911984,
+          "reconstruction_error": 0.0,
+          "old_den_abs_sq": 0.005053064478470835,
+          "symplectic_numerator": 2.443113910706186e-06
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "quotient_im": -0.0008116823365710337,
+          "bilinear_im_formula": -0.0008116823365710334,
+          "reconstruction_error": 3.2526065174565133e-19,
+          "old_den_abs_sq": 0.0021371337455846147,
+          "symplectic_numerator": -1.7346737121809246e-06
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "quotient_im": 0.0007206033860248035,
+          "bilinear_im_formula": 0.0007206033860248037,
+          "reconstruction_error": 2.168404344971009e-19,
+          "old_den_abs_sq": 0.0011281502871168798,
+          "symplectic_numerator": 8.129489168412781e-07
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "quotient_im": -0.0006119092046593143,
+          "bilinear_im_formula": -0.0006119092046593143,
+          "reconstruction_error": 0.0,
+          "old_den_abs_sq": 0.0006078570642527902,
+          "symplectic_numerator": -3.719533327334706e-07
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "quotient_im": 0.00305124688168201,
+          "bilinear_im_formula": 0.003051246881682011,
+          "reconstruction_error": 8.673617379884035e-19,
+          "old_den_abs_sq": 0.04545191902001031,
+          "symplectic_numerator": 0.00013868502617626975
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "quotient_im": -0.00460174785080823,
+          "bilinear_im_formula": -0.0046017478508082275,
+          "reconstruction_error": 2.6020852139652106e-18,
+          "old_den_abs_sq": 0.01205799745713939,
+          "symplectic_numerator": -5.548786388344226e-05
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "quotient_im": 0.0014685570118621934,
+          "bilinear_im_formula": 0.0014685570118621932,
+          "reconstruction_error": 2.168404344971009e-19,
+          "old_den_abs_sq": 0.00460660004655553,
+          "symplectic_numerator": 6.765054799213829e-06
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "quotient_im": -0.002448224893571917,
+          "bilinear_im_formula": -0.002448224893571917,
+          "reconstruction_error": 0.0,
+          "old_den_abs_sq": 0.002000424205236846,
+          "symplectic_numerator": -4.897488336964664e-06
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "quotient_im": 0.0021723052355811677,
+          "bilinear_im_formula": 0.0021723052355811672,
+          "reconstruction_error": 4.336808689942018e-19,
+          "old_den_abs_sq": 0.0010737737203417963,
+          "symplectic_numerator": 2.3325642745279524e-06
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "quotient_im": -0.0018405994704980976,
+          "bilinear_im_formula": -0.0018405994704980982,
+          "reconstruction_error": 6.505213034913027e-19,
+          "old_den_abs_sq": 0.0005852474754650456,
+          "symplectic_numerator": -1.0772061934513116e-06
+        }
+      ],
+      "max_reconstruction_error": 2.6020852139652106e-18,
+      "max_abs_bilinear_im": 0.0046017478508082275
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "quotient_im": 2.298807664619163,
+          "bilinear_im_formula": 2.2988076646191624,
+          "reconstruction_error": 4.440892098500626e-16,
+          "old_den_abs_sq": 44.64166375444044,
+          "symplectic_numerator": 102.62259880005914
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "quotient_im": 0.2137902151325551,
+          "bilinear_im_formula": 0.21379021513255517,
+          "reconstruction_error": 5.551115123125783e-17,
+          "old_den_abs_sq": 2715.9468786157527,
+          "symplectic_numerator": 580.6428674678534
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "quotient_im": -0.007561828989406198,
+          "bilinear_im_formula": -0.007561828989406198,
+          "reconstruction_error": 0.0,
+          "old_den_abs_sq": 921.7710169993123,
+          "symplectic_numerator": -6.970274797939833
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "quotient_im": -0.006543570875673707,
+          "bilinear_im_formula": -0.006543570875673707,
+          "reconstruction_error": 0.0,
+          "old_den_abs_sq": 34.22889356006797,
+          "symplectic_numerator": -0.22397919100619604
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "quotient_im": 0.004113306181270076,
+          "bilinear_im_formula": 0.004113306181270074,
+          "reconstruction_error": 1.734723475976807e-18,
+          "old_den_abs_sq": 31.004935349796707,
+          "symplectic_numerator": 0.12753279222419783
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "quotient_im": -0.0008048375535036282,
+          "bilinear_im_formula": -0.0008048375535036282,
+          "reconstruction_error": 0.0,
+          "old_den_abs_sq": 34.10231668009425,
+          "symplectic_numerator": -0.027446825125613028
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "quotient_im": 2.2817795781118035,
+          "bilinear_im_formula": 2.2817795781118044,
+          "reconstruction_error": 8.881784197001252e-16,
+          "old_den_abs_sq": 47.388759435773466,
+          "symplectic_numerator": 108.13070351260096
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "quotient_im": 0.2603806034900981,
+          "bilinear_im_formula": 0.26038060349009806,
+          "reconstruction_error": 5.551115123125783e-17,
+          "old_den_abs_sq": 2729.829488121315,
+          "symplectic_numerator": 710.7946495420936
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "quotient_im": -0.0062427081535019165,
+          "bilinear_im_formula": -0.006242708153501916,
+          "reconstruction_error": 8.673617379884035e-19,
+          "old_den_abs_sq": 919.5922850061245,
+          "symplectic_numerator": -5.740746255505191
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "quotient_im": -0.005066628211348967,
+          "bilinear_im_formula": -0.00506662821134897,
+          "reconstruction_error": 2.6020852139652106e-18,
+          "old_den_abs_sq": 34.220401177410345,
+          "symplectic_numerator": -0.17338205000914675
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "quotient_im": 0.01320992303379528,
+          "bilinear_im_formula": 0.013209923033795274,
+          "reconstruction_error": 5.204170427930421e-18,
+          "old_den_abs_sq": 31.006670342798735,
+          "symplectic_numerator": 0.40959572876263384
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "quotient_im": 0.0010023412664082363,
+          "bilinear_im_formula": 0.001002341266408236,
+          "reconstruction_error": 2.168404344971009e-19,
+          "old_den_abs_sq": 34.073129210365934,
+          "symplectic_numerator": 0.03415290348320965
+        }
+      ],
+      "max_reconstruction_error": 8.881784197001252e-16,
+      "max_abs_bilinear_im": 2.2988076646191624
+    }
+  }
+}

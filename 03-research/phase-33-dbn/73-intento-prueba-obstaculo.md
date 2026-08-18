@@ -301,7 +301,7 @@ Esto no es una prueba — es un cálculo cuantitativo que *verificaría* RH (o r
 
 ---
 
-## 12. Conclusión honesta
+## 12. Conclusión franca
 
 **No hemos probado RH.** Pero hemos identificado con precisión quirúrgica dónde está el obstáculo:
 

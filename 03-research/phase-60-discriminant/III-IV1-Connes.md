@@ -18,7 +18,7 @@ ya asentado por el tribunal, B.3). *Prueba.* `QW` es real simétrica finita ⟹ 
 en la base de-modulada, vía Lévy–Khintchine + Schoenberg + Trotter) da que el autovalor
 inferior es **simple**: `ε_1>ε_0` estricto. Si además `ε_0>0`, `γ=ε_1/ε_0−1=(ε_1−ε_0)/ε_0>0`.
 Si `ε_0<0`, la cantidad `ε_1/ε_0−1` tiene signo opuesto y la interpretación "gap" se pierde
-(Obs 0.1). ∎ **Esto es todo lo incondicional.** `ε_1−ε_0>0` a cada `λ` es estructura finita honesta. El
+(Obs 0.1). ∎ **Esto es todo lo incondicional.** `ε_1−ε_0>0` a cada `λ` es estructura finita franca. El
 salto a la *uniformidad* es donde entra el contenido. ### III.B El obstáculo de la uniformidad: por qué `liminf` es duro El gap absoluto satisface (numérica robusta, asintótica del frame crítico):
 ``` ε_0(λ) ≍ C_0/λ², ε_1(λ)−ε_0(λ) ≍ 3C_0/λ² (ambos →0 a la misma tasa).
 ```
@@ -145,7 +145,7 @@ coeficiente **variable** (Lema IV.5 sólo restringe la forma, no fija `V`). **Ve
 > refutaciones E12–E18 (IV.1); (ii) el operador de concentración natural es el prolato y su
 > borde es Airy/Bessel, NO el portador de `n²` (IV.4 — esto **refuta** la esperanza de que el
 > límite de concentración crudo dé `n²`); (iii) la paridad alternante FUERZA forma SL regular
-> de 2º orden (IV.5), y BAJO esa forma Weyl da `n²` y `γ=3` (IV.6). El hueco honesto: pinear
+> de 2º orden (IV.5), y BAJO esa forma Weyl da `n²` y `γ=3` (IV.6). El hueco franco: pinear
 > el potencial variable `V(x)` vía convergencia de resolvente. No es RH-hard, es análisis duro
 > de capa de borde, y queda **abierto**. --- ## VEREDICTO GLOBAL **III.** La uniformidad `liminf_λ γ(λ)>0` **NO es probable sin RH** y lo demuestro:
 Teorema III.3 la factoriza en (a) comparabilidad de escalas [análisis, = IV.1] y (b) `ε_0>0`

@@ -43,7 +43,7 @@ This is the convergence detector already identified in Phase 71 and the
 nodal restriction of `PW-Cauchy/NUM-GROW` from Phase 72.  Phase 74 has not
 derived a new independent estimate that proves it.
 
-## Honest status
+## Candid status
 
 ```text
 proved: finite Schur, compression, Feshbach, numerator, and root-transport

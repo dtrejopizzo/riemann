@@ -673,7 +673,7 @@ $H^1$ — es su parte impura — y eso hace a R-SIG lógicamente anterior a todo
 
 ### 6.3. Tensiones entre axiomas (donde una construcción puede ser imposible)
 
-Declararlas es parte de la honestidad: si alguna tensión es una contradicción, la
+Declararlas es parte de la franqueza: si alguna tensión es una contradicción, la
 especificación es vacía y el roadmap muere en G1–G2. No afirmamos que lo sean; afirmamos
 que toda propuesta debe resolverlas explícitamente.
 

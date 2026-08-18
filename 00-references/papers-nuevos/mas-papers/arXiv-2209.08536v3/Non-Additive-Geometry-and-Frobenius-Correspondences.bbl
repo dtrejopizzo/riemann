@@ -1,0 +1,77 @@
+\begin{thebibliography}{Ram18}
+
+\bibitem[Alm74]{A}
+Gert Almkvist.
+\newblock The {G}rothendieck ring of the category of endomorphisms.
+\newblock {\em Journal of Algebra}, 28(3):375--388, 1974.
+
+\bibitem[AT69]{AT68}
+M.~F. Atiyah and D.~O. Tall.
+\newblock Group representations, {$\lambda $}-rings and the {$J$}-homomorphism.
+\newblock {\em Topology}, 8:253--297, 1969.
+
+\bibitem[Con99]{connes1999trace}
+Alain Connes.
+\newblock Trace formula in noncommutative geometry and the zeros of the
+  {R}iemann zeta function.
+\newblock {\em Selecta Mathematica}, 5(1):29, 1999.
+
+\bibitem[Den18]{D}
+Christopher Deninger.
+\newblock Dynamical systems for arithmetic schemes.
+\newblock {\em arXiv preprint arXiv:1807.06400}, 2018.
+
+\bibitem[DG71]{EGB}
+Jean Dieudonn{\'e} and Alexandre Grothendieck.
+\newblock {\em {\'E}l{\'e}ments de g{\'e}om{\'e}trie alg{\'e}brique}, volume
+  166.
+\newblock Springer Berlin Heidelberg New York, 1971.
+
+\bibitem[Har91]{Har90}
+Shai Haran.
+\newblock Index theory, potential theory, and the {R}iemann hypothesis.
+\newblock In {\em {$L$}-functions and arithmetic ({D}urham, 1989)}, volume 153
+  of {\em London Math. Soc. Lecture Note Ser.}, pages 257--270. Cambridge Univ.
+  Press, Cambridge, 1991.
+
+\bibitem[Har01]{Har01}
+M.~J.~Shai Haran.
+\newblock {\em The mysteries of the real prime}, volume~25 of {\em London
+  Mathematical Society Monographs. New Series}.
+\newblock The Clarendon Press, Oxford University Press, New York, 2001.
+
+\bibitem[Har07]{H07}
+Shai Haran.
+\newblock Non-additive geometry.
+\newblock {\em Compositio Mathematica}, 143(3):618--688, 2007.
+
+\bibitem[Har17]{H17}
+Shai Haran.
+\newblock {\em New foundations for geometry: Two non-additive languages for
+  arithmetical geometry}, volume 246.
+\newblock Memoires of the {A}merican {M}athematical {S}ociety, 2017.
+
+\bibitem[Har22]{H22}
+Shai Haran.
+\newblock Homotopy and arithmetic.
+\newblock {\em arXiv preprint arXiv:2204.03107}, 2022.
+
+\bibitem[KS18]{KS}
+Robert~A. Kucharczyk and Peter Scholze.
+\newblock Topological realisations of absolute galois groups.
+\newblock In James~W. Cogdell, G{\"u}nter Harder, Stephen Kudla, and Freydoon
+  Shahidi, editors, {\em Cohomology of Arithmetic Groups}, pages 201--288,
+  Cham, 2018. Springer International Publishing.
+
+\bibitem[Ram18]{R}
+Srinivasa Ramanujan.
+\newblock On certain trigonometrical sums and their applications in the theory
+  of numbers.
+\newblock {\em Trans. Cambridge Philos. Soc}, 22(13):259--276, 1918.
+
+\bibitem[Wei66]{weil1966fonction}
+Andr{\'e} Weil.
+\newblock Fonction z{\^e}ta et distributions.
+\newblock {\em S{\'e}minaire Bourbaki}, 9(312):523--531, 1966.
+
+\end{thebibliography}

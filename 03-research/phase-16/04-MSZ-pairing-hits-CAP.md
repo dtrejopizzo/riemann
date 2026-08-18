@@ -58,7 +58,7 @@ Two fingerprints tie Route A's pairing to the Phase-4 / CAP walls:
 
 ---
 
-## Net result for Route A (honest)
+## Net result for Route A (candid)
 - **Pillar 1 (spectrum):** zeros present as scattering resonances ✓ (partial: resonances, not clean $L^2$ spectrum).
 - **Pillar 2 (pairing):** the **natural resonance pairing is definite (Bochner), not the indefinite $Q$** — it does
   not carry $\kappa$, and is regularization-dependent. **The MSZ route to Pillar 2 fails, and it fails by CAP.**

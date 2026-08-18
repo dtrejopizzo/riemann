@@ -1,7 +1,7 @@
 # E67.15 — The forcing theorem: what is proved, what is Omega_7 in disguise, and the real gap
 
 **Date:** 2026-07-06.
-**Role:** formulate the remaining Phase-67 statement honestly, separating the trivial part from the
+**Role:** formulate the remaining Phase-67 statement candidly, separating the trivial part from the
 content, and grounding it in the E67.15 numerical probe.
 
 ## Setup (from E67.9–E67.14)
@@ -27,7 +27,7 @@ overlay. Do NOT q-deform the form (that contaminated and fabricated: E67.12/E67.
 If `sum_n a_n (q^2)^n = 0` identically, every `a_n = 0`, so `Pi_{N,-} e_n = 0` for all `n`, so
 `Pi_{N,-} = 0`. ∎
 
-**Honest labelling.** FQT is valid but carries no content: it is the statement "a positive-semidefinite
+**Candid labelling.** FQT is valid but carries no content: it is the statement "a positive-semidefinite
 projection with zero trace is zero." The pivotal `G_q` adds nothing — at `q=1` it is already
 `Tr(Pi_{N,-}) = 0  <=>  Pi_{N,-} = 0  <=>  D_N >= 0`. The polynomial dressing is decoration. FQT is not
 where any difficulty lives, and should not be credited as an advance.
@@ -64,7 +64,7 @@ negligible-faithfulness bridge (E67.14), which is **unproven**. So what the quan
 (one root) is strictly weaker than what the clean theorem needs (many roots), and closing that gap is
 itself nontrivial.
 
-## Part 4 — numerical probe (E67.15), honestly read
+## Part 4 — numerical probe (E67.15), candidly read
 
 `z0=100-i`, `y=1`, `N=12` (script `E67_15_resolvent_probe.py`):
 
@@ -90,7 +90,7 @@ spectral residue vanishes as a q-polynomial for every N.
 ```
 
 Only that turns Part 2 from a restatement of `Omega_7` into a reduction. The E67.15 probe suggests the
-form is not elementary; the honest next step is to test whether `D_N` (equivalently its resolvent
+form is not elementary; the candid next step is to test whether `D_N` (equivalently its resolvent
 trace) has ANY q-hypergeometric / contiguous-relation structure inherited from the `Gamma_q` carrier,
 before assuming a fusion identity exists.
 
@@ -104,6 +104,6 @@ probe                 : framing consistent; masses a_n irregular => no obvious c
 real target           : closed form for R_N(z;q) from Gamma_q, independent of the zeros
 ```
 
-Phase 67's honest endpoint: the right object (signed index), the right architecture (exact form +
+Phase 67's candid endpoint: the right object (signed index), the right architecture (exact form +
 pivotal overlay), a satisfied precondition (E67.14), and a precisely located hard problem — with no
 claim that `Omega_7` has been reduced to anything easier.

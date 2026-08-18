@@ -16,7 +16,7 @@ mesh tails that cannot be integrated by parts to all orders.
 
 Smooth and Gevrey cutoffs improve formal integration by parts, but they
 change the exact finite CCM matrix unless the Hilbert/product-rule identities
-are rebuilt with the new weight.  When rebuilt honestly, the resulting signed
+are rebuilt with the new weight.  When rebuilt candidly, the resulting signed
 remainder is still the recombined Euler/Gamma object from P75.004-P75.006.
 
 Paley-Wiener compact support is incompatible with simultaneously keeping the

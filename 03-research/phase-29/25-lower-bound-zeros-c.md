@@ -109,7 +109,7 @@ luego $N_{C_\infty}(T) = N_\Xi^{crit}(T) + O(\log T)$.
 
 ---
 
-## 7. El resumen honesto: el gap es estructuralmente circular
+## 7. El resumen franco: el gap es estructuralmente circular
 
 **Teorema 3** (caracterización del gap sin circularidad). Las siguientes afirmaciones son equivalentes, y ninguna se puede deducir incondicionalmente de las demás sin usar RH:
 

@@ -11,7 +11,7 @@ muro como estructura.
 
 **Contrato creativo (regla absoluta de etiquetado):** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado DE VERDAD acá, prueba completa, estándar máximo; resultados
-externos citados con precisión. **[PUENTE]** = conexión con ζ/RH con estatus honesto de cada eslabón, y
+externos citados con precisión. **[PUENTE]** = conexión con ζ/RH con estatus franco de cada eslabón, y
 explícitamente NO una equivalencia de RH. **[DESEO]** = declarado sin vergüenza. **[GAP]** = declarado,
 incluidos los [GAP de literatura].
 
@@ -55,7 +55,7 @@ incluidos los [GAP de literatura].
    unilateral, soporte/analiticidad, simetría). Damos un invariante —el **tipo de transversalidad**— que
    clasifica colapsadores y señala dónde buscaría uno nuevo (§5.2).
 
-6. **(§6) [PUENTE honesto, breve]** Diccionario con la forma de Weil: $H$, $A$ (promedio sobre ventanas /
+6. **(§6) [PUENTE franco, breve]** Diccionario con la forma de Weil: $H$, $A$ (promedio sobre ventanas /
    media de Cesàro–MV74), $F$ (la contribución oscilatoria cero-a-cero), y qué significaría $\delta_A(F)=0$.
    Estatus: **no es una equivalencia de RH**; identifica qué input estructural (positividad estricta del símbolo,
    Doc 134) sería el colapsador, y por qué el muro es justamente "$\delta_A>0$ sin input".
@@ -454,9 +454,9 @@ transversalidad); su negación sería el quinto colapsador. Ambos quedan abierto
 
 ---
 
-## 6. [PUENTE honesto y breve] El diccionario con la forma de Weil
+## 6. [PUENTE franco y breve] El diccionario con la forma de Weil
 
-**Advertencia de honestidad.** Esta sección es SÓLO un diccionario. **No** convierte el documento en una
+**Advertencia de franqueza.** Esta sección es SÓLO un diccionario. **No** convierte el documento en una
 equivalencia de RH, **no** prueba nada sobre ζ, y declara el estatus de cada eslabón.
 
 | Objeto de la teoría | Realización en la forma de Weil |
@@ -474,7 +474,7 @@ símbolo/compacto"). Por el Teorema 3.4 de este documento, **ningún argumento q
 individuar los ceros**: hace falta un input externo.
 
 **Cuál input.** El candidato es positividad (Teorema 4.1) en la forma de positividad esencial *estricta* del
-símbolo (Doc 134). Estatus de cada eslabón, honesto:
+símbolo (Doc 134). Estatus de cada eslabón, franco:
 - "El promedio sobre ventanas es una proyección $A$": **plausible y formalizado** en Doc 134 (corona), pero
   la normalización de peso fijo destruye el gap incondicionalmente (Doc 134 Teorema 2.2) — el $A$ correcto no
   es trivial. [GAP].

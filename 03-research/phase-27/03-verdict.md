@@ -143,4 +143,4 @@ cuerpos de funciones (Weil 1948).
 
 **El obstáculo final está identificado con más precisión que en cualquier punto anterior del programa.**
 
-Eso es lo máximo que un programa analítico honesto puede lograr para un problema de 166 años.
+Eso es lo máximo que un programa analítico franco puede lograr para un problema de 166 años.

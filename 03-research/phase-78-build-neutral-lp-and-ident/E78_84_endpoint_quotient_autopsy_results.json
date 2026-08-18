@@ -1,0 +1,64 @@
+{
+  "statement": "Autopsy of whether the left-endpoint quotient is carried more directly by curvature or by u-sector size.",
+  "sources": {
+    "weighted_quotient": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_83_weighted_quotient_results.json",
+    "curvature": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_24_safe_u_curvature_results.json",
+    "left_endpoint_points": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ag_margin_lower_bound_zeta_sigma1_n24.json"
+  },
+  "rows": [
+    {
+      "N": 8,
+      "quotient": 0.32033520392027215,
+      "curvature_scale": 1.528127039773157,
+      "u_abs": 0.027999122944489512,
+      "sector_margin": 0.02624252803589129,
+      "cone_ratio_M": 0.992586656715795
+    },
+    {
+      "N": 10,
+      "quotient": 0.21977168960714427,
+      "curvature_scale": 1.8207235998762177,
+      "u_abs": 0.017618071254019173,
+      "sector_margin": 0.013553686304317865,
+      "cone_ratio_M": 0.9129066442177365
+    },
+    {
+      "N": 12,
+      "quotient": 0.21345882344908146,
+      "curvature_scale": 1.70399588774226,
+      "u_abs": 0.01174540620258734,
+      "sector_margin": 0.010496585686650736,
+      "cone_ratio_M": 0.9795206958940443
+    },
+    {
+      "N": 14,
+      "quotient": 0.1519253930881376,
+      "curvature_scale": 2.122605497711643,
+      "u_abs": 0.008549017169106143,
+      "sector_margin": 0.006396059212869853,
+      "cone_ratio_M": 0.8978742683488453
+    },
+    {
+      "N": 16,
+      "quotient": 0.16148347761058626,
+      "curvature_scale": 1.9068983459460138,
+      "u_abs": 0.006265679495851538,
+      "sector_margin": 0.005396896521702941,
+      "cone_ratio_M": 0.9661211548506337
+    },
+    {
+      "N": 18,
+      "quotient": 0.12692875635722015,
+      "curvature_scale": 1.607695564922681,
+      "u_abs": 0.005088865069693107,
+      "sector_margin": 0.00296406873494845,
+      "cone_ratio_M": 0.7506162328119272
+    }
+  ],
+  "correlations": {
+    "quotient_vs_curvature_scale": -0.5222208242198201,
+    "quotient_vs_u_abs": 0.9723357375817845,
+    "quotient_vs_sector_margin": 0.9886857350313464,
+    "quotient_vs_cone_ratio_M": 0.6756517757346858
+  }
+}

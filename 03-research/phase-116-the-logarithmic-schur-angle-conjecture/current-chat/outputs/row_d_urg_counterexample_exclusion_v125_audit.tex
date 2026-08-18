@@ -1,0 +1,285 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\title{Excluding the almost-constant counterexample to URGT$_1$ (v125)}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The first Gamma channel and the only dangerous band}
+
+For $a_j=2j+\frac12$ put
+\begin{equation}
+ g_j(\tau)=\frac{2\tau^2}{a_j(a_j^2+\tau^2)},
+ \qquad g_\Gamma(\tau)=\sum_{j\ge0}g_j(\tau).              \tag{1}
+\end{equation}
+The first channel, $a_0=\frac12$, is
+\begin{equation}
+ g_0(\tau)=\frac{4\tau^2}{\tau^2+\frac14}.                \tag{2}
+\end{equation}
+
+\begin{lemma}[Localization of every possible Gamma deficit --- \PROVED]
+One has
+\begin{equation}
+ g_0(\tau)\ge1
+ \quad\Longleftrightarrow\quad
+ |\tau|\ge\frac1{\sqrt{12}}.                              \tag{3}
+\end{equation}
+Consequently, for every $f$ in the Gamma form domain,
+\begin{equation}
+ \mathcal G_\Gamma[f]-\|f\|^2
+ \ge
+ \int_{|\tau|<1/\sqrt{12}}
+       (g_\Gamma(\tau)-1)|\widehat f(\tau)|^2
+       \frac{d\tau}{2\pi}.                               \tag{4}
+\end{equation}
+In particular, every counterexample to URGT$_1$ must concentrate its
+physical leakage in the fixed band
+$|\tau|<1/\sqrt{12}$; no $N$-dependent enlargement of that band is
+possible.
+\end{lemma}
+
+\begin{proof}
+Equation (3) follows by multiplying (2) by
+$\tau^2+\frac14>0$.  Outside the band in (3), the first summand alone is
+at least one, and every remaining summand in (1) is nonnegative.  Dropping
+the nonnegative exterior part gives (4).
+\end{proof}
+
+\section{Exact factorization of the depth-one rational polynomial}
+
+Let
+\begin{equation}
+ A_N(\tau)=\sum_{n\le N}\frac{\Lambda(n)}{\sqrt n}\,n^{-i\tau}.
+                                                                    \tag{5}
+\end{equation}
+For the depth-one coefficient in v124 define
+\begin{equation}
+ \Phi_{N,1}(\tau)=
+ \sum_{a/b\in\mathscr R_N^{\rm leak}}
+ \ell_{N,1}(a,b)(a/b)^{-i\tau}.                            \tag{6}
+\end{equation}
+
+\begin{proposition}[Full pair product minus the divisibility return ---
+\PROVED]
+One has the exact identity
+\begin{equation}
+ \boxed{
+ \Phi_{N,1}(\tau)
+ =\frac{|A_N(\tau)|^2}{\log N}-D_N(\tau),}                \tag{7}
+\end{equation}
+where
+\begin{equation}
+ D_N(\tau)=\frac1{\log N}
+ \sum_{\substack{m,n\le N\\n\mid m}}
+ \frac{\Lambda(m)\Lambda(n)}{\sqrt{mn}}
+ \left(\frac mn\right)^{-i\tau}.                         \tag{8}
+\end{equation}
+For every fixed $R>0$,
+\begin{equation}
+ \sup_{|\tau|\le R}|D_N(\tau)|=O(\log N).                \tag{9}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Expanding $|A_N(\tau)|^2$ gives all ordered pairs $(m,n)$ with weight
+$\Lambda(m)\Lambda(n)/\sqrt{mn}$ and label $m/n$.  Aggregating equal
+reduced fractions gives (2) of v124.  The label is an integer exactly when
+$n\mid m$, which is (8).  This proves (7).
+
+For (9), a nonzero summand in (8) has $n=p^r$ and $m=p^s$ for a common
+prime $p$ and $1\le r\le s$.  Hence, uniformly in real $\tau$,
+\[
+ |D_N(\tau)|
+ \le\frac1{\log N}\sum_{p^s\le N}(\log p)^2
+       \sum_{1\le r\le s}p^{-(r+s)/2}.
+\]
+The stratum $r=s=1$ is $O((\log N)^2)$ by partial summation from the prime
+number theorem.  The strata with $r+s\ge3$ are no larger after summing the
+geometric tails.  Division by $\log N$ proves (9).
+\end{proof}
+
+\begin{corollary}[Compact-frequency continuum limit --- \PROVED]
+For every fixed $R>0$,
+\begin{equation}
+ \boxed{
+ \sup_{|\tau|\le R}
+ \left|
+ \frac{\log N}{N}\Phi_{N,1}(\tau)
+ -\frac1{\tau^2+\frac14}
+ \right|\longrightarrow0.}                               \tag{10}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Uniform partial summation of the prime number theorem on compact
+$\tau$-sets gives
+\begin{equation}
+ \frac{A_N(\tau)}{\sqrt N}
+ =\frac{N^{-i\tau}}{\frac12-i\tau}+o_R(1).                 \tag{11}
+\end{equation}
+Therefore
+$|A_N(\tau)|^2/N\to(\tau^2+\frac14)^{-1}$ uniformly on
+$[-R,R]$.  Equations (7) and (9) show that the normalized divisibility
+return is $O((\log N)^2/N)=o(1)$.  This proves (10).
+\end{proof}
+
+\section{The critical model pays exactly one unit}
+
+Put $b=\frac12$ and
+\begin{equation}
+ W_*(\tau)=\frac1{(\tau^2+b^2)^2}.                         \tag{12}
+\end{equation}
+This is the squared continuum profile supplied by (10).
+
+\begin{theorem}[Exact critical Gamma normalization --- \PROVED]
+For every $a>0$,
+\begin{equation}
+ \frac{displaystyle
+  \int_{\mathbb R}
+  \frac{2\tau^2}{a(a^2+\tau^2)}W_*(\tau)\,d\tau}
+ {\displaystyle\int_{\mathbb R}W_*(\tau)\,d\tau}
+ =\frac{2b^2}{a(a+b)^2}.                                   \tag{13}
+\end{equation}
+Consequently
+\begin{align}
+ \frac{\int g_0W_*}{\int W_*}&=1,                         \tag{14}\\
+ \frac{\int g_\Gamma W_*}{\int W_*}
+ &=1+\eta_\Gamma,                                         \tag{15}\\
+ \eta_\Gamma
+ &:=\sum_{j\ge1}
+ \frac{1/2}{(2j+\frac12)(2j+1)^2}
+ >\frac1{45}.                                              \tag{16}
+\end{align}
+Thus the first Gamma channel pays the unit norm exactly on the unique
+continuum profile suggested by a coherent depth-one leakage cloud.  The
+second Gamma channel already supplies the strict surplus $1/45$; all
+later channels add further positive energy.
+\end{theorem}
+
+\begin{proof}
+First,
+\begin{equation}
+ \int_{\mathbb R}\frac{d\tau}{(\tau^2+b^2)^2}
+ =\frac{\pi}{2b^3}.                                       \tag{17}
+\end{equation}
+Also
+\[
+ \int_{\mathbb R}
+ \frac{\tau^2,d\tau}{(\tau^2+a^2)(\tau^2+b^2)}
+ =\frac\pi{a+b}.
+\]
+Differentiating this identity with respect to $b$ gives
+\begin{equation}
+ \int_{\mathbb R}
+ \frac{\tau^2,d\tau}
+      {(\tau^2+a^2)(\tau^2+b^2)^2}
+ =\frac\pi{2b(a+b)^2}.                                    \tag{18}
+\end{equation}
+Multiplication by $2/a$ and division by (17) proves (13).  Taking
+$a=b=\frac12$ gives (14).  Substitution of
+$a_j=2j+\frac12$ gives (15)--(16).  The first omitted term, $j=1$, is
+\[
+ \frac{1/2}{(5/2)3^2}=\frac1{45},
+\]
+and all subsequent terms are positive.
+\end{proof}
+
+\section{What the counterexample experiment now proves}
+
+Let
+\begin{equation}
+ e_N(t)=\delta_N^{-1/2}\mathbf1_{(0,\delta_N)}(t).          \tag{19}
+\end{equation}
+On every fixed frequency interval,
+$|\widehat e_N(\tau)|^2/\delta_N\to1$ uniformly.  Combining this with
+(10) and Theorem 4 shows that the proposed almost-constant obstruction has
+the critical Gamma ratio $1+\eta_\Gamma$, not a ratio below one.  A fully
+rigorous passage over the whole real line uses (3): outside the fixed
+deficit band the integrand of
+$\mathcal G_\Gamma-\|\cdot\|^2$ is nonnegative, so only compact-frequency
+convergence is needed for the lower bound.
+
+\begin{corollary}[No depth-one almost-constant counterexample ---
+\PROVED]
+For the profiles (19),
+\begin{equation}
+ \liminf_{N\to\infty}
+ \frac{
+ \mathcal G_\Gamma[L_{N,1}e_N]
+ -\|L_{N,1}e_N\|^2}
+ {\delta_NN^2/(\log N)^2}
+ \ge
+ \eta_\Gamma
+ \int_{\mathbb R}W_*(\tau)\frac{d\tau}{2\pi}>0.          \tag{20}
+\end{equation}
+In particular, the coherent depth-one leakage with a constant cell
+profile satisfies the Gamma domination strictly for all sufficiently
+large $N$, even before adding the Tate terminal.
+\end{corollary}
+
+\begin{proof}
+Fix $R>1/\sqrt{12}$.  On $[-R,R]$, use (10) and the uniform convergence
+$|\widehat e_N|^2/\delta_N\to1$.  Outside the deficit band, the integrand
+$g_\Gamma-1$ is nonnegative by (3), so it may be discarded when taking a
+lower bound.  Let first $N\to\infty$ and then $R\to\infty$.
+Equations (15)--(16) give (20).
+\end{proof}
+
+\paragraph{Scope of the exclusion.}
+Corollary 5 eliminates the most dangerous proposed counterexample and
+explains the unit normalization.  It is not yet the full URGT$_1$ theorem,
+because an arbitrary cell profile may have zero mean, and all Witt depths
+must be handled simultaneously.  A remaining counterexample would have
+to satisfy all three conditions:
+\begin{enumerate}
+ \item it is asymptotically orthogonal to the constant cell profile;
+ \item its leakage remains concentrated in $|\tau|<1/\sqrt{12}$ despite
+       support of the source in a cell of length $\delta_N\asymp N^{-1}$;
+ \item the higher-depth polynomials cancel the strict surplus (16), even
+       though depths are orthogonal and every Gamma summand is positive.
+\end{enumerate}
+The next theorem to prove is therefore the uniform mean-zero stability
+estimate
+\begin{equation}
+ \boxed{
+ \sum_{k\ge1}\int_{|\tau|<1/\sqrt{12}}
+ (1-g_\Gamma(\tau))
+ |\widehat e_0(\tau)|^2|\Phi_{N,k}(\tau)|^2\frac{d\tau}{2\pi}
+ \le
+ \sum_{k\ge1}\int_{|\tau|\ge1/\sqrt{12}}
+ (g_\Gamma(\tau)-1)
+ |\widehat e_0(\tau)|^2|\Phi_{N,k}(\tau)|^2\frac{d\tau}{2\pi}
+ +\mathcal T_N(e_0),}                                      \tag{21}
+\end{equation}
+where $\int_0^{\delta_N}e_0=0$.  Unlike v124 (20), (21) has removed the
+only saturating scalar mode.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.57\linewidth}
+                >{\centering\arraybackslash}p{.14\linewidth}
+                >{\raggedright\arraybackslash}p{.19\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Fixed dangerous frequency band & \PROVED & (2)--(4) \\
+Exact depth-one product/divisibility split & \PROVED & (7)--(9) \\
+Continuum leakage profile & \PROVED & (10)--(11) \\
+First Gamma channel pays exactly one & \PROVED & (13)--(14) \\
+Strict higher-Gamma margin $>1/45$ & \PROVED & (15)--(16) \\
+No almost-constant depth-one counterexample & \PROVED & (19)--(20) \\
+Uniform mean-zero stability, all depths & \OPEN & (21) \\
+URGT$_1$, $G$, row (d) & \OPEN & after (21) and finite audit \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

@@ -119,7 +119,7 @@ Thus (T) reduces to the single continuity statement:
 
 ---
 
-## Part IV — honest terminal status (for the auditor)
+## Part IV — candid terminal status (for the auditor)
 
 **(★) is the whole of Ω₇, stated three equivalent ways** (HB continuity / Kreĭn–Langer index continuity
 / rank-one escape boundedness). The spine above is complete and rigorous through step III.3; step III.4

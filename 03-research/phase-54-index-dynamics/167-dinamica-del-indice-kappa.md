@@ -3,7 +3,7 @@
 **Programa:** Hipótesis de Riemann — Fase 54 (dinámica del índice)
 **Fecha:** 2026-06-10
 **Prerrequisitos:** Phase 26 (κ=2m, espacio de Pontryagin), Phase 28 (DBN = gradiente de E_log), Phase 33 / Docs 70–72 (traza T_λ(t), derivada temporal, fórmula de Weil), Phase 44 / Doc 132 (B.4, δ=1 prohibido), Phase 46 / Doc 143 (exponente Lehmer = 2; LP-134/LP-143), Phase 48 / Doc 144 (contraejemplo de Hadamard, m=∞ analítico), Phases 52–53 (ζ ES la dualidad; el muro en lenguaje de Krein).
-**Contrato:** [DEFINICIÓN-NUEVA] libre; [TEOREMA]/[PROP]/[LEMA] con prueba completa o sin etiqueta; [PUENTE] honesto; [GAP]/[DESEO] declarados. **Este documento NO intenta probar κ=0.** El objeto es κ mismo: su cuantización, sus muros, su dinámica.
+**Contrato:** [DEFINICIÓN-NUEVA] libre; [TEOREMA]/[PROP]/[LEMA] con prueba completa o sin etiqueta; [PUENTE] franco; [GAP]/[DESEO] declarados. **Este documento NO intenta probar κ=0.** El objeto es κ mismo: su cuantización, sus muros, su dinámica.
 
 ---
 
@@ -52,7 +52,7 @@ Para $\zeta$: cada cuádruplo off-line $\{\rho, \bar\rho, 1-\rho, 1-\bar\rho\}$ 
 
 Topología: la inducida por convergencia **local de Hurwitz** — $Z_n \to Z$ si las medidas de conteo convergen vagamente y, en cada compacto cuya frontera evita $Z$, los conteos coinciden eventualmente. Un **camino admisible** es $u \mapsto Z_u$ continuo en esta topología; lo llamamos **propio** si existe un compacto $K$ que contiene $\{z \in Z_u : \operatorname{Im} z \ne 0\}$ para todo $u$ (los ceros no reales no escapan al infinito ni entran desde él).
 
-*Por qué hace falta "propio":* en la topología vaga sola, un par no real puede deslizarse hacia $\operatorname{Re} z \to \infty$ y "desaparecer", cambiando κ sin evento local. La propiedad es la hipótesis honesta mínima; para el flujo DBN con $\kappa<\infty$ se cumple automáticamente en intervalos compactos de tiempo (los ceros se mueven con velocidad localmente acotada, Lema 2.1).
+*Por qué hace falta "propio":* en la topología vaga sola, un par no real puede deslizarse hacia $\operatorname{Re} z \to \infty$ y "desaparecer", cambiando κ sin evento local. La propiedad es la hipótesis franca mínima; para el flujo DBN con $\kappa<\infty$ se cumple automáticamente en intervalos compactos de tiempo (los ceros se mueven con velocidad localmente acotada, Lema 2.1).
 
 ### 1.2. Los dos muros
 
@@ -83,7 +83,7 @@ $$\kappa(Z_u) = \frac{1}{2\pi i} \oint_{\partial R} \frac{F_u'(z)}{F_u(z)}\,dz =
 
 ### 1.4. El muro es una colisión de Kreĭn: por qué "Maslov" es el nombre correcto
 
-**[PUENTE 1.5] (colisión de signaturas).** Vía el teorema-puente de Phase 26 (κ = neg.ind de la forma de Weil $Q$; los ceros off-line = autovalores no reales del operador $Q$-simétrico $H_C$ en el espacio de Pontryagin $(\mathcal{K}, Q)$), el cruce de $W_{\mathrm{col}}$ es exactamente el mecanismo clásico de **colisión de Kreĭn**: en un espacio con producto indefinido, un par de autovalores reales de un operador $Q$-autoadjunto solo puede abandonar el eje real mediante la colisión de dos autovalores de **signatura de Kreĭn opuesta**; en la colisión se forma un bloque de Jordan y el par sale a $\mathbb{C}$ llevándose un plano hiperbólico (un $+$ y un $-$) del espacio. Esto es el criterio de estabilidad fuerte de Kreĭn (1950) y Gel'fand–Lidskii (1955) para sistemas Hamiltonianos lineales periódicos; exposición moderna: MacKay 1986; marco abstracto: Bognár 1974, Azizov–Iokhvidov 1989. El estatus de puente es honesto: la identificación operatorial completa depende de V.1–V.4 de Phase 26 (abiertas); la versión **configuracional** (Teorema 1.4) es incondicional.
+**[PUENTE 1.5] (colisión de signaturas).** Vía el teorema-puente de Phase 26 (κ = neg.ind de la forma de Weil $Q$; los ceros off-line = autovalores no reales del operador $Q$-simétrico $H_C$ en el espacio de Pontryagin $(\mathcal{K}, Q)$), el cruce de $W_{\mathrm{col}}$ es exactamente el mecanismo clásico de **colisión de Kreĭn**: en un espacio con producto indefinido, un par de autovalores reales de un operador $Q$-autoadjunto solo puede abandonar el eje real mediante la colisión de dos autovalores de **signatura de Kreĭn opuesta**; en la colisión se forma un bloque de Jordan y el par sale a $\mathbb{C}$ llevándose un plano hiperbólico (un $+$ y un $-$) del espacio. Esto es el criterio de estabilidad fuerte de Kreĭn (1950) y Gel'fand–Lidskii (1955) para sistemas Hamiltonianos lineales periódicos; exposición moderna: MacKay 1986; marco abstracto: Bognár 1974, Azizov–Iokhvidov 1989. El estatus de puente es franco: la identificación operatorial completa depende de V.1–V.4 de Phase 26 (abiertas); la versión **configuracional** (Teorema 1.4) es incondicional.
 
 **Esta es la respuesta estructural a la pregunta del director (nivel 1):** las direcciones negativas vienen en paquetes discretos porque *nacen por pares en colisiones de signatura* — el mismo mecanismo por el que los modos inestables de un sistema Hamiltoniano estable no aparecen gradualmente sino por cuantos, en resonancias de Kreĭn. En la física esto produce los teoremas de conteo de índice (Kapitula–Kevrekidis–Sandstede 2004, "Counting eigenvalues via the Krein signature...": el número de modos inestables está acotado por el índice negativo de la energía; criterio de Vakhitov–Kolokolov 1973 como caso escalar). El diccionario es exacto: modos inestables ↔ cuádruplos off-line; índice negativo de la Hessiana de energía ↔ κ = neg.ind(Q); resonancia de Kreĭn ↔ par de Lehmer en el muro.
 
@@ -164,7 +164,7 @@ Sumando, $dI/dt = -2\kappa - D$ con $D \ge 0$ como en el enunciado. La convergen
 
 $$\frac{dI}{dt} \le -4 \quad \text{en } (t_0, \Lambda) \qquad\Longrightarrow\qquad \Lambda \;\le\; t_0 + \tfrac14\, I(t_0).$$
 
-($I$ es continua a través de las colisiones: los ceros se mueven continuamente y en un aterrizaje el término que se extingue tiende a 0.) En particular, si $\kappa(0) < \infty$ (la mitad de finitud, **no probada**): $\Lambda \le \tfrac14 I(0^+) \le \tfrac14 \cdot \kappa(0)\cdot \sup_k \beta_k(0)^2 \le \kappa(0)/16$, usando $\beta \le 1/2$. *Honesto:* esta cadena es **condicional a $m < \infty$**; no compite con [dB]/[KKL] (incondicionales) salvo cuando $\kappa(0)$ es pequeño, y es del mismo espíritu "energético" que el método de barrera de [P15].
+($I$ es continua a través de las colisiones: los ceros se mueven continuamente y en un aterrizaje el término que se extingue tiende a 0.) En particular, si $\kappa(0) < \infty$ (la mitad de finitud, **no probada**): $\Lambda \le \tfrac14 I(0^+) \le \tfrac14 \cdot \kappa(0)\cdot \sup_k \beta_k(0)^2 \le \kappa(0)/16$, usando $\beta \le 1/2$. *Franco:* esta cadena es **condicional a $m < \infty$**; no compite con [dB]/[KKL] (incondicionales) salvo cuando $\kappa(0)$ es pequeño, y es del mismo espíritu "energético" que el método de barrera de [P15].
 
 **[COR 2.5] (la frontera $\Lambda = 0$ como balance energético; reformulación de Rodgers–Tao).** Por [RT], $\Lambda \ge 0$, luego $\kappa(t) > 0$ para todo $t < 0$. En cualquier intervalo $(t, 0)$ con dinámica bien definida y $\kappa$ finito, el Teorema 2.3 da $I(t) \ge I(0^+) + 4|t|$; si $\kappa$ o $I$ son infinitos en $(t,0)$ la conclusión vale trivialmente. Es decir:
 
@@ -182,7 +182,7 @@ El exponente $1/2$ ($\beta \sim \sqrt{2(t_c - t)}$) es el **mismo pliegue** de l
 
 ### 2.5. ¿Qué se conserva?
 
-Respuesta honesta y completa:
+Respuesta franca y completa:
 
 1. **La paridad de κ** (fuera de $W_{\mathrm{Sieg}}$): conservada absolutamente. Trivial pero no vacía: es lo que prohíbe el escape "de a uno".
 2. **κ entre muros:** conservado (Teorema 1.4) — κ es la "carga topológica" y los muros son los únicos vértices de des-excitación. Junto con el signo del cruce: bajo DBN los cruces son **solo de bajada** ([dB]: realidad absorbente; nuestro Cor 2.4 lo cuantifica). κ es un entero monótono escalonado: la des-excitación en cascada de un sistema cuantizado.
@@ -216,13 +216,13 @@ es estricta en la clase analítica (Doc 144 separa los dos del medio). Pregunta 
 
 ## 4. ¿Por qué pares y no continuo? — qué añade la aritmética
 
-Respuesta en tres capas, con la honestidad exigida:
+Respuesta en tres capas, con la franqueza exigida:
 
 **(a) La discretitud es barata.** Cualquier objeto de la clase de ξ (entera de orden 1, real en la línea, ecuación funcional) tiene ceros aislados; la "negatividad" de la forma de Weil asociada está soportada en átomos (cada cuádruplo aporta un plano hiperbólico de dimensión finita al espacio negativo — Phase 26/44). Una "densidad continua de negatividad" exigiría espectro no-real continuo, imposible para una entera no nula. **Esto no es profundo:** es Hadamard. En la clase analítica la cuantización es gratis.
 
 **(b) La paridad y el empaquetamiento son simetría, no aritmética.** κ ∈ 2ℤ es el grupo de Klein (Prop 1.3); el nacimiento/muerte por pares es la colisión de Kreĭn (Puente 1.5) — válida para cualquier $Q$-dinámica, sin un solo primo.
 
-**(c) La finitud es lo único que la aritmética debe pagar — y es la mitad Fredholm otra vez. Lo decimos sin adornos.** El contraejemplo del Doc 144 muestra $m = \infty$ realizable analíticamente: ningún argumento de carga topológica en la clase analítica puede dar κ < ∞. Lo que la aritmética añade no es un mecanismo de cuantización extra, sino (conjeturalmente) una **obstrucción de compacidad**: B.4 (Doc 132) dice que positividad esencial módulo compactos ⟹ δ < ∞; el contenido aritmético necesario es que el "símbolo" de la forma de Weil (la parte que ven los primos en promedio) sea positivo, dejando la negatividad en un compacto. El presente documento añade a ese cuadro solo dos cosas: (i) la versión dinámica — la finitud es una condición de **frontera del flujo** ($\kappa(t)$ acotado o al menos integrable en $t\to 0^+$, Prop 3.2), no una condición estática misteriosa: el interior $t>0$ ya es finito gratis [KKL]; (ii) el escalón intermedio $I(0^+)<\infty$ (GAP 167.A), que es la forma $\ell^2$ —no de conteo— de la finitud, y por tanto el primer candidato si la ruta es espectral-esencial. Veredicto honesto del punto 3 del mandato: **"nada nuevo" en cuanto a mecanismo de cuantización; la finitud es Fredholm; lo nuevo es la coordenada (frontera del flujo, norma $\ell^2$) en la que la mitad Fredholm debe medirse.**
+**(c) La finitud es lo único que la aritmética debe pagar — y es la mitad Fredholm otra vez. Lo decimos sin adornos.** El contraejemplo del Doc 144 muestra $m = \infty$ realizable analíticamente: ningún argumento de carga topológica en la clase analítica puede dar κ < ∞. Lo que la aritmética añade no es un mecanismo de cuantización extra, sino (conjeturalmente) una **obstrucción de compacidad**: B.4 (Doc 132) dice que positividad esencial módulo compactos ⟹ δ < ∞; el contenido aritmético necesario es que el "símbolo" de la forma de Weil (la parte que ven los primos en promedio) sea positivo, dejando la negatividad en un compacto. El presente documento añade a ese cuadro solo dos cosas: (i) la versión dinámica — la finitud es una condición de **frontera del flujo** ($\kappa(t)$ acotado o al menos integrable en $t\to 0^+$, Prop 3.2), no una condición estática misteriosa: el interior $t>0$ ya es finito gratis [KKL]; (ii) el escalón intermedio $I(0^+)<\infty$ (GAP 167.A), que es la forma $\ell^2$ —no de conteo— de la finitud, y por tanto el primer candidato si la ruta es espectral-esencial. Veredicto franco del punto 3 del mandato: **"nada nuevo" en cuanto a mecanismo de cuantización; la finitud es Fredholm; lo nuevo es la coordenada (frontera del flujo, norma $\ell^2$) en la que la mitad Fredholm debe medirse.**
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## Research Objective
 
-This program's task is constructing the geometric class K_geom / SURF behind the Riemann Hypothesis. The agent is instructed to work rigorously and report only what it can justify — a false proof is worse than an honest negative result: never present an unproven step as proven, never cite an open conjecture as if established.
+This program's task is constructing the geometric class K_geom / SURF behind the Riemann Hypothesis. The agent is instructed to work rigorously and report only what it can justify — a false proof is worse than an candid negative result: never present an unproven step as proven, never cite an open conjecture as if established.
 
 ### 1. Setting (definitions)
 
@@ -33,7 +33,7 @@ For each claimed theorem: give a complete proof, or label it "OPEN" and stop. Ne
 
 ### 5. Deliverable
 
-Output exactly one of: (i) A rigorous construction of S/Δ/L/ω: an explicit definition independent of the spectrum; a proof (or numerically-verified strong evidence) of whichever of G1–G4 is established; the independence + integrality certificates; an honest list of axioms still open. (ii) A precise obstruction theorem: a proved statement that route X cannot supply some G_i, for a specific structural reason, sharpening why RH resists. **DO NOT output a claimed proof of RH.** If a construction's positivity reduces to RH, classify it as a REDUCTION, not a proof. Report sections: setup → route → construction → gates passed/failed → numerical verification → partial result or obstruction → open items.
+Output exactly one of: (i) A rigorous construction of S/Δ/L/ω: an explicit definition independent of the spectrum; a proof (or numerically-verified strong evidence) of whichever of G1–G4 is established; the independence + integrality certificates; an candid list of axioms still open. (ii) A precise obstruction theorem: a proved statement that route X cannot supply some G_i, for a specific structural reason, sharpening why RH resists. **DO NOT output a claimed proof of RH.** If a construction's positivity reduces to RH, classify it as a REDUCTION, not a proof. Report sections: setup → route → construction → gates passed/failed → numerical verification → partial result or obstruction → open items.
 
 ## Results
 

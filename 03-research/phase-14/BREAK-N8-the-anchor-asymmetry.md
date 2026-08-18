@@ -83,7 +83,7 @@ Candidates this exposes as one family: a hypothetical **auxiliary object with a 
 $\sigma=\tfrac12$**; the **self-adjoint operator** of Hilbert–Pólya; the **center-positivity** of Weil. They are the
 *same missing ingredient* — an anchor at the center — now named as such.
 
-## 5. Honest status — what is and isn't established (no repeat of N8's over-reach)
+## 5. Candid status — what is and isn't established (no repeat of N8's over-reach)
 
 - **Established:** N8's *universal* form is **false** — de la Vallée Poussin forces exact absence with no
   cancellation. N8 correctly describes only the **density/anchorless** routes. The program has **two** walls, not
@@ -96,7 +96,7 @@ $\sigma=\tfrac12$**; the **self-adjoint operator** of Hilbert–Pólya; the **ce
   structure, not about cancellation — and it has **not** been audited to collapse. That is its value: it is the one
   reframing that the program's collapse-to-N8 did **not** dispose of, because N8 only ruled out the *anchorless*
   routes.
-- **Consequence for the program:** the honest frontier is **not** "the square-root barrier is the inevitable point
+- **Consequence for the program:** the candid frontier is **not** "the square-root barrier is the inevitable point
   of passage." It is: *anchorless routes hit square-root cancellation (N8); an anchored route at $\sigma=\tfrac12$
   would bypass it entirely, and whether such an anchor exists is open.* The auditor's Scenario B stands: **N8 is a
   symptom; the cause is the anchor asymmetry.**

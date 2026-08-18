@@ -1,0 +1,306 @@
+{
+  "statement": "Moving finite ground point versus largest-section frozen point",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "dps": 60,
+    "sigmas": [
+      "0.6",
+      "1.0",
+      "2.0",
+      "3.0"
+    ],
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "The largest-section point is a numerical reference, not a proved infinite-volume limit.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "2.52719644523725779337455e-49",
+      "planted": null,
+      "rows": [
+        {
+          "N": 6,
+          "mu_moving": "5.67857981289355695541481e-23",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "5.67857981289355695541481e-23",
+          "moving_energy": "10622021.8207215934877311",
+          "frozen_energy": "10465260.6292194501133665",
+          "energy_ratio_frozen_over_moving": "0.985241868812928685641794",
+          "max_safe_transfer_relative_difference": "0.00811932666406748830672745"
+        },
+        {
+          "N": 7,
+          "mu_moving": "1.14108331541358008838965e-25",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.14108331541358008838964e-25",
+          "moving_energy": "1121799125.91655806656093",
+          "frozen_energy": "1117420380.10401851944084",
+          "energy_ratio_frozen_over_moving": "0.996096675678043585810073",
+          "max_safe_transfer_relative_difference": "0.00211179288914995732076737"
+        },
+        {
+          "N": 8,
+          "mu_moving": "3.67864498056142094313034e-28",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "3.67864498056142094312781e-28",
+          "moving_energy": "11507285985578.1861088562",
+          "frozen_energy": "11434909989928.6123428833",
+          "energy_ratio_frozen_over_moving": "0.993710420012131364597054",
+          "max_safe_transfer_relative_difference": "0.00336079401862840589590456"
+        },
+        {
+          "N": 9,
+          "mu_moving": "1.85053117215286206370408e-30",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.85053117215286206345136e-30",
+          "moving_energy": "2591637814696.54049946667",
+          "frozen_energy": "2566106900749.93844029241",
+          "energy_ratio_frozen_over_moving": "0.990148733823135884638299",
+          "max_safe_transfer_relative_difference": "0.00519802872466963440080328"
+        },
+        {
+          "N": 10,
+          "mu_moving": "8.92947289710064654996649e-33",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "8.92947289710064629724685e-33",
+          "moving_energy": "50460432663613.5301184256",
+          "frozen_energy": "49982467642668.1531778457",
+          "energy_ratio_frozen_over_moving": "0.990527924638861998394558",
+          "max_safe_transfer_relative_difference": "0.00496167917635765490935184"
+        },
+        {
+          "N": 11,
+          "mu_moving": "4.3015277027002730350913e-35",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "4.30152770270024776312684e-35",
+          "moving_energy": "4515859203303360.95529336",
+          "frozen_energy": "4473058448134225.274588",
+          "energy_ratio_frozen_over_moving": "0.990522123644194479311379",
+          "max_safe_transfer_relative_difference": "0.00493148937717979777437915"
+        },
+        {
+          "N": 12,
+          "mu_moving": "2.40320588207581316433666e-37",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "2.40320588207328596789142e-37",
+          "moving_energy": "1681574175694465274009.73",
+          "frozen_energy": "1663070544455859776809.6",
+          "energy_ratio_frozen_over_moving": "0.988996244408330205797775",
+          "max_safe_transfer_relative_difference": "0.00570362802870488078853021"
+        },
+        {
+          "N": 13,
+          "mu_moving": "2.26213529149277597648465e-39",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "2.26213529124005633196092e-39",
+          "moving_energy": "19170441718386320797.7278",
+          "frozen_energy": "18814870910031546983.8771",
+          "energy_ratio_frozen_over_moving": "0.981452132737570320236804",
+          "max_safe_transfer_relative_difference": "0.00957352853271661620317325"
+        },
+        {
+          "N": 14,
+          "mu_moving": "1.70904698080237686364875e-41",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.70904695553041241127617e-41",
+          "moving_energy": "5486045627667651178825.55",
+          "frozen_energy": "5404234416666992125728.27",
+          "energy_ratio_frozen_over_moving": "0.985087398728865395694376",
+          "max_safe_transfer_relative_difference": "0.00767067898617069019586117"
+        },
+        {
+          "N": 15,
+          "mu_moving": "1.57226399655549833699041e-43",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.57226146935905309973262e-43",
+          "moving_energy": "26080226280327720523773.1",
+          "frozen_energy": "25606566091206725375511.3",
+          "energy_ratio_frozen_over_moving": "0.981838340510171248418278",
+          "max_safe_transfer_relative_difference": "0.00932554289474875867400188"
+        },
+        {
+          "N": 16,
+          "mu_moving": "1.54136825009323129579342e-45",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.54111553044870757001408e-45",
+          "moving_energy": "512791768696834618455378.0",
+          "frozen_energy": "502862281817120098252761.0",
+          "energy_ratio_frozen_over_moving": "0.980636415235469801844991",
+          "max_safe_transfer_relative_difference": "0.00991808433075954336734434"
+        },
+        {
+          "N": 17,
+          "mu_moving": "2.35669695022564892003865e-47",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "2.3314249857732763421049e-47",
+          "moving_energy": "2.32775817936233356477001e+26",
+          "frozen_energy": "2.25830367358453901927184e+26",
+          "energy_ratio_frozen_over_moving": "0.970162490935024477697343",
+          "max_safe_transfer_relative_difference": "0.0152874601954146521786011"
+        },
+        {
+          "N": 18,
+          "mu_moving": "2.52719644523725779337455e-49",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "0.0",
+          "moving_energy": "9.21323302920033092536764e+27",
+          "frozen_energy": "9.21323302920033092536764e+27",
+          "energy_ratio_frozen_over_moving": "1.0",
+          "max_safe_transfer_relative_difference": "0.0"
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "-1.74469368905726418414397",
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 6,
+          "mu_moving": "-0.120089541719792062945377",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "1.62460414733747212119859",
+          "moving_energy": "0.417494092732379537383397",
+          "frozen_energy": "0.00112623115583263253864839",
+          "energy_ratio_frozen_over_moving": "0.0026975978233890004189767",
+          "max_safe_transfer_relative_difference": "0.205611169047335948734242"
+        },
+        {
+          "N": 7,
+          "mu_moving": "-0.411328666741726584802306",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "1.33336502231553759934166",
+          "moving_energy": "0.369674306049370706853663",
+          "frozen_energy": "0.0126856733663973033961741",
+          "energy_ratio_frozen_over_moving": "0.0343158103195387011410043",
+          "max_safe_transfer_relative_difference": "0.155545693771953799053118"
+        },
+        {
+          "N": 8,
+          "mu_moving": "-0.720430127892945977947044",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "1.02426356116431820619692",
+          "moving_energy": "51.916581138542822898166",
+          "frozen_energy": "3.20573690803619345260586",
+          "energy_ratio_frozen_over_moving": "0.0617478431309155924072829",
+          "max_safe_transfer_relative_difference": "0.761665573184577022937352"
+        },
+        {
+          "N": 9,
+          "mu_moving": "-1.4970539014566867318729",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.247639787600577452271069",
+          "moving_energy": "0.811799045096838206005059",
+          "frozen_energy": "0.482159747451378986606222",
+          "energy_ratio_frozen_over_moving": "0.593939781481096622493016",
+          "max_safe_transfer_relative_difference": "0.0541907147289153834212144"
+        },
+        {
+          "N": 10,
+          "mu_moving": "-1.64398602971619752920644",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.100707659341066654937523",
+          "moving_energy": "6.24280330788927552980937",
+          "frozen_energy": "2.43731959864965166543408",
+          "energy_ratio_frozen_over_moving": "0.390420693788240170821867",
+          "max_safe_transfer_relative_difference": "0.195685390003828655168723"
+        },
+        {
+          "N": 11,
+          "mu_moving": "-1.69983946354891462497424",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0448542255083495591697271",
+          "moving_energy": "16.4662818847440345036998",
+          "frozen_energy": "5.51437696188398649082031",
+          "energy_ratio_frozen_over_moving": "0.33488901747716597676746",
+          "max_safe_transfer_relative_difference": "0.361831551031244554050119"
+        },
+        {
+          "N": 12,
+          "mu_moving": "-1.70945938630677984903713",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0352343027504843351068349",
+          "moving_energy": "279.909609881941745650036",
+          "frozen_energy": "13.8571095193076462130658",
+          "energy_ratio_frozen_over_moving": "0.0495056583628986436722747",
+          "max_safe_transfer_relative_difference": "0.782302438100315602607886"
+        },
+        {
+          "N": 13,
+          "mu_moving": "-1.72343779555181385817055",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0212558935054503259734217",
+          "moving_energy": "67.9471995631191744794316",
+          "frozen_energy": "11.180404004834630973652",
+          "energy_ratio_frozen_over_moving": "0.164545471729834231559996",
+          "max_safe_transfer_relative_difference": "0.594718523066484400320618"
+        },
+        {
+          "N": 14,
+          "mu_moving": "-1.72414565172047431765303",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0205480373367898664909337",
+          "moving_energy": "3009.26079515699666088884",
+          "frozen_energy": "3.48166787060659391192269",
+          "energy_ratio_frozen_over_moving": "0.0011569844249491015684818",
+          "max_safe_transfer_relative_difference": "0.961392954321757202800462"
+        },
+        {
+          "N": 15,
+          "mu_moving": "-1.73552701873597729516407",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.00916667032128688897989664",
+          "moving_energy": "89.7533055421896060540946",
+          "frozen_energy": "28.2679119635643330267946",
+          "energy_ratio_frozen_over_moving": "0.314951207566128755595729",
+          "max_safe_transfer_relative_difference": "0.442692618152062446009175"
+        },
+        {
+          "N": 16,
+          "mu_moving": "-1.74001868764442608712258",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.00467500141283809702138564",
+          "moving_energy": "220.331343974316380116656",
+          "frozen_energy": "53.3334761153402595558642",
+          "energy_ratio_frozen_over_moving": "0.242060322209795283871824",
+          "max_safe_transfer_relative_difference": "0.506202426158361856646868"
+        },
+        {
+          "N": 17,
+          "mu_moving": "-1.74013964734550496824202",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.00455404171175921590194235",
+          "moving_energy": "15587.5523059454916063407",
+          "frozen_energy": "10.6606039303381334905093",
+          "energy_ratio_frozen_over_moving": "0.000683917764707157143653372",
+          "max_safe_transfer_relative_difference": "0.972260103377268806091299"
+        },
+        {
+          "N": 18,
+          "mu_moving": "-1.74469368905726418414397",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0",
+          "moving_energy": "272.061600784219939664228",
+          "frozen_energy": "272.061600784219939664228",
+          "energy_ratio_frozen_over_moving": "1.0",
+          "max_safe_transfer_relative_difference": "0.0"
+        }
+      ]
+    }
+  ]
+}

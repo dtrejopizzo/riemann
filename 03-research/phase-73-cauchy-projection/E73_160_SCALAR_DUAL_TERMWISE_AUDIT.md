@@ -57,7 +57,7 @@ nodes can make separated-coordinate Cauchy Lebesgue constants blow up.
 E73.026 says this is a coordinate singularity locally, fixed by Hermite /
 confluent coordinates.
 
-Therefore the honest remaining geometric theorem is:
+Therefore the candid remaining geometric theorem is:
 
 ```text
 CONFL-PI-NH:

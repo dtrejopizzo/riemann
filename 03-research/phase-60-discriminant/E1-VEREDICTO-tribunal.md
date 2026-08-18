@@ -1,4 +1,4 @@
-# E1 — Veredicto consolidado del tribunal (· ·) Los tres trabajaron E1 en paralelo y **convergieron unánimemente**. Resultado honesto: **E1
+# E1 — Veredicto consolidado del tribunal (· ·) Los tres trabajaron E1 en paralelo y **convergieron unánimemente**. Resultado franco: **E1
 NO se cierra elementalmente — es cita obligada a CCM Thm 1.1(iii)** — pero el tribunal lo
 **demostró con un teorema de obstrucción** (no es opinión: es matemática). Eso ES un resultado. ## 1. Dato decisivo (, verbatim del código)
 La secular del motor validado (`E4hp_convergence.py:66`) es **LINEAL**:

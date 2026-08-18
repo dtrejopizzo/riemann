@@ -133,7 +133,7 @@ Las *fluctuaciones locales* en los coeficientes de Jacobi (el comportamiento de 
 
 El programa ha producido una reformulación elegante pero NO independiente de RH.
 
-*Evaluación final honesta:* El programa Phase 29 ha demostrado que la pared del problema de Riemann, en el marco CCM, es exactamente la indeterminación del problema de momentos de $\mu_\gamma^{real}$. La función $C_\infty$ es la invariante adicional que rompería la indeterminación — pero controlarla es equivalente a RH.
+*Evaluación final franca:* El programa Phase 29 ha demostrado que la pared del problema de Riemann, en el marco CCM, es exactamente la indeterminación del problema de momentos de $\mu_\gamma^{real}$. La función $C_\infty$ es la invariante adicional que rompería la indeterminación — pero controlarla es equivalente a RH.
 
 ---
 

@@ -1,0 +1,212 @@
+{
+  "statement": "Audit of a raw geometric envelope for d_N = Delta safe_u_N: 0 < d_{N+2} <= eta_* d_N",
+  "source": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_30_delta_safeu_ratio_results.json",
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "delta_safeu_ratio": 0.6471872960226843,
+          "weight_factor": 1.25,
+          "rho_reconstructed": 0.8089841200283554,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "delta_safeu_ratio": 0.6561215484069458,
+          "weight_factor": 1.25,
+          "rho_reconstructed": 0.8201519355086823,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "delta_safeu_ratio": 0.6816063666769818,
+          "weight_factor": 1.2,
+          "rho_reconstructed": 0.8179276400123782,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "delta_safeu_ratio": 0.6866501431726868,
+          "weight_factor": 1.2,
+          "rho_reconstructed": 0.8239801718072242,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "delta_safeu_ratio": 0.7354288651612672,
+          "weight_factor": 1.1666666666666667,
+          "rho_reconstructed": 0.8580003426881451,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "delta_safeu_ratio": 0.7389949558046757,
+          "weight_factor": 1.1666666666666667,
+          "rho_reconstructed": 0.8621607817721216,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "delta_safeu_ratio": 0.7423371563930222,
+          "weight_factor": 1.1428571428571428,
+          "rho_reconstructed": 0.8483853215920254,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "delta_safeu_ratio": 0.7445724686345487,
+          "weight_factor": 1.1428571428571428,
+          "rho_reconstructed": 0.8509399641537699,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "delta_safeu_ratio": 0.7829500918918881,
+          "weight_factor": 1.125,
+          "rho_reconstructed": 0.8808188533783742,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "delta_safeu_ratio": 0.7847043664230415,
+          "weight_factor": 1.125,
+          "rho_reconstructed": 0.8827924122259218,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "delta_safeu_ratio": 0.8196152217538659,
+          "weight_factor": 1.1111111111111112,
+          "rho_reconstructed": 0.9106835797265177,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "delta_safeu_ratio": 0.8210067653381925,
+          "weight_factor": 1.1111111111111112,
+          "rho_reconstructed": 0.9122297392646583,
+          "positive_geometric_envelope": true
+        }
+      ],
+      "positive_geometric_envelope_count": 12,
+      "positive_geometric_envelope_fail_count": 0,
+      "eta_star_observed": 0.8210067653381925
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "delta_safeu_ratio": 0.3156092808861427,
+          "weight_factor": 1.25,
+          "rho_reconstructed": 0.39451160110767836,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "delta_safeu_ratio": 0.725763980372016,
+          "weight_factor": 1.25,
+          "rho_reconstructed": 0.90720497546502,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "delta_safeu_ratio": 0.03597724189665411,
+          "weight_factor": 1.2,
+          "rho_reconstructed": 0.043172690275984936,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "delta_safeu_ratio": 0.21510630019363067,
+          "weight_factor": 1.2,
+          "rho_reconstructed": 0.2581275602323568,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "delta_safeu_ratio": -0.5877865231352727,
+          "weight_factor": 1.1666666666666667,
+          "rho_reconstructed": -0.6857509436578182,
+          "positive_geometric_envelope": false
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "delta_safeu_ratio": -0.1199596134012205,
+          "weight_factor": 1.1666666666666667,
+          "rho_reconstructed": -0.13995288230142391,
+          "positive_geometric_envelope": false
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "delta_safeu_ratio": 0.4570619842553225,
+          "weight_factor": 1.1428571428571428,
+          "rho_reconstructed": 0.5223565534346543,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "delta_safeu_ratio": 0.5366951890179775,
+          "weight_factor": 1.1428571428571428,
+          "rho_reconstructed": 0.61336593030626,
+          "positive_geometric_envelope": true
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "delta_safeu_ratio": -0.4069515362313396,
+          "weight_factor": 1.125,
+          "rho_reconstructed": -0.45782047826025707,
+          "positive_geometric_envelope": false
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "delta_safeu_ratio": -3.257250291347942,
+          "weight_factor": 1.125,
+          "rho_reconstructed": -3.664406577766435,
+          "positive_geometric_envelope": false
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "delta_safeu_ratio": -0.688769504847619,
+          "weight_factor": 1.1111111111111112,
+          "rho_reconstructed": -0.7652994498306879,
+          "positive_geometric_envelope": false
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "delta_safeu_ratio": -0.21086186275263605,
+          "weight_factor": 1.1111111111111112,
+          "rho_reconstructed": -0.23429095861404006,
+          "positive_geometric_envelope": false
+        }
+      ],
+      "positive_geometric_envelope_count": 6,
+      "positive_geometric_envelope_fail_count": 6,
+      "eta_star_observed": 0.725763980372016
+    }
+  }
+}

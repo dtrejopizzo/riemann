@@ -1,0 +1,203 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{The half-Tate Banach envelope and row (d) (v101)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Metric linearization of row (b)}
+
+Define
+\begin{equation}
+ \mathcal B_{1/2}:=left\{a=(a_n)_{n\ge1}:
+       \|a\|_{1/2}:=\sum_{n\ge1}|a_n|n^{-1/2}<\infty\right\}             \tag{1}
+\end{equation}
+with Dirichlet convolution.  This is not chosen from the zeros or the Weil
+form: its weight is exactly the self-dual metric character
+$w_{1/2}(\Gamma_n)=n^{-1/2}$ of row (b).
+
+\begin{theorem}[Half-Tate Banach algebra --- \PROVED]
+The space $\mathcal B_{1/2}$ is a commutative unital Banach algebra and
+\begin{equation}
+             \|\delta_m*\delta_n\|_{1/2}
+             =\|\delta_m\|_{1/2}\|\delta_n\|_{1/2}.             \tag{2}
+\end{equation}
+The algebraic row-(b) correspondence linearization therefore extends
+canonically to (1).
+\end{theorem}
+
+\begin{proof}
+The weight is completely multiplicative:
+$(mn)^{-1/2}=m^{-1/2}n^{-1/2}$.  Hence
+\[
+ \|a*b\|_{1/2}
+ \le\sum_{m,n}|a_m||b_n|(mn)^{-1/2}
+ =\|a\|_{1/2}\|b\|_{1/2}.
+\]
+Completeness is ordinary weighted $\ell^1$ completeness, the unit is
+$\delta_1$, and equality (2) is immediate.
+\end{proof}
+
+\section{Extension of the individual-correspondence functor}
+
+Row (c) sends $\delta_n$ to $U_n f(x)=f(nx)$ on
+$\mathcal S_>=\mathcal S_{(1,\infty)}$.  Its defining estimate is, for
+every relevant seminorm at an exponent $a>1$,
+\[
+ q_{a,j,k}(U_nf)\le Cn^{-a}(1+\log n)^N
+        \sum_{j'\le j}q_{a,j',k}(f).                 \tag{3}
+\]
+
+\begin{theorem}[Half-Tate multiplier extension --- \PROVED]
+For every $a=(a_n)\in\mathcal B_{1/2}$, the series
+\begin{equation}
+                  \mathcal R_{1/2}(a)f:=\sum_{n\ge1}a_nU_nf             \tag{4}
+\end{equation}
+converges in $\mathcal S_>$, uniformly on bounded subsets in every defining
+multiplier seminorm.  It defines a continuous algebra homomorphism
+\begin{equation}
+ \mathcal R_{1/2}:\mathcal B_{1/2}longrightarrow
+                     \mathsf{Mult}(\mathcal S_>).     \tag{5}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For $a>1$ and fixed $N$,
+$n^{-a}(1+\log n)^N\le C_{a,N}n^{-1/2}$.  Multiplying (3) by $|a_n|$ and
+summing proves absolute convergence controlled by
+$C_{a,N}\|a\|_{1/2}$.  Dirichlet convolution and $U_mU_n=U_{mn}$ prove the
+homomorphism identity by absolute rearrangement.
+\end{proof}
+
+Thus the metric line of row (b) does produce a genuine norm-enriched
+extension of the row-(c) functor on its individual-correspondence target.
+
+\section{Character test}
+
+On the simple Mellin character with parameter $s$,
+\begin{equation}
+                         \chi_s(\delta_n)=n^{-s}.     \tag{6}
+\end{equation}
+
+\begin{theorem}[Automatic continuity test --- \PROVED]
+The algebraic character (6) extends to a continuous character of
+$\mathcal B_{1/2}$ if and only if
+\begin{equation}
+                              \Re s\ge\frac12.        \tag{7}
+\end{equation}
+When it extends, its norm is one.
+\end{theorem}
+
+\begin{proof}
+A character on a unital Banach algebra is continuous and has norm one.
+Necessity also follows directly from point masses:
+\[
+ |n^{-s}|\le\|\delta_n\|_{1/2}=n^{-1/2}
+ \quad\Longrightarrow\quad \Re s\ge1/2.
+\]
+Conversely, under (7),
+\[
+ \left|\sum_na_nn^{-s}\right|
+ \le\sum_n|a_n|n^{-\Re s}
+ \le\|a\|_{1/2},
+\]
+which defines the required continuous character and gives norm one because
+it takes the unit to one.
+\end{proof}
+
+\begin{corollary}[Banach-envelope criterion for row (d) --- \PROVED]
+If the semisimplified odd row-(c) action extends from its algebraic
+$\mathbb C[\mathbb N^\times]$ action to a continuous
+$\mathcal B_{1/2}$-module action compatible with (5), then every spectral
+parameter has real part $1/2$ and row (d) follows.
+\end{corollary}
+
+\begin{proof}
+Every simple quotient of a continuous unital Banach module is a continuous
+character, so (7) gives $\Re\rho\ge1/2$.  The Fourier--Poisson involution of
+row (c) also supplies $1-\bar\rho$; applying (7) to it gives
+$1-\Re\rho\ge1/2$.  Thus $\Re\rho=1/2$.  The trace-preserving Loewy
+assembly of v99 then gives the negative Hilbert square for primitive test
+functions.
+\end{proof}
+
+\section{Does the extension act on the odd quotient?}
+
+The answer is not automatic.  Although $\mathcal H_-\subset\mathcal S_>$,
+the series (4) need not preserve $\mathcal H_-$.  For example, choose a
+nonzero smooth $f$ supported near $1$ and coefficients
+$a_n=n^{-1/2-\varepsilon}$ with $0<\varepsilon\le1/2$.  Then
+$a\in\mathcal B_{1/2}$, but near the points $x=n^{-1}$ the term
+$a_n f(nx)$ has size comparable to $n^{-1/2-\varepsilon}$.  Hence the sum
+has only polynomial decay as $x\downarrow0$ and is not in
+$\mathcal S_{(-\infty,\infty)}=\mathcal H_-$.
+
+Moreover the Zeta element is not in the half-Tate algebra:
+\begin{equation}
+              \left\|\sum_{n\ge1}\delta_n\right\|_{1/2}
+              =\sum_{n\ge1}n^{-1/2}=\infty.          \tag{8}
+\end{equation}
+Therefore the existence of (5) does not by itself make
+$\mathcal H_-^0=\mathcal H_-/Z\mathcal H_\cap$ a
+$\mathcal B_{1/2}$-module.
+
+The precise remaining extension theorem is
+\begin{equation}
+ \boxed{
+ \text{the algebraic action on }\operatorname{gr}_L(\mathcal H_-^0)
+ \text{ is continuous for }\|\cdot\|_{1/2}.}         \tag{9}
+\end{equation}
+It is enough to establish (9) on every finite Loewy quotient, uniformly in
+the quotient.  By the character test and functional symmetry, (9) closes
+row (d) immediately.
+
+Statement (9) is \OPEN.  It is not a new normalization: (1)--(5) construct
+the normalization and its multiplier action completely.  It is the
+boundary-descent theorem saying that the half-Tate multiplier action does
+not lose continuity when passing from the one-sided space $\mathcal S_>$
+to the two-sided Poisson cokernel.
+
+\begin{theorem}[Boundary descent is the exact terminal theorem ---
+\PROVED]
+On the semisimplified odd object, (9) is equivalent to condition $G$ (and
+hence to row (d) under the reductions already proved in the manuscript).
+It is not stronger than the desired conclusion and it is not a merely
+technical continuity lemma.
+\end{theorem}
+
+\begin{proof}
+The corollary above proves (9)$\Rightarrow$ every spectral parameter is
+critical, hence $G$ by the row-(c) spectral formula and the supplied Weil
+criterion.  Conversely, under $G$ every simple parameter has
+$\Re\rho=1/2$.  The character test shows that each simple action extends
+contractively to $\mathcal B_{1/2}$; taking the Loewy semisimplification
+and its multiplicity direct sum gives (9).  The nilpotent jets are absent
+from the semisimplification but their multiplicities are retained by the
+finite trace theorem of v99.
+\end{proof}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.57\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.18\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Half-Tate Banach algebra & \PROVED & (1)--(2) \\
+Norm-enriched functor on $\mathcal S_>$ & \PROVED & (3)--(5) \\
+Continuous characters exactly satisfy $\Re s\ge1/2$ & \PROVED & (6)--(7) \\
+Functional symmetry upgrades this to $\Re s=1/2$ & \PROVED & corollary \\
+Descent of the Banach action to the odd Loewy object & \OPEN & (9) \\
+Row (d), condition $G$ & \OPEN & immediate after (9) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

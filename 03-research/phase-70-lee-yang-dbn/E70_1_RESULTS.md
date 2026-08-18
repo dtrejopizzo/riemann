@@ -20,7 +20,7 @@ Our gauge-free Omega_7 (E69.1): xi in Laguerre-Polya = all zeros real = Lambda <
 So  Omega_7  <=>  Lambda <= 0.
 ```
 
-## The direction problem (honest, decisive)
+## The direction problem (candid, decisive)
 
 The heat-flow forcing pushes zeros to the real axis as `lambda` INCREASES -- the de Bruijn direction
 (`Lambda <= 1/2`, and the flow makes things real). This is the PROVEN half. But RH needs `Lambda <= 0`:
@@ -49,7 +49,7 @@ Phase 70 could add something the general framework lacks: a `Lambda <= 0` handle
 
 ```
 gained    : Omega_7 <=> Lambda = 0 (placed in the dBN / Rodgers-Tao framework)
-honest    : the heat-flow / Lee-Yang forcing gives Lambda >= 0 (the proven, wrong-direction half)
+candid    : the heat-flow / Lee-Yang forcing gives Lambda >= 0 (the proven, wrong-direction half)
 open      : a Lambda <= 0 handle from the Euler product -- the arithmetic direction, Weil-hard
 not useful: heat-flow monotonicity alone (it forces the wrong way)
 ```

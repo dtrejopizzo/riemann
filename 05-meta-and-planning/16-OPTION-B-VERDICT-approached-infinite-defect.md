@@ -57,5 +57,5 @@ Option (b), pushed to computation, returns to the program's central wall, now wi
   (growing near-null space) yields $\kappa<\infty$.
 - Net: the Pontryagin route does not cross the wall, but the wall is now characterized precisely — *infinite-
   dimensional, self-similar criticality* — returning to the semiboundedness/coercivity core with no finite
-  shortcut. The honest residue is that the program's central inequality (semiboundedness of the localized Weil
+  shortcut. The candid residue is that the program's central inequality (semiboundedness of the localized Weil
   form) is the irreducible object, and the off-line-zero count is not finite-rank-detectable.

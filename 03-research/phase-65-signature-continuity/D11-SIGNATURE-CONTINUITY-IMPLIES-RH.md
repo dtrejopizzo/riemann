@@ -7,7 +7,7 @@
 
 **Phase 65 / Signature-Continuity Package, deliverable D11.** Pure mathematics. The final deduction. It is
 short: once D0–D10 are in place, RH is a one-line corollary, **conditional on the single load-bearing
-input D8.5**. We state the assembly, then state with full honesty exactly what is proved unconditionally
+input D8.5**. We state the assembly, then state with full candor exactly what is proved unconditionally
 and what rests on D8.5.
 
 ---
@@ -68,7 +68,7 @@ endpoint $=\mathsf K_\Xi^{\mathrm{G5}}$ & D9 (A3) & \textbf{conditional on D8.5}
 \end{center}
 
 \begin{resultbox}
-\textbf{Honest final statement (updated after Connes R2 + the Vitali close, `D8.5-COMPLETE.md`).} The
+\textbf{Candid final statement (updated after Connes R2 + the Vitali close, `D8.5-COMPLETE.md`).} The
 strip-crossing is achieved by \textbf{Vitali normal-family continuation}: the shorted Green matrices are
 compressed resolvents of the self-adjoint $A_P$ (bounded by $\|\phi\|\|\psi\|/|\Im z|$, matrix-Herglotz),
 so convergence below the strip ($\Im z<-\tfrac12$, where Ξ has no zeros) forces convergence on all of
@@ -87,7 +87,7 @@ See `D8.5-COMPLETE.md` §D–§G. The box below is the superseded earlier framin
    \underbrace{\textbf{off-$\R$ divisor vanishes}}_{=\,\textbf{RH}}\ \Longrightarrow\ \textbf{RH}.
 \]
 \textbf{D8.5a} (the marked Tate–Binet convergence $G_P^\circ\to G^{\lim}$, blocks 1–8) is \emph{proved
-and genuinely local} (no hidden RH-strength; honesty checkpoint passed). \textbf{D8.5b's identification}
+and genuinely local} (no hidden RH-strength; candor checkpoint passed). \textbf{D8.5b's identification}
 ($G^{\lim}=G_\Xi^{\mathrm{G5}}$ as meromorphic objects) is \emph{proved}. But \textbf{D8.5b's index
 conclusion is RH-strength} (`D8.5b-...md` Thm gate, outcome ii): $\operatorname{sq}_-(G_\Xi^{\mathrm{G5}})
 =0$ does \emph{not} follow, because the negative squares live at the off-line poles, where the positive

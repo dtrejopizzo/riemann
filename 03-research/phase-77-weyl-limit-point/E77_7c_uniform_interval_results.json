@@ -1,0 +1,350 @@
+{
+  "statement": "Nested min-max and fixed real-interval contraction audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 20,
+    "dps": 50,
+    "radius": "0.05",
+    "grid_size": 21,
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "A finite real grid is a falsifier only; it does not prove interval-uniform contraction.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "mu_reference": "-3.36129784033978648158552e-51",
+      "interval": [
+        "-0.05",
+        "0.05"
+      ],
+      "grid_size": 21,
+      "planted": null,
+      "rows": [
+        {
+          "N": 6,
+          "mu_N": "5.67857981289355695541481e-23",
+          "mu_drop_from_previous": null,
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.0737413012063114690777679",
+          "maximum_grid_radius_proxy": "13.5609215411350873074517",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 7,
+          "mu_N": "1.14108331541358008838965e-25",
+          "mu_drop_from_previous": "5.66716897973942115453091e-23",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.0893724104675762701628383",
+          "maximum_grid_radius_proxy": "11.1891353804627827811308",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 8,
+          "mu_N": "3.6786449805614209431303e-28",
+          "mu_drop_from_previous": "1.13740467043301866744652e-25",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "8.16847355085983134419463",
+          "maximum_grid_radius_proxy": "0.122421893610065961302942",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 9,
+          "mu_N": "1.85053117215286206370023e-30",
+          "mu_drop_from_previous": "3.6601396688398923224933e-28",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.0936253208669304584702465",
+          "maximum_grid_radius_proxy": "10.6808712722202431042417",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 10,
+          "mu_N": "8.92947289710064654622271e-33",
+          "mu_drop_from_previous": "1.84160169925576141715401e-30",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.100341020034316748586345",
+          "maximum_grid_radius_proxy": "9.96601389599187656975405",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 11,
+          "mu_N": "4.30152770270027265871862e-35",
+          "mu_drop_from_previous": "8.88645762007364381963552e-33",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.13108289511166770496521",
+          "maximum_grid_radius_proxy": "7.62876040499497538442943",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 12,
+          "mu_N": "2.40320588207577731399858e-37",
+          "mu_drop_from_previous": "4.27749564387951488557864e-35",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.156747806951771575661344",
+          "maximum_grid_radius_proxy": "6.37967458331127817913572",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 13,
+          "mu_N": "2.2621352914890978697879e-39",
+          "mu_drop_from_previous": "2.3805845291608863353007e-37",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.457874430343569723575071",
+          "maximum_grid_radius_proxy": "2.1840049011901407986716",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 14,
+          "mu_N": "1.70904698044001297696881e-41",
+          "mu_drop_from_previous": "2.24504482168469774001821e-39",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "9.04122326618795192499877",
+          "maximum_grid_radius_proxy": "0.110604502350889259731021",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 15,
+          "mu_N": "1.5722639635989369704783e-43",
+          "mu_drop_from_previous": "1.69332434080402360726403e-41",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.585912197969219242218566",
+          "maximum_grid_radius_proxy": "1.70674036735540836417842",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 16,
+          "mu_N": "1.54136478593679685481098e-45",
+          "mu_drop_from_previous": "1.55685031573956900193019e-43",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.681935890321902891815199",
+          "maximum_grid_radius_proxy": "1.46641350630182736345579",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 17,
+          "mu_N": "2.35634449823910420064614e-47",
+          "mu_drop_from_previous": "1.51780134095440581280452e-45",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "5.84123847380979517568961",
+          "maximum_grid_radius_proxy": "0.171196571494841936803232",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 18,
+          "mu_N": "2.493152371385630663464e-49",
+          "mu_drop_from_previous": "2.3314129745252478940115e-47",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "1.68978534668427315850089",
+          "maximum_grid_radius_proxy": "0.59179114197091232563613",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 19,
+          "mu_N": "1.21525971028798268308314e-51",
+          "mu_drop_from_previous": "2.48099977428275083663317e-49",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "8.65867177484294264088065",
+          "maximum_grid_radius_proxy": "0.115491154533125692448669",
+          "grid_argmin_mu": "-0.05"
+        },
+        {
+          "N": 20,
+          "mu_N": "-3.36129784033978648158552e-51",
+          "mu_drop_from_previous": "4.57655755062776916466866e-51",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.558927308458702605834272",
+          "maximum_grid_radius_proxy": "1.78914142298324805964132",
+          "grid_argmin_mu": "-0.05"
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "mu_reference": "-1.74937984798384152252764",
+      "interval": [
+        "-1.79937984798384152252764",
+        "-1.69937984798384152252764"
+      ],
+      "grid_size": 21,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 6,
+          "mu_N": "-0.120089541719792062945377",
+          "mu_drop_from_previous": null,
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.00105782699865192257857246",
+          "maximum_grid_radius_proxy": "945.334162650777150113978",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 7,
+          "mu_N": "-0.411328666741726584802306",
+          "mu_drop_from_previous": "0.291239125021934521856929",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.0118802091556812946613401",
+          "maximum_grid_radius_proxy": "84.1736022401411142637434",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 8,
+          "mu_N": "-0.720430127892945977947044",
+          "mu_drop_from_previous": "0.309101461151219393144738",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "2.96468079985142865595514",
+          "maximum_grid_radius_proxy": "0.337304441021142570948889",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 9,
+          "mu_N": "-1.4970539014566867318729",
+          "mu_drop_from_previous": "0.776623773563740753925854",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.437029617923587836252698",
+          "maximum_grid_radius_proxy": "2.28817443712669460258896",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 10,
+          "mu_N": "-1.64398602971619752920644",
+          "mu_drop_from_previous": "0.146932128259510797333546",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "1.70893888313854223686068",
+          "maximum_grid_radius_proxy": "0.585158433614346430485646",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 11,
+          "mu_N": "-1.69983946354891462497424",
+          "mu_drop_from_previous": "0.0558534338327170957677961",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "2.54015304927606125153411",
+          "maximum_grid_radius_proxy": "0.393677066145678931655408",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 12,
+          "mu_N": "-1.70945938630677984903713",
+          "mu_drop_from_previous": "0.00961992275786522406289221",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "3.24572644816005486339448",
+          "maximum_grid_radius_proxy": "0.308097437036593882049458",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 13,
+          "mu_N": "-1.72343779555181385817055",
+          "mu_drop_from_previous": "0.0139784092450340091334132",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "1.98496571042949035189836",
+          "maximum_grid_radius_proxy": "0.503787040121528510866",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 14,
+          "mu_N": "-1.72414565172047431765303",
+          "mu_drop_from_previous": "0.000707856168660459482488036",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.397526532521195799130263",
+          "maximum_grid_radius_proxy": "2.5155553609410481144889",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 15,
+          "mu_N": "-1.73552701873597729516407",
+          "mu_drop_from_previous": "0.0113813670155029775110371",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "2.66037046891878610157568",
+          "maximum_grid_radius_proxy": "0.375887498257494486232194",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 16,
+          "mu_N": "-1.74001868764442608712258",
+          "mu_drop_from_previous": "0.00449166890844879195851101",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "1.38291861700255050065543",
+          "maximum_grid_radius_proxy": "0.723108350488100856681238",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 17,
+          "mu_N": "-1.74013964734550496824202",
+          "mu_drop_from_previous": "0.000120959701078881119443287",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.25426818337522809733762",
+          "maximum_grid_radius_proxy": "3.93285540772626730201199",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 18,
+          "mu_N": "-1.74469368905726418414397",
+          "mu_drop_from_previous": "0.00455404171175921590194235",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "2.29222656006875086823923",
+          "maximum_grid_radius_proxy": "0.436257051296887053323321",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 19,
+          "mu_N": "-1.748323149417549089218",
+          "mu_drop_from_previous": "0.00362946036028490507403498",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "4.79655027560092700203253",
+          "maximum_grid_radius_proxy": "0.208483168640344718266237",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        },
+        {
+          "N": 20,
+          "mu_N": "-1.74937984798384152252764",
+          "mu_drop_from_previous": "0.00105669856629243330963471",
+          "minmax_monotonicity_defect": "0.0",
+          "interval_radius": "0.05",
+          "minimum_grid_energy": "0.613970603174156250726071",
+          "maximum_grid_radius_proxy": "1.62874247534021481008342",
+          "grid_argmin_mu": "-1.79937984798384152252764"
+        }
+      ]
+    }
+  ]
+}

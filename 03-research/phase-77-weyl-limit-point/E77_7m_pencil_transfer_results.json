@@ -1,0 +1,321 @@
+{
+  "statement": "Projectively normalized moving-mu versus frozen-mu transfer",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "dps": 60,
+    "sigma0": "1.0",
+    "sigmas": [
+      "0.6",
+      "1.0",
+      "2.0",
+      "3.0"
+    ],
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "The largest-section point is only a finite frozen reference. This probe audits whether projective normalization removes the moving/frozen resonance sensitivity.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "2.52719644523725779337455e-49",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "planted": null,
+      "rows": [
+        {
+          "N": 6,
+          "mu_moving": "5.67857981289355695541481e-23",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "5.67857981289355695541481e-23",
+          "anchor_moving_abs": "1235.4975981625073445186",
+          "anchor_frozen_abs": "1225.78470292776523124989",
+          "max_projective_absolute_difference": "0.000574089454814258570388668",
+          "max_projective_relative_difference": "0.000265316947757277928119525"
+        },
+        {
+          "N": 7,
+          "mu_moving": "1.14108331541358008838965e-25",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.14108331541358008838964e-25",
+          "anchor_moving_abs": "12305.9581967699488066911",
+          "anchor_frozen_abs": "12280.6030563205294226352",
+          "max_projective_absolute_difference": "0.000138658111365132668061868",
+          "max_projective_relative_difference": "0.0000638234196004761410016614"
+        },
+        {
+          "N": 8,
+          "mu_moving": "3.67864498056142094313034e-28",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "3.67864498056142094312781e-28",
+          "anchor_moving_abs": "1215413.5605171400255963",
+          "anchor_frozen_abs": "1211409.47956125948418194",
+          "max_projective_absolute_difference": "0.00019386924359233228500391",
+          "max_projective_relative_difference": "0.0000889372762440920621943048"
+        },
+        {
+          "N": 9,
+          "mu_moving": "1.85053117215286206370408e-30",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.85053117215286206345136e-30",
+          "anchor_moving_abs": "565489.612425283615358581",
+          "anchor_frozen_abs": "562594.262786535490761105",
+          "max_projective_absolute_difference": "0.000261463601456636034943203",
+          "max_projective_relative_difference": "0.00011964160420098113058299"
+        },
+        {
+          "N": 10,
+          "mu_moving": "8.92947289710064654996649e-33",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "8.92947289710064629724685e-33",
+          "anchor_moving_abs": "2451315.33994295450179339",
+          "anchor_frozen_abs": "2439302.51677884061392182",
+          "max_projective_absolute_difference": "0.000228328479193141997503595",
+          "max_projective_relative_difference": "0.000104273389563886034809493"
+        },
+        {
+          "N": 11,
+          "mu_moving": "4.3015277027002730350913e-35",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "4.30152770270024776312684e-35",
+          "anchor_moving_abs": "22844404.5031078161279228",
+          "anchor_frozen_abs": "22732880.0741101793569509",
+          "max_projective_absolute_difference": "0.000205945306823324484792216",
+          "max_projective_relative_difference": "0.0000938988760872148606349509"
+        },
+        {
+          "N": 12,
+          "mu_moving": "2.40320588207581316433666e-37",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "2.40320588207328596789142e-37",
+          "anchor_moving_abs": "13751769253.1856135099679",
+          "anchor_frozen_abs": "13674011899.7818621092329",
+          "max_projective_absolute_difference": "0.000221418158544863372001802",
+          "max_projective_relative_difference": "0.000100816847383509004089113"
+        },
+        {
+          "N": 13,
+          "mu_moving": "2.26213529149277597648465e-39",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "2.26213529124005633196092e-39",
+          "anchor_moving_abs": "1452705289.43424330427978",
+          "anchor_frozen_abs": "1438894141.94491055089939",
+          "max_projective_absolute_difference": "0.000330432942508101432741499",
+          "max_projective_relative_difference": "0.000150284145678837759410179"
+        },
+        {
+          "N": 14,
+          "mu_moving": "1.70904698080237686364875e-41",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.70904695553041241127617e-41",
+          "anchor_moving_abs": "24324112908.1804181542242",
+          "anchor_frozen_abs": "24138664287.3176732354521",
+          "max_projective_absolute_difference": "0.000250001630009261922555872",
+          "max_projective_relative_difference": "0.00011359783535430006925112"
+        },
+        {
+          "N": 15,
+          "mu_moving": "1.57226399655549833699041e-43",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.57226146935905309973262e-43",
+          "anchor_moving_abs": "52554241491.0517773565215",
+          "anchor_frozen_abs": "52066765963.8114281472111",
+          "max_projective_absolute_difference": "0.000284128430125597950612754",
+          "max_projective_relative_difference": "0.000128998622149984225270508"
+        },
+        {
+          "N": 16,
+          "mu_moving": "1.54136825009323129579342e-45",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "1.54111553044870757001408e-45",
+          "anchor_moving_abs": "231196357214.758286118971",
+          "anchor_frozen_abs": "228913744279.60061396352",
+          "max_projective_absolute_difference": "0.00028093978921973231054952",
+          "max_projective_relative_difference": "0.000127461044985150987628885"
+        },
+        {
+          "N": 17,
+          "mu_moving": "2.35669695022564892003865e-47",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "2.3314249857732763421049e-47",
+          "anchor_moving_abs": "4891962160211.35061669661",
+          "anchor_frozen_abs": "4817477741913.11225124354",
+          "max_projective_absolute_difference": "0.000398157496845759413771738",
+          "max_projective_relative_difference": "0.000180530680591677345105254"
+        },
+        {
+          "N": 18,
+          "mu_moving": "2.52719644523725779337455e-49",
+          "mu_reference": "2.52719644523725779337455e-49",
+          "mu_difference": "0.0",
+          "anchor_moving_abs": "30571229271969.4099998043",
+          "anchor_frozen_abs": "30571229271969.4099998043",
+          "max_projective_absolute_difference": "0.0",
+          "max_projective_relative_difference": "0.0"
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "-1.74469368905726418414397",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 6,
+          "mu_moving": "-0.120089541719792062945377",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "1.62460414733747212119859",
+          "anchor_moving_abs": "0.296175818604341380209369",
+          "anchor_frozen_abs": "0.104409677363206748295843",
+          "max_projective_absolute_difference": "0.0731682647793041800776843",
+          "max_projective_relative_difference": "0.0731682647793041800776843"
+        },
+        {
+          "N": 7,
+          "mu_moving": "-0.411328666741726584802306",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "1.33336502231553759934166",
+          "anchor_moving_abs": "0.245238714862895063031228",
+          "anchor_frozen_abs": "0.110192090831039311485878",
+          "max_projective_absolute_difference": "0.0527020336288122252476363",
+          "max_projective_relative_difference": "0.0498284363480662210464635"
+        },
+        {
+          "N": 8,
+          "mu_moving": "-0.720430127892945977947044",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "1.02426356116431820619692",
+          "anchor_moving_abs": "1.51229979110813861906685",
+          "anchor_frozen_abs": "0.375828769502377436177624",
+          "max_projective_absolute_difference": "0.0419599151045413056447783",
+          "max_projective_relative_difference": "0.0419599151045413056447783"
+        },
+        {
+          "N": 9,
+          "mu_moving": "-1.4970539014566867318729",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.247639787600577452271069",
+          "anchor_moving_abs": "0.191333076303362095419626",
+          "anchor_frozen_abs": "0.145232886658197872089965",
+          "max_projective_absolute_difference": "0.0178300275999114359938962",
+          "max_projective_relative_difference": "0.0159387171711873305428423"
+        },
+        {
+          "N": 10,
+          "mu_moving": "-1.64398602971619752920644",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.100707659341066654937523",
+          "anchor_moving_abs": "0.418632897914738702965764",
+          "anchor_frozen_abs": "0.254898073379391020623099",
+          "max_projective_absolute_difference": "0.0205525876000741773805314",
+          "max_projective_relative_difference": "0.0205525876000741773805314"
+        },
+        {
+          "N": 11,
+          "mu_moving": "-1.69983946354891462497424",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0448542255083495591697271",
+          "anchor_moving_abs": "0.693151042221546294079399",
+          "anchor_frozen_abs": "0.392439423273506596309154",
+          "max_projective_absolute_difference": "0.0184163810916832682193387",
+          "max_projective_relative_difference": "0.0184163810916832682193387"
+        },
+        {
+          "N": 12,
+          "mu_moving": "-1.70945938630677984903713",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0352343027504843351068349",
+          "anchor_moving_abs": "2.92072689584118885616619",
+          "anchor_frozen_abs": "0.640324534499120057515048",
+          "max_projective_absolute_difference": "0.0263456011472544431169443",
+          "max_projective_relative_difference": "0.0263456011472544431169443"
+        },
+        {
+          "N": 13,
+          "mu_moving": "-1.72343779555181385817055",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0212558935054503259734217",
+          "anchor_moving_abs": "1.45868786004875541393436",
+          "anchor_frozen_abs": "0.593683334595892061421364",
+          "max_projective_absolute_difference": "0.0171296213172542188077032",
+          "max_projective_relative_difference": "0.0171296213172542188077032"
+        },
+        {
+          "N": 14,
+          "mu_moving": "-1.72414565172047431765303",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0205480373367898664909337",
+          "anchor_moving_abs": "9.78094733727733937145294",
+          "anchor_frozen_abs": "0.378133357822588115004043",
+          "max_projective_absolute_difference": "0.00762804090177635347120136",
+          "max_projective_relative_difference": "0.00762804090177635347120136"
+        },
+        {
+          "N": 15,
+          "mu_moving": "-1.73552701873597729516407",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.00916667032128688897989664",
+          "anchor_moving_abs": "1.69481597680215452934492",
+          "anchor_frozen_abs": "0.946476896601994628761773",
+          "max_projective_absolute_difference": "0.010463544620873126879162",
+          "max_projective_relative_difference": "0.010463544620873126879162"
+        },
+        {
+          "N": 16,
+          "mu_moving": "-1.74001868764442608712258",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.00467500141283809702138564",
+          "anchor_moving_abs": "2.68513866893832839744507",
+          "anchor_frozen_abs": "1.3272142835946750581237",
+          "max_projective_absolute_difference": "0.00669559115935904385535098",
+          "max_projective_relative_difference": "0.00669559115935904385535098"
+        },
+        {
+          "N": 17,
+          "mu_moving": "-1.74013964734550496824202",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.00455404171175921590194235",
+          "anchor_moving_abs": "22.633854879813694216579",
+          "anchor_frozen_abs": "0.627874328984656456875033",
+          "max_projective_absolute_difference": "0.00288673873084264933436266",
+          "max_projective_relative_difference": "0.00288673873084264933436266"
+        },
+        {
+          "N": 18,
+          "mu_moving": "-1.74469368905726418414397",
+          "mu_reference": "-1.74469368905726418414397",
+          "mu_difference": "0.0",
+          "anchor_moving_abs": "2.99980731234335350223838",
+          "anchor_frozen_abs": "2.99980731234335350223838",
+          "max_projective_absolute_difference": "0.0",
+          "max_projective_relative_difference": "0.0"
+        }
+      ]
+    }
+  ]
+}

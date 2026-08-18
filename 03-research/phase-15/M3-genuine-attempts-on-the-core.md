@@ -1,9 +1,9 @@
-# Phase 15 · M3 — Four genuine attempts on the irreducible core (every step documented, outcomes honest)
+# Phase 15 · M3 — Four genuine attempts on the irreducible core (every step documented, outcomes candid)
 
 **Author: David Alejandro Trejo Pizzo · 2026-06-06.**
 The core of M3 is: prove $\langle D,D\rangle=\sum_\rho|\widehat D(\gamma_\rho)|^2\ge0$ for all $D$ in the primitive
 part $\Pi^\perp=\ker\lambda$ — the arithmetic Hodge index, $=$ RH. Below are four genuinely new attacks, each
-developed to its honest endpoint. The point is maximum-effort exploration with the outcome reported as it is, for
+developed to its candid endpoint. The point is maximum-effort exploration with the outcome reported as it is, for
 independent verification. None is fabricated; where an attempt lands on the irreducible core, that is stated.
 
 ---
@@ -25,7 +25,7 @@ cross-place intersection number. In the function-field model the fibers satisfy 
 cross-term is nonzero and the reverse inequality can hold. Here, computing $a$ requires the cross-place pairing,
 and the inequality $a^2>2\lambda^2V$ to hold *for all* test functions is precisely $\det G<0$ uniformly.
 
-**Outcome (honest).** The $2\times2$ determinant condition $a^2>2\lambda^2V$ for all test functions is equivalent
+**Outcome (candid).** The $2\times2$ determinant condition $a^2>2\lambda^2V$ for all test functions is equivalent
 to the primitive negativity of $\Gamma$, hence to the Hodge index, hence to RH (it is the $2$-dimensional shadow of
 the full signature). Unconditionally we have $V\ge0$ and $2\lambda^2>0$; the sign of $\det G$ is governed by the
 cross-place pairing $a$, whose uniform domination $a^2>2\lambda^2V$ is the index theorem itself. **Lands on the
@@ -42,7 +42,7 @@ $\mathrm{offdiag}\le0$ (upper). Subtracting the diagonal from a positive-definit
 definiteness, so no single Bochner kernel signs the off-diagonal. One would need a kernel $K$ with $\widehat K\ge0$
 \emph{and} $K(0)=0$ (no diagonal) — impossible, since $K(0)=\int\widehat K\ge0$ with equality iff $\widehat K\equiv0$.
 
-**Outcome (honest).** Bochner positivity yields exactly the effectivity $V\ge0$ (the lower bound) and \emph{cannot}
+**Outcome (candid).** Bochner positivity yields exactly the effectivity $V\ge0$ (the lower bound) and \emph{cannot}
 yield the upper bound: a positive-definite kernel has nonnegative diagonal, so "off-diagonal $\le0$" is outside
 Bochner's reach. **The upper bound (the Hodge index) is genuinely a different, one-sided statement** — the
 wrong-sign capstone, now seen as the impossibility of a zero-diagonal positive-definite kernel. *No crossing; a
@@ -58,7 +58,7 @@ toward the GUE value as $t$ increases. Hence $V_0\ge V_{t>\Lambda}$ — a \emph{
 Moreover the flow is arithmetic-blind (N5): it cannot use the primes to break the symmetry that would be needed for
 an upper bound.
 
-**Outcome (honest).** The flow gives $V_0\ge\text{GUE}$ (a lower bound, $=$ effectivity again), not the upper bound;
+**Outcome (candid).** The flow gives $V_0\ge\text{GUE}$ (a lower bound, $=$ effectivity again), not the upper bound;
 and N5 forbids an arithmetic-aware monotone that would flip it. **Lands on N5 (arithmetic-blindness).** *No
 crossing; the flow's monotonicity is the wrong sign and arithmetic cannot enter.*
 
@@ -74,7 +74,7 @@ Langlands–Shahidi philosophy). But Ramanujan is a statement about the \emph{lo
 axis), \emph{not} about the location of the archimedean zeros (the critical line). The tower constrains the Satake,
 not the zeros.
 
-**Outcome (honest).** The symmetric-power tower controls the Satake parameters (Ramanujan), an orthogonal axis to
+**Outcome (candid).** The symmetric-power tower controls the Satake parameters (Ramanujan), an orthogonal axis to
 the zeros (this is exactly the M14.3 prime-count-vs-prime-identity / the P19 anatomy dichotomy). It does not reach
 RH. **Lands on the orthogonality of Satake (local) and zeros (archimedean).** *No crossing; the family is a tower of
 equivalent-difficulty GRHs on a different axis.*
@@ -105,7 +105,7 @@ primitive part. In the function-field case this is the general Hodge index theor
 $\operatorname{Spec}\mathbb Z$ it requires a structure delivering a one-sided (upper) bound that is **not** an
 effectivity/Bochner/relaxation positivity and **not** a local Satake statement — i.e.\ a genuinely new
 constraint of the type the discriminator $D_0$ flags as missing ($I_{2b}$). None of the four standard reservoirs
-supplies it; that is the honest state, now triply confirmed.
+supplies it; that is the candid state, now triply confirmed.
 
 **Status.** Four genuine attempts executed and documented; outcomes reported as found; the core stands. The team
 can verify each landing independently. No fabricated crossing.

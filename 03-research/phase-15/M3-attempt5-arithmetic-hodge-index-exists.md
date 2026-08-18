@@ -34,7 +34,7 @@ together with:
 
 Then $(2)$ + Faltings–Hriljac give the definiteness, hence RH.
 
-## 3. Where it lands (honest, and sharper than before)
+## 3. Where it lands (candid, and sharper than before)
 **The obstruction is exactly the surface $\mathcal X$, not the theorem.** Two facts:
 - **Faltings–Hriljac/Yuan–Zhang control *heights*, not critical-line zeros.** On a genuine arithmetic surface (a
   curve over $\mathbb Z$, e.g.\ an elliptic curve $E/\mathbb Q$), the arithmetic Hodge index gives the
@@ -73,7 +73,7 @@ it is the \emph{arithmetic surface} }\mathcal X\text{ for }\zeta_{\mathbb Q}\tex
   Moriwaki). The obstruction to RH via M3 is therefore **purely the missing arithmetic surface** $\mathcal X$ for
   $\operatorname{Spec}\mathbb Z$ (and the zeros↔Arakelov dictionary), not a missing theorem.
 - **No crossing:** $\mathcal X$ does not exist (SURF / Connes–Consani), and the height↔zero link is open
-  (Beilinson). The attempt is genuine and lands honestly: it converts "we lack a Hodge index theorem" into the
+  (Beilinson). The attempt is genuine and lands candidly: it converts "we lack a Hodge index theorem" into the
   precise, correct "we lack the surface to apply the Hodge index theorem we already have."
 - This is the sharpest true statement of the M3 obstruction the program has reached, and it is verifiable: the
   theorems cited are published; the gap (surface / zeros↔heights) is explicit.

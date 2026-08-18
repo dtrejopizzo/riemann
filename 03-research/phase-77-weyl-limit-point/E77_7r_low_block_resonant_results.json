@@ -1,0 +1,1356 @@
+{
+  "statement": "Low-block resonant subtraction audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "dps": 60,
+    "sigma0": "1.0",
+    "sigmas": [
+      "0.6",
+      "1.0",
+      "2.0",
+      "3.0"
+    ],
+    "etas": [
+      "0.01",
+      "0.0001",
+      "0.000001",
+      "1.0e-8"
+    ],
+    "block_size": 3,
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "mu_reference is a finite frozen surrogate. The probe checks whether subtracting a low-dimensional resonant block stabilizes the regularized projective profile.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "2.52719644523725779337455e-49",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.01",
+        "0.0001",
+        "0.000001",
+        "1.0e-8"
+      ],
+      "block_size": 3,
+      "planted": null,
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "7.4348808641654420969885e-21",
+            "3.0262515608158794387323e-18",
+            "9.36564463250913255980999e-16"
+          ],
+          "resonant_overlaps_abs": [
+            "2.36799601329596239546832e-17",
+            "1.65467634127529822254022e-15",
+            "1.31180902472394986662292e-13"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.29223021505415850697656",
+              "regular_anchor_abs": "0.292230215053789973652261",
+              "block_anchor_abs": "0.0946292373630825013946564",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.657706943447376251192716",
+              "regular_anchor_abs": "0.657706943760912025286253",
+              "block_anchor_abs": "0.094629237832345774472134",
+              "raw_max_profile_step_from_previous_eta": "0.173600745154555716816369",
+              "regular_max_profile_step_from_previous_eta": "0.173600745356391248869303"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "1.41114339156400723495702",
+              "regular_anchor_abs": "1.41114334425141325792047",
+              "block_anchor_abs": "0.0946292847586732012490372",
+              "raw_max_profile_step_from_previous_eta": "0.118855235486558018996296",
+              "regular_max_profile_step_from_previous_eta": "0.118855224736010529258145"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "2.53900406348865855020745",
+              "regular_anchor_abs": "2.53900377302532785746977",
+              "block_anchor_abs": "0.0946339773926061108391856",
+              "raw_max_profile_step_from_previous_eta": "0.0832057230538094012466536",
+              "regular_max_profile_step_from_previous_eta": "0.0832057302126482762060693"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "5.67857981289355695541481e-23",
+            "2.73623629704006832197052e-20",
+            "3.79810492132627306947722e-18"
+          ],
+          "resonant_overlaps_abs": [
+            "1.87151487545682316099567e-18",
+            "1.48703541363699064676613e-16",
+            "4.74873373521404930003537e-15"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.333618574829518839448315",
+              "regular_anchor_abs": "0.333618574829451171594224",
+              "block_anchor_abs": "0.0812072957371894343373995",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "1.12887129751043596493469",
+              "regular_anchor_abs": "1.12887129751470287217278",
+              "block_anchor_abs": "0.0812072957214768075678838",
+              "raw_max_profile_step_from_previous_eta": "0.15746413371507054641904",
+              "regular_max_profile_step_from_previous_eta": "0.157464133716515395362475"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "2.10488869493090526100007",
+              "regular_anchor_abs": "2.10488869596097637706078",
+              "block_anchor_abs": "0.0812072941502141307679079",
+              "raw_max_profile_step_from_previous_eta": "0.16986795115435706469721",
+              "regular_max_profile_step_from_previous_eta": "0.169867951056790723777929"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "3.69508544298050464355115",
+              "regular_anchor_abs": "3.69508531390161988422483",
+              "block_anchor_abs": "0.0812071370239479666486914",
+              "raw_max_profile_step_from_previous_eta": "0.169725960195126714142908",
+              "regular_max_profile_step_from_previous_eta": "0.169725984812315226239079"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "1.14108331541358008838964e-25",
+            "9.62811159830329751767644e-23",
+            "3.88810643430353325483317e-20"
+          ],
+          "resonant_overlaps_abs": [
+            "3.8137880702065687038066e-19",
+            "4.83079147717941991599207e-17",
+            "4.18985416513832580410929e-15"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "4.3094290629496500061089",
+              "regular_anchor_abs": "4.30942906294978202376372",
+              "block_anchor_abs": "0.0711113604217267306997069",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "14.4512353171135419200142",
+              "regular_anchor_abs": "14.4512353171007434142439",
+              "block_anchor_abs": "0.0711113604350639646629249",
+              "raw_max_profile_step_from_previous_eta": "0.12299887940019771412982",
+              "regular_max_profile_step_from_previous_eta": "0.122998879399718793862145"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "30.0061086572568809344194",
+              "regular_anchor_abs": "30.0061086572495877137641",
+              "block_anchor_abs": "0.07111136176878736106074",
+              "raw_max_profile_step_from_previous_eta": "0.10295283656202912030905",
+              "regular_max_profile_step_from_previous_eta": "0.102952836563452731903935"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "66.120512436739009540765",
+              "regular_anchor_abs": "66.1205125630077317175252",
+              "block_anchor_abs": "0.071111495141127760903721",
+              "raw_max_profile_step_from_previous_eta": "0.107957973770928552084094",
+              "regular_max_profile_step_from_previous_eta": "0.107957974441094033466143"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "3.67864498056142094312781e-28",
+            "2.65231334125047400974052e-25",
+            "1.09208518384913048427537e-22"
+          ],
+          "resonant_overlaps_abs": [
+            "5.83785089933566404837131e-22",
+            "5.6794916291239067061094e-20",
+            "4.51995273974964644819858e-18"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.313054502395876946540802",
+              "regular_anchor_abs": "0.313054502395876986944218",
+              "block_anchor_abs": "0.0632436676008842096519825",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.660703014881770381696279",
+              "regular_anchor_abs": "0.660703014881779902924517",
+              "block_anchor_abs": "0.0632436676008980260255493",
+              "raw_max_profile_step_from_previous_eta": "0.134765452134489801335516",
+              "regular_max_profile_step_from_previous_eta": "0.134765452134496272911987"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "1.3669424816131130895893",
+              "regular_anchor_abs": "1.36694248161186804827793",
+              "block_anchor_abs": "0.0632436676022796633822302",
+              "raw_max_profile_step_from_previous_eta": "0.102892287337476937499644",
+              "regular_max_profile_step_from_previous_eta": "0.102892287338096108254353"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "3.11539403534215734569152",
+              "regular_anchor_abs": "3.11539403530741464241615",
+              "block_anchor_abs": "0.06324366774044339905107",
+              "raw_max_profile_step_from_previous_eta": "0.13370215849046431596408",
+              "regular_max_profile_step_from_previous_eta": "0.133702158503681740423737"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "1.85053117215286206345136e-30",
+            "1.5773912748739481892459e-27",
+            "5.38753633308808995220012e-25"
+          ],
+          "resonant_overlaps_abs": [
+            "1.29758118720659187597285e-23",
+            "1.40072717018152656594112e-21",
+            "8.578394271245931097044e-20"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.257151521756224861289463",
+              "regular_anchor_abs": "0.257151521756224859759637",
+              "block_anchor_abs": "0.0569409412204830846746305",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.398948288014526939870251",
+              "regular_anchor_abs": "0.398948288014526894258797",
+              "block_anchor_abs": "0.0569409412204828314930946",
+              "raw_max_profile_step_from_previous_eta": "0.110608888171447804624846",
+              "regular_max_profile_step_from_previous_eta": "0.110608888171447773055731"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.688937461988380635109994",
+              "regular_anchor_abs": "0.688937461988400160474476",
+              "block_anchor_abs": "0.0569409412204575133394991",
+              "raw_max_profile_step_from_previous_eta": "0.102640987945811550004308",
+              "regular_max_profile_step_from_previous_eta": "0.102640987945824266939691"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "1.84009451677133775521824",
+              "regular_anchor_abs": "1.84009451676891664096273",
+              "block_anchor_abs": "0.056940941217925697979948",
+              "raw_max_profile_step_from_previous_eta": "0.0765629196312618314924727",
+              "regular_max_profile_step_from_previous_eta": "0.0765629196307356939476709"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "8.92947289710064629724685e-33",
+            "7.86740794212826871041602e-30",
+            "3.57340859479188036743652e-27"
+          ],
+          "resonant_overlaps_abs": [
+            "5.93008901530249204812874e-25",
+            "6.14387544095276818909362e-23",
+            "4.62213824679184852925625e-21"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.245089942131171683408179",
+              "regular_anchor_abs": "0.245089942131171683520774",
+              "block_anchor_abs": "0.0517790623188801984563468",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.45728485267625850058345",
+              "regular_anchor_abs": "0.457284852676258493758775",
+              "block_anchor_abs": "0.0517790623188802117544988",
+              "raw_max_profile_step_from_previous_eta": "0.100893397253094176165811",
+              "regular_max_profile_step_from_previous_eta": "0.10089339725309416704224"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "1.17350763198717402929659",
+              "regular_anchor_abs": "1.1735076319871740068055",
+              "block_anchor_abs": "0.0517790623188815415696998",
+              "raw_max_profile_step_from_previous_eta": "0.102400483705772371817208",
+              "regular_max_profile_step_from_previous_eta": "0.102400483705772451993855"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "5.37483579996294050302867",
+              "regular_anchor_abs": "5.37483579996295179272458",
+              "block_anchor_abs": "0.0517790623190145230897954",
+              "raw_max_profile_step_from_previous_eta": "0.0830645050180845320863608",
+              "regular_max_profile_step_from_previous_eta": "0.083064505018086472310858"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "4.30152770270024776312684e-35",
+            "4.75206784204916825263893e-32",
+            "2.34521711158682729499038e-29"
+          ],
+          "resonant_overlaps_abs": [
+            "1.74310657933612122569789e-24",
+            "2.14846793703810167890595e-22",
+            "1.65891174159956002501587e-20"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.551679686118522924653851",
+              "regular_anchor_abs": "0.551679686118522924510833",
+              "block_anchor_abs": "0.0474743064293853674334596",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "20.2338524016339842739694",
+              "regular_anchor_abs": "20.2338524016339843129041",
+              "block_anchor_abs": "0.0474743064293854140770232",
+              "raw_max_profile_step_from_previous_eta": "0.103640941641421150383424",
+              "regular_max_profile_step_from_previous_eta": "0.103640941641421151716481"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "299.995733399198796213748",
+              "regular_anchor_abs": "299.995733399198792122023",
+              "block_anchor_abs": "0.0474743064293900784333772",
+              "raw_max_profile_step_from_previous_eta": "0.0962463396048469091875122",
+              "regular_max_profile_step_from_previous_eta": "0.0962463396048469016233497"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "882.667834250558111326845",
+              "regular_anchor_abs": "882.667834250558567528879",
+              "block_anchor_abs": "0.0474743064298565140687849",
+              "raw_max_profile_step_from_previous_eta": "0.0665241316709363290705625",
+              "regular_max_profile_step_from_previous_eta": "0.0665241316709365626800388"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "2.40320588207328596789142e-37",
+            "2.23938523396731086107044e-34",
+            "1.40916725486283007473453e-31"
+          ],
+          "resonant_overlaps_abs": [
+            "1.03702668021280998909311e-27",
+            "9.76315902674431593432506e-26",
+            "8.78291928026964458429874e-24"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.557722195452327679581258",
+              "regular_anchor_abs": "0.557722195452327679581016",
+              "block_anchor_abs": "0.0438297438149928536396526",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "1.98796849160079240696002",
+              "regular_anchor_abs": "1.98796849160079240698323",
+              "block_anchor_abs": "0.0438297438149928536154158",
+              "raw_max_profile_step_from_previous_eta": "0.0925999067032964773768042",
+              "regular_max_profile_step_from_previous_eta": "0.0925999067032964773844038"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "5.60642303080375346495654",
+              "regular_anchor_abs": "5.60642303080375346382697",
+              "block_anchor_abs": "0.0438297438149928511917345",
+              "raw_max_profile_step_from_previous_eta": "0.0810415189032974166376203",
+              "regular_max_profile_step_from_previous_eta": "0.0810415189032974165323686"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "13.8457519346717904530264",
+              "regular_anchor_abs": "13.8457519346717903498553",
+              "block_anchor_abs": "0.043829743814992608823604",
+              "raw_max_profile_step_from_previous_eta": "0.124445562776359317442005",
+              "regular_max_profile_step_from_previous_eta": "0.124445562776359320776514"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "2.26213529124005633196091e-39",
+            "2.45489391995875976805835e-36",
+            "1.15208525290524704148161e-33"
+          ],
+          "resonant_overlaps_abs": [
+            "1.65507885595898813372466e-28",
+            "1.74017894657567251995478e-26",
+            "1.10738438370103005860084e-24"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "1.53722747045805812377002",
+              "regular_anchor_abs": "1.53722747045805812377002",
+              "block_anchor_abs": "0.0407044340721373588859599",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "3.91125199109220303581605",
+              "regular_anchor_abs": "3.91125199109220303581481",
+              "block_anchor_abs": "0.0407044340721373588889603",
+              "raw_max_profile_step_from_previous_eta": "0.0923484310011055230088143",
+              "regular_max_profile_step_from_previous_eta": "0.0923484310011055230086437"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "13.6462010433725609862362",
+              "regular_anchor_abs": "13.6462010433725609865257",
+              "block_anchor_abs": "0.0407044340721373591889987",
+              "raw_max_profile_step_from_previous_eta": "0.0885702608645302616292392",
+              "regular_max_profile_step_from_previous_eta": "0.0885702608645302616411462"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "33.3890094584995895359901",
+              "regular_anchor_abs": "33.3890094584995895130953",
+              "block_anchor_abs": "0.0407044340721373891928381",
+              "raw_max_profile_step_from_previous_eta": "0.0821146197391598677774301",
+              "regular_max_profile_step_from_previous_eta": "0.0821146197391598685040342"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "1.70904695553041241127555e-41",
+            "2.163315293779902516723e-38",
+            "1.30474712696588360025291e-35"
+          ],
+          "resonant_overlaps_abs": [
+            "2.72315850671371699746145e-30",
+            "3.16733473005741396104353e-28",
+            "2.46416552143924020099175e-26"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.51797969207431418312087",
+              "regular_anchor_abs": "0.517979692074314183120871",
+              "block_anchor_abs": "0.0379948622459119751667694",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "1.43232602089714006245273",
+              "regular_anchor_abs": "1.43232602089714006245268",
+              "block_anchor_abs": "0.0379948622459119751668354",
+              "raw_max_profile_step_from_previous_eta": "0.0832757284156820110717349",
+              "regular_max_profile_step_from_previous_eta": "0.0832757284156820110717128"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "3.4849308650573399563989",
+              "regular_anchor_abs": "3.48493086505733995639936",
+              "block_anchor_abs": "0.0379948622459119751734263",
+              "raw_max_profile_step_from_previous_eta": "0.0745249446121686828222746",
+              "regular_max_profile_step_from_previous_eta": "0.0745249446121686828224329"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "11.7998192409273117290791",
+              "regular_anchor_abs": "11.7998192409273117295102",
+              "block_anchor_abs": "0.0379948622459119758325221",
+              "raw_max_profile_step_from_previous_eta": "0.106522976356603261236804",
+              "regular_max_profile_step_from_previous_eta": "0.106522976356603261248497"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "1.57226146935905309959376e-43",
+            "1.85637602231331907023018e-40",
+            "1.21558333691396868277718e-37"
+          ],
+          "resonant_overlaps_abs": [
+            "1.11072242148457133828513e-31",
+            "1.13481782127301859375929e-29",
+            "8.93417920029272207339222e-28"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.318919968638111682607411",
+              "regular_anchor_abs": "0.318919968638111682607411",
+              "block_anchor_abs": "0.0356232971832343118693316",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.878969717100856220077015",
+              "regular_anchor_abs": "0.878969717100856220077017",
+              "block_anchor_abs": "0.0356232971832343118693292",
+              "raw_max_profile_step_from_previous_eta": "0.0847041676242714198002896",
+              "regular_max_profile_step_from_previous_eta": "0.0847041676242714198002912"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "2.65677474883913926219363",
+              "regular_anchor_abs": "2.6567747488391392621934",
+              "block_anchor_abs": "0.0356232971832343118690932",
+              "raw_max_profile_step_from_previous_eta": "0.0675063122722441714777818",
+              "regular_max_profile_step_from_previous_eta": "0.0675063122722441714777268"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "8.4099783526579625264331",
+              "regular_anchor_abs": "8.40997835265796252645247",
+              "block_anchor_abs": "0.0356232971832343118454915",
+              "raw_max_profile_step_from_previous_eta": "0.0610458421938500383174785",
+              "regular_max_profile_step_from_previous_eta": "0.0610458421938500383186626"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "1.54111553044870757479131e-45",
+            "2.11934730968731430186279e-42",
+            "1.44877514398823426676862e-39"
+          ],
+          "resonant_overlaps_abs": [
+            "2.30836652652143925161181e-32",
+            "2.55559194615576245580402e-30",
+            "2.00681884324877451327016e-28"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "1.14249297747939473390613",
+              "regular_anchor_abs": "1.14249297747939473390613",
+              "block_anchor_abs": "0.0335302385565897176905706",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "3.31213863983747386445226",
+              "regular_anchor_abs": "3.31213863983747386445226",
+              "block_anchor_abs": "0.0335302385565897176905711",
+              "raw_max_profile_step_from_previous_eta": "0.0762449938552505381365395",
+              "regular_max_profile_step_from_previous_eta": "0.0762449938552505381365395"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "10.9094127660894851502138",
+              "regular_anchor_abs": "10.9094127660894851502138",
+              "block_anchor_abs": "0.0335302385565897176906235",
+              "raw_max_profile_step_from_previous_eta": "0.0707915899184921172222238",
+              "regular_max_profile_step_from_previous_eta": "0.070791589918492117222224"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "37.4508233901382083930314",
+              "regular_anchor_abs": "37.4508233901382083930282",
+              "block_anchor_abs": "0.0335302385565897176958657",
+              "raw_max_profile_step_from_previous_eta": "0.0803590171325992909828706",
+              "regular_max_profile_step_from_previous_eta": "0.080359017132599290982856"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "2.52719644523725779337455e-49",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "2.33142498577327724276229e-47",
+            "3.03413893409714828896058e-44",
+            "1.80620067103280216252122e-41"
+          ],
+          "resonant_overlaps_abs": [
+            "2.23097757569302964334954e-33",
+            "2.2643374923727758026482e-31",
+            "1.4537822151056158993545e-29"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.846818188478522454149788",
+              "regular_anchor_abs": "0.846818188478522454149788",
+              "block_anchor_abs": "0.0316693707012912701455791",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "4.67909356508773166551016",
+              "regular_anchor_abs": "4.67909356508773166551016",
+              "block_anchor_abs": "0.0316693707012912701455791",
+              "raw_max_profile_step_from_previous_eta": "0.0774630599825108602894415",
+              "regular_max_profile_step_from_previous_eta": "0.0774630599825108602894415"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "14.6261273449873746986017",
+              "regular_anchor_abs": "14.6261273449873746986017",
+              "block_anchor_abs": "0.0316693707012912701455829",
+              "raw_max_profile_step_from_previous_eta": "0.0634182451941046102369601",
+              "regular_max_profile_step_from_previous_eta": "0.0634182451941046102369602"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "39.1901378138679016488213",
+              "regular_anchor_abs": "39.190137813867901648821",
+              "block_anchor_abs": "0.0316693707012912701459589",
+              "raw_max_profile_step_from_previous_eta": "0.0526668015094046228428164",
+              "regular_max_profile_step_from_previous_eta": "0.0526668015094046228428125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "reference_N": 18,
+      "mu_reference": "-1.74469368905726418414397",
+      "sigma0": "1.0",
+      "sigmas": [
+        "0.6",
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "etas": [
+        "0.01",
+        "0.0001",
+        "0.000001",
+        "1.0e-8"
+      ],
+      "block_size": 3,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "rows": [
+        {
+          "N": 6,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "1.70650543840880281070199",
+            "1.71135998583901683198949",
+            "1.74469368905726418475708"
+          ],
+          "resonant_overlaps_abs": [
+            "0.033716353681465757868858",
+            "0.0414118602615599311408288",
+            "4.56746353353279592595182e-15"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.104370614658872206560208",
+              "regular_anchor_abs": "0.0958016316739464674520576",
+              "block_anchor_abs": "0.103293252456806469129567",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.104409289936016987562893",
+              "regular_anchor_abs": "0.0958484035461664296600645",
+              "block_anchor_abs": "0.103289116004561336399864",
+              "raw_max_profile_step_from_previous_eta": "0.0000854878414733852131989556",
+              "regular_max_profile_step_from_previous_eta": "0.000144663446306581403529236"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.10440967348925592291322",
+              "regular_anchor_abs": "0.0958488707847348471091354",
+              "block_anchor_abs": "0.1032890718175155456498",
+              "raw_max_profile_step_from_previous_eta": "0.000000854520213711371057773097",
+              "regular_max_profile_step_from_previous_eta": "0.00000144594343476474588273464"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.104409677324467272150316",
+              "regular_anchor_abs": "0.0958488754570710607773691",
+              "block_anchor_abs": "0.103289071375362965615814",
+              "raw_max_profile_step_from_previous_eta": "8.5451653009196754958089e-9",
+              "regular_max_profile_step_from_previous_eta": "1.44593630876961223950367e-8"
+            }
+          ]
+        },
+        {
+          "N": 7,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "1.62460414733747212119859",
+            "1.64736973874228476082195",
+            "1.7446936890572641842113"
+          ],
+          "resonant_overlaps_abs": [
+            "0.146701078027822785089742",
+            "0.101693253661753481798772",
+            "2.12311642102577423763748e-14"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.110082446185855869206871",
+              "regular_anchor_abs": "0.0843347110867293285329019",
+              "block_anchor_abs": "0.105905225852834148391714",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.11019100391450819513848",
+              "regular_anchor_abs": "0.0844225577617070521252202",
+              "block_anchor_abs": "0.105949814077220841964527",
+              "raw_max_profile_step_from_previous_eta": "0.000216597162861870296402745",
+              "regular_max_profile_step_from_previous_eta": "0.00028616637648429651758"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.11019207996282967247562",
+              "regular_anchor_abs": "0.0844234348166150682634355",
+              "block_anchor_abs": "0.105950251897135153322597",
+              "raw_max_profile_step_from_previous_eta": "0.00000216369752393838753983116",
+              "regular_max_profile_step_from_previous_eta": "0.00000285869263284086147166173"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.11019209072235731066564",
+              "regular_anchor_abs": "0.0844234435870203748062425",
+              "block_anchor_abs": "0.105950256274526698142437",
+              "raw_max_profile_step_from_previous_eta": "2.16367465421592521921578e-8",
+              "regular_max_profile_step_from_previous_eta": "2.85866255932765806296668e-8"
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "1.33336502231553759934166",
+            "1.4409356025522990885769",
+            "1.74469368905726418414461"
+          ],
+          "resonant_overlaps_abs": [
+            "1.91815327369059936197939",
+            "1.51682180440890587540931",
+            "6.94803170886191601434013e-13"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.37621819235193486251468",
+              "regular_anchor_abs": "0.129830031808231531328625",
+              "block_anchor_abs": "0.337022955733282772298319",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.375832755283197115394955",
+              "regular_anchor_abs": "0.129576414150361311993336",
+              "block_anchor_abs": "0.336839891717175182257746",
+              "raw_max_profile_step_from_previous_eta": "0.000251892792129804302504246",
+              "regular_max_profile_step_from_previous_eta": "0.000581796249357322655809431"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.375828809369332556517268",
+              "regular_anchor_abs": "0.129573861202157504992712",
+              "block_anchor_abs": "0.336837978283558786230938",
+              "raw_max_profile_step_from_previous_eta": "0.00000252334381365666245052528",
+              "regular_max_profile_step_from_previous_eta": "0.00000582958078588293672400045"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.375828769901047902064711",
+              "regular_anchor_abs": "0.12957383567100266998497",
+              "block_anchor_abs": "0.336837959140943470281303",
+              "raw_max_profile_step_from_previous_eta": "2.52338795561582706319234e-8",
+              "regular_max_profile_step_from_previous_eta": "5.82969706084491244363765e-8"
+            }
+          ]
+        },
+        {
+          "N": 9,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "1.02426356116431820619692",
+            "1.2420989962134097976385",
+            "1.74469368905726418414399"
+          ],
+          "resonant_overlaps_abs": [
+            "0.600404002905132684849375",
+            "0.450843617993315762657523",
+            "4.79466454207817844643217e-16"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.145712768737329316654942",
+              "regular_anchor_abs": "0.0741476766000324468418606",
+              "block_anchor_abs": "0.111384205340836883484868",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.145237741880109888170304",
+              "regular_anchor_abs": "0.0739626665776025233486522",
+              "block_anchor_abs": "0.111001449116792697879904",
+              "raw_max_profile_step_from_previous_eta": "0.000749332250187939265751263",
+              "regular_max_profile_step_from_previous_eta": "0.000633881932234147121315951"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.145232935216044421348461",
+              "regular_anchor_abs": "0.0739608122465050153320154",
+              "block_anchor_abs": "0.110997576166261701725903",
+              "raw_max_profile_step_from_previous_eta": "0.00000752495463061527571032301",
+              "regular_max_profile_step_from_previous_eta": "0.00000635490755632709356974187"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.145232887143776900312389",
+              "regular_anchor_abs": "0.0739607937027754530881287",
+              "block_anchor_abs": "0.110997537432228032968201",
+              "raw_max_profile_step_from_previous_eta": "7.52527262198002686748422e-8",
+              "regular_max_profile_step_from_previous_eta": "6.35506826236190355399522e-8"
+            }
+          ]
+        },
+        {
+          "N": 10,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "0.247639787600577452271069",
+            "0.469279305220262335286823",
+            "1.74469368905726418414397"
+          ],
+          "resonant_overlaps_abs": [
+            "0.339632986064360384344587",
+            "0.348758112920218497666613",
+            "2.91050129164144996449518e-18"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.255496086836312526286544",
+              "regular_anchor_abs": "0.0600592098006254975231289",
+              "block_anchor_abs": "0.233716429648354012011044",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.254906029010821491919722",
+              "regular_anchor_abs": "0.0599533803679778661714467",
+              "block_anchor_abs": "0.233210566652405068974239",
+              "raw_max_profile_step_from_previous_eta": "0.00175157104339244202103484",
+              "regular_max_profile_step_from_previous_eta": "0.000399571235659178982896858"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.254898153133636476662975",
+              "regular_anchor_abs": "0.0599523211926964389575345",
+              "block_anchor_abs": "0.23320366715566000245253",
+              "raw_max_profile_step_from_previous_eta": "0.0000175654527848349399238492",
+              "regular_max_profile_step_from_previous_eta": "0.00000400280946513945805194419"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.25489807417695326843531",
+              "regular_anchor_abs": "0.0599523106008579076476419",
+              "block_anchor_abs": "0.233203597976265292825994",
+              "raw_max_profile_step_from_previous_eta": "0.00000017565917792615941586346",
+              "regular_max_profile_step_from_previous_eta": "4.00288014178344826441118e-8"
+            }
+          ]
+        },
+        {
+          "N": 11,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "0.100707659341066654937523",
+            "0.280399378836582409618469",
+            "1.74469368905726418414397"
+          ],
+          "resonant_overlaps_abs": [
+            "0.218755779763273112429499",
+            "0.249536755545565907462209",
+            "1.03440559281014072686392e-19"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.391327505838730916426936",
+              "regular_anchor_abs": "0.0533633936108952239778331",
+              "block_anchor_abs": "0.370221869600339909334126",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.392447097667632621211007",
+              "regular_anchor_abs": "0.0532637317015658505694639",
+              "block_anchor_abs": "0.371183056376356170814224",
+              "raw_max_profile_step_from_previous_eta": "0.00357210862067045083039627",
+              "regular_max_profile_step_from_previous_eta": "0.000415740532769229013856009"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.392439501913095670418702",
+              "regular_anchor_abs": "0.0532627345321617236101083",
+              "block_anchor_abs": "0.371174762575755407273614",
+              "raw_max_profile_step_from_previous_eta": "0.0000357024462911006824930998",
+              "regular_max_profile_step_from_previous_eta": "0.00000416518060512580821471349"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.39243942406009205416389",
+              "regular_anchor_abs": "0.0532627245604147536027767",
+              "block_anchor_abs": "0.37117467783270566333768",
+              "raw_max_profile_step_from_previous_eta": "0.000000357020426123063185640486",
+              "regular_max_profile_step_from_previous_eta": "4.16525808110998491251885e-8"
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "0.0448542255083495591697271",
+            "0.196465825567701065165311",
+            "1.74469368905726418414397"
+          ],
+          "resonant_overlaps_abs": [
+            "0.160496063507337465335656",
+            "0.201365976630412546910455",
+            "3.87915141594679399029256e-19"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.625457604280780730991293",
+              "regular_anchor_abs": "0.0499957461731071761182561",
+              "block_anchor_abs": "0.606020012985707171332763",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.640327127334074250368364",
+              "regular_anchor_abs": "0.0499061926178721469458307",
+              "block_anchor_abs": "0.620371991360434191628437",
+              "raw_max_profile_step_from_previous_eta": "0.00628975235033208796487317",
+              "regular_max_profile_step_from_previous_eta": "0.000395369862685661723890516"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.6403245761406766904854",
+              "regular_anchor_abs": "0.0499052962627083896410595",
+              "block_anchor_abs": "0.620368636399412434745637",
+              "raw_max_profile_step_from_previous_eta": "0.0000626912886909670536126587",
+              "regular_max_profile_step_from_previous_eta": "0.00000396077228495918095850766"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.640324534917106969075577",
+              "regular_anchor_abs": "0.0499052872990765828747616",
+              "block_anchor_abs": "0.62036858759751330392929",
+              "raw_max_profile_step_from_previous_eta": "0.00000062688411746899732313426",
+              "regular_max_profile_step_from_previous_eta": "3.96084277742457291503078e-8"
+            }
+          ]
+        },
+        {
+          "N": 13,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "0.0352343027504843351068349",
+            "0.180698291950082841546269",
+            "1.74469368905726418414397"
+          ],
+          "resonant_overlaps_abs": [
+            "0.114561226724731646118574",
+            "0.140000370641305974406656",
+            "2.53706474855473781787489e-22"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.571712565026520119678828",
+              "regular_anchor_abs": "0.0427670691101110882614118",
+              "block_anchor_abs": "0.548115884807703467762916",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.593685889591710418118414",
+              "regular_anchor_abs": "0.0426408483368823874833314",
+              "block_anchor_abs": "0.566784391775200327184569",
+              "raw_max_profile_step_from_previous_eta": "0.00714285581652293954791857",
+              "regular_max_profile_step_from_previous_eta": "0.000647815628835725788696583"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.593683383737988544705192",
+              "regular_anchor_abs": "0.0426395855609205287740012",
+              "block_anchor_abs": "0.56675716826376520093029",
+              "raw_max_profile_step_from_previous_eta": "0.0000712174885784739168606206",
+              "regular_max_profile_step_from_previous_eta": "0.00000649720184527469458530867"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.593683335089672269745833",
+              "regular_anchor_abs": "0.0426395729331065440359324",
+              "block_anchor_abs": "0.566756873430129653751963",
+              "raw_max_profile_step_from_previous_eta": "0.000000712142507866468146295605",
+              "regular_max_profile_step_from_previous_eta": "6.49739224098375105490115e-8"
+            }
+          ]
+        },
+        {
+          "N": 14,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "0.0212558935054503259734217",
+            "0.157398816301106219423294",
+            "1.74469368905726418414397"
+          ],
+          "resonant_overlaps_abs": [
+            "0.0388297167186462534635654",
+            "0.00953005393366375467695236",
+            "2.39489383009335631155639e-23"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.340428049958724991285017",
+              "regular_anchor_abs": "0.0553157646115320578702786",
+              "block_anchor_abs": "0.312550143203263846872425",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.3781006714011852331307",
+              "regular_anchor_abs": "0.0551028339135449363587076",
+              "block_anchor_abs": "0.325374805301937820244958",
+              "raw_max_profile_step_from_previous_eta": "0.00337325459408289540301577",
+              "regular_max_profile_step_from_previous_eta": "0.000815148010448488883389033"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.378133071449436307810975",
+              "regular_anchor_abs": "0.0551007012072376708696168",
+              "block_anchor_abs": "0.325178180292370759445224",
+              "raw_max_profile_step_from_previous_eta": "0.0000334643588316009132222851",
+              "regular_max_profile_step_from_previous_eta": "0.00000818332760337896961937896"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.378133354962906089960271",
+              "regular_anchor_abs": "0.0551006798798378788209879",
+              "block_anchor_abs": "0.325176178413770038525924",
+              "raw_max_profile_step_from_previous_eta": "0.000000334614043193494382072383",
+              "regular_max_profile_step_from_previous_eta": "8.18364668321246177232336e-8"
+            }
+          ]
+        },
+        {
+          "N": 15,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "0.0205480373367898664909337",
+            "0.157354888747207693172909",
+            "1.74469368905726418414397"
+          ],
+          "resonant_overlaps_abs": [
+            "0.10706976029013403617412",
+            "0.162667092000072914769911",
+            "4.89014627549598213998511e-25"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.853815826332730376985384",
+              "regular_anchor_abs": "0.0516787880086254583527605",
+              "block_anchor_abs": "0.832149526121967110134877",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.946494597688648449014466",
+              "regular_anchor_abs": "0.0515667864488203078603223",
+              "block_anchor_abs": "0.927588264719084554901174",
+              "raw_max_profile_step_from_previous_eta": "0.0107182867467730024397225",
+              "regular_max_profile_step_from_previous_eta": "0.000474397263867966340617097"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.946477184481354635283968",
+              "regular_anchor_abs": "0.0515656658066423399312829",
+              "block_anchor_abs": "0.927621611888125559123331",
+              "raw_max_profile_step_from_previous_eta": "0.000107162002887319602961472",
+              "regular_max_profile_step_from_previous_eta": "0.00000475418505413107940391087"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.946476899491875032761359",
+              "regular_anchor_abs": "0.0515656546001607087619438",
+              "block_anchor_abs": "0.92762183664032922620141",
+              "raw_max_profile_step_from_previous_eta": "0.00000107159569167628673203568",
+              "regular_max_profile_step_from_previous_eta": "4.75428684370705258792826e-8"
+            }
+          ]
+        },
+        {
+          "N": 16,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "0.00916667032128688897989664",
+            "0.128199141741711854172609",
+            "1.74469368905726418414397"
+          ],
+          "resonant_overlaps_abs": [
+            "0.06657767059296045319933",
+            "0.0960456345978914275075191",
+            "2.37152904383364856804414e-26"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.898784772397176749556225",
+              "regular_anchor_abs": "0.0367084794260905091265174",
+              "block_anchor_abs": "0.887397358104082375721349",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "1.32715862223606385942991",
+              "regular_anchor_abs": "0.0365907944489730472047191",
+              "block_anchor_abs": "1.30339316582415090474917",
+              "raw_max_profile_step_from_previous_eta": "0.0136853000092724749201015",
+              "regular_max_profile_step_from_previous_eta": "0.000695236530097039245397261"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "1.32721450843262246851108",
+              "regular_anchor_abs": "0.0365896175053261065379058",
+              "block_anchor_abs": "1.30337454092860250674615",
+              "raw_max_profile_step_from_previous_eta": "0.000136673700326595655408861",
+              "regular_max_profile_step_from_previous_eta": "0.00000697456274091300912455937"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "1.32721428592120557850925",
+              "regular_anchor_abs": "0.0365896057358825382563341",
+              "block_anchor_abs": "1.30337358695355423282975",
+              "raw_max_profile_step_from_previous_eta": "0.00000136667441791679078990247",
+              "regular_max_profile_step_from_previous_eta": "6.97478471580834987425545e-8"
+            }
+          ]
+        },
+        {
+          "N": 17,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "0.00467500141283809702138564",
+            "0.118005634877938398488538",
+            "1.74469368905726418414397"
+          ],
+          "resonant_overlaps_abs": [
+            "0.0151017213672968519507241",
+            "0.0270945274632955331825421",
+            "4.62152163537517063247676e-27"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "0.265126804511560892544818",
+              "regular_anchor_abs": "0.0452495214877446471551304",
+              "block_anchor_abs": "0.2850723343466615255143",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "0.62764373865908983893533",
+              "regular_anchor_abs": "0.0450693492705290060417893",
+              "block_anchor_abs": "0.585605845930622815261499",
+              "raw_max_profile_step_from_previous_eta": "0.00559613929905663610276593",
+              "regular_max_profile_step_from_previous_eta": "0.000832997965427158438448347"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "0.627873437388264371315153",
+              "regular_anchor_abs": "0.0450675455762289360661108",
+              "block_anchor_abs": "0.584865777201971863251006",
+              "raw_max_profile_step_from_previous_eta": "0.0000529834592343148160464869",
+              "regular_max_profile_step_from_previous_eta": "0.00000836379226089500234617367"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "0.627874320210192031340721",
+              "regular_anchor_abs": "0.0450675275390912773903615",
+              "block_anchor_abs": "0.584857050578012646895335",
+              "raw_max_profile_step_from_previous_eta": "0.000000529512946270034694026506",
+              "regular_max_profile_step_from_previous_eta": "8.36413102054996302368161e-8"
+            }
+          ]
+        },
+        {
+          "N": 18,
+          "mu_reference": "-1.74469368905726418414397",
+          "block_size": 3,
+          "resonant_eigenvalues_abs": [
+            "0.00455404171175921590194235",
+            "0.117605864995153225464118",
+            "1.74469368905726418414397"
+          ],
+          "resonant_overlaps_abs": [
+            "0.0749220581970581736063604",
+            "0.135186961713509981497866",
+            "3.63896148692494921185622e-28"
+          ],
+          "profiles": [
+            {
+              "eta": "0.01",
+              "raw_anchor_abs": "1.24918800655108611702153",
+              "regular_anchor_abs": "0.0480931447645631689657736",
+              "block_anchor_abs": "1.22946781559468843659952",
+              "raw_max_profile_step_from_previous_eta": "0.0",
+              "regular_max_profile_step_from_previous_eta": "0.0"
+            },
+            {
+              "eta": "0.0001",
+              "raw_anchor_abs": "2.99921498615341089335736",
+              "regular_anchor_abs": "0.0479746605807354106498393",
+              "block_anchor_abs": "2.98061207845477237035807",
+              "raw_max_profile_step_from_previous_eta": "0.018657933826853241653969",
+              "regular_max_profile_step_from_previous_eta": "0.00053303536746049346512321"
+            },
+            {
+              "eta": "0.000001",
+              "raw_anchor_abs": "2.99980854613599457397466",
+              "regular_anchor_abs": "0.0479734754592559197493142",
+              "block_anchor_abs": "2.98148516657513386799422",
+              "raw_max_profile_step_from_previous_eta": "0.000186905632980391698177298",
+              "regular_max_profile_step_from_previous_eta": "0.00000534339843151655432643073"
+            },
+            {
+              "eta": "1.0e-8",
+              "raw_anchor_abs": "2.99980732539721630250847",
+              "regular_anchor_abs": "0.047973463608016310669908",
+              "block_anchor_abs": "2.98148678503707456116474",
+              "raw_max_profile_step_from_previous_eta": "0.00000186901742890706953263662",
+              "regular_max_profile_step_from_previous_eta": "5.34352851652214826512778e-8"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

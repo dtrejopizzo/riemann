@@ -1,0 +1,508 @@
+\documentclass[11pt,leqno]{amsart}
+
+\usepackage[all]{xy}
+\usepackage{amssymb,bbm,xr,a4wide,color,cancel,nicefrac,enumitem}
+\usepackage[mathscr]{euscript}
+\usepackage{mathrsfs}
+
+%\usepackage[latin1]{inputenc}
+%\usepackage[T1]{fontenc}
+
+\usepackage[colorlinks=true,pagebackref=true]{hyperref} % new hyperref package added by Jean
+\usepackage{cleveref}
+
+\newcommand{\fred}[1]{\textcolor{blue}{#1}} %notes by Frédéric
+\newcommand{\jean}[1]{\textcolor{red}{#1}} %notes by Jean
+
+\title{Quadratic Riemann-Roch formulas}
+
+\author{Fr\'ed\'eric D\'eglise}
+\address{ENS de Lyon, UMPA, UMR 5669, 46 all\'ee d'Italie, 69364 Lyon Cedex 07, France}
+\email{frederic.deglise@ens-lyon.fr}
+\urladdr{http://perso.ens-lyon.fr/frederic.deglise/}
+ 
+\author{Jean Fasel}
+\address{Institut Fourier - UMR 5582, Universit\'e Grenoble-Alpes, CNRS, CS 40700, 38058 Grenoble Cedex 9, France}
+\email{Jean.Fasel@univ-grenoble-alpes.fr}
+\urladdr{https://www-fourier.univ-grenoble-alpes.fr/~faselj/}
+
+\date{\today}
+
+\newtheorem{thm}{Theorem}[subsection]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lm}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{thmi}{Theorem}
+\newtheorem{propi}[thmi]{Proposition}
+\newtheorem{dfi}[thmi]{Definition}
+\newtheorem*{cori}{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{notation}[thm]{Notations}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{conv}[thm]{Convention}
+
+\theoremstyle{definition}
+\newtheorem{df}[thm]{Definition}
+\newtheorem{num}[thm]{}
+\newtheorem{paragr}[thm]{}
+%\newtheorem{assumption}{}
+\numberwithin{equation}{thm}
+
+\newtheorem{thm*}{Theorem}
+
+\renewcommand{\theequation}{\thethm.\alph{equation}}
+\renewcommand{\theparagraph}{\thesubsection.\alph{paragraph}}
+%\renewcommand{\theassumption}{\thesection.0}
+
+\input{command}
+
+\begin{document}
+
+%\begin{abstract}
+%\end{abstract}
+
+\maketitle
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\section*{Introduction}
+
+\subsubsection*{Orientation theory and Riemann-Roch formulas after Grothendieck}
+
+Starting from an astonishing six pages paper by Quillen \cite{QuiCob}, the intrication between \emph{formal group laws}
+ and homotopy theory has emerged and flourished for more than fifty years.
+ The picture of chromatic homotopy theory has arisen from Ravenel's conjectures and yielded deep insight in stable homotopy groups of spheres.
+ In particular, the stable homotopy category can not only be divided into the rational and $p$-local parts,
+ but each $p$-local components can be subsequently divided into $v_n$-local parts reflecting
+ Lazard's classification of $p$-local formal group laws by height (see \cite{BBchrom} for a historical account).
+ This colorful filtration is at the heart of many developments in stable homotopy theory since then.
+ The main players here are the spectrum of complex cobordism
+ and its subsequent cohort of complex oriented ring spectra.
+
+Motivic homotopy theory is driven by its analogy with its topological realization.
+ In particular, complex orientation has a well-known motivic analogue, the theory of $\GL$-orientation.
+ In the latter, the theory of formal group laws (\emph{aka} FGL) has been successfully developed, and algebraic cobordism $\MGL$
+ is known to possess the universal formal group law by works of Morel and
+ Levine.\footnote{Over fields of characteristic $0$: see \cite{LMcobord}
+ and \cite{LevMGL}.}
+ However, from the chromatic point of view, $\GL$-oriented theories missed an important
+ part of motivic stable homotopy: the quadratic part (or more accurately the symmetric bilinear part). This part is visible
+ in the computation of the $0$-th stable homotopy groups of spheres, whose sections over a field $k$
+ are given by the Grothendieck-Witt group of $k$. From the $\GL$-oriented point of view,
+ only the rank of the corresponding class of quadratic forms is visible.
+ Another indication is that rational motivic ring spectra
+ are not $\GL$-oriented in general --- whereas rational (topological) ring spectra are complex
+ oriented. However, they are both oriented with respect to the algebraic group
+ $\SL$ and $\Sp$, in the sense of Panin and Walter.
+
+\bigskip
+
+Whereas $\SL$-orientations are very close to $\GL$-orientations from the point of view of Thom classes,
+ it is only with \emph{$\Sp$-orientations} that one can develop a satisfactory theory of characteristic
+ (\emph{Borel}) classes, analogous to the $\GL$-oriented case (Chern classes).
+ The price to pay is to restrict one's attention to symplectic vector bundles
+ (\emph{i.e.} vector bundles equipped with a symplectic form, or equivalently an $\Sp$-torsor).
+Once this restriction is accepted, one can, following Panin and Walter, transport
+ all concepts of classical orientations theory:
+ starting from Thom classes, one derives Euler classes, proves the \emph{symplectic projective bundle} theorem,
+ gets \emph{higher Borel classes} following the method of Grothendieck, and derives all their properties
+ thanks to a \emph{symplectic splitting principle}.\footnote{For all this,
+ the reader may consult the original paper of Panin and Walter \cite{PW_MSP},
+ and for more precise references, the current text: Thom classes: \Cref{df:G-orientation} and \Cref{thm:PW_Sp-oriented},
+ Euler classes: \Cref{num:Sp-Euler}, symplectic projective bundle theorem \Cref{num:Sp-proj-bdl},
+ Borel classes: \Cref{num:Borel_Sp}, symplectic splitting: \Cref{num:sp-splitting-principle}.}
+  
+
+In \cite{DF3, DFJK}, we started the study of the analog of FGL for $\Sp$-orientations,
+ the theory of \emph{Formal Ternary Laws}, \emph{aka} FTL. Recall that the FGL associated
+ to an oriented ring spectrum is the power series given by expressing the first Chern class of a tensor product of two line
+ bundles in terms of the respective first Chern classes of the line bundles.
+ In the symplectic case, the analog of line bundles are rank $2$ symplectic bundles.
+ However, the tensor product of two symplectic bundles is not symplectic but orthogonal.
+ According to an original idea of Walter, one has to consider the tensor product of three copies
+ of the tautological symplectic bundles over the threefold product $\BSp^{\times 3}$ of the classifying space $\BSp$, which gives a rank $8$ vector bundle having
+four non trivial $4$ Borel classes. In particular, FTL are given by power series in $3$ variables,
+ with $4$ components --- an algebraic structure that we called a \emph{$(4,3)$-series} in \cite{CDFH}.
+
+This gives the theory of formal ternary laws a more intricate aspect compared to its parent,
+ the formal group laws.
+ Nonetheless, we were able to develop substantially this theory in the aforementioned papers.
+ We described a good analog of the additive (resp. multiplicative) FGL in the symplectic case,
+ and proved that it arises from the Chow-Witt groups or more generally the Milnor-Witt motivic cohomology
+ (resp. the higher Grothendieck-Witt groups).\footnote{See Examples \ref{ex:FTP_low_complexity}
+ and \ref{ex:representableFTL} for a reminder.}
+ As for formal groups, the existence of a universal FTL and its universal ring of coefficients,
+ called the \emph{Walter ring}, can be easily established.
+ We have set up computational tools to understand the latter in \cite{DFJK}, and derived
+ an explicit description of certain sub-quotients (see \emph{loc. cit.}, A.3 and A.4).
+ 
+\subsubsection*{Generalized orientations and GRR formulas}
+
+In this paper, we are interested by another classical aspect of orientation theory,
+ the Grothendieck-Riemann-Roch formulas. Fundamentally, these formulas describe
+ the effect of a change of orientation on a fixed ring spectrum. There exists Todd
+ classes which precisely describe how to go from the characteristic classes of one orientation
+ to the other. Moreover, this Todd class can be computed explicitly via the isomorphism
+ between the two FGLs associated with each orientations.
+ In the present article,
+ we extend these results to generalized orientations in the sense of Panin and Walter,
+ and specialize these theoretical results to the case of symplectic orientations
+ and their associated FTLs. 
+
+To explain the context of our generalized Riemann-Roch formulas,
+ let us first recall that the idea behind Panin and Walter's orientation theory
+ is that certain cohomology theories possess Thom classes only for vector bundles
+ with additional data, such as a symplectic form or more generally
+ $G_*$-torsors for a graded algebraic sub-group $G_*$ of the
+ general linear group $\GL_*$ (see \Cref{df:G-orientation} for a reminder).
+ To formulate our Grothendieck-Riemann-Roch formulas, we need to
+ extend these Thom classes to \emph{virtual} $G$-torsors (see \Cref{prop:virt_thom_G-orient}).
+ This leads us to introduce a new, more general, definition of orientations.
+ With that in mind, we introduce the notion of stable structures on vector bundles over a scheme $X$.
+ Recall that Deligne has defined the category $\uK(X)$ of virtual vector bundles over $X$,
+ which is a \emph{Picard groupoid} whose isomorphism classes are given by the 
+ K-theory group $\mathrm{K}_0(X)$.
+In this context, a stable structure on vector bundles is a collection of maps (or a so-called pseudo-functor)
+$$
+\sigma:\uK^\sigma(X) \rightarrow \uK(X)
+$$
+for various schemes $X$ with suitable properties: compatibility with pullbacks
+ and with the monoidal structure (see \Cref{df:stable_structure} for more precision).
+ One example is given by the functor $\sigma_G:\uK^G(X) \rightarrow \uK(X)$ from virtual $G$-torsors
+ to virtual vector bundles that ``forgets'' the $G$-structure.
+ Let us roughly state our main definition:
+\begin{dfi}(See \Cref{df:sigma-orientation})
+A $\sigma$-orientation on the ring spectrum $\E$ is 
+ the data of Thom classes $\th(\tilde v) \in \E^{2r,r}(\Th(v))$ 
+ associated to any object $\tilde v \in \uK^\sigma(X)$, where $v=\sigma(\tilde v)$
+ is a virtual vector bundle of rank $r$ and (motivic) Thom space $\Th(v)$.
+ These Thom classes are required to be compatible with isomorphisms, pullbacks
+ and the monoidal structure on $\uK^\sigma(X)$.
+\end{dfi}
+As in the classical case, the properties listed in the preceding definition imply
+ that $\thom(\tilde v)$ is a basis of the $\E^{**}(X)$-module
+ $\E^{**}(\Th(v))$ (as expected). The reader will be relieved 
+ to know that $\sigma_G$-orientations are in bijection with $G$-orientations
+ in the sense of Panin and Walter (\Cref{prop:stable_G-orientations}).
+ One easily deduces from the above definition
+ a new family of characteristic (or fundamental) classes.
+ 
+\begin{propi}(See \Cref{def:orientedfundamentalclass})\label{propi:fdl_classes}
+Let $\E$ be a $\sigma$-oriented ring spectrum, and let $f:X \rightarrow S$ be a smoothable lci morphism. A \emph{$\sigma$-orientation} of $f$ is a class $\tilde \tau_f \in \uK^\sigma(X)$ such
+ that $\sigma(\tilde \tau_f)$ is isomorphic to the image $\tau_f$ of the cotangent complex
+ $\mathcal L_f$ of $f$ in $\uK(X)$. One associates to the pair $(f,\tilde \tau_f)$ a canonical fundamental class
+ with coefficients  in $\E$:
+$$
+\tilde \eta_f^\E \in \E_{2d,d}(X/S)
+$$
+where $\E_{n,i}(X/S)=\Hom_{\SH(S)}(\un_S(i)[n],f^!\un_S)$
+ is the bivariant theory associated with $\E$ (see \Cref{sec:bivariant} for more information).
+\end{propi}
+These $\sigma$-oriented fundamental classes satisfy the usual formalism of their parent
+ the motivic fundamental classes: compatibility with composition,
+ transverse pullback formula, excess of intersection (see \cite{DJK}).
+ They also fulfill the formalism of Fulton and MacPherson \cite{FMP}.
+ Note in particular that they induce various Gysin morphisms.
+ For example, if $f$ is in addition proper, one gets a pushforward in cohomology:
+$$
+f^\E_!:\E^{n,i}(X) \rightarrow \E^{n+2d,i+d}(S), a \mapsto f_!(a.\tilde \eta_f^\E)
+$$
+where one uses the action of cohomology and the axiomatic pushforward on bivariant theory
+ (see also e.g. \cite[Def. 3.3.2]{Deg16}).
+Additionally, they satisfy our sought-for Grothendieck-Riemann-Roch formula,
+ in the style of \cite[1.4]{FMP}.
+\begin{thmi}(\Cref{prop:computeToddclass} and \Cref{thm:GRR})\label{thmi:GRR}
+Let $\psi:\E \rightarrow \F$ be a morphism of ring spectra.
+ Assume further that $\E$ and $\F$ admit $\sigma$-orientations. Then there exists a unique \emph{Todd class}
+\[
+\td_\psi\colon \mathrm{K}_0^{\sigma}(X) \rightarrow \F^{00}(X)^\times
+\]
+which is a morphism of abelian groups natural in $X$ such that
+ the following relation holds
+$
+\thom(\tilde v,\F)=\td_\psi(\tilde v)\cdot\psi_*(\thom(\tilde v,\E)).
+$
+
+Moreover, for any $\sigma$-oriented morphism $(f:X \rightarrow S,\tilde \tau_f)$,
+ one gets the following Grothendieck-Riemann-Roch formula:
+$$
+\psi_*(\tilde\eta_f^\E)=\td_\psi(\tilde \tau_f)\cdot\tilde\eta_f^\F.
+$$
+\end{thmi}
+As underlined by Fulton and MacPherson, one deduces from the above formula
+ the usual formulations of Grothendieck-Riemann-Roch formulas,
+ involving Gysin morphisms. Namely, when $f$ is in addition proper, the formula reads
+$$
+\psi(f^\E_!(a))=f^\F_!(\td_\psi(\tilde \tau_f).\psi(a)).
+$$
+One also deduces analogous formulas in homology
+ and, without the properness assumptions, formulas in cohomology
+ with compact support or bivariant theories. The reader
+ can find details in the statement of \Cref{thm:GRR}.
+ The problem with this abstract formula is to be able to compute
+ the relevant Todd class. This is one of the motivations to restrict our attention
+ to the symplectic case.
+ 
+\subsubsection*{Symplectic orientations and formal ternary laws}
+
+Symplectic orientations are very close to $\GL$-orientations.
+ Firstly, there is an appropriate variant of the projective bundle theorem,
+ for the so-called symplectic projective spaces $\HP^n_S$
+ (built out of the classifying spaces $\BSp_{2n}$, see \Cref{num:sp-grassmanian}).
+ This allowed Panin and Walter to characterize $\Sp$-orientations of a ring spectrum $\E$
+ as the datum of a class $b \in \tilde \E^{4,2}(\HP^\infty_S)$ in reduced cohomology
+ which restricts to the tautological class on $\HP^1_S\simeq \un(2)[4]$
+ (see \Cref{thm:PW_Sp-oriented} for a reminder).
+
+Our first task is to relate the theory of Thom classes
+ associated to symplectic orientations with the theory of virtual Thom classes
+ mentioned previously.
+ For this, we show that these Thom classes not only extend to 
+ virtual classes of symplectic bundles, but also factors modulo the so-called metabolic relation.
+ More precisely, we introduce a stable structure
+ $f_\Sp:\uKSp(X) \rightarrow \uK(X)$ whose source is the associated homotopy groupoid of the $\infty$-category $\mathrm{KSp}(X)$ and we show that $\Sp$-orientations
+ on a ring spectrum $\E$ are in bijection with $f_\Sp$-orientations in the
+ sense explained above (see \Cref{prop:sp-or&KSp-or}).
+
+Our second task is to improve the properties of symplectic Thom classes
+ by establishing the following formula:
+\begin{thmi}(see \Cref{thm:epsilon} and its corollary)\label{thmi:epsilon}
+Let $\E$ be an $\Sp$-oriented ring spectrum with Thom classes $\thom$.
+ Then for any symplectic vector bundle $(\cU,\psi)$ over a scheme $X$,
+ any unit $\lambda \in \cO_X(X)^\times$ with associated class
+ $\langle \lambda \rangle \in [\un_X,\Sigma^\infty \GG]_{\SH(X)}$,
+ the following relations hold:
+\begin{align*}
+\thom(\cU,\lambda.\psi)&=\langle u \rangle.\thom(\cU,\psi), \\
+b_i(\cU,\lambda.\psi)&=\langle \lambda^i \rangle.b_i(\cU,\psi), i \geq 0.
+\end{align*}
+\end{thmi}
+The proof of this formula is surprisingly involved. It was known before only
+ for $\SL$-oriented theories (see \cite[Prop. 2.2.8]{DF3}).
+ It is nevertheless central for the theory of FTL,
+ as it implies the so-called \emph{$\epsilon$-linearity axiom} of the FTL
+ associated to a symplectically oriented spectrum $\E$
+ (see \Cref{df:FTL} and \Cref{num:SP-orient->FTL}).
+ Such FTL are called \emph{representable}.
+
+Once all these preliminaries are settled,
+ the link between FTL and $\Sp$-orientations takes the same
+ form as for $\GL$-orientations: given an $\Sp$-oriented
+ ring spectrum with associated FTL $F_t$, choosing another
+ FTL amounts to choose a strict automorphism of $F_t$
+ (see \Cref{prop:sp-orient&FTL}).
+ This result contains the key to compute Todd classes
+ as we will see later in this introduction.
+ One also deduces the following
+ result, that confirms the analogy between FTL and FGL.
+\begin{thmi}(see \Cref{thm:log_FTL}) \label{thmi:log_FTL}
+Any representable rational formal ternary law $F_t$ admits a logarithm,
+ \emph{i.e.} a strict isomorphism $\log_{F_t}$ with the additive FTL.
+ Moreover, $\log_{F_t}$ is unique among such strict isomorphisms.
+\end{thmi}
+We expect that the representability assumption is unnecessary.
+ In fact, we believe that much more properties of FTL could be developed
+ in analogy with FGL. This includes a general chromatic study
+ of motivic homotopy theory.
+ On the other hand, the properties of the Walter ring classifying FTL
+ seems richer than its analog the Lazard ring, due to
+ the presence of torsion phenomena.
+ 
+\subsubsection*{The quadratic Riemann-Roch formula}
+
+Our main application is a quadratic enrichment
+ of the usual Grothendieck-Riemman-Roch formula.
+ In the former, the Borel character defined in \cite{DF3} plays the role
+ of the Chern character.
+
+Recall that, for a field of characteristic different from $2$,\footnote{this
+ assumption can probably be removed using \cite{Calmes24}}
+ and any smooth $k$-scheme, the (total) Borel character is an isomorphism 
+ of ring spectra over $k$
+$$
+\bo_t:\KO_\QQ \rightarrow \bigoplus_{i \in \ZZ} \big(\HMW\QQ(4i)[8i] \oplus \HM\QQ(4i+2)[8i+4]\big)
+$$
+where $\KO_\QQ$, $\HMW\QQ$, $\HM\QQ$ are respectively the ring spectra representing
+ higher-Grothendieck-Witt groups (aka Hermitian $K$-theory), Milnor-Witt motivic cohomology and motivic cohomology over $k$,
+ all with rational coefficients. 
+ Plainly, the \emph{general quadratic Grothendieck-Riemann-Roch theorem(s)}
+ are the formulas that one obtains by applying \Cref{thmi:GRR}
+ to this morphism of ring spectra, each equipped with their canonical
+ symplectic orientation.
+ The interesting point is that this particular case is amenable to calculations.
+ Our first result is a computation of the associated Todd class for a smooth $k$-scheme $X$
+$$
+\tilde \td:=\td_{\bo_t}:\KSp_0(X) \rightarrow  \CH{}^{4*}(X)\oplus \CHt{}^{4*+2}(X)
+$$
+using the symplectic splitting principle (see Propositions \ref{prop:Toddforgetful},
+ \ref{prop:Toddquadratic}).
+
+\bigskip
+
+We specialize the general quadratic GRR-formulas attached to $\bo_t$
+ to the \emph{Hirzebruch-Riemann-Roch case}.
+ To describe it, we need a little more notation.
+ Let $X$ be a smooth proper $k$-scheme of even dimension $d=2n$,
+ which is \emph{symplectically oriented} by a class $\tilde \tau_X \in \KSp_0(X)$,
+ as in \Cref{propi:fdl_classes}. Note that this induces
+ an isomorphism $f:\omega_X \simeq \OO_X$ where $\omega_X=\det(\Omega_X)$ is the canonical
+ bundle of $X/k$.%\footnote{In other words, $f$ is an orientation in the sense of Barge-Morel
+ %of the tangent bundle of $X/k$. See \Cref{ex:orientations} for more.}
+
+We first note that, given the $(8,4)$-periodicity of the ring spectra $\GW$,
+ the Borel character induces in particular isomorphisms
+\begin{align*}
+\bo_t^{0,0}:\KO_0(X)_\QQ &\rightarrow \CHt{}^{4*}(X)_\QQ \oplus \CH^{4*+2}(X)_\QQ \\
+\bo_t^{4,2}:\KSp_0(X)_\QQ &\rightarrow \CHt{}^{4*+2}(X)_\QQ \oplus \CH^{4*}(X)_\QQ
+\end{align*}
+where the first $\KO_0$ and $\KSp_0$ are respectively the orthogonal
+ and symplectic K-theory. One will retain that $\bo_t$ is defined on stable metabolic
+ classes of symmetric and symplectic vector bundles.
+
+We next consider $(V,\varphi)$ either a symmetric bundle if $d=0\pmod 4$ or a symplectic bundle if $d=2\pmod 4$.
+The orientation $f$ of $X/k$ allows us to define a \emph{quadratic Euler characteristic}
+ (\Cref{df:quad-Euler-char}) as the element in $\GW(k)$:
+$$
+\tilde \chi(X,f;V,\varphi)=
+[\H^n(X,V),\varphi_n]+(-1)^{\lfloor d/2 \rfloor}\sum_{i=0}^{n-1}(-1)^{i}\mathrm{dim}_k\H^i(X,V)\cdot h
+$$
+where $h$ is the class of the hyperbolic form, and we have considered the composite isomorphism:
+$$
+\varphi_n:\H^n(X,V) \xrightarrow \sim \H^n(X,(V)^\vee\otimes\omega_{X/k})
+ \xrightarrow \sim \H^{n}(X,V)^*
+$$
+where the first map is induced by $f$ and the second one by Serre duality.
+\begin{thmi}[quadratic HRR formula](\Cref{thm:HRR}) \label{thmi:HRR}
+Consider the above notation. Then the following formula holds in $\GW(k)$:
+$$
+\tilde \chi(X,f;V,\varphi)=\tdeg_{\tilde \tau_f}\big(\tilde \td(\tilde \tau_X)\cdot \bo_t(V,\varphi)\big)
+$$
+where $\tdeg_{\tilde \tau_f}:\CHt{}^d(X) \stackrel{\tilde \tau_X}\simeq \CHt_0(X,\omega_X) \xrightarrow{p_*} \GW(k)$
+ is the quadratic degree map associated with the orientation $f$ of $X/k$.
+\end{thmi}
+We compute explicitly the above formula in the case of K3-surfaces (see \Cref{ex:HRR-K3}).
+
+\subsubsection{Plan of the article}
+This work can be roughly divided into two parts.
+ In the first one, comprising Sections 1 and 2,
+ we establish a framework of generalized orientations
+ (or Thom classes attached to vector bundles with additional structures)
+ that allows one to define fundamental classes, Todd classes and prove several
+ Riemann-Roch formulas.
+ In the second part, comprising Sections 3 and 4,
+ we specialize the above discussion to the case of symplectic orientations,
+ whose specificity is to be tied with the algebraic notion of formal ternary laws.
+ The reader which is only interested in the symplectic case, can
+ start reading sections 3 and 4 independently.
+
+In more details, Section 1 is mainly concerned with a theory
+ that extends Panin-Walter's orientation theory. The main objective is to define 
+ a good notion of \emph{virtual Thom classes},
+ which are associated with ``virtual vector bundles with additional structures'',
+ which are rigorously axiomatized in \Cref{df:stable_structure}.
+ We also remind  in Section 1.1 some material about bivariant theories in $\AA^1$-homotopy.
+ Section 2.1 is then devoted to the application of the general theory of virtual Thom classes
+ to define fundamental classes in the sense of Fulton and MacPherson,
+ associated with the bivariant theories discussed in Section 1.1.
+Section 2.2 finally presents the various Riemann-Roch formula that one
+ can obtain out of an arbitrary morphism of ring spectra which are suitably
+ \emph{oriented}.
+
+Section 3 is more involved.
+ Let us first describe the sections that can be read independently of sections 1 and 2.
+ We first recall in 3.1 the algebraic theory of formal ternary laws,
+ and in 3.2 Panin-Walter's notion of symplectic orientations on a ring spectrum.
+ Section 3.4 is devoted to prove \Cref{thm:epsilon} (stated above as \Cref{thmi:epsilon}),
+ which is crucial to prove that each $\Sp$-oriented ring spectrum
+ has a canonically associated FTL. This association is studied in detail in 3.5.
+ We derive some interesting facts about FTL such as \Cref{thm:log_FTL}
+ (stated as \Cref{thmi:log_FTL} above).
+ Section 3 is connected with the two previous one by 3.3,
+ where we show that Panin-Walter's Thom classes can be extended as Thom classes
+ of virtual metabolic symplectic bundles. The final section 3.6 explains
+ how to compute Todd classes in the symplectic case
+ (by perfect analogy with the $\GL$-orientation case).
+
+The final section is devoted to computations, determining respectively the Todd classes associated with Adams operations (1.1)
+ and with the Borel character (1.2). We conclude by a proof of the
+ quadratic HRR-formula stated as \Cref{thmi:HRR} above. 
+ 
+
+\section*{Notations}
+
+We will fix throughout the paper a base scheme $\Sigma$
+ (eg: $\Spec(\ZZ)$, $\Spec(\ZZtwo)$, $\Spec(k)$ for a field $k$).
+ All schemes are assumed to be quasi-compact and quasi-separated (qcqs) $\Sigma$-schemes;  we denote by $\base$ the category whose objects are such schemes. 
+
+Given a scheme $X$, we let $\VB(X)$ be the category of vector bundles over $X$,
+ that we view as Zariski (or Nisnevich) locally trivial $\GL_*$-torsors.
+
+We let $\ZZe=\GW(\ZZ)$ be the Grothendieck-Witt ring of $\ZZ$:
+ in other words, $\ZZe=\ZZ[\epsilon]/(\epsilon^2-1)$,
+ $\epsilon$ corresponding to the opposite of the non-degenerate symmetric bilinear form $(x,y) \mapsto -xy$
+ (see eg. \cite[Rem. 2.1.7]{Deg18}).
+
+We use the terminology ``ring spectrum'' over a scheme $S$ for a commutative monoid object of the (homotopy category) $\SH(S)$
+ - we will not need $E_\infty$-structures. Without further precision, a (ring) spectrum is defined
+ over the fixed base scheme $\Sigma$.
+ Given a scheme $S$, we let $[-,-]_S$ denote the bifunctor of morphisms in $\SH(S)$,
+ and usually do not mention the indexing $S$ when it is clear from the context.
+
+Given a vector bundle $V$ over a scheme $X$, we let $\Th(V)=\Sigma^\infty (V/V-X)$ be the Thom space
+ associated with $V$ in the stable homotopy category $\SH(X)$.
+ Recall that this construction extends canonically to virtual vector bundles $v$ over $X$,
+ giving an object $\Th(v)$ in $\SH(X)$, such that $\Th(v+w)= \Th(v) \otimes \Th(w)$
+ (see \cite[4.1]{Riou}).
+ The rank of a virtual bundle over a scheme $X$ is considered as a $\ZZ$-valued Zariski locally
+ constant function on $X$; we denote by $\uZ(X)$ the abelian groups of such functions.
+ Similarly, given  $r \in \uZ(X)$, we let $\tw r$ be the constant virtual bundle
+ with rank $r(x)$ on the connected component corresponding to a generic point $x$ of $X$.
+
+For an lci morphism $f:X \rightarrow S$, we will denote by $\tau_f$ the virtual vector bundle
+ on $X$ associated with its cotangent complex $\mathcal L_f$.
+
+%\fred{Dans ce qui suit, on mélange la notion de spectre en anneaux sur $S$
+% (soit monoïde commutatif dans $\SH(S)$) et spectre en anneaux "absolu", c'est-à-dire
+% une collection $(E_S)_S$ de spectres en anneaux sur $S$ avec des isomorphismes
+% $f^*\E_S \simeq \E_T$, qui, en toute rigueur, font partie de la donnée --- il s'agit en fait
+% d'une section cartésienne de la catégorie fibrée des spectres en anneaux.
+% C'est inoffensif car étant donné un spectre en anneaux $\E$ sur $S$,
+% on obtient un spectre en anneaux absolu sur la catégorie des $S$-schémas.
+% Par contre, si on se donne une $G$-orientation sur un spectre en anneau sur $S$,
+% il n'est pas possible d'en déduire une $G$-orientation sur un pullback général
+% $f^*\E$ le long de $f:T \rightarrow S$. Sauf si $f$ est lisse, ou si $G=\GL, \Sp$.
+% Car une $\Sp$-orientation est définie par une classe de cohomologie.
+% J'ai l'impression qu'il faudrait être plus précis dans la rédaction
+% sur ces subtilités, même si au final, elles ne sont pas gênantes.}
+
+\subsubsection*{Acknowledgments}
+
+The authors thank Adeel Khan and Fangzhou Jin for first exchanges
+ that initially shaped this work.
+They are also grateful towards Adrien Dubouloz and Michel Brion for several insightful conversations,
+ and especially around the proof of Theorem \ref{thm:epsilon}. The second author also wishes to thank Marc Levine for useful discussions about K3-surfaces.
+ The authors were supported by the ANG project HQDIAG, grant number ANR-21-CE40-0015.
+
+\section{Orientation theory and fundamental classes}
+
+\input{orientations}
+
+\section{Fundamental classes and Grothendieck-Riemann-Roch formulas}
+
+\input{GRR}
+
+\section{Symplectic orientations and formal ternary laws}
+
+\input{sp-orientations}
+
+\section{Todd classes and GRR formulas in the symplectic case}\label{sec:grr}
+
+\input{examples}
+
+\bibliographystyle{amsalpha}
+\bibliography{QRR}
+
+\end{document}

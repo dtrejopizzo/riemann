@@ -186,7 +186,7 @@ lo que viola $G > 0$. La existencia de un cero fuera de la recta implica $G < 0$
 
 *Prueba.* $(1) \iff (3)$: Corolario 1 del documento 07 (vía la fórmula de curvatura). $(2) \iff (3)$: equivalencia de de Bruijn. $(1) \iff (2)$: corolario de ambas. $\square$
 
-**Corolario** (honestidad sobre la Pregunta 28.2). La Pregunta 28.2 no puede responderse afirmativamente sin probar RH, y hacerlo usando sólo la ecuación funcional y el producto de Euler (sin asumir RH) equivaldría a una prueba de RH. El obstáculo tiene dos capas:
+**Corolario** (franqueza sobre la Pregunta 28.2). La Pregunta 28.2 no puede responderse afirmativamente sin probar RH, y hacerlo usando sólo la ecuación funcional y el producto de Euler (sin asumir RH) equivaldría a una prueba de RH. El obstáculo tiene dos capas:
 
 - **Capa analítica:** $G_{\text{ana}}(t) < 0$ para $t > t_*$ (el sector analítico por sí solo no garantiza $G > 0$).
 - **Capa aritmética:** Controlar $G_\zeta(t)$ en $\sigma = 1/2$ requiere información sobre la distribución de ceros de $\zeta$, que es exactamente RH.
@@ -237,7 +237,7 @@ Phase 28 comenzó con cuatro frentes distintos (A, B, C, D) y los unificó progr
 
 **Conclusión final del programa Phase 28:** La Hipótesis de Riemann equivale exactamente a que $f(t) = \xi(1/2+it)$ pertenece a la clase de Laguerre–Pólya, lo cual equivale a que $G(t) > 0$. La descomposición en sectores localiza el obstáculo con máxima precisión: el sector analítico $G_{\text{ana}}$ es computable, cambia de signo, y requiere que el sector aritmético $G_\zeta$ compense. Esa compensación es exactamente RH. El círculo se cierra: no hay camino corto.
 
-La honestidad exige reconocer que Phase 28, como todas las fases anteriores, identifica equivalencias más y más precisas del problema, pero no lo resuelve. El muro (Wall A) es sólido.
+La franqueza exige reconocer que Phase 28, como todas las fases anteriores, identifica equivalencias más y más precisas del problema, pero no lo resuelve. El muro (Wall A) es sólido.
 
 ---
 

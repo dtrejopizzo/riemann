@@ -36,7 +36,7 @@ near zeros. **Ω₇ ⟺ `‖T_∞(t0)‖ ≤ 1` uniformly in t0**, i.e. the whit
 is bounded by 1 uniformly — a bound on `ζ'/ζ` near the critical line. This is a classical,
 Lindelöf-adjacent object (below RH in kind, unconditional bounds on ζ'/ζ exist and can be sharpened).
 
-## Honest status / essential caveat
+## Candid status / essential caveat
 - This is a **detector on ζ** (uses ζ's actual primes): the saturation and the sub-1 values at large t0
   are RH-CONSISTENT, not a proof. A planted off-line zero (Λ_DH / offfac) must be run to confirm it
   spikes ‖T_∞‖ above 1 — the faithfulness check (D2-style).

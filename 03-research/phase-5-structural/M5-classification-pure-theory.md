@@ -11,7 +11,7 @@ test** is mandatory and first.
 
 This document does two things: (1) **proves** that the tautology objection is already answered on our side
 (§1), which fixes *which side* the invariant must come from; (2) lays out a **pure-math path** of four
-theorem-targets T1–T4 (§§2–5), each leveraging an asset we already own, with proof strategies and an honest
+theorem-targets T1–T4 (§§2–5), each leveraging an asset we already own, with proof strategies and an candid
 account of what is in hand versus conjectural.
 
 ---
@@ -85,7 +85,7 @@ $d(L)$" to a clean separation theorem across a multi-$L$ family. §2.)*
 > function of the zero-distance data $d(L)$ alone: there exist $L_1,L_2$ in a family with $d(L_1)=d(L_2)$ but
 > $I(L_1)\ne I(L_2)$.
 
-**Proof strategy (honest).**
+**Proof strategy (candid).**
 1. *Analyticity.* $K_{\mathrm{CC}}(L)$ is assembled from $\epsilon_L(\rho)=\sum_n \frac{a_n(L)}{\sqrt{1-|a_n(L)|^2}}\langle\zeta_n|\vartheta(\rho^{-1})\zeta_n\rangle$
    (CC eq. (14) generalized: replace $\lambda(n)\to a_n(L)$, the normalized coefficients). On the region of
    absolute convergence this is real-analytic in $\{a_p\}$; the Hilbert–Schmidt norm and the conditioned top
@@ -179,7 +179,7 @@ the empirical counterpart of T1–T3; it guides the proofs and is run with the P
 
 ---
 
-## 7. Honest priors, guardrails, and what is in hand
+## 7. Candid priors, guardrails, and what is in hand
 
 | Target | In hand | To prove | Prior of a real result |
 |---|---|---|---|

@@ -146,7 +146,7 @@ El primer implica es un **TEOREMA de Deninger**: si la foliación es de tipo Kä
 
 ### 3.3. El precio: la no-circularidad es CONDICIONAL a "Kähler–Riemann"
 
-**[CÁLCULO — la honestidad].** La no-circularidad **NO es gratis**. El teorema math/0204111 requiere que la foliación sea **Kähler–Riemann** (hojas Kähler, métrica transversa Riemann). El implica "existencia del espacio $\Rightarrow$ positividad" es no circular **sólo si el espacio es de ese tipo**. Por tanto el problema se desplaza a:
+**[CÁLCULO — la franqueza].** La no-circularidad **NO es gratis**. El teorema math/0204111 requiere que la foliación sea **Kähler–Riemann** (hojas Kähler, métrica transversa Riemann). El implica "existencia del espacio $\Rightarrow$ positividad" es no circular **sólo si el espacio es de ese tipo**. Por tanto el problema se desplaza a:
 
 > **NÚCLEO-128.** ¿Es el espacio foliado de $\operatorname{Spec}\mathbb Z$ (si existe) de tipo **Kähler–Riemann** (o admite una estructura de Hodge polarizable foliada análoga)? Si SÍ $\Rightarrow$ la positividad es teorema $\Rightarrow$ RH, no circular. Si NO se sabe $\Rightarrow$ la positividad queda como hipótesis cuyo estatus es indeterminado.
 
@@ -187,7 +187,7 @@ $$
 
 ### 4.4. Resumen de estado: qué se ha probado, qué sigue conjetural
 
-**[DATO — tabla de estado, honesta]:**
+**[DATO — tabla de estado, franca]:**
 
 | Pieza | Estatus |
 |---|---|
@@ -256,7 +256,7 @@ $$
 
 ---
 
-## 7. Síntesis y honestidad
+## 7. Síntesis y franqueza
 
 Ningún teorema nuevo se probó aquí. Se **leyó en fuente** (Deninger ICM 1998 + survey 0709.2801 + DLSDeninger; math/0204111 estructuras de Hodge polarizables foliadas; math/0204194 ejemplo simple; Leichtnam 1307.3851; Álvarez López–Kordyukov–Leichtnam 2402.06671 fórmula de trazas 2024; 1712.04181 rigidez espectral; Morishita 2508.15971 relación con CC) y se **calculó** la identificación con nuestro programa.
 

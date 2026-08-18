@@ -5,11 +5,11 @@ $\arg D_P=\pi\xi_K$, with $\xi_K\ge0$ free from $H_{\mathrm{vM}}\ge0$, and RH de
 $\varphi_\Xi=\pi\xi_K+\vartheta$ be monotone. We compute $\xi_K'$ explicitly. It is the
 **explicit-formula prime sum** $\sum_n\Lambda(n)n^{-1/2}\cos(\lambda\log n)$ (regularized), whose
 negative excursions are **off-line zeros**. We catch and correct a tempting sign-chase that would make
-monotonicity "automatic," and reach the honest verdict: monotonicity is RH, and arithmetic rigidity
+monotonicity "automatic," and reach the candid verdict: monotonicity is RH, and arithmetic rigidity
 fixes the **exact shape** of $\varphi'$ but gives **no free lower bound** — positivity controls $\xi_K$
 (0th order) and is orthogonal to $\xi_K'$ (1st order), while the archimedean budget is only
 **logarithmic** against off-line dips of depth $1/(\beta-\tfrac12)$. This thread lands on the wall. No
-proof of RH; an honest reduction with a sharp new form.*
+proof of RH; an candid reduction with a sharp new form.*
 
 ---
 
@@ -51,7 +51,7 @@ $\Re\zeta'/\zeta$ chase mislabels which side of the inequality the negativity he
 compute the phase derivative as the Poisson-kernel zero-sum, not as a casual real part.}
 \end{auditbox}
 
-## §3. The honest verdict: orthogonality at first order
+## §3. The candid verdict: orthogonality at first order
 
 \begin{theorem}[spectral-shift monotonicity is RH, and rigidity does not lower it]\label{thm:firstorder}
 The free input is $\xi_K\ge0$ (0th order, from $H_{\mathrm{vM}}\ge0$, Kreĭn). The required input is
@@ -73,7 +73,7 @@ Therefore $\varphi_\Xi'\ge0\Leftrightarrow$ RH, and the spectral-shift thread re
 \end{theorem}
 
 \begin{resultbox}
-\textbf{Verdict (honest negative).} The spectral-shift lead, computed, lands on the same wall. The
+\textbf{Verdict (candid negative).} The spectral-shift lead, computed, lands on the same wall. The
 mechanism is the orthogonality theorem promoted one derivative: positivity supplies $\xi_K\ge0$
 (zeroth order) for free, RH is $\xi_K'\ge-\vartheta'/\pi$ (first order), and there is no free passage
 from a sign to a derivative bound — the more so because the archimedean baseline is only logarithmic
@@ -103,7 +103,7 @@ controls; RH is the \emph{pointwise/derivative} (1st-order) control, and the pro
 four successive levels (operator norm, Carleson box, diagonal sup, phase derivative), that the
 integrated controls are free and the pointwise one is RH.
 
-## §5. Honest status and what remains
+## §5. Candid status and what remains
 
 \textbf{Established (unconditional):}
 \begin{itemize}
@@ -111,7 +111,7 @@ integrated controls are free and the pointwise one is RH.
 explicit-formula prime sum); $\varphi_\Xi'=\vartheta'+(\text{that sum})$.
 \item Theorem~\ref{thm:firstorder}: positivity gives $\xi_K\ge0$ but not $\xi_K'\ge-\vartheta'/\pi$;
 arithmetic rigidity fixes the shape, not the lower envelope; the budget is logarithmic vs dips
-$1/\varepsilon$. \textbf{The thread reduces to RH (honest negative).}
+$1/\varepsilon$. \textbf{The thread reduces to RH (candid negative).}
 \item Corollary~\ref{cor:pointwise}: the sharp pointwise/first-order equivalent.
 \item The sign-chase that would make monotonicity "automatic" is caught and corrected (§2).
 \end{itemize}
@@ -120,11 +120,11 @@ $1/\varepsilon$. \textbf{The thread reduces to RH (honest negative).}
 Corollary~\ref{cor:pointwise} form. No positivity/integrated control reaches it.
 
 \textbf{Where this leaves the route.} Every \emph{integrated} certificate is proved and free; the single
-wall is now pinned as a \emph{pointwise/first-order} statement (Cor.~\ref{cor:pointwise}). The honest
+wall is now pinned as a \emph{pointwise/first-order} statement (Cor.~\ref{cor:pointwise}). The candid
 implication: a crossing must be a genuinely \emph{pointwise} mechanism (controlling $\varphi'$ between
 zeros), and the program has shown positivity-type tools are structurally 0th-order and cannot be it.
 The one tool class not yet tried that is intrinsically first-order/pointwise — \emph{a priori}
 equidistribution/discrepancy bounds on the frequencies $\{\log n\}$ weighted by $\Lambda(n)/\sqrt n$
-(a Diophantine, not analytic, control of the cosine sum) — is the honest next direction, and it is
+(a Diophantine, not analytic, control of the cosine sum) — is the candid next direction, and it is
 \emph{not} a positivity argument. No false victory; the thread is reduced, the wall is sharpened to its
 first-order form.

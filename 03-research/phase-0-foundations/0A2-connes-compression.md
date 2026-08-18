@@ -179,7 +179,7 @@ The earlier slogan "the wall is RH" must be conditioned:
 $$
 \boxed{\;\text{the wall}=\text{RH}\quad\text{if and only if (0A2) holds (Parts I and II).}\;}
 $$
-Two honest scenarios:
+Two candid scenarios:
 - **Scenario 1 — (0A2) correct.** $Q$ is the faithful localized avatar of Weil; the program has
   reached the genuine obstacle; the named inequality (LB) *is* RH. The remaining task is the
   structural positivity (Connes/de Branges).

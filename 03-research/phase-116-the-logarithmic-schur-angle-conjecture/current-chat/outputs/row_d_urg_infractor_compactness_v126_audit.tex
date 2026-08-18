@@ -1,0 +1,225 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\title{Compactness audit of a hypothetical URGT$_1$ infractor (v126)}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The spectral probability of an infractor}
+
+Use the notation of v124 and put
+\begin{equation}
+ W_N(\tau):=\sum_{k\ge1}|\Phi_{N,k}(\tau)|^2.              \tag{1}
+\end{equation}
+Assume that $N_\nu\to\infty$ and that $e_\nu\in E_{N_\nu}$ satisfy
+\begin{equation}
+ \sum_{k\ge1}\|L_{N_\nu,k}e_\nu\|^2=1,
+ \qquad
+ \mathcal E_{\Gamma T,N_\nu}(e_\nu)<1.                  \tag{2}
+\end{equation}
+Define the output spectral probability
+\begin{equation}
+ d\mu_\nu(\tau)
+ :=W_{N_\nu}(\tau)|\widehat e_\nu(\tau)|^2
+       \frac{d\tau}{2\pi}.                               \tag{3}
+\end{equation}
+Plancherel and (2) give $\mu_\nu(\mathbb R)=1$.
+
+\begin{lemma}[An infractor cannot escape to high frequency --- \PROVED]
+The family $(\mu_\nu)$ is tight.  More precisely,
+\begin{equation}
+ \mu_\nu\{|\tau|\ge R\}
+ \le\frac1{\inf_{|\tau|\ge R}g_\Gamma(\tau)}             \tag{4}
+\end{equation}
+for every sufficiently large $R$.
+\end{lemma}
+
+\begin{proof}
+The Tate term is nonnegative, so (2) implies
+\[
+ \int_{\mathbb R}g_\Gamma(\tau)\,d\mu_\nu(\tau)<1.
+\]
+The multiplier $g_\Gamma$ is even, increasing in $|\tau|$, and tends to
+$+\infty$.  Markov's inequality gives (4), whose right side tends to zero.
+\end{proof}
+
+Thus every infractor has a weakly convergent subsequence.  In particular,
+the proposed mean-zero mode cannot evade the argument by moving its output
+to frequencies of order $1/\delta_N$: Gamma would make its energy exceed
+one.
+
+\section{The all-depth compact arithmetic profile}
+
+For each fixed $k$, the same product/divisibility calculation as v125
+gives
+\begin{equation}
+ \frac{\log N}{N}\Phi_{N,k}(\tau)
+ \longrightarrow
+ \frac1{(k-1)!}\frac1{\tau^2+\frac14}                     \tag{5}
+\end{equation}
+locally uniformly in real $\tau$.  Indeed,
+\begin{equation}
+ \sum_{m\le N}\frac{\Lambda_k(m)}{\sqrt m}\,m^{-i\tau}
+ =\frac{N^{1/2-i\tau}(\log N)^{k-1}}
+       {(k-1)!(\frac12-i\tau)},(1+o_{k,R}(1)),            \tag{6}
+\end{equation}
+and the integral-label return is lower order.
+
+The uniform Witt majorant used in v109 is precisely what is needed to
+interchange the $N$-limit and the sum over depths.  Written at the
+polynomial rather than scalar-norm level, the required statement is
+\begin{equation}
+ \boxed{
+ \left(\frac{\log N}{N}\right)^2W_N(\tau)
+ \longrightarrow
+ C_{\rm W}\frac1{(\tau^2+\frac14)^2},
+ \qquad
+ C_{\rm W}:=\sum_{k\ge1}\frac1{((k-1)!)^2},}              \tag{7}
+\end{equation}
+locally uniformly in $\tau$.
+
+\paragraph{Status of (7) --- \AUDIT.}
+Fixed-depth convergence is proved by (5)--(6).  The scalar all-depth
+majorant of v109 does not, by itself, state local uniform convergence of
+the polynomials.  To use (7) without a gap one must prove the strengthened
+tail estimate
+\begin{equation}
+ \lim_{K\to\infty}\limsup_{N\to\infty}
+ \sup_{|\tau|\le R}
+ \left(\frac{\log N}{N}\right)^2
+ \sum_{k>K}|\Phi_{N,k}(\tau)|^2=0                         \tag{8}
+\end{equation}
+for every fixed $R$.  Equation (8), and not fixed-depth PNT, is the exact
+uniformity gate in the compactness proof.
+
+\section{The only two possible tight limiting modes}
+
+\begin{lemma}[Shrinking-support classification --- \AUDIT]
+Assume (7).  Let $h_\nu$ be supported in intervals of lengths tending to
+zero, and suppose the probabilities
+\[
+ \frac{W_{N_\nu}(\tau)|\widehat h_\nu(\tau)|^2\,d\tau}
+      {\int W_{N_\nu}|\widehat h_\nu|^2}
+\]
+are tight.  Every nonzero weak limit has density
+\begin{equation}
+ d\mu_*(\tau)=
+ \frac{|c_0+c_1i\tau|^2}{Z(\tau^2+\frac14)^2}\,d\tau,
+ \qquad (c_0,c_1)\ne(0,0).                                \tag{9}
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Candidate argument and exact missing bound]
+Translate the shrinking source intervals to the origin.  After scalar
+normalization on one fixed compact frequency interval carrying positive
+limiting mass, the Paley--Wiener functions $\widehat h_\nu$ have
+exponential types tending to zero.  The local $L^2$ compactness theorem
+for Paley--Wiener spaces and a diagonal extraction give a locally uniform
+limit $H$, entire of exponential type zero.  Tightness and (7) give
+\[
+ \int_{\mathbb R}\frac{|H(\tau)|^2}
+      {(\tau^2+\frac14)^2}\,d\tau<\infty.
+\]
+If the normalized sources are bounded in one fixed distributional order,
+Paley--Wiener--Schwartz identifies $H$ as the transform of a distribution
+supported at the origin, hence as a polynomial.  The displayed weighted
+integrability then forces $\deg H\le1$, giving (9).
+
+Tightness of the \emph{output} measures does not yet prove that uniform
+distributional-order bound for the normalized \emph{sources}.  Entire
+functions of exponential type zero need not be polynomials without such a
+growth bound.  Therefore the classification is retained as an audit gate,
+not used as an unconditional theorem.
+\end{proof}
+
+\begin{proposition}[Gamma excludes both limiting modes --- \PROVED]
+For the constant mode $c_1=0$,
+\begin{equation}
+ \int g_\Gamma\,d\mu_*>1+\frac1{45}.                     \tag{10}
+\end{equation}
+For the linear/mean-zero mode $c_0=0$, already the first Gamma channel
+satisfies
+\begin{equation}
+ \int g_0\,d\mu_*=3.                                      \tag{11}
+\end{equation}
+For arbitrary $(c_0,c_1)$ the odd cross term integrates to zero, so the
+Gamma expectation is the convex combination of the two diagonal
+expectations and is strictly larger than one.
+\end{proposition}
+
+\begin{proof}
+Equation (10) is Theorem 4 of v125.  Put $b=\frac12$.  For (11),
+\begin{align*}
+ \int_{\mathbb R}\frac{\tau^2}{(\tau^2+b^2)^2}\,d\tau
+ &=\frac\pi{2b},\\
+ \int_{\mathbb R}
+ \frac{4\tau^4}{(\tau^2+b^2)^3}\,d\tau
+ &=\frac{3\pi}{2b}.
+\end{align*}
+Their ratio is three.  Since $g_\Gamma\ge g_0$, later Gamma channels can
+only increase it.  Finally, all weights are even and the mixed term in
+$|c_0+c_1i\tau|^2$ is odd, proving the last assertion.
+\end{proof}
+
+\begin{theorem}[No asymptotic infractor, conditional compactness theorem
+--- \PROVED]
+If (8) and the distributional-order bound in Lemma 2 hold, there is no
+sequence satisfying (2).
+\end{theorem}
+
+\begin{proof}
+Lemma 1 gives a weakly convergent subsequence of the probabilities (3).
+Equations (7)--(8) and Lemma 2 identify its limit with (9).
+The bound in (2), lower semicontinuity, and nonnegativity of the Tate term
+give
+\[
+                         \int g_\Gamma\,d\mu_*\le1.
+\]
+Proposition 2 gives the strict opposite inequality.  This contradiction
+excludes (2).
+\end{proof}
+
+\section{Ledger}
+
+The limiting contradiction is complete once its two compactness gates are
+available.  There are three logically separate remaining tasks before
+URGT$_1$ can be marked proved:
+\begin{enumerate}
+ \item prove the polynomial all-depth tail estimate (8);
+ \item derive the uniform distributional-order bound in Lemma 2 from the
+       output-energy hypothesis, rather than assume it;
+ \item certify the finitely many $N$ not covered by the asymptotic
+       contradiction.  A failure at one fixed $N$ does not automatically
+       produce a sequence $N_\nu\to\infty$.
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.57\linewidth}
+                >{\centering\arraybackslash}p{.14\linewidth}
+                >{\raggedright\arraybackslash}p{.19\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Spectral tightness of every infractor & \PROVED & (3)--(4) \\
+Fixed-depth compact leakage profile & \PROVED & (5)--(6) \\
+All-depth polynomial tail gate & \OPEN & (8) \\
+Classification of tight shrinking-cell limits & \AUDIT & Lemma 2 \\
+Constant limit excluded by Gamma margin & \PROVED & (10), v125 \\
+Mean-zero linear limit excluded with ratio $3$ & \PROVED & (11) \\
+No sequence $N_\nu\to\infty$ of infractors & conditional & Theorem 3 \\
+Finite-$N$ operator audit & \OPEN & after asymptotic gate \\
+URGT$_1$, $G$, row (d) & \OPEN & compactness gates plus finite audit \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

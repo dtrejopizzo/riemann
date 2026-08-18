@@ -1,0 +1,955 @@
+{
+  "statement": "E79.3i effective edge width",
+  "cases": [
+    {
+      "label": "zeta",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.0038856850916",
+              "thresholds": {
+                "0.9": {
+                  "m": 7,
+                  "m_over_N": "0.875",
+                  "peak_N2_shell": "0.0430304564892",
+                  "avg_N2_shell": "0.0347381452591",
+                  "effective_width": "5.65104432193",
+                  "effective_over_raw": "0.807292045991",
+                  "effective_over_N": "0.706380540242"
+                },
+                "0.99": {
+                  "m": 9,
+                  "m_over_N": "1.125",
+                  "peak_N2_shell": "0.0430304564892",
+                  "avg_N2_shell": "0.0276086587397",
+                  "effective_width": "5.77446648096",
+                  "effective_over_raw": "0.641607386774",
+                  "effective_over_N": "0.72180831012"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00775031857931",
+              "thresholds": {
+                "0.9": {
+                  "m": 7,
+                  "m_over_N": "0.875",
+                  "peak_N2_shell": "0.0859386643949",
+                  "avg_N2_shell": "0.0692941896302",
+                  "effective_width": "5.64425024321",
+                  "effective_over_raw": "0.806321463315",
+                  "effective_over_N": "0.705531280401"
+                },
+                "0.99": {
+                  "m": 9,
+                  "m_over_N": "1.125",
+                  "peak_N2_shell": "0.0859386643949",
+                  "avg_N2_shell": "0.0550681597456",
+                  "effective_width": "5.76706004452",
+                  "effective_over_raw": "0.640784449391",
+                  "effective_over_N": "0.720882505565"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00281226360364",
+              "thresholds": {
+                "0.9": {
+                  "m": 8,
+                  "m_over_N": "0.8",
+                  "peak_N2_shell": "0.0456332013677",
+                  "avg_N2_shell": "0.0327560467539",
+                  "effective_width": "5.74249375844",
+                  "effective_over_raw": "0.717811719805",
+                  "effective_over_N": "0.574249375844"
+                },
+                "0.99": {
+                  "m": 11,
+                  "m_over_N": "1.1",
+                  "peak_N2_shell": "0.0456332013677",
+                  "avg_N2_shell": "0.0255322063575",
+                  "effective_width": "6.15460369896",
+                  "effective_over_raw": "0.559509427178",
+                  "effective_over_N": "0.615460369896"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00561353751115",
+              "thresholds": {
+                "0.9": {
+                  "m": 8,
+                  "m_over_N": "0.8",
+                  "peak_N2_shell": "0.0911089945525",
+                  "avg_N2_shell": "0.065397659366",
+                  "effective_width": "5.74236690348",
+                  "effective_over_raw": "0.717795862935",
+                  "effective_over_N": "0.574236690348"
+                },
+                "0.99": {
+                  "m": 11,
+                  "m_over_N": "1.1",
+                  "peak_N2_shell": "0.0911089945525",
+                  "avg_N2_shell": "0.0509649421714",
+                  "effective_width": "6.15322742435",
+                  "effective_over_raw": "0.559384311305",
+                  "effective_over_N": "0.615322742435"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00246967255598",
+              "thresholds": {
+                "0.9": {
+                  "m": 9,
+                  "m_over_N": "0.75",
+                  "peak_N2_shell": "0.0483224887166",
+                  "avg_N2_shell": "0.0376696575887",
+                  "effective_width": "7.01592420637",
+                  "effective_over_raw": "0.779547134041",
+                  "effective_over_N": "0.584660350531"
+                },
+                "0.99": {
+                  "m": 11,
+                  "m_over_N": "0.916666666667",
+                  "peak_N2_shell": "0.0483224887166",
+                  "avg_N2_shell": "0.0321831708683",
+                  "effective_width": "7.32608954864",
+                  "effective_over_raw": "0.666008140786",
+                  "effective_over_N": "0.610507462387"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00493174719241",
+              "thresholds": {
+                "0.9": {
+                  "m": 9,
+                  "m_over_N": "0.75",
+                  "peak_N2_shell": "0.0964626716095",
+                  "avg_N2_shell": "0.075230842855",
+                  "effective_width": "7.01906317126",
+                  "effective_over_raw": "0.779895907918",
+                  "effective_over_N": "0.584921930938"
+                },
+                "0.99": {
+                  "m": 11,
+                  "m_over_N": "0.916666666667",
+                  "peak_N2_shell": "0.0964626716095",
+                  "avg_N2_shell": "0.0642681329631",
+                  "effective_width": "7.32873608826",
+                  "effective_over_raw": "0.666248735296",
+                  "effective_over_N": "0.610728007355"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00195712828482",
+              "thresholds": {
+                "0.9": {
+                  "m": 10,
+                  "m_over_N": "0.714285714286",
+                  "peak_N2_shell": "0.0452562102971",
+                  "avg_N2_shell": "0.035522323623",
+                  "effective_width": "7.84916001359",
+                  "effective_over_raw": "0.784916001359",
+                  "effective_over_N": "0.560654286685"
+                },
+                "0.99": {
+                  "m": 13,
+                  "m_over_N": "0.928571428571",
+                  "peak_N2_shell": "0.0452562102971",
+                  "avg_N2_shell": "0.0292872764554",
+                  "effective_width": "8.41286955804",
+                  "effective_over_raw": "0.647143812157",
+                  "effective_over_N": "0.600919254146"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00390952949867",
+              "thresholds": {
+                "0.9": {
+                  "m": 10,
+                  "m_over_N": "0.714285714286",
+                  "peak_N2_shell": "0.0904016847902",
+                  "avg_N2_shell": "0.0709689301572",
+                  "effective_width": "7.85039906302",
+                  "effective_over_raw": "0.785039906302",
+                  "effective_over_N": "0.560742790215"
+                },
+                "0.99": {
+                  "m": 13,
+                  "m_over_N": "0.928571428571",
+                  "peak_N2_shell": "0.0904016847902",
+                  "avg_N2_shell": "0.0585048547391",
+                  "effective_width": "8.41315196031",
+                  "effective_over_raw": "0.647165535408",
+                  "effective_over_N": "0.600939425736"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00181877881651",
+              "thresholds": {
+                "0.9": {
+                  "m": 11,
+                  "m_over_N": "0.6875",
+                  "peak_N2_shell": "0.0478297116905",
+                  "avg_N2_shell": "0.038208291083",
+                  "effective_width": "8.78724096504",
+                  "effective_over_raw": "0.798840087731",
+                  "effective_over_N": "0.549202560315"
+                },
+                "0.99": {
+                  "m": 14,
+                  "m_over_N": "0.875",
+                  "peak_N2_shell": "0.0478297116905",
+                  "avg_N2_shell": "0.0329852537795",
+                  "effective_width": "9.65495163134",
+                  "effective_over_raw": "0.689639402238",
+                  "effective_over_N": "0.603434476959"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00363365015242",
+              "thresholds": {
+                "0.9": {
+                  "m": 11,
+                  "m_over_N": "0.6875",
+                  "peak_N2_shell": "0.0955731064675",
+                  "avg_N2_shell": "0.0763449005945",
+                  "effective_width": "8.786926967",
+                  "effective_over_raw": "0.798811542454",
+                  "effective_over_N": "0.549182935437"
+                },
+                "0.99": {
+                  "m": 14,
+                  "m_over_N": "0.875",
+                  "peak_N2_shell": "0.0955731064675",
+                  "avg_N2_shell": "0.0659004967894",
+                  "effective_width": "9.65341599904",
+                  "effective_over_raw": "0.689529714217",
+                  "effective_over_N": "0.60333849994"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 18,
+          "dim_common": 35,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.0015504153383",
+              "thresholds": {
+                "0.9": {
+                  "m": 13,
+                  "m_over_N": "0.722222222222",
+                  "peak_N2_shell": "0.0498374737024",
+                  "avg_N2_shell": "0.0361813710935",
+                  "effective_width": "9.43783440999",
+                  "effective_over_raw": "0.725987262307",
+                  "effective_over_N": "0.524324133888"
+                },
+                "0.99": {
+                  "m": 16,
+                  "m_over_N": "0.888888888889",
+                  "peak_N2_shell": "0.0498374737024",
+                  "avg_N2_shell": "0.0312167063479",
+                  "effective_width": "10.0219225507",
+                  "effective_over_raw": "0.626370159418",
+                  "effective_over_N": "0.556773475038"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00309801822009",
+              "thresholds": {
+                "0.9": {
+                  "m": 13,
+                  "m_over_N": "0.722222222222",
+                  "peak_N2_shell": "0.099575702566",
+                  "avg_N2_shell": "0.0723031540235",
+                  "effective_width": "9.43946141563",
+                  "effective_over_raw": "0.726112416587",
+                  "effective_over_N": "0.524414523091"
+                },
+                "0.99": {
+                  "m": 16,
+                  "m_over_N": "0.888888888889",
+                  "peak_N2_shell": "0.099575702566",
+                  "avg_N2_shell": "0.0623773454063",
+                  "effective_width": "10.0229021818",
+                  "effective_over_raw": "0.626431386361",
+                  "effective_over_N": "0.556827898988"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 20,
+          "dim_common": 39,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00123537894391",
+              "thresholds": {
+                "0.9": {
+                  "m": 13,
+                  "m_over_N": "0.65",
+                  "peak_N2_shell": "0.0476269067344",
+                  "avg_N2_shell": "0.0349909463062",
+                  "effective_width": "9.55095203888",
+                  "effective_over_raw": "0.734688618375",
+                  "effective_over_N": "0.477547601944"
+                },
+                "0.99": {
+                  "m": 17,
+                  "m_over_N": "0.85",
+                  "peak_N2_shell": "0.0476269067344",
+                  "avg_N2_shell": "0.0289196190014",
+                  "effective_width": "10.3226003269",
+                  "effective_over_raw": "0.607211783933",
+                  "effective_over_N": "0.516130016343"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00246899649971",
+              "thresholds": {
+                "0.9": {
+                  "m": 13,
+                  "m_over_N": "0.65",
+                  "peak_N2_shell": "0.095153220594",
+                  "avg_N2_shell": "0.0699381811419",
+                  "effective_width": "9.5550770554",
+                  "effective_over_raw": "0.735005927338",
+                  "effective_over_N": "0.47775385277"
+                },
+                "0.99": {
+                  "m": 17,
+                  "m_over_N": "0.85",
+                  "peak_N2_shell": "0.095153220594",
+                  "avg_N2_shell": "0.0577984288066",
+                  "effective_width": "10.3262221034",
+                  "effective_over_raw": "0.607424829614",
+                  "effective_over_N": "0.516311105172"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 22,
+          "dim_common": 43,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00132490749592",
+              "thresholds": {
+                "0.9": {
+                  "m": 16,
+                  "m_over_N": "0.727272727273",
+                  "peak_N2_shell": "0.0494753640895",
+                  "avg_N2_shell": "0.0370181294258",
+                  "effective_width": "11.9714140909",
+                  "effective_over_raw": "0.74821338068",
+                  "effective_over_N": "0.544155185949"
+                },
+                "0.99": {
+                  "m": 19,
+                  "m_over_N": "0.863636363636",
+                  "peak_N2_shell": "0.0494753640895",
+                  "avg_N2_shell": "0.0336958914359",
+                  "effective_width": "12.940216794",
+                  "effective_over_raw": "0.681064041791",
+                  "effective_over_N": "0.588191672456"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00264787308554",
+              "thresholds": {
+                "0.9": {
+                  "m": 16,
+                  "m_over_N": "0.727272727273",
+                  "peak_N2_shell": "0.0988493104593",
+                  "avg_N2_shell": "0.0739870952419",
+                  "effective_width": "11.9757388126",
+                  "effective_over_raw": "0.748483675791",
+                  "effective_over_N": "0.544351764211"
+                },
+                "0.99": {
+                  "m": 19,
+                  "m_over_N": "0.863636363636",
+                  "peak_N2_shell": "0.0988493104593",
+                  "avg_N2_shell": "0.0673425203526",
+                  "effective_width": "12.9440244019",
+                  "effective_over_raw": "0.681264442207",
+                  "effective_over_N": "0.588364745542"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 24,
+          "dim_common": 47,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.0011077959108",
+              "thresholds": {
+                "0.9": {
+                  "m": 15,
+                  "m_over_N": "0.625",
+                  "peak_N2_shell": "0.0492325468918",
+                  "avg_N2_shell": "0.0384643295534",
+                  "effective_width": "11.7191772461",
+                  "effective_over_raw": "0.781278483072",
+                  "effective_over_N": "0.48829905192"
+                },
+                "0.99": {
+                  "m": 20,
+                  "m_over_N": "0.833333333333",
+                  "peak_N2_shell": "0.0492325468918",
+                  "avg_N2_shell": "0.0315955371954",
+                  "effective_width": "12.8352235219",
+                  "effective_over_raw": "0.641761176094",
+                  "effective_over_N": "0.534800980079"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00221425988459",
+              "thresholds": {
+                "0.9": {
+                  "m": 15,
+                  "m_over_N": "0.625",
+                  "peak_N2_shell": "0.0984159482062",
+                  "avg_N2_shell": "0.0768884438721",
+                  "effective_width": "11.7189000269",
+                  "effective_over_raw": "0.781260001793",
+                  "effective_over_N": "0.488287501121"
+                },
+                "0.99": {
+                  "m": 20,
+                  "m_over_N": "0.833333333333",
+                  "peak_N2_shell": "0.0984159482062",
+                  "avg_N2_shell": "0.0631537505984",
+                  "effective_width": "12.8340480886",
+                  "effective_over_raw": "0.641702404432",
+                  "effective_over_N": "0.534752003693"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "common_total": "-0.213757027492",
+              "thresholds": {
+                "0.9": {
+                  "m": 14,
+                  "m_over_N": "1.75",
+                  "peak_N2_shell": "19.666888167",
+                  "avg_N2_shell": "2.19207748597",
+                  "effective_width": "1.5604443643",
+                  "effective_over_raw": "0.111460311736",
+                  "effective_over_N": "0.195055545537"
+                },
+                "0.99": {
+                  "m": 14,
+                  "m_over_N": "1.75",
+                  "peak_N2_shell": "19.666888167",
+                  "avg_N2_shell": "2.19207748597",
+                  "effective_width": "1.5604443643",
+                  "effective_over_raw": "0.111460311736",
+                  "effective_over_N": "0.195055545537"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "-0.0256763323528",
+              "thresholds": {
+                "0.9": {
+                  "m": 12,
+                  "m_over_N": "1.5",
+                  "peak_N2_shell": "3.24857075942",
+                  "avg_N2_shell": "0.669390657102",
+                  "effective_width": "2.4726836754",
+                  "effective_over_raw": "0.20605697295",
+                  "effective_over_N": "0.309085459426"
+                },
+                "0.99": {
+                  "m": 12,
+                  "m_over_N": "1.5",
+                  "peak_N2_shell": "3.24857075942",
+                  "avg_N2_shell": "0.669390657102",
+                  "effective_width": "2.4726836754",
+                  "effective_over_raw": "0.20605697295",
+                  "effective_over_N": "0.309085459426"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "common_total": "-0.00689644094266",
+              "thresholds": {
+                "0.9": {
+                  "m": 14,
+                  "m_over_N": "1.4",
+                  "peak_N2_shell": "0.32209306486",
+                  "avg_N2_shell": "0.0708010521924",
+                  "effective_width": "3.07741717793",
+                  "effective_over_raw": "0.219815512709",
+                  "effective_over_N": "0.307741717793"
+                },
+                "0.99": {
+                  "m": 16,
+                  "m_over_N": "1.6",
+                  "peak_N2_shell": "1.17908389785",
+                  "avg_N2_shell": "0.15549990318",
+                  "effective_width": "2.11011146486",
+                  "effective_over_raw": "0.131881966554",
+                  "effective_over_N": "0.211011146486"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00581752438377",
+              "thresholds": {
+                "0.9": {
+                  "m": 1,
+                  "m_over_N": "0.1",
+                  "peak_N2_shell": "0.636231060359",
+                  "avg_N2_shell": "0.636231060359",
+                  "effective_width": "1.0",
+                  "effective_over_raw": "1.0",
+                  "effective_over_N": "0.1"
+                },
+                "0.99": {
+                  "m": 1,
+                  "m_over_N": "0.1",
+                  "peak_N2_shell": "0.636231060359",
+                  "avg_N2_shell": "0.636231060359",
+                  "effective_width": "1.0",
+                  "effective_over_raw": "1.0",
+                  "effective_over_N": "0.1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.000427346882535",
+              "thresholds": {
+                "0.9": {
+                  "m": 1,
+                  "m_over_N": "0.0833333333333",
+                  "peak_N2_shell": "0.273691885343",
+                  "avg_N2_shell": "0.273691885343",
+                  "effective_width": "1.0",
+                  "effective_over_raw": "1.0",
+                  "effective_over_N": "0.0833333333333"
+                },
+                "0.99": {
+                  "m": 1,
+                  "m_over_N": "0.0833333333333",
+                  "peak_N2_shell": "0.273691885343",
+                  "avg_N2_shell": "0.273691885343",
+                  "effective_width": "1.0",
+                  "effective_over_raw": "1.0",
+                  "effective_over_N": "0.0833333333333"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00483387678162",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.166666666667",
+                  "peak_N2_shell": "0.54221953078",
+                  "avg_N2_shell": "0.509472533082",
+                  "effective_width": "1.87921129418",
+                  "effective_over_raw": "0.939605647088",
+                  "effective_over_N": "0.156600941181"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.166666666667",
+                  "peak_N2_shell": "0.54221953078",
+                  "avg_N2_shell": "0.509472533082",
+                  "effective_width": "1.87921129418",
+                  "effective_over_raw": "0.939605647088",
+                  "effective_over_N": "0.156600941181"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "common_total": "-0.00118918450649",
+              "thresholds": {
+                "0.9": {
+                  "m": 1,
+                  "m_over_N": "0.0714285714286",
+                  "peak_N2_shell": "0.216093131475",
+                  "avg_N2_shell": "0.216093131475",
+                  "effective_width": "1.0",
+                  "effective_over_raw": "1.0",
+                  "effective_over_N": "0.0714285714286"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.142857142857",
+                  "peak_N2_shell": "0.261618754503",
+                  "avg_N2_shell": "0.238855942989",
+                  "effective_width": "1.82598486445",
+                  "effective_over_raw": "0.912992432224",
+                  "effective_over_N": "0.130427490318"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00253642802567",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.142857142857",
+                  "peak_N2_shell": "0.518905054174",
+                  "avg_N2_shell": "0.473885264405",
+                  "effective_width": "1.82648159078",
+                  "effective_over_raw": "0.913240795388",
+                  "effective_over_N": "0.13046297077"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.142857142857",
+                  "peak_N2_shell": "0.518905054174",
+                  "avg_N2_shell": "0.473885264405",
+                  "effective_width": "1.82648159078",
+                  "effective_over_raw": "0.913240795388",
+                  "effective_over_N": "0.13046297077"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00108684085546",
+              "thresholds": {
+                "0.9": {
+                  "m": 1,
+                  "m_over_N": "0.0625",
+                  "peak_N2_shell": "0.316026652301",
+                  "avg_N2_shell": "0.316026652301",
+                  "effective_width": "1.0",
+                  "effective_over_raw": "1.0",
+                  "effective_over_N": "0.0625"
+                },
+                "0.99": {
+                  "m": 1,
+                  "m_over_N": "0.0625",
+                  "peak_N2_shell": "0.316026652301",
+                  "avg_N2_shell": "0.316026652301",
+                  "effective_width": "1.0",
+                  "effective_over_raw": "1.0",
+                  "effective_over_N": "0.0625"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.0037044944082",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.125",
+                  "peak_N2_shell": "0.62880438155",
+                  "avg_N2_shell": "0.568250288262",
+                  "effective_width": "1.80739926418",
+                  "effective_over_raw": "0.903699632088",
+                  "effective_over_N": "0.112962454011"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.125",
+                  "peak_N2_shell": "0.62880438155",
+                  "avg_N2_shell": "0.568250288262",
+                  "effective_width": "1.80739926418",
+                  "effective_over_raw": "0.903699632088",
+                  "effective_over_N": "0.112962454011"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 18,
+          "dim_common": 35,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00069127575418",
+              "thresholds": {
+                "0.9": {
+                  "m": 1,
+                  "m_over_N": "0.0555555555556",
+                  "peak_N2_shell": "0.340012442025",
+                  "avg_N2_shell": "0.340012442025",
+                  "effective_width": "1.0",
+                  "effective_over_raw": "1.0",
+                  "effective_over_N": "0.0555555555556"
+                },
+                "0.99": {
+                  "m": 1,
+                  "m_over_N": "0.0555555555556",
+                  "peak_N2_shell": "0.340012442025",
+                  "avg_N2_shell": "0.340012442025",
+                  "effective_width": "1.0",
+                  "effective_over_raw": "1.0",
+                  "effective_over_N": "0.0555555555556"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00291438708077",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.111111111111",
+                  "peak_N2_shell": "0.677323242715",
+                  "avg_N2_shell": "0.558185193794",
+                  "effective_width": "1.64820918165",
+                  "effective_over_raw": "0.824104590824",
+                  "effective_over_N": "0.0915671767583"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.111111111111",
+                  "peak_N2_shell": "0.677323242715",
+                  "avg_N2_shell": "0.558185193794",
+                  "effective_width": "1.64820918165",
+                  "effective_over_raw": "0.824104590824",
+                  "effective_over_N": "0.0915671767583"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 20,
+          "dim_common": 39,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00114003448699",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.1",
+                  "peak_N2_shell": "0.334958137908",
+                  "avg_N2_shell": "0.326127377597",
+                  "effective_width": "1.94727245401",
+                  "effective_over_raw": "0.973636227004",
+                  "effective_over_N": "0.0973636227004"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.1",
+                  "peak_N2_shell": "0.334958137908",
+                  "avg_N2_shell": "0.326127377597",
+                  "effective_width": "1.94727245401",
+                  "effective_over_raw": "0.973636227004",
+                  "effective_over_N": "0.0973636227004"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00295925804989",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.1",
+                  "peak_N2_shell": "0.667702797587",
+                  "avg_N2_shell": "0.649939010633",
+                  "effective_width": "1.94679133585",
+                  "effective_over_raw": "0.973395667926",
+                  "effective_over_N": "0.0973395667926"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.1",
+                  "peak_N2_shell": "0.667702797587",
+                  "avg_N2_shell": "0.649939010633",
+                  "effective_width": "1.94679133585",
+                  "effective_over_raw": "0.973395667926",
+                  "effective_over_N": "0.0973395667926"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 22,
+          "dim_common": 43,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00112518764254",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.0909090909091",
+                  "peak_N2_shell": "0.377785146497",
+                  "avg_N2_shell": "0.321755288448",
+                  "effective_width": "1.7033771255",
+                  "effective_over_raw": "0.851688562748",
+                  "effective_over_N": "0.0774262329771"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.0909090909091",
+                  "peak_N2_shell": "0.377785146497",
+                  "avg_N2_shell": "0.321755288448",
+                  "effective_width": "1.7033771255",
+                  "effective_over_raw": "0.851688562748",
+                  "effective_over_N": "0.0774262329771"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00256106997149",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.0909090909091",
+                  "peak_N2_shell": "0.753619929688",
+                  "avg_N2_shell": "0.641643694611",
+                  "effective_width": "1.70283101424",
+                  "effective_over_raw": "0.85141550712",
+                  "effective_over_N": "0.0774014097382"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.0909090909091",
+                  "peak_N2_shell": "0.753619929688",
+                  "avg_N2_shell": "0.641643694611",
+                  "effective_width": "1.70283101424",
+                  "effective_over_raw": "0.85141550712",
+                  "effective_over_N": "0.0774014097382"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 24,
+          "dim_common": 47,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.000756125705396",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.0833333333333",
+                  "peak_N2_shell": "0.354634402011",
+                  "avg_N2_shell": "0.325585911845",
+                  "effective_width": "1.83617782143",
+                  "effective_over_raw": "0.918088910717",
+                  "effective_over_N": "0.0765074092264"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.0833333333333",
+                  "peak_N2_shell": "0.354634402011",
+                  "avg_N2_shell": "0.325585911845",
+                  "effective_width": "1.83617782143",
+                  "effective_over_raw": "0.918088910717",
+                  "effective_over_N": "0.0765074092264"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00213192974855",
+              "thresholds": {
+                "0.9": {
+                  "m": 2,
+                  "m_over_N": "0.0833333333333",
+                  "peak_N2_shell": "0.707658849523",
+                  "avg_N2_shell": "0.649550673411",
+                  "effective_width": "1.83577347715",
+                  "effective_over_raw": "0.917886738573",
+                  "effective_over_N": "0.0764905615477"
+                },
+                "0.99": {
+                  "m": 2,
+                  "m_over_N": "0.0833333333333",
+                  "peak_N2_shell": "0.707658849523",
+                  "avg_N2_shell": "0.649550673411",
+                  "effective_width": "1.83577347715",
+                  "effective_over_raw": "0.917886738573",
+                  "effective_over_N": "0.0764905615477"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

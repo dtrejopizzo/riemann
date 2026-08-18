@@ -447,7 +447,7 @@ Luego $\sigma^2(T) = 0 \iff$ RH — es otra reformulación, no un avance.
 
 3. **Proposición 14** (Conexión con residuos): La energía $E_2$ mide la varianza de los residuos regulares $\Re[g_n(\rho_n)]$ alrededor de su valor prescrito $w(\gamma_n)/2$.
 
-**Obstáculo honesto:**
+**Obstáculo franco:**
 
 La norma $L^2$ no proporciona, por sí sola, una ruta incondicional a Inc. Inv. El lema de Landau y el Teorema de Gonek-Fujii son herramientas para calcular la asintótica de $E_2$ CONDICIONALMENTE a la distribución de los ceros — lo que produce círculos o hipótesis adicionales.
 

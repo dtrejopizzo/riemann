@@ -1,0 +1,110 @@
+====================================================================
+1. LOS DOS NUMEROS, AL MAXIMO DE DIGITOS
+====================================================================
+  log 2            = 0.69314718055994529
+  (log 2)^2        = 0.48045301391820139
+  sigma = e^-(l2)^2= 0.61850313780157595
+  1/phi            = 0.61803398874989479
+  sigma - 1/phi    = 4.691e-04
+  error relativo   = 7.5910e-04   (0.0759 %)
+
+  sigma = 1/phi  <=>  (log 2)^2 = log phi:
+     (log 2)^2 = 0.480453013918201
+     log phi   = 0.481211825059603
+     difieren en 7.588e-04  -> NO son el mismo numero.
+  Coinciden en 3 cifras significativas; difieren en la 4a.
+
+====================================================================
+2. DE DONDE SALE EL 2:  N_t cuenta DIGITOS EN BASE 2
+====================================================================
+  r(m) ~ log m / log b  con b la base del codigo digital.
+  Con base b generica:  sigma_b = exp(-(log b)^2).
+  sigma_2      = 0.618503138
+  sigma_b=1/phi en b* = 2.001094601   (no es 2, es 2.0011)
+  => el aureo no se alcanza en la base del codigo, sino
+     0.05% mas lejos.  La 'aparicion' es que log2 ~ sqrt(log phi).
+
+====================================================================
+3. CALIBRACION: CUAN RARO ES ESTAR A 0.076% DE UNA CONSTANTE?
+====================================================================
+  catalogo A (2201 valores: combinaciones simples de pi,e,phi,
+    sqrt2,ln2,gamma,zeta3,...)  -> 3 caen tan cerca de sigma como 1/phi
+  catalogo B (4115 valores: (p+q*sqrt d)/s, altura<=12)
+    -> 5 caen tan cerca de sigma como 1/phi
+
+  Vecinos de sigma dentro de 3x esa distancia (catalogo A):
+                2^-ln2 = 0.618503138   rel 0.00e+00
+     exp(-gamma/zeta3) = 0.618665854   rel 2.63e-04
+             sqrt5-phi = 0.618033989   rel 7.59e-04
+       1/sqrt(phi*phi) = 0.618033989   rel 7.59e-04
+               1/e-ln3 = 0.617409895   rel 1.77e-03
+
+  Es decir: a esta precision el aureo no es un vecino distinguido.
+  Tiene competencia, y el ojo elige al que ya conocia.
+
+====================================================================
+4. TEST DECISIVO: FORZAR sigma = 1/phi Y VER SI EL TEOREMA SOBREVIVE
+====================================================================
+  115_04:  h0_t - h2_t = N_t * log(1/sigma).
+  El teorema pide que eso sea (log2)^2 N_t = t^2 ab, SIN factor espurio.
+  Con sigma = e^-(log2)^2 :  log(1/sigma)/(log2)^2 = 1.000000000  (exacto)
+  Con sigma = 1/phi       :  log(phi)  /(log2)^2 = 1.001579366
+  -> factor espurio de 0.1579 % en cada t.
+  Como N_t ~ t^2 ab/(log2)^2, el error ABSOLUTO crece como t^2:
+     t=10   -> discrepancia 0.158
+     t=100  -> discrepancia 15.794
+     t=200  -> discrepancia 63.175   (y diverge)
+  El covolumen NO deja elegir: 1/phi rompe la igualdad exacta que
+  es todo el contenido de 115_04.  sigma esta forzado, y no es phi.
+
+[fig] /home/trabajo/Documentos/research/riemann/riemann/calculos-adicionales/115_08_fig1_sigma_vs_phi.png
+
+====================================================================
+5. Y EN LOS PRIMOS / LOS CEROS?  TRES TESTS SOBRE DATOS REALES
+====================================================================
+  control ceros: encontrados 100118, N(T) teorico 100117.7
+    gamma_1    calculado 14.137196  exacto 14.134725  err 2.5e-03
+    gamma_10   calculado 49.772640  exacto 49.773832  err 1.2e-03
+    gamma_100  calculado 236.524328  exacto 236.524230  err 9.8e-05
+    gamma_1000 calculado 1419.422592  exacto 1419.422481  err 1.1e-04
+  ceros usados: 100118 (hasta gamma=74999.4); <s> = 1.0000
+
+  --- EL DATO QUE PARECE DARLE LA RAZON ---
+  estadistico r (razon de espaciados consecutivos), TODA la muestra:
+     medido  0.6109 +/- 0.0007
+     GUE     0.5996   <-- a 15.8 sigmas
+     1/phi   0.6180   <-- a 9.9 sigmas (!)
+     Poisson 0.3863
+  A esta altura el valor medido esta MAS CERCA de 1/phi que de GUE.
+  Si uno se detiene aca, 'aparece el aureo en los ceros'.  No hay que
+  detenerse: el estadistico r depende de la altura.
+
+  <r> por franja de altura (x = 1/log(gamma/2pi)):
+     gamma ~     4564   1/L=0.1518   <r>=0.6150 +/- 0.0024
+     gamma ~    11973   1/L=0.1324   <r>=0.6126 +/- 0.0025
+     gamma ~    18710   1/L=0.1250   <r>=0.6127 +/- 0.0025
+     gamma ~    25142   1/L=0.1206   <r>=0.6103 +/- 0.0025
+     gamma ~    31378   1/L=0.1174   <r>=0.6102 +/- 0.0025
+     gamma ~    37469   1/L=0.1150   <r>=0.6109 +/- 0.0025
+     gamma ~    43448   1/L=0.1131   <r>=0.6091 +/- 0.0025
+     gamma ~    49334   1/L=0.1115   <r>=0.6111 +/- 0.0025
+     gamma ~    55143   1/L=0.1101   <r>=0.6095 +/- 0.0025
+     gamma ~    60885   1/L=0.1089   <r>=0.6104 +/- 0.0025
+     gamma ~    66568   1/L=0.1079   <r>=0.6111 +/- 0.0025
+     gamma ~    72199   1/L=0.1070   <r>=0.6082 +/- 0.0025
+  ajuste lineal, extrapolado a altura infinita (1/L -> 0):
+     <r>_inf = 0.5965 +/- 0.0026
+     GUE     = 0.5996  -> compatible a 1.2 sigmas
+     1/phi   = 0.6180  -> EXCLUIDO a 8.2 sigmas
+  control con termino cuadratico en 1/L (por si hay curvatura):
+     <r>_inf = 0.5992 +/- 0.0273     chi2/dof: lineal 0.15, cuadratico 0.16
+  El exceso sobre GUE se va como 1/log(altura): es la correccion
+  aritmetica de altura finita (Bogomolny-Keating), no una constante.
+  phi no es un limite; es un valor de paso.
+
+  primos usados: 148933 hasta 1999993
+  suma de Weyl |1/N sum e(alpha p)| en N=148933:
+     alpha=phi    0.00118
+     alpha=sqrt2  0.00143   <-- phi se comporta igual: generico
+     alpha=1/2    0.99999   <-- asi se ve una resonancia real
+[fig] /home/trabajo/Documentos/research/riemann/riemann/calculos-adicionales/115_08_fig2_phi_en_primos_y_ceros.png

@@ -2,7 +2,7 @@
 
 **Auditor build · 2026-06-05.** Objective: not to prove RH, but to find genuinely new structures that survive
 collapse + adversarial destruction. Discipline: every candidate is attacked before it is kept; literature
-precedent is checked. Honest prior (from the corpus's own track record): most/all RH-directed candidates collapse.
+precedent is checked. Candid prior (from the corpus's own track record): most/all RH-directed candidates collapse.
 **They do.**
 
 ---
@@ -110,7 +110,7 @@ precedent: [Connes–Consani 2024/2026].
   both FHK terms). **RH-independent by construction** (M14.3: prime-blind ⇒ self-referential). Survives novelty;
   fails RH-direction. Listed for completeness as the strongest *new* object the program produced.
 
-## Honest verdict of the search
+## Candid verdict of the search
 
 > **No genuinely-new, RH-*directed* structure survives.** Every candidate that touches the sign/reality of the
 > zeros collapses — under both the corpus audit and the independent 2024–2026 literature — to **CAP** (Weil/Lee–

@@ -2,7 +2,7 @@
 
 *Pure mathematics. The aim is to construct the adelic `J`-unitary colligation whose characteristic
 function is `S_κ`, carry the construction as far as it rigorously goes, **locate the single
-obstruction exactly**, and **propose a concrete mechanism to close it**. Honest throughout: the final
+obstruction exactly**, and **propose a concrete mechanism to close it**. Candid throughout: the final
 positivity is RH and is not proved; what is new here is the precise geometric localization of the
 obstruction (the overlap `𝒟₋∩𝒟₊`) and the reduction of its positivity to an index identity.*
 

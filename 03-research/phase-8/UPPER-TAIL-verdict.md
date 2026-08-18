@@ -43,7 +43,7 @@ And it lands exactly on the **B1 wall**: GUE gap universality for $\zeta$ zeros 
 upper-tail control is unknown). The flow has not bypassed it — it has compressed the whole question into a
 single sharp, quantitative, *extremal* statistic, and that statistic's uniform control is the open core.
 
-## Honest verdict
+## Candid verdict
 
 Attacking the upper tail gave: (i) a **verified mechanism** ($g^2=g_0^2+8t$; $\Lambda=$ first backward
 collision), (ii) a **new quantitative observation** (the normalized collision margin looks like a universal

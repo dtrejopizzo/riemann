@@ -4,7 +4,7 @@
 Milestone M3 of the Anatomy–Kreĭn–Hodge program. **M3 is RH itself** — the arithmetic Hodge index, the
 positivity of the intersection pairing on the primitive part. This document executes the full rigorous attack:
 it proves every provable step (the index inequality, the reduction, the unification of the three channels, the
-partial results), and isolates the irreducible RH-core with complete precision. **It does not, and honestly
+partial results), and isolates the irreducible RH-core with complete precision. **It does not, and candidly
 cannot, prove RH**; that would be the wrong-sign capstone, which the program established is not crossed by any
 known structure. What is delivered is the complete, documented reduction and the partial unconditional results, with
 the capstone sharply posed from three independent sides that here are proven to coincide.
@@ -161,7 +161,7 @@ The first equivalence is Theorem~\ref{thm:unif}; the third is Theorem~\ref{thm:M
 stability (uniform positivity $\iff\delta_\infty>0$); both equal RH by Proposition~\ref{prop:M3RH}.
 \end{proof}
 
-## 6. The irreducible core — and the honest statement
+## 6. The irreducible core — and the candid statement
 \begin{itemize}
 \item \textbf{Proved (unconditional):} the full reduction RH $\iff$ M3 (Prop.~\ref{prop:M3RH}); the Weil assembly
 (A)+(E)+(P) (Thm~\ref{thm:assembly}); the unification of geometry, analysis, and positivity into one wall
@@ -175,8 +175,8 @@ $D_0$; the finitization obstruction under Linear Independence, P15) that no curr
 it.
 \end{itemize}
 
-> **Honest endpoint.** M3 is the arithmetic Hodge index, and it \emph{is} RH. The attack is complete in the only
-> sense that pure mathematics honestly allows: every provable step is proved and documented; the geometric
+> **Candid endpoint.** M3 is the arithmetic Hodge index, and it \emph{is} RH. The attack is complete in the only
+> sense that pure mathematics candidly allows: every provable step is proved and documented; the geometric
 > (Weil), analytic (Montgomery/P18), and positivity-theoretic (HR-stability) formulations are proved to be the same
 > wall; the unconditional partial results (Hodge index mod $\log$; off a sparse set) are in hand; and the
 > irreducible core is isolated to one precise statement, which is RH. We do not cross it. To claim a crossing here

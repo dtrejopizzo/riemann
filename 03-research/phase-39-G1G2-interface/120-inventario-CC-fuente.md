@@ -538,7 +538,7 @@ sobre ese cuadrado. **[VERIFICADO — evidente]**.
 - Diagnóstico de Connes, textual: *"it is highly desirable to find a geometric
   framework for the Riemann zeta function itself, in which the Hasse-Weil formula, the
   geometric interpretation of the explicit formulas, the Frobenius correspondences...
-  all make sense"* y — crucial en honestidad — *"It is yet unclear if this is the
+  all make sense"* y — crucial en franqueza — *"It is yet unclear if this is the
   right set-up for the final Riemann-Roch step."* **[VERIFICADO]**.
 
 ### 6.3 *The Riemann-Roch strategy* (1805.10501, 2018) — la declaración más explícita

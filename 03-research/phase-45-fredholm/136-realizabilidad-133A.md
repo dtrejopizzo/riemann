@@ -4,7 +4,7 @@
 **Fecha:** junio 2026
 **Autor:** David Alejandro Trejo Pizzo
 **Prerrequisitos:** Doc 133 (signatura infinitesimal σ_ε, Defs. 2.1–2.4; Thms. 2.6, 2.7, 2.10; Prop. 2.8, 2.11; Teorema-puente 2.13; Problema 133.A en §5.2), Doc 108 (Defs. 1.1–1.2; Props. 2.2, 2.3, 2.5; Lema 2.4 con su Hipótesis D; Thms. 3.3, 3.4, 4.3; §7.4), Doc 107 (Lema 2.2(b) convergencia absoluta; Lema 5.2(b) lado espectral; Teorema 5.5 y Prop. 6.1 planos hiperbólicos; cerradura de la clase bajo x∂ₓ y polinomios en s), Doc 98 (estructura del cuádruplo: κ = 2, dos planos hiperbólicos), Doc 106 (identidad tensorial del índice), P43 (autonomía del valor).
-**Contrato creativo de la fase:** **[DEFINICIÓN-NUEVA]** = libertad total; **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad, prueba completa o estatus declarado línea por línea; **[CÁLCULO]** = cerrado; **[PUENTE]** = conexión con ζ/RH con estatus honesto; **[DESEO]** = declarado; **[GAP]** = marcado. Ninguna prueba se fabrica.
+**Contrato creativo de la fase:** **[DEFINICIÓN-NUEVA]** = libertad total; **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad, prueba completa o estatus declarado línea por línea; **[CÁLCULO]** = cerrado; **[PUENTE]** = conexión con ζ/RH con estatus franco; **[DESEO]** = declarado; **[GAP]** = marcado. Ninguna prueba se fabrica.
 
 ---
 
@@ -56,7 +56,7 @@ en dos movimientos, uno destructivo y uno constructivo:
    restringe el ESPACIO, no al vector testigo (Obs. 5.1), y eso desbloquea la
    aniquilación por posiciones dentro de un span ciego a posiciones.
 
-3. **(§6, [PUENTE] honesto.)** El criterio reformulado y promovido:
+3. **(§6, [PUENTE] franco.)** El criterio reformulado y promovido:
    **RH ⟺ lim_k σ_loc^(k) = 0 ⟺ lim_k σ_loc^(k) ≠ ½** (Corolario 5.6), con la rama
    RH teorema (positividad de Weil comprimida) y la rama ¬RH teorema módulo los
    insumos D107 listados — ya no módulo Hipótesis D. La no-canonicidad del
@@ -610,7 +610,7 @@ resuelta por monotonía, no por elección: la grilla creciente concentra por sí
 
 ---
 
-## 6. [PUENTE] Qué queda de la ley logística como criterio de RH — contabilidad honesta
+## 6. [PUENTE] Qué queda de la ley logística como criterio de RH — contabilidad franca
 
 ### 6.1. Lo que se ganó
 
@@ -674,7 +674,7 @@ resuelta por monotonía, no por elección: la grilla creciente concentra por sí
 
 ### 6.3. El eslabón abierto exacto (lo que un Doc 137 podría atacar)
 
-7. **[GAP/DESEO].** El único enunciado intermedio honesto que queda enunciable y no
+7. **[GAP/DESEO].** El único enunciado intermedio franco que queda enunciable y no
    probado en esta coordenada: una cota inferior INCONDICIONAL de positividad
    aproximada por celda — "existe una función computable ε(p) > 0 tal que bajo RH,
    λ_min(Gram(p)) ≥ ε(p) para toda celda p" (positividad cuantitativa de Weil
@@ -691,7 +691,7 @@ resuelta por monotonía, no por elección: la grilla creciente concentra por sí
    Prop. 2.7) encuentre oficio propio: un teorema incondicional "σ⁰_global = 0 para
    todo esquema de banda admisible" equivaldría a "no hay agrupamiento lineal de
    ceros off por banda" — más débil que RH, más fuerte que los teoremas de densidad
-   por ventana. Es un objetivo de teoremas parciales honestos (gran criba por
+   por ventana. Es un objetivo de teoremas parciales francos (gran criba por
    ventanas cortas), fuera del alcance de este documento.
 
 ---
@@ -713,7 +713,7 @@ ramas probadas y canonicidad en 𝒰 (Corolario 5.6, Obs. 5.7). Contenido neto m
 sin inflación: una presentación Gram-computable y logísticamente amplificada de la
 positividad de Weil, el caveat de D133 liquidado, y el muro re-cartografiado en
 Π₁-no-efectividad pura más búsqueda no acotada — con un único problema intermedio
-honesto y nuevo sobre la mesa (positividad cuantitativa localizada, Problema 136.A,
+franco y nuevo sobre la mesa (positividad cuantitativa localizada, Problema 136.A,
 que linda con Lehmer y correlación de pares, como todo lo que importa).
 
 ---

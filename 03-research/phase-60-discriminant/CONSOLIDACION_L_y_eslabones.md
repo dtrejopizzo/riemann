@@ -58,7 +58,7 @@ global de primos = conjugada al POLO de ζ en s=1 (a PNT). Coherente con H1: el 
 +1 de rango-1 (interlacing) — aquí reaparece como la única dirección curva del residuo; el resto
 es núcleo exacto. Reduce el Eslabón 2 a controlar una curvatura RANGO-1 en la dirección del polo.
 Estatus [N] robusto, NO [P]. Scripts: /tmp/via9.py, via9b.py (float, artefacto), via9mp(2).py (mpmath). PRÓXIMO: ¿el autovalor de curvatura (1er sv) escalado por ε₀ da (k+1)²? ¿la dirección-polo
-controla la tasa ε₀~C₀/λ² y la convergencia (Eslabón 2)? Conecta geometría rígida con tasa. ## 5. VEREDICTO HONESTO
+controla la tasa ε₀~C₀/λ² y la convergencia (Eslabón 2)? Conecta geometría rígida con tasa. ## 5. VEREDICTO FRANCO
 Eslabón 2 NO cerrado. Reducido a: identificar el **operador residual universal 𝓛** (existencia
 espectral [N], espectro Weyl (k+1)², autovectores caracterizados) y probar que controla la
 convergencia. El objeto está perfectamente caracterizado y falsado contra 8 identificaciones;

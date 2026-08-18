@@ -1,0 +1,403 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\PROVED}{\textcolor{green!45!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!80!black}{\textbf{AUDIT}}}
+\newcommand{\CONDITIONAL}{\textcolor{blue!65!black}{\textbf{CONDITIONAL}}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\old}{\mathrm{old}}
+\newcommand{\new}{\mathrm{new}}
+
+\title{Row (d), G40, and the Two Distinct \(d\)-Constructions\\
+       Corrected Full-Closure Audit (v131)}
+\author{}
+\date{August 14, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Controlling verdict.}
+The old local-analysis row (d) and the new Gamma--Fourier--Tate row (d) are
+different constructions and are audited separately below.  The files presently
+prove substantial exact identities, reductions, and local positivity statements,
+but they do not prove G40, condition \(G\), or row (d) for every window \(T\).
+Those three statements therefore remain \OPEN.  No numerical endpoint, Krein
+factorization, definition of a sign operator, or conditional cascade is counted
+as the missing positivity theorem.
+}}
+\end{center}
+
+\section{Scope: the two objects called row (d)}
+
+\subsection{The old row (d)}
+
+The old object is the local analytic construction contained in
+\texttt{main.tex} and \texttt{row-d-local-analysis.tex}.  Its relevant proved
+content is:
+\begin{enumerate}
+\item the explicit-formula operator and its primitive compression are defined;
+\item full Hilbert-space positivity is rigorously certified for
+      \(0<T\leq \log 2\);
+\item at the next finite threshold, in particular near
+      \(T=\tfrac12\log 5\), finite-dimensional and complementary estimates are
+      obtained separately;
+\item the audit identifies the missing joint Schur coupling and stops there.
+\end{enumerate}
+Thus the old row (d) supplies a rigorous base interval, finite-threshold tests,
+and the correct Schur/capacity obstruction.  It does not supply global positivity
+for all \(T\).
+
+\subsection{The new row (d)}
+
+The new object is the external sequence v89--v130.  It develops a
+Gamma--Fourier--Tate boundary/current model, a moving Tate cell, cross-only
+transport, a Gamma source state, rational leakage, and several candidate closure
+mechanisms.  Its authoritative accumulated operator ledger is v94; the later
+files refine particular routes without replacing the v94 terminal target.
+
+\medskip
+\noindent\AUDIT\quad A theorem proved for the old local model may be used as an
+input to the new construction only through an explicitly proved comparison map.
+Conversely, a formal or conditional identity in the new construction does not
+retroactively complete the old local proof.
+
+\section{The frozen target: no further movement of the goal}
+
+For a threshold cell, the new construction has the data
+\[
+ A_0=\mathcal G_0^*\mathcal G_0\geq0,
+ \qquad q=M_0h',
+ \qquad \beta=S_M'.
+\]
+The threshold block and its shorted defect are
+\begin{equation}
+ \mathcal K_T=
+ \begin{pmatrix}A_0&q\\q^*&\beta\end{pmatrix},
+ \qquad
+ \Delta_T=\beta-q^*A_0^\dagger q .
+ \tag{F1}
+\end{equation}
+The range condition is
+\begin{equation}
+ q\in\Ran A_0^{1/2}.
+ \tag{F2}
+\end{equation}
+The direct G40 target in the energy notation of v94 is
+\begin{equation}
+ S_E-Z_E^*Z_E-b_E^*A_0^\dagger b_E\geq0,
+ \qquad b_E\in\Ran A_0^{1/2}.
+ \tag{F3}
+\end{equation}
+Equivalently, the desired complete-source factorization is
+\begin{equation}
+ \mathcal K_T=\mathcal T_T^*\mathcal T_T
+ \quad\text{in a Hilbert space, for every threshold and every }T.
+ \tag{F4}
+\end{equation}
+
+The v94 equivalence theorem correctly establishes
+\begin{equation}
+ \mathcal K_T\geq0
+ \Longleftrightarrow
+ \bigl[(\mathrm{F2})\text{ and }\Delta_T\geq0\bigr]
+ \Longleftrightarrow
+ J_T:=\sgn(\Delta_T)=I
+ \Longleftrightarrow G40
+ \Longleftrightarrow G
+ \tag{F5}
+\end{equation}
+in the stated threshold framework.
+
+\medskip
+\noindent\PROVED\quad The definitions, Moore--Penrose Schur theorem, and the
+equivalences in (F5).
+
+\noindent\OPEN\quad The positive side of any one of these equivalent statements
+for every \(T\).  Defining \(\Delta_T\) and \(J_T\), or constructing a Krein
+factorization with signature \(J_T\), does not prove \(\Delta_T\geq0\) or
+\(J_T=I\).
+
+\section{What rows (a), (b), and (c) actually contribute}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.10\textwidth}
+                  >{\raggedright\arraybackslash}p{0.35\textwidth}
+                  >{\raggedright\arraybackslash}p{0.43\textwidth}}
+\toprule
+Row & Proved contribution & Boundary of the proved statement \\
+\midrule
+\endfirsthead
+\toprule
+Row & Proved contribution & Boundary of the proved statement \\
+\midrule
+\endhead
+(a) & \PROVED\ in the intrinsic periodic--Deligne--nuclear category; it constructs
+the required nuclear correspondence framework. & It does not give a finite-rank
+realization of the full kernel; the manuscript proves an obstruction to such a
+realization. \\
+\addlinespace
+(b) & \PROVED\ as cohomological correspondences.  In the Haran Hilbert state,
+\(V_n=F_n^*\), and the self-dual metric normalization produces the
+\(\Lambda(n)/\sqrt n\) coefficient. & No undecorated Cartier/Chow lift is
+asserted.  The Hilbert adjoint in this model is not automatically the adjoint of
+the odd nuclear quotient used in row (c). \\
+\addlinespace
+(c) & \PROVED\ as a cohomological/nuclear Lefschetz identity.  The even part
+contains the two Tate directions and the odd part is the nuclear Fr\'echet
+quotient \(H_-^0=H_-/ZH_{\cap}\). & It does not construct a positive Hilbert
+completion of that quotient for which the nuclear involution becomes the Hilbert
+adjoint and the nuclear character is preserved. \\
+\bottomrule
+\end{longtable}
+
+The tempting implication
+\begin{equation}
+ V_n=F_n^*
+ \quad\Longrightarrow\quad
+ \pi_-(f^\vee)=\pi_-(f)^*
+ \tag{A1}
+\end{equation}
+is therefore not among the proved results.  File v96 proves the algebraic scaling
+adjoint
+\[
+ V_n^\dagger\phi_k=n^{-1}\phi_{k/n}
+ \quad(n\mid k),
+ \qquad U_n^*=n^{-1}U_{1/n}
+\]
+on its algebraic domain, and proves descent of the involution.  It leaves open the
+positive Hilbert seminorm, closedness of \(ZH_{\cap}\), and preservation of the odd
+nuclear character.  File v97 further proves that the existing positive
+GNS/Gamma--Euler completions do not automatically descend to this quotient and
+that a cyclic matrix coefficient is not the nuclear trace.
+
+\medskip
+\noindent\AUDIT\quad The even Tate superobject in row (c) is essential structural
+data, but it is not by itself the missing positive metric on the odd quotient.
+Using (A1) without constructing and checking that metric would insert the desired
+positivity as an unproved assumption.
+
+\section{New row (d): exact ledger of what survives the audit}
+
+\subsection{Core exact identities}
+
+\begin{enumerate}
+\item[\PROVED] \textbf{G39 finite Gamma--Tate amplitude (v94).}
+The exact finite-threshold calculation gives
+\[
+ \mathcal H_{\infty,0}^*\mathcal W_\infty=-B_Q
+\]
+and the combined divergence equals \(M_0h'\).  This repairs the earlier mismatch
+between the moving harmonic residual and the differentiated metric.
+
+\item[\PROVED] \textbf{Moving Tate decomposition and conservation (v117).}
+The moving cell, its isometry, conservation identity, and full compression formula
+are established.  The final physical innovation factorization is not established.
+
+\item[\PROVED] \textbf{Cross-only G39 transport (v119).}
+The physical cross incidence, arithmetic cross Gram, and word-column description
+are exact.  The shorted inverse-metric domination is not a consequence of these
+identities.
+
+\item[\PROVED] \textbf{Positive Gamma source Gram (v120).}
+The Gamma contribution has a positive Gram representation.  This does not imply
+the required inverse-metric estimate, because compression and inversion do not
+commute.
+
+\item[\PROVED] \textbf{Causal Gamma state and leakage split (v121).}
+Integer and noninteger labels separate orthogonally at the relevant level.  The
+noninteger labels can form connected rational clusters; uniform unit domination
+of those clusters is open.
+
+\item[\PROVED] \textbf{Local Gamma--Tate cell bound (v122).}
+A one-cell inequality with a positive local margin is established.  It cannot be
+restarted independently at every cell: a connected cluster transports a
+near-constant Gamma state across cells.
+
+\item[\PROVED] \textbf{Exact correlated rational leakage (v123).}
+The coefficient is
+\[
+ \ell_{N,k}(a,b)=
+ \frac{1}{\sqrt{ab}(\log N)^k}
+ \sum_{d\leq N/\max(a,b)}
+ \frac{\Lambda(bd)\Lambda_k(ad)}{d}.
+\]
+This identifies data not determined by the diagonal Witt moments alone.
+\end{enumerate}
+
+\subsection{The uniform rational Gamma--Tate route}
+
+File v124 formulates the exact unit-constant estimate
+\begin{equation}
+ \|L_Ne\|^2\leq \mathcal E_{\Gamma T,N}(e)
+ \qquad\text{for every }N\text{ and every admissible }e.
+ \tag{URGT_1}
+\end{equation}
+Its scalar expansion and its equivalence to the operator inequality in that model
+are \PROVED.  The estimate itself is \OPEN.
+
+The cascade
+\begin{equation}
+ (\mathrm{URGT}_1)
+ \Longrightarrow
+ \text{uniform shorted leakage domination}
+ \Longrightarrow G40
+ \Longrightarrow G
+ \Longrightarrow \text{row (d)}
+ \tag{C1}
+\end{equation}
+is a \CONDITIONAL\ sufficient route.  It is not proved that
+\((\mathrm{URGT}_1)\) is necessary for G40.  Consequently, failure or incompletion
+of this route would not kill row (d), and its subsidiary lemmas must not be called
+the unique remaining steps of row (d).
+
+Files v125--v130 analyze one compactness/minimizer strategy for
+\((\mathrm{URGT}_1)\).  They provide fixed-\(N\) coercivity, all-depth local profile
+information, and useful resolvent/compactness reductions.  They do not establish
+uniform observability in the moving arithmetic holes where the weight is small.
+That observability statement is \OPEN, but it is only the remaining gap of this
+particular strategy, not the definition of G40 and not the sole logically possible
+closure of row (d).
+
+\section{Why the numerical endpoint is not the global closure}
+
+The old row (d) proves genuine numerical and interval statements.  They are useful
+tests of normalization, signs, and the first Schur cells.  Nevertheless,
+\begin{equation}
+ \text{one threshold or one finite compression is positive}
+ \quad\not\Longrightarrow\quad
+ P_T\mathcal A_TP_T\geq0\quad\text{for every }T.
+ \tag{N1}
+\end{equation}
+At \(T=\tfrac12\log5\), separate positivity of a finite block and its complement
+does not control their off-diagonal coupling.  That coupling is exactly what the
+Schur complement measures.  Hence the ``infinitesimal decimal'' work is a valid
+local certification and debugging tool, but it is not a proof of the uniform
+theorem.
+
+\section{Corrected terminal table}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.31\textwidth}
+                  >{\raggedright\arraybackslash}p{0.14\textwidth}
+                  >{\raggedright\arraybackslash}p{0.45\textwidth}}
+\toprule
+Item & Status & Exact meaning \\
+\midrule
+\endfirsthead
+\toprule
+Item & Status & Exact meaning \\
+\midrule
+\endhead
+Row (a) & \PROVED & Complete in its stated intrinsic
+periodic--Deligne--nuclear category. \\
+Row (b) & \PROVED & Complete as cohomological correspondences with its stated
+Hilbert normalization; no undecorated Chow lift. \\
+Row (c) & \PROVED & Complete as a nuclear/cohomological Lefschetz identity; no
+positive Hilbert completion of the odd quotient is asserted. \\
+Old row (d), \(0<T\leq\log2\) & \PROVED & Full Hilbert positivity on the certified
+initial interval. \\
+Old row (d), all \(T\) & \OPEN & The uniform Schur/capacity estimate is absent. \\
+G39 & \PROVED & Exact finite Gamma--Tate amplitude/divergence identity. \\
+Moving Tate conservation & \PROVED & Exact decomposition, isometry, and
+compression identity. \\
+G40 & \OPEN & The Hilbert positive factorization (F4), equivalently (F2)--(F3),
+has not been proved for every threshold. \\
+G41: \(J_T=I\) & \OPEN & Constructed and proved equivalent to G40; its value is
+not proved. \\
+G42: \(\Delta_T\geq0\) & \OPEN & Exact defect constructed; its sign is the
+load-bearing inequality. \\
+Positive Hilbert Rosati descent & \OPEN & Alternate closure route; the required
+metric/quotient/trace compatibility is not constructed. \\
+Correlated rational leakage domination & \OPEN & Direct missing unit domination
+in the Gamma-state route. \\
+\((\mathrm{URGT}_1)\) & \OPEN & Explicit sufficient uniform theorem, not a proved
+fact and not shown necessary. \\
+Uniform minimizer observability & \OPEN & Gap in one proposed proof of
+\((\mathrm{URGT}_1)\), not a new definition of row (d). \\
+Condition \(G\) & \OPEN & Equivalent positive statement not established. \\
+New row (d), all \(T\) & \OPEN & Depends on a genuine proof of G40 or another
+independent theorem implying the same positivity. \\
+\bottomrule
+\end{longtable}
+
+\section{What is useful, and what should leave the critical path}
+
+\subsection*{Retain in the main proof spine}
+\begin{enumerate}
+\item Rows (a), (b), and (c), with their category boundaries stated exactly.
+\item The old row (d) definition, the certified interval \(T\leq\log2\), and the
+      exact threshold Schur/capacity reduction.
+\item The v94 G39 amplitude and the single frozen G40 equivalence
+      (F1)--(F5).
+\item The v117 and v119--v123 exact moving-Tate/Gamma/leakage identities, because
+      they identify the physical source and the actual correlated obstruction.
+\item v124 as a clearly labelled sufficient conjectural theorem if the authors
+      choose to pursue the rational Gamma--Tate route.
+\end{enumerate}
+
+\subsection*{Move to an audit/no-go appendix}
+The alternative machines in v95--v116 and the compactness experiments v125--v130
+are valuable route audits, counterexample filters, and records of what cannot be
+inferred.  They should not appear as successive ``almost final'' steps in the main
+logical chain.  None presently supplies the missing sign.
+
+\section{The three honest closure routes}
+
+There are presently three noncircular targets.  Proving any one with all domain,
+range, and convergence statements would be a real closure; merely defining it
+would not.
+
+\begin{enumerate}
+\item \textbf{Direct G40.}  Prove (F2)--(F3), or equivalently construct the
+Hilbert factorization (F4), from the explicit Gamma--Euler--Tate network.  This is
+the shortest target and should remain the frozen definition of success.
+
+\item \textbf{Uniform rational Gamma--Tate theorem.}  Prove
+\((\mathrm{URGT}_1)\) and verify the already formulated conditional cascade (C1)
+without changing constants or spaces.  The current minimizer-observability work is
+one possible proof strategy, not part of the statement to be proved.
+
+\item \textbf{Positive Rosati descent.}  Construct a positive Hilbert completion
+of the odd Poisson quotient, prove the null subspace is closed, prove that
+\(f\mapsto f^\vee\) becomes the Hilbert adjoint, and prove that the resulting
+Hilbert trace equals the nuclear character of row (c).  Only after these checks can
+the negative Hilbert--Schmidt square be used.  The existing files show that this
+route carries load-bearing content rather than a formal transport.
+\end{enumerate}
+
+\section{Final audit conclusion}
+
+The work has not been empty and the boundary has not merely been renamed.  G39,
+the moving Tate state, exact conservation, the Gamma source Gram, the rational
+cluster decomposition, and the correlated leakage coefficient are genuine new
+mathematical constructions.  They explain precisely why simpler diagonal,
+cellwise, or formal-adjoint closures fail.
+
+But the current corpus contains no proof of the uniform positive inequality.
+Accordingly, the only defensible final labels are
+\[
+ \boxed{
+ \text{G39: \PROVED,}\qquad
+ \text{G40/G41/G42: \OPEN,}\qquad
+ G:\ \OPEN,\qquad
+ \text{new row (d): \OPEN.}}
+\]
+This is the stable ledger.  Future work should be measured directly against (F3)
+or (F4); no subsidiary reduction is to be advertised as the new unique terminal
+gap unless its equivalence to G40 is independently proved.
+
+\paragraph{Typographical audit.}
+The v117 source contains a malformed \verb|\binom| token and a missing backslash
+in one occurrence of \verb|\ker B_T|.  In v122, equation (7) appears to omit a
+plus sign between the Gamma energy and the endpoint term; equation (6), its proof,
+and subsequent use determine the intended sign.  These are editorial defects, not
+mathematical closures or counterexamples.
+
+\end{document}

@@ -1,4 +1,4 @@
-# Phase 60 — E5: el violador L_DH. RESULTADOS (honesto, inconcluso) **Fecha:** 2026-06-16 · **Código:** `E5_ldh_violator.py`, `E5b_*`, `E5c_dispersion_profile.py` ## Objetivo
+# Phase 60 — E5: el violador L_DH. RESULTADOS (franco, inconcluso) **Fecha:** 2026-06-16 · **Código:** `E5_ldh_violator.py`, `E5b_*`, `E5c_dispersion_profile.py` ## Objetivo
 Testear el mapa a RH (Eslabon 2): el operador CCM es auto-adjunto -> espectro REAL siempre;
 L_DH tiene un cero OFF-line (85.699+0.3085i), que un autovalor real no puede igualar -> la
 convergencia DEBE romperse. Buscabamos el testigo numerico de "convergencia <=> RH". ## Lo construido (real, primero en el programa)
@@ -13,7 +13,7 @@ del cero off-line. **El testigo numerico de "convergencia <=> RH" NO queda estab
 2. ~~a=3/4 NO validado~~ **CERRADO (E5d):** el arquimediano a=3/4 se valido sobre L(χ_-4) (caracter impar real mod 4, Euler, RH-true): ceros 6.0209, 10.2438, 12.9881, 16.3426 reproducidos a ~1e-6 (limitado por los valores de referencia, no el engine). Por tanto el operador de L_DH usa un arquimediano CORRECTO y el resultado negativo de E5 es real.
 3. **Metrica probablemente equivocada:** por Thm 1.1(iii) el cero off-line seria un autovalor FALTANTE (invisible al espectro real), no uno de alta dispersion. Diagnostico correcto: |ξ̂_{λ,N}(85.699+0.3085i)| (que no puede anularse) vs Ξ_DH(ahi)=0, y su no-convergencia a 0. ## Estado del mapa tras E5
 - Mecanismo matematico **intacto como teorema** (Hurwitz + Thm 1.1(iii)): aproximantes con solo raices reales no convergen a Ξ_DH (cero complejo). No depende del experimento.
-- Demostracion numerica del mecanismo: **abierta**. Requiere (a) validar a=3/4 sobre L(χ4); (b) λ grande con L_DH resuelto hasta H~85 (arith sums grandes + mpmath); (c) el diagnostico del determinante complejo (E6), no la dispersion. ## Honesto
+- Demostracion numerica del mecanismo: **abierta**. Requiere (a) validar a=3/4 sobre L(χ4); (b) λ grande con L_DH resuelto hasta H~85 (arith sums grandes + mpmath); (c) el diagnostico del determinante complejo (E6), no la dispersion. ## Franco
 No hubo victoria. Se construyo el instrumento correcto y el experimento decisivo salio
 inconcluso a parametros accesibles, con un caveat de validacion (a=3/4) que hay que cerrar
 antes de cualquier afirmacion. El siguiente paso real es E6 (determinante complejo) tras

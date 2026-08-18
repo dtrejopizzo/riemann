@@ -28,7 +28,7 @@ con β_λ la brecha de Hardy mejorada (remanente FLS). Es una **carrera cuantita
 falta δV ~ RH-óptimo → reentra el Escenario C. ### Dónde puede esconderse el Escenario C (lo que hay que vigilar) - Si β_λ decae *más rápido* que la cota clásica de δV, la carrera se pierde por densidad y habría que ajustar δV con info fina (posición) → C.
 - La proyección a φ₀^⊥ podría *no* matar la parte de δV que correlaciona con la estructura de ceros. Hay que verificar que δV sobre φ₀^⊥ es genuinamente la fluctuación "blanca" (PNT) y no retiene un eco de Σ_ρ. --- ## 3. Veredicto del audit - **[N]** φ₀ = modo-polo suave: confirmado en mpmath. La conflación temida NO existe; la cascada se sostiene. (Float64 daba un falso "edge-localized".)
 - **[P/argumentado]** δV es del **lado densidad**: objeto aritmético finito (primos + media suave), sin ceros explícitos; su tamaño lo gobiernan regiones libres de ceros clásicas (no Θ=½). **Se inclina a Escenario A.**
-- **[O]** La **suficiencia cuantitativa** (cota clásica de δV < β_λ) es lo único que queda para (i), más la escalar (ii). Es una carrera de tamaños, computable. **Lectura honesta:** el audit no rompió la cascada — al contrario, descartó una posible
+- **[O]** La **suficiencia cuantitativa** (cota clásica de δV < β_λ) es lo único que queda para (i), más la escalar (ii). Es una carrera de tamaños, computable. **Lectura franca:** el audit no rompió la cascada — al contrario, descartó una posible
 conflación (vía mpmath) y mostró que δV vive del lado densidad. Pero **traslada** el
 problema a dos cotas cuantitativas (δV y la escalar (ii)) cuya suficiencia hay que
 *calcular*, no asumir. El Escenario C no está excluido: podría reentrar si β_λ decae más
@@ -47,7 +47,7 @@ Brezis–Vázquez es real y robusto (4×).** Confirma el cuadro de Hardy mejorad
 | 3.7 | 0.771 | ε₁/ε₀=4.58, ε₂/ε₀=9.14 |
 | 5 | 0.782 | 3.86, 9.08 |
 | 7 | 0.797 | 4.07, 9.05 | **[N]** φ₀ está ~78% alineado con el funcional-polo ℓ (=e^{u/2}), **creciendo con λ**
-→ tiende a alinearse más. Torre (k+1)² confirmada. ### Lectura honesta de la carrera - **Lado izquierdo β_λ ≈ 4ε₀ ~ 4C₀/λ²:** medido, positivo, estable. La Hardy mejorada tiene holgura 4× sobre ℓ^⊥.
+→ tiende a alinearse más. Torre (k+1)² confirmada. ### Lectura franca de la carrera - **Lado izquierdo β_λ ≈ 4ε₀ ~ 4C₀/λ²:** medido, positivo, estable. La Hardy mejorada tiene holgura 4× sobre ℓ^⊥.
 - **CAVEAT decisivo:** esto es data RH-true. El β_λ medido ya COMBINA la positividad FLS (β_FLS) y la corrección δV — no los separa. Que el neto sea +4ε₀>0 dice que **δV NO domina a β_FLS** (empíricamente, para esta data), pero no aísla δV.
 - **Lo que NO puede dar la numérica:** la separación β_FLS vs δV es analítica (sólo tenemos data con ceros en línea). La prueba incondicional necesita β_FLS ≥ δV probado del lado primo. ## 6. Síntesis del estado (post-medición) **Confirmado numéricamente [N]:**
 - Torre (k+1)²; φ₀ polo-dominante (78%, creciente); β_λ≈4ε₀>0 estable.

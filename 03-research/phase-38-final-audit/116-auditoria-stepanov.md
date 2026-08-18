@@ -5,7 +5,7 @@
 **Auditor:** rol adversarial — el mandato es DESTRUIR el teorema, no confirmarlo
 **Objetivo:** Doc 113 (phase-37-physics/113-LP112-contra-literatura.md), §5.2, Teorema 5.2:
 *"ζ no es S^p-casi-periódica en ninguna sub-banda de la franja crítica, para ningún p ≥ 1 — incondicional"* — citado en P44 como Theorem 4.2 (main.tex, líneas 282–288).
-**Naturaleza:** auditoría de definiciones, de la prueba paso a paso, de las referencias externas (verificadas en fuente en esta sesión vía web) y del uso en P44. Sin numéricos. Honestidad absoluta: se reporta lo que sobrevive y lo que no, con localización exacta.
+**Naturaleza:** auditoría de definiciones, de la prueba paso a paso, de las referencias externas (verificadas en fuente en esta sesión vía web) y del uso en P44. Sin numéricos. Franqueza absoluta: se reporta lo que sobrevive y lo que no, con localización exacta.
 
 ---
 
@@ -142,7 +142,7 @@ del Teorema 5.2 (la subarmonicidad reparte la masa en un entorno bidimensional, 
 en la recta misma)… Estado declarado: GAP menor, abierto — e irrelevante para
 LP-112". El documento no solo no comete el error: lo nombra, lo localiza y lo
 descarta como irrelevante para su uso (Rouché necesita control de área, la banda).
-Honestidad verificada en el punto más delicado.
+Franqueza verificada en el punto más delicado.
 
 ### 2.3. Conclusión del ataque al corazón
 
@@ -169,7 +169,7 @@ no hay desigualdad submedia 1D para |hol|^p sobre segmentos verticales). La vers
   dice que "el mismo resultado ya fue obtenido por Montgomery, con menor valor de
   c_α".
 - **Montgomery 1977 (Comment. Math. Helv. 52):** Doc 113 lo cita "[vía Aistleitner,
-  original NO VERIFICADO]" — etiqueta honesta. Matiz que la auditoría agrega: en la
+  original NO VERIFICADO]" — etiqueta franca. Matiz que la auditoría agrega: en la
   literatura el resultado de Montgomery con denominador (log log T)^σ aparece a
   veces como condicional a RH, con la versión incondicional de esa época en forma
   más débil (Levinson: (log T)^{1−σ}/log log T, incondicional — verificado vía
@@ -343,7 +343,7 @@ El teorema es, además, robusto: no depende de la tasa de crecimiento (cualquier
 no-acotación en una recta interior basta), no depende de p (todo p > 0 con la
 misma prueba; p ≥ 1 solo normaliza la clase), y no depende de la sub-banda (el
 radio r se calibra localmente). Es uno de los enunciados mejor blindados del
-programa, y su honestidad interna (el gap de recta única declarado en el propio
+programa, y su franqueza interna (el gap de recta única declarado en el propio
 §5.2) le ahorró el único error que esta auditoría podía encontrarle.
 
 ---
@@ -351,7 +351,7 @@ programa, y su honestidad interna (el gap de recta única declarado en el propio
 ## Referencias de la auditoría
 
 - Doc 113, §5.1–5.4 (objetivo); D112 (Lemas 2.1–2.2, Obs. 2.4, Prop. 2.6 — contexto).
-- P44, main.tex, abstract (l. 68–73), Theorem 4.2 (l. 282–288), honest assessment (l. 365).
+- P44, main.tex, abstract (l. 68–73), Theorem 4.2 (l. 282–288), candid assessment (l. 365).
 - C. Aistleitner, *Lower bounds for the maximum of the Riemann zeta function along
   vertical lines*, Math. Ann. 365 (2016); arXiv:1409.6035. [VERIFICADO en esta
   sesión: abstract; enunciado, incondicionalidad, constante c_α = 0.18(2α−1)^{1−α}.]

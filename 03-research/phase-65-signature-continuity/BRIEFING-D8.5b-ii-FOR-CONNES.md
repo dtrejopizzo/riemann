@@ -145,7 +145,7 @@ self-adjointness of the limit, and whether it can be removed by the right (signa
 completion. This is the original Phase-65 goal; D8.5b-ii is its irreducible core.
 
 \item \textbf{Is D8.5b-ii provably equivalent to RH with no easier content, or is one of (1)–(4) genuinely
-weaker?} We have been honest that, as a theorem implying RH, D8.5b-ii \emph{is} RH-strength. The question
+weaker?} We have been candid that, as a theorem implying RH, D8.5b-ii \emph{is} RH-strength. The question
 is whether any of the structural inputs above is a \emph{new, independently provable} principle (so that
 D8.5b-ii becomes a corollary), or whether each collapses back to the off-$\R$ divisor statement. \emph{We
 ask for a verdict on which, and — if a new object is needed — what it should be.}

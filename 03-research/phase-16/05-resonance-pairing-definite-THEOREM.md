@@ -59,7 +59,7 @@ bulk pairing. So $\kappa$ requires either:
 Every natural pairing the modular surface supplies (analytic Maass–Selberg; arithmetic Arakelov/Néron–Tate) is
 **definite**; the indefinite $Q$ is not among them. This is the wrong-sign capstone (CAP), now **proven** on Route A.
 
-## Status (honest)
+## Status (candid)
 - **Advance (genuine):** a theorem — the modular-surface resonance pairing is structurally definite (half-plane Hardy
   kernel); $\kappa$ is absent from it, RH-independently. A durable impossibility result.
 - **No crossing:** the indefiniteness $\kappa$ is the off-axis evaluation / the missing surface's intersection form,

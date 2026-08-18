@@ -4,7 +4,7 @@
 **Fecha:** junio 2026  
 **Prerrequisitos:** Docs 42–53  
 **Naturaleza:** Conexión entre el déficit espectral $C_\infty(\gamma_n)$ y la información aritmética codificada en $\zeta'/\zeta$.  
-**Objetivo:** Derivar una fórmula explícita para $C_\infty(\gamma_n)$ en términos de la parte finita (partie finie de Hadamard) de $\zeta'/\zeta$ en el cero $\rho_n$. Explorar si la distribución estadística de esta cantidad bajo hipótesis de correlación par (GUE/Montgomery) puede aportar información nueva. Ser honesto sobre circularidades.
+**Objetivo:** Derivar una fórmula explícita para $C_\infty(\gamma_n)$ en términos de la parte finita (partie finie de Hadamard) de $\zeta'/\zeta$ en el cero $\rho_n$. Explorar si la distribución estadística de esta cantidad bajo hipótesis de correlación par (GUE/Montgomery) puede aportar información nueva. Ser franco sobre circularidades.
 
 ---
 

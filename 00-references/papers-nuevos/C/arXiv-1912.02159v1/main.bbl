@@ -1,0 +1,241 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{ynt/global/}
+    \entry{deninger1998some}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8a107f7bac74091b2b32c16090936987}{%
+           family={Deninger},
+           familyi={D\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{fullhash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authornamehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authorfullhash}{8a107f7bac74091b2b32c16090936987}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Doc. Math. J. DMV. Extra}
+      \field{title}{Some analogies between number theory and dynamical systems on foliated spaces}
+      \field{volume}{901}
+      \field{year}{1998}
+      \field{pages}{23\bibrangedash 46}
+      \range{pages}{24}
+    \endentry
+    \entry{connes2000noncommutative}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=2ab2d4ccb58c7b113828990aedfcaadb}{%
+           family={Connes},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2ab2d4ccb58c7b113828990aedfcaadb}
+      \strng{fullhash}{2ab2d4ccb58c7b113828990aedfcaadb}
+      \strng{authornamehash}{2ab2d4ccb58c7b113828990aedfcaadb}
+      \strng{authorfullhash}{2ab2d4ccb58c7b113828990aedfcaadb}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Visions in Mathematics}
+      \field{title}{Noncommutative geometry year 2000}
+      \field{year}{2000}
+      \field{pages}{481\bibrangedash 559}
+      \range{pages}{79}
+    \endentry
+    \entry{lopez2001long}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c20a617b4d2d4574482bb031229a8a40}{%
+           family={L\'{o}pez},
+           familyi={L\bibinitperiod},
+           given={Jes\'{u}s\bibnamedelimb A\bibnamedelima \'{A}lvarez},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim \'{A}\bibinitperiod}}}%
+        {{hash=582c0f578399f50c865fd98f241dfc95}{%
+           family={Kordyukov},
+           familyi={K\bibinitperiod},
+           given={Yuri\bibnamedelima A},
+           giveni={Y\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {London Mathematical Society}%
+      }
+      \strng{namehash}{4efc93e31c5b526ab0d670d89df5dfd3}
+      \strng{fullhash}{4efc93e31c5b526ab0d670d89df5dfd3}
+      \strng{authornamehash}{4efc93e31c5b526ab0d670d89df5dfd3}
+      \strng{authorfullhash}{4efc93e31c5b526ab0d670d89df5dfd3}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Compositio Mathematica}
+      \field{number}{2}
+      \field{title}{Long time behaviour of leafwise heat flow for Riemannian foliations}
+      \field{volume}{125}
+      \field{year}{2001}
+      \field{pages}{129\bibrangedash 153}
+      \range{pages}{25}
+    \endentry
+    \entry{deninger2002number}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8a107f7bac74091b2b32c16090936987}{%
+           family={Deninger},
+           familyi={D\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{fullhash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authornamehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authorfullhash}{8a107f7bac74091b2b32c16090936987}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint math/0204110}
+      \field{title}{Number theory and dynamical systems on foliated spaces}
+      \field{year}{2002}
+    \endentry
+    \entry{lopez2002distributional}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=c20a617b4d2d4574482bb031229a8a40}{%
+           family={L\'{o}pez},
+           familyi={L\bibinitperiod},
+           given={Jes\'{u}s\bibnamedelimb A\bibnamedelima \'{A}lvarez},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim \'{A}\bibinitperiod}}}%
+        {{hash=582c0f578399f50c865fd98f241dfc95}{%
+           family={Kordyukov},
+           familyi={K\bibinitperiod},
+           given={Yuri\bibnamedelima A},
+           giveni={Y\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{4efc93e31c5b526ab0d670d89df5dfd3}
+      \strng{fullhash}{4efc93e31c5b526ab0d670d89df5dfd3}
+      \strng{authornamehash}{4efc93e31c5b526ab0d670d89df5dfd3}
+      \strng{authorfullhash}{4efc93e31c5b526ab0d670d89df5dfd3}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Foliations: Geometry and Dynamics}
+      \field{title}{Distributional Betti numbers of transitive foliations of codimension one}
+      \field{year}{2002}
+      \field{pages}{159\bibrangedash 183}
+      \range{pages}{25}
+    \endentry
+    \entry{deninger2005arithmetic}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8a107f7bac74091b2b32c16090936987}{%
+           family={Deninger},
+           familyi={D\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{fullhash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authornamehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authorfullhash}{8a107f7bac74091b2b32c16090936987}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint math/0505354}
+      \field{title}{Arithmetic geometry and analysis on foliated spaces}
+      \field{year}{2005}
+    \endentry
+    \entry{deninger2006dynamical}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8a107f7bac74091b2b32c16090936987}{%
+           family={Deninger},
+           familyi={D\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}}%
+      }
+      \strng{namehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{fullhash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authornamehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authorfullhash}{8a107f7bac74091b2b32c16090936987}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A dynamical systems analogue of Lichtenbaum's conjectures on special values of Hasse-Weil zeta functions (Analytic Number Theory)}
+      \field{year}{2006}
+    \endentry
+    \entry{deninger2008analogies}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8a107f7bac74091b2b32c16090936987}{%
+           family={Deninger},
+           familyi={D\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{fullhash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authornamehash}{8a107f7bac74091b2b32c16090936987}
+      \strng{authorfullhash}{8a107f7bac74091b2b32c16090936987}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Groups and Analysis}
+      \field{title}{Analogies between analysis on foliated spaces and arithmetic geometry}
+      \field{year}{2008}
+      \field{pages}{174\bibrangedash 190}
+      \range{pages}{17}
+    \endentry
+    \entry{morishita2011knots}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7edbe3133de7466f6267c1f45dc8291e}{%
+           family={Morishita},
+           familyi={M\bibinitperiod},
+           given={Masanori},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{7edbe3133de7466f6267c1f45dc8291e}
+      \strng{fullhash}{7edbe3133de7466f6267c1f45dc8291e}
+      \strng{authornamehash}{7edbe3133de7466f6267c1f45dc8291e}
+      \strng{authorfullhash}{7edbe3133de7466f6267c1f45dc8291e}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Knots and primes: an introduction to arithmetic topology}
+      \field{year}{2011}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

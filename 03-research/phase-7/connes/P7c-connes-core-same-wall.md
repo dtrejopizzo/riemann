@@ -3,13 +3,13 @@
 **Author: David Alejandro Trejo Pizzo · 2026-06-03.**
 The user chose to engage the one structurally-distinct open core — Connes / Connes–Consani's
 multiplicative (scaling / adelic) organization of Weil positivity — eyes open at <1%. This records what
-the engagement actually establishes, honestly: a precise bridge from our band-limited form to their prolate
+the engagement actually establishes, candidly: a precise bridge from our band-limited form to their prolate
 object, the confirmation that their *proved* positivity is the archimedean piece (not the wall), and the
 finding that the obstruction sits at the **same place** as ours.
 
 ---
 
-## 1. The framework (precise, with honest citation boundary)
+## 1. The framework (precise, with candid citation boundary)
 
 Connes' trace formula reads the Weil explicit formula as a sum over **places** of local distributions:
 $$

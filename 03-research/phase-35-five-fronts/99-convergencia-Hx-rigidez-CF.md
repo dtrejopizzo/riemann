@@ -193,7 +193,7 @@ El precio de ese intercambio es exacto. Para que los ceros reales del aproximant
 
 ### 4.4. Sobre el significado de los $10^{-55}$ y la barrera de Hadamard
 
-Dos observaciones de honestidad:
+Dos observaciones de franqueza:
 
 1. La precisión $10^{-55}$ con 6 primos **no es evidencia de no-circularidad**; es evidencia de que la cancelación aritmética que controla $\mu_\lambda$ (y la proximidad $\xi_\lambda \approx$ función prolate) ya es extraordinariamente profunda a $x = 13$. CCM estiman en $\sim 10^{-1235}$ la probabilidad de coincidencia casual: hay estructura real. Pero la *magnitud* de esa cancelación es exactamente lo que nadie sabe acotar — ver §6.1 (obstrucción del gap evanescente).
 
@@ -278,7 +278,7 @@ y $\int_0^L(1 - u/L)e^{u/2}du = \tfrac{4e^{L/2}}{L} + O(1) = \tfrac{4\lambda}{2\
 
 Esto explica con exactitud por qué el "main remaining obstacle" de CCM-ZST (justificar $\xi_\lambda \approx k_\lambda$ con $k_\lambda$ la aproximación prolate) no es un detalle técnico: el error admisible debe competir con gaps evanescentes.
 
-### 6.2. El Wronskiano exacto y la fórmula cerrada de $F_n$ (Doc 68/69): diagnóstico honesto
+### 6.2. El Wronskiano exacto y la fórmula cerrada de $F_n$ (Doc 68/69): diagnóstico franco
 
 El Wronskiano exacto $W_k = -1/a_k^\infty$ y la fórmula $F_n = -1/(a_n^\infty P_n P_{n+1} m_\infty)$ viven en la **representación de Jacobi** de las medidas $dm_\infty$ y $dm_{\mathrm{full}} = |\zeta(\tfrac12+is)|^2\,dm_\infty$: son identidades del objeto **límite** $\lambda = \infty$, con el producto de Euler **ya sumado** dentro de $|\zeta|^2$. La familia $H_x$ interpola precisamente **en $x$**, antes de ese límite. Las dos familias de truncaciones son filtraciones distintas del mismo objeto:
 
@@ -357,7 +357,7 @@ Queda viva, en concreto, la sub-ruta no circular: **E1 (even-simplicity de $QW_\
 
 ---
 
-## Apéndice A — Verificación de fuentes (protocolo de honestidad)
+## Apéndice A — Verificación de fuentes (protocolo de franqueza)
 
 | Fuente | Qué se verificó | Cómo |
 |---|---|---|

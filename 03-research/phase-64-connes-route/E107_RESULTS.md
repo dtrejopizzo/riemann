@@ -41,7 +41,7 @@ perturbations. This is the local nature of the de Branges/Pick criterion.)
 - **Faithful & local:** off-line zeros flip the sign exactly at `ω=β−½`, detectable for any β when
   sampled near the pole.
 
-## Honest status
+## Candid status
 
 This sharpens, but does not close, the crossing. We have shown the regularized positivity **exists,
 survives ω↓0, and is positive for ζ** on every configuration tested, with faithful off-line

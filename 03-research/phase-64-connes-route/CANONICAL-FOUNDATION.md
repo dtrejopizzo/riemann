@@ -6,7 +6,7 @@ canonical Gram identity (de Branges' Lagrange identity), which is the load-beari
 `CONSTRUCTION-TW-canonical-system.md` stated schematically. It then secures the two "known-mathematics"
 stages: the archimedean Binet cell (Stage 3, positive) and the perturbation-determinant identification
 $D_P\to\Xi$ (Stages 5–6). After this note the construction is rigorous up to the single open wall, the
-rank-one escape theorem. Honest: escape is RH-strength and remains open.*
+rank-one escape theorem. Candid: escape is RH-strength and remains open.*
 
 Convention: $J=\begin{psmallmatrix}0&-1\\1&0\end{psmallmatrix}$, so $J^*=-J$, $J^2=-I$, $J^{-1}=-J$.
 A canonical system on $[0,\ell]$ is $J\,\partial_tY(t,z)=z\,H(t)\,Y(t,z)$, $Y(0,z)=I$, with
@@ -91,6 +91,16 @@ and it is positive by Proposition~\ref{prop:binet}. No new positivity is needed;
 ---
 
 ## §3. Stages 5–6: the perturbation determinant identifies the transfer with $\Xi$
+
+> **Binding erratum (Phase 106).** The proposition called “finite Tate
+> identity” below is false for the self-adjoint perturbation determinant
+> defined here. Such a determinant is holomorphic and nonzero on
+> \(\mathbb C\setminus\mathbb R\), while every factor
+> \(1-p^{-1/2-iz}\) has a prime-dependent divisor on
+> \(\operatorname{Im}z=1/2\). The local Tate identity belongs to a
+> scattering/virtual determinant. Sections 3–4 must therefore be read as a
+> proposed target conditional on a new global non-factorized determinant,
+> not as a secured bridge. See Phase 106, document 106.00.
 
 The limiting object must be $K_{S_\kappa}$; we secure this via the perturbation determinant, the
 correct vehicle (the scalar Euler product diverges; the canonical determinant does not).

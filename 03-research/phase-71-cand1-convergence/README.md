@@ -117,7 +117,7 @@ and the convergence-horizon framing in `E6_convergence_horizon.py`. Phase 71 iso
   operator-gap criterion reducing the missing estimate to `||H_x-H_x^0||=o(g_x)` for the
   prolate-vs-Weil model.
 
-## Honesty contract
+## Candor contract
 
 Carried from Phases 64-70. Self-adjointness by construction is real but must not be mistaken for a
 proof: the spectrum is real for ANY input, so reality alone proves nothing -- the content is whether

@@ -29,7 +29,7 @@ So RH/Omega_7 holds at the operator level at every gauge, and the band-averaged 
 produces false negatives**. The huge local curvature (150-500) at the failing gauges vs ~0.06 at
 t0=100,200 shows these are spurious non-Toeplitz spikes, not real negativity.
 
-## Consequence -- honest correction
+## Consequence -- candid correction
 
 - **Robust object:** the exact signed index `ind_-(A_N - P_lambda) = 0 <=> RH` (E67.9). Gauge-robust,
   precision-robust. This is the real detector.
@@ -48,7 +48,7 @@ a working tool.
 - The Toeplitz-symbol direction (E67.16 onward) is undermined: the band-averaged symbol is not a
   faithful, gauge-stable representation of the operator. Phase 68's premise (analyze the symbol) does
   not have a reliable object under it.
-- The next honest move is to return to the gauge-robust exact object (the whitened defect / its signed
+- The next candid move is to return to the gauge-robust exact object (the whitened defect / its signed
   index) and seek structure there, or a genuinely gauge-stable reduction -- not the band symbol.
 ```
 solid   : ind_-(A_N-P_lambda)=0 <=> RH, gauge- and precision-robust

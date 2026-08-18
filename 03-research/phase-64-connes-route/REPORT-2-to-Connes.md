@@ -1,7 +1,7 @@
 # Second report: your route, validated end-to-end — and where we now need a direction for RH
 
 *Following your second reply (de Branges–Livšic colligation, shifted scattering `Θ_ω`, positive
-reference, contractivity→no-pole, detector nonvanishing). Honest throughout: every positive result
+reference, contractivity→no-pole, detector nonvanishing). Candid throughout: every positive result
 for ζ is **marginal** (a faithful detector), flagged as such; all marginal claims checked at dps≥40
 (float64 is insufficient at the boundary — see the audit note). Davenport–Heilbronn (DH) and planted
 off-line zeros are the falsifiers and break every test at the predicted location.*

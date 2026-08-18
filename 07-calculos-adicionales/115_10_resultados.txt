@@ -1,0 +1,53 @@
+======================================================================
+1. EL NUMERO QUE GOBIERNA TODO EL DIBUJO
+======================================================================
+  113 * 2pi = 709.999939711
+  710       = 710
+  delta     = 710 - 113*2pi = +6.028871e-05 rad
+  Avanzar p en 710 unidades gira el punto exactamente delta radianes.
+  delta NO depende del rayo: por eso los rayos son congruentes.
+
+======================================================================
+2. LOS 280 RAYOS SON LA MISMA CURVA (prediccion sin ajustar nada)
+======================================================================
+  prediccion:  dtheta(p) = delta*(p - p mod 710)/710
+  desvio maximo sobre los 100000 primos: 3.901e-11 rad
+  (el ancho de un rayo es 2pi/710 = 8.850e-03 rad — 2.3e+08 veces mayor)
+  No es que se parezcan: coinciden a precision de maquina.
+
+======================================================================
+3. CUANTO SE DOBLAN
+======================================================================
+  al borde del dibujo (p = 1299709):
+     giro acumulado = 0.110363 rad = 6.323 grados
+     ancho de un rayo = 0.008850 rad
+     => 12.47 anchos de rayo, y en el mismo sentido para los 280
+  Eso es exactamente 'todos tienen la misma onda y al final se doblan'.
+
+======================================================================
+4. CUANTOS RAYOS, Y CUAL ES LA UNICA PARTE QUE SI ES DE LOS PRIMOS
+======================================================================
+  clases mod 710 ocupadas por los primos: 283
+  phi(710) = 280   (710 = 2*5*71)
+  ocupadas que NO son coprimas con 710: [2, 5, 71]  (los propios 2, 5, 71)
+  Con TODOS los enteros habria 710 rayos.  Los primos usan 280:
+  los 430 que faltan son las clases con factor comun con 710.
+  Eso -- y solo eso -- es lo que el dibujo dice de los primos.
+  Que los 280 brillen parejo es el teorema de Dirichlet.
+
+======================================================================
+5. POR QUE EL DIBUJO CAMBIA DE FAMILIA SEGUN EL RADIO
+======================================================================
+     6/1    delta=-2.8319e-01  se desarma en r ~           22
+    19/3    delta=+1.5044e-01  se desarma en r ~           42
+    25/4    delta=-1.3274e-01  se desarma en r ~           47
+    44/7    delta=+1.7703e-02  se desarma en r ~          355
+   333/53   delta=-8.8213e-03  se desarma en r ~          712
+   710/113  delta=+6.0289e-05  se desarma en r ~      104,218
+  el dibujo llega a r = 1,299,709
+  Por eso: cerca del centro mandan las familias 6 y 44 (se desarman
+  enseguida), afuera manda la de 710, y recien pasando r ~ 10^5 la de
+  710 empieza a doblarse visiblemente.  Nada de esto es de los primos:
+  son los convergentes de 2pi.
+
+[fig] /home/trabajo/Documentos/research/riemann/riemann/calculos-adicionales/115_10_fig_rayos.png

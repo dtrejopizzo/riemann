@@ -2,7 +2,7 @@
 
 **Programa:** Hipótesis de Riemann — Fase 55 (dos flechas)
 **Fecha:** 2026-06-11
-**Mandato:** formalizar y probar la dicotomía de energía — que la auto-aproximación de ζ (LP-112) fuerza $I\in\{0,\infty\}$ —, cuantificando la réplica de Rouché–Hurwitz (la réplica copia la *distancia a la línea*, no solo el cero); explorar el puente densidad-de-replicación ↔ Teorema 170.5; estado honesto de LP-112; retrato del estado de energía finita.
+**Mandato:** formalizar y probar la dicotomía de energía — que la auto-aproximación de ζ (LP-112) fuerza $I\in\{0,\infty\}$ —, cuantificando la réplica de Rouché–Hurwitz (la réplica copia la *distancia a la línea*, no solo el cero); explorar el puente densidad-de-replicación ↔ Teorema 170.5; estado franco de LP-112; retrato del estado de energía finita.
 **Prerrequisitos leídos en fuente:** Doc 112 completo (LP-112, LP-112⁻, Teorema 2.3, Prop. 2.6, Obs. 2.4, §2.6), Doc 113 (LP-112 contra literatura; Bohr 1922; soporte de Bagchi), Doc 170 (coordenadas, Teorema 170.5, Cor. 170.6, Thm 170.8, §5 envolvente), Doc 172 (cabecera, veredicto: la envolvente $T/\log T$ = suelo de ruido).
 **Contrato:** [DEFINICIÓN-NUEVA] libre; [TEOREMA]/[PROP]/[LEMA] prueba completa o sin etiqueta; [GAP] declarado con forma de enunciado. Falsa victoria peor que fracaso.
 
@@ -35,7 +35,7 @@ $$\sup_{s\in D}\,\bigl|\zeta(s+i\tau_k)-\zeta(s)\bigr|\;\longrightarrow\;0.$$
 
 **Lema LP-112⁻ (versión débil — Doc 112).** *Para todo disco cerrado $D\subset\{\tfrac12<\sigma<1\}$ y todo $\varepsilon>0$ existe UN $\tau>\mathrm{altura}(D)$ con $\sup_D|\zeta(s+i\tau)-\zeta(s)|<\varepsilon$.*
 
-**Tres precisiones sobre el disco (la honestidad pedida):**
+**Tres precisiones sobre el disco (la franqueza pedida):**
 
 (a) *El cuantificador del Doc 112 ya cubre la altura del cero.* LP-112 cuantifica sobre **todos** los discos cerrados de la franja abierta, sin restricción de altura: en particular sobre $D=\bar D(\rho_0,r)$ centrado en un cero off $\rho_0$ a altura $\gamma_0$ arbitraria. No hay que reformular nada: la versión que usamos es una *instancia* de la del Doc 112, no una extensión. (Si $\rho_0$ cayera en el borde de un disco dado, se reemplaza por el disco concéntrico en $\rho_0$ de radio admisible: la franja es abierta y $0<b_0<\tfrac12$ estricto deja holgura por los dos lados.)
 
@@ -105,7 +105,7 @@ $$b^{(k+1)}\;\ge\;b^{(k)}-r_k\;\ge\;b_0-\sum_{j=0}^{k}b_0\,2^{-j-2}\;\ge\;b_0\Bi
 1. $I\in\{0,\infty\}\Rightarrow m\in\{0,\infty\}$ (si $m\ge1$ entonces $I>0$, luego $I=\infty$, luego $m=\infty$ porque una suma finita de cuadrados acotados por $\tfrac14$ es finita). La dicotomía de energía **implica** D-109; el Teorema 175.2 subsume al Teorema 2.3 del D112 con la misma hipótesis.
 2. $\boxed{\ \mathrm{RH}\;\Longleftarrow\;\bigl(I(0^+)<\infty\bigr)\;\wedge\;\mathrm{LP\text{-}112}\ }$ — en efecto, bajo LP-112, $I\in\{0,\infty\}$; con $I<\infty$ queda $I=0$, i.e. no hay ceros off. Mejora **estricta** de la arquitectura $(m<\infty)\wedge$LP-112 de P44: $m<\infty\Rightarrow I<\infty$ trivialmente, y el recíproco falla ($b_j=1/j$ sobre alturas cualesquiera: $m=\infty$, $I=\pi^2/6-$tipo$<\infty$). La primera flecha (finitud) se debilita de un enunciado de **cardinal** a un enunciado de **momento ℓ²** — exactamente la cantidad sobre la que el programa tiene su único certificado incondicional de segundo orden (Teorema 170.5).
 
-**Honestidad sobre la novedad.** La prueba del Teorema 2.3 del D112 ya producía, bajo LP-112 completo, infinitos ceros off a distancia $<r$ de $\rho_0+i\tau_k$ — la cota $b\ge b_0-r$ estaba *implícita*. Lo nuevo de este documento es: (i) hacer explícito y cuantitativo que la réplica copia la abscisa (Lema 175.1(ii), tasa $\varepsilon^{1/m_0}$, multiplicidad incluida); (ii) que la conclusión correcta es sobre $I$, no sobre $m$, y que eso **debilita la primera flecha de la arquitectura** (Cor. 175.5.2 — este es el contenido estratégico); (iii) que LP-112⁻ también basta, lo que requiere la inducción de radios sumables del Cor. 175.4 (no trivial: sin sumabilidad la abscisa se fuga); (iv) el puente incondicional del §3, que es independiente de LP-112.
+**Franqueza sobre la novedad.** La prueba del Teorema 2.3 del D112 ya producía, bajo LP-112 completo, infinitos ceros off a distancia $<r$ de $\rho_0+i\tau_k$ — la cota $b\ge b_0-r$ estaba *implícita*. Lo nuevo de este documento es: (i) hacer explícito y cuantitativo que la réplica copia la abscisa (Lema 175.1(ii), tasa $\varepsilon^{1/m_0}$, multiplicidad incluida); (ii) que la conclusión correcta es sobre $I$, no sobre $m$, y que eso **debilita la primera flecha de la arquitectura** (Cor. 175.5.2 — este es el contenido estratégico); (iii) que LP-112⁻ también basta, lo que requiere la inducción de radios sumables del Cor. 175.4 (no trivial: sin sumabilidad la abscisa se fuga); (iv) el puente incondicional del §3, que es independiente de LP-112.
 
 ---
 
@@ -144,7 +144,7 @@ $$\#\mathcal Z(T)\;\le\;N\bigl(\tfrac12+\tfrac{b_0}2,\,T+\gamma_0+r\bigr)\qquad\
 
 ---
 
-## 4. Estado honesto de LP-112
+## 4. Estado franco de LP-112
 
 Resumen verificado contra Docs 112–113 y la literatura citada allí en fuente.
 

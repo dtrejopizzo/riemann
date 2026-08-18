@@ -68,7 +68,7 @@ breaking coercivity. So **coercivity $\Longleftarrow$ a uniform upper bound on c
 
 ---
 
-## 4. The reduction, and its honest status
+## 4. The reduction, and its candid status
 $$
 \boxed{\ \text{B-2 (the §6 prize: faithful semibounded Weil realization, RH-independent)}\ \Longleftarrow\ \text{no }\zeta\text{-zero gap exceeds the Nyquist length }\tfrac1d\ (d\to\tfrac12^+).\ }
 $$

@@ -19,7 +19,7 @@ El presente documento inaugura el estudio sistemático de $g^*$. Sus objetivos s
 4. **Formular** conjeturas sobre la unicidad y canonicidad de $g^*$.
 5. **Explorar** si $g^*$ da lugar a una nueva reformulación de RH.
 
-**Advertencia previa.** En todo este documento, la existencia de $g^*$ en $\overline{\mathcal{M}}$ se toma como hipótesis de trabajo (condición ND1 del Doc 95). Los resultados que dependen de esta hipótesis se marcan explícitamente con la etiqueta **(H-ND1)**. No se fabrica ninguna demostración de RH; los obstáculos se señalan con honestidad.
+**Advertencia previa.** En todo este documento, la existencia de $g^*$ en $\overline{\mathcal{M}}$ se toma como hipótesis de trabajo (condición ND1 del Doc 95). Los resultados que dependen de esta hipótesis se marcan explícitamente con la etiqueta **(H-ND1)**. No se fabrica ninguna demostración de RH; los obstáculos se señalan con franqueza.
 
 ---
 
@@ -510,7 +510,7 @@ Este documento ha desarrollado el análisis del minimizador sombra $g^*$, establ
 
 6. **Preguntas abiertas** (§8): se formulan nueve preguntas abiertas que delinean las direcciones de investigación más prometedoras.
 
-### 10.2. Los obstáculos honestos
+### 10.2. Los obstáculos francos
 
 Es necesario ser explícito sobre lo que este documento **no** ha demostrado:
 

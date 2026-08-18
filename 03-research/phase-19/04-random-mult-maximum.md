@@ -113,7 +113,7 @@ starting to dominate.
 
 ---
 
-## 4. Honest assessment
+## 4. Candid assessment
 
 **What was learned:**
 1. The maximum of the random B-smooth Dirichlet polynomial grows monotonically with B (with Σ1/p).
@@ -158,7 +158,7 @@ starting to dominate.
 - Step 4: Quenched maximum — monotone growth with B (Σ1/p), finite-N amplification ~3×,
   approach to Gumbel distribution.
 
-**The honest frontier:** the TRUE BRW freezing transition (the kink in the free energy at
+**The candid frontier:** the TRUE BRW freezing transition (the kink in the free energy at
 the glass-temperature q_c) requires N → ∞ in the restricted-sum / maximum experiment. It is
 visible in theory (Harper 2020, Arguin–BS–Harper–RS 2019) but not fully at the numerical
 scales accessible here. Camino 3 has documented the pre-asymptotic regime of every observable;

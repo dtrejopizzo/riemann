@@ -118,7 +118,7 @@ it.** $\;\;\checkmark$ for the localizers.
 which holds for all $g\in\mathcal S$ because $g\star\tilde g\in\mathcal S$ decays faster than any power of
 $\log n$. $\;\;\checkmark$
 
-**Conclusion (A.1, for the localizer class).** $g_j\in\mathrm{dom}(\mathfrak t)$, with the one honest
+**Conclusion (A.1, for the localizer class).** $g_j\in\mathrm{dom}(\mathfrak t)$, with the one candid
 correction that the natural domain is **Gaussian-localized Schwartz** (strip-analytic with rate
 $>\tfrac12$), not all of $\mathcal S$ — forced by the pole term. The localizers live there by
 construction. $\square$

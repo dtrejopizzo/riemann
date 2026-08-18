@@ -4,7 +4,7 @@
 **Fecha:** 2026-06-11
 **Mandato:** ejecutar el PIVOTE 176.P1 (mejorar $E(T)\ll T/\log T$ a $T/\log^2T$) por las dos rutas nombradas en Doc 176 §6.3 — densidad log-free cerca de $\sigma=\tfrac12$ y la representación integral 173.C/176.4 — o, si ninguna cierra, localizar EXACTAMENTE la pérdida y formular el enunciado mínimo residual de GAP-A. Calibrar además la cadena hacia abajo (¿LH compra algo?).
 **Prerrequisitos (no re-derivados):** [TEOREMA 173.C] (identidad de Green–Littlewood, Doc 173 §6.1); [TEOREMA 176.4] (forma promediada, el límite de Cesàro existe siempre y vale $\pi I(0^+)-\frac\pi8$); [TEOREMA 176.6] ($D(T)=\pi E(T)-\frac\pi8+O(\log T)$); [TEOREMA 176.7] (A ⟹ LH); [PROP 176.8] (layer-cake exacto y GAP-A); [PROP 176.9] (barrera de densidades exponenciales); Teorema 170.5 ($E(T)\ll T/\log T$, vía Selberg [S46]).
-**Contrato:** [TEOREMA]/[PROP]/[LEMA] solo con prueba completa; [GAP]/[GAP de literatura] declarados; sin numérica; honestidad total — una falsa victoria es peor que un fracaso declarado.
+**Contrato:** [TEOREMA]/[PROP]/[LEMA] solo con prueba completa; [GAP]/[GAP de literatura] declarados; sin numérica; franqueza total — una falsa victoria es peor que un fracaso declarado.
 
 **Coordenadas (idénticas a Docs 170/173/176).** $\rho=\tfrac12+b+i\gamma$, $b\in(0,\tfrac12)$, un representante por cuádruplo; $E(T)=\sum_{\gamma\le T}b^2$; **A** $\iff I(0^+)=\lim E(T)<\infty$; $N(\tfrac12+s,T)=\#\{\rho:\beta\ge\tfrac12+s,\,0<\gamma\le T\}$; $D(T)=\int_{1/2}^\infty\int_0^T\log|\zeta(\sigma+it)|\,dt\,d\sigma$. Layer-cake exacto ([PROP 176.8.a]): $E(T)=\int_0^{1/2}2s\,N(\tfrac12+s,T)\,ds$.
 

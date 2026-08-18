@@ -4,7 +4,7 @@
 **Fecha:** junio 2026  
 **Prerrequisitos:** Docs 39–54; conocimiento básico del programa de Langlands (Borel-Casselman)  
 **Naturaleza:** Generalización del funcional $C_\infty$ al marco de L-funciones automorfas. Identificación de casos donde $C_\infty^{(F)} \equiv 0$ está probado. Formulación del Problema de Transferencia Espectral (PTE).  
-**Honestidad:** El puente de Langlands es genuinamente nuevo en el contexto CCM. Sin embargo, el salto desde "$C_\infty^{(F)} = 0$ probado para $F \neq \zeta$" hasta "$C_\infty^{(\zeta)} = 0$" no está garantizado — se formulan las condiciones exactas para que el puente funcione.
+**Franqueza:** El puente de Langlands es genuinamente nuevo en el contexto CCM. Sin embargo, el salto desde "$C_\infty^{(F)} = 0$ probado para $F \neq \zeta$" hasta "$C_\infty^{(\zeta)} = 0$" no está garantizado — se formulan las condiciones exactas para que el puente funcione.
 
 ---
 

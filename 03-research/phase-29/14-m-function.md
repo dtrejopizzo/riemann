@@ -182,7 +182,7 @@ De lo anterior, el **único camino que veo hacia RH** desde el marco CCM actual 
 
 ---
 
-## 11. El ingrediente que falta (honestidad completa)
+## 11. El ingrediente que falta (franqueza completa)
 
 El Paso 2 requiere identificar los coeficientes límite $(a_n^\infty, b_n^\infty)$ explícitamente. Esto involucra:
 

@@ -67,7 +67,7 @@ The single open input is the \textbf{Hurwitz-safe convergence} $E_P\to\Xi$. What
 \emph{proved} to converge to $\Xi$ is the \emph{renormalized} determinant $\mathrm{ren\text{-}lim}\,D_P
 =\Xi$ (`CANONICAL-FOUNDATION.md` Stage 5), and a renormalized limit is \textbf{not} locally-uniform
 convergence: it divides out divergent factors ($\Tr K_P\sim\tfrac12(\log P)^2$), and that regularization
-\emph{can move zeros across $\mathbb R$}, breaking the Hurwitz hypothesis. \emph{Precise, honest
+\emph{can move zeros across $\mathbb R$}, breaking the Hurwitz hypothesis. \emph{Precise, candid
 breakpoint:} not "the limits decouple" (unproven, probably false), but \textbf{"only a renormalized
 limit is known; locally-uniform $E_P\to\Xi$ is open and is itself RH-strength."} The proof is neither
 dead nor complete: it is an exact reduction of RH to a \textbf{Hurwitz-safe convergence of the von
@@ -134,7 +134,7 @@ $H_{\mathrm{vM}}\ge0$. So positivity *does* reach the $\Xi$-side, as a **sign** 
 through $E_P$.
 
 \begin{auditbox}
-\textbf{Pre-audit (the honest fork).} What RH needs is not $\xi_K\ge0$ (sign) but $\xi_K$
+\textbf{Pre-audit (the candid fork).} What RH needs is not $\xi_K\ge0$ (sign) but $\xi_K$
 \textbf{monotone} (so $\varphi_\Xi=\pi\xi_K+\vartheta$ is monotone). Kreĭn positivity gives
 $\xi_K\ge0$ for free; monotonicity $\xi_K'\ge0$ is \emph{not} automatic from a positive perturbation —
 it is again the magnitude/derivative, where positivity (a sign) tends to be orthogonal
@@ -148,7 +148,7 @@ that arithmetic rigidity upgrades $\xi_K\ge0$ to $\xi_K'\ge0$ is the one thing n
 
 ---
 
-## §5. Honest status
+## §5. Candid status
 
 \textbf{Established (unconditional):}
 \begin{itemize}

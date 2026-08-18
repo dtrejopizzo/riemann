@@ -53,7 +53,7 @@ FALSA aquí**. La ruta "IV.1-res blando vía H1→TN" está **cerrada en falso**
 envelopes con `n` nodos):** de la estructura **diferencial de 2º orden (Sturm–Liouville)**
 del *operador de borde* que gobierna el bajo-espectro del frame a densidad crítica — el
 operador del *plunge* prolato / capa límite (cf. Nota IV.1★: "boundary-layer edge
-operator"). Sturm oscilación es teorema para ODEs de 2º orden, **no** requiere TN matricial. ## Estado honesto FINAL de IV.1 **Identificado (numérico sólido):** `Â_∞` = operador de **2º orden tipo Sturm–Liouville**
+operator"). Sturm oscilación es teorema para ODEs de 2º orden, **no** requiere TN matricial. ## Estado franco FINAL de IV.1 **Identificado (numérico sólido):** `Â_∞` = operador de **2º orden tipo Sturm–Liouville**
 (boundary-layer del frame crítico), carrier de borde `2πN/(2N+1)`, paridad alternante
 `(−1)^k`, fundamental nodeless (= H1), espectro `n²` (Weyl), coef. variables. NO TN-matriz,
 NO Dirichlet/Hermite/prolato-estándar. **Residual de IV.1 (no cerrado):**
@@ -82,7 +82,7 @@ identificaciones de coef. constante fallan **porque los coeficientes son variabl
 > (Conj 2b + asintótica). HARD, **análisis** (no RH-hard). **Lo que el chain necesita YA está cualitativo:** "2º orden ⟹ `n²` Weyl ⟹ `ε_1/ε_0→4`,
 `γ=3>0`". El `γ>0` se apoya en la naturaleza de 2º orden (paridad alternante + Weyl), que
 es robusta; la identificación EXACTA del operador (IV.1-res'') es refinamiento, no bloquea
-el `γ>0` cualitativo. **Veredicto IV.1 (honesto, metódico):** IV.1-res' **no cerrado**. Sub-atacado, se afinó a:
+el `γ>0` cualitativo. **Veredicto IV.1 (franco, metódico):** IV.1-res' **no cerrado**. Sub-atacado, se afinó a:
 (i) 2º orden SL **confirmado cualitativo** (paridad + n² + nodeless); (ii) coef. **variables**
 (todas las id. de coef. constante refutadas, con explicación); (iii) residual IV.1-res'' =
 pinear `(p,q,w)`, análisis puro. El `γ=3` para IV.1★ se sostiene en (i). El límite de

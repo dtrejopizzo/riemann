@@ -1,0 +1,106 @@
+\section{Proof of theorem \ref{theorem:1.1}}
+
+\begin{proof}
+We fix a positive number $T>0$.
+We consider the 2 series for $s\in\mathbb{C}$ such that $|\mathrm{Im}(s)|<T$
+\begin{equation*}
+    \begin{split}
+        \theta_{p}^{+}(t) &= V^{p}(t) e^{-sit}, \\
+        \theta_{p}^{-}(t) &= V^{p}(t) e^{sit}.
+    \end{split}
+\end{equation*}
+They play a role like a partition function.
+
+We take the Mellin transform for the series and define the following functions
+\begin{equation*}
+    \begin{split}
+        \xi_{p}^{+}(s,z) &= \frac{e^{\frac{\pi}{2}iz}}{\Gamma(z)} \int_{0}^{\infty}\theta_{p}^{+}(t)t^{z-1}dt,\\
+        \xi_{p}^{-}(s,z) &= \frac{e^{-\frac{\pi}{2}iz}}{\Gamma(z)}  \int_{0}^{\infty}\theta_{p}^{-}(t)t^{z-1}dt.
+    \end{split}
+\end{equation*}
+
+Since $V^{p}(t)$ is convergent, we have for $\mathrm{Re}(z) > 1$
+\begin{equation*}
+    \begin{split}
+        \xi_{p}^{+}(s,z) &= \sum_{\mathrm{Im}(\rho)>T}(s-\rho)^{-z}, \\
+        \xi_{p}^{-}(s,z) &= \sum_{\mathrm{Im}(\rho)<-T}(s-\rho)^{-z}.
+    \end{split}
+\end{equation*}
+
+Next, we consider
+\begin{equation*}
+    \begin{split}
+        \xi_{p}^{+}(s,z) &= \frac{e^{\frac{\pi}{2}iz}}{\Gamma(z)} \int_{0}^{\infty}\theta_{p}^{+}(t)t^{z-1}dt \\
+        &= \frac{e^{\frac{\pi}{2}iz}}{\Gamma(z)} \left( \int_{0}^{1}\theta_{p}^{+}(t)t^{z-1}dt + \int_{1}^{\infty}\theta_{p}^{+}(t)t^{z-1}dt \right), \\
+        \xi_{p}^{-}(s,z) &= \frac{e^{-\frac{\pi}{2}iz}}{\Gamma(z)} \int_{0}^{\infty}\theta_{p}^{-}(t)t^{z-1}dt \\
+        &= \frac{e^{-\frac{\pi}{2}iz}}{\Gamma(z)} \left( \int_{0}^{1}\theta_{p}^{-}(t)t^{z-1}dt + \int_{1}^{\infty}\theta_{p}^{-}(t)t^{z-1}dt \right).
+    \end{split}
+\end{equation*}
+Since $V^{p}(t)$ is of rapid decay at infinity, the second terms are convergent for any $z\in\mathbb{C}$.
+Hence we have
+\begin{equation*}
+    \begin{split}
+        \xi_{p}^{+}(s,z) &= \frac{e^{\frac{\pi}{2}iz}}{\Gamma(z)} \left( \int_{0}^{1}\theta_{p}^{+}(t)t^{z-1}dt + \int_{1}^{\infty}\theta_{p}^{+}(t)t^{z-1}dt \right) \\
+        &= \frac{e^{\frac{\pi}{2}iz}}{\Gamma(z)} \left ( \frac{a}{z-1} - \frac{asi + b_{0}}{z} - \frac{b_{0}si}{z+1} - \frac{c_{0}}{(z+1)^{2}} + \cdots \right) \\
+        &= \frac{ai}{z-1} + \eta_{p}^{+}(s,z),
+    \end{split}
+\end{equation*}
+where $\eta_{p}^{+}(s,z)$ is a meromorphic function of $(s,z)$ for $|\mathrm{Im}(s)|<T$ and $z\in\mathbb{C}$ and is regular at $z=0$.
+The meromorphic function $\eta_{p}^{+}(s,z)$ has only simple poles at $z=-2n-1$ $(n=0,1,2,\cdots)$. 
+% It follows that the series $\sum_{\mathrm{Im}(\rho)>T}(s-\rho)^{-z}$ has a meromorphic continuation to all of $\mathbb{C}$ and is regular at $z=0$.
+The same result holds for $\xi_{p}^{-}(s,z)$ by the same argument:
+\begin{equation*}
+    \xi_{p}^{-}(s,z) = \frac{-ai}{z-1} + \eta_{p}^{-}(s,z).
+\end{equation*}
+Note that $\eta_{p}^{-}(s,z)$ is meromorphic in $|\mathrm{Im}(s)|<T$ and $z\in\mathbb{C}$ and is regular at $z=0$.
+Since $\xi_{p}(s,z)$ differs from $\xi_{p}^{+}(s,z)+\xi_{p}^{-}(s,z)$ by the sum of the finite terms, we have that $\xi_{p}(s,z)$ is a meromorphic function for all $|\mathrm{Im}(s)|<T$ and all $z\in\mathbb{C}$ and is regular at $z=0$.
+\end{proof}
+
+
+
+% We fix a positive number $T>0$.
+% For $s\in\mathbb{C}$ such that $|\mathrm{Im}(s)|<T$, we divide the series $\xi_{p}$ into three parts as follows 
+% \begin{equation*}
+%     \begin{split}
+%         \xi_{p}^{+}(s,z)&=\sum_{\mathrm{Im}(\rho)>T}(s-\rho)^{-z},\\
+%         \xi_{p}^{-}(s,z)&=\sum_{\mathrm{Im}(\rho)<-T}(s-\rho)^{-z},\\
+%         \xi_{pi}^{0}(s,z)&=\sum_{-T\le\mathrm{Im}(\rho)\le{T}}(s-\rho)^{-z},
+%     \end{split}
+% \end{equation*}
+% where $\rho$ runs over the spectrum of $\Theta$ on $\bar{H}^{p}_{\mathcal{F}}(M)$.
+% Note that $\xi_{p}^{0}(s,z)$ is the summation of finite terms and is a rational function is meromorphic on the whole complex plane.
+
+% We define real valued-functions $\phi_{p}:[0,\infty)\rightarrow\mathbb{R}$ by
+% \begin{equation*}
+%     \phi_{p}(x)=
+%     \begin{cases}
+%     0 &\mathrm{for}\quad 0\le{x}<T\\
+%     \#\{\rho\in\mathrm{Sp}(\Theta_{p}) | T<\mathrm{Im}(\rho)\le{x} \} &\mathrm{for}\quad T\le{x}.
+%     \end{cases}
+% \end{equation*}
+% From the lemma (\ref{lem:5.3}), we have
+% \begin{equation*}
+%     \int_{0}^{\infty}e^{-tx}d\phi_{p}(x)=\sum_{\mathrm{Im}(\rho)>T}e^{-\mathrm{Im}(\rho)t}\overset{t\downarrow0}{\sim}{C}_{p}\cdot{t}^{-\alpha_{p}}.
+% \end{equation*}
+% It follows from the Hardy-Littlewood tauberian theorem that we have
+% \begin{equation*}
+%     \phi_{p}(x)\overset{x\uparrow{\infty}}{\sim}\frac{{C}_{p}\cdot{x}^{\alpha_{p}}}{\Gamma(\alpha_{p}+1)}.
+% \end{equation*}
+
+% Since a partial summation of $\xi_{p}^{+}(s,z)$ is bounded on $\mathrm{Re}(z)>0$ as follows
+% \begin{equation*}
+%     \sum_{x>\mathrm{Im}(\rho)>T}|(s-\rho)^{-z}|<\phi_{p}(x)(T+x)^{-\mathrm{Re}(z)},
+% \end{equation*}
+% % $ |(s-\rho_{i})^{-z}| < |Im(s-\rho_{i})^{-z}| $
+% % $ -T < Im(s) < T $
+% % $ -x < -Im(\rho_{i}) < -T $
+% % $ -T-x < Im(s-\rho_{i}) < 0 $
+% the series $\xi_{i}^{+}(s,z)$ is absolutely convergent on $\mathrm{Re}(z)>\alpha_{i}$.
+% By the same argument, we have that $\xi_{i}^{-}(s,z)$ is absolutely convergent on $\mathrm{Re}(z)>\alpha_{i}$.
+% %$ -T < Im(s) < T $
+% %$ T < -Im(\rho_{i}) < x $
+% %$ 0 < Im(s-\rho_{i}) < T+x $
+% Since $\xi_{i}(s,z)$ differs from $\xi_{i}^{+}(s,z)+\xi_{i}^{-}(s,z)$ by the sum of the finite terms, it is absolutely convergent on $\mathrm{Re}(z)>\alpha_{i}>0$. Therefore, the assertion (1) holds.
+
+% \Gamma(z)\{ (s-\rho) i \}^{-z}
+

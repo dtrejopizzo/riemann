@@ -1,0 +1,180 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\title{The strict arithmetic budget of the Witt return series (v109)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Fixed-depth asymptotics}
+
+Write $\Lambda_k=\Lambda^{*k}$ and, as in row (d), put
+\begin{equation}
+ V_{N,k}=\sum_{m\le N}\frac{\Lambda_k(m)^2}{m},
+ \qquad H_{N,k}=\frac{\Lambda_{2k}(N)}{\sqrt N}.                \tag{1}
+\end{equation}
+
+\begin{lemma}[Exact fixed-depth constant --- \PROVED]
+For every fixed integer $k\ge1$,
+\begin{equation}
+ \boxed{
+ \lim_{N\to\infty}\frac{V_{N,k}}{(\log N)^{2k}}
+       =\frac{k!}{(2k)!}.}                                    \tag{2}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The leading stratum consists of squarefree integers
+$m=p_1\cdots p_k$ with distinct primes.  On this stratum
+\[
+ \Lambda_k(m)=k!\prod_{j=1}^k\log p_j.
+\]
+The prime number theorem and partial summation give, for $0\le y\le1$,
+\begin{equation}
+ \frac1{(\log N)^2}\sum_{p\le N^y}\frac{(\log p)^2}{p}
+       \longrightarrow\frac{y^2}{2}.                          \tag{3}
+\end{equation}
+Thus the normalized prime measures converge to $y\,dy$.  Product-measure
+convergence on the simplex $y_1+\cdots+y_k\le1$, whose boundary has zero
+limit measure, gives
+\begin{align*}
+ &\frac{(k!)^2}{(\log N)^{2k}}
+ \sum_{p_1<\cdots<p_k\atop p_1\cdots p_k\le N}
+       \prod_{j=1}^k\frac{(\log p_j)^2}{p_j}\\
+ &\hspace{25mm}\longrightarrow
+ \frac{(k!)^2}{k!}
+ \int_{y_j\ge0,\,\sum y_j\le1}\prod_{j=1}^ky_j\,dy_1\cdots dy_k
+ =\frac{k!}{(2k)!}.                                           \tag{4}
+\end{align*}
+The factor $1/k!$ removes the ordering of the distinct primes, and the last
+integral is the Dirichlet simplex integral.
+
+It remains to remove the leading stratum.  Expanding the two copies of
+$\Lambda_k(m)$ classifies every remaining term by a common prime support.
+If a prime occurs with total exponent at least two, its summation contains
+$p^{-a}$ with $a\ge2$ and is convergent after any fixed logarithmic weight.
+Otherwise the support has at most $k-1$ freely growing primes.  Repeated
+use of (3) then gives $O_k((\log N)^{2k-2})$.  There are only finitely many
+exponent and incidence patterns for fixed $k$.  Hence the complement of
+the squarefree distinct-prime stratum is $o((\log N)^{2k})$, proving (2).
+\end{proof}
+
+\section{The complete all-depth budget}
+
+The uniform Witt-moment proposition in row (d) supplies, for a fixed
+$\varepsilon>0$, a summable majorant
+\begin{equation}
+ \frac{V_{N,k}}{(\log N)^{2k}}
+ \le C_\varepsilon\sqrt k\,e^{\varepsilon k}\frac{k!}{(2k)!}
+ \quad(1\le k\le\delta\log N),                                \tag{5}
+\end{equation}
+and says that the sum over $k\ge\delta\log N$ is $o(1)$.
+
+\begin{theorem}[Strict arithmetic return budget --- \PROVED]
+One has
+\begin{equation}
+ \boxed{
+ \lim_{N\to\infty}
+ \sum_{k\ge1}\frac{V_{N,k}+H_{N,k}}{(\log N)^{2k}}
+ =\sum_{k\ge1}\frac{k!}{(2k)!}
+ =\frac{\sqrt\pi}{2}e^{1/4}\operatorname{erf}\!\left(\frac12\right)
+ =0.5922965364\ldots<1.}                                      \tag{6}
+\end{equation}
+Consequently the asymptotic unused unit budget is
+\begin{equation}
+ 1-\frac{\sqrt\pi}{2}e^{1/4}\operatorname{erf}\!\left(\frac12\right)
+ =0.4077034635\ldots.                                         \tag{7}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Equations (2), (5), and the large-depth $o(1)$ estimate in row (d) allow
+dominated convergence in the $V$-series.
+
+For the boundary term, write $N=\prod_pp^{e_p}$.  An ordered
+$j$-factorization of $N$ into prime powers gives
+\begin{equation}
+ \Lambda_j(N)=j!\!\sum_{\sum r_p=j}
+ \prod_{p:r_p>0}
+ \frac{\binom{e_p-1}{r_p-1}}{r_p!}(\log p)^{r_p}.              \tag{8}
+\end{equation}
+Since $\binom{e-1}{r-1}\le e^r$, comparison term by term with the
+multinomial expansion of
+$(\sum_pe_p\log p)^j=(\log N)^j$ gives
+\begin{equation}
+                         0\le\Lambda_j(N)\le(\log N)^j.        \tag{9}
+\end{equation}
+Moreover $\Lambda_j(N)=0$ for $j>\Omega(N)\le\log N/\log2$.  Therefore
+\begin{equation}
+ 0\le\sum_{k\ge1}\frac{H_{N,k}}{(\log N)^{2k}}
+ \le\frac{\log N}{2\log2\,\sqrt N}\longrightarrow0.         \tag{10}
+\end{equation}
+This proves the first equality in (6).
+
+Finally, using $k!=\int_0^\infty e^{-t}t^kdt$ and then $t=u^2$,
+\begin{align*}
+ \sum_{k\ge1}\frac{k!}{(2k)!}
+ &=\int_0^\infty e^{-t}(\cosh\sqrt t-1)\,dt\\
+ &=\int_0^\infty e^{-u^2}\sinh u\,du
+ =\frac{\sqrt\pi}{2}e^{1/4}\operatorname{erf}\!\left(\frac12\right).
+\end{align*}
+The numerical enclosure displayed in (6) is separated from one by more
+than $0.4077$.  Independently of the decimal evaluation, if
+$a_k=k!/(2k)!$, then
+\[
+ \frac{a_{k+1}}{a_k}=\frac1{2(2k+1)}.
+\]
+Thus
+\[
+ \sum_{k\ge1}a_k
+ <\frac12+\frac1{12}+\frac{1/120}{1-1/14}<0.593<1,
+\]
+which proves the strict inequality using rational bounds only.
+\end{proof}
+
+\section{Interface with the physical Schur capacity}
+
+Theorem 2 strengthens the earlier statement ``all Witt depths are
+summable'': the complete normalized arithmetic return consumes strictly
+less than the unit budget, with an explicit limiting margin.  It does not
+by itself identify the physical return vector
+$D_0^{\dagger/2}(D_0h_e-q_e)$ with the coefficient model (1).  To turn
+(6) into the G40 shorted-capacity inequality one must prove the
+source-normalized comparison
+\begin{equation}
+ \bigl\|D_0^{\dagger/2}(D_0h_e-q_e)\bigr\|^2
+ \le
+ \sum_{k\ge1}\frac{V_{N,k}+H_{N,k}}{(\log N)^{2k}}\,\|e\|^2
+ +o(1)\|e\|^2,                                                \tag{11}
+\end{equation}
+uniformly at the threshold cells.  Equation (11) is a comparison between
+the physical Gamma--Tate return and the already constructed Witt word Gram;
+it is not implied by summability.  If (11) is derived from G39 with its
+fixed normalization, (6)--(7) give a strict large-threshold capacity
+margin; only finitely many remaining thresholds then require certified
+verification.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.56\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.19\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Fixed-depth asymptotic $V_{N,k}\sim\frac{k!}{(2k)!}\log^{2k}N$ & \PROVED & Lemma 1 \\
+Boundary series $H$ is $o(1)$ after normalization & \PROVED & (8)--(10) \\
+Strict total arithmetic budget $0.5922965\ldots<1$ & \PROVED & Theorem 2 \\
+Physical-to-Witt comparison (11) & \OPEN & Gamma--Tate/Witt interface \\
+G40, condition $G$, row (d) & \OPEN & follow after (11) and finite thresholds \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

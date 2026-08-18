@@ -1,6 +1,6 @@
 # Calibration of E112/E113 against the P52 harness — FAILED (findings do not transfer)
 
-**Date:** 2026-07-05. Essential honesty check before any P52 amendment (E113_RESULTS §caveat).
+**Date:** 2026-07-05. Essential candor check before any P52 amendment (E113_RESULTS §caveat).
 
 ## The test
 Compare the whitened prime operator's top eigenvalue vs N:

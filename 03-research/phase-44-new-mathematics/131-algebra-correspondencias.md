@@ -456,7 +456,7 @@ $W_{\sigma X}(f) = \overline{W_X(\tilde f)} = \overline{\sum_Z\widehat{\tilde f}
 = \overline{\sum_Z \overline{\hat f(1-\bar\rho)}} = \sum_{\sigma Z}\hat f(\rho)$;
 las cotas de densidad y banda se preservan. $\square$
 
-*(Declaración honesta: no afirmo unicidad puntual del multiconjunto $Z$ a partir del
+*(Declaración franca: no afirmo unicidad puntual del multiconjunto $Z$ a partir del
 funcional — la categoría **porta** el divisor como dato, no lo reconstruye; esa es
 exactamente la decisión de diseño que §7 discute contra el Doc 110.)*
 
@@ -706,7 +706,7 @@ esto. $\square$
 un bloque se transporte a una negatividad del funcional completo contra la marea
 positiva del resto del divisor — es la separación tipo "Hipótesis D" del programa
 (P35; Doc 96 Teorema 8.1): probada abajo para divisores de retícula (§6.5) y
-finitos; declarada como [PUENTE] en general. Esta honestidad importa en §6.6.)*
+finitos; declarada como [PUENTE] en general. Esta franqueza importa en §6.6.)*
 
 ### 6.2. Verificación 1: la función constante
 
@@ -855,7 +855,7 @@ bloque contra la marea on-line — el mismo enunciado tipo Hipótesis D que el
 programa declara para ζ; estatus: [PUENTE], no probado acá en general (probado
 arriba cuando el divisor es de retícula o finito).
 
-*Demostración.* (a) es Teorema 6.3 + [DATO]. (b) es la delimitación honesta de
+*Demostración.* (a) es Teorema 6.3 + [DATO]. (b) es la delimitación franca de
 §6.1. $\square$
 
 **La tensión que el encargo anticipaba, resuelta.** La pregunta era: "si tu Axioma H
@@ -921,7 +921,7 @@ Doc 108 §7.4 ("autonomía del valor ≠ autonomía de la inercia") se convierte
 *el valor vive en $\mathcal{A}rith$, la inercia en $\mathcal{A}rith^{EF}$, y RH es
 una propiedad del funtor $U$ restringido al punto ζ.*
 
-### 7.3. Qué redistribuye la categoría (balance honesto)
+### 7.3. Qué redistribuye la categoría (balance franco)
 
 **A favor (probado):** (i) H es **decidible** en subcategorías genuinas: divisores
 finitos (Teorema 4.4(c)), objetos de un primo (Teorema 6.7: pureza, un criterio

@@ -162,7 +162,7 @@ e^(alpha L)|<P_{Q,L}Pi_A,G_K>| <= L^B.
 
 E73.274--E73.276 do not supersede this.  They show that the APR source row
 does not create an additional residual slot by curvature or Loewner
-coordinate changes.  Thus the honest fork is:
+coordinate changes.  Thus the candid fork is:
 
 ```text
 either APR-U4 is reduced to the old three-dimensional cauchy0 quotient,

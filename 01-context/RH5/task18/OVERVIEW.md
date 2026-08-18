@@ -11,7 +11,7 @@ The validated checkpointing subprocess architecture works correctly and is empir
 7. Polled progress; after ~2642 s total wall time across both runs, 388 distinct new zeros were refined (aggregate rate 0.147 zeros/s across 8 cores).
 8. Merged the 1455 prior dps=80 zeros with the 388 newly refined ones, sorted by float value, deduplicated (TOL=1e-9), and saved `ldelta_zeros_N1843_dps80_partial.npy` (`dtype='<U81'`).
 9. Validated γ₁ against the LMFDB reference (full 81-character match).
-10. Did NOT execute the search-extension step (T from 2200 → 3100 via `lfunzeros`) because the missing `delta_shard_runner.py` script would have to be written and we ran out of compute budget; this is documented honestly rather than fabricated.
+10. Did NOT execute the search-extension step (T from 2200 → 3100 via `lfunzeros`) because the missing `delta_shard_runner.py` script would have to be written and we ran out of compute budget; this is documented candidly rather than fabricated.
 </methods> <results>
 - Final saved artifact: `ldelta_zeros_N1843_dps80_partial.npy`, shape (1843,), dtype `<U81`.
 - Contiguous dps=80 prefix (no index gaps): 1455 zeros — unchanged from the input because the cost-aware partition spread the 388 new refinements across [T≈1100, T≈2200].

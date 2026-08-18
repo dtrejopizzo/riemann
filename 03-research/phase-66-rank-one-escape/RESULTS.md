@@ -49,7 +49,7 @@ easy direction, with the off-line ⊥ pole orthogonality numerically confirmed),
 escape detector: ζ bounded / DH unbounded, robust), **D3** (precise identification face A = MW-2). These
 are criteria/mappings, not a proof. The escape theorem itself remains RH-strength (phase-64, unbroken).
 
-## Honest meta-note
+## Candid meta-note
 The escape theorem itself is RH (phase-64, all three faces). Phase 66 targets only the below-RH pieces:
 D1 easy direction (¬RH⟹unbounded, sharpness), D2 faithful detector, D3 large-sieve gap. Anything that
 turns into MW-1 (positivity) or MW-5 (arithmetic site, face B) is logged and dropped.

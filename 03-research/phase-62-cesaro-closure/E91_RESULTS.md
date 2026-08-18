@@ -32,7 +32,7 @@ Cesàro average can remove. This says the **analytic target is correct**: prove
 `(1/Λ) Σ_{λ≤Λ} b_osc(λ) → 0` for ζ, where `b_osc` is the zero-sum part of the explicit formula
 and the bound uses only the unconditional count `N(T) ~ (T/2π)log T`.
 
-**Honesty:** this is evidence, not proof. The oscillation is consistent with the prime/zero echo
+**Candor:** this is evidence, not proof. The oscillation is consistent with the prime/zero echo
 in the band `L = 2 log λ`, but E91 does not yet *identify* `b_osc` with the zero-sum term — that
 identification (applying the explicit formula to the Doob-conjugated kernel) is the open analytic
 step, written up in [C1-ANALYSIS.md](C1-ANALYSIS.md). DH refutes any shortcut.

@@ -1,0 +1,30 @@
+\section{Dynamical zeta function on RFDS\texorpdfstring{$^{3}$}{3}}
+
+Let $(M,\mathcal{F},\phi,g_{\mathcal{F}})$ be the foliated dynamical system with a bundle-like metric which we discussed above.
+We define the dynamical zeta function for a $\mathrm{RFDS}^{3}$ by the analytic continuation of the infinite product
+\begin{equation*}
+  \zeta_{\mathcal{F}}(s)=\prod_{\gamma}(1-e^{-s\cdot l(\gamma)})^{-\epsilon_{\gamma}},
+\end{equation*}
+where $\gamma$ runs over periodic orbits of $\phi$ and  $l(\gamma)$ is the length of $\gamma$. 
+Here, $\epsilon_{\gamma}$ is the index of a closed orbit.
+
+
+    \subsection{Index of a closed orbit}
+    For a closed orbit $\gamma$ of $\phi$, we set an index
+    \begin{equation*}
+        \epsilon_{\gamma}:=\mathrm{sgn}\,\det(1-T_{x}\phi^{l(\gamma)}|T_{x}\mathcal{F})\quad\mathrm{for}\,{x}\in\gamma,
+    \end{equation*}
+    where $T_{x}\phi^{t}:T_{x}\mathcal{F}\rightarrow{T_{\phi^{t}(x)}\mathcal{F}}$ is the differential of $\phi^{t}$.
+    It does not depend on the choice of the point $x\in\gamma$.
+    We call a closed orbit $\gamma$ \textbf{non-degenerate} in a sense that $\epsilon_{\gamma}$ is non-zero.
+    
+    
+    \subsection{Absolute convergent condition}
+    It is known that the infinite product converges absolutely on $\mathrm{Re}(s)>h(\phi)$ where $h(\phi)$ is \textbf{topological entropy} and only if it is finite. 
+    Note that  the topological entropy $h(\phi)$ is defined by
+    \begin{equation*}
+        h(\phi):=\lim_{T\rightarrow+\infty}\frac{1}{T}\log{N(T)}\ge0,
+    \end{equation*}
+    where  $N(T)$ denotes the cardinality of orbits whose length is less than or equal to $T$, i.e. $N(T)=\mathrm{Card}\{\gamma|l(\gamma)\le{T}\}$. 
+    We assume that the topological entropy $h(\phi)$ of a foliated dynamical system  $(M,\mathcal{F},\phi)$ is finite so that $\zeta(s)$ converges absolutely on the right-half plane.
+    

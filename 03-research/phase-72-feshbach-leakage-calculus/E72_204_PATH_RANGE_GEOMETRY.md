@@ -83,7 +83,7 @@ partial displacements and on finite-section diffraction, not only on the final p
 
 ## Consequence
 
-The next closed theorem should not be stated as a scalar displacement kernel. The honest target is a
+The next closed theorem should not be stated as a scalar displacement kernel. The candid target is a
 path-sensitive group-algebra inequality:
 
 ```text

@@ -1,0 +1,2977 @@
+{
+  "statement": "E79.71 local robustness around the E79.70 sign pattern",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_70_linear_penalized_matching_rule_results.json",
+  "base_coefficients": {
+    "mismatch": 1.0,
+    "cardinality": -1.0,
+    "span": 0.78,
+    "gaps": -0.64,
+    "start": 0.36
+  },
+  "target_sign_pattern": {
+    "cardinality": -1,
+    "span": 1,
+    "gaps": -1,
+    "start": 1
+  },
+  "grid_summary": {
+    "total_points": 12870,
+    "exact_5_of_5_points": 418,
+    "sign_preserving_points": 12870,
+    "sign_preserving_exact_5_of_5_points": 418
+  },
+  "examples_exact": [
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.2,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 0.95,
+        "gaps": -0.8,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.9,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.9,
+        "gaps": -0.75,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.85,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.8,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.8,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.75,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.75,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.75,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.9,
+        "start": 0.2
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.2
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.2
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.75,
+        "start": 0.2
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.75,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.75,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.75,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    }
+  ],
+  "top_configs": [
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.2,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 0.95,
+        "gaps": -0.8,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.9,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.15,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.9,
+        "gaps": -0.75,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.85,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.8,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.8,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.75,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.75,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 0.95,
+        "gaps": -0.75,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.9,
+        "start": 0.2
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.2
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.85,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.2
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.8,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.75,
+        "start": 0.2
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.75,
+        "start": 0.25
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.75,
+        "start": 0.3
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    },
+    {
+      "coefficients": {
+        "mismatch": 1.0,
+        "cardinality": -1.1,
+        "span": 1.0,
+        "gaps": -0.75,
+        "start": 0.35
+      },
+      "sign_pattern": {
+        "cardinality": -1,
+        "span": 1,
+        "gaps": -1,
+        "start": 1
+      },
+      "sign_preserving": true,
+      "exact_match_count": 5,
+      "picks": {
+        "8": {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "exact": true
+        },
+        "10": {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "exact": true
+        },
+        "12": {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "exact": true
+        },
+        "14": {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "exact": true
+        },
+        "16": {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "exact": true
+        }
+      }
+    }
+  ]
+}

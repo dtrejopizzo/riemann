@@ -106,7 +106,7 @@ ACC would itself be the structural classification the audit asked for; it is not
 - It **subsumes** Hilbert–Pólya (the structure $=$ a self-adjoint spectral measure, singular on the real axis $=$
   the center) and Weil positivity (the structure $=$ the explicit-formula functional, anchored at the center by
   the functional equation) as **two concrete proposals for the same object**.
-- **Honest caveats (no repeat of N8's over-reach):** (i) Q(anchor) **may** turn out RH-equivalent — Hilbert–Pólya
+- **Candid caveats (no repeat of N8's over-reach):** (i) Q(anchor) **may** turn out RH-equivalent — Hilbert–Pólya
   and Weil are this question, and both are open at exactly the point where the center-anchor must be *forced*
   rather than *assumed*; I do **not** claim it is more elementary than RH. (ii) ACC is a **conjecture**; "every
   absence proof needs an anchor" is supported by all known cases but unproven. What *is* established is the ζ-free
@@ -124,11 +124,11 @@ ACC would itself be the structural classification the audit asked for; it is not
 3. **Attack Q(anchor) as a construction problem:** search for *any* positive structure with a forced (Landau-type)
    real singularity at $\sigma=\tfrac12$ — including non-arithmetic toy models (a positive measure engineered to
    have abscissa $\tfrac12$ relative to the relevant symmetry) to learn what *obstructs* a center-anchor. The
-   obstruction itself, if one is found, is the next honest wall — and it will be a wall about *positive structures
+   obstruction itself, if one is found, is the next candid wall — and it will be a wall about *positive structures
    and their singularities*, not about cancellation.
 
-**Assessment, honestly.** Are we "close"? The **framework** is real, ζ-free, and new as an organizing object, and
+**Assessment, candidly.** Are we "close"? The **framework** is real, ζ-free, and new as an organizing object, and
 it converts RH into a sharply posed construction problem that the audits did **not** collapse. Whether the
 construction *exists* is exactly Hilbert–Pólya/Weil and may be RH-hard — so I will not claim a short path to RH.
 But the audit's own criterion is met: this is a direction that looks at the zeros' absence mechanism itself, is
-not a reformulation-via-cancellation, and has not been disposed of. That is the boldest *honest* step available.
+not a reformulation-via-cancellation, and has not been disposed of. That is the boldest *candid* step available.

@@ -47,7 +47,7 @@ This is a Toeplitz/Szego statement, in a domain with rigorous machinery: symbol 
 factorization, Fisher-Hartwig, Borodin-Okounkov, Szego limit theorems. The pivotal q-trace forcing
 becomes a SYMBOL INTEGRAL: the pivotal-weighted negative part of `sigma_A - sigma_P` must vanish.
 
-## Honest status
+## Candid status
 
 - This is still equivalent to RH (the symbol is computed via zeta; proving positivity = RH). It is a
   reformulation, not yet a reduction to something easier.

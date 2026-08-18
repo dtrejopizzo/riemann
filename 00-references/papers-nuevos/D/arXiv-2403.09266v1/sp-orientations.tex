@@ -1,0 +1,1411 @@
+\subsection{Recollections on FTL}
+
+\begin{num}\label{num:multi-valued} \textit{Multi-valued series}.--
+Formal ternary laws were introduced by Walter in an unpublished work,
+ and then formally developped in \cite{DF3}. More recently, we further expanded the theory
+ in \cite{CDFH}, introducing in particular a slightly more accurate framework that we now briefly recall,
+ referring the reader to \cite[\textsection 1]{CDFH} for more details. 
+
+ Let $R$ be a (commutative) ring. Given a pair of integers $(n,d) \in \ZZ^2$, $\ux=(x_1,...,x_d)$ a $d$-tuple of integers,
+ an $n$-valued $d$-dimensional series, $(n,d)$-series for short,
+ with coefficients in $R$ will be an element 
+$$
+F_t(\ux)=1+F_1(\ux)t+\hdots+F_n(\ux)t^n
+$$
+in $R[[\ux]][t]$, polynomial in $t$ of degree $n$.
+ These $(n,d)$-series form an $R$-module $\MForm_{n,d}(R)$.
+ We will use a \emph{$\ZZ$-filtration} on $\MForm_{n,d}(R)$ by assigning to the variables $x_i$ degree $+1$
+ and to the variable $t$ degree $-1$. Therefore, an $(n,d)$-series has valuation greater or equal to $(-n)$
+ and can have infinite degree.
+
+One can define a generalized composition on these $(*,*)$-series
+ (see \cite[Def. 2.1.13]{CDFH} for more details).
+ Let $G_t(\uy)$ be an $(m,r)$-series. We say that $G_t(\uy)$ is \emph{composable}
+ if $G_t(\underline 0)=1$. We then introduce formal variables $(G^{[1]},\hdots,G^{[m]})$,
+ called the \emph{roots} of $G_t(\uy)$, satisfying the formal identity
+\begin{equation}\label{eq:roots}
+G_t(\uy)=\prod_{l=1}^m (1+G^{[l]}t).
+\end{equation}
+In other words, the coefficients of $G_t(\uy)$ are given by the elementary symmetric functions
+ in the variables $G^{[l]}$.
+
+Then we define the \emph{substitution of $G_t(\uy)$ in $F_t(\ux)$ at the variable $x_i$}
+ as the $(nm,d+r-1)$-series in the variables $(x_1,\hdots,\cancel{x_i},\hdots,x_d,y_1,\hdots,y_r)$
+ by the following equality:
+$$
+F_t\big(x_1,...,x_{i-1},G_t(\uy),x_{i+1},...,x_d\big)
+ :=\prod_{l=1}^m F_t\big(x_1,...,x_{i-1},G^{[l]},x_{i+1},...,x_d\big).
+$$
+More precisely, the expression on the right is obviously symmetric in the variables $G^{[l]}$.
+ Thus it can be expressed as a polynomial in the elementary symmetric polynomials $e_s$ in the
+ $G^{[l]}$, and we can therefore substitute to the $e_s$ the actual coefficients of the
+ polynomial $G_t(\uy)$, following the rule \eqref{eq:roots}.
+
+The following algebraic notion is an analog of formal group laws,
+ especially relevant in motivic homotopy theory (see also \cite[Def. 3.1.5]{CDFH}).
+\end{num}
+\begin{df}\label{df:FTL}
+Let $R$ be a $\ZZe$-algebra.
+A \emph{formal ternary law}, FTL for short,
+ with coefficients in $R$ is a $(4,3)$-series with coefficients in $R$
+$$
+F_t(\ux)=1+F_1(x,y,z)t+F_2(x,y,z)t^2+F_3(x,y,z)t^3+F_4(x,y,z)t^4
+$$
+satisfying the following properties:
+\begin{enumerate}
+\item \textit{Neutral element}. The $(4,1)$-series $F_t(x,0,0)$ is split
+with roots $x$ and $-\epsilon x$ each with multiplicity $2$,
+ \emph{i.e.} $F_t(x,0,0)=(1+xt)^2(1-\epsilon xt)^2$.
+\item \textit{Semi-neutral element}. The following relation holds:
+$$
+F_4(x,x,0)=0.
+$$
+\item \textit{Symmetry}. The element $F_t(x,y,z)$ of $R[[x,y,z]][t]$ is fixed
+ under the action of the group $\mathfrak S(x,y,z)$ permuting the formal variables.
+\item \textit{Associativity}. Given formal variables $(x,y,z,u,v)$,
+ one has the following equality of $(16,5)$-series:
+$$
+F_t\big(F_t(x,y,z),u,v\big)=F_t\big(x,F_t(y,z,u),v\big)
+$$
+where we have used the above substitution operation as $F_t(x,y,z)$ is composable by property (1).
+\item \textit{$\epsilon$-Linearity}. One has the following relation in $\MForm_{4,3}(R)$:
+$$
+F_t(-\epsilon x,y,z)=F_{-\epsilon t}(x,y,z).
+$$
+\end{enumerate}
+We frequently display an FTL by its coefficients:
+\begin{equation}\label{eq:generitc_FTL}
+F_t(x,y,z)=1+\sum_{i,j,k\geq 0, 1 \leq l \leq 4} a_{ijk}^lx^iy^jz^kt^l.
+\end{equation}
+Then, according to the above paragraph, the \emph{degree} of $F_t(\ux)$ is the integer
+$$
+d=\max \{i+j+k-l \mid a_{ijk}^l \neq 0\}.
+$$
+\end{df}
+
+\begin{rem} Most of the above axioms are easy to translate in terms of coefficients.
+ Using the notation \eqref{eq:generitc_FTL}, one obtains the following translations:
+\begin{enumerate}
+\item \textit{Neutral element}:
+ $a_{i00}^l=\begin{cases}
+1 & i=l=4, \\
+2(1-\epsilon) & i=l=1,3, \\
+2(1-2\epsilon) & i=l=2, \\
+0 & \text{otherwise.}
+\end{cases}$
+\item \textit{Semi-neutral element}: For all $n \geq 0$, $\sum_{i+j=n} a^4_{ij0}=0$.
+\item \textit{Symmetry}: for all $l$, $a_{ijk}^l$ is invariant under permutations of the triple $(i,j,k)$.
+\item[(5)] \textit{$\epsilon$-Linearity}. The relation $(1+\epsilon)a_{ijk}^l=0$ holds
+ whenever $l$ and one of the $i,j,k$ do not have the same parity.
+\end{enumerate}
+The associativity axiom is computationaly very involved and we refer the reader to \cite[Appendix]{CDFH}
+ for a computer-based calculation.
+\end{rem}
+
+\begin{ex}\label{ex:FTP_low_complexity}
+ The following FTL are examples with bounded degree. As such, they are respective analogues
+ of the additive and multiplicative formal group laws (FGL for short).
+\begin{enumerate}
+\item We have an FTL of \emph{degree $0$} with coefficients in $\ZZe$ whose non-zero coefficients are:
+$$
+\begin{array}{llll}
+a^1_{100}=2(1-\epsilon) & & & \\
+a^2_{200}=2(1-2\epsilon) & a^2_{110}=2(1-\epsilon) & & \\
+a^3_{300}=2(1-\epsilon) & a^3_{210}=-2(1-\epsilon) & a^3_{111}=8(2-3\epsilon) & \\
+a^4_{400}=1 & a^4_{310}=-2(1-\epsilon) & a^4_{220}=2(1-2\epsilon) & a^4_{211}=2(1-\epsilon).
+\end{array}
+$$
+After inverting $2$, this is one of the two universal FTL of degree $0$, and even $\leq 0$: see \cite[Th. 3.1.12]{CDFH}.
+ The other FTL of degree $0$ is given by the same coefficients except that $a^3_{111}=8(3-2\epsilon)$.
+ Note that the universality statement tells us that these coefficients will appear in any FTL.
+\item We have an FTL of \emph{degree $2$}, having parameters $\tau$ and $\gamma$,
+ \emph{i.e.} with coefficients in the polynomial ring
+ $\ZZe^{mul}:=\ZZe[\tau,\gamma^{\pm 1}]/\langle \tau^2-2(1-\epsilon)\gamma, (1+\epsilon)\tau\rangle$,
+ whose non-zero coefficients are, in addition to the ones appearing in the preceding law:
+$$
+\begin{array}{llll}
+a^1_{110}=\tau\gamma^{-1} & a^1_{111}=\gamma^{-1} & & \\
+a^2_{210}=2\tau\gamma^{-1} & a^2_{111}=-3\tau\gamma^{-1} & a^2_{220}=\gamma^{-1} & \\
+a^3_{310}=\tau\gamma^{-1} & a^2_{220}=-2\tau\gamma^{-1} & a^3_{211}=3\tau\gamma^{-1} & a^3_{220}=\gamma^{-1} \\
+a^4_{311}=-\tau\gamma^{-1} & a^4_{221}=2\tau\gamma^{-1} & a^4_{222}=\gamma^{-1}. &
+\end{array}
+$$
+\end{enumerate}
+See \cite[Theorem 6.6]{FH21} for more details. Note that these two FTL have no non-trivial coefficients in degrees less than $0$.
+\end{ex}
+
+By analogy with the case of formal group laws as underlined above,
+ we will adopt the following definition.
+\begin{df}\label{df:addmulFTL}
+The FTL with coefficients in $\ZZe$ (resp. $\ZZe^{mul}$) of point (1) of the above example
+ will be called the \emph{additive} (resp. \emph{multiplicative}) FTL
+ and denoted by $F_t^{add}$ (resp. $F_t^{mul}$).
+
+We will use the same terminology for any FTL obtained by extension of scalars
+ from the two previous ones.
+\end{df}
+
+\begin{num}
+As for FGL, FTL can be organized in a category.
+ First note that if $F_t(x,y,z)$ is an FTL with coefficients $a_{ijk}^l$ in a ring $R$,
+ and $\varphi:R \rightarrow R'$ is a morphism of rings,
+ one obviously obtains a new FTL with coefficients in $R'$ by applying $\varphi$ to all
+ coefficients of $F_t(x,y,z)$. We will denote this new FTL by
+$$
+\varphi_*F_t(x,y,z):=1+\sum_{i,j,k\geq 0, 1 \leq l \leq 4} \varphi(a_{ijk}^l)x^iy^jz^kt^l.
+$$
+\end{num}
+\begin{df}\label{df:morph_FTL}
+Let $F_t(x,y,z)$ and $G_t(x,y,z)$ be FTL with coefficients respectively
+ in $\ZZe$-algebras $R$ and $R'$. A morphism from $F_t(x,y,z)$ to $G_t(x,y,z)$ is pair $(\varphi,\Theta)$ where $\varphi:R \rightarrow R'$
+ is a morphism of $\ZZe$-algebras,
+ $\Theta \in R[[x]]$ is a composable power series such that
+ the following equality of $(4,3)$-series holds:
+$$
+\Theta_t\big(\varphi_*F_t(x,y,z)\big)=G_t\big(\Theta_t(x),\Theta_t(y),\Theta_t(y)\big),
+$$
+where $\Theta_t(x)=1+\Theta(x).t$ as a $(1,1)$-series.
+ Note that the two terms of this equality are well defined,
+ using the substitution operation of \Cref{num:multi-valued},
+ as both $\Theta_t(x)$ and $F_t(x,y,z)$ are composable. Explicitly, the above equality reads as
+ \[
+ \prod_{i=1}^4(1+\Theta(F^{[i]})t)=G_t\big(\Theta_t(x),\Theta_t(y),\Theta_t(y)\big).
+ \]
+
+The composition of these morphisms are defined by composition of rings for $\varphi$,
+ and by composition of power series for $\Theta(x)$.
+ Therefore an isomorphism of FTL is a pair $(\varphi,\Theta)$ such that $\varphi$ is an isomorphism
+ of $\ZZe$-algebras, and $\Theta$ is an invertible power series.
+ Such an isomorphism will be called \emph{strict} if $\theta(x)=x+\sum_{i\geq 2}a_ix^i$.
+
+The corresponding category will be denoted by $\FTL$.
+\end{df}
+
+\begin{rem}
+The category $\FTL$ is a $\ZZe$-linear category, cofibred over the category of $\ZZe$-algebras.
+In particular, any morphism $(\varphi,\Theta)$ of FTL can be factorised as
+ $(\varphi,\Theta)=(\Id,\Theta)\circ (\varphi,\Id)$.
+We can then restrict to the case where FTL have the same coefficient ring.
+\end{rem}
+
+\begin{ex}
+The \emph{$\epsilon$-linearity axiom} for an FTL $F_t(x,y,z)$ with coefficients in $R$ 
+ can be translated by saying that the series $\Theta(x)=-\epsilon.x$, seen as a power series
+ with coefficients in $R$,
+ induces an automorphism $(\Id_R,\Theta(x))$ of $F_t(x,y,z)$.
+\end{ex}
+
+\begin{num}
+Let us briefly recall the discussion of \cite[3.1.1]{CDFH}.
+ We define the plus and minus parts of $\ZZe$ as the quotient
+ rings $\ZZep=\ZZe/(1+\epsilon)$, $\ZZem=\ZZe/(1-\epsilon)$.
+ There is an injective map $\ZZe \rightarrow \ZZep \times \ZZem$
+ which is an isomorphism after inverting $2$.
+ The same definition applies to an arbitrary $\ZZe$-algebra $R$,
+ and $R \rightarrow R^+ \times R^-$ is injective if $R/\ZZe$ is flat
+ and bijective if $2 \in R^\times$.
+
+Consequently, given any FTL $(R,\F_t(x,y,z))$,
+ one defines its plus and minus parts by base change 
+ respectively to $R^+/R$ and $R^-/R$.
+ Equivalently, the FTLs $\big(R^+,F_t^+(x,y,z)\big)$ and $\big(R^-,F_t^-(x,y,z)\big)$
+ are respectively obtained by specializing the symbol $\epsilon$ to $(-1)$ and $(+1)$.
+\end{num}
+
+\begin{ex}
+The minus part of the additive formal group law can be written explicitly:
+$$
+F_t^{add-}(x,y,z)=1-2x^2.t^2-8xyz.t^3+(x^4-2x^2y^2).t^4.
+$$
+\end{ex}
+
+
+\subsection{$\Sp$-oriented theories}\label{sec:sp_orientaiton}
+
+\begin{num}\label{num:sp-grassmanian}
+In this section, we recall the links between $\Sp$-oriented ring spectra and symplectic cobordism, following Panin and Walter.
+
+We first start with the construction of symplectic cobordism.
+ Recall that Voevodsky introduced in \cite{VoeMilnor} the algebraic cobordism spectrum $\MGL_S$
+ over a base scheme $S$, as the algebraic analogue of complex cobordism.
+ As in the classical algebraic topological case,
+ it is defined as the colimits of the Thom spaces of the universal rank $n$ vector bundle
+ $\gamma_n$ on the grassmanian scheme $\Gr_n$ of $n$-vector subspaces of the infinite dimension affine
+ space:
+$$
+\MGL_S=\colim_{n>0} \Omega^n \Th(\gamma_n).
+$$
+This is a (commutative) ring spectrum, in the strict sense
+ (see \cite{PPR} for the construction in terms of symmetric spectra,
+ and \cite[\textsection 16]{BH} for that in terms of monoidal $\infty$-categories).
+ Recall lastly that thanks to a theorem of Morel and Voevodsky,
+ $\Gr_n$ is weakly equivalent in the $\AA^1$-homotopy category to the classifying space $\BGL_n$
+ of the general linear group $\GL_n$.
+
+Panin and Walter introduced in \cite{PWcobord} the analogous construction
+ by replacing the family $\GL_n$ by that of the symplectic group $\Sp_{2n}$,
+ following again classical algebraic topology. The main difference is that
+ one naturally produces a $(\PP^1)^{\wedge 2}$-spectrum.
+
+First, the classifying space $\BSp_{2n}$ also admits a geometrical model,
+ the hyperbolic (or ``quaternionic'') Grassmannian.
+ To fix notations, we consider the standard symplectic form $h$ on $\AA^2_S$,
+ and denote by $\omega_2$ the corresponding symplectic bundle.
+ We also set $\omega_{2n}=\omega_{2n-2}\perp \omega_2$ for any $n\geq 2$.
+ For any integer $0\leq r\leq n$, we can consider the \emph{hyperbolic Grassmannian} $\HGr_S(2r,\omega_{2n})$ defined to be the open subscheme of the Grassmannian $\Gr_S(2r,2n)$ of $2r$-subvector bundles of $\AA^{2n}$
+ on which the restriction of $\omega_{2n}$ is non degenerate.
+ It satisfies the following compatibilities:
+\begin{enumerate}
+\item We have a canonical embedding $\HGr_S(2r,\omega_{2n})\to \HGr_S(2r,\omega_{2n+2})$
+ which classifies flags of vector bundles of the form $U_{2r}\subset p^*\omega_{2n}\subset  p^*\omega_{2n+2}$.
+\item We have a canonical embedding $\HGr_S(2r,\omega_{2n})\to \HGr_S(2r+2,\omega_{2n+2})$ which classifies flags of vector bundles
+ $U_{2r}\perp p^*\omega_2\subset p^*\omega_{2n}\perp p^*\omega_{2}$.
+\end{enumerate}
+
+Then we get an $\AA^1$-weak equivalence of pointed spaces:
+$$
+\BSp_{2r}=\colim_{n>0} \HGr_S(2r,\omega_{2n}).
+$$
+We also consider the \emph{hyperbolic projective space} $\HP^n_S=\HGr_S(2,\omega_{2n+2})$,
+ of dimension $2n$ over $S$, and $\HP^\infty_S=\colim_{n>0} \HGr_S(2,\omega_{2n+2})$,
+ so that $\HP^\infty_S=\BSp_2$. Note that $\HP^1_S \simeq (\PP^1)^{\wedge 2}$, the two-fold smash-power
+ of the Tate sphere.
+
+We then define $\MSp_{2n}=\Th(\cU_{2n})$, as a space over $S$,
+ $\cU_{2r}$ being the tautological symplectic bundle on $\BSp_{2n}$.
+ The second of the above properties allows to define $(\PP^1)^{\wedge 2}$-suspension maps as follows.
+ The embedding $f:\HGr_S(2n,\omega_{2n})\to \HGr_S(2n+2,\omega_{2n+2})$ yields a bundle of rank $2n+2$ on the first factor,
+ namely $f^*\cU_{2n+2}$ which splits as $f^*\cU_{2n+2}\simeq \cU_{2n}\oplus \omega_2$.
+ We obtain a morphism of Thom spaces
+\[
+\Th(\cU_{2n})\wedge th(\omega_2)\simeq \Th(\cU_{2n}\oplus \omega_2)\simeq \Th(f^*\cU_{2n+2})\to \Th(\cU_{2n+2})
+\]
+which is compatible with the inclusions of item 1. This yields the desired suspension maps:
+\[
+\sigma_{2n}:(\PP^1)^{\wedge 2} \wedge \MSp_{2n} \simeq \Th(\omega_2)\wedge \MSp_{2n}\to \MSp_{2n+2},
+\]
+and therefore a $(\PP^1)^{\wedge 2}$-spectrum, which in $\infty$-categorical terms can be defined as:
+\begin{equation}\label{eq:MSp_as_colim}
+\MSp_S=\colim_{r>0} \Omega^{2n} \MSp_{2n}.
+\end{equation}
+To get the ring structure, one considers the rank $2(n+m)$ symplectic bundle
+ $\cU_{2n} \boxplus \cU_{2m}$ over $\BSp_{2n} \times_S \BSp_{2m}$,
+ obtained by exterior sum. It is classified by a map
+ $$f:\BSp_{2n} \times_S \BSp_{2m} \rightarrow \BSp_{2(n+m)}$$ such that
+ $f^{-1}(\cU_{2(n+m)})=\cU_{2n} \boxplus \cU_{2m}$. Taking Thom spaces, one deduces:
+$$
+\Th(\cU_{2n}) \otimes \Th(\cU_{2m})
+ \simeq \Th(\cU_{2n} \boxplus \cU_{2m}) \xrightarrow{f'_*} \Th(\cU_{2(n+m)})
+$$
+as required. This gives a (commutative) ring structure on the spectrum $\MSp_S$,
+ which can be lifted to a strict ring structure at the level of symmetric $(\PP^1)^{\wedge 2}$-spectra
+ according to \cite{PWcobord}.\footnote{For a more conceptual construction
+ of the corresponding $E_\infty$-ring structure, we refer the reader to \cite[\textsection 16]{BH}.
+ However, in this paper, we will only need the (commutative) monoid structure in $\SH(S)$
+ on $\MSp_S$.}
+\end{num}
+\begin{df}
+The ring spectrum $\MSp_S$ is called the symplectic cobordism spectrum over $S$.
+\end{df}
+
+\begin{num}\label{num:symplectic_Thom_Grass_Euler}
+ \textit{Thom classes for symplectic cobordism}.
+As in topology, the previous ring spectrum is built to possess ``symplectic Thom classes''.
+ First note that the identity of $\MSp_{2r}$ corresponds by construction of $\MSp_S$
+ to a map:
+\[
+\tau_r:\Sigma^{\infty}\MSp_{2r}\to \MSp(2r)[4r],
+\]
+or in other words, an element $\tau_r \in \tilde \MSp^{4r,2r}(\MSp_{2r})$
+ in the reduced symplectic cobordism.
+ Let $X$ be a smooth $S$-scheme which is affine.
+ Then a symplectic bundle $\cE$ of rank $2r$ is classified by a map:
+\[
+f:X\to \BSp_{2r}
+\] 
+such that $\cE=f^{-1}(\cU_{2r})$. Taking Thom spaces and composing with $\tau_r$, we get:
+\[
+Th(\cE)=Th(f^{-1}\cU_{2r}) \xrightarrow{f_*} Th(\cU_{2r})=\MSp_{2r} \xrightarrow{\tau_r} \MSp(2r)[4r]
+\]
+This is the Thom class $\thom^\MSp(\cE) \in \tilde \MSp^{4r,2r}(\Th(\cE))$
+ associated with $\cE$
+ with coefficients in $\MSp$. Equivalently, $\thom(\cE)=f^*(\tau_r)$.
+
+Using Jouanolou's trick, this construction can be extended to any smooth $S$-scheme.
+ One can check the basic properties of Thom classes, as stated in \cite[Def. 2.1.3, $G=\Sp_*$]{DF3}:
+ compatibility with isomorphisms and pullbacks, products, normalisation.
+ In other words, $\MSp_S$ is symplectically oriented in the sense of \emph{loc. cit.}
+ (see \cite[\textsection 10, Th. 1.1]{PWcobord} for the proof, analogous to the
+ topological case).
+%An $\MSp$-algebra over $S$ is a morphism of ring spectra $\varphi:\MSp_S \rightarrow \E$
+% over $S$.
+% We immediately associates to $\varphi$ Thom classes $\thom^\E$ for $\E$ by the formula:
+%$$
+%\thom^\E(\cU)=\varphi_*(\thom^\MSp(\cU)).
+%$$
+%One immediately check that this provides a structure of an $\Sp$-orientation on $\E$.
+Let us introduce some terminology for the statement of the next result.
+ Let $\E$ be a ring spectrum over $S$.
+ When $\E$ admits Thom classes for symplectic bundles satisfying the properties
+ mentioned above, we will say that $\E$ admits symplectic Thom classes --- this corresponds
+ to being $\Sp$-oriented in the sense of \cite[Def. 2.1.3]{DF3}.
+ Recall that one can define the \emph{Euler class} $e(\cE)$ as the image of the Thom class $\thom(\cE)$
+ under the canonical map:
+$$
+\E^{2r,r}(\Th(\cE)) \rightarrow \E^{2r,r}(\cE) \xrightarrow{\sim} \E^{2r,r}(X).
+$$
+Moreover, when $\E$ admits a Thom structure, one deduces an isomorphism:
+\begin{equation}\label{coh_HPinfty}
+\E^{n,m}(\HP^\infty_S) \simeq \colim_{n>0} \E^{n,m}(\HP^n_S)
+\end{equation}
+\emph{i.e.} the $\colim^{(1)}$ vanishes here.
+ This follows from the symplectic projective bundle theorem for $\E$
+ (see \cite[Th. 2.2.3]{DF3})
+
+An $\MSp$-algebra structure on $\E$ (over $S$) will be a morphism $\varphi:\MSp_S\rightarrow \E$
+ of ring spectra.
+ We denote by $\Sigma_T^2 1_\E$ the image of the unit $1_\E \in \E^{00}(S)$ of the ring spectrum $\E$
+ under the $(\PP^1)^{\wedge 2}$-suspension isomorphism $\E^{00}(S) \simeq \tilde \E^{4,2}(\HP^1_S)$.
+\end{num}
+\begin{thm}[Panin-Walter]\label{thm:PW_Sp-oriented}
+Let $\E$ be a ring spectrum over $S$. Then the following data are in bijective
+ correspondance:
+\begin{enumerate}
+\item the cohomology classes $b \in \tilde \E^{4,2}(\HP^\infty_S)$ such
+ that $b|_{\HP^1_S}=\Sigma_T^2 1_\E$.
+\item The $\Sp$-orientation on $\E$ over $S$ in the sense of \Cref{df:G-orientation}.
+\item The $\MSp$-algebra structure on $\E$ over $S$: $\varphi:\MSp_S \rightarrow \E$
+\end{enumerate}
+Moreover, the bijections are constructed as follows:
+\begin{itemize}
+\item (3) $\rightarrow$ (2): for any symplectic bundle $\cU$ over a smooth $S$-scheme $X$,
+ one defines $\thom^\E(\cU)=\varphi_*(\thom^\MSp(\cU))$.
+\item (2) $\rightarrow$ (1): one defines: $b_n=\varphi_*(e(\cV_{2})) \in \E^{4,2}(\HP^n_S)$,
+ where $\cV_{2}$ is the tautological rank $2$ symplectic bundle over $\HP^n_S$.
+ Using formula \eqref{coh_HPinfty}, this defines a class $b \in \E^{4,2}(\HP^\infty_S)$.
+\end{itemize}
+%\jean{Shall we say something about the missing implication? Or maybe simply omit the sketch of the proof.}
+%\fred{Je pense que ce n'est pas la peine: les deux points ci-dessus permettent juste d'être plus précis.
+%  La preuve complète est bien donnée dans la référence ci-dessous.}
+\end{thm}
+For the proof of that theorem, we refer the reader to \cite[Th. 1.1]{PWcobord}.
+The condition (1) being much more cost effective,
+ and analogous to that of $\GL$-oriented ring spectra,
+ we chose to use it as an equivalent replacement of \Cref{df:G-orientation} in the case $G=\Sp$
+ (or also Definition 2.3.1 of \cite{DF3}).
+\begin{df}\label{df:Sp-orientation}
+A symplectic orientation of a ring spectrum $\E$ will be a class $b$
+ as in point (1) of the previous proposition.
+ We also say that $(\E,b)$ is a symplectically oriented ring spectrum over $S$.
+
+A morphism of symplectically oriented ring spectra
+ $\varphi:(\E,b^\E) \rightarrow (\F,b^\F)$ is a morphism of ring spectra
+ such that $\varphi_*(b^\E)=b^\F$.
+\end{df}
+Note that by the above theorem, given such a morphism $\varphi$,
+ one immediately deduces for an $\Sp$-bundle $\cU$ over a smooth $S$-scheme $X$,
+ the relation
+\begin{equation}\label{eq:Sp-morphisms&Thom_classes}
+\varphi_*(\thom^\E(\cU))=\thom^\F(\cU).
+\end{equation}
+
+\begin{rem} The symplectic orientation theory is completely analogous to
+ the classical orientation theory, both in $\AA^1$-homotopy (see \cite[Section 2.1]{Deg12}), 
+ and in classical topology (see \cite[Definition 4.1.1]{Ra03}):
+\begin{enumerate}
+\item Note as a byproduct of the above theorem that $\MSp_S$ equipped with its canonical
+ orientation $b^\MSp$ (coming from the above construction of Thom classes),
+ is the universal symplectically oriented ring spectrum over $S$.
+ That is, it is the initial object among symplectically oriented ring spectra over $S$.
+\item From the previous theorem, a symplectically oriented ring spectrum is just
+ an $\MSp$-algebra, and a morphism of such is simply a morphism of $\MSp$-algebras.
+\item Let $f:T \rightarrow S$ be a morphism of schemes.
+ Given an $\Sp$-oriented ring spectrum $(\E,b)$ over $S$,
+ we immediately deduce an $\Sp$-orientation $f^*(b)$ on $f^*(\E)$ over $T$.
+ This will be very useful to reduce arguments to the base scheme.
+\end{enumerate}
+\end{rem}
+
+As a corollary of the 
+
+\begin{num}\label{num:Sp-Euler}
+One can interpret Euler classes in analogy with the $\GL$-oriented case.
+ Given any scheme $S$, according to \cite[Prop. 1.16, p. 130]{MV},
+ there exists a canonical map:
+$$
+\mathrm{H}^1(S,\Sp_2)  \rightarrow [S_+,\BSp_2^S]=[S_+,\HP^\infty_S].\footnote{According to \cite[4.1.2]{AHW},
+ this map is an isomorphism whenever $S$
+ is affine and ind-smooth over a Dedeking ring but we will not use that fact.}
+$$
+ The left hand-side can be interpreted
+ as the set of isomorphisms classes of rank $2$ symplectic bundle $\PicSp(S)$.
+ Note that this map is compatible with pullbacks in $S$. Besides, given a smooth $S$-scheme $X$,
+ one similarly gets a canonical map:
+$$
+\mathrm{H}^1(X,\Sp_2) \rightarrow [X_+,\BSp_2^S]=[X_+,\HP^\infty_S].
+$$
+One should be aware of an essential difference with the $\GL$-case here:
+ there is no group structure on $\PicSp(S)$. First, the tensor product of two symplectic bundles
+ is an orthogonal bundle. Secondly, even if one considers triple tensor products,
+ the rank becomes $8$. The correct algebraic structure will be explored
+ through the notion of formal ternary laws.
+
+However, given an $\Sp$-oriented spectrum $(\E,b)$, one gets a streamlined interpretation of the associated
+ Euler classes in terms of $b$.
+ First one can view $b$ as a map $b:\Sigma^\infty \HP^\infty_S \rightarrow \E(2)[4]$.
+ Then given any smooth $S$-scheme $X$, one gets a natural map: 
+\begin{align*}
+\PicSp(X)=\mathrm{H}^1(X,\Sp_2) &\rightarrow [X_+,\HP^\infty_S] \xrightarrow{\Sigma^\infty}
+ [\Sigma^\infty X_+,\Sigma^\infty \HP^\infty_S]^{st} \\
+& \xrightarrow{b_*} [\Sigma^\infty X_+,\E(2)[4]]^{st}=\E^{4,2}(X).
+\end{align*}
+One easily checks that this is the \emph{Euler class map}, which to the class of a rank $2$
+ symplectic bundle $\cU$ associates $e(\cU)$ whose construction was recalled in
+ \ref{num:symplectic_Thom_Grass_Euler}. In this case, this coincides with the first
+ Borel class $b_1(\cU)$ which will be recalled in the next paragraph.
+\end{num}
+
+\begin{rem}
+In fact, one easily checks that the data of an $\Sp$-orientation
+ on $\E$ over $S$ is equivalent to the data for any smooth $S$-scheme $X$ of
+$$
+b_1:\PicSp(X) \rightarrow \E^{4,2}(X)
+$$
+such that:
+\begin{enumerate}
+\item $b_1$ is natural with respect to the pullback on both functors
+\item for the tautological symplectic bundle $\cV$ on $\HP^1_S$,
+ one has $b_1(\cV)=(1,0)$ via the identification $\E^{4,2}(\HP^1_S)=\E^{0,0}(S) \oplus \E^{4,2}(S)$.
+\end{enumerate}
+\end{rem}
+
+\begin{num}\label{num:Sp-proj-bdl}
+As already said, a symplectically oriented ring spectrum $(\E,b)$ automatically satisfies
+ the symplectic projective bundle theorem, \cite[Th. 2.2.3]{DF3}.
+ In particular, putting $\E^{**}=\E^{**}(S)$ as a bigraded ring,
+ one obtains an isomorphism of $\E^{**}$-algebra
+$$
+\E^{**} [[t]] \rightarrow \E^{**}(\HP^\infty_S), t \rightarrow b
+$$
+which is bihomogeneous, of bidegree $(0,0)$,
+ when one decides that $t$ on the left hand-side has bidegree $(4,2)$.
+ As a corollary of the previous theorem one therefore deduces:
+\end{num}
+\begin{cor}\label{cor:chg_Sp-orient}
+Let $(\E,b)$ be a symplectically oriented ring spectrum over $S$.
+ Then the symplectic orientations $b'$ of $\E$ are in one-to-one correspondence
+ with the local parameters of bidegree $(4,2)$ of the power series ring $\E^{**}[[t]]$,
+ \emph{i.e.} with the power series of the form
+$$
+\phi(t)=t+a_2t^2+a_3t^3+\hdots
+$$
+where $a_n \in \E^{4-4n,2-2n}$.  \\
+ The bijection is given by $\phi \mapsto \phi(b)$ in
+ $\E^{**}(\HP^\infty_S) \simeq \E^{**}[[b]]$.
+\end{cor}
+Note moreover that when one has a class $b'$ as above associated
+ with a power series $\phi$, then for any rank $2$ symplectic
+ bundle $\cU$ over a smooth $S$-scheme $X$, one gets:
+\begin{equation}\label{eq:firstBorel&chg_orient}
+b'_1(\cU)=\phi(b_1(\cU)) \in \E^{4,2}(X),
+\end{equation}
+where the right hand-side makes sense as $b_1(\cU)$ is nilpotent
+ (see \cite{DF3}).
+
+\subsection{Virtual symplectic Thom classes}\label{sec:virt_symplect}
+
+According to \Cref{prop:stable_G-orientations},
+ symplectically oriented ring spectra admits virtual symplectic Thom classes,
+ associated with stable symplectic bundles. However, hermitian K-theory of symplectic bundles
+ is finer as it involves the equivalence relation modulo metabolic spaces (see e.g. \cite{Kneb}).
+ We will show in this subsection that symplectic Thom classes are compatible with
+ the metabolic equivalence relation.
+
+\begin{num}
+We first give a quick recollection on the hermitian $Q$-construction and the forgetful functor, following \cite{Schlichting09}.
+
+We start with a triple $(\mathcal{E},*,\eta)$, where $\mathcal{E}$ is an exact category, $(-)^*$ is a duality (i.e. an exact functor $\mathcal E^{\mathrm{op}}\to \mathcal{E}$) and a canonical isomorphism $\eta:1\to (-)^{**}$ satisfying an extra condition \cite[Definition 2.1]{Schlichting09}. Recall that a symmetric form is a pair $(X,\varphi)$, where $X$ is an object of $\mathcal{E}$ and $\varphi:X\to X^*$ is a morphism which is symmetric in the sense that the diagram
+\[
+\xymatrix{X\ar[r]^-{\varphi}\ar[d]_-{\eta} & X^*\ar@{=}[d] \\
+X^{**}\ar[r]_-{\varphi*} & X^*}
+\]
+is commutative. A symmetric form is called \emph{symmetric space} if $\varphi$ is an isomorphism. A morphism of symmetric forms $f:(X,\varphi)\to (Y,\psi)$ is a morphism $f:X\to Y$ such that the diagram
+\[
+\xymatrix{X\ar[r]^-f\ar[d]_-{\varphi} & Y\ar[d]^-\psi \\
+X^* & Y^*\ar[l]^/-2pt/{f^*}}
+\]
+is commutative. Let now $(X,\varphi)$ be a symmetric space (i.e. $\varphi$ is an isomorphism). Let $i:L\to X$ be an admissible monomorphism. The orthogonal of $L$, denoted by $L^{\perp}$ is the kernel of $X\xrightarrow{i^*\varphi} L^*$, which is also admissible. We say that $L$ is totally isotropic if the composite $i^*\varphi i$ is trivial and the associated morphism $L\to L^{\perp}$ is admissible. In the special case where $L\to L^{\perp}$ is an isomorphism, we say that $L$ is a Lagrangian.
+
+
+We now form the $Q$-construction in this context, following \cite[\S 4.1]{Schlichting09}. We let $Q^h\mathcal E$ be the category whose objects are symmetric spaces $(X,\varphi)$ and whose morphisms are equivalences classes of diagrams of the form
+\[
+\xymatrix{X & U\ar[l]_-p\ar[r]^-i & Y}
+\] 
+where $p$ is an admissible epimorphism, $i$ is an admissible monomorphism, and the diagram
+\[
+\xymatrix{U\ar[r]^-i\ar[d]_-p & Y\ar[d]^-{i^*\psi} \\
+X\ar[r]_-{p^*\varphi} & U^*}
+\]
+is bicartesian. Two such diagrams $(U,i,p)$ and $(U',i',p')$ are equivalent if there exists an isomorphim $g:U\to U'$ such that $i'g=i$ and $p'g=p$. The composition is obtained as in Quillen's original $Q$-construction, and there is thus an obvious functor
+\[
+Q^h(\mathcal E,*,\eta)\to Q\mathcal E
+\]
+which induces a morphism on the nerves of the relevant categories. To simplify the notation, we will now write $\mathcal E$ for $(\mathcal E,*,\eta)$.
+ Following Schlichting, we denote by $\mathrm{GW}(\mathcal E)$ the homotopy fiber (with respect to a zero object in $\mathcal E$) of the
+ induced map of (Kan) simplicial sets:
+\[
+N(Q^h\mathcal E) \to N(Q\mathcal E).
+\]
+As a special case of an exact category with duality, we may consider the category $H\mathcal E=\mathcal E\times \mathcal E^{\mathrm{op}}$. There is an obvious duality, defined on objects as $(A,B)^{\sharp}=(B,A)$ and natural isomorphism $1\to {}^{\sharp\sharp}$ the identity. If $(\mathcal E,*,\eta)$ is an exact category with duality, we define a functor 
+\[
+F:(\mathcal E,*,\eta)\to H\mathcal E
+\] 
+on objects by $A\mapsto (A,A^*)$ and on morphisms by $f\mapsto (f,f^*)$. There is a natural isomorphism
+\[
+F(A^*)=(A^*,A^{**})\to F(A)^{\sharp}=(A^*,A)
+\]
+given by the pair $(\mathrm{Id}_A,\eta_A)$. Consequently, we obtain a commutative diagram
+\[
+\xymatrix{Q^h\mathcal E\ar[r]\ar[d] &  Q\mathcal E\ar[d]\\
+Q^hH\mathcal E\ar[r] &  QH\mathcal E
+}
+\] 
+Now, there is an equivalence of categories $Q^hH\mathcal E\to Q\mathcal E$ given on objects by $(A,B)\mapsto A$ and on morphisms by $(f,g)\mapsto f$ (see \cite[Remark 4.3]{Schlichting09}).
+ It follows that the homotopy fiber of 
+\[
+N(Q^hH\mathcal E) \to N(QH\mathcal E) \simeq N(Q\mathcal E) \times N(Q\mathcal E)
+\]
+is $\Omega N(Q\mathcal E):=\mathrm{K}(\mathcal E)$ (see \cite[Proposition 4.7]{Schlichting09}).
+ Consequently, we obtain the \emph{forgetful map}
+\[
+F:\mathrm{GW}(\mathcal E)\to \mathrm{K}(\mathcal E).
+\]
+Our main example here is the category $\mathcal E=\mathcal{V}(X)$ of vector bundles over a scheme $X$, with usual duality $V^*=\mathrm{Hom}(V,\OO_X)$ and canonical isomorphism $\eta=-\varpi$, where $\varpi:V\to V^{**}$ is the usual identification (given by the evaluation). In the usual notation, this gives the \emph{forgetful map}
+\[
+F:\mathrm{KSp}(X)\to  \mathrm{K}(X).
+\]
+We can view $F$ as a morphism of $\infty$-categories, and consider the induced map on the associated homotopy groupoids:
+$$
+f_\Sp:\uKSp(X) \rightarrow \uK(X).
+$$
+The pseudo-functoriality of the above construction actually gives
+ a stable structure of degree $2$ in the sense of \Cref{df:stable_structure}.
+\end{num}
+\begin{df}\label{df:fine-sp-structure}
+We will call the stable structure $f_\Sp:\uKSp \rightarrow \uK$ over $\base$ defined above
+ the \emph{fine symplectic stable structure}.
+\end{df}
+
+\begin{num}
+Note that, by construction, one gets a commutative diagram:
+$$
+\xymatrix@R=-2pt@C=40pt{
+\uK^{\Sp}(X)\ar^{\sigma_\Sp}[rd]\ar_{\kappa_X}[dd] & \\
+& \uK(X) \\
+\uKSp(X)\ar_{f_\Sp}[ru]
+}
+$$
+where $\sigma_\Sp$ is stable structure associated with
+ the symplectic group in \Cref{ex:stable_G-structure}.
+ Moreover, $\kappa_X$ is compatible with pullbacks in $X$, or in other words,
+ corresponds to a morphism of $\base$-fibred categories in Picard groupoid
+ (see \Cref{num:fibred_cat&K}).
+ The next lemma says that Zariski locally, both stable structures coincide.
+\end{num}
+\begin{lm}
+If $X$ an affine scheme, then the functor $\kappa_X$ is an equivalence of categories.
+\end{lm}
+\begin{proof}
+Indeed, by construction, the map induced by $\pi$ on the respective sets of isomorphism classes coincides
+ with the quotient map
+$$
+\mathrm K^{\Sp}_0(X) \rightarrow \mathrm K^{\Sp}_0(X)/\mathcal I
+$$
+where $\mathcal I$ is the ideal generated by metabolic symplectic spaces.
+ Then the result follows as in \cite[\textsection 4, Prop. 1]{Kneb}.
+\end{proof}
+
+We have seen in \Cref{prop:stable_G-orientations} that,
+ on a given ring spectrum $\E$ over $S$,
+ the data of a  symplectic orientations on $\E$ over $S$-schemes
+ is equivalent to that of a $\sigma_\Sp$-orientations on $\E$.
+ Thanks to the preceding result, we can make a finer statement.
+\begin{prop}\label{prop:sp-or&KSp-or}
+Let $\E$ be a ring spectrum over $S$.
+ Then there are bijective correspondences between:
+\begin{enumerate}
+\item The symplectic orientations on $\E$ over $S$ in the sense of \Cref{df:Sp-orientation}.
+\item The $\sigma_\Sp$-orientations on $\E$ over $S$ in the sense of \Cref{df:sigma-orientation}.
+\item The $f_\Sp$-orientations on $\E$ over $S$ in the sense of \Cref{df:sigma-orientation}.
+\end{enumerate}
+Moreover, the map between (3) and (2) is simply obtained by composing with
+ the pseudo-natural transformation $\kappa:\uK^\Sp \rightarrow \uKSp$.
+\end{prop}
+\begin{proof}
+In view of \Cref{prop:stable_G-orientations}, we need only proving the equivalence
+ between datas (2) and (3). Recall that, according to Jouanolou's trick,
+ given any scheme $X$, there exists a (Zariski-local) $\AA^1$-torsor
+ $p:X' \rightarrow X$
+ such that $X'$ is affine.
+ Then the result follows from the preceding lemma applied to $X'$,
+ and the fact the pullback map: $p^*:\E\modd_X \rightarrow \E\modd_{X'}$
+ is an equivalence of categories.
+\end{proof}
+
+\begin{num}\textit{Virtual symplectic Thom classes}.
+Following \Cref{num:Thom_iso_explicit},
+ we now make explicit the data of the $f_\Sp$-orientation
+ associated with an $\Sp$-oriented ring spectrum $(\E,\thom)$ over $S$.
+
+Given a stable symplectic bundle $\omega \in \uKSp(X)$,
+ of rank $r:=\rk(f_\Sp(\omega))$, and with Thom space $\Th(\omega):=\Th(f_\Sp(\omega))$ in $\SH(X)$,
+ one gets a \emph{virtual Thom class}:
+$$
+\thom(\omega) \in \E^{2r,r}(\Th(\omega))
+$$
+such that the natural map:
+$$
+\E^{**}(X) \rightarrow \E^{*+2r,*+r}(\Th(\omega)), \lambda \mapsto \lambda.\thom(\omega)
+$$
+is an isomorphism of bigraded $\E^{**}(X)$-modules.
+
+Moreover, this class is compatible with isomorphisms in $\omega$, pullbacks in $X$
+ in an obvious sense. Let us spell out explicitly the compatibility with 
+ sums of two stable symplectic bundles $\omega, \omega'$ of respective ranks $r$ and $r'$.
+ One gets a natural product map:
+$$
+\mu:\E^{2r,r}(\Th(\omega)) \otimes_\ZZ \E^{2r',r'}(\Th(\omega'))
+  \rightarrow \E^{2r+2r',r+r'}(\Th(\omega+\omega')).
+$$
+Then the following relation holds: $\mu(\thom(\omega) \otimes \thom(\omega'))=\thom(\omega+\omega')$.
+ We can equivalently write this as:
+$$
+\thom(\omega).\thom(\omega')=\thom(\omega+\omega').
+$$
+One deduces that $\mu$ induces an isomorphism of bigraded $\E^{**}(X)$-modules:
+$$
+\E^{**}(\Th(\omega)) \otimes_{\E^{**}(X)} \E^{*}(\Th(\omega'))
+ \xrightarrow \sim \E^{**}(\Th(\omega+\omega')).
+$$
+Finally the virtual Thom class extends the Thom class associated with
+ a symplectic vector bundle. Given a symplectic bundle $(V,\psi)$,
+ one associates a virtual symplectic bundle $[V,\psi] \in \uKSp(X)$
+ such that $f_\Sp([V,\psi])=[V]$ the stable vector bundles assocaited with $V$.
+ One further gets an identification $\Th([V,\psi])=\Th([V])=\Th(V)$,
+ by construction of the Thom space of the virtual bundle $[V]$.
+ Given this identification, one has in the group $\E^{2r,r}(\Th(V))$ with $r=\rk(V)$:
+$$
+\thom([V,\psi])=\thom(V,\psi).
+$$
+\end{num}
+
+
+
+\subsection{Higher Borel classes and $\GW$-linearity}
+
+\begin{num}\textit{Borel classes}. \label{num:Borel_Sp}
+Recall that to a symplectic orientation $b$ of $\E$ is associated by Panin and Walter
+ a theory of Borel classes $b_n(\cU) \in \E^{4n,2n}(X)$, $\cU/X$ a symplectic vector bundle
+ over a smooth $S$-scheme $X$. Besides, the Euler class introduced in Paragraph
+ \ref{num:symplectic_Thom_Grass_Euler}
+ satisfies the relation: $e(\cU)=b_r(\cU)$ when $\cU$ has rank $2r$.
+ We refer the reader to \cite[Section 2.2]{DF3}.
+ Following the classical scheme, one defines the total Borel class associated with
+ $\cU$ as the following polynomial expression in $t$:
+\begin{equation}\label{eq:total_borel}
+b_t(\cU)=\sum_{n=0}^r b_n(\cU).t^r.
+\end{equation}
+Note moreover that, using relation \eqref{eq:Sp-morphisms&Thom_classes} and the construction
+ of Borel classes, one deduces further that for a morphism $\varphi$ as in \Cref{df:Sp-orientation},
+ we have the following relation in $\F^{4n,2n}(X)$:
+\begin{equation}\label{eq:Sp-morphisms&Borel_classes}
+\varphi_*(b_n^\E(\cU))=b_n^\F(\cU).
+\end{equation}
+\end{num}
+
+\begin{num}\label{num:sp-splitting-principle}
+\textit{The symplectic splitting principle}. As for Chern classes,
+ one has a splitting principle for Borel classes.
+ Indeed, given any symplectic bundle $\cV$ over a scheme $X$, there exists an affine morphism $p:X' \rightarrow X$
+ inducing a monomorphism $p^*:\E^{**}(X) \rightarrow \E^{**}(X')$ with the property that $p^{-1}(\cV)$ splits
+ as a direct sum of rank $2$ symplectic bundles: $p^{-1}(\cV)=\mathcal X_1 \perp \hdots \perp \mathcal X_n$.
+
+One defines the {\it Borel roots} of $\cV$ as the Borel classes $\xi_i=b_1(\mathcal X_i)$ so that
+ by the Whitney sum formula \cite[Theorem 10.5]{PWQuaternionic} the Borel classes of $\cV$ are the elementary symmetric polynomials
+ in the variables $\xi_i$.
+
+As in the classical case, one can compute universal formulas involving Borel classes of $\cV$ by introducing Borel roots
+ $\xi_i$, which reduces to rank $2$ symplectic bundles, compute as if $\cV$ was completely split, and
+ then express the resulting formula in terms of
+ the elementary symmetric polynomials in the $\xi_i$. %This principle will be used repeatedly in Section \ref{sec:ternary}.
+\end{num}
+
+\begin{num}
+We now give a complement to the theory of Borel classes which was known previously only under the stronger assumption of the existence of an $\SL$-orientation
+(see \cite[2.2.8]{DF3}). To start with, let us recall the following definition.
+
+\begin{df}
+Let $\lambda\in \OO(S)^\times$. We denote by $\langle \lambda\rangle\in \mathrm{End}_{\mathcal{SH}(S)}(\mathbf{1})$ the endomorphism induced by the pointed morphism $\lambda:\PP^1_{S}\to \PP^1_{S}$ given by $[x:y]\mapsto [\lambda x:y]$.
+\end{df}
+
+As a result, $\lambda$ acts on the set $[X,Y]_{\mathcal{SH}(S)}$ for any objects $X,Y$ via 
+\[
+f\mapsto f\wedge \langle \lambda\rangle:X\wedge 1\to Y\wedge 1.
+\]
+By abuse of notation, we still denote by $\langle\lambda\rangle$ the endomorphism $\mathrm{Id}_X\wedge \langle\lambda\rangle$. The aim of this section is to prove the following theorem.
+
+\begin{thm}\label{thm:epsilon}
+Let $(\E,b)$ be an $\Sp$-oriented ring spectrum, and thom classes $\thom$.
+ Then for any unit $\lambda \in \mathcal O_S(X)^\times$, 
+ and any $\Sp$-vector bundle $(V,\psi)$ over $X$, the following relation holds:
+\[
+\thom(V,\lambda\psi)=\langle \lambda \rangle \thom(V,\psi).
+\]
+\end{thm}
+
+As a corollary, we obtain the following result whose proof is the same as \cite[2.2.8]{DF3}.
+
+\begin{cor}\label{cor:epsilonlinearity}
+Let $(\E,b)$ be an $\Sp$-oriented ring spectrum and let $\lambda \in \mathcal O_X(X)^\times$ be a unit. Then
+\[
+b_i(V,\lambda\psi)=\langle \lambda^i\rangle b_i(V,\psi)
+\]
+for any $\Sp$-vector bundle $(V,\psi)$ over $X$ and any $i\in\NN$.
+\end{cor}
+
+The proof of the theorem will occupy the remaining of this section.
+ We first reduces to the case $\E=\MSp_S$ (using \Cref{thm:PW_Sp-oriented})
+ and to the case where of the tautological symplectic bundle $(U,\varphi)$ on $\mathrm{BSp}_2$
+ seen over the base scheme $S$. Given $\lambda \in \cO_S(S)^\times$, the relation to prove is now:
+\[
+\mathrm{th}(U,\lambda\varphi)=\langle \lambda\rangle \mathrm{th}(U,\varphi).
+\]
+The proof of the theorem will require some elaborate computations with the hyperbolic Grassmannians. Recall that $\HP^n_S=\HGr_S(2,\omega_{2n+2})$ and that there are embeddings
+\[
+i_n:\HP^n_S\to \HP^{n+1}_S
+\]
+for any $n\in\NN$. In particular, $\HP^0_S=S$ and we will consider $\HP^{n}_S$ as pointed by the image of $\HP^0_S=S$ under the above map. In the sequel, we will suppress the subscript $S$ from the notation to slightly lighten the expressions. 
+
+There is an interesting cell structure on $\HP^n$ for any $n\in\NN$, as explained by Panin-Walter in \cite{PWQuaternionic}. There is a decomposition
+\[
+\HP^n=X_0\sqcup X_2\sqcup \ldots\sqcup X_{2n}
+\]
+where each $X_i$ is of codimension $2i$, smooth and quasi-affine. The closure $\overline X_{2i}$ of $X_{2i}$ is of the form $\overline X_{2i}=X_{2i}\sqcup X_{2i+2}\sqcup\ldots\sqcup X_{2n}$ and there is a projection
+\[
+q_i:\overline X_{2i}\to \HP^{n-i}
+\]
+identifying $\overline X_{2i}$ with the total space of the universal bundle $\mathcal U_2$ over $\HP^{n-i}$. The composite of the zero section $\HP^{n-i}\to \overline X_{2i}$ with $\overline X_{2i}\to \HP^{n}$ is the composite of embeddings $i_{n-1}\circ\ldots\circ i_{n-i}$ described above. In more detail, write $e_1,\ldots,e_{2n+2}$ for the usual basis of $\OO_S^{2n+2}$. Observe that $E_i=\mathrm{Vect}(e_{2j-1},j=1,\ldots,i)$ is a totally isotropic subspace, in the sense that $E_i\subset E_i^\perp$, and that we have a filtration of $\OO_S^{2n+2}$ of the form
+\[
+0:=E_0\subset E_1\subset E_{n+1}=E_{n+1}^\perp\subset \ldots\subset E_1^\perp\subset 0^\perp=\OO_S^{2n+2}
+\]
+We have for any $i=0,\ldots,n$ an embedding $\mathrm{Gr}(2,E_i^{\perp})\subset \mathrm{Gr}(2,\OO_S^{2n+2})$ and we set $\overline X_{2i}:=\mathrm{Gr}(2,E_i^{\perp})\cap \HP^{n+1}$. In terms of the universal sequence, we can interpret these closed subschemes as follows. Consider the projection $p_2:\OO_S^{2n+2}\to \OO_S$ on the second factor. As $E_1^\perp=\langle e_1,e_3,e_4,\ldots,e_{2n+2}\rangle$ we see that $\overline X_2$ is the closed subscheme where the section
+\[
+\mathcal{U}\xrightarrow{i} \OO^{2n+2}\xrightarrow{p_2} \OO
+\]
+vanishes. In particular, the normal bundle to $\overline X_2$ in $\HP^n$ is $(\mathcal{U}^\vee)_{\vert \overline X_2}$. Besides, if $p_1:\OO_S^{2n+2}\to \OO_S$ is the projection to the first factor, it is easy to check that if the above composite vanishes (i.e. we are on $\overline X_2$) then the composite 
+\[
+\mathcal{U}\xrightarrow{i} \OO^{2n+2}\xrightarrow{p_1} \OO
+\]
+is arbitrary (i.e. the symplectic form on $\mathcal{U}$ is automatically nondegenerate). Observing that the restriction of $\mathcal{U}$ to $\HP^{n-1}$ is the universal bundle, this realizes $\overline X_2$ as the total space of $\mathcal{U}^\vee$ over $\HP^{n-1}$. We also deduce from this that the normal bundle to $\HP^{n-1}$ in $\HP^{n}$ is $\mathcal{U}^\vee\oplus \mathcal{U}^\vee$. To conclude, let us say that the filtration $\HP^{n-1}=X^\prime_0\sqcup\ldots \sqcup X^\prime_{2n-2}$ pulls back to the filtration $X_2\sqcup\ldots \sqcup X_{2n}$ under the projection $q_{n-1}:\overline X_2\to \HP^{n-1}$. 
+
+Let us now concentrate on the geometry of $X_{2i}$ for $i=0,\ldots,n$, starting with $X_0$. By definition, $X_0$ is the open subscheme over which the composite 
+\[
+\pi:\mathcal{U}\xrightarrow{i} \OO^{2n+2}\xrightarrow{p_2} \OO
+\]
+is non trivial. This yields a nowhere vanishing section of $\mathcal{U}$ with kernel $\OO$ (as $\mathcal U$ has trivial determinant). We set $Y=\{f\in U\vert \pi(y)=1\}$. This is a $\ker(\pi)$-torsor over $X_0$, i.e. an $\AA^1$-torsor over $X_0$ of the form $\mu:Y\to X_0$. We now work over $Y$. It is easy to see that there exists a unique global section $e$ of $\mu^*\mathcal{U}$ which has the property that the symplectic form on $\OO^2$ induced by the isomorphism $j:\OO^2\simeq \mathcal{U}$ obtained via $f,e$ is the usual hyperbolic one. 
+
+We may then write $i:\mathcal{U}\to \OO^{2n+2}$ as a matrix
+\[
+\begin{pmatrix} 1 & 0 \\ a & b \\ v & w\end{pmatrix}
+\]
+where $a,b\in \AA^1$ and $v,w\in \AA^{2n}$. The restriction of $\sigma_{2n+2}$ under this map is the matrix
+\[
+\begin{pmatrix} 0 & b+v^t\sigma_{2n}w \\ -b+w^t\sigma_{2n}v & 0\end{pmatrix}
+\]
+and it follows that $b+v^t\sigma_{2n}w=1$. Now, the action of $\mathbb{G}_a$ on $(a,v,w)$ is of the form $\mathbb{G}_a\times \AA^1\times \AA^{2n}\times \AA^{2n}\to \AA^1\times \AA^{2n}\times \AA^{2n}$  given by 
+\[
+\lambda\cdot \begin{pmatrix} 1 & 0 \\ a & b \\ v & w\end{pmatrix}=\begin{pmatrix} 1 & 0 \\ a & b \\ v & w\end{pmatrix}\begin{pmatrix} 1 & 0 \\ \lambda & 1\end{pmatrix},
+\]
+i.e. $\lambda\cdot (a,v,w)=(a+b\lambda,v+\lambda w,w)=(a+\lambda(1-v^t\sigma_{2n}w),v+\lambda w,w)$. We may extend this description to the other open cells $X_{2i}$ (or use inductively the fact that the pull-back of $X^\prime_0\sqcup\ldots \sqcup X^\prime_{2n-2}$ is $X_2\sqcup\ldots \sqcup X_{2n}$) to obtain the following result (\cite[Theorem 3.4]{PWQuaternionic}).
+
+\begin{lm}
+The cell $X_{2i}$ is the quotient of $\AA^1\times \AA^i\times \AA^{2n-2i}\times \AA^i\times \AA^{2n-2i}$ under the free action of $\mathbb{G}_a$ given by
+\[
+\lambda\cdot (a,v_1,v_2,w_1,w_2)\mapsto (a+\lambda(1-v_2^t\sigma_{2n-2i}w_2),v_1+\lambda w_1,v_2+\lambda w_2,w_1,w_2).
+\]
+In particular, the cells $X_{2i}$ are $\AA^1$-contractible for $i=0,\ldots,n$.
+\end{lm}
+
+As a consequence, we obtain the following lemma. 
+
+\begin{lm}
+For $n\geq 1$, there is a canonical weak-equivalence 
+\[
+c_n:\HP^n\simeq \mathrm{Th}(U_{\vert \HP^{n-1}}).
+\]
+\end{lm}
+
+\begin{proof}
+Consider the open immersion $X_0\subset \HP^n$, whose closed complement is $\overline X_2$. The normal bundle to $\overline X_2$ in $\HP^n$ being $\mathcal{U}^\vee$, we obtain by purity a cofiber sequence
+\[
+X_0\to\HP^n\to  \mathrm{Th}(U^\vee_{\vert\overline X_2})
+\]
+and therefore, as $X_0$ is contractible, a weak-equivalence $\HP^n\to  \mathrm{Th}(U^\vee_{\overline X_2})$. The inclusion $\HP^{n-1}\subset \overline X_2$ is a weak-equivalence (being the zero section of a vector bundle) and the pull back of $U^\vee_{\vert\overline X_2}$ under this map is just $U^\vee_{\HP^{n-1}}$, which is isomorphic to its dual. We then obtain a string of canonical weak-equivalences $\mathrm{Th}(U^\vee_{\vert\overline X_2})\simeq \mathrm{Th}(U^\vee_{\vert \HP^{n-1}})\simeq \mathrm{Th}(U_{\vert \HP^{n-1}})$.
+\end{proof}
+
+For $n\geq 0$, the universal subbundle $\mathcal U$ on $\HP^{n+1}$ restricts to the canonical bundle on $\HP^n$ and we obtain an induced map 
+\[
+j_n:\mathrm{Th}(U_{\vert \HP^{n}})\to \mathrm{Th}(U_{\vert \HP^{n+1}}).
+\]
+The following lemma will prove useful in the sequel. 
+
+\begin{lm}\label{lem:fundamental}
+Let $n\geq 1$ and let $\tau_n:\HP^n\to \mathrm{Th}(U_{\vert \HP^{n}})$ be the canonical morphism.
+Then, the following diagram commutes in $\mathcal{H}(S)$
+\[
+\xymatrix{\HP^n\ar[r]^-{c_n}\ar[d]_-{i_n}\ar[rd]_-{\tau_n} & \mathrm{Th}(U_{\vert \HP^{n-1}})\ar[d]^-{j_{n-1}}  \\
+\HP^{n+1}\ar[r]_-{c_{n+1}} &  \mathrm{Th}(U_{\vert \HP^{n}}).
+}
+\]
+\end{lm}
+
+\begin{proof}
+We first prove that the bottom triangle commutes. Consider the composite of the zero section $\overline X_2\to U_{\vert \overline X_2}$ with the projection $U_{\vert \overline X_2}\to\mathrm{Th}(U_{\vert \overline X_2})$. The deformation to the normal cone shows that the following diagram commutes in $\mathcal{H}(S)$ 
+\[
+\xymatrix{ & \overline X_2\ar[r]\ar[d] & U_{\vert \overline X_2}\ar[d] \\
+X_0\ar[r] & \HP^{n+1}\ar[r] & \mathrm{Th}(U_{\vert \overline X_2}).}
+\]
+On the other hand, we have a commutative diagram
+\[
+\xymatrix{\HP^{n}\ar[r]\ar[d] & U_{\vert \HP^n}\ar[d] \\
+\overline X_2\ar[r] & U_{\vert \overline X_2}}
+\] 
+inducing the weak-equivalence $\mathrm{Th}(U_{\vert \HP^n})\to \mathrm{Th}(U_{\vert \overline X_2})$. The claim follows from the fact that the composite 
+\[
+\HP^{n}\to \overline X_2\to \HP^{n+1}
+\]
+is $i_n$. We prove next that the other triangle commutes. For this, recall that $X_0^\prime\subset \HP^{n}$ is defined as the complement of the vanishing locus of a section $s:\mathcal{U}\to \OO$. We then obtain a commutative diagram
+\[
+\xymatrix{X_0^\prime\ar[r]\ar[d] & \HP^{n}\ar[r]\ar[d]_-s & \mathrm{Th}(U_{\vert \overline X_2^\prime})\ar@{-->}[d] \\
+U\setminus 0\ar[r] & U\ar[r] & \mathrm{Th}(U).
+}
+\]
+In $\mathcal{H}(S)$, $s$ and the zero section are equal, and we conclude observing that the composite 
+\[
+\xymatrix{\mathrm{Th}(U_{\vert \HP^{n-1}})\ar[r] & \mathrm{Th}(U_{\vert \overline X_2^\prime})\ar@{-->}[r] & \mathrm{Th}(U)}
+\]
+is just $j_n$.
+\end{proof}
+
+We now pass to the definition of an action of $\mathbb{G}_m$ on $\HP^n$ for any $n\in\NN$. Let $\lambda\in \OO(S)^\times$ and let $m_\lambda:\OO_S^2\to \OO_S^2$ be given by the matrix
+\[
+\begin{pmatrix} \lambda & 0 \\ 0 & 1\end{pmatrix}.
+\]
+A direct computation shows that $m_\lambda^\vee \sigma_2 m_\lambda=\lambda\cdot \sigma_2$ and it follows that $m_{\lambda}$ induces a map
+\[
+\mathrm{Sp}_2(S)\to \mathrm{Sp}_2(S)
+\]
+given by $A=\begin{pmatrix} a & b \\ c & d\end{pmatrix}\mapsto m_{\lambda}^{-1}\cdot A\cdot m_{\lambda}=\begin{pmatrix} a & \lambda^{-1}b \\ \lambda c & d \end{pmatrix}$.
+This induces an action of $\mathbb{G}_m$ on $\mathrm{Sp}_2$, and consequently an action of $\mathbb{G}_m$ on $\mathrm{BSp}_2$. This could be defined at the level of $\HP^n$ for $n\in\NN$ as follows: Set
+\[
+\mathrm{Gr}(2,\OO_S^{2n+2})\to \mathrm{Gr}(2,\OO_S^{2n+2})
+\]
+by considering the composite 
+\[
+\mathcal{U}\xrightarrow{i} \OO^{2n+2}\xrightarrow{m_{\lambda}^{\oplus n+1}} \OO^{2n+2}.
+\]
+If $i^\vee \sigma_{2n+2} i$ is non degenerate, then so is the composite 
+\[
+i^\vee (m_{\lambda}^{\oplus n+1})^\vee \sigma_{2n+2} (m_{\lambda}^{\oplus n+1}i)=\lambda\cdot  (i^\vee \sigma_{2n+2} i).
+\]
+Consequently, the above action of $\mathbb{G}_m$ on $\mathrm{Gr}(2,\OO_S^{2n+2})$ restricts to an action of $\mathbb{G}_m$ on $\mathrm{HGr}(2,\OO_S^{2n+2})=\HP^{n}$. Let us denote by 
+\[
+\mu:\mathbb{G}_m\times \HP^{n} \to \HP^{n}
+\]
+this action, and $\pi:\mathbb{G}_m\times \HP^{n}\to \HP^{n}$ the projection to the second factor.
+
+\begin{lm}
+There is a canonical isomorphism $f:\pi^*\mathcal{U}\to \mu^*\mathcal{U}$ on $\mathbb{G}_m\times \HP^{n}$.
+\end{lm}
+
+\begin{proof}
+We start by exhibiting a $\mathbb{G}_m$-equivariant open covering $\cup_{i=1}^m V_i$ of $ \HP^{n}$ which has the following properties
+\begin{enumerate}
+\item $V_i$ is affine for any $i=1,\ldots,m$.
+\item The restriction of $\mathcal U$ to $V_i$ is free for any $i=1,\ldots,m$.
+\end{enumerate} 
+To obtain this, we consider the composite morphism
+\[
+\HP^n\to \mathrm{Gr}(2,\OO_S^{2n+2})\to \mathbb{P}_S^{\frac{(2n+2)(2n+1)}2}
+\]
+where the second map is the Pl\"ucker embedding. We note that the $\mathbb{G}_m$-action on $\HP^n$ is the restriction of a $\mathbb{G}_m$-action on $\mathrm{Gr}(2,\OO_S^{2n+2})$. The latter can be extended (taking exterior powers) to an action on $\mathbb{P}_S^{\frac{(2n+2)(2n+1)}2}$ which is easily seen to be diagonal. It follows that the usual covering of the latter by affine spaces (complement of the zero locus of a given coordinate) is $\mathbb{G}_m$-equivariant. We define the open subschemes $V_i\subset \HP^n$ as the intersections of this covering with $\HP^n$. The latter being affine, it follows that (1) above is satisfied. For (2), we observe that the condition on the minors is equivalent to the composite
+\[
+\mathcal{U}\xrightarrow{i}\OO^{2n+2}\to \OO^2
+\]
+being an isomorphism (the projection corresponds to the identification of some minor). 
+
+This covering being obtained, we now choose over each $V_i$ a symplectic basis of $\mathcal U_{\vert V_i}$ and we may recover $\mathcal U$ from the open covering $V_i$ and transition functions $V_i\cap V_j\to \mathrm{Sp}_2$. A direct computations shows that $\mu^*\mathcal U$ is then obtained via the transition functions
+\[
+V_i\cap V_j\to \mathrm{Sp}_2\to \mathrm{Sp}_2
+\]
+where the second map is given by 
+\[
+\begin{pmatrix} a & b \\ c & d\end{pmatrix}\mapsto \begin{pmatrix} a & tb \\ t^{-1}c & d\end{pmatrix}=\begin{pmatrix} t & 0 \\ 0 & 1\end{pmatrix}\begin{pmatrix} a & b \\ c & d\end{pmatrix}\begin{pmatrix} t^{-1} & 0 \\ 0 & 1\end{pmatrix}
+\]
+where $t$ is a parameter of $\mathbb{G}_m$. We now define $\pi^*\mathcal U_{\vert V_i}\to \mu^*\mathcal U_{\vert V_i}$ using the matrix $\begin{pmatrix} t & 0 \\ 0 & 1\end{pmatrix}$. A direct computation shows that this behaves well with the transition functions, yielding the required isomorphism $f:\pi^*\mathcal{U}\to \mu^*\mathcal{U}$.
+\end{proof}
+
+We now fix $\lambda\in \OO(S)^\times$, obtaining a multiplication by $\lambda$ morphism
+\[
+\mu_{\lambda}:\HP^n\to \HP^n.
+\]
+Using the above lemma, we obtain a commutative diagram
+\[
+\xymatrix{U\ar[r]^-f\ar[rd] & \mu_{\lambda}^*U\ar[r]\ar[d] & U\ar[d] \\
+ & \HP^n\ar[r]_-{\mu_{\lambda}} & \HP^n}
+\]
+and then a morphism of Thom spaces $\mu_{\lambda}^f:\mathrm{Th}(U_{\vert \HP^n})\to \mathrm{Th}(U_{\vert \HP^n})$ making the diagram 
+\[
+\xymatrix{\HP^n\ar[r]^-{\mu_{\lambda}}\ar[d] & \HP^n\ar[d] \\
+\mathrm{Th}(U_{\vert \HP^n})\ar[r]_-{\mu_{\lambda}^f} & \mathrm{Th}(U_{\vert \HP^n})}
+\] 
+commutative. 
+
+We note here that the action of $\mathbb{G}_m$ on $\HP^n$ stabilizes the cellular filtration  
+\[
+\HP^n=X_0\sqcup \ldots\sqcup X_{2n}
+\] 
+in the sense that the subschemes $X_i$ (and their closure) are $\mathbb{G}_m$-equivariant. As a result, we see that the morphisms in Lemma \ref{lem:fundamental} all commute with the relevant morphisms $\mu_{\lambda}$ and $\mu_{\lambda}^f$.
+
+\begin{lm}\label{lem:initialize}
+The endomorphism $\mu_{\lambda}:\HP^1\to \HP^1$ is equal to $\langle\lambda\rangle$ in $\mathrm{End}_{\mathcal{SH}(S)}(\HP^1)$.
+\end{lm}
+
+\begin{proof}
+By the above remark, we have a commutative diagram
+\[
+\xymatrix{\HP^1\ar[r]^-{c_1}\ar[d]_-{\mu_{\lambda}} & \mathrm{Th}(U_{\vert \HP^0})\ar[d]^-{\mu_{\lambda}^f} \\
+\HP^1\ar[r]_-{c_1} & \mathrm{Th}(U_{\vert \HP^0})}
+\]
+Now, $U_{\vert \HP^0}$ is trivial and $f$ is just the multiplication by $\begin{pmatrix} \lambda & 0 \\ 0 & 1\end{pmatrix}$. The claim follows easily. 
+\end{proof}
+
+By construction, there is a tautological Thom class 
+\[
+\mathrm{th}(U_{\vert \HP^n}):\mathrm{Th}(U_{\vert \HP^n})\to \mathbf{MSp}(2)[4]
+\]
+which has the property that the following diagram commutes for any $n\in\NN$:
+\[
+\xymatrix@C=5em{\mathrm{Th}(U_{\vert \HP^n})\ar[r]^-{\mathrm{th}(U_{\vert \HP^n})}\ar[d]_-{j_n} & \mathbf{MSp}(2)[4]\ar@{=}[d] \\
+\mathrm{Th}(U_{\vert \HP^{n+1}})\ar[r]_-{\mathrm{th}(U_{\vert \HP^{n+1}})} & \mathbf{MSp}(2)[4]}
+\]
+
+\begin{prop}
+For any $n\geq 0$, the composite
+\[
+\mathrm{Th}(U_{\vert \HP^n})\xrightarrow{\mu_{\lambda}^f} \mathrm{Th}(U_{\vert \HP^n})\xrightarrow{\mathrm{th}(U_{\vert \HP^n})} \mathbf{MSp}(2)[4]
+\]
+is equal to $\langle \lambda\rangle \mathrm{th}(U_{\vert \HP^n})$ in $[\mathrm{Th}(U_{\vert \HP^n}),\mathbf{MSp}(2)[4]]_{\mathcal{SH}(R)}$.
+\end{prop}
+
+\begin{proof}
+We work by induction on $n$. If $n=0$, this is a direct consequence of (the proof of) Lemma \ref{lem:initialize}. Let us then suppose that the result is true for some $n-1\geq 0$ and consider the composite
+ \[
+\mathrm{Th}(U_{\vert \HP^n})\xrightarrow{\mu_{\lambda}^f} \mathrm{Th}(U_{\vert \HP^n})\xrightarrow{\mathrm{th}(U_{\vert \HP^n})} \mathbf{MSp}(2)[4].
+\]
+We have a commutative diagram
+\[
+\xymatrix{\mathrm{Th}(U_{\vert \HP^{n-1}})\ar[r]^-{\mu_{\lambda}^f}\ar[d]_-{j_{n-1}} & \mathrm{Th}(U_{\vert \HP^{n-1}})\ar[r]^-{\mathrm{th}(U_{\vert \HP^{n-1}})}\ar[d]_-{j_{n-1}} & \mathbf{MSp}(2)[4]\ar@{=}[d]
+\\ \mathrm{Th}(U_{\vert \HP^n})\ar[r]_-{\mu_{\lambda}^f} & \mathrm{Th}(U_{\vert \HP^n})\ar[r]_-{\mathrm{th}(U_{\vert \HP^n})} & \mathbf{MSp}(2)[4]}
+\]
+By induction, we know that  
+\[
+(\mathrm{th}(U_{\vert \HP^n})\circ \mu_{\lambda}^f)\circ j_{n-1}=(\langle \lambda\rangle \mathrm{th}(U_{\vert \HP^n}))\circ j_{n-1}
+\]
+and it suffices to prove that 
+\[
+j_{n-1}^*:[\mathrm{Th}(U_{\vert \HP^n}),\mathbf{MSp}(2)[4]]\to [\mathrm{Th}(U_{\vert \HP^{n-1}}),\mathbf{MSp}(2)[4]]
+\]
+is injective for $n\geq 1$. Now, we may use Lemma \ref{lem:fundamental} to obtain
+\[
+\tau_n^*=c_n^*\circ j_{n-1}^*
+\]
+and it suffices to show that $\tau_n^*$ is injective. However, it follows from \cite{PWQuaternionic} that the cofiber sequence
+\[
+U\setminus 0\to \HP^n \xrightarrow{\tau_n} \mathrm{Th}(U_{\vert  \HP^n})
+\]
+induces a short split exact sequence
+\[
+0\to [\mathrm{Th}(U_{\vert  \HP^n}),\mathbf{MSp}(2)[4]]\xrightarrow{\tau_n^*}[\HP^n,\mathbf{MSp}(2)[4]]\to  [U\setminus 0,\mathbf{MSp}(2)[4]]\to 0
+\]
+and in particular $\tau_n^*$ is injective.
+\end{proof}
+
+\begin{proof}[Proof of \Cref{thm:epsilon}]
+Taking colimits, it is sufficient to prove the result for the Thom classes of $\mathcal U_{\vert \HP^n}$ for any $n\in \NN$. It follows from the above proposition that we have
+\[
+\langle \lambda\rangle \mathrm{th}(U_{\vert \HP^n})=\mathrm{th}(U_{\vert \HP^n})\circ \mu_{\lambda}^f.
+\]
+Now, the property of Thom classes reads as $\mathrm{th}(U_{\vert \HP^n})\circ \mu_{\lambda}^f=\mathrm{th}(f^*\mu_{\lambda}^*U_{\vert \HP^n})$ and a direct computation shows that $f^*\mu_{\lambda}^*(U_{\vert \HP^n},\varphi)=(U,\langle\lambda\rangle \varphi)$.
+\end{proof}
+ 
+
+\end{num}
+%
+% Given the previous remarks, we consider the case of $\MSp_S$,
+% a symplectic bundle $\cE=(E,\psi)$ over $S$ and a unit $u \in \GG(S)$.
+% We will compare the Borel classes of a symplectic bundle $\cE=(E,\psi)$ over $S$
+% and its "twisted" version,
+% $(E,u.\psi)$.
+% First, we remark that we have an isometry $\omega_2\simeq u\omega_2$ given by the matrix
+%\[
+%\sigma_u:\begin{pmatrix} u & 0 \\ 0 & 1\end{pmatrix}.
+%\]
+%More precisely,
+%\[
+%\begin{pmatrix} u & 0 \\ 0 & 1\end{pmatrix}\begin{pmatrix} 0 & 1 \\ -1 & 0\end{pmatrix} \begin{pmatrix} u & 0 \\ 0 & 1\end{pmatrix} =\begin{pmatrix} 0 & u \\ -u & 0\end{pmatrix}.
+%\]
+%This yields an action of $\GG$ on $\HP^n_S$ for any $n>0$,
+% sending the universal bundle $(U_{2n},\phi)$ to $(U_{2n},u\phi)$.
+% Indeed, one can easily check that the symplectic form induced on $U_{2n}$ by the composite
+%\[
+%U_{2n}\to \AA^{2n}_S\xrightarrow{\oplus_n \sigma_u} \AA^{2n}_S
+%\]
+%is $u.\psi$. In the sequel, we write $\sigma_{u,n}$ in place of $\oplus_n \sigma_u$. We then obtain a morphism
+%\[
+%m:\GG\times \HP^n_S\to \HP^n_S
+%\]
+%under which $m^{-1}(U_2,\psi)=(\sigma_{u,n}(U_2),u.\psi)$.
+% One easily checks that this action of $\GG$ is compatible with the inclusions $\HP^n_S\to \HP^{n+1}_S$, yielding an action of $\GG$ on $\BSp_2^S$ of the form
+%\[
+%m:\GG\times\BSp_2^S\to \BSp_2^S
+%\]
+%We let $b=b^\MSp$ be the canonical $\Sp$-orientation on $\MSp_S$. Then one obtains a class:
+%\begin{align*}
+%b_1(U_2,u.\psi)=b_1(m^{-1}(U_2,\psi))&=m^*b_1(U_2,\psi) \in \MSp^{2,1}(\BSp_2^S) \\
+%&=\MSp^{2,1}(\HP^\infty) \simeq \MSp^{2,1}(\MSp_S).b_1(U_2)
+%\end{align*}
+%where the last isomorphism follows from the symplectic projective bundle theorem.
+% In particular, there exists a unique class $\lambda_u \in \MSp^{2,1}(\MSp_S)$ such that: $b_1(U_2,u.\psi)=\lambda_u.b_1(U_2)$.
+%
+%We are then reduced to show that the class of $\lambda_u$ is multiplication by $\langle u\rangle$. In fact, we only need to prove that the multiplication by a unit defined above
+%\[
+%m_u:\BSp_2\to \BSp_2
+%\]
+%is the multiplication by $\langle u\rangle$. \fred{This assertion should be made more precise, as by definition, $<u>$ is an endomorphism
+% of either the pointed sheaf $\GGx X$, the Thom space $\Th(\AA^1_X)$, of the $0$-th sphere spectrum.}
+%The action defined above is compatible with the stabilization maps and we obtain a commutative diagram
+%\[
+%\xymatrix{\BSp_2\ar[r]^-{m_u}\ar[d] & \BSp_2\ar[d] \\
+%\BSp\ar[r]_-{m_u} & \BSp}
+%\]
+%The map $m_u:\BSp\to \BSp$ is precisely multiplication by $\langle u\rangle$.
+% Now the composite $\BSp_2\to \BSp\xrightarrow{m_u}\BSp$ can be seen as an element of $[\BSp_2,\BSp]$ (unstable here). We have 
+%\[
+%[\BSp_2,\BSp]=[\Sigma_{T}^{\infty}\BSp_2,\mathbf{BSp}]=[\Sigma_{T}^{\infty}\BSp_2,\mathbf{BO}(2)[4]]=\mathbf{BO}^{4,2}(\Sigma_{T}^{\infty}\BSp_2)
+%\]
+%The latter is just $(\mathbf{BO}^{*,*}[[b_1]])^{(4,2)}$ (the subgroup of elements of degree $(4,2)$), and we see that the class of the composite is just $\langle u\rangle b_1$. The result follows from the commutativity of the previous diagram. We have proved the following crucial proposition.
+%\fred{I am a bit uncomfortable with the last step of this proof. It seems strange that the assertion reduces to the case of hermitian (or even othgonal) K-theory as there is no map
+% from $\KSp$ to $\MSp$. The global plan is ok however. I believe one can di this proof directly with $\MSp$, using formula \eqref{eq:MSp_as_colim} and going back
+% to the action of $\GG$ on $\Sp$. To be done...}
+%\end{num}
+%
+%\jean{Here is a new approach:}
+%
+%For any $n\in\NN$, let $U_{n}$ be the universal bundle on $\HP^n_S$ which is of rank $2$. We have a universal split sequence
+%\[
+%0\to U_n\xrightarrow{i_n} \OO_S^{2n+2}\xrightarrow{p_n} V_{2n}\to 0
+%\]
+%in which $V_{2n}$ is of rank $2n$. If $\chi_n:U_n\to U_n^\vee$ is the universal form on $U_n$, we have the retraction $r_n:\OO_S^{2n+2}\to U_n$
+%defined by the composite
+%\[
+%\OO_S^{2n+2}\xrightarrow{h_{2n+2}}(\OO_S^{2n+2})^\vee\xrightarrow{i_n^\vee}U_n^\vee\xrightarrow{\chi_n^{-1}} U_n
+%\]
+%and a morphism $s_n:V_{2n}^{\vee}\to \OO_S^{2n+2}$ defined by 
+%\[
+%V_{2n}^{\vee}\xrightarrow{p_n^\vee}(\OO_S^{2n+2})^\vee\xrightarrow{h_{2n+2}}\OO_S^{2n+2}
+%\]
+%such that $\psi_n:p_ns_n:V_{2n}^{\vee}\to V_{2n}$ is a skew symmetric isomorphism.
+%We obtain an isomorphism
+%\[
+%\OO_S^{2n+2}\xrightarrow{(r_n,p_n)}U_n\oplus V_{2n}.
+%\]
+%For any unit $u$, we obtain a morphism (as $\mathbb{G}_m$ acts on $\HP^n_S$)
+%\[
+%m_u:\HP^n_S\to \HP^n_S
+%\]
+%inducing a morphism $m_u:U_n\to U_n$ and in turn a morphism of Thom spaces $m_u:Th(U_n)\to Th(U_n)$. The identity on $V_{2n}$ induces the identity on Thom spaces and we consider 
+%\[
+%Th(\OO_S^{2n+2})\simeq Th(U_n)\wedge Th(V_{2n})\xrightarrow{m_u\wedge \mathrm{Id}} Th(U_n)\wedge Th(V_{2n})\simeq Th(\OO_S^{2n+2})
+%\]
+%wich is induced by an isomorphism of $\OO_S^{2n+2}$. I think that its class in 
+%\[
+%[Th(\OO_S^{2n+2}),Th(\OO_S^{2n+2})]=[Th(\OO_S),Th(\OO_S)]
+%\] 
+%is the determinant (this is certainly true over $\ZZ$ and then the result holds for $u=-1$), which should be $u$. It follows that the class of $m_u$ in 
+%\[
+%[Th(U_n),Th(U_n)]
+%\]
+%is $\langle u\rangle$. One can then check that it stabilizes with respect to $n$ and thus that the induced map on Thom spaces of the universal bundles $U$ on $\BSp_2$ is also $\langle u\rangle$. Now, we consider the composite 
+%\[
+%\Sigma^{\infty}\BSp_2\to \Sigma^{\infty}Th(U)\xrightarrow{m_u}\Sigma^{\infty}Th(U)\to \MSp(1)[2]
+%\]
+%which gives the Euler class of $e(U,u\varphi)$. The commutative diagram
+%\[
+%\xymatrix{\Sigma^{\infty}\BSp_2\ar[r]\ar[d]^-{m_u} & \Sigma^{\infty}Th(U)\ar[d]_-{m_u} \\
+%\Sigma^{\infty}\BSp_2\ar[r] & \Sigma^{\infty}Th(U)}
+%\]
+%allows then to conclude that $e(U,u\varphi)=\langle u\rangle e(U,\varphi)$.
+%
+%%If we consider instead of $i_n$ the composite
+%%\[
+%%U_n\xrightarrow{i_n}\OO_S^{2n+2}\xrightarrow{\sigma_{u,n}}\OO_S^{2n+2}
+%%\] 
+%%the above maps change accordingly and the induced map on the Thom space of $U_{n}$ is the one we want to compute. Taking the identity on the Thom space of $V_{2n}$, this is tantamount to computing the map on the Thom space of $\OO_S^{2n+2}$. The map on $U_n\oplus V_{2n}$ is given by the composite
+%%\[
+%%U_n\oplus V_{2n}\xrightarrow{(r_n(u),p_n)^{-1}}\OO_S^{2n+2}\xrightarrow{(r_n,p_n)}U_n\oplus V_{2n}
+%%\]
+%%where $r_n(u)$ is obtained as above using $\sigma_{u,n}\circ i_n$ instead of $i_n$.
+%
+%\begin{prop}\label{prop:GW-linearity_Borel}
+%Let $(\E,b)$ be an $\Sp$-oriented spectrum over $S$.
+% Let $X$ be a smooth $S$-scheme with a global unit $u \in \GG(X)$, and $(E,\psi)$ a rank $2n$ symplectic bundle over $X$.
+% Then one has:
+%$$
+%b_1(E,u.\psi)=\langle u^n \rangle.b_n(E,\psi).
+%$$
+%\end{prop}
+%\begin{proof}
+%By universality of the $\Sp$-oriented spectrum $\MSp$, one can assume $\E=\MSp_S$.
+% Using the symplectic projective bundle theorem as in \cite[2.2.8]{DF3}, one reduces to the case $X=\HP^\infty_S=\BSp_2^S$.
+% \fred{Finish as suggested above...}
+%\end{proof}
+
+\subsection{The FTL associated to an $\Sp$-oriented spectrum}
+
+\begin{num}\label{num:SP-orient->FTL}
+Let $(\E,b)$ be an $\Sp$-oriented ring spectrum over $S$.
+ Its ring of coefficients $\E^{**}:=\E^{**}(S)$ is a bigraded ring.
+ Moreover, the action of $\epsilon=-\langle -1 \rangle$ on $\SH(S)$
+ allows to equip it with a bigraded $\ZZe$-algebra structure.
+ When dealing with symplectic orientations, and the forthcoming associated
+ FTL, it is more natural to consider the subring
+ $\E^{\tw 2*}:=(\E^{4n,2n}(S), n \in \ZZ)$,
+ which is now a graded $\ZZe$-algebra.\footnote{Indeed, Borel classes live
+ in degree $\tw 2*$.}
+
+In \cite[Def. 2.3.2]{DF3}, we proved that one can associate to $(\E,b)$
+ a $(3,4)$-series that we will denote by $F_t^b(x,y,z)$
+ with coefficients in $\E^{\tw 2*}$.
+ The method is directly imported from the $\GL$-oriented case
+ (compare \cite[2.1.19]{Deg12}):
+ thanks to the symplectic projective bundle theorem (\cite[2.2.3]{DF3}),
+ one gets a canonical isomorphism
+$$
+\E^{\tw 2*}(\HP^\infty_S \times_S \HP^\infty_S \times_S \HP^\infty_S)
+ \simeq \E^{\tw 2*}(S)[[x,y,z]]
+$$
+where $x$ (resp. $y$, $z$) are formal variables which corresponds
+ to the Borel class of the tautological symplectic bundle $\cU_1$ (resp. $\cU_2$, $\cU_3$) on $\HP^\infty_S$
+  over the first (resp. second, third) coordinates.
+ The triple tensor product $\cU_1 \otimes \cU_2 \otimes \cU_3$ is naturally a rank $8$ symplectic bundle. 
+ It follows that one can write the total Borel class \eqref{eq:total_borel}:
+\begin{equation}\label{eq:Borel&FTL}
+F_t^b(x,y,z):=b_t(\cU_1 \otimes \cU_2 \otimes \cU_3)
+\end{equation}
+as a polynomial in $t$ of degree $4$, with coefficients in $\E^{**}[[x,y,z]]$.
+ In other words, the expression $F_t^b(x,y,z)$
+ defines a $(3,4)$-series in the formal variables $x,y,z$ as required.
+ It satisfies the symmetry and associativity axioms of \Cref{df:FTL}
+ according to the analogous properties of the tensor product
+ of symplectic bundles.
+
+In \emph{op. cit.}, the Neutral and Semi-neutral element axioms were only proved
+ under the additional assumption that $\E$ is $\SL$-oriented.
+ Thanks to \Cref{cor:epsilonlinearity}, we can now avoid the latter assumption on $\E$.
+ In fact, the mentioned corollary readily implies that the FTL $F_t^b(x,y,z)$
+ satisfies the $\epsilon$-linearity axiom.
+ Once this property is known, one deduces the Neutral and Semi-neutral element
+ properties as in the proof of \cite[Prop. 2.3.4]{DF3}.
+
+The above procedure allows us to deduce the following theorem
+ (which enhances \cite[\textsection 2.3]{DF3} thanks to the $\epsilon$-linearity axiom).
+\end{num}
+\begin{prop}
+The association $(\E,b) \mapsto \big(\E^{\tw 2*},F_t^b(x,y,z)\big)$ described above
+ defines a canonical pseudo-functor from the scheme-fibred category of $\Sp$-oriented ring spectra
+ to the ring-fibred category of formal ternary laws $\FTL$.
+\end{prop}
+\begin{proof}
+The association on objects was described in the paragraph preceding the statement.
+ The functoriality assertion follows from Formulas \eqref{eq:Borel&FTL},
+ \eqref{eq:Sp-morphisms&Borel_classes}
+ and the symplectic splitting principle \cite[Par. 2.2.5]{DF3}.
+\end{proof}
+
+\begin{rem}\label{rem:repFTL&BC}
+To be more explicit about the pseudo-functoriality assertion (see also the forthcoming proposition),
+ we mean in particular that for any morphism
+ of scheme $f:T \rightarrow S$ and any s$\Sp$-oriented ring spectrum $(\E,b)$ over $S$,
+ if we let $\E_T=f^*(\E)$ with the $\Sp$-orientation $b_T$ obtained by pullback
+ (from the $\MSp$-algebra structure), then one gets a canonical morphism of FTL:
+$$
+\big(\E^{\tw 2*}(S),F_t^b\big) \rightarrow \big(\E^{\tw 2*}(T),F_t^{b_T}\big)
+$$
+which can be decomposed as an extension of scalars along
+ the ring extension $\E^{\tw 2*}(T)/\E^{\tw 2*}(S)$ and then an isomorphism.
+\end{rem}
+
+\begin{df}
+Let $S$ be a scheme. We say that a formal ternary law $(R,F_t)$ is \emph{representable over $S$}
+ if there exists an $\Sp$-oriented ring spectrum $(\E,b)$ over $S$ such that $(R,F_t) \simeq (\E^{**}(S),F_t^b)$.  
+ We will say that $(R,F_t)$ is \emph{weakly representable over $S$} if there exists an $\Sp$-oriented ring spectrum $(\mathbb{E},b)$
+ and a (graded) ring homomorphism $\varphi: \mathbb{E}^{*,*}(S)\to R$ such that $(R,F_t)=(\E^{**},\varphi_*F_t^b)$.
+
+Representable (resp. weakly) will mean representable (resp. weakly) over some scheme.
+\end{df}
+
+\begin{ex}\label{ex:representableFTL}
+Recall \Cref{df:addmulFTL} for additive and multiplicative FTL.
+\begin{enumerate}
+\item The additive FTL with coefficients in $\ZZe$ (resp. $\QQe$) is representable
+ by Milnor-Witt motivic cohomology spectrum $\HMW \ZZ$ over $\QQ$ (resp. $\ZZ$)
+ as proved in \cite[Th. 3.3.2]{DF3}) (resp. \cite[Cor. 3.3.5]{DF3}).
+ More generally, over any $\ZZ[1/6]$-scheme (any scheme) $S$, the $\Sp$-oriented ring spectrum $\HMW\ZZ_S$
+ (resp. $\HMW\QQ_S$) admits the additive formal group law (see \emph{loc. cit.} and use base change
+ \Cref{rem:repFTL&BC}).
+\item The multiplicative FTL with coefficients in $\ZZe^{mul}$
+ is representable by the (higher) Grothendieck-Witt (aka hermitian K-theory) $\GWsp_\RR$ ring spectrum
+ over $\RR$, according to \cite[Th. 6.6]{FH21} (see also \cite[\textsection 3.2]{CDFH}).
+ More generally, using again base change, over any $\ZZ[1/2]$-scheme $S$,
+ the $\Sp$-oriented ring spectrum $\GWsp_S$ admits the multiplicative formal group law.
+\end{enumerate}
+\end{ex}
+
+\begin{rem}
+There is an obvious obstruction for an FTL to be representable:
+ its ring of coefficients must be isomorphic to the $\tw2*$-graded part of the
+ ring of coefficients of some (motivic) ring spectrum. In particular, it must be graded!
+ Note on the other hand that the grading on the ring of coefficients
+ of a representable FTL is compatible with the notion of degree 
+ introduced in \Cref{df:FTL}.
+
+Apart from the obvious restriction on grading,
+ the problem of determining which FTLs are representable is a mystery.
+ Note that it is already an open question to determine which formal group laws
+ are representable by a classical complex-oriented ring spectrum, or
+ even a $\GL$-oriented (motivic) ring spectrum.
+\end{rem}
+
+\begin{prop}\label{prop:sp-orient&FTL}
+Let $(\E,b)$ be an $\Sp$-oriented ring spectrum with associated formal ternary law $F_t^b$.
+
+Then there exists a one-to-one correspondence between the strict isomorphisms of $FTL$ (\Cref{df:morph_FTL})
+ of the form $(Id,\phi):(\E^{\tw 2*},F_t^b) \rightarrow (\E^{\tw 2*},F_t)$
+ and the $\Sp$-orientations $b'$ of $\E$.
+\end{prop}
+\begin{proof}
+Indeed, according to \Cref{cor:chg_Sp-orient},
+ the $\Sp$-orientation $b'$ corresponds to the power series $\phi$
+ with coefficients in $\E^{**}$ such that $b'=\phi(b)$.
+ The fact that $(Id,\phi)$ is an isomorphism from $F_t^b$ to $F_t^{b'}$
+ follows from the symplectic splitting principle and Formula
+ \eqref{eq:firstBorel&chg_orient}.
+
+Given now a strict isomorphism of the form
+ $(Id,\phi):(\E^{**},F_t^b) \rightarrow (\E^{**},F_t)$,
+ we get that $b'=\phi(b)$ is an $\Sp$-orientation and the isomorphism $\phi$
+ gives an identification between $F_t$ and $F_t^b$.
+\end{proof}
+
+As in the classical case, one gets the following notable corollary.
+\begin{cor}
+Given an $\Sp$-orientable ring spectrum $\E$,
+ there exists a unique formal ternary law $F_t^\E$ up to strict isomorphism associated with an $\Sp$-orientation on $\E$.
+
+Moreover, given any ring spectrum $\F$, if $\F$ admits an $\E$-algebra structure,
+ then $\F$ is $\Sp$-orientable and the FTL associated with any $\Sp$-orientation on $\F$
+ is uniquely strictly isomorphism to $F_t^\E$
+ (after extension of scalars along $\F^{\tw 2*}/\E^{\tw 2*}$).
+\end{cor}
+
+We close this section with the following theorem.
+\begin{thm}\label{thm:log_FTL}
+ Any representable formal ternary law $F_t$
+ with coefficients in a $\QQ$-algebra is uniquely strictly isomorphic to the additive FTL.
+\end{thm}
+In other words, there exists a unique strict isomorphism of FTLs
+$$
+\mathrm{log}_{F_t}:(R,F_t) \rightarrow \big(R,F_t^{add}\big)
+$$
+called the \emph{logarithm} of $F_t$.
+\begin{proof}
+Let $(\E,b)$ be a rational $\Sp$-oriented ring spectrum over some scheme $S$
+ whose associated FTL is $F_t$.
+ The rationalization $L_\QQ\E$ still represents $F_t$,
+ so we can assume that $E$ is rational.
+ According to \cite[Cor. 6.2]{DFJK}, the rational sphere spectrum over $S$ is isomorphic
+ to the rational Milnor-Witt motivic cohomology spectrum $\HMW\QQ_S$.
+ In particular $\E$ admits a canonical $\HMW\QQ_S$-algebra structure.
+ Then the theorem follows from \Cref{ex:representableFTL}(1) and the preceding corollary.
+\end{proof}
+
+\subsection{Todd classes and FTL}
+
+\begin{num}
+As in \Cref{num:todd},
+ we consider $\Sp$-oriented ring spectra $(\E,b)$ and $(\F,b')$
+ and a morphism  of ring spectra $\psi:\E \rightarrow \F$.
+ For any scheme $S$, we consider the induced morphism of bigraded rings:
+$$
+\psi_{\HP^\infty_S}:\E^{**}(\HP^\infty_S) \rightarrow \F^{**}(\HP^\infty_S).
+$$
+According to the symplectic projective bundle theorem (\cite[Th. 2.2.3]{DF3}), $\psi_{\HP^\infty_S}$ corresponds to a morphism of bigraded rings:
+$$
+\E^{**}(S)[[u]] \rightarrow \F^{**}(S)[[t]]
+$$
+where $u$ and $t$ are indeterminates of bidegree $(4,2)$.
+ Let us denote by $\phi(t)$ the power series image of $u$ under this latter map.
+ By definition, $\phi(t)$ is uniquely determined by the relation in $\F^{**}(\HP^\infty_S)$:
+\begin{equation}
+\psi_{\HP^\infty_S}(b)=\phi(b').
+\end{equation}
+Moreover, $\phi(b')$ is an $\Sp$-orientation of $\F$ over $S$
+ and it follows from \Cref{cor:chg_Sp-orient} that it has the form:
+$$
+\phi(t)=t+\sum_{i>1} a_i.t^i
+$$
+where $a_i \in \F^{4-4i,2-2i}(S)$. 
+ In particular, the following power series is well defined:
+$$
+\tilde \Theta(t):=\frac t {\Theta(t)}=1-a_2.t+(a_2^2-a_3).t^2+(-a_4+2a_2a_3-a^3_2).t^4+ \cdots
+$$
+The next result is a direct analog of the $\GL$-oriented case
+ (see \cite[Prop. 4.1.2]{Deg12}).  
+\end{num}
+
+\begin{prop}
+The Todd class $\td_\psi:\KSp_0 \rightarrow \F^{00 \times}$
+ associated with the morphism $\psi$ (\Cref{prop:computeToddclass})
+ is uniquely characterized by the relation 
+$$
+\td_\psi([\cU])=\left. \frac t {\Theta(t)}\right\vert_{t=b_1(\cU)}
+$$
+for a rank $2$ symplectic bundle $\cU$ over $X$.
+\end{prop}
+The case of an arbitrary symplectic bundle $\cU$ of rank $2n$ is determined
+ by the symplectic splitting principle \Cref{num:sp-splitting-principle}.
+ One introduces Borel roots
+ $b_1^{(1)}=b_1(\cU_1)$, ..., $b_1^{(n)}=b_1(\cU_n)$ such that the Borel classes
+ of $\cU$ satisfies the relations given by $b_t(\cU)=\prod_i (1+b_1^{(i)}.t)$.
+ Then we obtain the expression
+$$
+\td_\psi([\cU])=\prod_{i=1}^n \tilde \Theta\big(b_1^{(i)}\big)
+$$
+which gives a computation of the left hand-side in terms of the Borel classes
+ $b_i(\cU)$.
+
+%\begin{rem}
+% Moreover, \Cref{prop:sp-orient&FTL} implies that
+% $(\Id,\phi):(\F^{**}(S),F^{b'}_t) \rightarrow (\F^{**}(S),F^{\phi(b')}_t)$ is a strict isomorphism of FTL.
+%\end{rem}

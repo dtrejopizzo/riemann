@@ -1,7 +1,7 @@
 # The critical primitive finite part (Stage 4): positivity is free, boundedness is the only wall
 
 *Pure mathematics. We carry out Stage 4 of the Critical Tate–Weil Hodge Module $\mathsf{TW}_\Z$ and
-reach a clean, honest consolidation. The decisive new input is Theorem 2 of the local construction:
+reach a clean, candid consolidation. The decisive new input is Theorem 2 of the local construction:
 **every finite Euler colligation $K_P$ is unconditionally a positive kernel.** Combined with the
 elementary fact that **weak limits of positive operators are positive**, this shows that the
 Hodge-index sign — the upper pinning of the Birman–Schwinger spectral radius — is **not a separate
@@ -163,7 +163,7 @@ prevents the bounded weak limit, i.e. it is the failure of $L1$. The arithmetic 
 
 ---
 
-## 6. Status and honest endpoint
+## 6. Status and candid endpoint
 
 \textbf{Proved (modulo the Stage 5 identification, which is Tate $+$ explicit formula):}
 \begin{itemize}

@@ -161,7 +161,7 @@ At finite N = 2×10⁶: we see the **pre-freezing saturation region** q ∈ [1.5
 the empirical slope lies strictly between 0 and q. The sharp BRW freezing transition
 (the kink from linear to constant lambda) requires the N→∞ limit in the RESTRICTED sum.
 
-**Honest framing.** The forward-flow Camino 3 at N = 2×10⁶ reaches the boundary of the
+**Candid framing.** The forward-flow Camino 3 at N = 2×10⁶ reaches the boundary of the
 pre-freezing regime. The genuinely new computable object — the arithmetic rate function
 I(α) and the freezing threshold q_c — is visible in its finite-N precursor but would
 need N >> exp(exp(10)) to exhibit the asymptotic Gaussian bulk AND the large-deviation

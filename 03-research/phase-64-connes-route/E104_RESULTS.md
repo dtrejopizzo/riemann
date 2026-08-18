@@ -41,7 +41,7 @@ This is the **strongest and most faithful realization of Connes' route to date**
 - The completed `ξ` carries this; a function with off-line zeros (DH-type) cannot — its passive
   continuation breaks at `ω=β−½`.
 
-## Honest status
+## Candid status
 
 Still a criterion, not a proof: we verify ζ is passive on a finite point-set down to small ω; proving
 Pick-PSD for **all** point-sets and **all** `ω>0` (equivalently the de Branges kernel positivity for

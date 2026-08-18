@@ -76,7 +76,7 @@ a precise form:
 > deviation structure ($a_k$ via the many-factor integers) constrains the spectral/zero side.
 
 This is genuinely RH-directed (it is *about* the zeros, via an exact identity), and it is the first place in the
-whole program where the new ω-structure meets the zeros non-trivially and exactly. Honest caveats:
+whole program where the new ω-structure meets the zeros non-trivially and exactly. Candid caveats:
 - It brings in the **automorphic spectrum** (Maass forms, the Kuznetsov/Motohashi machinery) — a whole new
   apparatus, deep and technical.
 - The $k\ge3$ spectral theory of moments is **open** (the $GL(k)$ Motohashi analogue is conjectural) — this is

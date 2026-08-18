@@ -13,7 +13,7 @@ The program follows strict methodological rules to avoid the pitfalls identified
 - **Liouville is fully multiplicative** — λ(n) = (−1)^Ω(n) is completely multiplicative (λ(mn) = λ(m)λ(n) for all m, n), with Dirichlet series ζ(2s)/ζ(s) and Euler product ∏_p(1+p⁻ˢ)⁻¹. It was flagged as a key test case because it can exhibit anomalous resonance despite full multiplicativity.
 - **N-dependence tracking** — every metric is reported across N ∈ {10⁴, 10⁵, 10⁶, 10⁷}; a single number is never treated as a result, only a curve.
 - **Kahan summation** — naive summation was shown to corrupt GEV (generalized extreme value) fits at N ≳ 10⁵.
-- **Honest reporting** — refuted hypotheses are reported as refuted, without post-hoc adjustment.
+- **Candid reporting** — refuted hypotheses are reported as refuted, without post-hoc adjustment.
 
 ### The Davenport–Heilbronn function (canonical definition)
 

@@ -38,7 +38,7 @@ Connes' trace formula. Substituting gives `W(f)`. ∎
 
 So **the self-intersection identity `(Z_f·Z_f)=W(f)` is a formal consequence of the trace formula** —
 it holds at the level of the correspondence algebra, *once the pairing `⟨[F_s],[F_t]⟩` is defined as
-an honest number with the trace-formula value*. This part is unconditional/formal: no positivity yet.
+an candid number with the trace-formula value*. This part is unconditional/formal: no positivity yet.
 
 ---
 
@@ -61,7 +61,7 @@ unconditionally** and fixes `Z_f` in the primitive part.
 **Proposition 2.** Suppose:
 - (A) the arithmetic intersection pairing on `\bar X=\overline{X×X}` exists, is symmetric and
   `ℝ`-bilinear on `\widehat{\mathrm{CH}}^1(\bar X)`, and `f↦Z_f` is linear with `(Z_f·Z_f)=W(f)`
-  (Lemma 1 made honest);
+  (Lemma 1 made candid);
 - (B) **Arithmetic Hodge index (Abboud):** for primitive `D` (`(D·H)=0`), `(D·D)≤0`;
 - (C) the explicit-formula **sign convention** places `W` on the component where Abboud gives the sign
   `W(f)=−(Z_f·Z_f)_{\text{prim}}` (the Weil form is *minus* the primitive self-intersection).
@@ -70,7 +70,7 @@ Then for every admissible `f`, `(Z_f·H)=0` (§2) ⟹ `(Z_f·Z_f)≤0` (B) ⟹ `
 Weil positivity holds for all `f`, hence **RH**. ∎
 
 (A)+(C) are the realization; (B) is Abboud's unconditional theorem. The degree hypothesis is §2.
-So **RH follows from (A)** — the existence of the honest pairing and realization with the stated sign.
+So **RH follows from (A)** — the existence of the candid pairing and realization with the stated sign.
 
 ---
 
@@ -96,7 +96,7 @@ function-field theorem that *proves* RH for curves.
 > Hodge-index inequality `(D·D)≤0` holds for `(D·H)=0`. Then RH.
 
 Everything in §§1–3 is assembled around this one statement. It is **not** proved here; it is the
-active Connes–Consani frontier. Honest verdict: the program has reduced RH to the **construction of one
+active Connes–Consani frontier. Candid verdict: the program has reduced RH to the **construction of one
 arithmetic intersection pairing with one positivity** — the sharpest, most localized form of MW-5, with
 all the surrounding apparatus (model space, Lax–Phillips realization, Kreĭn–Langer index, the formal
 trace-formula self-intersection identity, the degree-balance `μ_max=1`, and Abboud's inequality as the
@@ -118,7 +118,7 @@ intended tool) rigorously in place.
 
 **No false victory.** RH is open; §4 is the frontier. The contribution of this pure-math arc is the
 **complete assembly around a single, named, arithmetic-geometric obstruction**, with a proposed
-construction (two-variable kernel + Connes–Consani Frobenius) for it. This is the honest current
+construction (two-variable kernel + Connes–Consani Frobenius) for it. This is the candid current
 endpoint: the proof of RH along this route `=` the construction of §4, which is genuinely open
 mathematics (the Connes–Consani program), not something to be fabricated.
 ```

@@ -91,7 +91,7 @@ divergent-but-slower fluctuation ($\log\log T \lll T$) is the precise resolution
 **Meta-note.** This is the **first audited pillar (Days 7–13) to hold up largely intact** — a possible sign
 the program has reached more stable ground (the durable stack: B-1, EF-id, K1–K4, the scaling law, and now
 DENS.1 with explicit hypothesis). Earlier pillars (CLOS in $H(E_\gamma)$, the Day-10 theorem) cracked;
-this one only acquired an honest side-condition.
+this one only acquired an candid side-condition.
 
 **Next:** with DENS.1 secured, return to the **lower frame bound** (form-core A.2) and **relative Carleson
 in density form** ($K\rho_{\mathrm{off}}\notin L^1$), both now resting on an audited foundation.

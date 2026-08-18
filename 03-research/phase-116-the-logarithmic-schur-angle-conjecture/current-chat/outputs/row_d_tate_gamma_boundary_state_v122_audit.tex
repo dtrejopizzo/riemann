@@ -1,0 +1,187 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{The Tate moments as the two exterior Gamma states (v122)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Causal and anticausal boundary states}
+
+For $a>0$ define
+\begin{align}
+ z_{a,+}(t)&=\sqrt{2a}\int_{-\infty}^t
+                  e^{-a(t-s)}f(s)\,ds,\notag\\
+ z_{a,-}(t)&=\sqrt{2a}\int_t^\infty
+                  e^{-a(s-t)}f(s)\,ds.                       \tag{1}
+\end{align}
+They satisfy
+\begin{equation}
+ z_{a,+}'=-az_{a,+}+\sqrt{2a}f,\qquad
+ z_{a,-}'=az_{a,-}-\sqrt{2a}f.                              \tag{2}
+\end{equation}
+
+\begin{theorem}[Tate moments are exterior Gamma states --- \PROVED]
+If $\operatorname{supp}f\subset[L,R]$, then
+\begin{align}
+ z_{a,+}(t)&=\sqrt{2a}\,e^{-at}
+       \int_L^Re^{as}f(s)\,ds &&(t\ge R),\notag\\
+ z_{a,-}(t)&=\sqrt{2a}\,e^{at}
+       \int_L^Re^{-as}f(s)\,ds &&(t\le L).                   \tag{3}
+\end{align}
+At $a=\frac12$, the conditions
+\begin{equation}
+ M_+(f)=\int e^{s/2}f(s)\,ds=0,\qquad
+ M_-(f)=\int e^{-s/2}f(s)\,ds=0                             \tag{4}
+\end{equation}
+are equivalent to vanishing of the right causal and left anticausal
+exterior states, respectively.
+\end{theorem}
+
+\begin{proof}
+For $t\ge R$ and $t\le L$, respectively, pull the $t$-dependent exponential
+out of (1).  This gives (3), and (4) is its specialization to $a=1/2$.
+\end{proof}
+
+Thus the two-dimensional Tate terminal of v117 is exactly the boundary
+state space of the first Gamma cell.  This identification is source-level
+and precedes any sign or Schur complement.
+
+\section{A local leakage inequality with a strict margin}
+
+Let $J=[r,r+L]$ and let $z\in H^1(J)$.  For one causal Gamma channel set
+\begin{equation}
+ f=\frac{z'+az}{\sqrt{2a}},\qquad
+ \mathcal E_a(z)=\frac1{a^2}\int_J|z'|^2.                    \tag{5}
+\end{equation}
+
+\begin{theorem}[Local Gamma--Tate control --- \PROVED]
+For every $a,L>0$,
+\begin{equation}
+ \boxed{
+ \|f\|_{L^2(J)}^2
+ \le\left(\frac a2+a^3L^2\right)\mathcal E_a(z)
+    +\left(aL+\frac12\right)
+       \bigl(|z(r)|^2+|z(r+L)|^2\bigr).}                    \tag{6}
+\end{equation}
+For the Tate cell $a=\frac12$ this is
+\begin{equation}
+ \|f\|_{L^2(J)}^2
+ \le\left(\frac14+\frac{L^2}{8}\right)\mathcal E_{1/2}(z)
+  \frac{L+1}{2}\bigl(|z(r)|^2+|z(r+L)|^2\bigr).             \tag{7}
+\end{equation}
+In every arithmetic threshold cell,
+$L\le\delta_N\le\frac12\log(3/2)<0.203$, so the coefficient of the Gamma
+resistance in (7) is smaller than $0.256$.
+\end{theorem}
+
+\begin{proof}
+Expansion of (5) and integration of the cross term give
+\begin{equation}
+ \|f\|_2^2
+ =\frac1{2a}\|z'\|_2^2+\frac a2\|z\|_2^2
+   +\frac12\bigl(|z(r+L)|^2-|z(r)|^2\bigr).                  \tag{8}
+\end{equation}
+For $t\in J$,
+\[
+ |z(t)|^2\le2|z(r)|^2+2L\int_J|z'|^2.
+\]
+The analogous right-endpoint estimate and averaging give
+\[
+ \|z\|_2^2\le
+ L\bigl(|z(r)|^2+|z(r+L)|^2\bigr)+2L^2\|z'\|_2^2.
+\]
+Substitute this in (8), bound the signed endpoint difference by half the
+sum, and use $\|z'\|^2=a^2\mathcal E_a(z)$.  This proves (6).
+Equation (7) is $a=1/2$.  Finally $\delta_N$ decreases with $N$ and its
+largest value for $N\ge2$ is $\frac12\log(3/2)$.
+\end{proof}
+
+\section{Normalization against the moving Tate terminal}
+
+For the old interval $I_T$, the Tate Gram is
+\begin{equation}
+ G_T=2\begin{pmatrix}\sinh T&T\\T&\sinh T\end{pmatrix}.       \tag{9}
+\end{equation}
+For a newborn source $e$, write
+\[
+ b_E=\binom{M_+(e)}{M_-(e)},\qquad
+ C=B_T^*G_T^{-1}B_E,\qquad M=I+C^*C,
+\]
+as in v117.  By (3), the outer $a=1/2$ state vector is
+\begin{equation}
+ \zeta_E=
+ \binom{e^{-R/2}M_+(e)}{e^{L/2}M_-(e)}
+ =D_{L,R}b_E,                                               \tag{10}
+\end{equation}
+with $D_{L,R}=\operatorname{diag}(e^{-R/2},e^{L/2})$.
+The Tate terminal energy is
+\begin{equation}
+ \|CM^{-1/2}e\|^2+\|M^{-1/2}e\|^2=\|e\|^2.                 \tag{11}
+\end{equation}
+
+Equations (7), (10), and (11) reduce the clustered-leakage estimate v121
+(14) to a finite two-state comparison.  In typed form the candidate is
+\begin{equation}
+ \boxed{
+ \frac{L+1}{2}\,
+ B_E^*D_{L,R}^*D_{L,R}B_E
+ \le B_E^*G_T^{-1}B_E
+   +\left(\frac34-\frac{L^2}{8}\right)I_E.}                  \tag{12}
+\end{equation}
+Every term in (12) is source-defined.  The scalar remainder is the unused
+part of the unit Gamma budget after (7).  Proving (12) uniformly on every
+cluster, with the correct endpoint matrices for its orientation, would
+complete the unit leakage domination.
+
+\begin{theorem}[Uniform boundary-state domination --- \PROVED]
+For every $0<L\le\frac12\log(3/2)$, inequality (12) holds.  In fact its
+left side is bounded by $L(1+L)I_E<0.245I_E$, whereas the scalar summand
+on the right is larger than $0.744I_E$.
+\end{theorem}
+
+\begin{proof}
+After translating $J$ to $(0,L)$, the two state functionals in (10) have
+representers $e^{(t-L)/2}$ and $e^{-t/2}$.  Their Gram matrix is
+\[
+ K_L=\begin{pmatrix}
+ 1-e^{-L}&Le^{-L/2}\\
+ Le^{-L/2}&1-e^{-L}
+ \end{pmatrix}.
+\]
+Hence
+\[
+ \|B_E^*D_{L,R}^*D_{L,R}B_E\|
+ =\|K_L\|
+ =1-e^{-L}+Le^{-L/2}\le2L.
+\]
+Multiplication by $(L+1)/2$ bounds the left side of (12) by
+$L(1+L)I_E$.  At the largest allowed $L$ this is less than $0.245I_E$.
+The scalar part of the right side is
+$3/4-L^2/8>0.744$.  The remaining term
+$B_E^*G_T^{-1}B_E$ is positive.  This proves (12).
+\end{proof}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Tate moments equal the two exterior $a_0$ states & \PROVED & (3)--(4) \\
+Strict local Gamma leakage margin & \PROVED & (6)--(7) \\
+Explicit state/moment normalization & \PROVED & (9)--(11) \\
+Typed boundary-state domination & \PROVED & (12), Theorem 3 \\
+Contractivity (8c), condition $G$, row (d) & \OPEN & cascading audit remains \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

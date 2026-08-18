@@ -1,0 +1,48 @@
+\section{Riemannian foliated dynamical system (RFDS\texorpdfstring{$^{3}$}{3})}
+
+We consider a smooth, compact, orientable, closed 3-manifold $M$ with additional structure: foliation $\mathcal{F}$, transverse flow $\phi$. 
+
+    \subsection{Foliation}
+    A foliation $\mathcal{F}$ of $d$-codimension is a partition of sub-manifolds of $d$-codimension.
+    Let $M$ be a smooth, connected, closed and oriented manifold of $n$-dimension. It is equipped with a foliation of $d$-codimension as follows: let $(U_{i}, \phi_{i})_{i\in{I}}$ be an atlas.
+    The transition maps $\phi_{ij}:=\phi_{j}\circ\phi_{i}^{-1}$ which are defined over $U_{i}\cap{U_{j}}$ take forms 
+    \begin{multline*}
+        \phi_{ij}(x_{1},\cdots,x_{d},y_{d+1},\cdots,y_{n}) = (\phi_{ij}^{1}(x_{1},\cdots,x_{d}),\cdots,\phi_{ij}^{d}(x_{1},\cdots,x_{d}), \\
+        \phi_{ij}^{d+1}(x_{1},\cdots,x_{d},y_{d+1},\cdots,y_{n}), \phi_{ij}^{n}(x_{1},\cdots,x_{d},y_{d+1},\cdots,y_{n}))
+    \end{multline*}
+    for $i,j \in {I}$.
+    By piecing together the stripes, where $(x_{1}, \cdots, x_{d})$ are constant, from chart to chart, we obtain a maximal immersed sub-manifold $\mathcal{L}$ whose first $d$ local coordinates are constant on each $U_{i}$.
+    We call the sub-manifold a $\textit{leaf}$ of the foliation.
+    The foliation consists of the disjoint union of leaves.
+    
+    \subsection{Transversal flow}
+    A transverse flow $\phi$ is a smooth $\mathbb{R}$-action on a manifold $M$
+    \begin{equation*}
+        \phi : \mathbb{R} \times {M} \rightarrow {M}
+    \end{equation*}
+    which maps leaves of a foliation to leaves. 
+    For any two points $x$ and $y$ in a same leaf $\mathcal{L}$, there is a leaf $\mathcal{L}^{'}$ containing $\phi(t,x)$ and $\phi(t, y)$ for any $t\in\mathbb{R}$.
+    Let $\dot{\phi}$ be the vector field giving the velocity vector at a point.
+    We denote by $\omega_{\phi}$ the dual 1-form of the vector field $\dot{\phi}$ .
+    
+    \subsection{Bundle-like metric}
+    A Riemannian metric $g_{\mathcal{F}}$ on $(M,\mathcal{F},\phi)$ is called a \textbf{bundle-like metric} whose geodesics are perpendicular to all leaves whenever they are perpendicular to one leaf.
+    Note that any 1-codimensional foliation without singularities is Riemannian.\\
+    
+
+We consider 3-manifolds with additional structures as follows:
+\begin{definition}
+We define a foliated dynamical system on a 3-manifold by a triple $(M,\mathcal{F},\phi)$, where
+\begin{enumerate}
+    \item $M$ is a smooth, compact, orientable 3-manifold,
+    \item $\mathcal{F}$ is a 1-codimensional foliation on $M$,
+    \item $\phi$ is a smooth $\mathbb{R}$-action acting on $M$ such that
+    \begin{enumerate}
+        \item The flow is transverse to the leaves of the foliation up to a finite number of compact leaves;
+        \item The $\mathbb{R}$-action maps leaves to leaves.
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+The manifold and the flow may have boundaries and fixed-points.
+For this paper, we assume that the manifold is closed and the flow has no fixed-point.
+It is known that only mapping torus allows such a foliated dynamical system on itself.

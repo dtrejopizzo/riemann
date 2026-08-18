@@ -1,12 +1,12 @@
-# Program 10 — The Research Program (Phases 0–76)
+# Program 10 — The Research Program (Phases 0–107)
 
 This folder is the core of the project: a single continuous research program on the Riemann
-Hypothesis, run as a sequence of numbered phases (currently through **phase 76**) after nine
+Hypothesis, run as a sequence of numbered phases (currently through **phase 107**) after nine
 early exploratory computational programs (now conducted in Lise Science)
 (see [`../01-context/`](../01-context/), *Research Programs 1–9*).
 
 Each `phase-*/` folder is a self-contained block of work: setup, attacks, audits, and a
-verdict. The program's governing principle is **absolute honesty** — *a false victory would
+verdict. The program's governing principle is **absolute candor** — *a false victory would
 be worse than a failure*. No proof of RH was reached; every wall and every dead end is named.
 
 > **Language note.** Phase folder names are in English. Front-door and per-phase *summary*
@@ -101,6 +101,54 @@ The complete narrative is in
 | phase-73-cauchy-projection | Cauchy projection gate; the transformed compact branch reduced to the single finite Cauchy-Schur nodal identity NAT-PROJ |
 | phase-74-hilbert-eigenline-cancellation | Hilbert eigenline cancellation; NAT-PROJ reduced to an exact Hilbert product rule (HPR-DIV) on the projected eigenline |
 | phase-75-arithmetic-numerator-divisibility | Arithmetic numerator divisibility; attacks the ARITH-LOCK ⇒ CCM-ROOT-LOCK ⇒ CRIT-NUM-DIV ⇒ CAUCHY-EIG-LOC ⇒ HPR-DIV chain via a new signed arithmetic identity |
-| phase-76-normalized-adjugate-arithmetic-lock | Normalized adjugate arithmetic lock; autonomous phase closing the paper-53 endpoint chain down to a normalized-adjugate reformulation, with theorem-grade autopsies on each failed mechanism |
+| phase-76-normalized-adjugate-arithmetic-lock | Normalized adjugate arithmetic lock; safe-ratio closure theorem SR-SAFE ⇒ Ω7, exact Sherman–Morrison/displacement algebra, and the closing split SAFE-LIMIT-POINT = LP ∧ IDENT (closed at 67 documents; see PHASE_76_CLOSURE.md) |
+| phase-77-weyl-limit-point | Weyl limit-point closure; proves (or refutes) LP (limit-point for the semi-infinite CCM system, via Kato–Putnam on the rank-two displacement commutator) and IDENT (Gamma-prime identification in absolute convergence), the two halves left by phase 76 |
+| phase-78-build-neutral-lp-and-ident | Build-neutral LP and IDENT: separating the two halves from the construction that produced them |
+| phase-79-shared-convergence-and-ident-discriminant | The shared convergence lemma (GAP-Z) and the IDENT discriminant |
+| phase-80-relative-determinant-identification | Relative determinant identification |
+| phase-81-secular-arithmetic-anchor | Secular arithmetic anchor |
+| phase-82-coupled-generator-continuum | Coupled generator continuum |
+| phase-83-gamma-euler-coboundary | Gamma–Euler arithmetic coboundary |
+| phase-84-distributional-endpoint-module | Distributional endpoint module |
+| phase-85-parity-weyl-defect | Parity Weyl defect |
+| phase-86-signed-spectral-abel | Signed spectral Abel reduction |
+| phase-87-euler-deformation-discriminant | Euler deformation discriminant |
+| phase-88-endpoint-layer-pencil | Endpoint layer pencil |
+| phase-89-projective-layer-rotation | Projective layer rotation |
+| phase-90-projective-kato-euler-current | Projective Kato–Euler current |
+| phase-91-kato-coboundary-equivalence | Kato–coboundary equivalence |
+| phase-92-cluster-adjugate-projectivization | Cluster adjugate projectivization |
+| phase-93-direct-bordered-anchor | Direct bordered anchor |
+| phase-94-global-cofactor-cell-current | Global cofactor cell current |
+| phase-95-characteristic-jacobian-current | Characteristic Jacobian current |
+| phase-96-determinantal-prime-response | Determinantal prime response |
+| phase-97-euler-sensitivity-commutator | Euler sensitivity commutator |
+| phase-98-sensitivity-shell-split | Sensitivity shell split |
+| phase-99-adjugate-boundary-sandwich | Adjugate boundary sandwich |
+| phase-100-characteristic-cofactor-factorization | Characteristic cofactor factorization |
+| phase-101-covariant-bordered-current | Covariant bordered current; planted-falsifier controls |
+| phase-102-omega7-closure-campaign | Omega-7 closure campaign; finite certificates and the surviving direct inequality |
+| phase-103-direct-a1-closure | Exact direct-A1 reduction, compact--tail identity, finite certificates and Laguerre transport |
+| phase-104-unconditional-a1-closure | Unconditional A1 campaign; exact equivalences, Deep/Blaschke reduction and adversarial closure ledger |
+| phase-105-a1-geometry-and-deep-limit | Visual geometry of A1 and the literal Deep limit; clean restart from the two surviving targets |
+| phase-106-global-modular-star-audit | Global modular-star audit; self-adjoint Euler determinant no-go, second-resolvent target, and adelic half-density descent obstruction |
+| phase-107-arithmetic-lefschetz-reconstruction | Reverse engineering of a finite-support arithmetic Lefschetz divisor; function-field calibration, proper-global support rule, exact radical audit, and arithmetic surface program |
+| phase-108-row-a-construction | Row (a): the space over ℤ; the graded family, and the closure of principal invariance and of both pairing routes |
+| phase-109-one-sided-pairing | Does the one-sided assembly carry a pairing? No: any pairing reading the prime-power coefficients is blind to the zeros, for every kernel |
+| phase-110-principal-xi-divisibility | Does ξ-divisibility supply the principal subspace row (d) needs? Impossible on compactly supported data, by a growth argument independent of the zeros |
+| phase-111-schwartz-admissibility | Does I_∂ converge on Schwartz-class data? The threshold, and Assumption T |
+| phase-112-effective-cone | Requirement d5, the effective cone — satisfied formally; superseded by 113_10 |
+| phase-113-the-trace-on-schwartz-data | The trace on Schwartz data: rad = the χ-ideal, a Frobenius \*-algebra with a zero-free trace, d0/d2/d4/d5/K=0 built, d3 impossible inside 𝒟 — and row (d) proved **equivalent to RH** |
+| phase-114-closing-the-four-rows | Rows (a)–(c) completed and written up (paper 42); row (d) reduced to the sharp Douglas gate and then to one explicit joint residual — but the local-construction campaign re-proved two obstructions already in the paper |
+| phase-115-the-mixed-class-and-the-green-extension | Row (d) is missing an **object**, not an inequality: row (a)'s Green term is a rank cut r→1 (`ℓℓᵀ − diag ℓ`) and row (a) attains B=0 on its own primitive space — so it is row (d)'s equality case. Target: the mixed class **M**_f |
+| phase-116-the-logarithmic-schur-angle-conjecture | Audits and rejects a proposed Cauchy–Schwarz/Gamma-gap closure of row (d)'s constant/mean-zero Schur block, then extracts and names the estimate that survives: the Logarithmic Schur Angle Conjecture, ρ_N ≤ 1/(20 log N). Carried verbatim into paper 42, where row (d) is completed **conditionally** on it |
+| phase-117-the-transfer-comparison-measured | Measures the one item neither paper nor corpus addressed — the comparison carrying the Gamma–Tate *source model* to the *exact* threshold condition. **c_N < 1 at every threshold, decaying like (log N)^-0.6: the source route does not reach the target.** Galerkin bounds c_N from above, so this is one-sided-robust. Also falsifies ρ_N ≤ 1/(20 log N) at 4 of the 5 points in paper 42's own audit table. The exact target *does* hold on every threshold tested — so the redirect is to prove it directly in the output-defect metric |
+
+| phase-118-the-exact-threshold-inequality | Attacks the exact threshold condition directly — and **verifies against real zeros of ζ, to 10 digits, that `⟨A_T F,F⟩ = Σ_ρ h(γ_ρ)`**. The row-(d) inequality *is* localized Weil positivity on the primitive space, hence equivalent to RH (Weil 1952; Yoshida 1992; Bombieri 2000), so no internal reformulation can close it. `m₀`, the primitive space and the truncation all turn out **forced**, not chosen. Also: balanced factorization re-verified by an independent code path; Toeplitz/Hankel structure for the scattering operator refuted; the log-2 certificate reproduced and its limit diagnosed as analytic, not numerical. Closed |
+| phase-119-what-a-finite-compression-certifies | Pivot: stop asking whether Weil's form is positive (that question's only answer is RH) and ask what a **finite compression** certifies unconditionally — its inertia constrained by Sylvester, its moments computable from the prime side. Distinctive assets: the exact filtration, the balanced factorization as a second signature decomposition, a working Arb pipeline. Gated on the Davenport–Heilbronn test: does `Λ(n) = deg_det 𝕃_n` separate ζ from an object whose RH-analogue is false? |
 
 *Note: there are two `phase-44-*` folders (parallel threads run under that number).*
+
+*The phase index runs through **phase 119**; the header's "Phases 0–107" refers
+to the original scope of this folder.  The backward-map audit that organises
+phases 107–113 is [`THE_BACKWARD_MAP.md`](THE_BACKWARD_MAP.md).*

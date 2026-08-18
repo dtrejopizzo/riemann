@@ -1,0 +1,93 @@
+\usepackage{amssymb,amsmath,amscd, amsthm, array}
+\usepackage{cases} 
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+ \usepackage{bm}
+ 
+ %%%%%%%%%%%%%
+%\usepackage{mathpazo}
+\usepackage{newtxmath,newtxtext}
+%\usepackage{setspace}
+\usepackage{amsmath,mathtools}
+\usepackage{amsfonts}
+\usepackage{tikz-cd}
+%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%
+\usepackage{hyperref}
+\hypersetup{colorlinks}
+\hypersetup{
+    %bookmarks=true,         % show bookmarks bar?
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=magenta,        % color of links to bibliography
+    filecolor=violet,      % color of file links
+    urlcolor=blue      % color of external links
+}
+%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\@addtoreset{equation}{section}
+\def\theequation{\thesection.\arabic{equation}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\textwidth=14.5cm
+\textheight=21.5cm
+\oddsidemargin=0.8cm
+\evensidemargin=0.8cm
+\topmargin=1cm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \makeatletter
+  \parsep   = 0pt
+  \labelsep = 0pt
+  \def\@listi{%
+  \leftmargin = 0pt \rightmargin = 0pt
+     \labelwidth\leftmargin \advance\labelwidth-\labelsep
+   %  \topsep     = .5\baselineskip
+     \partopsep  = 0pt \itemsep       = 0pt
+     \itemindent = 0pt \listparindent = 0pt}
+  \let\@listI\@listi
+  \@listi
+  \def\@listii{%
+     \leftmargin = 0pt \rightmargin = 0pt
+     \labelwidth\leftmargin \advance\labelwidth-\labelsep
+     \topsep     = 0pt \partopsep     = 0pt \itemsep   = 0pt
+     \itemindent = 0pt \listparindent = 0pt}
+  \let\@listiii\@listii
+  \let\@listiv\@listii
+  \let\@listv\@listii
+  \let\@listvi\@listii
+  \makeatother
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\renewcommand{\arraystretch}{1.2}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjectural theorem}{Conjectural theorem}[section]
+\newtheorem*{definition}{Definition}
+\newtheorem*{remark}{Remark}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{example}{Example}
+
+%newcommand
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\F}{{\mathbb{F}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Fh}{{\mathcal{F}}}
+\newcommand{\Ah}{{\mathcal{A}}}
+\renewcommand{\det}{{\mathrm{det}}}
+\newcommand{\id}{{\mathrm{id}}}
+\newcommand{\tr}{{\mathrm{tr}}}
+\newcommand{\Sp}{{\mathrm{Sp}}}
+\newcommand{\Arg}{{\mathrm{Arg}}}
+\newcommand{\sdim}{{\mathrm{sdim}}}

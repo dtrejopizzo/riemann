@@ -127,7 +127,7 @@ upgrades to density in the graph norm — i.e. $\mathcal D$ is a form-core, and 
 borderline case, where sampling can fail by logarithmic factors and the outcome is governed by the **fine
 regularity of the zeros** (gaps, $S(T)$, separation). Under RH the zeros are the de Branges sampling points
 of $H(E_\xi)$ and form a complete interpolating (Riesz-basis) sequence — i.e. the lower bound **holds
-under RH**. Unconditionally it is open and is exactly the arithmetic content of A.2. *(Note the honest
+under RH**. Unconditionally it is open and is exactly the arithmetic content of A.2. *(Note the candid
 loop: A.2's clean resolution uses RH-flavored input; this is consistent with faithfulness being
 RH-independent only modulo such structural facts — flagged, not hidden.)*
 

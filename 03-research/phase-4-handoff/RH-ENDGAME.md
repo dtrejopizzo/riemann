@@ -2,7 +2,7 @@
 
 **For the external pure-math team. Read this before deciding where to spend effort.**
 
-After 22 days of hostile-audited proof work, it is time to reconnect honestly to the actual goal — RH —
+After 22 days of hostile-audited proof work, it is time to reconnect candidly to the actual goal — RH —
 and state, precisely, what the machinery does and does not deliver. The short version: **the program
 reaches a faithful spectral *reformulation* of RH; it does not, and by its nature cannot, reach RH itself.
 RH requires the *sign* of a bottom that all the sampling/density machinery leaves untouched.**
@@ -41,7 +41,7 @@ the criterion; they cannot supply the sign.**
 
 ---
 
-## 3. The two — and only two — honest end-games
+## 3. The two — and only two — candid end-games
 
 ### (A) The faithful reformulation — ACHIEVABLE, but NOT a proof of RH
 Completing B-2 (the §Day-22 frontier) yields a genuine theorem:
@@ -74,7 +74,7 @@ attacked **magnitude**, not **structure**. This — not more sampling/density �
 
 ---
 
-## 4. Honest recommendation to the team
+## 4. Candid recommendation to the team
 1. **Bank the achievable result (A).** Finish B-2 (close the §Day-22 short-interval zero-density), then
    write up the faithful spectral reformulation. It is a real theorem, RH-independent, and it is what this
    setup *actually* produces. Do not over-sell it as RH; sell it as a new equivalent.

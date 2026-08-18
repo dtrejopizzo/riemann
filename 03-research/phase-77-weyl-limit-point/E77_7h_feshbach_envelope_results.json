@@ -1,0 +1,1118 @@
+{
+  "statement": "E77.7h finite Feshbach self-energy envelope audit",
+  "parameters": {
+    "lambda": 6,
+    "max_modes": 18,
+    "refs": [
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "top_k": 6,
+    "dps": 70,
+    "plant": {
+      "gamma": "14.134725141734693790",
+      "beta": "0.30",
+      "strength": "5.0"
+    }
+  },
+  "warning": "This is a finite max-section identity probe. It identifies the exact weighted self-energy object needed for an infinite Ritz bracket, but does not certify the infinite envelope.",
+  "cases": [
+    {
+      "label": "zeta",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 18,
+      "max_dim": 37,
+      "planted": null,
+      "references": [
+        {
+          "reference_modes": 8,
+          "reference_dim": 17,
+          "mu_ref": "3.67864498056142094313034e-28",
+          "mu_full_max_section": "2.52719644523900428303032e-49",
+          "finite_delta_mu_ref_minus_mu_full": "3.67864498056142094312781e-28",
+          "finite_delta_log10": "-27.4343121231291518",
+          "complement_min_kappa_to_mu_ref": "-3.67864498056142093928436e-28",
+          "h_norm": "9.20365900823456731601165e-15",
+          "h_norm_log10": "-14.0360394801365342",
+          "orthogonality_defect": "4.39102706650917427074873e-71",
+          "crude_gap_eta": "inf",
+          "crude_gap_eta_log10": "inf",
+          "weighted_fixed_point_eta": "3.67864498056142094312781e-28",
+          "weighted_fixed_point_log10": "-27.4343121231291518",
+          "self_energy_at_full_delta": "3.67864498056142094312781e-28",
+          "feshbach_identity_relative_defect": "1.19452282101411685940264e-73",
+          "effective_denominator_hnorm2_over_delta": "0.230267774105588150980013",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "-3.67864498056142093928436e-28",
+              "coeff_abs": "3.41508260663316454719732e-78",
+              "contribution_at_full_delta": "3.03445921227072068071003e-110"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "-3.67864498056141777972623e-28",
+              "coeff_abs": "4.77398095740303124872066e-44",
+              "contribution_at_full_delta": "7.2045529324109847333908e-45"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "-3.67864498055985033296197e-28",
+              "coeff_abs": "8.49316023604433997803948e-77",
+              "contribution_at_full_delta": "4.5927227751190287731094e-113"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "-3.67864498006323197202986e-28",
+              "coeff_abs": "1.17869261324747945827516e-39",
+              "contribution_at_full_delta": "2.78873350701093213326611e-41"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "-3.67864484034424076015158e-28",
+              "coeff_abs": "8.19393222242989307351818e-77",
+              "contribution_at_full_delta": "4.78832374022640738478725e-118"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "-3.67860755635292753788788e-28",
+              "coeff_abs": "1.22791862487427205959984e-35",
+              "contribution_at_full_delta": "4.02890057001157310157433e-38"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 17,
+              "kappa_to_mu_ref": "3.5563556562751196371786e-11",
+              "denominator_at_full_delta": "3.55635565627511967396505e-11",
+              "coeff_abs": "5.86929852030426941521706e-20",
+              "contribution_at_full_delta": "9.68650732658357545311054e-29",
+              "fraction": "0.263317264312503925953434"
+            },
+            {
+              "j": 25,
+              "kappa_to_mu_ref": "0.0951268336564403033660854",
+              "denominator_at_full_delta": "0.0951268336564403033660854",
+              "coeff_abs": "2.53748671893166435288424e-15",
+              "contribution_at_full_delta": "6.76868828832153534771948e-29",
+              "fraction": "0.183999497752254517153442"
+            },
+            {
+              "j": 15,
+              "kappa_to_mu_ref": "3.75587342394751429955371e-14",
+              "denominator_at_full_delta": "3.75587342394755108600352e-14",
+              "coeff_abs": "1.51645190263978580664987e-21",
+              "contribution_at_full_delta": "6.12274726394490858542255e-29",
+              "fraction": "0.166440287015967437997044"
+            },
+            {
+              "j": 23,
+              "kappa_to_mu_ref": "0.00145893326976050816804994",
+              "denominator_at_full_delta": "0.00145893326976050816804994",
+              "coeff_abs": "2.7310522955599950325124e-16",
+              "contribution_at_full_delta": "5.11239739039462434046699e-29",
+              "fraction": "0.138975014371035867235906"
+            },
+            {
+              "j": 27,
+              "kappa_to_mu_ref": "0.790679910620104384030541",
+              "denominator_at_full_delta": "0.790679910620104384030541",
+              "coeff_abs": "5.56519069465512443234835e-15",
+              "contribution_at_full_delta": "3.91705253312761822193758e-29",
+              "fraction": "0.106480852428706300872279"
+            },
+            {
+              "j": 21,
+              "kappa_to_mu_ref": "0.00000520991186006994980218412",
+              "denominator_at_full_delta": "0.00000520991186006994980218449",
+              "coeff_abs": "1.09123089373503841190914e-17",
+              "contribution_at_full_delta": "2.28561422040215257790443e-29",
+              "fraction": "0.0621319597971460334622315"
+            }
+          ]
+        },
+        {
+          "reference_modes": 10,
+          "reference_dim": 21,
+          "mu_ref": "8.92947289710064654996649e-33",
+          "mu_full_max_section": "2.52719644523900428303032e-49",
+          "finite_delta_mu_ref_minus_mu_full": "8.92947289710064629724685e-33",
+          "finite_delta_log10": "-32.0491741765691146",
+          "complement_min_kappa_to_mu_ref": "-8.92947289710026195234733e-33",
+          "h_norm": "5.51136560467127932347138e-18",
+          "h_norm_log10": "-17.2587407784456378",
+          "orthogonality_defect": "5.19108951818840243007866e-71",
+          "crude_gap_eta": "inf",
+          "crude_gap_eta_log10": "inf",
+          "weighted_fixed_point_eta": "8.92947289710064629724685e-33",
+          "weighted_fixed_point_log10": "-32.0491741765691146",
+          "self_energy_at_full_delta": "8.92947289710064629724685e-33",
+          "feshbach_identity_relative_defect": "2.07692908103289337764316e-73",
+          "effective_denominator_hnorm2_over_delta": "0.00340167344460122286296713",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "-8.92947289710026195234733e-33",
+              "coeff_abs": "1.48723362082308203111289e-79",
+              "contribution_at_full_delta": "5.75489318504314946091836e-113"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "-8.92947289678052083687149e-33",
+              "coeff_abs": "3.30666189735323950235344e-44",
+              "contribution_at_full_delta": "3.41553992318736581072061e-45"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "-8.92947274003962971268874e-33",
+              "coeff_abs": "3.07156174857830218170691e-78",
+              "contribution_at_full_delta": "6.00689577878166869923081e-116"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "-8.92942305607974737500696e-33",
+              "coeff_abs": "5.35953602790308742704626e-40",
+              "contribution_at_full_delta": "5.76325001300532028819494e-42"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "-8.91545117908234867349602e-33",
+              "coeff_abs": "3.80773088714710272381032e-77",
+              "contribution_at_full_delta": "1.03402553738520855341907e-118"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "-5.18701510938258305092553e-33",
+              "coeff_abs": "3.54112427188529291542052e-36",
+              "contribution_at_full_delta": "3.35062192286771341641159e-39"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 13,
+              "kappa_to_mu_ref": "2.13978811552945899780101e-17",
+              "denominator_at_full_delta": "2.1397881155294598907483e-17",
+              "coeff_abs": "2.44070076391129336125332e-25",
+              "contribution_at_full_delta": "2.783929948822615891355e-33",
+              "fraction": "0.31176867670728286308688"
+            },
+            {
+              "j": 17,
+              "kappa_to_mu_ref": "3.5563556562751196836504e-11",
+              "denominator_at_full_delta": "3.55635565627511968365129e-11",
+              "coeff_abs": "3.07349618068198727006949e-22",
+              "contribution_at_full_delta": "2.6561963103996118015275e-33",
+              "fraction": "0.297463953472781693134921"
+            },
+            {
+              "j": 19,
+              "kappa_to_mu_ref": "1.50585968332242944826735e-8",
+              "denominator_at_full_delta": "1.50585968332242944826735e-8",
+              "coeff_abs": "4.4788111607773320346646e-21",
+              "contribution_at_full_delta": "1.3321127882011612678969e-33",
+              "fraction": "0.149181570239570513277836"
+            },
+            {
+              "j": 11,
+              "kappa_to_mu_ref": "7.66250576648740081246042e-21",
+              "denominator_at_full_delta": "7.66250576649633028535752e-21",
+              "coeff_abs": "2.61288986225918355114593e-27",
+              "contribution_at_full_delta": "8.90987053105806606726412e-34",
+              "fraction": "0.0997804756644824464730388"
+            },
+            {
+              "j": 15,
+              "kappa_to_mu_ref": "3.7558734239475572077794e-14",
+              "denominator_at_full_delta": "3.75587342394755720867235e-14",
+              "coeff_abs": "5.42743005140396704471227e-24",
+              "contribution_at_full_delta": "7.84291525243215244340912e-34",
+              "fraction": "0.0878317829373635984067737"
+            },
+            {
+              "j": 21,
+              "kappa_to_mu_ref": "0.00000520991186006994980218451",
+              "denominator_at_full_delta": "0.00000520991186006994980218451",
+              "coeff_abs": "3.91967067436406018468452e-20",
+              "contribution_at_full_delta": "2.94895933138940419871317e-34",
+              "fraction": "0.033025010158739784669543"
+            }
+          ]
+        },
+        {
+          "reference_modes": 12,
+          "reference_dim": 25,
+          "mu_ref": "2.40320588207581316433666e-37",
+          "mu_full_max_section": "2.52719644523900428303032e-49",
+          "finite_delta_mu_ref_minus_mu_full": "2.40320588207328596789142e-37",
+          "finite_delta_log10": "-36.619209021697878",
+          "complement_min_kappa_to_mu_ref": "-2.40320587822983697277345e-37",
+          "h_norm": "7.79920650224600997066831e-22",
+          "h_norm_log10": "-21.1079495805436101",
+          "orthogonality_defect": "7.36184309148797603551814e-71",
+          "crude_gap_eta": "inf",
+          "crude_gap_eta_log10": "inf",
+          "weighted_fixed_point_eta": "2.40320588207328596789142e-37",
+          "weighted_fixed_point_log10": "-36.619209021697878",
+          "self_energy_at_full_delta": "2.40320588207328596789142e-37",
+          "feshbach_identity_relative_defect": "1.1171469517724776172435e-73",
+          "effective_denominator_hnorm2_over_delta": "0.00000253110324497872120380541",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "-2.40320587822983697277345e-37",
+              "coeff_abs": "2.63960274179450841707668e-81",
+              "contribution_at_full_delta": "1.81282557498209400749486e-116"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "-2.40320266105739891706575e-37",
+              "coeff_abs": "2.15294442804436836553133e-44",
+              "contribution_at_full_delta": "1.4390396920678560664245e-45"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "-2.40163527190744038687305e-37",
+              "coeff_abs": "7.70895682547715230634208e-80",
+              "contribution_at_full_delta": "3.78375338638382448422156e-119"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "-1.90474705140864120048277e-37",
+              "coeff_abs": "2.11931623912921320251587e-40",
+              "contribution_at_full_delta": "9.01077690899331981928729e-43"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "1.37813974300902951540369e-35",
+              "coeff_abs": "3.17083096560353608117018e-77",
+              "contribution_at_full_delta": "7.17042590594824220447228e-119"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "3.74222065056509783970665e-33",
+              "coeff_abs": "7.91005426072022200915321e-37",
+              "contribution_at_full_delta": "1.67186669119107507986021e-40"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 13,
+              "kappa_to_mu_ref": "2.13978811552946016910884e-17",
+              "denominator_at_full_delta": "2.13978811552946016913287e-17",
+              "coeff_abs": "1.34287188258283381023064e-27",
+              "contribution_at_full_delta": "8.42749279680601469019139e-38",
+              "fraction": "0.350677104266051292069715"
+            },
+            {
+              "j": 9,
+              "kappa_to_mu_ref": "8.2158489449122938506929e-25",
+              "denominator_at_full_delta": "8.21584894491469705657497e-25",
+              "coeff_abs": "2.4960152006935479347279e-31",
+              "contribution_at_full_delta": "7.58301658643498555460146e-38",
+              "fraction": "0.315537534382738366586119"
+            },
+            {
+              "j": 11,
+              "kappa_to_mu_ref": "7.66250576649722098164929e-21",
+              "denominator_at_full_delta": "7.66250576649722122196987e-21",
+              "coeff_abs": "1.96596678297694863472158e-29",
+              "contribution_at_full_delta": "5.04407501873314810588548e-38",
+              "fraction": "0.209889425469512420614506"
+            },
+            {
+              "j": 15,
+              "kappa_to_mu_ref": "3.75587342394755720875075e-14",
+              "denominator_at_full_delta": "3.75587342394755720875078e-14",
+              "coeff_abs": "2.73325238159109120490401e-26",
+              "contribution_at_full_delta": "1.98906292577384899101206e-38",
+              "fraction": "0.0827670629724762111670536"
+            },
+            {
+              "j": 7,
+              "kappa_to_mu_ref": "1.10698669018893312064732e-28",
+              "denominator_at_full_delta": "1.10698669259213900272061e-28",
+              "coeff_abs": "8.89142895802290666763174e-34",
+              "contribution_at_full_delta": "7.14168557261026278468835e-39",
+              "fraction": "0.0297173272830416469302731"
+            },
+            {
+              "j": 17,
+              "kappa_to_mu_ref": "3.55635565627511968365155e-11",
+              "denominator_at_full_delta": "3.55635565627511968365155e-11",
+              "coeff_abs": "2.83982605054094290618867e-25",
+              "contribution_at_full_delta": "2.26766183609930030193551e-39",
+              "fraction": "0.00943598654203921327311867"
+            }
+          ]
+        },
+        {
+          "reference_modes": 14,
+          "reference_dim": 29,
+          "mu_ref": "1.70904698080237686366971e-41",
+          "mu_full_max_section": "2.52719644523900428303032e-49",
+          "finite_delta_mu_ref_minus_mu_full": "1.70904695553041241127966e-41",
+          "finite_delta_log10": "-40.7672460050103274",
+          "complement_min_kappa_to_mu_ref": "-1.70900852104046123157479e-41",
+          "h_norm": "6.73442279327365663041885e-26",
+          "h_norm_log10": "-25.1716996216839268",
+          "orthogonality_defect": "4.23767982045457115269598e-71",
+          "crude_gap_eta": "inf",
+          "crude_gap_eta_log10": "inf",
+          "weighted_fixed_point_eta": "1.70904695553041241127966e-41",
+          "weighted_fixed_point_log10": "-40.7672460050103274",
+          "self_energy_at_full_delta": "1.70904695553041241127966e-41",
+          "feshbach_identity_relative_defect": "1.08580095880487682367803e-72",
+          "effective_denominator_hnorm2_over_delta": "2.65366906460965957923566e-10",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "-1.70900852104046123157479e-41",
+              "coeff_abs": "3.75289788807380158436251e-81",
+              "contribution_at_full_delta": "3.66448015212349647818288e-116"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "-1.6767434532882357154012e-41",
+              "coeff_abs": "1.27796832175493195113176e-44",
+              "contribution_at_full_delta": "5.05580794046765783319309e-46"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "1.39970547029253977724658e-40",
+              "coeff_abs": "1.03098437215240976855528e-76",
+              "contribution_at_full_delta": "6.76761680738416545183147e-113"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "4.98296053141345860343289e-38",
+              "coeff_abs": "6.63662300326029759259768e-41",
+              "contribution_at_full_delta": "8.83604503667330714059007e-44"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "1.40217009278280684467019e-35",
+              "coeff_abs": "3.92855191152283570253752e-73",
+              "contribution_at_full_delta": "1.10068681322715042065693e-110"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "3.74246111803306392282242e-33",
+              "coeff_abs": "1.09715107584840038788498e-37",
+              "contribution_at_full_delta": "3.21644083872515247514264e-42"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 7,
+              "kappa_to_mu_ref": "1.10698669266327694260678e-28",
+              "denominator_at_full_delta": "1.10698669266344784730233e-28",
+              "coeff_abs": "3.45784469863938779577573e-35",
+              "contribution_at_full_delta": "1.0801114448033980949224e-41",
+              "fraction": "0.631996354054637068089407"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "3.74246111803306392282242e-33",
+              "denominator_at_full_delta": "3.74246113512353347812654e-33",
+              "coeff_abs": "1.09715107584840038788498e-37",
+              "contribution_at_full_delta": "3.21644083872515247514264e-42",
+              "fraction": "0.188200846578080812692423"
+            },
+            {
+              "j": 9,
+              "kappa_to_mu_ref": "8.21584894491545516024541e-25",
+              "denominator_at_full_delta": "8.21584894491545533115011e-25",
+              "coeff_abs": "1.49169039071159331496625e-33",
+              "contribution_at_full_delta": "2.70835094055420657797037e-42",
+              "fraction": "0.158471417756550434265791"
+            },
+            {
+              "j": 11,
+              "kappa_to_mu_ref": "7.66250576649722127239329e-21",
+              "denominator_at_full_delta": "7.66250576649722127241038e-21",
+              "coeff_abs": "4.30805350855057182049033e-32",
+              "contribution_at_full_delta": "2.42209606075362972906814e-43",
+              "fraction": "0.0141722031271043602525764"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "4.98296053141345860343289e-38",
+              "denominator_at_full_delta": "4.98466957836898901584417e-38",
+              "coeff_abs": "6.63662300326029759259768e-41",
+              "contribution_at_full_delta": "8.83604503667330714059007e-44",
+              "fraction": "0.00517015931486270397508987"
+            },
+            {
+              "j": 13,
+              "kappa_to_mu_ref": "2.13978811552946016914129e-17",
+              "denominator_at_full_delta": "2.1397881155294601691413e-17",
+              "coeff_abs": "8.14569505469232785486351e-31",
+              "contribution_at_full_delta": "3.10088402877315262866939e-44",
+              "fraction": "0.0018143936997978944887146"
+            }
+          ]
+        },
+        {
+          "reference_modes": 16,
+          "reference_dim": 33,
+          "mu_ref": "1.54136825009323148669192e-45",
+          "mu_full_max_section": "2.52719644523900428303032e-49",
+          "finite_delta_mu_ref_minus_mu_full": "1.54111553044870758626361e-45",
+          "finite_delta_log10": "-44.812164802971619",
+          "complement_min_kappa_to_mu_ref": "-1.15677063093691053753442e-45",
+          "h_norm": "1.31020371603149801559762e-30",
+          "h_norm_log10": "-29.8826611731458089",
+          "orthogonality_defect": "6.57983035020894170730097e-71",
+          "crude_gap_eta": "inf",
+          "crude_gap_eta_log10": "inf",
+          "weighted_fixed_point_eta": "1.54111553044870758626361e-45",
+          "weighted_fixed_point_log10": "-44.812164802971619",
+          "self_energy_at_full_delta": "1.54111553044870758626361e-45",
+          "feshbach_identity_relative_defect": "6.49667034226725266088756e-73",
+          "effective_denominator_hnorm2_over_delta": "1.11389038886846803913191e-15",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "-1.15677063093691053753442e-45",
+              "coeff_abs": "1.57392595529236625640218e-77",
+              "contribution_at_full_delta": "6.44536434824459385450219e-109"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "3.21900177031352734146637e-43",
+              "coeff_abs": "5.66752831132609479698948e-45",
+              "contribution_at_full_delta": "9.93097600657941019046203e-47"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "1.57059475469027653129868e-40",
+              "coeff_abs": "1.8941915763098393976638e-73",
+              "contribution_at_full_delta": "2.28443811569975202710111e-106"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "4.98467812442493217638845e-38",
+              "coeff_abs": "8.2298616758684897955728e-42",
+              "contribution_at_full_delta": "1.35877622224026057336007e-45"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "1.40217180167565082203774e-35",
+              "coeff_abs": "2.09373833756592721344092e-70",
+              "contribution_at_full_delta": "3.12639308569233537350251e-105"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "3.74246113833835343873037e-33",
+              "coeff_abs": "5.46359479909091988292076e-40",
+              "contribution_at_full_delta": "7.97626669328483474222568e-47"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "4.98467812442493217638845e-38",
+              "denominator_at_full_delta": "4.98467827853648522125921e-38",
+              "coeff_abs": "8.2298616758684897955728e-42",
+              "contribution_at_full_delta": "1.35877622224026057336007e-45",
+              "fraction": "0.881683556744537168323069"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "3.21900177031352734146637e-43",
+              "denominator_at_full_delta": "3.23441292561801441732901e-43",
+              "coeff_abs": "5.66752831132609479698948e-45",
+              "contribution_at_full_delta": "9.93097600657941019046203e-47",
+              "fraction": "0.0644401786262443964177313"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "3.74246113833835343873037e-33",
+              "denominator_at_full_delta": "3.74246113833989455426082e-33",
+              "coeff_abs": "5.46359479909091988292076e-40",
+              "contribution_at_full_delta": "7.97626669328483474222568e-47",
+              "fraction": "0.0517564487262190111345764"
+            },
+            {
+              "j": 7,
+              "kappa_to_mu_ref": "1.10698669266355584300393e-28",
+              "denominator_at_full_delta": "1.10698669266355585841508e-28",
+              "coeff_abs": "1.8742952934530659082655e-38",
+              "contribution_at_full_delta": "3.17346438791203061878923e-48",
+              "fraction": "0.00205919953774526700446164"
+            },
+            {
+              "j": 9,
+              "kappa_to_mu_ref": "8.2158489449154553582182e-25",
+              "denominator_at_full_delta": "8.21584894491545535823361e-25",
+              "coeff_abs": "2.7347999200902698663177e-37",
+              "contribution_at_full_delta": "9.10329614513465222616094e-50",
+              "fraction": "0.0000590695244144620218964743"
+            },
+            {
+              "j": 11,
+              "kappa_to_mu_ref": "7.66250576649722127241062e-21",
+              "denominator_at_full_delta": "7.66250576649722127241063e-21",
+              "coeff_abs": "4.16044591463796825298171e-36",
+              "contribution_at_full_delta": "2.25896211188633201526604e-51",
+              "fraction": "0.00000146579673441394617612741"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "lambda": 6,
+      "L": "3.58351893845611000162495",
+      "max_modes": 18,
+      "max_dim": 37,
+      "planted": {
+        "gamma": "14.134725141734693790",
+        "beta": "0.30",
+        "strength": "5.0"
+      },
+      "references": [
+        {
+          "reference_modes": 8,
+          "reference_dim": 17,
+          "mu_ref": "-0.720430127892945977947044",
+          "mu_full_max_section": "-1.74469368905726418414397",
+          "finite_delta_mu_ref_minus_mu_full": "1.02426356116431820619692",
+          "finite_delta_log10": "0.0104117226860468064",
+          "complement_min_kappa_to_mu_ref": "-0.922671368301123965003991",
+          "h_norm": "1.24332501184268255637521",
+          "h_norm_log10": "0.0945846703950051664",
+          "orthogonality_defect": "5.40600231630538863080332e-71",
+          "crude_gap_eta": "inf",
+          "crude_gap_eta_log10": "inf",
+          "weighted_fixed_point_eta": "1.02426356116431820619692",
+          "weighted_fixed_point_log10": "0.0104117226860468064",
+          "self_energy_at_full_delta": "1.02426356116431820619692",
+          "feshbach_identity_relative_defect": "0.0",
+          "effective_denominator_hnorm2_over_delta": "1.50923760610635596251501",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "-0.922671368301123965003991",
+              "coeff_abs": "4.49972979468955945259754e-71",
+              "contribution_at_full_delta": "1.99302403605783580447094e-140"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "-0.0196931639312808192260375",
+              "coeff_abs": "0.933370229082143291481554",
+              "contribution_at_full_delta": "0.867216460823858806781183"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "0.720430127892945977947044",
+              "coeff_abs": "2.20574451674536195910278e-73",
+              "contribution_at_full_delta": "2.78863212704183835697637e-146"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "0.720430127892945977947044",
+              "coeff_abs": "1.11231692361887624624899e-33",
+              "contribution_at_full_delta": "7.09149661243689004074138e-67"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "0.720430127892945977947044",
+              "coeff_abs": "3.47166552726137093705011e-74",
+              "contribution_at_full_delta": "6.9080673637831837375912e-148"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "0.720430127892945977947044",
+              "coeff_abs": "8.27870112891259433786825e-29",
+              "contribution_at_full_delta": "3.92830516965371747999588e-57"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "-0.0196931639312808192260375",
+              "denominator_at_full_delta": "1.00457039723303738697089",
+              "coeff_abs": "0.933370229082143291481554",
+              "contribution_at_full_delta": "0.867216460823858806781183",
+              "fraction": "0.846673154942719857946705"
+            },
+            {
+              "j": 33,
+              "kappa_to_mu_ref": "4.83227243426744344317629",
+              "denominator_at_full_delta": "5.85653599543176164937321",
+              "coeff_abs": "0.619102193858191650983446",
+              "contribution_at_full_delta": "0.0654461146894682056145005",
+              "fraction": "0.0638957756293440633094294"
+            },
+            {
+              "j": 27,
+              "kappa_to_mu_ref": "1.38335941383955605079835",
+              "denominator_at_full_delta": "2.40762297500387425699528",
+              "coeff_abs": "0.380603052593313816189436",
+              "contribution_at_full_delta": "0.0601666810573261378841865",
+              "fraction": "0.0587414053751286926075261"
+            },
+            {
+              "j": 29,
+              "kappa_to_mu_ref": "3.81131317412124659056436",
+              "denominator_at_full_delta": "4.83557673528556479676129",
+              "coeff_abs": "0.337641025622682690089417",
+              "contribution_at_full_delta": "0.0235755667677983228030093",
+              "fraction": "0.0230170901920977308210332"
+            },
+            {
+              "j": 31,
+              "kappa_to_mu_ref": "4.14855575676845372684904",
+              "denominator_at_full_delta": "5.17281931793277193304597",
+              "coeff_abs": "0.159592638673388266282534",
+              "contribution_at_full_delta": "0.00492377729692542880187803",
+              "fraction": "0.00480713898611055670147095"
+            },
+            {
+              "j": 25,
+              "kappa_to_mu_ref": "0.780910604940879807540255",
+              "denominator_at_full_delta": "1.80517416610519801373718",
+              "coeff_abs": "0.0718283567182417205444663",
+              "contribution_at_full_delta": "0.00285806927980505859906778",
+              "fraction": "0.00279036508587319627738136"
+            }
+          ]
+        },
+        {
+          "reference_modes": 10,
+          "reference_dim": 21,
+          "mu_ref": "-1.64398602971619752920644",
+          "mu_full_max_section": "-1.74469368905726418414397",
+          "finite_delta_mu_ref_minus_mu_full": "0.100707659341066654937523",
+          "finite_delta_log10": "-0.996937497837030595",
+          "complement_min_kappa_to_mu_ref": "0.000884533522127586255408886",
+          "h_norm": "0.516367405059044835056225",
+          "h_norm_log10": "-0.287041179747537559",
+          "orthogonality_defect": "1.10721912886628049466142e-70",
+          "crude_gap_eta": "0.515925327697863909415558",
+          "crude_gap_eta_log10": "-0.287413151309827546",
+          "weighted_fixed_point_eta": "0.100707659341066654937523",
+          "weighted_fixed_point_log10": "-0.996937497837030595",
+          "self_energy_at_full_delta": "0.100707659341066654937523",
+          "feshbach_identity_relative_defect": "1.68662022843147517844857e-70",
+          "effective_denominator_hnorm2_over_delta": "2.64761686203427541520497",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "0.000884533522127586255408886",
+              "coeff_abs": "4.35353067170556321188672e-71",
+              "contribution_at_full_delta": "1.86561868341633597485148e-140"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "1.58210838611001068507866",
+              "coeff_abs": "0.328964410632693180250279",
+              "contribution_at_full_delta": "0.0643074350018498612428643"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "1.64398602971619752920644",
+              "coeff_abs": "2.22195196051207426090953e-33",
+              "contribution_at_full_delta": "2.82976349704753607191525e-66"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "1.64398602971619752920644",
+              "coeff_abs": "1.67348331495762071013842e-72",
+              "contribution_at_full_delta": "1.6051794208958291624162e-144"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "1.64398602971619752920644",
+              "coeff_abs": "5.99017591754990927228375e-29",
+              "contribution_at_full_delta": "2.05664798057380803429109e-57"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "1.64398602971619752920644",
+              "coeff_abs": "5.52075317588523003398743e-70",
+              "contribution_at_full_delta": "1.74693791925824315401084e-139"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "1.58210838611001068507866",
+              "denominator_at_full_delta": "1.68281604545107734001619",
+              "coeff_abs": "0.328964410632693180250279",
+              "contribution_at_full_delta": "0.0643074350018498612428643",
+              "fraction": "0.638555552006822590604689"
+            },
+            {
+              "j": 33,
+              "kappa_to_mu_ref": "5.82079522006990177100039",
+              "denominator_at_full_delta": "5.92150287941096842593792",
+              "coeff_abs": "0.332345595170787101315135",
+              "contribution_at_full_delta": "0.0186529664645560204196879",
+              "fraction": "0.185218945476470804022686"
+            },
+            {
+              "j": 27,
+              "kappa_to_mu_ref": "2.41932776033377958376974",
+              "denominator_at_full_delta": "2.52003541967484623870726",
+              "coeff_abs": "0.20391228574998474321718",
+              "contribution_at_full_delta": "0.0164998555001057965479828",
+              "fraction": "0.163839132078581350223561"
+            },
+            {
+              "j": 31,
+              "kappa_to_mu_ref": "5.07707657976637968702649",
+              "denominator_at_full_delta": "5.17778423910744634196402",
+              "coeff_abs": "0.0791063874813264775304508",
+              "contribution_at_full_delta": "0.00120859044165666089268804",
+              "fraction": "0.0120009783720970749934652"
+            },
+            {
+              "j": 22,
+              "kappa_to_mu_ref": "1.6470562358164624376957",
+              "denominator_at_full_delta": "1.74776389515752909263323",
+              "coeff_abs": "0.00677847945687353349368542",
+              "contribution_at_full_delta": "0.0000262894684313839527570206",
+              "fraction": "0.000261047358298234332723043"
+            },
+            {
+              "j": 21,
+              "kappa_to_mu_ref": "1.64489017774615771648997",
+              "denominator_at_full_delta": "1.74559783708722437142749",
+              "coeff_abs": "0.00267651910233974153550748",
+              "contribution_at_full_delta": "0.00000410389744589926181722872",
+              "fraction": "0.0000407505990383570659359287"
+            }
+          ]
+        },
+        {
+          "reference_modes": 12,
+          "reference_dim": 25,
+          "mu_ref": "-1.70945938630677984903713",
+          "mu_full_max_section": "-1.74469368905726418414397",
+          "finite_delta_mu_ref_minus_mu_full": "0.0352343027504843351068349",
+          "finite_delta_log10": "-1.45303431830927866",
+          "complement_min_kappa_to_mu_ref": "0.0663578901127099060860972",
+          "h_norm": "0.288657177421065840656763",
+          "h_norm_log10": "-0.539617639358457541",
+          "orthogonality_defect": "4.77450598285269206224719e-71",
+          "crude_gap_eta": "0.257378809050723221394896",
+          "crude_gap_eta_log10": "-0.589427213030660628",
+          "weighted_fixed_point_eta": "0.0352343027504843351068349",
+          "weighted_fixed_point_log10": "-1.45303431830927866",
+          "self_energy_at_full_delta": "0.0352343027504843351068349",
+          "feshbach_identity_relative_defect": "1.01310409694373844611508e-70",
+          "effective_denominator_hnorm2_over_delta": "2.36482517241103387848358",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "0.0663578901127099060860972",
+              "coeff_abs": "7.47835954460943310744024e-71",
+              "contribution_at_full_delta": "5.50493693484515244029987e-140"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "1.69105001208488740299407",
+              "coeff_abs": "0.185816799913886606559776",
+              "contribution_at_full_delta": "0.0200012725792101889864497"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "1.70945938630677984903713",
+              "coeff_abs": "5.37192023570753070494738e-32",
+              "contribution_at_full_delta": "1.65401681680851732658113e-63"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "1.70945938630677984903713",
+              "coeff_abs": "5.27381541852336806632454e-73",
+              "contribution_at_full_delta": "1.59415542356225762572393e-145"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "1.70945938630677984903713",
+              "coeff_abs": "9.62419017256044186481817e-28",
+              "contribution_at_full_delta": "5.30895692800140901338815e-55"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "1.70945938630677984903713",
+              "coeff_abs": "1.31111615665811582373847e-72",
+              "contribution_at_full_delta": "9.85287897257664240278707e-145"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "1.69105001208488740299407",
+              "denominator_at_full_delta": "1.72628431483537173810091",
+              "coeff_abs": "0.185816799913886606559776",
+              "contribution_at_full_delta": "0.0200012725792101889864497",
+              "fraction": "0.567664776023849343989298"
+            },
+            {
+              "j": 27,
+              "kappa_to_mu_ref": "2.49208636729260414074077",
+              "denominator_at_full_delta": "2.5273206700430884758476",
+              "coeff_abs": "0.160431710401922205147232",
+              "contribution_at_full_delta": "0.010184039567107018016873",
+              "fraction": "0.289037635829675299666435"
+            },
+            {
+              "j": 33,
+              "kappa_to_mu_ref": "5.90383695464206687194896",
+              "denominator_at_full_delta": "5.9390712573925512070558",
+              "coeff_abs": "0.0937209334472529914115971",
+              "contribution_at_full_delta": "0.00147895402926698026902259",
+              "fraction": "0.0419748345735790211723437"
+            },
+            {
+              "j": 29,
+              "kappa_to_mu_ref": "4.82722117924999814721541",
+              "denominator_at_full_delta": "4.86245548200048248232224",
+              "coeff_abs": "0.0841542274490232897579801",
+              "contribution_at_full_delta": "0.00145645220275175409787753",
+              "fraction": "0.0413362004937569972147451"
+            },
+            {
+              "j": 25,
+              "kappa_to_mu_ref": "1.80064510088445528616009",
+              "denominator_at_full_delta": "1.83587940363493962126693",
+              "coeff_abs": "0.043766291159381744246973",
+              "contribution_at_full_delta": "0.00104336278192086904381861",
+              "fraction": "0.0296121308064348413785728"
+            },
+            {
+              "j": 31,
+              "kappa_to_mu_ref": "5.14275292018066362424913",
+              "denominator_at_full_delta": "5.17798722293114795935596",
+              "coeff_abs": "0.0716811120126982319478167",
+              "contribution_at_full_delta": "0.000992312572078610847242803",
+              "fraction": "0.0281632527002388431040377"
+            }
+          ]
+        },
+        {
+          "reference_modes": 14,
+          "reference_dim": 29,
+          "mu_ref": "-1.72414565172047431765303",
+          "mu_full_max_section": "-1.74469368905726418414397",
+          "finite_delta_mu_ref_minus_mu_full": "0.0205480373367898664909337",
+          "finite_delta_log10": "-1.68722965381264692",
+          "complement_min_kappa_to_mu_ref": "0.0810441555264043747019984",
+          "h_norm": "0.22728969016614714616809",
+          "h_norm_log10": "-0.643420263375335502",
+          "orthogonality_defect": "6.93961717388615897425013e-71",
+          "crude_gap_eta": "0.190351571755468894595935",
+          "crude_gap_eta_log10": "-0.720443532813843767",
+          "weighted_fixed_point_eta": "0.0205480373367898664909337",
+          "weighted_fixed_point_log10": "-1.68722965381264692",
+          "self_energy_at_full_delta": "0.0205480373367898664909337",
+          "feshbach_identity_relative_defect": "2.15638358064561088251311e-70",
+          "effective_denominator_hnorm2_over_delta": "2.51413808574935583784316",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "0.0810441555264043747019984",
+              "coeff_abs": "3.40316040206383980721096e-71",
+              "contribution_at_full_delta": "1.13999908809638156355051e-140"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "1.71707100951425280866218",
+              "coeff_abs": "0.119526738665077344481289",
+              "contribution_at_full_delta": "0.00822196400402050681046415"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "1.72414565172047431765303",
+              "coeff_abs": "1.30702391784601584769771e-30",
+              "contribution_at_full_delta": "9.79146960028625822636607e-61"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "1.72414565172047431765303",
+              "coeff_abs": "5.10047807712187851138889e-74",
+              "contribution_at_full_delta": "1.49108561453316733283359e-147"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "1.72414565172047431765303",
+              "coeff_abs": "1.63128598581802707620615e-26",
+              "contribution_at_full_delta": "1.52524995316753864925377e-52"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "1.72414565172047431765303",
+              "coeff_abs": "1.30974307022331417364655e-72",
+              "contribution_at_full_delta": "9.83225262266475528191781e-145"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 27,
+              "kappa_to_mu_ref": "2.5088142151243938662287",
+              "denominator_at_full_delta": "2.52936225246118373271963",
+              "coeff_abs": "0.144961644756455473553327",
+              "contribution_at_full_delta": "0.00830797503601919483059864",
+              "fraction": "0.40431963889535713933982"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "1.71707100951425280866218",
+              "denominator_at_full_delta": "1.73761904685104267515312",
+              "coeff_abs": "0.119526738665077344481289",
+              "contribution_at_full_delta": "0.00822196400402050681046415",
+              "fraction": "0.400133787439622673453527"
+            },
+            {
+              "j": 31,
+              "kappa_to_mu_ref": "5.15575205066947255104235",
+              "denominator_at_full_delta": "5.17630008800626241753328",
+              "coeff_abs": "0.117694600154927720183163",
+              "contribution_at_full_delta": "0.00267604634007292384324788",
+              "fraction": "0.130233671285074242299816"
+            },
+            {
+              "j": 25,
+              "kappa_to_mu_ref": "1.81529107123288602032779",
+              "denominator_at_full_delta": "1.83583910856967588681872",
+              "coeff_abs": "0.0469080461826252916053348",
+              "contribution_at_full_delta": "0.00119856080328609929776414",
+              "fraction": "0.0583296975590051859654643"
+            },
+            {
+              "j": 22,
+              "kappa_to_mu_ref": "1.72748405960500658770122",
+              "denominator_at_full_delta": "1.74803209694179645419215",
+              "coeff_abs": "0.0119935568408559165172559",
+              "contribution_at_full_delta": "0.0000822899110070696356358513",
+              "fraction": "0.0040047577127833583431355"
+            },
+            {
+              "j": 21,
+              "kappa_to_mu_ref": "1.72452999910949115080642",
+              "denominator_at_full_delta": "1.74507803644628101729735",
+              "coeff_abs": "0.00868610436861495087822577",
+              "contribution_at_full_delta": "0.0000432349771911155867872169",
+              "fraction": "0.00210409278913009827904995"
+            }
+          ]
+        },
+        {
+          "reference_modes": 16,
+          "reference_dim": 33,
+          "mu_ref": "-1.74001868764442608712258",
+          "mu_full_max_section": "-1.74469368905726418414397",
+          "finite_delta_mu_ref_minus_mu_full": "0.00467500141283809702138564",
+          "finite_delta_log10": "-2.33021825354275826",
+          "complement_min_kappa_to_mu_ref": "0.0969171914503561441715465",
+          "h_norm": "0.102617626363344930217879",
+          "h_norm_log10": "-0.988778035180766264",
+          "orthogonality_defect": "6.13243544165556522204763e-71",
+          "crude_gap_eta": "0.065025379972289061418326",
+          "crude_gap_eta_log10": "-1.18691710134837152",
+          "weighted_fixed_point_eta": "0.00467500141283809702138564",
+          "weighted_fixed_point_log10": "-2.33021825354275826",
+          "self_energy_at_full_delta": "0.00467500141283809702138564",
+          "feshbach_identity_relative_defect": "1.20978212693700610534692e-70",
+          "effective_denominator_hnorm2_over_delta": "2.25248642952907460660002",
+          "low_kappa_rows": [
+            {
+              "j": 0,
+              "kappa_to_mu_ref": "0.0969171914503561441715465",
+              "coeff_abs": "1.65066929605692167346392e-70",
+              "contribution_at_full_delta": "2.68200641029000383344649e-139"
+            },
+            {
+              "j": 1,
+              "kappa_to_mu_ref": "1.74000113795417334015491",
+              "coeff_abs": "0.00661478437324312064674005",
+              "contribution_at_full_delta": "0.000025079366489402632966216"
+            },
+            {
+              "j": 2,
+              "kappa_to_mu_ref": "1.74001868764442608712258",
+              "coeff_abs": "1.46198557257523461149958e-27",
+              "contribution_at_full_delta": "1.22508714728776838797348e-54"
+            },
+            {
+              "j": 3,
+              "kappa_to_mu_ref": "1.74001868764442608712258",
+              "coeff_abs": "4.55826618874009143405884e-74",
+              "contribution_at_full_delta": "1.19091338369191246792622e-147"
+            },
+            {
+              "j": 4,
+              "kappa_to_mu_ref": "1.74001868764442608712258",
+              "coeff_abs": "1.23898245684214075411988e-23",
+              "contribution_at_full_delta": "8.79855035867102856007169e-47"
+            },
+            {
+              "j": 5,
+              "kappa_to_mu_ref": "1.74001868764442608712258",
+              "coeff_abs": "7.64306530991887397914788e-73",
+              "contribution_at_full_delta": "3.34823514855781389873172e-145"
+            }
+          ],
+          "top_self_energy_contributors": [
+            {
+              "j": 27,
+              "kappa_to_mu_ref": "2.53071010031095060316421",
+              "denominator_at_full_delta": "2.53538510172378870018559",
+              "coeff_abs": "0.0775373005530197593391458",
+              "contribution_at_full_delta": "0.00237125041594737762130284",
+              "fraction": "0.507219187022200354250908"
+            },
+            {
+              "j": 25,
+              "kappa_to_mu_ref": "1.83049219338754280101363",
+              "denominator_at_full_delta": "1.83516719480038089803501",
+              "coeff_abs": "0.0600324316151054649699583",
+              "contribution_at_full_delta": "0.0019637953728866242152924",
+              "fraction": "0.420063054418296851755106"
+            },
+            {
+              "j": 21,
+              "kappa_to_mu_ref": "1.74096738189170788623289",
+              "denominator_at_full_delta": "1.74564238330454598325427",
+              "coeff_abs": "0.017541069492993045530057",
+              "contribution_at_full_delta": "0.000176261255971310615147037",
+              "fraction": "0.0377029310595022983767519"
+            },
+            {
+              "j": 31,
+              "kappa_to_mu_ref": "5.17427257177636430059517",
+              "denominator_at_full_delta": "5.17894757318920239761655",
+              "coeff_abs": "0.0151937956693444713705655",
+              "contribution_at_full_delta": "0.0000445749688675902573795129",
+              "fraction": "0.00953474981744010047752668"
+            },
+            {
+              "j": 22,
+              "kappa_to_mu_ref": "1.74364415952360937213958",
+              "denominator_at_full_delta": "1.74831916093644746916097",
+              "coeff_abs": "0.00878376395169766290596192",
+              "contribution_at_full_delta": "0.0000441306775576475874444717",
+              "fraction": "0.0094397142718416340513631"
+            },
+            {
+              "j": 29,
+              "kappa_to_mu_ref": "4.85920836121637657184839",
+              "denominator_at_full_delta": "4.86388336262921466886977",
+              "coeff_abs": "0.0136200092976606102213293",
+              "contribution_at_full_delta": "0.0000381392067691535487449103",
+              "fraction": "0.00815811662953060419259272"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

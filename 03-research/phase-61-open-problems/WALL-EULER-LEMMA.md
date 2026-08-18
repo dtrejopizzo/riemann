@@ -1,6 +1,6 @@
 # El muro vía la estructura cuaterniónica — enunciado preciso para evaluación
 
-**Fecha:** 2026-06-25. **Para:** evaluación con A. Connes / C. Consani. **Honestidad:** todo lo
+**Fecha:** 2026-06-25. **Para:** evaluación con A. Connes / C. Consani. **Franqueza:** todo lo
 marcado MEDIDO es numérico (engine fiel `engine_cache.py`, forma de Weil semilocal, dps≥40, falsador
 Davenport–Heilbronn = DH); lo marcado PROBADO remite a la cadena (Teoremas 2.2, 12.2); las
 CONJETURAS son lo que habría que demostrar. Ningún paso usa la posición de los ceros como input.
@@ -45,7 +45,7 @@ $$A_{m,-n'} \;=\; \mathrm{ARCH}_{m,-n'} \;-\; \sum_{n\le\lambda^2}\Lambda(n)\,n^
 \qquad q_{m,-n'}(u) = -\frac{\sin\frac{2\pi m u}{L} + \sin\frac{2\pi n' u}{L}}{\pi(m+n')}.$$
 (Núcleo **suma** de senos, vs. el núcleo **diferencia** del bloque mismo-signo.)
 
-## 2. Estado honesto: `δ_λ ↛ 0` — la compatibilidad EXACTA FALLA
+## 2. Estado franco: `δ_λ ↛ 0` — la compatibilidad EXACTA FALLA
 
 MEDIDO: `δ_λ = 0.133, 0.135, 0.181, 0.216` para λ=7,11,15,19 (**crece**). Falsador DH:
 `δ = 4.51` (35× mayor). ⟹ **El `∗` aritmético hace a ζ *casi* cuaterniónica y a DH no en absoluto,
@@ -63,7 +63,7 @@ MEDIDO (λ=7…19):
 - Sobre el estado base: `⟨u_0, Â_λ u_0⟩ = +1.3·10⁻⁵`, `⟨u_0, Ǎ_λ u_0⟩ = −1.3·10⁻⁵`; **suman al
   residuo `ε₀ ≈ 10⁻²¹`** (`u_0 ⊥ Σu_0`, overlap = 0, así que `u_0` NO es `∗`-simétrico).
 
-**Consecuencia crucial (honesta):** `Â_λ ⪰ 0` por sí solo **NO** da `ε₀ ≥ 0`, porque el término
+**Consecuencia crucial (franca):** `Â_λ ⪰ 0` por sí solo **NO** da `ε₀ ≥ 0`, porque el término
 cruzado `⟨u_0, Ǎ_λ u_0⟩` es negativo y **casi cancela** a `⟨u_0, Â_λ u_0⟩`. El muro es que la parte
 cuaterniónica **domine** a la incompatible *sobre el estado base*:
 $$\boxed{\;\langle u_0, \hat A_\lambda u_0\rangle \;\ge\; \big|\langle u_0, \check A_\lambda u_0\rangle\big|\;}$$
@@ -75,7 +75,7 @@ y esto es **knife-edge** (ambos lados `≈ 1.3·10⁻⁵`, diferencia `≈ 10⁻
 > Equivalente a `Â_λ = B_λ^* B_λ` (suma de cuadrados). **Rol de Euler:** `Â_λ` mezcla, vía
 > `Σ^H A Σ`, los elementos `A_{−m,−n}`; la factorización `B^*B` debería reflejar el producto de
 > Euler `−ζ'/ζ(s) = Σ Λ(n)n^{−s}` como producto sobre primos (DH, sin producto de Euler, da
-> `Â` indefinida). **Honestidad:** Conj. A es RH-equivalente (MEDIDO: falla para DH); su prueba
+> `Â` indefinida). **Franqueza:** Conj. A es RH-equivalente (MEDIDO: falla para DH); su prueba
 > NO es más débil que RH, pero su forma (SOS sobre la parte simétrica) es donde la
 > multiplicatividad podría dar un certificado que el Cholesky directo de `A` (E42) no dio.
 

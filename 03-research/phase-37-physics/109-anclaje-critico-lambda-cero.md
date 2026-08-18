@@ -133,7 +133,7 @@ Ahora bien, la estadística GUE (β=2) predice densidad de espaciados normalizad
 
 Esto completa la respuesta a (i): el sistema exhibe la fenomenología de un punto crítico (fluctuaciones sin escala característica, casi-degeneraciones arbitrariamente finas, ausencia de gap), y la mitad demostrable de esa fenomenología (la cota $\Lambda \ge 0$) está demostrada. La criticalidad **observable** está establecida; la criticalidad **exacta** ($\Lambda = 0$, no $\Lambda > 0$) es RH.
 
-### §3.3 Tensión conceptual honesta: equilibrio ruidoso vs dinámica determinista [HEURÍSTICA]
+### §3.3 Tensión conceptual franca: equilibrio ruidoso vs dinámica determinista [HEURÍSTICA]
 
 Hay una observación estructural que no hemos visto explotada y registramos como heurística estricta. El flujo (H7) es la dinámica de Dyson **sin ruido** (determinista). Su equilibrio local, bajo confinamiento, es el **cristal** (espaciados iguales) — eso es lo que usa Rodgers–Tao. La estadística GUE, en cambio, es la medida de equilibrio de la dinámica de Dyson **con ruido browniano** (Dyson Brownian motion a β=2). Los ceros de ζ:
 
@@ -169,7 +169,7 @@ Es decir: el enunciado físico "simetría + producto de Euler ⟹ criticalidad p
 
 Pregunta: ¿puede el producto de Euler coexistir con **exactamente un** cuádruplo off-crítico? ¿Hay rigidez "0 o ∞"?
 
-**Inventario honesto de lo que se sabe (tipo "si hay un cero off-crítico entonces [estructura]"):**
+**Inventario franco de lo que se sabe (tipo "si hay un cero off-crítico entonces [estructura]"):**
 
 1. **[Speiser 1934]** RH ⟺ $\zeta'$ no tiene ceros en $0 < \sigma < 1/2$. Contrapositivo individual: un cero de ζ off-crítico fuerza un cero de $\zeta'$ a la izquierda del eje.
 2. **[Levinson–Montgomery 1974]** Versión cuantitativa: $N_1^-(T) = N^-(T) + O(\log T)$ — los conteos de ceros de $\zeta$ y de $\zeta'$ a la izquierda del eje crítico coinciden salvo $O(\log T)$. Rigidez de apareamiento defecto↔defecto-derivada, pero no produce multiplicación de defectos.
@@ -184,7 +184,7 @@ Generalización natural (más falsable): *ningún elemento de la clase de Selber
 
 **Por qué es físicamente plausible (heurística declarada):** en sistemas con interacción de largo alcance, un defecto aislado en un medio crítico es inestable: o se aniquila o nuclea una fase. La clonación de Bagchi es la sombra matemática de la nucleación: un defecto + recurrencia ⟹ defectos extensivos. Lo que falta es el régimen intermedio: un defecto + recurrencia débil ⟹ defectos infinitos (no necesariamente extensivos).
 
-**Por qué las rutas conocidas no la prueban (honestidad):** la ruta natural es clonar el cero por casi-periodicidad. Lo incondicional es la casi-periodicidad $B^2$ (en media cuadrática) de ζ en $\sigma > 1/2$ — los casi-períodos en media existen y son relativamente densos. Pero Rouché necesita aproximación **uniforme en un disco específico** alrededor del cero, y media cuadrática sobre la recta no da control puntual sobre el disco individual: es el paso media→uniforme, el mismo muro. La versión fuerte (recurrencia con densidad positiva) clona demasiado ($\gg T$ ceros, contradicción con Bohr–Landau) y por eso es equivalente a RH (Bagchi); la versión débil (clonación a lo largo de alguna sucesión $\tau_k \to \infty$, que daría exactamente D-109) requiere control puntual en los $\tau_k$ — más débil que invertir el cuantificador en todas partes, pero puntual al fin. **GAP ABIERTO.** Lo que registramos: D-109 necesita una versión *secuencial* del cuantificador, no la inversión total; queda estrictamente entre lo incondicional y RH.
+**Por qué las rutas conocidas no la prueban (franqueza):** la ruta natural es clonar el cero por casi-periodicidad. Lo incondicional es la casi-periodicidad $B^2$ (en media cuadrática) de ζ en $\sigma > 1/2$ — los casi-períodos en media existen y son relativamente densos. Pero Rouché necesita aproximación **uniforme en un disco específico** alrededor del cero, y media cuadrática sobre la recta no da control puntual sobre el disco individual: es el paso media→uniforme, el mismo muro. La versión fuerte (recurrencia con densidad positiva) clona demasiado ($\gg T$ ceros, contradicción con Bohr–Landau) y por eso es equivalente a RH (Bagchi); la versión débil (clonación a lo largo de alguna sucesión $\tau_k \to \infty$, que daría exactamente D-109) requiere control puntual en los $\tau_k$ — más débil que invertir el cuantificador en todas partes, pero puntual al fin. **GAP ABIERTO.** Lo que registramos: D-109 necesita una versión *secuencial* del cuantificador, no la inversión total; queda estrictamente entre lo incondicional y RH.
 
 ### §4.5 Por qué D-109 importa: la descomposición arquitectónica de RH
 
@@ -199,7 +199,7 @@ La identidad es trivial como lógica; lo no-trivial es que **parte RH en dos mit
 
 Ninguna de las dos mitades es, por separado y de manera obvia, equivalente a RH (verificación pendiente en §4.6). Esta es la primera descomposición de RH que el programa produce en la que el cuantificador maestro no bloquea ambas piezas por la misma razón.
 
-### §4.6 Auditoría de la descomposición [honestidad]
+### §4.6 Auditoría de la descomposición [franqueza]
 
 ¿Es alguna mitad secretamente equivalente a RH?
 
@@ -257,7 +257,7 @@ El candidato natural del programa: $F(t) := T_\lambda(t)$ (traza CCM del estado 
 Estado real de cada pieza:
 
 - $F \ge 0$ y la caracterización del ínfimo: lado de ceros, riguroso (D70/D103, con $d\nu \ge 0$ de D83).
-- Lado aritmético en $t=0$: D72 da $T_\lambda = A_\lambda^{\mathrm{off}} - \sum_p (\log p/\sqrt p)\,B_\lambda(\log p)$ vía fórmula de Weil — pero el Doc 105 probó que la serie de primos **diverge** como $(5\sqrt2/8)\log X$: la fórmula es estrictamente formal. La evaluación aritmética honesta de $F(0)$ no está disponible ni siquiera formalmente regularizada sin pasar por los ceros.
+- Lado aritmético en $t=0$: D72 da $T_\lambda = A_\lambda^{\mathrm{off}} - \sum_p (\log p/\sqrt p)\,B_\lambda(\log p)$ vía fórmula de Weil — pero el Doc 105 probó que la serie de primos **diverge** como $(5\sqrt2/8)\log X$: la fórmula es estrictamente formal. La evaluación aritmética franca de $F(0)$ no está disponible ni siquiera formalmente regularizada sin pasar por los ceros.
 - $\partial_t F|_0$: D71 mostró cancelación exacta bajo RH; el Doc 105 corrigió que el signo bajo ¬RH es GAP ABIERTO.
 
 ### §6.2 La obstrucción estructural: el flujo destruye la multiplicatividad
@@ -283,7 +283,7 @@ Dos estructuras ajenas — la ecuación de calor (aditiva, analítica) y el prod
 
 El flujo DBN tiene una estructura de renormalización pobre: hacia adelante ($t \to +\infty$, tras re-escalar) el atractor es el **cristal** (de Bruijn: para $t \ge 1/2$ realidad; asintóticamente los ceros se aproximan a un reticulado — la clase "clock"). Es el punto fijo trivial/orden. No hay punto fijo no-trivial conocido del flujo determinista que tenga la estadística GUE; GUE es el punto fijo de la dinámica **con ruido** (§3.3). El estado en $t=0$ no es punto fijo de nada: el flujo lo atraviesa. Mecanismo (d) en sentido literal: **no aplica** — la criticalidad de $t=0$ no es un punto fijo de re-escalado del propio flujo.
 
-### §7.2 Cuantización del índice: protección topológica y su lectura honesta
+### §7.2 Cuantización del índice: protección topológica y su lectura franca
 
 La versión más seria de (a)/(d) en el programa es la cuantización entera del parámetro de orden: $\kappa = \mathrm{neg.ind} = 2m \in 2\mathbb{Z}_{\ge0}$ (P35; cada cuádruplo aporta exactamente 2). Un parámetro de orden entero es el sello de la protección topológica: no puede variar continuamente, solo saltar. ¿Protege esto la criticalidad? Análisis:
 
@@ -308,7 +308,7 @@ Tabla final, mecanismo por mecanismo — la pregunta de (v): ¿la versión matem
 
 La salida esperada se confirma: (a), (c), (d) colapsan; (b) está medio probado y su otra mitad es el muro. Lo que no colapsa *como enunciado* es D-109 — precisamente porque no es un mecanismo de anclaje de Λ sino una rigidez del conjunto de defectos, ortogonal al eje promedio/individual.
 
-Una precisión brutalmente honesta, para no sobrevender D-109: que el enunciado no requiera la inversión del cuantificador no significa que su prueba sea más fácil que RH — significa que el argumento de imposibilidad de P43 **no se aplica a él**. P43 mostró que toda forma de argumento del programa muere en la inversión promedio→individual; D-109 es el primer objetivo natural del programa cuyo enunciado no contiene esa inversión. Puede haber (y seguramente hay) otros muros; el identificado en §4.4 es el paso media-cuadrática→puntual-secuencial de la casi-periodicidad, que es una forma estrictamente más débil de la misma dificultad (se necesita en una sucesión de puntos, no uniformemente). Si ese paso debilitado es tan duro como el original es, hoy, GAP ABIERTO — y es la pregunta correcta que este documento deja.
+Una precisión brutalmente franca, para no sobrevender D-109: que el enunciado no requiera la inversión del cuantificador no significa que su prueba sea más fácil que RH — significa que el argumento de imposibilidad de P43 **no se aplica a él**. P43 mostró que toda forma de argumento del programa muere en la inversión promedio→individual; D-109 es el primer objetivo natural del programa cuyo enunciado no contiene esa inversión. Puede haber (y seguramente hay) otros muros; el identificado en §4.4 es el paso media-cuadrática→puntual-secuencial de la casi-periodicidad, que es una forma estrictamente más débil de la misma dificultad (se necesita en una sucesión de puntos, no uniformemente). Si ese paso debilitado es tan duro como el original es, hoy, GAP ABIERTO — y es la pregunta correcta que este documento deja.
 
 ---
 

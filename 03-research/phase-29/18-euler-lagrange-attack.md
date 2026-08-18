@@ -256,7 +256,7 @@ donde $F(s)$ es una función de prueba apropiada que "selecciona" los ceros de $
 
 *Nota.* Esta identidad — la versión de la "fórmula de Weil para $C_\infty$" — no está establecida directamente en la literatura. Es una conjetura de trabajo que requeriría prueba.
 
-**Estado honesto del Ataque D.** El Ataque D (via la ecuación de Euler-Lagrange) reduce RH a la condición (CAF): que los ceros reales de $C_\infty = w - \Psi$ coincidan con los $\gamma_n$. Esta condición es más "explícita" que RH (está formulada en términos de la función $\Psi$ y sus cruces con $w$) pero no parece más fácil de probar en este momento.
+**Estado franco del Ataque D.** El Ataque D (via la ecuación de Euler-Lagrange) reduce RH a la condición (CAF): que los ceros reales de $C_\infty = w - \Psi$ coincidan con los $\gamma_n$. Esta condición es más "explícita" que RH (está formulada en términos de la función $\Psi$ y sus cruces con $w$) pero no parece más fácil de probar en este momento.
 
 ---
 

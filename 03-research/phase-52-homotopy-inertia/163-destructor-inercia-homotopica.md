@@ -22,7 +22,7 @@ obstrucción vista tres veces**, y esa obstrucción ya está probada en el progr
 
 ---
 
-## Preliminar: anatomía honesta de un invariante secundario
+## Preliminar: anatomía franca de un invariante secundario
 
 Para no atacar un fantasma, fijo qué ES un secundario, en cualquiera de sus tres
 encarnaciones. Las tres comparten una arquitectura idéntica:
@@ -157,7 +157,7 @@ dónde vive cada invariante:
   secundario **es** el primario de inercia (κ ya entero), no hay piso por debajo,
   y la Witt-trivialidad de D132 vuelve la formación split ⟹ indeterminación total.
 
-El constructor está atrapado entre dos receptores: el "honestamente secundario"
+El constructor está atrapado entre dos receptores: el "francamente secundario"
 (ℚ/ℤ) no puede llevar un entero, y el "que lleva el entero" no es secundario sino
 el spectral flow primario que D156 ya mostró que exige Fredholmicidad = m<∞ = RH
 por la puerta de atrás.
@@ -230,7 +230,7 @@ secundario:
 La construcción no sobrevive. **La razón profunda:** un invariante secundario es
 una *integral de un relleno del primario*; el primario relevante (Witt) es trivial
 por D132 *vía un lagrangiano que es un dato de Q*, así que el relleno reintroduce
-Q (Vía 1); y el receptor honesto de un secundario (ℚ/ℤ) no puede albergar el
+Q (Vía 1); y el receptor franco de un secundario (ℚ/ℤ) no puede albergar el
 entero m (Vía 2). La "ceguera del primario a m" que motivaba la construcción es
 real pero **estéril**: el primario es ciego a m no porque m viva en un piso
 secundario accesible, sino porque m es la *signatura*, que ningún invariante
@@ -238,7 +238,7 @@ Witt/homotópico-estable lee sin reintroducir la forma o el portador-primos.
 
 ### Lo que tendría que ser verdad para que sobreviviera (complemento de los 3 ataques)
 
-Aunque mi veredicto es muerte, registro honestamente el escape lógico —es el
+Aunque mi veredicto es muerte, registro francamente el escape lógico —es el
 mismo grial de D156/D161, ahora con una condición homotópica precisa añadida:
 
 1. **(contra Vía 1)** Existe una nullhomotopía del primario de inercia que
@@ -270,7 +270,7 @@ candidato en la literatura que cumpla siquiera dos.
 ## Mensaje final
 
 **MATAN LAS TRES.** La más limpia y la única con sabor genuinamente nuevo es la
-**Vía 2 (dicotomía de receptor)**: el e-invariante honesto vive en ℚ/ℤ y *m es un
+**Vía 2 (dicotomía de receptor)**: el e-invariante franco vive en ℚ/ℤ y *m es un
 entero* (2m=κ par, D132), de modo que 2m mód ℤ = 0 —el secundario aniquila m por
 **aritmética del receptor**, antes de que ζ tenga ocasión de aparecer. Las Vías 1
 y 3 reconducen al nodo ya conocido (ζ en la ORIENTACIÓN/partición del portador,
@@ -303,6 +303,6 @@ ORIENTACIÓN de D161 (Vías 1 y 3a), o cae en el GAP de EXISTENCIA de D156 (Vía
   contra la inercia homotópica secundaria.
 
 **Disciplina:** ningún teorema "RH ⟺ X" producido; ningún numérico; el escape
-lógico (sección "qué tendría que ser verdad") queda registrado como [GAP] honesto,
+lógico (sección "qué tendría que ser verdad") queda registrado como [GAP] franco,
 no como esperanza. Veredicto: la afirmación de Fase 52 está **destruida** salvo
 por el grial Connes/Deninger ya conocido, ahora con tres candados adicionales.

@@ -30,7 +30,7 @@ This is the classical Hermite-Biehler / Laguerre-Pólya characterization (`xi in
 The classical condition was correct; the initial code was not. Both bugs were caught before drawing
 conclusions.
 
-## Honest status
+## Candid status
 
 - **Achieved (point 1):** the gauge-invariant object is identified and verified -- the Nevanlinna
   condition on `-xi'/xi`, gauge-free. This removes the gauge-fragility of Phase 67-68 entirely: the

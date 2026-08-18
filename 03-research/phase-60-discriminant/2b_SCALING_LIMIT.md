@@ -39,7 +39,7 @@ BORDE/capa límite**; el espectro (k+1)² es el espectro de los modos de borde, 
 de tunneling. La prueba de #2 es **asintótica de capa límite + tunneling**, no WKB de bulk. ## Próximo paso sobre #2
 - Identificar el operador de borde efectivo (modelo de capa límite en u=λ): su espectro debe dar (k+1)². Candidato: el operador de borde asociado a δ_N (Dirichlet-to-Neumann / kernel de borde).
 - La escala ε_0 (tunneling): splitting exponencial entre los bordes u=λ y u=λ⁻¹, ∝ e^{−c·L}. **VERIFICADO:** fit da ε_0 ∝ λ^{−2.07} ≈ λ^{−2} = e^{−L} (tasa de decay 1 en w, atravesar L=2logλ). El modelo de tunneling borde-a-borde queda confirmado.
-- H1 (Gantmacher–Krein) sigue dando la estructura nodal/oscilatoria de los modos de borde. ## ESTADO CONSOLIDADO de #2 (honesto) Modelo de borde/tunneling **caracterizado y verificado numéricamente en 3 piezas**:
+- H1 (Gantmacher–Krein) sigue dando la estructura nodal/oscilatoria de los modos de borde. ## ESTADO CONSOLIDADO de #2 (franco) Modelo de borde/tunneling **caracterizado y verificado numéricamente en 3 piezas**:
 (1) modos blandos edge-localized (autofunciones, softmodes.py);
 (2) ε_0 ∝ λ^{−2} = e^{−L}, tunneling borde-a-borde (verificado, exp −2.07);
 (3) espectro relativo (k+1)² = espectro de modos de borde (relspec, verificado). **Lo que falta (el crux real, NO cerrado):** la PRUEBA rigurosa de que el operador de borde

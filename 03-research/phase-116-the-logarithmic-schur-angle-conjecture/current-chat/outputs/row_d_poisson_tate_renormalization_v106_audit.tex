@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{Exact Tate renormalization of the Poisson operator (v106)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The rank-two subtraction}
+
+Let $f$ be an even Schwartz function on $\mathbb R$, let
+\[
+ Zf(x)=\sum_{n\geq1}f(nx),\qquad
+ (\mathscr Jg)(x)=x^{-1}g(x^{-1}),
+\]
+and use the self-dual additive Fourier transform.  Poisson summation gives
+the exact identity
+\begin{equation}
+ f(0)+2Zf(x)=x^{-1}\widehat f(0)
+                 +2x^{-1}Z\widehat f(x^{-1}).                 \tag{1}
+\end{equation}
+Define the polar operator and the renormalized operator by
+\begin{equation}
+ \Pi f(x)=\frac{\widehat f(0)}{2x}-\frac{f(0)}2,
+ \qquad \mathcal Rf=Zf-\Pi f.                                \tag{2}
+\end{equation}
+
+\begin{theorem}[Exact Gamma--Fourier--Tate identity --- \PROVED]
+For every even Schwartz function,
+\begin{equation}
+                 \boxed{\mathcal R=\mathscr JZ\mathcal F}.   \tag{3}
+\end{equation}
+Moreover $\Pi$ and $\mathcal R$ commute with every arithmetic dilation
+$U_nf(x)=f(nx)$.
+\end{theorem}
+
+\begin{proof}
+Solving (1) for $Zf$ gives (3).  Since
+\[
+ (U_nf)(0)=f(0),\qquad \widehat{U_nf}(0)=n^{-1}\widehat f(0),
+\]
+we have
+\[
+ \Pi(U_nf)(x)=\frac{\widehat f(0)}{2nx}-\frac{f(0)}2
+             =U_n(\Pi f)(x).
+\]
+The operator $Z$ commutes with $U_n$, first on finite sums and then in
+Meyer's multiplier topology, so $\mathcal R=Z-\Pi$ also commutes with
+$U_n$.
+\end{proof}
+
+The formula is the desired subtraction at the level of the pole extension:
+the two coefficients are exactly the two Tate evaluations $f(0)$ and
+$\widehat f(0)$.  It is important, however, to determine what it changes
+on the odd object rather than infer this from the rank of $\Pi$.
+
+\section{Effect on the odd quotient}
+
+Put
+\begin{equation}
+ \mathcal H_\cap=\{f\in\mathcal H_+:f(0)=\widehat f(0)=0\}.   \tag{4}
+\end{equation}
+
+\begin{theorem}[Tate subtraction leaves the odd image unchanged ---
+\PROVED]
+On $\mathcal H_\cap$ one has
+\begin{equation}
+                       \mathcal Rf=Zf.                        \tag{5}
+\end{equation}
+Consequently
+\begin{equation}
+ \mathcal R\mathcal H_\cap=Z\mathcal H_\cap,
+ \qquad
+ \mathcal H_-/\mathcal R\mathcal H_\cap
+       =\mathcal H_-/Z\mathcal H_\cap                       \tag{6}
+\end{equation}
+as topological scaling representations.  In particular, the nuclear
+character and every finite Loewy subquotient are exactly the same as in
+row (c).
+\end{theorem}
+
+\begin{proof}
+Both coefficients in (2) vanish on (4), proving (5), hence equality of
+the two closed invariant images.  The identity map on $\mathcal H_-$ then
+induces the identity of the quotients in (6), including their topology,
+scaling action, nuclear trace and Loewy filtration.
+\end{proof}
+
+Thus the rank-two renormalization is not a new metric on the odd quotient.
+It is an exact splitting calculation for the even polar extension.  Any
+Hilbert norm on the quotient obtained after (2) still has to prove the
+same centered Witt estimate
+\begin{equation}
+ \bigl\|\sqrt n\,U_n\bigr\|_{\operatorname{gr}_L M}\leq1     \tag{7}
+\end{equation}
+for every finite odd Loewy factor $M$.
+
+\section{Why no endpoint norm is hidden in (3)}
+
+For a general even Schwartz function, $\mathcal Rf$ need not lie in an
+unweighted $L^p$ space.  Indeed, $Zf(x)\to0$ as $x\to\infty$, whereas
+from (2)
+\begin{equation}
+ \mathcal Rf(x)=Zf(x)-\frac{\widehat f(0)}{2x}+\frac{f(0)}2
+       \longrightarrow\frac{f(0)}2.                          \tag{8}
+\end{equation}
+The apparent residual constant is the opposite Tate chart in (3), not an
+$L^p$ error.  Requiring both Tate evaluations to vanish removes it and
+returns exactly $Z\mathcal H_\cap$, by (5).  Therefore interpolation of
+$\mathcal R$ on an ambient unweighted $L^p$ cannot furnish the missing odd
+Hilbert completion.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.58\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.17\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Exact Poisson--Tate subtraction & \PROVED & (1)--(3) \\
+Covariance with all Witt dilations & \PROVED & Theorem 1 \\
+Equality of renormalized and original odd quotients & \PROVED & (5)--(6) \\
+Ambient unweighted endpoint bound & false in general & (8) \\
+Contractivity (7), condition $G$, row (d) & \OPEN & unchanged on the odd quotient \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

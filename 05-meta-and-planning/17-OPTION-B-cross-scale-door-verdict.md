@@ -47,7 +47,7 @@ fails, near-null multiplicity grows linearly), the picture is complete and consi
   boundary --- the Weil criterion --- with the marginality now resolved in all three coordinates (scale:
   self-similar; direction-count: infinite; magnitude: boundary-exact). No finite or cross-scale shortcut exists.
 
-## The honest residue (where this leaves the genuine limit)
+## The candid residue (where this leaves the genuine limit)
 
 For $\zeta$ the running ratio lands at $R=1.000$ (RH-consistent: $R\le1$). The data does not, and cannot, decide
 the genuine-limit sign of the margin $1-R$ --- that is the Weil criterion itself. What the probe adds is

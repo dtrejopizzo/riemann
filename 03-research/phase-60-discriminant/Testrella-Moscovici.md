@@ -71,7 +71,7 @@ dominado por `𝓔_prime` cuando `κ>0` (la masa de Λ en `[2,λ²]` es `≍λ²
 efectivo total `q̂+𝓔̂_prime ≥ +c(logλ)²` en el bulk, `O(1)` en una capa de borde de ancho
 `δ_λ`. Minimizando energía: `δ_λ ≍ ε_0^{1/2}·(logλ)^{-1/2}... = 1/logλ` (balance cinético
 `∫|f'|²≍1/δ²` contra potencial `(logλ)²` ⟹ `δ≍1/logλ`). Reescalando por `1/δ_λ=logλ` da
-intervalo finito + Dirichlet en ambos extremos. ∎(módulo (CONF)) **ESTE ES EL HUECO HONESTO.** (CONF) — la **coercividad inferior uniforme** del `𝓔_prime`
+intervalo finito + Dirichlet en ambos extremos. ∎(módulo (CONF)) **ESTE ES EL HUECO FRANCO.** (CONF) — la **coercividad inferior uniforme** del `𝓔_prime`
 nonlocal con constante `κ·logλ` — **NO está probada aquí**. Es exactamente el contenido
 Landau–Widom: la asintótica de la forma de concentración de un núcleo de tipo seno truncado a
 `[−T*,T*]`. Es **RH-neutral** (vale palabra-por-palabra para DH: `𝓔_prime` usa `|Λ(n)|`, no

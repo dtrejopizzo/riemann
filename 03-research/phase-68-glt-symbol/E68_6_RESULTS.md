@@ -21,10 +21,10 @@ t0=400   -5.806    -2.453   (still negative)
 - Edge contamination is real but **secondary**: trimming corners reduces the negatives (e.g. -5.8 ->
   -2.5) but does NOT remove them at t0=30,50,400. So E68.5 was not pure artifact.
 - But the detector is **not broken**: at t0=100,200 the clean (trimmed) margin is `~ 0` -- zeta
-  correctly TOUCHES zero (marginal). The earlier `+0.04` was partly edge-inflation; the honest value is
+  correctly TOUCHES zero (marginal). The earlier `+0.04` was partly edge-inflation; the candid value is
   a touch at 0, which is *more* consistent with the de Branges marginality.
 
-So the honest status is: the band symbol is **gauge-fragile, not gauge-uniform**. It is faithful where
+So the candid status is: the band symbol is **gauge-fragile, not gauge-uniform**. It is faithful where
 the non-Toeplitz part is benign (t0~100,200: marginal 0, correct) and unreliable where it is not
 (t0=30,50,400). Root cause: the operator is not Toeplitz.
 

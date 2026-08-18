@@ -78,7 +78,7 @@ donde $\kappa_\mu$ es una **combinación explícita de los órdenes de los ceros
 
 ---
 
-## 2. LA ANALOGÍA [ANALOGÍA, grado de ajuste honesto, flecha por flecha]
+## 2. LA ANALOGÍA [ANALOGÍA, grado de ajuste franco, flecha por flecha]
 
 Construyo el diccionario candidato y clasifico cada flecha como **tight / parcial / especulativa**.
 
@@ -175,7 +175,7 @@ Aplico R-NC (Doc 119 §4.3) a GAP-FOLIADO, comparando con la externalidad de For
 $$ \mathrm{Tr}_{\mathrm{distr}}\Big(\int h(u)\,(\text{flujo de escala})\,du\Big) \;=\; \sum_p\sum_{m\ge1}\frac{\log p}{p^{m/2}}\,\hat h(m\log p)\;+\;(\text{término arquimediano}), $$
 y la fórmula explícita iguala esto a $\sum_\rho\hat h(\rho)$. **Las órbitas periódicas del flujo de escala son los primos** (período $\log p$); **el espectro del generador son los ceros.** [DATO]
 
-**[CÁLCULO — la respuesta directa, brutalmente honesta]:**
+**[CÁLCULO — la respuesta directa, brutalmente franca]:**
 
 > **El flujo $\mathbb R_+^*$ del sitio de escala LLEVA ζ ADENTRO. No es geometría pura.** A diferencia del flujo de Teichmüller —cuyas órbitas periódicas son las geodésicas cerradas de la métrica de Teichmüller, objetos de geometría de móduli sin contenido aritmético— las **órbitas periódicas del flujo de escala SON los primos**, y su traza **ES** la fórmula explícita. El flujo de escala **está definido (en su versión con contenido espectral, la única útil para la analogía, §2.4) precisamente para que su traza sea $\sum_p\log p/p^{m/2}$**. La estructura aritmética no es externa al flujo: **es el flujo.**
 
@@ -224,7 +224,7 @@ Desglose:
 
 3. **[VERIFICACIÓN — el experimento decisivo de Phase 42] ¿Existe alguna foliación del cuadrado, distinta del flujo de escala, con curvatura de Hodge no trivial y externa a ζ?** Si NO (lo probable, porque la única dinámica natural del sitio es la de escala = aritmética), entonces (a) está **cerrado** y el veredicto se endurece a (b)/(c) definitivo, no solo indeterminado.
 
-**[CÁLCULO] Primer paso concreto, si se persigue (a):** intentar definir, sobre el toro tropical $C_p\times C_p$, una **variación de "estructura de Hodge tropical"** (un análogo de la descomposición $H^{1,0}\oplus H^{0,1}$ tropical, vía la métrica de Allermann–Rau y una polarización) y calcular su **segunda forma fundamental** bajo una deformación de la polarización **que NO sea la traslación de escala**. Si la curvatura resultante es no trivial y su integral controla la signatura **sin** invocar la traza del flujo, hay un germen de (a). Si toda deformación natural de la polarización resulta ser el flujo de escala (= aritmética), (a) está cerrado. **Predicción honesta: está cerrado**, porque la única estructura que distingue las direcciones positivas/negativas del primitivo es la que sabe dónde están los ceros (P43 inercia), y eso es ζ.
+**[CÁLCULO] Primer paso concreto, si se persigue (a):** intentar definir, sobre el toro tropical $C_p\times C_p$, una **variación de "estructura de Hodge tropical"** (un análogo de la descomposición $H^{1,0}\oplus H^{0,1}$ tropical, vía la métrica de Allermann–Rau y una polarización) y calcular su **segunda forma fundamental** bajo una deformación de la polarización **que NO sea la traslación de escala**. Si la curvatura resultante es no trivial y su integral controla la signatura **sin** invocar la traza del flujo, hay un germen de (a). Si toda deformación natural de la polarización resulta ser el flujo de escala (= aritmética), (a) está cerrado. **Predicción franca: está cerrado**, porque la única estructura que distingue las direcciones positivas/negativas del primitivo es la que sabe dónde están los ceros (P43 inercia), y eso es ζ.
 
 ### 5.4. Síntesis
 
@@ -234,7 +234,7 @@ Desglose:
 
 ---
 
-## 6. Honestidad y registro
+## 6. Franqueza y registro
 
 Ningún teorema nuevo se probó. Se **leyó en fuente** (Forni 2002 Annals + survey cap. 8 Handbook; fórmula de Kontsevich–Forni $\sum\lambda_i=\int\mathrm{tr}(BB^*)d\mu$ vía notas Bourbaki Matheus; EKZ Publ. IHÉS 2014 $\sum\lambda_i=\kappa_\mu+\tfrac{\pi^2}{3}c_{\mathrm{area}}$; ergodicidad/no-uniform-hiperbolicidad del flujo de Teichmüller respecto de Masur–Veech; simplicidad de Avila–Viana) y se **comparó** con el corpus interno:
 

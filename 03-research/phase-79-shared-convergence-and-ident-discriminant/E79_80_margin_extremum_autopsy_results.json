@@ -1,0 +1,25 @@
+{
+  "statement": "E79.80 margin extremum autopsy",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_76_frontier_ratio_rule_results.json",
+  "admissible_count": 2793,
+  "best": {
+    "a": 0.0,
+    "b": 0.14,
+    "min_margin": 0.3786042592168566,
+    "margins": [
+      0.3992194631044972,
+      0.7507238267039273,
+      0.3786042592168566
+    ]
+  },
+  "current": {
+    "a": 0.36,
+    "b": 0.14,
+    "min_margin": 0.0186042592168566,
+    "margins": [
+      0.03921946310449719,
+      0.03072382670392737,
+      0.0186042592168566
+    ]
+  }
+}

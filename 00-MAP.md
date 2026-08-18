@@ -7,9 +7,11 @@ detail, see [`03-research/README.md`](03-research/README.md) and
 [`COMPLETE-PROGRAM-SUMMARY.md`](COMPLETE-PROGRAM-SUMMARY.md); for every dead end by name, see
 [`NO-GO-LIST.md`](NO-GO-LIST.md).
 
-**If you read nothing else, read Part 12.** It states the program's current final result: a
-fifteen-step reduction of RH to one classical, named inequality (Li–Keiper positivity), with
-fourteen of the fifteen steps proved.
+**If you read nothing else, read Part 15.** It states the program's current final result: two
+independent, structurally different constructions — the fifteen-step Li–Keiper reduction of
+Part 12, and the arithmetic-Lefschetz reconstruction of Part 14 — each terminate at a statement
+proved equivalent to RH. Part 12's Li–Keiper criterion and Part 14's row (d) are two different
+classical objects, reached by two different routes, both exactly as hard as RH.
 
 ---
 
@@ -45,7 +47,7 @@ fourteen of the fifteen steps proved.
                           |  troughs negative, mean zero). Cleans 02, 04.  |
                           +----------------------+--------------------------+
                                                  |  (02's "phase transition" refuted,
-                                                 |   reframed honestly)
+                                                 |   reframed candidly)
                                                  v
                   +---------------------------------------------------------+
                   |   ARC B -- inverse operator, the localized Weil form     |
@@ -283,7 +285,7 @@ zero side alone.
 
 ## Part 5 — The eight-language wall and the wrong-sign capstone
 
-With Route B's honest conclusion in hand, the program engaged every modern reformulation of RH
+With Route B's candid conclusion in hand, the program engaged every modern reformulation of RH
 it could identify. Each one reduced to the same statement, via the same underlying principle.
 
 - **The band-limited Weil–Carleson form** (paper 12): a saturated positivity constant
@@ -449,10 +451,10 @@ and then proved why the spectral routes available cannot supply it.
   obstruction is *global* gluing — exactly the missing object again, now in a third language.
 - A submitted third-party "proof" invoking Connes' framework was checked and refuted, with six
   independent fatal flaws identified.
-- A literature program returned three honest negative results — matching, independently, the
+- A literature program returned three candid negative results — matching, independently, the
   three-route obstruction already found — plus one new RH-independent constraint (a rigidity
   bound on the third moment of prime gaps, tied to a prime-power design constraint).
-- An "Arakelov–RH equivalence" claim from the literature was checked and clarified: its honest
+- An "Arakelov–RH equivalence" claim from the literature was checked and clarified: its candid
   content is a one-directional theorem (existence of a suitable witness variety implies RH, via
   the Yuan–Zhang arithmetic Hodge index theorem); the converse (RH implies such a variety
   exists) is the open Hilbert–Pólya dream, and may simply be false if the zeros are not
@@ -758,13 +760,13 @@ the Lee–Yang/de Bruijn–Newman route, and the finite CAND-1/Feshbach/Cauchy�
 that produced this very reduction — returned, on inspection, to one of the six structural walls
 (MW-1 through MW-6) catalogued in [`NO-GO-LIST.md`](NO-GO-LIST.md).
 
-### What changed, honestly
+### What changed, candidly
 
 $\Omega_7$ is exactly as hard as RH — being equivalent to it, it carries the Hypothesis's full
 difficulty, and this reduction does not lower that difficulty by one degree. What changed across
-phases 62–76 is the *resolution* of the map. Before this arc, the program's honest final
+phases 62–76 is the *resolution* of the map. Before this arc, the program's candid final
 statement was that RH requires "an unbuilt cohomology over $\mathrm{Spec}\,\mathbb Z$" — real,
-but abstract, and not stated as a checkable inequality. After this arc, the program's honest
+but abstract, and not stated as a checkable inequality. After this arc, the program's candid
 final statement is that RH requires one classical, precisely stated inequality — Li–Keiper
 positivity — reached independently through an arithmetic Pick/Nevanlinna architecture, with
 fourteen of its fifteen supporting steps fully proved and a falsification harness available for
@@ -773,3 +775,207 @@ outside attack.
 **No proof of RH is claimed.** This is a reduction, not a resolution — but it is the sharpest,
 most concrete statement this program has produced of exactly where RH lives and exactly what a
 proof would need to supply.
+
+---
+
+## Part 13 — Phases 77–106: the ARP-P architecture reaches its limit
+
+Phase 76 closed with one remaining item, SAFE-LIMIT-POINT, and two halves it had separated,
+named LP and IDENT. Phases 77–106 spent thirty phases closing sub-gate after sub-gate of the
+ARP-P/$\Omega_7$ architecture with exact, verified finite algebra — and never crossed the sign.
+
+**77–99: LP, IDENT, and a long chain of exact identities.** Phase 77 proves (or refutes) LP —
+limit-point classification for the semi-infinite CCM system, via Kato–Putnam on the rank-two
+displacement commutator — and IDENT, the Gamma-prime identification in absolute convergence.
+Phases 78–79 separate the two constructions cleanly and supply the shared convergence lemma
+GAP-Z. Phases 80–99 build, one exact identity per phase, the algebraic machinery the closure
+needs: relative determinant identification, a secular arithmetic anchor, a coupled generator
+continuum, the Gamma–Euler arithmetic coboundary, a distributional endpoint module, the parity
+Weyl defect, a signed spectral Abel reduction, the Euler deformation discriminant, the endpoint
+layer pencil, projective layer rotation, the Kato–Euler current and its coboundary equivalence,
+cluster/direct/global cofactor constructions, the characteristic Jacobian current, determinantal
+prime response, and the Euler sensitivity commutator and its shell split. Planted-falsifier
+controls are introduced at phase 101 to catch errors before they propagate.
+
+**100–103: the target sharpens to (A1).** Phase 100 factors the characteristic cofactor. Phase
+102 reaches the exact target
+
+$$\Omega_7\iff\lambda_n^{\mathrm{prime}}\ge-\lambda_n^{\mathrm{arch}}\qquad(n\ge1),$$
+
+with a finite exceptional range already closed. Phase 103 gives an exact direct-A1 reduction
+with finite certificates for $1\le n\le149$ and Laguerre transport, reducing everything to one
+statement, (A1), for $n\ge150$:
+
+$$\int_{\log2}^{T_n}(\psi(e^u)-e^u)e^{-u}L_{n-1}^{(2)}(u)\,du\ \le\ q_n
+=\tfrac34A_n+1-L_n^{(1)}(\log2).$$
+
+**104: attempted and not proved.** Phase 104's own closure records it plainly: *"El objetivo no
+fue demostrado."* A binding correction (104\_56A) shows the admissibility cutoff is cofinal,
+sharpening the sufficient front to the cleaner statement $4\lambda_n>A_n$ — but this remains
+unproved for all remaining $n$.
+
+**105: two surviving targets, made geometric.** (A1) and a literal limit $\Omega_X\to0$ (Deep)
+are shown visually and algebraically unambiguous. Two genuine unconditional theorems survive: the
+**off-line quartet law** (105\_02) — any off-line zero forces exponential growth in the full Li
+sequence, an explicit, checkable, RH-independent consequence — and a block spectral radius
+theorem (105\_03). The coupled ordinary-prime selector and the nodal-flux/Bregman resonance gate
+remain open.
+
+**106: the last spectral construction on this route, and it fails four ways.** Phase 106 tests
+the only remaining candidate left by phase 101's trace no-go: a positive Hilbert realization with
+generator $\Theta$, built from Euler–Gamma data alone (no zero labels), satisfying
+$\Theta^*=1-\Theta$ and $\det_\infty(s-\Theta)=e^{a+bs}\xi(s)$. Four results close it:
+
+- **106\_00.** An ordinary self-adjoint perturbation determinant is holomorphic and zero-free off
+  the real axis; a finite critical Euler factor has prime-dependent zeros or poles **on**
+  $\operatorname{Im}z=1/2$. So the finite Tate identity of phase 64 cannot be an ordinary
+  self-adjoint perturbation-determinant identity — a structural mismatch, not a missing estimate.
+- **106\_02.** The adelic half-density generator has exactly the right adjoint but cannot descend
+  through the arithmetic quotient without collapsing (positive weight) or being already zero
+  (weight zero, Wiener cyclicity).
+- **106\_13.** The completed heat semigroup **fails the first Beurling–Deny criterion** — it is
+  not positivity-preserving. Every fixed-derivative model built from $K,K',K'',\ldots$ is
+  asymptotically orthogonal to exactly the off-line evaluation channel it would need.
+- **106\_16/106\_17.** The prime–Gamma coupling is characterized exactly via a translated
+  Montgomery–Vaughan estimate; the remaining branch-selection question (Gate SPG) is isolated as
+  a pure sign question, and an explicit phase-twist falsifier shows magnitude data provably cannot
+  answer it.
+
+**Net verdict of phases 77–106.** Thirty phases of exact, verified finite algebra closed every
+accessible sub-gate of the ARP-P/$\Omega_7$ architecture without ever proving the one thing
+needed: a uniform sign. Two durable, unconditional, RH-independent theorems survive: the off-line
+quartet law (105\_02) and the Beurling–Deny failure of the completed heat semigroup (106\_13). No
+further phase continued this specific architecture; phase 107 pivoted to a structurally different
+one.
+
+---
+
+## Part 14 — Phases 107–119: Arc C, the arithmetic Lefschetz reconstruction
+
+Instead of pushing the ARP-P chain forward again, phase 107 works **backward** from Weil's actual
+1948 proof of RH for curves over finite fields, asking precisely what a literal imitation over
+$\operatorname{Spec}\mathbb Z$ would require: a space $X$ with $X\times X$, a diagonal,
+correspondences $\Gamma_n$ carrying Weil's coefficients $\Lambda(n)$ as intersection numbers, an
+intersection pairing (row c), and the Hodge index theorem / Castelnuovo–Severi (row d).
+
+**107: the reconstruction, and the first import closed.** The Deninger–Morishita bridge is
+computed directly and found to annihilate the $p$-adic transverse direction: at a point over $p$
+the residue field is $\overline{\mathbb F}_p$ with $\mu_{(p)}$ of order prime to $p$
+(`107_242` Thm 4.1). A dozen further documents in this phase build and test pieces of Deninger's
+actual orbit geometry (`C_p=\mathbb R/(\log p)\mathbb Z`) as concrete inputs — genuine partial
+bridges and no-gos, not rhetoric.
+
+**108–112: rows (a)–(c), and what they cannot be promoted to.** Phase 108 builds row (a), the
+graded family over $\mathbb Z$, closing both natural pairing routes. Phase 109 proves the sharper
+negative: **no pairing reading the prime-power coefficients can see the zeros, for any kernel**
+(Thm 1.1) — a general obstruction, not a failed attempt. Phase 110 proves $\xi$-divisibility is
+**impossible on compactly supported data** — by Stirling growth, and explicitly *not* RH in
+disguise: the obstruction is carried entirely by $\Gamma$, no zero of $\zeta$ enters it. Phase 111
+extends the admissible class to Schwartz data. Phase 112 builds the effective cone formally
+(superseded by 113).
+
+**113: the pivotal result — row (d) proved equivalent to RH, algebraically.** The pairing moves
+onto Schwartz data $\mathcal D$; the row-(c) object becomes a commutative Frobenius $*$-algebra
+$(\mathcal D/\mathrm{rad},\star,{}^*,\tau)$ with a zero-free trace. Requirements d0, d2, d4, d5,
+and $K=0$ are all **built**. Requirement **d3 — Riemann–Roch's quadratic growth term — is proved
+impossible inside $\mathcal D$**, by three independent obstructions:
+
+- **O1.** $\mathcal D/\mathrm{rad}$ is a complex vector space, so the effective cone is
+  scaling-stable and $h^0(nD)=h^0(D)$ — measured exactly at $n=2,5,100$. No growth argument has
+  anything to grow.
+- **O2.** Correspondences have infinite mutual intersection, because $|(n/m)^\rho|=(n/m)^{1/2}$
+  does not tend to $0$ — the exponent $1/2$ **is the critical line itself**, encoded directly into
+  the obstruction to discretizing.
+- **O3.** The negative part has no spectral gap: $\sup\mathfrak s(f,f)/\|f\|^2=0$ on
+  $\mathcal D^\circ\setminus\mathrm{rad}$, not attained.
+
+Two theorems then show the one remaining input, effectivity $(E^\circ)$, **is equivalent to RH**
+in both directions (Thm 4.2/4.3), and that the Hodge-index inequality on $H^\perp$ holds **iff**
+RH (`113_12` Thm 4.1) — measured exactly: signature $(1,7)$ with the zeros on the line, $(3,5)$
+off it. This is the first point in the ten-year program where a Weil-style algebraic construction
+— Riemann–Roch and effectivity, not a restatement of Weil positivity — is shown to be the *exact
+same statement* as RH.
+
+**114–117: transfer, diagnosis, and a conjecture measured to death.** Phase 114 writes up rows
+(a)–(c) as paper 42 and reduces row (d) further within the operator-theoretic reformulation (the
+Douglas gate, one joint residual) — and in doing so re-proves two obstructions already recorded in
+the paper, a sign the local-construction route had become self-repeating. Phase 115 diagnoses that
+row (d) is missing an **object**, not an inequality, and that row (a)'s Green term is row (d)'s own
+equality case. Phase 116 extracts and names the **Logarithmic Schur Angle Conjecture**,
+$\rho_N\le1/(20\log N)$, and paper 42 completes row (d) *conditionally* on it. Phase 117 measures
+the conjecture's actual load-bearing role and finds two negative results: the **Gamma–Tate source
+model route dies** ($c_N<1$ at every threshold, decaying like $(\log N)^{-0.6}$, Galerkin-bounded
+from above, hence one-sided-robust), and the conjecture itself is **falsified** against paper 42's
+own audit table (4 of its 5 tabulated points violate it). The redirect: attack the **exact**
+threshold condition directly, in the output-defect metric where it carries constant one.
+
+**118: row (d) proved equivalent to RH a second time, independently and analytically.** Phase 118
+derives, and verifies against real zeros of $\zeta$ to relative precision $5\times10^{-11}$ to
+$2\times10^{-9}$, that for $F$ real, primitive, and supported in the window $I_T$:
+
+$$\langle A_TF,F\rangle=\sum_\rho h(\gamma_\rho),\qquad h(\tau)=\widehat F(\tau)\widehat F(-\tau),$$
+
+summed over the nontrivial zeros of $\zeta$. So the row-(d) inequality **is** localized Weil
+positivity on the primitive space — the same wall phase 113 found, reached by a completely
+different, analytic route (the explicit formula, not Riemann–Roch). Three structural facts fall
+out of the derivation and *validate* the original construction rather than merely reformulate it:
+the constant $m_0=\log\pi+\gamma+\pi/2+3\log2$ turns out **forced**, from
+$\psi(1/4)=-(\gamma+\pi/2+3\log2)$, not chosen; the two Tate moments are exactly what is needed to
+kill the pole terms; and the prime-sum truncation at $n<e^{2T}$ loses nothing, because the
+autocorrelation is supported in $(-2T,2T)$. Phase 118 also independently re-verifies the balanced
+factorization to $\sim10^{-12}$ by a second code path, refutes several candidate structures for a
+scattering operator (Toeplitz and Hankel in $\log n$, $R^2\le0.16$), reproduces the interval-
+certified endpoint $T\le\log2$ and diagnoses its limit as **analytic** (a genuinely small Feshbach
+gap, $h=0.0012$) rather than numerical, and measures $\lambda_{\min}(A_0)\to0$ directly under
+refinement — a direct confirmation of O3.
+
+**119: opened, unresolved.** The pivot: stop asking whether Weil's form is positive — that
+question now has exactly one answer, proved twice — and ask what a **finite compression** of it
+certifies unconditionally, using its inertia (constrained by Sylvester's law) and its moments
+(computable from the prime side, without knowing where the zeros are). Gated on the
+Davenport–Heilbronn test: any argument built only from the functional equation, the explicit
+formula, and mean values of Dirichlet polynomials applies verbatim to Davenport–Heilbronn
+functions, whose RH-analogue is false. The one candidate wedge not on that list is whether
+$\Lambda(n)=\deg_{\det}\mathbb L_n$ — rows (a)–(c)'s cohomological origin for the coefficients —
+imposes any property Davenport–Heilbronn's coefficients violate. Plan only; nothing executed.
+
+**Net verdict of phases 107–119.** The program now has **two independent, structurally different
+proofs** that the natural target of a Weil-style construction over $\operatorname{Spec}\mathbb Z$
+equals RH exactly: phase 113's algebraic route (Riemann–Roch and effectivity, inside a Frobenius
+$*$-algebra) and phase 118's analytic route (the explicit formula, checked against real zeros).
+This is Arc C's analogue of Part 12's Li–Keiper reduction — a different, independently constructed
+architecture, terminating at the same wall by a different classical route. Neither is a proof of
+RH. Phase 119 is the live frontier: the corpus's own audit
+([`03-research/AUDIT_CONSOLIDATED.md`](03-research/AUDIT_CONSOLIDATED.md),
+[`03-research/THE_BACKWARD_MAP.md`](03-research/THE_BACKWARD_MAP.md)) finds three genuinely
+unbuilt — not proved impossible — objects (a construction with the required quadratic growth; a
+space with an integral lattice structure; whether a quadratic Riemann–Roch can exist over
+$\operatorname{Spec}\mathbb Z$ at all), plus a family of open, **non**-RH-equivalent sub-targets
+(Diana L8, "Lemma 108," Conjecture $\mathbf C_B$, LP-112, GAP-157.A, boundary triples for the CCM
+operator family) that the corpus never closed and never showed equivalent to RH. See
+[`OPTIONS.md`](OPTIONS.md) for the full options list with file citations.
+
+---
+
+## Part 15 — The current final state, in full
+
+The program's endpoint is now **two** independent reductions, not one:
+
+1. **The Li–Keiper reduction (Part 12, paper 36).** A fifteen-step arithmetic Pick/Nevanlinna
+   architecture, ARP-P, proved equivalent to RH; fourteen of fifteen steps closed; the remaining
+   step is the classical Li–Keiper criterion, $\lambda_n\ge0$ for all $n$.
+2. **The arithmetic-Lefschetz reduction (Part 14, paper 42).** A Weil-style four-row construction
+   over $\operatorname{Spec}\mathbb Z$; rows (a)–(c) built; row (d) proved equivalent to RH twice,
+   independently — algebraically (phase 113, via Riemann–Roch/effectivity) and analytically
+   (phase 118, via the explicit formula, verified against real zeros).
+
+Both reductions are candid and neither is a proof. Each replaces a diffuse map of walls with one
+precisely named, classical, RH-equivalent statement, reached by an independently constructed
+route. That two structurally unrelated architectures — one built from Pick/Nevanlinna
+interpolation theory, the other from Weil's own 1948 method — terminate at statements each
+provably as hard as RH is, itself, informative: it is further evidence that the difficulty is not
+an artifact of either construction, but a property of RH.
+
+**No proof of RH is claimed.** [`OPTIONS.md`](OPTIONS.md) records where the program can still
+usefully spend effort, including on targets that are not equivalent to RH and might therefore
+actually be reachable.

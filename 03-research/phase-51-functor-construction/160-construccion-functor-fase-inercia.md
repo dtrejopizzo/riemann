@@ -13,10 +13,10 @@ forma de Weil = κ/2 de P35). Cinco restricciones de diseño heredadas de las Fa
 **Contrato de etiquetado (regla absoluta).** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad aquí, prueba completa; resultados
 externos citados con referencia verificable. **[CÁLCULO]** = mostrado. **[CONSTRUCCIÓN]** =
-objeto definido con precisión. **[PUENTE]** = conexión con estatus honesto de cada eslabón.
+objeto definido con precisión. **[PUENTE]** = conexión con estatus franco de cada eslabón.
 **[GAP]** = declarado. **[GAP de literatura]** = dato no verificado a nivel de página esta
 sesión, NO usado como premisa de ningún teorema. **[DESEO]** = declarado. Jamás se fabrica
-una prueba de RH ni una victoria que no esté. **NADA de numéricos.** Honestidad absoluta:
+una prueba de RH ni una victoria que no esté. **NADA de numéricos.** Franqueza absoluta:
 está PERMITIDO terminar en (B/C/D); lo prohibido es fingir (A).
 
 **Prerrequisitos leídos en fuente esta sesión:** Doc 158 completo (Thm 158.10 confinamiento
@@ -80,7 +80,7 @@ cuál de ellas se rompe:
   τ (no es existencial), luego esquivaría el cuantificador maestro de P43 (Doc 159 C5).
   Esta es la única esperanza viva.
 
-**Adelanto del veredicto (honestidad up-front):** el resultado es **(D) con un núcleo de
+**Adelanto del veredicto (franqueza up-front):** el resultado es **(D) con un núcleo de
 (B)**. CONSTRUYO el functor 𝔉_KMS genuinamente (no es tautología — escapa a (C) la crítica
 del Doc 158 de que el único puente es la fórmula explícita-identidad), y el transporte SÍ
 existe como morfismo de la dinámica a un operador transversal. PERO en el test de
@@ -149,7 +149,7 @@ C(𝕋)⋊R es precisamente el ingrediente del marco adélico de Connes [Con99] 
 la acción de las idéles al subgrupo de fase ∏_p S¹ (la parte "unitaria" / de norma 1 de las
 idéles). Connes identifica los ceros de ζ con el espectro de la acción de escalamiento sobre
 L²(C_ℚ) (las clases de idéles); el TORO 𝕋 es la parte compacta C_ℚ^1 (norma 1), y el flujo de
-escalamiento de Connes es transversal a 𝕋. **Estatus honesto:** esta identificación es
+escalamiento de Connes es transversal a 𝕋. **Estatus franco:** esta identificación es
 estructural y correcta a nivel de qué grupo actúa, pero el contenido espectral (que el
 espectro DÉ los ceros) es exactamente lo que Connes deja como la dificultad de positividad —
 no es un input gratuito. Lo registro como puente, no como teorema. La diferencia con Connes:
@@ -553,7 +553,7 @@ encarnación, en el lenguaje del producto cruzado, de:
 **Tres líneas independientes, un solo objeto faltante: la métrica de inercia RH-libre sobre
 H_altura.** Ese es el GAP-160.A.
 
-### 5.3. Por qué esto es el resultado honesto y avanza el programa
+### 5.3. Por qué esto es el resultado franco y avanza el programa
 
 El valor del documento NO es una equivalencia ni una prueba de RH (no se produce ninguna). El
 valor es triple:

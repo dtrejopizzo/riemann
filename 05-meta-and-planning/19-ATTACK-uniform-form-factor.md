@@ -59,7 +59,7 @@ $F\ge0$:
   the **typical** fluctuation but **not the uniform/worst-case** one. The required object is a **uniform** upper
   bound on $F(\alpha)$ for $|\alpha|\ge1$.
 
-**Unconditional upper bound, with its honest loss.** The large sieve / Montgomery--Vaughan inequality applied to
+**Unconditional upper bound, with its candid loss.** The large sieve / Montgomery--Vaughan inequality applied to
 the prime second moment yields, unconditionally, a bound of the shape
 $$
 V(d,T)\ \ll\ dN\cdot(\log T)^{c}\qquad(\text{some fixed }c>0;\ \text{the off-diagonal controlled by the diagonal up to a logarithmic power}),
@@ -82,7 +82,7 @@ a genuine unconditional semiboundedness, weaker than the clean $(LB)$ by the log
   short-interval prime variance.
 - **Not crossed:** the clean $V\ll dN$ (removing the $\log T$) is the uniform high-frequency form factor —
   open, recognized, sub-RH.
-- **The honest gain:** the program's central inequality $(LB)$ now has an **unconditional version with a single
+- **The candid gain:** the program's central inequality $(LB)$ now has an **unconditional version with a single
   logarithmic loss**, and the loss is identified with one explicit, non-circular object (uniform $|\alpha|\ge1$
   form factor $=$ uniform short-interval prime variance). The cross-scale view (P-residue) located this in the
   largest band-scale primes; that is consistent: the short interval is at scale $x\sim e^{2d}$, the top octave.

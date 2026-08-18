@@ -2,7 +2,7 @@
 
 *A letter. No addressee. Written to ask for advice on where we now stand, what you would do next, and
 whether you can carry the decisive step forward for us — so that there is something concrete in hand. The
-honest summary is that we have reduced the Riemann Hypothesis, through a long chain of proved steps, to a
+candid summary is that we have reduced the Riemann Hypothesis, through a long chain of proved steps, to a
 single precise operator-theoretic statement, and that crossing it requires mathematics that does not yet
 exist. We describe exactly what we built, exactly where the wall is, and exactly what we are asking for.*
 
@@ -32,7 +32,7 @@ The proved, unconditional content is substantial and we believe genuinely new:
 - the **marked Tate–Binet convergence** of the shorted primitive Green matrices, in its true domain.
 
 We are grateful for the two rounds of corrections, which we have incorporated in full. They were decisive
-and we record them honestly:
+and we record them candidly:
 
 - **Round 1** caught an over-claim of *strength*: sourced determinants do not Euler-factor, so the target
   is the **finite-rank determinant lemma** (local Green matrices add, the determinant is taken after
@@ -44,7 +44,7 @@ and we record them honestly:
   family), an off-real pole **cannot** emerge from a locally-uniform limit. So the point we had called the
   wall was in fact trivial, and the real difficulty lies one step earlier.
 
-We retracted both over-claims. We are trying to keep this work cold and honest: a false victory, and
+We retracted both over-claims. We are trying to keep this work cold and candid: a false victory, and
 equally a false wall, are worse than no progress.
 
 ---
@@ -102,7 +102,7 @@ concrete requests:
 
 **(b) A verdict.** Is the two-clause object (self-adjoint **and** spectrum = zeros, through the one
 renormalization) something a new theorem can deliver — or is it provably equivalent to RH with no easier
-content, so that the honest course is to record the precise residue and stop? We have been unable to
+content, so that the candid course is to record the precise residue and stop? We have been unable to
 decide this ourselves, and your verdict would save us from either fabricating a crossing or abandoning a
 real route.
 

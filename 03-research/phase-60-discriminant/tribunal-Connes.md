@@ -38,10 +38,10 @@ Así que la truncación a `n'≤λ²` **no es por soporte estricto** sino por la
 `(1−y/L)` que se anula en `y=L`. Los primos con `log n'` cerca de `L` entran con peso
 **casi cero pero no cero**. La afirmación "exacto" es por tanto **ligeramente
 sobre-vendida**: es exacto en el límite, con un error de borde controlado por la
-ventana de Fejér. Esto es benigno (es de hecho el contenido honesto de N5b), pero
+ventana de Fejér. Esto es benigno (es de hecho el contenido franco de N5b), pero
 "exacto" debería ser "exacto módulo la cola de ventana de Fejér en `y→L`". **Conclusión E0:** SOLID como construcción y como identidad de Weil; corríjase
 "exacto" → "exacto salvo cola de ventana en el borde de banda". Esta salvedad no
-daña nada aguas abajo (se reabsorbe en N5b), pero un referee la marca. --- ## 2. E1 / H1 / H1′ **E1 — Veredicto: GAP (honesto, ya marcado 🔧). Confirmo la severidad ALTA.** El contraejemplo `ξ=(−1,2,−1)`, `d=(−1,0,1)` → `f(s)=−2/(s³−s)`, cero raíces reales,
+daña nada aguas abajo (se reabsorbe en N5b), pero un referee la marca. --- ## 2. E1 / H1 / H1′ **E1 — Veredicto: GAP (franco, ya marcado 🔧). Confirmo la severidad ALTA.** El contraejemplo `ξ=(−1,2,−1)`, `d=(−1,0,1)` → `f(s)=−2/(s³−s)`, cero raíces reales,
 es **correcto** y mata definitivamente el argumento de interlacing. Lo verifiqué:
 `−1/(s+1)+2/s−1/(s−1)`, común denominador `s(s²−1)`:
 numerador `= −s(s−1)+2(s²−1)−s(s+1) = −s²+s+2s²−2−s²−s = −2`. Exacto. El vector es
@@ -88,7 +88,7 @@ primero por N1 con `R=T*~λ²` (peso `1−ω~λ^{−2}` despreciable), dando
 `sup_{|Im z|≤½}|ξ̂−Ξ| ≤ Cλ^{1/2}ε_loc + Cλ³e^{−πλ²}`, es **correcto**. Reverifiqué la
 aritmética del horizonte: `1−ω~(2/π)(½)/(λ²)~λ^{−2}`, y `Γ^{1−ω}=poly(λ)^{λ^{−2}}→1`.
 El factor `λ^{1/2}` viene de `e^{τy₀}=e^{(logλ)(½)}=λ^{1/2}`. Todo correcto. **La implicación "si `ε_loc=o(λ^{−1/2})` entonces RH" es válida**, módulo E1
-(real-rootedness, necesaria para que Hurwitz transfiera). Esto es honestamente una
+(real-rootedness, necesaria para que Hurwitz transfiera). Esto es francamente una
 *implicación condicional*: no prueba el antecedente. El antecedente `ε_loc=o(λ^{−½})`
 es precisamente IV.2 = RH-equivalente. **SOLID como reducción; el antecedente es el
 núcleo RH.** **Severidad sobre el uso de Hurwitz dado el estado de E1:** El documento pregunta si
@@ -135,13 +135,13 @@ entonces **(B) NO ayuda a derivar `n²`**: el núcleo compacto es suavizante, no
 diferencial; el `n²` debe venir del operador de borde de Landau–Widom, que el propio
 doc admite **no haber derivado** (los perfiles conocidos dan `2n+1` o logístico, no
 `n²`). **Refutaciones registradas que confirmo decisivas:**
-- Gantmacher–Krein / total-no-negatividad: **REFUTADA** (E16: 15–22% de menores 2×2 `<0`, off-diagonales negativas). Esto cierra la ruta "oscilación total desde H1". Correcto y honesto. ⟹ la Sturmianidad **no** proviene de positividad total matricial.
+- Gantmacher–Krein / total-no-negatividad: **REFUTADA** (E16: 15–22% de menores 2×2 `<0`, off-diagonales negativas). Esto cierra la ruta "oscilación total desde H1". Correcto y franco. ⟹ la Sturmianidad **no** proviene de positividad total matricial.
 - Coeficiente constante (Dirichlet, Hermite, prolato, caja): **REFUTADAS** por overlaps. Correcto. **Lo que queda (residual exacto):** `Â_∞` es *cualitativamente* 2º orden (paridad
 alternante `(−1)^k` ES firma robusta de operador simétrico de 2º orden — esto sí lo
 da (A) rigurosamente), pero la ley `ε_k/ε₀→n²` y por tanto `γ=ε₁/ε₀−1→3` están
 **SÓLO medidas numéricamente, no derivadas**. El residual es la asintótica del
 operador de capa límite del frame crítico (Landau–Widom / de Branges-SL de coef.
-variables). **Análisis duro, NO RH-hard.** ### ¿Puedo cerrar (H-gap) γ>0 en mi lente? — Progreso parcial honesto. Intento: probar `γ>0` (gap relativo uniforme) **sin** pasar por la ley exacta `n²`. *Idea.* (H-gap) sólo pide `inf_λ ε₁/ε₀ ≥ 1+γ` con `γ>0`, i.e. el segundo autovalor
+variables). **Análisis duro, NO RH-hard.** ### ¿Puedo cerrar (H-gap) γ>0 en mi lente? — Progreso parcial franco. Intento: probar `γ>0` (gap relativo uniforme) **sin** pasar por la ley exacta `n²`. *Idea.* (H-gap) sólo pide `inf_λ ε₁/ε₀ ≥ 1+γ` con `γ>0`, i.e. el segundo autovalor
 no se pega al primero relativamente. Por (A), `ε₀=ε₀^E` (par) y `ε₁=ε₀^O` (impar, el
 siguiente por entrelazado). Así
 `γ = ε₀^O/ε₀^E − 1 = (menor autovalor del sector impar)/(menor del par) − 1`.
@@ -182,7 +182,7 @@ para `g∈LP` es **correcta** (consecuencia de Hadamard: para `g` con ceros real
 off-line `z₀=x₀+iη₀`, `sup_{|Im z|≤|η₀|}|ξ̂_f−Ξ_f| ≥ |ξ̂_f(z₀)| ≥ |ξ̂_f(x₀)| → |Ξ_f(x₀)|>0`.
 Correcto. Da el lado RH-falso (no converge off-axis). **SOLID módulo** (i)
 real-rootedness de `ξ̂_f` (= E1, cierto para DH vía auto-adjunción) y (ii) conv-eje
-(= andamiaje E2.a instanciado en `f`). No introduce gap nuevo. **SOLID\*.** --- ## 7. IV.2 ≡ §V — el núcleo **Veredicto: GAP = RH-EQUIVALENTE. NO lo toco (instrucción del tribunal y honestidad).** Examino sólo si la *reducción a este núcleo* es correcta y no circular. La
+(= andamiaje E2.a instanciado en `f`). No introduce gap nuevo. **SOLID\*.** --- ## 7. IV.2 ≡ §V — el núcleo **Veredicto: GAP = RH-EQUIVALENTE. NO lo toco (instrucción del tribunal y franqueza).** Examino sólo si la *reducción a este núcleo* es correcta y no circular. La
 caracterización variacional:
 - Bajo RH (`γ_ρ` reales), `A_λ(g,g)=Σ_ρ|g(γ_ρ)|²≥0`, el minimizador band-limited se anula en `{γ_ρ≤T*}` y por conteo (Landau–Beurling a densidad crítica) `g₀→Ξ_T`.
 - Sin RH (`γ_ρ` complejos), la forma es **indefinida**, el minimizador se concentra en ceros off-line, `≠Ξ_T`.
@@ -216,7 +216,7 @@ equivale a todos los ceros de ζ en la línea crítica). SOLID. --- ## 9. Sínte
 - IV.2 ≡ §V: tasa `o(λ^{−½})` ⟺ "ground state de Weil = Ξ_T" ⟺ RH.
 - (H-pos) `ε₀>0` = Weil-positividad-hasta-T* (RH-hasta-T*).
 - H1′: `QW` PSD = RH.
-- Déficit de frame dim-1 (lado RH-verdadero del núcleo). **Veredicto global del tribunal.** La cadena es honesta y, tras auditoría, es una
+- Déficit de frame dim-1 (lado RH-verdadero del núcleo). **Veredicto global del tribunal.** La cadena es franca y, tras auditoría, es una
 **reducción correcta de RH a un núcleo RH-equivalente** (IV.2), rodeada de andamiaje
 genuinamente probado (N0–N3, N5b, N5c, Reducción, E3, E4). Las dos afirmaciones que un
 referee severo habría podido tomar por "incondicionales" y que NO lo son —H1′ (PSD) y

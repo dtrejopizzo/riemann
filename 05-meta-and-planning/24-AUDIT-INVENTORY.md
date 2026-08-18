@@ -27,7 +27,7 @@ plus the actions taken.
 | Translated + updated front-door docs | `README.md`, `EXPLANATION.md`, `00-README.md`, `NO-GO-LIST.md`, `COMPLETE-PROGRAM-SUMMARY.md` (from the Spanish RESUMEN), folder READMEs — all English & current through Phase 61 |
 | Extended `00-MAP.md` | Appended English continuation through Phase 61 |
 | Per-phase translation | Per user decision: **summary/setup/verdict docs only** translated; granular working notes left in original Spanish as the raw record |
-| Reproducibility notebook | Replaced with an honest "checks that pass" notebook |
+| Reproducibility notebook | Replaced with an candid "checks that pass" notebook |
 
 ## Deliberately left in Spanish
 

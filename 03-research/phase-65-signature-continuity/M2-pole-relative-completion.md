@@ -4,7 +4,7 @@
 finite tower $\{\mathsf E_P\}$ converges to the $\Xi$-object (interface T2 of M1). In doing so we reach a
 **structural fact that corrects the original plan**: there is provably *no single topology* with both
 (T1) closedness of $\mathcal N_0$ and (T2) convergence of the arithmetic renormalization — they are in
-genuine tension (this *is* the content of N2/N3). The honest consequence: the index cannot be recovered
+genuine tension (this *is* the content of N2/N3). The candid consequence: the index cannot be recovered
 from topology; M2's job is to build the **coarse pole-relative topology** in which T2 is *free* (from
 G3) and to carry, on top of it, the **definite-signed rank-one defect datum** that M3 will use to
 recover the index from *sign*, not from topology. We prove T2 in the coarse topology and isolate exactly
@@ -140,7 +140,7 @@ now localized to \emph{one positive rank-one direction}.
 
 ---
 
-## §5. Honest status
+## §5. Candid status
 
 \textbf{Established (unconditional, no RH, no Phase-64 norm bound):}
 \begin{itemize}
@@ -166,7 +166,7 @@ rank-one limit} — the sharpest possible localization.
 topology, so T2 is genuinely free — but this means M2 alone proves \emph{nothing} about the index; if
 M3 cannot convert "positive rank-one divergence" into "no negative square," the difficulty was merely
 relocated, not removed, and Prop.~\ref{prop:tension} guarantees no topological trick can rescue it. The
-honest test of the whole Phase-65 thesis is therefore M3: \emph{is a positive rank-one renormalization
+candid test of the whole Phase-65 thesis is therefore M3: \emph{is a positive rank-one renormalization
 index-preserving?} If yes (in the needed generality), RH; if no, an off-line zero is consistent and we
 have a precise no-go. M2 has made that the only question.
 

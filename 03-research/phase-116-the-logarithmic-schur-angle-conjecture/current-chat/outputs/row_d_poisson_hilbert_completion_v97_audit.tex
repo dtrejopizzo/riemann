@@ -1,0 +1,202 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\title{The Hilbert completion of the odd Poisson quotient: recovery and audit (v97)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The completion constructed in the earlier run}
+
+The earlier Gamma--Euler run constructed the positive tempered measure
+\[
+ \nu_{E\Gamma}:=\mu_{E,\mathrm{crit}}*\mu_{\Gamma,1},
+ \qquad
+ \mu_{E,\mathrm{crit}}=\sum_{n\ge1}\frac1n\delta_{\log n},
+\]
+and the Hilbert space
+\begin{equation}\label{eq:HEG}
+ \mathscr H_{E\Gamma}^{\mathrm{crit}}=L^2(\nu_{E\Gamma}).
+\end{equation}
+It also constructed the gcd GNS completion and proved its finite incidence
+comparison with the critical Euler form.  These constructions are \PROVED.
+
+The group $\mathbb R$ acts unitarily on \eqref{eq:HEG} by
+\[
+ (\mathsf U_uF)(x)=e^{iux}F(x).
+\]
+Thus \eqref{eq:HEG} is indeed a positive Hilbert completion carrying a
+unitary centered scaling group.  The question is whether it is a completion
+of the specific quotient
+\[
+ \mathcal H_-^0=\mathcal H_-/Z\mathcal H_\cap
+\]
+and whether its Hilbert trace is the odd nuclear character of row (c).
+
+\section{The missing descent map}
+
+Let $\mathcal S$ denote the common test core and let
+\[
+ \mathcal F_\nu a:=\widehat a\big|_{\operatorname{supp}\nu_{E\Gamma}}
+\]
+be the sampling/Fourier map whose quadratic form completes to
+\eqref{eq:HEG}.  The evident attempted map is
+\begin{equation}\label{eq:attemptedmap}
+ [h]\longmapsto \mathcal F_\nu(Z^{-1}h).
+\end{equation}
+
+\begin{proposition}[The evident map does not descend --- \PROVED]
+The map \eqref{eq:attemptedmap} is not well-defined on
+$\mathcal H_-/Z\mathcal H_\cap$.
+\end{proposition}
+
+\begin{proof}
+Replacing $h$ by $h+Zf$ with $f\in\mathcal H_\cap$ replaces
+$Z^{-1}h$ by $Z^{-1}h+f$.  Hence well-definedness would require
+\[
+ \mathcal F_\nu f=0\qquad(f\in\mathcal H_\cap).
+\]
+But $\mathcal H_\cap$ is defined by only the two Tate conditions
+$f(0)=\mathcal Ff(0)=0$ (equivalently, two Mellin moments).  They do not
+force the Fourier transform of $f$ to vanish on the infinite support of
+$\nu_{E\Gamma}$.  Choose a compactly supported smooth $f$ satisfying the two
+linear conditions but with $\widehat f(x_0)\ne0$ at any prescribed
+$x_0\ne0$ in that support; such an $f$ exists because three distinct
+continuous linear functionals cannot have the third in the span of the first
+two.  Then $\mathcal F_\nu f\ne0$.
+\end{proof}
+
+Therefore the positive completion constructed previously is a source
+boundary/reference space, not yet the odd Poisson quotient.  Identifying the
+two without a new map is \AUDIT.
+
+\section{Character mismatch}
+
+\begin{proposition}[Matrix coefficient is not nuclear character --- \PROVED]
+The positive-definite Gamma--Euler kernel is a cyclic matrix coefficient of
+the unitary representation on \eqref{eq:HEG}.  It is not the operator trace
+of that representation.
+\end{proposition}
+
+\begin{proof}
+In the spectral model, $\mathsf U(f)$ is multiplication by $\widehat f(x)$
+on $L^2(\nu_{E\Gamma})$.  Its cyclic matrix coefficient at the constant
+vector is
+\[
+ \langle\mathsf U(f)1,1\rangle=\int\widehat f\,d\nu_{E\Gamma}.
+\]
+For a nonatomic component of $\nu_{E\Gamma}$, a nonzero multiplication
+operator is not trace class.  Hence the last integral is a vector state, not
+an operator trace.  Row (c), on the other hand, is the nuclear supertrace of
+the quotient representation.  Equality of the two requires a separate
+trace-comparison/intertwining theorem.
+\end{proof}
+
+This is the precise reason why positivity of the Euler--Gamma GNS space did
+not already prove row (d).
+
+\section{The exact obstruction on an off-line residue orbit}
+
+The following finite-dimensional calculation is an audit test for every
+proposed Hilbert completion.
+
+\begin{theorem}[Positive Rosati metric excludes a mirror pair --- \PROVED]
+Let an off-line functional-equation orbit be represented by two distinct
+characters $\rho$ and $\rho'=1-\bar\rho$.  On its residue space the test
+algebra acts by
+\[
+ \pi(f)=\begin{pmatrix}\widehat f(\rho)&0\\0&\widehat f(\rho')\end{pmatrix},
+ \qquad
+ \pi(f^\vee)=
+ \begin{pmatrix}\overline{\widehat f(\rho')}&0\\
+                 0&\overline{\widehat f(\rho)}\end{pmatrix}.
+\]
+There is no positive definite Gram matrix $G$ satisfying
+\[
+ \pi(f^\vee)=G^{-1}\pi(f)^*G
+\]
+for every test function $f$.
+\end{theorem}
+
+\begin{proof}
+Write $G=(g_{ij})$ with $g_{11}>0$.  The adjoint identity is equivalent to
+\[
+ \begin{pmatrix}\bar a&0\\0&\bar b\end{pmatrix}G
+ =G\begin{pmatrix}\bar b&0\\0&\bar a\end{pmatrix},
+ \qquad
+ a=\widehat f(\rho),\quad b=\widehat f(\rho').
+\]
+The $(1,1)$ entry gives $(\bar a-\bar b)g_{11}=0$.  Compactly supported test
+functions interpolate independently at the two distinct Mellin characters,
+so one can choose $a\ne b$.  This forces $g_{11}=0$, contradicting positive
+definiteness.
+\end{proof}
+
+Thus a faithful positive Hilbert completion with the row-(c) character does
+not merely repackage the quotient: its existence itself rules out every
+off-line orbit.  This is why preservation of the nuclear character is the
+load-bearing clause.
+
+\section{Status of all earlier candidates}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.30\linewidth}
+                >{\centering\arraybackslash}p{.13\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.32\linewidth}}
+\toprule
+Candidate & Positive Hilbert & Unitary scale & Same odd nuclear character \\
+\midrule
+Tate-renormalized Witt space & yes & rational dilation & no global Poisson
+descent constructed \\
+gcd GNS space & yes & $\mathbb Q_+^\times$ & no; different spectral type \\
+critical Euler form & yes & reference action & no trace comparison \\
+critical Euler--Gamma space \eqref{eq:HEG} & yes & continuous unitary action &
+no; the evident quotient map fails \\
+residue realization & Krein & exact & yes \\
+desired odd completion & \OPEN & \OPEN & \OPEN \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The residue realization is the only previous construction with the exact
+character, and it is Hilbert precisely when the off-line mirror blocks are
+absent.  The positive GNS constructions have the opposite virtue: they are
+Hilbert from the start, but no proved map identifies their vector state with
+the odd nuclear trace.
+
+\section{Exact remaining construction}
+
+The required theorem can now be stated without ambiguity:
+
+\medskip
+\noindent\textbf{Faithful Poisson--Witt Hilbert descent (\OPEN).}
+Construct a map
+\[
+ \mathfrak Q:\mathcal H_-^0\longrightarrow\mathscr H_{\rm PW}
+\]
+with dense image such that
+\begin{enumerate}
+\item $\mathfrak Q\pi_0(u)=\mathsf U_u\mathfrak Q$ for the centered scaling;
+\item $\mathfrak Q\pi_-(f^\vee)=\mathfrak Q\pi_-(f)^*$ on the nuclear core;
+\item $\operatorname{Tr}_{\mathscr H_{\rm PW}}\pi_-(h)$ equals the odd
+      nuclear trace of row (c), not merely a cyclic matrix coefficient.
+\end{enumerate}
+Then the even Tate trace vanishes on $\mathcal T^0$ and
+\[
+ B_{\rm nuc}(f,f)
+ =-\|\pi_-(f)^*\|_{\rm HS}^2\le0.
+\]
+
+The Witt--Tate adjoint required in clause (2) is already \PROVED in v96.
+Clauses (1) and (3), jointly, are not proved by any completion recovered from
+v89--v94.
+
+\end{document}

@@ -1,0 +1,65 @@
+\section{Preliminaries about foliated manifolds}\label{section1}
+In this section, we recall fundamental settings; foliated dynamical systems on manifolds and leafwise cohomology groups.
+
+\subsection{Foliation and transverse flow}
+
+%foliation
+Let $X$ be a smooth,connected, closed and oriented manifold of $n$-dimension with a $d$-codimensional foliation $\Fh=\Fh_{X}$. 
+The formal definition of a foliation is as follows: Let $(U_{i})_{i\in{I}}$ be charts covering $X$ together with maps $(\varphi_{i}:U_{i}\rightarrow\R^{n})_{i\in{I}}$.
+Assume that the transition maps $\varphi_{ij}:=\varphi_{j} \circ \varphi_{i}^{-1}$ which are defined over $U_{i}\cap U_{j}$ take the form $\varphi_{ij}(x,y)=(\varphi_{ij}^{1}(x),\varphi_{ij}^{2}(x,y))$ where $x$ denotes the first $d$ coordinates and $y$ denotes the last $n-d$ coordinates.
+By piecing together the stripes, where $x$ is constant, from chart to chart, we obtain immersed sub-manifolds whose first $d$ local coordinates on each $U_{i}$ are constant.
+They form a partition $\Fh$ of the manifold $X$, and we call it a $d$-codimensional foliation.
+Each sub-manifold is called a $\mathit{leaf}$ of the foliation.
+
+
+%transverse flow
+Let $\phi:\R\times{X}\rightarrow{X}$ be a smooth $\R$-action such that maps leaves to leaves, i.e. for any two points $x$ and $y$ in a same leaf $\mathcal{L}$, there is a leaf $\mathcal{L}^{\prime}$ containing $\phi(t,x)$ and $\phi(t,y)$ for any $t\in\R$. 
+We call the dynamical system the $\it{transverse}$ $\it{flow}$ which is compatible with the foliation $\Fh$. Denote $\phi(t,-):X\rightarrow{X}$ for $t\in\R$ by $\phi^{t}$. Note that each $\phi^{t}$ is a diffeomorphism of $X$.
+
+
+\subsection{Leafwise cohomology and Infinitesimal generator}
+
+%leafwise forms
+Assuming that a manifold $X$ has a foliation $\Fh$, we have a sub-vector bundle $T\Fh$ of the tangent bundle $TX$ whose restriction to any leaf $\mathcal{L}$ is identified with the tangent bundle of the leaf, i.e. $T\Fh|_{\mathcal{L}}\cong T\mathcal{L}$. 
+Differential $i$-forms along the leaves are defined as smooth sections to the sub-vector bundle $\wedge^{i} T^{*}\Fh$. 
+Such a differential form is called a $\mathit{leafwise}$ $i$-$\mathit{form}$. 
+Denote by $\mathcal{A}^{i}_{\Fh}(X)$ the space $\Gamma(X,\wedge^{i} T^{*}\Fh)$ of leafwise $i$-forms. 
+If we consider a restriction map to a leaf $\mathcal{L}$, it induces the following map:
+\begin{equation}
+\label{eq:1.1}
+\begin{matrix}
+    \mathcal{A}^{i}_{\Fh}(X) & \rightarrow & \mathcal{A}^{i}(\mathcal{L}) \\
+    \omega_{\Fh} &\mapsto &\omega_{\Fh}|_{\mathcal{L}}.
+\end{matrix}
+\end{equation}
+It is easy to check that this map is surjective. 
+The restriction of a leafwise form $\omega_{\Fh}$ becomes a differential form on the leaf. 
+
+%leafwise cohomology
+Let 
+\begin{equation*}
+d^{i}_{\Fh} : \mathcal{A}^{i}_{\Fh}(X) \rightarrow \mathcal{A}^{i+1}_{\Fh}(X).
+\end{equation*}
+be the exterior derivative which is restricted on $\mathcal{A}^{i}_{\Fh}(X)$. 
+It is a differential operator which acts only along leaves direction. 
+It satisfies the relation $d^{i+1}_{\Fh} \circ d^{i}_{\Fh} = 0$. 
+Hence, the pairs $(\mathcal{A}^{i}_{\Fh}(X),d^{i}_{\Fh})$ form a complex. 
+We call it the leafwise de Rham complex. We denote the kernel of $d_{\Fh}^{i}$ by $Z^{i}_{\Fh}(X)$ and the image of $d_{\Fh}^{i-1}$ by $B^{i}_{\Fh}(X)$. 
+Note that leafwise $i$-forms in $Z^{i}_{\Fh}(X)$ (resp. $B^{i}_{\Fh}(X)$) are called leafwise closed $i$-forms (resp. leafwise exact $i$-forms).
+Then, we have the following definition:
+\begin{definition}
+We define the $i$-th $\mathit{leafwise}$ $\mathit{cohomology}$ group of $\Fh$ by the $i$-th homology group of the leafwise de Rham complex.
+\begin{equation*}
+    H^{i}_{\Fh}(X) := Z^{i}_{\Fh}(X) / B^{i}_{\Fh}(X).
+\end{equation*}
+\end{definition}
+Since $X$ is closed, the leafwise cohomology group is trivial for $i>n-d$.
+For the transverse flow, each diffeomorphism $\phi^{t}$ can be induced on any $\mathcal{A}^{i}_{\Fh}(X)$ as the pullback. 
+Then we have the following operator:
+\begin{definition}
+The infinitesimal generator on  $\mathcal{A}^{i}_{\Fh}(X)$ is defined by
+\begin{equation*}
+    \Theta := \underset{t\rightarrow0}{\mathrm{lim}} \frac{\phi^{t*}- \mathrm{id}}{t}.
+\end{equation*}
+\end{definition}
+The operator $\Theta$ is shown to be independent of the choice of the time parameter $t$. 

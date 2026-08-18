@@ -15,7 +15,7 @@ El análisis está organizado en tres partes:
 
 **Parte 1 (Secciones 1–4):** Formulación rigurosa de C5. Se muestra que la cola prima $\sum_{p > X} \frac{\log p}{p^{1+\pi/4}}$ es convergente y, mediante la fórmula de Weil, se da una condición explícita para que C5 sea satisfecha. Se prueba que C5 **sí puede demostrarse** para $X$ suficientemente grande: la cola es arbitrariamente pequeña respecto al total. La deducción de $\kappa < \infty$ requiere no obstante un paso adicional no trivial de la teoría de Kreĭn–Langer que se analiza con cuidado.
 
-**Parte 2 (Secciones 5–9):** Suponiendo $\kappa < \infty$, se estudia el obstáculo entre esta finitud y $\kappa = 0$ (RH). Se examina el producto de Hadamard con finitos factores off-críticos, el teorema de Carlson–Beurling, argumentos de Phragmén–Lindelöf, y el teorema de Jensen. La conclusión es honesta: **no hay argumento que lleve de $\kappa < \infty$ a $\kappa = 0$ sin información adicional sobre las posiciones de los ceros**.
+**Parte 2 (Secciones 5–9):** Suponiendo $\kappa < \infty$, se estudia el obstáculo entre esta finitud y $\kappa = 0$ (RH). Se examina el producto de Hadamard con finitos factores off-críticos, el teorema de Carlson–Beurling, argumentos de Phragmén–Lindelöf, y el teorema de Jensen. La conclusión es franca: **no hay argumento que lleve de $\kappa < \infty$ a $\kappa = 0$ sin información adicional sobre las posiciones de los ceros**.
 
 **Parte 3 (Secciones 10–12):** El obstáculo refinado y la Conjetura $\mathbf{C}_B$. Se formula con precisión la barrera entre finitud y nulidad del índice, se propone la conjetura y se examina si aparece en la literatura (Levinson, Conrey, Soundararajan).
 
@@ -154,7 +154,7 @@ El obstáculo técnico es que $|Q_{\mathrm{head}}[f]|$ puede anularse sin que $f
 
 **Conclusión de la Parte 1.** La Condición C5 puede demostrarse en la forma puntual (Proposición 4.1): para cada $f$ fijada, la fracción de la cola tiende a 0. La versión uniforme (supremo sobre todas las $f$) requiere un análisis más fino del espacio funcional. La deducción de $\kappa < \infty$ a partir de C5 es correcta en principio (Teorema 4.5) pero depende de la versión uniforme, que no está establecida aquí.
 
-**Declaración honesta 4.8.** Sobre el estado de C5:
+**Declaración franca 4.8.** Sobre el estado de C5:
 
 *Lo que sí está demostrado:* La cola prima $\sum_{p > X} \frac{\log p}{\sqrt{p}} |B_\lambda(\log p)|$ es una serie convergente con cola que tiende a cero (Corolario 3.5).
 
@@ -249,7 +249,7 @@ Si se compara $\xi$ con $\xi_{\mathrm{on}}$ (la función con solo ceros on-crít
 
 ### Sección 9 — ¿Existe un argumento que vaya de $\kappa < \infty$ a $\kappa = 0$?
 
-Resumimos los obstáculos y damos un veredicto honesto.
+Resumimos los obstáculos y damos un veredicto franco.
 
 **Proposición 9.1 (Obstáculos independientes de las posiciones de ceros).** Ninguno de los siguientes argumentos estándar lleva de $\kappa < \infty$ a $\kappa = 0$ sin conocer las posiciones de los ceros off-críticos:
 
@@ -439,7 +439,7 @@ donde $\mathcal{Z}_{\mathrm{on}}[f] = \sum_{\beta = 1/2} |\hat{f}(\rho)|^2$ es l
 
 **Conclusión 13.6 (La doble tarea del programa).** Para deducir $\kappa < \infty$ hay dos términos que controlar: $\mathcal{Z}_{\mathrm{off}}$ (ceros fuera de línea) y $\mathcal{P}$ (contribución prima). La Condición C5 solo maneja el segundo. Un argumento completo de $\kappa < \infty$ vía C5 necesitaría también una cota sobre $\mathcal{Z}_{\mathrm{off}}$ que no asuma finitud a priori — lo que sería circular.
 
-**Declaración honesta 13.7.** La estrategia de C5 como ruta hacia $\kappa < \infty$ tiene una dificultad adicional no señalada en la Sección 4: controlar $\mathcal{P}_{\mathrm{tail}}$ es solo la mitad del argumento. La otra mitad es controlar $\mathcal{Z}_{\mathrm{off}}$, lo que equivale a acotar los ceros off-críticos. Si los ceros off-críticos son desconocidos, no se puede controlar $\mathcal{Z}_{\mathrm{off}}$ sin información sobre RH.
+**Declaración franca 13.7.** La estrategia de C5 como ruta hacia $\kappa < \infty$ tiene una dificultad adicional no señalada en la Sección 4: controlar $\mathcal{P}_{\mathrm{tail}}$ es solo la mitad del argumento. La otra mitad es controlar $\mathcal{Z}_{\mathrm{off}}$, lo que equivale a acotar los ceros off-críticos. Si los ceros off-críticos son desconocidos, no se puede controlar $\mathcal{Z}_{\mathrm{off}}$ sin información sobre RH.
 
 Esto sugiere que la ruta C5 $\implies$ $\kappa < \infty$ tiene un obstáculo más profundo del que aparece en la Sección 4: la forma cuadrática $Q$ mezcla primos y ceros de manera que no puede desacoplarse sin conocer las posiciones de los ceros.
 

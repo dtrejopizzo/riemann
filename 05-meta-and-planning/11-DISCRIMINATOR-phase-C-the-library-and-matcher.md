@@ -107,6 +107,6 @@ The matcher partitions all future candidates into exactly three actionable bins:
   = the same wall, third derivation) and the **object-special trap** (R4, = CAP). No third root.
 - **The instrument is complete:** D0 + library + matcher partition all candidates into REJECT / OPEN-on-SURF /
   NEW-THEOREM-REQUIRED. The last bin is empty and is the only place a genuinely new node could live.
-- **Honest standing:** this is not progress toward a proof. It is the completed, validated **strategy map** —
+- **Candid standing:** this is not progress toward a proof. It is the completed, validated **strategy map** —
   the deliverable the audit identified as the program's real output — now sharp enough to route every future idea
   in one of three directions and to spend only where a new degree of freedom is even logically possible.

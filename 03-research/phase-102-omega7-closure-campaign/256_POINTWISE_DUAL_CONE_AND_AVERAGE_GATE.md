@@ -1,0 +1,232 @@
+# Pointwise dual cone and average gate
+
+## Purpose
+
+The reduced compact target is the pointwise inequality
+\[
+  C_n(T_n)\ge0\qquad(n\ge8).
+\]
+Equivalently, with
+\[
+  M_n=\lambda_n-\frac12A_n,\qquad
+  \delta_n=\frac14A_n-R_n(T_n),
+\]
+it is
+\[
+  \delta_n\ge -M_n.
+\]
+
+This note records the exact dual form of that pointwise demand.  Its role is
+to prevent a common false closure: proving positivity of a smoothed or
+averaged transform of \(C_n(T_n)\) does not by itself prove positivity of
+each coefficient.
+
+## Sequence cone
+
+Let
+\[
+  c_n=C_n(T_n)\qquad(n\ge8).
+\]
+The A1 cone is
+\[
+\boxed{
+  c_n\ge0\qquad(n\ge8).
+}
+\tag{1}
+\]
+
+For every finitely supported nonnegative sequence
+\[
+  \mu=(\mu_n)_{n\ge8},\qquad \mu_n\ge0,
+\]
+define
+\[
+  \langle \mu,c\rangle=\sum_{n\ge8}\mu_n c_n.
+\]
+
+Then
+\[
+\boxed{
+  c_n\ge0\ \hbox{ for all }n\ge8
+  \quad\Longleftrightarrow\quad
+  \langle\mu,c\rangle\ge0
+  \hbox{ for every finitely supported }\mu\ge0.
+}
+\tag{2}
+\]
+
+The forward implication is immediate.  Conversely, if \(c_N<0\), choose
+\(\mu_N=1\) and \(\mu_n=0\) for \(n\ne N\).  Then
+\(\langle\mu,c\rangle=c_N<0\).
+
+Thus any averaged method closes A1 only if its tested weights generate the
+coordinate masses \(\delta_N\) in the positive dual cone, or if it supplies a
+separate coefficient-extraction theorem.
+
+## Margin-tail dual version
+
+Normalize
+\[
+  s_n={\delta_n\over A_n},\qquad
+  d_n={(-M_n)_+\over A_n}.
+\]
+
+Since \(A_n>0\) for \(n\ge8\), compact A1 is
+\[
+\boxed{s_n-d_n\ge0\qquad(n\ge8).}
+\tag{3}
+\]
+
+The exact dual form is
+\[
+\boxed{
+  \sum_{n\ge8}\mu_nA_n(s_n-d_n)\ge0
+  \quad\hbox{for every finitely supported }\mu_n\ge0.
+}
+\tag{4}
+\]
+
+Equivalently,
+\[
+\boxed{
+  \sum_{n\ge8}\mu_n
+  \left(\frac14A_n-R_n(T_n)\right)
+  \ge
+  \sum_{n\ge8}\mu_n(-M_n)_+
+  \quad(\mu\ge0).
+}
+\tag{5}
+\]
+
+This is the sharp averaged tail--margin theorem.  It is not weaker than A1
+unless the admissible family of \(\mu\)'s is restricted.
+
+## Restricted average gates
+
+Suppose a proposed route proves only
+\[
+\boxed{
+  \sum_{n\ge8}K_\alpha(n)c_n\ge0
+  \qquad(\alpha\in\mathcal A),
+}
+\tag{6}
+\]
+where \(K_\alpha(n)\ge0\).  Let \(\mathcal K\) be the closed cone generated
+by the rows \(K_\alpha\) in the finitely supported dual topology.
+
+Then (6) implies A1 only if
+\[
+\boxed{
+  \delta_N\in\mathcal K
+  \qquad(N\ge8),
+}
+\tag{7}
+\]
+where \(\delta_N(n)=1\) for \(n=N\) and \(0\) otherwise.
+
+Indeed, if (7) holds, each coordinate value \(c_N\) is a nonnegative limit
+of the known averages and is therefore nonnegative.  If (7) fails for some
+\(N\), the average theorem has not tested the direction that detects a
+possible negative \(c_N\).
+
+Thus the real obligation in any Abel, Laplace, Fejer, heat, or smoothed
+coefficient route is not just positivity of the smoothed transform.  It is
+one of the following stronger statements:
+
+1. positive reconstruction of every coordinate mass \(\delta_N\);
+2. local uniform convergence of coefficient-positive approximants, so that
+   Cauchy extraction gives each coefficient;
+3. an independent structural theorem forcing the sequence \(c_n\) into a
+   smaller cone where the tested averages do separate positivity.
+
+Without one of these, a positive average is only a shadow of A1.
+
+## Abel warning
+
+Let
+\[
+  F(r)=\sum_{n\ge8}c_n r^n,\qquad 0<r<1.
+\]
+
+Even if \(F(r)\ge0\) on \((0,1)\), this does not automatically imply
+\(c_n\ge0\) for every \(n\), unless the proof also gives coefficient
+extraction or enough derivative control at \(r=0\).
+
+The reason is elementary.  Positivity of one real function on an interval is
+not coefficientwise positivity of its Taylor series.  A negative coefficient
+can be hidden by lower or higher positive coefficients in the values of
+\(F\).  Therefore an Abel-positive theorem is useful for A1 only after it is
+upgraded to a coefficient-positive theorem, a complete monotonicity theorem,
+or a positive inverse-kernel theorem.
+
+This is exactly the same logical restriction found in the RDI bridge: local
+uniform convergence of the correct Li generator plus nonnegative
+approximating coefficients is enough; pointwise positivity of a real
+normalization is not.
+
+## Finite-dimensional separation certificate
+
+Fix \(N\ge8\) and truncate to
+\[
+  \mathcal I_N=\{8,9,\ldots,N\}.
+\]
+Let \(K_\alpha|_{\mathcal I_N}\) be a finite family of tested nonnegative
+weights.  If
+\[
+  \delta_j\notin
+  \operatorname{cone}\{K_\alpha|_{\mathcal I_N}\},
+\]
+then finite-dimensional separation gives a vector \(v=(v_n)_{n\in\mathcal
+I_N}\) such that
+\[
+  \sum_{n\in\mathcal I_N}K_\alpha(n)v_n\ge0
+  \quad\hbox{for every tested }\alpha,
+\]
+but
+\[
+  v_j<0.
+\]
+
+Hence the tested averages cannot rule out a negative A1 coefficient at
+\(j\).  This gives an executable audit for proposed smoothed methods: on
+each finite window, check whether the coordinate masses lie in the positive
+cone generated by the method's kernels.
+
+## Consequence for the live frontier
+
+The current frontier \(s_n\ge d_n\) is a pointwise theorem.  Therefore the
+next successful route must produce one of the following:
+
+\[
+\boxed{
+  C_n(T_n)\ge0\quad\hbox{directly for each }n,
+}
+\tag{8}
+\]
+or
+\[
+\boxed{
+  \delta_N\hbox{ is positively reconstructible from the proved averaged
+  inequalities for every }N,
+}
+\tag{9}
+\]
+or
+\[
+\boxed{
+  \hbox{a coefficient-extraction theorem for a correct Euler--Gamma
+  generator.}
+}
+\tag{10}
+\]
+
+This upgrades the planning rule: smoothed positivity is not a closure
+unless it comes with a positive inverse.
+
+## Status
+
+Closed as the pointwise dual-cone and average-gate audit.
+
+A1 remains open.  The accepted next target is a signed coefficient theorem,
+a positive inverse-kernel theorem, or a non-circular global Herglotz/RDI
+construction that supplies coefficient positivity directly.

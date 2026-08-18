@@ -18,7 +18,7 @@ Es el error de aproximación band-limited: ξ̂_{λ,N} ∈ PW_{L/2} (tipo L/2=lo
 γ_n (interior al horizonte) tiene error exponencial en la "sala" T*−γ_n.
 - **[GAP] Prueba:** desigualdad de Beurling–Selberg / Plancherel–Pólya para el residuo de interpolación a densidad crítica. Herramienta clásica; falta la constante c y la uniformidad. No usa ceros off-line (sólo densidad). **Término Euler [N→GAP]:** medido < 1e-19 ya con primos ≤13 (ultrarrápido). Es el resto
 de la fórmula explícita truncada, R_λ(½+iγ_n) (cf. weil-remainder-attack).
-- **[!] Subtileza honesta:** R_λ ~ Σ_ρ (λ²)^{ρ−s} ES sensible a Re ρ. PERO para γ_n FIJO y dentro del horizonte, la cola que importa es la de primos > λ², y su efecto sobre el cero ya resuelto es de orden PNT (regiones libres de ceros clásicas), no la posición de los γ globales. La sensibilidad RH aparece sólo en el régimen UNIFORME (ver §3), no en la convergencia local de un cero fijo. **Lectura:** E2-blando = convergencia local de cada cero, gobernada por Nyquist (banda)
+- **[!] Subtileza franca:** R_λ ~ Σ_ρ (λ²)^{ρ−s} ES sensible a Re ρ. PERO para γ_n FIJO y dentro del horizonte, la cola que importa es la de primos > λ², y su efecto sobre el cero ya resuelto es de orden PNT (regiones libres de ceros clásicas), no la posición de los γ globales. La sensibilidad RH aparece sólo en el régimen UNIFORME (ver §3), no en la convergencia local de un cero fijo. **Lectura:** E2-blando = convergencia local de cada cero, gobernada por Nyquist (banda)
 + PNT (Euler). Incondicional. Es el "quick win" que además **escribe la frontera**. --- ## 2. Por qué E2-blando NO da RH (y está bien que no) La convergencia local ρ̂_n(λ) → γ_n es sobre el **eje real**: dice que el n-ésimo
 autovalor real del modelo finito converge al n-ésimo γ_n. **No constata que ρ_n esté en
 línea**, porque γ_n es la altura (parte imaginaria), que existe esté ρ_n on u off line. Para RH hace falta que la convergencia **vea la parte real** β_n de ρ_n, lo cual requiere
@@ -34,7 +34,7 @@ sup-norma NO es e^{−cλ²} uniformemente — sólo cada cero converge así, lo
 cota sup-norma uniforme no hay nada que amplificar off-axis. ### ⟹ La pregunta dura, en variables de aproximación ``` ¿La convergencia LOCAL de los ceros (e^{−cλ²}, incondicional) se puede UPGRADEAR a convergencia UNIFORME en sup-norma en un intervalo real, con control de tipo suficiente para una franja de ancho FIJO?
 ``` - **Si sí ⟹ RH** (Hurwitz + amplificación off-axis).
 - **Es una pregunta de de Branges / Paley–Wiener / Beurling**, NO de positividad de Weil.
-- **No sabemos si es RH-por-necesidad o RH-por-formulación.** Esta es la frontera precisa que tu colaborador pedía escribir. --- ## 4. Qué cambia esto (honesto) **No escapamos la RH-hardness todavía.** Pero **reubicamos el muro** de
+- **No sabemos si es RH-por-necesidad o RH-por-formulación.** Esta es la frontera precisa que tu colaborador pedía escribir. --- ## 4. Qué cambia esto (franco) **No escapamos la RH-hardness todavía.** Pero **reubicamos el muro** de
 "positividad / posición de ceros" a una pregunta **limpia de teoría de aproximación**: > upgrade de convergencia local (incondicional) a uniforme-en-franja-fija, con tipo log λ. Esto es un **objeto nuevo del Mundo B**, distinto de A_∞⪰0. Las herramientas candidatas
 son de aproximación (Beurling–Selberg, Plancherel–Pólya, espacios modelo, de Branges
 sin positividad), no de positividad. **Por primera vez el Eslabón 2-duro está escrito

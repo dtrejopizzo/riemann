@@ -12,13 +12,13 @@ un **violador explícito de RH con ceros off-line calculados**: `L_DH` (Davenpor
 - `L_DH` (Euler ✘, RH-false, ‖K‖>1 forzado por el teorema de negatividad forzada de P7). **Objetivo:** aislar el bloque/operador-diferencia `Δ = K_ζ − K_{L_DH}` y determinar **qué característica
 aritmética** lleva la diferencia de signo: (a) la multiplicatividad (producto de Euler), (b) el factor Γ /
 conductor (geometría arquimediana), o (c) la arquitectura de coeficientes (entropía/paridad de P4 a nivel operador). Conexión B2conj: si la diferencia está en (a), el enunciado natural es **"la anatomía por-primo de K
-factoriza sobre primos ⟺ la L-función tiene producto de Euler"**, a nivel de operador residual. --- ## 4. POR QUÉ EVADE LOS MUROS (honesto) | Muro | Cómo se evade | ¿Realmente? |
+factoriza sobre primos ⟺ la L-función tiene producto de Euler"**, a nivel de operador residual. --- ## 4. POR QUÉ EVADE LOS MUROS (franco) | Muro | Cómo se evade | ¿Realmente? |
 |---|---|---|
 | MW-4 (signo equivocado) | No probamos cota inferior incondicional; medimos un **contraste** ζ↔L_DH. Output = condición suficiente / invariante, no desigualdad de un lado. | ✔ genuino |
 | MW-2 (propagación aritmética) | El producto de Euler entra como **etiqueta de clasificación** (multiplicatividad), no como cota propagada de Re(s)>1. | ✔ genuino |
 | Circularidad | El discriminante separa ζ de L_DH por **anatomía** (clasificación), no por ceros. RH-independiente por construcción. | ✔ genuino |
 | MW-3 / MW-5 (cross-place /) | **NO se evade.** El paso final ‖K_p‖→‖K‖ global es la cancelación cross-place (GNS, cuadrado global). <1%. | ✘ muro real |
-| NG-E1 (positividad por-lugar refutada) | `G_p` local es indefinida; **no asumimos positividad por-lugar**. Medimos el defecto de cancelación, no positividad local. | ⚠ respetado | **Conclusión honesta:** esta phase NO llega a RH. Llega, en el mejor caso, a un **invariante operatorial
+| NG-E1 (positividad por-lugar refutada) | `G_p` local es indefinida; **no asumimos positividad por-lugar**. Medimos el defecto de cancelación, no positividad local. | ⚠ respetado | **Conclusión franca:** esta phase NO llega a RH. Llega, en el mejor caso, a un **invariante operatorial
 necesario que separa L-funciones Euler de no-Euler por su espectro de Weil-residual** — prerequisito de
 cualquier ataque futuro a la cancelación cross-place, y nuevo en la literatura. --- ## 5. EXPERIMENTO DECISIVO (E1) — con go/no-go pre-registrado **Construir el espectro del residual de Weil localizado, en base Slepian-prolate, para ζ y para L_DH, y leer:** 1. **Base.** Funciones prolate esferoidales ψ_n^{(c)} a producto tiempo-banda c, centradas en altura T₀. (Hermite–Gauss de P7 es el límite c→0; prolates son la base matched a la geometría Sonin de.)
 2. **Operador.** Ensamblar `Q^{(c,T₀,X)} = M_zeros − M_arith` en esta base (semi-local: corte de primos X), para ζ y L_DH. El residual angular K se lee del split de Kreĭn (P8 §7).
@@ -26,7 +26,7 @@ cualquier ataque futuro a la cancelación cross-place, y nuevo en la literatura.
 - **NO-GO (cerrar y archivar):** la diferencia ζ↔L_DH no se localiza en ninguna característica aritmética estable (se diluye en ruido de truncación, o es atribuible solo a la ubicación de ceros = circular). → registrar en NO-GO-LIST como [NG-?], cerrar phase. --- ## 6. PROTOCOLO ANTI-AUTOENGAÑO (obligatorio) 1. Reusar el engine **real** de P7 (`02-foundations/`), no reescribir un engine nuevo no validado.
 2. Control que debe fallar: L_DH **tiene** que dar ‖K‖>1; si el engine no reproduce λ_min<0 para L_DH, el engine está roto — parar.
 3. Control multiplicativo sintético: una L falsa con coeficientes multiplicativos pero ceros movidos a mano, para separar "multiplicatividad" de "ubicación de ceros".
-4. Todo número reportado viene con el script que lo generó y su hash de commit. --- ## 7. PROBABILIDADES HONESTAS | Pregunta | Estimación |
+4. Todo número reportado viene con el script que lo generó y su hash de commit. --- ## 7. PROBABILIDADES FRANCAS | Pregunta | Estimación |
 |---|---|
 | El experimento corre y reproduce λ_min(L_DH)<0 (sanity) | ~90% |
 | Existe un invariante operatorial estable que separa Euler/no-Euler | ~30–40% |

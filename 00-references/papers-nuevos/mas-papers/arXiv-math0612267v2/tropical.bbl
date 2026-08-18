@@ -1,0 +1,126 @@
+\def\cprime{$'$}
+\begin{thebibliography}{BdlHN97}
+
+\bibitem[Ale02]{Alexeev}
+Valery Alexeev.
+\newblock Complete moduli in the presence of semiabelian group action.
+\newblock {\em Ann. of Math. (2)}, 155(3):611--708, 2002.
+
+\bibitem[AN99]{Alexeev-Nakamura}
+Valery Alexeev and Iku Nakamura.
+\newblock On {M}umford's construction of degenerating abelian varieties.
+\newblock {\em Tohoku Math. J. (2)}, 51(3):399--420, 1999.
+
+\bibitem[AR07]{AR}
+Lars Allermann and Johannes Rau.
+\newblock First steps in tropical intersection theory.
+\newblock http://arxiv.org/abs/0709.3705v2, 2007.
+
+\bibitem[BdlHN97]{Nagnibeda2}
+Roland Bacher, Pierre de~la Harpe, and Tatiana Nagnibeda.
+\newblock The lattice of integral flows and the lattice of integral cuts on a
+  finite graph.
+\newblock {\em Bull. Soc. Math. France}, 125(2):167--198, 1997.
+
+\bibitem[BHV01]{Biomath}
+Louis~J. Billera, Susan~P. Holmes, and Karen Vogtmann.
+\newblock Geometry of the space of phylogenetic trees.
+\newblock {\em Adv. in Appl. Math.}, 27(4):733--767, 2001.
+
+\bibitem[Big99]{Biggs1}
+N.~L. Biggs.
+\newblock Chip-firing and the critical group of a graph.
+\newblock {\em J. Algebraic Combin.}, 9(1):25--45, 1999.
+
+\bibitem[BLS91]{BLS}
+Anders Bj{\"o}rner, L{\'a}szl{\'o} Lov{\'a}sz, and Peter~W. Shor.
+\newblock Chip-firing games on graphs.
+\newblock {\em European J. Combin.}, 12(4):283--291, 1991.
+
+\bibitem[BN07]{BN}
+Matthew Baker and Serguei Norine.
+\newblock {R}iemann-{R}och and {A}bel-{J}acobi theory on a finite graph.
+\newblock {\em Advances in Mathematics}, 215:766--788, 2007.
+
+\bibitem[FC90]{Chai-Faltings}
+Gerd Faltings and Ching-Li Chai.
+\newblock {\em Degeneration of abelian varieties}, volume~22 of {\em Ergebnisse
+  der Mathematik und ihrer Grenzgebiete (3) [Results in Mathematics and Related
+  Areas (3)]}.
+\newblock Springer-Verlag, Berlin, 1990.
+\newblock With an appendix by David Mumford.
+
+\bibitem[GK06]{GK}
+Andreas Gathmann and Michael Kerber.
+\newblock A {R}iemann-{R}och theorem in tropical geometry.
+\newblock http://arxiv.org/abs/math.CO/0612129, 2006.
+
+\bibitem[GKZ94]{GKZ}
+I.~M. Gel{\cprime}fand, M.~M. Kapranov, and A.~V. Zelevinsky.
+\newblock {\em Discriminants, resultants, and multidimensional determinants}.
+\newblock Mathematics: Theory \& Applications. Birkh\"auser Boston Inc.,
+  Boston, MA, 1994.
+
+\bibitem[GW00]{GW}
+Mark Gross and P.~M.~H. Wilson.
+\newblock Large complex structure limits of {$K3$} surfaces.
+\newblock {\em J. Differential Geom.}, 55(3):475--546, 2000.
+
+\bibitem[HKN07]{HKN}
+Jan Hladk\'y, Daniel Kr\'al', and Serguei Norine.
+\newblock Rank of divisors on tropical curves.
+\newblock http://arxiv.org/abs/math.CO/0709.4485, 2007.
+
+\bibitem[Kap00]{Ka}
+Mikhail Kapranov.
+\newblock Amoebas over non-archimedean fields.
+\newblock Preprint, 2000.
+
+\bibitem[KS01]{KS}
+Maxim Kontsevich and Yan Soibelman.
+\newblock Homological mirror symmetry and torus fibrations.
+\newblock In {\em Symplectic geometry and mirror symmetry (Seoul, 2000)}, pages
+  203--263. World Sci. Publ., River Edge, NJ, 2001.
+
+\bibitem[KS06]{KS04}
+Maxim Kontsevich and Yan Soibelman.
+\newblock Affine structures and non-{A}rchimedean analytic spaces.
+\newblock In {\em The unity of mathematics}, volume 244 of {\em Progr. Math.},
+  pages 321--385. Birkh\"auser Boston, Boston, MA, 2006.
+
+\bibitem[Mik]{Mibook}
+Grigory Mikhalkin.
+\newblock Tropical geometry and amoebas.
+\newblock Book in preparation,
+  http://www.math.toronto.edu/~mikha/TG-project.html.
+
+\bibitem[Mik06]{Mi-ICM}
+Grigory Mikhalkin.
+\newblock Tropical geometry and its application.
+\newblock Proceedings of the ICM 2006 Madrid,
+  http://arxiv.org/abs/math.AG/0601041, 2006.
+
+\bibitem[Mik07]{Mi07}
+Grigory Mikhalkin.
+\newblock What is{$\dots$}a tropical curve?
+\newblock {\em Notices Amer. Math. Soc.}, 54(4):511--513, 2007.
+
+\bibitem[Mum72]{Mumford_abelian_varieties}
+David Mumford.
+\newblock An analytic construction of degenerating abelian varieties over
+  complete rings.
+\newblock {\em Compositio Math.}, 24:239--272, 1972.
+
+\bibitem[MZ06]{MZ1}
+Grigory Mikhalkin and Ilia Zharkov.
+\newblock Tropical curves, their {J}acobians and {T}heta functions.
+\newblock http://arxiv.org/abs/math.AG/0612267v1, 2006.
+
+\bibitem[Nag97]{Nagnibeda}
+Tatiana Nagnibeda.
+\newblock The {J}acobian of a finite graph.
+\newblock In {\em Harmonic functions on trees and buildings (New York, 1995)},
+  volume 206 of {\em Contemp. Math.}, pages 149--151. Amer. Math. Soc.,
+  Providence, RI, 1997.
+
+\end{thebibliography}

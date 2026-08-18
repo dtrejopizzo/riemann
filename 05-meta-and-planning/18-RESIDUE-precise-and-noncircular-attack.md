@@ -67,7 +67,7 @@ $$
 
 ## 4. Does the cross-scale/octave structure shrink the gap?
 
-Honest assessment of the new leverage:
+Candid assessment of the new leverage:
 - The octave increments alternate in sign (experiment), suggesting a summation-by-parts attack giving bounded
   partial sums without termwise decay. **But the alternation is a property of the saturating direction $g^\ast$
   (the eigenvector adapts to cancel), not a direction-independent prime law.** The clean, direction-free statement
@@ -85,7 +85,7 @@ Honest assessment of the new leverage:
   (diagonal $+$ Montgomery $|\alpha|<1$) and a prime-side equivalent (short-interval second moment).
 - **It separates from RH at the uniform high-frequency form factor $|\alpha|\ge1$** --- the Goldston--Montgomery
   frontier --- which the cross-scale view localizes to the largest primes in the band. This is a **recognized open
-  problem, not RH**, and is the honest, attackable, non-circular target the whole option-(b)/cross-scale line
+  problem, not RH**, and is the candid, attackable, non-circular target the whole option-(b)/cross-scale line
   produces.
 - **Caveat (no overclaim):** even this weaker target is hard and long-open; the contribution here is its precise
   identification and the proof that pursuing it is *not* circular --- it is a genuine sub-RH frontier, the same one

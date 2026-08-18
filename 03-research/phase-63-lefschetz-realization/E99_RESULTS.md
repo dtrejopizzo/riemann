@@ -50,7 +50,7 @@ structural statement of the master wall:
 
 > **The function-field proof needs a gapped positive polarization; ζ cannot have one on any finite
 > window because it has infinitely many, accumulating zeros (infinite genus). The crossing requires
-> an honestly infinite-dimensional realization with a *regularized* positivity (Deninger's
+> an candidly infinite-dimensional realization with a *regularized* positivity (Deninger's
 > regularized determinants / the arithmetic site), not a finite gap — which is a theory problem
 > beyond what numerics can validate.**
 

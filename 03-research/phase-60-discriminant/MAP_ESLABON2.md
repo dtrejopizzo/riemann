@@ -1,5 +1,5 @@
 # Eslabón 2 (convergencia ξ̂_{λ,N} → Ξ): estructura, ataque y estado **Foco:** este es EL hueco del mapa a RH. Todo lo demás (Eslabones 1,3,4) está probado o es
-clásico. Cerrar Eslabón 2 ⟹ RH. --- ## 0. Por qué pivotamos de numérico a teórico (honesto) E6 intentó medir el "horizonte" H(λ) = altura hasta la que los ceros se resuelven, como
+clásico. Cerrar Eslabón 2 ⟹ RH. --- ## 0. Por qué pivotamos de numérico a teórico (franco) E6 intentó medir el "horizonte" H(λ) = altura hasta la que los ceros se resuelven, como
 medida empírica de 2b. **Bloqueado numéricamente:** cond(QW_λ^N) ≈ 10¹⁶–10¹⁷ (diagnóstico
 directo). El primer cero sobrevive (1e-14 a N=70) pero los ceros altos —que dependen de las
 componentes pequeñas del autovector del menor autovalor— se ahogan en ruido float64. La

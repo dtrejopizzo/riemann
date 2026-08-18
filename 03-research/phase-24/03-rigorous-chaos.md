@@ -125,7 +125,7 @@ Para demostrar que $b_j \geq F(\gamma_j)$ para alguna función $F$ no trivial, o
 
 ---
 
-## 6. Balance honesto de Phase 24
+## 6. Balance franco de Phase 24
 
 Phase 24 es mayoritariamente un resultado negativo triple.
 

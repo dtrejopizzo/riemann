@@ -101,7 +101,7 @@ $$E_\lambda(t) = 2\left[\sum_{p\leq\lambda^2}\Lambda(p)p^{-1/2}\cos(t\log p) - \
 
 Hmm — esta diferencia requiere que la serie completa $\sum_p$ converja en sentido Cauchy, lo que NO es inmediato.
 
-**Nota honesta.** La convergencia de $\Psi_\lambda(t) \to \Psi(t)$ para $t$ fijo NO es obvia: la suma $\sum_p\Lambda(p)p^{-1/2}\cos(t\log p)$ DIVERGE absolutamente (ya que $\sum_p\Lambda(p)p^{-1/2} \sim 2\lambda^2 \to \infty$). La convergencia es solo OSCILATORIA y requiere la cancelación de las contribuciones de diferentes primos.
+**Nota franca.** La convergencia de $\Psi_\lambda(t) \to \Psi(t)$ para $t$ fijo NO es obvia: la suma $\sum_p\Lambda(p)p^{-1/2}\cos(t\log p)$ DIVERGE absolutamente (ya que $\sum_p\Lambda(p)p^{-1/2} \sim 2\lambda^2 \to \infty$). La convergencia es solo OSCILATORIA y requiere la cancelación de las contribuciones de diferentes primos.
 
 La convergencia oscilatoria (en el sentido de Cesàro o de Abel) de $\Psi_\lambda(t) - c_\lambda$ (donde $c_\lambda = \sum_{p\leq\lambda^2}\Lambda(p)p^{-1/2}$ es el término divergente) a $\Psi(t) - c$ (donde $c = \lim c_\lambda$ no existe) requiere que el POTENCIAL NORMALIZADO $\tilde C_\lambda(t) := C_\lambda(t) + c_\lambda = w(t) - (\Psi_\lambda(t) - c_\lambda)$ converja a $\tilde C_\infty(t) = w(t) - (\Psi(t)-c)$.
 
@@ -193,7 +193,7 @@ La estimación final $O(\lambda^{-1/2+\varepsilon})$ requiere una cota más fina
 
 ## 8. El obstáculo: el crecimiento de la suma parcial de primos en el cruce
 
-**Diagnóstico honesto.** El argumento del Paso 2 da $|t_n^{(\lambda)} - \gamma_n| = O(\lambda^\varepsilon)$, que crece con $\lambda$. La acotación requiere una estimación MÁS FINA de las sumas de primos twistadas evaluadas en $t = \gamma_n$.
+**Diagnóstico franco.** El argumento del Paso 2 da $|t_n^{(\lambda)} - \gamma_n| = O(\lambda^\varepsilon)$, que crece con $\lambda$. La acotación requiere una estimación MÁS FINA de las sumas de primos twistadas evaluadas en $t = \gamma_n$.
 
 La suma $\sum_{p\leq x}\Lambda(p)p^{-1/2}\cos(\gamma_n\log p)$ en $t = \gamma_n$: por la fórmula explícita evaluada en $\gamma_n$:
 
@@ -215,7 +215,7 @@ Y el desplazamiento del cruce:
 
 $$|t_n^{(\lambda)} - \gamma_n| \leq \frac{C}{c_n}\cdot\log\lambda.$$
 
-**Este es el resultado honesto:** bajo RH, $|t_n^{(\lambda)} - \gamma_n| = O(\log\lambda)$.
+**Este es el resultado franco:** bajo RH, $|t_n^{(\lambda)} - \gamma_n| = O(\log\lambda)$.
 
 ---
 

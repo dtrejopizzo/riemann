@@ -1,0 +1,719 @@
+{
+  "statement": "E79.3e interior remainder after removing the active outer layer",
+  "cases": [
+    {
+      "label": "zeta",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.0038856850916",
+              "thresholds": {
+                "0.5": {
+                  "m": 4,
+                  "fraction_of_dim": 0.26666666666666666,
+                  "outer": "0.00235230561245",
+                  "remainder": "0.00153337947915",
+                  "abs_remainder_over_common": "0.394622683774",
+                  "N_abs_remainder": "0.0122670358332",
+                  "N2_abs_remainder": "0.0981362866655"
+                },
+                "0.9": {
+                  "m": 7,
+                  "fraction_of_dim": 0.4666666666666667,
+                  "outer": "0.00379948463771",
+                  "remainder": "8.62004538872e-5",
+                  "abs_remainder_over_common": "0.0221841070121",
+                  "N_abs_remainder": "0.000689603631098",
+                  "N2_abs_remainder": "0.00551682904878"
+                },
+                "0.99": {
+                  "m": 9,
+                  "fraction_of_dim": 0.6,
+                  "outer": "0.00388246763527",
+                  "remainder": "3.21745632659e-6",
+                  "abs_remainder_over_common": "0.000828028069889",
+                  "N_abs_remainder": "2.57396506127e-5",
+                  "N2_abs_remainder": "0.000205917204902"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00775031857931",
+              "thresholds": {
+                "0.5": {
+                  "m": 4,
+                  "fraction_of_dim": 0.26666666666666666,
+                  "outer": "0.00469653916862",
+                  "remainder": "0.0030537794107",
+                  "abs_remainder_over_common": "0.394019856016",
+                  "N_abs_remainder": "0.0244302352856",
+                  "N2_abs_remainder": "0.195441882285"
+                },
+                "0.9": {
+                  "m": 7,
+                  "fraction_of_dim": 0.4666666666666667,
+                  "outer": "0.00757905199081",
+                  "remainder": "0.000171266588507",
+                  "abs_remainder_over_common": "0.0220980062631",
+                  "N_abs_remainder": "0.00137013270805",
+                  "N2_abs_remainder": "0.0109610616644"
+                },
+                "0.99": {
+                  "m": 9,
+                  "fraction_of_dim": 0.6,
+                  "outer": "0.00774395996423",
+                  "remainder": "6.358615084e-6",
+                  "abs_remainder_over_common": "0.000820432736916",
+                  "N_abs_remainder": "5.0868920672e-5",
+                  "N2_abs_remainder": "0.000406951365376"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00281226360364",
+              "thresholds": {
+                "0.5": {
+                  "m": 4,
+                  "fraction_of_dim": 0.21052631578947367,
+                  "outer": "0.00147929188621",
+                  "remainder": "0.00133297171744",
+                  "abs_remainder_over_common": "0.473985338966",
+                  "N_abs_remainder": "0.0133297171744",
+                  "N2_abs_remainder": "0.133297171744"
+                },
+                "0.9": {
+                  "m": 8,
+                  "fraction_of_dim": 0.42105263157894735,
+                  "outer": "0.00262048374031",
+                  "remainder": "0.00019177986333",
+                  "abs_remainder_over_common": "0.0681941277059",
+                  "N_abs_remainder": "0.0019177986333",
+                  "N2_abs_remainder": "0.019177986333"
+                },
+                "0.99": {
+                  "m": 11,
+                  "fraction_of_dim": 0.5789473684210527,
+                  "outer": "0.00280854269933",
+                  "remainder": "3.72090431639e-6",
+                  "abs_remainder_over_common": "0.00132309941058",
+                  "N_abs_remainder": "3.72090431639e-5",
+                  "N2_abs_remainder": "0.000372090431639"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00561353751115",
+              "thresholds": {
+                "0.5": {
+                  "m": 4,
+                  "fraction_of_dim": 0.21052631578947367,
+                  "outer": "0.00295549473679",
+                  "remainder": "0.00265804277436",
+                  "abs_remainder_over_common": "0.473505836397",
+                  "N_abs_remainder": "0.0265804277436",
+                  "N2_abs_remainder": "0.265804277436"
+                },
+                "0.9": {
+                  "m": 8,
+                  "fraction_of_dim": 0.42105263157894735,
+                  "outer": "0.00523181274928",
+                  "remainder": "0.000381724761869",
+                  "abs_remainder_over_common": "0.0680007501707",
+                  "N_abs_remainder": "0.00381724761869",
+                  "N2_abs_remainder": "0.0381724761869"
+                },
+                "0.99": {
+                  "m": 11,
+                  "fraction_of_dim": 0.5789473684210527,
+                  "outer": "0.00560614363886",
+                  "remainder": "7.39387228978e-6",
+                  "abs_remainder_over_common": "0.00131715024173",
+                  "N_abs_remainder": "7.39387228978e-5",
+                  "N2_abs_remainder": "0.000739387228978"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00246967255598",
+              "thresholds": {
+                "0.5": {
+                  "m": 5,
+                  "fraction_of_dim": 0.21739130434782608,
+                  "outer": "0.00129924443698",
+                  "remainder": "0.001170428119",
+                  "abs_remainder_over_common": "0.473920364934",
+                  "N_abs_remainder": "0.014045137428",
+                  "N2_abs_remainder": "0.168541649136"
+                },
+                "0.9": {
+                  "m": 9,
+                  "fraction_of_dim": 0.391304347826087,
+                  "outer": "0.0023543535993",
+                  "remainder": "0.000115318956687",
+                  "abs_remainder_over_common": "0.0466940268692",
+                  "N_abs_remainder": "0.00138382748025",
+                  "N2_abs_remainder": "0.016605929763"
+                },
+                "0.99": {
+                  "m": 11,
+                  "fraction_of_dim": 0.4782608695652174,
+                  "outer": "0.00245843666355",
+                  "remainder": "1.12358924354e-5",
+                  "abs_remainder_over_common": "0.00454954743217",
+                  "N_abs_remainder": "0.000134830709225",
+                  "N2_abs_remainder": "0.00161796851069"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00493174719241",
+              "thresholds": {
+                "0.5": {
+                  "m": 5,
+                  "fraction_of_dim": 0.21739130434782608,
+                  "outer": "0.00259644450313",
+                  "remainder": "0.00233530268928",
+                  "abs_remainder_over_common": "0.473524411971",
+                  "N_abs_remainder": "0.0280236322713",
+                  "N2_abs_remainder": "0.336283587256"
+                },
+                "0.9": {
+                  "m": 9,
+                  "fraction_of_dim": 0.391304347826087,
+                  "outer": "0.00470192767844",
+                  "remainder": "0.000229819513966",
+                  "abs_remainder_over_common": "0.0466000192225",
+                  "N_abs_remainder": "0.0027578341676",
+                  "N2_abs_remainder": "0.0330940100112"
+                },
+                "0.99": {
+                  "m": 11,
+                  "fraction_of_dim": 0.4782608695652174,
+                  "outer": "0.00490937126802",
+                  "remainder": "2.23759243906e-5",
+                  "abs_remainder_over_common": "0.00453711910153",
+                  "N_abs_remainder": "0.000268511092687",
+                  "N2_abs_remainder": "0.00322213311225"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00195712828482",
+              "thresholds": {
+                "0.5": {
+                  "m": 6,
+                  "fraction_of_dim": 0.2222222222222222,
+                  "outer": "0.00115265708691",
+                  "remainder": "0.000804471197909",
+                  "abs_remainder_over_common": "0.411046738299",
+                  "N_abs_remainder": "0.0112625967707",
+                  "N2_abs_remainder": "0.15767635479"
+                },
+                "0.9": {
+                  "m": 10,
+                  "fraction_of_dim": 0.37037037037037035,
+                  "outer": "0.00181236345015",
+                  "remainder": "0.000144764834668",
+                  "abs_remainder_over_common": "0.073967984516",
+                  "N_abs_remainder": "0.00202670768535",
+                  "N2_abs_remainder": "0.0283739075949"
+                },
+                "0.99": {
+                  "m": 13,
+                  "fraction_of_dim": 0.48148148148148145,
+                  "outer": "0.00194252343837",
+                  "remainder": "1.46048464528e-5",
+                  "abs_remainder_over_common": "0.00746238586713",
+                  "N_abs_remainder": "0.000204467850339",
+                  "N2_abs_remainder": "0.00286254990475"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00390952949867",
+              "thresholds": {
+                "0.5": {
+                  "m": 6,
+                  "fraction_of_dim": 0.2222222222222222,
+                  "outer": "0.00230374399585",
+                  "remainder": "0.00160578550282",
+                  "abs_remainder_over_common": "0.410736254417",
+                  "N_abs_remainder": "0.0224809970395",
+                  "N2_abs_remainder": "0.314733958552"
+                },
+                "0.9": {
+                  "m": 10,
+                  "fraction_of_dim": 0.37037037037037035,
+                  "outer": "0.00362086378353",
+                  "remainder": "0.000288665715139",
+                  "abs_remainder_over_common": "0.0738364335752",
+                  "N_abs_remainder": "0.00404132001194",
+                  "N2_abs_remainder": "0.0565784801672"
+                },
+                "0.99": {
+                  "m": 13,
+                  "fraction_of_dim": 0.48148148148148145,
+                  "outer": "0.00388042403882",
+                  "remainder": "2.91054598555e-5",
+                  "abs_remainder_over_common": "0.00744474747291",
+                  "N_abs_remainder": "0.000407476437977",
+                  "N2_abs_remainder": "0.00570467013167"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00181877881651",
+              "thresholds": {
+                "0.5": {
+                  "m": 7,
+                  "fraction_of_dim": 0.22580645161290322,
+                  "outer": "0.00103801504484",
+                  "remainder": "0.000780763771669",
+                  "abs_remainder_over_common": "0.429279121013",
+                  "N_abs_remainder": "0.0124922203467",
+                  "N2_abs_remainder": "0.199875525547"
+                },
+                "0.9": {
+                  "m": 11,
+                  "fraction_of_dim": 0.3548387096774194,
+                  "outer": "0.00164176250747",
+                  "remainder": "0.000177016309038",
+                  "abs_remainder_over_common": "0.0973270127356",
+                  "N_abs_remainder": "0.00283226094461",
+                  "N2_abs_remainder": "0.0453161751137"
+                },
+                "0.99": {
+                  "m": 14,
+                  "fraction_of_dim": 0.45161290322580644,
+                  "outer": "0.00180388106607",
+                  "remainder": "1.48977504451e-5",
+                  "abs_remainder_over_common": "0.00819107321342",
+                  "N_abs_remainder": "0.000238364007121",
+                  "N2_abs_remainder": "0.00381382411394"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00363365015242",
+              "thresholds": {
+                "0.5": {
+                  "m": 7,
+                  "fraction_of_dim": 0.22580645161290322,
+                  "outer": "0.00207482684813",
+                  "remainder": "0.0015588233043",
+                  "abs_remainder_over_common": "0.42899652936",
+                  "N_abs_remainder": "0.0249411728688",
+                  "N2_abs_remainder": "0.3990587659"
+                },
+                "0.9": {
+                  "m": 11,
+                  "fraction_of_dim": 0.3548387096774194,
+                  "outer": "0.00328044494742",
+                  "remainder": "0.000353205205006",
+                  "abs_remainder_over_common": "0.0972039657617",
+                  "N_abs_remainder": "0.0056512832801",
+                  "N2_abs_remainder": "0.0904205324816"
+                },
+                "0.99": {
+                  "m": 14,
+                  "fraction_of_dim": 0.45161290322580644,
+                  "outer": "0.00360393341817",
+                  "remainder": "2.97167342559e-5",
+                  "abs_remainder_over_common": "0.00817820456273",
+                  "N_abs_remainder": "0.000475467748095",
+                  "N2_abs_remainder": "0.00760748396952"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "common_total": "-0.213757027492",
+              "thresholds": {
+                "0.5": {
+                  "m": 14,
+                  "fraction_of_dim": 0.9333333333333333,
+                  "outer": "0.255872338178",
+                  "remainder": "-0.46962936567",
+                  "abs_remainder_over_common": "2.19702421567",
+                  "N_abs_remainder": "3.75703492536",
+                  "N2_abs_remainder": "30.0562794029"
+                },
+                "0.9": {
+                  "m": 14,
+                  "fraction_of_dim": 0.9333333333333333,
+                  "outer": "0.255872338178",
+                  "remainder": "-0.46962936567",
+                  "abs_remainder_over_common": "2.19702421567",
+                  "N_abs_remainder": "3.75703492536",
+                  "N2_abs_remainder": "30.0562794029"
+                },
+                "0.99": {
+                  "m": 14,
+                  "fraction_of_dim": 0.9333333333333333,
+                  "outer": "0.255872338178",
+                  "remainder": "-0.46962936567",
+                  "abs_remainder_over_common": "2.19702421567",
+                  "N_abs_remainder": "3.75703492536",
+                  "N2_abs_remainder": "30.0562794029"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "-0.0256763323528",
+              "thresholds": {
+                "0.5": {
+                  "m": 11,
+                  "fraction_of_dim": 0.7333333333333333,
+                  "outer": "-0.0222252697522",
+                  "remainder": "-0.00345106260069",
+                  "abs_remainder_over_common": "0.134406368996",
+                  "N_abs_remainder": "0.0276085008055",
+                  "N2_abs_remainder": "0.220868006444"
+                },
+                "0.9": {
+                  "m": 12,
+                  "fraction_of_dim": 0.8,
+                  "outer": "0.0285336483639",
+                  "remainder": "-0.0542099807167",
+                  "abs_remainder_over_common": "2.11128209324",
+                  "N_abs_remainder": "0.433679845734",
+                  "N2_abs_remainder": "3.46943876587"
+                },
+                "0.99": {
+                  "m": 12,
+                  "fraction_of_dim": 0.8,
+                  "outer": "0.0285336483639",
+                  "remainder": "-0.0542099807167",
+                  "abs_remainder_over_common": "2.11128209324",
+                  "N_abs_remainder": "0.433679845734",
+                  "N2_abs_remainder": "3.46943876587"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "common_total": "-0.00689644094266",
+              "thresholds": {
+                "0.5": {
+                  "m": 2,
+                  "fraction_of_dim": 0.10526315789473684,
+                  "outer": "0.00406939698573",
+                  "remainder": "-0.0109658379284",
+                  "abs_remainder_over_common": "1.59007204144",
+                  "N_abs_remainder": "0.109658379284",
+                  "N2_abs_remainder": "1.09658379284"
+                },
+                "0.9": {
+                  "m": 14,
+                  "fraction_of_dim": 0.7368421052631579,
+                  "outer": "0.00631800988318",
+                  "remainder": "-0.0132144508258",
+                  "abs_remainder_over_common": "1.91612614908",
+                  "N_abs_remainder": "0.132144508258",
+                  "N2_abs_remainder": "1.32144508258"
+                },
+                "0.99": {
+                  "m": 16,
+                  "fraction_of_dim": 0.8421052631578947,
+                  "outer": "0.0149318506383",
+                  "remainder": "-0.0218282915809",
+                  "abs_remainder_over_common": "3.16515312209",
+                  "N_abs_remainder": "0.218282915809",
+                  "N2_abs_remainder": "2.18282915809"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00581752438377",
+              "thresholds": {
+                "0.5": {
+                  "m": 1,
+                  "fraction_of_dim": 0.05263157894736842,
+                  "outer": "0.00636231060359",
+                  "remainder": "-0.000544786219821",
+                  "abs_remainder_over_common": "0.0936457131733",
+                  "N_abs_remainder": "0.00544786219821",
+                  "N2_abs_remainder": "0.0544786219821"
+                },
+                "0.9": {
+                  "m": 1,
+                  "fraction_of_dim": 0.05263157894736842,
+                  "outer": "0.00636231060359",
+                  "remainder": "-0.000544786219821",
+                  "abs_remainder_over_common": "0.0936457131733",
+                  "N_abs_remainder": "0.00544786219821",
+                  "N2_abs_remainder": "0.0544786219821"
+                },
+                "0.99": {
+                  "m": 1,
+                  "fraction_of_dim": 0.05263157894736842,
+                  "outer": "0.00636231060359",
+                  "remainder": "-0.000544786219821",
+                  "abs_remainder_over_common": "0.0936457131733",
+                  "N_abs_remainder": "0.00544786219821",
+                  "N2_abs_remainder": "0.0544786219821"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.000427346882535",
+              "thresholds": {
+                "0.5": {
+                  "m": 1,
+                  "fraction_of_dim": 0.043478260869565216,
+                  "outer": "0.00190063809266",
+                  "remainder": "-0.00147329121013",
+                  "abs_remainder_over_common": "3.4475300285",
+                  "N_abs_remainder": "0.0176794945215",
+                  "N2_abs_remainder": "0.212153934258"
+                },
+                "0.9": {
+                  "m": 1,
+                  "fraction_of_dim": 0.043478260869565216,
+                  "outer": "0.00190063809266",
+                  "remainder": "-0.00147329121013",
+                  "abs_remainder_over_common": "3.4475300285",
+                  "N_abs_remainder": "0.0176794945215",
+                  "N2_abs_remainder": "0.212153934258"
+                },
+                "0.99": {
+                  "m": 1,
+                  "fraction_of_dim": 0.043478260869565216,
+                  "outer": "0.00190063809266",
+                  "remainder": "-0.00147329121013",
+                  "abs_remainder_over_common": "3.4475300285",
+                  "N_abs_remainder": "0.0176794945215",
+                  "N2_abs_remainder": "0.212153934258"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00483387678162",
+              "thresholds": {
+                "0.5": {
+                  "m": 1,
+                  "fraction_of_dim": 0.043478260869565216,
+                  "outer": "0.00376541340819",
+                  "remainder": "0.00106846337343",
+                  "abs_remainder_over_common": "0.221036534794",
+                  "N_abs_remainder": "0.0128215604812",
+                  "N2_abs_remainder": "0.153858725774"
+                },
+                "0.9": {
+                  "m": 2,
+                  "fraction_of_dim": 0.08695652173913043,
+                  "outer": "0.00707600740392",
+                  "remainder": "-0.00224213062229",
+                  "abs_remainder_over_common": "0.463836941566",
+                  "N_abs_remainder": "0.0269055674675",
+                  "N2_abs_remainder": "0.32286680961"
+                },
+                "0.99": {
+                  "m": 2,
+                  "fraction_of_dim": 0.08695652173913043,
+                  "outer": "0.00707600740392",
+                  "remainder": "-0.00224213062229",
+                  "abs_remainder_over_common": "0.463836941566",
+                  "N_abs_remainder": "0.0269055674675",
+                  "N2_abs_remainder": "0.32286680961"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "common_total": "-0.00118918450649",
+              "thresholds": {
+                "0.5": {
+                  "m": 1,
+                  "fraction_of_dim": 0.037037037037037035,
+                  "outer": "0.00110251597691",
+                  "remainder": "-0.0022917004834",
+                  "abs_remainder_over_common": "1.9271193586",
+                  "N_abs_remainder": "0.0320838067676",
+                  "N2_abs_remainder": "0.449173294746"
+                },
+                "0.9": {
+                  "m": 1,
+                  "fraction_of_dim": 0.037037037037037035,
+                  "outer": "0.00110251597691",
+                  "remainder": "-0.0022917004834",
+                  "abs_remainder_over_common": "1.9271193586",
+                  "N_abs_remainder": "0.0320838067676",
+                  "N2_abs_remainder": "0.449173294746"
+                },
+                "0.99": {
+                  "m": 2,
+                  "fraction_of_dim": 0.07407407407407407,
+                  "outer": "0.00243730554071",
+                  "remainder": "-0.00362649004719",
+                  "abs_remainder_over_common": "3.04956045712",
+                  "N_abs_remainder": "0.0507708606607",
+                  "N2_abs_remainder": "0.71079204925"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.00253642802567",
+              "thresholds": {
+                "0.5": {
+                  "m": 1,
+                  "fraction_of_dim": 0.037037037037037035,
+                  "outer": "0.0021880891563",
+                  "remainder": "0.000348338869368",
+                  "abs_remainder_over_common": "0.13733441905",
+                  "N_abs_remainder": "0.00487674417115",
+                  "N2_abs_remainder": "0.0682744183961"
+                },
+                "0.9": {
+                  "m": 2,
+                  "fraction_of_dim": 0.07407407407407407,
+                  "outer": "0.0048355639225",
+                  "remainder": "-0.00229913589683",
+                  "abs_remainder_over_common": "0.906446338536",
+                  "N_abs_remainder": "0.0321879025556",
+                  "N2_abs_remainder": "0.450630635778"
+                },
+                "0.99": {
+                  "m": 2,
+                  "fraction_of_dim": 0.07407407407407407,
+                  "outer": "0.0048355639225",
+                  "remainder": "-0.00229913589683",
+                  "abs_remainder_over_common": "0.906446338536",
+                  "N_abs_remainder": "0.0321879025556",
+                  "N2_abs_remainder": "0.450630635778"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "common_total": "0.00108684085546",
+              "thresholds": {
+                "0.5": {
+                  "m": 1,
+                  "fraction_of_dim": 0.03225806451612903,
+                  "outer": "0.00123447911055",
+                  "remainder": "-0.000147638255086",
+                  "abs_remainder_over_common": "0.135841649993",
+                  "N_abs_remainder": "0.00236221208138",
+                  "N2_abs_remainder": "0.0377953933021"
+                },
+                "0.9": {
+                  "m": 1,
+                  "fraction_of_dim": 0.03225806451612903,
+                  "outer": "0.00123447911055",
+                  "remainder": "-0.000147638255086",
+                  "abs_remainder_over_common": "0.135841649993",
+                  "N_abs_remainder": "0.00236221208138",
+                  "N2_abs_remainder": "0.0377953933021"
+                },
+                "0.99": {
+                  "m": 1,
+                  "fraction_of_dim": 0.03225806451612903,
+                  "outer": "0.00123447911055",
+                  "remainder": "-0.000147638255086",
+                  "abs_remainder_over_common": "0.135841649993",
+                  "N_abs_remainder": "0.00236221208138",
+                  "N2_abs_remainder": "0.0377953933021"
+                }
+              }
+            },
+            "2.0": {
+              "common_total": "0.0037044944082",
+              "thresholds": {
+                "0.5": {
+                  "m": 1,
+                  "fraction_of_dim": 0.03225806451612903,
+                  "outer": "0.00245626711543",
+                  "remainder": "0.00124822729277",
+                  "abs_remainder_over_common": "0.336949433641",
+                  "N_abs_remainder": "0.0199716366843",
+                  "N2_abs_remainder": "0.319546186948"
+                },
+                "0.9": {
+                  "m": 2,
+                  "fraction_of_dim": 0.06451612903225806,
+                  "outer": "0.00443945537705",
+                  "remainder": "-0.000734960968851",
+                  "abs_remainder_over_common": "0.198397105749",
+                  "N_abs_remainder": "0.0117593755016",
+                  "N2_abs_remainder": "0.188150008026"
+                },
+                "0.99": {
+                  "m": 2,
+                  "fraction_of_dim": 0.06451612903225806,
+                  "outer": "0.00443945537705",
+                  "remainder": "-0.000734960968851",
+                  "abs_remainder_over_common": "0.198397105749",
+                  "N_abs_remainder": "0.0117593755016",
+                  "N2_abs_remainder": "0.188150008026"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

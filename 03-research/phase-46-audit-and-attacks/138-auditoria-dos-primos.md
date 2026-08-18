@@ -228,7 +228,7 @@ números). El "objeto de $n$ primos" es un producto de tales factores para primo
 distintos, y su positividad es la suma de las positividades locales. **Nadie publicó
 "Weil positivity for finite systems of primes" como teorema porque es un corolario de
 una línea de la fórmula explícita para polinomios de Dirichlet con ceros en la
-línea.** La comparación honesta:
+línea.** La comparación franca:
 
 - *vs. positividad para L-funciones de grado finito con RH conocida* (cuerpos de
   funciones, Weil 1952): es ese resultado, restringido a productos de factores
@@ -278,7 +278,7 @@ degradarse a "primera formulación explícita en esta categoría".**
   muestreo universal; Lyubarskii–Seip sobre secuencias interpolantes completas); antes
   de invertir en GAP-135.A, revisar esa literatura — es plausible que la respuesta (o
   un contraejemplo con fases genéricas) ya exista en forma de teorema de frames.
-- **B1–B4:** bien enunciados y honestos; B2 (la positividad pasa al límite, la
+- **B1–B4:** bien enunciados y francos; B2 (la positividad pasa al límite, la
   espectralidad no) y B3 (los factores de $\zeta$ son maximalmente impuros:
   $c_m=1+p^m$; la simetría de $\zeta$ es global) son correctos y son precisamente la
   admisión de que el teorema finito vive en el régimen donde no hay obstáculo. B1-B4
@@ -361,7 +361,7 @@ error: la estructura es demasiado lineal para esconder uno. Esa misma linealidad
 sentencia sobre la novedad: **el teorema es correcto porque no afirma nada que no sea
 la suma de positividades locales término a término sobre un divisor colocado en la
 línea por hipótesis.** El valor real del documento está en lo que declara no saber
-(GAP-135.A, GAP-135.B/Doc 136) y en la honestidad de B1–B4 — que deberían promoverse
+(GAP-135.A, GAP-135.B/Doc 136) y en la franqueza de B1–B4 — que deberían promoverse
 de "sección de alcance" a tesis del paper, con el reclamo de prioridad retirado.
 
 *Fin del Documento 138.*

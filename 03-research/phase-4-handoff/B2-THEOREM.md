@@ -153,7 +153,7 @@ semibounded; $\mathcal T$ is its associated self-adjoint operator (KLMN with the
 
 ---
 
-## 7. Honest status of (H), and what is *not* claimed
+## 7. Candid status of (H), and what is *not* claimed
 
 **(H) is strictly weaker than RH.** RH says there are *no* off-line zeros; (H) says only that deep off-line
 zeros do not *locally dominate* (they may exist, even infinitely many, as long as they don't fill a Nyquist

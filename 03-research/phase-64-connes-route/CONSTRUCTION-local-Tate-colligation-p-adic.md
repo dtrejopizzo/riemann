@@ -19,7 +19,7 @@ positive defect kernel, and the Redheffer-product theorem that finite products o
 passive. Both are finite and auditable. The positivity is rooted in the same fact as the curvature
 theorem of P50 (von Mangoldt positivity $\Lambda\ge0$), now at the level of a single place, and the
 Davenport–Heilbronn falsifier fails it locally. Stages 3–5 (archimedean cell, critical
-renormalization, transfer identification) are stated honestly as open.*
+renormalization, transfer identification) are stated candidly as open.*
 
 Notation: $J=\mathrm{diag}(1,-1)$; for an $\C^{2\times2}$-valued $T$ holomorphic on the upper
 half-plane $\C_+$ and $J$-unitary on $\R$ ($T(z)^*JT(z)=J$, $z\in\R$), the **defect kernel** is

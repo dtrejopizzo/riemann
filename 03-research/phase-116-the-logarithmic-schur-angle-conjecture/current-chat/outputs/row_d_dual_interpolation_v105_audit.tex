@@ -1,0 +1,137 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{Dual interpolation and the Abel--Poisson endpoint (v105)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The dual contractive endpoints}
+
+On $L^p(\mathbb R_+,dx)$ let $U_nf(x)=f(nx)$ and
+$S_n=\sqrt nU_n$.  Then
+\begin{equation}
+ \|U_n\|_{p\to p}=n^{-1/p},\qquad
+ \|S_n\|_{p\to p}=n^{1/2-1/p}.                       \tag{1}
+\end{equation}
+The Banach adjoint of $S_n$ is
+\begin{equation}
+                  S_n'=n^{-1/2}U_{1/n}.              \tag{2}
+\end{equation}
+Thus $S_n$ is contractive for $1\le p\le2$, while its adjoint orientation
+is contractive on the dual exponent $p'\ge2$.
+
+For $\sigma>0$ define the Abel--Poisson operator
+\begin{equation}
+ P_\sigma:=\frac1{\zeta(1+\sigma)}
+                \sum_{n\ge1}n^{-\sigma}U_n.          \tag{3}
+\end{equation}
+
+\begin{theorem}[Endpoint interpolation contraction --- \PROVED]
+The operator $P_\sigma$ is a positive contraction on $L^1(dx)$, its Banach
+adjoint is a positive contraction on $L^\infty(dx)$, and it is a contraction
+on every interpolated $L^p$, in particular on $L^2(dx)$.
+\end{theorem}
+
+\begin{proof}
+Since $\|U_n\|_{1\to1}=n^{-1}$,
+\[
+ \|P_\sigma\|_{1\to1}
+ \le\frac{\sum_n n^{-1-\sigma}}{\zeta(1+\sigma)}=1.
+\]
+Positivity is termwise.  The Banach adjoint has the same norm, and
+Riesz--Thorin interpolation proves the intermediate bounds.
+\end{proof}
+
+\section{The central limit}
+
+The unitary logarithmic map
+\[
+ (Wf)(t)=e^{t/2}f(e^t):L^2(\mathbb R_+,dx)\longrightarrow L^2(\mathbb R,dt)
+\]
+sends $U_n$ to $n^{-1/2}$ times translation by $\log n$.  Hence the Fourier
+multiplier of (3) is
+\begin{equation}
+ m_\sigma(\tau)=
+ \frac{\zeta(\sigma+\tfrac12+i\tau)}{\zeta(1+\sigma)},          \tag{4}
+\end{equation}
+up to the harmless sign convention for $\tau$.
+
+\begin{theorem}[The contractive Abel family collapses at the critical
+endpoint --- \PROVED]
+As $\sigma\downarrow0$, $P_\sigma\to0$ strongly on $L^2(dx)$.  Consequently
+\begin{equation}
+                 I-P_\sigma^*P_\sigma\longrightarrow I        \tag{5}
+\end{equation}
+strongly.  The limiting defect contains no odd Poisson quotient and no
+row-(c) nuclear character.
+\end{theorem}
+
+\begin{proof}
+For almost every real $\tau$, the numerator in (4) has a finite limit,
+whereas $\zeta(1+\sigma)\sim\sigma^{-1}$.  Thus
+$m_\sigma(\tau)\to0$ almost everywhere.  The preceding theorem gives
+$|m_\sigma|\le1$ as an $L^2$ multiplier.  Dominated convergence in
+Plancherel proves strong convergence to zero, and then (5) follows.
+\end{proof}
+
+The two primitive Tate conditions do not change this conclusion: they are
+two evaluations of the analytic Mellin transform away from almost every
+point on the real Plancherel axis.  They define a dense subspace of $L^2$
+and $P_\sigma$ still converges strongly to zero there.
+
+\section{Removing the normalization}
+
+Multiplying (3) by $\zeta(1+\sigma)$ gives
+\begin{equation}
+ Z_\sigma=\sum_{n\ge1}n^{-\sigma}U_n,                 \tag{6}
+\end{equation}
+whose multiplier tends formally to
+$\zeta(1/2+i\tau)$.  But
+\begin{equation}
+                  \|Z_\sigma\|_{L^1\to L^1}
+                  =\zeta(1+\sigma)\longrightarrow\infty.      \tag{7}
+\end{equation}
+Thus the only rescaling which retains the Zeta boundary destroys the
+endpoint contractivity used in the interpolation proof.
+
+On critical $L^2$, the maximal multiplication operator by
+$\zeta(1/2+i\tau)$ has dense range: its adjoint kernel consists of functions
+supported on the real zero set, which has Lebesgue measure zero.  Therefore
+its reduced Hilbert cokernel is zero.  The algebraic/non-Hausdorff cokernel
+can retain evaluation jets, but is not a Hilbert quotient.
+
+\begin{corollary}[Interpolation pivot verdict --- \PROVED]
+The dual $L^1$--$L^\infty$ interpolation produces either
+\begin{enumerate}
+\item a contractive family whose critical limit is zero; or
+\item the nontrivial Zeta multiplier with divergent endpoint norm and zero
+      reduced Hilbert cokernel.
+\end{enumerate}
+It therefore does not construct the positive odd Hilbert completion with
+the row-(c) trace.
+\end{corollary}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.58\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.17\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Dual endpoint contractions & \PROVED & (1)--(3) \\
+Critical strong limit of normalized family & \PROVED & (4)--(5) \\
+Trace-preserving odd defect & false for this family & Theorem 2 \\
+Unnormalized endpoint contractivity & false & (7) \\
+Contractivity (8c) on Loewy factors & \OPEN & not supplied by interpolation \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

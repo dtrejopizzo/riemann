@@ -1,0 +1,203 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\title{Resolvent compactness excludes singular URGT$_1$ limits (v128)}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{A vanishing-support resolvent lemma}
+
+Fix $b>0$.  Let $I_\nu$ be intervals shrinking to the origin and let
+$h_\nu$ be distributions supported in $I_\nu$.  Let $f_\nu\in L^2(\mathbb
+R)$ solve
+\begin{equation}
+ (-\partial_t^2+b^2)f_\nu=h_\nu,                            \tag{1}
+\end{equation}
+or, equivalently,
+\begin{equation}
+ \widehat f_\nu(\tau)=rac{\widehat h_\nu(\tau)}
+                            {\tau^2+b^2}.                   \tag{2}
+\end{equation}
+
+\begin{lemma}[Resolvent classification of a tight collapsing source ---
+\PROVED]
+Suppose
+\begin{equation}
+ \|f_\nu\|_2=1,
+ \qquad
+ \sup_\nu\int_{\mathbb R}q(\tau)|\widehat f_\nu(\tau)|^2
+                 \frac{d\tau}{2\pi}<\infty,               \tag{3}
+\end{equation}
+where $q(\tau)\to+\infty$ as $|\tau|\to\infty$.  Then a subsequence
+converges strongly in $L^2(\mathbb R)$ to a nonzero function
+\begin{equation}
+ f=c_0G_b+c_1G_b',
+ \qquad
+ \widehat G_b(\tau)=\frac1{\tau^2+b^2}.                    \tag{4}
+\end{equation}
+Equivalently,
+\begin{equation}
+ (-\partial_t^2+b^2)f=c_0\delta_0+c_1\delta_0'.            \tag{5}
+\end{equation}
+No derivative $\delta_0^{(r)}$ with $r\ge2$ can occur.
+\end{lemma}
+
+\begin{proof}
+The second bound in (3) gives uniform Fourier tightness:
+\begin{equation}
+ \int_{|\tau|>R}|\widehat f_\nu(\tau)|^2\frac{d\tau}{2\pi}
+ \le\frac{C}{\inf_{|\tau|>R}q(\tau)}\longrightarrow0.      \tag{6}
+\end{equation}
+Outside $I_\nu$, equation (1) is homogeneous.  If
+$I_\nu\subset(-\varepsilon_\nu,\varepsilon_\nu)$, then
+\begin{equation}
+ f_\nu(t)=A_{\nu,+}e^{-bt}\quad(t>\varepsilon_\nu),
+ \qquad
+ f_\nu(t)=A_{\nu,-}e^{bt}\quad(t<-\varepsilon_\nu).       \tag{7}
+\end{equation}
+The $L^2$ normalization bounds the two exterior coefficients in the
+weighted form needed for
+\begin{equation}
+ \int_{|t|>R}|f_\nu(t)|^2dt\le e^{-2b(R-\varepsilon_\nu)}
+ \qquad(R>\varepsilon_\nu).                               \tag{8}
+\end{equation}
+Thus the family is uniformly tight in physical space as well.
+
+Equations (6) and (8), together with translation continuity obtained from
+the Fourier cutoff, give the Kolmogorov--Riesz compactness criterion.
+After extraction, $f_\nu\to f$ strongly in $L^2$, and $\|f\|_2=1$.
+Passing to distributions in (1), the limit
+$h=(-\partial_t^2+b^2)f$ is supported at the origin.  Every distribution
+supported at one point has the form
+\begin{equation}
+                         h=\sum_{r=0}^Mc_r\delta_0^{(r)}.   \tag{9}
+\end{equation}
+Taking Fourier transforms gives
+\begin{equation}
+ \widehat f(\tau)=rac{\sum_{r=0}^Mc_r(i\tau)^r}
+                        {\tau^2+b^2}.                       \tag{10}
+\end{equation}
+Because $f\in L^2$, the numerator in (10) has degree at most one.  This
+proves (4)--(5).
+\end{proof}
+
+\section{Application to a hypothetical URGT infractor}
+
+Take $b=\frac12$.  Let $N_\nu\to\infty$ and assume the normalized
+infractor equations
+\begin{equation}
+ \sum_{k\ge1}\|L_{N_\nu,k}e_\nu\|^2=1,
+ \qquad
+ \mathcal E_{\Gamma T,N_\nu}(e_\nu)<1.                   \tag{11}
+\end{equation}
+By v127,
+\begin{equation}
+ \left(\frac{\log N}{N}\right)^2W_N(\tau)
+ \longrightarrow
+ C_{\rm W}\frac1{(\tau^2+b^2)^2}                          \tag{12}
+\end{equation}
+locally uniformly, with $C_{\rm W}>0$.  Define
+\begin{equation}
+ \widehat f_\nu(\tau)
+ :=\sqrt{C_{\rm W}}\frac{N_\nu}{\log N_\nu}
+       \frac{\widehat e_\nu(\tau)}{\tau^2+b^2}.           \tag{13}
+\end{equation}
+
+\begin{theorem}[No singular-order asymptotic infractor --- \AUDIT]
+No sequence can satisfy (11), provided its critical resolvents (13) are
+Fourier-tight.
+\end{theorem}
+
+\begin{proof}
+Let
+\[
+ d\mu_\nu(\tau)=W_{N_\nu}(\tau)|\widehat e_\nu(\tau)|^2
+                  \frac{d\tau}{2\pi}.
+\]
+Equation (11) says that $\mu_\nu$ is a probability and
+$\int g_\Gamma\,d\mu_\nu<1$.  Since $g_\Gamma(\tau)\to\infty$, these
+probabilities are tight.  On every fixed compact, the locally uniform
+equivalence (12) gives
+\begin{align}
+ \int_{|\tau|\le R}|\widehat f_\nu|^2\frac{d\tau}{2\pi}
+ &\longrightarrow\mu_*(\{|\tau|\le R\}),                \tag{14}\\
+ \limsup_\nu\int_{|\tau|\le R}g_\Gamma|\widehat f_\nu|^2
+                 \frac{d\tau}{2\pi}&\le1.                \tag{15}
+\end{align}
+If the resolvents (13) are Fourier-tight, (14) gives
+$\|f_\nu\|_2\to1$ and Lemma 1 applies.  Indeed,
+\begin{equation}
+ (-\partial_t^2+b^2)f_\nu
+ =\sqrt{C_{\rm W}}\frac{N_\nu}{\log N_\nu}e_\nu,          \tag{16}
+\end{equation}
+whose support has length $\delta_{N_\nu}\to0$.
+The strong limit therefore has Fourier transform
+\begin{equation}
+ \widehat f(\tau)=\frac{c_0+c_1i\tau}{\tau^2+b^2}.         \tag{17}
+\end{equation}
+
+For $c_1=0$, v125 gives the strict Gamma expectation
+$1+\eta_\Gamma$ with $\eta_\Gamma>1/45$.  For $c_0=0$, v126 gives the
+first-channel expectation $3$.  The mixed term is odd and integrates to
+zero against every even Gamma multiplier.  Hence every nonzero vector
+$(c_0,c_1)$ satisfies
+\begin{equation}
+ \int g_\Gamma(\tau)|\widehat f(\tau)|^2\frac{d\tau}{2\pi}
+ >\|f\|_2^2=1.                                             \tag{18}
+\end{equation}
+Lower semicontinuity of the positive Gamma form, followed by
+$R\to\infty$ in (15), contradicts (18).
+Therefore (11) is impossible.
+\end{proof}
+
+\paragraph{Exact remaining observability gate --- \OPEN.}
+The output probabilities being tight does not by itself imply Fourier
+tightness of (13), because the arithmetic weight $W_N$ may be small on
+parts of the high-frequency line.  The additional statement required by
+Theorem 2 is
+\begin{equation}
+ \boxed{
+ \lim_{R\to\infty}\limsup_{\nu\to\infty}
+ \int_{|\tau|>R}
+ \left(\frac{N_\nu}{\log N_\nu}\right)^2
+ \frac{|\widehat e_\nu(\tau)|^2}{(\tau^2+\frac14)^2}
+ \frac{d\tau}{2\pi}=0.}                                   \tag{19}
+\end{equation}
+It is a weighted observability assertion for the all-depth arithmetic
+polynomial.  Local convergence (12) does not prove (19), and inserting it
+silently would recreate the source-order gap identified in v126.
+
+\paragraph{Finite-$N$ scope.}
+Conditional on (19), the theorem excludes every infractor sequence with
+$N\to\infty$.  Only then would there be a finite $N_0$ such that
+URGT$_1$ holds for all $N\ge N_0$.  The finitely many $2\le N<N_0$ would
+still require operator certification.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.58\linewidth}
+                >{\centering\arraybackslash}p{.14\linewidth}
+                >{\raggedright\arraybackslash}p{.18\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Fourier tightness from Gamma energy & \PROVED & (3), (6) \\
+Physical tightness from the exterior ODE & \PROVED & (7)--(8) \\
+Only $\delta_0,\delta_0'$ survive in an $L^2$ limit & \PROVED & (9)--(10) \\
+No singular-order asymptotic infractor & \AUDIT & Theorem 2, needs (19) \\
+Critical-resolvent observability & \OPEN & (19) \\
+URGT$_1$ for all sufficiently large $N$ & \OPEN & after (19) \\
+Finite-$N$ certification & \OPEN & $2\le N<N_0$ \\
+URGT$_1$ for every $N$, $G$, row (d) & \OPEN & after finite audit \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

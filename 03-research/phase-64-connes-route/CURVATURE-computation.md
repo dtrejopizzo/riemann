@@ -2,7 +2,7 @@
 
 *Pure symbolic mathematics. We compute the iterated carré-du-champ `Γ₂` of the prime jump generator
 exactly, prove **unconditionally** that `Γ₂≥0` (`CD(0,∞)`) for ζ because the von Mangoldt weights are
-positive (Schur-product mechanism), show DH fails it, then show honestly that `CD(0,∞)` is **marginal**
+positive (Schur-product mechanism), show DH fails it, then show candidly that `CD(0,∞)` is **marginal**
 (no spectral gap — the wall), and propose the **archimedean curvature** as the missing gap. The
 positivity theorem is genuinely new and rigorous; the gap is the remaining frontier.*
 
@@ -78,7 +78,7 @@ Bakry–Émery curvature, by a Schur-product mechanism rooted in `\Lambda≥0`.*
 
 ---
 
-## §4. The honest obstruction: `CD(0,∞)` is marginal — no spectral gap
+## §4. The candid obstruction: `CD(0,∞)` is marginal — no spectral gap
 
 `CD(0,∞)` (`Γ₂≥0`) is the **flat** case; it does **not** give a spectral gap. Indeed the diagonal
 (integrated) curvature is `∫Γ₂(v,\bar v) = Σ_ξ|a_ξ|^2ψ(ξ)^2` and `∫Γ = Σ_ξ|a_ξ|^2ψ(ξ)`, so
@@ -136,7 +136,7 @@ comparison `Γ^{L_∞}≳Γ^{L}`** at the ground state as `λ→∞` — a singl
 - **Theorem 2:** `CD(0,∞)` (`Γ₂≥0`) for ζ's prime jump kernel, **unconditional**, via Schur product on
   `B⪰0` rooted in `\Lambda≥0`. **DH fails it** (Thm 2′). *This is a genuine new positivity theorem and
   it discriminates ζ from DH at the level of curvature.*
-- **§4:** honest identification that `CD(0,∞)` is marginal (no gap; `ψ(0)=0`) = the wall in curvature
+- **§4:** candid identification that `CD(0,∞)` is marginal (no gap; `ψ(0)=0`) = the wall in curvature
   form.
 
 **Open (the new frontier, replacing the Spec ℤ² intersection theory):**
@@ -172,7 +172,7 @@ constant), giving lowest eigenvalue `(π/L)²>0`. **Crucially, this is the gap o
 generator `G_λ=A−ε₀`** (whose ground state is `0` by construction) — i.e. it is `ε₁−ε₀`, the *internal*
 gap, **not** `ε₀` itself.
 
-> **Crystallization (the honest, sharp statement).** The entire curvature / de Branges / colligation
+> **Crystallization (the candid, sharp statement).** The entire curvature / de Branges / colligation
 > apparatus is **Doob-invariant** — it is built from `G_λ=A−ε₀` and is therefore **blind to the additive
 > constant `ε₀`**. It proves, unconditionally and beautifully, the **shape** positivity (`CD(0,∞)`, the
 > `(k+1)²` ladder, the internal gap `(π/L)²`). But the **wall is `ε₀(λ)≥0`** — the *sign of the overall

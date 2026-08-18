@@ -1,10 +1,10 @@
-# M3 — Signature closedness: does a positive rank-one divergence preserve the index? — the honest crux
+# M3 — Signature closedness: does a positive rank-one divergence preserve the index? — the candid crux
 
 **Phase 65, milestone M3 (the conceptual heart).** Pure mathematics. The single remaining question
 (M2): does the positive, rank-one pole divergence create a negative square in the $\tau_0$-limit? We
 prove the half that the definite sign genuinely buys — **each finite operator is self-adjoint, so its
 determinant has only real zeros (is Hermite–Biehler), and Davenport–Heilbronn fails here exactly** — and
-then we locate, with full honesty, the half it does **not** buy: the negative squares of the limit are
+then we locate, with full candor, the half it does **not** buy: the negative squares of the limit are
 concentrated precisely on the locus where the renormalization is **non-uniform**, which finite
 positivity cannot reach. The net, cold result: **M3 reduces RH to a single sharp statement — that the
 regularized convergence $D_P\to\Xi$ is *uniform on compacts of $\C$* (not merely a renormalized
@@ -54,13 +54,13 @@ If $D_P\to\Xi$ \textbf{uniformly on compact subsets of $\C$} (across the critica
 half-plane. By Hurwitz's theorem, the locally-uniform limit $\Xi\ (\not\equiv0)$ has no zeros in the open
 upper half-plane. By the functional equation ($\Xi$ even/real), no zeros off $\R$ at all. RH. $\square$
 
-This is the target shape: real-zero approximants $+$ honest convergence $\Rightarrow$ real-zero limit.
+This is the target shape: real-zero approximants $+$ candid convergence $\Rightarrow$ real-zero limit.
 The sign gives the approximants (Lemma~\ref{lem:sa}); the only missing input is the *mode* of
 convergence.
 
 ---
 
-## §3. The honest obstruction: the index hides where convergence is non-uniform
+## §3. The candid obstruction: the index hides where convergence is non-uniform
 
 The given datum (G3) is $\mathrm{ren\text{-}lim}_PD_P=\Xi$ — a \emph{regularized} limit (zeta/Binet),
 which is **weaker** than uniform-on-compacts across the strip (N3). The gap is not cosmetic:
@@ -97,7 +97,7 @@ it holds iff there is no singular locus, i.e. iff convergence is uniform, i.e. i
 
 ## §4. The verdict: M3 reduces RH to uniformity of the renormalization
 
-\begin{theorem}[M3, honest form]\label{thm:m3}
+\begin{theorem}[M3, candid form]\label{thm:m3}
 The following are equivalent:
 \begin{enumerate}
 \item[\textbf{(i)}] RH;
@@ -136,7 +136,7 @@ $\Xi$ \emph{uniformly on compacts of $\C$} — equivalently, that the renormaliz
 non-uniform step, and is rank-one and definite-signed) does not push the finite real zeros off $\R$.
 \end{quote}
 
-Three honest options, to be weighed (and to inform Connes' ideal M1–M5 plan):
+Three candid options, to be weighed (and to inform Connes' ideal M1–M5 plan):
 \begin{itemize}
 \item \textbf{(a) Attack uniformity directly.} Show the rank-one definite renormalization is a
 \emph{uniform} (not just regularized) limit. Risk: this is essentially the Hurwitz-safe convergence
@@ -151,9 +151,9 @@ renormalization (Thm~\ref{thm:m3}) as the phase's theorem: a clean, classical, s
 equivalent, with the definite sign explaining the approximants and excluding DH.
 \end{itemize}
 
-\textbf{Honest status.} \emph{Established:} Lemma~\ref{lem:sa} (real zeros from the sign; DH excluded),
+\textbf{Candid status.} \emph{Established:} Lemma~\ref{lem:sa} (real zeros from the sign; DH excluded),
 Thm~\ref{thm:hurwitz} (uniform $\Rightarrow$ RH), Thm~\ref{thm:concentration} (index concentrated at the
 non-uniformity locus), Thm~\ref{thm:m3} (RH $\Leftrightarrow$ uniformity). \emph{Open (RH-strength):}
 uniformity of the renormalization (Thm~\ref{thm:m3}(ii)) — i.e. (A2) itself. The new object is genuinely
 constructed; its key property is RH; the residue is one classical convergence statement. No false
-victory: M3 is the honest crux, and it reduces to RH rather than proving it.
+victory: M3 is the candid crux, and it reduces to RH rather than proving it.

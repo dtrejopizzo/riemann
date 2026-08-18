@@ -1,7 +1,7 @@
 # D6 — Positive-pole closedness: index zero is closed in $\tau_\kappa$
 
 **Phase 65 / Signature-Continuity Package, deliverable D6.** Pure mathematics, full proofs. This is M3 in
-its correct form. It absorbs and supersedes `M3-signature-closedness.md` — whose honest finding (closedness
+its correct form. It absorbs and supersedes `M3-signature-closedness.md` — whose candid finding (closedness
 is RH-strength *at the scalar level*) is exactly *why* D2–D5 moved everything to the sourced/kernel level.
 With the D4 shorting and the D5 kernel topology, closedness becomes a clean **Schur-complement positivity
 theorem**: a $\tau_\kappa$-limit of positive shorted kernels is positive. The decisive arithmetic content
@@ -74,7 +74,7 @@ Thm~\ref{thm:closed} suffices.
 
 ---
 
-## §3. Acceptance criteria (the honesty gate for D6)
+## §3. Acceptance criteria (the candor gate for D6)
 
 D6 is accepted only if its proof uses exactly: (i) positivity of the finite kernels $\mathsf K_i$ (G2);
 (ii) positivity of the pole line (G4); (iii) Feshbach shorting (D4, not subtraction); (iv) pointwise
@@ -103,7 +103,7 @@ is closed; D9 = the closed-positive limit *is* the $\Xi$ kernel.
   bound.
 - **Upper semicontinuity** of the index in general (Thm~\ref{thm:usc}); continuity via the divisor at
   $\kappa>0$ (for D10).
-- The honest localization, completing the M3 story: **closedness is free; the entire remaining content is
+- The candid localization, completing the M3 story: **closedness is free; the entire remaining content is
   the convergence τ3 of the arithmetic shorted kernels to the fixed endpoint** — D8 (that they converge)
   and D9 (that the limit is $\mathsf K_\Xi^{\mathrm{G5}}$).
 

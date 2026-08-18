@@ -27,7 +27,7 @@ operator `H_x` (spectrum ≈ zeros). Test: `RH ⟸ (QW ⪰ 0 AND H_x is QW-self-
    eigenvalues than ζ — backwards. The complex spectrum comes from the ill-conditioned `ξ = QW⁻¹δ`
    solve in float64 with an indefinite, near-singular QW; it is noise, not arithmetic.
 
-## Honest status — no conclusion either way
+## Candid status — no conclusion either way
 
 E97 does **not** establish or refute the polarized-isometry mechanism. It establishes only that this
 *particular* realization (E3's `H_x` + its Cauchy–Toeplitz `QW`, float64) is unsuitable: wrong form,

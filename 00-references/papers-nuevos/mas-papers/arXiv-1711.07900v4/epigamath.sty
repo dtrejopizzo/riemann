@@ -1,0 +1,385 @@
+%% Revision 1.2  2015/10/01 12:28:14
+%% Jean-Pierre Demailly <jean-pierre.demailly@ujf-grenoble.fr>
+%% Initial revision
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Useful math packages
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb} % Include useful math symbols
+\usepackage{amsmath} % Include useful math stuff
+\usepackage{textcomp} % provide lots of new symbols
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Support for nicer environments to be used
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{verbatim} % Environment for commenting out blocks of text & for better verbatim
+\usepackage{subfigure} % make it possible to include more than one captioned figure/table
+\usepackage{enumerate} % Customizable enumerate environment
+\usepackage{multicol} % Good multi-column support
+\usepackage{pdflscape} % Mid-document landscape for PDF's
+\usepackage{fancyhdr} % Improved header style
+\usepackage{titling}
+
+%%%%%%%%%%%%%%%%
+% Hyperlinks
+%%%%%%%%%%%%%%%%
+% hyperlinks, with coloured links
+\usepackage[dvipsnames]{xcolor}
+\usepackage[bookmarks,colorlinks]{hyperref}
+%\usepackage{hyperref}
+% Colors for hyperlinks:
+\definecolor{darkred}{rgb}{0.5, 0.0, 0.0}
+\definecolor{darkgreen}{rgb}{0.0, 0.3, 0.0}
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.5}
+\definecolor{darkmagenta}{rgb}{0.5, 0.0, 0.5}
+\hypersetup{linkcolor=darkgreen,citecolor=darkblue,filecolor=darkred,urlcolor=darkmagenta}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Layout the page properly according to standard printing guidelines
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\textwidth}{16.9cm} % Standard print size
+\setlength{\textheight}{24cm} % Standard print size
+\setlength{\headheight}{14pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modifications to the standard 'article.cls' class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+
+\newcount\@episecdepth \@episecdepth=0
+\renewcommand\section{%
+   \@startsection {section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex\@episecdepth=0}%
+  {2.3ex \@plus.2ex}%
+  {\normalfont\Large\bfseries}}
+\renewcommand\subsection{%
+  \@startsection{subsection}{2}{\z@}%
+  {-3ex\@plus -0.75ex \@minus -.15ex\@episecdepth=1}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand\subsubsection{%
+  \@startsection{subsubsection}{3}{\z@}%
+  {-1.5ex\@plus -0.6ex \@minus -.1ex\@episecdepth=2}%
+  {0.75ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\paragraph{%
+  \@startsection{paragraph}{4}{\z@}%
+  {1.5ex \@plus1ex \@minus.1ex\@episecdepth=3}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{%
+  \@startsection{subparagraph}{5}{\parindent}%
+  {1.5ex \@plus1ex \@minus .1ex\@episecdepth=4}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+
+\newcounter{numsection}
+\setcounter{numsection}{-1}
+\usepackage{etoolbox}
+\preto{\section}{\stepcounter{numsection}}
+
+\renewcommand\thesection{{\@arabic\c@section}.}
+\renewcommand\thesubsection{{\thesection}\@Alph\c@subsection.}
+\renewcommand\thesubsubsection{{\thesubsection}{\@alph\c@subsubsection}.}
+\renewcommand\theparagraph{{\thesubsubsection}{\@arabic\c@paragraph}.}
+\renewcommand\thesubparagraph{{\theparagraph}{\@arabic\c@subparagraph}.}
+\renewcommand\theequation{{\thesection}{\@arabic\c@equation}}
+
+\renewcommand*\l@section[2]{%
+  \ifnum \c@tocdepth >\z@
+    \addpenalty\@secpenalty
+    \addvspace{1.0em \@plus\p@}%
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\leaders\hbox{$\m@th
+        \mkern \@dotsep mu\hbox{\rm.}\mkern \@dotsep
+        mu$}\hfil\nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+    \endgroup
+  \fi}
+
+%\makeatletter
+\renewcommand{\p@section}{\arabic{section}\expandafter\@gobble}
+\renewcommand{\p@subsection}{\arabic{section}.\Alph{subsection}\expandafter\@gobble}
+\renewcommand{\p@subsubsection}{\arabic{section}.\Alph{subsection}.\alph{subsection}\expandafter\@gobble}
+\renewcommand{\p@paragraph}{\arabic{section}.\Alph{subsection}.\alph{subsection}.\arabic{paragraph}\expandafter\@gobble}
+\renewcommand{\p@subparagraph}{\arabic{section}.\Alph{subsection}.\alph{subsection}.\arabic{paragraph}.\arabic{subparagraph}\expandafter\@gobble}
+%\makeatother
+
+
+\newcommand\forceindent{\strut\indent}
+
+%\usepackage{amsthm}
+
+\newcommand{\openbox}{\leavevmode
+  \hbox to.77778em{%
+  \hfil\vrule
+  \vbox to.675em{\hrule width.6em\vfil\hrule}%
+  \vrule\hfil}}
+\DeclareRobustCommand{\textsquare}{%
+  \begingroup \usefont{U}{msa}{m}{n}\thr@@\endgroup
+} \providecommand{\qedsymbol}{\openbox}
+\newenvironment{proof}[1][\proofname]{\par
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[\hskip\labelsep
+        \itshape
+    #1\@addpunct{.}]\ignorespaces
+}{%
+  \endtrivlist\@endpefalse
+} \providecommand{\proofname}{Proof}
+
+\newcommand\TOCname{Contents}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
+\newenvironment{prelims}[1][]{\par
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \fontsize{10}{12pt}\selectfont
+  \def\contentsname{{\normalsize\bf\TOCname}}
+  \item[\itshape
+  #1]\ignorespaces
+  \begin{changemargin}{1.4cm}{1.4cm}
+}{%
+  \end{changemargin}
+  \endtrivlist\@endpefalse
+}
+
+\newcommand{\commentskip}{\vskip3pt plus 1pt minus 1pt\noindent}
+\newcommand{\languagesection}[2]{\commentskip{\bf [#1]}\commentskip #2}
+
+\renewcommand{\abstractname}{Abstract}
+\renewcommand{\abstract}[1]{\noindent{\bf\abstractname.} #1\smallskip}
+
+\newcommand{\keywordsname}{Keywords}
+\newcommand{\keywords}[1]{\noindent{\bf\keywordsname.} #1\smallskip}
+
+\newcommand{\MSCclassname}{2010 Mathematics Subject Classification}
+\newcommand{\MSCclass}[1]{\noindent{\bf\MSCclassname.} #1\smallskip}
+
+\DeclareRobustCommand{\qed}{%
+  \ifmmode \mathqed
+  \else
+    \leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
+    \quad\hbox{\qedsymbol}%
+  \fi
+}
+
+\newcommand{\@pithanks}[1]{\xdef\@thefnmark{}\let\hyper@@anchor\@gobble
+\@footnotetext{\kern-6.66pt\kern-\columnsep\ignorespaces#1}}
+
+\newcommand{\acknow}{\ \vspace{-5mm}}
+\newcommand{\acknowledgement}[1]{\def\acknow{\vspace{2mm} #1}}
+
+\newcommand{\accepteddate}{}
+\newcommand{\journal}[1]{\def\journalname{#1}}
+\newcommand{\acceptation}[1]{\def\accepteddate{#1}}
+
+\newcommand{\license}{\copyright \ by the author(s) \hfill This work is licensed under
+\url{http://creativecommons.org/licenses/by-sa/4.0/}}
+
+
+\let\@pititle=\title
+\renewcommand{\title}[1]{\def\titl@string{#1}\@pititle{\bf{#1}}}
+\newcommand{\titlemark}[1]{\def\titl@string{\bf{#1}}}
+
+\let\@piauthor=\author
+\def\author#1{\def\@uthorstring{#1}\@piauthor{\bf{#1}}}
+\def\authormark#1{\def\@uthorstring{\bf{#1}}}
+
+\newbox\epi@evenhead{}
+
+%% Disable \MakeUppercase and redefine \markright !!
+\renewcommand{\MakeUppercase}[1]{#1}
+
+\renewcommand{\markright}[1]{%
+  \begingroup
+    \let\label\relax \let\index\relax \let\glossary\relax
+    \expandafter\@markright\@themark {#1}%
+    \@temptokena \expandafter{\@themark}%
+    \mark{\the\@temptokena}%
+  \endgroup
+  \ifnum \@episecdepth=0 \setbox\epi@evenhead=\hbox{\scriptsize#1}\fi%
+  \if@nobreak\ifvmode\nobreak\fi\fi}
+
+\renewcommand{\markboth}[2]{%
+  \begingroup
+    \let\label\relax \let\index\relax \let\glossary\relax
+    \unrestored@protected@xdef\@themark {{#1}{#2}}%
+    \@temptokena \expandafter{\@themark}%
+    \mark{\the\@temptokena}%
+  \endgroup
+  \ifnum \@episecdepth=0 \setbox\epi@evenhead=\hbox{\scriptsize#1}\fi%
+  \if@nobreak\ifvmode\nobreak\fi\fi}
+
+\fancyfoot{} \fancyhead[LR]{ \ifnum \c@page=1
+\else
+\ifodd\c@page{\scriptsize\@uthorstring,~\titl@string
+\hfill{\bf\number\c@page}}\else
+{\scriptsize{\bf\number\c@page}\hfill\copy\epi@evenhead}\fi\fi}
+
+%% Modification of \maketitle
+\let\@pimaketitle=\maketitle
+\def\maketitle{
+\renewcommand{\maketitlehooka}{ \ \vspace{-3cm}
+
+\noindent\begin{tabular}[b]{l}{\normalsize\em\journalname}
+\\[0.05cm] {\footnotesize \href{http://epiga.episciences.org/}{\url{epiga.episciences.org}}} \\[0.1cm] {\footnotesize \articlereference} \\[0.05cm] \
+\end{tabular}\hfill
+{\includegraphics[width=3cm]{epiga-logo.png}\hspace{-0.25cm}
+
+\vspace{-0.4cm}
+\begin{center} \rule{15cm}{.5pt} \end{center}}
+
+\vspace{1.7cm}}%
+\@pimaketitle\let\thanks\@pithanks
+%\renewcommand*\footnoterule{}
+\thanks{\accepteddate \begin{changemargin}{0cm}{0cm} \authordetails \end{changemargin} \acknow \\[5mm] \license}
+\thispagestyle{empty}
+\pagestyle{fancy}}
+
+%% Allow size change in bibliography
+\def\sm@lltag{small}
+\newcommand{\bibliographysize}[1]{%
+\def\@tmp{#1}%
+\ifx \@tmp\sm@lltag
+\fontsize{8}{10pt}\selectfont
+\normallineskip=2pt
+\normalbaselines
+\parskip=0pt \fi}
+
+\newcommand{\bibliographymark}[1]{%
+\setbox\epi@evenhead=\hbox{{\scriptsize #1}}}
+
+%% Adapt theorem environments
+\def\@thmcountersep{}
+\def\newtheorem#1{%
+  \@ifnextchar[{\@othm{#1}}{\@nthm{#1}}}
+\def\@nthm#1#2{%
+  \@ifnextchar[{\@xnthm{#1}{#2}}{\@ynthm{#1}{#2}}}
+\def\@xnthm#1#2[#3]{%
+  \expandafter\@ifdefinable\csname #1\endcsname
+    {\@definecounter{#1}\@newctr{#1}[#3]%
+     \expandafter\xdef\csname the#1\endcsname{%
+       \expandafter\noexpand\csname the#3\endcsname\@thmcountersep%
+          {}\@thmcounter{#1}}%
+     \global\@namedef{#1}{\@thm{#1}{#2}}%
+     \global\@namedef{end#1}{\@endtheorem}}}
+\def\@ynthm#1#2{%
+  \expandafter\@ifdefinable\csname #1\endcsname
+    {\@definecounter{#1}%
+     \expandafter\xdef\csname the#1\endcsname{\@thmcounter{#1}}%
+     \global\@namedef{#1}{\@thm{#1}{#2}}%
+     \global\@namedef{end#1}{\@endtheorem}}}
+\def\@othm#1[#2]#3{%
+  \@ifundefined{c@#2}{\@nocounterr{#2}}%
+    {\expandafter\@ifdefinable\csname #1\endcsname
+    {\global\@namedef{the#1}{\@nameuse{the#2}}%
+  \global\@namedef{#1}{\@thm{#2}{#3}}%
+  \global\@namedef{end#1}{\@endtheorem}}}}
+\def\@thm#1#2{%
+  \refstepcounter{#1}%
+  \@ifnextchar[{\@ythm{#1}{#2}}{\@xthm{#1}{#2}}}
+\def\@xthm#1#2{%
+  \@begintheorem{#2}{\csname the#1\endcsname.}\ignorespaces}
+\def\@ythm#1#2[#3]{%
+  \@opargbegintheorem{#2}{\csname the#1\endcsname.}{#3}\ignorespaces}
+\def\@thmcounter#1{\noexpand\arabic{#1}}
+
+\def\@begintheorem#1#2{\trivlist
+   \item[\hskip \labelsep{\bfseries #1\ #2}]\itshape}
+\def\@opargbegintheorem#1#2#3{\trivlist
+      \item[\hskip \labelsep{\bfseries #1\ #2\ (#3)}]\itshape}
+\def\@endtheorem{\endtrivlist}
+
+% use dots in table of contents
+
+%for creating appendix use the command \appendix{letter}{title}
+
+\newcounter{appendix}
+\renewcommand{\theappendix}{\Alph{appendix}}
+
+\renewcommand{\appendix}[2]{\renewcommand{\thesection}{}
+\section[\hspace{-0.66cm} Appendix#1. #2]{\hspace{-0.7cm} Appendix#1. #2}
+\refstepcounter{appendix}
+\renewcommand{\thesection}{\theappendix}
+\renewcommand{\thesubsection}{\theappendix.\@Alph\c@subsection.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Predefined environments
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{example}[theorem]{Example}
+
+%%%%%%%%%%%%%%%%%%
+% contribution
+%%%%%%%%%%%%%%%%%%
+\def\contribution#1{\vspace{-0.75cm} \begin{center}\large\bf{#1}\end{center}\vskip3ex}
+
+%%%%%%%%%%%%%%%%%%
+% dedication stuff
+%%%%%%%%%%%%%%%%%%
+\def\dedication#1{\begin{center}\emph{#1}\end{center}\vskip3ex}
+
+%%%%%%%%%%%%%%%%%%%%%
+% footnotes
+%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{footnotenumber}
+
+\renewcommand{\footnote}[1]{\stepcounter{footnotenumber}\phantomsection\label{reffootnote\arabic{footnotenumber}}\hyperref[footnote\arabic{footnotenumber}]{${}^{\arabic{footnotenumber}}$}\footnotetext[\arabic{footnotenumber}]{\phantomsection\label{footnote\arabic{footnotenumber}} \hyperref[reffootnote\arabic{footnotenumber}]{${}^\uparrow$} #1}}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Miscellaneous stuff
+%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\authordetails}{}
+
+%\newcommand{\authoraddresses}[1]{\par{\parindent=0cm \parskip=5pt plus 2pt minus 1pt #1}}
+
+\newcommand{\authoraddresses}[1]{\def\authordetails{\par{\parindent=0cm \parskip=5pt plus 2pt minus 1pt #1}}}
+
+\newcommand{\authordata}[2]{#2}
+\newcommand{\firstname}[1]{#1}
+\newcommand{\lastname}[1]{#1}
+\newcommand{\institution}[1]{#1}
+\newcommand{\email}[1]{\emph{e-mail}\/:\ #1}
+
+\newcommand{\DOIstring}[1]{\gdef\DOIfi@ld{#1}}
+
+\def\@MRExtract#1 #2!{#1}     % thanks to Martin Hairer for this macro
+\newcommand{\MR}[1]{% we need to strip the "(...)"
+  \xdef\@MRSTRIP{\@MRExtract#1 !}%
+  \href{http://www.ams.org/mathscinet-getitem?mr=\@MRSTRIP}{MR-\@MRSTRIP}}
+\newcommand{\ARXIV}[1]{\href{http://arXiv.org/abs/#1}{arXiv:#1}}
+\newcommand{\HAL}[1]{\href{http://hal.archives-ouvertes.fr/#1}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paper formats, make A4 default
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\l@ttertype{letter}
+\def\Af@urtype{A4}
+\newcommand{\setpapertype}[1]{%
+\def\@tmp{#1}%
+\ifx \@tmp\Af@urtype
+\paperwidth=210mm \paperheight=297mm
+\topmargin=-0.65cm\oddsidemargin=-0.4cm\evensidemargin=-0.4cm\fi
+\ifx \@tmp\l@ttertype
+\paperwidth=8.5in \paperheight=11in
+\topmargin=-1.35cm\oddsidemargin=-0.2cm\evensidemargin=-0.2cm\fi}
+
+\setpapertype{A4}
+
+\makeatother

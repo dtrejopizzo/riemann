@@ -21,7 +21,7 @@ offline b=0.8:
 min kappa = -5.4, -12.8, -26.3          (depth grows)   ind_-/N = 0.42
 ```
 
-## Honest reading (calibrating E67.19 vs E67.20)
+## Candid reading (calibrating E67.19 vs E67.20)
 
 1. **Not a clean GLT sequence.** The GLT distribution law fails: for zeta `measure{kappa<0} ~ 0.4`
    while `ind_-/N = 0`. So the rigorous GLT eigenvalue-counting is NOT available. E67.20 ("rigorous
@@ -42,7 +42,7 @@ solid         : symbol-depth detector -- min kappa -> 0 for zeta, -> -inf for of
 target        : prove the symbol does not dip below 0 by structure (min kappa >= 0)
 ```
 
-The honest framing is the symbol-positivity of the foundations detector, at the depth level. The
+The candid framing is the symbol-positivity of the foundations detector, at the depth level. The
 forcer is unchanged in difficulty (Weil-hard phase-cancellation core), but the object is a symbol-sign
 detector, not a GLT measure. No fabricated rigor; the marginal touch `min kappa -> 0` for zeta is a
 clean, pretty confirmation of zeta at the de Branges boundary in the 2-D symbol.

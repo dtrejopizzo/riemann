@@ -57,7 +57,7 @@ Bost-Connes (MW-5), Woronowicz CQG, Cuntz N^x semigroup, Connes-Consani Gamma_q/
 (Koelink-Stokman-Rahman, Caspers), Lusztig-Andersen root-of-unity Jantzen, Bottcher-Silbermann /
 Simon OPUC / Serra-Capizzano GLT / Widom for the symbol side.
 
-## Honest endpoint
+## Candid endpoint
 
 Omega_7 is open, exactly as in P52/P53 -- no regression. Phase 67 produced: a canonical arch sector,
 a faithful signed certificate, a beautiful symbol-positivity detector (now in foundations), and a

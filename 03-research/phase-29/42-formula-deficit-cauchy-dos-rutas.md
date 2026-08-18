@@ -298,7 +298,7 @@ $$y_c(\infty)^2 - y_c(\lambda)^2 \approx \frac{2}{|C_\lambda''(x_c)|} \cdot [C_\
 
 Bajo Inc. Inv. ($C_\infty(\gamma_n) = 0$): $y_c(\infty) = 0$ y $y_c(\lambda) \approx \sqrt{2R_\lambda(\gamma_n)/|C_\lambda''(\gamma_n)|}$, que va a 0 condicionalmente.
 
-**Obstáculo honesto de Ruta B.** Para probar que $y_c(\lambda) \to 0$ necesitamos probar que $C_\infty(\gamma_n) = 0$, lo cual es Inc. Inv. La trayectoria no proporciona una ruta incondicional; sí proporciona una IMAGEN GEOMÉTRICA precisa: $y_c(\infty)$ mide directamente la "masa espectral" de ceros off-críticos de $\zeta$ vista desde $\gamma_n$ via núcleos de Cauchy.
+**Obstáculo franco de Ruta B.** Para probar que $y_c(\lambda) \to 0$ necesitamos probar que $C_\infty(\gamma_n) = 0$, lo cual es Inc. Inv. La trayectoria no proporciona una ruta incondicional; sí proporciona una IMAGEN GEOMÉTRICA precisa: $y_c(\infty)$ mide directamente la "masa espectral" de ceros off-críticos de $\zeta$ vista desde $\gamma_n$ via núcleos de Cauchy.
 
 ---
 

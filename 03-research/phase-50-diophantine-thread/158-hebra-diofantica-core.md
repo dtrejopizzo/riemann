@@ -16,7 +16,7 @@ Bohr/Voronin confinada al lado-valor. Si apareciera (c), desconfío y triplico e
 
 **Contrato creativo (regla absoluta de etiquetado):** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado DE VERDAD acá, prueba completa; resultados externos citados con
-precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con estatus honesto de cada eslabón. **[GAP]** =
+precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con estatus franco de cada eslabón. **[GAP]** =
 declarado. **[DESEO]** = declarado. **[GAP de literatura]** = dato no verificado al nivel de página esta
 sesión, NO usado como premisa de ningún [TEOREMA]. Jamás se fabrica una prueba de RH. **NADA de numéricos.**
 
@@ -145,7 +145,7 @@ lado-valor** — esto se confirmará en §3.
 
 ### 1.2. El par promediador (H,A) — NO hay uno, hay tres
 
-El encargo pide fijar EXACTAMENTE en qué (H,A) del Doc 155 vive la pregunta. La respuesta honesta es que el
+El encargo pide fijar EXACTAMENTE en qué (H,A) del Doc 155 vive la pregunta. La respuesta franca es que el
 input diofántico admite tres realizaciones del par promediador, y la elección **determina el veredicto**.
 
 **[DEFINICIÓN-NUEVA 158.4] (los tres pares promediadores candidatos).**
@@ -410,9 +410,9 @@ distribucionales que actúan en H_fase (seminorma B², equidistribución de Bagc
 son las tres ciegas a H_altura — y esa ceguera es exactamente el cuantificador maestro de P43 (promedio no
 ve el punto), confirmado tres veces.
 
-### 4.3. Por qué esto es el resultado honesto y valioso
+### 4.3. Por qué esto es el resultado franco y valioso
 
-El encargo anticipó que el resultado honesto sería (a) o (b), y que (c) merecería triple desconfianza. Es
+El encargo anticipó que el resultado franco sería (a) o (b), y que (c) merecería triple desconfianza. Es
 (b), con el núcleo de (a) localizado en el mecanismo de espacio. El valor del documento NO es una
 equivalencia de RH (no se produce ninguna). El valor es **localizar con precisión la frontera entre la
 completitud diofántica incondicional y el certificado de inercia que RH necesita**, y mostrar que esa

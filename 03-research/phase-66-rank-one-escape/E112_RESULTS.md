@@ -24,7 +24,7 @@ The prime sum converges **absolutely** (m_{jk}(log n) ~ n^{-y}·poly = n^{-1}·p
 The whitening `1/log(t0/2π)` scaling holds approximately for t0 ≤ 1e6 (product λ_max·log flat within
 ~30%); the t0=1e8 point is unreliable (lower-order corrections / phase resolution) and is not used.
 
-## Consequence (the border extension — honest scope)
+## Consequence (the border extension — candid scope)
 `cor:loglog-effective` bounds `λ_max(T_N) ≤ c0 N^2 e^{βN}/log(|t0|/2π)` (a crude sup-norm bound on the
 Laguerre functions), giving contractivity only for **N ≤ loglog|t0|/β**. The measurement says the TRUE
 rate is `λ_max(T_N) ≈ C N^{a}/log(|t0|/2π)` with **a ≈ 2/3**, not exponential. Substituting the true rate
@@ -36,7 +36,7 @@ statement, not a positivity/zero-location statement). **It does NOT close Ω₇:
 `N ∈ ((log|t0|)^{3/2}, N_*(t0) ≍ t0² log t0)` remains open. It is a real extension of the border, not
 the border meeting the center.
 
-## Status / honest caveats
+## Status / candid caveats
 1. **Numerical evidence, not yet a theorem.** To upgrade `cor:loglog-effective` one must PROVE
    `‖T_N‖ = O(N^{a}/log|t0|)` with a<1 analytically — a concrete operator-norm bound on the compressed
    Laguerre-shift (Toeplitz-type) operator. This is the below-RH analytic task this experiment sets.

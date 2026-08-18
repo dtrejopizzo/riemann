@@ -1,0 +1,377 @@
+{
+  "statement": "Centered quotient form of the denominator direction law: Delta d_N / d_N controls the directional increment defect exactly.",
+  "sources": {
+    "zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "centered_quotient_re": -0.505777115184859,
+          "centered_quotient_im": 0.0009740448567951873,
+          "centered_quotient_abs": 0.5057780531103551,
+          "centered_quotient_arg": 3.13966681783456,
+          "directional_increment_defect": 0.001925834564796076,
+          "im_over_abs": 0.001925834564796076,
+          "im_over_neg_re": 0.0019258381361109602,
+          "q_reconstruction_error": 5.551115123125783e-17
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "centered_quotient_re": -0.39514133849769734,
+          "centered_quotient_im": -0.0015061500854115753,
+          "centered_quotient_abs": 0.3951442089640586,
+          "centered_quotient_arg": -3.137780997747895,
+          "directional_increment_defect": -0.003811646612157667,
+          "im_over_abs": -0.003811646612157667,
+          "im_over_neg_re": 0.003811674301498962,
+          "q_reconstruction_error": 1.1102251422055052e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "centered_quotient_re": -0.3496632281078971,
+          "centered_quotient_im": 0.0004834915368911974,
+          "centered_quotient_abs": 0.3496635623780401,
+          "centered_quotient_arg": 3.140209919604954,
+          "directional_increment_defect": 0.0013827335442189103,
+          "im_over_abs": 0.0013827335442189103,
+          "im_over_neg_re": 0.0013827348660809262,
+          "q_reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "centered_quotient_re": -0.27344690497238666,
+          "centered_quotient_im": -0.000811682336571027,
+          "centered_quotient_abs": 0.2734481096427491,
+          "centered_quotient_arg": -3.1386243261452047,
+          "directional_increment_defect": -0.0029683230856174616,
+          "im_over_abs": -0.0029683230856174616,
+          "im_over_neg_re": 0.0029683361625650606,
+          "q_reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "centered_quotient_re": -0.26596453109078194,
+          "centered_quotient_im": 0.0007206033860248012,
+          "centered_quotient_abs": 0.2659655072891586,
+          "centered_quotient_arg": 3.1388832636579793,
+          "directional_increment_defect": 0.0027093866169696917,
+          "im_over_abs": 0.0027093866169696917,
+          "im_over_neg_re": 0.002709396561524352,
+          "q_reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "centered_quotient_re": -0.2668712275493552,
+          "centered_quotient_im": -0.0006119092046593115,
+          "centered_quotient_abs": 0.2668719290719323,
+          "centered_quotient_arg": -3.1392997569821945,
+          "directional_increment_defect": -0.0022928945984962636,
+          "im_over_abs": -0.0022928945984962636,
+          "im_over_neg_re": 0.0022929006258126682,
+          "q_reconstruction_error": 2.168404344971009e-19
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "centered_quotient_re": -0.4849446991894159,
+          "centered_quotient_im": 0.003051246881682013,
+          "centered_quotient_abs": 0.48495429823793296,
+          "centered_quotient_arg": 3.1353007885114383,
+          "directional_increment_defect": 0.006291823565166095,
+          "im_over_abs": 0.006291823565166095,
+          "im_over_neg_re": 0.0062919481062112155,
+          "q_reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "centered_quotient_re": -0.38192578894545104,
+          "centered_quotient_im": -0.004601747850808251,
+          "centered_quotient_abs": 0.3819535107115624,
+          "centered_quotient_arg": -3.1295444355346653,
+          "directional_increment_defect": -0.012047926571575161,
+          "im_over_abs": -0.012047926571575161,
+          "im_over_neg_re": 0.012048801060316722,
+          "q_reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "centered_quotient_re": -0.34102381735819765,
+          "centered_quotient_im": 0.0014685570118621969,
+          "centered_quotient_abs": 0.3410269793803042,
+          "centered_quotient_arg": 3.137286362183182,
+          "directional_increment_defect": 0.00430627809720738,
+          "im_over_abs": 0.00430627809720738,
+          "im_over_neg_re": 0.00430631802564008,
+          "q_reconstruction_error": 2.168404344971009e-19
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "centered_quotient_re": -0.2673561469547314,
+          "centered_quotient_im": -0.002448224893571923,
+          "centered_quotient_abs": 0.26736735612188983,
+          "centered_quotient_arg": -3.132435742503259,
+          "directional_increment_defect": -0.009156783120732976,
+          "im_over_abs": -0.009156783120732976,
+          "im_over_neg_re": 0.009157167027794035,
+          "q_reconstruction_error": 1.1102314949223176e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "centered_quotient_re": -0.2617363100173541,
+          "centered_quotient_im": 0.0021723052355811616,
+          "centered_quotient_abs": 0.2617453244883985,
+          "centered_quotient_arg": 3.1332932496629806,
+          "directional_increment_defect": 0.008299308649837777,
+          "im_over_abs": 0.008299308649837777,
+          "im_over_neg_re": 0.008299594486669159,
+          "q_reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "centered_quotient_re": -0.2641863357714149,
+          "centered_quotient_im": -0.0018405994704980577,
+          "centered_quotient_abs": 0.26419274746808924,
+          "centered_quotient_arg": -3.1346257160863034,
+          "directional_increment_defect": -0.006966881143171336,
+          "im_over_abs": -0.006966881143171336,
+          "im_over_neg_re": 0.006967050226589392,
+          "q_reconstruction_error": 0.0
+        }
+      ],
+      "stats": {
+        "re_centered": {
+          "min": -0.505777115184859,
+          "median": -0.30723536116529215,
+          "max": -0.2617363100173541
+        },
+        "abs_im_centered": {
+          "min": 0.0004834915368911974,
+          "median": 0.0014873535486368862,
+          "max": 0.004601747850808251
+        },
+        "abs_directional_increment_defect": {
+          "min": 0.0013827335442189103,
+          "median": 0.004058962354682524,
+          "max": 0.012047926571575161
+        },
+        "abs_im_over_neg_re": {
+          "min": 0.0013827348660809262,
+          "median": 0.004058996163569521,
+          "max": 0.012048801060316722
+        },
+        "min_neg_re_centered": 0.2617363100173541
+      },
+      "max_q_reconstruction_error": 1.1102314949223176e-16
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "centered_quotient_re": 6.453477023497479,
+          "centered_quotient_im": 2.2988076646191633,
+          "centered_quotient_abs": 6.850684810420174,
+          "centered_quotient_arg": 0.3421983753093066,
+          "directional_increment_defect": 0.3355588132039854,
+          "im_over_abs": 0.3355588132039854,
+          "im_over_neg_re": NaN,
+          "q_reconstruction_error": 4.440892098500626e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "centered_quotient_re": -0.4580720697283445,
+          "centered_quotient_im": 0.2137902151325551,
+          "centered_quotient_abs": 0.5055059615391628,
+          "centered_quotient_arg": 2.70492381654902,
+          "directional_increment_defect": 0.42292323216447814,
+          "im_over_abs": 0.42292323216447814,
+          "im_over_neg_re": 0.4667174212550035,
+          "q_reconstruction_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "centered_quotient_re": -0.8074470085681013,
+          "centered_quotient_im": -0.007561828989406197,
+          "centered_quotient_abs": 0.8074824164669101,
+          "centered_quotient_arg": -3.1322278186841306,
+          "directional_increment_defect": -0.009364698023385472,
+          "im_over_abs": -0.009364698023385472,
+          "im_over_neg_re": 0.009365108681021786,
+          "q_reconstruction_error": 8.673617379884035e-19
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "centered_quotient_re": -0.04828104368480796,
+          "centered_quotient_im": -0.0065435708756737074,
+          "centered_quotient_abs": 0.048722453746699784,
+          "centered_quotient_arg": -3.0068826142316096,
+          "directional_increment_defect": -0.13430298296741544,
+          "im_over_abs": -0.13430298296741544,
+          "im_over_neg_re": 0.13553084971385357,
+          "q_reconstruction_error": 8.673617379884035e-19
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "centered_quotient_re": 0.048752927525569964,
+          "centered_quotient_im": 0.004113306181270075,
+          "centered_quotient_abs": 0.048926140559565415,
+          "centered_quotient_arg": 0.08417110211737018,
+          "directional_increment_defect": 0.08407174844012694,
+          "im_over_abs": 0.08407174844012694,
+          "im_over_neg_re": NaN,
+          "q_reconstruction_error": 2.220462989844635e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "centered_quotient_re": -0.33014153402577207,
+          "centered_quotient_im": -0.0008048375535036287,
+          "centered_quotient_abs": 0.3301425150633852,
+          "centered_quotient_arg": -3.1391548023165115,
+          "directional_increment_defect": -0.0024378488585425147,
+          "im_over_abs": -0.0024378488585425147,
+          "im_over_neg_re": 0.0024378561027731823,
+          "q_reconstruction_error": 4.336808689942018e-19
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "centered_quotient_re": 6.238679573947946,
+          "centered_quotient_im": 2.2817795781118035,
+          "centered_quotient_abs": 6.642863905687322,
+          "centered_quotient_arg": 0.350634052635849,
+          "directional_increment_defect": 0.343493350233812,
+          "im_over_abs": 0.343493350233812,
+          "im_over_neg_re": NaN,
+          "q_reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "centered_quotient_re": -0.4812804491208942,
+          "centered_quotient_im": 0.26038060349009806,
+          "centered_quotient_abs": 0.5472009954119942,
+          "centered_quotient_arg": 2.645672813669124,
+          "directional_increment_defect": 0.47584088054162693,
+          "im_over_abs": 0.47584088054162693,
+          "im_over_neg_re": 0.541016374061545,
+          "q_reconstruction_error": 5.551115123125783e-17
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "centered_quotient_re": -0.8071954142835647,
+          "centered_quotient_im": -0.0062427081535019165,
+          "centered_quotient_abs": 0.8072195539291064,
+          "centered_quotient_arg": -3.1338589826788277,
+          "directional_increment_defect": -0.007733593819817426,
+          "im_over_abs": -0.007733593819817426,
+          "im_over_neg_re": 0.0077338250974117615,
+          "q_reconstruction_error": 8.326672684688674e-17
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "centered_quotient_re": -0.0481273127307509,
+          "centered_quotient_im": -0.005066628211348967,
+          "centered_quotient_abs": 0.04839327383134494,
+          "centered_quotient_arg": -3.0367034813110925,
+          "directional_increment_defect": -0.10469695084086764,
+          "im_over_abs": -0.10469695084086764,
+          "im_over_neg_re": 0.10527552701091598,
+          "q_reconstruction_error": 1.1102230246251565e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "centered_quotient_re": 0.04819952588900692,
+          "centered_quotient_im": 0.01320992303379528,
+          "centered_quotient_abs": 0.049976958315646254,
+          "centered_quotient_arg": 0.26749905637721433,
+          "directional_increment_defect": 0.2643202683597424,
+          "im_over_abs": 0.2643202683597424,
+          "im_over_neg_re": NaN,
+          "q_reconstruction_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "centered_quotient_re": -0.32994002345596396,
+          "centered_quotient_im": 0.0010023412664082354,
+          "centered_quotient_abs": 0.3299415459837339,
+          "centered_quotient_arg": 3.138554713020038,
+          "directional_increment_defect": 0.0030379358968562597,
+          "im_over_abs": 0.0030379358968562597,
+          "im_over_neg_re": 0.0030379499155912945,
+          "q_reconstruction_error": 1.1102569054260746e-16
+        }
+      ],
+      "stats": {
+        "re_centered": {
+          "min": -0.8074470085681013,
+          "median": -0.18911053357038596,
+          "max": 6.453477023497479
+        },
+        "abs_im_centered": {
+          "min": 0.0008048375535036287,
+          "median": 0.007052699932539952,
+          "max": 2.2988076646191633
+        },
+        "abs_directional_increment_defect": {
+          "min": 0.0024378488585425147,
+          "median": 0.11949996690414154,
+          "max": 0.47584088054162693
+        },
+        "abs_im_over_neg_re": {
+          "min": 0.0024378561027731823,
+          "median": 0.05732031784596889,
+          "max": 0.541016374061545
+        },
+        "min_neg_re_centered": 0.0481273127307509
+      },
+      "max_q_reconstruction_error": 4.440892098500626e-16
+    }
+  }
+}

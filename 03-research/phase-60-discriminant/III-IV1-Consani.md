@@ -51,7 +51,7 @@ y en particular, tomando como test el cuasi-elemento del núcleo `g₀ = Ξ_T/�
 *Prueba.* Min-max de Courant–Fischer: `ε₀ ≤ ⟨g,QW g⟩` para todo `g` unitario; con `g₀` el
 término `S_λ` es exponencialmente pequeño por la propiedad de cuasi-anulación de `Ξ_T` en los
 ceros. Lo que queda, `⟨g₀,W g₀⟩`, es **un número determinado, analítico** (integral
-arquimediana + residuo de polo evaluados en `Ξ_T`). ∎ **Lo honesto sobre la tasa.** `⟨g₀,W g₀⟩` es la **explicit-formula de Weil evaluada en `Ξ_T`**:
+arquimediana + residuo de polo evaluados en `Ξ_T`). ∎ **Lo franco sobre la tasa.** `⟨g₀,W g₀⟩` es la **explicit-formula de Weil evaluada en `Ξ_T`**:
 es el término arquimediano `∫ Ξ_T · (Γ′/Γ)(¼+it/2)…` menos el de polo, normalizado por
 `‖Ξ_T‖² ≍ logλ` (Plancherel–Pólya). Su orden de magnitud es `O(1)` en escala absoluta y
 `O(1/logλ)` tras normalizar por `‖Ξ_T‖²`. **Pero su SIGNO es exactamente la positividad de Weil
@@ -59,7 +59,7 @@ en `Ξ_T` = RH-local.** Por tanto: ``` ┌────────────�
 ``` **Aclaración crítica frente al documento maestro.** Esta cota es `O(1/logλ)`, **no** `C/λ²`. La
 afirmación pre-auditoría `ε₀~C₀/λ²` **no se sostiene** por este camino incondicional: confundía
 el gap de frame (geométrico, `O(λ²)` direcciones) con el autovalor de QW. Lo que el método de
-Rayleigh entrega honestamente es `O(1/logλ)` (vía `‖Ξ_T‖²≍logλ`), y **sólo como cota superior
+Rayleigh entrega francamente es `O(1/logλ)` (vía `‖Ξ_T‖²≍logλ`), y **sólo como cota superior
 del valor absoluto**. No puedo derivar la potencia exacta de `λ` sin la asintótica del operador
 de borde (IV.1), que está abierta. Declaro `ε₀ ~ C/λ²` **NO PROBADO** por medios de conteo. ### III.4 — El signo de ε₀ es RH y el conteo no lo alcanza (con razón demostrada) **Prop III.4.** El conteo sub-crítico es **invariante bajo el reflejo de un cero fuera del
 eje**. *Prueba:* mover `γ_ρ → x_ρ ± iη_ρ` no cambia `N(T*)` (el conteo cuenta ceros con
@@ -152,6 +152,6 @@ abierto.** --- ## Veredicto final (III + IV.1) **Probado incondicionalmente (an�
 de núcleo, gap de frame, densidad de muestreo, orden del operador de borde) y entrega todo eso
 limpiamente. Pero es **estructuralmente ciego al signo**: invariante bajo el reflejo de un cero,
 no puede ver RH. La tentación de leer `ε₀~C/λ²` desde el conteo era una **conflación
-`S_λ` vs `QW`** (C.2) y queda refutada: lo honesto es `|ε₀|=O(1/logλ)` como cota de tamaño, con
+`S_λ` vs `QW`** (C.2) y queda refutada: lo franco es `|ε₀|=O(1/logλ)` como cota de tamaño, con
 el signo RH-hard. IV.1 es análisis duro (Landau–Widom) que cerraría el gap uniforme pero **no
 toca el muro**. El corazón no se mueve. — C. 

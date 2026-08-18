@@ -1,7 +1,7 @@
 Question: 
 Your goal is to write a clear and thorough literature review for this primary objective that others can easily use for future work. The primary research objective is: Constructing the geometric class K_geom / SURF behind the Riemann Hypothesis
 
-You are an autonomous mathematics research agent. Work rigorously; report only what you can justify. A FALSE PROOF IS WORSE THAN AN HONEST NEGATIVE RESULT: never present an unproven step as proven, never cite an open conjecture as if established. This prompt is fully self-contained; assume no external context.
+You are an autonomous mathematics research agent. Work rigorously; report only what you can justify. A FALSE PROOF IS WORSE THAN AN CANDID NEGATIVE RESULT: never present an unproven step as proven, never cite an open conjecture as if established. This prompt is fully self-contained; assume no external context.
 
 1. SETTING (definitions).
 Riemann zeta ζ(s), nontrivial zeros ρ = 1/2 + iγ_ρ. The Weil explicit formula: for test f with Fourier transform f̂, Σ_ρ f̂(γ_ρ) = A_∞(f) + (poles at s=0,1) − 2 Σ_n Λ(n) n^{−1/2} g(log n), where Λ = von Mangoldt, g = Fourier transform of f̂, and the archimedean density is Ψ(r) = Re ψ(1/4 + ir/2) − log π (ψ = digamma). Define the Weil pairing ⟨f,h⟩ = Σ_ρ f̂(γ_ρ) conj(ĥ(γ_ρ)); complete to a Kreĭn space H_W with indefinite form Q whose negative index κ = #(zeros off the critical line). There is a self-adjoint "Frobenius" operator T on H_W with spectrum {γ_ρ}, and a complex structure J from the spectral splitting. Let Π⊥ = primitive part (orthocomplement of the rank-2 pole part).
@@ -34,7 +34,7 @@ Make genuine, rigorous progress toward (S, Δ, L, ω) satisfying G1–G4, OR pro
 • Numerics: verify checkable claims against the first ~10³ zeros, von Mangoldt Λ, and Ψ(r).
 
 5. DELIVERABLE — output exactly one of:
-(i) A rigorous construction of S/Δ/L/ω: an explicit definition independent of the spectrum; a proof (or numerically-verified strong evidence) of whichever of G1–G4 you establish; the independence + integrality certificates; an honest list of axioms still open.
+(i) A rigorous construction of S/Δ/L/ω: an explicit definition independent of the spectrum; a proof (or numerically-verified strong evidence) of whichever of G1–G4 you establish; the independence + integrality certificates; an candid list of axioms still open.
 (ii) A precise obstruction theorem: a proved statement that route X cannot supply some G_i, for a specific structural reason, sharpening why RH resists.
 DO NOT output a claimed proof of RH. If your construction's positivity reduces to RH, classify it as a REDUCTION, not a proof. Report sections: setup · route · construction · gates passed/failed · numerical verification · partial result or obstruction · open items.
 
@@ -210,7 +210,7 @@ These numerical checks cannot certify G1–G4, but they can test whether the ope
 
 - **Construct a new compact/finite geometric object** whose invariants are integer-graded and which maps to the scaling-site world only after completion/realification. The obstruction suggests that the passage through type-II dimensions should be viewed as an analytic shadow, not the target cohomology itself.
 
-- **Clarify the role of cutoffs vs geometry:** since trace formulas require IR/UV regularization (connes2000noncommutativegeometryyear pages 55-58, connes2602theriemannhypothesis pages 30-33), a successful “SURF” object would need a built-in compactness/renormalization mechanism that yields an honest trace without external cutoffs.
+- **Clarify the role of cutoffs vs geometry:** since trace formulas require IR/UV regularization (connes2000noncommutativegeometryyear pages 55-58, connes2602theriemannhypothesis pages 30-33), a successful “SURF” object would need a built-in compactness/renormalization mechanism that yields an candid trace without external cutoffs.
 
 - **Bridge to \(\lambda\)-ring/F\(_1\) descent carefully:** Borger’s framework makes precise how Frobenius lifts serve as descent data and warns that finite-type descent is rare and cohomologically rigid (only very restricted motives descend). This suggests that any \(\mathbb F_1\)-surface supporting nontrivial \(H^1\) must live in a broader (likely derived/topos-theoretic) category than finite-type \(\mathbb F_1\)-schemes. (borger2009lambdaringsandthe pages 1-3, borger2009lambdaringsandthe pages 3-5)
 

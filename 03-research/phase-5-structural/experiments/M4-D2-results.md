@@ -1,4 +1,4 @@
-# M4 / D2 — Numerical results (honest report, including what failed and what it redirects)
+# M4 / D2 — Numerical results (candid report, including what failed and what it redirects)
 
 **Route B / M5 experiment.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
 Code: `d2_destroy_test.py` (first pass, artifacts), `d2_gradient_check.py` (clean gradient check).
@@ -6,7 +6,7 @@ Env: `/usr/bin/python3`, numpy 2.0.2 + mpmath 1.4.1. **Self-contained Gram, NOT 
 
 > **One-line outcome.** Proposition D2 (the gradient formula) is **numerically confirmed** (rel. err
 > $\sim10^{-7}$) and the gradient is **spread across $\sim$14 Euler factors** — the structural non-tautology is
-> exhibited. **But** two honest negatives reshape the program: (i) the self-contained Gram does **not**
+> exhibited. **But** two candid negatives reshape the program: (i) the self-contained Gram does **not**
 > reproduce P7's positivity baseline (RH-true $\zeta$ wrongly gives $\lambda_{\min}<0$), so the *absolute*
 > margin and the margin-discriminant test need the real engine; (ii) per P7's validated data (engine-spec §4)
 > the *scalar* $\lambda_{\min}$ sits at the floor for **all** RH-true L-functions and only fires for $L_{\mathrm{DH}}$
@@ -70,7 +70,7 @@ different $\Gamma$-factors producing different baselines, not a genuine arithmet
 
 ## 3. The redirection (the real finding)
 
-Items (i)–(ii) sharpen the program honestly:
+Items (i)–(ii) sharpen the program candidly:
 
 > **The scalar margin $\lambda_{\min}$ is not the non-tautological invariant** — by P7's own validated data it
 > is an off-line-zero detector ($\approx f(d)$). **The non-tautological, arithmetic content lives in the finer
@@ -102,7 +102,7 @@ where the analytic machinery already points.
   finer, non-tautological discriminant. The scalar-margin route is dropped.
 
 **Net for the panel.** *The numerical D2 confirmed the analytic gradient (Prop D2) to $10^{-7}$ and exhibited
-its spread over $\sim$14 Euler factors (the non-tautological structure). It also produced two honest
+its spread over $\sim$14 Euler factors (the non-tautological structure). It also produced two candid
 negatives: my self-contained Gram lacks P7's positivity baseline (absolute margins are artifact), and — more
 importantly — P7's validated data shows the scalar $\lambda_{\min}$ is an off-line-zero detector ($\approx
 f(d)$, near-tautological). So the program is redirected: the non-tautological invariant is the per-prime

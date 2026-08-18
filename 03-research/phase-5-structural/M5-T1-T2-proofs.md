@@ -78,7 +78,7 @@ $I^{(X)}$ is constant while $d$ varies: $I^{(X)}$ cannot equal $f(d)$ for any $f
 > is not a re-encoding of the zero positions. This complements the operator-level statement (P8 Thm C: the
 > *zero-side* invariant **is** the tautology; M1 Prop B3.1.3: the arithmetic side is distinct).
 
-**Honest caveat.** T1(b) shows non-tautology as a statement about *functionals on L-data with a free tail*.
+**Candid caveat.** T1(b) shows non-tautology as a statement about *functionals on L-data with a free tail*.
 Within a constrained family of *genuine* L-functions (Euler product + functional equation), exhibiting two
 members with identical $D_X$ but different $d$ is more delicate; the **analytic D2 (§3)** supplies the
 constructive, within-window witness ($\partial I/\partial\Lambda_L(n)\ne0$ at fixed $d$), which is the
@@ -142,7 +142,7 @@ the crossing is transversal ($\tfrac{d\lambda_{\min}}{ds}\ne0$). By (0.2), $\|K\
 > the window — zero-independently. A *transversal* crossing is precisely the panel's signature of "real
 > structure, not a numerical coincidence."
 
-**Honest caveats.** (i) The result is to leading order in $\delta$; the $o(\delta^2)$ remainder does not
+**Candid caveats.** (i) The result is to leading order in $\delta$; the $o(\delta^2)$ remainder does not
 affect the first-order slope, hence not the transversality, but the exact $\delta_*$ has $o(1)$ corrections.
 (ii) Simplicity of $m_0$ and $m_0>0$ are genericity hypotheses on the window (no on-line near-degeneracy);
 both are checkable. (iii) "Family $L_t$ with a zero moving off the line at rate $\delta(t)$" is a deformation
@@ -190,7 +190,7 @@ expectation explicit, so the numerical test is a clean confirm/refute.
 
 ---
 
-## 4. What T1+T2+D2 establish, and the honest status of T3, T4
+## 4. What T1+T2+D2 establish, and the candid status of T3, T4
 
 **Established (pure theory, this file).**
 - **T1** ✅ — the invariant $I^{(X)}$ is a local, real-analytic, arithmetic functional, provably **not** a
@@ -202,7 +202,7 @@ expectation explicit, so the numerical test is a clean confirm/refute.
   generically nonzero, $\nabla I\not\parallel\nabla d$ — the constructive non-tautology witness; the numerical
   D2 is the falsification test.
 
-**Honest status of the rest.**
+**Candid status of the rest.**
 - **T3 (anatomy)** ◆ — the place-decomposition $\langle K\cdot,\cdot\rangle=R_\infty+\sum_p R_p$ is explicit:
   $R_\infty=A_\infty$ (archimedean, CC square), $R_p=-\sum_{k}\tfrac{\Lambda_L(p^k)}{\sqrt{p^k}}w_{p^k}w_{p^k}^{*}$
   (rank-one-per-frequency, by §3). **Provable now:** each $R_p$ is rank-bounded and its sign is explicit; the

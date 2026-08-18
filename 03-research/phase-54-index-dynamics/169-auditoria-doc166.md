@@ -24,7 +24,7 @@ constantes, (ii) finito-dimensional citado como general, (iii) H-26 usada en sil
 no-RH-equivalentes" declarados en §6, sobrevive entero solo uno (166.6/φ, condicional a V.2);
 166.9 es tautología vestida, 166.13(a)+(c)-interpretación es Weil reescrito y condicional a V.1,
 y la tasa 2b² pierde su coeficiente (queda solo el exponente, forzado por simetría). El documento
-es honesto en el cuerpo (etiqueta sus GAPs) pero su resumen ejecutivo y su veredicto sobreviven
+es franco en el cuerpo (etiqueta sus GAPs) pero su resumen ejecutivo y su veredicto sobreviven
 mejor que su letra pequeña — exactamente el modo de inflación que esta fase debía vigilar.
 
 ---
@@ -136,7 +136,7 @@ probado. Igual A_J(W)=0. Por tanto:
 1. **"Incondicionalmente" es falso como adverbio.** El resumen ejecutivo (§0, punto (1)) y la
    interpretación de 166.13 dicen "A_t(W)=0, A_J(W)=0 incondicionalmente" / "sin RH". "Sin RH" es
    correcto; "incondicionalmente" no: es condicional a V.1. El cuerpo del teorema 166.13 sí lista
-   "(H-26) restringida al modelo" — la letra pequeña es honesta, el titular no. Es el patrón (iii)
+   "(H-26) restringida al modelo" — la letra pequeña es franca, el titular no. Es el patrón (iii)
    en su forma más sutil: la hipótesis está declarada en el marco y luego se evapora del lenguaje
    de los resultados ("punto fijo universal", "canónico", "gratis").
 2. **El abuso de dominio está controlado.** W con m≥1 es indefinida: W ∉ 𝕄 y W ∉ ∂𝕄 (la frontera
@@ -146,7 +146,7 @@ probado. Igual A_J(W)=0. Por tanto:
 3. **El contenido es el criterio de Weil verbatim.** "RH ⟺ el punto fijo W cae dentro del cono
    𝕄" = "RH ⟺ W ≥ ε > 0" = positividad de la forma de Weil (Weil, *Sur les "formules explicites"
    de la théorie des nombres premiers*, Comm. Sém. Math. Lund 1952; con la uniformidad = GAP
-   166.A). El doc declara honestamente que 166.7 es "RH-reescrito", pero presenta la lectura
+   166.A). El doc declara francamente que 166.7 es "RH-reescrito", pero presenta la lectura
    dinámica de 166.13(a)+(c) ("el punto crítico existe siempre y es canónico; RH es su pertenencia
    al cono") como la "imagen completa del muro" — es la MISMA frase de Weil con un flujo alrededor.
    Lo único añadido por la dinámica es 166.13(b): ker L = formas apareadas λ↔λ̄ (cálculo correcto:
@@ -264,13 +264,13 @@ documentos lo declaran ([PUENTE], Doc 167 §0; Doc 166 §4.2). Coherencia de eti
   miembro es el criterio de Weil reescrito (§3 arriba), de modo que la "dualidad" aparea un
   teorema difícil y nuevo (RT) con una reformulación sin contenido. Isomorfismo de FORMA de
   enunciado, sí — el doc usa exactamente esa palabra ("isomorfa en FORMA") en §0, lo cual es
-  honesto; la fila de la tabla "la variable dinámica de uno es la cantidad conservada del otro"
+  franco; la fila de la tabla "la variable dinámica de uno es la cantidad conservada del otro"
   ya no lo es tanto: sugiere una estructura simpléctica/acoplada que nadie construyó, y la mitad
   "conservada" es Sylvester (vacía).
 - El único candidato a contenido compartido era el eco cuantitativo 2b² ↔ b²/2 — eliminado en
   §4.3 (gauge).
 
-**Veredicto (f): ANALOGÍA VERBAL honesta en §0, sobre-estructurada en la tabla §4.2; consistencia
+**Veredicto (f): ANALOGÍA VERBAL franca en §0, sobre-estructurada en la tabla §4.2; consistencia
 166↔167 verificada.**
 
 ---

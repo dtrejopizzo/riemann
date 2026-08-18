@@ -19,7 +19,7 @@ viene con el cálculo o el contraejemplo de configuración.
 |---|---|
 | **Ley logística** x_{k+1} = 2x_k(1−x_k) (núcleo algebraico, D133 Thm. 2.10 / P47 `thm:logistic`) | **SOBREVIVE** — exacta, re-derivada abajo sin hipótesis ocultas. Su *transplante* a σ_loc (Prop. 3.5 "verbatim" / `prop:loc-logistic`) contiene un error de normalización (radical) reparable: la fórmula cerrada es falsa tal como está escrita, la dicotomía 0 vs ½ sobrevive. |
 | **Rama RH ⟹ lim σ_loc^(k) = 0** (D136 Prop. 5.5 / P47 `prop:RHbranch`) | **SOBREVIVE** — insumos verificados contra ERRATA, sin circularidad. |
-| **Rama ¬RH ⟹ lim σ_loc^(k) = ½** (D136 Thm. 5.4 / P47 `thm:realiz`) | **MUERE como "teorema con prueba completa"** — dos huecos en la prueba: (GAP-A) el Paso 3 afirma θ(M,w) → 0 con constantes C_M, e^{a₀(M,w)}, b₀(M) que dependen de M y cuya uniformidad no solo no está probada sino que es **falsa** para toda familia de bumps de soporte fijo (Lema 139.1 abajo); (GAP-B) el Paso 1 no aniquila los **pares resonantes** con ambos miembros en S y σ ∈ {σ₀, σ₀′} distintos de la órbita objetivo, que existen para configuraciones ¬RH legítimas y aportan términos de signo no controlado. El **enunciado** no queda refutado: GAP-B es reparable con Vandermonde en la coordenada τ, y GAP-A es probablemente reparable importando el mecanismo clásico de dominancia exponencial del criterio de Weil (esbozo en §3.5), pero el estatus honesto hoy es **CONDICIONAL/ABIERTO**, no teorema. |
+| **Rama ¬RH ⟹ lim σ_loc^(k) = ½** (D136 Thm. 5.4 / P47 `thm:realiz`) | **MUERE como "teorema con prueba completa"** — dos huecos en la prueba: (GAP-A) el Paso 3 afirma θ(M,w) → 0 con constantes C_M, e^{a₀(M,w)}, b₀(M) que dependen de M y cuya uniformidad no solo no está probada sino que es **falsa** para toda familia de bumps de soporte fijo (Lema 139.1 abajo); (GAP-B) el Paso 1 no aniquila los **pares resonantes** con ambos miembros en S y σ ∈ {σ₀, σ₀′} distintos de la órbita objetivo, que existen para configuraciones ¬RH legítimas y aportan términos de signo no controlado. El **enunciado** no queda refutado: GAP-B es reparable con Vandermonde en la coordenada τ, y GAP-A es probablemente reparable importando el mecanismo clásico de dominancia exponencial del criterio de Weil (esbozo en §3.5), pero el estatus franco hoy es **CONDICIONAL/ABIERTO**, no teorema. |
 
 **Consecuencia para la equivalencia (D136 Cor. 5.6 / P47 `thm:main`):** queda con una rama
 teorema y una rama con gap — exactamente el estatus asimétrico que tenía el Doc 133 antes
@@ -103,7 +103,7 @@ correcto **siempre que la base de la torre sea la cantidad correcta** — ver §
   luego el cociente ≤ dim V_p/(dim V_p + (D+1)²) ≤ ½. ✔ (Vale incluso si los
   h_{g_a,φ_b} son linealmente dependientes y dim V_p < (D+1)².)
 
-Dos observaciones de honestidad, no fatales:
+Dos observaciones de franqueza, no fatales:
 
 - **(O-1) Canonicidad de diseño:** σ_loc es 𝒰-canónica pero NO diseño-canónica: depende
   de la familia de bumps B^{(M)}_w "elegida de una vez" y de la geometría de la grilla.
@@ -296,7 +296,7 @@ cubiertos). GAP-B queda así reducido a una errata-con-parche; **pero el parche 
 y por tanto agrava el presupuesto de GAP-A** (C₁ y el grado del polinomio crecen):
 los dos huecos no son independientes y la reparación debe cerrarlos juntos.
 
-### 4.4. ¿Es verdadero el enunciado? La ruta de reparación honesta
+### 4.4. ¿Es verdadero el enunciado? La ruta de reparación franca
 
 El enunciado "¬RH ⟹ existe una celda acotada con neg.ind ≥ 1" es el análogo doblado del
 sentido clásico del criterio de Weil ("¬RH ⟹ ∃f ∈ C_c^∞ con Q(f) < 0"), que es teorema
@@ -328,7 +328,7 @@ queda abierto-reparable, no refutado; la arquitectura de localización está con
 
 ## 5. Efectividad Π₁ (protocolo 5) — VERIFICADA
 
-- D136 §6.2(5) y P47 §`sec:honest`(a) declaran explícitamente: σ_loc = 0 es Π₁ sobre
+- D136 §6.2(5) y P47 §`sec:candid`(a) declaran explícitamente: σ_loc = 0 es Π₁ sobre
   (x_0(N))_N, "exactamente tan inverificable como siempre"; N₀ y D₀ "no son efectivos a
   partir de m̄ o de nada". **Ningún corolario afirma efectividad.** ✔
 - La única tensión de redacción: Teorema 4.4 / `thm:mesh` dice "N₀ **computable** desde
@@ -360,11 +360,11 @@ queda abierto-reparable, no refutado; la arquitectura de localización está con
 
 1. **Abstract y `thm:main`:** la frase "with *both* branches theorems over cited inputs"
    y "realizability under ¬RH is now a theorem rather than a hypothesis" deben
-   retirarse o condicionarse mientras 139.A esté abierto. Redacción honesta: "the RH
+   retirarse o condicionarse mientras 139.A esté abierto. Redacción franca: "the RH
    branch is a theorem; the ¬RH branch is proved modulo a quantitative uniformity of
    Paley–Wiener constants in the witness construction (stated as Problem 139.A), which
    replaces the former realizability hypothesis by a strictly narrower, purely analytic
-   gap". Lo mismo en §`sec:honest`(c) ítem 4 ("realizability is now a theorem") y en
+   gap". Lo mismo en §`sec:candid`(c) ítem 4 ("realizability is now a theorem") y en
    `rem:key` (la frase "dissolves it" es correcta para la Hipótesis D *como tal* — el
    régimen T → ∞ sí se disolvió — pero el caveat no desapareció: se transmutó en la
    uniformidad de constantes).

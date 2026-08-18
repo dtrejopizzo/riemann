@@ -1,0 +1,236 @@
+\documentclass[12pt,english,reqno]{smfart}
+\usepackage[letterpaper,left=1in,right=1in,top=1.5in,bottom=1.5in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[english,francais]{babel}
+
+\usepackage{amssymb,url,xspace,smfthm,float,subfig}
+
+\usepackage{tikz-cd}
+
+\usepackage[export]{adjustbox}
+
+\def\meta#1{$\langle${\it #1}$\rangle$}
+\newcommand{\myast}{($\star$)\ }
+
+\iffalse
+\makeatletter
+    \def\ps@copyright{\ps@empty
+    \def\@oddfoot{\hfil\small\copyright 1997, \SMF}}
+\makeatother
+\fi
+
+\newcommand{\SmF}{Soci\'et\'e ma\-th\'e\-ma\-ti\-que de France}
+\newcommand{\SMF}{Soci\'et\'e Ma\-th\'e\-Ma\-ti\-que de France}
+\newcommand{\BibTeX}{{\scshape Bib}\kern-.08em\TeX}
+\newcommand{\T}{\S\kern .15em\relax }
+\newcommand{\AMS}{$\mathcal{A}$\kern-.1667em\lower.5ex\hbox
+        {$\mathcal{M}$}\kern-.125em$\mathcal{S}$}
+\newcommand{\resp}{\emph{resp}.\xspace}
+
+\tolerance 400
+\pretolerance 200
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[%nameinlink %, capitalise
+]{cleveref}
+
+ 
+
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{}{n}%
+      \fontsize{9}{20}%
+      \selectfont}
+
+
+
+
+\title[Knots, Primes and the adele class space]{Knots, Primes and the adele class space\\\TitleFont{}}\date {}
+\author{Alain Connes}
+\address{Coll\`ege de France\\3 Rue d'Ulm\\75005 Paris, France}
+\address{I.H.E.S., France}
+\email{\url{alain@connes.org}}
+\author{Caterina Consani}
+\address{Department of Mathematics\\Johns Hopkins University\\Baltimore, MD 21218, USA}
+\email{\url{cconsan1@jhu.edu}}
+
+
+
+\subjclass{\href{http://www.ams.org/mathscinet/msc/msc2020.html?t=11R37&btn=Current}{11R37},
+\href{http://www.ams.org/mathscinet/msc/msc2020.html?t=11M06&btn=Current}{11M06},
+\href{http://www.ams.org/mathscinet/msc/msc2020.html?t=11Mxx&btn=Current}{11M55},
+\href{http://www.ams.org/mathscinet/msc/msc2020.html?t=14A15&btn=Current}{14A15},
+\href{http://www.ams.org/mathscinet/msc/msc2020.html?t=14F20&btn=Current}{14F20},
+\href{http://www.ams.org/mathscinet/msc/msc2020.html?t=57K10&btn=Current}{57K10}}
+\keywords{Knots and Primes, \'Etale fundamental group, Scheme, Class field theory, Adele class space, Scaling site, Baum-Connes map, Noncommutative Geometry}
+
+% General includes
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsbsy}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{eufrak}
+\usepackage{eucal}
+\usepackage{microtype}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\pagestyle{headings}
+\usepackage[all,cmtip]{xy}
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+\usepackage[abbrev,lite,alphabetic]{amsrefs}
+\usepackage{dsfont}
+
+
+
+
+
+% Color definitions
+\usepackage{color}
+\definecolor{todo}{rgb}{1,0,0}
+\definecolor{conditional}{rgb}{0,1,0}
+\definecolor{e-mail}{rgb}{0,.40,.80}
+\definecolor{reference}{rgb}{.20,.60,.22}
+\definecolor{mrnumber}{rgb}{.80,.40,0} %light blue
+\definecolor{citation}{rgb}{0,.40,.80} %light blu
+
+\setlength{\parindent}{0pt}
+
+
+\def\ie{{\it i.e.\/}\ }
+\def\qqq{\,,\,~\forall}
+\def\cf{{\it cf.}}
+
+
+
+
+
+
+\def\hatz{{\hat\Z^\times}}
+\def\Spec{{\rm Spec\,}}
+
+\newcommand{\GL}{{\rm GL}}
+
+
+
+% Caligrafic letters
+\def\cA{\mathcal{A}}
+\def\cO{{\mathcal O}}
+
+%Boldface letters
+\def\A{{\mathbb A}}
+\def\C{{\mathbb C}}
+\def\F{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+
+
+% Theorems
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{myprop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{rem}[thm]{Remark}
+
+%\newtheorem{prop}[thm]{Proposition}
+
+
+
+%\newtheorem*{theorem1}{Theorem 1}
+%\newtheorem*{theorem2}{Theorem 2}
+
+
+
+
+
+\begin{document}
+\def\smfbyname{}
+
+\begin{abstract}
+We show that the  scaling site $X_\Q$ and its periodic orbits $C_p$ of length $\log p$  offer a  geometric framework for the well-known analogy between primes and knots. The role of the maximal abelian cover of $X_\Q$ is played by the  quotient map $\pi:X_\Q^{ab}\to X_\Q$ from the adele class space $X_\Q^{ab}:=\Q^\times \backslash \A_\Q$ to   $X_\Q=X_\Q^{ab}/\hatz$.	 The inverse image $\pi^{-1}(C_p)\subset X_\Q^{ab}$ of the periodic orbit $C_p$  is canonically isomorphic to the mapping torus  of the multiplication by the Frobenius at $p$  in the abelianized \'etale fundamental group $\pi_1^{e t}(\Spec \, \Z_{(p)})^{ab}$ of the spectrum of the local ring $\Z_{(p)}$, thus exhibiting the linking of $p$ with all other primes.  In the same way as the Grothendieck theory of the  \'etale fundamental group of schemes is an extension of Galois theory to schemes, the adele class space gives, as a covering of the scaling site, the corresponding extension of the class field isomorphism  for $\Q$ to schemes related to $\Spec\,\Z$.
+\end{abstract}
+
+
+\maketitle
+
+\tableofcontents
+
+\input{intro}
+
+
+
+\input{sect2}
+\input{sect3}
+\input{sect4}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% End material. %%%
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+
+  \bibitem{BC} P.~Baum, A.~Connes, N.~Higson,  \emph{ Classifying space for proper actions and $K$-theory of group
+$C^*$-algebras}. (English summary)
+$C^*$-algebras: 1943-1993 (San Antonio, TX, 1993), 240-291, Contemp. Math., 167, Amer. Math. Soc., Providence, RI, 1994.
+ 
+\bibitem{Co-zeta} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}.  Selecta Math. (N.S.)  \textbf{5}  (1999),  no. 1, 29--106.
+
+
+\bibitem{CC1} A. Connes, C. Consani, \emph{Schemes over $\mathbb F_1$ and Zeta Functions}, Compos. Math. \textbf{146} (2010), no. 6, 1383--1415.
+ 
+ \bibitem{ccmonoids} A.~Connes, C.~Consani  {\em  From monoids to hyperstructures: in search of an absolute arithmetic}. Casimir force, Casimir operators and the Riemann hypothesis, 147--198, Walter de Gruyter, Berlin, 2010.
+
+
+
+\bibitem{CCas} A.~Connes, C.~Consani, {\em Geometry of the Arithmetic Site}. Adv. Math. 291 (2016), 274--329.
+
+\bibitem{CCscal1} A.~Connes, C.~Consani, \emph{Geometry of the Scaling Site}.  Selecta Math. (N.S.) \textbf{23} (2017), no. 3, 1803--1850.
+
+\bibitem{CCsurvey} A.~Connes, C.~Consani, \emph{The Riemann-Roch strategy, complex lift of the Scaling Site},  ``Advances in Noncommutative Geometry, On the Occasion of Alain Connes' 70th Birthday", Chamseddine, A., Consani, C., Higson, N., Khalkhali, M., Moscovici, H., Yu, G. (Eds.), Springer (2020). 
+
+
+
+\bibitem{CMbook} A.~Connes, M.~Marcolli,  \emph{  Noncommutative Geometry, Quantum Fields, and Motives}, Colloquium Publications, Vol.55, American Mathematical Society, 2008.
+
+\bibitem{Lenstra} H.~Lenstra, {\em Galois theory for schemes}. First edition: 1985
+(Mathematisch Instituut, Universiteit van Amsterdam)
+Second edition: 1997
+(Department of Mathematics, University of California at Berkeley)
+Electronic third edition: 2008
+
+\bibitem{Manin} Y.~Manin {\em Introduction into theory of schemes}. Translated from the Russian and edited by Dimitry Leites. Abdus Salam School of Mathematical Sciences Lahore, Pakistan. (2009).
+
+\bibitem{Mazur0}  B.~Mazur, {\em Remarks on the Alexander Polynomial}, (1963), \url{https://bpb-us-e1.wpmucdn.com/sites.harvard.edu/dist/a/189/files/2023/01/Remarks-on-the-Alexander-Polynomial.pdf}
+
+\bibitem{Mazur}  B.~Mazur, {\em Primes, Knots and Po}, Lecture notes for the conference "Geometry, Topology and Group Theory" in honor of the 80th birthday of Valentin Poenaru, July 2012. \url{https://www-fourier.ujf-grenoble.fr/~funar/CONFERENCES/article_barry.pdf}
+
+\bibitem{Mazur1}  B.~Mazur, {\em Bridges between Geometry and Number Theory},  talk at the conference ``Unifying themes in geometry'' como 2021 \url{https://www.youtube.com/watch?v=U3EzqIYgqEw}
+
+\bibitem{Mazur2}  B.~Mazur, {\em Thoughts about primes and knots},  (2021),  \url{https://www.youtube.com/watch?v=KTVEFwRbuzU}
+
+\bibitem{Morishita} M.~Morishita, {\em Analogies between knots and primes, 3-manifolds and number rings} [translation of MR2208305]. Sugaku expositions. Sugaku Expositions 23 (2010), no. 1, 1--30.
+
+\bibitem{Morishita1} M.~Morishita, {\em Knots and primes. An introduction to arithmetic topology}. Universitext. Springer, London, 2012.
+
+
+
+
+
+
+\end{thebibliography}
+
+
+
+
+
+
+\end{document}

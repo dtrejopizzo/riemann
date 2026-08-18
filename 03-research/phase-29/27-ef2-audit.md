@@ -214,7 +214,7 @@ $$\mu_{WT}^\infty = \mu_\gamma^{real}. \quad \text{(incondicional)}$$
 
 ## 9. Verificación de la normalización y posibles errores
 
-**Advertencia de honestidad.** El argumento del Teorema 2 asume que:
+**Advertencia de franqueza.** El argumento del Teorema 2 asume que:
 
 (i) $\mu_\infty^{emp} = \mu_\gamma^{real}$ en la misma normalización que $\mu_{WT}^\infty$.
 (ii) El término $\mu_\Xi^{real}/N$ desaparece en el límite $N\to\infty$.

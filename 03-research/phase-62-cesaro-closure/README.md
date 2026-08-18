@@ -44,7 +44,7 @@ carries an intrinsic **quaternionic Hodge–Riemann polarization** (Deninger obj
 | [E93](E93_quaternionic_HR.py) | with correct `J²=−1`, `AJ` is ≈antisymmetric for ζ → its symmetric part is `[A,J]/2`, tiny for ζ |
 | [E94](E94_Jcompat.py) + [E94_RESULTS.md](E94_RESULTS.md) | **ζ is positive-semidefinite on V₊ (J's +i-eigenspace) at every λ; DH and random-symmetric are indefinite** |
 
-**Result (strong, honest):** ζ's finite-window Weil matrix genuinely behaves like a *polarized
+**Result (strong, candid):** ζ's finite-window Weil matrix genuinely behaves like a *polarized
 quaternionic Hodge structure* — PSD on V₊, while the off-line DH falsador and a symmetry-matched
 random control both fail. The clearest intrinsic appearance of Weil/Hodge–Riemann positivity in
 the program, and not trivially algebraic (random fails).
@@ -72,7 +72,7 @@ Next: a genuinely different road (new phase). The finite-window object keeps ret
 gapless wall, so the productive frontier is the geometric realization (MW-5) or a different object,
 not more brute force on the window.
 
-## C0 result (honest, 2026-06-26)
+## C0 result (candid, 2026-06-26)
 
 - The **`k(k+2)` ladder is NOT a discriminator** — the DH falsador reproduces it *better* than ζ.
   It is generic period-2 Dirichlet geometry, not arithmetic. This refutes the optimistic reading
@@ -88,7 +88,7 @@ not more brute force on the window.
   (`engine_cache.py`, `E70_doob_parter.py`, `.cache_23F/`) via a path shim; falsador DH mandatory; dps≥40.
 - [E90_RESULTS.md](E90_RESULTS.md) — full C0 writeup and reproduce instructions.
 
-## Honesty guardrails
+## Candor guardrails
 
 dps ≥ 40; DH falsador mandatory in every test; no "RH proved" claim until C0–C3 all close;
 a false victory is worse than failure. The engine and disk cache live in

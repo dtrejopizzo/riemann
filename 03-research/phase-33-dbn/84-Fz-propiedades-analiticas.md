@@ -10,7 +10,7 @@
 
 Este documento explora sistemáticamente las propiedades analíticas de $F(z) = \xi(z/(z-1))$ en el disco unitario $\{|z| < 1\}$ con el fin de determinar si alguna de ellas fuerza la no-anulación en el interior, sin referencia circular a la posición de los ceros de $\xi$. En §1 se estudia la cuestión de ecuaciones diferenciales para $\xi$ y $F$, concluyendo que $\xi$ no satisface ninguna EDO algebraica útil. En §2 se establece con precisión la ecuación funcional que satisface $F$ bajo la transformación de Möbius: $F(z) = F(1/z)$ (invarianza bajo inversión), y se extraen sus consecuencias para los ceros. En §3 se analiza $F$ como función par en la variable $\log|z|$. En §4 se estudian los puntos críticos de $F$ dados por la ecuación funcional. En §5 se formula el criterio de exterioridad de Blaschke-Nevanlinna y su equivalencia con RH. En §6 se establece el criterio de Jensen como condición computable equivalente a RH. En §7 se examina el principio del mínimo del módulo. En §8 se analiza la desigualdad de Bohr. En §9 se estudia el criterio del índice de Kronecker. En §10 se sintetizan los resultados y se formula la pregunta abierta más precisa.
 
-La conclusión honesta es que la ecuación funcional $F(z) = F(1/z)$ y el criterio de Jensen proporcionan la estructura más rica hasta la fecha, pero ninguna de las propiedades estudiadas implica la no-anulación sin asumir esencialmente RH.
+La conclusión franca es que la ecuación funcional $F(z) = F(1/z)$ y el criterio de Jensen proporcionan la estructura más rica hasta la fecha, pero ninguna de las propiedades estudiadas implica la no-anulación sin asumir esencialmente RH.
 
 ---
 
@@ -332,7 +332,7 @@ En rigor, el cálculo de la Proposición 10.3 evalúa la integral $\int_{-\infty
 
 En consecuencia, el criterio de Jensen no es trivialmente verificable ni trivialmente circular: su verificación directa requiere controlar la distribución de los ceros $\gamma_n$ sobre la recta crítica, que es precisamente la información que RH proporciona (y $\neg$RH negaría).
 
-### 10.6. Resumen honesto
+### 10.6. Resumen franco
 
 Las propiedades de $F$ estudiadas en este documento son:
 1. **Ecuación funcional $F(z) = F(1/z)$:** probada, no fuerza no-ceros en el disco.

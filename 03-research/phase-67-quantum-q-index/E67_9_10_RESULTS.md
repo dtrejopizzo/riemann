@@ -43,7 +43,7 @@ Contravariant (Shapovalov) norms of the `U_q(su(1,1))` positive discrete series 
 So an integer signed index is **native** to the q-algebra at a root of unity -- exactly the certificate
 type E67.9 requires, and impossible for any `0<q<1`/positive mechanism.
 
-## Honest gap (open construction, not a wall)
+## Candid gap (open construction, not a wall)
 
 The **bare** Shapovalov index is sparse and, for e.g. ell=7,y=1, flat in n (0,0,0,...), whereas the
 E67.9 defect index **grows with N** under an off-line zero. This is the "before" picture: the bare form

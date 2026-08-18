@@ -138,7 +138,7 @@ $$\mathcal{D}[f]_n = \langle f, \varphi_n\rangle_{\mu_{\mathrm{off}}} = \int_\ma
 
 *Prueba.* Si $\mathcal{D}[f] = 0$, entonces $\langle f, \varphi_n\rangle_{\mu_{\mathrm{off}}} = 0$ para todo $n$. Por el Teorema 6.3 y el Corolario 7.3 (completitud de $\{\varphi_n\}$ en $L^2(\mu_{\mathrm{off}})$), se concluye $f = 0$ en $L^2(\mu_{\mathrm{off}})$. $\square$
 
-**Nota honesta sobre el Corolario 7.3.** La Proposición 7.2 es una prueba esquemática. La condición de Carleson para medidas atómicas (en vez de absolutamente continuas) requiere un argumento más cuidadoso: la región libre de ceros garantiza que cada átomo $\delta_{(\gamma_0, \sigma_0-1/2)}$ está a distancia $\geq c/\log|\gamma_0|$ de la recta real, pero la condición de Carleson pide una cota uniforme sobre la densidad de los átomos en cajas. Esta cota sigue de la estimación de densidad de Ingham — el argumento detallado es la tarea de Doc 47-Apéndice.
+**Nota franca sobre el Corolario 7.3.** La Proposición 7.2 es una prueba esquemática. La condición de Carleson para medidas atómicas (en vez de absolutamente continuas) requiere un argumento más cuidadoso: la región libre de ceros garantiza que cada átomo $\delta_{(\gamma_0, \sigma_0-1/2)}$ está a distancia $\geq c/\log|\gamma_0|$ de la recta real, pero la condición de Carleson pide una cota uniforme sobre la densidad de los átomos en cajas. Esta cota sigue de la estimación de densidad de Ingham — el argumento detallado es la tarea de Doc 47-Apéndice.
 
 ---
 

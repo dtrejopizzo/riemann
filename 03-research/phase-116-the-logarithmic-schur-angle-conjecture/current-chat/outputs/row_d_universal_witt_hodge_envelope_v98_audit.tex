@@ -1,0 +1,301 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\title{The universal Witt--Hodge envelope of the odd Poisson object (v98)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Purpose and type correction}
+
+Put
+\[
+ E:=\mathcal H_-^0=\mathcal H_-/Z\mathcal H_\cap
+\]
+and let $\pi_0$ be its centrally normalized scaling representation.  The
+goal of this note is to construct a positive Hilbert object from the Witt
+adjoint without using $H_T^{-1}$, zeros of $\xi$, or the sign of the Weil
+form.
+
+There is a type distinction which is essential for this construction.
+Row (b) supplies the injective algebraic map
+\[
+ J:\bigoplus_{r\ge1}\mathbb C\phi_r\longrightarrow\mathcal C_{\mathbb R},
+ \qquad J\phi_r=\delta_r,
+\]
+and row (c) sends $\delta_r$ to the multiplier $U_r$ on a test-function
+space.  The completed odd object $E$, however, is introduced later as a
+closed quotient in the category of nuclear Fr\'echet representations.
+The existing compatibility theorem compares composition and the scalar
+contact $\Lambda(r)$; it does not define a map
+\begin{equation}
+       W_{\rm alg}\longrightarrow E.                 \tag{1}
+\end{equation}
+Thus (1), and not merely a choice of norm on $W_{\rm alg}$, has to be
+constructed if the Witt metric is to complete $E$.
+
+\section{A source-defined universal construction}
+
+Let $G=\mathbb Q_+^\times$.  The half-Tate normalization of v96 gives the
+involution $q^*=q^{-1}$ after replacing $U_q$ by the centered operator
+$S_q=q^{1/2}U_q$.  Algebraically $S$ is a representation of $G$ on $E$.
+
+Choose any continuous Hilbertian seminorm $p$ on the nuclear Fr\'echet
+space $E$ and let $H_p$ be the Hilbert completion of $E/\ker p$.  Form
+\[
+ \mathfrak F_p:=\ell^2(G)\widehat\otimes H_p.
+\]
+On its algebraic core let $\mathfrak R_p$ be the span of the covariance
+relations
+\begin{equation}
+ \delta_{gq}\otimes x-\delta_q\otimes S_gx,
+ \qquad g,q\in G,\ x\in E,                           \tag{2}
+\end{equation}
+whenever the second tensor is interpreted in $H_p$.  Put
+\begin{equation}
+ \mathscr K_p:=\mathfrak F_p/\overline{\mathfrak R_p},
+ \qquad Q_p x=[\delta_1\otimes x].                   \tag{3}
+\end{equation}
+
+\begin{theorem}[Free Witt--Hodge quotient --- \PROVED]
+The space $\mathscr K_p$ is a positive Hilbert space.  Left translation on
+$\ell^2(G)$ descends to a unitary representation $\mathsf S_p$ on
+$\mathscr K_p$, and
+\begin{equation}
+       Q_pS_g=\mathsf S_p(g)Q_p.                     \tag{4}
+\end{equation}
+Consequently the integrated test action satisfies the Witt--Rosati
+identity
+\begin{equation}
+       \mathsf S_p(f^\vee)=\mathsf S_p(f)^*.         \tag{5}
+\end{equation}
+The null space
+\begin{equation}
+ \mathfrak N_p:=\ker Q_p
+ =\{x:\delta_1\otimes x\in\overline{\mathfrak R_p}\} \tag{6}
+\end{equation}
+is precisely the part of $E$ lost when the algebraic covariance relations
+are Hilbert-completed.
+\end{theorem}
+
+\begin{proof}
+The closed quotient in (3) is Hilbert.  Left translation $L_g$ is unitary
+on $\ell^2(G)$ and carries every generator of (2) to another generator;
+the same is true for $L_{g^{-1}}$.  Hence $\overline{\mathfrak R_p}$ is
+reducing and $L_g$ descends unitarily.  Relation (2) with $q=1$ is exactly
+(4).  Integrating the unitary group representation gives (5).  Formula
+(6) is the definition of the kernel of the quotient map and records the
+only possible loss in passing from algebraic to Hilbert covariance.
+\end{proof}
+
+Taking a countable separating family $(p_j)$ of Hilbertian seminorms and
+the Hilbert direct sum of suitably rescaled $\mathscr K_{p_j}$ produces a
+canonical source-defined map
+\begin{equation}
+ Q_{\rm WH}:E\longrightarrow\mathscr K_{\rm WH},
+ \qquad
+ \ker Q_{\rm WH}=\bigcap_j\mathfrak N_{p_j}.         \tag{7}
+\end{equation}
+This is the universal Witt--Hodge envelope associated with the supplied
+Fr\'echet topology.  It is constructed before any spectral description.
+
+\section{What Hilbert completion does to a nonunitary mode}
+
+The construction (3) permits an exact calculation of its radical.
+
+\begin{theorem}[Hyperbolic modes are forced into the radical --- \PROVED]
+Suppose $0\ne x\in E$ and, for some $g\in G$ of infinite order,
+\begin{equation}
+                 S_gx=\lambda x.                    \tag{8}
+\end{equation}
+If $|\lambda|\ne1$, then $Q_px=0$ for every $p$ for which $p(x)\ne0$.
+More generally, no positive Hilbert completion which is injective on $x$
+and satisfies the adjoint identity $S_g^*=S_{g^{-1}}$ can contain (8)
+unless $|\lambda|=1$.
+\end{theorem}
+
+\begin{proof}
+Restrict the first factor in $\mathfrak F_p$ to the copy of
+$\ell^2(\mathbb Z)$ generated by $g$.  Relation (2) says that the class of
+$(L_g-\lambda)\delta_1\otimes x$ is zero.  If $|\lambda|\ne1$, the bounded
+operator $L_g-\lambda I$ is invertible because the spectrum of the
+bilateral shift is the unit circle.  Therefore
+$\delta_1\otimes x$ belongs to the closed relation space and $Q_px=0$.
+
+For the second assertion, in any positive Hilbert completion the adjoint
+identity makes $S_g$ unitary.  Taking norms in (8) gives
+$\|x\|=\|S_gx\|=|\lambda|\|x\|$; injectivity on $x$ and $x\ne0$ imply
+$|\lambda|=1$.
+\end{proof}
+
+For the centered scaling character attached by row (c) to a zero $\rho$,
+$\lambda=g^{\rho-1/2}$.  The theorem therefore kills exactly every
+off-critical character.  This conclusion was not inserted in the
+definition of $Q_{\rm WH}$; it is forced by positivity and the Witt
+adjoint.
+
+There is a second, subtler loss.  The regular module $\ell^2(G)$ has no
+eigenvectors, so the closed range of $L_g-\lambda$ is dense also when
+$|\lambda|=1$.  Thus the particular free regular quotient (3) can collapse
+unitary point characters as well.  To retain them one must take the direct
+sum of all positive cyclic Witt quotients, equivalently the universal
+$C^*(G)$ representation.  This refinement still kills (and must kill)
+all $|\lambda|\ne1$ modes.
+
+\section{The maximal positive Witt quotient}
+
+Let $\mathscr P(E)$ be the set of continuous positive semidefinite
+sesquilinear forms $b$ on $E$ satisfying
+\begin{equation}
+ b(S_gx,y)=b(x,S_{g^{-1}}y)\qquad(g\in G).           \tag{9}
+\end{equation}
+Define
+\begin{equation}
+ \mathfrak R_{\rm Hod}(E):=igcap_{b\in\mathscr P(E)}\operatorname{rad}b.
+                                                               \tag{10}
+\end{equation}
+
+\begin{theorem}[Maximal positive Witt--Hodge separated quotient --- \PROVED]
+The quotient
+\begin{equation}
+                 E_{\rm Hod}:=E/\mathfrak R_{\rm Hod}(E)       \tag{11}
+\end{equation}
+is separated by its family of positive GNS Hilbert maps.  It is maximal in
+the following sense: every continuous map from $E$ to a positive Hilbert
+space which intertwines the Witt adjoint factors through (11).  If a
+countable separating subfamily $(b_j)$ can be rescaled so that
+$\sum_j b_j(x,x)<\infty$ continuously on $E_{\rm Hod}$, its diagonal GNS
+map is a faithful embedding into one Hilbert direct sum.  Every
+off-critical scaling eigenvector belongs to
+$\mathfrak R_{\rm Hod}(E)$.
+\end{theorem}
+
+\begin{proof}
+Quotient each form $b$ by its radical and complete.  Equation (9) makes
+the centered $G$-action unitary on that completion.  The family of all
+resulting maps has common kernel equal to the intersection (10), hence
+separates (11).  Any other positive intertwining map pulls its Hilbert
+inner product back to a member of $\mathscr P(E)$, so its kernel contains
+(10), proving maximality.  Under the summability hypothesis stated in the
+theorem, the diagonal map has squared norm $\sum_jb_j(x,x)$ and is the
+claimed single Hilbert embedding.  The last assertion follows from the
+preceding theorem, applied to every $b$.
+\end{proof}
+
+This is a genuine universal family of Hilbert completions produced from the
+Witt adjoint and the odd source representation, not from $H_T^{-1}$ or from
+a spectral positive part.  Producing one global Hilbert completion requires
+the countable summability clause in the theorem.  The remaining issues are
+that clause, injectivity of $E\to E_{\rm Hod}$, and preservation of the
+nuclear character.
+
+\section{The exact separation theorem required for row (d)}
+
+Write $\tau_-(h)=\operatorname{Tr}_E\pi_-(h)$ for the odd nuclear character
+of row (c).  On the test convolution algebra set
+\begin{equation}
+              q_-(f,g):=\tau_-(g^\vee*f).            \tag{12}
+\end{equation}
+
+\begin{theorem}[Hilbert descent/Weil positivity equivalence --- \PROVED]
+The following statements are equivalent on the primitive test ideal.
+\begin{enumerate}
+\item $q_-(f,f)\ge0$ for every primitive $f$.
+\item The primitive odd character is of positive type and hence has its
+      canonical GNS Hilbert realization with
+      $\pi_-(f^\vee)=\pi_-(f)^*$.
+\item The row-(c) supertrace satisfies
+      $B_{\rm nuc}(f,f)\le0$ for every primitive $f$.
+\end{enumerate}
+When the GNS realization also realizes the nuclear trace as an operator
+trace, one has
+\begin{equation}
+ B_{\rm nuc}(f,f)
+ =-\operatorname{Tr}\bigl(\pi_-(f)\pi_-(f)^*\bigr)\le0.        \tag{13}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Statements (1) and (2) are the GNS theorem applied to (12).  For primitive
+$f$ the two even Tate matrix coefficients vanish, so the supertrace is
+minus the odd trace:
+\[
+ B_{\rm nuc}(f,f)=-\tau_-(f*f^\vee)=-q_-(f,f).
+\]
+This proves equivalence with (3).  If the integrated operator is nuclear
+in the Hilbert realization, the adjoint identity gives (13).
+\end{proof}
+
+\begin{corollary}[Exact new target --- \PROVED]
+Rows (b) and (c) close row (d) if one proves the following source-labelled
+separation statement:
+\begin{equation}
+ \boxed{
+ \mathfrak R_{\rm Hod}(\mathcal H_-^0)=0
+ \quad\text{and the induced Hilbert character equals }\tau_- .}           \tag{14}
+\end{equation}
+No additional Gamma normalization or finite-window sign computation is
+needed after (14).
+\end{corollary}
+
+\begin{proof}
+Here (14) includes the countably summable separating family required in the
+preceding theorem.  It then gives a faithful positive Hilbert completion of
+the odd object with the Witt adjoint.  Character
+compatibility and vanishing of the even Tate part on the primitive ideal
+give (13), hence row (d).  Conversely, any faithful Hilbert completion of
+the required kind supplies separating forms in $\mathscr P(E)$ and the
+same character, so it implies (14).
+\end{proof}
+
+\section{Audit of what rows (b) and (c) currently prove}
+
+The contact maps already present in the manuscript do not prove (14).
+They give
+\[
+ W_{\rm alg}\xrightarrow{J}\mathcal C_{\mathbb R}
+ \xrightarrow{\mathfrak j}\mathcal D'(\mathbb R_+^\times)
+ \longrightarrow\mathsf{Mult}(\mathcal S_>)
+\]
+and compare the scalar determinant contact with $\Lambda(n)$.  The odd
+quotient $E$ is then introduced independently as a nuclear Fr\'echet
+quotient.  There is no arrow from the first line onto $E$, and scalar
+contact equality cannot imply separation of vectors in $E$.
+
+Accordingly, the following ledger is forced.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.53\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.22\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Witt--Rosati involution before completion & \PROVED & v96 \\
+Free positive Witt--Hodge quotient & \PROVED & (2)--(7) \\
+Maximal separated family of positive Witt quotients & \PROVED & (9)--(11) \\
+Assembly into one faithful Hilbert completion & \OPEN & summable separating family \\
+Off-critical modes lie in every positive radical & \PROVED & Theorem 2 \\
+Rows (b)/(c) define a point-separating map into that quotient & \OPEN & (14) \\
+Preservation of the odd nuclear character & \OPEN & (14) \\
+Row (d), condition $G$ & \OPEN & immediate after (14) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The construction therefore produces the missing Hilbert envelope and
+locates the only admissible non-circular theorem: prove, directly from the
+Poisson--Witt source maps, that their positive invariant forms separate the
+odd quotient and that their Hilbert character is Meyer's nuclear character.
+Declaring this separation from the scalar identities $\Lambda(n)$ would
+assume the required promotion and is not a proof.
+
+\end{document}

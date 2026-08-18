@@ -8,7 +8,7 @@ whitened.
 (Bost-Connes/KMS: partición = zeta), Phase 53 (Stone/CCR: producto interno = RH) ni Phase 66
 (whitening escalar equivocado).
 
-**Contrato de honestidad.** Este documento no prueba RH. Define una álgebra, las relaciones que deberían
+**Contrato de franqueza.** Este documento no prueba RH. Define una álgebra, las relaciones que deberían
 forzar la positividad terminal, y el lugar exacto donde la idea vive o muere. Si el operador primo
 queda contractivo sólo porque se eligió una norma/métrica que ya contiene zeta, cae en Phase 51/MW-5.
 Si la contractividad sale de relaciones algebraicas q-unitarias independientes de ceros, es un nodo
@@ -53,7 +53,7 @@ nuevo.
 > `omega_{z0,q}` que conserve off-diagonal aritmético y una densidad Haar-dominante `D_{z0,q}` canónica.
 
 Si ambas compuertas se prueban, Omega_7 cae: `delta_N >= 0` para todo `N`. Si fallan, esta phase deja
-un detector honesto: los autovalores negativos de `I - B_lambda^*B_lambda` leen `m`, pero no lo anulan.
+un detector franco: los autovalores negativos de `I - B_lambda^*B_lambda` leen `m`, pero no lo anulan.
 
 ---
 

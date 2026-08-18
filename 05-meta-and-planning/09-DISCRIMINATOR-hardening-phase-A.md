@@ -24,7 +24,7 @@ substantially de-risking the overfit worry.
   **not** supply.
 
 If $I2$ = "an independent-looking object is invoked," then Connes passes all four and **D0 is falsified.** The
-honest fix:
+candid fix:
 
 > **$I2$ splits.** $I2a$ — an independent input *exists* (a structure not reconstructible from ζ). $I2b$ — that
 > input comes with a **decisive theorem** that *unconditionally supplies the constraint* (pins the sign / bounds
@@ -91,7 +91,7 @@ and the corpus's own objects — ~30 programs. **Every verdict matches the histo
    Deninger, Connes–Consani) sits precisely at $I2a$ ✅ $/$ $I2b$ ❌ — independent geometry **without** a theorem
    that supplies the sign. This is the most precise statement yet of where the wall is.
 
-## Residual risks (honest, before any automation)
+## Residual risks (candid, before any automation)
 
 - **$I2b$ is judgment-laden.** "A decisive theorem that unconditionally supplies the constraint" is clear for the
   proven cases but requires expertise to adjudicate for novel candidates. **Automation gap:** $I2b$ must be made

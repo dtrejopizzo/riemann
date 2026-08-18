@@ -251,7 +251,7 @@ $$R_n \asymp \gamma_n^2 (\log n)^{-1/2} \to \infty \qquad (n \to \infty).$$
 
 En particular el PPP se cumple asintóticamente bajo la hipótesis de simpleza de los ceros de $\Xi$.
 
-### 7.3. Honestidad sobre los supuestos
+### 7.3. Franqueza sobre los supuestos
 
 El Teorema 7.1 depende de:
 

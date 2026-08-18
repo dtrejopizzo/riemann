@@ -97,7 +97,7 @@ result independent of RH.*
   in the literature, or genuinely open-but-provable? Nearest: explicit-formula error analysis
   (Iwaniec–Kowalski §5), Hermite-function tail asymptotics.
 - **If §2 fails** (margin closes at large $J$): the lemma becomes conditional/hypothesis-strength,
-  and we reframe Front A's theorem honestly. Even then it is publishable as conditional.
+  and we reframe Front A's theorem candidly. Even then it is publishable as conditional.
 
 **Bottom line of 0.B:** the cautious-case the advisor feared — "all your effort funnels into a lemma
 that is secretly RH" — appears **not** to apply to the *truncation* lemma. The RH-equivalent content

@@ -1,0 +1,124 @@
+{
+  "statement": "E79.56 ray-amplitude autopsy",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_55_modal_ray_reduction_results.json",
+  "cases": [
+    {
+      "label": "zeta",
+      "ray_slope": 0.36290527515601606,
+      "rows": [
+        {
+          "N": 8,
+          "rho": 0.0331799142465018,
+          "abs_rho": 0.0331799142465018,
+          "N_abs_rho": 0.2654393139720144,
+          "sign": "+"
+        },
+        {
+          "N": 10,
+          "rho": -0.038684833336302744,
+          "abs_rho": 0.038684833336302744,
+          "N_abs_rho": 0.38684833336302743,
+          "sign": "-"
+        },
+        {
+          "N": 12,
+          "rho": -0.027682487754282833,
+          "abs_rho": 0.027682487754282833,
+          "N_abs_rho": 0.332189853051394,
+          "sign": "-"
+        },
+        {
+          "N": 14,
+          "rho": 0.03546470265657091,
+          "abs_rho": 0.03546470265657091,
+          "N_abs_rho": 0.4965058371919927,
+          "sign": "+"
+        },
+        {
+          "N": 16,
+          "rho": -0.03183731099877623,
+          "abs_rho": 0.03183731099877623,
+          "N_abs_rho": 0.5093969759804197,
+          "sign": "-"
+        }
+      ],
+      "abs_rho_band": {
+        "min": 0.027682487754282833,
+        "max": 0.038684833336302744,
+        "ratio": 1.3974478623337496,
+        "mean": 0.03336984979848691
+      },
+      "N_abs_rho_band": {
+        "min": 0.2654393139720144,
+        "max": 0.5093969759804197,
+        "ratio": 1.919071325034113,
+        "mean": 0.39807606271176965
+      },
+      "simple_sign_pattern_misses": {
+        "constant_plus": 3,
+        "constant_minus": 2,
+        "alternating_from_first": 3,
+        "alternating_from_first_flipped": 2
+      }
+    },
+    {
+      "label": "plant",
+      "ray_slope": -0.46546944034657034,
+      "rows": [
+        {
+          "N": 8,
+          "rho": 2.819294715954925,
+          "abs_rho": 2.819294715954925,
+          "N_abs_rho": 22.5543577276394,
+          "sign": "+"
+        },
+        {
+          "N": 10,
+          "rho": -1.3806467369671989,
+          "abs_rho": 1.3806467369671989,
+          "N_abs_rho": 13.806467369671989,
+          "sign": "-"
+        },
+        {
+          "N": 12,
+          "rho": 0.01922405500541514,
+          "abs_rho": 0.01922405500541514,
+          "N_abs_rho": 0.23068866006498168,
+          "sign": "+"
+        },
+        {
+          "N": 14,
+          "rho": -12.99292077639287,
+          "abs_rho": 12.99292077639287,
+          "N_abs_rho": 181.9008908695002,
+          "sign": "-"
+        },
+        {
+          "N": 16,
+          "rho": 0.5953933261340493,
+          "abs_rho": 0.5953933261340493,
+          "N_abs_rho": 9.526293218144788,
+          "sign": "+"
+        }
+      ],
+      "abs_rho_band": {
+        "min": 0.01922405500541514,
+        "max": 12.99292077639287,
+        "ratio": 675.8678526841995,
+        "mean": 3.5614959220908915
+      },
+      "N_abs_rho_band": {
+        "min": 0.23068866006498168,
+        "max": 181.9008908695002,
+        "ratio": 788.512494798233,
+        "mean": 45.60373956900427
+      },
+      "simple_sign_pattern_misses": {
+        "constant_plus": 2,
+        "constant_minus": 3,
+        "alternating_from_first": 2,
+        "alternating_from_first_flipped": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "statement": "M_N >= threshold lower-bound gate",
+  "threshold": 0.5,
+  "cases": [
+    {
+      "label": "zeta-lam6",
+      "source": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ag_margin_lower_bound_zeta_sigma1_n24.json",
+      "threshold": 0.5,
+      "all_pass": true,
+      "first_failure": null,
+      "worst_row": {
+        "sigma": "1.0",
+        "N": 18,
+        "mod4": 2,
+        "margin": 0.7506162328119272,
+        "margin_minus_threshold": 0.25061623281192724,
+        "passes_threshold": true,
+        "u_re": 0.0017969666972399343,
+        "u_im": 0.004761035432188384
+      },
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "mod4": 0,
+          "margin": 0.9925866567157953,
+          "margin_minus_threshold": 0.49258665671579527,
+          "passes_threshold": true,
+          "u_re": 0.0017046549553148083,
+          "u_im": 0.0279471829912061
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "mod4": 2,
+          "margin": 0.9129066442177368,
+          "margin_minus_threshold": 0.4129066442177368,
+          "passes_threshold": true,
+          "u_re": 0.0036765110581835495,
+          "u_im": 0.017230197362501413
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "mod4": 0,
+          "margin": 0.979520695894044,
+          "margin_minus_threshold": 0.479520695894044,
+          "passes_threshold": true,
+          "u_re": 0.0011885313474218296,
+          "u_im": 0.011685117034072564
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "mod4": 2,
+          "margin": 0.8978742683488453,
+          "margin_minus_threshold": 0.3978742683488453,
+          "passes_threshold": true,
+          "u_re": 0.0019318294476913646,
+          "u_im": 0.008327888660561217
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "mod4": 0,
+          "margin": 0.9661211548506337,
+          "margin_minus_threshold": 0.46612115485063366,
+          "passes_threshold": true,
+          "u_re": 0.0008154878165231402,
+          "u_im": 0.006212384338226081
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "mod4": 2,
+          "margin": 0.7506162328119272,
+          "margin_minus_threshold": 0.25061623281192724,
+          "passes_threshold": true,
+          "u_re": 0.0017969666972399343,
+          "u_im": 0.004761035432188384
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "mod4": 0,
+          "margin": 0.8816833836537584,
+          "margin_minus_threshold": 0.3816833836537584,
+          "passes_threshold": true,
+          "u_re": 0.0009625228666285901,
+          "u_im": 0.0038384992511015866
+        },
+        {
+          "sigma": "1.0",
+          "N": 22,
+          "mod4": 2,
+          "margin": 0.9975147126816493,
+          "margin_minus_threshold": 0.49751471268164926,
+          "passes_threshold": true,
+          "u_re": 0.00010701723871474319,
+          "u_im": 0.0030339640645305416
+        }
+      ]
+    },
+    {
+      "label": "plant-lam6",
+      "source": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json",
+      "threshold": 0.5,
+      "all_pass": false,
+      "first_failure": {
+        "sigma": "1.0",
+        "N": 8,
+        "mod4": 0,
+        "margin": -0.9957760561680793,
+        "margin_minus_threshold": -1.4957760561680793,
+        "passes_threshold": false,
+        "u_re": -0.15751986554972253,
+        "u_im": 0.007246670182035296
+      },
+      "worst_row": {
+        "sigma": "1.0",
+        "N": 20,
+        "mod4": 0,
+        "margin": -0.9999983405543227,
+        "margin_minus_threshold": -1.4999983405543227,
+        "passes_threshold": false,
+        "u_re": -0.007454696688312654,
+        "u_im": -6.7904206761993e-06
+      },
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "mod4": 0,
+          "margin": -0.9957760561680793,
+          "margin_minus_threshold": -1.4957760561680793,
+          "passes_threshold": false,
+          "u_re": -0.15751986554972253,
+          "u_im": 0.007246670182035296
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "mod4": 2,
+          "margin": -0.9947764346026331,
+          "margin_minus_threshold": -1.494776434602633,
+          "passes_threshold": false,
+          "u_re": -0.10906838310684627,
+          "u_im": 0.005581298865501692
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "mod4": 0,
+          "margin": -0.9955886396658133,
+          "margin_minus_threshold": -1.4955886396658133,
+          "passes_threshold": false,
+          "u_re": -0.008302987691590933,
+          "u_im": -0.0003903778335317097
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "mod4": 2,
+          "margin": -0.9984167759458208,
+          "margin_minus_threshold": -1.4984167759458207,
+          "passes_threshold": false,
+          "u_re": -0.012142103871433612,
+          "u_im": -0.0003417606839729178
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "mod4": 0,
+          "margin": -0.9993023894590003,
+          "margin_minus_threshold": -1.4993023894590003,
+          "passes_threshold": false,
+          "u_re": -0.012660763091138135,
+          "u_im": -0.00023649782821552148
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "mod4": 2,
+          "margin": -0.9999141537845784,
+          "margin_minus_threshold": -1.4999141537845784,
+          "passes_threshold": false,
+          "u_re": -0.008371929054619075,
+          "u_im": 5.485048086179656e-05
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "mod4": 0,
+          "margin": -0.9999983405543227,
+          "margin_minus_threshold": -1.4999983405543227,
+          "passes_threshold": false,
+          "u_re": -0.007454696688312654,
+          "u_im": -6.7904206761993e-06
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "mod4": 0,
+          "margin": -0.8504012848799113,
+          "margin_minus_threshold": -1.3504012848799114,
+          "passes_threshold": false,
+          "u_re": -0.0525094110966097,
+          "u_im": -0.014930285713415448
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "mod4": 2,
+          "margin": -0.9992233214178166,
+          "margin_minus_threshold": -1.4992233214178166,
+          "passes_threshold": false,
+          "u_re": -0.05563608842984211,
+          "u_im": 0.0010965958516873503
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "mod4": 0,
+          "margin": -0.9812058192476532,
+          "margin_minus_threshold": -1.4812058192476532,
+          "passes_threshold": false,
+          "u_re": -0.01854950059465997,
+          "u_im": 0.0018066712096266476
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "mod4": 2,
+          "margin": -0.9982211681144105,
+          "margin_minus_threshold": -1.4982211681144104,
+          "passes_threshold": false,
+          "u_re": -0.014303336370081611,
+          "u_im": 0.0004267593324637694
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "mod4": 0,
+          "margin": -0.9996688026045469,
+          "margin_minus_threshold": -1.499668802604547,
+          "passes_threshold": false,
+          "u_re": -0.01340274466624921,
+          "u_im": 0.00017248771335418128
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "mod4": 2,
+          "margin": -0.996770367963829,
+          "margin_minus_threshold": -1.496770367963829,
+          "passes_threshold": false,
+          "u_re": -0.009090608297534174,
+          "u_im": 0.00036559934215788897
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "mod4": 0,
+          "margin": -0.9994544403466973,
+          "margin_minus_threshold": -1.4994544403466974,
+          "passes_threshold": false,
+          "u_re": -0.0077003621150219794,
+          "u_im": 0.00012719689639558175
+        }
+      ]
+    }
+  ]
+}

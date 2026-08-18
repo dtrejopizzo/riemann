@@ -6,7 +6,7 @@ arithmetic variety with an ample class and a realization isomorphism $\Phi: H^1_
 \xrightarrow{\sim}\HW^{\mathrm{prim}}$ intertwining Frobenius with $\T$ and the Arakelov pairing with $Q$ — "Axiom 3").
 **Verdict: the operational conclusion is correct and matches M9/Attempt 6; but the claimed biconditional is
 overstated. The forward direction ($\mathcal X\Rightarrow$ RH) is a correct near-tautology; the reverse (RH $\Rightarrow
-\mathcal X$) is NOT rigorous and may be false. The honest statement is one-directional.**
+\mathcal X$) is NOT rigorous and may be false. The candid statement is one-directional.**
 
 ---
 
@@ -56,7 +56,7 @@ The converse is a heuristic expectation (the Hilbert–Pólya/Deninger dream), n
 - **Do NOT lean on:** "RH $\Rightarrow\mathcal X$, so $\mathcal X$ must exist." That guarantee is not real. If the
   geometric route proves intractable, it does not follow that we are missing an existing object; the zeros may simply
   not be geometric, and RH (if true) would then need a non-geometric proof — which is where the analytic side of the
-  program (the sub-RH results P17, the localized Weil form) remains the honest fallback.
+  program (the sub-RH results P17, the localized Weil form) remains the candid fallback.
 
 ## Bottom line
 The team's directive — *stop writing "proofs of RH"; the one task is to construct $\mathcal X$ (the Beilinson

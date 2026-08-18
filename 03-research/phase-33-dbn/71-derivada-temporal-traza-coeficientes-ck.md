@@ -186,7 +186,7 @@ $$\text{RH} \iff T_\lambda(0) = 0 \ \forall\lambda \iff \partial_t T_\lambda|_{t
 
 donde la segunda equivalencia usa que $T_\lambda(0) = 0$ implica $\partial_t T_\lambda|_{t=0} = 0$ (derivada de la función idénticamente nula), y la recíproca requiere la condición inicial $T_\lambda(0) = 0$ que es en sí RH. Sin información sobre $T_\lambda(0)$, la condición $\partial_t T_\lambda|_{t=0} = 0$ es *más débil* que RH.
 
-**Conclusión honesta:** La derivada temporal no da una nueva equivalencia con RH; solo da una condición necesaria.
+**Conclusión franca:** La derivada temporal no da una nueva equivalencia con RH; solo da una condición necesaria.
 
 ---
 

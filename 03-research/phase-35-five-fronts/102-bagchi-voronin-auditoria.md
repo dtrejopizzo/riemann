@@ -551,7 +551,7 @@ el primero de naturaleza **dinámico-ergódica**.
 
 ---
 
-## 9. Activo trasladable (registro honesto)
+## 9. Activo trasladable (registro franco)
 
 Aunque la ruta se cierra, la auditoría deja un activo preciso que el programa no tenía
 inventariado:

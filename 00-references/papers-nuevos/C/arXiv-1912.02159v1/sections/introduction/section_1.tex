@@ -1,0 +1,60 @@
+\section{Introduction}
+% 연구 주제,필요성, 중요성
+
+% 선행 연구, 밝히지 못한 점
+In a series of papers (c.f. \cite{deninger1998some},\cite{deninger2002number},\cite{deninger2005arithmetic},\cite{deninger2006dynamical},\cite{deninger2008analogies}), C. Deninger considered arithmetic schemes $\overline{\mathrm{spec}\,\mathcal{O}_{K}}$ with a conjectural dynamical system for a number field $K/\mathbb{Q}$.
+He interpreted the completed Dedekind zeta function $\hat{\zeta}_{K}(s)$ of $K$ in terms of infinite dimensional cohomology groups $H^{\bullet}_{\mathrm{dyn}}(\overline{\mathrm{spec}\,\mathcal{O}_{K}},\mathcal{R})$:
+\begin{equation*}
+    \hat{\zeta}_{K}(s)=\prod_{i=0}^{2} \mathrm{det}_{\infty} \left(\frac{1}{2\pi}(s-\Theta)|H^{i}_{\mathrm{dyn}}(\overline{\mathrm{spec}\,\mathcal{O}_{K}},\mathcal{R}) \right)^{(-1)^{i+1}},
+\end{equation*}
+where $\det_{\infty}$ denotes the zeta-regularized determinant and $\Theta$ denotes an infinitesimal generator of the flow.
+
+This idea is extended to smooth closed 3-manifold $M$ with 1-codimensional foliation structure $\mathcal{F}$, transverse flow $\phi$ and a bundle-like metric $g_{\mathcal{F}}$ via Arithmetic topology (\cite{morishita2011knots}).
+We call the manifold with the additional structure a \textbf{Riemannian foliated dynamical system} of 3 dimension, simply $\mathrm{RFDS}^3$.
+It is a geometric/dynamical analogue of the above arithmetic scheme with a conjectural dynamical system, where closed orbits correspond to finite primes.
+Note that dynamical zeta function corresponds to Dedekind zeta function in this context.
+%논문의 목적, 방법,결과
+The purpose of this paper is to show leafwise cohomological expression of dynamical zeta function on a Riemannian foliated dynamical system.
+We describe our main results in the following. \\
+
+Let $(M, \mathcal{F}, \phi, g_{\mathcal{F}})$ be a $\mathrm{RFDS}^3$.
+The additional structures give a \textbf{reduced leafwise cohomology} $\bar{H}_{\mathcal{F}}^{\bullet}(M)$ and an \textbf{infinitesimal generator} $\Theta$.
+Then we consider infinite series
+\begin{equation*}
+    \xi_{p}(s,z):=\sum_{\rho\in\mathrm{Sp}(\Theta_{p})}(s-\rho)^{-z},
+\end{equation*}
+where $\Theta_{p}$ denotes the operator $\Theta$ acting on $\bar{H}^{p}_{\mathcal{F}}(M)$.
+We have our first main theorem:
+\begin{theorem}\label{theorem:1.1}
+The following assertions hold:
+\begin{enumerate}
+    \item {
+        The series $\xi_{p}(s,z)$ is absolutely convergent on $\mathrm{Re}(z) >> 0$ for any $s\in\mathbb{C}$.
+    }
+    \item {
+    It extends to a meromorphic function of $z\in\mathbb{C}$ and $s\in\mathbb{C}$} which is holomorphic at $z=0$.
+\end{enumerate}
+\end{theorem}
+As a consequence of the theorem, the series defines a Hurwitz-type spectral zeta function associated with the infinitesimal generator.
+It follows that a zeta-regularized determinant can be defined since the spectral zeta function is regular at $z=0$.
+
+For the second result, we define the dynamical zeta function for $\mathrm{RFDS}^3$.
+\begin{equation*}
+    \zeta_{\mathcal{F}}(s) = \prod_{\gamma}(1-e^{-s\cdot{l(\gamma)}})^{-\epsilon_{\gamma}},
+\end{equation*}
+where $\gamma$ runs over closed orbits of $\phi$ and $l(\gamma)$ is the length of $\gamma$.
+Here, $\epsilon_{\gamma}$ denotes the index of a closed orbit.
+We give our second main theorem as follows:
+\begin{theorem}\label{theorem:1.2}
+The dynamical zeta function on a Riemmanian foliated dynamical system of 3 dimension has a leafwise cohological expression
+\begin{equation*}
+    \zeta_{\mathcal{F}}(s) = \prod_{i=0}^{2} \mathrm{det}_{\infty}(s-\Theta | \bar{H}_{\mathcal{F}}^{i}(M))^{(-1)^{i+1}}.
+\end{equation*}
+\end{theorem}
+
+%논문의구성 순서
+The contents of this paper are organized as follows:
+In section 2, 3, 4, we introduce a Riemannian foliated dynamical system of 3 dimension ($\mathrm{RFDS}^3$) and basic notions: leafwise cohomology and infinitesimal generator.
+In section 5, we give a proof of the main theorem \ref{theorem:1.1}.
+In section 6, 7, we recall the zeta-regularized determinant and dynamical zeta function for $\mathrm{RFDS}^3$.
+In section 8, we show a leafwise cohomlogical expression of the dynamical zeta function on $\mathrm{RFDS}^3$.

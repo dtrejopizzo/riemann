@@ -77,7 +77,7 @@ the balanced curvature endpoint is not explained by a fixed few-mode
 row singular reduction.
 ```
 
-The failure is useful because it keeps the endpoint honest.  The curvature
+The failure is useful because it keeps the endpoint candid.  The curvature
 identity is a signed full-kernel orthogonality statement, not a low-rank
 certificate in disguise.
 

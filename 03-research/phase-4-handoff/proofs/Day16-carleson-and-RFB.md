@@ -25,7 +25,7 @@ $\Rightarrow\mu$ Carleson.** ✅ (the referee's argument, rigorous).
 
 ### A.2 The full equivalence is false ◆
 $P$ bounded is **not necessary**: a clustered sequence can have small *average* $P$ yet break boundedness
-locally (or vice versa). So the honest statement is **"$P$ is the natural local density; $P\lesssim1$ is
+locally (or vice versa). So the candid statement is **"$P$ is the natural local density; $P\lesssim1$ is
 sufficient for Carleson"** — not an equivalence. Day-15's "$\mu$ Carleson $\iff P$ bounded" is corrected to
 the one-way sufficient form. *(Exactly the referee's caution.)*
 
@@ -109,7 +109,7 @@ $$
 $$
 $\Rightarrow$ **the Weil form is semibounded** (B-2 holds), via the relative bound (RFB).
 
-**The honest reduction.** Functional analysis delivers everything **above** the regularity hypotheses
+**The candid reduction.** Functional analysis delivers everything **above** the regularity hypotheses
 (1)–(2). The **entire remaining difficulty** is proving that the $\zeta$-zeros satisfy (2) — that they form
 a **sufficiently regular sampling/interpolation sequence** for the Hardy-band space. This is precisely:
 - **minimum separation** of ordinates (no two zeros too close) — known to fail *pointwise* (small gaps
@@ -120,11 +120,11 @@ a **sufficiently regular sampling/interpolation sequence** for the Hardy-band sp
 $$
 \boxed{\ \text{Functional analysis ends at RFB; the arithmetic begins at "are the zeros a regular sampling sequence?"}\ }
 $$
-**This is the referee's conclusion, now proven as the precise location of the boundary.** Note the honest
+**This is the referee's conclusion, now proven as the precise location of the boundary.** Note the candid
 tension: zeros have *no positive uniform minimum gap* (arbitrarily close pairs are expected), so hypothesis
 (2) must be the *averaged/Schur* form, not a naive separation — and whether the averaged form suffices is
 itself a pair-correlation question. *(And the lower frame bound at over-critical density may still need an
-RH-flavored input — flagged, the Day-12 §6 honest loop persists.)*
+RH-flavored input — flagged, the Day-12 §6 candid loop persists.)*
 
 ---
 

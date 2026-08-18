@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{Exact physical synthesis of the threshold delay channels (v111)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Arithmetic separation of a newborn cell}
+
+Put
+\begin{equation}
+ T_N=\frac12\log N,
+ \qquad
+ \delta_N=T_{N+1}-T_N=\frac12\log\frac{N+1}{N},
+ \qquad E_N=L^2(0,\delta_N).                                  \tag{1}
+\end{equation}
+For $1\le m\le N$ define two translated copies of the newborn boundary
+cell:
+\begin{align}
+ L_m&=(\log m-T_{N+1},\,\log m-T_N),\notag\\
+ R_m&=(T_N-\log m,\,T_{N+1}-\log m).                          \tag{2}
+\end{align}
+Let $J_m^L,J_m^R:E_N\to L^2(\mathbb R)$ be the translation isometries onto
+$L^2(L_m)$ and $L^2(R_m)$, respectively.
+
+\begin{theorem}[No-overlap theorem for an arithmetic threshold cell ---
+\PROVED]
+The $2N$ open intervals in (2) are pairwise disjoint.  Consequently the
+delay synthesis
+\begin{equation}
+ \mathfrak S_N:
+ \bigl(\ell^2\{1,\ldots,N\}\oplus\ell^2\{1,\ldots,N\}\bigr)
+       \widehat\otimes E_N\longrightarrow L^2(\mathbb R),
+\quad
+ \mathfrak S_N(a,b;e)=
+ \sum_{m\le N}a_mJ_m^Le+\sum_{m\le N}b_mJ_m^Re               \tag{3}
+\end{equation}
+is an isometry on elementary tensors and extends to an isometry on the
+Hilbert tensor product.
+\end{theorem}
+
+\begin{proof}
+All intervals have length $\delta_N$.  For consecutive integers
+$m<m+1\le N$,
+\[
+ \log\frac{m+1}{m}\ge\log\frac N{N-1}
+ >\log\frac{N+1}{N}=2\delta_N,
+\]
+so the intervals within each of the two families are disjoint.
+
+An interval $L_m$ and an interval $R_n$ overlap in positive measure only
+if both
+\[
+ \log m-T_{N+1}<T_{N+1}-\log n,
+ \qquad
+ T_N-\log n<\log m-T_N
+\]
+hold.  Using $2T_N=\log N$ and $2T_{N+1}=\log(N+1)$, these inequalities
+are exactly
+\[
+                             N<mn<N+1,
+\]
+which is impossible for integers $m,n$.  Endpoint contacts have measure
+zero.  Orthogonality of all ranges proves (3).
+\end{proof}
+
+Compression of (3) to any physical subwindow is a contraction.  Thus the
+arithmetic label-to-delay map requested after the prime Julia colligation
+is not an additional norm estimate: on every open threshold cell it is the
+restriction of the explicit isometry $\mathfrak S_N$.
+
+\section{The physical Witt word current}
+
+For $k\ge1$ retain
+\begin{equation}
+ v_{N,k}(m)=\frac{\Lambda_k(m)}{\sqrt m(\log N)^k}.             \tag{4}
+\end{equation}
+Give different Witt depths orthogonal output copies and define
+\begin{equation}
+ \mathfrak W_Ne=
+ \bigoplus_{k\ge1}\frac1{\sqrt2}
+ \mathfrak S_N(v_{N,k},v_{N,k};e)
+ \quad
+ (e\in E_N).                                                   \tag{5}
+\end{equation}
+
+\begin{corollary}[Strict physical arithmetic current --- \PROVED]
+The current (5) is constructed directly from the physical delay channels
+and satisfies
+\begin{equation}
+ \|\mathfrak W_Ne\|^2
+ =\left(\sum_{k\ge1}\frac{V_{N,k}}{(\log N)^{2k}}\right)\|e\|^2
+ \longrightarrow
+ \frac{\sqrt\pi}{2}e^{1/4}\operatorname{erf}\!\left(\frac12\right)
+ \|e\|^2.                                                     \tag{6}
+\end{equation}
+Hence for some $N_0$ and $\eta>0$,
+\begin{equation}
+                         \|\mathfrak W_N\|^2\le1-\eta
+ \qquad(N\ge N_0).                                           \tag{7}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+The two orientations in (5) have orthogonal physical ranges by Theorem 1,
+and distinct depths were placed in orthogonal innovation channels.  Thus
+the norm is the sum of the squared coefficient norms, giving the first
+identity.  The fixed-depth and uniform all-depth arguments of v109 give
+the limit in (6).  Its value is $0.5922965364\ldots<1$, proving (7).
+\end{proof}
+
+The boundary cross $H_{N,k}$ in v109 is now geometrically located: it is
+an endpoint contact $mn=N$ or $mn=N+1$.  It disappears from the open-cell
+$L^2$ synthesis because endpoints have measure zero, while it survives in
+the differentiated threshold port G39.  This reconciles, without a sign
+assumption, the word Gram of v110 with the physical delay current (5).
+
+\section{Remaining Gamma--Tate coupling}
+
+Theorem 1 closes the arithmetic label-to-physical-delay part of the
+interface.  To identify (5) with the normalized Schur return one still has
+to prove that the Kato-transported Gamma coherent cell and its affine
+cocycle attach to $\mathfrak W_N$ through the already computed two Tate
+terminal maps by a contraction
+\begin{equation}
+ \mathfrak C_N:
+ \operatorname{Ran}\mathfrak W_N\oplus\mathscr K_{\Gamma,N}
+ \oplus\mathbb C^2_{\rm Tate}longrightarrow
+ \overline{\operatorname{Ran}D_0^{1/2}}                       \tag{8}
+\end{equation}
+whose value is
+\begin{equation}
+ \mathfrak C_N(\mathfrak W_Ne,\,b_{\Gamma,N}e,\,B'_{T,N}e)
+ =D_0^{\dagger/2}(D_0h_e-q_e).                                \tag{9}
+\end{equation}
+The arithmetic restriction of (8) is now explicitly contractive by
+(3)--(7).  What remains in (8)--(9) is the affine Gamma--Tate attachment,
+not the Euler delay synthesis and not the all-depth unit budget.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Exact disjointness of all newborn arithmetic delay channels & \PROVED & Theorem 1 \\
+Physical label-to-delay isometry & \PROVED & (3) \\
+Strict all-depth physical arithmetic current & \PROVED & (5)--(7) \\
+Gamma--Tate attachment (8)--(9) & \OPEN & remaining interface \\
+G40, condition $G$, row (d) & \OPEN & follow after the attachment and finite audit \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

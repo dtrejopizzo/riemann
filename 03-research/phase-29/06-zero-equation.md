@@ -141,7 +141,7 @@ $$2\sum_{|\gamma_n| \leq T_\lambda} \frac{\cos(t\log\gamma_n)}{\gamma_n} \approx
 3. Los ceros de $\hat\xi_\lambda$ convergen a los cruces (por la aproximación diagonal).
 4. Luego los ceros de $\hat\xi_\lambda$ convergen a $\gamma_n$.
 
-**El obstáculo (honesto).** El paso 1 es formal (la aproximación $M \approx \text{multiplicación}$ ignora el término de rango 1 $Q^{\mathrm{cross}}$ y los efectos de la discretización en $E_N^+$). Los pasos 2 y 3 requieren cuantificación. El paso 2 usa RH (es CONDICIONAL).
+**El obstáculo (franco).** El paso 1 es formal (la aproximación $M \approx \text{multiplicación}$ ignora el término de rango 1 $Q^{\mathrm{cross}}$ y los efectos de la discretización en $E_N^+$). Los pasos 2 y 3 requieren cuantificación. El paso 2 usa RH (es CONDICIONAL).
 
 ---
 

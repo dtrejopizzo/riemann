@@ -1,6 +1,6 @@
 # Lemma 2.3.F — what it is, everything we tried, and where the wall is
 
-*A briefing to request a new route. Honest throughout: no proof reached; every claimed positive
+*A briefing to request a new route. Candid throughout: no proof reached; every claimed positive
 result is marginal/detector-grade and is flagged as such.*
 
 ---
@@ -62,7 +62,7 @@ quantities are faithful detectors of RH (and hence why proving them is RH-hard).
 - **Tried:** bound the coefficient, the eigenvalue, the heat trace, perturbations — all *pointwise
   in λ*.
 - **Failed because:** `A^osc_λ` oscillates arithmetically with λ (the prime echo in the band
-  `L = 2 log λ`). A pointwise bound requires cancellation among the zeros = the wall. R10's honest
+  `L = 2 log λ`). A pointwise bound requires cancellation among the zeros = the wall. R10's candid
   correction: the fluctuation term is literally `Σ_ρ(...)`, growing until zero-oscillation tames it.
 
 ### B. Cesàro / log averaging in λ (Phase 62, C1 — NG-62)

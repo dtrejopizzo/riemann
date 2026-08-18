@@ -164,7 +164,7 @@ T_λ = 0 ∀λ ⟺ RH  (Hamburger + Hadamard, DOC 64 Thm 3.1)
 
 ---
 
-## §7. Advertencia honesta sobre el alcance del Teorema 3.1
+## §7. Advertencia franca sobre el alcance del Teorema 3.1
 
 El Teorema 3.1 establece la equivalencia RH $\iff$ $T_\lambda = 0\;\forall\lambda$. Esto es un avance conceptual pero NO es una prueba de RH: no probamos que $T_\lambda = 0$ (eso sería RH), sino que la condición $T_\lambda = 0$ es la reformulación correcta del problema. El valor del resultado es haber construido un invariante $T_\lambda$ con las siguientes propiedades:
 

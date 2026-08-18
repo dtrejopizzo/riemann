@@ -1,5 +1,5 @@
 # E1 (real-rootedness) — lens: is the secular LINEAR or QUADRATIC? **Author of audit:** C. (with,), for the CCM zeta spectral-triple
-program. Cold honesty. Scope: settle whether the validated engine's secular function is the
+program. Cold candor. Scope: settle whether the validated engine's secular function is the
 *linear* form `Σ ξ_k/(s−d_k)` or the *quadratic resolvent* `Σ ξ_k²/(s−d_k)`, because the
 latter would close E1 elementarily (Herglotz), the former would not. --- ## 1. What the engine ACTUALLY computes (VERBATIM from the code) — DECISIVE File: `experiments/E4hp_convergence.py`, lines 64–66: ```python
 def root_near(xi,idx,L,target): d=[2*mp.pi*k/L for k in idx] f=lambda s: mp.fsum([xi[i]/(s-d[i]) for i in range(len(d))])
@@ -53,10 +53,10 @@ missing lemma precisely: > **(E1-core)** The de-modulated ground eigenvector `(�
 > (or interlacing-with-`d_k`) structure, equivalently `ξ̂` lies in `H(E)` with `E`
 > Hermite–Biehler. Then Hermite–Biehler ⟹ real roots. Proving (E1-core) from `QW=`Weil-form + PF-simplicity is the open work. It is **not**
 closeable by the quadratic-resolvent shortcut, and it is **not** Perron–Frobenius alone
-(PF gives a simple positive *envelope*, which is structure, not the phase-alignment needed). --- ## 4. Honest verdict - **Secular = LINEAR**, `Σ ξ_k/(s−d_k)`, signed residues. Confirmed verbatim from `E4hp_convergence.py:66` and its header. NOT quadratic. (Decisive, checkable.)
+(PF gives a simple positive *envelope*, which is structure, not the phase-alignment needed). --- ## 4. Candid verdict - **Secular = LINEAR**, `Σ ξ_k/(s−d_k)`, signed residues. Confirmed verbatim from `E4hp_convergence.py:66` and its header. NOT quadratic. (Decisive, checkable.)
 - **The easy win is unavailable.** The Herglotz/resolvent argument needs `ξ_k²` (or `ξ_k≥0`); the engine uses bare signed `ξ_k`, and squaring them would destroy the Weil identity that defines `ξ̂`. So we are genuinely in the de Branges / Hermite–Biehler regime.
 - **E1 does NOT close elementarily here.** It closes *correctly* only via the self-adjoint / de Branges realization: `ξ̂∈H(E)`, `E` Hermite–Biehler ⟹ real roots. The sub-case `ξ_k>0` is the only elementary piece (Lemma M1) and the ground state is not in it.
 - The recorded refutation (interlacing proof refuted by `ξ=(−1,2,−1)`) stands. The reconciliation in §3 explains the empirics without rescuing the elementary proof: the ground state is special (smoothest band-limited / de Branges reproducing element), generic real vectors are not. **Status: cita obligada CCM Thm 1.1(iii) confirmed**, with the open repair now sharply
 localized to lemma (E1-core): show the de-modulated ground eigenvector has Hermite–Biehler
-structure (`ξ̂∈H(E)`). That is honest finite-entire-function analysis — RH-neutral, hence
+structure (`ξ̂∈H(E)`). That is candid finite-entire-function analysis — RH-neutral, hence
 non-circular to use — but it is **not** the quadratic one-liner, and I will not claim it is.

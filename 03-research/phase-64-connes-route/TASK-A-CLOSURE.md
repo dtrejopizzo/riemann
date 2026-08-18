@@ -74,7 +74,7 @@ statement that the Jacobi/Lanczos coordinate map **does not annihilate** `R_ρ`.
 `L` of the near-radical windows is **dense (cyclic)** in the relevant Paley–Wiener space `PW_{exp}`.
 This density is the one remaining technical point; the bulk functionals (E100) are the robust choice
 (individual Lanczos coordinates can be degenerate). *Status: reduces to a standard cyclicity/density
-statement; not a deep obstruction, but stated honestly as the soft step.* **Note:** the forward proof
+statement; not a deep obstruction, but stated candidly as the soft step.* **Note:** the forward proof
 above uses only the **raw** entries (Lemma 1) and so is **independent of Lemma 2** — Lemma 2 is needed
 only to connect the *Jacobi*-coordinate form of L1 to the raw form, and `L1-raw ⟹ L1-Jacobi`
 unconditionally (Lanczos of a bounded matrix has bounded coordinates).
@@ -106,10 +106,10 @@ program already had numerical confirmation — E91/E100: ζ coefficients bounded
 
 ---
 
-## Honest status
+## Candid status
 
 Theorem A is the **closable** part of the program and it is now closed at the level of architecture +
-the unconditional Lemma 1, with two honestly-flagged standard inputs (the converse's explicit-formula
+the unconditional Lemma 1, with two candidly-flagged standard inputs (the converse's explicit-formula
 convergence; Lemma 2's cyclicity, needed only for the Jacobi-coordinate phrasing). It rigorously
 establishes `L1 ⟺ RH`. The RH-strength content has **not** moved — it is the boundedness L1 itself,
 equivalently the Critical Gram Realization of the de Branges kernel (`THEOREM-adelic-colligation.md`).

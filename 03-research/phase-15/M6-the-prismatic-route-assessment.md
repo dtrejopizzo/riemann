@@ -80,7 +80,7 @@ $\zeta$'s triviality ($N=0$, Tate motive, dimension $1$) is exactly why no surfa
 
 ## 4. The one concrete sub-target the prismatic view leaves
 
-The prismatic perspective does name a precise, non-vacuous question (the honest continuation, not a crossing):
+The prismatic perspective does name a precise, non-vacuous question (the candid continuation, not a crossing):
 
 > **Does absolute prismatic cohomology over $\operatorname{Spec}\mathbb Z$ (or over the sphere spectrum $\mathbb S$,
 > à la Connes–Consani $\mathbb F_1$) admit a global Frobenius whose eigenvalues are the $\zeta$-zeros?**
@@ -89,7 +89,7 @@ This is the Deninger "$\Phi$ on leafwise cohomology" / Connes–Consani target s
 same object Attempt 6 isolated (the zero-carrying cohomology, distinct from the Arakelov height theory), now with a
 candidate machine (absolute prismatic / $\delta$-rings) to build it. The program cannot manufacture it; flagging it
 as the precise locus — and confirming (M6) that the *local* integer Lefschetz already exists, so only the *global*
-gluing is missing — is the honest output.
+gluing is missing — is the candid output.
 
 ## 5. Status
 

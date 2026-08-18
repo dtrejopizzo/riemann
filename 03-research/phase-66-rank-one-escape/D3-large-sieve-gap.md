@@ -53,7 +53,7 @@ individual = fluctuation off the pole (RH-strength). A single $\xi$ (a zero of $
 line) spikes $\sup_\xi|m_X|$ without disturbing the mean — the same average/individual mechanism as
 NG-62 (Cesàro) and CIR-1 (Selberg density bounds the count, not the individual).
 
-## 4. Verdict (honest, below RH)
+## 4. Verdict (candid, below RH)
 
 Face (A) does **not** sit below RH: it is MW-2 in critical-exponent large-sieve form. What is genuinely
 gained (real orientation, not a proof step):

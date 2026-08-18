@@ -13,7 +13,7 @@ tauberiana).
 
 **Contrato creativo (regla absoluta de etiquetado):** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado DE VERDAD acá, prueba completa; resultados externos citados
-con precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con estatus honesto. **[GAP]** = declarado.
+con precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con estatus franco. **[GAP]** = declarado.
 **[DESEO]** = declarado. **[GAP de literatura]** = dato no verificado al nivel de página esta sesión, NO
 usado como premisa de ningún [TEOREMA]. Jamás se fabrica una prueba de RH. **NADA de numéricos.**
 
@@ -513,7 +513,7 @@ espectral (cierre/completitud de $\{p^{i\tau}\}$), cruza promedio→individual. 
 tercera coordenada independiente confirmando que el muro tiene un único punto de paso candidato, el
 diofántico.
 
-**Estatus honesto de GAP-157.A:** **[GAP de literatura]** No conozco un teorema tauberiano espectral
+**Estatus franco de GAP-157.A:** **[GAP de literatura]** No conozco un teorema tauberiano espectral
 publicado que use la independencia $\mathbb Q$-lineal de $\{\log p\}$ como condición tauberiana para cruzar
 a control puntual de $\psi(x)-x$ sin la fórmula explícita; la maquinaria de completitud de exponenciales
 con frecuencias $\mathbb Q$-independientes (Beurling–Malliavin, Kreĭn, Levin) existe pero su aplicación a

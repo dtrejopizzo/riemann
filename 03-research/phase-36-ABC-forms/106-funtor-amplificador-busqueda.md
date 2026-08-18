@@ -723,7 +723,7 @@ cosa: no positividad (Hodge index = CAP-riesgo), sino **finitud + racionalidad**
 
 ### 5.3 Enunciado falsable
 
-**Problema 5.4 (el experimento decisivo, finito y honesto).** Tómese el modelo de
+**Problema 5.4 (el experimento decisivo, finito y franco).** Tómese el modelo de
 juguete del Doc 98 ($m = 1$, un cuádruplo, $\mathcal{K}_{\mathrm{off}}$ de dimensión 4,
 signatura $(2,2)$). Constrúyase explícitamente el espacio
 $\mathcal{K}_{\mathrm{off}}^{\otimes 2}$ (dimensión 16, índice negativo 8 por la

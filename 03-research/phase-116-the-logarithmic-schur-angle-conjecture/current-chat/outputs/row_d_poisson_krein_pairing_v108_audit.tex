@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{Fourier--Poisson duality as a Krein, rather than Hilbert, pairing (v108)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The invariant block equation}
+
+Let $E_\rho\oplus E_{1-\overline\rho}$ be a simple functional pair in the
+odd Poisson quotient and let
+\begin{equation}
+ A_n=\begin{pmatrix}a&0\\0&1/\overline a\end{pmatrix},
+ \qquad a=n^{1/2-\rho}.                                    \tag{1}
+\end{equation}
+This is the centered Witt action.  Let $P=P^*$ be the Gram matrix of a
+Hermitian form for which the Fourier--Poisson adjoint is the inverse Witt
+action.  The required invariance is
+\begin{equation}
+                         A_n^*PA_n=P.                         \tag{2}
+\end{equation}
+
+\begin{theorem}[Complete solution of the invariant Gram equation ---
+\PROVED]
+If $\Re\rho\ne1/2$, every solution of (2) is
+\begin{equation}
+                         P=\begin{pmatrix}0&c\\\overline c&0\end{pmatrix}
+                                                               \tag{3}
+\end{equation}
+for some $c\in\mathbb C$.  It is nondegenerate exactly when $c\ne0$, and
+then has signature $(1,1)$.  In particular no nonzero positive definite or
+positive semidefinite invariant form exists on an off-critical functional
+pair.
+\end{theorem}
+
+\begin{proof}
+Write $P=(p_{ij})$.  The diagonal equations in (2) are
+\[
+ (|a|^2-1)p_{11}=0,
+ \qquad (|a|^{-2}-1)p_{22}=0.
+\]
+If $\Re\rho\ne1/2$, then $|a|\ne1$, hence $p_{11}=p_{22}=0$.  The
+off-diagonal multiplier is
+\(
+ \overline a(1/\overline a)=1,
+\)
+so (2) imposes no further condition beyond Hermitian symmetry.  This gives
+(3).  Its eigenvalues are $|c|$ and $-|c|$.
+\end{proof}
+
+\begin{corollary}[Source positivity is exactly the missing theorem ---
+\PROVED]
+Suppose the source-defined Fourier--Poisson pairing on the odd quotient is
+nondegenerate on each functional pair and obeys the Witt adjoint identity.
+If that pairing is positive semidefinite, then every spectral character
+satisfies $\Re\rho=1/2$.
+\end{corollary}
+
+\begin{proof}
+An off-critical pair would be nondegenerate and have signature $(1,1)$ by
+Theorem 1, contradicting positive semidefiniteness.
+\end{proof}
+
+\section{What the Tate superobject does and does not supply}
+
+The two-dimensional even object contains the characters $0$ and $1$.  It
+accounts exactly for the two polar terms in the Poisson extension.  On the
+primitive subspace both polar evaluations vanish, so this even block is
+removed before the odd quadratic form is tested.  Therefore its positive
+metric cannot alter the signature (3) of an odd functional pair.
+
+Equivalently, the exact Tate subtraction of v106 satisfies
+$\mathcal R\mathcal H_\cap=Z\mathcal H_\cap$; hence it changes the polar
+extension but not the odd quotient or its invariant Gram equation.
+
+The remaining non-circular target is consequently source-level and can be
+stated without choosing spectral vectors:
+\begin{equation}
+ \boxed{
+  \langle [g],[g]\rangle_{\mathrm{FP}}\ge0
+  \quad\text{for every }[g]\in\mathcal H_-/Z\mathcal H_\cap,
+ }                                                            \tag{4}
+\end{equation}
+where $\langle\ ,\ \rangle_{\mathrm{FP}}$ must be obtained from the
+already constructed Fourier--Poisson duality and the Witt adjoint, not
+defined from the spectral sign.  Once (4) is proved, Corollary 2 gives
+(8c), and v99 supplies the trace-preserving Hilbert assembly and row (d).
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.58\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.17\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Invariant Gram equation on every simple functional pair & \PROVED & (1)--(3) \\
+Off-critical pairs are necessarily Krein-indefinite & \PROVED & Theorem 1 \\
+Tate subtraction changes the odd block signature & false & v106 and Section 2 \\
+Source positivity (4) & \OPEN & the remaining mathematical theorem \\
+Condition $G$ and row (d) & \OPEN & follow from (4) and v99 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

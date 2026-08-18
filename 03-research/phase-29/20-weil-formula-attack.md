@@ -207,7 +207,7 @@ Para $t = \gamma_n$ (cero de $\Xi$ en la recta crítica): el término con $\rho 
 
 La suma completa $\lim_{\eta\to 0^+}C_\infty(\gamma_n+i\eta)$ es la suma de infinitos términos cada uno finito, y no es obvio que sea cero.
 
-**El resultado honesto.** La inclusión inversa (Inc. Inv.) NO se puede probar de manera elemental. El Teorema C1 (Doc 17) fue sobre los eigenvalores de $J_\infty$ vía la ecuación de punto fijo (EF2) — que da los ceros del límite no-tangencial de $C_\infty'/C_\infty$. Los polos de $C_\infty'/C_\infty$ son los ceros (simples) de $C_\infty$. La pregunta de si los $\gamma_n$ son polos de $C_\infty'/C_\infty$ — i.e., si $C_\infty(\gamma_n) = 0$ — requiere que la suma $\sum_\rho\cos(\gamma_n\log|\rho|)/|\rho|$ sea $-c_0/2$.
+**El resultado franco.** La inclusión inversa (Inc. Inv.) NO se puede probar de manera elemental. El Teorema C1 (Doc 17) fue sobre los eigenvalores de $J_\infty$ vía la ecuación de punto fijo (EF2) — que da los ceros del límite no-tangencial de $C_\infty'/C_\infty$. Los polos de $C_\infty'/C_\infty$ son los ceros (simples) de $C_\infty$. La pregunta de si los $\gamma_n$ son polos de $C_\infty'/C_\infty$ — i.e., si $C_\infty(\gamma_n) = 0$ — requiere que la suma $\sum_\rho\cos(\gamma_n\log|\rho|)/|\rho|$ sea $-c_0/2$.
 
 ---
 
@@ -296,7 +296,7 @@ Equivalentemente:
 
 ---
 
-## 12. Honestidad final: el estado riguroso del programa
+## 12. Franqueza final: el estado riguroso del programa
 
 **Lo que el programa Phase 29 ha demostrado incondicionalmente:**
 

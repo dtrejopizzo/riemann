@@ -1,0 +1,304 @@
+{
+  "statement": "Normalized directional form of the denominator increment area: det(Delta d_N,d_N) / (|Delta d_N| |d_N|)",
+  "source": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_42_den_increment_area_results.json",
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "direct_symplectic_numerator": 5.5077714030365475e-05,
+          "increment_area_numerator": 5.507771403036547e-05,
+          "reconstruction_error": 6.776263578034403e-21,
+          "delta_d_abs": 0.12027031682405188,
+          "old_d_abs": 0.23779267622316178,
+          "directional_increment_defect": 0.0019258345647960755,
+          "directional_increment_angle": 0.0019258357552330457
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "direct_symplectic_numerator": -2.0802359131598302e-05,
+          "increment_area_numerator": -2.0802359131598302e-05,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 0.046438458060154446,
+          "old_d_abs": 0.11752281067689511,
+          "directional_increment_defect": -0.003811646612157685,
+          "directional_increment_angle": -0.0038116558418978875
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "direct_symplectic_numerator": 2.443113910706186e-06,
+          "increment_area_numerator": 2.443113910706186e-06,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 0.024855802981853317,
+          "old_d_abs": 0.07108491034298936,
+          "directional_increment_defect": 0.0013827335442189092,
+          "directional_increment_angle": 0.0013827339848393285
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "direct_symplectic_numerator": -1.7346737121809246e-06,
+          "increment_area_numerator": -1.7346737121809244e-06,
+          "reconstruction_error": 2.117582368135751e-22,
+          "delta_d_abs": 0.012641272009436651,
+          "old_d_abs": 0.04622914389846101,
+          "directional_increment_defect": -0.0029683230856175176,
+          "directional_increment_angle": -0.0029683274445885285
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "direct_symplectic_numerator": 8.129489168412781e-07,
+          "increment_area_numerator": 8.129489168412781e-07,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 0.008933235772208567,
+          "old_d_abs": 0.03358794853986888,
+          "directional_increment_defect": 0.0027093866169696436,
+          "directional_increment_angle": 0.002709389931813897
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "direct_symplectic_numerator": -3.719533327334706e-07,
+          "increment_area_numerator": -3.7195333273347056e-07,
+          "reconstruction_error": 5.293955920339377e-23,
+          "delta_d_abs": 0.00657966267788007,
+          "old_d_abs": 0.024654757436502802,
+          "directional_increment_defect": -0.0022928945984962744,
+          "directional_increment_angle": -0.002292896607598574
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "direct_symplectic_numerator": 0.00013868502617626975,
+          "increment_area_numerator": 0.00013868502617626972,
+          "reconstruction_error": 2.710505431213761e-20,
+          "delta_d_abs": 0.1033896166479508,
+          "old_d_abs": 0.2131945567316631,
+          "directional_increment_defect": 0.006291823565166093,
+          "directional_increment_angle": 0.00629186507835477
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "direct_symplectic_numerator": -5.548786388344226e-05,
+          "increment_area_numerator": -5.548786388344225e-05,
+          "reconstruction_error": 6.776263578034403e-21,
+          "delta_d_abs": 0.0419418999719444,
+          "old_d_abs": 0.10980891337746398,
+          "directional_increment_defect": -0.012047926571575048,
+          "directional_increment_angle": -0.012048218055127997
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "direct_symplectic_numerator": 6.765054799213829e-06,
+          "increment_area_numerator": 6.765054799213832e-06,
+          "reconstruction_error": 2.541098841762901e-21,
+          "delta_d_abs": 0.02314616219849278,
+          "old_d_abs": 0.06787193857961868,
+          "directional_increment_defect": 0.004306278097207392,
+          "directional_increment_angle": 0.0043062914066109145
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "direct_symplectic_numerator": -4.897488336964664e-06,
+          "increment_area_numerator": -4.897488336964666e-06,
+          "reconstruction_error": 1.6940658945086007e-21,
+          "delta_d_abs": 0.011958299656688676,
+          "old_d_abs": 0.04472610205726457,
+          "directional_increment_defect": -0.009156783120732932,
+          "directional_increment_angle": -0.009156911086534233
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "direct_symplectic_numerator": 2.3325642745279524e-06,
+          "increment_area_numerator": 2.3325642745279524e-06,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 0.008576998183221865,
+          "old_d_abs": 0.03276848669593694,
+          "directional_increment_defect": 0.008299308649837722,
+          "directional_increment_angle": 0.008299403926812653
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "direct_symplectic_numerator": -1.0772061934513116e-06,
+          "increment_area_numerator": -1.0772061934513116e-06,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 0.006391321523485396,
+          "old_d_abs": 0.024191888629560232,
+          "directional_increment_defect": -0.006966881143171652,
+          "directional_increment_angle": -0.006966937503490299
+        }
+      ],
+      "max_abs_directional_increment_defect": 0.012047926571575048
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "direct_symplectic_numerator": 102.62259880005914,
+          "increment_area_numerator": 102.62259880005917,
+          "reconstruction_error": 2.842170943040401e-14,
+          "delta_d_abs": 45.77245145501112,
+          "old_d_abs": 6.681441742202085,
+          "directional_increment_defect": 0.33555881320398545,
+          "directional_increment_angle": 0.34219837530930663
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "direct_symplectic_numerator": 580.6428674678534,
+          "increment_area_numerator": 580.6428674678534,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 26.344315407751044,
+          "old_d_abs": 52.114747227783354,
+          "directional_increment_defect": 0.4229232321644782,
+          "directional_increment_angle": 0.43666883704077336
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "direct_symplectic_numerator": -6.970274797939833,
+          "increment_area_numerator": -6.970274797939833,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 24.515716940006016,
+          "old_d_abs": 30.360682090481966,
+          "directional_increment_defect": -0.009364698023385474,
+          "directional_increment_angle": -0.009364834905662738
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "direct_symplectic_numerator": -0.22397919100619604,
+          "increment_area_numerator": -0.22397919100619604,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 0.2850529779555202,
+          "old_d_abs": 5.850546432605075,
+          "directional_increment_defect": -0.1343029829674154,
+          "directional_increment_angle": -0.13471003935818374
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "direct_symplectic_numerator": 0.12753279222419783,
+          "increment_area_numerator": 0.12753279222419786,
+          "reconstruction_error": 2.7755575615628914e-17,
+          "delta_d_abs": 0.2724309053875811,
+          "old_d_abs": 5.568207552686655,
+          "directional_increment_defect": 0.08407174844012692,
+          "directional_increment_angle": 0.08417110211737017
+        },
+        {
+          "sigma": "1.0",
+          "N": 20,
+          "to_N": 22,
+          "direct_symplectic_numerator": -0.027446825125613028,
+          "increment_area_numerator": -0.027446825125613035,
+          "reconstruction_error": 6.938893903907228e-18,
+          "delta_d_abs": 1.9279394806430479,
+          "old_d_abs": 5.8397188870778916,
+          "directional_increment_defect": -0.0024378488585425143,
+          "directional_increment_angle": -0.002437851273281765
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "direct_symplectic_numerator": 108.13070351260096,
+          "increment_area_numerator": 108.13070351260095,
+          "reconstruction_error": 1.4210854715202004e-14,
+          "delta_d_abs": 45.72913904319821,
+          "old_d_abs": 6.883949406828428,
+          "directional_increment_defect": 0.3434933502338121,
+          "directional_increment_angle": 0.3506340526358491
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "direct_symplectic_numerator": 710.7946495420936,
+          "increment_area_numerator": 710.7946495420936,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 28.59003184709286,
+          "old_d_abs": 52.24777017367646,
+          "directional_increment_defect": 0.4758408805416269,
+          "directional_increment_angle": 0.4959198399206695
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "direct_symplectic_numerator": -5.740746255505191,
+          "increment_area_numerator": -5.740746255505191,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 24.478755423964323,
+          "old_d_abs": 30.32478004876745,
+          "directional_increment_defect": -0.007733593819817427,
+          "directional_increment_angle": -0.0077336709109656
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "direct_symplectic_numerator": -0.17338205000914675,
+          "increment_area_numerator": -0.17338205000914664,
+          "reconstruction_error": 1.1102230246251565e-16,
+          "delta_d_abs": 0.2830919706780153,
+          "old_d_abs": 5.849820610703404,
+          "directional_increment_defect": -0.10469695084086762,
+          "directional_increment_angle": -0.10488917227870062
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "direct_symplectic_numerator": 0.40959572876263384,
+          "increment_area_numerator": 0.40959572876263395,
+          "reconstruction_error": 1.1102230246251565e-16,
+          "delta_d_abs": 0.278289862783293,
+          "old_d_abs": 5.568363345077145,
+          "directional_increment_defect": 0.2643202683597425,
+          "directional_increment_angle": 0.26749905637721433
+        },
+        {
+          "sigma": "3.0",
+          "N": 20,
+          "to_N": 22,
+          "direct_symplectic_numerator": 0.03415290348320965,
+          "increment_area_numerator": 0.03415290348320965,
+          "reconstruction_error": 0.0,
+          "delta_d_abs": 1.9259411616163062,
+          "old_d_abs": 5.837219304631781,
+          "directional_increment_defect": 0.003037935896856261,
+          "directional_increment_angle": 0.0030379405697550012
+        }
+      ],
+      "max_abs_directional_increment_defect": 0.4758408805416269
+    }
+  }
+}

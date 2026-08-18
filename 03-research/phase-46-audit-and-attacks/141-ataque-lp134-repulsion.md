@@ -9,7 +9,7 @@ intentar refutarlo, y dar veredicto con consecuencias exactas para la sinergia d
 
 **Contrato creativo (regla absoluta de etiquetado):** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado DE VERDAD acá, prueba completa; resultados externos citados con
-precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con ζ/RH con estatus honesto. **[GAP]** =
+precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con ζ/RH con estatus franco. **[GAP]** =
 declarado. **[DESEO]** = declarado.
 
 **Prerrequisitos leídos en fuente esta sesión:** Doc 134 completo (en particular §4: visibilidad
@@ -374,7 +374,7 @@ $\leq\varepsilon2^{-i}$. (3) $\delta_j\,a(\gamma_j)\to0$, de modo que D134 Teo. 
 coincide con el autónomo. La violación de LP-134$^{(\psi)}$: $\liminf\delta_j\psi(\gamma_j)=0$ por (1), con
 $m=\infty$. Las estadísticas verticales: Lema 141.B0. $\square$
 
-**Observación 3.1 (qué dice y qué no dice el no-go — honestidad sobre su alcance).** El Corolario 141.B2 es
+**Observación 3.1 (qué dice y qué no dice el no-go — franqueza sobre su alcance).** El Corolario 141.B2 es
 un no-go **relativo a una clase de datos**, no un teorema de indemostrabilidad absoluta. No excluye: (a)
 argumentos que usen la aritmética REAL de ζ a todos los soportes simultáneamente (la identidad de la fórmula
 explícita es válida para todo $L$; lo que no existe es su *evaluación* incondicional con error que supere a
@@ -453,7 +453,7 @@ modo de fallo de RH ("si RH falla, falla visiblemente"), vacua bajo RH.
 *Demostración.* Refutar LP-134 exhibe una sucesión infinita de ceros con $\beta\neq\tfrac12$ — ceros fuera
 de la línea: ¬RH. La segunda afirmación es 141.P1. $\square$
 
-**Consistencia del mundo violador con todo lo conocido [discusión honesta].** ¿Hay configuraciones
+**Consistencia del mundo violador con todo lo conocido [discusión franca].** ¿Hay configuraciones
 compatibles con todo lo probado/computado que violen LP-134? Sí, y el mapa de §2 lo certifica pieza por
 pieza: tómese el mundo $Z_\varepsilon$ del Corolario 141.B2 implantado por encima de la altura de
 verificación numérica ($3\cdot10^{12}$, Platt–Trudgian [PT21]), con $\delta_j=1/\log^2\gamma_j$. Conteo

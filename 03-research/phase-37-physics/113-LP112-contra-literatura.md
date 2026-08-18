@@ -212,7 +212,7 @@ sesión contra los abstracts/textos accesibles):
 - **d = 1:** trivial (las dos copias coinciden). **d = −1:** comparar ζ(s+iτ) con
   ζ(s−iτ); excluido de los teoremas anteriores; estado: abierto según las fuentes
   consultadas [NO VERIFICADO si existe trabajo posterior que lo cubra].
-- **Nota de cartografía (honestidad sobre la fragilidad de la frontera):** el preprint
+- **Nota de cartografía (franqueza sobre la fragilidad de la frontera):** el preprint
   T. Nakamura, *A simple proof of the generalized strong recurrence for any non-zero
   parameter*, arXiv:1006.3184, que afirmaba todo d ≠ 0 de una vez, fue **retirado por
   el autor** ("the proof has a gap" — verificado en arXiv). La frontera d ≠ 0 se
@@ -438,7 +438,7 @@ D ⊂ interior(R) ⊂ R ⊂ {½ < σ < 1}; sea W = proyección en t de R (la "ve
   sí, diagonal sobre ε → 0 produce la sucesión de LP-112. **Este es el eslabón en
   cuestión.**
 
-**Lo que queda probado (registro honesto): E1–E4 son teoremas**, ensamblados de
+**Lo que queda probado (registro franco): E1–E4 son teoremas**, ensamblados de
 piezas incondicionales (momentos, subarmonicidad, Montel, Kronecker–Weyl). El punto
 delicado señalado en el encargo — compatibilidad entre el conjunto de normalidad
 (densidad 1−δ) y el de casi-períodos B² (densidad positiva) — se resuelve LIMPIO a

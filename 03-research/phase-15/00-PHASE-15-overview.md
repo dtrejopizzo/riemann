@@ -8,7 +8,7 @@ as a genuinely new entry point into the geometric frontier where the one proven 
 
 ---
 
-## 0. What we are allowed to propose (the honest constraint)
+## 0. What we are allowed to propose (the candid constraint)
 
 The program established, rigorously and from many sides:
 - every RH-directed route collapses to **CAP** (Weil positivity, the wrong-sign capstone) or **SURF** (a missing
@@ -51,7 +51,7 @@ This is genuinely new: it inverts the usual order. Connes–Consani/Deninger bui
 and a positivity emerge; here the **Frobenius (anatomy) and the pairing (Kreĭn form) are already in hand**, and the
 task is the *definiteness theorem* on the primitive part.
 
-## 3. The milestones (with honest status markers)
+## 3. The milestones (with candid status markers)
 
 **M1 — The arithmetic intersection pairing (achievable, non-circular).**
 Construct, from the explicit formula and the anatomy, the data of an "arithmetic surface" for
@@ -88,7 +88,7 @@ Verify the construction is genuinely infinite-dimensional (the anatomy gives an 
 family of Satake data, no finite Frobenius), so it evades the finitization obstruction of P15. *Deliverable: the
 construction is LI-consistent by design.*
 
-## 4. What is honest about this
+## 4. What is candid about this
 
 - **M1, M2, M4 are achievable and non-circular** (an arithmetic intersection pairing; the unconditional edge
   positivity; the LI-consistency). They are real, publishable, RH-independent or sub-RH partial results, and they
@@ -110,7 +110,7 @@ The next phase assembles these into an **arithmetic intersection theory built ar
 single **infinite-dimensional Hodge-index definiteness** (M3), and attacks it through two channels unavailable to
 the geometric programs --- the HR-stability limit question and the Rankin--Selberg effectivity square. The early
 milestones (M1, M2, M4) are achievable, non-circular, and real; the final one (M3) is RH itself, now sharply posed.
-This is the honest frontier: not a promise of a proof, but the construction of the precise object a proof would
+This is the candid frontier: not a promise of a proof, but the construction of the precise object a proof would
 need, from the spectral side, where this program's tools give a genuinely new and certified entry.
 
 ## 6. For the team

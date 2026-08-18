@@ -226,7 +226,7 @@ edge-only ceiling — novelty is conceptual framing, not mechanism.
 4. **Strongest surviving RH-directed direction.** **SURF** — a Hodge index theorem on a 2-dimensional arithmetic
    geometry over $\mathrm{Spec}\,\mathbb Z$ (the Connes–Consani / Deninger / Arakelov target). It is the least-
    collapsed *restatement* and is corroborated by the one **proven** RH (function fields use exactly a Hodge index
-   theorem on $C\times C$). **Honest caveat:** it is **RH-equivalent** (= CAP via DEF), i.e., a sharper statement
+   theorem on $C\times C$). **Candid caveat:** it is **RH-equivalent** (= CAP via DEF), i.e., a sharper statement
    of the wall, not an independent lever.
 
 5. **Strongest evidence the program has no path to RH (as mapped).**

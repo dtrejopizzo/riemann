@@ -1,0 +1,15 @@
+\section{Zeta-regularized determinant}
+
+We recall the notion of the zeta-regularized determinant.
+Let $\Theta:V\rightarrow{V}$ be a linear operator acting on a complex vector space $V$ of countable dimension.
+We assume that $V$ is the direct sum of finite-dimensional $\Theta$-invariant sub-spaces.
+Let $\mathrm{Sp}(\Theta)$ be the set of eigenvalues of $\Theta$. 
+The spectral zeta function associated with the operator $\Theta$ is defined by the analytic continuation of Dirichlet series
+\begin{equation*}
+  \zeta_{\Theta}(s)=\sum_{\lambda\ne0\in\mathrm{Sp}(\Theta)}\lambda^{-s}\text{ with }\lambda^{-s}=|\lambda|^{-s}e^{-is(\mathrm{Arg}\lambda)}, -\pi<\mathrm{Arg}\lambda\le\pi.
+\end{equation*}
+We assume that the Dirichlet series converges absolutely on some right-half plane and has an analytic continuation to the half plane $\mathrm{Re}(s)>-\epsilon$ for some $\epsilon>0$ which is holomorphic at $s=0$.
+Under these conditions, we define a zeta-regularized determinant by
+\begin{equation*}
+    \mathrm{det}_{\infty}(\Theta|V):=\exp\left(-\partial_{s}\zeta_{\Theta}(0)\right).
+\end{equation*}

@@ -1,0 +1,330 @@
+{
+  "statement": "E79.73 mismatch plus depth-complexity surcharge",
+  "source": "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_70_linear_penalized_matching_rule_results.json",
+  "exact_match_count": 5,
+  "rows": [
+    {
+      "N": 8,
+      "target_support": [
+        6,
+        7,
+        8
+      ],
+      "best": {
+        "name": "suffix",
+        "support": [
+          6,
+          7,
+          8
+        ],
+        "score": 1.5274056617274363,
+        "mismatch": 0.027405661727436414,
+        "surcharge": 1.5,
+        "size_cost": -0.66,
+        "spread_cost": 0.0,
+        "delay_cost": 2.16
+      },
+      "exact": true,
+      "candidates": [
+        {
+          "name": "suffix",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "score": 1.5274056617274363,
+          "mismatch": 0.027405661727436414,
+          "surcharge": 1.5,
+          "size_cost": -0.66,
+          "spread_cost": 0.0,
+          "delay_cost": 2.16
+        },
+        {
+          "name": "triple",
+          "support": [
+            6,
+            7,
+            8
+          ],
+          "score": 1.5274056617274363,
+          "mismatch": 0.027405661727436206,
+          "surcharge": 1.5,
+          "size_cost": -0.66,
+          "spread_cost": 0.0,
+          "delay_cost": 2.16
+        },
+        {
+          "name": "pair",
+          "support": [
+            5,
+            7
+          ],
+          "score": 1.5299001863311625,
+          "mismatch": 0.029900186331162863,
+          "surcharge": 1.4999999999999998,
+          "size_cost": -0.44,
+          "spread_cost": 0.14,
+          "delay_cost": 1.7999999999999998
+        }
+      ],
+      "hard_margin_vs_second": 0.0
+    },
+    {
+      "N": 10,
+      "target_support": [
+        5
+      ],
+      "best": {
+        "name": "pair",
+        "support": [
+          5
+        ],
+        "score": 1.609482358403511,
+        "mismatch": 0.02948235840351119,
+        "surcharge": 1.5799999999999998,
+        "size_cost": -0.22,
+        "spread_cost": 0.0,
+        "delay_cost": 1.7999999999999998
+      },
+      "exact": true,
+      "candidates": [
+        {
+          "name": "pair",
+          "support": [
+            5
+          ],
+          "score": 1.609482358403511,
+          "mismatch": 0.02948235840351119,
+          "surcharge": 1.5799999999999998,
+          "size_cost": -0.22,
+          "spread_cost": 0.0,
+          "delay_cost": 1.7999999999999998
+        },
+        {
+          "name": "suffix",
+          "support": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "score": 1.6487018215080085,
+          "mismatch": 0.00870182150800833,
+          "surcharge": 1.6400000000000001,
+          "size_cost": -0.88,
+          "spread_cost": 0.0,
+          "delay_cost": 2.52
+        },
+        {
+          "name": "triple",
+          "support": [
+            7,
+            8,
+            9
+          ],
+          "score": 1.966575885598671,
+          "mismatch": 0.10657588559867112,
+          "surcharge": 1.8599999999999999,
+          "size_cost": -0.66,
+          "spread_cost": 0.0,
+          "delay_cost": 2.52
+        }
+      ],
+      "hard_margin_vs_second": 0.03921946310449753
+    },
+    {
+      "N": 12,
+      "target_support": [
+        7
+      ],
+      "best": {
+        "name": "pair",
+        "support": [
+          7
+        ],
+        "score": 2.3229878549094867,
+        "mismatch": 0.02298785490948674,
+        "surcharge": 2.3,
+        "size_cost": -0.22,
+        "spread_cost": 0.0,
+        "delay_cost": 2.52
+      },
+      "exact": true,
+      "candidates": [
+        {
+          "name": "pair",
+          "support": [
+            7
+          ],
+          "score": 2.3229878549094867,
+          "mismatch": 0.02298785490948674,
+          "surcharge": 2.3,
+          "size_cost": -0.22,
+          "spread_cost": 0.0,
+          "delay_cost": 2.52
+        },
+        {
+          "name": "triple",
+          "support": [
+            7,
+            9,
+            10
+          ],
+          "score": 2.3537116816134143,
+          "mismatch": 0.35371168161341404,
+          "surcharge": 2.0,
+          "size_cost": -0.66,
+          "spread_cost": 0.14,
+          "delay_cost": 2.52
+        },
+        {
+          "name": "suffix",
+          "support": [
+            8,
+            9,
+            10
+          ],
+          "score": 2.5787708698562732,
+          "mismatch": 0.3587708698562733,
+          "surcharge": 2.2199999999999998,
+          "size_cost": -0.66,
+          "spread_cost": 0.0,
+          "delay_cost": 2.88
+        }
+      ],
+      "hard_margin_vs_second": 0.030723826703927593
+    },
+    {
+      "N": 14,
+      "target_support": [
+        10,
+        11,
+        12
+      ],
+      "best": {
+        "name": "suffix",
+        "support": [
+          10,
+          11,
+          12
+        ],
+        "score": 2.964247174755565,
+        "mismatch": 0.02424717475556555,
+        "surcharge": 2.9399999999999995,
+        "size_cost": -0.66,
+        "spread_cost": 0.0,
+        "delay_cost": 3.5999999999999996
+      },
+      "exact": true,
+      "candidates": [
+        {
+          "name": "suffix",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "score": 2.964247174755565,
+          "mismatch": 0.02424717475556555,
+          "surcharge": 2.9399999999999995,
+          "size_cost": -0.66,
+          "spread_cost": 0.0,
+          "delay_cost": 3.5999999999999996
+        },
+        {
+          "name": "triple",
+          "support": [
+            10,
+            11,
+            12
+          ],
+          "score": 2.964247174755565,
+          "mismatch": 0.02424717475556555,
+          "surcharge": 2.9399999999999995,
+          "size_cost": -0.66,
+          "spread_cost": 0.0,
+          "delay_cost": 3.5999999999999996
+        },
+        {
+          "name": "pair",
+          "support": [
+            9,
+            11
+          ],
+          "score": 3.1289972536467845,
+          "mismatch": 0.18899725364678438,
+          "surcharge": 2.94,
+          "size_cost": -0.44,
+          "spread_cost": 0.14,
+          "delay_cost": 3.2399999999999998
+        }
+      ],
+      "hard_margin_vs_second": 0.0
+    },
+    {
+      "N": 16,
+      "target_support": [
+        11,
+        13
+      ],
+      "best": {
+        "name": "pair",
+        "support": [
+          11,
+          13
+        ],
+        "score": 3.6955431426674283,
+        "mismatch": 0.03554314266742822,
+        "surcharge": 3.66,
+        "size_cost": -0.44,
+        "spread_cost": 0.14,
+        "delay_cost": 3.96
+      },
+      "exact": true,
+      "candidates": [
+        {
+          "name": "pair",
+          "support": [
+            11,
+            13
+          ],
+          "score": 3.6955431426674283,
+          "mismatch": 0.03554314266742822,
+          "surcharge": 3.66,
+          "size_cost": -0.44,
+          "spread_cost": 0.14,
+          "delay_cost": 3.96
+        },
+        {
+          "name": "triple",
+          "support": [
+            11,
+            12,
+            13
+          ],
+          "score": 3.7141474018842846,
+          "mismatch": 0.4141474018842848,
+          "surcharge": 3.3,
+          "size_cost": -0.66,
+          "spread_cost": 0.0,
+          "delay_cost": 3.96
+        },
+        {
+          "name": "suffix",
+          "support": [
+            12,
+            13
+          ],
+          "score": 4.038877470266803,
+          "mismatch": 0.15887747026680213,
+          "surcharge": 3.8800000000000003,
+          "size_cost": -0.44,
+          "spread_cost": 0.0,
+          "delay_cost": 4.32
+        }
+      ],
+      "hard_margin_vs_second": 0.018604259216856267
+    }
+  ]
+}

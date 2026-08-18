@@ -1,0 +1,361 @@
+% !TEX encoding = UTF-8 Unicode
+In this section, we compute the Todd classes associated to some morphisms of ring spectra. We focus on two morphisms, both involving ring spectra that are $\Sp$-oriented but not $\GL$-oriented.   
+
+\subsection{Adams operations}
+
+Let $S=\Spec (\ZZ[\frac 12])$, and let $\KO$ be the ring spectrum representing Hermitian $K$-theory (aka higher Grothendieck-Witt groups) over $S$. For any integer $n\in \NN$, let further $n^*\in \KO^{0,0}(S)$ be defined by 
+\[
+n^*=\begin{cases} n & \text{if $n$ is odd.} \\ \frac n2(1-\epsilon) & \text{if $n$ is even.}\end{cases}
+\]
+For any $n\geq 1$, we have a morphism of ring spectra (constructed either in \cite{FH21} or \cite{Bachmann20a})
+\[
+\Psi^n:\KO\to \KO\left[\frac 1{n^*}\right]
+\]
+called the \emph{$n$-th Adams operation}. These morphisms satisfy the same properties as the classical Adams operations on $K$-theory. For instance, we have $\Psi^m[\frac 1{n^*}]\circ\Psi^n=\Psi^{mn}$ for any $m,n\geq 1$. Moreover, denoting by $f:\KO\to \KGL$ the forgetful map, we obtain a commutative diagram for any $n\geq 1$
+\[
+\xymatrix{\KO\ar[r]^-{\Psi^n}\ar[d]_-f & \KO[\frac 1{n^*}]\ar[d]^-f \\
+\KGL\ar[r]_-{\Psi^n} &  \KGL[\frac 1{n}]}
+\]
+where the bottom map is the classical Adams operation. Note that $n^*$ is hyperbolic when $n$ is even. The Adams operations on $\KO$ are obtained via unstable operations
+\[
+\psi^n:\GW^{2i}\to \GW^{2in}
+\]
+for any $i\in\ZZ$ and any $n\in\NN$ (\cite[\S 5]{FH21}). Here $\GW^{2i}$ represents symplectic $K$-theory if $i$ is odd and orthogonal $K$-theory if $i$ is even. There is a periodicity element $\gamma\in \GW^{4}(\ZZ)$ having the property that  
+\[
+\GW^{2i}(X)\xrightarrow{\cdot\gamma} \GW^{2i+4}(X)
+\]
+is an isomorphism for any $i\in \ZZ$ and any $X$. In that setting, the unstable operation $\psi^n$ can be inductively computed using the formula  (\cite[(5.1.c)]{FH21})
+\begin{equation}\label{eqn:inductiveAdams}
+\psi^n(y)=y\psi^{n-1}(y)-\gamma\psi^{n-2}(y)
+\end{equation}
+where $y$ is the class in $\GW^{2}(X)$ of a rank $2$ symplectic bundle.
+
+
+Even though the spectrum we consider is a priori not defined over $\ZZ$, it is still convenient to consider the graded $\ZZ_{\epsilon}$-algebra
+\[
+\ZZ_{\epsilon}[\tau,\gamma^{\pm 1}]/\langle \tau^2-2h\gamma,(1+\epsilon)\tau\rangle
+\]
+in which $\tau$ is of degree $2$ and $\gamma$ of degree $4$. There is an isomorphism of graded $\ZZ_{\epsilon}=\GW^0(\ZZ)$-algebras
+\[
+\ZZ_{\epsilon}[\tau,\gamma^{\pm 1}]/\langle \tau^2-2h\gamma,(1+\epsilon)\tau\rangle\simeq \bigoplus_{i\in\ZZ}\GW^{2i}(\ZZ)
+\]
+under which $\tau$ is mapped to the class of the hyperbolic plane in $\GW^2(\ZZ)$. It is clear that for any $X$ as above, $\KO^{*,*}(X)$ is an algebra over this ring.
+
+If $E$ is a symplectic bundle of rank $2$ on a scheme $X$, its (first) Borel class $b_1(E)$ is the class of $[E]-\tau$ in $\KO^{4,2}(X)=\GW^2(X)$. In particular, we have seen that $X=\HP^{\infty}_{\ZZ[\frac 12]}$ (which can be seen as an ind-object in the category of smooth schemes) has a universal symplectic bundle $U$ with associated class $u\in \KO^{4,2}(X)$, and we set $x:=b_1(U)=u-\tau$. 
+
+\begin{lm}
+For any $n\geq 1$, there exists a unique \emph{monic} polynomial 
+\[
+p_n(x)\in \ZZ_{\epsilon}[\tau,\gamma^{\pm 1},x]/\langle \tau^2-2h\gamma,(1+\epsilon)\tau\rangle
+\] 
+of degree $n-1$ such that 
+\[
+\psi^n(x)=xp_n(x).
+\]
+It satisfies the inductive formula $p_1(x)=1$, $p_2(x)=x+2\tau$ and
+\[
+p_n(x)=(x+\tau)p_{n-1}(x)-\gamma p_{n-2}(x)+\psi^{n-1}(\tau).
+\]
+\end{lm}
+
+\begin{proof}
+For $u$, we have $\psi^0(u)=2$, $\psi^1(u)=u$ and for $n\geq 2$
+\[
+\psi^n(u)=u\psi^{n-1}(u)-\gamma\psi^{n-2}(u)
+\]
+in view of formula \eqref{eqn:inductiveAdams}. The same holds for $\tau$ and we we obtain
+\begin{eqnarray*}
+\psi^n(u)-\psi^n(\tau) & = & u\psi^{n-1}(u)-\gamma\psi^{n-2}(u)-\tau\psi^{n-1}(\tau)+\gamma\psi^{n-2}(\tau) \\
+ & = & (u-\tau)\psi^{n-1}(u)+\tau(\psi^{n-1}(u)-\psi^{n-1}(\tau))-\gamma(\psi^{n-2}(u)-\psi^{n-2}(\tau)) \\
+ & = & (x+\tau)\psi^{n-1}(x)+x\psi^{n-1}(\tau)-\gamma\psi^{n-2}(x).
+\end{eqnarray*}
+This yields 
+\begin{eqnarray*}
+xp_n(x) & = & \psi^n(x) \\
+ & = & (x+\tau)\psi^{n-1}(x)+x\psi^{n-1}(\tau)-\gamma\psi^{n-2}(x) \\
+ & = & (x+\tau)xp_{n-1}(x)+x\psi^{n-1}(\tau)-\gamma x p_{n-2}(x).
+\end{eqnarray*}
+As $x$ is a not a zero divisor, we conclude.
+\end{proof}
+
+As noted in the proof, the polynomials $p_n$ actually compute the quotients $\psi^n(x)/x$. In view of \eqref{eq:Todd&Euler}, the Todd class of $u$ associated to the operation $\Psi^n$ can actually be computed as 
+\[
+\td_{\Psi^n}^{-1}(u)=\Psi^n(x)/x
+\]
+since $x=u-\tau=b_1(u)=e(U,\KO)$ (in principle, we would have to choose a stable orientation of $U$, but here we can take the ``canonical one'' since $U$ is symplectic). Now, the stable operations $\Psi^n$ are obtained out of the unstable ones by inverting a convenient element $\omega(n)$ defined as follows (\cite[Lemma 5.3.3]{FH21}): 
+\[
+\omega(n)=\begin{cases} 0 & \text{ if $n=0$.}  \\ 1 &  \text{ if $n=1$.} \\ \tau\omega(n-1)-\gamma\omega(n-2)+\psi^{n-1}(\tau) &  \text{ if $n\geq 2$.}\end{cases}
+\]
+One can then explicitly compute $\omega(n)$ as follows (\cite[Proposition 5.3.4]{FH21}):
+\[
+\omega(n) = 
+\begin{cases}
+\displaystyle{n \Big(\frac{n-1}{2} (1-\epsilon) + \langle -1\rangle^{\frac{n-1}{2}}\Big)\gamma^{\frac{n-1}{2}} }& \text{if $n$ is odd},\\
+\displaystyle{\frac{n^2}{2}\tau\gamma^{\frac{n-2}{2}}} & \text{if $n$ is even}
+\end{cases}
+\]
+and set 
+\begin{equation}\label{eqn:stablevsunstable}
+\Psi^n=\frac 1{\omega(n)}\psi^n
+\end{equation}
+for any $n\in\NN$ (one observes that $\omega(n)$ is indeed invertible whenever $n^*$ is).
+
+\begin{lm}
+For any $n\geq 2$, we have and $p_n(x)=x^{n-1}+n\tau x^{n-2}+r_{n-2}(x)$ for some polynomial $r_{n-2}(x)$ of degree $\leq n-3$. Further, we have $p_n(0)=r_{n-2}(0)=\omega(n)$.
+\end{lm}
+
+\begin{proof}
+For the first assertion, we already know that $p_n$ is monic. To compute the coefficient of $x^{n-2}$, it suffices work by induction using  
+\[
+p_n(x)=(x+\tau)p_{n-1}(x)-\gamma p_{n-2}(x)+\psi^{n-1}(\tau)
+\]
+and $p_2=x+2\tau$. For the second statement, we observe that $p_n(0)$ and $\omega(n)$ satisfy the same inductive definition. It suffices then to prove that $\omega(2)=p_2(0)$ to conclude. The left-hand side is $\tau+\psi^{1}(\tau)=2\tau$, which is precisely $p_2(0)$.
+\end{proof}
+
+\begin{rem}
+We were not able to give a closed formula for $p_n$. For small values of $n$, they can be inductively computed, but it would be interesting to be actually able to write them for all integers $n$.
+\end{rem}
+
+As $p_n=\psi^n(x)/x$ and $\Psi^n=\frac 1{\omega(n)}\psi^n$, this immediately yields the following proposition.
+
+\begin{prop}
+For any $n\geq 1$, there exists unique polynomials 
+\[
+q_n(x)\in  \ZZ_{\epsilon}[\tau,\gamma^{\pm 1},\omega(n)^{-1},x]/\langle \tau^2-2h\gamma,(1+\epsilon)\tau\rangle
+\]
+of degree $n-1$ such that $q_n(0)=1$, $q_n(x)=\frac 1{\omega(n)}(x^{n-1}+n\tau x^{n-2})+r_{n-2}(x)$ with $r_{n-2}$ of degree $\leq n-3$.  They satisfy 
+\[
+\td_{\Psi^n}^{-1}(u)=q_n(u-\tau).
+\]
+\end{prop}
+
+This proposition allows to compute the Todd class $\td_{\Psi^n}$ associated to any symplectic bundle of rank $2$, using the splitting principle and the fact that $U$ is the universal rank $2$ bundle. 
+
+
+
+\subsection{The Borel character}
+
+We begin by recalling that the Borel character is a morphism of ring spectra 
+\[
+\mathrm{bo}_t:\KO \xrightarrow{\ (\mathrm{bo}_{2n})_{n \in \ZZ}\ } \bigoplus_{n \text{ even}} \mathbf{H}_\mathrm{MW}\QQ(2n)[4n] \oplus \bigoplus_{n \text{ odd}} \mathbf{H}_{\mathrm M} \QQ(2n)[4n].
+\]
+Let $p:\mathbf{H}_\mathrm{MW}\QQ\to \mathbf{H}_\mathrm{M}\QQ$ be the projection from MW-motivic cohomology to ordinary motivic cohomology and let $f:\KO\to \KGL$ be the forgetful map considered in the previous section (both are  morphism of ring spectra over $S$). We will consider $\mathbf{H}_\mathrm{M}\QQ$ (resp. $\KGL$) as a $\mathbf{H}_\mathrm{MW}\QQ$-algebra using the morphism $p$ (resp. a $\KO$-algebra using the morphism $f$). More explicitly, if $X$ is a (ind-)smooth $S$-scheme, we will set $\alpha\cdot\beta:=p(\alpha)\cdot \beta$ for any $\alpha\in \mathbf{H}_\mathrm{MW}\QQ(i)[j](X)$ and any $\beta \in \mathbf{H}_\mathrm{M}\QQ(a)[b](X)$.
+
+We have a commutative diagram of spectra
+\begin{equation}\label{eq:commutativecharacters}
+\xymatrix{\KO\ar[r]^-{\mathrm{bo}_t}\ar[d]_-f & \bigoplus_{n \text{ even}} \mathbf{H}_\mathrm{MW}\QQ(2n)[4n] \oplus \bigoplus_{n \text{ odd}} \mathbf{H}_{\mathrm M} \QQ(2n)[4n]\ar[d]^-{p\oplus \mathrm{Id}} \\
+\KGL\ar[r]_-{\mathrm{ch}_t} & \bigoplus_{n \text{ even}} \mathbf{H}_\mathrm{M}\QQ(2n)[4n] \oplus \bigoplus_{n \text{ odd}} \mathbf{H}_{\mathrm M} \QQ(2n)[4n]
+}
+\end{equation}
+where $\mathrm{ch}_t$ is the usual Chern character.
+
+
+Let further $X$ be a (ind-)smooth $S$-scheme and $E$ be a symplectic bundle of rank $2d$ on $X$. We may see $E$ as the class of a morphism $\Sigma_T^{\infty}X\to \KO_{S}(2)[4]$ whose image under the Borel character is by definition of the form
+\begin{equation}\label{eq:Borelchar}
+\mathrm{bo}_t(E)=2d+\tilde\chi_2(E)+\frac 1{4!}\chi_4(f(E))+\frac 1{\psi_6!}\tilde\chi_6(E)+\ldots
+\end{equation}
+in $\bigoplus_{n \text{ odd}} \mathbf{H}_\mathrm{MW}\QQ(2n)[4n] \oplus \bigoplus_{n \text{ even}} \mathbf{H}_{\mathrm M} \QQ(2n)[4n]$ where 
+\[
+\tilde\chi_{2n}:\GW^2\to \mathbf{H}_\mathrm{MW}(2n)[4n]
+\]
+is defined inductively by setting $\tilde\chi_{2}=b_1$ (the first Borel class in $\mathbf{H}_\mathrm{MW}(2)[4]$) and using
+\begin{equation}
+\tilde \chi_{2n}-b_1\tilde \chi_{2n-2}+b_2\tilde \chi_{2n-4}
++ \hdots +(-1)^{n-1}b_{n-1}\tilde \chi_2+(-1)^nnb_n=0.
+\end{equation}
+The operation
+\[
+\chi_{2n}\circ f:\GW^2\to \mathbf{H}_\mathrm{M}(2n)[4n]
+\]
+is defined in a similar fashion, using the forgetful functor $f:\GW^2\to \mathrm{K}_0$ and the operation $\chi_{2n}:\mathrm{K}_0\to  \mathbf{H}_\mathrm{M}(2n)[4n]$ worked out by Riou (\cite[Remark 6.2.2.3]{Riou}). The symmetric bilinear forms $\psi_{2n}$ are defined by 
+\[
+\psi_{2n}=\begin{cases}
+1 & \text{ if $n=0,1$} \\
+n(2n-1)(2n-2)(2n-3)h & \text{if $n\geq 2$ is even,} \\
+2n(2n-2)\big((2n^2-4n+1)h-\epsilon\big) & \text{if $n\geq 3$ is odd,} \\
+\end{cases}
+\]
+and we set
+\[
+\psi_{2n}!=\psi_2 \cdot \psi_6 \cdot \hdots \cdot \psi_{2n}.
+\]
+One checks that their inverses are indeed well defined in $\mathbf{H}_\mathrm{MW}\QQ(0)[0](S)$, at least if $\frac 12\in \OO(S)$ (\cite[Theorem 4.3.2]{DF3}).
+
+
+%We can write \eqref{eq:Borelchar} under the following form
+%\[
+%\mathrm{bo}_t(E)=\left( 2d+\sum_{n\geq 1}\frac 1{(4n)!}\chi_{4n}(f(E))\right )+\left( b_1(E)+\sum_{n\geq 1}\frac 1{\psi_{2+4n}!}\tilde \chi_{2+4n}(E)\right).
+%\]
+%In view of \cite[Lemma 4.3.4]{DF3}, we have $2\tilde\chi_{4n}^{\mathrm{M}}=\chi_{4n}\circ f$ and we may write the above expression as 
+%\[
+%\mathrm{bo}_t(E)=\left( 2d+\sum_{n\geq 1}\frac 1{(4n)!}\chi_{4n}(f(E))\right )+\left( b_1(E)+\sum_{n\geq 1}\frac 1{\psi_{2+4n}!}\tilde \chi_{2+4n}(E)\right).
+%\]
+If $U$ is the universal bundle on $\mathrm{H}\mathbb{P}^{\infty}_S$ and $u$ is its class in $\GW^2(\mathrm{H}\mathbb{P}^{\infty}_S)$, we have $\tilde \chi_{2+4n}(E)=b_1(U)^{2n+1}$ according to \cite[\S 4.1.7]{DF3}, while $\chi_{4n}(f(U))=2c_2(U)^{2n}$ \cite[Lemma 4.3.4]{DF3}. If $x:=b_1(u)=b_1(u-\tau)$, then its image $p(x)$ under the  morphism $p:\mathbf{H}_\mathrm{MW}\QQ(2)[4]\to \mathbf{H}_\mathrm{M}\QQ(2)[4]$ is $-c_2(U)$ and the $\mathbf{H}_\mathrm{MW}$-algebra structure on $\mathbf{H}_\mathrm{M}$ reads in this case as 
+\[
+p(x)^{2n}=x\cdot p(x)^{2n-1}
+\] 
+for any $n\geq 1$. As $b_1(\tau)$ and $c_2(\tau)$ are both trivial, we obtain an expression (slightly reordering terms) of $\mathrm{bo}_t(u-\tau)$ of the form
+\[
+\left(\sum_{n\geq 1}\frac 2{(4n)!}p(x)^{2n}\right )+\left( x+\sum_{n\geq 1}\frac 1{\psi_{2+4n}!} x^{2n+1}\right)=x\cdot \left(\sum_{n\geq 1}\frac 2{(4n)!}p(x)^{2n-1}+ 1 +\sum_{n\geq 1}\frac 1{\psi_{2+4n}!} t^{2n}\right).
+\]
+As $x=u-\tau$ is the first Borel class of $U$ in $\mathrm{KGL}(2)[4]$, we then see that 
+\[
+\td_{\mathrm{bo}_t}^{-1}(u)=\left(1+\sum_{n\geq 1}\frac 2{4n!}p(x)^{2n-1}+\sum_{n\geq 1}\frac 1{\psi_{2+4n}!} x^{2n}\right).
+\]
+%and 
+%\[
+%p(\td_{\mathrm{bo}_t}(u))=\td_{\mathrm{ch}_t}(f(u))=\left(1+\sum_{n\geq 1}\frac 2{4n!}p(x)^{2n-1}+\sum_{n\geq 1}\frac 2{(2+4n)!} p(x)^{2n}\right).
+%\]
+We now make use of the fact that rationally the ring spectrum representing MW-motivic cohomology decomposes as a product (this could even by taken as a definition \cite[\S 5, \S 6]{DFJK})
+\[
+\mathbf{H}_\mathrm{MW}\QQ\simeq \mathbf{H}_\mathrm{M}\QQ\times \mathbf{H}_\mathrm{W}\QQ
+\]
+where $ \mathbf{H}_\mathrm{W}\QQ$ is the spectrum representing the cohomology of the rational Witt sheaf. Here the composite $\mathbf{H}_\mathrm{MW}\QQ\simeq \mathbf{H}_\mathrm{M}\QQ\times \mathbf{H}_\mathrm{W}\QQ\to \mathbf{H}_\mathrm{M}\QQ$ is just the morphism we denoted by $p$, and we denote by $p':\mathbf{H}_\mathrm{MW}\QQ\simeq \mathbf{H}_\mathrm{M}\QQ\times \mathbf{H}_\mathrm{W}\QQ\to \mathbf{H}_\mathrm{W}\QQ$ the composite of the decomposition and the second projection. This equivalence yields in particular in degree $(0,0)$ an isomorphism 
+\[
+\mathbf{H}^{0,0}_\mathrm{MW}\QQ(S)\simeq \mathbf{K}^{\mathrm{MW}}_0(S)\simeq \underline\QQ(S)\times \mathbf{W}(S)
+\]
+where $\underline\QQ$ is the sheaf associated to the constant presheaf $\QQ$. In view of this decomposition and the commutative diagram \eqref{eq:commutativecharacters}, we obtain
+\[
+p(\td_{\mathrm{bo}_t}^{-1}(u))=\td_{\mathrm{ch}_t}^{-1}(f(u))
+\]
+and we see that it suffices to compute the latter and $p'(\td_{\mathrm{bo}_t}(u))$ to obtain $\td_{\mathrm{bo}_t}(u)$. 
+\begin{prop}\label{prop:Toddforgetful}
+If $U$ is a rank $2$ symplectic bundle on a smooth $S$-scheme $X$ and $u\in \GW^2(X)$ is its associated class, we have
+\[
+\td_{\mathrm{ch}_t}^{-1}(f(u))=2\sum_{i\geq 1} \frac{(-c_2(U))^{i-1}}{(2i)!}.
+\]
+\end{prop}
+
+\begin{proof}
+By universality, it suffices to consider the situation where $X=\HP^{\infty}_S$ and $U$ is the universal rank two symplectic bundle. We may consider the projective bundle $\pi:Y:=\Proj(U)\to X$ and replace $X$ by $Y$ in view of the splitting principle, as both $K$-theory and motivic cohomology are $\GL$-oriented. Over $Y$, $U$ splits as an extension of a line bundle $L$ with its dual, and we have 
+\[
+\mathrm{ch}_t(f(u))=e^{c_1(L)}+e^{c_1(L^\vee)}=e^{c_1(L)}+e^{-c_1(L)}=2\cosh(c_1(L)).
+\]
+This yields $\mathrm{ch}_t(f(u-\tau))=2\cosh(c_1(L))-2$. Using $c_1(L)^2=-c_1(L)c_1(L^\vee)=-c_2(U)$, the expression reads as
+\[
+\mathrm{ch}_t(f(u-\tau))=2\sum_{i\geq 1} \frac{(-c_2(U))^i}{(2i)!}
+\]
+As the first Borel class of $U$ in $\mathrm{CH}^2(X)$ is $-c_2(U)$, we finally obtain
+\[
+\td_{\mathrm{ch}_t}^{-1}(f(u))=2\sum_{i\geq 1} \frac{(-c_2(U))^{i-1}}{(2i)!}.
+\]
+\end{proof}
+
+We now start the computation of $p'(\td_{\mathrm{bo}_t}(u))$ which is obtained by omitting the terms of the form $\chi_{2n}$ (including $2d$) in the expression \eqref{eq:Borelchar}, replacing the operations $\tilde \chi_{2+4n}$ by the operations $\tilde \chi_{2+4n}^{\mathrm{W}}:=p'\circ \tilde \chi_{2+4n}$ and taking the images of the symmetric bilinear forms $\psi_{2n}$ in the group $\mathbf{W}(S)\otimes \QQ$. Since $\epsilon=1$ and $h=0$ in $\mathbf{W}(S)\otimes \QQ$, we obtain for $n\geq 3$ odd
+\[
+\psi_{2n}=-2n(2n-2),
+\]
+so that $\psi_{4n+2}=-4n(4n+2)=-8n(2n+1)=-4(2n+1)2n$ for any $n\geq 1$ and $\psi_2=1$.
+The following lemma is easily proved by induction.
+\begin{lm}
+For $n\geq 0$, we have $\psi_{4n+2}!=(-1)^n2^{2n}(2n+1)!$.
+\end{lm}
+
+We then obtain an expression of the form
+\[
+p'(\td_{\mathrm{bo}_t}^{-1}(u))= x+\sum_{n\geq 1}\frac 1{\psi_{2+4n}!} x^{2n+1}=x+\sum_{n\geq 1}\frac {(-1)^n}{2^{2n}(2n+1)!} x^{2n+1}
+\]
+where $x=e(U,\mathbf{H}_\mathrm{W}\QQ)$ is the Euler class of $U$ (which coincides with the first Borel class). Dividing by $x$, we finally obtain the following result.
+
+\begin{prop}\label{prop:Toddquadratic}
+The Todd class associated to the morphism of ring spectra 
+\[
+\KO \xrightarrow{p'\circ \mathrm{bo}_t} \bigoplus_{n \text{ even}} \mathbf{H}_\mathrm{W}\QQ(2n)[4n]
+\]
+is of the form
+\[
+\td_{p'\circ\mathrm{bo}_t}^{-1}(u)=1 +\sum_{n\geq 1}\frac {(-1)^n}{(2n+1)!} \left(\frac x2\right)^{2n}
+\]
+where $x=e(U,\mathbf{H}_\mathrm{W}\QQ)$ is the Euler class of the universal rank $2$ bundle $U$ on $\HP^{\infty}$.
+\end{prop}
+
+\begin{rem}
+The power series in the expression of the inverse of the Todd class of $u$ is in fact the power series $\frac{\sin (\frac x2)}{\frac x2}$.
+\end{rem}
+
+If now $(E,\varphi)$ is a symplectic bundle of rank $2n$ over a smooth scheme $X$, we may now use the splitting principle to suppose (up to passing to a smooth scheme $Y/X$) that $E$ splits as a sum of rank $2$ symplectic bundles, the so-called Borel roots $\alpha_1,\ldots,\alpha_n$ of $E$. The Todd class of $E$ is then of the form
+\[
+\td_{p'\circ\mathrm{bo}_t}(E)=\prod_{i=1}^n\frac{\frac {\alpha_i}2}{\sin (\frac {\alpha_i}2)}
+\]
+where we have somewhat abusively denoted by $\alpha_i$ the first Borel class of the respective Borel roots. For the Todd class $\td_{\mathrm{ch}_t}$, we refer to \cite[Example 3.2.4]{Fulton98}. 
+
+\subsection{The quadratic Hirzebruch-Riemann-Roch theorem}
+
+\begin{num}
+In this section, we illustrate Theorem \ref{thm:GRR} in the case of the Borel character discussed in the previous section.
+
+We consider a smooth proper scheme $X$ over a field $k$ of even dimension $d=2n$,
+ with projection $p\colon X\to \Spec(k)$ and canonical bundle $\omega_{X/k}=\det(\Omega_{X/k})$.
+ We let $f\colon L^{\otimes 2}\to \omega_{X/k}$ be an orientation of $X/k$
+ (see \Cref{ex:orientations}).
+ Using this isomorphism, we obtain an isomorphism (corresponding to the fact $\GW$ is $\SL^c$-oriented)
+\[
+\GW^{2}(X)\simeq \GW^2(X,L^{\otimes 2})\simeq \GW^{2}(X,\omega_{X/k})
+\]
+mapping the (isometry class of the) symplectic bundle $(V,\varphi)$ to $(V\otimes L,f\circ(\varphi\otimes \mathrm{Id}))$. The same formula applies for $\GW^{0}(X)$.
+
+The isomorphism $f\circ(\varphi\otimes \mathrm{Id})$ induces for any $i\in \NN$ an isomorphism
+\[
+[f\circ(\varphi\otimes \mathrm{Id})]_i\colon\H^i(X,V\otimes L)\to \H^i(X,(V\otimes L)^\vee\otimes\omega_{X/k}).
+\]
+Serre duality yields a canonical isomorphism $\mathrm{can}:\H^i(X,(V\otimes L)^\vee\otimes\omega_{X/k})\simeq \H^{2n-i}(X,V\otimes L)^*$ and we finally obtain isomorphisms
+\[
+\varphi_i\colon \H^i(X,V\otimes L)\to \H^{2n-i}(X,V\otimes L)^*.
+\]
+In particular, for $i=n$, the isomorphism 
+\[
+\varphi_n\colon\H^n(X,V\otimes L)\to \H^{n}(X,V\otimes L)^*
+\]
+yields either a symmetric or symplectic form on the vector space $\H^n(X,V\otimes L)$ in the following way: If $[V,\varphi]\in \GW^{2m}(X)$, then $[\H^n(X,V\otimes L),\varphi_n]\in \GW^{2m-2n}(k)$. For instance, if $\varphi$ is symplectic and $n$ is odd then $\varphi_n$ is symmetric. The following proposition can be seen as a computation of the tranfer map in Grothendieck-Witt theory.
+\end{num}
+\begin{prop}
+Let $[V,\varphi]\in \GW^{2m}(X)$. Then 
+\[
+p_*([V,\varphi])=(-1)^{m+n}[\H^n(X,V\otimes L),\varphi_n]+(\sum_{i=0}^{n-1}(-1)^{(m+i)}\mathrm{dim}_k\H^i(X,V\otimes L))\cdot (1-\epsilon)
+\]
+in $\GW^{2m-2n}(k)$.
+\end{prop}
+
+\begin{rem}
+The bundle $V$ should be seen as a complex concentrated in degree $m$ in the statement. Moreover, one observes that if $m-n$ is odd then $\varphi_n$ is symplectic, and then hyperbolic. Thus, the interesting information arises only when $m$ and $n$ have the same parity, and is then encoded by $\varphi_n$. 
+\end{rem}
+
+In view of this computation, we may set the following definition.
+
+\begin{df}\label{df:quad-Euler-char}
+Let $X$ be a smooth proper scheme of even dimension $d=2n$ and let $(V,\varphi)$ be either a symplectic bundle if $d=2\pmod 4$ or a symmetric bundle if $d=0\pmod 4$. We define the quadratic Euler characteristic of $(V,\varphi)$ under the orientation $f:L^{\otimes2}\simeq \omega_{X/k}$ as the following expression
+$$
+[\H^n(X,V\otimes L),\varphi_n]+\sum_{i=0}^{n-1}(-1)^{(m+i)}\mathrm{dim}_k\H^i(X,V\otimes L)\cdot (1-\epsilon)
+$$
+where $m=1$ if $\varphi$ is symplectic and $m=0$ else.  We denote by $\tilde \chi(X,f;V,\varphi)$ the class of this symmetric bilinear form.
+\end{df}
+
+
+The Grothendieck-Riemann-Roch formula for the Borel character $\bo_t$ then reads as follows.
+\begin{thm}\label{thm:HRR}
+Let $X$ be a smooth proper scheme of even dimension $d$ such that its tangent bundle $T_{X/k}$ admits a stable $\Sp$-orientation $\tilde\tau_X$. We let $f$ be the orientation of $X/k$ associated with $\tilde\tau_X$.
+
+Let $(V,\varphi)$ be either a symplectic bundle if $d=2\pmod 4$ or a symmetric bundle if $d=0\pmod 4$. Then the following equality holds in $\GW(k)$
+$$
+\tilde \chi(X,f;V,\varphi)=\tdeg_{\tilde \tau_X}\left(\td_{\bo_t}(\tilde \tau_X).\bo_t(V,\varphi)\right)
+$$
+where $\tdeg_{\tilde \tau_X}\colon\CHt^{d}(X)\to \GW(k)$ is the quadratic degree map
+ (pushforwar) associated with the symplectic orientation $\tilde \tau_X$ of $X/K$.
+\end{thm}
+
+\begin{ex}\label{ex:HRR-K3}
+Suppose that $d=2$ and that $X$ is a K3 surface. Then, a symplectic orientation $\tilde\tau_X$ of $\Omega_{X/k}$ (or $T_{X/k}$) is just obtained by choosing an isomorphism $f:\OO_X\to\omega_{X/k}$. Indeed, one just considers the composite $\Omega_{X/k}\otimes \Omega_{X/k}\to \omega_{X/k}\xrightarrow{f^{-1}} \OO_X$. The Todd class can be easily computed using \Cref{prop:Toddforgetful} and \Cref{prop:Toddquadratic}. We have
+\[
+\td_{\mathrm{ch}_t}^{-1}(\Omega_{X/k})=1-\frac{c_2(\Omega_{X/k})}{12}, \td_{p'\circ\mathrm{ch}_t}^{-1}(\Omega_{X/k})=1
+\]
+and it follows easily from the fact that $X$ is a surface that $\td_{\bo_t}(\Omega_{X/k})=1+\frac{c_2(\Omega_{X/k})}{24}(1-\epsilon)$. Note further that there is no need to tensor with $\QQ$ as the Borel character is defined integrally in case of surfaces. If $(V,\varphi)$ is a symplectic bundle of rank $2r$ over $X$, we finally obtain
+\begin{eqnarray*}
+\tilde \chi(X,f;V,\varphi) &= &\tdeg_{\tilde \tau_X}\left((2r+e(V,\varphi))\cdot (1+\frac{c_2(\Omega_{X/k})}{24}(1-\epsilon))\right) \\
+ & = & \tdeg_{\tilde \tau_X}\left(r\cdot \frac{c_2(\Omega_{X/k})}{12}(1-\epsilon)+e(V,\varphi)\right) \\
+ & = & \mathrm{deg}\left(r\cdot \frac{c_2(\Omega_{X/k})}{12}\right)\cdot (1-\epsilon)+ \tdeg_{\tilde \tau_X}(e(V,\varphi)).
+\end{eqnarray*}
+Using the fact that $\mathrm{deg}(c_2(\Omega_{X/k}))=24$ (e.g. \cite{Huybrechts16}), we finally obtain the formula:
+\[
+\tilde \chi(X,f;V,\varphi)=2r(1-\epsilon)+\tdeg_{\tilde \tau_X}(e(V,\varphi)).
+\]
+\end{ex}

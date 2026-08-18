@@ -1,6 +1,6 @@
 # Report back: results from your route for 2.3.F / L1
 
-*Following your four-task program. Honest throughout: no proof reached; every positive result is a
+*Following your four-task program. Candid throughout: no proof reached; every positive result is a
 faithful but RH-equivalent detector, flagged as such. All experiments reproducible (mpmath dps≥30–40;
 Davenport–Heilbronn falsador mandatory in every test).*
 

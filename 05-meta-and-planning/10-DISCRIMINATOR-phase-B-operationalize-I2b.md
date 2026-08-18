@@ -31,7 +31,7 @@ a class $X$ belongs to — or is it a bespoke fact about $X$ alone?"* — withou
 the wrong-sign capstone CAP into $T$. Every PASS still rests on a positivity; I2b is CAP wearing a category hat,
 and for $\zeta$ that positivity is RH. So I2b is circular — it passes only what already proves RH."*
 
-**Response — it is non-circular, but only as a *classifier*, and the honesty is in stating exactly what it does
+**Response — it is non-circular, but only as a *classifier*, and the candor is in stating exactly what it does
 not do.**
 - I2b does **not** escape CAP. $T$ *is* a positivity. What I2b discriminates is **whether that positivity is
   PROVEN GENERALLY** (for the whole class $\mathcal C$, independently — as the Hodge index theorem is, for all
@@ -75,7 +75,7 @@ conjectures. The recent **Adiprasito–Huh–Katz** program proved Hodge–Riema
 *non-geometric* objects — settling old combinatorial conjectures. That is the precise template: a general
 positivity theorem established for a **new** class.
 
-**Honest caveat — and the calibration bites here too.** The obvious attempt to place $\zeta$ in a Hodge–Riemann /
+**Candid caveat — and the calibration bites here too.** The obvious attempt to place $\zeta$ in a Hodge–Riemann /
 stable-polynomial class **already exists in the corpus as HYP** (Jensen-polynomial hyperbolicity = Lee–Yang /
 Lorentzian-type positivity), and **HYP is REJECT**: proving the hyperbolicity *is* RH; no general theorem supplies
 it for $\zeta$'s Jensen polynomials. So the reservoir is the right *type*, but every *known* embedding of $\zeta$
@@ -97,7 +97,7 @@ Hodge index, now stated as a category-placement problem with a checkable success
 - **The search target is sharp and fundable:** find a class $\mathcal C$ + general theorem $T$ placing ζ's zeros
   where the constraint is a corollary. The only known theorem-reservoir is Hodge-type positivity; the only known
   ζ-embeddings into it are REJECT (HYP = RH); a non-special embedding is the open frontier.
-- **Residual honesty.** I2b is now checkable but still requires expert judgment to *recognize* whether a proposed
+- **Residual candor.** I2b is now checkable but still requires expert judgment to *recognize* whether a proposed
   $\mathcal C/T$ is "general and independent." Full machine automation (Phase C) needs a library of admissible
   general theorems $T$ and a matcher; that library is finite and writable, but adjudicating a *novel* $\mathcal C$
   remains a research act, not a lookup. **D0 is a validated expert filter with a sharp, non-circular I2b — not yet

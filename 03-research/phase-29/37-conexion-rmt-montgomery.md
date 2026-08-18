@@ -31,7 +31,7 @@ $$\lim_{T\to\infty} F(\alpha, T) = \int_{-\infty}^\infty f(x)\left[1 - \left(\fr
 
 La función $1 - (\sin\pi x/\pi x)^2$ es precisamente la función de correlación de pares de los eigenvalores de matrices aleatorias GUE (Gaussian Unitary Ensemble). 
 
-**Nota de honestidad.** La conjetura de Montgomery está:
+**Nota de franqueza.** La conjetura de Montgomery está:
 - PROBADA para $\hat f$ con soporte en $(-1,1)$ (Montgomery 1973, condicional a RH).
 - NO PROBADA en general — es una conjetura abierta.
 - Apoyada por extensiva evidencia numérica (Odlyzko 1987–2001).

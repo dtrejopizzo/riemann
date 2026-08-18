@@ -55,7 +55,7 @@ This **subsumes the forwarded "PT-symmetry / dissipative-dynamics" suggestion**:
 attractor picture is *true and now rigorous* ($\mathcal L$ is a genuine Lyapunov function), but it is not a
 proof of RH for the same structural reason.
 
-## The only honest continuation, and its price
+## The only candid continuation, and its price
 
 Arithmetic must enter through the **initial statistics**. The productive version of the heat-flow path is
 therefore **Rodgers–Tao's**: couple the flow to $\zeta$'s actual zero distribution. They did exactly this to

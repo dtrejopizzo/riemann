@@ -4,7 +4,7 @@
 N3 closed the first-order lever (the Carleson constant $C=\lambda_{\max}$ is identically $1$, saturated). The
 user directed the pivot to **second order** — the subdominant spectrum, the gap below $1$, where zero-spacing
 fluctuation lives and the $\omega$-class machinery is built to act. This records what we found, with numbers,
-and the honest verdict.
+and the candid verdict.
 
 ---
 
@@ -52,7 +52,7 @@ pairs. The form thus *quantifies* how close ζ comes to violating RH, height by 
 
 ---
 
-## 3. Honest verdict: a real bridge, the same wall (fourth language)
+## 3. Candid verdict: a real bridge, the same wall (fourth language)
 
 RH $\iff$ "the sine-kernel Gram is a contraction ($\preceq 1$) on every window." The detector confirms
 off-line zeros break it ($\delta^2$). **But this restates RH; it does not prove it:**

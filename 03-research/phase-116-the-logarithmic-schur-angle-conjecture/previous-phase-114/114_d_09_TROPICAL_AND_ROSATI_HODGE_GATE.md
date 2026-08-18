@@ -1,0 +1,146 @@
+# Row (d): tropical and Rosati Hodge gate
+
+## Purpose
+
+This note audits two genuinely non-spectral ways of proving the primitive
+inequality required in row (d): tropical Hodge--Riemann and categorical
+Rosati positivity.  Neither route is allowed to use the zeros of `xi`, the
+spectral decomposition of the Meyer quotient, or the sign of the Weil form.
+
+The target is the following order of construction.
+
+1. Construct a mixed numerical space `N_D`, its two ruling classes and its
+   primitive subspace without using the explicit formula.
+2. Prove a Hodge theorem on `N_D` from the geometry or the dagger category.
+3. Only afterwards identify the resulting intersection form with
+   `B_nuc`.
+
+Reversing steps 2 and 3 is Weil's criterion, not a proof of it.
+
+## 1. Tropical Hodge--Riemann does not yet apply
+
+Amini--Piquerez prove Hard Lefschetz and the Hodge--Riemann relations for
+smooth projective tropical varieties.  In dimension two this gives one
+positive intersection direction and a negative-definite primitive part.
+The theorem is therefore of exactly the right logical kind: its proof is
+geometric and does not refer to an arithmetic zeta function.
+
+Its hypotheses are not presently satisfied by the mixed correspondence
+sector:
+
+* the spherical square has not been exhibited as a smooth projective
+  tropical variety with a finite unimodular polyhedral structure;
+* the completed classes `D_f` are nuclear correspondence classes, not
+  tropical Cartier divisors in a finite-dimensional `H^{1,1}`;
+* no cycle-class map from the completed correspondence module to tropical
+  cohomology has been constructed;
+* no such map is known to preserve composition, the two ruling degrees,
+  the local perfect contacts and the archimedean Green term.
+
+These are typing failures, not missing citations.
+
+### Finite-contact obstruction
+
+Let `S` contain powers of `r` distinct primes.  The contact form on the
+prime-power correspondence symbols is
+
+```
+K_S = direct_sum_p (log p) 1_p 1_p^t.
+```
+
+It has positive index `r`.  Adding it orthogonally to the hyperbolic ruling
+plane gives positive index `r+1`.  On the other hand, the divisor intersection
+form of a smooth projective tropical surface has positive index one.
+Consequently, for `r > 0`, no degree- and intersection-preserving realization
+can retain both the required ruling plane and the uncorrected contact form.
+(If the ruling plane is discarded, the contact form alone already obstructs
+such a realization as soon as `r > 1`.)
+
+This conclusion is independent of RH and of the zeros.  It shows that the
+global Green correction is not optional in a tropical realization.
+
+### Exact tropical construction that would suffice
+
+A successful tropical route must construct, for a cofinal system of finite
+supports `S`, smooth projective tropical surfaces `Y_S`, divisor maps
+
+```
+j_S : E_S -> H^{1,1}(Y_S, R),
+```
+
+and ample classes `H_S` such that:
+
+1. `j_S(F_i)` are the two rulings and have intersection matrix
+   `[[0,1],[1,0]]`;
+2. `j_S(e_n)` is obtained from the Frobenius correspondence, not from a
+   matrix realization chosen after computing inertia;
+3. the intersection of the `j_S(e_n)` is the *full* finite prime--Green
+   pairing, not merely `Lambda(mn)`;
+4. transition maps are compatible with divisor classes, intersection and
+   ample classes;
+5. the limit pairing is continuous and equals `B_nuc` on tests.
+
+Hodge--Riemann on every `Y_S` would then give the finite primitive
+inequalities; continuity would give row (d).  Projectivity or ampleness may
+not be inferred from the desired matrix signature, since that would insert
+the conclusion into hypothesis 4.
+
+No object satisfying these five clauses is currently present in the
+construction.
+
+## 2. The Rosati route requires positivity, not only an involution
+
+The Tate involution makes `B_nuc` Hermitian.  Hermitian symmetry by itself
+has no sign.  A non-circular Rosati proof needs a dagger category `C`, a
+positive trace `tau`, a Lefschetz object `L`, and a realization of mixed
+classes by morphisms `a_f` such that:
+
+```
+tau(a^dagger a) >= 0,
+B_geom(M_f, M_g) = -tau(a_f^dagger a_g),
+M_f is primitive iff a_f is primitive for L.
+```
+
+The dagger and the positivity of `tau` must be constructed before the
+comparison with `B_nuc`.  The existing data provide:
+
+* a Tate involution on tests;
+* duality of the local perfect contact complexes;
+* a nuclear supertrace realizing the explicit formula.
+
+They do not provide a positive trace on the completed mixed object.  A
+supertrace is a difference of traces, and declaring the spectral summand
+corresponding to zeros to be the negative part is precisely the forbidden
+spectral-sign step.
+
+### Exact Rosati construction that would suffice
+
+It is enough to construct a polarizable object `M_mix` in an independently
+defined dagger enhancement of the intrinsic periodic--Deligne--nuclear
+category, together with:
+
+1. a positive faithful trace on `End(M_mix)`;
+2. an `sl_2` Lefschetz action generated by the two ruling classes;
+3. a dense continuous map `f -> a_f` from the mixed test module;
+4. the primitive identity and the equality case for the Rosati norm;
+5. a post hoc comparison
+   `-tau(a_f^dagger a_g) = B_nuc(f,g)`.
+
+Clauses 1--4 would prove the sign without zeta zeros; clause 5 would then
+deduce RH.  At present the enriched periodic Yoneda category internalizes
+the ruling section theory, but there is no construction extending its
+positive/dagger structure to the completed mixed correspondence module.
+
+## 3. Outcome of the audit
+
+The published tropical Hodge theorem is a legitimate possible engine for
+row (d), but it cannot be cited directly for the spherical/nuclear square.
+The current finite contact blocks prove that a naive tropical realization is
+impossible.  Likewise, the current involution is insufficient for a Rosati
+argument: the missing datum is a positive trace on a polarizable mixed
+object.
+
+The two routes have now been reduced to explicit construction contracts.
+Meeting either contract and then proving the comparison with `B_nuc` closes
+row (d); merely defining the intersection form to be `B_nuc`, or checking
+its spectral sign, does not.

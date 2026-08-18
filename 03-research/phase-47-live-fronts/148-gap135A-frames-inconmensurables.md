@@ -5,7 +5,7 @@
 **Autor:** David Alejandro Trejo Pizzo.
 **Encargo:** revisar la literatura activa de frames/muestreo (Seip; Olevskii–Ulanovskii; Beurling–Landau; Avdonin; Hedenmalm–Montes-Rodríguez) y decidir si GAP-135.A (la estructura fina del núcleo de la forma de Weil de dos primos puros) es matemática nueva genuina, un caso ya resuelto, o un problema abierto que el contexto-ζ ilumina pero no resuelve.
 **Prerrequisitos:** Doc 135 (teorema de dos primos; §5 estructura fina, Teorema 5.4, Prop. 5.6, GAP-135.A); Doc 138 (auditoría — el veredicto de que lo único potencialmente nuevo es §5, y la advertencia de revisar la literatura de frames antes de invertir).
-**Contrato creativo:** **[DEFINICIÓN-NUEVA]** libertad total; **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** prueba completa o no lleva etiqueta; **[PUENTE]** estatus declarado; **[GAP]** nombrado; **[DESEO]** declarado; **[DATO]** literatura citada; **[GAP de literatura]** lo que no recuerdo con certeza. Honestidad absoluta: la auditoría ya castigó una inflación de novedad sobre este mismo objeto (Doc 138 §4.3, §5.5); no se repite.
+**Contrato creativo:** **[DEFINICIÓN-NUEVA]** libertad total; **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** prueba completa o no lleva etiqueta; **[PUENTE]** estatus declarado; **[GAP]** nombrado; **[DESEO]** declarado; **[DATO]** literatura citada; **[GAP de literatura]** lo que no recuerdo con certeza. Franqueza absoluta: la auditoría ya castigó una inflación de novedad sobre este mismo objeto (Doc 138 §4.3, §5.5); no se repite.
 
 **Convenciones.** Normalización del Doc 135: $F(t)=f(e^t)e^{t/2}\in C_c^\infty(\mathbb R)$, $\hat F(\xi)=\int F(t)e^{i\xi t}\,dt$, $\|f\|_w=\|F\|_{L^2}$. Bajo pureza ($|\alpha|=\sqrt p$, $|\alpha'|=\sqrt q$, fases $\phi,\phi'$),
 $$Q_X(f,f)=2\sum_{\xi\in\Lambda_p}|\hat F(\xi)|^2+2\sum_{\xi\in\Lambda_q}|\hat F(\xi)|^2,\qquad
@@ -25,7 +25,7 @@ La pregunta de GAP-135.A es, **exactamente y sin pérdida**: ¿es $E(\Lambda)$ u
 
 **VEREDICTO: (b) problema abierto en frames que el contexto-ζ ilumina pero no resuelve — con un matiz importante hacia (a).** El matiz: para una **unión de dos progresiones aritméticas exactas** (no perturbadas), creo que la respuesta SÍ es conocida o accesible por la maquinaria de Avdonin/Pavlov–Khrushchev–Nikolskii de espacios modelo, y **es afirmativa con fases genéricas / negativa solo en un conjunto medida-cero de configuraciones** — ver §2 y §4. Lo genuinamente abierto y nuevo NO es "¿es Riesz?" en sentido binario, sino **la dependencia cuantitativa de la cota inferior de frame respecto de la medida de irracionalidad de $\log p/\log q$** (la constante, no el bit). Esa es la pregunta que el Doc 135 nombró correctamente y que la literatura, hasta donde la conozco, no responde para este caso aritmético específico. La novedad es de *constante efectiva diofántica*, no de *fenómeno*.
 
-Tres resultados con etiqueta (§1–§3) y el [PUENTE] honesto con ζ (§5) cierran el documento.
+Tres resultados con etiqueta (§1–§3) y el [PUENTE] franco con ζ (§5) cierran el documento.
 
 ---
 
@@ -136,7 +136,7 @@ Para $\log q<2T<\log pq$, $E(\Lambda)$ es completo en $L^2(-T,T)$ pero **no es u
 
 *Argumento (esbozo riguroso, con un punto técnico marcado [GAP]).* Tomo near-collisions $\xi_n\in\Lambda_p,\eta_n\in\Lambda_q$, $|\xi_n-\eta_n|=:\sigma_n\to0$ (existen por 2.1(a), a frecuencia $R_n\to\infty$). Construyo $F_n\in\mathcal H_T$ con $\hat F_n$ "casi proporcional a $e_{\xi_n}-e_{\eta_n}$ en el lado físico": concretamente $F_n(t)=c_n(e^{i\xi_n t}-e^{i\eta_n t})\psi(t)$ con $\psi\in C_c^\infty(-T,T)$ fija, $\psi\ge0$, $c_n$ normalizando $\|F_n\|_w=1$. Entonces $\|F_n\|_w^2=c_n^2\int|\psi|^2|e^{i\xi_n t}-e^{i\eta_n t}|^2\asymp c_n^2\sigma_n^2\int t^2|\psi|^2\Rightarrow c_n\asymp\sigma_n^{-1}$. Y $\hat F_n(\zeta)=c_n(\hat\psi(\zeta-\xi_n)-\hat\psi(\zeta-\eta_n))$. Evaluando en $\Lambda$: en $\xi_n$, $\hat F_n(\xi_n)=c_n(\hat\psi(0)-\hat\psi(\xi_n-\eta_n))\asymp c_n\sigma_n^2\hat\psi''(0)/2\asymp\sigma_n$; análogamente en $\eta_n$; en los demás $\zeta\in\Lambda$, $\hat\psi(\zeta-\xi_n)$ y $\hat\psi(\zeta-\eta_n)$ decaen rápido (Paley–Wiener de $\psi$) pero NO son cero, y al sumar sobre $\Lambda$ — **aquí el punto técnico**: hay que verificar que $\sum_{\zeta\in\Lambda}|\hat F_n(\zeta)|^2\to0$. Los términos cercanos ($\xi_n,\eta_n$ y sus vecinos en $\Lambda_p,\Lambda_q$ a distancia $\gtrsim 2\pi/L_r$) dan $\asymp\sigma_n^2\to0$. Los términos lejanos están controlados por la cota de Bessel uniforme (Obs. 1.2) aplicada a la "casi-diferencia" — **[GAP]: falta verificar que la contribución de Bessel de la cola no esté acotada *por debajo* uniformemente; creo que sí va a cero porque $e^{i\xi_n t}-e^{i\eta_n t}=O(\sigma_n)$ uniformemente en $t\in[-T,T]$, luego $F_n=O(\sigma_n)c_n\psi=O(1)\psi$ en norma sup pero su transformada tiene masa total $\|F_n\|^2=1$ concentrada espectralmente cerca de $\xi_n\approx\eta_n$; la traza con $\Lambda$ recoge solo $\asymp\sigma_n^2$.** Si el [GAP] cierra, $Q_X(F_n,F_n)=2\sum_\Lambda|\hat F_n|^2\to0$ con $\|F_n\|_w=1$, luego $\mu(T)=0$. El núcleo es trivial (Teorema 5.4(a)) porque ninguna $F_n$ es exactamente nula y el límite débil es $0\notin$ esfera unidad. $\square$ *(condicional al [GAP])*
 
-**Veredicto cuantitativo (honesto).** Creo, con confianza moderada-alta, que **$\mu(T)=0$ para todo $\log q<2T<\log pq$**: el sistema es completo pero NO un frame, exactamente porque las near-collisions (densidad lineal, profundidad $\to0$) permiten construir tests casi-invisibles normalizados. Esto **responde a GAP-135.A en su forma binaria: NO hay gap de frame uniforme en la región intermedia; $\mu(T)=0$.** El Doc 135 (Obs. 5.7) lo dejó como pregunta abierta optimista ("es plausible que [Baker] alcance para $\mu(T)>0$"); mi análisis sugiere que el optimismo era infundado: **Baker controla la profundidad a frecuencia acotada, pero $L^2(-T,T)$ no acota la frecuencia, y por eso el ínfimo a través de todas las escalas es $0$.**
+**Veredicto cuantitativo (franco).** Creo, con confianza moderada-alta, que **$\mu(T)=0$ para todo $\log q<2T<\log pq$**: el sistema es completo pero NO un frame, exactamente porque las near-collisions (densidad lineal, profundidad $\to0$) permiten construir tests casi-invisibles normalizados. Esto **responde a GAP-135.A en su forma binaria: NO hay gap de frame uniforme en la región intermedia; $\mu(T)=0$.** El Doc 135 (Obs. 5.7) lo dejó como pregunta abierta optimista ("es plausible que [Baker] alcance para $\mu(T)>0$"); mi análisis sugiere que el optimismo era infundado: **Baker controla la profundidad a frecuencia acotada, pero $L^2(-T,T)$ no acota la frecuencia, y por eso el ínfimo a través de todas las escalas es $0$.**
 
 ---
 
@@ -162,7 +162,7 @@ La esperanza del Doc 135 (Obs. 5.7, GAP-135.A) era: *"¿se puede dar una caracte
 
 *Demostración.* (a) El conteo de Jensen suma densidades; la medida de irracionalidad solo afecta el término $O(1)$ del solapamiento (Lema 1.7: a lo sumo un punto compartido), no la pendiente. (b) Kronecker ($\inf|\xi-\eta|=0$) vale para todo irracional; la profundidad de la peor colisión a escala $R$ depende de la medida de irracionalidad, pero el $\inf$ sobre $R\to\infty$ es $0$ universalmente. $\square$
 
-**Conclusión de §3 (el desinflado honesto, en la línea de la auditoría Doc 138).** La conexión "near-collisions diofánticas $\leftrightarrow$ estructura fina del núcleo" que el Doc 135 nombró como potencialmente profunda **NO sobrevive el análisis**: el núcleo es puramente de densidad (Beurling–Landau, conocido), y la medida de irracionalidad **no aparece** ni en el núcleo ni en el módulo $\mu(T)$ sobre $L^2(-T,T)$. La aritmética de Baker controla un objeto más fino — la tasa de degradación de la cota de frame *restringida a una banda de frecuencias $\le R$* — pero ese objeto no es la forma de Weil sobre el intervalo completo. **La medida de irracionalidad de $\log p/\log q$ no es la respuesta a GAP-135.A; es un epifenómeno.**
+**Conclusión de §3 (el desinflado franco, en la línea de la auditoría Doc 138).** La conexión "near-collisions diofánticas $\leftrightarrow$ estructura fina del núcleo" que el Doc 135 nombró como potencialmente profunda **NO sobrevive el análisis**: el núcleo es puramente de densidad (Beurling–Landau, conocido), y la medida de irracionalidad **no aparece** ni en el núcleo ni en el módulo $\mu(T)$ sobre $L^2(-T,T)$. La aritmética de Baker controla un objeto más fino — la tasa de degradación de la cota de frame *restringida a una banda de frecuencias $\le R$* — pero ese objeto no es la forma de Weil sobre el intervalo completo. **La medida de irracionalidad de $\log p/\log q$ no es la respuesta a GAP-135.A; es un epifenómeno.**
 
 ### 3.3. Dónde SÍ podría vivir matemática diofántica nueva (la versión salvable de la intuición)
 
@@ -184,7 +184,7 @@ con $\kappa(p,q)$ el exponente de Baker (medida de irracionalidad de $\log p/\lo
 
 ## 4. Veredicto: conocido / abierto-iluminado / nuevo
 
-Desglose por componente, con honestidad de auditoría:
+Desglose por componente, con franqueza de auditoría:
 
 | Componente de GAP-135.A | Estatus | Justificación |
 |---|---|---|
@@ -200,7 +200,7 @@ Esto **confirma y agudiza la sospecha de la auditoría Doc 138 §4.4**: "es plau
 
 ---
 
-## 5. [PUENTE] honesto con ζ y el escalamiento a infinitas progresiones
+## 5. [PUENTE] franco con ζ y el escalamiento a infinitas progresiones
 
 ### 5.1. ¿Dice algo sobre ζ?
 

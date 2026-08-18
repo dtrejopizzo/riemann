@@ -256,7 +256,7 @@ And it cannot be silently assumed: it is precisely the operator-convergence fron
 the language of the NO-GO audit, this is where MW-2 could re-enter if the proof requires propagation
 of Euler information into the critical strip.
 
-So the honest status is:
+So the candid status is:
 
 ```text
 proved:  stable real divisors satisfying counting/tail bounds have real-zero normal limits;

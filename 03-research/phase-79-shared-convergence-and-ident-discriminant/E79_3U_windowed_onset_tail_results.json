@@ -1,0 +1,939 @@
+{
+  "statement": "E79.3u windowed onset tail selector",
+  "cases": [
+    {
+      "label": "zeta",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.000525776522483",
+              "active_len": 9,
+              "onset": 7,
+              "windows": {
+                "2": {
+                  "start": 7,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.0617110795143",
+                  "geom_decay": "0.763255031645",
+                  "score": "0.0471012919475",
+                  "tail": "8.29829975606e-5",
+                  "minus": "-0.000442793524922",
+                  "mismatch": "0.842170591473",
+                  "N2_abs_minus": "0.028338785595"
+                },
+                "3": {
+                  "start": 7,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.0617110795143",
+                  "geom_decay": "0.763255031645",
+                  "score": "0.0471012919475",
+                  "tail": "8.29829975606e-5",
+                  "minus": "-0.000442793524922",
+                  "mismatch": "0.842170591473",
+                  "N2_abs_minus": "0.028338785595"
+                },
+                "4": {
+                  "start": 7,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.0617110795143",
+                  "geom_decay": "0.763255031645",
+                  "score": "0.0471012919475",
+                  "tail": "8.29829975606e-5",
+                  "minus": "-0.000442793524922",
+                  "mismatch": "0.842170591473",
+                  "N2_abs_minus": "0.028338785595"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.00105114185516",
+              "active_len": 9,
+              "onset": 7,
+              "windows": {
+                "2": {
+                  "start": 7,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.0614049006542",
+                  "geom_decay": "0.763239410339",
+                  "score": "0.0468666401673",
+                  "tail": "0.000164907973423",
+                  "minus": "-0.000886233881739",
+                  "mismatch": "0.843115396259",
+                  "N2_abs_minus": "0.0567189684313"
+                },
+                "3": {
+                  "start": 7,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.0614049006542",
+                  "geom_decay": "0.763239410339",
+                  "score": "0.0468666401673",
+                  "tail": "0.000164907973423",
+                  "minus": "-0.000886233881739",
+                  "mismatch": "0.843115396259",
+                  "N2_abs_minus": "0.0567189684313"
+                },
+                "4": {
+                  "start": 7,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.0614049006542",
+                  "geom_decay": "0.763239410339",
+                  "score": "0.0468666401673",
+                  "tail": "0.000164907973423",
+                  "minus": "-0.000886233881739",
+                  "mismatch": "0.843115396259",
+                  "N2_abs_minus": "0.0567189684313"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.000307409734913",
+              "active_len": 11,
+              "onset": 7,
+              "windows": {
+                "2": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.102752302195",
+                  "geom_decay": "0.577373182295",
+                  "score": "0.0593264237066",
+                  "tail": "9.37783299414e-5",
+                  "minus": "-0.000213631404972",
+                  "mismatch": "0.694940272572",
+                  "N2_abs_minus": "0.0213631404972"
+                },
+                "3": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.102752302195",
+                  "geom_decay": "0.577373182295",
+                  "score": "0.0593264237066",
+                  "tail": "9.37783299414e-5",
+                  "minus": "-0.000213631404972",
+                  "mismatch": "0.694940272572",
+                  "N2_abs_minus": "0.0213631404972"
+                },
+                "4": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.102752302195",
+                  "geom_decay": "0.577373182295",
+                  "score": "0.0593264237066",
+                  "tail": "9.37783299414e-5",
+                  "minus": "-0.000213631404972",
+                  "mismatch": "0.694940272572",
+                  "N2_abs_minus": "0.0213631404972"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.000614678199283",
+              "active_len": 11,
+              "onset": 7,
+              "windows": {
+                "2": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.102371116039",
+                  "geom_decay": "0.577351174622",
+                  "score": "0.0591040840926",
+                  "tail": "0.000186538589071",
+                  "minus": "-0.000428139610212",
+                  "mismatch": "0.696526427506",
+                  "N2_abs_minus": "0.0428139610212"
+                },
+                "3": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.102371116039",
+                  "geom_decay": "0.577351174622",
+                  "score": "0.0591040840926",
+                  "tail": "0.000186538589071",
+                  "minus": "-0.000428139610212",
+                  "mismatch": "0.696526427506",
+                  "N2_abs_minus": "0.0428139610212"
+                },
+                "4": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.102371116039",
+                  "geom_decay": "0.577351174622",
+                  "score": "0.0591040840926",
+                  "tail": "0.000186538589071",
+                  "minus": "-0.000428139610212",
+                  "mismatch": "0.696526427506",
+                  "N2_abs_minus": "0.0428139610212"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.000198719668364",
+              "active_len": 11,
+              "onset": 9,
+              "windows": {
+                "2": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.155082671137",
+                  "geom_decay": "0.812021773341",
+                  "score": "0.125930505631",
+                  "tail": "0.000104083064252",
+                  "minus": "-9.46366041127e-5",
+                  "mismatch": "0.476231693076",
+                  "N2_abs_minus": "0.0136276709922"
+                },
+                "3": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.155082671137",
+                  "geom_decay": "0.812021773341",
+                  "score": "0.125930505631",
+                  "tail": "0.000104083064252",
+                  "minus": "-9.46366041127e-5",
+                  "mismatch": "0.476231693076",
+                  "N2_abs_minus": "0.0136276709922"
+                },
+                "4": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.155082671137",
+                  "geom_decay": "0.812021773341",
+                  "score": "0.125930505631",
+                  "tail": "0.000104083064252",
+                  "minus": "-9.46366041127e-5",
+                  "mismatch": "0.476231693076",
+                  "N2_abs_minus": "0.0136276709922"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.000397382480892",
+              "active_len": 11,
+              "onset": 9,
+              "windows": {
+                "2": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.1548364585",
+                  "geom_decay": "0.811998535341",
+                  "score": "0.125726977519",
+                  "tail": "0.000207443589576",
+                  "minus": "-0.000189938891316",
+                  "mismatch": "0.47797500003",
+                  "N2_abs_minus": "0.0273512003495"
+                },
+                "3": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.1548364585",
+                  "geom_decay": "0.811998535341",
+                  "score": "0.125726977519",
+                  "tail": "0.000207443589576",
+                  "minus": "-0.000189938891316",
+                  "mismatch": "0.47797500003",
+                  "N2_abs_minus": "0.0273512003495"
+                },
+                "4": {
+                  "start": 9,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.1548364585",
+                  "geom_decay": "0.811998535341",
+                  "score": "0.125726977519",
+                  "tail": "0.000207443589576",
+                  "minus": "-0.000189938891316",
+                  "mismatch": "0.47797500003",
+                  "N2_abs_minus": "0.0273512003495"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.000133017693008",
+              "active_len": 13,
+              "onset": 9,
+              "windows": {
+                "2": {
+                  "start": 11,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.193299146006",
+                  "geom_decay": "0.57909507561",
+                  "score": "0.111938583572",
+                  "tail": "8.92651714477e-5",
+                  "minus": "-4.37525215605e-5",
+                  "mismatch": "0.328922570908",
+                  "N2_abs_minus": "0.00857549422585"
+                },
+                "3": {
+                  "start": 11,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.193299146006",
+                  "geom_decay": "0.57909507561",
+                  "score": "0.111938583572",
+                  "tail": "8.92651714477e-5",
+                  "minus": "-4.37525215605e-5",
+                  "mismatch": "0.328922570908",
+                  "N2_abs_minus": "0.00857549422585"
+                },
+                "4": {
+                  "start": 11,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.193299146006",
+                  "geom_decay": "0.57909507561",
+                  "score": "0.111938583572",
+                  "tail": "8.92651714477e-5",
+                  "minus": "-4.37525215605e-5",
+                  "mismatch": "0.328922570908",
+                  "N2_abs_minus": "0.00857549422585"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.000266010252359",
+              "active_len": 13,
+              "onset": 9,
+              "windows": {
+                "2": {
+                  "start": 11,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.192933452991",
+                  "geom_decay": "0.579073450395",
+                  "score": "0.11172264032",
+                  "tail": "0.000177974583702",
+                  "minus": "-8.80356686572e-5",
+                  "mismatch": "0.330948404719",
+                  "N2_abs_minus": "0.0172549910568"
+                },
+                "3": {
+                  "start": 11,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.192933452991",
+                  "geom_decay": "0.579073450395",
+                  "score": "0.11172264032",
+                  "tail": "0.000177974583702",
+                  "minus": "-8.80356686572e-5",
+                  "mismatch": "0.330948404719",
+                  "N2_abs_minus": "0.0172549910568"
+                },
+                "4": {
+                  "start": 11,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.192933452991",
+                  "geom_decay": "0.579073450395",
+                  "score": "0.11172264032",
+                  "tail": "0.000177974583702",
+                  "minus": "-8.80356686572e-5",
+                  "mismatch": "0.330948404719",
+                  "N2_abs_minus": "0.0172549910568"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "extra": "9.49775787544e-5",
+              "active_len": 14,
+              "onset": 12,
+              "windows": {
+                "2": {
+                  "start": 12,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.214283230808",
+                  "geom_decay": "0.258173562469",
+                  "score": "0.0553222650749",
+                  "tail": "8.00711339816e-5",
+                  "minus": "-1.49064447727e-5",
+                  "mismatch": "0.156946986523",
+                  "N2_abs_minus": "0.00381604986182"
+                },
+                "3": {
+                  "start": 12,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.214283230808",
+                  "geom_decay": "0.258173562469",
+                  "score": "0.0553222650749",
+                  "tail": "8.00711339816e-5",
+                  "minus": "-1.49064447727e-5",
+                  "mismatch": "0.156946986523",
+                  "N2_abs_minus": "0.00381604986182"
+                },
+                "4": {
+                  "start": 12,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.214283230808",
+                  "geom_decay": "0.258173562469",
+                  "score": "0.0553222650749",
+                  "tail": "8.00711339816e-5",
+                  "minus": "-1.49064447727e-5",
+                  "mismatch": "0.156946986523",
+                  "N2_abs_minus": "0.00381604986182"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.000189942293",
+              "active_len": 14,
+              "onset": 12,
+              "windows": {
+                "2": {
+                  "start": 12,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.213971144507",
+                  "geom_decay": "0.258105316799",
+                  "score": "0.0552270900387",
+                  "tail": "0.000159764741991",
+                  "minus": "-3.01775510087e-5",
+                  "mismatch": "0.158877470268",
+                  "N2_abs_minus": "0.00772545305824"
+                },
+                "3": {
+                  "start": 12,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.213971144507",
+                  "geom_decay": "0.258105316799",
+                  "score": "0.0552270900387",
+                  "tail": "0.000159764741991",
+                  "minus": "-3.01775510087e-5",
+                  "mismatch": "0.158877470268",
+                  "N2_abs_minus": "0.00772545305824"
+                },
+                "4": {
+                  "start": 12,
+                  "take": 2,
+                  "window_seen": 2,
+                  "avg_height_over_peak": "0.213971144507",
+                  "geom_decay": "0.258105316799",
+                  "score": "0.0552270900387",
+                  "tail": "0.000159764741991",
+                  "minus": "-3.01775510087e-5",
+                  "mismatch": "0.158877470268",
+                  "N2_abs_minus": "0.00772545305824"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "plant",
+      "L": "3.5835189384561100016",
+      "dps": 60,
+      "rows": [
+        {
+          "N": 8,
+          "dim_common": 15,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.025942560238",
+              "active_len": 14,
+              "onset": 14,
+              "windows": {
+                "2": {
+                  "start": 13,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.30729512761",
+                  "minus": "0.281352567372",
+                  "mismatch": "0.915577703949",
+                  "N2_abs_minus": "18.0065643118"
+                },
+                "3": {
+                  "start": 13,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.30729512761",
+                  "minus": "0.281352567372",
+                  "mismatch": "0.915577703949",
+                  "N2_abs_minus": "18.0065643118"
+                },
+                "4": {
+                  "start": 13,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.30729512761",
+                  "minus": "0.281352567372",
+                  "mismatch": "0.915577703949",
+                  "N2_abs_minus": "18.0065643118"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0513034113696",
+              "active_len": 12,
+              "onset": 12,
+              "windows": {
+                "2": {
+                  "start": 11,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.050758918116",
+                  "minus": "-0.000544493253623",
+                  "mismatch": "0.0106131978184",
+                  "N2_abs_minus": "0.0348475682319"
+                },
+                "3": {
+                  "start": 11,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.050758918116",
+                  "minus": "-0.000544493253623",
+                  "mismatch": "0.0106131978184",
+                  "N2_abs_minus": "0.0348475682319"
+                },
+                "4": {
+                  "start": 11,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.050758918116",
+                  "minus": "-0.000544493253623",
+                  "mismatch": "0.0106131978184",
+                  "N2_abs_minus": "0.0348475682319"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 10,
+          "dim_common": 19,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.0156278887936",
+              "active_len": 16,
+              "onset": 16,
+              "windows": {
+                "2": {
+                  "start": 15,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.0117908389785",
+                  "minus": "-0.00383704981505",
+                  "mismatch": "0.24552579467",
+                  "N2_abs_minus": "0.383704981505"
+                },
+                "3": {
+                  "start": 15,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.0117908389785",
+                  "minus": "-0.00383704981505",
+                  "mismatch": "0.24552579467",
+                  "N2_abs_minus": "0.383704981505"
+                },
+                "4": {
+                  "start": 15,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.0117908389785",
+                  "minus": "-0.00383704981505",
+                  "mismatch": "0.24552579467",
+                  "N2_abs_minus": "0.383704981505"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0310509121697",
+              "active_len": 1,
+              "onset": 1,
+              "windows": {
+                "2": {
+                  "start": 0,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00636231060359",
+                  "minus": "-0.0246886015661",
+                  "mismatch": "0.79510068597",
+                  "N2_abs_minus": "2.46886015661"
+                },
+                "3": {
+                  "start": 0,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00636231060359",
+                  "minus": "-0.0246886015661",
+                  "mismatch": "0.79510068597",
+                  "N2_abs_minus": "2.46886015661"
+                },
+                "4": {
+                  "start": 0,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00636231060359",
+                  "minus": "-0.0246886015661",
+                  "mismatch": "0.79510068597",
+                  "N2_abs_minus": "2.46886015661"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 12,
+          "dim_common": 23,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.011645313968",
+              "active_len": 1,
+              "onset": 1,
+              "windows": {
+                "2": {
+                  "start": 0,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00190063809266",
+                  "minus": "-0.00974467587538",
+                  "mismatch": "0.836789450428",
+                  "N2_abs_minus": "1.40323332605"
+                },
+                "3": {
+                  "start": 0,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00190063809266",
+                  "minus": "-0.00974467587538",
+                  "mismatch": "0.836789450428",
+                  "N2_abs_minus": "1.40323332605"
+                },
+                "4": {
+                  "start": 0,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00190063809266",
+                  "minus": "-0.00974467587538",
+                  "mismatch": "0.836789450428",
+                  "N2_abs_minus": "1.40323332605"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0231801662401",
+              "active_len": 2,
+              "onset": 2,
+              "windows": {
+                "2": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "0.879211294176",
+                  "geom_decay": "1.0",
+                  "score": "0.879211294176",
+                  "tail": "0.00331059399572",
+                  "minus": "-0.0198695722443",
+                  "mismatch": "0.857179885535",
+                  "N2_abs_minus": "2.86121840318"
+                },
+                "3": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "0.879211294176",
+                  "geom_decay": "1.0",
+                  "score": "0.879211294176",
+                  "tail": "0.00331059399572",
+                  "minus": "-0.0198695722443",
+                  "mismatch": "0.857179885535",
+                  "N2_abs_minus": "2.86121840318"
+                },
+                "4": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "0.879211294176",
+                  "geom_decay": "1.0",
+                  "score": "0.879211294176",
+                  "tail": "0.00331059399572",
+                  "minus": "-0.0198695722443",
+                  "mismatch": "0.857179885535",
+                  "N2_abs_minus": "2.86121840318"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 14,
+          "dim_common": 27,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.00855322674668",
+              "active_len": 2,
+              "onset": 2,
+              "windows": {
+                "2": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00133478956379",
+                  "minus": "-0.00721843718289",
+                  "mismatch": "0.843943156972",
+                  "N2_abs_minus": "1.41481368785"
+                },
+                "3": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00133478956379",
+                  "minus": "-0.00721843718289",
+                  "mismatch": "0.843943156972",
+                  "N2_abs_minus": "1.41481368785"
+                },
+                "4": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00133478956379",
+                  "minus": "-0.00721843718289",
+                  "mismatch": "0.843943156972",
+                  "N2_abs_minus": "1.41481368785"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0170441661996",
+              "active_len": 2,
+              "onset": 2,
+              "windows": {
+                "2": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00264747476619",
+                  "minus": "-0.0143966914334",
+                  "mismatch": "0.844669740063",
+                  "N2_abs_minus": "2.82175152095"
+                },
+                "3": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00264747476619",
+                  "minus": "-0.0143966914334",
+                  "mismatch": "0.844669740063",
+                  "N2_abs_minus": "2.82175152095"
+                },
+                "4": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00264747476619",
+                  "minus": "-0.0143966914334",
+                  "mismatch": "0.844669740063",
+                  "N2_abs_minus": "2.82175152095"
+                }
+              }
+            }
+          }
+        },
+        {
+          "N": 16,
+          "dim_common": 31,
+          "sigmas": {
+            "1.0": {
+              "extra": "0.00665771637675",
+              "active_len": 1,
+              "onset": 1,
+              "windows": {
+                "2": {
+                  "start": 0,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00123447911055",
+                  "minus": "-0.0054232372662",
+                  "mismatch": "0.814579197927",
+                  "N2_abs_minus": "1.38834874015"
+                },
+                "3": {
+                  "start": 0,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00123447911055",
+                  "minus": "-0.0054232372662",
+                  "mismatch": "0.814579197927",
+                  "N2_abs_minus": "1.38834874015"
+                },
+                "4": {
+                  "start": 0,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "1.0",
+                  "geom_decay": "1.0",
+                  "score": "1.0",
+                  "tail": "0.00123447911055",
+                  "minus": "-0.0054232372662",
+                  "mismatch": "0.814579197927",
+                  "N2_abs_minus": "1.38834874015"
+                }
+              }
+            },
+            "2.0": {
+              "extra": "0.0132781609951",
+              "active_len": 2,
+              "onset": 2,
+              "windows": {
+                "2": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "0.807399264176",
+                  "geom_decay": "1.0",
+                  "score": "0.807399264176",
+                  "tail": "0.00198318826162",
+                  "minus": "-0.0112949727335",
+                  "mismatch": "0.850642851646",
+                  "N2_abs_minus": "2.89151301978"
+                },
+                "3": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "0.807399264176",
+                  "geom_decay": "1.0",
+                  "score": "0.807399264176",
+                  "tail": "0.00198318826162",
+                  "minus": "-0.0112949727335",
+                  "mismatch": "0.850642851646",
+                  "N2_abs_minus": "2.89151301978"
+                },
+                "4": {
+                  "start": 1,
+                  "take": 1,
+                  "window_seen": 1,
+                  "avg_height_over_peak": "0.807399264176",
+                  "geom_decay": "1.0",
+                  "score": "0.807399264176",
+                  "tail": "0.00198318826162",
+                  "minus": "-0.0112949727335",
+                  "mismatch": "0.850642851646",
+                  "N2_abs_minus": "2.89151301978"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

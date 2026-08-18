@@ -1,0 +1,1262 @@
+\subsection{The Gamma--Fourier--Tate boundary construction}
+\label{ss:gammafouriertate}
+
+The local analysis above proves the primitive inequality on a nontrivial
+initial interval and identifies the obstruction to propagation as a shorted
+old/new coupling.  We now construct the arithmetic and archimedean boundary
+data entering that coupling.  The construction is independent of the zeros
+of $\xi$.  It fixes the amplitude, the moving Tate constraints and the
+positive Gamma storage before the remaining estimate is formulated.
+
+\subsubsection{The finite logarithmic boundary port}
+
+Let $\mathcal H_N$ be the Hilbert space with orthonormal basis
+$\{\delta_d:1\leq d\leq N\}$.  For $n\leq N$, let
+$S_n\delta_d=\delta_{nd}$ when $nd\leq N$ and let it be zero otherwise.
+For $t>0$ put
+\begin{equation}\label{eq:newdZetaConnection}
+ \mathscr Z_t=\sum_{n\leq N}n^{-t/2}S_n,
+ \qquad
+ \mathscr C_t=\sum_{n\leq N}\Lambda(n)n^{-t/2}S_n,
+ \qquad Q\delta_d=(\log d)\delta_d.
+\end{equation}
+All the sums in this subsection belong to the finite divisibility algebra.
+In particular, no convergence or domain assertion is implicit.
+
+\begin{lemma}[Finite logarithmic connection]
+\label{lem:newdFiniteConnection}
+One has
+\begin{align}
+ [Q,\mathscr Z_t]&=\mathscr Z_t\mathscr C_t
+                  =\mathscr C_t\mathscr Z_t,
+                  \label{eq:newdCommutator}\\
+ \mathscr Z_t'&=-\tfrac12\mathscr Z_t\mathscr C_t,
+                  \label{eq:newdZetaDerivative}\\
+ (\mathscr Z_t^{-1})'&=\tfrac12\mathscr C_t\mathscr Z_t^{-1}.
+                  \label{eq:newdMobiusDerivative}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+Since $[Q,S_n]=(\log n)S_n$, the coefficient of $S_k$ in the
+commutator is $(\log k)k^{-t/2}$.  The coefficient of $S_k$ in
+$\mathscr Z_t\mathscr C_t$ is
+\[
+ k^{-t/2}\sum_{d\mid k}\Lambda(d)=k^{-t/2}\log k.
+\]
+The algebra is commutative, which proves \eqref{eq:newdCommutator}.
+Termwise differentiation proves \eqref{eq:newdZetaDerivative};
+differentiating $\mathscr Z_t^{-1}\mathscr Z_t=I$ then proves
+\eqref{eq:newdMobiusDerivative}.
+\end{proof}
+
+We record the operator identity for which this connection is needed.  Let
+$G(t)$ be the positive Gram family at a threshold, let
+$v(t)=(-h(t),I)^t$ be its harmonic residual, and let $P_0$ be the old
+coordinate projection.  Write $M_0$ for the old block of $G(t_0)$.  The
+normal equation is $P_0G(t)v(t)=0$.  Hence differentiation gives
+\begin{equation}\label{eq:newdMovingNormal}
+ P_0G'(t_0)v(t_0)=M_0h'(t_0).
+\end{equation}
+Suppose, as in the localized explicit-formula decomposition, that
+\[
+ G'=R^*\mathscr LR-\tfrac12(QG+GQ),
+ \qquad Gv=S\delta_1,
+\]
+where $S>0$ is the scalar normalization.  With
+\[
+ W_{\rm H}=\mathscr L^{1/2}Rv,
+ \qquad H_0=\mathscr L^{1/2}RP_0^*,
+\]
+equation \eqref{eq:newdMovingNormal} becomes
+\begin{equation}\label{eq:newdFiniteExcess}
+ H_0^*W_{\rm H}=M_0h'+B_Q,
+ \qquad
+ B_Q=\frac S2P_0
+ \bigl[-\mathscr C\delta_1+\mathscr Z\mathscr C^*m\bigr],
+ \qquad m=\mathscr Z^{-1}\delta_1,
+\end{equation}
+where the parameter is now fixed and omitted from the notation.
+
+Define the doubled logarithmic boundary port by
+\begin{align}
+ W_\infty
+ &=\sqrt{\frac S2}
+   \binom{\mathscr C\delta_1}{\mathscr C^*m},
+   \label{eq:newdWinfty}\\
+ H_{\infty,0}x
+ &=\sqrt{\frac S2}
+   \binom{P_0^*x}{-\mathscr Z^*P_0^*x}.
+   \label{eq:newdHinfty}
+\end{align}
+
+\begin{theorem}[Exact finite Gamma--Tate amplitude]
+\label{thm:newdAmplitude}
+The port \eqref{eq:newdWinfty}--\eqref{eq:newdHinfty} is defined entirely
+by the finite Euler transport and satisfies
+\begin{equation}\label{eq:newdAmplitude}
+ H_{\infty,0}^*W_\infty=-B_Q.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:newdCompletedDivergence}
+ (H_0^*\oplus H_{\infty,0}^*)
+ (W_{\rm H}\oplus W_\infty)=M_0h'.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Taking the adjoint of \eqref{eq:newdHinfty} and applying it to
+\eqref{eq:newdWinfty} gives
+\[
+ H_{\infty,0}^*W_\infty
+ =\frac S2P_0
+   (\mathscr C\delta_1-\mathscr Z\mathscr C^*m)
+ =-B_Q
+\]
+by \eqref{eq:newdFiniteExcess}.  Adding this equality to
+\eqref{eq:newdFiniteExcess} proves
+\eqref{eq:newdCompletedDivergence}.
+\end{proof}
+
+The theorem fixes both orientations and the normalization of the boundary
+amplitude.  It is an amplitude identity, not an energy inequality: its
+finite-dimensional port cannot be identified with the complete
+infinite-rank Hodge factor.  The continuum realization below uses it only
+for the arithmetic cross-incidence that it computes.
+
+\subsubsection{The moving Tate terminal}
+
+Let $H_0,E$ be Hilbert spaces, let $B_0:H_0\to\C^r$ be bounded and onto,
+and let $B_E:E\to\C^r$ be bounded.  Put
+\begin{equation}\label{eq:newdMovingData}
+ K_0=\ker B_0,
+ \quad G_0=B_0B_0^*,
+ \quad C=B_0^*G_0^{-1}B_E,
+ \quad M=I_E+C^*C=I_E+B_E^*G_0^{-1}B_E.
+\end{equation}
+The enlarged moment map is $B(h,e)=B_0h+B_Ee$.
+
+\begin{theorem}[Conservative update of a moving constraint]
+\label{thm:newdMovingConstraint}
+There is an orthogonal decomposition
+\begin{equation}\label{eq:newdMovingDecomposition}
+ \ker B=(K_0\oplus0)\ \widehat\oplus\
+          \{(-Ce,e):e\in E\}.
+\end{equation}
+Moreover
+\begin{equation}\label{eq:newdMovingIsometry}
+ W:E\longrightarrow H_0\oplus E,
+ \qquad
+ Wx=\binom{-CM^{-1/2}x}{M^{-1/2}x}
+\end{equation}
+is an isometry onto the second summand.  In particular,
+\begin{equation}\label{eq:newdMovingConservation}
+ \|M^{-1/2}x\|^2+\|CM^{-1/2}x\|^2=\|x\|^2.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The surjectivity of $B_0$ gives
+$H_0=K_0\widehat\oplus\operatorname{Ran} B_0^*$.  If $h=k+r$ is the corresponding
+decomposition, then $B(h,e)=0$ is equivalent to $B_0r=-B_Ee$ and hence to
+$r=-B_0^*G_0^{-1}B_Ee=-Ce$.  This proves
+\eqref{eq:newdMovingDecomposition}.  Finally,
+\[
+ \|Wx\|^2
+ =\langle M^{-1/2}x,(I+C^*C)M^{-1/2}x\rangle=\|x\|^2,
+\]
+which proves both remaining assertions.
+\end{proof}
+
+For $I_T=(-T,T)$ take the two Tate moments
+\begin{equation}\label{eq:newdTateMomentMap}
+ B_Tf=
+ \binom{\langle f,e^{t/2}\rangle}{\langle f,e^{-t/2}\rangle}.
+\end{equation}
+Their Gram is
+\begin{equation}\label{eq:newdTateGram}
+ B_TB_T^*=2
+ \begin{pmatrix}\sinh T&T\\T&\sinh T\end{pmatrix},
+\end{equation}
+with eigenvalues $2(\sinh T\pm T)>0$.  Applying
+Theorem~\ref{thm:newdMovingConstraint} to
+$L^2(I_{T'})=L^2(I_T)\oplus L^2(I_{T'}\setminus I_T)$ gives an explicit
+orthogonal update of the primitive space $\ker B_T$.  At the arithmetic
+thresholds
+\[
+ T_N=\tfrac12\log N,
+ \qquad
+ \delta_N=T_{N+1}-T_N=\tfrac12\log\frac{N+1}{N},
+\]
+the two nonzero eigenvalues of $C^*C$ are
+\begin{equation}\label{eq:newdTateReturnEigenvalues}
+ \kappa_{N,\pm}=
+ \frac{\sinh T_{N+1}-\sinh T_N\ \pm\delta_N}
+      {\sinh T_N\ \pm T_N}.
+\end{equation}
+Therefore
+\begin{equation}\label{eq:newdTateReturnDecay}
+ \|C\|^2=\frac1{2N}+o(N^{-1}),
+ \qquad
+ \|CM^{-1/2}\|=O(N^{-1/2}),
+ \qquad
+ \|M^{-1/2}-I\|=O(N^{-1}).
+\end{equation}
+Thus the motion of the two Tate constraints is an explicit conservative
+rank-two terminal; it creates no unidentified projection term.
+
+We next identify the finite incidence column with its physical
+old/new boundary action.  Put $I_N=(-T_N,T_N)$ and
+\[
+ \mathcal E_N=
+ (-T_{N+1},-T_N)\cup(T_N,T_{N+1}).
+\]
+Let $U_n$ be translation by $\log n$ on the zero-extension line and set
+\begin{equation}\label{eq:newdPhysicalIncidence}
+ \mathcal B_N^{\rm ar}
+ =-P_{I_N}\sum_{2\leq n\leq N}
+       \frac{\Lambda(n)}{\sqrt n}(U_n+U_n^*)
+       \big|_{L^2(\mathcal E_N)}.
+\end{equation}
+After separating the two newborn wings, the translated intervals give an
+isometry
+\[
+ \mathfrak S_N:
+ \ell^2\{2,\ldots,N\}\widehat\otimes L^2(\mathcal E_N)
+ \longrightarrow L^2(I_N),
+\]
+where the $n$th coordinate is the unique orientation entering $I_N$.
+
+\begin{proposition}[Physical incidence fibre]
+\label{prop:newdPhysicalIncidence}
+If
+\[
+ \mathbf c_N=\sum_{n=2}^N\frac{\Lambda(n)}{\sqrt n}e_n,
+\]
+then, for every newborn profile $e$,
+\begin{equation}\label{eq:newdPhysicalIncidenceColumn}
+ \mathcal B_N^{\rm ar}e=-\mathfrak S_N(\mathbf c_N\otimes e),
+\end{equation}
+and
+\begin{equation}\label{eq:newdPhysicalIncidenceGram}
+ (\mathcal B_N^{\rm ar})^*\mathcal B_N^{\rm ar}
+ =\left(\sum_{n=2}^N\frac{\Lambda(n)^2}{n}\right)I.
+\end{equation}
+At word depth $k$, the corresponding label column is
+\begin{equation}\label{eq:newdWordColumn}
+ (\log N)^{-k}\mathscr C_N^k\delta_1
+ =\left\{\frac{\Lambda_k(n)}
+                {\sqrt n(\log N)^k}\right\}_{n\leq N}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For a vector on the right newborn wing only $U_n$ enters the old interval;
+for a vector on the left wing only $U_n^*$ enters it.  These translated
+copies are pairwise disjoint, proving
+\eqref{eq:newdPhysicalIncidenceColumn}; isometry gives
+\eqref{eq:newdPhysicalIncidenceGram}.  Multiplication of an integer label by
+$m$ agrees, whenever the result remains in the threshold fibre, with
+physical translation by $\log m$.  Iterating and using Dirichlet convolution
+gives \eqref{eq:newdWordColumn}.
+\end{proof}
+
+\subsubsection{Euler incidence and rational leakage}
+
+On the right-oriented threshold fibre label the interval
+$T_N-\log m+(0,\delta_N)$ by $m\leq N$.  Translation by $\log n$ sends
+$m$ to $mn$, while translation in the opposite direction sends it to
+$m/n$.  The latter remains in the integer fibre exactly when $n\mid m$.
+
+\begin{proposition}[Divisibility and rational-leakage decomposition]
+\label{prop:newdLeakageSplit}
+The finite Euler boundary action is the orthogonal sum of its action on the
+integer divisibility fibre and an action supported on nonintegral rational
+labels.  An integer-labelled cell never overlaps a noninteger-labelled cell
+in positive measure.  Two rational cells labelled by $m/n$ and $m'/n'$ can
+overlap only when
+\begin{equation}\label{eq:newdOverlapCondition}
+ \left|\log\frac{m/n}{m'/n'}\right|<\delta_N.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The assertions about labels follow directly from translation of the cell
+positions.  If $m>kn$, then
+\[
+ \frac{m}{kn}\geq\frac N{N-1}>\frac{N+1}{N}=e^{2\delta_N};
+\]
+if $m<kn$, then $kn/m\geq(N+1)/N$, with equality producing at most an
+endpoint contact.  Hence integer and noninteger cells are orthogonal.
+Two intervals of length $\delta_N$ overlap exactly under
+\eqref{eq:newdOverlapCondition}.
+\end{proof}
+
+Write $\Lambda_k=\Lambda^{*k}$.  For coprime positive integers $a,b$ with
+$b>1$ define
+\begin{equation}\label{eq:newdLeakageCoefficient}
+ \ell_{N,k}(a,b)=
+ \frac1{\sqrt{ab}(\log N)^k}
+ \sum_{d\leq N/\max(a,b)}
+       \frac{\Lambda(bd)\Lambda_k(ad)}d.
+\end{equation}
+Let
+\[
+ \mathscr R_N^{\rm leak}
+ =\{a/b:(a,b)=1,\ b>1,\ \max(a,b)\leq N\},
+\]
+extend $e\in E_N:=L^2(0,\delta_N)$ by zero, and define
+\begin{equation}\label{eq:newdLeakageOperator}
+ L_{N,k}e=\sum_{a/b\in\mathscr R_N^{\rm leak}}
+   \ell_{N,k}(a,b)\,\tau_{\log(a/b)}e,
+ \qquad
+ \mathbf L_Ne=\bigoplus_{k\geq1}L_{N,k}e.
+\end{equation}
+Only finitely many depths occur for a fixed $N$.
+
+\begin{proposition}[Exact aggregation on reduced rational labels]
+\label{prop:newdRationalAggregation}
+The coefficient of the oppositely oriented Euler output on the reduced
+rational cell $a/b$ is the sum in
+\eqref{eq:newdLeakageCoefficient}.  If
+$\kappa_e(u)=\langle\tau_ue,e\rangle$, then
+\begin{align}
+ \|\mathbf L_Ne\|^2
+ ={}&\sum_{k\geq1}
+ \sum_{a/b,c/d\in\mathscr R_N^{\rm leak}}
+ \ell_{N,k}(a,b)\overline{\ell_{N,k}(c,d)}
+ \kappa_e\!\left(\log\frac{ad}{bc}\right).
+ \label{eq:newdLeakageGram}
+\end{align}
+Thus the Gram retains all coherent collisions between equal or nearby
+reduced fractions.
+\end{proposition}
+
+\begin{proof}
+The equality $m/n=a/b$ with $(a,b)=1$ is equivalent to
+$m=ad$, $n=bd$ for a unique positive integer $d$.  Substitution of the
+Euler weight and of the $k$th word column gives
+\eqref{eq:newdLeakageCoefficient}.  Expanding the squared norm in
+\eqref{eq:newdLeakageOperator} gives
+\eqref{eq:newdLeakageGram}, since the inner product of the cells labelled by
+$a/b$ and $c/d$ is $\kappa_e(\log(ad/bc))$.
+\end{proof}
+
+\subsubsection{Positive Gamma storage and the two exterior Tate states}
+
+For $a>0$ and $f\in C_c^\infty(\R)$, let $z_{a,f}$ be the causal state
+\begin{equation}\label{eq:newdGammaState}
+ z_{a,f}'=-az_{a,f}+\sqrt{2a}\,f,
+ \qquad z_{a,f}(-\infty)=0,
+\end{equation}
+and set $g_{a,f}=\sqrt{2a}\,z_{a,f}-f$.
+
+\begin{lemma}[Lossless Gamma state]
+\label{lem:newdGammaState}
+The state satisfies
+\begin{align}
+ \frac d{dt}|z_{a,f}|^2&=|f|^2-|g_{a,f}|^2,
+ \label{eq:newdGammaConservation}\\
+ \frac1{2a}\|f-g_{a,f}\|_2^2
+ &=\frac1{a^2}\int_\R|z_{a,f}'(t)|^2\,dt
+ =\int_\R\frac{2\tau^2}{a(a^2+\tau^2)}
+       |\widehat f(\tau)|^2\frac{d\tau}{2\pi}.
+ \label{eq:newdGammaEnergy}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+Expanding $|g_{a,f}|^2$ and using
+\eqref{eq:newdGammaState} proves
+\eqref{eq:newdGammaConservation}.  Solving
+\eqref{eq:newdGammaState} for $f$ gives
+$f-g_{a,f}=\sqrt{2/a}\,z_{a,f}'$.  Its Fourier multiplier has squared
+modulus $4\tau^2/(a^2+\tau^2)$, proving
+\eqref{eq:newdGammaEnergy}.
+\end{proof}
+
+Put $a_j=2j+\tfrac12$ and define the unreset Gamma energy
+\begin{equation}\label{eq:newdFullGammaEnergy}
+ \mathcal G_\Gamma[f]
+ =\sum_{j\geq0}\frac1{a_j^2}\int_\R|z_{a_j,f}'(t)|^2\,dt
+ =\int_\R g_\Gamma(\tau)|\widehat f(\tau)|^2
+      \frac{d\tau}{2\pi},
+\end{equation}
+where
+\begin{equation}\label{eq:newdGammaMultiplier}
+ g_\Gamma(\tau)=
+ \sum_{j\geq0}\frac{2\tau^2}{a_j(a_j^2+\tau^2)}.
+\end{equation}
+The causal equations are solved once on the real line; states are not reset
+at internal rational-cell endpoints.
+
+For a compactly supported $f$ define
+\begin{equation}\label{eq:newdTateMoments}
+ M_+(f)=\int_\R e^{t/2}f(t)\,dt,
+ \qquad
+ M_-(f)=\int_\R e^{-t/2}f(t)\,dt.
+\end{equation}
+If $I=(L,R)$ contains the support of $f$, the Gram of the two Tate vectors is
+\begin{equation}\label{eq:newdExteriorTateGram}
+ G_I=
+ \begin{pmatrix}
+ e^R-e^L&R-L\\
+ R-L&e^{-L}-e^{-R}
+ \end{pmatrix}>0,
+\end{equation}
+and the squared norm of the Tate component is
+\begin{equation}\label{eq:newdTateTerminalForm}
+ \mathcal T_I[f]=
+ \begin{pmatrix}\overline{M_+(f)}&\overline{M_-(f)}\end{pmatrix}
+ G_I^{-1}
+ \binom{M_+(f)}{M_-(f)}.
+\end{equation}
+The moments in \eqref{eq:newdTateMoments} are exactly the exterior states of
+\eqref{eq:newdGammaState} at $a=1/2$: for
+$\operatorname{supp}f\subset[L,R]$,
+\[
+ z_{1/2,f}(t)=e^{-t/2}M_+(f)\quad(t\geq R),
+\]
+up to the normalization $\sqrt{2a}=1$, and the anticausal state gives
+$e^{t/2}M_-(f)$ on $t\leq L$.
+
+Take one interval containing every cell in
+\eqref{eq:newdLeakageOperator}, for instance
+\begin{equation}\label{eq:newdGlobalLeakageInterval}
+ I_N=\left(-\log N,\ \log\frac N2+\delta_N\right).
+\end{equation}
+The source-defined Gamma--Tate form on the physical leakage column is
+\begin{equation}\label{eq:newdGammaTateForm}
+ \mathcal E_{\Gamma T,N}(e)=
+ \sum_{k\geq1}
+ \bigl\{\mathcal G_\Gamma[L_{N,k}e]
+       +\mathcal T_{I_N}[L_{N,k}e]\bigr\}.
+\end{equation}
+Every term in this form is nonnegative and is determined by prime-power
+weights, the Gamma parameters and the two Tate moments.  In particular, it
+does not use the sign of the primitive Weil form.
+
+\paragraph{The first nontrivial arithmetic cell.}
+The threshold $N=3$ gives
+\begin{equation}\label{eq:newdFirstCellLength}
+ T_3=\tfrac12\log3,
+ \qquad T_4=\log2,
+ \qquad L_3=\delta_3=\tfrac12\log\frac43.
+\end{equation}
+At word depth one the only nonzero nonintegral coefficient is
+\begin{equation}\label{eq:newdFirstLeakageCoefficient}
+ \ell_{3,1}(2,3)
+ =\frac{\Lambda(3)\Lambda(2)}{\sqrt6\log3}
+ =\frac{\log2}{\sqrt6}.
+\end{equation}
+There is no deeper word, because $\Lambda_k(m)=0$ for $m\leq3$ and
+$k\geq2$.  Consequently the complete rational leakage in this threshold
+cell is
+\begin{equation}\label{eq:newdFirstLeakageOutput}
+ \mathbf L_3e=f_e
+ :=\frac{\log2}{\sqrt6}\,
+   \tau_{\log(2/3)}e,
+ \qquad
+ \|f_e\|_2^2=\frac{(\log2)^2}{6}\|e\|_2^2.
+\end{equation}
+
+\begin{theorem}[Complete Gamma--Tate payment on one arithmetic cell]
+\label{thm:newdFirstCellPayment}
+For every $e\in L^2(0,L_3)$, let $f_e$ be given by
+\eqref{eq:newdFirstLeakageOutput}.  Then
+\begin{equation}\label{eq:newdFirstCellPayment}
+ \|\mathbf L_3e\|_2^2
+ \leq \mathcal G_\Gamma[f_e]+\mathcal T_{J_3}[f_e],
+ \qquad
+ J_3=\log(2/3)+(0,L_3).
+\end{equation}
+More precisely, if $\mathcal G_{0}[f]$ denotes the first Gamma-channel
+energy, corresponding to $a_0=1/2$, then
+\begin{equation}\label{eq:newdFirstCellStrictPayment}
+ \|f_e\|_2^2
+ \leq \alpha_3\mathcal G_0[f_e]
+       +\eta_3\mathcal T_{J_3}[f_e],
+\end{equation}
+where
+\begin{equation}\label{eq:newdFirstCellConstants}
+ \alpha_3=\frac14+\frac{L_3^2}{32}<0.251,
+ \qquad
+ \eta_3=\frac{1-e^{-L_3}}2
+       =\frac{2-\sqrt3}{4}<0.067.
+\end{equation}
+Thus the Gamma interior energy and the two exterior Tate states pay the
+whole leakage simultaneously, with a strict positive remainder:
+\begin{align}
+ &\mathcal G_\Gamma[f_e]+\mathcal T_{J_3}[f_e]
+       -\|\mathbf L_3e\|_2^2                              \notag\\
+ &\qquad\geq
+ (1-\alpha_3)\mathcal G_0[f_e]
+ +(1-\eta_3)\mathcal T_{J_3}[f_e]\geq0.
+ \label{eq:newdFirstCellRemainder}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Translation does not change any of the following estimates, so write
+$J_3=(0,L_3)$.  Let $z$ be the causal state of the first Gamma channel,
+\[
+ z'=-\tfrac12z+f_e,
+ \qquad z(0)=0.
+\]
+The initial value vanishes because $f_e$ is supported on this single cell.
+Since $f_e=z'+\tfrac12z$, integration of the cross term gives the exact
+identity
+\begin{equation}\label{eq:newdFirstCellStateIdentity}
+ \|f_e\|_2^2
+ =\|z'\|_2^2+\frac14\|z\|_2^2+\frac12|z(L_3)|^2.
+\end{equation}
+The anchored Cauchy--Schwarz inequality yields
+\[
+ |z(t)|^2
+ \leq t\int_0^t|z'(s)|^2\,ds
+ \leq t\|z'\|_2^2,
+\]
+and hence
+\begin{equation}\label{eq:newdFirstCellPoincare}
+ \|z\|_2^2\leq\frac{L_3^2}{2}\|z'\|_2^2.
+\end{equation}
+By \eqref{eq:newdGammaEnergy} at $a=1/2$,
+\begin{equation}\label{eq:newdFirstCellGammaState}
+ \mathcal G_0[f_e]=4\|z'\|_2^2.
+\end{equation}
+
+It remains to pay the endpoint.  The exterior-state formula gives
+\[
+ z(L_3)=e^{-L_3/2}M_+(f_e).
+\]
+The Tate terminal is the squared norm of the orthogonal projection onto
+$\operatorname{span}\{e^{t/2},e^{-t/2}\}$.  It therefore dominates the
+projection onto the first of these one-dimensional subspaces:
+\begin{equation}\label{eq:newdFirstCellTateProjection}
+ \mathcal T_{J_3}[f_e]
+ \geq\frac{|M_+(f_e)|^2}{\|e^{t/2}\|_{L^2(J_3)}^2}
+ =\frac{|M_+(f_e)|^2}{e^{L_3}-1}.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:newdFirstCellEndpoint}
+ \frac12|z(L_3)|^2
+ \leq\frac{1-e^{-L_3}}2\,\mathcal T_{J_3}[f_e]
+ =\eta_3\mathcal T_{J_3}[f_e].
+\end{equation}
+Substitution of \eqref{eq:newdFirstCellPoincare},
+\eqref{eq:newdFirstCellGammaState} and
+\eqref{eq:newdFirstCellEndpoint} into
+\eqref{eq:newdFirstCellStateIdentity} proves
+\eqref{eq:newdFirstCellStrictPayment}.  Since the full Gamma energy contains
+$\mathcal G_0$ as its first nonnegative summand and both constants in
+\eqref{eq:newdFirstCellConstants} are smaller than one,
+\eqref{eq:newdFirstCellPayment} and
+\eqref{eq:newdFirstCellRemainder} follow.
+\end{proof}
+
+This theorem proves the complete one-cell assertion without a sign
+assumption and without resetting a state inside the cell.  Its causal state
+starts at zero only because, at $N=3$, the whole rational leakage consists
+of the single support interval $J_3$.  For a connected cluster at a later
+threshold, the outgoing state of one rational cell is the incoming state of
+the next; Theorem~\ref{thm:newdFirstCellPayment} cannot be iterated by
+setting those intermediate states to zero.
+
+The same argument in fact applies to a whole connected cluster, provided it
+is applied once on the exterior hull rather than separately on its
+constituent cells.
+
+\begin{lemma}[Gamma--Tate payment on a finite support hull]
+\label{lem:newdClusterHull}
+Let $f\in L^2(\R)$ be supported in an interval $J=(r,r+D)$.  If
+$D<\sqrt{24}$, then
+\begin{equation}\label{eq:newdClusterHullPayment}
+ \|f\|_2^2
+ \leq \alpha(D)\mathcal G_0[f]
+       +\eta(D)\mathcal T_J[f]
+ \leq \mathcal G_\Gamma[f]+\mathcal T_J[f],
+\end{equation}
+where
+\begin{equation}\label{eq:newdClusterHullConstants}
+ \alpha(D)=\frac14+\frac{D^2}{32}<1,
+ \qquad
+ \eta(D)=\frac{1-e^{-D}}2<1.
+\end{equation}
+No disjointness or orthogonality assumption is made inside $J$.
+\end{lemma}
+
+\begin{proof}
+Translate $J$ to $(0,D)$ and solve the first causal Gamma equation once on
+the complete hull:
+\[
+ z'=-\tfrac12z+f,
+ \qquad z(0)=0.
+\]
+There is no condition on $z$ at an internal subdivision.  The proof of
+Theorem~\ref{thm:newdFirstCellPayment}, with $D$ in place of $L_3$, gives
+\begin{align*}
+ \|f\|_2^2
+ &=\|z'\|_2^2+\tfrac14\|z\|_2^2+\tfrac12|z(D)|^2,\\
+ \|z\|_2^2&\leq\tfrac{D^2}{2}\|z'\|_2^2,
+ \qquad
+ \mathcal G_0[f]=4\|z'\|_2^2,\\
+ \tfrac12|z(D)|^2
+ &\leq\tfrac{1-e^{-D}}2\mathcal T_J[f].
+\end{align*}
+Combining these identities proves the first inequality in
+\eqref{eq:newdClusterHullPayment}.  The restriction $D<\sqrt{24}$ is
+exactly $\alpha(D)<1$; the second inequality then follows because the full
+Gamma form contains $\mathcal G_0$ as a nonnegative summand.
+\end{proof}
+
+\paragraph{A three-cell connected cluster.}
+Take $N=10$, word depth $k=1$, and
+\begin{equation}\label{eq:newdThreeCellLabels}
+ q_1=\frac34,
+ \qquad q_2=\frac79,
+ \qquad q_3=\frac45,
+ \qquad
+ \delta_{10}=\frac12\log\frac{11}{10}.
+\end{equation}
+The three coefficients obtained from
+\eqref{eq:newdLeakageCoefficient} are
+\begin{equation}\label{eq:newdThreeCellCoefficients}
+ c_1=\frac{\log2\log3}{\sqrt{12}\log10},
+ \qquad
+ c_2=\frac{\log3\log7}{\sqrt{63}\log10},
+ \qquad
+ c_3=\frac{\log5\log2}{\sqrt{20}\log10}.
+\end{equation}
+They are all nonzero.  Moreover
+\begin{equation}\label{eq:newdThreeCellConnections}
+ \log\frac{q_2}{q_1}=\log\frac{28}{27}<\delta_{10},
+ \qquad
+ \log\frac{q_3}{q_2}=\log\frac{36}{35}<\delta_{10},
+\end{equation}
+so the translated cells overlap in a connected chain.  For
+$e\in L^2(0,\delta_{10})$ define their coherent physical output
+\begin{equation}\label{eq:newdThreeCellOutput}
+ f_{10,e}=\sum_{j=1}^3c_j\tau_{\log q_j}e.
+\end{equation}
+Its support is contained in the single exterior hull
+\begin{equation}\label{eq:newdThreeCellHull}
+ J_{10}=\left(\log\frac34,
+              \log\frac45+\delta_{10}\right),
+ \qquad
+ D_{10}=|J_{10}|=\log\frac{16}{15}
+                 +\frac12\log\frac{11}{10}.
+\end{equation}
+
+\begin{theorem}[Complete payment of a connected three-cell cluster]
+\label{thm:newdThreeCellCluster}
+For every $e\in L^2(0,\delta_{10})$, including profiles for which the
+adjacent translated copies interfere coherently,
+\begin{equation}\label{eq:newdThreeCellPayment}
+ \|f_{10,e}\|_2^2
+ \leq\mathcal G_\Gamma[f_{10,e}]
+      +\mathcal T_{J_{10}}[f_{10,e}].
+\end{equation}
+More precisely,
+\begin{equation}\label{eq:newdThreeCellStrictPayment}
+ \|f_{10,e}\|_2^2
+ \leq\alpha_{10}\mathcal G_0[f_{10,e}]
+      +\eta_{10}\mathcal T_{J_{10}}[f_{10,e}],
+\end{equation}
+where
+\begin{align}
+ \alpha_{10}
+ &=\frac14+\frac1{32}
+   \left(\log\frac{16}{15}
+        +\frac12\log\frac{11}{10}\right)^2
+   <0.251,\notag\\
+ \eta_{10}
+ &=\frac12\left[1-
+   \exp\!\left(-\log\frac{16}{15}
+               -\frac12\log\frac{11}{10}\right)\right]
+   <0.054.                                                   
+ \label{eq:newdThreeCellConstants}
+\end{align}
+Consequently
+\begin{align}
+ &\mathcal G_\Gamma[f_{10,e}]
+  +\mathcal T_{J_{10}}[f_{10,e}]-\|f_{10,e}\|_2^2
+ \notag\\
+ &\qquad\geq
+ (1-\alpha_{10})\mathcal G_0[f_{10,e}]
+ +(1-\eta_{10})\mathcal T_{J_{10}}[f_{10,e}]\geq0.
+ \label{eq:newdThreeCellRemainder}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+The coefficient formulas follow because, for each pair in
+\eqref{eq:newdThreeCellLabels}, the only contributing divisor in
+\eqref{eq:newdLeakageCoefficient} is $d=1$.  Equations
+\eqref{eq:newdThreeCellConnections} prove connectedness, and the extreme
+endpoints give \eqref{eq:newdThreeCellHull}.  Numerically,
+\[
+ D_{10}=0.1121936110\ldots<\sqrt{24},
+ \quad
+ \alpha_{10}=0.2503933564\ldots,
+ \quad
+ \eta_{10}=0.0530644113\ldots.
+\]
+Apply Lemma~\ref{lem:newdClusterHull} directly to the coherent sum
+$f_{10,e}$, before expanding its squared norm.  Therefore every diagonal
+term and every interference term
+\[
+ c_i\overline{c_j}
+ \langle\tau_{\log q_i}e,\tau_{\log q_j}e\rangle
+\]
+is included automatically.  The Gamma state is solved once from the left
+endpoint of $J_{10}$ to its right endpoint and is never reset at either
+internal cell boundary.  This proves
+\eqref{eq:newdThreeCellStrictPayment}; the remaining statements follow as
+in Lemma~\ref{lem:newdClusterHull}.
+\end{proof}
+
+Thus the earlier warning is not an obstruction to finite clusters: it only
+forbids proving a cluster estimate by summing independently reset one-cell
+estimates.  The exterior-hull argument proves every connected cluster with
+hull length $D<\sqrt{24}$.  The following arithmetic separation lemma shows
+that this restriction is automatic for every connected rational-leakage
+cluster.  The point is that the cells respect a fixed family of reciprocal
+half-integer bands.
+
+\begin{theorem}[Reciprocal half-integer band theorem]
+\label{thm:newdHalfIntegerBands}
+Fix $N\geq2$ and a word depth $k$.  Form the intervals
+\[
+ J_q=\log q+(0,\delta_N),
+ \qquad
+ q=a/b\in\mathscr R_N^{\rm leak},
+ \qquad \ell_{N,k}(a,b)>0.
+\]
+Every connected component of $\bigcup_qJ_q$ is contained in one of the
+bands
+\begin{equation}\label{eq:newdArithmeticBands}
+ \left(\log\frac m2,\log\frac{m+1}{2}\right)
+ \quad(m\geq2),
+ \qquad\text{or}\qquad
+ \left(\log\frac2{m+1},\log\frac2m\right)
+ \quad(m\geq2),
+\end{equation}
+up to the possible inclusion of one boundary cell.  In particular, the
+exterior hull of every connected component has length
+\begin{equation}\label{eq:newdUniformClusterDiameter}
+ D_{N,k}^{\rm comp}
+ \leq \log\frac32+\delta_N
+ \leq\frac32\log\frac32
+ <\sqrt{24}.
+\end{equation}
+Consequently every connected component $C$ and every profile
+$e\in L^2(0,\delta_N)$ satisfy, for
+\[
+ f_{C,e}=\sum_{q:\,J_q\subset C}
+          \ell_{N,k}(q)\tau_{\log q}e,
+\]
+the complete estimate
+\begin{equation}\label{eq:newdEveryConnectedClusterPaid}
+ \|f_{C,e}\|_2^2
+ \leq\mathcal G_\Gamma[f_{C,e}]
+      +\mathcal T_{\operatorname{hull}(C)}[f_{C,e}].
+\end{equation}
+This assertion is uniform in $N$, $k$, the number of cells in $C$, and
+all coherent interference among them.
+\end{theorem}
+
+\begin{proof}
+We first prove that a rational cell cannot cross the indicated barriers.
+Let $q=a/b>1$ be reduced, with $a,b\leq N$, and let $r=m/2>q$ be a
+half-integer.  Since $mb-2a$ is a positive integer,
+\[
+ \log\frac rq
+ =\log\frac{mb}{2a}
+ \geq\log\left(1+\frac1{2a}\right)
+ \geq\log\left(1+\frac1{2N}\right).
+\]
+But
+\begin{equation}\label{eq:newdBarrierMargin}
+ \log\left(1+\frac1{2N}\right)
+ >\frac12\log\left(1+\frac1N\right)=\delta_N,
+\end{equation}
+because $(1+1/(2N))^2>1+1/N$.  Hence the right endpoint of $J_q$ lies
+strictly to the left of $\log r$.
+
+For $0<q=a/b<r=2/m$, the positive integer $2b-ma$ gives
+\[
+ \log\frac rq
+ =\log\frac{2b}{ma}
+ \geq\log\left(1+\frac1{ma}\right).
+\]
+Here $ma=2b-(2b-ma)\leq2N-1$, and therefore the last quantity is at least
+$\log(1+1/(2N-1))$, which is strictly larger than the left side of
+\eqref{eq:newdBarrierMargin}, hence larger than $\delta_N$.  Thus no cell
+below a reciprocal barrier $2/m$ crosses it either.  Cells starting on a
+barrier belong only to the band on its right, so they do not join the two
+adjacent open bands.  Notice that this proof uses only $a,b\leq N$; it is
+therefore valid at every word depth and does not depend on which of the
+coefficients happen to vanish.
+
+The consecutive ratios of the band endpoints are
+\[
+ \frac{(m+1)/2}{m/2}=1+\frac1m,
+ \qquad
+ \frac{2/m}{2/(m+1)}=1+\frac1m.
+\]
+Their logarithms are at most $\log(3/2)$ for $m\geq2$.  Adding one cell
+length gives the first inequality in
+\eqref{eq:newdUniformClusterDiameter}; the second follows from
+$\delta_N\leq\delta_2=\tfrac12\log(3/2)$.  Lemma
+\ref{lem:newdClusterHull} now applies once to the complete coherent output
+on each connected component and proves
+\eqref{eq:newdEveryConnectedClusterPaid}.
+\end{proof}
+
+\begin{corollary}[No low-frequency fugitive inside one arithmetic band]
+\label{cor:newdBandCoherence}
+For a connected component $C$ define its positive exponential polynomial
+\[
+ P_C(\tau)=\sum_{q:\,J_q\subset C}\ell_{N,k}(q)q^{-i\tau}.
+\]
+For every $0\leq\omega<\pi/\log(3/2)$ and $|\tau|\leq\omega$ one has
+\begin{equation}\label{eq:newdBandCoherence}
+ c(\omega)P_C(0)\leq |P_C(\tau)|\leq P_C(0),
+ \qquad
+ c(\omega)=
+ \cos\!\left(\frac{\omega}{2}\log\frac32\right)>0.
+\end{equation}
+Thus the translates belonging to a single arithmetic band cannot, at any
+$N$ or word depth, form a low-frequency fugitive profile by destructive
+interference.
+\end{corollary}
+
+\begin{proof}
+Let $x_q=\log q$ and let $x_C$ be the midpoint of the smallest interval
+containing all $x_q$ in $C$.  The band theorem gives
+$|x_q-x_C|\leq\tfrac12\log(3/2)$.  Positivity of the coefficients yields
+\begin{align*}
+ |P_C(\tau)|
+ &\geq \Re\!\left(e^{i\tau x_C}P_C(\tau)\right)\\
+ &=\sum_{q\in C}\ell_{N,k}(q)
+       \cos\bigl(\tau(x_q-x_C)\bigr)\\
+ &\geq
+ \cos\!\left(\frac{\omega}{2}\log\frac32\right)
+ \sum_{q\in C}\ell_{N,k}(q).
+\end{align*}
+The cosine is positive by the assumed range of $\omega$.  The upper bound
+is the triangle inequality.
+\end{proof}
+
+For orientation, direct enumeration of the exact nonzero coefficients at
+depth one gives the following largest connected hulls.  These figures are
+not used in the proof; they display the approach to the sharp first-band
+width $\log(3/2)$.
+\[
+\begin{array}{c|c|c|c}
+N&\text{leftmost label}&\text{rightmost label}&
+ D_{N,1}^{\rm largest}\\ \hline
+10&6/5&4/3&0.1530156\ldots\\
+50&33/49&48/49&0.3845948\ldots\\
+200&133/199&198/199&0.4004117\ldots\\
+1000&665/997&996/997&0.4044600\ldots
+\end{array}
+\]
+
+The theorem removes the possibility of an arbitrarily long connected
+cluster, and Corollary~\ref{cor:newdBandCoherence} removes destructive
+low-frequency interference inside each such cluster.  It does not by
+itself permit one to add
+\eqref{eq:newdEveryConnectedClusterPaid} over disconnected bands: the
+unreset Gamma form and the two global Tate moments contain cross-band
+terms.  The remaining question is therefore a recombination theorem for
+the separated arithmetic bands---equivalently, exclusion of cancellation
+between distinct band polynomials---not a further one-cell or
+connected-cluster estimate.
+
+\paragraph{Audit of causal recombination across the gaps.}
+There is a tempting but incorrect argument which treats decay of the causal
+state in a gap as a negative Schur remainder.  The exact sign is the
+opposite.  To record this point unambiguously, write
+\[
+ A_m=z(\inf C_m),\qquad B_m=z(\sup C_m),\qquad
+ A_{m+1}=e^{-\Delta_m/2}B_m,qquad A_1=0.
+\]
+Summing the exact cluster identities gives
+\begin{align}
+ \frac12\sum_{m=1}^M(|B_m|^2-|A_m|^2)
+ &=\frac12|B_M|^2
+   +\frac12\sum_{m=1}^{M-1}
+      (1-e^{-\Delta_m})|B_m|^2.             
+ \label{eq:newdGapAuditSign}
+\end{align}
+Thus the gap term occurs with a plus sign, not a minus sign.  Equivalently,
+on a gap the equation $z'=-z/2$ gives
+\[
+ 4\int_{\rm gap}|z'|^2
+ =\int_{\rm gap}|z|^2
+ =(1-e^{-\Delta_m})|B_m|^2,
+\]
+and the two positive bulk terms are cancelled exactly by the decrease of
+the endpoint storage when the identity is written on the complete hull;
+they do not produce an additional negative remainder.  Indeed the global
+identity remains
+\begin{equation}\label{eq:newdGlobalStateAuditIdentity}
+ \|f\|_2^2
+ =\frac14\mathcal G_0[f]
+  +\frac14\|z\|_2^2+rac12|B_M|^2.
+\end{equation}
+
+There is a second independent obstruction to that argument.  The anchored
+estimate
+\[
+ \|z\|_{L^2(C_m)}^2
+ \leq\frac{|C_m|^2}{2}\|z'\|_{L^2(C_m)}^2
+\]
+used in Lemma~\ref{lem:newdClusterHull} requires $A_m=0$ and cannot be
+reused for the restriction of the global state to later clusters.  For
+example, the homogeneous state $z(t)=Ae^{-(t-L)/2}$ on an interval of
+length $D$ has
+\[
+ \|z'\|_2^2=\frac14\|z\|_2^2,
+\]
+so the displayed estimate would require $1\leq D^2/8$, which is false for
+all the band lengths in \eqref{eq:newdUniformClusterDiameter}.  An
+arbitrarily small nonzero source perturbation gives the same failure inside
+a genuine later support component.  Therefore causal decay by itself does
+not prove the required recombination; a valid proof must control the
+incoming states or establish the global low-frequency observability
+inequality below.
+
+\paragraph{The single obstruction for arbitrary clusters.}
+The preceding results permit an exact separation of the disconnected-band
+problem.  Since every summand in \eqref{eq:newdGammaMultiplier} is strictly
+increasing for $\tau>0$, while $g_\Gamma(0)=0$ and
+$g_\Gamma(\tau)\to\infty$, there is a unique number
+$\tau_\Gamma>0$ such that
+\begin{equation}\label{eq:newdGammaCutoff}
+ g_\Gamma(\tau_\Gamma)=1.
+\end{equation}
+Numerically, $\tau_\Gamma=0.2860886323\ldots$; the numerical value is not
+used below.  Put $\Omega_\Gamma=(-\tau_\Gamma,\tau_\Gamma)$ and define the
+positive and negative Gamma weights
+\[
+ w_-(\tau)=(1-g_\Gamma(\tau))_+,
+ \qquad
+ w_+(\tau)=(g_\Gamma(\tau)-1)_+.
+\]
+In fact $\tau_\Gamma<1$, because the $j=0$ summand alone gives
+$g_\Gamma(1)>1$, and $1<\pi/\log(3/2)$.  Hence
+Corollary~\ref{cor:newdBandCoherence} applies on the whole deficit window
+$\Omega_\Gamma$: no individual reciprocal half-integer band has a
+low-frequency zero or even an arbitrarily small normalized value there.
+For the $k$th rational leakage output write
+\begin{equation}\label{eq:newdLeakagePolynomial}
+ P_{N,k}(\tau)=
+ \sum_{a/b\in\mathscr R_N^{\rm leak}}
+ \ell_{N,k}(a,b)e^{-i\tau\log(a/b)},
+ \qquad
+ \widehat{L_{N,k}e}(\tau)=\widehat e(\tau)P_{N,k}(\tau).
+\end{equation}
+
+\begin{proposition}[Exact low-frequency reduction]
+\label{prop:newdLowFrequencyReduction}
+The uniform Gamma--Tate estimate
+\eqref{eq:newdUniformSourceEstimate} is equivalent to
+\begin{align}
+ &\sum_{k\geq1}\int_{\Omega_\Gamma}
+    w_-(\tau)|\widehat e(\tau)P_{N,k}(\tau)|^2
+       \frac{d\tau}{2\pi}                                \notag\\
+ &\qquad\leq
+ \sum_{k\geq1}\mathcal T_{I_N}[L_{N,k}e]
+ +\sum_{k\geq1}\int_{\R\setminus\Omega_\Gamma}
+    w_+(\tau)|\widehat e(\tau)P_{N,k}(\tau)|^2
+       \frac{d\tau}{2\pi}.                               
+ \label{eq:newdLowFrequencyObservability}
+\end{align}
+Moreover, because all coefficients
+$\ell_{N,k}(a,b)$ are nonnegative,
+\begin{equation}\label{eq:newdPositiveCoefficientEnvelope}
+ |P_{N,k}(\tau)|^2
+ \leq P_{N,k}(i/2)P_{N,k}(-i/2)
+ \qquad(\tau\in\R).
+\end{equation}
+Thus every frequency outside the fixed compact band
+$\Omega_\Gamma$ is already paid by Gamma.  The only remaining issue is the
+two-moment observability of the arithmetic leakage range inside that band.
+\end{proposition}
+
+\begin{proof}
+For $F_k=L_{N,k}e$, Plancherel and
+\eqref{eq:newdFullGammaEnergy} give
+\begin{align*}
+ &\mathcal G_\Gamma[F_k]+\mathcal T_{I_N}[F_k]-\|F_k\|_2^2\\
+ &\quad=\mathcal T_{I_N}[F_k]
+ +\int_\R(g_\Gamma(\tau)-1)|\widehat F_k(\tau)|^2
+          \frac{d\tau}{2\pi}.
+\end{align*}
+Splitting the integral at $\Omega_\Gamma$, substituting
+\eqref{eq:newdLeakagePolynomial}, and summing over $k$ proves the
+equivalence.  For the envelope, write $q=a/b$ and use Cauchy--Schwarz:
+\begin{align*}
+ |P_{N,k}(\tau)|
+ &\leq\sum_q\ell_{N,k}(q)\\
+ &=\sum_q
+   \sqrt{\ell_{N,k}(q)q^{1/2}}
+   \sqrt{\ell_{N,k}(q)q^{-1/2}}\\
+ &\leq
+ \left(\sum_q\ell_{N,k}(q)q^{1/2}\right)^{1/2}
+ \left(\sum_q\ell_{N,k}(q)q^{-1/2}\right)^{1/2}.
+\end{align*}
+The two factors are $P_{N,k}(i/2)^{1/2}$ and
+$P_{N,k}(-i/2)^{1/2}$, proving
+\eqref{eq:newdPositiveCoefficientEnvelope}.
+\end{proof}
+
+\paragraph{The mean/oscillation Schur decomposition.}
+The preceding band calculation suggests a sharper way to formulate the
+remaining global problem.  Put
+\[
+ \mathfrak A_N[e]=\|\mathbf L_Ne\|_2^2,
+ \qquad
+ \mathfrak Q_N[e]=\mathcal E_{\Gamma T,N}(e),
+ \qquad
+ \mathfrak D_N=\mathfrak Q_N-\mathfrak A_N,
+\]
+and decompose the input cell exactly as
+\begin{equation}\label{eq:newdMeanZeroSplit}
+ E_N=\C u_N\oplus E_N^0,
+ \qquad
+ u_N=\delta_N^{-1/2}\mathbf1_{(0,\delta_N)},
+ \qquad
+ E_N^0=\left\{h:\int_0^{\delta_N}h=0\right\}.
+\end{equation}
+Let $d_N=\mathfrak D_N[u_N]$, let
+$b_N(h)=\mathfrak D_N(u_N,h)$, and let $C_N$ be the restriction of
+$\mathfrak D_N$ to $E_N^0$.
+
+\begin{proposition}[Exact mean/oscillation recombination criterion]
+\label{prop:newdMeanZeroSchur}
+The unit Gamma--Tate estimate at threshold $N$ holds if and only if
+\begin{equation}\label{eq:newdMeanZeroSchurCriterion}
+ C_N\geq0,
+ \qquad
+ b_N\in\operatorname{Ran}C_N^{1/2},
+ \qquad
+ d_N-b_N^*C_N^\dagger b_N\geq0.
+\end{equation}
+Thus the remaining interference problem splits into a coercivity statement
+for zero-mean cell profiles and one scalar Schur inequality for the constant
+profile after all oscillatory profiles have been eliminated.
+\end{proposition}
+
+\begin{proof}
+In the orthogonal decomposition \eqref{eq:newdMeanZeroSplit}, the defect
+form has block matrix
+\[
+ \mathfrak D_N=
+ \begin{pmatrix}d_N&b_N^*\\ b_N&C_N\end{pmatrix}.
+\]
+The generalized Schur-complement criterion for a closed Hermitian form is
+exactly \eqref{eq:newdMeanZeroSchurCriterion}.  Positivity of
+$\mathfrak D_N$ is the unit Gamma--Tate estimate by definition.
+\end{proof}
+
+\paragraph{Finite-dimensional reconnaissance (audit only).}
+To identify which part of Proposition~\ref{prop:newdMeanZeroSchur} carries
+the difficulty, the exact arithmetic coefficients were evaluated on the
+space of twelve-bin piecewise-constant profiles on $(0,\delta_N)$.  The
+table reports the smallest generalized quotient
+$\mathfrak Q_N/\mathfrak A_N$, the same quotient after imposing zero mean,
+and the proportion of the constant defect consumed by its Schur correction.
+\[
+\begin{array}{c|c|c|c}
+N&\min \mathfrak Q_N/\mathfrak A_N&
+\min_{E_N^0}\mathfrak Q_N/\mathfrak A_N&
+b_N^*C_N^{-1}b_N/d_N\\ \hline
+10 &5.1436&8.2823&0.0156\\
+20 &4.9506&8.9386&0.0175\\
+40 &4.8129&9.6305&0.0150\\
+80 &4.5263&10.2950&0.0116\\
+120&4.4563&10.6917&0.0118
+\end{array}
+\]
+Mesh refinement at $N=80$ from six to sixteen bins changes the first
+quotient from $4.5316$ to $4.5263$ and the zero-mean quotient from
+$10.3691$ to $10.2807$.  These computations are neither interval-certified
+nor a proof for arbitrary profiles.  Their consistent structural signal is
+that the prospective minimizer lies in the almost-constant sector, while
+the zero-mean sector has a large Gamma margin and the cross-sector Schur
+correction is small.  Accordingly, the next analytic target is
+\eqref{eq:newdMeanZeroSchurCriterion}, not an unstructured estimate over
+all cell profiles at once.
+
+The restriction to the arithmetic range in
+\eqref{eq:newdLowFrequencyObservability} is essential.  Indeed, choose
+$\varphi\in C_c^\infty(-1/4,1/4)$ with $\|\varphi\|_2=1$ and put
+\begin{equation}\label{eq:newdPlateauFamily}
+ f_D(t)=D^{-1/2}\varphi(t/D),
+ \qquad I_D=(-D/2,D/2).
+\end{equation}
+Then $\|f_D\|_2=1$, whereas
+\begin{equation}\label{eq:newdPlateauEscape}
+ \mathcal G_\Gamma[f_D]\longrightarrow0,
+ \qquad
+ \mathcal T_{I_D}[f_D]\longrightarrow0
+ \qquad(D\to\infty).
+\end{equation}
+For the first limit, substitute
+$\widehat f_D(\tau)=D^{1/2}\widehat\varphi(D\tau)$ and use
+$g_\Gamma(u/D)\to0$ together with the rapid decay of
+$\widehat\varphi$.  For the second, the support of $f_D$ stays a distance
+$D/4$ from both endpoints of $I_D$: its two exponential moments grow at
+most like $D^{1/2}e^{D/8}$, while the corresponding diagonal Tate Grams
+grow like $e^{D/2}$; the off-diagonal entry is only $D$.  Hence the Tate
+projection tends to zero exponentially.
+
+Consequently no support-only argument can prove the unit estimate for an
+aggregate whose disconnected bands have an arbitrarily long exterior
+hull.  The one remaining theorem is precisely that
+outputs of the positive arithmetic polynomials
+$P_{N,k}$ cannot form the escaping family
+\eqref{eq:newdPlateauFamily}; equivalently, they must satisfy the compact
+low-frequency observability inequality
+\eqref{eq:newdLowFrequencyObservability} uniformly in $N$.
+
+\subsubsection{The exact threshold Schur condition}
+
+Let the two physical analysis factors at one threshold have old/new columns
+\[
+ X=(X_0,X_E),\qquad Y=(Y_0,Y_E),
+\]
+and put
+\begin{equation}\label{eq:newdPhysicalBlocks}
+ R_0=X_0^*X_0,
+ \quad L_0=Y_0^*Y_0,
+ \quad r=X_0^*X_E,
+ \quad \ell=Y_0^*Y_E,
+ \quad A_0=R_0-L_0.
+\end{equation}
+Assume the old primitive block $A_0$ is nonnegative and the reference range
+condition $r\in\operatorname{Ran}R_0$ holds.  Define
+\begin{align}
+ H&=R_0^\dagger r,
+ \label{eq:newdReferenceLift}\\
+ S_E&=X_E^*X_E-r^*R_0^\dagger r,
+ \label{eq:newdReferenceSchur}\\
+ Z_E&=Y_E-Y_0H,
+ \qquad
+ b_E=L_0H-\ell.
+ \label{eq:newdOppositeResidual}
+\end{align}
+
+\begin{theorem}[Exact threshold completion criterion]
+\label{thm:newdThresholdCriterion}
+The full old/new signed block $X^*X-Y^*Y$ is nonnegative if and only if
+\begin{equation}\label{eq:newdRangeCondition}
+ b_E\in\operatorname{Ran}A_0^{1/2}
+\end{equation}
+and
+\begin{equation}\label{eq:newdSchurTarget}
+ S_E-Z_E^*Z_E-b_E^*A_0^\dagger b_E\geq0.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The equation $R_0H=r$ gives
+$X_0^*(X_E-X_0H)=0$ and
+\[
+ (X_E-X_0H)^*(X_E-X_0H)=S_E.
+\]
+Hence the reference-harmonic column $v_E=(-H,I)^t$ satisfies
+\[
+ v_E^*(X^*X-Y^*Y)v_E=S_E-Z_E^*Z_E.
+\]
+Its old cross is
+\[
+ (r-\ell)-(R_0-L_0)H=L_0H-\ell=b_E.
+\]
+Congruence by the invertible triangular change from the coordinate newborn
+column to $v_E$ leaves the old block equal to $A_0$ and changes the other
+entries to $b_E$ and $S_E-Z_E^*Z_E$.  The generalized Schur-complement
+criterion gives precisely \eqref{eq:newdRangeCondition} and
+\eqref{eq:newdSchurTarget}.
+\end{proof}
+
+This theorem is the fixed global target.  The preceding construction
+determines the divergence, the moving Tate cell, the complete positive Gamma
+form and the exact rational leakage.  It does not determine the sign in
+\eqref{eq:newdSchurTarget}.
+
+The source construction isolates a concrete sufficient estimate.  Let
+\[
+ \mathscr D_N=
+ \{e\in E_N:\mathcal E_{\Gamma T,N}(e)<\infty\}.
+\]
+It would suffice to prove, with the same unit constant for every arithmetic
+threshold,
+\begin{equation}\label{eq:newdUniformSourceEstimate}
+ \|\mathbf L_Ne\|^2\leq\mathcal E_{\Gamma T,N}(e)
+ \qquad(N\geq2,\ e\in\mathscr D_N).
+\end{equation}
+Indeed, Proposition~\ref{prop:newdLeakageSplit} separates the integer
+incidence from the noninteger leakage.  The former is the finite
+divisibility current of Theorem~\ref{thm:newdAmplitude}; the latter is
+exactly $\mathbf L_Ne$ by
+Proposition~\ref{prop:newdRationalAggregation}.  The right side of
+\eqref{eq:newdUniformSourceEstimate} is the unreset positive Gamma storage
+plus the conservative two-dimensional Tate terminal.  Thus the estimate
+would make the joint boundary source contractive with unit normalization;
+shorting a passive source network would give
+\eqref{eq:newdRangeCondition}--\eqref{eq:newdSchurTarget} at the next
+threshold.  Induction from the certified initial interval would then give
+the primitive inequality for every $T$.
+
+For clarity, \eqref{eq:newdUniformSourceEstimate} is a sufficient
+source-level route, not a definition of the desired Schur complement and not
+an additional conclusion of the identities already proved.  Expanded on the
+test core $C_c^\infty(0,\delta_N)$, it is the explicit inequality
+\begin{align}
+ &\sum_{k\geq1}
+ \sum_{a/b,c/d\in\mathscr R_N^{\rm leak}}
+ \ell_{N,k}(a,b)\overline{\ell_{N,k}(c,d)}
+ \kappa_e\!\left(\log\frac{ad}{bc}\right)
+ \notag\\
+ &\quad\leq
+ \sum_{k\geq1}\int_\R g_\Gamma(\tau)
+ \left|\widehat e(\tau)
+   \sum_{a/b\in\mathscr R_N^{\rm leak}}
+       \ell_{N,k}(a,b)e^{-i\tau\log(a/b)}\right|^2
+ \frac{d\tau}{2\pi}
+ \notag\\
+ &\qquad+
+ \sum_{k\geq1}
+ \begin{pmatrix}
+  \overline{M_+(L_{N,k}e)}&\overline{M_-(L_{N,k}e)}
+ \end{pmatrix}
+ G_{I_N}^{-1}
+ \binom{M_+(L_{N,k}e)}{M_-(L_{N,k}e)}.
+ \label{eq:newdExpandedSourceEstimate}
+\end{align}
+All quantities in \eqref{eq:newdExpandedSourceEstimate} have been defined
+independently of the desired sign.  The unresolved issue is its uniform
+validity, including coherent clusters of nearby rational labels; a cellwise
+argument that resets the Gamma state does not prove it.
+
+\begin{center}
+\fbox{\parbox{0.91\linewidth}{
+\textbf{Open end of row (d).}
+For every threshold, prove the range condition
+$b_E\in\operatorname{Ran}A_0^{1/2}$ and the uniform Schur inequality
+\[
+ S_E-Z_E^*Z_E-b_E^*A_0^\dagger b_E\geq0.
+\]
+Equivalently, construct from the explicit Gamma--Euler--Tate source data a
+Hilbert-space factorization of the corresponding old/new block.  A concrete
+sufficient route is the unit-constant estimate
+\eqref{eq:newdUniformSourceEstimate}, or its expanded form
+\eqref{eq:newdExpandedSourceEstimate}, for every $N$ and every admissible
+cell profile.  This uniform estimate, the global primitive inequality, and
+row~(d) are not proved in the present manuscript.
+}}
+\end{center}

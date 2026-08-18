@@ -26,7 +26,7 @@ modo de borde** es exactamente
 ``` h(λ) = π/(2N+1) ≍ π/(2·(2λ²logλ)) = O(1/(λ²logλ)).
 ```
 *Prueba.* `2N+1≍2·DOF/longitud = 2·(4λ²logλ)/2 = 4λ²logλ`... — **CUIDADO, aquí hay que ser
-honesto sobre qué es `N`.** Dos lecturas de `N` circulan en el programa:
+franco sobre qué es `N`.** Dos lecturas de `N` circulan en el programa:
 - (i) `N` = mitad del tamaño de la matriz de Weil `(2N+1)²`, i.e. `2N+1≍DOF≍4λ²logλ`,
 - (ii) `N` = índice de banda del carrier (modos por unidad de horizonte), `N≍λ²`. Ambas dan `h(λ)→0` pero con tasa distinta: (i) `h≍1/(λ²logλ)`, (ii) `h≍1/λ²`. **No re-derivo
 cuál es la correcta**: el dato físico es `ω*≈0.966π` (RH-PROOF L106), i.e. `h≈0.034π`, lo que
@@ -76,7 +76,7 @@ La fase de borde `h(λ)=π/(2N+1)` y el espaciado de rampa `Δs=Θ(1/logλ)` se 
 *Estatus.* La igualdad `2N+1 = W(λ)` (modos de banda de borde = modos de rampa) es **la hipótesis
 de matcheo**. Es plausible y dimensionalmente correcta, pero **identificar la constante** requiere
 el límite fino del operador (no el conteo). La declaro **probada en orden** (ambos `≍logλ`),
-**abierta en constante**. Es lo honesto. ∎ **Conclusión §2.** (T★-b) está **probado en orden de magnitud**: el ancho de rampa de
+**abierta en constante**. Es lo franco. ∎ **Conclusión §2.** (T★-b) está **probado en orden de magnitud**: el ancho de rampa de
 Landau–Widom es `W(λ)=Θ(logλ)` (Lema 2, vía teorema LW), con espaciado uniforme `Θ(1/logλ)`
 (Lema 3), lo que da **no-degeneración** del borde. La escala "logarítmica" de (T★) ES la escala de
 la rampa de Landau–Widom — confirmado por conteo. **Lo único abierto es la constante de matcheo
@@ -94,7 +94,7 @@ uniforme en λ** (es `ω*/π → const`, no crece). Como `ℓ=O(1)` uniformement
 para todo `η>0` existe `E(η)` con `μ_{Â_λ}([0,E(η)])≥1−η` para todo `λ`. ∎ **Cor 3.1 (tightness ⟹ (H-lim), reciclando).** Por Lema 4 `{Â_λ}` es tight; entonces
 por III.3 (Prokhorov + convergencia fuerte de resolvente, Reed–Simon VIII.21/24),
 `(H-lim)` se prueba **incondicionalmente**. La pieza que faltaba a — *verificar* la
-tightness — la entrega el conteo: **es el defecto sub-principal uniforme** (Lema 4). ∎ **Lo que falta (honesto).** Lema 4(i) usa `‖Â_λ‖`-ventana `=O(1)`, que descansa en (GAP-rampa) y
+tightness — la entrega el conteo: **es el defecto sub-principal uniforme** (Lema 4). ∎ **Lo que falta (franco).** Lema 4(i) usa `‖Â_λ‖`-ventana `=O(1)`, que descansa en (GAP-rampa) y
 en `ε₀≍` (escala de borde). El **piso** `ε₀ > 0` con tasa controlada NO es del conteo (es el
 tamaño `|ε₀|=O(1/logλ)` sólo como cota SUPERIOR; la cota INFERIOR `ε₀ ≳ 1/(λ²logλ)` requiere el
 límite). Si `ε₀` decae más rápido que la cota superior sugiere, la ventana podría no ser `O(1)`.

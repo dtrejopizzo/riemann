@@ -55,7 +55,7 @@ out why gives the program's sharpest statement of the wall:
 > **A spectral gap needs finitely many eigenvalues.** A curve over F_q has finite genus `g` (Frobenius
 > = a `2g×2g` matrix, polarization PD with a gap). ζ has **infinitely many, accumulating** zeros
 > (`N(T)~(T/2π)logT`), so its polarization margin → 0 as λ grows — **gaplessness is the analytic
-> shadow of Spec ℤ having "infinite genus".** The crossing needs an honestly infinite-dimensional
+> shadow of Spec ℤ having "infinite genus".** The crossing needs an candidly infinite-dimensional
 > *regularized* positivity (Deninger regularized determinants), not a finite gap — a theory problem
 > beyond numerics.
 
@@ -63,7 +63,7 @@ Per David's plan, the program stops here on this frontier — now with the obstr
 as "MW-5" but as the structural impossibility of a finite gap for an object with infinitely many zeros.
 | **R3** | `F_q` positive control: build the analog for a curve `ζ_C/F_q`; confirm `L`=Frobenius gives the gap (HL = the proven `F_q` RH). | construct `A` for a known curve; verify gap present where it must be |
 | **R4** | Contrast: show precisely *which* property of `L` exists over `F_q` and is obstructed over Spec ℤ. | the sharp MW-5 statement |
-| **R5** | Verdict + writeup. If R1–R2 cross → RH route; if R3–R4 only pin the obstruction → sharpened MW-5, hand to experts. | honest |
+| **R5** | Verdict + writeup. If R1–R2 cross → RH route; if R3–R4 only pin the obstruction → sharpened MW-5, hand to experts. | candid |
 
 ## Guardrails (unchanged)
 

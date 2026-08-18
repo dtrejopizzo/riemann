@@ -36,3 +36,7 @@ __pycache__/
 01-context/**/*.parquet
 # Large zero tables
 zeros6.txt
+
+# Vendored compiled third-party dependencies (reinstall via pip, not committed)
+vendor/
+__pycache__/

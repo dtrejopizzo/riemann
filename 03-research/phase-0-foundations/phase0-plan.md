@@ -71,7 +71,7 @@ is unconditional or hypothesis-strength.
 - **Technical case:** the weak lemma needed for the detector follows from an *unconditional*
   zero-free region + standard explicit-formula error analysis → Phase 1 is real, do it.
 - **Hypothesis-strength case:** the lemma needs GRH/Lindelöf → the detector theorem is
-  *conditional*; still publishable, but reframe honestly.
+  *conditional*; still publishable, but reframe candidly.
 - **RH-equivalent case:** the full uniform lemma ⟺ RH → stop trying to "prove" it; pivot all
   energy to Phase 3 (structural positivity) and Phase 2 (reformulation).
 

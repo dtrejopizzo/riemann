@@ -1,0 +1,383 @@
+\subsection{Oriented fundamental classes}
+
+\begin{df}
+Let $\sigma$ be a stable structure on vector bundles (\Cref{df:stable_structure}).
+
+Let $f:X \rightarrow S$ be an lci morphism with virtual tangent bundle $\tau_f$,
+ seen as an object of the category $\uK(X)$.
+ A \emph{$\sigma$-orientation} on $f$ is an element $\tilde \tau_f \in \uK^\sigma(X)$ and an isomorphism
+ $o_\sigma(\tilde \tau_f) \simeq \tau_f$ --- in other words, a $\sigma$-orientation of its virtual
+ tangent bundle (\Cref{df:sigma-orientation}).
+ When $\sigma=\sigma_G$ is the stable structure associated with a linear algebraic group $G$ of degree $d$
+ (\Cref{ex:stable_G-structure}), we simply say $G$-orientation.
+\end{df}
+
+%\fred{The most interesting examples come from the orthogonal and symplectic cases.}
+%
+%\fred{Cette définition est particulièrement intéressante dans le cas orthogonal et symplectique,
+% en vue des suites exactes:
+%\begin{align*}
+%{}_\epsilon U(X) \xrightarrow \eta \KO_0(X) \xrightarrow o K_0(X)
+% \xrightarrow{h\circ \gamma_{\beta}} {}_\epsilon U(X) \\
+%{}_\epsilon U(X) \xrightarrow \eta \KSp_0(X) \xrightarrow o K_0(X)
+% \xrightarrow{h\circ \gamma_{\beta}} {}_\epsilon U(X)
+% \end{align*}
+%Grâce à cette suite, on sait qu'un fibré virtuel est orthogonalement resp. symplectiquement
+% orientable ssi son hyperbolisation est triviale, et par ailleurs, on sait
+% que deux orientations diffèrent d'un multiple de $\eta$. Je n'ai pas encore trouvé
+% comment appliquer ces remarques concrètement!}
+
+\begin{ex}\label{ex:orientations}
+\begin{enumerate}
+\item Consider a smooth projective K3-surface over a field. 
+ By definition, its canonical sheaf is trivial. In particular, it admits a symplectic form
+ $\psi:\Lambda^2 T_X \rightarrow \cO_X$.
+%\fred{A quoi correspond l'ensemble des formes symplectiques sur le fibré tangent de $X$ ?}
+ Examples include for instance smooth quartics in $\PP^3_k$, or a generic intersection of a quadric and a cubic in $\PP^4_k$.
+ More generally, any fibre product of $\mathrm{K}3$-surfaces admits a symplectic orientation.
+ Thus, there are varieties over $k$ with a symplectic orientation for any even dimension. More complicated examples in any even dimension can be found in \cite{Beauville83}.
+\item An $\SL^c$-orientation of a smooth morphism $f$ corresponds is a choice of a square root
+ of the determinant $\omega_f$ of the cotangent sheaf $\Omega_f$: $\phi:\omega_f \simeq \mathcal L^{\otimes 2}$.
+This is sometimes simply called an orientation of $f$ (or of $X/S$).
+
+When $f:C \rightarrow \Spec(k)$ is a projective smooth curve over a field,
+such an ($\SL^c$-)orientation is more classically called a $\Theta$-characteristic of $C$.
+\item A symplectic orientation $\tilde \tau_f$ of $f$ uniquely determines
+ an ($\SL^c$-)orientation of $f$.
+\end{enumerate}
+\end{ex}
+
+We can now introduce the oriented fundamental class in the most general case of $\sigma$-structures.
+\begin{df}\label{def:orientedfundamentalclass}
+Let $\sigma$ be a stable structure on vector bundles, as in the previous definition.
+
+Let $\E$ be a $\sigma$-oriented ring spectrum,
+ and $f:X \rightarrow S$ be a $\sigma$-orientable smoothable lci morphism,
+ with virtual dimension $d$, virtual tangent bundle $\tau_f$ and $\sigma$-orientation
+ $\varphi:o_\sigma(\tilde \tau_f)\to \tau_f$.
+
+One defines the \emph{$\sigma$-oriented fundamental class} of $f$ with coefficients in $\E$ as
+ the class 
+$$\tilde \eta_f^\E \in \E_{2d,d}(X/S)$$
+obtained as the image of the
+ fundamental class $\eta_f^\E$ (\Cref{num:fdl_class}) under the inverse of
+ the Thom isomorphism $\gamma_{\tilde \tau_f}:\E_{2d,d}(X/S) \rightarrow \E_{0,0}(X/S,\tau_f)$
+ associated with $\tilde \tau_f$ -- see \Cref{num:sigma-Thom&Euler}.
+\end{df}
+
+\begin{rem}
+Beware that the class $\tilde \eta_f^\E$ depends on the choice of
+ both the $\sigma$-orientation on $\E$ and on $f$: in our notation,
+ it is intended that $\E$ and $f$ are $\sigma$-oriented objects.
+ Similar conventions are taken below.
+\end{rem}
+
+\begin{num}\label{num:sigma_fundamental_classes_ppty}
+The preceding fundamental classes satisfy good properties: 
+ when restricted to the class $\mathcal C$ consisting of $\sigma$-oriented smoothable lci morphisms,
+ they form a system of fundamental classes in the sense of \cite[Def. 2.3.4]{DJK},
+ where the \emph{twist} associated to $f \in \mathcal C$ is the element
+ $e_f=\tw{r_f}$ of $K_0(X)$, the trivial virtual vector bundle whose rank is the of rank of $f$.
+
+In particular, they are normalized, compatible with composition (associativity formula),
+ and satisfy the transversal base change (see \emph{loc. cit.} for details). This follows
+ from the analogue properties of the classes $(\eta_f)$, and the compatibility of Thom isomorphism
+ with pullbacks, and addition (\Cref{num:Thom_iso_explicit}).
+ One also has an excess intersection formula.
+\end{num}
+\begin{prop}\label{prop:sigma_excess_intersection}
+Consider a $\sigma$-oriented ring spectrum, and a cartesian square of schemes
+$$
+\xymatrix@=10pt{
+Y\ar^g[r]\ar_v[d]\ar@{}|\Delta[rd] & T\ar^u[d] \\
+X\ar_f[r] & S
+}
+$$
+such that $f$ and $g$ are smoothable lci and $\sigma$-oriented, $n=\dim(f)$.
+ Let $\xi$ be the excess intersection bundle associated with
+ $\delta$.\footnote{To define $\xi$, one consider a factorisation $X \rightarrow P \rightarrow S$
+ into a regular closed immersion and a smooth morphism, and put, let $Y \rightarrow Q \rightarrow T$
+ be its pullback along $T/S$, and put: $\xi=v^{-1}N_XP/N_YQ$. See e.g. \cite[3.3.3]{DJK}.}
+ We put $\tilde \xi=v^{-1}\tilde \tau_f-\tilde \tau_g$, and see it as a $\sigma$-orientation of $\xi$.
+
+Then the following \emph{excess intersection formula} holds in $\E^{2n,n}(Y/T)$:
+$$
+\Delta^*(\tilde \eta^\E_f)=e(\tilde \xi,\E).\tilde \eta^\E_g.
+$$
+\end{prop}
+
+\begin{num}\textit{Oriented Gysin maps}.\label{num:general_Gysin}
+ As explained in \cite[\textsection 2.4]{DJK} (following \cite{FMP}),
+ one deduces from the previous fundamental classes the existence of Gysin maps in the theories with coefficients
+ in a $\sigma$-oriented ring spectrum.
+ Explicitly, let us consider a $\sigma$-oriented lci smoothable morphism $f:Y \rightarrow X$ of relative dimension $d$.
+ Then one gets:
+\begin{align*}
+f_!^\E&:\E^{n,m}(Y) \rightarrow \E^{n-2d,m-d}(X), &f \text{ proper}, \\
+f^!_\E&:\E_{n,m}(X/S) \rightarrow \E_{n+2d,m+d}(Y/S), &f \text{ $S$-morphism}, \\
+f_!^\E&:\E^{n,m}_c(Y/S) \rightarrow \E^{n-2d,m-d}_c(X/S), &f \text{ $S$-morphism}, \\
+f^!_\E&:\E_{n,m}^c(X/S) \rightarrow \E_{n+2d,m+d}^c(Y/S), &f \text{ proper $S$-morphism}.
+\end{align*}
+These maps are essentially induced by multiplication with the fundamental class $\tilde \eta_f^\E$:
+ see \cite[3.3.2]{Deg16}, \cite[2.4.1]{DJK}.
+ As an example, for $y \in \E^{n,m}(Y)$, one has:
+$$
+f_!(y)=f_*(y.\tilde\eta_f^\E)
+$$
+where the product is taken in the underlying bivariant theory,
+ and lands in $\E_{2d-n,d-m}(Y/X)$, while
+ $f_*:\E_{2d-n,d-m}(Y/X) \rightarrow \E_{2d-n,d-m}(Y/Y)=\E^{n-2d,m-d}(Y/Y)$
+ is the pushforward in bivariant theory. See also \cite[2.4.1]{DJK} in the second case.
+\end{num}
+
+\begin{rem}
+From the properties of $\sigma$-oriented fundamental classes (\Cref{num:sigma_fundamental_classes_ppty}), \Cref{prop:sigma_excess_intersection},
+ one deduces the ``usual'' formulas for these Gysin maps: compatibility with composition,
+ projection formula in the transversal case, excess intersection formula.
+\end{rem}
+
+\begin{num}\textit{Internal Gysin maps}. It is possible to give a more categorical
+ formulation of Gysin maps, in the spirit of Grothendieck's trace map in coherent duality
+ (\cite[III, Th. 10.5]{Hart}) or trace map in the \'etale formalism (\cite[XVIII, Th. 2.9]{SGA4}).
+
+Through the isomorphism $\E_{2d,d}(X/S) \simeq \Hom_{\E\modd_X}(\E_X(d)[2d],f^!\E_S)$,
+ the $\sigma$-oriented fundamental class corresponds to the following composite map,
+ called the \emph{cotrace map}:
+\begin{equation}\label{eq:cotrace}
+\mathrm{cotr}_f^\E:\E_X(d)[2d] \xrightarrow{\gamma_{\tilde v}^{-1}} \E_X\otimes \Th(o(\tilde v))\xrightarrow{\varphi^*}\E_X \otimes \Th(v)
+ \xrightarrow{\eta_f^\E} f^!(\E_S).
+\end{equation}
+The first morphism is the (inverse of the) Thom isomorphism \eqref{eq:sigma_Thom_iso_map}, the second one the stable orientation of $v$
+ and the third one is the fundamental class \eqref{eq:fdl_biv}.
+ By adjunction, one deduces the \emph{trace map}:
+\begin{equation}\label{eq:trace}
+\mathrm{tr}_f^\E:f_!(\E_X)(d)[2d] \rightarrow \E_S.
+\end{equation}
+Both maps can be considered in the category of $\E$-modules or
+ (after forgetting the $\E$-module structure) in the stable homotopy category.
+ They directly induce the Gysin morphisms defined above
+ (see also \cite[\textsection 4.3]{DJK}).
+\end{num}
+
+%\begin{num}\textit{Gysin maps}.
+%As in \cite[2.5]{FMP} or \cite[4.3.3]{DJK}, one deduces from the above definition
+% several exceptional functorialities.
+% Consider the assumption of the previous definition.
+%
+%If $f$ is in addition proper, one gets a \emph{Gysin map}:
+%$$
+%f_!:\E^{n+2d,i+d}(X) \rightarrow \E^{n,i}(S), x \mapsto f_*(\tilde \eta_f^\E.x)
+%$$
+%where $f_*$ refers to the proper covariance of bivariant homology
+% (\Cref{prop:biv_functorial}).
+% Alternatively, this map is simply induced by the map \eqref{eq:trace}
+% and the fact that the functor $f_!$ is the right adjoint of $f^*$
+% (as $f$ is proper).
+%
+%If $f$ is in addition a proper morphism of $B$-schemes of finite type,
+% one gets a pullback map:
+%$$ 
+%f^!:\E_{n,i}(S/B) \rightarrow \E_{n+2d,i+d}(X/B), s \mapsto \tilde \eta_f^\E.s
+%$$
+%using the product of bivariant homology \Cref{prop:biv_product}.
+% This pullback map is also induced by the morphism $p_!(\mathrm{tr}_f^\E)$
+% where $p:S \rightarrow B$ is the structural map.
+%\end{num}
+
+The following result is a tautology, given that the first map
+ in \eqref{eq:cotrace} is always an isomorphism.
+\begin{prop}
+Let $\E$ be  a $\sigma$-oriented ring spectrum
+ and $f$ a smoothable lci $\sigma$-oriented morphism, of relative dimension $d$.
+ Assume that $\E$ is $f$-pure (\Cref{df:f-pure}).
+
+Then, the cotrace map \eqref{eq:cotrace} associated with $f$ and $\E$ is an isomorphism.
+In particular, it induces by functoriality \emph{duality isomorphisms}:
+\begin{align*}
+\E^{n,m}(X) &\xrightarrow{\ \sim\ } \E_{2d-n,d-m}(X/S) \\
+\E^{n,m}_c(X/S) &\xrightarrow{\ \sim\ } \E^c_{2d-n,d-m}(X/S).
+\end{align*}
+In fact, both morphisms are given by multiplication with the $\sigma$-oriented fundamental class $\tilde \eta_f^\E$.
+\end{prop}
+
+\begin{rem}
+In fact, one can extend the first duality isomorphism.
+ Given any $X$-scheme $Y$ of finite type, mutliplication by the class $\tilde \eta_f^\E$ induces an isomorphism:
+$$
+\E^{n,m}(Y/X) \xrightarrow{\ \sim\ } \E_{2d-n,d-m}(Y/S).
+$$
+This statement is actually a generalization of the axiom considered in Bloch-Ogus twisted duality theory
+ (\cite{BlochOgus}).
+\end{rem}
+%
+%\begin{num}
+%Let $X$ be a scheme. We let $\uK(X)$ (resp. $\uKSp(X)$) be the Picard category
+% of virtual vector (resp. symplectic vector) bundles over $X$. 
+% There is a natural (non full) functor:
+%$$
+%\Theta:\uKSp(X) \rightarrow \uK(X).
+%$$
+%\fred{Est-ce que l'image de ce morphisme tombe nécessairement dans les fibrés virtuels de rang pair ?}\jean{Je pense que oui. Tout fibr\'e symplectique est de rang pair, et une diff\'erence formelle est de rang pair.}
+%\end{num}
+%\begin{df}
+%Let $f:X \rightarrow S$ be an lci morphism.
+% A \emph{symplectic orientation} ($\Sp$-orientation for short) on $f$ will the data of a virtual symplectic vector bundle $\tilde \tau_f \in \uKSp(X)$
+% such that $\Theta(\tilde \tau_f)=\tau_f$. When we do not want to refer to a particular $\Sp$-orientation, we say that 
+% $f$ is \emph{symplectically orientable}.
+%\end{df}
+%
+%\fred{Remarque: Cette notion a-t-elle déjà été introduite ? Je pense qu'elle se compare aux Spin-structures des variétés orientables, sauf que $\Sp$ remplace $\SO$.
+%Example: trouver des examples de variétés algébriques lisses admettant une orientation symplectique.}
+%\jean{Je ne sais pas si \c ca  a d\'ej\`a \'et\'e introduit. On peut consid\'erer les exemples suivants:}
+%
+%\begin{ex}
+%Let $k$ be a field. Then, any $\mathrm{K}3$-surface $X$ over $k$ has by definition trivial canonical bundle, and consequently a symplectic tangent bundle. Examples include for instance smooth quartics in $\PP^3_k$, or a generic intersection of a quadric and a cubic in $\PP^4_k$. More generally, any fibre product of $\mathrm{K}3$-surfaces admits a natural symplectic orientation. Thus, there are varieties over $k$ with a symplectic orientation for any even dimension. More complicated examples in any even dimension can be found in \cite{Beauville83}.
+%\end{ex}
+%
+%\jean{As an amusing exercise, we could try to compute the Euler characteristic of any $\mathrm{K}3$-surface. Over the complex numbers, the result should be $24$, but it should be different over a general field $k$. The way to compute it is to find a generic section of $\Omega_{X/k}$ and keep the quadratic information there. More on the subject later.}
+%
+%\begin{ex}
+%Suppose that $S$ is a smooth scheme of dimension $d$ over a field $k$. Let $E$ be a rank $2n$ symplectic bundle on $X$, with $2n\leq d$. Suppose that there is a section $E\xrightarrow{s}\OO_X$ whose vanishing locus $Z$ is of dimension $d-2n$. Then, $Z\to S$ is a lci morphism with normal bundle $E$. It thus has a symplectic orientation.
+%\end{ex}
+%
+%
+%
+%\subsection{Symplectic Todd classes}
+%
+%\subsection{Fundamental classes and the generalized Riemann-Roch formula}
+
+\subsection{Todd classes and GRR formulas}
+
+\begin{num}\label{num:todd}
+As in the preceding section, we consider a stable structure $\sigma$
+ of rank $r$ on vector bundles
+ (\Cref{df:stable_structure}).
+ We also consider $\sigma$-oriented ring spectra $(\E,\thom(-,\E))$ and $(\F,\thom(-,\F))$,
+ and a morphism of ring spectra $\psi:\E \rightarrow \F$.
+ We will generically denote by $\psi_*$ the map of cohomology theories or bivariant theories,
+ with or without support, induced by $\psi$.
+ Given a scheme $X$, we let $\mathrm{K}_0^\sigma(X)$ be the abelian group of isomorphisms classes of objects
+ of $\uK^\sigma(X)$.
+
+From the formalism developed previously,
+ the following fundamental proposition is now obvious.
+\end{num}
+\begin{prop}\label{prop:computeToddclass}
+Consider the above assumption.
+
+Then for any scheme $X$, there exists a unique morphim of abelian groups:
+$$
+\td_\psi:\mathrm{K}_0^\sigma(X) \rightarrow \F^{00}(X)^\times
+$$
+contravariantly functorial in $X$ and such that for any element $\tilde v \in \mathrm{K}^\sigma_0(X)$
+ of rank $n$,
+ the following relation holds in $\F^{2n,n}(\Th(o(\tilde v)))$
+\begin{equation}\label{eq:Todd&Thom}
+\thom(\tilde v,\F)=\td_\psi(\tilde v)\cdot\psi_*(\thom(\tilde v,\E))
+\end{equation}
+using the product of bivariant theories (\Cref{prop:biv_product}).
+
+Moreover, for any $\sigma$-oriented vector bundle $V/X$,
+ with orientation $(\tilde v,\omega)$ where $\tilde v \in \uK^\sigma(X)$ is of rank $n$ and $\omega:o(\tilde v)\simeq V$,
+ one has the following relation between Euler classes in $\F^{2n,n}(X)$:
+\begin{equation}\label{eq:Todd&Euler}
+e(V,\tilde v,\omega,\F)=\td_\psi(\tilde v)\cdot\psi_*(e(V,\tilde v,\omega,\E)).
+\end{equation}
+\end{prop}
+\begin{proof}
+Consider an element $\tilde v \in \uK^\sigma(X)$, and put $v=o(\tilde v)$.
+ According to \Cref{num:Thom_iso_explicit}, the Thom class $\th(v)$
+ forms a basis of the bigraded $\F^{**}(X)$-module $\F^{**}(\Th(v))$.
+ Therefore, the existence and uniqueness of $\td_\psi(\tilde v)$ is obvious,
+ except that one has to prove that the latter class depends only on the isomorphism
+ class of $\tilde v$.
+ Assume there exists an isomorphism $\tilde \mu:\tilde v \rightarrow \tilde v'$ in $\uK^\sigma(X)$.
+One deduces an isomorphism $\mu:v=o(\tilde v) \rightarrow o(\tilde v')=v'$ of virtual vector
+ bundles. By compatibility of Thom classes with isomorphisms,
+ one deduces the following relations, where $\epsilon=\E,\F$:
+$$
+\mu_*(\thom^\epsilon(\tilde v))=\thom^\epsilon(\tilde v').
+$$
+Thus the statement follows from relation \eqref{eq:Todd&Thom} and the uniqueness
+ of $\td_\varphi(-)$.
+ Finally, relation \eqref{eq:Todd&Euler} follows from the definition given in \Cref{num:sigma-Thom&Euler}
+ and relation \eqref{eq:Todd&Thom}. 
+\end{proof}
+
+\begin{rem}
+The main problem of the theory of Todd classes given by the above proposition
+ is to find methods to obtain them explicitly. In the $\GL$ (resp. $\Sp$) oriented case,
+ we have a theory of characteristic classes and a splitting principle
+ that will allow us to express Todd classes as formal power series and to have
+ an effective tool to compute them.
+\end{rem}
+
+As an immediate corollary, one obtains the generalized
+ Grothendieck-Riemann-Roch formula \emph{à la} Fulton-MacPherson:
+\begin{thm}[Grothendieck-Riemann-Roch formula]\label{thm:GRR}
+Consider the assumptions of the previous proposition.
+ Let $f:Y \rightarrow X$ be a smoothable lci morphism of dimension $d$,
+ which is $\sigma$-oriented with $\sigma$-orientation $\tilde \tau_f$. Then the following GRR formula holds in $\F^{2d,d}(Y/X)$:
+$$
+\psi_*(\tilde\eta_f^\E)=\td_\psi(\tilde \tau_f)\cdot\tilde\eta_f^\F.
+$$
+Consequently, the following diagrams commute
+\[
+\xymatrix@=16pt@C=44pt{
+\E^{**}(Y)\ar^{f_!^\E}[r]\ar_{\td_\psi(\tilde \tau_f).\psi_*}[d]\ar@{}|{(1)}[rd] & \E^{**}(X)\ar^{\psi_*}[d] 
+ & \E_{**}(X/S)\ar^{f^!_\E}[r]\ar_{\td_\psi(\tilde \tau_f).\psi_*}[d]\ar@{}|{(2)}[rd] & \E_{**}(Y/S)\ar^{\psi_*}[d] \\
+\F^{**}(Y)\ar_{f_!^\F}[r] & \F^{**}(X)
+ & \F_{**}(X/S)\ar_{f^!_\F}[r] & \F_{**}(Y/S) \\
+\E^{**}_c(Y/S)\ar^{f_!^\E}[r]\ar_{\td_\psi(\tilde \tau_f).\psi_*}[d]\ar@{}|{(3)}[rd] & \E^{**}_c(X/S)\ar^{\psi_*}[d]
+ & \E_{**}^c(X/S)\ar^{f^!_\E}[r]\ar_{\td_\psi(\tilde \tau_f).\psi_*}[d]\ar@{}|{(4)}[rd] & \E_{**}^c(Y/S)\ar^{\psi_*}[d] \\
+\F^{**}_c(Y/S)\ar_{f_!^\F}[r] & \F^{**}_c(X/S)
+ & \F_{**}^c(X/S)\ar_{f^!_\F}[r] & \F_{**}^c(Y/S) 
+}
+\]
+where the $!$-maps are the Gysin morphisms as defined in \Cref{num:general_Gysin},
+that exist under the following assumptions:
+\begin{enumerate}
+\item[(a)] $f$ is proper in cases (1) and (4);
+\item[(b)] $f$ is a morphism of finite type $S$-schemes in cases (2), (3) and (4).
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Recall first from \eqref{eq:cotrace} that the $\sigma$-oriented fundamental class is obtained from the cotrace map
+\[
+\tilde\eta_f^\E\colon\E_X(d)[2d] \xrightarrow{(\gamma_{\tilde \tau_f}^{\E})^{-1}} \E_X\otimes \Th(o(\tilde \tau_f))\xrightarrow{\varphi^*}\E_X \otimes \Th(\tau_f)
+\xrightarrow{\eta_f^\E} f^!(\E_S).
+\]
+Applying $\psi_*$ and using the fact that it respects the \emph{non oriented} fundamental classes of \Cref{num:fdl_class}, we obtain 
+\[
+\psi_*(\tilde\eta_f^\E)\colon\F_X(d)[2d] \xrightarrow{\psi_*(\gamma_{\tilde \tau_f}^{\E})^{-1}} \F_X\otimes \Th(o(\tau_f))\xrightarrow{\varphi^*}\F_X \otimes \Th(\tau_f)
+\xrightarrow{\eta_f^\F} f^!(\F_S).
+\]
+From \eqref{eq:Todd&Thom} and \eqref{eq:thomclass} we deduce that $\psi_*(\gamma_{\tilde \tau_f}^{\E})^{-1}=(\gamma_{\tilde \tau_f}^{\F})^{-1}\cdot \td_{\psi}(\tilde \tau_f)$, yielding the equality $\psi_*(\tilde\eta_f^\E)=\td_\psi(\tilde \tau_f)\cdot\tilde\eta_f^\F$. The displayed diagrams then commute in view of definition \Cref{num:general_Gysin}.
+\end{proof}
+
+ 
+%\begin{cor}
+%Consider the assumptions of the above theorem.
+% Then the following diagrams commute:
+%$$
+%\xymatrix@=16pt@C=44pt{
+%\E^{**}(Y)\ar^{f_!^\E}[r]\ar_{\varphi_*}[d]\ar@{}|{(1)}[rd] & \E^{**}(X)\ar^{\varphi_*}[d] 
+% & \E_{**}(X/S)\ar^{f^!_\E}[r]\ar_{\varphi_*}[d]\ar@{}|{(2)}[rd] & \E_{**}(Y/S)\ar^{\varphi_*}[d] \\
+%\F^{**}(Y)\ar_{\td_\varphi(\tilde \tau_f).f_!^\F}[r] & \F^{**}(X)
+% & \F_{**}(X/S)\ar_{\td_\varphi(\tilde \tau_f).f^!_\F}[r] & \F_{**}(Y/S) \\
+%\E^{**}_c(Y/S)\ar^{f_!^\E}[r]\ar_{\varphi_*}[d]\ar@{}|{(3)}[rd] & \E^{**}_c(X/S)\ar^{\varphi_*}[d]
+% & \E_{**}^c(X/S)\ar^{f^!_\E}[r]\ar_{\varphi_*}[d]\ar@{}|{(4)}[rd] & \E_{**}^c(Y/S)\ar^{\varphi_*}[d] \\
+%\F^{**}_c(Y/S)\ar_{\td_\varphi(\tilde \tau_f).f_!^\F}[r] & \F^{**}_c(X/S)
+% & \F_{**}^c(X/S)\ar_{\td_\varphi(\tilde \tau_f).f^!_\F}[r] & \F_{**}^c(Y/S) 
+%}
+%$$
+%where the $!$-maps are Gysin morphisms as defined in \Cref{num:general_Gysin},
+% and we add the following assumptions:
+%\begin{enumerate}
+%\item[(a)] $f$ is proper in cases (1) and (4);
+%\item[(b)] $f$ is a morphism of finite type $S$-schemes in cases (2), (3) and (4).
+%\end{enumerate}
+%\end{cor}
+%This is a direct corollary of the previous theorem, given the definitions
+% of \Cref{num:general_Gysin}.

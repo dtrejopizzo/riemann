@@ -77,7 +77,7 @@ lives at the meeting point `Lambda = 0`.
   `delta(Z^{-1}delta Z)+(Z^{-1}delta Z)^2=Z^{-1}delta^2Z`; it closes the internal Euler curvature but
   shows that the missing sign is exactly the Gamma-Euler dissipativity theorem.
 
-## Honesty contract
+## Candor contract
 
 Carried from Phase 67-69. The dBN framework is real and active (Rodgers-Tao); the NEW work is connecting
 its monotonicity to our terminal defect. No fabricated closure; audit the audits. If the flow gives only

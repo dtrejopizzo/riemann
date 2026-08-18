@@ -2,7 +2,7 @@
 
 *Self-audit (2026-06-29), requested before moving to the spectral-shift thread: re-examine the claim
 in `FACE-C-structure-function-fork.md` §2 that the phase-monotonicity proof died. Verdict: the **stated
-cause of death was an invalid argument**, now withdrawn. The honest status is that the proof is a
+cause of death was an invalid argument**, now withdrawn. The candid status is that the proof is a
 **valid reduction of RH to a Hurwitz-safe convergence** $E_P\to\Xi$ — neither dead (no flaw found) nor
 complete (the convergence is itself RH-strength). This corrects an over-eager burial. No proof of RH.*
 
@@ -31,7 +31,7 @@ D_P$" from it is a non-sequitur.
 \item I never proved $E_P\to E_\infty\ne\Xi$. I asserted it. There is no computation behind it.
 \item It contradicts \textbf{Hurwitz's theorem}: if $E_P$ are HB (no zeros in open $\C_+$) and
 $E_P\to F\not\equiv0$ locally uniformly, then $F$ has no zeros in open $\C_+$. So HB \emph{is} preserved
-under honest locally-uniform limits — the generic "limits don't preserve HB" intuition is false here.
+under candid locally-uniform limits — the generic "limits don't preserve HB" intuition is false here.
 \end{itemize}
 \end{auditbox}
 
@@ -73,7 +73,7 @@ positivity or a zero-sum bound.
 ## §5. Verdict
 
 The proof did **not** die from a flaw; my obituary used an invalid argument and is retracted. The
-honest state: the phase-monotonicity argument is a **valid reduction of RH to the Hurwitz-safe
+candid state: the phase-monotonicity argument is a **valid reduction of RH to the Hurwitz-safe
 convergence $E_P\to\Xi$**, which is open and RH-strength. This is the correct, cold status — neither a
 crossing nor a corpse. Lesson logged: a reduction-to-RH-strength is not the same as a dead proof; do not
 bury a reduction with a hand-waved decoupling. The earlier rigidity-note phrase "signature-blind

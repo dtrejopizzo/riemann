@@ -133,7 +133,7 @@ da autovalor negativo solo en finitas ventanas, que la truncación $A^{(N)}\in\m
 con la calibración M1 (cosh: $m$ finito ⟹ símbolo estrictamente positivo). La errata 2 de E46.4 (caso
 degenerado de 5.2(iv), $\vartheta_n\leq\omega_n$) NO es invocada por 144.8. ✓
 
-### 2.3. El matiz honesto (no portante)
+### 2.3. El matiz franco (no portante)
 
 El paréntesis de 144.8(a) "$\sigma(Q)=\sigma(Q^{\mathrm{aut}})$, débilmente **(y estrictamente)** positivo"
 depende de modelar la cola $e^{-\gamma_j}$ como estrictamente sub-resolución ($\theta_j=0$, absorbida en
@@ -209,7 +209,7 @@ exigente). Es decir: la falla de invariancia reintroduce exactamente la **consta
 el Teorema 141.A diagnosticó como la trivialización del calendario libre, ahora en miniatura (un factor
 constante, no un calendario arbitrario). No mata la ruta — un factor constante sobre la clase $\log$ es
 infinitamente más benigno que el calendario adaptado $a_Z$ de 141.A — pero **debe declararse**: la versión
-honesta de la ruta es
+franca de la ruta es
 $$m<\infty\ \Longleftarrow\ \bigl[\sigma_{C\log}(Q)\geq0\ \text{débil }\forall C\in\mathbb N\bigr]\ \wedge\ \text{144.D}.$$
 La misma corrección aplica a la Prop. 144.9(b) del Doc 144 ("DH satisface LP-134$^{(\log)}$... a fortiori
 LP-141" — a fortiori LP-141$(C\log)$ para algún $C$, no LP-141$(\log)$), y retro-aplica a la Prop.
@@ -431,7 +431,7 @@ que FAVORECE al Doc 144:
 
 ### 5.3. Efecto neto sobre el programa
 
-1. La ruta mínima de la mitad Fredholm queda, en su forma honesta:
+1. La ruta mínima de la mitad Fredholm queda, en su forma franca:
    $$m<\infty\ \Longleftarrow\ \bigl[\sigma_{C\log}(Q)\ \text{débilmente positivo}\ \forall C\in\mathbb N\bigr]\ \wedge\ \text{144.D},$$
    con el cuantificador en $C$ explícito (consecuencia de §3.2–3.3; antes estaba oculto).
 2. GAP-141.DH se re-abre en su mitad fina: el dato pendiente es $\liminf_j\delta_j\log\gamma_j$ para D–H
@@ -479,7 +479,7 @@ que FAVORECE al Doc 144:
    liminf absorbe constantes, el umbral "$\geq1$" no. Reparación: LP-134$^{(\psi)}\Rightarrow\exists C:
    \mathrm{LP\text{-}141}(C\psi)$, y 144.D $\Rightarrow\mathrm{LP\text{-}141}(C(F)\log)$ con $C(F)$ interna
    a la función — la constante interna al mundo de 141.A/P43 reaparece (en miniatura) dentro del propio
-   pivote, y la sinergia honesta exige positividad débil del símbolo sobre toda la familia
+   pivote, y la sinergia franca exige positividad débil del símbolo sobre toda la familia
    $\{C\log\}_{C\in\mathbb N}$, no sobre un calendario único.
 3. **[REPARACIÓN — Doc 144] La cadena de fuerza 144.6 tiene el primer separador mal citado** (141.P4(iii)
    da LP-141⟹̸Axioma R, que no separa Axioma R ≻ LP-134); el separador correcto es trivial y queda probado

@@ -11,7 +11,7 @@ responde la pregunta con precisión total, incluida la parte que duele.
 
 **Contrato creativo (regla absoluta de etiquetado):** **[DEFINICIÓN-NUEVA]** = libertad total.
 **[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado DE VERDAD acá, prueba completa, estándar máximo; resultados
-externos citados con precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con ζ/RH con estatus honesto
+externos citados con precisión. **[CÁLCULO]** = mostrado. **[PUENTE]** = conexión con ζ/RH con estatus franco
 de cada eslabón. **[DESEO]** = declarado sin vergüenza. **[GAP]** = declarado.
 
 **Prerrequisitos leídos en fuente esta sesión:** Doc 132 (B.4 y su prueba; el contraejemplo
@@ -313,7 +313,7 @@ El **campo de Weil a calendario $a$** es $\{(H_n,Q_n)\}$; su símbolo es $\sigma
 ventana: los bloques $E+\Pi_{\mathrm{predicho}}$ del Doc 108 (3.1) con el déficit $\Delta K$ puesto a cero —
 computable sin posiciones de ceros (Doc 108, Def. 3.6 y Teorema 4.1).
 
-**[Estatus de la Definición 3.6 — honestidad].** Que estas compresiones existen con la normalización dicha y que
+**[Estatus de la Definición 3.6 — franqueza].** Que estas compresiones existen con la normalización dicha y que
 la sección es acotada usa el aparato de realizabilidad del Doc 107/108 (Lema 2.4 del Doc 108 y su caveat
 declarado, mismo estatus acá: Hipótesis D del juguete para los enunciados bajo ¬RH; bajo RH la normalización es
 la diagonal exacta de la Prop. 2.2 del Doc 108). La acotación uniforme de $\|Q_n\|$ en la normalización por mar
@@ -782,7 +782,7 @@ $\theta_j\geq c_0$ para todo $j$ con $\gamma_j$ grande ((V2)): el estrato fino y
 VACÍOS, y entonces (Teoremas 5.1+5.3) **$m<\infty\iff$ positividad estricta del símbolo a UN calendario** — la
 mitad Fredholm de la arquitectura D-109 se vuelve un único enunciado C*-algebraico. $\square$ (5.1, 5.3, (V2).)
 
-**Estatus y carácter de LP-134, con honestidad total.** (1) **No es RH** ni la implica: un mundo con un
+**Estatus y carácter de LP-134, con franqueza total.** (1) **No es RH** ni la implica: un mundo con un
 cuádruplo en $\delta=\tfrac14$ satisface LP-134 y viola RH. (2) **No se sigue de nada conocido:** la región
 libre de ceros clásica (Vinogradov–Korobov) repele de $\mathrm{Re}\,s=1$, no de $\mathrm{Re}\,s=\tfrac12$; los
 teoremas de densidad ($N(\sigma,T)=o(T)$) acotan cuántos, no cuán cerca. Que yo sepa, NINGÚN enunciado del
@@ -925,7 +925,7 @@ $\Lambda$ como tiempo de absorción en el ideal compacto.
 **Transmutación localizada con dividendos — ni teorema-puente ni muerte seca.**
 
 1. **La pregunta del encargo ("¿forma de Weil = símbolo autónomo + compacto?") tiene respuesta exacta: depende
-   de la normalización, y las dos opciones honestas fallan por razones duales y demostradas.** Peso fijo: sí se
+   de la normalización, y las dos opciones francas fallan por razones duales y demostradas.** Peso fijo: sí se
    descompone (off compacto), pero el símbolo no tiene gap que ofrecer (Teorema 2.2) y sin gap no hay nada
    (Teorema 1.3: la estricta es exactamente la finitud robusta). Ventanas: el símbolo existe (Lemas 3.2–3.3),
    tiene gap autónomo, y los negativos de ¬RH se estratifican: gordos en el símbolo (5.1), finos en la frontera

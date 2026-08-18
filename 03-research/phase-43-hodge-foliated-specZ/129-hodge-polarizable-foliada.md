@@ -282,7 +282,7 @@ Desglose:
 
 ---
 
-## 8. Honestidad y registro
+## 8. Franqueza y registro
 
 Ningún teorema nuevo se probó. Se **leyó en fuente** (math/0204111 vía ar5iv: definición de foliación Kähler–Riemann, hojas Kähler dim_ℂ $g$, Hard Lefschetz Prop. 4.3, polarización Prop. 4.4, positividad $Q(\xi,J\bar\xi)>0$, origen en la descomposición de Álvarez López–Kordyukov; math/0204194 vía ar5iv: el ejemplo de la curva elíptica, hojas $\mathcal F_{\mathcal L}$ = curvas complejas dim_ℂ 1, fórmula explícita = índice transversal; Morishita 2508.15971 vía HTML: $\mathfrak X_K=\check X_K(\mathbb C)\times_{\mathbb Q_+}\mathbb R_+$, transversal profinito dim 0, hojas reales, **sin estructura compleja**, mapa $\Psi_F$ anti-equivariante; WebSearch: la definición de estructura compleja foliada y la confirmación de que el espacio de Spec ℤ sigue sin construirse) y se **calculó** el diccionario dimensional con el cuadrado de Doc 125.
 

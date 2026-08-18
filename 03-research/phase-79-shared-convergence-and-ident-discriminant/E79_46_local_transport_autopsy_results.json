@@ -1,0 +1,85 @@
+{
+  "statement": "E79.46 local transport autopsy",
+  "window": 4,
+  "supports_local": [
+    {
+      "N": 8,
+      "support": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "N": 10,
+      "support": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "N": 12,
+      "support": [
+        0
+      ]
+    },
+    {
+      "N": 14,
+      "support": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "N": 16,
+      "support": [
+        1,
+        3
+      ]
+    }
+  ],
+  "perfect_rules": [],
+  "best_rule": {
+    "shift": -1,
+    "add": [
+      1,
+      3
+    ],
+    "remove": [
+      2
+    ],
+    "predictions": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        3
+      ]
+    ],
+    "distances": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "total_distance": 5,
+    "exact_hits": 0,
+    "complexity": 3
+  }
+}

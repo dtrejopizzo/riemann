@@ -69,7 +69,7 @@ large-deviation rate function) that the analytic/probabilistic pictures do not m
   the cohomological route reduces to a Hodge positivity, so a *genuinely new* discreteness remains the missing
   idea.
 
-## 4. Honest framing (per the advisor, accepted)
+## 4. Candid framing (per the advisor, accepted)
 
 - This is **RH-independent structural mathematics** — its value does not depend on the RH chain. It answers
   "why ω-exponents $=$ $k^2$ moments" rigorously, and opens the ω large-deviation view of the freezing.

@@ -2,7 +2,7 @@
 
 **Author: David Alejandro Trejo Pizzo · 2026-06-04.** Figure: `deeprun_M10.1-M10.3.png`.
 The deeper Colab run (basis dim $M=25$, heights to $T=10^4$) sharpens M10.1–M10.2 and **corrects an
-over-optimistic reading of M10.3** — which is exactly why we ran it deeper. Honest analysis below.
+over-optimistic reading of M10.3** — which is exactly why we ran it deeper. Candid analysis below.
 
 ---
 
@@ -35,7 +35,7 @@ resolves. Confirms: the **primitive form is definite**; the degeneration was tri
 | **10⁴** | 20/25 | **0.111** | **0.313** | 1.13 |
 
 **The new fact: at $T=10^4$ the regularized gap dropped to $0.111$ — about half the $\sim0.28$ plateau.**
-The earlier (T≤3000) "stability" was a too-short range. Two honest readings, and the data discriminates:
+The earlier (T≤3000) "stability" was a too-short range. Two candid readings, and the data discriminates:
 
 > **The regularized gap obeys $\boxed{\lambda_{\min}(G)\approx\tfrac{\pi^2}{6}\,\beta_{\min}^2}$** — the
 > **squared tightest normalized gap** (the $2\times2$ sine-kernel level-repulsion law,
@@ -47,7 +47,7 @@ $\beta_{\min}$ is the min of $\sim19$ GUE gaps — a *fluctuating* quantity (the
 fluctuation, not proven systematic decay). **But the uniform infimum over *all* windows is set by the GLOBAL
 tightest Lehmer pairs, and $\inf\beta_{\min}\to0$ (the Lehmer phenomenon), so $\inf\lambda_{\min}(G)\to0$.**
 
-## Honest conclusion of the deep run
+## Candid conclusion of the deep run
 
 > **The regularized Hodge index gap is NOT uniformly bounded below in the naive sense: it equals
 > $\tfrac{\pi^2}{6}\beta_{\min}^2$, so it dips wherever a tight pair sits and its infimum $\to0$ at the Lehmer

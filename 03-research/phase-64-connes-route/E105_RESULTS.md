@@ -20,7 +20,7 @@ with `s_± = ½+ω±iz`. This is the claimed "restricted tensor product of local
 | **(3) assembled product passive** (Pick matrix, strip `Im z<½+ω`) | **PSD**, min eig = **+8.8e-3** → the global colligation is passive as a product, for ω>½ |
 | (1) individual scalar local factors `|Θ_p|≤1`? | **NO** — `|Θ_p|` up to 1.16 (p=3), 1.05 (p=7) in the strip |
 
-## The refinement (honest, and useful for the construction)
+## The refinement (candid, and useful for the construction)
 
 - The local factors `Θ_p` are **unimodular on ℝ** (`|Θ_p|=1`, since numerator/denominator are
   conjugates there) but are **not scalar-Schur** in the interior — `|Θ_p|>1` occurs. They are also

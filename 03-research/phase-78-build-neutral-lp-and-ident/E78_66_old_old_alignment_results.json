@@ -1,0 +1,430 @@
+{
+  "statement": "Old-old alignment of the E77.5i cocycle with the stored E77.5ac shell rows, and consequent exact polarization formula for PAIRNUM on the old-old chain.",
+  "sources": {
+    "cocycle": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5i_schur_cocycle_cell_results.json",
+    "theta_zeta": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_zeta.json",
+    "theta_plant": "/Users/dt/riemann/03-research/phase-77-weyl-limit-point/E77_5ac_theta_logderiv_coupling_plant.json"
+  },
+  "builds": {
+    "zeta": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "delta_theta_cocycle": {
+            "re": 0.0676686635264534,
+            "im": -0.0002243403527123655
+          },
+          "delta_theta_old_old": {
+            "re": 0.0676686635264534,
+            "im": -0.00022434035271236554
+          },
+          "theta_alignment_error": 2.710505431213761e-20,
+          "pairnum_from_cocycle": 0.023165914219114424,
+          "pairnum_from_old_old_polarization": 0.023165914219114427,
+          "pairnum_alignment_error": 3.469446951953614e-18
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "delta_theta_cocycle": {
+            "re": 0.05331457752402686,
+            "im": 0.00019251907329434682
+          },
+          "delta_theta_old_old": {
+            "re": 0.05331457752402691,
+            "im": 0.00019251907329434682
+          },
+          "theta_alignment_error": 4.85722573273506e-17,
+          "pairnum_from_cocycle": 0.014644270098337391,
+          "pairnum_from_old_old_polarization": 0.014644270098337386,
+          "pairnum_alignment_error": 5.204170427930421e-18
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "delta_theta_cocycle": {
+            "re": 0.023373645063443377,
+            "im": 1.2183217113787396e-05
+          },
+          "delta_theta_old_old": {
+            "re": 0.023373645063443416,
+            "im": 1.21832171137874e-05
+          },
+          "theta_alignment_error": 3.816391662188623e-17,
+          "pairnum_from_cocycle": 0.0051740076492235694,
+          "pairnum_from_old_old_polarization": 0.005174007649223573,
+          "pairnum_alignment_error": 3.469446951953614e-18
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "delta_theta_cocycle": {
+            "re": 0.02276160844400536,
+            "im": 0.00022228644588793663
+          },
+          "delta_theta_old_old": {
+            "re": 0.022761608444005432,
+            "im": 0.00022228644588793663
+          },
+          "theta_alignment_error": 7.28583859910259e-17,
+          "pairnum_from_cocycle": 0.004506545578849901,
+          "pairnum_from_old_old_polarization": 0.0045065455788498975,
+          "pairnum_alignment_error": 3.469446951953614e-18
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "delta_theta_cocycle": {
+            "re": 0.017215414591951115,
+            "im": -0.00017403331993606335
+          },
+          "delta_theta_old_old": {
+            "re": 0.017215414591950973,
+            "im": -0.00017403331993606335
+          },
+          "theta_alignment_error": 1.4224732503009818e-16,
+          "pairnum_from_cocycle": 0.0030165827679270564,
+          "pairnum_from_old_old_polarization": 0.0030165827679270577,
+          "pairnum_alignment_error": 1.3010426069826053e-18
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "delta_theta_cocycle": {
+            "re": 0.015410165082827788,
+            "im": -1.903069192492956e-05
+          },
+          "delta_theta_old_old": {
+            "re": 0.015410165082827776,
+            "im": -1.9030691924929556e-05
+          },
+          "theta_alignment_error": 1.2143064804512276e-17,
+          "pairnum_from_cocycle": 0.002434957061963614,
+          "pairnum_from_old_old_polarization": 0.002434957061963617,
+          "pairnum_alignment_error": 3.0357660829594124e-18
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "delta_theta_cocycle": {
+            "re": 0.05939968752514128,
+            "im": -0.0006696994119771644
+          },
+          "delta_theta_old_old": {
+            "re": 0.05939968752514124,
+            "im": -0.0006696994119771644
+          },
+          "theta_alignment_error": 3.469446951953614e-17,
+          "pairnum_from_cocycle": 0.019405379966775712,
+          "pairnum_from_old_old_polarization": 0.019405379966775722,
+          "pairnum_alignment_error": 1.0408340855860843e-17
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "delta_theta_cocycle": {
+            "re": 0.0499793354881269,
+            "im": 0.0005542167085322131
+          },
+          "delta_theta_old_old": {
+            "re": 0.04997933548812705,
+            "im": 0.0005542167085322131
+          },
+          "theta_alignment_error": 1.5265566588595902e-16,
+          "pairnum_from_cocycle": 0.013359990132244424,
+          "pairnum_from_old_old_polarization": 0.013359990132244419,
+          "pairnum_alignment_error": 5.204170427930421e-18
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "delta_theta_cocycle": {
+            "re": 0.021799171091251006,
+            "im": 3.208285911952433e-05
+          },
+          "delta_theta_old_old": {
+            "re": 0.021799171091250846,
+            "im": 3.208285911952434e-05
+          },
+          "theta_alignment_error": 1.5959455993372374e-16,
+          "pairnum_from_cocycle": 0.00473737384403053,
+          "pairnum_from_old_old_polarization": 0.004737373844030529,
+          "pairnum_alignment_error": 8.673617379884035e-19
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "delta_theta_cocycle": {
+            "re": 0.021941586533469327,
+            "im": 0.0006572610995750574
+          },
+          "delta_theta_old_old": {
+            "re": 0.021941586533469337,
+            "im": 0.0006572610995750574
+          },
+          "theta_alignment_error": 1.0408340855860843e-17,
+          "pairnum_from_cocycle": 0.004290371384903593,
+          "pairnum_from_old_old_polarization": 0.004290371384903593,
+          "pairnum_alignment_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "delta_theta_cocycle": {
+            "re": 0.016669922690573116,
+            "im": -0.0005177481085257898
+          },
+          "delta_theta_old_old": {
+            "re": 0.016669922690573102,
+            "im": -0.0005177481085257898
+          },
+          "theta_alignment_error": 1.3877787807814457e-17,
+          "pairnum_from_cocycle": 0.0028935651123845963,
+          "pairnum_from_old_old_polarization": 0.0028935651123846,
+          "pairnum_alignment_error": 3.903127820947816e-18
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "delta_theta_cocycle": {
+            "re": 0.015088869115444867,
+            "im": -5.73825733400574e-05
+          },
+          "delta_theta_old_old": {
+            "re": 0.015088869115444936,
+            "im": -5.738257334005737e-05
+          },
+          "theta_alignment_error": 6.9388944333028e-17,
+          "pairnum_from_cocycle": 0.0023675307266267996,
+          "pairnum_from_old_old_polarization": 0.0023675307266267983,
+          "pairnum_alignment_error": 1.3010426069826053e-18
+        }
+      ],
+      "max_theta_alignment_error": 1.5959455993372374e-16,
+      "max_pairnum_alignment_error": 1.0408340855860843e-17
+    },
+    "plant": {
+      "rows": [
+        {
+          "sigma": "1.0",
+          "N": 8,
+          "to_N": 10,
+          "delta_theta_cocycle": {
+            "re": 2.726309411414889,
+            "im": -0.18252933841903154
+          },
+          "delta_theta_old_old": {
+            "re": 2.7263094114148885,
+            "im": -0.18252933841903157
+          },
+          "theta_alignment_error": 4.449557262054371e-16,
+          "pairnum_from_cocycle": -5.809951544408081,
+          "pairnum_from_old_old_polarization": -5.809951544408082,
+          "pairnum_alignment_error": 8.881784197001252e-16
+        },
+        {
+          "sigma": "1.0",
+          "N": 10,
+          "to_N": 12,
+          "delta_theta_cocycle": {
+            "re": 1.6942362813563396,
+            "im": 0.7231309820962634
+          },
+          "delta_theta_old_old": {
+            "re": 1.6942362813563392,
+            "im": 0.7231309820962634
+          },
+          "theta_alignment_error": 4.440892098500626e-16,
+          "pairnum_from_cocycle": -7.765701011297599,
+          "pairnum_from_old_old_polarization": -7.765701011297596,
+          "pairnum_alignment_error": 3.552713678800501e-15
+        },
+        {
+          "sigma": "1.0",
+          "N": 12,
+          "to_N": 14,
+          "delta_theta_cocycle": {
+            "re": 3.664171966874755,
+            "im": -0.033844509667897225
+          },
+          "delta_theta_old_old": {
+            "re": 3.664171966874755,
+            "im": -0.03384450966789722
+          },
+          "theta_alignment_error": 6.938893903907228e-18,
+          "pairnum_from_cocycle": -23.904054570070926,
+          "pairnum_from_old_old_polarization": -23.90405457007094,
+          "pairnum_alignment_error": 1.4210854715202004e-14
+        },
+        {
+          "sigma": "1.0",
+          "N": 14,
+          "to_N": 16,
+          "delta_theta_cocycle": {
+            "re": -7.261033314763046,
+            "im": -0.1080481320845014
+          },
+          "delta_theta_old_old": {
+            "re": -7.261033314763046,
+            "im": -0.10804813208450141
+          },
+          "theta_alignment_error": 1.3877787807814457e-17,
+          "pairnum_from_cocycle": 73.99621293251948,
+          "pairnum_from_old_old_polarization": 73.99621293251948,
+          "pairnum_alignment_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 16,
+          "to_N": 18,
+          "delta_theta_cocycle": {
+            "re": -1.8386065189503662,
+            "im": -0.00259526166014149
+          },
+          "delta_theta_old_old": {
+            "re": -1.8386065189503662,
+            "im": -0.00259526166014149
+          },
+          "theta_alignment_error": 0.0,
+          "pairnum_from_cocycle": 5.383802057883561,
+          "pairnum_from_old_old_polarization": 5.383802057883561,
+          "pairnum_alignment_error": 0.0
+        },
+        {
+          "sigma": "1.0",
+          "N": 18,
+          "to_N": 20,
+          "delta_theta_cocycle": {
+            "re": 1.9240692543623492,
+            "im": -0.0063600487897093405
+          },
+          "delta_theta_old_old": {
+            "re": 1.9240692543623494,
+            "im": -0.00636004878970934
+          },
+          "theta_alignment_error": 2.220462989844635e-16,
+          "pairnum_from_cocycle": -2.0964456477112714,
+          "pairnum_from_old_old_polarization": -2.096445647711272,
+          "pairnum_alignment_error": 4.440892098500626e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 8,
+          "to_N": 10,
+          "delta_theta_cocycle": {
+            "re": 2.64186461035417,
+            "im": -0.4785608815407967
+          },
+          "delta_theta_old_old": {
+            "re": 2.64186461035417,
+            "im": -0.4785608815407967
+          },
+          "theta_alignment_error": 0.0,
+          "pairnum_from_cocycle": -6.16782253058968,
+          "pairnum_from_old_old_polarization": -6.167822530589678,
+          "pairnum_alignment_error": 1.7763568394002505e-15
+        },
+        {
+          "sigma": "3.0",
+          "N": 10,
+          "to_N": 12,
+          "delta_theta_cocycle": {
+            "re": 1.6308651856414969,
+            "im": 0.7848439339411545
+          },
+          "delta_theta_old_old": {
+            "re": 1.6308651856414969,
+            "im": 0.7848439339411545
+          },
+          "theta_alignment_error": 0.0,
+          "pairnum_from_cocycle": -7.328725486109521,
+          "pairnum_from_old_old_polarization": -7.328725486109521,
+          "pairnum_alignment_error": 0.0
+        },
+        {
+          "sigma": "3.0",
+          "N": 12,
+          "to_N": 14,
+          "delta_theta_cocycle": {
+            "re": 3.6428751278827822,
+            "im": 0.0824824573244096
+          },
+          "delta_theta_old_old": {
+            "re": 3.642875127882782,
+            "im": 0.08248245732440959
+          },
+          "theta_alignment_error": 4.443059973708341e-16,
+          "pairnum_from_cocycle": -23.81218905842953,
+          "pairnum_from_old_old_polarization": -23.812189058429524,
+          "pairnum_alignment_error": 7.105427357601002e-15
+        },
+        {
+          "sigma": "3.0",
+          "N": 14,
+          "to_N": 16,
+          "delta_theta_cocycle": {
+            "re": -7.254195133012808,
+            "im": -0.046018430536934885
+          },
+          "delta_theta_old_old": {
+            "re": -7.254195133012807,
+            "im": -0.046018430536934885
+          },
+          "theta_alignment_error": 8.881784197001252e-16,
+          "pairnum_from_cocycle": 73.85688293629602,
+          "pairnum_from_old_old_polarization": 73.85688293629599,
+          "pairnum_alignment_error": 2.842170943040401e-14
+        },
+        {
+          "sigma": "3.0",
+          "N": 16,
+          "to_N": 18,
+          "delta_theta_cocycle": {
+            "re": -1.8372792724339035,
+            "im": 0.03658724458514819
+          },
+          "delta_theta_old_old": {
+            "re": -1.8372792724339035,
+            "im": 0.036587244585148185
+          },
+          "theta_alignment_error": 6.938893903907228e-18,
+          "pairnum_from_cocycle": 5.379159080480414,
+          "pairnum_from_old_old_polarization": 5.379159080480415,
+          "pairnum_alignment_error": 8.881784197001252e-16
+        },
+        {
+          "sigma": "3.0",
+          "N": 18,
+          "to_N": 20,
+          "delta_theta_cocycle": {
+            "re": 1.922864956798398,
+            "im": -0.03238187359190795
+          },
+          "delta_theta_old_old": {
+            "re": 1.922864956798398,
+            "im": -0.032381873591907945
+          },
+          "theta_alignment_error": 6.938893903907228e-18,
+          "pairnum_from_cocycle": -2.0954841831199285,
+          "pairnum_from_old_old_polarization": -2.095484183119929,
+          "pairnum_alignment_error": 4.440892098500626e-16
+        }
+      ],
+      "max_theta_alignment_error": 8.881784197001252e-16,
+      "max_pairnum_alignment_error": 2.842170943040401e-14
+    }
+  }
+}

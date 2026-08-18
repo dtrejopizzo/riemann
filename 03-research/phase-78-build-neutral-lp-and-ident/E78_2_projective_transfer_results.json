@@ -1,0 +1,32 @@
+{
+  "run": "2026-07-18",
+  "probe_file": "E78_2_projective_transfer_probe.py",
+  "infrastructure": "P76.002 build_mp + P76.018 transfer, verbatim",
+  "planted": ["14.134725141734693790", "0.30", "5.0"],
+  "lambda": 6, "dps": 55,
+  "target": "PROJECTIVE-MU-TRANSFER: maxProjDefect = sup_sigma |Pi_N(i sigma; mu_L) - Pi_N(i sigma; 0)| -> 0, mu_L proxy = inner-block bottom eigenvalue",
+  "zeta": [
+    {"N":6,"mu_bottom":"7.43e-21","defect":"0.0337178"},
+    {"N":8,"mu_bottom":"1.14e-25","defect":"0.0269685"},
+    {"N":10,"mu_bottom":"1.85e-30","defect":"0.0212735"},
+    {"N":12,"mu_bottom":"4.30e-35","defect":"0.0178288"},
+    {"N":14,"mu_bottom":"2.26e-39","defect":"0.0149035"},
+    {"N":16,"mu_bottom":"1.57e-43","defect":"0.0129144"}
+  ],
+  "zeta_ratios": ["0.80","0.79","0.836","0.837","0.866"],
+  "plant": [
+    {"N":6,"mu_bottom":"-0.0381883","defect":"0.703644"},
+    {"N":8,"mu_bottom":"-0.411329","defect":"0.960552"},
+    {"N":10,"mu_bottom":"-1.49705","defect":"0.873715"},
+    {"N":12,"mu_bottom":"-1.69984","defect":"0.846783"},
+    {"N":14,"mu_bottom":"-1.72344","defect":"0.843461"},
+    {"N":16,"mu_bottom":"-1.73553","defect":"0.841695"}
+  ],
+  "conclusions": {
+    "plant": "defect PLATEAUS at ~0.84; PROJECTIVE-MU-TRANSFER is FALSE for the plant.",
+    "zeta": "defect decreasing but DECELERATING (ratio 0.80 -> 0.87 toward 1); not decisively -> 0.",
+    "mechanism": "by (M-6), Pi_N(mu_L)-Pi_N(0) is driven by (mu_L - 0)*[paired double resolvent]. For zeta mu_L ~ 0 so the two families nearly coincide; for the plant mu_L ~ -1.74 (order one) so they stay O(1) apart. The 'smallness' is a shadow of mu_L location.",
+    "verdict": "item 2 (PROJECTIVE-MU-TRANSFER) is NOT build-neutral. Its defect is controlled by |mu_L - 0|, the SAME build-discriminating quantity that governs item 4's ground gap (E78.1). Hence a DETECTOR under E77.7az/E72.16, not an admissible build-neutral forcing step.",
+    "unification": "interface subclauses (c)=item 2 and (e)=item 4 both reduce to the location/gap of mu_L (~0 zeta, O(1) plant). The README's 'front A2 build-neutral by nature' label is incorrect: mu_L-dependence smuggles the discriminant into the interface."
+  }
+}

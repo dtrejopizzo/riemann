@@ -747,7 +747,7 @@ más fuerte que B² (pide control puntual sobre un compacto, que B² no da).
    es exactamente el que LP-112 esquiva: densidad positiva de réplicas contradiría los
    teoremas de densidad N(σ,T) = O(T^θ) (clonación ≫ T vs techo o(T): Doc 109 §4.3,
    ítem 3), de modo que recurrencia fuerte fuerza m = 0; una sucesión de densidad cero
-   no contradice nada (Prop. 2.7) y solo fuerza m ∉ (0,∞). Declaración honesta: esto
+   no contradice nada (Prop. 2.7) y solo fuerza m ∉ (0,∞). Declaración franca: esto
    muestra que LP-112 no implica RH *por la vía de densidades*; una implicación por vía
    desconocida no puede excluirse — pero la asimetría estructural (LP-112 es invariante
    ante quitar al conjunto bueno cualquier subconjunto de densidad positiva; la

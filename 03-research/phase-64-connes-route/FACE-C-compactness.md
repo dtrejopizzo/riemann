@@ -6,7 +6,7 @@ primitive Tate–Weil Hamiltonians in the critical ($\exp\tfrac12$) scale. We re
 unconditional bounded Carleson measure**, and identify the **fluctuation** (the zero-sum / the
 short-interval prime error at the $\sqrt n$ normalization) as the precise wall. We connect this to the
 central large sieve (face A) and state exactly where the unconditional zero-free region falls short.
-Honest: the fluctuation Carleson bound is RH-strength; the smooth part is genuine, unconditional
+Candid: the fluctuation Carleson bound is RH-strength; the smooth part is genuine, unconditional
 progress that removes the PNT part from the obstruction.*
 
 ---

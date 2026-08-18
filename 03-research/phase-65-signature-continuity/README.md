@@ -40,7 +40,7 @@ The decisive burden is **D8+D9**: `Short_{H_P} K_{A_P} → K_Ξ^{G5}`.
 - [D8-ARITHMETIC-SOURCED-FESHBACH-CONVERGENCE.md](D8-ARITHMETIC-SOURCED-FESHBACH-CONVERGENCE.md) — **DECISIVE.** 5 subclaims proved (8.1–8.4, 8.6–8.7) from G3+G4+D2–D7; **D8.5 (source-level Tate×Binet local-factor convergence) is the single LOAD-BEARING input — flagged in ASSUMED, not faked.** Given D8.5, shorted kernels converge.
 - [D9-ENDPOINT-XI-REALIZATION.md](D9-ENDPOINT-XI-REALIZATION.md) — **DONE (conditional on D8.5).** A3: limit kernel **is** the *fixed* `K_Ξ^{G5}` by differentiation (both = `N_{Ξ'/Ξ}`), not assignment.
 - [D10-DAVENPORT-HEILBRONN-FALSIFIER.md](D10-DAVENPORT-HEILBRONN-FALSIFIER.md) — **DONE.** DH **fires**: signed `H^χ` ⟹ finite `κ>0`, off-line zeros = `deg b_DH>0`. Constrains D8.5: any proof must use `Λ≥0`.
-- [D11-SIGNATURE-CONTINUITY-IMPLIES-RH.md](D11-SIGNATURE-CONTINUITY-IMPLIES-RH.md) — **DONE.** Assembly: **D8.5 ⟹ RH**, every other step unconditional. Honest conditional, not a proof by us.
+- [D11-SIGNATURE-CONTINUITY-IMPLIES-RH.md](D11-SIGNATURE-CONTINUITY-IMPLIES-RH.md) — **DONE.** Assembly: **D8.5 ⟹ RH**, every other step unconditional. Candid conditional, not a proof by us.
 - [D12-AUDIT-NO-GO-REGISTRY.md](D12-AUDIT-NO-GO-REGISTRY.md) — **DONE.** 5 forbidden inferences all avoided; consolidated ASSUMED ledger; **D8.5 = single point of failure**; DH falsifier confirmed.
 
 > **PACKAGE STATUS (after Connes R2 — see [CORRECTIONS-CONNES-R2.md](CORRECTIONS-CONNES-R2.md)): the wall
@@ -57,7 +57,7 @@ The decisive burden is **D8+D9**: `Short_{H_P} K_{A_P} → K_Ξ^{G5}`.
   compressed-resolvent linchpin (self-adjoint `A_P`, bounded Herglotz) → §3 **Check 4 theorem** (D8.5d:
   word-level Tate expansion ⟹ `G_P^∘` is a genuine compressed resolvent, converges on `Re s>1` to fixed
   `G_Ξ^{G5}=N_{−Ξ'/Ξ}`) → §4 fixed channel + **endpoint-source richness proved** → §5 **Vitali** ⟹ no
-  off-real poles ⟹ RH ∎. **§6 honest flagged ledger:** only 3 residuals (L1 uniform Gram bound = G4
+  off-real poles ⟹ RH ∎. **§6 candid flagged ledger:** only 3 residuals (L1 uniform Gram bound = G4
   Carleson; L2 per-word Tate identity; L3 `−ζ'/ζ=ΣΛ(n)n^{−s}` paired) — **all in `Re s>1`, all zero-free**,
   so the chain cannot be circular. §7 DH remark (breaks at self-adjoint bound). *Not asserted as verified
   certainty — a complete RH-free chain modulo 3 standard local estimates, for audit.*
@@ -91,8 +91,8 @@ The decisive burden is **D8+D9**: `Short_{H_P} K_{A_P} → K_Ξ^{G5}`.
 - [D8.5a-MARKED-TATE-BINET.md](D8.5a-MARKED-TATE-BINET.md) — blocks 1–8: finite-rank det reduction;
   fixed algebraic source core (de-circularizes D2); marked local Tate identity; primitive pole
   cancellation; **primitive marked tail estimate** (the heart — G4 + Schur–Cauchy–Schwarz, `Λ≥0`;
-  honesty checkpoint: genuinely local, no hidden RH); source-level Binet; additive assembly; extension.
-- [D8.5b-ENDPOINT-IDENTIFICATION.md](D8.5b-ENDPOINT-IDENTIFICATION.md) — block 9 + **the decisive honesty
+  candor checkpoint: genuinely local, no hidden RH); source-level Binet; additive assembly; extension.
+- [D8.5b-ENDPOINT-IDENTIFICATION.md](D8.5b-ENDPOINT-IDENTIFICATION.md) — block 9 + **the decisive candor
   gate**. Identification `G^lim=G_Ξ^{G5}` (meromorphic, plausibly unconditional) **holds**; index
   conclusion is **outcome (ii): RH-strength**, localized to off-line divisor convergence. Positivity is
   provably *compatible* with off-ℝ poles in a non-uniform limit, so it can't exclude them — the M3 wall.
@@ -128,7 +128,7 @@ The decisive burden is **D8+D9**: `Short_{H_P} K_{A_P} → K_Ξ^{G5}`.
 
 - [PROBLEM-STATEMENT.md](PROBLEM-STATEMENT.md) — **the precise statement**: given data (G1–G5, all
   proved in Phases 60–64), the exact gap (N1–N3), the object to construct (A1–A3, T1–T2), the theorem
-  (Signature-Continuity = RH), the milestone decomposition (M1–M5), the honesty/falsification hooks
+  (Signature-Continuity = RH), the milestone decomposition (M1–M5), the candor/falsification hooks
   (DH must fail by construction), and why this is new (possibly foundational) mathematics.
 - [M1-index-graded-category.md](M1-index-graded-category.md) — **M1 DONE (language layer).** Builds
   `G`: objects `(E,Π)` = entire function + Pontryagin model space, graded by Kreĭn–Langer index;
@@ -141,7 +141,7 @@ The decisive burden is **D8+D9**: `Short_{H_P} K_{A_P} → K_Ξ^{G5}`.
 
 - [M2-pole-relative-completion.md](M2-pole-relative-completion.md) — **M2 DONE (analytic heart) + a structural correction.** Prop (T1–T2 tension): **no single unconditional topology has both** closedness of `N_0` and convergence of the renormalization — their conjunction *is* RH (the N2↔N3 tension is the problem itself). So the plan is corrected: index comes from **sign-structure carried on a topology**, not topology alone. Thm (T2 free): in the coarse **determinant topology `τ_0`** the tower converges to the Ξ-object from **G3 alone** — the Phase-64 rank-one *norm* bound is **not** imported (size dissolved, not solved). Lemma (defect concentration): every finite increment is positive (`σ_P=0`), so a negative square can enter the limit **only** through the single positive rank-one pole direction `ĥ_∞`. **Sharpened M3 interface: does a positive rank-one divergence create a negative square? That one question is all of RH.**
 
-- [M3-signature-closedness.md](M3-signature-closedness.md) — **M3 DONE (the conceptual heart) — honest crux, reduces to RH, does NOT cross for free.** Lemma (sign load-bearing): `H_vM≥0 ⟹ A_P self-adjoint ⟹ D_P has only REAL zeros (HB)`; **DH fails exactly here** (signed ⟹ Pontryagin ⟹ complex zeros). Thm (conditional crossing): **uniform-on-compacts** `D_P→Ξ` + Hurwitz ⟹ RH. Thm (concentration): the `κ` negative squares of the limit live **exactly at the off-ℝ poles = off-line zeros = the non-uniformity locus**; finite positivity controls only regular points → "positive rank-one ⟹ index 0" is **NOT** unconditional. **Thm (M3 honest form): RH ⟺ the regularized `D_P→Ξ` is *uniform on compacts* (not merely ren-lim) ⟺ finite real zeros don't migrate off ℝ ⟺ `κ(Ξ)=0`.** Verdict: signature-continuity (A2) **is RH-strength**, not free — the wall survives as one sharp classical statement (uniformity of the renormalization), with the sign explaining the real-zero approximants + excluding DH. Three options for M4/Connes: (a) attack uniformity directly, (b) a finite-stage invariant controlling the kernel *at* the off-ℝ poles (the real "new math" question), (c) accept the RH⟺uniformity reduction as the phase theorem.
+- [M3-signature-closedness.md](M3-signature-closedness.md) — **M3 DONE (the conceptual heart) — candid crux, reduces to RH, does NOT cross for free.** Lemma (sign load-bearing): `H_vM≥0 ⟹ A_P self-adjoint ⟹ D_P has only REAL zeros (HB)`; **DH fails exactly here** (signed ⟹ Pontryagin ⟹ complex zeros). Thm (conditional crossing): **uniform-on-compacts** `D_P→Ξ` + Hurwitz ⟹ RH. Thm (concentration): the `κ` negative squares of the limit live **exactly at the off-ℝ poles = off-line zeros = the non-uniformity locus**; finite positivity controls only regular points → "positive rank-one ⟹ index 0" is **NOT** unconditional. **Thm (M3 candid form): RH ⟺ the regularized `D_P→Ξ` is *uniform on compacts* (not merely ren-lim) ⟺ finite real zeros don't migrate off ℝ ⟺ `κ(Ξ)=0`.** Verdict: signature-continuity (A2) **is RH-strength**, not free — the wall survives as one sharp classical statement (uniformity of the renormalization), with the sign explaining the real-zero approximants + excluding DH. Three options for M4/Connes: (a) attack uniformity directly, (b) a finite-stage invariant controlling the kernel *at* the off-ℝ poles (the real "new math" question), (c) accept the RH⟺uniformity reduction as the phase theorem.
 
 ## Milestones (pure-math, logical order)
 

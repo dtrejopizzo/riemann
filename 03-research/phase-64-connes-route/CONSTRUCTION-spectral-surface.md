@@ -6,7 +6,7 @@ no pre-existing Spec ℤ² cohomology required — define its intersection form,
 positivity into a Bakry–Émery curvature (`Γ₂≥0`) statement** for the prime jump measure. The new,
 non-circular input is then a curvature inequality powered by **Euler multiplicativity** — a different
 mechanism, where DH fails for lack of a multiplicative jump kernel. We develop it, compute the
-relevant `Γ₂`, locate the obstruction, and propose its resolution. Honest: RH not proved; the new
+relevant `Γ₂`, locate the obstruction, and propose its resolution. Candid: RH not proved; the new
 conjecture (`Γ₂≥0` from multiplicativity) is stated precisely and is the frontier.*
 
 ---
@@ -150,7 +150,7 @@ discriminator) and gives it a **local, computable** form.
 
 ---
 
-## §5. The obstruction, honestly, and the proposed resolution
+## §5. The obstruction, candidly, and the proposed resolution
 
 **Obstruction.** Pure-jump generators do **not** satisfy `CD(0,∞)` automatically even when `j≥0` —
 the cross-prime terms in `Γ_2` can be negative, and the program's LGV/"razor-thin" finding

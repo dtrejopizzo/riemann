@@ -237,7 +237,7 @@ No es M_k(N) el portador de información de ceros. El portador es Σ q^{ω(n)}·
 | 3 | Correlaciones C_k(h,N) | Σ k^{2ω(n)}k^{2ω(n+h)}/n | Método del círculo, potencial real |
 | 4 | Veredicto del puente | Síntesis | ¿Existe puente ω↔ceros? |
 
-*El Paso 1 revisado es matemáticamente más honesto que el Experimento 1 original.*
+*El Paso 1 revisado es matemáticamente más franco que el Experimento 1 original.*
 
 ---
 

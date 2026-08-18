@@ -1,0 +1,62 @@
+{
+  "statement": "E79.59 ray-amplitude vs normalized profile moments",
+  "sources": [
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_56_ray_amplitude_autopsy_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_3J_normalized_edge_profile_results.json",
+    "/Users/dt/riemann/03-research/phase-79-shared-convergence-and-ident-discriminant/E79_3K_signed_edge_blocks_results.json"
+  ],
+  "rows": [
+    {
+      "N": 8,
+      "abs_rho": 0.0331799142465018,
+      "profile_avg": 0.8072920459905715,
+      "profile_centroid": 0.4089997859385386,
+      "profile_slope": -0.16507495518136453,
+      "front_back_gap": 1.346211644176,
+      "alt_ratio": 0.0816591549083
+    },
+    {
+      "N": 10,
+      "abs_rho": 0.038684833336302744,
+      "profile_avg": 0.71781171980475,
+      "profile_centroid": 0.38491804295253457,
+      "profile_slope": -0.3196810946820139,
+      "front_back_gap": 1.6578383704619999,
+      "alt_ratio": 0.0191647856446
+    },
+    {
+      "N": 12,
+      "abs_rho": 0.027682487754282833,
+      "profile_avg": 0.7795471340410001,
+      "profile_centroid": 0.451443061741753,
+      "profile_slope": 0.057766786479176505,
+      "front_back_gap": 0.7275179835889998,
+      "alt_ratio": 0.0627720388999
+    },
+    {
+      "N": 14,
+      "abs_rho": 0.03546470265657091,
+      "profile_avg": 0.7849160013587999,
+      "profile_centroid": 0.44026018966375313,
+      "profile_slope": -0.08994038803670595,
+      "front_back_gap": 1.134918969254,
+      "alt_ratio": 0.0275728173998
+    },
+    {
+      "N": 16,
+      "abs_rho": 0.03183731099877623,
+      "profile_avg": 0.7801228682205,
+      "profile_centroid": 0.4760739579845334,
+      "profile_slope": 0.23930459869123524,
+      "front_back_gap": 0.35231520383199966,
+      "alt_ratio": 0.0297597380898
+    }
+  ],
+  "correlations_against_abs_rho": {
+    "profile_avg": -0.5897819407194569,
+    "profile_centroid": -0.6915337012294935,
+    "profile_slope": -0.7272113821477365,
+    "front_back_gap": 0.7420225204738105,
+    "alt_ratio": -0.5889346102762297
+  }
+}

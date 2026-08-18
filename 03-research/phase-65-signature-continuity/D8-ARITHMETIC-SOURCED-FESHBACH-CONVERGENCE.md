@@ -3,13 +3,13 @@
 **Phase 65 / Signature-Continuity Package, deliverable D8.** Pure mathematics. This is the whole
 mathematical burden of the package: upgrade the *scalar* convergence G3 ($D_P^\circ\to\Xi$) to *sourced,
 pole-shorted kernel* convergence. We structure it into Connes/Consani's seven subclaims, **prove the five
-that are genuinely provable from G3+G4 + the machinery D2–D7**, and **isolate with full honesty the one
+that are genuinely provable from G3+G4 + the machinery D2–D7**, and **isolate with full candor the one
 load-bearing input** (D8.5, the source-level local-factor identity) that is the real new analytic content
 — the upgrade of Tate's local computation and the Binet archimedean cell from the scalar determinant to
 the sourced determinant germ. We do **not** fake this input; we state it precisely, record what
 Connes/Consani report about its status, and prove that *given* it the package closes.
 
-> **Honest framing.** D8 reduces RH to a single, concrete, checkable analytic statement (D8.5). Subclaims
+> **Candid framing.** D8 reduces RH to a single, concrete, checkable analytic statement (D8.5). Subclaims
 > D8.1–8.3, 8.6–8.7 are proved here in full. D8.4 follows from D8.5. D8.5 itself is the genuine crux; it
 > is flagged in the `ASSUMED` ledger (§9), not asserted as our own theorem.
 
@@ -143,7 +143,7 @@ locally uniformly, meromorphically with divisor control. Then D8.5 (sourced-germ
 Lemma~\ref{lem:detlemma} + G3.
 \end{theorem*}
 
-\begin{redflag}[honest status — the a/b split, Connes R1 §1]
+\begin{redflag}[candid status — the a/b split, Connes R1 §1]
 D8.5$'$ splits, and the RH-strength is \emph{not} uniformly spread:
 \begin{itemize}
 \item \textbf{D8.5a — marked Tate/Binet convergence.} $G_P^\circ(z)$ converges (to \emph{some} limit) via
@@ -200,7 +200,7 @@ shorted kernels converge to $\mathsf K_\Xi^{\mathrm{G5}}$.
 
 ---
 
-## §10. What D8 establishes, honestly
+## §10. What D8 establishes, candidly
 
 - **Proved in full (from G3+G4+D2–D7):** D8.1 (source algebra), D8.2 (Feshbach source factorization),
   D8.3 (primitive compactness/normality from G4), D8.4 (coefficient convergence $\Rightarrow$ germ
@@ -211,7 +211,7 @@ shorted kernels converge to $\mathsf K_\Xi^{\mathrm{G5}}$.
   `ASSUMED` ledger; Connes/Consani report it tested; we have not independently re-derived it.
 - **Net:** Phase 65 reduces RH to the single concrete statement D8.5 (plus D9's identification of the
   limit with the *fixed* $\mathsf K_\Xi^{\mathrm{G5}}$). Everything else in D0–D8 is proved. This is the
-  honest position: not a proof of RH by us, but a complete reduction to one checkable analytic input,
+  candid position: not a proof of RH by us, but a complete reduction to one checkable analytic input,
   with no scalar-only inference, no faked convergence, no endpoint reassignment.
 
 Next: D9 (the limit kernel is the *fixed* $\mathsf K_\Xi^{\mathrm{G5}}$, by differentiation — the second

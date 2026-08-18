@@ -41,7 +41,7 @@ Control: a random symmetric matrix with the **same** parity symmetry `A_{−m,�
 - **Random-symmetric (same parity symmetry):** `r≈1.4` (strongly J-incompatible), `A|V₊`
   **indefinite**. So the positivity is **not** a trivial consequence of the symmetry.
 
-## Honest reading — strong structural evidence, but NOT a proof (and why)
+## Candid reading — strong structural evidence, but NOT a proof (and why)
 
 **What is genuinely new and strong:** the finite-window Weil matrix of ζ behaves *exactly* like a
 **polarized weight-1 quaternionic Hodge structure** — positive semidefinite on the J-positive
@@ -49,7 +49,7 @@ subspace, with a stable primitive rank — while both the off-line falsador (DH)
 symmetry-matched random control fail. This is the clearest intrinsic appearance of Weil/Hodge–Riemann
 positivity the program has produced, and it is **not** trivially algebraic (random fails).
 
-**Why it does not cross the wall (the honest boundary):**
+**Why it does not cross the wall (the candid boundary):**
 
 1. **r_ζ saturates at ≈ 0.13–0.16, it does not → 0.** ζ is only *approximately* J-compatible;
    the residual does not vanish with λ. A genuine Hodge structure needs `[A,J]=0` exactly; the

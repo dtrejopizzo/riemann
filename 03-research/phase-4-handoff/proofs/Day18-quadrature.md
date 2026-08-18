@@ -20,7 +20,7 @@ equivalent of RH*, not an unconditional reduction — exactly the referee's "pes
   $P=\rho\ell$ cancelling in the ratio $\widetilde{\mathfrak t}_-/\mathfrak t_+$. ✅ Correct and is the right
   object — statistical, $P$-free, immune to the Day-17 errors.
 - **$S(T)=O(\log)$ is INSUFFICIENT (Step 10).** $\int g\,dS\overset{\text{IBP}}{=}-\int g'S$, $|{\le}|\,C\log T\!\int|g'|\le C\Lambda\log T\|F\|^2$,
-  **same order** as the main term $\int g\rho\sim\log T\|F\|^2$. ✅ Correct — and an honest self-correction of
+  **same order** as the main term $\int g\rho\sim\log T\|F\|^2$. ✅ Correct — and an candid self-correction of
   the earlier "$S(T)$ suffices." The pointwise sup of $S$ does not beat the main term; **cancellation is
   required.**
 - **Form-factor / pair-correlation route (Step 11).** $E(g)=\int\widehat g(\xi)\big(\widehat\mu(\xi)-\rho\delta_0\big)d\xi$;
@@ -78,7 +78,7 @@ every audit that destroyed the others. The likely final shape, per the referee:
 $$
 \text{RH}\ \Longleftrightarrow\ \text{semiboundedness}\ \Longleftarrow\ \text{RFB}\ \Longleftarrow\ \text{band-fixed quadrature of the zeros},
 $$
-with the deepest step the last, and "quadrature $\approx$ RH" the honest expectation.
+with the deepest step the last, and "quadrature $\approx$ RH" the candid expectation.
 
 ---
 

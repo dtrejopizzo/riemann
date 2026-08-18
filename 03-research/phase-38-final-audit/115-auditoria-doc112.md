@@ -6,7 +6,7 @@
 **Objeto:** Doc 112, Teorema 2.3 (LP-112 ⟹ m∈{0,∞}) y Proposición 2.6 (densidad cero de testigos);
 Doc 113 (no-precedencia); P44 (`06-papers/P44-two-lemma-architecture/main.tex`), que apoya toda su
 arquitectura sobre estos dos enunciados.
-**Regla:** sin numéricos; honestidad absoluta; toda afirmación de literatura es verificable
+**Regla:** sin numéricos; franqueza absoluta; toda afirmación de literatura es verificable
 (Bagchi 1987, Laurinčikas 1996, Titchmarsh 1986 — las mismas fuentes que el Doc 112 cita).
 
 ---
@@ -215,7 +215,7 @@ contraposición del teorema la supera trivialmente.
    LP-112 ∧ ¬RH (la rama m = ∞ con auto-aproximación), que está fuera de todo alcance.
    Más aún: nada excluye hoy que LP-112 sea materialmente equivalente a RH — que en la rama
    m = ∞ los testigos también falten (la Prop. 2.6 aplica verbatim ahí: densidad cero
-   alrededor de cualquier cero off-crítico). El estatus honesto es: **LP-112 está implicado
+   alrededor de cualquier cero off-crítico). El estatus franco es: **LP-112 está implicado
    por RH, implica la dicotomía, y no se conoce ni implicación inversa ni obstrucción a
    ella.**
 3. **Dónde sobreclama cada documento:**
@@ -224,15 +224,15 @@ contraposición del teorema la supera trivialmente.
    - D112 §7.3: "LP-112 queda vivo, no RH-equivalente" y §7 "certificado de no-equivalencia
      con RH" — **"certificado" es falso**: lo certificado es la no-equivalencia POR
      DENSIDADES, no la no-equivalencia.
-   - D112 §5.4 cuerpo: correcto y honesto (hedge explícito + GAP declarado). El cuerpo y los
+   - D112 §5.4 cuerpo: correcto y franco (hedge explícito + GAP declarado). El cuerpo y los
      titulares del mismo documento no dicen lo mismo; los titulares deben bajar al cuerpo.
-   - D113: el cuerpo es honesto ("no ⟹ RH por diccionarios conocidos", tabla §7); el
+   - D113: el cuerpo es franco ("no ⟹ RH por diccionarios conocidos", tabla §7); el
      resumen §0.4 ("LP-113 no es RH-equivalente por los diccionarios conocidos, pero...")
      mantiene el hedge — aceptable.
    - **P44, §2.4 (línea 196 de main.tex): el título de sección es "LP-112 is not
      RH-equivalent" — sobreclamo en titular.** El cuerpo (líneas 142–144, 197–203) sí dice
      "as far as every known dictionary reaches" y "no known dictionary upgrades it to RH" —
-     honesto. **Corrección requerida: retitular** ("LP-112 is not known to be
+     franco. **Corrección requerida: retitular** ("LP-112 is not known to be
      RH-equivalent" o "No known dictionary upgrades LP-112 to RH") y revisar la línea 104
      ("strictly weaker than every previously identified sufficient condition" — "strictly
      weaker" solo está probado contra la recurrencia fuerte EN FORMA DE ENUNCIADO, sucesión
@@ -245,7 +245,7 @@ contraposición del teorema la supera trivialmente.
    con franqueza brutal: no hay precedente, no hay técnica, toda la maquinaria conocida
    produce genéricos y el testigo requerido es excepcional; en el peor mundo (que nadie
    puede excluir) probar LP-112 es exactamente tan difícil como RH. La arquitectura es
-   honesta SI Y SOLO SI se presenta como apuesta: "el target es más débil como enunciado;
+   franca SI Y SOLO SI se presenta como apuesta: "el target es más débil como enunciado;
    no sabemos si es más débil como problema". P44 debe decir esa segunda mitad explícita.
 
 **RESPUESTA A LA LÍNEA 5: no-equivalencia NO-REFUTADA, no probada; el lenguaje de los

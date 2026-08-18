@@ -1,0 +1,309 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\title{The Witt--Loewy trace bridge: the correct Hilbert target (v99)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Why a faithful Hilbert completion is too strong}
+
+Let $\mathcal A$ be the commutative test convolution algebra with involution
+$f\mapsto f^\vee$, and let
+\[
+ E=\mathcal H_-^0
+\]
+be the odd nuclear representation of row (c).  A multiple spectral point
+need not act semisimply on $E$: on a length-two local jet the action has
+the form
+\begin{equation}
+             \pi(f)=\widehat f(\rho)I+widehat f'(\rho)N,
+ \qquad N^2=0.                                      \tag{1}
+\end{equation}
+
+\begin{theorem}[Positive faithful completion kills jets --- \PROVED]
+Suppose a positive Hilbert completion of the module in (1) satisfies
+$\pi(f^\vee)=\pi(f)^*$ for every $f$.  If the involution fixes the simple
+character (the critical case), then $N=0$.  Consequently a faithful
+positive completion of the full odd Fr\'echet module would imply not only
+criticality of every character but semisimplicity of every local spectral
+block.
+\end{theorem}
+
+\begin{proof}
+Choose $f$ whose value at $\rho$ is zero and whose first derivative there
+is nonzero.  After multiplying by a scalar, the adjoint relation makes the
+nonzero nilpotent $N$ either selfadjoint or skew-adjoint (the sign depends
+only on the convention for $f^\vee$).  A selfadjoint or skew-adjoint
+bounded operator is normal.  A normal nilpotent operator is zero, a
+contradiction.  Equivalently, $\|N x\|^2=\langle N^*Nx,x\rangle$ and the
+spectral theorem force $N=0$.
+\end{proof}
+
+The Weil form counts a zero with its algebraic multiplicity and does not
+assert simplicity.  Therefore the correct Hilbert object cannot be a
+faithful completion of $E$.  It must preserve the nuclear character while
+semisimplifying the nilpotent jets.
+
+\section{The source-defined Loewy object}
+
+For a finite-length $\mathcal A$-module $M$, define its module radical
+intrinsically by
+\[
+ \operatorname{rad}M:=\bigcap\{N\subset M:N\text{ is a maximal proper
+ }\mathcal A\text{-submodule}\}.
+\]
+Iterate it and put
+\begin{equation}
+ \operatorname{gr}_{L}M
+ :=\bigoplus_{j\ge0}\operatorname{rad}^jM/
+                         \operatorname{rad}^{j+1}M.  \tag{2}
+\end{equation}
+This definition uses only the source module and its action; it contains no
+zero of $\xi$ and no sign choice.
+
+For the nuclear representation $E$, the candidate global construction is to
+apply (2) to its finite-length Riesz subquotients and take a nuclear locally
+convex direct limit.  Equivalently, one would apply (2) to every finite
+spectral subquotient in a summability filtration.  Denote this candidate by
+\begin{equation}
+                      E^{\rm ss}:=\operatorname{gr}_{L}E.       \tag{3}
+\end{equation}
+
+\begin{theorem}[Finite Loewy trace preservation --- \PROVED]
+For every finite-length invariant subquotient $M$ and every test function
+$f$,
+\begin{equation}
+          \operatorname{Tr}_{\operatorname{gr}_L M}\pi(f)
+          =\operatorname{Tr}_{M}\pi(f).             \tag{4}
+\end{equation}
+In particular the finite construction preserves every algebraic
+multiplicity, even though it deletes all nilpotent couplings.
+\end{theorem}
+
+\begin{proof}
+The radical filtration is invariant under
+every $\pi(f)$.  In a basis adapted to the filtration, $\pi(f)$ is block
+upper triangular and its diagonal blocks are precisely its actions on the
+summands of (2).  The trace of a block upper triangular matrix is the sum
+of the traces of its diagonal blocks, proving (4).
+\end{proof}
+
+To promote (4) unconditionally to the topological object (3), one must prove that the finite
+Loewy pieces assemble in a nuclear topology and that their traces converge
+to Meyer's character in its stated distributional topology.  Row (c)
+proves summability of the original quotient, but does not state this Loewy
+assembly.  The global promotion is therefore \AUDIT, not used below as an
+unconditional lemma.
+
+\section{Positive simple factors and the critical line}
+
+Every simple factor of $E^{\rm ss}$ is a one-dimensional character module.
+Under the subsequent spectral description of row (c), its character is
+\begin{equation}
+       \chi_\rho(f)=\widehat f(\rho),                \tag{5}
+\end{equation}
+with algebraic repetitions supplied by the different Loewy layers.
+The source involution obeys
+\begin{equation}
+ \chi_\rho(f^\vee)
+ =\overline{\widehat f(1-\overline\rho)}.            \tag{6}
+\end{equation}
+
+\begin{theorem}[Simple Witt positivity test --- \PROVED]
+The character module $\chi_\rho$ admits a nonzero positive Hilbert metric
+for which $\pi(f^\vee)=\pi(f)^*$ for every $f$ if and only if
+\begin{equation}
+                       \Re\rho=\frac12.              \tag{7}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+On a one-dimensional positive Hilbert space the adjoint condition is
+exactly
+\[
+ \chi_\rho(f^\vee)=\overline{\chi_\rho(f)}
+ \quad\text{for every }f.
+\]
+By (5)--(6), this says
+$\widehat f(1-\bar\rho)=\widehat f(\rho)$ for every test function.
+Mellin transforms of compactly supported smooth functions separate two
+distinct points, hence $1-\bar\rho=\rho$, which is (7).  Conversely, (7)
+turns (6) into the required scalar adjoint identity, and the standard
+metric on $\mathbb C$ is positive.
+\end{proof}
+
+Thus, at every finite spectral level, the Loewy construction removes the
+artificial simplicity requirement: if a critical spectral point has
+multiplicity $m$, (2) produces $m$ copies of its character and (4) keeps
+the coefficient $m$ in the trace.  The asserted global direct sum is
+conditional on the assembly audit above.
+
+\section{The finite-level Witt $C^*$-factorization}
+
+Let $G=\mathbb Q_+^\times$ and let $C^*(G)$ be the universal group
+$C^*$-algebra for the centered half-Tate generators.  The row-(b) metric
+gives the algebraic involution $g^*=g^{-1}$.  The action on $E^{\rm ss}$
+is initially only an action of the algebraic group algebra $\mathbb C[G]$.
+Let $\mathfrak M_{\rm fin}(E)$ be the family of finite-length spectral
+subquotients furnished by the row-(c) nuclear spectral theorem.  Give every
+one-dimensional factor of $\operatorname{gr}_L M$ its standard Hilbert
+norm; the resulting operator norm is independent of the choice of a
+nonzero basis in each factor.
+
+\begin{theorem}[$C^*$-factorization criterion --- \PROVED]
+The following are equivalent.
+\begin{enumerate}
+\item Every finite Loewy object $\operatorname{gr}_L M$ extends to a
+      $*$-representation of $C^*(G)$, uniformly over
+      $M\in\mathfrak M_{\rm fin}(E)$.
+\item Every simple factor of $E^{\rm ss}$ is a unitary character of $G$.
+\item For every finite sum $a=\sum_g a_g g$,
+\begin{equation}
+ \sup_{M\in\mathfrak M_{\rm fin}(E)}
+ \|\pi_{\operatorname{gr}_L M}(a)\|
+ \le \|a\|_{C^*(G)}
+ =\sup_{\chi\in\widehat G}\left|\sum_g a_g\chi(g)\right|.      \tag{8}
+\end{equation}
+\end{enumerate}
+Under the row-(c) spectral theorem these conditions hold if and only if all
+its simple centered characters lie on the unitary axis.
+\end{theorem}
+
+\begin{proof}
+A $*$-representation of a group $C^*$-algebra sends every group element to
+a unitary, proving (1)$\Rightarrow$(2).  Conversely a finite Hilbert direct
+sum of the simple unitary character factors, repeated according to their
+Loewy multiplicities, proves (2)$\Rightarrow$(1).  Contractivity of
+$*$-representations proves (1)$\Rightarrow$(3).  Conversely (8) extends
+each finite algebraic representation continuously to $C^*(G)$;
+preservation of the involution makes every extension a
+$*$-representation.  The last assertion is the scalar test of the
+preceding theorem.
+\end{proof}
+
+This gives a new, entirely source-labelled formulation of the desired
+bridge: prove the single uniform contractivity estimate (8) on finite
+Loewy pieces from the row-(b) metric realization.  It requires no prior
+global Hilbert topology on $E^{\rm ss}$.
+
+\begin{corollary}[One-generator reduction --- \PROVED]
+Estimate (8) is equivalent to the following pair of inequalities for every
+$n\ge2$ and every $M\in\mathfrak M_{\rm fin}(E)$:
+\begin{equation}
+ \boxed{
+ \|\pi_{\operatorname{gr}_L M}(\sqrt n\,U_n)\|\le1,
+ \qquad
+ \|\pi_{\operatorname{gr}_L M}(n^{-1/2}U_{1/n})\|\le1.}       \tag{8c}
+\end{equation}
+Thus the missing promotion can be tested one correspondence at a time.
+\end{corollary}
+
+\begin{proof}
+Condition (8) gives (8c) because both centered group elements have
+$C^*(G)$-norm one.  Conversely, on a simple factor let $\lambda_n$ be the
+eigenvalue of $\sqrt n\,U_n$.  The second operator in (8c) is its inverse,
+so the two inequalities give $|\lambda_n|\le1$ and
+$|\lambda_n|^{-1}\le1$.  Hence $|\lambda_n|=1$ for every $n$.  Every
+finite Loewy graded object is a direct sum of these unitary characters, so
+it is a $*$-representation of $C^*(G)$.  The factorization criterion then
+gives (8).
+\end{proof}
+
+Row (b) proves that $n^{-1/2}$ is the norm of its based metric contact line
+and that the algebraic Witt generator has the corresponding adjoint.  It
+does not prove (8c): (8c) is an operator-norm assertion on the simple
+subquotients of the different completed object $E$.  A contractive functor
+from the row-(b) metric correspondence category to those subquotients would
+prove (8c), but the functor currently constructed in row (c) is monoidal
+and trace-compatible, not norm-enriched.
+
+\begin{theorem}[Global Hilbert assembly after (8) --- \PROVED]
+If (8) holds, there is a positive Hilbert representation
+\begin{equation}
+ \mathscr H_-^{\rm ss}
+ =\widehat\bigoplus_{\text{simple factors of }E}
+        \mathbb C_{\chi},                            \tag{8a}
+\end{equation}
+where every factor is repeated with its Loewy multiplicity, such that the
+integrated action of every test function is trace class and
+\begin{equation}
+ \operatorname{Tr}_{\mathscr H_-^{\rm ss}}\pi(f)=\tau_-(f).    \tag{8b}
+\end{equation}
+Thus the global topological audit following (4) is not an additional
+hypothesis for the implication (8)$\Rightarrow$ row (d).
+\end{theorem}
+
+\begin{proof}
+By the factorization criterion, every simple centered scaling character is
+unitary.  Form the Hilbert direct sum (8a), retaining the number of copies
+given by the finite Loewy filtration.  On the subsequent spectral
+description of row (c), these characters are $u\mapsto e^{i\gamma u}$.
+The Mellin transform of a compactly supported smooth test function decays
+faster than every power of $|\gamma|$, while the nuclear spectral counting
+used in row (c) has polynomial (indeed $O(R\log R)$) growth.  Hence the
+diagonal eigenvalue sequence is absolutely summable and the integrated
+operator is trace class.  Finite trace preservation (4), followed by
+absolute convergence, gives (8b).  No rearrangement of a conditionally
+convergent series occurs.
+\end{proof}
+
+\section{What is and is not closed}
+
+Let $\tau_-^{\rm ss}$ be the trace on the Hilbert direct sum (8a).  The
+preceding theorem shows that if (8) holds then
+\[
+ \tau_-^{\rm ss}(f)=\tau_-(f).
+\]
+For primitive $f$ the even Tate trace vanishes, and therefore
+\begin{equation}
+ B_{\rm nuc}(f,f)
+ =-\operatorname{Tr}\bigl(\pi_{E^{\rm ss}}(f)
+                  \pi_{E^{\rm ss}}(f)^*\bigr)\le0.  \tag{9}
+\end{equation}
+So (8) closes row (d) without requiring simplicity of the zeros and without
+requiring a faithful Hilbert completion of Meyer's nonsemisimple quotient.
+
+The files currently prove the algebraic involution on the multiplier
+labels and the equality of their scalar contact weights.  They do not prove
+the $C^*$-norm estimate (8) for the completed Loewy object.  Equality of
+traces on individual labels is weaker than complete contractivity: a
+one-dimensional algebraic character $g\mapsto g^\alpha$ has perfectly
+defined label traces for any $\alpha\in\mathbb C$, but factors through
+$C^*(G)$ only when $\Re\alpha=0$.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.16\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Evidence \\
+\midrule
+Faithful completion is unnecessarily stronger than row (d) & \PROVED & (1) \\
+Finite source-defined Loewy semisimplification & \PROVED & (2) \\
+Finite trace and multiplicity preservation & \PROVED & (4) \\
+Unconditional topological Loewy direct limit & \AUDIT & topology/trace limit not supplied \\
+Global trace-class Hilbert assembly after (8) & \PROVED & (8a)--(8b) \\
+Positive metric on each simple factor exactly at the unitary axis & \PROVED & (5)--(7) \\
+Reduction to one $C^*$-contractivity estimate & \PROVED & (8) \\
+Derivation of (8) from rows (a)--(c) & \OPEN & no such norm comparison in the files \\
+Row (d), condition $G$ & \OPEN & follows from the still-open estimate (8) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The mathematical gain is that the completion problem has now been typed
+correctly.  The missing theorem is not ``put a Hilbert norm on Meyer'' and
+not ``assume all zeros simple''.  It is the promotion of the
+semisimplified Witt action from $\mathbb C[G]$ to $C^*(G)$ with its
+source-fixed multiplicities.  Any proof of that promotion must produce
+(8), not merely reproduce the scalar contacts $\Lambda(n)$.
+
+\end{document}

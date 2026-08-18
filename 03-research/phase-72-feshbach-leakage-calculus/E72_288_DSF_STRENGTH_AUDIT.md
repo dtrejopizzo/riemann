@@ -68,7 +68,7 @@ DSF-O2 => APCB => upper complement => compact-root HPAC.
 But proving DSF-O2 directly by standard prime-number estimates would likely run into the same
 zero-resonance wall already identified in E72.15--E72.16.
 
-## How to keep the route honest
+## How to keep the route candid
 
 There are now two possible APCB routes:
 

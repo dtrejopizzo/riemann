@@ -1,0 +1,157 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,booktabs,array}
+\newcommand{\PROVED}{\textcolor{green!40!black}{\textbf{PROVED}}}
+\newcommand{\OPEN}{\textcolor{red!70!black}{\textbf{OPEN}}}
+\newcommand{\AUDIT}{\textcolor{orange!70!black}{\textbf{AUDIT}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{Uniform Gamma--Tate coupling at an arithmetic threshold cell (v112)}
+\date{13 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{The off-diagonal Gamma kernel}
+
+At the critical parameter write $a_j=2j+\tfrac12$.  The positive Gamma
+energy has multiplier
+\begin{equation}
+ g_\Gamma(\tau)=\sum_{j\ge0}
+ \frac{2\tau^2}{a_j(a_j^2+\tau^2)}.                            \tag{1}
+\end{equation}
+Since
+\[
+ \frac{2\tau^2}{a(a^2+\tau^2)}=\frac2a-\frac{2a}{a^2+\tau^2},
+\]
+the distribution kernel away from the diagonal is, up to the fixed Fourier
+sign convention,
+\begin{equation}
+ K_\Gamma(u)=-\sum_{j\ge0}e^{-a_j|u|}
+ =-\frac{e^{-|u|/2}}{1-e^{-2|u|}}.                            \tag{2}
+\end{equation}
+The omitted terms $2a_j^{-1}\delta_0$ are diagonal and therefore do not
+enter an old/new cross block.
+
+Let $I_N=(-T_N,T_N)$ and
+$E_N=(T_N,T_{N+1})\cup(-T_{N+1},-T_N)$, with
+$T_N=\tfrac12\log N$.
+
+\begin{theorem}[Uniform Gamma old/new cross --- \PROVED]
+The integral operator obtained by restricting (2) from $E_N$ to $I_N$ has
+operator norm bounded by an absolute constant, uniformly in $N$.
+\end{theorem}
+
+\begin{proof}
+For $0<u\le1$, (2) is bounded in modulus by
+$C(1/u+1)$; for $u\ge1$ it is bounded by $Ce^{-u/2}$.  Near the right
+endpoint write an old coordinate as $T_N-x$, $x>0$, and a newborn
+coordinate as $T_N+y$, $0<y<T_{N+1}-T_N$.  The singular part is dominated
+by $C/(x+y)$.  Extending both functions by zero to $\mathbb R_+$ reduces
+the bound to the Carleman operator
+\[
+ Cf(x)=\int_0^\infty\frac{f(y)}{x+y}\,dy,
+ \qquad \|C\|_{2\to2}=\pi.
+\]
+The constant and exponentially decaying remainders are bounded by Schur's
+test.  The left endpoint is identical by reflection, while opposite
+endpoints have distance $2T_N$ and give a smaller exponential bound.
+Summing the four blocks proves a bound independent of $N$.
+\end{proof}
+
+\section{The two Tate channels}
+
+The old/new blocks of a Tate rank-one channel are products of the
+$L^2$ norms of $e^{t/2}$ or $e^{-t/2}$ on $I_N$ and on one component of
+$E_N$.
+
+\begin{theorem}[Uniform Tate old/new cross --- \PROVED]
+Both primitive Tate channels have old/new cross norm bounded by an absolute
+constant, uniformly in $N$.
+\end{theorem}
+
+\begin{proof}
+For example,
+\begin{align*}
+ \|e^{t/2}\|_{L^2(I_N)}^2&=2\sinh T_N,\\
+ \|e^{t/2}\|_{L^2(T_N,T_{N+1})}^2
+ &=e^{T_N}(e^{\delta_N}-1),
+ \qquad \delta_N=\frac12\log(1+N^{-1}).
+\end{align*}
+Their product is bounded because $e^{2T_N}=N$ and
+$e^{\delta_N}-1=O(N^{-1})$.  On the opposite newborn component the
+product is smaller.  Replacing $t$ by $-t$ interchanges the two endpoints,
+so the same bound holds for the second Tate channel.
+\end{proof}
+
+Combining the two theorems, the complete affine Gamma--Tate old/new cross
+$B_N^{\Gamma T}$ satisfies
+\begin{equation}
+                         \|B_N^{\Gamma T}\|\le C_{\Gamma T}   \tag{3}
+\end{equation}
+with an absolute constant.
+
+\section{Cost in the normalized positive reference}
+
+Row (d) proves for the positive reference
+\begin{equation}
+ \widehat{\mathcal R}_N\ge\alpha_N I,
+ \qquad \alpha_N\sim\sqrt N.                                 \tag{4}
+\end{equation}
+
+\begin{corollary}[Gamma--Tate capacity is asymptotically negligible ---
+\PROVED]
+One has
+\begin{equation}
+ \bigl\|\widehat{\mathcal R}_N^{-1/2}B_N^{\Gamma T}\bigr\|^2
+ \le\frac{C_{\Gamma T}^2}{\alpha_N}=O(N^{-1/2}).              \tag{5}
+\end{equation}
+If the normalized old defect obeys $D_{0,N}\ge\eta I$ for a fixed
+$\eta>0$, then its additional Gamma--Tate return cost is
+\begin{equation}
+                         O(\eta^{-1}N^{-1/2}).                 \tag{6}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Equation (5) follows immediately from (3)--(4).  Passing through the
+normalized defect inverse costs at most $\|D_{0,N}^{-1}\|\le\eta^{-1}$,
+which proves (6).
+\end{proof}
+
+The fixed-gap hypothesis in (6) must be propagated, not assumed.  The
+strict arithmetic limit of v109--v111 suggests the induction
+\begin{equation}
+ \operatorname{Cap}_{N+1}
+ \le s_*+o(1)+O(\eta^{-1}N^{-1/2}),
+ \qquad
+ s_*=\frac{\sqrt\pi}{2}e^{1/4}\operatorname{erf}\!\left(\frac12\right)
+ <1.                                                          \tag{7}
+\end{equation}
+To make (7) a theorem about the signed physical Schur complement, one must
+still verify that the Kato-transported residual innovation factors through
+the physical delay isometry of v111 and the normalized defect operator,
+with no additional noncontractive connection term.  This is precisely the
+Gamma--Tate attachment (8)--(9) of v111.  Once that source identity is
+proved, choose $\eta<(1-s_*)/3$ and then $N_0$ so large that both error
+terms in (7) are below $\eta$; the fixed gap propagates for all
+$N\ge N_0$.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.55\linewidth}
+                >{\centering\arraybackslash}p{.15\linewidth}
+                >{\raggedright\arraybackslash}p{.20\linewidth}}
+\toprule
+Statement & Status & Location \\
+\midrule
+Uniform Gamma old/new cross & \PROVED & Theorem 1 \\
+Uniform two-Tate old/new cross & \PROVED & Theorem 2 \\
+Normalized Gamma--Tate cost $O(N^{-1/2})$ under a fixed defect gap & \PROVED & (5)--(6) \\
+Physical defect-factor attachment & \OPEN & v111 (8)--(9) \\
+Large-threshold gap induction & \OPEN & follows after that attachment \\
+Condition $G$, row (d) & \OPEN & plus finite threshold certification \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

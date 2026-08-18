@@ -43,7 +43,7 @@ Along a **fixed** test function `f₀` (frozen, orthogonal to the on-line mode `
 
 So **each negative direction is shallow, `O(b²)`**, vanishing as the zero approaches the line
 (recovers the `δ²` law of P7 from the direction viewpoint).
-**Honest caveat (important):** the *supremum* of `−Q` over `L²` is `+∞` — the off-axis
+**Candid caveat (important):** the *supremum* of `−Q` over `L²` is `+∞` — the off-axis
 evaluation is unbounded in `L²` (the Phase-4 fact). Shallowness is a **per-direction**,
 bandwidth-relative statement, *not* a bound on the negative eigenvalue. This is exactly why the
 realization needs a weighted (de Branges) space, and it is the first structural tension in the
@@ -115,9 +115,9 @@ for any synthetic `(b,γ)`), but:
 This is the first question in the whole program that attacks `κ` **directly** and is *not*
 obviously CAP: it does not ask for a positivity of a realization; it asks whether the **arithmetic
 rigidity of `ξ`** (Hadamard/explicit formula) is consistent with the negative-direction portrait.
-Two honest outcomes:
+Two candid outcomes:
 - **(a) compatible** — a free family of negative directions is consistent with `ξ`'s rigidity:
-  then the portrait gives no obstruction, and `κ>0` is not excluded this way (an honest null, but
+  then the portrait gives no obstruction, and `κ>0` is not excluded this way (an candid null, but
   a sharp one — it would say the arithmetic does not see the dents).
 - **(b) incompatible** — the explicit-formula coupling forbids the simultaneous existence of the
   `γ`-localized negative directions: that would be a genuine handle on `κ`, the first non-CAP one.

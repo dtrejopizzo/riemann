@@ -3,7 +3,7 @@
 **Author: David Alejandro Trejo Pizzo · 2026-06-04.**
 Every route in this program (P11's five static languages; P12's dynamical N5 and extremal reduction) terminates
 at one irreducible arithmetic statement. This document turns that statement into a structured attack — the
-"new mathematics" the problem demands — with a genuinely new spearhead that escapes the N5 no-go, an honest
+"new mathematics" the problem demands — with a genuinely new spearhead that escapes the N5 no-go, an candid
 landscape of what is known, concrete sub-targets and milestones, and the role of our own assets. Odds are
 small and the horizon is long; this is written as a real multi-stage program, not a promise.
 
@@ -27,7 +27,7 @@ Two features make (U) hard and shape the attack:
 
 ---
 
-## 1. The honest landscape (what is known, where the barriers are)
+## 1. The candid landscape (what is known, where the barriers are)
 
 | Result | Status | Barrier to (U) |
 |---|---|---|
@@ -113,7 +113,7 @@ them to a Gaussian-smoothed prime sum). Identify whether any $\mathcal F$ is sim
 
 ---
 
-## 6. Honest expectations and horizon
+## 6. Candid expectations and horizon
 
 - **(U) is a central open problem** (the unconditional, extremal, full-support GUE universality of ζ zeros).
   Cracking it outright is a multi-year, likely community-scale effort; from here, $<1\%$ for the full target.
@@ -121,7 +121,7 @@ them to a Gaussian-smoothed prime sum). Identify whether any $\mathcal F$ is sim
   genuine, publishable sub-problems where partial progress is real and our detector can calibrate *exactly how
   much* is needed. The spearhead S9 is high-risk/high-novelty and is the one move that escapes our own N5.
 - **What would constitute a crossing:** either S9 yields an arithmetic-aware Lyapunov forcing $t_c/s^2<0$, or
-  T9-A/B reach the closest-pair regime unconditionally. Both are new mathematics; both are honestly named.
+  T9-A/B reach the closest-pair regime unconditionally. Both are new mathematics; both are candidly named.
 - **What is already banked (so the program rests on solid ground):** P1–P12, the validated detector, the
   no-gos N1–N5, the Lyapunov theorem, and the precise target. Phase 9 is the attack on the named target, not a
   re-derivation of the wall.
@@ -139,5 +139,5 @@ real sub-problem, with the detector calibrating the needed range.
 ### Status
 - Target (U) stated exactly; landscape mapped; barriers named — ✅.
 - Spearhead S9 (arithmetic-aware monotone functional) — ⬜ the make-or-break, M9.1 next.
-- Sub-targets T9-A/B/C/D + asset roles + gates + honest horizon — ✅ designed.
+- Sub-targets T9-A/B/C/D + asset roles + gates + candid horizon — ✅ designed.
 - This is the program for the new mathematics; execution begins at M9.1.

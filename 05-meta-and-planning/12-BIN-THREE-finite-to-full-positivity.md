@@ -85,7 +85,7 @@ total positivity is itself a corollary). The function-field curve is such a fini
   are unconditional **and** whose full level is a corollary of a finite-order general theorem — i.e., a bin-three
   occupant. None exists; the claim is that the four known families all exhibit the gap, which the table verifies.
 - **"Is the TP-form new?"** The Pólya–Schoenberg link of LP to total positivity is classical; *applying it as the
-  matcher's test for ζ and extracting the finite-to-full synthesis* is the new step. Honest precedent flagged.
+  matcher's test for ζ and extracting the finite-to-full synthesis* is the new step. Candid precedent flagged.
 - **"Does it help prove RH?"** **No** — and it must not be sold as such. It sharpens *what to build* (a
   finitization) and *why every reformulation fails* (it stays at finite order or relabels the infinite one).
 - **"Could the finitization be non-geometric?"** Unknown — and this is exactly bin three's open question, now
@@ -103,5 +103,5 @@ total positivity is itself a corollary). The function-field curve is such a fini
   a new inequality, but a **finitization of ζ's full positivity**. Whether one exists — geometric (the
   $\operatorname{Spec}\mathbb Z$ surface) or otherwise — is the single open question the entire strategy map now
   points to.
-- **No RH proof is claimed.** This is new mathematics in the honest sense the program demands: a sharper true
+- **No RH proof is claimed.** This is new mathematics in the candid sense the program demands: a sharper true
   statement about the wall, falsifiable, and pointing at exactly one thing to build.

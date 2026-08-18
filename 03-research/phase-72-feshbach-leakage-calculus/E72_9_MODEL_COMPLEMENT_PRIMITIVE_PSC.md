@@ -296,5 +296,5 @@ proved:   PSC => reduced leakage => theta_x -> k_x => stable divisor convergence
 open:     PSC itself, the one-vector pole-relative Prolate-Sonin coboundary lemma.
 ```
 
-This is the furthest honest closure currently available. It does not prove RH, but it isolates the first
+This is the furthest candid closure currently available. It does not prove RH, but it isolates the first
 missing lemma sharply enough to attack or falsify.

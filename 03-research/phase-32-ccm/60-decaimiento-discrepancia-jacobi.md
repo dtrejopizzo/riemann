@@ -203,7 +203,7 @@ La igualdad $Q_n(\varphi_n,\varphi_n) = 0$ para la función de prueba $\varphi_n
 
 ---
 
-## §8. Diagnóstico honesto
+## §8. Diagnóstico franco
 
 **Resultado probado (nuevo, riguroso):**
 $$\Delta_n^{\{\infty,p\}} = \frac{A_n}{p} + O(p^{-3/2}\log p), \quad \sum_{p\leq T}\Delta_n^{\{\infty,p\}} \sim A_n\log\log T.$$

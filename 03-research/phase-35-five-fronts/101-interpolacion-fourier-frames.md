@@ -197,7 +197,7 @@ $$\mathrm{RH} \iff \big(W_\lambda\,d\nu\big)^{\wedge}(\gamma_n) = 0 \quad \text{
 
 *Demostración.* ($\Rightarrow$) RH $\Rightarrow d\nu = 0 \Rightarrow$ trivial. ($\Leftarrow$) Por el Lema 4.1, las hipótesis dicen $\langle h, e_n\rangle = 0$ para todo $n$ ($d\nu$ es par, Prop. 8.1 del Doc 89, así que anulación en $\gamma_n$ equivale a anulación en $-\gamma_n$). Por la completitud (Doc 85, Teorema 5.1), $h = 0$ en $L^2(\mu_\lambda)$, es decir $h\,W_\lambda\,w = 0$ a.e.; por el Lema 2.1 ($W_\lambda > 0$) y $w > 0$, $h = 0$ a.e., luego $d\nu = 0$, luego RH (Doc 89, Teorema 10.1, (1)$\iff$(2)). $\square$
 
-Es la primera condición del programa que testea $d\nu$ **solo en las frecuencias $\gamma_n$** (numerable, sin sup sobre $\lambda$ ni sobre $z \in \mathbb{H}$). Su honestidad se audita en §6.3: es una condición CAP-style, no verificable sin los ceros.
+Es la primera condición del programa que testea $d\nu$ **solo en las frecuencias $\gamma_n$** (numerable, sin sup sobre $\lambda$ ni sobre $z \in \mathbb{H}$). Su franqueza se audita en §6.3: es una condición CAP-style, no verificable sin los ceros.
 
 **(Nivel "frame" — el que NO tenemos, refutado).** Si $\{e_n\}$ fuera un frame con cotas $A, B$, valdría
 $$A\,\|h\|^2_{L^2(\mu_\lambda)} \;\leq\; \sum_n \big|\widehat{\nu_\lambda}(\gamma_n)\big|^2 \;\leq\; B\,\|h\|^2_{L^2(\mu_\lambda)},$$
@@ -349,7 +349,7 @@ Aunque la ruta se cierra, el audit deja dos resultados y dos gaps nuevos. Para s
 
 1. **Teorema 101.A (no-estructura; incondicional).** *Sea $\mu$ cualquier medida positiva finita no nula sobre $\mathbb{R}$ y $\{\gamma_n\}$ las ordenadas de los ceros no triviales de $\zeta$. El sistema $\{e^{i\gamma_n s}\}$ en $L^2(\mu)$ no admite cota superior de frame, no es sucesión de Riesz y no es sucesión de interpolación; para $\mu = W_\lambda dm_\infty$ es además completo y sobrecompleto (todo subsistema cofinito es completo, módulo V.1).* — Cierra definitivamente la pregunta que el Doc 85 dejó implícita ("lo que el teorema estándar no puede garantizar directamente es la base de Riesz", Doc 85 §1.2, Obs.): la base de Riesz no es no-garantizada, es **falsa**. Ingredientes: Riemann–von Mangoldt + casillas + continuidad de $\widehat{\mu}$; nada más.
 
-2. **Proposición 101.B (Condición 9; incondicional módulo V.1).** *Para cualquier $\lambda$ fijo con $N(\lambda)\geq 1$: RH $\iff (W_\lambda\,d\nu)^\wedge(\gamma_n) = 0$ para todo $n$.* Se añade a la tabla del Doc 89 §6 con la anotación honesta: CAP-style, no verificable sin posiciones de ceros (MW-7); su interés es de cardinalidad mínima (numerable, sin supremos sobre $\lambda$ ni sobre $z \in \mathbb{H}$) y de forma (es la primera condición del catálogo cuyos puntos de prueba son los propios $\gamma_n$).
+2. **Proposición 101.B (Condición 9; incondicional módulo V.1).** *Para cualquier $\lambda$ fijo con $N(\lambda)\geq 1$: RH $\iff (W_\lambda\,d\nu)^\wedge(\gamma_n) = 0$ para todo $n$.* Se añade a la tabla del Doc 89 §6 con la anotación franca: CAP-style, no verificable sin posiciones de ceros (MW-7); su interés es de cardinalidad mínima (numerable, sin supremos sobre $\lambda$ ni sobre $z \in \mathbb{H}$) y de forma (es la primera condición del catálogo cuyos puntos de prueba son los propios $\gamma_n$).
 
 3. **Dicotomía 101.C (= 8.1, taxonómica):** todo enunciado del corpus interpolación/unicidad/cristalinidad sobre ceros de $\zeta$ es o bien $\beta$-ciego e incondicional (sin filo), o bien $\beta$-sensible y RH-equivalente/condicional (CAP renombrado). Test de admisión para cualquier candidato futuro de esta familia: exhibir primero un enunciado $\beta$-sensible no-RH-equivalente.
 
@@ -375,7 +375,7 @@ Aunque la ruta se cierra, el audit deja dos resultados y dos gaps nuevos. Para s
 
 ---
 
-## Apéndice — Checklist de honestidad
+## Apéndice — Checklist de franqueza
 
 | Afirmación | Estatus |
 |---|---|

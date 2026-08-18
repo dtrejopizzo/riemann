@@ -4,7 +4,7 @@ The Day-10 "space-independent theorem" (faithful $\Rightarrow S_{\mathrm{off}}=\
 logical bottleneck, so it gets the same hard audit as the kernel formula. **Two gaps found** — one in F2
 (the referee's catch), one in F1 (found here). The theorem is **not** space-independent; it holds for
 **translation-invariant / reflection-symmetric faithful spaces** (the candidate class) and reconstructs in
-a **density-adapted** form covering the log-weighted candidates. Net: an honest **impossibility result with
+a **density-adapted** form covering the log-weighted candidates. Net: an candid **impossibility result with
 explicit hypotheses**, not a universal claim.
 
 **Tags:** ✅ rigorous · ◆ conditional · ❌ retracted-overclaim · ⬜ open.
@@ -68,7 +68,7 @@ Hence **$a=0$ ($\mathfrak t_-$ bounded) is impossible** and the relative Carleso
   ($K\sim1/\log$ ✓ borderline) — both candidate faithful spaces. *(i) is a mild extra regularity beyond
   bare faithfulness; it is exactly the referee's $K\gtrsim1/\log$ threshold.*
 - (ii) ✅ for translation-invariant; ◆ for log-weighted (a mild perturbation — to verify $D(t)\ge0$ there).
-- (iii) is the honest restriction: a *genuine* RH violation (positive proportion off-line) gives it; a
+- (iii) is the candid restriction: a *genuine* RH violation (positive proportion off-line) gives it; a
   super-sparse off-line set is a near-RH world where the question is nearly moot.
 
 ---

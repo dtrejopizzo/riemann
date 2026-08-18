@@ -3,7 +3,7 @@
 `experiments/E11_relspec_prolate.py` (`q_func`, `QW_entry`, `spec`), venv at
 `…/investigacion-2/venv/bin/python`. **Goal (hypothesis of Theorem III, relative stability / Davis–Kahan on `Â_λ=A_λ/ε₀`):**
 > `ε₁(λ)/ε₀(λ) ≥ 1 + γ`, some fixed `γ>0`, uniformly as `λ→∞`. Markers: **[P]** proved · **[P\*]** proved modulo a standard classical result ·
-**[GAP]** well-posed missing lemma · **[!]** the single minimal residual. > **HONESTY NOTE on this session.** `Bash` execution was disabled in the working environment,
+**[GAP]** well-posed missing lemma · **[!]** the single minimal residual. > **CANDOR NOTE on this session.** `Bash` execution was disabled in the working environment,
 > so I could **not** run fresh mpmath experiments. The empirical backbone below is the
 > **already-recorded high-precision data** in this repo (E11 / `relspec2.py`, mpmath dps 40–50,
 > `N≤20`, λ≤11), cited verbatim. A ready-to-run new experiment that measures `ε₀,ε₁,ε₂` and the
@@ -51,7 +51,7 @@ Both jump forms are genuine non-negative Dirichlet forms (Beurling–Deny). Prov
 `A_λ` over orthogonal sectors. Two standard facts hold rigorously and uniformly: **(a) `ε₁ ≥ ε₀`, strict by H1 [P].** Trivial from eigenvalue ordering (`ε₁` is the second
 smallest); strict (`ε₁>ε₀`) because `ε₀` is **simple** (H1). So `μ_E = ε₀` and, by (2),
 `μ_O = ε₁ > ε₀`, giving `ε₁/ε₀ > 1`. **[P]**
-*Caveat (honest):* the heuristic "odd = Dirichlet node at center ≥ Neumann even mode" is only an
+*Caveat (candid):* the heuristic "odd = Dirichlet node at center ≥ Neumann even mode" is only an
 *intuition* for the half-domain `[0,L/2]`; it is **not** a clean Dirichlet≥Neumann domination
 here because the jump forms `E_θ,E_prime` are **non-local**, so even/odd folding does not produce
 exact local Dirichlet/Neumann problems. The rigorous content of (a) is just the ordering +
@@ -89,7 +89,7 @@ their ratio is the **edge operator's own gap**, scale-invariant. Empirically `s_
 `Â_∞` has the `(k+1)²` (Dirichlet-on-an-interval) low spectrum. Then `(GT)` gives
 `gap(D)/ε₀ = s_1−1 = 3`, hence **`γ=3`** in the limit. **[P\* modulo identifying `Â_∞`'s low gap]** What is rigorous here vs. open: - **[P]** `ε₁/ε₀ ≥ 1`, strict by H1 (`>1`); scale-invariance of the ratio; `(GT)`/`(P-ineq)` equivalence; the BD decomposition `(BD)` with the upper symbol bound.
 - **[P\*]** that the ratio has a finite `λ→∞` limit `s_1<∞` (the renormalized edge operator `Â_∞` exists with discrete bottom) — supported by the convergence in §0 and Theorem-III framing; depends on the scale-limit existence (`Conjetura 2b`).
-- **[GAP — the residual]** a **uniform lower bound** `s_1 − 1 ≥ γ > 0`, equivalently the uniform Poincaré inequality `(P-ineq)` with constant `~1/ε₀`. This is the single non-classical point. --- ## 5. Honest status — what is proved, what remains **Proved / re-proved [P], [P\*]:**
+- **[GAP — the residual]** a **uniform lower bound** `s_1 − 1 ≥ γ > 0`, equivalently the uniform Poincaré inequality `(P-ineq)` with constant `~1/ε₀`. This is the single non-classical point. --- ## 5. Candid status — what is proved, what remains **Proved / re-proved [P], [P\*]:**
 1. Exact reduction `ε₁/ε₀ = μ_O/μ_E` (lowest odd over lowest even Rayleigh value), via H1 evenness of `ξ₀` and the measured odd/even labelling of `ξ₁,ξ₂`. **(★)**
 2. `ε₁/ε₀ ≥ 1` rigorously (Dirichlet ≥ Neumann on the half-domain), strict `>1` by H1. The exp/poly-small **absolute** gap is irrelevant: the ratio is **scale-invariant** (§2b).
 3. Ground-state transform: `ε₁/ε₀ = 1 + gap(D)/ε₀`, reducing IV.1★ to a uniform Poincaré inequality `(P-ineq)` for `π=ξ₀²` with constant `~1/ε₀`. Uses `Λ(n)≥0` (H1) to keep the jump kernel `J≥0`. **(GT)**
@@ -111,5 +111,5 @@ reduction `(★)`, `ε₁/ε₀ ≥ 1` (strict), scale-invariance (killing the e
 and the ground-state-transform identity `(GT)`. The empirical law `ε₁/ε₀ → 4` (`γ=3`),
 `inf_λ ≳ 3.99`, is robust and improving with λ. The residual is genuine analysis (boundary-layer
 Poincaré constant), the same flavour as the program's §V positivity core, and is **not** an
-absolute-gap obstruction — it is honestly a missing *uniform* constant, not a proof I can force. > **One-line residual:** *the lowest odd boundary-layer mode sits a fixed fraction above the
+absolute-gap obstruction — it is candidly a missing *uniform* constant, not a proof I can force. > **One-line residual:** *the lowest odd boundary-layer mode sits a fixed fraction above the
 > lowest even one* — `gap(D) ≥ γ ε₀`, `γ>0` uniform `(P-ineq)`. Everything else is [P]/[P\*].

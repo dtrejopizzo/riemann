@@ -230,7 +230,7 @@ The remaining mathematical problem is:
 prove Cauchy-Weil positivity from the Euler product.
 ```
 
-This is exactly the RH-strength arithmetic inequality. I cannot honestly replace this with a finished
+This is exactly the RH-strength arithmetic inequality. I cannot candidly replace this with a finished
 proof without solving RH.
 
 The useful closure is that there is no longer ambiguity about the target:

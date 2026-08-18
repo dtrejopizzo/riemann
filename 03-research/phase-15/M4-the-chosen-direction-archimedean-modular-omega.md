@@ -215,7 +215,7 @@ non-negative remainder. The positivity of the Weil form is the residue of an alm
 cancellation.
 \end{proposition}
 
-**Honest terminus of M4.** The archimedean–modular direction delivered three genuine, verified gains: (1) the
+**Candid terminus of M4.** The archimedean–modular direction delivered three genuine, verified gains: (1) the
 positive metric $g_\infty=|\Psi|$ on the spectral bulk (M4.1); (2) the first **explicit operator clearing the
 independence filter** — the continuum $\mathfrak{sl}_2$ with $L=T_c\notin W^*(\mathcal T)$ (M4.2); (3) the exact
 location of the obstruction. But M4.3 shows the capstone does **not** cross here: the discrete positivity $Q\ge0$ is
@@ -258,8 +258,8 @@ worth one explicit test before declaring the direction closed. *(Certificate: `m
    operator, for the first time.** Grading is continuous (Frobenius-flow Lefschetz). *(Certificate: `m4_2_sl2_clean.py`.)*
 3. **A1 as a control, in parallel:** run the $L=f(\mathcal T)$ Gram computation on $10^5$ zeros **labeled as a probe
    of the M3 criterion**, not as a proof. If $G\succ0$ numerically (it will, in range, since RH holds there), that
-   confirms the criterion is the right target; it does not cross it. Keep it honest about what it is.
-4. **M4.3 — DONE (reaches the wall, honestly).** The transport is exactly the explicit formula $Q=A_\infty-P$
+   confirms the criterion is the right target; it does not cross it. Keep it candid about what it is.
+4. **M4.3 — DONE (reaches the wall, candidly).** The transport is exactly the explicit formula $Q=A_\infty-P$
    (verified to $10^{-12}$–$10^{-20}$). But $Q\ge0$ is **not** the transported upstairs positivity: $A_\infty<0$ on the
    relevant primitives, and $Q$ is the tiny non-negative residual of an almost-total archimedean$-$prime cancellation
    — the classical CAP. M4 gives real structural gains (positive bulk metric, explicit independent $\mathfrak{sl}_2$,

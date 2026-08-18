@@ -189,4 +189,4 @@ proved: scalar bordered current convergence reduces to a Weyl-weak transform of 
 open:   prove Weyl-weak ground convergence from CCM data.
 ```
 
-The route has now reached its weakest honest analytic target.
+The route has now reached its weakest candid analytic target.

@@ -1,0 +1,44 @@
+{
+  "statement": "Audit of the left-endpoint benchmark for the weighted safe-delta target.",
+  "source": "/Users/dt/riemann/03-research/phase-78-build-neutral-lp-and-ident/E78_81_weighted_safedelta_sigma_monotonicity_results.json",
+  "sigma_left": "1.0",
+  "summary": {
+    "min": 0.09574794283987662,
+    "median": 0.1614834776105863,
+    "max": 0.32033520392027215
+  },
+  "worst_row": {
+    "N": 8,
+    "Y_sigma_1": 0.32033520392027215
+  },
+  "rows": [
+    {
+      "N": 8,
+      "Y_sigma_1": 0.32033520392027215
+    },
+    {
+      "N": 10,
+      "Y_sigma_1": 0.21977168960714422
+    },
+    {
+      "N": 12,
+      "Y_sigma_1": 0.21345882344908143
+    },
+    {
+      "N": 14,
+      "Y_sigma_1": 0.1519253930881376
+    },
+    {
+      "N": 16,
+      "Y_sigma_1": 0.1614834776105863
+    },
+    {
+      "N": 18,
+      "Y_sigma_1": 0.12692875635722015
+    },
+    {
+      "N": 20,
+      "Y_sigma_1": 0.09574794283987662
+    }
+  ]
+}
