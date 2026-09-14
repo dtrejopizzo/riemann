@@ -579,3 +579,72 @@ Before attacking any new direction:
 ---
 
 *Last updated: 2026-08-18. Compiled from Phases 3–119 of the program. See `OPTIONS.md` for the current options list.*
+
+---
+
+## [phase 137] audit of phase-65 `RH-PROOF.md`
+
+*Added 2026-09-13, phase 137 round 1 (item D.0 of `R137_000_LEAD_BLUEPRINT.md`); **revised round 2**
+after the hostile audit `R137_002_HOSTILE_AUDIT.md` (findings H7, H8, H16, H17).  Full verdict:
+`R137_001_BUILDER_ROUND1.md` §1 as repaired by `R137_003_BUILDER_ROUND2.md` §1.*
+
+**Object.** `03-research/phase-65-signature-continuity/RH-PROOF.md`, which styles itself "a **complete,
+RH-free chain modulo three standard local estimates**" ending in "\textbf{The Riemann Hypothesis holds.}",
+together with its superseding correction round `CORRECTIONS-CONNES-R3.md`.
+
+**Verdict: `REFUTED` as a proof of RH, in both versions.**  Not because the Vitali step is invalid — it is
+valid *given* its premises, and it is **not** the Hurwitz fallacy that `D8.5b-i` §3 refutes — but because
+of where the premise lives.
+
+1. **Pre-R3: the residual is the wall, not an estimate.**  The chain proved is
+   `(G1–G5) ∧ L1 ∧ L2 ∧ L3 ⟹ RH`; §6 lists all three `L`'s as "residual analytic estimates not written in
+   full detail" and asserts that none "can encode zero locations".  L2 and L3 are genuine identities in
+   `Re s > 1`; **L1 is the uniform-in-`P` Gram bound that Montel needs, and by §5 it implies RH**.  Hence
+   at least one of L1–L3 is not of the advertised kind, and it is L1.  `D8.5b-i` §5 (Theorem
+   `thm:robust`) states the same object as the wall: "RH `⇔` the renormalized strong-resolvent convergence
+   `G_P^∘→G_Ξ^{G5}` *extends across the strip*".
+2. **R3: the bound and the identification sit on different objects (the fork).**  `CORRECTIONS-CONNES-R3.md`
+   declares "The single load-bearing input is **H1 ⇐ G2**".  Round 3 verified its point 4 from source and
+   **confirms** it: with the source core `S_a^∘`, `a > ¼`, the Gram energy
+   `Σ_{p^k≤P²}(\log p)p^{−k/2}|⟨v_{p,k},\hatφ(k\log p)⟩|² ≤ CΣ(\log p)p^{−k(1/2+2a)} < ∞` is uniform in
+   `P` — this is L1 — and the pole-relative shorting cannot spoil it, since an orthogonal projection, or a
+   Schur complement of a positive form, only decreases the norm.  So the Montel premise **is** available
+   for the sourced channel matrix `G_P^∘`.  The defect is elsewhere: R3 **point 1** withdraws the limit
+   identification for precisely that object ("*A resolvent is not additive; its Neumann expansion produces
+   cross words … The cancellation was asserted*"), and R3 **point 3** applies Vitali instead to the
+   renormalized trace `M_P = −∂_z\log D_P^∘ − E_P'/E_P`.  For a trace, no source-frame bound bounds the
+   Nevanlinna mass: `−∂_z\log D_P^∘ = Σ_jm_j/(z_j−z)` has total mass the eigenvalue count of `A_P`, which
+   diverges, and `E_P'/E_P` is the `½(\log P)²` counterterm, so the boundedness clause is exactly
+   `D8.5b-i` §5's strong-resolvent-continuity.  **Neither object carries both premises of the Vitali
+   step**, and R3's ledger lists neither half.  This is `D8.5b-i` §5's "each gets one clause, never both",
+   one level up.
+
+3. **Unreconciled gap on the divergence** (a gap, not a contradiction: the two sentences are about
+   different objects).  `RH-PROOF.md` §2: "The divergent `½(log P)²` is the excluded `H–H` element" — a
+   statement about which mode carries the divergence in the Hamiltonian.  `D8.5b-i` §5, Theorem
+   `thm:robust`, third bullet: the divergence "lives in the non-additive cross terms of the Feshbach
+   resolvent" — a statement about where it lands in the inverse.  Nothing in `RH-PROOF.md` reconciles them,
+   and the uniformity of §2 is asserted on the first reading only.
+4. **The falsifier test is vacuous here, not passed.**  §7 excludes Davenport–Heilbronn by the
+   **signedness** of its weights; `Ξ_a(s) = ξ(s+a)ξ(s−a)` has **nonnegative** weights
+   `Λ(n)(n^a+n^{−a})` and off-line zeros unconditionally (Paper 46 Thm 12.4), and round 3 checked that
+   G1, G2 and R3 point 4 all transfer to it (point 4 with the source-core threshold moved from `a > ¼` to
+   `a > ¼ + a/2`).  What `Ξ_a` fails is **G4**: its polar set `\{−a,a,1−a,1+a\}` has four points, so the
+   divergence is not rank one and the rank-one shorting does not remove it — while §2 does use
+   rank-one-ness ("the excluded `H–H` element").  **This is not a defence of the chain.**  The class with
+   G4's shape (Euler product with positive atoms, one simple pole, functional equation) is large: every
+   Dedekind zeta function `ζ_K` is in it and G1, G2, G4 and point 4 transfer to `ζ_K` (point 4 with a
+   factor `[K:Q]`).  But **no member of that class with proven off-line zeros is known** (GRH for `ζ_K` is
+   open; Epstein zetas have off-line zeros but no Euler product; `ζ_K/ζ` has no pole).  So the corpus's
+   faithfulness test cannot adjudicate this chain either way — and a sound chain would prove GRH for all
+   number fields.  The verdict rests on point 2, which is internal mathematics.  [Corrected per
+   `R137_006` N9; the earlier "no falsifier of that shape exists" was false.]
+
+**No-go recorded.**  *Do not reuse the pattern "uniform bound on a renormalized `P`-family + Vitali/Montel
+across the strip" as a route to RH.*  The move is sound; it relocates the whole difficulty into the
+uniformity constant, where the `½(log P)²` renormalization lives, and leaves it there.  Any future
+document asserting a chain to RH must, before the label, (i) name which residual implies RH, and (ii) run
+the `Ξ_a` substitution and say where it breaks.
+
+**Label of the audited document:** `REFUTED` as a proof; `PARTIAL-SUCCESS` as a localization of the wall.
+A header note to this effect has been added to the file, placed after its own R3 banner.

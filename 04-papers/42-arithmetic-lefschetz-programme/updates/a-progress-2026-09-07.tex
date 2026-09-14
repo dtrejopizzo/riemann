@@ -1,0 +1,497 @@
+\subsection{Continuation of row (a): domains and derived comparisons}
+\label{sec:a-progress-20260907}
+This continuation integrates P123.063--123. The detailed constructions
+and proofs are archived in the dated update directories. The statements
+below retain their specified domains; they do not assert completion of
+row (a).
+
+P123.063 extends the logarithmic comparison to $t=1$ on sufficiently
+small balls: $p^a\mathbb Z_p$, with $a\geq1$ for odd $p$ and $a\geq2$
+for $p=2$. P123.064--069 construct bounded twist complexes, relative
+completed bars, cyclic comparisons and their multibar coherence.
+P123.070--072 distinguish the relative scalar retract from finite
+perfectness over $\mathbb C$: the scalar rapid algebra already has an
+infinite-dimensional degree-zero shadow. P123.073--074 realize graph
+kernels and their half-density adjoints, retaining the distinction
+between coefficient effectivity and positive-semidefinite squares.
+
+P123.082 computes morphisms between elementary twists and shows why
+finite cones of those twists alone do not supply the mixed source.
+P123.083 supplies a larger localized sector: for the stated rapid
+coefficient ideals,
+\[
+ I_U\widehat\otimes_A I_V\simeq I_{U\cap V},
+\]
+with strict exactness of the corresponding augmented bar. Nevertheless,
+P123.084 shows that its original continuous degree-zero shadow vanishes
+on open sets avoiding the origin. P123.085--090 therefore construct
+stronger integrable modules, external boundary traces, covariant normal
+actions, periodization and cutoff partial isometries. The resulting
+quotient representation is identified with the induced representation
+of P123.043. This is a comparison on the declared boundary sector;
+it does not yet glue all strata of the arithmetic source.
+
+\subsection{Tate excess and the topology of corner transport}
+P123.075--081 compute the full Tate bar excess by strict comparisons.
+For $r$ prime coordinates, a character self-intersection has the
+exterior-algebra Tor groups $\bigwedge^\bullet\mathbb C^r$; distinct
+Tate characters give acyclic mixed fibers. The multiplication cone
+retains two copies of $\bigwedge^k\mathbb C^r$ in degree $-k-1$.
+The determinant transitions are explicit, but do not remove the
+underlying excess complexes or provide their arithmetic metric.
+The strict exactness arguments use convergent residual fillings;
+no continuous linear splitting is inferred from those fillings.
+
+P123.091 identifies the cutoff corner with $C(Y)$ but proves that the
+reverse Morita tensor does not surject onto the original full rapid
+algebra. P123.092--093 construct an orbit-decay ideal $J$ for which
+both completed tensor identities hold:
+\[
+ Je\widehat\otimes_{eJe}eJ\simeq J,
+ \qquad eJ\widehat\otimes_J Je\simeq eJe=C(Y).
+\]
+P123.094 identifies both its internal and ambient commutator quotients
+with $C(Y)$ by periodization. P123.095 transports perfect complexes in
+this corner sector to actual vector bundles and their graded determinant
+lines. This is a determinant construction on a specified sector, rather
+than a determinant of the full mixed diagonal.
+
+\subsection{Smooth diagonals and unit-level completion}
+P123.096--097 separate the moving and fixed continuous bars. Moving
+translations admit explicit contractions; the fixed continuous bar has
+a strict comparison with $C(Y)[0]$. P123.098 explains why these fibers
+cannot form a perfect family across the fixed parameter: their virtual
+ranks jump. At a finite unit level the smooth diagonal instead retains
+its first-order term. Writing $B_N=C^\infty(Y_N)$, P123.099 gives
+\[
+ H_0=B_N,\qquad H_1=B_N\,dt,\qquad H_j=0\quad(j\geq2).
+\]
+Under refinement the pulled-back diagonal is the union of all deck
+transformation graphs. P123.100 retains every summand in its derived
+comparison; projection to the identity graph does not erase the others.
+
+P123.101 constructs the nuclear Fourier/conductor algebra
+$\mathcal S(Y)$ and its completed tensor square. P123.102 identifies
+its completed first bar homology with $\mathcal S(Y)\,dt$.
+P123.118, incorporated below, resolves the remaining higher homology
+of this particular completed smooth bar.
+P123.103 constructs the continuous inverse of the tangential derivative
+on the mean-zero subspace and moving-bar contractions. It also proves
+that the real-direction heat operator has infinite trace on the
+associated full Hilbert space. Nuclearity of the coefficient algebra
+alone therefore does not supply the missing Hilbert trace.
+
+\subsection{Relative analytic determinants and composition}
+P123.104 constructs the tangential Fredholm determinant with convergence
+from finite unit levels. P123.105--108 treat the normal compression,
+including both valuation directions, nonlinear bulk subtraction and
+all-order trace estimates. Opposite shifts exhibit a nontrivial
+composition correction $1/(1-st)$; multiplicativity of compressed
+operators cannot be assumed.
+
+P123.109 performs the coupled construction on the actual induced
+representation. On each fixed external Bruhat test domain put
+$B_L(F)=E_LR(F)E_L$. Its finite collection of trace-class
+operator-valued Laurent symbols is denoted $P_{F,\chi}(w)$. For $z$
+sufficiently small define
+\[
+ b_F(z)=\sum_\chi\int_0^{2\pi}
+ \log\det\bigl(1+zP_{F,\chi}(e^{i\theta})\bigr)
+ \frac{d\theta}{2\pi}.
+\]
+The all-order endpoint estimates give the locally uniform limit
+\[
+ \Delta_F(z)=\lim_{L\to\infty}
+ \det(1+zB_L(F))\exp\bigl(-(L+1)b_F(z)\bigr),
+ \qquad (\log\Delta_F)'(0)=W_q(F).
+\]
+It is a nonvanishing holomorphic germ and respects the prescribed
+normalized scalar semilocal pullbacks. Section changes have this
+invariance when the cutoffs are transported with the unitary comparison.
+These assertions do not identify arbitrary independently chosen cutoffs.
+
+P123.110 constructs a trace-class endpoint Fredholm correction
+$\mathcal A(F,G)$ for the convolution-unitization product:
+\[
+ \Delta_{F+G+F*G}(1)
+   =\Delta_F(1)\Delta_G(1)\mathcal A(F,G).
+\]
+Here all arguments lie in a sufficiently small fixed test neighborhood.
+The correction satisfies the associativity cocycle, transpose and
+prescribed semilocal identities. Its endpoint Hilbert space is a finite
+sum of tangential Hilbert spaces, not generally finite-dimensional.
+An analytic cocycle on this test domain is not yet the geometric
+biextension required by mixed Riemann--Roch.
+
+\subsection{Intersection, boundary energy and the missing metric comparison}
+P123.111 identifies the bilinear variation of this correction with the
+stabilized endpoint trace
+\[
+ \mathcal B(F,G)=\operatorname{Tr}
+ \bigl(E_LR(F)(1-E_L)R(G)E_L\bigr).
+\]
+It is symmetric, and $\mathcal B(F,G^*)$ is a positive Hermitian
+boundary energy. P123.112 proves that the radical of the analogous
+local normal anomaly pairing is not an ideal: a unit-character
+projector has zero anomaly against every test, while its product with
+a valuation shift has nonzero anomaly. Thus that pairing cannot simply
+be substituted for the numerical intersection form of row (a).
+P123.113 computes the distinct local trace-product pairing: on the
+compact test algebra its radical is zero and the form is indefinite.
+Neither statement supplies a global sign theorem.
+
+Let $\lambda(F)=\log\Delta_F(1)$ near zero. P123.114 proves the
+second-variation identity
+\[
+ W_q(F*G)=\mathcal B(F,G)-d^2\lambda_0(F,G).
+\]
+Indeed, the difference between the trace of the compressed product and
+the compressed convolution is exactly the endpoint defect above;
+the bulk-subtracted former trace is $-d^2\lambda_0(F,G)$.
+This connects the analytic determinant to the relative trace-product
+pairing with its actual normalization.
+
+P123.115 adds explicit metric data. With
+$X_L(F)=(1-E_L)R(F)E_L$, the positive Fredholm determinant
+\[
+ h(F)=\det\bigl(1+X_L(F)^*X_L(F)\bigr)\geq1
+\]
+is exactly independent of sufficiently large $L$ on the fixed test
+domain. It defines the metric $\|1\|_F^2=h(F)^{-1}$ on a trivial line.
+Its potential has Levi form
+\[
+ \left.\partial_z\partial_{\bar w}\log h(zF+wG)\right|_0
+       =\mathcal B(F,G^*).
+\]
+By contrast, $2\operatorname{Re}\lambda$ is pluriharmonic. The
+holomorphic Hessian in the preceding identity is therefore not the
+curvature of the relative determinant modulus. The Gram metric
+respects the prescribed semilocal pullbacks, but a multiplicative
+isometry law and identification with the intrinsic periodic ruling
+metric remain to be constructed.
+
+P123.116 extends this curvature computation to every amplitude. Set
+$X=X_L(F)$, $A=X_L(U)$, $C=X_L(V)$, $P=1+X^*X$ and
+$Q=1+XX^*$. Trace-norm differentiation gives
+\[
+ K_F(U,V)=\operatorname{Tr}(P^{-1}C^*Q^{-1}A),\qquad
+ K_F(U,U)=\|Q^{-1/2}AP^{-1/2}\|_{\mathrm{HS}}^2.
+\]
+Indeed the mixed derivative of $\log\det P$ is
+$\operatorname{Tr}(P^{-1}C^*[1-XP^{-1}X^*]A)$, and the bracket
+is $Q^{-1}$. Both inverse square roots are boundedly invertible.
+Consequently the null directions are precisely $X_L(U)=0$,
+independent of the base point, and
+\[
+ (1+\|X_L(F)\|^2)^{-2}\|X_L(U)\|_{\mathrm{HS}}^2
+ \leq K_F(U,U)\leq\|X_L(U)\|_{\mathrm{HS}}^2.
+\]
+The affine test-family Gram determinant stabilizes before differentiation,
+so this is also an exact cutoff-independent curvature formula. It
+respects the prescribed semilocal transport. Holomorphic changes of
+frame add only pluriharmonic terms to the potential and cannot change
+its kernel. In the local normal model of P123.112 the unit-character
+projector remains a null direction at every base point, while its
+product with the valuation shift remains non-null. Thus neither moving
+the base point nor changing holomorphic frame makes this particular
+local curvature kernel a convolution ideal. Additional geometric metric
+data are still necessary for the proposed arithmetic comparison.
+
+\subsection{The composition correction as a normalized graph metric}
+P123.117 links the analytic composition correction to metric data.
+For a sufficiently small test $F$, put
+\[
+ a_F=1+E_LR(F)E_L,\qquad c_F=(1-E_L)R(F)E_L,
+ \qquad Y_F=c_Fa_F^{-1}.
+\]
+The represented operator $1+R(F)$ maps the cutoff space onto the graph
+of $Y_F$. The exact factorization
+\[
+ 1+E_LR(F^*\mathbin{\diamond}G)E_L
+       =a_F^*(1+Y_F^*Y_G)a_G,
+ \qquad F\mathbin{\diamond}G=F+G+F*G,
+\]
+identifies its finite-cutoff determinant correction with
+$\det(1+Y_F^*Y_G)$. Consequently
+\[
+ \mathcal A(F^*,G)=\lim_L\det(1+Y_F^*Y_G),\qquad
+ \widehat h(F)=\mathcal A(F^*,F)\geq1.
+\]
+Convergence follows from the endpoint resolvent estimates: if
+$c_F^*c_F=W_LdW_L^*$, the diagonal determinant equals
+\[
+ \det\bigl(1+d^{1/2}W_L^*a_F^{-1}(a_F^*)^{-1}W_Ld^{1/2}\bigr),
+\]
+whose positive perturbation converges in trace norm. These assertions
+hold in the common small test neighborhood, not at arbitrary amplitude.
+
+The mixed kernel is positive definite. At finite cutoff it is the
+Gram kernel of
+$\Psi(Y)=(1,Y,\bigwedge^2Y,\ldots)$ in the Hilbert direct sum of
+Hilbert--Schmidt exterior-map spaces, since
+\[
+ \langle\Psi(Y_F),\Psi(Y_G)\rangle=\det(1+Y_F^*Y_G),
+ \qquad \|\Psi(Y)\|^2=\det(1+Y^*Y)<\infty.
+\]
+Finite-rank approximation proves these identities; positivity passes
+to each finite Gram matrix in the limit. This provides an actual
+analytic kernel, rather than assuming an intersection form positive.
+
+The existing cocycle and adjoint identities now yield
+\[
+ \Delta_{F^*\mathbin{\diamond}F}(1)
+          =|\Delta_F(1)|^2\widehat h(F).
+\]
+Thus $\widehat h^{-1}$ is a metric explicitly tied to the relative
+determinant composition law. Its potential is plurisubharmonic on
+finite-dimensional test slices, and its Levi form at zero is the
+boundary energy $\mathcal B(U,V^*)$. All these identities respect
+the prescribed semilocal pullbacks. They do not identify the line with
+the arithmetic determinant or its curvature with the trace-product
+intersection. In particular the local radical obstruction at zero
+remains; positivity of this analytic kernel is not the Weil sign law.
+
+\subsection{Continuous contraction of the higher smooth diagonal}
+P123.118 closes the higher-degree question left by P123.102 for the
+normalized completed Hochschild complex of $S=\mathcal S(Y)$. It
+constructs continuous $S$-linear maps $H_n:C_n\to C_{n+1}$ with
+\[
+ bH+Hb=1-s\pi,\qquad
+ C_\bullet\simeq S[0]\oplus S\,dt[1].
+\]
+Here $\pi_0=1$, $\pi_1(m\otimes[f])=mDf\,dt$, and
+$s_1(h\,dt)=h\chi_0^{-1}\otimes[\chi_0]/(i\tau_0)$.
+In particular all higher homology vanishes and all boundary images
+are closed, with continuous right inverses on those images.
+
+The proof supplies the estimates needed for completion. Separating the
+total Fourier character identifies Hochschild chains with group-bar
+chains of the character group and a free $S$ coefficient. At unit
+level $N$, the subgroup generated by $\chi_0$ has finite index. Choose
+coset representatives $s(k)$ with frequencies in $[0,\tau_0)$ and put
+$r(g)=g-s(\bar g)$. Averaging homogeneous simplices
+\[
+ [g_0,\ldots,g_n]\longmapsto
+ \frac1{|K_N|}\sum_{k\in K_N}
+ [r(g_0+s(k)),\ldots,r(g_n+s(k))]
+\]
+gives a transfer to the infinite cyclic subgroup. An averaged prism
+is a homotopy from its inclusion-composite to the identity. The cyclic
+bar contracts to the cellular integer line: edges map to their oriented
+unit-edge paths, and higher homotopies cone the recursively formed
+cycles from their first vertex. Vertex ranges remain in the original
+integer interval and coefficient sums grow at most linearly in its
+diameter, with constants depending on degree.
+
+These finite-level homotopies need not be compatible as chosen.
+P123.118 therefore assembles the global homotopy recursively, starting
+with the degree-one filling of P123.102. For a Fourier basis simplex
+$\sigma$ in degree $n\geq2$, take its least unit level $N$ and set
+\[
+ z_\sigma=\sigma-H_{n-1}b\sigma,\qquad
+ H_n\sigma=h_n^{(N)}z_\sigma.
+\]
+The residual $z_\sigma$ is a cycle in that same level; the finite-level
+homotopy fills it exactly. Coset representatives, unit paths and the
+recursion give, for each degree and seminorm, a finite exponent $B(n,m)$
+such that
+\[
+ \|H_n[g_1|\cdots|g_n]\|_m
+       \leq C_{n,m}\prod_i W(g_i)^{B(n,m)}.
+\]
+These polynomial bounds extend the maps continuously to the weighted
+Fourier completion and extend the homotopy identity by density.
+Thus vanishing is proved on the completed complex itself. This gives a
+bounded finite free $S$-module model for this boundary shadow; it does
+not assert a finite projective resolution of the diagonal over
+$S\widehat\otimes S$, full smooth orbit Morita transport, or arithmetic
+mixed Riemann--Roch.
+
+\subsection{A common smooth source and the cyclic boundary comparison}
+P123.119 proves that the projection of P123.118 is a strict morphism
+of mixed complexes: Connes' operator maps under it to the physical
+derivative $D:S\to S\,dt$. The kernel has the continuous Hochschild
+contraction already constructed. For a formal $(b+uB)$-cycle in that
+kernel, the recursive filling
+\[
+ y_j=H(x_j-By_{j-1})
+\]
+proves comparison in the coefficientwise formal negative and periodic
+cyclic totalizations. This does not assert entire cyclic convergence.
+The Green operator of P123.103 then computes periodic homology:
+\[
+ HP_{2j}(S)=K_0,\qquad HP_{2j+1}(S)=K_0\,dt,
+ \qquad K_0=\ker D=C(U/\overline{\langle q\rangle}).
+\]
+The unit subgroup $\overline{\langle q\rangle}$ is open: for a suitable
+positive integer $m$, put $b=v_p(q^m-1)<\infty$ in the logarithm's
+small-ball domain; closure of the powers of $q^m$ contains
+$1+p^b\mathbb Z_p$. Thus $K_0$ is finite-dimensional. If its dimension
+is $r$, the original trace is $(\log q)/r$ times the sum on these
+$r$ quotient points. The finite periodic determinant is thereby defined,
+but remains distinct from a Hilbert heat determinant or arithmetic RR.
+
+P123.120 compares this smooth algebra with the original boundary
+composition. Impose all real derivative and unit-conductor seminorms
+on the orbit-decay source $J$ to obtain $J_{\rm sm}$. Smooth finite-unit
+cutoffs give
+\[
+ eJ_{\rm sm}e=S(Y),\qquad
+ J_{\rm sm}e\widehat\otimes_S eJ_{\rm sm}=J_{\rm sm},\qquad
+ eJ_{\rm sm}\widehat\otimes_{J_{\rm sm}}J_{\rm sm}e=S.
+\]
+The frame estimates of P123.093 survive differentiation and conductor
+weights: translated fixed frames have fixed unit level and bounded
+real derivatives, while arbitrarily high orbit weights absorb their
+label growth. The inverse tensor series therefore converge in the
+smooth topology. These identities provide monoidal transport on the
+specified firm complete bimodules, with the original unit and transpose,
+and transport the bounded corner-perfect determinant sector.
+
+P123.121 places that boundary inside one coefficient algebra across
+all finite-zero strata. For each prime $p$, define $F_p$ by absolutely
+summable shell/unit Fourier coefficients with every weight
+\[
+ \sum_{j,\kappa}p^{l|j|}c_p(\kappa)^N|f_{j,\kappa}|,
+ \qquad E_p=\mathbb C\chi_p\oplus F_p,
+ \quad \chi_p=1_{\mathbb Z_p}.
+\]
+The functions in $F_p$ extend by zero at the origin and decay at both
+valuation ends. Evaluation at zero splits $E_p\to\mathbb C$.
+Dilation preserves $F_p$ and retains the actual correction
+\[
+ \alpha_{p^h v}\chi_p-\chi_p
+       =1_{p^h\mathbb Z_p}-1_{\mathbb Z_p}\in F_p.
+\]
+Let $E_{\mathbb R}$ consist of smooth real functions with every
+exponentially weighted derivative bounded. The common coefficients and
+source are
+\[
+ E_P=E_{\mathbb R}\widehat\otimes\widehat\bigotimes_{p\in P}E_p,
+ \qquad A_{\rm sm}(P)=\operatorname{Rapid}_{\Gamma_P}(E_P).
+\]
+Weighted sequence estimates prove nuclearity and completeness; dilation
+has polynomial growth in the original lattice height, so the original
+crossed multiplication and involution are continuous. The coefficient
+realization is injective into the original continuous source.
+
+The tensor splittings at zero give strict split source extensions
+for the full zero-count filtration. Their exactly-$k$ layers are
+\[
+ \bigoplus_{|J|=k}\operatorname{Rapid}_{\Gamma_P}
+ \left(E_{\mathbb R}\widehat\otimes
+       \widehat\bigotimes_{p\notin J}F_p\right).
+\]
+In the two-prime single-zero case this is precisely $J_{\rm sm}$,
+with equivalent seminorms. Thus the boundary comparison is a comparison
+on an actual layer of this common source. Neither the generic nor the
+multiple-zero layers have been discarded.
+
+For $P\subset T$, the coefficient map
+$f\mapsto f\prod_{\ell\in T\setminus P}\chi_\ell$, together with the
+old-lattice inclusion, is an injective continuous algebra map. Old
+lattice elements act as units at the added primes and preserve their
+cutoffs; this proves multiplicativity after crossing. These maps compose
+exactly on triples and extend to the coefficient unitizations with the
+actual old gauge unitaries. They are coherent semilocal source maps.
+
+The construction now joins the boundary algebra to a common stratified
+source with its attaching corrections. It still requires a localized
+derived correspondence category on the full square and its shadow,
+cyclic/excision comparisons on that domain, the numerical and effectivity
+constructions, and the mixed determinant identity with its intrinsic
+ruling metric. Algebraic source gluing alone does not prove those claims.
+
+\subsection{Derived composition on the common algebra}
+P123.122 constructs the relative derived category of bounded-above
+complete Fr\'echet bimodule complexes over $A=A_{\rm sm}^u(P)$.
+Admissible sequences split continuously after forgetting both actions.
+The free bimodules $A\widehat\otimes V\widehat\otimes A$ lift maps
+through these surjections. Left and right completed bars give relatively
+projective resolutions $Q(M)$: a term with internal degree $i$ and bar
+degrees $r,s$ lies in degree $i-r-s$, so each total degree has only
+finitely many summands. Unit insertion proves the augmentation is an
+underlying continuous chain-homotopy equivalence.
+
+Composition is
+\[
+ M\star N=Q(M)\widehat\otimes_A Q(N).
+\]
+Free bimodules are flat for the stated split exact structure; the
+bounded-above totalization preserves this property by a finite-in-each-
+degree contraction argument. Consequently composition is independent
+of the chosen resolutions. Balanced tensor association gives the
+associator, its pentagon and the two-sided unit $A$. The relative
+diagonal complex
+\[
+ \operatorname{Tr}_A(M)
+    =\operatorname{Tot}_{i,n}\bigl(M^i\widehat\otimes A^{\widehat\otimes n}\bigr),
+ \qquad \deg=i-n,
+\]
+has continuous differentials, respects the relative replacements and
+cones, and the multiple-bar rotation proves
+$\operatorname{Tr}_A(M\star N)\simeq\operatorname{Tr}_A(N\star M)$.
+On degreewise nuclear modules it is a degreewise nuclear complex;
+no finite determinant of an arbitrary unbounded complex is inferred.
+
+For an inclusion $A\to B$, the well-defined induction
+$B\widehat\otimes_A^{\mathbf L}M\widehat\otimes_A^{\mathbf L}B$
+is coherent on chart triples, but is not asserted strong monoidal.
+The middle $A$ in a source composition becomes a middle $B$ after
+two induced objects are composed; the resulting comparison need not
+be invertible. Likewise the source operation
+$a\bar m b=\overline{b^*ma^*}$ is a covariant conjugate-opposite
+involution reversing tensor order. It does not supply the contravariant
+duality required by A.4. These distinctions retain the actual descent
+and duality obligations. Geometric localization on the full square,
+the suitable determinant domain, numerical equivalence, effectivity
+and the mixed RR metric identity remain required.
+
+\subsection{An equivariant repair of the semilocal composition map}
+P123.123 proves that the induction unit comparison fails on the actual
+common source. For a new prime $\ell$, the continuous derivation
+$\delta_\ell(\sum b_\gamma U_\gamma)=\sum v_\ell(\gamma)b_\gamma U_\gamma$
+vanishes on the old algebra $A$. Hence
+$b\otimes c\mapsto b\delta_\ell(c)$ is $A$-balanced and detects
+\[
+ U_\ell\otimes1-1\otimes U_\ell\ne0,
+\]
+while multiplication kills this element. It also annihilates every
+bar boundary, proving that $B\widehat\otimes_A^{\mathbf L}B\to B$
+is not a relative quasi-isomorphism.
+
+There is a different, invertible comparison with a specified equivariant
+domain. Let $C$ use the full new coefficients but only the old lattice,
+and let $G$ be the added prime lattice. Then the actual new algebra is
+$B=C\rtimes_{\rm rapid}G$. For complete $C$-bimodules with tempered
+semilinear actions $\rho_g$, the maps
+\[
+ (mU_g)\otimes(nU_h)\longmapsto
+       (m\otimes\rho_g(n))U_{g+h},\qquad
+ (m\otimes n)U_k\longmapsto(mU_0)\otimes(nU_k)
+\]
+are inverse topological bimodule maps. Balancing over the actual gauge
+unitaries proves the inverse identities, and tempered bounds absorb
+the action in stronger rapid seminorms. They preserve the unit and
+satisfy the associativity diagrams.
+
+The comparison also holds for relative derived composition:
+\[
+ (M\rtimes G)\widehat\otimes_B^{\mathbf L}(N\rtimes G)
+       \simeq (M\widehat\otimes_C^{\mathbf L}N)\rtimes G.
+\]
+Indeed the equivariant double bars remain resolutions after crossing;
+their terms are free on each individual $B$ side, by
+$(cU_g)\otimes v\mapsto(c\otimes\rho_gv)U_g$.
+Thus their bounded-above complexes are relatively K-flat and compute
+the asserted derived tensors. This repairs transport through the new
+lattice on the declared equivariant domain. It still requires actual
+$C$-bimodule lifts and new-generator actions on the geometric objects;
+these data and their determinant descent are not supplied by induction.
+
+These advances supply explicit local compositions, derived comparisons,
+a relative determinant germ and controlled boundary metric data. Full
+row (a) still requires their common geometric realization, the full mixed
+diagonal and determinant comparison, and compatibility
+with gluing, multiple-zero strata and the archimedean sector. The mixed
+Riemann--Roch and global sign obligations of the other rows remain open.

@@ -1,5 +1,15 @@
 # 106.203 — The complete-return charged Tate boundary
 
+> **Phase-120 physical-weight warning (2026-08-25).** This source pushout is
+> not the row-(c) attachment required for row (d). It uses `p^{-k/2}` as a
+> boundary *amplitude*, so its quadratic Gram mass is `log(p)/p^k`. In the
+> central Weil form `log(p)/p^{k/2}` is already the quadratic coefficient;
+> the corresponding Hodge amplitude is proportional to `p^{-k/4}`. The
+> constant boundary mass here is `kappa_infty`, whereas the physical balanced
+> factorization has `m_0=log(pi)-psi(1/4)`. All internal statements below are
+> statements about the phase-106 source object, not a comparison with
+> `B_nuc`.
+
 > **Covariance correction.**  The finite Hodge and Gram identities in
 > Sections 2--3 are correct in a fixed boundary frame.  As originally
 > written, however, (6)--(8) identify coefficient fibers carrying the

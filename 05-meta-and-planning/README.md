@@ -9,6 +9,15 @@ direction was chosen or dropped) but are not part of the publishable corpus.
 For the polished outputs, see [`../04-papers/`](../04-papers/); for the phase-by-phase
 research record, see [`../03-research/`](../03-research/).
 
+
+## Current A–B–C–D plan — 2026-09-05
+
+[Closure plan](ABCD-CLOSURE-PLAN/PLAN.md),
+[first campaign](ABCD-CLOSURE-PLAN/FIRST_CAMPAIGN.md), and
+[corpus coverage](ABCD-CLOSURE-PLAN/CORPUS_COVERAGE.md).
+This research plan incorporates the phase-123 audit and the existing
+phase-122 two-prime calculation. It does not certify completion of any row.
+
 ## Order
 
 Files are numbered `01`–`24` in the order they were actually written (by content date, then

@@ -2,6 +2,12 @@
 
 Opened 2026-08-17, after `phase-118-the-exact-threshold-inequality` closed.
 
+**Audit update (2026-08-25).** The coefficient-contact package does separate
+zeta from Davenport–Heilbronn, but it is not sufficient for critical-line
+positivity and is not the universal function-field polarization. See
+[`RESULTS_119_SEPARATOR.md`](RESULTS_119_SEPARATOR.md). The next constructive
+programme is [`../phase-120-global-polarization/PLAN.md`](../phase-120-global-polarization/PLAN.md).
+
 ## The pivot
 
 Phase 118 verified, against real zeros of zeta, that for `F` primitive and
@@ -47,13 +53,12 @@ this phase will not claim otherwise.
 
 Rows (a)–(c) of paper 42 derive `Lambda(n)` as degrees of determinants of Witt
 contact complexes — a constraint on the coefficients that is *not* on that list.
-Whether that constraint separates zeta from Davenport–Heilbronn is the one
-question in this phase whose answer could matter for RH, and it is scheduled
-early rather than late. See `PLAN.md` §5c.
+Whether that constraint separates zeta from Davenport–Heilbronn is a necessary
+triage question, not by itself progress toward RH. See `PLAN.md` and the
+corrected results file.
 
 ## Scope
 
-Paper 42 is left as it stands. Nothing is written to it from this phase until
-there is a result worth writing.
+The corrected separator and its limitations are now recorded in paper 42.
 
 See [`PLAN.md`](PLAN.md).

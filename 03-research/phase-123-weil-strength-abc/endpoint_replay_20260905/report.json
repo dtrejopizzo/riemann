@@ -1,0 +1,106 @@
+{
+  "started": "2026-09-05T16:28:37.833209+00:00",
+  "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "executable": "/tmp/p123-certificate-venv/bin/python",
+  "packages": {
+    "python-flint": "0.9.0",
+    "numpy": "2.5.2"
+  },
+  "input_sha256": {
+    "114_d_77_log3_legendre_arb_verify.py": "6e1d6f85590f665f6c5b97674b0f02a3a661b8127a96bd458cb9a27cfe89bcf6",
+    "114_d_85_two_level_endpoint_budget_verify.py": "cef4ef7f410999d78e5ce0b982c6a6001b941a4d0fa82c543e5a8d836ea96c0b",
+    "114_d_85_capacity_arb_prototype.py": "4c31b74cc80a8859156e5eef76d7238fff94d31be34b2a3471a359c6bb4730b8",
+    "114_d_79_stable_projected_tangency_verify.py": "25d9240ad2e9f71a2b833ee2932fdd7a07fe32fffcb9321e578590f32d4622f0",
+    "114_d_85_fixed_vector_analytic_verify.py": "238cf3eb19221972bc1c1ce3d7521c2d1217f6eaa1ec40d08546cf9e246ccda7",
+    "114_d_84_log2_degree23_projected_gap_arb_verify.py": "0fa04adb160afd46d459e474644c1fe1752473c837406c1317a19d2099108a95"
+  },
+  "scope": "Original endpoint replay; not global D; outputs require enclosure review",
+  "jobs": {
+    "even_gap": {
+      "script": "114_d_84_log2_degree23_projected_gap_arb_verify.py",
+      "environment": {
+        "D84_DEG": "9",
+        "D84_HIGH_GAP": "1"
+      },
+      "status": "exited",
+      "pid": 18511,
+      "started": "2026-09-05T16:28:37.841082+00:00",
+      "returncode": 0,
+      "finished": "2026-09-05T16:30:48.717205+00:00"
+    },
+    "odd_gap": {
+      "script": "114_d_84_log2_degree23_projected_gap_arb_verify.py",
+      "environment": {
+        "D84_DEG": "9",
+        "D84_ODD_GAP": "1"
+      },
+      "status": "exited",
+      "pid": 18512,
+      "started": "2026-09-05T16:28:37.842171+00:00",
+      "returncode": 0,
+      "finished": "2026-09-05T16:30:48.144872+00:00"
+    },
+    "vector1": {
+      "script": "114_d_85_fixed_vector_analytic_verify.py",
+      "environment": {},
+      "status": "exited",
+      "pid": 19753,
+      "started": "2026-09-05T16:30:48.146838+00:00",
+      "returncode": 0,
+      "finished": "2026-09-05T16:31:45.488126+00:00"
+    },
+    "vector2": {
+      "script": "114_d_85_fixed_vector_analytic_verify.py",
+      "environment": {
+        "D85_VECTOR": "2"
+      },
+      "status": "exited",
+      "pid": 19764,
+      "started": "2026-09-05T16:30:48.718783+00:00",
+      "returncode": 0,
+      "finished": "2026-09-05T16:31:46.452293+00:00"
+    },
+    "vector_odd": {
+      "script": "114_d_85_fixed_vector_analytic_verify.py",
+      "environment": {
+        "D85_VECTOR": "odd"
+      },
+      "status": "exited",
+      "pid": 20483,
+      "started": "2026-09-05T16:31:45.490175+00:00",
+      "returncode": 0,
+      "finished": "2026-09-05T16:32:42.923762+00:00"
+    },
+    "generic_bounds": {
+      "script": "114_d_85_fixed_vector_analytic_verify.py",
+      "environment": {
+        "D85_GENERIC_BOUNDS": "1"
+      },
+      "status": "exited",
+      "pid": 20489,
+      "started": "2026-09-05T16:31:46.454160+00:00",
+      "returncode": 0,
+      "finished": "2026-09-05T16:32:40.916673+00:00"
+    },
+    "capacity": {
+      "script": "114_d_85_capacity_arb_prototype.py",
+      "environment": {},
+      "status": "exited",
+      "pid": 21087,
+      "started": "2026-09-05T16:32:40.918405+00:00",
+      "returncode": 0,
+      "finished": "2026-09-05T16:32:53.486117+00:00"
+    },
+    "recombination": {
+      "script": "114_d_85_two_level_endpoint_budget_verify.py",
+      "environment": {},
+      "status": "exited",
+      "pid": 21170,
+      "started": "2026-09-05T16:32:42.925868+00:00",
+      "returncode": 0,
+      "finished": "2026-09-05T16:32:42.957144+00:00"
+    }
+  },
+  "finished": "2026-09-05T16:32:53.487036+00:00",
+  "all_exit_zero": true
+}

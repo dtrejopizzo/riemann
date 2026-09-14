@@ -1,0 +1,364 @@
+# R142.002 — Hostile audit, round 1, phase 142: the clause (b′)⁺
+
+*Auditor: Opus 5 (hostile). Date 2026-09-13. Target: `R142_001_BUILDER_ROUND1.md` (§D.31), `README.md`,
+`scripts/certify_sF.py`, `scripts/certify_leakage.py`. Sources re-read independently and in full:
+Paper 46 `04-papers/46-row-d-the-sign/main.md` §§11.1–11.5 (Def. 11.1, Lemma 11.2, Thm 11.3, Def. 11.4,
+Lemma 11.4a, Thm 11.5, Def. 11.6, Def.–Thm 11.7, Thm 11.8, Thm 11.11, Thm 11.13, **Thm 11.14 with its
+exact constant and (11.16)–(11.17)**) and §§12.1–12.5 (Thm 12.3 with proof, Rem. 12.3a/b, Lemma 12.4A,
+Prop. 12.4B, Thm 12.4, Rest. 12.4a); `R141_001` §D.30 (Cor. D.30.8, Def. D.30.9, Thm D.30.10 Proof 2,
+Thm D.30.11, Cor. D.30.12, Thm D.30.13, Prop. D.30.14 with the lead's C5 correction, Thm D.30.16);
+`R140_001` Lemma D.24.6, Thm D.24.7, Prop. D.24.9. Every numeric claim was recomputed from scratch with
+mpmath at `mp.dps = 50` on an independently written script, and both builder scripts were executed.
+No builder file was edited.*
+
+---
+
+## 0. VERDICT ON THEOREM D.31.12, FIRST
+
+> **Theorem D.31.12 STANDS.** After an adversarial re-derivation of every step, I find **no FATAL
+> finding** and **no error that touches the obstruction theorem**. There is no `h⁰ : D^W → R_{≥0}`
+> satisfying (a), (b′), (c) of Paper 46 Theorem 12.3 for `ξ`, for any `χ ∈ R`. Theorem 12.3's
+> hypothesis is unsatisfiable; the route "construct an `h⁰`, obtain RH" is closed for `ξ`.
+>
+> **Two qualifications the write-up must carry, and currently blurs (H4, H5):**
+> 1. The result is **unconditional but computer-assisted**. It rests on (V1) — `ρ_1` is a **simple**
+>    zero of `ξ` — and (V2). (V1) is genuinely load-bearing, not decorative: if `ρ_1` had multiplicity
+>    `m ≥ 2`, then `C_{F_0} = mGs_1` while `√(W_{F_0}/2) = G√m`, and `mGs_1 ≥ G√m` for `m ≥ 2`, so the
+>    refutation **fails at `m = 2`**. Calling D.31.12 "unconditional" in the README without the
+>    parenthetical "(given a verified-zero import)" overstates its epistemic type by one notch.
+> 2. It is a theorem about **the frame**, not about `ξ`. The builder says this; the README's headline
+>    ordering ("(b′)⁺ is false for `ξ`") invites the opposite reading.
+
+The four load-bearing links, each verified by me independently:
+
+| link | what I checked | verdict |
+|---|---|---|
+| `\|I_∞(E',F_0)\| ≤ C_{F_0}\deg E'` for `E' ≥ 0` | Thm 11.14(i),(ii) as printed in Paper 46; `C_F := \sup_u\|w_F(u)\|/(2\cosh(u/2))` is exactly the constant of 11.14(ii), (11.17) being a *bound on it* | correct |
+| `w_{F_0}(u) = −2G\sin(γ_1u) + O(10^{−90})` | recomputed (11.16) by hand: `Φ_{F_0}(1−ρ_1) = −iG`, `e^{(ρ_1−½)u} = e^{iγ_1u}`, conjugate term, giving `−[e^{iγ_1u}(−iG)+e^{−iγ_1u}(iG)] = −2G\sin(γ_1u)`. Polar terms `O(e^{−898})`. **Needs (V1) simplicity and (V2) isolation; both are cited** | correct |
+| `I_∞(E,F_0) = −tW_{F_0}` exactly, `\deg E = d`, `R(E) = 10` | bilinearity with `I_∞(F_0,K) = ½\deg F_0 = 0` (Thm 11.8(i)), `I_∞(K,K) = ½`, `\deg K = 1`. **The polar cross term the blueprint warned about is handled correctly**: `Φ_E(0)Φ_E(1) = d²/4 − t²η²`, and `W_F := −I_∞(F,F) = W(F) + 2η²` absorbs it, so `I_∞(E,E) = d²/2 − t²W_F` is an identity, not an approximation. I also verified `∫E·w_{F_0} = −2tG² = −tW_{F_0}` by direct integration — the two sides of Thm 11.14(i) agree | correct |
+| Steps 1–3 of D.31.12 | (b′)+Thm 11.13(i),(ii),(iv) ⟹ `h⁰ = 0` in degree `≤ 0`; `\deg(K−E) = 1−\deg E < 0`; (c) reads `h⁰(E)+h⁰(K−E) ≥ ½I_∞(E,E) − ½I_∞(E,K) + χ = R(E)` because `I_∞(E,K) = ½\deg E` — **so (c)'s right side is literally `R(E)`**, as the builder assumes | correct |
+
+**Certified constants, recomputed by me at `mp.dps = 50` (independent script, independent scan grid):**
+
+    u^*  = 0.11099156337051369408…          (builder: identical to 20 digits)
+    s_1  = 0.9984601627188091092345474…     (builder: identical to 25 digits)
+    1−s_1 = 1.53983728119…×10^{−3},  1−s_1² = 3.07730346353…×10^{−3},  d_0 = 324.959826631…
+    G = 3.7599424119465007536…,  W_{F_0} = 2G² = 9π = 28.274333882308139146…
+    d = 400, t²W = 79780  ⟹  t = 53.1191142828422…
+    I_∞(E,E) = 220,  \deg E = 400,  R(E) = 10
+    |Im Φ_E(ρ_1)| = tG = 199.724810677091…   >   ½s_1\deg E = 199.692032543762…   ✓ violated
+    old bound √(ab) = 200 ✓ satisfied;  Σ_{γ>0}|Φ_E(ρ)|² = 39890 < ab − ¼deg = 39900 ✓ (N2 strict)
+    |I_∞(E,F_0)| = tW = 1501.90757…   >   C_{F_0}\deg E = Gs_1d = 1501.66108…     ✓ violated
+
+Both builder scripts run to completion and reproduce their printed values (`certify_sF.py`:
+`s = 0.9984601627188091092345474`, `d0 = 324.959826631`, windows nonempty at `d = 330,400,1000`;
+`certify_leakage.py`: `L ≤ 4.58332612356×10^{−92}` vs margin `5.78969950104×10^{−3}`). **Scripts run and
+match.** I additionally re-derived the leakage bound using **only** (V2)+(E2)+Riemann–von Mangoldt,
+with no zero list at all (see H6): `L ≤ 5.46×10^{−91}`, still 88 orders below the margin.
+
+---
+
+## 1. Findings
+
+### H1 — MAJOR. Theorem D.31.14(i) is **false as stated**, and its counterexample is one line long.
+
+D.31.14(i) asserts `S_0^{(★)} ⊆ \{E ∈ S_0 : \deg E ≤ d_*\}`. Take `E := dK` with `d = 1000`. Then
+`\deg E = d > 0`, `I_∞(E,E) = d²/2`, `R(E) = d²/4 − d/4 > 0`, so `E ∈ S_0`; and `K > 0` pointwise
+(Thm 11.7(i)), so `E` is **effective**, hence satisfies **every** condition of (★) trivially, i.e.
+`E ∈ S_0^{(★)}` with `\deg E = 1000 > 324.96 ≥ d_*`. The stated inclusion fails at every degree.
+
+*Root cause.* The proof of (i) establishes `s_F² ≥ 1 − 1/d` only **along the aligned rays** `E_{t,d}`
+with `t ≠ 0`; for `t = 0` the constraint is empty because `I_∞(dK,F) = ½d\deg F = 0` for every `F` of
+degree `0`. The theorem's own proof therefore proves only the ray-restricted clause, which the
+statement already contains as its second half ("and along the aligned rays the bound is exact").
+**The first half must be deleted.**
+
+*Collateral, in three places:*
+* **D.31.14(ii)** — "`S_0^{(★)} ⊆ \{1 < \deg E ≤ d_*\}`, which is **empty if `s_* = 0`**" is false for
+  the same reason; `dK ∈ S_0^{(★)}` for every `d > 1` whatever `s_*` is.
+* **O-19** — "`s_* = 0` would say `S_0 ∩ 𝔐 = ∅` under RH" is false: `T(dK) ∈ 𝔐 ∩ T(S_0)` always. The
+  correct reading of `s_* = 0` is "no class of `S_0` with a nonzero component along **some** degree-zero
+  direction is effective-equivalent", i.e. `𝔐` meets `S_0` only in a thin set; O-19 remains a good
+  question but its advertised payoff is mis-stated.
+* **D.31.14(iv)** — the gated candidate `h⁰_★`: the argument as written picks "`E` with
+  `\deg E > \max(1,d_*)` and `R(E) > 0`" and concludes `h⁰_★(E) = 0`. At `E = dK` that is wrong
+  (`h⁰_★(dK) = R(dK) > 0`). **The conclusion survives** — substitute the witness `E = tF_0 + dK` of
+  D.31.10, which is in `S_0∖S_0^{(★)}` by construction, so `h⁰_★(E) = 0 = h⁰_★(K−E)` while `R(E) > 0`,
+  violating (c). So "a gated repair breaks (c)" is **correct**, but only via the witness, not via an
+  arbitrary large-degree class. Rewrite the proof accordingly.
+
+**Severity MAJOR** (a `PROVED`-labelled statement is false), **impact on D.31.12: none** — D.31.12 uses
+the witness, never D.31.14.
+
+### H2 — MAJOR. Theorem D.31.2(ii)'s completeness/polarity claim is an overclaim, with no topology.
+
+The claim "`(★)` is exactly the polar description of the closed convex cone generated by `T(𝓔)`" and
+"**no linear necessary condition is stronger**" is asserted, not proved. The proof supplies only
+(a) `≤` (= Thm 11.14(ii)) and (b) the bump-approximation giving `≥` in (i). Missing:
+
+1. **No topology.** A polar/bipolar statement needs a locally convex topology on `D^W/𝓝_∞` in which the
+   functionals `I_∞(\cdot,X)` are continuous **and exhaust the dual**. `D^W` carries no topology
+   anywhere in Paper 46 §11. Without one there is no Hahn–Banach and no bipolar theorem.
+2. **`𝔐` vs. its closed convex hull.** The bipolar theorem, even when available, characterises
+   `\overline{\mathrm{conv}}\,T(𝓔)`, not `T(𝓔)`. The builder's own Q-B.1(i) says this correctly
+   ("the remaining content of (M) over (★) is exactly the non-convexity gap … plus the decay
+   requirement"), which **contradicts** D.31.2(ii)'s headline as stated and as repeated in the README
+   ("the complete set of linear necessary conditions for `T(E) ∈ 𝔐`").
+3. **Separation of points.** `I_∞(\cdot,X)` separates points of `D^W/𝓝_∞` by Thm 11.11, so the
+   functionals are at least faithful; that is all one gets for free, and it is much less than polarity.
+
+*What is actually true and is all that is used:* (★) is a family of **necessary** conditions, it is
+`𝓝_∞`-invariant, and `C_X` is the smallest constant for which the `X`-condition holds (D.31.2(i), and
+(i) I checked and accept). **D.31.12 uses only the `≤` half of (i).** Downgrade (ii) to
+`PROVED (necessity + optimality of the constant)` + `CLAIM (completeness)`, or supply a topology.
+
+### H3 — MAJOR (discipline, not mathematics). The corpus check is inaccurate in three rows.
+
+* `"Platt"` — the builder reports "the *zero verification* is not an import of record" and registers
+  (X19) as new. In fact Platt–Trudgian is already cited in **`04-papers/01-critical-line-survey`,
+  `04-papers/36-obstruction-ledger`, `04-papers/37-death-of-the-positivity-family`** (21 files contain
+  the string). The honest statement is "not an import of record *in Paper 46*"; (X19) is a new import
+  **to row D**, not to the corpus.
+* `"Beurling–Malliavin"` — the builder grepped only `"Nudelman"` and `"exponential system"` and
+  concluded the material is absent. `"Malliavin"` hits **`03-research/phase-33-dbn/85-completitud-
+  exponenciales-incondicional.md`**, which is *precisely* the Beurling–Malliavin density computation for
+  `\{γ_ρ\}` the Q-B.2 table presents as a new import — including (its §4) the observation that
+  **`γ_ρ ∈ R` unconditionally**, which improves the builder's row: the BM completeness statement does
+  **not** need RH, contrary to the way Q-B.2 frames it inside the "under RH" formulation (M)(ii).
+  Doc 85 and Doc 82 should be cited, and the Q-B.2 row corrected.
+* `"support function"` — 3 files here, not 5. Immaterial, but the grep discipline is the point.
+
+No relabelling follows; the ideas of §D.31.1–4 remain new. **Impact on D.31.12: none.**
+
+### H4 — MAJOR (epistemic labelling). "Unconditional" is used for a computer-assisted theorem.
+
+D.31.9, D.31.10, D.31.11, D.31.12 are labelled `PROVED (unconditional, using (V1),(V2))`; the README
+says "**(b′)⁺ is false for `ξ`**, unconditionally". (V1)+(V2) is a **verified computation** — the
+simplicity and isolation of `ρ_1`. Simplicity is load-bearing (see §0, `m ≥ 2` kills the argument), so
+these are theorems *modulo a numerical verification*, of the same type as (X16)/(X18) but not of the
+same type as, say, Thm 11.14. Every headline should read "unconditional given the verified-zero import
+(X19)". The builder's own §D.31.0 box says this correctly; the README does not.
+
+*A repair worth one line in round 3:* simplicity of `ρ_1` alone can be certified by rigorous interval
+arithmetic on `ξ'(ρ_1)` without any RH verification, so the dependence on Platt–Trudgian can be reduced
+to Rosser–Yohe–Schoenfeld + an argument-principle count on `|Im s| ≤ 21`. That is the same evidential
+type but a far smaller import.
+
+### H5 — MAJOR (framing). The README's ordering misrepresents what was proved.
+
+"**(b′)⁺ is false for `ξ`**" is true but reads as a statement about `ξ`. What is proved is that the
+**effective cone of `D^W` is strictly smaller than the Riemann–Roch gate**, for a reason (`s_1 < 1`)
+that has nothing to do with the arithmetic of `ξ` beyond the existence of one simple on-line zero — and
+§D.31.7 shows the same family fails for `Ξ_a`. The builder's own block "What Theorem D.31.12 does and
+does not say" gets this right; the README's bullets should be reordered so the frame-defect statement
+comes first. Otherwise a reader takes D.31.12 as evidence about `ζ`, which it is not.
+
+### H6 — MINOR (repairable gap, and I repaired it). `certify_leakage.py` uses more than (V2) states.
+
+The script sums the explicit ordinates `γ_2,…,γ_{200}` via `mpmath.zetazero`, i.e. it assumes the
+**completeness** of the standard zero list up to height `≈ 236`, whereas the stated import (V2) only
+asserts that there is no other zero with `|Im ρ| ≤ 21`. As written the certified `L` depends on an
+unstated import.
+
+*Repair, verified by me:* using only (E2), (V2) and the unconditional Riemann–von Mangoldt bound
+`\#\{γ ∈ [T,T+1]\} ≤ \log T`, starting the tail at `T = 21`,
+
+    L ≤ Ge^{9/8}·Σ_{T ≥ 21}2\log T·e^{−4.5(T−γ_1)²} = 5.46×10^{−91} ,
+
+against the margin `G(1−s_1) = 5.79×10^{−3}`. The proof needs no zero list. Replace the script's
+explicit sum by this bound (or add it as the proof-of-record and keep the script as a sharper
+illustration).
+
+### H7 — MINOR. Numerical/typographic defects inside certified statements.
+
+* **D.31.10, "Certified instance":** "`E = 53.089·F_0 + 400·K`" contradicts the `t = 53.11911…` given
+  two lines above and the value I recompute, `t = 53.1191142828422`. The `53.089` is wrong; delete it.
+* **D.31.7(iii):** "`iG(1 − e^{−1598…})`". The exponent is `σ²(2γ_1)²/2 = 18γ_1² = 3596.2…`, not `1598`.
+  Harmless in size, wrong as printed.
+* **D.31.7(ii):** `|Φ_{F_0}(1)| ≤ σ√(2π)e^{σ²(¼−γ_1²)/2}` is right, but the sharp value is
+  `σ√(2π)e^{σ²(¼−γ_1²)/2}|\sin(σ²γ_1/2)|`; the bound as printed is fine, the "`= 7.52·e^{−898.5}`"
+  should be "`≤`".
+* **D.31.12 Step 2** cites "Theorem 12.2" for `\deg(K−E) = 1−\deg E`; that is linearity of `\deg` plus
+  `\deg K = 1` (Thm 11.13(iv), Thm 11.7(iii)). Wrong pointer, trivial content.
+
+### H8 — MINOR. Theorem D.31.8(ii) is a sketch carried under a `PROVED` header.
+
+The clause "the supremum over **all** `E ∈ S_χ` of that degree" is argued by a Cauchy–Schwarz equality
+case plus "the zero-free part maximising `2ab` at fixed `a+b`", under RH, in two lines, with no proof
+that the maximiser of the combined problem is `a = b`. The builder says it is not load-bearing and the
+label table discloses it. Correct, but the theorem header should read `PROVED ((i),(iii)); SKETCH (ii)`.
+
+### H9 — MINOR. Two literature statements in Q-B.2 are stated more strongly than the evidence.
+
+* "**No classical sufficiency criterion covers (M)**" is an argument from absence. It is a reasonable
+  verdict and I did not find a counterexample, but it should be labelled `ASSESSMENT`, not folded into
+  a `RESTATEMENT (literature)` row. In particular the truncated/Nevanlinna–Pick and Krein–Langer
+  extension literature for positive-definite data on discrete sets is not surveyed.
+* The Krein extension theorem row is right (a continuous positive-definite function on `(−A,A) ⊂ R`
+  extends to `R`; Krein 1940) and Rudin, *Illinois J. Math.* **7** (1963), 532–539 is the right
+  citation for failure on general sets. The Beurling–Malliavin citation (Acta Math. **118** (1967),
+  79–93) is correct; see H3 for the corpus overlap and the removable "under RH".
+* Carleman/Akhiezer row: correct as stated (Carleman is a determinacy criterion; the exponential system
+  is not multiplicatively closed). Kreĭn–Nudel'man row: correct as stated (T-systems, compact interval,
+  finite real system) — and the builder is right that the *only* thing imported is the moment-cone =
+  closed-convex-hull-of-point-evaluations idea, which he proves directly.
+
+### H10 — MINOR. Imprecise quantifiers in the "collision" narrative.
+
+"Above degree `\max(1,d_*)` the two demands are incompatible" (§D.31.6 and README) is true in the sense
+"for every `d > d_*` there **exist** classes of degree `d` witnessing the incompatibility" — which does
+follow from the definition of `s_*` as an infimum plus D.31.8 — but not in the sense "every class of
+degree `> d_*` is a witness" (H1). State the quantifier.
+
+---
+
+## 2. Per-item verdicts
+
+| item | verdict |
+|---|---|
+| **Lemma D.31.4** | **CORRECT, and the proof is genuinely two lines.** `\|\cos(γu+θ)\| ≤ s(γ,θ)\cosh(u/2)` pointwise by definition of `s`; integrate against `E' ≥ 0`; `\deg E' = ∫E'·2\cosh(u/2)` is Thm 11.13(i)/Def. 11.6. The second display is `Φ_{E'}(½+iγ) = ∫E'e^{iγu}` and `\mathrm{Re}(e^{iθ}Φ) = ∫E'\cos(γu+θ)`. **`𝓝_∞`-invariant:** both `Φ_\cdot(ρ_1)` and `\deg` are (Thm 11.11 gives `Φ_N(ρ) = 0` and `Φ_N(0)=Φ_N(1)=0`; Thm 11.13(iv)). **Zero-free as a definition, zero-using as data:** the lemma names `ρ_1`, so it is an *estimate* using (X19), exactly as Thm 11.14 uses (E2) — legitimate, and the builder flags it. **Sharpness:** equality holds iff `E'` concentrates at the maximiser `u^*` (mod the period set), i.e. the constant is attained only in the limit of bumps at `u^*`; `s(γ,θ)` is the exact constant by D.31.2(i). **`s < 1` strictly:** correct as argued — the numerator equals `1` only on `(πZ−θ)/γ`, which contains `0` iff `θ ∈ πZ`; off `0` the denominator exceeds `1`; and the quotient `→ 0`, so the sup is attained and `< 1`. At `θ = π/2` the value at `u = 0` is `0` and the sup is attained at `u^* > 0`. **Certified by me:** `u^* = 0.11099156337051369408…`, `s_1 = 0.9984601627188091092345474…`. |
+| **Prop. D.31.5** | **CORRECT.** The tail bound "outside `\|u\| ≤ 0.4` the quotient is `≤ 1/\cosh(0.2) = 0.9803 < s_1`" is valid (`\|\sin\| ≤ 1`); I re-ran the scan on `[0,0.5]` at a different grid with a different Newton seed and got the same `u^*, s_1`. |
+| **Thm D.31.2** | **(i) CORRECT** (both directions; the bump construction lands in `D^W` because `C_c^∞ ⊂ D^W`, Lemma 11.2(ii)). **(ii) necessity + `𝓝_∞`-invariance CORRECT; the completeness/polarity half is an OVERCLAIM (H2)** — no topology, and `𝔐` vs. `\overline{\mathrm{conv}}` conflated. **(iii) CORRECT.** **`C_X` equals Thm 11.14(ii)'s exact constant: YES** — Paper 46 defines `C_F := \sup_u\|w_F(u)\|/(2\cosh(u/2))` and derives (11.17) as an upper bound for it, so Def. D.31.1 is a quotation, not a new definition. **Cor. D.31.2a CORRECT**, including the observation that R137 D.11.1's condition is not `𝓝_∞`-invariant and therefore cannot refute (b′)⁺. |
+| **Lemma D.31.7 / the witness** | **CORRECT in every component, and I recomputed all of it.** `F_0 ∈ D^W` (Gaussian decay beats `e^{−(1+ε)\|u\|}`; `D^W` does **not** require evenness — Def. 11.1 and Thm 11.5 say so explicitly, so the *odd* `F_0` is admissible; this was my first FATAL hypothesis and it is refuted by the text). `\deg F_0 = 0` exactly by parity. `Φ_{F_0}(0) = −Φ_{F_0}(1) = η`, `\|η\| < 10^{−390}`. `Φ_{F_0}(ρ_1) = iG` exactly up to `e^{−3596}`, **purely imaginary**, so `Φ_E(ρ_1) = tΦ_{F_0}(ρ_1)` exactly (`Φ_K(ρ_1) = ξ(ρ_1) = 0`). **The polar cross term is handled correctly** (see §0, row 3): `W_F := −I_∞(F,F) = W(F)+2η²`, and `I_∞(E,E) = d²/2 − t²W_F` is an identity. **The `W` sum over all zeros, including hypothetical off-line ones, is handled correctly**: (E2) gives `\|e^{(½−ρ)u}\|` control through `\|\mathrm{Re}\,ρ−½\| < ½`, i.e. the Gaussian prefactor `e^{σ²c²/2} ≤ e^{9/8}` **uniformly in the real part**, so only the *imaginary* separation matters; (V2) gives `\|γ∓γ_1\| ≥ 6.86` for every other zero, on or off the line, and Riemann–von Mangoldt (unconditional, counts off-line zeros too) closes the tail. So a hypothetical off-line zero cannot be near `γ_1` and cannot enlarge `W_{F_0}` or `C_{F_0}`. **Leakage: correct, with the H6 caveat and my zero-list-free repair.** `R(E) = 10 > 0` and the violation `199.724810677 > 199.692032544` confirmed to 12 digits. |
+| **Thm D.31.8** | **(i),(iii) CORRECT and unconditional** — pure bilinearity plus Thms 11.8(i), 11.13(i). **(ii) SKETCH under a `PROVED` header (H8), and not load-bearing.** |
+| **Thm D.31.9 (the decision)** | **CORRECT: (C4.1) is FALSE.** `C_{F_0} ≤ Gs_1 + 10^{−90} < G = √(W_{F_0}/2)`, margin `G(1−s_1) = 5.79×10^{−3}` against error `< 10^{−90}`. The blueprint's demand for the *exact* constant rather than (11.17) is vindicated: (11.17) gives `2G ≥ G`, vacuous. |
+| **Thms D.31.10, D.31.11** | **CORRECT, for every `χ ∈ R`** (Def. D.30.9 only ever asked `χ ≤ 0`, so the result is stronger than needed). The stable form falls because (★) is homogeneous of degree `0` — correct, the `N` cancels. |
+| **Thm D.31.12** | **STANDS.** Step 1 = Thm 11.13(i),(ii),(iv) + (b′); Step 2 = `\deg(K−E) < 0` + (c) with `I_∞(E,K) = ½\deg E`, so (c)'s RHS is `R(E)`; Step 3 = the witness, `d = 400 > 1`, `R = 10 > 0`. **`χ` is fully covered**: the family `E_{t,d}` needs `d²(1−s_1²) > d − 4χ`, solvable for every real `χ` by taking `d` large, and the window `(s_1²d²/2,\ d²/2 − d/2 + 2χ)` is then nonempty — I verified the window at `d = 330,400,1000` and the inequality is quadratic-vs-linear, so it holds for all large `d` at any fixed `χ`. `χ > 0` is separately refuted by D.30.7 (`a < 0` witness); `χ < 0` only raises `d`. **No FATAL.** |
+| **D.31.14 / `s_*`, `d_*`** | **(i) FALSE as stated (H1); (ii) FALSE as stated (H1); (iii) CORRECT; (iv) CONCLUSION CORRECT, PROOF BROKEN (H1).** |
+| **Q-B (§D.31.8)** | **Q-B.1 CORRECT** (it is Prop. D.24.9 plus D.31.2(i), and (M)(ii)'s positive-definite reformulation under RH is right: `\hatμ(−γ) = z_ρ` for the finite positive measure `E'(u)du`, finite because `∫E' ≤ ∫E'2\cosh = \deg`). **Q-B.2 sound in its hypotheses-checking, over-strong in its negative headline and incomplete in its corpus coverage (H3, H9).** **Q-B.3 is the most valuable surviving item**: the observation that under RH the exponents `ρ−½` are characters of `R`, so Bochner applies, while for `Ξ_a` they are not, is a genuine named A3/RH line — and it is correctly demoted to "re-aim it at whatever replaces (c)". **Q-B.4 void as posed: agreed.** |
+| **§D.31.5 table** | Rows N1, N1′, N2, N5, N6, N8 checked and correct. **N3/N4 rows correct.** N7 correct as an `OPEN`. The witness's passing of N1/N1′/N2 I verified numerically (`a = b = 200`, `\|Φ_E(ρ_1)\| = 199.72 < √(ab) = 200`, `Σ_{γ>0}\|Φ_E(ρ)\|² = 39890 < 39900`) — **the witness really does pass everything the corpus knew and fail exactly the new row.** |
+| **Falsifier protocol (§D.31.7)** | **CORRECT, and its "third outcome" report is the honest one.** For `Ξ_a` the same family degenerates because `W_a(F_+) = −q < 0` makes D.31.8(i)'s constraint vacuous, so (★) fails at every degree: the family separates nothing and **is not an A3-line**. This is a real finding and it is correctly *not* treated as a refutation of the refutation — the FATAL rule forbids arguments **for** (b′)⁺ that run for `Ξ_a`; an argument **against** it that runs for both is exactly what a frame defect looks like. `ξ_K` rows: correct, and correctly labelled `PROVED modulo (V1_K),(V2_K)`; the remark that smaller lowest ordinate gives smaller `s_1^{(K)}` and hence refutation at smaller degree is right (`s(γ,π/2) → 0` as `γ → 0`). `Ξ_Q`: correct — `C_X ≡ ∞` (A7 fails), so (★) is vacuous and §D.31 says nothing there; unchanged, not a new finding, as stated. |
+| **Labels** | Accept all, **except**: D.31.14 must be split (`(i),(ii)` withdrawn, `(iii),(iv)` kept with a repaired proof), D.31.2(ii) split into necessity (`PROVED`) and completeness (`CLAIM`), D.31.8 header split, and every "unconditional" for D.31.9–12 annotated with "(X19)". **"Row D: no label change" is correct** — nothing with a sign is proved, and the withdrawal of `R141_005`'s reduction is the right bookkeeping. |
+
+---
+
+## 3. The consequences, assessed (blueprint item 5)
+
+**"Theorem 12.3's hypothesis is unsatisfiable."** **Correct, and Theorem 12.3 is now vacuous for `ξ`.**
+It remains `PROVED` as an implication — a true implication with a hypothesis that no function satisfies
+— and it can no longer be used to prove RH by constructing an `h⁰`. Every downstream sentence of the
+form "row D reduces RH to the construction of an `h⁰` with (a),(b′),(c)" is **withdrawn, not
+relabelled**. That includes `R141_005`'s reduction, D.30.6(i),(iv), Cor. D.30.8's "the calibration is
+exact" remark, and `ROW-D-COMPLETION-PLAN`'s phase-142 entry. The builder's list of re-wordings is
+complete as far as I could check it.
+
+**"(b′)⁺_st falls with it."** **Correct**, and for the stated reason: (★) is degree-`0` homogeneous in
+the class, so `N` cancels. This kills the "big divisor" route, which was the one `R141_005` nominated.
+Note what this costs: the classical analogue *"`D² > 0`, `D·H > 0` ⟹ `D` is big"* is **false in this
+frame**, and that is the sharpest one-line statement of the phase.
+
+**"A gated repair breaks (c); only weakening (c) with a quadratic defect can survive (O-22)."**
+**Conclusion correct, proof to be repaired (H1).** The structural statement is right and is the real
+output: (b′) forces the gate **into** the effective cone; (c) with the Serre symmetry `R(K−E) = R(E)`
+forces it **above `R`** on the whole half-space `\deg E > 1`, because `h⁰(K−E) = 0` there; and above
+`d_*` these are incompatible at some classes of each degree. `χ` cannot repair it (it shifts by a
+constant against a gap growing like `d²(1−s_*²)`). So a repair must put a `−(1−s_*²)(\deg E)²/2`-sized
+defect into (c) — i.e. an error term in Riemann–Roch of the same order as the main term, destroying the
+`¼m²` growth that made (c) usable in Step 3 of Thm 12.3. **My assessment: O-22 as posed is very
+probably empty.** Step 3 of Theorem 12.3 needs `h⁰(nF) ≥ ½n²q + χ` to beat `0`; a quadratic defect of
+the same order in `\deg` is harmless on the *primitive* ray (`\deg nF = 0`!) but the defect would be
+written in `\deg`, so the honest question for phase 143 is whether a defect supported on
+`\{\deg E > d_*\}` — where Theorem 12.3's proof never goes (its load-bearing classes are `nF` of degree
+`0` and `K−nF` of degree `1`) — can be made compatible with (b′). That is a **sharper and more
+promising** form of O-22 than the one the builder states, and it is exactly the gap D.31.14(iv) tried
+to close and closed only for the ungated candidate. **Recommend phase 143 open on that refinement.**
+
+**Does the same argument apply to every admissible `Z` with a simple, isolated on-line zero?**
+**Yes.** The proof uses exactly: (1) Thm 11.14 (finiteness of `C_X`, i.e. A7); (2) `K_Z > 0` pointwise
+with `Φ_{K_Z} = Z` and `\deg_Z K_Z > 0`; (3) one zero `ρ_1` of `Z` **on the line**, **simple**, and
+isolated from the rest by a margin the Gaussian can resolve. Nothing else. So for `ξ_K` it runs
+verbatim (modulo (V1_K),(V2_K)); for `Ξ_a` it does not apply for lack of on-line zeros but the clause
+fails there for a cruder reason (`W_a < 0`); for `Ξ_Q` the frame is already gone. **The refutation is a
+theorem about the class `𝒵`, not about `ζ`** — which is precisely why it is a frame defect.
+
+**Is there an analogue in Weil's geometry, where `h⁰` exists?** **No — and locating why is the real
+output of this round.** On a smooth projective surface, (a) holds, (b′) holds (`h⁰(D) > 0 ⟹ D ∼ D' ≥ 0`),
+and (c) holds with `χ = χ(𝒪)` — that is Riemann–Roch plus Serre duality. So the geometric frame
+satisfies the very hypotheses D.31.12 shows to be unsatisfiable here, and the argument must break
+somewhere in transport. It breaks at exactly one place, and it is **not** (c):
+
+* The Hodge-index normalisation transports **exactly**. Here `I_∞(E,E) ≤ 2ab ≤ (\deg E)²/2 =
+  (\deg E)²/I_∞(2K,2K)`, which is the surface inequality `D² ≤ (D·H)²/H²` with `H = 2K`. So the
+  quadratic growth demanded by (c) is the geometric one, with the geometric constant. **(c) is not
+  "off by the factor `s_1`".**
+* What fails is **effectivity**. On a surface, `D² > 0` and `D·H > 0` ⟹ `D` is effective (that is the
+  RR argument itself), so the effective cone **fills** the positive cone and the support function of
+  the effective cone in any direction is the support function of the positive cone: the analogue of
+  `s_1` is `1`. In `D^W`, effectivity means **pointwise non-negativity of a density on the single real
+  modulus line**, and `T(𝓔)` is therefore a **moment cone** — the image of the positive measures
+  `E'(u)du` under `(\deg, (Φ(ρ))_ρ)`. A moment cone is strictly thinner than the positive cone of the
+  quadratic form: the archimedean degree weight `2\cosh(u/2)` grows while the zero-datum weight
+  `\cos(γu+θ)` oscillates, and `\sup_u\|\cos(γu+θ)\|/\cosh(u/2) = s(γ,θ) < 1` is the exact deficit. So
+  **Lemma D.31.4 is the analogue of "`D` effective ⟹ `\|D·Γ\|` controlled by `\deg D`", i.e. of the
+  Castelnuovo/nef pairing bound — but with an extra strict factor that geometry does not have**, and
+  the factor's source is that the arithmetic effective cone is a one-parameter moment cone while the
+  geometric one is a full-dimensional cone in `NS`.
+* **The axiom that differs, named:** the arithmetic frame has no analogue of *"the positive cone is the
+  effective cone"* — equivalently, it lacks the surjectivity of Riemann–Roch onto effectivity. `D^W`
+  supplies far too few effective classes (only radial densities on the modulus line, and only those
+  that are pointwise non-negative) relative to how many classes the form `I_∞` declares positive. In
+  geometry the missing classes are supplied by the rest of `NS(C × C)` — curves that are not
+  combinations of the diagonal and the Frobenius/translate family. **Row D's frame retains the
+  intersection theory of `C × C` and discards its linear systems**, and D.31.12 is the theorem that says
+  you cannot keep the first without the second.
+* *A consistency remark, offered as heuristic, not as a check:* one cannot simply "run the refutation
+  for a curve over `F_q` and watch it contradict Weil", because the function-field zeta is **not** an
+  admissible `Z` for this frame (its zeros are not of finite `Σ(1+\|γ\|)^{−2}`-type in the way (E3d)
+  demands, and the modulus line is the lattice `\log q·Z`, not `R`). The absence of a function-field
+  model of `D^W` is itself part of the diagnosis.
+
+**What this does to row D's programme, in one paragraph.** Row D loses its reduction. Since phase 135
+the row's deliverable has been "RH follows from the construction of an `h⁰` satisfying (a),(b′),(c)";
+that deliverable is now provably unreachable, and the `h⁰` route as formulated is closed — not because
+`h⁰` is hard to build, but because the frame's effective cone is too thin for any `h⁰` to satisfy both
+clauses at once. What survives: the frame itself (§11 — `D^W`, `K`, `𝓝_∞`, `\deg`, Thm 11.14, `σ_K`);
+Theorem 12.3 as a vacuous but correct implication; the identification of `𝔐` as a moment cone; and the
+new sharp constant `s_1`, which is the first quantitative measurement of *how far* the frame's
+effective cone sits inside its positive cone. The programme's next question is not "which `h⁰`" but
+"which weakening of (c), or which enlargement of the class of effective representatives (distributional
+densities? a completion of `D^W` in which the moment cone is closed and fatter?), restores a
+Riemann–Roch that still implies RH". **The second horn is the one this audit would push:** D.31.12 is a
+statement about a *cone being too small*, and the natural repair is to enlarge the cone, not to weaken
+the inequality. That is a different O-22 from the builder's, and it should be recorded alongside it.
+
+---
+
+## 4. Required actions before `R142_003`
+
+1. **Withdraw D.31.14(i) and (ii)** (H1); keep (iii); rewrite (iv)'s proof with the D.31.10 witness in
+   place of "any `E` of degree `> \max(1,d_*)`"; correct O-19's `s_* = 0` interpretation.
+2. **Split D.31.2(ii)** into `PROVED` (necessity, `𝓝_∞`-invariance, optimality of `C_X`) and `CLAIM`
+   (completeness/polarity), or supply a topology and prove the bipolar statement (H2). Correct the
+   README's "the complete set of linear necessary conditions" accordingly.
+3. **Annotate every "unconditional"** on D.31.9–D.31.12 with "(given the verified-zero import (X19))",
+   and record that **simplicity of `ρ_1` is load-bearing** with the `m ≥ 2` computation (H4). Add the
+   proposed reduction of the import to `ξ'(ρ_1) ≠ 0` by interval arithmetic.
+4. **Replace the leakage proof-of-record** with the (V2)+RvM bound `L ≤ 5.46×10^{−91}`, which needs no
+   zero list (H6); keep the script as an illustration.
+5. **Fix the corpus check** rows for Platt, Beurling–Malliavin (cite `phase-33-dbn/85` and `/82`, and
+   drop the "under RH" from the BM row, since `γ_ρ ∈ R` unconditionally), and "support function" (H3).
+6. **Fix H7's four numeric/pointer typos**, and reorder the README's bullets so the frame-defect
+   statement leads (H5).
+7. **Restate O-22 in the sharper form** of §3 (a defect supported above `d_*`, where Thm 12.3's proof
+   never goes), and add the cone-enlargement horn as a second open item.
+
+---
+
+## 5. Overall
+
+The round is **correct where it matters and overreaches where it does not**. The mathematics of
+D.31.4, D.31.5, D.31.7, D.31.8(i),(iii), D.31.9, D.31.10, D.31.11 and **D.31.12** survived a maximally
+hostile re-derivation: every constant recomputed to 12+ digits and matched, every identity re-derived
+from Paper 46's own statements, the two hypotheses I expected to be fatal (oddness of `F_0` versus a
+possible evenness requirement in `D^W`; the unknown contribution of hypothetical off-line zeros to `W`
+and to `w_{F_0}`) both closed **by the paper's own text** — Thm 11.5 assumes no evenness, and (E2)+(V2)
+make the leakage bound uniform in the real part. The polar cross term the blueprint flagged is handled
+by an identity, not an approximation. The errors I did find (H1, H2) are in the *interpretive* apparatus
+built on top of the refutation — the `s_*`/`d_*` geometry and the polarity claim — and one of them
+(H1) is a genuinely false `PROVED` statement that a single line, `E = dK`, refutes. That is the kind of
+error a round which has just proved a negative is most prone to: having found that the effective cone is
+too thin along one direction, the write-up generalises to "the effective cone is thin", which is false
+because the canonical ray is effective at every degree.
+
+**Label recommendation: D.31.12 `PROVED` (given (X19)). Row D: no label change** — concur with the
+builder. Nothing with a sign is proved, and `R141_005`'s reduction is withdrawn.

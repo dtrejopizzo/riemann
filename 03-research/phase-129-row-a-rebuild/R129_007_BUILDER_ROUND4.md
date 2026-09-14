@@ -1,0 +1,227 @@
+# R129.007 — row A rebuild, round 4: builder report
+
+Date: 2026-09-12.  Target: Paper 43.  Input: `R129.006` (auditor, round 3).
+
+Round 4 makes the paper **exact** rather than adding results, and makes one
+final attempt at A.8.  Every finding F1–F17 is accepted.  Four changes are
+substantive; the rest are corrections of statement, constant or attribution.
+
+**(A.8-I) was NOT found.**  I report no construction and, worse for the
+programme, one new negative theorem that closes off the route the corpus
+suggests.
+
+---
+
+## 1. The four substantive changes
+
+### 1.1 F13 — `T` is now defined, and `𝓝 = 0` is import-free
+
+`T := Σ_v W_v + c·F(1)` is the **definition** (8.4), with `W_p` = P123.042
+(3.2) and `W_∞` = P123.035 (3.1), both `PROVED-IN-REPOSITORY`, and `c ∈ R` a
+declared constant.  The semilocal cutoff trace theorem becomes **Theorem 8.10**
+(a comparison: the analytic functional is the member `c=c_{an}` of the family,
+with `c_{an}` unevaluated — P123.035 §6's stop rule).
+
+Consequence, and it is the point: **Theorems 9.7–9.14 and 10.3a use no import
+at all.**  §12 now records that `C` is used in exactly two places,
+Theorem 8.10 and Theorem 8A.7, and that the binding clause A.8 needs no
+import — it needs a construction.
+
+### 1.2 F1 — the archimedean factor `½`
+
+`τ_∞(+e^t) = 1/(2|\sinh(t/2)|)`, `τ_∞(−e^t) = 1/(2\cosh(t/2))`, while
+P123.035 (3.1)'s kernel is `K(t) = ¼[1/\sinh(t/2)+1/\cosh(t/2)]`.  So
+P123.035 computes **half** the naive regularized integral, and rounds 2–3's
+(8.6)/(9.10) were false as displayed.  Fixed by **declaring**
+`d^*x_∞ := dx/(2|x|)` (Remark 8.6a).
+
+`Ŵ_∞` is re-derived with every constant carried (Theorem 9.7(b)).  The
+auditor is right that round 3 reached the right answer through two
+compensating slips (`∫_0^1` where the full line was meant; the folding factor
+"absorbed" rather than carried).  The clean derivation:
+`∫'_R e^{iτt}dt/(2|\sinh(t/2)|) = 2∫_0^1(\cos τt−1)/t\,dt + O(1) =
+−2\,\mathrm{Cin}|τ| + O(1) = −2\log|τ|+O(1)`, times the declared `½`, gives
+`−\log|τ|+O(1)`; the parity term `∫e^{iτt}dt/(2\cosh(t/2)) = π/\cosh(πτ)` is
+bounded by `π` and is the only place parity enters.  Cross-checks against
+P123.035 (4.1): `\log π − Re ψ(1/4+iτ/2) = −\log|τ| + \log 2π + O(τ^{−2})`.
+Reality of `Ŵ_∞` and of `Ŵ_p` is now stated (F9), and `T̂` is proved
+**bounded above** by a finite `m`, which Theorem 14.1 needs.
+
+### 1.3 F5 — Theorem 9.13(a): no `D_A`-module splitting exists
+
+Stronger than round 3's orthogonality statement, and it settles the A.6
+reading question.  A section `σ: B_T → N_A` would give `Φ_∓ = σ(e_∓) ≠ 0` with
+`a⋆Φ_∓ = λ_∓(a)Φ_∓` for all `a`, i.e. `â(χ)Φ̂_∓(χ) = λ_∓(a)Φ̂_∓(χ)`.  If
+`Φ̂_∓(χ_0) ≠ 0` then `â(χ_0) = λ_∓(a) = â(∓i/2)` for **every** `a` — a value
+on the unitary axis forced to equal one off it.  These functionals are
+independent: under translation `|â_w(χ_0)|` is constant while
+`|λ_∓(a_w)| = |w|_S^{∓1/2}|λ_∓(a)|` is unbounded.  So `Φ̂_∓ ≡ 0`,
+contradiction.
+
+Also recorded (Remark 9.13a): a **weak, non-canonical** hyperbolic plane does
+exist inside `N_A` whenever the form is indefinite — but it is not the ruling
+plane, for three stated reasons (not canonical; carries no arithmetic, being a
+general fact about indefinite Hermitian forms; not module-compatible, by
+Theorem 9.13(a)).  `A_MIXED_METRIC_WORK` makes the same warning about its own
+hyperbolic plane of tests.
+
+### 1.4 F6 — Theorem 14.1: the numerical form has no Hodge-index shape
+
+`I_A(F,F) = ∫|F̂|²(T̂+c)dχ`, real.  With `m := \sup T̂ < ∞`:
+
+* infinite **negative** index, for every `c` (since `T̂+c → −∞` on every
+  component);
+* infinite **positive** index **iff** `c > −m`, and then the form is
+  indefinite;
+* for `c=0`, `m ≥ \log π − ψ(1/4) = \log π + γ + 3\log 2 + π/2 ≈ 5.372 > 0`
+  (all finite-place terms at `τ=0`, trivial `κ`, are positive), so the form
+  is indefinite;
+* `(D_A^{prim})^⊥ = 0` and no module splitting (Theorem 9.13).
+
+**Transmitted to rows B/C/D**, in §14.1, with three consequences spelled out:
+no classical Hodge-index shape is available; any downstream positivity
+argument must change the form (as row C's `Π = −∂_t²+¼` does) or restrict to a
+sector where `T̂+c` has a sign; and — a finding I had not expected — **the
+signature is hostage to the unpinned constant `c`**, since `c ≤ −m` would make
+the form negative *definite*.  So (O-A5-3) is not cosmetic.
+
+---
+
+## 2. The final attempt at A.8, and Proposition 10.6
+
+F14 accepted: (O-A8-1) and (O-A8-2) merge into one theorem in three parts,
+stated in §10 as **(A.8-I)** the monoidal source functor `Φ_det`, **(A.8-II)**
+the metric comparison with `L_tan`, **(A.8-III)** = (O-A5-1).  All three items
+of P123.012 §7 are quoted.  `A_MIXED_METRIC_WORK`'s `L_tan(F) = (C·1, ‖1‖² =
+e^{−I(F,F)})` with `P(F,G)`, `‖1‖ = e^{−Re I(F,G)}` is cited as the analytic
+**target**, already constructed — that note itself says it builds "the
+analytic determinant/biextension target for the comparison, **not its missing
+geometric source functor**".
+
+**I attempted (A.8-I) and did not find it.**  Re-read: P123.007 §8, P123.009
+(all), P123.012 §§4–7, `A_MIXED_METRIC_WORK` §§6–7.  The natural candidate is
+to build `Φ_det` from the derived diagonal contact, since P123.009 is
+`PROVED-IN-REPOSITORY` for a perfect contact complex, its based determinant
+line, the half-density correction, a local Lefschetz number, dagger symmetry
+and cyclicity, at each place and each `q ≠ 1`.  That route is **closed**:
+
+> **Proposition 10.6.**  Any functor defined on `G` by taking the determinant
+> line of the derived diagonal contact is constant on the finite-place data of
+> the graph sector, and cannot carry `Tr_A`.
+>
+> *Proof.*  Theorem 7.1(c) and Remark 7.3: at a finite place the contact
+> complex of a twist with `v_p(w_p)≠0` is `C[0]`, rank one, **no
+> differential**, independent of the twist — determinant line canonically `C`,
+> no torsion; at a unit twist it is `C[0]⊕⊕̂_jC^{N_k}[0]`, of infinite rank, so
+> the determinant line is not even defined.  Corollary 7.5 is this statement,
+> and §13.3 already records that the boundary determinant target built on this
+> idea "was proved trivial on every graph class".  But `Tr_A` separates
+> classes (Theorem 9.5).  ∎
+
+So `Φ_det`, if it exists, must transport data invisible to the K-theory of the
+contact complex: the arithmetic content of `Tr_A` lives in the **half-density
+normalization of the point class**, which by §1.3 and Remark 7.3 is the
+torsion of the *smooth model* `[R[z] →^{(σ−1)z} R[z]]` (P123.060 (1.1), §4) —
+a structure the totally disconnected coefficient algebra does not carry.
+P123.009 §5 says the same from its side: "a trace on the quotient by `S`-units
+is a **sum** of local-stratum Lefschetz numbers, not the fixed-point
+determinant of the Cartesian product of all transverse fields".
+
+**Exact missing statement.**
+
+> **(A.8-I).**  A monoidal functor
+> `Φ_det : Corr_A^{tr} → (periodic Deligne ruling category, λ_per)` carrying
+> `⋆ ↦ ⊗`, `† ↦` duality, `Δ ↦` unit, `Tr_A = Det_S^{rel} ↦ λ_per`, and the
+> Tate boundary map `M` of Theorem 9.12 to the two ruling directions.
+>
+> **(A.8-II).**  An isometry of its determinant metric with `L_tan`,
+> normalization included ("the distinction between a norm and its square"),
+> under which the proved endpoint cocycle `A(F,G)A(F⋄G,K)=A(G,K)A(F,G⋄K)`
+> (P123.108 (5), P123.110 (7)) becomes the biextension cocycle of `Φ_det`.
+
+No route.  **A.8 is the binding constraint on row A.**
+
+---
+
+## 3. The other findings
+
+| id | disposition |
+|---|---|
+| F1 | Fixed: `d^*x_∞ := dx/(2|x|)` declared; `Ŵ_∞` re-derived cleanly; reality and boundedness above added. |
+| F2 | Fixed: the clause "whose constant `c` is the same on both sides" deleted from Thm 8A.5's proof; `(c_T−c_S)F(1)` stays unevaluated, folded into (O-A5-3). |
+| F3 | Fixed: (O-A5-1) split into **(O-A5-1a)** a genuine inequality and **(O-A5-1b)** a construction that P123.105 §4 and P123.107 §5 explicitly disclaim.  "No longer a structural unknown" removed. |
+| F4 | Fixed: the (8A.14) display was false (`c_p(1)=0`, so `v_{0,1}` misses the shell sum); corrected to `v_{0,0}+v_{0,1}`.  Stated that `W_∞` needs the `E_R` seminorms and that submultiplicativity is proved at finite places only. |
+| F5 | Accepted; Thm 9.13(a) written out; A.6 status stated under both readings; §14.2 carries the proposed amendment text.  **I did not edit the specification file.** |
+| F6 | Accepted; Theorem 14.1 with proof and the numeric bound `5.372`. |
+| F7 | Fixed: the slogan is `𝓝 = {F : F̂ = 0 on supp(T̂+c)}` throughout; `δ_1` has symbol `1`. |
+| F8 | Fixed: the swapped exponents in Thm 9.12's translate argument. |
+| F9 | Fixed: `T̂` real-valued now stated and proved in Thm 9.7(a),(b),(c). |
+| F10 | Accepted: round 3's report misdescribed G4; the paragraph was rewritten, not deleted.  §4 below corrects the earlier report. |
+| F12 | Accepted: Remark 9.7a and §11 now state that `T̂` **is** the prime+Gamma side, that `Λ` is derived not used, that no zero appears, and that Thm 9.8 uses only boundedness of the finite part against the divergence of the Gamma symbol — hence is not a renaming of the explicit formula. |
+| F13 | Accepted; see §1.1. |
+| F14 | Accepted; see §2. |
+| F15 | Noted in the paper: Thm 10.3a is correct but near-vacuous, properness being pointwise; the substantive item is (O-A7-1) on the completion. |
+| F16/F17 | Report corrections in §4. |
+
+---
+
+## 4. Corrections to my own earlier reports
+
+* `R129.005` §3 claimed G4 was fixed by *deleting* the "P123.018 counterexample
+  does not apply" paragraph.  It was **rewritten**, not deleted; the rewrite is
+  correct (P123.018 §2 stands unqualified; `π_{TS}` is a different,
+  splitting-defined map supported by P123.042 §4 and P123.046 §4), but the
+  report described the wrong action.
+* `R129.005` §2 stated the archimedean asymptotic without the folding factor,
+  reproducing the paper's F1 error.
+* `R129.005` §4 called (O-A8-4) "an inequality, not a construction".  Half of
+  it is a construction: (O-A5-1b).
+
+---
+
+## 5. Per-clause table
+
+| clause | verdict | exact remaining obstacles |
+|---|---|---|
+| **A.1** | **PARTIAL** | (O-A1-1) geometric descent; (O-A1-2) restriction functor on objects |
+| **A.2** | **PARTIAL** | completion not proved a localization on `Y_S`; (3.3) transferred from P123.082's algebra to `U` |
+| **A.3** | **PROVED** on `G` | — |
+| **A.4** | **PROVED** on `G` | — |
+| **A.5** | **PARTIAL** | (O-A5-1a) the inequality; (O-A5-1b) the construction beyond the unit block; (O-A5-2) chart invariance, **false**; (O-A5-3) the constant `c` — which decides the signature; (O-A5-4) objects vs presentations; (O-A5-5) `Sh` vs `Tr_A`; (O-A5-6) faithfulness of `F↦E_F` |
+| **A.6** | **PARTIAL** | **PROVED** in P123.017 §4's exact-sequence reading; **REFUTED on this carrier** in the literal "contains" reading, by Thm 9.13(a).  `𝓝=0`, `N_A=D_A`, Tate functionals descend, canonical hyperbolic boundary sequence, nonzero primitive sector, separated completion — all proved, and now **import-free**.  Residual = a specification decision (§14.2) |
+| **A.7** | **PARTIAL** | properness on `N_A` proved (but near-vacuous); (O-A7-1) properness on `N_A^{dist}`; (O-A7-2) positive factorizations |
+| **A.8** | **OPEN — binding** | (A.8-I) the source functor; (A.8-II) the metric comparison with `L_tan`; (A.8-III)=(O-A5-1).  **Prop. 10.6 closes off the contact-determinant route.** |
+| **A.9** | **PASSED for the formalism**, automorphism sector | surrogate `G_Λ`; `†` antilinear vs `D_h` linear |
+| **A.10** | **PROVED** | and §11 now states why Thm 9.8 is not a renaming of the explicit formula |
+
+**Label: `ROW A: CONSTRUCTED`.**  Between Paper 43 and
+`WEIL-STRENGTH-COMPLETE` stand exactly: (1) A.8 = (A.8-I)+(A.8-II), new
+mathematics with no route in the corpus; (2) A.6 = a decision on the
+specification's wording; (3) A.5 = (O-A5-1b), a construction; (4) A.1, A.2,
+A.7, which depend on the above.
+
+---
+
+## 6. The proposed specification amendment (also in `main.md` §14.2)
+
+Clause A.6 currently reads, in part: "its Hausdorff quotient `N_A` contains
+the ruling plane and a nonzero completed mixed sector."
+
+Proposed replacement for that fragment:
+
+> its Hausdorff quotient `N_A` carries a canonical exact sequence
+> `0 → N_A^{prim} → N_A → B_T → 0` of topological modules, in which `B_T` is
+> the two-dimensional Tate boundary with the hyperbolic form `[[0,1],[1,0]]`
+> and with `†` exchanging its two directions, and in which `N_A^{prim}` is
+> nonzero and carries a nondegenerate induced pairing.  No splitting of this
+> sequence is required.
+
+Rationale: this is P123.017 §4's own formulation; that note's status line is
+`PROVED-IN-REPOSITORY` for "the exact Tate-boundary/primitive sequence", and
+its §8 already claims A.6 closed "in the appropriate correspondence-module
+sense".  Theorem 9.13(a) proves the literal reading is unattainable on this
+carrier.  **I have not edited `P123_A_ACCEPTANCE_SPECIFICATION.md`; the
+decision belongs to its owner, and rejection — leaving A.6 `REFUTED` here and
+requiring a different carrier — is a legitimate outcome I do not prejudge.**
+
+Papers 44 and 45 were not modified.

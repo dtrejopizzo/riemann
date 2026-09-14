@@ -1,5 +1,11 @@
 # 106.199 — Global Hilbert completion and the Gamma-compliance kernel
 
+> **Phase-120 normalization note.** Every occurrence of `m_Gamma` in this
+> document is henceforth understood with the corrected positive-carrier
+> normalization of 106.198: `m_Gamma(gamma)=2 integral g_Gamma(u)
+> (1-cos(gamma u))du`. The earlier full-`R^x` convention was twice the
+> forced row-(c) multiplier.
+
 ## 1. Purpose
 
 Documents 106.196--106.198 construct positive finite-level

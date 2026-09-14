@@ -1,0 +1,121 @@
+# R141.003 — Builder, round 2, phase 141: repair ledger
+
+*Builder: Claude Opus 5. Date 2026-09-13. Object: the 14 findings of `R141_002_HOSTILE_AUDIT.md`
+(0 FATAL, 7 MAJOR, 7 MINOR; verdict **REVISE**; D.29 recommendation rejected), applied in place in
+`R141_001_BUILDER_ROUND1.md` with bracketed round-2 notes at every edited passage. The audit is
+accepted in full: **no finding is contested**, and three of them (H1, H2/H5, H6) change the round's
+conclusions rather than its wording.*
+
+---
+
+## 1. Per-finding status
+
+| # | sev | finding, in one line | status | where |
+|---|---|---|---|---|
+| **H1** | MAJOR | the FATAL-screen claim ("no `C` closes (c) unconditionally … proved, not asserted") is unearned in case (A) and is a category error about **provability** | **CLOSED — claim withdrawn.** Head matter rewritten; the screen now states only that *nothing with a sign is proved*, that (c) for `C^{\deg}` and for every case-(B) `C` would be a proof of RH, and that **for `C` in case (A) the status of (c) is not decided**. The auditor's own sentence ("no argument of the trace class can establish that (c) is unprovable, since for `Q_C ≡ 0` the question **is** Weil positivity") is recorded. §D.30 then exhibits a candidate for which (c) **does** close unconditionally, and screens it explicitly | head matter; D.27.3 box → *FATAL screen at D.27.6*; D.29 §1; `§ Label` |
+| **H2** | MAJOR | the "dichotomy" has no content beyond Theorem 12.3, and its conclusion is stated with the sign inverted | **CLOSED — reframed.** D.27.5 is retitled *"in case (B), (c) alone suffices"*; its genuine increment is stated as what it is — **(b′) is removed from Theorem 12.3's hypotheses on that subclass**, a weakening of the reduction, i.e. good news. Added: case (B) does **not** imply (b′), with `h⁰_{\deg}` as the example (`h⁰_{\deg}(−K) = ¼ > 0`, `\deg(−K) < 0`); the partition is of `Ψ`, not of failure modes. Every phrase presenting "(c) implies RH" as a failure is deleted | D.27.5 bracket + clause (B); D.27.5b; D.29 §1; `§ Label` |
+| **H3** | MAJOR | "no branch survives the falsifiers" repeats the non-sequitur Paper 46 §13.1 withdrew (M1 of `R135_002`) | **CLOSED — restricted to the schema.** Deleted at (AT-1)(ii), (AT-2) and D.29; replaced by *no **model-uniform proof** of (c) for a case-(B) `Ψ` can exist*. D.26.11's gloss ("`𝔐` … can carry no sign") withdrawn and replaced by a statement about **proofs**. Corollary D.28.2's wording, which the auditor certified correct, is kept verbatim | D.26.11 box; (AT-1)(ii); (AT-2); D.29 §4; P46-24; `§ Label` |
+| **H4** | MAJOR | D.28.1: `Π` has order 2 (single Green kernel), and compact support of the preimage must be cited, not asserted | **CLOSED — repaired.** `G_{1/2}∗G_{1/2}` inverts `Π²`, not `Π`, and Lemma 12.4A's degenerate case is `Π²`; more seriously `G_{1/2}∗F` is not compactly supported. Replaced by: injectivity from Lemma 11.2(v), **surjectivity onto the primitive class with compactly supported preimage from Paper 46 Lemma 3.1** (`P = {0,1}`, quoted inside Theorem 11.10's proof). Nothing downstream moves — the tail bump `D ↦ D+4` matches the order-2 symbol `|ρ(1−ρ)|²`, as the auditor notes | D.28.1 *The operator* |
+| **H5** | MAJOR | D.27.4 is Theorem 11.13 + (b′) = Theorem 12.3 Steps 2/4; "wider than D.24.7" mis-describes it | **CLOSED — relabelled `RESTATEMENT`.** Retitled *"`h⁰` vanishes in degree `≤ 0`"*; the **trace-free two-line proof** is printed as the version of record; the D.24.7 comparison is deleted; and the correct reading is stated — it is the classical sanity check `h⁰(D) = 0` for `\deg D < 0`, a **required feature**, which §D.30's candidate satisfies by construction | D.27.4; the box after D.27.5a; P46-20; README; `§ Label` |
+| **H6** | MAJOR | the candidate the round should have found: `h⁰_{RR}` and its degree-gated form; (a),(c) free; the recommendation is refuted | **CLOSED — built out in full as new §D.30** (see §2 below). The round-1 recommendation is **withdrawn**; D.29 is rewritten around the clause | new §D.30; D.29 rewritten; O-18; P46-25 |
+| **H7** | MAJOR | D.26.9(iv),(v) and D.26.10(iii) are restatements labelled as structure, with one overreach | **CLOSED.** (iv) → `RESTATEMENT` (change of variable; the first two components of `v` determine `u`, so `𝒞` is a **graph**; the word "explicit" withdrawn, `w_g` being (11.16)); (v) → `PROVED` in `⊆`, **`OPEN` in `⊇`** (the closure/regularity step, now inside O-15′′); D.26.10(iii)'s *"these are **all** the linear conditions"* → the word "all" withdrawn. README and P46-19 aligned with the `§ Label` table | D.26.9; D.26.10(iii); P46-19; README; `§ Label` |
+| **H8** | MINOR | Lemma D.26.4: multiplicity convention, over-strong hypothesis, `ξ`-specific half-plane | **CLOSED.** Multiset convention stated once (`c_ρ` is constant on each fibre, residue `m(ρ_0)c_{ρ_0}`); the hypothesis class named (`θ < ∞` + rapid decay, with `A = A_0(𝒦)` per compact); the half-plane carried as `\mathrm{Re}\,w > 1+θ` from the start. The auditor's acceptance of the ζ-transform deviation is recorded | D.26.4 |
+| **H9** | MINOR | D.28.1: "four interpolation conditions" contradicts the `(α,β)` family; the wrong-sign tail needs a sentence | **CLOSED.** (1) For real even `F` the value at `ρ_0` determines all four quartet values: **one complex condition**, matched by two real parameters; sentence deleted. (2) Added: the zeros on the critical line and the real zeros in `(0,1)` both push the wrong way, and are handled by `106_11`'s **modulus** domination, uniform on `|\mathrm{Im}\,z| ≤ θ_Q` — so their sign plays no role. (3) The two R8 checks were certified correct and stand | D.28.0(a); D.28.1 *Tail domination* |
+| **H10** | MINOR | D.26.6 cites a decomposition of the primitive perp that Paper 46 does not give | **CLOSED.** `𝓝_∞ ⊕ Λ_ξ` deleted; only Theorem 11.10 (`Φ_X(ρ) = 0` at every zero) is used, which is all the proof needs. The Langer / Riemann–von Mangoldt comparison is untouched | D.26.6 *Second map* |
+| **H11** | MINOR | one corpus-check citation ("Paper 32") not matched by the stated grep string | **CLOSED.** The matched string is printed: `04-papers/32-stepanov-band/main.tex:33`, *"Bohr almost periodic on"*, one hit; phase-25 path given in full | corpus-check box (D.26) |
+| **H12** | MINOR | seven labels to change | **CLOSED.** `§ Label` rewritten in full; every row in the audit's table applied, plus the new §D.30 rows | `§ Label` |
+| **H13** | MINOR | D.27.6: optimality of `χ = 3/16` and the failure of (b′) for `h⁰_{\deg}` omitted; `3/16` vs `1/8` left to be misread | **CLOSED.** New **Addendum D.27.6a**: optimality with extremal class `E = ½K` (`a=b=¼`, `W = 0`); `h⁰_{\deg}(−K) = ¼ > 0` with `\deg(−K) < 0`, so (b′) fails; and a boxed clause explaining that the two constants belong to **different candidates**, that `\tfrac14(a+b)² ≥ \max(a,0)\max(b,0)`, and that `3/16 > 1/8` is therefore **no** improvement of `R140` Theorem D.24.4 | D.27.6a; P46-21 |
+| **H14** | MINOR | the one place a zero is named: the admissibility of `g` | **CLOSED.** Stated explicitly after Lemma D.26.1: `T` depends on a choice made through the zero set; `g` must be re-chosen per model, so `T` is not one object transported across models, and Proposition D.26.11 is to be read as "the same construction performed separately in each model" | box after D.26.1; `§ Label` |
+
+**Contested: none.** Every finding is accepted as stated.
+
+---
+
+## 2. The new section: §D.30, and what it settles
+
+The auditor's construction is built out with each clause proved.
+
+| item | statement | label |
+|---|---|---|
+| D.30.1 | `R(K−E) = R(E)` identically, from bilinearity and symmetry of `I_∞` alone (Serre symmetry of (c)'s right-hand side) | **PROVED** |
+| D.30.3 | `h⁰_{RR} = \max(R,0)`: (a),(c) unconditional; **(b′) false for every `χ`** (`R(mK) → +∞` as `m → −∞`, `\deg < 0`) | **PROVED** |
+| D.30.5 | `h⁰_{RR}^{+} = \max(R,0)\mathbf 1_{\deg > 0}`: **(a) and (c) unconditional, for every `χ`** — the two gates cannot both be off because `\deg E + \deg(K−E) = \deg K = 1 > 0`; growth `¼m² − ¼m + χ` (and `(r²/4)m²+O(m)` over `K`); vanishes in degree `≤ 0`; not 2-homogeneous; not a bidegree-function | **PROVED** |
+| D.30.6 | it defeats `R140` D.24.7's witness `E_0+tF` through `−½W(E)` | **PROVED** under RH |
+| **D.30.7** | **`χ > 0` is refuted unconditionally** — witness `E = αK + βτ_cK` with `M(E) = (−ε,2ε)`, `Z(E) = 0`, `\deg E = ε > 0`, `R(E) = −2ε² − ε/4 + χ > 0`, and `Φ_E(1) < 0` | **PROVED** *(new; not in the audit)* |
+| D.30.8 | hence `χ ≤ 0`; at `χ = 0` the gate is **calibrated exactly** to Lemma D.24.6: `R > 0`, `\deg > 0` imply `a,b > 0` and `|Φ_E(ρ)| < \sqrt{ab}`, the known necessary conditions for `𝔐`, made strict | **PROVED** *(new)* |
+| **D.30.9** | **THE CLAUSE (b′)⁺**: `\deg E > 0` and `I_∞(E,E) > ½\deg E − 2χ` ⟹ `E` is `𝓝_∞`-equivalent to a nonzero effective class | statement |
+| D.30.10 | **(b′)⁺ ⟹ RH**, twice: through Theorem 12.3, and **directly** with the witness `E = rF+K` and the bounded-density bound (`rq ≤ C_F`) | **PROVED** *(the direct proof is new)* |
+| **D.30.11** | **Theorem 12.3 survives replacing (b′) by its stable form (b′)_{st}** (*some* positive multiple is equivalent to an effective class) — checked step by step | **PROVED** *(new; an extension of Thm 12.3, which is untouched)* |
+| D.30.12 | hence the weakest target is **(b′)⁺_{st}**, the arithmetic analogue of *"`D² > 0`, `D·H > 0` ⟹ `D` is big"* | **PROVED** as an implication |
+| D.30.13 | **RH ⟹ (b′)⁺ on the zero-free locus**: `E' := 2\sqrt{ab}\,τ_{\log(a/b)}K` realizes every bidegree with `a,b > 0`, is effective (`K > 0`) and has `Z = 0` | **PROVED**, unconditional |
+| **O-18** | **RH ⟹ (b′)⁺ in general?** | **OPEN** — see §3 |
+| D.30.14 | (b′)⁺ is the zero-free containment `T(S_χ) ⊆ 𝔐`; **under RH `S_0` is already convex** (the forward cone of the Lorentzian `I_∞`, via `R138_001` Thm D.15.2(a)), so convexity of `𝔐` adds nothing; and if `S_0` is convex then `I_∞` has at most one positive direction, i.e. RH | **PROVED** *(new)* |
+| D.30.15 | (a) and (c) are **model-uniform**: the gate argument needs only `\deg_Z K_Z > 0` (= A2⁺), so the **rank of the polar block is irrelevant** — for `Ξ_a`, `\#P = 4` and `\deg_a K_a = 2Σ_pΞ_a(p)² > 0`. Hence the **entire model-dependence of row D sits inside (b′)⁺** | **PROVED** *(the coordinator's explicit check, done)* |
+| D.30.16 | **`Ξ_a`: (b′)⁺ is false**, with explicit witness `E = rF_+ + K_a` (`F_+` from Prop. 12.4B), via the §12.5(c) transport of Theorem 11.14; independently confirmed by Theorem 12.4 | **PROVED** |
+| `Ξ_Q` | **not decided — and the reason is a theorem**: Theorem 11.14's constant is `C_F = ∞` for `Ξ_Q`, because the polar weight grows like `e^{|u|/2}` while the Davenport–Heilbronn zeros give `e^{(β−½)|u|}` with `β > 1`. **This is exactly the failure of A7**, and it means **Theorem 12.3 itself does not transport to `Ξ_Q`**: the *frame*, not the clause, is what breaks | **NOT DECIDED**, with the obstruction named |
+
+**Corpus check (D.30), re-run.** The auditor's grep is confirmed — **zero hits** for any
+Riemann–Roch-defined `h⁰` outside this phase; Paper 46 §13's three candidates are the `H⁰`-set (13.1),
+the lattice count (13.4) and the tensor square (`R140`), none of which is `\max` of (c)'s own
+right-hand side. Two placements added, neither contradicting nor relabelling anything: `R138_001`
+Thm D.15.2 is **used** in D.30.14(i) and D.15.2b(ii) is **used** in O-18(iii); and the corpus's
+repeatedly named missing ingredient, *"`H¹` or an **existence theorem for positive
+self-intersection**"* (`107_239:193`, `111_03_VERDICT:100`, `111_99:53`), **is** clause (b′)⁺ at
+`χ = 0`, now stated on `D^W` with its hypotheses in arithmetic form.
+
+---
+
+## 3. The exact status of `RH ⟹ (b′)⁺` (the coordinator's question)
+
+**Status: `OPEN` (open item O-18). Not proved, not refuted, and not decidable from anything currently
+in the corpus.** Precisely:
+
+1. **Proved:** the zero-free locus. If `Z(E) = 0`, `\deg E > 0`, `R(E) > 0` and `χ ≤ 0`, then
+   `E ≡ 2\sqrt{ab}\,τ_{\log(a/b)}K \pmod{𝓝_∞}` and the representative is effective (Theorem D.30.13).
+   Unconditional — RH is not needed on this locus.
+2. **No counterexample is available.** The two unconditional necessary conditions for membership in
+   `𝔐` — `a,b > 0` (Theorem D.26.9(iii)) and `|Φ_{E'}(ρ)| ≤ b^{1−β}a^{β}` (`R140` Lemma D.24.6) — are
+   **both implied** by the hypothesis at `χ = 0`, the second strictly (Corollary D.30.8, using
+   `W(E) = 2Σ_{γ>0}|Φ_E(½+iγ)|²` under RH). The remaining known conditions are the `𝒫_g`-inequalities,
+   which are not checkable because `𝒫_g` is itself undescribed (O-15′′).
+3. **What is missing is a *sufficiency* criterion for the exponential moment problem** of Paper 46
+   Proposition D.24.9 — given `a,b > 0` and a rapidly decaying `(z_ρ)` with `z_{1−ρ} = \bar z_ρ` and
+   `Σ_{γ>0}|z_{½+iγ}|² < ab`, construct a nonnegative `E' ∈ D^W` with those moments. **No such
+   criterion exists anywhere in the corpus**; the corpus's moment problems (phase-29 doc 26, Paper 22)
+   are Hamburger *determinacy* questions for the zero measure, a different object, and Carleman is not
+   available here (the defining system is not multiplicatively closed — D.26.10(iv)).
+4. **The obvious proof is blocked, and the block is a corpus theorem.** The perturbative route
+   `E' := 2\sqrt{ab}\,τ_cK + N` with `|N| ≤ 2\sqrt{ab}\,τ_cK` fails because `K` decays
+   super-exponentially while `N ∈ D^W` decays only like `e^{−(1+ε)|t|}` — which is `R138_001` Theorem
+   D.15.2b(ii), *the effective cone is not absorbing at `K`*, proved there for exactly this reason.
+   Any proof of O-18 must build the nonnegative representative directly.
+5. **Therefore "is (b′)⁺ strictly stronger than RH?" is undecided.** We have (b′)⁺ ⟹ RH (Theorem
+   D.30.10) and no evidence in either direction for the converse. **The minimal modifications
+   available, and their status:**
+   * *of the constant:* `χ > 0` is **refuted** (Theorem D.30.7); `χ ≤ 0` is forced; `χ = 0` is the
+     weakest admissible gate and is exactly calibrated to the known necessary conditions (Corollary
+     D.30.8). Lowering `χ` below `0` strengthens the gate and weakens the clause, but by (2) no
+     finite `χ < 0` is *needed* — nothing is known to be excluded by it. So **`χ = 0` is the
+     recommended normalization and no further modification of `χ` is justified by evidence**.
+   * *of the gate:* replacing (b′) by its **stable** form (b′)_{st} genuinely weakens the clause while
+     preserving Theorem 12.3 (Theorem D.30.11). This is the one modification that is *proved* to be
+     admissible and is *strictly* weaker, and it is the recommended target.
+   * *making the clause equivalent to RH:* **not achieved, and `OPEN`.** It would require either a
+     proof of O-18 (then (b′)⁺ ⟺ RH at `χ = 0`) or a witness under RH (then the gate must be
+     strengthened, and the natural candidate would be to intersect `S_0` with the `𝒫_g`-conditions of
+     D.26.9(v) — which is O-15′′ again).
+
+---
+
+## 4. What changed in the round's conclusions
+
+| | round 1 | round 2 |
+|---|---|---|
+| FATAL screen | "no `C` closes (c) unconditionally — proved" | **withdrawn**; nothing with a sign is proved; case (A) not decided; §D.30 exhibits an unconditional (c) |
+| D.27.4 | "the primitive obstruction to (b′)", `PROVED`, "wider than D.24.7" | **`RESTATEMENT`** of Thm 12.3 Steps 2/4; the classical **sanity check** |
+| D.27.5 | "the dichotomy … the class is closed negatively" | "(c) **alone** implies RH in case (B)" — a **weakening of Thm 12.3's hypotheses**; the *ansatz* is wrong, not the class |
+| falsifiers | "no branch survives" | the **schema** only: no model-uniform proof of case-(B) (c); the `Ξ_Q`-instance refuted (D.28.1) |
+| recommendation | "an obstruction theorem, not an assembly" | **withdrawn**: enter `h⁰_{RR}^{+}`, state **(b′)⁺** and **(b′)⁺_{st}**, attack **O-18** |
+| row D's remaining content | "the scissors" (a shape) | **one clause**: every class of positive degree and positive self-intersection is equivalent to a nonzero effective class |
+
+**Row D: no label change.** No sign is proved. (a) and (c) are now theorems; (b′)⁺ is not.

@@ -111,3 +111,30 @@ open question left ambiguous.
 RH is not proved. Row (d) is not closed. The strongest unconditional theorem is
 unchanged: `A_T >= 0` for all `0 < T <= log 2`. Paper 42 was not modified during
 this phase.
+
+---
+
+## `[phase 134]` scope note on this phase's numerics (2026-09-12)
+
+Recorded from Paper 46 §9.3(2) (`04-papers/46-row-d-the-sign/main.md`) and the
+independent re-runs in `03-research/phase-134-row-d-opening/R134_002_AUDIT_ROUND1.md`
+§4.  It retracts nothing; it fixes how this phase's scan numbers may be read.
+
+**The `rowd_assembly` scan eigenvalues are variational upper bounds.**  The
+piecewise-constant Galerkin space is a **subspace** of the test space and the
+primitive constraint is imposed exactly inside it, so every computed
+`lambda_min` is `>=` the true infimum of the Rayleigh quotient.  Therefore:
+
+* a **negative** computed eigenvalue exhibits a genuine test function and is a
+  certificate (up to quadrature error);
+* a **positive** computed eigenvalue certifies **nothing**, and does not
+  become a certificate by refining the mesh — refinement can only lower it.
+  Measured on the same assembly: for `zeta` at `T = 1.7`, `lambda_min(L_T) =
+  2.93, 1.99, 1.23, 0.84, 0.61` (`x 10^-2`) at `refine = 2,...,6`.
+
+**Scope, stated so it is not over-read.**  This note is about the
+double-precision Galerkin **scans** of this phase and of phase 124.  It does
+**not** touch the interval-arithmetic endpoint certificate at `T = log 2`
+(replayed with Arb in P123.036), which is a different computation with its own
+bounds; whether that certificate carries a proved discretization bound is a
+separate question and is not opened here.

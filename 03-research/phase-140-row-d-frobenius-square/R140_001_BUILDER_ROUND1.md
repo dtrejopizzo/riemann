@@ -1,0 +1,1388 @@
+# R140.001 — Builder, round 1, phase 140: the Frobenius side of (P139) — the square as a tensor structure
+
+*Builder: Claude Opus 5. Date 2026-09-13. Blueprint of record: `R140_000_LEAD_BLUEPRINT.md`.
+Inputs read line by line: `R139_005_LEAD_CLOSING_DECISION.md` §§1–4 ((P139), (AT-1)–(AT-3));
+`R139_001_BUILDER_ROUND1.md` §D.19.7 (axioms A1–A9, Theorem D.19.7a, Transfer Lemma D.19.7c, **T2**)
+and §D.21 (the Weil ledger W1–W8); `R138_001_BUILDER_ROUND1.md` §D.15 (splitting `D^W = Λ ⊥ P^W`,
+`K_odd`, Lorentzian criterion D.15.2, polar slack D.15.3, falsifier D.15.4); Paper 44 §§3ter, 5, 6bis,
+8bis and §12 (corrections K1, K2); Paper 43 §9 (rulings `e_∓`, Theorems 9.13, 9.14a); Paper 46 §§11–13
+(`D^W`, `I_∞`, `K`, `𝓝_∞`, Theorems 11.5, 11.7, 11.8, 11.11, 11.13, 11.14, **12.3**, §13.2, Theorem 13.6,
+Remarks 13.6a/13.6b, Finding 13.8); `R137_007_LEAD_CLOSING_DECISION.md` (D.11 growth);
+`PHASE_136_MAP_SYNTHESIS_AND_PLAN.md` §S4 (D-HS); `CORPUS_CHECK_ROW_D_PLAN.md` items 6, 7, 8;
+phase-15 `M1-arithmetic-intersection-pairing.md` Theorem B; phase-41 `125-forma-interseccion-cuadrado.md`
+§§1–5; Connes–Consani, arXiv:2205.01391v2, **read from the corpus source**
+`00-references/papers-nuevos/A/arXiv-2205.01391v2/RR-J-final.tex` (not IMPORTED from a quotation).*
+
+---
+
+## 0. Standing declarations
+
+### 0.1 Labels
+As in R138/R139: `PROVED`, `PROVED-IN-REPOSITORY` (with path), `RESTATEMENT`, `CLASSICAL`,
+`IMPORTED`, `REFUTED`, `HEURISTIC`, `OPEN`, `COMPUTATIONAL-ILLUSTRATION`. Nothing is relabelled.
+No statement of this round asserts a sign for `ξ`.
+
+### 0.2 FATAL screen, stated at the front
+**[RESTATED, round 2.]** This round proves (i) that the **Pólya realization `r`** of the blueprint's
+`Div_□` — one choice of realization among many, made here — lands, modulo the radical `𝓝_∞`, in a
+rank-2 lattice with the `NS(P¹×P¹)` form; (ii) that the tensor-square `h⁰` candidates are **refuted**
+at clause (b′) and **imply RH** at clause (c); (iii) that Paper 44's **actual** Frobenius Gram form
+behaves in the opposite way and is unsigned at every finite chart (Paper 44 Theorem 8bis.4a, cited,
+not re-proved). All are negative or neutral; **none asserts RH nor `¬RH`** — in particular the round
+carries Paper 44 Remark 8bis.4b(3)'s warning that 8bis.4a decides the left-hand side of a
+biconditional at a chart and decides nothing about RH. Screen **clean**.
+
+### 0.3 Three corrections to the blueprint, recorded at once  **[third added in round 2, finding H5]**
+1. The blueprint writes the composition law as holding "for coprime `m,n`". **Paper 44 Theorem
+   3ter.4(i) holds for all `m,n ≥ 1`** (`04-papers/44-row-b-arithmetic-family/main.md:1489`, proof at
+   `:1495–1518`): the coset formula `μ_{cK}⋆μ_{c'K'} = μ_{cc'KK'}` needs no coprimality, and
+   `K_{P(m)}K_{P(n)} = K_{P(mn)}` holds because `P(mn) = P(m)∪P(n)`. In particular
+   `Frob_p ⋆ Frob_p = Frob_{p²}` **exactly**. The blueprint's coprimality is a needless weakening and
+   is not carried. `REFUTED as stated` / `PROVED-IN-REPOSITORY` in the stronger form.
+2. The blueprint asks to "verify or correct the lead's computation for `h_c(x) = max(x,0)`, `χ = ¼`".
+   The computation is **corrected**: the optimal constant is `χ = 1/8`, not `¼`, the extremal class is
+   `E = ½F_1` (not `E = tK` with `t < ½`, which gives only the weaker bound `χ ≤ 3/16`), and the
+   obstruction is **not** a lower bound on `W(E)` but a ceiling on `χ`. Theorem D.24.4 below.
+3. **[ADDED, round 2, finding H5.]** The blueprint writes "`F_1, F_2` = the two rulings `e_∓` of
+   Paper 43 §9 in the Weil completion". **That is false as an identity of classes**: Paper 46
+   Proposition 14.1(iv) states, and Paper 43 Theorem 9.14c proves, that **`e_± ∉ D^W`**. What exists in
+   `D^W` are *lifts of the ruling data* `M = (1,0)`, `(0,1)`, namely `F_1 = K+K_{odd}`,
+   `F_2 = K−K_{odd}`, which depend on the parameter `a_0 > 0` of `K_{odd}` and are canonical only
+   **modulo `𝓝_∞`**. `REFUTED as stated`; repaired in Definition D.23.6.
+
+### 0.4 Scripts
+One: `scripts/certify_chi.py` (`--fast`), **illustrating** the constant `inf g = c²/2` of
+Theorem D.24.4 on a grid with a stated margin, and printing `1 − 1/\log 3 = 0.08976…`. Both constants
+are **proved** in the text. **[CORRECTED, round 2, finding H13: the word "certifying" is withdrawn.
+The grid sweep uses **no** Lipschitz or interval bound, the minimizer `(½,0)` is not a grid node at the
+default step, and the test would pass for a function dipping between nodes. It is an illustration, and
+the second "constant" is a `print` of `1/\log 3`, not a certification. The `--fast` run takes ≈0.13 s,
+not 1 s.]** `COMPUTATIONAL-ILLUSTRATION`; load-bearing nowhere.
+
+---
+
+## D.22 — `Sh_Z` and `Frob_𝔫` for a general number field (open item O-9)
+
+Throughout `K` is a number field of degree `d = r_1+2r_2`, `O_K` its ring of integers, `S` a finite
+chart: a finite set of places containing all archimedean ones, `S_f` its finite part, indexed by prime
+ideals `𝔓 ⊂ O_K`. Write `A_{K,S}^×` for the `S`-ideles, `C_{S,K} := A_{K,S}^×/K^×` for the carrier
+(the transported Paper 43 Definition 3.1), `|·|_S : C_{S,K} → R_{>0}` the module (well defined on
+classes by the product formula), `j_𝔓 : K_𝔓^× → C_{S,K}` the slice map, `π_𝔓` a uniformizer,
+`N𝔓 := \#(O_K/𝔓)`. Every statement below is stated for arbitrary `K`; **`K = Q` is nowhere assumed,
+and no class number, regulator, unit group or Hecke character occurs anywhere in D.22.**
+
+### D.22.1 The Frobenius family of `K`
+
+**Definition D.22.1 (transport of Paper 44 Definitions 3ter.1–3ter.2).** For `𝔓 ∈ S_f` and `k ≥ 1` put
+`O_𝔓^{(S)} := j_𝔓(O_𝔓^×)`, a compact subgroup of `C_{S,K}`, and
+
+    Frob_{𝔓^k} := the normalized Haar probability measure of the coset j_𝔓(π_𝔓^k O_𝔓^×) .   (D.22.1)
+
+For a finite `F ⊆ S_f` put `K_F := ∏_{𝔓∈F}O_𝔓^{(S)}` and `Δ^{(F)} :=` its normalized Haar measure;
+`Δ^{(∅)} = δ_1 = Δ`. For an integral ideal `𝔫 = ∏_𝔓 𝔓^{k_𝔓}` put `P(𝔫) := \{𝔓 : k_𝔓 > 0\}` and
+
+    Frob_𝔫 := ⋆_{𝔓 | 𝔫} Frob_{𝔓^{k_𝔓}} ,   Frob_{O_K} := Δ ,   Δ^{(𝔫)} := Δ^{(P(𝔫))} . (D.22.2)
+
+Equivalently, with the **integral idele** `ι(𝔫) := (1` at every archimedean place; `π_𝔓^{v_𝔓(𝔫)}` at
+every `𝔓 ∈ S_f`) and `c_𝔫 :=` its class, `Frob_𝔫` is the Haar measure of `c_𝔫K_{P(𝔫)}`.
+
+**This definition uses the ideal `𝔫`, not a generator.** No principality is asked for; `ι` is defined
+on the whole ideal monoid because it is built from uniformizers place by place. This is the single
+point at which a naive transport ("`Frob_α` for `α ∈ O_K`") would have smuggled in the class group and
+failed (AT-3); it is avoided by construction, and the avoidance is recorded here as the content of
+D.22.
+
+**Lemma D.22.2 (the support and the module; `PROVED`).**
+`supp\,Frob_𝔫 = c_𝔫K_{P(𝔫)}` and `|x|_S = N𝔫^{−1}` for every `x` in it; `Frob_𝔫` is a probability
+measure of compact support.
+
+*Proof.* The support statement is the definition. For the module: `|ι(𝔫)|_S = ∏_{𝔓}|π_𝔓|_𝔓^{v_𝔓(𝔫)}
+= ∏_𝔓 N𝔓^{−v_𝔓(𝔫)} = N𝔫^{−1}`, and `|·|_S` is trivial on `K^×` (product formula, `CLASSICAL`) and on
+`K_{P(𝔫)}` (units have module `1`), so it is constant `= N𝔫^{−1}` on the class and on the coset. ∎
+`PROVED`
+
+> **Remark D.22.2a (what replaces Paper 44 Lemma 3ter.3).** Paper 44's Lemma 3ter.3 computed a
+> *representative* of `c_n` ("`1/n` at `∞` …") using Paper 43 Lemma 3.3, i.e. the canonical section of
+> `Q_{>0}^× → Γ_S`. For a general `K` there is no such canonical section of the ideal monoid into
+> `A_{K,S}^×/K^×` when `h_K > 1`. **The proof above needs none**: only the value of `|·|_S`, which is
+> a class function. This is the first place a naive transcription would have failed, and it is
+> repaired by proving less and using only what is used.
+
+**Theorem D.22.3 (the inverse-semigroup law over `K`; `PROVED`).** For all integral ideals `𝔪,𝔫`
+(**no coprimality**):
+
+ (i) `Frob_𝔪 ⋆ Frob_𝔫 = Frob_{𝔪𝔫}`, an equality of measures; `Frob_{O_K} = Δ = δ_1` is a true unit,
+     so `𝔫 ↦ Frob_𝔫` is a strong monoidal realization of the ideal monoid `(I(O_K),·)`;
+ (ii) `Frob_𝔫^† = μ_{c_𝔫^{−1}K_{P(𝔫)}}`, supported on `\{|x|_S = N𝔫\}`, and
+      **`Frob_𝔫 ⋆ Frob_𝔫^† = Δ^{(𝔫)}`**, an idempotent, with `Δ^{(𝔫)} ≠ Δ` for `𝔫 ≠ O_K`;
+ (iii) the bidegree is `M(Frob_𝔫) = (λ_−,λ_+)(Frob_𝔫) = (N𝔫^{1/2}, N𝔫^{−1/2})`, and
+      `M(Δ^{(𝔫)}) = (1,1) = M(Δ)`; in particular `λ_−λ_+ = 1` — the half-density normalization —
+      and `M` is **multiplicative**: `M(Frob_𝔪⋆Frob_𝔫) = M(Frob_𝔪)M(Frob_𝔫)`;
+ (iv) `𝔉_{S,K} := \{Frob_{𝔞,F} := μ_{c_𝔞K_F}\}`, `𝔞` a fractional ideal with `P(𝔞) ⊆ F ⊂ S_f` finite,
+      is a commutative **inverse semigroup** under `⋆` with idempotent semilattice
+      `(𝒫_{fin}(S_f),∪)`, `†`-closed, containing every `Frob_𝔫` and `Frob_𝔫^†`; and
+      `𝔞 ↦ Frob_𝔞⋆Frob_𝔟^†` does **not** descend to the group of fractional ideals.
+
+*Proof.* Verbatim the proofs of Paper 44 Theorems 3ter.4, 3ter.6, 3ter.7 (`main.md:1489`, `:1554`,
+`:1592`), every step of which uses only: (α) `C_{S,K}` is a locally compact abelian group; (β) for
+compact subgroups `H,H'` and classes `c,c'`, `μ_{cH}⋆μ_{c'H'} = μ_{cc'HH'}` (image of `μ_H⊗μ_{H'}`
+under multiplication is a `HH'`-invariant probability measure on `HH'`, hence Haar by uniqueness);
+(γ) `K_FK_G = K_{F∪G}`; (δ) `c_𝔪c_𝔫 = c_{𝔪𝔫}`, which holds because `ι` is a monoid homomorphism on
+ideals (`v_𝔓(𝔪𝔫) = v_𝔓(𝔪)+v_𝔓(𝔫)`) and the `j_𝔓` commute; (ε) `P(𝔪𝔫) = P(𝔪)∪P(𝔫)`;
+(ζ) for (iii), `λ_∓(μ) = ∫|x|_S^{∓1/2}dμ` with `|x|_S ≡ N𝔫^{−1}` on the support (Lemma D.22.2) and
+`μ` a probability measure; `N` is multiplicative on ideals (`CLASSICAL`). For (ii), `†` is push-forward
+along inversion (Paper 43 (8.2)) and `(c_𝔫K_{P})^{−1} = c_𝔫^{−1}K_P`; `Δ^{(𝔫)} ≠ Δ` because `K_{P(𝔫)}`
+is an infinite compact group (it contains `O_𝔓^×`) whose Haar measure has no atoms, while `Δ = δ_1`
+does. For (iv), regularity `x⋆x^†⋆x = x` is the same one-line coset computation, and (iv)'s last clause
+is Paper 44's counterexample transported: `𝔓_1` and `𝔓_1𝔓_2·𝔓_2^{−1}` give measures on cosets of
+`K_{\{𝔓_1\}}` and of `K_{\{𝔓_1,𝔓_2\}}`, sets of different dimension. ∎ `PROVED`
+
+**None of (i)–(iv) mentions `h_K`, `R_K`, `w_K`, the units, or a Hecke character.** This is (AT-3) for
+D.22, and it is met by inspection of the proof, not by assertion.
+
+> **`OPEN` (O-13) — injectivity.** Paper 44 Theorem 3ter.4(iv) (`supp Frob_n` determines `n` and
+> `P(n)`) transports only in part. Lemma D.22.2 gives `N𝔫` and the support gives `P(𝔫)`; but
+> `Frob_𝔪 = Frob_𝔫` forces only `P(𝔪) = P(𝔫) =: P` and `c_𝔪c_𝔫^{−1} ∈ K_P`, i.e.
+> `𝔪𝔫^{−1} = (α)` for some `α ∈ K^×` which is a unit at every place outside `P` **and** whose class
+> normalization is trivial. For `K = Q` this forces `𝔪 = 𝔫` (Paper 44, using Lemma 3.3); for general
+> `K` the question is whether the ideal monoid injects into `C_{S,K}/K_P`, and it is **not settled
+> here**. It is **used nowhere below** — §D.23's realization factors through `N𝔫` anyway
+> (Remark D.23.6) — so it is recorded, not repaired.
+
+### D.22.2 The integral shadow over `O_K`
+
+**[REBUILT, round 2, finding H1 of `R140_002` (FATAL). Round 1 wrote "`L_S := O_{K,S}`, the ring of
+`S`-integers, a projective `O_K`-module". That is **not** Paper 44's lattice, and with it the whole
+subsection proves the opposite of what it claims. Paper 44 `main.md:2668–2672` defines
+`L_S = ∏_{p∈S_f}Z_p ⊂ X_S`, a product of **completions**. Since Definition D.22.1 admits only ideals
+with `P(𝔫) ⊆ S_f`, and `O_{K,S}` is by definition the ring in which exactly the primes of `S_f` are
+inverted, round 1's `𝔫O_{K,S} = O_{K,S}` for every admissible `𝔫`: the inclusion was the identity, the
+cone acyclic, `H^0 = 0` and `deg_{det} = 0`. The auditor is right, the error was introduced by the
+transport (Paper 44 is correct), and the hedge inside round 1's (i) — "in general of order `N(𝔫')`
+with `𝔫'` the prime-to-`S`-inverted part" — was its visible symptom (finding H12). The definition, not
+the statements, is repaired below; the measure-theoretic half of D.22 (§D.22.1) is untouched and was
+confirmed by the audit.]**
+
+**Definition D.22.4 (the integral lattice; the literal transport of `∏_pZ_p`).** Put
+
+    L_S := ∏_{𝔓 ∈ S_f} O_𝔓 ,        𝔫L_S := ∏_{𝔓 ∈ S_f} 𝔓^{v_𝔓(𝔫)}O_𝔓 ⊆ L_S ,
+
+for an integral ideal `𝔫` with `P(𝔫) ⊆ S_f`; equivalently `𝔫L_S` is the image of `L_S` under
+coordinatewise multiplication by the finite idele `ι(𝔫)_f = (π_𝔓^{v_𝔓(𝔫)})_{𝔓∈S_f}`, which is the
+literal transport of Paper 44 Definition 6bis.1 (`main.md:2676`). `L_S` is a topological ring, **not**
+a projective `O_K`-module; it is a module over `O_K` through the diagonal embedding, and every
+statement below is about `L_S`-modules, place by place. Put
+
+    Sh_{O_K}(Frob_𝔫) := Cone\big(\,𝔫L_S \hookrightarrow L_S\,\big) ,                (D.22.3)
+
+a two-term complex in degrees `−1,0`. For `K = Q`, `S_f` a set of rational primes and `𝔫 = (n)` with
+`P(n) ⊆ S_f`, `ι(n)_fL_S = nL_S` (Paper 44 Lemma 6bis.2(i)) and (D.22.3) is exactly
+`[L_S \xrightarrow{n} L_S]`.
+
+**Theorem D.22.5 (`PROVED`).** For integral ideals `𝔪,𝔫` with `P(𝔪),P(𝔫) ⊆ S_f`:
+
+ (i) `H^{−1}Sh_{O_K}(Frob_𝔫) = 0` and
+
+          H^0Sh_{O_K}(Frob_𝔫) \;=\; L_S/𝔫L_S \;≅\; ∏_{𝔓 ∈ S_f} O_𝔓/𝔓^{v_𝔓(𝔫)} \;≅\; O_K/𝔫 ,
+
+     a finite ring of order `N𝔫` — **with no hedge**: the factors at `𝔓 ∤ 𝔫` are trivial, the product
+     is finite, and the last isomorphism is the Chinese Remainder Theorem together with
+     `O_K/𝔓^k ≅ O_𝔓/𝔓^kO_𝔓` (`CLASSICAL`);
+ (ii) there is an exact triangle
+     `Sh(Frob_𝔪) → Sh(Frob_{𝔪𝔫}) → Sh(Frob_𝔫) \xrightarrow{+1}`, from
+     `𝔪𝔫L_S ⊆ 𝔪L_S ⊆ L_S` and the isomorphism `𝔪L_S/𝔪𝔫L_S ≅ L_S/𝔫L_S`;
+ (iii) `deg_{det}Sh_{O_K}(Frob_𝔫) = \log N𝔫`, hence **additive**:
+     `deg_{det}Sh(Frob_{𝔪𝔫}) = deg_{det}Sh(Frob_𝔪) + deg_{det}Sh(Frob_𝔫)`;
+ (iv) `Sh_{O_K}` is **not** monoidal: `Sh(Frob_𝔪)⊗^L_{L_S} Sh(Frob_𝔫) \not≅ Sh(Frob_{𝔪𝔫})` whenever
+     `𝔪 + 𝔫 ≠ O_K`, because the left side has
+     `H^{−1} = \mathrm{Tor}_1^{L_S}(L_S/𝔪L_S,\,L_S/𝔫L_S) ≅ (𝔪L_S ∩ 𝔫L_S)/𝔪𝔫L_S ≠ 0`
+     while the right side has `H^{−1} = 0` by (i);
+ (v) the finite contact is `contact_{fin}(Frob_𝔫) = Λ_K(𝔫)N𝔫^{−1/2}`, where
+     `Λ_K(𝔫) = \log N𝔓` if `𝔫 = 𝔓^k` and `0` otherwise, and
+     `Σ_{𝔡|𝔫}Λ_K(𝔡) = \log N𝔫 = deg_{det}Sh_{O_K}(Frob_𝔫)`.
+
+*Proof.* **Everything is local, and that is the point of the repaired definition.** Write
+`L_S = ∏_𝔓 O_𝔓` and note that all four modules in play are products over `𝔓 ∈ S_f` of their local
+factors, so it suffices to prove each clause at one place, where `𝔓^kO_𝔓 = (π_𝔓^k)` is **principal**.
+(i) At `𝔓`, multiplication by `π_𝔓^{v_𝔓(𝔫)}` is injective on the domain `O_𝔓`, so the cone is
+quasi-isomorphic to the cokernel `O_𝔓/𝔓^{v_𝔓(𝔫)}` in degree `0`; `H^{−1} = 0`. The order is
+`∏_𝔓 N𝔓^{v_𝔓(𝔫)} = N𝔫`, `CLASSICAL`. (ii) At `𝔓`, `π_𝔪π_𝔫O_𝔓 ⊆ π_𝔪O_𝔓` with quotient
+`π_𝔪O_𝔓/π_𝔪π_𝔫O_𝔓 ≅ O_𝔓/π_𝔫O_𝔓` by multiplication by `π_𝔪^{-1}`, an isomorphism because
+`π_𝔪` is a **non-zero-divisor** in the local ring — **no invertibility of a fractional ideal and no
+appeal to Dedekind is needed; round 1's proof went through `𝔪/𝔪𝔫 ≅ O_K/𝔫` and was more expensive
+than the statement requires.** The octahedron on `𝔪𝔫L_S ⊆ 𝔪L_S ⊆ L_S` gives the triangle.
+(iii) is (i) plus multiplicativity of `N`, or (ii) plus additivity of `deg_{det}` on triangles.
+(iv) At a place `𝔓 | \gcd(𝔪,𝔫)` the local `\mathrm{Tor}_1(O_𝔓/π^a, O_𝔓/π^b) ≅ O_𝔓/π^{\min(a,b)} ≠ 0`
+for `a,b ≥ 1`; for `K = Q`, `𝔪 = 𝔫 = (2)` this is Paper 44's `m = n = 2` witness
+(`main.md:2716–2722`). (v) is Definition D.22.1 and the shell computation of Paper 44 Theorem 3ter.10
+transported: `|x|_S ≡ N𝔫^{−1}` on the support, and the shell volume at `𝔓` is `\log N𝔓`. ∎ `PROVED`
+
+**Corollary D.22.6 (field-uniformity of row B's W4; `PROVED`).** The ledger entries W4a and W4b of
+`R139_001` §D.21.2 — *"`Frob_m⋆Frob_n = Frob_{mn}` … the `†`-closure is a commutative inverse
+semigroup"* and *"`contact_{fin}(Frob_n) = Λ(n)n^{−1/2}`, `deg_{det}Sh_Z(Frob_n) = \log n`"* — are
+`PRESENT` **for every number field**, with `n ↦ N𝔫` and `Λ ↦ Λ_K`. Open item **O-9 is closed**
+(round 2; it was **reopened by H1 and is closed again only after Definition D.22.4's repair**).
+
+> **Corpus check (D.22).** `CORPUS_CHECK_ROW_D_PLAN.md` item 6 records the corpus's own verdict that
+> `Frob_n⋆Frob_n^† = Δ^{(n)}` "has no precedent [in the literature] … it must be built from scratch",
+> and that Paper 44's construction "is the best current scaffold to extend". D.22 is exactly that
+> extension, and the only genuinely new mathematics in it is (α) the observation that the construction
+> is **ideal-indexed, not element-indexed**, so the class group never appears (Remark D.22.2a), and
+> (β) Theorem D.22.5(ii), whose proof needs invertibility of `𝔪` where `K = Q` needed nothing. No
+> prior document in the corpus states `Frob_𝔫`: `grep -rn "Frob_.*mathfrak\|Frob_𝔫"` over
+> `03-research` and `04-papers` returns only the blueprint `R140_000`. Nothing here is relabelled.
+> **[ADDED, round 2, finding H1: the round-1 corpus check did not check Paper 44's own definition of
+> `L_S`, which is the single line the transport depended on. It is now quoted verbatim —
+> `44/main.md:2668–2672`, *"the integral lattice `L_S = ∏_{p∈S_f}Z_p ⊂ X_S`"* — and the repaired
+> Definition D.22.4 is its literal transport. Lesson recorded for the round-2 ledger: a transport must
+> quote the definition it transports, not paraphrase it.]**
+
+---
+
+## D.23 — The square as a tensor structure
+
+### D.23.1 `Div_□`, the bidegree, and the multiplicative semigroup
+
+**Definition D.23.1 (the formal divisor group of the square).**
+
+    Div_□ := Z·F_1 ⊕ Z·F_2 ⊕ ⊕_{n≥1} Z·Frob_n ,      Δ := Frob_1 ,
+
+a free abelian group on the displayed symbols. **[REPAIRED, round 2, finding H11: round 1 wrote
+`… ⊕ Z·Δ ⊕ ⊕_{n≥1}Z·Frob_n` "with `Δ := Frob_1` identified", which is not a direct sum. The `Z·Δ`
+summand is dropped; `Δ` is the name of the generator `Frob_1`.]** The **bidegree** is the
+homomorphism `bideg : Div_□ → R²` determined on generators by
+
+    bideg F_1 = (1,0),  bideg F_2 = (0,1),  bideg Frob_n = (n^{1/2},n^{−1/2}),  bideg Δ = (1,1),
+
+extended `Z`-linearly. On the sub-**semigroup** `\{Frob_n\}` we also carry the composition `⋆` of
+Paper 44 §3ter.
+
+> **Warning kept, as the blueprint demands.** Two different "squares" are in play. Paper 44's
+> `Sh_Z(Frob_n)` lives in complexes of `Spec Z`-modules (D.22.2 above). `Div_□` here is a **formal
+> divisor group with a bidegree** and, from D.23.2 on, a **realization into `D^W`**. Every statement
+> below says which is meant.
+
+**Theorem D.23.2 (the Euler product as a structure on `Div_□`; `PROVED-IN-REPOSITORY` + `PROVED`).**
+
+ (i) `(\{Frob_n\}_{n≥1}, ⋆)` is a commutative monoid with unit `Δ = Frob_1`, and `n ↦ Frob_n` is an
+     **isomorphism** of monoids `(N_{≥1},·) \xrightarrow{\sim} (\{Frob_n\},⋆)`; in particular
+     `Frob_p⋆Frob_p = Frob_{p²}` (no coprimality anywhere).
+ (ii) `bideg` is **multiplicative** on it: `bideg(Frob_m⋆Frob_n) = bideg(Frob_m)·bideg(Frob_n)`
+     (coordinatewise), and lands in the hyperbola `\{d_1d_2 = 1\}`.
+ (iii) The `†`-closure is the inverse semigroup `𝔉_S` (Paper 44 Theorem 3ter.7), **not a group**:
+     `Frob_n⋆Frob_n^† = Δ^{(n)} ≠ Δ` for `n > 1`, and `r ↦ Frob_r⋆Frob_s^†` does not descend to
+     `Q_{>0}^×`.
+ (iv) On the **objects**, the realization is not monoidal:
+     `Sh_Z(Frob_m)⊗^L Sh_Z(Frob_n) \not≅ Sh_Z(Frob_{mn})` for `\gcd(m,n) > 1` (Paper 44
+     Theorem 6bis.3(iv)); the monoidality of (i) is a statement about **measures**, the
+     non-monoidality of (iv) about **complexes**, and the two are not in conflict.
+
+*Proof.* (i) is Paper 44 Theorem 3ter.4(i)–(iii) (`main.md:1489`) with injectivity from
+Theorem 3ter.4(iv); (ii) is Theorem 3ter.6(iii) (`:1554`) plus (i); (iii) is Theorems 3ter.6(ii),(iv)
+and 3ter.7(ii),(iv) (`:1592`); (iv) is Theorem 6bis.3(iv) (`:2716`). The assembly into the two
+displayed structures on one `Div_□` is new; each component is cited, not re-derived. ∎
+
+**Corollary D.23.3 (over any `K`; `PROVED`).** **[REPAIRED, round 2, finding H10: round 1 said
+"Theorem D.23.2 holds verbatim", which over-transports clause (i) — *injectivity* of `𝔫 ↦ Frob_𝔫` is
+the builder's own **O-13, `OPEN`**.]** Replacing `N_{≥1}` by the ideal monoid `I(O_K)` and `n` by
+`N𝔫`: `𝔫 ↦ Frob_𝔫` is a **surjective** homomorphism of commutative monoids
+`I(O_K) → (\{Frob_𝔫\},⋆)` with unit preserved (Theorem D.22.3(i)); bidegree is multiplicative and
+lands on `\{d_1d_2 = 1\}` (D.22.3(iii)); the `†`-closure is an inverse semigroup and not a group
+(D.22.3(iv)); and `Sh_{O_K}` is not monoidal (D.22.5(iv)). **It is an isomorphism iff O-13 holds**,
+which is open for general `K` and is true for `K = Q` (Paper 44 Thm 3ter.4(iv)). Define
+`Div_□^{(K)}` accordingly, on the generators `\{Frob_𝔫\}` — not on ideals — so that the
+construction is well defined independently of O-13.
+
+**Theorem D.23.4 (AT-1: the falsifier `Ξ_Q` has no product structure; `PROVED`).** Let `Q` be a
+primitive positive definite integral binary quadratic form of discriminant `−D`, **principal**, with
+`h(−D) > 1`, and let `r_Q(n) = ½\#\{v ∈ Z²: Q(v) = n\}` be its representation numbers, so
+`Z_Q(s) = Σ_n r_Q(n)n^{−s}` (R139 D.19.1(C1)). Then **there is no analogue of Theorem D.23.2(i) for
+`Ξ_Q`**, at the following exact line: the family `\{Frob_n^{(Q)}\}` that the explicit formula for
+`Ξ_Q` indexes carries the weights `r_Q(n)`, and
+
+    r_Q is **not multiplicative**: there exist primes p ≠ q with r_Q(p) = r_Q(q) = 0 < r_Q(pq).
+
+**[REPAIRED, round 2, finding H9 of `R140_002` (MAJOR, proof only; the statement is unaffected).
+Round 1's proof passed to the maximal order `O_{K_0}` of the underlying **fundamental** discriminant
+and then invoked `h(−D_0) > 1`. That is the wrong group and the wrong hypothesis: for non-fundamental
+`−D` the form class group of discriminant `−D` is the **ring class group** of the order `O_{−D}`, the
+correspondence is with **proper `O_{−D}`-ideals**, and `h(−D) > 1` does **not** imply `h(−D_0) > 1`
+(the auditor's witness: `h(−32) = 2` over `h(−4) = 1`). Everything is restated for the order.]**
+
+*Proof.* Let `O_{−D} ⊂ K_0 = Q(\sqrt{−D_0})` be the imaginary quadratic **order** of discriminant
+`−D`, of conductor `f`, and let `Cl(O_{−D})` be its ring class group, of order `h(−D) > 1`. The
+classical form–ideal correspondence (Gauss composition; Cox, *Primes of the form `x²+ny²`*, Thm 7.7)
+is a bijection between `SL_2(Z)`-classes of primitive positive definite forms of discriminant `−D`
+and `Cl(O_{−D})`, under which the **principal** form corresponds to the principal class and, for `n`
+prime to `f`, `r_Q(n) = (w/2)\#\{𝔞 ⊆ O_{−D}\ \text{proper}: N𝔞 = n,\ [𝔞] = 1\}` (`CLASSICAL`; R139
+D.19.1(C3)). Since `h(−D) > 1` there is a class `c ≠ 1` in `Cl(O_{−D})`. By Chebotarev applied to the
+**ring class field** of `O_{−D}` (`CLASSICAL`; Cox, Thm 9.12) there are infinitely many primes
+`p ∤ f` split in `K_0` with a proper `O_{−D}`-prime above them in the class `c`, and infinitely many
+`q ∤ f` with one in `c^{−1}`; choose `p ≠ q`, `𝔭 | p`, `𝔮 | q` with `[𝔭] = c`, `[𝔮] = c^{−1}`. Every
+proper ideal of norm `p` is `𝔭` or `\bar𝔭`, of classes `c`, `c^{−1} ≠ 1`, so `r_Q(p) = 0`; likewise
+`r_Q(q) = 0`. But `[𝔭𝔮] = 1` and `N(𝔭𝔮) = pq`, so `r_Q(pq) ≥ 1`.
+
+**An explicit witness, so that the statement is checkable without Chebotarev** (the auditor's, verified
+and adopted): `Q = x² + 5y²`, `−D = −20`, `h(−20) = 2`, the other class being `2x²+2xy+3y²`. Then
+`3` and `7` are represented only by the non-principal form, so `r_Q(3) = r_Q(7) = 0`; but
+`21 = 1² + 5·2²`, so `r_Q(21) ≥ 1`. Hence `r_Q(3)r_Q(7) = 0 ≠ r_Q(21)`. ∎ `PROVED`
+
+**Corollary D.23.4a.** `Z_Q` has no Euler product and `Div_□^{(Q)}` carries no multiplicative
+semigroup of Frobenius classes. This is the *named line* of (AT-1): the step
+`c_mc_n = c_{mn}`, `K_{P(m)}K_{P(n)} = K_{P(mn)}` in the proof of Paper 44 Theorem 3ter.4(i) has no
+`Ξ_Q`-analogue because the index set of the `Ξ_Q`-family — the value semigroup of a single class — is
+not closed under multiplication when `h > 1` (Gauss composition moves the class). Consistent with, and
+strictly sharper than, the corpus's `A8` failure for `Ξ_Q` (R139 Theorem D.19.6(i),(ii),
+`PROVED-IN-REPOSITORY`), which it re-proves by a one-paragraph class-group argument.
+
+**Theorem D.23.5 (AT-2: for `Ξ_a` the law holds and the *symmetry* fails; `PROVED`).** Let
+`Ξ_a(s) = ξ(s+a)ξ(s−a)`, `0 < a < ½`, `K_a := (e^{at}K)⋆(e^{−at}K)` (Paper 46 Remark 11.8a). Then:
+
+ (i) the arithmetic weights of `Ξ_a` are `Λ_a(n) = Λ(n)(n^a + n^{−a}) ≥ 0`, a sum of two
+     multiplicative-type weights, and the translate family `\{τ_{\log n}\}` obeys the same composition
+     law `τ_{\log m}τ_{\log n} = τ_{\log mn}` — **the law holds**;
+ (ii) the polar set is `P_a = \{−a,\,a,\,1−a,\,1+a\}`, of **four** elements, with
+     `|p − ½| ∈ \{½−a,\ ½+a\}` — so **A3 fails** (R139 Theorem D.19.7a, row `Ξ_a`), and the correct
+     bidegree of a class is the **four**-vector `M_a(E) := (Φ_E(p))_{p∈P_a}`, not a pair;
+ (iii) the translation weights are `n^{p−½} ∈ \{n^{−½−a},\,n^{−½+a},\,n^{½−a},\,n^{½+a}\}`; the
+     involution `p ↦ 1−p` pairs `a ↔ 1−a` and `−a ↔ 1+a`, so the `†`-swap **is** well defined, but the
+     two hyperbolic planes it produces carry **different weights**:
+     with `u := Ξ_a(a) = Ξ_a(1−a) = ½ξ(2a)` and `v := Ξ_a(−a) = Ξ_a(1+a) = ½ξ(1+2a)`,
+
+          M_a(K_a) = (v,\,u,\,u,\,v)  with  v > u  strictly;
+
+ (iv) consequently **`K_a ≠ ½(F_1+F_2)`** in any normalization: `K_a` is a combination of the four
+     isotropic rulings with two distinct weights, and `B_pol^{(a)}` has signature `(2,2)`
+     (`R138_001` §D.15.1, Falsifier; Theorem D.15.4).
+
+*Proof.* (i) `−Ξ_a'/Ξ_a(s) = −ξ'/ξ(s+a) − ξ'/ξ(s−a)`, whose prime part is
+`Σ_nΛ(n)(n^{−s−a}+n^{−s+a}) = Σ_nΛ_a(n)n^{−s}`; the translate law is the group law of `R`.
+(ii) `Ξ_a` has simple poles of `Ξ_a'/Ξ_a` exactly at the poles of the two factors, i.e. at
+`s ∓ a ∈ \{0,1\}`. (iii) `Ξ_a(a) = ξ(2a)ξ(0) = ½ξ(2a)`, `Ξ_a(1−a) = ξ(1)ξ(1−2a) = ½ξ(1−2a) = ½ξ(2a)`
+by `ξ(s) = ξ(1−s)`; `Ξ_a(−a) = ξ(0)ξ(−2a) = ½ξ(1+2a)` and `Ξ_a(1+a) = ξ(1+2a)ξ(1) = ½ξ(1+2a)`.
+For `v > u`: `ξ` is real, positive and **strictly increasing on `[½,∞)`** (`CLASSICAL`: `ξ = Φ_K` with
+`K > 0` even, so `ξ(σ) = ∫K(t)e^{(σ−½)t}dt = 2∫_0^∞K(t)\cosh((σ−½)t)dt`, whose `σ`-derivative
+`2∫_0^∞K(t)\,t\sinh((σ−½)t)dt > 0` for `σ > ½`; Paper 46 Theorem 11.7(i),(iii)), and `ξ` on `[0,1]`
+attains its maximum `½` at the endpoints (same integral formula: `\cosh((σ−½)t)` is maximized on
+`[0,1]` at `σ ∈ \{0,1\}`). Since `2a ∈ (0,1)` and `1+2a > 1`, `u = ½ξ(2a) ≤ ¼ < ½·ξ(1) ≤ ½ξ(1+2a) = v`,
+the last inequality strict because `1+2a > 1`. (iv) is (iii) plus the cited theorems. ∎ `PROVED`
+
+### D.23.2 The realization in `D^W`, and the full intersection matrix
+
+`Frob_n` is **not** an element of `D^W` (nor of `D_A`): the point classes are multipliers, Paper 44
+Remark 3bis.4b and Theorem 3ter.14, and `I_A(Frob_n,Frob_n)` **does not exist**, Remark 8bis.1c
+(`main.md:3542`). What exists is the **action**: `Frob_n` acts on radial classes by the modulus
+translation `τ_{\log n}` (Paper 46 Theorem 11.8(iii), Theorem 14.3(ii), Proposition 14.2). We realize a
+correspondence the way one realizes it on a surface — by applying it to the diagonal.
+
+**Definition D.23.6 (the **Pólya realization** `r`; a *choice*, and the named representative of the
+diagonal).** **[REBUILT, round 2, findings H3 and H5 of `R140_002` (both MAJOR). Two things were
+wrong with round 1's presentation. (H3) `r` was presented, and reported downstream, as *the*
+realization of the Frobenius family; **neither Paper 44 nor Paper 46 realizes `Frob_n` as a class of
+`D^W`.** Paper 46 Theorem 11.8(iii) (`main.md:2229`) observes only that the *weights* `n^{±½}` of
+`M(τ_{\log n}K)` coincide with the bidegrees `M(Frob_n)` of Paper 44 Theorem 3ter.6(iii) — a match of
+two numbers, not an identification of objects. `r` is the builder's construction, it is one of many,
+and it **deletes the arithmetic weights** `Λ_K(𝔫)N𝔫^{−½}` that D.22.5(v) attaches to `Frob_𝔫`,
+remembering only `N𝔫`. Everything proved about `r` below therefore says something about `r`, not
+about the Frobenius family; §D.23.3bis, new in round 2, computes what Paper 44's **actual** Frobenius
+Gram form sees instead. (H5) Paper 46 Proposition 14.1(iv) and Paper 43 Theorem 9.14c prove
+**`e_± ∉ D^W`**, so the blueprint's "`F_1,F_2` = the two rulings `e_∓` of Paper 43 §9" is **false as
+an identity of classes** — a third correction of the blueprint, alongside §0.3.1–2 — and `F_1,F_2`
+below are *lifts into `D^W` of the ruling data* `M = (1,0),(0,1)`, depending on the arbitrary
+parameter `a_0 > 0` of `K_{odd}` and canonical only **modulo `𝓝_∞`**.]** Fix `a_0 > 0` and put
+
+    Δ^W := 2K ,      r(Frob_n) := τ_{\log n}\,Δ^W = 2\,τ_{\log n}K ,
+    F_1 := K + K_{odd} ,   F_2 := K − K_{odd} ,                            (D.23.1)
+
+with `K` Paper 46's canonical class (Theorem 11.7, `Φ_K = ξ`) and `K_{odd}` the odd companion of
+`R138_001` Definition D.15.1b, `Φ_{K_{odd}}(s) = \frac{\sinh((s−½)a_0)}{\sinh(a_0/2)}ξ(s)`. Extend
+`r` `R`-linearly to `Div_□ ⊗ R → D^W`. Write `M(E) := (Φ_E(1),Φ_E(0))`.
+
+> **`F_1, F_2` are `a_0`-dependent lifts, and only their classes mod `𝓝_∞` are canonical.** For
+> `a_0 ≠ a_0'` the two `K_{odd}` differ by a class of `𝓝_∞`? — **no**: they differ by a class with the
+> same `M = (½,−½)` and the same (vanishing) zero data, hence by Theorem 11.11 **exactly** by an
+> element of `𝓝_∞`. So `F_1, F_2` are well defined in `D^W/𝓝_∞`, and every statement below about
+> `F_1,F_2` is made there or is `a_0`-independent by inspection. `PROVED`.
+
+> **The regularization is named, and it is the only one used.** `Δ·Δ = −∞` is **proved** (Paper 44
+> Theorem 8bis.2, `main.md:3667`, at a fixed finite chart, explicitly exempt from convention (C1)) for
+> the **point** diagonal `δ_1`, and `I_A(Frob_n,Frob_n)` does not exist (Corollary 8bis.1b′, Remark
+> 8bis.1c). Neither object is used below. The substitution `Δ ↦ 2K` is a **choice of representative**,
+> justified by exactly two matching facts and by nothing else:
+> (α) `M(2K) = (1,1) = M(Δ)` — Paper 46 Theorem 11.7(iii) and Paper 44 Theorem 3ter.6(iii);
+> (β) `I_∞(E,2K) = \deg E` for every `E` — Paper 46 Theorem 11.8(v) — which is Weil's
+> `Δ·D = d_1 + d_2` for a class of bidegree `(d_1,d_2)`.
+> Call it the **Pólya representative of the diagonal**. Every finite intersection number in
+> Theorem D.23.7 is a number attached to `2K` and its translates, and **none of them is asserted to be
+> a regularized value of `δ_1⋆δ_1`.**
+
+**Theorem D.23.7 (the realization, and the full intersection matrix; `PROVED`).**
+
+ (i) `F_1,F_2,K,K_{odd},τ_cK ∈ D^W` for every `c ∈ R`, and
+     `M(F_1) = (1,0)`, `M(F_2) = (0,1)`, `M(K) = (½,½)`, `M(K_{odd}) = (½,−½)`,
+     `M(Δ^W) = (1,1)`, `M(r(Frob_n)) = (n^{1/2},n^{−1/2})`.
+     In particular **`K = ½(F_1+F_2)`**, `bideg K = (½,½)`, and
+     `Λ = span(K,K_{odd}) = span(F_1,F_2)` — the blueprint's three checks, all confirmed.
+ (ii) `Φ_{r(D)}` vanishes at **every zero of `ξ`**, for every `D ∈ Div_□ ⊗ R`. Hence, writing
+     `W(E) := Σ_ρΦ_E(ρ)Φ_E(1−ρ)` for the zero sum of (11.6),
+
+          W(r(D)) = 0   for every  D ∈ Div_□ ⊗ R ,                          (D.23.2)
+
+     and therefore, with `bideg\,r(D) =: (d_1,d_2)`,
+
+          I_∞\big(r(D),r(D)\big) = 2\,d_1d_2   **exactly**.                  (D.23.3)
+ (iii) The intersection matrix on `\{F_1,F_2,Δ^W,r(Frob_n)\}` is, in full:
+
+    | `I_∞` | `F_1` | `F_2` | `Δ^W` | `r(Frob_m)` | `K` |
+    |---|---|---|---|---|---|
+    | `F_1` | `0` | `1` | `1` | `m^{−1/2}` | `½` |
+    | `F_2` | `1` | `0` | `1` | `m^{1/2}` | `½` |
+    | `Δ^W` | `1` | `1` | `2` | `m^{1/2}+m^{−1/2}` | `1` |
+    | `r(Frob_n)` | `n^{−1/2}` | `n^{1/2}` | `n^{1/2}+n^{−1/2}` | `(n/m)^{1/2}+(m/n)^{1/2}` | `½(n^{1/2}+n^{−1/2})` |
+    | `K` | `½` | `½` | `1` | `½(m^{1/2}+m^{−1/2})` | `½` |
+
+     in particular `I_∞(K,K) = ½`, `Δ^W·Δ^W = 2`, and
+     **`r(Frob_n)·r(Frob_n) = 2` for every `n`.**
+ (iv) **The Pólya realization lands in the ruling plane modulo the radical** (`r`, not the Frobenius
+     family — finding H3):
+
+          r(Frob_n) \;≡\; n^{1/2}F_1 + n^{−1/2}F_2 \pmod{𝓝_∞} ,              (D.23.4)
+
+     and `Δ^W ≡ F_1 + F_2 \pmod{𝓝_∞}`. Consequently `r(Div_□ ⊗ R) ⊆ Λ + 𝓝_∞`, and
+     `r(Div_□ ⊗ R)/𝓝_∞ = Λ`, a plane.
+ (v) `I_∞` on `r(Div_□ ⊗ R)/𝓝_∞ = Λ` is the hyperbolic plane
+     `\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}` in the basis `(F_1,F_2)`, of signature `(1,1)`.
+
+*Proof.* (i) Membership is Paper 46 Theorem 11.7(ii) and Lemma 11.2(i) (`D^W` is a vector space, closed
+under `τ_c`). `M(K) = (ξ(1),ξ(0)) = (½,½)` is Theorem 11.7(iii); `M(K_{odd}) = (½,−½)` is
+`R138_001` Definition D.15.1b. Then `M(F_1) = M(K)+M(K_{odd}) = (1,0)`, `M(F_2) = (0,1)`,
+`F_1+F_2 = 2K` so `K = ½(F_1+F_2)`; `M(τ_cK) = (e^{c/2}ξ(1), e^{−c/2}ξ(0)) = ½(e^{c/2},e^{−c/2})` is
+Theorem 11.8(iii), so `M(r(Frob_n)) = M(2τ_{\log n}K) = (n^{1/2},n^{−1/2})`, matching Paper 44
+Theorem 3ter.6(iii) **on the nose** — this is the reason for the factor `2` in Definition D.23.6.
+`span(K,K_{odd}) = span(F_1,F_2)` since the change of basis is invertible.
+(ii) Every generator of `r(Div_□ ⊗ R)` is a real multiple of some `τ_cK`, and
+`Φ_{τ_cK}(s) = e^{(s−½)c}ξ(s)` (Lemma 11.2(iv)), which vanishes at every zero of `ξ`. `Φ` is linear in
+the class, so `Φ_{r(D)}(ρ) = 0` for every `ρ` and every `D`. Then (11.6) of Theorem 11.5 gives
+`I_∞(E,E) = 2Φ_E(0)Φ_E(1) − W(E) = 2d_1d_2 − 0`.
+(iii) Each entry is (11.6) with the zero sum `0`, i.e. `I_∞(E,E') = Φ_E(0)Φ_{E'}(1)+Φ_E(1)Φ_{E'}(0)`,
+evaluated on the `M`-values of (i). E.g.
+`I_∞(r(Frob_n),r(Frob_m)) = n^{−1/2}m^{1/2} + n^{1/2}m^{−1/2}`; at `m = n` this is `2`.
+`I_∞(Δ^W,Δ^W) = 1·1+1·1 = 2`. The `K`-column also follows from `I_∞(E,K) = ½\deg E` (Theorem 11.8(i)).
+(iv) Both sides of (D.23.4) lie in `D^W`, have the same `M` (by (i)), and have `Φ` vanishing at every
+zero (by (ii)); by Theorem 11.11 (`main.md:2371`), `𝓝_∞` is exactly `\{Φ(0)=Φ(1)=0,\ Φ(ρ)=0\ ∀ρ\}`,
+so the difference lies in `𝓝_∞`. Explicitly, the difference has
+`Φ(s) = ξ(s)\big[2n^{s−½} − (n^{1/2}+n^{−1/2}) − (n^{1/2}−n^{−1/2})\tfrac{\sinh((s−½)a_0)}{\sinh(a_0/2)}\big]`,
+whose bracket vanishes at `s = 0` and `s = 1` by direct substitution, and `ξ(ρ) = 0` at the zeros.
+(v) is (iii) restricted to `(F_1,F_2)`, plus `𝓝_∞` being the radical of `I_∞` (Theorem 11.11). ∎
+`PROVED`
+
+### D.23.3 The Castelnuovo shape on `r(Div_□)` — and why it is empty
+
+**Theorem D.23.8 (`RESTATEMENT` of `R138_001` Corollary D.15.4c on the sub-cone `r(Div_□⊗R)`;
+`PROVED` as a computation).** **[RELABELLED, round 2, finding H4 of `R140_002`. `R138_001`
+Corollary D.15.4c (`:351`) already proves that `Λ_ξ^+ = \{Σc_jτ_{u_j}K\}` is a cone on which the
+Hodge-index inequality holds unconditionally with explicit slack and which is **not detecting**,
+because `Φ_X` vanishes at every zero of `ξ`. Since `r(Div_□⊗R) ⊆ span Λ_ξ` by construction, this
+theorem is that corollary applied to a sub-cone — as the round-1 proof itself already indicated by
+citing D.15.4b/c for the step. Round 1's blockquote calling it "the phase's central structural
+finding" is **withdrawn**; what is new is the packaging of Corollary D.23.9, and even there the
+novelty is the rank count and the comparison with phase-41 Doc 125, not the non-detection.]** For
+every `D ∈ Div_□ ⊗ R` of bidegree `(d_1,d_2)`:
+
+    I_∞\big(r(D),r(D)\big) = 2d_1d_2 ,
+
+so the Castelnuovo–Severi inequality `D·D ≤ 2d_1d_2` holds on `Div_□ ⊗ R` **with equality, always**.
+Equivalently: **the Hodge-index inequality is true on `Div_□ ⊗ R`, unconditionally, and it is
+non-detecting**, because `r(Div_□ ⊗ R)` meets the primitive sector `P^W` only in `𝓝_∞`.
+
+*Proof.* (D.23.3) is the equality. For the second sentence: `r(D) ≡ d_1F_1 + d_2F_2 \pmod{𝓝_∞}` by
+Theorem D.23.7(iv) and linearity; the primitive part of `r(D)` in the splitting
+`D^W = Λ ⊥ P^W` (`R138_001` Theorem D.15.1(iii)) is therefore in `P^W ∩ (Λ + 𝓝_∞) = 𝓝_∞`, on which
+`I_∞` vanishes identically. The unconditional Hodge index on `Λ` is `R138_001` Theorem D.15.4b, and its
+non-detection is Corollary D.15.4c (`R138_001:351`), both `PROVED-IN-REPOSITORY`. ∎ `PROVED`
+
+**Corollary D.23.9 (what `Div_□` is, named; `PROVED`).** Modulo `𝓝_∞`, `Div_□ ⊗ R` is the
+Néron–Severi lattice of a **quadric**: rank `2`, basis `F_1,F_2`, Gram
+`\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}`, `Δ^W = F_1+F_2`, `Δ^W·Δ^W = 2 = 2−2g` with `g = 0`,
+`K = ½(F_1+F_2)`. **The *lattice with its form* is that of `NS(P¹×P¹)`, scaled.** **[QUALIFIED,
+round 2, finding H14 of `R140_002`, in two respects. (1) The **canonical class does not match**: on
+`P¹×P¹`, `K_S = −2(f_1+f_2)`; here `K = +½(F_1+F_2)`. What matches is the lattice `(Z²,
+\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix})`, the dependence `Δ = f_1+f_2`, and the value
+`Δ² = 2`. (2) Reading `Δ^W·Δ^W = 2 = 2−2g` as "`g = 0`" applies the **curve** genus formula to the
+diagonal of a **surface**; Paper 46 Finding 13.8 records exactly this as an `OPEN` reconciliation and
+**refuses to make it** ("They measure different objects … No identification is asserted",
+`46/main.md:3561ff.`). The reading is carried here as an **analogy under that refusal**, and the
+paper-facing item P46-11 carries the refusal verbatim.]** In particular `Δ^W` is *not independent* of the
+rulings, the rank-3 configuration of phase-41 Doc 125 (`\begin{psmallmatrix}0&1&1\\1&0&1\\1&1&0\end{psmallmatrix}`,
+signature `(1,2)`, `g = 1`) has **no analogue** here, and the determinant of the corresponding `3×3`
+Gram `\begin{psmallmatrix}0&1&1\\1&0&1\\1&1&2\end{psmallmatrix}` is `0`.
+
+*Proof.* Theorem D.23.7(iii),(iv),(v); `\det\begin{psmallmatrix}0&1&1\\1&0&1\\1&1&2\end{psmallmatrix}
+= 0(0·2−1) − 1(1·2−1) + 1(1−0) = −1+1 = 0`. The classical facts about `P¹×P¹` (`Δ = f_1+f_2`,
+`Δ² = 2`, `g = 0`) are `CLASSICAL`. ∎ `PROVED`
+
+> **What this does and does not say.** **[REWRITTEN, round 2, findings H3 and H4. Round 1 wrote here:
+> *"This is the phase's central structural finding … the Euler-product structure of the Frobenius
+> family … realizes, on the Weil class `D^W`, entirely inside the ruling plane."* Both halves are
+> withdrawn: it is not central (H4: it is D.15.4c on a sub-cone) and it is not about the Frobenius
+> family (H3: it is about `r`).]**
+> **The Pólya realization `r` is degenerate.** It factors through the bidegree, lands in `span Λ_ξ`,
+> and therefore detects nothing — which is exactly `R138_001` Corollary D.15.4c and is *expected*, not
+> informative, once one observes (Definition D.23.6, round-2 note) that `r` remembers only `N𝔫` and
+> deletes the arithmetic weights `Λ_K(𝔫)N𝔫^{−½}`. **The Frobenius family itself has a different Gram
+> form, computed by Paper 44 and not by `r`; it is the subject of §D.23.3bis, and it behaves in the
+> opposite way.**
+
+### D.23.3bis The *arithmetic* Frobenius Gram form, and what it sees that `r` does not
+
+**[NEW, round 2, finding H3.3 of `R140_002`. The blueprint's D.23.2 instructed: *"restrict `I_∞` to
+the classes of `Div_□` realized in `D^W` (**Paper 44's Gram forms Thm 8bis.1**, the diagonal
+divergence `Δ·Δ = −∞` and its regularization … Thm 8bis.4a)"*. Round 1 computed the `I_∞`-matrix of
+its **own** realization and never compared it with Paper 44's Gram form, and never mentioned Theorem
+8bis.4a — in a round whose conclusion was "the Euler-product structure is non-detecting". The
+comparison is performed here. It reverses the round's message.]**
+
+**Definition D.23.11 (Paper 44's Frobenius Gram matrix; `PROVED-IN-REPOSITORY`).** At a finite chart
+`S`, with smeared Frobenii `Frob_n^{sm}` of unit-height archimedean profiles and level `N`, and
+`ε < ε_0(A,S)` (Paper 44 Theorem 8bis.1's hypothesis), the Gram matrix of the family is, for `m ≠ n`,
+
+    G^{Frob}_{mn} \;=\; c_N(m,n)\;·\;W_{fin}\big(\{\log m − \log n\}\big)\;·\;(h_m⋆h_n^†)(n/m) ,
+    W_{fin}\big(\{\log m − \log n\}\big) =
+      \begin{cases}(\log q)\,q^{−k/2}, & m/n = q^{\pm k},\ q\ \text{prime},\ k ≥ 1,\\
+                   0, & \text{otherwise,}\end{cases}                         (D.23.7)
+
+with `c_N(m,n) = ∏_{s ∈ S_f∖(P(m)∩P(n))}vol(1+s^NZ_s)` — the **complement of the intersection**, Paper
+44 §12 correction **K1** (`44/main.md:5829`), *not* of the union as the pre-correction text had it.
+The **diagonal does not exist**: `I_A(Frob_n,Frob_n)` is undefined (Remark 8bis.1c, `44/main.md:3542`),
+and its regularizations diverge in both conventions with no convention-free rate (Corollary 8bis.1b′).
+Writing `q^{−k/2} = (\min(m,n)/\max(m,n))^{1/2}`, (D.23.7) reads: `G^{Frob}_{mn}` is nonzero **exactly
+when `m/n` is a power of a single prime**, with value `Λ(\max/\min)·(\min/\max)^{1/2}·c_N(m,n)`.
+
+**Theorem D.23.12 (the three Gram forms of the Frobenius family, and what each sees; `PROVED` for
+(C), `PROVED-IN-REPOSITORY` for (A) and (B)).**
+
+| | object | Gram form | reads the factorization? | reads the zeros? | sign |
+|---|---|---|---|---|---|
+| **(A)** | the **pure** Frobenius family `\{Frob_n^{sm}\}` | `W_{fin}` only, **no archimedean block** (Cor. 8bis.1d, `44/main.md:3560ff.`); entries (D.23.7) | **yes** — `G^{Frob}_{mn} = 0` unless `m/n` is a prime power, weights `Λ(q^k)q^{−k/2}` | only the finite half of the kernel | **unsigned, and proved so**: `Q_{fin} > 0` on an explicit **primitive** class, at every finite chart, unconditionally — Theorem **8bis.4a** (`44/main.md:3973ff.`) |
+| **(B)** | the **unit-averaged** family `Γ_n^{rad} = Frob_n⋆Δ^{rad}` | the **full Weil kernel** `W_{fin}+ω_∞`, exactly and at every level — Theorem **8bis.1e** (`44/main.md:3598ff.`) | **no** — averaging forgets factorization (Prop. 3ter.5, Lemma 3bis.3b) | **yes**: its sign on primitive radial classes `⟺` RH, in the colimit (Thm 8bis.4(iii)) | **`⟺` RH** (colimit statement; at a fixed chart both forms are indefinite, Paper 43 Thm 14.1) |
+| **(C)** | the **Pólya realization** `r(Frob_n) = τ_{\log n}(2K) ∈ D^W` (Definition D.23.6, **this round's own construction**) | `I_∞(r(Frob_n),r(Frob_m)) = (n/m)^{1/2}+(m/n)^{1/2}` | **no** — depends on `m/n` as a real number only | **no** — `Φ` vanishes at every zero by construction | **identically `= 2d_1d_2`**: Castelnuovo with equality, non-detecting (Thm D.23.8) |
+
+Moreover:
+
+ (i) **(C) has rank 2.** As a matrix indexed by `n,m ≥ 1`,
+     `I_∞(r(Frob_n),r(Frob_m)) = u_nv_m + v_nu_m` with `u_n := n^{1/2}`, `v_n := n^{−1/2}`. It is the
+     symmetric outer product `u⊗v + v⊗u`, of rank `≤ 2` and signature `(1,1)` on every finite index
+     set on which `u,v` are independent. *Proof:* the displayed factorization; `u,v` independent as
+     soon as two distinct `n` occur. ∎ `PROVED`
+ (ii) **(A) has infinite rank and is sparse.** `G^{Frob}` is supported on the prime-power ratio
+     relation `m/n ∈ \{q^{\pm k}\}`, a sparse graph on `N_{≥2}`, with weights that are exactly the
+     finite contacts `contact_{fin}(Frob_{q^k}) = Λ(q^k)q^{−k/2}` of Theorem D.22.5(v). **These
+     weights are the arithmetic, and `r` deletes them.**
+ (iii) **Complementary slices of one projector.** (A) and (B) are the two halves of Paper 44 Theorem
+     8bis.1′: convolving with `Δ^{rad}` converts the finite half of the Weil kernel into the whole of
+     it, at the cost of forgetting factorization. **No object carries both**, which is phase 136's
+     recorded finding *"No object in the corpus does all three [support growth, bigrading,
+     unimodularity]. Several do two."* (`PHASE_136_MAP_SYNTHESIS_AND_PLAN.md:66`).
+ (iv) **(C) is a third object, and it carries neither.** It is not a slice of the projector; it is a
+     class of `D^W` whose bidegree happens to agree with `M(Frob_n)`. Its degeneracy (Thm D.23.8) is a
+     fact about (C) and says nothing about (A) or (B).
+
+*Proof.* The (A) row is Corollary 8bis.1d, Theorem 8bis.1 with correction K1, Remark 8bis.1c and
+Theorem 8bis.4a, each cited at the line given. The (B) row is Theorem 8bis.1e and Theorem
+8bis.4(iii), with the colimit quantifier (C1) carried. The (C) row is Theorem D.23.7(iii) and
+Theorem D.23.8. (i)–(iv) as shown. ∎
+
+> **This reverses round 1's message, and the reversal is the round-2 result of §D.23.** The pure
+> Frobenius Gram form is **not** non-detecting: Theorem 8bis.4a proves, unconditionally and at every
+> finite chart, that positivity **fails** on it — there is an explicit primitive class with
+> `Q_{fin} > 0`. What is non-detecting is the **Pólya realization**, a construction of this round.
+> The honest statement of the phase is therefore not *"the Euler product realizes inside the ruling
+> plane"* but: **the Euler product's own Gram form (A) is arithmetic, sparse and unsigned; the form
+> whose sign is RH is (B), which has forgotten the Euler product; and the tensor-square page of D.24
+> reads neither, because it reads only bidegrees.** Paper 44 Remark 8bis.4b(3)'s warning is carried:
+> 8bis.4a decides the *left-hand side* of a biconditional at a chart, and decides nothing about RH.
+
+### D.23.4 The comparison table with Weil, with every `−∞` and every `0` marked
+
+| # | Weil, `S = C×_{F_q}C` | `Div_□` / `D^W` | label |
+|---|---|---|---|
+| W3 | rulings `f_1,f_2`; `f_i² = 0`, `f_1f_2 = 1`; hyperbolic plane | `F_1 = K+K_{odd}`, `F_2 = K−K_{odd} ∈ D^W`; `I_∞(F_i,F_i) = 0`, `I_∞(F_1,F_2) = 1` | `PROVED` (Thm D.23.7) |
+| W3 | bidegree `(d_1,d_2) = (D·f_2,D·f_1) ∈ Z²`, additive | `M(E) = (Φ_E(1),Φ_E(0)) ∈ R²`, **linear in `E` and multiplicative for `⋆`** | `PROVED-IN-REPOSITORY` (Thm 11.5, Lemma 11.2(iv)) |
+| W3 | `K_S = (2g−2)(f_1+f_2)` | `K = ½(F_1+F_2)`, `I_∞(K,K) = ½`, `\deg K = 1` | `PROVED` |
+| W4a | `Γ_{q^m}∘Γ_{q^n} = Γ_{q^{m+n}}` (a **group**, one parameter) | `Frob_m⋆Frob_n = Frob_{mn}` (an **inverse semigroup**, indexed by `N_{≥1}`, graded by prime sets) | `PROVED-IN-REPOSITORY` (Thm 3ter.4, 3ter.7) |
+| W4 | `Γ_q` of bidegree `(1,q)`, `d_1d_2 = q` | `r(Frob_n)` of bidegree `(n^{1/2},n^{−1/2})`, `d_1d_2 = 1` (half-density; the degree has been absorbed, Paper 44 Remark 3ter.6a) | `PROVED-IN-REPOSITORY` |
+| W4 | `Γ_q·Γ_q = q(2−2g)` | `r(Frob_n)·r(Frob_n) = 2 = 2d_1d_2`, i.e. `2−2g` with `g = 0` — **equality in Castelnuovo, no genus term** | `PROVED` (Thm D.23.7(iii)) |
+| W4b | `Γ_q·Δ = N_1` (a counting function, `≠ q+1` in general) | `r(Frob_n)·Δ^W = n^{1/2}+n^{−1/2} = d_1+d_2` — **no `N_1` correction at all** | `PROVED` (Thm D.23.7(iii)) |
+| W4b | — | the counting datum survives elsewhere: `contact_{fin}(Frob_n) = Λ(n)n^{−1/2}`, `deg_{det}Sh_Z(Frob_n) = \log n` | `PROVED-IN-REPOSITORY` (Paper 44 `:2761`) |
+| W4c | `Δ·Δ = 2−2g`, finite genus | `δ_1⋆δ_1`: **`−∞`** (Paper 44 Thm 8bis.2, fixed chart) and `I_A(Frob_n,Frob_n)`: **does not exist** (Rem. 8bis.1c). *Regularization used here:* the **Pólya representative** `Δ ↦ Δ^W = 2K`, giving `Δ^W·Δ^W = 2`, justified only by `M(2K) = (1,1)` and `I_∞(·,2K) = \deg` | `PROVED` (the `−∞`); `NAMED REGULARIZATION` (the `2`) |
+| W5 | Castelnuovo–Severi `D·D ≤ 2d_1d_2`, an **input from geometry** | on `r(Div_□ ⊗ R)`: `I_∞ = 2d_1d_2` **with equality**, unconditional and **empty** — a property of the realization `r`, and `R138_001` Cor. D.15.4c on a sub-cone | `RESTATEMENT` (Thm D.23.8) |
+| W5 | — | on the **pure Frobenius Gram form** `Q_{fin}` (Paper 44): positivity **fails**, unconditionally, at every finite chart, on an explicit primitive class | `PROVED-IN-REPOSITORY` (Paper 44 **Thm 8bis.4a**) |
+| W4 | `Γ_q·Γ_{q'}` reads the geometry of the correspondences | `G^{Frob}_{mn} ≠ 0` **iff `m/n` is a prime power**, with weight `Λ(q^k)q^{−k/2}` and constant `c_N(m,n)` (correction K1) | `PROVED-IN-REPOSITORY` (Paper 44 Thm 8bis.1, §12 K1) |
+| W5 | on `NS(S)⊗R`: `D·D ≤ 2d_1d_2` for all `D`, with the deficit `−W(E)` carrying the eigenvalues | on `D^W`: `I_∞(E,E) = 2d_1d_2 − W(E)`, and `W(E) ≥ −½(d_1−d_2)²` **is** RH (`R138_001` Thm D.15.3(iii)) | `RESTATEMENT` of RH |
+| W6 | trace inequality `σ(Γ∘Γ') ≥ 0` | `Γ·Γ = ∫_{−2d}^{2d}|S(ξ)|²dξ ≥ 0` — **a different object** (a band-limited zero sum, not a ruling datum), unconditional and vacuous | `PROVED-IN-REPOSITORY` (phase-15 M1 Thm B, `:87–117`) |
+| W7 | `|N_1 − q − 1| ≤ 2g\sqrt q` | the shape **exists**, on the translate family of a class with nonzero zero data — Theorem D.23.10 below; on `Div_□` it degenerates to `0 ≤ 0` | `PROVED` (D.23.5) |
+| W8 | pass to `F_{q^n}` | pass to `K`: D.22, `R139` D.20.2 | `PROVED` / `PROVED-CONDITIONAL` |
+
+### D.23.5 Where the Weil shape actually lives: the translate family of one class
+
+The table's row W4 diagnoses the collapse precisely: `r(Frob_n) = τ_{\log n}(2K)`, and `2K` has
+**zero zero-data**. Replace the diagonal representative and the shape returns.
+
+**Theorem D.23.10 (the Weil bound shape on a translate family; `PROVED`).** Let `E_0 ∈ D^W` be real,
+put `W(F,G) := Σ_ρΦ_F(ρ)Φ_G(1−ρ)` (absolutely convergent, Theorem 11.3), `W(E_0) := W(E_0,E_0)`, and
+for `n ≥ 1`
+
+    T_n := W(E_0, τ_{\log n}E_0) + W(τ_{\log n}E_0, E_0)
+         = Σ_ρ \big(n^{ρ−½}+n^{½−ρ}\big)\,Φ_{E_0}(ρ)Φ_{E_0}(1−ρ) .            (D.23.5)
+
+Then:
+
+ (i) **the genus is constant along the family:** `W(τ_cE_0) = W(E_0)` for every `c ∈ R`; hence
+     `I_∞(τ_cE_0,τ_cE_0) = 2d_1d_2 − W(E_0)` with `d_1d_2 = Φ_{E_0}(1)Φ_{E_0}(0)` also constant — the
+     exact analogue of `Γ_{q^n}·Γ_{q^n} = q^n(2−2g)` after the half-density division, with
+     `2g := W(E_0)`;
+ (ii) **[REPAIRED, round 2, finding H8.1: round 1's clause (ii) contained a stray `/1` and the escape
+     "up to the polar terms written out in the proof", so it asserted nothing checkable inside a
+     `PROVED` theorem. It is replaced by the clean identity, which the auditor independently
+     verified.]** `T_n` is an arithmetic quantity computable from the explicit formula with **no zero
+     named**:
+
+          T_n = 2\big(n^{1/2}+n^{−1/2}\big)Φ_{E_0}(0)Φ_{E_0}(1)
+                − I_∞(E_0,\,τ_{\log n}E_0) − I_∞(τ_{\log n}E_0,\,E_0) ,       (D.23.5a)
+
+     each `I_∞` being `\mathrm{PRIME} − \mathrm{ARCH}` of `τ_{∓\log n}(E_0⋆E_0^∨)` (Lemma 11.4a). It
+     is the arithmetic Lefschetz datum the row W4b of the table found missing on `r(Div_□)`;
+ (iii) **Castelnuovo on the plane `span(E_0, τ_{\log n}E_0)` is exactly Weil's bound:**
+
+          I_∞(D,D) ≤ 2\,bideg_1(D)\,bideg_2(D)\ \ \text{for all}\ D ∈ span(E_0,τ_{\log n}E_0)
+          \iff  W(E_0) ≥ 0 \ \text{and}\  |T_n| ≤ 2\,W(E_0) ,                 (D.23.6)
+
+     the right-hand side being `|N_1 − q − 1| ≤ 2g\sqrt q` in the present normalization;
+ (iv) for `E_0 = 2K` (the blueprint's `Div_□`), `W(E_0) = 0` and `T_n = 0`, and (D.23.6) degenerates to
+     `0 ≤ 0`. **This is the exact sense in which `Div_□` is genus zero and carries no information.**
+
+*Proof.* (i) `Φ_{τ_cE_0}(ρ)Φ_{τ_cE_0}(1−ρ) = e^{(ρ−½)c}e^{(½−ρ)c}Φ_{E_0}(ρ)Φ_{E_0}(1−ρ)` — the two
+exponentials cancel identically. (ii) Apply (11.6) to the ordered pair `(E_0, τ_{\log n}E_0)` and to its transpose and add:
+`I_∞(E_0,τE_0) + I_∞(τE_0,E_0) = 2[Φ_{E_0}(0)Φ_{τE_0}(1) + Φ_{E_0}(1)Φ_{τE_0}(0)] − T_n`, and
+`Φ_{τ_{\log n}E_0}(1) = n^{1/2}Φ_{E_0}(1)`, `Φ_{τ_{\log n}E_0}(0) = n^{−1/2}Φ_{E_0}(0)`
+(Lemma 11.2(iv)), so the bracket is `(n^{1/2}+n^{−1/2})Φ_{E_0}(0)Φ_{E_0}(1)`. Rearranging gives
+(D.23.5a). (iii) Put `D = αE_0 + βτ_{\log n}E_0`. By (11.6),
+`I_∞(D,D) = 2\,bideg_1(D)bideg_2(D) − W(D)` with
+`W(D) = α²W(E_0) + β²W(τ_{\log n}E_0) + αβ\,T_n = (α²+β²)W(E_0) + αβ T_n` by (i). Castelnuovo on the
+plane is `W(D) ≥ 0` for all `(α,β) ∈ R²`, i.e. positive semidefiniteness of
+`\begin{psmallmatrix}W(E_0)&½T_n\\½T_n&W(E_0)\end{psmallmatrix}`, i.e. `W(E_0) ≥ 0` and
+`W(E_0)² ≥ ¼T_n²`. (iv) `Φ_{2K} = 2ξ` vanishes at every zero. ∎ `PROVED`
+
+**Theorem D.23.13 (the whole orbit: Castelnuovo `=` Bochner positive-definiteness `=` Weil positivity
+for the zeros `E_0` sees; `RESTATEMENT` + `PROVED`).** **[NEW, round 2, finding H8.3 of `R140_002`,
+which is the lead's own reading and is decisive for phase 141. Round 1 presented Theorem D.23.10 as
+"the constructive output" and built open item O-16 on it; the auditor observed that the condition it
+asks for is RH restricted to `E_0`'s zeros. That observation is proved here, and O-16 is withdrawn
+accordingly.]** For real `E_0 ∈ D^W` define the **translate kernel**
+
+    κ_{E_0}(c) := W(E_0,\,τ_cE_0) = Σ_ρ e^{(ρ−½)c}\,Φ_{E_0}(ρ)Φ_{E_0}(1−ρ) ,   c ∈ R,   (D.23.8)
+
+absolutely convergent by (11.2) and (E3d), with `κ_{E_0}(0) = W(E_0)` and
+`T_n = κ_{E_0}(\log n) + κ_{E_0}(−\log n)`. Then:
+
+ (i) `W(τ_uE_0,\,τ_vE_0) = κ_{E_0}(u−v)`: the Gram form of the **orbit** `\{τ_cE_0\}` is a
+     **Toeplitz** kernel, and for `D = Σ_ja_jτ_{c_j}E_0` (finite, `a_j ∈ R`),
+     `W(D) = Σ_{j,l}a_ja_l\,κ_{E_0}(c_j−c_l)`;
+ (ii) consequently **Castelnuovo holds on every finite span of translates of `E_0` if and only if
+     `κ_{E_0}` is positive-definite in Bochner's sense on `R`**, i.e. iff `κ_{E_0}` is the Fourier
+     transform of a positive measure;
+ (iii) *(sufficiency, unconditional)* if `Φ_{E_0}(ρ)Φ_{E_0}(1−ρ) = 0` for every zero `ρ` off the line
+     `\mathrm{Re}\,s = ½`, then `κ_{E_0}(c) = Σ_γ e^{iγc}|Φ_{E_0}(½+iγ)|²` is positive-definite, and
+     `|T_n| ≤ 2κ_{E_0}(0) = 2W(E_0)` for every `n`;
+ (iv) *(necessity, when finitely many real parts occur)* suppose only finitely many distinct values
+     `β` occur as `\mathrm{Re}\,ρ` among zeros with `A_ρ := Φ_{E_0}(ρ)Φ_{E_0}(1−ρ) ≠ 0`. If
+     `κ_{E_0}` is positive-definite, then `A_ρ = 0` for every `ρ` with `\mathrm{Re}\,ρ ≠ ½`.
+     **So the condition of Theorem D.23.10(iii), imposed over the whole family, is RH for the zeros
+     `E_0` sees.**
+
+*Proof.* (i) `W(τ_uE_0,τ_vE_0) = Σ_ρ e^{(ρ−½)u}Φ_{E_0}(ρ)\,e^{(½−ρ)v}Φ_{E_0}(1−ρ)
+= Σ_ρ e^{(ρ−½)(u−v)}A_ρ = κ_{E_0}(u−v)`, termwise, so no rearrangement question arises; the bilinear
+expansion follows. (ii) is (i) plus (11.6): Castelnuovo at `D` is `W(D) ≥ 0`, and `W(D) ≥ 0` for all
+finite real combinations of translates is the definition of positive-definiteness of `κ_{E_0}`
+(Bochner's theorem, `CLASSICAL`, then identifies it with a positive measure). (iii) Under the
+hypothesis, `ρ = ½+iγ` for every contributing zero, `1−ρ = \barρ` and, `E_0` being real,
+`Φ_{E_0}(1−ρ) = \overline{Φ_{E_0}(ρ)}`, so `A_ρ = |Φ_{E_0}(½+iγ)|² ≥ 0` and `κ_{E_0}` is the Fourier
+transform of the positive discrete measure `Σ_γ|Φ_{E_0}(½+iγ)|²δ_γ`; `|κ| ≤ κ(0)` gives the bound on
+`T_n`. (iv) A positive-definite function is **bounded**, `|κ_{E_0}(c)| ≤ κ_{E_0}(0)` for all `c`
+(`CLASSICAL`). Write `κ_{E_0}(c) = Σ_{j}e^{(β_j−½)c}f_j(c)`, `β_1 > β_2 > \dots > β_k`,
+`f_j(c) = Σ_{\mathrm{Re}\,ρ = β_j}A_ρ e^{iγ_ρc}`, each `f_j` absolutely convergent hence Bohr almost
+periodic. Suppose `β_1 > ½` and `f_1 ≢ 0`. Dividing by `e^{(β_1−½)c}` and letting `c → +∞`, the terms
+`j ≥ 2` tend to `0` uniformly, so `\limsup_{c→+∞}|f_1(c)| ≤ \limsup_{c→+∞}e^{−(β_1−½)c}κ_{E_0}(0) = 0`;
+but a nonzero Bohr almost periodic function has `\sup_{c ≥ T}|f_1| = \sup_{R}|f_1| > 0` for every `T`
+(`CLASSICAL`, Bohr), a contradiction. So `f_1 ≡ 0`, whence `A_ρ = 0` for all `ρ` with
+`\mathrm{Re}\,ρ = β_1` by uniqueness of the coefficients of an absolutely convergent almost periodic
+series (`CLASSICAL`, Bohr); induct downward on `j` until `β_j ≤ ½`, and symmetrically for
+`β < ½` using `c → −∞`. ∎ `PROVED` under the finiteness hypothesis of (iv); the general necessity
+(infinitely many accumulating real parts) is **not** claimed and is recorded as part of O-15′.
+
+> **Label discipline, rewritten (round 2, finding H8).** Theorem D.23.10 is a `RESTATEMENT` of Weil
+> positivity on a two-dimensional subspace, and Theorem D.23.13 says exactly how far that goes: on the
+> **whole orbit** it is Bochner positive-definiteness of `κ_{E_0}`, i.e. **RH for the zeros `E_0`
+> sees**. It proves no sign, and it is **not** a weaker intermediate step toward one. What is genuinely
+> new is only the *shape* — constant genus `W(E_0)` along the orbit, a Lefschetz datum `T_n` given by
+> the zero-free identity (D.23.5a), a two-sided bound `|T_n| ≤ 2W(E_0)` — and the observation that the
+> blueprint's `Div_□` is the unique degenerate choice `W(E_0) = 0`.
+>
+> **[WITHDRAWN, round 2, finding H8.2.** Round 1 wrote, here and in D.25 §4, the README and open item
+> O-16: *"the Euler product enters at the computation of `T_n`, which is exactly the line `Ξ_Q` lacks
+> … the first candidate shape in the programme in which clause (N) is even formulable."* **That is a
+> hope, not a result, and the auditor's objection is correct and fatal to it**: nothing shows `T_n` is
+> multiplicative in `n` or that `Frob_m⋆Frob_n = Frob_{mn}` bears on `T_n` at all. `T_n` is a
+> *translate* datum, and `τ_{\log m}τ_{\log n} = τ_{\log mn}` is the group law of `R`, which `Ξ_a`
+> **also has** — this round proves it itself, Theorem D.23.5(i). So the property invoked does not
+> separate the models, and the sentence is deleted, not demoted. What survives, labelled `HEURISTIC`
+> and nothing more: *if* an `E_0` were produced whose `κ_{E_0}` is positive-definite by an arithmetic
+> identity, the identity would have to read something `Ξ_Q` lacks, by T2 — but no such identity is in
+> hand and none is proposed.]**
+
+> **Corpus check (D.23).** `CORPUS_CHECK_ROW_D_PLAN.md` item 8 records that Castelnuovo/Hodge index on
+> the square is "the corpus's central open gap", recommends reusing the phase-41 tropical toy "as the
+> structural template … transport onto Paper 44's `Frob_n`/bidegree carrier", and warns (via Doc 125
+> `:226`) that the toy's signature `(1,2)` does not survive the passage to infinite rank. **The
+> transport is performed here and it does not reproduce the toy**: Corollary D.23.9 shows the
+> arithmetic square, read through `Div_□`, has rank `2` not `3`, `g = 0` not `1`, and `Δ` dependent not
+> independent. Doc 125's warning is therefore confirmed in a sharper form than it was stated — the
+> obstruction is not the limit of signatures, it is that `Δ` collapses onto `f_1+f_2` already at finite
+> rank. Item 6's "coupling step has no precedent" is respected: no coupling is claimed. Item 7's
+> Theorem B (phase-15 M1 `:87–117`) is placed in the table at W6 with its own verdict ("what remains
+> is the Hodge index") carried, not contradicted. Nothing is relabelled.
+> **[EXTENDED, round 2, finding H3.3: the round-1 corpus check omitted Paper 44 Theorems 8bis.1,
+> 8bis.1d, 8bis.1e and **8bis.4a**, which the blueprint named explicitly and which bear directly on
+> the round's conclusion. They are read and used in §D.23.3bis, and 8bis.4a **reverses** the round-1
+> message for the pure Frobenius form. Item 6's recommendation "reuse the proved local-purity theorems
+> … build the coupling step, no precedent exists" is respected: no coupling is claimed here either.]**
+
+---
+
+## D.24 — Tensor-square `h⁰` candidates, and the clause that absorbs the zeros
+
+Throughout, `E ∈ D^W`, `(a,b) := M(E) = (Φ_E(1),Φ_E(0))`, `W(E) := Σ_ρΦ_E(ρ)Φ_E(1−ρ)`, so that by
+Theorem 11.5 and Theorem 11.8(i)
+
+    I_∞(E,E) = 2ab − W(E) ,      I_∞(E,K) = ½\deg E = ½(a+b) ,      M(K−E) = (½−a,\,½−b). (D.24.1)
+
+### D.24.1 Curve-level input: the two candidates for `h_c`
+
+**Definition D.24.1.** A **curve Riemann–Roch function** is `h_c : R → R_{≥0}` with `h_c(x) = 0` for
+`x ≤ −c''` and `h_c(x) ≥ λx − c'` for constants `λ > 0`, `c',c'' ≥ 0` (linear growth of slope `λ`).
+**[WIDENED, round 2, finding H6 (secondary): round 1 demanded `h_c(x) = 0` for `x ≤ 0`, which
+Connes–Consani's function does **not** satisfy — `h_c^{CC}(0) = \lceil\log2/\log3\rceil − 1_L = 1`
+off the exceptional set — so candidate (β) was not in the declared class it was being tested in.
+The threshold is now `−c''`, and (β) qualifies with `c'' = \log 2`.]**
+
+**(α) The trivial candidate.** `h_c(x) := \max(x,0)`, `λ = 1`, `c' = 0`.
+
+**(β) Connes–Consani.** Read directly from `00-references/papers-nuevos/A/arXiv-2205.01391v2/RR-J-final.tex`
+(so: `CLASSICAL/IMPORTED` from the actual source, **not** from a quotation):
+
+* line `331`: `\dim_{\mathbb S}\|H\mathbb Z\|_n = \lceil \log(2n+1)/\log 3\rceil`;
+* line `393`: for an Arakelov divisor `D` on `\overline{\mathrm{Spec}\,\mathbb Z}` with `\deg D ≥ −\log2`,
+  `\dim_{\mathbb S}H^0(D) = \lceil(\deg D + \log 2)/\log 3\rceil − \mathbf 1_L`;
+* line `446`: `\dim_{\mathbb S}H^0(D) − \dim_{\mathbb S}H^1(D) = \lceil(\deg D+\log2)/\log3\rceil' − \mathbf 1_L`;
+* line `557` (Theorem `serredual`): `H^0(K−D) ≅ \underline{\mathrm{Hom}}(H^1(D),U(1)_{1/4})`, `K = −2\{2\}`;
+* line `160`: "the neperian logarithm … is replaced by the logarithm in base `3`", i.e.
+  `\deg'(D) := \deg(D)/\log 3`.
+
+So `h_c^{CC}(x) = \lceil(x+\log2)/\log3\rceil − \mathbf 1_L(x)` for `x ≥ −\log2`, and `0` below, whence
+
+    h_c^{CC}(x) = λ_{CC}\,x + O(1) ,     λ_{CC} = 1/\log 3 = 0.910239226627\ldots    (D.24.2)
+
+**[WITHDRAWN AND RESTATED, round 2, finding H6 of `R140_002` (MAJOR). Round 1 stated a
+`Lemma D.24.2` asserting `λ_{CC} = 1/\log 3 < 1` "in our degree" and concluded that candidate (β) is
+**refuted** at clause (c), citing Paper 46 Finding 13.8(1) for the impossibility of a rescaling. **Both
+halves are withdrawn.** (α) The inequality `1/\log 3 < 1` is a true statement about CC's slope *in
+CC's own degree*; converting it into a statement about row D's `(a,b) = M(E)` requires the
+identification `\deg_{CC} = \deg` in nats, which **nothing in the corpus asserts and which the corpus's
+own record contradicts**: import (X17) and Finding 13.8 (`46/main.md:3850`, `:3561ff.`) record
+`\deg K_{CC} = −2\log 2 ≈ −1.386` against row D's `\deg K = 1`, and Finding 13.8(2)–(3) say in terms
+that the two normalizations *measure different objects* and that **no identification is asserted**.
+(β) Finding 13.8(1) forbids rescaling **row D's** `\deg`/`I_∞` pair; it says nothing that licenses
+feeding row D's degree into CC's counting function, so round 1 cited it for a proposition it does not
+make. The auditor is right on both counts.]**
+
+**Observation D.24.2 (what is actually true about the CC slope; `PROVED` + `OPEN`).**
+
+ (i) *(`PROVED`, in CC's own units.)* `h_c^{CC}(x) = λ_{CC}x + O(1)` with
+     `λ_{CC} = 1/\log 3 = 0.910239226627\ldots < 1`, the inequality being `3 > e`, `CLASSICAL`.
+ (ii) *(`PROVED`, conditional, and stated as a conditional.)* **If** one declares the identification
+     `\deg_{CC} = \deg` (both in nats), then `h⁰_□` built from `h_c^{CC}` gives
+     `h⁰_□(mK_K) = λ_{CC}²(r²/4)m² + O(m) = 0.8285\,(r²/4)m² + O(m)`, short of the requirement
+     `(r²/4)m² + O(m)` of (P139), and candidate (β) fails clause (c) at `E = mK_K` for large `m`.
+     **This is a conditional refutation and nothing more.**
+ (iii) *(`OPEN` — two unit problems, both named.)*
+     **(U1) The degree.** The identification `\deg_{CC} = \deg` is **not** in the corpus; matching the
+     two canonical classes instead (`\deg K_{CC} = −2\log 2 ↔ \deg K = 1`) is a different
+     identification, rescales the slope by `|{-2\log 2}|^{-1}` or its reciprocal depending on
+     direction, and can reverse the verdict of (ii). Which — if either — is the right dictionary is
+     exactly the reconciliation Paper 46 Finding 13.8 records as `OPEN` and refuses to make by fiat.
+     **(U2) The dimension.** `\dim_{\mathbb S}` is an integer count over the sphere spectrum; row D's
+     `h⁰` slot in Theorem 12.3 is a real-valued functional on `D^W`. No map between the two is
+     constructed here or anywhere in the corpus.
+     Until (U1) and (U2) are settled, **the status of candidate (β) *at clause (c)* is `OPEN`, not
+     `REFUTED`.** *(This changes nothing about candidate (β) overall: it fails **(b′)** outright by
+     Theorem D.24.7, which is a statement about bidegree-functions and is independent of every unit
+     convention. The withdrawal is of the (c)-refutation only.)*
+
+*Proof.* (i) is (D.24.2) and `3 > e`. (ii) is Proposition D.24.3a with `h_c = h_c^{CC}` under the
+stated declaration. (iii) is the citation of (X17) and Finding 13.8, and the observation that no such
+map is constructed. ∎
+*(`scripts/certify_chi.py` prints `λ_{CC} = 0.910239226627` and `λ_{CC}² = 0.828535449690`; these are
+arithmetic of `\log 3` and are used only inside the conditional (ii).)*
+
+### D.24.2 The tensor-square candidate, clause by clause
+
+**Definition D.24.3.** `h⁰_□(E) := h_c(a)·h_c(b)`, where `(a,b) = M(E)`.
+
+`h⁰_□` **factors through the bidegree map `M`**. This one fact drives everything below.
+
+#### Clause (a) — free
+`h⁰_□ ≥ 0` since `h_c ≥ 0`. ∎ `PROVED`. *(This is the blueprint's "(a) trivial", confirmed.)*
+
+#### Growth — free, and **exactly** the constant (P139) demands
+
+**Proposition D.24.3a (`PROVED`).** With `h_c = \max(x,0)` (candidate (α)) and any number field `K`,
+writing `r := \mathrm{Res}_{s=1}Λ_K = 2^{r_1}h_KR_K/w_K > 0`, so that `M(K_K) = (r/2,r/2)`
+(`R139` Theorem D.20.1(i)):
+
+    h⁰_□(mK_K) = h_c(mr/2)² = \tfrac{r²}{4}m²   \qquad (m ≥ 0) ,
+
+which is **exactly** the growth (c) forces, `h⁰_K(mK_K) ≥ (r²/4)m² + O(m)`
+(`R139_005` §2; for `K = Q`, `r = 1`: `¼m²`). With candidate (β) the same computation gives
+`λ_{CC}²(r²/4)m² + O(m)`, **short by the factor `λ_{CC}² < 1` — but only under the declared
+identification `\deg_{CC} = \deg`, which is `OPEN` (Observation D.24.2(iii); round-2 finding H6).**
+
+*Proof.* `M(mK_K) = (mr/2, mr/2)`; `h_c(x) = x` for `x ≥ 0`. The required constant is `R139_005` §2.
+For (β), `h_c^{CC}(mr/2)² = (λ_{CC}mr/2 + O(1))²` **once `mr/2` is read as a CC degree**, and
+`λ_{CC}² = 0.828535\ldots < 1`; the reading is the conditional of Observation D.24.2(ii).
+∎ `PROVED` for (α); `PROVED-CONDITIONAL` for (β)
+
+> **This is what the tensor structure buys, and it is not nothing.** The single number that killed
+> every previous candidate — Paper 46 Theorem 13.6 (`O_Q(\log m)`), phase-137 D.11 (`(\log m)^{3/2}`)
+> against a required `m²` — is supplied **on the nose, with the right constant, uniformly in the
+> number field**, by the product of two linear counts. The `¼m²` wall of the ledger entry W2 is
+> cleared by the tensor square. What follows is that the two remaining clauses are not.
+
+#### Clause (c) — written out, and its optimal constant
+
+Substituting (D.24.1) into (12.1), clause (c) for `h⁰_□` reads, for every `E ∈ D^W`:
+
+    h_c(a)h_c(b) + h_c(½−a)h_c(½−b) \;≥\; ab − \tfrac12 W(E) − \tfrac14(a+b) + χ ,   (D.24.3)
+
+i.e., with
+
+    g(a,b) := h_c(a)h_c(b) + h_c(c−a)h_c(c−b) − ab + \tfrac{c}{2}(a+b) ,\qquad c := ½ ,  (D.24.4)
+
+    **(c) for `h⁰_□`  \iff  W(E) ≥ 2χ − 2\,g\big(M(E)\big)  for every `E ∈ D^W`.**   (D.24.5)
+
+**Theorem D.24.4 (the optimal constant; `PROVED`; this is the correction of the lead's computation).**
+Let `h_c = \max(·,0)` and let `c > 0` be the common value `Φ_{K_Z}(0) = Φ_{K_Z}(1)` (so `c = ½` for
+`ξ`, `c = r/2` for `ξ_K`, `c = ¼` for `Ξ_Q`). Then
+
+    \inf_{(a,b)∈R²} g(a,b) = \frac{c²}{2} ,
+
+attained exactly at `(a,b) = (c,0)` and `(0,c)`, i.e. at `E = ½F_1` and `E = ½F_2` for `c = ½`. In
+particular:
+
+ (i) for `ξ`: `\inf g = 1/8`. **The lead's `χ = ¼` is too large and (c) fails with it**;
+ (ii) the lead's proposed witness `E = tK` gives only the weaker bound `χ ≤ 3/16`, attained at
+     `t = ½` (not at "`t < ½`" generally, and not `¼`): on `a = b = u = t/2`,
+     `g(u,u) = u² − \tfrac{u}{2} + ¼`, so `g(u,u) − ⅛ = (u−¼)² + 1/16 ≥ 1/16 > 0` — the ruling
+     witness `½F_1` is strictly sharper than every multiple of `K`;
+ (iii) the obstruction is **a ceiling on `χ`, not a lower bound on `W(E)`**: the blueprint's reading
+     "(c) forces `W(E) ≥ 2(a+b)/4·… − 2ab`, which fails at `E = tK`" is **corrected** — at every
+     `E` with `W(E) = 0` the inequality (D.24.5) reads `0 ≥ 2χ − 2g`, which holds for all such `E`
+     **iff** `χ ≤ \inf g = c²/2`. For `ξ` the admissible range is `χ ≤ 1/8`, and `χ = 1/8` works.
+
+*Proof.* Homogeneity: `g_c(a,b) = c²g_1(a/c,b/c)`, so it suffices to take `c = 1` and show
+`\inf g_1 = ½` attained at `(1,0),(0,1)`. Write `x⁺ := \max(x,0)`. Split `R²` into regions.
+*Region `0 ≤ a,b ≤ 1`:* `g_1 = ab + (1−a)(1−b) − ab + ½(a+b) = 1 − ½(a+b) + ab`. Its gradient in `a` is
+`b − ½`, so for fixed `b < ½` it decreases in `a` (minimum at `a = 1`, value `1 − ½ − ½b + b = ½ + ½b
+≥ ½`), for `b > ½` it increases in `a` (minimum at `a = 0`, value `1 − ½b ≥ ½`), and at `b = ½` it is
+constant in `a`: `1 − ½(a+½) + ½a = ¾ > ½`. Hence on this square
+`\inf = ½`, attained at `(1,0)` and `(0,1)` (corner values: `g_1(1,0) = 0 + 0 − 0 + ½ = ½`;
+`g_1(0,0) = 0+1−0+0 = 1`; `g_1(1,1) = 1+0−1+1 = 1`).
+*Region `a > 1`, `0 ≤ b ≤ 1`:* `(1−a)⁺ = 0`, so `g_1 = ab − ab + ½(a+b) = ½(a+b) > ½`.
+*Region `a > 1`, `b < 0`:* `a⁺b⁺ = 0`, `(1−a)⁺ = 0`, so `g_1 = −ab + ½(a+b)`; with `b = −β`, `β>0`:
+`= aβ + ½a − ½β = β(a−½) + ½a > ½` for `a > 1`.
+*Region `a > 1`, `b > 1`:* `g_1 = ab − ab + ½(a+b) > 1`.
+*Region `a < 0`, `b ≤ 1`:* `a⁺ = 0` and `(1−a) > 0`, `(1−b) ≥ 0`, so
+`g_1 = (1−a)(1−b) − ab + ½(a+b) = 1 − (a+b) + ab − ab + ½(a+b) = 1 − ½(a+b) ≥ ½`, with equality only
+in the limit `a → 0⁻`, `b → 1`, i.e. at the closure point `(0,1)` already counted.
+*Region `a < 0`, `b > 1`:* `(1−b)⁺ = 0`, so `g_1 = −ab + ½(a+b) = |a|b + ½(a+b)`; at `a → 0⁻` it tends
+to `b/2 > ½`, and it increases in `|a|` since `∂/∂|a| = b − ½ > 0`.
+*Region `a < 0`, `b < 0`:* `g_1 = (1−a)(1−b) − ab + ½(a+b) = 1 − ½(a+b) > 1`.
+The regions cover `R²` (up to symmetry `a ↔ b`, under which `g_1` is symmetric). So
+`\inf g_1 = ½` at `(1,0),(0,1)`. Undoing the scaling gives `c²/2` at `(c,0),(0,c)`.
+For (ii), with `c = ½` and `u ∈ [0,½]`, substituting into (D.24.4):
+`g(u,u) = u² + (½−u)² − u² + ¼(2u) = (½−u)² + \tfrac{u}{2} = ¼ − u + u² + \tfrac{u}{2}
+= u² − \tfrac{u}{2} + ¼`, whose minimum over `u ∈ R` is at `u = ¼`, with value
+`1/16 − 1/8 + 1/4 = 3/16`. So `χ ≤ 3/16` from the `K`-line, and
+`3/16 > 1/8`, i.e. the `K`-line is **not** the binding constraint. At `u = ¼` (i.e. `E = ½K`) with
+`χ = ¼`, (D.24.3) reads `1/8 ≥ 3/16`, false by `1/16` — confirming the lead's conclusion that `χ = ¼`
+fails, with the corrected witness and the corrected deficit. ∎ `PROVED`
+
+*Illustration (`COMPUTATIONAL-ILLUSTRATION`; **not** a certificate — finding H13):*
+`scripts/certify_chi.py --fast` prints the grid minimum `0.1275` on a `401×401` grid
+over `[−6,6]²` (margin `+2.5·10^{−3}` above the proved `0.125`) and the exact values
+`g(½,0) = g(0,½) = 0.125`. The full run (`4001×4001`) gives margin `+2.5·10^{−4}`.
+Nothing above depends on it; the value `c²/2` is **proved**, and the sweep uses no Lipschitz or
+interval bound, so it is evidence of consistency and not a lower-bound certificate.
+
+**Theorem D.24.5 (clause (c) for a bidegree-function; `PROVED`).** **[SPLIT AND CORRECTED, round 2,
+finding H2 of `R140_002` (MAJOR). Round 1 asserted the biconditional *"for **any** `h⁰` that factors
+through `M`, (c) holds for some `χ` **iff** RH"*, labelled `PROVED`. **The `(⇐)` half is false in that
+generality**, and the auditor's counterexample is one line: `ψ ≡ 0` is admissible (`h⁰ ≥ 0`, factors
+through `M`), and (c) then reads `0 ≥ ½I_∞(E,E) − ½I_∞(E,K) + χ`, whose right side at `E = mK` is
+`¼m² − ¼m + χ → +∞`, so **no `χ` exists, under RH or otherwise**. Round 1's proof in fact establishes
+`(⇐)` only for `ψ(a,b) = a⁺b⁺`; the general paragraph was reused silently. Nothing downstream breaks:
+(AT-1)(ii), Proposition D.24.10(iv) and D.25 §3 use only `(⇒)`.]**
+
+ **(i) (`⇒`, fully general.)** Let `h⁰ : D^W → R_{≥0}` factor through `M`, i.e. `h⁰(E) = ψ(M(E))` for
+ some `ψ : R² → R_{≥0}`. If (c) holds for some `χ ∈ R`, then `I_∞(F,F) ≤ 0` for every primitive
+ `F ∈ C_c^∞(R)`, i.e. **RH**.
+
+ **(ii) (`⇐`, for the class the proof gives.)** Conversely, assume RH and let `ψ : R² → R_{≥0}` satisfy
+
+     ψ(a,b) + ψ(c−a,\,c−b) \;≥\; ab − \tfrac{c}{2}(a+b) + χ   for all (a,b) ∈ R²,   (D.24.5a)
+
+ with `c = Φ_K(0) = Φ_K(1) = ½` and some `χ ∈ R`. Then (c) holds with that `χ`. By Theorem D.24.4,
+ `ψ(a,b) = a⁺b⁺` satisfies (D.24.5a) for every `χ ≤ 1/8` and for no larger `χ`.
+
+ **(iii) Consequently, for `h⁰_□` with `h_c = \max(·,0)` and `χ ≤ 1/8`: (c) holds `\iff` RH.**
+
+*Proof.* (ii) (`⇐`) Assume RH. Then for real `E ∈ D^W` every zero is `ρ = ½+iγ`, so `1−ρ = \barρ` and
+`Φ_E(1−ρ) = Φ_E(\barρ) = \overline{Φ_E(ρ)}` (as `E` is real, `\overline{Φ_E(s)} = Φ_E(\bar s)`), whence
+`W(E) = Σ_ρ|Φ_E(ρ)|² ≥ 0`. Rearranged as at (D.24.5), (c) at `E` is `W(E) ≥ 2χ − 2g(M(E))`, and
+(D.24.5a) says exactly `g(M(E)) ≥ χ` (with `g` built from `ψ` by (D.24.4)); so `W(E) ≥ 0 ≥ 2χ − 2g`.
+(i) (`⇒`) Suppose (c) holds with constant `χ` and `h⁰ = ψ∘M`. Let `F ∈ C_c^∞(R)` be real and primitive, so
+`M(F) = (0,0)` and `M(nF) = (0,0)`, `M(K−nF) = (½,½)`, for every `n ≥ 1`. Then (c) at `E = nF` reads
+
+    ψ(0,0) + ψ(½,½) \;≥\; \tfrac12 I_∞(nF,nF) − \tfrac12 I_∞(nF,K) + χ
+                   \;=\; \tfrac{n²}{2}I_∞(F,F) + χ ,
+
+using `I_∞(nF,K) = ½\deg(nF) = 0` (Theorem 11.8(i), Theorem 11.13(iii)). The left side is independent
+of `n`; hence `I_∞(F,F) ≤ 0`. By Paper 45 Theorem 10.4 (Paper 46 (1.10)), `I_∞(F,F) ≤ 0` on every
+primitive `F ∈ C_c^∞` is equivalent to RH. (iii) combines (i) and (ii) with Theorem D.24.4. ∎
+`PROVED`
+
+> **`REFUTED` (the phase's hope, stated exactly).** The blueprint's expectation was that (b′) would
+> "absorb the zero information" and that (c) would be the computable clause. For the tensor-square
+> candidate the opposite is true of (c): **(c) is not a reduction of RH, it is RH.** The tensor square
+> supplies the growth constant and nothing else; the quadratic term `½I_∞(E,E)` of (12.1) contains
+> `−½W(E)`, which a bidegree-function cannot see, and the whole gap between `2ab` and `I_∞(E,E)` is
+> `W(E)`.
+
+#### Clause (b′) — the moment problem, and its refutation
+
+**Lemma D.24.6 (the unconditional moment bound; `PROVED`).** Let `E' ∈ D^W` with `E' ≥ 0`, and put
+`(a,b) = M(E')`. Then `a,b ≥ 0` and for every `s` with `β := \mathrm{Re}\,s ∈ [0,1]`,
+
+    |Φ_{E'}(s)| \;≤\; Φ_{E'}(β) \;≤\; Φ_{E'}(0)^{1−β}Φ_{E'}(1)^{β} \;=\; b^{1−β}a^{β} \;≤\; \max(a,b).
+
+*Proof.* `|Φ_{E'}(s)| = |∫E'(t)e^{(s−½)t}dt| ≤ ∫E'(t)e^{(β−½)t}dt = Φ_{E'}(β)` since `E' ≥ 0`.
+Log-convexity of `β ↦ Φ_{E'}(β)` on `[0,1]` is Hölder with exponents `1/(1−β), 1/β` applied to
+`E'^{1−β}e^{−(1−β)t/2}·E'^{β}e^{βt/2}`. Non-negativity of `a,b` is immediate. ∎ `PROVED`
+
+**Theorem D.24.7 ((b′) fails for every bidegree-function; `PROVED`).** Let `h⁰ : D^W → R_{≥0}` factor
+through `M` and be not identically zero. Then **(b′) fails**: there is `E ∈ D^W` with `h⁰(E) > 0` and
+**no** `E' ∈ D^W`, `E' ≥ 0`, `E' ≢ 0`, with `E − E' ∈ 𝓝_∞`.
+
+*Proof.* Pick `E_0` with `h⁰(E_0) > 0` and put `(a,b) := M(E_0)`. If `a < 0` or `b < 0`, take `E = E_0`
+and we are done by Lemma D.24.6 (no effective `E'` has that `M`, and `E−E' ∈ 𝓝_∞ ⟹ M(E') = M(E)` by
+Theorem 11.11). So assume `a,b ≥ 0`. Fix the first zero `ρ_1` of `ξ`. Choose `g ∈ C_c^∞(R)` real with
+`Φ_g(ρ_1) ≠ 0` — possible because `s ↦ Φ_g(s) = ∫g(t)e^{(s−½)t}dt` cannot vanish at `ρ_1` for every
+real `g ∈ C_c^∞` (that would force the continuous function `t ↦ e^{(ρ_1−½)t}` to be `0`). Put
+`F := Πg = −g''+¼g ∈ C_c^∞(R) ⊂ D^W`, real, with `Φ_F(s) = s(1−s)Φ_g(s)` (Lemma 11.2(iv)); then
+`Φ_F(0) = Φ_F(1) = 0`, so `F` is primitive and `M(F) = (0,0)`, and `Φ_F(ρ_1) = ρ_1(1−ρ_1)Φ_g(ρ_1) ≠ 0`.
+Choose `t > 0` with `|Φ_{E_0}(ρ_1) + t\,Φ_F(ρ_1)| > \max(a,b)` (possible since `Φ_F(ρ_1) ≠ 0`), and set
+`E := E_0 + tF`. Then `M(E) = (a,b)`, so `h⁰(E) = h⁰(E_0) > 0`. Suppose `E' ≥ 0`, `E' ≢ 0`, with
+`E − E' ∈ 𝓝_∞`. By Theorem 11.11, `M(E') = M(E) = (a,b)` and `Φ_{E'}(ρ_1) = Φ_E(ρ_1) =
+Φ_{E_0}(ρ_1)+tΦ_F(ρ_1)`. By Lemma D.24.6, `|Φ_{E'}(ρ_1)| ≤ \max(a,b)`, contradicting the choice of
+`t`. ∎ `PROVED`
+
+**Corollary D.24.8.** `h⁰_□` (candidates (α) and (β) alike) **fails (b′)**, and so does every variant
+obtained by **adding** a nonnegative term: `h⁰_□ + h⁰_{\mathbb Z}` (Paper 46 Definition 13.4),
+`h⁰_□ + h_c(\text{Frobenius part})`, etc., since the sum is `> 0` wherever `h⁰_□` is, and the witness
+`E` of Theorem D.24.7 is unchanged. *(By contrast, Paper 46 Theorem 13.5(iv) proves
+`h⁰_{\mathbb Z}` alone **does** satisfy (b′) — because `Λ_W ⊂ 𝓝_∞` and the defining set is nonempty
+exactly when `E` is congruent to an effective class. The tensor factor destroys that.)* `PROVED`
+
+**Proposition D.24.9 ((b′) is a moment problem, stated exactly; `PROVED`).** For `E ∈ D^W`, the
+condition "there is `E' ≥ 0`, `E' ≢ 0`, with `E − E' ∈ 𝓝_∞`" is, by Theorem 11.11, **exactly**:
+
+> there exists a continuous `E' ≥ 0` on `R` with `E'^{(j)}(t) = O(e^{−(1+ε)|t|})`, `j ≤ 2`, such that
+>
+>     ∫E'(t)e^{t/2}dt = a ,   ∫E'(t)e^{−t/2}dt = b ,   ∫E'(t)e^{(ρ−½)t}dt = Φ_E(ρ)\ \ ∀ρ ∈ Z(ξ). (D.24.6)
+
+This is a **moment problem on the half-line of exponentials** `\{e^{(s−½)t}\}_{s ∈ \{0,1\}∪Z(ξ)}` with
+a nonnegativity constraint on the density. Necessary conditions, all unconditional:
+`a,b ≥ 0`; `|Φ_E(ρ)| ≤ b^{1−β_ρ}a^{β_ρ}` for every zero (Lemma D.24.6); and `\deg E = a+b > 0`
+unless `E ∈ 𝓝_∞` (Theorem 11.13(i)). The moment cone
+
+    𝔐 := \{\,(M(E'),\,(Φ_{E'}(ρ))_ρ) \;:\; E' ∈ D^W,\ E' ≥ 0,\ E' ≢ 0\,\} ⊂ R² × ℓ^1(Z(ξ))
+
+is the object (b′) quantifies over. **Its description is `OPEN` (O-15)** and is, by Theorem D.24.7,
+the whole remaining content of (b′). `PROVED` (the reformulation), `OPEN` (the cone).
+
+> **Answer to the blueprint's question, in its own words.** *"Determine whether (b′) is exactly Weil
+> positivity / Hodge index in disguise (expected for (α)), or strictly weaker, or unconditionally
+> provable."* Answer: **none of the three.** (b′) is a **moment problem** (D.24.9), it is **false** for
+> every bidegree-function (D.24.7), and it is neither implied by nor implies Weil positivity: the
+> necessary condition `|Φ_E(ρ)| ≤ \max(a,b)` constrains the **size** of the zero data, whereas Weil
+> positivity constrains its **sign**. The lead's guess — *"for `E ∈ mK + Λ_W` it is trivial since
+> `Λ_W ⊂ 𝓝_∞` and `mK ≥ 0`"* — is **correct and is proved**: for `E = mK + λ`, `λ ∈ Λ_W ⊂ 𝓝_∞`,
+> take `E' := mK > 0` (Theorem 11.7(i)); but that sub-case is exactly the one on which `h⁰_□` carries
+> no information beyond `m`, and the witness of D.24.7 lies outside it. **The zeros enter at the line
+> `Φ_{E'}(ρ) = Φ_E(ρ)`**, and nowhere else.
+
+### D.24.3 The three acceptance tests
+
+**(AT-1), `Ξ_Q`.** Two statements, and they must be kept apart.
+
+ (i) *The product structure fails*, at the named line: `r_Q` is not multiplicative
+     (**Theorem D.23.4**), so `Div_□^{(Q)}` has no multiplicative Frobenius semigroup and the analogue
+     of Paper 44 Theorem 3ter.4(i) is false. This is the blueprint's (AT-1) as stated, and it **passes**.
+ (ii) *But `h⁰_□` is nevertheless definable for `Ξ_Q`*, and this is a **defect of the candidate**, not
+     a success. `Ξ_Q` satisfies A1–A6 + A2⁺ and has `P = \{0,1\}` equimodular with
+     `Ξ_Q(0) = Ξ_Q(1) = ¼` (R139 Theorem D.19.2; `\mathrm{Res}_{s=1}Λ_Q = ½`, so
+     `Ξ_Q(1) = \lim ½s(s−1)Λ_Q = ¼`, and `Ξ_Q(0) = ½·(−1)·(−½) = ¼`). Hence `M_Q`, `K_Q`,
+     `I_∞^{(Q)}`, `\deg_Q` all exist, and `h⁰_□^{(Q)}(E) := h_c(Φ_E(1))h_c(Φ_E(0))` is defined, with
+     `c = ¼` and `\inf g = c²/2 = 1/32` by Theorem D.24.4. By Theorem D.24.5(i) — whose proof uses
+     only A1, A2, A2⁺, A6 and the data `𝔇`, and transports by Paper 46 §12.5's four substitutions —
+     **(c) for `h⁰_□^{(Q)}` implies `I_∞^{(Q)}(F,F) ≤ 0` for every `Ξ_Q`-primitive `F ∈ C_c^∞(R)`.**
+     **[WEAKENED, round 2, finding H7 of `R140_002` (MAJOR). Round 1 continued: "which is equivalent
+     to Hodge index for `Ξ_Q`, which is FALSE (R139 Theorem D.19.5)". **The step is missing.**
+     D.19.5's witness `F_T^{(δ)}` is *effective, even, compactly supported with `\deg_Q > 0`* — it is
+     **not primitive**; removing its polar part costs compact support (one subtracts a multiple of
+     `K_Q`, which is not compactly supported), and applying `Π_P` multiplies each zero term by a
+     complex factor that is not sign-preserving, so the sign of `W_Q` does not transport. Moreover the
+     bridge "`I_∞ ≤ 0` on primitive `C_c^∞` `⟺` RH" is Paper 45 Theorem 10.4, a **`ξ`-theorem**, and
+     no `Ξ_Q`-analogue is cited. The claim is withdrawn and replaced by the honest form below; the
+     auditor's suggested repair — run D.19.5's Landau argument on `Π_P`-images, tracking the fixed
+     nonzero factor at the Davenport–Heilbronn zero — is recorded as **`OPEN` (O-17)** and is **not**
+     carried out here.]**
+     What stands is therefore the weaker statement: **(c) for `h⁰_□^{(Q)}` implies a primitive-cone
+     positivity statement for `Ξ_Q` that the corpus has not proved and that Theorem D.19.5 makes
+     implausible** (D.19.5 refutes Hodge index for `Ξ_Q` on the effective cone; the primitive-cone
+     transfer is O-17). (AT-1) therefore rests on (i), which is a theorem, and not on (ii).
+ (iii) **Consequence, and it is the decisive one.** `h⁰_□` is a **model-uniform** rule in the sense of
+     Paper 46 Restatement 12.4a (`main.md:2959`): its definition mentions only `D^W`, `M`, `K_Z`,
+     `\{·≥0\}`, all in the data list `𝔇` of Transfer Lemma D.19.7c. By **T2** (`R139_001` §D.19.7)
+     **no derivation of (a)+(b′)+(c) for `h⁰_□` from A1–A6 + A2⁺ can exist**, and the definition
+     contains no line reading A7, A8 or A9. **[QUALIFIED, round 2, finding H15: (N) is an audit
+     protocol on a *proof*, and here there is no proof to audit — (b′) is **false** (D.24.7) and (c)
+     is RH (D.24.5(iii)). So (N) is **moot**, and *a fortiori* unsatisfiable. The step also needs
+     Theorem 12.3 to hold for every member of `𝒵`, which it does by Paper 46 §12.5's four
+     substitutions; that step is now named.]** Clause **(N)** of (P139) is therefore **moot, and a
+     fortiori unsatisfiable, for this candidate**. The Euler product, which this phase set out to install through
+     `Frob_m⋆Frob_n = Frob_{mn}`, is *absent from the definition*, because the realization of the
+     Frobenius family collapses into the ruling plane (Theorem D.23.7(iv)) — the plane `Ξ_Q` also has.
+
+**(AT-2), `Ξ_a`.** By Theorem D.23.5 the polar set has four elements and the "bidegree" is a
+four-vector; `K_a ≠ ½(F_1+F_2)` because the two hyperbolic planes carry the distinct weights
+`u = ½ξ(2a) < v = ½ξ(1+2a)`. The natural transport of `h⁰_□` is
+`h⁰_□^{(a)}(E) := h_c(x_a)h_c(x_{1−a}) + h_c(x_{−a})h_c(x_{1+a})`, `x_p := Φ_E(p)`. Then:
+
+ (i) `I_∞^{(a)}(E,E) = 2(x_ax_{1−a} + x_{−a}x_{1+a}) − W_a(E)` (Paper 46 §12.5's substitutions), and
+     `I_∞^{(a)}(E,K_a) = u(x_a+x_{1−a}) + v(x_{−a}+x_{1+a})`;
+ (ii) the analysis of D.24.2 applies **plane by plane** and gives, by the scaling in the proof of
+     Theorem D.24.4, `\inf g_a = u²/2 + v²/2`, so `χ_a ≤ (u²+v²)/2`;
+ (iii) **where (c) fails:** exactly as in Theorem D.24.5, (c) for `h⁰_□^{(a)}` is equivalent to
+     `W_a(E) ≥ 0` on `Ξ_a`-primitive classes (`M_a(E) = 0`, four conditions — Paper 46 Lemma 12.4A),
+     i.e. to Hodge index for `Ξ_a`, which **fails** by `R138_001` Theorem D.15.4 and Paper 46
+     Theorem 12.4. The failure is located at the step of Theorem D.24.4 that replaces `\inf g` by a
+     **single** `c²/2`: for `ξ` this rests on `c = Φ_K(0) = Φ_K(1)` being one number, which is
+     `A3` (equimodularity, `θ_P = ½`); for `Ξ_a` it splits into `u ≠ v`, and the constant that would
+     have to hold simultaneously in both planes does not exist once `E` is allowed to have a nonzero
+     zero sum. **This is the A3-line the blueprint asked to be located** — and it is a line of the
+     *constant computation*, not of a positivity argument, which is precisely why the candidate does
+     not satisfy clause (N).
+
+**(AT-3), `ζ_K` non-distinction.** D.22 constructs `Frob_𝔫`, `Sh_{O_K}`, the law, the bidegrees and
+the contacts for **every** number field with no use of `h_K`, `R_K`, `w_K` or a Hecke character
+(Theorem D.22.3, Corollary D.22.6). D.23 and D.24 are field-uniform verbatim: substitute
+`c = r/2` for `c = ½` throughout, `K_K` for `K` (`R139` Theorem D.20.1), and obtain
+`I_∞^{(K)}(K_K,K_K) = r²/2`, `\inf g = r²/8`, `h⁰_□(mK_K) = (r²/4)m²` (Proposition D.24.3a), which is
+exactly the growth (P139) demands for `K`. **No line of D.22–D.24 distinguishes `Q` from `K`.**
+`(AT-3)` **passes** — and, per `R139` Corollary D.19.7d, that is also why the candidate cannot carry a
+sign without proving GRH for every `ζ_K`.
+
+### D.24.4 D-HS (phase 136, S4) as a variant — built only as far as needed
+
+Phase 136's S4 proposes "fibre-wise CC `H⁰` on `Spec Z̄ ×_S Spec Z̄` with **isometric Frobenius
+transport**". In the present frame the transport is the action `E ↦ τ_{\log n}E` (Theorem 14.3(ii)),
+under which `M(E) = (a,b) ↦ (n^{1/2}a,\ n^{−1/2}b)`.
+
+**Proposition D.24.10 (what transport-invariance forces, and that it does not help; `PROVED`).**
+
+ (i) The transport is an **isometry of the bidegree product**: `ab` is invariant under `τ_{\log n}`,
+     and this is exactly the unimodularity `\lambda_−\lambda_+(Frob_n) = 1` of Paper 44
+     Theorem 3ter.6(iii). It is *also* an isometry of the zero sum: `W(τ_cE) = W(E)`
+     (Theorem D.23.10(i)). So `I_∞(τ_cE,τ_cE) = I_∞(E,E)` — **`I_∞` is `τ`-invariant**.
+ (ii) Consequently a tensor-square `h⁰` of the form `h_c(a)h_c(b)` is transport-invariant **iff** it
+     factors through `ab`: `h⁰(E) = ψ(ab)` for some `ψ : R → R_{≥0}`. (If `h_c(a)h_c(b) =
+     h_c(n^{1/2}a)h_c(n^{−1/2}b)` for all `n > 0` and all `a,b > 0`, then `h_c(a)h_c(b)` depends only
+     on `ab`.)
+ (iii) The growth requirement forces `ψ(x) ≥ x` for large `x` (at `E = mK`, `ab = m²/4` and the demand
+     is `≥ ¼m²`); with `ψ(x) = x⁺` the candidate is `h⁰(E) = (ab)⁺`, a strict sub-family of
+     Definition D.24.3.
+ (iv) **Theorem D.24.7 and Theorem D.24.5 apply unchanged**, since `ψ(ab)` factors through `M`.
+     So D-HS with isometric transport is refuted at (b′) and is RH at (c).
+
+*Proof.* (i) `(n^{1/2}a)(n^{−1/2}b) = ab`; `W(τ_cE) = W(E)` is Theorem D.23.10(i); then (11.6).
+(ii) Fix `a,b > 0` and `a',b' > 0` with `ab = a'b'`; take `n := (a'/a)²`, so `n^{1/2}a = a'` and
+`n^{−1/2}b = (a/a')b = b'` since `a'b' = ab`. (iii),(iv) as stated. ∎ `PROVED`
+
+**Theorem D.24.11 (reading the Pólya-Frobenius Gram data adds nothing; `PROVED`).** **[NEW, round 2,
+answering the question the coordinator put after finding H3: does Theorem D.24.7 extend to `h⁰`'s that
+see the Frobenius Gram data?]** Let `h⁰ : D^W → R_{≥0}` be any function of the pairings of `E` against
+the Pólya realization, i.e. `h⁰(E) = Ψ\big((I_∞(E, r(D)))_{D ∈ Div_□ ⊗ R}\big)` for some functional
+`Ψ`. Then `h⁰` **factors through `M`**, and Theorems D.24.5(i) and D.24.7 apply verbatim: (c) implies
+RH and (b′) fails.
+
+*Proof.* By Theorem D.23.7(ii), `Φ_{r(D)}` vanishes at every zero, so (11.6) gives
+`I_∞(E,r(D)) = Φ_E(0)Φ_{r(D)}(1) + Φ_E(1)Φ_{r(D)}(0)`, a function of `M(E)` alone (with coefficients
+depending on `D` only). Hence the whole family of pairings is a function of `M(E)`, and so is `h⁰`. ∎
+`PROVED`
+
+**Corollary D.24.12 (what an admissible `h⁰` must see; `PROVED`).** If `h⁰` satisfies (b′) and is not
+identically `0`, then `h⁰` is **not** constant on the cosets `E + (P^W ∩ C_c^∞)`; equivalently, `h⁰`
+must separate two classes with the same bidegree and different zero data. Since by Theorem 11.11 the
+pair `(M(E), Z(E))`, `Z(E) := (Φ_E(ρ))_ρ`, determines `E` modulo `𝓝_∞`, and since the standing rule
+forbids a definition that names a zero, an admissible `h⁰` must read `Z(E)` **through the arithmetic
+side** — i.e. through the pairings `I_∞(E,X)` for classes `X` with `Z(X) ≠ 0`, each of which is
+`\mathrm{PRIME} − \mathrm{ARCH}` of `E⋆X^∨` by Definition 11.4 and Lemma 11.4a and names no zero.
+**`r(Div_□)` is exactly the wrong family of such `X`: every one of its members has `Z = 0`.**
+
+*Proof.* The first sentence is the construction of Theorem D.24.7 (`E := E_0 + tF` with `F` primitive
+in `C_c^∞`, `M(F) = 0`). The rest is Theorem 11.11 and Definition 11.4's declaration that `I_∞` is
+"a definition by the arithmetic side: it names no zero" (`46/main.md:2100ff.`). ∎ `PROVED`
+
+**Nothing further of S4 is built.** D.24.2 shows what is needed, and what is needed is not a variant of
+the tensor square: it is an `h⁰` that reads `Z(E) = (Φ_E(ρ))_ρ`. Recorded as `OPEN` (O-14).
+
+> **Corpus check (D.24).** `CORPUS_CHECK_ROW_D_PLAN.md` item 7 records Rankin–Selberg/tensor tricks as
+> `TRIED–PARTIAL` with the standing verdict of phase-15 M1 ("this reduces to, rather than resolves, the
+> Hodge-index gap") — Theorem D.24.5 is that verdict, proved for the tensor-square `h⁰` instead of for
+> `Γ·Γ`. Item 8's diagnosis, quoted from `PHASE_136_MAP_SYNTHESIS_AND_PLAN.md:9–12` ("Everything the
+> corpus can currently define grows logarithmically or linearly where `¼m²` is required"), is
+> **partially superseded**: Proposition D.24.3a defines an `h⁰` with growth exactly `¼m²` (and `r²m²/4`
+> over any `K`), so the *growth* obstruction is cleared and the obstruction moves to (b′) and (c).
+> Paper 46 Theorem 13.6 (`O_Q(\log m)`) and phase-137 D.11 (`(\log m)^{3/2}`) are not contradicted:
+> they bound `h⁰_{\mathbb Z}`, a different object, which satisfies (b′) and fails (c) — exactly the
+> complementary failure to `h⁰_□`, which satisfies (c)'s growth and fails (b′). **Neither is
+> relabelled.** Phase-136 S4's own risk assessment ("High risk at T1 (definability)") is answered: S4
+> is definable, and Proposition D.24.10 shows definability is not the obstruction.
+
+---
+
+## D.25 — Lead synthesis input (one page)
+
+**[REWRITTEN IN FULL, round 2, in the light of findings H3, H4, H6 and H8. Round 1's §§1–3 survive with
+three corrections; §4 and its open item O-16 are **withdrawn**; §5 is extended. The round-1 text is
+superseded, not deleted piecemeal: what follows is the version of record.]**
+
+**1. What the tensor idea buys — once the arithmetic Gram form replaces the naive realization.**
+ (α) **The growth, with the right constant, uniformly in the field.** `h⁰_□(mK_K) = (r²/4)m²`
+ (Proposition D.24.3a) against the requirement `(r²/4)m² + O(m)` of (P139) — on the nose, for
+ `h_c(x) = \max(x,0)`. The `¼m²` wall of ledger entry W2, the corpus's headline obstruction since
+ phase 136, is **cleared by the product of two linear counts**, and is no longer where the difficulty
+ lies. This is the round's one positive result and it survives the audit intact.
+ (β) **Weil's W3 and W4 over any number field.** `F_1,F_2` (as `a_0`-dependent lifts, canonical mod
+ `𝓝_∞` — finding H5, *not* the rulings `e_∓`, which are not in `D^W`), the hyperbolic Gram,
+ `K = ½(F_1+F_2)`, `Δ^W = F_1+F_2`, the intersection matrix (Theorem D.23.7), and the ideal-indexed
+ law, bidegrees, shadow and contacts for every `K` (D.22, closing O-9 after the H1 repair).
+ (γ) **Nothing about the zeros**, and §D.23.3bis says why with precision: the tensor idea is
+ implemented by a realization `r` that **remembers only `N𝔫` and deletes the weights
+ `Λ_K(𝔫)N𝔫^{−½}`**. Substituting Paper 44's actual Frobenius Gram form changes the picture
+ completely, and in the opposite direction (§2 below).
+ What it does **not** buy, and what round 1 wrongly claimed it rules out: Connes–Consani's `H⁰` is
+ **not refuted**. `λ_{CC} = 1/\log 3 < 1` is a statement in CC's own degree; converting it needs an
+ identification `\deg_{CC} = \deg` that the corpus's Finding 13.8 explicitly declines
+ (`\deg K_{CC} = −2\log 2` against `\deg K = 1`). Candidate (β) is **`OPEN`, conditionally refuted**
+ (Observation D.24.2, finding H6).
+
+**2. The three Gram forms, and which one is degenerate.** (Theorem D.23.12, new in round 2, executing
+the blueprint's D.23.2 instruction.)
+ * **(A) the pure Frobenius family.** Gram form `W_{fin}` only, no archimedean block; entries nonzero
+   **exactly when `m/n` is a prime power**, with weights `Λ(q^k)q^{−k/2}`; infinite rank; **and
+   unsigned — positivity on it FAILS on an explicit primitive class, unconditionally, at every finite
+   chart** (Paper 44 **Theorem 8bis.4a**). It reads the factorization and half the kernel.
+ * **(B) the unit-averaged family `Frob⋆Δ^{rad}`.** Gram form the **full** Weil kernel; its sign on
+   primitive radial classes is RH (colimit); it has **forgotten** the factorization.
+ * **(C) the Pólya realization `r(Frob_n) = τ_{\log n}(2K) ∈ D^W`.** Gram form of **rank 2**
+   (`u⊗v + v⊗u`, `u_n = n^{½}`, `v_n = n^{−½}`); reads neither factorization nor zeros; Castelnuovo
+   with equality always. **This — and only this — is what round 1 computed and what it called "the
+   Euler product realizes inside the ruling plane".** The claim is withdrawn: (C) is a construction of
+   this round, and its degeneracy is `R138_001` Corollary D.15.4c on a sub-cone (finding H4).
+ (A) and (B) are complementary slices of one projector (Paper 44 Theorem 8bis.1′) and **no object
+ carries both** — phase 136's recorded finding, now with the third object (C) added and shown to carry
+ neither.
+
+**3. Which clause absorbs the zero information: both, and in opposite ways.** (Unchanged by the audit;
+this is the durable part of the round.)
+ * **(b′) absorbs it as a moment problem** (Proposition D.24.9): realize a prescribed `(a,b)` and a
+   prescribed `(Φ_E(ρ))_ρ` by a **nonnegative** class. The zeros enter at one line,
+   `Φ_{E'}(ρ) = Φ_E(ρ)`, and the unconditional necessary condition is a **size** bound,
+   `|Φ_E(ρ)| ≤ b^{1−β_ρ}a^{β_ρ}` (Lemma D.24.6), not a sign condition. **This kills the tensor page:**
+   any `h⁰` factoring through the bidegree violates (b′) (Theorem D.24.7), because the bidegree is
+   bounded while the zero data is not.
+ * **(c) absorbs it as RH itself** (Theorem D.24.5(i),(iii)): an `h⁰` blind to `W(E)` cannot
+   compensate `½I_∞(E,E) = d_1d_2 − ½W(E)`, and testing at `E = nF` with `F` primitive gives a bounded
+   left side against an `n²` right side. For a bidegree-function, (c) **implies** RH; it is not a
+   reduction of it. (The converse holds for `ψ(a,b) = a⁺b⁺` with `χ ≤ 1/8`, and not in general —
+   finding H2.)
+
+**4. Does Theorem D.24.7 extend to `h⁰`'s that see the Frobenius Gram data? — Yes for (C), and the
+answer says what an admissible `h⁰` must see.**
+ * **For (C) the extension is immediate and total.** Any `h⁰` built from the pairings
+   `I_∞(E, r(D))`, `D ∈ Div_□ ⊗ R`, **factors through `M`** — because `Φ_{r(D)}` vanishes at every
+   zero, so each pairing is `Φ_E(0)Φ_{r(D)}(1)+Φ_E(1)Φ_{r(D)}(0)` — and therefore fails (b′) and
+   implies RH at (c) (Theorem D.24.11). **Reading the Pólya-Frobenius Gram data adds exactly nothing.**
+ * **What an admissible `h⁰` would have to see** (Corollary D.24.12). It must separate two classes of
+   equal bidegree and different zero data. By Theorem 11.11 the pair `(M(E), Z(E))` determines `E` mod
+   `𝓝_∞`, and the standing rule forbids naming a zero in a definition; so the rule must read `Z(E)`
+   **through the arithmetic side** — through pairings `I_∞(E,X)` with `Z(X) ≠ 0`, each of which is
+   `\mathrm{PRIME} − \mathrm{ARCH}` of `E⋆X^∨` and names no zero (Definition 11.4). The family
+   `r(Div_□)` is precisely the wrong choice of such `X`: every member has `Z = 0`. **Family (A) is the
+   candidate that is *not* excluded** — its Gram entries are the arithmetic atoms `Λ(q^k)q^{−k/2}`, and
+   an `h⁰` reading them is not a bidegree-function. Whether such an `h⁰` can satisfy (b′) is
+   **`OPEN`**, and it is the sharpened form of O-14. It is not, however, a licence for optimism:
+   Theorem 8bis.4a says positivity fails on (A)'s own form at every chart, so an `h⁰` built on (A)
+   cannot inherit a sign from it.
+
+**5. What is *not* the phase-141 target — the withdrawal of O-16.** Round 1 proposed: build `E_0 ∈ D^W`
+with `W(E_0) > 0` and `|T_n| ≤ 2W(E_0)` for all `n`, and claimed "the Euler product enters at `T_n`".
+**Both halves are withdrawn** (finding H8, and it is the lead's own reading).
+ * **Theorem D.23.13, new in round 2, proves the target is RH in disguise.** The Gram form of the
+   orbit `\{τ_cE_0\}` is the **Toeplitz** kernel `κ_{E_0}(c) = W(E_0,τ_cE_0)`; Castelnuovo on every
+   finite span of translates is exactly **Bochner positive-definiteness of `κ_{E_0}`**; it holds if
+   all zeros `E_0` sees are on the critical line, and (when finitely many real parts occur) it forces
+   them to be. So "prove `|T_n| ≤ 2W(E_0)` for all `n`" **is** "prove RH for the zeros `E_0` sees".
+   This is the blueprint's own warning realized: *do not prove it by an argument whose only content is
+   Weil positivity — identify, label, stop.* Identified, labelled `RESTATEMENT`, stopped.
+ * **"The Euler product enters at `T_n`" is deleted.** `T_n` is a *translate* datum and
+   `τ_{\log m}τ_{\log n} = τ_{\log mn}` is the group law of `R`, which `Ξ_a` **also** has (this round's
+   own Theorem D.23.5(i)). The property invoked does not separate the models.
+ * What survives of D.23.10/D.23.13 is the **shape**: constant genus `W(E_0)` along the orbit, a
+   Lefschetz datum given by the zero-free identity (D.23.5a), a two-sided bound. It is a good frame and
+   an honest `RESTATEMENT`. It is not a target.
+
+**6. What must not be repeated.**
+ * Do not build another `h⁰` that reads only `M(E)`, or only the pairings against `r(Div_□)`: Theorems
+   D.24.7 and D.24.11 refute the entire class in one line each.
+ * Do not present a chosen realization of an arithmetic family as the family. `r` is one map among
+   many, and its degeneracy is a fact about `r`.
+ * Do not identify `\deg_{CC}` with `\deg`: Finding 13.8 declines it, and every conclusion drawn from
+   it is conditional.
+ * Do not read `Δ^W·Δ^W = 2` as a regularization of `δ_1⋆δ_1 = −∞`: different class, named
+   representative, not a limit — and the reading `2 = 2−2g` applies a curve formula to a surface
+   diagonal, which Finding 13.8 refuses to reconcile.
+ * Do not set a phase-141 target whose statement is Weil positivity restricted to a subspace or an
+   orbit. Theorem D.23.13 is the test to run on any such proposal before adopting it.
+
+**7. Recommendation for phase 141.** Not O-16. The two questions this round leaves that are **not**
+RH in disguise are: **O-15** (describe the moment cone `𝔐` — the whole content of (b′), a
+classical-looking problem in the theory of moments with no zero named), and **O-14′** (can an `h⁰`
+reading family (A)'s arithmetic Gram entries satisfy (b′)?), with **O-17** (a `Ξ_Q`-primitive witness)
+as the falsifier-side prerequisite for testing any such construction against (AT-1).
+
+---
+
+## Open list carried out of this round
+
+**[UPDATED, round 2. O-9 was **reopened** by finding H1 and is closed again only after the repair of
+Definition D.22.4; O-16 is **withdrawn** by finding H8; O-14 is sharpened; O-17 is new (finding H7);
+O-15′ is the general-necessity half of Theorem D.23.13(iv).]**
+
+| # | statement | status |
+|---|---|---|
+| O-9 | `Sh_Z` and `Frob_𝔫` for a general number field | **CLOSED** (D.22 with the H1 repair, `L_S = ∏_{𝔓∈S_f}O_𝔓`; Corollary D.22.6) |
+| O-13 | injectivity of `𝔫 ↦ Frob_𝔫` for general `K` (does `I(O_K)` inject into `C_{S,K}/K_P`?) | `OPEN`, new in round 1, **used nowhere** (Corollary D.23.3 is now stated so as not to need it) |
+| **O-14′** | can an `h⁰` reading family (A)'s arithmetic Gram entries — `Λ(q^k)q^{−k/2}` on the prime-power ratio graph, Definition D.23.11 — satisfy (b′)? (Sharpening of round 1's O-14 by Corollary D.24.12: an admissible `h⁰` **must** read `Z(E)` through the arithmetic side, and family (C) is excluded outright by Theorem D.24.11) | `OPEN`; by D.24.7 and D.24.11 this is now **forced**, not optional |
+| **O-15** | describe the moment cone `𝔐 = \{(M(E'),Z(E')) : E' ≥ 0, E' ≢ 0\} ⊂ R²×ℓ¹(Z(ξ))` — the whole content of (b′) | `OPEN`; **recommended phase-141 target** |
+| **O-15′** | necessity in Theorem D.23.13(iv) when infinitely many real parts accumulate among `\{ρ : A_ρ ≠ 0\}` | `OPEN`, new in round 2; not needed for the withdrawal of O-16 |
+| ~~O-16~~ | ~~construct `E_0` with `W(E_0) > 0` and `|T_n| ≤ 2W(E_0)`~~ | **WITHDRAWN, round 2, finding H8**: Theorem D.23.13 proves the condition is Weil positivity on `E_0`'s orbit, i.e. RH for the zeros `E_0` sees |
+| **O-17** | a **`Ξ_Q`-primitive**, compactly supported witness with `W_Q < 0` (the auditor's suggested route: D.19.5's Landau argument on `Π_P`-images, tracking the fixed nonzero factor at the Davenport–Heilbronn zero) — needed to upgrade (AT-1)(ii) from "implausible" to "false" | `OPEN`, new in round 2 (finding H7) |
+| O-10 | Epstein results for general (non-principal) `Q` | carried from R139 |
+| (22),(23),(23a–c) | Paper 46 §14.5 open items on `h⁰_{\mathbb Z}` | carried; untouched |
+| O-1…O-8, O-11, O-12 | R139 carry-overs | carried; untouched |
+
+---
+
+## Paper-facing list (for Part III / Papers 44 and 46)
+
+**[UPDATED, round 2: P44-4 was blocked by H1 and is unblocked by the repair; P46-10 now *extends*
+Proposition 14.1 and carries its clause (iv); P46-11 carries Finding 13.8's refusal; P46-13 carries
+H2's split; **P46-14 is withdrawn** and replaced by a conditional; P46-15 carries H8; P44/46-16 carries
+H9's repair; **P46-17 is new** (§D.23.3bis).]**
+
+| tag | statement | destination |
+|---|---|---|
+| **P44-4** | `Frob_𝔫` and `Sh_{O_K}(Frob_𝔫)` over a general number field: Definitions D.22.1, **D.22.4 (`L_S = ∏_{𝔓∈S_f}O_𝔓`, the literal transport)**; Theorems D.22.3, D.22.5; Corollary D.22.6. Note the **ideal**-indexing (Remark D.22.2a), the place-by-place proof of the triangle, and the `Tor`-obstruction to monoidality. | Paper 44, new §3quater + §6ter |
+| **P44-5** | Correction of record: Paper 44 Theorem 3ter.4(i) holds for **all** `m,n`, not only coprime. | Paper 44 §12 (hygiene note) |
+| **P46-10** | `F_1 := K+K_{odd}`, `F_2 := K−K_{odd}` as `a_0`-dependent lifts of the ruling data, canonical **mod `𝓝_∞`** — **not** the rulings `e_∓`, which are not in `D^W` (Prop. 14.1(iv), carried); `K = ½(F_1+F_2)`; the intersection matrix (Thm D.23.7); `r(Frob_n) ≡ n^{½}F_1+n^{−½}F_2 \pmod{𝓝_∞}`; Corollary D.23.9. **Extends** Propositions 14.1–14.2; replaces nothing. | Paper 46 §14 |
+| **P46-11** | The named **Pólya representative** `Δ ↦ 2K`, its two justifications, the warning that it is not a regularization of `δ_1⋆δ_1 = −∞`, **and Finding 13.8's refusal to read `Δ² = 2−2g` across curve/surface, carried verbatim**. | Paper 46 §13.3 |
+| **P46-12** | **Theorem D.24.7** (no bidegree-function satisfies (b′)), Lemma D.24.6, Proposition D.24.9 ((b′) as a moment problem; the cone `𝔐`), **Theorem D.24.11** and **Corollary D.24.12** (what an admissible `h⁰` must see). *The round's strongest item; survived hostile re-derivation intact.* | Paper 46 §13, new §13.4 |
+| **P46-13** | **Theorem D.24.5** in its split form — (i) `(⇒)` general, (ii) `(⇐)` for `ψ` satisfying (D.24.5a), (iii) the biconditional for `h⁰_□`; **Theorem D.24.4** (`\inf g = c²/2`, `χ = 1/8` for `ξ`, `r²/8` for `ξ_K`, lead's `¼` corrected, witness `½F_1`); **Proposition D.24.3a** (growth `(r²/4)m²` exactly). | Paper 46 §13.4 |
+| ~~P46-14~~ | ~~CC's slope refutes candidate (β)~~ | **WITHDRAWN, round 2, finding H6.** Replaced by **Observation D.24.2**: `λ_{CC} = 1/\log 3 < 1` in CC's own units (`PROVED`); the deficit `λ_{CC}²` is **conditional** on `\deg_{CC} = \deg`; the two unit problems (U1) degree, (U2) dimension are `OPEN` and are exactly Finding 13.8's unreconciled entry. | Paper 46 §13.2 / Finding 13.8, as an `OPEN` entry |
+| **P46-15** | **Theorem D.23.10** (constant genus, Lefschetz datum (D.23.5a), Castelnuovo `\iff |T_n| ≤ 2W(E_0)`) **together with Theorem D.23.13** (orbit Castelnuovo `=` Bochner positive-definiteness of the Toeplitz kernel `κ_{E_0}` `=` RH for the zeros `E_0` sees). The pair must travel together, or the first reads as a target. | Paper 46, Part III opening |
+| **P46-17** | **Theorem D.23.12** (new, round 2): the three Gram forms (A) pure Frobenius / (B) unit-averaged / (C) Pólya realization, what each reads, and their signs — with (A)'s unsignedness from Paper 44 **Theorem 8bis.4a** and the rank-2 factorization of (C). | Paper 46 §14 / Paper 44 §8bis cross-reference |
+| **P44/46-16** | **Theorem D.23.4**: `r_Q` is not multiplicative, stated for the **order** `O_{−D}` and its ring class group (H9 repair), with the explicit witness `Q = x²+5y²`, `r_Q(3) = r_Q(7) = 0 < r_Q(21)`. | Paper 46 §12.3 / R139 §D.19.6 note |
+
+---
+
+## § Label
+
+**Row D: no label change. The sign is not proved, no `h⁰` is produced, and none is claimed.**
+
+Per-item labels, **as revised in round 2**:
+
+| item | label (round 2) |
+|---|---|
+| D.22.1 (`Frob_𝔫`: the measures, the law, `†`, bidegrees, field-uniformity) | **PROVED** (unaffected by H1; confirmed by the audit) |
+| D.22.2 (`Sh_{O_K}`, `deg_{det} = \log N𝔫`, non-monoidality) | **PROVED** *after the H1 repair of Definition D.22.4*; round 1's version was **FALSE** (`H^0 = 0`) |
+| O-9 | **CLOSED** (reopened by H1, closed again by the repair) |
+| D.22, injectivity `𝔫 ↦ Frob_𝔫` | **OPEN** (O-13), used nowhere |
+| D.23.1 (`Div_□`, `bideg`, the multiplicative semigroup) | **PROVED** / `PROVED-IN-REPOSITORY` |
+| D.23.4 falsifier (`r_Q` not multiplicative, ring class group, explicit witness) | **PROVED** (H9 repair) |
+| D.23.5 falsifier (`Ξ_a`: four poles, `u < v`, `K_a ≠ ½(F_1+F_2)`) | **PROVED** |
+| D.23.6 (`F_1,F_2`) | **`a_0`-dependent lifts, canonical mod `𝓝_∞`**; the blueprint's "`F_1,F_2 = e_∓`" **CORRECTED** (H5) |
+| D.23.6 (`Δ ↦ 2K`) | **NAMED REPRESENTATIVE** (not a regularization of `δ_1⋆δ_1 = −∞`, which stands at `−∞`) |
+| D.23.7 (intersection matrix, congruence mod `𝓝_∞`) | **PROVED** (re-derived by the audit) |
+| D.23.8 (Castelnuovo with equality on `r(Div_□)`) | **`RESTATEMENT`** of `R138_001` Cor. D.15.4c on a sub-cone (H4); `PROVED` as a computation |
+| D.23.9 (`r(Div_□)/𝓝_∞` is the `NS(P¹×P¹)` lattice) | **PROVED**, with H14's two qualifications (canonical class does **not** match; `2 = 2−2g` is an analogy under Finding 13.8's refusal) |
+| **D.23.3bis, Theorem D.23.12** (the three Gram forms) | **PROVED** (C) / **PROVED-IN-REPOSITORY** (A),(B); **reverses round 1's headline** |
+| D.23.10 (the Weil shape on a translate family) | **PROVED**; `RESTATEMENT`, carries no sign; clause (ii) **repaired** (H8.1) |
+| **D.23.13** (orbit `=` Bochner `=` RH for `E_0`'s zeros) | **PROVED** under the finiteness hypothesis of (iv); `RESTATEMENT` |
+| D.24.1 (`h_c` class, widened) | **PROVED** + `CLASSICAL` (CC's theorem, read from source) |
+| D.24.2 (CC slope) | `λ_{CC} < 1` **PROVED** in CC's units; the deficit **PROVED-CONDITIONAL**; candidate (β) **OPEN, not refuted** (H6) |
+| D.24.2 clause (a); growth `(r²/4)m²` | **PROVED** |
+| D.24.4 (`\inf g = c²/2`, `χ = 1/8`, lead's `¼`) | **PROVED**; lead's constant **CORRECTED** |
+| D.24.5 (c) | **(i) `(⇒)` general: PROVED.** (ii) `(⇐)`: **PROVED for `ψ` satisfying (D.24.5a)**; round 1's general biconditional **FALSE and withdrawn** (H2, witness `ψ ≡ 0`). (iii) for `h⁰_□`: biconditional, **PROVED** |
+| D.24.7 (b′) fails for every bidegree-function | **PROVED** (survived hostile re-derivation; refutes (α), (β) and all additive variants) |
+| D.24.9 ((b′) as a moment problem); the cone `𝔐` | **PROVED** (reformulation); **OPEN** (O-15) |
+| **D.24.11, D.24.12** (Gram-seeing `h⁰`'s; what an admissible `h⁰` must read) | **PROVED**, new in round 2 |
+| D.24.3 (AT-1) | **PASSES on (i)** (Theorem D.23.4). **(ii) weakened** (H7): (c) implies a `Ξ_Q`-primitive-cone statement the corpus has not proved; O-17 is the missing step. **(iii)** clause (N) is **moot, a fortiori unsatisfiable** (H15) |
+| D.24.3 (AT-2) | **PASSES**, and more strongly than (AT-1): the primitive-cone bridge for `Ξ_a` **exists** (Paper 46 Lemma 12.4A, §12.3) |
+| D.24.3 (AT-3) | **PASSES**: no line of D.22–D.24 distinguishes `Q` from `K` |
+| D.24.4 (D-HS / S4) | **PROVED**: transport-invariance forces `ψ(ab)`; refuted by D.24.5(i) and D.24.7 |
+| D.25 | synthesis, **rewritten in full**; O-16 **withdrawn**; recommended targets O-15, O-14′, O-17 |
+| `scripts/certify_chi.py` | **COMPUTATIONAL-ILLUSTRATION** (not a certificate: no Lipschitz/interval bound — finding H13); load-bearing nowhere |
+
+**Verdict of the round, as revised in round 2.** The tensor-square page is **closed negatively and
+precisely**: it supplies the growth `(r²/4)m²` and Weil's W3/W4 over every number field, and it is
+refuted at (b′) by Theorem D.24.7 — extended in round 2 to every `h⁰` reading the Pólya-Frobenius Gram
+data (Theorem D.24.11) — while at (c) it implies RH (Theorem D.24.5(i)). **Round 1's stated reason was
+wrong and is withdrawn**: the collapse into the ruling plane is a property of the round's own
+realization `r`, not of the Frobenius family, and it restates `R138_001` Corollary D.15.4c. The correct
+statement is Theorem D.23.12: the Euler product's own Gram form is arithmetic, sparse and **unsigned**
+(Paper 44 Theorem 8bis.4a, at every finite chart); the form whose sign is RH has forgotten the Euler
+product; and the tensor page reads neither. The one shape round 1 offered as a target (O-16) is proved
+in round 2 to be RH in disguise (Theorem D.23.13) and is withdrawn. What remains, and what phase 141
+should take, is the moment cone `𝔐` (O-15) and the family-(A) question (O-14′).

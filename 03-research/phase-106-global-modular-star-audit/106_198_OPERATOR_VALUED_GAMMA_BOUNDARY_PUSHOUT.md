@@ -1,5 +1,14 @@
 # 106.198 — The operator-valued Gamma boundary pushout
 
+> **Normalization correction (phase 120, 2026-08-25).** The original
+> formulas below used the full even energy on the two sign components of
+> `R^x` and were a factor two too large for the positive multiplicative
+> carrier of paper 42. Descending by the normalized `{-1,+1}` quotient
+> replaces `sqrt(2 g_Gamma)` by `sqrt(g_Gamma)` and `4 integral` by
+> `2 integral`. This is the normalized invariant projection, not a fitted
+> constant. With this correction the multiplier is exactly
+> `Re psi(1/4+i gamma/2)-psi(1/4)`.
+
 ## 1. Purpose
 
 The shared-boundary construction of 106.196 uses the scalar finite part
@@ -35,7 +44,7 @@ On the natural form domain define
 \[
  \boxed{
  (\mathcal G_\Gamma F)(u)
- =\sqrt{2g_\Gamma(u)}\,(I-V_u)F}                            \tag{3}
+ =\sqrt{g_\Gamma(u)}\,(I-V_u)F}                             \tag{3}
 \]
 
 as a map into
@@ -44,7 +53,7 @@ as a map into
 \[
  \begin{aligned}
  \mathfrak j_\Gamma(F,G)
- &=2\int_0^\infty g_\Gamma(u)
+ &=\int_0^\infty g_\Gamma(u)
    \langle(I-V_u)F,(I-V_u)G\rangle\,du.                    \tag{4}
  \end{aligned}
 \]
@@ -70,11 +79,13 @@ If \(A\) is the self-adjoint generator \(V_u=e^{iuA}\), then
  =m_\Gamma(A),
  \qquad
  m_\Gamma(\gamma)
- =4\int_0^\infty g_\Gamma(u)
+ =2\int_0^\infty g_\Gamma(u)
        (1-\cos(\gamma u))\,du.}                            \tag{6}
 \]
 
-This is exactly the even real Gamma Green multiplier of 106.176(14d).
+This is one half of the full two-component multiplier in 106.176(14d),
+exactly as required after normalized descent by the sign involution. It is
+the positive Gamma multiplier of paper 42.
 
 #### Proof
 
@@ -87,7 +98,7 @@ Apply the spectral theorem to (4).  On a spectral vector of frequency
  =2(1-\cos(\gamma u))\|F\|^2.                              \tag{7}
 \]
 
-Multiplication by the factor \(2\) in (4) gives (6). \(\square\)
+Substitution of (7) into (4) gives (6). \(\square\)
 
 The Lévy density in (2) is the heat trace of the positive spin operator
 \(N_\Gamma\) in 106.195.  Thus (3) and the determinant fiber there are

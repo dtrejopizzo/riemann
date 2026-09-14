@@ -48,7 +48,7 @@
 {An Arithmetic Lefschetz Programme over $\Z$:\\
 A Metrized Bivariant Correspondence Square,\\
 its Determinant Pairing and its Corner Trace\\[4pt]
-\large Conditional row-(d) evaluation draft}
+\large Corrected A--B--C--D research programme}
 
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
@@ -56,50 +56,34 @@ its Determinant Pairing and its Corner Trace\\[4pt]
 \date{\today}
 
 \begin{abstract}
-We construct the first three ingredients of Weil's argument over $\Z$ in an
-explicit periodic--cohomological--nuclear setting.  The noncollapsed
-spherical square carries intrinsic periodic section cohomology, a
-coefficient-one determinant and derived prime contact.  Witt Frobenius gives
-a faithful multiplicative correspondence family whose dynamic contact is
-$[\Z\xrightarrow{\Phi_n(1)}\Z]$ and has degree $\Lambda(n)$.  Its monoidal
-realization in Meyer's Poisson quotient yields the complete nuclear
-Lefschetz character, including the finite, polar and archimedean terms.
-
-For the fourth ingredient we identify the primitive operator and give it a
-balanced channel factorization into a positive reference minus a positive
-load, from which the reference inverse, the threshold step and the one-step
-criterion are all read off.  We prove full-space positivity for
-$0<T\leq\log2$; that the threshold step is exact, the old core receiving no
-correction from the newborn contact and the new directions being the annulus
-plus exactly two Tate modes; that the threshold condition is equivalent to a
-\emph{unit} capacity bound in the output-defect metric; and that the
-attendant range condition is a consequence of the quantitative estimate
-rather than a separate hypothesis.  We also prove a negative result which
-shapes the rest: comparing the two positive halves by size alone fails by a
-factor of exactly four in the limit, with a deficit of leading order
-$3\sqrt N$, so no sharpening of the coercivity constant can close it.  At
-every arithmetic threshold we construct the finite Gamma--Tate amplitude,
-conservative Tate terminal, positive unreset Gamma storage and exact
-correlated rational leakage; the reciprocal half-integer band theorem pays
-every connected leakage cluster and reduces disconnected-band recombination
-to an exact constant/mean-zero Schur block.
-
-Row (d) is thereby reduced to two named inputs: a uniform Schur angle bound
-for that block, and a transfer comparison identifying the Gamma--Tate source
-defect with the newborn-cell defect at unit constant.  The second is
-finite-dimensional at each threshold; we evaluate it, and it fails --- the
-comparison constant is below one and decays with the threshold, with the
-finite-dimensional evaluation bounding the true constant from above.  The
-source model therefore does not reach the exact condition, although the exact
-condition is itself satisfied on every threshold tested.  Proving it directly,
-in the output-defect metric where it carries constant one, is the remaining
-problem.  Rows (a)--(c) and the certified initial range of row (d) are
-unconditional; the global Hodge inequality and the Riemann Hypothesis remain
-open.
+We develop an arithmetic Lefschetz programme over $\Z$ organized by four
+requirements: a common correspondence source, integral primitive contacts,
+a global Lefschetz trace comparison, and a global Hodge sign.
+None of the four complete rows is claimed closed. The current construction
+repairs local bimodules and coherent gauge changes, builds semilocal relative
+test algebras with faithful coefficients, and constructs integral contacts
+for $2,4,3,6$. It supplies induced normal boundary representations and their
+Fourier-normalized relative traces, a finite-zero source filtration and
+attaching transgression on integrable domains. A composable integral
+deformation retains primitive contact while admitting a local operator
+conjugacy to normal dilation. Fixed graph contact and ramification remain
+different derived operations. The existing $T=\log2$ endpoint certificate
+is retained with its finite scope. Common-source mixed Riemann--Roch,
+global trace localization and the global sign argument remain open.
+A corrective construction section and complete archived notes specify
+which earlier closure claims are superseded.
 \end{abstract}
 
 
 \maketitle
+
+\noindent\textbf{Current status, 5 September 2026.}
+Section~\ref{sec:abcd-current} governs the corrected A--B--C--D construction.
+Earlier declarations of complete rows (a)--(c) in the retained development
+are superseded: the missing common-source comparisons are conditional,
+not established steps of a proof of RH. The new local results and their
+scope are incorporated in that section.
+
 
 \section{Where this comes from}
 
@@ -186,133 +170,31 @@ index theorem or from a source-defined positive factorization whose
 construction does not use that sign.
 \end{itemize}
 
-Accordingly the burden falls first on (a).  Section~\ref{sec:geometric-a}
-constructs and audits the intrinsic periodic--Deligne--nuclear spherical
-package, including its total coefficient cohomology, normalized determinant,
-independent code certificate and reduced derived contact.
-Section
-\ref{sec:correspondences} constructs row~(b) on that carrier.  The
-intervening sections study the analytic corner trace, and
-Section~\ref{sec:rowc} constructs the nuclear cohomological completion that
-proves row~(c).  The fourth-row construction and its final open inequality are stated in
-Section~\ref{ss:gammafouriertate}.
+The sections below retain earlier geometric and spectral proposals.
+Their common-source identifications are conditional on the repaired
+contracts in Section~\ref{sec:abcd-current}, which records current
+constructions and the remaining acceptance gates for all four rows.
 
 \subsection{The four rows over $\mathbb F_q$ and over $\Z$}
 \label{ss:map}
 
-The following table is the map the rest of the paper fills in.  The left
-half is Weil's, complete since 1948; the right half is what the present
-programme has over $\Z$, with its status stated as sharply as the results
-below allow.  It is included because the distance between the two halves,
-and its precise shape, is the actual subject of this work.
-
-\begingroup
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.25}
-\noindent
-\begin{tabularx}{\textwidth}{@{}c p{0.205\textwidth} p{0.36\textwidth} Y@{}}
+The table gives the current status; local constructions do not close a row.
+\begin{center}
+\begin{tabularx}{\textwidth}{lYY}
 \toprule
- & \textbf{Over $\mathbb F_q$ (Weil)} & \textbf{Over $\Z$ (this programme)}
- & \textbf{Status over $\Z$} \\
+Row & Constructed with specified local scope & Still required \\
 \midrule
-(a) &
-The surface $C\times_{\mathbb F_q}C$: smooth, projective, with finitely
-generated Néron--Severi group. &
-The noncollapsed spherical square $\mathscr Y_{\mathbb S}$; invertible
-Arakelov line objects; intrinsic periodic coefficient cohomology on the
-canonical integer-radius sector with
-K\"unneth, regular section-moduli cotangent and coefficient-one determinant;
-an independent spherical code certificate; reduced derived prime contact; and a
-rank-three module over the nuclear Dirichlet algebra
-(\S\ref{sec:geometric-a}). &
-\emph{Constructed in the intrinsic periodic--Deligne--nuclear category.}
-The total cohomology is that of the geometrically induced periodic
-coefficient object on the square; it is not, and by the proved growth
-obstruction cannot be, the raw functor of all bounded spherical sections.
-\\
-\addlinespace
-(b) &
-The Frobenius correspondences $\Gamma_n\subset C\times C$: honest algebraic
-cycles, with an intersection theory already available. &
-The faithful Witt cohomological correspondences $\Gamma_n$ on
-$\mathscr Y_{\mathbb S}$: constant Witt coefficient dynamics, nuclear
-realization, metrized divisor line, and the derived
-lambda-characteristic contact
-in one constrained graph-image category (\S\ref{sec:correspondences}). &
-\emph{Complete as cohomological correspondences.}  This is relative to
-row~(a) in the stated category.  The contact is derived from $F_n$, agrees
-in $\operatorname{Perf}_{IDN}$ with row~(a), and has determinant mass
-$\Lambda(n)$; no
-undecorated Chow lift is asserted. \\
-\addlinespace
-(c) &
-$\Gamma_n\cdot\Delta=N_n$: an intersection number \emph{equals} the counting
-function of the zeta function. &
-The nuclear diagonal character of the completed Frobenius family equals
-the two finite contact sums plus the Fourier--archimedean term
-(\S\ref{sec:rowc}). &
-\emph{Complete as a cohomological/nuclear Lefschetz identity.}  An ordinary
-Cartier/Chow promotion is not asserted. \\
-\addlinespace
-(d) &
-Castelnuovo--Severi: the intersection form on $NS$ has exactly one positive
-eigenvalue.  An \emph{input} from geometry, which then implies the bound. &
-The corner pairing has $n_+=1+\#P$, whence $n_+=1\iff\RH$ (\S3.5).
-Its nuclear form has infinite rank and cannot factor through the
-two-dimensional ruling quotient
-(\S\ref{sec:rowdgate}).  The associated full primitive operator is proved
-positive for every $0<T\le\log2$.  The balanced channel factorization, the
-exactness of the threshold step, the unit output-capacity form of the
-threshold condition and the regularized one-step criterion are proved.  At
-every arithmetic threshold the Gamma--Euler--Tate source, reciprocal bands,
-connected-cluster payment and constant/mean-zero Schur reduction are
-constructed. &
-\emph{Construction complete; global positivity open, and the source route
-measured to fall short.}  The theorem through $T=\log2$ is unconditional, as
-is the scalar no-go (Cor.~\ref{cor:scalarnogo}).  Two inputs would suffice:
-Conjecture~\ref{conj:newdLogSchurAngle}, the uniform Schur-angle estimate;
-and Problem~\ref{prob:newdTransferComparison}, the transfer comparison
-carrying it to the exact condition.  The second is evaluated in
-Remark~\ref{rem:newdTransferMeasured} and \emph{fails}, with the
-finite-dimensional evaluation bounding the true constant from above; so the
-source model does not reach the exact target.  The exact target is itself
-satisfied on every threshold tested, and proving it directly is the remaining
-problem.  Unconditional global row~(d) is not claimed.
- \\
+(a) & Repaired bimodules, gauge changes, semilocal relative algebras and faithful coefficients & Common correspondence realization and full compatibility \\
+(b) & Integral contacts for $2,4,3,6$ and a power-to-normal deformation & Contact of that same source and relative/global comparison \\
+(c) & Local operator traces, finite-zero layers and attaching transgression & Global localization, nuclear comparison and mixed RR \\
+(d) & Certified initial endpoint and conditional sign criteria & Independent global sign or first-contact/zero-flux law \\
 \bottomrule
 \end{tabularx}
-\endgroup
-
-\medskip
-
-Two asymmetries in this table are worth naming, because together they
-locate the whole difficulty.
-
-First, row (a) supplies a literal noncollapsed carrier, genuine divisor
-lines, an intrinsic periodic coefficient object, its total derived global
-sections, regular section-moduli cotangent, coefficient-one normalized
-determinant and reduced derived contact in one category.  The universal
-framed code supplies an independent spherical determinant certificate.
-Its finiteness is local
-freeness over a nuclear arithmetic algebra, not finite abelian rank; the
-latter cannot realize the full bilinear kernel $\Lambda(mn)$ by
-Theorem~\ref{thm:finiteNSnogo}.  In Weil's column (c) is a theorem in the
-ordinary intersection theory of a surface and (d) is an input.  Over $\Z$,
-row~(c) is proved below as a categorical trace theorem in the nuclear
-cohomological completion of the row-(b) correspondences.  It is not promoted
-back to an ordinary Cartier/Chow intersection on $\mathscr Y_{\mathbb S}$.  Row~(d)
-remains an open geometric input.
-
-Second, the preliminary Dirichlet assembly of
-Theorem~\ref{thm:assembly} is one-sided: the sum runs over positive shells
-$k\ge1$.  The completed row-(c) object of Theorem~\ref{thm:rowc} is instead
-the summable nuclear supercharacter of the two Poisson quotients and is
-intrinsically two-sided.  These
-must not be confused with the failed operation of merely symmetrizing a
-logarithmic derivative.  That failure is sharp enough to be worth stating as
-a result, since it is the reason the construction must pass through a graded
-quotient at all.
+\end{center}
+The earlier nuclear realization and source identifications remain conditional
+where they require these missing comparisons. A local scalar identity does
+not establish the common categorical shadow. The elementary symmetrization
+calculation below is retained with its own stated scope.
 
 \begin{proposition}[Bare symmetrization is blind to the zeros]
 \label{prop:symmetrizationblind}
@@ -360,6 +242,12 @@ construction violated it.
 
 % BEGIN INLINED SOURCE: row-a-deligne-nuclear
 \section{The Deligne--nuclear spherical square}
+\noindent\textbf{Status correction.} This section retains the earlier
+proposed package. Its assertions of a completed common source, integral
+contact realization or full nuclear comparison are conditional on the
+unresolved gates in Section~\ref{sec:abcd-current}, not current
+unconditional row-closure claims.
+
 \label{sec:geometric-a}
 
 This section constructs the object used as row~(a).  There are two points at
@@ -2482,6 +2370,12 @@ row~(d); it is not a hypothesis of the nuclear Lefschetz identity.
 
 % BEGIN INLINED SOURCE: row-b-witt-lefschetz
 \section{Witt correspondences and their local Lefschetz complexes}
+\noindent\textbf{Status correction.} This section retains the earlier
+proposed package. Its assertions of a completed common source, integral
+contact realization or full nuclear comparison are conditional on the
+unresolved gates in Section~\ref{sec:abcd-current}, not current
+unconditional row-closure claims.
+
 \label{sec:correspondences}
 
 The analogue of a Frobenius graph used here is a cohomological
@@ -2947,6 +2841,12 @@ at all.
 
 % BEGIN INLINED SOURCE: row-c-nuclear-lefschetz
 \section{The nuclear Lefschetz character}
+\noindent\textbf{Status correction.} This section retains the earlier
+proposed package. Its assertions of a completed common source, integral
+contact realization or full nuclear comparison are conditional on the
+unresolved gates in Section~\ref{sec:abcd-current}, not current
+unconditional row-closure claims.
+
 \label{sec:rowc}
 
 Row~(b) produced two related, but differently typed, objects: the
@@ -3568,6 +3468,212 @@ which couples distinct primes while preserving their local contact, together
 with sections, effectivity and a quadratic RR theorem for the $e_n$.  None of
 those structures is present on \eqref{eq:finitecandidate}.
 
+\subsection{What the contact block does and does not separate}
+\label{ss:contactseparation}
+
+Theorem~\ref{thm:finitecontactobstruction} is the only place in this paper
+where an arithmetic property of the coefficients enters as an inequality
+rather than as a value.  It is worth recording exactly how much it
+distinguishes, because the answer is sharply bounded in both directions.
+
+For a Dirichlet series $f(s)=\sum_{n\ge1}a_nn^{-s}$ with $a_1=1$ write
+$\Lambda_f$ for the coefficient sequence of $-f'/f$, and consider the
+following three coefficient properties:
+\begin{align}
+ \mathrm{(P_0)}&\quad \Lambda_f(n)\ge0\ \hbox{for all }n;\notag\\
+ \mathrm{(P_1)}&\quad \Lambda_f\ \hbox{supported on prime powers};
+   \label{eq:coefficienthierarchy}\\
+ \mathrm{(P_2^{\rm norm})}&\quad
+   \bigl[\Lambda_f(mn)\bigr]_{m,n\in S}\succeq0\ \hbox{for every finite }S
+   \subset\N_{\ge2}.\notag
+\end{align}
+For $\zeta$ all three hold.  Here, exceptionally, the norm $p^j$ determines
+the pair consisting of the place $p$ and the iterate $j$, so
+$\mathrm{(P_2^{\rm norm})}$ is the coefficient shadow of
+Theorem~\ref{thm:finitecontactobstruction}.  In this programme these
+properties are not imported: they are consequences of
+$\Lambda(n)=\deg\det L_n$ through Theorems~\ref{thm:rowbcompose} and
+\ref{thm:rowbcontact}.  The coincidence between norm indices and geometric
+place--iterate indices is special to $\Spec\Z$ and will not be used as an
+invariant definition.
+
+\begin{proposition}[Separation from Davenport--Heilbronn]
+\label{prop:DHseparation}
+All three properties fail for the Davenport--Heilbronn function
+$f_{\mathrm{DH}}$.  If $\kappa$ is its defining real parameter, direct
+Dirichlet inversion gives
+\[
+ \Lambda_{f_{\mathrm{DH}}}(3)=-\kappa\log3<0,
+ \quad
+ \Lambda_{f_{\mathrm{DH}}}(4)=-(2+\kappa^2)\log2<0,
+ \quad
+ \Lambda_{f_{\mathrm{DH}}}(6)=(1+\kappa^2)\log6\ne0.
+\]
+Thus $\mathrm{(P_0)}$ fails, $\mathrm{(P_1)}$ fails because $6$ is not a
+prime power, and $\mathrm{(P_2^{\rm norm})}$ fails already on $S=\{2\}$.
+\end{proposition}
+
+\begin{proof}
+The first Dirichlet coefficients are
+$a_1=1,a_2=\kappa,a_3=-\kappa,a_4=-1,a_6=1$.  Computing the coefficients of
+$(\sum a_n\log n\,n^{-s})/(\sum a_nn^{-s})$ at $3,4,6$ gives the three
+displayed identities.  Their signs prove the assertions.
+\end{proof}
+
+\begin{remark}[Numerical reconnaissance only]
+The following larger floating-point blocks are reproducible and useful for
+orientation:
+\[
+\begin{array}{c|c|c|c}
+N&|S|&(n_+,n_-,n_0)&\lambda_{\min}\\ \hline
+ 400 &19&(9,6,4)&-35.557\\
+1600 &39&(16,12,11)&-106.844\\
+4900 &69&(28,19,22)&-282.802
+\end{array}
+\]
+Here $S=\{2,\dots,\lfloor\sqrt N\rfloor\}$.  These three rows are not an
+interval certificate and no asymptotic for the negative index is claimed.
+\end{remark}
+
+This matters because of a standing ceiling on the subject: an argument using
+only functional symmetry, an explicit formula and mean values of Dirichlet
+polynomials has a Davenport--Heilbronn analogue after the local data are
+changed.  Since its critical-line analogue is false, those inputs alone
+cannot prove $\RH$.  The correct triage is by which arithmetic input a given
+step consumes, not by its outward form.  The balanced factorization
+\eqref{eq:balancedfactorization} consumes $\mathrm{(P_0)}$ --- the two
+positive halves $R_T$ and $L_T$ exist as written only because
+$w_n=\Lambda(n)/\sqrt n\ge0$ --- as do the shift-chain coercivity
+\eqref{eq:shiftchaincoercivity} and the scalar deficit
+\eqref{eq:scalarquarter}, whose asymptotics are those of a nonnegative
+prime-power sequence.  The localized explicit formula has a
+Davenport--Heilbronn analogue after changing its Gamma and conductor data,
+and zero-extension nesting is a formal support statement after rebuilding
+the birth list from the actual support of $\Lambda_f$.  The abstract
+Schur--Douglas algebra in Theorem~\ref{thm:newdOutputDefect} is
+arithmetic-free.  Its \emph{physical} instantiation here is not: the objects
+$D_{\rm out}$ and $y_N$ come from the positive factorization $R_T-L_T$, hence
+already consume $\mathrm{(P_0)}$.  Only the abstract identities, not the
+complete row-(d) construction as written, are subject verbatim to the
+Davenport--Heilbronn ceiling.
+
+The following limitation is equally important, and is recorded because the
+hierarchy \eqref{eq:coefficienthierarchy} otherwise invites a route which
+cannot work.
+
+\begin{proposition}[Norm-pushforward Hankel criterion]
+\label{prop:P2nogo}
+Let $a_k=\sum_rc_r\alpha_r^k$ be a minimal finite exponential
+representation, with distinct nonzero $\alpha_r$ and $c_r\ne0$, and suppose
+that $a_k$ is real.  Then $[a_{i+j}]_{i,j\ge1}\succeq0$ if and only if every
+$\alpha_r$ is real and every $c_r$ is positive.  Consequently
+$\mathrm{(P_2^{\rm norm})}$ is not an invariant avatar of Weil
+polarization: it can fail after distinct places or iterates are pushed to a
+common norm index, even for objects whose row-(d) analogue is a theorem,
+\begin{enumerate}
+\item for the zeta function of a smooth projective curve $C/\mathbb F_q$ of
+genus $g\ge1$, where $\Lambda(q^m)=\#C(\mathbb F_{q^m})\log q$;
+\item for the Dedekind zeta function of a number field having a prime of
+residue degree $f\ge3$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+If the $\alpha_r$ are real and the $c_r$ positive, the matrix is the Gram
+sum
+\[
+ [a_{i+j}]_{i,j\ge1}
+ =\sum_r c_r(\alpha_r^i)_{i\ge1}(\alpha_r^j)_{j\ge1}^{t}\succeq0.
+\]
+Conversely positivity makes $b_n=a_{n+2}$ a Hamburger moment sequence.
+Its geometric growth gives a unique compactly supported positive
+representing measure $\nu$ on $\R$.  Near the origin its Cauchy transform is
+the rational function
+\[
+ \int_\R\frac{d\nu(t)}{1-tz}
+ =\sum_{n\ge0}b_nz^n
+ =\sum_r\frac{c_r\alpha_r^2}{1-\alpha_rz}.
+\]
+Uniqueness of the representing measure, equivalently uniqueness of the
+partial-fraction decomposition of this rational Cauchy transform, forces the
+poles to correspond to real atoms and the partial-fraction coefficients
+$c_r\alpha_r^2$ to be positive.  Minimality then gives
+$\alpha_r\in\R$ and $c_r>0$.
+
+For (1), after repeated Weil numbers are collected, the norm-pushforward
+sequence has
+$\#C(\mathbb F_{q^m})=q^m+1-\sum_{i=1}^{2g}\omega_i^m$ with
+$|\omega_i|=\sqrt q$, so every collected Weil-number atom carries negative
+mass and is distinct from $q$ and $1$.  For (2) the rational-prime
+norm-pushforward has the formula
+\[
+ \Lambda_K(p^k)=\log p
+ \sum_{\substack{\mathfrak p\mid p\\ f_{\mathfrak p}\mid k}}
+ f_{\mathfrak p}.
+\]
+A summand of residue degree $f$ equals
+$\log p\sum_{\zeta^f=1}\zeta^k$.  If $f\ge3$, nonreal roots of unity occur
+with positive multiplicity and cannot be cancelled by the other prime ideals
+above $p$; the criterion excludes positivity of the norm-indexed Hankel
+block.
+\end{proof}
+
+This proposition concerns the pushforward sequence, not the geometric local
+contact package.  If $v$ denotes a closed place and $i,j\ge1$ its iterate
+indices, the invariant local block is
+\begin{equation}\label{eq:placeindexedcontact}
+ K_v(i,j)=\log Nv=(\log Nv)\,\mathbf1\mathbf1^t.
+\end{equation}
+For a closed point $x$ of a curve this means $\log Nx=\deg(x)\log q$; for a
+prime ideal $\mathfrak p$ it means
+$\log N\mathfrak p=f_{\mathfrak p}\log p$.  Thus every place block is
+positive semidefinite of rank one for $\zeta$, for curves and for Dedekind
+zeta functions.  The apparent failures in Proposition~\ref{prop:P2nogo}
+arise only after the forgetful map $(v,j)\mapsto (Nv)^j$ identifies data
+which the geometric category keeps separate.  In particular they cannot be
+used as a no-go theorem against a place-indexed polarization.
+
+There is a separate and stronger reason that $\mathrm{(P_0)}$--
+$\mathrm{(P_2^{\rm norm})}$ are not by themselves a positivity mechanism.  For
+$0<a<1/2$ put
+\[
+ F_a(s)=\zeta(s+a)\zeta(s-a),\qquad
+ \Xi_a(s)=\xi(s+a)\xi(s-a).
+\]
+Then $\Xi_a(1-s)=\Xi_a(s)$, but its zeros are not confined to
+$\Re s=1/2$.  On the Euler side
+\[
+ \Lambda_a(n)=\Lambda(n)(n^a+n^{-a})\ge0
+\]
+is supported on prime powers, and at each prime
+\[
+ \Lambda_a(p^{i+j})=\log p\,
+ \bigl(p^{a(i+j)}+p^{-a(i+j)}\bigr)
+\]
+is a sum of two positive rank-one Gram matrices.  Thus even
+$\mathrm{(P_0)}$--$\mathrm{(P_2^{\rm norm})}$ together with a symmetric
+completed functional equation do not imply critical-line positivity.  This
+example has a positive local block of rank two rather than the indecomposable
+rank-one block \eqref{eq:placeindexedcontact}, so it does not dispose of a
+use of the full place-indexed contact structure.
+
+The corrected separator is therefore structural rather than sequential:
+the place-indexed positive contact package is present for $\zeta$, for
+function-field curves and for Dedekind zeta functions; it is rank one at
+each place in all three cases, whereas the shifted pair has local rank two
+and Davenport--Heilbronn has no compatible positive place package.  This is
+still not a positivity mechanism.  Dedekind zeta functions possess the same
+rank-one local package while their row-(d) statement is GRH.  Consequently
+any proposed implication from local rank one alone is circular or false.
+What is missing is global structure: in Weil's proof, finite-dimensional
+$H^1$ and its polarization.  It is not recoverable from the counting
+sequence or from the direct sum of local blocks.  Accordingly
+\eqref{eq:finitealternative} continues to identify the missing ingredient:
+a global Green or polarization term coupling distinct places while
+preserving their local contacts.  A successful invariant construction is
+expected to extend to Dedekind zeta functions and would then prove the
+corresponding GRH; this strength is an advance warning, not a contradiction.
+
 \subsection{The Green correction is forced}
 
 The finite part of Theorem~\ref{thm:rowc} defines, on the test algebra,
@@ -3599,6 +3705,20 @@ $Q=B_{\mathrm{nuc}}$ gives \eqref{eq:forcedgreen}; two such corrections have
 difference zero.
 \end{proof}
 
+\begin{remark}[Operational test for a proposed polarization]
+\label{rem:operationalpolarizationtest}
+A candidate positive norm must be evaluable from its geometric
+Witt--determinant--metric data before $B_{\mathrm{nuc}}$ is evaluated.  Once
+its finite contact factor is identified with $K$, its cross-place matrix must
+equal the compression of $G_\infty$ in \eqref{eq:forcedgreen}, without a
+scalar or Green parameter fitted by comparison.  The set of active contacts
+at $T=\log2$ is $\{2,3\}$; since Theorem~\ref{thm:certifiedendpoints} already
+proves positivity there, this is a calibration gate for provenance and
+normalization, not a new sign theorem.  The first discovery gate is
+$T=\frac12\log5$, with active contacts $\{2,3,4\}$; that endpoint remains
+uncertified in \S\ref{subsec:primitiveendpoints}.
+\end{remark}
+
 The forced term has a genuine, but insufficient, energy property.  Put
 $F(t)=e^{t/2}f(e^t)$.  Mellin transformation of the Fourier finite part
 \eqref{eq:Winftyprecise} gives
@@ -3620,6 +3740,128 @@ $m_\infty(0)=\log\pi-\psi(1/4)>0$, while the asymptotic
 $\psi(z)=\log z+O(z^{-1})$ gives $m_\infty(\tau)\to-\infty$.
 Thus $G_\infty$ is indefinite, although subtracting its maximal constant
 multiplier gives a negative semidefinite translation energy.
+
+The latter energy has a canonical square root which will be useful for
+testing a geometric polarization.  It is independent of the zeta zeros and
+of the sign sought in row~(d).
+
+\begin{lemma}[Positive Gamma reservoir]
+\label{lem:positiveGammaReservoir}
+Let $a_n=n+\frac14$ and define, initially for smooth compactly supported
+$F$ on the logarithmic line,
+\begin{equation}\label{eq:GammaReservoirMap}
+ \widehat{(\mathcal W_\Gamma F)_n}(\tau)
+ =\frac{\tau/2}{
+ \sqrt{a_n\bigl(a_n^2+(\tau/2)^2\bigr)}}\,\widehat F(\tau),
+ \qquad n\ge0.
+\end{equation}
+Then $\mathcal W_\Gamma$ takes values in
+$L^2(\mathbb R;\ell^2(\mathbb N_0))$ and
+\begin{align}
+ \|\mathcal W_\Gamma F\|^2
+ &=\frac1{2\pi}\int_{\mathbb R}g_\Gamma(\tau)
+       |\widehat F(\tau)|^2\,d\tau,\label{eq:GammaReservoirGram}\\
+ g_\Gamma(\tau)
+ &=\Re\psi\!\left(\frac14+\frac{i\tau}{2}\right)-\psi(1/4)
+ \notag\\
+ &=\sum_{n=0}^\infty
+ \frac{(\tau/2)^2}
+ {a_n\bigl(a_n^2+(\tau/2)^2\bigr)}\ge0.\notag
+\end{align}
+Moreover
+\begin{equation}\label{eq:GammaReservoirConstant}
+ m_0:=\log\pi-\psi(1/4)
+ =\log\pi+\gamma+\frac\pi2+3\log2,
+ \qquad g_\Gamma-m_0=-m_\infty.
+\end{equation}
+Consequently, if $E_T:L^2(I_T)\to L^2(\mathbb R)$ is extension by zero, the
+compression used below satisfies
+$G_{\Gamma,T}=(\mathcal W_\Gamma E_T)^*(\mathcal W_\Gamma E_T)$.
+\end{lemma}
+
+\begin{proof}
+The classical digamma expansion gives
+\[
+ \Re\psi(a+it)-\psi(a)
+ =\sum_{n=0}^\infty
+ \frac{t^2}{(n+a)((n+a)^2+t^2)}.
+\]
+Take $a=1/4$ and $t=\tau/2$.  Tonelli and Plancherel prove
+\eqref{eq:GammaReservoirGram}; the series grows only logarithmically in
+$|\tau|$, so it is integrable against the rapidly decreasing transform of
+$F$.  The special value
+$\psi(1/4)=-\gamma-\pi/2-3\log2$ proves
+\eqref{eq:GammaReservoirConstant}.  Compression after zero extension is the
+last assertion.
+\end{proof}
+
+\begin{lemma}[Markov resolution of the Gamma reservoir]
+\label{lem:GammaMarkovResolution}
+For $a_n=n+1/4$, let
+\[
+ (R_nF)(t)=a_n\int_{\mathbb R}e^{-2a_n|t-s|}F(s)\,ds.
+\]
+Then each $R_n$ is a positive Markov contraction and, as a monotone sum of
+closed positive forms,
+\begin{equation}\label{eq:GammaMarkovResolution}
+ G_\Gamma=\sum_{n\ge0}\frac1{a_n}(I-R_n).
+\end{equation}
+Moreover $e^{-2a_n|t-s|}$ is the Gram kernel of the normalized translated
+exponential half-line states.  Hence the positive Gamma Green term is carried
+by the same translation-dilation geometry as the central half-density
+semigroup.
+\end{lemma}
+
+\begin{proof}
+The kernel of $R_n$ is positive definite, has integral one, and its Fourier
+multiplier is
+\[
+ \widehat R_n(\tau)=\frac{4a_n^2}{4a_n^2+\tau^2}.
+\]
+Thus the $n$-th term on the right of
+\eqref{eq:GammaMarkovResolution} has multiplier
+\(\tau^2/[a_n(4a_n^2+\tau^2)]\), which is the $n$-th summand in
+\eqref{eq:GammaReservoirGram}.  For the Gram assertion, the unit vectors
+\(k_{n,t}(x)=\sqrt{4a_n}\,e^{-2a_n(x-t)}\mathbf1_{[t,\infty)}(x)\) in
+\(L^2(\mathbb R_x)\) satisfy
+\(\langle k_{n,t},k_{n,s}\rangle=e^{-2a_n|t-s|}\).
+\end{proof}
+
+\begin{lemma}[Quarter-twisted determinant origin]
+\label{lem:quartertwisteddeterminant}
+Let $D_\alpha$ be the positive Hardy phase operator with eigenvalues
+$n+\alpha$, $n\ge0$.  Its zeta determinant and the connection coefficient
+of its canonically normalized determinant metric are
+\begin{equation}\label{eq:quartertwisteddeterminant}
+ \det_\zeta D_\alpha=\frac{\sqrt{2\pi}}{\Gamma(\alpha)},
+ \qquad
+ \frac d{d\alpha}\log\frac{\pi^\alpha}{\Gamma(\alpha)}
+ =\log\pi-\psi(\alpha).
+\end{equation}
+At the self-dual half-density character, holomorphic polarization sends
+\(|z|^{1/2}=(z\bar z)^{1/4}\) to the quarter-holonomy factor
+\(z^{1/4}\).  Thus \(\alpha=1/4\), the phase spectrum is precisely
+\(a_n=n+1/4\), and the second expression in
+\eqref{eq:quartertwisteddeterminant} is $m_0$ from
+\eqref{eq:GammaReservoirConstant}.
+\end{lemma}
+
+\begin{proof}
+The spectral zeta function of $D_\alpha$ is the Hurwitz zeta function
+\(\zeta(s,\alpha)\).  The identity
+\(\zeta'(0,\alpha)=\log\Gamma(\alpha)-\frac12\log(2\pi)\) proves the
+determinant formula, and logarithmic differentiation proves the second.
+The final statement follows directly from the monodromy of $z^{1/4}$
+under a full turn of the phase circle.
+\end{proof}
+
+Lemma~\ref{lem:positiveGammaReservoir} constructs the positive
+archimedean reservoir, but not the missing Hodge theorem.  Indeed the
+localized primitive operator is the reservoir Gram minus the constant Tate
+load and the finite contact translations.  What remains to be constructed
+geometrically is an attachment of those loads into the reservoir which is a
+compression of a unitary (or an isometry).  Merely asserting that this
+attachment is contractive is equivalent to the desired defect positivity.
 
 The desired assertion is not the conditional inequality
 \eqref{eq:archenergy}, but the sharp domination
@@ -3674,6 +3916,76 @@ Hence $nD$ or $-nD$ is nonzero and strictly effective, and so has positive
 degree.  Both have degree zero, a contradiction.  The last assertion is
 \eqref{eq:Dcircularity}.
 \end{proof}
+
+Hypotheses (1) and (2) are stronger than the argument needs, and the gap is
+exactly the difference between a categorical requirement and a quantitative
+one.  Effectivity is used only to force $h^0(nD)+h^0(-nD)$ to vanish on
+primitive classes; the contradiction survives if that sum is merely required
+to grow more slowly than the Riemann--Roch main term.
+
+\begin{theorem}[Mixed-section forcing by growth]
+\label{thm:growthforcing}
+Let $q$ be a form on a mixed divisor space with $\deg D=q(D,H)$, and suppose
+given $h^0,h^1,h^2$ with $h^1\ge0$, $h^2(D)=h^0(-D)$ and the Riemann--Roch
+asymptotic \eqref{eq:mixedRRminimum}.  If moreover
+\begin{equation}\label{eq:subquadraticgrowth}
+ h^0(nD)+h^0(-nD)=o(n^2)\qquad(n\to\infty)
+\end{equation}
+for every $D$ with $\deg D=0$, then $q(D,D)\le0$ on $\deg=0$.
+\end{theorem}
+
+\begin{proof}
+Let $\deg D=0$ and suppose $q(D,D)>0$.  Nonnegativity of $h^1$ and duality
+give
+\[
+ \tfrac{n^2}{2}q(D,D)+O_D(n)
+ =h^0(nD)-h^1(nD)+h^0(-nD)
+ \le h^0(nD)+h^0(-nD),
+\]
+whose left side grows like a positive multiple of $n^2$ while its right side
+is $o(n^2)$ by \eqref{eq:subquadraticgrowth}.
+\end{proof}
+
+Theorem~\ref{thm:growthforcing} contains
+Theorem~\ref{thm:mixedsectionforcing}: under (1) and (2) a primitive class
+has $h^0(nD)=0$ for every $n\ne0$, so \eqref{eq:subquadraticgrowth} is
+automatic.  As a list of axioms it is strictly weaker: it asks for no
+effective cone, no vanishing criterion and no integral dimensions.  This
+weakening does \emph{not} by itself reduce the logical difficulty.  At the
+scalar level the condition is an acceptance criterion equivalent in strength
+to the desired sign: the theorem proves one direction, while under the
+desired Hodge inequality artificial numerical functions can be defined as in
+the paragraph below.  Thus a proof has content only if the numerical
+cohomology and its growth bound are constructed independently of the sign of
+$q$.
+
+The real-valued Arakelov $h^0$ of van der Geer and Schoof
+\cite{GeerSchoof} and the numerical cohomology programme for arithmetic
+surfaces of He \cite{He2025} motivate this quantitative shape.  We do not
+assert here that either theory supplies strict positivity on every class or
+the bound below for the mixed classes of this paper.
+
+The following is therefore a concrete research target and falsification
+test for the second alternative of Theorem~\ref{thm:rowdtrilemma}, not a
+completed reduction of that alternative.
+
+\begin{problem}[Subquadratic numerical cohomology for the mixed classes]
+\label{prob:subquadratic}
+Construct on the completed mixed correspondence module quantities
+$h^0_{\mathrm{num}},h^1_{\mathrm{num}},h^2_{\mathrm{num}}$ satisfying
+$h^1_{\mathrm{num}}\ge0$, duality, continuity under finite-support
+inclusions and \eqref{eq:mixedRRminimum}, all independently of the sign of
+$B_{\mathrm{nuc}}$, and prove
+\[
+ h^0_{\mathrm{num}}(nD_f)+h^0_{\mathrm{num}}(-nD_f)=o(n^2)
+ \qquad\bigl(\widehat f(0)=\widehat f(1)=0\bigr).
+\]
+\end{problem}
+
+Neither \cite{GeerSchoof} nor \cite{He2025} constructs the classes $D_f$, so
+this is not a citation but a statement of what would have to be proved about
+them.  Without an independent construction, the growth bound merely repackages
+row~(d).
 
 The theorem is logically sharp at the scalar level.  If $\RH$ is assumed,
 the numerical form is Lorentzian; orient its positive cone by $\deg>0$, put
@@ -3771,8 +4083,36 @@ These are exactly the pullbacks of the two polar Mellin evaluations in
 \eqref{eq:twoprimitive}: indeed
 \(\widehat f(s)=\int_{-T}^TF(t)e^{(s-1/2)t}\,dt\), so evaluation at
 \(s=0,1\) gives \(M_-,M_+\).  Let
-\(\mathcal P_T=\ker M_-\cap\ker M_+\).  Under
-\(F(t)=e^{t/2}f(e^t)\), the Friedrichs operator representing
+\(\mathcal P_T=\ker M_-\cap\ker M_+\).
+
+\begin{lemma}[Compact polar potential]\label{lem:compactpolarpotential}
+For \(F\in C_c^\infty(I_T)\), the following are equivalent:
+\[
+ M_-(F)=M_+(F)=0,
+ \qquad
+ F=\left(-\frac{d^2}{dt^2}+\frac14\right)G
+ \quad\hbox{for a }G\in C_c^\infty(I_T).
+\]
+The compactly supported potential is unique and is given by
+\begin{equation}\label{eq:compactpolarpotential}
+ G(t)=\int_{\mathbb R}e^{-|t-s|/2}F(s)\,ds.
+\end{equation}
+In particular the two primitive conditions are exactly the two Fredholm
+obstructions to a compactly supported polar potential.
+\end{lemma}
+
+\begin{proof}
+The function \(e^{-|t|/2}\) is the Green kernel of
+\(-d^2/dt^2+1/4\), which proves the differential identity.  To the right
+of the support of \(F\), formula \eqref{eq:compactpolarpotential} is
+\(e^{-t/2}M_+(F)\); to the left it is \(e^{t/2}M_-(F)\).  Thus the
+two moments vanish exactly when \(G\) is compactly supported.  Conversely,
+integration by parts against the two null solutions \(e^{\pm t/2}\) gives
+the two vanishing moments.  A compactly supported solution of the
+homogeneous equation is zero, proving uniqueness.
+\end{proof}
+
+Under \(F(t)=e^{t/2}f(e^t)\), the Friedrichs operator representing
 \(-B_{\rm nuc}\) on compact support has the form
 \begin{equation}\label{eq:localizedprimitiveoperator}
  A_T=G_{\Gamma,T}-m_0I-
@@ -4077,6 +4417,32 @@ Subtracting the two identities and using \(S_a^*=S_{-a}\) gives
 \eqref{eq:channelresolution}.
 \end{proof}
 
+\begin{lemma}[Acyclic return cone]\label{lem:acyclicreturncone}
+Let $V_a$ be translation by $a$ on $L^2(\mathbb R)$.  The dagger
+complex
+\[
+ 0\longrightarrow L^2(\mathbb R)
+ \xrightarrow{E_a}L^2(\mathbb R)^{\oplus2}
+ \xrightarrow{J_a}L^2(\mathbb R)\longrightarrow0,
+ \qquad
+ E_aF=(V_aF,F),\quad J_a(u,v)=u-V_av,
+\]
+is split exact.  Under the normalized Hadamard unitary on its middle term,
+$E_aF$ becomes
+\[
+ \left(\frac{V_aF-F}{\sqrt2},
+       \frac{V_aF+F}{\sqrt2}\right).
+\]
+Thus the two zero-extension channels are the antisymmetric and symmetric
+boundary coordinates of an acyclic unitary return cone.
+\end{lemma}
+
+\begin{proof}
+The map $E_a$ is injective and $J_a$ is surjective.  Moreover
+$J_aE_a=0$, while $J_a(u,v)=0$ is equivalent to
+$(u,v)=(V_av,v)=E_av$.  The last assertion is the Hadamard rotation.
+\end{proof}
+
 \begin{remark}[Why the codomain matters]\label{rem:codomainmatters}
 The chain vertex at \(t=r-a\) falls outside \(I_T\), but
 \(\widehat J_{a,\pm}F\) does \emph{not} vanish there: it equals
@@ -4128,6 +4494,452 @@ exactly \(g_\Gamma\ge0\), strictly away from \(\tau=0\).  Since
 \(\langle G_{\Gamma,T}F,F\rangle
  =\frac1{2\pi}\int g_\Gamma|\widehat{\widetilde F}|^2\), the compression is
 positive.  The remaining summands are positive by construction.
+\end{proof}
+
+\begin{lemma}[Common half-density dilation]\label{lem:commonhalfdensitydilation}
+Let $S_a$, $a\ge0$, be the right-shift semigroup on
+\(L^2(\mathbb R_+)\),
+\[
+ (S_ah)(x)=\mathbf 1_{[a,\infty)}(x)h(x-a),
+ \qquad k(x)=e^{-x/2},
+\]
+and embed $L^2(\mathbb R_t)$ isometrically into
+\(\mathcal K=L^2(\mathbb R_t)\widehat\otimes L^2(\mathbb R_+)\) by
+\(JF=F\otimes k\).  Then
+\begin{equation}\label{eq:commonhalfdensitydilation}
+ J^*(V_a\otimes S_a)J=e^{-a/2}V_a.
+\end{equation}
+More generally the common dilated orbit has the cross-place Gram
+\begin{equation}\label{eq:commonhalfdensitycrossgram}
+ \left\langle(V_a\otimes S_a)JF,(V_b\otimes S_b)JG\right\rangle
+ =e^{-|a-b|/2}\langle V_aF,V_bG\rangle.
+\end{equation}
+In particular the complete arithmetic semigroup
+\(C_n=n^{-1/2}V_{\log n}\) has the simultaneous isometric dilation
+\(V_{\log n}\otimes S_{\log n}\), and the latter has the common minimal
+unitary dilation obtained from bilateral translation in the second variable.
+\end{lemma}
+
+\begin{proof}
+The vector $k$ has norm one and a direct integral gives
+\[
+ \langle k,S_ak\rangle
+ =\int_a^\infty e^{-x/2}e^{-(x-a)/2}\,dx=e^{-a/2}.
+\]
+This proves \eqref{eq:commonhalfdensitydilation}.  The semigroup laws and the
+same integral, starting at \(\max(a,b)\), proves
+\eqref{eq:commonhalfdensitycrossgram}.  The semigroup laws and the standard
+bilateral dilation of the unilateral shift prove the last claim.
+\end{proof}
+
+\begin{lemma}[Frobenius resonant boundary trace]
+\label{lem:frobeniusresonanttrace}
+Let $a=\log p$, let $V_aF(t)=F(t-a)$, and put
+\[
+ \mathcal O_pF=\sqrt{1-e^{-a}}
+   \sum_{j\ge0}e^{-ja/2}V_{ja}F.
+\]
+For $F\in C_c^\infty(\mathbb R)$ and $0\le r<a$, the limit
+\begin{equation}\label{eq:frobeniusresonanttrace}
+ \begin{split}
+ \mathcal T_pF(r)
+ &:=\lim_{k\to\infty}e^{(r+ka)/2}
+             \mathcal O_pF(r+ka)\\
+ &=\sqrt{1-e^{-a}}\sum_{\ell\in\mathbb Z}
+       e^{(r+\ell a)/2}F(r+\ell a)
+ \end{split}
+\end{equation}
+exists by eventual stabilization and defines a smooth function on
+$\mathbb R/a\mathbb Z$.  Its constant mode is
+\begin{equation}\label{eq:frobeniusresonantmean}
+ \int_0^a\mathcal T_pF(r)\,dr
+ =\sqrt{1-e^{-a}}\int_{\mathbb R}e^{t/2}F(t)\,dt.
+\end{equation}
+Consequently the positive Tate condition removes only the constant mode of
+this trace.  The remaining outgoing defect space is canonically
+$L^2_0(\mathbb R/(\log p)\mathbb Z)$, not zero.
+\end{lemma}
+
+\begin{proof}
+For $t=r+ka$, multiply the Neumann series by $e^{t/2}$ and set
+$\ell=k-j$.  This gives the partial sum on the right of
+\eqref{eq:frobeniusresonanttrace} with $\ell\le k$.  Compact support makes
+the sum finite and independent of $k$ for all sufficiently large $k$.
+Replacing $r$ by $r+a$ and shifting $\ell$ proves periodicity.  Integrating
+over a fundamental interval and using the disjoint decomposition
+$\mathbb R=\coprod_{\ell\in\mathbb Z}([0,a)+\ell a)$ proves
+\eqref{eq:frobeniusresonantmean}.
+\end{proof}
+
+\begin{proposition}[Bohr assembly of the Frobenius boundaries]
+\label{prop:bohrfrobeniusassembly}
+Embed each periodic trace space from
+Lemma~\ref{lem:frobeniusresonanttrace} in the Besicovitch--Bohr Hilbert
+space $B^2_{\rm ap}(\mathbb R)$, using its mean inner product.  Then
+\begin{equation}\label{eq:bohrfrobeniusassembly}
+ \overline{\sum_p L^2(\mathbb R/(\log p)\mathbb Z)}^{\,B^2_{\rm ap}}
+ =\mathbb C\mathbf1\ \widehat\oplus\
+   \widehat\bigoplus_p
+       L^2_0(\mathbb R/(\log p)\mathbb Z).
+\end{equation}
+Thus the constant resonances of all places form one coherent line, while
+the mean-zero defect boundaries of distinct places are canonically
+orthogonal.  Moreover, with normalized Fourier coefficients,
+\begin{equation}\label{eq:frobeniusresonantfourier}
+ \widehat{\mathcal T_pF}(k)
+ =\frac{\sqrt{1-p^{-1}}}{\log p}
+   \int_{\mathbb R}e^{t/2}F(t)
+       e^{-2\pi ikt/\log p}\,dt .
+\end{equation}
+In particular $k=0$ is exactly the positive Tate moment, up to the displayed
+fixed normalization.
+\end{proposition}
+
+\begin{proof}
+The frequency lattice of the $p$-periodic summand is
+$(2\pi/\log p)\mathbb Z$.  A nonzero frequency shared by the $p$ and $q$
+summands would imply $k\log q=\ell\log p$, hence $q^k=p^\ell$; unique
+factorization excludes this for distinct primes.  Distinct characters are
+orthogonal for the Bohr mean.  Only the zero-frequency characters coincide,
+which proves \eqref{eq:bohrfrobeniusassembly}.  Integrating
+\eqref{eq:frobeniusresonanttrace} against
+$e^{-2\pi ikr/\log p}$ over a fundamental interval and unfolding the
+translates gives \eqref{eq:frobeniusresonantfourier}.
+\end{proof}
+
+\begin{proposition}[Real matching of the two Frobenius boundaries]
+\label{prop:realfrobeniusboundary}
+In addition to $\mathcal T_p^+=\mathcal T_p$ from
+Lemma~\ref{lem:frobeniusresonanttrace}, define the opposite trace
+\[
+ \mathcal T_p^-F(r)=\sqrt{1-p^{-1}}
+   \sum_{\ell\in\mathbb Z}e^{-(r+\ell\log p)/2}
+       F(r+\ell\log p).
+\]
+Let $F^\sharp(t)=\overline{F(-t)}$ and
+$J_ph(r)=\overline{h(-r)}$ on
+$L^2(\mathbb R/(\log p)\mathbb Z)$.  Then
+\begin{equation}\label{eq:realfrobeniusboundary}
+ \mathcal T_p^-(F^\sharp)=J_p\mathcal T_p^+(F).
+\end{equation}
+Consequently the two traces have equal norm on the Real test core
+$F^\sharp=F$.  Under Proposition~\ref{prop:bohrfrobeniusassembly}, the
+$J_p$ assemble into the canonical Real antiunitary of the Bohr boundary;
+hence the complete nonconstant incoming and outgoing Frobenius boundary
+states have identical norms.
+\end{proposition}
+
+\begin{proof}
+Insert $F^\sharp$ in the definition of $\mathcal T_p^-$ and change the
+summation variable $\ell$ to $-\ell$.  This is exactly
+$\overline{\mathcal T_p^+F(-r)}$.  Antiunitarity gives the norm assertion.
+Reflection sends each Bohr character to its conjugate and preserves its
+frequency lattice, so the local maps assemble and preserve the orthogonal
+decomposition \eqref{eq:bohrfrobeniusassembly}.
+\end{proof}
+
+\begin{theorem}[Place-coherent Poisson factorization]
+\label{thm:placepoissonfactorization}
+On $L^2(\mathbb R)$, let $V_p$ be translation by \(\log p\), put
+\[
+ C_p=p^{-1/2}V_p,
+ \qquad
+ \mathcal O_p=\sqrt{1-p^{-1}}\,(I-C_p)^{-1},
+\]
+and let \(\mathcal O_{p,T}=\mathcal O_pE_T\).  Then
+\begin{equation}\label{eq:placepoissonkernel}
+ \mathcal O_p^*\mathcal O_p-I
+ =\sum_{j\ge1}p^{-j/2}
+       \bigl(V_p^j+V_p^{*j}\bigr)
+\end{equation}
+in the strong operator topology.  Consequently, with
+\(\vartheta_T=\sum_{p<e^{2T}}\log p\), the localized operator has the
+place-indexed factorization
+\begin{equation}\label{eq:placepoissonfactorization}
+ A_T=\underbrace{G_{\Gamma,T}+\vartheta_TI}_{R_T^{\rm pl}}
+ -\underbrace{\left(m_0I+
+   \sum_{p<e^{2T}}\log p\,
+     \mathcal O_{p,T}^*\mathcal O_{p,T}\right)}_{L_T^{\rm pl}}.
+\end{equation}
+Both displayed terms are positive.  This factorization is indexed by places,
+and every prime power $p^j$ is generated coherently by the single strict
+contraction $C_p$.
+\end{theorem}
+
+\begin{proof}
+Since \(\|C_p\|=p^{-1/2}<1\), its resolvent is the norm-convergent
+Neumann series.  Multiplication gives
+\[
+ (1-p^{-1})(I-C_p^*)^{-1}(I-C_p)^{-1}
+ =I+\sum_{j\ge1}p^{-j/2}(V_p^j+V_p^{*j}),
+\]
+because the coefficient of $V_p^j$, $j\ge0$, is
+\((1-p^{-1})\sum_{k\ge0}p^{-j/2-k}=p^{-j/2}\).
+This proves \eqref{eq:placepoissonkernel}.  After zero-extension compression,
+the $j$-th cross term vanishes whenever $j\log p\ge2T$.  Multiplication
+by \(\log p\), summation over the finitely many active places, and
+\(\Lambda(p^j)=\log p\) identify the nonconstant part with the contact
+sum in \eqref{eq:localizedprimitiveoperator}; the constant terms give
+\(\vartheta_TI\) on both sides.  Positivity is manifest from the Gram
+formulas.
+\end{proof}
+
+\begin{theorem}[Coherent parallel sum of the active places]
+\label{thm:coherentparallelsum}
+Let $S$ be a nonempty finite set of primes, put
+\[
+ a_p=\log p,\qquad C_p=p^{-1/2}V_p,\qquad
+ \vartheta_S=\sum_{p\in S}a_p,
+\]
+and define on $L^2(\mathbb R)$
+\begin{equation}\label{eq:effectivefrobeniusreturn}
+ C_{\mathrm{eff},S}
+ :=I-\vartheta_S\left[
+       \sum_{p\in S}a_p(I-C_p)^{-1}\right]^{-1}.
+\end{equation}
+Then $C_{\mathrm{eff},S}$ is a strict contraction.  If
+\[
+ D_{\mathrm{eff},S}
+   =(I-C_{\mathrm{eff},S}^*C_{\mathrm{eff},S})^{1/2},
+ \qquad
+ \mathcal O_{\mathrm{eff},S}
+   =D_{\mathrm{eff},S}(I-C_{\mathrm{eff},S})^{-1},
+\]
+then the whole place-Poisson load has the one-channel factorization
+\begin{equation}\label{eq:coherentparallelsum}
+ \boxed{
+ \sum_{p\in S}(\log p)\mathcal O_p^*\mathcal O_p
+ =\vartheta_S\,
+   \mathcal O_{\mathrm{eff},S}^*
+   \mathcal O_{\mathrm{eff},S}.}
+\end{equation}
+The construction uses only the strict Frobenius returns and precedes the
+comparison with the nuclear form.
+\end{theorem}
+
+\begin{proof}
+Let
+\(
+ \mathcal K=L^2(\mathbb R)\widehat\otimes\mathbb C^S
+\), set \(C=\bigoplus_{p\in S}C_p\), and let
+\[
+ jF=\left(\sqrt{a_p/\vartheta_S}\,F\right)_{p\in S}.
+\]
+Thus $j$ is an isometry.  For a source $F$, define seam states
+\[
+ \alpha=(I-C)^{-1}\sqrt{\vartheta_S}\,jF,
+ \qquad \beta=C\alpha.
+\]
+Their difference is
+\(
+ \alpha-\beta=\sqrt{\vartheta_S}\,jF
+\).
+Decompose relative to
+\(
+ \mathcal K=jL^2(\mathbb R)\oplus(jL^2(\mathbb R))^\perp
+\):
+\(
+ \alpha=j\alpha_c+\alpha_0
+\) and
+\(
+ \beta=j\beta_c+\beta_0
+\).
+The orthogonal component of the preceding difference gives the forced
+identity
+\begin{equation}\label{eq:forcedseamcancellation}
+ \alpha_0=\beta_0.
+\end{equation}
+In particular
+\begin{equation}\label{eq:coherentseamloss}
+ \|\alpha\|^2-\|\beta\|^2
+ =\|\alpha_c\|^2-\|\beta_c\|^2.
+\end{equation}
+
+Write $C$ in blocks
+\(
+ \left(\begin{smallmatrix}A&B\\ C_0&D\end{smallmatrix}\right)
+\)
+for this decomposition.  Since $\|D\|\le\|C\|<1$,
+$I-D$ is invertible.  Equations $\beta=C\alpha$ and
+\eqref{eq:forcedseamcancellation} yield
+\[
+ \alpha_0=(I-D)^{-1}C_0\alpha_c,
+ \qquad
+ \beta_c=\bigl(A+B(I-D)^{-1}C_0\bigr)\alpha_c.
+\]
+The operator in parentheses is $C_{\mathrm{eff},S}$.  It is a strict
+contraction because $C$ is strict and the primitive norms cancel in
+\eqref{eq:forcedseamcancellation}.  Moreover
+\[
+ \alpha_c-\beta_c=\sqrt{\vartheta_S}F,
+ \qquad
+ (I-C_{\mathrm{eff},S})^{-1}
+ =j^*(I-C)^{-1}j
+ =\frac{1}{\vartheta_S}\sum_{p\in S}a_p(I-C_p)^{-1},
+\]
+which proves \eqref{eq:effectivefrobeniusreturn}.
+
+The $p$-component of $\alpha$ is
+\(
+ \sqrt{a_p}(I-C_p)^{-1}F
+\), whereas the corresponding component of $\beta$ is $C_p\alpha_p$.
+Consequently
+\[
+ \|\alpha_p\|^2-\|\beta_p\|^2
+ =a_p(1-p^{-1})\|(I-C_p)^{-1}F\|^2
+ =a_p\|\mathcal O_pF\|^2.
+\]
+Summing, using \eqref{eq:coherentseamloss}, and substituting
+\(
+ \alpha_c=\sqrt{\vartheta_S}
+ (I-C_{\mathrm{eff},S})^{-1}F
+\)
+gives \eqref{eq:coherentparallelsum} by polarization.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:coherentparallelsum} is not the scalar relative Euler
+product excluded by the negative-index obstruction.  It is a weighted
+Redheffer parallel sum of the return contractions.  It removes the growing
+prime-index port exactly, but does not by itself prove positivity after the
+quarter-Gamma and two-Tate attachment.
+\end{remark}
+
+\begin{corollary}[Herglotz form of the effective return]
+\label{cor:effectiveherglotz}
+In the right half-plane put
+\[
+ c_p(s)=p^{-1/2}e^{-s\log p},\qquad
+ H_S(s)=\frac1{\vartheta_S}\sum_{p\in S}(\log p)
+             \frac{1+c_p(s)}{1-c_p(s)}.
+\]
+Then $\operatorname{Re}H_S(s)>0$ for $\operatorname{Re}s>0$ and
+\begin{equation}\label{eq:effectivecayley}
+ C_{\mathrm{eff},S}(s)=\frac{H_S(s)-1}{H_S(s)+1}.
+\end{equation}
+On the imaginary boundary,
+\begin{equation}\label{eq:effectivepoissonboundary}
+ \operatorname{Re}H_S(-i\tau)
+ =\frac1{\vartheta_S}\sum_{p\in S}(\log p)P_p(\tau)
+ =|\mathcal O_{\mathrm{eff},S}(-i\tau)|^2.
+\end{equation}
+Thus the arithmetic parallel sum is a canonical one-port passive system.
+\end{corollary}
+
+\begin{proof}
+Each $c_p$ maps the right half-plane strictly into the disk, so its Cayley
+transform has positive real part.  The identity
+\(
+ (1+c)/(1-c)=2(1-c)^{-1}-1
+\), together with \eqref{eq:effectivefrobeniusreturn}, proves
+\eqref{eq:effectivecayley}.  Taking boundary real parts and using
+\eqref{eq:coherentparallelsum} proves
+\eqref{eq:effectivepoissonboundary}.
+\end{proof}
+
+\begin{proposition}[One-port determinant impedance]
+\label{prop:oneportdeterminant}
+Let $S=S_T$ and define, for $\operatorname{Re}s>0$,
+\[
+ H_\Gamma(s)=\sum_{n\ge0}\frac1{n+1/4}
+                   \frac{s}{s+2n+1/2}.
+\]
+Both $H_\Gamma$ and $H_S$ are positive-real functions, and the signed
+one-port impedance
+\[
+ Z_T(s)=H_\Gamma(s)+\vartheta_T-m_0-\vartheta_TH_S(s)
+\]
+satisfies
+\begin{equation}\label{eq:oneportdeterminant}
+ Z_T(s)=\frac{d}{ds}\log\!\left[
+  \pi^{-s}\Gamma\!\left(\frac14+\frac s2\right)^2
+  \prod_{p\in S_T}(1-p^{-1/2-s})^{-2}\right].
+\end{equation}
+Moreover $\operatorname{Re}Z_T(-i\tau)=A_T(\tau)$.  Hence the finite
+global square is the finite-horizon storage problem for two explicit
+positive-real one-port systems; it is not a pointwise positive-real claim
+for $Z_T$.
+\end{proposition}
+
+\begin{proof}
+Local uniform convergence follows because the $n$-th Gamma summand is
+$O(n^{-2})$ on compact subsets.  Its real part is nonnegative since
+\[
+ \operatorname{Re}\frac{s}{s+2\alpha}
+ =\frac{\operatorname{Re}s(\operatorname{Re}s+2\alpha)
+         +(\operatorname{Im}s)^2}{|s+2\alpha|^2}.
+\]
+The classical digamma difference formula gives
+\(
+ H_\Gamma(s)=\psi(1/4+s/2)-\psi(1/4)
+\).
+Also
+\[
+ \vartheta_T(1-H_S(s))
+ =-2\sum_{p\in S_T}(\log p)
+       \frac{p^{-1/2-s}}{1-p^{-1/2-s}}.
+\]
+Using $m_0=\log\pi-\psi(1/4)$ and differentiating the displayed determinant
+proves \eqref{eq:oneportdeterminant}.  The boundary statement is
+\eqref{eq:effectivepoissonboundary} together with the Gamma multiplier
+identity.
+\end{proof}
+
+\begin{proposition}[Additive effective generator and exact cofinal
+stabilization]
+\label{prop:effectivecofinalgenerator}
+For a finite prime set $S$, define
+\begin{equation}\label{eq:additiveeffectivegenerator}
+ \mathcal L_S:=\vartheta_SC_{\mathrm{eff},S}
+                    (I-C_{\mathrm{eff},S})^{-1}.
+\end{equation}
+Then
+\begin{equation}\label{eq:additiveeffectivegeneratorsum}
+ \mathcal L_S
+ =\sum_{p\in S}(\log p)C_p(I-C_p)^{-1},
+\end{equation}
+so $\mathcal L_{S_1\sqcup S_2}=\mathcal L_{S_1}+\mathcal L_{S_2}$.
+For $\operatorname{Re}s>1/2$, these generators converge locally uniformly
+under exhaustion by primes to
+\begin{equation}\label{eq:additiveeffectivegeneratorlimit}
+ \mathcal L_\infty(s)
+ =-\frac{\zeta'(s+1/2)}{\zeta(s+1/2)}.
+\end{equation}
+Moreover, if $F$ is supported in $[-T_0,T_0]$ and
+$\log p\ge2T_0$, then
+\begin{equation}\label{eq:inactiveplacestabilization}
+ E_{T_0}^*(\mathcal O_p^*\mathcal O_p-I)E_{T_0}=0.
+\end{equation}
+Consequently the finite global forms stabilize exactly on every compactly
+supported test space.  In particular, a finite-stage positive storage which
+is functorial under the lossless extensions
+\eqref{eq:additiveeffectivegeneratorsum} passes to the compact primitive
+core without a further cofinal estimate.
+\end{proposition}
+
+\begin{proof}
+Equation \eqref{eq:effectivefrobeniusreturn} gives
+\[
+ C_{\mathrm{eff},S}(I-C_{\mathrm{eff},S})^{-1}
+ =\frac1{\vartheta_S}\sum_{p\in S}
+      (\log p)C_p(I-C_p)^{-1},
+\]
+which proves \eqref{eq:additiveeffectivegeneratorsum}.  In the right
+half-plane its multiplier is
+\[
+ \sum_{p\in S}(\log p)
+    \frac{p^{-1/2-s}}{1-p^{-1/2-s}}.
+\]
+The Euler logarithmic derivative proves local uniform convergence to
+\eqref{eq:additiveeffectivegeneratorlimit} for $\operatorname{Re}s>1/2$.
+
+Finally, \eqref{eq:placepoissonkernel} expresses
+$\mathcal O_p^*\mathcal O_p-I$ as a sum of translations by
+$j\log p$, $j\ge1$.  If $\log p\ge2T_0$, every translated support is
+disjoint from the original one up to a null endpoint.  Compression therefore
+gives \eqref{eq:inactiveplacestabilization}.  Polarization proves the
+operator statement and exact stabilization under every subsequent inactive
+place extension.
 \end{proof}
 
 \begin{corollary}\label{cor:referenceidentification}
@@ -4568,6 +5380,12 @@ The first alternative is impossible by
 Theorem~\ref{thm:infiniterankcontact}; the data required by the second and
 the theorem required by the third have not been constructed.
 \end{theorem}
+
+Theorem~\ref{thm:growthforcing} supplies a weaker numerical acceptance test
+for the second alternative, namely Problem~\ref{prob:subquadratic}.  It does
+not eliminate the second or third alternative, and it is equivalent in
+scalar strength to the desired sign unless its data are constructed
+independently from the row-(a)--(c) geometry.
 
 The minimum positive result would construct an infinite-dimensional space
 $N_D$, a class $H$ with $H^2>0$, a degree map and a continuous intersection
@@ -6137,6 +6955,17 @@ the certified initial interval $0<T\le\log2$.
 Also proved, and negative: Corollary~\ref{cor:scalarnogo}, that no comparison
 of $R_T$ against $L_T$ by size alone can succeed --- the deficit is
 $3\sqrt N$, of leading order, and the shift-chain constant is sharp.
+Propositions~\ref{prop:DHseparation} and \ref{prop:P2nogo} delimit the
+coefficient input: norm-indexed Hankel positivity separates $\zeta$ from
+Davenport--Heilbronn but is not invariant under the passage from norm labels
+to places.  The invariant rank-one place package is shared by $\zeta$,
+function-field curves and Dedekind zeta functions, while the shifted pair
+has rank two; even this corrected package is local data, not a global
+polarization theorem.  On the geometric
+side, Theorem~\ref{thm:growthforcing} records the subquadratic criterion
+\eqref{eq:subquadraticgrowth}.  Problem~\ref{prob:subquadratic} asks for an
+independent construction; absent that independence it is equivalent in
+scalar strength to row~(d), not a proof of it.
 
 \emph{Two} independent inputs are needed, and their status now differs:
 \begin{enumerate}
@@ -6165,6 +6994,8 @@ established in the present manuscript.
 \end{center}
 
 % END CLEAN GAMMA--FOURIER--TATE ROW (d)
+
+\input{updates/abcd-current.tex}
 
 \section*{Executable companion}
 

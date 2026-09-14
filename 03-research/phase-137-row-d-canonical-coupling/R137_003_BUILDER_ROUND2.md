@@ -1,0 +1,621 @@
+# R137.003 — Builder, round 2, phase 137: repairs to `R137_001` against the hostile audit `R137_002`
+
+Author: builder (Opus 5). Date: 2026-09-13. Object: every finding H1–H20 of
+`R137_002_HOSTILE_AUDIT.md`, plus the coordinator's standing instructions for this round (repair by
+construction, never by relabelling; every arrow labelled; downgrade explicitly what cannot be proved;
+numerics only where a constant must be certified, and then interval-safe).
+
+**Disposition in one line.** All twenty findings are **accepted**; none is contested. Two of them (H1,
+H2) were `FATAL` and are repaired by construction: H1 by replacing the grid-derived `u_0` with an
+**analytic** certificate (§2.1 — a cubic inequality, no numerics at all), H2 by **withdrawing** the
+comparison of two lower bounds and everything built on it (§2.5). Four statements are downgraded
+(Theorem D.11.6 → `CANDIDATE`; Theorem D.12.5 → `OPEN`; §4.4 → `HEURISTIC`; Remark 17.7 → deleted),
+one import is declared with its cost to Paper 46 §1.13 (§2.4), and the alternative route the coordinator
+asked me to work out honestly is worked out and **fails** (§2.4b) — which is itself the finding.
+
+**What survives round 2, with labels.** Theorem D.11.1 (two-sided Mellin bound, `PROVED`); Theorem
+D.11.2 (non-vacuity, `PROVED`, with certified constants); Theorem D.11.3 (`h⁰_Z(mK) ≥
+c(\log m)^{3/2}/\log\log m`, `PROVED`, now with both auxiliary bounds proved analytically); Theorem
+D.11.4 (coefficient bound, `PROVED` modulo one **declared** zero-location import); Corollary D.11.5 as a
+**one-directional** statement (`PROVED`); the sign correction of the blueprint's `W_S` (`PROVED`); the
+support decoupling (`PROVED`); the identity `Q = Π` (`PROVED`); the localization of `RH-PROOF.md`'s wall
+(`REFUTED` verdict, now audited against the R3 text too).
+
+---
+
+## 1. D.0 — repairs H7, H8, H16, H17
+
+### 1.1 H8 — the R3 text, read, and the verdict re-run against it (`PROVED`, new)
+
+`CORRECTIONS-CONNES-R3.md` (71 lines) was not read in round 1. It has been read. It **supersedes** §3
+and the decisive step of §5 of `RH-PROOF.md`, and its own summary is:
+
+> "the Vitali bridge is correct and is the right closing mechanism, but the decisive step was
+> *asserted, not proved*." … "The single load-bearing input is named explicitly (**H1**)".
+
+R3's chain, quoted in full from "What this changes in the chain":
+
+> "`D_P^∘` has real zeros (G2 = H1) ⟹ `M_P = −∂_z log D_P^∘ − E_P'/E_P` matrix-Herglotz, bounded
+> `≤ C_F/|Im z|` ⟹ normal family (Montel). On `U_- = {Re s>1}` (zero-free): `D_P^∘ E_P → Ξ` (G3) ⟹
+> `M_P → M_Ξ` … Vitali ⟹ `M_Ξ` has no off-real pole ⟹ … **RH**."
+
+**Finding D.0.4 (`PROVED`; supersedes round 1's location of the gap).** In the R3 chain the uniformity in
+`P` is no longer L1; it is the clause "**matrix-Herglotz, bounded `≤ C_F/|Im z|`**", asserted as a
+consequence of Herglotz-ness. *Herglotz-ness does not give it.* A matrix-Herglotz function has a
+Nevanlinna representation `M(z) = A + Bz + ∫(\frac1{λ−z} − \frac{λ}{1+λ²})dΩ(λ)`; a bound `‖M(z)‖ ≤
+C/|\mathrm{Im}\,z|` requires the total mass `Ω(\mathbb R)` to be bounded by `C`. For
+`M_P = −∂_z\log D_P^∘ − E_P'/E_P` the first summand is `Σ_j m_j/(z_j − z)`, whose total mass is the
+**number of zeros of `D_P^∘`**, which diverges with `P`; the second summand, `E_P'/E_P`, is the
+renormalizing subtraction, i.e. the `½(\log P)²` of G4. So the uniform bound is exactly the assertion
+that *the renormalization does not leak mass as `P → ∞`* — `D8.5b-i` §5's
+strong-resolvent-continuity, verbatim. **R3's ledger lists one residual (H1) and this is not it.**
+
+Two consequences, and both strengthen round 1's verdict rather than weaken it:
+
+ * the pre-R3 reading (round 1: the gap is L1) and the R3 reading (the gap is the uniform Herglotz bound
+   on `M_P`) name the **same** object — the `P`-uniformity of a renormalized family — so the verdict is
+   stable under the supersession;
+ * in the R3 form the gap is **worse documented**: `RH-PROOF.md` at least listed L1 in a ledger; R3
+   declares "Everything else … is proved with no use of zero locations and lives in `Re s>1`".
+
+*(R3 point 4 does prove a uniform-in-`P` bound — `Σ(\log p)p^{−k(1/2+2a)} < ∞` for the source core
+`S_a^∘`, `a > 1/4`. That is a bound on the **source frame**, i.e. the R3 replacement for L1's role in
+§2; it is not a bound on the Nevanlinna mass of `M_P`, which is what Montel consumes in the R3 chain.)*
+
+**Verdict, re-stated:** `REFUTED` as a proof of RH, **in both versions**. The header note in
+`RH-PROOF.md` has been rewritten and **relocated below the R3 banner**, and it now audits both texts;
+the `NO-GO-LIST.md` entry has been rewritten to match.
+
+### 1.2 H7 — Finding D.0.3's central sentence, withdrawn
+
+**`WITHDRAWN`.** Round 1 §1.5 wrote: "Whether rank-one-ness is load-bearing in §2–§5 is not decided here;
+**it is not used anywhere in §2–§5 as written**, which is precisely the complaint." The auditor is right
+and the sentence is self-refuted by round 1's own §1.3, which quotes the use: `RH-PROOF.md` §2, "The
+divergent `½(\log P)²` is the excluded `H–H` element" — that *is* the use of G4's rank-one pole mode.
+The sentence is withdrawn from the report, from the `NO-GO-LIST.md` entry ("and the document names
+none") and from the header note.
+
+**Replacement (`OPEN`).** §7's faithfulness check is **incomplete**, not silent: it excludes
+Davenport–Heilbronn by a mechanism — signedness of the weights — that `Ξ_a` does not trigger, since
+`Λ(n)(n^a+n^{−a}) ≥ 0`. The visible structural difference between `ξ` and `Ξ_a` in the chain's own terms
+is that G4's divergence is rank one for `ξ` (one pole) and rank `≥ 2` for `Ξ_a` (the polar set
+`\{−a,a,1−a,1+a\}`, Paper 46 §12.5 (S1)), and §2 does use rank-one-ness. **What is unverified is whether
+G1–G3, G5 transfer to `Ξ_a` at all**; G3 in particular presupposes a renormalized determinantal limit
+theorem for the two-gamma-factor `Ξ_a` that nobody has proved. Round 1's disjunction ("either it
+transfers, or a step uses a property `Ξ_a` lacks") is, as the auditor says, a tautology once the transfer
+is unverified. The honest statement is: *the falsifier check the standing rules require has not been
+run by the document, and cannot be run by this audit either without a `Ξ_a`-analogue of G3.* `OPEN`.
+
+**FATAL flag, restated correctly.** The flag is **not** "the chain proves a false statement". It is:
+*a document asserting a chain to RH does not run the corpus's standing falsifier and states no property
+of `ξ` that would block it, while the one property it does use (rank-one-ness) is never identified as the
+blocking one.* That is a defect of the document, and it is recorded as such.
+
+### 1.3 H17 — the implication stated as a conjunction, and the competing reading closed
+
+**Corrected statement (`PROVED`).** §5 of `RH-PROOF.md` consumes `G1–G5` and `L1, L2, L3` (L2 and L3
+inside §3, on which §5 depends). What is proved there is
+`(G1–G5) ∧ L1 ∧ L2 ∧ L3 ⟹ RH`. Hence **at least one of `L1, L2, L3` is not a statement that "cannot
+encode zero locations"** — contradicting §6's blanket claim. The narrowing to L1 is the separate
+observation that L2 (Tate's local computation, place by place) and L3 (`−ζ'/ζ = ΣΛ(n)n^{−s}` paired with
+the sources) are identities valid in `Re s > 1`, whereas L1 is a bound on Gram norms in the `P`-dependent
+space `H_P^∘`, where the renormalization lives. Round 1 stated the conclusion without the narrowing step;
+the narrowing is now part of the statement.
+
+**The competing reading, closed (`PROVED`).** `D8.5b-i` §6 lists as "Established (unconditional)": "each
+`A_P^∘` is self-adjoint; `G_P^∘` is a normal family (`≤1/|\Im z|`)". If that were a `P`-uniform bound on
+the *sourced matrix entries*, L1 would be unnecessary and round 1's identification would collapse. It is
+not: `‖(A_P^∘−z)^{−1}‖ ≤ 1/|\Im z|` is an **operator-norm** bound, and the entries in play are
+`⟨(A_P^∘−z)^{−1}ι_Pφ_β, ι_Pφ_α⟩`, bounded by `‖ι_Pφ_α‖·‖ι_Pφ_β‖/|\Im z|` — so the uniform constant is
+`\max_α‖ι_Pφ_α‖²`, which is L1 and nothing else. The reading is closed.
+
+### 1.4 H16 — citations
+
+ * "the divergence lives in the non-additive cross terms of the Feshbach resolvent" is `D8.5b-i` **§5**
+   (Theorem `thm:robust`, third bullet), not §4. §4's auditbox supplies only "`G_P^∘` is the genuine
+   Feshbach resolvent `Φ^*F_P^{−1}Φ`". Corrected here and in `NO-GO-LIST.md`.
+ * The audit of `RH-PROOF.md` was ordered by `R137_000_LEAD_BLUEPRINT.md` item D.0 (the phase-136 map §3
+   lists it as a no-go to reopen). Corrected in `NO-GO-LIST.md`.
+ * "direct contradiction" → **"unreconciled gap"**: §2's sentence is about which mode carries the
+   divergence in the Hamiltonian, `D8.5b-i` §5's about where it lands in the Feshbach inverse. Different
+   objects; the true complaint is that `RH-PROOF.md` nowhere reconciles them and asserts the uniformity
+   on the first reading alone. Corrected in the report, the header note and `NO-GO-LIST.md`.
+
+---
+
+## 2. D.11 — repairs H1, H2, H3, H4, H5, H6, H12, H15, H20
+
+### 2.1 H1, repaired by construction: `u_0 ≤ 0.24226`, proved, no numerics
+
+Round 1's `u_0 ≤ 0.235` was false (`ΠK(0.235) = +0.34634`), and the script's `C2` could not detect it. The
+repair is not a better grid: the constant is now **proved**.
+
+**Lemma 2.1 (`PROVED`).** Let `K(t) = 2Σ_{n≥1}f_n(t)`, `f_n(t) = (2π²n⁴e^{9t/2} − 3πn²e^{5t/2})
+e^{−πn²e^{2t}}` (Paper 46 (11.7), normalization fixed by `Φ_K = ξ`). Put `x := πn²e^{2t}`. Then for every
+`n ≥ 1` and every `t` with `x ≥ 5.1`,
+
+    f_n''(t) \;≥\; \tfrac14 f_n(t) .                                                    (2.1)
+
+Consequently `K''(t) ≥ K(t)/4`, i.e. `ΠK(t) = −K''(t) + K(t)/4 ≤ 0`, for every
+`t ≥ u_0 := \tfrac12\log(5.1/π) = 0.2422553…`; and `\{ΠK > 0\} ⊂ (−u_0,u_0)` since `ΠK` is even.
+
+*Proof.* Write `A := 2π²n⁴e^{9t/2}`, `B := 3πn²e^{5t/2}`, so `f_n = (A−B)e^{φ}` with
+`φ = −πn²e^{2t} = −x`, `φ' = −2x`, `φ'' = −4x`. Then `A' = \tfrac92A`, `B' = \tfrac52B`,
+`A'' = \tfrac{81}4A`, `B'' = \tfrac{25}4B`, and
+
+    f_n'' = e^{φ}\big[(A−B)'' + 2(A−B)'φ' + (A−B)(φ''+φ'^2)\big]
+          = e^{φ}\big[A(4x²−22x+\tfrac{81}4) − B(4x²−14x+\tfrac{25}4)\big] .
+
+So (2.1) is `A(4x²−22x+20) ≥ B(4x²−14x+6)`. Since `A/B = \tfrac{2π}{3}n²e^{2t} = \tfrac23x`, this is
+`\tfrac23x(4x²−22x+20) ≥ 4x²−14x+6`, i.e. `p(x) := 8x³−56x²+82x−18 ≥ 0`. Now `p(5.1) = 4.848 > 0` and
+`p'(x) = 24x²−112x+82` has roots `(112±\sqrt{4672})/48 = 0.909, 3.757`, so `p' > 0` on `[5.1,∞)` and
+`p > 0` there. Finally `x = πn²e^{2t} ≥ πe^{2t} ≥ 5.1` exactly when `t ≥ u_0`, and `n ≥ 2` only increases
+`x`. `ΠK` even is Theorem 11.7(i). ∎ `PROVED`
+
+**Consequences, all recomputed.** `β := πe^{2u_0} = 5.1` **exactly** (round 1: "`β ≤ 4.94`", false).
+The inequality `ΠK(t) ≤ 0` for `t ≥ u_0` is the only property of `u_0` that Theorems D.11.2 and D.11.3
+use, and it is now a theorem. The lead's independent value `u_0^{true} = 0.238624` is consistent with —
+and strictly below — the certified bound `0.2422553`, as it must be.
+
+### 2.2 H5(b), repaired by construction: the kernel lower bound, proved for all `t ≥ 0`
+
+**Lemma 2.2 (`PROVED`).** `K(t) ≥ 2π²e^{9t/2}e^{−πe^{2t}}` for every `t ≥ 0`.
+
+*Proof.* `f_n(t) ≥ 0` for `n ≥ 2` and `t ≥ 0`, because `2π²n⁴e^{9t/2} ≥ 3πn²e^{5t/2}` iff
+`e^{2t} ≥ 3/(2πn²)`, and `3/(2πn²) ≤ 3/(8π) < 1`. For `n = 1`,
+`2f_1(t) ≥ 2π²e^{9t/2}e^{−πe^{2t}}` iff `2(2π²e^{9t/2} − 3πe^{5t/2}) ≥ 2π²e^{9t/2}` iff
+`π²e^{9t/2} ≥ 3πe^{5t/2}` iff `e^{2t} ≥ 3/π = 0.9549…`, i.e. `t ≥ −0.0231`. ∎ `PROVED`
+
+Round 1 grid-checked this on `[1,4]` and used it at `\log q ± u_0` for `q` up to `Q ≍ \sqrt{\log m}`,
+far outside the checked range. It is now proved on the whole range used, and the script's `C3` merely
+verifies it.
+
+**Corollary 2.3 (`PROVED`; this is H20(1)).** For every prime power `q ≥ 2`,
+
+    κ_q := \min_{|t−\log q| ≤ u_0}K(t) \;≥\; 2π²q^{9/2}e^{9u_0/2}e^{−βq²} \;≥\; e^{−βq²},\qquad β = 5.1 .
+
+*Proof.* The majorant `t ↦ 2π²e^{9t/2}e^{−πe^{2t}}` of Lemma 2.2 has logarithmic derivative
+`\tfrac92 − 2πe^{2t} < 0` for `t > \tfrac12\log\tfrac9{4π} = −0.167`, hence is decreasing on the window
+`[\log q − u_0, \log q + u_0] ⊂ [0.45,∞)`; its value at the right endpoint is the displayed quantity, and
+`2π²e^{9u_0/2}q^{9/2} ≥ 2π² > 1`. ∎ `PROVED`
+
+### 2.3 H1, H6, H18 — Theorem D.11.2 restated, with a certified threshold and without "exact"
+
+**Theorem D.11.2′ (non-vacuity; `PROVED`).** Let `M_+ := \sup ΠK`. For every prime power `q` and every
+integer `m ≥ M_+w_q/κ_q`, the class `λ := −w_qτ_{\log q}(ΠK)` lies in `H⁰_Z(mK)`. With the certified
+constants `M_+ ≤ 17` (§2.3a), `w_2 = (\log2)/\sqrt2 = 0.4901291…` and `κ_2 ≥ 1.83571·10^{−6}`
+(Corollary 2.3), the value `m = 4\,538\,961` suffices; hence `h⁰_Z(mK) > 0` for all `m ≥ 4\,538\,961`.
+
+*Proof.* Unchanged from round 1 — `w_qΠK(t−\log q) ≤ mK(t)` is automatic where `ΠK(t−\log q) ≤ 0`, and
+where `ΠK(t−\log q) > 0` Lemma 2.1 gives `|t−\log q| < u_0`, so `ΠK(t−\log q) ≤ M_+` and `K(t) ≥ κ_q`. ∎
+
+**No number here is sharp, and the word "exact" is withdrawn.** `4\,538\,961` is a *sufficient* threshold
+proved from lower bounds; with the numerically computed `κ_2 = 3.40145·10^{−6}` (on the certified window)
+and `M_+ = 16.953849` it drops to about `2.4·10^{6}`; the auditor's `2\,143\,635` uses the true
+`u_0 = 0.238624`; and the direct grid check `C5` passes at every `m` tested, including values well below
+all of these. The **threshold itself is not the content**; the content is that it is finite.
+
+#### 2.3a `M_+` — the one constant certified numerically, and why that is legitimate
+
+`M_+ = \sup ΠK` is a number attached to one fixed entire function; only an **upper** bound is needed.
+By Lemma 2.1, `ΠK ≤ 0` off `(−u_0,u_0)`, and `ΠK` is even, so `\sup ΠK = \max_{[0,u_0]}ΠK`. The script's
+`C4` computes `ΠK` on `[0,u_0]` with step `h = 2·10^{−4}` and a Lipschitz bound
+`L := \max|ΠK'|` sampled on the same interval, and checks `\max_{\text{grid}}ΠK + Lh/2 ≤ 17`. The grid-plus-margin **structure** bounds the sup on the *whole* interval, not only at grid points.
+**[CORRECTED, round 3, finding N7: the word "interval-safe" is withdrawn — `L` is a *sampled* maximum of
+`|ΠK'|`, not a proved bound. The robust statement: `16.953849 + Lh/2 ≤ 17` holds for **any** `L ≤ 460` at
+`h = 2·10^{−4}`, against a sampled `L ≈ 101.5` — a factor `4.5` of head-room.]** `\max_{\text{grid}}ΠK = 16.953849` (reproducing Paper 46 §13.2's `\max ΠK =
+16.953849`), `L ≈ 101.5`, margin `≈ 0.0102`. **`M_+ ≤ 17`: `PROVED` modulo the certified numerical
+bound on `L`, and labelled as such.**
+
+#### 2.3b H6 — this **confirms** Remark 13.6a; the claimed "correction" is withdrawn
+
+**`WITHDRAWN`.** Round 1 §2.2 ("Correction to Paper 46", `PROVED`), refutation B8, the headline phrase
+"correcting the impression left by Remark 13.6a", the `README` row and draft Theorem 17.2's gloss are all
+withdrawn. Remark 13.6a contains no false statement: it reports a true fact about the tested range and
+closes with "**Everything in this remark beyond Theorem 13.6(ii) is heuristic.**" Count `1` means
+`H⁰_Z = \{0\}` — the zero section — not "no sections".
+
+**Replacement (`PROVED`).** Remark 13.6a's heuristic is: "`mK` dominates a *single* translate
+`τ_{\log q}(ΠK)` only for `\log q ≲ \tfrac12\log\log m`". Theorem D.11.2′ **proves the sufficiency direction of exactly that picture**
+**[CORRECTED, round 3, finding N5: Remark 13.6a's "only for" is a *necessity* claim and Theorem D.11.2′
+proves *sufficiency*. The necessity half is supplied in `R137_005` Proposition 2.2 — `m ≥ cq^{−5}e^{πq²}`
+is **necessary** — so both directions are now theorems, bracketing the single-generator threshold between
+`e^{πq²}` and `e^{5.1q²}`.]**: feasibility of one generator at `q` holds once `m ≳ e^{βq²}`, i.e. for
+`q ≲ \sqrt{(\log m)/β}`, i.e. `\log q ≲ \tfrac12\log\log m − \tfrac12\logβ`. What Theorem D.11.2′ adds is
+the converse direction of the same picture — the count is `> 1` from `m ≈ 4.5·10^6` on — so the numerical
+`1` of Paper 46 §13.2 reflects the range `m ≤ 8` and nothing else. *This is a confirmation of a heuristic
+and a determination of its threshold, not a correction of the paper.*
+
+### 2.4 H3, H5(a) — Theorem D.11.4: the mean value repaired, the import declared
+
+**H3, repaired (`PROVED`).** Round 1's majorant `|A(1+iτ)| ≤ (m + m/|ξ(1+iτ)|)/|s(1−s)|` degenerates at
+`τ = 0`, where `|s(1−s)| = |τ||1+iτ| → 0`. The repair is the auditor's one-liner and it costs nothing:
+Montgomery–Vaughan is invariant under `b_q ↦ b_qq^{iT_0}`, so run the mean value on `[1, 1+T]`, where
+`|s(1−s)| = |τ|\,|1+iτ| ≥ 1`. Every constant is unchanged.
+
+**Theorem D.11.4′ (`PROVED`, with the imports named).** *Imports: the Montgomery–Vaughan mean value
+theorem (`CLASSICAL`); Stirling ((E4)); and — declared, see below — the classical zero-free region in the
+quantitative form `|ζ(1+iτ)|^{−1} ≪ \log^{7}(2+|τ|)` (`IMPORTED`, new tag (X19)).* There is an absolute
+constant `C` such that, if `λ ∈ H⁰_Z(mK)` has all nonzero coefficients at prime powers `q ≤ Q`, then
+
+    Σ_q|a_qΛ(q)|² ≤ C\,m²e^{CQ},\qquad
+    h⁰_{\mathbb Z,≤Q}(mK) ≤ C\,π_*(Q)\big(\log m + Q\big) .
+
+*Proof.* As in round 1, with the mean value taken on `[1,1+T]`, `T := C_0Q`. ∎
+
+**H5(a) — the import is a zero-location input, and it is declared.** `|ζ(1+iτ)|^{−1} ≪ \log^{7}` is a
+quantitative form of `ζ(1+iτ) ≠ 0`; Paper 46 §1.13 requires every such fact to be listed. Note that
+§1.13 **already lists** "`ζ(s) ≠ 0` for `\mathrm{Re}\,s ≥ 1` (import (E2), Proposition 11.11a)", so the
+*qualitative* fact is already in the paper's compliance list and already used; what is new is its
+*quantitative* strengthening. **If Part III is ever appended, §1.13 must gain the row and §15 the import
+tag (X19); until then Theorem D.11.4′ is `PROVED` with the import declared here and nowhere else.**
+
+#### 2.4b The zero-free-region-free route: **this bootstrap does not close**, and the structural reason why
+
+**[RETITLED, round 3, finding N6.** Round 2's heading said the route "**fails**". What is proved below is
+that **one** bootstrap — the degree-identity majorant for `Φ_E(1+η)` fed into Montgomery–Vaughan — does not
+close; another majorant is not excluded. The section's claim is the **structural** paragraph that follows
+Statement 2.4, not the bootstrap.**]**
+
+The suggestion is to run the argument at `σ = 1+η` where the Euler product gives, with **no** zero
+information, `|ζ(σ+iτ)| ≥ ζ(2σ)/ζ(σ) > 0`, and hence `|ξ(σ+iτ)|^{−1} ≤ C(η)|τ|^{(1−σ)/2−2}e^{π|τ|/4}`
+by Stirling. Worked out honestly, it does not close, and the reason is structural.
+
+**Statement 2.4 (`PROVED`, a negative result).** The `σ > 1` route requires an upper bound for
+`Φ_E(1+η) = ∫E(t)e^{(1/2+η)t}dt`, and the only unconditional handle on `E` is the degree identity
+`∫E·2\cosh(t/2) = m` (Theorem D.11.1(i)), whose weight is `≍ e^{|t|/2}`. Splitting at `T_0 := \log Q + 1`:
+
+    Φ_E(1+η) ≤ m(eQ)^{η} + Cm + C_ηΣ_q|a_q|Λ(q)q^{η}
+            ≤ m(eQ)^{η} + Cm + C_ηQ^{η}\sqrt{π_*(Q)}\;X,\qquad X := \big(Σ_q|a_qΛ(q)|²\big)^{1/2},
+
+the last term by Cauchy–Schwarz, using `∫_{|u|≥1}|ΠK(u)|e^{(1/2+η)|u|}du < ∞`. Feeding this into the
+mean value gives
+
+    X² ≤ \frac{C}{T}e^{πT/2}T^{C}\Big(mQ^{η} + C_ηQ^{η}\sqrt{π_*(Q)}\,X\Big)^2 + Cm² ,
+
+a quadratic inequality in `X` whose `X²` coefficient on the right is
+`≍ Q^{2η}π_*(Q)T^{-1}e^{πT/2}T^C`. Since the mean value needs `T ≳ Q` for the diagonal to dominate, that
+coefficient is `≫ 1` and the bootstrap **does not close**. ∎ `PROVED` (as a statement about this route)
+
+**Why this is structural, and what it says (`PROVED`).** Theorem D.11.1(ii) gives `Φ_E(σ) ≤ m` **only**
+for `σ ∈ [0,1]`, because that is exactly the range in which `e^{(σ−1/2)t} ≤ 2\cosh(t/2)`. Inside `(0,1)`
+the function `ξ` may vanish, so the division by `ξ(σ+iτ)` is illegitimate there without RH. The two
+endpoints `σ ∈ \{0,1\}` are the *only* abscissae where the degree ceiling and non-vanishing coexist — and
+non-vanishing at the endpoints is precisely (E2)'s last clause. **So the Mellin-positivity route to a
+coefficient bound is forced onto the line `\mathrm{Re}\,s = 1`, and any quantitative version of it must
+import a zero-free region.** That is not a defect of the proof; it is a property of the method, and it is
+worth recording as such.
+
+### 2.5 H2, H12, H15 — the comparison with `Ξ_a`, withdrawn; what replaces it
+
+**`WITHDRAWN` (H2, `FATAL`).** The following are withdrawn in full: "`Ξ_a` has **strictly more** sections
+than `ξ`"; the box "**D.11 verdict on the sign**" of round 1 §2.5 and its phrase "carries it in the
+direction opposite"; "anti-correlated with the sign"; the last row of the §2.6 table; refutation B6's
+second half; draft Theorem 17.6's comparative clause and draft Remark 17.7 in full; and the reason given
+in round 1 §6 for not opening D.14. **`A ≥ f` and `B ≥ g` with `g > f` says nothing about `A` versus
+`B`.** No upper bound for `h⁰_Z(mK)` on the full lattice exists in this round — that is item (23) — so no
+comparison of the two counts is available in either direction, and I should have seen it.
+
+**`WITHDRAWN` (H12).** "Any `h⁰` whose growth is driven by the decay rate of the canonical kernel is
+disqualified in advance" is withdrawn. It is the exact shape of the non-sequitur Paper 46 withdrew as
+finding M1 (Restatement 12.4a, Remark 12.4a′): a model-uniform *rule* may satisfy (a)+(b′)+(c) for `ξ`
+and fail them for `Ξ_a`; what is excluded is a **model-free proof**, never a function.
+
+**Theorem D.11.6′ (`CANDIDATE`; H15).** Let `0 < a < ½`, `K_a := (e^{at}K)⋆(e^{−at}K)` with `Φ_{K_a} =
+Ξ_a`, `Π_P = (∂_t²−c_1²)(∂_t²−c_2²)`, `w_q^{(a)} = Λ(q)(q^a+q^{−a})q^{−1/2}` (Paper 46 §12.5).
+ (i) Theorems D.11.1 and D.11.4′ transfer **verbatim** by Proposition 12.6's four substitutions, with
+     `ξ(σ) \rightsquigarrow Ξ_a(σ) > 0`, `s(1−s) \rightsquigarrow π_P(s)`, `\deg \rightsquigarrow
+     \deg_{Ξ_a}` of (S2), and exponential type `π/4 \rightsquigarrow π/2`. `PROVED`.
+ (ii) **Under the hypothesis `(H_a)`: one of `\{Π_PK_a > 0\}`, `\{Π_PK_a < 0\}` has bounded complement**
+      — the construction of §2.3/Theorem D.11.3 runs for `Ξ_a` with coefficients of the corresponding
+      sign, and yields a lower bound of the same shape. `CANDIDATE`.
+ (iii) `M_- := \sup(−Π_PK_a) < ∞` holds trivially (`Π_PK_a` is continuous with super-exponential decay).
+      `PROVED`.
+
+*Why (ii) is not `PROVED`.* Round 1 asserted `Π_PK_a > 0` at infinity from `K_a^{(4)} ∼
+K_a((\log K_a)')^4` and deduced `v_0 < ∞`. The asymptotics of `K_a` require a Laplace analysis of
+`K_a(t) = e^{−at}∫e^{2au}K(u)K(t−u)du` — the maximum of the integrand sits at `u = t/2` with Gaussian
+width `≍ e^{−t/2}`, giving `\log K_a(t) = −2πe^{|t|} + O(|t|)` — and turning that into a **two-sided**
+bound on the *fourth derivative*, uniformly, is a real lemma, not a line. Absent it, `(H_a)` is a
+hypothesis. `scripts/d137_lattice.py` computes nothing about `K_a`, and I have deliberately not added an
+illustrative check: a numerical sign pattern would not certify `(H_a)`, and the coordinator's rule is
+numerics only where a constant must be certified.
+
+**What replaces the comparison (`RESTATEMENT`).** The surviving statement is the weak and correct one:
+
+> The construction of Theorem D.11.3 is **model-uniform** in the sense of Paper 46 (12.3) — it mentions
+> only `D^W`, `⋆`, the canonical class, the positive weights and `\{\cdot ≥ 0\}`, all of which exist for
+> every admissible `Z` (Proposition 12.6) — so by **Restatement 12.4a** no derivation of (a)+(b′)+(c) can
+> rest on it alone. Both `ξ` and `Ξ_a` receive **lower** bounds from it; nothing is claimed about which
+> count is larger, and nothing about any sign.
+
+This is Remark 13.7's point, restated for the growth mechanism rather than for the weights. It is not a
+strengthening of Remark 13.7, and round 1 should not have presented it as one.
+
+### 2.6 H4 — Corollary D.11.5: one implication, no converse, and the relation to `ρ_Q`
+
+**`WITHDRAWN`:** the words "exactly" and "equivalent" in round 1's Corollary D.11.5 title, its "Reading"
+paragraph, the §2.6 table row, §6's item (23) row and draft Corollary 17.5.
+
+**Corollary D.11.5′ (`PROVED`).** Let `Q(m) ∈ [2,∞]` be the supremum of the largest index occurring in a
+class of `H⁰_Z(mK)`, and `Ψ(Q) := C\,π_*(Q)(\log m + Q)` the bound of Theorem D.11.4′. Then:
+
+ (i) `Q(m) ≥ c\sqrt{\log m}` for large `m` (Theorem D.11.3's construction). `PROVED`.
+ (ii) If `Q(m) < ∞` then `h⁰_Z(mK) ≤ Ψ(Q(m))`. `PROVED`.
+ (iii) There is an absolute `ε_0 > 0` such that `Q(m) ≤ ε_0\,m\sqrt{\log m}` **implies**
+      `h⁰_Z(mK) < ¼m²−¼m+χ` for large `m`, i.e. **implies that (c) fails for `h⁰_Z`**; equivalently, by
+      contraposition, **(c) `⟹` `Q(m) > ε_0m\sqrt{\log m}`**. `PROVED`.
+ (iv) There is **no converse**: `Q(m)` large does not imply `h⁰_Z(mK)` large, because (ii) is an upper
+      bound only. Round 1's "item (23) is equivalent to a bound on `Q(m)`" is therefore false as stated;
+      what is true is that *a bound `Q(m) = o(m\sqrt{\log m})` is **sufficient** for `h⁰_Z(mK) = o(m²)`*.
+ (v) `Q(m) < ∞` and `h⁰_Z(mK) < ∞` are **not proved here**. Theorem D.11.4′ gives finiteness of the count
+      at each fixed rank; the full-lattice finiteness is `OPEN`, and so the object of (iii) may not be a
+      finite integer. `OPEN`.
+
+**Relation to Paper 46's own reformulation of item (23) (`PROVED`; this is what H4(3) asks for).** §14.5
+item (23) reads: "whether `h⁰_Z(mK) = o(m²)` on the **full** lattice `Λ_W` — equivalently whether `ρ_Q` of
+Lemma 13.5a can be controlled uniformly in the rank". Lemma 13.5a gives `C(Q) ⊆ [−ρ_Q,ρ_Q]^{Q}`, i.e.
+`|a_q| ≤ mρ_Q` for feasible `λ` of rank `Q`, with `ρ_Q` **not controlled at all**. Theorem D.11.4′
+supplies the first explicit bound on it:
+
+    ρ_Q \;≤\; C\,e^{CQ}/\min_{q≤Q}Λ(q) .                                              (2.2)
+
+So the two reductions are related but distinct: the paper's asks for `ρ_Q` **uniform in the rank** — (2.2)
+is exponential, not uniform — while `Q(m)` bounds the **rank itself**. Either suffices: a uniform `ρ_Q`
+with an unbounded rank still leaves `h⁰ ≤ π_*(Q)\log(2mρ+1)`, which needs `Q` bounded, so in fact
+**item (23) needs both**, and (2.2) supplies one of the two in a non-uniform form. Round 1 claimed a
+reduction to one number; there are two, and only the second is new.
+
+### 2.7 H20 — quantifiers and the two unstated steps in Theorem D.11.3
+
+Both are supplied above: `2π²q^{9/2}e^{9u_0/2} ≥ 1` is Corollary 2.3, and the quantifier ordering is
+now explicit: **first** choose the absolute constants `β = 5.1`, `M_+ ≤ 17`, `C` (from
+`\log(M_+/w_q) ≤ C\log Q`); **then**, given `m`, set `Q := \lfloor\sqrt{(\log m)/(2β)}\rfloor`; the
+brackets `\log m − βq² − \log d − \log(M_+/w_q) ≥ ¼\log m` hold, and in particular `N_q ≥ 1`, for all
+`m ≥ m_1` where `m_1` is absolute. The conclusion `h⁰_Z(mK) ≥ c(\log m)^{3/2}/\log\log m` then holds for
+all `m ≥ m_1` with `c` absolute. Theorem D.11.3 is otherwise unchanged, and the auditor reports having
+reproduced it.
+
+---
+
+## 3. D.12 — repairs H9, H10, H13, H14, H19
+
+### 3.1 H14 — CC's sign convention, checked before importing (`PROVED`)
+
+Connes–Consani define the archimedean Weil functional with an **explicit change of sign** `[cc:88–90]`:
+
+> "the geometric side of the explicit formula … is given by an elusive distribution `W_R` … Weil's
+> inequality in this context is the following statement (note the change of sign) … one has:
+> `W_∞(f) ≥ 0` where `W_∞ := −W_R`."
+
+In Paper 46's normalization, `⟨h,W_{fin}+ω_∞⟩ = \mathrm{PRIME}(h) − \mathrm{ARCH}(h)` (Theorem 11.3,
+(11.4)), and for `h = F⋆F^∨` with `\mathrm{supp}(h) ⊂ (−\log2,\log2)` the prime part is empty, so
+`⟨h,W_{fin}+ω_∞⟩ = −\mathrm{ARCH}(h)` — the geometric side, with `W_R` playing the role of `\mathrm{ARCH}`.
+CC's `W_∞ = −W_R` is therefore `+\mathrm{ARCH}(h) = −⟨h,ω_∞⟩`, and on a primitive `F` (where
+`2Φ_F(0)Φ_F(1) = 0`) the corrected corpus quantity is
+`W_{\{∞\}}(F) = −⟨F⋆F^∨,ω_∞⟩ = \mathrm{ARCH}(F⋆F^∨)`. **The two agree**, and CC's `W_∞(g⋆g^*) ≥ 0` is
+importable as `W_{\{∞\}}(F) ≥ 0` with the conventions matched. Round 1 imported it without this check;
+the check is now in the text, with its citation.
+
+### 3.2 H10 — the vanishing conditions are **not** primitivity (`CORRECTED`)
+
+**`WITHDRAWN`:** round 1 §3.2's "`\hat g(\pm i/2) = 0 ⟺ Φ_F(1) = Φ_F(0) = 0` (primitivity, (1.7))", the
+word "**exactly**" in Corollary D.12.2, the §4.1 table gloss "*the same two linear conditions*", and
+draft §19's second bullet.
+
+**Corrected statement (`PROVED`).**
+
+ 1. CC's hypotheses are on the **convolution square root** `g`, not on `f = g⋆g^*`: Theorem 1
+    `[cc:109–111]` asks for `\hat g(i/2) = \hat g(0) = 0`; Theorem 6.11 `[cc:3108]` asks only for
+    `\hat g(−i/2) = 0`. In the corpus's variables `t = \logρ`, `\hat g(\mp i/2) = Φ_F(1)`, `Φ_F(0)` and
+    `\hat g(0) = Φ_F(½)`.
+ 2. CC's displayed condition (11) `[cc:236–239]` is stated for the **test function** `f`. Since
+    `Φ_{F⋆F^∨}(s) = Φ_F(s)Φ_F(1−s)` (Lemma 11.2(iv)), both equations of (11) read
+    `Φ_F(0)Φ_F(1) = 0` — a **single** equation, **strictly weaker** than primitivity.
+ 3. Corollary D.12.2(a) is nevertheless **safe**: it hypothesizes primitivity, which implies CC's
+    condition, so the imported conclusion still holds. Only the claimed *identity* of the conditions is
+    wrong, and only the word "exactly" has to go.
+ 4. **The exact reconciliation, worth stating.** For real **even** `F`, `Φ_F(1−s) = Φ_F(s)`, so
+    `Φ_F(0) = Φ_F(1)` and CC's single condition `\hat g(i/2) = 0` **is** primitivity. Paper 45 Theorem
+    10.4 produces even *and* odd witnesses, so on the even half of the corpus's test class the two
+    hypotheses coincide, and on the odd half CC's is weaker. This is the precise relation and it replaces
+    round 1's false identification.
+
+### 3.3 H9 — Theorem D.12.5 withdrawn to its correct scope
+
+**`WITHDRAWN`:** round 1's Theorem D.12.5 ("the prime block is not a reservoir", `PROVED-IN-REPOSITORY`),
+its use in §3.5(ii), refutation B3's second limb, and draft Theorem 18.5's gloss "*There is no positive
+prime block to add.*"
+
+**Replacement (`PROVED-IN-REPOSITORY` + `OPEN`).** Paper 44 Theorem 8bis.4a exhibits, at every finite
+chart, **some** primitive class with `Q_{fin} > 0`; its witness is built by concentrating `\hat g` on
+`|τ| ≤ δ`, so the support of `g` is of size `≳ 1/δ` and is **not** controlled. Paper 44 Remark 8bis.4b
+states the limits: "It is a **fixed-chart** statement, and it is **not** claimed in the colimit"; "The
+colimit version is therefore `OPEN`". D.12's question is about `\mathrm{supp}F ⊆ [−T,T]` with `T`
+slightly above `½\log2`. **Whether the pure Frobenius form fails positivity under that support
+restriction is `OPEN`**, and Theorem 8bis.4a does not bear on it.
+
+### 3.4 H13 — labels, and §3.4 restated as non-applicability (`RESTATEMENT` + `NOT-APPLICABLE`)
+
+`REFUTED` is reserved for statements shown false. Re-labelling, with no change of content except where
+noted:
+
+| round-1 item | round-1 label | round-2 label |
+|---|---|---|
+| §3.4 (Doc 135's purity cannot supply the prime block) | `REFUTED` (method) | **`RESTATEMENT`** of Doc 135 §7.2 B3 + **`NOT-APPLICABLE`** |
+| B1 (D.0's dichotomy) | `REFUTED` | **question ill-posed** — the dichotomy is not exhaustive |
+| B2 (the sign of `W_S`) | `REFUTED` | **`REFUTED`** (unchanged — the blueprint's inequality *is* false as an expression of Weil positivity) |
+| B3 (the Doc-135 route) | `REFUTED` | **`NOT-APPLICABLE`** (and its 8bis.4a limb withdrawn, §3.3) |
+| B4 (`Ξ_a` must fail at `S=\{∞,2\}`) | `REFUTED` | **conjecture answered: no** — not shown false, shown unsupported |
+| B8 (Remark 13.6a) | `REFUTED` | **deleted** (§2.3b) |
+| draft Remark 18.6 | `REFUTED` | **`RESTATEMENT`** + `NOT-APPLICABLE` |
+
+**§3.4, restated.** Doc 135's Theorems A/A′ are theorems about the **constructive** regime (weight-one
+local roots, `a ≤ 0`); the semilocal object of D.12 is the **destructive** regime (`a = Λ ≥ 0`, polar
+block). Doc 135 says this itself at §7.2 B3 ("régimen **destructivo**, donde los primos restan y la
+positividad debe venir del bloque polar … **no es todavía el paso inductivo de H⁺** — es su gemelo
+especular") and files the semilocal object as its own open problem `[GAP-135.B]`. So the blueprint's
+route is **not applicable**, and this is Doc 135's statement, not a new refutation. Credit accordingly.
+
+### 3.5 H19 — Theorem D.12.4 demoted, with the arithmetic fixed
+
+**Remark D.12.4′ (`PROVED`, demoted from `Theorem`).**
+ 1. *Arithmetic.* With `F := φ + τ_aφ`, `a := \log2`, `F⋆F^∨ = 2(φ⋆φ^∨) + τ_a(φ⋆φ^∨) + τ_{−a}(φ⋆φ^∨)`,
+    so `(F⋆F^∨)(a) = 2(φ⋆φ^∨)(a) + (φ⋆φ^∨)(0) + (φ⋆φ^∨)(2a) = (φ⋆φ^∨)(0) + O(ε)`, **not**
+    `2(φ⋆φ^∨)(0)`. The sign conclusion is unaffected.
+ 2. *Demotion.* "`F ↦ −⟨F⋆F^∨,W_2⟩` is not nonnegative" is immediate — `W_2` is a positive atomic measure
+    and `F⋆F^∨` can be made positive at `\pm\log2` — and no construction is needed. It is a remark.
+ 3. *The monotonicity sentence, corrected.* Round 1 wrote "hence no monotonicity argument in `S` gives
+    positivity", which does not follow: `W_S` **is** decreasing in `S` whenever the added prime blocks are
+    positive, and the target `W_{\text{all}} ≥ 0` sits at the bottom of that chain. The correct statement
+    is the converse one: **`W_{\{∞\}} ≥ 0` carries no information about `W_{\text{all}} ≥ 0`**, because
+    the chain runs the wrong way — every prime added can only lower `W_S`. That is the honest form of
+    "the archimedean window proves nothing about the sign", and it is worth more than the sentence it
+    replaces.
+ 4. The constant `2(\log2)2^{−1/2} = 0.98026…` and its sign stand (the auditor checked them).
+
+### 3.6 H14 (second limb) — CC's own semilocal programme, cited
+
+Round 1 declared D.12(ii) `OPEN` without noting that CC state it as their **next step** `[cc:82–84]`:
+
+> "It is thus natural to implement this fundamental positivity in the semi-local framework applied to the
+> finite set of places `\{∞,2,3,…,p\}`, and provide a conceptual reason for Weil's negativity for
+> functions `f` fulfilling the support condition `\mathrm{Support}(f) ⊂ (p^{−1},p)`. In this paper we
+> consider the simplest instance of this strategy, namely when the support … is contained in `(1/2,2)` …
+> so that rational primes are not involved."
+
+So D.12(ii) is **the literature's open problem in the literature's own words**, and the corpus's `W_S`
+is its restatement in Paper 46's normalization. The support condition they name — `(p^{−1},p)` for `f`,
+i.e. `|t| ≤ \log p` for `F⋆F^∨` — is exactly the corpus's window convention. Cited now in §3.5(ii) of the
+round-1 report and in the draft.
+
+---
+
+## 4. D.13 — repairs H10 (propagated), H11
+
+### 4.1 H11 — the table, split into exact identities and analogies
+
+Round 1's §4.1 labelled every row `RESTATEMENT` or `IMPORTED`. Corrected split:
+
+**Exact identities (with the computation, `PROVED`):**
+
+ * `Q = −(ρ∂_ρ)² + ¼` `[cc:243]`, `[cc:1445]` **is** `Π = −∂_t² + ¼` (Paper 46 (1.11)): with `t = \logρ`,
+   `ρ∂_ρ = ∂_t`, and on `s = ½+iz` the symbol `z²+¼` (CC's footnote `[cc:1445 fn]`) is `s(1−s)`
+   (Paper 45 Lemma 10.1). This is the section's one genuine identity, and the auditor confirms it.
+ * The vanishing conditions, **as corrected in §3.2**: CC's (11) on `f` is `Φ_F(0)Φ_F(1) = 0`; primitivity
+   implies it, strictly; and for real **even** `F` the two coincide. `PROVED`.
+
+**Analogies, relabelled `HEURISTIC`** (round 1 had them as `RESTATEMENT`; no map is constructed in either
+direction, and constructing one is the research):
+
+ * scaling kernel `k(x,y) = δ(λx−y)` `[cc:145–148]` ↔ `Frob_n` (Paper 44 Thm 3ter.4–3ter.7);
+ * trace `= ∫k(x,x)` `[cc:186–188]` ↔ `T_∞`, `I_∞`; diagonal ↔ `Δ = Frob_1`;
+ * small square `∆` `[cc:588]` ↔ the polar packet / `K`;
+ * big square `Σ` ↔ the Frobenius lattice `Λ_W ⊂ 𝓝_∞`;
+ * trace-remainder `δ(ρ)` (8) `[cc:193–202]` ↔ the Tate block `𝔅_T` / `Σ(T)` of P124.013;
+ * the jump of `δ'` at `ρ = 1` `[cc:226–232]` ↔ the diagonal divergence (8bis.4a).
+
+**`IMPORTED`, no transfer claimed:** `L = D + W_∞ ≥ 0` `[cc:204–207]`; `δ(ρ) = \mathrm{Tr}(ϑ(ρ^{−1})\hat
+P_1P_1)` `[cc:264–268]`; Theorem 4.7 `[cc:289–296]`, `[cc:1766–1769]`; the "delicate principal values"
+sentence `[cc:139–141]`; the semilocal programme `[cc:82–84]`; the sign convention `W_∞ := −W_R`
+`[cc:88–90]`.
+
+### 4.2 H11 — §4.4 repaired: the circularity removed, the label corrected
+
+**`WITHDRAWN`:** round 1's Statement D.13.3 as written, including "This is a new and, **I think**, the
+correct reading" (an opinion inside a labelled statement) and the label `RESTATEMENT`.
+
+**Statement D.13.3′ (`HEURISTIC`).** Two facts, each independently sourced, and one non-inference:
+ (a) CC's `Σ` carries a **positive** functional: `\mathrm{Tr}(ϑ(f)S) ≥ 0` with `S` the projection on
+     Sonin's space (Theorem 4.7, `[cc:289–296]`, `[cc:1766–1769]`). `IMPORTED`.
+ (b) `Λ_W ⊂ 𝓝_∞` and `𝓝_∞` is the **radical** of `I_∞`: `I_∞(N,X) = 0` for all `N ∈ 𝓝_∞`, `X ∈ D^W`
+     (Paper 46 Theorem 11.11). `PROVED-IN-REPOSITORY`.
+ (c) **No inference is drawn.** (a) and (b) are statements about two objects that no construction
+     identifies; the round-1 argument ("therefore `∆ → Σ` transfers only as a dimension count") used the
+     identification `Σ ↔ Λ_W` from the table row it was meant to justify, and is withdrawn as circular.
+     What remains is a **question**: is there any completion in which the corpus's degenerate `𝓝_∞`
+     carries a positive functional in CC's sense? `OPEN`, recorded as D.13-γ.
+
+---
+
+## 5. Repairs to the round-1 refutation table (§5 of `R137_001`)
+
+| # | round-1 verdict | round-2 disposition |
+|---|---|---|
+| B1 | `REFUTED` (dichotomy) | **question ill-posed**; content unchanged (H13) |
+| B2 | `REFUTED` (sign of `W_S`) | **stands** — the auditor independently verified it |
+| B3 | `REFUTED` (Doc-135 route) | **`NOT-APPLICABLE`**, credited to Doc 135 §7.2 B3 / GAP-135.B; its 8bis.4a limb **withdrawn** (H9, H13) |
+| B4 | `REFUTED` (`Ξ_a` at `S=\{∞,2\}`) | **conjecture answered: no** — unsupported, not false (H13) |
+| B5 | partially met, re-posed | **stands**, but "one number" → two reductions, one of them the paper's own `ρ_Q` (H4) |
+| B6 | confirmed and strengthened | **first half stands** (the mechanism is model-uniform, Restatement 12.4a); **second half withdrawn** (H2) |
+| B7 | quantified | **stands**, restated one-directionally (H4) |
+| B8 | Remark 13.6a corrected | **deleted**; replaced by a confirmation (H6) |
+
+---
+
+## 6. Open list after round 2
+
+| id | statement | label |
+|---|---|---|
+| (23) | `h⁰_Z(mK) = o(m²)` on the full `Λ_W`. Two **sufficient** routes, neither available: `Q(m) = o(m\sqrt{\log m})` (Cor. D.11.5′(iii)) or `ρ_Q` uniform in the rank (Paper 46's own form; (2.2) gives only `ρ_Q ≤ Ce^{CQ}`) | `OPEN` |
+| (23a) | Is `Q(m) = O(\sqrt{\log m})`? | `OPEN` |
+| (23b) | Can the Montgomery–Vaughan step run at length `T ≍ \log Q` rather than `T ≍ Q`? | `OPEN` |
+| (23c) | *new.* Are `Q(m)` and `h⁰_Z(mK)` finite at all? | `OPEN` |
+| (23d) | *new.* Is there a coefficient bound on `Λ_W` that avoids a zero-free region? §2.4b shows the `σ>1` route fails and the method is forced onto `\mathrm{Re}\,s = 1` | `OPEN` |
+| `(H_a)` | *new.* Does `\{Π_PK_a > 0\}` or its complement have bounded complement — i.e. does Theorem D.11.3 transfer to `Ξ_a`? | `OPEN` (Thm D.11.6′(ii) is `CANDIDATE` on it) |
+| D.12-α | A finite `(S,T)` with `W_S ≥ 0` for `ξ` and `W^{(a)}_S < 0` for `Ξ_a` on the same support class — acceptance test for any sign-carrying semilocal theorem (the auditor endorses it) | `OPEN` |
+| D.12-β | `W_{\{∞,2\}} ≥ 0` for some `T > ½\log2`? = CC's own programme `[cc:82–84]` = GAP-135.B | `OPEN` |
+| D.12-γ | *new.* Does the pure Frobenius form fail positivity under a **narrow support** restriction? (Thm 8bis.4a does not say; Rem. 8bis.4b declares the colimit `OPEN`) | `OPEN` |
+| D.13-γ | A completion in which `𝓝_∞` carries a positive functional as CC's `Σ` does | `OPEN` |
+| D.0-δ | Do G1–G3, G5 of phase 65 transfer to `Ξ_a` at all? (G3 needs a renormalized determinantal limit theorem for `Ξ_a`) | `OPEN` |
+
+---
+
+## 7. Reassessment of the D.14 gate, for the lead
+
+**The gate should stay closed, and the anti-correlation argument that round 1 gave for closing it is
+withdrawn.** What remains is arithmetic and it is enough. The blueprint opens D.14 on "super-logarithmic
+growth", and Theorem D.11.3 does deliver it: `h⁰_Z(mK) ≥ c(\log m)^{3/2}/\log\log m`, strictly beyond
+Lemma 13.5a's `O_Q(\log m)` at fixed rank. But requirement (c) asks for `¼m²`, and the two quantities are
+not near-misses: at `m = 10^6` the proved lower bound is of order `10^{2}` and the requirement is of order
+`10^{11}`. Corollary D.11.5′(iii) converts the distance into a structural demand — (c) forces feasible
+corrections of `mK` to involve prime powers of size `≳ m\sqrt{\log m}`, i.e. modulus `t ≈ \log m`, where
+`K(t) ≈ e^{−πm²}` — and Theorem D.11.2′ shows that a *single* generator at `q` is feasible only from
+`m ≳ e^{5.1q²}`, the exact opposite regime. Nothing in this round says that near-cancelling combinations
+cannot evade the single-generator bound; that is item (23), and it is open. But the gate as written
+("super-logarithmic growth") measures growth against zero rather than against `¼m²`, and on the corrected
+evidence there is no ground for opening D.14 in round 3. I recommend the lead re-word the gate as
+*"`h⁰_Z(mK) = Ω(m^{2−ε})` for some `ε < 2`, or `Q(m) = Ω(m)`"*, either of which would be a genuine signal,
+and keep D.14 closed until one of them appears.
+
+---
+
+## 8. Reproduction
+
+```text
+cd 03-research/phase-137-row-d-canonical-coupling/scripts
+python3 d137_lattice.py --fast     # ~32 s
+python3 d137_lattice.py            # run of record, exit 0
+```
+
+The script was rewritten for this round. `u_0` and the kernel lower bound are **no longer numerical**:
+they are Lemmas 2.1 and 2.2, and `C2`/`C3` only verify them. `C2` additionally tests `ΠK > 0` inside
+`[0.235, u_0)` — the interval round 1's check never probed — so the script now *exhibits* the defect H1
+found rather than being blind to it. `C4` is the one certified numerical constant, `M_+ ≤ 17`, bounded on
+the whole interval `[0,u_0]` by grid plus Lipschitz margin. `--fast` and the full run report the **same**
+constants (`u_0`, `β`, `κ_q`, the threshold) because those constants no longer depend on the grid; only
+the verification density changes. `M_+ ≤ 17` is `PROVED` modulo the single inequality `|ΠK'| ≤ 460` on `[0,u_0]` (round 3, N7).
+**Numerics illustrate and certify one constant; they prove nothing, and
+no number here is evidence for any sign.**
+
+## 9. Label
+
+**[Round 3: superseded in part by `R137_005_BUILDER_ROUND3.md` — §1.1's closing parenthetical is
+**withdrawn** (finding N1: R3 point 4 *does* bound `‖ι_Pφ_α‖²` uniformly, and the shorting preserves it),
+and Finding D.0.4's conclusion is re-grounded on the fork of `R137_005` Proposition 1.1. Minors N2–N7 are
+corrected in place above.]**
+
+`R137.003` — all twenty findings accepted; two `FATAL` repaired by construction (H1 analytically, H2 by
+withdrawal); four statements downgraded (`CANDIDATE`, `OPEN`, `HEURISTIC`, deleted); one import declared
+with its §1.13 cost; one alternative route worked out and shown to fail (§2.4b). **No sign is claimed,
+asserted or suggested anywhere in this document.**

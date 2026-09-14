@@ -8,6 +8,52 @@
 > `M_Ξ` vs two-variable Pick kernel `K_Ξ`; source core `a>1/4`; constructive Mellin-bump residue. See
 > [`CORRECTIONS-CONNES-R3.md`](CORRECTIONS-CONNES-R3.md). The single load-bearing input is **H1 ⇐ G2**.
 
+> **[STATUS NOTE — phase 137, rounds 1–3, item D.0 (hostile audit). Placed after the R3 banner because
+> it audits BOTH versions of the chain.]**
+>
+> **This document is NOT a proof of the Riemann Hypothesis.** Its self-description as "a complete,
+> RH-free chain modulo three standard local estimates" does not hold, in either version.
+>
+> *Pre-R3 text (§§1–8 below).* The chain is `(G1–G5) ∧ L1 ∧ L2 ∧ L3 ⟹ RH`. L2 and L3 are genuine
+> identities in `Re s > 1`. **L1 is not**: it is the uniform-in-`P` Gram bound that §2's Montel/Vitali
+> step needs, and by §5 it *implies RH*, so §6's blanket "none can encode zero locations" fails for it.
+> The Vitali step itself is **valid** given its premises — it is not the Hurwitz fallacy refuted in
+> `D8.5b-i` §3; the defect is the premise.
+>
+> *R3 text (`CORRECTIONS-CONNES-R3.md`, which supersedes §3 and §5).* The verdict survives, and the reason
+> is a **fork between two objects**, not a missing estimate. Round 3 verified R3 point 4 from source:
+> with the core `S_a^∘`, `a > ¼`, the Gram energy of a source is
+> `Σ_{p^k≤P²}(\log p)p^{−k/2}|⟨v_{p,k},\hatφ(k\log p)⟩|² ≤ CΣ(\log p)p^{−k(1/2+2a)} < ∞`, **uniformly in
+> `P`** — this *is* L1 — and the shorting cannot spoil it (an orthogonal projection, or a Schur
+> complement of a positive form, only decreases the norm). So the Montel premise **is** available for
+> `G_P^∘`, the sourced channel matrix. But R3 **point 1** withdraws the limit identification for exactly
+> that object ("*A resolvent is not additive … The cancellation was asserted*"), and R3 **point 3** applies
+> Vitali instead to the renormalized trace `M_P = −∂_z\log D_P^∘ − E_P'/E_P`. For a trace no source-frame
+> bound is a bound on the Nevanlinna mass: `−∂_z\log D_P^∘ = Σ_jm_j/(z_j−z)` has total mass the eigenvalue
+> count of `A_P`, divergent, and the subtraction of `E_P'/E_P` is the `½(log P)²` renormalization, so the
+> boundedness clause R3 asserts in passing is exactly the strong-resolvent-continuity that `D8.5b-i` §5
+> states as equivalent to RH. **The object with the bound is not the object with the identification, and
+> R3's ledger ("a single load-bearing input, H1 ⇐ G2") lists neither half of the difficulty.**
+>
+> *Falsifier.* §7 excludes Davenport–Heilbronn by the **signedness** of its weights. That does not exclude
+> `Ξ_a(s) = ξ(s+a)ξ(s−a)`, whose weights `Λ(n)(n^a+n^{−a})` are nonnegative and whose zeros are off the
+> critical line unconditionally (Paper 46 Thm 12.4); G1, G2 and R3 point 4 all transfer to it (point 4 with
+> the core threshold moved from `a > ¼` to `a > ¼ + a/2`). What `Ξ_a` fails is **G4**: its polar set has
+> **four** points, so the divergence is not rank one and the rank-one shorting `Q_P = I − |ĥ_P⟩⟨ĥ_P|` does
+> not remove it, while §2 does use rank-one-ness ("the excluded `H–H` element"). **That is not a defence
+> of the chain**: the class of series with G4's shape (Euler product with positive atoms, a single simple
+> pole, functional equation) is large — every Dedekind zeta function `ζ_K` belongs to it, with point 4
+> transferring with a factor `[K:Q]` — but **no member with proven off-line zeros is known** (GRH for
+> `ζ_K` is open). So the falsifier test cannot adjudicate this chain; and if the chain were sound it would
+> prove GRH for every number field. The verdict rests on the fork, which is internal. [Corrected per
+> `R137_006` finding N9, 2026-09-13.]
+>
+> Full verdict with quoted lines: `03-research/phase-137-row-d-canonical-coupling/R137_001_BUILDER_ROUND1.md`
+> §1, as repaired by `R137_003_BUILDER_ROUND2.md` §1 and **decided** by `R137_005_BUILDER_ROUND3.md` §1;
+> ledger entry in `NO-GO-LIST.md`, heading "[phase 137] audit of phase-65 RH-PROOF.md".
+>
+> **Label: `REFUTED` as a proof of RH; `PARTIAL-SUCCESS` as a localization of the wall.**
+
 **Phase 65 / Signature-Continuity Package.** Pure mathematics. This is the capstone: the full chain from
 the proved inputs (G1–G5, Phases 60–64) to RH, assembled from the package documents, with Check 4 now a
 theorem (D8.5d) and Connes' audit fixes A–E applied. Every load-bearing step lives in the

@@ -106,8 +106,8 @@ structure — so the test is *not* about the identity. It is about `P`.
 Three outcomes:
 
 - **`P` fails for DH.** Then this programme has a genuine distinguishing input,
-  and the whole corpus reorganises around making `P` load-bearing. This is the
-  only outcome that bears on RH.
+  but one must still test whether `P` is sufficient, universal, or merely a
+  separator. Failure for DH alone is not progress toward RH.
 - **`P` holds for DH.** Then `P` is not a wedge; return to Step 2 with the next
   candidate. Record the failure in the obstruction ledger.
 - **No `P` survives Step 2 at all.** Then the programme is subject to the DH
@@ -147,8 +147,10 @@ Hardy–Littlewood strength.
 
 - Step 2 yields no candidate `P` → close the phase, record the DH ceiling.
 - Step 3 shows every `P` holds for DH → same.
-- Step 3 shows some `P` fails for DH → stop everything else and pursue it; that
-  is the first genuinely new arithmetic input the programme has produced.
+- Step 3 shows some `P` fails for DH → first distinguish norm-pushforward
+  indexing from the invariant `(place,iterate)` package; then audit it against
+  positive-genus curves, Dedekind zeta and false central-line examples that
+  retain `P` before treating it as load-bearing.
 
 ## What this phase will not do
 

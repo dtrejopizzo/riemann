@@ -1,0 +1,175 @@
+# R129.003 — row A rebuild, round 2: builder report
+
+Date: 2026-09-12.  Target: Paper 43.  Input: `R129.002` (auditor, round 1).
+
+**Every finding F1–F19 is accepted.**  None was rejected.  Two of the fixes
+produced new mathematics rather than withdrawals; four produced withdrawals;
+the rest are corrections of statement or of attribution.  The ledger moved
+*down*: six clauses are now `PARTIAL` or `OPEN` where round 1 had four.
+
+---
+
+## 1. The two constructive fixes
+
+### 1.1 The valuation splitting (answers F6, and repairs F1, F13, 10.2b)
+
+**Lemma 3.3.**  `φ(x) := ∏_{p∈S_f} p^{v_p(x_p)}` is a homomorphism
+`A_S^× → Γ_S` restricting to the identity on `Γ_S`.  Hence
+
+    A_S^× = Γ_S × ker φ,   C_S ≅ ker φ = R^× × ∏_{p∈S_f} Z_p^×,
+    |x|_S = |x_∞|  on C_S.
+
+**Corollary 3.4.**  `σ: C_S ≅ ker φ ↪ A_S^×` is a **group-theoretic section**,
+so `β_{σ(u)}β_{σ(v)} = β_{σ(uv)}` on the nose: the Fell bundle of P123.014 §5
+is **canonically trivial**, and `D_A = C_c^∞(C_S)` is a commutative convolution
+`†`-algebra with `F ↦ E_F` a homomorphism.
+
+This is exactly the datum P123.014 §5 says is missing — "a scalar test `h` does
+not define a canonical element of the faithful Fell algebra without a
+splitting or the corresponding line twist" — and P123.014 §7 lists as the
+descent half of its next gate.  It is supplied here because `Γ_S` is free on
+the primes of `S_f` and `φ` retracts onto it.  It makes canonical: the section
+algebra, the coefficient of `E_F` at a class (hence effectivity, F13), and the
+chart maps (F1).
+
+### 1.2 The chart comparison formula (answers F1)
+
+The auditor is right that round-1's `J_{ST}` did not exist.  Extension-by-one
+is refuted by P123.018 §2; the displayed formula is not `Γ_T`-invariant; and
+P123.018 §2 adds "projection … also does not automatically descend …".
+
+With Lemma 3.3 the projection **does** descend: `π_{TS}: C_T ↠ C_S` is the
+coordinate projection of the split forms, a continuous surjective homomorphism
+with compact kernel `∏_{ℓ new}Z_ℓ^×`, so `J_{ST} = π_{TS}^*` is a continuous
+algebra `†`-homomorphism `D_A(S)→D_A(T)`.  P123.018 §2's counterexample is
+disarmed: `a=(1,1)` and `a'=(2,2)` have `φ_S`-canonical representatives
+`(1,1)` and `a'/2=(1,1)`, the same point.
+
+And then **the equality is false**.  Computing the canonical representative of
+`j_{T,ℓ}(ℓ^k u)` gives
+
+    T_T(J_{ST}F) = T_S(F)
+       + Σ_{ℓ∈T_f∖S_f} (log ℓ) Σ_{k≠0} ℓ^{−|k|/2} F(δ_S(ℓ^{−k})),   (8A.12)
+
+`δ_S(t) = (t at ∞, t at every p∈S_f)`, inner sum finite.  Old places match
+exactly (this is the content of P123.042 §4 and P123.046 §4, now as an
+identity of class-group maps); new places contribute their half-density prime
+weights.  Arithmetically this is the expected behaviour — enlarging the chart
+adds local factors — but clause A.5, read as invariance, is **not** satisfied:
+**(O-A5-2)**.
+
+---
+
+## 2. Findings, disposition by disposition
+
+| finding | disposition |
+|---|---|
+| F1 FATAL | **Fixed constructively.**  Chart maps built from Lemma 3.3; Theorem 8A.5 replaced by the comparison formula (8A.12); invariance declared false; (O-A5-2) added. |
+| F2 | **Fixed.**  Theorem 8.7 now reads `T = Σ_v W_v + c·F(1)` with `c` open.  The round-1 comparison of P123.012 (1.2) with P123.046 (4.1) is withdrawn: P123.046 (4.1) is a finite-place identity with no archimedean term (Remark 8.7b.3). |
+| F3 | **Fixed.**  Import `C` downgraded in §12: imported for existence and local shape, **not** for its constants.  P123.004 §4 calls its own display schematic; P123.035 §6's stop rule quoted.  (O-A5-3) added.  Round 1's "audited in P123.004" is corrected. |
+| F4 | **Fixed.**  `Corr_A^{tr}` redefined as pairs `(K,𝔣)`, presented complexes; `s` defined on presentations by construction (Def. 8A.1, Rem. 8A.1a). |
+| F5 | **Withdrawn.**  Theorem 8A.8's Karoubi argument is deleted; replaced by Proposition 8A.8 (invariance under isomorphism of presentations, elementary contractions, shifts/cones).  Full homotopy invariance is (O-A5-4).  The idempotent-completeness clause added to Definition 3.1 in round 1 is removed with it. |
+| F6 | **Fixed.**  Remark 3.5 states the type correction: `Corr_A^{tr} ⊄ G`; two categories, related by `F↦E_F`.  Splitting stated and proved (Lemma 3.3, Cor. 3.4). |
+| F7 | **Accepted; obstacle added.**  Theorem 8A.7 split into a pointwise statement (proved) and the completion statement (open).  (O-A5-1)=(O-A8-4), quoting P123.014 §7 and P123.012 §7.1 verbatim.  P123.012 §5's commutator hypothesis checked: vacuous here because `D_A` is commutative — and flagged as therefore empty, not to be transported. |
+| F8 | **Accepted.**  Theorem 9.5 rebilled: it proves `N_A ≠ 0` and that `T` separates two sections of equal modulus profile.  "Nonzero mixed sector" is withdrawn (Remark 9.6). |
+| F9 | **Fixed, all three.**  (i) The false archimedean-slice claim replaced by the correct argument (`F∘j_∞ ≡ 0`, from (9.5b)).  (ii) Explicit hypotheses: `h≥0`, `h(1)>0`, `supp h ⊂ (θ^{−1},θ)` with `θ=min_q q^{1/2}`, giving `ν = h(1)vol(1+p^mZ_p) > 0` and killing the off-unit shells at every place.  (iii) `T|_𝓝 = 0` now proved (approximate identity, continuity on the fixed-support step). |
+| F10 | **Fixed.**  Theorem 8.9 hypotheses: `T'` continuous, archimedean part of finite order. |
+| F11 | **Accepted.**  A.1 downgraded to `PARTIAL`; (O-A1-1) descent, (O-A1-2) object restriction.  The spec's own audit table already read "OPEN: common integral/analytic coefficients and full geometric descent". |
+| F12 | **Accepted.**  A.9 → "`PASSED for the formalism` on the automorphism sector".  `Perf^{gr}` removed; `Φ` stated to be a functor out of a surrogate `G_Λ`, not out of `G`; the antilinear-`†` vs linear-`D_h` mismatch recorded; the twist bookkeeping labelled as such. |
+| F13 | **Fixed.**  Definition 10.2a (effectivity for smeared objects) and Proposition 10.2b (`E_F` effective ⟺ `F ≥ 0`, proved from the canonical trivialization and P123.074's row-measure criterion).  Theorem 10.3 is no longer vacuous. |
+| F14 | **Fixed.**  The `†`-stability chain in Theorem 9.4 rewritten cleanly. |
+| F15 | **Fixed, and this is the most substantive housekeeping item.**  The "spectral measure" formulation is withdrawn as ill posed: `|·|_S^{±1/2}` is not a unitary character of `C_S`.  Replaced by the support mismatch (9.6): `T` is a sum of measures carried by the Haar-**null** slices `j_v(Q_v^×)`, while `λ_±` are Haar integrals over `C_S`. |
+| F16 | **Fixed.**  The two `vol(Z_p^×)` conventions (`1−p^{−1}`, P123.046 §1, additive; `log p`, P123.042 §1, multiplicative) marked at each use. |
+| F17 | **Fixed.**  The categorical shadow of (2.6) is renamed `Sh`; `Tr_A` is reserved for the analytic trace.  Their non-identification is (O-A5-5). |
+| F18 | **Fixed.**  Remark 3.6: P123.064/082 are proved for the P123.019/P123.053 algebras, not for `U`; the arguments transfer (unital complete Fréchet + continuous automorphism + left-linearity), the conclusion (3.3) is a transfer and is marked as such. |
+| F19 | **Fixed.**  Remark 8.7a: with `S` fixed and finite the old paragraph was vacuous; the substantive stabilization statement (P123.032–033) is not used, and the chart statement actually proved is (8A.12), whose corrections do not vanish. |
+
+---
+
+## 3. Attack on the open obstacles
+
+### (O-A6-1) — the Tate functionals and the radical.  **Not proved.**
+
+I could not prove that `λ_±` annihilate `𝓝`, and I record why, precisely.
+
+**The structural obstruction.**  By Lemma 3.3, `C_S ≅ R^× × ∏_{q∈S_f}Z_q^×`.
+By (9.5b) each local term `W_v` of the trace is carried by the slice
+`j_v(Q_v^×) ⊂ C_S`:
+
+    j_∞(Q_∞^×) = {(x,1,…,1)},
+    j_q(Q_q^×) = {(q^{−k}, w at q, q^{−k} elsewhere) : k∈Z, w∈Z_q^×}.
+
+Each is Haar-**null** in `C_S` once `S_f ≠ ∅`: the archimedean slice pins every
+profinite coordinate, and the finite slice at `q` pins the `R^×` coordinate to
+the discrete set `{q^{−k}}`.  Hence
+
+    T is a sum of measures carried by Haar-null sets,
+    while λ_± are Haar integrals over all of C_S.                   (9.6)
+
+So `λ_±` cannot be recovered from `T` by any local manipulation; the pairing
+`I_A(F,G)=T(F⋆G^†)` reaches `λ_±` only through how convolution spreads mass
+onto the slices.  `𝓝` contains every `F` with `F⋆G^†` vanishing on
+`∪_v j_v(Q_v^×)` for all `G`; whether that forces `λ_±(F)=0` I do not know.
+
+**The only known route is barred by A.10.**  P123.035 §5 proves that the two
+pole characters at `s=0,1` give `ĝ(0)+ĝ(1) = ∫2cosh(t/2)h(t)dt`, "exactly the
+moments of the two half-density Tate characters" — i.e. exactly `λ_−+λ_+`.
+The Weil explicit formula equates `Σ_v W_v` with that polar packet minus the
+sum over zeros; granting it would express `λ_−+λ_+` through `T` and the
+zero-sum.  But clause **A.10 forbids row A from using Meyer's explicit formula
+or a zero of zeta**, and §4 of the specification requires that A.2–A.8 not be
+"merely a renaming of the scalar explicit formula".
+
+**Finding (recorded in the paper, §9.3).**  As the specification is written,
+A.6's ruling-plane requirement and A.10's independence requirement pull against
+each other.  Closing A.6 needs either new mathematics — an independent proof
+that `λ_±` annihilate `𝓝` — or an amendment to the specification.  I assert
+neither.
+
+### (O-A8-1..4) — mixed Riemann–Roch.  **Not proved.**
+
+The four obstacles are now aligned with P123.012 §7's own list of why "the full
+A.8 clause is still not green":
+
+* (O-A8-4) = (O-A5-1) = P123.012 §7 item 1: continuity of the determinant on
+  the complete rapid infinite-label space.  P123.014 §7 states the same gate
+  from the other side ("put a complete trace-class topology on the resulting
+  compact sections and prove that the relative determinant of P123.012 is
+  continuous for it").  Lemma 3.3 supplies the splitting half of that gate and
+  **not** the topology half; I tried and did not obtain a trace-class seminorm
+  on `D_A` dominating the determinant, because the local densities `τ_q` grow
+  like `|1−u|_q^{−1}`, unbounded on every neighbourhood of `1`, so no
+  `sup`-type seminorm controls `T` near the identity class and the natural
+  candidates are exactly the ones the cutoff was introduced to avoid.
+* (O-A8-1) = P123.012 §7 item 2 and P123.007 §8: the realization `Φ_det` into
+  the periodic Deligne ruling category.
+* (O-A8-2): a geometric origin for the P123.108/110 endpoint anomaly.  Those
+  notes prove the cocycle identity; both disclaim the geometric reading in
+  their own status lines, and are cited here only for what they prove.
+* (O-A8-3) = (O-A6-1): without a ruling plane in `N_A` there is nothing for
+  the ruling determinant to be compared with.
+
+---
+
+## 4. Per-clause verdict
+
+| clause | verdict | exact remaining obstacles |
+|---|---|---|
+| **A.1** carrier, coefficients, restriction | **PARTIAL** | (O-A1-1) full geometric descent for `C_X`, `C_Y`; (O-A1-2) a restriction functor on objects with coherence.  The chart map `π_{TS}` now exists on class groups; it is not shown to induce such a functor. |
+| **A.2** correspondences | **PARTIAL** | `G` is stable, `⋆`-closed, localized, with infinitely many pairwise non-isomorphic objects (all proved).  Not proved: that the declared completion is a localization on `Y_S`; the intertwiner classification (3.3) is transferred from P123.082's algebra to `U`, not cited (Rem. 3.6). |
+| **A.3** composition, unit | **PROVED** on `G` | — |
+| **A.4** transpose | **PROVED** on `G` | — |
+| **A.5** trace | **PARTIAL** | (O-A5-1) trace-class topology making the determinant continuous; (O-A5-2) chart invariance — **false** as stated, (8A.12) computes the defect; (O-A5-3) the constant `c`, i.e. the archimedean normalization, barred by P123.035 §6 until reconciled; (O-A5-4) `Tr_A` as an invariant of objects rather than presentations; (O-A5-5) identification of `Sh` with `Tr_A`. |
+| **A.6** numerical equivalence | **OPEN** | (O-A6-1) `λ_±` annihilate `𝓝` and the matrix is `[[0,1],[1,0]]` — hard for the support reason (9.6), and the only known route is barred by A.10; (O-A6-2) vanishing of P123.007 §4's boundary radical. |
+| **A.7** effectivity | **PARTIAL** | properness after the numerical quotient, which needs (O-A6-1).  P123.010's own status already lists it as open. |
+| **A.8** mixed RR | **OPEN** | (O-A8-1) `Φ_det`; (O-A8-2) geometric origin of the anomaly; (O-A8-3)=(O-A6-1); (O-A8-4)=(O-A5-1). |
+| **A.9** classical control | **PASSED for the formalism**, on the automorphism sector | no non-invertible comparison; `Φ` is out of a surrogate `G_Λ`, not out of `G`; `†` antilinear vs `D_h` linear; cone comparison refuted (P123.021 §1) and not used. |
+| **A.10** independence | **PROVED** | — |
+
+**Label: `ROW A: CONSTRUCTED`.**  `WEIL-STRENGTH-COMPLETE` is not claimed and,
+on the present repository, cannot be: A.6 and A.8 both reduce to statements no
+note proves, and A.6's only known route is barred by A.10 itself.
+
+Papers 44 and 45 were not modified.  `main.md` §14.1 records the one
+consequence for Paper 45: it may cite Theorem 9.1's external Tate characters
+on `C_S`, which are proved, but not a ruling plane inside `N_A`.

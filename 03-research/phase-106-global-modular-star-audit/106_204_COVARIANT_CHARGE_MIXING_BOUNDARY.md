@@ -1,5 +1,11 @@
 # 106.204 — The covariant charge-mixing boundary
 
+> **Phase-120 physical-weight warning (2026-08-25).** The covariant source
+> construction below inherits the phase-106 Gram mass `log(p)/p^k`. It does
+> not have the central row-(c) mass `log(p)/p^{k/2}` and therefore fails the
+> physical `{2,3}` calibration as an attachment for row (d). Its unitary
+> charge translations remain a valid analytic dagger construction.
+
 ## 1. Purpose
 
 The complete-return boundary of 106.203 has the correct finite Hodge

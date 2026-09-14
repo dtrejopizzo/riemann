@@ -1,0 +1,225 @@
+# R135.006 — Builder round 3 (bounded erratum), phase 135, Paper 46 Part II
+
+Builder: Claude Opus 5, round 3. Date: 2026-09-13.
+Scope: exactly findings **N1–N8** (and the partial **M11**, **M15**) of
+`R135_005_HOSTILE_CONFIRMATION_ROUND2.md`. Nothing else was touched.
+Pure mathematics; **no new numerics were run**; **no sign is claimed**; §10's
+label remains **None**.
+
+File edited: `04-papers/46-row-d-the-sign/main.md` (plus one row of this
+phase's `README.md`). Every edit carries an inline dated bracket naming its
+finding, so the paper is self-auditing.
+
+---
+
+## Finding → edit → grep evidence
+
+### N1 `MINOR` — the two factors `½` in (11.17)
+
+**Edit.** (11.17) is now
+`C_F ≤ |Φ_F(0)| + |Φ_F(1)| + Σ_ρ|Φ_F(1−ρ)| < ∞`. The proof of Theorem 11.14(ii)
+gains the sharpness line: `sup_u e^{±u/2}/2cosh(u/2) = 1` and
+`sup_u e^{|u|/2}/2cosh(u/2) = 1`, so the coefficients are `1` and are sharp,
+with a bracket recording that round 2's display was wrong by a factor `2`.
+**Downstream check:** the only consumer is Theorem 12.3 Step 1, which chooses
+any `m > C_F` and uses only `C_F < ∞`; nothing quotes the `½`.
+
+```
+2505:          C_F ≤ |Φ_F(0)| + |Φ_F(1)| + Σ_ρ|Φ_F(1−ρ)| \; < \; ∞ ,          (11.17)
+2530:(11.17) are `1`, not `½`.  **[CORRECTED, phase 135 round 3, finding N1 of
+```
+(and `grep -n "tfrac12\\big(|Φ_F" main.md` now returns nothing)
+
+### N2 `MAJOR` — (b′) **does** hold for `h⁰_Z`
+
+**Edit.** Theorem 13.5(iii) is restated as
+"`h⁰_Z(E) > 0 ⟹ deg E > 0`, and then `E ≡ E' (mod 𝓝_∞)` with `E' ≥ 0`,
+`E' ≢ 0`; so **(b′) holds unconditionally**", and its proof is written out:
+`h⁰_Z(E) > 0` gives `#H⁰_Z(E) ≥ 2`; `Λ_W ⊂ 𝓝_∞` gives `deg(E+λ) = deg E`
+(Theorem 11.13(ii)); `deg E < 0` empties `H⁰`; `deg E = 0` makes each `E+λ_i`
+nonnegative of degree `0`, hence `≡ 0` by Theorem 11.13(i), hence
+`λ_1 = −E = λ_2`, contradicting injectivity, so `#H⁰ ≤ 1`. Therefore
+`deg E > 0` and `E' := E+λ_1 ≢ 0`.
+
+**Remark 13.5c is withdrawn and replaced** (round-2 text quoted in place), on
+two counts: "not verified" ≠ "fails", and the conclusion is false. The three
+propagations are deleted:
+
+* Theorem 13.6(ii) now ends "It does satisfy (a) and (b′)
+  (Theorem 13.5(iii),(iv)); (c) is the only failure."
+* §14.5 item (3) now reads "satisfy (a) and (b′) unconditionally … and fail (c)
+  on every finite truncation … the full lattice is `OPEN` (item (23))".
+* §14.4a's M15 row keeps the convention clause and marks its second clause
+  withdrawn.
+
+```
+3232:with `E' ≥ 0` and `E' ≢ 0`; so **(b′) holds unconditionally** for
+3264:verified" does not entail "fails", and the conclusion is in fact false.  By
+3352:     satisfy (c)**, whatever the constant `χ`.  It does satisfy (a) and (b′)
+3353:     (Theorem 13.5(iii),(iv)); (c) is the only failure.
+3645:  **(3)** the natural lattice-counting candidates satisfy (a) and (b′)
+3606:| **M15** | `MINOR` | … **[Round 2's second clause … is withdrawn in round 3, finding N2: (b′) holds unconditionally.]** |
+```
+(and `grep -n "(b′) off" main.md` now returns nothing)
+
+**Net effect:** §13 is *stronger*. `h⁰_Z` is a genuine (a)+(b′) candidate whose
+only known failure is (c), and only on finite truncations.
+
+### N3 `MINOR` — Theorem 11.12 out of Proposition 12.6's verbatim list
+
+**Edit.** The verbatim list now reads "Theorem 11.10; Theorem 11.11; Theorem
+11.13; …", and a new paragraph "**Not claimed for `Ξ_a`: Theorem 11.12**"
+explains that its repaired proof runs on (X18), a statement about the zeros of
+`ζ`, that nothing in the hypotheses on `Z` bounds the distinct zeros of `Z`
+from below, and that nothing uses Theorem 11.12 for `Ξ_a`.
+
+```
+3059:Theorem 11.10; Theorem 11.11; Theorem 11.13; §12.1 (Theorems 12.2,
+3064:**Not claimed for `Ξ_a`: Theorem 11.12.**  **[CORRECTED, phase 135 round 3,
+```
+
+### N4 `MAJOR` — §10's live withdrawn claim
+
+**Edit.** "so that any `h⁰` must use the Euler product" → "so that no
+**model-free** derivation of the three properties can exist (Restatement 12.4a,
+a schema about *derivations*: it excludes no function `h⁰`, and whether the
+Euler product must enter the *definition* of `h⁰` is not proved and survives
+only as the heuristic Remark 12.4b)", with a dated bracket. §10's label is
+unchanged: **None**.
+
+```
+1813:> **model-free** derivation of the three properties can exist (Restatement
+3709:edit that answers it.  No new numerics; no sign; §10's label is still **None**.
+```
+The only remaining occurrences of "must use the Euler product" in live text are
+inside withdrawal brackets (lines 1470, 1842, 3045).
+
+### N5 `MINOR` — the `106_11` strip, and `D ↦ D+4`
+
+**Edit (strip).** A new paragraph *The strip* in Proposition 12.4B's proof:
+`106_11` (15), (16), (27), (29) are stated on `|Im z| ≤ ½`, which is
+`max_ρ|Re ρ − ½|` for `ξ`; for `Ξ_a` the quartet reaches `|y_0| = ½+a`, so they
+are re-read on `|Im z| ≤ ½+a`. This is legitimate because the only property of
+`Φ` those estimates use is the Paley–Wiener one: `Φ = φ̂` with `φ ∈ C_c^∞`
+satisfies `sup_{|Im z| ≤ h}(1+|Re z|)^M|Φ(z)| < ∞` for **every** `M` and
+**every** finite `h`, not only `h = ½`. What changes is only the size of the
+constants (`C_R` and the `R` of (16)), which enter no conclusion — the argument
+needs, at fixed `N`, finiteness of the constants plus the geometric factor
+`4^{−(N−N_0)}`, both of which survive. The four vanishing conditions of
+(20)–(21) are imposed at the quartet, inside the wider strip.
+
+**Edit (`D ↦ D+4`).** Re-derived from (27)–(30) rather than asserted: (27) is
+`|F_{N,±}(z)| ≤ C_R(1+|z|)^D(|Φ(z)|/|Φ(s_0)|)^N`, `D` fixed at least the total
+polynomial degree carried through (20)–(21) and (27); the multiplier's value
+enters once per interpolation condition. Paper 45: symbol `ρ(1−ρ)`, degree `2`,
+**two** conditions, tail factor `|ρ(1−ρ)|² = O((1+|z|)^4)`, bump `D ↦ D+2`.
+Here: symbol `π_P`, degree `4`, **four** conditions (the quartet is four
+*distinct* points, where Paper 45's conjugate pair collapses), tail factor
+`|π_P(ρ)|² = O((1+|z|)^8)`, bump `D ↦ D+4`. (29) still converges because (15),
+now on `|Im z| ≤ ½+a`, gives faster-than-polynomial decay in `|Re z|`, so
+`(1+|z|)^{D+4}|Φ(z)|^N` is integrable for every `D` and every `N ≥ 1`; (28) is
+unchanged.
+
+```
+2846:re-read on the wider strip `|\Im z| ≤ ½+a`.  This is legitimate, and nothing
+2879:**[RE-DERIVED, phase 135 round 3, finding N5 of `R135_005`: round 2 asserted
+2894:exponent of Paper 45, and four conditions instead of two; in the same
+```
+
+### N6 `NOTE` — Remark 13.6b
+
+**Edit.** `log(q'/q) = O(1/q)` → `log(q'/q) = O((q'−q)/q) = O(log q/q) = o(1)`;
+the change of weight `w_{q'} − w_q` is named as a second contribution; the
+remark is labelled `HEURISTIC`; a bracket records that only `log(q'/q) → 0` is
+used, so the conclusion is unaffected.
+
+```
+3394:**Remark 13.6b (`HEURISTIC`; why the round-1 mechanism is not merely unproved,
+```
+
+### N7 / M11 `MINOR` — §1.13's rule
+
+**Edit.** Round 2's rule ("no statement about the location of the zeros of `ζ`
+is proved, asserted or conjectured anywhere in this paper") is quoted and
+amended, since Lemma 13.5b proves `ξ(σ) > 0` on `R` — which is (E2)'s last
+clause — and Lemma 12.4A(v) proves "no zero of `Ξ_a` is real". The rule now in
+force has three clauses: (i) nothing about the zeros of `ζ` beyond the listed
+classical unconditional facts, all entering only as **data** ((E2) in Lemma
+11.9, Theorems 11.10, 11.11, **11.14**; (X16) in Theorem 12.4; (X18) in Theorem
+11.12); (ii) two classical facts are exceptionally **proved here** from `K > 0`
+(import (X12)) and used only as data, and are named as zero-location
+statements; (iii) no object anywhere is defined by the location of a zero, and
+no sign is claimed. Two attribution fixes: "Proposition 12.4A" → **Lemma**
+12.4A (with the note that 12.4A/12.4B are precisely what *avoids* importing
+(E2)'s last clause), and Theorem 11.14 added to the list.
+
+```
+185:**[AMENDED AGAIN, phase 135 round 3, finding N7/M11 of `R135_005`.  Round 2
+```
+
+### N8 / M15 `NOTE` — ledger nits
+
+**Edits.**
+1. Theorem 12.3's hypothesis line: `(X12)–(X15)` → `(X12)`, with the reason
+   ((X13),(X14) serve only Theorem 11.12, which Theorem 12.3 does not use;
+   (X15) serves no proof).
+2. §14.4a's numerics row: `26 s` → `28 s`, the figure `R135_004` §3.2 actually
+   printed and the one §16 already carried; the discrepancy is recorded.
+3. Definition 13.4 states the convention as `log #∅ := 0`, with `#∅ = 0` and
+   `log 0 = −∞` spelled out so the stipulation is visible.
+4. The phase `README.md`'s `polya_class.py` row: `T_∞(K) = 1` →
+   `⟨K, W_fin+ω_∞⟩ = 1` (the extended pairing; `T_∞` does not extend to `K`,
+   Finding 11.0).
+
+```
+2677:(E3d), (X12).  **[CORRECTED, phase 135 round 3, finding N8 of `R135_005`:
+3702:| numerics | — | `canonical_pairings.py` rewritten (`--check` exits `0` in 28 s — the figure printed by `R135_004` §3.2 …
+3287:with the **convention** `\log\#∅ := 0`, i.e. `h⁰_{\mathbb Z}(E) := 0` when
+README.md:20:… `deg K = 1`, `⟨K, W_fin+ω_∞⟩ = 1` (the extended pairing; `T_∞` does not extend to `K` — Finding 11.0), `I_∞(K,K) = ½` …
+```
+
+---
+
+## Ledger entries added to the paper
+
+* **§14.4b "Round-3 repair ledger (phase 135, `R135_006`)"** — one row per
+  finding N1–N8, inserted immediately after §14.4a's round-2 ledger.
+* **Withdrawal table** retitled "(rounds 2 and 3)" with one new final row:
+  **Remark 13.5c**, round-2 assertion → **withdrawn and replaced**; what is
+  withdrawn is the claim that `h⁰_Z` fails (b′), together with the three
+  propagated clauses.
+
+```
+3706:### 14.4b Round-3 repair ledger (phase 135, `R135_006`)
+3722:**Withdrawal table (rounds 2 and 3).**  Statements whose label changed, and
+3737:| **Remark 13.5c** *(round 3, finding N2)* | round-2 assertion, unlabelled | **withdrawn and replaced** | …
+```
+
+---
+
+## What is *not* changed
+
+* No numerics were rerun; every printed number in Part II still comes from the
+  round-2 runs, and the only numeric edit is the `26 s → 28 s` ledger
+  correction to match `R135_004` §3.2.
+* No theorem's status changed except Remark 13.5c (withdrawn) and Theorem
+  13.5(iii) (strengthened, with proof). Theorem 13.6 keeps its title "on every
+  finite truncation"; the full lattice stays `OPEN`, item (23).
+* §0.1's boxed target, §10's label (**None**), Theorem 12.3's statement and
+  §14.5's closing paragraph ("a reduction of unknown satisfiability") are
+  untouched.
+* **No sign is claimed, asserted or suggested anywhere in these edits**, and no
+  new statement about the location of the zeros of `ζ` is made.
+
+---
+
+## Residual, for round 4
+
+* `§15` still lists (X18) between (X15) and (X16) (a cosmetic ordering note in
+  N8, left as is).
+* Restatement 13.3 remains a pure specialization of Restatement 12.4a; Remark
+  13.3a says so. Presentational only.
+* Open items (20)–(23) are unchanged and are the live mathematics: in
+  particular (20), whether **any** `h⁰` with (a)+(b′)+(c) exists, and (23),
+  whether `h⁰_Z(mK) = o(m²)` on the **full** lattice — which, after N2, is now
+  the *only* obstruction on record for the lattice candidate.

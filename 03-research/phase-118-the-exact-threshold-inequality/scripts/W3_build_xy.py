@@ -15,13 +15,12 @@ matrices to machine precision:  J_{a,-}^*J_{a,-} = Gram - 0.5(S+S^T),
 J_{a,+}^*J_{a,+} = Gram + 0.5(S+S^T), matching rowd_assembly.assemble()'s R,L
 accumulation exactly.
 
-The Gamma channel has no elementary explicit L^2(R) realization available in
-this codebase (Psi is only known as a truncated series / closed form on the
-mesh, not an explicit Fourier synthesis), so G_{Gamma,T}^{1/2} is realized as
-the ABSTRACT symmetric PSD square root of the assembled Gram form G (exact
-matrix identity Xg^T Xg = G by construction; this does not claim any
-particular physical codomain for the Gamma channel beyond "some Hilbert
-space", which is all Douglas' lemma needs).
+At the time of phase 118 the Gamma channel had no explicit codomain in this
+code. Phase 120 now constructs two equivalent ones: the quarter-twisted Hardy
+map of paper 42, Lemma `positiveGammaReservoir`, and the corrected heat
+gradient `sqrt(c(u))(I-V_u)`. The present historical script still uses the
+abstract symmetric PSD square root; `p3_log2_gamma_calibration.py` verifies
+the explicit heat realization against the same matrix to about `7e-14`.
 
 No file outside this phase directory is touched; rowd_assembly.py and
 rowd_threshold.py are read-only imports, never modified.

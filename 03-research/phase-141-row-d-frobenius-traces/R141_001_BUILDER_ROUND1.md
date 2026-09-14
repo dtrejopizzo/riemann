@@ -1,0 +1,1510 @@
+# R141.001 — Builder, phase 141 (round 1, repaired in place in round 2): an `h⁰` that reads the Frobenius traces
+
+*Builder: Claude Opus 5. Date 2026-09-13. Blueprint of record: `R141_000_LEAD_BLUEPRINT.md`, followed
+literally. Inputs of record: `R139_005` ((P139), axioms A1–A9, tests AT-1..3, T2); `R140_005`
+(complementary failure, Cor. D.24.12, the three Gram forms, residues R2, R8, R11); `R140_001`
+§D.23.3bis, §D.24; Paper 46 §§11–13; Paper 44 §8bis; `CORPUS_CHECK_ROW_D_PLAN.md` items 6–8.*
+
+**Standing rules carried (R139_000/R140_000).** Nothing is defined through a zero. Every statement
+carries a label. Nothing in the corpus is relabelled. The three falsifiers (`Ξ_a`, `Ξ_Q`, the `ζ_K`
+non-distinction test) are run on every construction. T2's naming clause (N) is an audit protocol on
+*proofs*. Paper 44 Theorem **8bis.4a** (the pure Frobenius form is unsigned at every finite chart; the
+colimit version `OPEN`, R3) accompanies every use of family (A), together with residue **R2**: Paper
+44's `Q_{fin}` is the `W_{fin}`-form on **real radial profiles** (8bis.10a), *not* the discrete Gram
+matrix `G^{Frob}_{mn}` of `{Frob_n^{sm}}`, whose diagonal does not exist (Rem. 8bis.1c); the two share
+the kernel `W_{fin}` and are not the same form, and 8bis.4a's witness is not exhibited inside
+`span{Frob_n^{sm}}`.
+
+**FATAL screen, run first and reported first (blueprint §Warnings).**
+**[REWRITTEN, round 2, finding H1 of `R141_002` (MAJOR). Round 1 wrote: *"No clause (c) of this round
+closes unconditionally, for any `C`. … The FATAL rule is not triggered, and the reason is proved, not
+asserted."* **Both halves are withdrawn.** (i) The quantifier "for any `C`" was unearned: Theorem
+D.27.5 says *nothing* about (c) in case (A), which by Corollary D.27.5a(i) is the generic case; the
+necessary condition (Q1) of D.27.3(iii) is never decided. (ii) "(c) closes unconditionally" is a
+statement about **provability**, not about truth — if RH holds then (c) for `h⁰_{\deg}` is true
+(D.27.6), and what is absent is a proof not routed through RH; no argument of the trace class can
+establish that (c) is *unprovable*, since for `Q_C ≡ 0` the question (Q1) **is** Weil positivity. The
+auditor's repair is adopted verbatim.]**
+
+What is proved, exactly: **no inequality with a sign is proved anywhere in this round.** For the
+kernel `C^{\deg}` a proof of (c) would be a proof of RH (Theorem D.27.6, a biconditional). For every
+`C` landing in case (B) of Theorem D.27.5, likewise. For `C` in case (A) the status of (c) is **not
+decided here**. In §D.30 a candidate is built for which (c) **does** hold unconditionally — and there
+the FATAL rule is screened explicitly and passes, because (c) alone carries no sign: the whole content
+moves into (b′), which is *not* proved (Theorem D.30.8 shows it **implies** RH, and the converse is
+`OPEN`). **The FATAL rule is therefore not triggered, because nothing with a sign is proved — not
+because anything is shown to be unprovable.**
+
+---
+
+## Contents
+
+* **D.26** — the Frobenius traces: what they determine, the moment cone `𝔐`, (b′) as a statement
+  about `𝔐`, zero-free necessary conditions, falsifier checks.
+* **D.27** — the quadratic candidate: (c) as an inequality between quadratic forms; the (b′) decision
+  (a **proof**, for every `C`, with an explicit witness); the Paper-44 Gram choice of `C`.
+* **D.28** — O-17: Proposition 12.4B transposed to `Ξ_Q` with `P = {0,1}`.
+* **D.30** *(new, round 2, finding H6)* — the **Riemann–Roch-defined candidate** `h⁰_{RR}^{+}`: (a) and
+  (c) unconditional, the whole of row D in one clause, and that clause read in the moment cone.
+  *(Placed before the synthesis, which is written around it.)*
+* **D.29** — synthesis, **rewritten in round 2** around the clause of D.30.
+
+---
+
+## D.26 — The Frobenius traces and what they determine
+
+### D.26.0 The object, and the test function
+
+Conventions are Paper 46 §11: `D^W` (Definition 11.1), `Φ_E(s) = ∫E(t)e^{(s−½)t}dt`,
+`M(E) = (Φ_E(1),Φ_E(0)) =: (a,b)`, `deg E = a+b`, `Z(E) = (Φ_E(ρ))_{ρ∈Z(ξ)}`,
+`I_∞(F,G) = Φ_F(0)Φ_G(1)+Φ_F(1)Φ_G(0) − Σ_ρΦ_F(ρ)Φ_G(1−ρ)` (Definition 11.4, Lemma 11.4a,
+Theorem 11.5), `K` with `Φ_K = ξ`, `𝓝_∞` the radical (Theorem 11.11).
+
+**Lemma D.26.1 (the test function exists; `PROVED`).** There is a real, even `g ∈ C_c^∞(R)` with
+`g ≥ 0`, `g ≢ 0`, such that `Φ_g(1−ρ) ≠ 0` for every zero `ρ` of `ξ`. Any such `g` also has
+`Φ_g(ρ) ≠ 0` at every zero, and `Φ_g(0) > 0`, `Φ_g(1) > 0`.
+
+*Proof.* Fix `T > 0` and let `E_T` be the real Fréchet space of **even** `φ ∈ C_c^∞([−T,T])` with its
+usual seminorms `‖·‖_{C^k}`. Choose `g_0 ∈ E_T` with `g_0 > 0` on `(−T,T)`, and fix `δ ∈ (0,T/2)`;
+put `κ := \min_{[−T+δ,T−δ]}g_0 > 0`. Let
+
+    U := \{h ∈ E_{T−δ} : ‖h‖_{C^0} < κ\} ,
+
+an open neighbourhood of `0` in the Fréchet space `E_{T−δ}` (the `C^0`-seminorm is one of its
+seminorms). For `h ∈ U`, `g_0+h ≥ 0`: on `[−T+δ,T−δ]` because `g_0 ≥ κ > ‖h‖_{C^0}`, and off that
+interval because `h ≡ 0` and `g_0 ≥ 0`.
+
+For a zero `ρ` let `ℓ_ρ : E_{T−δ} → C`, `ℓ_ρ(h) := Φ_{g_0+h}(1−ρ) = Φ_{g_0}(1−ρ) + Φ_h(1−ρ)`, an
+affine continuous map. Its linear part `h ↦ Φ_h(1−ρ) = ∫h(t)\cosh((½−ρ)t)\,dt` (the function `h`
+being even) is **not** the zero functional: `t ↦ \cosh((½−ρ)t)` is a nonzero real-analytic function,
+so it is non-orthogonal to some even test function supported in `(−T+δ,T−δ)`. Hence
+`A_ρ := ℓ_ρ^{−1}(0)` is a closed affine hyperplane in `E_{T−δ}`, in particular closed with empty
+interior. The zero set `Z(ξ)` is countable, so `⋃_ρ A_ρ` is meagre; by Baire's theorem the open set
+`U` is not contained in it, and any `h ∈ U ∖ ⋃_ρ A_ρ` gives `g := g_0+h`.
+
+`Φ_g(ρ) ≠ 0` follows because `Z(ξ)` is invariant under `ρ ↦ 1−ρ` ((E2)). `Φ_g(0) = ∫g e^{−t/2} > 0`
+and `Φ_g(1) = ∫g e^{t/2} > 0` since `g ≥ 0`, `g ≢ 0`. ∎ `PROVED`
+
+> The choice is non-constructive (Baire). Nothing below uses more than the stated non-vanishing, and
+> the non-vanishing is a property of `g`, not a statement about the location of any zero.
+>
+> **[ADDED, round 2, finding H14 of `R141_002` (MINOR), which is accepted in full.** The *pairing*
+> `t_n(E) = I_∞(E,τ_{\log n}g)` is zero-free (Definition 11.4 is the polarized arithmetic bracket;
+> Lemma 11.4a). **But the admissible `g` is selected by a condition quantified over `Z(ξ)`.** Two
+> consequences must be stated, not left implicit: (i) the trace map `T` **depends on a choice made
+> through the zero set** — it is a non-vanishing condition, not a location statement, but it is a
+> quantification over zeros all the same; (ii) for each falsifier `Z` the `g` must be **re-chosen**, so
+> `T` is *not* one object transported across models, and Proposition D.26.11 must be read as "the same
+> construction, performed separately in each model", which is what its proof actually establishes.
+> Only `Φ_g(1−ρ) ≠ 0` is ever used, and it is used only in the last line of Theorem D.26.5's proof;
+> nothing quantitative depends on `g`.]**
+
+**Definition D.26.2 (the Frobenius traces).** With `g` as in Lemma D.26.1, for `E ∈ D^W` put
+
+    t_0(E) := \big(Φ_E(1),\,Φ_E(0)\big) = M(E) ,
+    t_n(E) := I_∞\big(E,\,τ_{\log n}g\big)  \qquad (n ≥ 1) ,
+    x(E)   := \big(t_0(E),\,(t_n(E))_{n≥1}\big) ∈ R^2 × R^{N_{≥1}} ,
+    T : D^W → R^2 × R^{N_{≥1}},\quad T(E) := x(E) .
+
+`T` is **real-linear**. By Definition 11.4 each `t_n(E)` is `PRIME − ARCH` of the even part of
+`E ⋆ (τ_{\log n}g)^∨`: *it is defined by the arithmetic side and names no zero*. `t_0(E)` is the polar
+packet, likewise zero-free.
+
+**Lemma D.26.3 (the two readings of `t_n`; `PROVED`).** For every `E ∈ D^W` and `n ≥ 1`,
+
+    t_n(E) = n^{½}Φ_g(1)Φ_E(0) + n^{−½}Φ_g(0)Φ_E(1) − Σ_ρ Φ_E(ρ)Φ_g(1−ρ)\,n^{½−ρ} ,   (D.26.1)
+
+the sum absolutely convergent; and
+
+    t_n(E) = ∫_R E(u)\,w_g(u−\log n)\,du ,                                            (D.26.2)
+
+with `w_g` the bounded-density kernel (11.16) of Theorem 11.14, `w_g(u) = Φ_g(1)e^{−u/2} +
+Φ_g(0)e^{u/2} − Σ_ρ e^{(ρ−½)u}Φ_g(1−ρ)`, and `|w_g(u)| ≤ C_g\,2\cosh(u/2)` with
+`C_g ≤ Φ_g(0)+Φ_g(1)+Σ_ρ|Φ_g(1−ρ)| < ∞`.
+
+*Proof.* (D.26.1) is Theorem 11.5 applied to `(E, τ_{\log n}g)` together with
+`Φ_{τ_cg}(s) = e^{(s−½)c}Φ_g(s)` (Lemma 11.2(iv)) at `s = 1, 0, 1−ρ` and `c = \log n`. For (D.26.2),
+Theorem 11.14(i) gives `I_∞(E,F) = ∫E\,w_F`; and `w_{τ_cg}(u) = w_g(u−c)`, read off (11.16) with the
+same three substitutions. The bound is (11.17). ∎ `PROVED`
+
+*(Arithmetic reading, recorded and used only where licensed.* For `E ∈ C_c^∞(R)` the bracket
+`⟨·,W_{fin}+ω_∞⟩` of Theorem 11.3 splits as `PRIME − ARCH` with
+`PRIME(h) = Σ_{n≥2}Λ(n)n^{−½}[h(\log n)+h(−\log n)]` and `ARCH` the archimedean integral of (11.3);
+the prime sum converges absolutely for every `h ∈ D^W` by (11.1). The identification of `ARCH` with a
+`K_∞`-kernel integral is **not** licensed on `D^W` (Paper 46, repair M9); it is not used.)*
+
+### D.26.1 The traces determine `E` modulo `𝓝_∞`
+
+**Lemma D.26.4 (separation of the exponentials `n^{½−ρ}`; `PROVED`).** Let `(c_ρ)_{ρ∈Z(ξ)}` be complex
+numbers with `Σ_ρ|c_ρ|(1+|γ_ρ|)^A < ∞` for every `A > 0`. If
+
+    Σ_ρ c_ρ\,n^{½−ρ} = 0 \qquad\text{for every integer } n ≥ 1 ,
+
+then `c_ρ = 0` for every `ρ`.
+
+**[REPAIRED, round 2, finding H8 of `R141_002` (MINOR); the proof was re-derived by the auditor and
+found correct, and the three defects below are wording, not conclusions. (1) *Convention:* the index
+set is the zero **multiset** (as in Theorem 11.5), and `c_ρ` depends on `ρ` only, so it is constant on
+each fibre and the residue at `w = 3/2−ρ_0` is `m(ρ_0)c_{ρ_0}` with `m(ρ_0) ≥ 1` the multiplicity;
+the conclusion is unaffected. (2) *Hypothesis:* the proof needs only `A = A_0(𝒦)` per compact set, so
+the natural hypothesis class is "`\sup_ρ|\mathrm{Re}\,ρ−½| =: θ < ∞` and `(c_ρ)` of rapid decay in
+`|γ_ρ|`", which is what is verified in the application. (3) *Half-plane:* `\mathrm{Re}\,w > 3/2` is
+`ξ`-specific; in general it is `\mathrm{Re}\,w > 1+θ`. The statement is now carried with `θ` from the
+start.]**
+
+*Proof.* Put `s_ρ := ρ−½`, so `|\mathrm{Re}\,s_ρ| ≤ θ = ½` by (E2) (for a general `Z` read `θ = θ_Z`
+throughout and `\mathrm{Re}\,w > 1+θ_Z` below). For `\mathrm{Re}\,w > 3/2`,
+
+    Σ_{n≥1} n^{−w}\Big(Σ_ρ c_ρ n^{−s_ρ}\Big) = Σ_ρ c_ρ\,ζ(w+s_ρ) =: G(w) ,
+
+the interchange legitimate because `Σ_ρ|c_ρ|Σ_n n^{−\mathrm{Re}\,w+½} < ∞` there. By hypothesis the
+left-hand side is `0`, so `G ≡ 0` on `\mathrm{Re}\,w > 3/2`.
+
+`G` is meromorphic on `C`. Fix a compact `𝒦 ⊂ C`. Only finitely many `ρ` have `3/2−ρ` within distance
+`1` of `𝒦`, since `|γ_ρ| → ∞`; their terms are meromorphic with a single simple pole each. For the
+remaining `ρ`, `w ∈ 𝒦` gives `|\mathrm{Im}(w+s_ρ)| ≥ |γ_ρ| − C_𝒦 ≥ 1` and
+`\mathrm{Re}(w+s_ρ) ≥ −C_𝒦`; by the classical polynomial bound `|ζ(σ+it)| ≪_{σ_0} (1+|t|)^{A_0}`
+valid uniformly for `σ ≥ σ_0` and `|t| ≥ 1` (`CLASSICAL`), those terms are bounded by
+`|c_ρ|(1+|γ_ρ|)^{A_0}·C`, and the tail converges uniformly on `𝒦` by hypothesis. So `G` is
+holomorphic on `𝒦` off the finitely many points `3/2−ρ`.
+
+Hence `G` is meromorphic on `C`, holomorphic off `\{3/2−ρ\}`, and vanishes on a half-plane; by the
+identity theorem on the connected open set `C ∖ \{3/2−ρ\}` it vanishes identically there, so every
+pole is removable. The residue of `G` at `w = 3/2−ρ_0` is `m(ρ_0)\,c_{ρ_0}` (`m(ρ_0) ≥ 1` the
+multiplicity; `\mathrm{Res}_{s=1}ζ = 1`, and `3/2−ρ` determines `ρ`). Therefore `c_{ρ_0} = 0`. ∎
+`PROVED`
+
+**Theorem D.26.5 (the traces determine the class; `PROVED`).** With `g` as in Lemma D.26.1,
+
+    \ker T = 𝓝_∞ ,
+
+i.e. `x(E) = x(E')` if and only if `E − E' ∈ 𝓝_∞`. In particular `(t_0,(t_n)_n)` determines
+`(M(E),Z(E))` and hence, by Theorem 11.11, the class of `E` in `D^W/𝓝_∞`; and every function of the
+traces is automatically a function on `D^W/𝓝_∞`.
+
+*Proof.* `⊇`: if `N ∈ 𝓝_∞` then `Φ_N(0) = Φ_N(1) = 0` and `Φ_N(ρ) = 0` for all `ρ` (Theorem 11.11),
+so `t_0(N) = 0` and, by (D.26.1), `t_n(N) = 0`.
+
+`⊆`: let `x(E) = 0`. Then `Φ_E(0) = Φ_E(1) = 0`, and (D.26.1) reduces to
+`Σ_ρ c_ρ n^{½−ρ} = 0` for all `n ≥ 1`, with `c_ρ := Φ_E(ρ)Φ_g(1−ρ)`. The decay hypothesis of Lemma
+D.26.4 holds: `|Φ_E(ρ)| ≤ C_2(E)|γ_ρ|^{−2}` by (11.2), and `g ∈ C_c^∞([−T,T])` gives, for every `M`,
+`|Φ_g(1−ρ)| = |∫g(t)e^{(½−ρ)t}dt| ≤ C_M e^{T/2}(1+|γ_ρ|)^{−M}` by `M` integrations by parts; together
+with `Σ_ρ(1+|γ_ρ|)^{−2} < ∞` ((E3d)) this gives `Σ_ρ|c_ρ|(1+|γ_ρ|)^{A} < ∞` for every `A`. By Lemma
+D.26.4, `c_ρ = 0`; since `Φ_g(1−ρ) ≠ 0` (Lemma D.26.1), `Φ_E(ρ) = 0` at every zero. By (11.14),
+`E ∈ 𝓝_∞`. ∎ `PROVED`
+
+> **What this licenses and what it does not.** It licenses `h⁰ = Ψ∘T`: no information is lost. It does
+> **not** say the traces are a *convenient* coordinate system — Lemma D.26.4 is an inversion in
+> infinitely many coordinates with no modulus of continuity, and every quantitative statement below is
+> proved directly, never through the inverse.
+
+**Lemma D.26.6 (the traces of the finite windows are unobstructed; `PROVED`).** For every `N ≥ 1` the
+map `E ↦ (Φ_E(1),Φ_E(0),t_1(E),…,t_N(E)) ∈ R^{N+2}` is **surjective** on `D^W`, and
+`F ↦ (t_1(F),…,t_N(F)) ∈ R^{N}` is **surjective** on the primitive subspace `P^W ∩ C_c^∞(R)`.
+
+*Proof.* Both maps are linear; if not surjective, some nonzero real `λ` annihilates the image. By
+Theorem 11.8(iii), `I_∞(E,τ_cK) = ½(e^{c/2}Φ_E(0)+e^{−c/2}Φ_E(1))`, so `Φ_E(0)` and `Φ_E(1)` are
+fixed real combinations of `I_∞(E,K)` and `I_∞(E,τ_1K)`; hence in both cases the functional is
+`E ↦ I_∞(E,X)` for
+
+    X := α K + α' τ_1K + Σ_{n≤N} λ_n τ_{\log n}g ∈ D^W .
+
+*First map.* Vanishing for all `E ∈ D^W` means `X ∈ 𝓝_∞` (Theorem 11.11), so `Φ_X(ρ) = 0` at every
+zero. Since `Φ_K(ρ) = ξ(ρ) = 0`, this reads `Φ_g(ρ)·Σ_{n≤N}λ_n n^{ρ−½} = 0`, and `Φ_g(ρ) ≠ 0`, so the
+exponential polynomial `f(z) := Σ_{n≤N}λ_n e^{(z−½)\log n}` vanishes at every zero of `ξ`. By Langer's
+theorem (`CLASSICAL`; the number of zeros of `Σ_j a_je^{μ_jz}` with `|\mathrm{Im}\,z| ≤ T` is
+`(μ_{\max}−μ_{\min})T/π + O(1)`), a nonzero `f` has at most `T\log N/π + O(1)` such zeros, while
+`N_ξ(T) = (T/π)\log(T/2πe) + O(\log T)` ((E3d), Riemann–von Mangoldt, `CLASSICAL`) exceeds it for
+`T > 2πeN`. So `f ≡ 0`, i.e. every `λ_n = 0`; then `Φ_X(0) = Φ_X(1) = 0` forces `α = α' = 0`.
+
+*Second map.* **[REPAIRED, round 2, finding H10 of `R141_002` (MINOR). Round 1 wrote "this puts
+`X ∈ 𝓝_∞ ⊕ Λ_ξ`, `Λ_ξ = span(K,K_{odd})`". That description of the primitive perp is **not** in Paper
+46 — Theorem 11.10 gives the perp as `\{G : Φ_G(ρ) = 0` at every zero`\}`, and the paper explicitly
+`REFUTED` its identification with `ξ·(\text{entire})` unless all zeros are simple (`OPEN`). The
+conclusion is unaffected, because only `Φ_X(ρ) = 0` is used.]** Here `α = α' = 0` from the start, and
+vanishing for all primitive `E ∈ C_c^∞` means `X ⊥_{I_∞}(P^W ∩ C_c^∞)`; by **Theorem 11.10**,
+`Φ_X(ρ) = 0` at every zero of `ξ`. The same Langer/Riemann–von Mangoldt comparison applies. ∎
+`PROVED`
+
+### D.26.2 The moment cone `𝔐`, and (b′) as a statement about `𝔐`
+
+**Definition D.26.7 (the moment cone; O-15 made explicit).**
+
+    𝔐 := T\big(\{E ∈ D^W : E ≥ 0,\ E ≢ 0\}\big)
+        = \{x(E') : E' ≥ 0,\ E' ≢ 0\} ⊂ R^2 × R^{N_{≥1}} .
+
+**Theorem D.26.8 ((b′) is exactly a containment of cones; `PROVED`).** Let `h⁰ = Ψ∘T` for any
+`Ψ : R^2×R^{N_{≥1}} → R_{≥0}`. Then clause (b′) of Theorem 12.3 holds for `h⁰` **if and only if**
+
+    \{x ∈ T(D^W) : Ψ(x) > 0\} ⊆ 𝔐 .                                            (D.26.3)
+
+*Proof.* (b′) says: `Ψ(x(E)) > 0 ⟹ ∃E' ≥ 0, E' ≢ 0` with `E−E' ∈ 𝓝_∞`. By Theorem D.26.5,
+`E−E' ∈ 𝓝_∞ ⟺ x(E) = x(E')`. So the conclusion of (b′) at `E` is exactly `x(E) ∈ 𝔐`. ∎ `PROVED`
+
+> This is the blueprint's requirement met literally: the traces of `𝓝_∞` vanish (Theorem D.26.5), so
+> no `𝓝_∞`-correction appears in (D.26.3), and (b′) is a statement about `𝔐` alone.
+
+**Theorem D.26.9 (structure of `𝔐`; `PROVED`).**
+
+ (i) `𝔐 ∪ \{0\}` is a **convex cone**: `𝔐 + 𝔐 ⊆ 𝔐` and `λ𝔐 = 𝔐` for `λ > 0`.
+ (ii) `𝔐` is **pointed**: `𝔐 ∩ (−𝔐) = ∅`, and `0 ∉ 𝔐`.
+ (iii) *(the degree hyperplane)* every `x ∈ 𝔐` has `x_{0,1} > 0`, `x_{0,2} > 0`; in particular
+     **no trace vector of a primitive class lies in `𝔐`**, and no trace vector of a class of
+     degree `≤ 0` lies in `𝔐`.
+ (iv) *(barycentric description; `RESTATEMENT` — see the round-2 note)* writing `dμ_E(u) := E(u)\,2\cosh(u/2)\,du`, a positive measure of
+     total mass `\deg E`, one has for every `E ≥ 0`
+
+          x(E) = ∫_R v(u)\,dμ_E(u) ,\qquad
+          v(u) := \frac{1}{2\cosh(u/2)}\Big(e^{u/2},\,e^{−u/2},\,\big(w_g(u−\log n)\big)_{n≥1}\Big),
+
+     with `v` bounded componentwise by `\max(1,C_g)`. Hence `𝔐` is contained in the convex cone
+     generated by the **curve** `𝒞 := \{v(u) : u ∈ R\}`, and contains the sub-cone generated by all
+     barycentres `∫v\,dμ` with `μ ≥ 0`, `μ ≠ 0`, whose density `u ↦ dμ/du / (2\cosh(u/2))` lies in
+     `D^W`. `𝔐` is therefore, up to the density regularity, **the moment cone of the curve `𝒞`**.
+ (v) *(dual description; `PROVED` in `⊆`, `OPEN` in `⊇`)* let `𝒫_g` be the cone of finitely supported real `λ = (λ_{0,1},λ_{0,2},
+     (λ_n))` such that `u ↦ λ_{0,1}e^{u/2}+λ_{0,2}e^{−u/2}+Σ_nλ_n w_g(u−\log n) ≥ 0` on `R`. Then
+     `⟨λ,x⟩ ≥ 0` for every `λ ∈ 𝒫_g` and every `x ∈ 𝔐`, so the closed convex conic hull of `𝔐` is
+     contained in the dual cone `𝒫_g^{*}`. **The reverse inclusion is not proved** — it needs the
+     density of `D^W`-densities among positive measures in the topology in which the barycentre map of
+     (iv) is continuous, which is asserted nowhere and is recorded as part of **O-15′′**.
+
+**[LABELS CORRECTED, round 2, finding H7 of `R141_002` (MAJOR). (iv) is a change of variable —
+(D.26.2) divided and multiplied by `2\cosh(u/2)` — and not a structure theorem; moreover the first two
+components of `v(u)` already determine `u` (their ratio is `e^{u}`), so `v` is an injective
+parametrization and `𝒞` is a **graph**: "the Markov moment cone of a curve" is vocabulary, not
+information, and the word **"explicit" is withdrawn** (`w_g` is given by (11.16), a sum over the
+zeros; it is zero-*free* in the sense of Definition 11.4, being `PRIME − ARCH`, but it is not written
+down). (v)'s `⊇` half was asserted "by (iv) and mollification"; it is **not proved**. Round 1's
+`§ Label` table already conceded this, but the body, the README and P46-19 printed it flat. (i)–(iii)
+stand as proved and were re-derived by the auditor.]**
+
+*Proof.* (i) `E_1,E_2 ≥ 0`, `≢ 0` gives `E_1+E_2 ≥ 0`, `≢ 0`, and `T` is linear; likewise for `λ > 0`.
+(ii) If `x ∈ 𝔐 ∩ (−𝔐)`, say `x = x(E_1) = −x(E_2)` with `E_i ≥ 0` and `≢ 0`, then
+`x(E_1+E_2) = 0`, so `E_1+E_2 ∈ 𝓝_∞` (Theorem D.26.5) and `\deg(E_1+E_2) = 0` (Theorem 11.13(ii));
+but `\deg(E_1+E_2) > 0` (Theorem 11.13(i)). Same argument with `E_2 := E_1` gives `0 ∉ 𝔐`.
+(iii) `Φ_{E'}(1) = ∫E'e^{u/2} > 0` and `Φ_{E'}(0) > 0` for `E' ≥ 0`, `≢ 0`, continuous; a primitive
+class has `Φ(0) = Φ(1) = 0` and a class of degree `≤ 0` cannot have both coordinates positive.
+(iv) is (D.26.2) and Theorem 11.8's `Φ_E(1) = ∫E e^{u/2}`, `Φ_E(0) = ∫E e^{−u/2}`, divided and
+multiplied by `2\cosh(u/2)`; boundedness of `v` is (11.17). The two inclusions are immediate; the
+barycentre converges componentwise because `v` is bounded and `μ_E` is finite.
+(v) For `λ ∈ 𝒫_g` and `E ≥ 0`, `⟨λ,x(E)⟩ = ∫ (λ·v)(u)\,dμ_E(u) ≥ 0` by (iv). ∎ `PROVED`
+
+> **What (i)–(v) do and do not give.** **[REWRITTEN, round 2, finding H7. Round 1 headed this box
+> "the answer to O-15 in the only form the problem has"; that rhetoric is withdrawn.]** `𝔐` is a
+> moment cone for the system `\{e^{u/2},\,e^{−u/2},\,w_g(·−\log n)\}_{n≥1}` on `R`, with the
+> nonnegativity constraint carried by the measure; one half of the duality is proved and the other is
+> open. The genuinely useful items are **(i)–(iii)**: convexity, pointedness, and the strict positivity
+> of both polar coordinates. Item (iii) is what does all the work in D.27.4 and in §D.30 — and, as the
+> auditor observes, (iii) is itself Theorem 11.13(i),(ii) in trace coordinates. **No zero is named in
+> (i)–(v).** Recorded `OPEN` (**O-15′′**): an intrinsic description of `𝒫_g` — which translate
+> combinations of `w_g` are pointwise nonnegative — together with the closure step in (v).
+
+### D.26.3 Zero-free necessary conditions on `𝔐`
+
+**Proposition D.26.10 (unconditional necessary conditions; `PROVED`).** Let `x = x(E') ∈ 𝔐`, write
+`(a,b) := t_0`, `d := a+b = \deg E' > 0`. Then
+
+ (i) `a > 0`, `b > 0`, `d > 0`;
+ (ii) `|t_n| ≤ C_g\,d` for every `n ≥ 1`, with `C_g` the constant of Lemma D.26.3 (this is Theorem
+     11.14(ii)); more precisely `t_n/d` lies in the closed convex hull of the range of
+     `u ↦ w_g(u−\log n)/2\cosh(u/2)`;
+ (iii) *(the `𝒫_g` inequalities)* `⟨λ,x⟩ ≥ 0` for every `λ ∈ 𝒫_g` — Theorem D.26.9(v). **[CORRECTED,
+     round 2, finding H7(4): round 1 added "These are **all** the linear conditions". That is exactly
+     the unproved `⊇` of D.26.9(v) and the word "all" is withdrawn.]** Whether every linear inequality
+     valid on `𝔐` comes from `𝒫_g` is **`OPEN` (O-15′′)**;
+ (iv) *(Cauchy–Schwarz / moment-matrix conditions)* for finitely supported real `λ`,
+     `⟨λ,x⟩² ≤ d·∫ (λ·v)(u)^2\,dμ_{E'}(u)`; the right-hand side is again a moment of `μ_{E'}`, but
+     of the **squares** `(λ·v)^2`, which are not in the span of the defining system — so these
+     conditions are not finitely checkable from `x` alone, and no Hankel positivity is available. The
+     system `\{e^{u/2},e^{−u/2},w_g(·−\log n)\}` is **not** closed under multiplication; this is the
+     structural reason `𝔐` is a *Markov* moment cone and not a Hamburger one;
+ (v) *(the sign carried by nonnegative atoms — where A4/A8 enters `𝔐`)* for `E' ≥ 0` and
+     `E' ∈ C_c^∞(R)`, the function `h_n := \big(E'⋆(τ_{\log n}g)^∨\big)_{\mathrm{ev}}` is `≥ 0`
+     (a convolution of nonnegative functions, symmetrized), so its prime side is nonnegative,
+
+          \mathrm{PRIME}(h_n) = Σ_{m≥2}Λ(m)m^{−½}\big[h_n(\log m)+h_n(−\log m)\big] ≥ 0 ,
+
+     and therefore `t_n(E') = \mathrm{PRIME}(h_n) − \mathrm{ARCH}(h_n) ≥ −\mathrm{ARCH}(h_n)`: a
+     **one-sided, zero-free lower bound** on the traces of nonnegative classes, whose only input is
+     the non-negativity of the atoms `Λ(m)m^{−½}` (axiom **A4**, and **A8** in the form in which A8 is
+     read off `−ξ'/ξ`).
+
+*Proof.* (i),(ii) are Theorem 11.13(i), Theorem 11.14(ii) and D.26.9(iv). (iii),(iv) are D.26.9(v)
+and Cauchy–Schwarz against `dμ_{E'}/d`. (v): `E' ≥ 0` and `g ≥ 0` give `E'⋆(τ_cg)^∨ ≥ 0` pointwise
+and its even part `≥ 0`; `W_{fin}` is a **positive** measure; the splitting `PRIME − ARCH` is Theorem
+11.3, and the prime sum converges absolutely on `D^W` by (11.1). ∎ `PROVED`
+
+> **Honest scope of (v).** It is a lower bound only, and `ARCH` is not of one sign, so it yields no
+> upper bound and no Hodge-type inequality. It is also **not discriminating**: `Ξ_Q` has non-negative
+> coefficients `r_Q(n) ≥ 0` (A4 holds for `Ξ_Q`, R139 Theorem D.19.7a), so (v) transports verbatim to
+> `Ξ_Q`. See D.26.4.
+
+### D.26.4 Falsifier checks for D.26, and where A3 and A8 enter
+
+**Proposition D.26.11 (model-uniformity of D.26; `PROVED`).** Let `Z ∈ 𝒵` satisfy A1, A2, A2⁺, A4, A5,
+A6 (R139 §D.19.7), with polar set `P`, canonical class `K_Z`, form `I_∞^{(Z)}`, radical `𝓝_∞^{(Z)}`.
+Define `t_0^{(Z)}(E) := (Φ_E(p))_{p∈P}` and `t_n^{(Z)}(E) := I_∞^{(Z)}(E,τ_{\log n}g)`. Then:
+
+ (i) Lemma D.26.1 holds for `Z` (same Baire argument; the zero set of `Z` is countable);
+ (ii) Lemma D.26.4 holds verbatim, because it uses only `\mathrm{Re}\,s_ρ` bounded and the rapid decay
+     of `c_ρ`; the bound on `\mathrm{Re}\,ρ` needed is `|\mathrm{Re}\,ρ − ½| ≤ θ_Z < ∞`, which holds
+     for `Ξ_a` (`θ = ½+a`) and for `Ξ_Q` (D.28.0 below) and for every `ξ_K`;
+ (iii) Theorem D.26.5, Theorem D.26.8, Theorem D.26.9 and Proposition D.26.10(i)–(iv) hold verbatim
+     for `Ξ_a`, for `Ξ_Q`, and for every `ξ_K`, with `t_0` of length `\#P` (`2` for `ξ`, `ξ_K`, `Ξ_Q`;
+     `4` for `Ξ_a`) and `Lemma D.26.6`'s Langer comparison requiring only `N_Z(T)/T → ∞`, which holds
+     for all four (R139 D.19.2, Proposition 12.4B's *Counting* paragraph, and Riemann–von Mangoldt
+     for `ξ_K`).
+
+*Proof.* Each cited proof uses only: linearity of `I_∞^{(Z)}`, the comparison identity (11.6) for `Z`
+(A5), `𝓝_∞^{(Z)}` being the radical (Theorem 11.11 for `Z`, transported by §12.5), the convergence
+(E3d) for `Z`, and positivity of `\deg_Z` on nonzero effective classes (A2⁺, Theorem 11.13(i) for
+`Z`). None of these is A3, A7, A8 or A9. ∎ `PROVED`
+
+**Where A3 enters `𝔐`: nowhere in a proof.** A3 (equimodularity of the polar block) fixes only the
+*shape* of `t_0` — for `ξ`, `ξ_K` and `Ξ_Q` the two polar exponents are `±½`, for `Ξ_a` the four
+exponents are `±(½±a)`, so the curve `v(u)` of D.26.9(iv) has two polar components in the first case
+and four in the second. Every statement of D.26 is proved without using equimodularity.
+
+**Where A8 enters `𝔐`: only at Proposition D.26.10(v), and there non-discriminatingly.** The
+non-negativity of the atoms is what makes `\mathrm{PRIME}(h_n) ≥ 0`; but `Ξ_Q` has it too (A4), so
+no line of D.26 separates `ξ` from `Ξ_Q`, and no line separates `ξ` from `Ξ_a` either.
+
+> **Consequence, stated as a statement about proofs and nothing else.** **[REWRITTEN, round 2, finding
+> H3 of `R141_002` (MAJOR). Round 1 wrote "`𝔐` and the trace framework are model-uniform, and **can
+> carry no sign**". That converts a statement about *derivations* into one about *objects*, and it is
+> exactly the non-sequitur Paper 46 §13.1 withdrew (finding M1 of `R135_002`): a model-uniform
+> **definition** may satisfy (a)+(b′)+(c) for `ξ` and fail them for `Ξ_a`. What survives is the
+> schema.]** By **T2** (R139 Theorem D.19.7), a proof of the sign must use A3 **and** one of A7/A8/A9.
+> Every theorem of D.26 is proved without any of them, and therefore **transports verbatim to `Ξ_a`,
+> `Ξ_Q` and every `ξ_K`**. The correct conclusion is: **no proof carried out inside D.26 can establish
+> a sign**, since it would establish the same statement in models where the statement is false. It is
+> *not* a conclusion about the objects `𝔐` or `T` — §D.30 builds, inside this very language, an object
+> whose (a) and (c) are model-uniform theorems and whose remaining clause is model-dependent. The
+> `ζ_K` non-distinction test (AT-3) **passes**: no line of D.26 distinguishes `Q` from `K`.
+
+> **Corpus check (D.26).** Grep of the corpus (`--include=*.md --include=*.tex`) for *"Frobenius
+> trace"*, *"trace of Frobenius"*, *"traza de Frobenius"*, *"Gram of translates"*, *"quadratic form in
+> the prime sums"*, *"Rankin–Selberg Gram"*, *"moment problem"*, *"problema de momentos"*, *"moment
+> cone"*, *"Bohr almost"*. Outcome per idea:
+> * *"Frobenius trace" / "trace of Frobenius"*: hits are phase-107 (`107_121`, a **NO-GO** on an
+>   `A4`-Frobenius current), phase-120 `P3_*` (Tate polarization attacks) and phase-17/119 in unrelated
+>   senses. **None defines `I_∞(E,τ_{\log n}g)` or any pairing of a Weil class against a translate
+>   family.** The object of Definition D.26.2 is **NEW**; the phase-107 no-go is not contradicted (it
+>   concerns a current on the Lefschetz reconstruction, not `D^W`).
+> * *"Gram of translates"*, *"quadratic form in the prime sums"*, *"Rankin–Selberg Gram"*: **zero hits
+>   outside this phase's blueprint.** NEW. Item 7 of `CORPUS_CHECK_ROW_D_PLAN` (Rankin–Selberg,
+>   `TRIED–PARTIAL`, phase-15 M1 Theorem B with the standing verdict *"this reduces to, rather than
+>   resolves, the Hodge-index gap"*) is respected: nothing here claims otherwise, and D.27.5 below is
+>   that same verdict proved for the trace-quadratic class.
+> * *"moment problem" / "problema de momentos"*: the corpus's moment problems are **different
+>   objects** — the Hamburger problem for the zero measure `μ_γ^{real}` and its Jacobi coefficients
+>   (phase-29 doc 26, Paper 22 `moment-rigidity-criterion`, Paper 15). Those are determinacy questions
+>   for a measure supported on the ordinates `γ`; `𝔐` is a **Markov moment cone on `R` in the modulus
+>   variable `u`, with the constraint `E ≥ 0`**, and the tested system is `\{e^{±u/2},w_g(·−\log n)\}`.
+>   No overlap; nothing relabelled. Paper 22's determinacy mechanism (Carleman) is **not** available
+>   here and is not invoked — D.26.10(iv) records exactly why (the system is not multiplicatively
+>   closed).
+> * *"moment cone"*: only `R140` and this phase — the term enters the corpus at D.24.9 and is made
+>   explicit here.
+> * *"Bohr almost"*: `NO-GO-LIST.md`, `04-papers/32-stepanov-band/main.tex:33` (the matched string is
+>   *"Bohr almost periodic on"*, one hit — **[citation string stated, round 2, finding H11]**),
+>   `03-research/phase-25/01-audit-classical.md`, and `R140_001/003/004/005` (Theorem D.23.13(iv)). The
+>   blueprint offered Bohr almost-periodicity as the separation argument; **it is not used** — Lemma
+>   D.26.4 is proved by the `ζ`-transform instead, because the hypothesis is available only on the
+>   discrete set `\{\log n\}` and a Bohr argument needs the continuum. This is a deliberate deviation
+>   from the blueprint's suggested proof, recorded here.
+> * Items 6 and 8 of `CORPUS_CHECK_ROW_D_PLAN`: item 6's warning (*"no source promotes unimodularity to
+>   global positivity … must be built from scratch"*) is respected — no such promotion is claimed;
+>   item 8's headline (*"Everything the corpus can currently define grows logarithmically or linearly
+>   where `¼m²` is required"*) is **not** contradicted here (see D.27.4: the growth is attainable, as
+>   `R140` already found for `h⁰_□`, and the obstruction is elsewhere). Nothing relabelled.
+
+---
+
+## D.27 — The quadratic candidate
+
+### D.27.0 Why quadratic, and the ray `mK`
+
+**Lemma D.27.1 (the traces of the canonical ray; `PROVED`).** `t_0(K) = (½,½)`,
+
+    t_n(K) = \tfrac12\big(n^{½}Φ_g(1) + n^{−½}Φ_g(0)\big) > 0 ,\qquad
+    x(mK+λ) = m\,x(K)\ \ \text{for every } λ ∈ 𝓝_∞,\ m ∈ R .
+
+The traces of `K` are **pure polar**: `Z(K) = 0`.
+
+*Proof.* `Φ_K(0) = Φ_K(1) = ½` and `Φ_K(ρ) = ξ(ρ) = 0`, so (D.26.1) drops its zero sum; equivalently
+`t_n(K) = I_∞(K,τ_{\log n}g) = ½\deg(τ_{\log n}g)` by Theorem 11.8(i). Positivity is
+`Φ_g(0),Φ_g(1) > 0` (Lemma D.26.1). Linearity of `T` and `𝓝_∞ = \ker T` (Theorem D.26.5) give the
+last claim. ∎ `PROVED`
+
+Clause (c) forces `h⁰(mK) + h⁰(K−mK) ≥ ½I_∞(mK,mK) − ½I_∞(mK,K) + χ = \tfrac{m²}{4} − \tfrac{m}{4}+χ`
+(Theorem 11.8(ii)); since `x(mK) = m\,x(K)`, any `h⁰ = Ψ∘T` must satisfy `Ψ(mx(K)) + Ψ((1−m)x(K)) ≳
+m²/4`, i.e. **`Ψ` must grow quadratically along the ray `R·x(K)`**. That is the blueprint's
+2-homogeneity heuristic, and it motivates — but, as D.27.5 shows, does not survive — the quadratic
+class.
+
+**Definition D.27.2 (the quadratic candidates).** For a symmetric real kernel `C = (C_{ij})` on the
+index set `\{(0,1),(0,2)\} ∪ N_{≥1}`, **finitely supported** (so that `Q_C` is everywhere defined on
+trace vectors), put `Q_C(x) := Σ_{i,j}C_{ij}x_ix_j`, `B_C` its polarization, and
+
+    h⁰_C(E) := \max\big(Q_C(x(E)),\,0\big) .
+
+Clause (a) is trivial. `h⁰_C` is `𝓝_∞`-invariant by Theorem D.26.5.
+
+### D.27.1 Clause (c), written as an inequality between quadratic forms
+
+**Proposition D.27.3 ((c) made explicit; `PROVED`).** Write `Q := Q_C∘x`, `B := B_C(x(·),x(·))`,
+`a := Φ_E(1)`, `b := Φ_E(0)`, `W(E) := Σ_ρΦ_E(ρ)Φ_E(1−ρ)`, so that
+`I_∞(E,E) = 2ab − W(E)` (11.6) and `I_∞(E,K) = ½\deg E` (11.10). Define on `D^W`
+
+    A(E) := 2Q(E) − \tfrac12 I_∞(E,E) = 2Q_C(x(E)) − ab + \tfrac12 W(E)      (quadratic part)
+    L(E) := 2B_C\big(x(K),x(E)\big) − \tfrac14\deg E                          (linear part)
+    c_0   := Q_C(x(K)) − χ                                                    (constant).
+
+Then:
+
+ (i) the **quadratic-form form of (c)** — the inequality
+
+          Q_C(x(E)) + Q_C\big(x(K)−x(E)\big) \;≥\; \tfrac12 I_∞(E,E) − \tfrac14\deg E + χ
+          \quad ∀E ∈ D^W                                                        (c*)
+
+     is **equivalent** to `A(E) − L(E) + c_0 ≥ 0` for all `E ∈ D^W`, and is **sufficient** for (c)
+     (because `\max(·,0) ≥ ·`, twice). It is *not* necessary for (c);
+ (ii) `L(E) = I_∞\big(E,\,2X_C − \tfrac12 K\big)` where
+     `X_C := Σ_j\big(Σ_i C_{ij}\,x(K)_i\big)·Y_j ∈ D^W`, with `Y_n := τ_{\log n}g` for `n ≥ 1` and
+     `Y_{(0,1)},Y_{(0,2)}` the fixed combinations of `K, τ_1K` representing `Φ_{(·)}(1),Φ_{(·)}(0)`
+     (Theorem 11.8(iii)). So (c*) is an inequality between the quadratic form `A` and an
+     `I_∞`-pairing plus a constant;
+ (iii) *(necessity of the homogeneous part)* (c*) holds for some `χ` **only if** `A(E) ≥ 0` for every
+     `E ∈ D^W`, i.e.
+
+          4\,Q_C(x(E)) \;≥\; I_∞(E,E) \qquad ∀E ∈ D^W .                          (Q1)
+
+*Proof.* (i) `x(K−E) = x(K)−x(E)` by linearity; expand
+`Q_C(x(K)−x(E)) = Q_C(x(K)) − 2B_C(x(K),x(E)) + Q_C(x(E))` and collect. (ii) is Theorem 11.8(iii) and
+Theorem 11.14(i)/(11.10): `\deg E = I_∞(E,2K)`, and each `t_n(E) = I_∞(E,Y_n)`. (iii) Apply
+`A(rE) − L(rE) + c_0 ≥ 0` for `r → ∞`: `r²A(E) − rL(E) + c_0 ≥ 0` forces `A(E) ≥ 0`. ∎ `PROVED`
+
+> **(Q1) restated.** `4Q_C(x(E)) ≥ 2ab − W(E)`, i.e. **the quadratic form in the traces must dominate
+> the intersection form.** On the primitive subspace (`a = b = 0`) this is `4Q_C(x(F)) ≥ −W(F) =
+> I_∞(F,F)`.
+
+### D.27.2 The (b′) decision: a proof, for every `C`, and the general obstruction
+
+**Theorem D.27.4 (`h⁰` vanishes in degree `≤ 0`; `RESTATEMENT` of Theorem 12.3 Steps 2 and 4).**
+**[RELABELLED AND REFRAMED, round 2, finding H5 of `R141_002` (MAJOR). Round 1 titled this "the
+primitive obstruction to (b′)", labelled it `PROVED` and called it "strictly wider in scope than
+`R140` Theorem D.24.7". All three are withdrawn. (1) **The traces play no role**: strip them out and
+the proof is two lines — (b′) at `F` gives `E' ≥ 0`, `E' ≢ 0`, `F−E' ∈ 𝓝_∞`; `\deg` is
+`𝓝_∞`-invariant (Theorem 11.13(ii),(iv)) so `\deg E' = \deg F = 0`; but `\deg E' > 0` (Theorem
+11.13(i)). That is **verbatim Step 4 of Theorem 12.3's own proof**, and Remark 12.3a already tabulates
+it against Hartshorne V.1.9 ("effective of degree `0` is `0`"). (2) It is **not comparable in scope**
+with D.24.7: D.24.7 *refutes* (b′) for every nonzero bidegree-function; this *constrains* any `h⁰`
+satisfying (b′), and refutes nothing. (3) Read correctly it is the classical **sanity check**
+`h⁰(D) = 0` for `\deg D < 0` and for non-trivial `\deg D = 0` — a required feature of any Riemann–Roch
+`h⁰`, not an obstruction. An `h⁰` that did *not* vanish there would be wrong; §D.30's candidate
+satisfies it, as it must.]** Let `Ψ : R^2×R^{N_{≥1}} → R_{≥0}` be
+arbitrary and `h⁰ = Ψ∘T`. If `h⁰` satisfies (b′), then
+
+    Ψ\big(x(F)\big) = 0 \qquad\text{for every primitive } F ∈ P^W ,
+
+i.e. `h⁰` vanishes identically on the primitive subspace, and in particular on every class of degree
+`≤ 0`.
+
+*Proof.* Suppose `Ψ(x(F)) > 0` for a primitive `F`. By Theorem D.26.8, `x(F) ∈ 𝔐`; but every element
+of `𝔐` has both polar coordinates strictly positive (Theorem D.26.9(iii)), while `x(F)` has
+`t_0(F) = (0,0)`. Contradiction. Since `Ψ ≥ 0`, `Ψ(x(F)) = 0`. The same argument with `\deg E ≤ 0`
+uses `\deg = t_{0,1}+t_{0,2}`. **Trace-free form (the version of record):** the statement holds for
+**every** `h⁰ : D^W → R_{≥0}` satisfying (b′), trace-built or not, by the two-line argument quoted in
+the bracket above, whose only inputs are Theorem 11.13(i),(ii),(iv). ∎ `RESTATEMENT` (`PROVED` as a
+computation)
+
+**Theorem D.27.5 (on the 2-homogeneous ansatz: in case (B), (c) alone suffices; `PROVED`).**
+**[REFRAMED, round 2, finding H2 of `R141_002` (MAJOR). The mathematics was re-derived by the auditor
+and is correct in both branches — including the `o(n²)` step and the exactness of the ray-continuity
+hypothesis. What is withdrawn is the **sign of the conclusion**. (1) "Either (b′) is false or (c)
+implies RH" carries **no content beyond Theorem 12.3** for a general `h⁰`: 12.3 already says
+(a)+(b′)+(c) ⟹ RH. (2) The one genuine increment is in the other direction and is **good news**: on
+this subclass, in case (B), **(b′) is not needed** — (c) alone implies RH, i.e. the hypotheses of the
+programme's central reduction can be weakened there. (3) It is **not a dichotomy of outcomes**: case
+(B) does not assert (b′); both clauses can fail at once, and `h⁰_{\deg}` (D.27.6) is exactly such an
+example — it is in case (B) **and** fails (b′) (`h⁰_{\deg}(−K) = ¼ > 0` while `\deg(−K) = −1 < 0`).
+The partition is of `Ψ`, not of failure modes. Every phrase presenting "(c) implies RH" as a failure
+is deleted below.]** Let `Ψ ≥ 0` be **positively 2-homogeneous**
+(`Ψ(λx) = λ²Ψ(x)` for `λ ≥ 0`) and **ray-continuous at the primitive directions**, by which is meant:
+for every primitive `F ∈ P^W ∩ C_c^∞(R)` the function `r ↦ Ψ\big(r\,x(K) − x(F)\big)` is continuous
+at `r = 0`. (Any `Ψ` continuous for the product topology — in particular any `\max(Q_C∘x,0)` with `C`
+finitely supported — has this property.) Put `h⁰ = Ψ∘T`. Then exactly one of:
+
+ **(A)** `Ψ(x(F)) > 0` for some primitive `F ∈ P^W ∩ C_c^∞(R)` — and then **(b′) is false**, with the
+   explicit witness `E := F`: `h⁰(F) > 0` and there is **no** `E' ≥ 0`, `E' ≢ 0` with `F−E' ∈ 𝓝_∞`;
+ **(B)** `Ψ(x(F)) = 0` for every primitive `F ∈ P^W ∩ C_c^∞(R)` — and then **(c) alone implies RH**,
+   without (b′): clause (c), for any `χ ∈ R`, forces `I_∞(F,F) ≤ 0` for every primitive
+   `F ∈ C_c^∞(R)`, hence RH by Paper 45 Theorem 10.4 ((1.10)). *(Case (B) asserts nothing about (b′);
+   see the bracket above.)*
+
+*Proof.* The two cases are exhaustive and exclusive because `Ψ ≥ 0`.
+
+(A) is Theorem D.27.4 read contrapositively; the witness is `F` itself, and the failure is *explicit*:
+`x(F) ∉ 𝔐` because `\deg F = 0` while `\deg E' > 0` for every `E' ≥ 0`, `≢ 0` (Theorem 11.13(i)) and
+`\deg` is constant on `𝓝_∞`-cosets (Theorem 11.13(ii),(iv)).
+
+(B) Fix a real primitive `F ∈ C_c^∞(R)`, `F ≢ 0`. Then `−F` is primitive too, so `Ψ(x(F)) =
+Ψ(−x(F)) = 0`. By 2-homogeneity, `h⁰(nF) = n²Ψ(x(F)) = 0` for every `n ≥ 1`, and
+
+    h⁰(K−nF) = Ψ\big(x(K) − n\,x(F)\big) = n²\,Ψ\big(\tfrac1n x(K) − x(F)\big) ,
+
+by positive 2-homogeneity with `λ = n > 0`. By ray-continuity at `F` and `Ψ(−x(F)) = 0`,
+for every `ε > 0` there is `n_ε` with
+`Ψ(\tfrac1n x(K) − x(F)) < ε` for all `n ≥ n_ε`; hence `h⁰(K−nF) ≤ εn²` for `n ≥ n_ε`. Clause (c) at
+`E = nF`, with `I_∞(nF,nF) = n²I_∞(F,F)` and `I_∞(nF,K) = ½n\deg F = 0`, reads
+
+    0 + h⁰(K−nF) \;≥\; \tfrac12 n² I_∞(F,F) + χ .
+
+Divide by `n²` and let `n → ∞`: `ε ≥ ½I_∞(F,F)` for every `ε > 0`, so `I_∞(F,F) ≤ 0`. As `F` was
+arbitrary, Paper 45 Theorem 10.4 gives RH. ∎ `PROVED`
+
+**Corollary D.27.5a (the quadratic class, decided; `PROVED`).** For every symmetric finitely supported
+`C`, `h⁰_C = \max(Q_C∘x,0)` is positively 2-homogeneous and ray-continuous, so Theorem D.27.5 applies:
+either (b′) is false (case (A), witness a primitive `F ∈ C_c^∞`), or (c) is RH (case (B)). In
+particular:
+
+ (i) if `C` is **positive semidefinite** and `Q_C∘x ≢ 0` on the primitive traces, case (A) holds and
+     **(b′) fails**; by Lemma D.26.6 this is decidable from `C` alone: `Q_C∘x ≡ 0` on primitive traces
+     iff the finite block of `C` indexed by `N_{≥1}` is the zero matrix;
+ (ii) if that block is zero, `Q_C` factors through the polar pair `t_0 = M(E)`, so `h⁰_C` is a
+     **bidegree-function** and (b′) fails by `R140_001` Theorem D.24.7 — independently, and with a
+     different witness (`E_0 + tF`);
+ (iii) hence **no symmetric finitely supported `C` satisfies (b′)** unless `h⁰_C ≡ 0`, which fails (c)
+     by growth: `h⁰(mK)+h⁰(K−mK) = 0 < \tfrac{m²}{4}−\tfrac m4+χ` for large `m`.
+
+*Proof.* (i) If the `N_{≥1}`-block of `C` is nonzero, pick `(m,n)` with `C_{mn} ≠ 0`; by Lemma D.26.6
+choose primitive `F ∈ C_c^∞` with prescribed `(t_1,…,t_N)`; a PSD `Q_C` restricted to the
+finite-dimensional image is PSD and nonzero, so it is `> 0` somewhere, and the corresponding `F` is
+the witness. If the block is zero, `Q_C(x(F)) = 0` for primitive `F` (which has `t_0 = 0`), which is
+(ii). (iii) combines them with Theorem D.27.5(A) and the computation of (iii). ∎ `PROVED`
+
+> **The (b′) decision asked for by the blueprint, answered.** *"Decide: does any nonzero PSD `C`
+> satisfy it?"* — **No**, and the proof is one line (Theorem D.27.4) rather than a construction: (b′)
+> forces `h⁰` to vanish on every primitive class, because a primitive class has degree `0` and no
+> nonzero effective class does. The witness the blueprint asked for (*"an `E` with `Q_C(t(E)) > 0` not
+> equivalent to a nonnegative class"*) is the primitive `F` of Lemma D.26.6 itself:
+> `t(F) ∉ 𝔐` and `Q_C(t(F)) > 0`. **[DELETED, round 2, finding H5: round 1 continued "Theorem D.27.4
+> is strictly stronger than `R140` Theorem D.24.7 in scope … and weaker in conclusion … The two
+> together close the class." The comparison is incoherent — D.24.7 *refutes* (b′) for a family, D.27.4
+> *constrains* any `h⁰` that satisfies it, and the two are not comparable — and "close the class"
+> overstates what is proved: what is closed is the **ansatz**, not the problem.]** Theorem D.27.4 is
+> the sanity check any Riemann–Roch `h⁰` must pass (and §D.30's does); D.24.7 is a refutation of a
+> different family.
+
+**Remark D.27.5b (what Theorem D.27.5 does *not* say).** It does not say `h⁰` cannot exist. It says the
+**positively 2-homogeneous ray-continuous** functionals of the traces are the wrong ansatz — and the
+reason is elementary: `h⁰(mK) ~ ¼m²` together with `h⁰|_{P^W} ≡ 0` needs a linear-and-constant part,
+which 2-homogeneity forbids. **[ADDED, round 2, finding H2/H6: §D.30 exhibits a non-homogeneous `Ψ∘T`
+for which (a) and (c) hold unconditionally, so the class of trace functionals is emphatically **not**
+closed.]** `h⁰_{\mathbb Z}` (Paper 46
+Definition 13.4) satisfies (b′) (Theorem 13.5(iii), phase-135 round-3 repair N2) and therefore
+vanishes on primitive classes — consistent with Theorem D.27.4 — and fails (c) by growth
+`O((\log m)^{3/2})` (phase-137 D.11). Nothing is relabelled.
+
+### D.27.3 Clause (c) for a PSD `C`: implied by RH, hence never unconditional
+
+**Theorem D.27.6 (the FATAL screen, proved; `PROVED`).** Assume RH. Let `C^{\deg}` be the kernel with
+`Q_{C^{\deg}}(x) = \tfrac14(x_{0,1}+x_{0,2})²`, i.e. `h⁰_{\deg}(E) = \tfrac14(\deg E)²`, which is PSD.
+Then (c*) — hence (c) — holds for `h⁰_{\deg}` with `χ = 3/16`, and `h⁰_{\deg}(mK) = \tfrac14 m²`, the
+growth required by (P139) on the nose. Conversely, (c) for `h⁰_{\deg}` with **any** `χ` implies RH.
+
+*Proof.* With `d := \deg E = a+b`, `h⁰_{\deg}(E) + h⁰_{\deg}(K−E) = \tfrac14 d² + \tfrac14(1−d)²`
+(using `\deg K = 1`), and `\tfrac12I_∞(E,E) − \tfrac12I_∞(E,K) + χ = ab − \tfrac12W(E) − \tfrac14 d
++ χ`. Subtracting,
+
+    \text{LHS} − \text{RHS} = \tfrac12(a²+b²) − \tfrac14(a+b) + \tfrac14 + \tfrac12 W(E) − χ .
+
+Under RH, `Φ_E(1−ρ) = \overline{Φ_E(ρ)}` at every zero `ρ = ½+iγ` (`E` real), so
+`W(E) = Σ_ρ|Φ_E(ρ)|² ≥ 0`; and `\min_{a,b∈R}\big[\tfrac12(a²+b²)−\tfrac14(a+b)\big] = −\tfrac1{16}`,
+so `\text{LHS}−\text{RHS} ≥ −\tfrac1{16}+\tfrac14 − χ = \tfrac3{16} − χ ≥ 0` for `χ ≤ 3/16`. Growth:
+`\deg(mK) = m`. Conversely, at `E = nF` with `F` primitive (`a = b = 0`), the displayed identity gives
+`\tfrac14 + \tfrac12 n²W(F) ≥ χ` for all `n`, forcing `W(F) ≥ 0`, i.e. `I_∞(F,F) ≤ 0`, i.e. RH. ∎
+`PROVED`
+
+**Addendum D.27.6a (two omissions of round 1; `PROVED`).** **[ADDED, round 2, finding H13 of
+`R141_002` (MINOR); D.27.6's computation itself was recomputed by the auditor and confirmed.]**
+
+ (i) *`χ = 3/16` is optimal for `h⁰_{\deg}`*, and the extremal class is `E = ½K`: there
+     `a = b = ¼`, `W(½K) = 0` (since `Φ_K(ρ) = ξ(ρ) = 0`), and
+     `\tfrac12(a²+b²) − \tfrac14(a+b) + \tfrac14 = \tfrac1{16} − \tfrac18 + \tfrac14 = \tfrac3{16}`.
+ (ii) *`h⁰_{\deg}` **fails (b′)***, and this must be printed beside the theorem or the reader takes it
+     for a live candidate: it is a bidegree-function (`R140` Theorem D.24.7), and directly
+     `h⁰_{\deg}(−K) = \tfrac14 > 0` while `\deg(−K) = −1 < 0`, so `−K` is `𝓝_∞`-equivalent to no
+     nonzero effective class (Theorem 11.13(i),(ii)).
+
+> **`3/16` versus `1/8`, stated so it cannot be misread (round 2, finding H13).** The two constants
+> belong to **different candidates**, and both are suprema of admissible `χ` **under RH**:
+> `χ = 1/8 = c²/2` (`c = ½`) is `R140` Theorem D.24.4 for the **tensor square**
+> `h⁰_□(E) = \max(a,0)\max(b,0)`, extremal at `(a,b) = (c,0),(0,c)`; `χ = 3/16` is this round's, for
+> the **square of the degree** `h⁰_{\deg}(E) = \tfrac14(a+b)²`, extremal at `(a,b) = (¼,¼)`. They
+> differ because `\tfrac14(a+b)² ≥ ab ≥ \max(a,0)\max(b,0)` wherever the last is nonzero (the first
+> gap is `\tfrac14(a−b)²`), so the degree square is the **larger** `h⁰` and tolerates the **larger**
+> `χ`. The ordering `3/16 > 1/8` is therefore **not** an improvement of `R140` Theorem D.24.4, which is
+> neither contradicted nor relabelled.
+
+> **FATAL screen at D.27.6, stated exactly.** **[REWRITTEN, round 2, finding H1.]** For `C^{\deg}`,
+> clause (c) is **equivalent to RH** — so a proof of it would be a proof of RH, and none is given. For
+> `C` in case (B) of Theorem D.27.5, (c) again implies RH. **For `C` in case (A) the status of (c) is
+> not decided in this round**, and the necessary condition (Q1) of D.27.3(iii) is exactly where the
+> question lives. Nothing with a sign is proved, so the FATAL rule is not triggered.
+
+### D.27.4 The Paper-44 Gram choice of `C`, and Theorem 8bis.4a
+
+**Definition D.27.7 (the arithmetic Gram kernel; a `NAMED CHOICE`).** Fix a finite chart `S`, a level
+`N`, unit-height archimedean profiles, `ε < ε_0(A,S)`, and a finite window `A ⊂ N_{≥2}`. Put, for
+`m ≠ n` in `A`,
+
+    C^{Frob}_{mn} := G^{Frob}_{mn} = c_N(m,n)\,W_{fin}\big(\{\log m − \log n\}\big)\,(h_m⋆h_n^†)(n/m)
+                   = c_N(m,n)\,Λ(q^k)\,q^{−k/2}\quad\text{if } m/n = q^{\pm k},\ \ 0 \text{ otherwise,}
+
+`c_N(m,n) = ∏_{s∈S_f∖(P(m)∩P(n))}\mathrm{vol}(1+s^NZ_s)` (Paper 44 §12 correction **K1**: the
+complement of the **intersection**), and `C^{Frob}_{nn} := 0`, `C^{Frob}` zero on the polar indices.
+
+> **Three warnings travel with Definition D.27.7, and none is optional.**
+> 1. **The diagonal is a declared choice, not a regularization.** `I_A(Frob_n^{sm},Frob_n^{sm})` does
+>    **not exist** (Paper 44 Remark 8bis.1c), and its regularizations diverge in both conventions with
+>    no convention-free rate (Corollary 8bis.1b′). Setting it to `0` is a *naming*, exactly as
+>    `R140`'s `Δ ↦ 2K` was, and it is flagged as such wherever used.
+> 2. **Residue R2.** `C^{Frob}` is the **discrete Gram matrix** of `\{Frob_n^{sm}\}`; Paper 44's
+>    unsignedness theorem 8bis.4a is about `Q_{fin}(g) = ∫(g⋆g^†)dW^S_{fin}`, the `W_{fin}`-form on
+>    **real radial profiles** (8bis.10a). They share the kernel `W_{fin}` and are not the same form,
+>    and 8bis.4a's witness is not exhibited inside `span\{Frob_n^{sm}\}`.
+> 3. **Theorem 8bis.4a itself, with Remark 8bis.4b(3).** Positivity fails on the pure Frobenius form
+>    at **every finite chart**, unconditionally, on an explicit primitive class; the **colimit version
+>    is `OPEN`** (R3); and 8bis.4a decides the left-hand side of a biconditional at a chart and decides
+>    nothing about RH. So no sign can be inherited from family (A).
+
+**Proposition D.27.8 (what `Q_{C^{Frob}}` is on the two families; `PROVED`).** Write
+`α := Φ_g(1) > 0`, `β := Φ_g(0) > 0`.
+
+ (i) *(on the ray `mK + 𝓝_∞`)* `x(mK+λ) = m\,x(K)` and
+
+          Q_{C^{Frob}}\big(x(mK+λ)\big) = γ_C\,m² ,\qquad
+          γ_C = \tfrac12 Σ_{m'∈A}\ Σ_{\substack{q^k\,:\,m'q^k∈A}}
+                 Λ(q^k)q^{−k/2}\,c_N(m',m'q^k)\,
+                 \big(αm'^{½}+βm'^{−½}\big)\big(α(m'q^k)^{½}+β(m'q^k)^{−½}\big) ,
+
+     and `γ_C > 0` whenever the window `A` contains one pair `(m',m'q^k)`. **The growth wall is
+     cleared by the arithmetic Gram kernel too**: rescaling `C^{Frob} ↦ (4γ_C)^{−1}C^{Frob}` makes
+     `h⁰_{C^{Frob}}(mK) = \tfrac14 m²` exactly, the constant required by (P139) (and `(r²/4)m²` over a
+     number field `K`, by the same rescaling applied to `x(K_K)` with `I_∞^{(K)}(K_K,K_K) = r²/2`,
+     R139 Theorem D.20.1).
+ (ii) *(sign of the kernel)* `C^{Frob}` has **zero diagonal** and nonnegative, not identically zero,
+     off-diagonal entries; hence `\mathrm{tr}\,C^{Frob} = 0` and `C^{Frob}` (restricted to any finite
+     window containing one nonzero entry) is **indefinite**: it has eigenvalues of both signs.
+ (iii) *(on primitive classes — the trace-level analogue of 8bis.4a)* there exist primitive
+     `F_+, F_- ∈ C_c^∞(R)` with
+
+          Q_{C^{Frob}}\big(x(F_+)\big) > 0 \qquad\text{and}\qquad Q_{C^{Frob}}\big(x(F_-)\big) < 0 ,
+
+     unconditionally. Consequently `h⁰_{C^{Frob}}` falls in **case (A)** of Theorem D.27.5 and
+     **(b′) is false for it**, with the explicit witness `F_+` (`x(F_+) ∉ 𝔐` because `\deg F_+ = 0`).
+
+*Proof.* (i) Lemma D.27.1 gives `t_{m'}(K) = ½(αm'^{½}+βm'^{−½})`; expand
+`Σ_{m'≠n'}C^{Frob}_{m'n'}t_{m'}(K)t_{n'}(K)`, using that the support of `C^{Frob}` is the prime-power
+ratio relation `n' = m'q^{\pm k}` and that the kernel is symmetric, whence the factor `2` collapsing
+the two orientations against the `¼` from the two factors of `½`. Positivity of every displayed factor
+is `Λ(q^k) > 0`, `q^{−k/2} > 0`, `c_N > 0`, `α,β > 0`. The rescaling is immediate.
+(ii) A real symmetric matrix with zero trace and a nonzero entry is nonzero and has eigenvalue sum
+`0`, so it has both a positive and a negative eigenvalue.
+(iii) By (ii) choose unit vectors `y_\pm` in the finite window with `⟨C^{Frob}y_\pm,y_\pm⟩ ≷ 0`; by
+Lemma D.26.6 (second map) there are primitive `F_\pm ∈ C_c^∞(R)` with `(t_1(F_\pm),…,t_N(F_\pm)) =
+y_\pm`; and `t_0(F_\pm) = (0,0)` so the polar block of `C^{Frob}` (which is zero anyway) contributes
+nothing. The last sentence is Theorem D.27.5(A) and Theorem D.26.9(iii). ∎ `PROVED`
+
+> **Reading, with 8bis.4a.** (iii) is *not* Theorem 8bis.4a, and does not use it: it is the statement
+> that the **traces** see a positive value of the arithmetic Gram quadratic form on a primitive class,
+> proved here from indefiniteness plus surjectivity (Lemma D.26.6). It is however the exact analogue,
+> and it points the same way: **family (A)'s form carries no sign, at the level of traces as at the
+> level of radial profiles.** 8bis.4a is the corpus's independent statement of the same phenomenon for
+> `Q_{fin}`; the two are related only by sharing `W_{fin}`, per residue R2.
+>
+> **Where A8 is used, exactly.** In the **definition** of `C^{Frob}`: the entries are the atoms
+> `Λ(q^k)q^{−k/2}` of `−ξ'/ξ`, i.e. axiom A8 read directly, and the support of `C^{Frob}` is the
+> prime-power-ratio graph, i.e. the Euler product read as a combinatorial structure. A8 is used
+> **in no proof step** of D.26 or D.27. By T2's naming clause (N), a construction whose only contact
+> with A8 is in a definition cannot discharge the requirement — and Proposition D.26.11 shows the
+> whole framework transports to `Ξ_Q`, which has no Euler product. **Clause (N) is therefore moot for
+> this class**, exactly as `R140` found it moot for the tensor square (finding H15 there), and for the
+> same structural reason.
+
+### D.27.5 Acceptance tests for D.27
+
+**(AT-1), `Ξ_Q`.** (i) The product structure fails: `r_Q` is not multiplicative (`R140` Theorem
+D.23.4, with the H9 ring-class-group repair), so the index structure that defines `C^{Frob}` has no
+`Ξ_Q`-analogue with multiplicative content. **Passes.** (ii) But the *trace* construction is
+nevertheless definable for `Ξ_Q` (Proposition D.26.11), and Theorem D.27.5 transports: any
+2-homogeneous ray-continuous `Ψ` of the `Ξ_Q`-traces is in case (A) — then (b′) fails — or case (B) — and
+then (c) forces `I_∞^{(Q)}(F,F) ≤ 0` for every `Ξ_Q`-primitive `F ∈ C_c^∞(R)`, which **D.28.1 below
+refutes**. **[REWRITTEN, round 2, finding H3 of `R141_002` (MAJOR). Round 1 concluded "for `Ξ_Q` the dichotomy
+has **no surviving branch**". That converts the T2 schema into a refutation of the `ξ`-candidates and
+repeats the non-sequitur Paper 46 §13.1 withdrew: a case-(B) `Ψ` of the `ξ`-traces is refuted at `Ξ_Q`
+only if its case-(B) property **and** its (c) are proved model-uniformly. Concretely `h⁰_{\deg}` is in
+case (B) for `ξ` and its (c) is *equivalent to RH* (D.27.6); "refuted at `Ξ_Q`" would then say RH is
+refuted, which is absurd.]** What is proved is the schema, and only the schema: **no model-uniform
+proof of (c) for a case-(B) `Ψ` can exist**, since such a proof would apply verbatim at `Ξ_Q` and at
+`Ξ_a`, where the conclusion `I_∞^{(Z)}(F,F) ≤ 0` on the primitive `C_c^∞` cone is **false** (Theorem
+D.28.1; Proposition 12.4B with Theorem 12.4). In that form (AT-1)(ii) is a **refutation of the
+`Ξ_Q`-instance** and not an implausibility — `R140`'s residue **R8** discharged — and Corollary
+D.28.2, which quantifies over *proofs*, is the correct wording and is kept unchanged.
+
+**(AT-2), `Ξ_a`.** Proposition D.26.11 gives the construction for `Ξ_a`; Theorem D.27.5 transports;
+case (B)'s conclusion `I_∞^{(a)}(F,F) ≤ 0` on `Ξ_a`-primitive `F ∈ C_c^∞` is **false** by Paper 46
+Proposition 12.4B and Hardy's theorem (Theorem 12.4). **Passes**, in the same schema form as (AT-1):
+what is excluded is a *model-uniform proof* of case-(B) (c), not the `ξ`-instance of (c). The failure
+is located at a **named line** — the line at which D.27.5(B) concludes, which uses no property `Ξ_a`
+lacks. **Where A3 would have to enter a proof, and enters no proof of D.26–D.27, is exactly here.**
+**[Round-2 note, finding H3: round 1 added "So both branches die for `Ξ_a` as well"; deleted, same
+non-sequitur.]**
+
+**(AT-3), `ζ_K`.** No line of D.26 or D.27 distinguishes `Q` from `K` (Proposition D.26.11). **Passes**
+in the sense of the test (non-distinction is required), and this is precisely why the construction
+carries no sign.
+
+> **Corpus check (D.27).** The greps of D.26 apply. Additional: *"quadratic form in the prime sums"*
+> and *"Rankin–Selberg Gram"* have **no hits** outside the blueprint — the candidate class of
+> Definition D.27.2 is **NEW**. `CORPUS_CHECK_ROW_D_PLAN` item 7's standing verdict (M1's Theorem B:
+> *"this reduces to, rather than resolves, the Hodge-index gap"*) is confirmed in a new instance:
+> Theorem D.27.5(B) is that verdict for the trace quadratics. Item 8's *"the single central open gap"*
+> stands untouched. `R140` Theorems D.24.7, D.24.11 and Corollary D.24.12 are used and **not**
+> relabelled; D.24.12's guidance (*"an admissible `h⁰` must read `Z(E)` through pairings `I_∞(E,X)`
+> with `Z(X) ≠ 0`"*) is **satisfied** by Definition D.26.2 — `Z(τ_{\log n}g) ≠ 0` by Lemma D.26.1 — and
+> the 2-homogeneous ansatz nevertheless fails, for the elementary growth reason. `R140`'s O-14′ (per
+> residue **R11**) is hereby well-posed; it is **not** answered negatively. **[CORRECTED, round 2,
+> findings H2 and H6: round 1 wrote "the class still fails, which is the round's negative content …
+> answered in the negative for the 2-homogeneous case". The ansatz fails; the class does not. §D.30
+> exhibits a function of the traces with (a) and (c) proved unconditionally, and it satisfies D.24.12's
+> requirement with `X = E` itself.]**
+
+---
+
+## D.28 — O-17: Proposition 12.4B transposed to `Ξ_Q` with `P = \{0,1\}`
+
+**D.28.0 The two checks named by residue R8, verified.**
+
+ (a) *A non-real off-line zero exists.* Let `Q` be principal with `h(−D) > 1`. By Davenport–Heilbronn
+     ((C4) of R139 §D.19), `Z_Q(s)` has infinitely many zeros with `\mathrm{Re}\,s > 1`. For **real**
+     `σ > 1`, `Z_Q(σ) = Σ_n r_Q(n)n^{−σ} > 0` (positive terms, `r_Q(1) > 0`) and the archimedean factor
+     of `Λ_Q` is positive, so `Λ_Q(σ) > 0`: **every zero with `\mathrm{Re}\,s > 1` is non-real.** Fix
+     one, `ρ_0 = β_0 + iγ_0`, `β_0 > 1`, `γ_0 ≠ 0`. Then `β_0 ≠ ½` and `γ_0 ≠ 0`, which is exactly the
+     condition `x_0y_0 ≠ 0` that `106_11` (20)–(21) requires, and the quartet
+     `\{ρ_0, 1−ρ_0, \barρ_0, 1−\barρ_0\}` consists of **four distinct points**. *(The real zeros of
+     `Λ_Q` in `(0,1)` — R139 Corollary D.19.4a — are irrelevant here, and **[EXPANDED, round 2,
+     finding H9(2)]** the reason must be said rather than asserted: both they (contributing
+     `Φ_F(β)² ≥ 0`) and the zeros of `Ξ_Q` **on** the critical line (contributing `|Φ_F|² ≥ 0`) push
+     the **wrong** way, and the proof handles them only through `106_11`'s bound, which is a
+     domination **in modulus**, uniform on the strip `|\mathrm{Im}\,z| ≤ θ_Q`; so the sign of the tail
+     plays no role and no step needs `Ξ_Q` to have no real zeros. This is the one place where Lemma
+     12.4A(v)'s argument for `Ξ_a` cannot be copied, and it is not needed.)*
+ (b) *The strip is bounded, and the estimates are read on it.* For `σ ≥ σ_1` large,
+     `Z_Q(σ+it) = r_Q(1)(1+O(2^{−σ}))≠ 0`, so `Λ_Q` and hence `Ξ_Q = ½s(s−1)Λ_Q` has no zero with
+     `\mathrm{Re}\,s ≥ σ_1`; by the functional equation `Ξ_Q(s) = Ξ_Q(1−s)` none with
+     `\mathrm{Re}\,s ≤ 1−σ_1`. So `θ_Q := \sup_ρ|\mathrm{Re}\,ρ − ½| ≤ σ_1 − ½ < ∞`. As in Proposition
+     12.4B's *The strip* paragraph (phase-135 round-3 addition N5), `106_11`'s estimates (15), (16),
+     (27), (29) are re-read on `|\mathrm{Im}\,z| ≤ θ_Q`; this is legitimate because the only property
+     of the profile they use is Paley–Wiener membership (`Φ = \hatφ`, `φ ∈ C_c^∞`), which holds on
+     **every** horizontal strip, with constants depending on the strip and entering no conclusion.
+
+**Theorem D.28.1 (O-17: a `Ξ_Q`-primitive witness; `PROVED`, modulo the repository input `106_11`
+Theorem 1 as used by Paper 45 Theorem 10.4 and Paper 46 Proposition 12.4B).** Let `Q` be principal with
+`h(−D) > 1`, and `P := \{0,1\}`, `Π_P := Π = −∂_t²+¼`, `π_P(s) = s(s−1)`. Then there exist nonzero
+compactly supported real **`Ξ_Q`-primitive** tests `F_+` (even) and `F_-` (odd) with
+
+    Σ_{ρ∈Z(Ξ_Q)} Φ_{F_\pm}(ρ)\,Φ_{F_\pm}(1−ρ) < 0 ,\qquad\text{equivalently}\qquad
+    I_∞^{(Q)}(F_\pm,F_\pm) > 0 .
+
+Consequently the statement *"`I_∞^{(Q)}(F,F) ≤ 0` for every `Ξ_Q`-primitive `F ∈ C_c^∞(R)`"* is
+**false**.
+
+*Proof.* We run Proposition 12.4B with `P = \{0,1\}` in place of `\{−a,a,1−a,1+a\}`, checking each
+input.
+
+*The operator.* `Π_P = Π` is Paper 45's own primitivizer: real, order `2`, even in `∂_t`, support- and
+parity-preserving, with symbol `Φ_{ΠG}(s) = s(1−s)Φ_G(s)` (Lemma 11.2(iv)); up to the sign convention
+`π_P(s) := s(s−1)`, and `π_P(1−s) = (1−s)(−s) = s(s−1) = π_P(s)`, so Lemma 12.4A(iv)'s identity
+`Φ_F(ρ)Φ_F(1−ρ) = π_P(ρ)²Φ_G(ρ)Φ_G(1−ρ)` holds. `Π : C_c^∞(I_T) → P_T^{(P)}` is a linear bijection
+**[CORRECTED, round 2, finding H4 of `R141_002` (MAJOR): round 1 called `Π` "a linear bijection with
+inverse `F ↦ G_{1/2}∗G_{1/2}∗F` … the degenerate case of Lemma 12.4A(iii)". **Two errors.** (i) `Π`
+has order `2`, so its Green kernel is the **single** `G_{1/2}`; the double convolution inverts `Π²`,
+and Lemma 12.4A's degenerate case `c_1 = c_2 = ½` is `(∂²−¼)² = Π²`, not `Π`. (ii) More seriously,
+`G_{1/2}∗F` is **not compactly supported** for a general `F ∈ C_c^∞` (the kernel `e^{−|t|/2}` is
+supported everywhere); compact support of the preimage is the whole content, and it holds only on the
+**primitive** class. Nothing downstream changes: the tail bump `D ↦ D+4` corresponds to the order-`2`
+symbol `|ρ(1−ρ)|² = O((1+|z|)^4)` and would be degree `8` for `Π²`, so the rest of the proof was
+already written for the correct operator.]** — injective there by Lemma 11.2(v)
+(`\ker Π ∩ D^W = 0`); and **surjective onto the primitive class with compactly supported preimage by
+Paper 46 Lemma 3.1**: *every primitive `F ∈ C_c^∞(I_T)` is `ΠH` with `H ∈ C_c^∞(I_T)`, for every `T`*
+(quoted verbatim inside the proof of Theorem 11.10). That is the `P = \{0,1\}` case of Lemma
+12.4A(iii), already in the corpus, and it needs no degenerate limit.
+
+*Non-vanishing of `π_P` at the zeros.* `π_P(ρ) = ρ(ρ−1) = 0` only at `ρ ∈ \{0,1\}`, and
+`Ξ_Q(0) = Ξ_Q(1) = ¼ ≠ 0` (R139 Theorem D.19.2), so `0,1 ∉ Z(Ξ_Q)` and `π_P(ρ) ≠ 0` at every zero.
+Hence prescribing finitely many values of `Φ_F` at zeros is equivalent to prescribing them for `Φ_G`.
+
+*The quartet and the interpolation.* D.28.0(a): `β_0 > 1 ≠ ½`, `γ_0 ≠ 0`, four distinct points, and
+`x_0y_0 ≠ 0` in `106_11`'s variable `z = (ρ−½)/i` (`x_0 = γ_0`, `y_0 = ½−β_0`), so
+`(α,β) \mapsto Z_R(s_0)Φ(s_0)^N(α+βs_0²)` is an `R`-linear isomorphism `R²→C` and real coefficients
+realize any complex target; the odd family `z ↦ izZ_R(z)(γ+δz²)Φ(z)^N` identically.
+
+*The strip.* D.28.0(b).
+
+*Paley–Wiener* (import (E6)). `π_P` is a polynomial; multiplication by it does not change the
+exponential type, so `F = ΠG` is supported in the interval of `G` (and `Π` is local, so this is
+immediate).
+
+*Counting* (import (E3d)). `Ξ_Q` is entire of order `1` (R139 Theorem D.19.2), so
+`N_{Ξ_Q}(T) = O(T\log T)` and `Σ_ρ(1+|γ_ρ|)^{−2} < ∞`.
+
+*Tail domination.* The tail acquires `|π_P(ρ)|² = |ρ(1−ρ)|² = O\big((1+|z|)^{4}\big)` — degree `4`,
+exactly as in Paper 45 (and **not** the degree `8` of Proposition 12.4B, whose symbol has degree `4`).
+**[CORRECTED, round 2, finding H9(1) of `R141_002`: round 1 added "the construction imposes **four**
+interpolation conditions, one at each point of the quartet", which contradicts the two-real-parameter
+family `(α,β)` used one line earlier. For real even `F`, `Φ_F(1−s) = Φ_F(s)` and
+`Φ_F(\bar s) = \overline{Φ_F(s)}`, so the value at `ρ_0` determines the values at all four quartet
+points: **one complex condition**, matched by the two real parameters — which is exactly what the
+`R`-linear isomorphism `R² → C` provides. The sentence is deleted.]** In `106_11`'s bookkeeping the
+bump is therefore at most `D ↦ D+4`, and any such bump is
+harmless: as Proposition 12.4B records, *"(29) still converges, because (15) gives decay faster than
+any polynomial in `|\mathrm{Re}\,z|` on the strip, so `(1+|z|)^{D+4}|Φ(z)|^N` is integrable for every
+`D` and every `N ≥ 1`; it is the degree `D`, not the exponent `N`, that absorbs the factor."*
+
+Hence for `N` large the quartet's contribution `4\,\mathrm{Re}[Φ_F(ρ_0)Φ_F(1−ρ_0)]` — made negative by
+the choice of target values, weighted by positive multiplicities — dominates the rest of the sum,
+giving `F_\pm`. The last sentence of the statement is the equivalence (11.6) read for `Ξ_Q` on a
+`Ξ_Q`-primitive test, where the polar packet vanishes. ∎ `PROVED` (with the same import list as
+Proposition 12.4B: (E3d), (E6), `106_11` Theorem 1; **it uses no statement about where the zeros of
+`ζ` are**, and about `Ξ_Q` only (C4) and the elementary positivity of `Z_Q` on `(1,∞)`.)
+
+**Corollary D.28.2 ((AT-1)(ii) is a refutation; `PROVED`).** Any rule `Z ↦ h⁰_Z` on `𝒵` whose
+`(a)+(b′)+(c)` proof, read at `Z = Ξ_Q`, concludes `I_∞^{(Q)}(F,F) ≤ 0` for every `Ξ_Q`-primitive
+`F ∈ C_c^∞(R)` — in particular every rule of the class of Theorem D.27.5 landing in case (B) — is
+**refuted at `Ξ_Q`**. Combined with Theorem 12.4 (the `Ξ_a` refutation) and Theorem D.27.5, the
+acceptance tests (AT-1) and (AT-2) both bite, at the same line.
+
+> **What Theorem D.28.1 adds to R139 Theorem D.19.5, and what it does not.** D.19.5 produced an
+> **effective, even, compactly supported** witness `F_T^{(δ)}` with `Ŵ^{(Ξ_Q)} > 0` — not a primitive
+> one; the auditor's finding H7 was precisely that the step from there to the primitive cone is
+> missing, because `Π_P` multiplies each zero term by a non-sign-preserving factor. D.28.1 supplies the
+> primitive witness **directly**, by interpolation, and does not go through `F_T^{(δ)}`. R139 Theorem
+> D.19.5 is used nowhere in the proof and is **not** relabelled.
+>
+> **Corpus check (D.28).** The template is Paper 46 Proposition 12.4B (`46/main.md:2838ff.`) and
+> Lemma 12.4A; the construction imported is `106_11` Theorem 1, already imported by Paper 45 Theorem
+> 10.4 and by Proposition 12.4B — so nothing new is imported. `CORPUS_CHECK_ROW_D_PLAN` item 1's
+> recommendation (*"reuse the existing classification; do not reopen the Selberg-class search"*) is
+> respected: no search is reopened, and the Epstein input used is only (C4) and positivity of `Z_Q` on
+> `(1,∞)`. R139's O-10 (general, non-principal `Q`) is untouched and stays `OPEN`.
+
+---
+
+## D.30 — The Riemann–Roch-defined candidate `h⁰_{RR}^{+}` (new, round 2)
+
+**[NEW, round 2, finding H6 of `R141_002` (MAJOR). The auditor's construction, built out here with
+every clause proved, the gate constant decided, the falsifiers run, and the one open direction stated
+exactly. Round 1 never tried `X = E` in Corollary D.24.12's requirement — *"an admissible `h⁰` must
+read `Z(E)` through pairings `I_∞(E,X)` with `Z(X) ≠ 0`"* — although it is two lines from the round's
+own D.27.3. The finding is accepted in full and the round-1 recommendation of D.29 is withdrawn.]**
+
+Throughout, `R(E) := ½I_∞(E,E) − ½I_∞(E,K) + χ`, i.e. **the right-hand side of clause (c)**. By
+Theorem 11.8(i), `I_∞(E,K) = ½\deg E`, and by (11.6),
+
+    R(E) = ab − \tfrac12 W(E) − \tfrac14\deg E + χ ,\qquad (a,b) = M(E),\ \ W(E) = Σ_ρΦ_E(ρ)Φ_E(1−ρ).
+                                                                                   (D.30.1)
+
+`R` is defined by the arithmetic side (Definition 11.4 names no zero) and, by Theorem D.26.5, is a
+function of the traces `x(E)` — so the candidate below lives inside D.26's language, and is outside
+D.27.5's ansatz only because it is **not** positively 2-homogeneous.
+
+### D.30.1 Serre symmetry: the right-hand side of (c) is `σ_K`-invariant
+
+**Theorem D.30.1 (`PROVED`).** `R(K−E) = R(E)` for every `E ∈ D^W`, identically, unconditionally, and
+for every `χ`. The proof uses **only** bilinearity and symmetry of `I_∞` (Definition 11.4, Lemma
+11.4a); no value of `I_∞(K,K)` and no property of `K` beyond its being a fixed class is needed.
+
+*Proof.*
+
+    R(K−E) = \tfrac12\big[I_∞(K,K) − 2I_∞(K,E) + I_∞(E,E)\big] − \tfrac12\big[I_∞(K,K) − I_∞(E,K)\big] + χ
+           = \tfrac12 I_∞(E,E) − I_∞(E,K) + \tfrac12 I_∞(E,K) + χ
+           = \tfrac12 I_∞(E,E) − \tfrac12 I_∞(E,K) + χ = R(E). ∎ `PROVED`
+
+*Check in coordinates (the lead's verification, redone here).* `M(K−E) = (½−a,½−b)` and
+`W(K−E) = W(K) − 2Σ_ρΦ_K(ρ)Φ_E(1−ρ) + W(E) = W(E)` because `Φ_K(ρ) = ξ(ρ) = 0`; so by (D.30.1)
+
+    R(K−E) − R(E) = (\tfrac12−a)(\tfrac12−b) − ab − \tfrac14\big(1−a−b\big) + \tfrac14(a+b) = 0 .
+
+The invariance is exactly under the affine duality `σ_K(E) = K−E` of Paper 46 Theorem 12.2 — clause
+(R5) of the superseded Definition 6.8 — which is why it is available at all.
+
+### D.30.2 The ungated candidate, and why it fails
+
+**Definition D.30.2.** `h⁰_{RR}(E) := \max(R(E),0)`.
+
+**Proposition D.30.3 (`PROVED`).** For every `χ ∈ R`: (a) holds; **(c) holds unconditionally**, since
+by Theorem D.30.1
+
+    h⁰_{RR}(E) + h⁰_{RR}(K−E) = 2\max(R(E),0) ≥ R(E) ;
+
+and **(b′) fails, unconditionally**. Witness: `E = mK` with `m < 0`. Then `I_∞(mK,mK) = \tfrac{m²}2`
+and `I_∞(mK,K) = \tfrac m2`, so
+
+    R(mK) = \tfrac{m²}4 − \tfrac m4 + χ \xrightarrow[m→−∞]{} +∞ ,
+
+while `\deg(mK) = m < 0`; by Theorem 11.13(i),(ii),(iv) no nonzero effective class is
+`𝓝_∞`-equivalent to a class of negative degree. `PROVED`
+
+> So the lead's expectation *"(b′) for `h⁰_{RR}` ⟺ RH"* is **false in the `⟸` direction**, and not by
+> a repairable margin: (b′) for `h⁰_{RR}` is false outright, for every `χ`, with no hypothesis. The
+> defect is entirely in the **negative-degree half-line**, where `R` grows quadratically for the wrong
+> reason. That is what the gate removes — and Theorem D.27.4 says in advance that a gate of this kind
+> is *mandatory*, not ad hoc: any `h⁰` satisfying (b′) vanishes in degree `≤ 0`.
+
+### D.30.3 The gated candidate: (a) and (c) unconditionally
+
+**Definition D.30.4 (the Riemann–Roch candidate).**
+
+    h⁰_{RR}^{+}(E) := \max\big(R(E),\,0\big)\cdot\mathbf 1_{\{\deg E > 0\}} .
+
+**Theorem D.30.5 (`PROVED`; unconditional, for every `χ`).**
+
+ (i) **(a)** `h⁰_{RR}^{+} ≥ 0`, trivially.
+ (ii) **(c)** `h⁰_{RR}^{+}(E) + h⁰_{RR}^{+}(K−E) ≥ R(E)` for every `E ∈ D^W` — i.e. clause (c) of
+     Theorem 12.3 holds, unconditionally, with **any** `χ`.
+ (iii) **Growth:** `h⁰_{RR}^{+}(mK) = \tfrac14 m² − \tfrac14 m + χ` for `m` large, which is the
+     `(P139)` requirement `\tfrac14m² + O(m)` **on the nose**; over a number field `K`, with
+     `I_∞^{(K)}(K_K,K_K) = r²/2` and `\deg_K K_K = r` (R139 Theorem D.20.1), the same computation gives
+     `\tfrac{r²}{4}m² + O(m)`.
+ (iv) **Vanishing in degree `≤ 0`:** `h⁰_{RR}^{+}(E) = 0` whenever `\deg E ≤ 0`, in particular on the
+     whole primitive subspace `P^W` — the requirement of Theorem D.27.4, met by construction.
+ (v) **It is not positively 2-homogeneous** (the linear and constant terms of `R`), so Theorem D.27.5
+     does not apply to it; and it is **not a bidegree-function** (it reads `W(E)`), so `R140` Theorem
+     D.24.7 does not apply to it either.
+
+*Proof.* (i) is the definition. (ii): since `\deg E + \deg(K−E) = \deg K = 1 > 0`, **the two gates
+cannot both be off**. If the `E`-gate is on, the left side is `≥ \max(R(E),0) ≥ R(E)`. If the
+`(K−E)`-gate is on, the left side is `≥ \max(R(K−E),0) = \max(R(E),0) ≥ R(E)` by Theorem D.30.1. In
+detail, the three cases: `\deg E ≤ 0` (then `\deg(K−E) = 1 − \deg E ≥ 1 > 0`, second gate on);
+`\deg E ≥ 1` (then the first gate is on); `0 < \deg E < 1` (both on, and the left side is
+`2\max(R(E),0)`). No case uses `χ`, and none uses a sign. (iii) `\deg(mK) = m`,
+`I_∞(mK,mK) = \tfrac{m²}2`, `I_∞(mK,K) = \tfrac m2`; the gate is on for `m > 0` and `R(mK) > 0` for `m`
+large. (iv) is the gate, with `\deg|_{P^W} = 0` (Theorem 11.13(iii)). (v) `h⁰_{RR}^{+}(λE) ≠
+λ²h⁰_{RR}^{+}(E)` already for `E = K`, `λ = 2` (`R(2K) = 1 − ½ + χ`, `4R(K) = 1 − 1 + 4χ`); and `R`
+depends on `W(E)`, which is not a function of `M(E)` (`R140` Theorem D.24.7's own construction
+provides two classes of equal bidegree and different `W`). ∎ `PROVED`
+
+**Proposition D.30.6 (it defeats `R140` Theorem D.24.7's witness; `PROVED` under RH).** Let
+`E_0 ∈ D^W`, let `F ∈ C_c^∞(R)` be primitive with `Φ_F(ρ_1) ≠ 0` at some zero, and let `E_t := E_0+tF`
+be D.24.7's family (constant bidegree `(a,b)`, unbounded zero data). Then
+
+    R(E_t) = ab − \tfrac12\big[W(E_0) + 2t\,W(E_0,F) + t²W(F)\big] − \tfrac14\deg E_0 + χ ,
+
+and under RH `W(F) = Σ_ρ|Φ_F(ρ)|² > 0` (the sum contains `|Φ_F(ρ_1)|² > 0`), so `R(E_t) → −∞` and
+`h⁰_{RR}^{+}(E_t) = 0` for all large `t`. **The gate never fires on D.24.7's witness**, and the
+refutation of the bidegree class does not reach this candidate. `PROVED` (under RH; unconditionally,
+`R(E_t) → −∞` unless `W(F) ≤ 0`, i.e. unless RH already fails at a zero `F` sees).
+
+> **This is Corollary D.24.12's requirement met.** D.24.12 demands that an admissible `h⁰` read `Z(E)`
+> through pairings `I_∞(E,X)` with `Z(X) ≠ 0`. Here `X = E` **itself**: the single pairing
+> `I_∞(E,E)`, which is `\mathrm{PRIME} − \mathrm{ARCH}` of `E⋆E^∨` and names no zero. The phase spent
+> D.27 searching for an external family `X`; the diagonal was available throughout.
+
+### D.30.4 The gate constant: `χ > 0` is refuted, `χ = 0` is canonical
+
+**Theorem D.30.7 (`PROVED`, unconditional).** If `χ > 0` then (b′) fails for `h⁰_{RR}^{+}`.
+
+*Proof.* Fix `c > 0` and `ε > 0`, and set `E := αK + βτ_cK` with
+
+    β := \frac{−6ε}{e^{c/2}−e^{−c/2}} ,\qquad α := −2ε − β e^{c/2} ,
+
+so that, by `Φ_{τ_cK}(1) = \tfrac12e^{c/2}`, `Φ_{τ_cK}(0) = \tfrac12e^{−c/2}` (Theorem 11.8(iii)),
+`M(E) = (a,b) = (−ε,\,2ε)`. Then `E ∈ D^W`, `Z(E) = 0` (both `K` and `τ_cK` have `Φ(ρ) = 0`), so
+`W(E) = 0`, `\deg E = ε > 0`, and by (D.30.1)
+
+    R(E) = ab − \tfrac14\deg E + χ = −2ε² − \tfrac{ε}{4} + χ > 0
+
+for `ε` small. So `h⁰_{RR}^{+}(E) > 0`. But `a = Φ_E(1) = −ε < 0`, while every effective `E' ≢ 0` has
+`Φ_{E'}(1) = ∫E'e^{u/2} > 0`, and `M` is `𝓝_∞`-invariant (Theorem 11.11). So no such `E'` exists. ∎
+`PROVED`
+
+**Corollary D.30.8 (`PROVED`).** Admissibility forces `χ ≤ 0`, and `χ = 0` is the **weakest** (largest
+`\{h⁰ > 0\}`) admissible gate. With `χ = 0` the candidate is
+
+    h⁰_{RR}^{+}(E) = \max\big(\tfrac12 I_∞(E,E) − \tfrac14\deg E,\,0\big)\cdot\mathbf 1_{\{\deg E>0\}} ,
+    \qquad h⁰_{RR}^{+}(mK) = \tfrac14m² − \tfrac14m .
+
+Moreover, with `χ ≤ 0` and under RH, `R(E) > 0` and `\deg E > 0` **imply the two elementary necessary
+conditions for membership in `𝔐`**:
+
+ (i) `a > 0` and `b > 0` — since `W(E) ≥ 0` under RH, `R(E) > 0` gives
+     `ab > \tfrac12W + \tfrac14\deg E − χ ≥ \tfrac14\deg E > 0`, and `a+b > 0`;
+ (ii) `|Φ_E(ρ)| < \sqrt{ab}` at every zero — which is **exactly** Lemma D.24.6's necessary bound
+     `|Φ_{E'}(ρ)| ≤ b^{1−β}a^{β} = \sqrt{ab}` at `β = ½`, made strict.
+
+*Proof of (ii).* Under RH every zero is `ρ = ½+iγ` and, `E` being real, `Φ_E(1−ρ) =
+\overline{Φ_E(ρ)}`; the multiset is stable under `ρ ↦ \barρ`, so
+`W(E) = 2Σ_{γ>0}|Φ_E(\tfrac12+iγ)|²`. With `χ ≤ 0`, `R(E) > 0` gives
+`Σ_{γ>0}|Φ_E(\tfrac12+iγ)|² ≤ \tfrac12 W(E) < ab − \tfrac14\deg E + χ ≤ ab`, and each term is at most
+the sum. ∎ `PROVED`
+
+> **The calibration is exact, and it is the reason to take this candidate seriously.** The gate
+> `R > 0` at `χ = 0` cuts out precisely the classes that pass *both* elementary tests for membership in
+> the moment cone — no more and no less. At `χ > 0` it admits classes with `a < 0`, and is refuted
+> (Theorem D.30.7); at `χ < 0` it is strictly more cautious than necessary.
+
+### D.30.5 The clause, and that it implies RH — twice
+
+**Definition D.30.9 (THE CLAUSE).** For `χ ≤ 0`,
+
+> **(b′)⁺** : `\deg E > 0` **and** `R(E) = \tfrac12I_∞(E,E) − \tfrac14\deg E + χ > 0`
+> `⟹` there is `E' ∈ D^W` with `E' ≥ 0`, `E' ≢ 0`, `E − E' ∈ 𝓝_∞`.
+
+At `χ = 0` this reads, in words: **every class of positive degree and positive self-intersection is
+`𝓝_∞`-equivalent to a nonzero effective class.** Both hypotheses are `I_∞`-pairings, hence arithmetic
+(Definition 11.4); no zero is named.
+
+**Theorem D.30.10 ((b′)⁺ ⟹ RH; `PROVED`, two independent proofs).**
+
+*Proof 1 (through the corpus).* By Theorem D.30.5, `h⁰_{RR}^{+}` satisfies (a) and (c); (b′)⁺ is
+exactly clause (b′) for it, since `h⁰_{RR}^{+}(E) > 0 ⟺ \deg E > 0` and `R(E) > 0`. Theorem 12.3
+applies. ∎
+
+*Proof 2 (direct, self-contained, and it is the one that transports).* Let `F ∈ C_c^∞(R)` be real and
+primitive with `q := I_∞(F,F) > 0`; we derive a contradiction, which gives `I_∞(F,F) ≤ 0` on the
+primitive `C_c^∞` cone, i.e. RH by Paper 45 Theorem 10.4. Put `E := rF + K` with `r > 0`. Since
+`I_∞(F,K) = ½\deg F = 0` (Theorem 11.8(i)),
+
+    \deg E = \deg K = 1 > 0 ,\qquad I_∞(E,E) = r²q + I_∞(K,K) = r²q + \tfrac12 ,
+    R(E) = \tfrac12 r²q + \tfrac14 − \tfrac14 + χ = \tfrac12 r²q + χ ,
+
+which is `> 0` as soon as `r² > −2χ/q`. By (b′)⁺ there is `E' ≥ 0`, `E' ≢ 0`, with `E−E' ∈ 𝓝_∞`. Since
+`𝓝_∞` is the radical (Theorem 11.11), `I_∞(E',F) = I_∞(E,F) = rq + I_∞(K,F) = rq`, and
+`\deg E' = \deg E = 1` (Theorem 11.13(ii),(iv)). But `E'` is effective, so Theorem 11.14(ii) gives
+
+    rq = |I_∞(E',F)| ≤ C_F\,\deg E' = C_F < ∞ ,
+
+with `C_F` the bounded-density constant (11.17), independent of `r`. Taking `r > \max(C_F/q,
+\sqrt{−2χ/q})` is a contradiction. ∎ `PROVED`
+
+> Proof 2 uses only: bilinearity, `I_∞(F,K) = ½\deg F` (Theorem 11.8(i)), `𝓝_∞` = radical (Theorem
+> 11.11), `\deg` `𝓝_∞`-invariant and positive on nonzero effective classes (Theorem 11.13), and the
+> **bounded-density bound** (Theorem 11.14(ii)). It does not use ampleness, Step 2 of Theorem 12.3, or
+> Hardy's theorem. Its transportability is decided in D.30.8 below, and the answer is instructive.
+
+**Theorem D.30.11 (the stable weakening suffices; `PROVED`).** Theorem 12.3 remains valid with (b′)
+replaced by
+
+> **(b′)_{st}** : `h⁰(E) > 0 ⟹ ∃N ∈ N_{≥1}` and `E' ∈ D^W` with `E' ≥ 0`, `E' ≢ 0`,
+> `N·E − E' ∈ 𝓝_∞`.
+
+*Proof.* Re-read Paper 46 Theorem 12.3's proof. Step 2: if `h⁰(K−nF) > 0`, (b′)_{st} gives `N ≥ 1` and
+`E' ≥ 0`, `≢ 0`, with `N(K−nF) − E' ∈ 𝓝_∞`; then `N·I_∞(K−nF,H') = I_∞(E',H') > 0` by ampleness of
+`H'`, and `N > 0`, so `I_∞(K−nF,H') = m − nq > 0`, exactly as before. Step 3 uses only (c). Step 4: at
+the chosen `n`, (b′)_{st} gives `N ≥ 1` and `E' ≥ 0`, `≢ 0` with `Nn F − E' ∈ 𝓝_∞`, so
+`\deg E' = Nn\deg F = 0`, contradicting `\deg E' > 0`. ∎ `PROVED` (an extension of Theorem 12.3's
+hypothesis; Theorem 12.3 itself is untouched and unrelabelled)
+
+**Corollary D.30.12.** The weakest form of the row-D clause now available is
+
+> **(b′)⁺_{st}** : `\deg E > 0` and `I_∞(E,E) > \tfrac12\deg E − 2χ` `⟹` **some positive multiple of
+> `E`** is `𝓝_∞`-equivalent to a nonzero effective class,
+
+and it still implies RH (Theorems D.30.5, D.30.11). At `χ = 0` this is the arithmetic analogue of the
+classical *"`D² > 0` and `D·H > 0` ⟹ `D` is big"*, i.e. of asymptotic Riemann–Roch on a surface —
+where the multiple is exactly what the classical statement provides and the un-stabilized version does
+not. **This is the form phase 142 should target.**
+
+### D.30.6 Does RH imply the clause? — what is proved, and what is missing
+
+**Theorem D.30.13 (the zero-free locus: `PROVED`, unconditionally).** Let `E ∈ D^W` with `Z(E) = 0`,
+`\deg E > 0` and `R(E) > 0`, `χ ≤ 0`. Then `E` is `𝓝_∞`-equivalent to a nonzero effective class;
+explicitly, with `(a,b) = M(E)`,
+
+    E' := 2\sqrt{ab}\;τ_{c}K ,\qquad c := \log(a/b) ,
+
+satisfies `E' ≥ 0`, `E' ≢ 0`, `M(E') = (a,b)`, `Z(E') = 0`, hence `E − E' ∈ 𝓝_∞`.
+
+*Proof.* `W(E) = 0`, so `R(E) > 0` reads `ab > \tfrac14\deg E − χ ≥ \tfrac14\deg E > 0`; with
+`a + b = \deg E > 0` this gives `a,b > 0`, so `c` is defined. By Theorem 11.8(iii),
+`M(τ_cK) = \tfrac12(e^{c/2},e^{−c/2})`, so
+`M(E') = \sqrt{ab}\,(\sqrt{a/b},\sqrt{b/a}) = (a,b)`. `K > 0` pointwise (Theorem 11.7(i)) and
+translation preserves positivity, so `E' ≥ 0`, `E' ≢ 0`. `Φ_{E'}(ρ) = 2\sqrt{ab}e^{(ρ−½)c}ξ(ρ) = 0 =
+Φ_E(ρ)`. By Theorem 11.11, `E − E' ∈ 𝓝_∞`. ∎ `PROVED`
+
+> **The translates of `K` realize every rulings ratio.** `\{2λτ_cK : λ > 0, c ∈ R\}` sweeps out exactly
+> the open quadrant `\{(a,b) : a,b > 0\}` of bidegrees, with `λ = \sqrt{ab}` and `e^{c} = a/b`. So on
+> the zero-free locus the clause is not merely true but *witnessed by an explicit two-parameter family
+> of effective classes*.
+
+**The general case is `OPEN` (new open item O-18).** Precisely:
+
+> **O-18.** Assume RH. Let `a,b > 0` and let `(z_ρ)_{ρ∈Z(ξ)}` satisfy `z_{1−ρ} = \bar z_ρ`,
+> `Σ_ρ|z_ρ|(1+|γ_ρ|)^A < ∞` for the relevant `A`, and `Σ_{γ>0}|z_{½+iγ}|² < ab`. Does there exist
+> `E' ∈ D^W` with `E' ≥ 0`, `E' ≢ 0`, `Φ_{E'}(1) = a`, `Φ_{E'}(0) = b` and `Φ_{E'}(ρ) = z_ρ` for every
+> zero?
+
+**Exactly what is missing, stated so that the next round can attack it.**
+
+ (i) *No counterexample is available from the known necessary conditions.* The two unconditional
+     necessary conditions for membership in `𝔐` — `a,b > 0` and `|Φ_{E'}(ρ)| ≤ b^{1−β}a^{β}` (Lemma
+     D.24.6) — are **both implied** by the hypothesis, the second strictly (Corollary D.30.8). The
+     `𝒫_g`-conditions of D.26.9(v)/D.26.10(iii) are not checkable, because the description of `𝒫_g`
+     is itself open (O-15′′). So the clause is not refutable by anything the corpus currently knows.
+ (ii) *What is missing is a **sufficiency** criterion for the exponential moment problem* — Proposition
+     D.24.9's problem, now with the extra hypothesis `Σ|z_ρ|² < ab`. No sufficiency criterion for it
+     exists anywhere in the corpus (`CORPUS_CHECK_ROW_D_PLAN` items 6–8 record none; the corpus's
+     moment problems, phase-29 doc 26 and Paper 22, are Hamburger determinacy questions for the zero
+     measure, a different object).
+ (iii) *The obvious perturbative proof does not work, and the reason is already in the corpus.* One
+     would like `E' := 2\sqrt{ab}\,τ_cK + N` with `N` primitive carrying the prescribed zero data and
+     `|N| ≤ 2\sqrt{ab}\,τ_cK` pointwise. This **cannot** be arranged in general: `K` decays
+     super-exponentially, `K(t) = O(e^{9t/2}e^{−πe^{2t}})`, while a general `N ∈ D^W` decays only like
+     `e^{−(1+ε)|t|}` — which is exactly `R138_001` Theorem D.15.2b(ii), *"the effective cone is not
+     absorbing at `K`"*, proved there for this very reason. Any proof of O-18 must therefore build the
+     nonnegative representative directly, not as a perturbation of `τ_cK`.
+ (iv) *Consequently the status of "(b′)⁺ is strictly stronger than RH" is **undecided**.* We know
+     (b′)⁺ `⟹` RH (Theorem D.30.10). We do **not** know RH `⟹` (b′)⁺, and we have no witness against
+     it. Both possibilities remain open, and O-18 is the fork.
+ (v) *A remark on how the stable form changes the question.* For **(b′)⁺_{st}** (Corollary D.30.12)
+     the moment problem is relaxed: one must realize `(Na, Nb, (Nz_ρ))` for **some** `N ≥ 1`, and the
+     hypothesis `Σ|z_ρ|² < ab` scales as `N²Σ|z_ρ|² < N²ab` — i.e. it is scale-invariant and no easier
+     in this respect. What the multiple does buy is room in the *pointwise* problem of (iii): `N·E`
+     must dominate a fixed profile, not a shrinking one. Whether that suffices is part of O-18.
+
+### D.30.7 The clause as a containment in the moment cone
+
+**[Lead correction after R141_004 C5/C6.** (i) as written misidentified `S_0`: `R(E) > 0` is
+`Q(E) > I_∞(E,K)` with `Q = ½I_∞`, not `Q(E) > 0`, and `S_0` is **not a cone**. Correct statement and
+proof (auditor's): under RH, `S_0 = \{ℓ > 0,\ Q(E − ½K) > Q(½K)\}` with `ℓ = \deg`, which is **convex**
+by concavity of `√Q` on the forward Lorentzian cone (R138 D.15.2(a)), the backward branch being excluded
+by reverse Cauchy–Schwarz; the extremal class is `½K`, the fixed point of `σ_K`. Everything downstream
+survives with "convex cone" → "convex set". (ii) is downgraded to `SKETCH` (not load-bearing).**]**
+**Proposition D.30.14 (`PROVED` (i) as corrected above; (ii) `SKETCH`).** With `S_χ := \{E ∈ D^W : \deg E > 0,\ R(E) > 0\}`, clause (b′)⁺ is
+exactly the **zero-free containment**
+
+    T(S_χ) \;⊆\; 𝔐                                                              (D.30.2)
+
+(Theorem D.26.8), and since `𝔐 ∪ \{0\}` is a convex cone (Theorem D.26.9(i)), (D.30.2) is equivalent
+to `\mathrm{conv}\,T(S_χ) ⊆ 𝔐`. Moreover:
+
+ (i) *(under RH, with `χ = 0`, the left side is already convex, so convexity of `𝔐` adds nothing)*
+     `S_0 = \{E : I_∞(E,E) > 0,\ I_∞(E,K) > 0\}` is a **convex cone** — the forward cone of the
+     Lorentzian form `I_∞`.
+ (ii) *(unconditionally, convexity of the left side is equivalent to the sign)* if `S_0` is convex for
+     the ambient `I_∞`, then `I_∞` has at most one positive direction, which is Hodge index, i.e. RH.
+
+*Proof.* (i) Under RH, `I_∞(F_0,F_0) ≤ 0` for every `F_0 ∈ K^{⊥_{I_∞}}` — that is Paper 45 Theorem
+10.4 together with Theorem 11.10 (`K^⊥` is spanned by primitive directions modulo `𝓝_∞`, on which
+`I_∞(F,F) = −W(F) ≤ 0`) — so hypothesis (a) of `R138_001` Theorem D.15.2 holds with the positive
+vector `K` (`I_∞(K,K) = ½ > 0`). Write `Q := I_∞`, `ℓ := Q(·,K) = ½\deg`. Let `E_1,E_2 ∈ S_0`. If they
+are dependent, `E_2 = λE_1` with `λ > 0` (by `ℓ > 0`), and `S_0` is a cone. If independent, put
+`W_0 := \mathrm{span}(E_1,E_2)`; `W_0 ∩ K^⊥` has dimension `≥ 1` and `Q ≤ 0` there, while
+`Q(E_1) > 0`, so `Q|_{W_0}` has signature `(1,1)` (possibly with radical) and, in a basis where
+`Q = u²−v²`, the set `\{Q>0\}` has two nappes `u > 0`, `u < 0`. The functional `ℓ` does not vanish on
+`\{Q > 0\}` (a vector there with `ℓ = 0` would lie in `K^⊥` with `Q > 0`, contradicting D.15.2(a)), so
+it has constant sign on each nappe and opposite signs on the two. As `ℓ(E_1),ℓ(E_2) > 0`, `E_1` and
+`E_2` lie in the **same** nappe, whence `Q(E_1,E_2) = u_1u_2 − v_1v_2 > 0` (same sign of `u_i`, and
+`|u_i| > |v_i|`). Therefore `Q(E_1+E_2) = Q(E_1) + 2Q(E_1,E_2) + Q(E_2) > 0` and
+`ℓ(E_1+E_2) > 0`: `S_0` is convex. (ii) is the contrapositive of D.15.2(a)⇔(e)'s mechanism: if `Q` has
+two independent positive directions `X,Y` with `Q(X,Y) < 0` one can arrange `ℓ(X),ℓ(Y) > 0` (replacing
+`X` by `X + tK` for small `t`, which keeps `Q(X) > 0` and makes `ℓ > 0`) and `Q(X+Y) ≤ 0`, so `S_0` is
+not convex. ∎ `PROVED`
+
+> **What the convexity says.** Under RH the containment (D.30.2) is a containment of **convex cones**,
+> `T(S_0) ⊆ 𝔐`, both of them defined without naming a zero: the left one by the intersection form and
+> the degree, the right one as the moment cone. Convexity of `𝔐` therefore yields no extra necessary
+> condition — the left side is already convex, so there is nothing to close up. Conversely, in the
+> regime where the left side fails to be convex the clause is already false, because RH is. **This is
+> the legitimate use of D.26's moment cone**, and the one round 1 built the language for and did not
+> make.
+
+### D.30.8 The falsifiers
+
+**Proposition D.30.15 ((a) and (c) are model-uniform; `PROVED`).** Let `Z ∈ 𝒵` satisfy A1, A2, A2⁺,
+A5, A6, with polar set `P`, canonical class `K_Z`, `\deg_Z := I_∞^{(Z)}(\cdot,2K_Z)`, and
+`R_Z(E) := ½I_∞^{(Z)}(E,E) − ½I_∞^{(Z)}(E,K_Z) + χ`. Then `R_Z(K_Z−E) = R_Z(E)` identically (Theorem
+D.30.1's proof is pure bilinearity), and
+
+    h⁰_{RR}^{+,Z}(E) := \max(R_Z(E),0)\cdot\mathbf 1_{\{\deg_Z E > 0\}}
+
+satisfies **(a)** and **(c)** unconditionally, for every `χ`. **The gate argument needs only
+`\deg_Z K_Z > 0`**, which is A2⁺: `\deg_Z K_Z = 2Σ_{p∈P}Z(p)Φ_{K_Z}(p) = 2Σ_{p∈P}Z(p)² > 0`. **The
+rank of the polar block is irrelevant** — for `Ξ_a`, `\#P = 4` and `\deg_a K_a = 2Σ_{p∈P}Ξ_a(p)² > 0`,
+so `\deg_a E ≤ 0 ⟹ \deg_a(K_a−E) = \deg_a K_a − \deg_a E > 0` and the two gates still cannot both be
+off. ∎ `PROVED`
+
+> **Therefore the entire model-dependence of row D sits inside (b′)⁺.** That is the sharpest form T2's
+> demand has taken in this programme: (a) and (c) are theorems for every member of `𝒵`, and the clause
+> that must distinguish `ξ` from `Ξ_a` and from `Ξ_Q` is a single statement about effectivity.
+
+**Theorem D.30.16 (the `Ξ_a` falsifier: (b′)⁺ is false for `Ξ_a`; `PROVED`).** Fix `0 < a < ½`. Then
+**(b′)⁺ fails for `Ξ_a`**, for every `χ`, and the witness is explicit: with `F_+` the even
+`Ξ_a`-primitive compactly supported test of Paper 46 Proposition 12.4B (`I_∞^{(a)}(F_+,F_+) =: q > 0`)
+and `r` large, `E := rF_+ + K_a` has `\deg_a E = \deg_a K_a > 0`, `R_a(E) = ½r²q +
+½I_∞^{(a)}(K_a,K_a) − ¼\deg_a K_a + χ > 0`, and `E` is `𝓝_∞^{(a)}`-equivalent to no nonzero effective
+class.
+
+*Proof.* Proof 2 of Theorem D.30.10, transported. Every ingredient transports by Paper 46 §12.5: the
+comparison identity (11.6), `I_∞^{(a)}(F,K_a) = ½\deg_a F = 0` for `Ξ_a`-primitive `F`, `𝓝_∞^{(a)}`
+the radical (Theorem 11.11), Theorem 11.13, and — the one substantive point — **Theorem 11.14**, whose
+transport is §12.5(c): the weight `2\cosh(t/2)` is replaced by `Σ_{p∈P}Ξ_a(p)e^{(p−½)t}`, which grows
+like `e^{(½+a)|t|} = e^{θ_a|t|}` and therefore still dominates `|e^{(ρ−½)u}| ≤ e^{θ_a|u|}`; so
+`C_{F_+} < ∞`. Then `rq = |I_∞^{(a)}(E',F_+)| ≤ C_{F_+}\deg_a E' = C_{F_+}\deg_a K_a` bounds `r`, a
+contradiction for `r` large. `q > 0` exists by Proposition 12.4B, whose hypothesis (a zero of `Ξ_a` off
+the line) is Hardy's theorem via Theorem 12.4's argument. ∎ `PROVED`
+
+*Independent confirmation:* by Proposition D.30.15, `h⁰_{RR}^{+,Ξ_a}` satisfies (a) and (c); if it
+also satisfied (b′) it would contradict Paper 46 **Theorem 12.4** (no `h⁰_a` satisfies (a),(b′),(c)).
+The two arguments agree, and the first exhibits the witness.
+
+**The `Ξ_Q` falsifier: `OPEN`, and the reason is exactly axiom A7.** For `Ξ_Q`, (a) and (c) hold
+(Proposition D.30.15: `Ξ_Q` has A1, A2, A2⁺, A5, A6 — R139 Theorem D.19.2, D.19.3 — and
+`\deg_Q K_Q = 2Σ_{p∈\{0,1\}}Ξ_Q(p)² = 2\cdot2\cdot\tfrac1{16} = \tfrac14 > 0`). **But neither proof of
+Theorem D.30.10 transports**, and the obstruction is a theorem, not an oversight:
+
+ * **Theorem 11.14 fails for `Ξ_Q`.** Its constant is `C_F = \sup_u|w_F(u)|/\text{(polar weight)}`,
+   and the polar weight for `Ξ_Q` is `Σ_{p∈\{0,1\}}Ξ_Q(p)e^{(p−½)u} = \tfrac14\cdot 2\cosh(u/2)`,
+   which grows like `e^{|u|/2}`; while the zero terms `e^{(ρ−½)u}` grow like `e^{(β−½)|u|}` with
+   `β > 1` at the Davenport–Heilbronn zeros (D.28.0(a)). So `C_F = ∞`. **This is precisely the failure
+   of axiom A7** (`\sup_ρ|\mathrm{Re}\,ρ−½| ≤ θ_P`), which R139 Theorem D.19.7a records as one of the
+   two axioms `Ξ_Q` lacks.
+ * Consequently **Theorem 12.3 itself does not transport to `Ξ_Q`** (its Step 1 constructs the ample
+   class `F + 2mK` out of Theorem 11.14(ii),(iii)), and neither does Proof 2's bound. Whether (b′)⁺
+   holds or fails for `Ξ_Q` is therefore **not decided here** — and it is not the right question,
+   because the *frame* has already failed.
+
+> **Where A7, A3 and A8 would have to enter a proof of (b′)⁺ for `ξ`.**
+> * **A7 enters before (b′)⁺ is even stated**, at Theorem 11.14 — the bounded-density bound, whose
+>   whole content is that the zero strip lies inside the polar strip. For `ξ` this is import (E2) and
+>   is Chebyshev-trivial; for `Ξ_Q` it is false. So the `Ξ_Q` half of T2's requirement is discharged
+>   **by the frame**, not by the clause — a localization this phase did not have before.
+> * **A3 must enter the proof of (b′)⁺ itself**, by Theorem D.30.16: the frame survives for `Ξ_a`
+>   (A7 holds there, `θ_a = ½+a = θ_{P}`), (a) and (c) hold, and (b′)⁺ is **false**. Any proof of
+>   (b′)⁺ for `ξ` must therefore break at `Ξ_a`, and the only axiom separating them is A3
+>   (equimodularity of the polar block: `θ_P` is one number for `ξ`, two for `Ξ_a`).
+> * **A8** has, in this candidate, **no role yet**: nothing in D.30 reads the Euler product. That is
+>   not a defect of the candidate but a statement about where the work remains — a proof of (b′)⁺ is
+>   a statement about **effectivity**, and by T2 it must, at some line, read A8 (or A7/A9) as well as
+>   A3. The trace language of D.26 is where such a line would be written: by Proposition D.26.10(v)
+>   the only sign the arithmetic side supplies for free is `\mathrm{PRIME} ≥ 0` on nonnegative
+>   classes, which is A4/A8.
+
+> **Corpus check (D.30).** The auditor's grep is re-run and confirmed:
+> `grep -rIn "h⁰_{RR}\|h0_RR\|h⁰_RR\|Riemann–Roch-defined\|Riemann-Roch defined\|RR-defined\|\max(R(E)"`
+> over `--include=*.md --include=*.tex --include=*.py`, excluding this phase: **zero hits.** Paper 46
+> §13.1 (Definition 13.1, Theorem 13.2, Restatement 13.3) is the `H⁰`-**set** candidate; §13.2
+> Definition 13.4 is the lattice count `h⁰_{\mathbb Z}`; phase-135's `scripts/h0_candidate.py`
+> certifies Definition 13.4. **No Riemann–Roch-defined `h⁰` exists in the corpus**, and none of the
+> three candidates in Paper 46 §13 is `\max` of (c)'s own right-hand side. Two related corpus entries
+> are *not* contradicted and are now placed:
+> * `R138_001` Theorem D.15.2 (Lorentzian criterion) and D.15.2b (the effective cone is not absorbing
+>   at `K`) are **used** here — the first in Proposition D.30.14(i), the second in O-18(iii) as the
+>   reason the perturbative proof fails. Neither is relabelled.
+> * The corpus repeatedly names, as a missing ingredient, *"`H¹` or an **existence theorem for
+>   positive self-intersection**"* (`03-research/phase-107-arithmetic-lefschetz-reconstruction/107_239_RENORMALIZED_CORNER_TRACE_PAIRING.md:193`,
+>   echoed at `03-research/phase-111-schwartz-admissibility/111_03_VERDICT.md:100` and
+>   `111_99_PHASE_111_SUMMARY.md:53`). **Clause (b′)⁺ at `χ = 0` is exactly that existence theorem**,
+>   now stated on the row-D carrier `D^W` with its hypotheses in arithmetic form. The corpus named the
+>   gap; this round names the statement. Nothing is relabelled and no earlier claim is contradicted.
+
+---
+
+## D.29 — Synthesis input (one page)
+
+**[REWRITTEN IN FULL, round 2. Round 1's §§1–3 are superseded and its §4 recommendation ("an
+obstruction theorem, not an assembly") is **withdrawn**: findings H1, H2, H3, H5 and H6 of `R141_002`,
+the last of which exhibits the candidate that refutes it. The round-1 text is not deleted piecemeal;
+what follows is the version of record.]**
+
+**1. What the round actually establishes about the trace class.** Two theorems and one non-theorem.
+* **Faithfulness (the round's one clean new theorem).** `\ker T = 𝓝_∞` (Theorem D.26.5), by the
+  `ζ`-transform separation of the exponentials `n^{½−ρ}` (Lemma D.26.4). Every function of the traces
+  is a function on `D^W/𝓝_∞`, and no information is lost.
+* **(b′) is a zero-free cone containment** (Theorem D.26.8): (b′) `⟺ \{Ψ > 0\} ∩ T(D^W) ⊆ 𝔐`, with
+  `𝔐` convex, **pointed**, and inside the positive-degree half-space (Theorem D.26.9(i)–(iii)).
+* **The 2-homogeneous ansatz is wrong, and that is all.** Theorem D.27.4 is Theorem 12.3's own Steps
+  2/4 — `h⁰` vanishes in degree `≤ 0`, which is the classical sanity check `h⁰(D) = 0` for
+  `\deg D < 0`, a *required feature*. Theorem D.27.5 shows that on the positively 2-homogeneous
+  ray-continuous subclass, either `Ψ > 0` somewhere on primitive traces — and then (b′) fails — or
+  (c) **alone** implies RH, without (b′), which is a *weakening of the hypotheses of the programme's
+  central reduction* on that subclass. Neither is an impossibility theorem, and the reason the ansatz
+  fails is elementary: `h⁰(mK) ~ ¼m²` together with `h⁰|_{P^W} ≡ 0` requires a linear-and-constant
+  part, which 2-homogeneity forbids.
+
+**2. The candidate the phase was looking for is the right-hand side of (c) itself.** Because
+`R(E) := ½I_∞(E,E) − ½I_∞(E,K) + χ` is `σ_K`-invariant — `R(K−E) = R(E)` identically, from bilinearity
+and symmetry of `I_∞` alone (Theorem D.30.1) —
+
+    h⁰_{RR}^{+}(E) := \max(R(E),0)\cdot\mathbf 1_{\{\deg E > 0\}}
+
+satisfies **(a)** and **(c) unconditionally, for every `χ`** (Theorem D.30.5), with growth
+`¼m² − ¼m + χ` on the canonical ray, vanishing in degree `≤ 0`, not 2-homogeneous, not a
+bidegree-function, and unaffected by `R140` Theorem D.24.7's witness `E_0+tF` (Proposition D.30.6) —
+because it reads `Z(E)` through the pairing `I_∞(E,E)`, which is Corollary D.24.12's requirement met
+with `X = E` itself. The gate is forced: without it (b′) is false outright (`R(mK) → ∞` as
+`m → −∞`, Proposition D.30.3), and `χ > 0` is refuted unconditionally (Theorem D.30.7), so `χ ≤ 0`,
+with `χ = 0` the canonical and weakest admissible choice.
+
+**3. Which clause forces RH, and with what witness.** With (a) and (c) settled, **row D reduces,
+unconditionally, to one statement**:
+
+> **(b′)⁺** (`χ = 0` form): *every class of positive degree and positive self-intersection is
+> `𝓝_∞`-equivalent to a nonzero effective class* —
+> `\deg E > 0` and `I_∞(E,E) > \tfrac12\deg E` `⟹` `∃E' ≥ 0`, `E' ≢ 0`, `E − E' ∈ 𝓝_∞`.
+
+* **(b′)⁺ ⟹ RH**, twice (Theorem D.30.10): through Theorem 12.3, and directly, with the explicit
+  witness `E = rF + K` for a primitive `F ∈ C_c^∞` with `I_∞(F,F) = q > 0` — the contradiction being
+  `rq = |I_∞(E',F)| ≤ C_F\deg E' = C_F` from the bounded-density bound (Theorem 11.14(ii)).
+* **The stable form suffices** (Theorem D.30.11, Corollary D.30.12): Theorem 12.3 survives replacing
+  (b′) by "*some* positive multiple of `E` is equivalent to a nonzero effective class", so the target
+  may be weakened to the arithmetic analogue of *"`D² > 0`, `D·H > 0` ⟹ `D` is big"*.
+* **RH ⟹ (b′)⁺ is `OPEN` (O-18).** Proved on the zero-free locus `Z(E) = 0`, where the translates
+  `2\sqrt{ab}\,τ_{\log(a/b)}K` realize every bidegree with `a,b > 0` (Theorem D.30.13). In general the
+  hypothesis implies **both** unconditional necessary conditions for membership in `𝔐` — `a,b > 0`
+  and `|Φ_E(ρ)| < \sqrt{ab}`, the second exactly Lemma D.24.6's bound made strict (Corollary D.30.8) —
+  so no counterexample is available from anything the corpus knows; what is missing is a
+  **sufficiency** criterion for the exponential moment problem of Proposition D.24.9, and the obvious
+  perturbative proof is blocked by `R138_001` Theorem D.15.2b(ii). **Whether (b′)⁺ is strictly
+  stronger than RH is undecided, and O-18 is the fork.**
+
+**4. Where A3, A7 and A8 are used, and where they would have to be.**
+* **Nowhere in a proof of D.26–D.27.** A8 enters only the *definition* of `C^{Frob}` (the atoms
+  `Λ(q^k)q^{−k/2}`) and, one-sidedly and non-discriminatingly, Proposition D.26.10(v) (`PRIME ≥ 0`,
+  which is A4 and which `Ξ_Q` has too). Every theorem of D.26 transports to `Ξ_a`, `Ξ_Q`, `ξ_K`
+  (Proposition D.26.11) — which means, exactly and only, that **no proof carried out inside D.26 can
+  establish a sign**.
+* **A7 enters the frame, before the clause.** Theorem 11.14 — the bounded-density bound — is the
+  statement that the zero strip lies inside the polar strip; for `ξ` it is Chebyshev-trivial ((E2)),
+  and for `Ξ_Q` it is **false**, so Theorem 12.3 itself does not transport to `Ξ_Q`. That is a
+  localization of T2's "one of A7/A8/A9" that the phase did not have before.
+* **A3 must enter the proof of (b′)⁺.** For `Ξ_a` the frame survives (A7 holds), (a) and (c) hold
+  (Proposition D.30.15), and (b′)⁺ is **false** with an explicit witness (Theorem D.30.16). So any
+  proof of (b′)⁺ for `ξ` must break at `Ξ_a`, and the only axiom separating them is A3.
+* **A8 has no role in D.30 yet**, and by T2 a complete proof must acquire one. The natural place is
+  Proposition D.26.10(v): the only free sign the arithmetic side gives is `\mathrm{PRIME} ≥ 0` on
+  nonnegative classes.
+* **Consequently the whole model-dependence of row D now sits inside a single clause about
+  effectivity** — the sharpest form T2's demand has taken in this programme.
+
+**5. Recommendation for phase 142 (replacing round 1's).** Not an obstruction theorem. Phase 142
+should (1) enter `h⁰_{RR}^{+}` into the corpus with (a), (c) proved and the gate constant decided
+(`χ ≤ 0`, `χ = 0` canonical; Theorems D.30.5, D.30.7); (2) state **(b′)⁺**, and its stable weakening
+**(b′)⁺_{st}**, as row D's single open clause; (3) attack **O-18** — RH `⟹` (b′)⁺ — with the moment
+problem of Proposition D.24.9 as the technical target and O-15′′ (`𝒫_g`) as its dual form; (4) read
+the clause as the containment of convex cones `T(S_0) ⊆ 𝔐` (Proposition D.30.14), which is the
+legitimate use of this round's moment cone; and (5) run the falsifiers on (b′)⁺ — `Ξ_a` is done
+(Theorem D.30.16), and for `Ξ_Q` the finding is that the **frame**, not the clause, is what fails
+(A7).
+
+**6. What must not be repeated (carried, with one addition).**
+* Do not read a model-uniform *definition* as a refutation of the `ξ`-instance: Paper 46 §13.1
+  withdrew that inference, and round 1 repeated it (finding H3).
+* Do not present "(c) implies RH" as a failure of a candidate: it is the programme's reduction working
+  (finding H2).
+* Do not claim a clause is "not unconditionally provable": that is a statement about provability, and
+  no argument of this kind is available (finding H1).
+* **New:** do not search for an external family `X` in Corollary D.24.12's requirement before trying
+  `X = E` (finding H6).
+
+## Open list carried out of this round
+
+| # | statement | status |
+|---|---|---|
+| **O-14′** | can an `h⁰ = Ψ∘T` reading the Frobenius traces satisfy (a),(b′),(c)? (well-posed per R11 as a functional of the **pairings**, Definition D.26.2) | **[REVISED, round 2, findings H2/H6.]** For positively 2-homogeneous ray-continuous `Ψ`: the ansatz is wrong (Theorem D.27.5), by the elementary growth argument. For general `Ψ`: **a candidate exists** — `h⁰_{RR}^{+} = \max(R,0)\mathbf 1_{\deg>0}` is a function of the traces with (a),(c) **proved unconditionally** (Theorem D.30.5). O-14′ is therefore **not** answered negatively; it is reduced to **O-18** |
+| **O-15** | describe the moment cone `𝔐` | **PARTIALLY ANSWERED** **[downgraded, round 2, finding H7]**: convex, **pointed**, inside the positive-degree half-space (D.26.9(i)–(iii), `PROVED` — and it is these three that do all the work below); the barycentric description is a `RESTATEMENT` and the duality `𝔐̄ = 𝒫_g^{*}` is proved only in `⊆`. The remainder is **O-15′′** |
+| **O-15′′** | describe `𝒫_g`: which finitely supported combinations `λ_{0,1}e^{u/2}+λ_{0,2}e^{−u/2}+Σλ_nw_g(u−\log n)` are `≥ 0` on `R`? — **and** the closure step in Theorem D.26.9(v) (`𝔐̄ ⊇ 𝒫_g^{*}`) | **OPEN**, new this round; names no zero; it is the dual form of **O-18** |
+| **O-18** | **(the round's principal open item, new in round 2.)** Assume RH. Given `a,b > 0` and `(z_ρ)` with `z_{1−ρ} = \bar z_ρ`, rapid decay, and `Σ_{γ>0}|z_{½+iγ}|² < ab`, does there exist `E' ∈ D^W`, `E' ≥ 0`, `E' ≢ 0`, with `M(E') = (a,b)` and `Φ_{E'}(ρ) = z_ρ` at every zero? Equivalently: **RH ⟹ (b′)⁺?** | **OPEN**. Proved for `Z(E) = 0` (Theorem D.30.13). No counterexample available from the known necessary conditions (Corollary D.30.8). The perturbative route is blocked by `R138_001` Thm D.15.2b(ii) (O-18(iii)) |
+| **O-17** | a `Ξ_Q`-primitive compactly supported witness with `I_∞^{(Q)} > 0` | **CLOSED modulo the `106_11` import** — the standing of Proposition 12.4B itself (Theorem D.28.1, with the H4 repair); (AT-1)(ii) is a refutation of the `Ξ_Q`-instance (Corollary D.28.2) |
+| O-15′ | necessity in `R140` Theorem D.23.13(iv) with infinitely many accumulating real parts | carried, untouched |
+| O-13 | injectivity of `𝔫 ↦ Frob_𝔫` for general `K` | carried, used nowhere |
+| O-10 | Epstein results for general (non-principal) `Q` | carried; D.28.1 is stated for **principal** `Q` with `h(−D) > 1` only |
+| (22),(23),(23a–c) | Paper 46 §14.5 items on `h⁰_{\mathbb Z}` | carried, untouched |
+| O-1…O-8, O-11, O-12 | R139/R140 carry-overs | carried, untouched |
+| ~~O-16~~ | withdrawn in `R140` round 2 | stays withdrawn |
+
+---
+
+## Paper-facing list
+
+| tag | statement | destination |
+|---|---|---|
+| **P46-18** | **Definition D.26.2** (the Frobenius traces `t_n(E) = I_∞(E,τ_{\log n}g)`, zero-free by Definition 11.4), **Lemma D.26.1** (existence of `g` by Baire), **Lemma D.26.3** (the two readings, (D.26.1) and (D.26.2)), **Lemma D.26.4** (separation of `n^{½−ρ}` by the `ζ`-transform), **Theorem D.26.5** (`\ker T = 𝓝_∞`). | Paper 46, new §13.5 |
+| **P46-19** | **Theorem D.26.8** ((b′) `⟺ \{Ψ>0\}⊆𝔐`) and **Theorem D.26.9(i)–(iii)** (`𝔐` convex, **pointed**, inside the positive-degree half-space), with **Proposition D.26.10(i),(ii),(v)** (necessary conditions, including the A4/A8 one-sided bound). **[CORRECTED, round 2, finding H7: (iv) is a `RESTATEMENT` (a change of variable; `𝒞` is a graph, and `w_g` is not "explicit"), (v)'s `⊇` half is `OPEN`, and D.26.10(iii)'s "all" is withdrawn. The flat claim "with dual `𝒫_g^{*}`" is removed.]** | Paper 46 §13.4/§13.5 — **extends** D.24.9, replaces nothing |
+| **P46-20** | **Theorem D.27.5** (on the positively 2-homogeneous ray-continuous ansatz: in case (B), **(c) alone implies RH, without (b′)** — a weakening of Theorem 12.3's hypotheses on that subclass; in case (A), (b′) fails), with **Corollary D.27.5a**. **Theorem D.27.4** travels as a `RESTATEMENT` of Theorem 12.3 Steps 2/4 (`h⁰` vanishes in degree `≤ 0`) — the sanity check, **not** an obstruction. **[DOWNGRADED and REFRAMED, round 2, findings H2, H5; the comparison with D.24.7 is deleted.]** | Paper 46 §13, new §13.6 |
+| **P46-21** | **Theorem D.27.6** (`h⁰_{\deg} = ¼(\deg)²`: growth `¼m²` exactly, (c) `⟺` RH with `χ = 3/16`) **with Addendum D.27.6a**: `χ = 3/16` optimal, extremal class `E = ½K`; `h⁰_{\deg}` **fails (b′)** (`h⁰_{\deg}(−K) = ¼ > 0`, `\deg(−K) < 0`) — must be printed together or the reader takes it for a live candidate; and the `3/16` vs `1/8` clause (different candidates, `\tfrac14(a+b)² ≥ \max(a,0)\max(b,0)`, so the larger `h⁰` tolerates the larger `χ`; **no** improvement of D.24.4). | Paper 46 §13.4, beside Theorem D.24.4 |
+| **P44/46-22** | **Definition D.27.7** and **Proposition D.27.8**: the arithmetic Gram kernel `C^{Frob}` as a `NAMED CHOICE` (diagonal set to `0`, with Remark 8bis.1c and Corollary 8bis.1b′ carried), its growth constant `γ_C > 0` clearing `¼m²`, its indefiniteness (zero trace), and the trace-level unsignedness on primitive classes — **with residue R2's distinction between `Q_{fin}` and `G^{Frob}` written out**, and Theorem 8bis.4a + Remark 8bis.4b(3) carried verbatim. | Paper 46 §14 / Paper 44 §8bis cross-reference |
+| **P46-23** | **Theorem D.28.1** (O-17: the `Ξ_Q`-primitive witness, `P = \{0,1\}`, non-real Davenport–Heilbronn zero, bounded strip `θ_Q`, tail bump `D ↦ D+4`) and **Corollary D.28.2** ((AT-1)(ii) is a refutation). *Companion to Proposition 12.4B; the same import list.* | Paper 46 §12.3, new Proposition 12.4C |
+| **P46-24** | **Proposition D.26.11** (every theorem of D.26 transports to `Ξ_a`, `Ξ_Q`, `ξ_K`) stated **as a statement about proofs**: no derivation carried out inside D.26 can establish a sign. **[CORRECTED, round 2, finding H3: the round-1 gloss "the objects can carry no sign" is withdrawn — it is the inference Paper 46 §13.1 withdrew.]** Must travel with P46-18/P46-19 or the moment cone reads as a target. | Paper 46, Part III opening, beside P46-15 |
+| **P46-25** | **§D.30 entire**, and it is the round's principal paper-facing item: Theorem D.30.1 (`R(K−E) = R(E)`, from bilinearity alone), Definition D.30.4 and Theorem D.30.5 ((a) and **(c) unconditional**, growth `¼m² − ¼m + χ`, vanishing in degree `≤ 0`, non-homogeneity), Proposition D.30.6 (D.24.7's witness defeated), Theorem D.30.7 and Corollary D.30.8 (`χ ≤ 0` forced; `χ = 0` calibrated exactly to Lemma D.24.6), **Definition D.30.9 (the clause (b′)⁺)**, Theorem D.30.10 (two proofs that (b′)⁺ ⟹ RH), Theorem D.30.11 + Corollary D.30.12 (the **stable** weakening of Theorem 12.3, and (b′)⁺_{st} as the "big divisor" form), Theorem D.30.13 (the zero-free locus, with the explicit family `2\sqrt{ab}\,τ_{\log(a/b)}K`), **O-18**, Proposition D.30.14 (the containment `T(S_0) ⊆ 𝔐` of **convex** cones under RH), Proposition D.30.15 ((a),(c) model-uniform; the gate needs only `\deg_Z K_Z > 0`, any polar rank) and Theorem D.30.16 (the `Ξ_a` witness), together with the `Ξ_Q` finding that **Theorem 11.14, hence Theorem 12.3, does not transport** — axiom A7. | Paper 46, new §13.7 + §12.6; Theorem D.30.11 as an extension note to Theorem 12.3 |
+
+---
+
+## § Label
+
+**[REVISED IN FULL, round 2, finding H12 of `R141_002`.]**
+
+**Row D: no label change. No sign is proved, no `h⁰` with (a),(b′),(c) is produced, and none is
+claimed.** What round 2 adds is an `h⁰` with **(a) and (c) proved unconditionally** and the whole of
+row D reduced to one clause, which is *not* proved and which implies RH.
+
+| item | label (round 2) |
+|---|---|
+| D.26.1 (existence of `g`, Baire) | **PROVED** (non-constructive); carries the H14 note: `g` is selected by a condition quantified over `Z(ξ)`, and must be re-chosen in each model |
+| D.26.2 (the traces) | **DEFINITION**, zero-free (Definition 11.4) |
+| D.26.3 (the two readings) | **PROVED** |
+| D.26.4 (separation of `n^{½−ρ}`) | **PROVED** (auditor re-derived); multiset convention, hypothesis class and the `θ_Z` half-plane repaired (H8) |
+| D.26.5 (`\ker T = 𝓝_∞`) | **PROVED** — the round's one clean new theorem |
+| D.26.6 (surjectivity of the finite trace windows) | **PROVED**; the `𝓝_∞ ⊕ Λ_ξ` description of the primitive perp **deleted** (H10), only Theorem 11.10 is used |
+| D.26.8 ((b′) `⟺` cone containment) | **PROVED** (a definition-chase, correctly handling `E' ≢ 0` via `0 ∉ 𝔐`); the "answer to O-15" rhetoric withdrawn |
+| D.26.9(i)–(iii) (`𝔐` convex, pointed, positive-degree) | **PROVED** (auditor re-derived); (iii) is Theorem 11.13(i),(ii) in trace coordinates |
+| D.26.9(iv) (barycentric) | **RESTATEMENT** (change of variable; `𝒞` is a graph; "explicit" withdrawn) — H7 |
+| D.26.9(v) (dual) | **PROVED** in `⊆`; **OPEN** in `⊇` (the closure/regularity step) — H7, O-15′′ |
+| D.26.10(i),(ii),(v) | **PROVED**; (v) one-sided, licensed for `E' ∈ C_c^∞`, and shared by `Ξ_Q` via A4 |
+| D.26.10(iii) | **PROVED** minus the word "all" (H7) |
+| D.26.11 (transport) | **PROVED** as a statement about **proofs**; the gloss "the objects can carry no sign" **withdrawn** (H3) |
+| D.27.1 (traces of `mK`) | **PROVED** |
+| D.27.3 ((c) as a quadratic-form inequality; (Q1)) | **PROVED**; (c*) **sufficient, not necessary**, for (c); (Q1) is **not decided** in this round |
+| D.27.4 (`h⁰` vanishes in degree `≤ 0`) | **RESTATEMENT** of Theorem 12.3 Steps 2,4 (+ Theorem 11.13); `PROVED` as a computation. Round 1's "primitive obstruction" framing and the D.24.7 comparison **withdrawn** (H5) |
+| D.27.5 (case (A)/(B)) | **PROVED**; content restated (H2): in case (B) **(c) alone implies RH, without (b′)** — a weakening of Theorem 12.3's hypotheses, *not* an obstruction; the partition is of `Ψ`, not of failure modes |
+| D.27.5a (the quadratic class) | **PROVED**; reads as "the ansatz is wrong", not "the class is closed" |
+| D.27.6 + Addendum D.27.6a | **PROVED** (recomputed by the auditor); `χ = 3/16` **optimal**, extremal class `½K`; `h⁰_{\deg}` fails (b′); `3/16` vs `1/8` explained and D.24.4 **not** contradicted |
+| the FATAL screen | **REWRITTEN** (H1): nothing with a sign is proved; "(c) is not unconditionally provable" is **withdrawn as unprovable by any argument of this kind**; for `C` in case (A) the status of (c) is **not decided** |
+| D.27.7 (`C^{Frob}`) | **NAMED CHOICE** (the diagonal is *set*, not regularized); entries **PROVED-IN-REPOSITORY** (Paper 44 Thm 8bis.1 with K1, Cor. 8bis.1d); R2 and 8bis.4a + Rem. 8bis.4b(3) carried |
+| D.27.8 | **PROVED** (auditor verified `γ_C > 0`, zero-trace indefiniteness, the trace-level unsignedness) |
+| acceptance tests in D.27 | (AT-1) **PASSES**, (ii) a refutation of the **`Ξ_Q`-instance** via D.28.1 (schema form, H3); (AT-2) **PASSES** in the same schema form; (AT-3) **PASSES** |
+| **D.28.1** (O-17) | **PROVED modulo the `106_11` import** — the standing of Proposition 12.4B. Operator inverse **repaired** (H4: `Π` has order 2; compact support of the preimage is Paper 46 **Lemma 3.1**, the `P = \{0,1\}` case); "four interpolation conditions" **corrected** to one complex condition (H9(1)); the modulus-domination of the wrong-sign tail **stated** (H9(2)) |
+| D.28.2 | **PROVED** (quantifies over proofs; wording kept) |
+| **D.30.1** (`R(K−E) = R(E)`) | **PROVED**, from bilinearity and symmetry of `I_∞` alone |
+| **D.30.3** (`h⁰_{RR}`: (a),(c) free; (b′) false) | **PROVED**, unconditional, every `χ` |
+| **D.30.5** (`h⁰_{RR}^{+}`: (a) and **(c) unconditional**; growth `¼m² − ¼m + χ`; vanishes in degree `≤ 0`; not 2-homogeneous; not a bidegree-function) | **PROVED**, unconditional, every `χ` |
+| D.30.6 (D.24.7's witness defeated) | **PROVED under RH** (and unconditionally unless `W(F) ≤ 0`) |
+| **D.30.7** (`χ > 0` refuted) | **PROVED**, unconditional |
+| D.30.8 (`χ ≤ 0`; `χ = 0` calibrated to Lemma D.24.6) | **PROVED** (the calibration under RH) |
+| **D.30.9** (the clause **(b′)⁺**) | **STATEMENT**; **not proved, not refuted** |
+| **D.30.10** ((b′)⁺ ⟹ RH) | **PROVED**, twice; proof 2 is self-contained and uses Theorem 11.14(ii) |
+| **D.30.11** (Theorem 12.3 with (b′)_{st}) | **PROVED** — an **extension** of Theorem 12.3's hypothesis; Theorem 12.3 itself untouched and unrelabelled |
+| D.30.12 ((b′)⁺_{st}, the "big divisor" form) | **PROVED** as an implication (⟹ RH); the statement itself open |
+| **D.30.13** (zero-free locus) | **PROVED**, unconditional |
+| **O-18** (RH ⟹ (b′)⁺?) | **OPEN**. Proved for `Z(E) = 0`; no counterexample available from the known necessary conditions; the perturbative route blocked by `R138_001` D.15.2b(ii) |
+| D.30.14 (containment; `S_0` a convex **set**, not a cone — lead correction C5) | **PROVED** (i) as corrected; (ii) `SKETCH` (C6) |
+| D.30.15 ((a),(c) model-uniform; gate needs only `\deg_Z K_Z > 0`) | **PROVED** |
+| **D.30.16** (`Ξ_a`: (b′)⁺ **false**, explicit witness) | **PROVED**, with the §12.5(c) transport of Theorem 11.14 checked |
+| the `Ξ_Q` instance of (b′)⁺ | **NOT DECIDED** — and the finding is that **Theorem 11.14, hence Theorem 12.3, does not transport to `Ξ_Q`**, because A7 fails there. The *frame*, not the clause, is what breaks |
+| D.29 | synthesis, **rewritten in full**; round 1's recommendation ("an obstruction theorem") **withdrawn** |
+| deviation from the blueprint | Lemma D.26.4 by the `ζ`-transform, not Bohr (accepted by the audit, with its reason) |
+| scripts | **none**. `γ_C`, `χ = 3/16`, `−1/16`, `3/16` optimality at `½K` are exact closed forms |
+
+**Verdict of the round, as revised in round 2.** The traces are a faithful coordinate system (Theorem
+D.26.5) and (b′) is exactly a zero-free containment in the moment cone (Theorem D.26.8) — the two
+deliverables the blueprint asked for. The quadratic ansatz is the wrong one, for an elementary reason
+(growth needs a non-homogeneous part), and round 1's reading of that as an obstruction theorem is
+withdrawn. **The round's result of record is §D.30**: the right-hand side of clause (c) is
+`σ_K`-invariant, so its positive part, gated by degree, satisfies (a) and (c) **unconditionally**, with
+the required growth — and row D reduces to the single clause **(b′)⁺**, *every class of positive degree
+and positive self-intersection is equivalent to a nonzero effective class*, which implies RH, is false
+for `Ξ_a`, is proved on the zero-free locus, and whose converse (RH ⟹ (b′)⁺) is the new open item
+**O-18**.
