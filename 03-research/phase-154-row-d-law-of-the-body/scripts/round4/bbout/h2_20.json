@@ -1,0 +1,1 @@
+{"lo": 144.38403469520506, "hi": 167.26084163424608, "lb": 4.42892819e-05, "best": 0.959230546705369, "evals": 9028, "final_intervals": 0, "surviving_measure": 0.0, "L": 647.4198370823957, "target": 4.42892819e-05, "wmin": 5e-08, "complete": true, "which": "h2"}

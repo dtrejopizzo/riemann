@@ -1,0 +1,196 @@
+# R154.016 — Hostile audit of round 5 (phase 154). Auditor: Opus 5 (1M). 2026-09-20.
+
+*Scope: `R154_014` (lead order), `R154_015` (builder), `scripts/round5/` (`r5core.py`, `r5lp.py`, `r5polish.py`,
+`r5shape.py`, `r5bb.py`, `r5final.py`, logs, `certificate/CERT_log3_R5.json`, `certificate/CERT_T058_M24.json`),
+against `R154_007` (Lemma D2.3 is in fact `R154_010 §3`), `R154_010`, `R154_011`, `R154_012`.
+Everything numerical below was recomputed by the auditor from the **archived JSON decimals only**, with an
+evaluator written from scratch: `m` from `mpmath.digamma`, `ĝ₀, ĝ₁` from `mpmath.quad` and from independently
+derived closed forms (the `α`-derivative of `∫cosh(αu)cos(uτ)du`, **not** `r5core._J`), `ĝ₀′, ĝ₁′` by complex-step
+differentiation, `H₀, H₁` by quadrature, and a from-scratch reimplementation of the Taylor branch-and-bound.
+Scratch code: `/tmp/.../aud/indep.py`, `/tmp/.../aud/mybb.py`.*
+
+---
+
+## 0. Verdict table
+
+| # | item | builder's claim | auditor's verdict |
+|---|---|---|---|
+| 1 | **(F3) (TAY) inequality** `f ≥ m(mid−w/2) + (q+r)(mid) − \|(q+r)′(mid)\|w/2 − M₂w²/8` | rigorous | **CONFIRMED — sound.** Taylor with integral remainder on `[mid−w/2, mid+w/2]` plus monotonicity of `m`; the code implements exactly this, with the right `w` (cell `[cur, cur+w]`, `mid = cur+w/2`, `\|x−mid\| ≤ w/2`) |
+| 1a | `m(τ) = Re ψ(¼+iτ/2) − log π` increasing on `τ ≥ 0` | proved via the series | **CONFIRMED.** `Re ψ(¼+iy) = −γ + Σ_{n≥0}[1/(n+1) − (n+¼)/((n+¼)²+y²)]`, each summand increasing in `\|y\|`. The exact function in `r5core.m` is `Re ψ − log π` and **nothing else** — no cosine, no `Σv` (the prime cosines are a separate term in `base`). 0 violations on a 7 000-point grid over `[0,1000]` |
+| 1b | `M₂ = Σv_n log²n + 2Σ\|a_j\|u_j² + \|β₀\|H₀ + \|β₁\|H₁` | rigorous | **CONFIRMED, recomputed independently.** `log3`: `M₂_f = 6264.92293113`, `M₂_h = 6262.98636223`; `0.58`: `M₂_f = 2956.64135614`, `M₂_h = 2954.23542376` — all four agree with the archived decimals to every printed digit. Term-by-term: `(−v_n cos)″` ≤ `v_nlog²n`; `ν̂″` ≤ `2Σ\|a_j\|u_j²`; `ĝ₀″` ≤ `∫u²cosh(u/2)`; `ĝ₁″` ≤ `∫\|u\|³sinh(\|u\|/2)` (integrand of one sign). For the tail families the `β` terms are correctly *excluded* from `M₂` and carried instead by the monotone `−\|β₀\|k₀−\|β₁\|k₁` evaluated at the **left** endpoint; for `k = N` the `M₂` used is an over-estimate (`q` is then `ν̂ − Σv`), i.e. conservative |
+| 1c | rerun of the F3 verifier on round 4's own certificate | `8.8577·10⁻⁵`, 0 unresolved | **REPRODUCED TWICE.** (i) builder's `r5bb.py` on `round4/certificate/CERT_log3_M24.pkl`: `lb = 8.8578000000·10⁻⁵`, **2 378 593 evaluations, 0 unresolved**, 55 s / 6 procs. (ii) auditor's independent B&B, own evaluator and own derivatives: `lb = 8.8578·10⁻⁵`, **2 378 610 evaluations, 0 unresolved**. `c = lb − ε_fp = 8.8577·10⁻⁵` |
+| 1d | spot-check that nothing falls below `c` | — | **CONFIRMED.** `4·10⁵` random points (`10⁵` each on `f, h₀, h₁, h₂`) plus dense `10⁻⁴` scans of `[0,30]` and `[30,167.26]`: minimum found `8.85785640·10⁻⁵` (`h₀`, `x = 37.8153`) — **above `c` by `1.6·10⁻⁹`**; no value below `c`. My evaluator agrees with `r5core` to `≤ 1.3·10⁻¹³` |
+| 2 | **(F1)** D2.3's proof never used periodicity of the prime term | claimed | **CONFIRMED, and the refutation is decisive.** `R154_010 §3` already writes `Σ_n v_n cos((x+kP)log n)` with a *general* sum over `n`; `u_jP = 2πj` uses only the lattice of `ν`. Lemma F1 is D2.3 verbatim. The "obstruction" of `R154_010 §6` was refuted by §3 of the same document |
+| 2a | worst-case floors `1.583` (0.58) … `1.425` (log 2) | table §2 | **REPRODUCED to 4 decimals** (`Σv = 2.24882634466`; `m(289.99)−Σv = 1.5832`, …, `m(247.55)−Σv = 1.4249`). `τ* = 59.54` where `m = Σv` (builder's "passed at 60" ✓). `k₀, k₁` verified valid bounds on `\|ĝ₀\|, \|ĝ₁\|` over `[0.5, 400]` |
+| 2b | the incommensurability obstruction "does not exist" | withdrawn | **AGREED. Amendments required in `R154_010 §6` + §7 table, `R154_011` row 20 + §closing, `R154_012` §3 and its table — texts supplied in §3 below** |
+| 3 | `CERT_T058_M24`: `inf f ≈ −3.1964·10⁻³` | negative | **REPRODUCED EXACTLY** by my own B&B: `lb = −3.1964·10⁻³`, **505 806 evaluations** (builder: 505 806), 0 unresolved; dense-scan infima `f −3.1801528·10⁻³`, `h₀ −3.1963577·10⁻³`, `h₁ −3.1834131·10⁻³`, `h₂ −3.1947841·10⁻³`, all matching the archived `fine_min` to `10⁻¹⁰`. The certificate certifies **`λ_min ≥ −3.1964·10⁻³`, i.e. nothing**, and `checks_failed` in the JSON says so in five lines. Honest |
+| 3a | two-contact symbol at `T = 0.58` | `n = 2,3` | **CONFIRMED.** `e^{2T} = 3.1899`, so `{2,3}`; `v₂ = 2log2/√2 = 0.98025814`, `v₃ = 2log3/√3 = 1.26856820` (`= 2w₂, 2w₃`); `2Σw_n − C₀ = 2.24882634 + 5.37218342 = 7.62100976`, identical to `R154_007`'s `log 2` value `7.6210097639` (same contact set) and to `−σ_T(0) = −(C₀ − Σv_n)`. Normalisation correct |
+| 3b | deficit is **not** LP tolerance / F2 | `Δc = 2.5·10⁻¹⁴` | **CONFIRMED** (`7.8·10⁻¹²` of the deficit; the builder's "`1.3·10⁻¹¹`" is a slip, harmless) |
+| 3c | deficit is **not** the grid | `1.6·10⁻⁵` = 0.5 % | **CONFIRMED.** polish LP `−3.17993567·10⁻³` vs true infimum `−3.19635765·10⁻³`, gap `1.64·10⁻⁵` |
+| 3d | deficit is **not** the β range | (not addressed) | **CONFIRMED by me.** `β₀, β₁` enter with bounds `(None, None)` and only `t_i ≥ \|β_i\|` auxiliaries; **β is unconstrained**, so it cannot bind |
+| 3e | deficit is **not** the tail lemma / `ρ` | "floor is 1.58, four orders above" | **CONCLUSION RIGHT, REASON WRONG — repair required.** There is no `ρ` in the round-5 LP (the graded form has none) ✓, but the `k = N = 2` worst-cased row **is** binding: its minimum `−3.1948·10⁻³` is within `0.5 %` of the binding `h₀`. The floor `1.58` is irrelevant because the LP has already driven `ν̂` to `≈ −1.59` there. The correct measurement (mine): with `N = 3` the `k = 2` row moves from `−3.1948·10⁻³` to **`+0.1888`** and the new worst-case `k = 3` row to `+0.2980`; the binding constraints become `h₀ = −3.19636·10⁻³` and `f = −3.18015·10⁻³`. **Raising `N` buys `1.6·10⁻⁶` out of a `3.2·10⁻³` deficit — 0.05 %.** So the tail lemma is cleared, by this number and not by the one printed |
+| 3f | atoms strictly inside the window? | forbidden | **CONFIRMED NOT ALLOWED.** `u_j = j·2T/M`, `j ≥ M`, so `min u_j = 2T` exactly (`1.0986122886681098 = 2·½log3`; `1.16 = 2·0.58`), 0 atoms strictly inside. *Caveat (inherited, not this round's):* an atom sits **on** `\|u\| = 2T`, admissible only because `R154_007 §2` writes `supp ν ⊆ {\|u\| ≥ 2T}` closed |
+| 3g | both signs of `a_j` allowed? | yes | **CONFIRMED.** `bounds = (None, None)`; realised `222+/215−` at `log3`, `220+/194−` at `0.58` |
+| 3h | block polish run at 0.58? | yes | **CONFIRMED.** `sw_q058.log`: `G = 128`, 210 001 rows, `S = 10⁴`, 696 s, `LPc = −3.1799356683·10⁻³` |
+| 3i | "shape transfer fails across contact sets" | sound diagnosis | **HALF-SUPPORTED — repair required.** The *negative* half is measured (`½log3 → 0.58` polishes to `−0.4209` vs `−3.175·10⁻³` for the own LP, factor 132) ✓. The *positive* half — "within `{2,3}` the shape transfers, so steps 2–5 would be cheap" — is **untested**: `lp_S0.62/0.65/0.68/Slog2.pkl` all carry `lp = 8.885462·10⁻⁵` and 437 atoms, i.e. they are transfers **from `½log3`, not from `0.58`**, and none of their polishes produced an `it0` line. An alternative explanation (the lattice rescaling `d = 2T/M` alone destroys the profile) was never excluded |
+| 4 | **(F2)** exact active-set vertex, `133 = nv`, `Δc = −2.5·10⁻¹⁴`, not the binding lever | claimed | **CONFIRMED on the numbers, MISDESCRIBED in the narrative.** `lp_Q058_it0.pkl` carries `n_active = 133 = nv`, `n_bound_active = 0`, `max_violation = 2.18·10⁻¹¹` on the `S = 10⁴`-scaled rows (`2.2·10⁻¹⁵` unscaled), `Δc = −2.4998666·10⁻¹⁴`. **Agree: F2 is not the binding lever.** But §4's story — "variables sitting at a bound were then added as rows, and the repaired version returned `133 = nv`" — is **not what happened**: the `132/133` degeneracy was on `P058` (the *transferred* shape) and was never repaired; `Q058` is a **different LP** (own-atom shape `A058`) that happened to be non-degenerate, with `n_bound_active = 0`. Rewrite that sentence |
+| 5 | labels | see §7 of `R154_015` | **ACCEPTED as written**, with the corrections of §2 below |
+| 5a | FATAL rule | nothing beyond `log 2` | **PASSED.** `T = 0.58 < log 2 = 0.693147`, inside Paper 42's certified range (`main.tex:4072–4230`); no `ζ`-zero data, no zero-free region, no moments anywhere in `scripts/round5/` |
+| 5b | corpus-check lines | table §1 | **TWO GREPS RERUN.** `"high-precision LP"`: **0 hits** outside phase 154 ✓. `"second-order branch"/"Taylor branch"`: **0 hits** ✓. (`"two-frequency"` reproduces `phase-131 R131_015/016/017`, `phase-106`; the builder omits `04-papers/44-row-b-arithmetic-family/main.md` and `PLAN.md`, same object, immaterial) |
+| 5c | the doubling is due to F3, not F2 | claimed | **CONFIRMED CONCLUSIVELY.** `max\|a_{R5} − a_{R4}\| = 0` over all 437 atoms, `max\|u\| diff = 0`, `β₀, β₁` bit-identical. The certificate is **unchanged**; only the verifier changed. `4.42792819·10⁻⁵ → 8.8577·10⁻⁵` is `2.00042×`, and `8.8577·10⁻⁵/9.89281·10⁻⁴ = 8.95 %` ✓ |
+
+---
+
+## 1. Errors found (ranked)
+
+**E1 (real, in a proved statement — cosmetic in effect). The inequality `Re ψ(¼+iy) − log y ∈ (−1/(96y²), 0)` of
+`R154_015 §2` is FALSE, and the builder reports having verified it.** The true value is *more* negative than
+`−1/(96y²)` at every `y` I tested:
+
+| `y` | `−y²(Re ψ(¼+iy) − log y)` | `1/96 = 0.01041667` |
+|---|---|---|
+| 1 | `0.01682721` | violated |
+| 10 | `0.01042123` | violated |
+| 100 | `0.01041671` | violated |
+| 10⁴ | `0.010416667…` | violated (approached from above) |
+
+The quantity decreases to `1/96` from above, so `1/96` is the asymptotic constant but never an upper bound.
+`sup_{y≥1} −y²(Re ψ(¼+iy) − log y) = 0.0168272` (at `y = 1`). **Repair:** replace by
+`Re ψ(¼+iy) ≥ log y − 1/(50y²)` for `y ≥ 1`, i.e. **`m(τ) ≥ log(τ/2) − log π − 1/(12.5τ²)` for `τ ≥ 2`**.
+(Also delete "the constant `1/96` is the first Stieltjes term": `1/96` comes from the `ψ` asymptotic expansion, not
+from a Stieltjes constant.) Nothing downstream changes — the term is `1.3·10⁻⁵` at `τ = 30` — but a claimed
+`mpmath` verification that would have caught this was reported as passing, which is a hygiene failure.
+
+**E2 (inherited from `R154_010 §3`, repeated in F1). The "`⟺`" is false; only "`⟸`" holds and only "`⟸`" is used.**
+`W_k` subtracts `−|β₀|k₀ − |β₁|k₁`, so `ν̂ + W_k ≤ f(x+kP)`; `f ≥ c` therefore does **not** imply the rows. The
+proof's "`⟹` is the specialisation `τ = x+kP`" is wrong, and "an equality of content, not an inequality" is wrong
+for the `β` part (it is right for the prime part). **Repair:** state F1 and D2.3 as *sufficient criteria* (`⟸`),
+and say that the `k < N` rows are exact in the prime term and conservative in `β` by `|β₀|k₀+|β₁|k₁ ≤ 2.1·10⁻²`
+(builder writes `1.6·10⁻²`; the true value at `τ₁+NP ∈ [247.6, 290.0]` is `0.0180`–`0.0211`).
+
+**E3 (rigour of `ε_fp`).** `ε_fp = 10⁻⁹` is justified by the *measured* float-vs-interval discrepancy on 40 sampled
+points plus the four argmins (`5.43·10⁻¹³`). That is a sample, not a bound. My own estimate of the dominant term —
+`ν̂` roundoff, `2Σ|a_j|·max(u_jτ)·ε_mach ≈ 90 · 6.4·10³ · 1.1·10⁻¹⁶ ≈ 6·10⁻¹¹` — sits under `10⁻⁹` by only a factor
+`≈ 16`, not the `1.8·10³` claimed. The certificate survives (the true infimum exceeds `c` by `1.6·10⁻⁹`), but
+**Theorem R5a's `ε_fp` should be stated as an a priori bound**, e.g. `2Σ|a_j|u_{max}τ_{max}ε_mach + M₂w_min²/8 +
+(437+8)ε_mach·‖·‖`, or the surviving cells re-run in `mpmath.iv`. Round 4 used `ε_fp = 10⁻⁸` for the same data.
+
+**E4 (§4 narrative).** See row 4 above: the F2 "repair" described did not occur.
+
+**E5 (§5.1, fourth bullet).** See row 3e: right conclusion, wrong reason; replace with the `N = 3` measurement.
+
+**E6 (§6, last bullet).** See row 3i: the positive half of the shape-transfer diagnosis is untested and must be
+labelled `OPEN`, not `DIAGNOSTIC-NUMERIC`.
+
+**Non-error, for the record.** The builder *understates* F3: at equal target (`4.42892819·10⁻⁵`) the gain is
+`2.372·10⁸ / 2.559·10⁵ ≈ 930×`, not `100×`. The `100×` figure compares against a *harder* target and is therefore
+conservative. Keep it or state both.
+
+---
+
+## 2. Required repairs
+
+| # | where | what |
+|---|---|---|
+| R1 | `R154_015 §2` | replace the `1/96` inequality by `Re ψ(¼+iy) ≥ log y − 1/(50y²)` (`y ≥ 1`); delete "first Stieltjes term"; recompute the flat-corollary `τ₁` (unchanged at `≈ 1.1·10³`) |
+| R2 | `R154_015 §2` (Lemma F1) **and** `R154_010 §3` (Lemma D2.3) | `⟺` → `⟸`; correct the proof's last sentence; state the `β`-conservatism `≤ 2.1·10⁻²` |
+| R3 | `R154_015 §3` / Theorem R5a | state `ε_fp` as an a priori bound, or re-run surviving cells in `mpmath.iv` |
+| R4 | `R154_015 §4` | rewrite the F2 degeneracy sentence: the `132/133` vertex on `P058` was **declined and never repaired**; `Q058` is a different LP with `n_bound_active = 0` |
+| R5 | `R154_015 §5.1` | replace the tail bullet by: *"not the tail lemma (F1) — the `k = N` row is in fact binding to `0.5 %`, but raising `N` to 3 lifts it to `+0.1888` (and the new `k = 3` worst-case row to `+0.2980`), leaving `h₀ = −3.19636·10⁻³`; the whole tail lever is worth `1.6·10⁻⁶`, i.e. `0.05 %` of the deficit."* |
+| R6 | `R154_015 §6` | label the within-contact-set half of "shape transfer" **`OPEN`**; record that `lp_S0.62/0.65/0.68/Slog2.pkl` are transfers from `½log3`, not from `0.58`, and that none was polished |
+
+### Amendment texts for the withdrawn incommensurability obstruction
+
+**(A) `R154_010 §6`, replace the last sentence of the paragraph beginning "`T = log 2` (E3) was **not** run:"**
+
+> `T = log 2` (E3) was **not** run: at `log 2` round 3's distance is `8.49·10⁻²` against a target `1.09·10⁻⁷`, six
+> orders. ~~and the graded lemma does not help there — the second contact `log 3` is incommensurate with any lattice,
+> so no `P` makes the prime term periodic and `W_k` must worst-case both primes. That is the honest structural
+> obstruction at `log 2`, and it is unchanged.~~ **[AMENDED 2026-09-20, R154_015 §2 / R154_016.** The sentence
+> asserting a structural obstruction at `log 2` is **withdrawn as false**. Lemma D2.3 above is already stated with
+> `Σ_n v_n cos((x+kP)log n)` over the full contact set, and its proof uses periodicity **only for `ν̂`** — which is a
+> lattice measure we choose. The prime term is never required to be periodic: it is evaluated *exactly* on the `N`
+> shifted copies of one period of `ν̂` and worst-cased only on `[τ₁+NP, ∞)`. D2.3 therefore holds verbatim for any
+> finite frequency set, in particular for the two contacts `{2,3}` of `½log3 < T ≤ log 2`. The obstacle at `log 2` is
+> **quantitative, not structural**: the distance at `M = 24`, measured at `T = 0.58` in round 5, is `3.20·10⁻³`, and
+> the binding lever is the atom budget `M`.**]**
+
+**(B) `R154_010 §7`, verdict table, last row**
+
+> | `T = log 2` | **not run**; ~~the `log 3` incommensurability blocks the graded lemma there~~ **[AMENDED: the
+> incommensurability claim is withdrawn (R154_016). D2.3 applies unchanged at two contacts; `log 2` is not run for
+> compute reasons, and the measured lever is `M` (R154_015 §5.1).]** |
+
+**(C) `R154_010 §8`, open item 3, replace in full**
+
+> 3. `T = log 2` needs **no new tail lemma**: D2.3 already covers any finite contact set (`R154_015 §2`, `R154_016`).
+>    What it needs is an atom budget `M` large enough for two contacts; the `M`-sweep at `T = 0.58` is the
+>    measurement, and it is `OPEN`. *(Superseded: the earlier text asking for "a two-lattice `ν` … by simultaneous
+>    Diophantine approximation, not by periodicity" is withdrawn.)*
+
+**(D) `R154_011` row 20, replace the parenthesis**
+
+> | 20 | FATAL rule | **PASSED.** Positivity at `½log3` is already certified in Paper 42 (`main.tex:4072–4230`,
+> Feshbach/Schur-complement); nothing here claims a sign beyond `log 2`, and `T = log 2` is explicitly **not run**
+> ~~with a stated structural obstruction (`log 3` incommensurate with any lattice ⟹ no periodic `ν̂`)~~ **[AMENDED
+> 2026-09-20 (R154_016): the stated obstruction was false — D2.3 needs periodicity only of `ν̂`, never of the prime
+> term, and applies unchanged at two contacts. `log 2` is not run for compute reasons.]** Inputs are `ψ`, `log 2`,
+> `log 3`, LP. No `ζ`-zero data |
+
+**(E) `R154_011`, closing paragraph (line ~98), replace the clause**
+
+> ~~at `T = log 2` a second, incommensurate contact at `log 3` destroys the periodicity the whole tail argument
+> [rests on]~~ → **at `T = log 2` a second contact at `log 3` was wrongly believed to destroy the periodicity the
+> tail argument rests on; it does not (R154_016). The tail argument needs only the lattice of `ν`. What the second
+> contact costs is quantitative: at `T = 0.58` the same pipeline reaches `−3.1964·10⁻³` against `+8.86·10⁻⁵` one
+> step below.**
+
+**(F) `R154_012` table, row `T = log 2`**
+
+> | `T = log 2` | best certificate `−8.49·10⁻²` vs `λ_min ≈ 1.09·10⁻⁷`; ~~D2.3 blocked by the incommensurability of
+> `log 3` with any lattice of `log 2`-multiples~~ **D2.3 applies unchanged (R154_015 §2, R154_016); the block is the
+> atom budget `M`, measured at `T = 0.58` as a deficit of `3.20·10⁻³`** | `DIAGNOSTIC-NUMERIC`; `OPEN` (P154.1) |
+
+**(G) `R154_012` §3 (the "does not give the sign" paragraph), replace the second clause**
+
+> At `log 2` the certificate is six orders short ~~and the periodic method is blocked by incommensurability: the
+> two-prime window needs a genuinely two-frequency certificate.~~ **and the periodic method is *not* blocked: the
+> graded tail lemma holds for any finite contact set (R154_015 §2, confirmed R154_016). What the two-prime window
+> costs is an atom budget: at `T = 0.58` the same class reaches only `−3.1964·10⁻³`, exhaustively verified, against
+> a target `2.16·10⁻⁴`.**
+
+**(H) `R154_012` §4, (P154.1)** — strike "`needs a non-lattice tail lemma`" and replace by
+"`needs an atom budget M sufficient for two contacts; the M-sweep at T = 0.58 is the open measurement`".
+
+---
+
+## 3. What is confirmed, in one line each
+
+* **Theorem R5a** (`λ_min(A_{½log3}(w_ζ)) ≥ 8.8577·10⁻⁵`): **UPHELD**, reproduced by two independent verifiers
+  (2 378 593 and 2 378 610 evaluations, 0 unresolved each), no point below `c` in `4·10⁵` random + `2.0·10⁶`
+  dense-scan evaluations, `M₂` recomputed, coefficients bit-identical to round 4. Subject to R3 (`ε_fp` rigour).
+* **Lemma F1 / D2.3 at any finite contact set**: **UPHELD** as a sufficient criterion (E2), and the incommensurability
+  obstruction of rounds 4–5's predecessors is **correctly withdrawn**.
+* **(F3)** is a genuine, correctly implemented method contribution and the sole cause of the doubling at `½log3`.
+* **(F2)** is correct where it ran and is **not** the binding lever anywhere reached (`7.8·10⁻¹²` of the deficit).
+* **`T = 0.58` fails**, certified, by `3.1964·10⁻³` — `14.8×` its own target eigenvalue.
+
+## 4. Honest reading
+
+Round 5 produced one real theorem-shaped gain and one real theorem-shaped loss, and both survive audit. The gain is
+not a better certificate — the certificate at `½log3` is the *same 437 numbers round 4 archived* — but a better way
+of proving that certificate true: replacing a Lipschitz cover by a second-order Taylor cover turns the verifier's
+cost from `target⁻¹` into `target^{−1/2}`, and the constant it certifies happens to double because round 4's cover
+simply could not be driven to its own infimum. That is honest method work and I confirm every digit of it, twice,
+with independent code. The loss is that the staircase does not start: at the first `T` with two contacts the best
+certificate the class produces is negative by `3.2·10⁻³`, which is `36×` the entire margin available one step below,
+and I reproduce that number exactly. The builder's elimination of the alternative explanations is correct in its
+conclusions but sloppy in two of its reasons — the tail row *is* binding (it just cannot be worth more than `0.05 %`
+of the deficit, which I had to measure myself), and the claim that shapes transfer within a contact set was never
+tested, because the four remaining shape files were transferred from the wrong `T` and never polished. Add a false
+`ψ`-inequality that was reported as numerically verified and an `ε_fp` justified by sampling rather than by a bound,
+and the picture is a round whose *results* are solid and whose *reporting discipline* slipped in exactly the places
+where no one would have checked. The withdrawal of the incommensurability obstruction is the most consequential
+sentence of the round and it is correct: the obstruction was refuted, three months ago, by §3 of the very document
+that asserted it in §6. Nothing here moves the sign; the open question is now a single measurement, `c(M)` at
+`T = 0.58`.

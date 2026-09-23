@@ -1,0 +1,764 @@
+# R147.001 — Builder round 1, phase 147: the Galois group ring `Z[G]` as the missing `+`
+
+*Builder: Opus 5. Date 2026-09-14. Blueprint of record: `R147_000_LEAD_BLUEPRINT.md`, followed literally,
+D.50 items 1–4 → D.51 (Epstein done EARLY, per the binding warning) → D.52 → D.53 → D.54. Corpus checks of
+record: `CORPUS_CHECK_R147b.md` (this phase) and `../phase-147-row-d-single-prime-tower/CORPUS_CHECK_R147.md`.
+Binding warnings W-a (counts and effective realizations, never positivity of a trace form) and W-c (every
+statement run against `Ξ_a`, `Ξ_Q`, `ζ_K` **by structure**) are carried in every section and are discharged
+in §D.51. Scripts: `scripts/model_intersections.py`, `scripts/epstein_cone_test.py` (`--fast`, margins
+printed).*
+
+---
+
+## §0 — The answer of round 1, stated first
+
+**The Galois group ring does not supply the `+` on the arithmetic side, and the reason is one lemma.**
+
+> **Lemma D.50.2 (the collapse).** Every `σ ∈ G = \mathrm{Gal}(K/Q)` preserves the idele modulus,
+> `|σ(x)|_{A_K} = |x|_{A_K}`. The frame's carrier `D^W_K` consists of **radial** classes — functions of
+> `t = \log|x|_{A_K}` alone. Hence `Γ_σ ⋆ E = E` for every `E ∈ D^W_K` and every `σ ∈ G`:
+> **`Γ_σ = Δ` in the frame.**
+
+Everything in D.50 is then true and empty: `Γ_σ` is effective, `Γ_σ⋆Γ_τ = Γ_{στ}`, `Γ_σ^† = Γ_{σ^{-1}}`,
+bidegree `(1,1)`, `Γ_σ⋆\mathrm{Frob}_𝔫⋆Γ_σ^{-1} = \mathrm{Frob}_{σ𝔫}` — all hold, all because both sides are
+the same object. Consequently
+
+    𝓔_G = 𝓔 ,        𝓔_{G,\mathrm{Frob}} = 𝓔_{\mathrm{Frob}} ,
+    s(𝓔_{G,\mathrm{Frob}}) = s_1 = 0.99846016…  (UNCHANGED; margin 1 − s_1 = 1.53983728×10^{−3}) ,
+
+the character table does **not** enter the frame's intersection numbers, and `\dim H^0 = 1` for the
+regular-representation construction of (4a). No statement reaches `s = 1`; **the FATAL rule is not
+triggered** (§D.50.4).
+
+Three positive by-products survive, and they are the round's real content:
+
+1. **Theorem D.50.6 (the arithmetic Lefschetz/Hurwitz identity).** The fixed-point counts of the Galois
+   automorphisms exist and add up to the discriminant:
+   `Σ_{σ≠1} (Γ_σ·Δ)_{\mathrm{Arak}} = \log|d_K| = Σ_χ χ(1)\log 𝔣(χ)` (Hilbert's different formula plus the
+   conductor–discriminant formula). **The character table enters the fixed-point count — through the
+   conductors, not through the zero sums.** Verified on the model: `Σ_{σ≠1}\#\mathrm{Fix}(σ) = 8` for
+   `E/F_5` with `\mathrm{Aut} = μ_4`, matching Riemann–Hurwitz `2g−2 − |G|(2g_0−2) = 0+8`.
+2. **Theorem D.53.4 (the model's `+`, with numbers).** On `E/F_5 : y² = x³+x` (`π = 1+2i`,
+   `\mathrm{End} = Z[i]`, `\mathrm{Aut} = μ_4`) the automorphism graph `Γ_i` **is** an effective class with
+   negative coefficients in the Frobenius basis, `[Γ_i] = ½[Γ_π] − ½[Δ] − F_1 + F_2`; and the cone
+   constants are `s_{\mathrm{Frob}} = 2/3`, `s_{\mathrm{Aut,Frob}} = \cos(π/4) = 1/\sqrt2`,
+   `s_{\mathrm{End}} = 2/\sqrt5`, against `s(\mathrm{Eff}) = 1`. **So `Z[G]` supplies a genuine `+` in the
+   model, worth `0.667 → 0.707`, and still does not reach `1`.**
+3. **Theorem D.51.5 (the Epstein resolution).** The principal Epstein canonical class `K_{Q_0}` **is
+   sometimes in the effective cone and sometimes not, with no correlation to `h` or to zero location**:
+   `K_{Q_0} ∈ 𝓔` for `D = 3,4,7,8,11,15`, `K_{Q_0} ∉ 𝓔` for `D = 19,43,163,23,47`. In particular
+   **`D = 15` (`h = 2`): `K_{Q_0} ∈ 𝓔`, `\deg K_{Q_0} = ½ > 0`, and `Z_{Q_0}` has infinitely many zeros in
+   `\mathrm{Re}\,s > 1`** (Davenport–Heilbronn). And the Riemann control: **Paper 46's `K` is effective**
+   (`\min_t K = −1.5×10^{−15}`, `\deg K = 1.000000000`) while `K_{Q}` for `D = 163`, `h = 1`, is **not**.
+   *Membership in `𝓔` carries no zero-location information whatsoever.* This does **not** kill the frame
+   (no theorem of the frame says "effective ⟹ Hodge index"); it kills the hope that enlarging `𝓔` is where
+   the sign lives.
+
+---
+
+## D.50 — The Galois correspondences on the arithmetic square
+
+### D.50.0 Objects and standing notation
+
+`K/Q` finite Galois, `G := \mathrm{Gal}(K/Q)`, `|G| = n`, `S ⊇ S_∞ ∪ \{𝔭 \mid 𝔡_K\}` finite. `C_{K,S}` is the
+`S`-idele class group of phase 139/140; `D^W_K` the Weil carrier (Paper 46 Definition 11.1 transported to
+`K`: real **radial** test classes, i.e. functions of `t ∈ R` with `t = \log|x|_{A_K}`, of the admissible
+decay class); `I_∞^{(K)}` the colimit form of Paper 46 (11.6) with the zero set of `ξ_K`; `𝓝_∞^{(K)}` its
+radical; `𝓔 := \{E ∈ D^W_K : E ≥ 0\ \text{pointwise},\ E ≢ 0\}`; `K_K` the canonical class,
+`Φ_{K_K} = ξ_K`, `\deg K_K = 1`; `\mathrm{Frob}_𝔫` and `\mathrm{Sh}_{O_K}` as in phase 140 Theorem D.22.
+
+`CLASSICAL` imports used in this section, with sources:
+
+* **(A1)** `σ ∈ G` permutes the places of `K` over each place of `Q`, and `σ : K_v → K_{σv}` is an isometry
+  for the normalized absolute values (`|σ(x)|_{σv} = |x|_v`). *Neukirch, `Algebraic Number Theory`, II.§8
+  and III.§1.* `CLASSICAL`
+* **(A2) Hilbert's different formula.** For `𝔓 ∣ p` in `K/Q` Galois, `v_𝔓(𝔇_{K/Q}) = Σ_{σ≠1} i_𝔓(σ)` with
+  `i_𝔓(σ) := v_𝔓(σ(x) − x)`, `x` a generator of `O_𝔓` over `Z_p`. *Serre, `Corps Locaux`, IV §1 Prop. 4;
+  Neukirch III.2.6.* `CLASSICAL`
+* **(A3)** `N(𝔇_{K/Q}) = |d_K|`. *Neukirch III.2.9.* `CLASSICAL`
+* **(A4) Conductor–discriminant formula.** `|d_K| = ∏_{χ ∈ \mathrm{Irr}(G)} 𝔣(χ)^{χ(1)}`.
+  *Neukirch VII.11.9.* `CLASSICAL`
+* **(A5) Artin formalism.** `ξ_L = ξ_K ∏_{χ≠1} Λ(s,χ)^{χ(1)}` (phase 139 D.20.2, `PROVED` unconditionally
+  for abelian `L/K`, `PROVED-CONDITIONAL` on Artin holomorphy otherwise). *Neukirch VII.§10–§12.*
+* **(A6) Chebotarev.** The Frobenius classes `\mathrm{Frob}_𝔭 ∈ G` are equidistributed over conjugacy
+  classes. *Neukirch VII.13.4.* `CLASSICAL` — used only in Remark D.50.7.
+
+### D.50.1 The Galois correspondence `Γ_σ`
+
+**Definition D.50.1.** For `σ ∈ G`, `σ` acts on `A_K^×` place-by-place and descends to an automorphism of
+`C_{K,S}` (`S` is `G`-stable by construction). Define `Γ_σ` as the **graph correspondence**: the pushforward
+to `C_{K,S} × C_{K,S}` of the normalized Haar measure of `C_{K,S}` under `x ↦ (x, σx)`; equivalently, the
+operator `(Γ_σ ⋆ f)(x) := f(σ^{-1}x)` on measures/densities on `C_{K,S}`.
+
+**Theorem D.50.1 (`PROVED`).** For all `σ, τ ∈ G` and every integral ideal `𝔫` of `O_K`:
+
+ (i) `Γ_σ` is an **effective class**: a nonnegative measure on the square, supported on the graph of an
+   automorphism, hence a nonnegative kernel;
+ (ii) `Γ_σ ⋆ Γ_τ = Γ_{στ}`, `Γ_σ^† = Γ_{σ^{-1}}`, `Γ_1 = Δ`; the map `σ ↦ Γ_σ` is a **group** homomorphism
+   into the `⋆`-monoid (contrast phase 140 D.22.3(iv), where `\{\mathrm{Frob}_𝔫\}` is an inverse semigroup
+   and **not** a group);
+ (iii) **bidegree `(1,1)`.** With the bidegree of D.22.3(iii), `λ_∓(Γ_σ) = ∫|x|_S^{∓1/2}\,dΓ_σ = 1`, since
+   `Γ_σ` is supported where `|x|_S = 1`; so `d_1d_2 = 1` with `d_1 = d_2 = 1`;
+ (iv) `Γ_σ ⋆ \mathrm{Frob}_𝔫 ⋆ Γ_σ^{-1} = \mathrm{Frob}_{σ𝔫}`.
+
+*Proof.* (i) is Definition D.50.1: a pushforward of a nonnegative measure. (ii) `σ ↦ (x ↦ σx)` is a group
+action, and pushforward along a composite is the composite of pushforwards; `†` is the transpose of the
+graph, which is the graph of `σ^{-1}`. (iii) By (A1), `|σx|_{A_K} = ∏_v|σx|_v = ∏_v|x|_{σ^{-1}v} = |x|_{A_K}`,
+so `Γ_σ` lives over `|x|_S = 1`, whence `λ_∓ = 1`. (iv) By Definition D.22.1, `\mathrm{Frob}_{𝔓^k}` is the
+Haar probability measure of the coset `j_𝔓(π_𝔓^kO_𝔓^×)`; `σ` carries `𝔓` to `σ𝔓`, `π_𝔓` to a uniformizer of
+`σ𝔓` and `O_𝔓^×` to `O_{σ𝔓}^×`, hence carries that coset to `j_{σ𝔓}(π_{σ𝔓}^kO_{σ𝔓}^×)`, and Haar to Haar.
+Multiply over `𝔓 ∣ 𝔫` (D.22.2). ∎ `PROVED`
+
+> **Where `G` is used (W-c bookkeeping, item 1).** (i)–(iv) use: a group of automorphisms of the carrier
+> (i,ii), the norm-invariance (A1) (iii), and the Galois action on primes (iv). For `Ξ_a` there is no field,
+> no ideals and no automorphisms: **none of (i)–(iv) exists**; see §D.51.1.
+
+### D.50.2 The collapse, and what it costs
+
+**Lemma D.50.2 (the collapse; `PROVED`, two lines).** For every `σ ∈ G` and every `E ∈ D^W_K`,
+`Γ_σ ⋆ E = E`. Equivalently: the image of `Z[G] → \mathrm{End}(D^W_K)` is `Z`, the augmentation, and
+`Γ_σ = Δ` as an operator on the carrier.
+
+*Proof.* `D^W_K` consists of **radial** classes: `E` is a function of `t = \log|x|_{A_K}` alone (Paper 46
+Definition 11.1; phase 140 §D.22 carries the same convention to `K` — "real radial tests"). By (A1),
+`|σx|_{A_K} = |x|_{A_K}`, so `σ` preserves every level set of the modulus; the modulus-pushforward of
+`σ_*μ` equals that of `μ` for every measure `μ`. Hence `Γ_σ ⋆ E = E`. ∎ `PROVED`
+
+**Corollary D.50.3 (`PROVED`).**
+ (i) `I_∞^{(K)}(Γ_σ, X) = I_∞^{(K)}(Δ, X)` for every `X` and every `σ` — independent of `σ`;
+ (ii) in particular `I_∞^{(K)}(Γ_σ, Γ_τ) = I_∞^{(K)}(Δ,Δ)`, which **does not exist**: `Δ·Δ = −∞`
+   (Paper 44 Theorem 8bis.2, infinite genus; Paper 46 Prop. 14.2). The proposed formula
+   `I_∞^{(K)}(Γ_σ,Γ_τ) = (\text{polar}) − Σ_χ χ(1)χ(σ^{-1}τ)\,Ŵ^{(Λ_{[χ]})}` of the blueprint is
+   **REFUTED as stated**: its right-hand side depends on `σ^{-1}τ` and its left-hand side does not;
+ (iii) `Γ_σ ⋆ \mathrm{Frob}_𝔫 = \mathrm{Frob}_𝔫` and `\mathrm{Frob}_{σ𝔫} = \mathrm{Frob}_𝔫` in the frame
+   (consistent with D.50.1(iv), and with `N(σ𝔫) = N𝔫`, the only datum `\mathrm{Frob}_𝔫` carries after
+   D.22.5(v));
+ (iv) **the character table does not enter any intersection number of the frame.**
+
+*Proof.* (i),(iii) are Lemma D.50.2. (ii) is (i) at `X = Γ_τ` together with the cited divergence; the
+refutation is the `σ`-independence. (iv) is (i): `χ(σ)` could only enter through a `σ`-dependence, and there
+is none. ∎ `PROVED`
+
+**Remark D.50.4 (why, structurally).** The Artin decomposition `ξ_K = ∏_χ Λ(s,χ)^{χ(1)}` (A5) **does**
+grade the zero set of `ξ_K` by `\mathrm{Irr}(G)` — phase 139 Theorem D.20.2 is exactly that, and it is
+`PROVED`. What the frame lacks is an operator that sees the grading: `Φ_E(ρ)` is a functional of the radial
+density alone, and `Γ_σ` acts trivially on radial densities, so `Φ_{Γ_σ⋆E}(ρ) = Φ_E(ρ)` with **no factor
+`χ(σ)`**. To get `χ(σ)` into an intersection number one needs tests that are *not* radial — `χ`-isotypic
+tests on `C_{Q,S}` obtained by pushing forward along the norm `N : C_{K,S} → C_{Q,S}` — i.e. an explicit
+formula on the **non-radial** sector. No such formula exists in the corpus (it is adjacent to Paper 46 open
+item (21)), and this round does not build one. Recorded as **O-47.1** (open).
+
+### D.50.3 The fixed-point count that does survive: Arakelov degree, not `I_∞`
+
+The count the blueprint asks for (`Γ_σ·Δ` = the fixed locus of `σ`) is destroyed by the frame (Corollary
+D.50.3(ii)), but it exists on `\mathrm{Spec}\,O_K` itself and it is a classical theorem in disguise.
+
+**Definition D.50.5.** For `σ ≠ 1` let `𝔞_σ ⊆ O_K` be the ideal generated by `\{σ(x) − x : x ∈ O_K\}`. The
+fixed subscheme of `σ` on `\mathrm{Spec}\,O_K` is `\mathrm{Spec}(O_K/𝔞_σ)`, and its **Arakelov degree** is
+`(Γ_σ·Δ)_{\mathrm{Arak}} := \log N(𝔞_σ) = \log \#(O_K/𝔞_σ)`.
+
+**Theorem D.50.6 (the arithmetic Lefschetz/Hurwitz identity; `PROVED` from `CLASSICAL` inputs).**
+
+    Σ_{σ ∈ G,\ σ ≠ 1} (Γ_σ·Δ)_{\mathrm{Arak}} \;=\; \log|d_K| \;=\; Σ_{χ ∈ \mathrm{Irr}(G)} χ(1)\,\log 𝔣(χ) .
+
+In particular the fixed loci are **finite, nonempty, and supported exactly on the ramified primes**: for
+`𝔓` unramified and `σ ≠ 1`, `v_𝔓(𝔞_σ) = 0` unless `σ ∉ D_𝔓`, and `v_𝔓(𝔞_σ) > 0` forces `σ ∈ I_𝔓 = 1`.
+
+*Proof.* `v_𝔓(𝔞_σ) = i_𝔓(σ)` by definition of the ramification function and because `O_𝔓 = Z_p[x]` is
+monogenic locally; summing (A2) over `σ ≠ 1` and over `𝔓` gives `Σ_σ \log N(𝔞_σ) = \log N(𝔇_{K/Q})`, which is
+`\log|d_K|` by (A3); the last equality is (A4). The unramified statement is `I_𝔓 = 1` together with the fact
+that `σ` acts on the residue field `O_K/𝔓` by a power of Frobenius, which is the identity only if `σ` is in
+the inertia group. ∎ `PROVED`
+
+> **Model check (certified, `scripts/model_intersections.py`).** `E/F_5 : y² = x³+x`, `\mathrm{Aut} = μ_4`:
+> `\#\mathrm{Fix}(i) = N(i−1) = 2`, `\#\mathrm{Fix}(−1) = N(−2) = 4`, `\#\mathrm{Fix}(−i) = 2`, total
+> `Σ_{σ≠1}\#\mathrm{Fix}(σ) = 8`; Riemann–Hurwitz for `E → E/μ_4 = P¹` gives
+> `2g_E − 2 − |G|(2g_{P¹}−2) = 0 − 4(−2) = 8`. **Exact match.** (Hartshorne IV.2.4 (Hurwitz), V.1.10.)
+
+**Remark D.50.7 (what the count is worth, bluntly).** `\log|d_K|` is a **ramification** invariant. It is
+already the content of (A4)/(A5): the frame's field-uniformity statement (phase 139 D.20.2) and this count
+are the same theorem read twice. `\log|d_K| → ∞` with `K` (Minkowski), so the "genus" grows — the same
+divergence Paper 46 Prop. 14.2 records for `Δ·Δ`. **No sign datum is produced.** Chebotarev (A6) governs
+where `\mathrm{Frob}_𝔭` lands, but by Corollary D.50.3(iii) the frame retains only `N𝔭`, so Chebotarev
+contributes nothing to any pairing. (Corpus check: "Chebotarev positivity" has zero hits in the corpus
+(`CORPUS_CHECK_R147b` §1) and after D.50.3(iii) there is nothing for it to act on. Recorded as a closed
+no-go, not an open item.)
+
+### D.50.4 The ring, the cones, and the support function
+
+**Definition D.50.8.** `𝓡 := Z[G]` acting on `D^W_K` by `Γ_σ`;
+`𝓔_G := \{Σ_σ a_σ Γ_σ ⋆ E : a_σ ≥ 0,\ E ∈ 𝓔\}`; `𝓔_{\mathrm{Frob}} := \mathrm{Cone}\{\mathrm{Frob}_𝔫\}`;
+`𝓔_{G,\mathrm{Frob}} := \mathrm{Cone}\{\mathrm{Frob}_𝔫 ⋆ Γ_σ : 𝔫, σ\} + 𝓔_G`.
+
+**Theorem D.50.9 (`PROVED`).**
+ (i) `𝓔_G = 𝓔` and `𝓔_{G,\mathrm{Frob}} = 𝓔_{\mathrm{Frob}} + 𝓔 = 𝓔`;
+ (ii) the isotypic combinations `Σ_σ χ(σ)Γ_σ` collapse to `(Σ_σ χ(σ))Δ = |G|δ_{χ,1}Δ`: for `χ ≠ 1` the
+   projector is the **zero class** (not a new effective class, and not a non-effective one either); the
+   augmentation class `|G|Δ − Σ_{σ≠1}Γ_σ = Δ` is effective **trivially**;
+ (iii) **`\mathrm{Frob}_𝔫 ⋆ Γ_σ = \mathrm{Frob}_𝔫`**: the Galois-twisted Frobenius classes are the
+   untwisted ones, and their span mod `𝓝_∞^{(K)}` is that of `\{\mathrm{Frob}_𝔫\}`;
+ (iv) **the support function is unchanged.** With
+   `s(𝔠;γ,θ) := \sup_{E' ∈ 𝔠} |\mathrm{Re}(e^{iθ}Φ_{E'}(½+iγ))| / (½\deg E')`,
+
+       s(𝓔_{G,\mathrm{Frob}};γ,θ) \;=\; s(𝓔_{\mathrm{Frob}};γ,θ) \;≤\; s(𝓔;γ,θ) \;=\; s(γ,θ) ,
+
+   and at the arithmetic test point `(γ_1, π/2)` of phase 142 Prop. D.31.5,
+   `s(𝓔_{G,\mathrm{Frob}};γ_1,π/2) ≤ s_1 = 0.99846016…`, `1 − s_1 = 1.53983728×10^{−3}`.
+
+*Proof.* (i)–(iii) are Lemma D.50.2 and Corollary D.50.3(iii): every generator of the enlarged cone is a
+generator of the old one. (ii) additionally uses `Σ_σ χ(σ) = |G|δ_{χ,1}` (first orthogonality). (iv) The
+support function of a cone depends only on its generators; by (i) the generating sets coincide, and
+`𝓔_{\mathrm{Frob}} ⊆ 𝓔` gives the inequality; `s(γ,θ)` is Definition D.31.3 and `s_1` is Prop. D.31.5
+(certified there to 40 digits by `scripts/certify_sF.py`). ∎ `PROVED`
+
+> **W-a discharge.** (iv) is a support-function identity for a convex cone. **No trace form on `Z[G]` is
+> claimed positive, semidefinite, or anything else.** The image of `Z[G]` in `\mathrm{End}(D^W_K)` is `Z`
+> (Lemma D.50.2); a "trace form on `Z[G]`" would be a form on a `n`-dimensional space that the carrier does
+> not see at all.
+>
+> **FATAL-rule check.** `s(𝓔_{G,\mathrm{Frob}};γ_1,π/2) ≤ s_1 < 1` with margin `1.54×10^{−3}`. Nothing
+> reaches `1`; the defect theorem's obstruction (Theorem D.31.10, D.31.12) is **not** lifted; no transfer
+> theorem is made to run. The rule is not triggered, and nothing in this round is RH-strength.
+
+**Corollary D.50.10 (the cosh witness is not reached; `PROVED`).** The witness class of phase 142
+`E = tF_0 + dK_K` (Theorem D.31.10, valid verbatim for `ξ_K` given a simple isolated on-line zero, §D.31.7)
+is **not** equivalent mod `𝓝_∞^{(K)}` to any class of `𝓔_{G,\mathrm{Frob}}`, for exactly the reason it is
+not equivalent to a class of `𝓔`: Theorem D.31.10 forbids it and by D.50.9(i) the cone did not change.
+
+---
+
+## D.51 — Falsifiers by structure (W-c)
+
+### D.51.1 `Ξ_a`: where the construction fails to exist
+
+`Ξ_a(s) := \frac12 s(s−1)\,a^{-s}Γ(s)\,\text{(Doc 131's family)}` has no Euler product, no field, no ring of
+integers, no ideals, no Galois group. Statement-by-statement:
+
+| statement | uses `G` how | exists for `Ξ_a`? |
+|---|---|---|
+| D.50.1(i) `Γ_σ` effective | needs an automorphism of the carrier | **no automorphism exists** — `Ξ_a` has no carrier with a group acting; only `Δ` |
+| D.50.1(ii) `Γ_σ⋆Γ_τ = Γ_{στ}` | needs `G` a group | **vacuous** (`G = 1`) |
+| D.50.1(iii) bidegree | needs (A1), a product formula over places | **no places** |
+| D.50.1(iv) `Γ_σ\mathrm{Frob}_𝔫Γ_σ^{-1}` | needs `G` acting on ideals | **no ideals** |
+| D.50.6 `Σ(Γ_σ·Δ) = \log|d_K|` | needs the different (A2)–(A4) | **no different, no discriminant** |
+| D.50.9 `𝓔_G = 𝓔` | Lemma D.50.2 | **`𝓔_G = 𝓔` holds trivially with `G = 1`** |
+
+**Theorem D.51.1 (`PROVED`, and it is a negative).** The conclusions of D.50 — `𝓔_G = 𝓔`,
+`𝓔_{G,\mathrm{Frob}} = 𝓔`, `s ≤ s_1`, `\dim H^0 = 1` (D.52.2) — hold **verbatim for `Ξ_a`**, with `G = 1`.
+Hence **D.50 is `Ξ_a`-uniform: no statement of D.50 separates `ξ` from `Ξ_a`.**
+
+*Proof.* Every conclusion of D.50 is obtained by collapsing `Γ_σ` to `Δ`; the collapsed statements make no
+reference to `K`, to the Euler product, or to the zero set. ∎ `PROVED`
+
+> This is the decisive W-c verdict. It places D.50 squarely inside the corpus's standing pattern
+> (`R146_005` §2.2: "every construction inside the frame is either a restatement of RH or `Ξ_a`-uniform").
+> The Galois ring is on the `Ξ_a`-uniform side.
+
+### D.51.2 `Ξ_Q` (Epstein) — the sharpest test, run first, reported plainly
+
+**Setup (`CLASSICAL`; phase 139 D.19.1 (C1)–(C5), cited not re-derived).** `K = Q(\sqrt{−D})` imaginary
+quadratic of fundamental discriminant `−D`, `h = h(−D)`, `\mathrm{Cl}(K)` the class group, `H` the Hilbert
+class field.
+
+**Lemma D.51.2 (the Galois structure of `H/Q`; `PROVED`, `CLASSICAL`).** `H/Q` **is** Galois, and
+`\mathrm{Gal}(H/Q) ≅ \mathrm{Cl}(K) ⋊ Z/2` is the **generalized dihedral** group `\mathrm{Dih}(\mathrm{Cl}(K))`
+of order `2h`, complex conjugation acting on `\mathrm{Cl}(K)` by inversion. Its irreducible characters are:
+the two characters of `\mathrm{Gal}(H/Q)/\mathrm{Cl}(K) = Z/2` (degree 1), the degree-1 characters coming from
+the order-2 elements of `\widehat{\mathrm{Cl}(K)}` (genus characters), and `2`-dimensional characters
+`\mathrm{Ind}_{\mathrm{Cl}(K)}^{\mathrm{Dih}}χ` for `χ² ≠ 1`, with `\mathrm{Ind}\,χ = \mathrm{Ind}\,\barχ`.
+
+*Proof.* `H/K` is abelian with group `\mathrm{Cl}(K)` (class field theory), `H/Q` is Galois because `H` is
+canonical (the maximal unramified abelian extension of `K`, and `K/Q` is Galois), and the conjugation action
+on `\mathrm{Gal}(H/K)` is `𝔞 ↦ \bar𝔞 = 𝔞^{-1}` in `\mathrm{Cl}(K)` because `𝔞\bar𝔞 = (N𝔞)` is principal.
+The character list is the standard one for a generalized dihedral group. *Neukirch VI.§6, VII.§10;
+Cox, `Primes of the Form x²+ny²`, §§5–9.* ∎ `PROVED` `CLASSICAL`
+
+**The blueprint's two objects, separated.**
+
+    ζ_H(s) = ∏_{χ ∈ \widehat{\mathrm{Cl}(K)}} L(s,χ)                     — a PRODUCT (Artin, A5)
+    Z_{Q_𝔄}(s) = \frac1h Σ_{χ} \overline{χ}(𝔄)\,L(s,χ)                   — a SUM (D.19.1)
+
+**Lemma D.51.3 (the coefficients; `PROVED`).** All class-group characters of an imaginary quadratic field
+are **unramified**, so every `L(s,χ)` has the **same** completion factor `(\sqrt D/2π)^sΓ(s)`. Hence
+`Λ_{Q_𝔄} = \frac1hΣ_χ \overline{χ}(𝔄)Λ(s,χ)` and, since `K_Z` is defined by `Φ_{K_Z} = Ξ_Z` and `Ξ` is
+`R`-linear in `Λ`,
+
+    K_{Q_𝔄} = \tfrac1h Σ_χ \overline{χ}(𝔄)\,K_χ   \quad\text{in } D^W .
+
+The coefficients are **all `= 1/h > 0` exactly when `𝔄` is the principal class**, and otherwise take
+non-real or negative values. Moreover `K_χ` is **primitive** (`Φ_{K_χ}(0) = Φ_{K_χ}(1) = 0`, hence
+`\deg K_χ = 0`) for every `χ ≠ 1`, because `Λ(\cdot,χ)` is entire; and `\deg K_{χ_0} = h/2`, so
+`\deg K_{Q_𝔄} = ½` for every `𝔄` (matching D.19.2(vi)).
+
+*Proof.* Unramifiedness is class field theory (`H/K` unramified everywhere); the shared `Γ`-factor is then
+(C2)/(C3). Linearity: `Ξ_Z = ½s(s−1)Λ_Z` and `Φ` is linear. Primitivity: `Ξ_χ(0) = ½·0·(−1)Λ(0,χ) = 0` and
+`Ξ_χ(1) = 0` since `Λ(\cdot,χ)` is entire for `χ ≠ 1` (Hecke). For `χ_0`: `Λ(\cdot,χ_0) = Λ_K` has residues
+`±h/2` at `s = 1,0` (sum of the `h` classes, each `±½` by (C2)), giving `Ξ_{χ_0}(0) = Ξ_{χ_0}(1) = h/4`. ∎
+`PROVED`
+
+> **So the blueprint's worry is exact.** For `𝔄` principal, `h·K_{Q_0} = Σ_χ K_χ` is a combination of
+> canonical classes with **all coefficients positive**. The question is whether that makes `K_{Q_0}`
+> **effective** — and the answer is that "nonnegative coefficients in a basis of canonical classes" and
+> "membership in `𝓔`" are unrelated: `𝓔` is the cone of **pointwise nonnegative densities**, and by Lemma
+> D.51.3 all but one of the `K_χ` are primitive, hence (Paper 46 Theorem 11.13(iii)) **not effective**. A
+> positive combination of non-effective classes is not effective in general. So the question must be
+> settled by computing `K_{Q_0}(t)`.
+
+**Theorem D.51.5 (the Epstein resolution; `PROVED` modulo the stated numerics, certified by
+`scripts/epstein_cone_test.py`).** Write `K_Q(t) = ¼e^{t/2}Σ'_{v∈Z²}(y_v²−2y_v)e^{−y_v}`,
+`y_v = (2π/\sqrt D)e^tQ(v)` (phase 139 Theorem D.19.2). Then, on `t ∈ [−4.5, 4.5]` at step `0.05`
+(`K_Q` is even and doubly-exponentially small outside, D.19.2(ii),(iii)):
+
+| `D` | `h` | principal form | `\min_t K_{Q_0}` | `\max_t K_{Q_0}` | `K_{Q_0} ∈ 𝓔`? |
+|---|---|---|---|---|---|
+| 3 | 1 | `(1,1,1)` | `−1.36×10^{−15}` | `0.238262` | **yes** |
+| 4 | 1 | `(1,0,1)` | `−1.31×10^{−15}` | `0.205768` | **yes** |
+| 7 | 1 | `(1,1,2)` | `−1.02×10^{−15}` | `0.162450` | **yes** |
+| 8 | 1 | `(1,0,2)` | `−1.38×10^{−15}` | `0.134638` | **yes** |
+| 11 | 1 | `(1,1,3)` | `−1.17×10^{−15}` | `0.111158` | **yes** |
+| **19** | **1** | `(1,1,5)` | `−2.983×10^{−2}` at `t=0` | `0.124588` | **no** |
+| **43** | **1** | `(1,1,11)` | `−1.074×10^{−1}` at `t=0` | `0.152869` | **no** |
+| **163** | **1** | `(1,1,41)` | `−1.579×10^{−1}` at `t=0` | `0.213206` | **no** |
+| **15** | **2** | `(1,1,4)` | `−1.04×10^{−15}` | `0.117487` | **yes** |
+| 15 | 2 | `(2,1,2)` (non-princ.) | `−5.66×10^{−16}` | `0.219223` | yes |
+| 23 | 3 | `(1,1,6)` | `−5.621×10^{−2}` at `t=0` | `0.130628` | **no** |
+| 23 | 3 | `(2,1,3)` (non-princ.) | `−1.42×10^{−15}` | `0.189221` | yes |
+| 47 | 5 | `(1,1,12)` | `−1.116×10^{−1}` at `t=0` | `0.156272` | **no** |
+| 47 | 5 | `(2,1,6)` (non-princ.) | `−8.80×10^{−16}` | `0.111890` | yes |
+
+The entries at `10^{−15}`–`10^{−16}` are IEEE-754 round-off (the evenness residual of the same sums is
+`≤ 3.1×10^{−16}`); the entries at `10^{−2}`–`10^{−1}` are `0.24`–`0.74` of the class's own maximum and are
+therefore genuine sign changes with a margin of eleven orders of magnitude over the noise.
+
+**Riemann control (same script, section [A]).** `K(t) = e^{t/2}Σ_{n≥1}(4y²−6y)e^{−y}`, `y = πn²e^{2t}`
+(derived here by the identical Mellin route, `Φ_K = ξ`): `\deg K = 1.000000000` (the normalization check of
+Paper 46 Theorem 11.8), evenness residual `1.5×10^{−15}`, `\min_t K = −1.47×10^{−15}`, `\max_t K = 0.893394`.
+**So Paper 46's canonical class `K` IS effective: `K ∈ 𝓔`.** *(New in the corpus; recorded as
+Theorem D.51.6 below.)*
+
+**Conclusions, in the order the blueprint asks for them.**
+
+ (a) **Is the principal Epstein zeta an effective class?** *Sometimes.* Yes for `D = 3,4,7,8,11,15`; no for
+   `D = 19,43,163,23,47`. There is **no correlation with `h`**: `D = 15` (`h = 2`) is in the cone and
+   `D = 163` (`h = 1`, the Euler-product case with no known off-line zeros) is not.
+ (b) **Does it then have off-line zeros?** Yes, in the one case that matters: `D = 15`, `h = 2`, so by
+   (C4) (Davenport–Heilbronn 1936) `Z_{Q_0}` has infinitely many zeros in `\mathrm{Re}\,s > 1`. So
+   **`𝓔` contains a class `E` with `\deg E = ½ > 0` whose `Φ_E` has infinitely many zeros off the critical
+   line** — indeed off the critical strip.
+ (c) **Does effectivity in `𝓔_G` therefore fail to imply Hodge index?** *Yes — and it never claimed to.*
+   This is the resolution the blueprint demands, and it is a **clarification, not a contradiction**: no
+   theorem of the frame asserts "effectivity ⟹ Hodge index". The Hodge-index transfer (Paper 46 Theorem
+   12.3) consumes a function `h⁰` with (a), (b′), (c); effectivity enters only through (b′) as the
+   *conclusion* of a hypothesis, and through Theorem 11.13(i) as "effective ⟹ `\deg > 0`" — which
+   `K_{Q_0}` satisfies (`\deg = ½`). The frame is therefore **not** broken by D.51.5. What *would* break it
+   is an `h⁰` for `Ξ_{Q_0}` satisfying (a),(b′),(c), and phase 142 Theorem D.31.12 already proves none
+   exists — for `ξ`, `ξ_K` **and** `Ξ_Q` alike (§D.31.5 table: "both sides fail, for different reasons, so
+   it separates nothing").
+ (d) **What is the object, geometrically?** `K_{Q_0}` is the canonical class of the zeta function of the
+   **set of principal ideals** — a sub-object of `\mathrm{Spec}\,O_K`, not a `\mathrm{Gal}(H/Q)`-invariant
+   one. Under the norm/idele dictionary it is the radial density of the principal-genus coset, a
+   **coset indicator** in the sense of Paper 44 §8bis, not a correspondence on the square of
+   `\mathrm{Spec}\,O_H`. Its degree is `½` and its self-pairing `I_∞^{(Q)}(K_{Q_0},K_{Q_0}) = ⅛`
+   (D.19.2(vi)); on `\mathrm{Spec}\,O_H` it is not a class of the square at all, because the `Z[G]`-module
+   structure collapses (Lemma D.50.2 applies to `H/Q` verbatim). So the "sub-object vs Galois-invariant"
+   distinction the blueprint hoped would save the cone **does not arise**: the cone never saw the Galois
+   structure.
+ (e) **The real-axis test.** `E ≥ 0, E ≢ 0` forces `Φ_E(s) = ∫E(u)e^{(s−½)u}du > 0` for every real `s`.
+   Section [C] of the script confirms `Ξ_Q > 0` on `\{0,¼,½,¾,1\}` for all eleven cases (so the real-axis
+   test is passed by all of them and does **not** discriminate), and independently confirms the frame's
+   own Lemma D.31.4 bound `|Φ_E(½)| ≤ ½\deg E = ¼` in every case where `K_Q ∈ 𝓔`: the tightest is `D = 3`
+   with `Ξ(½) = 0.2450624` against `0.25`, margin `4.94×10^{−3}`. Quadrature margins `|n` vs `2n|` are
+   `≤ 2.6×10^{−5}` (section [D]).
+
+**Theorem D.51.6 (`PROVED`, numerics certified as above) [NEW in the corpus].**
+ (i) `K ∈ 𝓔`: Paper 46's canonical class for `ξ` is pointwise nonnegative.
+ (ii) `𝓔` contains classes of positive degree whose `Φ` has zeros in `\mathrm{Re}\,s > 1` (D.51.5(b)).
+ (iii) Hence **membership in `𝓔` is zero-blind in both directions**, and so is membership in any cone
+   containing `𝓔` — in particular in `𝓔_G`, `𝓔_{G,\mathrm{Frob}}`, and in every enlargement that a
+   correspondence ring could produce.
+
+> **This is the round's sharpest general finding, and it is a `W-a`-clean one:** it is a statement about
+> which densities are nonnegative, not about the sign of any form. It says that the repair horn "enlarge
+> the effective cone" (Paper 46 `[phase 143]` note at Theorem 12.3) cannot work **by enlargement alone** —
+> the cone already contains an object with off-line zeros, so no membership criterion built on it can
+> certify zero location. What Theorem 12.3 actually needs from the cone is only `\deg > 0` (Step 4), and
+> that clause is satisfied by `K_{Q_0}` too. The decision lives in `h⁰`, exactly where phases 141–146 put
+> it, and the cone is not a lever.
+
+> **Residual check (MINOR, for the hostile round).** (C4) is quoted from the corpus as "if `h(−D)>1` then
+> `Z_Q` has infinitely many zeros in `\mathrm{Re}\,s>1`". Davenport–Heilbronn's argument applies to any
+> `Z_Q` that is not an Euler product, which for `h > 1` includes the **principal** form
+> (`Z_{Q_0} = \frac1hΣ_χL(s,χ)`, a sum of `h ≥ 2` independent Euler products). The class-uniformity of the
+> statement should be page-checked against Davenport–Heilbronn (1936) II and Cassels (1961). Flagged as
+> **O-47.2**; nothing in §0 or D.54 depends on more than the case `D = 15`, `h = 2`, for which the
+> non-Euler-product property is explicit.
+
+### D.51.3 `ζ_K`: uniformity and Artin formalism at the level of cones
+
+**Theorem D.51.7 (`PROVED`, and it is the structural reason the idea cannot work).** The effective cone is
+**independent of the field**: `D^W_K = D^W` as a space of radial classes for every number field `K`, and
+`𝓔 = \{E ≥ 0\}` is literally the same cone for every `K`. What varies with `K` is only the **form**
+`I_∞^{(K)}` (through the zero set of `ξ_K`) and the canonical class `K_K`. Consequently:
+
+ (i) `𝓔_G = 𝓔 = 𝓔_Q` for every Galois `K/Q` — the cone functor `K ↦ 𝓔` is **constant**;
+ (ii) Artin formalism acts **additively on the form** and **trivially on the cone**: for `L/K` Galois,
+   `I_∞^{(L)}(F,G) = I_∞^{(K)}(F,G) + Σ_{[χ]≠1}χ(1)Ŵ^{(Λ_{[χ]})}(F,G)` (phase 139 Theorem D.20.2,
+   `PROVED` for abelian `L/K`, `PROVED-CONDITIONAL` on Artin holomorphy in general), while the cone on both
+   sides is the same set;
+ (iii) therefore **induction and restriction of cones are the identity**, and there is no "Artin formalism
+   at the level of cones" beyond the tautology. A ring of correspondences cannot enlarge a cone that does
+   not depend on the field it is built from.
+ (iv) Uniformity of D.50 in `K`: every statement of D.50 holds for every Galois `K/Q` (D.50.1 uses only
+   (A1) and D.22; D.50.6 uses only (A2)–(A4)); the towers `L/K/Q` are compatible because `Γ_σ = Δ` at every
+   level.
+
+*Proof.* (i) Definition of `𝓔` (pointwise nonnegativity) plus Lemma D.50.2. (ii) is D.20.2 restated.
+(iii),(iv) follow. ∎ `PROVED`
+
+> **Diagnosis, in one sentence.** Phase 139's T1 ("everything must be uniform in `K`") is satisfied by the
+> Galois construction **because the construction is constant in `K`** — which is the opposite of what
+> T1 was meant to detect.
+
+---
+
+## D.52 — What bigness would require, stated without RH
+
+Per Proposition D.42.5 (R145, `PROVED` frame-internally, both directions), for a closed `𝓝_∞`-saturated cone
+with the degree gate (4b), the bigness clause (4) **is** RH. So the target is the **mechanism** (4a) of
+(P145′): a sections functor `E ↦ H^0(E)` with `\dim H^0(E) < ∞`, a scaling-invariant divisor map
+`H^0(E)∖0 → 𝔈` with `E − \mathrm{div}(σ) ∈ 𝓝_∞`, and growth `\dim H^0(mK) ≍ m²`.
+
+**The blueprint's proposal.** `H^0(E) := (Z[G]\text{-module generated by } E)^{G\text{-invariants}}`, with
+dimension counting by Frobenius reciprocity.
+
+**Theorem D.52.2 (`PROVED`; the proposal fails, and by how much).** With `Γ_σ` acting as in D.50.1,
+ (i) the `Z[G]`-module generated by `E ∈ D^W_K` is `Z·E` (Lemma D.50.2);
+ (ii) `(Z·E)^G = Z·E`, so `\dim_R H^0(E) = 1` for every `E ≠ 0` and `0` for `E = 0`;
+ (iii) in particular `\dim H^0(mK_K) = 1` for every `m ≥ 1`: **no growth at all**, against the required
+   `≍ m²`;
+ (iv) the divisor map is forced: the only candidate `\mathrm{div}` on a one-dimensional `H^0(E)` sends
+   `λE ↦ E`, which satisfies `E − \mathrm{div}(λE) = 0 ∈ 𝓝_∞` but supplies **no** effective class unless
+   `E` is already effective — i.e. (b′) becomes "`E ∈ 𝓔`", and `h^0 := 1_{E ≠ 0}` then fails (c)
+   immediately, since (c) demands `h^0(E)+h^0(K−E) ≥ ½I_∞(E,E) − ½I_∞(E,K) + χ`, whose right-hand side is
+   unbounded (take `E = nF` with `I_∞(F,F) > 0`) while the left-hand side is `≤ 2`.
+
+*Proof.* (i),(ii) Lemma D.50.2. (iii) is (ii). (iv) Paper 46 Theorem 12.3 hypotheses; the unboundedness is
+its Step 3. ∎ `PROVED`
+
+**Remark D.52.3 (Frobenius reciprocity is not available, and the reason is the same).** Frobenius
+reciprocity `\mathrm{Hom}_G(\mathrm{Ind}_1^G 1, M) ≅ \mathrm{Hom}_1(1, \mathrm{Res}\,M)` computes
+`\dim M^G = \langle χ_M, 1\rangle` from the character of `M`. Here `M = Z·E` carries the **trivial**
+character, so `\dim M^G = \dim M = 1`. The `|G|` copies of the identity in the regular representation never
+appear because `Z[G]` does not act with `|G|` independent images.
+
+**Remark D.52.4 (what the model has and the arithmetic does not).** On `C×C` with `G ⊆ \mathrm{Aut}(C)`,
+`\dim H^0(C×C, 𝒪(D))^G` is computable by equivariant Riemann–Roch and grows like `\frac1{|G|}·\frac12D² +
+O(\deg D)` for `D` ample (Hartshorne V.1.6 plus averaging over `G`; the `G`-invariant part of an
+`m²`-growing space still grows like `m²`). The mechanism (4a) is there because `G` acts **nontrivially on
+the sections**, i.e. on `H^1` of the curve and hence on the zero data. In the arithmetic frame, `G` acts
+trivially on the carrier, so the invariants are everything and the count is `1`. **(4a) is exactly what is
+missing, and `Z[G]` does not supply it.** `O-47.3`: does the non-radial sector (O-47.1) carry a nontrivial
+`G`-action whose invariants grow? Unknown; no explicit formula on that sector exists.
+
+**Honest statement of what is computable and what is (4a) itself.** Computable, unconditionally, in this
+round: `\dim H^0 = 1` (D.52.2); `Σ_{σ≠1}(Γ_σ·Δ)_{\mathrm{Arak}} = \log|d_K|` (D.50.6); the support functions
+of D.50.9(iv) and D.53.5. Not computable, and equal to (4a): any `h^0` with (a),(b′),(c). Phase 142 Theorem
+D.31.12 says it does not exist for `ξ`, `ξ_K`, `Ξ_Q` on the current carrier; the frame must change, not the
+cone.
+
+---
+
+## D.53 — The model: a curve with automorphisms over `F_q`
+
+*Certified by `scripts/model_intersections.py` (default run; `--fast` for a coarse grid). All numbers below
+are reproduced by that script, with the printed margins.*
+
+### D.53.1 The curve
+
+`E/F_5 : y² = x³ + x`, `j = 1728`, `p = 5 ≡ 1 \pmod 4`. Direct point count: `N_1 = \#E(F_5) = 4`, hence
+`a = q+1−N_1 = 2` and `π = 1+2i` (`N(π) = 5`, `\mathrm{tr}\,π = 2`, `a²−4q = −16 < 0`, ordinary).
+`\mathrm{End}(E) = Z[i]` (Silverman AEC III.9 / V.3; `j = 1728`, `p ≡ 1 \bmod 4` ⟹ ordinary with CM by the
+maximal order `Z[i]`), and `\mathrm{Aut}(E) = μ_4 = \{1,i,−1,−i\}` (Silverman AEC III.10.1). Note
+`Z[π] = Z + 2iZ` has index `2` in `Z[i]` — **the automorphism `i = (π−1)/2` is not in the Frobenius
+subring**, which is the whole point.
+
+`N_m = q^m+1−2\mathrm{Re}(π^m)`: `N_1,…,N_4 = 4, 32, 148, 640`, matching `\deg(1−π^m) = N(1−π^m)` exactly.
+
+### D.53.2 `NS(E×E)` and the intersection numbers
+
+`CLASSICAL` (W3),(W4) of R145 D.41.0 (Hartshorne V.1 and Ex. V.1.9, V.1.10; Mumford, `Abelian Varieties`,
+§20–21 for `\mathrm{NS}(E×E) ≅ ZF_1 ⊕ ZF_2 ⊕ \mathrm{End}(E)`): for `α, β ∈ \mathrm{End}(E)`,
+
+    Γ_α·F_1 = 1,\quad Γ_α·F_2 = N(α),\quad Γ_α·Γ_β = \deg(α−β) = N(α−β),\quad Γ_α² = 0\ (g=1) .
+
+**Lemma D.53.1 (`PROVED`, `CLASSICAL`).** `\tildeγ_α := [Γ_α] − N(α)F_1 − F_2` satisfies
+`\tildeγ_α·F_1 = \tildeγ_α·F_2 = 0`, `\tildeγ_α·\tildeγ_β = −\mathrm{Tr}(α\barβ)`, and `α ↦ \tildeγ_α` is a
+**group homomorphism** `\mathrm{End}(E) → \mathrm{NS}(E×E)`. Consequently
+
+    [Γ_{α+β}] = [Γ_α] + [Γ_β] − F_2 + \mathrm{Tr}(α\barβ)\,F_1 ,
+
+which is R146 D.45.4's formula `[Γ_{φ+ψ}] = [Γ_φ]+[Γ_ψ] − F_2 + 2\langle φ,ψ\rangle F_1` with
+`2\langle φ,ψ\rangle = \mathrm{Tr}(φ\barψ)`.
+
+*Proof.* Direct expansion using the displayed intersection numbers and `F_1² = F_2² = 0`, `F_1F_2 = 1`. ∎
+
+**Theorem D.53.4 (the model's genuine `+`; `PROVED`, certified).** Since `2i = π − 1`,
+
+    [Γ_i] \;=\; \tfrac12[Γ_π] \;-\; \tfrac12[Δ] \;-\; F_1 \;+\; F_2 ,
+
+an identity in `\mathrm{NS}(E×E)` verified by pairing both sides against `F_1, F_2, Δ, Γ_π, Γ_i, Γ_{1+i}`
+(script §[3]: `\max|{\rm LHS}·T − {\rm RHS}·T| = 0.0` exactly, integer arithmetic). `Γ_i` is an
+**irreducible curve** (`≅ E`), hence effective, and its coefficients in the Frobenius basis
+`(F_1,F_2,Δ,Γ_π)` are `(−1,+1,−½,+½)`: **two of them negative.**
+
+> **So in the model, `Z[G]` does supply the `+`.** This is exactly the missing structure R145_005 named
+> ("the missing effective classes are the graphs of the sums `Γ_{m+nπ}`"), produced here by a **group
+> element**, not by a formal sum — and produced unconditionally, as an irreducible curve.
+
+**Fixed points and the isotypic combinations.**
+
+    Γ_σ·Γ_τ = N(σ−τ):\quad \begin{matrix} & 1 & i & -1 & -i\\ 1 & 0&2&4&2\\ i&2&0&2&4\\ -1&4&2&0&2\\ -i&2&4&2&0\end{matrix}
+    \qquad Γ_σ·Δ = \#\mathrm{Fix}(σ):\ \ 0,\,2,\,4,\,2 ;\qquad Σ_{σ≠1}\#\mathrm{Fix}(σ) = 8 .
+
+Riemann–Hurwitz for `E → E/μ_4 = P¹` (Hartshorne IV.2.4): `2g_E−2 = |G|(2g_{P¹}−2) + Σ_{σ≠1}\#\mathrm{Fix}(σ)`
+gives `0 = −8 + 8` ✓. (This is the model check of Theorem D.50.6.)
+
+**Proposition D.53.3 (`PROVED`).** `Σ_{σ∈μ_4}[Γ_σ] = 4(F_1+F_2)` (because `Σ_{σ}σ = 0` in `Z[i]` and
+`\tildeγ` is additive). Hence:
+ (i) the **isotypic projector** for the real character `χ(i^k) = (−1)^k` is
+   `[Δ] − [Γ_i] + [Γ_{−1}] − [Γ_{−i}] = 0` — the zero class, so it produces nothing;
+ (ii) the **augmentation** class is `|G|Δ − Σ_{σ≠1}Γ_σ = 5Δ − 4(F_1+F_2)`, with `D·(F_1+F_2) = 2 > 0`,
+   `D² = −48 < 0`, and `D·Δ = −8 < 0`. It is **NOT effective**: an effective `D` with `D·Δ < 0` and
+   `Δ² = 0` must contain `Δ` as a component, and removing it leaves `D'·Δ ≥ 0`, a contradiction.
+
+*Proof.* As indicated; `Δ² = 2−2g = 0`, `Δ·F_i = 1`. ∎ `PROVED`
+
+> **Answer to the blueprint's question 3, in the model:** the *new content* is **not** in the
+> character-table combinations (they are `0` or non-effective), it is in the **individual automorphism
+> graphs** `Γ_σ`, which are effective and have negative coefficients in the Frobenius basis. The group
+> ring's *relations* give nothing; the group's *elements* give everything.
+
+### D.53.5 The cones, and the model's `s`
+
+With the frame dictionary (R145 Theorem D.41.6) the class `Γ_α` has
+`Φ_{Γ_α}(0) = Γ_α·F_1 = 1`, `Φ_{Γ_α}(1) = Γ_α·F_2 = N(α)`, `\deg Γ_α = 1+N(α)`, and
+**`Φ_{Γ_α}(ρ_1) = α`** under `ρ_1 ↔ α_1 = π`. *(Check: `I(Γ_α,Γ_β) = Φ_α(1)Φ_β(0)+Φ_α(0)Φ_β(1) −
+2\mathrm{Re}(α\barβ) = N(α)+N(β)−2\mathrm{Re}(α\barβ) = N(α−β)` ✓, which is (145.7) and reproduces the
+geometric intersection number exactly.)* The support function is
+
+    s(𝔠) := \min_θ \ \sup_{\text{generators } α ∈ 𝔠} \ \frac{|\mathrm{Re}(e^{iθ}α)|}{\tfrac12(1+N(α))} .
+
+| cone | generators | `s` | `θ^*` | closed form | margin (numeric vs closed) |
+|---|---|---|---|---|---|
+| `𝓔_C` (frame: Frobenius graphs) | `π^n, \barπ^n` | **0.666666667** | `π/2` | `\sqrt{4q−a²}/(q+1) = 4/6` | `0.0` |
+| `𝓔_{\mathrm{Aut,Frob}}` | `σπ^n`, `σ ∈ μ_4` | **0.707106781** | `π/4` | `\cos(π/|{\rm Aut}|) = 1/\sqrt2` | `0.0` |
+| `𝓔_{\mathrm{End}}` | all `α ∈ Z[i]∖0` | **0.894428486** | `2.034448` | `2/\sqrt5` | `1.29×10^{−6}` (grid) |
+| `\overline{\mathrm{Eff}}(E×E)` | — | **1** | — | R145: `σ(\overline{\rm Eff}) = ½` | — |
+
+*Cross-check of the search code against R145's record curve* `C: y²+xy = x³+1` over `F_2` (`q=2`, `a=−1`):
+the script returns `s^* = 0.7977281` against R145 Prop. D.41.12′'s `\sqrt{7/11} = 0.7977240`, margin
+`4.10×10^{−6}` (grid resolution `π/2·10^{5}`). ✓
+
+> **[FINDING F-147-1, for the ledger.]** R145's closed form (145.10)
+> `(s_C^*)² = (4q−a²)/((4q−a²)+(q+1+a)²)` **does not apply to `E/F_5`**: its balance is between the `n = 0`
+> and `n = +1` entries only, and at its `θ^* = \arctan 2` the `n = −1` entry gives `1/\cosh(\tfrac12\log5)
+> = 0.7454`, which exceeds the claimed value `0.4472`. The proviso printed with (145.10) ("provided no entry
+> with `|n| ≥ 2` exceeds that value") is **incomplete**: it must also exclude the mirrored entry `n = −1`.
+> For `E/F_5` the true optimum is at `θ = π/2`, where the `n = ±1` entries tie, and the value is
+> (145.9)'s `\sqrt{4q−a²}/(q+1) = 2/3`. R145's record curve is unaffected (its `s^* = \sqrt{7/11}` is
+> confirmed above); only the general closed form needs the extra clause. Recorded as a repair for R145
+> Prop. D.41.12′.
+
+**Theorem D.53.5 (the model's verdict; `PROVED`, certified).**
+ (i) Adding the automorphism graphs to the frame's cone **strictly enlarges it and strictly raises the
+   support function**: `2/3 → 1/\sqrt2` (a gain of `0.0404`, i.e. `1−s` falls from `0.3333` to `0.2929`).
+ (ii) The gain is exactly a **phase rotation**: for `G` cyclic of order `m` acting faithfully by a
+   primitive `m`-th root of unity on the zero datum `Φ(ρ)`, the `n = 0` generators contribute
+   `\min_θ\max_{k}|\cos(θ+2πk/m)| = \cos(π/m)`, so
+   `s(𝓔_{\mathrm{Aut,Frob}}) ≥ \cos(π/|G|)`, `= \cos(π/4) = 1/\sqrt2` here.
+ (iii) **The gain is bounded away from `1` by the finiteness of `G`.** `\cos(π/m) < 1` for every finite
+   `m`, and `m ≤ 6` for elliptic curves (`\mathrm{Aut} ≤ μ_6`), `|G| ≤ 84(g−1)` for `g ≥ 2` (Hurwitz).
+   For a curve with `\mathrm{Aut} = \{±1\}` (generic `j`) the rotation is by `π`, `|\cos(θ+π)| = |\cos θ|`,
+   and **the gain is exactly zero**.
+ (iv) Adding the whole endomorphism ring raises `s` further, to `2/\sqrt5 = 0.8944` (driven by the
+   degree-2 isogenies `±1±i`, which are **not** automorphisms and **not** Frobenius powers), still `< 1`.
+ (v) **The defect theorem survives on the model with its full endomorphism-graph cone.** By R145 Theorem
+   D.41.13/D.41.14 with `s = 2/\sqrt5`: the threshold is `d_0 = (1−s²)^{-1} = 5`, so for every `χ` and every
+   `d > 5` there is a class `E` with `\deg E = d`, `R(E) > 0`, not `𝓝_∞^C`-equivalent to any element of
+   `𝓔_{\mathrm{End}}`. The frame defect theorem is a property of the **graph cone**, not of the zeros — and
+   enlarging the graph cone from `\{π^n\}` to all of `\mathrm{End}(E)` does not repair it.
+
+*Proof.* (i),(iv) are the table. (ii) `\min_θ\max_{0≤k<m}|\cos(θ+2πk/m)|` is attained at
+`θ = π/(2m)`, value `\cos(π/m)`; and the `n = 0` generators of `𝓔_{\mathrm{Aut,Frob}}` are exactly the
+`Γ_σ`, `σ ∈ \mathrm{Aut}`, each with `\tfrac12\deg = 1` and `Φ(ρ) = σ`. (iii) is the same formula plus the
+classical bounds (Silverman AEC III.10.1; Hartshorne IV.2.5 Ex. / Hurwitz's automorphism theorem).
+(v) is R145 Theorem D.41.13 verbatim with the new `s`, whose hypothesis is only `s < 1`. ∎ `PROVED`
+
+---
+
+## D.54 — Synthesis input (one page)
+
+**Does `Z[G]` supply a genuine `+`?**
+
+* **In the model: YES, with numbers.** `Γ_i` on `E/F_5` is an irreducible curve — an effective class —
+  equal to `½Γ_π − ½Δ − F_1 + F_2`: negative coefficients in the Frobenius basis, which is precisely the
+  structure R145_005 identified as missing. Quantitatively, the automorphism graphs raise the cone's
+  support function from `2/3` to `\cos(π/4) = 0.7071`, and the full endomorphism graphs to
+  `2/\sqrt5 = 0.8944`. Against `s(\overline{\mathrm{Eff}}) = 1`. So the group ring is a real mechanism and
+  it is **not enough**: `\cos(π/|G|) < 1` for every finite `G`, and the residual gap is where linear
+  systems (Riemann–Roch), not correspondences, live.
+* **In the arithmetic frame: NO, and not by a small margin — by a collapse.** `σ ∈ \mathrm{Gal}(K/Q)`
+  preserves the idele modulus, the carrier is radial, so `Γ_σ = Δ`. `𝓔_G = 𝓔`,
+  `𝓔_{G,\mathrm{Frob}} = 𝓔_{\mathrm{Frob}}`, the cosh constant stays at `s_1 = 0.99846016` (margin
+  `1−s_1 = 1.54×10^{−3}` to `1`), `\dim H^0 = 1`, and the character table enters no intersection number.
+  Every conclusion of D.50 is `Ξ_a`-uniform (Theorem D.51.1).
+* **Where the model's gain comes from and the arithmetic's does not:** in the model `\mathrm{Aut}(E)` acts
+  on `H^1` (the Tate module) by a **primitive root of unity** — a phase on the zero datum. That is exactly
+  the "phase of the unimodular roots" R146_005 §4 named as the missing non-magnitude datum. In the
+  arithmetic frame `\mathrm{Gal}(K/Q)` acts on the zero set of `ζ_K` only by **permuting the Artin
+  factors** (phase 139 D.20.2), and the radial carrier cannot see a permutation of factors — it sees only
+  the union of the zero multisets. **The Galois group is a phase datum on the wrong side of the carrier.**
+
+**The Epstein resolution.** `K_{Q_0} = \frac1hΣ_χK_χ` with all coefficients `1/h > 0` (Lemma D.51.3), and
+**it is genuinely sometimes effective**: `K_{Q_0} ∈ 𝓔` for `D = 15` (`h = 2`), where `Z_{Q_0}` has
+infinitely many zeros in `\mathrm{Re}\,s > 1`; and `K_{Q} ∉ 𝓔` for `D = 163` (`h = 1`). Paper 46's own `K`
+is effective (`\deg K = 1.000000000`, `\min_t K = −1.5×10^{−15}`). Therefore **membership in the effective
+cone is zero-blind in both directions** (Theorem D.51.6). This does **not** break the frame — no theorem of
+the frame says "effective ⟹ Hodge index"; Theorem 12.3 consumes `h⁰`, not effectivity, and phase 142
+Theorem D.31.12 already forbids `h⁰` for `Ξ_Q` as for `ξ`. What it does break is the repair horn *"enlarge
+the effective cone"*: the cone cannot be a lever on the sign, because it already contains the counterexample.
+
+**What remains for (4a).** Everything. The one place a nontrivial `G`-action could live is the **non-radial
+sector** of `C_{K,S}` — `χ`-isotypic tests along the norm `N : C_{K,S} → C_{Q,S}` — where `χ(σ)` would enter
+intersection numbers and `\dim H^0` could grow. No explicit formula exists there (O-47.1, adjacent to Paper
+46 open item (21)). That is a **carrier** problem, not a ring problem.
+
+**Recommendation.** Close the Galois-ring thread on the negative. It is a clean, short, and *new* negative:
+the corpus now has a one-lemma reason why field extensions cannot supply the missing endomorphisms
+(`|σx| = |x|`), which is a sharper statement than "`\mathrm{Spec}\,Z` has no endomorphisms" (R146_005) —
+it says that *even when endomorphisms exist, the frame's carrier is blind to them*. Together with R146_005
+this closes the "more correspondences" family of escape routes (Connes–Consani, Borger, `F_1`, and now
+`K/Q`) by a single mechanism: the carrier is radial. The next genuine move is therefore the one R146_005
+already named — a **non-magnitude datum** — and this round localizes it precisely: **build the explicit
+formula on the non-radial sector**, where the Galois/Hecke phase lives. Options (i)/(ii) of R146_005 §4 are
+unchanged; the present round adds a third: (iii) enlarge the **carrier**, not the cone or the ring.
+
+---
+
+## §5 — Corpus check per idea
+
+| # | idea introduced here | corpus status (per `CORPUS_CHECK_R147b`, re-verified) | verdict |
+|---|---|---|---|
+| 1 | `Γ_σ` as an effective correspondence on `C_{K,S}` (D.50.1) | **NEW** (`CORPUS_CHECK_R147b` §1: zero hits for `Γ_σ`, `\mathrm{Spec}\,O_K` endomorphisms) | built, `PROVED`, and **collapsed** |
+| 2 | `|σx|_{A_K} = |x|_{A_K}` ⟹ `Γ_σ = Δ` on radial classes (D.50.2) | **NEW**; the fact (A1) is `CLASSICAL`, its use as a *no-go for the frame* is not in the corpus | `PROVED`; the round's load-bearing lemma |
+| 3 | `Σ_{σ≠1}(Γ_σ·Δ) = \log|d_K| = Σ_χχ(1)\log𝔣(χ)` (D.50.6) | **NEW** as a statement about the arithmetic square; inputs (A2)–(A4) `CLASSICAL`; overlaps D.20.2's content | `PROVED`, real but sign-free |
+| 4 | `K ∈ 𝓔` for `ξ` (D.51.6(i)) | **NEW** — the corpus never computes the sign of `K` | `PROVED` (numerics, margins printed) |
+| 5 | `𝓔` contains a class with off-line zeros (D.51.6(ii)) | **NEW**; uses D.19 (TRIED–PARTIAL) and (C4) `CLASSICAL` | `PROVED` (for `D=15`, subject to O-47.2) |
+| 6 | `𝓔` is field-independent, cone functor constant (D.51.7) | **NEW** as stated; implicit in Paper 46 Definition 11.1 | `PROVED` |
+| 7 | `Γ_i = ½Γ_π − ½Δ − F_1 + F_2` effective on `E/F_5` (D.53.4) | **NEW** (`CORPUS_CHECK_R147b` §4: no curve-with-automorphisms model anywhere) | `PROVED`, exact |
+| 8 | `s(𝓔_{\mathrm{Aut,Frob}}) = \cos(π/|G|)` (D.53.5(ii)) | **NEW** | `PROVED` |
+| 9 | R145 (145.10) needs an `n = −1` clause (F-147-1) | repair of an existing `PROVED` statement | repair issued |
+| 10 | positivity of a trace form on `Z[G]` | **BARRED** (`R145_004` Warning 1; W-a) | **not claimed anywhere**; see the W-a discharge under D.50.9 |
+| 11 | "Chebotarev positivity" | **NEW**, zero hits | **closed as a no-go**: after D.50.3(iii) there is nothing for it to act on |
+
+---
+
+## §6 — Paper-facing
+
+* **Paper 46 §§11–12.** Add after Theorem 11.13: *Remark 11.13b (phase 147).* `K ∈ 𝓔` — the canonical class
+  is effective (D.51.6(i), `\deg K = 1` and `K(t) ≥ 0`, numerically certified) — and the cone `𝓔` contains
+  classes of positive degree whose `Φ` has zeros off the strip (D.51.6(ii)). Hence **effectivity is
+  zero-blind**, and the `[phase 143]` repair horn "enlarge the effective cone" is closed by D.51.6(iii):
+  no enlargement of `𝓔` can certify zero location, because `𝓔` itself does not.
+* **Paper 46, new subsection (Part III candidate):** *the carrier is radial, so correspondence rings
+  collapse.* Lemma D.50.2 + Theorem D.51.7 + Theorem D.52.2, as the general reason the Connes–Consani /
+  Borger / `F_1` / `K/Q` family of "more endomorphisms" escapes cannot reach the frame.
+* **Paper 44 §8bis.** Cross-reference: `\mathrm{Frob}_𝔫 ⋆ Γ_σ = \mathrm{Frob}_𝔫` (D.50.3(iii)) is the Galois
+  counterpart of Thm 8bis.4a's finding that the Frobenius family retains only magnitude; add a one-line
+  remark that `N(σ𝔫) = N𝔫` makes the two statements the same statement.
+* **Paper 45 / phase 139 D.19.** Add: `K_{Q_0}` is effective for `D = 15` (Theorem D.51.5) — the first
+  computed example of a cone member with off-line zeros; it strengthens D.19.5's falsifier from "the
+  meta-theorem would prove something false" to "the **cone** does not see it".
+* **R145 Prop. D.41.12′.** Issue the repair of F-147-1 (the `n = −1` clause).
+* **Paper 43/44 ledger:** no change.
+
+---
+
+## §7 — Open list
+
+| id | statement | status |
+|---|---|---|
+| **O-47.1** | An explicit formula on the **non-radial** sector of `C_{K,S}` (`χ`-isotypic tests along `N : C_{K,S} → C_{Q,S}`), in which `Γ_σ` acts by `χ(σ)` and the character table enters intersection numbers. Adjacent to Paper 46 open item (21). | OPEN — the only opening this round leaves |
+| **O-47.2** | Class-uniformity of Davenport–Heilbronn: does "`h>1 ⟹` infinitely many zeros in `\mathrm{Re}\,s>1`" hold for the **principal** class? Page-check D–H (1936) II and Cassels (1961). | OPEN (MINOR); only `D=15` is used |
+| **O-47.3** | On the non-radial sector, does `\dim H^0(E) := \dim(Z[G]E)^G` grow? | OPEN, conditional on O-47.1 |
+| **O-47.4** | Exact value of `\min_θ s(𝓔_{\mathrm{End}})` in closed form for a general CM curve (here `2/\sqrt5`); and whether `\sup_{E} s(𝓔_{\mathrm{End}}(E)) < 1` uniformly over CM elliptic curves. | OPEN |
+| **O-47.5** | Is `K_Q ∈ 𝓔` decidable by a closed condition on `Q` (the data suggest: on the second successive minimum of `Q`, since the sign change is at `t = 0` and appears exactly for the elongated forms `(1,1,c)` with `c ≥ 5`)? | OPEN, low priority |
+| O-37, O-36, O-38, O-39 | carried from R145 | unchanged |
+| O-46.6 | carried; unchanged (this round does not reopen `\mathrm{Frob}⋆Δ^{\rm rad}`) | unchanged |
+
+---
+
+## §Label
+
+| item | statement | label |
+|---|---|---|
+| **D.50.1** | `Γ_σ` effective, `Γ_σ⋆Γ_τ = Γ_{στ}`, `Γ_σ^† = Γ_{σ^{-1}}`, bidegree `(1,1)`, `Γ_σ⋆\mathrm{Frob}_𝔫⋆Γ_σ^{-1} = \mathrm{Frob}_{σ𝔫}` | **`PROVED`** |
+| **D.50.2** | `|σx|_{A_K} = |x|_{A_K}` and the carrier is radial ⟹ `Γ_σ = Δ`; image of `Z[G]` is `Z` | **`PROVED`** |
+| **D.50.3** | `I_∞^{(K)}(Γ_σ,X)` is `σ`-independent; `I_∞(Γ_σ,Γ_τ) = Δ·Δ = −∞`; the character table enters no intersection number; the blueprint's `χ(σ^{-1}τ)` formula | **`PROVED`** / the formula **`REFUTED as stated`** |
+| **D.50.6** | `Σ_{σ≠1}(Γ_σ·Δ)_{\mathrm{Arak}} = \log|d_K| = Σ_χχ(1)\log𝔣(χ)`; fixed loci supported on the ramified primes | **`PROVED`** (from `CLASSICAL` (A2)–(A4)) |
+| **D.50.9** | `𝓔_G = 𝓔`, `𝓔_{G,\mathrm{Frob}} = 𝓔_{\mathrm{Frob}}`, isotypic projectors are `0`, support function unchanged, `s ≤ s_1 = 0.99846016 < 1` | **`PROVED`** |
+| **D.50.10** | the R142 cosh witness is not reached by `𝓔_{G,\mathrm{Frob}}` | **`PROVED`** |
+| **D.51.1** | every conclusion of D.50 holds verbatim for `Ξ_a` with `G = 1`: D.50 is `Ξ_a`-uniform | **`PROVED`** (a negative) |
+| **D.51.2** | `\mathrm{Gal}(H/Q) ≅ \mathrm{Dih}(\mathrm{Cl}(K))`, order `2h`; character list | **`PROVED`** / **`CLASSICAL`** |
+| **D.51.3** | `K_{Q_𝔄} = \frac1hΣ_χ\barχ(𝔄)K_χ`; `K_χ` primitive for `χ≠1`; `\deg K_{Q_𝔄} = ½` | **`PROVED`** |
+| **D.51.5** | the membership table: `K_{Q_0} ∈ 𝓔` for `D=3,4,7,8,11,15`; `∉ 𝓔` for `D=19,43,163,23,47` | **`PROVED`** (numerics certified, margins `≥ 10^{11}×` noise) |
+| **D.51.6** | `K ∈ 𝓔`; `𝓔` contains a positive-degree class with zeros in `\mathrm{Re}\,s>1`; membership in `𝓔` is zero-blind | **`PROVED`** (modulo O-47.2 for (ii)) |
+| **D.51.7** | the cone is field-independent; `K ↦ 𝓔` is constant; induction/restriction of cones is the identity | **`PROVED`** |
+| **D.52.2** | `\dim H^0(E) = 1` for the regular-representation construction; no `m²` growth; (c) fails | **`PROVED`** |
+| **D.53.1** | `\tildeγ_α` additive, `\tildeγ_α·\tildeγ_β = −\mathrm{Tr}(α\barβ)`, `[Γ_{α+β}]` formula | **`PROVED`** / **`CLASSICAL`** |
+| **D.53.3** | `Σ_σ[Γ_σ] = 4(F_1+F_2)`; isotypic projector `= 0`; augmentation class not effective | **`PROVED`** |
+| **D.53.4** | `[Γ_i] = ½[Γ_π] − ½[Δ] − F_1 + F_2`, effective with negative coefficients | **`PROVED`** (exact, integer-certified) |
+| **D.53.5** | `s = 2/3,\ 1/\sqrt2,\ 2/\sqrt5` for the three cones; `s ≥ \cos(π/|G|)`; gain `= 0` for `\mathrm{Aut}=\{±1\}`; defect theorem survives with `d_0 = 5` | **`PROVED`** (numerics certified; cross-check vs R145 margin `4.1×10^{−6}`) |
+| **F-147-1** | R145 (145.10) requires an `n = −1` exclusion clause; `E/F_5` is a counterexample to it as printed | **repair issued** |
+| **D.54** | synthesis | — |
+
+**No label anywhere in the corpus is changed by this round.** Row D remains as `R146_005` left it; this
+round adds a negative on the Galois-ring thread and two new positives (`K ∈ 𝓔`; the model's `+` with
+numbers), and issues one repair to R145.
+
+---
+
+## Corrections of record (2026-09-14, round 2)
+
+*Entered after `R147_002_HOSTILE_AUDIT.md` (ACCEPT WITH REPAIRS; 0 FATAL, 6 MAJOR, 11 MINOR). The text
+above is **not** rewritten; every correction is listed here and carried out in
+`R147_003_BUILDER_ROUND2.md`, which is the document of record for phase 147 round 2. Read this block
+before using anything above.*
+
+| # | location above | correction | where repaired |
+|---|---|---|---|
+| **C1** | §0 item 3; D.51.5 "Riemann control"; **D.51.6(i)**; §5 row 4; §6 bullet 1; README | **`K ∈ 𝓔` IS NOT NEW.** It is Paper 46 **Definition–Theorem 11.7(i)** (`main.md:2164`), `CLASSICAL` (X12, Pólya) + an elementary term-by-term proof inserted at phase 135 (finding LF6 of `R135_003`), with the corpus's own check `\min K = 1.02×10^{−69}`. Round 1's `\min_t K = −1.47×10^{−15}` is round-off (the script's `YMAX` truncation zeroes `K(±4.5)`), offered against a **proved strict positivity**. Label → `RESTATEMENT`; §5 row 4 → **NOT NEW**; the §6 proposal to add "Remark 11.13b" to Paper 46 is **deleted**; script section [A] survives only as the check `\deg K = 1.000000000` | `R147_003` §A.1 |
+| **C2** | §0 item 3; **D.51.6(ii)** and its "sharpest general finding" blockquote; D.54; §7 O-47.2 | The statement needs **no** Epstein, no `h > 1`, no Davenport–Heilbronn and no numerics. Two-line witness: `E = 3e^{−t²} + e^{−(t−\log2)²} > 0`, `Φ_E(s) = \sqrt π e^{(s−½)²/4}(3+2^{s−½})`, zeros exactly on `\mathrm{Re}\,s = ½+\log3/\log2 = 2.0849625…`. The `D = 15` dependence and **O-47.2 are deleted**; O-47.2 was already closed at `R139_004` **H4** | `R147_003` §A.2 (Theorem A.2) |
+| **C3** | §0 item 3 last sentence; blockquote after D.51.6; **D.51.6(iii)**; D.54; §6 bullet 1; README | **"kills / closes the horn *enlarge the effective cone*" is WITHDRAWN.** Paper 46's horn (§12.2 RECORD NOTE, §19.9, §20 as `B4`) works through the **support function**: a cone `𝓒 ⊇ 𝓔` with `s(𝓒) = 1` lifts the Lemma 19.17 / Theorem 19.23 obstruction *whether or not* it contains classes with off-line zeros. Round 1's own D.51.5(c) says this and the following paragraph contradicts it. Defensible residue only: *no `𝓒 ⊇ 𝓔` yields "`E ∈ 𝓒 ⟹` zeros on the line"* — which nobody advanced | `R147_003` §A.3 (Prop. A.3) |
+| **C4** | §0; D.50.0; D.50.1; **D.50.2**; D.50.3(ii),(iii); D.50.9(i); D.54 bullet 2; README | **Two carriers conflated.** `Γ_σ` lives in `\mathrm{Corr}(C_{K,S})` (carrier `D_A`), `D^W` is Paper 46 Def. 11.1 (functions on `R`); they differ — Paper 46 **Theorem 14.3(i)**, Paper 44 §3bis. The theorem is `R(Γ_σ) = \mathrm{id}` for the **radial realization** `R`, not "the carrier is radial". Upstairs `Γ_σ ≠ Δ`, `\mathrm{Frob}_{σ𝔫} ≠ \mathrm{Frob}_𝔫`, `𝓔_{G,\mathrm{Frob}} ⊋ 𝓔_{\mathrm{Frob}}`. Three retypings: **(a) D.50.3(ii) WITHDRAWN as stated** (`Δ ∉ D^W`; replaced by `I_∞(R(Γ_σ)E,F) = I_∞(E,F)`); **(b) D.50.9(i) DOWNGRADED** (`𝓔_{\mathrm{Frob}} ⊄ 𝓔`: `R(\mathrm{Frob}_𝔫)` is a point mass; the `s ≤ s(γ,θ)` conclusion is re-proved by the point-mass ratio); **(c)** `\mathrm{Frob}_{σ𝔫} = \mathrm{Frob}_𝔫` holds only **after `R`** | `R147_003` §A.4 (Def. A.4, Thm D.50.2′) |
+| **C5** | **Remark D.50.4** ("No such formula exists in the corpus"); D.50.3(iv); §7 **O-47.1**; Remark D.52.4 / O-47.3; D.54 | **FALSE, and a corpus-check failure on a document round 1 cites five times.** Phase 139 **Theorem D.20.2** (`(D.20.3)`) is a χ-graded explicit formula **already on radial tests**, `PROVED` unconditionally for abelian `L/K`. On the graded carrier `⊕_χ D^W` the group ring acts by `χ(σ)`, **not** by the augmentation, and the blueprint's `χ(σ^{-1}τ)` pairing is well defined and **true**. D.50.3(iv) holds only of the **single-copy radial realization**. **O-47.1 re-worded (→ O-47.1′)**; D.52.2 must not be stated for the graded carrier | `R147_003` **Part B (§D.55)** — the construction built and measured |
+| **C6** | **D.53.5(ii)** proof and constants; D.53.5(iii); D.54 bullet 1; §5 row 8 | The `\cos(π/m)` lemma is **proved wrongly and false as an equality for odd `m`**. Correct: `L(m) := \min_θ\max_{k<m}|\cos(θ+2πk/m)| = \cos(π/m)` for `m` even (`≥ 4`), `= \cos(π/(2m))` for `m` odd (`≥ 3`), `= 0` for `m ≤ 2`; argmin `θ^* = π/m` resp. `π/(2m)` — not `π/(2m)` in general and **not** `π/2−π/m`. Round 1's `m = 4` value `1/\sqrt2` is right by coincidence. The **inequality** `s ≥ L(|G|)` stands; the gain approaches `1` twice as fast for odd `m` | `R147_003` §A.6 (Lemma A.6, proved + certified to `1.1×10^{−16}`) |
+| **c7** | Def. D.50.5, **D.50.6**, §Label, §5 row 3 | "Arakelov" is unearned (no intersection theory, no archimedean Green's term; `σ` permutes the infinite places and they are absent). → **`CLASSICAL-RESTATEMENT`** of (A2)–(A4), renamed the **Hurwitz/different identity** | `R147_003` §A.5 |
+| **c8** | D.50.6, "In particular the fixed loci…" | **False as printed**: "`v_𝔓(𝔞_σ) = 0` unless `σ ∉ D_𝔓`" → **"unless `σ ∈ I_𝔓`"**. Two missing steps supplied: density of `O_K` in `O_𝔓` (Hilbert's formula is local, `O_K` need not be monogenic); the model check is the **tame** Riemann–Hurwitz identity (`p = 5 ∤ |G| = 4`) | `R147_003` §A.5 |
+| **c9** | **D.51.7**, §Label, §5 row 6 | Tautology of Paper 46 Def. 11.1 (which mentions no field); Lemma D.50.2 is not needed and its citation is removed. **Clause (iii) deleted** — no induction/restriction map on `D^W` is defined anywhere. Clause (ii) inherits D.20.2's Artin-holomorphy conditionality. → `RESTATEMENT` | `R147_003` §A.5 |
+| **c10** | §Label rows D.51.5, D.51.6, D.53.5 | Five `PROVED` labels rested on grids. `s_{\mathrm{End}} = 2/\sqrt5` and `s_{\mathrm{Aut,Frob}} = 1/\sqrt2` are now **proved** (two lines each); `s_{\mathrm{Frob}} = 2/3` keeps `≤` proved and `≥` **`CERTIFIED`**; **D.51.5 → `CERTIFIED`** with grid and margins in the label | `R147_003` §A.5, §A.7 |
+| **c11** | "Residual check" after D.51.5; §7 O-47.2 | **WITHDRAWN**: closed at `R139_004` **H4** — for the principal class `\overlineχ(𝔄_0) = 1`, so `Z_{Q_0} = \frac1hΣ_χL(s,χ)` is a non-degenerate combination of `h ≥ 2` distinct Euler products and Davenport–Heilbronn applies to every class | `R147_003` §A.2, §A.5 |
+| **c12** | D.50.3(ii); §Label | `REFUTED as stated` is not fair: the blueprint directed the computation on a χ-graded object. → **`NOT-APPLICABLE` (to the radial realization)**, and **CONFIRMED** on the graded carrier | `R147_003` §A.5, Thm D.55.4 |
+| **c13** | §0 display; README | `s(𝓔_{G,\mathrm{Frob}};γ_1,π/2) ≤ s_1`, not `=` (D.50.9(i)'s inclusion is ill-typed) | `R147_003` §A.4 |
+| **c14** | D.53.5(v); §Label | "for every `χ` and every `d > 5`" is false for `χ < 0`. → "for every `χ ≥ 0` and `d > 5`; in general `d²(1−s²) > d−4χ`" | `R147_003` §A.5 |
+| **c15** | D.53.4; `scripts/model_intersections.py` docstring | Half-integer coefficients: the integral identity is `2[Γ_i] = [Γ_π] − [Δ] − 2F_1 + 2F_2` in `\mathrm{NS}(E×E)`; the displayed form lives in `\mathrm{NS}⊗Q`. **Script docstring corrected** (it printed `+F_1−F_2`, against its own code) | done in the script; `R147_003` §A.5 |
+| **c16** | Remark D.50.4; §7 O-47.1; D.54 | Paper 46 open item **(21)** is the kernel representation of `ω_∞` on `D^W` (finding M9 of `R135_002`), unrelated to non-radial tests. Correct citation: **Theorem 14.3(i)** and Paper 44 §3bis | `R147_003` §A.5 |
+| **c17** | D.53.5 table, `θ^*` column | `Z[i]` is `i`-stable, so the minimiser is a **coset of four**: `θ^* = \arctan½` (one of four; the run printed `2.034448 = \arctan½ + π/2`) | `R147_003` §A.5 |
+| **c18** | §0 bullet 2; README; (D.54 already said it) | In `E/F_5`, `μ_4` is **both** the deck group of `E → E/μ_4 = P¹` **and** a subring of `\mathrm{End}(E)` acting on the Tate module by a primitive 4th root of unity; **only the first role has an arithmetic counterpart**. The model's positive result does **not** support the arithmetic construction. `R145_004` Warning 1 binds any attempt to carry D.53.1's trace form across | `R147_003` §A.5 (NOTE 20), §0 |
+| **c19** | §5 row 5; D.51.5 | Phase 139 **Theorem D.19.4a** already proves `K_Q > 0` **false** for `Q_k = x²+ky²`, `k` large. Row 5 "NEW" → **"extends D.19.4a"**; the table detects non-membership pointwise where no real zero is visible, which is complementary, not new | `R147_003` §A.5 (NOTE 22) |
+
+**Summary of what survives above, unchanged:** D.50.1 (as a statement about `\mathrm{Corr}(C_{K,S})`);
+the collapse, correctly typed as `R(Γ_σ) = \mathrm{id}`; D.50.9(ii)–(iv) and D.50.10 with `≤`; D.51.1
+(`Ξ_a`-uniformity of the radial realization); D.51.2, D.51.3; D.52.2 on the radial realization only;
+D.53.1, D.53.3, D.53.4 (typed in `\mathrm{NS}⊗Q`); D.53.5(i),(iii),(v) with corrected constants and
+hypotheses; F-147-1 (`CONFIRMED` by the auditor). **No label elsewhere in the corpus is changed.**

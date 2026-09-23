@@ -1,0 +1,86 @@
+{
+ "inflate": 1e-09,
+ "rows": [
+  {
+   "file": "r8a_02_0p60_par0.json",
+   "T": "0.60",
+   "par": 0,
+   "in_range": true,
+   "two_negative_box": true,
+   "mu_lower": 0.006626508242486407,
+   "certified_lower_bound_sector": 1
+  },
+  {
+   "file": "r8a_02_0p75_par1.json",
+   "T": "0.75",
+   "par": 1,
+   "in_range": true,
+   "two_negative_box": false,
+   "mu_lower": 0.0,
+   "certified_lower_bound_sector": 0
+  },
+  {
+   "file": "r8a_02_0p78_par1.json",
+   "T": "0.78",
+   "par": 1,
+   "in_range": true,
+   "two_negative_box": false,
+   "mu_lower": 0.0,
+   "certified_lower_bound_sector": 0
+  },
+  {
+   "file": "r8a_02_0p80_par0.json",
+   "T": "0.80",
+   "par": 0,
+   "in_range": true,
+   "two_negative_box": true,
+   "mu_lower": 0.290055638823614,
+   "certified_lower_bound_sector": 1
+  },
+  {
+   "file": "r8a_02_0p80_par1.json",
+   "T": "0.80",
+   "par": 1,
+   "in_range": true,
+   "two_negative_box": false,
+   "mu_lower": 0.0,
+   "certified_lower_bound_sector": 0
+  },
+  {
+   "file": "r8a_02_0p81_par1.json",
+   "T": "0.81",
+   "par": 1,
+   "in_range": true,
+   "two_negative_box": true,
+   "mu_lower": 0.005123572551748814,
+   "certified_lower_bound_sector": 1
+  },
+  {
+   "file": "r8a_02_0p82_par1.json",
+   "T": "0.82",
+   "par": 1,
+   "in_range": true,
+   "two_negative_box": true,
+   "mu_lower": 0.012367770270613091,
+   "certified_lower_bound_sector": 1
+  },
+  {
+   "file": "r8a_02_0p90_par1.json",
+   "T": "0.90",
+   "par": 1,
+   "in_range": false,
+   "two_negative_box": true,
+   "mu_lower": 0.073957618913842,
+   "certified_lower_bound_sector": 0
+  },
+  {
+   "file": "r8a_02_log2_par0.json",
+   "T": "log2",
+   "par": 0,
+   "in_range": true,
+   "two_negative_box": true,
+   "mu_lower": 0.14717022135780622,
+   "certified_lower_bound_sector": 1
+  }
+ ]
+}

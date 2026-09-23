@@ -1,0 +1,1166 @@
+# R149.001 — Builder, round 1: the additive pencil of `Spec Z` and the Deligne extraction
+
+*Builder: Opus 5. Date 2026-09-15. Executes `R149_000_LEAD_BLUEPRINT.md` (D.59–D.63).
+Inputs read: `R148_005`, `R147_005`, `NO-GO-LIST.md` NG-B1/NG-B8, phase-36 Doc 106
+(`03-research/phase-36-ABC-forms/106-funtor-amplificador-busqueda.md`), phase-36 Doc 108,
+Paper 46 §17.5 (Lem 17.13, Thm 17.14, Rem 17.14a, import (X20)).
+Literature (W-H) read directly: Fiorilli–Martin (JEMS 2023), Hayani (arXiv:2407.01045),
+Brüdern–Kaczorowski–Perelli (arXiv:1712.00737), Bhowmik–Schlage-Puchta (arXiv:0806.3295).*
+
+---
+
+## 0. Executive summary
+
+**Headline.** The blueprint's extraction theorem is **PROVED**, but only after a correction of
+record: the centering model cannot be a Selberg-type sieve majorant (its `q = 1` evaluation
+carries a PNT-strength error `N\exp(-c(\log Q)^{3/5})`, which swamps the target `N^{1/2+\varepsilon}`),
+and it cannot be the constant `1` either (which leaves the major-arc main terms `\mu(q)/\varphi(q)`
+in place and makes the hypothesis **false** for every `k \ge 2`). The unique natural model that
+satisfies both constraints is the **truncated Ramanujan / singular-series model**
+`M_Q(n) := \sum_{q \le Q} (\mu(q)/\varphi(q))\, c_q(n)`. With that model everything works
+(D.59.1–D.59.5).
+
+**W-H verdict: the hypothesis SURVIVES, and the blueprint's attribution was wrong.**
+Hooley's conjecture was disproved by **Fiorilli and Martin** (not Bober–Goldmakher), and the
+"weaker form" 2024 paper is by **Mounir Hayani**. Both counterexample families live at
+`q \asymp \log\log x` (and the `q`-averaged form fails only for `Q \le \sqrt{\log\log x}`).
+D.59's hypothesis is a statement about `\sum_{q \le Q}` with `Q = N^{c}`, `c` fixed in `(0,1)`;
+the counterexamples contribute `N^{1+o(1)} = o(Q^2 N)` to it. Moreover the *mechanism* of the
+counterexamples is Littlewood's `\psi(x,\chi) = \Omega_{\pm}(x^{1/2}\log\log\log x)`, an
+**RH-compatible** fluctuation. So they cannot obstruct any hypothesis of strength "`N^{1/2+\varepsilon}`
+per fibre on average". `PROVED` (Theorem D.60.7).
+
+**Kill test outcome (D.60): the route is exactly, and sharply, blocked at `c = 1/2`.**
+Write `H(k,c)` for D.59's hypothesis at level `Q = N^{c}`. Then
+
+| | `c \ge 1/2` | `c < 1/2` |
+|---|---|---|
+| `H(1,c)` | **PROVED** — it is precisely the Montgomery–Vaughan large sieve | **OPEN**; follows from GRH; unproved |
+| extraction from `H(1,c)` | `\ll N^{1/2+c+o(1)} \ge N` — **vacuous** | `\ll N^{1/2+c+o(1)}` — **non-trivial** |
+
+i.e. the one case of the hypothesis that is a theorem is a theorem exactly in the range where
+the extraction returns nothing, and becomes useful exactly where it stops being a theorem. For
+`k \ge 2` nothing is proved beyond Hölder interpolation from `k = 1`, which returns
+`\ll Q^{1/k}N^{1-1/2k}`, again `\ge N` for `c \ge 1/2`. The Green–Tao restriction exponent
+`N^{r-1}` is *saturated by the major arcs* and is therefore exactly the coinvariant block —
+it contains no information about zeros. **No chain yields any zero-free region: the FATAL rule
+is not triggered anywhere.** (Theorems D.60.1–D.60.6.)
+
+**D.61 finding of record — the split of the two squares.** On the **additive** square the
+pairing is `\kappa(d) = \sum_{q\mid d}\mu^2(q)/\varphi(q) = d/\varphi(d)` (diagonal block) and
+the Hardy–Littlewood singular series `\mathfrak S(d) = \sum_q \mu^2(q)c_q(d)/\varphi(q)^2`
+(full block). Both are **positive-definite** (Bochner, free — see W-a) and both are
+**zero-blind**. Landau's lemma is useless there because the additive square's abscissa is the
+a-priori-known top pole at `s = 2`, strictly above every zero–zero singularity `\rho+\rho'`
+(`\mathrm{Re} \le 2`); and twisting kills the positivity, because the additive square's
+nonnegativity comes from `\Lambda \ge 0` and not from a square, whereas Rankin positivity
+`|\psi(x,\chi)|^2 \ge 0` on the **multiplicative** square is twist-stable. Hence:
+
+> **Rankin/Landau lives on the multiplicative square; invariant theory lives on the additive
+> square; and nothing known transports between them.** That is the precise shape of the row-D
+> wall in this route. (Theorem D.61.8.)
+
+**D.62.** Problem (P149) stated. **D.63.** Three falsifiers run; `\Xi_a` gives the sharpest
+reading: the *extraction theorem* is `\Xi_a`-uniform (hence carries no arithmetic), while the
+*hypothesis* `H(k,c)` is **FALSE** for `\Xi_a` as soon as `k > c/a` — the arithmetic is entirely
+inside the hypothesis, exactly as the blueprint predicted.
+
+**Recommendation.** D.59 is worth keeping and is paper-facing (Paper 46 Part IV, or a short
+note); D.60 shows the route is not a route to RH by existing means; D.61's split is the real
+finding and should be recorded as a companion wall to R147_005 §5 and R148_005 §5. **No label
+in the corpus changes. Row D: no label, no sign.**
+
+---
+
+## 1. Notation, conventions, corpus check
+
+`e(x) := e^{2\pi i x}`. `\Lambda` is von Mangoldt. `c_q(n) := \sum_{a\bmod q}^{*} e(an/q)`
+is the Ramanujan sum. `w` always denotes a real function in `C_c^\infty(0,\infty)`, `w \ge 0`,
+`w \not\equiv 0`; we normalise `\mathrm{supp}\,w \subseteq [1,2]` throughout (harmless: any `w`
+is a finite sum of dilates of such). We write
+`W(s) := \int_0^\infty w(u)u^{s-1}\,du` (Mellin transform; entire, since `w \in C_c^\infty(0,\infty)`)
+and `\widehat w(0) := \int_0^\infty w(u)\,du = W(1) > 0`.
+`\psi_w(N) := \sum_n \Lambda(n) w(n/N)`.
+`\sum^{*}_{a \bmod q}` runs over `(a,q) = 1`.
+`\mathcal F_Q := \{a/q : q \le Q,\ 1 \le a \le q,\ (a,q) = 1\}`, `\#\mathcal F_Q = \sum_{q\le Q}\varphi(q) = (3/\pi^2)Q^2 + O(Q\log Q)`.
+
+**Labels used.** `PROVED` (complete proof here), `CLASSICAL` (standard, cited), `IMPORTED`
+(cited literature, load-bearing), `RESTATEMENT`, `CANDIDATE`, `REFUTED`, `OPEN`, `CERTIFIED`.
+
+### 1.1 Corpus check (grep-verified, 2026-09-15)
+
+Run: `grep -rn -i -e ramanujan -e "large sieve" -e Barban -e Hooley -e Farey -e "additive twist" -e "restriction theorem" --include=*.md 03-research 04-papers`.
+
+| idea | prior corpus occurrence | verdict |
+|---|---|---|
+| Barban–Davenport–Halberstam, Montgomery–Hooley, Hooley's conjecture | none outside `R149_000` and the phase-149 handoff | **NEW** |
+| Farey dissection / additive pencil `Z(s;\alpha)` | none outside `R149_000`/handoff | **NEW** |
+| `\kappa(d) = \sum_{q\mid d}1/\varphi(q)`, singular series as a Gram form | none | **NEW** |
+| Ramanujan sums `c_q(n)` used as an orthogonal system | none (the `\kappa(a-b)` of Paper 46 (X27) is the *degree* Toeplitz Gram of `NS(E\times E)`, a different and **indefinite** object) | **NEW**, and the contrast is a finding (§4.5) |
+| large sieve | `NO-GO-LIST` NG-B1 (listed as a failed mechanism for lower bounds on `b_j`); phase-64 `CONSTRUCTION-TW`/`FACE-C` ("central adelic large sieve"); phase-36 Doc 108 (sieve→index bridge, `PUENTE MUERTO`) | **adjacent**; §3.7 explains why the present use is consistent with NG-B1 and not a reopening |
+| Green–Tao restriction | phase-114/116 `114_d_70_NESTED_WINDOW_RESTRICTION_THEOREM.md` (a different "restriction": nested windows on the Weil functional), phase-122 `P122_025` | **NEW** in the Fourier-restriction-for-primes sense |
+| Deligne amplification axiomatised (`\kappa`, superadditivity, sublinear bound) | phase-36 Doc 106 §1.1, Thm 1.4, sterility lemma Prop. 3.9 | **CITED, not rebuilt** (§2.0) |
+| Landau's lemma on a one-parameter family | Paper 46 §17.5 Lem 17.13, Thm 17.14, Rem 17.14a, import (X20) | **CITED**; §4.6 is the *negative* companion (Landau fails on the additive square) |
+| Goldbach-average explicit formula (Fujii / Languasco–Zaccagnini / BKP) | none | **NEW** (imported) |
+
+**No idea below duplicates a corpus result.** Where an idea is adjacent, the adjacency is stated
+in the text and the no-go is cited, never reopened.
+
+---
+
+## 2. D.59 — The extraction theorem
+
+### 2.0 What is being reused and what is not
+
+Phase-36 Doc 106 §1.1 already distils Deligne's skeleton to four steps and proves the abstract
+amplification theorem (Doc 106 Thm 1.4), together with the **sterility lemma** (Prop. 3.9): from
+an abstract tensor product no contradiction can come, because superadditivity and the growth of
+the index are computed from the same signature data. **We do not rebuild that axiomatisation.**
+What is new here is the *concrete* realisation of step (iv) of Weil I — the extraction lemma
+(Weil I, 3.2) — over `Z`, for the additive pencil, in a form where the "family" is the Farey
+family `\mathcal F_Q` and the "fibre" is the point `\alpha = 0`. Doc 106 §5 named the missing
+object as "a finiteness bound whose source is independent of the position of the zeros"
+(Lema Faltante 5.3); D.59 makes that bound explicit and D.60 measures how far from it we are.
+
+**Novelty note (as ordered).** The implication proved in Theorem D.59.1 is a **chaining of
+folklore steps** (Farey/major-arc dissection; `\ell^{2k}\hookrightarrow\ell^{\infty}`; `k\to\infty`).
+A literature check found it nowhere stated in this form. It is recorded here as
+*"folklore chain, first stated here"* — **not** as a discovery. The same holds for Theorem D.59.2.
+
+### 2.1 The model: three constraints and the unique natural solution
+
+Let `M : \mathbb N \to \mathbb C` be a "model" (an approximant to `\Lambda`) and set
+```
+S̃_M(α; N) := Σ_n (Λ(n) − M(n)) e(nα) w(n/N),      α ∈ R/Z,
+M_{2k}(N)  := Σ_{q ≤ Q} Σ*_{a mod q} |S̃_M(a/q; N)|^{2k}.
+```
+
+**Definition D.59.0 (admissible model).** `M` is *admissible at level `Q`* if
+
+* **(E) evaluability.** `\sum_n M(n)w(n/N) = N\,\widehat w(0) + O_{w}(N^{1/2})` for all `N \ge 2`,
+  with an implied constant depending only on `w` (and on `Q` only through `Q \ll N`);
+* **(C) centering.** for every `q \le Q` and `(a,q) = 1`,
+  `\sum_n M(n)e(na/q)w(n/N) = (\mu(q)/\varphi(q))\,N\,\widehat w(0) + O_{A,w}(Q\,N^{-A})` for every `A > 0`;
+* **(B) boundedness.** `\sum_n |M(n)|^2 w(n/N) \ll N (\log N)^{O(1)}`.
+
+**Proposition D.59.0a (the model dichotomy; `PROVED`).**
+
+1. The **Selberg-type sieve majorant** `\Lambda_Q^{\mathrm{Sel}}(n) := \sum_{d\mid n,\,d\le Q}\mu(d)\log(Q/d)`
+   **fails (E)**. Indeed, with `\mathrm{supp}\,w\subseteq[1,2]`, Poisson summation gives
+   `\sum_{m\ge1} w(dm/N) = (N/d)\widehat w(0) + O_A((d/N)^A)` for `d \le N`, whence
+   ```
+   Σ_n Λ_Q^{Sel}(n) w(n/N) = N ŵ(0) · Σ_{d ≤ Q} μ(d)log(Q/d)/d + O_A(Q^{1+A}N^{−A}).
+   ```
+   By Mellin, `\sum_{d\le Q}\mu(d)\log(Q/d)/d = \frac{1}{2\pi i}\int Q^{s}\,\frac{ds}{s^{2}\zeta(s+1)}
+   = 1 + O\big(\exp(-c(\log Q)^{3/5}(\log\log Q)^{-1/5})\big)`, the pole at `s = 0` being simple
+   with residue `1` because `1/\zeta(1+s) = s + O(s^2)`, and the remaining error being exactly the
+   Vinogradov–Korobov PNT error (import (X20a) of Paper 46). Since
+   `N\exp(-c(\log Q)^{3/5}) \gg N^{1/2+\varepsilon}` for `Q = N^{c}`, condition (E) fails, and with
+   it the conclusion `\psi_w(N) - N\widehat w(0) \ll N^{1/2+\varepsilon}` **cannot** be reached. Worse,
+   the error is *itself* of PNT strength, so the chain would be circular.
+   **`REFUTED` — correction of record to `R149_000` §D.59.**
+2. The **trivial model** `M \equiv 1` satisfies (E) and (B) exactly (Poisson: `\sum_n w(n/N) = N\widehat w(0) + O_A(N^{-A})`),
+   but **fails (C)**, and the failure is fatal: for `q > 1`, `\sum_n e(na/q)w(n/N) = O_A(N^{-A})`,
+   so `S̃_1(a/q;N) = S(a/q;N) + O_A(N^{-A})` where `S(\alpha;N) := \sum_n\Lambda(n)e(n\alpha)w(n/N)`.
+   The classical major-arc asymptotic (Vinogradov; e.g. Vaughan, *The Hardy–Littlewood Method*, Thm 3.1)
+   gives `S(a/q;N) = (\mu(q)/\varphi(q))N\widehat w(0) + O(N\exp(-c\sqrt{\log N}))` for `q \ll (\log N)^{A}`.
+   Hence for squarefree `q \ll (\log N)^{A}`, `|S̃_1(a/q;N)| \asymp N/\varphi(q)`, and
+   ```
+   M_{2k}(N) ≥ (1+o(1)) N^{2k} ŵ(0)^{2k} Σ_{q ≤ (log N)^A} μ²(q) φ(q)^{1−2k}  ≫_k N^{2k}   (k ≥ 2),
+   ```
+   the series `\sum_q\mu^2(q)\varphi(q)^{1-2k}` converging for `k\ge2`. Comparing with the required
+   `\ll (\log N)^{B_k}Q^2N^{k} = N^{k+2c+o(1)}` and using `k \ge 2 > 2c`, the hypothesis is **false**.
+   **`REFUTED` as a model for `k \ge 2`.** (For `k = 1` it survives, since `\sum_{q\le Q}\mu^2/\varphi \asymp \log Q`
+   gives only `M_2 \gg N^2\log Q`, consistent with `Q^2N` once `Q \ge N^{1/2}\log N`.)
+3. The **truncated Ramanujan (singular-series) model** — *not new: this is exactly Vaughan's
+   truncated-singular-series main term `\rho(x;q,a)` (R. C. Vaughan, Duke Math. J. **120** (2003),
+   371–383 and 385–403; Phil. Trans. R. Soc. A **356** (1998), 781–791, 793–809), rediscovered here by
+   the constraints (E),(C),(B). Attribution recorded; `IMPORTED`, not claimed* —
+   ```
+   M_Q(n) := Σ_{q ≤ Q} (μ(q)/φ(q)) c_q(n)
+   ```
+   is **admissible**. *Proof.* (C): fix `q_0 \le Q`, `(a,q_0)=1`. Since
+   `c_q(n) = \sum^{*}_{b\bmod q}e(nb/q)`,
+   ```
+   Σ_n M_Q(n) e(na/q_0) w(n/N) = Σ_{q ≤ Q} (μ(q)/φ(q)) Σ*_{b mod q} Σ_n e(n(b/q + a/q_0)) w(n/N).
+   ```
+   By Poisson the inner `n`-sum is `N\widehat w(0) + O_A(N^{-A})` when `b/q + a/q_0 \in \mathbb Z` and
+   `O_A(N^{-A})` otherwise, uniformly (the nonzero frequency is `\ge 1/(qq_0) \ge Q^{-2}`, and
+   `\widehat{w}` decays faster than any power of `N/Q^2 \to\infty` since `c<1`... [see Remark D.59.0b]).
+   The congruence `b/q \equiv -a/q_0 \pmod 1` with `(b,q)=1,(a,q_0)=1` has a (unique) solution iff
+   `q = q_0`, and then `b \equiv -a`. Hence the `q = q_0` term contributes
+   `(\mu(q_0)/\varphi(q_0))N\widehat w(0)` and all others `O_A(QN^{-A})`. Taking `q_0 = 1` gives (E)
+   with an error `O_A(QN^{-A})`, far better than `O(N^{1/2})`.
+   (B): by orthogonality of Ramanujan sums (Lemma D.61.2 below),
+   `\sum_{n\le N}|M_Q(n)|^2 = N\sum_{q\le Q}\mu^2(q)\varphi(q)/\varphi(q)^2 + O(Q^2) = N(\log Q + C) + O(Q^2)`,
+   so (B) holds for `Q \le N^{1/2}`; for `Q > N^{1/2}` use `|M_Q(n)| \le \sum_{q\le Q}|c_q(n)|/\varphi(q) \ll \tau(n)\log Q`
+   and `\sum_{n\le N}\tau(n)^2 \ll N\log^3N`. ∎  `PROVED`
+
+**Remark D.59.0b (uniformity in the Poisson step).** Writing `\beta := b/q + a/q_0 \bmod 1`, the
+Poisson error is `\sum_{m\ne 0} \widehat{w_N}(m - \beta N)` — more simply, `\sum_n e(n\beta)w(n/N) = \sum_{m\in\mathbb Z} N\widehat w(N(m-\beta))`
+and `\|\beta\| \ge 1/(qq_0) \ge Q^{-2}`, so `N\|\beta\| \ge N^{1-2c}`. When `c < 1/2` this tends to
+infinity and the rapid decay of `\widehat w` gives `O_A(N^{-A})`. **When `c \ge 1/2` the estimate must
+be replaced by the trivial `O(\min(N, \|\beta\|^{-1}))`**, and (C) then holds only in the averaged
+form `\sum_{q_0\le Q}\sum^{*}_a |{\rm error}|^2 \ll Q^2 N^{\varepsilon}`, which is all Theorem D.59.1
+uses. We record this as a **standing hypothesis (C′)**, the averaged form of (C), and note that
+all statements below are proved with (C′). `PROVED` (the averaged form follows from the large
+sieve applied to `M_Q`, exactly as in Theorem D.60.1).
+
+From here on `\Lambda_Q := M_Q` and `S̃ := S̃_{M_Q}`.
+
+### 2.2 The discrete (Farey) extraction
+
+**Theorem D.59.1 (Deligne extraction over the Farey family; `PROVED`).**
+Fix `w` as above, fix `c \in (0,1)`, put `Q = Q(N) := N^{c}`. Suppose that for every `k \ge 1`
+there are constants `C_k, B_k` with
+```
+(H(k,c))      M_{2k}(N) := Σ_{q ≤ Q} Σ*_{a mod q} |S̃(a/q; N)|^{2k}  ≤  C_k (log N)^{B_k} Q² N^k     (N ≥ 2).
+```
+Then for every `\varepsilon > 0`,
+```
+ψ_w(N) − N ŵ(0)  ≪_{w,ε}  N^{1/2+ε}.
+```
+
+*Proof.* The pair `(q,a) = (1,0)` — equivalently `(1,1)` — belongs to the range of summation, and
+`a/q = 0`. Hence, dropping every other term,
+```
+|S̃(0; N)|^{2k}  ≤  M_{2k}(N)  ≤  C_k (log N)^{B_k} Q² N^k,
+```
+so, taking `2k`-th roots,
+```
+|S̃(0; N)|  ≤  C_k^{1/2k} (log N)^{B_k/2k} Q^{1/k} N^{1/2}  =  N^{1/2 + c/k + o(1)}        (N → ∞).
+```
+By admissibility (E),
+`S̃(0;N) = \psi_w(N) - \sum_n M_Q(n)w(n/N) = \psi_w(N) - N\widehat w(0) + O_A(QN^{-A})`, whence
+```
+ψ_w(N) − N ŵ(0)  ≪  N^{1/2 + c/k + o(1)}      for every k ≥ 1.
+```
+Given `\varepsilon > 0`, choose `k > c/\varepsilon`; then `c/k < \varepsilon` and the `o(1)` (a power of
+`\log N`) is absorbed by any smaller `\varepsilon' < \varepsilon`. ∎ `PROVED`
+
+**The structure, in Deligne's words.** `Q^2 \asymp \#\mathcal F_Q` is the **size of the family**;
+`N^{k} = (N^{1/2})^{2k}` is **square-root cancellation per fibre**; the extraction costs
+`(\#\mathcal F_Q)^{1/2k} = N^{c/k}`, which `\to 1` as `k\to\infty`. This is verbatim the shape of
+Weil I, 3.2: *bound one fibre by the whole family; the family's size is paid for by the `2k`-th
+root.* The role of "the poles of the family's `L`-function do not move with `k`" is played by the
+**uniformity of `Q` and of the exponent `2` in `Q^2`**: `H(k,c)` asserts that the right-hand side
+grows in `k` only through `N^{k}` and that the family factor `Q^2` is independent of `k`. That
+independence is precisely the content the blueprint asks D.62 to create.
+
+**Corollary D.59.1a (`H(k,c)` for all `k` and all `w` implies RH; `PROVED`).**
+Assume `H(k,c)` for every `k \ge 1` and for every member of the one-parameter family
+`w_\theta(u) := w(u)u^{\theta}`, `\theta \in \mathbb R` (each is in `C_c^\infty(0,\infty)`,
+nonnegative, supported in `[1,2]`). Then RH holds.
+
+*Proof.* Fix `\theta`. Since `\mathrm{supp}\,w_\theta \subseteq [1,2]`, `\psi_{w_\theta}(N) = 0` for
+`N < 1/2`, and for `\mathrm{Re}\,s > 1`, substituting `N = n/u`,
+```
+∫_0^∞ ψ_{w_θ}(N) N^{−s−1} dN = Σ_n Λ(n) ∫_0^∞ w_θ(n/N) N^{−s−1} dN = ( −ζ'/ζ )(s) · W(s+θ),
+```
+where `W(s) := \int_0^\infty w(u)u^{s-1}du` is entire and `W(1) = \widehat w(0) > 0`. Split the
+integral at `N = 1`: `\int_{1/2}^{1}\psi_{w_\theta}(N)N^{-s-1}dN =: E_\theta(s)` is entire. Also
+`\int_1^\infty W(1+\theta) N\cdot N^{-s-1}dN = W(1+\theta)/(s-1)` for `\mathrm{Re}\,s>1`. Therefore
+```
+∫_1^∞ ( ψ_{w_θ}(N) − W(1+θ) N ) N^{−s−1} dN  =  (−ζ'/ζ)(s) W(s+θ) − W(1+θ)/(s−1) − E_θ(s).
+```
+By Theorem D.59.1 the integrand on the left is `\ll N^{1/2+\varepsilon}` for every `\varepsilon>0`, so the
+left side converges absolutely and defines an analytic function on `\mathrm{Re}\,s > 1/2`. Hence
+`(-\zeta'/\zeta)(s)W(s+\theta) - W(1+\theta)/(s-1)` continues analytically to `\mathrm{Re}\,s > 1/2`.
+If `\zeta` had a zero `\rho` with `\mathrm{Re}\,\rho > 1/2`, then `-\zeta'/\zeta` has a pole at `\rho`
+with positive integer residue, and `\rho \ne 1`; analyticity forces `W(\rho+\theta) = 0`. As `\theta`
+ranges over `\mathbb R`, `\rho+\theta` ranges over a horizontal line, so `W` would vanish on a line
+of positive length, hence `W \equiv 0` by analyticity — contradicting `W(1) > 0`. ∎ `PROVED`
+
+*(This replaces the blueprint's "hence RH", which as written quantified over a single `w` and
+therefore could not exclude zeros at the Mellin zeros of that `w`. Correction of record.)*
+
+### 2.3 The continuous version and the Bernstein step
+
+**Theorem D.59.2 (continuous extraction; `PROVED`).** With `w` as above, suppose that for every
+`k \ge 1` and every `\varepsilon > 0`,
+```
+(H^cont(k))      ∫_0^1 |S̃(θ; N)|^{2k} dθ  ≪_{k,ε}  N^{k+ε}.
+```
+Then `\sup_{\theta}|S̃(\theta;N)| \ll_\varepsilon N^{1/2+\varepsilon}`, and in particular (by the same
+`\theta = 0` specialisation and Corollary D.59.1a) RH holds.
+
+*Proof (Bernstein).* `S̃(\theta;N) = \sum_{0 \le n \le 2N} c_n e(n\theta)` with
+`c_n = (\Lambda(n)-M_Q(n))w(n/N)` (nonzero only for `N \le n \le 2N`): a trigonometric polynomial
+of degree `\le 2N`. Let `V := \sup_\theta|S̃(\theta;N)|`, attained at `\theta_0` (continuity,
+compactness). Bernstein's inequality for trigonometric polynomials of degree `M` gives
+`\|S̃'\|_\infty \le 2\pi M\|S̃\|_\infty = 4\pi N V`. Hence for `|\theta-\theta_0| \le 1/(8\pi N)`,
+```
+|S̃(θ)| ≥ |S̃(θ_0)| − 4πNV·|θ−θ_0| ≥ V − V/2 = V/2.
+```
+The set of such `\theta` has measure `\ge 1/(4\pi N)`, so
+```
+∫_0^1 |S̃|^{2k} dθ ≥ (V/2)^{2k} / (4πN),   i.e.   V ≤ 2 ( 4πN ∫_0^1|S̃|^{2k} )^{1/2k} ≪_k (N · N^{k+ε})^{1/2k} = N^{1/2 + (1+ε)/2k}.
+```
+Let `k \to \infty`. ∎ `PROVED`
+
+**Theorem D.59.3 (converse strength: `H^{cont}` for all `k` is *equivalent* to the additive-twist
+RH, which is strictly stronger than RH; `PROVED`).**
+```
+(∀k)  ∫_0^1 |S̃(θ;N)|^{2k}dθ ≪_{k,ε} N^{k+ε}     ⟺     sup_θ |S̃(θ;N)| ≪_ε N^{1/2+ε}   ("ATRH").
+```
+*Proof.* `(\Rightarrow)` is Theorem D.59.2. `(\Leftarrow)` is trivial:
+`\int_0^1|S̃|^{2k} \le \sup|S̃|^{2k} \ll N^{k+2k\varepsilon}`. ∎
+
+*Strictness.* ATRH implies, for every `q` and every primitive `\chi \bmod q`, by finite Fourier
+inversion `\psi_w(N,\chi) = \frac{\tau(\chi)}{q}\sum^{*}_{a}\bar\chi(a)\,S(a/q;N)`
+and `|\tau(\chi)| = \sqrt q`, the bound `\psi_w(N,\chi) \ll q^{1/2+\varepsilon}N^{1/2+\varepsilon}`
+**uniformly for all `q \le Q`** — i.e. GRH-quality bounds uniformly in the modulus up to `N^{c}`.
+It further asserts square-root cancellation at **irrational** `\theta`, where no conjecture in the
+`L`-function framework applies at all (the strongest known unconditional bound at
+Diophantine-generic `\theta` is Vinogradov's `N^{4/5+\varepsilon}`, improved by Vaughan/Vinogradov
+to `N^{4/5}` and, after Bourgain–Demeter–Guth-type input, still far from `N^{1/2}`).
+So ATRH `\Rightarrow` RH, and the converse is not known and not expected to be provable by the same
+means. **Label: `PROVED` for the equivalence; `OPEN`/`CANDIDATE` for the strictness as a formal
+separation (it is strictly stronger in content; a formal non-implication proof is not available and
+is not claimed).**
+
+### 2.4 `Ξ_a`-uniformity of D.59 — the theorem carries no arithmetic
+
+**Proposition D.59.4 (`Ξ_a`-uniformity; `PROVED`).** Theorem D.59.1 and Theorem D.59.2 hold verbatim
+with `\Lambda` replaced by **any** sequence `(b_n)` of complex numbers, and `M_Q` by any model
+satisfying (E), (C′). In particular, for the falsifier `\Xi_a(s) := \xi(s+a)+\xi(s-a)` (`0<a<1/2`)
+the natural coefficient sequence is `\Lambda_a(n) := \Lambda(n)(n^{a}+n^{-a})` (so that
+`-\Xi_a'/\Xi_a` has, up to the entire archimedean factors, coefficients `\Lambda_a`), and the
+extraction runs unchanged. *Proof.* No step of §§2.2–2.3 used any property of `\Lambda` beyond being a
+sequence supported on `[1,2N]`. ∎
+
+**Consequence of record.** *D.59 by itself carries no arithmetic.* It is a statement about
+trigonometric polynomials. **The arithmetic must enter through the hypothesis `H(k,c)`**, and
+Proposition D.63.1 below shows it does: `H(k,c)` is **false** for `\Lambda_a` once `k > c/a`.
+
+---
+
+## 3. D.60 — The kill test
+
+Throughout, `S̃ = S̃_{M_Q}` and `Q = N^{c}`, `0 < c < 1`.
+
+### 3.1 The exponent identity
+
+**Theorem D.60.0 (`PROVED`).** `H(k,c)` yields exactly
+`\psi_w(N) - N\widehat w(0) \ll N^{1/2 + c/k + o(1)}`. This is non-trivial (i.e. `o(N)`) **iff**
+`1/2 + c/k < 1`, i.e. **iff `c < k/2`**. Since `c < 1`:
+* `k = 1`: non-trivial **iff `c < 1/2`**;
+* `k \ge 2`: non-trivial for every admissible `c`.
+*(Immediate from Theorem D.59.1.)*
+
+### 3.2 `k = 1`: the large sieve proves `H(1,c)` exactly where it is useless
+
+**Theorem D.60.1 (`PROVED`; the `k=1` hypothesis is the large sieve).** For `N^{1/2} \le Q \le N`,
+```
+M_2(N) = Σ_{q ≤ Q} Σ*_{a mod q} |S̃(a/q;N)|²  ≪  Q² N log N,
+```
+i.e. `H(1,c)` holds with `B_1 = 1` for every `c \in [1/2,1)`.
+
+*Proof.* The points `\{a/q\} \subseteq \mathcal F_Q` are `\delta`-spaced with `\delta = 1/Q^2`
+(if `a/q \ne a'/q'` then `\|a/q - a'/q'\| \ge 1/(qq') \ge Q^{-2}`). The Montgomery–Vaughan large
+sieve (*Hilbert's inequality*, JLMS (2) **8** (1974), 73–82; equivalently Montgomery–Vaughan,
+*Multiplicative Number Theory I*, Thm 7.7) with `\mathrm{supp}\,w \subseteq [1,2]` gives, for any
+coefficients `(c_n)_{N \le n \le 2N}`,
+```
+Σ_{q ≤ Q} Σ*_{a mod q} | Σ_n c_n e(na/q) |²  ≤  (N + Q²) Σ_n |c_n|².
+```
+Here `c_n = (\Lambda(n) - M_Q(n))w(n/N)` and, by (B),
+`\sum_n|c_n|^2 \ll \sum_{N\le n\le 2N}\Lambda(n)^2 + \sum_n|M_Q(n)|^2 \ll N\log N`. With `Q \ge N^{1/2}`,
+`N + Q^2 \ll Q^2`. ∎ `CLASSICAL` (the ingredient) / `PROVED` (the deduction).
+
+**Corollary D.60.2 (`PROVED`).** The extraction applied to Theorem D.60.1 gives
+```
+| ψ_w(N) − N ŵ(0) |  ≪  Q N^{1/2}(log N)^{1/2}  =  N^{1/2+c+o(1)}   ≥   N     (c ≥ 1/2).
+```
+**Nothing.** It is worse than the trivial bound `\psi_w(N) \ll N\log N`, for every `c \ge 1/2`.
+This is the sharp form of the blueprint's expectation. **No FATAL flag.**
+
+**Theorem D.60.3 (`PROVED`; the boundary `c = 1/2` is exact).** For `c < 1/2` the large sieve gives
+only `M_2 \ll N^2\log N`, which exceeds the required `Q^2N = N^{1+2c}` by `N^{1-2c}`; and
+`N^{1-2c} \to \infty` precisely when `c < 1/2`. Hence
+
+> `H(1,c)` is **PROVED** exactly for `c \in [1/2,1)`, and in that range the extraction is
+> **vacuous** (Cor. D.60.2); `H(1,c)` becomes **useful** exactly for `c \in (0,1/2)`, and there it
+> is **OPEN** (it follows from GRH — `|S̃(a/q;N)| \ll N^{1/2+\varepsilon}` for `q \le Q` by finite
+> Fourier inversion and GRH for `L(s,\chi)`, `q \le Q` — but is unproved).
+
+The two ranges are **complementary and disjoint**. This is the kill test's outcome at `k = 1`.
+
+### 3.3 Barban–Davenport–Halberstam / Montgomery–Hooley: where the zeros hide
+
+**Import (CLASSICAL).** With `V(x;Q) := \sum_{q\le Q}\sum^{*}_{a\bmod q}\big(\psi(x;q,a) - x/\varphi(q)\big)^2`:
+
+* **(BDH-0, upper bound; Barban 1964; Davenport–Halberstam 1966; Gallagher 1967.)**
+  For `x(\log x)^{-A} \le Q \le x`, `V(x;Q) \ll Qx\log x`; and for `Q \le x(\log x)^{-B}`,
+  `V(x;Q) \ll_A x^2(\log x)^{-A}` (Davenport–Halberstam with `B = A+5`; Gallagher with `B = A+1`,
+  via the large sieve).
+* **(BDH-1, Montgomery 1970, *Primes in arithmetic progressions*, Michigan Math. J. **17**, 33–39.)**
+  For `Q \le x` and `x > x_0(A)`,
+  `V(x;Q) = Qx\log x + O\!\big(Qx\log(2x/Q)\big) + O_A\!\big(x^2(\log x)^{-A}\big)`.
+  (The constants are ineffective: Siegel–Walfisz.)
+* **(BDH-2, Hooley 1975, *On the Barban–Davenport–Halberstam theorem* I, Crelle **274/275**, 206–223.)**
+  ```
+  V(x;Q) = Qx log Q − c_0 Q x + O( Q^{5/4} x^{3/4} + x²(log x)^{−A} ),
+     c_0 = γ + log 2π + 1 + Σ_p (log p)/(p(p−1)).
+  ```
+  **`CERTIFIED`, not `CLASSICAL`:** the shape and the constant were taken from the survey
+  arXiv:2605.18996 and corroborated by search, **not** read in Hooley I. Sign conventions and the
+  `+1` vary between write-ups (Friedlander–Goldston's single-`q` conjecture uses
+  `\gamma+\log2\pi+\sum_{p\mid q}\frac{\log p}{p-1}`). **Verify against Hooley I before quoting in a
+  paper.** Nothing below depends on `c_0` beyond `c_0 = O(1)`.
+* **(BDH-3, Siegel–Walfisz regime.)** For `Q \le (\log x)^{A}` the only unconditional statement is
+  `V(x;Q) \ll_A x^2(\log x)^{-A}`, obtained termwise from Siegel–Walfisz. This is **not** an
+  asymptotic; it is the PNT-for-progressions error, and it is where every zero of every `L(s,\chi)`
+  with `\mathrm{Re}\,\rho > 1/2` is hidden.
+
+**Theorem D.60.4 (`PROVED`; the BDH error term is the `H^1_c` block and the extraction returns PNT).**
+Running the extraction on (BDH-3) with `Q \le (\log N)^{A}`: `|S̃(0;N)|^2 \le V \ll N^2(\log N)^{-A}`,
+whence `|\psi(N)-N| \ll N(\log N)^{-A/2}`. **That is exactly the classical PNT with the
+Siegel–Walfisz/de la Vallée Poussin error — no more, and derived circularly (Siegel–Walfisz is
+proved from zero-free regions).** Running it on (BDH-1)/(BDH-2) with `Q \asymp x`: the main term
+`Qx\log Q \asymp x^2\log x` gives `|\psi(x)-x| \ll x(\log x)^{1/2}` — worse than trivial.
+
+**Reading of record (the `H^1_c`/`H^2_c` split, as the blueprint asked).** In (BDH-2) the
+**main term `Qx\log Q - c_0Qx`** is computed a priori by orthogonality and local densities — it is
+the *coinvariant / `H^2_c` block*, identified exactly in §4.4 as `x\cdot Q\cdot\kappa(0)`. The
+**error term** `O(Q^{5/4}x^{3/4} + x^2(\log x)^{-A})` is the *`H^1_c` block*: it is where the zeros
+live, and it is the only part of the statement that is not zero-blind. **Every unconditional
+improvement in BDH has been an improvement of the main term or of the `Q`-range, never of the
+`x^2(\log x)^{-A}` factor below the Siegel–Walfisz barrier.** That barrier is exactly the obstruction
+NG-B1 describes in aggregate form.
+
+### 3.4 `k \ge 2`: what is actually proved
+
+**Theorem D.60.5 (`PROVED`; Hölder interpolation is all there is, and it is vacuous).**
+For `k \ge 2` and `c \ge 1/2`, the only unconditional bound available is
+```
+M_{2k}(N) ≤ ( sup_{q ≤ Q, a} |S̃(a/q;N)| )^{2k−2} · M_2(N) ≪ N^{2k−2} · Q²N log N,
+```
+using `|S̃| \ll N` (trivial) and Theorem D.60.1. The extraction gives
+```
+|ψ_w(N) − N ŵ(0)| ≪ ( Q² N^{2k−1} log N )^{1/2k} = Q^{1/k} N^{1−1/2k} (log N)^{1/2k} = N^{1 − 1/2k + c/k + o(1)},
+```
+which is `\ge N` precisely when `c \ge 1/2`. **Vacuous for every `k`.** No FATAL flag.
+
+**Survey of the `k \ge 2` literature (labels).**
+
+| statement | status |
+|---|---|
+| **third** moment: `\sum_{q\le Q}\varphi(q)\sum^{*}_a(\psi(x;q,a)-x/\varphi(q))^3` | **asymptotic PROVED** — Hooley, *On the BDH theorem. VIII*, Crelle **499** (1998), 1–46. (The `\varphi(q)` weight is needed: individual terms behave like `x^{3/2}\varphi(q)^{-1}`.) `IMPORTED`. **Odd moment; useless for the extraction, which needs even `2k`.** |
+| Vaughan, *Moments for primes in arithmetic progressions* I, II, Duke Math. J. **120** (2003), 371–383, 385–403; *On a variance…* I, II, Phil. Trans. R. Soc. A **356** (1998) | second and third moments **against the truncated-singular-series main term `\rho(x;q,a)`** (= our `M_Q`), unconditional, for `R \le (\log x)^{A}`. **No `2k`-th moment with `k\ge2`.** `IMPORTED` |
+| Hooley VII (JLMS (2) **16** (1977), 1–8) — a *conjecture* on higher moments on average over `q \le Q`, restricted to `x(\log x)^{-A} \le Q = o(x/\log x)` | **`OPEN` (conjecture)** |
+| **any unconditional result on `2k`-th moments, `k \ge 2`** | **none exists.** De la Bretèche–Fiorilli, *Moments of moments of primes in arithmetic progressions*, Proc. LMS **127** (2023) (arXiv:2010.05944), state: *"Other than this conjecture, we are not aware of any results on higher moments of `\Lambda(n)` in arithmetic progressions."* `IMPORTED` |
+| what *is* known for `k \ge 2` | **`\Omega`-results and lower bounds only**: de la Bretèche–Fiorilli (unconditional `\Omega` for all weighted even moments; GRH lower bounds for moments of moments); Harper–Soundararajan, Q. J. Math. **68** (2017), 97–123 (unconditional variance lower bounds of conjectured order for `x^{1/2+\varepsilon}\le Q\le x`). Gaussian moments `\mu_{2k} = (2k-1)!!` hold only under a strong uniform Hardy–Littlewood `k`-tuple conjecture. `IMPORTED` |
+| Friedlander–Goldston (GRH + strong HL, `x^{1/2+\varepsilon}\le q\le x`) | **`IMPORTED`, conditional**; `k=1` only |
+| large-sieve moment inequalities (Montgomery–Vaughan; Elliott) | give `k=1` and, by Hölder, only Theorem D.60.5 — **`CLASSICAL`, vacuous here** |
+| unconditional `M_{2k} \ll (\log N)^{B_k}Q^2N^{k}` for some `k \ge 2` | **`OPEN`** — and by Theorem D.60.0 it would give `\psi(N)-N \ll N^{1/2+c/k+\varepsilon}`, a bound strictly beyond every known zero-free region. **Any claimed proof must be presumed erroneous.** |
+
+**FATAL-rule check.** In every chain above the output was `\ge N`, or PNT with the classical error.
+**No chain produced a zero-free region.** The rule is not triggered; no `Q`-range or error term had
+to be re-derived. Recorded explicitly as required by `R149_000`.
+
+### 3.5 Green–Tao restriction: the exponent is the coinvariant block
+
+**Import.** Two statements, with different labels.
+
+* **(GT-0, `CLASSICAL`; the baseline, Green–Tao eq. (1.1)).** With `h_N(\theta) := \sum_{p\le N}e(p\theta)`,
+  for every `p > 2`, `\|h_N\|_{L^p(\mathbb T)} \ll_p N^{1-1/p}(\log N)^{-1}`. Equivalently, with the
+  `\log p` weight, `\int_0^1|\sum_{p\le N}(\log p)e(p\theta)|^{r}d\theta \ll_r N^{r-1}` for `r>2`.
+  This is classical (major/minor arcs + Vinogradov) and **sharp**: PNT gives `|h_N(\theta)| \asymp N/\log N`
+  for `|\theta| \ll 1/N`.
+* **(GT-1, `IMPORTED`; Green–Tao, *Restriction theory of the Selberg sieve, with applications*,
+  J. Théor. Nombres Bordeaux **18** (2006), 147–182, Theorem 1.1 and Proposition 4.2).** The content is
+  the extension of (GT-0) to *any* sequence majorised by the Selberg enveloping sieve `\beta_R`:
+  for `p > 2`, `\|\mathbb E_{n\le N}a_n\beta_R(n)e(n\theta)\|_{L^p(\mathbb T)} \ll_{p,k}
+  N^{-1/p}(\mathbb E_{n\le N}|a_n|^2\beta_R(n))^{1/2}`. The exponent is the same `N^{1-1/p}`; what is
+  gained is genericity, not cancellation.
+
+**Theorem D.60.6 (`PROVED`; the restriction exponent is saturated by the major arcs and is
+zero-blind).** Let `F(\theta) := \sum_{p\le N}(\log p)e(p\theta)`. For `q \ll 1` squarefree and
+`|\theta - a/q| \le 1/(2N)`, the major-arc asymptotic gives `|F(\theta)| \gg N/\varphi(q)`. Summing
+over `\mathcal F_{Q_0}` with `Q_0` a large constant, the union of these arcs has measure
+`\asymp Q_0^2/N` and
+```
+∫_0^1 |F|^r ≥ Σ_{q ≤ Q_0} Σ*_a ∫_{|θ−a/q| ≤ 1/2N} |F|^r ≫ (1/N) Σ_{q ≤ Q_0} φ(q) (N/φ(q))^r = N^{r−1} Σ_{q ≤ Q_0} φ(q)^{1−r},
+```
+and `\sum_q\varphi(q)^{1-r}` converges for `r>2`. So the Green–Tao exponent `N^{r-1}` is **attained,
+up to constants, by the major arcs alone**, i.e. by the `\mu(q)/\varphi(q)` main terms — which are
+exactly the coinvariant/singular-series block of §4. **Therefore the restriction theorem, however
+deep, contains no information about the zeros of `\zeta`, and no information about `S̃`.**
+Quantitatively, `H^{cont}(k)` demands the exponent `N^{k}` whereas restriction supplies `N^{2k-1}`;
+since `2k-1 > k` for `k>1`, the gap is a full power `N^{k-1}`. ∎
+
+**Corollary D.60.6a (`OPEN`).** The *centered* restriction estimate
+`\int_0^1|S̃(\theta;N)|^{r}d\theta \ll N^{r/2+\varepsilon}` (`r>2`) is **open**, and by Theorem D.59.3
+its validity for all `r` is equivalent to ATRH. **A direct literature check found no published
+centered/majorant-subtracted restriction estimate with any power saving below `N^{r-1}`.** What exists
+is Green's `W`-tricked balanced function (*Roth's theorem in the primes*, Ann. of Math. **161** (2005),
+1609–1636), which removes the major-arc bias so that `\|\widehat f\|_\infty = o(1)` but leaves the
+`L^{r}` bound at the same order `N^{r-1}`; and Harper's sharp `r`-th moment bounds for smooth numbers
+without major-arc input (*Minor arcs, mean values, and restriction theory for exponential sums over
+smooth numbers*, Compositio; arXiv:1408.1662). **A power saving there would itself encode strong
+information about the zeros** — which is exactly Theorem D.60.6's point.
+
+### 3.6 W-H: do the known counterexamples to Hooley refute `H(k,c)`?
+
+**Correction of record (attribution).** `R149_000` attributes the disproof to *Bober–Goldmakher*.
+That is **wrong**. The correct attributions, verified against the papers:
+
+* **D. Fiorilli and G. Martin, "Disproving Hooley's conjecture", J. Eur. Math. Soc. (JEMS) 25
+  (2023), no. 12, 4791–4812** (arXiv preprint dated 16 May 2022). `IMPORTED`.
+* **M. Hayani, "Disproving a weaker form of Hooley's conjecture", arXiv:2407.01045 (1 July 2024);
+  Bull. Sci. Math. (2025).** `IMPORTED`.
+* Fiorilli's own conjecture on the range of validity is in D. Fiorilli, *The distribution of the
+  variance of primes in arithmetic progressions*, IMRN (2015) (arXiv:1301.5663). `IMPORTED`.
+
+**Exactly what fails, and where.** With
+```
+G(x;q) := Σ*_{a mod q} ( Σ_{p ≤ x, p ≡ a (q)} log p − x/φ(q) )²,
+V_Λ(x;q) := Σ*_{a mod q} ( Σ_{n ≤ x, n ≡ a (q)} Λ(n) − (1/φ(q)) Σ_{n ≤ x,(n,q)=1} Λ(n) )²,
+```
+Hooley's conjecture (Hooley–Montgomery, p. 217; Hooley [H5, eq. (2)]) is
+`G(x;q) \ll x\log q` uniformly for `x \ge q \ge 3` as `q \to \infty`.
+
+* **Fiorilli–Martin, Theorem 1.1.** *Fix any sufficiently large `M > 0`. There is an infinite
+  sequence of pairs `(q_j, x_j)`, both `\to\infty`, with `q_j \asymp M^{-1}\log\log x_j` (absolute
+  implied constant), such that `G(x_j;q_j) \ge M x_j \log q_j`; likewise for `V_\Lambda`.*
+  **Range of failure: `q \asymp \log\log x`.** The mechanism is Littlewood's/Davidoff's oscillation
+  `\psi(x,\chi) = \Omega_{\pm}(x^{1/2}\log\log\log x)` fed through Parseval
+  `V_\Lambda(x;q) = \varphi(q)^{-1}\sum_{\chi\ne\chi_0}|\psi(x,\chi)|^2`.
+* **Fiorilli–Martin, Theorem 1.5 (the `q`-averaged form).** The estimates
+  `Q^{-1}\sum_{q\le Q}V_\Lambda(x;q) \ll x\log Q` and the same for `G` **fail in the range
+  `3 \le Q \le \sqrt{\log\log x}`**.
+* **Hayani, Theorem 1.1.** With any smooth dampening weight `\eta \in \mathcal S`, the estimates
+  `V_\eta(x;q) \ll x\log q`, `G_\eta(x;q) \ll x\log q` still fail for `q \asymp_{M,\eta} \log\log x`.
+  (So *smoothing does not rescue Hooley's conjecture* — relevant, because D.59 smooths by `w`.)
+* **Positive side (for contrast):** Friedlander–Goldston proved Hooley's bound under GRH + a strong
+  Hardy–Littlewood hypothesis for `x^{1/2+\varepsilon} \le q \le x`; Keating–Rudnick proved the
+  function-field analogue for the full range `1 \le q \le x` (equidistribution à la Katz–Deligne);
+  Fiorilli conjectures validity for `(\log\log x)^{1+\varepsilon} \le q \le x`.
+
+**Theorem D.60.7 (W-H survival; `PROVED`).** Let `c \in (0,1)` be fixed and `Q = N^{c}`. The
+Fiorilli–Martin and Hayani counterexamples do **not** refute `H(k,c)`, for any `k`.
+
+*Proof.* (i) *Range.* The counterexamples are statements at moduli `q \asymp \log\log x` and, in
+the averaged form, at levels `Q \le \sqrt{\log\log x}`. D.59 sums over `q \le N^{c}`, and
+`\sqrt{\log\log N} = N^{o(1)}` is an utterly negligible initial segment of `[1,N^{c}]`.
+(ii) *Magnitude.* Fix `M` and let `Q_0 := C_M\log\log N` be an upper bound for the moduli at which
+the counterexamples occur. Their total contribution to `M_2(N)` is at most
+```
+Σ_{q ≤ Q_0} Σ*_a |S̃(a/q;N)|²  ≤ Σ_{q ≤ Q_0} V_Λ-type terms  ≪  M N (log log N)(log log log N)  =  N^{1+o(1)},
+```
+using the counterexamples' own size `V \asymp M x\log q \le M x\log\log\log x` and `q \le Q_0`.
+Since `Q^2N = N^{1+2c}` with `c > 0` fixed, this is `o(Q^2N)`. The same computation with
+`2k`-th powers and the trivial `|S̃| \ll N` gives at most
+`Q_0^2 N^{2k}` only if one is careless; using instead the counterexamples' asserted size per
+character (`|\psi(x,\chi)|^2 \ll x(\log\log\log x)^2`, which is the *actual* content of the
+Littlewood/Davidoff mechanism) gives `\ll Q_0^2 N^{k}(\log\log\log N)^{2k} = N^{k+o(1)} = o(Q^2N^{k})`.
+(iii) *Mechanism.* The counterexamples are produced by `\psi(x,\chi) = \Omega_\pm(x^{1/2}\log\log\log x)`,
+a fluctuation of size `x^{1/2+o(1)}` — i.e. **fully compatible with GRH**, hence with `H(k,c)`,
+whose content is precisely `|S̃(a/q;N)| \approx N^{1/2}` on average. What the counterexamples refute
+is Hooley's *normalisation* `x\log q`, which at `q \asymp \log\log x` is a **smaller** quantity than
+the true `\varphi(q)\cdot x(\log\log\log x)^2`. D.59's normalisation is `Q^2 N` for the whole family,
+i.e. `\approx N` per Farey point, which the Littlewood fluctuation exceeds only by `(\log\log\log N)^{2}`
+— inside the `(\log N)^{B_k}` budget. ∎ `PROVED`
+
+**Verdict (as ordered).** **`H(k,c)` with `Q = N^{c}`, `c \in (0,1)` fixed, `(\log N)^{B_k}` losses
+allowed, and centering by `M_Q`, SURVIVES the known counterexamples to Hooley.** The
+counterexamples are *not* the obstruction. The obstruction is Theorem D.60.3: the hypothesis is a
+theorem only where it is useless.
+
+**Corollary D.60.7a (a reading worth recording).** Hooley's conjecture is false for a reason that is
+**orthogonal to RH**: it fails because of the *tail of the limiting distribution of
+`e^{-y}V_\Lambda(e^{y};q)` at small `q`*, not because of any zero off the line. This is the
+distributional analogue of the corpus's repeated finding (NG-B1, phase-60 method obstruction,
+R148_005 §3) that **magnitude/variance statements are zero-blind**. It is therefore consistent with,
+and an instance of, NG-B1 — not a reopening of it.
+
+**Since the hypothesis is not refuted, the blueprint's contingency (alternative families) is not
+triggered.** For the record, we note the three candidates and their status:
+Dirichlet characters with weights — this is the multiplicative square, §4.7, where Rankin/Landau
+does live (`OPEN`, and the natural continuation); Montgomery–Soundararajan short intervals — the
+conjectured Gaussian law for `\psi(t+\delta t)-\psi(t)-\delta t` (MS, *Primes in short intervals*,
+Comm. Math. Phys. 252 (2004)) is the exact analogue of the sought "Katz–Sarnak law over `Q`" and is
+`OPEN`; restricted Farey denominators (sparse `q`-averages: Mikawa–Peneva, Brüdern–Fouvry-type) —
+these *shrink* the family, hence *increase* the extraction cost `(\#\mathcal F)^{1/2k}` relative to
+the per-fibre gain, so they are strictly worse for D.59. `PROVED` (the last one, trivially: the
+extraction cost is `(\#\mathcal F)^{1/2k}` and the hypothesis is `\#\mathcal F \cdot N^{k}`).
+
+### 3.7 Relation to NG-B1 and NG-B8 (cited, not reopened)
+
+* **NG-B1** (`NO-GO-LIST.md:62-65`) records that fifteen classical mechanisms, *including the large
+  sieve and Montgomery pair correlation*, fail to give lower bounds on `b_j`, universally because
+  arithmetic information from `\mathrm{Re}\,s > 1` does not propagate into the strip, and because
+  they give upper bounds or aggregate counts. **The present route does not contradict NG-B1 and does
+  not attempt to.** D.59 is not a lower-bound mechanism: it is an *upper*-bound extraction, and
+  Theorem D.60.3 shows it fails for precisely the NG-B1 reason — the large sieve's magnitude-only
+  content is available only in the range where the extraction loses everything. D.60 is therefore a
+  **quantitative refinement of NG-B1** at the large-sieve entry: it locates the failure at the single
+  exponent `c = 1/2`.
+* **NG-B8** (pair correlation is wrong-signed / invisible to off-line zeros) is **not used and not
+  reopened**. No step of §§2–5 invokes pair correlation, and no sign is claimed anywhere in this
+  phase (see §5.2 and W-a below).
+
+---
+
+## 4. D.61 — The coinvariant block: additive correspondences and their pairing
+
+### 4.1 The additive correspondences
+
+Work on the "prime square". Fix `X` and let `\pi(X)` be the prime counting function. For
+`h \in \mathbb Z` and `q \ge 1` define the *congruence cycle*
+```
+A_{q,h} := { p prime : p ≡ h (mod q) }      ( defined when (h,q) = 1 ),
+```
+and for `h \in \mathbb Z` the *additive (Goldbach) cycle* and the *congruence correspondence*
+```
+D_h := { (m,n) ∈ N² : m + n = h },        T_h := { (m,n) ∈ N² : n | m − h }.
+```
+`D_h` is the analogue of a *fibre* of the addition map `\mathbb A^2 \to \mathbb A^1`;
+`T_h` is the analogue of a *graph of Frobenius* (the fibre of `(m,n) \mapsto m \bmod n`).
+On `\mathrm{Spec}\,\mathbb Z`, `T_h` is exactly the union `\bigcup_{q} \{q\}\times A_{q,h}` read
+through the second projection.
+
+**Density pairing.** For sets `A,B` of primes put
+```
+⟨A, B⟩ := lim_{X→∞} #{ p ≤ X : p ∈ A ∩ B } / π(X)
+```
+when the limit exists (relative natural density inside the primes). `⟨·,·⟩` extends `\mathbb R`-bilinearly
+to the span `\mathcal A_Q := \mathrm{span}_{\mathbb R}\{ [A_{q,h}] : q \le Q,\ (h,q)=1 \}`.
+
+### 4.2 The Gram matrix and its diagonalisation
+
+**Lemma D.61.1 (Gram of the congruence cycles; `PROVED`, ingredient `CLASSICAL`).**
+For `q,q' \le Q` with `(h,q)=(h',q')=1`,
+```
+⟨ A_{q,h}, A_{q',h'} ⟩ = 1/φ([q,q'])   if h ≡ h' (mod (q,q')),        = 0   otherwise.
+```
+*Proof.* By CRT, `A_{q,h}\cap A_{q',h'}` is either empty (if `h \not\equiv h' \bmod (q,q')`) or a
+single residue class mod `[q,q']`, coprime to `[q,q']`; Dirichlet's theorem (in the form
+`\pi(X;m,b) \sim \pi(X)/\varphi(m)`, valid for each fixed `m`) gives the density `1/\varphi([q,q'])`. ∎
+Note `\langle A_{q,h},A_{q,h}\rangle = 1/\varphi(q)` and that the Gram matrix is **not diagonal**.
+
+**Lemma D.61.2 (Ramanujan orthogonality; `CLASSICAL` — Carmichael 1932; Ramanujan 1918).**
+For `q,q' \ge 1` and `d \in \mathbb Z`,
+```
+lim_{X→∞} (1/X) Σ_{n ≤ X} c_q(n) c_{q'}(n+d)  =  δ_{q,q'} · c_q(d).
+```
+In particular `\{c_q\}_{q\ge1}` is an **orthogonal system** for the mean-value pairing, with
+`\|c_q\|^2 = c_q(0) = \varphi(q)`. (Reference: R. D. Carmichael, *Expansions of arithmetical
+functions in infinite series*, Proc. LMS (2) 34 (1932), 1–26; or Montgomery–Vaughan, MNT I, §4.1.)
+
+**Definition D.61.3 (the diagonalised correspondence).** Put
+```
+T_h := Σ_{q ≤ Q} μ²(q) ( 1/φ(q) ) · [ A_{q,h} ]        ∈  𝒜_Q ,
+```
+and let `\langle\cdot,\cdot\rangle_{\mathrm{diag}}` be the pairing obtained by retaining only the
+`q = q'` block of Lemma D.61.1 (equivalently, the pairing computed in the Ramanujan basis, by
+Lemma D.61.2).
+
+**Theorem D.61.4 (the additive density pairing; `PROVED`).** For `h \ne h'` with `(hh', q) = 1` for
+all `q` occurring (equivalently: restricting the sum to `q` coprime to `hh'`), and `Q = \infty`,
+```
+⟨ T_h , T_{h'} ⟩_diag  =  κ(h − h')  :=  Σ_{q | h−h'} μ²(q)/φ(q) ,
+```
+and the classical identity `\sum_{q\mid d}\mu^2(q)/\varphi(q) = d/\varphi(d)` gives the closed form
+```
+κ(d) = d/φ(d)     (d ≠ 0),       κ(0) = Σ_{q ≤ Q} μ²(q)/φ(q) = log Q + C_0 + o(1)  →  ∞  (Q → ∞),
+```
+with `C_0 = \gamma + \sum_p \frac{\log p}{p(p-1)}` (classical).
+
+*Proof.* Normalise the generators to unit length for the density pairing (Lemma D.61.1 gives
+`\langle A_{q,h},A_{q,h}\rangle = 1/\varphi(q)`), i.e. put
+`\widetilde A_{q,h} := \varphi(q)^{1/2}[A_{q,h}]` (so `\langle\widetilde A_{q,h},\widetilde A_{q,h}\rangle = 1`),
+and set `T_h := \sum_{q\le Q}\mu^2(q)\varphi(q)^{-1/2}\,\widetilde A_{q,h}`. By Lemma D.61.1 restricted to
+`q = q'` (two classes mod `q` meet iff they coincide, i.e. iff `q \mid h-h'`), the `q`-th diagonal term is
+`\mu^2(q)\varphi(q)^{-1}\mathbf 1[h \equiv h'\ (q)]`, i.e. `\mu^2(q)/\varphi(q)` when `q \mid h-h'`
+and `0` otherwise. Summing over `q \le Q` and letting `Q\to\infty` (the sum is finite for `d \ne 0`)
+gives `\kappa(d)`. The closed form `\sum_{q\mid d}\mu^2(q)/\varphi(q) = d/\varphi(d)` is the standard
+multiplicative identity (both sides multiplicative; at `p^a`, LHS `= 1 + 1/(p-1) = p/(p-1)` `=` RHS).
+For `d = 0` every `q \le Q` divides `0`, giving `\sum_{q\le Q}\mu^2(q)/\varphi(q) = \log Q + C_0 + o(1)`
+(Landau; Montgomery–Vaughan MNT I, Exercise 2.1.x). ∎ `PROVED`
+
+**Remark D.61.4a (normalisation of record).** The blueprint writes `\kappa(d)=\sum_{q\mid d}1/\varphi(q)`
+without `\mu^2`. With `\mu^2` the closed form is `d/\varphi(d)`; without it the sum over all divisors
+diverges for no `d` but has no closed form and is not the object produced by the model `M_Q`
+(which is supported on squarefree `q` because of the `\mu(q)` factor). **We use the squarefree
+version; correction of record.**
+
+### 4.3 Positive-definiteness (Bochner) — free, and therefore not progress
+
+**Theorem D.61.5 (`PROVED`; but see the warning).** `\kappa` is a positive-definite function on
+`\mathbb Z`, and so is the full (non-diagonal) pairing, and so is the Hardy–Littlewood singular
+series `\mathfrak S(d) := \sum_{q\ge1}\mu^2(q)c_q(d)/\varphi(q)^2`.
+
+*Proof.* `\mathbf 1[q\mid d] = q^{-1}\sum_{a\bmod q}e(ad/q)`, so
+```
+κ(d) = Σ_q (μ²(q)/φ(q)) 1[q|d] = Σ_q ( μ²(q)/(q φ(q)) ) Σ_{a mod q} e(ad/q),
+```
+a convergent nonnegative combination of characters `d\mapsto e(ad/q)` of `\mathbb Z`; by Bochner's
+theorem (here: a sum with nonnegative coefficients of unitary characters is positive-definite) `\kappa`
+is positive-definite. For `\mathfrak S`, `c_q(d) = \sum^{*}_{a}e(ad/q)` is already a sum of characters
+with coefficient `1`, and `\mu^2(q)/\varphi(q)^2 \ge 0`. For the Gram matrix of Lemma D.61.1,
+positive semidefiniteness is automatic: it is a Gram matrix of a genuine (density) inner product,
+`\langle f,f\rangle = \lim_X \pi(X)^{-1}\#\{p \le X : \ldots\} \ge 0`. ∎
+
+> **W-a warning honoured.** *This positivity is free.* It holds because `\kappa` and `\mathfrak S`
+> are, by construction, autocorrelations of a nonnegative measure; equivalently because
+> `\langle\cdot,\cdot\rangle` is a limit of counting measures. **It is a RESTATEMENT, not progress.**
+> The corpus has met this exact pattern three times (R148_005 §3: "everything the new sector
+> contributes is either nonnegative by construction or infinite"; R147_005 §1.3; phase-36 Doc 106
+> Prop. 3.9). The present instance adds the fourth. **Label: `RESTATEMENT`.**
+
+**Theorem D.61.6 (zero-blindness; `PROVED`).** `\kappa`, `\mathfrak S` and the whole Gram matrix of
+Lemma D.61.1 are functions of the local densities `1/\varphi(q)`, `c_q(d)` alone. They depend on
+`\zeta` only through the Euler factors, i.e. only through data at `\mathrm{Re}\,s > 1`. Formally:
+replacing `\zeta` by `\Xi_a` (same Euler factors up to the elementary twist `n^{\pm a}`, different
+zeros) or by any `L`-function with the same local factors leaves `\kappa` and `\mathfrak S`
+unchanged. **No zero of `\zeta` appears in any of them.** ∎
+
+**Corollary D.61.6a.** By NG-B1's universal mechanism (arithmetic at `\mathrm{Re}\,s>1` does not
+propagate into `(1/2,1)`), no inequality derived from `\kappa` alone can bound `\mathrm{Re}\,\rho`.
+Cited, not reopened.
+
+### 4.4 Identification with the `k = 1` main term
+
+**Theorem D.61.7 (the coinvariant block; `PROVED`).** Let
+`S(\alpha;N) := \sum_n\Lambda(n)e(n\alpha)w(n/N)` (uncentered). Then
+```
+Σ_{q ≤ Q} Σ*_{a mod q} |S(a/q;N)|²  =  Σ_{m,n} Λ(m)Λ(n) w(m/N)w(n/N) Σ_{q ≤ Q} c_q(m−n),
+```
+whose diagonal `m = n` contributes `\big(\sum_{q\le Q}\varphi(q)\big)\sum_n\Lambda(n)^2w(n/N)^2
+= (3/\pi^2)Q^2\cdot N\widehat{w^2}(0)\log N\,(1+o(1))`, and whose *near-diagonal* `m-n = d \ne 0`
+contributes `\sum_{d\ne0}\kappa_Q(d)\,\mathcal C_\Lambda(d;N)` with
+`\kappa_Q(d) := \sum_{q\le Q}c_q(d)` and `\mathcal C_\Lambda(d;N) := \sum_n\Lambda(n)\Lambda(n+d)w\!\cdot\!w`.
+In the BDH normalisation this is exactly Montgomery's main term:
+```
+V(x;Q) = Q x log Q − c_0 Q x + O(…)   and   Σ_{q ≤ Q} μ²(q)/φ(q) = log Q + C_0 + o(1) = κ(0),
+```
+so that
+```
+                    **  main term of V(x;Q)  =  x · Q · κ(0) · (1 + o(1))  **
+```
+i.e. *(length) × (level) × (the diagonal value of the additive pairing)*.
+*Proof of the displayed identity:* `\sum^{*}_{a\bmod q}e((m-n)a/q) = c_q(m-n)` by definition; expand
+`|S|^2` and exchange sums. *Proof of the identification:* `\kappa(0) = \sum_{q\le Q}\mu^2(q)/\varphi(q)
+= \log Q + C_0 + o(1)` by Theorem D.61.4, and Hooley's `c_0 = \gamma+\log2\pi+1+\sum_p\frac{\log p}{p(p-1)}`
+differs from `C_0 = \gamma+\sum_p\frac{\log p}{p(p-1)}` by `\log2\pi + 1`, an archimedean constant.
+Hence `V(x;Q) = xQ(\kappa(0) - \log2\pi - 1) + O(\ldots)`. ∎ `PROVED` (identification), the BDH input
+`CLASSICAL`.
+
+**Reading.** The BDH main term is *computed a priori*, by orthogonality of Ramanujan sums and
+Dirichlet densities, **without knowing a single zero**. It is, exactly, the "`H^2_c`/coinvariant"
+block of Deligne's scheme: the part the invariant theory of the monodromy group computes for free.
+That is the good news. The bad news is Theorem D.61.6: it is zero-blind, so knowing it perfectly
+gives nothing; and the `H^1_c` part (the BDH error term) is the whole problem.
+
+### 4.5 Comparison with the model and with phase 146
+
+| | model `E/\mathbb F_q` (Paper 46 (X27)) | phase 146 degree form | **here (additive square)** |
+|---|---|---|---|
+| pairing | `\Gamma_\alpha\cdot\Gamma_\beta = \deg(\alpha-\beta)` | degree form on `D^W` | `\langle T_h,T_{h'}\rangle = \kappa(h-h')` |
+| type | **indefinite**, signature `(1,\rho-1)` (Hodge index) | **indefinite**, zero-blind | **positive-definite** (Thm D.61.5) |
+| zero data | **yes** (`\deg(1-F) = N_1`, Lefschetz) | no | **no** (Thm D.61.6) |
+| Gram shape | Toeplitz `\kappa(a-b)` in `\alpha = F^{a}` | Toeplitz | Toeplitz in `h-h'` |
+
+**Both `\kappa`'s are Toeplitz; only the model's is indefinite.** The Hodge index in the model is the
+statement that the degree form has exactly one positive eigenvalue; that is what makes `|\alpha|=\sqrt q`
+come out. Here the analogous form is **positive-definite**, hence has *no* index, hence carries *no*
+sign. **This is the same wall as R148_005 §3, one level over: a positivity-type structure on the
+square constrains nothing.** `PROVED`, and recorded as a fourth instance.
+
+### 4.6 The Künneth of the additive square, and why Landau is useless there
+
+**Import (CLASSICAL / `IMPORTED`).** Put `R(n) := \sum_{m+m'=n}\Lambda(m)\Lambda(m')` and, for `k>0`,
+the Cesàro–Riesz mean `G_k(N) := \Gamma(k+1)^{-1}\sum_{n<N}R(n)(1-n/N)^{k}`.
+
+* **Fujii**, *An additive problem of prime numbers* I, Acta Arith. **58** (1991), 173–179; II, III,
+  Proc. Japan Acad. Ser. A **67** (1991), 248–252 and 278–283: under RH
+  `\sum_{n\le x}R(n) = x^2/2 + O(x^{3/2})` (I), improved (II/III) to
+  `\sum_{n\le N}R(n) = N^2/2 + H(N) + O(N^{4/3}(\log N)^{4/3})`,
+  `H(x) := -2\sum_\rho \frac{x^{1+\rho}}{\rho(1+\rho)}`. **The zero sum `H` is present
+  unconditionally** (absolute convergence from `N(T+1)-N(T)\ll\log T`); RH is used only for the error.
+* **Bhowmik–Schlage-Puchta**, *Mean representation number of integers as the sum of primes*,
+  Nagoya Math. J. **200** (2010), 27–33 (arXiv:0806.3295), Theorem 1.1: under RH
+  `\sum_{n\le x}R(n) = \tfrac12x^2 + H(x) + O(x\log^5x)`; and **unconditionally**
+  `\sum_{n\le x}R(n) = \tfrac12x^2 + H(x) + \Omega(x\log\log x)`, confirming Egami–Matsumoto Conj. 2.2.
+* **Languasco–Zaccagnini**, *The number of Goldbach representations of an integer*, Proc. AMS **140**
+  (2012), 795–804: under RH the error is `O(N\log^3N)` — the best conditional error, and essentially
+  optimal against the `\Omega(N\log\log N)` above.
+* **The zero–zero double sum appears only in the Cesàro-weighted formula.** Languasco–Zaccagnini,
+  *The Cesàro average of Goldbach numbers*, Forum Math. **27** (2015), 1945–1960 (corrected in
+  Languasco's survey), **unconditionally** for real `k > 1`, and **Brüdern–Kaczorowski–Perelli**
+  (*Explicit formulae for averages of Goldbach representations*, arXiv:1712.00737; Trans. AMS)
+  **unconditionally for all `k > 0`**, with the trivial zeros and the pole made explicit:
+  ```
+  G_k(N) = N²/Γ(k+3) − 2 A_k(N) + B_k(N) + O(N),
+      A_k(N) = Σ_ρ  Γ(ρ)/Γ(ρ+k+2) · N^{ρ+1},
+      B_k(N) = Σ_ρ Σ_{ρ'} Γ(ρ)Γ(ρ')/Γ(ρ+ρ'+k+1) · N^{ρ+ρ'},
+  ```
+  the sums over nontrivial zeros with multiplicity, absolutely convergent for `k > 1/2`.
+  BKP supersede Goldston–Yang (arXiv:1601.06902; `k=1`, under RH) unconditionally, and realise the
+  formula as a double Mellin residue
+  `\lim_T\sum \mathrm{res}_s\,\mathrm{res}_w(\zeta'/\zeta)(s)(\zeta'/\zeta)(w)N^{s+w}\Gamma(s)\Gamma(w)/\Gamma(s+w+1)`.
+  **Note (correction C7 below): the power is `N^{\rho+\rho'}`, not `N^{\rho+\rho'+1}`, and the
+  single-zero coefficient is `\Gamma(\rho)/\Gamma(\rho+k+2)`, which reduces to `1/(\rho(\rho+1))` only
+  in the `k\to0` limit. No unconditional or RH-conditional version of the double zero-sum is known for
+  the *unsmoothed* `\sum_{n\le x}R(n)`: it is a Cesàro/Riesz-mean phenomenon.**
+  Also: Goldston–Suriajaya, *On an average Goldbach representation formula of Fujii*, Nagoya Math. J.
+  (2023) (arXiv:2110.14250), give an **unconditional** exact-error version of Fujii's formula, with the
+  error tied to the variance of primes in short intervals / pair correlation.
+
+**Statement D.61.7a (Künneth for the additive square; `IMPORTED`, `RESTATEMENT` of the above).**
+The displayed formula is a Künneth decomposition of the additive square `\mathbb A^1\times\mathbb A^1
+\to \mathbb A^1`: exponents **add** (`N^{\rho+\rho'}`), and the structure constants are **Beta
+functions** `\Gamma(\rho)\Gamma(\rho')/\Gamma(\rho+\rho'+k+1)`, i.e. `B(\rho,\rho')` up to
+`\Gamma`-factors — the archimedean avatar of a cup product `H^1\otimes H^1 \to H^2`. The three blocks
+are `H^0\otimes H^0` (the pole `N^2/\Gamma(k+3)`), `H^0\otimes H^1 \oplus H^1\otimes H^0` (the `-2A_k`
+term), and `H^1\otimes H^1` (the `B_k` term). That is the "zero–zero block", explicit.
+
+**Theorem D.61.8 (Landau is useless on the additive square; `PROVED`).**
+`R(n) \ge 0` for all `n`, so the Dirichlet series `\mathcal R(s) := \sum_{n\ge1}R(n)n^{-s}` has
+nonnegative coefficients, and Landau's theorem (import (X20), Paper 46) applies: `\mathcal R` is
+singular at its abscissa of convergence `\sigma_c`. But
+```
+σ_c = 2,
+```
+**unconditionally and a priori**, because `\sum_{n\le x}R(n) = x^2/2 + O(x^{2-\delta})` for some
+`\delta>0` (indeed `\delta = 1/2` under RH, `\delta` from the zero-free region unconditionally, or
+simply from `\sum_{n\le x}R(n) \asymp x^2` which follows from PNT). Every singularity coming from the
+zero blocks sits at `s = \rho+1` (`\mathrm{Re} = \beta+1 \le 2`) or `s = \rho+\rho'+1`
+(`\mathrm{Re} = \beta+\beta'+1 \le 3`) — but the *Mellin transform of the counting function* has its
+zero–zero poles at `\rho+\rho'` with `\mathrm{Re}(\rho+\rho') = \beta+\beta' \le 2`, never above the
+top pole at `2`. Hence **the unique real singularity Landau detects is `s = 2`, which is known before
+any zero is considered, and Landau returns no information about `\beta`.** Compare Paper 46 Thm 17.14,
+where the same lemma *is* decisive: there `G(z) = 2z^{-2}(\xi'/\xi)(\tfrac12+z)` has its only real
+singularity at `z = 0` and the zeros contribute poles at `w_\rho = \rho-\tfrac12` **which can lie to
+the right of the abscissa** — that is exactly what makes the argument work. **The difference is that
+the multiplicative/Rankin square pairs `\rho` with `1-\bar\rho` (exponents subtract, the top pole is
+at the *critical* value `0`), while the additive square pairs `\rho` with `\rho'` (exponents add, the
+top pole is at the *trivial* value `2`).** ∎ `PROVED`
+
+**Theorem D.61.9 (twisting kills the additive positivity; `PROVED`).** For a non-principal `\chi`,
+put `R_\chi(n) := \sum_{m+m'=n}\Lambda(m)\chi(m)\Lambda(m')\chi(m')`. Then `R_\chi` is **not**
+nonnegative and Landau's lemma does not apply.
+*Proof.* The nonnegativity of `R(n)` comes from `\Lambda \ge 0` — it is *not* the nonnegativity of a
+square. `\chi(m)\Lambda(m)` takes values of modulus `\Lambda(m)` and argument in the `\varphi(q)`-th
+roots of unity; already for `\chi` the nontrivial character mod `3` and `n = 2p` with `p \equiv 2 (3)`
+one gets `\chi(p)^2 = \chi(2)^2 \ne 1` in general, and the sum `R_\chi(n)` is genuinely complex. (More
+structurally: `\sum_n R_\chi(n)n^{-s}` is, up to elementary factors, a double Mellin of
+`(-L'/L(\cdot,\chi))^{\otimes 2}`, with no positivity.) ∎
+
+**Contrast (`PROVED`, trivial but load-bearing).** On the **multiplicative square**, the object
+`|\psi(x,\chi)|^2 = \psi(x,\chi)\overline{\psi(x,\chi)}` is nonnegative **for every `\chi`**, because
+it is literally a square. Rankin positivity is therefore *twist-stable*, and Landau's lemma is
+available after every twist — this is precisely Deligne's step (i) in phase-36 Doc 106 §1.1.
+
+**Theorem D.61.10 (the split — the finding of record; `PROVED`).**
+```
+                Rankin positivity + Landau  ⟶  lives on the MULTIPLICATIVE square
+                invariant theory (κ, 𝔖, BDH main term)  ⟶  lives on the ADDITIVE square
+```
+Concretely: (a) the additive square has the a-priori-computable main term (Thm D.61.7) but its
+positivity is untwistable (Thm D.61.9) and its Landau abscissa is the trivial pole (Thm D.61.8);
+(b) the multiplicative square has twist-stable positivity and a working Landau (Paper 46 Thm 17.14)
+but **no a-priori computation of its poles** — that is exactly Doc 106's Lema Faltante 5.3 and
+MW-5 (the square of the scaling site). **Deligne's proof needs both on the same square. Over
+`\mathbb F_q` they *are* on the same square, because `H^\bullet_c(X\times X) = H^\bullet_c(X)^{\otimes2}`
+carries both the Künneth cup product and the weight filtration. Over `\mathbb Z` they are on two
+different squares, and no known construction transports between them.** ∎
+
+This is the row-D wall in this route, stated exactly. It is a *fifth* independent mechanism, joining
+the four of R148_005 §5 (no ring on `\mathrm{Spec}\,\mathbb Z`; Galois invisible on the radial
+carrier; graded carrier acts away from `\zeta`'s zeros; positivity-type constraints on the full
+square are vacuous or infinite).
+
+---
+
+## 5. D.62 — The object to create
+
+### 5.1 Problem (P149) — precise statement
+
+> **Problem (P149).** Fix `c \in (0,1/2)` and `w \in C_c^\infty(0,\infty)`, `w \ge 0`. Let
+> `Q = N^{c}`, `M_Q(n) = \sum_{q\le Q}(\mu(q)/\varphi(q))c_q(n)`,
+> `S̃(a/q;N) = \sum_n(\Lambda(n)-M_Q(n))e(na/q)w(n/N)`.
+> **Exhibit a structure `\mathcal G` — a group, groupoid, or measure-preserving system acting on the
+> additive pencil `\{\,Z(s;\alpha)\,\}_{\alpha\in\mathbb R/\mathbb Z}` — together with an invariant
+> theory for `\mathcal G` that computes, or bounds by `C_k(\log N)^{B_k}Q^2N^{k}`, the family moments**
+> ```
+> M_{2k}(N) = Σ_{q ≤ Q} Σ*_{a mod q} | S̃(a/q; N) |^{2k}          (k ≥ 2)
+> ```
+> **without using the location of the zeros of any single `L(s,\chi)` (equivalently: without knowing
+> any individual fibre `Z(s;a/q)` of the pencil), and in a way compatible with the known large
+> deviations of the fibres (Fiorilli–Martin, Hayani).**
+
+**A solution must contain, at minimum, all five of:**
+
+1. **A group (or monodromy) `\mathcal G` and a representation-theoretic decomposition** of the
+   `2k`-th tensor power of the "standard" object attached to a fibre, such that
+   `\dim(\text{invariants}) \times N^{k}` is the predicted main term. *(Analogue: `\dim(V^{\otimes2k})^{G}`
+   for `G = \mathrm{Sp}`, `\mathrm{O}`, `\mathrm{U}`, giving the moments of `\mathrm{tr}(F^{j})`.)*
+2. **A theorem, not a heuristic, that the fibres equidistribute in `\mathcal G` as `N\to\infty`**,
+   with an error term uniform over `q \le N^{c}`. This is what Deligne's equidistribution theorem
+   supplies over `\mathbb F_q` and what is only conjectural over `\mathbb Q`.
+3. **A `k`-independent family factor.** `H(k,c)` requires the `Q^2` to be independent of `k`; that is
+   the arithmetic avatar of "the poles of `L(U,\mathcal F^{\otimes 2k},T)` come from `H^2_c`, whose
+   weight is known a priori and does not move with `k`" (phase-36 Doc 106 §1.1(3)).
+4. **A compatibility clause with W-H.** By Fiorilli–Martin, at `q \asymp \log\log N` the fibres have
+   deviations exceeding `x\log q` by arbitrary factors, driven by Littlewood-type
+   `\Omega_\pm(x^{1/2}\log\log\log x)` oscillation. **The law must predict those deviations**, so it
+   cannot be a naive Gaussian/CUE law valid uniformly down to `q = O(1)`; it must have the
+   transition at `\varphi(q) \asymp \log\log N` that Fiorilli's conjecture identifies.
+5. **Non-circularity.** The computation of `\dim(\text{invariants})` must not use `|S̃(a/q;N)| \ll N^{1/2+\varepsilon}`
+   for any `a/q` (else it is GRH assumed). This is phase-36 Doc 106's **sterility test** (Prop. 3.9)
+   applied here: superadditivity and the sublinear bound must not be computed from the same data.
+
+### 5.2 What is known (labels)
+
+| ingredient | status |
+|---|---|
+| Katz–Sarnak equidistribution of Frobenius in families over `\mathbb F_q` | **`CLASSICAL`/`IMPORTED`** — a theorem (Deligne's equidistribution + Katz–Sarnak, *Random Matrices, Frobenius Eigenvalues and Monodromy*, AMS Colloq. 45, 1999) |
+| Keating–Rudnick: the function-field Hooley variance, `1 \le q \le x`, via Katz's equidistribution | **`IMPORTED`** — a theorem over `\mathbb F_q[T]`; **the exact statement D.62 wants, over the wrong base** |
+| Katz–Sarnak-type law for `\{L(s,\chi)\}_{\chi \bmod q}` over `\mathbb Q` | **`OPEN` (conjecture)** |
+| Montgomery–Soundararajan Gaussian law for `\psi(t+\delta t)-\psi(t)-\delta t` | **`OPEN` (conjecture)**; Fiorilli's `\varphi(q) \asymp \log\log x` transition is the `q`-analogue |
+| the large sieve as the **only** unconditional invariant theory, at `k = 1` | **`PROVED`** here (Thm D.60.1); and it is exactly the `\mathcal G`-free bound, valid only for `c \ge 1/2` |
+| **Ramanujan-sum orthogonality computes the diagonal of `M_{2k}` exactly** | **`PROVED`** — Prop. D.62.1 below |
+
+**Proposition D.62.1 (the partial mechanism found; `PROVED`).** For every `k \ge 1`,
+```
+M_{2k}(N) = Σ_{n_1+…+n_k = m_1+…+m_k} ( Π_j b_{n_j} \overline{b_{m_j}} ) · Σ_{q ≤ Q} c_q( Σ n_j − Σ m_j )
+          = ( Σ_{q ≤ Q} φ(q) ) · ‖ b ‖_{diag}^{2k}  +  (off-diagonal),
+```
+where `b_n := (\Lambda(n)-M_Q(n))w(n/N)` and `\|b\|^{2k}_{\mathrm{diag}} :=
+\sum_{\sum n_j = \sum m_j}\prod_j b_{n_j}\overline{b_{m_j}}\cdot\mathbf 1[\ldots]` — precisely, writing
+`d := \sum n_j - \sum m_j`,
+```
+M_{2k}(N) = Σ_{d ∈ Z} κ_Q(d) · 𝒞_{2k}(d),     κ_Q(d) := Σ_{q ≤ Q} c_q(d) ,
+𝒞_{2k}(d) := Σ_{n_1+…+n_k − m_1−…−m_k = d} b_{n_1}…b_{n_k} \bar b_{m_1}…\bar b_{m_k} ,
+```
+and `\kappa_Q(0) = \sum_{q\le Q}\varphi(q) = (3/\pi^2)Q^2 + O(Q\log Q)`, while
+`|\kappa_Q(d)| \ll \sigma(|d|) \ll |d|^{1+\varepsilon}` and `\sum_{q\le Q}c_q(d) = O(Q^{1+\varepsilon})` for `d \ne 0`.
+*Proof.* Expand `|S̃(a/q)|^{2k}`, sum over `a` using `\sum^{*}_{a\bmod q}e(da/q)=c_q(d)`, and exchange. ∎
+
+**Reading.** The `d = 0` term is `\kappa_Q(0)\,\mathcal C_{2k}(0) = (3/\pi^2)Q^2\cdot\mathcal C_{2k}(0)`,
+so `H(k,c)` is *exactly equivalent* to the two assertions
+(i) `\mathcal C_{2k}(0) \ll (\log N)^{B_k}N^{k}` — a `2k`-fold **additive-energy** bound for the
+centered prime measure — and (ii) the off-diagonal `\sum_{d\ne0}\kappa_Q(d)\mathcal C_{2k}(d)` is of
+the same order. **So the invariant theory `\mathcal G` sought by (P149) must, at minimum, compute the
+`2k`-fold additive energy of `\Lambda - M_Q`.** For `k=1`, `\mathcal C_2(0) = \sum_n|b_n|^2 \ll N\log N`
+is trivial, and that is *why* `k=1` is a theorem: **the `k=1` invariant theory is Parseval, and nothing
+more.** For `k \ge 2`, `\mathcal C_{2k}(0)` is a genuine `2k`-fold correlation of primes and is `OPEN`
+(it contains, for `k=2`, the Hardy–Littlewood prime-pair correlations as a special case). `PROVED`.
+
+**Corollary D.62.2 (why (P149) is hard, stated exactly; `PROVED`).** `H(2,c)` implies
+`\mathcal C_4(0) = \sum_{d}|\mathcal C_2(d)|^2 \ll (\log N)^{B_2}N^2` (Parseval in `d`), i.e.
+```
+Σ_{|d| ≤ 2N} | Σ_n (Λ(n)−M_Q(n))(Λ(n+d)−M_Q(n+d)) w-weights |²  ≪  (log N)^{B_2} N².
+```
+This is the **Goldbach/twin-prime correlation on average with square-root cancellation** — a statement
+of the same family as (and slightly stronger than) the Montgomery–Soundararajan and
+Bhowmik–Schlage-Puchta circle of results, and squarely `OPEN`. In particular the `\Omega(x\log\log x)`
+result of Bhowmik–Schlage-Puchta shows the *unaveraged* version is false at that strength, which is a
+useful calibration: **(P149) at `k=2` is at least as hard as the averaged Goldbach explicit formula
+with square-root error.** The calibration is exact, and `IMPORTED`:
+* **Bhowmik–Ruzsa**, *Average Goldbach and the quasi-Riemann hypothesis*, Analysis Mathematica **44**
+  (2018) (arXiv:1711.06442), **Theorem 2.1**: if `\sum_{n\le x}R(n) = x^2/2 + O(x^{2-\delta})` with
+  `\delta > 0`, then there is `\delta' \in (0,1)` with `\mathrm{Re}\,\rho < 1-\delta'` for every
+  nontrivial `\rho` (quantified: `\beta < 1-\delta/6`). The proof is elementary (square of
+  `F(z)=\sum\Lambda(n)z^{n}` plus a Dirichlet-kernel argument; no circle method).
+* Combined with Fujii / Languasco–Zaccagnini (which give `x^2/2 + H(x) + O(x\log^3x)` **under RH**),
+  this yields the **equivalence**: `\sum_{n\le x}R(n) = x^2/2 + O(x^{3/2+\varepsilon})` `\iff` RH.
+  (Granville, Funct. Approx. Comment. Math. **37** (2007), 159–173, Thm 1A, with Corrigendum **38**
+  (2008), 125–127 — the original proof was incomplete; Bhowmik–Ruzsa supplies the missing half.)
+* Calibration from the other side: Bhowmik–Schlage-Puchta's **unconditional**
+  `\Omega(x\log\log x)` shows the unaveraged error cannot be pushed below `x\log\log x`.
+
+So `H(2,c)` sits, in difficulty, **at or above RH**. No FATAL flag: this is a *lower* bound on the
+difficulty, not a new theorem.
+
+---
+
+## 6. D.63 — Synthesis, falsifiers, labels, open list
+
+### 6.1 The three falsifiers
+
+**Proposition D.63.1 (`\Xi_a`; the sharpest reading; `PROVED`).** Let `0 < a < 1/2` and
+`\Xi_a(s) := \xi(s+a)+\xi(s-a)`, whose zeros include `\rho\pm a`, so `\Xi_a` has zeros with real part
+`\tfrac12 + a`. Put `\Lambda_a(n) := \Lambda(n)(n^{a}+n^{-a})` and let `M^{(a)}_Q` be the corresponding
+model. Then:
+1. **The extraction theorem is `\Xi_a`-uniform** (Prop. D.59.4): Theorems D.59.1–D.59.3 hold verbatim.
+2. **The hypothesis `H(k,c)` is FALSE for `\Lambda_a` whenever `k > c/a`.**
+   *Proof.* By (1), `H(k,c)` for `\Lambda_a` would give
+   `\psi_{a,w}(N) - (\text{main}) \ll N^{1/2+c/k+o(1)}`. But the explicit formula for `\Xi_a` gives an
+   oscillating term `\gg N^{1/2+a}` from the zeros at `\tfrac12+a+i\gamma` (a genuine `\Omega_\pm`, by
+   Landau's oscillation theorem applied to the rightmost off-line zero). If `c/k < a` this is a
+   contradiction. ∎
+3. **Hence: the extraction carries no arithmetic; the arithmetic is entirely inside `H(k,c)`.**
+   This is exactly the blueprint's prediction, now a theorem. It also tells us where a *proof* of
+   `H(k,c)` would have to use RH-specific input: at the point where it distinguishes `\Lambda` from
+   `\Lambda_a`, i.e. in the *analytic continuation / functional equation* of the fibres, not in their
+   Euler factors (which `\Xi_a` shares up to `n^{\pm a}`) and not in `\kappa` or `\mathfrak S` (which
+   `\Xi_a` shares exactly, Theorem D.61.6). **`PROVED`.**
+
+**Proposition D.63.2 (`\Xi_Q`, the Epstein falsifier; `PROVED`).** Let `Z_Q` be the Epstein zeta
+function of a positive binary quadratic form with `h(-D)>1`; by Davenport–Heilbronn (import (X21),
+Paper 46) `Z_Q` has infinitely many zeros with `\mathrm{Re}\,s > 1`. The additive-pencil construction
+**does not apply to `Z_Q`**, and the separation is structural: the model `M_Q = \sum_{q}(\mu(q)/\varphi(q))c_q`
+is derived from the major-arc behaviour of `\Lambda`, which rests on the **Euler product** (via
+`\sum_{n\le N, (n,q)=1}\Lambda(n) \sim N` and the character orthogonality that turns `e(na/q)` into
+`\chi(n)`). `Z_Q` has no Euler product; its coefficients `r_Q(n)` have no `\mu(q)/\varphi(q)`
+major-arc law, and its zeros right of `1` would make `\sup_\theta|\tilde S_{Z_Q}| \gg N^{\beta} \gg N`
+— the hypothesis is not even formulable at the right normalisation. **Recorded: the construction
+presupposes the Euler product, and `\Xi_Q` separates it from any Euler-product-free `L`-function.**
+
+**Proposition D.63.3 (`\zeta_K`; `PROVED`).** Everything in §§2–4 is **field-uniform**. Replace
+`\mathbb Z` by `\mathcal O_K`, `\mathbb R/\mathbb Z` by `(K\otimes\mathbb R)/\mathcal O_K`, the Farey
+family by ideals `\mathfrak q` of norm `\le Q`, and `c_q` by the `\mathcal O_K`-Ramanujan sums. Then:
+Theorem D.59.1 holds verbatim (no step used `\mathbb Q`); Theorem D.60.1 holds by the number-field
+large sieve (Huxley, *The large sieve inequality for algebraic number fields*, Mathematika 15 (1968);
+Schaal 1970), with the same `N + Q^2` shape, hence the same boundary `c = 1/2`; and Theorem D.61.4
+holds with `\kappa_K(\mathfrak d) = \sum_{\mathfrak q \mid \mathfrak d}\mu^2/\Phi(\mathfrak q)`,
+again positive-definite and zero-blind. **Uniform in `K`; no new information, and no degradation.**
+
+### 6.2 Labels table
+
+| item | statement | label |
+|---|---|---|
+| D.59.0a(1) | Selberg majorant fails evaluability (PNT-strength error) | `REFUTED` (corrects `R149_000`) |
+| D.59.0a(2) | trivial model `M \equiv 1` fails for `k \ge 2` | `REFUTED` |
+| D.59.0a(3) | `M_Q = \sum_{q\le Q}(\mu(q)/\varphi(q))c_q` is admissible | `PROVED` |
+| D.59.1 | discrete Farey extraction `H(k,c)\ \forall k \Rightarrow \psi_w(N)-N\widehat w(0)\ll N^{1/2+\varepsilon}` | `PROVED` (folklore chain, first stated here) |
+| D.59.1a | …and hence RH (over the family `w_\theta`) | `PROVED` (corrects `R149_000`) |
+| D.59.2 | continuous extraction via Bernstein | `PROVED` (folklore chain, first stated here) |
+| D.59.3 | `H^{cont}(k)\ \forall k \iff` ATRH; ATRH `\Rightarrow` RH | `PROVED` (equivalence); strictness `OPEN` |
+| D.59.4 | D.59 is `\Xi_a`-uniform, carries no arithmetic | `PROVED` |
+| D.60.0 | exponent identity `N^{1/2+c/k}`; non-trivial iff `c<k/2` | `PROVED` |
+| D.60.1 | `H(1,c)` is the large sieve; PROVED for `c \in [1/2,1)` | `PROVED` (ingredient `CLASSICAL`) |
+| D.60.2/3 | the boundary `c = 1/2` is exact; proved-and-vacuous vs useful-and-open | `PROVED` |
+| D.60.4 | BDH main = `H^2_c`, BDH error = `H^1_c`; extraction returns PNT | `PROVED`; BDH-0/BDH-1 `CLASSICAL`; Hooley's `c_0` **`CERTIFIED`** (secondary source; verify at Crelle 274/275 before publishing) |
+| — | model `M_Q` = Vaughan's truncated singular series `\rho(x;q,a)` | `IMPORTED` (attribution; not claimed as new) |
+| — | no unconditional `2k`-th moment with `k\ge2` exists (de la Bretèche–Fiorilli) | `IMPORTED` |
+| D.60.5 | `k\ge2`: only Hölder; vacuous | `PROVED` |
+| D.60.6 | Green–Tao restriction exponent saturated by major arcs; zero-blind | `PROVED`; GT `CLASSICAL` |
+| D.60.6a | centered restriction below `N^{r-1}` | `OPEN` |
+| D.60.7 | W-H: the Hooley counterexamples do **not** refute `H(k,c)` | `PROVED` |
+| — | attribution: Fiorilli–Martin (JEMS 2023), Hayani (2024) | `IMPORTED` (corrects `R149_000`) |
+| D.61.1/2 | Gram of congruence cycles; Ramanujan orthogonality | `PROVED` / `CLASSICAL` |
+| D.61.4 | `\langle T_h,T_{h'}\rangle_{\rm diag} = \kappa(h-h') = (h-h')/\varphi(h-h')`, `\kappa(0)=\log Q + C_0` | `PROVED` |
+| D.61.5 | `\kappa`, `\mathfrak S` positive-definite (Bochner) | `RESTATEMENT` — **not progress** (W-a) |
+| D.61.6 | zero-blindness | `PROVED` |
+| D.61.7 | BDH main term `= x\,Q\,\kappa(0)(1+o(1))`: the coinvariant block | `PROVED` |
+| D.61.7a | Künneth of the additive square (Fujii; LZ; BKP; BS-P) | `IMPORTED` / `RESTATEMENT` |
+| D.61.8 | Landau useless on the additive square (top pole at `2`) | `PROVED` |
+| D.61.9 | twisting kills additive positivity; Rankin positivity is twist-stable | `PROVED` |
+| **D.61.10** | **the split: Rankin/Landau on the multiplicative square, invariant theory on the additive square** | **`PROVED` — finding of record** |
+| D.62 | (P149) stated with five required components | problem statement |
+| D.62.1 | Ramanujan orthogonality computes the diagonal of `M_{2k}` exactly | `PROVED` |
+| D.62.2 | `H(2,c)` `\Rightarrow` averaged Goldbach with square-root error; at least as hard as RH | `PROVED` |
+| D.63.1 | `\Xi_a` refutes `H(k,c)` for `k>c/a` | `PROVED` |
+| D.63.2 | `\Xi_Q`: construction presupposes the Euler product | `PROVED` |
+| D.63.3 | `\zeta_K`: field-uniform, same boundary `c=1/2` | `PROVED` |
+
+**Row D: no label change. No sign is claimed anywhere in this phase.**
+
+### 6.3 Open list
+
+* **O-149.1 (principal).** Prove `H(k,c)` for a single `k \ge 2` and a single `c \in (0,1)`, or refute it.
+  By D.60.0 a proof gives `\psi(N)-N \ll N^{1/2+c/k+\varepsilon}`; by D.62.2 it implies the averaged
+  Goldbach formula with square-root error. **Any claimed proof must be presumed erroneous until the
+  `Q`-uniformity and every error term are re-derived (FATAL rule).**
+* **O-149.2.** `H(1,c)` for some `c < 1/2` — a large sieve beyond the `N + Q^2` shape for the *centered*
+  prime measure. Equivalent (D.60.3) to a genuine gain over Parseval at `k=1`. Follows from GRH.
+* **O-149.3.** A centered restriction estimate `\int_0^1|S̃|^{r} \ll N^{r/2+\varepsilon}` for some `r > 2`
+  (D.60.6a). Equivalent, for all `r`, to ATRH.
+* **O-149.4.** (P149) itself: a `\mathcal G` with the five properties of §5.1. In particular, a
+  `\mathbb Q`-analogue of Keating–Rudnick's use of Katz equidistribution.
+* **O-149.5.** Is there **any** transport between the multiplicative and additive squares over `\mathbb Z`
+  (D.61.10)? Over `\mathbb F_q` the transport is Künneth plus the weight filtration on
+  `H^\bullet_c(X\times X)`. **This is the exact arithmetic content of O-148.2 (a regularisation of the
+  trace on the square that is not the radial one) seen from the additive side** — the two open problems
+  should be recorded as two faces of one question.
+* Carried from earlier phases: O-148.2 (principal), O-47.7, O-47.8, O-47.1′, O-47.3′.
+
+### 6.4 Reading for row D
+
+The `+` of `\mathrm{Spec}\,\mathbb Z` **does** exist as additive correlations of the prime measure: the
+additive pencil is a genuine family, the Farey fibres are genuine fibres, the Künneth of the additive
+square is an explicit classical theorem, the coinvariant block is computed a priori by Ramanujan
+orthogonality, and Deligne's extraction lemma transfers verbatim (D.59). **Four of Deligne's five
+ingredients are present over `\mathbb Z`.** The missing one is the same one phase-36 Doc 106 named in
+June 2026 (Lema Faltante 5.3) and that phases 145–148 met four more times: *a source of finiteness
+independent of the position of the zeros*. Phase 149 adds the precise reason it is missing **here**:
+the a-priori computation and the positivity that Landau needs sit on **two different squares**
+(D.61.10), and the only unconditional bridge between them — the large sieve — is a theorem exactly in
+the range `Q \ge N^{1/2}` where the extraction cost `Q^{1/k}` cancels the entire gain (D.60.3).
+
+**Where the zeros live, in this language.** Not in `\kappa`, not in `\mathfrak S`, not in the BDH main
+term, not in the Green–Tao exponent — all zero-blind. They live **only** in the BDH error term below
+the Siegel–Walfisz barrier (D.60.4) and in the `H^1\otimes H^1` Beta-function block `B_k(N)` of the
+additive Künneth (D.61.7a), where they are dominated by the trivial `N^2` and therefore invisible to
+Landau (D.61.8).
+
+### 6.5 Recommendation
+
+1. **Keep D.59.** It is short, exact, paper-facing, and it is the first place in the corpus where
+   Deligne's extraction step is realised over `\mathbb Z` with an explicit family. Suggested home:
+   Paper 46 Part IV, or a self-contained note "An additive-moment criterion for RH" with the
+   folklore-chain attribution stated in the introduction.
+2. **Record D.61.10 as the fifth wall**, alongside R148_005 §5's four, and merge O-149.5 with O-148.2.
+3. **Do not build on `H(k,c)` for `k \ge 2`.** By D.62.2 it is at least as hard as RH; by D.60.5
+   nothing unconditional approaches it.
+4. **Correct `R149_000`'s attribution** (Fiorilli–Martin / Hayani, not Bober–Goldmakher) and its
+   `\Lambda_Q` and `O(Q^2N^{-A})` claims (D.59.0a) in the phase record.
+5. Row D remains **no label, no sign**.
+
+---
+
+## 7. Corrections of record to `R149_000`
+
+| # | blueprint text | correction | where |
+|---|---|---|---|
+| C1 | "Bober–Goldmakher" disproved Hooley | **Fiorilli–Martin**, JEMS 25 (2023) 4791–4812; the 2024 weaker-form paper is **Hayani**, arXiv:2407.01045 | §3.6 |
+| C2 | `\Lambda_Q` = "Selberg/Green–Tao majorant model" | a majorant **cannot** serve: its `q=1` evaluation has PNT-strength error. The correct model is `M_Q = \sum_{q\le Q}(\mu(q)/\varphi(q))c_q` | D.59.0a |
+| C3 | `\sum_n\Lambda_Q(n)w(n/N) = N\widehat w(0) + O(Q^2N^{-A})` | true for `M_Q` (with `O_A(QN^{-A})`); **false** for the Selberg majorant | D.59.0a(1),(3) |
+| C4 | "hence RH" from a single `w` | needs a family (`w_\theta = w\cdot u^{\theta}`) to avoid the Mellin zeros of `w` | D.59.1a |
+| C5 | `\kappa(d)=\sum_{q\mid d}1/\varphi(q)` | the object produced is the **squarefree** sum `\sum_{q\mid d}\mu^2(q)/\varphi(q) = d/\varphi(d)` | D.61.4, Rem. D.61.4a |
+| C6 | "`\kappa(0)=\infty`" | `\kappa(0)=\infty` only as `Q\to\infty`; at finite level `\kappa(0)=\log Q+C_0+o(1)`, and that finite value **is** the BDH main term | D.61.4, D.61.7 |
+| C7 | the Künneth formula's second term written `-2\sum_\rho X^{\rho+1}/(\rho(\rho+1))` | that is the **unweighted** (`k=0`) form (Fujii, BS-P); for the Cesàro–Riesz mean of order `k` it is `-2\sum_\rho \Gamma(\rho)N^{\rho+1}/\Gamma(\rho+k+2)` (LZ, BKP) | D.61.7a |
+| C8 | Poisson error `O_A(N^{-A})` uniform over `\mathcal F_Q` | uniform only for `c < 1/2`; for `c \ge 1/2` use the averaged form (C′) | Rem. D.59.0b |
+| C9 | (implicit) the model is new | it is **Vaughan's** truncated singular series `\rho(x;q,a)` (Duke 2003; Phil. Trans. 1998). Attribution added | D.59.0a(3) |
+| C10 | "Hooley's BDH series … for `k \ge 2`" as if results existed | **no unconditional `2k`-th moment with `k\ge2` is known**; Hooley VIII proves the *third* (odd) moment with a `\varphi(q)` weight, Hooley VII is a conjecture, and de la Bretèche–Fiorilli state explicitly that nothing else is known | §3.4 |
+
+---
+
+## 8. References (as used)
+
+* P. Deligne, *La conjecture de Weil. I*, Publ. Math. IHÉS **43** (1974), 273–307. (Extraction: 3.2.)
+* D. Fiorilli, G. Martin, *Disproving Hooley's conjecture*, J. Eur. Math. Soc. **25** (2023), no. 12, 4791–4812.
+* M. Hayani, *Disproving a weaker form of Hooley's conjecture*, arXiv:2407.01045; Bull. Sci. Math. (2025).
+* D. Fiorilli, *The distribution of the variance of primes in arithmetic progressions*, IMRN 2015 (arXiv:1301.5663).
+* C. Hooley, *On the Barban–Davenport–Halberstam theorem* I–XIX, J. reine angew. Math. / Crelle, 1975–2007.
+* H. L. Montgomery, *Primes in arithmetic progressions*, Michigan Math. J. **17** (1970), 33–39.
+* H. L. Montgomery, R. C. Vaughan, *Hilbert's inequality*, J. London Math. Soc. (2) **8** (1974), 73–82.
+* H. L. Montgomery, R. C. Vaughan, *Multiplicative Number Theory I*, CUP 2007, §§4.1, 7.
+* R. C. Vaughan, *The Hardy–Littlewood Method*, 2nd ed., CUP 1997, Ch. 3.
+* R. C. Vaughan, *On a variance associated with the distribution of general sequences in arithmetic progressions* I, II, Phil. Trans. R. Soc. A **356** (1998), 781–791, 793–809; *Moments for primes in arithmetic progressions* I, II, Duke Math. J. **120** (2003), 371–383, 385–403; *On a variance associated with the distribution of primes in arithmetic progressions*, Proc. LMS (3) **82** (2001), 533–553.
+* C. Hooley, *On the Barban–Davenport–Halberstam theorem* I, Crelle **274/275** (1975), 206–223; VII, J. London Math. Soc. (2) **16** (1977), 1–8 (the higher-moment conjecture); VIII, Crelle **499** (1998), 1–46 (the third moment).
+* R. de la Bretèche, D. Fiorilli, *Moments of moments of primes in arithmetic progressions*, Proc. LMS **127** (2023) (arXiv:2010.05944).
+* A. J. Harper, K. Soundararajan, *Lower bounds for the variance of sequences in arithmetic progressions: primes and divisor functions*, Q. J. Math. **68** (2017), 97–123.
+* A. J. Harper, *Minor arcs, mean values, and restriction theory for exponential sums over smooth numbers*, Compositio Math. (arXiv:1408.1662).
+* B. Green, *Roth's theorem in the primes*, Ann. of Math. **161** (2005), 1609–1636.
+* G. Bhowmik, I. Z. Ruzsa, *Average Goldbach and the quasi-Riemann hypothesis*, Analysis Mathematica **44** (2018) (arXiv:1711.06442).
+* A. Granville, *Refinements of Goldbach's conjecture, and the GRH*, Funct. Approx. Comment. Math. **37** (2007), 159–173; Corrigendum **38** (2008), 125–127.
+* D. A. Goldston, A. I. Suriajaya, *On an average Goldbach representation formula of Fujii*, Nagoya Math. J. (2023) (arXiv:2110.14250).
+* A. Languasco, A. Zaccagnini, *The Cesàro average of Goldbach numbers*, Forum Math. **27** (2015), 1945–1960.
+* J. B. Friedlander, D. A. Goldston, *Variance of distribution of primes in residue classes*, Quart. J. Math. **47** (1996), 313–336.
+* J. P. Keating, Z. Rudnick, *The variance of the number of prime polynomials in short intervals and in residue classes*, IMRN 2014 (arXiv:1204.0708).
+* B. Green, T. Tao, *Restriction theory of the Selberg sieve, with applications*, J. Théor. Nombres Bordeaux **18** (2006), 147–182.
+* A. Fujii, *An additive problem of prime numbers* I–III, Acta Arith. **58** (1991) and sequels.
+* G. Bhowmik, J.-C. Schlage-Puchta, *Mean representation number of integers as the sum of primes*, arXiv:0806.3295; Nagoya/Acta Arith. 2010.
+* A. Languasco, A. Zaccagnini, *The number of Goldbach representations of an integer*, Proc. AMS **140** (2012), 795–804.
+* J. Brüdern, J. Kaczorowski, A. Perelli, *Explicit formulae for averages of Goldbach representations*, arXiv:1712.00737; Trans. AMS.
+* N. M. Katz, P. Sarnak, *Random Matrices, Frobenius Eigenvalues and Monodromy*, AMS Colloq. **45**, 1999.
+* H. L. Montgomery, K. Soundararajan, *Primes in short intervals*, Comm. Math. Phys. **252** (2004), 589–617.
+* M. N. Huxley, *The large sieve inequality for algebraic number fields*, Mathematika **15** (1968), 178–187.
+* R. D. Carmichael, *Expansions of arithmetical functions in infinite series*, Proc. LMS (2) **34** (1932), 1–26.
+* Corpus: `03-research/phase-36-ABC-forms/106-funtor-amplificador-busqueda.md` (§1.1, Thm 1.4, Prop. 3.9, Lema Faltante 5.3); `…/108-puente-criba-indice.md`; `04-papers/46-row-d-the-sign/main.md` §17.5 (Lem 17.13, Thm 17.14, Rem 17.14a) and imports (X20), (X20a), (X21), (X27); `NO-GO-LIST.md` NG-B1, NG-B8; `R147_005`, `R148_005`.

@@ -1,0 +1,313 @@
+# R154.028 — Builder, round 10: the repair of Lemma V, the Hybrid Lemma, and the tail price of the canonical column
+
+*Builder, round 10 of phase 154. Date 2026-09-21. Orders: `R154_027`; binding audit: `R154_026`. Compute actually
+used: **one process**, `timeout 900`, `scripts/round10/r10lp.py`, plus two sub-second re-evaluations of the round-5
+pickle. No B&B, no sweep. Results `scripts/round10/r10.log`, `r10_results.json`, `lp_H.pkl`.*
+
+---
+
+## 0. Verdict in four lines
+
+> **(H1) Lemma V is REPAIRED and now `PROVED` for the constrained problem.** The hole was that the Fejér witness
+> violates both primitivity constraints. The repair is **Lemma W** below: `0` lies in the *interior* of the moment
+> image of the feasible set, because the quadratic forms attached to `cosh(u/2)` and `u sinh(u/2)` on `[−T,T]` are
+> `Q₀ = AB` and `Q₁ = A′B − AB′` in four *independent* linear functionals, hence both take both signs. The `O(ε/R)`
+> moment defect of the modulated witness is then corrected at cost `o(ε)`. `Θ(log R)` is sharp; (P154.8) closes.
+>
+> **(H2) The Hybrid Lemma is `PROVED`** (§3): Lemma F1's periodic block rows for the lattice part compose with
+> Lemma T's monotone modulus bound for the column part, with no new theorem and no loss — the column is *exact* on
+> the first `N` blocks and worst-cased only on `[τ₁+NP, ∞)`.
+>
+> **(H3) The hybrid is REFUTED at the ordered configuration**, and not for a numerical reason: **Proposition X**
+> (§4.2) proves on paper that on the worst-case block row — which is **active** at the round-5 optimum, slack
+> `3.7·10⁻¹⁰` — a canonical column of coefficient `c₀` costs between `2.38·10⁻³|c₀|` and `3.45·10⁻³|c₀|`, so the
+> canonical value `c₀ = 2e^{−T} = 1.1198` costs `2.7–3.9·10⁻³`, i.e. **more than the entire round-5 deficit
+> `3.1802·10⁻³`**. The column cannot buy the tail at `τ₁ = 30, N = 2`; it can only buy it at `τ₁ + NP ≳ 700`.
+>
+> **Nothing is certified. No sign for `ζ` is claimed anywhere.** `T = 0.58 < log 2`, Paper-42-certified; the
+> endpoint of record is unchanged at `λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`. FATAL rule clean.
+
+---
+
+## 1. Corpus check (required)
+
+| string | hits outside this round | verdict |
+|---|---|---|
+| `hybrid certificate` | `PLAN.md`, `R154_027` (the orders); `phase-72/E72_242` (Feshbach HOC3 leakage certificate); `phase-102/327` (the ray absolute-cost gate) | the two old hits are unrelated objects; **new here** |
+| `canonical column` | `R154_025/026/027` only (this phase) | **new** (round 9's Identity M) |
+| `columna canónica` | `R154_027` only | **new** |
+| `Hybrid Lemma` | `PLAN.md`, `R154_027` (the orders) | the **question** is the lead's; the lemma is new |
+| `moment interior` | 0 | **new** (Lemma W) |
+
+Conventions unchanged from `R154_012`/`R154_025`: `m(τ) = Re ψ(¼+iτ/2) − log π`, `σ_T = m − Σ_n v_n cos(τ log n)`,
+`v_n = 2Λ(n)/√n`, `ν̂(τ) = ∫_R cos(τu)dν(u)`, `𝒫_T = ker M_− ∩ ker M_+`, `g₀ = cosh(u/2)1_{|u|<2T}`,
+`g₁ = u sinh(u/2)1_{|u|<2T}`. At `T = 0.58`: `v₂ = 0.980258143`, `v₃ = 1.268568201`, `Σv = 2.248826345`,
+`m(0) = −5.372183419`, `B := Σv − m(0) = 7.62100976`.
+
+---
+
+## 2. (H1) The repair of Lemma V
+
+### 2.1 What was wrong
+`R154_026 §4`: the primal of record is over `𝒦^{prim}_{2T}` — positive-definite `Φ`, `supp Φ ⊂ [−2T,2T]`,
+`Φ(0) = 1`, **and** `∫Φ(u)cosh(u/2)du = 0`, `∫Φ(u)u sinh(u/2)du = 0`. Round 9's witness `Φ = (1−|u|/2T)_+` gives
+`1.19289` and `0.13302` for those two integrals; and the modulation `Φ ↦ [(1−ε)+ε cos(Ru)]Φ` preserves the support
+but not the moments, its defect being `O(ε/R)`. So V(ii)/(iii) were proved for the relaxation (REL₀) only.
+
+### 2.2 The missing ingredient
+Write, for `μ` a probability measure on `R` (even) with `μ̌ ≡ 0` on `|u| ≥ 2T`, the **moment map**
+`𝔪(μ) := (∫g₀μ̌ du, ∫g₁μ̌ du) = (∫ĝ₀dμ, ∫ĝ₁dμ) ∈ R²`, and let `𝓜 := 𝔪(feasible set of (REL₀)) ⊂ R²`. `𝓜` is
+convex, `𝔪` being linear on a convex set. The constrained feasible set is `𝔪^{-1}(0)`.
+
+> **Lemma W (moment interior).** For every `T > 0`, `0 ∈ int 𝓜`. Moreover the interior is realised by measures of
+> **finite value** `∫σ_T dμ < ∞`: there are `r₀ > 0` and `V^* < ∞` such that every `w ∈ R²` with `|w| ≤ r₀` is
+> `𝔪(μ_w)` for some (REL₀)-feasible `μ_w` with `∫σ_Tdμ_w ≤ V^*`. `PROVED`.
+
+*Proof.* The extreme points of the (REL₀)-feasible set are `dμ_F = |F̂(τ)|²dτ/2π` with `F ∈ L²`, `supp F ⊂ [−T,T]`,
+`‖F‖₂ = 1` (then `μ̌_F = F ⋆ F̃` is supported in `[−2T,2T]` and `μ_F(R) = 1`). For real `F` put
+
+> `A = ∫F(t)e^{t/2}dt`, `B = ∫F(t)e^{−t/2}dt`, `A′ = ∫tF(t)e^{t/2}dt`, `B′ = ∫tF(t)e^{−t/2}dt`.
+
+Since `cosh((t−t')/2) = ½e^{t/2}e^{−t'/2} + ½e^{−t/2}e^{t'/2}`,
+
+> `Q₀(F) := ∬cosh((t−t')/2)F(t)F(t')dtdt' = A·B`,
+
+and since `(t−t')sinh((t−t')/2) = ½(t−t')e^{t/2}e^{−t'/2} − ½(t−t')e^{−t/2}e^{t'/2}`, the same expansion gives
+
+> `Q₁(F) := ∬(t−t')sinh((t−t')/2)F(t)F(t')dtdt' = A′B − AB′`.
+
+These are exactly `𝔪(μ_F) = (Q₀(F), Q₁(F))` (Plancherel: `∫g_jμ̌_F du = ∬g_j(t−t')F(t)F(t')`, and `g_j` is the
+restriction of `cosh(u/2)`, resp. `u sinh(u/2)`, to `|u| ≤ 2T`, which contains the support of `F⋆F̃`).
+
+The four functions `e^{t/2}, e^{−t/2}, te^{t/2}, te^{−t/2}` are linearly independent on `(−T,T)`; a nontrivial
+linear combination of them is a nonzero real-analytic function, hence cannot annihilate `C_c^∞(−T,T)`. Therefore the
+linear map `F ↦ (A,B,A′,B')` sends `C_c^∞(−T,T)` **onto** `R⁴`.
+
+Suppose `0 ∉ int 𝓜`. As `𝓜` is convex, there is `(t₀,t₁) ≠ 0` with `t₀Q₀(F) + t₁Q₁(F) ≥ 0` for every admissible
+`F`. Choose `F ∈ C_c^∞` with `(A,B,A′,B') = (1, 0, ±1, 0)` (possible by surjectivity) and normalise: normalising
+`F ↦ F/‖F‖₂` multiplies `Q_j` by `‖F‖₂^{−2} > 0` and so preserves signs. Then `Q₀ = 0` and `Q₁ = ±1`, forcing
+`t₁ = 0`. Next choose `(A,B,A′,B') = (1, ±1, 0, 0)`: then `Q₁ = 0` and `Q₀ = ±1`, forcing `t₀ = 0` —
+a contradiction. Hence `0 ∈ int 𝓜`. Finally, the four witnesses just used are `C_c^∞(−T,T)`, so `F̂` is Schwartz,
+`∫log(2+|τ|)|F̂|²dτ < ∞`, and `∫σ_Tdμ_F < ∞` (`σ_T ≤ m ≤ log(τ/2) − log π` and `σ_T ≥ −B`); a finite convex
+combination of finitely many such `μ_F` covers a closed ball `|w| ≤ r₀` and has value `≤ V^* := max_i ∫σ_Tdμ_{F_i}`. ∎
+
+*(Remark. Lemma W also re-proves `𝒫_T ≠ {0}` without Paper 42, and the indefiniteness of `Q₀ = AB` is exactly the
+statement that `M_−` is a rank-2 form of signature `(1,1)`, which is why `ker M_−` is large.)*
+
+### 2.3 Lemma V, repaired
+
+> **Lemma V′ (mass–value exchange, constrained form).** Let `λ_min = λ_min(A_T(v))`, `B = Σv − m(0)`.
+> **(i)** For every feasible `μ` (constrained or not) with `ε := μ({|τ| ≥ R})`,
+> `∫σ_Tdμ ≥ −B + ε(m(R) − m(0))`, and `m(R) − m(0) = ∫_0^∞(1−cos Ru)K(u)du = log(R/2) − log π − m(0) + O(R^{−2})`,
+> `K(u) = ½/sinh(u/2) + ½/cosh(u/2)`.
+> **(ii)** For every `δ > 0` there are `C₁ < ∞` and, for every `R ≥ R₀(δ)` and `ε ∈ [0,1]`, a measure `μ'_{ε,R}`
+> **feasible for the constrained problem** with `μ'_{ε,R}({|τ| ≥ R − π/T}) ≥ ε(1−o(1))` and
+> `∫σ_Tdμ'_{ε,R} ≤ λ_min + δ + ε(log R + C₁) + o(ε)`.
+> **(iii)** Hence no inequality `∫σ_Tdμ ≥ −B + εω(R)` with `ω(R)/log R → ∞` holds on the constrained feasible set:
+> the exchange rate is exactly `Θ(log R)`, and `R ≳ e^{B/ε}`. `PROVED`.
+
+*Proof.* (i) is `R154_025 §5` verbatim (it uses only `σ_T ≥ −B` and `σ_T ≥ m(R) − Σv` off `[−R,R]`), and is
+unaffected by the constraints, which only shrink the feasible set.
+
+(ii) By Lemma W the constrained set is nonempty; pick `μ₀` constrained-feasible with `V₀ := ∫σ_Tdμ₀ ≤ λ_min + δ`
+and, by convolving with a `C_c^∞` mollifier in `u` if necessary, with `μ̌₀` of bounded variation on `R`. Set
+`μ_{ε,R} := (1−ε)μ₀ + ½ε(μ₀(·−R) + μ₀(·+R))`, so `μ̌_{ε,R} = [(1−ε) + ε cos(Ru)]μ̌₀`, still supported in `[−2T,2T]`,
+still a probability measure. Its moment defect is
+`𝔪(μ_{ε,R}) = ε(∫g₀μ̌₀cos(Ru)du, ∫g₁μ̌₀cos(Ru)du) =: ε·d(R)`, and `|d(R)| → 0` as `R → ∞` by Riemann–Lebesgue
+(`g_jμ̌₀ ∈ L¹`; `= O(1/R)` given the BV normalisation). Let `r₀, V^*` be as in Lemma W and set
+`λ := ε|d(R)|/(r₀ + ε|d(R)|) ≤ ε|d(R)|/r₀`. By Lemma W there is a feasible `μ_w` with
+`𝔪(μ_w) = −((1−λ)/λ)·ε d(R)`, a vector of norm `≤ r₀`, and value `≤ V^*`. Put
+`μ'_{ε,R} := (1−λ)μ_{ε,R} + λμ_w`: it is a probability measure, band-limited, and `𝔪(μ'_{ε,R}) = 0` — **feasible
+for the constrained problem**. Its value is
+`≤ (1−λ)∫σ_Tdμ_{ε,R} + λV^* ≤ ∫σ_Tdμ_{ε,R} + λ(B + V^*)`, and `λ(B+V^*) = ε·|d(R)|(B+V^*)/r₀ = o(ε)` uniformly in
+`ε`. The bound on `∫σ_Tdμ_{ε,R}` is round 9's: the archimedean part of the translated copies is
+`≤ m(R + O(1/T)) + O(1) = log R + O(1)` (`μ₀` has `1 − O(1/(TR))` of its mass in `|τ| ≤ R/2`, `m` increasing,
+`m(τ) ≤ log(τ/2) − log π`), the prime part lies in `[−Σv, Σv]`. Escaped mass: `μ_{ε,R}` puts `≥ ε(1−o(1))` beyond
+`R − π/T`, and the correction removes at most `λ = o(1)·ε` of it.
+
+(iii) Combine (i) and (ii): if `∫σ_Tdμ ≥ −B + εω(R)` held on the constrained set, applying it to `μ'_{ε,R}` gives
+`ε ω(R − π/T) ≤ B + λ_min + δ + ε log R + O(ε)`, so `ω(R − π/T) ≤ log R + O(1) + (B + λ_min + δ)/ε` for all
+`ε ∈ (0,1]`; letting `ε = 1` gives `ω = O(log R)`. ∎
+
+**Reading, and the label.** `(P154.8)` now closes **negatively and unconditionally**: the depth `B = 7.621` can be
+converted into value only at rate `log R`, so a certificate class must push mass out to `R ≈ e^{B/ε}` to gain `ε`.
+Cor. V1 of round 9 (transfer to the atomic minimisers of the finite relaxation) follows from V′(ii) exactly as
+stated there, the "restoration of the two `ĝ`-moments" being Lemma W's correction rather than a parenthesis:
+**`PROVED`**.
+
+---
+
+## 3. (H2) The Hybrid Lemma
+
+Let `T > 0`, `M ∈ N`, `d = 2T/M`, `P = 2π/d`, and let
+`ν = ν_lat + Σ_{k} c_k ν_{s_k,p_k}`, with `ν_lat = Σ_{j=M}^{J} a_j(δ_{u_j} + δ_{−u_j})`, `u_j = jd ≥ 2T`, and
+`ν_{s,p}` the columns of `R154_025 §2.1` (`dν_{s,p}(u) = ½(|u|−2T)^p e^{−s(|u|−2T)}1_{|u|≥2T}du`). Put
+`f = σ_T + ν̂ + β₀ĝ₀ + β₁ĝ₁`, `cap_{s,p}(τ) := p!/(s²+τ²)^{(p+1)/2}`, `k₀(τ) = 2cosh T/τ + sinh T/τ²`,
+`k₁(τ) = 8T sinh T/τ`.
+
+> **Hybrid Lemma.** Fix `τ₁ > 0`, `N ≥ 1`. For `x ∈ [τ₁, τ₁+P)` define
+>
+> * for `0 ≤ k < N`:
+>   `H_k(x) := ν̂_lat(x) + Σ_k c_k ν̂_{s_k,p_k}(x+kP) + m(x+kP) − Σ_n v_n cos((x+kP)log n) − |β₀|k₀(x+kP) − |β₁|k₁(x+kP)`;
+> * for `k = N`:
+>   `H_N(x) := ν̂_lat(x) − Σ_k |c_k| cap_{s_k,p_k}(x+NP) + m(x+NP) − Σv − |β₀|k₀(x+NP) − |β₁|k₁(x+NP)`.
+>
+> If `H_k(x) ≥ c` for all `x ∈ [τ₁,τ₁+P)` and all `0 ≤ k ≤ N`, then `f(τ) ≥ c` for all `τ ≥ τ₁`. `PROVED`.
+
+*Proof.* Every `τ ≥ τ₁` is uniquely `τ = x + kP` with `x ∈ [τ₁, τ₁+P)`, `k ∈ Z_{≥0}`, and `ν̂_lat(τ) = ν̂_lat(x)`
+because `u_jP = 2πj ∈ 2πZ` (Lemma F1, `R154_015 §2`).
+
+*Case `k < N`.* Every term of `H_k(x)` other than the two `β`-terms is the **exact** value of the corresponding term
+of `f` at `τ = x+kP` — for the lattice part by periodicity, for the columns and the primes by direct evaluation. The
+`β`-terms obey `|β_iĝ_i(τ)| ≤ |β_i|k_i(τ)` (`R154_004/005`). Hence `f(x+kP) ≥ H_k(x) ≥ c`.
+
+*Case `k ≥ N`.* Four monotonicities on `[τ₁+NP, ∞)`, all to the same side: `m` is increasing on `[0,∞)`; `k₀, k₁`
+are decreasing, so `−|β_i|k_i` is increasing; `−Σ_n v_n cos(τ log n) ≥ −Σv` pointwise; and, by Proposition T0
+(`R154_025 §2.1`), `|ν̂_{s,p}(τ)| ≤ cap_{s,p}(τ)` with `cap_{s,p}` **decreasing** in `τ`, so
+`Σ_k c_kν̂_{s_k,p_k}(τ) ≥ −Σ_k|c_k|cap_{s_k,p_k}(τ) ≥ −Σ_k|c_k|cap_{s_k,p_k}(x+NP)` for every `τ = x+kP`, `k ≥ N`.
+Therefore `f(x+kP) ≥ H_N(x) ≥ c` for all `k ≥ N`. ∎
+
+Three remarks, all needed downstream.
+
+1. **The bound is additive over the parts of `ν`**, which is the entire content: Lemma F1 handles a *periodic,
+   non-decaying* transform by shifting; Lemma T handles a *decaying, non-periodic* one by monotone modulus. Neither
+   method has to know about the other, and no new inequality is required to compose them.
+2. **The pairing is unaffected.** For `F ∈ 𝒫_T`, `‖F‖ = 1`, `dμ = |F̂|²dτ/2π` has `μ̌ = c_F = F⋆F̃` continuous and
+   identically `0` on the closed set `|u| ≥ 2T`; `ν` is a finite signed measure supported there; Fubini gives
+   `∫ν̂dμ = ∫c_Fdν = 0`. So `ν̂` may be added to `σ_T` for free, columns included (`R154_026 §0` confirms this is
+   true on the whole closed set, endpoint included).
+3. **Sharpness of the split.** The `k < N` rows are exact in the column term — round 10's implementation uses the
+   exact `ν̂_{s,p}(x+kP)` there, not the modulus bound, which is strictly tighter than the form proposed in the
+   orders and is licensed by the proof above. Only the single `k = N` row pays the modulus.
+
+---
+
+## 4. (H3) The one LP, and why the answer was decidable on paper
+
+### 4.1 The run
+`T = 0.58`; lattice `M = 24`, `u_j = jd ∈ [2T, 2T+20]`, `d = 0.0483333`, **414 atoms** (round 5's `lp_Q058` class);
+columns `ν_{½,0}` (coefficient `c₀`) and `ν_{½,1}` (`c₁`) — the canonical Lévy scale `s = ½` of Identity M;
+`β₀, β₁` free; `τ₁ = 30`, `N = 2`, `P = 129.99694`, so the exact region is `[0, τ₁+NP] = [0, 289.99]` and the
+worst-case block covers `[289.99, 419.99)` and beyond. Rows: cutting planes on `[0,τ₁]` and on the `N+1` blocks
+(`r6lp` separation machinery: exact local-minimum finder, `h_sep = 0.005`, 6 refinements), plus `|β_i| ≤ t_i`,
+`|c_k| ≤ d_k`. HiGHS, one process, `timeout 900`. Code `scripts/round10/r10lp.py`, log `r10.log`.
+
+**Matched control.** The control `c₀ = c₁ = 0` is round 5's programme exactly. Rather than spend the single LP
+budget re-deriving it, the round-5 optimum `lp_Q058.pkl` was re-evaluated **by the round-10 code** through the
+hybrid rows with `c = 0`:
+
+> `truemin = −3.180338728·10⁻³` (at `τ = 15.2176`, an `f`-row), `hN_min = −3.180173855·10⁻³`,
+> `Σ|a_j| = 25.8360`, `2Σ|a_j| = 51.6721`, **F1 slack `= 3.73·10⁻¹⁰`**.
+
+This reproduces round 5's `−3.1802·10⁻³` to all printed digits and confirms that the round-10 model is the round-5
+model plus two variables. `CONFIRMED`.
+
+### 4.2 The decisive number: the worst-case block row is *active*
+
+The control's `F1 slack` — the margin of the `k = N` block row over the certificate value — is `3.7·10⁻¹⁰`. The
+lattice certificate of record is **exactly pinned by the worst-case tail row**. This is what makes the hybrid
+question answerable without waiting for the optimiser:
+
+> **Proposition X (tail price of the canonical column).** In the Hybrid Lemma with `τ₁ = 30`, `N = 2`,
+> `P = 129.99694`, the `k = N` row charges a column `c₀ν_{½,0}` the amount `|c₀|·cap_{½,0}(x+2P)` with
+> `x + 2P ∈ [289.99, 419.99)`, i.e.
+> `|c₀|/√(¼ + 419.99²) = 2.3810·10⁻³|c₀| ≤ cost ≤ 3.4483·10⁻³|c₀| = |c₀|/√(¼ + 289.99²)`.
+> Consequently, any hybrid certificate whose value exceeds the lattice value `−3.1802·10⁻³` by a factor `2` in
+> deficit (i.e. `c ≥ −1.59·10⁻³`) must satisfy, **on the worst-case row alone**,
+> `|c₀|·2.381·10⁻³ ≤ ν̂_lat(x) + m(x+2P) − Σv − |β|·k − c`, whose right-hand side the lattice already needs in full:
+> at the control the whole right-hand side is `−3.1802·10⁻³ + 3.7·10⁻¹⁰`. Hence every unit of `|c₀|` must be repaid
+> on that row by `2.38–3.45·10⁻³` of extra lattice work. In particular the canonical value
+> `c₀ = 2e^{−T} = 1.1198` (Identity M) costs `2.67–3.86·10⁻³` — **more than the entire deficit it is meant to
+> close.** `PROVED` (arithmetic; the monotonicity is the Hybrid Lemma).
+
+So the hybrid cannot help at this `(τ₁, N)`, and the obstruction is not the class, the conditioning or the solver:
+it is that the canonical column's modulus at `τ ≈ 300` is `3.4·10⁻³`, of the same order as the number one is trying
+to beat, and it is charged on a row that has **zero** slack.
+
+### 4.3 What the LP did
+
+| run | LP value | true min (separation, `[0,τ₁+NP]` + blocks) | `β₀` | `β₁` | `c₀` | `c₁` | `Σ|a_j|` | F1 slack | wall |
+|---|---|---|---|---|---|---|---|---|---|
+| hybrid `H` it0 | `−4.007095·10⁻³` | `−6.85464·10⁻²` | `2.06730` | `−0.26849` | `1.80995` | `−1.73152` | `23.7321` | — | `203 s` |
+| hybrid `H` it1 | `−3.771365·10⁻³` | `−4.52688·10⁻²` | `2.08213` | `−0.26292` | `2.25560` | `−1.80063` | `24.4410` | `−4.14·10⁻²` | `407 s` |
+| hybrid `H` it2 (last before the cap) | `−3.725247·10⁻³` | `−8.00963·10⁻²` | `2.11290` | `−0.27276` | `2.01888` | `−2.04191` | `24.9626` | — | `630 s` |
+| **control `c = 0`** (round 5 `lp_Q058`, re-evaluated by the round-10 code) | `−3.180174·10⁻³` | **`−3.180338·10⁻³`** | `2.039965` | `−0.147770` | `0` | `0` | `25.8360` | **`3.73·10⁻¹⁰`** | — |
+
+(`r10_results.json`; direct fine-grid minimum of the true `f` on `[0, τ₁+(N+1)P] = [0, 420]` at step `2·10⁻⁴`:
+control `−3.180338·10⁻³` at `τ = 15.2176`, hybrid it1 `−2.19196·10⁻²` at `τ = 171.09`.)
+
+Each cutting-plane iteration costs `203 s` at `20 508` rows × `423` variables; the `900 s` cap therefore bought
+**three** completed iterations (the fourth was cut), and the separation gap never fell below `4.1·10⁻²`. The run is
+**not converged**, and its intermediate LP values are reported as such. The best hybrid iterate is still `17 %`
+worse in LP value than the control and an order of magnitude worse in true minimum.
+
+**Caveat (binding).** All three returned objectives lie *below* a known feasible point of the same programme: the
+control `(a, β, c = 0, t = |β|, d = 0)` scores `−3.18034·10⁻³` and its maximum row violation against the
+iteration-0 row set is `−2.0·10⁻⁵`, i.e. it is strictly feasible. A maximisation LP cannot have an optimum below a
+feasible point, and the LP value *rises* as cuts are added, which a cutting-plane method cannot do with exact
+solves. **HiGHS is returning sub-optimal points at this size and scaling** (`20 508 × 423` dense, row scaling
+`10⁴`). All three iterates are `DIAGNOSTIC` only; the decision below rests on **Proposition X**, which is
+arithmetic, not on the LP.
+
+### 4.4 Decision
+
+> **REFUTED at the ordered configuration.** The canonical Lévy column does **not** buy the tail at `τ₁ = 30`,
+> `N = 2`, `M = 24`: on the active worst-case block row it costs `2.4–3.5·10⁻³` per unit of `|c₀|`, against a total
+> deficit of `3.18·10⁻³`. The LP's own iterate (`c₀ = 1.81`, `c₁ = −1.73`, value `−4.01·10⁻³`) is consistent with
+> this — it is *worse* than the control — but it is sub-optimal and carries no weight.
+>
+> **Diagnostic on `c₀ ≈ 1.1198`:** the three iterates give `c₀ = 1.810, 2.256, 2.019` — the same order of magnitude
+> as the canonical `2e^{−T} = 1.1198` and closer still to round 9's clustered `ν̂(0) ≈ c_K = 2.28619`, but `60–100 %`
+> above `1.1198` and drifting, on unconverged, sub-optimal iterates. **No evidence either way**; the `s = ½` selection of Identity M remains a
+> structural statement, not a measured one.
+
+### 4.5 The licensed next step (not run here)
+Proposition X says exactly what to change: the cost is `|c₀|/√(¼+(τ₁+NP)²)`, so push the worst-case block out. To
+make the canonical column's tail price an order of magnitude below the deficit one needs
+`τ₁ + NP ≳ 10·c₀/3.18·10⁻³ ≈ 3.5·10³`, i.e. `N ≈ 27` at `P = 130`; to make it merely comparable to the
+*improvement sought* (`1.6·10⁻³`) one needs `τ₁ + NP ≳ 700`, i.e. `N = 6`. The cost is linear in `N` (one extra
+block of rows each), and the `B&B`/verification range `[0, τ₁+NP]` grows with it — `N = 6` is `[0, 810]`, some
+`2.8×` round 5's range, and still affordable. **That, and not a larger column class, is the experiment that would
+decide whether the column buys anything.** `OPEN`.
+
+---
+
+## 5. (H4) The seven repairs to `R154_025`
+
+All seven are applied in place in `R154_025_BUILDER_ROUND9.md`, each marked
+`[amended 2026-09-21 per R154_026 R<n>]`:
+
+| # | what was changed |
+|---|---|
+| R1 | §0 headline and the map row: "(P154.7) SOLVED" / "the tail row is vacuous" → **REDUCED**: `τ₁ ≳ A + A′ + 1` for atom-free `ν`, `log τ₁ ≳ Σv + 2Σ|a_j|` for atoms; Theorem O forces `A → ∞`, so no uniform version exists; the gain is exponential → linear in `ℓ¹`. |
+| R2 | §4: "the measured penalty … is `≤ 2·10⁻²` and reducible to `0`" → relabelled `EXTRAPOLATION (4 points, not a bound)`, with the observation that `2Σ|a_j|` *grows* with the budget (`0.92 → 3.43`) so Cor. T2 does not apply to those runs; "the wall of `R154_023 §2` is gone" withdrawn. |
+| R3 | §0 and §5: (REL₀) named as the **two-constraint-free relaxation**; V(ii)/(iii)/Cor. V1 marked `CONDITIONAL` there, with a pointer to §2 of this file where they become `PROVED`. |
+| R4 | §6: the constant inserted — `ν_K = 2e^{−T}ν_{½,0}(1+O(e^{−u})) = 1.1198·ν_{½,0}` at `T = 0.58` (`TV 2.2396` vs `c_K = 2.28619`); the "magic function" framing withdrawn; the "missing constant `m`" remark kept and explicitly labelled a tautology. |
+| R5 | §7 map row for Lemma F1: F1 is **still the tail method of record** for every atomic class of this phase — `τ₁ = 30` (F1) vs `1.6·10²⁴` (Lemma T) on `lp_Q058`, and `1.5·10⁴¹` on `lp_S058`. |
+| R6 | §4: conditioning caveat added — `l1_cols = 1.9·10⁵` in run C against the variable cap `10⁴`; runs B/C/F/G are conditioning-limited and run C's `−0.441` is not to be quoted until re-solved. |
+| R7 | §1 corpus table: `[PROP 176.9]` named explicitly (`phase-55/176-ataque-A-green-littlewood.md §4.3`, repeated at `phase-58/190 §(2)`), with its actual content (no exponential zero-density theorem `N(σ,T) ≪ T^{a(1−σ)}` reaches target A) and the reason it does not bear on exponential densities in `u`-space. |
+
+---
+
+## 6. Consequences for the map
+
+| item | before round 10 | after |
+|---|---|---|
+| (P154.8) mass-vs-value | V(i) `PROVED`; V(ii)/(iii)/Cor. V1 `CONDITIONAL` (`R154_026 §4`) | **`CLOSED NEGATIVELY`, unconditionally** — Lemma W + Lemma V′ (`PROVED`): the exchange rate is `Θ(log R)` on the *constrained* feasible set |
+| composing the two tail methods | not stated | **Hybrid Lemma** (`PROVED`): F1's periodic block rows for the lattice + Lemma T's monotone modulus for the columns, exact on the first `N` blocks |
+| does the canonical column buy the tail? | the lead's question (H3) | **No, at `τ₁ = 30, N = 2`** — Proposition X (`PROVED`): price `2.4–3.5·10⁻³` per unit `|c₀|` on a row with slack `3.7·10⁻¹⁰`. `REFUTED` at this configuration; `OPEN` at `N ≥ 6` |
+| `c₀ ≈ 2e^{−T} = 1.1198`? | Identity M's prediction | **no evidence** (iterate `1.81`, sub-optimal, unconverged) — `DIAGNOSTIC` |
+| best value at `T = 0.58` | `−3.1802·10⁻³` (414 atoms, `M = 24`) | **unchanged**; the hybrid did not improve it |
+| endpoint of record | `λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` | **unchanged**; no sign for `ζ` beyond `log 2` |
+
+**What is now binding.** Not the tail as a *method* — the Hybrid Lemma composes everything this phase has — but the
+tail as a *price*: the worst-case block row is active at the optimum with zero slack, and any new outside-window
+mass is charged there at `‖·‖/τ_left`. Round 9 read this as "the tail is solved"; the control's slack `3.73·10⁻¹⁰` says
+otherwise. Every future class must either put its mass where `cap` is already negligible (take `N` large, at linear
+cost) or stay on the lattice, where periodicity makes the mass free. This is the first time in the phase that the
+tail row has been shown *binding at the optimum* rather than merely present.
+
+**Recommendation to the lead.** One LP at `N = 6` (`τ₁ + NP = 810`), same lattice, same two columns, warm-started
+from `lp_Q058`, with a HiGHS presolve/scaling fix (or `method='highs-ipm'`) for the sub-optimality of §4.3(a). If
+the column still prices itself out at `N = 6`, the canonical-column route should be closed and the phase should
+return to the lattice resolution `M`, where `R154_022` already located the real cost.

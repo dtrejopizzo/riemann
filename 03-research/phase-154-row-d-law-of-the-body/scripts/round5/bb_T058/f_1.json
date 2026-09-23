@@ -1,0 +1,1 @@
+{"which": "f", "lo": 6.0, "hi": 12.0, "lb": -0.0031964, "best": -0.003179958156138696, "best_arg": 11.8410546875, "evals": 114442, "final_intervals": 0, "surviving_measure": 0.0, "M2": 2956.6413561438167, "target": -0.0031964, "wmin": 1e-09, "w0": 0.02, "complete": true, "method": "taylor2", "L": 346.98322584602226}

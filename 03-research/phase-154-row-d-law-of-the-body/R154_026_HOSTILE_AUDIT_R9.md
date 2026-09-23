@@ -1,0 +1,273 @@
+# R154.026 — Hostile audit, round 9 (`R154_025`). Date 2026-09-21.
+
+*Auditor. Compute used: `r9check.py` re-run in full (13 s) plus ~20 mpmath/quad point checks and a read of the
+round-5 pickles. No LP, no B&B. Everything below is either derived on paper or a point check that is named.*
+
+---
+
+## 0. Verdict table
+
+| item | builder's label | audited verdict |
+|---|---|---|
+| Prop. T0 (exact transform + modulus bound) | `PROVED` | **CONFIRMED.** Derivation, normalisation, the `½`/mirror bookkeeping and the equality case at `τ = 0` all check. |
+| The pairing `∫ν̂dμ = 0` for finite `ν` on `|u| ≥ 2T` | asserted | **CONFIRMED, and the builder's own justification is weaker than the truth**: `c_F ≡ 0` on the whole closed set `|u| ≥ 2T`, not merely at the endpoint, so atoms at `±2T` are trivially admissible. Fubini is legitimate (`‖ν‖·‖F‖² < ∞`). |
+| Lemma T (i)+(ii)+(iii) | `PROVED` | **CONFIRMED as stated.** Each of the six terms of `L` is monotone in the claimed direction; the archimedean floor is R154_016 E1, re-verified here (min margin `3.7·10⁻¹⁴`, attained at `τ = 2`). |
+| Cor. T1 (atoms pay full mass, broad columns pay `s/τ₁`) | `PROVED` | **CONFIRMED** (immediate from T0). |
+| Cor. T2 ("the tail row is **vacuous** for smooth certificates"); `τ₁ ≤ 161.9` | `PROVED` | **ARITHMETIC CONFIRMED, READING OVERSTATED.** See §2: the threshold is `τ₁ ≳ A = Σ_k|c_k|p_k!`, a quantity Theorem O forces to `+∞` along any maximising sequence. "Vacuous" holds for a *fixed* certificate, never uniformly over the class — and the round's own LP data show `A/τ₁` climbing `0.073 → 0.135 → 0.465 → 0.707`. |
+| "(P154.7), the tail problem, is SOLVED"; "the wall of `R154_023 §2` is gone" | headline | **OVERCLAIM — DOWNGRADE to: the tail cost is reduced from exponential to linear in the certificate's ℓ¹ size, for smooth ν only.** For the atomic classes of record it is strictly *worse* than Lemma F1 by ~40 orders of magnitude in `τ₁` (§6). |
+| Theorem E (exhaustion by the exponential class) | `PROVED` | **CONFIRMED.** Steps (a),(b),(c) are complete and the `R`-uniformity of step (b) is genuinely supplied by the flat bound `|ν̂| ≤ ‖ν‖`. Direction check: `D_T^𝓔 ≤ D_T` by weak duality, `≥ λ_min − ε` by (a)–(c); the exponential class's sup **equals** `λ_min`. |
+| Dimension count (`≈ (p+1)log(s_max/s_min)/log 2`) | `PROVED`/`DIAGNOSTIC` | **ACCEPTED as DIAGNOSTIC.** The asymptotic `ν̂_{s,0}(τ) = −sin(2Tτ)/τ + O(s/τ²)` is correct; the "useful dimension" formula is a heuristic and is labelled as one. |
+| LP table (7 runs) | `DIAGNOSTIC-NUMERIC` | **INTERNALLY CONSISTENT** (every row satisfies `LP = L₀(τ₁) − tailcost` to `10⁻⁵`; `L₀` recomputed independently at all four `τ₁`). |
+| "the residual tail penalty is `≤ 2·10⁻²` and reducible to `0` by Cor. T2" | reading | **NOT JUSTIFIED — REPAIR REQUIRED.** It is a 4-point extrapolation, and in the runs that produce it the optimiser's atom mass `2Σ|a_j|` *grows with the budget* (`0.92 → 1.74 → 2.59 → 3.43`), so Cor. T2 does not apply to them at all. |
+| Lemma V (i) exchange inequality | `PROVED` | **CONFIRMED.** `σ_T ≥ m(0) − Σv` and `σ_T ≥ m(R) − Σv` on `|τ| ≥ R`; the split is exact; the Lévy form is verified to `2·10⁻⁹` here (`K = ½/\sinh(u/2)+½/\cosh(u/2)` re-derived from `ψ`'s integral representation, §5). |
+| Lemma V (ii) the Fejér witness is feasible | `PROVED` | **FALSE AS STATED — the hole.** The witness violates **both** primitivity constraints. See §4. |
+| Lemma V (iii) "no rate theorem exists" | `PROVED` | **DOWNGRADE to `PROVED for the two-constraint-free relaxation (REL₀)`, `PLAUSIBLE-REPAIRABLE for the real problem`.** An obstruction on a strictly larger feasible set does not obstruct the smaller one. A repair is available and cheap (§4.3) but must be written. |
+| Cor. V1 (transfer to atomic minimisers) | `PROVED` | **NOT PROVED**; it inherits §4's defect and then adds a one-parenthesis hand-wave for the moment restoration. |
+| Identity M | `PROVED` | **CONFIRMED** (re-derived in §5); `c_K = 2.28619216` re-computed; `K(u)/2e^{−u/2} = 1.000006` at `u = 6` re-computed. |
+| "`K` picks `s = ½`" | reading | **CONFIRMED, with a constant the builder omits**: `½K(u) = 1.1198·½e^{−(u−2T)/2}(1+O(e^{−u}))` at `T = 0.58`, i.e. `ν_K = 2e^{−T}·ν_{½,0}` asymptotically (`TV`: `2.2396` vs `c_K = 2.28619`). |
+| "the only exactly-nonnegative completion is `½K1_{|u|>0}`, whose divergence *is* the missing constant `m`" | `DIAGNOSTIC` | **CORRECT BUT A TAUTOLOGY.** It restates `∫_0^∞ K = ∞` in the language of the certificate. The non-tautological content of §6 is the *band-limitation* of the right-hand side of Identity M, and the selection of `s = ½`. Keep the first, delete the rhetoric around the second. |
+| Corpus lines, FATAL rule, `T = 0.58 < log 2`, no sign claimed | — | **CLEAN.** The `densidad exponencial` no-go of phases 55/58 is cited and correctly distinguished (§7). |
+
+**Overall: round 9 contains two genuine, correct new theorems (T0+Lemma T, Theorem E) and one correct new identity
+(M). Its two headline claims — "(P154.7) SOLVED" and "(P154.8) CLOSED NEGATIVELY" — are both overstated, the first
+by a uniformity that Theorem O forbids, the second by a missing pair of constraints.**
+
+---
+
+## 1. Lemma T: the derivation, checked line by line
+
+With `dν_{s,k}(u) = ½(|u|−2T)^k e^{−s(|u|−2T)}1_{|u|≥2T}du` on all of `R` and the phase's normalisation
+`ν̂(τ) = ∫_R\cos(τu)dν(u)`:
+
+`ν̂_{s,k}(τ) = 2·∫_{2T}^∞ ½(u−2T)^k e^{−s(u−2T)}\cos(τu)du = \mathrm{Re}[e^{2iTτ}∫_0^∞ t^ke^{−(s−iτ)t}dt]
+= \mathrm{Re}[e^{2iTτ}k!/(s−iτ)^{k+1}]`.
+
+The `½` in the density is exactly what cancels the mirror doubling — **the factor is right**, and it is right in the
+code too (`r9tail.nuhat_col`). `ν̂` is even in `τ` because `\cos` is. Total variation `= 2·½·k!/s^{k+1} = k!/s^{k+1}`,
+as claimed, and at `τ = 0` the bound `k!/(s²+τ²)^{(k+1)/2}` is attained with equality — the bound is sharp at the one
+point where sharpness matters for Cor. T1. `r9check.py` reproduces the transform against oscillatory quadrature at
+30 `(s,k,τ)` points to `<10⁻⁷` and asserts the cap at each; I re-ran it, it passes.
+
+Monotonicity of `L` on `[2,∞)`: `\log(τ/2)` ↑; `−1/(12.5τ²)` ↑; `−|c_k|p_k!/(s_k²+τ²)^{(p_k+1)/2}` ↑ (denominator ↑);
+`−2Σ|a_j|`, `−Σv` constant; `k₀(τ) = 2\cosh T/τ + \sinh T/τ²` ↓ and `k₁(τ) = 8T\sinh T/τ` ↓, so `−|β_i|k_i` ↑.
+**All six verified; (ii) holds.** (iii) is then immediate. The archimedean floor is R154_016's corrected constant;
+re-verified on 2·10⁵ geometric points of `[2,10⁶]`, minimal margin `3.730·10⁻¹⁴` **attained at the left endpoint
+`τ = 2`**. Nothing in round 9 evaluates `L` near `τ = 2` (the smallest `τ₁` used is 120), so the near-equality is
+harmless here; but it should be recorded that the floor is an equality-to-14-digits at `τ = 2` and must never be
+used in floating point at that end without an interval guard.
+
+Cor. T2's arithmetic: `1/(12.5τ²) ≤ 0.08/τ`, `|c_k|p_k!/(s²+τ²)^{(p+1)/2} ≤ |c_k|p_k!/τ` and
+`|β₀|k₀+|β₁|k₁ ≤ A′/τ` for `τ ≥ 1`, so `L(τ) ≥ \log(τ/2π) − Σv − (A+A′+1)/τ` with `A := Σ_k|c_k|p_k!` — correct and
+mildly conservative. `L(τ₁) ≥ c` then holds as soon as `τ₁ ≥ A+A′+1` **and** `τ₁ ≥ 2πe^{c+Σv+1}`. At `T = 0.58`,
+`Σv = 2.248826345`, `2πe^{3.248826} = 161.856` — **`161.9` reproduced**. (The bisection in `r9check.py` gives the
+same number as "extra budget 1.00", and `L_floor = 0` at `τ = 59.5446`, where `m(τ₁) = Σv` exactly — a pleasing
+consistency check that I confirm.)
+
+---
+
+## 2. What Cor. T2 does *not* say, and the one number that settles it
+
+Cor. T2 fixes `ν` first and then chooses `τ₁ ≥ A+A′+1`. The threshold is **linear in the certificate's own
+coefficient ℓ¹-norm `A`**, and by **Theorem O** no maximising sequence has bounded `‖ν‖`; for the `k = 0` columns
+`A = Σ|c_k|` and `‖ν‖ = Σ|c_k|/s_k ≥ A/s_max`, so `A → ∞` unless all the mass migrates to broad columns, which is
+exactly the collinear direction §3 shows is useless. The round's own data confirm the mechanism rather than
+contradicting it:
+
+| `τ₁` | `A = ℓ¹` of the columns | `A/τ₁` | `2Σ|a_j|` | LP value |
+|---|---|---|---|---|
+| 120 | 8.77 | 0.073 | 0.922 | `−0.3568` |
+| 300 | 40.65 | 0.135 | 1.745 | `−0.2845` |
+| 1000 | 464.9 | 0.465 | 2.587 | `−0.2361` |
+| 3000 | 2119.8 | **0.707** | 3.428 | `−0.2173` |
+
+The optimiser drives `A` up toward the T2 threshold `τ₁` as fast as it is allowed to. **So the correct statement is:
+the tail row is not an obstruction of fixed size; it is a constraint `A + 2·e^{2Σ|a_j|}·(…) ≲ τ₁` linking the
+certificate's size to the length of the interval on which positivity must be checked.** Lemma T's real achievement
+is to make that link *linear* (in `A`) instead of *exponential* (in the atom mass) — a very large gain, but not the
+disappearance of the constraint. §0 and §7 of `R154_025` must be rewritten accordingly.
+
+**Required repair R1.** Replace "(P154.7) is SOLVED" / "the tail row is vacuous" by: *for outside-window measures
+with no atomic part, Lemma T reduces the tail to the single requirement `τ₁ ≳ Σ_k|c_k|p_k! + |β|·O(1)`; the period,
+the flat floor `ρ` and the incommensurability of `\log 2, \log 3` disappear; the tail cost does not.*
+
+**Required repair R2.** Delete "the measured penalty … is `≤ 2·10⁻²`" or relabel it
+`EXTRAPOLATION (4 points, not a bound)`. As written it invites exactly the reading round 8 was criticised for. The
+honest statement is: the LP value is `L₀(τ₁) − \text{tailcost}(τ₁)` with the row active at every `τ₁` tested, the
+increments are `0.072, 0.048, 0.019` against budget increments `0.92, 1.20, 1.10`, and **no upper bound on the
+limit is proved**.
+
+---
+
+## 3. Theorem E — accepted, with one clarification
+
+(a) is Theorem D1. (b) is complete: the bump replacement preserves total variation and support, so Lemma T's `τ₁`
+computed for `ν₀` is valid verbatim for `ν₁` (the only `ν`-dependence in `L` is through `Σ_j|a_j|`, and the flat
+bound `|ν̂| ≤ ‖ν‖` holds for every finite signed measure); on `[0,τ₁]` the estimate
+`|ν̂₁−ν̂₀| ≤ 2Σ_j|a_j|τ₁η` is right (the `2` from the mirror pair). **The auditor's suspicion that the tail is not
+controlled for the bump is unfounded: it is, and the argument is complete.**
+(c) The totality of `{t^ke^{−t}}` in `L¹(0,∞)` via Laplace uniqueness + Hahn–Banach is correct as written
+(`G` holomorphic on `\mathrm{Re}\,z>0`, `G^{(k)}(1) = 0 ∀k` on a connected domain ⟹ `G ≡ 0`). The essential point,
+correctly flagged in the Remark, is that TV-convergence gives `‖ν̂₂−ν̂₁‖_{L^∞(R)} ≤ ‖ν₂−ν₁‖` — uniformity on **all**
+of `R`, not just on a compact.
+Direction: `D_T^𝓔 ≤ D_T` (weak duality) and `D_T^𝓔 ≥ λ_min − ε` for every `ε`, so `D_T^𝓔 = D_T = λ_min`. **Equality,
+not merely `≥`.** `CONFIRMED PROVED`.
+
+---
+
+## 4. Lemma V — the hole
+
+### 4.1 The witness is infeasible for the actual problem
+The primal of record is over `𝒦^{prim}_{2T}` (`R154_012`, Theorem A): positive-definite `Φ` with `\mathrm{supp}Φ ⊂
+[−2T,2T]`, `Φ(0)=1`, **and the two primitivity conditions** `∫Φ(u)\cosh(u/2)du = 0`, `∫Φ(u)u\sinh(u/2)du = 0`
+(these are `\ker M_∓`, i.e. `𝒫_T`). Equivalently, on the measure side, `∫ĝ_jdμ = ∫g_jμ̌ = 0`, `j = 0,1`.
+`R154_025 §5` defines (REL₀) **without them** and then takes `μ̌₀ = (1−|u|/2T)_+` (Fejér). Direct computation at
+`T = 0.58`:
+
+> `∫_{−2T}^{2T}\cosh(u/2)(1−|u|/2T)du = 1.19289` (not `0`), `∫_{−2T}^{2T}u\sinh(u/2)(1−|u|/2T)du = 0.13302` (not `0`).
+
+So `μ₀` is **not feasible** for the problem whose value is `λ_min`. (The defect is inherited from `R154_020 §2.2`,
+where the same witness was used for a weaker purpose — "support is not mass" — for which the two constraints were
+genuinely irrelevant. Here they are not, because Lemma V(iii) is a *quantitative claim about the feasible set*.)
+
+### 4.2 Multiplying by `\cos(Ru)` does not preserve the constraints
+Even starting from a genuinely feasible `μ₀`, `μ̌_{ε,R}(u) = [(1−ε) + ε\cos(Ru)]μ̌₀(u)` gives
+`∫ĝ_jdμ_{ε,R} = ε∫_{−2T}^{2T}g_j(u)\cos(Ru)μ̌₀(u)du ≠ 0` in general. It is `O(ε/R)` by Riemann–Lebesgue
+(equivalently, `= ε∫½[ĝ_j(τ+R)+ĝ_j(τ−R)]dμ₀` with `ĝ_j = O(1/τ)` — the builder's parenthetical in Cor. V1 is the
+right computation, but it is a *diagnosis of the defect*, not a proof that the defect can be removed).
+**Feasibility of `μ_{ε,R}` for the real problem is therefore asserted, not proved.** This is the hole the round
+should have found itself: the band-limitation `μ̌ ≡ 0` on `|u| ≥ 2T` *is* preserved by the modulation (correctly
+argued); the two moments are not.
+
+### 4.3 The repair (available, cheap, but it must be written)
+The moment map `μ ↦ (∫ĝ₀dμ, ∫ĝ₁dμ)` on the (REL₀)-feasible set has `0` in the relative interior of its image
+(modulated Fejér kernels `\cos(au)(1−|u|/2T)_+` realise both signs of the `g₀`-moment as `a` varies). Fix two
+(REL₀)-feasible `μ^±` whose moment vectors span a neighbourhood of `0`, both with finite value. Start from a
+`μ₀` **feasible for the full problem** with `V₀ ≤ λ_min + δ`, form `μ_{ε,R}`, and correct its `O(ε/R)` moment defect
+by a convex combination with `μ^±` of weight `λ = O(ε/R)`; since `σ_T ≥ −B` and the `μ^±` have finite value, the
+value changes by `O(ε/R)·(B + \max V^±) = o(ε)`. Then V(ii) and hence V(iii) hold **for the constrained problem**,
+with the same `Θ(\log R)` rate. *This is two paragraphs of work and it is not optional.*
+
+### 4.4 What survives now
+V(i) is unconditional and correct (it needs only `σ_T ≥ −B`, `σ_T ≥ m(R)−Σv` on `|τ|≥R`, `m` increasing), and it is
+the half that carries the pessimistic content: `R ≳ e^{B/ε}` with `B = 7.62101` at `T = 0.58`. V(ii)/V(iii) — the
+claim that this is **sharp**, i.e. that no better rate lemma can exist — is exactly the half that needs §4.3.
+**Verdict: Lemma V is a correct *lower* bound plus an *unproved* sharpness claim. "CLOSED NEGATIVELY" is premature
+by one repair.**
+
+---
+
+## 5. Identity M — re-derived and confirmed
+
+From `ψ(z) = −γ + ∫_0^∞(e^{−t} − e^{−zt})/(1−e^{−t})dt` at `z = ¼ + iτ/2`, taking real parts and substituting
+`t = 2u`: `m(τ) − m(0) = ∫_0^∞(1−\cos τu)·\frac{2e^{−u/2}}{1−e^{−2u}}du`, and
+`\frac{2e^{−u/2}}{1−e^{−2u}} = \frac{2}{e^{u/2}−e^{−3u/2}} = \frac{1}{2\sinh(u/2)}·2 \cdot … = ½/\sinh(u/2)+½/\cosh(u/2) = K(u)`
+(the middle identity: `[\!(e^{u/2}+e^{−u/2}) + (e^{u/2}−e^{−u/2})]/(e^u−e^{−u}) = 2e^{u/2}/(e^u−e^{−u})`). **`K` is
+correct.** Then with `ν̂_K(τ) = ∫_{2T}^∞K(u)\cos(τu)du`,
+`σ_T + ν̂_K = m(0) + ∫_0^{2T}(1−\cos τu)K + ∫_{2T}^∞K − Σ_nv_n\cos(τ\log n)`, i.e. Identity M, `c_K = ∫_{2T}^∞K`.
+Point checks: `m(0) = −5.3721834192`; the Lévy identity at `τ ∈ {0.7,3,17,59.544}` to `≤ 2·10⁻⁹`;
+`c_K = 2.2861921600` — **`2.28619` reproduced**.
+
+Two additions the builder should make. (a) The proportionality constant: `½K(u) → e^{−u/2}` while the column
+`ν_{½,0}` has density `½e^{−(u−2T)/2}`, so `ν_K = 2e^{−T}ν_{½,0}(1+O(e^{−u})) = 1.1198·ν_{½,0}` at `T = 0.58`
+(`TV` `2.2396` vs `c_K = 2.28619`). Saying "`ν_K` *is* `ν_{½,0}` up to an exponentially small correction" without the
+factor is sloppy. (b) A point in the round's favour that it did not notice: the LP's own optimal `ν̂(0)` (total
+signed mass) is `2.33, 2.33, 2.22, 2.77, 1.94, 2.08, 1.81` across the seven runs — clustered around `c_K = 2.286`.
+That is weak but real support for the "canonical column" reading, and it is free.
+
+On the "missing constant" remark: adding the **full** Lévy measure gives `m(0) + ∫_0^∞K = +∞`, so the completion is
+not a measure and not a certificate. That is a true statement, but it is a restatement of `K(u) ∼ 1/u` at the
+origin, and Theorem O already forbids any finite `ν` from attaining. **Judgement: a tautology, correctly labelled
+`DIAGNOSTIC` but rhetorically inflated ("the exact analogue of the magic-function step"). The genuine content of §6
+is (i) the identity itself, (ii) the band-limitation of its right-hand side, (iii) the selection of `s = ½`.**
+
+---
+
+## 6. The next LP, and whether Lemma T licenses it
+
+The lead's proposed next step — *re-optimise round 5's 437-atom class at `T = 0.58` with Lemma T's single tail row
+replacing F1* — is **NOT licensed, by a wide margin, and the reason is Cor. T1 itself: atoms pay full mass.**
+From the round-5 pickles:
+
+| certificate | atoms | `2Σ|a_j|` | `τ₁` used by F1 | `τ₁` required by Lemma T `= 2πe^{Σv+2Σ|a_j|}` |
+|---|---|---|---|---|
+| `lp_Q058` (`c = −3.1802·10⁻³`) | 414 | `51.672` | 30 (`+NP ≈ 290`) | `1.6·10^{24}` |
+| `lp_S058` (`λ_min ≥ 8.8855·10⁻⁵`, the endpoint of record) | 437 | **`90.754`** | 30 (`+NP ≈ 290`) | **`1.5·10^{41}`** |
+
+A B&B over `[0, 1.5·10^{41}]` is not a budget question, it is impossible. **Lemma T is strictly worse than Lemma F1
+on every atomic class this phase has built**, by ~39 orders of magnitude in `τ₁`, precisely because F1 exploits the
+*periodicity* of a lattice `ν̂` (so that `N+1` shifted period-blocks suffice) whereas Lemma T throws periodicity away
+and pays the flat bound `2Σ|a_j|`. The round's §7 line "Lemma F1 … superseded for smooth `ν`; still needed for
+pure-atom classes" is formally correct but badly understates the gap; §0's "the wall is gone" is not.
+
+**What the next LP should actually be (recommended, and licensed by what is proved):**
+
+> `T = 0.58` (then `T = \log 2`). `ν = ν_{lat} + ν_{smooth}` with
+> `ν_{lat} = Σ_{j} a_j(δ_{u_j}+δ_{−u_j})` on the round-5 lattice `u_j = 2T + j/M`, `M = 24`, `u_{max} = 2T+20`
+> (437 atoms), and `ν_{smooth} = Σ_{k}c_kν_{s_k,p_k}` with `s` log-spaced on `[0.05,50]`, orders `0,1,2`, plus the
+> **canonical column `ν_{½,0}` pinned as its own variable** (Identity M).
+> Tail: keep **Lemma F1's periodic block rows for `ν_{lat}`** at `τ₁ = 30`, `P = 2πM/2T`, `N+1` blocks, and **add to
+> each block row the single monotone term `−Σ_k|c_k|p_k!/(s_k²+τ²)^{(p_k+1)/2}` evaluated at the block's left
+> endpoint**. This is legitimate because Lemma T's bound is *additive over the parts of `ν`* and the column term is
+> monotone in `τ`, so its worst case on a block is at the left endpoint: the two tail methods compose without any
+> new theorem. Interval rows on `[0, τ₁]` as in round 5; B&B unchanged and affordable (`τ₁ = 30`).
+
+That LP tests the only question round 9 leaves open — *do smooth columns buy anything on top of the lattice?* — at
+round-5 cost. Running the pure-smooth class at `T = \log 2` is **not** worth compute: at `T = 0.58` it is `68×`
+worse than the lattice (`−2.17·10⁻¹` vs `−3.20·10⁻³`), and §3's own dimension count explains why (60 parameters of
+which perhaps `3·\log(1000)/\log 2 ≈ 30` are independent, against 437 atoms; the broad `k = 0` columns are collinear
+on `[τ₁/10,τ₁]` because they all equal `−\sin(2Tτ)/τ + O(s/τ²)` there). The `\ell^1` blow-up in the LP output
+(`l1_cols = 1.9·10⁵` in run C, against the artificial variable cap `10⁴`) is the numerical signature of that
+collinearity and should be reported as such — and run C should be re-run with a larger cap before its `−0.441` is
+quoted, since the bound may be active.
+
+---
+
+## 7. Corpus, FATAL rule, and the phase-55/58 no-go
+
+The corpus table of `R154_025 §1` is accurate: `Laguerre` hits are the Laguerre–Pólya class and the paper-36
+integration by parts, unrelated to Laguerre *columns*. The `densidad exponencial` hits are checked and correctly
+distinguished: `[PROP 176.9]` (phase 55, `176-ataque-A-green-littlewood.md §4.3`, repeated in `phase-58/190 §(2)`)
+is a theorem that **no exponential zero-density theorem reaches target A** — "exponential density" there means the
+zero-counting bound `N(σ,T) ≪ T^{a(1−σ)}`, and the obstruction is that "the fatal mass lives at `s ≍ 1/\log T`".
+It has no bearing on exponential *densities of the outside-window measure* in `u`-space. **The distinction is
+correct; I would ask only that `R154_025` name `[PROP 176.9]` explicitly rather than "Green–Littlewood", since the
+proposition is the no-go and Green–Littlewood is only one of its four families.**
+FATAL rule: `T = 0.58 < \log 2 = 0.6931`; no positivity is claimed anywhere in round 9; the endpoint of record is
+untouched at `λ_min(A_{½\log3}) ≥ 8.8577·10⁻⁵`. **Clean.**
+
+---
+
+## 8. Required repairs (numbered, for the lead)
+
+1. **R1.** Downgrade "(P154.7) SOLVED" and "the tail row is vacuous" to the linear-in-`A` statement of §2; state
+   explicitly that Theorem O forces `A → ∞` along maximising sequences, so no uniform version exists.
+2. **R2.** Delete or relabel "residual penalty `≤ 2·10⁻²`, reducible to `0`" (§2): extrapolation, not a bound, and
+   the runs it is read from carry atoms to which Cor. T2 does not apply.
+3. **R3.** Lemma V: state (REL₀) honestly as the *two-constraint-free relaxation*; prove V(ii) for the constrained
+   problem by the correction argument of §4.3, or relabel V(ii)/(iii)/Cor. V1 `CONDITIONAL`.
+4. **R4.** Identity M: insert the constant `2e^{−T} = 1.1198`; keep the tautology remark but strip the
+   "magic function" framing.
+5. **R5.** §7's row for Lemma F1 must record the `τ₁` comparison of §6 (`30` vs `1.5·10^{41}` on the endpoint
+   certificate), so that no later round mistakes Lemma T for a replacement.
+6. **R6.** Report the `l1_cols` blow-up against the variable cap `10⁴` as a conditioning caveat on runs B/C/F/G.
+7. **R7.** Cite `[PROP 176.9]` by name in the corpus table.
+
+---
+
+## 9. One-paragraph reading
+
+**Is the tail problem genuinely solved?** No — it is *transformed*, and the transformation is worth having. Lemma T
+is correct, elementary and general: it replaces a lattice-periodic, `ρ`-floored, incommensurability-flavoured
+argument by one monotone inequality, and it prices each piece of the outside-window measure exactly
+(`atoms: full mass; broad columns: mass·s/τ₁`). But the price is not zero, and Theorem O guarantees it diverges: the
+requirement `τ₁ ≳ Σ_k|c_k|p_k!` for smooth `ν` and `\log τ₁ ≳ 2Σ_j|a_j|` for atoms both blow up along any sequence
+approaching `λ_min`, and the round's own LP data show the optimiser saturating the first. What Lemma T really
+achieves is the reduction of the tail cost from **exponential to linear** in the certificate's size — real progress,
+badly described. **Is Lemma V's negative result solid?** Its lower half is; its sharpness half rests on a witness
+that violates both primitivity constraints, and until §4.3 is written "no rate theorem exists" is a theorem about a
+different, larger problem. I expect the repair to go through, so I expect Lemma V to be true — but it is not yet
+proved, and an obstruction theorem is worth exactly its hypotheses. **What is now the binding object?** Neither the
+tail nor the mass–value exchange: it is the **approximation power of the certificate class on `[0,τ₁]` at fixed
+`\ell^1` budget** — precisely the object Theorem O says must diverge and §3's dimension count says the smooth class
+supplies too slowly. The lattice still wins by `68×`, and the honest next experiment is the hybrid of §6, not the
+smooth class alone.

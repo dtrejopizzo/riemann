@@ -1,0 +1,318 @@
+# R154.008 — Hostile audit, round 3 of phase 154
+
+*Auditor: Opus 5 (1M). 2026-09-20. Target: `R154_007_BUILDER_ROUND3.md` against `R154_006` (orders), `R154_005`
+(binding repairs RA–RI), `R154_004`, `R154_001/002` (Theorem A, two-condition primitive class),
+Paper 42 `main.tex:4072–4230`, and `scripts/round3/`. Every number below was recomputed or re-run by the auditor;
+independent reimplementations are marked "own". Auditor scripts: `audit.py`, `audit2.py`, `audit3.py`, `bb.py`
+(archived in `scripts/round3/audit_r3/`, together with the two certificates as `.pkl` and the exhaustive-cover logs;
+the diffs against `close5.py` are stated inline and are a few lines each).*
+
+---
+
+## 0. Verdict table
+
+| # | item | builder's label | **audit verdict** |
+|---|---|---|---|
+| 1 | **Theorem D1** — zero duality gap, sup exhausted by finitely atomic `ν` | `PROVED` (new) | **PROVED, with one required repair (§1.4).** Every step of (i), (ii), (iii) rederived and confirmed, including the determinant identity `sinh T cosh T + T > 0` (exact, own algebra) and the `ĝ` asymptotics. One link — *"the conic hull is convex with the same interior as `M`"* — is asserted, not proved, and is what makes `w` finite near `b`. It closes in three lines (§1.4). **This is a genuine new theorem of the programme**, and it is an **equivalence**, not a proof of anything about `ζ`. |
+| 2 | **Lemma D2.1** (lattice atoms ⟹ `ν̂` `P`-periodic ⟹ tail certified on one period) | `PROVED` (new method) | **PROVED.** Periodicity is trivial and correct; the three tail majorants are correct and two of them are **sharp**: `∫_{-2T}^{2T}|g_1'| = 4T\sinh T` exactly, so `|ĝ_1| ≤ 8T\sinh T/τ` is exact, not lossy (own derivation + quadrature check to `10⁻¹⁶`). `m` increasing verified. The method is the real methodological gain of the round. |
+| 3 | rigorous constants `L = 337`, `G_0 = 1.29953`, `G_1 = 0.37653`, `ψ'(¼)/2 = 8.59866`, `Σv_n = 0.98026`, `σ_T(0) = −6.35244`, tail `+0.2352` | `PROVED` | **ALL REPRODUCED TO EVERY PRINTED DIGIT** (own, §2). `ĝ_0, ĝ_1` closed forms agree with quadrature to `4·10⁻¹⁶`. |
+| 4 | **certified `λ_min(A_{½log3}) ≥ −3.7002·10⁻³`** | **`PROVED`** (machine-verified) | **DOWNGRADE as printed; the *statement* survives after the auditor's own exhaustive re-verification.** Two defects in `close5.py`: (a) `cert = min(tail, bb)` uses `bb` = *minimum sampled value*, an **upper** bound on `inf f`; the Lipschitz residual `L·w/2 = 8.4·10⁻⁶` is **never subtracted** (contrast `close3.certify`, which does it correctly); (b) the branch-and-bound **hits its 400 000-interval cap and silently discards intervals** (own instrumentation: `capped=True`; the true surviving set has measure `8.42` of `[0,100]`), so the run does **not** cover `[0,τ_max]`. **Auditor's repair, run to completion** (`bb.py`, stack-based, no discards, 300 175 806 evaluations, 110 381 048 terminal intervals, 1 685 s): `\inf_{[0,100]}f ≥ −3.71788877·10⁻³`. So the certificate is genuine and the correct certified value is **`−3.7179·10⁻³`** (`it0`), not `−3.7051·10⁻³`; the published `it1` figure `−3.7002·10⁻³` must likewise be relabelled `≈ −3.708·10⁻³` pending the same treatment. `PROVED` is recoverable, but only with the verifier rewritten. |
+| 5 | the LP/B&B run itself (`c5c_M16.log` it0) | data | **REPRODUCED EXACTLY** (own, 420 s): `LP = −3.605450·10⁻³`, `ρ = 1.50599`, `tail = +0.233308`, `β_0 = 1.9928506`, `β_1 = 0.0629253`, `‖a‖₁ = 24.599`, `L = 336.31`. No discrepancy anywhere. |
+| 6 | "the certificate data are in `scripts/round3/`" | claim | **REFUTED.** No `.pkl` for any `close5` run exists in `scripts/round3/` (only `sweepM.pkl`, from a different driver); `close5.py` pickles only inside `__main__`, which the logged invocation did not reach. The 292 weights `a_j` — i.e. **the certificate itself** — are nowhere in the repository. Only `β_0, β_1, ‖a‖₁, ρ` survive in the log. The run is reproducible (auditor did so, bit-for-bit) but the object is not archived. |
+| 7 | "the obstruction is LP size, not structure" | claim | **REFUTED at the stated parameters.** The run imposed `ρ ≤ 1.5` while its own tail row had **`+0.235` of unused slack** — i.e. `ρ ≈ 1.74` was affordable. Own rerun at `ρ ≤ 1.70`, identical grid, identical LP cost (371 s), exhaustively verified: **`λ_min(A_{½log3}) ≥ −1.6500·10⁻³`, a `2.25×` improvement for free** (§4) — a new record for the programme. The round left a factor `2.25` on the table through a parameter choice, not through LP size. |
+| 8 | LP grid `+2.18·10⁻⁴` / `+3.43·10⁻⁴` "crossing zero"; B&B `−1.14·10⁻²` | `DIAGNOSTIC-NUMERIC` | **CONFIRMED AND CORRECTLY LABELLED** — the honesty here is exemplary. But the accompanying reading ("closing needs a `10⁵`-row LP") is **the wrong diagnosis** (§4): regime (a) uses `τ_max = 400 ≈ 4.4` periods, which quadruples the grid cost to buy `ρ`-budget that regime (b) gets more cheaply by putting `τ_max` at **one period**. |
+| 9 | **D3**: `β_0 → 2`, `β_1 → 0` = the dual restores `Φ̂(i/2)+Φ̂(−i/2)` | `DIAGNOSTIC-NUMERIC` | **UPGRADE on the identity, CONFIRMED on the numerics.** The identity `∫Φ\cosh(u/2)du = ½(Φ̂(i/2)+Φ̂(−i/2))` is **exact** in the builder's normalisation (own check, §5), and `g_0` on `supp Φ ⊂ [−2T,2T]` *is* `\cosh(u/2)`, so `β_0 = 2` means exactly the two polar terms with coefficient `1` each. The interpretation is **exact, not heuristic**; that `2` is the *optimum* remains `DIAGNOSTIC-NUMERIC`. |
+| 10 | **D3**: the contact set is an **interval** `[0,≈13]` | `DIAGNOSTIC-NUMERIC` | **DOWNGRADE.** On the reproduced certificate the near-contact set is a **comb**, not an interval: `{f−c<10⁻⁴}` has **49 components** in `[0,30]` (first: `[0,0.026]`, `[0.286,0.341]`, …), total measure `12.27`; `{f−c<10⁻³}` has **22 components** spread to `τ = 29.13`, of which one is wide (`[0.804,11.89]`). "Touches on a set of positive measure" is right; "is an interval" is not. The complementary-slackness reading survives; the geometric picture must be restated. |
+| 11 | D3: no arithmetic structure; `70%` sign alternations; decay from the window edge | `DIAGNOSTIC-NUMERIC`, honest negative | **REPRODUCED** (own: alternation fraction `0.70103`; mean `\|a_j\|` `0.206, 0.157, 0.103, 0.022` on `[2T,3), [3,6), [6,12), [12,22)`; `\max\|a_j\| = 0.681` at `u = 2T`, the **first** lattice point). Honest and correct. |
+| 12 | D4 (`log 2`): `−8.49·10⁻²`, six orders short; `M`-progression slower | `DIAGNOSTIC-NUMERIC` | **ACCEPTED as labelled** (not re-run; the `log 2` driver `close4.py` was not re-executed — cost, and nothing turns on it). The structural explanation (incommensurate second contact `\log 3` defeats any lattice) is correct and is the round's best diagnostic remark. |
+| 13 | period residual "`2·10⁻²`" for `ρ` at step `2·10⁻⁵` | stated | **WRONG NUMBER, conservative direction.** Own: `L_ν = 2Σ\|a_j\|u_j = 324.42`, residual `L_ν h/2 = 3.24·10⁻³`, not `2·10⁻²`. The `ρ` printed (`1.50599`) is the correct one; only the quoted residual is wrong. |
+| 14 | repairs RA–RI | done | **ACCEPTED, one leftover (§6).** RA–RI are addressed substantively and in the right direction; RG is only half-done — the round still quotes `λ_min(½log3) ≤ 9.89281·10⁻⁴` (`K = 120`) when `R154_002`'s own `chk2` gives the **better** upper bound `9.791464·10⁻⁴` (`K = 160`). Every "distance to target" in §3.3 is computed against the weaker number. |
+| 15 | corpus checks | done | **CONFIRMED** (own greps, §7). "strong duality / dualidad fuerte / no duality gap": the only pre-existing hit outside this phase is `PLAN.md:846`, which poses it as the lead's **question**. "Besicovitch": 20+ hits, **all** almost-periodicity of `ζ` on vertical lines (papers 30, 32, phase-38) — a different use; the mean-value argument of D1 is new here. |
+| 16 | FATAL rule, no sign beyond `log 2`, no ζ-input | — | **COMPLIANT.** Paper 42 Thm `certifiedendpoints` already proves strict positivity for `0 < T ≤ ½log3` and at `T = log 2` by interval-arithmetic Feshbach; round 3 re-proves a *subset* of that by an independent method and claims nothing further. No zero-free region, no moment import, no ζ-zero. |
+| 17 | §8 item 1 | — | **CORRUPTED FILE.** The whole of §5 (the `log 2` table and paragraph) is pasted verbatim into the middle of open item 1, mid-sentence, ending `…present distance is <§5 text>SHORT`. Must be repaired before the file is cited. |
+
+---
+
+## 1. Theorem D1, rederived step by step
+
+### 1.1 (i) The relaxation direction
+`P(U)` drops the constraint `μ̌ ≡ 0` on all of `[2T,∞)` and keeps it only at the finitely many `u_i ∈ U`. Fewer
+constraints ⟹ **larger** feasible set ⟹ **smaller** infimum, so `P(U) ≤ λ_min`. The builder's direction is **right**,
+and the sentence justifying it ("the primal feasible set of (P) is contained in that of `P(U)`") is the correct
+justification. `P(U_n)` is nondecreasing along an increasing chain `U_1 ⊂ U_2 ⊂ …` for the same reason. **CONFIRMED.**
+
+That `(P)` really has value `λ_min` is a `RESTATEMENT` of Theorem A plus repair R1 of `R154_002`, and it is correct:
+`μ = |F̂|²dτ/2π` gives `μ̌ = c_F = Φ`, Theorem A gives `⟨A_TF,F⟩ = ∫σ_T dμ`, and conversely **Boas–Kac** turns a
+continuous positive-definite `Φ` with `Φ(0) = 1`, `\mathrm{supp}\,Φ ⊂ [−2T,2T]` into `c_F` with `\mathrm{supp}\,F` in
+an interval of length `2T`. The two moment conditions are `A(½) = A'(½) = 0` for `A(t) := ∫Φ(u)\cosh(tu)du`, i.e.
+`∫Φ\cosh(u/2) = ∫Φ·u\sinh(u/2) = 0`, i.e. a zero of order `≥ 2` of `Φ̂` at `±i/2`, i.e. (splitting the four zeros
+`±i/2` twice each between `F̂(z)` and `F̂(−z)`) `M_±(F) = 0`, i.e. `F ∈ P_T = \ker M_− ∩ \ker M_+` — which is exactly
+Paper 42's `\mathcal P_T` (`main.tex:4086`). **CONFIRMED**, consistent with `R154_002 §3` and `R154_005` row 13.
+
+### 1.2 (ii) Interiority of `b` in the moment cone
+* **Separation.** `M` convex cone, `0 ∈ M`. If `b ∉ \mathrm{int}\,M` there is `y ≠ 0` supporting/separating. The
+  builder writes `⟨y,z⟩ ≥ ⟨y,b⟩ ∀z ∈ M`; the standard orientation is `≤`, which is the same statement after `y ↦ −y`.
+  Taking `z = 0` and `z = tf(τ)`, `t ↑ ∞`, gives `⟨y,f(τ)⟩` of one sign for all `τ`; normalise to `G ≥ 0`. **Harmless
+  sign slip, no damage.**
+* **Besicovitch mean kills `y_0`.** `X^{-1}∫_0^X\cos(u_iτ)dτ → 0` because `u_i ≥ 2T > 0` (this is where the
+  outside-window support is used — if an atom at `u = 0` were allowed the step would fail, which is exactly why
+  `ν̂` has mean `0`); `ĝ_j → 0` by Riemann–Lebesgue (`g_j ∈ L¹`, compact support), so its mean is `0`. Hence the mean
+  of `G` is `y_0`, and `G ≥ 0` forces `y_0 ≥ 0`, while the separation gave `y_0 ≤ 0`. So `y_0 = 0` and then
+  `X^{-1}∫_0^X|G| = X^{-1}∫_0^XG → 0`. Testing against the bounded `\cos(u_iτ)` and using that the `u_i` are
+  **distinct and positive** gives `y_i/2 = 0`. **CONFIRMED, all four hypotheses used are present.**
+* **The `ĝ` asymptotics.** Own derivation: for even `g` supported in `[−2T,2T]`,
+  `ĝ(τ) = 2g(2T)\sin(2Tτ)/τ + 2g'(2T)\cos(2Tτ)/τ² + o(τ^{-2})` (the `g'` term is `2g'(2T)` and **not** `g'(2T)` because
+  `g` even ⟹ `g'` odd ⟹ the two endpoint contributions add). The builder's display is **exactly right**. The
+  remainder is `o(τ^{-2})` by Riemann–Lebesgue, not `O(τ^{-3})` as written — the stronger claim would need `g'' ∈ BV`;
+  **the argument only needs `o(τ^{-2})`, so this is a wording repair, not a gap.** `ĝ ≥ 0` then forces `g(2T) = 0`
+  (both signs of `\sin 2Tτ` occur at arbitrarily large `τ`) and then `g'(2T) = 0`.
+* **The `2×2` determinant.** With `g = y_{N+1}\cosh(u/2) + y_{N+2}u\sinh(u/2)`:
+  `g(2T) = y_{N+1}\cosh T + 2T\sinh T·y_{N+2}`, `g'(2T) = ½\sinh T·y_{N+1} + (\sinh T + T\cosh T)y_{N+2}`;
+  `\det = \cosh T(\sinh T + T\cosh T) − T\sinh²T = \sinh T\cosh T + T(\cosh²T − \sinh²T) = \sinh T\cosh T + T > 0`.
+  **Own recomputation, symbolic and numeric: `1.2159728110007215` both ways at `T = ½\log3`. Exact.**
+  So `y_{N+1} = y_{N+2} = 0`, `y = 0`, contradiction, `b ∈ \mathrm{int}\,M`. ∎
+
+### 1.3 The convex-analysis theorem actually used
+The builder cites no theorem by name. The one used is the **perturbation (Fenchel–Rockafellar / conic-LP) duality
+theorem**: for the value function `w(b') = \inf\{⟨σ_T,μ⟩ : μ ≥ 0, ⟨f,μ⟩ = b'\}`, one always has `\sup(\text{dual}) = w^{**}(b)`,
+and `w` convex with `b ∈ \mathrm{int}(\mathrm{dom}\,w)` and `w > −∞` gives `w` continuous, hence lsc, at `b`, hence
+`w^{**}(b) = w(b)`. The precise reference is **Rockafellar, *Convex Analysis*, Thm 7.2 + Cor 12.2.2 (equivalently
+Thm 30.4 / Cor 31.2.1)**; the "interior point" hypothesis is the **Slater condition** in conic form. **No closedness of
+the dual cone is needed** — closedness of `M` is exactly what interiority replaces, and this is the right way round
+(`M` here is *not* closed). The builder's route is sound; it should name the theorem.
+
+### 1.4 The one required repair (`RJ`)
+> *"The conic hull is convex with the same interior as `M`, so `b ∈ \mathrm{int}(\mathrm{dom}\,w)`."*
+
+This is asserted. `\mathrm{dom}\,w` contains `M` only if every `b' ∈ M` is the moment vector of **some** feasible `μ`
+of finite energy — and `σ_T(τ) ∼ \log τ` is unbounded, so a measure realising `b'` need not have `⟨σ_T,μ⟩ < ∞`.
+**Repair (three lines):** let `M_c ⊆ M` be the moment cone of *compactly supported* positive measures; `w < ∞` on `M_c`.
+Every finite `μ` is the weak limit of `μ|_{[−R,R]}`, whose moments converge (all `f_k` are bounded continuous), so
+`M ⊆ \overline{M_c}`. Hence `\dim M_c = \dim \overline{M_c} = m+1` (by §1.2), so `\mathrm{int}\,M_c ≠ ∅` and for convex sets
+`\mathrm{int}\,\overline{M_c} = \mathrm{int}\,M_c`; therefore `b ∈ \mathrm{int}\,M ⊆ \mathrm{int}\,M_c ⊆ \mathrm{int}(\mathrm{dom}\,w)`. ∎
+**With this inserted, Theorem D1 is `PROVED`.**
+
+### 1.5 (iii) The weak-* limit
+The builder **avoids** the trap the orders flagged: he never needs the set of autocorrelations of `P_T` functions to be
+weak-* closed. He passes to the limit at the level of **measures** and recovers `F` at the end by Boas–Kac. Checked:
+tightness from `σ_T → +∞` and `σ_T` bounded below (`σ_T ≥ σ_T(0) = −6.35244`, `m` increasing) with
+`⟨σ_T,μ_n⟩ ≤ λ_{\min}+1`; limit is a probability measure (no escape of mass); `μ̌(u) = 0` on the dense set `∪U_n` and
+`μ̌` continuous ⟹ `μ̌ ≡ 0` on `[2T,∞)`; `∫ĝ_jdμ = 0` since `ĝ_j` is bounded continuous and `→0`; lsc of
+`μ ↦ ∫σ_Tdμ` along weak-* convergence for `σ_T` continuous and bounded below. **All correct. No gap here.**
+
+### 1.6 What D1 does and does not say
+> **Equivalent formulation of Weil positivity at support `T`.** For `T > 0` and weights `v_n = 2Λ(n)/\sqrt n`
+> (`n < e^{2T}`), with `σ_T(τ) = \mathrm{Re}\,ψ(¼+iτ/2) − \logπ − Σ_nv_n\cos(τ\log n)` and
+> `ĝ_0, ĝ_1` the cosine transforms of `\cosh(u/2)1_{|u|<2T}` and `u\sinh(u/2)1_{|u|<2T}`:
+> **`A_T ≥ 0` on `\mathcal P_T` ⟺ for every `ε > 0` there exist finitely many `u_1,…,u_N ≥ 2T`, reals `a_j`, `β ∈ R²`
+> with `σ_T(τ) + Σ_j2a_j\cos(u_jτ) + β_0ĝ_0(τ) + β_1ĝ_1(τ) ≥ −ε` for all `τ ∈ R`.**
+
+**FATAL rule.** This is an **equivalence**, not a proof: it converts one hard statement into another, and by Theorem O
+the `ε` can never be taken to be `0`. It buys *completeness of the certificate route* (whenever `λ_{\min} > 0` a finite
+certificate exists), and nothing about `ζ`. The builder states this correctly.
+
+---
+
+## 2. Constants and the tail (own recomputation)
+
+| quantity | builder | **own** |
+|---|---|---|
+| `Σ_nv_n` (`n < 3`, i.e. `n = 2`) | `0.9803` | `0.9802581434685471` |
+| `σ_T(0) = m(0) − Σv_n` | `−6.3524` | `−6.352441562694213` |
+| `ψ'(¼)/2` | `8.5987` | `8.598664577253556` |
+| `G_0 = ∫_{-2T}^{2T}\|u\|\cosh(u/2)du` | `1.29953` | `1.2995320953562448` |
+| `G_1 = ∫u²\|\sinh(u/2)\|du` | `0.37653` | `0.37653007796128435` |
+| `m(100)` | — | `2.7672889528391584` |
+| `k_0 = 2\cosh T/τ_{\max} + \sinh T/τ_{\max}²` | — | `0.023151745794504` |
+| `k_1 = 8T\sinh T/τ_{\max}` | — | `0.025371364023903` |
+| tail at `ρ = 1.5041, β_0 = 1.992849, β_1 = 0.062930` | `+0.2352` | **`+0.23519625597776`** |
+| `\det = \sinh T\cosh T + T` | `> 0` | `1.2159728110007215` (both forms agree exactly) |
+| `ĝ_0, ĝ_1` closed forms vs `scipy.quad` at `τ = 0.7, 3.3, 11` | — | `\|Δ\| ≤ 4.4·10⁻¹⁶` |
+
+**Sharpness note (own).** `|ĝ_1(τ)| ≤ 8T\sinh T/τ` is not a crude majorant: the boundary term contributes
+`4T\sinh T/τ` and `∫_{-2T}^{2T}|g_1'| = 2g_1(2T) = 4T\sinh T` **exactly** (because `g_1' ≥ 0` on `[0,2T]`), so the sum is
+exactly `8T\sinh T/τ`. Lemma D2.1's tail is tight to the integration-by-parts order used. `m` increasing is correct
+(`m'(τ) = −½\,\mathrm{Im}\,ψ'(¼+iτ/2) > 0` for `τ > 0`). **Lemma D2.1: `PROVED`.**
+
+---
+
+## 3. The certified value: two defects (the blocking finding)
+
+**Reproduction.** Own rerun of `close5.py 16 20 log3 100 1.5 0.002`, iteration 0, 420 s, 292 atoms, `P = 91.50723`,
+50 699 `τ`-rows / 5 264 period-rows: `LP = −3.605450·10⁻³`, `ρ = 1.5059887`, `tail = +0.2333076`,
+`β_0 = 1.99285057`, `β_1 = 0.06292529`, `‖a‖₁ = 24.59926`, `L = 336.312`, min sampled `= −3.7050595·10⁻³`.
+**Every digit of the builder's `it0` row is reproduced.** The defects are not in the numbers; they are in what is
+concluded from them.
+
+**Defect 1 — the Lipschitz residual is not subtracted.** `close5.run` computes `cert = min(tail, bb)` where `bb` is
+`survivors(...)`'s `best`, i.e. the **smallest sampled midpoint value**. That is an *upper* bound on `\inf f`. A lower
+bound needs `\min_{\text{surviving}}\mathrm{val} − Lw/2`. With `L = 337`, `w = 5·10⁻⁸` this is `8.4·10⁻⁶`. The
+orders anticipated this and asked to "confirm it is subtracted": **it is not.** (`close3.certify`, the round-2-era
+function, does it correctly — the regression is in `close5.py` only.) Headline repair: `−3.7002·10⁻³ → −3.7086·10⁻³`.
+
+**Defect 2 (blocking) — the branch-and-bound does not cover `[0,τ_max]`.** `survivors()` caps the surviving list at
+400 000 intervals per level, keeping the 400 000 with the *lowest* values and **discarding the rest without certifying
+them**, and caps the returned list at 40 000. Own instrumentation of the identical code path on the reproduced
+certificate: **`capped = True`, 800 000 survivors at the final level.** The cap therefore fired, so the union of the
+intervals actually examined is a strict subset of `[0,100]` and the run proves nothing about the complement. The
+logged `nsurv = 40000` in `c5c_M16.log` is the *display* cap and gives no warning of this.
+
+**Repair (auditor's, `bb.py`).** Replace the level-synchronous array by a stack processed in chunks of `≤ 2·10⁵`
+intervals, refining each chunk to `w < 5·10⁻⁸` before popping the next; memory is then bounded without discarding
+anything, and the returned bound is `\min(\text{target}, \min_{\text{final survivors}}\mathrm{val} − Lw/2)`. This is
+a ten-line change to `close5.py` and is the **blocking repair** for the round's headline label.
+
+**The exhaustive run, completed (own).** `bb.py` on the reproduced `it0` certificate, `w_{\min} = 5·10⁻⁸`,
+`target = ` the LP value:
+
+```
+L=336.31  target=-3.605450e-03  evals=300,175,806  best_sampled=-3.70505949e-03
+final_intervals=110,381,048  surviving_measure=8.421  lb_on_survivors=-3.71788877e-03
+RIGOROUS  inf_[0,100] f >= -3.71788877e-03      (1685 s)
+```
+
+The surviving set has measure **`8.42` out of `100`** — the cap was hiding about `8%` of the interval, two orders of
+magnitude more than the 400 000 intervals it kept. So the defect was real and not cosmetic. **But the conclusion
+survives**: the certificate is genuine, and combined with the tail `+0.2333` the correct certified statement for the
+reproduced `it0` is
+
+> **`λ_{\min}(A_{½\log3}(w_ζ)) ≥ −3.7179·10⁻³`** (`PROVED`, `τ_{\max} = 100`, `L = 336.31`, `ρ = 1.50599`,
+> exhaustive Lipschitz cover of `[0,100]` to width `5·10⁻⁸`, tail by Lemma D2.1).
+
+The builder's `it0` figure `−3.7051·10⁻³` and headline `it1` figure `−3.7002·10⁻³` are each optimistic by
+`≈ 1.3·10⁻⁵` and were obtained by a verifier that did not cover its domain. **Verdict: `DOWNGRADE` of the printed
+number and of the label as earned; `PROVED` restored at `−3.7179·10⁻³` by the auditor, conditional on the round
+adopting `RK`.**
+
+---
+
+## 4. Regime (a), the resonances, and a cheap improvement that works
+
+**The phenomenon is real and correctly diagnosed.** `ν̂(τ) = Σ_j2a_j\cos(jdτ)` with `d = 2T/M`: at `τ = pP/q`
+(`P = 2π/d`) the phases `jdτ = 2πjp/q` take only `q` values, the polynomial collapses, and the dips concentrate there.
+Regime (a)'s LP value `+2.18·10⁻⁴` against a true minimum `−1.14·10⁻²` is exactly this. The `DIAGNOSTIC-NUMERIC`
+label is right and the builder's refusal to claim the crossing is the best thing in the round.
+
+**The proposed fix is the wrong lever.** "A `10⁵`-row LP over `[0,200]`" attacks the symptom. Regime (a) runs
+`τ_max = 200`–`400`, i.e. `2.2`–`4.4` periods; the only thing a larger `τ_max` buys is a larger `ρ`-budget
+(`m(τ_max)` grows like `\log τ_{\max}`, so `τ_{\max}: 100 → 400` buys `+0.69` of `ρ`) while quadrupling the grid cost
+and leaving `ν̂`'s resonance comb to be resolved over four periods instead of one. Regime (b)'s choice
+`τ_{\max} ≈ P` is the right one and the round already found it.
+
+**The actual waste (own, and the round's own numbers give it away).** The certified run imposed `ρ ≤ 1.5` but its
+tail row closed at `+0.2352` — i.e. `ρ ≈ 1.74` was affordable at zero cost. Own reruns, identical grid, identical
+budget:
+
+| run | `ρ` cap | LP value | certified `ρ` | tail | `L` | certified `c` | wall |
+|---|---|---|---|---|---|---|---|
+| builder `it0` (reproduced) | `1.50` | `−3.605450·10⁻³` | `1.50599` | `+0.23331` | `336` | `−3.7179·10⁻³` (exhaustive) | 420 s + 1 685 s |
+| own | `1.73` | `−1.266536·10⁻³` | `1.74359` | **`−0.00336`** (overshoots) | `388` | `−3.3602·10⁻³` | 389 s |
+| **own** | **`1.70`** | **`−1.483502·10⁻³`** | `1.70719` | `+0.03296` | `393` | **`−1.6500·10⁻³`** (exhaustive) | 371 s + 1 489 s |
+
+Both `c` values are from the **exhaustive** stack-based cover (`bb.py`), not the capped one. For the `ρ ≤ 1.70`
+certificate: `evals = 308,551,456`, `final_intervals = 128,142,320`, `surviving_measure = 9.776`,
+`lb = −1.64997320·10⁻³`, tail `+0.03296 >` that, so
+
+> **`λ_{\min}(A_{½\log3}(w_ζ)) ≥ −1.6500·10⁻³`** — a new record for the programme, `2.25×` better than round 3's
+> corrected value and `21×` better than round 2's `−3.4567·10⁻²`, obtained by changing one LP bound.
+
+**A `2.25×` improvement in 12 minutes of compute, from one parameter.** The distance to the target shrinks from the
+round's claimed `3.8×` to `1.7×` (against the *better* upper bound `λ_{\min} ≤ 9.791464·10⁻⁴` of `R154_002`, which the
+round should have used; `1.65·10⁻³/9.79·10⁻⁴ = 1.69`). The `ρ ≤ 1.73` row also shows the sharp edge: the LP's `ρ`
+variable is bounded on a coarse period grid whose Lipschitz constant is `L_ν ≈ 376`, so the *certified* `ρ` overshoots
+the cap and the tail goes negative. **Recommended recipe:** set `ρ_{\max}` from the tail row with a
+`L_ν h/2` safety margin, put `τ_{\max}` at one period, and spend the saved rows on `M`.
+
+**Corrected reading of item 7.** "The remaining obstruction is LP size, not structure" is **not established**. What
+this round establishes is that the remaining obstruction is *tuning plus LP size*; a factor `2.25` of it was tuning.
+Whether the last factor `1.7` is also tuning is now the sharpest open question of the phase.
+
+---
+
+## 5. D3, checked
+
+**The identity is exact.** With `Φ̂(z) = ∫Φ(u)e^{izu}du`, `Φ̂(i/2) = ∫Φe^{-u/2}du`, `Φ̂(−i/2) = ∫Φe^{u/2}du`, so
+`½(Φ̂(i/2)+Φ̂(−i/2)) = ∫Φ(u)\cosh(u/2)du` — **exactly** the builder's display. On the primal side
+`∫ĝ_0dμ = ∫g_0(u)μ̌(u)du = ∫_{-2T}^{2T}Φ(u)\cosh(u/2)du`, and since `\mathrm{supp}\,Φ ⊂ [−2T,2T]` the truncation in
+`g_0` is invisible. Hence `β_0 = 2` adds back `2·½(Φ̂(i/2)+Φ̂(−i/2)) = Φ̂(i/2)+Φ̂(−i/2)`, which is precisely the two
+polar terms of Weil's explicit formula, **each with coefficient `1`**, with the sign convention of
+`σ_T = m − Σv_n\cos` (archimedean minus primes) matching the explicit formula's. **The interpretation is exact
+arithmetic, not a heuristic**, and the builder understates it. What stays `DIAGNOSTIC-NUMERIC` is that the *optimum*
+sits there (`β_0 = 2.4463, 2.1384, 2.00052, 2.00078` and `β_1 = −1.4070, −0.3885, −0.00520, −0.00803`; own
+reproduction on the `τ_{\max} = 100` run: `β_0 = 1.99285`, `β_1 = +0.06293`, the residual `7·10⁻³` reflecting the
+`ρ`-cap, not the `M`-limit). Note the `β_1 \to 0` claim is **not monotone** across the two families: the `ρ`-capped
+runs give `β_1 = +0.063, +0.022, +0.026` while the `τ_{\max}=400` runs give `β_1 = −5.4·10⁻⁴`. State it as a limit,
+not a monotone convergence.
+
+**Sign conventions in the LP match Theorem A.** Checked line by line in `close3.lp`: row block `R1` is
+`c − 2Σa_j\cos(u_jτ) − β_0ĝ_0 − β_1ĝ_1 ≤ σ_T(τ)`, i.e. `c ≤ σ_T + ν̂ + β·ĝ`; `R2` is `ν̂(t) ≥ −ρ`; `R3` is the tail row
+`c + ρ + k_0t_0 + k_1t_1 ≤ m(τ_{\max}) − Σv_n` with `t_j ≥ |β_j|` enforced by `R4`; objective `\min(−c)`. Atoms start
+at `j = M`, i.e. `u = 2T` exactly (admissible by RB). Pairing a feasible `μ` against the certificate gives
+`λ_{\min} ≥ c` because `∫ν̂dμ = Σ2a_jμ̌(u_j) = 0` (support outside the window) and `∫ĝ_jdμ = 0` (primitivity).
+`v_n = 2Λ(n)/\sqrt n` in `vdict` matches `A_T`'s shift coefficients. **All correct.**
+
+**Contact set: downgraded** — see verdict row 10. `{f−c<10⁻⁴}` is 49 components, `{f−c<10⁻³}` is 22, reaching
+`τ = 29.13`. The correct statement is *"the near-contact set has positive measure and its measure grows with `M`"*,
+with the word "interval" deleted; the complementary-slackness reading of Theorem O is unaffected and remains the best
+structural remark of D3.
+
+**"No arithmetic structure": accepted**, reproduced exactly, and an honest negative worth keeping on the record.
+
+---
+
+## 6. Repairs RA–RI, and the new ones
+
+RA–RI are all addressed, in the right direction, and RA in particular (withdrawing round 2's "decisive negative"
+headline) is the correct self-correction. Leftovers and new items:
+
+* **RG (partial).** Use `λ_{\min}(½\log3) ≤ 9.791464·10⁻⁴` (`R154_002` `chk2`, `K = 160`) rather than `9.89281·10⁻⁴`
+  (`K = 120`); Galerkin upper bounds improve with `K`, and every "distance to target" in §3.3 is computed against the
+  weaker one.
+* **RJ (blocking, new).** Insert the `M ⊆ \overline{M_c}` argument of §1.4 into the proof of D1.
+* **RK (blocking, new).** Rewrite `close5.py`'s verifier as in §3 (stack, no discards) and subtract `Lw/2`; re-label
+  the `½log3` certified value accordingly. Until then the label is `DIAGNOSTIC-NUMERIC`.
+* **RL (blocking, new).** **Archive the certificate.** Pickle and commit `us, a, β_0, β_1, ρ, τ_{\max}` for the run
+  that is quoted. At present no `.pkl` from `close5.py` exists; the 292 weights exist nowhere in the repository.
+* **RM.** Fix the corrupted §8 item 1 (§5 pasted into it).
+* **RN.** Period residual is `L_νh/2 = 3.24·10⁻³`, not `2·10⁻²`.
+* **RO.** In D1, `O(τ^{-3})` → `o(τ^{-2})`; name the duality theorem (Rockafellar Cor 31.2.1 / Slater in conic form)
+  and say explicitly that dual-cone closedness is **not** needed.
+* **RP.** Rerun at `ρ_{\max}` set from the tail row (§4): the round's own best number improves `2.25×`.
+
+---
+
+## 7. Corpus checks (own greps, 2026-09-20)
+
+* `grep -rin "strong duality\|dualidad fuerte\|no duality gap\|zero duality gap" 03-research 04-papers 05-meta`
+  outside phase 154 → **one hit**, `PLAN.md:846`, which poses it as the round-3 *question*. The theorem is new.
+* `grep -rin "besicovitch"` → papers 30, 32 (almost periodicity of `ζ` on vertical lines, `B^2` classes),
+  phase-38, paper 42 (`Besicovitch–Bohr Hilbert space`), one reference file. **All a different use**; the mean-value
+  argument inside a moment-cone separation is new here. No credit issue.
+* Boas–Kac: already vetted in `R154_002` row 1b; the citation is now correct throughout.
+
+---
+
+## 8. Honest reading of round 3
+
+Round 3 produced one genuine new theorem and one genuine new method, and then over-labelled its numerical headline.
+**Theorem D1 is real**: the proof is essentially correct, the one missing link is repairable in three lines, and the
+statement it yields — that Weil positivity at support `T` is *equivalent* to the existence, for every `ε > 0`, of a
+finite atomic outside-window certificate of value `> −ε` — is the first unconditional statement in this programme
+that the certificate route is not merely sufficient but **complete**; it also converts round 2's "class ceiling" from
+conditional to unconditional and squares exactly with Theorem O (the sup is attained by no certificate but approached
+by finitely atomic ones). It is, however, an equivalence, and by itself proves nothing about `ζ`. **Lemma D2.1 is
+the round's practical advance**: replacing `|ν̂| ≤ TV(ν)` by periodicity moves the required `τ_{\max}` from `e^{120}`
+to one period, and that single idea is what makes certificates with `‖a‖₁ ≈ 25` verifiable at all. Against this, the
+headline `−3.7002·10⁻³` is **not** a proved bound as it stands: the verifier never subtracts its own Lipschitz
+residual, and — the blocking defect — its branch-and-bound silently discards intervals when its cap fires, which it
+does, leaving `8%` of `[0,100]` unexamined. The auditor rebuilt the cover without discards and ran it to completion
+(300 million evaluations, 28 min): the certificate *is* genuine, at the corrected value `−3.7179·10⁻³`. So the damage
+is to the label and the last digits, not to the object. The certificate itself was never archived. And the round's diagnosis that "the obstruction is LP size, not
+structure" is refuted by its own tail column: leaving `0.235` of tail slack unused cost a factor `2.25`, which the
+auditor recovered in twelve minutes of LP time (`c = −1.6500·10⁻³`, exhaustively verified, `1.7×` from the target
+rather than `3.8×`). So: the route is
+"complete in principle" — that is now a theorem — but the first fully certified structural proof at `½log3` does not
+exist yet, and is closer than the round claims (a factor `\lesssim 2` in `c`, not an order of magnitude) while being
+further than the round claims in rigour (the verifier must be rewritten before any `PROVED` label is defensible). No
+sign is claimed beyond `T ≤ \log 2`; Paper 42's interval-arithmetic certificate remains the only proof of positivity
+at these endpoints, and nothing in round 3 touches `ζ`.

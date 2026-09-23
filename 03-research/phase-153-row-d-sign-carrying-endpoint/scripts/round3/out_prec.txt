@@ -1,0 +1,13 @@
+quadrature sensitivity at b=log3, K=160:
+  taumax=2000 npan=400 ng=24:  1.06734589e-07
+  taumax=4000 npan=400 ng=24:  1.06754469e-07
+  taumax=8000 npan=400 ng=24:  1.06756681e-07
+  taumax=4000 npan=600 ng=24:  1.06754083e-07
+  taumax=4000 npan=400 ng=32:  1.06754018e-07
+basis refinement at b=log3:
+  K=100:  1.09927342e-07
+  K=160:  1.06754469e-07
+  K=240:  1.04378171e-07
+  K=320:  1.03070519e-07
+argmax at T=log2 (golden section, K=160):
+  b*=1.0986265908  b*-log3=+1.430e-05  lam= 3.80122501e-06  lam(log3)= 1.06754469e-07
