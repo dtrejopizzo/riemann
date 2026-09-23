@@ -145,9 +145,10 @@ Lemma~\ref{lem:roughEF}). Weil's criterion says that the Riemann Hypothesis
 \]
 Write $\lamA$ for the bottom of $\mathfrak a_T$ on the unit sphere of $\PT$ and $\lamW$ for that
 of $W_T$ on the unit sphere of $L^2(\IT)$; $\lamW\le\lamA$ since the two forms agree on $\PT$.
-Positivity is known unconditionally for $T\le\log2$ \cite{Paper42}, for the complete form at
-autocorrelation support $\log 2$ \cite{Yoshida1992,Bombieri2000}, and, by certified matrix
-computation, at support $1.6$ \cite{Zhu2026}.
+Positivity of the primitive form ($\lamA\ge0$) is known unconditionally for $T\le\log2$ \cite{Paper42}.
+Positivity of the complete form ($\lamW\ge0$) is known at autocorrelation support $\log 2$, i.e.\ for
+$T\le\frac12\log2$ \cite{Yoshida1992,Bombieri2000}, and, by certified matrix computation, at support $1.6$,
+i.e.\ for $T\le0.8$ \cite{Zhu2026}.
 
 This paper is about the \emph{dual} of the problem ``$\lamA\ge0$''. The primal side---minimise
 $\mathfrak a_T$ over unit vectors---has been studied variationally by Bombieri
@@ -266,7 +267,13 @@ uniformity in $T$ alone (Proposition~\ref{prop:uniform}, Theorem~\ref{thm:finmod
 and, from the verified zeros up to height $3\cdot10^{12}$ and Rosser's zero count, the margin decays,
 $\lamA\le4\cdot10^9Te^{-15.449T}$ for $T\ge1$ (Theorem~\ref{thm:margin}), so that no uniform margin exists and
 RH is equivalent to $\lim_{T\to\infty}\lamA\ge0$ (Corollary~\ref{cor:margin2}) --- the trivial half of Zhu's
-conjectural law, exponentially weaker than it. Three appendices carry the enclosure methods, the Li
+conjectural law, exponentially weaker than it. At a single window the two forms are related exactly:
+$\lamW\ge0$ if and only if $\mathrm{RD}_T$ holds and a diagonal $2\times2$ matrix $\mathfrak G_T$ is positive
+semidefinite, with a range condition in a degenerate sector (Theorem~\ref{thm:parityschur}). $\mathfrak G_T$ is the
+polar capacity, the least complete energy needed to prescribe $\Phi_F$ at the pole
+(Proposition~\ref{prop:polarcap}). This positivity is not a comb-class consequence of $\mathrm{RD}_T$ at any
+$T\in[0.4608,0.58]$ (Corollary~\ref{cor:convfail}), and with the primes deleted the complete form is negative
+from $T=0.4608$ on (Proposition~\ref{prop:archneg}). Three appendices carry the enclosure methods, the Li
 dictionary and the measured numbers, so that the proved and the measured never share a page.
 
 \subsection{Related work}\label{subsec:related}
@@ -304,9 +311,13 @@ of the prime generator was written down with the archimedean part taken to be a 
 a pure-jump process (Theorem~\ref{thm:S}).
 
 \subsection{What is not claimed}
-No statement about the zeros of $\zeta$ beyond $T\le\log2$ is asserted, and no sign is claimed
-for any $T>\log 2$. Positivity at $T\le\log2$ is known \cite{Paper42,Yoshida1992,Bombieri2000},
-and at support $1.6$ by \cite{Zhu2026}; Theorem~\ref{thm:C} is an independent proof of the
+No statement about the zeros of $\zeta$ beyond $T\le\log2$ is asserted, and this paper proves no sign,
+of either form, at any $T>\log 2$. Which form is meant matters. For the primitive form ($\lamA\ge0$,
+i.e.\ $\mathrm{RD}_T$) positivity is known for $T\le\log2$ \cite{Paper42}, and for $T\le0.8$ through
+\cite{Zhu2026}, since $\lamA\ge\lamW$. For the complete form ($\lamW\ge0$) it is classical for
+$T\le\frac12\log2$, the prime-free range \cite{Yoshida1992,Bombieri2000}. On $(\frac12\log2,0.8]$ it rests on
+\cite[Thm.~1.2]{Zhu2026} alone, cited and not re-verified here. Nothing in this paper proves $\lamW\ge0$ at any
+$T>\frac12\log2$. Theorem~\ref{thm:C} is an independent proof of the
 positivity of the \emph{primitive} form at $T=\frac12\log3$, by a different kind of object, not a
 new range --- Zhu's certificate is for the complete form, and it is that certificate, not
 Theorem~\ref{thm:C}, that yields the unconditional half of Corollary~\ref{cor:KEP08}. Theorem~\ref{thm:Z} and its corollaries are
@@ -315,7 +326,10 @@ that the dual method cannot by itself supply the uniformity in $T$ that RH requi
 Theorem~\ref{thm:margin} is an upper bound on the margin and gives no sign at any window.
 Theorem~\ref{thm:index} and Corollaries~\ref{cor:Tarch}, \ref{cor:H1} concern the archimedean form
 with the prime comb deleted; they give no sign for $\mathfrak a_T$ or $W_T$ at any window and no
-statement about the zeros.
+statement about the zeros. The same holds for Proposition~\ref{prop:archneg}. Theorem~\ref{thm:parityschur}
+and Proposition~\ref{prop:polarcap} are identities at a fixed window and give no sign.
+Corollary~\ref{cor:convfail} concerns comb-level forms and classes of derivations. It says nothing about
+the zeros of $\zeta$ or of any modified $\zeta_a$.
 
 \subsection{Conventions and labels}
 $\widehat h(\tau)=\int_\R h(u)e^{i\tau u}du$; for even $h$ this is $\int h\cos(\tau u)$. For a
@@ -953,8 +967,8 @@ that residual is.
 
 At $T=\frac12\log3$ the window is $[-\log3,\log3]$, the contact set is $\NT=\{2\}$,
 $v_2=2\log2/\sqrt2=0.98025814\ldots=\Aconst$, and the Galerkin upper bound is
-$\lamA\le9.893\cdot10^{-4}$ ($K=120$ modes, \textsc{diagnostic}). Positivity here is known
-\cite{Paper42,Zhu2026}. The following is an independent proof by an explicit dual feasible point.
+$\lamA\le9.893\cdot10^{-4}$ ($K=120$ modes, \textsc{diagnostic}). Positivity of the primitive form here is
+known \cite{Paper42}, and positivity of the complete form by \cite{Zhu2026}. The following is an independent proof by an explicit dual feasible point.
 
 \begin{theorem}[explicit certificate]\label{thm:C}
 \textsc{proved (machine-verified).} Let $T=\frac12\log3$, $d=2T/24=\frac{\log3}{24}$,
@@ -1136,7 +1150,8 @@ certificate whose infimum is $-3.1964\cdot10^{-3}$, exhaustively verified; the s
 with the canonical column $\nu_{\frac12,0}$ added (Lemma~\ref{lem:hybrid}) did not improve it
 within the solver accuracy available, and a clustered placement of the atoms was worse by a
 factor $4$. All these numbers are \textsc{diagnostic}; nothing is certified at any
-$T>\frac12\log3$ by the methods of this paper, and the sign there rests on \cite{Paper42,Zhu2026}.
+$T>\frac12\log3$ by the methods of this paper. The sign there rests on \cite{Paper42} for the primitive form
+and on \cite{Zhu2026} alone for the complete form.
 Four levers were eliminated by measurement (linear-programme tolerance, grid, verifier, tail
 lemma); what remains is the size of the certificate class, which by Theorem~\ref{thm:Vp} no
 mass-based rate theorem can predict.
@@ -2374,14 +2389,16 @@ $A=0$. Hence both are nonpositive at $T=T_0(0)=0.74921$ and negative for $T>T_0(
 itself, as for every $T\ge0.60$, $\laminf\le\laminfP<0$ by Corollary~\ref{cor:Tarch}), and $\laminfP(T)\downarrow C_0$ as
 $T\to\infty$, since $\Lev\ge0$ and $\varphi((3\pi/2T)^2)\downarrow0$.
 \emph{(iii)} For $2T<\log2$ the contact set is empty, so $W_T=\Ainf$ and $\laminf(T)\ge0$ by the
-known positivity of $W_T$ for $T\le\log2$ \textup{\cite{Paper42,Yoshida1992,Bombieri2000}}.
+known positivity of the complete form at autocorrelation support $\le\log2$
+\textup{\cite{Yoshida1992,Bombieri2000}} (and, certified, \textup{\cite[Thm.~1.2]{Zhu2026}}).
 \emph{(iv)} Consequently the thresholds
 $T^*_\infty=\sup\{T:\laminf(T)>0\}$ and $T^*_{\infty,\mathrm P}=\sup\{T:\laminfP(T)>0\}$ exist, and
 \[
 T^*_\infty\ \le\ T^*_{\infty,\mathrm P}\ \le\ 0.74921 ;
 \]
 for $T^*_{\infty,\mathrm P}$ this is sharpened to $0.58\le T^*_{\infty,\mathrm P}\le0.60$ by
-Corollary~\ref{cor:Tarch}.
+Corollary~\ref{cor:Tarch}, and for $T^*_\infty$ to $T^*_\infty\le0.4608<0.58\le T^*_{\infty,\mathrm P}$ by
+Proposition~\ref{prop:archneg}.
 \end{proposition}
 \begin{proof}
 (i) $K$, $C_0$ and the two Tate moments are $T$-free, and an infimum over a growing set is
@@ -2548,13 +2565,58 @@ symbol, an exact finite section and a Schur complement over the tail controlled 
 Theorem~\ref{thm:P} --- an intermediate problem in the classical sense, for which no priority is
 claimed. It improves the bound $0.74921$ of Proposition~\ref{prop:arch}(iv).
 
+On all of $L^2(\IT)$ the pole term $2A(F)B(F)$ is present, and one explicit odd test makes the
+archimedean form negative well before $T^*_{\infty,\mathrm P}$. Until now the only proved upper bound on
+$T^*_\infty$ was $T^*_\infty\le T^*_{\infty,\mathrm P}\le0.60$ (Proposition~\ref{prop:arch}(iv),
+Corollary~\ref{cor:Tarch}).
+
+\begin{proposition}[the archimedean complete form is negative from $T=0.4608$]\label{prop:archneg}
+\textsc{proved}; the one numerical evaluation is done in interval arithmetic. For $T>0$ let
+$F^{\mathrm{odd}}_T(t)=t$ on $\IT$ and put
+\[
+U(T):=\frac{2T^3}3\Big(C_0+\log\coth\frac T2+2\arctan e^{-T}\Big)+\frac{2T^3(3T+7)}9
+-2\Big(4T\cosh\frac T2-8\sinh\frac T2\Big)^2 .
+\]
+Then $\Ainf(F^{\mathrm{odd}}_T)\le U(T)$, and $U(0.4608)\in[-7.0159575,-7.0159574]\cdot10^{-6}$. Hence
+$\laminf(T)<0$ for every $T\ge0.4608$, and
+\[
+T^*_\infty\ \le\ 0.4608\ <\ 0.58\ \le\ T^*_{\infty,\mathrm P} .
+\]
+\end{proposition}
+\begin{proof}
+Write $F=F^{\mathrm{odd}}_T$. It is real, odd and bounded, and $|\Fh(\tau)|=O(1/|\tau|)$, so it lies in the
+form domain. By the parity paragraph after Proposition~\ref{prop:nodes}, $A(F)=-B(F)=s:=\int F\sinh\frac t2$,
+so the pole term is $2A(F)B(F)=-2s^2$, and $s=2\int_0^Tt\sinh\frac t2\,dt=4T\cosh\frac T2-8\sinh\frac T2$.
+For $0\le u\le2T$, $\cF(u)=\int_{u-T}^Tt(t-u)\,dt=(4T^3-6T^2u+u^3)/6$, so $\|F\|^2=\cF(0)=2T^3/3$ and
+$\cF(0)-\cF(u)=u(6T^2-u^2)/6\ge0$; for $u\ge2T$, $\cF(u)=0$. On $u>0$ one has $K(u)\le\frac1u+\frac12$,
+since $\sinh x\ge x$ and $\cosh x\ge1$. Against the nonnegative function $\cF(0)-\cF(u)$ this gives
+\begin{align*}
+\Lev(\cF)&\le\int_0^{2T}\frac{u(6T^2-u^2)}6\Big(\frac1u+\frac12\Big)du+\|F\|^2\int_{2T}^\infty K\\
+&=\frac{2T^3(3T+7)}9+\frac{2T^3}3\Big(\log\coth\frac T2+2\arctan e^{-T}\Big),
+\end{align*}
+by Theorem~\ref{thm:S}(iii) for the tail, with $\pi-2\arctan e^T=2\arctan e^{-T}$.
+Adding $C_0\|F\|^2$ and $-2s^2$ gives $\Ainf(F)\le U(T)$. The value of $U(0.4608)$ is an outward-rounded
+\texttt{mpmath} interval evaluation at $40$ digits, with $C_0=-\gamma-\frac\pi2-3\log2-\log\pi$ and
+$2\arctan e^{-T}$ enclosed by its alternating series with the remainder term. The script also re-derives
+$\cF$, the body integral and $s$ symbolically. So $\laminf(0.4608)\le\Ainf(F)/\|F\|^2<0$. The rest is
+Proposition~\ref{prop:arch}(i), $\laminf$ being nonincreasing, together with Corollary~\ref{cor:Tarch}.
+\end{proof}
+The certificate is \path{scripts/r156/audit_r156_witness_t.py} (about $1$\,s). It also gives
+$U(0.461)\in[-3.59383,-3.59382]\cdot10^{-5}$, $U(0.47)=-1.4048\cdot10^{-3}$ and
+$U(\frac12\log3)=-0.0200526$. At $\frac12\log3$ a quadrature of the exact form gives $\Ainf(F)=-0.0268769$
+(\textsc{diagnostic}). The content of Proposition~\ref{prop:archneg} is the certified strict separation of
+the two thresholds. It is the empty-comb case of Corollary~\ref{cor:convfail}(i) below: on $[0.4608,0.58]$
+the archimedean form is positive definite on $\PT$ but not on $L^2(\IT)$.
+
 \textsc{diagnostic}. Galerkin values in an orthonormal Legendre basis of $L^2(\IT)$ are variational
 upper bounds on the two infima, hence upper bounds on the two thresholds:
 \[
 T^*_\infty\le0.3716,\qquad T^*_{\infty,\mathrm P}\le0.5958 .
 \]
 The second lies inside the certified bracket of Corollary~\ref{cor:Tarch}, whose upper end $0.60$ is
-weaker; only the bracket is used in this paper. The reading is the following. At $T=\frac12\log3$ the
+weaker. The first is numerically smaller than the proved bound $0.4608$ of
+Proposition~\ref{prop:archneg}, but it is a measurement and proves nothing. Only the proved bounds are
+used in this paper. The reading is the following. At $T=\frac12\log3$ the
 archimedean form is positive definite on $\PT$ by itself (\textsc{proved}, Corollary~\ref{cor:Tarch}),
 with Galerkin value $\laminfP\approx+0.083$, and switching the primes on \emph{lowers} the bottom by
 two orders, to $\approx+9.8\cdot10^{-4}$: there the primes are a cost, which is consistent with the
@@ -2953,7 +3015,11 @@ Combining \cite[Thm.~10.4]{Paper45}, Theorems~\ref{thm:D1}, \ref{thm:Zexh} and C
 \mathrm{RH}\iff\forall T:\ \lamW\ge0\iff\forall T:\ \lamP\ge0\iff\forall T\ \exists\ \text{finite certificate}\\
 \iff\forall T\ \exists\,w_T\in\Wcl^{\mathrm{reg}}:\ \sum_\rho\wh_T(\tau-\gamma_\rho)\ge0\ \text{on }\R .
 \end{multline*}
-Every link is an equivalence proved above; none of them is a proof. The chain has one
+Every link is an equivalence proved above; none of them is a proof. The links are equivalences of
+statements quantified over all $T$. At a single window only $\lamW\le\lamP\le\lamA$ holds, together with the
+exact relation between $\lamW$ and $\lamA$ given in \S\ref{subsec:alignineq} (Theorem~\ref{thm:parityschur}). The
+per-window converse $\mathrm{RD}_T\Rightarrow\lamW\ge0$ is not a comb-class consequence
+(Corollary~\ref{cor:convfail}). The chain has one
 consequence that is worth stating as a theorem.
 
 \begin{proposition}[the sign at each window is decidable]\label{prop:decide}
@@ -3212,7 +3278,18 @@ $\lambda_{\min}(A_T(a)|\PT)$ for the bottom on $\PT$ of the form \eqref{eq:form}
 $\mathrm{RD}_T(a)$, if $\lambda_{\min}(A_T(a)|\PT)\ge0$; $\mathrm{RD}_T:=\mathrm{RD}_T(\Lambda)$ is
 $\lamA\ge0$. ($\mathrm{RD}_T$ is not the dual value $D_T$ of Definition~\ref{def:PD}.) For a real vector
 $v=(v_n)_{n\in\NT}$, signed or not, $\mathfrak a^{(v)}_T$ denotes the form \eqref{eq:form} with the comb
-$\sum_{n\in\NT}v_n\cos(\tau\log n)$.
+$\sum_{n\in\NT}v_n\cos(\tau\log n)$. With $v(a):=(v_n(a))_{n\in\NT}$, the \emph{comb-level complete form} is
+\[
+W_T(a)(F):=\mathfrak a^{(v(a))}_T(F)+2\Rel\big(A(F)\overline{B(F)}\big),
+\]
+the form \eqref{eq:W} built with the weights of $a$, and $\lambda^{\mathrm W}_T(a)$ is its bottom on the unit sphere of
+$L^2(\IT)$. So $W_T(\Lambda)=W_T$, and on $\PT$ the form $W_T(a)$ agrees with $\mathfrak a^{(v(a))}_T$. For
+$a\ne\Lambda$, $W_T(a)$ is \emph{not} the zero sum of $\zeta_a$ (Theorem~\ref{thm:finmod} below). For the
+modifications there, $\zeta_a=\zeta E$ has exactly the zeros of $\zeta$, whose zero sum is $W_T$
+(Lemma~\ref{lem:roughEF}), and $W_T(a)(F)-W_T(F)=\sum_{n\in\NT}(v_n(\Lambda)-v_n(a))\cF(\log n)$ is in general
+nonzero. It is the contribution of $E'/E$. Statements about $\lambda^{\mathrm W}_T(a)$ are therefore
+statements about forms and classes, like those about $\mathrm{RD}_T(a)$ in Corollary~\ref{cor:void}. They are
+not statements about the zeros of $\zeta$ or of any $\zeta_a$.
 
 \begin{proposition}[finite dependence]\label{prop:finite}
 Put $v_T(a):=(v_n(a))_{n\in\NT}\in\R^{\NT}$, $|\NT|=\lceil e^{2T}\rceil-2$. Then:
@@ -3350,7 +3427,8 @@ actual values $\Lambda(n)$, $n\in\NT$, and not only their asymptotics, and \emph
 Dedekind zeta function and is not implied by the functional equation, the pole, reality and nonnegative
 coefficients. Both are method constraints in the sense of \cite[Thm.~18.1]{Paper46}; no minimality of such
 a hypothesis is claimed. The per-window derivations of record are computations with the actual vector:
-\cite{Paper42} for $T\le\log2$, \cite{Zhu2026} at support $1.6$, and Theorem~\ref{thm:C} at $\frac12\log3$.
+\cite{Paper42} for $T\le\log2$ (the primitive form), \cite{Zhu2026} at support $1.6$ (the complete form, which
+implies $\mathrm{RD}_T$), and Theorem~\ref{thm:C} at $\frac12\log3$ (the primitive form).
 The frame of \cite{Paper46} records one more exclusion of the same kind, which is not used here: its
 frame-defect theorem \cite[Thm.~19.25]{Paper46}, which rules out every dimension function on its domain
 satisfying its axioms for $\xi$, also disposes, on that domain, of the one arithmetic-geometry candidate
@@ -3546,10 +3624,313 @@ of Corollary~\ref{cor:RH}; the third is (b); the fourth is (a) for $T\ge\frac12\
 Lemma~\ref{lem:monoT} below it.
 \end{proof}
 
-\textsc{open}. \emph{Per window}, $\mathrm{RD}_T$ (that is, $\lamA\ge0$) is not known to imply $\lamW\ge0$ or
-$\lamP\ge0$: the inequalities $\lamW\le\lamP\le\lamA$ are the only ones proved at a fixed $T$, and the only
-route of record from $\mathrm{RD}_T$ to $\lamW>0$ passes through all $T$ at once (RH). So the converse of
-Theorem~\ref{thm:Al}(a) at a single window is open.
+\emph{The per-window converse.} At a single window, the converse of Theorem~\ref{thm:Al}(a) is the
+implication $\mathrm{RD}_T\Rightarrow\lamW\ge0$. It reduces to the signs of two numbers. Fix $T$. We work
+with real functions. This suffices for bottoms and negative indices, as in the remark after
+Lemma~\ref{lem:parity}: for $F=u+iv$ with $u,v$ real, $W_T(F)=W_T(u)+W_T(v)$ and
+$\mathfrak a_T(F)=\mathfrak a_T(u)+\mathfrak a_T(v)$. Let $\mathcal D_T$ be the form domain of \eqref{eq:form}
+and $\mathcal D^{\mathrm{par}}_T$ its elements of parity $\mathrm{par}\in\{\mathrm{ev},\mathrm{odd}\}$. Put
+$\varphi_{\mathrm{ev}}=\cosh\frac t2\,\mathbf 1_{\IT}$, $\varphi_{\mathrm{odd}}=\sinh\frac t2\,\mathbf 1_{\IT}$,
+$\ell_{\mathrm{par}}(F)=\langle F,\varphi_{\mathrm{par}}\rangle$, $\varepsilon_{\mathrm{ev}}=+1$ and
+$\varepsilon_{\mathrm{odd}}=-1$. Then $A=\ell_{\mathrm{ev}}+\ell_{\mathrm{odd}}$ and
+$B=\ell_{\mathrm{ev}}-\ell_{\mathrm{odd}}$ on real $F$ (the parity paragraph after
+Proposition~\ref{prop:nodes}). Let $\mathcal Q^{\mathrm{par}}_T:=\PT^{\mathrm{par}}\cap\mathcal D_T
+=\ker(\ell_{\mathrm{par}}|\mathcal D^{\mathrm{par}}_T)$, and write $\lambda_{\min}(A_T|\PT^{\mathrm{par}})$ for the
+bottom of $\mathfrak a_T$ on its unit sphere. This is the bottom with the primes, not the prime-free
+$\lambda_{\mathrm{par}}$ of \S\ref{subsec:arch}. Write $\lambda^{\mathrm W}_{T,\mathrm{par}}$ for the bottom of
+$W_T$ on the unit sphere of $\mathcal D^{\mathrm{par}}_T$. As in Lemma~\ref{lem:parity}, $n_-$ is the largest
+dimension of a subspace of the form domain on which the form is negative definite. The letters $h$,
+$\mathfrak g$, $\mathfrak G$, $J$, $S^{\mathrm{Sch}}$, $\mathcal N$ are local to this subsection.
+
+\begin{theorem}[the parity Schur complement of the complete form]\label{thm:parityschur}
+\textsc{proved.} Fix $T>0$.
+\emph{(o) Parity splitting.} On real $F=F_{\mathrm e}+F_{\mathrm o}\in\mathcal D_T$,
+\[
+W_T(F)=\big[\mathfrak a_T(F_{\mathrm e})+2\ell_{\mathrm{ev}}(F_{\mathrm e})^2\big]
++\big[\mathfrak a_T(F_{\mathrm o})-2\ell_{\mathrm{odd}}(F_{\mathrm o})^2\big],
+\]
+the sum being orthogonal for $L^2$, for $\mathfrak a_T$ and for $W_T$. Hence
+$\lamA=\min_{\mathrm{par}}\lambda_{\min}(A_T|\PT^{\mathrm{par}})$ and $\lamW=\min_{\mathrm{par}}\lambda^{\mathrm W}_{T,\mathrm{par}}$.
+
+\emph{(a) Non-degenerate sector.} Suppose $0$ is not in the spectrum of the self-adjoint operator of the
+closed form $\mathfrak a_T|\mathcal Q^{\mathrm{par}}_T$. This holds in particular if
+$\lambda_{\min}(A_T|\PT^{\mathrm{par}})>0$. Then there is a unique $h_{\mathrm{par}}\in\mathcal D^{\mathrm{par}}_T$
+with $\ell_{\mathrm{par}}(h_{\mathrm{par}})=1$ and $\mathfrak a_T(h_{\mathrm{par}},G)=0$ for all
+$G\in\mathcal Q^{\mathrm{par}}_T$. Put $\mathfrak g_{\mathrm{par}}(T):=W_T(h_{\mathrm{par}})=\mathfrak a_T(h_{\mathrm{par}})+2\varepsilon_{\mathrm{par}}$.
+Then:
+\begin{itemize}
+\item[(a1)] $\mathcal D^{\mathrm{par}}_T=\mathcal Q^{\mathrm{par}}_T\oplus\R h_{\mathrm{par}}$, orthogonally for
+$\mathfrak a_T$ and for $W_T$, and $W_T(G+xh_{\mathrm{par}})=\mathfrak a_T(G)+\mathfrak g_{\mathrm{par}}x^2$ for
+$G\in\mathcal Q^{\mathrm{par}}_T$, $x\in\R$;
+\item[(a2)] $n_-(W_T|\mathcal D^{\mathrm{par}}_T)=n_-(\mathfrak a_T|\mathcal Q^{\mathrm{par}}_T)+[\mathfrak g_{\mathrm{par}}<0]$.
+The radical of $W_T$ on $\mathcal D^{\mathrm{par}}_T$ is $\R h_{\mathrm{par}}$ if $\mathfrak g_{\mathrm{par}}=0$ and $0$
+otherwise;
+\item[(a3)] if $\lambda_{\min}(A_T|\PT^{\mathrm{par}})>0$, then
+$\mathfrak a_T(h_{\mathrm{par}})=\min\{\mathfrak a_T(F):F\in\mathcal D^{\mathrm{par}}_T,\ \ell_{\mathrm{par}}(F)=1\}$ and
+$\mathfrak g_{\mathrm{par}}=\min\{W_T(F):F\in\mathcal D^{\mathrm{par}}_T,\ \ell_{\mathrm{par}}(F)=1\}$;
+\item[(a4)] $\lambda^{\mathrm W}_{T,\mathrm{par}}\le\mathfrak g_{\mathrm{par}}/\|h_{\mathrm{par}}\|^2$ and
+$\|h_{\mathrm{par}}\|\ge1/\|\varphi_{\mathrm{par}}\|$. If $\lambda_{\min}(A_T|\PT^{\mathrm{par}})>0$ \emph{and}
+$\mathfrak g_{\mathrm{par}}>0$, then
+$\lambda^{\mathrm W}_{T,\mathrm{par}}\ge\frac12\min\big(\lambda_{\min}(A_T|\PT^{\mathrm{par}}),\mathfrak g_{\mathrm{par}}/\|h_{\mathrm{par}}\|^2\big)$.
+If in addition $2\lambda^{\mathrm W}_{T,\mathrm{par}}<\lambda_{\min}(A_T|\PT^{\mathrm{par}})$, then
+$\lambda^{\mathrm W}_{T,\mathrm{par}}\le\mathfrak g_{\mathrm{par}}/\|h_{\mathrm{par}}\|^2\le2\lambda^{\mathrm W}_{T,\mathrm{par}}$.
+\end{itemize}
+
+\emph{(b) Degenerate sector.} Suppose $\lambda_{\min}(A_T|\PT^{\mathrm{par}})=0$, and let
+$\mathcal N=\ker(\mathfrak a_T|\mathcal Q^{\mathrm{par}}_T)$. It is nonzero and finite-dimensional. For each
+$F_0\in\mathcal N$ there is a unique $\alpha(F_0)\in\R$ with $\mathfrak a_T(F_0,G)=\alpha(F_0)\ell_{\mathrm{par}}(G)$
+for all $G\in\mathcal D^{\mathrm{par}}_T$. If $\alpha\not\equiv0$ on $\mathcal N$, then $W_T$ is unbounded below on
+$\mathcal D^{\mathrm{par}}_T$, so $\lamW<0$. If $\alpha\equiv0$ on $\mathcal N$ (the \emph{range condition}), then
+$\mathcal N$ lies in the radical of $W_T$ on $\mathcal D^{\mathrm{par}}_T$ and (a) applies on the $L^2$-orthogonal
+complement of $\mathcal N$ in $\mathcal D^{\mathrm{par}}_T$. With the $h_{\mathrm{par}},\mathfrak g_{\mathrm{par}}$ so obtained,
+$W_T\ge0$ on $\mathcal D^{\mathrm{par}}_T$ if and only if $\mathfrak g_{\mathrm{par}}\ge0$.
+
+\emph{(c) Assembled.} Put $\mathfrak G_T:=\mathrm{diag}(\mathfrak g_{\mathrm{ev}}(T),\mathfrak g_{\mathrm{odd}}(T))$. It is
+defined whenever each sector is as in (a), or as in (b) with the range condition. If $0$ is not in the
+spectrum of the operator of $\mathfrak a_T|(\PT\cap\mathcal D_T)$, then
+$n_-(W_T)=n_-(\mathfrak a_T|\PT)+n_-(\mathfrak G_T)$, and the radical of $W_T$ has dimension $n_0(\mathfrak G_T)$. At every window,
+without further hypotheses,
+\[
+\lamW>0\iff\big[\lamA>0\ \text{and}\ \mathfrak G_T\succ0\big],
+\]
+\[
+\lamW\ge0\iff\big[\mathrm{RD}_T,\ \text{the range condition in every sector with }
+\lambda_{\min}(A_T|\PT^{\mathrm{par}})=0,\ \text{and}\ \mathfrak G_T\succeq0\big].
+\]
+In particular, if $\lamA>0$, then $\lamW\ge0$ if and only if $\mathfrak g_{\mathrm{ev}}(T)\ge0$ and
+$\mathfrak g_{\mathrm{odd}}(T)\ge0$.
+\end{theorem}
+\begin{proof}
+(o) The symbol $\sT$ is even. For real even $F_{\mathrm e}$ and real odd $F_{\mathrm o}$, $\widehat{F_{\mathrm e}}$ is even and
+$\widehat{F_{\mathrm o}}$ is odd, so $\mathfrak a_T(F_{\mathrm e},F_{\mathrm o})=0$ as in the proof of
+Lemma~\ref{lem:parity}. Also $\ell_{\mathrm{ev}}$ vanishes on odd functions and $\ell_{\mathrm{odd}}$ on even ones, so
+$A(F)B(F)=(\ell_{\mathrm{ev}}(F_{\mathrm e})+\ell_{\mathrm{odd}}(F_{\mathrm o}))(\ell_{\mathrm{ev}}(F_{\mathrm e})-\ell_{\mathrm{odd}}(F_{\mathrm o}))
+=\ell_{\mathrm{ev}}(F_{\mathrm e})^2-\ell_{\mathrm{odd}}(F_{\mathrm o})^2$, with no cross term. Polarising gives the
+orthogonality. $F\in\PT$ if and only if $\ell_{\mathrm{ev}}(F_{\mathrm e})=\ell_{\mathrm{odd}}(F_{\mathrm o})=0$, and bottoms over an
+orthogonal sum take the minimum.
+
+(a) Write $\mathcal Q=\mathcal Q^{\mathrm{par}}_T$, $\ell=\ell_{\mathrm{par}}$ and $\varepsilon=\varepsilon_{\mathrm{par}}$. On
+$\mathcal D^{\mathrm{par}}_T$, $W_T(F,G)=\mathfrak a_T(F,G)+2\varepsilon\,\ell(F)\ell(G)$ by (o).
+
+\emph{Solvability.} First, $\mathfrak a_T=\Gamma_T+\PiT$ with $\|\PiT\|\le\Aconst$ (\S\ref{subsec:arch}). The form
+$\Gamma_T\ge C_0\|\cdot\|^2$ is closed, with domain $\mathcal D_T$ (Theorem~\ref{thm:A}), and this domain embeds
+compactly in $L^2(\IT)$ (proof of Proposition~\ref{prop:nodes}(i)). So $\mathfrak a_T$ is closed and bounded
+below by $-M$, where $M:=\Aconst-C_0$. Second, $\mathcal Q$ is closed in the form norm, because $\ell$ and the
+parity projection are $L^2$-continuous. Third, $\mathcal Q$ is dense in
+$H:=\ker\ell\cap L^2_{\mathrm{par}}(\IT)$. Indeed, let $x\in H$, let $d_n\in\mathcal D^{\mathrm{par}}_T$ with $d_n\to x$ in
+$L^2$ (smooth functions of parity $\mathrm{par}$ are dense), and let $e\in\mathcal D^{\mathrm{par}}_T$ with $\ell(e)=1$.
+Then $d_n-\ell(d_n)e\in\mathcal Q$ tends to $x$. Hence $\mathfrak a_T|\mathcal Q$ is a closed, semibounded, densely
+defined form in $H$ with compact resolvent. Its spectrum is discrete, and its negative spectral subspace
+$\mathcal Q_-$ is finite-dimensional and $\mathfrak a_T$-orthogonal to $\mathcal Q_+:=\mathcal Q\cap\mathcal Q_-^\perp$. If
+$0$ is not in the spectrum, then $\mathfrak a_T\ge\delta\|\cdot\|^2$ on $\mathcal Q_+$ for some $\delta>0$. Hence
+$\mathfrak a_T(x)\ge\frac{\delta}{\delta+M+1}\big(\mathfrak a_T(x)+(M+1)\|x\|^2\big)$ there, so $\mathfrak a_T$ is coercive
+on $\mathcal Q_+$ in the form norm and the Lax--Milgram lemma applies on $\mathcal Q_+$. On $\mathcal Q_-$ the form is a
+negative definite finite matrix. So for every form-bounded linear functional $f$ on $\mathcal Q$ there is a unique
+$Y\in\mathcal Q$ with $\mathfrak a_T(Y,\cdot)=f$ on $\mathcal Q$. Uniqueness holds because the operator has trivial
+kernel. Now fix $H_0\in\mathcal D^{\mathrm{par}}_T$ with $\ell(H_0)=1$, for instance a smooth bump of parity
+$\mathrm{par}$. The functional $f=\mathfrak a_T(H_0,\cdot)$ is form-bounded, by Cauchy--Schwarz for the nonnegative
+form $\mathfrak a_T+M\|\cdot\|^2$. Put $h:=H_0-Y$. Then $\ell(h)=1$ and $\mathfrak a_T(h,\cdot)=0$ on $\mathcal Q$. Two such
+$h$ differ by an element of $\mathcal Q$ that is $\mathfrak a_T$-orthogonal to $\mathcal Q$, which is $0$.
+
+(a1) Any $F\in\mathcal D^{\mathrm{par}}_T$ decomposes as $F=(F-\ell(F)h)+\ell(F)h$ with $F-\ell(F)h\in\mathcal Q$. For
+$G\in\mathcal Q$, $W_T(h,G)=\mathfrak a_T(h,G)+2\varepsilon\ell(h)\ell(G)=0$. Expand, using $\ell(G)=0$ and $\ell(h)=1$.
+
+(a2) By (a1), $\mathcal D^{\mathrm{par}}_T=(\mathcal Q_-\oplus[\R h\text{ if }\mathfrak g<0])\oplus(\mathcal Q_+\oplus[\R h\text{ if }\mathfrak g\ge0])$,
+orthogonally for $W_T$. The first summand is negative definite and has the stated dimension. The second
+summand carries $W_T\ge0$. A negative definite subspace meets the second summand only in $0$, so its
+projection onto the first summand along the second is injective. For the radical: if
+$W_T(G+xh,\cdot)=0$, then $\mathfrak a_T(G,\cdot)=0$ on $\mathcal Q$, so $G=0$, and then $\mathfrak g x=0$.
+
+(a3) If the bottom is positive, then $\mathfrak a_T(G+h)=\mathfrak a_T(G)+\mathfrak a_T(h)\ge\mathfrak a_T(h)$ and
+$W_T(G+h)=\mathfrak a_T(G)+\mathfrak g\ge\mathfrak g$.
+
+(a4) The upper bound is the Rayleigh quotient at $h$, and $1=\ell(h)\le\|h\|\|\varphi_{\mathrm{par}}\|$. Put
+$\lambda:=\lambda_{\min}(A_T|\PT^{\mathrm{par}})$ and assume $\lambda>0$ and $\mathfrak g>0$. With
+$\mu:=\min(\lambda,\mathfrak g/\|h\|^2)$,
+\[
+W_T(G+xh)=\mathfrak a_T(G)+\mathfrak gx^2\ge\lambda\|G\|^2+\frac{\mathfrak g}{\|h\|^2}\|xh\|^2
+\ge\mu\big(\|G\|^2+\|xh\|^2\big)\ge\tfrac12\mu\|G+xh\|^2 .
+\]
+If also $2\lambda^{\mathrm W}_{T,\mathrm{par}}<\lambda$, then $\frac12\mu\le\lambda^{\mathrm W}_{T,\mathrm{par}}<\frac12\lambda$ forces
+$\mu=\mathfrak g/\|h\|^2$. The hypothesis $\mathfrak g>0$ is used in the second inequality and cannot be dropped.
+
+(b) The bottom $0$ is attained (compact resolvent), so $\mathcal N\ne0$, and $\mathcal N$ is finite-dimensional. For
+$F_0\in\mathcal N$ and $G\in\mathcal Q$, Cauchy--Schwarz for the nonnegative form $\mathfrak a_T|\mathcal Q$ gives
+$\mathfrak a_T(F_0,G)=0$. So $\mathfrak a_T(F_0,\cdot)$ is a linear functional on $\mathcal D^{\mathrm{par}}_T$ vanishing on
+$\ker\ell$, hence a multiple $\alpha(F_0)\ell$. Since $\ell(F_0)=0$, we get $W_T(F_0,H)=\alpha(F_0)\ell(H)$ and
+$W_T(F_0)=0$. So $W_T(xF_0+H)=W_T(H)+2x\alpha(F_0)\ell(H)$, which is unbounded below in $x$ if
+$\alpha(F_0)\ne0$ and $\ell(H)=1$. Now suppose $\alpha\equiv0$. Then $\mathcal N$ is $W_T$-orthogonal to
+$\mathcal D^{\mathrm{par}}_T$. Put $\mathcal D':=\mathcal D^{\mathrm{par}}_T\cap\mathcal N^\perp$ and $\mathcal Q':=\mathcal Q\cap\mathcal N^\perp$.
+Then $\mathcal Q'=\ker(\ell|\mathcal D')$, and $\ell\ne0$ on $\mathcal D'$: subtract from $H_0$ its $L^2$-projection onto
+$\mathcal N\subset\mathcal Q$, which $\ell$ annihilates. On $\mathcal Q'$ the form is bounded below by the next eigenvalue,
+which is $>0$. So (a) applies with $\mathcal D',\mathcal Q'$ in place of $\mathcal D^{\mathrm{par}}_T,\mathcal Q$. Moreover
+$\mathcal D^{\mathrm{par}}_T=\mathcal N\oplus\mathcal D'$, $W_T$-orthogonally. Conclude by (a1).
+
+(c) By (o), everything adds over the two sectors, and the inertia formula is (a2) in each sector. If
+$\lamW>0$, then $\lamA\ge\lamW>0$ (recall $\lamW\le\lamA$), so both sectors are as in (a), and
+$\mathfrak g_{\mathrm{par}}=W_T(h_{\mathrm{par}})\ge\lamW\|h_{\mathrm{par}}\|^2>0$. The converse is (a4) in each sector. If $\lamW\ge0$,
+then $\lamA\ge\lamW\ge0$, which is $\mathrm{RD}_T$. In a sector with bottom $0$, (b) excludes $\alpha\not\equiv0$, and
+in every sector $\mathfrak g_{\mathrm{par}}=W_T(h_{\mathrm{par}})\ge0$. Conversely, (a1) and $\mathfrak a_T\ge0$ on
+$\mathcal Q^{\mathrm{par}}_T$ give $W_T\ge0$ on a sector with positive bottom when $\mathfrak g_{\mathrm{par}}\ge0$, and (b) does the
+same on a sector with bottom $0$.
+\end{proof}
+
+The range condition says that the column $\rho(G):=\mathfrak a_T(H_0,G)$ of the bordered form, with
+$\ell_{\mathrm{par}}(H_0)=1$, vanishes on $\ker(\mathfrak a_T|\mathcal Q^{\mathrm{par}}_T)$, since $\rho(F_0)=\alpha(F_0)$. This is the
+range condition of a bordered Schur complement. Because $\mathfrak a_T|\mathcal Q^{\mathrm{par}}_T$ has a spectral gap above
+$0$, it is equivalent to $\rho$ lying in the range of the square root of the operator. The theorem takes
+the complement over $\PT$ and not over $L^2(\IT)$. So only $\mathfrak a_T|\PT$ has to be invertible, which is
+the natural hypothesis for a converse whose premise is on the primitive side.
+
+\begin{proposition}[$\mathfrak G_T$ is the polar capacity]\label{prop:polarcap}
+\textsc{proved.} Assume $\mathrm{RD}_T$, and the range condition of Theorem~\ref{thm:parityschur}(b) in every
+sector with $\lambda_{\min}(A_T|\PT^{\mathrm{par}})=0$. Let
+$S^{\mathrm{Sch}}_T:=\mathrm{diag}\big(\mathfrak a_T(h_{\mathrm{ev}}),\mathfrak a_T(h_{\mathrm{odd}})\big)$. This is the compression of
+$\mathfrak a_T$ to $\mathrm{span}(h_{\mathrm{ev}},h_{\mathrm{odd}})$, the $\mathfrak a_T$-orthogonal complement of the primitive part,
+i.e.\ the Schur complement of $\mathfrak a_T$ over $\PT$. Let $J:=\mathrm{diag}(2,-2)$. Then
+\[
+\mathfrak G_T=S^{\mathrm{Sch}}_T+J .
+\]
+For $(\beta,\alpha)\in\R^2$ put
+$E_T(\beta,\alpha):=\inf\{W_T(F):\ F\in\mathcal D_T\ \text{real},\ \Phi_F(0)=B(F)=\beta,\ \Phi_F(1)=A(F)=\alpha\}$. Then
+\[
+E_T(\beta,\alpha)=(\alpha,\beta)\,\mathfrak G^{AB}_T\,(\alpha,\beta)^{\mathsf T},\qquad
+\mathfrak G^{AB}_T=\frac14\begin{pmatrix}\mathfrak g_{\mathrm{ev}}+\mathfrak g_{\mathrm{odd}}&\mathfrak g_{\mathrm{ev}}-\mathfrak g_{\mathrm{odd}}\\
+\mathfrak g_{\mathrm{ev}}-\mathfrak g_{\mathrm{odd}}&\mathfrak g_{\mathrm{ev}}+\mathfrak g_{\mathrm{odd}}\end{pmatrix},
+\]
+and the infimum is attained. In these coordinates $J$ becomes $\big(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\big)$,
+the form $2\alpha\beta=2\Phi_F(0)\Phi_F(1)$, with the one negative square of Lemma~\ref{lem:polar}. Hence
+$\lamW\ge0$ if and only if $E_T\ge0$ on $\R^2$. Under $\mathrm{RD}_T$, the complete form is nonnegative
+exactly when the least complete Weil energy needed to prescribe the values of $\Phi_F$ at the pole
+$s\in\{0,1\}$ is nonnegative.
+\end{proposition}
+\begin{proof}
+$\mathfrak G_T=S^{\mathrm{Sch}}_T+J$ is the definition $\mathfrak g_{\mathrm{par}}=\mathfrak a_T(h_{\mathrm{par}})+2\varepsilon_{\mathrm{par}}$. In the
+degenerate case with the range condition, $\mathfrak a_T(h_{\mathrm{par}})$ does not depend on the choice of $h_{\mathrm{par}}$
+modulo $\mathcal N$. For real $F$, $\Phi_F(1)=A(F)$ and $\Phi_F(0)=B(F)$ (proof of Lemma~\ref{lem:roughEF}). The
+constraints are $\ell_{\mathrm{ev}}(F_{\mathrm e})=c:=\frac{\alpha+\beta}2$ and $\ell_{\mathrm{odd}}(F_{\mathrm o})=s:=\frac{\alpha-\beta}2$,
+and they split over the sectors, as does $W_T$ by Theorem~\ref{thm:parityschur}(o). In each sector,
+Theorem~\ref{thm:parityschur}(a1) (or (b)) gives $W_T(G+xh_{\mathrm{par}})=\mathfrak a_T(G)+\mathfrak g_{\mathrm{par}}x^2$ with $x$ the
+prescribed value of $\ell_{\mathrm{par}}$ and $\mathfrak a_T(G)\ge0$ by $\mathrm{RD}_T$. So the sector minimum is
+$\mathfrak g_{\mathrm{par}}x^2$, attained at $G=0$. Hence $E_T=\mathfrak g_{\mathrm{ev}}c^2+\mathfrak g_{\mathrm{odd}}s^2$, which is the displayed
+matrix. The form $2c^2-2s^2=2\alpha\beta$ gives $J$ in the new coordinates. The last statement is
+Theorem~\ref{thm:parityschur}(c), since $E_T\ge0$ if and only if $\mathfrak G_T\succeq0$.
+\end{proof}
+
+The converse is therefore the pair of inequalities $\mathfrak a_T(h_{\mathrm{odd}})\ge2$ and
+$\mathfrak a_T(h_{\mathrm{ev}})\ge-2$. In the odd direction the primitive Schur complement must beat the negative
+polar square. In the even direction the positive polar square may absorb a negative Schur value down
+to $-2$. Neither is automatic. The next corollary shows that the pair is not implied by $\mathrm{RD}_T$ at the level of combs. Its witnesses are odd, so it is the odd inequality that is refuted.
+It uses the comb-level form $W_T(a)$ of \S\ref{subsec:finite}. Put $F^{\mathrm{odd}}_T(t)=t$ on $\IT$ as in
+Proposition~\ref{prop:archneg}.
+
+\begin{corollary}[the converse is not a comb-class consequence]\label{cor:convfail}
+\textsc{proved}, as comb-level statements and method constraints in the sense of
+Corollary~\ref{cor:void}. The proof imports the machine-verified Theorem~\ref{thm:index},
+Corollary~\ref{cor:Tarch} and Theorem~\ref{thm:C}, and two interval evaluations. The clause $\theta_*<1$ in
+(ii) rests on \cite[Thm.~1.2]{Zhu2026}, \textsc{cited, not re-verified here}.
+\emph{(i) Deletion.} Let $a=\Lambda\mathbf 1_{n\ge5}$. For every $T\in[0.4608,0.58]$, $\mathrm{RD}_T(a)$ holds
+strictly while $\lambda^{\mathrm W}_T(a)<0$:
+\[
+\lambda_{\min}(A_T(a)|\PT)=\laminfP(T)>0,\qquad\lambda^{\mathrm W}_T(a)=\laminf(T)<0 .
+\]
+On $[0.4608,\log2]$ the odd-sector implication fails. There the bottom of $\mathfrak a^{(v(a))}_T$ on $\PT^{\mathrm{odd}}$ is
+$\lambda_{\mathrm{odd}}(T)>0$, while $W_T(a)$ is negative on an odd vector. On $(T^*_{\infty,\mathrm P},\log2]$,
+$\mathrm{RD}_T(a)$ fails, so the full implication holds there vacuously and only its odd-sector form is refuted.
+\emph{(ii) One contact.} Let $T=\frac12\log3$, so $\NT=\{2\}$, and for $\theta\in[0,1]$ let
+$a_\theta:=\Lambda-(1-\theta)\Lambda(2)\mathbf 1_{n=2}$. Its comb on $\NT$ is $\theta v_2$. Then
+$\lambda_{\min}(A_T(a_\theta)|\PT)>0$ for every $\theta\in[0,1]$, and $\lambda^{\mathrm W}_T(a_\theta)<0$ for every
+$\theta\in[0,0.8148]$. The set of $\theta\in[0,1]$ with $\lambda^{\mathrm W}_T(a_\theta)\ge0$ is an interval
+$[\theta_*,1]$ with $0.8148<\theta_*<1$.
+\emph{(iii) Method constraint.} Let $\mathcal C$ be a class of nonnegative arithmetic functions containing $\Lambda$.
+Suppose $\mathcal C$ is closed under deletion of finitely many terms. Then no derivation of the implication
+$\mathrm{RD}_T\Rightarrow\lamW\ge0$ whose only prime input is $\mathcal C$-membership exists at any
+$T\in[0.4608,0.58]$. Suppose instead that $\mathcal C$ contains $a_\theta$ for some $\theta\le0.8148$. This holds,
+for instance, if $\mathcal C$ is closed under lowering one term within $[0,\Lambda(n)]$. Then no such derivation
+exists at $T=\frac12\log3$: a sound derivation there must distinguish $\Lambda(2)$ from every weight
+$\theta\Lambda(2)$ with $\theta\le0.8148$, that is, from weights at least $18.5\%$ below it. Nothing is claimed
+about weights above $\Lambda(2)$. The classes $\mathcal C_{\mathrm{PNT}}(\varepsilon)$, $\mathcal C_{\mathrm{zeros}}$ and
+$\mathcal C_{\mathrm{BT}}$ of Corollary~\ref{cor:void} are closed under deletion and under lowering one term.
+\end{corollary}
+\begin{proof}
+(i) For $T\le\log2<\frac12\log5$ one has $\NT\subseteq\{2,3,4\}$, where $a=0$. So the comb of $a$ is empty,
+$W_T(a)=\Ainf$ and $\mathfrak a^{(v(a))}_T=\Gamma_T$ on $\PT$, as in the proof of Theorem~\ref{thm:finmod}(i). For
+$T\le0.58$, $\laminfP(T)>0$ by Theorem~\ref{thm:index}(i), and for $T\ge0.4608$, $\laminf(T)<0$ by
+Proposition~\ref{prop:archneg}. On $[0.4608,\log2]$, $\lambda_{\mathrm{odd}}(T)>0$ by Theorem~\ref{thm:index}(i). The
+odd vector $F^{\mathrm{odd}}_{0.4608}$, extended by zero, lies in $L^2(\IT)$ with
+$\Ainf(F^{\mathrm{odd}}_{0.4608})\le U(0.4608)<0$ ($\Ainf$ is $T$-free). $\mathrm{RD}_T(a)$ fails on
+$(T^*_{\infty,\mathrm P},\log2]$ by Lemma~\ref{lem:strict}.
+
+(ii) The comb: $\NT=\{n:\log n<\log3\}=\{2\}$ and $v_2(a_\theta)=\theta v_2$. So
+$W_T(a_\theta)=\Ainf+\theta\PiT$, and $\mathfrak a^{(v(a_\theta))}_T=\Gamma_T+\theta\PiT$ on $\PT$.
+
+\emph{The primitive side.} $\theta\mapsto\lambda_{\min}(A_T(a_\theta)|\PT)=\inf_{F\in\PT,\|F\|=1}[\Gamma_T(F)+\theta\PiT(F)]$
+is an infimum of affine functions of $\theta$. It is finite, since $\|\PiT\|\le v_2$, and hence concave on
+$\R$. At $\theta=0$ it is $\laminfP(\frac12\log3)>0$ (Corollary~\ref{cor:Tarch}). At $\theta=1$ it is
+$\lamA\ge8.8577\cdot10^{-5}$ (Theorem~\ref{thm:C}, which is stated for the actual comb $v_2$ at this window). A
+concave function on $[0,1]$ is at least the smaller of its endpoint values.
+
+\emph{The complete side.} Let
+$F_5(t)=t-\frac{2634299}{500000}t^3+\frac{1919331}{250000}t^5$ on $\IT$, with $T=\frac12\log3$. As in
+Proposition~\ref{prop:archneg}, $\Ainf(F_5)\le U_0$. Here $U_0$ is obtained by bounding $K\le\frac1u+\frac12$
+against $c_{F_5}(0)-c_{F_5}(u)\ge0$ (Cauchy--Schwarz) on $(0,2T)$, by Theorem~\ref{thm:S}(iii) on $[2T,\infty)$,
+and by $2A(F_5)B(F_5)=-2s(F_5)^2$. The autocorrelation $c_{F_5}$ is an exact polynomial in $(u,T)$ with rational
+coefficients. Evaluating in outward-rounded interval arithmetic at $50$ digits with $T=\frac12\log3$ gives
+\begin{gather*}
+U_0\in[-0.00613778443569004,\,-0.00613778443569003],\\
+\PiT(F_5)=-v_2c_{F_5}(\log2)\in[0.00753283781432786,\,0.00753283781432787],
+\end{gather*}
+and $U_0+0.8148\,\PiT(F_5)\in[-2.81845757,-2.81845756]\cdot10^{-8}$. Since $\PiT(F_5)>0$, we get
+$W_T(a_\theta)(F_5)=\Ainf(F_5)+\theta\PiT(F_5)\le U_0+0.8148\,\PiT(F_5)<0$ for every $\theta\le0.8148$. (The bare
+witness $F^{\mathrm{odd}}_T$ gives the same for $\theta\le0.4741$.) The certificate is
+\path{scripts/r156/audit_r156_theta_quintic.py} (about $1$\,s). Finally, $\theta\mapsto\lambda^{\mathrm W}_T(a_\theta)$
+is concave and finite on $\R$ for the same reason, hence continuous. At $\theta=1$ it is
+$\lamW\ge\lambda^{\mathrm W}_{0.8}>0$ by \cite[Thm.~1.2]{Zhu2026}, as in the proof of Corollary~\ref{cor:KEP08}. So
+$\{\theta\in[0,1]:\lambda^{\mathrm W}_T(a_\theta)\ge0\}$ is a closed interval that contains $1$ and is disjoint from
+$[0,0.8148]$. It has the form $[\theta_*,1]$, and $\theta_*<1$ by continuity.
+
+(iii) As in Corollary~\ref{cor:void}. Such a derivation proves the implication for every member of $\mathcal C$,
+hence for $\Lambda\mathbf 1_{n\ge5}$ (delete $n=2,3,4$) or for $a_\theta$, where it is false by (i) or (ii). For
+the closure properties: lowering one term keeps $0\le a\le\Lambda$; it changes $\psi_a$ by a constant for
+$x\ge n$; and $\zeta_a=\zeta\exp\big(-(1-\theta)\Lambda(n)n^{-s}/\log n\big)$ with an entire zero-free factor, as in
+Theorem~\ref{thm:finmod}(iii).
+\end{proof}
+
+As with Corollary~\ref{cor:void}, these are statements about derivations and classes. They are not
+statements about $\zeta$. The form $W_T(a)$ is not the zero sum of $\zeta_a$ (\S\ref{subsec:finite}), so
+$\lambda^{\mathrm W}_T(a)<0$ says nothing about the zeros of $\zeta_a$, which are those of $\zeta$. The missing
+functional equation of $\zeta_a$ (Theorem~\ref{thm:finmod}(iii)) is a second reason. A model with the
+functional equation (Remark~\ref{rem:twohalves}) has not been examined. For the empty comb, (i) is exactly
+the strict separation $T^*_\infty<T^*_{\infty,\mathrm P}$. The \textsc{diagnostic} Galerkin values of
+\S\ref{subsec:arch} already showed it. What is new is the proof, Proposition~\ref{prop:archneg} with
+Corollary~\ref{cor:Tarch}.
+
+\emph{The chain at one window.} For $T\ge\frac12\log2$, Theorem~\ref{thm:Al}(b),
+Theorem~\ref{thm:parityschur}(c) and Theorem~\ref{thm:KEP3}(a) give
+\begin{multline*}
+\big[\exists\,w\in\Wcl:\ \mathrm{Al}_T(w)\big]\iff\lamW>0\iff\big[\lamA>0\ \text{and}\ \mathfrak G_T\succ0\big]\\
+\Longrightarrow\ \mathrm{KEP}(T)\ \text{indeterminate}\ \Longrightarrow\ \lamW\ge0\\
+\iff\big[\mathrm{RD}_T,\ \text{range condition},\ \mathfrak G_T\succeq0\big].
+\end{multline*}
+Indeterminacy of $\mathrm{KEP}(T)$ is not known to be equivalent to either $\lamW>0$ or $\lamW\ge0$. The two
+ends of the chain can differ only on $\{T:\lamW=0\}$. So, per window, $\mathrm{RD}_T$ implies $\lamW\ge0$ if and only
+if $\mathfrak G_T\succeq0$ holds, together with the range condition in a degenerate sector. The converse of
+Theorem~\ref{thm:Al}(a) at a single window is the pair of scalar inequalities $\mathfrak g_{\mathrm{ev}}(T)\ge0$,
+$\mathfrak g_{\mathrm{odd}}(T)\ge0$. By Corollary~\ref{cor:convfail}, it is not a comb-class consequence at any
+$T\in[0.4608,0.58]$, nor at $\frac12\log3$ for classes containing some $a_\theta$ with $\theta\le0.8148$. For $\zeta$
+it holds at every $T\le0.8$, and the reason is not the identity: its conclusion $\lamW>0$ is Zhu's certificate
+\cite[Thm.~1.2]{Zhu2026} (cited, not re-verified here), and then $\mathfrak G_T\succ0$ by
+Theorem~\ref{thm:parityschur}(c).
+
+\textsc{open}. \emph{(1)} Per window, whether $\mathrm{RD}_T$ implies $\lamP\ge0$. The inequalities
+$\lamW\le\lamP\le\lamA$ are the only ones between the three bottoms proved at a fixed $T$. \emph{(2)} The
+per-window converse for $\zeta$ at $T>0.8$, equivalently $\mathrm{RD}_T\Rightarrow\mathfrak G_T\succeq0$ (with the
+range condition) there. The only route of record from $\mathrm{RD}_T$ to $\lamW\ge0$ at such a window passes
+through all $T$ at once (RH). \emph{(3)} An effective window shift for $\zeta$, i.e.\ an implication
+$\mathrm{RD}_{T'}\Rightarrow\lamW\ge0$ with an explicit $T'=T'(T)$. At the comb level, such a shift valid for
+every nonnegative comb needs $T'\ge T^*_{\infty,\mathrm P}$ whenever $T\ge0.4608$. To see this, take
+$a=\Lambda\mathbf 1_{n\ge N}$ with $N\ge\max(5,e^{2\max(T,T')})$. Then both combs are empty,
+$\mathrm{RD}_{T'}(a)\iff\laminfP(T')\ge0$, and $\lambda^{\mathrm W}_T(a)=\laminf(T)<0$.
 
 \begin{remark}[the per-window quantity]\label{rem:excess}
 By Theorem~\ref{thm:Zexh}(i), $\sup_{w\in\Wcl^{\mathrm{reg}}}\inf_\tau f_w=\lamW$ for $T\ge\frac12\log2$: the
@@ -3854,19 +4235,28 @@ problem converge to $\beta=(2,0)$, i.e.\ whether $\lamP=\lamW$ for the windows c
 (Remark~\ref{rem:Kprim}). (3) A certificate at a two-prime window: the best certified value at
 $T=0.58$ is $-3.20\cdot10^{-3}$ (\S\ref{subsec:twoprime}); the class size required cannot be predicted
 by a mass-based rate (Theorem~\ref{thm:Vp}). (4) A closed-form profile $a_j$ replacing the $437$ archived numbers.
-(5) Whether $\lamW>0$ unconditionally for some $T>0.8$, beyond the range of \cite{Zhu2026}; by
-Corollary~\ref{cor:KEP08} this is exactly the question of unconditional indeterminacy of
-$\mathrm{KEP}(T)$ past that window, and by Theorem~\ref{thm:KEP3} the question for \emph{every} $T$
-is RH itself. (6) Whether the flat-top
+(5) Whether $\lamW>0$ unconditionally for some $T>0.8$, beyond the range of \cite{Zhu2026}. By
+Theorem~\ref{thm:KEP3}(a), a positive answer at $T$ gives unconditional indeterminacy of $\mathrm{KEP}(T)$, and
+indeterminacy gives $\lamW\ge0$. The two questions can differ only where $\lamW=0$, and no equivalence is
+claimed at a single window. By Theorem~\ref{thm:KEP3}(b) the question for \emph{every} $T$ is RH itself. By
+Theorem~\ref{thm:parityschur}, at a window with $\lamA>0$ the question is whether $\mathfrak g_{\mathrm{ev}}(T)>0$ and
+$\mathfrak g_{\mathrm{odd}}(T)>0$. (6) Whether the flat-top
 certificates of Theorem~\ref{thm:Zexh} can be chosen with $w_T$ depending on $T$ through the
 primes outside the window only (Problem~\ref{prob:B}).
 
 \subsection{Labels}
-\begin{center}\small
-\begin{tabularx}{\textwidth}{@{}YY@{}}
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.475\textwidth}>{\raggedright\arraybackslash}p{0.475\textwidth}@{}}
 \toprule
 statement & label\\
 \midrule
+\endfirsthead
+\toprule
+statement & label\\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
 Lemma~\ref{lem:K}, Theorems~\ref{thm:S}, \ref{thm:A}, Cor.~\ref{cor:mono} & \textsc{proved} (Thm.~\ref{thm:S}(i) and the killed-process reading restate earlier unpublished work)\\
 Prop.~\ref{prop:weak}, Lemma~\ref{lem:gbounds}, Theorems~\ref{thm:D1}, \ref{thm:O}, \ref{thm:W}, Prop.~\ref{prop:P} & \textsc{proved}\\
 Lemmas~\ref{lem:mbounds}, \ref{lem:F1}, \ref{lem:T}, \ref{lem:hybrid}, Prop.~\ref{prop:T0}, Cor.~\ref{cor:T2}, Thm.~\ref{thm:E}, Props.~\ref{prop:M}, \ref{prop:TAY} & \textsc{proved}\\
@@ -3889,6 +4279,7 @@ Theorem~\ref{thm:P3}, Corollaries~\ref{cor:AP}, \ref{cor:CP} (concentration of t
 Proposition~\ref{prop:arch} (two archimedean thresholds; structure) & \textsc{proved}; the values $T^*_\infty\le0.3716$, $T^*_{\infty,\mathrm P}\le0.5958$ are \textsc{diagnostic} Galerkin \emph{upper} bounds on the thresholds, the certified bracket for $T^*_{\infty,\mathrm P}$ being that of Cor.~\ref{cor:Tarch}, and $\|\PiT\|\le\Aconst$ is \textsc{proved}\\
 Lemma~\ref{lem:strict} (the bottoms $\lambda_{\mathrm{ev}},\lambda_{\mathrm{odd}},\laminfP$ are attained and strictly decreasing; $\lambda_{\mathrm{par}}<0\iff n_{\mathrm{par}}\ge1$) & \textsc{proved}\\
 Corollary~\ref{cor:Tarch} ($0.58\le T^*_{\infty,\mathrm P}\le0.60$; $\laminfP(\frac12\log3)>0$; $\laminfP<0$ for $T\ge0.60$, so $\Ainf$ is indefinite on $\mathcal P_{\log2}$) & \textsc{proved (machine-verified)}; a sign, not a value: $\laminfP(\frac12\log3)\approx0.083$ and $\laminfP(\log2)\approx-0.154$ are \textsc{diagnostic}\\
+Proposition~\ref{prop:archneg} ($\Ainf(t\mathbf 1_{\IT})\le U(T)<0$; $\laminf<0$ for $T\ge0.4608$; $T^*_\infty\le0.4608<0.58\le T^*_{\infty,\mathrm P}$) & \textsc{proved}, elementary closed form, the value $U(0.4608)$ in interval arithmetic (\path{scripts/r156/audit_r156_witness_t.py}); it improves the proved bound $T^*_\infty\le0.60$, and the \textsc{diagnostic} Galerkin value $0.3716$ is unaffected and proves nothing\\
 Proposition~\ref{prop:schur} (Schur reduction and the parity splitting; the technique restates earlier unpublished work) & \textsc{proved}\\
 Theorem~\ref{thm:w11} (a proved value of $W_{\log2}$ in one explicit direction) & \textsc{proved (machine-verified)}, interval arithmetic; one direction, not a sign for the form\\
 Theorem~\ref{thm:SC}, Corollary~\ref{cor:SC1} (sub-comb negativity; positivity is collective) & \textsc{proved}\\
@@ -3922,13 +4313,15 @@ Lemma~\ref{lem:cpos}, Theorem~\ref{thm:finmod}, Proposition~\ref{prop:finsupp} (
 Corollary~\ref{cor:void}, Remark~\ref{rem:twohalves} (classical prime-side hypotheses decide no window; the two halves of the void) & \textsc{proved} as method constraints in the sense of \cite[Thm.~18.1]{Paper46}; statements about derivations, not about $\zeta$; no minimality claimed\\
 Propositions~\ref{prop:band}, \ref{prop:align} (the negative set of $\sT$ is a finite band; the alignment bracket $|k\log3-l\log2|<\frac14\log6$; at most $6$, resp.\ $12$, arcs) & \textsc{proved}; the roots $\tau^{\mathrm{lo}},\tau_a,\tau_b,\tau_b',y_0$ are computed in double precision from explicit monotone equations; $\tau_{\mathrm{last}}\in[45.642,60.544]$ and $[108.723,120.087]$ \textsc{proved} modulo double-precision evaluation\\
 Proposition~\ref{prop:negtrace} (the negative part is trace class; the band does not decide the sign) & \textsc{proved}; the trace values of Rem.~\ref{rem:bandtable} are \textsc{diagnostic}\\
-Definition~\ref{def:Al}, Lemmas~\ref{lem:Alband}, \ref{lem:Onat}, Theorem~\ref{thm:Al}, Remark~\ref{rem:excess} (the alignment inequality; per window $[\exists w:\mathrm{Al}_T(w)]\iff\lamW>0$; non-attainment for the complete form) & \textsc{proved}; the per-window converse $\lamA\ge0\Rightarrow\lamW\ge0$ is \textsc{open}\\
+Definition~\ref{def:Al}, Lemmas~\ref{lem:Alband}, \ref{lem:Onat}, Theorem~\ref{thm:Al}, Remark~\ref{rem:excess} (the alignment inequality; per window $[\exists w:\mathrm{Al}_T(w)]\iff\lamW>0$; non-attainment for the complete form) & \textsc{proved}; the per-window converse $\lamA\ge0\Rightarrow\lamW\ge0$ for $\zeta$ at $T>0.8$ is \textsc{open} (it holds for $T\le0.8$ through \cite{Zhu2026}, cited)\\
+Theorem~\ref{thm:parityschur} (parity splitting of $W_T$; $\mathcal D^{\mathrm{par}}_T=\mathcal Q^{\mathrm{par}}_T\oplus\R h_{\mathrm{par}}$; $n_-(W_T)=n_-(\mathfrak a_T|\PT)+n_-(\mathfrak G_T)$; per window $\lamW>0\iff[\lamA>0\wedge\mathfrak G_T\succ0]$ and $\lamW\ge0\iff[\mathrm{RD}_T\wedge\text{range}\wedge\mathfrak G_T\succeq0]$; the sandwich only for $\mathfrak g_{\mathrm{par}}>0$) & \textsc{proved}\\
+Proposition~\ref{prop:polarcap} ($\mathfrak G_T=S^{\mathrm{Sch}}_T+J$; $\mathfrak G_T$ is the polar capacity $E_T(\Phi_F(0),\Phi_F(1))$) & \textsc{proved}\\
+The comb-level complete form $W_T(a)$ of \S\ref{subsec:finite} (a definition; not the zero sum of $\zeta_a$) and Corollary~\ref{cor:convfail} (the converse fails for $\Lambda\mathbf 1_{n\ge5}$ on $[0.4608,0.58]$, its odd-sector form on $[0.4608,\log2]$, and for $a_\theta$ at $\frac12\log3$ for every $\theta\le0.8148$; failure set $[0,\theta_*)$, $0.8148<\theta_*<1$; method constraint) & \textsc{proved} as comb-level statements and method constraints in the sense of Cor.~\ref{cor:void}, importing the machine-verified Thm.~\ref{thm:index}, Cor.~\ref{cor:Tarch}, Thm.~\ref{thm:C}; quintic witness in interval arithmetic (\path{scripts/r156/audit_r156_theta_quintic.py}); $\theta_*<1$ rests on \cite[Thm.~1.2]{Zhu2026}, \textsc{cited, not re-verified here}; statements about derivations and classes, not about zeros\\
+The chain at one window ($\exists\mathrm{Al}_T\iff\lamW>0\iff[\lamA>0\wedge\mathfrak G_T\succ0]\Rightarrow\mathrm{KEP}(T)$ indeterminate $\Rightarrow\lamW\ge0$) & \textsc{proved}; indeterminacy is not claimed equivalent to either end; $\mathrm{RD}_T\Rightarrow\lamP\ge0$ per window, the effective window shift for $\zeta$ and the converse for $\zeta$ at $T>0.8$ \textsc{open}\\
 Remark~\ref{rem:Cheb} (on $\PT$ the prime comb is the Chebyshev remainder) & the identity \eqref{eq:Cheb} \textsc{proved}; the closing sentences a reading\\
 The entry law for $\Aconst$ and the two scales of \S\ref{subsec:where}, and the class monotonicity $\mathcal W_{T'}\subseteq\Wcl$ & \textsc{proved} (elementary)\\
 The \textsc{diagnostic} record of Appendix~\ref{app:diag} & \textsc{diagnostic} throughout; no proof depends on it\\
-\bottomrule
-\end{tabularx}
-\end{center}
+\end{longtable}}
 
 \subsection{Reproduction}
 The certificate of Theorem~\ref{thm:C} is archived, in the repository of the programme, under
@@ -3969,7 +4362,9 @@ $13$--$14$\,s each; they agree bit for bit with the earlier runs of an uncorrect
 of \path{r8a_03_recheck.json}, written by \texttt{r8a\_03\_recheck\_lower.py} ($0.1$\,s) from the explicit
 vectors and interval enclosures archived by \texttt{r8a\_02\_lower.py} (which uses the enclosure library of
 Theorem~\ref{thm:w11}, $10$--$56$\,s per window, valid for $T<0.88137$); the flag written by
-\texttt{r8a\_02\_lower.py} itself is not a certificate (Appendix~\ref{app:encl}). Software: Python~3, \texttt{scipy}
+\texttt{r8a\_02\_lower.py} itself is not a certificate (Appendix~\ref{app:encl}). The interval evaluations of Proposition~\ref{prop:archneg} and Corollary~\ref{cor:convfail}(ii) are
+\path{scripts/r156/audit_r156_witness_t.py} and \path{scripts/r156/audit_r156_theta_quintic.py} (\texttt{sympy} and
+\texttt{mpmath} interval arithmetic, about $1$\,s each). Software: Python~3, \texttt{scipy}
 1.11.4 (HiGHS), \texttt{mpmath} 1.3.0.
 
 \appendix
@@ -4510,6 +4905,22 @@ neither sign at $0.80$. Likewise the Galerkin upper bound $0.5958$ on $T^*_{\mat
 (\S\ref{subsec:arch}) is \textsc{diagnostic}; the certified bracket is $[0.58,0.60]$.
 \end{remark}
 
+\begin{remark}[\textsc{diagnostic}]\label{rem:polarcapdiag}
+These are float64 Legendre--Galerkin values of the polar-capacity constants of Theorem~\ref{thm:parityschur}.
+A Galerkin $\mathfrak g_{\mathrm{par}}$ is a minimum over a subspace, hence an \emph{upper} bound on the true constant.
+A negative value is therefore evidence of a true negative, up to rounding and quadrature error. A positive
+value is no evidence at all. At $T=\frac12\log3$ with the primes deleted, $\mathfrak g_{\mathrm{ev}}\approx-0.451$ and
+$\mathfrak g_{\mathrm{odd}}\approx-20.08$, with primitive sector bottoms $\approx+0.0825$ and $+0.3816$, so both channels
+fail. For $\zeta$ at the same window, $\mathfrak g_{\mathrm{ev}}\approx8.6\cdot10^{-8}$ and $\mathfrak g_{\mathrm{odd}}\approx1.35\cdot10^{-3}$,
+stable over $16$, $24$ and $32$ modes. There $S^{\mathrm{Sch}}_T\approx\mathrm{diag}(-1.99999991,+2.00135)\approx-J$:
+the primitive Schur complement nearly cancels the polar block. In the family $a_\theta$ of
+Corollary~\ref{cor:convfail}(ii) the complete form fails for $\theta$ below $\theta_*\approx0.99991$, and its
+even channel fails already at $\theta=1.001$ ($\mathfrak g_{\mathrm{ev}}\approx-4.9\cdot10^{-5}$). With the primes
+deleted, the odd and the even channel of the complete form cross zero at $T\approx0.372$ and $T\approx0.44$. The
+positivity of $\mathfrak g_{\mathrm{ev}},\mathfrak g_{\mathrm{odd}}$ for $\zeta$ at $T\le0.8$ rests on \cite{Zhu2026} and
+Theorem~\ref{thm:parityschur}(c), not on these numbers. None of them enters a proof.
+\end{remark}
+
 The labels of these measurements, moved here from the table of \S\ref{sec:repro}:
 
 \begin{center}\small
@@ -4527,6 +4938,7 @@ Remark~\ref{rem:Zcheck} (numerical check of the identity of Theorem~\ref{thm:Z})
 Measured ceilings $\operatorname{Ceil}(M,\frac12\log3)$; the cap $\approx2.0\cdot10^{-4}$ at $T=0.58$ (two figures); the negative ceilings at $T=0.68$ and $\log2$ (sign robust, digits not stable) & \textsc{diagnostic}\\
 Galerkin bounds, contact-set description, two-prime values, resolution scale & \textsc{diagnostic}\\
 Remark~\ref{rem:odd080} (the odd sector at $T=0.80$: residual eigenvalues $-0.0047$, $-0.0043$, $-0.0019$ and their attribution to the tail minorant; odd Galerkin bottoms at $0.75$--$0.81$; $0.5958$) & \textsc{diagnostic}; $n_{\mathrm{odd}}(0.80)$ and $(\mathrm{H1})(0.80)$ \textsc{open}\\
+Remark~\ref{rem:polarcapdiag} (Galerkin values of $\mathfrak g_{\mathrm{ev}},\mathfrak g_{\mathrm{odd}}$ at $\frac12\log3$ with and without primes; $S^{\mathrm{Sch}}_T\approx-J$; $\theta_*\approx0.99991$; the channel crossings $\approx0.372$, $0.44$) & \textsc{diagnostic}; Galerkin $\mathfrak g$ are upper bounds, and positive values carry nothing\\
 Remark~\ref{rem:bandtable} (components of $\{\sT<0\}$ at $\{2,3\}$ and $\{2,3,4\}$; the convergent pattern; $\operatorname{tr}\mathrm{Neg}_T$; the loss of the proof of Theorem~\ref{thm:margin} on its own test function) & \textsc{diagnostic}\\
 \bottomrule
 \end{tabularx}

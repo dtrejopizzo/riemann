@@ -84,7 +84,7 @@ the cited statement say "with the contact set held fixed".)
 citation). Strict positivity: `CONDITIONAL`.
 *Proof.* For `2T < log 2` the contact set `N_T = {n ≥ 2 : log n < 2T}` is empty, so the prime term of
 `W_T` is identically zero and `W_T = A_∞` as quadratic forms on `L²(−T,T)`. Positivity of `W_T` for
-`T ≤ log 2` is known (Paper 47 `:137,276`, citing `Paper42`, `Yoshida1992`, `Bombieri2000`; the
+`T ≤ log 2` is known (Paper 47 `:137,276`, citing `Paper42`, `Yoshida1992`, `Bombieri2000`; the [amended 2026-09-23 per R156_004 A14: `T ≤ log 2` holds for the primitive form only; complete form `T ≤ ½log2` classical, `≤ 0.8` Zhu, cited]
 prime-free case is also verified end to end in `phase-115/scripts/115_08_prime_free_window_crosscheck.py`
 and `phase-118/PHASE_118_CLOSURE`). Hence `λ^∞_min(T) = λ^W_min(T) ≥ 0`. ∎
 *On strictness.* The corpus's own record (`R154_013`) is that Yoshida 1992 is not held in

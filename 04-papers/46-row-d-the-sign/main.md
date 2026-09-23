@@ -3969,7 +3969,7 @@ the record note at Theorem 12.3.
 
 | tag | import | clause it serves | used at |
 |---|---|---|---|
-| **(X19)** | **The first zero, verified**: `ρ_1 = ½ + iγ_1` with `γ_1 = 14.134725141734693790…` is a zero of `ξ` **on the critical line** and is **simple**, and `ξ` has no zero `ρ ≠ ρ_1,\barρ_1` with `|\mathrm{Im}\,ρ| ≤ 21`.  J. B. Rosser, J. M. Yohe, L. Schoenfeld, *Rigorous computation and the zeros of the Riemann zeta-function*, IFIP Congress 1968, 70–76; D. J. Platt and T. S. Trudgian, *The Riemann hypothesis is true up to `3·10^{12}`*, Bull. LMS **53** (2021), 792–797 (Turing's method; the verification establishes that the zeros in the checked range are simple and on the line).  **New to this paper as an import of record; Platt–Trudgian is already cited elsewhere in the corpus.**  Of the same evidential type as (X15), (X16), (X18); a cheaper substitute would be `ξ'(ρ_1) ≠ 0` plus an argument-principle count on `|\mathrm{Im}\,s| ≤ 21`, both certifiable by rigorous interval arithmetic | the simplicity and isolation of `ρ_1`, on which the exact constant `C_{F_0} ≤ Gs_1` and the value `W_{F_0} = 2G²` depend | Lemma 19.20(iv),(v), Thm 19.22, Thm 19.23, Thm 19.25, Thm 19.30; load-bearing per Remark 19.27 |
+| **(X19)** | **The first zero, verified**: `ρ_1 = ½ + iγ_1` with `γ_1 = 14.134725141734693790…` is a zero of `ξ` **on the critical line** and is **simple**, and `ξ` has no zero `ρ ≠ ρ_1,\barρ_1` with `|\mathrm{Im}\,ρ| ≤ 21`.  J. B. Rosser, J. M. Yohe, L. Schoenfeld, *Rigorous computation and the zeros of the Riemann zeta-function*, IFIP Congress 1968, 70–76; D. J. Platt and T. S. Trudgian, *The Riemann hypothesis is true up to `3·10^{12}`*, Bull. LMS **53** (2021), 792–797 (Turing's method; the verification establishes that the zeros in the checked range are simple and on the line).  **New to this paper as an import of record; Platt–Trudgian is already cited elsewhere in the corpus.**  Of the same evidential type as (X15), (X16), (X18); a cheaper substitute would be `ξ'(ρ_1) ≠ 0` plus an argument-principle count on `|\mathrm{Im}\,s| ≤ 21`, both certifiable by rigorous interval arithmetic | the simplicity and isolation of `ρ_1`, on which the exact constant `C_{F_0} ≤ Gs_1` and the value `W_{F_0} = 2G²` depend | Lemma 19.20(iv),(v), Thm 19.22, Thm 19.23, Thm 19.25, Lemma 19.25a, Cor 19.25b, Thm 19.30; load-bearing per Remark 19.27.  **[phase 156: Lemma 19.20(iv)'s per-interval count for `21 ≤ T ≲ 2×10^4` needs the verified zero list on that range or an explicit Trudgian count — flagged gap, see the note at Lemma 19.20(iv)]** |
 | **(X20)** | **Landau's theorem for Laplace transforms and Dirichlet series**: a Laplace integral `∫_0^∞f(T)e^{−zT}dT` with `f ≥ 0`, or a Dirichlet series with nonnegative coefficients, whose abscissa of convergence `σ_c` is finite, has a **singularity at the real point `z = σ_c`** of its analytic continuation.  D. V. Widder, *The Laplace Transform*, Princeton Univ. Press (1941), Theorem II.5b; E. Landau, *Handbuch der Lehre von der Verteilung der Primzahlen*, §8 (the Dirichlet-series form) | the passage from `W(h_T) ≥ 0` for all `T > 0` to the absence of a real singularity other than `z = 0`, hence `σ_c = 0`, hence analyticity of `G` on `\mathrm{Re}\,z > 0` | Thm 17.14 (and Rem. 17.14a, the same argument for `Ξ_a`) |
 | **(X20a)** | **The prime-number theorem with the Vinogradov–Korobov remainder**: `ψ_{Ch}(u) = u + O\big(u\exp(−c(\log u)^{3/5}(\log\log u)^{−1/5})\big)` for an absolute `c > 0`.  I. M. Vinogradov (1958); N. M. Korobov (1958); see A. Ivić, *The Riemann Zeta-Function*, Ch. 12, or H. L. Montgomery–R. C. Vaughan, *Multiplicative Number Theory I*, §6.3 | the best unconditional size of `\mathcal E(u)` against which `R(T)` is estimated, and the admissibility profile of the one-signed perturbation `η` | Thm 17.19, Rem. 17.20 |
 | **(X21)** | **Davenport–Heilbronn**: if `h(−D) > 1` then the Epstein zeta function `Z_Q` of a form of discriminant `−D` has **infinitely many zeros in the half-plane `Re s > 1`**.  H. Davenport and H. Heilbronn, *On the zeros of certain Dirichlet series* I, II, J. London Math. Soc. **11** (1936), 181–185 and 307–312.  (Voronin's zeros in `½ < Re s < 1`, 1976, would **not** serve: see Remark 18.10a) | the existence of a real singularity of `G_Q` strictly right of `θ_R`, and the failure of A7 | Lem 18.4, Thm 18.10, Thm 18.12 |
@@ -3984,6 +3984,7 @@ the record note at Theorem 12.3.
 | **(X28)** | **Intersection theory, Riemann–Roch, Serre duality, the Hodge index theorem and the bigness criterion on a smooth projective surface.**  On `S = C×C`: the numbers (21.1), including `Δ² = 2−2g`, `Γ_f² = d(2−2g)`, `K_{C×C} = (2g−2)(F_1+F_2)` and `χ(𝒪_S) = χ(𝒪_C)^2 = (1−g)^2` (Künneth); Riemann–Roch `χ(𝒪(D)) = ½D·(D−K_S)+χ(𝒪_S)`; Serre duality `h^2(D) = h^0(K_S−D)`; the Hodge index theorem (`H` ample, `D·H = 0`, `D ≢ 0 ⟹ D^2 < 0`); and bigness: `D^2 > 0`, `D·H > 0 ⟹ nD` effective for `n ≫ 0`.  R. Hartshorne, *Algebraic Geometry*, GTM 52, §V.1 (V.1.1, V.1.5, V.1.6, V.1.8, V.1.9) with Exercises V.1.9, V.1.10, and III.7.6 for duality; R. Lazarsfeld, *Positivity in Algebraic Geometry I*, Ergebnisse **48**, §§1.5, 2.2 | the intersection numbers (21.1) underlying the dictionary; that `h⁰_C` satisfies (a),(b′),(c); `\overline{\mathrm{Pos}} ⊆ \overline{\mathrm{Eff}}`; the model column of the (P145′) supply table | (21.1), Thm 21.7, Thm 21.16, Thm 21.17(iii), §21.6, §21.8 |
 | **(X29)** | **Toeplitz operators with continuous symbol**: for real `f ∈ C(T)` with Fourier coefficients `\hat f(k)`, the Toeplitz operator `T(f)` on `ℓ^2(N)` (and the Laurent operator on `ℓ^2(Z)`) is bounded self-adjoint with `\inf\mathrm{spec}\,T(f) = \min f` and `\sup\mathrm{spec}\,T(f) = \max f`; in particular `T(f) ⪰ 0 ⟺ f ≥ 0`.  U. Grenander and G. Szegő, *Toeplitz Forms and Their Applications*, 2nd ed., Chelsea 1984, Ch. 5; A. Böttcher and B. Silbermann, *Analysis of Toeplitz Operators*, 2nd ed., Springer 2006, §1.2 and Prop. 2.14.  Applied to the Kac–Murdock–Szegő symbol `f_ρ(θ) = (1−ρ^2)/(1−2ρ\cosθ+ρ^2)`, and to the sum of two such Poisson kernels for the falsifier | the trichotomy (22.15) and its thresholds `τ_±(p)`, and the `Ξ_a` thresholds of Remark 22.16a | Thm 22.15, Rem 22.16a |
 | **(X29a)** | **The affine anti-equivalence**: `\mathrm{Spec}` is an anti-equivalence from commutative rings to affine schemes, so `\mathrm{Hom}_{\mathrm{Sch}}(\mathrm{Spec}\,A,\mathrm{Spec}\,B) = \mathrm{Hom}_{\mathrm{Ring}}(B,A)`, and more generally `\mathrm{Hom}_{\mathrm{Sch}}(X,\mathrm{Spec}\,B) = \mathrm{Hom}_{\mathrm{Ring}}(B,Γ(X,𝒪_X))`.  R. Hartshorne, *Algebraic Geometry*, Springer 1977, Prop. II.2.3 and Exercise II.2.4; A. Grothendieck and J. Dieudonné, *EGA I*, §1.6 | passing from "the only ring endomorphism of `Z` is the identity" to the scheme statement and to terminality of `\mathrm{Spec}\,Z` | Thm 22.17(ii) |
+| **(X30)** | **Hadamard's constant for `ξ` (Davenport's identity)**: `Σ_ρ\mathrm{Re}(1/ρ) = 1 + ½γ_E − ½\log 4π = 0.0230957089…`, the sum over the nontrivial zeros with multiplicity, a series of positive terms `β/\|ρ\|²`; unconditional (it is `−B` in the Hadamard product of `ξ`).  H. Davenport, *Multiplicative Number Theory*, 3rd ed. (rev. H. L. Montgomery), GTM **74**, Springer 2000, Ch. 12, eqs. (10)–(11).  `CLASSICAL`.  **[NEW, phase 156 (`R156_002` Lemma 3.2, cleared by `R156_003` D4).]**  Serves only the explicit constants; the existence statements need only (E3d) | the explicit bound `S_2 = Σ_ρ\|ρ−½\|^{−2} ≤ 0.0465`, hence the explicit `R_0(ϑ)`, `s_{F_R} < 0.998464`, `d_0^{(R)} < 325.78` and `s_{F_R^♭} ≤ 0.998469` | Lemma 19.25a(ii),(iv),(v) |
 
 ---
 
@@ -6212,8 +6213,11 @@ representative.**
  (ii) `\deg F_0 = 0` exactly, and `Φ_{F_0}(0) = −Φ_{F_0}(1) = η` with `|η| < 10^{−390}`;
  (iii) `Φ_{F_0}(ρ_1) = iG(1 + O(10^{−390}))` and `Φ_{F_0}(1−ρ_1) = \overline{Φ_{F_0}(ρ_1)}`;
  (iv) `L := Σ_{ρ ≠ ρ_1,\barρ_1}|Φ_{F_0}(1−ρ)| ≤ 5.46×10^{−91}` (with multiplicity);
- (v) `|W(F_0) − 2G²| ≤ 6×10^{−91}`; in particular `W_0 := W(F_0) = −I_∞(F_0,F_0) + 2η²` and
+ (v) `|W(F_0) − 2G²| ≤ 6×10^{−91}`; in particular `W_0 := W(F_0) = −I_∞(F_0,F_0) − 2η²` and
      `−I_∞(F_0,F_0) = 2G²(1 ± 10^{−90}) > 0`;
+     **[CORRECTED, phase 156 (`R156_003` item E1): the sign of the `2η²` term was printed `+`; the
+     proof line of (v) below, `I_∞(F_0,F_0) = −2η² − W`, gives `−`.  The discrepancy `4η² < 10^{−780}`
+     is invisible in both two-sided bounds of (v), so nothing downstream changes.]**
  (vi) `w_{F_0}(u) = −2G\sin(γ_1u) + r(u)` with `|r(u)| ≤ (L + 2|η|)·2\cosh(u/2)`, whence the exact
       constant of Theorem 11.14(ii) satisfies `C_{F_0} ≤ G·s_1 + L + 2|η| < G·s_1 + 10^{−90}`.
 
@@ -6241,6 +6245,15 @@ Riemann–von Mangoldt count `\#\{γ ∈ [T,T+1]\} ≤ \log T` (which counts off
 
 which is `88` orders of magnitude below the margin `G(1−s_1) = 5.79×10^{−3}`.  Certified by
 `certify_leakage.py`.
+**[FLAGGED GAP, phase 156 (`R156_003` item E3); the mathematics above is not changed.]**  The
+phrase *"with no zero list at all"* is not supported as written: explicit Trudgian-type bounds for
+`S(T)` give about `6.5` ordinates per unit interval at `T = 21`, against `\log 21 = 3.04`, and they
+reach `\#\{γ ∈ [T,T+1]\} ≤ \log T` only for `T ≳ 2×10^4`.  For `21 ≤ T ≲ 2×10^4` the count must be
+supplied either by the verified zero list on that range (the Platt–Trudgian verification already
+cited under (X19), used beyond `|\mathrm{Im}\,ρ| ≤ 21`), or by replacing `\log T` with an explicit Trudgian count.  The margin is untouched: any count
+`≤ 10\log T` moves `L` to at most `5.5×10^{−90}`, which weakens the displayed `< 10^{−90}` of (vi)
+to `≈ 10^{−89}` and leaves `L ≪ G(1−s_1)`.  The same caveat applies to the header of
+`certify_leakage.py`.  `OPEN` as a citation item only.
 (v) `W(F_0) = Σ_ρΦ_{F_0}(ρ)Φ_{F_0}(1−ρ)`; by (X19) the zero `ρ_1` is **simple**, so the terms at
 `ρ_1` and `\barρ_1` contribute `2(iG)(−iG) = 2G²` up to the error of (iii), and the remaining terms
 are bounded by `(\max_ρ|Φ_{F_0}(ρ)|)·L ≤ 11.59·L`.  The identity
@@ -6289,24 +6302,36 @@ margin `G(1−s_1) = 5.7897×10^{−3}`, against a leakage error `< 10^{−90}`.
 
 *Proof.*  Lemma 19.20(v),(vi) and Proposition 19.18.  ∎  `PROVED`
 
-**Theorem 19.23 ((b′)⁺ is false for every `χ`; `PROVED`, unconditional given (X19)).**  Fix `χ ∈ R`
-and let `d` satisfy
+**Theorem 19.23 ((b′)⁺ is false for every `χ`; `PROVED`, unconditional given (X19)).**  Put
+`s_{F_0} := C_{F_0}\sqrt{2/W_{F_0}}` (the ratio whose infimum over `\deg F = 0`, `W_F > 0` is `s_*`
+of §19.9); by Lemma 19.20(v),(vi) and Proposition 19.18, `s_{F_0} ≤ s_1^+ := s_1(1+10^{−89})^{1/2}`.
+Fix `χ ∈ R` and let `d` satisfy
 
-    d²(1 − s_1²) > d − 4χ \qquad\big(\text{at } χ = 0:\ d > d_0 := (1−s_1²)^{−1} = 324.9598266…\big) .
+    d²(1 − s_{F_0}²) > d − 4χ \qquad\big(\text{sufficient: } d²(1 − (s_1^+)²) > d − 4χ;\ \text{at } χ = 0:\ d > d_0^+ := (1−(s_1^+)²)^{−1} = 324.9598266…\big) .
 
-Pick `t > 0` with `s_1²d²/2 < t²W_{F_0} < d²/2 − d/2 + 2χ` — a nonempty range, by the displayed
-inequality — and put `E := tF_0 + dK`.  Then `E ∈ S_χ`, and **there is no `E' ∈ D^W` with `E' ≥ 0`,
+Pick `t > 0` with `s_{F_0}²d²/2 < t²W_{F_0} < d²/2 − d/2 + 2χ` — a nonempty range, by the displayed
+inequality; it suffices that `(s_1^+)²d²/2 < t²W_{F_0}` — and put `E := tF_0 + dK`.
+Then `E ∈ S_χ`, and **there is no `E' ∈ D^W` with `E' ≥ 0`,
 `E' ≢ 0`, `E − E' ∈ 𝓝_∞`.**  In particular clause (b′)⁺ of Definition 19.10 is false for `ξ`, at
 every `χ`, and `h⁰_{RR}^{+}` fails clause (b′).
+**[CORRECTED, phase 156 (`R156_003` item E2): the window and threshold were stated with `s_1` in
+place of `s_{F_0}`.  The proof reaches only `t²W_{F_0} ≤ s_1²d²/2·(1+10^{−89})`, so the sliver
+`t²W_{F_0} ∈ (s_1²d²/2,\ s_1²d²/2·(1+10^{−89})]` of the old window was not covered and
+`(1−s_1²)^{−1}` was a sliver too low as a threshold.  `d_0^+` agrees with `(1−s_1²)^{−1}` in every
+displayed digit.  Downstream, Theorem 19.25 needs one admissible `t` (its Step 3 is restated
+accordingly), Corollary 19.24 only cancels `N`, Theorem 19.30 replaces `C` by `C'`, and the certified
+instance below lies `≈ 26` units inside the window; no statement uses the exact `s_1` form.]**
 
 *Proof.*  `E ∈ S_χ` by Theorem 19.21(i).  If such an `E'` existed then, by Theorem 11.11 and
 Theorem 11.13(ii),(iv), `\deg E' = d` and `I_∞(E',F_0) = I_∞(E,F_0) = −tW_{F_0}`, so
 Theorem 11.14(ii) would give `t\,W_{F_0} ≤ C_{F_0}d`, i.e.
-`t²W_{F_0}² ≤ C_{F_0}²d² ≤ (Gs_1 + 10^{−90})²d²`; since `W_{F_0} = 2G²(1±10^{−90})` this reads
-`t²W_{F_0} ≤ s_1²d²/2·(1+10^{−89})`, contradicting the choice of `t`.  ∎  `PROVED`
+`t²W_{F_0}² ≤ C_{F_0}²d²`, i.e. `t²W_{F_0} ≤ s_{F_0}²d²/2`, contradicting the choice of `t`.  For the
+bound on `s_{F_0}`: `C_{F_0} ≤ Gs_1 + 10^{−90}` and `W_{F_0} = 2G²(1±10^{−90})` give
+`s_{F_0}² ≤ s_1²(1+10^{−89})`.  ∎  `PROVED`
 
 **Certified instance** (`certify_sF.py`, mpmath, `mp.dps = 40`).  At `χ = 0`, `d = 400`: the
-admissible window for `t²W_{F_0}` is `(79753.8157…,\ 79800)`, nonempty.  Taking
+admissible window for `t²W_{F_0}` is `(s_{F_0}²·80000,\ 79800) ⊇ (79753.8157…·(1+10^{−89}),\ 79800)`,
+nonempty.  Taking
 `t²W_{F_0} = 79780`, i.e. `t = 53.11911…` with `W_{F_0} = 2G² = 28.274333882…`, the class
 `E = 53.11911…·F_0 + 400·K` has
 
@@ -6346,9 +6371,159 @@ Theorem 12.3, for any constant `χ ∈ R`.  Equivalently, the hypothesis of Theo
 `R(K−E) = R(E)` of Theorem 19.2 gives `h⁰(E) ≥ R(E)`.
 
 *Step 3 (the witness).*  Take `E := tF_0 + dK` as in Theorem 19.23, with `d` large enough that both
-`d > 1` and `d²(1−s_1²) > d − 4χ`.  Then `\deg E = d > 1` and `R(E) > 0`, so `h⁰(E) ≥ R(E) > 0` by
+`d > 1` and `d²(1−s_{F_0}²) > d − 4χ` (for instance `d²(1−(s_1^+)²) > d − 4χ`).  Then `\deg E = d > 1` and `R(E) > 0`, so `h⁰(E) ≥ R(E) > 0` by
 Step 2, so (b′) supplies `E' ≥ 0`, `E' ≢ 0` with `E − E' ∈ 𝓝_∞` — which Theorem 19.23 forbids.  ∎
 `PROVED`
+
+*Provenance of Lemma 19.25a – Remark 19.25c.  Taken from
+`03-research/phase-156-row-d-per-window-converse/R156_002_BUILDER_R1_TRUNCATION.md` (Lemmas 1.2, 3.1,
+3.2, 4.1, 5.1, Proposition 2.1, Theorem 6.1, Proposition 7.1, Remarks 8.3, 8.4), as amended in place
+per `R156_003_HOSTILE_AUDIT_R1.md` (A1–A10); only what §5 of `R156_003` clears is carried.  Theorem
+19.25 as stated quantifies over `h⁰` defined on all of `D^W`; what follows removes that, and needs
+no new certified constant.*
+
+**The ratio `s_F` and the seminorm `N`.**  For real `F ∈ D^W` with `\deg F = 0` and
+`W_F := −I_∞(F,F) > 0` (as in Theorem 19.21) put `s_F := C_F\sqrt{2/W_F}`, with `C_F` the exact
+constant of Theorem 11.14(ii); so `s_* = \inf s_F` (§19.9), and Theorems 19.21, 19.23 and 19.25 use
+of `F_0` only `F_0 ∈ D^W` real, `\deg F_0 = 0` exactly, `W_{F_0} > 0` and `s_{F_0} < 1`
+(`R156_003` D1).  For measurable `g` put `N(g) := ∫|g(u)|\,2\cosh(u/2)\,du`, and
+`S_2 := Σ_ρ|ρ−½|^{−2}` over the zeros of `ξ` with multiplicity.  Fix a cutoff `ϑ ∈ C_c^∞(R)`,
+**even**, `0 ≤ ϑ ≤ 1`, `ϑ = 1` on `[−1,1]`, `\mathrm{supp}\,ϑ ⊆ [−2,2]`; put
+`A := 1 + \|ϑ'\|_∞ + \|ϑ''\|_∞`, `ϑ_R(u) := ϑ(u/R)`, and
+
+    F_R := F_0\,ϑ_R ∈ C_c^∞(R) ,\qquad D_R := F_0 − F_R .
+
+(The cutoff is written `ϑ` because `χ` is the constant of Definition 19.1.)  Fix also a real odd
+`B ∈ C_c^∞(R)` with `Φ_B(0) = 1` — e.g. `B := −uψ(u)/c_ψ` with `ψ ≥ 0` an even bump, `ψ ≢ 0`,
+`c_ψ := ∫uψ(u)\sinh(u/2)du > 0` — so `Φ_B(1) = −1`.
+
+**Lemma 19.25a (truncation of the witness; `PROVED`, given (X19), (E2), (E3d)).**
+ (i) *(seminorm bounds, unconditional given (E3d))*  For real `E, F, F' ∈ D^W`: `C_{F+F'} ≤ C_F + C_{F'}`;
+     `|Φ_F(0)| + |Φ_F(1)| ≤ N(F)`; `C_F ≤ N(F) + S_2\,N(F'')`; and `|I_∞(E,F)| ≤ C_F\,N(E)` for
+     **every** `E ∈ D^W`, effective or not.
+ (ii) *(the constant; `CLASSICAL` import (X30))*  `S_2 ≤ 0.0465`.
+ (iii) `F_R` is real and **odd**, `\mathrm{supp}\,F_R ⊆ [−2R,2R]`, and `\deg F_R = 0` **exactly**.
+ (iv) `s_{F_R} → s_{F_0}` as `R → ∞`.  Explicitly, for `R ≥ R_0(ϑ) := 6\sqrt{40 + 2\log A}`:
+      `N(D_R) ≤ 4e^{−R²/36}`, `C_{D_R} ≤ 80ARe^{−R²/36} ≤ 10^{−6}`,
+      `C_{F_R} ≤ Gs_1 + 10^{−6} + 10^{−90}`, `|W_{F_R} − W_{F_0}| ≤ 9.3×10^{−5}`, and
+
+          s_{F_R} ≤ s_1 + 3.6×10^{−6} < \bar s := 0.998464 ,\qquad
+          d_0^{(R)} := (1 − s_{F_R}²)^{−1} ≤ (1−\bar s²)^{−1} < 325.78 ,
+
+      with `|Φ_{F_R}(0)| = |Φ_{F_R}(1)| < 2×10^{−17}`.
+ (v) *(primitive variant)*  If moreover `(10^{−390} + 4e^{−R²/36})(N(B)+N(B'')) ≤ 10^{−6}`, then
+     `F_R^♭ := F_R − Φ_{F_R}(0)B` lies in `P_c^∞ := \{F ∈ C_c^∞(R) \text{ real} : Φ_F(0) = Φ_F(1) = 0\}`,
+     is odd, and has `W_{F_R^♭} > 0`, `s_{F_R^♭} ≤ s_1 + 8×10^{−6} ≤ 0.998469`,
+     `(1 − s_{F_R^♭}²)^{−1} < 326.9`.
+
+The explicit constants of (iv), (v) use (ii); the existence of an `R` with `s_{F_R} < 1` (resp.
+`s_{F_R^♭} < 1`) needs only `S_2 < ∞`, i.e. (E3d) with `|ρ−½| ≥ |γ_ρ|`.
+
+*Proof (condensed).*  (i) (11.16) is linear in `F`, so `w_{F+F'} = w_F + w_{F'}` and the supremum
+defining `C` is subadditive.  `e^{±u/2} ≤ 2\cosh(u/2)` gives the polar bound.  For the zero part of
+(11.17), the two integrations by parts behind (11.2) hold **pointwise** at `s = 1−ρ`, where
+`σ − ½ = ½ − β ∈ (−½,½)` by (E2), so `|Φ_F(1−ρ)| ≤ |ρ−½|^{−2}∫|F''|e^{(½−β)t}dt ≤ |ρ−½|^{−2}N(F'')`;
+sum over `ρ`.  Finally Theorem 11.14(i) gives `I_∞(E,F) = ∫E\,w_F`, absolutely convergent, so
+`|I_∞(E,F)| ≤ C_F∫|E|\,2\cosh(u/2)`, with no sign hypothesis on `E`.
+(ii) By (X30), `Σ_ρ\mathrm{Re}(1/ρ) = 1 + ½γ_E − ½\log 4π = 0.0230957…`, a series of positive terms
+`β/|ρ|²`, unconditionally.  The zero multiset is invariant under `ρ ↦ 1−\barρ` ((E2) and reality),
+and for `0 < β < 1`, `\mathrm{Re}\tfrac1ρ + \mathrm{Re}\tfrac1{1−\barρ} ≥ (1+γ²)^{−1}`; averaging,
+`Σ_ρ(1+γ²)^{−1} ≤ 0.04620`.  Every zero has `|γ| > 14` (X19), so
+`|ρ−½|^{−2} ≤ γ^{−2} ≤ (1+14^{−2})(1+γ²)^{−1}` and `S_2 ≤ 1.0052·0.04620 < 0.0465`.  No step
+assumes RH.  Only `S_2 ≤ 1` is used below.
+(iii) `ϑ_R` is even and `F_0` odd (Lemma 19.20(i)), so `F_R(u)\,2\cosh(u/2)` is odd and integrable:
+`\deg F_R = 0` with no error term.
+(iv) Write `g := e^{−u²/18}`.  From `F_0'' = g[(u²/81 − 1/9 − γ_1²)\sin γ_1u − (2γ_1u/9)\cos γ_1u]`
+and `D_R'' = F_0''(1−ϑ_R) − 2F_0'ϑ_R' − F_0ϑ_R''`, which vanishes on `|u| < R`, one gets
+`|D_R''| ≤ A\,u²g\,\mathbf 1_{|u|≥R}` for `R ≥ 18`.  For `u ≥ 18`, `g(u)\,2\cosh(u/2) ≤ 2e^{−u²/36}`,
+whence `N(D_R) ≤ 4e^{−R²/36}`, `N(D_R'') ≤ 76ARe^{−R²/36}`, and by (i) with `S_2 ≤ 1`,
+`C_{D_R} ≤ 80ARe^{−R²/36}`; with `R = 6\sqrt L` this is `≤ 480Ae^{−L/2} ≤ 10^{−6}` once
+`L ≥ 2\log(4.8×10^8A)`, which `R ≥ R_0(ϑ)` ensures.  Then `C_{F_R} ≤ C_{F_0} + C_{D_R}` by (i) and
+Lemma 19.20(vi).  Next `W_{F_R} − W_{F_0} = 2I_∞(F_0,D_R) − I_∞(D_R,D_R)`, bounded by (i) by
+`C_{D_R}(2N(F_0) + N(D_R))` with `N(F_0) ≤ 4Ge^{9/8} < 46.33`; so `|ΔW| ≤ 9.3×10^{−5}`, and with
+`W_{F_0} = 2G²(1±10^{−90})`, `2G² = 9π` (Lemma 19.20(v)), `\sqrt{W_{F_R}/2} ≥ G(1 − 3.3×10^{−6})`.
+Hence `s_{F_R} ≤ (s_1 + 2.7×10^{−7})(1 + 3.3×10^{−6}) ≤ s_1 + 3.6×10^{−6} = 0.9984638…`, and
+`1 − \bar s² = 3.06964×10^{−3}`.  Oddness gives `Φ_{F_R}(1) = −Φ_{F_R}(0)`, and
+`|Φ_{F_R}(0)| ≤ |η| + N(D_R) < 10^{−390} + 4e^{−40}` by Lemma 19.20(ii) and (i).  The same
+estimates with `R → ∞` give `C_{D_R} → 0`, `W_{F_R} → W_{F_0}`, hence `s_{F_R} → s_{F_0}`.
+(v) `Φ_{F_R^♭}(0) = 0`, and oddness gives `Φ_{F_R^♭}(1) = 0`.  With `D' := D_R + Φ_{F_R}(0)B`,
+(i) gives `C_{D'}, N(D') ≤ 2×10^{−6}`; repeating (iv) with `D'` gives `|ΔW| < 1.86×10^{−4}`,
+`s ≤ (s_1 + 5.4×10^{−7})(1 + 6.7×10^{−6}) ≤ s_1 + 8×10^{−6}`, and `1 − 0.998469² = 3.0597×10^{−3}`.  ∎
+`PROVED`
+
+*Certified instance, carried over (arithmetic only).*  At `χ = 0`, `d = 400`, the window of
+Theorem 19.23 with `F_R` in place of `F_0` is `(s_{F_R}²·80000,\ 79800) ⊇ (79754.43,\ 79800)` (for
+`F_R^♭`: `⊇ (79755.2,\ 79800)`), and `t²W_{F_R} = 79780` gives `\deg E = 400`, `I_∞(E,E) = 220`,
+`R(E) = 10`, exactly as in the certified instance of Theorem 19.23; `t` moves from `53.11911…` only at
+the sixth significant digit or later, and is not needed numerically.
+
+**Corollary 19.25b (the frame defect theorem on the small domain; `PROVED`, given (X19), (E2),
+(E3d)).**  Let `𝒟_c := C_c^∞(R) ⊕ RK` and `𝒟_p := P_c^∞ ⊕ RK` (direct, since `K > 0` everywhere,
+Theorem 11.7(i)); `𝒟_p` is the linear span of `𝒢_min := \{nF,\ K−nF : F ∈ P_c^∞,\ n ∈ Z\}`, the set on
+which Theorem 12.3's proof evaluates `h⁰`, and both are `σ_K`-stable.  For `𝒟 ∈ \{𝒟_c, 𝒟_p\}` there
+is **no** `h⁰ : 𝒟 → R_{≥0}` satisfying
+
+  (a)_𝒟 `h⁰ ≥ 0` on `𝒟`;  (b′)_𝒟 if `E ∈ 𝒟` and `h⁰(E) > 0`, there is `E' ∈ D^W`, `E' ≥ 0`,
+  `E' ≢ 0`, `E − E' ∈ 𝓝_∞`;  (c)_𝒟 `h⁰(E) + h⁰(K−E) ≥ R(E)` whenever `E, K−E ∈ 𝒟`,
+
+for any `χ ∈ R`; and the same holds with (b′)_𝒟 replaced by its stable form (b′)_{st} of
+Theorem 19.12 restricted to `𝒟`.  Requiring `E' ∈ 𝒟` in (b′)_𝒟, or reading the equivalence modulo the
+finer `𝓝_∞ ∩ 𝒟` or modulo the radical of `I_∞|_𝒟` (both `0`, Remark 19.25c(ii)), only strengthens the hypothesis, so the conclusion
+covers those readings too.
+
+**Localised form.**  Fix `χ`, let `F := F_R` (for `𝒟_c`) or `F := F_R^♭` (for `𝒟_p`) as in
+Lemma 19.25a, take `d > 1` with `d²(1 − s_F²) > d − 4χ` and `t > 0` with
+`s_F²d²/2 < t²W_F < d²/2 − d/2 + 2χ`, and put `E_w := tF + dK`.  On **any** set `𝒟 ⊆ D^W` containing
+the pair `\{E_w,\ K−E_w\}`, no `h⁰ ≥ 0` satisfies (b′) at `E_w` and at `K−E_w` together with (c) at
+`E_w`.
+
+*Proof.*  Theorem 19.21 and the proof of Theorem 19.23 use of `F_0` only the four properties listed
+above, so they hold for `F`, with `s_{F_0}` replaced by `s_F`: `\deg E_w = d`, `R(E_w) > 0`, and no
+`E' ≥ 0`, `E' ≢ 0` has `E_w − E' ∈ 𝓝_∞`, nor `NE_w − E' ∈ 𝓝_∞` for any `N ≥ 1` (the `N` cancels as
+in Corollary 19.24).  Lemma 19.25a supplies `F` with `s_F < 1`, so `d` and `t` exist.  Now
+`E_w ∈ 𝒟_p ⊆ 𝒟_c`, and `K−E_w = −tF + (1−d)K` lies there too.  *Step 1:* `\deg(K−E_w) = 1−d < 0`,
+so (b′) (or (b′)_{st}) at `K−E_w` would give `E' ≥ 0`, `E' ≢ 0` of degree `(1−d)` (resp.
+`N(1−d)`) `< 0`, against Theorem 11.13(i); hence `h⁰(K−E_w) = 0`.  *Step 2:* (c) at `E_w` gives
+`h⁰(E_w) ≥ R(E_w) > 0`; the Serre symmetry is not needed.  *Step 3:* (b′) (or (b′)_{st}) at `E_w`
+supplies the forbidden `E'`.  ∎  `PROVED`
+
+**Remark 19.25c (`PROVED`, new).**
+ (i) *On the bare set `𝒢_min` the hypothesis is RH itself.*  For `h⁰` defined only on `𝒢_min`, with
+     (a), (b′), (c) restricted to it and `χ` existential as in (12.1), the hypothesis of Theorem 12.3
+     is **satisfiable if and only if RH holds**.  ⇐: under RH, `Φ_F(1−ρ) = \overline{Φ_F(ρ)}` for real
+     `F`, so `I_∞(F,F) = −Σ_ρ|Φ_F(ρ)|² ≤ 0` for `F ∈ P_c^∞` by (11.6); take `χ = 0` and `h⁰ ≡ 0`.
+     Then (a) holds, (b′) is vacuous, and `R(K−nF) = R(nF) = ½n²I_∞(F,F) ≤ 0` (Theorem 19.2,
+     `\deg F = 0`), with `R(0) = R(K) = 0`.  ⇒: Theorem 12.3's proof evaluates `h⁰` only at `nF` and
+     `K−nF` and applies (c) only at `E = nF`; the ample class `F + 2mK` of its Step 1 enters only
+     through `I_∞(\cdot,F+2mK)`.  So it runs verbatim on any `𝒟 ⊇ 𝒢_min`.  Hence no unconditional
+     non-existence theorem for `h⁰` on `𝒢_min` can be proved unless RH is false, and the kill of
+     Corollary 19.25b needs a **linear** domain: it uses the pair `\{E_w, K−E_w\}`, of degrees
+     `d > d_0^{(R)}` and `1−d`.  No lower bound on the degree of an arbitrary witness is claimed; that
+     is governed by the unknown `s_*` and by witnesses of other shapes.  This sharpens the first
+     paragraph of §19.9.
+ (ii) *`𝓝_∞ ∩ (C_c^∞ ⊕ RK) = 0`.*  If `N = G + cK ∈ 𝓝_∞` with `G ∈ C_c^∞`, then by (11.14)
+     `Φ_G(ρ) = Φ_N(ρ) − cξ(ρ) = 0` at every zero, so `G = 0` by the proof of Theorem 11.12, and then
+     `Φ_N(0) = cξ(0) = c/2 = 0`; a fortiori `𝓝_∞ ∩ 𝒟_p = 0`.  Moreover the radical of `I_∞`
+     restricted to `𝒟_p` is `0`: if `N = G + cK` pairs to zero with `P_c^∞ ⊕ RK`, then, since
+     `I_∞(K,\cdot) = ½\deg = 0` on `P_c^∞`, (11.6) and Lemma 11.9 force `Φ_G(ρ) = 0` at every zero,
+     so `G = 0` as before and `c = 0` by pairing with `K`.  So on the
+     small domain no two classes are identified modulo the radical: `F_0` cannot be exchanged for an
+     `𝓝_∞`-equivalent compactly supported class for free, and the replacement `F_0 ↦ F_R` is
+     **analytic** — a different class, admissible because the inequality it must satisfy is strict
+     and open.  This is unlike the curve model, where `D^W_C/𝓝^C_∞` is `(2+2g)`-dimensional and the
+     evaluation map is onto already from the `δ_m` (proof of Theorem 21.8), so every class, the
+     witness of Theorem 21.14 included, has a finitely supported representative modulo `𝓝^C_∞`.
+     Whether `F_0` itself is `𝓝_∞`-equivalent to an element of `𝒟_c` is `OPEN` and not needed.
+ (iii) *`s_*` is a compactly supported constant.*  For every real `F ∈ D^W` with `\deg F = 0` and
+     `W_F > 0` there are real `F_k ∈ C_c^∞`, `\deg F_k = 0`, with `s_{F_k} → s_F`; if `F ∈ P^W`, the
+     `F_k` may be taken in `P_c^∞`.  So `s_*` of §19.9 may be computed over `C_c^∞`, and its primitive
+     analogue over `P^W` equals that over `P_c^∞`.  *Proof.*  Truncate by `ϑ_R` (by (11.1) for
+     `j ≤ 2`, `N` of the error and of its second derivative tend to `0`); mollify with an even `φ_δ`
+     on the fixed compact support, where `N ≤ 2\cosh(R+1)\|\cdot\|_{L¹}`; then restore `\deg = 0` by
+     subtracting a multiple of a fixed even bump `B_1 ≥ 0` (for which `Φ_{B_1}(0) = Φ_{B_1}(1)`),
+     and, in the primitive case, restore `Φ(0) = Φ(1) = 0` with `B_1` and `B` above, the coefficients
+     being `≤ N` of the error by Lemma 19.25a(i).  By Lemma 19.25a(i), `C` and `W` converge, and
+     `W_F > 0` makes `s = C\sqrt{2/W}` continuous at `F`.  ∎
 
 **Remark 19.26 (what Theorem 19.25 does and does not say).**
 
@@ -6433,7 +6608,9 @@ Theorem 12.3's proof applies (b′) at `E = K − nF` (`\deg = 1`) and at `E = n
 applies (c) **only** at `E = nF` (`\deg = 0`); Proof 2 of Theorem 19.11 applies the clause at
 `rF + K` (`\deg = 1`).  The load-bearing degrees are therefore `0` and `1`, both far below the
 threshold `d_*` at which the witnesses of Theorem 19.23 live.  Two repairs are open; §20 takes up the
-second.
+second.  **[phase 156: on the bare set `𝒢_min` of these load-bearing classes the hypothesis of Theorem 12.3
+is equivalent to RH (Remark 19.25c(i)); the frame defect theorem acts on its linear span
+`P_c^∞ ⊕ RK` and on `C_c^∞ ⊕ RK` (Corollary 19.25b), through the pair `\{E_w, K−E_w\}`.]**
 
 **Horn A — weaken (c) by a defect vanishing where it is used.**  For `Δ : R → R_{≥0}` with
 `Δ(0) = Δ(1) = 0` and `Δ` symmetric under `d ↦ 1−d` (so that the Serre symmetry of Theorem 19.2 is
@@ -6474,6 +6651,15 @@ Then the hypothesis of the corresponding transfer theorem is satisfiable **only 
 *Proof.*  Theorems 19.21, 19.23 and 19.25 use only (T1_cone), (T2_cone) and bilinearity; replace `C` by `C'`
 throughout.  If `C'_{F_0} < G` then the witness `E = tF_0 + dK` with `d` large lies in `S_χ` and
 outside `𝓔' + 𝓝_∞`, and Steps 1–3 of Theorem 19.25 close as before.  ∎  `PROVED`
+
+**[phase 156, Horn B on the small domain (`R156_002` Remark 8.1, `PROVED`, same proof).]**  Theorem
+19.30's proof uses of `F_0` only the four properties listed before Lemma 19.25a, with `C` replaced by
+`C'`.  So for `h⁰` defined only on `𝒟_c = C_c^∞ ⊕ RK` its conclusion holds with `F_R` in place of
+`F_0`: a cone `𝓔'` with (T1_cone), (T2_cone) can support the small-domain transfer only if
+`C'_{F_R} ≥ \sqrt{W_{F_R}/2} ≥ G(1 − 3.3×10^{−6})`.  Truncation neither closes nor reopens Horn B:
+for a general `𝓔'`, `C'_{D_R}` is not controlled by `C_{D_R}` ((T2_cone) gives finiteness, not size),
+and the B4 row of the table below was computed at `F_0` (recomputing the traces `t_n(F_R)` is `OPEN`
+and not needed, since B4 passes).  **Horn B (the residual R2 of the phase-155 record) stays `OPEN`.**
 
 So Horn B is a single inequality: the enlargement must strictly raise the support function at `F_0`
 past `G`, i.e. contain classes more extreme in the `F_0` direction than any nonnegative density —
@@ -10025,6 +10211,10 @@ the imports listed in §15:
    same for every admissible `Z` with a simple isolated on-line zero
    (Theorem 19.28).  The deficit is the constant `s(γ,θ) < 1` of Lemma 19.17,
    with `s_* = 0.99846…` attained at `ρ_1` (Proposition 19.18).
+   **[phase 156:]** the same holds for `h⁰` defined only on `C_c^∞ ⊕ RK` or on
+   `P_c^∞ ⊕ RK = \mathrm{span}\,𝒢_min`, with the compactly supported witness of
+   Lemma 19.25a (Corollary 19.25b); on the bare set `𝒢_min` the hypothesis is
+   equivalent to RH (Remark 19.25c(i)).
 10. **The trace side.**  `ker T = 𝓝_∞` (Theorem 20.5); (T1′)
    `B4^{g,0} ∩ P^W ⊆ 𝓝_∞` unconditionally (Theorem 20.15); and the
    **unconditional transfer theorem 12.3-B4** (Theorem 20.17), which uses
@@ -11925,6 +12115,15 @@ Continuing §23.4, and carrying every item there that is not answered above.
   clauses (1)–(5) of §21.8 with `𝔈 = D^W` excluded.  `OPEN`.
 * All remaining items of §23.4 — (24)–(33), together with (34) = (P145′) and
   (36) above — stand as recorded there; (35) is answered negatively by item 13.
+* **[phase 156] The phase-155 residuals of the frame defect theorem.**  **R1**
+  (whether Theorem 19.25 needs `h⁰` on all of `D^W`) is **closed** by
+  Corollary 19.25b: the theorem, its stable form and its localised form hold for
+  `h⁰` defined only on `C_c^∞ ⊕ RK` or on `P_c^∞ ⊕ RK = \mathrm{span}\,𝒢_min`,
+  given (X19), (E2), (E3d); the bare set `𝒢_min` is excluded for a reason
+  (Remark 19.25c(i)).  **R2** (Horn B) is **unchanged and `OPEN`**: Theorem 19.30
+  holds on the small domain with `F_R` (the note after its proof), and this
+  neither closes nor reopens it.  The citation gap at Lemma 19.20(iv) is recorded
+  there.  No label changes.
 
 ### 28.4 The decision
 

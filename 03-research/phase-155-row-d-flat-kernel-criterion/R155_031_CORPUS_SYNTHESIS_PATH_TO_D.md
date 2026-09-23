@@ -49,7 +49,7 @@ where (Paper 47 §1, eqs. (1.1)–(1.3))
 Bombieri 2000 Thm 1). Equivalently, on the intersection-theoretic side: `RH ⟺ 𝔏 = −Π²(W_fin + ω_∞)`
 positive definite (Paper 46 §5, `RESTATEMENT`), a Hodge-index inequality on the adelic square.
 Unconditional positivity is known for `T ≤ log 2` (Paper 42; Yoshida 1992; Bombieri 2000) and,
-by certified matrix computation, at support `1.6` (Zhu, arXiv:2608.24827). **Nothing beyond.**
+by certified matrix computation, at support `1.6` (Zhu, arXiv:2608.24827). **Nothing beyond.** **[amended 2026-09-23 per R156_004 A14: this is proved for the PRIMITIVE form on `P_T` only (Paper 42 is primitive-only; Yoshida/Bombieri give the complete form only for `T ≤ ½log2`). Complete form `λ^W ≥ 0`: `T ≤ ½log2` classical, `(½log2, 0.8]` Zhu 2026 Thm 1.2, cited not re-verified.]**
 
 ### 1.3 The successive reductions, phases 134–155
 

@@ -13,6 +13,18 @@ described below.  One round-2 repair was withdrawn in round 3 (§9.2b): it was
 not proved, it is false under RH, and it would have put a statement about the
 zeros inside the paper.
 
+**[phase 156, 2026-09-23 — `R156_002` as cleared by `R156_003`:]** §19.7 gains
+Lemma 19.25a (truncation of the Gaussian witness to `C_c^∞`, `\deg F_R = 0`
+exactly, `s_{F_R} < 0.998464`, `d_0^{(R)} < 325.78`; primitive variant
+`s ≤ 0.998469`), Corollary 19.25b (the frame defect theorem for `h⁰` defined only
+on `C_c^∞ ⊕ RK` or `P_c^∞ ⊕ RK = span 𝒢_min`, with stable and localised forms;
+residual R1 **closed**) and Remark 19.25c (on bare `𝒢_min` the hypothesis of
+Thm 12.3 is equivalent to RH; `𝓝_∞ ∩ (C_c^∞ ⊕ RK) = 0`; `s_*` over `C_c^∞`).
+New `CLASSICAL` import (X30) (Davenport's `Σ Re(1/ρ)`), explicit constants only.
+Editor fixes E1 (sign in Lemma 19.20(v)), E2 (Thm 19.23 window stated with
+`s_{F_0}`), E3 (flagged citation gap at Lemma 19.20(iv), math unchanged).
+Residual R2 (Horn B) unchanged and `OPEN`.  No label change, no sign.
+
 ---
 
 ## What this paper is
